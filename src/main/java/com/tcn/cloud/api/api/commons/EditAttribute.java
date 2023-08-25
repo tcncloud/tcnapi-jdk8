@@ -4,16 +4,6 @@
 package com.tcn.cloud.api.api.commons;
 
 /**
- * <pre>
- *
- *Description = 1
- *Skills = 2
- *Status = 3
- *Due Date = 4
- *SLA = 5
- *All Values must come as String. BE to convert values to int64, JSON and DateTime
- * </pre>
- *
  * Protobuf type {@code api.commons.EditAttribute}
  */
 public final class EditAttribute extends
@@ -146,10 +136,6 @@ private static final long serialVersionUID = 0L;
   public static final int IS_EDITED_FIELD_NUMBER = 4;
   private boolean isEdited_ = false;
   /**
-   * <pre>
-   *EditColumnType edit_column_type = 5;
-   * </pre>
-   *
    * <code>bool is_edited = 4 [json_name = "isEdited"];</code>
    * @return The isEdited.
    */
@@ -349,16 +335,6 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * <pre>
-   *
-   *Description = 1
-   *Skills = 2
-   *Status = 3
-   *Due Date = 4
-   *SLA = 5
-   *All Values must come as String. BE to convert values to int64, JSON and DateTime
-   * </pre>
-   *
    * Protobuf type {@code api.commons.EditAttribute}
    */
   public static final class Builder extends
@@ -756,10 +732,6 @@ private static final long serialVersionUID = 0L;
 
     private boolean isEdited_ ;
     /**
-     * <pre>
-     *EditColumnType edit_column_type = 5;
-     * </pre>
-     *
      * <code>bool is_edited = 4 [json_name = "isEdited"];</code>
      * @return The isEdited.
      */
@@ -768,10 +740,6 @@ private static final long serialVersionUID = 0L;
       return isEdited_;
     }
     /**
-     * <pre>
-     *EditColumnType edit_column_type = 5;
-     * </pre>
-     *
      * <code>bool is_edited = 4 [json_name = "isEdited"];</code>
      * @param value The isEdited to set.
      * @return This builder for chaining.
@@ -784,10 +752,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     *EditColumnType edit_column_type = 5;
-     * </pre>
-     *
      * <code>bool is_edited = 4 [json_name = "isEdited"];</code>
      * @return This builder for chaining.
      */

@@ -669,6 +669,99 @@ public final class TicketsGrpc {
     return getListUsersMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketActionRequest,
+      com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketActionResponse> getCloseTicketActionMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CloseTicketAction",
+      requestType = com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketActionRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketActionResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketActionRequest,
+      com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketActionResponse> getCloseTicketActionMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketActionRequest, com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketActionResponse> getCloseTicketActionMethod;
+    if ((getCloseTicketActionMethod = TicketsGrpc.getCloseTicketActionMethod) == null) {
+      synchronized (TicketsGrpc.class) {
+        if ((getCloseTicketActionMethod = TicketsGrpc.getCloseTicketActionMethod) == null) {
+          TicketsGrpc.getCloseTicketActionMethod = getCloseTicketActionMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketActionRequest, com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketActionResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CloseTicketAction"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketActionRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketActionResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new TicketsMethodDescriptorSupplier("CloseTicketAction"))
+              .build();
+        }
+      }
+    }
+    return getCloseTicketActionMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketActionRequest,
+      com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketActionResponse> getAssignTicketActionMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "AssignTicketAction",
+      requestType = com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketActionRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketActionResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketActionRequest,
+      com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketActionResponse> getAssignTicketActionMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketActionRequest, com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketActionResponse> getAssignTicketActionMethod;
+    if ((getAssignTicketActionMethod = TicketsGrpc.getAssignTicketActionMethod) == null) {
+      synchronized (TicketsGrpc.class) {
+        if ((getAssignTicketActionMethod = TicketsGrpc.getAssignTicketActionMethod) == null) {
+          TicketsGrpc.getAssignTicketActionMethod = getAssignTicketActionMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketActionRequest, com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketActionResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AssignTicketAction"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketActionRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketActionResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new TicketsMethodDescriptorSupplier("AssignTicketAction"))
+              .build();
+        }
+      }
+    }
+    return getAssignTicketActionMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.tickets.CreateTicketActionRequest,
+      com.tcn.cloud.api.api.v1alpha1.tickets.CreateTicketActionResponse> getCreateTicketActionMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateTicketAction",
+      requestType = com.tcn.cloud.api.api.v1alpha1.tickets.CreateTicketActionRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.tickets.CreateTicketActionResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.tickets.CreateTicketActionRequest,
+      com.tcn.cloud.api.api.v1alpha1.tickets.CreateTicketActionResponse> getCreateTicketActionMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.tickets.CreateTicketActionRequest, com.tcn.cloud.api.api.v1alpha1.tickets.CreateTicketActionResponse> getCreateTicketActionMethod;
+    if ((getCreateTicketActionMethod = TicketsGrpc.getCreateTicketActionMethod) == null) {
+      synchronized (TicketsGrpc.class) {
+        if ((getCreateTicketActionMethod = TicketsGrpc.getCreateTicketActionMethod) == null) {
+          TicketsGrpc.getCreateTicketActionMethod = getCreateTicketActionMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.tickets.CreateTicketActionRequest, com.tcn.cloud.api.api.v1alpha1.tickets.CreateTicketActionResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateTicketAction"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.tickets.CreateTicketActionRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.tickets.CreateTicketActionResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new TicketsMethodDescriptorSupplier("CreateTicketAction"))
+              .build();
+        }
+      }
+    }
+    return getCreateTicketActionMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -753,6 +846,7 @@ public final class TicketsGrpc {
     /**
      * <pre>
      * Public method to assign ticket
+     * Would be deprecated
      * </pre>
      */
     default void assignTicket(com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketReq request,
@@ -763,6 +857,7 @@ public final class TicketsGrpc {
     /**
      * <pre>
      * Public Method to Close a ticket
+     * Any agent can close the ticket. No BE validation required
      * </pre>
      */
     default void closeTicket(com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketReq request,
@@ -928,6 +1023,36 @@ public final class TicketsGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.ListUsersResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListUsersMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * Any agent can close the ticket. No BE validation required
+     * </pre>
+     */
+    default void closeTicketAction(com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketActionRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketActionResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCloseTicketActionMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Public method to assign a ticket action
+     * </pre>
+     */
+    default void assignTicketAction(com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketActionRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketActionResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAssignTicketActionMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Public method to assign a ticket
+     * </pre>
+     */
+    default void createTicketAction(com.tcn.cloud.api.api.v1alpha1.tickets.CreateTicketActionRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.CreateTicketActionResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateTicketActionMethod(), responseObserver);
+    }
   }
 
   /**
@@ -999,6 +1124,7 @@ public final class TicketsGrpc {
     /**
      * <pre>
      * Public method to assign ticket
+     * Would be deprecated
      * </pre>
      */
     public void assignTicket(com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketReq request,
@@ -1010,6 +1136,7 @@ public final class TicketsGrpc {
     /**
      * <pre>
      * Public Method to Close a ticket
+     * Any agent can close the ticket. No BE validation required
      * </pre>
      */
     public void closeTicket(com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketReq request,
@@ -1192,6 +1319,39 @@ public final class TicketsGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListUsersMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Any agent can close the ticket. No BE validation required
+     * </pre>
+     */
+    public void closeTicketAction(com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketActionRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketActionResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCloseTicketActionMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Public method to assign a ticket action
+     * </pre>
+     */
+    public void assignTicketAction(com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketActionRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketActionResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getAssignTicketActionMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Public method to assign a ticket
+     * </pre>
+     */
+    public void createTicketAction(com.tcn.cloud.api.api.v1alpha1.tickets.CreateTicketActionRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.CreateTicketActionResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateTicketActionMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -1246,6 +1406,7 @@ public final class TicketsGrpc {
     /**
      * <pre>
      * Public method to assign ticket
+     * Would be deprecated
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketRes assignTicket(com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketReq request) {
@@ -1256,6 +1417,7 @@ public final class TicketsGrpc {
     /**
      * <pre>
      * Public Method to Close a ticket
+     * Any agent can close the ticket. No BE validation required
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketRes closeTicket(com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketReq request) {
@@ -1421,6 +1583,36 @@ public final class TicketsGrpc {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListUsersMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * Any agent can close the ticket. No BE validation required
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketActionResponse closeTicketAction(com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketActionRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCloseTicketActionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Public method to assign a ticket action
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketActionResponse assignTicketAction(com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketActionRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getAssignTicketActionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Public method to assign a ticket
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.tickets.CreateTicketActionResponse createTicketAction(com.tcn.cloud.api.api.v1alpha1.tickets.CreateTicketActionRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateTicketActionMethod(), getCallOptions(), request);
+    }
   }
 
   /**
@@ -1478,6 +1670,7 @@ public final class TicketsGrpc {
     /**
      * <pre>
      * Public method to assign ticket
+     * Would be deprecated
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketRes> assignTicket(
@@ -1489,6 +1682,7 @@ public final class TicketsGrpc {
     /**
      * <pre>
      * Public Method to Close a ticket
+     * Any agent can close the ticket. No BE validation required
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketRes> closeTicket(
@@ -1671,6 +1865,39 @@ public final class TicketsGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListUsersMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Any agent can close the ticket. No BE validation required
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketActionResponse> closeTicketAction(
+        com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketActionRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCloseTicketActionMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Public method to assign a ticket action
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketActionResponse> assignTicketAction(
+        com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketActionRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getAssignTicketActionMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Public method to assign a ticket
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.tickets.CreateTicketActionResponse> createTicketAction(
+        com.tcn.cloud.api.api.v1alpha1.tickets.CreateTicketActionRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateTicketActionMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE_TICKET = 0;
@@ -1694,6 +1921,9 @@ public final class TicketsGrpc {
   private static final int METHODID_LIST_AVAILABLE_AGENT_TICKETS = 18;
   private static final int METHODID_LIST_SKILLS = 19;
   private static final int METHODID_LIST_USERS = 20;
+  private static final int METHODID_CLOSE_TICKET_ACTION = 21;
+  private static final int METHODID_ASSIGN_TICKET_ACTION = 22;
+  private static final int METHODID_CREATE_TICKET_ACTION = 23;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1795,6 +2025,18 @@ public final class TicketsGrpc {
         case METHODID_LIST_USERS:
           serviceImpl.listUsers((com.tcn.cloud.api.api.v1alpha1.tickets.ListUsersRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.ListUsersResponse>) responseObserver);
+          break;
+        case METHODID_CLOSE_TICKET_ACTION:
+          serviceImpl.closeTicketAction((com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketActionRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketActionResponse>) responseObserver);
+          break;
+        case METHODID_ASSIGN_TICKET_ACTION:
+          serviceImpl.assignTicketAction((com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketActionRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketActionResponse>) responseObserver);
+          break;
+        case METHODID_CREATE_TICKET_ACTION:
+          serviceImpl.createTicketAction((com.tcn.cloud.api.api.v1alpha1.tickets.CreateTicketActionRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.CreateTicketActionResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -1961,6 +2203,27 @@ public final class TicketsGrpc {
               com.tcn.cloud.api.api.v1alpha1.tickets.ListUsersRequest,
               com.tcn.cloud.api.api.v1alpha1.tickets.ListUsersResponse>(
                 service, METHODID_LIST_USERS)))
+        .addMethod(
+          getCloseTicketActionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketActionRequest,
+              com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketActionResponse>(
+                service, METHODID_CLOSE_TICKET_ACTION)))
+        .addMethod(
+          getAssignTicketActionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketActionRequest,
+              com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketActionResponse>(
+                service, METHODID_ASSIGN_TICKET_ACTION)))
+        .addMethod(
+          getCreateTicketActionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.tickets.CreateTicketActionRequest,
+              com.tcn.cloud.api.api.v1alpha1.tickets.CreateTicketActionResponse>(
+                service, METHODID_CREATE_TICKET_ACTION)))
         .build();
   }
 
@@ -2030,6 +2293,9 @@ public final class TicketsGrpc {
               .addMethod(getListAvailableAgentTicketsMethod())
               .addMethod(getListSkillsMethod())
               .addMethod(getListUsersMethod())
+              .addMethod(getCloseTicketActionMethod())
+              .addMethod(getAssignTicketActionMethod())
+              .addMethod(getCreateTicketActionMethod())
               .build();
         }
       }

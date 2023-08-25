@@ -59,10 +59,6 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object assigneeList_ = "";
   /**
-   * <pre>
-   * type:json - send 0 or null for un-assigning a ticket
-   * </pre>
-   *
    * <code>string assignee_list = 2 [json_name = "assigneeList"];</code>
    * @return The assigneeList.
    */
@@ -80,10 +76,6 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   * type:json - send 0 or null for un-assigning a ticket
-   * </pre>
-   *
    * <code>string assignee_list = 2 [json_name = "assigneeList"];</code>
    * @return The bytes for assigneeList.
    */
@@ -106,10 +98,6 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object assignedId_ = "";
   /**
-   * <pre>
-   * uuid
-   * </pre>
-   *
    * <code>string assigned_id = 3 [json_name = "assignedId"];</code>
    * @return The assignedId.
    */
@@ -127,10 +115,6 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   * uuid
-   * </pre>
-   *
    * <code>string assigned_id = 3 [json_name = "assignedId"];</code>
    * @return The bytes for assignedId.
    */
@@ -561,10 +545,6 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object assigneeList_ = "";
     /**
-     * <pre>
-     * type:json - send 0 or null for un-assigning a ticket
-     * </pre>
-     *
      * <code>string assignee_list = 2 [json_name = "assigneeList"];</code>
      * @return The assigneeList.
      */
@@ -581,10 +561,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * type:json - send 0 or null for un-assigning a ticket
-     * </pre>
-     *
      * <code>string assignee_list = 2 [json_name = "assigneeList"];</code>
      * @return The bytes for assigneeList.
      */
@@ -602,10 +578,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * type:json - send 0 or null for un-assigning a ticket
-     * </pre>
-     *
      * <code>string assignee_list = 2 [json_name = "assigneeList"];</code>
      * @param value The assigneeList to set.
      * @return This builder for chaining.
@@ -619,10 +591,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * type:json - send 0 or null for un-assigning a ticket
-     * </pre>
-     *
      * <code>string assignee_list = 2 [json_name = "assigneeList"];</code>
      * @return This builder for chaining.
      */
@@ -633,10 +601,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * type:json - send 0 or null for un-assigning a ticket
-     * </pre>
-     *
      * <code>string assignee_list = 2 [json_name = "assigneeList"];</code>
      * @param value The bytes for assigneeList to set.
      * @return This builder for chaining.
@@ -653,10 +617,6 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object assignedId_ = "";
     /**
-     * <pre>
-     * uuid
-     * </pre>
-     *
      * <code>string assigned_id = 3 [json_name = "assignedId"];</code>
      * @return The assignedId.
      */
@@ -673,10 +633,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * uuid
-     * </pre>
-     *
      * <code>string assigned_id = 3 [json_name = "assignedId"];</code>
      * @return The bytes for assignedId.
      */
@@ -694,10 +650,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * uuid
-     * </pre>
-     *
      * <code>string assigned_id = 3 [json_name = "assignedId"];</code>
      * @param value The assignedId to set.
      * @return This builder for chaining.
@@ -711,10 +663,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * uuid
-     * </pre>
-     *
      * <code>string assigned_id = 3 [json_name = "assignedId"];</code>
      * @return This builder for chaining.
      */
@@ -725,10 +673,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * uuid
-     * </pre>
-     *
      * <code>string assigned_id = 3 [json_name = "assignedId"];</code>
      * @param value The bytes for assignedId to set.
      * @return This builder for chaining.

@@ -4,129 +4,96 @@
 package com.tcn.cloud.api.api.v1alpha1.tickets;
 
 /**
- * <pre>
- * AssignTicketRes
- * </pre>
- *
- * Protobuf type {@code api.v1alpha1.tickets.AssignTicketRes}
+ * Protobuf type {@code api.v1alpha1.tickets.CloseTicketActionRequest}
  */
-public final class AssignTicketRes extends
+public final class CloseTicketActionRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v1alpha1.tickets.AssignTicketRes)
-    AssignTicketResOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v1alpha1.tickets.CloseTicketActionRequest)
+    CloseTicketActionRequestOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use AssignTicketRes.newBuilder() to construct.
-  private AssignTicketRes(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use CloseTicketActionRequest.newBuilder() to construct.
+  private CloseTicketActionRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private AssignTicketRes() {
-    assigneeList_ = "";
-    assignedId_ = "";
+  private CloseTicketActionRequest() {
+    comment_ = "";
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new AssignTicketRes();
+    return new CloseTicketActionRequest();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v1alpha1.tickets.TicketProto.internal_static_api_v1alpha1_tickets_AssignTicketRes_descriptor;
+    return com.tcn.cloud.api.api.v1alpha1.tickets.TicketProto.internal_static_api_v1alpha1_tickets_CloseTicketActionRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v1alpha1.tickets.TicketProto.internal_static_api_v1alpha1_tickets_AssignTicketRes_fieldAccessorTable
+    return com.tcn.cloud.api.api.v1alpha1.tickets.TicketProto.internal_static_api_v1alpha1_tickets_CloseTicketActionRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketRes.class, com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketRes.Builder.class);
+            com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketActionRequest.class, com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketActionRequest.Builder.class);
   }
 
-  public static final int TICKET_SID_FIELD_NUMBER = 1;
-  private long ticketSid_ = 0L;
+  public static final int TICKET_ACTION_ID_FIELD_NUMBER = 1;
+  private long ticketActionId_ = 0L;
   /**
-   * <code>int64 ticket_sid = 1 [json_name = "ticketSid", jstype = JS_STRING];</code>
-   * @return The ticketSid.
+   * <code>int64 ticket_action_id = 1 [json_name = "ticketActionId", jstype = JS_STRING];</code>
+   * @return The ticketActionId.
    */
   @java.lang.Override
-  public long getTicketSid() {
-    return ticketSid_;
+  public long getTicketActionId() {
+    return ticketActionId_;
   }
 
-  public static final int ASSIGNEE_LIST_FIELD_NUMBER = 2;
+  public static final int TICKET_ID_FIELD_NUMBER = 2;
+  private long ticketId_ = 0L;
+  /**
+   * <code>int64 ticket_id = 2 [json_name = "ticketId", jstype = JS_STRING];</code>
+   * @return The ticketId.
+   */
+  @java.lang.Override
+  public long getTicketId() {
+    return ticketId_;
+  }
+
+  public static final int COMMENT_FIELD_NUMBER = 3;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object assigneeList_ = "";
+  private volatile java.lang.Object comment_ = "";
   /**
-   * <code>string assignee_list = 2 [json_name = "assigneeList"];</code>
-   * @return The assigneeList.
+   * <code>string comment = 3 [json_name = "comment"];</code>
+   * @return The comment.
    */
   @java.lang.Override
-  public java.lang.String getAssigneeList() {
-    java.lang.Object ref = assigneeList_;
+  public java.lang.String getComment() {
+    java.lang.Object ref = comment_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      assigneeList_ = s;
+      comment_ = s;
       return s;
     }
   }
   /**
-   * <code>string assignee_list = 2 [json_name = "assigneeList"];</code>
-   * @return The bytes for assigneeList.
+   * <code>string comment = 3 [json_name = "comment"];</code>
+   * @return The bytes for comment.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getAssigneeListBytes() {
-    java.lang.Object ref = assigneeList_;
+      getCommentBytes() {
+    java.lang.Object ref = comment_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      assigneeList_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int ASSIGNED_ID_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object assignedId_ = "";
-  /**
-   * <code>string assigned_id = 3 [json_name = "assignedId"];</code>
-   * @return The assignedId.
-   */
-  @java.lang.Override
-  public java.lang.String getAssignedId() {
-    java.lang.Object ref = assignedId_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      assignedId_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string assigned_id = 3 [json_name = "assignedId"];</code>
-   * @return The bytes for assignedId.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getAssignedIdBytes() {
-    java.lang.Object ref = assignedId_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      assignedId_ = b;
+      comment_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -147,14 +114,14 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (ticketSid_ != 0L) {
-      output.writeInt64(1, ticketSid_);
+    if (ticketActionId_ != 0L) {
+      output.writeInt64(1, ticketActionId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(assigneeList_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, assigneeList_);
+    if (ticketId_ != 0L) {
+      output.writeInt64(2, ticketId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(assignedId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, assignedId_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(comment_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, comment_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -165,15 +132,16 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (ticketSid_ != 0L) {
+    if (ticketActionId_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(1, ticketSid_);
+        .computeInt64Size(1, ticketActionId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(assigneeList_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, assigneeList_);
+    if (ticketId_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(2, ticketId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(assignedId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, assignedId_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(comment_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, comment_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -185,17 +153,17 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketRes)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketActionRequest)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketRes other = (com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketRes) obj;
+    com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketActionRequest other = (com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketActionRequest) obj;
 
-    if (getTicketSid()
-        != other.getTicketSid()) return false;
-    if (!getAssigneeList()
-        .equals(other.getAssigneeList())) return false;
-    if (!getAssignedId()
-        .equals(other.getAssignedId())) return false;
+    if (getTicketActionId()
+        != other.getTicketActionId()) return false;
+    if (getTicketId()
+        != other.getTicketId()) return false;
+    if (!getComment()
+        .equals(other.getComment())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -207,56 +175,57 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + TICKET_SID_FIELD_NUMBER;
+    hash = (37 * hash) + TICKET_ACTION_ID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getTicketSid());
-    hash = (37 * hash) + ASSIGNEE_LIST_FIELD_NUMBER;
-    hash = (53 * hash) + getAssigneeList().hashCode();
-    hash = (37 * hash) + ASSIGNED_ID_FIELD_NUMBER;
-    hash = (53 * hash) + getAssignedId().hashCode();
+        getTicketActionId());
+    hash = (37 * hash) + TICKET_ID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getTicketId());
+    hash = (37 * hash) + COMMENT_FIELD_NUMBER;
+    hash = (53 * hash) + getComment().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketRes parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketActionRequest parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketRes parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketActionRequest parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketRes parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketActionRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketRes parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketActionRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketRes parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketActionRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketRes parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketActionRequest parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketRes parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketActionRequest parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketRes parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketActionRequest parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -264,26 +233,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketRes parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketActionRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketRes parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketActionRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketRes parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketActionRequest parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketRes parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketActionRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -296,7 +265,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketRes prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketActionRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -312,30 +281,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * <pre>
-   * AssignTicketRes
-   * </pre>
-   *
-   * Protobuf type {@code api.v1alpha1.tickets.AssignTicketRes}
+   * Protobuf type {@code api.v1alpha1.tickets.CloseTicketActionRequest}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v1alpha1.tickets.AssignTicketRes)
-      com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketResOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v1alpha1.tickets.CloseTicketActionRequest)
+      com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketActionRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v1alpha1.tickets.TicketProto.internal_static_api_v1alpha1_tickets_AssignTicketRes_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.tickets.TicketProto.internal_static_api_v1alpha1_tickets_CloseTicketActionRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v1alpha1.tickets.TicketProto.internal_static_api_v1alpha1_tickets_AssignTicketRes_fieldAccessorTable
+      return com.tcn.cloud.api.api.v1alpha1.tickets.TicketProto.internal_static_api_v1alpha1_tickets_CloseTicketActionRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketRes.class, com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketRes.Builder.class);
+              com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketActionRequest.class, com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketActionRequest.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketRes.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketActionRequest.newBuilder()
     private Builder() {
 
     }
@@ -349,26 +314,26 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      ticketSid_ = 0L;
-      assigneeList_ = "";
-      assignedId_ = "";
+      ticketActionId_ = 0L;
+      ticketId_ = 0L;
+      comment_ = "";
       return this;
     }
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v1alpha1.tickets.TicketProto.internal_static_api_v1alpha1_tickets_AssignTicketRes_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.tickets.TicketProto.internal_static_api_v1alpha1_tickets_CloseTicketActionRequest_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketRes getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketRes.getDefaultInstance();
+    public com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketActionRequest getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketActionRequest.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketRes build() {
-      com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketRes result = buildPartial();
+    public com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketActionRequest build() {
+      com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketActionRequest result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -376,23 +341,23 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketRes buildPartial() {
-      com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketRes result = new com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketRes(this);
+    public com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketActionRequest buildPartial() {
+      com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketActionRequest result = new com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketActionRequest(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketRes result) {
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketActionRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.ticketSid_ = ticketSid_;
+        result.ticketActionId_ = ticketActionId_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.assigneeList_ = assigneeList_;
+        result.ticketId_ = ticketId_;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.assignedId_ = assignedId_;
+        result.comment_ = comment_;
       }
     }
 
@@ -430,26 +395,24 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketRes) {
-        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketRes)other);
+      if (other instanceof com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketActionRequest) {
+        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketActionRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketRes other) {
-      if (other == com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketRes.getDefaultInstance()) return this;
-      if (other.getTicketSid() != 0L) {
-        setTicketSid(other.getTicketSid());
+    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketActionRequest other) {
+      if (other == com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketActionRequest.getDefaultInstance()) return this;
+      if (other.getTicketActionId() != 0L) {
+        setTicketActionId(other.getTicketActionId());
       }
-      if (!other.getAssigneeList().isEmpty()) {
-        assigneeList_ = other.assigneeList_;
-        bitField0_ |= 0x00000002;
-        onChanged();
+      if (other.getTicketId() != 0L) {
+        setTicketId(other.getTicketId());
       }
-      if (!other.getAssignedId().isEmpty()) {
-        assignedId_ = other.assignedId_;
+      if (!other.getComment().isEmpty()) {
+        comment_ = other.comment_;
         bitField0_ |= 0x00000004;
         onChanged();
       }
@@ -480,17 +443,17 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 8: {
-              ticketSid_ = input.readInt64();
+              ticketActionId_ = input.readInt64();
               bitField0_ |= 0x00000001;
               break;
             } // case 8
-            case 18: {
-              assigneeList_ = input.readStringRequireUtf8();
+            case 16: {
+              ticketId_ = input.readInt64();
               bitField0_ |= 0x00000002;
               break;
-            } // case 18
+            } // case 16
             case 26: {
-              assignedId_ = input.readStringRequireUtf8();
+              comment_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000004;
               break;
             } // case 26
@@ -511,177 +474,137 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private long ticketSid_ ;
+    private long ticketActionId_ ;
     /**
-     * <code>int64 ticket_sid = 1 [json_name = "ticketSid", jstype = JS_STRING];</code>
-     * @return The ticketSid.
+     * <code>int64 ticket_action_id = 1 [json_name = "ticketActionId", jstype = JS_STRING];</code>
+     * @return The ticketActionId.
      */
     @java.lang.Override
-    public long getTicketSid() {
-      return ticketSid_;
+    public long getTicketActionId() {
+      return ticketActionId_;
     }
     /**
-     * <code>int64 ticket_sid = 1 [json_name = "ticketSid", jstype = JS_STRING];</code>
-     * @param value The ticketSid to set.
+     * <code>int64 ticket_action_id = 1 [json_name = "ticketActionId", jstype = JS_STRING];</code>
+     * @param value The ticketActionId to set.
      * @return This builder for chaining.
      */
-    public Builder setTicketSid(long value) {
+    public Builder setTicketActionId(long value) {
 
-      ticketSid_ = value;
+      ticketActionId_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>int64 ticket_sid = 1 [json_name = "ticketSid", jstype = JS_STRING];</code>
+     * <code>int64 ticket_action_id = 1 [json_name = "ticketActionId", jstype = JS_STRING];</code>
      * @return This builder for chaining.
      */
-    public Builder clearTicketSid() {
+    public Builder clearTicketActionId() {
       bitField0_ = (bitField0_ & ~0x00000001);
-      ticketSid_ = 0L;
+      ticketActionId_ = 0L;
       onChanged();
       return this;
     }
 
-    private java.lang.Object assigneeList_ = "";
+    private long ticketId_ ;
     /**
-     * <code>string assignee_list = 2 [json_name = "assigneeList"];</code>
-     * @return The assigneeList.
+     * <code>int64 ticket_id = 2 [json_name = "ticketId", jstype = JS_STRING];</code>
+     * @return The ticketId.
      */
-    public java.lang.String getAssigneeList() {
-      java.lang.Object ref = assigneeList_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        assigneeList_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
+    @java.lang.Override
+    public long getTicketId() {
+      return ticketId_;
     }
     /**
-     * <code>string assignee_list = 2 [json_name = "assigneeList"];</code>
-     * @return The bytes for assigneeList.
-     */
-    public com.google.protobuf.ByteString
-        getAssigneeListBytes() {
-      java.lang.Object ref = assigneeList_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        assigneeList_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string assignee_list = 2 [json_name = "assigneeList"];</code>
-     * @param value The assigneeList to set.
+     * <code>int64 ticket_id = 2 [json_name = "ticketId", jstype = JS_STRING];</code>
+     * @param value The ticketId to set.
      * @return This builder for chaining.
      */
-    public Builder setAssigneeList(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      assigneeList_ = value;
+    public Builder setTicketId(long value) {
+
+      ticketId_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
-     * <code>string assignee_list = 2 [json_name = "assigneeList"];</code>
+     * <code>int64 ticket_id = 2 [json_name = "ticketId", jstype = JS_STRING];</code>
      * @return This builder for chaining.
      */
-    public Builder clearAssigneeList() {
-      assigneeList_ = getDefaultInstance().getAssigneeList();
+    public Builder clearTicketId() {
       bitField0_ = (bitField0_ & ~0x00000002);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string assignee_list = 2 [json_name = "assigneeList"];</code>
-     * @param value The bytes for assigneeList to set.
-     * @return This builder for chaining.
-     */
-    public Builder setAssigneeListBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      assigneeList_ = value;
-      bitField0_ |= 0x00000002;
+      ticketId_ = 0L;
       onChanged();
       return this;
     }
 
-    private java.lang.Object assignedId_ = "";
+    private java.lang.Object comment_ = "";
     /**
-     * <code>string assigned_id = 3 [json_name = "assignedId"];</code>
-     * @return The assignedId.
+     * <code>string comment = 3 [json_name = "comment"];</code>
+     * @return The comment.
      */
-    public java.lang.String getAssignedId() {
-      java.lang.Object ref = assignedId_;
+    public java.lang.String getComment() {
+      java.lang.Object ref = comment_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        assignedId_ = s;
+        comment_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
       }
     }
     /**
-     * <code>string assigned_id = 3 [json_name = "assignedId"];</code>
-     * @return The bytes for assignedId.
+     * <code>string comment = 3 [json_name = "comment"];</code>
+     * @return The bytes for comment.
      */
     public com.google.protobuf.ByteString
-        getAssignedIdBytes() {
-      java.lang.Object ref = assignedId_;
+        getCommentBytes() {
+      java.lang.Object ref = comment_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        assignedId_ = b;
+        comment_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <code>string assigned_id = 3 [json_name = "assignedId"];</code>
-     * @param value The assignedId to set.
+     * <code>string comment = 3 [json_name = "comment"];</code>
+     * @param value The comment to set.
      * @return This builder for chaining.
      */
-    public Builder setAssignedId(
+    public Builder setComment(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      assignedId_ = value;
+      comment_ = value;
       bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
-     * <code>string assigned_id = 3 [json_name = "assignedId"];</code>
+     * <code>string comment = 3 [json_name = "comment"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearAssignedId() {
-      assignedId_ = getDefaultInstance().getAssignedId();
+    public Builder clearComment() {
+      comment_ = getDefaultInstance().getComment();
       bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
     /**
-     * <code>string assigned_id = 3 [json_name = "assignedId"];</code>
-     * @param value The bytes for assignedId to set.
+     * <code>string comment = 3 [json_name = "comment"];</code>
+     * @param value The bytes for comment to set.
      * @return This builder for chaining.
      */
-    public Builder setAssignedIdBytes(
+    public Builder setCommentBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      assignedId_ = value;
+      comment_ = value;
       bitField0_ |= 0x00000004;
       onChanged();
       return this;
@@ -699,23 +622,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v1alpha1.tickets.AssignTicketRes)
+    // @@protoc_insertion_point(builder_scope:api.v1alpha1.tickets.CloseTicketActionRequest)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v1alpha1.tickets.AssignTicketRes)
-  private static final com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketRes DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v1alpha1.tickets.CloseTicketActionRequest)
+  private static final com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketActionRequest DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketRes();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketActionRequest();
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketRes getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketActionRequest getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<AssignTicketRes>
-      PARSER = new com.google.protobuf.AbstractParser<AssignTicketRes>() {
+  private static final com.google.protobuf.Parser<CloseTicketActionRequest>
+      PARSER = new com.google.protobuf.AbstractParser<CloseTicketActionRequest>() {
     @java.lang.Override
-    public AssignTicketRes parsePartialFrom(
+    public CloseTicketActionRequest parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -734,17 +657,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<AssignTicketRes> parser() {
+  public static com.google.protobuf.Parser<CloseTicketActionRequest> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<AssignTicketRes> getParserForType() {
+  public com.google.protobuf.Parser<CloseTicketActionRequest> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketRes getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketActionRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 
