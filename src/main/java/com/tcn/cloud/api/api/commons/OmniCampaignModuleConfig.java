@@ -792,6 +792,44 @@ private static final long serialVersionUID = 0L;
     return paymentPortalIds_.getByteString(index);
   }
 
+  public static final int FLOW_ID_FIELD_NUMBER = 20;
+  private com.tcn.cloud.api.api.commons.Int64Id flowId_;
+  /**
+   * <pre>
+   * Flow Id
+   * </pre>
+   *
+   * <code>.api.commons.Int64Id flow_id = 20 [json_name = "flowId"];</code>
+   * @return Whether the flowId field is set.
+   */
+  @java.lang.Override
+  public boolean hasFlowId() {
+    return ((bitField0_ & 0x00008000) != 0);
+  }
+  /**
+   * <pre>
+   * Flow Id
+   * </pre>
+   *
+   * <code>.api.commons.Int64Id flow_id = 20 [json_name = "flowId"];</code>
+   * @return The flowId.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.Int64Id getFlowId() {
+    return flowId_ == null ? com.tcn.cloud.api.api.commons.Int64Id.getDefaultInstance() : flowId_;
+  }
+  /**
+   * <pre>
+   * Flow Id
+   * </pre>
+   *
+   * <code>.api.commons.Int64Id flow_id = 20 [json_name = "flowId"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.Int64IdOrBuilder getFlowIdOrBuilder() {
+    return flowId_ == null ? com.tcn.cloud.api.api.commons.Int64Id.getDefaultInstance() : flowId_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -859,6 +897,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < paymentPortalIds_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 19, paymentPortalIds_.getRaw(i));
+    }
+    if (((bitField0_ & 0x00008000) != 0)) {
+      output.writeMessage(20, getFlowId());
     }
     getUnknownFields().writeTo(output);
   }
@@ -944,6 +985,10 @@ private static final long serialVersionUID = 0L;
       }
       size += dataSize;
       size += 2 * getPaymentPortalIdsList().size();
+    }
+    if (((bitField0_ & 0x00008000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(20, getFlowId());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -1041,6 +1086,11 @@ private static final long serialVersionUID = 0L;
     }
     if (!getPaymentPortalIdsList()
         .equals(other.getPaymentPortalIdsList())) return false;
+    if (hasFlowId() != other.hasFlowId()) return false;
+    if (hasFlowId()) {
+      if (!getFlowId()
+          .equals(other.getFlowId())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1123,6 +1173,10 @@ private static final long serialVersionUID = 0L;
     if (getPaymentPortalIdsCount() > 0) {
       hash = (37 * hash) + PAYMENT_PORTAL_IDS_FIELD_NUMBER;
       hash = (53 * hash) + getPaymentPortalIdsList().hashCode();
+    }
+    if (hasFlowId()) {
+      hash = (37 * hash) + FLOW_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getFlowId().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -1275,6 +1329,7 @@ private static final long serialVersionUID = 0L;
         getStopOnTaskDepleteFieldBuilder();
         getAttachmentsFieldBuilder();
         getComplianceRuleSetIdFieldBuilder();
+        getFlowIdFieldBuilder();
       }
     }
     @java.lang.Override
@@ -1372,6 +1427,11 @@ private static final long serialVersionUID = 0L;
       }
       paymentPortalIds_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
+      flowId_ = null;
+      if (flowIdBuilder_ != null) {
+        flowIdBuilder_.dispose();
+        flowIdBuilder_ = null;
+      }
       return this;
     }
 
@@ -1521,6 +1581,12 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00020000) != 0)) {
         paymentPortalIds_.makeImmutable();
         result.paymentPortalIds_ = paymentPortalIds_;
+      }
+      if (((from_bitField0_ & 0x00040000) != 0)) {
+        result.flowId_ = flowIdBuilder_ == null
+            ? flowId_
+            : flowIdBuilder_.build();
+        to_bitField0_ |= 0x00008000;
       }
       result.bitField0_ |= to_bitField0_;
     }
@@ -1675,6 +1741,9 @@ private static final long serialVersionUID = 0L;
           paymentPortalIds_.addAll(other.paymentPortalIds_);
         }
         onChanged();
+      }
+      if (other.hasFlowId()) {
+        mergeFlowId(other.getFlowId());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -1839,6 +1908,13 @@ private static final long serialVersionUID = 0L;
               paymentPortalIds_.add(s);
               break;
             } // case 154
+            case 162: {
+              input.readMessage(
+                  getFlowIdFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00040000;
+              break;
+            } // case 162
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -4980,6 +5056,163 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00020000;
       onChanged();
       return this;
+    }
+
+    private com.tcn.cloud.api.api.commons.Int64Id flowId_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.Int64Id, com.tcn.cloud.api.api.commons.Int64Id.Builder, com.tcn.cloud.api.api.commons.Int64IdOrBuilder> flowIdBuilder_;
+    /**
+     * <pre>
+     * Flow Id
+     * </pre>
+     *
+     * <code>.api.commons.Int64Id flow_id = 20 [json_name = "flowId"];</code>
+     * @return Whether the flowId field is set.
+     */
+    public boolean hasFlowId() {
+      return ((bitField0_ & 0x00040000) != 0);
+    }
+    /**
+     * <pre>
+     * Flow Id
+     * </pre>
+     *
+     * <code>.api.commons.Int64Id flow_id = 20 [json_name = "flowId"];</code>
+     * @return The flowId.
+     */
+    public com.tcn.cloud.api.api.commons.Int64Id getFlowId() {
+      if (flowIdBuilder_ == null) {
+        return flowId_ == null ? com.tcn.cloud.api.api.commons.Int64Id.getDefaultInstance() : flowId_;
+      } else {
+        return flowIdBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Flow Id
+     * </pre>
+     *
+     * <code>.api.commons.Int64Id flow_id = 20 [json_name = "flowId"];</code>
+     */
+    public Builder setFlowId(com.tcn.cloud.api.api.commons.Int64Id value) {
+      if (flowIdBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        flowId_ = value;
+      } else {
+        flowIdBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00040000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Flow Id
+     * </pre>
+     *
+     * <code>.api.commons.Int64Id flow_id = 20 [json_name = "flowId"];</code>
+     */
+    public Builder setFlowId(
+        com.tcn.cloud.api.api.commons.Int64Id.Builder builderForValue) {
+      if (flowIdBuilder_ == null) {
+        flowId_ = builderForValue.build();
+      } else {
+        flowIdBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00040000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Flow Id
+     * </pre>
+     *
+     * <code>.api.commons.Int64Id flow_id = 20 [json_name = "flowId"];</code>
+     */
+    public Builder mergeFlowId(com.tcn.cloud.api.api.commons.Int64Id value) {
+      if (flowIdBuilder_ == null) {
+        if (((bitField0_ & 0x00040000) != 0) &&
+          flowId_ != null &&
+          flowId_ != com.tcn.cloud.api.api.commons.Int64Id.getDefaultInstance()) {
+          getFlowIdBuilder().mergeFrom(value);
+        } else {
+          flowId_ = value;
+        }
+      } else {
+        flowIdBuilder_.mergeFrom(value);
+      }
+      if (flowId_ != null) {
+        bitField0_ |= 0x00040000;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Flow Id
+     * </pre>
+     *
+     * <code>.api.commons.Int64Id flow_id = 20 [json_name = "flowId"];</code>
+     */
+    public Builder clearFlowId() {
+      bitField0_ = (bitField0_ & ~0x00040000);
+      flowId_ = null;
+      if (flowIdBuilder_ != null) {
+        flowIdBuilder_.dispose();
+        flowIdBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Flow Id
+     * </pre>
+     *
+     * <code>.api.commons.Int64Id flow_id = 20 [json_name = "flowId"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.Int64Id.Builder getFlowIdBuilder() {
+      bitField0_ |= 0x00040000;
+      onChanged();
+      return getFlowIdFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Flow Id
+     * </pre>
+     *
+     * <code>.api.commons.Int64Id flow_id = 20 [json_name = "flowId"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.Int64IdOrBuilder getFlowIdOrBuilder() {
+      if (flowIdBuilder_ != null) {
+        return flowIdBuilder_.getMessageOrBuilder();
+      } else {
+        return flowId_ == null ?
+            com.tcn.cloud.api.api.commons.Int64Id.getDefaultInstance() : flowId_;
+      }
+    }
+    /**
+     * <pre>
+     * Flow Id
+     * </pre>
+     *
+     * <code>.api.commons.Int64Id flow_id = 20 [json_name = "flowId"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.Int64Id, com.tcn.cloud.api.api.commons.Int64Id.Builder, com.tcn.cloud.api.api.commons.Int64IdOrBuilder> 
+        getFlowIdFieldBuilder() {
+      if (flowIdBuilder_ == null) {
+        flowIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.Int64Id, com.tcn.cloud.api.api.commons.Int64Id.Builder, com.tcn.cloud.api.api.commons.Int64IdOrBuilder>(
+                getFlowId(),
+                getParentForChildren(),
+                isClean());
+        flowId_ = null;
+      }
+      return flowIdBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
