@@ -244,6 +244,16 @@ public final class TicketProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_tickets_AssignTicketActionResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_tickets_ChangeTicketStatusRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_tickets_ChangeTicketStatusRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_tickets_ChangeTicketStatusResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_tickets_ChangeTicketStatusResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -351,12 +361,16 @@ public final class TicketProto {
       "d\030\001 \001(\010R\010isClosed\"I\n\031AssignTicketActionR" +
       "equest\022,\n\020ticket_action_id\030\001 \001(\003B\0020\001R\016ti" +
       "cketActionId\"=\n\032AssignTicketActionRespon" +
-      "se\022\037\n\013is_assigned\030\001 \001(\010R\nisAssignedB\247\001\n&" +
-      "com.tcn.cloud.api.api.v1alpha1.ticketsB\013" +
-      "TicketProtoP\001\242\002\003AVT\252\002\024Api.V1alpha1.Ticke" +
-      "ts\312\002\024Api\\V1alpha1\\Tickets\342\002 Api\\V1alpha1" +
-      "\\Tickets\\GPBMetadata\352\002\026Api::V1alpha1::Ti" +
-      "cketsb\006proto3"
+      "se\022\037\n\013is_assigned\030\001 \001(\010R\nisAssigned\"]\n\031C" +
+      "hangeTicketStatusRequest\022\037\n\tticket_id\030\001 " +
+      "\001(\003B\0020\001R\010ticketId\022\037\n\tstatus_id\030\002 \001(\003B\0020\001" +
+      "R\010statusId\"F\n\032ChangeTicketStatusResponse" +
+      "\022(\n\020is_status_edited\030\001 \001(\010R\016isStatusEdit" +
+      "edB\247\001\n&com.tcn.cloud.api.api.v1alpha1.ti" +
+      "cketsB\013TicketProtoP\001\242\002\003AVT\252\002\024Api.V1alpha" +
+      "1.Tickets\312\002\024Api\\V1alpha1\\Tickets\342\002 Api\\V" +
+      "1alpha1\\Tickets\\GPBMetadata\352\002\026Api::V1alp" +
+      "ha1::Ticketsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -641,6 +655,18 @@ public final class TicketProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_tickets_AssignTicketActionResponse_descriptor,
         new java.lang.String[] { "IsAssigned", });
+    internal_static_api_v1alpha1_tickets_ChangeTicketStatusRequest_descriptor =
+      getDescriptor().getMessageTypes().get(46);
+    internal_static_api_v1alpha1_tickets_ChangeTicketStatusRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_tickets_ChangeTicketStatusRequest_descriptor,
+        new java.lang.String[] { "TicketId", "StatusId", });
+    internal_static_api_v1alpha1_tickets_ChangeTicketStatusResponse_descriptor =
+      getDescriptor().getMessageTypes().get(47);
+    internal_static_api_v1alpha1_tickets_ChangeTicketStatusResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_tickets_ChangeTicketStatusResponse_descriptor,
+        new java.lang.String[] { "IsStatusEdited", });
     com.tcn.cloud.api.api.commons.TicketsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();

@@ -762,6 +762,37 @@ public final class TicketsGrpc {
     return getCreateTicketActionMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.tickets.ChangeTicketStatusRequest,
+      com.tcn.cloud.api.api.v1alpha1.tickets.ChangeTicketStatusResponse> getChangeTicketStatusMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ChangeTicketStatus",
+      requestType = com.tcn.cloud.api.api.v1alpha1.tickets.ChangeTicketStatusRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.tickets.ChangeTicketStatusResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.tickets.ChangeTicketStatusRequest,
+      com.tcn.cloud.api.api.v1alpha1.tickets.ChangeTicketStatusResponse> getChangeTicketStatusMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.tickets.ChangeTicketStatusRequest, com.tcn.cloud.api.api.v1alpha1.tickets.ChangeTicketStatusResponse> getChangeTicketStatusMethod;
+    if ((getChangeTicketStatusMethod = TicketsGrpc.getChangeTicketStatusMethod) == null) {
+      synchronized (TicketsGrpc.class) {
+        if ((getChangeTicketStatusMethod = TicketsGrpc.getChangeTicketStatusMethod) == null) {
+          TicketsGrpc.getChangeTicketStatusMethod = getChangeTicketStatusMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.tickets.ChangeTicketStatusRequest, com.tcn.cloud.api.api.v1alpha1.tickets.ChangeTicketStatusResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ChangeTicketStatus"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.tickets.ChangeTicketStatusRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.tickets.ChangeTicketStatusResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new TicketsMethodDescriptorSupplier("ChangeTicketStatus"))
+              .build();
+        }
+      }
+    }
+    return getChangeTicketStatusMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -1052,6 +1083,16 @@ public final class TicketsGrpc {
     default void createTicketAction(com.tcn.cloud.api.api.v1alpha1.tickets.CreateTicketActionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.CreateTicketActionResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateTicketActionMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Public method to change the Status of a ticket
+     * </pre>
+     */
+    default void changeTicketStatus(com.tcn.cloud.api.api.v1alpha1.tickets.ChangeTicketStatusRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.ChangeTicketStatusResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getChangeTicketStatusMethod(), responseObserver);
     }
   }
 
@@ -1352,6 +1393,17 @@ public final class TicketsGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateTicketActionMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Public method to change the Status of a ticket
+     * </pre>
+     */
+    public void changeTicketStatus(com.tcn.cloud.api.api.v1alpha1.tickets.ChangeTicketStatusRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.ChangeTicketStatusResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getChangeTicketStatusMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -1612,6 +1664,16 @@ public final class TicketsGrpc {
     public com.tcn.cloud.api.api.v1alpha1.tickets.CreateTicketActionResponse createTicketAction(com.tcn.cloud.api.api.v1alpha1.tickets.CreateTicketActionRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateTicketActionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Public method to change the Status of a ticket
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.tickets.ChangeTicketStatusResponse changeTicketStatus(com.tcn.cloud.api.api.v1alpha1.tickets.ChangeTicketStatusRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getChangeTicketStatusMethod(), getCallOptions(), request);
     }
   }
 
@@ -1898,6 +1960,17 @@ public final class TicketsGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateTicketActionMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Public method to change the Status of a ticket
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.tickets.ChangeTicketStatusResponse> changeTicketStatus(
+        com.tcn.cloud.api.api.v1alpha1.tickets.ChangeTicketStatusRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getChangeTicketStatusMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE_TICKET = 0;
@@ -1924,6 +1997,7 @@ public final class TicketsGrpc {
   private static final int METHODID_CLOSE_TICKET_ACTION = 21;
   private static final int METHODID_ASSIGN_TICKET_ACTION = 22;
   private static final int METHODID_CREATE_TICKET_ACTION = 23;
+  private static final int METHODID_CHANGE_TICKET_STATUS = 24;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -2037,6 +2111,10 @@ public final class TicketsGrpc {
         case METHODID_CREATE_TICKET_ACTION:
           serviceImpl.createTicketAction((com.tcn.cloud.api.api.v1alpha1.tickets.CreateTicketActionRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.CreateTicketActionResponse>) responseObserver);
+          break;
+        case METHODID_CHANGE_TICKET_STATUS:
+          serviceImpl.changeTicketStatus((com.tcn.cloud.api.api.v1alpha1.tickets.ChangeTicketStatusRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.ChangeTicketStatusResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -2224,6 +2302,13 @@ public final class TicketsGrpc {
               com.tcn.cloud.api.api.v1alpha1.tickets.CreateTicketActionRequest,
               com.tcn.cloud.api.api.v1alpha1.tickets.CreateTicketActionResponse>(
                 service, METHODID_CREATE_TICKET_ACTION)))
+        .addMethod(
+          getChangeTicketStatusMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.tickets.ChangeTicketStatusRequest,
+              com.tcn.cloud.api.api.v1alpha1.tickets.ChangeTicketStatusResponse>(
+                service, METHODID_CHANGE_TICKET_STATUS)))
         .build();
   }
 
@@ -2296,6 +2381,7 @@ public final class TicketsGrpc {
               .addMethod(getCloseTicketActionMethod())
               .addMethod(getAssignTicketActionMethod())
               .addMethod(getCreateTicketActionMethod())
+              .addMethod(getChangeTicketStatusMethod())
               .build();
         }
       }

@@ -22,7 +22,8 @@ private static final long serialVersionUID = 0L;
   private TicketAction() {
     ticketContext_ = "";
     assignee_ = "";
-    actionSkills_ = java.util.Collections.emptyList();
+    actionSkills_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   @java.lang.Override
@@ -278,63 +279,74 @@ private static final long serialVersionUID = 0L;
 
   public static final int ACTION_SKILLS_FIELD_NUMBER = 9;
   @SuppressWarnings("serial")
-  private java.util.List<com.tcn.cloud.api.api.commons.Skills> actionSkills_;
+  private com.google.protobuf.LazyStringArrayList actionSkills_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * Skills needed for the action to be completed
+   * For action we need only skill id and not mandatory/optional
    * </pre>
    *
-   * <code>repeated .api.commons.Skills action_skills = 9 [json_name = "actionSkills"];</code>
+   * <code>repeated string action_skills = 9 [json_name = "actionSkills"];</code>
+   * @return A list containing the actionSkills.
    */
-  @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.api.commons.Skills> getActionSkillsList() {
+  public com.google.protobuf.ProtocolStringList
+      getActionSkillsList() {
     return actionSkills_;
   }
   /**
    * <pre>
    * Skills needed for the action to be completed
+   * For action we need only skill id and not mandatory/optional
    * </pre>
    *
-   * <code>repeated .api.commons.Skills action_skills = 9 [json_name = "actionSkills"];</code>
+   * <code>repeated string action_skills = 9 [json_name = "actionSkills"];</code>
+   * @return The count of actionSkills.
    */
-  @java.lang.Override
-  public java.util.List<? extends com.tcn.cloud.api.api.commons.SkillsOrBuilder> 
-      getActionSkillsOrBuilderList() {
-    return actionSkills_;
-  }
-  /**
-   * <pre>
-   * Skills needed for the action to be completed
-   * </pre>
-   *
-   * <code>repeated .api.commons.Skills action_skills = 9 [json_name = "actionSkills"];</code>
-   */
-  @java.lang.Override
   public int getActionSkillsCount() {
     return actionSkills_.size();
   }
   /**
    * <pre>
    * Skills needed for the action to be completed
+   * For action we need only skill id and not mandatory/optional
    * </pre>
    *
-   * <code>repeated .api.commons.Skills action_skills = 9 [json_name = "actionSkills"];</code>
+   * <code>repeated string action_skills = 9 [json_name = "actionSkills"];</code>
+   * @param index The index of the element to return.
+   * @return The actionSkills at the given index.
    */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.Skills getActionSkills(int index) {
+  public java.lang.String getActionSkills(int index) {
     return actionSkills_.get(index);
   }
   /**
    * <pre>
    * Skills needed for the action to be completed
+   * For action we need only skill id and not mandatory/optional
    * </pre>
    *
-   * <code>repeated .api.commons.Skills action_skills = 9 [json_name = "actionSkills"];</code>
+   * <code>repeated string action_skills = 9 [json_name = "actionSkills"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the actionSkills at the given index.
+   */
+  public com.google.protobuf.ByteString
+      getActionSkillsBytes(int index) {
+    return actionSkills_.getByteString(index);
+  }
+
+  public static final int ACTION_SLA_ID_FIELD_NUMBER = 10;
+  private long actionSlaId_ = 0L;
+  /**
+   * <pre>
+   * SLA Id for the ACTION
+   * </pre>
+   *
+   * <code>int64 action_sla_id = 10 [json_name = "actionSlaId"];</code>
+   * @return The actionSlaId.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.SkillsOrBuilder getActionSkillsOrBuilder(
-      int index) {
-    return actionSkills_.get(index);
+  public long getActionSlaId() {
+    return actionSlaId_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -376,7 +388,10 @@ private static final long serialVersionUID = 0L;
       output.writeInt64(8, status_);
     }
     for (int i = 0; i < actionSkills_.size(); i++) {
-      output.writeMessage(9, actionSkills_.get(i));
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 9, actionSkills_.getRaw(i));
+    }
+    if (actionSlaId_ != 0L) {
+      output.writeInt64(10, actionSlaId_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -417,9 +432,17 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(8, status_);
     }
-    for (int i = 0; i < actionSkills_.size(); i++) {
+    {
+      int dataSize = 0;
+      for (int i = 0; i < actionSkills_.size(); i++) {
+        dataSize += computeStringSizeNoTag(actionSkills_.getRaw(i));
+      }
+      size += dataSize;
+      size += 1 * getActionSkillsList().size();
+    }
+    if (actionSlaId_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(9, actionSkills_.get(i));
+        .computeInt64Size(10, actionSlaId_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -460,6 +483,8 @@ private static final long serialVersionUID = 0L;
         != other.getStatus()) return false;
     if (!getActionSkillsList()
         .equals(other.getActionSkillsList())) return false;
+    if (getActionSlaId()
+        != other.getActionSlaId()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -499,6 +524,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + ACTION_SKILLS_FIELD_NUMBER;
       hash = (53 * hash) + getActionSkillsList().hashCode();
     }
+    hash = (37 * hash) + ACTION_SLA_ID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getActionSlaId());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -635,7 +663,6 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
         getStartDateFieldBuilder();
         getExpiryDateFieldBuilder();
-        getActionSkillsFieldBuilder();
       }
     }
     @java.lang.Override
@@ -658,13 +685,9 @@ private static final long serialVersionUID = 0L;
       }
       assignee_ = "";
       status_ = 0L;
-      if (actionSkillsBuilder_ == null) {
-        actionSkills_ = java.util.Collections.emptyList();
-      } else {
-        actionSkills_ = null;
-        actionSkillsBuilder_.clear();
-      }
-      bitField0_ = (bitField0_ & ~0x00000100);
+      actionSkills_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      actionSlaId_ = 0L;
       return this;
     }
 
@@ -691,22 +714,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.TicketAction buildPartial() {
       com.tcn.cloud.api.api.commons.TicketAction result = new com.tcn.cloud.api.api.commons.TicketAction(this);
-      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
-    }
-
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.commons.TicketAction result) {
-      if (actionSkillsBuilder_ == null) {
-        if (((bitField0_ & 0x00000100) != 0)) {
-          actionSkills_ = java.util.Collections.unmodifiableList(actionSkills_);
-          bitField0_ = (bitField0_ & ~0x00000100);
-        }
-        result.actionSkills_ = actionSkills_;
-      } else {
-        result.actionSkills_ = actionSkillsBuilder_.build();
-      }
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.commons.TicketAction result) {
@@ -741,6 +751,13 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.status_ = status_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        actionSkills_.makeImmutable();
+        result.actionSkills_ = actionSkills_;
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.actionSlaId_ = actionSlaId_;
       }
       result.bitField0_ |= to_bitField0_;
     }
@@ -817,31 +834,18 @@ private static final long serialVersionUID = 0L;
       if (other.getStatus() != 0L) {
         setStatus(other.getStatus());
       }
-      if (actionSkillsBuilder_ == null) {
-        if (!other.actionSkills_.isEmpty()) {
-          if (actionSkills_.isEmpty()) {
-            actionSkills_ = other.actionSkills_;
-            bitField0_ = (bitField0_ & ~0x00000100);
-          } else {
-            ensureActionSkillsIsMutable();
-            actionSkills_.addAll(other.actionSkills_);
-          }
-          onChanged();
+      if (!other.actionSkills_.isEmpty()) {
+        if (actionSkills_.isEmpty()) {
+          actionSkills_ = other.actionSkills_;
+          bitField0_ |= 0x00000100;
+        } else {
+          ensureActionSkillsIsMutable();
+          actionSkills_.addAll(other.actionSkills_);
         }
-      } else {
-        if (!other.actionSkills_.isEmpty()) {
-          if (actionSkillsBuilder_.isEmpty()) {
-            actionSkillsBuilder_.dispose();
-            actionSkillsBuilder_ = null;
-            actionSkills_ = other.actionSkills_;
-            bitField0_ = (bitField0_ & ~0x00000100);
-            actionSkillsBuilder_ = 
-              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getActionSkillsFieldBuilder() : null;
-          } else {
-            actionSkillsBuilder_.addAllMessages(other.actionSkills_);
-          }
-        }
+        onChanged();
+      }
+      if (other.getActionSlaId() != 0L) {
+        setActionSlaId(other.getActionSlaId());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -914,18 +918,16 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 64
             case 74: {
-              com.tcn.cloud.api.api.commons.Skills m =
-                  input.readMessage(
-                      com.tcn.cloud.api.api.commons.Skills.parser(),
-                      extensionRegistry);
-              if (actionSkillsBuilder_ == null) {
-                ensureActionSkillsIsMutable();
-                actionSkills_.add(m);
-              } else {
-                actionSkillsBuilder_.addMessage(m);
-              }
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureActionSkillsIsMutable();
+              actionSkills_.add(s);
               break;
             } // case 74
+            case 80: {
+              actionSlaId_ = input.readInt64();
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 80
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1617,316 +1619,204 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.util.List<com.tcn.cloud.api.api.commons.Skills> actionSkills_ =
-      java.util.Collections.emptyList();
+    private com.google.protobuf.LazyStringArrayList actionSkills_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureActionSkillsIsMutable() {
-      if (!((bitField0_ & 0x00000100) != 0)) {
-        actionSkills_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.Skills>(actionSkills_);
-        bitField0_ |= 0x00000100;
-       }
-    }
-
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.Skills, com.tcn.cloud.api.api.commons.Skills.Builder, com.tcn.cloud.api.api.commons.SkillsOrBuilder> actionSkillsBuilder_;
-
-    /**
-     * <pre>
-     * Skills needed for the action to be completed
-     * </pre>
-     *
-     * <code>repeated .api.commons.Skills action_skills = 9 [json_name = "actionSkills"];</code>
-     */
-    public java.util.List<com.tcn.cloud.api.api.commons.Skills> getActionSkillsList() {
-      if (actionSkillsBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(actionSkills_);
-      } else {
-        return actionSkillsBuilder_.getMessageList();
+      if (!actionSkills_.isModifiable()) {
+        actionSkills_ = new com.google.protobuf.LazyStringArrayList(actionSkills_);
       }
+      bitField0_ |= 0x00000100;
     }
     /**
      * <pre>
      * Skills needed for the action to be completed
+     * For action we need only skill id and not mandatory/optional
      * </pre>
      *
-     * <code>repeated .api.commons.Skills action_skills = 9 [json_name = "actionSkills"];</code>
+     * <code>repeated string action_skills = 9 [json_name = "actionSkills"];</code>
+     * @return A list containing the actionSkills.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getActionSkillsList() {
+      actionSkills_.makeImmutable();
+      return actionSkills_;
+    }
+    /**
+     * <pre>
+     * Skills needed for the action to be completed
+     * For action we need only skill id and not mandatory/optional
+     * </pre>
+     *
+     * <code>repeated string action_skills = 9 [json_name = "actionSkills"];</code>
+     * @return The count of actionSkills.
      */
     public int getActionSkillsCount() {
-      if (actionSkillsBuilder_ == null) {
-        return actionSkills_.size();
-      } else {
-        return actionSkillsBuilder_.getCount();
-      }
+      return actionSkills_.size();
     }
     /**
      * <pre>
      * Skills needed for the action to be completed
+     * For action we need only skill id and not mandatory/optional
      * </pre>
      *
-     * <code>repeated .api.commons.Skills action_skills = 9 [json_name = "actionSkills"];</code>
+     * <code>repeated string action_skills = 9 [json_name = "actionSkills"];</code>
+     * @param index The index of the element to return.
+     * @return The actionSkills at the given index.
      */
-    public com.tcn.cloud.api.api.commons.Skills getActionSkills(int index) {
-      if (actionSkillsBuilder_ == null) {
-        return actionSkills_.get(index);
-      } else {
-        return actionSkillsBuilder_.getMessage(index);
-      }
+    public java.lang.String getActionSkills(int index) {
+      return actionSkills_.get(index);
     }
     /**
      * <pre>
      * Skills needed for the action to be completed
+     * For action we need only skill id and not mandatory/optional
      * </pre>
      *
-     * <code>repeated .api.commons.Skills action_skills = 9 [json_name = "actionSkills"];</code>
+     * <code>repeated string action_skills = 9 [json_name = "actionSkills"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the actionSkills at the given index.
      */
-    public Builder setActionSkills(
-        int index, com.tcn.cloud.api.api.commons.Skills value) {
-      if (actionSkillsBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureActionSkillsIsMutable();
-        actionSkills_.set(index, value);
-        onChanged();
-      } else {
-        actionSkillsBuilder_.setMessage(index, value);
-      }
-      return this;
+    public com.google.protobuf.ByteString
+        getActionSkillsBytes(int index) {
+      return actionSkills_.getByteString(index);
     }
     /**
      * <pre>
      * Skills needed for the action to be completed
+     * For action we need only skill id and not mandatory/optional
      * </pre>
      *
-     * <code>repeated .api.commons.Skills action_skills = 9 [json_name = "actionSkills"];</code>
+     * <code>repeated string action_skills = 9 [json_name = "actionSkills"];</code>
+     * @param index The index to set the value at.
+     * @param value The actionSkills to set.
+     * @return This builder for chaining.
      */
     public Builder setActionSkills(
-        int index, com.tcn.cloud.api.api.commons.Skills.Builder builderForValue) {
-      if (actionSkillsBuilder_ == null) {
-        ensureActionSkillsIsMutable();
-        actionSkills_.set(index, builderForValue.build());
-        onChanged();
-      } else {
-        actionSkillsBuilder_.setMessage(index, builderForValue.build());
-      }
+        int index, java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureActionSkillsIsMutable();
+      actionSkills_.set(index, value);
+      bitField0_ |= 0x00000100;
+      onChanged();
       return this;
     }
     /**
      * <pre>
      * Skills needed for the action to be completed
+     * For action we need only skill id and not mandatory/optional
      * </pre>
      *
-     * <code>repeated .api.commons.Skills action_skills = 9 [json_name = "actionSkills"];</code>
-     */
-    public Builder addActionSkills(com.tcn.cloud.api.api.commons.Skills value) {
-      if (actionSkillsBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureActionSkillsIsMutable();
-        actionSkills_.add(value);
-        onChanged();
-      } else {
-        actionSkillsBuilder_.addMessage(value);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * Skills needed for the action to be completed
-     * </pre>
-     *
-     * <code>repeated .api.commons.Skills action_skills = 9 [json_name = "actionSkills"];</code>
+     * <code>repeated string action_skills = 9 [json_name = "actionSkills"];</code>
+     * @param value The actionSkills to add.
+     * @return This builder for chaining.
      */
     public Builder addActionSkills(
-        int index, com.tcn.cloud.api.api.commons.Skills value) {
-      if (actionSkillsBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureActionSkillsIsMutable();
-        actionSkills_.add(index, value);
-        onChanged();
-      } else {
-        actionSkillsBuilder_.addMessage(index, value);
-      }
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureActionSkillsIsMutable();
+      actionSkills_.add(value);
+      bitField0_ |= 0x00000100;
+      onChanged();
       return this;
     }
     /**
      * <pre>
      * Skills needed for the action to be completed
+     * For action we need only skill id and not mandatory/optional
      * </pre>
      *
-     * <code>repeated .api.commons.Skills action_skills = 9 [json_name = "actionSkills"];</code>
-     */
-    public Builder addActionSkills(
-        com.tcn.cloud.api.api.commons.Skills.Builder builderForValue) {
-      if (actionSkillsBuilder_ == null) {
-        ensureActionSkillsIsMutable();
-        actionSkills_.add(builderForValue.build());
-        onChanged();
-      } else {
-        actionSkillsBuilder_.addMessage(builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * Skills needed for the action to be completed
-     * </pre>
-     *
-     * <code>repeated .api.commons.Skills action_skills = 9 [json_name = "actionSkills"];</code>
-     */
-    public Builder addActionSkills(
-        int index, com.tcn.cloud.api.api.commons.Skills.Builder builderForValue) {
-      if (actionSkillsBuilder_ == null) {
-        ensureActionSkillsIsMutable();
-        actionSkills_.add(index, builderForValue.build());
-        onChanged();
-      } else {
-        actionSkillsBuilder_.addMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * Skills needed for the action to be completed
-     * </pre>
-     *
-     * <code>repeated .api.commons.Skills action_skills = 9 [json_name = "actionSkills"];</code>
+     * <code>repeated string action_skills = 9 [json_name = "actionSkills"];</code>
+     * @param values The actionSkills to add.
+     * @return This builder for chaining.
      */
     public Builder addAllActionSkills(
-        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.Skills> values) {
-      if (actionSkillsBuilder_ == null) {
-        ensureActionSkillsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, actionSkills_);
-        onChanged();
-      } else {
-        actionSkillsBuilder_.addAllMessages(values);
-      }
+        java.lang.Iterable<java.lang.String> values) {
+      ensureActionSkillsIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, actionSkills_);
+      bitField0_ |= 0x00000100;
+      onChanged();
       return this;
     }
     /**
      * <pre>
      * Skills needed for the action to be completed
+     * For action we need only skill id and not mandatory/optional
      * </pre>
      *
-     * <code>repeated .api.commons.Skills action_skills = 9 [json_name = "actionSkills"];</code>
+     * <code>repeated string action_skills = 9 [json_name = "actionSkills"];</code>
+     * @return This builder for chaining.
      */
     public Builder clearActionSkills() {
-      if (actionSkillsBuilder_ == null) {
-        actionSkills_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000100);
-        onChanged();
-      } else {
-        actionSkillsBuilder_.clear();
-      }
+      actionSkills_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000100);;
+      onChanged();
       return this;
     }
     /**
      * <pre>
      * Skills needed for the action to be completed
+     * For action we need only skill id and not mandatory/optional
      * </pre>
      *
-     * <code>repeated .api.commons.Skills action_skills = 9 [json_name = "actionSkills"];</code>
+     * <code>repeated string action_skills = 9 [json_name = "actionSkills"];</code>
+     * @param value The bytes of the actionSkills to add.
+     * @return This builder for chaining.
      */
-    public Builder removeActionSkills(int index) {
-      if (actionSkillsBuilder_ == null) {
-        ensureActionSkillsIsMutable();
-        actionSkills_.remove(index);
-        onChanged();
-      } else {
-        actionSkillsBuilder_.remove(index);
-      }
+    public Builder addActionSkillsBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      ensureActionSkillsIsMutable();
+      actionSkills_.add(value);
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+
+    private long actionSlaId_ ;
+    /**
+     * <pre>
+     * SLA Id for the ACTION
+     * </pre>
+     *
+     * <code>int64 action_sla_id = 10 [json_name = "actionSlaId"];</code>
+     * @return The actionSlaId.
+     */
+    @java.lang.Override
+    public long getActionSlaId() {
+      return actionSlaId_;
+    }
+    /**
+     * <pre>
+     * SLA Id for the ACTION
+     * </pre>
+     *
+     * <code>int64 action_sla_id = 10 [json_name = "actionSlaId"];</code>
+     * @param value The actionSlaId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setActionSlaId(long value) {
+
+      actionSlaId_ = value;
+      bitField0_ |= 0x00000200;
+      onChanged();
       return this;
     }
     /**
      * <pre>
-     * Skills needed for the action to be completed
+     * SLA Id for the ACTION
      * </pre>
      *
-     * <code>repeated .api.commons.Skills action_skills = 9 [json_name = "actionSkills"];</code>
+     * <code>int64 action_sla_id = 10 [json_name = "actionSlaId"];</code>
+     * @return This builder for chaining.
      */
-    public com.tcn.cloud.api.api.commons.Skills.Builder getActionSkillsBuilder(
-        int index) {
-      return getActionSkillsFieldBuilder().getBuilder(index);
-    }
-    /**
-     * <pre>
-     * Skills needed for the action to be completed
-     * </pre>
-     *
-     * <code>repeated .api.commons.Skills action_skills = 9 [json_name = "actionSkills"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.SkillsOrBuilder getActionSkillsOrBuilder(
-        int index) {
-      if (actionSkillsBuilder_ == null) {
-        return actionSkills_.get(index);  } else {
-        return actionSkillsBuilder_.getMessageOrBuilder(index);
-      }
-    }
-    /**
-     * <pre>
-     * Skills needed for the action to be completed
-     * </pre>
-     *
-     * <code>repeated .api.commons.Skills action_skills = 9 [json_name = "actionSkills"];</code>
-     */
-    public java.util.List<? extends com.tcn.cloud.api.api.commons.SkillsOrBuilder> 
-         getActionSkillsOrBuilderList() {
-      if (actionSkillsBuilder_ != null) {
-        return actionSkillsBuilder_.getMessageOrBuilderList();
-      } else {
-        return java.util.Collections.unmodifiableList(actionSkills_);
-      }
-    }
-    /**
-     * <pre>
-     * Skills needed for the action to be completed
-     * </pre>
-     *
-     * <code>repeated .api.commons.Skills action_skills = 9 [json_name = "actionSkills"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.Skills.Builder addActionSkillsBuilder() {
-      return getActionSkillsFieldBuilder().addBuilder(
-          com.tcn.cloud.api.api.commons.Skills.getDefaultInstance());
-    }
-    /**
-     * <pre>
-     * Skills needed for the action to be completed
-     * </pre>
-     *
-     * <code>repeated .api.commons.Skills action_skills = 9 [json_name = "actionSkills"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.Skills.Builder addActionSkillsBuilder(
-        int index) {
-      return getActionSkillsFieldBuilder().addBuilder(
-          index, com.tcn.cloud.api.api.commons.Skills.getDefaultInstance());
-    }
-    /**
-     * <pre>
-     * Skills needed for the action to be completed
-     * </pre>
-     *
-     * <code>repeated .api.commons.Skills action_skills = 9 [json_name = "actionSkills"];</code>
-     */
-    public java.util.List<com.tcn.cloud.api.api.commons.Skills.Builder> 
-         getActionSkillsBuilderList() {
-      return getActionSkillsFieldBuilder().getBuilderList();
-    }
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.Skills, com.tcn.cloud.api.api.commons.Skills.Builder, com.tcn.cloud.api.api.commons.SkillsOrBuilder> 
-        getActionSkillsFieldBuilder() {
-      if (actionSkillsBuilder_ == null) {
-        actionSkillsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.Skills, com.tcn.cloud.api.api.commons.Skills.Builder, com.tcn.cloud.api.api.commons.SkillsOrBuilder>(
-                actionSkills_,
-                ((bitField0_ & 0x00000100) != 0),
-                getParentForChildren(),
-                isClean());
-        actionSkills_ = null;
-      }
-      return actionSkillsBuilder_;
+    public Builder clearActionSlaId() {
+      bitField0_ = (bitField0_ & ~0x00000200);
+      actionSlaId_ = 0L;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

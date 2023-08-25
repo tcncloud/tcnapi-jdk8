@@ -123,7 +123,7 @@ public final class TicketsProto {
       "cket_sla\030\021 \003(\0132\020.api.commons.SlaR\tticket" +
       "Sla\022\032\n\010assignee\030\022 \001(\tR\010assignee\022>\n\rticke" +
       "t_action\030\023 \003(\0132\031.api.commons.TicketActio" +
-      "nR\014ticketAction\"\213\003\n\014TicketAction\022,\n\020tick" +
+      "nR\014ticketAction\"\232\003\n\014TicketAction\022,\n\020tick" +
       "et_action_id\030\001 \001(\003B\0020\001R\016ticketActionId\022\037" +
       "\n\taction_id\030\002 \001(\003B\0020\001R\010actionId\022%\n\016ticke" +
       "t_context\030\003 \001(\tR\rticketContext\022\037\n\tticket" +
@@ -131,62 +131,62 @@ public final class TicketsProto {
       "\001(\0132\032.google.protobuf.TimestampR\tstartDa" +
       "te\022;\n\013expiry_date\030\006 \001(\0132\032.google.protobu" +
       "f.TimestampR\nexpiryDate\022\032\n\010assignee\030\007 \001(" +
-      "\tR\010assignee\022\026\n\006status\030\010 \001(\003R\006status\0228\n\ra" +
-      "ction_skills\030\t \003(\0132\023.api.commons.SkillsR" +
-      "\014actionSkills\"4\n\010Metadata\022\022\n\004name\030\001 \001(\tR" +
-      "\004name\022\024\n\005value\030\002 \001(\tR\005value\"F\n\006Skills\022\031\n" +
-      "\010skill_id\030\001 \001(\tR\007skillId\022!\n\014is_preferred" +
-      "\030\002 \001(\010R\013isPreferred\"h\n\003Sla\022\'\n\rcondition_" +
-      "sid\030\001 \001(\003B\0020\001R\014conditionSid\022\033\n\007sla_sid\030\002" +
-      " \001(\003B\0020\001R\006slaSid\022\033\n\007sla_min\030\003 \001(\003B\0020\001R\006s" +
-      "laMin\"\373\001\n\007Comment\022#\n\013comment_sid\030\001 \001(\003B\002" +
-      "0\001R\ncommentSid\022!\n\nticket_sid\030\002 \001(\003B\0020\001R\t" +
-      "ticketSid\022\030\n\007comment\030\003 \001(\tR\007comment\022\"\n\rc" +
-      "reated_by_id\030\004 \001(\tR\013createdById\022&\n\017creat" +
-      "ed_by_name\030\005 \001(\tR\rcreatedByName\022B\n\017creat" +
-      "ed_by_date\030\006 \001(\0132\032.google.protobuf.Times" +
-      "tampR\rcreatedByDate\"\247\001\n\013CloseTicket\022!\n\nt" +
-      "icket_sid\030\001 \001(\003B\0020\001R\tticketSid\022\026\n\006status" +
-      "\030\002 \001(\003R\006status\022\030\n\007comment\030\003 \001(\tR\007comment" +
-      "\022\037\n\013from_status\030\004 \001(\003R\nfromStatus\022\"\n\rcre" +
-      "ated_by_id\030\005 \001(\tR\013createdById\"&\n\014Confirm" +
-      "Close\022\026\n\006status\030\001 \001(\003R\006status\"\340\001\n\rTicket" +
-      "Project\022.\n\021ticket_project_id\030\001 \001(\003B\0020\001R\017" +
-      "ticketProjectId\022\025\n\006org_id\030\002 \001(\tR\005orgId\022#" +
-      "\n\013project_sid\030\003 \001(\003B\0020\001R\nprojectSid\022!\n\014p" +
-      "roject_code\030\004 \001(\tR\013projectCode\022#\n\rprojec" +
-      "t_title\030\005 \001(\tR\014projectTitle\022\033\n\tis_active" +
-      "\030\006 \001(\010R\010isActive\"\227\001\n\tTicketSla\022\033\n\007sla_si" +
-      "d\030\001 \001(\003B\0020\001R\006slaSid\022\022\n\004name\030\002 \001(\tR\004name\022" +
-      " \n\013description\030\003 \001(\tR\013description\022\032\n\010int" +
-      "erval\030\004 \001(\003R\010interval\022\033\n\tis_active\030\005 \001(\003" +
-      "R\010isActive\"m\n\rSlaConditions\022.\n\021sla_condi" +
-      "tion_sid\030\001 \001(\003B\0020\001R\017slaConditionSid\022,\n\022s" +
-      "la_condition_name\030\002 \001(\tR\020slaConditionNam" +
-      "e\"\324\001\n\014ReplyComment\022#\n\013comment_sid\030\001 \001(\003B" +
-      "\0020\001R\ncommentSid\022!\n\nticket_sid\030\002 \001(\003B\0020\001R" +
-      "\tticketSid\022\024\n\005reply\030\003 \001(\tR\005reply\022\"\n\rcrea" +
-      "ted_by_id\030\004 \001(\tR\013createdById\022B\n\017created_" +
-      "by_date\030\005 \001(\0132\032.google.protobuf.Timestam" +
-      "pR\rcreatedByDate\"4\n\023ConfirmReplyComment\022" +
-      "\035\n\nis_created\030\001 \001(\010R\tisCreated\"\241\002\n\016Ticke" +
-      "tAuditLog\0228\n\031ticket_audit_event_log_id\030\001" +
-      " \001(\tR\025ticketAuditEventLogId\022\025\n\006org_id\030\002 " +
-      "\001(\tR\005orgId\022\024\n\005event\030\003 \001(\tR\005event\022!\n\ntick" +
-      "et_sid\030\004 \001(\003B\0020\001R\tticketSid\022\035\n\nevent_typ" +
-      "e\030\005 \001(\tR\teventType\022\"\n\rcreated_by_id\030\006 \001(" +
-      "\tR\013createdById\022B\n\017created_by_date\030\007 \001(\0132" +
-      "\032.google.protobuf.TimestampR\rcreatedByDa" +
-      "te\"j\n\nEditTicket\022!\n\nticket_sid\030\001 \001(\003B\0020\001" +
-      "R\tticketSid\0229\n\nedit_value\030\002 \001(\0132\032.api.co" +
-      "mmons.EditAttributeR\teditValue\"}\n\rEditAt" +
-      "tribute\022\035\n\010col_desc\030\001 \001(\003B\0020\001R\007colDesc\022\031" +
-      "\n\010from_val\030\002 \001(\tR\007fromVal\022\025\n\006to_val\030\003 \001(" +
-      "\tR\005toVal\022\033\n\tis_edited\030\004 \001(\010R\010isEditedBz\n" +
-      "\035com.tcn.cloud.api.api.commonsB\014TicketsP" +
-      "rotoP\001\242\002\003ACX\252\002\013Api.Commons\312\002\013Api\\Commons" +
-      "\342\002\027Api\\Commons\\GPBMetadata\352\002\014Api::Common" +
-      "sb\006proto3"
+      "\tR\010assignee\022\026\n\006status\030\010 \001(\003R\006status\022#\n\ra" +
+      "ction_skills\030\t \003(\tR\014actionSkills\022\"\n\racti" +
+      "on_sla_id\030\n \001(\003R\013actionSlaId\"4\n\010Metadata" +
+      "\022\022\n\004name\030\001 \001(\tR\004name\022\024\n\005value\030\002 \001(\tR\005val" +
+      "ue\"F\n\006Skills\022\031\n\010skill_id\030\001 \001(\tR\007skillId\022" +
+      "!\n\014is_preferred\030\002 \001(\010R\013isPreferred\"h\n\003Sl" +
+      "a\022\'\n\rcondition_sid\030\001 \001(\003B\0020\001R\014conditionS" +
+      "id\022\033\n\007sla_sid\030\002 \001(\003B\0020\001R\006slaSid\022\033\n\007sla_m" +
+      "in\030\003 \001(\003B\0020\001R\006slaMin\"\373\001\n\007Comment\022#\n\013comm" +
+      "ent_sid\030\001 \001(\003B\0020\001R\ncommentSid\022!\n\nticket_" +
+      "sid\030\002 \001(\003B\0020\001R\tticketSid\022\030\n\007comment\030\003 \001(" +
+      "\tR\007comment\022\"\n\rcreated_by_id\030\004 \001(\tR\013creat" +
+      "edById\022&\n\017created_by_name\030\005 \001(\tR\rcreated" +
+      "ByName\022B\n\017created_by_date\030\006 \001(\0132\032.google" +
+      ".protobuf.TimestampR\rcreatedByDate\"\247\001\n\013C" +
+      "loseTicket\022!\n\nticket_sid\030\001 \001(\003B\0020\001R\ttick" +
+      "etSid\022\026\n\006status\030\002 \001(\003R\006status\022\030\n\007comment" +
+      "\030\003 \001(\tR\007comment\022\037\n\013from_status\030\004 \001(\003R\nfr" +
+      "omStatus\022\"\n\rcreated_by_id\030\005 \001(\tR\013created" +
+      "ById\"&\n\014ConfirmClose\022\026\n\006status\030\001 \001(\003R\006st" +
+      "atus\"\340\001\n\rTicketProject\022.\n\021ticket_project" +
+      "_id\030\001 \001(\003B\0020\001R\017ticketProjectId\022\025\n\006org_id" +
+      "\030\002 \001(\tR\005orgId\022#\n\013project_sid\030\003 \001(\003B\0020\001R\n" +
+      "projectSid\022!\n\014project_code\030\004 \001(\tR\013projec" +
+      "tCode\022#\n\rproject_title\030\005 \001(\tR\014projectTit" +
+      "le\022\033\n\tis_active\030\006 \001(\010R\010isActive\"\227\001\n\tTick" +
+      "etSla\022\033\n\007sla_sid\030\001 \001(\003B\0020\001R\006slaSid\022\022\n\004na" +
+      "me\030\002 \001(\tR\004name\022 \n\013description\030\003 \001(\tR\013des" +
+      "cription\022\032\n\010interval\030\004 \001(\003R\010interval\022\033\n\t" +
+      "is_active\030\005 \001(\003R\010isActive\"m\n\rSlaConditio" +
+      "ns\022.\n\021sla_condition_sid\030\001 \001(\003B\0020\001R\017slaCo" +
+      "nditionSid\022,\n\022sla_condition_name\030\002 \001(\tR\020" +
+      "slaConditionName\"\324\001\n\014ReplyComment\022#\n\013com" +
+      "ment_sid\030\001 \001(\003B\0020\001R\ncommentSid\022!\n\nticket" +
+      "_sid\030\002 \001(\003B\0020\001R\tticketSid\022\024\n\005reply\030\003 \001(\t" +
+      "R\005reply\022\"\n\rcreated_by_id\030\004 \001(\tR\013createdB" +
+      "yId\022B\n\017created_by_date\030\005 \001(\0132\032.google.pr" +
+      "otobuf.TimestampR\rcreatedByDate\"4\n\023Confi" +
+      "rmReplyComment\022\035\n\nis_created\030\001 \001(\010R\tisCr" +
+      "eated\"\241\002\n\016TicketAuditLog\0228\n\031ticket_audit" +
+      "_event_log_id\030\001 \001(\tR\025ticketAuditEventLog" +
+      "Id\022\025\n\006org_id\030\002 \001(\tR\005orgId\022\024\n\005event\030\003 \001(\t" +
+      "R\005event\022!\n\nticket_sid\030\004 \001(\003B\0020\001R\tticketS" +
+      "id\022\035\n\nevent_type\030\005 \001(\tR\teventType\022\"\n\rcre" +
+      "ated_by_id\030\006 \001(\tR\013createdById\022B\n\017created" +
+      "_by_date\030\007 \001(\0132\032.google.protobuf.Timesta" +
+      "mpR\rcreatedByDate\"j\n\nEditTicket\022!\n\nticke" +
+      "t_sid\030\001 \001(\003B\0020\001R\tticketSid\0229\n\nedit_value" +
+      "\030\002 \001(\0132\032.api.commons.EditAttributeR\tedit" +
+      "Value\"}\n\rEditAttribute\022\035\n\010col_desc\030\001 \001(\003" +
+      "B\0020\001R\007colDesc\022\031\n\010from_val\030\002 \001(\tR\007fromVal" +
+      "\022\025\n\006to_val\030\003 \001(\tR\005toVal\022\033\n\tis_edited\030\004 \001" +
+      "(\010R\010isEditedBz\n\035com.tcn.cloud.api.api.co" +
+      "mmonsB\014TicketsProtoP\001\242\002\003ACX\252\002\013Api.Common" +
+      "s\312\002\013Api\\Commons\342\002\027Api\\Commons\\GPBMetadat" +
+      "a\352\002\014Api::Commonsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -204,7 +204,7 @@ public final class TicketsProto {
     internal_static_api_commons_TicketAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_TicketAction_descriptor,
-        new java.lang.String[] { "TicketActionId", "ActionId", "TicketContext", "TicketId", "StartDate", "ExpiryDate", "Assignee", "Status", "ActionSkills", });
+        new java.lang.String[] { "TicketActionId", "ActionId", "TicketContext", "TicketId", "StartDate", "ExpiryDate", "Assignee", "Status", "ActionSkills", "ActionSlaId", });
     internal_static_api_commons_Metadata_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_api_commons_Metadata_fieldAccessorTable = new

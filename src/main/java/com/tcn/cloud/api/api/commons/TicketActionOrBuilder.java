@@ -144,44 +144,55 @@ public interface TicketActionOrBuilder extends
   /**
    * <pre>
    * Skills needed for the action to be completed
+   * For action we need only skill id and not mandatory/optional
    * </pre>
    *
-   * <code>repeated .api.commons.Skills action_skills = 9 [json_name = "actionSkills"];</code>
+   * <code>repeated string action_skills = 9 [json_name = "actionSkills"];</code>
+   * @return A list containing the actionSkills.
    */
-  java.util.List<com.tcn.cloud.api.api.commons.Skills> 
+  java.util.List<java.lang.String>
       getActionSkillsList();
   /**
    * <pre>
    * Skills needed for the action to be completed
+   * For action we need only skill id and not mandatory/optional
    * </pre>
    *
-   * <code>repeated .api.commons.Skills action_skills = 9 [json_name = "actionSkills"];</code>
-   */
-  com.tcn.cloud.api.api.commons.Skills getActionSkills(int index);
-  /**
-   * <pre>
-   * Skills needed for the action to be completed
-   * </pre>
-   *
-   * <code>repeated .api.commons.Skills action_skills = 9 [json_name = "actionSkills"];</code>
+   * <code>repeated string action_skills = 9 [json_name = "actionSkills"];</code>
+   * @return The count of actionSkills.
    */
   int getActionSkillsCount();
   /**
    * <pre>
    * Skills needed for the action to be completed
+   * For action we need only skill id and not mandatory/optional
    * </pre>
    *
-   * <code>repeated .api.commons.Skills action_skills = 9 [json_name = "actionSkills"];</code>
+   * <code>repeated string action_skills = 9 [json_name = "actionSkills"];</code>
+   * @param index The index of the element to return.
+   * @return The actionSkills at the given index.
    */
-  java.util.List<? extends com.tcn.cloud.api.api.commons.SkillsOrBuilder> 
-      getActionSkillsOrBuilderList();
+  java.lang.String getActionSkills(int index);
   /**
    * <pre>
    * Skills needed for the action to be completed
+   * For action we need only skill id and not mandatory/optional
    * </pre>
    *
-   * <code>repeated .api.commons.Skills action_skills = 9 [json_name = "actionSkills"];</code>
+   * <code>repeated string action_skills = 9 [json_name = "actionSkills"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the actionSkills at the given index.
    */
-  com.tcn.cloud.api.api.commons.SkillsOrBuilder getActionSkillsOrBuilder(
-      int index);
+  com.google.protobuf.ByteString
+      getActionSkillsBytes(int index);
+
+  /**
+   * <pre>
+   * SLA Id for the ACTION
+   * </pre>
+   *
+   * <code>int64 action_sla_id = 10 [json_name = "actionSlaId"];</code>
+   * @return The actionSlaId.
+   */
+  long getActionSlaId();
 }
