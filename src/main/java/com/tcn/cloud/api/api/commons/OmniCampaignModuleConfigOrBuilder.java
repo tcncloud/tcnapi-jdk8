@@ -540,31 +540,4 @@ public interface OmniCampaignModuleConfigOrBuilder extends
    */
   com.google.protobuf.ByteString
       getPaymentPortalIdsBytes(int index);
-
-  /**
-   * <pre>
-   * Flow Id
-   * </pre>
-   *
-   * <code>.api.commons.Int64Id flow_id = 20 [json_name = "flowId"];</code>
-   * @return Whether the flowId field is set.
-   */
-  boolean hasFlowId();
-  /**
-   * <pre>
-   * Flow Id
-   * </pre>
-   *
-   * <code>.api.commons.Int64Id flow_id = 20 [json_name = "flowId"];</code>
-   * @return The flowId.
-   */
-  com.tcn.cloud.api.api.commons.Int64Id getFlowId();
-  /**
-   * <pre>
-   * Flow Id
-   * </pre>
-   *
-   * <code>.api.commons.Int64Id flow_id = 20 [json_name = "flowId"];</code>
-   */
-  com.tcn.cloud.api.api.commons.Int64IdOrBuilder getFlowIdOrBuilder();
 }
