@@ -1599,6 +1599,37 @@ public final class WFMGrpc {
     return getUpdateNonSkillActivityMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivitiesReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivitiesRes> getListNonSkillActivitiesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListNonSkillActivities",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivitiesReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivitiesRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivitiesReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivitiesRes> getListNonSkillActivitiesMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivitiesReq, com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivitiesRes> getListNonSkillActivitiesMethod;
+    if ((getListNonSkillActivitiesMethod = WFMGrpc.getListNonSkillActivitiesMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getListNonSkillActivitiesMethod = WFMGrpc.getListNonSkillActivitiesMethod) == null) {
+          WFMGrpc.getListNonSkillActivitiesMethod = getListNonSkillActivitiesMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivitiesReq, com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivitiesRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListNonSkillActivities"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivitiesReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivitiesRes.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListNonSkillActivities"))
+              .build();
+        }
+      }
+    }
+    return getListNonSkillActivitiesMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivityAssociationsReq,
       com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivityAssociationsRes> getListNonSkillActivityAssociationsMethod;
 
@@ -3118,6 +3149,37 @@ public final class WFMGrpc {
     return getListDraftSchedulesMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ClearScheduleReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ClearScheduleRes> getClearScheduleMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ClearSchedule",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.ClearScheduleReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.ClearScheduleRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ClearScheduleReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ClearScheduleRes> getClearScheduleMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ClearScheduleReq, com.tcn.cloud.api.api.v1alpha1.wfm.ClearScheduleRes> getClearScheduleMethod;
+    if ((getClearScheduleMethod = WFMGrpc.getClearScheduleMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getClearScheduleMethod = WFMGrpc.getClearScheduleMethod) == null) {
+          WFMGrpc.getClearScheduleMethod = getClearScheduleMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ClearScheduleReq, com.tcn.cloud.api.api.v1alpha1.wfm.ClearScheduleRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ClearSchedule"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ClearScheduleReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ClearScheduleRes.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ClearSchedule"))
+              .build();
+        }
+      }
+    }
+    return getClearScheduleMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteDraftScheduleReq,
       com.tcn.cloud.api.api.v1alpha1.wfm.DeleteDraftScheduleRes> getDeleteDraftScheduleMethod;
 
@@ -3147,6 +3209,37 @@ public final class WFMGrpc {
       }
     }
     return getDeleteDraftScheduleMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidRes> getListShiftInstancesBySidMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListShiftInstancesBySid",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidRes> getListShiftInstancesBySidMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidReq, com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidRes> getListShiftInstancesBySidMethod;
+    if ((getListShiftInstancesBySidMethod = WFMGrpc.getListShiftInstancesBySidMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getListShiftInstancesBySidMethod = WFMGrpc.getListShiftInstancesBySidMethod) == null) {
+          WFMGrpc.getListShiftInstancesBySidMethod = getListShiftInstancesBySidMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidReq, com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListShiftInstancesBySid"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidRes.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListShiftInstancesBySid"))
+              .build();
+        }
+      }
+    }
+    return getListShiftInstancesBySidMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CopyScheduleToScheduleReq,
@@ -4520,6 +4613,20 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Lists the non skill activities that belong to the org sending the request.
+     * Required permissions:
+     *   NONE
+     * Errors:.
+     *   - grpc.Internal: error occurs when listing the activites.
+     * </pre>
+     */
+    default void listNonSkillActivities(com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivitiesReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivitiesRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListNonSkillActivitiesMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Lists the IDs of non skill activities that belong to the org sending the request which have the given &#64;relationship_type with the &#64;associated_entity.
      * Required permissions:
      *   NONE
@@ -5413,6 +5520,32 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Clears shift instances from the &#64;schedule_selector for the org sending the request.
+     * If &#64;node_selector is set, only shifts related to the given &#64;node_selector will be cleared.
+     * If &#64;node_selector is not set, all shifts on the &#64;schedule_selector may be cleared, regardless of the shift template they are associated with.
+     * If &#64;datetime_range is set, only the shifts overlapping the &#64;datetime_range will be cleared.
+     * If &#64;datetime_range is not set, all shifts on the schedule will be considered in range to be deleted and &#64;invert_datetime_range and &#64;start_datetimes_only must be set to false.
+     * If &#64;invert_datetime_range is set to true, the shifts overlapping the range before and after the provided &#64;datetime_range will be deleted.
+     * If &#64;invert_datetime_range is set to false, the provided &#64;datetime_range will be used.
+     * If &#64;start_datetimes_only is set to true, deletes the shifts that start within the &#64;datetime range, or start before or after &#64;datetime_range if &#64;invert_datetime_range is true.
+     * If &#64;start_datetimes_only is set to false, deletes the shifts that overlap with the &#64;datetime range, or overlap the range before or after &#64;datetime_range if &#64;invert_datetime_range is true.
+     * If &#64;delete_locked is set to true, both locked and unlocked shifts will be cleared.
+     * If &#64;delete_locked is set to false, only shifts with &#64;is_locked set to false may be cleared.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;node_selector, &#64;schedule_selector, or &#64;datetime_range in the request are invalid.
+     *   - grpc.NotFound: the draft schedule with the given &#64;schedule_selector doesn't exist.
+     *   - grpc.Internal: error occurs when removing the shifts from the schedule.
+     * </pre>
+     */
+    default void clearSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.ClearScheduleReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ClearScheduleRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getClearScheduleMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Deletes a draft schedule with the corresponding &#64;draft_schedule_sid for the org sending the request.
      * It also deletes all of its shift instances and segments.
      * Required permissions:
@@ -5426,6 +5559,27 @@ public final class WFMGrpc {
     default void deleteDraftSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteDraftScheduleReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteDraftScheduleRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteDraftScheduleMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Lists the shift instances with the corresponding &#64;shift_instance_sids for the org sending the request.
+     * If &#64;include_shift_template is set to true then the related shift template for the shift instances will be returned in the shift template field.
+     * If &#64;include_shift_segments is set to true then the related shift segments for the shift instances will be returned in the shift segments field.
+     * If &#64;include_scheduling_activity is set to true then the related scheduling activity for the shift segment will be returned in the scheduling activity field.
+     * &#64;include_shift_segments must be true to take effect.
+     * If &#64;include_activity is set to true then the related non skill activity for the scheduling activity will be returned in the scheduling
+     * activities member non skill activity field. &#64;include_scheduling_activity must be true to take effect.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;org_id or &#64;shift_instance_sids in the request are invalid.
+     *   - grpc.Internal: error occurs when listing the shift instances or their shift segments.
+     * </pre>
+     */
+    default void listShiftInstancesBySid(com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListShiftInstancesBySidMethod(), responseObserver);
     }
 
     /**
@@ -5494,7 +5648,7 @@ public final class WFMGrpc {
      * NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
-     *   - grpc.NotFound: wfm_agent_sid_1, wfm_agent_sid_2, or shift_instance_sids do not exist for org_id.
+     *   - grpc.NotFound: wfm_agent_sid_1, wfm_agent_sid_2, or shift_instance_sids do not exist for the org sending the request.
      *   - grpc.Internal: error occurs when swapping the shift instances.
      * </pre>
      */
@@ -6641,6 +6795,21 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Lists the non skill activities that belong to the org sending the request.
+     * Required permissions:
+     *   NONE
+     * Errors:.
+     *   - grpc.Internal: error occurs when listing the activites.
+     * </pre>
+     */
+    public void listNonSkillActivities(com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivitiesReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivitiesRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListNonSkillActivitiesMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Lists the IDs of non skill activities that belong to the org sending the request which have the given &#64;relationship_type with the &#64;associated_entity.
      * Required permissions:
      *   NONE
@@ -7583,6 +7752,33 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Clears shift instances from the &#64;schedule_selector for the org sending the request.
+     * If &#64;node_selector is set, only shifts related to the given &#64;node_selector will be cleared.
+     * If &#64;node_selector is not set, all shifts on the &#64;schedule_selector may be cleared, regardless of the shift template they are associated with.
+     * If &#64;datetime_range is set, only the shifts overlapping the &#64;datetime_range will be cleared.
+     * If &#64;datetime_range is not set, all shifts on the schedule will be considered in range to be deleted and &#64;invert_datetime_range and &#64;start_datetimes_only must be set to false.
+     * If &#64;invert_datetime_range is set to true, the shifts overlapping the range before and after the provided &#64;datetime_range will be deleted.
+     * If &#64;invert_datetime_range is set to false, the provided &#64;datetime_range will be used.
+     * If &#64;start_datetimes_only is set to true, deletes the shifts that start within the &#64;datetime range, or start before or after &#64;datetime_range if &#64;invert_datetime_range is true.
+     * If &#64;start_datetimes_only is set to false, deletes the shifts that overlap with the &#64;datetime range, or overlap the range before or after &#64;datetime_range if &#64;invert_datetime_range is true.
+     * If &#64;delete_locked is set to true, both locked and unlocked shifts will be cleared.
+     * If &#64;delete_locked is set to false, only shifts with &#64;is_locked set to false may be cleared.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;node_selector, &#64;schedule_selector, or &#64;datetime_range in the request are invalid.
+     *   - grpc.NotFound: the draft schedule with the given &#64;schedule_selector doesn't exist.
+     *   - grpc.Internal: error occurs when removing the shifts from the schedule.
+     * </pre>
+     */
+    public void clearSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.ClearScheduleReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ClearScheduleRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getClearScheduleMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Deletes a draft schedule with the corresponding &#64;draft_schedule_sid for the org sending the request.
      * It also deletes all of its shift instances and segments.
      * Required permissions:
@@ -7597,6 +7793,28 @@ public final class WFMGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteDraftScheduleRes> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteDraftScheduleMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Lists the shift instances with the corresponding &#64;shift_instance_sids for the org sending the request.
+     * If &#64;include_shift_template is set to true then the related shift template for the shift instances will be returned in the shift template field.
+     * If &#64;include_shift_segments is set to true then the related shift segments for the shift instances will be returned in the shift segments field.
+     * If &#64;include_scheduling_activity is set to true then the related scheduling activity for the shift segment will be returned in the scheduling activity field.
+     * &#64;include_shift_segments must be true to take effect.
+     * If &#64;include_activity is set to true then the related non skill activity for the scheduling activity will be returned in the scheduling
+     * activities member non skill activity field. &#64;include_scheduling_activity must be true to take effect.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;org_id or &#64;shift_instance_sids in the request are invalid.
+     *   - grpc.Internal: error occurs when listing the shift instances or their shift segments.
+     * </pre>
+     */
+    public void listShiftInstancesBySid(com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListShiftInstancesBySidMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -7668,7 +7886,7 @@ public final class WFMGrpc {
      * NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
-     *   - grpc.NotFound: wfm_agent_sid_1, wfm_agent_sid_2, or shift_instance_sids do not exist for org_id.
+     *   - grpc.NotFound: wfm_agent_sid_1, wfm_agent_sid_2, or shift_instance_sids do not exist for the org sending the request.
      *   - grpc.Internal: error occurs when swapping the shift instances.
      * </pre>
      */
@@ -8766,6 +8984,20 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Lists the non skill activities that belong to the org sending the request.
+     * Required permissions:
+     *   NONE
+     * Errors:.
+     *   - grpc.Internal: error occurs when listing the activites.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivitiesRes listNonSkillActivities(com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivitiesReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListNonSkillActivitiesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Lists the IDs of non skill activities that belong to the org sending the request which have the given &#64;relationship_type with the &#64;associated_entity.
      * Required permissions:
      *   NONE
@@ -9659,6 +9891,32 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Clears shift instances from the &#64;schedule_selector for the org sending the request.
+     * If &#64;node_selector is set, only shifts related to the given &#64;node_selector will be cleared.
+     * If &#64;node_selector is not set, all shifts on the &#64;schedule_selector may be cleared, regardless of the shift template they are associated with.
+     * If &#64;datetime_range is set, only the shifts overlapping the &#64;datetime_range will be cleared.
+     * If &#64;datetime_range is not set, all shifts on the schedule will be considered in range to be deleted and &#64;invert_datetime_range and &#64;start_datetimes_only must be set to false.
+     * If &#64;invert_datetime_range is set to true, the shifts overlapping the range before and after the provided &#64;datetime_range will be deleted.
+     * If &#64;invert_datetime_range is set to false, the provided &#64;datetime_range will be used.
+     * If &#64;start_datetimes_only is set to true, deletes the shifts that start within the &#64;datetime range, or start before or after &#64;datetime_range if &#64;invert_datetime_range is true.
+     * If &#64;start_datetimes_only is set to false, deletes the shifts that overlap with the &#64;datetime range, or overlap the range before or after &#64;datetime_range if &#64;invert_datetime_range is true.
+     * If &#64;delete_locked is set to true, both locked and unlocked shifts will be cleared.
+     * If &#64;delete_locked is set to false, only shifts with &#64;is_locked set to false may be cleared.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;node_selector, &#64;schedule_selector, or &#64;datetime_range in the request are invalid.
+     *   - grpc.NotFound: the draft schedule with the given &#64;schedule_selector doesn't exist.
+     *   - grpc.Internal: error occurs when removing the shifts from the schedule.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ClearScheduleRes clearSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.ClearScheduleReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getClearScheduleMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Deletes a draft schedule with the corresponding &#64;draft_schedule_sid for the org sending the request.
      * It also deletes all of its shift instances and segments.
      * Required permissions:
@@ -9672,6 +9930,27 @@ public final class WFMGrpc {
     public com.tcn.cloud.api.api.v1alpha1.wfm.DeleteDraftScheduleRes deleteDraftSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteDraftScheduleReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteDraftScheduleMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Lists the shift instances with the corresponding &#64;shift_instance_sids for the org sending the request.
+     * If &#64;include_shift_template is set to true then the related shift template for the shift instances will be returned in the shift template field.
+     * If &#64;include_shift_segments is set to true then the related shift segments for the shift instances will be returned in the shift segments field.
+     * If &#64;include_scheduling_activity is set to true then the related scheduling activity for the shift segment will be returned in the scheduling activity field.
+     * &#64;include_shift_segments must be true to take effect.
+     * If &#64;include_activity is set to true then the related non skill activity for the scheduling activity will be returned in the scheduling
+     * activities member non skill activity field. &#64;include_scheduling_activity must be true to take effect.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;org_id or &#64;shift_instance_sids in the request are invalid.
+     *   - grpc.Internal: error occurs when listing the shift instances or their shift segments.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidRes listShiftInstancesBySid(com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListShiftInstancesBySidMethod(), getCallOptions(), request);
     }
 
     /**
@@ -9740,7 +10019,7 @@ public final class WFMGrpc {
      * NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
-     *   - grpc.NotFound: wfm_agent_sid_1, wfm_agent_sid_2, or shift_instance_sids do not exist for org_id.
+     *   - grpc.NotFound: wfm_agent_sid_1, wfm_agent_sid_2, or shift_instance_sids do not exist for the org sending the request.
      *   - grpc.Internal: error occurs when swapping the shift instances.
      * </pre>
      */
@@ -10777,6 +11056,21 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Lists the non skill activities that belong to the org sending the request.
+     * Required permissions:
+     *   NONE
+     * Errors:.
+     *   - grpc.Internal: error occurs when listing the activites.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivitiesRes> listNonSkillActivities(
+        com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivitiesReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListNonSkillActivitiesMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Lists the IDs of non skill activities that belong to the org sending the request which have the given &#64;relationship_type with the &#64;associated_entity.
      * Required permissions:
      *   NONE
@@ -11719,6 +12013,33 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Clears shift instances from the &#64;schedule_selector for the org sending the request.
+     * If &#64;node_selector is set, only shifts related to the given &#64;node_selector will be cleared.
+     * If &#64;node_selector is not set, all shifts on the &#64;schedule_selector may be cleared, regardless of the shift template they are associated with.
+     * If &#64;datetime_range is set, only the shifts overlapping the &#64;datetime_range will be cleared.
+     * If &#64;datetime_range is not set, all shifts on the schedule will be considered in range to be deleted and &#64;invert_datetime_range and &#64;start_datetimes_only must be set to false.
+     * If &#64;invert_datetime_range is set to true, the shifts overlapping the range before and after the provided &#64;datetime_range will be deleted.
+     * If &#64;invert_datetime_range is set to false, the provided &#64;datetime_range will be used.
+     * If &#64;start_datetimes_only is set to true, deletes the shifts that start within the &#64;datetime range, or start before or after &#64;datetime_range if &#64;invert_datetime_range is true.
+     * If &#64;start_datetimes_only is set to false, deletes the shifts that overlap with the &#64;datetime range, or overlap the range before or after &#64;datetime_range if &#64;invert_datetime_range is true.
+     * If &#64;delete_locked is set to true, both locked and unlocked shifts will be cleared.
+     * If &#64;delete_locked is set to false, only shifts with &#64;is_locked set to false may be cleared.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;node_selector, &#64;schedule_selector, or &#64;datetime_range in the request are invalid.
+     *   - grpc.NotFound: the draft schedule with the given &#64;schedule_selector doesn't exist.
+     *   - grpc.Internal: error occurs when removing the shifts from the schedule.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ClearScheduleRes> clearSchedule(
+        com.tcn.cloud.api.api.v1alpha1.wfm.ClearScheduleReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getClearScheduleMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Deletes a draft schedule with the corresponding &#64;draft_schedule_sid for the org sending the request.
      * It also deletes all of its shift instances and segments.
      * Required permissions:
@@ -11733,6 +12054,28 @@ public final class WFMGrpc {
         com.tcn.cloud.api.api.v1alpha1.wfm.DeleteDraftScheduleReq request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteDraftScheduleMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Lists the shift instances with the corresponding &#64;shift_instance_sids for the org sending the request.
+     * If &#64;include_shift_template is set to true then the related shift template for the shift instances will be returned in the shift template field.
+     * If &#64;include_shift_segments is set to true then the related shift segments for the shift instances will be returned in the shift segments field.
+     * If &#64;include_scheduling_activity is set to true then the related scheduling activity for the shift segment will be returned in the scheduling activity field.
+     * &#64;include_shift_segments must be true to take effect.
+     * If &#64;include_activity is set to true then the related non skill activity for the scheduling activity will be returned in the scheduling
+     * activities member non skill activity field. &#64;include_scheduling_activity must be true to take effect.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;org_id or &#64;shift_instance_sids in the request are invalid.
+     *   - grpc.Internal: error occurs when listing the shift instances or their shift segments.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidRes> listShiftInstancesBySid(
+        com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListShiftInstancesBySidMethod(), getCallOptions()), request);
     }
 
     /**
@@ -11804,7 +12147,7 @@ public final class WFMGrpc {
      * NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
-     *   - grpc.NotFound: wfm_agent_sid_1, wfm_agent_sid_2, or shift_instance_sids do not exist for org_id.
+     *   - grpc.NotFound: wfm_agent_sid_1, wfm_agent_sid_2, or shift_instance_sids do not exist for the org sending the request.
      *   - grpc.Internal: error occurs when swapping the shift instances.
      * </pre>
      */
@@ -12043,70 +12386,73 @@ public final class WFMGrpc {
   private static final int METHODID_DELETE_CONSTRAINT_RULE = 48;
   private static final int METHODID_CREATE_NON_SKILL_ACTIVITY = 49;
   private static final int METHODID_UPDATE_NON_SKILL_ACTIVITY = 50;
-  private static final int METHODID_LIST_NON_SKILL_ACTIVITY_ASSOCIATIONS = 51;
-  private static final int METHODID_LIST_CANDIDATE_SCHEDULING_ACTIVITIES = 52;
-  private static final int METHODID_CREATE_AGENT_GROUP = 53;
-  private static final int METHODID_UPDATE_AGENT_GROUP = 54;
-  private static final int METHODID_UPDATE_WFMAGENT = 55;
-  private static final int METHODID_LIST_ALL_WFMAGENTS = 56;
-  private static final int METHODID_LIST_CANDIDATE_WFMAGENTS = 57;
-  private static final int METHODID_LIST_UNGROUPED_WFMAGENTS = 58;
-  private static final int METHODID_LIST_WFMAGENTS_ASSOCIATED_WITH_AGENT_GROUP = 59;
-  private static final int METHODID_CREATE_WFMAGENT_MEMBERSHIPS = 60;
-  private static final int METHODID_DELETE_WFMAGENT_MEMBERSHIPS = 61;
-  private static final int METHODID_DELETE_WFMAGENTS_MEMBERSHIPS = 62;
-  private static final int METHODID_BUILD_AGENT_DIAGNOSTICS = 63;
-  private static final int METHODID_CREATE_SHIFT_TEMPLATE = 64;
-  private static final int METHODID_UPDATE_SHIFT_TEMPLATE = 65;
-  private static final int METHODID_LIST_SHIFT_TEMPLATES_BY_SIDS = 66;
-  private static final int METHODID_BUILD_SHIFT_TEMPLATE_DIAGNOSTICS = 67;
-  private static final int METHODID_CREATE_PLACEMENT_RULE = 68;
-  private static final int METHODID_UPDATE_PLACEMENT_RULE = 69;
-  private static final int METHODID_DELETE_PLACEMENT_RULE = 70;
-  private static final int METHODID_CREATE_OPEN_TIMES_PATTERN = 71;
-  private static final int METHODID_UPDATE_OPEN_TIMES_PATTERN = 72;
-  private static final int METHODID_DELETE_OPEN_TIMES_PATTERN = 73;
-  private static final int METHODID_GET_OPEN_TIMES_BITMAPS = 74;
-  private static final int METHODID_CREATE_AGENT_AVAILABILITY_PATTERN = 75;
-  private static final int METHODID_UPDATE_AGENT_AVAILABILITY_PATTERN = 76;
-  private static final int METHODID_DELETE_AGENT_AVAILABILITY_PATTERN = 77;
-  private static final int METHODID_GET_AVAILABILITY_BITMAPS = 78;
-  private static final int METHODID_UPSERT_NON_SKILL_ACTIVITY_ASSOCIATION = 79;
-  private static final int METHODID_CREATE_SKILL_PROFICIENCIES = 80;
-  private static final int METHODID_UPDATE_SKILL_PROFICIENCIES = 81;
-  private static final int METHODID_DELETE_SKILL_PROFICIENCY = 82;
-  private static final int METHODID_COPY_SCENARIO = 83;
-  private static final int METHODID_CREATE_SCHEDULE_SCENARIO_WITH_NODES = 84;
-  private static final int METHODID_UPDATE_SCHEDULE_SCENARIO = 85;
-  private static final int METHODID_LIST_CONFIG_ENTITIES = 86;
-  private static final int METHODID_DELETE_SHIFT_INSTANCES = 87;
-  private static final int METHODID_BUILD_NODE_DIAGNOSTICS = 88;
-  private static final int METHODID_BUILD_GLOBAL_DIAGNOSTICS = 89;
-  private static final int METHODID_GET_PUBLISHED_SCHEDULE = 90;
-  private static final int METHODID_GET_PUBLISHED_SCHEDULE_REQUIRED_CALLS = 91;
-  private static final int METHODID_GET_DRAFT_SCHEDULE_REQUIRED_CALLS = 92;
-  private static final int METHODID_CREATE_DRAFT_SCHEDULE = 93;
-  private static final int METHODID_UPDATE_DRAFT_SCHEDULE = 94;
-  private static final int METHODID_BUILD_DRAFT_SCHEDULE = 95;
-  private static final int METHODID_PUBLISH_DRAFT_SCHEDULE = 96;
-  private static final int METHODID_RESET_DRAFT_SCHEDULE = 97;
-  private static final int METHODID_GET_DRAFT_SCHEDULE = 98;
-  private static final int METHODID_LIST_DRAFT_SCHEDULES = 99;
-  private static final int METHODID_DELETE_DRAFT_SCHEDULE = 100;
-  private static final int METHODID_COPY_SCHEDULE_TO_SCHEDULE = 101;
-  private static final int METHODID_CREATE_SHIFT_INSTANCE = 102;
-  private static final int METHODID_CREATE_SHIFT_INSTANCE_V2 = 103;
-  private static final int METHODID_SWAP_SHIFT_INSTANCES = 104;
-  private static final int METHODID_UPDATE_SHIFT_INSTANCE = 105;
-  private static final int METHODID_UPDATE_SHIFT_INSTANCE_V2 = 106;
-  private static final int METHODID_COPY_SHIFT_INSTANCES_TO_SCHEDULE = 107;
-  private static final int METHODID_LIST_SHIFT_INSTANCE_SIDS_FOR_AGENT = 108;
-  private static final int METHODID_LIST_SHIFT_SEGMENTS_BY_SHIFT_INSTANCE_SIDS = 109;
-  private static final int METHODID_SET_SCHEDULING_TARGET = 110;
-  private static final int METHODID_GET_SCHEDULING_TARGET = 111;
-  private static final int METHODID_DELETE_SCHEDULING_TARGET = 112;
-  private static final int METHODID_GET_PERFORMANCE_METRICS = 113;
-  private static final int METHODID_LIST_REQUIRED_CALLS_INTERVALS = 114;
+  private static final int METHODID_LIST_NON_SKILL_ACTIVITIES = 51;
+  private static final int METHODID_LIST_NON_SKILL_ACTIVITY_ASSOCIATIONS = 52;
+  private static final int METHODID_LIST_CANDIDATE_SCHEDULING_ACTIVITIES = 53;
+  private static final int METHODID_CREATE_AGENT_GROUP = 54;
+  private static final int METHODID_UPDATE_AGENT_GROUP = 55;
+  private static final int METHODID_UPDATE_WFMAGENT = 56;
+  private static final int METHODID_LIST_ALL_WFMAGENTS = 57;
+  private static final int METHODID_LIST_CANDIDATE_WFMAGENTS = 58;
+  private static final int METHODID_LIST_UNGROUPED_WFMAGENTS = 59;
+  private static final int METHODID_LIST_WFMAGENTS_ASSOCIATED_WITH_AGENT_GROUP = 60;
+  private static final int METHODID_CREATE_WFMAGENT_MEMBERSHIPS = 61;
+  private static final int METHODID_DELETE_WFMAGENT_MEMBERSHIPS = 62;
+  private static final int METHODID_DELETE_WFMAGENTS_MEMBERSHIPS = 63;
+  private static final int METHODID_BUILD_AGENT_DIAGNOSTICS = 64;
+  private static final int METHODID_CREATE_SHIFT_TEMPLATE = 65;
+  private static final int METHODID_UPDATE_SHIFT_TEMPLATE = 66;
+  private static final int METHODID_LIST_SHIFT_TEMPLATES_BY_SIDS = 67;
+  private static final int METHODID_BUILD_SHIFT_TEMPLATE_DIAGNOSTICS = 68;
+  private static final int METHODID_CREATE_PLACEMENT_RULE = 69;
+  private static final int METHODID_UPDATE_PLACEMENT_RULE = 70;
+  private static final int METHODID_DELETE_PLACEMENT_RULE = 71;
+  private static final int METHODID_CREATE_OPEN_TIMES_PATTERN = 72;
+  private static final int METHODID_UPDATE_OPEN_TIMES_PATTERN = 73;
+  private static final int METHODID_DELETE_OPEN_TIMES_PATTERN = 74;
+  private static final int METHODID_GET_OPEN_TIMES_BITMAPS = 75;
+  private static final int METHODID_CREATE_AGENT_AVAILABILITY_PATTERN = 76;
+  private static final int METHODID_UPDATE_AGENT_AVAILABILITY_PATTERN = 77;
+  private static final int METHODID_DELETE_AGENT_AVAILABILITY_PATTERN = 78;
+  private static final int METHODID_GET_AVAILABILITY_BITMAPS = 79;
+  private static final int METHODID_UPSERT_NON_SKILL_ACTIVITY_ASSOCIATION = 80;
+  private static final int METHODID_CREATE_SKILL_PROFICIENCIES = 81;
+  private static final int METHODID_UPDATE_SKILL_PROFICIENCIES = 82;
+  private static final int METHODID_DELETE_SKILL_PROFICIENCY = 83;
+  private static final int METHODID_COPY_SCENARIO = 84;
+  private static final int METHODID_CREATE_SCHEDULE_SCENARIO_WITH_NODES = 85;
+  private static final int METHODID_UPDATE_SCHEDULE_SCENARIO = 86;
+  private static final int METHODID_LIST_CONFIG_ENTITIES = 87;
+  private static final int METHODID_DELETE_SHIFT_INSTANCES = 88;
+  private static final int METHODID_BUILD_NODE_DIAGNOSTICS = 89;
+  private static final int METHODID_BUILD_GLOBAL_DIAGNOSTICS = 90;
+  private static final int METHODID_GET_PUBLISHED_SCHEDULE = 91;
+  private static final int METHODID_GET_PUBLISHED_SCHEDULE_REQUIRED_CALLS = 92;
+  private static final int METHODID_GET_DRAFT_SCHEDULE_REQUIRED_CALLS = 93;
+  private static final int METHODID_CREATE_DRAFT_SCHEDULE = 94;
+  private static final int METHODID_UPDATE_DRAFT_SCHEDULE = 95;
+  private static final int METHODID_BUILD_DRAFT_SCHEDULE = 96;
+  private static final int METHODID_PUBLISH_DRAFT_SCHEDULE = 97;
+  private static final int METHODID_RESET_DRAFT_SCHEDULE = 98;
+  private static final int METHODID_GET_DRAFT_SCHEDULE = 99;
+  private static final int METHODID_LIST_DRAFT_SCHEDULES = 100;
+  private static final int METHODID_CLEAR_SCHEDULE = 101;
+  private static final int METHODID_DELETE_DRAFT_SCHEDULE = 102;
+  private static final int METHODID_LIST_SHIFT_INSTANCES_BY_SID = 103;
+  private static final int METHODID_COPY_SCHEDULE_TO_SCHEDULE = 104;
+  private static final int METHODID_CREATE_SHIFT_INSTANCE = 105;
+  private static final int METHODID_CREATE_SHIFT_INSTANCE_V2 = 106;
+  private static final int METHODID_SWAP_SHIFT_INSTANCES = 107;
+  private static final int METHODID_UPDATE_SHIFT_INSTANCE = 108;
+  private static final int METHODID_UPDATE_SHIFT_INSTANCE_V2 = 109;
+  private static final int METHODID_COPY_SHIFT_INSTANCES_TO_SCHEDULE = 110;
+  private static final int METHODID_LIST_SHIFT_INSTANCE_SIDS_FOR_AGENT = 111;
+  private static final int METHODID_LIST_SHIFT_SEGMENTS_BY_SHIFT_INSTANCE_SIDS = 112;
+  private static final int METHODID_SET_SCHEDULING_TARGET = 113;
+  private static final int METHODID_GET_SCHEDULING_TARGET = 114;
+  private static final int METHODID_DELETE_SCHEDULING_TARGET = 115;
+  private static final int METHODID_GET_PERFORMANCE_METRICS = 116;
+  private static final int METHODID_LIST_REQUIRED_CALLS_INTERVALS = 117;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -12329,6 +12675,10 @@ public final class WFMGrpc {
           serviceImpl.updateNonSkillActivity((com.tcn.cloud.api.api.v1alpha1.wfm.UpdateNonSkillActivityReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateNonSkillActivityRes>) responseObserver);
           break;
+        case METHODID_LIST_NON_SKILL_ACTIVITIES:
+          serviceImpl.listNonSkillActivities((com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivitiesReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivitiesRes>) responseObserver);
+          break;
         case METHODID_LIST_NON_SKILL_ACTIVITY_ASSOCIATIONS:
           serviceImpl.listNonSkillActivityAssociations((com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivityAssociationsReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivityAssociationsRes>) responseObserver);
@@ -12525,9 +12875,17 @@ public final class WFMGrpc {
           serviceImpl.listDraftSchedules((com.tcn.cloud.api.api.v1alpha1.wfm.ListDraftSchedulesReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListDraftSchedulesRes>) responseObserver);
           break;
+        case METHODID_CLEAR_SCHEDULE:
+          serviceImpl.clearSchedule((com.tcn.cloud.api.api.v1alpha1.wfm.ClearScheduleReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ClearScheduleRes>) responseObserver);
+          break;
         case METHODID_DELETE_DRAFT_SCHEDULE:
           serviceImpl.deleteDraftSchedule((com.tcn.cloud.api.api.v1alpha1.wfm.DeleteDraftScheduleReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteDraftScheduleRes>) responseObserver);
+          break;
+        case METHODID_LIST_SHIFT_INSTANCES_BY_SID:
+          serviceImpl.listShiftInstancesBySid((com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidRes>) responseObserver);
           break;
         case METHODID_COPY_SCHEDULE_TO_SCHEDULE:
           serviceImpl.copyScheduleToSchedule((com.tcn.cloud.api.api.v1alpha1.wfm.CopyScheduleToScheduleReq) request,
@@ -12961,6 +13319,13 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.UpdateNonSkillActivityRes>(
                 service, METHODID_UPDATE_NON_SKILL_ACTIVITY)))
         .addMethod(
+          getListNonSkillActivitiesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivitiesReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivitiesRes>(
+                service, METHODID_LIST_NON_SKILL_ACTIVITIES)))
+        .addMethod(
           getListNonSkillActivityAssociationsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -13304,12 +13669,26 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.ListDraftSchedulesRes>(
                 service, METHODID_LIST_DRAFT_SCHEDULES)))
         .addMethod(
+          getClearScheduleMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.ClearScheduleReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.ClearScheduleRes>(
+                service, METHODID_CLEAR_SCHEDULE)))
+        .addMethod(
           getDeleteDraftScheduleMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
               com.tcn.cloud.api.api.v1alpha1.wfm.DeleteDraftScheduleReq,
               com.tcn.cloud.api.api.v1alpha1.wfm.DeleteDraftScheduleRes>(
                 service, METHODID_DELETE_DRAFT_SCHEDULE)))
+        .addMethod(
+          getListShiftInstancesBySidMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidRes>(
+                service, METHODID_LIST_SHIFT_INSTANCES_BY_SID)))
         .addMethod(
           getCopyScheduleToScheduleMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -13507,6 +13886,7 @@ public final class WFMGrpc {
               .addMethod(getDeleteConstraintRuleMethod())
               .addMethod(getCreateNonSkillActivityMethod())
               .addMethod(getUpdateNonSkillActivityMethod())
+              .addMethod(getListNonSkillActivitiesMethod())
               .addMethod(getListNonSkillActivityAssociationsMethod())
               .addMethod(getListCandidateSchedulingActivitiesMethod())
               .addMethod(getCreateAgentGroupMethod())
@@ -13556,7 +13936,9 @@ public final class WFMGrpc {
               .addMethod(getResetDraftScheduleMethod())
               .addMethod(getGetDraftScheduleMethod())
               .addMethod(getListDraftSchedulesMethod())
+              .addMethod(getClearScheduleMethod())
               .addMethod(getDeleteDraftScheduleMethod())
+              .addMethod(getListShiftInstancesBySidMethod())
               .addMethod(getCopyScheduleToScheduleMethod())
               .addMethod(getCreateShiftInstanceMethod())
               .addMethod(getCreateShiftInstanceV2Method())
