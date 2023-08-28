@@ -69,84 +69,64 @@ public interface TicketActionOrBuilder extends
    * Start Date of the ACTION
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp start_date = 5 [json_name = "startDate"];</code>
-   * @return Whether the startDate field is set.
+   * <code>.google.protobuf.Timestamp start_ts = 5 [json_name = "startTs"];</code>
+   * @return Whether the startTs field is set.
    */
-  boolean hasStartDate();
+  boolean hasStartTs();
   /**
    * <pre>
    * Start Date of the ACTION
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp start_date = 5 [json_name = "startDate"];</code>
-   * @return The startDate.
+   * <code>.google.protobuf.Timestamp start_ts = 5 [json_name = "startTs"];</code>
+   * @return The startTs.
    */
-  com.google.protobuf.Timestamp getStartDate();
+  com.google.protobuf.Timestamp getStartTs();
   /**
    * <pre>
    * Start Date of the ACTION
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp start_date = 5 [json_name = "startDate"];</code>
+   * <code>.google.protobuf.Timestamp start_ts = 5 [json_name = "startTs"];</code>
    */
-  com.google.protobuf.TimestampOrBuilder getStartDateOrBuilder();
+  com.google.protobuf.TimestampOrBuilder getStartTsOrBuilder();
 
   /**
    * <pre>
    * Expiry date of the ACTION
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp expiry_date = 6 [json_name = "expiryDate"];</code>
-   * @return Whether the expiryDate field is set.
+   * <code>.google.protobuf.Timestamp expiry_ts = 6 [json_name = "expiryTs"];</code>
+   * @return Whether the expiryTs field is set.
    */
-  boolean hasExpiryDate();
+  boolean hasExpiryTs();
   /**
    * <pre>
    * Expiry date of the ACTION
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp expiry_date = 6 [json_name = "expiryDate"];</code>
-   * @return The expiryDate.
+   * <code>.google.protobuf.Timestamp expiry_ts = 6 [json_name = "expiryTs"];</code>
+   * @return The expiryTs.
    */
-  com.google.protobuf.Timestamp getExpiryDate();
+  com.google.protobuf.Timestamp getExpiryTs();
   /**
    * <pre>
    * Expiry date of the ACTION
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp expiry_date = 6 [json_name = "expiryDate"];</code>
+   * <code>.google.protobuf.Timestamp expiry_ts = 6 [json_name = "expiryTs"];</code>
    */
-  com.google.protobuf.TimestampOrBuilder getExpiryDateOrBuilder();
+  com.google.protobuf.TimestampOrBuilder getExpiryTsOrBuilder();
 
   /**
    * <pre>
-   * Agent to whom ACTION is assigned. Only one assignee per action
+   * Ticket action status can be 1 == AVAILABLE and 2 == NOT AVAILABLE
    * </pre>
    *
-   * <code>string assignee = 7 [json_name = "assignee"];</code>
-   * @return The assignee.
+   * <code>int64 state = 8 [json_name = "state"];</code>
+   * @return The state.
    */
-  java.lang.String getAssignee();
-  /**
-   * <pre>
-   * Agent to whom ACTION is assigned. Only one assignee per action
-   * </pre>
-   *
-   * <code>string assignee = 7 [json_name = "assignee"];</code>
-   * @return The bytes for assignee.
-   */
-  com.google.protobuf.ByteString
-      getAssigneeBytes();
-
-  /**
-   * <pre>
-   * Ticket action status can be 1 == OPEN and 2 == CLOSE
-   * </pre>
-   *
-   * <code>int64 status = 8 [json_name = "status"];</code>
-   * @return The status.
-   */
-  long getStatus();
+  long getState();
 
   /**
    * <pre>

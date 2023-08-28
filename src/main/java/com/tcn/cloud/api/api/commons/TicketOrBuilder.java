@@ -406,4 +406,15 @@ public interface TicketOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.TicketActionOrBuilder getTicketActionOrBuilder(
       int index);
+
+  /**
+   * <code>.api.commons.TicketStatus ticket_status = 20 [json_name = "ticketStatus"];</code>
+   * @return The enum numeric value on the wire for ticketStatus.
+   */
+  int getTicketStatusValue();
+  /**
+   * <code>.api.commons.TicketStatus ticket_status = 20 [json_name = "ticketStatus"];</code>
+   * @return The ticketStatus.
+   */
+  com.tcn.cloud.api.api.commons.TicketStatus getTicketStatus();
 }

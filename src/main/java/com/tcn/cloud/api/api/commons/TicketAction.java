@@ -20,7 +20,6 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private TicketAction() {
-    assignee_ = "";
     actionSkills_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
     actionSlaId_ = java.util.Collections.emptyList();
@@ -130,18 +129,18 @@ private static final long serialVersionUID = 0L;
     return ticketId_;
   }
 
-  public static final int START_DATE_FIELD_NUMBER = 5;
-  private com.google.protobuf.Timestamp startDate_;
+  public static final int START_TS_FIELD_NUMBER = 5;
+  private com.google.protobuf.Timestamp startTs_;
   /**
    * <pre>
    * Start Date of the ACTION
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp start_date = 5 [json_name = "startDate"];</code>
-   * @return Whether the startDate field is set.
+   * <code>.google.protobuf.Timestamp start_ts = 5 [json_name = "startTs"];</code>
+   * @return Whether the startTs field is set.
    */
   @java.lang.Override
-  public boolean hasStartDate() {
+  public boolean hasStartTs() {
     return ((bitField0_ & 0x00000002) != 0);
   }
   /**
@@ -149,37 +148,37 @@ private static final long serialVersionUID = 0L;
    * Start Date of the ACTION
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp start_date = 5 [json_name = "startDate"];</code>
-   * @return The startDate.
+   * <code>.google.protobuf.Timestamp start_ts = 5 [json_name = "startTs"];</code>
+   * @return The startTs.
    */
   @java.lang.Override
-  public com.google.protobuf.Timestamp getStartDate() {
-    return startDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startDate_;
+  public com.google.protobuf.Timestamp getStartTs() {
+    return startTs_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTs_;
   }
   /**
    * <pre>
    * Start Date of the ACTION
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp start_date = 5 [json_name = "startDate"];</code>
+   * <code>.google.protobuf.Timestamp start_ts = 5 [json_name = "startTs"];</code>
    */
   @java.lang.Override
-  public com.google.protobuf.TimestampOrBuilder getStartDateOrBuilder() {
-    return startDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startDate_;
+  public com.google.protobuf.TimestampOrBuilder getStartTsOrBuilder() {
+    return startTs_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTs_;
   }
 
-  public static final int EXPIRY_DATE_FIELD_NUMBER = 6;
-  private com.google.protobuf.Timestamp expiryDate_;
+  public static final int EXPIRY_TS_FIELD_NUMBER = 6;
+  private com.google.protobuf.Timestamp expiryTs_;
   /**
    * <pre>
    * Expiry date of the ACTION
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp expiry_date = 6 [json_name = "expiryDate"];</code>
-   * @return Whether the expiryDate field is set.
+   * <code>.google.protobuf.Timestamp expiry_ts = 6 [json_name = "expiryTs"];</code>
+   * @return Whether the expiryTs field is set.
    */
   @java.lang.Override
-  public boolean hasExpiryDate() {
+  public boolean hasExpiryTs() {
     return ((bitField0_ & 0x00000004) != 0);
   }
   /**
@@ -187,85 +186,38 @@ private static final long serialVersionUID = 0L;
    * Expiry date of the ACTION
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp expiry_date = 6 [json_name = "expiryDate"];</code>
-   * @return The expiryDate.
+   * <code>.google.protobuf.Timestamp expiry_ts = 6 [json_name = "expiryTs"];</code>
+   * @return The expiryTs.
    */
   @java.lang.Override
-  public com.google.protobuf.Timestamp getExpiryDate() {
-    return expiryDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : expiryDate_;
+  public com.google.protobuf.Timestamp getExpiryTs() {
+    return expiryTs_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : expiryTs_;
   }
   /**
    * <pre>
    * Expiry date of the ACTION
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp expiry_date = 6 [json_name = "expiryDate"];</code>
+   * <code>.google.protobuf.Timestamp expiry_ts = 6 [json_name = "expiryTs"];</code>
    */
   @java.lang.Override
-  public com.google.protobuf.TimestampOrBuilder getExpiryDateOrBuilder() {
-    return expiryDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : expiryDate_;
+  public com.google.protobuf.TimestampOrBuilder getExpiryTsOrBuilder() {
+    return expiryTs_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : expiryTs_;
   }
 
-  public static final int ASSIGNEE_FIELD_NUMBER = 7;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object assignee_ = "";
+  public static final int STATE_FIELD_NUMBER = 8;
+  private long state_ = 0L;
   /**
    * <pre>
-   * Agent to whom ACTION is assigned. Only one assignee per action
+   * Ticket action status can be 1 == AVAILABLE and 2 == NOT AVAILABLE
    * </pre>
    *
-   * <code>string assignee = 7 [json_name = "assignee"];</code>
-   * @return The assignee.
+   * <code>int64 state = 8 [json_name = "state"];</code>
+   * @return The state.
    */
   @java.lang.Override
-  public java.lang.String getAssignee() {
-    java.lang.Object ref = assignee_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      assignee_ = s;
-      return s;
-    }
-  }
-  /**
-   * <pre>
-   * Agent to whom ACTION is assigned. Only one assignee per action
-   * </pre>
-   *
-   * <code>string assignee = 7 [json_name = "assignee"];</code>
-   * @return The bytes for assignee.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getAssigneeBytes() {
-    java.lang.Object ref = assignee_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      assignee_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int STATUS_FIELD_NUMBER = 8;
-  private long status_ = 0L;
-  /**
-   * <pre>
-   * Ticket action status can be 1 == OPEN and 2 == CLOSE
-   * </pre>
-   *
-   * <code>int64 status = 8 [json_name = "status"];</code>
-   * @return The status.
-   */
-  @java.lang.Override
-  public long getStatus() {
-    return status_;
+  public long getState() {
+    return state_;
   }
 
   public static final int ACTION_SKILLS_FIELD_NUMBER = 9;
@@ -413,16 +365,13 @@ private static final long serialVersionUID = 0L;
       output.writeInt64(4, ticketId_);
     }
     if (((bitField0_ & 0x00000002) != 0)) {
-      output.writeMessage(5, getStartDate());
+      output.writeMessage(5, getStartTs());
     }
     if (((bitField0_ & 0x00000004) != 0)) {
-      output.writeMessage(6, getExpiryDate());
+      output.writeMessage(6, getExpiryTs());
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(assignee_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 7, assignee_);
-    }
-    if (status_ != 0L) {
-      output.writeInt64(8, status_);
+    if (state_ != 0L) {
+      output.writeInt64(8, state_);
     }
     for (int i = 0; i < actionSkills_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 9, actionSkills_.getRaw(i));
@@ -457,18 +406,15 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(5, getStartDate());
+        .computeMessageSize(5, getStartTs());
     }
     if (((bitField0_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(6, getExpiryDate());
+        .computeMessageSize(6, getExpiryTs());
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(assignee_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, assignee_);
-    }
-    if (status_ != 0L) {
+    if (state_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(8, status_);
+        .computeInt64Size(8, state_);
     }
     {
       int dataSize = 0;
@@ -508,20 +454,18 @@ private static final long serialVersionUID = 0L;
     }
     if (getTicketId()
         != other.getTicketId()) return false;
-    if (hasStartDate() != other.hasStartDate()) return false;
-    if (hasStartDate()) {
-      if (!getStartDate()
-          .equals(other.getStartDate())) return false;
+    if (hasStartTs() != other.hasStartTs()) return false;
+    if (hasStartTs()) {
+      if (!getStartTs()
+          .equals(other.getStartTs())) return false;
     }
-    if (hasExpiryDate() != other.hasExpiryDate()) return false;
-    if (hasExpiryDate()) {
-      if (!getExpiryDate()
-          .equals(other.getExpiryDate())) return false;
+    if (hasExpiryTs() != other.hasExpiryTs()) return false;
+    if (hasExpiryTs()) {
+      if (!getExpiryTs()
+          .equals(other.getExpiryTs())) return false;
     }
-    if (!getAssignee()
-        .equals(other.getAssignee())) return false;
-    if (getStatus()
-        != other.getStatus()) return false;
+    if (getState()
+        != other.getState()) return false;
     if (!getActionSkillsList()
         .equals(other.getActionSkillsList())) return false;
     if (!getActionSlaIdList()
@@ -550,19 +494,17 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + TICKET_ID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getTicketId());
-    if (hasStartDate()) {
-      hash = (37 * hash) + START_DATE_FIELD_NUMBER;
-      hash = (53 * hash) + getStartDate().hashCode();
+    if (hasStartTs()) {
+      hash = (37 * hash) + START_TS_FIELD_NUMBER;
+      hash = (53 * hash) + getStartTs().hashCode();
     }
-    if (hasExpiryDate()) {
-      hash = (37 * hash) + EXPIRY_DATE_FIELD_NUMBER;
-      hash = (53 * hash) + getExpiryDate().hashCode();
+    if (hasExpiryTs()) {
+      hash = (37 * hash) + EXPIRY_TS_FIELD_NUMBER;
+      hash = (53 * hash) + getExpiryTs().hashCode();
     }
-    hash = (37 * hash) + ASSIGNEE_FIELD_NUMBER;
-    hash = (53 * hash) + getAssignee().hashCode();
-    hash = (37 * hash) + STATUS_FIELD_NUMBER;
+    hash = (37 * hash) + STATE_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getStatus());
+        getState());
     if (getActionSkillsCount() > 0) {
       hash = (37 * hash) + ACTION_SKILLS_FIELD_NUMBER;
       hash = (53 * hash) + getActionSkillsList().hashCode();
@@ -706,8 +648,8 @@ private static final long serialVersionUID = 0L;
       if (com.google.protobuf.GeneratedMessageV3
               .alwaysUseFieldBuilders) {
         getCallbackContextFieldBuilder();
-        getStartDateFieldBuilder();
-        getExpiryDateFieldBuilder();
+        getStartTsFieldBuilder();
+        getExpiryTsFieldBuilder();
         getActionSlaIdFieldBuilder();
       }
     }
@@ -723,18 +665,17 @@ private static final long serialVersionUID = 0L;
         callbackContextBuilder_ = null;
       }
       ticketId_ = 0L;
-      startDate_ = null;
-      if (startDateBuilder_ != null) {
-        startDateBuilder_.dispose();
-        startDateBuilder_ = null;
+      startTs_ = null;
+      if (startTsBuilder_ != null) {
+        startTsBuilder_.dispose();
+        startTsBuilder_ = null;
       }
-      expiryDate_ = null;
-      if (expiryDateBuilder_ != null) {
-        expiryDateBuilder_.dispose();
-        expiryDateBuilder_ = null;
+      expiryTs_ = null;
+      if (expiryTsBuilder_ != null) {
+        expiryTsBuilder_.dispose();
+        expiryTsBuilder_ = null;
       }
-      assignee_ = "";
-      status_ = 0L;
+      state_ = 0L;
       actionSkills_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
       if (actionSlaIdBuilder_ == null) {
@@ -743,7 +684,7 @@ private static final long serialVersionUID = 0L;
         actionSlaId_ = null;
         actionSlaIdBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000200);
+      bitField0_ = (bitField0_ & ~0x00000100);
       return this;
     }
 
@@ -778,9 +719,9 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartialRepeatedFields(com.tcn.cloud.api.api.commons.TicketAction result) {
       if (actionSlaIdBuilder_ == null) {
-        if (((bitField0_ & 0x00000200) != 0)) {
+        if (((bitField0_ & 0x00000100) != 0)) {
           actionSlaId_ = java.util.Collections.unmodifiableList(actionSlaId_);
-          bitField0_ = (bitField0_ & ~0x00000200);
+          bitField0_ = (bitField0_ & ~0x00000100);
         }
         result.actionSlaId_ = actionSlaId_;
       } else {
@@ -807,24 +748,21 @@ private static final long serialVersionUID = 0L;
         result.ticketId_ = ticketId_;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.startDate_ = startDateBuilder_ == null
-            ? startDate_
-            : startDateBuilder_.build();
+        result.startTs_ = startTsBuilder_ == null
+            ? startTs_
+            : startTsBuilder_.build();
         to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.expiryDate_ = expiryDateBuilder_ == null
-            ? expiryDate_
-            : expiryDateBuilder_.build();
+        result.expiryTs_ = expiryTsBuilder_ == null
+            ? expiryTs_
+            : expiryTsBuilder_.build();
         to_bitField0_ |= 0x00000004;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
-        result.assignee_ = assignee_;
+        result.state_ = state_;
       }
       if (((from_bitField0_ & 0x00000080) != 0)) {
-        result.status_ = status_;
-      }
-      if (((from_bitField0_ & 0x00000100) != 0)) {
         actionSkills_.makeImmutable();
         result.actionSkills_ = actionSkills_;
       }
@@ -887,24 +825,19 @@ private static final long serialVersionUID = 0L;
       if (other.getTicketId() != 0L) {
         setTicketId(other.getTicketId());
       }
-      if (other.hasStartDate()) {
-        mergeStartDate(other.getStartDate());
+      if (other.hasStartTs()) {
+        mergeStartTs(other.getStartTs());
       }
-      if (other.hasExpiryDate()) {
-        mergeExpiryDate(other.getExpiryDate());
+      if (other.hasExpiryTs()) {
+        mergeExpiryTs(other.getExpiryTs());
       }
-      if (!other.getAssignee().isEmpty()) {
-        assignee_ = other.assignee_;
-        bitField0_ |= 0x00000040;
-        onChanged();
-      }
-      if (other.getStatus() != 0L) {
-        setStatus(other.getStatus());
+      if (other.getState() != 0L) {
+        setState(other.getState());
       }
       if (!other.actionSkills_.isEmpty()) {
         if (actionSkills_.isEmpty()) {
           actionSkills_ = other.actionSkills_;
-          bitField0_ |= 0x00000100;
+          bitField0_ |= 0x00000080;
         } else {
           ensureActionSkillsIsMutable();
           actionSkills_.addAll(other.actionSkills_);
@@ -915,7 +848,7 @@ private static final long serialVersionUID = 0L;
         if (!other.actionSlaId_.isEmpty()) {
           if (actionSlaId_.isEmpty()) {
             actionSlaId_ = other.actionSlaId_;
-            bitField0_ = (bitField0_ & ~0x00000200);
+            bitField0_ = (bitField0_ & ~0x00000100);
           } else {
             ensureActionSlaIdIsMutable();
             actionSlaId_.addAll(other.actionSlaId_);
@@ -928,7 +861,7 @@ private static final long serialVersionUID = 0L;
             actionSlaIdBuilder_.dispose();
             actionSlaIdBuilder_ = null;
             actionSlaId_ = other.actionSlaId_;
-            bitField0_ = (bitField0_ & ~0x00000200);
+            bitField0_ = (bitField0_ & ~0x00000100);
             actionSlaIdBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getActionSlaIdFieldBuilder() : null;
@@ -987,26 +920,21 @@ private static final long serialVersionUID = 0L;
             } // case 32
             case 42: {
               input.readMessage(
-                  getStartDateFieldBuilder().getBuilder(),
+                  getStartTsFieldBuilder().getBuilder(),
                   extensionRegistry);
               bitField0_ |= 0x00000010;
               break;
             } // case 42
             case 50: {
               input.readMessage(
-                  getExpiryDateFieldBuilder().getBuilder(),
+                  getExpiryTsFieldBuilder().getBuilder(),
                   extensionRegistry);
               bitField0_ |= 0x00000020;
               break;
             } // case 50
-            case 58: {
-              assignee_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000040;
-              break;
-            } // case 58
             case 64: {
-              status_ = input.readInt64();
-              bitField0_ |= 0x00000080;
+              state_ = input.readInt64();
+              bitField0_ |= 0x00000040;
               break;
             } // case 64
             case 74: {
@@ -1334,18 +1262,18 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.Timestamp startDate_;
+    private com.google.protobuf.Timestamp startTs_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startDateBuilder_;
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startTsBuilder_;
     /**
      * <pre>
      * Start Date of the ACTION
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp start_date = 5 [json_name = "startDate"];</code>
-     * @return Whether the startDate field is set.
+     * <code>.google.protobuf.Timestamp start_ts = 5 [json_name = "startTs"];</code>
+     * @return Whether the startTs field is set.
      */
-    public boolean hasStartDate() {
+    public boolean hasStartTs() {
       return ((bitField0_ & 0x00000010) != 0);
     }
     /**
@@ -1353,14 +1281,14 @@ private static final long serialVersionUID = 0L;
      * Start Date of the ACTION
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp start_date = 5 [json_name = "startDate"];</code>
-     * @return The startDate.
+     * <code>.google.protobuf.Timestamp start_ts = 5 [json_name = "startTs"];</code>
+     * @return The startTs.
      */
-    public com.google.protobuf.Timestamp getStartDate() {
-      if (startDateBuilder_ == null) {
-        return startDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startDate_;
+    public com.google.protobuf.Timestamp getStartTs() {
+      if (startTsBuilder_ == null) {
+        return startTs_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTs_;
       } else {
-        return startDateBuilder_.getMessage();
+        return startTsBuilder_.getMessage();
       }
     }
     /**
@@ -1368,16 +1296,16 @@ private static final long serialVersionUID = 0L;
      * Start Date of the ACTION
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp start_date = 5 [json_name = "startDate"];</code>
+     * <code>.google.protobuf.Timestamp start_ts = 5 [json_name = "startTs"];</code>
      */
-    public Builder setStartDate(com.google.protobuf.Timestamp value) {
-      if (startDateBuilder_ == null) {
+    public Builder setStartTs(com.google.protobuf.Timestamp value) {
+      if (startTsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        startDate_ = value;
+        startTs_ = value;
       } else {
-        startDateBuilder_.setMessage(value);
+        startTsBuilder_.setMessage(value);
       }
       bitField0_ |= 0x00000010;
       onChanged();
@@ -1388,14 +1316,14 @@ private static final long serialVersionUID = 0L;
      * Start Date of the ACTION
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp start_date = 5 [json_name = "startDate"];</code>
+     * <code>.google.protobuf.Timestamp start_ts = 5 [json_name = "startTs"];</code>
      */
-    public Builder setStartDate(
+    public Builder setStartTs(
         com.google.protobuf.Timestamp.Builder builderForValue) {
-      if (startDateBuilder_ == null) {
-        startDate_ = builderForValue.build();
+      if (startTsBuilder_ == null) {
+        startTs_ = builderForValue.build();
       } else {
-        startDateBuilder_.setMessage(builderForValue.build());
+        startTsBuilder_.setMessage(builderForValue.build());
       }
       bitField0_ |= 0x00000010;
       onChanged();
@@ -1406,21 +1334,21 @@ private static final long serialVersionUID = 0L;
      * Start Date of the ACTION
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp start_date = 5 [json_name = "startDate"];</code>
+     * <code>.google.protobuf.Timestamp start_ts = 5 [json_name = "startTs"];</code>
      */
-    public Builder mergeStartDate(com.google.protobuf.Timestamp value) {
-      if (startDateBuilder_ == null) {
+    public Builder mergeStartTs(com.google.protobuf.Timestamp value) {
+      if (startTsBuilder_ == null) {
         if (((bitField0_ & 0x00000010) != 0) &&
-          startDate_ != null &&
-          startDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-          getStartDateBuilder().mergeFrom(value);
+          startTs_ != null &&
+          startTs_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+          getStartTsBuilder().mergeFrom(value);
         } else {
-          startDate_ = value;
+          startTs_ = value;
         }
       } else {
-        startDateBuilder_.mergeFrom(value);
+        startTsBuilder_.mergeFrom(value);
       }
-      if (startDate_ != null) {
+      if (startTs_ != null) {
         bitField0_ |= 0x00000010;
         onChanged();
       }
@@ -1431,14 +1359,14 @@ private static final long serialVersionUID = 0L;
      * Start Date of the ACTION
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp start_date = 5 [json_name = "startDate"];</code>
+     * <code>.google.protobuf.Timestamp start_ts = 5 [json_name = "startTs"];</code>
      */
-    public Builder clearStartDate() {
+    public Builder clearStartTs() {
       bitField0_ = (bitField0_ & ~0x00000010);
-      startDate_ = null;
-      if (startDateBuilder_ != null) {
-        startDateBuilder_.dispose();
-        startDateBuilder_ = null;
+      startTs_ = null;
+      if (startTsBuilder_ != null) {
+        startTsBuilder_.dispose();
+        startTsBuilder_ = null;
       }
       onChanged();
       return this;
@@ -1448,26 +1376,26 @@ private static final long serialVersionUID = 0L;
      * Start Date of the ACTION
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp start_date = 5 [json_name = "startDate"];</code>
+     * <code>.google.protobuf.Timestamp start_ts = 5 [json_name = "startTs"];</code>
      */
-    public com.google.protobuf.Timestamp.Builder getStartDateBuilder() {
+    public com.google.protobuf.Timestamp.Builder getStartTsBuilder() {
       bitField0_ |= 0x00000010;
       onChanged();
-      return getStartDateFieldBuilder().getBuilder();
+      return getStartTsFieldBuilder().getBuilder();
     }
     /**
      * <pre>
      * Start Date of the ACTION
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp start_date = 5 [json_name = "startDate"];</code>
+     * <code>.google.protobuf.Timestamp start_ts = 5 [json_name = "startTs"];</code>
      */
-    public com.google.protobuf.TimestampOrBuilder getStartDateOrBuilder() {
-      if (startDateBuilder_ != null) {
-        return startDateBuilder_.getMessageOrBuilder();
+    public com.google.protobuf.TimestampOrBuilder getStartTsOrBuilder() {
+      if (startTsBuilder_ != null) {
+        return startTsBuilder_.getMessageOrBuilder();
       } else {
-        return startDate_ == null ?
-            com.google.protobuf.Timestamp.getDefaultInstance() : startDate_;
+        return startTs_ == null ?
+            com.google.protobuf.Timestamp.getDefaultInstance() : startTs_;
       }
     }
     /**
@@ -1475,34 +1403,34 @@ private static final long serialVersionUID = 0L;
      * Start Date of the ACTION
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp start_date = 5 [json_name = "startDate"];</code>
+     * <code>.google.protobuf.Timestamp start_ts = 5 [json_name = "startTs"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-        getStartDateFieldBuilder() {
-      if (startDateBuilder_ == null) {
-        startDateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        getStartTsFieldBuilder() {
+      if (startTsBuilder_ == null) {
+        startTsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                getStartDate(),
+                getStartTs(),
                 getParentForChildren(),
                 isClean());
-        startDate_ = null;
+        startTs_ = null;
       }
-      return startDateBuilder_;
+      return startTsBuilder_;
     }
 
-    private com.google.protobuf.Timestamp expiryDate_;
+    private com.google.protobuf.Timestamp expiryTs_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> expiryDateBuilder_;
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> expiryTsBuilder_;
     /**
      * <pre>
      * Expiry date of the ACTION
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp expiry_date = 6 [json_name = "expiryDate"];</code>
-     * @return Whether the expiryDate field is set.
+     * <code>.google.protobuf.Timestamp expiry_ts = 6 [json_name = "expiryTs"];</code>
+     * @return Whether the expiryTs field is set.
      */
-    public boolean hasExpiryDate() {
+    public boolean hasExpiryTs() {
       return ((bitField0_ & 0x00000020) != 0);
     }
     /**
@@ -1510,14 +1438,14 @@ private static final long serialVersionUID = 0L;
      * Expiry date of the ACTION
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp expiry_date = 6 [json_name = "expiryDate"];</code>
-     * @return The expiryDate.
+     * <code>.google.protobuf.Timestamp expiry_ts = 6 [json_name = "expiryTs"];</code>
+     * @return The expiryTs.
      */
-    public com.google.protobuf.Timestamp getExpiryDate() {
-      if (expiryDateBuilder_ == null) {
-        return expiryDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : expiryDate_;
+    public com.google.protobuf.Timestamp getExpiryTs() {
+      if (expiryTsBuilder_ == null) {
+        return expiryTs_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : expiryTs_;
       } else {
-        return expiryDateBuilder_.getMessage();
+        return expiryTsBuilder_.getMessage();
       }
     }
     /**
@@ -1525,16 +1453,16 @@ private static final long serialVersionUID = 0L;
      * Expiry date of the ACTION
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp expiry_date = 6 [json_name = "expiryDate"];</code>
+     * <code>.google.protobuf.Timestamp expiry_ts = 6 [json_name = "expiryTs"];</code>
      */
-    public Builder setExpiryDate(com.google.protobuf.Timestamp value) {
-      if (expiryDateBuilder_ == null) {
+    public Builder setExpiryTs(com.google.protobuf.Timestamp value) {
+      if (expiryTsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        expiryDate_ = value;
+        expiryTs_ = value;
       } else {
-        expiryDateBuilder_.setMessage(value);
+        expiryTsBuilder_.setMessage(value);
       }
       bitField0_ |= 0x00000020;
       onChanged();
@@ -1545,14 +1473,14 @@ private static final long serialVersionUID = 0L;
      * Expiry date of the ACTION
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp expiry_date = 6 [json_name = "expiryDate"];</code>
+     * <code>.google.protobuf.Timestamp expiry_ts = 6 [json_name = "expiryTs"];</code>
      */
-    public Builder setExpiryDate(
+    public Builder setExpiryTs(
         com.google.protobuf.Timestamp.Builder builderForValue) {
-      if (expiryDateBuilder_ == null) {
-        expiryDate_ = builderForValue.build();
+      if (expiryTsBuilder_ == null) {
+        expiryTs_ = builderForValue.build();
       } else {
-        expiryDateBuilder_.setMessage(builderForValue.build());
+        expiryTsBuilder_.setMessage(builderForValue.build());
       }
       bitField0_ |= 0x00000020;
       onChanged();
@@ -1563,21 +1491,21 @@ private static final long serialVersionUID = 0L;
      * Expiry date of the ACTION
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp expiry_date = 6 [json_name = "expiryDate"];</code>
+     * <code>.google.protobuf.Timestamp expiry_ts = 6 [json_name = "expiryTs"];</code>
      */
-    public Builder mergeExpiryDate(com.google.protobuf.Timestamp value) {
-      if (expiryDateBuilder_ == null) {
+    public Builder mergeExpiryTs(com.google.protobuf.Timestamp value) {
+      if (expiryTsBuilder_ == null) {
         if (((bitField0_ & 0x00000020) != 0) &&
-          expiryDate_ != null &&
-          expiryDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-          getExpiryDateBuilder().mergeFrom(value);
+          expiryTs_ != null &&
+          expiryTs_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+          getExpiryTsBuilder().mergeFrom(value);
         } else {
-          expiryDate_ = value;
+          expiryTs_ = value;
         }
       } else {
-        expiryDateBuilder_.mergeFrom(value);
+        expiryTsBuilder_.mergeFrom(value);
       }
-      if (expiryDate_ != null) {
+      if (expiryTs_ != null) {
         bitField0_ |= 0x00000020;
         onChanged();
       }
@@ -1588,14 +1516,14 @@ private static final long serialVersionUID = 0L;
      * Expiry date of the ACTION
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp expiry_date = 6 [json_name = "expiryDate"];</code>
+     * <code>.google.protobuf.Timestamp expiry_ts = 6 [json_name = "expiryTs"];</code>
      */
-    public Builder clearExpiryDate() {
+    public Builder clearExpiryTs() {
       bitField0_ = (bitField0_ & ~0x00000020);
-      expiryDate_ = null;
-      if (expiryDateBuilder_ != null) {
-        expiryDateBuilder_.dispose();
-        expiryDateBuilder_ = null;
+      expiryTs_ = null;
+      if (expiryTsBuilder_ != null) {
+        expiryTsBuilder_.dispose();
+        expiryTsBuilder_ = null;
       }
       onChanged();
       return this;
@@ -1605,26 +1533,26 @@ private static final long serialVersionUID = 0L;
      * Expiry date of the ACTION
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp expiry_date = 6 [json_name = "expiryDate"];</code>
+     * <code>.google.protobuf.Timestamp expiry_ts = 6 [json_name = "expiryTs"];</code>
      */
-    public com.google.protobuf.Timestamp.Builder getExpiryDateBuilder() {
+    public com.google.protobuf.Timestamp.Builder getExpiryTsBuilder() {
       bitField0_ |= 0x00000020;
       onChanged();
-      return getExpiryDateFieldBuilder().getBuilder();
+      return getExpiryTsFieldBuilder().getBuilder();
     }
     /**
      * <pre>
      * Expiry date of the ACTION
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp expiry_date = 6 [json_name = "expiryDate"];</code>
+     * <code>.google.protobuf.Timestamp expiry_ts = 6 [json_name = "expiryTs"];</code>
      */
-    public com.google.protobuf.TimestampOrBuilder getExpiryDateOrBuilder() {
-      if (expiryDateBuilder_ != null) {
-        return expiryDateBuilder_.getMessageOrBuilder();
+    public com.google.protobuf.TimestampOrBuilder getExpiryTsOrBuilder() {
+      if (expiryTsBuilder_ != null) {
+        return expiryTsBuilder_.getMessageOrBuilder();
       } else {
-        return expiryDate_ == null ?
-            com.google.protobuf.Timestamp.getDefaultInstance() : expiryDate_;
+        return expiryTs_ == null ?
+            com.google.protobuf.Timestamp.getDefaultInstance() : expiryTs_;
       }
     }
     /**
@@ -1632,154 +1560,62 @@ private static final long serialVersionUID = 0L;
      * Expiry date of the ACTION
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp expiry_date = 6 [json_name = "expiryDate"];</code>
+     * <code>.google.protobuf.Timestamp expiry_ts = 6 [json_name = "expiryTs"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-        getExpiryDateFieldBuilder() {
-      if (expiryDateBuilder_ == null) {
-        expiryDateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        getExpiryTsFieldBuilder() {
+      if (expiryTsBuilder_ == null) {
+        expiryTsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                getExpiryDate(),
+                getExpiryTs(),
                 getParentForChildren(),
                 isClean());
-        expiryDate_ = null;
+        expiryTs_ = null;
       }
-      return expiryDateBuilder_;
+      return expiryTsBuilder_;
     }
 
-    private java.lang.Object assignee_ = "";
+    private long state_ ;
     /**
      * <pre>
-     * Agent to whom ACTION is assigned. Only one assignee per action
+     * Ticket action status can be 1 == AVAILABLE and 2 == NOT AVAILABLE
      * </pre>
      *
-     * <code>string assignee = 7 [json_name = "assignee"];</code>
-     * @return The assignee.
-     */
-    public java.lang.String getAssignee() {
-      java.lang.Object ref = assignee_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        assignee_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <pre>
-     * Agent to whom ACTION is assigned. Only one assignee per action
-     * </pre>
-     *
-     * <code>string assignee = 7 [json_name = "assignee"];</code>
-     * @return The bytes for assignee.
-     */
-    public com.google.protobuf.ByteString
-        getAssigneeBytes() {
-      java.lang.Object ref = assignee_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        assignee_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <pre>
-     * Agent to whom ACTION is assigned. Only one assignee per action
-     * </pre>
-     *
-     * <code>string assignee = 7 [json_name = "assignee"];</code>
-     * @param value The assignee to set.
-     * @return This builder for chaining.
-     */
-    public Builder setAssignee(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      assignee_ = value;
-      bitField0_ |= 0x00000040;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Agent to whom ACTION is assigned. Only one assignee per action
-     * </pre>
-     *
-     * <code>string assignee = 7 [json_name = "assignee"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearAssignee() {
-      assignee_ = getDefaultInstance().getAssignee();
-      bitField0_ = (bitField0_ & ~0x00000040);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Agent to whom ACTION is assigned. Only one assignee per action
-     * </pre>
-     *
-     * <code>string assignee = 7 [json_name = "assignee"];</code>
-     * @param value The bytes for assignee to set.
-     * @return This builder for chaining.
-     */
-    public Builder setAssigneeBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      assignee_ = value;
-      bitField0_ |= 0x00000040;
-      onChanged();
-      return this;
-    }
-
-    private long status_ ;
-    /**
-     * <pre>
-     * Ticket action status can be 1 == OPEN and 2 == CLOSE
-     * </pre>
-     *
-     * <code>int64 status = 8 [json_name = "status"];</code>
-     * @return The status.
+     * <code>int64 state = 8 [json_name = "state"];</code>
+     * @return The state.
      */
     @java.lang.Override
-    public long getStatus() {
-      return status_;
+    public long getState() {
+      return state_;
     }
     /**
      * <pre>
-     * Ticket action status can be 1 == OPEN and 2 == CLOSE
+     * Ticket action status can be 1 == AVAILABLE and 2 == NOT AVAILABLE
      * </pre>
      *
-     * <code>int64 status = 8 [json_name = "status"];</code>
-     * @param value The status to set.
+     * <code>int64 state = 8 [json_name = "state"];</code>
+     * @param value The state to set.
      * @return This builder for chaining.
      */
-    public Builder setStatus(long value) {
+    public Builder setState(long value) {
 
-      status_ = value;
-      bitField0_ |= 0x00000080;
+      state_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Ticket action status can be 1 == OPEN and 2 == CLOSE
+     * Ticket action status can be 1 == AVAILABLE and 2 == NOT AVAILABLE
      * </pre>
      *
-     * <code>int64 status = 8 [json_name = "status"];</code>
+     * <code>int64 state = 8 [json_name = "state"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearStatus() {
-      bitField0_ = (bitField0_ & ~0x00000080);
-      status_ = 0L;
+    public Builder clearState() {
+      bitField0_ = (bitField0_ & ~0x00000040);
+      state_ = 0L;
       onChanged();
       return this;
     }
@@ -1790,7 +1626,7 @@ private static final long serialVersionUID = 0L;
       if (!actionSkills_.isModifiable()) {
         actionSkills_ = new com.google.protobuf.LazyStringArrayList(actionSkills_);
       }
-      bitField0_ |= 0x00000100;
+      bitField0_ |= 0x00000080;
     }
     /**
      * <pre>
@@ -1861,7 +1697,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureActionSkillsIsMutable();
       actionSkills_.set(index, value);
-      bitField0_ |= 0x00000100;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1880,7 +1716,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureActionSkillsIsMutable();
       actionSkills_.add(value);
-      bitField0_ |= 0x00000100;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1899,7 +1735,7 @@ private static final long serialVersionUID = 0L;
       ensureActionSkillsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, actionSkills_);
-      bitField0_ |= 0x00000100;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1915,7 +1751,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearActionSkills() {
       actionSkills_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000100);;
+      bitField0_ = (bitField0_ & ~0x00000080);;
       onChanged();
       return this;
     }
@@ -1935,7 +1771,7 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureActionSkillsIsMutable();
       actionSkills_.add(value);
-      bitField0_ |= 0x00000100;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1943,9 +1779,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.tcn.cloud.api.api.commons.Sla> actionSlaId_ =
       java.util.Collections.emptyList();
     private void ensureActionSlaIdIsMutable() {
-      if (!((bitField0_ & 0x00000200) != 0)) {
+      if (!((bitField0_ & 0x00000100) != 0)) {
         actionSlaId_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.Sla>(actionSlaId_);
-        bitField0_ |= 0x00000200;
+        bitField0_ |= 0x00000100;
        }
     }
 
@@ -2139,7 +1975,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearActionSlaId() {
       if (actionSlaIdBuilder_ == null) {
         actionSlaId_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000200);
+        bitField0_ = (bitField0_ & ~0x00000100);
         onChanged();
       } else {
         actionSlaIdBuilder_.clear();
@@ -2244,7 +2080,7 @@ private static final long serialVersionUID = 0L;
         actionSlaIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.commons.Sla, com.tcn.cloud.api.api.commons.Sla.Builder, com.tcn.cloud.api.api.commons.SlaOrBuilder>(
                 actionSlaId_,
-                ((bitField0_ & 0x00000200) != 0),
+                ((bitField0_ & 0x00000100) != 0),
                 getParentForChildren(),
                 isClean());
         actionSlaId_ = null;

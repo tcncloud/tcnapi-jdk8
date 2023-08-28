@@ -42,6 +42,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.Sla.class, com.tcn.cloud.api.api.commons.Sla.Builder.class);
   }
 
+  private int bitField0_;
   public static final int CONDITION_SID_FIELD_NUMBER = 1;
   private long conditionSid_ = 0L;
   /**
@@ -75,6 +76,32 @@ private static final long serialVersionUID = 0L;
     return slaMin_;
   }
 
+  public static final int SLA_DURATION_FIELD_NUMBER = 4;
+  private com.tcn.cloud.api.api.commons.Duration slaDuration_;
+  /**
+   * <code>.api.commons.Duration sla_duration = 4 [json_name = "slaDuration"];</code>
+   * @return Whether the slaDuration field is set.
+   */
+  @java.lang.Override
+  public boolean hasSlaDuration() {
+    return ((bitField0_ & 0x00000001) != 0);
+  }
+  /**
+   * <code>.api.commons.Duration sla_duration = 4 [json_name = "slaDuration"];</code>
+   * @return The slaDuration.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.Duration getSlaDuration() {
+    return slaDuration_ == null ? com.tcn.cloud.api.api.commons.Duration.getDefaultInstance() : slaDuration_;
+  }
+  /**
+   * <code>.api.commons.Duration sla_duration = 4 [json_name = "slaDuration"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.DurationOrBuilder getSlaDurationOrBuilder() {
+    return slaDuration_ == null ? com.tcn.cloud.api.api.commons.Duration.getDefaultInstance() : slaDuration_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -98,6 +125,9 @@ private static final long serialVersionUID = 0L;
     if (slaMin_ != 0L) {
       output.writeInt64(3, slaMin_);
     }
+    if (((bitField0_ & 0x00000001) != 0)) {
+      output.writeMessage(4, getSlaDuration());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -118,6 +148,10 @@ private static final long serialVersionUID = 0L;
     if (slaMin_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(3, slaMin_);
+    }
+    if (((bitField0_ & 0x00000001) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, getSlaDuration());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -140,6 +174,11 @@ private static final long serialVersionUID = 0L;
         != other.getSlaSid()) return false;
     if (getSlaMin()
         != other.getSlaMin()) return false;
+    if (hasSlaDuration() != other.hasSlaDuration()) return false;
+    if (hasSlaDuration()) {
+      if (!getSlaDuration()
+          .equals(other.getSlaDuration())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -160,6 +199,10 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + SLA_MIN_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getSlaMin());
+    if (hasSlaDuration()) {
+      hash = (37 * hash) + SLA_DURATION_FIELD_NUMBER;
+      hash = (53 * hash) + getSlaDuration().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -283,13 +326,19 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.Sla.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getSlaDurationFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -298,6 +347,11 @@ private static final long serialVersionUID = 0L;
       conditionSid_ = 0L;
       slaSid_ = 0L;
       slaMin_ = 0L;
+      slaDuration_ = null;
+      if (slaDurationBuilder_ != null) {
+        slaDurationBuilder_.dispose();
+        slaDurationBuilder_ = null;
+      }
       return this;
     }
 
@@ -340,6 +394,14 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.slaMin_ = slaMin_;
       }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.slaDuration_ = slaDurationBuilder_ == null
+            ? slaDuration_
+            : slaDurationBuilder_.build();
+        to_bitField0_ |= 0x00000001;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -395,6 +457,9 @@ private static final long serialVersionUID = 0L;
       if (other.getSlaMin() != 0L) {
         setSlaMin(other.getSlaMin());
       }
+      if (other.hasSlaDuration()) {
+        mergeSlaDuration(other.getSlaDuration());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -436,6 +501,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 24
+            case 34: {
+              input.readMessage(
+                  getSlaDurationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -547,6 +619,127 @@ private static final long serialVersionUID = 0L;
       slaMin_ = 0L;
       onChanged();
       return this;
+    }
+
+    private com.tcn.cloud.api.api.commons.Duration slaDuration_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.Duration, com.tcn.cloud.api.api.commons.Duration.Builder, com.tcn.cloud.api.api.commons.DurationOrBuilder> slaDurationBuilder_;
+    /**
+     * <code>.api.commons.Duration sla_duration = 4 [json_name = "slaDuration"];</code>
+     * @return Whether the slaDuration field is set.
+     */
+    public boolean hasSlaDuration() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>.api.commons.Duration sla_duration = 4 [json_name = "slaDuration"];</code>
+     * @return The slaDuration.
+     */
+    public com.tcn.cloud.api.api.commons.Duration getSlaDuration() {
+      if (slaDurationBuilder_ == null) {
+        return slaDuration_ == null ? com.tcn.cloud.api.api.commons.Duration.getDefaultInstance() : slaDuration_;
+      } else {
+        return slaDurationBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.api.commons.Duration sla_duration = 4 [json_name = "slaDuration"];</code>
+     */
+    public Builder setSlaDuration(com.tcn.cloud.api.api.commons.Duration value) {
+      if (slaDurationBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        slaDuration_ = value;
+      } else {
+        slaDurationBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.Duration sla_duration = 4 [json_name = "slaDuration"];</code>
+     */
+    public Builder setSlaDuration(
+        com.tcn.cloud.api.api.commons.Duration.Builder builderForValue) {
+      if (slaDurationBuilder_ == null) {
+        slaDuration_ = builderForValue.build();
+      } else {
+        slaDurationBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.Duration sla_duration = 4 [json_name = "slaDuration"];</code>
+     */
+    public Builder mergeSlaDuration(com.tcn.cloud.api.api.commons.Duration value) {
+      if (slaDurationBuilder_ == null) {
+        if (((bitField0_ & 0x00000008) != 0) &&
+          slaDuration_ != null &&
+          slaDuration_ != com.tcn.cloud.api.api.commons.Duration.getDefaultInstance()) {
+          getSlaDurationBuilder().mergeFrom(value);
+        } else {
+          slaDuration_ = value;
+        }
+      } else {
+        slaDurationBuilder_.mergeFrom(value);
+      }
+      if (slaDuration_ != null) {
+        bitField0_ |= 0x00000008;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.Duration sla_duration = 4 [json_name = "slaDuration"];</code>
+     */
+    public Builder clearSlaDuration() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      slaDuration_ = null;
+      if (slaDurationBuilder_ != null) {
+        slaDurationBuilder_.dispose();
+        slaDurationBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.Duration sla_duration = 4 [json_name = "slaDuration"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.Duration.Builder getSlaDurationBuilder() {
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return getSlaDurationFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.Duration sla_duration = 4 [json_name = "slaDuration"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.DurationOrBuilder getSlaDurationOrBuilder() {
+      if (slaDurationBuilder_ != null) {
+        return slaDurationBuilder_.getMessageOrBuilder();
+      } else {
+        return slaDuration_ == null ?
+            com.tcn.cloud.api.api.commons.Duration.getDefaultInstance() : slaDuration_;
+      }
+    }
+    /**
+     * <code>.api.commons.Duration sla_duration = 4 [json_name = "slaDuration"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.Duration, com.tcn.cloud.api.api.commons.Duration.Builder, com.tcn.cloud.api.api.commons.DurationOrBuilder> 
+        getSlaDurationFieldBuilder() {
+      if (slaDurationBuilder_ == null) {
+        slaDurationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.Duration, com.tcn.cloud.api.api.commons.Duration.Builder, com.tcn.cloud.api.api.commons.DurationOrBuilder>(
+                getSlaDuration(),
+                getParentForChildren(),
+                isClean());
+        slaDuration_ = null;
+      }
+      return slaDurationBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
