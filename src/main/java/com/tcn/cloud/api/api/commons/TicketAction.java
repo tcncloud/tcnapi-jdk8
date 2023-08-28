@@ -20,10 +20,10 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private TicketAction() {
-    ticketContext_ = "";
     assignee_ = "";
     actionSkills_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
+    actionSlaId_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -77,51 +77,42 @@ private static final long serialVersionUID = 0L;
     return actionId_;
   }
 
-  public static final int TICKET_CONTEXT_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object ticketContext_ = "";
+  public static final int CALLBACK_CONTEXT_FIELD_NUMBER = 3;
+  private com.tcn.cloud.api.api.commons.CallbackContext callbackContext_;
   /**
    * <pre>
-   * Description for the Action
+   * Attributes for a callback Action
    * </pre>
    *
-   * <code>string ticket_context = 3 [json_name = "ticketContext"];</code>
-   * @return The ticketContext.
+   * <code>.api.commons.CallbackContext callback_context = 3 [json_name = "callbackContext"];</code>
+   * @return Whether the callbackContext field is set.
    */
   @java.lang.Override
-  public java.lang.String getTicketContext() {
-    java.lang.Object ref = ticketContext_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      ticketContext_ = s;
-      return s;
-    }
+  public boolean hasCallbackContext() {
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
-   * Description for the Action
+   * Attributes for a callback Action
    * </pre>
    *
-   * <code>string ticket_context = 3 [json_name = "ticketContext"];</code>
-   * @return The bytes for ticketContext.
+   * <code>.api.commons.CallbackContext callback_context = 3 [json_name = "callbackContext"];</code>
+   * @return The callbackContext.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
-      getTicketContextBytes() {
-    java.lang.Object ref = ticketContext_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      ticketContext_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
+  public com.tcn.cloud.api.api.commons.CallbackContext getCallbackContext() {
+    return callbackContext_ == null ? com.tcn.cloud.api.api.commons.CallbackContext.getDefaultInstance() : callbackContext_;
+  }
+  /**
+   * <pre>
+   * Attributes for a callback Action
+   * </pre>
+   *
+   * <code>.api.commons.CallbackContext callback_context = 3 [json_name = "callbackContext"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.CallbackContextOrBuilder getCallbackContextOrBuilder() {
+    return callbackContext_ == null ? com.tcn.cloud.api.api.commons.CallbackContext.getDefaultInstance() : callbackContext_;
   }
 
   public static final int TICKET_ID_FIELD_NUMBER = 4;
@@ -151,7 +142,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasStartDate() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <pre>
@@ -189,7 +180,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasExpiryDate() {
-    return ((bitField0_ & 0x00000002) != 0);
+    return ((bitField0_ & 0x00000004) != 0);
   }
   /**
    * <pre>
@@ -335,18 +326,64 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ACTION_SLA_ID_FIELD_NUMBER = 10;
-  private long actionSlaId_ = 0L;
+  @SuppressWarnings("serial")
+  private java.util.List<com.tcn.cloud.api.api.commons.Sla> actionSlaId_;
   /**
    * <pre>
    * SLA Id for the ACTION
    * </pre>
    *
-   * <code>int64 action_sla_id = 10 [json_name = "actionSlaId"];</code>
-   * @return The actionSlaId.
+   * <code>repeated .api.commons.Sla action_sla_id = 10 [json_name = "actionSlaId"];</code>
    */
   @java.lang.Override
-  public long getActionSlaId() {
+  public java.util.List<com.tcn.cloud.api.api.commons.Sla> getActionSlaIdList() {
     return actionSlaId_;
+  }
+  /**
+   * <pre>
+   * SLA Id for the ACTION
+   * </pre>
+   *
+   * <code>repeated .api.commons.Sla action_sla_id = 10 [json_name = "actionSlaId"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.tcn.cloud.api.api.commons.SlaOrBuilder> 
+      getActionSlaIdOrBuilderList() {
+    return actionSlaId_;
+  }
+  /**
+   * <pre>
+   * SLA Id for the ACTION
+   * </pre>
+   *
+   * <code>repeated .api.commons.Sla action_sla_id = 10 [json_name = "actionSlaId"];</code>
+   */
+  @java.lang.Override
+  public int getActionSlaIdCount() {
+    return actionSlaId_.size();
+  }
+  /**
+   * <pre>
+   * SLA Id for the ACTION
+   * </pre>
+   *
+   * <code>repeated .api.commons.Sla action_sla_id = 10 [json_name = "actionSlaId"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.Sla getActionSlaId(int index) {
+    return actionSlaId_.get(index);
+  }
+  /**
+   * <pre>
+   * SLA Id for the ACTION
+   * </pre>
+   *
+   * <code>repeated .api.commons.Sla action_sla_id = 10 [json_name = "actionSlaId"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.SlaOrBuilder getActionSlaIdOrBuilder(
+      int index) {
+    return actionSlaId_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -369,16 +406,16 @@ private static final long serialVersionUID = 0L;
     if (actionId_ != 0L) {
       output.writeInt64(2, actionId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ticketContext_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, ticketContext_);
+    if (((bitField0_ & 0x00000001) != 0)) {
+      output.writeMessage(3, getCallbackContext());
     }
     if (ticketId_ != 0L) {
       output.writeInt64(4, ticketId_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(5, getStartDate());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       output.writeMessage(6, getExpiryDate());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(assignee_)) {
@@ -390,8 +427,8 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < actionSkills_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 9, actionSkills_.getRaw(i));
     }
-    if (actionSlaId_ != 0L) {
-      output.writeInt64(10, actionSlaId_);
+    for (int i = 0; i < actionSlaId_.size(); i++) {
+      output.writeMessage(10, actionSlaId_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -410,18 +447,19 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(2, actionId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ticketContext_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, ticketContext_);
+    if (((bitField0_ & 0x00000001) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, getCallbackContext());
     }
     if (ticketId_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(4, ticketId_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getStartDate());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, getExpiryDate());
     }
@@ -440,9 +478,9 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getActionSkillsList().size();
     }
-    if (actionSlaId_ != 0L) {
+    for (int i = 0; i < actionSlaId_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(10, actionSlaId_);
+        .computeMessageSize(10, actionSlaId_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -463,8 +501,11 @@ private static final long serialVersionUID = 0L;
         != other.getTicketActionId()) return false;
     if (getActionId()
         != other.getActionId()) return false;
-    if (!getTicketContext()
-        .equals(other.getTicketContext())) return false;
+    if (hasCallbackContext() != other.hasCallbackContext()) return false;
+    if (hasCallbackContext()) {
+      if (!getCallbackContext()
+          .equals(other.getCallbackContext())) return false;
+    }
     if (getTicketId()
         != other.getTicketId()) return false;
     if (hasStartDate() != other.hasStartDate()) return false;
@@ -483,8 +524,8 @@ private static final long serialVersionUID = 0L;
         != other.getStatus()) return false;
     if (!getActionSkillsList()
         .equals(other.getActionSkillsList())) return false;
-    if (getActionSlaId()
-        != other.getActionSlaId()) return false;
+    if (!getActionSlaIdList()
+        .equals(other.getActionSlaIdList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -502,8 +543,10 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + ACTION_ID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getActionId());
-    hash = (37 * hash) + TICKET_CONTEXT_FIELD_NUMBER;
-    hash = (53 * hash) + getTicketContext().hashCode();
+    if (hasCallbackContext()) {
+      hash = (37 * hash) + CALLBACK_CONTEXT_FIELD_NUMBER;
+      hash = (53 * hash) + getCallbackContext().hashCode();
+    }
     hash = (37 * hash) + TICKET_ID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getTicketId());
@@ -524,9 +567,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + ACTION_SKILLS_FIELD_NUMBER;
       hash = (53 * hash) + getActionSkillsList().hashCode();
     }
-    hash = (37 * hash) + ACTION_SLA_ID_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getActionSlaId());
+    if (getActionSlaIdCount() > 0) {
+      hash = (37 * hash) + ACTION_SLA_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getActionSlaIdList().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -661,8 +705,10 @@ private static final long serialVersionUID = 0L;
     private void maybeForceBuilderInitialization() {
       if (com.google.protobuf.GeneratedMessageV3
               .alwaysUseFieldBuilders) {
+        getCallbackContextFieldBuilder();
         getStartDateFieldBuilder();
         getExpiryDateFieldBuilder();
+        getActionSlaIdFieldBuilder();
       }
     }
     @java.lang.Override
@@ -671,7 +717,11 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       ticketActionId_ = 0L;
       actionId_ = 0L;
-      ticketContext_ = "";
+      callbackContext_ = null;
+      if (callbackContextBuilder_ != null) {
+        callbackContextBuilder_.dispose();
+        callbackContextBuilder_ = null;
+      }
       ticketId_ = 0L;
       startDate_ = null;
       if (startDateBuilder_ != null) {
@@ -687,7 +737,13 @@ private static final long serialVersionUID = 0L;
       status_ = 0L;
       actionSkills_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
-      actionSlaId_ = 0L;
+      if (actionSlaIdBuilder_ == null) {
+        actionSlaId_ = java.util.Collections.emptyList();
+      } else {
+        actionSlaId_ = null;
+        actionSlaIdBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000200);
       return this;
     }
 
@@ -714,9 +770,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.TicketAction buildPartial() {
       com.tcn.cloud.api.api.commons.TicketAction result = new com.tcn.cloud.api.api.commons.TicketAction(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.commons.TicketAction result) {
+      if (actionSlaIdBuilder_ == null) {
+        if (((bitField0_ & 0x00000200) != 0)) {
+          actionSlaId_ = java.util.Collections.unmodifiableList(actionSlaId_);
+          bitField0_ = (bitField0_ & ~0x00000200);
+        }
+        result.actionSlaId_ = actionSlaId_;
+      } else {
+        result.actionSlaId_ = actionSlaIdBuilder_.build();
+      }
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.commons.TicketAction result) {
@@ -727,24 +796,27 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.actionId_ = actionId_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.ticketContext_ = ticketContext_;
+        result.callbackContext_ = callbackContextBuilder_ == null
+            ? callbackContext_
+            : callbackContextBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.ticketId_ = ticketId_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.startDate_ = startDateBuilder_ == null
             ? startDate_
             : startDateBuilder_.build();
-        to_bitField0_ |= 0x00000001;
+        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.expiryDate_ = expiryDateBuilder_ == null
             ? expiryDate_
             : expiryDateBuilder_.build();
-        to_bitField0_ |= 0x00000002;
+        to_bitField0_ |= 0x00000004;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.assignee_ = assignee_;
@@ -755,9 +827,6 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000100) != 0)) {
         actionSkills_.makeImmutable();
         result.actionSkills_ = actionSkills_;
-      }
-      if (((from_bitField0_ & 0x00000200) != 0)) {
-        result.actionSlaId_ = actionSlaId_;
       }
       result.bitField0_ |= to_bitField0_;
     }
@@ -812,10 +881,8 @@ private static final long serialVersionUID = 0L;
       if (other.getActionId() != 0L) {
         setActionId(other.getActionId());
       }
-      if (!other.getTicketContext().isEmpty()) {
-        ticketContext_ = other.ticketContext_;
-        bitField0_ |= 0x00000004;
-        onChanged();
+      if (other.hasCallbackContext()) {
+        mergeCallbackContext(other.getCallbackContext());
       }
       if (other.getTicketId() != 0L) {
         setTicketId(other.getTicketId());
@@ -844,8 +911,31 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       }
-      if (other.getActionSlaId() != 0L) {
-        setActionSlaId(other.getActionSlaId());
+      if (actionSlaIdBuilder_ == null) {
+        if (!other.actionSlaId_.isEmpty()) {
+          if (actionSlaId_.isEmpty()) {
+            actionSlaId_ = other.actionSlaId_;
+            bitField0_ = (bitField0_ & ~0x00000200);
+          } else {
+            ensureActionSlaIdIsMutable();
+            actionSlaId_.addAll(other.actionSlaId_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.actionSlaId_.isEmpty()) {
+          if (actionSlaIdBuilder_.isEmpty()) {
+            actionSlaIdBuilder_.dispose();
+            actionSlaIdBuilder_ = null;
+            actionSlaId_ = other.actionSlaId_;
+            bitField0_ = (bitField0_ & ~0x00000200);
+            actionSlaIdBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getActionSlaIdFieldBuilder() : null;
+          } else {
+            actionSlaIdBuilder_.addAllMessages(other.actionSlaId_);
+          }
+        }
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -884,7 +974,9 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 16
             case 26: {
-              ticketContext_ = input.readStringRequireUtf8();
+              input.readMessage(
+                  getCallbackContextFieldBuilder().getBuilder(),
+                  extensionRegistry);
               bitField0_ |= 0x00000004;
               break;
             } // case 26
@@ -923,11 +1015,19 @@ private static final long serialVersionUID = 0L;
               actionSkills_.add(s);
               break;
             } // case 74
-            case 80: {
-              actionSlaId_ = input.readInt64();
-              bitField0_ |= 0x00000200;
+            case 82: {
+              com.tcn.cloud.api.api.commons.Sla m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.commons.Sla.parser(),
+                      extensionRegistry);
+              if (actionSlaIdBuilder_ == null) {
+                ensureActionSlaIdIsMutable();
+                actionSlaId_.add(m);
+              } else {
+                actionSlaIdBuilder_.addMessage(m);
+              }
               break;
-            } // case 80
+            } // case 82
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1033,96 +1133,161 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object ticketContext_ = "";
+    private com.tcn.cloud.api.api.commons.CallbackContext callbackContext_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.CallbackContext, com.tcn.cloud.api.api.commons.CallbackContext.Builder, com.tcn.cloud.api.api.commons.CallbackContextOrBuilder> callbackContextBuilder_;
     /**
      * <pre>
-     * Description for the Action
+     * Attributes for a callback Action
      * </pre>
      *
-     * <code>string ticket_context = 3 [json_name = "ticketContext"];</code>
-     * @return The ticketContext.
+     * <code>.api.commons.CallbackContext callback_context = 3 [json_name = "callbackContext"];</code>
+     * @return Whether the callbackContext field is set.
      */
-    public java.lang.String getTicketContext() {
-      java.lang.Object ref = ticketContext_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        ticketContext_ = s;
-        return s;
+    public boolean hasCallbackContext() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * Attributes for a callback Action
+     * </pre>
+     *
+     * <code>.api.commons.CallbackContext callback_context = 3 [json_name = "callbackContext"];</code>
+     * @return The callbackContext.
+     */
+    public com.tcn.cloud.api.api.commons.CallbackContext getCallbackContext() {
+      if (callbackContextBuilder_ == null) {
+        return callbackContext_ == null ? com.tcn.cloud.api.api.commons.CallbackContext.getDefaultInstance() : callbackContext_;
       } else {
-        return (java.lang.String) ref;
+        return callbackContextBuilder_.getMessage();
       }
     }
     /**
      * <pre>
-     * Description for the Action
+     * Attributes for a callback Action
      * </pre>
      *
-     * <code>string ticket_context = 3 [json_name = "ticketContext"];</code>
-     * @return The bytes for ticketContext.
+     * <code>.api.commons.CallbackContext callback_context = 3 [json_name = "callbackContext"];</code>
      */
-    public com.google.protobuf.ByteString
-        getTicketContextBytes() {
-      java.lang.Object ref = ticketContext_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        ticketContext_ = b;
-        return b;
+    public Builder setCallbackContext(com.tcn.cloud.api.api.commons.CallbackContext value) {
+      if (callbackContextBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        callbackContext_ = value;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        callbackContextBuilder_.setMessage(value);
       }
-    }
-    /**
-     * <pre>
-     * Description for the Action
-     * </pre>
-     *
-     * <code>string ticket_context = 3 [json_name = "ticketContext"];</code>
-     * @param value The ticketContext to set.
-     * @return This builder for chaining.
-     */
-    public Builder setTicketContext(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ticketContext_ = value;
       bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Description for the Action
+     * Attributes for a callback Action
      * </pre>
      *
-     * <code>string ticket_context = 3 [json_name = "ticketContext"];</code>
-     * @return This builder for chaining.
+     * <code>.api.commons.CallbackContext callback_context = 3 [json_name = "callbackContext"];</code>
      */
-    public Builder clearTicketContext() {
-      ticketContext_ = getDefaultInstance().getTicketContext();
+    public Builder setCallbackContext(
+        com.tcn.cloud.api.api.commons.CallbackContext.Builder builderForValue) {
+      if (callbackContextBuilder_ == null) {
+        callbackContext_ = builderForValue.build();
+      } else {
+        callbackContextBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Attributes for a callback Action
+     * </pre>
+     *
+     * <code>.api.commons.CallbackContext callback_context = 3 [json_name = "callbackContext"];</code>
+     */
+    public Builder mergeCallbackContext(com.tcn.cloud.api.api.commons.CallbackContext value) {
+      if (callbackContextBuilder_ == null) {
+        if (((bitField0_ & 0x00000004) != 0) &&
+          callbackContext_ != null &&
+          callbackContext_ != com.tcn.cloud.api.api.commons.CallbackContext.getDefaultInstance()) {
+          getCallbackContextBuilder().mergeFrom(value);
+        } else {
+          callbackContext_ = value;
+        }
+      } else {
+        callbackContextBuilder_.mergeFrom(value);
+      }
+      if (callbackContext_ != null) {
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Attributes for a callback Action
+     * </pre>
+     *
+     * <code>.api.commons.CallbackContext callback_context = 3 [json_name = "callbackContext"];</code>
+     */
+    public Builder clearCallbackContext() {
       bitField0_ = (bitField0_ & ~0x00000004);
+      callbackContext_ = null;
+      if (callbackContextBuilder_ != null) {
+        callbackContextBuilder_.dispose();
+        callbackContextBuilder_ = null;
+      }
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Description for the Action
+     * Attributes for a callback Action
      * </pre>
      *
-     * <code>string ticket_context = 3 [json_name = "ticketContext"];</code>
-     * @param value The bytes for ticketContext to set.
-     * @return This builder for chaining.
+     * <code>.api.commons.CallbackContext callback_context = 3 [json_name = "callbackContext"];</code>
      */
-    public Builder setTicketContextBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      ticketContext_ = value;
+    public com.tcn.cloud.api.api.commons.CallbackContext.Builder getCallbackContextBuilder() {
       bitField0_ |= 0x00000004;
       onChanged();
-      return this;
+      return getCallbackContextFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Attributes for a callback Action
+     * </pre>
+     *
+     * <code>.api.commons.CallbackContext callback_context = 3 [json_name = "callbackContext"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.CallbackContextOrBuilder getCallbackContextOrBuilder() {
+      if (callbackContextBuilder_ != null) {
+        return callbackContextBuilder_.getMessageOrBuilder();
+      } else {
+        return callbackContext_ == null ?
+            com.tcn.cloud.api.api.commons.CallbackContext.getDefaultInstance() : callbackContext_;
+      }
+    }
+    /**
+     * <pre>
+     * Attributes for a callback Action
+     * </pre>
+     *
+     * <code>.api.commons.CallbackContext callback_context = 3 [json_name = "callbackContext"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.CallbackContext, com.tcn.cloud.api.api.commons.CallbackContext.Builder, com.tcn.cloud.api.api.commons.CallbackContextOrBuilder> 
+        getCallbackContextFieldBuilder() {
+      if (callbackContextBuilder_ == null) {
+        callbackContextBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.CallbackContext, com.tcn.cloud.api.api.commons.CallbackContext.Builder, com.tcn.cloud.api.api.commons.CallbackContextOrBuilder>(
+                getCallbackContext(),
+                getParentForChildren(),
+                isClean());
+        callbackContext_ = null;
+      }
+      return callbackContextBuilder_;
     }
 
     private long ticketId_ ;
@@ -1775,33 +1940,79 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private long actionSlaId_ ;
+    private java.util.List<com.tcn.cloud.api.api.commons.Sla> actionSlaId_ =
+      java.util.Collections.emptyList();
+    private void ensureActionSlaIdIsMutable() {
+      if (!((bitField0_ & 0x00000200) != 0)) {
+        actionSlaId_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.Sla>(actionSlaId_);
+        bitField0_ |= 0x00000200;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.Sla, com.tcn.cloud.api.api.commons.Sla.Builder, com.tcn.cloud.api.api.commons.SlaOrBuilder> actionSlaIdBuilder_;
+
     /**
      * <pre>
      * SLA Id for the ACTION
      * </pre>
      *
-     * <code>int64 action_sla_id = 10 [json_name = "actionSlaId"];</code>
-     * @return The actionSlaId.
+     * <code>repeated .api.commons.Sla action_sla_id = 10 [json_name = "actionSlaId"];</code>
      */
-    @java.lang.Override
-    public long getActionSlaId() {
-      return actionSlaId_;
+    public java.util.List<com.tcn.cloud.api.api.commons.Sla> getActionSlaIdList() {
+      if (actionSlaIdBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(actionSlaId_);
+      } else {
+        return actionSlaIdBuilder_.getMessageList();
+      }
     }
     /**
      * <pre>
      * SLA Id for the ACTION
      * </pre>
      *
-     * <code>int64 action_sla_id = 10 [json_name = "actionSlaId"];</code>
-     * @param value The actionSlaId to set.
-     * @return This builder for chaining.
+     * <code>repeated .api.commons.Sla action_sla_id = 10 [json_name = "actionSlaId"];</code>
      */
-    public Builder setActionSlaId(long value) {
-
-      actionSlaId_ = value;
-      bitField0_ |= 0x00000200;
-      onChanged();
+    public int getActionSlaIdCount() {
+      if (actionSlaIdBuilder_ == null) {
+        return actionSlaId_.size();
+      } else {
+        return actionSlaIdBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * SLA Id for the ACTION
+     * </pre>
+     *
+     * <code>repeated .api.commons.Sla action_sla_id = 10 [json_name = "actionSlaId"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.Sla getActionSlaId(int index) {
+      if (actionSlaIdBuilder_ == null) {
+        return actionSlaId_.get(index);
+      } else {
+        return actionSlaIdBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * SLA Id for the ACTION
+     * </pre>
+     *
+     * <code>repeated .api.commons.Sla action_sla_id = 10 [json_name = "actionSlaId"];</code>
+     */
+    public Builder setActionSlaId(
+        int index, com.tcn.cloud.api.api.commons.Sla value) {
+      if (actionSlaIdBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureActionSlaIdIsMutable();
+        actionSlaId_.set(index, value);
+        onChanged();
+      } else {
+        actionSlaIdBuilder_.setMessage(index, value);
+      }
       return this;
     }
     /**
@@ -1809,14 +2020,236 @@ private static final long serialVersionUID = 0L;
      * SLA Id for the ACTION
      * </pre>
      *
-     * <code>int64 action_sla_id = 10 [json_name = "actionSlaId"];</code>
-     * @return This builder for chaining.
+     * <code>repeated .api.commons.Sla action_sla_id = 10 [json_name = "actionSlaId"];</code>
+     */
+    public Builder setActionSlaId(
+        int index, com.tcn.cloud.api.api.commons.Sla.Builder builderForValue) {
+      if (actionSlaIdBuilder_ == null) {
+        ensureActionSlaIdIsMutable();
+        actionSlaId_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        actionSlaIdBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * SLA Id for the ACTION
+     * </pre>
+     *
+     * <code>repeated .api.commons.Sla action_sla_id = 10 [json_name = "actionSlaId"];</code>
+     */
+    public Builder addActionSlaId(com.tcn.cloud.api.api.commons.Sla value) {
+      if (actionSlaIdBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureActionSlaIdIsMutable();
+        actionSlaId_.add(value);
+        onChanged();
+      } else {
+        actionSlaIdBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * SLA Id for the ACTION
+     * </pre>
+     *
+     * <code>repeated .api.commons.Sla action_sla_id = 10 [json_name = "actionSlaId"];</code>
+     */
+    public Builder addActionSlaId(
+        int index, com.tcn.cloud.api.api.commons.Sla value) {
+      if (actionSlaIdBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureActionSlaIdIsMutable();
+        actionSlaId_.add(index, value);
+        onChanged();
+      } else {
+        actionSlaIdBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * SLA Id for the ACTION
+     * </pre>
+     *
+     * <code>repeated .api.commons.Sla action_sla_id = 10 [json_name = "actionSlaId"];</code>
+     */
+    public Builder addActionSlaId(
+        com.tcn.cloud.api.api.commons.Sla.Builder builderForValue) {
+      if (actionSlaIdBuilder_ == null) {
+        ensureActionSlaIdIsMutable();
+        actionSlaId_.add(builderForValue.build());
+        onChanged();
+      } else {
+        actionSlaIdBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * SLA Id for the ACTION
+     * </pre>
+     *
+     * <code>repeated .api.commons.Sla action_sla_id = 10 [json_name = "actionSlaId"];</code>
+     */
+    public Builder addActionSlaId(
+        int index, com.tcn.cloud.api.api.commons.Sla.Builder builderForValue) {
+      if (actionSlaIdBuilder_ == null) {
+        ensureActionSlaIdIsMutable();
+        actionSlaId_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        actionSlaIdBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * SLA Id for the ACTION
+     * </pre>
+     *
+     * <code>repeated .api.commons.Sla action_sla_id = 10 [json_name = "actionSlaId"];</code>
+     */
+    public Builder addAllActionSlaId(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.Sla> values) {
+      if (actionSlaIdBuilder_ == null) {
+        ensureActionSlaIdIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, actionSlaId_);
+        onChanged();
+      } else {
+        actionSlaIdBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * SLA Id for the ACTION
+     * </pre>
+     *
+     * <code>repeated .api.commons.Sla action_sla_id = 10 [json_name = "actionSlaId"];</code>
      */
     public Builder clearActionSlaId() {
-      bitField0_ = (bitField0_ & ~0x00000200);
-      actionSlaId_ = 0L;
-      onChanged();
+      if (actionSlaIdBuilder_ == null) {
+        actionSlaId_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000200);
+        onChanged();
+      } else {
+        actionSlaIdBuilder_.clear();
+      }
       return this;
+    }
+    /**
+     * <pre>
+     * SLA Id for the ACTION
+     * </pre>
+     *
+     * <code>repeated .api.commons.Sla action_sla_id = 10 [json_name = "actionSlaId"];</code>
+     */
+    public Builder removeActionSlaId(int index) {
+      if (actionSlaIdBuilder_ == null) {
+        ensureActionSlaIdIsMutable();
+        actionSlaId_.remove(index);
+        onChanged();
+      } else {
+        actionSlaIdBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * SLA Id for the ACTION
+     * </pre>
+     *
+     * <code>repeated .api.commons.Sla action_sla_id = 10 [json_name = "actionSlaId"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.Sla.Builder getActionSlaIdBuilder(
+        int index) {
+      return getActionSlaIdFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * SLA Id for the ACTION
+     * </pre>
+     *
+     * <code>repeated .api.commons.Sla action_sla_id = 10 [json_name = "actionSlaId"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.SlaOrBuilder getActionSlaIdOrBuilder(
+        int index) {
+      if (actionSlaIdBuilder_ == null) {
+        return actionSlaId_.get(index);  } else {
+        return actionSlaIdBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * SLA Id for the ACTION
+     * </pre>
+     *
+     * <code>repeated .api.commons.Sla action_sla_id = 10 [json_name = "actionSlaId"];</code>
+     */
+    public java.util.List<? extends com.tcn.cloud.api.api.commons.SlaOrBuilder> 
+         getActionSlaIdOrBuilderList() {
+      if (actionSlaIdBuilder_ != null) {
+        return actionSlaIdBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(actionSlaId_);
+      }
+    }
+    /**
+     * <pre>
+     * SLA Id for the ACTION
+     * </pre>
+     *
+     * <code>repeated .api.commons.Sla action_sla_id = 10 [json_name = "actionSlaId"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.Sla.Builder addActionSlaIdBuilder() {
+      return getActionSlaIdFieldBuilder().addBuilder(
+          com.tcn.cloud.api.api.commons.Sla.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * SLA Id for the ACTION
+     * </pre>
+     *
+     * <code>repeated .api.commons.Sla action_sla_id = 10 [json_name = "actionSlaId"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.Sla.Builder addActionSlaIdBuilder(
+        int index) {
+      return getActionSlaIdFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.api.commons.Sla.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * SLA Id for the ACTION
+     * </pre>
+     *
+     * <code>repeated .api.commons.Sla action_sla_id = 10 [json_name = "actionSlaId"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.Sla.Builder> 
+         getActionSlaIdBuilderList() {
+      return getActionSlaIdFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.Sla, com.tcn.cloud.api.api.commons.Sla.Builder, com.tcn.cloud.api.api.commons.SlaOrBuilder> 
+        getActionSlaIdFieldBuilder() {
+      if (actionSlaIdBuilder_ == null) {
+        actionSlaIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.Sla, com.tcn.cloud.api.api.commons.Sla.Builder, com.tcn.cloud.api.api.commons.SlaOrBuilder>(
+                actionSlaId_,
+                ((bitField0_ & 0x00000200) != 0),
+                getParentForChildren(),
+                isClean());
+        actionSlaId_ = null;
+      }
+      return actionSlaIdBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

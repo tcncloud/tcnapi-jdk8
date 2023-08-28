@@ -29,23 +29,30 @@ public interface TicketActionOrBuilder extends
 
   /**
    * <pre>
-   * Description for the Action
+   * Attributes for a callback Action
    * </pre>
    *
-   * <code>string ticket_context = 3 [json_name = "ticketContext"];</code>
-   * @return The ticketContext.
+   * <code>.api.commons.CallbackContext callback_context = 3 [json_name = "callbackContext"];</code>
+   * @return Whether the callbackContext field is set.
    */
-  java.lang.String getTicketContext();
+  boolean hasCallbackContext();
   /**
    * <pre>
-   * Description for the Action
+   * Attributes for a callback Action
    * </pre>
    *
-   * <code>string ticket_context = 3 [json_name = "ticketContext"];</code>
-   * @return The bytes for ticketContext.
+   * <code>.api.commons.CallbackContext callback_context = 3 [json_name = "callbackContext"];</code>
+   * @return The callbackContext.
    */
-  com.google.protobuf.ByteString
-      getTicketContextBytes();
+  com.tcn.cloud.api.api.commons.CallbackContext getCallbackContext();
+  /**
+   * <pre>
+   * Attributes for a callback Action
+   * </pre>
+   *
+   * <code>.api.commons.CallbackContext callback_context = 3 [json_name = "callbackContext"];</code>
+   */
+  com.tcn.cloud.api.api.commons.CallbackContextOrBuilder getCallbackContextOrBuilder();
 
   /**
    * <pre>
@@ -191,8 +198,42 @@ public interface TicketActionOrBuilder extends
    * SLA Id for the ACTION
    * </pre>
    *
-   * <code>int64 action_sla_id = 10 [json_name = "actionSlaId"];</code>
-   * @return The actionSlaId.
+   * <code>repeated .api.commons.Sla action_sla_id = 10 [json_name = "actionSlaId"];</code>
    */
-  long getActionSlaId();
+  java.util.List<com.tcn.cloud.api.api.commons.Sla> 
+      getActionSlaIdList();
+  /**
+   * <pre>
+   * SLA Id for the ACTION
+   * </pre>
+   *
+   * <code>repeated .api.commons.Sla action_sla_id = 10 [json_name = "actionSlaId"];</code>
+   */
+  com.tcn.cloud.api.api.commons.Sla getActionSlaId(int index);
+  /**
+   * <pre>
+   * SLA Id for the ACTION
+   * </pre>
+   *
+   * <code>repeated .api.commons.Sla action_sla_id = 10 [json_name = "actionSlaId"];</code>
+   */
+  int getActionSlaIdCount();
+  /**
+   * <pre>
+   * SLA Id for the ACTION
+   * </pre>
+   *
+   * <code>repeated .api.commons.Sla action_sla_id = 10 [json_name = "actionSlaId"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.api.commons.SlaOrBuilder> 
+      getActionSlaIdOrBuilderList();
+  /**
+   * <pre>
+   * SLA Id for the ACTION
+   * </pre>
+   *
+   * <code>repeated .api.commons.Sla action_sla_id = 10 [json_name = "actionSlaId"];</code>
+   */
+  com.tcn.cloud.api.api.commons.SlaOrBuilder getActionSlaIdOrBuilder(
+      int index);
 }
