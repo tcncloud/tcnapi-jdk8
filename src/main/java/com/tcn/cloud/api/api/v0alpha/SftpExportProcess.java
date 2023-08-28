@@ -401,7 +401,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.FilePattern file_pattern = 11 [json_name = "filePattern", deprecated = true];</code>
    * @deprecated api.v0alpha.SftpExportProcess.file_pattern is deprecated.
-   *     See api/v0alpha/lms.proto;l=1790
+   *     See api/v0alpha/lms.proto;l=1791
    * @return Whether the filePattern field is set.
    */
   @java.lang.Override
@@ -415,7 +415,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.FilePattern file_pattern = 11 [json_name = "filePattern", deprecated = true];</code>
    * @deprecated api.v0alpha.SftpExportProcess.file_pattern is deprecated.
-   *     See api/v0alpha/lms.proto;l=1790
+   *     See api/v0alpha/lms.proto;l=1791
    * @return The filePattern.
    */
   @java.lang.Override
@@ -2192,7 +2192,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.FilePattern file_pattern = 11 [json_name = "filePattern", deprecated = true];</code>
      * @deprecated api.v0alpha.SftpExportProcess.file_pattern is deprecated.
-     *     See api/v0alpha/lms.proto;l=1790
+     *     See api/v0alpha/lms.proto;l=1791
      * @return Whether the filePattern field is set.
      */
     @java.lang.Deprecated public boolean hasFilePattern() {
@@ -2205,7 +2205,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.FilePattern file_pattern = 11 [json_name = "filePattern", deprecated = true];</code>
      * @deprecated api.v0alpha.SftpExportProcess.file_pattern is deprecated.
-     *     See api/v0alpha/lms.proto;l=1790
+     *     See api/v0alpha/lms.proto;l=1791
      * @return The filePattern.
      */
     @java.lang.Deprecated public com.tcn.cloud.api.api.commons.FilePattern getFilePattern() {

@@ -3123,13 +3123,16 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Control whether the reject option is available to the approvers.
+   * Please use disable_reject_option_for_approvers under GeneralSettings.
    * </pre>
    *
-   * <code>bool enable_reject_option_for_approvers = 29 [json_name = "enableRejectOptionForApprovers"];</code>
+   * <code>bool enable_reject_option_for_approvers = 29 [json_name = "enableRejectOptionForApprovers", deprecated = true];</code>
+   * @deprecated api.commons.org.ManualDialSettings.enable_reject_option_for_approvers is deprecated.
+   *     See api/commons/org/huntgroup.proto;l=471
    * @return The enableRejectOptionForApprovers.
    */
   @java.lang.Override
-  public boolean getEnableRejectOptionForApprovers() {
+  @java.lang.Deprecated public boolean getEnableRejectOptionForApprovers() {
     return enableRejectOptionForApprovers_;
   }
 
@@ -6562,25 +6565,31 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Control whether the reject option is available to the approvers.
+     * Please use disable_reject_option_for_approvers under GeneralSettings.
      * </pre>
      *
-     * <code>bool enable_reject_option_for_approvers = 29 [json_name = "enableRejectOptionForApprovers"];</code>
+     * <code>bool enable_reject_option_for_approvers = 29 [json_name = "enableRejectOptionForApprovers", deprecated = true];</code>
+     * @deprecated api.commons.org.ManualDialSettings.enable_reject_option_for_approvers is deprecated.
+     *     See api/commons/org/huntgroup.proto;l=471
      * @return The enableRejectOptionForApprovers.
      */
     @java.lang.Override
-    public boolean getEnableRejectOptionForApprovers() {
+    @java.lang.Deprecated public boolean getEnableRejectOptionForApprovers() {
       return enableRejectOptionForApprovers_;
     }
     /**
      * <pre>
      * Control whether the reject option is available to the approvers.
+     * Please use disable_reject_option_for_approvers under GeneralSettings.
      * </pre>
      *
-     * <code>bool enable_reject_option_for_approvers = 29 [json_name = "enableRejectOptionForApprovers"];</code>
+     * <code>bool enable_reject_option_for_approvers = 29 [json_name = "enableRejectOptionForApprovers", deprecated = true];</code>
+     * @deprecated api.commons.org.ManualDialSettings.enable_reject_option_for_approvers is deprecated.
+     *     See api/commons/org/huntgroup.proto;l=471
      * @param value The enableRejectOptionForApprovers to set.
      * @return This builder for chaining.
      */
-    public Builder setEnableRejectOptionForApprovers(boolean value) {
+    @java.lang.Deprecated public Builder setEnableRejectOptionForApprovers(boolean value) {
 
       enableRejectOptionForApprovers_ = value;
       bitField0_ |= 0x10000000;
@@ -6590,12 +6599,15 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Control whether the reject option is available to the approvers.
+     * Please use disable_reject_option_for_approvers under GeneralSettings.
      * </pre>
      *
-     * <code>bool enable_reject_option_for_approvers = 29 [json_name = "enableRejectOptionForApprovers"];</code>
+     * <code>bool enable_reject_option_for_approvers = 29 [json_name = "enableRejectOptionForApprovers", deprecated = true];</code>
+     * @deprecated api.commons.org.ManualDialSettings.enable_reject_option_for_approvers is deprecated.
+     *     See api/commons/org/huntgroup.proto;l=471
      * @return This builder for chaining.
      */
-    public Builder clearEnableRejectOptionForApprovers() {
+    @java.lang.Deprecated public Builder clearEnableRejectOptionForApprovers() {
       bitField0_ = (bitField0_ & ~0x10000000);
       enableRejectOptionForApprovers_ = false;
       onChanged();

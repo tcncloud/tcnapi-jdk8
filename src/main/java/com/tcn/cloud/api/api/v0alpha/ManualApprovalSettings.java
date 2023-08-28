@@ -82,6 +82,21 @@ private static final long serialVersionUID = 0L;
     return smsNumberConfirmation_;
   }
 
+  public static final int DISABLE_REJECT_OPTION_FOR_APPROVERS_FIELD_NUMBER = 5;
+  private boolean disableRejectOptionForApprovers_ = false;
+  /**
+   * <pre>
+   * Control whether the reject option is available to the approvers.
+   * </pre>
+   *
+   * <code>bool disable_reject_option_for_approvers = 5 [json_name = "disableRejectOptionForApprovers"];</code>
+   * @return The disableRejectOptionForApprovers.
+   */
+  @java.lang.Override
+  public boolean getDisableRejectOptionForApprovers() {
+    return disableRejectOptionForApprovers_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -108,6 +123,9 @@ private static final long serialVersionUID = 0L;
     if (smsNumberConfirmation_ != false) {
       output.writeBool(4, smsNumberConfirmation_);
     }
+    if (disableRejectOptionForApprovers_ != false) {
+      output.writeBool(5, disableRejectOptionForApprovers_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -133,6 +151,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(4, smsNumberConfirmation_);
     }
+    if (disableRejectOptionForApprovers_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(5, disableRejectOptionForApprovers_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -156,6 +178,8 @@ private static final long serialVersionUID = 0L;
         != other.getSmsAllowed()) return false;
     if (getSmsNumberConfirmation()
         != other.getSmsNumberConfirmation()) return false;
+    if (getDisableRejectOptionForApprovers()
+        != other.getDisableRejectOptionForApprovers()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -179,6 +203,9 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + SMS_NUMBER_CONFIRMATION_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getSmsNumberConfirmation());
+    hash = (37 * hash) + DISABLE_REJECT_OPTION_FOR_APPROVERS_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getDisableRejectOptionForApprovers());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -314,6 +341,7 @@ private static final long serialVersionUID = 0L;
       confirm_ = false;
       smsAllowed_ = false;
       smsNumberConfirmation_ = false;
+      disableRejectOptionForApprovers_ = false;
       return this;
     }
 
@@ -358,6 +386,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.smsNumberConfirmation_ = smsNumberConfirmation_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.disableRejectOptionForApprovers_ = disableRejectOptionForApprovers_;
       }
     }
 
@@ -417,6 +448,9 @@ private static final long serialVersionUID = 0L;
       if (other.getSmsNumberConfirmation() != false) {
         setSmsNumberConfirmation(other.getSmsNumberConfirmation());
       }
+      if (other.getDisableRejectOptionForApprovers() != false) {
+        setDisableRejectOptionForApprovers(other.getDisableRejectOptionForApprovers());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -463,6 +497,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000008;
               break;
             } // case 32
+            case 40: {
+              disableRejectOptionForApprovers_ = input.readBool();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 40
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -604,6 +643,50 @@ private static final long serialVersionUID = 0L;
     public Builder clearSmsNumberConfirmation() {
       bitField0_ = (bitField0_ & ~0x00000008);
       smsNumberConfirmation_ = false;
+      onChanged();
+      return this;
+    }
+
+    private boolean disableRejectOptionForApprovers_ ;
+    /**
+     * <pre>
+     * Control whether the reject option is available to the approvers.
+     * </pre>
+     *
+     * <code>bool disable_reject_option_for_approvers = 5 [json_name = "disableRejectOptionForApprovers"];</code>
+     * @return The disableRejectOptionForApprovers.
+     */
+    @java.lang.Override
+    public boolean getDisableRejectOptionForApprovers() {
+      return disableRejectOptionForApprovers_;
+    }
+    /**
+     * <pre>
+     * Control whether the reject option is available to the approvers.
+     * </pre>
+     *
+     * <code>bool disable_reject_option_for_approvers = 5 [json_name = "disableRejectOptionForApprovers"];</code>
+     * @param value The disableRejectOptionForApprovers to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDisableRejectOptionForApprovers(boolean value) {
+
+      disableRejectOptionForApprovers_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Control whether the reject option is available to the approvers.
+     * </pre>
+     *
+     * <code>bool disable_reject_option_for_approvers = 5 [json_name = "disableRejectOptionForApprovers"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearDisableRejectOptionForApprovers() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      disableRejectOptionForApprovers_ = false;
       onChanged();
       return this;
     }

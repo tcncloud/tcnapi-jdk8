@@ -30,4 +30,14 @@ public interface ManualApprovalSettingsOrBuilder extends
    * @return The smsNumberConfirmation.
    */
   boolean getSmsNumberConfirmation();
+
+  /**
+   * <pre>
+   * Control whether the reject option is available to the approvers.
+   * </pre>
+   *
+   * <code>bool disable_reject_option_for_approvers = 5 [json_name = "disableRejectOptionForApprovers"];</code>
+   * @return The disableRejectOptionForApprovers.
+   */
+  boolean getDisableRejectOptionForApprovers();
 }
