@@ -5,7 +5,7 @@ package com.tcn.cloud.api.api.commons;
 
 /**
  * <pre>
- * SlaConditions - Condition Fields for sla on a ticket
+ * ReplyComment -
  * </pre>
  *
  * Protobuf type {@code api.commons.ReplyComment}
@@ -403,7 +403,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * SlaConditions - Condition Fields for sla on a ticket
+   * ReplyComment -
    * </pre>
    *
    * Protobuf type {@code api.commons.ReplyComment}

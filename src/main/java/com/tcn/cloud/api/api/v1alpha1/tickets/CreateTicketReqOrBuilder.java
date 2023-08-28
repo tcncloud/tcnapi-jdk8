@@ -243,4 +243,28 @@ public interface CreateTicketReqOrBuilder extends
    */
   com.google.protobuf.ByteString
       getAssignOtherBytes();
+
+  /**
+   * <code>repeated .api.commons.TicketAction ticket_action = 15 [json_name = "ticketAction"];</code>
+   */
+  java.util.List<com.tcn.cloud.api.api.commons.TicketAction> 
+      getTicketActionList();
+  /**
+   * <code>repeated .api.commons.TicketAction ticket_action = 15 [json_name = "ticketAction"];</code>
+   */
+  com.tcn.cloud.api.api.commons.TicketAction getTicketAction(int index);
+  /**
+   * <code>repeated .api.commons.TicketAction ticket_action = 15 [json_name = "ticketAction"];</code>
+   */
+  int getTicketActionCount();
+  /**
+   * <code>repeated .api.commons.TicketAction ticket_action = 15 [json_name = "ticketAction"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.api.commons.TicketActionOrBuilder> 
+      getTicketActionOrBuilderList();
+  /**
+   * <code>repeated .api.commons.TicketAction ticket_action = 15 [json_name = "ticketAction"];</code>
+   */
+  com.tcn.cloud.api.api.commons.TicketActionOrBuilder getTicketActionOrBuilder(
+      int index);
 }

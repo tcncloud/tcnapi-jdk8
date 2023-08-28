@@ -191,6 +191,21 @@ java.lang.String defaultValue) {
     return map.get(key);
   }
 
+  public static final int ASM_SESSION_SID_FIELD_NUMBER = 4;
+  private long asmSessionSid_ = 0L;
+  /**
+   * <pre>
+   * asm session sid
+   * </pre>
+   *
+   * <code>int64 asm_session_sid = 4 [json_name = "asmSessionSid"];</code>
+   * @return The asmSessionSid.
+   */
+  @java.lang.Override
+  public long getAsmSessionSid() {
+    return asmSessionSid_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -217,6 +232,9 @@ java.lang.String defaultValue) {
         internalGetCollectedData(),
         CollectedDataDefaultEntryHolder.defaultEntry,
         3);
+    if (asmSessionSid_ != 0L) {
+      output.writeInt64(4, asmSessionSid_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -244,6 +262,10 @@ java.lang.String defaultValue) {
       size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, collectedData__);
     }
+    if (asmSessionSid_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(4, asmSessionSid_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -264,6 +286,8 @@ java.lang.String defaultValue) {
     if (channelType_ != other.channelType_) return false;
     if (!internalGetCollectedData().equals(
         other.internalGetCollectedData())) return false;
+    if (getAsmSessionSid()
+        != other.getAsmSessionSid()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -284,6 +308,9 @@ java.lang.String defaultValue) {
       hash = (37 * hash) + COLLECTED_DATA_FIELD_NUMBER;
       hash = (53 * hash) + internalGetCollectedData().hashCode();
     }
+    hash = (37 * hash) + ASM_SESSION_SID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getAsmSessionSid());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -444,6 +471,7 @@ java.lang.String defaultValue) {
       conversationSid_ = 0L;
       channelType_ = 0;
       internalGetMutableCollectedData().clear();
+      asmSessionSid_ = 0L;
       return this;
     }
 
@@ -486,6 +514,9 @@ java.lang.String defaultValue) {
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.collectedData_ = internalGetCollectedData();
         result.collectedData_.makeImmutable();
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.asmSessionSid_ = asmSessionSid_;
       }
     }
 
@@ -542,6 +573,9 @@ java.lang.String defaultValue) {
       internalGetMutableCollectedData().mergeFrom(
           other.internalGetCollectedData());
       bitField0_ |= 0x00000004;
+      if (other.getAsmSessionSid() != 0L) {
+        setAsmSessionSid(other.getAsmSessionSid());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -587,6 +621,11 @@ java.lang.String defaultValue) {
               bitField0_ |= 0x00000004;
               break;
             } // case 26
+            case 32: {
+              asmSessionSid_ = input.readInt64();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -873,6 +912,50 @@ java.lang.String defaultValue) {
       internalGetMutableCollectedData().getMutableMap()
           .putAll(values);
       bitField0_ |= 0x00000004;
+      return this;
+    }
+
+    private long asmSessionSid_ ;
+    /**
+     * <pre>
+     * asm session sid
+     * </pre>
+     *
+     * <code>int64 asm_session_sid = 4 [json_name = "asmSessionSid"];</code>
+     * @return The asmSessionSid.
+     */
+    @java.lang.Override
+    public long getAsmSessionSid() {
+      return asmSessionSid_;
+    }
+    /**
+     * <pre>
+     * asm session sid
+     * </pre>
+     *
+     * <code>int64 asm_session_sid = 4 [json_name = "asmSessionSid"];</code>
+     * @param value The asmSessionSid to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAsmSessionSid(long value) {
+
+      asmSessionSid_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * asm session sid
+     * </pre>
+     *
+     * <code>int64 asm_session_sid = 4 [json_name = "asmSessionSid"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAsmSessionSid() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      asmSessionSid_ = 0L;
+      onChanged();
       return this;
     }
     @java.lang.Override
