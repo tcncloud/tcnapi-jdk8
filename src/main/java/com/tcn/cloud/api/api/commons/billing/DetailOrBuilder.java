@@ -162,4 +162,24 @@ public interface DetailOrBuilder extends
    * <code>.google.protobuf.Timestamp deleted_on = 7 [json_name = "deletedOn"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getDeletedOnOrBuilder();
+
+  /**
+   * <pre>
+   * the billing plan identifier
+   * </pre>
+   *
+   * <code>string billing_plan_id = 8 [json_name = "billingPlanId"];</code>
+   * @return The billingPlanId.
+   */
+  java.lang.String getBillingPlanId();
+  /**
+   * <pre>
+   * the billing plan identifier
+   * </pre>
+   *
+   * <code>string billing_plan_id = 8 [json_name = "billingPlanId"];</code>
+   * @return The bytes for billingPlanId.
+   */
+  com.google.protobuf.ByteString
+      getBillingPlanIdBytes();
 }

@@ -70,4 +70,132 @@ public interface BillingPlanOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.billing.PlanOrBuilder getPlansOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * billing plan identifier
+   * </pre>
+   *
+   * <code>string billing_plan_id = 3 [json_name = "billingPlanId"];</code>
+   * @return The billingPlanId.
+   */
+  java.lang.String getBillingPlanId();
+  /**
+   * <pre>
+   * billing plan identifier
+   * </pre>
+   *
+   * <code>string billing_plan_id = 3 [json_name = "billingPlanId"];</code>
+   * @return The bytes for billingPlanId.
+   */
+  com.google.protobuf.ByteString
+      getBillingPlanIdBytes();
+
+  /**
+   * <pre>
+   * time the billing plan was created
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp date_created = 4 [json_name = "dateCreated"];</code>
+   * @return Whether the dateCreated field is set.
+   */
+  boolean hasDateCreated();
+  /**
+   * <pre>
+   * time the billing plan was created
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp date_created = 4 [json_name = "dateCreated"];</code>
+   * @return The dateCreated.
+   */
+  com.google.protobuf.Timestamp getDateCreated();
+  /**
+   * <pre>
+   * time the billing plan was created
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp date_created = 4 [json_name = "dateCreated"];</code>
+   */
+  com.google.protobuf.TimestampOrBuilder getDateCreatedOrBuilder();
+
+  /**
+   * <pre>
+   * time the billing plan was updated
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp date_modified = 5 [json_name = "dateModified"];</code>
+   * @return Whether the dateModified field is set.
+   */
+  boolean hasDateModified();
+  /**
+   * <pre>
+   * time the billing plan was updated
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp date_modified = 5 [json_name = "dateModified"];</code>
+   * @return The dateModified.
+   */
+  com.google.protobuf.Timestamp getDateModified();
+  /**
+   * <pre>
+   * time the billing plan was updated
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp date_modified = 5 [json_name = "dateModified"];</code>
+   */
+  com.google.protobuf.TimestampOrBuilder getDateModifiedOrBuilder();
+
+  /**
+   * <pre>
+   * the start time
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp start_time = 6 [json_name = "startTime"];</code>
+   * @return Whether the startTime field is set.
+   */
+  boolean hasStartTime();
+  /**
+   * <pre>
+   * the start time
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp start_time = 6 [json_name = "startTime"];</code>
+   * @return The startTime.
+   */
+  com.google.protobuf.Timestamp getStartTime();
+  /**
+   * <pre>
+   * the start time
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp start_time = 6 [json_name = "startTime"];</code>
+   */
+  com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder();
+
+  /**
+   * <pre>
+   * the time the billing plan ends
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp end_time = 7 [json_name = "endTime"];</code>
+   * @return Whether the endTime field is set.
+   */
+  boolean hasEndTime();
+  /**
+   * <pre>
+   * the time the billing plan ends
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp end_time = 7 [json_name = "endTime"];</code>
+   * @return The endTime.
+   */
+  com.google.protobuf.Timestamp getEndTime();
+  /**
+   * <pre>
+   * the time the billing plan ends
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp end_time = 7 [json_name = "endTime"];</code>
+   */
+  com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder();
 }

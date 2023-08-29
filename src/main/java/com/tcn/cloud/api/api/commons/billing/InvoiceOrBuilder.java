@@ -55,4 +55,98 @@ public interface InvoiceOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.billing.InvoiceItemOrBuilder getItemsOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * the invoice identifier
+   * </pre>
+   *
+   * <code>string invoice_id = 2 [json_name = "invoiceId"];</code>
+   * @return The invoiceId.
+   */
+  java.lang.String getInvoiceId();
+  /**
+   * <pre>
+   * the invoice identifier
+   * </pre>
+   *
+   * <code>string invoice_id = 2 [json_name = "invoiceId"];</code>
+   * @return The bytes for invoiceId.
+   */
+  com.google.protobuf.ByteString
+      getInvoiceIdBytes();
+
+  /**
+   * <pre>
+   * the billing cycle
+   * </pre>
+   *
+   * <code>string billing_cycle = 3 [json_name = "billingCycle"];</code>
+   * @return The billingCycle.
+   */
+  java.lang.String getBillingCycle();
+  /**
+   * <pre>
+   * the billing cycle
+   * </pre>
+   *
+   * <code>string billing_cycle = 3 [json_name = "billingCycle"];</code>
+   * @return The bytes for billingCycle.
+   */
+  com.google.protobuf.ByteString
+      getBillingCycleBytes();
+
+  /**
+   * <pre>
+   * time the invoice was created
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp date_created = 4 [json_name = "dateCreated"];</code>
+   * @return Whether the dateCreated field is set.
+   */
+  boolean hasDateCreated();
+  /**
+   * <pre>
+   * time the invoice was created
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp date_created = 4 [json_name = "dateCreated"];</code>
+   * @return The dateCreated.
+   */
+  com.google.protobuf.Timestamp getDateCreated();
+  /**
+   * <pre>
+   * time the invoice was created
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp date_created = 4 [json_name = "dateCreated"];</code>
+   */
+  com.google.protobuf.TimestampOrBuilder getDateCreatedOrBuilder();
+
+  /**
+   * <pre>
+   * time the invoice was last modified
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp date_modified = 5 [json_name = "dateModified"];</code>
+   * @return Whether the dateModified field is set.
+   */
+  boolean hasDateModified();
+  /**
+   * <pre>
+   * time the invoice was last modified
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp date_modified = 5 [json_name = "dateModified"];</code>
+   * @return The dateModified.
+   */
+  com.google.protobuf.Timestamp getDateModified();
+  /**
+   * <pre>
+   * time the invoice was last modified
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp date_modified = 5 [json_name = "dateModified"];</code>
+   */
+  com.google.protobuf.TimestampOrBuilder getDateModifiedOrBuilder();
 }
