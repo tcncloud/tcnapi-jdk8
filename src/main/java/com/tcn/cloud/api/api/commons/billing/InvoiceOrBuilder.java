@@ -91,27 +91,27 @@ public interface InvoiceOrBuilder extends
    * time the invoice was created
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp cretae_time = 4 [json_name = "cretaeTime"];</code>
-   * @return Whether the cretaeTime field is set.
+   * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime"];</code>
+   * @return Whether the createTime field is set.
    */
-  boolean hasCretaeTime();
+  boolean hasCreateTime();
   /**
    * <pre>
    * time the invoice was created
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp cretae_time = 4 [json_name = "cretaeTime"];</code>
-   * @return The cretaeTime.
+   * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime"];</code>
+   * @return The createTime.
    */
-  com.google.protobuf.Timestamp getCretaeTime();
+  com.google.protobuf.Timestamp getCreateTime();
   /**
    * <pre>
    * time the invoice was created
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp cretae_time = 4 [json_name = "cretaeTime"];</code>
+   * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime"];</code>
    */
-  com.google.protobuf.TimestampOrBuilder getCretaeTimeOrBuilder();
+  com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder();
 
   /**
    * <pre>

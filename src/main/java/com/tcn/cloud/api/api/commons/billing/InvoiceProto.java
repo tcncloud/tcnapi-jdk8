@@ -38,9 +38,9 @@ public final class InvoiceProto {
       "amp.proto\"\203\002\n\007Invoice\0226\n\005items\030\001 \003(\0132 .a" +
       "pi.commons.billing.InvoiceItemR\005items\022!\n" +
       "\ninvoice_id\030\002 \001(\003B\0020\001R\tinvoiceId\022#\n\rbill" +
-      "ing_cycle\030\003 \001(\tR\014billingCycle\022;\n\013cretae_" +
+      "ing_cycle\030\003 \001(\tR\014billingCycle\022;\n\013create_" +
       "time\030\004 \001(\0132\032.google.protobuf.TimestampR\n" +
-      "cretaeTime\022;\n\013update_time\030\005 \001(\0132\032.google" +
+      "createTime\022;\n\013update_time\030\005 \001(\0132\032.google" +
       ".protobuf.TimestampR\nupdateTime\"\252\002\n\013Invo" +
       "iceItem\022(\n\020invoice_item_sid\030\001 \001(\003R\016invoi" +
       "ceItemSid\0226\n\007product\030\002 \001(\0162\034.api.commons" +
@@ -75,7 +75,7 @@ public final class InvoiceProto {
     internal_static_api_commons_billing_Invoice_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_billing_Invoice_descriptor,
-        new java.lang.String[] { "Items", "InvoiceId", "BillingCycle", "CretaeTime", "UpdateTime", });
+        new java.lang.String[] { "Items", "InvoiceId", "BillingCycle", "CreateTime", "UpdateTime", });
     internal_static_api_commons_billing_InvoiceItem_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_api_commons_billing_InvoiceItem_fieldAccessorTable = new
