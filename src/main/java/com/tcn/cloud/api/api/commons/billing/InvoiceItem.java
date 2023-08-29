@@ -183,7 +183,7 @@ private static final long serialVersionUID = 0L;
    * the invoice identifier
    * </pre>
    *
-   * <code>int64 invoice_id = 6 [json_name = "invoiceId"];</code>
+   * <code>int64 invoice_id = 6 [json_name = "invoiceId", jstype = JS_STRING];</code>
    * @return The invoiceId.
    */
   @java.lang.Override
@@ -1156,7 +1156,7 @@ private static final long serialVersionUID = 0L;
      * the invoice identifier
      * </pre>
      *
-     * <code>int64 invoice_id = 6 [json_name = "invoiceId"];</code>
+     * <code>int64 invoice_id = 6 [json_name = "invoiceId", jstype = JS_STRING];</code>
      * @return The invoiceId.
      */
     @java.lang.Override
@@ -1168,7 +1168,7 @@ private static final long serialVersionUID = 0L;
      * the invoice identifier
      * </pre>
      *
-     * <code>int64 invoice_id = 6 [json_name = "invoiceId"];</code>
+     * <code>int64 invoice_id = 6 [json_name = "invoiceId", jstype = JS_STRING];</code>
      * @param value The invoiceId to set.
      * @return This builder for chaining.
      */
@@ -1184,7 +1184,7 @@ private static final long serialVersionUID = 0L;
      * the invoice identifier
      * </pre>
      *
-     * <code>int64 invoice_id = 6 [json_name = "invoiceId"];</code>
+     * <code>int64 invoice_id = 6 [json_name = "invoiceId", jstype = JS_STRING];</code>
      * @return This builder for chaining.
      */
     public Builder clearInvoiceId() {

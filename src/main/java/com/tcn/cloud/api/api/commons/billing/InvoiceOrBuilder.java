@@ -61,14 +61,14 @@ public interface InvoiceOrBuilder extends
    * the invoice identifier
    * </pre>
    *
-   * <code>int64 invoice_id = 2 [json_name = "invoiceId"];</code>
+   * <code>int64 invoice_id = 2 [json_name = "invoiceId", jstype = JS_STRING];</code>
    * @return The invoiceId.
    */
   long getInvoiceId();
 
   /**
    * <pre>
-   * the billing cycle
+   * the billing cycle this invoice was generated for
    * </pre>
    *
    * <code>string billing_cycle = 3 [json_name = "billingCycle"];</code>
@@ -77,7 +77,7 @@ public interface InvoiceOrBuilder extends
   java.lang.String getBillingCycle();
   /**
    * <pre>
-   * the billing cycle
+   * the billing cycle this invoice was generated for
    * </pre>
    *
    * <code>string billing_cycle = 3 [json_name = "billingCycle"];</code>

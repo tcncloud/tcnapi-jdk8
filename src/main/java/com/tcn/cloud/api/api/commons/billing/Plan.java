@@ -22,7 +22,6 @@ private static final long serialVersionUID = 0L;
   private Plan() {
     details_ = java.util.Collections.emptyList();
     orgId_ = "";
-    billingPlanId_ = "";
   }
 
   @java.lang.Override
@@ -160,50 +159,18 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int BILLING_PLAN_ID_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object billingPlanId_ = "";
+  private long billingPlanId_ = 0L;
   /**
    * <pre>
    * billing plan identifier
    * </pre>
    *
-   * <code>string billing_plan_id = 3 [json_name = "billingPlanId"];</code>
+   * <code>int64 billing_plan_id = 3 [json_name = "billingPlanId", jstype = JS_STRING];</code>
    * @return The billingPlanId.
    */
   @java.lang.Override
-  public java.lang.String getBillingPlanId() {
-    java.lang.Object ref = billingPlanId_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      billingPlanId_ = s;
-      return s;
-    }
-  }
-  /**
-   * <pre>
-   * billing plan identifier
-   * </pre>
-   *
-   * <code>string billing_plan_id = 3 [json_name = "billingPlanId"];</code>
-   * @return The bytes for billingPlanId.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getBillingPlanIdBytes() {
-    java.lang.Object ref = billingPlanId_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      billingPlanId_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
+  public long getBillingPlanId() {
+    return billingPlanId_;
   }
 
   public static final int CREATE_TIME_FIELD_NUMBER = 4;
@@ -286,7 +253,7 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Timestamp startTime_;
   /**
    * <pre>
-   * the start time
+   * the time from which this billing plan took effect
    * </pre>
    *
    * <code>.google.protobuf.Timestamp start_time = 6 [json_name = "startTime"];</code>
@@ -298,7 +265,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * the start time
+   * the time from which this billing plan took effect
    * </pre>
    *
    * <code>.google.protobuf.Timestamp start_time = 6 [json_name = "startTime"];</code>
@@ -310,7 +277,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * the start time
+   * the time from which this billing plan took effect
    * </pre>
    *
    * <code>.google.protobuf.Timestamp start_time = 6 [json_name = "startTime"];</code>
@@ -324,7 +291,7 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Timestamp endTime_;
   /**
    * <pre>
-   * the time the billing plan ends
+   * the time (if applicable) this billing plan ended; can be null
    * </pre>
    *
    * <code>.google.protobuf.Timestamp end_time = 7 [json_name = "endTime"];</code>
@@ -336,7 +303,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * the time the billing plan ends
+   * the time (if applicable) this billing plan ended; can be null
    * </pre>
    *
    * <code>.google.protobuf.Timestamp end_time = 7 [json_name = "endTime"];</code>
@@ -348,7 +315,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * the time the billing plan ends
+   * the time (if applicable) this billing plan ended; can be null
    * </pre>
    *
    * <code>.google.protobuf.Timestamp end_time = 7 [json_name = "endTime"];</code>
@@ -378,8 +345,8 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, orgId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(billingPlanId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, billingPlanId_);
+    if (billingPlanId_ != 0L) {
+      output.writeInt64(3, billingPlanId_);
     }
     if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(4, getCreateTime());
@@ -409,8 +376,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, orgId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(billingPlanId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, billingPlanId_);
+    if (billingPlanId_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(3, billingPlanId_);
     }
     if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
@@ -447,8 +415,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getDetailsList())) return false;
     if (!getOrgId()
         .equals(other.getOrgId())) return false;
-    if (!getBillingPlanId()
-        .equals(other.getBillingPlanId())) return false;
+    if (getBillingPlanId()
+        != other.getBillingPlanId()) return false;
     if (hasCreateTime() != other.hasCreateTime()) return false;
     if (hasCreateTime()) {
       if (!getCreateTime()
@@ -487,7 +455,8 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + ORG_ID_FIELD_NUMBER;
     hash = (53 * hash) + getOrgId().hashCode();
     hash = (37 * hash) + BILLING_PLAN_ID_FIELD_NUMBER;
-    hash = (53 * hash) + getBillingPlanId().hashCode();
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getBillingPlanId());
     if (hasCreateTime()) {
       hash = (37 * hash) + CREATE_TIME_FIELD_NUMBER;
       hash = (53 * hash) + getCreateTime().hashCode();
@@ -657,7 +626,7 @@ private static final long serialVersionUID = 0L;
       }
       bitField0_ = (bitField0_ & ~0x00000001);
       orgId_ = "";
-      billingPlanId_ = "";
+      billingPlanId_ = 0L;
       createTime_ = null;
       if (createTimeBuilder_ != null) {
         createTimeBuilder_.dispose();
@@ -833,10 +802,8 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000002;
         onChanged();
       }
-      if (!other.getBillingPlanId().isEmpty()) {
-        billingPlanId_ = other.billingPlanId_;
-        bitField0_ |= 0x00000004;
-        onChanged();
+      if (other.getBillingPlanId() != 0L) {
+        setBillingPlanId(other.getBillingPlanId());
       }
       if (other.hasCreateTime()) {
         mergeCreateTime(other.getCreateTime());
@@ -894,11 +861,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 18
-            case 26: {
-              billingPlanId_ = input.readStringRequireUtf8();
+            case 24: {
+              billingPlanId_ = input.readInt64();
               bitField0_ |= 0x00000004;
               break;
-            } // case 26
+            } // case 24
             case 34: {
               input.readMessage(
                   getCreateTimeFieldBuilder().getBuilder(),
@@ -1366,60 +1333,30 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object billingPlanId_ = "";
+    private long billingPlanId_ ;
     /**
      * <pre>
      * billing plan identifier
      * </pre>
      *
-     * <code>string billing_plan_id = 3 [json_name = "billingPlanId"];</code>
+     * <code>int64 billing_plan_id = 3 [json_name = "billingPlanId", jstype = JS_STRING];</code>
      * @return The billingPlanId.
      */
-    public java.lang.String getBillingPlanId() {
-      java.lang.Object ref = billingPlanId_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        billingPlanId_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
+    @java.lang.Override
+    public long getBillingPlanId() {
+      return billingPlanId_;
     }
     /**
      * <pre>
      * billing plan identifier
      * </pre>
      *
-     * <code>string billing_plan_id = 3 [json_name = "billingPlanId"];</code>
-     * @return The bytes for billingPlanId.
-     */
-    public com.google.protobuf.ByteString
-        getBillingPlanIdBytes() {
-      java.lang.Object ref = billingPlanId_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        billingPlanId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <pre>
-     * billing plan identifier
-     * </pre>
-     *
-     * <code>string billing_plan_id = 3 [json_name = "billingPlanId"];</code>
+     * <code>int64 billing_plan_id = 3 [json_name = "billingPlanId", jstype = JS_STRING];</code>
      * @param value The billingPlanId to set.
      * @return This builder for chaining.
      */
-    public Builder setBillingPlanId(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+    public Builder setBillingPlanId(long value) {
+
       billingPlanId_ = value;
       bitField0_ |= 0x00000004;
       onChanged();
@@ -1430,30 +1367,12 @@ private static final long serialVersionUID = 0L;
      * billing plan identifier
      * </pre>
      *
-     * <code>string billing_plan_id = 3 [json_name = "billingPlanId"];</code>
+     * <code>int64 billing_plan_id = 3 [json_name = "billingPlanId", jstype = JS_STRING];</code>
      * @return This builder for chaining.
      */
     public Builder clearBillingPlanId() {
-      billingPlanId_ = getDefaultInstance().getBillingPlanId();
       bitField0_ = (bitField0_ & ~0x00000004);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * billing plan identifier
-     * </pre>
-     *
-     * <code>string billing_plan_id = 3 [json_name = "billingPlanId"];</code>
-     * @param value The bytes for billingPlanId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setBillingPlanIdBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      billingPlanId_ = value;
-      bitField0_ |= 0x00000004;
+      billingPlanId_ = 0L;
       onChanged();
       return this;
     }
@@ -1777,7 +1696,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startTimeBuilder_;
     /**
      * <pre>
-     * the start time
+     * the time from which this billing plan took effect
      * </pre>
      *
      * <code>.google.protobuf.Timestamp start_time = 6 [json_name = "startTime"];</code>
@@ -1788,7 +1707,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the start time
+     * the time from which this billing plan took effect
      * </pre>
      *
      * <code>.google.protobuf.Timestamp start_time = 6 [json_name = "startTime"];</code>
@@ -1803,7 +1722,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the start time
+     * the time from which this billing plan took effect
      * </pre>
      *
      * <code>.google.protobuf.Timestamp start_time = 6 [json_name = "startTime"];</code>
@@ -1823,7 +1742,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the start time
+     * the time from which this billing plan took effect
      * </pre>
      *
      * <code>.google.protobuf.Timestamp start_time = 6 [json_name = "startTime"];</code>
@@ -1841,7 +1760,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the start time
+     * the time from which this billing plan took effect
      * </pre>
      *
      * <code>.google.protobuf.Timestamp start_time = 6 [json_name = "startTime"];</code>
@@ -1866,7 +1785,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the start time
+     * the time from which this billing plan took effect
      * </pre>
      *
      * <code>.google.protobuf.Timestamp start_time = 6 [json_name = "startTime"];</code>
@@ -1883,7 +1802,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the start time
+     * the time from which this billing plan took effect
      * </pre>
      *
      * <code>.google.protobuf.Timestamp start_time = 6 [json_name = "startTime"];</code>
@@ -1895,7 +1814,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the start time
+     * the time from which this billing plan took effect
      * </pre>
      *
      * <code>.google.protobuf.Timestamp start_time = 6 [json_name = "startTime"];</code>
@@ -1910,7 +1829,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the start time
+     * the time from which this billing plan took effect
      * </pre>
      *
      * <code>.google.protobuf.Timestamp start_time = 6 [json_name = "startTime"];</code>
@@ -1934,7 +1853,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> endTimeBuilder_;
     /**
      * <pre>
-     * the time the billing plan ends
+     * the time (if applicable) this billing plan ended; can be null
      * </pre>
      *
      * <code>.google.protobuf.Timestamp end_time = 7 [json_name = "endTime"];</code>
@@ -1945,7 +1864,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the time the billing plan ends
+     * the time (if applicable) this billing plan ended; can be null
      * </pre>
      *
      * <code>.google.protobuf.Timestamp end_time = 7 [json_name = "endTime"];</code>
@@ -1960,7 +1879,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the time the billing plan ends
+     * the time (if applicable) this billing plan ended; can be null
      * </pre>
      *
      * <code>.google.protobuf.Timestamp end_time = 7 [json_name = "endTime"];</code>
@@ -1980,7 +1899,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the time the billing plan ends
+     * the time (if applicable) this billing plan ended; can be null
      * </pre>
      *
      * <code>.google.protobuf.Timestamp end_time = 7 [json_name = "endTime"];</code>
@@ -1998,7 +1917,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the time the billing plan ends
+     * the time (if applicable) this billing plan ended; can be null
      * </pre>
      *
      * <code>.google.protobuf.Timestamp end_time = 7 [json_name = "endTime"];</code>
@@ -2023,7 +1942,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the time the billing plan ends
+     * the time (if applicable) this billing plan ended; can be null
      * </pre>
      *
      * <code>.google.protobuf.Timestamp end_time = 7 [json_name = "endTime"];</code>
@@ -2040,7 +1959,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the time the billing plan ends
+     * the time (if applicable) this billing plan ended; can be null
      * </pre>
      *
      * <code>.google.protobuf.Timestamp end_time = 7 [json_name = "endTime"];</code>
@@ -2052,7 +1971,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the time the billing plan ends
+     * the time (if applicable) this billing plan ended; can be null
      * </pre>
      *
      * <code>.google.protobuf.Timestamp end_time = 7 [json_name = "endTime"];</code>
@@ -2067,7 +1986,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the time the billing plan ends
+     * the time (if applicable) this billing plan ended; can be null
      * </pre>
      *
      * <code>.google.protobuf.Timestamp end_time = 7 [json_name = "endTime"];</code>

@@ -105,7 +105,7 @@ public interface InvoiceItemOrBuilder extends
    * the invoice identifier
    * </pre>
    *
-   * <code>int64 invoice_id = 6 [json_name = "invoiceId"];</code>
+   * <code>int64 invoice_id = 6 [json_name = "invoiceId", jstype = JS_STRING];</code>
    * @return The invoiceId.
    */
   long getInvoiceId();

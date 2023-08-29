@@ -168,18 +168,8 @@ public interface DetailOrBuilder extends
    * the billing plan identifier
    * </pre>
    *
-   * <code>string billing_plan_id = 8 [json_name = "billingPlanId"];</code>
+   * <code>int64 billing_plan_id = 8 [json_name = "billingPlanId", jstype = JS_STRING];</code>
    * @return The billingPlanId.
    */
-  java.lang.String getBillingPlanId();
-  /**
-   * <pre>
-   * the billing plan identifier
-   * </pre>
-   *
-   * <code>string billing_plan_id = 8 [json_name = "billingPlanId"];</code>
-   * @return The bytes for billingPlanId.
-   */
-  com.google.protobuf.ByteString
-      getBillingPlanIdBytes();
+  long getBillingPlanId();
 }

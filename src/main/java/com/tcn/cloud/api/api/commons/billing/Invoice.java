@@ -119,7 +119,7 @@ private static final long serialVersionUID = 0L;
    * the invoice identifier
    * </pre>
    *
-   * <code>int64 invoice_id = 2 [json_name = "invoiceId"];</code>
+   * <code>int64 invoice_id = 2 [json_name = "invoiceId", jstype = JS_STRING];</code>
    * @return The invoiceId.
    */
   @java.lang.Override
@@ -132,7 +132,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object billingCycle_ = "";
   /**
    * <pre>
-   * the billing cycle
+   * the billing cycle this invoice was generated for
    * </pre>
    *
    * <code>string billing_cycle = 3 [json_name = "billingCycle"];</code>
@@ -153,7 +153,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * the billing cycle
+   * the billing cycle this invoice was generated for
    * </pre>
    *
    * <code>string billing_cycle = 3 [json_name = "billingCycle"];</code>
@@ -1097,7 +1097,7 @@ private static final long serialVersionUID = 0L;
      * the invoice identifier
      * </pre>
      *
-     * <code>int64 invoice_id = 2 [json_name = "invoiceId"];</code>
+     * <code>int64 invoice_id = 2 [json_name = "invoiceId", jstype = JS_STRING];</code>
      * @return The invoiceId.
      */
     @java.lang.Override
@@ -1109,7 +1109,7 @@ private static final long serialVersionUID = 0L;
      * the invoice identifier
      * </pre>
      *
-     * <code>int64 invoice_id = 2 [json_name = "invoiceId"];</code>
+     * <code>int64 invoice_id = 2 [json_name = "invoiceId", jstype = JS_STRING];</code>
      * @param value The invoiceId to set.
      * @return This builder for chaining.
      */
@@ -1125,7 +1125,7 @@ private static final long serialVersionUID = 0L;
      * the invoice identifier
      * </pre>
      *
-     * <code>int64 invoice_id = 2 [json_name = "invoiceId"];</code>
+     * <code>int64 invoice_id = 2 [json_name = "invoiceId", jstype = JS_STRING];</code>
      * @return This builder for chaining.
      */
     public Builder clearInvoiceId() {
@@ -1138,7 +1138,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object billingCycle_ = "";
     /**
      * <pre>
-     * the billing cycle
+     * the billing cycle this invoice was generated for
      * </pre>
      *
      * <code>string billing_cycle = 3 [json_name = "billingCycle"];</code>
@@ -1158,7 +1158,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the billing cycle
+     * the billing cycle this invoice was generated for
      * </pre>
      *
      * <code>string billing_cycle = 3 [json_name = "billingCycle"];</code>
@@ -1179,7 +1179,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the billing cycle
+     * the billing cycle this invoice was generated for
      * </pre>
      *
      * <code>string billing_cycle = 3 [json_name = "billingCycle"];</code>
@@ -1196,7 +1196,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the billing cycle
+     * the billing cycle this invoice was generated for
      * </pre>
      *
      * <code>string billing_cycle = 3 [json_name = "billingCycle"];</code>
@@ -1210,7 +1210,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the billing cycle
+     * the billing cycle this invoice was generated for
      * </pre>
      *
      * <code>string billing_cycle = 3 [json_name = "billingCycle"];</code>

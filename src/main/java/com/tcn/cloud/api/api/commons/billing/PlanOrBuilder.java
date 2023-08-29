@@ -81,20 +81,10 @@ public interface PlanOrBuilder extends
    * billing plan identifier
    * </pre>
    *
-   * <code>string billing_plan_id = 3 [json_name = "billingPlanId"];</code>
+   * <code>int64 billing_plan_id = 3 [json_name = "billingPlanId", jstype = JS_STRING];</code>
    * @return The billingPlanId.
    */
-  java.lang.String getBillingPlanId();
-  /**
-   * <pre>
-   * billing plan identifier
-   * </pre>
-   *
-   * <code>string billing_plan_id = 3 [json_name = "billingPlanId"];</code>
-   * @return The bytes for billingPlanId.
-   */
-  com.google.protobuf.ByteString
-      getBillingPlanIdBytes();
+  long getBillingPlanId();
 
   /**
    * <pre>
@@ -152,7 +142,7 @@ public interface PlanOrBuilder extends
 
   /**
    * <pre>
-   * the start time
+   * the time from which this billing plan took effect
    * </pre>
    *
    * <code>.google.protobuf.Timestamp start_time = 6 [json_name = "startTime"];</code>
@@ -161,7 +151,7 @@ public interface PlanOrBuilder extends
   boolean hasStartTime();
   /**
    * <pre>
-   * the start time
+   * the time from which this billing plan took effect
    * </pre>
    *
    * <code>.google.protobuf.Timestamp start_time = 6 [json_name = "startTime"];</code>
@@ -170,7 +160,7 @@ public interface PlanOrBuilder extends
   com.google.protobuf.Timestamp getStartTime();
   /**
    * <pre>
-   * the start time
+   * the time from which this billing plan took effect
    * </pre>
    *
    * <code>.google.protobuf.Timestamp start_time = 6 [json_name = "startTime"];</code>
@@ -179,7 +169,7 @@ public interface PlanOrBuilder extends
 
   /**
    * <pre>
-   * the time the billing plan ends
+   * the time (if applicable) this billing plan ended; can be null
    * </pre>
    *
    * <code>.google.protobuf.Timestamp end_time = 7 [json_name = "endTime"];</code>
@@ -188,7 +178,7 @@ public interface PlanOrBuilder extends
   boolean hasEndTime();
   /**
    * <pre>
-   * the time the billing plan ends
+   * the time (if applicable) this billing plan ended; can be null
    * </pre>
    *
    * <code>.google.protobuf.Timestamp end_time = 7 [json_name = "endTime"];</code>
@@ -197,7 +187,7 @@ public interface PlanOrBuilder extends
   com.google.protobuf.Timestamp getEndTime();
   /**
    * <pre>
-   * the time the billing plan ends
+   * the time (if applicable) this billing plan ended; can be null
    * </pre>
    *
    * <code>.google.protobuf.Timestamp end_time = 7 [json_name = "endTime"];</code>
