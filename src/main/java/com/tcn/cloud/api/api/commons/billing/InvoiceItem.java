@@ -176,6 +176,21 @@ private static final long serialVersionUID = 0L;
     return dateModified_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : dateModified_;
   }
 
+  public static final int INVOICE_ID_FIELD_NUMBER = 6;
+  private long invoiceId_ = 0L;
+  /**
+   * <pre>
+   * the invoice identifier
+   * </pre>
+   *
+   * <code>int64 invoice_id = 6 [json_name = "invoiceId"];</code>
+   * @return The invoiceId.
+   */
+  @java.lang.Override
+  public long getInvoiceId() {
+    return invoiceId_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -205,6 +220,9 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(5, getDateModified());
     }
+    if (invoiceId_ != 0L) {
+      output.writeInt64(6, invoiceId_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -233,6 +251,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getDateModified());
+    }
+    if (invoiceId_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(6, invoiceId_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -265,6 +287,8 @@ private static final long serialVersionUID = 0L;
       if (!getDateModified()
           .equals(other.getDateModified())) return false;
     }
+    if (getInvoiceId()
+        != other.getInvoiceId()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -292,6 +316,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + DATE_MODIFIED_FIELD_NUMBER;
       hash = (53 * hash) + getDateModified().hashCode();
     }
+    hash = (37 * hash) + INVOICE_ID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getInvoiceId());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -447,6 +474,7 @@ private static final long serialVersionUID = 0L;
         dateModifiedBuilder_.dispose();
         dateModifiedBuilder_ = null;
       }
+      invoiceId_ = 0L;
       return this;
     }
 
@@ -501,6 +529,9 @@ private static final long serialVersionUID = 0L;
             ? dateModified_
             : dateModifiedBuilder_.build();
         to_bitField0_ |= 0x00000002;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.invoiceId_ = invoiceId_;
       }
       result.bitField0_ |= to_bitField0_;
     }
@@ -564,6 +595,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasDateModified()) {
         mergeDateModified(other.getDateModified());
       }
+      if (other.getInvoiceId() != 0L) {
+        setInvoiceId(other.getInvoiceId());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -619,6 +653,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000010;
               break;
             } // case 42
+            case 48: {
+              invoiceId_ = input.readInt64();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 48
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1109,6 +1148,50 @@ private static final long serialVersionUID = 0L;
         dateModified_ = null;
       }
       return dateModifiedBuilder_;
+    }
+
+    private long invoiceId_ ;
+    /**
+     * <pre>
+     * the invoice identifier
+     * </pre>
+     *
+     * <code>int64 invoice_id = 6 [json_name = "invoiceId"];</code>
+     * @return The invoiceId.
+     */
+    @java.lang.Override
+    public long getInvoiceId() {
+      return invoiceId_;
+    }
+    /**
+     * <pre>
+     * the invoice identifier
+     * </pre>
+     *
+     * <code>int64 invoice_id = 6 [json_name = "invoiceId"];</code>
+     * @param value The invoiceId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setInvoiceId(long value) {
+
+      invoiceId_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the invoice identifier
+     * </pre>
+     *
+     * <code>int64 invoice_id = 6 [json_name = "invoiceId"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearInvoiceId() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      invoiceId_ = 0L;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

@@ -61,20 +61,10 @@ public interface InvoiceOrBuilder extends
    * the invoice identifier
    * </pre>
    *
-   * <code>string invoice_id = 2 [json_name = "invoiceId"];</code>
+   * <code>int64 invoice_id = 2 [json_name = "invoiceId"];</code>
    * @return The invoiceId.
    */
-  java.lang.String getInvoiceId();
-  /**
-   * <pre>
-   * the invoice identifier
-   * </pre>
-   *
-   * <code>string invoice_id = 2 [json_name = "invoiceId"];</code>
-   * @return The bytes for invoiceId.
-   */
-  com.google.protobuf.ByteString
-      getInvoiceIdBytes();
+  long getInvoiceId();
 
   /**
    * <pre>

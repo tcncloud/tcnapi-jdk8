@@ -37,32 +37,33 @@ public final class InvoiceProto {
       ".commons.billing\032\037google/protobuf/timest" +
       "amp.proto\"\377\001\n\007Invoice\0226\n\005items\030\001 \003(\0132 .a" +
       "pi.commons.billing.InvoiceItemR\005items\022\035\n" +
-      "\ninvoice_id\030\002 \001(\tR\tinvoiceId\022#\n\rbilling_" +
+      "\ninvoice_id\030\002 \001(\003R\tinvoiceId\022#\n\rbilling_" +
       "cycle\030\003 \001(\tR\014billingCycle\022;\n\013cretae_time" +
       "\030\004 \001(\0132\032.google.protobuf.TimestampR\ncret" +
       "aeTime\022;\n\013update_time\030\005 \001(\0132\032.google.pro" +
-      "tobuf.TimestampR\nupdateTime\"\207\002\n\013InvoiceI" +
+      "tobuf.TimestampR\nupdateTime\"\246\002\n\013InvoiceI" +
       "tem\022(\n\020invoice_item_sid\030\001 \001(\003R\016invoiceIt" +
       "emSid\0226\n\007product\030\002 \001(\0162\034.api.commons.bil" +
       "ling.ProductR\007product\022\026\n\006amount\030\003 \001(\001R\006a" +
       "mount\022=\n\014date_created\030\004 \001(\0132\032.google.pro" +
       "tobuf.TimestampR\013dateCreated\022?\n\rdate_mod" +
       "ified\030\005 \001(\0132\032.google.protobuf.TimestampR" +
-      "\014dateModified*\253\002\n\007Product\022\027\n\023PRODUCT_UNS" +
-      "PECIFIED\020\000\022\021\n\rPRODUCT_OTHER\020\001\022\027\n\023PRODUCT" +
-      "_AGENT_SEATS\020d\022\030\n\023PRODUCT_EMAILS_SENT\020\310\001" +
-      "\022\034\n\027PRODUCT_EMAILS_RECEIVED\020\311\001\022\025\n\020PRODUC" +
-      "T_SMS_SENT\020\312\001\022\031\n\024PRODUCT_SMS_RECEIVED\020\313\001" +
-      "\022\026\n\021PRODUCT_CHAT_SENT\020\314\001\022\032\n\025PRODUCT_CHAT" +
-      "_RECEIVED\020\315\001\022\021\n\014PRODUCT_OMNI\020\254\002\022\021\n\014PRODU" +
-      "CT_VANA\020\220\003\022\027\n\022PRODUCT_COMPLIANCE\020\364\003*a\n\rI" +
-      "nvoiceFormat\022\036\n\032INVOICE_FORMAT_UNSPECIFI" +
-      "ED\020\000\022\030\n\024INVOICE_FORMAT_PROTO\020\001\022\026\n\022INVOIC" +
-      "E_FORMAT_CSV\020\002B\243\001\n%com.tcn.cloud.api.api" +
-      ".commons.billingB\014InvoiceProtoP\001\242\002\003ACB\252\002" +
-      "\023Api.Commons.Billing\312\002\023Api\\Commons\\Billi" +
-      "ng\342\002\037Api\\Commons\\Billing\\GPBMetadata\352\002\025A" +
-      "pi::Commons::Billingb\006proto3"
+      "\014dateModified\022\035\n\ninvoice_id\030\006 \001(\003R\tinvoi" +
+      "ceId*\253\002\n\007Product\022\027\n\023PRODUCT_UNSPECIFIED\020" +
+      "\000\022\021\n\rPRODUCT_OTHER\020\001\022\027\n\023PRODUCT_AGENT_SE" +
+      "ATS\020d\022\030\n\023PRODUCT_EMAILS_SENT\020\310\001\022\034\n\027PRODU" +
+      "CT_EMAILS_RECEIVED\020\311\001\022\025\n\020PRODUCT_SMS_SEN" +
+      "T\020\312\001\022\031\n\024PRODUCT_SMS_RECEIVED\020\313\001\022\026\n\021PRODU" +
+      "CT_CHAT_SENT\020\314\001\022\032\n\025PRODUCT_CHAT_RECEIVED" +
+      "\020\315\001\022\021\n\014PRODUCT_OMNI\020\254\002\022\021\n\014PRODUCT_VANA\020\220" +
+      "\003\022\027\n\022PRODUCT_COMPLIANCE\020\364\003*a\n\rInvoiceFor" +
+      "mat\022\036\n\032INVOICE_FORMAT_UNSPECIFIED\020\000\022\030\n\024I" +
+      "NVOICE_FORMAT_PROTO\020\001\022\026\n\022INVOICE_FORMAT_" +
+      "CSV\020\002B\243\001\n%com.tcn.cloud.api.api.commons." +
+      "billingB\014InvoiceProtoP\001\242\002\003ACB\252\002\023Api.Comm" +
+      "ons.Billing\312\002\023Api\\Commons\\Billing\342\002\037Api\\" +
+      "Commons\\Billing\\GPBMetadata\352\002\025Api::Commo" +
+      "ns::Billingb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -80,7 +81,7 @@ public final class InvoiceProto {
     internal_static_api_commons_billing_InvoiceItem_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_billing_InvoiceItem_descriptor,
-        new java.lang.String[] { "InvoiceItemSid", "Product", "Amount", "DateCreated", "DateModified", });
+        new java.lang.String[] { "InvoiceItemSid", "Product", "Amount", "DateCreated", "DateModified", "InvoiceId", });
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 
