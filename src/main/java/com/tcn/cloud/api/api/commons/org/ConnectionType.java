@@ -20,6 +20,10 @@ public enum ConnectionType
    * <code>CONNECTION_TYPE_OIDC = 1;</code>
    */
   CONNECTION_TYPE_OIDC(1),
+  /**
+   * <code>CONNECTION_TYPE_AZURE = 2;</code>
+   */
+  CONNECTION_TYPE_AZURE(2),
   UNRECOGNIZED(-1),
   ;
 
@@ -31,6 +35,10 @@ public enum ConnectionType
    * <code>CONNECTION_TYPE_OIDC = 1;</code>
    */
   public static final int CONNECTION_TYPE_OIDC_VALUE = 1;
+  /**
+   * <code>CONNECTION_TYPE_AZURE = 2;</code>
+   */
+  public static final int CONNECTION_TYPE_AZURE_VALUE = 2;
 
 
   public final int getNumber() {
@@ -59,6 +67,7 @@ public enum ConnectionType
     switch (value) {
       case 0: return CONNECTION_TYPE_NONE;
       case 1: return CONNECTION_TYPE_OIDC;
+      case 2: return CONNECTION_TYPE_AZURE;
       default: return null;
     }
   }
