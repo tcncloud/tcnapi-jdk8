@@ -84,6 +84,17 @@ private static final long serialVersionUID = 0L;
         encryptionCase_);
   }
 
+  public static final int ENCRYPTION_SID_FIELD_NUMBER = 1;
+  private long encryptionSid_ = 0L;
+  /**
+   * <code>int64 encryption_sid = 1 [json_name = "encryptionSid"];</code>
+   * @return The encryptionSid.
+   */
+  @java.lang.Override
+  public long getEncryptionSid() {
+    return encryptionSid_;
+  }
+
   public static final int ORG_ID_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
   private volatile java.lang.Object orgId_ = "";
@@ -329,6 +340,9 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    if (encryptionSid_ != 0L) {
+      output.writeInt64(1, encryptionSid_);
+    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, orgId_);
     }
@@ -359,6 +373,10 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    if (encryptionSid_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(1, encryptionSid_);
+    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, orgId_);
     }
@@ -399,6 +417,8 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v1alpha1.delivery.Encryption other = (com.tcn.cloud.api.api.v1alpha1.delivery.Encryption) obj;
 
+    if (getEncryptionSid()
+        != other.getEncryptionSid()) return false;
     if (!getOrgId()
         .equals(other.getOrgId())) return false;
     if (!getName()
@@ -439,6 +459,9 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + ENCRYPTION_SID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getEncryptionSid());
     hash = (37 * hash) + ORG_ID_FIELD_NUMBER;
     hash = (53 * hash) + getOrgId().hashCode();
     hash = (37 * hash) + NAME_FIELD_NUMBER;
@@ -603,6 +626,7 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
+      encryptionSid_ = 0L;
       orgId_ = "";
       name_ = "";
       description_ = "";
@@ -659,22 +683,25 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.delivery.Encryption result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.orgId_ = orgId_;
+        result.encryptionSid_ = encryptionSid_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.name_ = name_;
+        result.orgId_ = orgId_;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.name_ = name_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
         result.description_ = description_;
       }
       int to_bitField0_ = 0;
-      if (((from_bitField0_ & 0x00000020) != 0)) {
+      if (((from_bitField0_ & 0x00000040) != 0)) {
         result.createdOn_ = createdOnBuilder_ == null
             ? createdOn_
             : createdOnBuilder_.build();
         to_bitField0_ |= 0x00000001;
       }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
+      if (((from_bitField0_ & 0x00000080) != 0)) {
         result.lastEdited_ = lastEditedBuilder_ == null
             ? lastEdited_
             : lastEditedBuilder_.build();
@@ -740,19 +767,22 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.delivery.Encryption other) {
       if (other == com.tcn.cloud.api.api.v1alpha1.delivery.Encryption.getDefaultInstance()) return this;
+      if (other.getEncryptionSid() != 0L) {
+        setEncryptionSid(other.getEncryptionSid());
+      }
       if (!other.getOrgId().isEmpty()) {
         orgId_ = other.orgId_;
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (!other.getName().isEmpty()) {
         name_ = other.name_;
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (!other.getDescription().isEmpty()) {
         description_ = other.description_;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (other.hasCreatedOn()) {
@@ -800,19 +830,24 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
+            case 8: {
+              encryptionSid_ = input.readInt64();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
             case 18: {
               orgId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             case 26: {
               name_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000004;
               break;
             } // case 26
             case 34: {
               description_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000008;
               break;
             } // case 34
             case 42: {
@@ -833,14 +868,14 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getCreatedOnFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000020;
+              bitField0_ |= 0x00000040;
               break;
             } // case 82
             case 90: {
               input.readMessage(
                   getLastEditedFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000040;
+              bitField0_ |= 0x00000080;
               break;
             } // case 90
             default: {
@@ -874,6 +909,38 @@ private static final long serialVersionUID = 0L;
     }
 
     private int bitField0_;
+
+    private long encryptionSid_ ;
+    /**
+     * <code>int64 encryption_sid = 1 [json_name = "encryptionSid"];</code>
+     * @return The encryptionSid.
+     */
+    @java.lang.Override
+    public long getEncryptionSid() {
+      return encryptionSid_;
+    }
+    /**
+     * <code>int64 encryption_sid = 1 [json_name = "encryptionSid"];</code>
+     * @param value The encryptionSid to set.
+     * @return This builder for chaining.
+     */
+    public Builder setEncryptionSid(long value) {
+
+      encryptionSid_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int64 encryption_sid = 1 [json_name = "encryptionSid"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearEncryptionSid() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      encryptionSid_ = 0L;
+      onChanged();
+      return this;
+    }
 
     private java.lang.Object orgId_ = "";
     /**
@@ -918,7 +985,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       orgId_ = value;
-      bitField0_ |= 0x00000001;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -928,7 +995,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearOrgId() {
       orgId_ = getDefaultInstance().getOrgId();
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -942,7 +1009,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       orgId_ = value;
-      bitField0_ |= 0x00000001;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -990,7 +1057,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       name_ = value;
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1000,7 +1067,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearName() {
       name_ = getDefaultInstance().getName();
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -1014,7 +1081,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       name_ = value;
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1062,7 +1129,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       description_ = value;
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1072,7 +1139,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearDescription() {
       description_ = getDefaultInstance().getDescription();
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1086,7 +1153,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       description_ = value;
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1383,7 +1450,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the createdOn field is set.
      */
     public boolean hasCreatedOn() {
-      return ((bitField0_ & 0x00000020) != 0);
+      return ((bitField0_ & 0x00000040) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp created_on = 10 [json_name = "createdOn"];</code>
@@ -1408,7 +1475,7 @@ private static final long serialVersionUID = 0L;
       } else {
         createdOnBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1422,7 +1489,7 @@ private static final long serialVersionUID = 0L;
       } else {
         createdOnBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1431,7 +1498,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCreatedOn(com.google.protobuf.Timestamp value) {
       if (createdOnBuilder_ == null) {
-        if (((bitField0_ & 0x00000020) != 0) &&
+        if (((bitField0_ & 0x00000040) != 0) &&
           createdOn_ != null &&
           createdOn_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
           getCreatedOnBuilder().mergeFrom(value);
@@ -1442,7 +1509,7 @@ private static final long serialVersionUID = 0L;
         createdOnBuilder_.mergeFrom(value);
       }
       if (createdOn_ != null) {
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000040;
         onChanged();
       }
       return this;
@@ -1451,7 +1518,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp created_on = 10 [json_name = "createdOn"];</code>
      */
     public Builder clearCreatedOn() {
-      bitField0_ = (bitField0_ & ~0x00000020);
+      bitField0_ = (bitField0_ & ~0x00000040);
       createdOn_ = null;
       if (createdOnBuilder_ != null) {
         createdOnBuilder_.dispose();
@@ -1464,7 +1531,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp created_on = 10 [json_name = "createdOn"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getCreatedOnBuilder() {
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000040;
       onChanged();
       return getCreatedOnFieldBuilder().getBuilder();
     }
@@ -1504,7 +1571,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the lastEdited field is set.
      */
     public boolean hasLastEdited() {
-      return ((bitField0_ & 0x00000040) != 0);
+      return ((bitField0_ & 0x00000080) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp last_edited = 11 [json_name = "lastEdited"];</code>
@@ -1529,7 +1596,7 @@ private static final long serialVersionUID = 0L;
       } else {
         lastEditedBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1543,7 +1610,7 @@ private static final long serialVersionUID = 0L;
       } else {
         lastEditedBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1552,7 +1619,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeLastEdited(com.google.protobuf.Timestamp value) {
       if (lastEditedBuilder_ == null) {
-        if (((bitField0_ & 0x00000040) != 0) &&
+        if (((bitField0_ & 0x00000080) != 0) &&
           lastEdited_ != null &&
           lastEdited_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
           getLastEditedBuilder().mergeFrom(value);
@@ -1563,7 +1630,7 @@ private static final long serialVersionUID = 0L;
         lastEditedBuilder_.mergeFrom(value);
       }
       if (lastEdited_ != null) {
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000080;
         onChanged();
       }
       return this;
@@ -1572,7 +1639,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp last_edited = 11 [json_name = "lastEdited"];</code>
      */
     public Builder clearLastEdited() {
-      bitField0_ = (bitField0_ & ~0x00000040);
+      bitField0_ = (bitField0_ & ~0x00000080);
       lastEdited_ = null;
       if (lastEditedBuilder_ != null) {
         lastEditedBuilder_.dispose();
@@ -1585,7 +1652,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp last_edited = 11 [json_name = "lastEdited"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getLastEditedBuilder() {
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000080;
       onChanged();
       return getLastEditedFieldBuilder().getBuilder();
     }

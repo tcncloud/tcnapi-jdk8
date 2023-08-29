@@ -8,6 +8,12 @@ public interface EncryptionOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <code>int64 encryption_sid = 1 [json_name = "encryptionSid"];</code>
+   * @return The encryptionSid.
+   */
+  long getEncryptionSid();
+
+  /**
    * <code>string org_id = 2 [json_name = "orgId"];</code>
    * @return The orgId.
    */
