@@ -13,10 +13,6 @@ package com.tcn.cloud.api.api.v1alpha1.agentsmith;
 public enum AgentState
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
-   * <pre>
-   * TBD - in the works
-   * </pre>
-   *
    * <code>UNKNOWN = 0;</code>
    */
   UNKNOWN(0),
@@ -56,14 +52,154 @@ public enum AgentState
    * <code>PREPARING_AFTER_IDLE = 10;</code>
    */
   PREPARING_AFTER_IDLE(10),
+  /**
+   * <code>PREPARING_AFTER_WRAPUP = 11;</code>
+   */
+  PREPARING_AFTER_WRAPUP(11),
+  /**
+   * <code>PREPARING_AFTER_PAUSE = 12;</code>
+   */
+  PREPARING_AFTER_PAUSE(12),
+  /**
+   * <code>PREPARING_AFTER_DIAL_CANCEL = 13;</code>
+   */
+  PREPARING_AFTER_DIAL_CANCEL(13),
+  /**
+   * <code>PREPARING_AFTER_PBX_REJECT = 14;</code>
+   */
+  PREPARING_AFTER_PBX_REJECT(14),
+  /**
+   * <code>PREPARING_AFTER_PBX_HANGUP = 15;</code>
+   */
+  PREPARING_AFTER_PBX_HANGUP(15),
+  /**
+   * <code>PREPARING_AFTER_PBX_WAS_TAKEN = 16;</code>
+   */
+  PREPARING_AFTER_PBX_WAS_TAKEN(16),
+  /**
+   * <code>PREPARING_AFTER_GUI_BUSY = 17;</code>
+   */
+  PREPARING_AFTER_GUI_BUSY(17),
+  /**
+   * <code>MANUAL_DIAL_PREPARED = 18;</code>
+   */
+  MANUAL_DIAL_PREPARED(18),
+  /**
+   * <code>PREVIEW_DIAL_PREPARED = 19;</code>
+   */
+  PREVIEW_DIAL_PREPARED(19),
+  /**
+   * <code>MANUAL_DIAL_STARTED = 20;</code>
+   */
+  MANUAL_DIAL_STARTED(20),
+  /**
+   * <code>PREVIEW_DIAL_STARTED = 21;</code>
+   */
+  PREVIEW_DIAL_STARTED(21),
+  /**
+   * <code>OUTBOUND_LOCKED = 22;</code>
+   */
+  OUTBOUND_LOCKED(22),
+  /**
+   * <code>WARM_AGENT_TRANSFER_STARTED_SOURCE = 23;</code>
+   */
+  WARM_AGENT_TRANSFER_STARTED_SOURCE(23),
+  /**
+   * <code>WARM_AGENT_TRANSFER_STARTED_DESTINATION = 24;</code>
+   */
+  WARM_AGENT_TRANSFER_STARTED_DESTINATION(24),
+  /**
+   * <code>WARM_OUTBOUND_TRANSFER_STARTED = 25;</code>
+   */
+  WARM_OUTBOUND_TRANSFER_STARTED(25),
+  /**
+   * <code>WARM_OUTBOUND_TRANSFER_PEER_LOST = 26;</code>
+   */
+  WARM_OUTBOUND_TRANSFER_PEER_LOST(26),
+  /**
+   * <code>PBX_POPUP_LOCKED = 27;</code>
+   */
+  PBX_POPUP_LOCKED(27),
+  /**
+   * <code>PEERED_WITH_CALL_ON_HOLD = 28;</code>
+   */
+  PEERED_WITH_CALL_ON_HOLD(28),
+  /**
+   * <code>CALLBACK_RESUMING = 29;</code>
+   */
+  CALLBACK_RESUMING(29),
+  /**
+   * <code>GUI_BUSY = 30;</code>
+   */
+  GUI_BUSY(30),
+  /**
+   * <code>INTERCOM = 31;</code>
+   */
+  INTERCOM(31),
+  /**
+   * <code>INTERCOM_RINGING_SOURCE = 32;</code>
+   */
+  INTERCOM_RINGING_SOURCE(32),
+  /**
+   * <code>INTERCOM_RINGING_DESTINATION = 33;</code>
+   */
+  INTERCOM_RINGING_DESTINATION(33),
+  /**
+   * <code>WARM_OUTBOUND_TRANSFER_OUTBOUND_LOST = 34;</code>
+   */
+  WARM_OUTBOUND_TRANSFER_OUTBOUND_LOST(34),
+  /**
+   * <code>PREPARED_TO_PEER = 35;</code>
+   */
+  PREPARED_TO_PEER(35),
+  /**
+   * <code>WARM_SKILL_TRANSFER_SOURCE_PENDING = 36;</code>
+   */
+  WARM_SKILL_TRANSFER_SOURCE_PENDING(36),
+  /**
+   * <pre>
+   * when the transfer has started
+   * </pre>
+   *
+   * <code>CALLER_TRANSFER_STARTED = 37;</code>
+   */
+  CALLER_TRANSFER_STARTED(37),
+  /**
+   * <pre>
+   * when the transfer is running and the peer hangs up
+   * </pre>
+   *
+   * <code>CALLER_TRANSFER_LOST_PEER = 38;</code>
+   */
+  CALLER_TRANSFER_LOST_PEER(38),
+  /**
+   * <pre>
+   * when the transfer is running and the dest caller hangs up
+   * </pre>
+   *
+   * <code>CALLER_TRANSFER_LOST_MERGED_CALLER = 39;</code>
+   */
+  CALLER_TRANSFER_LOST_MERGED_CALLER(39),
+  /**
+   * <pre>
+   * interim state for cold outbound transfer
+   * </pre>
+   *
+   * <code>COLD_OUTBOUND_TRANSFER_STARTED = 40;</code>
+   */
+  COLD_OUTBOUND_TRANSFER_STARTED(40),
+  /**
+   * <pre>
+   * interim state for cold agent transfer
+   * </pre>
+   *
+   * <code>COLD_AGENT_TRANSFER_STARTED = 41;</code>
+   */
+  COLD_AGENT_TRANSFER_STARTED(41),
   UNRECOGNIZED(-1),
   ;
 
   /**
-   * <pre>
-   * TBD - in the works
-   * </pre>
-   *
    * <code>UNKNOWN = 0;</code>
    */
   public static final int UNKNOWN_VALUE = 0;
@@ -103,6 +239,150 @@ public enum AgentState
    * <code>PREPARING_AFTER_IDLE = 10;</code>
    */
   public static final int PREPARING_AFTER_IDLE_VALUE = 10;
+  /**
+   * <code>PREPARING_AFTER_WRAPUP = 11;</code>
+   */
+  public static final int PREPARING_AFTER_WRAPUP_VALUE = 11;
+  /**
+   * <code>PREPARING_AFTER_PAUSE = 12;</code>
+   */
+  public static final int PREPARING_AFTER_PAUSE_VALUE = 12;
+  /**
+   * <code>PREPARING_AFTER_DIAL_CANCEL = 13;</code>
+   */
+  public static final int PREPARING_AFTER_DIAL_CANCEL_VALUE = 13;
+  /**
+   * <code>PREPARING_AFTER_PBX_REJECT = 14;</code>
+   */
+  public static final int PREPARING_AFTER_PBX_REJECT_VALUE = 14;
+  /**
+   * <code>PREPARING_AFTER_PBX_HANGUP = 15;</code>
+   */
+  public static final int PREPARING_AFTER_PBX_HANGUP_VALUE = 15;
+  /**
+   * <code>PREPARING_AFTER_PBX_WAS_TAKEN = 16;</code>
+   */
+  public static final int PREPARING_AFTER_PBX_WAS_TAKEN_VALUE = 16;
+  /**
+   * <code>PREPARING_AFTER_GUI_BUSY = 17;</code>
+   */
+  public static final int PREPARING_AFTER_GUI_BUSY_VALUE = 17;
+  /**
+   * <code>MANUAL_DIAL_PREPARED = 18;</code>
+   */
+  public static final int MANUAL_DIAL_PREPARED_VALUE = 18;
+  /**
+   * <code>PREVIEW_DIAL_PREPARED = 19;</code>
+   */
+  public static final int PREVIEW_DIAL_PREPARED_VALUE = 19;
+  /**
+   * <code>MANUAL_DIAL_STARTED = 20;</code>
+   */
+  public static final int MANUAL_DIAL_STARTED_VALUE = 20;
+  /**
+   * <code>PREVIEW_DIAL_STARTED = 21;</code>
+   */
+  public static final int PREVIEW_DIAL_STARTED_VALUE = 21;
+  /**
+   * <code>OUTBOUND_LOCKED = 22;</code>
+   */
+  public static final int OUTBOUND_LOCKED_VALUE = 22;
+  /**
+   * <code>WARM_AGENT_TRANSFER_STARTED_SOURCE = 23;</code>
+   */
+  public static final int WARM_AGENT_TRANSFER_STARTED_SOURCE_VALUE = 23;
+  /**
+   * <code>WARM_AGENT_TRANSFER_STARTED_DESTINATION = 24;</code>
+   */
+  public static final int WARM_AGENT_TRANSFER_STARTED_DESTINATION_VALUE = 24;
+  /**
+   * <code>WARM_OUTBOUND_TRANSFER_STARTED = 25;</code>
+   */
+  public static final int WARM_OUTBOUND_TRANSFER_STARTED_VALUE = 25;
+  /**
+   * <code>WARM_OUTBOUND_TRANSFER_PEER_LOST = 26;</code>
+   */
+  public static final int WARM_OUTBOUND_TRANSFER_PEER_LOST_VALUE = 26;
+  /**
+   * <code>PBX_POPUP_LOCKED = 27;</code>
+   */
+  public static final int PBX_POPUP_LOCKED_VALUE = 27;
+  /**
+   * <code>PEERED_WITH_CALL_ON_HOLD = 28;</code>
+   */
+  public static final int PEERED_WITH_CALL_ON_HOLD_VALUE = 28;
+  /**
+   * <code>CALLBACK_RESUMING = 29;</code>
+   */
+  public static final int CALLBACK_RESUMING_VALUE = 29;
+  /**
+   * <code>GUI_BUSY = 30;</code>
+   */
+  public static final int GUI_BUSY_VALUE = 30;
+  /**
+   * <code>INTERCOM = 31;</code>
+   */
+  public static final int INTERCOM_VALUE = 31;
+  /**
+   * <code>INTERCOM_RINGING_SOURCE = 32;</code>
+   */
+  public static final int INTERCOM_RINGING_SOURCE_VALUE = 32;
+  /**
+   * <code>INTERCOM_RINGING_DESTINATION = 33;</code>
+   */
+  public static final int INTERCOM_RINGING_DESTINATION_VALUE = 33;
+  /**
+   * <code>WARM_OUTBOUND_TRANSFER_OUTBOUND_LOST = 34;</code>
+   */
+  public static final int WARM_OUTBOUND_TRANSFER_OUTBOUND_LOST_VALUE = 34;
+  /**
+   * <code>PREPARED_TO_PEER = 35;</code>
+   */
+  public static final int PREPARED_TO_PEER_VALUE = 35;
+  /**
+   * <code>WARM_SKILL_TRANSFER_SOURCE_PENDING = 36;</code>
+   */
+  public static final int WARM_SKILL_TRANSFER_SOURCE_PENDING_VALUE = 36;
+  /**
+   * <pre>
+   * when the transfer has started
+   * </pre>
+   *
+   * <code>CALLER_TRANSFER_STARTED = 37;</code>
+   */
+  public static final int CALLER_TRANSFER_STARTED_VALUE = 37;
+  /**
+   * <pre>
+   * when the transfer is running and the peer hangs up
+   * </pre>
+   *
+   * <code>CALLER_TRANSFER_LOST_PEER = 38;</code>
+   */
+  public static final int CALLER_TRANSFER_LOST_PEER_VALUE = 38;
+  /**
+   * <pre>
+   * when the transfer is running and the dest caller hangs up
+   * </pre>
+   *
+   * <code>CALLER_TRANSFER_LOST_MERGED_CALLER = 39;</code>
+   */
+  public static final int CALLER_TRANSFER_LOST_MERGED_CALLER_VALUE = 39;
+  /**
+   * <pre>
+   * interim state for cold outbound transfer
+   * </pre>
+   *
+   * <code>COLD_OUTBOUND_TRANSFER_STARTED = 40;</code>
+   */
+  public static final int COLD_OUTBOUND_TRANSFER_STARTED_VALUE = 40;
+  /**
+   * <pre>
+   * interim state for cold agent transfer
+   * </pre>
+   *
+   * <code>COLD_AGENT_TRANSFER_STARTED = 41;</code>
+   */
+  public static final int COLD_AGENT_TRANSFER_STARTED_VALUE = 41;
 
 
   public final int getNumber() {
@@ -139,6 +419,37 @@ public enum AgentState
       case 7: return PAUSED;
       case 8: return WRAPUP;
       case 10: return PREPARING_AFTER_IDLE;
+      case 11: return PREPARING_AFTER_WRAPUP;
+      case 12: return PREPARING_AFTER_PAUSE;
+      case 13: return PREPARING_AFTER_DIAL_CANCEL;
+      case 14: return PREPARING_AFTER_PBX_REJECT;
+      case 15: return PREPARING_AFTER_PBX_HANGUP;
+      case 16: return PREPARING_AFTER_PBX_WAS_TAKEN;
+      case 17: return PREPARING_AFTER_GUI_BUSY;
+      case 18: return MANUAL_DIAL_PREPARED;
+      case 19: return PREVIEW_DIAL_PREPARED;
+      case 20: return MANUAL_DIAL_STARTED;
+      case 21: return PREVIEW_DIAL_STARTED;
+      case 22: return OUTBOUND_LOCKED;
+      case 23: return WARM_AGENT_TRANSFER_STARTED_SOURCE;
+      case 24: return WARM_AGENT_TRANSFER_STARTED_DESTINATION;
+      case 25: return WARM_OUTBOUND_TRANSFER_STARTED;
+      case 26: return WARM_OUTBOUND_TRANSFER_PEER_LOST;
+      case 27: return PBX_POPUP_LOCKED;
+      case 28: return PEERED_WITH_CALL_ON_HOLD;
+      case 29: return CALLBACK_RESUMING;
+      case 30: return GUI_BUSY;
+      case 31: return INTERCOM;
+      case 32: return INTERCOM_RINGING_SOURCE;
+      case 33: return INTERCOM_RINGING_DESTINATION;
+      case 34: return WARM_OUTBOUND_TRANSFER_OUTBOUND_LOST;
+      case 35: return PREPARED_TO_PEER;
+      case 36: return WARM_SKILL_TRANSFER_SOURCE_PENDING;
+      case 37: return CALLER_TRANSFER_STARTED;
+      case 38: return CALLER_TRANSFER_LOST_PEER;
+      case 39: return CALLER_TRANSFER_LOST_MERGED_CALLER;
+      case 40: return COLD_OUTBOUND_TRANSFER_STARTED;
+      case 41: return COLD_AGENT_TRANSFER_STARTED;
       default: return null;
     }
   }

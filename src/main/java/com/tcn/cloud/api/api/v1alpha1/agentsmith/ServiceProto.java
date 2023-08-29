@@ -84,20 +84,43 @@ public final class ServiceProto {
       "ls\"\014\n\nEmptyState\"8\n\024AgentVoiceStartEvent" +
       "\022 \n\014sip_dial_url\030\001 \001(\tR\nsipDialUrl\"\024\n\022Ag" +
       "entVoiceEndEvent\"\026\n\024AgentSessionEndEvent" +
-      "*\230\001\n\nAgentState\022\013\n\007UNKNOWN\020\000\022\017\n\013UNAVAILA" +
+      "*\304\010\n\nAgentState\022\013\n\007UNKNOWN\020\000\022\017\n\013UNAVAILA" +
       "BLE\020\001\022\010\n\004IDLE\020\002\022\t\n\005READY\020\003\022\n\n\006HUNGUP\020\004\022\r" +
       "\n\tDESTROYED\020\005\022\n\n\006PEERED\020\006\022\n\n\006PAUSED\020\007\022\n\n" +
-      "\006WRAPUP\020\010\022\030\n\024PREPARING_AFTER_IDLE\020\n2\266\001\n\n" +
-      "AgentSmith\022\247\001\n\013FollowAgent\022\'.api.v1alpha" +
-      "1.agentsmith.FollowAgentReq\032\'.api.v1alph" +
-      "a1.agentsmith.FollowAgentRes\"D\272\270\221\002\005\n\003\010\254\002" +
-      "\202\323\344\223\0024\"//api/v1alpha1/agentsmith/agentsm" +
-      "ith/followagent:\001*0\001B\267\001\n)com.tcn.cloud.a" +
-      "pi.api.v1alpha1.agentsmithB\014ServiceProto" +
-      "P\001\242\002\003AVA\252\002\027Api.V1alpha1.Agentsmith\312\002\027Api" +
-      "\\V1alpha1\\Agentsmith\342\002#Api\\V1alpha1\\Agen" +
-      "tsmith\\GPBMetadata\352\002\031Api::V1alpha1::Agen" +
-      "tsmithb\006proto3"
+      "\006WRAPUP\020\010\022\030\n\024PREPARING_AFTER_IDLE\020\n\022\032\n\026P" +
+      "REPARING_AFTER_WRAPUP\020\013\022\031\n\025PREPARING_AFT" +
+      "ER_PAUSE\020\014\022\037\n\033PREPARING_AFTER_DIAL_CANCE" +
+      "L\020\r\022\036\n\032PREPARING_AFTER_PBX_REJECT\020\016\022\036\n\032P" +
+      "REPARING_AFTER_PBX_HANGUP\020\017\022!\n\035PREPARING" +
+      "_AFTER_PBX_WAS_TAKEN\020\020\022\034\n\030PREPARING_AFTE" +
+      "R_GUI_BUSY\020\021\022\030\n\024MANUAL_DIAL_PREPARED\020\022\022\031" +
+      "\n\025PREVIEW_DIAL_PREPARED\020\023\022\027\n\023MANUAL_DIAL" +
+      "_STARTED\020\024\022\030\n\024PREVIEW_DIAL_STARTED\020\025\022\023\n\017" +
+      "OUTBOUND_LOCKED\020\026\022&\n\"WARM_AGENT_TRANSFER" +
+      "_STARTED_SOURCE\020\027\022+\n\'WARM_AGENT_TRANSFER" +
+      "_STARTED_DESTINATION\020\030\022\"\n\036WARM_OUTBOUND_" +
+      "TRANSFER_STARTED\020\031\022$\n WARM_OUTBOUND_TRAN" +
+      "SFER_PEER_LOST\020\032\022\024\n\020PBX_POPUP_LOCKED\020\033\022\034" +
+      "\n\030PEERED_WITH_CALL_ON_HOLD\020\034\022\025\n\021CALLBACK" +
+      "_RESUMING\020\035\022\014\n\010GUI_BUSY\020\036\022\014\n\010INTERCOM\020\037\022" +
+      "\033\n\027INTERCOM_RINGING_SOURCE\020 \022 \n\034INTERCOM" +
+      "_RINGING_DESTINATION\020!\022(\n$WARM_OUTBOUND_" +
+      "TRANSFER_OUTBOUND_LOST\020\"\022\024\n\020PREPARED_TO_" +
+      "PEER\020#\022&\n\"WARM_SKILL_TRANSFER_SOURCE_PEN" +
+      "DING\020$\022\033\n\027CALLER_TRANSFER_STARTED\020%\022\035\n\031C" +
+      "ALLER_TRANSFER_LOST_PEER\020&\022&\n\"CALLER_TRA" +
+      "NSFER_LOST_MERGED_CALLER\020\'\022\"\n\036COLD_OUTBO" +
+      "UND_TRANSFER_STARTED\020(\022\037\n\033COLD_AGENT_TRA" +
+      "NSFER_STARTED\020)2\266\001\n\nAgentSmith\022\247\001\n\013Follo" +
+      "wAgent\022\'.api.v1alpha1.agentsmith.FollowA" +
+      "gentReq\032\'.api.v1alpha1.agentsmith.Follow" +
+      "AgentRes\"D\272\270\221\002\005\n\003\010\254\002\202\323\344\223\0024\"//api/v1alpha" +
+      "1/agentsmith/agentsmith/followagent:\001*0\001" +
+      "B\267\001\n)com.tcn.cloud.api.api.v1alpha1.agen" +
+      "tsmithB\014ServiceProtoP\001\242\002\003AVA\252\002\027Api.V1alp" +
+      "ha1.Agentsmith\312\002\027Api\\V1alpha1\\Agentsmith" +
+      "\342\002#Api\\V1alpha1\\Agentsmith\\GPBMetadata\352\002" +
+      "\031Api::V1alpha1::Agentsmithb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
