@@ -96,54 +96,54 @@ public interface BillingPlanOrBuilder extends
    * time the billing plan was created
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp date_created = 4 [json_name = "dateCreated"];</code>
-   * @return Whether the dateCreated field is set.
+   * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime"];</code>
+   * @return Whether the createTime field is set.
    */
-  boolean hasDateCreated();
+  boolean hasCreateTime();
   /**
    * <pre>
    * time the billing plan was created
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp date_created = 4 [json_name = "dateCreated"];</code>
-   * @return The dateCreated.
+   * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime"];</code>
+   * @return The createTime.
    */
-  com.google.protobuf.Timestamp getDateCreated();
+  com.google.protobuf.Timestamp getCreateTime();
   /**
    * <pre>
    * time the billing plan was created
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp date_created = 4 [json_name = "dateCreated"];</code>
+   * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime"];</code>
    */
-  com.google.protobuf.TimestampOrBuilder getDateCreatedOrBuilder();
+  com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder();
 
   /**
    * <pre>
    * time the billing plan was updated
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp date_modified = 5 [json_name = "dateModified"];</code>
-   * @return Whether the dateModified field is set.
+   * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
+   * @return Whether the updateTime field is set.
    */
-  boolean hasDateModified();
+  boolean hasUpdateTime();
   /**
    * <pre>
    * time the billing plan was updated
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp date_modified = 5 [json_name = "dateModified"];</code>
-   * @return The dateModified.
+   * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
+   * @return The updateTime.
    */
-  com.google.protobuf.Timestamp getDateModified();
+  com.google.protobuf.Timestamp getUpdateTime();
   /**
    * <pre>
    * time the billing plan was updated
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp date_modified = 5 [json_name = "dateModified"];</code>
+   * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
    */
-  com.google.protobuf.TimestampOrBuilder getDateModifiedOrBuilder();
+  com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder();
 
   /**
    * <pre>

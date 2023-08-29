@@ -35,34 +35,34 @@ public final class InvoiceProto {
     java.lang.String[] descriptorData = {
       "\n!api/commons/billing/invoice.proto\022\023api" +
       ".commons.billing\032\037google/protobuf/timest" +
-      "amp.proto\"\205\002\n\007Invoice\0226\n\005items\030\001 \003(\0132 .a" +
+      "amp.proto\"\377\001\n\007Invoice\0226\n\005items\030\001 \003(\0132 .a" +
       "pi.commons.billing.InvoiceItemR\005items\022\035\n" +
       "\ninvoice_id\030\002 \001(\tR\tinvoiceId\022#\n\rbilling_" +
-      "cycle\030\003 \001(\tR\014billingCycle\022=\n\014date_create" +
-      "d\030\004 \001(\0132\032.google.protobuf.TimestampR\013dat" +
-      "eCreated\022?\n\rdate_modified\030\005 \001(\0132\032.google" +
-      ".protobuf.TimestampR\014dateModified\"\207\002\n\013In" +
-      "voiceItem\022(\n\020invoice_item_sid\030\001 \001(\003R\016inv" +
-      "oiceItemSid\0226\n\007product\030\002 \001(\0162\034.api.commo" +
-      "ns.billing.ProductR\007product\022\026\n\006amount\030\003 " +
-      "\001(\001R\006amount\022=\n\014date_created\030\004 \001(\0132\032.goog" +
-      "le.protobuf.TimestampR\013dateCreated\022?\n\rda" +
-      "te_modified\030\005 \001(\0132\032.google.protobuf.Time" +
-      "stampR\014dateModified*\253\002\n\007Product\022\027\n\023PRODU" +
-      "CT_UNSPECIFIED\020\000\022\021\n\rPRODUCT_OTHER\020\001\022\027\n\023P" +
-      "RODUCT_AGENT_SEATS\020d\022\030\n\023PRODUCT_EMAILS_S" +
-      "ENT\020\310\001\022\034\n\027PRODUCT_EMAILS_RECEIVED\020\311\001\022\025\n\020" +
-      "PRODUCT_SMS_SENT\020\312\001\022\031\n\024PRODUCT_SMS_RECEI" +
-      "VED\020\313\001\022\026\n\021PRODUCT_CHAT_SENT\020\314\001\022\032\n\025PRODUC" +
-      "T_CHAT_RECEIVED\020\315\001\022\021\n\014PRODUCT_OMNI\020\254\002\022\021\n" +
-      "\014PRODUCT_VANA\020\220\003\022\027\n\022PRODUCT_COMPLIANCE\020\364" +
-      "\003*a\n\rInvoiceFormat\022\036\n\032INVOICE_FORMAT_UNS" +
-      "PECIFIED\020\000\022\030\n\024INVOICE_FORMAT_PROTO\020\001\022\026\n\022" +
-      "INVOICE_FORMAT_CSV\020\002B\243\001\n%com.tcn.cloud.a" +
-      "pi.api.commons.billingB\014InvoiceProtoP\001\242\002" +
-      "\003ACB\252\002\023Api.Commons.Billing\312\002\023Api\\Commons" +
-      "\\Billing\342\002\037Api\\Commons\\Billing\\GPBMetada" +
-      "ta\352\002\025Api::Commons::Billingb\006proto3"
+      "cycle\030\003 \001(\tR\014billingCycle\022;\n\013cretae_time" +
+      "\030\004 \001(\0132\032.google.protobuf.TimestampR\ncret" +
+      "aeTime\022;\n\013update_time\030\005 \001(\0132\032.google.pro" +
+      "tobuf.TimestampR\nupdateTime\"\207\002\n\013InvoiceI" +
+      "tem\022(\n\020invoice_item_sid\030\001 \001(\003R\016invoiceIt" +
+      "emSid\0226\n\007product\030\002 \001(\0162\034.api.commons.bil" +
+      "ling.ProductR\007product\022\026\n\006amount\030\003 \001(\001R\006a" +
+      "mount\022=\n\014date_created\030\004 \001(\0132\032.google.pro" +
+      "tobuf.TimestampR\013dateCreated\022?\n\rdate_mod" +
+      "ified\030\005 \001(\0132\032.google.protobuf.TimestampR" +
+      "\014dateModified*\253\002\n\007Product\022\027\n\023PRODUCT_UNS" +
+      "PECIFIED\020\000\022\021\n\rPRODUCT_OTHER\020\001\022\027\n\023PRODUCT" +
+      "_AGENT_SEATS\020d\022\030\n\023PRODUCT_EMAILS_SENT\020\310\001" +
+      "\022\034\n\027PRODUCT_EMAILS_RECEIVED\020\311\001\022\025\n\020PRODUC" +
+      "T_SMS_SENT\020\312\001\022\031\n\024PRODUCT_SMS_RECEIVED\020\313\001" +
+      "\022\026\n\021PRODUCT_CHAT_SENT\020\314\001\022\032\n\025PRODUCT_CHAT" +
+      "_RECEIVED\020\315\001\022\021\n\014PRODUCT_OMNI\020\254\002\022\021\n\014PRODU" +
+      "CT_VANA\020\220\003\022\027\n\022PRODUCT_COMPLIANCE\020\364\003*a\n\rI" +
+      "nvoiceFormat\022\036\n\032INVOICE_FORMAT_UNSPECIFI" +
+      "ED\020\000\022\030\n\024INVOICE_FORMAT_PROTO\020\001\022\026\n\022INVOIC" +
+      "E_FORMAT_CSV\020\002B\243\001\n%com.tcn.cloud.api.api" +
+      ".commons.billingB\014InvoiceProtoP\001\242\002\003ACB\252\002" +
+      "\023Api.Commons.Billing\312\002\023Api\\Commons\\Billi" +
+      "ng\342\002\037Api\\Commons\\Billing\\GPBMetadata\352\002\025A" +
+      "pi::Commons::Billingb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -74,7 +74,7 @@ public final class InvoiceProto {
     internal_static_api_commons_billing_Invoice_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_billing_Invoice_descriptor,
-        new java.lang.String[] { "Items", "InvoiceId", "BillingCycle", "DateCreated", "DateModified", });
+        new java.lang.String[] { "Items", "InvoiceId", "BillingCycle", "CretaeTime", "UpdateTime", });
     internal_static_api_commons_billing_InvoiceItem_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_api_commons_billing_InvoiceItem_fieldAccessorTable = new

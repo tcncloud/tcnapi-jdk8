@@ -207,18 +207,18 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int DATE_CREATED_FIELD_NUMBER = 4;
-  private com.google.protobuf.Timestamp dateCreated_;
+  public static final int CRETAE_TIME_FIELD_NUMBER = 4;
+  private com.google.protobuf.Timestamp cretaeTime_;
   /**
    * <pre>
    * time the invoice was created
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp date_created = 4 [json_name = "dateCreated"];</code>
-   * @return Whether the dateCreated field is set.
+   * <code>.google.protobuf.Timestamp cretae_time = 4 [json_name = "cretaeTime"];</code>
+   * @return Whether the cretaeTime field is set.
    */
   @java.lang.Override
-  public boolean hasDateCreated() {
+  public boolean hasCretaeTime() {
     return ((bitField0_ & 0x00000001) != 0);
   }
   /**
@@ -226,61 +226,61 @@ private static final long serialVersionUID = 0L;
    * time the invoice was created
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp date_created = 4 [json_name = "dateCreated"];</code>
-   * @return The dateCreated.
+   * <code>.google.protobuf.Timestamp cretae_time = 4 [json_name = "cretaeTime"];</code>
+   * @return The cretaeTime.
    */
   @java.lang.Override
-  public com.google.protobuf.Timestamp getDateCreated() {
-    return dateCreated_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : dateCreated_;
+  public com.google.protobuf.Timestamp getCretaeTime() {
+    return cretaeTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : cretaeTime_;
   }
   /**
    * <pre>
    * time the invoice was created
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp date_created = 4 [json_name = "dateCreated"];</code>
+   * <code>.google.protobuf.Timestamp cretae_time = 4 [json_name = "cretaeTime"];</code>
    */
   @java.lang.Override
-  public com.google.protobuf.TimestampOrBuilder getDateCreatedOrBuilder() {
-    return dateCreated_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : dateCreated_;
+  public com.google.protobuf.TimestampOrBuilder getCretaeTimeOrBuilder() {
+    return cretaeTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : cretaeTime_;
   }
 
-  public static final int DATE_MODIFIED_FIELD_NUMBER = 5;
-  private com.google.protobuf.Timestamp dateModified_;
+  public static final int UPDATE_TIME_FIELD_NUMBER = 5;
+  private com.google.protobuf.Timestamp updateTime_;
   /**
    * <pre>
-   * time the invoice was last modified
+   * time the invoice was last updated
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp date_modified = 5 [json_name = "dateModified"];</code>
-   * @return Whether the dateModified field is set.
+   * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
+   * @return Whether the updateTime field is set.
    */
   @java.lang.Override
-  public boolean hasDateModified() {
+  public boolean hasUpdateTime() {
     return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <pre>
-   * time the invoice was last modified
+   * time the invoice was last updated
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp date_modified = 5 [json_name = "dateModified"];</code>
-   * @return The dateModified.
+   * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
+   * @return The updateTime.
    */
   @java.lang.Override
-  public com.google.protobuf.Timestamp getDateModified() {
-    return dateModified_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : dateModified_;
+  public com.google.protobuf.Timestamp getUpdateTime() {
+    return updateTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updateTime_;
   }
   /**
    * <pre>
-   * time the invoice was last modified
+   * time the invoice was last updated
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp date_modified = 5 [json_name = "dateModified"];</code>
+   * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
    */
   @java.lang.Override
-  public com.google.protobuf.TimestampOrBuilder getDateModifiedOrBuilder() {
-    return dateModified_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : dateModified_;
+  public com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder() {
+    return updateTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updateTime_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -307,10 +307,10 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, billingCycle_);
     }
     if (((bitField0_ & 0x00000001) != 0)) {
-      output.writeMessage(4, getDateCreated());
+      output.writeMessage(4, getCretaeTime());
     }
     if (((bitField0_ & 0x00000002) != 0)) {
-      output.writeMessage(5, getDateModified());
+      output.writeMessage(5, getUpdateTime());
     }
     getUnknownFields().writeTo(output);
   }
@@ -333,11 +333,11 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(4, getDateCreated());
+        .computeMessageSize(4, getCretaeTime());
     }
     if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(5, getDateModified());
+        .computeMessageSize(5, getUpdateTime());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -360,15 +360,15 @@ private static final long serialVersionUID = 0L;
         .equals(other.getInvoiceId())) return false;
     if (!getBillingCycle()
         .equals(other.getBillingCycle())) return false;
-    if (hasDateCreated() != other.hasDateCreated()) return false;
-    if (hasDateCreated()) {
-      if (!getDateCreated()
-          .equals(other.getDateCreated())) return false;
+    if (hasCretaeTime() != other.hasCretaeTime()) return false;
+    if (hasCretaeTime()) {
+      if (!getCretaeTime()
+          .equals(other.getCretaeTime())) return false;
     }
-    if (hasDateModified() != other.hasDateModified()) return false;
-    if (hasDateModified()) {
-      if (!getDateModified()
-          .equals(other.getDateModified())) return false;
+    if (hasUpdateTime() != other.hasUpdateTime()) return false;
+    if (hasUpdateTime()) {
+      if (!getUpdateTime()
+          .equals(other.getUpdateTime())) return false;
     }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -389,13 +389,13 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getInvoiceId().hashCode();
     hash = (37 * hash) + BILLING_CYCLE_FIELD_NUMBER;
     hash = (53 * hash) + getBillingCycle().hashCode();
-    if (hasDateCreated()) {
-      hash = (37 * hash) + DATE_CREATED_FIELD_NUMBER;
-      hash = (53 * hash) + getDateCreated().hashCode();
+    if (hasCretaeTime()) {
+      hash = (37 * hash) + CRETAE_TIME_FIELD_NUMBER;
+      hash = (53 * hash) + getCretaeTime().hashCode();
     }
-    if (hasDateModified()) {
-      hash = (37 * hash) + DATE_MODIFIED_FIELD_NUMBER;
-      hash = (53 * hash) + getDateModified().hashCode();
+    if (hasUpdateTime()) {
+      hash = (37 * hash) + UPDATE_TIME_FIELD_NUMBER;
+      hash = (53 * hash) + getUpdateTime().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -533,8 +533,8 @@ private static final long serialVersionUID = 0L;
       if (com.google.protobuf.GeneratedMessageV3
               .alwaysUseFieldBuilders) {
         getItemsFieldBuilder();
-        getDateCreatedFieldBuilder();
-        getDateModifiedFieldBuilder();
+        getCretaeTimeFieldBuilder();
+        getUpdateTimeFieldBuilder();
       }
     }
     @java.lang.Override
@@ -550,15 +550,15 @@ private static final long serialVersionUID = 0L;
       bitField0_ = (bitField0_ & ~0x00000001);
       invoiceId_ = "";
       billingCycle_ = "";
-      dateCreated_ = null;
-      if (dateCreatedBuilder_ != null) {
-        dateCreatedBuilder_.dispose();
-        dateCreatedBuilder_ = null;
+      cretaeTime_ = null;
+      if (cretaeTimeBuilder_ != null) {
+        cretaeTimeBuilder_.dispose();
+        cretaeTimeBuilder_ = null;
       }
-      dateModified_ = null;
-      if (dateModifiedBuilder_ != null) {
-        dateModifiedBuilder_.dispose();
-        dateModifiedBuilder_ = null;
+      updateTime_ = null;
+      if (updateTimeBuilder_ != null) {
+        updateTimeBuilder_.dispose();
+        updateTimeBuilder_ = null;
       }
       return this;
     }
@@ -614,15 +614,15 @@ private static final long serialVersionUID = 0L;
       }
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.dateCreated_ = dateCreatedBuilder_ == null
-            ? dateCreated_
-            : dateCreatedBuilder_.build();
+        result.cretaeTime_ = cretaeTimeBuilder_ == null
+            ? cretaeTime_
+            : cretaeTimeBuilder_.build();
         to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.dateModified_ = dateModifiedBuilder_ == null
-            ? dateModified_
-            : dateModifiedBuilder_.build();
+        result.updateTime_ = updateTimeBuilder_ == null
+            ? updateTime_
+            : updateTimeBuilder_.build();
         to_bitField0_ |= 0x00000002;
       }
       result.bitField0_ |= to_bitField0_;
@@ -708,11 +708,11 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000004;
         onChanged();
       }
-      if (other.hasDateCreated()) {
-        mergeDateCreated(other.getDateCreated());
+      if (other.hasCretaeTime()) {
+        mergeCretaeTime(other.getCretaeTime());
       }
-      if (other.hasDateModified()) {
-        mergeDateModified(other.getDateModified());
+      if (other.hasUpdateTime()) {
+        mergeUpdateTime(other.getUpdateTime());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -765,14 +765,14 @@ private static final long serialVersionUID = 0L;
             } // case 26
             case 34: {
               input.readMessage(
-                  getDateCreatedFieldBuilder().getBuilder(),
+                  getCretaeTimeFieldBuilder().getBuilder(),
                   extensionRegistry);
               bitField0_ |= 0x00000008;
               break;
             } // case 34
             case 42: {
               input.readMessage(
-                  getDateModifiedFieldBuilder().getBuilder(),
+                  getUpdateTimeFieldBuilder().getBuilder(),
                   extensionRegistry);
               bitField0_ |= 0x00000010;
               break;
@@ -1308,18 +1308,18 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.Timestamp dateCreated_;
+    private com.google.protobuf.Timestamp cretaeTime_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> dateCreatedBuilder_;
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> cretaeTimeBuilder_;
     /**
      * <pre>
      * time the invoice was created
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp date_created = 4 [json_name = "dateCreated"];</code>
-     * @return Whether the dateCreated field is set.
+     * <code>.google.protobuf.Timestamp cretae_time = 4 [json_name = "cretaeTime"];</code>
+     * @return Whether the cretaeTime field is set.
      */
-    public boolean hasDateCreated() {
+    public boolean hasCretaeTime() {
       return ((bitField0_ & 0x00000008) != 0);
     }
     /**
@@ -1327,14 +1327,14 @@ private static final long serialVersionUID = 0L;
      * time the invoice was created
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp date_created = 4 [json_name = "dateCreated"];</code>
-     * @return The dateCreated.
+     * <code>.google.protobuf.Timestamp cretae_time = 4 [json_name = "cretaeTime"];</code>
+     * @return The cretaeTime.
      */
-    public com.google.protobuf.Timestamp getDateCreated() {
-      if (dateCreatedBuilder_ == null) {
-        return dateCreated_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : dateCreated_;
+    public com.google.protobuf.Timestamp getCretaeTime() {
+      if (cretaeTimeBuilder_ == null) {
+        return cretaeTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : cretaeTime_;
       } else {
-        return dateCreatedBuilder_.getMessage();
+        return cretaeTimeBuilder_.getMessage();
       }
     }
     /**
@@ -1342,16 +1342,16 @@ private static final long serialVersionUID = 0L;
      * time the invoice was created
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp date_created = 4 [json_name = "dateCreated"];</code>
+     * <code>.google.protobuf.Timestamp cretae_time = 4 [json_name = "cretaeTime"];</code>
      */
-    public Builder setDateCreated(com.google.protobuf.Timestamp value) {
-      if (dateCreatedBuilder_ == null) {
+    public Builder setCretaeTime(com.google.protobuf.Timestamp value) {
+      if (cretaeTimeBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        dateCreated_ = value;
+        cretaeTime_ = value;
       } else {
-        dateCreatedBuilder_.setMessage(value);
+        cretaeTimeBuilder_.setMessage(value);
       }
       bitField0_ |= 0x00000008;
       onChanged();
@@ -1362,14 +1362,14 @@ private static final long serialVersionUID = 0L;
      * time the invoice was created
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp date_created = 4 [json_name = "dateCreated"];</code>
+     * <code>.google.protobuf.Timestamp cretae_time = 4 [json_name = "cretaeTime"];</code>
      */
-    public Builder setDateCreated(
+    public Builder setCretaeTime(
         com.google.protobuf.Timestamp.Builder builderForValue) {
-      if (dateCreatedBuilder_ == null) {
-        dateCreated_ = builderForValue.build();
+      if (cretaeTimeBuilder_ == null) {
+        cretaeTime_ = builderForValue.build();
       } else {
-        dateCreatedBuilder_.setMessage(builderForValue.build());
+        cretaeTimeBuilder_.setMessage(builderForValue.build());
       }
       bitField0_ |= 0x00000008;
       onChanged();
@@ -1380,21 +1380,21 @@ private static final long serialVersionUID = 0L;
      * time the invoice was created
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp date_created = 4 [json_name = "dateCreated"];</code>
+     * <code>.google.protobuf.Timestamp cretae_time = 4 [json_name = "cretaeTime"];</code>
      */
-    public Builder mergeDateCreated(com.google.protobuf.Timestamp value) {
-      if (dateCreatedBuilder_ == null) {
+    public Builder mergeCretaeTime(com.google.protobuf.Timestamp value) {
+      if (cretaeTimeBuilder_ == null) {
         if (((bitField0_ & 0x00000008) != 0) &&
-          dateCreated_ != null &&
-          dateCreated_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-          getDateCreatedBuilder().mergeFrom(value);
+          cretaeTime_ != null &&
+          cretaeTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+          getCretaeTimeBuilder().mergeFrom(value);
         } else {
-          dateCreated_ = value;
+          cretaeTime_ = value;
         }
       } else {
-        dateCreatedBuilder_.mergeFrom(value);
+        cretaeTimeBuilder_.mergeFrom(value);
       }
-      if (dateCreated_ != null) {
+      if (cretaeTime_ != null) {
         bitField0_ |= 0x00000008;
         onChanged();
       }
@@ -1405,14 +1405,14 @@ private static final long serialVersionUID = 0L;
      * time the invoice was created
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp date_created = 4 [json_name = "dateCreated"];</code>
+     * <code>.google.protobuf.Timestamp cretae_time = 4 [json_name = "cretaeTime"];</code>
      */
-    public Builder clearDateCreated() {
+    public Builder clearCretaeTime() {
       bitField0_ = (bitField0_ & ~0x00000008);
-      dateCreated_ = null;
-      if (dateCreatedBuilder_ != null) {
-        dateCreatedBuilder_.dispose();
-        dateCreatedBuilder_ = null;
+      cretaeTime_ = null;
+      if (cretaeTimeBuilder_ != null) {
+        cretaeTimeBuilder_.dispose();
+        cretaeTimeBuilder_ = null;
       }
       onChanged();
       return this;
@@ -1422,26 +1422,26 @@ private static final long serialVersionUID = 0L;
      * time the invoice was created
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp date_created = 4 [json_name = "dateCreated"];</code>
+     * <code>.google.protobuf.Timestamp cretae_time = 4 [json_name = "cretaeTime"];</code>
      */
-    public com.google.protobuf.Timestamp.Builder getDateCreatedBuilder() {
+    public com.google.protobuf.Timestamp.Builder getCretaeTimeBuilder() {
       bitField0_ |= 0x00000008;
       onChanged();
-      return getDateCreatedFieldBuilder().getBuilder();
+      return getCretaeTimeFieldBuilder().getBuilder();
     }
     /**
      * <pre>
      * time the invoice was created
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp date_created = 4 [json_name = "dateCreated"];</code>
+     * <code>.google.protobuf.Timestamp cretae_time = 4 [json_name = "cretaeTime"];</code>
      */
-    public com.google.protobuf.TimestampOrBuilder getDateCreatedOrBuilder() {
-      if (dateCreatedBuilder_ != null) {
-        return dateCreatedBuilder_.getMessageOrBuilder();
+    public com.google.protobuf.TimestampOrBuilder getCretaeTimeOrBuilder() {
+      if (cretaeTimeBuilder_ != null) {
+        return cretaeTimeBuilder_.getMessageOrBuilder();
       } else {
-        return dateCreated_ == null ?
-            com.google.protobuf.Timestamp.getDefaultInstance() : dateCreated_;
+        return cretaeTime_ == null ?
+            com.google.protobuf.Timestamp.getDefaultInstance() : cretaeTime_;
       }
     }
     /**
@@ -1449,66 +1449,66 @@ private static final long serialVersionUID = 0L;
      * time the invoice was created
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp date_created = 4 [json_name = "dateCreated"];</code>
+     * <code>.google.protobuf.Timestamp cretae_time = 4 [json_name = "cretaeTime"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-        getDateCreatedFieldBuilder() {
-      if (dateCreatedBuilder_ == null) {
-        dateCreatedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        getCretaeTimeFieldBuilder() {
+      if (cretaeTimeBuilder_ == null) {
+        cretaeTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                getDateCreated(),
+                getCretaeTime(),
                 getParentForChildren(),
                 isClean());
-        dateCreated_ = null;
+        cretaeTime_ = null;
       }
-      return dateCreatedBuilder_;
+      return cretaeTimeBuilder_;
     }
 
-    private com.google.protobuf.Timestamp dateModified_;
+    private com.google.protobuf.Timestamp updateTime_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> dateModifiedBuilder_;
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> updateTimeBuilder_;
     /**
      * <pre>
-     * time the invoice was last modified
+     * time the invoice was last updated
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp date_modified = 5 [json_name = "dateModified"];</code>
-     * @return Whether the dateModified field is set.
+     * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
+     * @return Whether the updateTime field is set.
      */
-    public boolean hasDateModified() {
+    public boolean hasUpdateTime() {
       return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <pre>
-     * time the invoice was last modified
+     * time the invoice was last updated
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp date_modified = 5 [json_name = "dateModified"];</code>
-     * @return The dateModified.
+     * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
+     * @return The updateTime.
      */
-    public com.google.protobuf.Timestamp getDateModified() {
-      if (dateModifiedBuilder_ == null) {
-        return dateModified_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : dateModified_;
+    public com.google.protobuf.Timestamp getUpdateTime() {
+      if (updateTimeBuilder_ == null) {
+        return updateTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updateTime_;
       } else {
-        return dateModifiedBuilder_.getMessage();
+        return updateTimeBuilder_.getMessage();
       }
     }
     /**
      * <pre>
-     * time the invoice was last modified
+     * time the invoice was last updated
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp date_modified = 5 [json_name = "dateModified"];</code>
+     * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
      */
-    public Builder setDateModified(com.google.protobuf.Timestamp value) {
-      if (dateModifiedBuilder_ == null) {
+    public Builder setUpdateTime(com.google.protobuf.Timestamp value) {
+      if (updateTimeBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        dateModified_ = value;
+        updateTime_ = value;
       } else {
-        dateModifiedBuilder_.setMessage(value);
+        updateTimeBuilder_.setMessage(value);
       }
       bitField0_ |= 0x00000010;
       onChanged();
@@ -1516,17 +1516,17 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * time the invoice was last modified
+     * time the invoice was last updated
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp date_modified = 5 [json_name = "dateModified"];</code>
+     * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
      */
-    public Builder setDateModified(
+    public Builder setUpdateTime(
         com.google.protobuf.Timestamp.Builder builderForValue) {
-      if (dateModifiedBuilder_ == null) {
-        dateModified_ = builderForValue.build();
+      if (updateTimeBuilder_ == null) {
+        updateTime_ = builderForValue.build();
       } else {
-        dateModifiedBuilder_.setMessage(builderForValue.build());
+        updateTimeBuilder_.setMessage(builderForValue.build());
       }
       bitField0_ |= 0x00000010;
       onChanged();
@@ -1534,24 +1534,24 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * time the invoice was last modified
+     * time the invoice was last updated
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp date_modified = 5 [json_name = "dateModified"];</code>
+     * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
      */
-    public Builder mergeDateModified(com.google.protobuf.Timestamp value) {
-      if (dateModifiedBuilder_ == null) {
+    public Builder mergeUpdateTime(com.google.protobuf.Timestamp value) {
+      if (updateTimeBuilder_ == null) {
         if (((bitField0_ & 0x00000010) != 0) &&
-          dateModified_ != null &&
-          dateModified_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-          getDateModifiedBuilder().mergeFrom(value);
+          updateTime_ != null &&
+          updateTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+          getUpdateTimeBuilder().mergeFrom(value);
         } else {
-          dateModified_ = value;
+          updateTime_ = value;
         }
       } else {
-        dateModifiedBuilder_.mergeFrom(value);
+        updateTimeBuilder_.mergeFrom(value);
       }
-      if (dateModified_ != null) {
+      if (updateTime_ != null) {
         bitField0_ |= 0x00000010;
         onChanged();
       }
@@ -1559,67 +1559,67 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * time the invoice was last modified
+     * time the invoice was last updated
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp date_modified = 5 [json_name = "dateModified"];</code>
+     * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
      */
-    public Builder clearDateModified() {
+    public Builder clearUpdateTime() {
       bitField0_ = (bitField0_ & ~0x00000010);
-      dateModified_ = null;
-      if (dateModifiedBuilder_ != null) {
-        dateModifiedBuilder_.dispose();
-        dateModifiedBuilder_ = null;
+      updateTime_ = null;
+      if (updateTimeBuilder_ != null) {
+        updateTimeBuilder_.dispose();
+        updateTimeBuilder_ = null;
       }
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * time the invoice was last modified
+     * time the invoice was last updated
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp date_modified = 5 [json_name = "dateModified"];</code>
+     * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
      */
-    public com.google.protobuf.Timestamp.Builder getDateModifiedBuilder() {
+    public com.google.protobuf.Timestamp.Builder getUpdateTimeBuilder() {
       bitField0_ |= 0x00000010;
       onChanged();
-      return getDateModifiedFieldBuilder().getBuilder();
+      return getUpdateTimeFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * time the invoice was last modified
+     * time the invoice was last updated
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp date_modified = 5 [json_name = "dateModified"];</code>
+     * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
      */
-    public com.google.protobuf.TimestampOrBuilder getDateModifiedOrBuilder() {
-      if (dateModifiedBuilder_ != null) {
-        return dateModifiedBuilder_.getMessageOrBuilder();
+    public com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder() {
+      if (updateTimeBuilder_ != null) {
+        return updateTimeBuilder_.getMessageOrBuilder();
       } else {
-        return dateModified_ == null ?
-            com.google.protobuf.Timestamp.getDefaultInstance() : dateModified_;
+        return updateTime_ == null ?
+            com.google.protobuf.Timestamp.getDefaultInstance() : updateTime_;
       }
     }
     /**
      * <pre>
-     * time the invoice was last modified
+     * time the invoice was last updated
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp date_modified = 5 [json_name = "dateModified"];</code>
+     * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-        getDateModifiedFieldBuilder() {
-      if (dateModifiedBuilder_ == null) {
-        dateModifiedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        getUpdateTimeFieldBuilder() {
+      if (updateTimeBuilder_ == null) {
+        updateTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                getDateModified(),
+                getUpdateTime(),
                 getParentForChildren(),
                 isClean());
-        dateModified_ = null;
+        updateTime_ = null;
       }
-      return dateModifiedBuilder_;
+      return updateTimeBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

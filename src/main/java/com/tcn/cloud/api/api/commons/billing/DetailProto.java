@@ -47,205 +47,204 @@ public final class DetailProto {
       "commons.billing\032#api/commons/audit/event" +
       "_types.proto\032)api/commons/billing/module" +
       "s/modules.proto\032\037google/protobuf/timesta" +
-      "mp.proto\"\357\002\n\013BillingPlan\022\025\n\006org_id\030\001 \001(\t" +
+      "mp.proto\"\351\002\n\013BillingPlan\022\025\n\006org_id\030\001 \001(\t" +
       "R\005orgId\022/\n\005plans\030\002 \003(\0132\031.api.commons.bil" +
       "ling.PlanR\005plans\022&\n\017billing_plan_id\030\003 \001(" +
-      "\tR\rbillingPlanId\022=\n\014date_created\030\004 \001(\0132\032" +
-      ".google.protobuf.TimestampR\013dateCreated\022" +
-      "?\n\rdate_modified\030\005 \001(\0132\032.google.protobuf" +
-      ".TimestampR\014dateModified\0229\n\nstart_time\030\006" +
-      " \001(\0132\032.google.protobuf.TimestampR\tstartT" +
-      "ime\0225\n\010end_time\030\007 \001(\0132\032.google.protobuf." +
-      "TimestampR\007endTime\"=\n\004Plan\0225\n\007details\030\001 " +
-      "\003(\0132\033.api.commons.billing.DetailR\007detail" +
-      "s\"\331\003\n\006Detail\022,\n\022billing_detail_sid\030\001 \001(\003" +
-      "R\020billingDetailSid\022;\n\nevent_type\030\002 \001(\0162\034" +
-      ".api.commons.audit.EventTypeR\teventType\022" +
-      "F\n\013config_type\030\003 \001(\0162%.api.commons.billi" +
-      "ng.DetailConfigTypeR\nconfigType\0229\n\006confi" +
-      "g\030\004 \001(\0132!.api.commons.billing.DetailConf" +
-      "igR\006config\022=\n\014date_created\030\005 \001(\0132\032.googl" +
-      "e.protobuf.TimestampR\013dateCreated\022?\n\rdat" +
-      "e_modified\030\006 \001(\0132\032.google.protobuf.Times" +
-      "tampR\014dateModified\0229\n\ndeleted_on\030\007 \001(\0132\032" +
-      ".google.protobuf.TimestampR\tdeletedOn\022&\n" +
-      "\017billing_plan_id\030\010 \001(\tR\rbillingPlanId\"\363$" +
-      "\n\014DetailConfig\022X\n\022agent_seats_config\030\002 \001" +
-      "(\0132(.api.commons.billing.modules.BasicCo" +
-      "nfigH\000R\020agentSeatsConfig\022n\n\036agent_text_m" +
-      "essage_chat_config\030d \001(\0132(.api.commons.b" +
-      "illing.modules.BasicConfigH\000R\032agentTextM" +
-      "essageChatConfig\022\177\n\'agent_text_message_e" +
-      "mail_message_config\030e \001(\0132(.api.commons." +
-      "billing.modules.BasicConfigH\000R\"agentText" +
-      "MessageEmailMessageConfig\022\177\n$agent_text_" +
-      "message_email_size_config\030f \001(\0132..api.co" +
-      "mmons.billing.modules.BasicAmountConfigH" +
-      "\000R\037agentTextMessageEmailSizeConfig\022l\n\035ag" +
-      "ent_text_message_sms_config\030g \001(\0132(.api." +
-      "commons.billing.modules.BasicConfigH\000R\031a" +
-      "gentTextMessageSmsConfig\022}\n&task_message" +
-      "_sent_email_message_config\030h \001(\0132(.api.c" +
-      "ommons.billing.modules.BasicConfigH\000R!ta" +
-      "skMessageSentEmailMessageConfig\022}\n#task_" +
-      "message_sent_email_size_config\030i \001(\0132..a" +
-      "pi.commons.billing.modules.BasicAmountCo" +
-      "nfigH\000R\036taskMessageSentEmailSizeConfig\022j" +
-      "\n\034task_message_sent_sms_config\030j \001(\0132(.a" +
+      "\tR\rbillingPlanId\022;\n\013create_time\030\004 \001(\0132\032." +
+      "google.protobuf.TimestampR\ncreateTime\022;\n" +
+      "\013update_time\030\005 \001(\0132\032.google.protobuf.Tim" +
+      "estampR\nupdateTime\0229\n\nstart_time\030\006 \001(\0132\032" +
+      ".google.protobuf.TimestampR\tstartTime\0225\n" +
+      "\010end_time\030\007 \001(\0132\032.google.protobuf.Timest" +
+      "ampR\007endTime\"=\n\004Plan\0225\n\007details\030\001 \003(\0132\033." +
+      "api.commons.billing.DetailR\007details\"\331\003\n\006" +
+      "Detail\022,\n\022billing_detail_sid\030\001 \001(\003R\020bill" +
+      "ingDetailSid\022;\n\nevent_type\030\002 \001(\0162\034.api.c" +
+      "ommons.audit.EventTypeR\teventType\022F\n\013con" +
+      "fig_type\030\003 \001(\0162%.api.commons.billing.Det" +
+      "ailConfigTypeR\nconfigType\0229\n\006config\030\004 \001(" +
+      "\0132!.api.commons.billing.DetailConfigR\006co" +
+      "nfig\022=\n\014date_created\030\005 \001(\0132\032.google.prot" +
+      "obuf.TimestampR\013dateCreated\022?\n\rdate_modi" +
+      "fied\030\006 \001(\0132\032.google.protobuf.TimestampR\014" +
+      "dateModified\0229\n\ndeleted_on\030\007 \001(\0132\032.googl" +
+      "e.protobuf.TimestampR\tdeletedOn\022&\n\017billi" +
+      "ng_plan_id\030\010 \001(\tR\rbillingPlanId\"\363$\n\014Deta" +
+      "ilConfig\022X\n\022agent_seats_config\030\002 \001(\0132(.a" +
       "pi.commons.billing.modules.BasicConfigH\000" +
-      "R\030taskMessageSentSmsConfig\022i\n\033connected_" +
-      "inbox_poll_config\030k \001(\0132(.api.commons.bi" +
-      "lling.modules.BasicConfigH\000R\030connectedIn" +
-      "boxPollConfig\022r\n manager_text_message_ch" +
-      "at_config\030l \001(\0132(.api.commons.billing.mo" +
-      "dules.BasicConfigH\000R\034managerTextMessageC" +
-      "hatConfig\022\203\001\n)manager_text_message_email" +
-      "_message_config\030m \001(\0132(.api.commons.bill" +
-      "ing.modules.BasicConfigH\000R$managerTextMe" +
-      "ssageEmailMessageConfig\022\203\001\n&manager_text" +
-      "_message_email_size_config\030n \001(\0132..api.c" +
-      "ommons.billing.modules.BasicAmountConfig" +
-      "H\000R!managerTextMessageEmailSizeConfig\022p\n" +
-      "\037manager_text_message_sms_config\030o \001(\0132(" +
-      ".api.commons.billing.modules.BasicConfig" +
-      "H\000R\033managerTextMessageSmsConfig\022t\n!custo" +
-      "mer_text_message_chat_config\030p \001(\0132(.api" +
-      ".commons.billing.modules.BasicConfigH\000R\035" +
-      "customerTextMessageChatConfig\022\205\001\n*custom" +
-      "er_text_message_email_message_config\030q \001" +
-      "(\0132(.api.commons.billing.modules.BasicCo" +
-      "nfigH\000R%customerTextMessageEmailMessageC" +
-      "onfig\022\205\001\n\'customer_text_message_email_si" +
-      "ze_config\030r \001(\0132..api.commons.billing.mo" +
-      "dules.BasicAmountConfigH\000R\"customerTextM" +
-      "essageEmailSizeConfig\022r\n customer_text_m" +
-      "essage_sms_config\030s \001(\0132(.api.commons.bi" +
-      "lling.modules.BasicConfigH\000R\034customerTex" +
-      "tMessageSmsConfig\022}\n#agent_text_message_" +
-      "chat_size_config\030t \001(\0132..api.commons.bil" +
-      "ling.modules.BasicAmountConfigH\000R\036agentT" +
-      "extMessageChatSizeConfig\022\201\001\n%manager_tex" +
-      "t_message_chat_size_config\030u \001(\0132..api.c" +
-      "ommons.billing.modules.BasicAmountConfig" +
-      "H\000R managerTextMessageChatSizeConfig\022\203\001\n" +
-      "&customer_text_message_chat_size_config\030" +
-      "v \001(\0132..api.commons.billing.modules.Basi" +
-      "cAmountConfigH\000R!customerTextMessageChat" +
-      "SizeConfig\022o\n\036connected_inbox_created_co" +
-      "nfig\030w \001(\0132(.api.commons.billing.modules" +
-      ".BasicConfigH\000R\033connectedInboxCreatedCon" +
-      "fig\022{\n\"agent_text_message_sms_size_confi" +
-      "g\030x \001(\0132..api.commons.billing.modules.Ba" +
-      "sicAmountConfigH\000R\035agentTextMessageSmsSi" +
-      "zeConfig\022\177\n$manager_text_message_sms_siz" +
-      "e_config\030y \001(\0132..api.commons.billing.mod" +
-      "ules.BasicAmountConfigH\000R\037managerTextMes" +
-      "sageSmsSizeConfig\022\201\001\n%customer_text_mess" +
-      "age_sms_size_config\030z \001(\0132..api.commons." +
-      "billing.modules.BasicAmountConfigH\000R cus" +
-      "tomerTextMessageSmsSizeConfig\022y\n!task_me" +
-      "ssage_sent_sms_size_config\030{ \001(\0132..api.c" +
-      "ommons.billing.modules.BasicAmountConfig" +
-      "H\000R\034taskMessageSentSmsSizeConfig\022p\n\037agen" +
-      "t_chat_message_units_config\030| \001(\0132(.api." +
-      "commons.billing.modules.BasicConfigH\000R\033a" +
-      "gentChatMessageUnitsConfig\022r\n agent_emai" +
-      "l_message_units_config\030} \001(\0132(.api.commo" +
-      "ns.billing.modules.BasicConfigH\000R\034agentE" +
-      "mailMessageUnitsConfig\022n\n\036agent_sms_mess" +
-      "age_units_config\030~ \001(\0132(.api.commons.bil" +
-      "ling.modules.BasicConfigH\000R\032agentSmsMess" +
-      "ageUnitsConfig\022t\n!manager_chat_message_u" +
-      "nits_config\030\177 \001(\0132(.api.commons.billing." +
-      "modules.BasicConfigH\000R\035managerChatMessag" +
-      "eUnitsConfig\022w\n\"manager_email_message_un" +
-      "its_config\030\200\001 \001(\0132(.api.commons.billing." +
-      "modules.BasicConfigH\000R\036managerEmailMessa" +
-      "geUnitsConfig\022s\n manager_sms_message_uni" +
-      "ts_config\030\201\001 \001(\0132(.api.commons.billing.m" +
-      "odules.BasicConfigH\000R\034managerSmsMessageU" +
-      "nitsConfig\022w\n\"customer_chat_message_unit" +
-      "s_config\030\202\001 \001(\0132(.api.commons.billing.mo" +
-      "dules.BasicConfigH\000R\036customerChatMessage" +
-      "UnitsConfig\022y\n#customer_email_message_un" +
-      "its_config\030\203\001 \001(\0132(.api.commons.billing." +
-      "modules.BasicConfigH\000R\037customerEmailMess" +
-      "ageUnitsConfig\022u\n!customer_sms_message_u" +
-      "nits_config\030\204\001 \001(\0132(.api.commons.billing" +
-      ".modules.BasicConfigH\000R\035customerSmsMessa" +
-      "geUnitsConfig\022s\n system_chat_message_uni" +
-      "ts_config\030\205\001 \001(\0132(.api.commons.billing.m" +
-      "odules.BasicConfigH\000R\034systemChatMessageU" +
-      "nitsConfig\022u\n!system_email_message_units" +
-      "_config\030\206\001 \001(\0132(.api.commons.billing.mod" +
-      "ules.BasicConfigH\000R\035systemEmailMessageUn" +
-      "itsConfig\022q\n\037system_sms_message_units_co" +
-      "nfig\030\207\001 \001(\0132(.api.commons.billing.module" +
-      "s.BasicConfigH\000R\033systemSmsMessageUnitsCo" +
-      "nfig\022j\n\033compliance_rnd_query_config\030\310\001 \001" +
-      "(\0132(.api.commons.billing.modules.BasicCo" +
-      "nfigH\000R\030complianceRndQueryConfig\022w\n\"comp" +
-      "liance_rnd_query_cached_config\030\311\001 \001(\0132(." +
-      "api.commons.billing.modules.BasicConfigH" +
-      "\000R\036complianceRndQueryCachedConfigB\010\n\006con" +
-      "fig*\270\020\n\020DetailConfigType\022\"\n\036DETAIL_CONFI" +
-      "G_TYPE_UNSPECIFIED\020\000\022\033\n\027DETAIL_CONFIG_TY" +
-      "PE_NOOP\020\001\022\"\n\036DETAIL_CONFIG_TYPE_AGENT_SE" +
-      "ATS\020\002\022.\n*DETAIL_CONFIG_TYPE_AGENT_TEXT_M" +
-      "ESSAGE_CHAT\020d\0227\n3DETAIL_CONFIG_TYPE_AGEN" +
-      "T_TEXT_MESSAGE_EMAIL_MESSAGE\020e\0224\n0DETAIL" +
-      "_CONFIG_TYPE_AGENT_TEXT_MESSAGE_EMAIL_SI" +
-      "ZE\020f\022-\n)DETAIL_CONFIG_TYPE_AGENT_TEXT_ME" +
-      "SSAGE_SMS\020g\0226\n2DETAIL_CONFIG_TYPE_TASK_M" +
-      "ESSAGE_SENT_EMAIL_MESSAGE\020h\0223\n/DETAIL_CO" +
-      "NFIG_TYPE_TASK_MESSAGE_SENT_EMAIL_SIZE\020i" +
-      "\022,\n(DETAIL_CONFIG_TYPE_TASK_MESSAGE_SENT" +
-      "_SMS\020j\022+\n\'DETAIL_CONFIG_TYPE_CONNECTED_I" +
-      "NBOX_POLL\020k\0220\n,DETAIL_CONFIG_TYPE_MANAGE" +
-      "R_TEXT_MESSAGE_CHAT\020l\0229\n5DETAIL_CONFIG_T" +
-      "YPE_MANAGER_TEXT_MESSAGE_EMAIL_MESSAGE\020m" +
-      "\0226\n2DETAIL_CONFIG_TYPE_MANAGER_TEXT_MESS" +
-      "AGE_EMAIL_SIZE\020n\022/\n+DETAIL_CONFIG_TYPE_M" +
-      "ANAGER_TEXT_MESSAGE_SMS\020o\0221\n-DETAIL_CONF" +
-      "IG_TYPE_CUSTOMER_TEXT_MESSAGE_CHAT\020p\022:\n6" +
-      "DETAIL_CONFIG_TYPE_CUSTOMER_TEXT_MESSAGE" +
-      "_EMAIL_MESSAGE\020q\0227\n3DETAIL_CONFIG_TYPE_C" +
-      "USTOMER_TEXT_MESSAGE_EMAIL_SIZE\020r\0220\n,DET" +
-      "AIL_CONFIG_TYPE_CUSTOMER_TEXT_MESSAGE_SM" +
-      "S\020s\0223\n/DETAIL_CONFIG_TYPE_AGENT_TEXT_MES" +
-      "SAGE_CHAT_SIZE\020t\0225\n1DETAIL_CONFIG_TYPE_M" +
-      "ANAGER_TEXT_MESSAGE_CHAT_SIZE\020u\0226\n2DETAI" +
-      "L_CONFIG_TYPE_CUSTOMER_TEXT_MESSAGE_CHAT" +
-      "_SIZE\020v\022.\n*DETAIL_CONFIG_TYPE_CONNECTED_" +
-      "INBOX_CREATED\020w\0222\n.DETAIL_CONFIG_TYPE_AG" +
-      "ENT_TEXT_MESSAGE_SMS_SIZE\020x\0224\n0DETAIL_CO" +
-      "NFIG_TYPE_MANAGER_TEXT_MESSAGE_SMS_SIZE\020" +
-      "y\0225\n1DETAIL_CONFIG_TYPE_CUSTOMER_TEXT_ME" +
-      "SSAGE_SMS_SIZE\020z\0221\n-DETAIL_CONFIG_TYPE_T" +
-      "ASK_MESSAGE_SENT_SMS_SIZE\020{\022/\n+DETAIL_CO" +
-      "NFIG_TYPE_AGENT_CHAT_MESSAGE_UNITS\020|\0220\n," +
-      "DETAIL_CONFIG_TYPE_AGENT_EMAIL_MESSAGE_U" +
-      "NITS\020}\022.\n*DETAIL_CONFIG_TYPE_AGENT_SMS_M" +
-      "ESSAGE_UNITS\020~\0221\n-DETAIL_CONFIG_TYPE_MAN" +
-      "AGER_CHAT_MESSAGE_UNITS\020\177\0223\n.DETAIL_CONF" +
-      "IG_TYPE_MANAGER_EMAIL_MESSAGE_UNITS\020\200\001\0221" +
-      "\n,DETAIL_CONFIG_TYPE_MANAGER_SMS_MESSAGE" +
-      "_UNITS\020\201\001\0223\n.DETAIL_CONFIG_TYPE_CUSTOMER" +
-      "_CHAT_MESSAGE_UNITS\020\202\001\0224\n/DETAIL_CONFIG_" +
-      "TYPE_CUSTOMER_EMAIL_MESSAGE_UNITS\020\203\001\0222\n-" +
-      "DETAIL_CONFIG_TYPE_CUSTOMER_SMS_MESSAGE_" +
-      "UNITS\020\204\001\0221\n,DETAIL_CONFIG_TYPE_SYSTEM_CH" +
-      "AT_MESSAGE_UNITS\020\205\001\0222\n-DETAIL_CONFIG_TYP" +
-      "E_SYSTEM_EMAIL_MESSAGE_UNITS\020\206\001\0220\n+DETAI" +
-      "L_CONFIG_TYPE_SYSTEM_SMS_MESSAGE_UNITS\020\207" +
-      "\001\0221\n,BillingDetailConfigType_COMPLIANCE_" +
-      "RND_QUERY\020\310\001\0228\n3BillingDetailConfigType_" +
-      "COMPLIANCE_RND_QUERY_CACHED\020\311\001B\242\001\n%com.t" +
-      "cn.cloud.api.api.commons.billingB\013Detail" +
-      "ProtoP\001\242\002\003ACB\252\002\023Api.Commons.Billing\312\002\023Ap" +
-      "i\\Commons\\Billing\342\002\037Api\\Commons\\Billing\\" +
-      "GPBMetadata\352\002\025Api::Commons::Billingb\006pro" +
-      "to3"
+      "R\020agentSeatsConfig\022n\n\036agent_text_message" +
+      "_chat_config\030d \001(\0132(.api.commons.billing" +
+      ".modules.BasicConfigH\000R\032agentTextMessage" +
+      "ChatConfig\022\177\n\'agent_text_message_email_m" +
+      "essage_config\030e \001(\0132(.api.commons.billin" +
+      "g.modules.BasicConfigH\000R\"agentTextMessag" +
+      "eEmailMessageConfig\022\177\n$agent_text_messag" +
+      "e_email_size_config\030f \001(\0132..api.commons." +
+      "billing.modules.BasicAmountConfigH\000R\037age" +
+      "ntTextMessageEmailSizeConfig\022l\n\035agent_te" +
+      "xt_message_sms_config\030g \001(\0132(.api.common" +
+      "s.billing.modules.BasicConfigH\000R\031agentTe" +
+      "xtMessageSmsConfig\022}\n&task_message_sent_" +
+      "email_message_config\030h \001(\0132(.api.commons" +
+      ".billing.modules.BasicConfigH\000R!taskMess" +
+      "ageSentEmailMessageConfig\022}\n#task_messag" +
+      "e_sent_email_size_config\030i \001(\0132..api.com" +
+      "mons.billing.modules.BasicAmountConfigH\000" +
+      "R\036taskMessageSentEmailSizeConfig\022j\n\034task" +
+      "_message_sent_sms_config\030j \001(\0132(.api.com" +
+      "mons.billing.modules.BasicConfigH\000R\030task" +
+      "MessageSentSmsConfig\022i\n\033connected_inbox_" +
+      "poll_config\030k \001(\0132(.api.commons.billing." +
+      "modules.BasicConfigH\000R\030connectedInboxPol" +
+      "lConfig\022r\n manager_text_message_chat_con" +
+      "fig\030l \001(\0132(.api.commons.billing.modules." +
+      "BasicConfigH\000R\034managerTextMessageChatCon" +
+      "fig\022\203\001\n)manager_text_message_email_messa" +
+      "ge_config\030m \001(\0132(.api.commons.billing.mo" +
+      "dules.BasicConfigH\000R$managerTextMessageE" +
+      "mailMessageConfig\022\203\001\n&manager_text_messa" +
+      "ge_email_size_config\030n \001(\0132..api.commons" +
+      ".billing.modules.BasicAmountConfigH\000R!ma" +
+      "nagerTextMessageEmailSizeConfig\022p\n\037manag" +
+      "er_text_message_sms_config\030o \001(\0132(.api.c" +
+      "ommons.billing.modules.BasicConfigH\000R\033ma" +
+      "nagerTextMessageSmsConfig\022t\n!customer_te" +
+      "xt_message_chat_config\030p \001(\0132(.api.commo" +
+      "ns.billing.modules.BasicConfigH\000R\035custom" +
+      "erTextMessageChatConfig\022\205\001\n*customer_tex" +
+      "t_message_email_message_config\030q \001(\0132(.a" +
+      "pi.commons.billing.modules.BasicConfigH\000" +
+      "R%customerTextMessageEmailMessageConfig\022" +
+      "\205\001\n\'customer_text_message_email_size_con" +
+      "fig\030r \001(\0132..api.commons.billing.modules." +
+      "BasicAmountConfigH\000R\"customerTextMessage" +
+      "EmailSizeConfig\022r\n customer_text_message" +
+      "_sms_config\030s \001(\0132(.api.commons.billing." +
+      "modules.BasicConfigH\000R\034customerTextMessa" +
+      "geSmsConfig\022}\n#agent_text_message_chat_s" +
+      "ize_config\030t \001(\0132..api.commons.billing.m" +
+      "odules.BasicAmountConfigH\000R\036agentTextMes" +
+      "sageChatSizeConfig\022\201\001\n%manager_text_mess" +
+      "age_chat_size_config\030u \001(\0132..api.commons" +
+      ".billing.modules.BasicAmountConfigH\000R ma" +
+      "nagerTextMessageChatSizeConfig\022\203\001\n&custo" +
+      "mer_text_message_chat_size_config\030v \001(\0132" +
+      "..api.commons.billing.modules.BasicAmoun" +
+      "tConfigH\000R!customerTextMessageChatSizeCo" +
+      "nfig\022o\n\036connected_inbox_created_config\030w" +
+      " \001(\0132(.api.commons.billing.modules.Basic" +
+      "ConfigH\000R\033connectedInboxCreatedConfig\022{\n" +
+      "\"agent_text_message_sms_size_config\030x \001(" +
+      "\0132..api.commons.billing.modules.BasicAmo" +
+      "untConfigH\000R\035agentTextMessageSmsSizeConf" +
+      "ig\022\177\n$manager_text_message_sms_size_conf" +
+      "ig\030y \001(\0132..api.commons.billing.modules.B" +
+      "asicAmountConfigH\000R\037managerTextMessageSm" +
+      "sSizeConfig\022\201\001\n%customer_text_message_sm" +
+      "s_size_config\030z \001(\0132..api.commons.billin" +
+      "g.modules.BasicAmountConfigH\000R customerT" +
+      "extMessageSmsSizeConfig\022y\n!task_message_" +
+      "sent_sms_size_config\030{ \001(\0132..api.commons" +
+      ".billing.modules.BasicAmountConfigH\000R\034ta" +
+      "skMessageSentSmsSizeConfig\022p\n\037agent_chat" +
+      "_message_units_config\030| \001(\0132(.api.common" +
+      "s.billing.modules.BasicConfigH\000R\033agentCh" +
+      "atMessageUnitsConfig\022r\n agent_email_mess" +
+      "age_units_config\030} \001(\0132(.api.commons.bil" +
+      "ling.modules.BasicConfigH\000R\034agentEmailMe" +
+      "ssageUnitsConfig\022n\n\036agent_sms_message_un" +
+      "its_config\030~ \001(\0132(.api.commons.billing.m" +
+      "odules.BasicConfigH\000R\032agentSmsMessageUni" +
+      "tsConfig\022t\n!manager_chat_message_units_c" +
+      "onfig\030\177 \001(\0132(.api.commons.billing.module" +
+      "s.BasicConfigH\000R\035managerChatMessageUnits" +
+      "Config\022w\n\"manager_email_message_units_co" +
+      "nfig\030\200\001 \001(\0132(.api.commons.billing.module" +
+      "s.BasicConfigH\000R\036managerEmailMessageUnit" +
+      "sConfig\022s\n manager_sms_message_units_con" +
+      "fig\030\201\001 \001(\0132(.api.commons.billing.modules" +
+      ".BasicConfigH\000R\034managerSmsMessageUnitsCo" +
+      "nfig\022w\n\"customer_chat_message_units_conf" +
+      "ig\030\202\001 \001(\0132(.api.commons.billing.modules." +
+      "BasicConfigH\000R\036customerChatMessageUnitsC" +
+      "onfig\022y\n#customer_email_message_units_co" +
+      "nfig\030\203\001 \001(\0132(.api.commons.billing.module" +
+      "s.BasicConfigH\000R\037customerEmailMessageUni" +
+      "tsConfig\022u\n!customer_sms_message_units_c" +
+      "onfig\030\204\001 \001(\0132(.api.commons.billing.modul" +
+      "es.BasicConfigH\000R\035customerSmsMessageUnit" +
+      "sConfig\022s\n system_chat_message_units_con" +
+      "fig\030\205\001 \001(\0132(.api.commons.billing.modules" +
+      ".BasicConfigH\000R\034systemChatMessageUnitsCo" +
+      "nfig\022u\n!system_email_message_units_confi" +
+      "g\030\206\001 \001(\0132(.api.commons.billing.modules.B" +
+      "asicConfigH\000R\035systemEmailMessageUnitsCon" +
+      "fig\022q\n\037system_sms_message_units_config\030\207" +
+      "\001 \001(\0132(.api.commons.billing.modules.Basi" +
+      "cConfigH\000R\033systemSmsMessageUnitsConfig\022j" +
+      "\n\033compliance_rnd_query_config\030\310\001 \001(\0132(.a" +
+      "pi.commons.billing.modules.BasicConfigH\000" +
+      "R\030complianceRndQueryConfig\022w\n\"compliance" +
+      "_rnd_query_cached_config\030\311\001 \001(\0132(.api.co" +
+      "mmons.billing.modules.BasicConfigH\000R\036com" +
+      "plianceRndQueryCachedConfigB\010\n\006config*\270\020" +
+      "\n\020DetailConfigType\022\"\n\036DETAIL_CONFIG_TYPE" +
+      "_UNSPECIFIED\020\000\022\033\n\027DETAIL_CONFIG_TYPE_NOO" +
+      "P\020\001\022\"\n\036DETAIL_CONFIG_TYPE_AGENT_SEATS\020\002\022" +
+      ".\n*DETAIL_CONFIG_TYPE_AGENT_TEXT_MESSAGE" +
+      "_CHAT\020d\0227\n3DETAIL_CONFIG_TYPE_AGENT_TEXT" +
+      "_MESSAGE_EMAIL_MESSAGE\020e\0224\n0DETAIL_CONFI" +
+      "G_TYPE_AGENT_TEXT_MESSAGE_EMAIL_SIZE\020f\022-" +
+      "\n)DETAIL_CONFIG_TYPE_AGENT_TEXT_MESSAGE_" +
+      "SMS\020g\0226\n2DETAIL_CONFIG_TYPE_TASK_MESSAGE" +
+      "_SENT_EMAIL_MESSAGE\020h\0223\n/DETAIL_CONFIG_T" +
+      "YPE_TASK_MESSAGE_SENT_EMAIL_SIZE\020i\022,\n(DE" +
+      "TAIL_CONFIG_TYPE_TASK_MESSAGE_SENT_SMS\020j" +
+      "\022+\n\'DETAIL_CONFIG_TYPE_CONNECTED_INBOX_P" +
+      "OLL\020k\0220\n,DETAIL_CONFIG_TYPE_MANAGER_TEXT" +
+      "_MESSAGE_CHAT\020l\0229\n5DETAIL_CONFIG_TYPE_MA" +
+      "NAGER_TEXT_MESSAGE_EMAIL_MESSAGE\020m\0226\n2DE" +
+      "TAIL_CONFIG_TYPE_MANAGER_TEXT_MESSAGE_EM" +
+      "AIL_SIZE\020n\022/\n+DETAIL_CONFIG_TYPE_MANAGER" +
+      "_TEXT_MESSAGE_SMS\020o\0221\n-DETAIL_CONFIG_TYP" +
+      "E_CUSTOMER_TEXT_MESSAGE_CHAT\020p\022:\n6DETAIL" +
+      "_CONFIG_TYPE_CUSTOMER_TEXT_MESSAGE_EMAIL" +
+      "_MESSAGE\020q\0227\n3DETAIL_CONFIG_TYPE_CUSTOME" +
+      "R_TEXT_MESSAGE_EMAIL_SIZE\020r\0220\n,DETAIL_CO" +
+      "NFIG_TYPE_CUSTOMER_TEXT_MESSAGE_SMS\020s\0223\n" +
+      "/DETAIL_CONFIG_TYPE_AGENT_TEXT_MESSAGE_C" +
+      "HAT_SIZE\020t\0225\n1DETAIL_CONFIG_TYPE_MANAGER" +
+      "_TEXT_MESSAGE_CHAT_SIZE\020u\0226\n2DETAIL_CONF" +
+      "IG_TYPE_CUSTOMER_TEXT_MESSAGE_CHAT_SIZE\020" +
+      "v\022.\n*DETAIL_CONFIG_TYPE_CONNECTED_INBOX_" +
+      "CREATED\020w\0222\n.DETAIL_CONFIG_TYPE_AGENT_TE" +
+      "XT_MESSAGE_SMS_SIZE\020x\0224\n0DETAIL_CONFIG_T" +
+      "YPE_MANAGER_TEXT_MESSAGE_SMS_SIZE\020y\0225\n1D" +
+      "ETAIL_CONFIG_TYPE_CUSTOMER_TEXT_MESSAGE_" +
+      "SMS_SIZE\020z\0221\n-DETAIL_CONFIG_TYPE_TASK_ME" +
+      "SSAGE_SENT_SMS_SIZE\020{\022/\n+DETAIL_CONFIG_T" +
+      "YPE_AGENT_CHAT_MESSAGE_UNITS\020|\0220\n,DETAIL" +
+      "_CONFIG_TYPE_AGENT_EMAIL_MESSAGE_UNITS\020}" +
+      "\022.\n*DETAIL_CONFIG_TYPE_AGENT_SMS_MESSAGE" +
+      "_UNITS\020~\0221\n-DETAIL_CONFIG_TYPE_MANAGER_C" +
+      "HAT_MESSAGE_UNITS\020\177\0223\n.DETAIL_CONFIG_TYP" +
+      "E_MANAGER_EMAIL_MESSAGE_UNITS\020\200\001\0221\n,DETA" +
+      "IL_CONFIG_TYPE_MANAGER_SMS_MESSAGE_UNITS" +
+      "\020\201\001\0223\n.DETAIL_CONFIG_TYPE_CUSTOMER_CHAT_" +
+      "MESSAGE_UNITS\020\202\001\0224\n/DETAIL_CONFIG_TYPE_C" +
+      "USTOMER_EMAIL_MESSAGE_UNITS\020\203\001\0222\n-DETAIL" +
+      "_CONFIG_TYPE_CUSTOMER_SMS_MESSAGE_UNITS\020" +
+      "\204\001\0221\n,DETAIL_CONFIG_TYPE_SYSTEM_CHAT_MES" +
+      "SAGE_UNITS\020\205\001\0222\n-DETAIL_CONFIG_TYPE_SYST" +
+      "EM_EMAIL_MESSAGE_UNITS\020\206\001\0220\n+DETAIL_CONF" +
+      "IG_TYPE_SYSTEM_SMS_MESSAGE_UNITS\020\207\001\0221\n,B" +
+      "illingDetailConfigType_COMPLIANCE_RND_QU" +
+      "ERY\020\310\001\0228\n3BillingDetailConfigType_COMPLI" +
+      "ANCE_RND_QUERY_CACHED\020\311\001B\242\001\n%com.tcn.clo" +
+      "ud.api.api.commons.billingB\013DetailProtoP" +
+      "\001\242\002\003ACB\252\002\023Api.Commons.Billing\312\002\023Api\\Comm" +
+      "ons\\Billing\342\002\037Api\\Commons\\Billing\\GPBMet" +
+      "adata\352\002\025Api::Commons::Billingb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -259,7 +258,7 @@ public final class DetailProto {
     internal_static_api_commons_billing_BillingPlan_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_billing_BillingPlan_descriptor,
-        new java.lang.String[] { "OrgId", "Plans", "BillingPlanId", "DateCreated", "DateModified", "StartTime", "EndTime", });
+        new java.lang.String[] { "OrgId", "Plans", "BillingPlanId", "CreateTime", "UpdateTime", "StartTime", "EndTime", });
     internal_static_api_commons_billing_Plan_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_api_commons_billing_Plan_fieldAccessorTable = new
