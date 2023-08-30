@@ -1164,7 +1164,6 @@ private static final long serialVersionUID = 0L;
               com.tcn.cloud.api.api.v0alpha.ReshapeAction.AddDate.class, com.tcn.cloud.api.api.v0alpha.ReshapeAction.AddDate.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DATETIME_FIELD_NUMBER = 45;
     private com.tcn.cloud.api.api.v0alpha.DateTimeModifier datetime_;
     /**
@@ -1173,7 +1172,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasDatetime() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return datetime_ != null;
     }
     /**
      * <code>.api.v0alpha.DateTimeModifier datetime = 45 [json_name = "datetime"];</code>
@@ -1205,7 +1204,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (datetime_ != null) {
         output.writeMessage(45, getDatetime());
       }
       getUnknownFields().writeTo(output);
@@ -1217,7 +1216,7 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (datetime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(45, getDatetime());
       }
@@ -1379,19 +1378,13 @@ private static final long serialVersionUID = 0L;
 
       // Construct using com.tcn.cloud.api.api.v0alpha.ReshapeAction.AddDate.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getDatetimeFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1435,14 +1428,11 @@ private static final long serialVersionUID = 0L;
 
       private void buildPartial0(com.tcn.cloud.api.api.v0alpha.ReshapeAction.AddDate result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.datetime_ = datetimeBuilder_ == null
               ? datetime_
               : datetimeBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1608,10 +1598,8 @@ private static final long serialVersionUID = 0L;
         } else {
           datetimeBuilder_.mergeFrom(value);
         }
-        if (datetime_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -1785,7 +1773,6 @@ private static final long serialVersionUID = 0L;
               com.tcn.cloud.api.api.v0alpha.ReshapeAction.AddField.class, com.tcn.cloud.api.api.v0alpha.ReshapeAction.AddField.Builder.class);
     }
 
-    private int bitField0_;
     public static final int OTHER_FIELD_FIELD_NUMBER = 12;
     private com.tcn.cloud.api.api.v0alpha.FieldIndex otherField_;
     /**
@@ -1794,7 +1781,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasOtherField() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return otherField_ != null;
     }
     /**
      * <code>.api.v0alpha.FieldIndex other_field = 12 [json_name = "otherField"];</code>
@@ -1826,7 +1813,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (otherField_ != null) {
         output.writeMessage(12, getOtherField());
       }
       getUnknownFields().writeTo(output);
@@ -1838,7 +1825,7 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (otherField_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(12, getOtherField());
       }
@@ -2001,19 +1988,13 @@ private static final long serialVersionUID = 0L;
 
       // Construct using com.tcn.cloud.api.api.v0alpha.ReshapeAction.AddField.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getOtherFieldFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2057,14 +2038,11 @@ private static final long serialVersionUID = 0L;
 
       private void buildPartial0(com.tcn.cloud.api.api.v0alpha.ReshapeAction.AddField result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.otherField_ = otherFieldBuilder_ == null
               ? otherField_
               : otherFieldBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2230,10 +2208,8 @@ private static final long serialVersionUID = 0L;
         } else {
           otherFieldBuilder_.mergeFrom(value);
         }
-        if (otherField_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -2913,7 +2889,6 @@ private static final long serialVersionUID = 0L;
               com.tcn.cloud.api.api.v0alpha.ReshapeAction.SubtractField.class, com.tcn.cloud.api.api.v0alpha.ReshapeAction.SubtractField.Builder.class);
     }
 
-    private int bitField0_;
     public static final int OTHER_FIELD_FIELD_NUMBER = 12;
     private com.tcn.cloud.api.api.v0alpha.FieldIndex otherField_;
     /**
@@ -2922,7 +2897,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasOtherField() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return otherField_ != null;
     }
     /**
      * <code>.api.v0alpha.FieldIndex other_field = 12 [json_name = "otherField"];</code>
@@ -2954,7 +2929,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (otherField_ != null) {
         output.writeMessage(12, getOtherField());
       }
       getUnknownFields().writeTo(output);
@@ -2966,7 +2941,7 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (otherField_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(12, getOtherField());
       }
@@ -3129,19 +3104,13 @@ private static final long serialVersionUID = 0L;
 
       // Construct using com.tcn.cloud.api.api.v0alpha.ReshapeAction.SubtractField.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getOtherFieldFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3185,14 +3154,11 @@ private static final long serialVersionUID = 0L;
 
       private void buildPartial0(com.tcn.cloud.api.api.v0alpha.ReshapeAction.SubtractField result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.otherField_ = otherFieldBuilder_ == null
               ? otherField_
               : otherFieldBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3358,10 +3324,8 @@ private static final long serialVersionUID = 0L;
         } else {
           otherFieldBuilder_.mergeFrom(value);
         }
-        if (otherField_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -3566,7 +3530,6 @@ private static final long serialVersionUID = 0L;
               com.tcn.cloud.api.api.v0alpha.ReshapeAction.Convert.class, com.tcn.cloud.api.api.v0alpha.ReshapeAction.Convert.Builder.class);
     }
 
-    private int bitField0_;
     public static final int NEWTYPE_FIELD_NUMBER = 17;
     private int newType_ = 0;
     /**
@@ -3597,7 +3560,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasNewField() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return newField_ != null;
     }
     /**
      * <code>.api.v0alpha.Field new_field = 18 [json_name = "newField"];</code>
@@ -3623,7 +3586,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasDefaultValue() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return defaultValue_ != null;
     }
     /**
      * <code>.api.v0alpha.RecordFieldProto default_value = 19 [json_name = "defaultValue"];</code>
@@ -3658,10 +3621,10 @@ private static final long serialVersionUID = 0L;
       if (newType_ != com.tcn.cloud.api.api.commons.RecordType.RECORD_TYPE_ALL.getNumber()) {
         output.writeEnum(17, newType_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (newField_ != null) {
         output.writeMessage(18, getNewField());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (defaultValue_ != null) {
         output.writeMessage(19, getDefaultValue());
       }
       getUnknownFields().writeTo(output);
@@ -3677,11 +3640,11 @@ private static final long serialVersionUID = 0L;
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(17, newType_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (newField_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(18, getNewField());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (defaultValue_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(19, getDefaultValue());
       }
@@ -3856,20 +3819,13 @@ private static final long serialVersionUID = 0L;
 
       // Construct using com.tcn.cloud.api.api.v0alpha.ReshapeAction.Convert.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getNewFieldFieldBuilder();
-          getDefaultValueFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3922,20 +3878,16 @@ private static final long serialVersionUID = 0L;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.newType_ = newType_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.newField_ = newFieldBuilder_ == null
               ? newField_
               : newFieldBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.defaultValue_ = defaultValueBuilder_ == null
               ? defaultValue_
               : defaultValueBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4182,10 +4134,8 @@ private static final long serialVersionUID = 0L;
         } else {
           newFieldBuilder_.mergeFrom(value);
         }
-        if (newField_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -4303,10 +4253,8 @@ private static final long serialVersionUID = 0L;
         } else {
           defaultValueBuilder_.mergeFrom(value);
         }
-        if (defaultValue_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -6681,7 +6629,6 @@ private static final long serialVersionUID = 0L;
               com.tcn.cloud.api.api.v0alpha.ReshapeAction.AddNewField.class, com.tcn.cloud.api.api.v0alpha.ReshapeAction.AddNewField.Builder.class);
     }
 
-    private int bitField0_;
     public static final int STARTING_VALUE_FIELD_NUMBER = 18;
     private com.tcn.cloud.api.api.v0alpha.RecordFieldProto startingValue_;
     /**
@@ -6690,7 +6637,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasStartingValue() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return startingValue_ != null;
     }
     /**
      * <code>.api.v0alpha.RecordFieldProto starting_value = 18 [json_name = "startingValue"];</code>
@@ -6722,7 +6669,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (startingValue_ != null) {
         output.writeMessage(18, getStartingValue());
       }
       getUnknownFields().writeTo(output);
@@ -6734,7 +6681,7 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (startingValue_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(18, getStartingValue());
       }
@@ -6897,19 +6844,13 @@ private static final long serialVersionUID = 0L;
 
       // Construct using com.tcn.cloud.api.api.v0alpha.ReshapeAction.AddNewField.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getStartingValueFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -6953,14 +6894,11 @@ private static final long serialVersionUID = 0L;
 
       private void buildPartial0(com.tcn.cloud.api.api.v0alpha.ReshapeAction.AddNewField result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.startingValue_ = startingValueBuilder_ == null
               ? startingValue_
               : startingValueBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7126,10 +7064,8 @@ private static final long serialVersionUID = 0L;
         } else {
           startingValueBuilder_.mergeFrom(value);
         }
-        if (startingValue_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -7315,7 +7251,6 @@ private static final long serialVersionUID = 0L;
               com.tcn.cloud.api.api.v0alpha.ReshapeAction.AddNewFieldFromField.class, com.tcn.cloud.api.api.v0alpha.ReshapeAction.AddNewFieldFromField.Builder.class);
     }
 
-    private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 10;
     @SuppressWarnings("serial")
     private volatile java.lang.Object name_ = "";
@@ -7363,7 +7298,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasOtherField() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return otherField_ != null;
     }
     /**
      * <code>.api.v0alpha.FieldIndex other_field = 12 [json_name = "otherField"];</code>
@@ -7398,7 +7333,7 @@ private static final long serialVersionUID = 0L;
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 10, name_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (otherField_ != null) {
         output.writeMessage(12, getOtherField());
       }
       getUnknownFields().writeTo(output);
@@ -7413,7 +7348,7 @@ private static final long serialVersionUID = 0L;
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, name_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (otherField_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(12, getOtherField());
       }
@@ -7579,19 +7514,13 @@ private static final long serialVersionUID = 0L;
 
       // Construct using com.tcn.cloud.api.api.v0alpha.ReshapeAction.AddNewFieldFromField.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getOtherFieldFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -7639,14 +7568,11 @@ private static final long serialVersionUID = 0L;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.name_ = name_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.otherField_ = otherFieldBuilder_ == null
               ? otherField_
               : otherFieldBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7894,10 +7820,8 @@ private static final long serialVersionUID = 0L;
         } else {
           otherFieldBuilder_.mergeFrom(value);
         }
-        if (otherField_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -8475,7 +8399,6 @@ private static final long serialVersionUID = 0L;
               com.tcn.cloud.api.api.v0alpha.ReshapeAction.SetFieldValue.class, com.tcn.cloud.api.api.v0alpha.ReshapeAction.SetFieldValue.Builder.class);
     }
 
-    private int bitField0_;
     public static final int VALUE_FIELD_NUMBER = 18;
     private com.tcn.cloud.api.api.v0alpha.RecordFieldProto value_;
     /**
@@ -8484,7 +8407,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasValue() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return value_ != null;
     }
     /**
      * <code>.api.v0alpha.RecordFieldProto value = 18 [json_name = "value"];</code>
@@ -8516,7 +8439,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (value_ != null) {
         output.writeMessage(18, getValue());
       }
       getUnknownFields().writeTo(output);
@@ -8528,7 +8451,7 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (value_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(18, getValue());
       }
@@ -8690,19 +8613,13 @@ private static final long serialVersionUID = 0L;
 
       // Construct using com.tcn.cloud.api.api.v0alpha.ReshapeAction.SetFieldValue.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getValueFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -8746,14 +8663,11 @@ private static final long serialVersionUID = 0L;
 
       private void buildPartial0(com.tcn.cloud.api.api.v0alpha.ReshapeAction.SetFieldValue result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.value_ = valueBuilder_ == null
               ? value_
               : valueBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -8919,10 +8833,8 @@ private static final long serialVersionUID = 0L;
         } else {
           valueBuilder_.mergeFrom(value);
         }
-        if (value_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -9108,7 +9020,6 @@ private static final long serialVersionUID = 0L;
               com.tcn.cloud.api.api.v0alpha.ReshapeAction.SetFieldFromField.class, com.tcn.cloud.api.api.v0alpha.ReshapeAction.SetFieldFromField.Builder.class);
     }
 
-    private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 10;
     @SuppressWarnings("serial")
     private volatile java.lang.Object name_ = "";
@@ -9156,7 +9067,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasOtherField() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return otherField_ != null;
     }
     /**
      * <code>.api.v0alpha.FieldIndex other_field = 12 [json_name = "otherField"];</code>
@@ -9191,7 +9102,7 @@ private static final long serialVersionUID = 0L;
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 10, name_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (otherField_ != null) {
         output.writeMessage(12, getOtherField());
       }
       getUnknownFields().writeTo(output);
@@ -9206,7 +9117,7 @@ private static final long serialVersionUID = 0L;
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, name_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (otherField_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(12, getOtherField());
       }
@@ -9372,19 +9283,13 @@ private static final long serialVersionUID = 0L;
 
       // Construct using com.tcn.cloud.api.api.v0alpha.ReshapeAction.SetFieldFromField.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getOtherFieldFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -9432,14 +9337,11 @@ private static final long serialVersionUID = 0L;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.name_ = name_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.otherField_ = otherFieldBuilder_ == null
               ? otherField_
               : otherFieldBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -9687,10 +9589,8 @@ private static final long serialVersionUID = 0L;
         } else {
           otherFieldBuilder_.mergeFrom(value);
         }
-        if (otherField_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -17071,7 +16971,6 @@ private static final long serialVersionUID = 0L;
 
   }
 
-  private int bitField0_;
   private int actionCase_ = 0;
   @SuppressWarnings("serial")
   private java.lang.Object action_;
@@ -17235,7 +17134,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasPredicate() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return predicate_ != null;
   }
   /**
    * <code>.api.v0alpha.FilterCheck predicate = 50 [json_name = "predicate"];</code>
@@ -17944,7 +17843,7 @@ private static final long serialVersionUID = 0L;
     if (actionCase_ == 47) {
       output.writeMessage(47, (com.tcn.cloud.api.api.v0alpha.ReshapeAction.AddDate) action_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (predicate_ != null) {
       output.writeMessage(50, getPredicate());
     }
     if (actionCase_ == 52) {
@@ -18040,7 +17939,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(47, (com.tcn.cloud.api.api.v0alpha.ReshapeAction.AddDate) action_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (predicate_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(50, getPredicate());
     }
@@ -18386,19 +18285,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.ReshapeAction.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getPredicateFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -18513,14 +18406,11 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.matchingType_ = matchingType_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.predicate_ = predicateBuilder_ == null
             ? predicate_
             : predicateBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     private void buildPartialOneofs(com.tcn.cloud.api.api.v0alpha.ReshapeAction result) {
@@ -19204,10 +19094,8 @@ private static final long serialVersionUID = 0L;
       } else {
         predicateBuilder_.mergeFrom(value);
       }
-      if (predicate_ != null) {
-        bitField0_ |= 0x00000004;
-        onChanged();
-      }
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**

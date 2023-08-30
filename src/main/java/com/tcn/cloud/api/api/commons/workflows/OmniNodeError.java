@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.commons.workflows;
 
 /**
+ * <pre>
+ * OmniNodeError will send an error message to the user and log an error
+ * </pre>
+ *
  * Protobuf type {@code api.commons.workflows.OmniNodeError}
  */
 public final class OmniNodeError extends
@@ -43,6 +47,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object error_ = "";
   /**
+   * <pre>
+   * the error message to send/log
+   * </pre>
+   *
    * <code>string error = 1 [json_name = "error"];</code>
    * @return The error.
    */
@@ -60,6 +68,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * the error message to send/log
+   * </pre>
+   *
    * <code>string error = 1 [json_name = "error"];</code>
    * @return The bytes for error.
    */
@@ -235,6 +247,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * OmniNodeError will send an error message to the user and log an error
+   * </pre>
+   *
    * Protobuf type {@code api.commons.workflows.OmniNodeError}
    */
   public static final class Builder extends
@@ -406,6 +422,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object error_ = "";
     /**
+     * <pre>
+     * the error message to send/log
+     * </pre>
+     *
      * <code>string error = 1 [json_name = "error"];</code>
      * @return The error.
      */
@@ -422,6 +442,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * the error message to send/log
+     * </pre>
+     *
      * <code>string error = 1 [json_name = "error"];</code>
      * @return The bytes for error.
      */
@@ -439,6 +463,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * the error message to send/log
+     * </pre>
+     *
      * <code>string error = 1 [json_name = "error"];</code>
      * @param value The error to set.
      * @return This builder for chaining.
@@ -452,6 +480,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * the error message to send/log
+     * </pre>
+     *
      * <code>string error = 1 [json_name = "error"];</code>
      * @return This builder for chaining.
      */
@@ -462,6 +494,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * the error message to send/log
+     * </pre>
+     *
      * <code>string error = 1 [json_name = "error"];</code>
      * @param value The bytes for error to set.
      * @return This builder for chaining.

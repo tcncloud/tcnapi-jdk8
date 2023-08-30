@@ -38,7 +38,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.integrations.GetDetailedPortalReq.class, com.tcn.cloud.api.api.v1alpha1.integrations.GetDetailedPortalReq.Builder.class);
   }
 
-  private int bitField0_;
   public static final int ENTITY_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.api.v1alpha1.integrations.PortalId entity_;
   /**
@@ -47,7 +46,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasEntity() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return entity_ != null;
   }
   /**
    * <code>.api.v1alpha1.integrations.PortalId entity = 1 [json_name = "entity"];</code>
@@ -73,7 +72,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasPortalMask() {
-    return ((bitField0_ & 0x00000002) != 0);
+    return portalMask_ != null;
   }
   /**
    * <code>.google.protobuf.FieldMask portal_mask = 2 [json_name = "portalMask"];</code>
@@ -104,7 +103,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasPortalConfigMask() {
-    return ((bitField0_ & 0x00000004) != 0);
+    return portalConfigMask_ != null;
   }
   /**
    * <pre>
@@ -145,7 +144,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasPluginInstanceMask() {
-    return ((bitField0_ & 0x00000008) != 0);
+    return pluginInstanceMask_ != null;
   }
   /**
    * <pre>
@@ -187,16 +186,16 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (entity_ != null) {
       output.writeMessage(1, getEntity());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (portalMask_ != null) {
       output.writeMessage(2, getPortalMask());
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
+    if (portalConfigMask_ != null) {
       output.writeMessage(3, getPortalConfigMask());
     }
-    if (((bitField0_ & 0x00000008) != 0)) {
+    if (pluginInstanceMask_ != null) {
       output.writeMessage(4, getPluginInstanceMask());
     }
     getUnknownFields().writeTo(output);
@@ -208,19 +207,19 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (entity_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getEntity());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (portalMask_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getPortalMask());
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
+    if (portalConfigMask_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getPortalConfigMask());
     }
-    if (((bitField0_ & 0x00000008) != 0)) {
+    if (pluginInstanceMask_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getPluginInstanceMask());
     }
@@ -405,22 +404,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.integrations.GetDetailedPortalReq.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getEntityFieldBuilder();
-        getPortalMaskFieldBuilder();
-        getPortalConfigMaskFieldBuilder();
-        getPluginInstanceMaskFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -479,32 +469,26 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.integrations.GetDetailedPortalReq result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.entity_ = entityBuilder_ == null
             ? entity_
             : entityBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.portalMask_ = portalMaskBuilder_ == null
             ? portalMask_
             : portalMaskBuilder_.build();
-        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.portalConfigMask_ = portalConfigMaskBuilder_ == null
             ? portalConfigMask_
             : portalConfigMaskBuilder_.build();
-        to_bitField0_ |= 0x00000004;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.pluginInstanceMask_ = pluginInstanceMaskBuilder_ == null
             ? pluginInstanceMask_
             : pluginInstanceMaskBuilder_.build();
-        to_bitField0_ |= 0x00000008;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -700,10 +684,8 @@ private static final long serialVersionUID = 0L;
       } else {
         entityBuilder_.mergeFrom(value);
       }
-      if (entity_ != null) {
-        bitField0_ |= 0x00000001;
-        onChanged();
-      }
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -821,10 +803,8 @@ private static final long serialVersionUID = 0L;
       } else {
         portalMaskBuilder_.mergeFrom(value);
       }
-      if (portalMask_ != null) {
-        bitField0_ |= 0x00000002;
-        onChanged();
-      }
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -967,10 +947,8 @@ private static final long serialVersionUID = 0L;
       } else {
         portalConfigMaskBuilder_.mergeFrom(value);
       }
-      if (portalConfigMask_ != null) {
-        bitField0_ |= 0x00000004;
-        onChanged();
-      }
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -1133,10 +1111,8 @@ private static final long serialVersionUID = 0L;
       } else {
         pluginInstanceMaskBuilder_.mergeFrom(value);
       }
-      if (pluginInstanceMask_ != null) {
-        bitField0_ |= 0x00000008;
-        onChanged();
-      }
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**

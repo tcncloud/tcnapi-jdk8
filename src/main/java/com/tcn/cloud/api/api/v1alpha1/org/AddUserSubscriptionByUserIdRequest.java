@@ -43,7 +43,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.org.AddUserSubscriptionByUserIdRequest.class, com.tcn.cloud.api.api.v1alpha1.org.AddUserSubscriptionByUserIdRequest.Builder.class);
   }
 
-  private int bitField0_;
   public static final int USER_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object userId_ = "";
@@ -105,7 +104,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasSubscription() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return subscription_ != null;
   }
   /**
    * <pre>
@@ -148,7 +147,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, userId_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (subscription_ != null) {
       output.writeMessage(2, getSubscription());
     }
     getUnknownFields().writeTo(output);
@@ -163,7 +162,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, userId_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (subscription_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getSubscription());
     }
@@ -329,19 +328,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.org.AddUserSubscriptionByUserIdRequest.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getSubscriptionFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -389,14 +382,11 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.userId_ = userId_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.subscription_ = subscriptionBuilder_ == null
             ? subscription_
             : subscriptionBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -689,10 +679,8 @@ private static final long serialVersionUID = 0L;
       } else {
         subscriptionBuilder_.mergeFrom(value);
       }
-      if (subscription_ != null) {
-        bitField0_ |= 0x00000002;
-        onChanged();
-      }
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**

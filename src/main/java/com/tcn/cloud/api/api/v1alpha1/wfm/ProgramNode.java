@@ -51,7 +51,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.wfm.ProgramNode.class, com.tcn.cloud.api.api.v1alpha1.wfm.ProgramNode.Builder.class);
   }
 
-  private int bitField0_;
   public static final int PROGRAM_NODE_SID_FIELD_NUMBER = 1;
   private long programNodeSid_ = 0L;
   /**
@@ -188,7 +187,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasDatetimeSetToInactive() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return datetimeSetToInactive_ != null;
   }
   /**
    * <pre>
@@ -699,7 +698,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasOriginSid() {
-    return ((bitField0_ & 0x00000002) != 0);
+    return originSid_ != null;
   }
   /**
    * <pre>
@@ -753,7 +752,7 @@ private static final long serialVersionUID = 0L;
     if (locationNodeSid_ != 0L) {
       output.writeInt64(4, locationNodeSid_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (datetimeSetToInactive_ != null) {
       output.writeMessage(5, getDatetimeSetToInactive());
     }
     if (shrinkageIsPercentage_ != false) {
@@ -786,7 +785,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < memberSkillProficiencies_.size(); i++) {
       output.writeMessage(15, memberSkillProficiencies_.get(i));
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (originSid_ != null) {
       output.writeMessage(16, getOriginSid());
     }
     getUnknownFields().writeTo(output);
@@ -812,7 +811,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(4, locationNodeSid_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (datetimeSetToInactive_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getDatetimeSetToInactive());
     }
@@ -856,7 +855,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(15, memberSkillProficiencies_.get(i));
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (originSid_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(16, getOriginSid());
     }
@@ -1101,27 +1100,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.ProgramNode.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getDatetimeSetToInactiveFieldBuilder();
-        getMemberShiftTemplatesFieldBuilder();
-        getMemberNonSkillActivitiesFieldBuilder();
-        getMemberOpenTimesPatternsFieldBuilder();
-        getMemberAgentAvailabilityPatternsFieldBuilder();
-        getMemberConstraintRulesFieldBuilder();
-        getMemberAgentGroupsFieldBuilder();
-        getMemberSkillProficienciesFieldBuilder();
-        getOriginSidFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -1305,12 +1290,10 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.locationNodeSid_ = locationNodeSid_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.datetimeSetToInactive_ = datetimeSetToInactiveBuilder_ == null
             ? datetimeSetToInactive_
             : datetimeSetToInactiveBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.shrinkageIsPercentage_ = shrinkageIsPercentage_;
@@ -1325,9 +1308,7 @@ private static final long serialVersionUID = 0L;
         result.originSid_ = originSidBuilder_ == null
             ? originSid_
             : originSidBuilder_.build();
-        to_bitField0_ |= 0x00000002;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -2128,10 +2109,8 @@ private static final long serialVersionUID = 0L;
       } else {
         datetimeSetToInactiveBuilder_.mergeFrom(value);
       }
-      if (datetimeSetToInactive_ != null) {
-        bitField0_ |= 0x00000010;
-        onChanged();
-      }
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -4606,10 +4585,8 @@ private static final long serialVersionUID = 0L;
       } else {
         originSidBuilder_.mergeFrom(value);
       }
-      if (originSid_ != null) {
-        bitField0_ |= 0x00008000;
-        onChanged();
-      }
+      bitField0_ |= 0x00008000;
+      onChanged();
       return this;
     }
     /**

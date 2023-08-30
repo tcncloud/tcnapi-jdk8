@@ -43,7 +43,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.wfm.UpsertNonSkillActivityAssociationReq.class, com.tcn.cloud.api.api.v1alpha1.wfm.UpsertNonSkillActivityAssociationReq.Builder.class);
   }
 
-  private int bitField0_;
   public static final int NON_SKILL_ACTIVITY_SID_FIELD_NUMBER = 1;
   private long nonSkillActivitySid_ = 0L;
   /**
@@ -71,7 +70,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasNode() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return node_ != null;
   }
   /**
    * <pre>
@@ -155,7 +154,7 @@ private static final long serialVersionUID = 0L;
     if (nonSkillActivitySid_ != 0L) {
       output.writeInt64(1, nonSkillActivitySid_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (node_ != null) {
       output.writeMessage(2, getNode());
     }
     if (associationType_ != com.tcn.cloud.api.api.commons.ConfigRelationshipType.IS_ASSOCIATED_WITH.getNumber()) {
@@ -177,7 +176,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(1, nonSkillActivitySid_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (node_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getNode());
     }
@@ -360,19 +359,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.UpsertNonSkillActivityAssociationReq.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getNodeFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -422,12 +415,10 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.nonSkillActivitySid_ = nonSkillActivitySid_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.node_ = nodeBuilder_ == null
             ? node_
             : nodeBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.associationType_ = associationType_;
@@ -435,7 +426,6 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.scheduleScenarioSid_ = scheduleScenarioSid_;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -689,10 +679,8 @@ private static final long serialVersionUID = 0L;
       } else {
         nodeBuilder_.mergeFrom(value);
       }
-      if (node_ != null) {
-        bitField0_ |= 0x00000002;
-        onChanged();
-      }
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**

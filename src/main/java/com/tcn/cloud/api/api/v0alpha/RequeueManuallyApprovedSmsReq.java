@@ -39,7 +39,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.RequeueManuallyApprovedSmsReq.class, com.tcn.cloud.api.api.v0alpha.RequeueManuallyApprovedSmsReq.Builder.class);
   }
 
-  private int bitField0_;
   public static final int SMS_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.api.commons.SimpleSmsMamData sms_;
   /**
@@ -48,7 +47,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasSms() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return sms_ != null;
   }
   /**
    * <code>.api.commons.SimpleSmsMamData sms = 1 [json_name = "sms"];</code>
@@ -119,7 +118,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (sms_ != null) {
       output.writeMessage(1, getSms());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(queueName_)) {
@@ -134,7 +133,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (sms_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getSms());
     }
@@ -299,19 +298,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.RequeueManuallyApprovedSmsReq.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getSmsFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -356,17 +349,14 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v0alpha.RequeueManuallyApprovedSmsReq result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.sms_ = smsBuilder_ == null
             ? sms_
             : smsBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.queueName_ = queueName_;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -542,10 +532,8 @@ private static final long serialVersionUID = 0L;
       } else {
         smsBuilder_.mergeFrom(value);
       }
-      if (sms_ != null) {
-        bitField0_ |= 0x00000001;
-        onChanged();
-      }
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**

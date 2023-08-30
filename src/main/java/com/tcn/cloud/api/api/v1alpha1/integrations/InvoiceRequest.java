@@ -41,7 +41,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.integrations.InvoiceRequest.class, com.tcn.cloud.api.api.v1alpha1.integrations.InvoiceRequest.Builder.class);
   }
 
-  private int bitField0_;
   public static final int INVOICE_REQUEST_PAYLOAD_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.Request> invoiceRequestPayload_;
@@ -131,7 +130,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasInvoiceRequest() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return invoiceRequest_ != null;
   }
   /**
    * <code>.api.v1alpha1.integrations.Request invoice_request = 3 [json_name = "invoiceRequest"];</code>
@@ -219,7 +218,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < invoiceRequestPayload_.size(); i++) {
       output.writeMessage(2, invoiceRequestPayload_.get(i));
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (invoiceRequest_ != null) {
       output.writeMessage(3, getInvoiceRequest());
     }
     for (int i = 0; i < filterResponseKeys_.size(); i++) {
@@ -238,7 +237,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, invoiceRequestPayload_.get(i));
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (invoiceRequest_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getInvoiceRequest());
     }
@@ -416,20 +415,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.integrations.InvoiceRequest.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getInvoiceRequestPayloadFieldBuilder();
-        getInvoiceRequestFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -495,18 +487,15 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.integrations.InvoiceRequest result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.invoiceRequest_ = invoiceRequestBuilder_ == null
             ? invoiceRequest_
             : invoiceRequestBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         filterResponseKeys_.makeImmutable();
         result.filterResponseKeys_ = filterResponseKeys_;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1111,10 +1100,8 @@ private static final long serialVersionUID = 0L;
       } else {
         invoiceRequestBuilder_.mergeFrom(value);
       }
-      if (invoiceRequest_ != null) {
-        bitField0_ |= 0x00000002;
-        onChanged();
-      }
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**

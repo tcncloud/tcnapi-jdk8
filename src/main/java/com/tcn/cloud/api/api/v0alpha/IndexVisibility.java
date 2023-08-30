@@ -74,8 +74,7 @@ private static final long serialVersionUID = 0L;
 
   public static final int VIEWERS_FIELD_NUMBER = 4;
   @SuppressWarnings("serial")
-  private com.google.protobuf.Internal.LongList viewers_ =
-      emptyLongList();
+  private com.google.protobuf.Internal.LongList viewers_;
   /**
    * <code>repeated int64 viewers = 4 [json_name = "viewers"];</code>
    * @return A list containing the viewers.
@@ -376,9 +375,18 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.IndexVisibility buildPartial() {
       com.tcn.cloud.api.api.v0alpha.IndexVisibility result = new com.tcn.cloud.api.api.v0alpha.IndexVisibility(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v0alpha.IndexVisibility result) {
+      if (((bitField0_ & 0x00000008) != 0)) {
+        viewers_.makeImmutable();
+        bitField0_ = (bitField0_ & ~0x00000008);
+      }
+      result.viewers_ = viewers_;
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.v0alpha.IndexVisibility result) {
@@ -391,10 +399,6 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.week_ = week_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        viewers_.makeImmutable();
-        result.viewers_ = viewers_;
       }
     }
 
@@ -454,8 +458,7 @@ private static final long serialVersionUID = 0L;
       if (!other.viewers_.isEmpty()) {
         if (viewers_.isEmpty()) {
           viewers_ = other.viewers_;
-          viewers_.makeImmutable();
-          bitField0_ |= 0x00000008;
+          bitField0_ = (bitField0_ & ~0x00000008);
         } else {
           ensureViewersIsMutable();
           viewers_.addAll(other.viewers_);
@@ -634,10 +637,10 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Internal.LongList viewers_ = emptyLongList();
     private void ensureViewersIsMutable() {
-      if (!viewers_.isModifiable()) {
-        viewers_ = makeMutableCopy(viewers_);
+      if (!((bitField0_ & 0x00000008) != 0)) {
+        viewers_ = mutableCopy(viewers_);
+        bitField0_ |= 0x00000008;
       }
-      bitField0_ |= 0x00000008;
     }
     /**
      * <code>repeated int64 viewers = 4 [json_name = "viewers"];</code>
@@ -645,8 +648,8 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Long>
         getViewersList() {
-      viewers_.makeImmutable();
-      return viewers_;
+      return ((bitField0_ & 0x00000008) != 0) ?
+               java.util.Collections.unmodifiableList(viewers_) : viewers_;
     }
     /**
      * <code>repeated int64 viewers = 4 [json_name = "viewers"];</code>
@@ -674,7 +677,6 @@ private static final long serialVersionUID = 0L;
 
       ensureViewersIsMutable();
       viewers_.setLong(index, value);
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -687,7 +689,6 @@ private static final long serialVersionUID = 0L;
 
       ensureViewersIsMutable();
       viewers_.addLong(value);
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -701,7 +702,6 @@ private static final long serialVersionUID = 0L;
       ensureViewersIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, viewers_);
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }

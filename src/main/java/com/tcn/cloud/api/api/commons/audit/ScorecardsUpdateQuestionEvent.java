@@ -45,7 +45,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateQuestionEvent.class, com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateQuestionEvent.Builder.class);
   }
 
-  private int bitField0_;
   public static final int USER_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object userId_ = "";
@@ -199,7 +198,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasUpdateMask() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return updateMask_ != null;
   }
   /**
    * <pre>
@@ -237,7 +236,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasQuestion() {
-    return ((bitField0_ & 0x00000002) != 0);
+    return question_ != null;
   }
   /**
    * <pre>
@@ -286,10 +285,10 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (updateMask_ != null) {
       output.writeMessage(4, getUpdateMask());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (question_ != null) {
       output.writeMessage(5, getQuestion());
     }
     getUnknownFields().writeTo(output);
@@ -310,11 +309,11 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (updateMask_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getUpdateMask());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (question_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getQuestion());
     }
@@ -497,20 +496,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateQuestionEvent.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getUpdateMaskFieldBuilder();
-        getQuestionFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -571,20 +563,16 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.description_ = description_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.updateMask_ = updateMaskBuilder_ == null
             ? updateMask_
             : updateMaskBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.question_ = questionBuilder_ == null
             ? question_
             : questionBuilder_.build();
-        to_bitField0_ |= 0x00000002;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1086,10 +1074,8 @@ private static final long serialVersionUID = 0L;
       } else {
         updateMaskBuilder_.mergeFrom(value);
       }
-      if (updateMask_ != null) {
-        bitField0_ |= 0x00000008;
-        onChanged();
-      }
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -1243,10 +1229,8 @@ private static final long serialVersionUID = 0L;
       } else {
         questionBuilder_.mergeFrom(value);
       }
-      if (question_ != null) {
-        bitField0_ |= 0x00000010;
-        onChanged();
-      }
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**

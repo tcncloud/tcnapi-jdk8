@@ -42,7 +42,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.GetEndOfDayPreferencesResponse.class, com.tcn.cloud.api.api.v0alpha.GetEndOfDayPreferencesResponse.Builder.class);
   }
 
-  private int bitField0_;
   public static final int END_OF_DAY_PREFERENCES_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.api.v0alpha.EndOfDayPreferences endOfDayPreferences_;
   /**
@@ -55,7 +54,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasEndOfDayPreferences() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return endOfDayPreferences_ != null;
   }
   /**
    * <pre>
@@ -95,7 +94,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (endOfDayPreferences_ != null) {
       output.writeMessage(1, getEndOfDayPreferences());
     }
     getUnknownFields().writeTo(output);
@@ -107,7 +106,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (endOfDayPreferences_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getEndOfDayPreferences());
     }
@@ -269,19 +268,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.GetEndOfDayPreferencesResponse.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getEndOfDayPreferencesFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -325,14 +318,11 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v0alpha.GetEndOfDayPreferencesResponse result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.endOfDayPreferences_ = endOfDayPreferencesBuilder_ == null
             ? endOfDayPreferences_
             : endOfDayPreferencesBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -518,10 +508,8 @@ private static final long serialVersionUID = 0L;
       } else {
         endOfDayPreferencesBuilder_.mergeFrom(value);
       }
-      if (endOfDayPreferences_ != null) {
-        bitField0_ |= 0x00000001;
-        onChanged();
-      }
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**

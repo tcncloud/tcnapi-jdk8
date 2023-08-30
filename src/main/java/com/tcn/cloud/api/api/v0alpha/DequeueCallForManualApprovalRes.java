@@ -39,7 +39,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.DequeueCallForManualApprovalRes.class, com.tcn.cloud.api.api.v0alpha.DequeueCallForManualApprovalRes.Builder.class);
   }
 
-  private int bitField0_;
   public static final int CALL_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.api.commons.SimpleCallData call_;
   /**
@@ -48,7 +47,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCall() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return call_ != null;
   }
   /**
    * <code>.api.commons.SimpleCallData call = 1 [json_name = "call"];</code>
@@ -113,7 +112,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasClientInfo() {
-    return ((bitField0_ & 0x00000002) != 0);
+    return clientInfo_ != null;
   }
   /**
    * <code>.api.v0alpha.GetClientInfoDataRes client_info = 3 [json_name = "clientInfo"];</code>
@@ -139,7 +138,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasClientInfoTemplate() {
-    return ((bitField0_ & 0x00000004) != 0);
+    return clientInfoTemplate_ != null;
   }
   /**
    * <code>.api.v0alpha.GetClientInfoDisplayTemplateRes client_info_template = 4 [json_name = "clientInfoTemplate"];</code>
@@ -171,16 +170,16 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (call_ != null) {
       output.writeMessage(1, getCall());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(queue_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, queue_);
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (clientInfo_ != null) {
       output.writeMessage(3, getClientInfo());
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
+    if (clientInfoTemplate_ != null) {
       output.writeMessage(4, getClientInfoTemplate());
     }
     getUnknownFields().writeTo(output);
@@ -192,18 +191,18 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (call_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getCall());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(queue_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, queue_);
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (clientInfo_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getClientInfo());
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
+    if (clientInfoTemplate_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getClientInfoTemplate());
     }
@@ -383,21 +382,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.DequeueCallForManualApprovalRes.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getCallFieldBuilder();
-        getClientInfoFieldBuilder();
-        getClientInfoTemplateFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -452,12 +443,10 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v0alpha.DequeueCallForManualApprovalRes result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.call_ = callBuilder_ == null
             ? call_
             : callBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.queue_ = queue_;
@@ -466,15 +455,12 @@ private static final long serialVersionUID = 0L;
         result.clientInfo_ = clientInfoBuilder_ == null
             ? clientInfo_
             : clientInfoBuilder_.build();
-        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.clientInfoTemplate_ = clientInfoTemplateBuilder_ == null
             ? clientInfoTemplate_
             : clientInfoTemplateBuilder_.build();
-        to_bitField0_ |= 0x00000004;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -670,10 +656,8 @@ private static final long serialVersionUID = 0L;
       } else {
         callBuilder_.mergeFrom(value);
       }
-      if (call_ != null) {
-        bitField0_ |= 0x00000001;
-        onChanged();
-      }
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -863,10 +847,8 @@ private static final long serialVersionUID = 0L;
       } else {
         clientInfoBuilder_.mergeFrom(value);
       }
-      if (clientInfo_ != null) {
-        bitField0_ |= 0x00000004;
-        onChanged();
-      }
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -984,10 +966,8 @@ private static final long serialVersionUID = 0L;
       } else {
         clientInfoTemplateBuilder_.mergeFrom(value);
       }
-      if (clientInfoTemplate_ != null) {
-        bitField0_ |= 0x00000008;
-        onChanged();
-      }
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**

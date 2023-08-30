@@ -829,7 +829,6 @@ private static final long serialVersionUID = 0L;
 
   }
 
-  private int bitField0_;
   public static final int EVALUATION_ID_FIELD_NUMBER = 2;
   private long evaluationId_ = 0L;
   /**
@@ -1016,7 +1015,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCompletedAt() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return completedAt_ != null;
   }
   /**
    * <pre>
@@ -1226,7 +1225,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < evaluationSections_.size(); i++) {
       output.writeMessage(9, evaluationSections_.get(i));
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (completedAt_ != null) {
       output.writeMessage(10, getCompletedAt());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(agentUserId_)) {
@@ -1277,7 +1276,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(9, evaluationSections_.get(i));
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (completedAt_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(10, getCompletedAt());
     }
@@ -1507,21 +1506,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.Evaluation.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getEvaluationSectionsFieldBuilder();
-        getCompletedAtFieldBuilder();
-        getCustomFieldsFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -1628,12 +1619,10 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.evaluationState_ = evaluationState_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.completedAt_ = completedAtBuilder_ == null
             ? completedAt_
             : completedAtBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000100) != 0)) {
         result.agentUserId_ = agentUserId_;
@@ -1644,7 +1633,6 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000400) != 0)) {
         result.transcriptSid_ = transcriptSid_;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -2565,10 +2553,8 @@ private static final long serialVersionUID = 0L;
       } else {
         completedAtBuilder_.mergeFrom(value);
       }
-      if (completedAt_ != null) {
-        bitField0_ |= 0x00000080;
-        onChanged();
-      }
+      bitField0_ |= 0x00000080;
+      onChanged();
       return this;
     }
     /**

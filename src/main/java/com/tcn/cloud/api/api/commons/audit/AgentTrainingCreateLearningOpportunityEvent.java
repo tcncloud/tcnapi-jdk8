@@ -42,7 +42,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent.class, com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent.Builder.class);
   }
 
-  private int bitField0_;
   public static final int LEARNING_OPPORTUNITY_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.api.commons.LearningOpportunity learningOpportunity_;
   /**
@@ -55,7 +54,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasLearningOpportunity() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return learningOpportunity_ != null;
   }
   /**
    * <pre>
@@ -95,7 +94,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (learningOpportunity_ != null) {
       output.writeMessage(1, getLearningOpportunity());
     }
     getUnknownFields().writeTo(output);
@@ -107,7 +106,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (learningOpportunity_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getLearningOpportunity());
     }
@@ -269,19 +268,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getLearningOpportunityFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -325,14 +318,11 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.learningOpportunity_ = learningOpportunityBuilder_ == null
             ? learningOpportunity_
             : learningOpportunityBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -518,10 +508,8 @@ private static final long serialVersionUID = 0L;
       } else {
         learningOpportunityBuilder_.mergeFrom(value);
       }
-      if (learningOpportunity_ != null) {
-        bitField0_ |= 0x00000001;
-        onChanged();
-      }
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**

@@ -279,7 +279,6 @@ private static final long serialVersionUID = 0L;
               com.tcn.cloud.api.api.commons.AgentQueuedCallsNotification.QueuedCallData.class, com.tcn.cloud.api.api.commons.AgentQueuedCallsNotification.QueuedCallData.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CALL_SID_FIELD_NUMBER = 1;
     private long callSid_ = 0L;
     /**
@@ -427,7 +426,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasStartDate() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return startDate_ != null;
     }
     /**
      * <pre>
@@ -465,7 +464,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasHoldDate() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return holdDate_ != null;
     }
     /**
      * <pre>
@@ -611,10 +610,10 @@ private static final long serialVersionUID = 0L;
       if (callType_ != com.tcn.cloud.api.api.commons.CallType.Enum.INBOUND.getNumber()) {
         output.writeEnum(4, callType_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (startDate_ != null) {
         output.writeMessage(5, getStartDate());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (holdDate_ != null) {
         output.writeMessage(6, getHoldDate());
       }
       for (int i = 0; i < skills_.size(); i++) {
@@ -649,11 +648,11 @@ private static final long serialVersionUID = 0L;
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(4, callType_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (startDate_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getStartDate());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (holdDate_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getHoldDate());
       }
@@ -866,20 +865,13 @@ private static final long serialVersionUID = 0L;
 
       // Construct using com.tcn.cloud.api.api.commons.AgentQueuedCallsNotification.QueuedCallData.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getStartDateFieldBuilder();
-          getHoldDateFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -948,18 +940,15 @@ private static final long serialVersionUID = 0L;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.callType_ = callType_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.startDate_ = startDateBuilder_ == null
               ? startDate_
               : startDateBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.holdDate_ = holdDateBuilder_ == null
               ? holdDate_
               : holdDateBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
           skills_.makeImmutable();
@@ -971,7 +960,6 @@ private static final long serialVersionUID = 0L;
         if (((from_bitField0_ & 0x00000100) != 0)) {
           result.queuedNotificationType_ = queuedNotificationType_;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1536,10 +1524,8 @@ private static final long serialVersionUID = 0L;
         } else {
           startDateBuilder_.mergeFrom(value);
         }
-        if (startDate_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -1693,10 +1679,8 @@ private static final long serialVersionUID = 0L;
         } else {
           holdDateBuilder_.mergeFrom(value);
         }
-        if (holdDate_ != null) {
-          bitField0_ |= 0x00000020;
-          onChanged();
-        }
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**

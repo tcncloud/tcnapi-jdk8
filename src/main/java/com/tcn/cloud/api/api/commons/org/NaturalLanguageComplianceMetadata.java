@@ -61,8 +61,7 @@ private static final long serialVersionUID = 0L;
 
   public static final int OPTIONAL_DATA_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
-  private com.google.protobuf.Internal.LongList optionalData_ =
-      emptyLongList();
+  private com.google.protobuf.Internal.LongList optionalData_;
   /**
    * <pre>
    * List of optional contact field description metadata.
@@ -106,8 +105,7 @@ private static final long serialVersionUID = 0L;
 
   public static final int REQUIRED_DATA_FIELD_NUMBER = 3;
   @SuppressWarnings("serial")
-  private com.google.protobuf.Internal.LongList requiredData_ =
-      emptyLongList();
+  private com.google.protobuf.Internal.LongList requiredData_;
   /**
    * <pre>
    * List of required contact field description metadata.
@@ -429,23 +427,29 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.org.NaturalLanguageComplianceMetadata buildPartial() {
       com.tcn.cloud.api.api.commons.org.NaturalLanguageComplianceMetadata result = new com.tcn.cloud.api.api.commons.org.NaturalLanguageComplianceMetadata(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.commons.org.NaturalLanguageComplianceMetadata result) {
+      if (((bitField0_ & 0x00000002) != 0)) {
+        optionalData_.makeImmutable();
+        bitField0_ = (bitField0_ & ~0x00000002);
+      }
+      result.optionalData_ = optionalData_;
+      if (((bitField0_ & 0x00000004) != 0)) {
+        requiredData_.makeImmutable();
+        bitField0_ = (bitField0_ & ~0x00000004);
+      }
+      result.requiredData_ = requiredData_;
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.commons.org.NaturalLanguageComplianceMetadata result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.enabled_ = enabled_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        optionalData_.makeImmutable();
-        result.optionalData_ = optionalData_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        requiredData_.makeImmutable();
-        result.requiredData_ = requiredData_;
       }
     }
 
@@ -499,8 +503,7 @@ private static final long serialVersionUID = 0L;
       if (!other.optionalData_.isEmpty()) {
         if (optionalData_.isEmpty()) {
           optionalData_ = other.optionalData_;
-          optionalData_.makeImmutable();
-          bitField0_ |= 0x00000002;
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
           ensureOptionalDataIsMutable();
           optionalData_.addAll(other.optionalData_);
@@ -510,8 +513,7 @@ private static final long serialVersionUID = 0L;
       if (!other.requiredData_.isEmpty()) {
         if (requiredData_.isEmpty()) {
           requiredData_ = other.requiredData_;
-          requiredData_.makeImmutable();
-          bitField0_ |= 0x00000004;
+          bitField0_ = (bitField0_ & ~0x00000004);
         } else {
           ensureRequiredDataIsMutable();
           requiredData_.addAll(other.requiredData_);
@@ -644,10 +646,10 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Internal.LongList optionalData_ = emptyLongList();
     private void ensureOptionalDataIsMutable() {
-      if (!optionalData_.isModifiable()) {
-        optionalData_ = makeMutableCopy(optionalData_);
+      if (!((bitField0_ & 0x00000002) != 0)) {
+        optionalData_ = mutableCopy(optionalData_);
+        bitField0_ |= 0x00000002;
       }
-      bitField0_ |= 0x00000002;
     }
     /**
      * <pre>
@@ -660,8 +662,8 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Long>
         getOptionalDataList() {
-      optionalData_.makeImmutable();
-      return optionalData_;
+      return ((bitField0_ & 0x00000002) != 0) ?
+               java.util.Collections.unmodifiableList(optionalData_) : optionalData_;
     }
     /**
      * <pre>
@@ -704,7 +706,6 @@ private static final long serialVersionUID = 0L;
 
       ensureOptionalDataIsMutable();
       optionalData_.setLong(index, value);
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -722,7 +723,6 @@ private static final long serialVersionUID = 0L;
 
       ensureOptionalDataIsMutable();
       optionalData_.addLong(value);
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -741,7 +741,6 @@ private static final long serialVersionUID = 0L;
       ensureOptionalDataIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, optionalData_);
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -763,10 +762,10 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Internal.LongList requiredData_ = emptyLongList();
     private void ensureRequiredDataIsMutable() {
-      if (!requiredData_.isModifiable()) {
-        requiredData_ = makeMutableCopy(requiredData_);
+      if (!((bitField0_ & 0x00000004) != 0)) {
+        requiredData_ = mutableCopy(requiredData_);
+        bitField0_ |= 0x00000004;
       }
-      bitField0_ |= 0x00000004;
     }
     /**
      * <pre>
@@ -779,8 +778,8 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Long>
         getRequiredDataList() {
-      requiredData_.makeImmutable();
-      return requiredData_;
+      return ((bitField0_ & 0x00000004) != 0) ?
+               java.util.Collections.unmodifiableList(requiredData_) : requiredData_;
     }
     /**
      * <pre>
@@ -823,7 +822,6 @@ private static final long serialVersionUID = 0L;
 
       ensureRequiredDataIsMutable();
       requiredData_.setLong(index, value);
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -841,7 +839,6 @@ private static final long serialVersionUID = 0L;
 
       ensureRequiredDataIsMutable();
       requiredData_.addLong(value);
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -860,7 +857,6 @@ private static final long serialVersionUID = 0L;
       ensureRequiredDataIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, requiredData_);
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }

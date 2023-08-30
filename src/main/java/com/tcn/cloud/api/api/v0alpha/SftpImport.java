@@ -51,7 +51,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.SftpImport.class, com.tcn.cloud.api.api.v0alpha.SftpImport.Builder.class);
   }
 
-  private int bitField0_;
   public static final int USER_FIELD_NUMBER = 4;
   @SuppressWarnings("serial")
   private volatile java.lang.Object user_ = "";
@@ -267,7 +266,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasFilePattern() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return filePattern_ != null;
   }
   /**
    * <code>.api.commons.FilePattern file_pattern = 13 [json_name = "filePattern"];</code>
@@ -556,7 +555,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(port_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 8, port_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (filePattern_ != null) {
       output.writeMessage(13, getFilePattern());
     }
     if (enabled_ != false) {
@@ -604,7 +603,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(port_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, port_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (filePattern_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(13, getFilePattern());
     }
@@ -841,19 +840,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.SftpImport.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getFilePatternFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -924,12 +917,10 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.port_ = port_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.filePattern_ = filePatternBuilder_ == null
             ? filePattern_
             : filePatternBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.enabled_ = enabled_;
@@ -952,7 +943,6 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00001000) != 0)) {
         result.transferConfigName_ = transferConfigName_;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1622,10 +1612,8 @@ private static final long serialVersionUID = 0L;
       } else {
         filePatternBuilder_.mergeFrom(value);
       }
-      if (filePattern_ != null) {
-        bitField0_ |= 0x00000020;
-        onChanged();
-      }
+      bitField0_ |= 0x00000020;
+      onChanged();
       return this;
     }
     /**

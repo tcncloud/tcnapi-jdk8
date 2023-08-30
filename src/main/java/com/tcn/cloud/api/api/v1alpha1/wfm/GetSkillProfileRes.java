@@ -724,7 +724,6 @@ private static final long serialVersionUID = 0L;
 
   }
 
-  private int bitField0_;
   public static final int SKILL_PROFILE_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile skillProfile_;
   /**
@@ -733,7 +732,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasSkillProfile() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return skillProfile_ != null;
   }
   /**
    * <code>.api.v1alpha1.wfm.SkillProfile skill_profile = 1 [json_name = "skillProfile"];</code>
@@ -836,7 +835,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (skillProfile_ != null) {
       output.writeMessage(1, getSkillProfile());
     }
     for (int i = 0; i < mappings_.size(); i++) {
@@ -851,7 +850,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (skillProfile_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getSkillProfile());
     }
@@ -1023,20 +1022,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfileRes.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getSkillProfileFieldBuilder();
-        getMappingsFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -1100,14 +1092,11 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfileRes result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.skillProfile_ = skillProfileBuilder_ == null
             ? skillProfile_
             : skillProfileBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1312,10 +1301,8 @@ private static final long serialVersionUID = 0L;
       } else {
         skillProfileBuilder_.mergeFrom(value);
       }
-      if (skillProfile_ != null) {
-        bitField0_ |= 0x00000001;
-        onChanged();
-      }
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**

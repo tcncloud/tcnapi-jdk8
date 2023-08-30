@@ -39,7 +39,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.BillingSummary.class, com.tcn.cloud.api.api.v0alpha.BillingSummary.Builder.class);
   }
 
-  private int bitField0_;
   public static final int CLIENT_SID_FIELD_NUMBER = 1;
   private long clientSid_ = 0L;
   /**
@@ -109,7 +108,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasWeeks() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return weeks_ != null;
   }
   /**
    * <code>.api.v0alpha.WeeksSummary weeks = 4 [json_name = "weeks"];</code>
@@ -135,7 +134,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCustomReports() {
-    return ((bitField0_ & 0x00000002) != 0);
+    return customReports_ != null;
   }
   /**
    * <code>.api.v0alpha.CustomReportsSummary custom_reports = 5 [json_name = "customReports"];</code>
@@ -161,7 +160,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasReportJobs() {
-    return ((bitField0_ & 0x00000004) != 0);
+    return reportJobs_ != null;
   }
   /**
    * <code>.api.v0alpha.ActiveReportJobsSummary report_jobs = 6 [json_name = "reportJobs"];</code>
@@ -187,7 +186,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasWatchers() {
-    return ((bitField0_ & 0x00000008) != 0);
+    return watchers_ != null;
   }
   /**
    * <code>.api.v0alpha.ActiveWatchersSummary watchers = 7 [json_name = "watchers"];</code>
@@ -213,7 +212,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasMultiClient() {
-    return ((bitField0_ & 0x00000010) != 0);
+    return multiClient_ != null;
   }
   /**
    * <code>.api.v0alpha.MultiClientSummary multi_client = 8 [json_name = "multiClient"];</code>
@@ -254,19 +253,19 @@ private static final long serialVersionUID = 0L;
     if (proStatus_ != false) {
       output.writeBool(3, proStatus_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (weeks_ != null) {
       output.writeMessage(4, getWeeks());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (customReports_ != null) {
       output.writeMessage(5, getCustomReports());
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
+    if (reportJobs_ != null) {
       output.writeMessage(6, getReportJobs());
     }
-    if (((bitField0_ & 0x00000008) != 0)) {
+    if (watchers_ != null) {
       output.writeMessage(7, getWatchers());
     }
-    if (((bitField0_ & 0x00000010) != 0)) {
+    if (multiClient_ != null) {
       output.writeMessage(8, getMultiClient());
     }
     getUnknownFields().writeTo(output);
@@ -289,23 +288,23 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(3, proStatus_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (weeks_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getWeeks());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (customReports_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getCustomReports());
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
+    if (reportJobs_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, getReportJobs());
     }
-    if (((bitField0_ & 0x00000008) != 0)) {
+    if (watchers_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, getWatchers());
     }
-    if (((bitField0_ & 0x00000010) != 0)) {
+    if (multiClient_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, getMultiClient());
     }
@@ -513,23 +512,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.BillingSummary.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getWeeksFieldBuilder();
-        getCustomReportsFieldBuilder();
-        getReportJobsFieldBuilder();
-        getWatchersFieldBuilder();
-        getMultiClientFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -605,38 +594,31 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.proStatus_ = proStatus_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.weeks_ = weeksBuilder_ == null
             ? weeks_
             : weeksBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.customReports_ = customReportsBuilder_ == null
             ? customReports_
             : customReportsBuilder_.build();
-        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.reportJobs_ = reportJobsBuilder_ == null
             ? reportJobs_
             : reportJobsBuilder_.build();
-        to_bitField0_ |= 0x00000004;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.watchers_ = watchersBuilder_ == null
             ? watchers_
             : watchersBuilder_.build();
-        to_bitField0_ |= 0x00000008;
       }
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.multiClient_ = multiClientBuilder_ == null
             ? multiClient_
             : multiClientBuilder_.build();
-        to_bitField0_ |= 0x00000010;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1004,10 +986,8 @@ private static final long serialVersionUID = 0L;
       } else {
         weeksBuilder_.mergeFrom(value);
       }
-      if (weeks_ != null) {
-        bitField0_ |= 0x00000008;
-        onChanged();
-      }
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -1125,10 +1105,8 @@ private static final long serialVersionUID = 0L;
       } else {
         customReportsBuilder_.mergeFrom(value);
       }
-      if (customReports_ != null) {
-        bitField0_ |= 0x00000010;
-        onChanged();
-      }
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -1246,10 +1224,8 @@ private static final long serialVersionUID = 0L;
       } else {
         reportJobsBuilder_.mergeFrom(value);
       }
-      if (reportJobs_ != null) {
-        bitField0_ |= 0x00000020;
-        onChanged();
-      }
+      bitField0_ |= 0x00000020;
+      onChanged();
       return this;
     }
     /**
@@ -1367,10 +1343,8 @@ private static final long serialVersionUID = 0L;
       } else {
         watchersBuilder_.mergeFrom(value);
       }
-      if (watchers_ != null) {
-        bitField0_ |= 0x00000040;
-        onChanged();
-      }
+      bitField0_ |= 0x00000040;
+      onChanged();
       return this;
     }
     /**
@@ -1488,10 +1462,8 @@ private static final long serialVersionUID = 0L;
       } else {
         multiClientBuilder_.mergeFrom(value);
       }
-      if (multiClient_ != null) {
-        bitField0_ |= 0x00000080;
-        onChanged();
-      }
+      bitField0_ |= 0x00000080;
+      onChanged();
       return this;
     }
     /**

@@ -55,7 +55,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.integrations.GetIntegrationTransactionReportDataReq.class, com.tcn.cloud.api.api.v1alpha1.integrations.GetIntegrationTransactionReportDataReq.Builder.class);
   }
 
-  private int bitField0_;
   public static final int START_FIELD_NUMBER = 3;
   private com.google.protobuf.Timestamp start_;
   /**
@@ -64,7 +63,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasStart() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return start_ != null;
   }
   /**
    * <code>.google.protobuf.Timestamp start = 3 [json_name = "start"];</code>
@@ -90,7 +89,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasEnd() {
-    return ((bitField0_ & 0x00000002) != 0);
+    return end_ != null;
   }
   /**
    * <code>.google.protobuf.Timestamp end = 4 [json_name = "end"];</code>
@@ -268,10 +267,10 @@ java.lang.String defaultValue) {
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (start_ != null) {
       output.writeMessage(3, getStart());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (end_ != null) {
       output.writeMessage(4, getEnd());
     }
     com.google.protobuf.GeneratedMessageV3
@@ -301,11 +300,11 @@ java.lang.String defaultValue) {
     if (size != -1) return size;
 
     size = 0;
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (start_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getStart());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (end_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getEnd());
     }
@@ -546,20 +545,13 @@ java.lang.String defaultValue) {
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.integrations.GetIntegrationTransactionReportDataReq.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getStartFieldBuilder();
-        getEndFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -613,18 +605,15 @@ java.lang.String defaultValue) {
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.integrations.GetIntegrationTransactionReportDataReq result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.start_ = startBuilder_ == null
             ? start_
             : startBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.end_ = endBuilder_ == null
             ? end_
             : endBuilder_.build();
-        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.groupBy_ = internalGetGroupBy();
@@ -642,7 +631,6 @@ java.lang.String defaultValue) {
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.searchAfterSid_ = searchAfterSid_;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -862,10 +850,8 @@ java.lang.String defaultValue) {
       } else {
         startBuilder_.mergeFrom(value);
       }
-      if (start_ != null) {
-        bitField0_ |= 0x00000001;
-        onChanged();
-      }
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -983,10 +969,8 @@ java.lang.String defaultValue) {
       } else {
         endBuilder_.mergeFrom(value);
       }
-      if (end_ != null) {
-        bitField0_ |= 0x00000002;
-        onChanged();
-      }
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**

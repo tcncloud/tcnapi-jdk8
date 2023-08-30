@@ -39,7 +39,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.GetExportHistoryDetailsReq.class, com.tcn.cloud.api.api.v0alpha.GetExportHistoryDetailsReq.Builder.class);
   }
 
-  private int bitField0_;
   public static final int ORG_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object orgId_ = "";
@@ -87,7 +86,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasTimeFrom() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return timeFrom_ != null;
   }
   /**
    * <code>.google.protobuf.Timestamp time_from = 2 [json_name = "timeFrom"];</code>
@@ -113,7 +112,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasTimeTo() {
-    return ((bitField0_ & 0x00000002) != 0);
+    return timeTo_ != null;
   }
   /**
    * <code>.google.protobuf.Timestamp time_to = 3 [json_name = "timeTo"];</code>
@@ -148,10 +147,10 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, orgId_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (timeFrom_ != null) {
       output.writeMessage(2, getTimeFrom());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (timeTo_ != null) {
       output.writeMessage(3, getTimeTo());
     }
     getUnknownFields().writeTo(output);
@@ -166,11 +165,11 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, orgId_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (timeFrom_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getTimeFrom());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (timeTo_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getTimeTo());
     }
@@ -341,20 +340,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.GetExportHistoryDetailsReq.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getTimeFromFieldBuilder();
-        getTimeToFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -407,20 +399,16 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.orgId_ = orgId_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.timeFrom_ = timeFromBuilder_ == null
             ? timeFrom_
             : timeFromBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.timeTo_ = timeToBuilder_ == null
             ? timeTo_
             : timeToBuilder_.build();
-        to_bitField0_ |= 0x00000002;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -678,10 +666,8 @@ private static final long serialVersionUID = 0L;
       } else {
         timeFromBuilder_.mergeFrom(value);
       }
-      if (timeFrom_ != null) {
-        bitField0_ |= 0x00000002;
-        onChanged();
-      }
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -799,10 +785,8 @@ private static final long serialVersionUID = 0L;
       } else {
         timeToBuilder_.mergeFrom(value);
       }
-      if (timeTo_ != null) {
-        bitField0_ |= 0x00000004;
-        onChanged();
-      }
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**

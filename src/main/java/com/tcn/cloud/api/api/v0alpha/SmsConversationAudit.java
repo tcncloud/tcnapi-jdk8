@@ -41,7 +41,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.SmsConversationAudit.class, com.tcn.cloud.api.api.v0alpha.SmsConversationAudit.Builder.class);
   }
 
-  private int bitField0_;
   public static final int SMS_CONVERSATION_AUDIT_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object smsConversationAuditId_ = "";
@@ -211,7 +210,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCreatedOn() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return createdOn_ != null;
   }
   /**
    * <code>.google.protobuf.Timestamp created_on = 8 [json_name = "createdOn"];</code>
@@ -264,7 +263,7 @@ private static final long serialVersionUID = 0L;
     if (agentId_ != 0L) {
       output.writeInt64(7, agentId_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (createdOn_ != null) {
       output.writeMessage(8, getCreatedOn());
     }
     getUnknownFields().writeTo(output);
@@ -301,7 +300,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(7, agentId_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (createdOn_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, getCreatedOn());
     }
@@ -491,19 +490,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.SmsConversationAudit.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getCreatedOnFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -575,14 +568,11 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.agentId_ = agentId_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.createdOn_ = createdOnBuilder_ == null
             ? createdOn_
             : createdOnBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1154,10 +1144,8 @@ private static final long serialVersionUID = 0L;
       } else {
         createdOnBuilder_.mergeFrom(value);
       }
-      if (createdOn_ != null) {
-        bitField0_ |= 0x00000080;
-        onChanged();
-      }
+      bitField0_ |= 0x00000080;
+      onChanged();
       return this;
     }
     /**

@@ -44,7 +44,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.org.BroadcastPreferences.class, com.tcn.cloud.api.api.commons.org.BroadcastPreferences.Builder.class);
   }
 
-  private int bitField0_;
   public static final int ORG_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object orgId_ = "";
@@ -225,7 +224,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasDefaultStartTime() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return defaultStartTime_ != null;
   }
   /**
    * <pre>
@@ -278,7 +277,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasDefaultStopTime() {
-    return ((bitField0_ & 0x00000002) != 0);
+    return defaultStopTime_ != null;
   }
   /**
    * <pre>
@@ -342,13 +341,13 @@ private static final long serialVersionUID = 0L;
     if (startTimeEnabled_ != false) {
       output.writeBool(16, startTimeEnabled_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (defaultStartTime_ != null) {
       output.writeMessage(17, getDefaultStartTime());
     }
     if (stopTimeEnabled_ != false) {
       output.writeBool(18, stopTimeEnabled_);
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (defaultStopTime_ != null) {
       output.writeMessage(19, getDefaultStopTime());
     }
     getUnknownFields().writeTo(output);
@@ -391,7 +390,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(16, startTimeEnabled_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (defaultStartTime_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(17, getDefaultStartTime());
     }
@@ -399,7 +398,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(18, stopTimeEnabled_);
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (defaultStopTime_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(19, getDefaultStopTime());
     }
@@ -612,20 +611,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.org.BroadcastPreferences.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getDefaultStartTimeFieldBuilder();
-        getDefaultStopTimeFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -707,12 +699,10 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.startTimeEnabled_ = startTimeEnabled_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000100) != 0)) {
         result.defaultStartTime_ = defaultStartTimeBuilder_ == null
             ? defaultStartTime_
             : defaultStartTimeBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000200) != 0)) {
         result.stopTimeEnabled_ = stopTimeEnabled_;
@@ -721,9 +711,7 @@ private static final long serialVersionUID = 0L;
         result.defaultStopTime_ = defaultStopTimeBuilder_ == null
             ? defaultStopTime_
             : defaultStopTimeBuilder_.build();
-        to_bitField0_ |= 0x00000002;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1437,10 +1425,8 @@ private static final long serialVersionUID = 0L;
       } else {
         defaultStartTimeBuilder_.mergeFrom(value);
       }
-      if (defaultStartTime_ != null) {
-        bitField0_ |= 0x00000100;
-        onChanged();
-      }
+      bitField0_ |= 0x00000100;
+      onChanged();
       return this;
     }
     /**
@@ -1638,10 +1624,8 @@ private static final long serialVersionUID = 0L;
       } else {
         defaultStopTimeBuilder_.mergeFrom(value);
       }
-      if (defaultStopTime_ != null) {
-        bitField0_ |= 0x00000400;
-        onChanged();
-      }
+      bitField0_ |= 0x00000400;
+      onChanged();
       return this;
     }
     /**

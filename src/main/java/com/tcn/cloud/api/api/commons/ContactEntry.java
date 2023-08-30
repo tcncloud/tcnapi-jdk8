@@ -45,7 +45,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.ContactEntry.class, com.tcn.cloud.api.api.commons.ContactEntry.Builder.class);
   }
 
-  private int bitField0_;
   public static final int CONTACT_ENTRY_SID_FIELD_NUMBER = 1;
   private long contactEntrySid_ = 0L;
   /**
@@ -88,7 +87,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasDateCreated() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return dateCreated_ != null;
   }
   /**
    * <pre>
@@ -126,7 +125,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasDateModified() {
-    return ((bitField0_ & 0x00000002) != 0);
+    return dateModified_ != null;
   }
   /**
    * <pre>
@@ -286,10 +285,10 @@ private static final long serialVersionUID = 0L;
     if (contactListSid_ != 0L) {
       output.writeInt64(2, contactListSid_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (dateCreated_ != null) {
       output.writeMessage(3, getDateCreated());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (dateModified_ != null) {
       output.writeMessage(4, getDateModified());
     }
     for (int i = 0; i < fieldNames_.size(); i++) {
@@ -315,11 +314,11 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(2, contactListSid_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (dateCreated_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getDateCreated());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (dateModified_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getDateModified());
     }
@@ -524,21 +523,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.ContactEntry.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getDateCreatedFieldBuilder();
-        getDateModifiedFieldBuilder();
-        getDataFieldsFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -617,24 +608,20 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.contactListSid_ = contactListSid_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.dateCreated_ = dateCreatedBuilder_ == null
             ? dateCreated_
             : dateCreatedBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.dateModified_ = dateModifiedBuilder_ == null
             ? dateModified_
             : dateModifiedBuilder_.build();
-        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         fieldNames_.makeImmutable();
         result.fieldNames_ = fieldNames_;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -989,10 +976,8 @@ private static final long serialVersionUID = 0L;
       } else {
         dateCreatedBuilder_.mergeFrom(value);
       }
-      if (dateCreated_ != null) {
-        bitField0_ |= 0x00000004;
-        onChanged();
-      }
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -1146,10 +1131,8 @@ private static final long serialVersionUID = 0L;
       } else {
         dateModifiedBuilder_.mergeFrom(value);
       }
-      if (dateModified_ != null) {
-        bitField0_ |= 0x00000008;
-        onChanged();
-      }
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**

@@ -38,7 +38,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.tickets.CreateTicketActionResponse.class, com.tcn.cloud.api.api.v1alpha1.tickets.CreateTicketActionResponse.Builder.class);
   }
 
-  private int bitField0_;
   public static final int TICKET_ACTION_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.api.commons.TicketAction ticketAction_;
   /**
@@ -47,7 +46,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasTicketAction() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return ticketAction_ != null;
   }
   /**
    * <code>.api.commons.TicketAction ticket_action = 1 [json_name = "ticketAction"];</code>
@@ -79,7 +78,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (ticketAction_ != null) {
       output.writeMessage(1, getTicketAction());
     }
     getUnknownFields().writeTo(output);
@@ -91,7 +90,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (ticketAction_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getTicketAction());
     }
@@ -249,19 +248,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.tickets.CreateTicketActionResponse.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getTicketActionFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -305,14 +298,11 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.tickets.CreateTicketActionResponse result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.ticketAction_ = ticketActionBuilder_ == null
             ? ticketAction_
             : ticketActionBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -478,10 +468,8 @@ private static final long serialVersionUID = 0L;
       } else {
         ticketActionBuilder_.mergeFrom(value);
       }
-      if (ticketAction_ != null) {
-        bitField0_ |= 0x00000001;
-        onChanged();
-      }
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**

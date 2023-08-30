@@ -38,7 +38,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.UpdateClientInfoDisplayTemplateRequest.class, com.tcn.cloud.api.api.v0alpha.UpdateClientInfoDisplayTemplateRequest.Builder.class);
   }
 
-  private int bitField0_;
   public static final int CLIENT_INFO_DISPLAY_TEMPLATE_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.api.v0alpha.ClientInfoDisplayTemplate clientInfoDisplayTemplate_;
   /**
@@ -47,7 +46,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasClientInfoDisplayTemplate() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return clientInfoDisplayTemplate_ != null;
   }
   /**
    * <code>.api.v0alpha.ClientInfoDisplayTemplate client_info_display_template = 1 [json_name = "clientInfoDisplayTemplate"];</code>
@@ -79,7 +78,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (clientInfoDisplayTemplate_ != null) {
       output.writeMessage(1, getClientInfoDisplayTemplate());
     }
     getUnknownFields().writeTo(output);
@@ -91,7 +90,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (clientInfoDisplayTemplate_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getClientInfoDisplayTemplate());
     }
@@ -249,19 +248,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.UpdateClientInfoDisplayTemplateRequest.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getClientInfoDisplayTemplateFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -305,14 +298,11 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v0alpha.UpdateClientInfoDisplayTemplateRequest result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.clientInfoDisplayTemplate_ = clientInfoDisplayTemplateBuilder_ == null
             ? clientInfoDisplayTemplate_
             : clientInfoDisplayTemplateBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -478,10 +468,8 @@ private static final long serialVersionUID = 0L;
       } else {
         clientInfoDisplayTemplateBuilder_.mergeFrom(value);
       }
-      if (clientInfoDisplayTemplate_ != null) {
-        bitField0_ |= 0x00000001;
-        onChanged();
-      }
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**

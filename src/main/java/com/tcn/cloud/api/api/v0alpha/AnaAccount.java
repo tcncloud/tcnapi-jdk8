@@ -43,7 +43,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.AnaAccount.class, com.tcn.cloud.api.api.v0alpha.AnaAccount.Builder.class);
   }
 
-  private int bitField0_;
   public static final int UUID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object uuid_ = "";
@@ -102,7 +101,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasRegistrationDate() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return registrationDate_ != null;
   }
   /**
    * <code>.google.protobuf.Timestamp registration_date = 3 [json_name = "registrationDate"];</code>
@@ -319,7 +318,7 @@ private static final long serialVersionUID = 0L;
     if (p3ClientSid_ != 0L) {
       output.writeInt64(2, p3ClientSid_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (registrationDate_ != null) {
       output.writeMessage(3, getRegistrationDate());
     }
     if (java.lang.Double.doubleToRawLongBits(pricePerDoc_) != 0) {
@@ -362,7 +361,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(2, p3ClientSid_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (registrationDate_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getRegistrationDate());
     }
@@ -594,19 +593,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.AnaAccount.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getRegistrationDateFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -666,12 +659,10 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.p3ClientSid_ = p3ClientSid_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.registrationDate_ = registrationDateBuilder_ == null
             ? registrationDate_
             : registrationDateBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.pricePerDoc_ = pricePerDoc_;
@@ -697,7 +688,6 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000400) != 0)) {
         result.currentWeeks_ = currentWeeks_;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1055,10 +1045,8 @@ private static final long serialVersionUID = 0L;
       } else {
         registrationDateBuilder_.mergeFrom(value);
       }
-      if (registrationDate_ != null) {
-        bitField0_ |= 0x00000004;
-        onChanged();
-      }
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**

@@ -51,7 +51,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.integrations.FieldDefinition.class, com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder.class);
   }
 
-  private int bitField0_;
   public static final int NAME_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object name_ = "";
@@ -334,7 +333,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasHelperText() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return helperText_ != null;
   }
   /**
    * <pre>
@@ -395,7 +394,7 @@ private static final long serialVersionUID = 0L;
     if (invoiceType_ != com.tcn.cloud.api.api.commons.integrations.InvoiceDisplayType.UNSPECIFIED.getNumber()) {
       output.writeEnum(7, invoiceType_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (helperText_ != null) {
       output.writeMessage(8, getHelperText());
     }
     getUnknownFields().writeTo(output);
@@ -436,7 +435,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(7, invoiceType_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (helperText_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, getHelperText());
     }
@@ -626,19 +625,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.integrations.FieldDefinition.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getHelperTextFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -712,14 +705,11 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.invoiceType_ = invoiceType_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.helperText_ = helperTextBuilder_ == null
             ? helperText_
             : helperTextBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1611,10 +1601,8 @@ private static final long serialVersionUID = 0L;
       } else {
         helperTextBuilder_.mergeFrom(value);
       }
-      if (helperText_ != null) {
-        bitField0_ |= 0x00000080;
-        onChanged();
-      }
+      bitField0_ |= 0x00000080;
+      onChanged();
       return this;
     }
     /**

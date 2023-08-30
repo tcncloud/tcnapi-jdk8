@@ -42,7 +42,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.CallProfileGroupCalls.class, com.tcn.cloud.api.api.commons.CallProfileGroupCalls.Builder.class);
   }
 
-  private int bitField0_;
   public static final int TOTAL_CALLS_FIELD_NUMBER = 1;
   private int totalCalls_ = 0;
   /**
@@ -62,7 +61,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasDistributionProfile() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return distributionProfile_ != null;
   }
   /**
    * <code>.api.commons.DistributionProfile distribution_profile = 2 [json_name = "distributionProfile"];</code>
@@ -97,7 +96,7 @@ private static final long serialVersionUID = 0L;
     if (totalCalls_ != 0) {
       output.writeInt32(1, totalCalls_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (distributionProfile_ != null) {
       output.writeMessage(2, getDistributionProfile());
     }
     getUnknownFields().writeTo(output);
@@ -113,7 +112,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(1, totalCalls_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (distributionProfile_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getDistributionProfile());
     }
@@ -279,19 +278,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.CallProfileGroupCalls.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getDistributionProfileFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -339,14 +332,11 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.totalCalls_ = totalCalls_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.distributionProfile_ = distributionProfileBuilder_ == null
             ? distributionProfile_
             : distributionProfileBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -552,10 +542,8 @@ private static final long serialVersionUID = 0L;
       } else {
         distributionProfileBuilder_.mergeFrom(value);
       }
-      if (distributionProfile_ != null) {
-        bitField0_ |= 0x00000002;
-        onChanged();
-      }
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**

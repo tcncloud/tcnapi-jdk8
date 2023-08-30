@@ -42,7 +42,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.org.UpdateAgentResponseAutoRulesRequest.class, com.tcn.cloud.api.api.v1alpha1.org.UpdateAgentResponseAutoRulesRequest.Builder.class);
   }
 
-  private int bitField0_;
   public static final int RULESETSID_FIELD_NUMBER = 1;
   private long rulesetSid_ = 0L;
   /**
@@ -70,7 +69,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasRuleset() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return ruleset_ != null;
   }
   /**
    * <pre>
@@ -113,7 +112,7 @@ private static final long serialVersionUID = 0L;
     if (rulesetSid_ != 0L) {
       output.writeInt64(1, rulesetSid_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (ruleset_ != null) {
       output.writeMessage(2, getRuleset());
     }
     getUnknownFields().writeTo(output);
@@ -129,7 +128,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(1, rulesetSid_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (ruleset_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getRuleset());
     }
@@ -296,19 +295,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.org.UpdateAgentResponseAutoRulesRequest.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getRulesetFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -356,14 +349,11 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.rulesetSid_ = rulesetSid_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.ruleset_ = rulesetBuilder_ == null
             ? ruleset_
             : rulesetBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -601,10 +591,8 @@ private static final long serialVersionUID = 0L;
       } else {
         rulesetBuilder_.mergeFrom(value);
       }
-      if (ruleset_ != null) {
-        bitField0_ |= 0x00000002;
-        onChanged();
-      }
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**

@@ -2765,6 +2765,81 @@ public interface ExecuteFlowOrBuilder extends
   com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareAchPaymentOrBuilder getNewzwareAchPaymentOrBuilder();
 
   /**
+   * <code>.api.commons.integrations.ExecuteNewzwareComplaintHistory newzware_complaint_history = 3805 [json_name = "newzwareComplaintHistory"];</code>
+   * @return Whether the newzwareComplaintHistory field is set.
+   */
+  boolean hasNewzwareComplaintHistory();
+  /**
+   * <code>.api.commons.integrations.ExecuteNewzwareComplaintHistory newzware_complaint_history = 3805 [json_name = "newzwareComplaintHistory"];</code>
+   * @return The newzwareComplaintHistory.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareComplaintHistory getNewzwareComplaintHistory();
+  /**
+   * <code>.api.commons.integrations.ExecuteNewzwareComplaintHistory newzware_complaint_history = 3805 [json_name = "newzwareComplaintHistory"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareComplaintHistoryOrBuilder getNewzwareComplaintHistoryOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteNewzwareComplaintUpdate newzware_complaint_update = 3806 [json_name = "newzwareComplaintUpdate"];</code>
+   * @return Whether the newzwareComplaintUpdate field is set.
+   */
+  boolean hasNewzwareComplaintUpdate();
+  /**
+   * <code>.api.commons.integrations.ExecuteNewzwareComplaintUpdate newzware_complaint_update = 3806 [json_name = "newzwareComplaintUpdate"];</code>
+   * @return The newzwareComplaintUpdate.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareComplaintUpdate getNewzwareComplaintUpdate();
+  /**
+   * <code>.api.commons.integrations.ExecuteNewzwareComplaintUpdate newzware_complaint_update = 3806 [json_name = "newzwareComplaintUpdate"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareComplaintUpdateOrBuilder getNewzwareComplaintUpdateOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteNewzwareVacationRestart newzware_vacation_restart = 3807 [json_name = "newzwareVacationRestart"];</code>
+   * @return Whether the newzwareVacationRestart field is set.
+   */
+  boolean hasNewzwareVacationRestart();
+  /**
+   * <code>.api.commons.integrations.ExecuteNewzwareVacationRestart newzware_vacation_restart = 3807 [json_name = "newzwareVacationRestart"];</code>
+   * @return The newzwareVacationRestart.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareVacationRestart getNewzwareVacationRestart();
+  /**
+   * <code>.api.commons.integrations.ExecuteNewzwareVacationRestart newzware_vacation_restart = 3807 [json_name = "newzwareVacationRestart"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareVacationRestartOrBuilder getNewzwareVacationRestartOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteNewzwareVacationUpdate newzware_vacation_update = 3808 [json_name = "newzwareVacationUpdate"];</code>
+   * @return Whether the newzwareVacationUpdate field is set.
+   */
+  boolean hasNewzwareVacationUpdate();
+  /**
+   * <code>.api.commons.integrations.ExecuteNewzwareVacationUpdate newzware_vacation_update = 3808 [json_name = "newzwareVacationUpdate"];</code>
+   * @return The newzwareVacationUpdate.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareVacationUpdate getNewzwareVacationUpdate();
+  /**
+   * <code>.api.commons.integrations.ExecuteNewzwareVacationUpdate newzware_vacation_update = 3808 [json_name = "newzwareVacationUpdate"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareVacationUpdateOrBuilder getNewzwareVacationUpdateOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteNewzwarePhoneLookupMulti newzware_phone_lookup_multi = 3809 [json_name = "newzwarePhoneLookupMulti"];</code>
+   * @return Whether the newzwarePhoneLookupMulti field is set.
+   */
+  boolean hasNewzwarePhoneLookupMulti();
+  /**
+   * <code>.api.commons.integrations.ExecuteNewzwarePhoneLookupMulti newzware_phone_lookup_multi = 3809 [json_name = "newzwarePhoneLookupMulti"];</code>
+   * @return The newzwarePhoneLookupMulti.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwarePhoneLookupMulti getNewzwarePhoneLookupMulti();
+  /**
+   * <code>.api.commons.integrations.ExecuteNewzwarePhoneLookupMulti newzware_phone_lookup_multi = 3809 [json_name = "newzwarePhoneLookupMulti"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwarePhoneLookupMultiOrBuilder getNewzwarePhoneLookupMultiOrBuilder();
+
+  /**
    * <code>.api.commons.integrations.ExecutePriocommerceAchPayment priocommerce_ach_payment = 3901 [json_name = "priocommerceAchPayment"];</code>
    * @return Whether the priocommerceAchPayment field is set.
    */

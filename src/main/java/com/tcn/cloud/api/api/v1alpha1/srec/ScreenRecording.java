@@ -44,7 +44,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.srec.ScreenRecording.class, com.tcn.cloud.api.api.v1alpha1.srec.ScreenRecording.Builder.class);
   }
 
-  private int bitField0_;
   public static final int SESSION_ID_FIELD_NUMBER = 2;
   private long sessionId_ = 0L;
   /**
@@ -166,7 +165,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasStartTime() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return startTime_ != null;
   }
   /**
    * <pre>
@@ -245,7 +244,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(agentLastName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, agentLastName_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (startTime_ != null) {
       output.writeMessage(5, getStartTime());
     }
     if (audioTime_ != 0) {
@@ -273,7 +272,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(agentLastName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, agentLastName_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (startTime_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getStartTime());
     }
@@ -465,19 +464,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.srec.ScreenRecording.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getStartTimeFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -535,12 +528,10 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.agentLastName_ = agentLastName_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.startTime_ = startTimeBuilder_ == null
             ? startTime_
             : startTimeBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.audioTime_ = audioTime_;
@@ -548,7 +539,6 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.audioBytes_ = audioBytes_;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1006,10 +996,8 @@ private static final long serialVersionUID = 0L;
       } else {
         startTimeBuilder_.mergeFrom(value);
       }
-      if (startTime_ != null) {
-        bitField0_ |= 0x00000008;
-        onChanged();
-      }
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**

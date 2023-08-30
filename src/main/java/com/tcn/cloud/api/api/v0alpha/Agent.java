@@ -39,7 +39,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.Agent.class, com.tcn.cloud.api.api.v0alpha.Agent.Builder.class);
   }
 
-  private int bitField0_;
   public static final int AGENT_SID_FIELD_NUMBER = 1;
   private long agentSid_ = 0L;
   /**
@@ -120,7 +119,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAgentId() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return agentId_ != null;
   }
   /**
    * <code>.google.protobuf.Int64Value agent_id = 7 [json_name = "agentId"];</code>
@@ -146,7 +145,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAgentPin() {
-    return ((bitField0_ & 0x00000002) != 0);
+    return agentPin_ != null;
   }
   /**
    * <code>.google.protobuf.Int64Value agent_pin = 8 [json_name = "agentPin"];</code>
@@ -172,7 +171,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAddDate() {
-    return ((bitField0_ & 0x00000004) != 0);
+    return addDate_ != null;
   }
   /**
    * <code>.google.protobuf.Timestamp add_date = 9 [json_name = "addDate"];</code>
@@ -198,7 +197,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasModifyDate() {
-    return ((bitField0_ & 0x00000008) != 0);
+    return modifyDate_ != null;
   }
   /**
    * <code>.google.protobuf.Timestamp modify_date = 10 [json_name = "modifyDate"];</code>
@@ -224,7 +223,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCallbackNumber() {
-    return ((bitField0_ & 0x00000010) != 0);
+    return callbackNumber_ != null;
   }
   /**
    * <code>.google.protobuf.StringValue callback_number = 11 [json_name = "callbackNumber"];</code>
@@ -250,7 +249,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCallbackExtension() {
-    return ((bitField0_ & 0x00000020) != 0);
+    return callbackExtension_ != null;
   }
   /**
    * <code>.google.protobuf.StringValue callback_extension = 12 [json_name = "callbackExtension"];</code>
@@ -276,7 +275,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasHuntGroupSid() {
-    return ((bitField0_ & 0x00000040) != 0);
+    return huntGroupSid_ != null;
   }
   /**
    * <code>.google.protobuf.Int64Value hunt_group_sid = 13 [json_name = "huntGroupSid"];</code>
@@ -302,7 +301,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasSubscriberUsername() {
-    return ((bitField0_ & 0x00000080) != 0);
+    return subscriberUsername_ != null;
   }
   /**
    * <code>.google.protobuf.StringValue subscriber_username = 14 [json_name = "subscriberUsername"];</code>
@@ -328,7 +327,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasPartnerAgentId() {
-    return ((bitField0_ & 0x00000100) != 0);
+    return partnerAgentId_ != null;
   }
   /**
    * <code>.google.protobuf.StringValue partner_agent_id = 15 [json_name = "partnerAgentId"];</code>
@@ -354,7 +353,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasLastPasswordChangeDate() {
-    return ((bitField0_ & 0x00000200) != 0);
+    return lastPasswordChangeDate_ != null;
   }
   /**
    * <code>.google.protobuf.Timestamp last_password_change_date = 16 [json_name = "lastPasswordChangeDate"];</code>
@@ -398,34 +397,34 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(webLogin_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, webLogin_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (agentId_ != null) {
       output.writeMessage(7, getAgentId());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (agentPin_ != null) {
       output.writeMessage(8, getAgentPin());
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
+    if (addDate_ != null) {
       output.writeMessage(9, getAddDate());
     }
-    if (((bitField0_ & 0x00000008) != 0)) {
+    if (modifyDate_ != null) {
       output.writeMessage(10, getModifyDate());
     }
-    if (((bitField0_ & 0x00000010) != 0)) {
+    if (callbackNumber_ != null) {
       output.writeMessage(11, getCallbackNumber());
     }
-    if (((bitField0_ & 0x00000020) != 0)) {
+    if (callbackExtension_ != null) {
       output.writeMessage(12, getCallbackExtension());
     }
-    if (((bitField0_ & 0x00000040) != 0)) {
+    if (huntGroupSid_ != null) {
       output.writeMessage(13, getHuntGroupSid());
     }
-    if (((bitField0_ & 0x00000080) != 0)) {
+    if (subscriberUsername_ != null) {
       output.writeMessage(14, getSubscriberUsername());
     }
-    if (((bitField0_ & 0x00000100) != 0)) {
+    if (partnerAgentId_ != null) {
       output.writeMessage(15, getPartnerAgentId());
     }
-    if (((bitField0_ & 0x00000200) != 0)) {
+    if (lastPasswordChangeDate_ != null) {
       output.writeMessage(16, getLastPasswordChangeDate());
     }
     getUnknownFields().writeTo(output);
@@ -452,43 +451,43 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(webLogin_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, webLogin_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (agentId_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, getAgentId());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (agentPin_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, getAgentPin());
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
+    if (addDate_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(9, getAddDate());
     }
-    if (((bitField0_ & 0x00000008) != 0)) {
+    if (modifyDate_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(10, getModifyDate());
     }
-    if (((bitField0_ & 0x00000010) != 0)) {
+    if (callbackNumber_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(11, getCallbackNumber());
     }
-    if (((bitField0_ & 0x00000020) != 0)) {
+    if (callbackExtension_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(12, getCallbackExtension());
     }
-    if (((bitField0_ & 0x00000040) != 0)) {
+    if (huntGroupSid_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(13, getHuntGroupSid());
     }
-    if (((bitField0_ & 0x00000080) != 0)) {
+    if (subscriberUsername_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(14, getSubscriberUsername());
     }
-    if (((bitField0_ & 0x00000100) != 0)) {
+    if (partnerAgentId_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(15, getPartnerAgentId());
     }
-    if (((bitField0_ & 0x00000200) != 0)) {
+    if (lastPasswordChangeDate_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(16, getLastPasswordChangeDate());
     }
@@ -746,28 +745,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.Agent.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getAgentIdFieldBuilder();
-        getAgentPinFieldBuilder();
-        getAddDateFieldBuilder();
-        getModifyDateFieldBuilder();
-        getCallbackNumberFieldBuilder();
-        getCallbackExtensionFieldBuilder();
-        getHuntGroupSidFieldBuilder();
-        getSubscriberUsernameFieldBuilder();
-        getPartnerAgentIdFieldBuilder();
-        getLastPasswordChangeDateFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -872,68 +856,56 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.webLogin_ = webLogin_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.agentId_ = agentIdBuilder_ == null
             ? agentId_
             : agentIdBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.agentPin_ = agentPinBuilder_ == null
             ? agentPin_
             : agentPinBuilder_.build();
-        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.addDate_ = addDateBuilder_ == null
             ? addDate_
             : addDateBuilder_.build();
-        to_bitField0_ |= 0x00000004;
       }
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.modifyDate_ = modifyDateBuilder_ == null
             ? modifyDate_
             : modifyDateBuilder_.build();
-        to_bitField0_ |= 0x00000008;
       }
       if (((from_bitField0_ & 0x00000100) != 0)) {
         result.callbackNumber_ = callbackNumberBuilder_ == null
             ? callbackNumber_
             : callbackNumberBuilder_.build();
-        to_bitField0_ |= 0x00000010;
       }
       if (((from_bitField0_ & 0x00000200) != 0)) {
         result.callbackExtension_ = callbackExtensionBuilder_ == null
             ? callbackExtension_
             : callbackExtensionBuilder_.build();
-        to_bitField0_ |= 0x00000020;
       }
       if (((from_bitField0_ & 0x00000400) != 0)) {
         result.huntGroupSid_ = huntGroupSidBuilder_ == null
             ? huntGroupSid_
             : huntGroupSidBuilder_.build();
-        to_bitField0_ |= 0x00000040;
       }
       if (((from_bitField0_ & 0x00000800) != 0)) {
         result.subscriberUsername_ = subscriberUsernameBuilder_ == null
             ? subscriberUsername_
             : subscriberUsernameBuilder_.build();
-        to_bitField0_ |= 0x00000080;
       }
       if (((from_bitField0_ & 0x00001000) != 0)) {
         result.partnerAgentId_ = partnerAgentIdBuilder_ == null
             ? partnerAgentId_
             : partnerAgentIdBuilder_.build();
-        to_bitField0_ |= 0x00000100;
       }
       if (((from_bitField0_ & 0x00002000) != 0)) {
         result.lastPasswordChangeDate_ = lastPasswordChangeDateBuilder_ == null
             ? lastPasswordChangeDate_
             : lastPasswordChangeDateBuilder_.build();
-        to_bitField0_ |= 0x00000200;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1391,10 +1363,8 @@ private static final long serialVersionUID = 0L;
       } else {
         agentIdBuilder_.mergeFrom(value);
       }
-      if (agentId_ != null) {
-        bitField0_ |= 0x00000010;
-        onChanged();
-      }
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -1512,10 +1482,8 @@ private static final long serialVersionUID = 0L;
       } else {
         agentPinBuilder_.mergeFrom(value);
       }
-      if (agentPin_ != null) {
-        bitField0_ |= 0x00000020;
-        onChanged();
-      }
+      bitField0_ |= 0x00000020;
+      onChanged();
       return this;
     }
     /**
@@ -1633,10 +1601,8 @@ private static final long serialVersionUID = 0L;
       } else {
         addDateBuilder_.mergeFrom(value);
       }
-      if (addDate_ != null) {
-        bitField0_ |= 0x00000040;
-        onChanged();
-      }
+      bitField0_ |= 0x00000040;
+      onChanged();
       return this;
     }
     /**
@@ -1754,10 +1720,8 @@ private static final long serialVersionUID = 0L;
       } else {
         modifyDateBuilder_.mergeFrom(value);
       }
-      if (modifyDate_ != null) {
-        bitField0_ |= 0x00000080;
-        onChanged();
-      }
+      bitField0_ |= 0x00000080;
+      onChanged();
       return this;
     }
     /**
@@ -1875,10 +1839,8 @@ private static final long serialVersionUID = 0L;
       } else {
         callbackNumberBuilder_.mergeFrom(value);
       }
-      if (callbackNumber_ != null) {
-        bitField0_ |= 0x00000100;
-        onChanged();
-      }
+      bitField0_ |= 0x00000100;
+      onChanged();
       return this;
     }
     /**
@@ -1996,10 +1958,8 @@ private static final long serialVersionUID = 0L;
       } else {
         callbackExtensionBuilder_.mergeFrom(value);
       }
-      if (callbackExtension_ != null) {
-        bitField0_ |= 0x00000200;
-        onChanged();
-      }
+      bitField0_ |= 0x00000200;
+      onChanged();
       return this;
     }
     /**
@@ -2117,10 +2077,8 @@ private static final long serialVersionUID = 0L;
       } else {
         huntGroupSidBuilder_.mergeFrom(value);
       }
-      if (huntGroupSid_ != null) {
-        bitField0_ |= 0x00000400;
-        onChanged();
-      }
+      bitField0_ |= 0x00000400;
+      onChanged();
       return this;
     }
     /**
@@ -2238,10 +2196,8 @@ private static final long serialVersionUID = 0L;
       } else {
         subscriberUsernameBuilder_.mergeFrom(value);
       }
-      if (subscriberUsername_ != null) {
-        bitField0_ |= 0x00000800;
-        onChanged();
-      }
+      bitField0_ |= 0x00000800;
+      onChanged();
       return this;
     }
     /**
@@ -2359,10 +2315,8 @@ private static final long serialVersionUID = 0L;
       } else {
         partnerAgentIdBuilder_.mergeFrom(value);
       }
-      if (partnerAgentId_ != null) {
-        bitField0_ |= 0x00001000;
-        onChanged();
-      }
+      bitField0_ |= 0x00001000;
+      onChanged();
       return this;
     }
     /**
@@ -2480,10 +2434,8 @@ private static final long serialVersionUID = 0L;
       } else {
         lastPasswordChangeDateBuilder_.mergeFrom(value);
       }
-      if (lastPasswordChangeDate_ != null) {
-        bitField0_ |= 0x00002000;
-        onChanged();
-      }
+      bitField0_ |= 0x00002000;
+      onChanged();
       return this;
     }
     /**

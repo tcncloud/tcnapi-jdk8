@@ -39,7 +39,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.callqueue.DequeuePreviewRecordOrCallRes.class, com.tcn.cloud.api.api.v1alpha1.callqueue.DequeuePreviewRecordOrCallRes.Builder.class);
   }
 
-  private int bitField0_;
   public static final int QUEUE_NAME_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object queueName_ = "";
@@ -87,7 +86,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCall() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return call_ != null;
   }
   /**
    * <code>.api.commons.SimpleCallData call = 2 [json_name = "call"];</code>
@@ -113,7 +112,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasRecord() {
-    return ((bitField0_ & 0x00000002) != 0);
+    return record_ != null;
   }
   /**
    * <code>.api.commons.SimpleRecordData record = 3 [json_name = "record"];</code>
@@ -148,10 +147,10 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(queueName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, queueName_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (call_ != null) {
       output.writeMessage(2, getCall());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (record_ != null) {
       output.writeMessage(3, getRecord());
     }
     getUnknownFields().writeTo(output);
@@ -166,11 +165,11 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(queueName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, queueName_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (call_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getCall());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (record_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getRecord());
     }
@@ -341,20 +340,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.callqueue.DequeuePreviewRecordOrCallRes.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getCallFieldBuilder();
-        getRecordFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -407,20 +399,16 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.queueName_ = queueName_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.call_ = callBuilder_ == null
             ? call_
             : callBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.record_ = recordBuilder_ == null
             ? record_
             : recordBuilder_.build();
-        to_bitField0_ |= 0x00000002;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -678,10 +666,8 @@ private static final long serialVersionUID = 0L;
       } else {
         callBuilder_.mergeFrom(value);
       }
-      if (call_ != null) {
-        bitField0_ |= 0x00000002;
-        onChanged();
-      }
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -799,10 +785,8 @@ private static final long serialVersionUID = 0L;
       } else {
         recordBuilder_.mergeFrom(value);
       }
-      if (record_ != null) {
-        bitField0_ |= 0x00000004;
-        onChanged();
-      }
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**

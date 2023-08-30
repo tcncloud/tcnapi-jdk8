@@ -42,7 +42,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.UpdateCustomUnsubscribeLinkRes.class, com.tcn.cloud.api.api.v0alpha.UpdateCustomUnsubscribeLinkRes.Builder.class);
   }
 
-  private int bitField0_;
   public static final int VALIDATED_FIELD_NUMBER = 1;
   private boolean validated_ = false;
   /**
@@ -70,7 +69,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasDateValidated() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return dateValidated_ != null;
   }
   /**
    * <pre>
@@ -113,7 +112,7 @@ private static final long serialVersionUID = 0L;
     if (validated_ != false) {
       output.writeBool(1, validated_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (dateValidated_ != null) {
       output.writeMessage(2, getDateValidated());
     }
     getUnknownFields().writeTo(output);
@@ -129,7 +128,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(1, validated_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (dateValidated_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getDateValidated());
     }
@@ -296,19 +295,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.UpdateCustomUnsubscribeLinkRes.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getDateValidatedFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -356,14 +349,11 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.validated_ = validated_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.dateValidated_ = dateValidatedBuilder_ == null
             ? dateValidated_
             : dateValidatedBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -601,10 +591,8 @@ private static final long serialVersionUID = 0L;
       } else {
         dateValidatedBuilder_.mergeFrom(value);
       }
-      if (dateValidated_ != null) {
-        bitField0_ |= 0x00000002;
-        onChanged();
-      }
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**

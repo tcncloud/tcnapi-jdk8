@@ -42,7 +42,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.wfm.PlacementRule.class, com.tcn.cloud.api.api.v1alpha1.wfm.PlacementRule.Builder.class);
   }
 
-  private int bitField0_;
   public static final int PLACEMENT_RULE_SID_FIELD_NUMBER = 1;
   private long placementRuleSid_ = 0L;
   /**
@@ -160,7 +159,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasMemberSchedulingActivity() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return memberSchedulingActivity_ != null;
   }
   /**
    * <pre>
@@ -221,7 +220,7 @@ private static final long serialVersionUID = 0L;
     if (scheduleScenarioSid_ != 0L) {
       output.writeInt64(7, scheduleScenarioSid_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (memberSchedulingActivity_ != null) {
       output.writeMessage(8, getMemberSchedulingActivity());
     }
     getUnknownFields().writeTo(output);
@@ -261,7 +260,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(7, scheduleScenarioSid_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (memberSchedulingActivity_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, getMemberSchedulingActivity());
     }
@@ -455,19 +454,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.PlacementRule.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getMemberSchedulingActivityFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -539,14 +532,11 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.scheduleScenarioSid_ = scheduleScenarioSid_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.memberSchedulingActivity_ = memberSchedulingActivityBuilder_ == null
             ? memberSchedulingActivity_
             : memberSchedulingActivityBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1096,10 +1086,8 @@ private static final long serialVersionUID = 0L;
       } else {
         memberSchedulingActivityBuilder_.mergeFrom(value);
       }
-      if (memberSchedulingActivity_ != null) {
-        bitField0_ |= 0x00000080;
-        onChanged();
-      }
+      bitField0_ |= 0x00000080;
+      onChanged();
       return this;
     }
     /**

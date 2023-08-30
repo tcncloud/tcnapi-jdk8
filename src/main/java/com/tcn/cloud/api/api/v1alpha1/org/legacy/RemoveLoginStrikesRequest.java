@@ -41,8 +41,7 @@ private static final long serialVersionUID = 0L;
 
   public static final int LOGIN_LOG_SIDS_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private com.google.protobuf.Internal.LongList loginLogSids_ =
-      emptyLongList();
+  private com.google.protobuf.Internal.LongList loginLogSids_;
   /**
    * <code>repeated int64 login_log_sids = 1 [json_name = "loginLogSids"];</code>
    * @return A list containing the loginLogSids.
@@ -304,17 +303,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.org.legacy.RemoveLoginStrikesRequest buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.org.legacy.RemoveLoginStrikesRequest result = new com.tcn.cloud.api.api.v1alpha1.org.legacy.RemoveLoginStrikesRequest(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.org.legacy.RemoveLoginStrikesRequest result) {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        loginLogSids_.makeImmutable();
+        bitField0_ = (bitField0_ & ~0x00000001);
+      }
+      result.loginLogSids_ = loginLogSids_;
+    }
+
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.legacy.RemoveLoginStrikesRequest result) {
       int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        loginLogSids_.makeImmutable();
-        result.loginLogSids_ = loginLogSids_;
-      }
     }
 
     @java.lang.Override
@@ -364,8 +368,7 @@ private static final long serialVersionUID = 0L;
       if (!other.loginLogSids_.isEmpty()) {
         if (loginLogSids_.isEmpty()) {
           loginLogSids_ = other.loginLogSids_;
-          loginLogSids_.makeImmutable();
-          bitField0_ |= 0x00000001;
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           ensureLoginLogSidsIsMutable();
           loginLogSids_.addAll(other.loginLogSids_);
@@ -433,10 +436,10 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Internal.LongList loginLogSids_ = emptyLongList();
     private void ensureLoginLogSidsIsMutable() {
-      if (!loginLogSids_.isModifiable()) {
-        loginLogSids_ = makeMutableCopy(loginLogSids_);
+      if (!((bitField0_ & 0x00000001) != 0)) {
+        loginLogSids_ = mutableCopy(loginLogSids_);
+        bitField0_ |= 0x00000001;
       }
-      bitField0_ |= 0x00000001;
     }
     /**
      * <code>repeated int64 login_log_sids = 1 [json_name = "loginLogSids"];</code>
@@ -444,8 +447,8 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Long>
         getLoginLogSidsList() {
-      loginLogSids_.makeImmutable();
-      return loginLogSids_;
+      return ((bitField0_ & 0x00000001) != 0) ?
+               java.util.Collections.unmodifiableList(loginLogSids_) : loginLogSids_;
     }
     /**
      * <code>repeated int64 login_log_sids = 1 [json_name = "loginLogSids"];</code>
@@ -473,7 +476,6 @@ private static final long serialVersionUID = 0L;
 
       ensureLoginLogSidsIsMutable();
       loginLogSids_.setLong(index, value);
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -486,7 +488,6 @@ private static final long serialVersionUID = 0L;
 
       ensureLoginLogSidsIsMutable();
       loginLogSids_.addLong(value);
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -500,7 +501,6 @@ private static final long serialVersionUID = 0L;
       ensureLoginLogSidsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, loginLogSids_);
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }

@@ -38,7 +38,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.delivery.Source.class, com.tcn.cloud.api.api.v1alpha1.delivery.Source.Builder.class);
   }
 
-  private int bitField0_;
   private int valueCase_ = 0;
   @SuppressWarnings("serial")
   private java.lang.Object value_;
@@ -87,7 +86,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasEncryption() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return encryption_ != null;
   }
   /**
    * <code>.api.commons.Encryption encryption = 1 [json_name = "encryption"];</code>
@@ -150,7 +149,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (encryption_ != null) {
       output.writeMessage(1, getEncryption());
     }
     if (valueCase_ == 2) {
@@ -165,7 +164,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (encryption_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getEncryption());
     }
@@ -344,19 +343,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.delivery.Source.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getEncryptionFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -406,14 +399,11 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.delivery.Source result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.encryption_ = encryptionBuilder_ == null
             ? encryption_
             : encryptionBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     private void buildPartialOneofs(com.tcn.cloud.api.api.v1alpha1.delivery.Source result) {
@@ -619,10 +609,8 @@ private static final long serialVersionUID = 0L;
       } else {
         encryptionBuilder_.mergeFrom(value);
       }
-      if (encryption_ != null) {
-        bitField0_ |= 0x00000001;
-        onChanged();
-      }
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
