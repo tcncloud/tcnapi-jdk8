@@ -5,41 +5,41 @@ package com.tcn.cloud.api.api.commons.workflows;
 
 /**
  * <pre>
- * OmniNodeToAgent removes the conversation from the flow (updates the status)
+ * OmniNodeToMatcher removes the conversation from the flow (updates the status)
  * </pre>
  *
- * Protobuf type {@code api.commons.workflows.OmniNodeToAgent}
+ * Protobuf type {@code api.commons.workflows.OmniNodeToMatcher}
  */
-public final class OmniNodeToAgent extends
+public final class OmniNodeToMatcher extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.commons.workflows.OmniNodeToAgent)
-    OmniNodeToAgentOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.commons.workflows.OmniNodeToMatcher)
+    OmniNodeToMatcherOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use OmniNodeToAgent.newBuilder() to construct.
-  private OmniNodeToAgent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use OmniNodeToMatcher.newBuilder() to construct.
+  private OmniNodeToMatcher(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private OmniNodeToAgent() {
+  private OmniNodeToMatcher() {
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new OmniNodeToAgent();
+    return new OmniNodeToMatcher();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.commons.workflows.OmniProto.internal_static_api_commons_workflows_OmniNodeToAgent_descriptor;
+    return com.tcn.cloud.api.api.commons.workflows.OmniProto.internal_static_api_commons_workflows_OmniNodeToMatcher_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.commons.workflows.OmniProto.internal_static_api_commons_workflows_OmniNodeToAgent_fieldAccessorTable
+    return com.tcn.cloud.api.api.commons.workflows.OmniProto.internal_static_api_commons_workflows_OmniNodeToMatcher_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.commons.workflows.OmniNodeToAgent.class, com.tcn.cloud.api.api.commons.workflows.OmniNodeToAgent.Builder.class);
+            com.tcn.cloud.api.api.commons.workflows.OmniNodeToMatcher.class, com.tcn.cloud.api.api.commons.workflows.OmniNodeToMatcher.Builder.class);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -75,10 +75,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.commons.workflows.OmniNodeToAgent)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.commons.workflows.OmniNodeToMatcher)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.commons.workflows.OmniNodeToAgent other = (com.tcn.cloud.api.api.commons.workflows.OmniNodeToAgent) obj;
+    com.tcn.cloud.api.api.commons.workflows.OmniNodeToMatcher other = (com.tcn.cloud.api.api.commons.workflows.OmniNodeToMatcher) obj;
 
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -96,44 +96,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeToAgent parseFrom(
+  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeToMatcher parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeToAgent parseFrom(
+  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeToMatcher parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeToAgent parseFrom(
+  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeToMatcher parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeToAgent parseFrom(
+  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeToMatcher parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeToAgent parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeToMatcher parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeToAgent parseFrom(
+  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeToMatcher parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeToAgent parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeToMatcher parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeToAgent parseFrom(
+  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeToMatcher parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -141,26 +141,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeToAgent parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeToMatcher parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeToAgent parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeToMatcher parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeToAgent parseFrom(
+  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeToMatcher parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeToAgent parseFrom(
+  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeToMatcher parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -173,7 +173,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.commons.workflows.OmniNodeToAgent prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.commons.workflows.OmniNodeToMatcher prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -190,29 +190,29 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * OmniNodeToAgent removes the conversation from the flow (updates the status)
+   * OmniNodeToMatcher removes the conversation from the flow (updates the status)
    * </pre>
    *
-   * Protobuf type {@code api.commons.workflows.OmniNodeToAgent}
+   * Protobuf type {@code api.commons.workflows.OmniNodeToMatcher}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.commons.workflows.OmniNodeToAgent)
-      com.tcn.cloud.api.api.commons.workflows.OmniNodeToAgentOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.commons.workflows.OmniNodeToMatcher)
+      com.tcn.cloud.api.api.commons.workflows.OmniNodeToMatcherOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.commons.workflows.OmniProto.internal_static_api_commons_workflows_OmniNodeToAgent_descriptor;
+      return com.tcn.cloud.api.api.commons.workflows.OmniProto.internal_static_api_commons_workflows_OmniNodeToMatcher_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.commons.workflows.OmniProto.internal_static_api_commons_workflows_OmniNodeToAgent_fieldAccessorTable
+      return com.tcn.cloud.api.api.commons.workflows.OmniProto.internal_static_api_commons_workflows_OmniNodeToMatcher_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.commons.workflows.OmniNodeToAgent.class, com.tcn.cloud.api.api.commons.workflows.OmniNodeToAgent.Builder.class);
+              com.tcn.cloud.api.api.commons.workflows.OmniNodeToMatcher.class, com.tcn.cloud.api.api.commons.workflows.OmniNodeToMatcher.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.commons.workflows.OmniNodeToAgent.newBuilder()
+    // Construct using com.tcn.cloud.api.api.commons.workflows.OmniNodeToMatcher.newBuilder()
     private Builder() {
 
     }
@@ -231,17 +231,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.commons.workflows.OmniProto.internal_static_api_commons_workflows_OmniNodeToAgent_descriptor;
+      return com.tcn.cloud.api.api.commons.workflows.OmniProto.internal_static_api_commons_workflows_OmniNodeToMatcher_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.workflows.OmniNodeToAgent getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.commons.workflows.OmniNodeToAgent.getDefaultInstance();
+    public com.tcn.cloud.api.api.commons.workflows.OmniNodeToMatcher getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.commons.workflows.OmniNodeToMatcher.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.workflows.OmniNodeToAgent build() {
-      com.tcn.cloud.api.api.commons.workflows.OmniNodeToAgent result = buildPartial();
+    public com.tcn.cloud.api.api.commons.workflows.OmniNodeToMatcher build() {
+      com.tcn.cloud.api.api.commons.workflows.OmniNodeToMatcher result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -249,8 +249,8 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.workflows.OmniNodeToAgent buildPartial() {
-      com.tcn.cloud.api.api.commons.workflows.OmniNodeToAgent result = new com.tcn.cloud.api.api.commons.workflows.OmniNodeToAgent(this);
+    public com.tcn.cloud.api.api.commons.workflows.OmniNodeToMatcher buildPartial() {
+      com.tcn.cloud.api.api.commons.workflows.OmniNodeToMatcher result = new com.tcn.cloud.api.api.commons.workflows.OmniNodeToMatcher(this);
       onBuilt();
       return result;
     }
@@ -289,16 +289,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.commons.workflows.OmniNodeToAgent) {
-        return mergeFrom((com.tcn.cloud.api.api.commons.workflows.OmniNodeToAgent)other);
+      if (other instanceof com.tcn.cloud.api.api.commons.workflows.OmniNodeToMatcher) {
+        return mergeFrom((com.tcn.cloud.api.api.commons.workflows.OmniNodeToMatcher)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.commons.workflows.OmniNodeToAgent other) {
-      if (other == com.tcn.cloud.api.api.commons.workflows.OmniNodeToAgent.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.api.commons.workflows.OmniNodeToMatcher other) {
+      if (other == com.tcn.cloud.api.api.commons.workflows.OmniNodeToMatcher.getDefaultInstance()) return this;
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -353,23 +353,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.commons.workflows.OmniNodeToAgent)
+    // @@protoc_insertion_point(builder_scope:api.commons.workflows.OmniNodeToMatcher)
   }
 
-  // @@protoc_insertion_point(class_scope:api.commons.workflows.OmniNodeToAgent)
-  private static final com.tcn.cloud.api.api.commons.workflows.OmniNodeToAgent DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.commons.workflows.OmniNodeToMatcher)
+  private static final com.tcn.cloud.api.api.commons.workflows.OmniNodeToMatcher DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.workflows.OmniNodeToAgent();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.workflows.OmniNodeToMatcher();
   }
 
-  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeToAgent getDefaultInstance() {
+  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeToMatcher getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<OmniNodeToAgent>
-      PARSER = new com.google.protobuf.AbstractParser<OmniNodeToAgent>() {
+  private static final com.google.protobuf.Parser<OmniNodeToMatcher>
+      PARSER = new com.google.protobuf.AbstractParser<OmniNodeToMatcher>() {
     @java.lang.Override
-    public OmniNodeToAgent parsePartialFrom(
+    public OmniNodeToMatcher parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -388,17 +388,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<OmniNodeToAgent> parser() {
+  public static com.google.protobuf.Parser<OmniNodeToMatcher> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<OmniNodeToAgent> getParserForType() {
+  public com.google.protobuf.Parser<OmniNodeToMatcher> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.workflows.OmniNodeToAgent getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.commons.workflows.OmniNodeToMatcher getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

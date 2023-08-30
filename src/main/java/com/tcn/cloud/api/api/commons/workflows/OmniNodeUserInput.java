@@ -5,85 +5,85 @@ package com.tcn.cloud.api.api.commons.workflows;
 
 /**
  * <pre>
- * OmniNodeError will send an error message to the user and log an error
+ * OmniNodeUserInput will store the text value of an incoming message under a given key in the payload
  * </pre>
  *
- * Protobuf type {@code api.commons.workflows.OmniNodeError}
+ * Protobuf type {@code api.commons.workflows.OmniNodeUserInput}
  */
-public final class OmniNodeError extends
+public final class OmniNodeUserInput extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.commons.workflows.OmniNodeError)
-    OmniNodeErrorOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.commons.workflows.OmniNodeUserInput)
+    OmniNodeUserInputOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use OmniNodeError.newBuilder() to construct.
-  private OmniNodeError(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use OmniNodeUserInput.newBuilder() to construct.
+  private OmniNodeUserInput(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private OmniNodeError() {
-    error_ = "";
+  private OmniNodeUserInput() {
+    storeId_ = "";
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new OmniNodeError();
+    return new OmniNodeUserInput();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.commons.workflows.OmniProto.internal_static_api_commons_workflows_OmniNodeError_descriptor;
+    return com.tcn.cloud.api.api.commons.workflows.OmniProto.internal_static_api_commons_workflows_OmniNodeUserInput_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.commons.workflows.OmniProto.internal_static_api_commons_workflows_OmniNodeError_fieldAccessorTable
+    return com.tcn.cloud.api.api.commons.workflows.OmniProto.internal_static_api_commons_workflows_OmniNodeUserInput_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.commons.workflows.OmniNodeError.class, com.tcn.cloud.api.api.commons.workflows.OmniNodeError.Builder.class);
+            com.tcn.cloud.api.api.commons.workflows.OmniNodeUserInput.class, com.tcn.cloud.api.api.commons.workflows.OmniNodeUserInput.Builder.class);
   }
 
-  public static final int ERROR_FIELD_NUMBER = 1;
+  public static final int STORE_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object error_ = "";
+  private volatile java.lang.Object storeId_ = "";
   /**
    * <pre>
-   * the error message to send/log
+   * the name (key in payload) under which to store the input (e.g. "input_text")
    * </pre>
    *
-   * <code>string error = 1 [json_name = "error"];</code>
-   * @return The error.
+   * <code>string store_id = 1 [json_name = "storeId"];</code>
+   * @return The storeId.
    */
   @java.lang.Override
-  public java.lang.String getError() {
-    java.lang.Object ref = error_;
+  public java.lang.String getStoreId() {
+    java.lang.Object ref = storeId_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      error_ = s;
+      storeId_ = s;
       return s;
     }
   }
   /**
    * <pre>
-   * the error message to send/log
+   * the name (key in payload) under which to store the input (e.g. "input_text")
    * </pre>
    *
-   * <code>string error = 1 [json_name = "error"];</code>
-   * @return The bytes for error.
+   * <code>string store_id = 1 [json_name = "storeId"];</code>
+   * @return The bytes for storeId.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getErrorBytes() {
-    java.lang.Object ref = error_;
+      getStoreIdBytes() {
+    java.lang.Object ref = storeId_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      error_ = b;
+      storeId_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -104,8 +104,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(error_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, error_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(storeId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, storeId_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -116,8 +116,8 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(error_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, error_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(storeId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, storeId_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -129,13 +129,13 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.commons.workflows.OmniNodeError)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.commons.workflows.OmniNodeUserInput)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.commons.workflows.OmniNodeError other = (com.tcn.cloud.api.api.commons.workflows.OmniNodeError) obj;
+    com.tcn.cloud.api.api.commons.workflows.OmniNodeUserInput other = (com.tcn.cloud.api.api.commons.workflows.OmniNodeUserInput) obj;
 
-    if (!getError()
-        .equals(other.getError())) return false;
+    if (!getStoreId()
+        .equals(other.getStoreId())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -147,51 +147,51 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + ERROR_FIELD_NUMBER;
-    hash = (53 * hash) + getError().hashCode();
+    hash = (37 * hash) + STORE_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getStoreId().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeError parseFrom(
+  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeUserInput parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeError parseFrom(
+  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeUserInput parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeError parseFrom(
+  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeUserInput parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeError parseFrom(
+  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeUserInput parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeError parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeUserInput parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeError parseFrom(
+  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeUserInput parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeError parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeUserInput parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeError parseFrom(
+  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeUserInput parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -199,26 +199,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeError parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeUserInput parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeError parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeUserInput parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeError parseFrom(
+  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeUserInput parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeError parseFrom(
+  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeUserInput parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -231,7 +231,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.commons.workflows.OmniNodeError prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.commons.workflows.OmniNodeUserInput prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -248,29 +248,29 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * OmniNodeError will send an error message to the user and log an error
+   * OmniNodeUserInput will store the text value of an incoming message under a given key in the payload
    * </pre>
    *
-   * Protobuf type {@code api.commons.workflows.OmniNodeError}
+   * Protobuf type {@code api.commons.workflows.OmniNodeUserInput}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.commons.workflows.OmniNodeError)
-      com.tcn.cloud.api.api.commons.workflows.OmniNodeErrorOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.commons.workflows.OmniNodeUserInput)
+      com.tcn.cloud.api.api.commons.workflows.OmniNodeUserInputOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.commons.workflows.OmniProto.internal_static_api_commons_workflows_OmniNodeError_descriptor;
+      return com.tcn.cloud.api.api.commons.workflows.OmniProto.internal_static_api_commons_workflows_OmniNodeUserInput_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.commons.workflows.OmniProto.internal_static_api_commons_workflows_OmniNodeError_fieldAccessorTable
+      return com.tcn.cloud.api.api.commons.workflows.OmniProto.internal_static_api_commons_workflows_OmniNodeUserInput_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.commons.workflows.OmniNodeError.class, com.tcn.cloud.api.api.commons.workflows.OmniNodeError.Builder.class);
+              com.tcn.cloud.api.api.commons.workflows.OmniNodeUserInput.class, com.tcn.cloud.api.api.commons.workflows.OmniNodeUserInput.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.commons.workflows.OmniNodeError.newBuilder()
+    // Construct using com.tcn.cloud.api.api.commons.workflows.OmniNodeUserInput.newBuilder()
     private Builder() {
 
     }
@@ -284,24 +284,24 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      error_ = "";
+      storeId_ = "";
       return this;
     }
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.commons.workflows.OmniProto.internal_static_api_commons_workflows_OmniNodeError_descriptor;
+      return com.tcn.cloud.api.api.commons.workflows.OmniProto.internal_static_api_commons_workflows_OmniNodeUserInput_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.workflows.OmniNodeError getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.commons.workflows.OmniNodeError.getDefaultInstance();
+    public com.tcn.cloud.api.api.commons.workflows.OmniNodeUserInput getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.commons.workflows.OmniNodeUserInput.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.workflows.OmniNodeError build() {
-      com.tcn.cloud.api.api.commons.workflows.OmniNodeError result = buildPartial();
+    public com.tcn.cloud.api.api.commons.workflows.OmniNodeUserInput build() {
+      com.tcn.cloud.api.api.commons.workflows.OmniNodeUserInput result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -309,17 +309,17 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.workflows.OmniNodeError buildPartial() {
-      com.tcn.cloud.api.api.commons.workflows.OmniNodeError result = new com.tcn.cloud.api.api.commons.workflows.OmniNodeError(this);
+    public com.tcn.cloud.api.api.commons.workflows.OmniNodeUserInput buildPartial() {
+      com.tcn.cloud.api.api.commons.workflows.OmniNodeUserInput result = new com.tcn.cloud.api.api.commons.workflows.OmniNodeUserInput(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.commons.workflows.OmniNodeError result) {
+    private void buildPartial0(com.tcn.cloud.api.api.commons.workflows.OmniNodeUserInput result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.error_ = error_;
+        result.storeId_ = storeId_;
       }
     }
 
@@ -357,18 +357,18 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.commons.workflows.OmniNodeError) {
-        return mergeFrom((com.tcn.cloud.api.api.commons.workflows.OmniNodeError)other);
+      if (other instanceof com.tcn.cloud.api.api.commons.workflows.OmniNodeUserInput) {
+        return mergeFrom((com.tcn.cloud.api.api.commons.workflows.OmniNodeUserInput)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.commons.workflows.OmniNodeError other) {
-      if (other == com.tcn.cloud.api.api.commons.workflows.OmniNodeError.getDefaultInstance()) return this;
-      if (!other.getError().isEmpty()) {
-        error_ = other.error_;
+    public Builder mergeFrom(com.tcn.cloud.api.api.commons.workflows.OmniNodeUserInput other) {
+      if (other == com.tcn.cloud.api.api.commons.workflows.OmniNodeUserInput.getDefaultInstance()) return this;
+      if (!other.getStoreId().isEmpty()) {
+        storeId_ = other.storeId_;
         bitField0_ |= 0x00000001;
         onChanged();
       }
@@ -399,7 +399,7 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              error_ = input.readStringRequireUtf8();
+              storeId_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000001;
               break;
             } // case 10
@@ -420,22 +420,22 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.lang.Object error_ = "";
+    private java.lang.Object storeId_ = "";
     /**
      * <pre>
-     * the error message to send/log
+     * the name (key in payload) under which to store the input (e.g. "input_text")
      * </pre>
      *
-     * <code>string error = 1 [json_name = "error"];</code>
-     * @return The error.
+     * <code>string store_id = 1 [json_name = "storeId"];</code>
+     * @return The storeId.
      */
-    public java.lang.String getError() {
-      java.lang.Object ref = error_;
+    public java.lang.String getStoreId() {
+      java.lang.Object ref = storeId_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        error_ = s;
+        storeId_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
@@ -443,20 +443,20 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the error message to send/log
+     * the name (key in payload) under which to store the input (e.g. "input_text")
      * </pre>
      *
-     * <code>string error = 1 [json_name = "error"];</code>
-     * @return The bytes for error.
+     * <code>string store_id = 1 [json_name = "storeId"];</code>
+     * @return The bytes for storeId.
      */
     public com.google.protobuf.ByteString
-        getErrorBytes() {
-      java.lang.Object ref = error_;
+        getStoreIdBytes() {
+      java.lang.Object ref = storeId_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        error_ = b;
+        storeId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -464,49 +464,49 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the error message to send/log
+     * the name (key in payload) under which to store the input (e.g. "input_text")
      * </pre>
      *
-     * <code>string error = 1 [json_name = "error"];</code>
-     * @param value The error to set.
+     * <code>string store_id = 1 [json_name = "storeId"];</code>
+     * @param value The storeId to set.
      * @return This builder for chaining.
      */
-    public Builder setError(
+    public Builder setStoreId(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      error_ = value;
+      storeId_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * the error message to send/log
+     * the name (key in payload) under which to store the input (e.g. "input_text")
      * </pre>
      *
-     * <code>string error = 1 [json_name = "error"];</code>
+     * <code>string store_id = 1 [json_name = "storeId"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearError() {
-      error_ = getDefaultInstance().getError();
+    public Builder clearStoreId() {
+      storeId_ = getDefaultInstance().getStoreId();
       bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * the error message to send/log
+     * the name (key in payload) under which to store the input (e.g. "input_text")
      * </pre>
      *
-     * <code>string error = 1 [json_name = "error"];</code>
-     * @param value The bytes for error to set.
+     * <code>string store_id = 1 [json_name = "storeId"];</code>
+     * @param value The bytes for storeId to set.
      * @return This builder for chaining.
      */
-    public Builder setErrorBytes(
+    public Builder setStoreIdBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      error_ = value;
+      storeId_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
@@ -524,23 +524,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.commons.workflows.OmniNodeError)
+    // @@protoc_insertion_point(builder_scope:api.commons.workflows.OmniNodeUserInput)
   }
 
-  // @@protoc_insertion_point(class_scope:api.commons.workflows.OmniNodeError)
-  private static final com.tcn.cloud.api.api.commons.workflows.OmniNodeError DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.commons.workflows.OmniNodeUserInput)
+  private static final com.tcn.cloud.api.api.commons.workflows.OmniNodeUserInput DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.workflows.OmniNodeError();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.workflows.OmniNodeUserInput();
   }
 
-  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeError getDefaultInstance() {
+  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeUserInput getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<OmniNodeError>
-      PARSER = new com.google.protobuf.AbstractParser<OmniNodeError>() {
+  private static final com.google.protobuf.Parser<OmniNodeUserInput>
+      PARSER = new com.google.protobuf.AbstractParser<OmniNodeUserInput>() {
     @java.lang.Override
-    public OmniNodeError parsePartialFrom(
+    public OmniNodeUserInput parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -559,17 +559,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<OmniNodeError> parser() {
+  public static com.google.protobuf.Parser<OmniNodeUserInput> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<OmniNodeError> getParserForType() {
+  public com.google.protobuf.Parser<OmniNodeUserInput> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.workflows.OmniNodeError getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.commons.workflows.OmniNodeUserInput getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

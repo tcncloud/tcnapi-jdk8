@@ -5,23 +5,22 @@ package com.tcn.cloud.api.api.commons.workflows;
 
 /**
  * <pre>
- * OmniNodePrompt is the PoC all-in-one version to send a message (optionally displaying options) and store the user input
+ * OmniNodeSendMessage will send a message, displaying options if provided
  * </pre>
  *
- * Protobuf type {@code api.commons.workflows.OmniNodePrompt}
+ * Protobuf type {@code api.commons.workflows.OmniNodeSendMessage}
  */
-public final class OmniNodePrompt extends
+public final class OmniNodeSendMessage extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.commons.workflows.OmniNodePrompt)
-    OmniNodePromptOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.commons.workflows.OmniNodeSendMessage)
+    OmniNodeSendMessageOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use OmniNodePrompt.newBuilder() to construct.
-  private OmniNodePrompt(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use OmniNodeSendMessage.newBuilder() to construct.
+  private OmniNodeSendMessage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private OmniNodePrompt() {
+  private OmniNodeSendMessage() {
     prompt_ = "";
-    storeTo_ = "";
     options_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
   }
@@ -30,20 +29,20 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new OmniNodePrompt();
+    return new OmniNodeSendMessage();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.commons.workflows.OmniProto.internal_static_api_commons_workflows_OmniNodePrompt_descriptor;
+    return com.tcn.cloud.api.api.commons.workflows.OmniProto.internal_static_api_commons_workflows_OmniNodeSendMessage_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.commons.workflows.OmniProto.internal_static_api_commons_workflows_OmniNodePrompt_fieldAccessorTable
+    return com.tcn.cloud.api.api.commons.workflows.OmniProto.internal_static_api_commons_workflows_OmniNodeSendMessage_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.commons.workflows.OmniNodePrompt.class, com.tcn.cloud.api.api.commons.workflows.OmniNodePrompt.Builder.class);
+            com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage.class, com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage.Builder.class);
   }
 
   public static final int PROMPT_FIELD_NUMBER = 1;
@@ -93,63 +92,16 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int STORE_TO_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object storeTo_ = "";
-  /**
-   * <pre>
-   * the name (key in payload) under which to store the user input
-   * </pre>
-   *
-   * <code>string store_to = 2 [json_name = "storeTo"];</code>
-   * @return The storeTo.
-   */
-  @java.lang.Override
-  public java.lang.String getStoreTo() {
-    java.lang.Object ref = storeTo_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      storeTo_ = s;
-      return s;
-    }
-  }
-  /**
-   * <pre>
-   * the name (key in payload) under which to store the user input
-   * </pre>
-   *
-   * <code>string store_to = 2 [json_name = "storeTo"];</code>
-   * @return The bytes for storeTo.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getStoreToBytes() {
-    java.lang.Object ref = storeTo_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      storeTo_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int OPTIONS_FIELD_NUMBER = 3;
+  public static final int OPTIONS_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
   private com.google.protobuf.LazyStringArrayList options_ =
       com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
-   * a list of options to display along with the prompt
+   * the list of options to select from as the correct response
    * </pre>
    *
-   * <code>repeated string options = 3 [json_name = "options"];</code>
+   * <code>repeated string options = 2 [json_name = "options"];</code>
    * @return A list containing the options.
    */
   public com.google.protobuf.ProtocolStringList
@@ -158,10 +110,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * a list of options to display along with the prompt
+   * the list of options to select from as the correct response
    * </pre>
    *
-   * <code>repeated string options = 3 [json_name = "options"];</code>
+   * <code>repeated string options = 2 [json_name = "options"];</code>
    * @return The count of options.
    */
   public int getOptionsCount() {
@@ -169,10 +121,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * a list of options to display along with the prompt
+   * the list of options to select from as the correct response
    * </pre>
    *
-   * <code>repeated string options = 3 [json_name = "options"];</code>
+   * <code>repeated string options = 2 [json_name = "options"];</code>
    * @param index The index of the element to return.
    * @return The options at the given index.
    */
@@ -181,10 +133,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * a list of options to display along with the prompt
+   * the list of options to select from as the correct response
    * </pre>
    *
-   * <code>repeated string options = 3 [json_name = "options"];</code>
+   * <code>repeated string options = 2 [json_name = "options"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the options at the given index.
    */
@@ -210,11 +162,8 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(prompt_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, prompt_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(storeTo_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, storeTo_);
-    }
     for (int i = 0; i < options_.size(); i++) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, options_.getRaw(i));
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, options_.getRaw(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -227,9 +176,6 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(prompt_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, prompt_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(storeTo_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, storeTo_);
     }
     {
       int dataSize = 0;
@@ -249,15 +195,13 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.commons.workflows.OmniNodePrompt)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.commons.workflows.OmniNodePrompt other = (com.tcn.cloud.api.api.commons.workflows.OmniNodePrompt) obj;
+    com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage other = (com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage) obj;
 
     if (!getPrompt()
         .equals(other.getPrompt())) return false;
-    if (!getStoreTo()
-        .equals(other.getStoreTo())) return false;
     if (!getOptionsList()
         .equals(other.getOptionsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -273,8 +217,6 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + PROMPT_FIELD_NUMBER;
     hash = (53 * hash) + getPrompt().hashCode();
-    hash = (37 * hash) + STORE_TO_FIELD_NUMBER;
-    hash = (53 * hash) + getStoreTo().hashCode();
     if (getOptionsCount() > 0) {
       hash = (37 * hash) + OPTIONS_FIELD_NUMBER;
       hash = (53 * hash) + getOptionsList().hashCode();
@@ -284,44 +226,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.commons.workflows.OmniNodePrompt parseFrom(
+  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.workflows.OmniNodePrompt parseFrom(
+  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.workflows.OmniNodePrompt parseFrom(
+  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.workflows.OmniNodePrompt parseFrom(
+  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.workflows.OmniNodePrompt parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.workflows.OmniNodePrompt parseFrom(
+  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.workflows.OmniNodePrompt parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.commons.workflows.OmniNodePrompt parseFrom(
+  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -329,26 +271,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.commons.workflows.OmniNodePrompt parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.commons.workflows.OmniNodePrompt parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.workflows.OmniNodePrompt parseFrom(
+  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.commons.workflows.OmniNodePrompt parseFrom(
+  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -361,7 +303,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.commons.workflows.OmniNodePrompt prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -378,29 +320,29 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * OmniNodePrompt is the PoC all-in-one version to send a message (optionally displaying options) and store the user input
+   * OmniNodeSendMessage will send a message, displaying options if provided
    * </pre>
    *
-   * Protobuf type {@code api.commons.workflows.OmniNodePrompt}
+   * Protobuf type {@code api.commons.workflows.OmniNodeSendMessage}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.commons.workflows.OmniNodePrompt)
-      com.tcn.cloud.api.api.commons.workflows.OmniNodePromptOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.commons.workflows.OmniNodeSendMessage)
+      com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessageOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.commons.workflows.OmniProto.internal_static_api_commons_workflows_OmniNodePrompt_descriptor;
+      return com.tcn.cloud.api.api.commons.workflows.OmniProto.internal_static_api_commons_workflows_OmniNodeSendMessage_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.commons.workflows.OmniProto.internal_static_api_commons_workflows_OmniNodePrompt_fieldAccessorTable
+      return com.tcn.cloud.api.api.commons.workflows.OmniProto.internal_static_api_commons_workflows_OmniNodeSendMessage_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.commons.workflows.OmniNodePrompt.class, com.tcn.cloud.api.api.commons.workflows.OmniNodePrompt.Builder.class);
+              com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage.class, com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.commons.workflows.OmniNodePrompt.newBuilder()
+    // Construct using com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage.newBuilder()
     private Builder() {
 
     }
@@ -415,7 +357,6 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       prompt_ = "";
-      storeTo_ = "";
       options_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
@@ -424,17 +365,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.commons.workflows.OmniProto.internal_static_api_commons_workflows_OmniNodePrompt_descriptor;
+      return com.tcn.cloud.api.api.commons.workflows.OmniProto.internal_static_api_commons_workflows_OmniNodeSendMessage_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.workflows.OmniNodePrompt getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.commons.workflows.OmniNodePrompt.getDefaultInstance();
+    public com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.workflows.OmniNodePrompt build() {
-      com.tcn.cloud.api.api.commons.workflows.OmniNodePrompt result = buildPartial();
+    public com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage build() {
+      com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -442,22 +383,19 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.workflows.OmniNodePrompt buildPartial() {
-      com.tcn.cloud.api.api.commons.workflows.OmniNodePrompt result = new com.tcn.cloud.api.api.commons.workflows.OmniNodePrompt(this);
+    public com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage buildPartial() {
+      com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage result = new com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.commons.workflows.OmniNodePrompt result) {
+    private void buildPartial0(com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.prompt_ = prompt_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.storeTo_ = storeTo_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
         options_.makeImmutable();
         result.options_ = options_;
       }
@@ -497,30 +435,25 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.commons.workflows.OmniNodePrompt) {
-        return mergeFrom((com.tcn.cloud.api.api.commons.workflows.OmniNodePrompt)other);
+      if (other instanceof com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage) {
+        return mergeFrom((com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.commons.workflows.OmniNodePrompt other) {
-      if (other == com.tcn.cloud.api.api.commons.workflows.OmniNodePrompt.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage other) {
+      if (other == com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage.getDefaultInstance()) return this;
       if (!other.getPrompt().isEmpty()) {
         prompt_ = other.prompt_;
         bitField0_ |= 0x00000001;
         onChanged();
       }
-      if (!other.getStoreTo().isEmpty()) {
-        storeTo_ = other.storeTo_;
-        bitField0_ |= 0x00000002;
-        onChanged();
-      }
       if (!other.options_.isEmpty()) {
         if (options_.isEmpty()) {
           options_ = other.options_;
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000002;
         } else {
           ensureOptionsIsMutable();
           options_.addAll(other.options_);
@@ -559,16 +492,11 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 10
             case 18: {
-              storeTo_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
-            case 26: {
               java.lang.String s = input.readStringRequireUtf8();
               ensureOptionsIsMutable();
               options_.add(s);
               break;
-            } // case 26
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -678,112 +606,20 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object storeTo_ = "";
-    /**
-     * <pre>
-     * the name (key in payload) under which to store the user input
-     * </pre>
-     *
-     * <code>string store_to = 2 [json_name = "storeTo"];</code>
-     * @return The storeTo.
-     */
-    public java.lang.String getStoreTo() {
-      java.lang.Object ref = storeTo_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        storeTo_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <pre>
-     * the name (key in payload) under which to store the user input
-     * </pre>
-     *
-     * <code>string store_to = 2 [json_name = "storeTo"];</code>
-     * @return The bytes for storeTo.
-     */
-    public com.google.protobuf.ByteString
-        getStoreToBytes() {
-      java.lang.Object ref = storeTo_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        storeTo_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <pre>
-     * the name (key in payload) under which to store the user input
-     * </pre>
-     *
-     * <code>string store_to = 2 [json_name = "storeTo"];</code>
-     * @param value The storeTo to set.
-     * @return This builder for chaining.
-     */
-    public Builder setStoreTo(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      storeTo_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * the name (key in payload) under which to store the user input
-     * </pre>
-     *
-     * <code>string store_to = 2 [json_name = "storeTo"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearStoreTo() {
-      storeTo_ = getDefaultInstance().getStoreTo();
-      bitField0_ = (bitField0_ & ~0x00000002);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * the name (key in payload) under which to store the user input
-     * </pre>
-     *
-     * <code>string store_to = 2 [json_name = "storeTo"];</code>
-     * @param value The bytes for storeTo to set.
-     * @return This builder for chaining.
-     */
-    public Builder setStoreToBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      storeTo_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-
     private com.google.protobuf.LazyStringArrayList options_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureOptionsIsMutable() {
       if (!options_.isModifiable()) {
         options_ = new com.google.protobuf.LazyStringArrayList(options_);
       }
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
     }
     /**
      * <pre>
-     * a list of options to display along with the prompt
+     * the list of options to select from as the correct response
      * </pre>
      *
-     * <code>repeated string options = 3 [json_name = "options"];</code>
+     * <code>repeated string options = 2 [json_name = "options"];</code>
      * @return A list containing the options.
      */
     public com.google.protobuf.ProtocolStringList
@@ -793,10 +629,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * a list of options to display along with the prompt
+     * the list of options to select from as the correct response
      * </pre>
      *
-     * <code>repeated string options = 3 [json_name = "options"];</code>
+     * <code>repeated string options = 2 [json_name = "options"];</code>
      * @return The count of options.
      */
     public int getOptionsCount() {
@@ -804,10 +640,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * a list of options to display along with the prompt
+     * the list of options to select from as the correct response
      * </pre>
      *
-     * <code>repeated string options = 3 [json_name = "options"];</code>
+     * <code>repeated string options = 2 [json_name = "options"];</code>
      * @param index The index of the element to return.
      * @return The options at the given index.
      */
@@ -816,10 +652,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * a list of options to display along with the prompt
+     * the list of options to select from as the correct response
      * </pre>
      *
-     * <code>repeated string options = 3 [json_name = "options"];</code>
+     * <code>repeated string options = 2 [json_name = "options"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the options at the given index.
      */
@@ -829,10 +665,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * a list of options to display along with the prompt
+     * the list of options to select from as the correct response
      * </pre>
      *
-     * <code>repeated string options = 3 [json_name = "options"];</code>
+     * <code>repeated string options = 2 [json_name = "options"];</code>
      * @param index The index to set the value at.
      * @param value The options to set.
      * @return This builder for chaining.
@@ -842,16 +678,16 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureOptionsIsMutable();
       options_.set(index, value);
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * a list of options to display along with the prompt
+     * the list of options to select from as the correct response
      * </pre>
      *
-     * <code>repeated string options = 3 [json_name = "options"];</code>
+     * <code>repeated string options = 2 [json_name = "options"];</code>
      * @param value The options to add.
      * @return This builder for chaining.
      */
@@ -860,16 +696,16 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureOptionsIsMutable();
       options_.add(value);
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * a list of options to display along with the prompt
+     * the list of options to select from as the correct response
      * </pre>
      *
-     * <code>repeated string options = 3 [json_name = "options"];</code>
+     * <code>repeated string options = 2 [json_name = "options"];</code>
      * @param values The options to add.
      * @return This builder for chaining.
      */
@@ -878,31 +714,31 @@ private static final long serialVersionUID = 0L;
       ensureOptionsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, options_);
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * a list of options to display along with the prompt
+     * the list of options to select from as the correct response
      * </pre>
      *
-     * <code>repeated string options = 3 [json_name = "options"];</code>
+     * <code>repeated string options = 2 [json_name = "options"];</code>
      * @return This builder for chaining.
      */
     public Builder clearOptions() {
       options_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000004);;
+      bitField0_ = (bitField0_ & ~0x00000002);;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * a list of options to display along with the prompt
+     * the list of options to select from as the correct response
      * </pre>
      *
-     * <code>repeated string options = 3 [json_name = "options"];</code>
+     * <code>repeated string options = 2 [json_name = "options"];</code>
      * @param value The bytes of the options to add.
      * @return This builder for chaining.
      */
@@ -912,7 +748,7 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureOptionsIsMutable();
       options_.add(value);
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -929,23 +765,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.commons.workflows.OmniNodePrompt)
+    // @@protoc_insertion_point(builder_scope:api.commons.workflows.OmniNodeSendMessage)
   }
 
-  // @@protoc_insertion_point(class_scope:api.commons.workflows.OmniNodePrompt)
-  private static final com.tcn.cloud.api.api.commons.workflows.OmniNodePrompt DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.commons.workflows.OmniNodeSendMessage)
+  private static final com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.workflows.OmniNodePrompt();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage();
   }
 
-  public static com.tcn.cloud.api.api.commons.workflows.OmniNodePrompt getDefaultInstance() {
+  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<OmniNodePrompt>
-      PARSER = new com.google.protobuf.AbstractParser<OmniNodePrompt>() {
+  private static final com.google.protobuf.Parser<OmniNodeSendMessage>
+      PARSER = new com.google.protobuf.AbstractParser<OmniNodeSendMessage>() {
     @java.lang.Override
-    public OmniNodePrompt parsePartialFrom(
+    public OmniNodeSendMessage parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -964,17 +800,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<OmniNodePrompt> parser() {
+  public static com.google.protobuf.Parser<OmniNodeSendMessage> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<OmniNodePrompt> getParserForType() {
+  public com.google.protobuf.Parser<OmniNodeSendMessage> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.workflows.OmniNodePrompt getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

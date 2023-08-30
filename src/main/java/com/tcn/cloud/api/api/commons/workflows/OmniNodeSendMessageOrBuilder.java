@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.commons.workflows;
 
-public interface OmniNodePromptOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.commons.workflows.OmniNodePrompt)
+public interface OmniNodeSendMessageOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.commons.workflows.OmniNodeSendMessage)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -29,59 +29,39 @@ public interface OmniNodePromptOrBuilder extends
 
   /**
    * <pre>
-   * the name (key in payload) under which to store the user input
+   * the list of options to select from as the correct response
    * </pre>
    *
-   * <code>string store_to = 2 [json_name = "storeTo"];</code>
-   * @return The storeTo.
-   */
-  java.lang.String getStoreTo();
-  /**
-   * <pre>
-   * the name (key in payload) under which to store the user input
-   * </pre>
-   *
-   * <code>string store_to = 2 [json_name = "storeTo"];</code>
-   * @return The bytes for storeTo.
-   */
-  com.google.protobuf.ByteString
-      getStoreToBytes();
-
-  /**
-   * <pre>
-   * a list of options to display along with the prompt
-   * </pre>
-   *
-   * <code>repeated string options = 3 [json_name = "options"];</code>
+   * <code>repeated string options = 2 [json_name = "options"];</code>
    * @return A list containing the options.
    */
   java.util.List<java.lang.String>
       getOptionsList();
   /**
    * <pre>
-   * a list of options to display along with the prompt
+   * the list of options to select from as the correct response
    * </pre>
    *
-   * <code>repeated string options = 3 [json_name = "options"];</code>
+   * <code>repeated string options = 2 [json_name = "options"];</code>
    * @return The count of options.
    */
   int getOptionsCount();
   /**
    * <pre>
-   * a list of options to display along with the prompt
+   * the list of options to select from as the correct response
    * </pre>
    *
-   * <code>repeated string options = 3 [json_name = "options"];</code>
+   * <code>repeated string options = 2 [json_name = "options"];</code>
    * @param index The index of the element to return.
    * @return The options at the given index.
    */
   java.lang.String getOptions(int index);
   /**
    * <pre>
-   * a list of options to display along with the prompt
+   * the list of options to select from as the correct response
    * </pre>
    *
-   * <code>repeated string options = 3 [json_name = "options"];</code>
+   * <code>repeated string options = 2 [json_name = "options"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the options at the given index.
    */
