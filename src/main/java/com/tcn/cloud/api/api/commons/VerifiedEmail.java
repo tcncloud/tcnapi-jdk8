@@ -43,7 +43,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.VerifiedEmail.class, com.tcn.cloud.api.api.commons.VerifiedEmail.Builder.class);
   }
 
-  private int bitField0_;
   public static final int VERIFIED_EMAIL_SID_FIELD_NUMBER = 1;
   private long verifiedEmailSid_ = 0L;
   /**
@@ -133,7 +132,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCreatedOn() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return createdOn_ != null;
   }
   /**
    * <pre>
@@ -171,7 +170,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasVerifiedOn() {
-    return ((bitField0_ & 0x00000002) != 0);
+    return verifiedOn_ != null;
   }
   /**
    * <pre>
@@ -224,7 +223,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasDescription() {
-    return ((bitField0_ & 0x00000004) != 0);
+    return description_ != null;
   }
   /**
    * <pre>
@@ -273,16 +272,16 @@ private static final long serialVersionUID = 0L;
     if (verified_ != false) {
       output.writeBool(4, verified_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (createdOn_ != null) {
       output.writeMessage(5, getCreatedOn());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (verifiedOn_ != null) {
       output.writeMessage(6, getVerifiedOn());
     }
     if (deleted_ != false) {
       output.writeBool(7, deleted_);
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
+    if (description_ != null) {
       output.writeMessage(8, getDescription());
     }
     getUnknownFields().writeTo(output);
@@ -305,11 +304,11 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(4, verified_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (createdOn_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getCreatedOn());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (verifiedOn_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, getVerifiedOn());
     }
@@ -317,7 +316,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(7, deleted_);
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
+    if (description_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, getDescription());
     }
@@ -516,21 +515,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.VerifiedEmail.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getCreatedOnFieldBuilder();
-        getVerifiedOnFieldBuilder();
-        getDescriptionFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -597,18 +588,15 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.verified_ = verified_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.createdOn_ = createdOnBuilder_ == null
             ? createdOn_
             : createdOnBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.verifiedOn_ = verifiedOnBuilder_ == null
             ? verifiedOn_
             : verifiedOnBuilder_.build();
-        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.deleted_ = deleted_;
@@ -617,9 +605,7 @@ private static final long serialVersionUID = 0L;
         result.description_ = descriptionBuilder_ == null
             ? description_
             : descriptionBuilder_.build();
-        to_bitField0_ |= 0x00000004;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1039,10 +1025,8 @@ private static final long serialVersionUID = 0L;
       } else {
         createdOnBuilder_.mergeFrom(value);
       }
-      if (createdOn_ != null) {
-        bitField0_ |= 0x00000008;
-        onChanged();
-      }
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -1196,10 +1180,8 @@ private static final long serialVersionUID = 0L;
       } else {
         verifiedOnBuilder_.mergeFrom(value);
       }
-      if (verifiedOn_ != null) {
-        bitField0_ |= 0x00000010;
-        onChanged();
-      }
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -1397,10 +1379,8 @@ private static final long serialVersionUID = 0L;
       } else {
         descriptionBuilder_.mergeFrom(value);
       }
-      if (description_ != null) {
-        bitField0_ |= 0x00000040;
-        onChanged();
-      }
+      bitField0_ |= 0x00000040;
+      onChanged();
       return this;
     }
     /**

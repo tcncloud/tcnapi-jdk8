@@ -46,7 +46,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.org.VoiceAnalyticsPreferences.class, com.tcn.cloud.api.api.commons.org.VoiceAnalyticsPreferences.Builder.class);
   }
 
-  private int bitField0_;
   public static final int ORG_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object orgId_ = "";
@@ -188,7 +187,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasNotify() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return notify_ != null;
   }
   /**
    * <pre>
@@ -226,7 +225,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasBillingNotify() {
-    return ((bitField0_ & 0x00000002) != 0);
+    return billingNotify_ != null;
   }
   /**
    * <pre>
@@ -371,10 +370,10 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < redact_.size(); i++) {
       output.writeMessage(3, redact_.get(i));
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (notify_ != null) {
       output.writeMessage(4, getNotify());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (billingNotify_ != null) {
       output.writeMessage(5, getBillingNotify());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(numberFormat_)) {
@@ -409,11 +408,11 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, redact_.get(i));
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (notify_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getNotify());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (billingNotify_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getBillingNotify());
     }
@@ -632,21 +631,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.org.VoiceAnalyticsPreferences.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getRedactFieldBuilder();
-        getNotifyFieldBuilder();
-        getBillingNotifyFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -727,18 +718,15 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.enabled_ = enabled_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.notify_ = notifyBuilder_ == null
             ? notify_
             : notifyBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.billingNotify_ = billingNotifyBuilder_ == null
             ? billingNotify_
             : billingNotifyBuilder_.build();
-        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.numberFormat_ = numberFormat_;
@@ -752,7 +740,6 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000100) != 0)) {
         result.talkOverThreshold_ = talkOverThreshold_;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1508,10 +1495,8 @@ private static final long serialVersionUID = 0L;
       } else {
         notifyBuilder_.mergeFrom(value);
       }
-      if (notify_ != null) {
-        bitField0_ |= 0x00000008;
-        onChanged();
-      }
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -1665,10 +1650,8 @@ private static final long serialVersionUID = 0L;
       } else {
         billingNotifyBuilder_.mergeFrom(value);
       }
-      if (billingNotify_ != null) {
-        bitField0_ |= 0x00000010;
-        onChanged();
-      }
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**

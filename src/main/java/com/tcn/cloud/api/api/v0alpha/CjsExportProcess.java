@@ -42,7 +42,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.CjsExportProcess.class, com.tcn.cloud.api.api.v0alpha.CjsExportProcess.Builder.class);
   }
 
-  private int bitField0_;
   public static final int CJS_COLLECTION_ID_FIELD_NUMBER = 3;
   @SuppressWarnings("serial")
   private volatile java.lang.Object cjsCollectionId_ = "";
@@ -104,7 +103,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasHeader() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return header_ != null;
   }
   /**
    * <pre>
@@ -301,7 +300,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cjsCollectionId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, cjsCollectionId_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (header_ != null) {
       output.writeMessage(4, getHeader());
     }
     if (runType_ != com.tcn.cloud.api.api.commons.RunType.RUN_TYPE_ENABLED.getNumber()) {
@@ -331,7 +330,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cjsCollectionId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, cjsCollectionId_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (header_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getHeader());
     }
@@ -532,19 +531,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.CjsExportProcess.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getHeaderFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -597,12 +590,10 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.cjsCollectionId_ = cjsCollectionId_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.header_ = headerBuilder_ == null
             ? header_
             : headerBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.runType_ = runType_;
@@ -619,7 +610,6 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.updateKeyField_ = updateKeyField_;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -956,10 +946,8 @@ private static final long serialVersionUID = 0L;
       } else {
         headerBuilder_.mergeFrom(value);
       }
-      if (header_ != null) {
-        bitField0_ |= 0x00000002;
-        onChanged();
-      }
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**

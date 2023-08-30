@@ -49,7 +49,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.org.legacy.GetPermissionsResponse.class, com.tcn.cloud.api.api.v1alpha1.org.legacy.GetPermissionsResponse.Builder.class);
   }
 
-  private int bitField0_;
   public static final int USER_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.api.v1alpha1.org.legacy.User user_;
   /**
@@ -58,7 +57,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasUser() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return user_ != null;
   }
   /**
    * <code>.api.v1alpha1.org.legacy.User user = 1 [json_name = "user"];</code>
@@ -408,7 +407,7 @@ private static final long serialVersionUID = 0L;
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     getSerializedSize();
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (user_ != null) {
       output.writeMessage(1, getUser());
     }
     if (getPermissionsList().size() > 0) {
@@ -449,7 +448,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (user_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getUser());
     }
@@ -680,19 +679,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.org.legacy.GetPermissionsResponse.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getUserFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -759,12 +752,10 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.legacy.GetPermissionsResponse result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.user_ = userBuilder_ == null
             ? user_
             : userBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.uiLogLevel_ = uiLogLevel_;
@@ -781,7 +772,6 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.defaultApp_ = defaultApp_;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1047,10 +1037,8 @@ private static final long serialVersionUID = 0L;
       } else {
         userBuilder_.mergeFrom(value);
       }
-      if (user_ != null) {
-        bitField0_ |= 0x00000001;
-        onChanged();
-      }
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**

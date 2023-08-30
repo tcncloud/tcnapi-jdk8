@@ -1202,7 +1202,6 @@ private static final long serialVersionUID = 0L;
 
   }
 
-  private int bitField0_;
   public static final int CONVERSATION_SID_FIELD_NUMBER = 1;
   private long conversationSid_ = 0L;
   /**
@@ -1256,7 +1255,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasSkills() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return skills_ != null;
   }
   /**
    * <pre>
@@ -1294,7 +1293,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasDateCreated() {
-    return ((bitField0_ & 0x00000002) != 0);
+    return dateCreated_ != null;
   }
   /**
    * <pre>
@@ -1332,7 +1331,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasDateModified() {
-    return ((bitField0_ & 0x00000004) != 0);
+    return dateModified_ != null;
   }
   /**
    * <pre>
@@ -1396,7 +1395,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCustomerEmailAddress() {
-    return ((bitField0_ & 0x00000008) != 0);
+    return customerEmailAddress_ != null;
   }
   /**
    * <pre>
@@ -1434,7 +1433,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCustomerPhoneNumber() {
-    return ((bitField0_ & 0x00000010) != 0);
+    return customerPhoneNumber_ != null;
   }
   /**
    * <pre>
@@ -1472,7 +1471,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCustomerName() {
-    return ((bitField0_ & 0x00000020) != 0);
+    return customerName_ != null;
   }
   /**
    * <pre>
@@ -1525,7 +1524,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasReferenceId() {
-    return ((bitField0_ & 0x00000040) != 0);
+    return referenceId_ != null;
   }
   /**
    * <pre>
@@ -1563,7 +1562,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasLastMessageTime() {
-    return ((bitField0_ & 0x00000080) != 0);
+    return lastMessageTime_ != null;
   }
   /**
    * <pre>
@@ -1601,7 +1600,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasConversationCollectedData() {
-    return ((bitField0_ & 0x00000100) != 0);
+    return conversationCollectedData_ != null;
   }
   /**
    * <pre>
@@ -1639,7 +1638,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasSlaTimeouts() {
-    return ((bitField0_ & 0x00000200) != 0);
+    return slaTimeouts_ != null;
   }
   /**
    * <pre>
@@ -1738,7 +1737,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasMetadata() {
-    return ((bitField0_ & 0x00000400) != 0);
+    return metadata_ != null;
   }
   /**
    * <pre>
@@ -1776,7 +1775,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasEndTime() {
-    return ((bitField0_ & 0x00000800) != 0);
+    return endTime_ != null;
   }
   /**
    * <pre>
@@ -1830,7 +1829,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasLastMessageGroupTime() {
-    return ((bitField0_ & 0x00001000) != 0);
+    return lastMessageGroupTime_ != null;
   }
   /**
    * <pre>
@@ -1922,7 +1921,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasLastStateChangedTime() {
-    return ((bitField0_ & 0x00002000) != 0);
+    return lastStateChangedTime_ != null;
   }
   /**
    * <pre>
@@ -1968,55 +1967,55 @@ private static final long serialVersionUID = 0L;
     if (channelType_ != com.tcn.cloud.api.api.commons.ChannelType.CHANNEL_TYPE_EMAIL.getNumber()) {
       output.writeEnum(2, channelType_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (skills_ != null) {
       output.writeMessage(3, getSkills());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (dateCreated_ != null) {
       output.writeMessage(4, getDateCreated());
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
+    if (dateModified_ != null) {
       output.writeMessage(5, getDateModified());
     }
     if (status_ != com.tcn.cloud.api.api.commons.ConversationStatus.CONVERSATION_STATUS_NEW.getNumber()) {
       output.writeEnum(6, status_);
     }
-    if (((bitField0_ & 0x00000008) != 0)) {
+    if (customerEmailAddress_ != null) {
       output.writeMessage(7, getCustomerEmailAddress());
     }
-    if (((bitField0_ & 0x00000010) != 0)) {
+    if (customerPhoneNumber_ != null) {
       output.writeMessage(8, getCustomerPhoneNumber());
     }
-    if (((bitField0_ & 0x00000020) != 0)) {
+    if (customerName_ != null) {
       output.writeMessage(9, getCustomerName());
     }
     if (campaignSid_ != 0L) {
       output.writeInt64(10, campaignSid_);
     }
-    if (((bitField0_ & 0x00000040) != 0)) {
+    if (referenceId_ != null) {
       output.writeMessage(11, getReferenceId());
     }
-    if (((bitField0_ & 0x00000080) != 0)) {
+    if (lastMessageTime_ != null) {
       output.writeMessage(12, getLastMessageTime());
     }
-    if (((bitField0_ & 0x00000100) != 0)) {
+    if (conversationCollectedData_ != null) {
       output.writeMessage(13, getConversationCollectedData());
     }
-    if (((bitField0_ & 0x00000200) != 0)) {
+    if (slaTimeouts_ != null) {
       output.writeMessage(14, getSlaTimeouts());
     }
     for (int i = 0; i < conversationAssignments_.size(); i++) {
       output.writeMessage(15, conversationAssignments_.get(i));
     }
-    if (((bitField0_ & 0x00000400) != 0)) {
+    if (metadata_ != null) {
       output.writeMessage(16, getMetadata());
     }
-    if (((bitField0_ & 0x00000800) != 0)) {
+    if (endTime_ != null) {
       output.writeMessage(18, getEndTime());
     }
     if (campaignModuleSid_ != 0L) {
       output.writeInt64(19, campaignModuleSid_);
     }
-    if (((bitField0_ & 0x00001000) != 0)) {
+    if (lastMessageGroupTime_ != null) {
       output.writeMessage(20, getLastMessageGroupTime());
     }
     if (lastMessageGroupType_ != com.tcn.cloud.api.api.commons.OmniSenderType.OMNI_SENDER_TYPE_AGENT.getNumber()) {
@@ -2025,7 +2024,7 @@ private static final long serialVersionUID = 0L;
     if (result_ != com.tcn.cloud.api.api.commons.OmniConversationResult.NONE.getNumber()) {
       output.writeEnum(22, result_);
     }
-    if (((bitField0_ & 0x00002000) != 0)) {
+    if (lastStateChangedTime_ != null) {
       output.writeMessage(23, getLastStateChangedTime());
     }
     getUnknownFields().writeTo(output);
@@ -2045,15 +2044,15 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(2, channelType_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (skills_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getSkills());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (dateCreated_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getDateCreated());
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
+    if (dateModified_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getDateModified());
     }
@@ -2061,15 +2060,15 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(6, status_);
     }
-    if (((bitField0_ & 0x00000008) != 0)) {
+    if (customerEmailAddress_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, getCustomerEmailAddress());
     }
-    if (((bitField0_ & 0x00000010) != 0)) {
+    if (customerPhoneNumber_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, getCustomerPhoneNumber());
     }
-    if (((bitField0_ & 0x00000020) != 0)) {
+    if (customerName_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(9, getCustomerName());
     }
@@ -2077,19 +2076,19 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(10, campaignSid_);
     }
-    if (((bitField0_ & 0x00000040) != 0)) {
+    if (referenceId_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(11, getReferenceId());
     }
-    if (((bitField0_ & 0x00000080) != 0)) {
+    if (lastMessageTime_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(12, getLastMessageTime());
     }
-    if (((bitField0_ & 0x00000100) != 0)) {
+    if (conversationCollectedData_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(13, getConversationCollectedData());
     }
-    if (((bitField0_ & 0x00000200) != 0)) {
+    if (slaTimeouts_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(14, getSlaTimeouts());
     }
@@ -2097,11 +2096,11 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(15, conversationAssignments_.get(i));
     }
-    if (((bitField0_ & 0x00000400) != 0)) {
+    if (metadata_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(16, getMetadata());
     }
-    if (((bitField0_ & 0x00000800) != 0)) {
+    if (endTime_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(18, getEndTime());
     }
@@ -2109,7 +2108,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(19, campaignModuleSid_);
     }
-    if (((bitField0_ & 0x00001000) != 0)) {
+    if (lastMessageGroupTime_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(20, getLastMessageGroupTime());
     }
@@ -2121,7 +2120,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(22, result_);
     }
-    if (((bitField0_ & 0x00002000) != 0)) {
+    if (lastStateChangedTime_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(23, getLastStateChangedTime());
     }
@@ -2433,33 +2432,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.OmniConversation.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getSkillsFieldBuilder();
-        getDateCreatedFieldBuilder();
-        getDateModifiedFieldBuilder();
-        getCustomerEmailAddressFieldBuilder();
-        getCustomerPhoneNumberFieldBuilder();
-        getCustomerNameFieldBuilder();
-        getReferenceIdFieldBuilder();
-        getLastMessageTimeFieldBuilder();
-        getConversationCollectedDataFieldBuilder();
-        getSlaTimeoutsFieldBuilder();
-        getConversationAssignmentsFieldBuilder();
-        getMetadataFieldBuilder();
-        getEndTimeFieldBuilder();
-        getLastMessageGroupTimeFieldBuilder();
-        getLastStateChangedTimeFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -2601,24 +2580,20 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.channelType_ = channelType_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.skills_ = skillsBuilder_ == null
             ? skills_
             : skillsBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.dateCreated_ = dateCreatedBuilder_ == null
             ? dateCreated_
             : dateCreatedBuilder_.build();
-        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.dateModified_ = dateModifiedBuilder_ == null
             ? dateModified_
             : dateModifiedBuilder_.build();
-        to_bitField0_ |= 0x00000004;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.status_ = status_;
@@ -2627,19 +2602,16 @@ private static final long serialVersionUID = 0L;
         result.customerEmailAddress_ = customerEmailAddressBuilder_ == null
             ? customerEmailAddress_
             : customerEmailAddressBuilder_.build();
-        to_bitField0_ |= 0x00000008;
       }
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.customerPhoneNumber_ = customerPhoneNumberBuilder_ == null
             ? customerPhoneNumber_
             : customerPhoneNumberBuilder_.build();
-        to_bitField0_ |= 0x00000010;
       }
       if (((from_bitField0_ & 0x00000100) != 0)) {
         result.customerName_ = customerNameBuilder_ == null
             ? customerName_
             : customerNameBuilder_.build();
-        to_bitField0_ |= 0x00000020;
       }
       if (((from_bitField0_ & 0x00000200) != 0)) {
         result.campaignSid_ = campaignSid_;
@@ -2648,37 +2620,31 @@ private static final long serialVersionUID = 0L;
         result.referenceId_ = referenceIdBuilder_ == null
             ? referenceId_
             : referenceIdBuilder_.build();
-        to_bitField0_ |= 0x00000040;
       }
       if (((from_bitField0_ & 0x00000800) != 0)) {
         result.lastMessageTime_ = lastMessageTimeBuilder_ == null
             ? lastMessageTime_
             : lastMessageTimeBuilder_.build();
-        to_bitField0_ |= 0x00000080;
       }
       if (((from_bitField0_ & 0x00001000) != 0)) {
         result.conversationCollectedData_ = conversationCollectedDataBuilder_ == null
             ? conversationCollectedData_
             : conversationCollectedDataBuilder_.build();
-        to_bitField0_ |= 0x00000100;
       }
       if (((from_bitField0_ & 0x00002000) != 0)) {
         result.slaTimeouts_ = slaTimeoutsBuilder_ == null
             ? slaTimeouts_
             : slaTimeoutsBuilder_.build();
-        to_bitField0_ |= 0x00000200;
       }
       if (((from_bitField0_ & 0x00008000) != 0)) {
         result.metadata_ = metadataBuilder_ == null
             ? metadata_
             : metadataBuilder_.build();
-        to_bitField0_ |= 0x00000400;
       }
       if (((from_bitField0_ & 0x00010000) != 0)) {
         result.endTime_ = endTimeBuilder_ == null
             ? endTime_
             : endTimeBuilder_.build();
-        to_bitField0_ |= 0x00000800;
       }
       if (((from_bitField0_ & 0x00020000) != 0)) {
         result.campaignModuleSid_ = campaignModuleSid_;
@@ -2687,7 +2653,6 @@ private static final long serialVersionUID = 0L;
         result.lastMessageGroupTime_ = lastMessageGroupTimeBuilder_ == null
             ? lastMessageGroupTime_
             : lastMessageGroupTimeBuilder_.build();
-        to_bitField0_ |= 0x00001000;
       }
       if (((from_bitField0_ & 0x00080000) != 0)) {
         result.lastMessageGroupType_ = lastMessageGroupType_;
@@ -2699,9 +2664,7 @@ private static final long serialVersionUID = 0L;
         result.lastStateChangedTime_ = lastStateChangedTimeBuilder_ == null
             ? lastStateChangedTime_
             : lastStateChangedTimeBuilder_.build();
-        to_bitField0_ |= 0x00002000;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -3229,10 +3192,8 @@ private static final long serialVersionUID = 0L;
       } else {
         skillsBuilder_.mergeFrom(value);
       }
-      if (skills_ != null) {
-        bitField0_ |= 0x00000004;
-        onChanged();
-      }
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -3386,10 +3347,8 @@ private static final long serialVersionUID = 0L;
       } else {
         dateCreatedBuilder_.mergeFrom(value);
       }
-      if (dateCreated_ != null) {
-        bitField0_ |= 0x00000008;
-        onChanged();
-      }
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -3543,10 +3502,8 @@ private static final long serialVersionUID = 0L;
       } else {
         dateModifiedBuilder_.mergeFrom(value);
       }
-      if (dateModified_ != null) {
-        bitField0_ |= 0x00000010;
-        onChanged();
-      }
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -3773,10 +3730,8 @@ private static final long serialVersionUID = 0L;
       } else {
         customerEmailAddressBuilder_.mergeFrom(value);
       }
-      if (customerEmailAddress_ != null) {
-        bitField0_ |= 0x00000040;
-        onChanged();
-      }
+      bitField0_ |= 0x00000040;
+      onChanged();
       return this;
     }
     /**
@@ -3930,10 +3885,8 @@ private static final long serialVersionUID = 0L;
       } else {
         customerPhoneNumberBuilder_.mergeFrom(value);
       }
-      if (customerPhoneNumber_ != null) {
-        bitField0_ |= 0x00000080;
-        onChanged();
-      }
+      bitField0_ |= 0x00000080;
+      onChanged();
       return this;
     }
     /**
@@ -4087,10 +4040,8 @@ private static final long serialVersionUID = 0L;
       } else {
         customerNameBuilder_.mergeFrom(value);
       }
-      if (customerName_ != null) {
-        bitField0_ |= 0x00000100;
-        onChanged();
-      }
+      bitField0_ |= 0x00000100;
+      onChanged();
       return this;
     }
     /**
@@ -4288,10 +4239,8 @@ private static final long serialVersionUID = 0L;
       } else {
         referenceIdBuilder_.mergeFrom(value);
       }
-      if (referenceId_ != null) {
-        bitField0_ |= 0x00000400;
-        onChanged();
-      }
+      bitField0_ |= 0x00000400;
+      onChanged();
       return this;
     }
     /**
@@ -4445,10 +4394,8 @@ private static final long serialVersionUID = 0L;
       } else {
         lastMessageTimeBuilder_.mergeFrom(value);
       }
-      if (lastMessageTime_ != null) {
-        bitField0_ |= 0x00000800;
-        onChanged();
-      }
+      bitField0_ |= 0x00000800;
+      onChanged();
       return this;
     }
     /**
@@ -4602,10 +4549,8 @@ private static final long serialVersionUID = 0L;
       } else {
         conversationCollectedDataBuilder_.mergeFrom(value);
       }
-      if (conversationCollectedData_ != null) {
-        bitField0_ |= 0x00001000;
-        onChanged();
-      }
+      bitField0_ |= 0x00001000;
+      onChanged();
       return this;
     }
     /**
@@ -4759,10 +4704,8 @@ private static final long serialVersionUID = 0L;
       } else {
         slaTimeoutsBuilder_.mergeFrom(value);
       }
-      if (slaTimeouts_ != null) {
-        bitField0_ |= 0x00002000;
-        onChanged();
-      }
+      bitField0_ |= 0x00002000;
+      onChanged();
       return this;
     }
     /**
@@ -5228,10 +5171,8 @@ private static final long serialVersionUID = 0L;
       } else {
         metadataBuilder_.mergeFrom(value);
       }
-      if (metadata_ != null) {
-        bitField0_ |= 0x00008000;
-        onChanged();
-      }
+      bitField0_ |= 0x00008000;
+      onChanged();
       return this;
     }
     /**
@@ -5385,10 +5326,8 @@ private static final long serialVersionUID = 0L;
       } else {
         endTimeBuilder_.mergeFrom(value);
       }
-      if (endTime_ != null) {
-        bitField0_ |= 0x00010000;
-        onChanged();
-      }
+      bitField0_ |= 0x00010000;
+      onChanged();
       return this;
     }
     /**
@@ -5591,10 +5530,8 @@ private static final long serialVersionUID = 0L;
       } else {
         lastMessageGroupTimeBuilder_.mergeFrom(value);
       }
-      if (lastMessageGroupTime_ != null) {
-        bitField0_ |= 0x00040000;
-        onChanged();
-      }
+      bitField0_ |= 0x00040000;
+      onChanged();
       return this;
     }
     /**
@@ -5898,10 +5835,8 @@ private static final long serialVersionUID = 0L;
       } else {
         lastStateChangedTimeBuilder_.mergeFrom(value);
       }
-      if (lastStateChangedTime_ != null) {
-        bitField0_ |= 0x00200000;
-        onChanged();
-      }
+      bitField0_ |= 0x00200000;
+      onChanged();
       return this;
     }
     /**

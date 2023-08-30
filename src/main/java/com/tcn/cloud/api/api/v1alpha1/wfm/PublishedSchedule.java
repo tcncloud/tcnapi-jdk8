@@ -40,7 +40,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.wfm.PublishedSchedule.class, com.tcn.cloud.api.api.v1alpha1.wfm.PublishedSchedule.Builder.class);
   }
 
-  private int bitField0_;
   public static final int PUBLISHED_SCHEDULE_SID_FIELD_NUMBER = 1;
   private long publishedScheduleSid_ = 0L;
   /**
@@ -68,7 +67,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCreatedAt() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return createdAt_ != null;
   }
   /**
    * <pre>
@@ -106,7 +105,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasLastUpdatedAt() {
-    return ((bitField0_ & 0x00000002) != 0);
+    return lastUpdatedAt_ != null;
   }
   /**
    * <pre>
@@ -271,10 +270,10 @@ private static final long serialVersionUID = 0L;
     if (publishedScheduleSid_ != 0L) {
       output.writeInt64(1, publishedScheduleSid_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (createdAt_ != null) {
       output.writeMessage(2, getCreatedAt());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (lastUpdatedAt_ != null) {
       output.writeMessage(3, getLastUpdatedAt());
     }
     for (int i = 0; i < shiftInstances_.size(); i++) {
@@ -296,11 +295,11 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(1, publishedScheduleSid_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (createdAt_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getCreatedAt());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (lastUpdatedAt_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getLastUpdatedAt());
     }
@@ -492,22 +491,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.PublishedSchedule.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getCreatedAtFieldBuilder();
-        getLastUpdatedAtFieldBuilder();
-        getShiftInstancesFieldBuilder();
-        getPerformanceMetricsFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -596,20 +586,16 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.publishedScheduleSid_ = publishedScheduleSid_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.createdAt_ = createdAtBuilder_ == null
             ? createdAt_
             : createdAtBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.lastUpdatedAt_ = lastUpdatedAtBuilder_ == null
             ? lastUpdatedAt_
             : lastUpdatedAtBuilder_.build();
-        to_bitField0_ |= 0x00000002;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -935,10 +921,8 @@ private static final long serialVersionUID = 0L;
       } else {
         createdAtBuilder_.mergeFrom(value);
       }
-      if (createdAt_ != null) {
-        bitField0_ |= 0x00000002;
-        onChanged();
-      }
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -1092,10 +1076,8 @@ private static final long serialVersionUID = 0L;
       } else {
         lastUpdatedAtBuilder_.mergeFrom(value);
       }
-      if (lastUpdatedAt_ != null) {
-        bitField0_ |= 0x00000004;
-        onChanged();
-      }
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**

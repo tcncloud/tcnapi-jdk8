@@ -45,7 +45,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.TicketAction.class, com.tcn.cloud.api.api.commons.TicketAction.Builder.class);
   }
 
-  private int bitField0_;
   public static final int TICKET_ACTION_ID_FIELD_NUMBER = 1;
   private long ticketActionId_ = 0L;
   /**
@@ -88,7 +87,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCallbackContext() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return callbackContext_ != null;
   }
   /**
    * <pre>
@@ -141,7 +140,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasStartTs() {
-    return ((bitField0_ & 0x00000002) != 0);
+    return startTs_ != null;
   }
   /**
    * <pre>
@@ -179,7 +178,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasExpiryTs() {
-    return ((bitField0_ & 0x00000004) != 0);
+    return expiryTs_ != null;
   }
   /**
    * <pre>
@@ -358,16 +357,16 @@ private static final long serialVersionUID = 0L;
     if (actionId_ != 0L) {
       output.writeInt64(2, actionId_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (callbackContext_ != null) {
       output.writeMessage(3, getCallbackContext());
     }
     if (ticketId_ != 0L) {
       output.writeInt64(4, ticketId_);
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (startTs_ != null) {
       output.writeMessage(5, getStartTs());
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
+    if (expiryTs_ != null) {
       output.writeMessage(6, getExpiryTs());
     }
     if (state_ != 0L) {
@@ -396,7 +395,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(2, actionId_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (callbackContext_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getCallbackContext());
     }
@@ -404,11 +403,11 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(4, ticketId_);
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (startTs_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getStartTs());
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
+    if (expiryTs_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, getExpiryTs());
     }
@@ -636,22 +635,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.TicketAction.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getCallbackContextFieldBuilder();
-        getStartTsFieldBuilder();
-        getExpiryTsFieldBuilder();
-        getActionSlaIdFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -737,12 +727,10 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.actionId_ = actionId_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.callbackContext_ = callbackContextBuilder_ == null
             ? callbackContext_
             : callbackContextBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.ticketId_ = ticketId_;
@@ -751,13 +739,11 @@ private static final long serialVersionUID = 0L;
         result.startTs_ = startTsBuilder_ == null
             ? startTs_
             : startTsBuilder_.build();
-        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.expiryTs_ = expiryTsBuilder_ == null
             ? expiryTs_
             : expiryTsBuilder_.build();
-        to_bitField0_ |= 0x00000004;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.state_ = state_;
@@ -766,7 +752,6 @@ private static final long serialVersionUID = 0L;
         actionSkills_.makeImmutable();
         result.actionSkills_ = actionSkills_;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1147,10 +1132,8 @@ private static final long serialVersionUID = 0L;
       } else {
         callbackContextBuilder_.mergeFrom(value);
       }
-      if (callbackContext_ != null) {
-        bitField0_ |= 0x00000004;
-        onChanged();
-      }
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -1348,10 +1331,8 @@ private static final long serialVersionUID = 0L;
       } else {
         startTsBuilder_.mergeFrom(value);
       }
-      if (startTs_ != null) {
-        bitField0_ |= 0x00000010;
-        onChanged();
-      }
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -1505,10 +1486,8 @@ private static final long serialVersionUID = 0L;
       } else {
         expiryTsBuilder_.mergeFrom(value);
       }
-      if (expiryTs_ != null) {
-        bitField0_ |= 0x00000020;
-        onChanged();
-      }
+      bitField0_ |= 0x00000020;
+      onChanged();
       return this;
     }
     /**

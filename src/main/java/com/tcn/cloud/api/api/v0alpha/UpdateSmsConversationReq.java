@@ -40,7 +40,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.UpdateSmsConversationReq.class, com.tcn.cloud.api.api.v0alpha.UpdateSmsConversationReq.Builder.class);
   }
 
-  private int bitField0_;
   public static final int SMS_CONVERSATION_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object smsConversationId_ = "";
@@ -127,7 +126,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasSmsTaskParent() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return smsTaskParent_ != null;
   }
   /**
    * <code>.google.protobuf.Int64Value sms_task_parent = 3 [json_name = "smsTaskParent"];</code>
@@ -165,7 +164,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(inboundSmsGroupId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, inboundSmsGroupId_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (smsTaskParent_ != null) {
       output.writeMessage(3, getSmsTaskParent());
     }
     getUnknownFields().writeTo(output);
@@ -183,7 +182,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(inboundSmsGroupId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, inboundSmsGroupId_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (smsTaskParent_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getSmsTaskParent());
     }
@@ -349,19 +348,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.UpdateSmsConversationReq.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getSmsTaskParentFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -413,14 +406,11 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.inboundSmsGroupId_ = inboundSmsGroupId_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.smsTaskParent_ = smsTaskParentBuilder_ == null
             ? smsTaskParent_
             : smsTaskParentBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -750,10 +740,8 @@ private static final long serialVersionUID = 0L;
       } else {
         smsTaskParentBuilder_.mergeFrom(value);
       }
-      if (smsTaskParent_ != null) {
-        bitField0_ |= 0x00000004;
-        onChanged();
-      }
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**

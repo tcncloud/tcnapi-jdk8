@@ -100,8 +100,7 @@ private static final long serialVersionUID = 0L;
 
   public static final int CATEGORY_IDS_FIELD_NUMBER = 3;
   @SuppressWarnings("serial")
-  private com.google.protobuf.Internal.LongList categoryIds_ =
-      emptyLongList();
+  private com.google.protobuf.Internal.LongList categoryIds_;
   /**
    * <pre>
    * Optional.
@@ -398,9 +397,18 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.scorecards.ListQuestionsRequest buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.scorecards.ListQuestionsRequest result = new com.tcn.cloud.api.api.v1alpha1.scorecards.ListQuestionsRequest(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.scorecards.ListQuestionsRequest result) {
+      if (((bitField0_ & 0x00000002) != 0)) {
+        categoryIds_.makeImmutable();
+        bitField0_ = (bitField0_ & ~0x00000002);
+      }
+      result.categoryIds_ = categoryIds_;
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.scorecards.ListQuestionsRequest result) {
@@ -408,10 +416,6 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         authorIds_.makeImmutable();
         result.authorIds_ = authorIds_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        categoryIds_.makeImmutable();
-        result.categoryIds_ = categoryIds_;
       }
     }
 
@@ -472,8 +476,7 @@ private static final long serialVersionUID = 0L;
       if (!other.categoryIds_.isEmpty()) {
         if (categoryIds_.isEmpty()) {
           categoryIds_ = other.categoryIds_;
-          categoryIds_.makeImmutable();
-          bitField0_ |= 0x00000002;
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
           ensureCategoryIdsIsMutable();
           categoryIds_.addAll(other.categoryIds_);
@@ -694,10 +697,10 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Internal.LongList categoryIds_ = emptyLongList();
     private void ensureCategoryIdsIsMutable() {
-      if (!categoryIds_.isModifiable()) {
-        categoryIds_ = makeMutableCopy(categoryIds_);
+      if (!((bitField0_ & 0x00000002) != 0)) {
+        categoryIds_ = mutableCopy(categoryIds_);
+        bitField0_ |= 0x00000002;
       }
-      bitField0_ |= 0x00000002;
     }
     /**
      * <pre>
@@ -709,8 +712,8 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Long>
         getCategoryIdsList() {
-      categoryIds_.makeImmutable();
-      return categoryIds_;
+      return ((bitField0_ & 0x00000002) != 0) ?
+               java.util.Collections.unmodifiableList(categoryIds_) : categoryIds_;
     }
     /**
      * <pre>
@@ -750,7 +753,6 @@ private static final long serialVersionUID = 0L;
 
       ensureCategoryIdsIsMutable();
       categoryIds_.setLong(index, value);
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -767,7 +769,6 @@ private static final long serialVersionUID = 0L;
 
       ensureCategoryIdsIsMutable();
       categoryIds_.addLong(value);
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -785,7 +786,6 @@ private static final long serialVersionUID = 0L;
       ensureCategoryIdsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, categoryIds_);
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }

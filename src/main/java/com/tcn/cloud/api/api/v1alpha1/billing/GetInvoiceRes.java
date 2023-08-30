@@ -43,7 +43,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.billing.GetInvoiceRes.class, com.tcn.cloud.api.api.v1alpha1.billing.GetInvoiceRes.Builder.class);
   }
 
-  private int bitField0_;
   private int formatCase_ = 0;
   @SuppressWarnings("serial")
   private java.lang.Object format_;
@@ -142,7 +141,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   @java.lang.Deprecated public boolean hasInvoice() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return invoice_ != null;
   }
   /**
    * <pre>
@@ -407,7 +406,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (invoice_ != null) {
       output.writeMessage(1, getInvoice());
     }
     if (formatCase_ == 2) {
@@ -434,7 +433,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (invoice_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getInvoice());
     }
@@ -667,19 +666,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.billing.GetInvoiceRes.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getInvoiceFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -735,17 +728,14 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.billing.GetInvoiceRes result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.invoice_ = invoiceBuilder_ == null
             ? invoice_
             : invoiceBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.billingCycle_ = billingCycle_;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     private void buildPartialOneofs(com.tcn.cloud.api.api.v1alpha1.billing.GetInvoiceRes result) {
@@ -1046,10 +1036,8 @@ private static final long serialVersionUID = 0L;
       } else {
         invoiceBuilder_.mergeFrom(value);
       }
-      if (invoice_ != null) {
-        bitField0_ |= 0x00000001;
-        onChanged();
-      }
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**

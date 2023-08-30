@@ -45,7 +45,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlagSnapshotsRequest.class, com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlagSnapshotsRequest.Builder.class);
   }
 
-  private int bitField0_;
   public static final int PAGE_SIZE_FIELD_NUMBER = 2;
   private int pageSize_ = 0;
   /**
@@ -168,8 +167,7 @@ private static final long serialVersionUID = 0L;
 
   public static final int FLAG_SNAPSHOT_SIDS_FIELD_NUMBER = 5;
   @SuppressWarnings("serial")
-  private com.google.protobuf.Internal.LongList flagSnapshotSids_ =
-      emptyLongList();
+  private com.google.protobuf.Internal.LongList flagSnapshotSids_;
   /**
    * <pre>
    * Optional. List of flag_snapshots to filter on.
@@ -222,7 +220,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasMask() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return mask_ != null;
   }
   /**
    * <pre>
@@ -298,7 +296,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < flagSnapshotSids_.size(); i++) {
       output.writeInt64NoTag(flagSnapshotSids_.getLong(i));
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (mask_ != null) {
       output.writeMessage(6, getMask());
     }
     if (transcriptSid_ != 0L) {
@@ -337,7 +335,7 @@ private static final long serialVersionUID = 0L;
       }
       flagSnapshotSidsMemoizedSerializedSize = dataSize;
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (mask_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, getMask());
     }
@@ -526,19 +524,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlagSnapshotsRequest.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getMaskFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -580,9 +572,18 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlagSnapshotsRequest buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlagSnapshotsRequest result = new com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlagSnapshotsRequest(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlagSnapshotsRequest result) {
+      if (((bitField0_ & 0x00000008) != 0)) {
+        flagSnapshotSids_.makeImmutable();
+        bitField0_ = (bitField0_ & ~0x00000008);
+      }
+      result.flagSnapshotSids_ = flagSnapshotSids_;
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlagSnapshotsRequest result) {
@@ -596,21 +597,14 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.pageToken_ = pageToken_;
       }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        flagSnapshotSids_.makeImmutable();
-        result.flagSnapshotSids_ = flagSnapshotSids_;
-      }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.mask_ = maskBuilder_ == null
             ? mask_
             : maskBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.transcriptSid_ = transcriptSid_;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -673,8 +667,7 @@ private static final long serialVersionUID = 0L;
       if (!other.flagSnapshotSids_.isEmpty()) {
         if (flagSnapshotSids_.isEmpty()) {
           flagSnapshotSids_ = other.flagSnapshotSids_;
-          flagSnapshotSids_.makeImmutable();
-          bitField0_ |= 0x00000008;
+          bitField0_ = (bitField0_ & ~0x00000008);
         } else {
           ensureFlagSnapshotSidsIsMutable();
           flagSnapshotSids_.addAll(other.flagSnapshotSids_);
@@ -1031,10 +1024,10 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Internal.LongList flagSnapshotSids_ = emptyLongList();
     private void ensureFlagSnapshotSidsIsMutable() {
-      if (!flagSnapshotSids_.isModifiable()) {
-        flagSnapshotSids_ = makeMutableCopy(flagSnapshotSids_);
+      if (!((bitField0_ & 0x00000008) != 0)) {
+        flagSnapshotSids_ = mutableCopy(flagSnapshotSids_);
+        bitField0_ |= 0x00000008;
       }
-      bitField0_ |= 0x00000008;
     }
     /**
      * <pre>
@@ -1046,8 +1039,8 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Long>
         getFlagSnapshotSidsList() {
-      flagSnapshotSids_.makeImmutable();
-      return flagSnapshotSids_;
+      return ((bitField0_ & 0x00000008) != 0) ?
+               java.util.Collections.unmodifiableList(flagSnapshotSids_) : flagSnapshotSids_;
     }
     /**
      * <pre>
@@ -1087,7 +1080,6 @@ private static final long serialVersionUID = 0L;
 
       ensureFlagSnapshotSidsIsMutable();
       flagSnapshotSids_.setLong(index, value);
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1104,7 +1096,6 @@ private static final long serialVersionUID = 0L;
 
       ensureFlagSnapshotSidsIsMutable();
       flagSnapshotSids_.addLong(value);
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1122,7 +1113,6 @@ private static final long serialVersionUID = 0L;
       ensureFlagSnapshotSidsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, flagSnapshotSids_);
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1237,10 +1227,8 @@ private static final long serialVersionUID = 0L;
       } else {
         maskBuilder_.mergeFrom(value);
       }
-      if (mask_ != null) {
-        bitField0_ |= 0x00000010;
-        onChanged();
-      }
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**

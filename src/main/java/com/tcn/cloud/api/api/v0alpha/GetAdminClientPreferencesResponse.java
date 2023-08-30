@@ -42,7 +42,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.GetAdminClientPreferencesResponse.class, com.tcn.cloud.api.api.v0alpha.GetAdminClientPreferencesResponse.Builder.class);
   }
 
-  private int bitField0_;
   public static final int ADMIN_CLIENT_PREFERENCES_FIELD_NUMBER = 10;
   private com.tcn.cloud.api.api.v0alpha.AdminClientPreferences adminClientPreferences_;
   /**
@@ -55,7 +54,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAdminClientPreferences() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return adminClientPreferences_ != null;
   }
   /**
    * <pre>
@@ -95,7 +94,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (adminClientPreferences_ != null) {
       output.writeMessage(10, getAdminClientPreferences());
     }
     getUnknownFields().writeTo(output);
@@ -107,7 +106,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (adminClientPreferences_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(10, getAdminClientPreferences());
     }
@@ -269,19 +268,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.GetAdminClientPreferencesResponse.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getAdminClientPreferencesFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -325,14 +318,11 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v0alpha.GetAdminClientPreferencesResponse result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.adminClientPreferences_ = adminClientPreferencesBuilder_ == null
             ? adminClientPreferences_
             : adminClientPreferencesBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -518,10 +508,8 @@ private static final long serialVersionUID = 0L;
       } else {
         adminClientPreferencesBuilder_.mergeFrom(value);
       }
-      if (adminClientPreferences_ != null) {
-        bitField0_ |= 0x00000001;
-        onChanged();
-      }
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**

@@ -45,7 +45,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.FileTemplate.class, com.tcn.cloud.api.api.v0alpha.FileTemplate.Builder.class);
   }
 
-  private int bitField0_;
   public static final int FILE_TEMPLATE_ID_FIELD_NUMBER = 3;
   @SuppressWarnings("serial")
   private volatile java.lang.Object fileTemplateId_ = "";
@@ -208,7 +207,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasFileFormatParams() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return fileFormatParams_ != null;
   }
   /**
    * <code>.api.v0alpha.FileFormatParams file_format_params = 14 [json_name = "fileFormatParams"];</code>
@@ -311,7 +310,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < fieldNames_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 12, fieldNames_.getRaw(i));
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (fileFormatParams_ != null) {
       output.writeMessage(14, getFileFormatParams());
     }
     if (fileFormat_ != com.tcn.cloud.api.api.commons.FileFormat.FILE_FORMAT_CSV.getNumber()) {
@@ -346,7 +345,7 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getFieldNamesList().size();
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (fileFormatParams_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(14, getFileFormatParams());
     }
@@ -539,20 +538,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.FileTemplate.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getFileFormatParamsFieldBuilder();
-        getFieldsFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -635,17 +627,14 @@ private static final long serialVersionUID = 0L;
         fieldNames_.makeImmutable();
         result.fieldNames_ = fieldNames_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.fileFormatParams_ = fileFormatParamsBuilder_ == null
             ? fileFormatParams_
             : fileFormatParamsBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.fileFormat_ = fileFormat_;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1231,10 +1220,8 @@ private static final long serialVersionUID = 0L;
       } else {
         fileFormatParamsBuilder_.mergeFrom(value);
       }
-      if (fileFormatParams_ != null) {
-        bitField0_ |= 0x00000010;
-        onChanged();
-      }
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**

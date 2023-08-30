@@ -42,7 +42,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.org.AgentProfileGroup.class, com.tcn.cloud.api.api.commons.org.AgentProfileGroup.Builder.class);
   }
 
-  private int bitField0_;
   public static final int ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object id_ = "";
@@ -213,7 +212,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasLastUpdated() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return lastUpdated_ != null;
   }
   /**
    * <pre>
@@ -276,7 +275,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < priorityGroups_.size(); i++) {
       output.writeMessage(4, priorityGroups_.get(i));
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (lastUpdated_ != null) {
       output.writeMessage(5, getLastUpdated());
     }
     if (defaultGroup_ != false) {
@@ -304,7 +303,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, priorityGroups_.get(i));
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (lastUpdated_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getLastUpdated());
     }
@@ -489,20 +488,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.org.AgentProfileGroup.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getPriorityGroupsFieldBuilder();
-        getLastUpdatedFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -579,17 +571,14 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.name_ = name_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.lastUpdated_ = lastUpdatedBuilder_ == null
             ? lastUpdated_
             : lastUpdatedBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.defaultGroup_ = defaultGroup_;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1308,10 +1297,8 @@ private static final long serialVersionUID = 0L;
       } else {
         lastUpdatedBuilder_.mergeFrom(value);
       }
-      if (lastUpdated_ != null) {
-        bitField0_ |= 0x00000010;
-        onChanged();
-      }
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**

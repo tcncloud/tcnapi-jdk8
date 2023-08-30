@@ -43,11 +43,9 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileAveragesUsingHistoricalDataReq.class, com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileAveragesUsingHistoricalDataReq.Builder.class);
   }
 
-  private int bitField0_;
   public static final int SKILL_PROFILE_SIDS_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private com.google.protobuf.Internal.LongList skillProfileSids_ =
-      emptyLongList();
+  private com.google.protobuf.Internal.LongList skillProfileSids_;
   /**
    * <pre>
    * IDs of the skill profiles to calculate the averages of, if none are sent it calculates it for all skill profiles the org has.
@@ -100,7 +98,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasDatetimeRange() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return datetimeRange_ != null;
   }
   /**
    * <pre>
@@ -168,7 +166,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < skillProfileSids_.size(); i++) {
       output.writeInt64NoTag(skillProfileSids_.getLong(i));
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (datetimeRange_ != null) {
       output.writeMessage(2, getDatetimeRange());
     }
     if (excludeSkillProfilesWithManualAverages_ != false) {
@@ -197,7 +195,7 @@ private static final long serialVersionUID = 0L;
       }
       skillProfileSidsMemoizedSerializedSize = dataSize;
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (datetimeRange_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getDatetimeRange());
     }
@@ -374,19 +372,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileAveragesUsingHistoricalDataReq.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getDatetimeRangeFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -425,28 +417,30 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileAveragesUsingHistoricalDataReq buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileAveragesUsingHistoricalDataReq result = new com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileAveragesUsingHistoricalDataReq(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileAveragesUsingHistoricalDataReq result) {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        skillProfileSids_.makeImmutable();
+        bitField0_ = (bitField0_ & ~0x00000001);
+      }
+      result.skillProfileSids_ = skillProfileSids_;
+    }
+
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileAveragesUsingHistoricalDataReq result) {
       int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        skillProfileSids_.makeImmutable();
-        result.skillProfileSids_ = skillProfileSids_;
-      }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.datetimeRange_ = datetimeRangeBuilder_ == null
             ? datetimeRange_
             : datetimeRangeBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.excludeSkillProfilesWithManualAverages_ = excludeSkillProfilesWithManualAverages_;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -496,8 +490,7 @@ private static final long serialVersionUID = 0L;
       if (!other.skillProfileSids_.isEmpty()) {
         if (skillProfileSids_.isEmpty()) {
           skillProfileSids_ = other.skillProfileSids_;
-          skillProfileSids_.makeImmutable();
-          bitField0_ |= 0x00000001;
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           ensureSkillProfileSidsIsMutable();
           skillProfileSids_.addAll(other.skillProfileSids_);
@@ -583,10 +576,10 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Internal.LongList skillProfileSids_ = emptyLongList();
     private void ensureSkillProfileSidsIsMutable() {
-      if (!skillProfileSids_.isModifiable()) {
-        skillProfileSids_ = makeMutableCopy(skillProfileSids_);
+      if (!((bitField0_ & 0x00000001) != 0)) {
+        skillProfileSids_ = mutableCopy(skillProfileSids_);
+        bitField0_ |= 0x00000001;
       }
-      bitField0_ |= 0x00000001;
     }
     /**
      * <pre>
@@ -598,8 +591,8 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Long>
         getSkillProfileSidsList() {
-      skillProfileSids_.makeImmutable();
-      return skillProfileSids_;
+      return ((bitField0_ & 0x00000001) != 0) ?
+               java.util.Collections.unmodifiableList(skillProfileSids_) : skillProfileSids_;
     }
     /**
      * <pre>
@@ -639,7 +632,6 @@ private static final long serialVersionUID = 0L;
 
       ensureSkillProfileSidsIsMutable();
       skillProfileSids_.setLong(index, value);
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -656,7 +648,6 @@ private static final long serialVersionUID = 0L;
 
       ensureSkillProfileSidsIsMutable();
       skillProfileSids_.addLong(value);
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -674,7 +665,6 @@ private static final long serialVersionUID = 0L;
       ensureSkillProfileSidsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, skillProfileSids_);
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -789,10 +779,8 @@ private static final long serialVersionUID = 0L;
       } else {
         datetimeRangeBuilder_.mergeFrom(value);
       }
-      if (datetimeRange_ != null) {
-        bitField0_ |= 0x00000002;
-        onChanged();
-      }
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**

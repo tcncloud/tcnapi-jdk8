@@ -56,8 +56,7 @@ private static final long serialVersionUID = 0L;
 
   public static final int JANUARY_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private com.google.protobuf.Internal.FloatList january_ =
-      emptyFloatList();
+  private com.google.protobuf.Internal.FloatList january_;
   /**
    * <code>repeated float january = 1 [json_name = "january"];</code>
    * @return A list containing the january.
@@ -86,8 +85,7 @@ private static final long serialVersionUID = 0L;
 
   public static final int FEBRUARY_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
-  private com.google.protobuf.Internal.FloatList february_ =
-      emptyFloatList();
+  private com.google.protobuf.Internal.FloatList february_;
   /**
    * <code>repeated float february = 2 [json_name = "february"];</code>
    * @return A list containing the february.
@@ -116,8 +114,7 @@ private static final long serialVersionUID = 0L;
 
   public static final int MARCH_FIELD_NUMBER = 3;
   @SuppressWarnings("serial")
-  private com.google.protobuf.Internal.FloatList march_ =
-      emptyFloatList();
+  private com.google.protobuf.Internal.FloatList march_;
   /**
    * <code>repeated float march = 3 [json_name = "march"];</code>
    * @return A list containing the march.
@@ -146,8 +143,7 @@ private static final long serialVersionUID = 0L;
 
   public static final int APRIL_FIELD_NUMBER = 4;
   @SuppressWarnings("serial")
-  private com.google.protobuf.Internal.FloatList april_ =
-      emptyFloatList();
+  private com.google.protobuf.Internal.FloatList april_;
   /**
    * <code>repeated float april = 4 [json_name = "april"];</code>
    * @return A list containing the april.
@@ -176,8 +172,7 @@ private static final long serialVersionUID = 0L;
 
   public static final int MAY_FIELD_NUMBER = 5;
   @SuppressWarnings("serial")
-  private com.google.protobuf.Internal.FloatList may_ =
-      emptyFloatList();
+  private com.google.protobuf.Internal.FloatList may_;
   /**
    * <code>repeated float may = 5 [json_name = "may"];</code>
    * @return A list containing the may.
@@ -206,8 +201,7 @@ private static final long serialVersionUID = 0L;
 
   public static final int JUNE_FIELD_NUMBER = 6;
   @SuppressWarnings("serial")
-  private com.google.protobuf.Internal.FloatList june_ =
-      emptyFloatList();
+  private com.google.protobuf.Internal.FloatList june_;
   /**
    * <code>repeated float june = 6 [json_name = "june"];</code>
    * @return A list containing the june.
@@ -236,8 +230,7 @@ private static final long serialVersionUID = 0L;
 
   public static final int JULY_FIELD_NUMBER = 7;
   @SuppressWarnings("serial")
-  private com.google.protobuf.Internal.FloatList july_ =
-      emptyFloatList();
+  private com.google.protobuf.Internal.FloatList july_;
   /**
    * <code>repeated float july = 7 [json_name = "july"];</code>
    * @return A list containing the july.
@@ -266,8 +259,7 @@ private static final long serialVersionUID = 0L;
 
   public static final int AUGUST_FIELD_NUMBER = 8;
   @SuppressWarnings("serial")
-  private com.google.protobuf.Internal.FloatList august_ =
-      emptyFloatList();
+  private com.google.protobuf.Internal.FloatList august_;
   /**
    * <code>repeated float august = 8 [json_name = "august"];</code>
    * @return A list containing the august.
@@ -296,8 +288,7 @@ private static final long serialVersionUID = 0L;
 
   public static final int SEPTEMBER_FIELD_NUMBER = 9;
   @SuppressWarnings("serial")
-  private com.google.protobuf.Internal.FloatList september_ =
-      emptyFloatList();
+  private com.google.protobuf.Internal.FloatList september_;
   /**
    * <code>repeated float september = 9 [json_name = "september"];</code>
    * @return A list containing the september.
@@ -326,8 +317,7 @@ private static final long serialVersionUID = 0L;
 
   public static final int OCTOBER_FIELD_NUMBER = 10;
   @SuppressWarnings("serial")
-  private com.google.protobuf.Internal.FloatList october_ =
-      emptyFloatList();
+  private com.google.protobuf.Internal.FloatList october_;
   /**
    * <code>repeated float october = 10 [json_name = "october"];</code>
    * @return A list containing the october.
@@ -356,8 +346,7 @@ private static final long serialVersionUID = 0L;
 
   public static final int NOVEMBER_FIELD_NUMBER = 11;
   @SuppressWarnings("serial")
-  private com.google.protobuf.Internal.FloatList november_ =
-      emptyFloatList();
+  private com.google.protobuf.Internal.FloatList november_;
   /**
    * <code>repeated float november = 11 [json_name = "november"];</code>
    * @return A list containing the november.
@@ -386,8 +375,7 @@ private static final long serialVersionUID = 0L;
 
   public static final int DECEMBER_FIELD_NUMBER = 12;
   @SuppressWarnings("serial")
-  private com.google.protobuf.Internal.FloatList december_ =
-      emptyFloatList();
+  private com.google.protobuf.Internal.FloatList december_;
   /**
    * <code>repeated float december = 12 [json_name = "december"];</code>
    * @return A list containing the december.
@@ -925,61 +913,77 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.ProfileWOMS buildPartial() {
       com.tcn.cloud.api.api.commons.ProfileWOMS result = new com.tcn.cloud.api.api.commons.ProfileWOMS(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.commons.ProfileWOMS result) {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        january_.makeImmutable();
+        bitField0_ = (bitField0_ & ~0x00000001);
+      }
+      result.january_ = january_;
+      if (((bitField0_ & 0x00000002) != 0)) {
+        february_.makeImmutable();
+        bitField0_ = (bitField0_ & ~0x00000002);
+      }
+      result.february_ = february_;
+      if (((bitField0_ & 0x00000004) != 0)) {
+        march_.makeImmutable();
+        bitField0_ = (bitField0_ & ~0x00000004);
+      }
+      result.march_ = march_;
+      if (((bitField0_ & 0x00000008) != 0)) {
+        april_.makeImmutable();
+        bitField0_ = (bitField0_ & ~0x00000008);
+      }
+      result.april_ = april_;
+      if (((bitField0_ & 0x00000010) != 0)) {
+        may_.makeImmutable();
+        bitField0_ = (bitField0_ & ~0x00000010);
+      }
+      result.may_ = may_;
+      if (((bitField0_ & 0x00000020) != 0)) {
+        june_.makeImmutable();
+        bitField0_ = (bitField0_ & ~0x00000020);
+      }
+      result.june_ = june_;
+      if (((bitField0_ & 0x00000040) != 0)) {
+        july_.makeImmutable();
+        bitField0_ = (bitField0_ & ~0x00000040);
+      }
+      result.july_ = july_;
+      if (((bitField0_ & 0x00000080) != 0)) {
+        august_.makeImmutable();
+        bitField0_ = (bitField0_ & ~0x00000080);
+      }
+      result.august_ = august_;
+      if (((bitField0_ & 0x00000100) != 0)) {
+        september_.makeImmutable();
+        bitField0_ = (bitField0_ & ~0x00000100);
+      }
+      result.september_ = september_;
+      if (((bitField0_ & 0x00000200) != 0)) {
+        october_.makeImmutable();
+        bitField0_ = (bitField0_ & ~0x00000200);
+      }
+      result.october_ = october_;
+      if (((bitField0_ & 0x00000400) != 0)) {
+        november_.makeImmutable();
+        bitField0_ = (bitField0_ & ~0x00000400);
+      }
+      result.november_ = november_;
+      if (((bitField0_ & 0x00000800) != 0)) {
+        december_.makeImmutable();
+        bitField0_ = (bitField0_ & ~0x00000800);
+      }
+      result.december_ = december_;
+    }
+
     private void buildPartial0(com.tcn.cloud.api.api.commons.ProfileWOMS result) {
       int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        january_.makeImmutable();
-        result.january_ = january_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        february_.makeImmutable();
-        result.february_ = february_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        march_.makeImmutable();
-        result.march_ = march_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        april_.makeImmutable();
-        result.april_ = april_;
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        may_.makeImmutable();
-        result.may_ = may_;
-      }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        june_.makeImmutable();
-        result.june_ = june_;
-      }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
-        july_.makeImmutable();
-        result.july_ = july_;
-      }
-      if (((from_bitField0_ & 0x00000080) != 0)) {
-        august_.makeImmutable();
-        result.august_ = august_;
-      }
-      if (((from_bitField0_ & 0x00000100) != 0)) {
-        september_.makeImmutable();
-        result.september_ = september_;
-      }
-      if (((from_bitField0_ & 0x00000200) != 0)) {
-        october_.makeImmutable();
-        result.october_ = october_;
-      }
-      if (((from_bitField0_ & 0x00000400) != 0)) {
-        november_.makeImmutable();
-        result.november_ = november_;
-      }
-      if (((from_bitField0_ & 0x00000800) != 0)) {
-        december_.makeImmutable();
-        result.december_ = december_;
-      }
     }
 
     @java.lang.Override
@@ -1029,8 +1033,7 @@ private static final long serialVersionUID = 0L;
       if (!other.january_.isEmpty()) {
         if (january_.isEmpty()) {
           january_ = other.january_;
-          january_.makeImmutable();
-          bitField0_ |= 0x00000001;
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           ensureJanuaryIsMutable();
           january_.addAll(other.january_);
@@ -1040,8 +1043,7 @@ private static final long serialVersionUID = 0L;
       if (!other.february_.isEmpty()) {
         if (february_.isEmpty()) {
           february_ = other.february_;
-          february_.makeImmutable();
-          bitField0_ |= 0x00000002;
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
           ensureFebruaryIsMutable();
           february_.addAll(other.february_);
@@ -1051,8 +1053,7 @@ private static final long serialVersionUID = 0L;
       if (!other.march_.isEmpty()) {
         if (march_.isEmpty()) {
           march_ = other.march_;
-          march_.makeImmutable();
-          bitField0_ |= 0x00000004;
+          bitField0_ = (bitField0_ & ~0x00000004);
         } else {
           ensureMarchIsMutable();
           march_.addAll(other.march_);
@@ -1062,8 +1063,7 @@ private static final long serialVersionUID = 0L;
       if (!other.april_.isEmpty()) {
         if (april_.isEmpty()) {
           april_ = other.april_;
-          april_.makeImmutable();
-          bitField0_ |= 0x00000008;
+          bitField0_ = (bitField0_ & ~0x00000008);
         } else {
           ensureAprilIsMutable();
           april_.addAll(other.april_);
@@ -1073,8 +1073,7 @@ private static final long serialVersionUID = 0L;
       if (!other.may_.isEmpty()) {
         if (may_.isEmpty()) {
           may_ = other.may_;
-          may_.makeImmutable();
-          bitField0_ |= 0x00000010;
+          bitField0_ = (bitField0_ & ~0x00000010);
         } else {
           ensureMayIsMutable();
           may_.addAll(other.may_);
@@ -1084,8 +1083,7 @@ private static final long serialVersionUID = 0L;
       if (!other.june_.isEmpty()) {
         if (june_.isEmpty()) {
           june_ = other.june_;
-          june_.makeImmutable();
-          bitField0_ |= 0x00000020;
+          bitField0_ = (bitField0_ & ~0x00000020);
         } else {
           ensureJuneIsMutable();
           june_.addAll(other.june_);
@@ -1095,8 +1093,7 @@ private static final long serialVersionUID = 0L;
       if (!other.july_.isEmpty()) {
         if (july_.isEmpty()) {
           july_ = other.july_;
-          july_.makeImmutable();
-          bitField0_ |= 0x00000040;
+          bitField0_ = (bitField0_ & ~0x00000040);
         } else {
           ensureJulyIsMutable();
           july_.addAll(other.july_);
@@ -1106,8 +1103,7 @@ private static final long serialVersionUID = 0L;
       if (!other.august_.isEmpty()) {
         if (august_.isEmpty()) {
           august_ = other.august_;
-          august_.makeImmutable();
-          bitField0_ |= 0x00000080;
+          bitField0_ = (bitField0_ & ~0x00000080);
         } else {
           ensureAugustIsMutable();
           august_.addAll(other.august_);
@@ -1117,8 +1113,7 @@ private static final long serialVersionUID = 0L;
       if (!other.september_.isEmpty()) {
         if (september_.isEmpty()) {
           september_ = other.september_;
-          september_.makeImmutable();
-          bitField0_ |= 0x00000100;
+          bitField0_ = (bitField0_ & ~0x00000100);
         } else {
           ensureSeptemberIsMutable();
           september_.addAll(other.september_);
@@ -1128,8 +1123,7 @@ private static final long serialVersionUID = 0L;
       if (!other.october_.isEmpty()) {
         if (october_.isEmpty()) {
           october_ = other.october_;
-          october_.makeImmutable();
-          bitField0_ |= 0x00000200;
+          bitField0_ = (bitField0_ & ~0x00000200);
         } else {
           ensureOctoberIsMutable();
           october_.addAll(other.october_);
@@ -1139,8 +1133,7 @@ private static final long serialVersionUID = 0L;
       if (!other.november_.isEmpty()) {
         if (november_.isEmpty()) {
           november_ = other.november_;
-          november_.makeImmutable();
-          bitField0_ |= 0x00000400;
+          bitField0_ = (bitField0_ & ~0x00000400);
         } else {
           ensureNovemberIsMutable();
           november_.addAll(other.november_);
@@ -1150,8 +1143,7 @@ private static final long serialVersionUID = 0L;
       if (!other.december_.isEmpty()) {
         if (december_.isEmpty()) {
           december_ = other.december_;
-          december_.makeImmutable();
-          bitField0_ |= 0x00000800;
+          bitField0_ = (bitField0_ & ~0x00000800);
         } else {
           ensureDecemberIsMutable();
           december_.addAll(other.december_);
@@ -1193,8 +1185,7 @@ private static final long serialVersionUID = 0L;
             case 10: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
-              int alloc = length > 4096 ? 4096 : length;
-              ensureJanuaryIsMutable(alloc / 4);
+              ensureJanuaryIsMutable();
               while (input.getBytesUntilLimit() > 0) {
                 january_.addFloat(input.readFloat());
               }
@@ -1210,8 +1201,7 @@ private static final long serialVersionUID = 0L;
             case 18: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
-              int alloc = length > 4096 ? 4096 : length;
-              ensureFebruaryIsMutable(alloc / 4);
+              ensureFebruaryIsMutable();
               while (input.getBytesUntilLimit() > 0) {
                 february_.addFloat(input.readFloat());
               }
@@ -1227,8 +1217,7 @@ private static final long serialVersionUID = 0L;
             case 26: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
-              int alloc = length > 4096 ? 4096 : length;
-              ensureMarchIsMutable(alloc / 4);
+              ensureMarchIsMutable();
               while (input.getBytesUntilLimit() > 0) {
                 march_.addFloat(input.readFloat());
               }
@@ -1244,8 +1233,7 @@ private static final long serialVersionUID = 0L;
             case 34: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
-              int alloc = length > 4096 ? 4096 : length;
-              ensureAprilIsMutable(alloc / 4);
+              ensureAprilIsMutable();
               while (input.getBytesUntilLimit() > 0) {
                 april_.addFloat(input.readFloat());
               }
@@ -1261,8 +1249,7 @@ private static final long serialVersionUID = 0L;
             case 42: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
-              int alloc = length > 4096 ? 4096 : length;
-              ensureMayIsMutable(alloc / 4);
+              ensureMayIsMutable();
               while (input.getBytesUntilLimit() > 0) {
                 may_.addFloat(input.readFloat());
               }
@@ -1278,8 +1265,7 @@ private static final long serialVersionUID = 0L;
             case 50: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
-              int alloc = length > 4096 ? 4096 : length;
-              ensureJuneIsMutable(alloc / 4);
+              ensureJuneIsMutable();
               while (input.getBytesUntilLimit() > 0) {
                 june_.addFloat(input.readFloat());
               }
@@ -1295,8 +1281,7 @@ private static final long serialVersionUID = 0L;
             case 58: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
-              int alloc = length > 4096 ? 4096 : length;
-              ensureJulyIsMutable(alloc / 4);
+              ensureJulyIsMutable();
               while (input.getBytesUntilLimit() > 0) {
                 july_.addFloat(input.readFloat());
               }
@@ -1312,8 +1297,7 @@ private static final long serialVersionUID = 0L;
             case 66: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
-              int alloc = length > 4096 ? 4096 : length;
-              ensureAugustIsMutable(alloc / 4);
+              ensureAugustIsMutable();
               while (input.getBytesUntilLimit() > 0) {
                 august_.addFloat(input.readFloat());
               }
@@ -1329,8 +1313,7 @@ private static final long serialVersionUID = 0L;
             case 74: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
-              int alloc = length > 4096 ? 4096 : length;
-              ensureSeptemberIsMutable(alloc / 4);
+              ensureSeptemberIsMutable();
               while (input.getBytesUntilLimit() > 0) {
                 september_.addFloat(input.readFloat());
               }
@@ -1346,8 +1329,7 @@ private static final long serialVersionUID = 0L;
             case 82: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
-              int alloc = length > 4096 ? 4096 : length;
-              ensureOctoberIsMutable(alloc / 4);
+              ensureOctoberIsMutable();
               while (input.getBytesUntilLimit() > 0) {
                 october_.addFloat(input.readFloat());
               }
@@ -1363,8 +1345,7 @@ private static final long serialVersionUID = 0L;
             case 90: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
-              int alloc = length > 4096 ? 4096 : length;
-              ensureNovemberIsMutable(alloc / 4);
+              ensureNovemberIsMutable();
               while (input.getBytesUntilLimit() > 0) {
                 november_.addFloat(input.readFloat());
               }
@@ -1380,8 +1361,7 @@ private static final long serialVersionUID = 0L;
             case 98: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
-              int alloc = length > 4096 ? 4096 : length;
-              ensureDecemberIsMutable(alloc / 4);
+              ensureDecemberIsMutable();
               while (input.getBytesUntilLimit() > 0) {
                 december_.addFloat(input.readFloat());
               }
@@ -1407,16 +1387,10 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Internal.FloatList january_ = emptyFloatList();
     private void ensureJanuaryIsMutable() {
-      if (!january_.isModifiable()) {
-        january_ = makeMutableCopy(january_);
+      if (!((bitField0_ & 0x00000001) != 0)) {
+        january_ = mutableCopy(january_);
+        bitField0_ |= 0x00000001;
       }
-      bitField0_ |= 0x00000001;
-    }
-    private void ensureJanuaryIsMutable(int capacity) {
-      if (!january_.isModifiable()) {
-        january_ = makeMutableCopy(january_, capacity);
-      }
-      bitField0_ |= 0x00000001;
     }
     /**
      * <code>repeated float january = 1 [json_name = "january"];</code>
@@ -1424,8 +1398,8 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Float>
         getJanuaryList() {
-      january_.makeImmutable();
-      return january_;
+      return ((bitField0_ & 0x00000001) != 0) ?
+               java.util.Collections.unmodifiableList(january_) : january_;
     }
     /**
      * <code>repeated float january = 1 [json_name = "january"];</code>
@@ -1453,7 +1427,6 @@ private static final long serialVersionUID = 0L;
 
       ensureJanuaryIsMutable();
       january_.setFloat(index, value);
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1466,7 +1439,6 @@ private static final long serialVersionUID = 0L;
 
       ensureJanuaryIsMutable();
       january_.addFloat(value);
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1480,7 +1452,6 @@ private static final long serialVersionUID = 0L;
       ensureJanuaryIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, january_);
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1497,16 +1468,10 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Internal.FloatList february_ = emptyFloatList();
     private void ensureFebruaryIsMutable() {
-      if (!february_.isModifiable()) {
-        february_ = makeMutableCopy(february_);
+      if (!((bitField0_ & 0x00000002) != 0)) {
+        february_ = mutableCopy(february_);
+        bitField0_ |= 0x00000002;
       }
-      bitField0_ |= 0x00000002;
-    }
-    private void ensureFebruaryIsMutable(int capacity) {
-      if (!february_.isModifiable()) {
-        february_ = makeMutableCopy(february_, capacity);
-      }
-      bitField0_ |= 0x00000002;
     }
     /**
      * <code>repeated float february = 2 [json_name = "february"];</code>
@@ -1514,8 +1479,8 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Float>
         getFebruaryList() {
-      february_.makeImmutable();
-      return february_;
+      return ((bitField0_ & 0x00000002) != 0) ?
+               java.util.Collections.unmodifiableList(february_) : february_;
     }
     /**
      * <code>repeated float february = 2 [json_name = "february"];</code>
@@ -1543,7 +1508,6 @@ private static final long serialVersionUID = 0L;
 
       ensureFebruaryIsMutable();
       february_.setFloat(index, value);
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1556,7 +1520,6 @@ private static final long serialVersionUID = 0L;
 
       ensureFebruaryIsMutable();
       february_.addFloat(value);
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1570,7 +1533,6 @@ private static final long serialVersionUID = 0L;
       ensureFebruaryIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, february_);
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1587,16 +1549,10 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Internal.FloatList march_ = emptyFloatList();
     private void ensureMarchIsMutable() {
-      if (!march_.isModifiable()) {
-        march_ = makeMutableCopy(march_);
+      if (!((bitField0_ & 0x00000004) != 0)) {
+        march_ = mutableCopy(march_);
+        bitField0_ |= 0x00000004;
       }
-      bitField0_ |= 0x00000004;
-    }
-    private void ensureMarchIsMutable(int capacity) {
-      if (!march_.isModifiable()) {
-        march_ = makeMutableCopy(march_, capacity);
-      }
-      bitField0_ |= 0x00000004;
     }
     /**
      * <code>repeated float march = 3 [json_name = "march"];</code>
@@ -1604,8 +1560,8 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Float>
         getMarchList() {
-      march_.makeImmutable();
-      return march_;
+      return ((bitField0_ & 0x00000004) != 0) ?
+               java.util.Collections.unmodifiableList(march_) : march_;
     }
     /**
      * <code>repeated float march = 3 [json_name = "march"];</code>
@@ -1633,7 +1589,6 @@ private static final long serialVersionUID = 0L;
 
       ensureMarchIsMutable();
       march_.setFloat(index, value);
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1646,7 +1601,6 @@ private static final long serialVersionUID = 0L;
 
       ensureMarchIsMutable();
       march_.addFloat(value);
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1660,7 +1614,6 @@ private static final long serialVersionUID = 0L;
       ensureMarchIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, march_);
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1677,16 +1630,10 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Internal.FloatList april_ = emptyFloatList();
     private void ensureAprilIsMutable() {
-      if (!april_.isModifiable()) {
-        april_ = makeMutableCopy(april_);
+      if (!((bitField0_ & 0x00000008) != 0)) {
+        april_ = mutableCopy(april_);
+        bitField0_ |= 0x00000008;
       }
-      bitField0_ |= 0x00000008;
-    }
-    private void ensureAprilIsMutable(int capacity) {
-      if (!april_.isModifiable()) {
-        april_ = makeMutableCopy(april_, capacity);
-      }
-      bitField0_ |= 0x00000008;
     }
     /**
      * <code>repeated float april = 4 [json_name = "april"];</code>
@@ -1694,8 +1641,8 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Float>
         getAprilList() {
-      april_.makeImmutable();
-      return april_;
+      return ((bitField0_ & 0x00000008) != 0) ?
+               java.util.Collections.unmodifiableList(april_) : april_;
     }
     /**
      * <code>repeated float april = 4 [json_name = "april"];</code>
@@ -1723,7 +1670,6 @@ private static final long serialVersionUID = 0L;
 
       ensureAprilIsMutable();
       april_.setFloat(index, value);
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1736,7 +1682,6 @@ private static final long serialVersionUID = 0L;
 
       ensureAprilIsMutable();
       april_.addFloat(value);
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1750,7 +1695,6 @@ private static final long serialVersionUID = 0L;
       ensureAprilIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, april_);
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1767,16 +1711,10 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Internal.FloatList may_ = emptyFloatList();
     private void ensureMayIsMutable() {
-      if (!may_.isModifiable()) {
-        may_ = makeMutableCopy(may_);
+      if (!((bitField0_ & 0x00000010) != 0)) {
+        may_ = mutableCopy(may_);
+        bitField0_ |= 0x00000010;
       }
-      bitField0_ |= 0x00000010;
-    }
-    private void ensureMayIsMutable(int capacity) {
-      if (!may_.isModifiable()) {
-        may_ = makeMutableCopy(may_, capacity);
-      }
-      bitField0_ |= 0x00000010;
     }
     /**
      * <code>repeated float may = 5 [json_name = "may"];</code>
@@ -1784,8 +1722,8 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Float>
         getMayList() {
-      may_.makeImmutable();
-      return may_;
+      return ((bitField0_ & 0x00000010) != 0) ?
+               java.util.Collections.unmodifiableList(may_) : may_;
     }
     /**
      * <code>repeated float may = 5 [json_name = "may"];</code>
@@ -1813,7 +1751,6 @@ private static final long serialVersionUID = 0L;
 
       ensureMayIsMutable();
       may_.setFloat(index, value);
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1826,7 +1763,6 @@ private static final long serialVersionUID = 0L;
 
       ensureMayIsMutable();
       may_.addFloat(value);
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1840,7 +1776,6 @@ private static final long serialVersionUID = 0L;
       ensureMayIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, may_);
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1857,16 +1792,10 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Internal.FloatList june_ = emptyFloatList();
     private void ensureJuneIsMutable() {
-      if (!june_.isModifiable()) {
-        june_ = makeMutableCopy(june_);
+      if (!((bitField0_ & 0x00000020) != 0)) {
+        june_ = mutableCopy(june_);
+        bitField0_ |= 0x00000020;
       }
-      bitField0_ |= 0x00000020;
-    }
-    private void ensureJuneIsMutable(int capacity) {
-      if (!june_.isModifiable()) {
-        june_ = makeMutableCopy(june_, capacity);
-      }
-      bitField0_ |= 0x00000020;
     }
     /**
      * <code>repeated float june = 6 [json_name = "june"];</code>
@@ -1874,8 +1803,8 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Float>
         getJuneList() {
-      june_.makeImmutable();
-      return june_;
+      return ((bitField0_ & 0x00000020) != 0) ?
+               java.util.Collections.unmodifiableList(june_) : june_;
     }
     /**
      * <code>repeated float june = 6 [json_name = "june"];</code>
@@ -1903,7 +1832,6 @@ private static final long serialVersionUID = 0L;
 
       ensureJuneIsMutable();
       june_.setFloat(index, value);
-      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1916,7 +1844,6 @@ private static final long serialVersionUID = 0L;
 
       ensureJuneIsMutable();
       june_.addFloat(value);
-      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1930,7 +1857,6 @@ private static final long serialVersionUID = 0L;
       ensureJuneIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, june_);
-      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1947,16 +1873,10 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Internal.FloatList july_ = emptyFloatList();
     private void ensureJulyIsMutable() {
-      if (!july_.isModifiable()) {
-        july_ = makeMutableCopy(july_);
+      if (!((bitField0_ & 0x00000040) != 0)) {
+        july_ = mutableCopy(july_);
+        bitField0_ |= 0x00000040;
       }
-      bitField0_ |= 0x00000040;
-    }
-    private void ensureJulyIsMutable(int capacity) {
-      if (!july_.isModifiable()) {
-        july_ = makeMutableCopy(july_, capacity);
-      }
-      bitField0_ |= 0x00000040;
     }
     /**
      * <code>repeated float july = 7 [json_name = "july"];</code>
@@ -1964,8 +1884,8 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Float>
         getJulyList() {
-      july_.makeImmutable();
-      return july_;
+      return ((bitField0_ & 0x00000040) != 0) ?
+               java.util.Collections.unmodifiableList(july_) : july_;
     }
     /**
      * <code>repeated float july = 7 [json_name = "july"];</code>
@@ -1993,7 +1913,6 @@ private static final long serialVersionUID = 0L;
 
       ensureJulyIsMutable();
       july_.setFloat(index, value);
-      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -2006,7 +1925,6 @@ private static final long serialVersionUID = 0L;
 
       ensureJulyIsMutable();
       july_.addFloat(value);
-      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -2020,7 +1938,6 @@ private static final long serialVersionUID = 0L;
       ensureJulyIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, july_);
-      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -2037,16 +1954,10 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Internal.FloatList august_ = emptyFloatList();
     private void ensureAugustIsMutable() {
-      if (!august_.isModifiable()) {
-        august_ = makeMutableCopy(august_);
+      if (!((bitField0_ & 0x00000080) != 0)) {
+        august_ = mutableCopy(august_);
+        bitField0_ |= 0x00000080;
       }
-      bitField0_ |= 0x00000080;
-    }
-    private void ensureAugustIsMutable(int capacity) {
-      if (!august_.isModifiable()) {
-        august_ = makeMutableCopy(august_, capacity);
-      }
-      bitField0_ |= 0x00000080;
     }
     /**
      * <code>repeated float august = 8 [json_name = "august"];</code>
@@ -2054,8 +1965,8 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Float>
         getAugustList() {
-      august_.makeImmutable();
-      return august_;
+      return ((bitField0_ & 0x00000080) != 0) ?
+               java.util.Collections.unmodifiableList(august_) : august_;
     }
     /**
      * <code>repeated float august = 8 [json_name = "august"];</code>
@@ -2083,7 +1994,6 @@ private static final long serialVersionUID = 0L;
 
       ensureAugustIsMutable();
       august_.setFloat(index, value);
-      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -2096,7 +2006,6 @@ private static final long serialVersionUID = 0L;
 
       ensureAugustIsMutable();
       august_.addFloat(value);
-      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -2110,7 +2019,6 @@ private static final long serialVersionUID = 0L;
       ensureAugustIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, august_);
-      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -2127,16 +2035,10 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Internal.FloatList september_ = emptyFloatList();
     private void ensureSeptemberIsMutable() {
-      if (!september_.isModifiable()) {
-        september_ = makeMutableCopy(september_);
+      if (!((bitField0_ & 0x00000100) != 0)) {
+        september_ = mutableCopy(september_);
+        bitField0_ |= 0x00000100;
       }
-      bitField0_ |= 0x00000100;
-    }
-    private void ensureSeptemberIsMutable(int capacity) {
-      if (!september_.isModifiable()) {
-        september_ = makeMutableCopy(september_, capacity);
-      }
-      bitField0_ |= 0x00000100;
     }
     /**
      * <code>repeated float september = 9 [json_name = "september"];</code>
@@ -2144,8 +2046,8 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Float>
         getSeptemberList() {
-      september_.makeImmutable();
-      return september_;
+      return ((bitField0_ & 0x00000100) != 0) ?
+               java.util.Collections.unmodifiableList(september_) : september_;
     }
     /**
      * <code>repeated float september = 9 [json_name = "september"];</code>
@@ -2173,7 +2075,6 @@ private static final long serialVersionUID = 0L;
 
       ensureSeptemberIsMutable();
       september_.setFloat(index, value);
-      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -2186,7 +2087,6 @@ private static final long serialVersionUID = 0L;
 
       ensureSeptemberIsMutable();
       september_.addFloat(value);
-      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -2200,7 +2100,6 @@ private static final long serialVersionUID = 0L;
       ensureSeptemberIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, september_);
-      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -2217,16 +2116,10 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Internal.FloatList october_ = emptyFloatList();
     private void ensureOctoberIsMutable() {
-      if (!october_.isModifiable()) {
-        october_ = makeMutableCopy(october_);
+      if (!((bitField0_ & 0x00000200) != 0)) {
+        october_ = mutableCopy(october_);
+        bitField0_ |= 0x00000200;
       }
-      bitField0_ |= 0x00000200;
-    }
-    private void ensureOctoberIsMutable(int capacity) {
-      if (!october_.isModifiable()) {
-        october_ = makeMutableCopy(october_, capacity);
-      }
-      bitField0_ |= 0x00000200;
     }
     /**
      * <code>repeated float october = 10 [json_name = "october"];</code>
@@ -2234,8 +2127,8 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Float>
         getOctoberList() {
-      october_.makeImmutable();
-      return october_;
+      return ((bitField0_ & 0x00000200) != 0) ?
+               java.util.Collections.unmodifiableList(october_) : october_;
     }
     /**
      * <code>repeated float october = 10 [json_name = "october"];</code>
@@ -2263,7 +2156,6 @@ private static final long serialVersionUID = 0L;
 
       ensureOctoberIsMutable();
       october_.setFloat(index, value);
-      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -2276,7 +2168,6 @@ private static final long serialVersionUID = 0L;
 
       ensureOctoberIsMutable();
       october_.addFloat(value);
-      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -2290,7 +2181,6 @@ private static final long serialVersionUID = 0L;
       ensureOctoberIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, october_);
-      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -2307,16 +2197,10 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Internal.FloatList november_ = emptyFloatList();
     private void ensureNovemberIsMutable() {
-      if (!november_.isModifiable()) {
-        november_ = makeMutableCopy(november_);
+      if (!((bitField0_ & 0x00000400) != 0)) {
+        november_ = mutableCopy(november_);
+        bitField0_ |= 0x00000400;
       }
-      bitField0_ |= 0x00000400;
-    }
-    private void ensureNovemberIsMutable(int capacity) {
-      if (!november_.isModifiable()) {
-        november_ = makeMutableCopy(november_, capacity);
-      }
-      bitField0_ |= 0x00000400;
     }
     /**
      * <code>repeated float november = 11 [json_name = "november"];</code>
@@ -2324,8 +2208,8 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Float>
         getNovemberList() {
-      november_.makeImmutable();
-      return november_;
+      return ((bitField0_ & 0x00000400) != 0) ?
+               java.util.Collections.unmodifiableList(november_) : november_;
     }
     /**
      * <code>repeated float november = 11 [json_name = "november"];</code>
@@ -2353,7 +2237,6 @@ private static final long serialVersionUID = 0L;
 
       ensureNovemberIsMutable();
       november_.setFloat(index, value);
-      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -2366,7 +2249,6 @@ private static final long serialVersionUID = 0L;
 
       ensureNovemberIsMutable();
       november_.addFloat(value);
-      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -2380,7 +2262,6 @@ private static final long serialVersionUID = 0L;
       ensureNovemberIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, november_);
-      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -2397,16 +2278,10 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Internal.FloatList december_ = emptyFloatList();
     private void ensureDecemberIsMutable() {
-      if (!december_.isModifiable()) {
-        december_ = makeMutableCopy(december_);
+      if (!((bitField0_ & 0x00000800) != 0)) {
+        december_ = mutableCopy(december_);
+        bitField0_ |= 0x00000800;
       }
-      bitField0_ |= 0x00000800;
-    }
-    private void ensureDecemberIsMutable(int capacity) {
-      if (!december_.isModifiable()) {
-        december_ = makeMutableCopy(december_, capacity);
-      }
-      bitField0_ |= 0x00000800;
     }
     /**
      * <code>repeated float december = 12 [json_name = "december"];</code>
@@ -2414,8 +2289,8 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Float>
         getDecemberList() {
-      december_.makeImmutable();
-      return december_;
+      return ((bitField0_ & 0x00000800) != 0) ?
+               java.util.Collections.unmodifiableList(december_) : december_;
     }
     /**
      * <code>repeated float december = 12 [json_name = "december"];</code>
@@ -2443,7 +2318,6 @@ private static final long serialVersionUID = 0L;
 
       ensureDecemberIsMutable();
       december_.setFloat(index, value);
-      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -2456,7 +2330,6 @@ private static final long serialVersionUID = 0L;
 
       ensureDecemberIsMutable();
       december_.addFloat(value);
-      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -2470,7 +2343,6 @@ private static final long serialVersionUID = 0L;
       ensureDecemberIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, december_);
-      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }

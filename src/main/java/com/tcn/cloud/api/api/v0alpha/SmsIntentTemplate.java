@@ -43,7 +43,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.SmsIntentTemplate.class, com.tcn.cloud.api.api.v0alpha.SmsIntentTemplate.Builder.class);
   }
 
-  private int bitField0_;
   public static final int SMS_INTENT_TEMPLATE_SID_FIELD_NUMBER = 1;
   private long smsIntentTemplateSid_ = 0L;
   /**
@@ -269,7 +268,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasLastUpdated() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return lastUpdated_ != null;
   }
   /**
    * <code>.google.protobuf.Timestamp last_updated = 8 [json_name = "lastUpdated"];</code>
@@ -322,7 +321,7 @@ private static final long serialVersionUID = 0L;
     if (priority_ != 0L) {
       output.writeInt64(7, priority_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (lastUpdated_ != null) {
       output.writeMessage(8, getLastUpdated());
     }
     getUnknownFields().writeTo(output);
@@ -357,7 +356,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(7, priority_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (lastUpdated_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, getLastUpdated());
     }
@@ -545,19 +544,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.SmsIntentTemplate.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getLastUpdatedFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -629,14 +622,11 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.priority_ = priority_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.lastUpdated_ = lastUpdatedBuilder_ == null
             ? lastUpdated_
             : lastUpdatedBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1292,10 +1282,8 @@ private static final long serialVersionUID = 0L;
       } else {
         lastUpdatedBuilder_.mergeFrom(value);
       }
-      if (lastUpdated_ != null) {
-        bitField0_ |= 0x00000080;
-        onChanged();
-      }
+      bitField0_ |= 0x00000080;
+      onChanged();
       return this;
     }
     /**

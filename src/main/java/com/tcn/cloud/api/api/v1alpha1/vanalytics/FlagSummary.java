@@ -194,8 +194,7 @@ private static final long serialVersionUID = 0L;
 
     public static final int FLAG_SIDS_FIELD_NUMBER = 4;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList flagSids_ =
-        emptyLongList();
+    private com.google.protobuf.Internal.LongList flagSids_;
     /**
      * <pre>
      * The Flag sids that need review.
@@ -509,9 +508,18 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagSummary.NeedReview buildPartial() {
         com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagSummary.NeedReview result = new com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagSummary.NeedReview(this);
+        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagSummary.NeedReview result) {
+        if (((bitField0_ & 0x00000008) != 0)) {
+          flagSids_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000008);
+        }
+        result.flagSids_ = flagSids_;
       }
 
       private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagSummary.NeedReview result) {
@@ -524,10 +532,6 @@ private static final long serialVersionUID = 0L;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.count_ = count_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          flagSids_.makeImmutable();
-          result.flagSids_ = flagSids_;
         }
       }
 
@@ -587,8 +591,7 @@ private static final long serialVersionUID = 0L;
         if (!other.flagSids_.isEmpty()) {
           if (flagSids_.isEmpty()) {
             flagSids_ = other.flagSids_;
-            flagSids_.makeImmutable();
-            bitField0_ |= 0x00000008;
+            bitField0_ = (bitField0_ & ~0x00000008);
           } else {
             ensureFlagSidsIsMutable();
             flagSids_.addAll(other.flagSids_);
@@ -803,10 +806,10 @@ private static final long serialVersionUID = 0L;
 
       private com.google.protobuf.Internal.LongList flagSids_ = emptyLongList();
       private void ensureFlagSidsIsMutable() {
-        if (!flagSids_.isModifiable()) {
-          flagSids_ = makeMutableCopy(flagSids_);
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          flagSids_ = mutableCopy(flagSids_);
+          bitField0_ |= 0x00000008;
         }
-        bitField0_ |= 0x00000008;
       }
       /**
        * <pre>
@@ -818,8 +821,8 @@ private static final long serialVersionUID = 0L;
        */
       public java.util.List<java.lang.Long>
           getFlagSidsList() {
-        flagSids_.makeImmutable();
-        return flagSids_;
+        return ((bitField0_ & 0x00000008) != 0) ?
+                 java.util.Collections.unmodifiableList(flagSids_) : flagSids_;
       }
       /**
        * <pre>
@@ -859,7 +862,6 @@ private static final long serialVersionUID = 0L;
 
         ensureFlagSidsIsMutable();
         flagSids_.setLong(index, value);
-        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -876,7 +878,6 @@ private static final long serialVersionUID = 0L;
 
         ensureFlagSidsIsMutable();
         flagSids_.addLong(value);
-        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -894,7 +895,6 @@ private static final long serialVersionUID = 0L;
         ensureFlagSidsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, flagSids_);
-        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -4946,7 +4946,6 @@ private static final long serialVersionUID = 0L;
 
   }
 
-  private int bitField0_;
   public static final int COUNT_FIELD_NUMBER = 1;
   private int count_ = 0;
   /**
@@ -5004,7 +5003,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasNeedReview() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return needReview_ != null;
   }
   /**
    * <pre>
@@ -5140,7 +5139,7 @@ private static final long serialVersionUID = 0L;
     if (priorityMax_ != 0) {
       output.writeInt32(3, priorityMax_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (needReview_ != null) {
       output.writeMessage(4, getNeedReview());
     }
     for (int i = 0; i < flags_.size(); i++) {
@@ -5170,7 +5169,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(3, priorityMax_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (needReview_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getNeedReview());
     }
@@ -5361,20 +5360,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagSummary.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getNeedReviewFieldBuilder();
-        getFlagsFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -5451,17 +5443,14 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.priorityMax_ = priorityMax_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.needReview_ = needReviewBuilder_ == null
             ? needReview_
             : needReviewBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.reviewStatus_ = reviewStatus_;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -5850,10 +5839,8 @@ private static final long serialVersionUID = 0L;
       } else {
         needReviewBuilder_.mergeFrom(value);
       }
-      if (needReview_ != null) {
-        bitField0_ |= 0x00000008;
-        onChanged();
-      }
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**

@@ -39,7 +39,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTarget.class, com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTarget.Builder.class);
   }
 
-  private int bitField0_;
   public static final int SCHEDULING_TARGET_SID_FIELD_NUMBER = 1;
   private long schedulingTargetSid_ = 0L;
   /**
@@ -109,7 +108,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasServiceLevelTargetDurationSeconds() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return serviceLevelTargetDurationSeconds_ != null;
   }
   /**
    * <pre>
@@ -150,7 +149,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasNodeEntity() {
-    return ((bitField0_ & 0x00000002) != 0);
+    return nodeEntity_ != null;
   }
   /**
    * <pre>
@@ -201,10 +200,10 @@ private static final long serialVersionUID = 0L;
     if (java.lang.Float.floatToRawIntBits(schedulingTargetPercentage_) != 0) {
       output.writeFloat(3, schedulingTargetPercentage_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (serviceLevelTargetDurationSeconds_ != null) {
       output.writeMessage(4, getServiceLevelTargetDurationSeconds());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (nodeEntity_ != null) {
       output.writeMessage(5, getNodeEntity());
     }
     getUnknownFields().writeTo(output);
@@ -228,11 +227,11 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(3, schedulingTargetPercentage_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (serviceLevelTargetDurationSeconds_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getServiceLevelTargetDurationSeconds());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (nodeEntity_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getNodeEntity());
     }
@@ -413,20 +412,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTarget.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getServiceLevelTargetDurationSecondsFieldBuilder();
-        getNodeEntityFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -487,20 +479,16 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.schedulingTargetPercentage_ = schedulingTargetPercentage_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.serviceLevelTargetDurationSeconds_ = serviceLevelTargetDurationSecondsBuilder_ == null
             ? serviceLevelTargetDurationSeconds_
             : serviceLevelTargetDurationSecondsBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.nodeEntity_ = nodeEntityBuilder_ == null
             ? nodeEntity_
             : nodeEntityBuilder_.build();
-        to_bitField0_ |= 0x00000002;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -886,10 +874,8 @@ private static final long serialVersionUID = 0L;
       } else {
         serviceLevelTargetDurationSecondsBuilder_.mergeFrom(value);
       }
-      if (serviceLevelTargetDurationSeconds_ != null) {
-        bitField0_ |= 0x00000008;
-        onChanged();
-      }
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -1052,10 +1038,8 @@ private static final long serialVersionUID = 0L;
       } else {
         nodeEntityBuilder_.mergeFrom(value);
       }
-      if (nodeEntity_ != null) {
-        bitField0_ |= 0x00000010;
-        onChanged();
-      }
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
