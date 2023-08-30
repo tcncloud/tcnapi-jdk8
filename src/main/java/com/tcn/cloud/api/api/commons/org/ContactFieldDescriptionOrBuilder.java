@@ -36,4 +36,34 @@ public interface ContactFieldDescriptionOrBuilder extends
    */
   com.google.protobuf.ByteString
       getFieldNameBytes();
+
+  /**
+   * <pre>
+   * Whether this field holds a phone number.
+   * </pre>
+   *
+   * <code>bool is_phone = 3 [json_name = "isPhone"];</code>
+   * @return The isPhone.
+   */
+  boolean getIsPhone();
+
+  /**
+   * <pre>
+   * Special formatting.
+   * </pre>
+   *
+   * <code>string display_format_string = 4 [json_name = "displayFormatString"];</code>
+   * @return The displayFormatString.
+   */
+  java.lang.String getDisplayFormatString();
+  /**
+   * <pre>
+   * Special formatting.
+   * </pre>
+   *
+   * <code>string display_format_string = 4 [json_name = "displayFormatString"];</code>
+   * @return The bytes for displayFormatString.
+   */
+  com.google.protobuf.ByteString
+      getDisplayFormatStringBytes();
 }
