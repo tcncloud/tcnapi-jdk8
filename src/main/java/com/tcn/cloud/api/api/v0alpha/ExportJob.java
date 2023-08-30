@@ -40,7 +40,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.ExportJob.class, com.tcn.cloud.api.api.v0alpha.ExportJob.Builder.class);
   }
 
-  private int bitField0_;
   public static final int EXPORT_JOB_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object exportJobId_ = "";
@@ -127,7 +126,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasExportDelivery() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return exportDelivery_ != null;
   }
   /**
    * <code>.api.v0alpha.ExportDelivery export_delivery = 4 [json_name = "exportDelivery"];</code>
@@ -153,7 +152,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasExportOptions() {
-    return ((bitField0_ & 0x00000002) != 0);
+    return exportOptions_ != null;
   }
   /**
    * <code>.api.v0alpha.ExportOptions export_options = 5 [json_name = "exportOptions"];</code>
@@ -179,7 +178,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasExportSchedule() {
-    return ((bitField0_ & 0x00000004) != 0);
+    return exportSchedule_ != null;
   }
   /**
    * <code>.api.v0alpha.ExportSchedule export_schedule = 6 [json_name = "exportSchedule"];</code>
@@ -217,13 +216,13 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, title_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (exportDelivery_ != null) {
       output.writeMessage(4, getExportDelivery());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (exportOptions_ != null) {
       output.writeMessage(5, getExportOptions());
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
+    if (exportSchedule_ != null) {
       output.writeMessage(6, getExportSchedule());
     }
     getUnknownFields().writeTo(output);
@@ -241,15 +240,15 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, title_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (exportDelivery_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getExportDelivery());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (exportOptions_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getExportOptions());
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
+    if (exportSchedule_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, getExportSchedule());
     }
@@ -433,21 +432,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.ExportJob.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getExportDeliveryFieldBuilder();
-        getExportOptionsFieldBuilder();
-        getExportScheduleFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -509,26 +500,21 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.title_ = title_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.exportDelivery_ = exportDeliveryBuilder_ == null
             ? exportDelivery_
             : exportDeliveryBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.exportOptions_ = exportOptionsBuilder_ == null
             ? exportOptions_
             : exportOptionsBuilder_.build();
-        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.exportSchedule_ = exportScheduleBuilder_ == null
             ? exportSchedule_
             : exportScheduleBuilder_.build();
-        to_bitField0_ |= 0x00000004;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -878,10 +864,8 @@ private static final long serialVersionUID = 0L;
       } else {
         exportDeliveryBuilder_.mergeFrom(value);
       }
-      if (exportDelivery_ != null) {
-        bitField0_ |= 0x00000004;
-        onChanged();
-      }
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -999,10 +983,8 @@ private static final long serialVersionUID = 0L;
       } else {
         exportOptionsBuilder_.mergeFrom(value);
       }
-      if (exportOptions_ != null) {
-        bitField0_ |= 0x00000008;
-        onChanged();
-      }
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -1120,10 +1102,8 @@ private static final long serialVersionUID = 0L;
       } else {
         exportScheduleBuilder_.mergeFrom(value);
       }
-      if (exportSchedule_ != null) {
-        bitField0_ |= 0x00000010;
-        onChanged();
-      }
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**

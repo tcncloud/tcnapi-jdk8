@@ -46,8 +46,7 @@ private static final long serialVersionUID = 0L;
 
   public static final int VALUES_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private com.google.protobuf.Internal.LongList values_ =
-      emptyLongList();
+  private com.google.protobuf.Internal.LongList values_;
   /**
    * <code>repeated int64 values = 1 [json_name = "values"];</code>
    * @return A list containing the values.
@@ -314,17 +313,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.Int64ArraySql buildPartial() {
       com.tcn.cloud.api.api.commons.Int64ArraySql result = new com.tcn.cloud.api.api.commons.Int64ArraySql(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.commons.Int64ArraySql result) {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        values_.makeImmutable();
+        bitField0_ = (bitField0_ & ~0x00000001);
+      }
+      result.values_ = values_;
+    }
+
     private void buildPartial0(com.tcn.cloud.api.api.commons.Int64ArraySql result) {
       int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        values_.makeImmutable();
-        result.values_ = values_;
-      }
     }
 
     @java.lang.Override
@@ -374,8 +378,7 @@ private static final long serialVersionUID = 0L;
       if (!other.values_.isEmpty()) {
         if (values_.isEmpty()) {
           values_ = other.values_;
-          values_.makeImmutable();
-          bitField0_ |= 0x00000001;
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           ensureValuesIsMutable();
           values_.addAll(other.values_);
@@ -443,10 +446,10 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Internal.LongList values_ = emptyLongList();
     private void ensureValuesIsMutable() {
-      if (!values_.isModifiable()) {
-        values_ = makeMutableCopy(values_);
+      if (!((bitField0_ & 0x00000001) != 0)) {
+        values_ = mutableCopy(values_);
+        bitField0_ |= 0x00000001;
       }
-      bitField0_ |= 0x00000001;
     }
     /**
      * <code>repeated int64 values = 1 [json_name = "values"];</code>
@@ -454,8 +457,8 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Long>
         getValuesList() {
-      values_.makeImmutable();
-      return values_;
+      return ((bitField0_ & 0x00000001) != 0) ?
+               java.util.Collections.unmodifiableList(values_) : values_;
     }
     /**
      * <code>repeated int64 values = 1 [json_name = "values"];</code>
@@ -483,7 +486,6 @@ private static final long serialVersionUID = 0L;
 
       ensureValuesIsMutable();
       values_.setLong(index, value);
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -496,7 +498,6 @@ private static final long serialVersionUID = 0L;
 
       ensureValuesIsMutable();
       values_.addLong(value);
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -510,7 +511,6 @@ private static final long serialVersionUID = 0L;
       ensureValuesIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, values_);
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }

@@ -43,7 +43,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.integrations.PluginInstance.class, com.tcn.cloud.api.api.v1alpha1.integrations.PluginInstance.Builder.class);
   }
 
-  private int bitField0_;
   public static final int ID_FIELD_NUMBER = 3;
   @SuppressWarnings("serial")
   private volatile java.lang.Object id_ = "";
@@ -216,7 +215,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasData() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return data_ != null;
   }
   /**
    * <code>.api.v1alpha1.integrations.Values data = 7 [json_name = "data"];</code>
@@ -242,7 +241,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasMetadata() {
-    return ((bitField0_ & 0x00000002) != 0);
+    return metadata_ != null;
   }
   /**
    * <code>.api.v1alpha1.integrations.Values metadata = 10 [json_name = "metadata"];</code>
@@ -268,7 +267,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasLastEdited() {
-    return ((bitField0_ & 0x00000004) != 0);
+    return lastEdited_ != null;
   }
   /**
    * <code>.google.protobuf.Timestamp last_edited = 9 [json_name = "lastEdited"];</code>
@@ -330,13 +329,13 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pluginDefinition_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 6, pluginDefinition_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (data_ != null) {
       output.writeMessage(7, getData());
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
+    if (lastEdited_ != null) {
       output.writeMessage(9, getLastEdited());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (metadata_ != null) {
       output.writeMessage(10, getMetadata());
     }
     if (methodId_ != com.tcn.cloud.api.api.commons.integrations.RequestMethod.REQUEST_METHOD_UNKNOWN.getNumber()) {
@@ -363,15 +362,15 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pluginDefinition_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, pluginDefinition_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (data_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, getData());
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
+    if (lastEdited_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(9, getLastEdited());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (metadata_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(10, getMetadata());
     }
@@ -570,21 +569,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.integrations.PluginInstance.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getDataFieldBuilder();
-        getMetadataFieldBuilder();
-        getLastEditedFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -655,29 +646,24 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.pluginDefinition_ = pluginDefinition_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.data_ = dataBuilder_ == null
             ? data_
             : dataBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.metadata_ = metadataBuilder_ == null
             ? metadata_
             : metadataBuilder_.build();
-        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.lastEdited_ = lastEditedBuilder_ == null
             ? lastEdited_
             : lastEditedBuilder_.build();
-        to_bitField0_ |= 0x00000004;
       }
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.methodId_ = methodId_;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1219,10 +1205,8 @@ private static final long serialVersionUID = 0L;
       } else {
         dataBuilder_.mergeFrom(value);
       }
-      if (data_ != null) {
-        bitField0_ |= 0x00000010;
-        onChanged();
-      }
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -1340,10 +1324,8 @@ private static final long serialVersionUID = 0L;
       } else {
         metadataBuilder_.mergeFrom(value);
       }
-      if (metadata_ != null) {
-        bitField0_ |= 0x00000020;
-        onChanged();
-      }
+      bitField0_ |= 0x00000020;
+      onChanged();
       return this;
     }
     /**
@@ -1461,10 +1443,8 @@ private static final long serialVersionUID = 0L;
       } else {
         lastEditedBuilder_.mergeFrom(value);
       }
-      if (lastEdited_ != null) {
-        bitField0_ |= 0x00000040;
-        onChanged();
-      }
+      bitField0_ |= 0x00000040;
+      onChanged();
       return this;
     }
     /**

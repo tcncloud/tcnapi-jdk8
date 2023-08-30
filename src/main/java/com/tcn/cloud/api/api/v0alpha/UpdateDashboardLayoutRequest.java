@@ -43,7 +43,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.UpdateDashboardLayoutRequest.class, com.tcn.cloud.api.api.v0alpha.UpdateDashboardLayoutRequest.Builder.class);
   }
 
-  private int bitField0_;
   public static final int DASHBOARD_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object dashboardId_ = "";
@@ -103,7 +102,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasLayout() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return layout_ != null;
   }
   /**
    * <pre>
@@ -146,7 +145,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dashboardId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, dashboardId_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (layout_ != null) {
       output.writeMessage(2, getLayout());
     }
     getUnknownFields().writeTo(output);
@@ -161,7 +160,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dashboardId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, dashboardId_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (layout_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getLayout());
     }
@@ -327,19 +326,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.UpdateDashboardLayoutRequest.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getLayoutFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -387,14 +380,11 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.dashboardId_ = dashboardId_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.layout_ = layoutBuilder_ == null
             ? layout_
             : layoutBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -682,10 +672,8 @@ private static final long serialVersionUID = 0L;
       } else {
         layoutBuilder_.mergeFrom(value);
       }
-      if (layout_ != null) {
-        bitField0_ |= 0x00000002;
-        onChanged();
-      }
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**

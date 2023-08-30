@@ -42,7 +42,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.ScheduleRule.class, com.tcn.cloud.api.api.v0alpha.ScheduleRule.Builder.class);
   }
 
-  private int bitField0_;
   public static final int SCHEDULE_RULE_SID_FIELD_NUMBER = 1;
   private long scheduleRuleSid_ = 0L;
   /**
@@ -70,7 +69,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasClientSid() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return clientSid_ != null;
   }
   /**
    * <pre>
@@ -108,7 +107,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasName() {
-    return ((bitField0_ & 0x00000002) != 0);
+    return name_ != null;
   }
   /**
    * <pre>
@@ -146,7 +145,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasRuleTimeZone() {
-    return ((bitField0_ & 0x00000004) != 0);
+    return ruleTimeZone_ != null;
   }
   /**
    * <pre>
@@ -189,13 +188,13 @@ private static final long serialVersionUID = 0L;
     if (scheduleRuleSid_ != 0L) {
       output.writeInt64(1, scheduleRuleSid_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (clientSid_ != null) {
       output.writeMessage(2, getClientSid());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (name_ != null) {
       output.writeMessage(3, getName());
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
+    if (ruleTimeZone_ != null) {
       output.writeMessage(4, getRuleTimeZone());
     }
     getUnknownFields().writeTo(output);
@@ -211,15 +210,15 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(1, scheduleRuleSid_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (clientSid_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getClientSid());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (name_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getName());
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
+    if (ruleTimeZone_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getRuleTimeZone());
     }
@@ -404,21 +403,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.ScheduleRule.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getClientSidFieldBuilder();
-        getNameFieldBuilder();
-        getRuleTimeZoneFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -476,26 +467,21 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.scheduleRuleSid_ = scheduleRuleSid_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.clientSid_ = clientSidBuilder_ == null
             ? clientSid_
             : clientSidBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.name_ = nameBuilder_ == null
             ? name_
             : nameBuilder_.build();
-        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.ruleTimeZone_ = ruleTimeZoneBuilder_ == null
             ? ruleTimeZone_
             : ruleTimeZoneBuilder_.build();
-        to_bitField0_ |= 0x00000004;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -753,10 +739,8 @@ private static final long serialVersionUID = 0L;
       } else {
         clientSidBuilder_.mergeFrom(value);
       }
-      if (clientSid_ != null) {
-        bitField0_ |= 0x00000002;
-        onChanged();
-      }
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -910,10 +894,8 @@ private static final long serialVersionUID = 0L;
       } else {
         nameBuilder_.mergeFrom(value);
       }
-      if (name_ != null) {
-        bitField0_ |= 0x00000004;
-        onChanged();
-      }
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -1067,10 +1049,8 @@ private static final long serialVersionUID = 0L;
       } else {
         ruleTimeZoneBuilder_.mergeFrom(value);
       }
-      if (ruleTimeZone_ != null) {
-        bitField0_ |= 0x00000008;
-        onChanged();
-      }
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**

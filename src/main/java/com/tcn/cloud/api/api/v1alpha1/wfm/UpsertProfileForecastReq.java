@@ -42,7 +42,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.wfm.UpsertProfileForecastReq.class, com.tcn.cloud.api.api.v1alpha1.wfm.UpsertProfileForecastReq.Builder.class);
   }
 
-  private int bitField0_;
   public static final int SKILL_PROFILE_SID_FIELD_NUMBER = 1;
   private long skillProfileSid_ = 0L;
   /**
@@ -70,7 +69,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCallProfileTemplate() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return callProfileTemplate_ != null;
   }
   /**
    * <pre>
@@ -130,7 +129,7 @@ private static final long serialVersionUID = 0L;
     if (skillProfileSid_ != 0L) {
       output.writeInt64(1, skillProfileSid_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (callProfileTemplate_ != null) {
       output.writeMessage(2, getCallProfileTemplate());
     }
     if (fixedAveragesForecast_ != false) {
@@ -149,7 +148,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(1, skillProfileSid_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (callProfileTemplate_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getCallProfileTemplate());
     }
@@ -325,19 +324,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.UpsertProfileForecastReq.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getCallProfileTemplateFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -386,17 +379,14 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.skillProfileSid_ = skillProfileSid_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.callProfileTemplate_ = callProfileTemplateBuilder_ == null
             ? callProfileTemplate_
             : callProfileTemplateBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.fixedAveragesForecast_ = fixedAveragesForecast_;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -642,10 +632,8 @@ private static final long serialVersionUID = 0L;
       } else {
         callProfileTemplateBuilder_.mergeFrom(value);
       }
-      if (callProfileTemplate_ != null) {
-        bitField0_ |= 0x00000002;
-        onChanged();
-      }
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**

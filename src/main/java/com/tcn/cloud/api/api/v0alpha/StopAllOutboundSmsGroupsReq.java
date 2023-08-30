@@ -41,8 +41,7 @@ private static final long serialVersionUID = 0L;
 
   public static final int SMS_GROUP_SIDS_ARR_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
-  private com.google.protobuf.Internal.LongList smsGroupSidsArr_ =
-      emptyLongList();
+  private com.google.protobuf.Internal.LongList smsGroupSidsArr_;
   /**
    * <code>repeated int64 sms_group_sids_arr = 2 [json_name = "smsGroupSidsArr"];</code>
    * @return A list containing the smsGroupSidsArr.
@@ -304,17 +303,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.StopAllOutboundSmsGroupsReq buildPartial() {
       com.tcn.cloud.api.api.v0alpha.StopAllOutboundSmsGroupsReq result = new com.tcn.cloud.api.api.v0alpha.StopAllOutboundSmsGroupsReq(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v0alpha.StopAllOutboundSmsGroupsReq result) {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        smsGroupSidsArr_.makeImmutable();
+        bitField0_ = (bitField0_ & ~0x00000001);
+      }
+      result.smsGroupSidsArr_ = smsGroupSidsArr_;
+    }
+
     private void buildPartial0(com.tcn.cloud.api.api.v0alpha.StopAllOutboundSmsGroupsReq result) {
       int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        smsGroupSidsArr_.makeImmutable();
-        result.smsGroupSidsArr_ = smsGroupSidsArr_;
-      }
     }
 
     @java.lang.Override
@@ -364,8 +368,7 @@ private static final long serialVersionUID = 0L;
       if (!other.smsGroupSidsArr_.isEmpty()) {
         if (smsGroupSidsArr_.isEmpty()) {
           smsGroupSidsArr_ = other.smsGroupSidsArr_;
-          smsGroupSidsArr_.makeImmutable();
-          bitField0_ |= 0x00000001;
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           ensureSmsGroupSidsArrIsMutable();
           smsGroupSidsArr_.addAll(other.smsGroupSidsArr_);
@@ -433,10 +436,10 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Internal.LongList smsGroupSidsArr_ = emptyLongList();
     private void ensureSmsGroupSidsArrIsMutable() {
-      if (!smsGroupSidsArr_.isModifiable()) {
-        smsGroupSidsArr_ = makeMutableCopy(smsGroupSidsArr_);
+      if (!((bitField0_ & 0x00000001) != 0)) {
+        smsGroupSidsArr_ = mutableCopy(smsGroupSidsArr_);
+        bitField0_ |= 0x00000001;
       }
-      bitField0_ |= 0x00000001;
     }
     /**
      * <code>repeated int64 sms_group_sids_arr = 2 [json_name = "smsGroupSidsArr"];</code>
@@ -444,8 +447,8 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Long>
         getSmsGroupSidsArrList() {
-      smsGroupSidsArr_.makeImmutable();
-      return smsGroupSidsArr_;
+      return ((bitField0_ & 0x00000001) != 0) ?
+               java.util.Collections.unmodifiableList(smsGroupSidsArr_) : smsGroupSidsArr_;
     }
     /**
      * <code>repeated int64 sms_group_sids_arr = 2 [json_name = "smsGroupSidsArr"];</code>
@@ -473,7 +476,6 @@ private static final long serialVersionUID = 0L;
 
       ensureSmsGroupSidsArrIsMutable();
       smsGroupSidsArr_.setLong(index, value);
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -486,7 +488,6 @@ private static final long serialVersionUID = 0L;
 
       ensureSmsGroupSidsArrIsMutable();
       smsGroupSidsArr_.addLong(value);
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -500,7 +501,6 @@ private static final long serialVersionUID = 0L;
       ensureSmsGroupSidsArrIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, smsGroupSidsArr_);
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }

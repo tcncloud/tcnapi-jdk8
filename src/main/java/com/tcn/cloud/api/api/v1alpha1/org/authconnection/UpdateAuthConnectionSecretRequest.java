@@ -98,7 +98,6 @@ private static final long serialVersionUID = 0L;
               com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration.class, com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DATE_FIELD_NUMBER = 1;
     private com.google.protobuf.Timestamp date_;
     /**
@@ -107,7 +106,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasDate() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return date_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp date = 1 [json_name = "date"];</code>
@@ -139,7 +138,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (date_ != null) {
         output.writeMessage(1, getDate());
       }
       getUnknownFields().writeTo(output);
@@ -151,7 +150,7 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (date_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getDate());
       }
@@ -309,19 +308,13 @@ private static final long serialVersionUID = 0L;
 
       // Construct using com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getDateFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -365,14 +358,11 @@ private static final long serialVersionUID = 0L;
 
       private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.date_ = dateBuilder_ == null
               ? date_
               : dateBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -538,10 +528,8 @@ private static final long serialVersionUID = 0L;
         } else {
           dateBuilder_.mergeFrom(value);
         }
-        if (date_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -656,7 +644,6 @@ private static final long serialVersionUID = 0L;
 
   }
 
-  private int bitField0_;
   public static final int CONNECTION_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object connectionId_ = "";
@@ -763,7 +750,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasSecretExpiration() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return secretExpiration_ != null;
   }
   /**
    * <pre>
@@ -809,7 +796,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientSecret_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, clientSecret_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (secretExpiration_ != null) {
       output.writeMessage(3, getSecretExpiration());
     }
     getUnknownFields().writeTo(output);
@@ -827,7 +814,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientSecret_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, clientSecret_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (secretExpiration_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getSecretExpiration());
     }
@@ -997,19 +984,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getSecretExpirationFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -1061,14 +1042,11 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.clientSecret_ = clientSecret_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.secretExpiration_ = secretExpirationBuilder_ == null
             ? secretExpiration_
             : secretExpirationBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1458,10 +1436,8 @@ private static final long serialVersionUID = 0L;
       } else {
         secretExpirationBuilder_.mergeFrom(value);
       }
-      if (secretExpiration_ != null) {
-        bitField0_ |= 0x00000004;
-        onChanged();
-      }
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**

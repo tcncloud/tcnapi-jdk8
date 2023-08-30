@@ -41,7 +41,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.CjsSearchDefinitionMetadata.class, com.tcn.cloud.api.api.v0alpha.CjsSearchDefinitionMetadata.Builder.class);
   }
 
-  private int bitField0_;
   public static final int CJS_SEARCH_DEFINITION_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object cjsSearchDefinitionId_ = "";
@@ -211,7 +210,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCreatedDate() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return createdDate_ != null;
   }
   /**
    * <code>.google.protobuf.Timestamp created_date = 10 [json_name = "createdDate"];</code>
@@ -237,7 +236,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasLastEdited() {
-    return ((bitField0_ & 0x00000002) != 0);
+    return lastEdited_ != null;
   }
   /**
    * <code>.google.protobuf.Timestamp last_edited = 11 [json_name = "lastEdited"];</code>
@@ -290,10 +289,10 @@ private static final long serialVersionUID = 0L;
     if (execFail_ != 0L) {
       output.writeInt64(9, execFail_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (createdDate_ != null) {
       output.writeMessage(10, getCreatedDate());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (lastEdited_ != null) {
       output.writeMessage(11, getLastEdited());
     }
     getUnknownFields().writeTo(output);
@@ -330,11 +329,11 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(9, execFail_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (createdDate_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(10, getCreatedDate());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (lastEdited_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(11, getLastEdited());
     }
@@ -533,20 +532,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.CjsSearchDefinitionMetadata.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getCreatedDateFieldBuilder();
-        getLastEditedFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -623,20 +615,16 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.execFail_ = execFail_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.createdDate_ = createdDateBuilder_ == null
             ? createdDate_
             : createdDateBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000100) != 0)) {
         result.lastEdited_ = lastEditedBuilder_ == null
             ? lastEdited_
             : lastEditedBuilder_.build();
-        to_bitField0_ |= 0x00000002;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1218,10 +1206,8 @@ private static final long serialVersionUID = 0L;
       } else {
         createdDateBuilder_.mergeFrom(value);
       }
-      if (createdDate_ != null) {
-        bitField0_ |= 0x00000080;
-        onChanged();
-      }
+      bitField0_ |= 0x00000080;
+      onChanged();
       return this;
     }
     /**
@@ -1339,10 +1325,8 @@ private static final long serialVersionUID = 0L;
       } else {
         lastEditedBuilder_.mergeFrom(value);
       }
-      if (lastEdited_ != null) {
-        bitField0_ |= 0x00000100;
-        onChanged();
-      }
+      bitField0_ |= 0x00000100;
+      onChanged();
       return this;
     }
     /**

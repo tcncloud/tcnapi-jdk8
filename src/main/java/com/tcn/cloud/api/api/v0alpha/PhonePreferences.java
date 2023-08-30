@@ -43,7 +43,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.PhonePreferences.class, com.tcn.cloud.api.api.v0alpha.PhonePreferences.Builder.class);
   }
 
-  private int bitField0_;
   public static final int AGENT_PREVIEW_DIALING_FIELD_NUMBER = 10;
   private boolean agentPreviewDialing_ = false;
   /**
@@ -161,7 +160,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasDefaultDialOrder() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return defaultDialOrder_ != null;
   }
   /**
    * <pre>
@@ -263,7 +262,7 @@ private static final long serialVersionUID = 0L;
     if (callerIdCfdSid_ != 0L) {
       output.writeInt64(16, callerIdCfdSid_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (defaultDialOrder_ != null) {
       output.writeMessage(17, getDefaultDialOrder());
     }
     if (answeringMachineDetection_ != com.tcn.cloud.api.api.commons.AnsweringMachineDetection.OPTIMIZE_MACHINE_DETECTION.getNumber()) {
@@ -309,7 +308,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(16, callerIdCfdSid_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (defaultDialOrder_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(17, getDefaultDialOrder());
     }
@@ -521,19 +520,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.PhonePreferences.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getDefaultDialOrderFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -607,12 +600,10 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.callerIdCfdSid_ = callerIdCfdSid_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.defaultDialOrder_ = defaultDialOrderBuilder_ == null
             ? defaultDialOrder_
             : defaultDialOrderBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000100) != 0)) {
         result.answeringMachineDetection_ = answeringMachineDetection_;
@@ -620,7 +611,6 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000200) != 0)) {
         result.linkbackRecording_ = linkbackRecording_;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1186,10 +1176,8 @@ private static final long serialVersionUID = 0L;
       } else {
         defaultDialOrderBuilder_.mergeFrom(value);
       }
-      if (defaultDialOrder_ != null) {
-        bitField0_ |= 0x00000080;
-        onChanged();
-      }
+      bitField0_ |= 0x00000080;
+      onChanged();
       return this;
     }
     /**

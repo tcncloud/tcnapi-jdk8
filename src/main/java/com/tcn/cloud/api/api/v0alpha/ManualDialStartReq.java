@@ -38,7 +38,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.ManualDialStartReq.class, com.tcn.cloud.api.api.v0alpha.ManualDialStartReq.Builder.class);
   }
 
-  private int bitField0_;
   public static final int SIMPLE_CALL_DATA_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.api.commons.SimpleCallData simpleCallData_;
   /**
@@ -47,7 +46,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasSimpleCallData() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return simpleCallData_ != null;
   }
   /**
    * <code>.api.commons.SimpleCallData simple_call_data = 1 [json_name = "simpleCallData"];</code>
@@ -101,7 +100,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (simpleCallData_ != null) {
       output.writeMessage(1, getSimpleCallData());
     }
     if (huntGroupSid_ != 0L) {
@@ -119,7 +118,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (simpleCallData_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getSimpleCallData());
     }
@@ -295,19 +294,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.ManualDialStartReq.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getSimpleCallDataFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -353,12 +346,10 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v0alpha.ManualDialStartReq result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.simpleCallData_ = simpleCallDataBuilder_ == null
             ? simpleCallData_
             : simpleCallDataBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.huntGroupSid_ = huntGroupSid_;
@@ -366,7 +357,6 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.agentSessionSid_ = agentSessionSid_;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -548,10 +538,8 @@ private static final long serialVersionUID = 0L;
       } else {
         simpleCallDataBuilder_.mergeFrom(value);
       }
-      if (simpleCallData_ != null) {
-        bitField0_ |= 0x00000001;
-        onChanged();
-      }
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**

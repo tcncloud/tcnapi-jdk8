@@ -536,7 +536,6 @@ private static final long serialVersionUID = 0L;
 
   }
 
-  private int bitField0_;
   private int filterCase_ = 0;
   @SuppressWarnings("serial")
   private java.lang.Object filter_;
@@ -589,7 +588,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasTimestamp() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return timestamp_ != null;
   }
   /**
    * <pre>
@@ -713,7 +712,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (timestamp_ != null) {
       output.writeMessage(2, getTimestamp());
     }
     if (live_ != false) {
@@ -734,7 +733,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (timestamp_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getTimestamp());
     }
@@ -929,19 +928,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.ListMessagesReq.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getTimestampFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -993,12 +986,10 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v0alpha.ListMessagesReq result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.timestamp_ = timestampBuilder_ == null
             ? timestamp_
             : timestampBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.live_ = live_;
@@ -1006,7 +997,6 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.channelType_ = channelType_;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     private void buildPartialOneofs(com.tcn.cloud.api.api.v0alpha.ListMessagesReq result) {
@@ -1248,10 +1238,8 @@ private static final long serialVersionUID = 0L;
       } else {
         timestampBuilder_.mergeFrom(value);
       }
-      if (timestamp_ != null) {
-        bitField0_ |= 0x00000001;
-        onChanged();
-      }
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**

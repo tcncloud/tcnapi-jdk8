@@ -47,7 +47,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.ScheduledCallback.class, com.tcn.cloud.api.api.v0alpha.ScheduledCallback.Builder.class);
   }
 
-  private int bitField0_;
   public static final int SCHEDULED_CALLBACK_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object scheduledCallbackId_ = "";
@@ -152,7 +151,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasStartTime() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return startTime_ != null;
   }
   /**
    * <code>.google.protobuf.Timestamp start_time = 102 [json_name = "startTime"];</code>
@@ -178,7 +177,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasEndTime() {
-    return ((bitField0_ & 0x00000002) != 0);
+    return endTime_ != null;
   }
   /**
    * <code>.google.protobuf.Timestamp end_time = 103 [json_name = "endTime"];</code>
@@ -321,7 +320,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCreateDate() {
-    return ((bitField0_ & 0x00000004) != 0);
+    return createDate_ != null;
   }
   /**
    * <code>.google.protobuf.Timestamp create_date = 108 [json_name = "createDate"];</code>
@@ -347,7 +346,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasLastUpdate() {
-    return ((bitField0_ & 0x00000008) != 0);
+    return lastUpdate_ != null;
   }
   /**
    * <code>.google.protobuf.Timestamp last_update = 109 [json_name = "lastUpdate"];</code>
@@ -464,10 +463,10 @@ private static final long serialVersionUID = 0L;
     if (status_ != com.tcn.cloud.api.api.commons.ScheduledCallbackStatus.SCS_INVALID.getNumber()) {
       output.writeEnum(101, status_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (startTime_ != null) {
       output.writeMessage(102, getStartTime());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (endTime_ != null) {
       output.writeMessage(103, getEndTime());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(phoneNumber_)) {
@@ -479,10 +478,10 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(notes_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 107, notes_);
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
+    if (createDate_ != null) {
       output.writeMessage(108, getCreateDate());
     }
-    if (((bitField0_ & 0x00000008) != 0)) {
+    if (lastUpdate_ != null) {
       output.writeMessage(109, getLastUpdate());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lastUpdatedBy_)) {
@@ -510,11 +509,11 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(101, status_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (startTime_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(102, getStartTime());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (endTime_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(103, getEndTime());
     }
@@ -527,11 +526,11 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(notes_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(107, notes_);
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
+    if (createDate_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(108, getCreateDate());
     }
-    if (((bitField0_ & 0x00000008) != 0)) {
+    if (lastUpdate_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(109, getLastUpdate());
     }
@@ -760,22 +759,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.ScheduledCallback.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getStartTimeFieldBuilder();
-        getEndTimeFieldBuilder();
-        getCreateDateFieldBuilder();
-        getLastUpdateFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -852,18 +842,15 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.status_ = status_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.startTime_ = startTimeBuilder_ == null
             ? startTime_
             : startTimeBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.endTime_ = endTimeBuilder_ == null
             ? endTime_
             : endTimeBuilder_.build();
-        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.phoneNumber_ = phoneNumber_;
@@ -878,13 +865,11 @@ private static final long serialVersionUID = 0L;
         result.createDate_ = createDateBuilder_ == null
             ? createDate_
             : createDateBuilder_.build();
-        to_bitField0_ |= 0x00000004;
       }
       if (((from_bitField0_ & 0x00000200) != 0)) {
         result.lastUpdate_ = lastUpdateBuilder_ == null
             ? lastUpdate_
             : lastUpdateBuilder_.build();
-        to_bitField0_ |= 0x00000008;
       }
       if (((from_bitField0_ & 0x00000400) != 0)) {
         result.lastUpdatedBy_ = lastUpdatedBy_;
@@ -893,7 +878,6 @@ private static final long serialVersionUID = 0L;
         callbackSkills_.makeImmutable();
         result.callbackSkills_ = callbackSkills_;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1370,10 +1354,8 @@ private static final long serialVersionUID = 0L;
       } else {
         startTimeBuilder_.mergeFrom(value);
       }
-      if (startTime_ != null) {
-        bitField0_ |= 0x00000008;
-        onChanged();
-      }
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -1491,10 +1473,8 @@ private static final long serialVersionUID = 0L;
       } else {
         endTimeBuilder_.mergeFrom(value);
       }
-      if (endTime_ != null) {
-        bitField0_ |= 0x00000010;
-        onChanged();
-      }
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -1828,10 +1808,8 @@ private static final long serialVersionUID = 0L;
       } else {
         createDateBuilder_.mergeFrom(value);
       }
-      if (createDate_ != null) {
-        bitField0_ |= 0x00000100;
-        onChanged();
-      }
+      bitField0_ |= 0x00000100;
+      onChanged();
       return this;
     }
     /**
@@ -1949,10 +1927,8 @@ private static final long serialVersionUID = 0L;
       } else {
         lastUpdateBuilder_.mergeFrom(value);
       }
-      if (lastUpdate_ != null) {
-        bitField0_ |= 0x00000200;
-        onChanged();
-      }
+      bitField0_ |= 0x00000200;
+      onChanged();
       return this;
     }
     /**

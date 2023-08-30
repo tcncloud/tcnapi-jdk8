@@ -40,7 +40,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.HuntGroupResponse.class, com.tcn.cloud.api.api.v0alpha.HuntGroupResponse.Builder.class);
   }
 
-  private int bitField0_;
   public static final int HUNT_GROUP_RESPONSE_SID_FIELD_NUMBER = 1;
   private long huntGroupResponseSid_ = 0L;
   /**
@@ -60,7 +59,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasHuntGroupSid() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return huntGroupSid_ != null;
   }
   /**
    * <code>.google.protobuf.Int64Value hunt_group_sid = 2 [json_name = "huntGroupSid"];</code>
@@ -86,7 +85,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasType() {
-    return ((bitField0_ & 0x00000002) != 0);
+    return type_ != null;
   }
   /**
    * <code>.google.protobuf.StringValue type = 3 [json_name = "type"];</code>
@@ -149,7 +148,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasName() {
-    return ((bitField0_ & 0x00000004) != 0);
+    return name_ != null;
   }
   /**
    * <code>.google.protobuf.StringValue name = 5 [json_name = "name"];</code>
@@ -175,7 +174,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasDescription() {
-    return ((bitField0_ & 0x00000008) != 0);
+    return description_ != null;
   }
   /**
    * <code>.google.protobuf.StringValue description = 6 [json_name = "description"];</code>
@@ -201,7 +200,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasOrder() {
-    return ((bitField0_ & 0x00000010) != 0);
+    return order_ != null;
   }
   /**
    * <code>.google.protobuf.Int32Value order = 7 [json_name = "order"];</code>
@@ -227,7 +226,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasRequired() {
-    return ((bitField0_ & 0x00000020) != 0);
+    return required_ != null;
   }
   /**
    * <code>.google.protobuf.BoolValue required = 8 [json_name = "required"];</code>
@@ -253,7 +252,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasDefaultValue() {
-    return ((bitField0_ & 0x00000040) != 0);
+    return defaultValue_ != null;
   }
   /**
    * <code>.google.protobuf.StringValue default_value = 9 [json_name = "defaultValue"];</code>
@@ -279,7 +278,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasManualDial() {
-    return ((bitField0_ & 0x00000080) != 0);
+    return manualDial_ != null;
   }
   /**
    * <code>.api.v0alpha.ManualDialSettings manual_dial = 10 [json_name = "manualDial"];</code>
@@ -314,31 +313,31 @@ private static final long serialVersionUID = 0L;
     if (huntGroupResponseSid_ != 0L) {
       output.writeInt64(1, huntGroupResponseSid_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (huntGroupSid_ != null) {
       output.writeMessage(2, getHuntGroupSid());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (type_ != null) {
       output.writeMessage(3, getType());
     }
     for (int i = 0; i < options_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, options_.getRaw(i));
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
+    if (name_ != null) {
       output.writeMessage(5, getName());
     }
-    if (((bitField0_ & 0x00000008) != 0)) {
+    if (description_ != null) {
       output.writeMessage(6, getDescription());
     }
-    if (((bitField0_ & 0x00000010) != 0)) {
+    if (order_ != null) {
       output.writeMessage(7, getOrder());
     }
-    if (((bitField0_ & 0x00000020) != 0)) {
+    if (required_ != null) {
       output.writeMessage(8, getRequired());
     }
-    if (((bitField0_ & 0x00000040) != 0)) {
+    if (defaultValue_ != null) {
       output.writeMessage(9, getDefaultValue());
     }
-    if (((bitField0_ & 0x00000080) != 0)) {
+    if (manualDial_ != null) {
       output.writeMessage(10, getManualDial());
     }
     getUnknownFields().writeTo(output);
@@ -354,11 +353,11 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(1, huntGroupResponseSid_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (huntGroupSid_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getHuntGroupSid());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (type_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getType());
     }
@@ -370,27 +369,27 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getOptionsList().size();
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
+    if (name_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getName());
     }
-    if (((bitField0_ & 0x00000008) != 0)) {
+    if (description_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, getDescription());
     }
-    if (((bitField0_ & 0x00000010) != 0)) {
+    if (order_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, getOrder());
     }
-    if (((bitField0_ & 0x00000020) != 0)) {
+    if (required_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, getRequired());
     }
-    if (((bitField0_ & 0x00000040) != 0)) {
+    if (defaultValue_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(9, getDefaultValue());
     }
-    if (((bitField0_ & 0x00000080) != 0)) {
+    if (manualDial_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(10, getManualDial());
     }
@@ -622,26 +621,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.HuntGroupResponse.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getHuntGroupSidFieldBuilder();
-        getTypeFieldBuilder();
-        getNameFieldBuilder();
-        getDescriptionFieldBuilder();
-        getOrderFieldBuilder();
-        getRequiredFieldBuilder();
-        getDefaultValueFieldBuilder();
-        getManualDialFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -726,18 +712,15 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.huntGroupResponseSid_ = huntGroupResponseSid_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.huntGroupSid_ = huntGroupSidBuilder_ == null
             ? huntGroupSid_
             : huntGroupSidBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.type_ = typeBuilder_ == null
             ? type_
             : typeBuilder_.build();
-        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         options_.makeImmutable();
@@ -747,39 +730,32 @@ private static final long serialVersionUID = 0L;
         result.name_ = nameBuilder_ == null
             ? name_
             : nameBuilder_.build();
-        to_bitField0_ |= 0x00000004;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.description_ = descriptionBuilder_ == null
             ? description_
             : descriptionBuilder_.build();
-        to_bitField0_ |= 0x00000008;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.order_ = orderBuilder_ == null
             ? order_
             : orderBuilder_.build();
-        to_bitField0_ |= 0x00000010;
       }
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.required_ = requiredBuilder_ == null
             ? required_
             : requiredBuilder_.build();
-        to_bitField0_ |= 0x00000020;
       }
       if (((from_bitField0_ & 0x00000100) != 0)) {
         result.defaultValue_ = defaultValueBuilder_ == null
             ? defaultValue_
             : defaultValueBuilder_.build();
-        to_bitField0_ |= 0x00000040;
       }
       if (((from_bitField0_ & 0x00000200) != 0)) {
         result.manualDial_ = manualDialBuilder_ == null
             ? manualDial_
             : manualDialBuilder_.build();
-        to_bitField0_ |= 0x00000080;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1071,10 +1047,8 @@ private static final long serialVersionUID = 0L;
       } else {
         huntGroupSidBuilder_.mergeFrom(value);
       }
-      if (huntGroupSid_ != null) {
-        bitField0_ |= 0x00000002;
-        onChanged();
-      }
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -1192,10 +1166,8 @@ private static final long serialVersionUID = 0L;
       } else {
         typeBuilder_.mergeFrom(value);
       }
-      if (type_ != null) {
-        bitField0_ |= 0x00000004;
-        onChanged();
-      }
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -1424,10 +1396,8 @@ private static final long serialVersionUID = 0L;
       } else {
         nameBuilder_.mergeFrom(value);
       }
-      if (name_ != null) {
-        bitField0_ |= 0x00000010;
-        onChanged();
-      }
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -1545,10 +1515,8 @@ private static final long serialVersionUID = 0L;
       } else {
         descriptionBuilder_.mergeFrom(value);
       }
-      if (description_ != null) {
-        bitField0_ |= 0x00000020;
-        onChanged();
-      }
+      bitField0_ |= 0x00000020;
+      onChanged();
       return this;
     }
     /**
@@ -1666,10 +1634,8 @@ private static final long serialVersionUID = 0L;
       } else {
         orderBuilder_.mergeFrom(value);
       }
-      if (order_ != null) {
-        bitField0_ |= 0x00000040;
-        onChanged();
-      }
+      bitField0_ |= 0x00000040;
+      onChanged();
       return this;
     }
     /**
@@ -1787,10 +1753,8 @@ private static final long serialVersionUID = 0L;
       } else {
         requiredBuilder_.mergeFrom(value);
       }
-      if (required_ != null) {
-        bitField0_ |= 0x00000080;
-        onChanged();
-      }
+      bitField0_ |= 0x00000080;
+      onChanged();
       return this;
     }
     /**
@@ -1908,10 +1872,8 @@ private static final long serialVersionUID = 0L;
       } else {
         defaultValueBuilder_.mergeFrom(value);
       }
-      if (defaultValue_ != null) {
-        bitField0_ |= 0x00000100;
-        onChanged();
-      }
+      bitField0_ |= 0x00000100;
+      onChanged();
       return this;
     }
     /**
@@ -2029,10 +1991,8 @@ private static final long serialVersionUID = 0L;
       } else {
         manualDialBuilder_.mergeFrom(value);
       }
-      if (manualDial_ != null) {
-        bitField0_ |= 0x00000200;
-        onChanged();
-      }
+      bitField0_ |= 0x00000200;
+      onChanged();
       return this;
     }
     /**

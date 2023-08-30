@@ -51,7 +51,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.integrationspublic.SubmitPaymentReq.class, com.tcn.cloud.api.api.v1alpha1.integrationspublic.SubmitPaymentReq.Builder.class);
   }
 
-  private int bitField0_;
   public static final int ENTITY_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.api.v1alpha1.integrationspublic.PortalLinkId entity_;
   /**
@@ -60,7 +59,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasEntity() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return entity_ != null;
   }
   /**
    * <code>.api.v1alpha1.integrationspublic.PortalLinkId entity = 1 [json_name = "entity"];</code>
@@ -204,7 +203,7 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
    */
   @java.lang.Override
   public boolean hasPaymentFlow() {
-    return ((bitField0_ & 0x00000002) != 0);
+    return paymentFlow_ != null;
   }
   /**
    * <code>.api.commons.integrations.PaymentFlow payment_flow = 4 [json_name = "paymentFlow"];</code>
@@ -236,7 +235,7 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (entity_ != null) {
       output.writeMessage(1, getEntity());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sessionId_)) {
@@ -248,7 +247,7 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
         internalGetPaymentFields(),
         PaymentFieldsDefaultEntryHolder.defaultEntry,
         3);
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (paymentFlow_ != null) {
       output.writeMessage(4, getPaymentFlow());
     }
     getUnknownFields().writeTo(output);
@@ -260,7 +259,7 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
     if (size != -1) return size;
 
     size = 0;
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (entity_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getEntity());
     }
@@ -277,7 +276,7 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
       size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, paymentFields__);
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (paymentFlow_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getPaymentFlow());
     }
@@ -476,20 +475,13 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.integrationspublic.SubmitPaymentReq.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getEntityFieldBuilder();
-        getPaymentFlowFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -540,12 +532,10 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.integrationspublic.SubmitPaymentReq result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.entity_ = entityBuilder_ == null
             ? entity_
             : entityBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.sessionId_ = sessionId_;
@@ -558,9 +548,7 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
         result.paymentFlow_ = paymentFlowBuilder_ == null
             ? paymentFlow_
             : paymentFlowBuilder_.build();
-        to_bitField0_ |= 0x00000002;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -758,10 +746,8 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
       } else {
         entityBuilder_.mergeFrom(value);
       }
-      if (entity_ != null) {
-        bitField0_ |= 0x00000001;
-        onChanged();
-      }
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -1078,10 +1064,8 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
       } else {
         paymentFlowBuilder_.mergeFrom(value);
       }
-      if (paymentFlow_ != null) {
-        bitField0_ |= 0x00000008;
-        onChanged();
-      }
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**

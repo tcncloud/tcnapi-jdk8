@@ -42,7 +42,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.ConsentProfile.class, com.tcn.cloud.api.api.v0alpha.ConsentProfile.Builder.class);
   }
 
-  private int bitField0_;
   public static final int CONSENT_PROFILE_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object consentProfileId_ = "";
@@ -195,7 +194,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   @java.lang.Deprecated public boolean hasChannel() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return channel_ != null;
   }
   /**
    * <pre>
@@ -235,7 +234,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCreatedOn() {
-    return ((bitField0_ & 0x00000002) != 0);
+    return createdOn_ != null;
   }
   /**
    * <pre>
@@ -326,10 +325,10 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < consents_.size(); i++) {
       output.writeMessage(12, consents_.get(i));
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (channel_ != null) {
       output.writeMessage(13, getChannel());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (createdOn_ != null) {
       output.writeMessage(50, getCreatedOn());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createdBy_)) {
@@ -358,11 +357,11 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(12, consents_.get(i));
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (channel_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(13, getChannel());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (createdOn_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(50, getCreatedOn());
     }
@@ -555,21 +554,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.ConsentProfile.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getConsentsFieldBuilder();
-        getChannelFieldBuilder();
-        getCreatedOnFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -651,23 +642,19 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.disabled_ = disabled_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.channel_ = channelBuilder_ == null
             ? channel_
             : channelBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.createdOn_ = createdOnBuilder_ == null
             ? createdOn_
             : createdOnBuilder_.build();
-        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.createdBy_ = createdBy_;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1380,10 +1367,8 @@ private static final long serialVersionUID = 0L;
       } else {
         channelBuilder_.mergeFrom(value);
       }
-      if (channel_ != null) {
-        bitField0_ |= 0x00000010;
-        onChanged();
-      }
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -1537,10 +1522,8 @@ private static final long serialVersionUID = 0L;
       } else {
         createdOnBuilder_.mergeFrom(value);
       }
-      if (createdOn_ != null) {
-        bitField0_ |= 0x00000020;
-        onChanged();
-      }
+      bitField0_ |= 0x00000020;
+      onChanged();
       return this;
     }
     /**
