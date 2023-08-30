@@ -38,7 +38,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.DashPageSelectEventReq.class, com.tcn.cloud.api.api.v0alpha.DashPageSelectEventReq.Builder.class);
   }
 
-  private int bitField0_;
   public static final int SELECTION_DASH_PAGE_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.api.v0alpha.RecommendedDashPageReq selectionDashPage_;
   /**
@@ -47,7 +46,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasSelectionDashPage() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return selectionDashPage_ != null;
   }
   /**
    * <code>.api.v0alpha.RecommendedDashPageReq selection_dash_page = 1 [json_name = "selectionDashPage"];</code>
@@ -73,7 +72,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasSourceDashPage() {
-    return ((bitField0_ & 0x00000002) != 0);
+    return sourceDashPage_ != null;
   }
   /**
    * <code>.api.v0alpha.RecommendedDashPageReq source_dash_page = 2 [json_name = "sourceDashPage"];</code>
@@ -116,10 +115,10 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (selectionDashPage_ != null) {
       output.writeMessage(1, getSelectionDashPage());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (sourceDashPage_ != null) {
       output.writeMessage(2, getSourceDashPage());
     }
     if (fromHome_ != false) {
@@ -134,11 +133,11 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (selectionDashPage_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getSelectionDashPage());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (sourceDashPage_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getSourceDashPage());
     }
@@ -314,20 +313,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.DashPageSelectEventReq.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getSelectionDashPageFieldBuilder();
-        getSourceDashPageFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -377,23 +369,19 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v0alpha.DashPageSelectEventReq result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.selectionDashPage_ = selectionDashPageBuilder_ == null
             ? selectionDashPage_
             : selectionDashPageBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.sourceDashPage_ = sourceDashPageBuilder_ == null
             ? sourceDashPage_
             : sourceDashPageBuilder_.build();
-        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.fromHome_ = fromHome_;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -577,10 +565,8 @@ private static final long serialVersionUID = 0L;
       } else {
         selectionDashPageBuilder_.mergeFrom(value);
       }
-      if (selectionDashPage_ != null) {
-        bitField0_ |= 0x00000001;
-        onChanged();
-      }
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -698,10 +684,8 @@ private static final long serialVersionUID = 0L;
       } else {
         sourceDashPageBuilder_.mergeFrom(value);
       }
-      if (sourceDashPage_ != null) {
-        bitField0_ |= 0x00000002;
-        onChanged();
-      }
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**

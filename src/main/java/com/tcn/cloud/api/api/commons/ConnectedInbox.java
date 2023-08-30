@@ -48,7 +48,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.ConnectedInbox.class, com.tcn.cloud.api.api.commons.ConnectedInbox.Builder.class);
   }
 
-  private int bitField0_;
   public static final int CONNECTED_INBOX_SID_FIELD_NUMBER = 1;
   private long connectedInboxSid_ = 0L;
   /**
@@ -294,7 +293,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasLastScheduledTime() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return lastScheduledTime_ != null;
   }
   /**
    * <pre>
@@ -332,7 +331,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasLastChecked() {
-    return ((bitField0_ & 0x00000002) != 0);
+    return lastChecked_ != null;
   }
   /**
    * <pre>
@@ -447,7 +446,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasLastError() {
-    return ((bitField0_ & 0x00000004) != 0);
+    return lastError_ != null;
   }
   /**
    * <pre>
@@ -485,7 +484,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasStandbyErrorTime() {
-    return ((bitField0_ & 0x00000008) != 0);
+    return standbyErrorTime_ != null;
   }
   /**
    * <pre>
@@ -523,7 +522,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasLastUpdated() {
-    return ((bitField0_ & 0x00000010) != 0);
+    return lastUpdated_ != null;
   }
   /**
    * <pre>
@@ -591,7 +590,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasGoogleXoauth2RefreshToken() {
-    return ((bitField0_ & 0x00000020) != 0);
+    return googleXoauth2RefreshToken_ != null;
   }
   /**
    * <pre>
@@ -629,7 +628,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasGoogleXoauth2AccessToken() {
-    return ((bitField0_ & 0x00000040) != 0);
+    return googleXoauth2AccessToken_ != null;
   }
   /**
    * <pre>
@@ -667,7 +666,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasGoogleXoauth2AccessTokenExpiration() {
-    return ((bitField0_ & 0x00000080) != 0);
+    return googleXoauth2AccessTokenExpiration_ != null;
   }
   /**
    * <pre>
@@ -754,10 +753,10 @@ private static final long serialVersionUID = 0L;
     if (serverPort_ != 0L) {
       output.writeInt64(7, serverPort_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (lastScheduledTime_ != null) {
       output.writeMessage(8, getLastScheduledTime());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (lastChecked_ != null) {
       output.writeMessage(9, getLastChecked());
     }
     if (purgeThreshold_ != 0L) {
@@ -769,13 +768,13 @@ private static final long serialVersionUID = 0L;
     if (numConsecutiveFailures_ != 0) {
       output.writeInt32(12, numConsecutiveFailures_);
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
+    if (lastError_ != null) {
       output.writeMessage(13, getLastError());
     }
-    if (((bitField0_ & 0x00000008) != 0)) {
+    if (standbyErrorTime_ != null) {
       output.writeMessage(14, getStandbyErrorTime());
     }
-    if (((bitField0_ & 0x00000010) != 0)) {
+    if (lastUpdated_ != null) {
       output.writeMessage(15, getLastUpdated());
     }
     if (maxMessageSize_ != 0) {
@@ -784,13 +783,13 @@ private static final long serialVersionUID = 0L;
     if (maxMessages_ != 0) {
       output.writeInt32(17, maxMessages_);
     }
-    if (((bitField0_ & 0x00000020) != 0)) {
+    if (googleXoauth2RefreshToken_ != null) {
       output.writeMessage(18, getGoogleXoauth2RefreshToken());
     }
-    if (((bitField0_ & 0x00000040) != 0)) {
+    if (googleXoauth2AccessToken_ != null) {
       output.writeMessage(19, getGoogleXoauth2AccessToken());
     }
-    if (((bitField0_ & 0x00000080) != 0)) {
+    if (googleXoauth2AccessTokenExpiration_ != null) {
       output.writeMessage(20, getGoogleXoauth2AccessTokenExpiration());
     }
     if (authenticationType_ != com.tcn.cloud.api.api.commons.ConnectedInboxAuthenticationType.CONNECTED_INBOX_AUTHENTICATION_TYPE_PASSWORD.getNumber()) {
@@ -829,11 +828,11 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(7, serverPort_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (lastScheduledTime_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, getLastScheduledTime());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (lastChecked_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(9, getLastChecked());
     }
@@ -848,15 +847,15 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(12, numConsecutiveFailures_);
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
+    if (lastError_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(13, getLastError());
     }
-    if (((bitField0_ & 0x00000008) != 0)) {
+    if (standbyErrorTime_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(14, getStandbyErrorTime());
     }
-    if (((bitField0_ & 0x00000010) != 0)) {
+    if (lastUpdated_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(15, getLastUpdated());
     }
@@ -868,15 +867,15 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(17, maxMessages_);
     }
-    if (((bitField0_ & 0x00000020) != 0)) {
+    if (googleXoauth2RefreshToken_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(18, getGoogleXoauth2RefreshToken());
     }
-    if (((bitField0_ & 0x00000040) != 0)) {
+    if (googleXoauth2AccessToken_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(19, getGoogleXoauth2AccessToken());
     }
-    if (((bitField0_ & 0x00000080) != 0)) {
+    if (googleXoauth2AccessTokenExpiration_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(20, getGoogleXoauth2AccessTokenExpiration());
     }
@@ -1160,26 +1159,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.ConnectedInbox.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getLastScheduledTimeFieldBuilder();
-        getLastCheckedFieldBuilder();
-        getLastErrorFieldBuilder();
-        getStandbyErrorTimeFieldBuilder();
-        getLastUpdatedFieldBuilder();
-        getGoogleXoauth2RefreshTokenFieldBuilder();
-        getGoogleXoauth2AccessTokenFieldBuilder();
-        getGoogleXoauth2AccessTokenExpirationFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -1292,18 +1278,15 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.serverPort_ = serverPort_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.lastScheduledTime_ = lastScheduledTimeBuilder_ == null
             ? lastScheduledTime_
             : lastScheduledTimeBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000100) != 0)) {
         result.lastChecked_ = lastCheckedBuilder_ == null
             ? lastChecked_
             : lastCheckedBuilder_.build();
-        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000200) != 0)) {
         result.purgeThreshold_ = purgeThreshold_;
@@ -1318,19 +1301,16 @@ private static final long serialVersionUID = 0L;
         result.lastError_ = lastErrorBuilder_ == null
             ? lastError_
             : lastErrorBuilder_.build();
-        to_bitField0_ |= 0x00000004;
       }
       if (((from_bitField0_ & 0x00002000) != 0)) {
         result.standbyErrorTime_ = standbyErrorTimeBuilder_ == null
             ? standbyErrorTime_
             : standbyErrorTimeBuilder_.build();
-        to_bitField0_ |= 0x00000008;
       }
       if (((from_bitField0_ & 0x00004000) != 0)) {
         result.lastUpdated_ = lastUpdatedBuilder_ == null
             ? lastUpdated_
             : lastUpdatedBuilder_.build();
-        to_bitField0_ |= 0x00000010;
       }
       if (((from_bitField0_ & 0x00008000) != 0)) {
         result.maxMessageSize_ = maxMessageSize_;
@@ -1342,24 +1322,20 @@ private static final long serialVersionUID = 0L;
         result.googleXoauth2RefreshToken_ = googleXoauth2RefreshTokenBuilder_ == null
             ? googleXoauth2RefreshToken_
             : googleXoauth2RefreshTokenBuilder_.build();
-        to_bitField0_ |= 0x00000020;
       }
       if (((from_bitField0_ & 0x00040000) != 0)) {
         result.googleXoauth2AccessToken_ = googleXoauth2AccessTokenBuilder_ == null
             ? googleXoauth2AccessToken_
             : googleXoauth2AccessTokenBuilder_.build();
-        to_bitField0_ |= 0x00000040;
       }
       if (((from_bitField0_ & 0x00080000) != 0)) {
         result.googleXoauth2AccessTokenExpiration_ = googleXoauth2AccessTokenExpirationBuilder_ == null
             ? googleXoauth2AccessTokenExpiration_
             : googleXoauth2AccessTokenExpirationBuilder_.build();
-        to_bitField0_ |= 0x00000080;
       }
       if (((from_bitField0_ & 0x00100000) != 0)) {
         result.authenticationType_ = authenticationType_;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -2229,10 +2205,8 @@ private static final long serialVersionUID = 0L;
       } else {
         lastScheduledTimeBuilder_.mergeFrom(value);
       }
-      if (lastScheduledTime_ != null) {
-        bitField0_ |= 0x00000080;
-        onChanged();
-      }
+      bitField0_ |= 0x00000080;
+      onChanged();
       return this;
     }
     /**
@@ -2386,10 +2360,8 @@ private static final long serialVersionUID = 0L;
       } else {
         lastCheckedBuilder_.mergeFrom(value);
       }
-      if (lastChecked_ != null) {
-        bitField0_ |= 0x00000100;
-        onChanged();
-      }
+      bitField0_ |= 0x00000100;
+      onChanged();
       return this;
     }
     /**
@@ -2723,10 +2695,8 @@ private static final long serialVersionUID = 0L;
       } else {
         lastErrorBuilder_.mergeFrom(value);
       }
-      if (lastError_ != null) {
-        bitField0_ |= 0x00001000;
-        onChanged();
-      }
+      bitField0_ |= 0x00001000;
+      onChanged();
       return this;
     }
     /**
@@ -2880,10 +2850,8 @@ private static final long serialVersionUID = 0L;
       } else {
         standbyErrorTimeBuilder_.mergeFrom(value);
       }
-      if (standbyErrorTime_ != null) {
-        bitField0_ |= 0x00002000;
-        onChanged();
-      }
+      bitField0_ |= 0x00002000;
+      onChanged();
       return this;
     }
     /**
@@ -3037,10 +3005,8 @@ private static final long serialVersionUID = 0L;
       } else {
         lastUpdatedBuilder_.mergeFrom(value);
       }
-      if (lastUpdated_ != null) {
-        bitField0_ |= 0x00004000;
-        onChanged();
-      }
+      bitField0_ |= 0x00004000;
+      onChanged();
       return this;
     }
     /**
@@ -3282,10 +3248,8 @@ private static final long serialVersionUID = 0L;
       } else {
         googleXoauth2RefreshTokenBuilder_.mergeFrom(value);
       }
-      if (googleXoauth2RefreshToken_ != null) {
-        bitField0_ |= 0x00020000;
-        onChanged();
-      }
+      bitField0_ |= 0x00020000;
+      onChanged();
       return this;
     }
     /**
@@ -3439,10 +3403,8 @@ private static final long serialVersionUID = 0L;
       } else {
         googleXoauth2AccessTokenBuilder_.mergeFrom(value);
       }
-      if (googleXoauth2AccessToken_ != null) {
-        bitField0_ |= 0x00040000;
-        onChanged();
-      }
+      bitField0_ |= 0x00040000;
+      onChanged();
       return this;
     }
     /**
@@ -3596,10 +3558,8 @@ private static final long serialVersionUID = 0L;
       } else {
         googleXoauth2AccessTokenExpirationBuilder_.mergeFrom(value);
       }
-      if (googleXoauth2AccessTokenExpiration_ != null) {
-        bitField0_ |= 0x00080000;
-        onChanged();
-      }
+      bitField0_ |= 0x00080000;
+      onChanged();
       return this;
     }
     /**

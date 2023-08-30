@@ -45,7 +45,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.class, com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.Builder.class);
   }
 
-  private int bitField0_;
   public static final int SKILL_PROFILE_SID_FIELD_NUMBER = 1;
   private long skillProfileSid_ = 0L;
   /**
@@ -167,7 +166,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCreateDate() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return createDate_ != null;
   }
   /**
    * <pre>
@@ -220,7 +219,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasInactiveAsOfDate() {
-    return ((bitField0_ & 0x00000002) != 0);
+    return inactiveAsOfDate_ != null;
   }
   /**
    * <pre>
@@ -439,13 +438,13 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (createDate_ != null) {
       output.writeMessage(4, getCreateDate());
     }
     if (unnamed_ != false) {
       output.writeBool(5, unnamed_);
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (inactiveAsOfDate_ != null) {
       output.writeMessage(6, getInactiveAsOfDate());
     }
     for (int i = 0; i < skills7_.size(); i++) {
@@ -491,7 +490,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (createDate_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getCreateDate());
     }
@@ -499,7 +498,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(5, unnamed_);
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (inactiveAsOfDate_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, getInactiveAsOfDate());
     }
@@ -765,21 +764,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getCreateDateFieldBuilder();
-        getInactiveAsOfDateFieldBuilder();
-        getSkills7FieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -868,12 +859,10 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.description_ = description_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.createDate_ = createDateBuilder_ == null
             ? createDate_
             : createDateBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.unnamed_ = unnamed_;
@@ -882,7 +871,6 @@ private static final long serialVersionUID = 0L;
         result.inactiveAsOfDate_ = inactiveAsOfDateBuilder_ == null
             ? inactiveAsOfDate_
             : inactiveAsOfDateBuilder_.build();
-        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.skillsCount8_ = skillsCount8_;
@@ -905,7 +893,6 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00002000) != 0)) {
         result.areAveragesManual_ = areAveragesManual_;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1460,10 +1447,8 @@ private static final long serialVersionUID = 0L;
       } else {
         createDateBuilder_.mergeFrom(value);
       }
-      if (createDate_ != null) {
-        bitField0_ |= 0x00000008;
-        onChanged();
-      }
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -1661,10 +1646,8 @@ private static final long serialVersionUID = 0L;
       } else {
         inactiveAsOfDateBuilder_.mergeFrom(value);
       }
-      if (inactiveAsOfDate_ != null) {
-        bitField0_ |= 0x00000020;
-        onChanged();
-      }
+      bitField0_ |= 0x00000020;
+      onChanged();
       return this;
     }
     /**

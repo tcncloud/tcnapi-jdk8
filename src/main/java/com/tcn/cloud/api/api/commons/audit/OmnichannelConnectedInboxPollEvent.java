@@ -42,7 +42,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.audit.OmnichannelConnectedInboxPollEvent.class, com.tcn.cloud.api.api.commons.audit.OmnichannelConnectedInboxPollEvent.Builder.class);
   }
 
-  private int bitField0_;
   public static final int OMNI_CAMPAIGN_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.api.commons.OmniCampaign omniCampaign_;
   /**
@@ -55,7 +54,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasOmniCampaign() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return omniCampaign_ != null;
   }
   /**
    * <pre>
@@ -108,7 +107,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasConnectedInbox() {
-    return ((bitField0_ & 0x00000002) != 0);
+    return connectedInbox_ != null;
   }
   /**
    * <pre>
@@ -148,13 +147,13 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (omniCampaign_ != null) {
       output.writeMessage(1, getOmniCampaign());
     }
     if (campaignModuleSid_ != 0L) {
       output.writeInt64(2, campaignModuleSid_);
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (connectedInbox_ != null) {
       output.writeMessage(3, getConnectedInbox());
     }
     getUnknownFields().writeTo(output);
@@ -166,7 +165,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (omniCampaign_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getOmniCampaign());
     }
@@ -174,7 +173,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(2, campaignModuleSid_);
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (connectedInbox_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getConnectedInbox());
     }
@@ -350,20 +349,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.audit.OmnichannelConnectedInboxPollEvent.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getOmniCampaignFieldBuilder();
-        getConnectedInboxFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -413,12 +405,10 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.commons.audit.OmnichannelConnectedInboxPollEvent result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.omniCampaign_ = omniCampaignBuilder_ == null
             ? omniCampaign_
             : omniCampaignBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.campaignModuleSid_ = campaignModuleSid_;
@@ -427,9 +417,7 @@ private static final long serialVersionUID = 0L;
         result.connectedInbox_ = connectedInboxBuilder_ == null
             ? connectedInbox_
             : connectedInboxBuilder_.build();
-        to_bitField0_ |= 0x00000002;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -633,10 +621,8 @@ private static final long serialVersionUID = 0L;
       } else {
         omniCampaignBuilder_.mergeFrom(value);
       }
-      if (omniCampaign_ != null) {
-        bitField0_ |= 0x00000001;
-        onChanged();
-      }
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -834,10 +820,8 @@ private static final long serialVersionUID = 0L;
       } else {
         connectedInboxBuilder_.mergeFrom(value);
       }
-      if (connectedInbox_ != null) {
-        bitField0_ |= 0x00000004;
-        onChanged();
-      }
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**

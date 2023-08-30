@@ -45,7 +45,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.org.ContactPreferences.class, com.tcn.cloud.api.api.commons.org.ContactPreferences.Builder.class);
   }
 
-  private int bitField0_;
   public static final int ORG_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object orgId_ = "";
@@ -105,7 +104,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasDefaultContactImportFormat() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return defaultContactImportFormat_ != null;
   }
   /**
    * <pre>
@@ -158,7 +157,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasDefaultContactAreaCode() {
-    return ((bitField0_ & 0x00000002) != 0);
+    return defaultContactAreaCode_ != null;
   }
   /**
    * <pre>
@@ -320,13 +319,13 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, orgId_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (defaultContactImportFormat_ != null) {
       output.writeMessage(10, getDefaultContactImportFormat());
     }
     if (useContactImportFormat_ != false) {
       output.writeBool(11, useContactImportFormat_);
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (defaultContactAreaCode_ != null) {
       output.writeMessage(12, getDefaultContactAreaCode());
     }
     if (useContactAreaCode_ != false) {
@@ -356,7 +355,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, orgId_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (defaultContactImportFormat_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(10, getDefaultContactImportFormat());
     }
@@ -364,7 +363,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(11, useContactImportFormat_);
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (defaultContactAreaCode_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(12, getDefaultContactAreaCode());
     }
@@ -585,20 +584,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.org.ContactPreferences.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getDefaultContactImportFormatFieldBuilder();
-        getDefaultContactAreaCodeFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -657,12 +649,10 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.orgId_ = orgId_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.defaultContactImportFormat_ = defaultContactImportFormatBuilder_ == null
             ? defaultContactImportFormat_
             : defaultContactImportFormatBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.useContactImportFormat_ = useContactImportFormat_;
@@ -671,7 +661,6 @@ private static final long serialVersionUID = 0L;
         result.defaultContactAreaCode_ = defaultContactAreaCodeBuilder_ == null
             ? defaultContactAreaCode_
             : defaultContactAreaCodeBuilder_.build();
-        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.useContactAreaCode_ = useContactAreaCode_;
@@ -688,7 +677,6 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000100) != 0)) {
         result.defaultDuplicateHandling_ = defaultDuplicateHandling_;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1036,10 +1024,8 @@ private static final long serialVersionUID = 0L;
       } else {
         defaultContactImportFormatBuilder_.mergeFrom(value);
       }
-      if (defaultContactImportFormat_ != null) {
-        bitField0_ |= 0x00000002;
-        onChanged();
-      }
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -1237,10 +1223,8 @@ private static final long serialVersionUID = 0L;
       } else {
         defaultContactAreaCodeBuilder_.mergeFrom(value);
       }
-      if (defaultContactAreaCode_ != null) {
-        bitField0_ |= 0x00000008;
-        onChanged();
-      }
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**

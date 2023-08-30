@@ -51,7 +51,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.org.legacy.OrgBillingSettings.class, com.tcn.cloud.api.api.v1alpha1.org.legacy.OrgBillingSettings.Builder.class);
   }
 
-  private int bitField0_;
   public static final int ORG_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object orgId_ = "";
@@ -128,7 +127,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasDefault() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return default_ != null;
   }
   /**
    * <pre>
@@ -276,7 +275,7 @@ com.tcn.cloud.api.api.v1alpha1.org.legacy.BillingRegionMap defaultValue) {
    */
   @java.lang.Override
   public boolean hasAgentRates() {
-    return ((bitField0_ & 0x00000002) != 0);
+    return agentRates_ != null;
   }
   /**
    * <pre>
@@ -317,7 +316,7 @@ com.tcn.cloud.api.api.v1alpha1.org.legacy.BillingRegionMap defaultValue) {
    */
   @java.lang.Override
   public boolean hasEmailPricePerMessage() {
-    return ((bitField0_ & 0x00000004) != 0);
+    return emailPricePerMessage_ != null;
   }
   /**
    * <pre>
@@ -368,13 +367,13 @@ com.tcn.cloud.api.api.v1alpha1.org.legacy.BillingRegionMap defaultValue) {
     if (java.lang.Float.floatToRawIntBits(analyticsPricePerDoc_) != 0) {
       output.writeFloat(3, analyticsPricePerDoc_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (default_ != null) {
       output.writeMessage(4, getDefault());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (agentRates_ != null) {
       output.writeMessage(6, getAgentRates());
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
+    if (emailPricePerMessage_ != null) {
       output.writeMessage(7, getEmailPricePerMessage());
     }
     com.google.protobuf.GeneratedMessageV3
@@ -403,15 +402,15 @@ com.tcn.cloud.api.api.v1alpha1.org.legacy.BillingRegionMap defaultValue) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(3, analyticsPricePerDoc_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (default_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getDefault());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (agentRates_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, getAgentRates());
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
+    if (emailPricePerMessage_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, getEmailPricePerMessage());
     }
@@ -641,21 +640,13 @@ com.tcn.cloud.api.api.v1alpha1.org.legacy.BillingRegionMap defaultValue) {
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.org.legacy.OrgBillingSettings.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getDefaultFieldBuilder();
-        getAgentRatesFieldBuilder();
-        getEmailPricePerMessageFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -722,12 +713,10 @@ com.tcn.cloud.api.api.v1alpha1.org.legacy.BillingRegionMap defaultValue) {
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.analyticsPricePerDoc_ = analyticsPricePerDoc_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.default_ = defaultBuilder_ == null
             ? default_
             : defaultBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.countryRegionOverrides_ = internalGetCountryRegionOverrides();
@@ -737,15 +726,12 @@ com.tcn.cloud.api.api.v1alpha1.org.legacy.BillingRegionMap defaultValue) {
         result.agentRates_ = agentRatesBuilder_ == null
             ? agentRates_
             : agentRatesBuilder_.build();
-        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.emailPricePerMessage_ = emailPricePerMessageBuilder_ == null
             ? emailPricePerMessage_
             : emailPricePerMessageBuilder_.build();
-        to_bitField0_ |= 0x00000004;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1140,10 +1126,8 @@ com.tcn.cloud.api.api.v1alpha1.org.legacy.BillingRegionMap defaultValue) {
       } else {
         defaultBuilder_.mergeFrom(value);
       }
-      if (default_ != null) {
-        bitField0_ |= 0x00000008;
-        onChanged();
-      }
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -1483,10 +1467,8 @@ com.tcn.cloud.api.api.v1alpha1.org.legacy.BillingRegionMap defaultValue) {
       } else {
         agentRatesBuilder_.mergeFrom(value);
       }
-      if (agentRates_ != null) {
-        bitField0_ |= 0x00000020;
-        onChanged();
-      }
+      bitField0_ |= 0x00000020;
+      onChanged();
       return this;
     }
     /**
@@ -1649,10 +1631,8 @@ com.tcn.cloud.api.api.v1alpha1.org.legacy.BillingRegionMap defaultValue) {
       } else {
         emailPricePerMessageBuilder_.mergeFrom(value);
       }
-      if (emailPricePerMessage_ != null) {
-        bitField0_ |= 0x00000040;
-        onChanged();
-      }
+      bitField0_ |= 0x00000040;
+      onChanged();
       return this;
     }
     /**

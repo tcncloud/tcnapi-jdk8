@@ -45,7 +45,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.audit.ComplianceRndQueryEvent.class, com.tcn.cloud.api.api.commons.audit.ComplianceRndQueryEvent.Builder.class);
   }
 
-  private int bitField0_;
   public static final int ORG_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object orgId_ = "";
@@ -171,7 +170,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasDateLastContact() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return dateLastContact_ != null;
   }
   /**
    * <code>.google.protobuf.Timestamp date_last_contact = 4 [json_name = "dateLastContact"];</code>
@@ -212,7 +211,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(result_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, result_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (dateLastContact_ != null) {
       output.writeMessage(4, getDateLastContact());
     }
     getUnknownFields().writeTo(output);
@@ -233,7 +232,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(result_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, result_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (dateLastContact_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getDateLastContact());
     }
@@ -407,19 +406,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.audit.ComplianceRndQueryEvent.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getDateLastContactFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -475,14 +468,11 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.result_ = result_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.dateLastContact_ = dateLastContactBuilder_ == null
             ? dateLastContact_
             : dateLastContactBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -894,10 +884,8 @@ private static final long serialVersionUID = 0L;
       } else {
         dateLastContactBuilder_.mergeFrom(value);
       }
-      if (dateLastContact_ != null) {
-        bitField0_ |= 0x00000008;
-        onChanged();
-      }
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**

@@ -42,7 +42,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.GetOrgDefaultSuperUserGroupResponse.class, com.tcn.cloud.api.api.v0alpha.GetOrgDefaultSuperUserGroupResponse.Builder.class);
   }
 
-  private int bitField0_;
   public static final int DEFAULT_PERMISSION_GROUP_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.api.v0alpha.PermissionGroup defaultPermissionGroup_;
   /**
@@ -51,7 +50,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasDefaultPermissionGroup() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return defaultPermissionGroup_ != null;
   }
   /**
    * <code>.api.v0alpha.PermissionGroup default_permission_group = 1 [json_name = "defaultPermissionGroup"];</code>
@@ -83,7 +82,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (defaultPermissionGroup_ != null) {
       output.writeMessage(1, getDefaultPermissionGroup());
     }
     getUnknownFields().writeTo(output);
@@ -95,7 +94,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (defaultPermissionGroup_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getDefaultPermissionGroup());
     }
@@ -257,19 +256,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.GetOrgDefaultSuperUserGroupResponse.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getDefaultPermissionGroupFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -313,14 +306,11 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v0alpha.GetOrgDefaultSuperUserGroupResponse result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.defaultPermissionGroup_ = defaultPermissionGroupBuilder_ == null
             ? defaultPermissionGroup_
             : defaultPermissionGroupBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -486,10 +476,8 @@ private static final long serialVersionUID = 0L;
       } else {
         defaultPermissionGroupBuilder_.mergeFrom(value);
       }
-      if (defaultPermissionGroup_ != null) {
-        bitField0_ |= 0x00000001;
-        onChanged();
-      }
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**

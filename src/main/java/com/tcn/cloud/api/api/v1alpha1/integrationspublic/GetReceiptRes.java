@@ -54,7 +54,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetReceiptRes.class, com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetReceiptRes.Builder.class);
   }
 
-  private int bitField0_;
   public static final int RECEIPT_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object receiptId_ = "";
@@ -358,7 +357,7 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
    */
   @java.lang.Override
   public boolean hasPaymentFlow() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return paymentFlow_ != null;
   }
   /**
    * <pre>
@@ -419,7 +418,7 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amountPaidKey_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, amountPaidKey_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (paymentFlow_ != null) {
       output.writeMessage(6, getPaymentFlow());
     }
     getUnknownFields().writeTo(output);
@@ -461,7 +460,7 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amountPaidKey_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, amountPaidKey_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (paymentFlow_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, getPaymentFlow());
     }
@@ -671,19 +670,13 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetReceiptRes.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getPaymentFlowFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -749,14 +742,11 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.amountPaidKey_ = amountPaidKey_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.paymentFlow_ = paymentFlowBuilder_ == null
             ? paymentFlow_
             : paymentFlowBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1512,10 +1502,8 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
       } else {
         paymentFlowBuilder_.mergeFrom(value);
       }
-      if (paymentFlow_ != null) {
-        bitField0_ |= 0x00000020;
-        onChanged();
-      }
+      bitField0_ |= 0x00000020;
+      onChanged();
       return this;
     }
     /**

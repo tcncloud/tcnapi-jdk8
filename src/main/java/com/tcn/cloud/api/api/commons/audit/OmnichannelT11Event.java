@@ -43,7 +43,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.audit.OmnichannelT11Event.class, com.tcn.cloud.api.api.commons.audit.OmnichannelT11Event.Builder.class);
   }
 
-  private int bitField0_;
   public static final int CONVERSATION_SID_FIELD_NUMBER = 1;
   private long conversationSid_ = 0L;
   /**
@@ -112,7 +111,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasConversation() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return conversation_ != null;
   }
   /**
    * <pre>
@@ -161,7 +160,7 @@ private static final long serialVersionUID = 0L;
     if (channelType_ != com.tcn.cloud.api.api.commons.ChannelType.CHANNEL_TYPE_EMAIL.getNumber()) {
       output.writeEnum(3, channelType_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (conversation_ != null) {
       output.writeMessage(4, getConversation());
     }
     getUnknownFields().writeTo(output);
@@ -185,7 +184,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(3, channelType_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (conversation_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getConversation());
     }
@@ -360,19 +359,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.audit.OmnichannelT11Event.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getConversationFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -428,14 +421,11 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.channelType_ = channelType_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.conversation_ = conversationBuilder_ == null
             ? conversation_
             : conversationBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -806,10 +796,8 @@ private static final long serialVersionUID = 0L;
       } else {
         conversationBuilder_.mergeFrom(value);
       }
-      if (conversation_ != null) {
-        bitField0_ |= 0x00000008;
-        onChanged();
-      }
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**

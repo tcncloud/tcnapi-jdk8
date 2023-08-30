@@ -39,7 +39,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.CreateContactFieldDescriptionReq.class, com.tcn.cloud.api.api.v0alpha.CreateContactFieldDescriptionReq.Builder.class);
   }
 
-  private int bitField0_;
   public static final int FIELD_NAME_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object fieldName_ = "";
@@ -98,7 +97,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasDisplayFormatString() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return displayFormatString_ != null;
   }
   /**
    * <code>.google.protobuf.StringValue display_format_string = 3 [json_name = "displayFormatString"];</code>
@@ -136,7 +135,7 @@ private static final long serialVersionUID = 0L;
     if (isPhone_ != false) {
       output.writeBool(2, isPhone_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (displayFormatString_ != null) {
       output.writeMessage(3, getDisplayFormatString());
     }
     getUnknownFields().writeTo(output);
@@ -155,7 +154,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(2, isPhone_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (displayFormatString_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getDisplayFormatString());
     }
@@ -322,19 +321,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.CreateContactFieldDescriptionReq.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getDisplayFormatStringFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -386,14 +379,11 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.isPhone_ = isPhone_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.displayFormatString_ = displayFormatStringBuilder_ == null
             ? displayFormatString_
             : displayFormatStringBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -681,10 +671,8 @@ private static final long serialVersionUID = 0L;
       } else {
         displayFormatStringBuilder_.mergeFrom(value);
       }
-      if (displayFormatString_ != null) {
-        bitField0_ |= 0x00000004;
-        onChanged();
-      }
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**

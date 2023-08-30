@@ -42,7 +42,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.RecordingsFileNamingConvention.class, com.tcn.cloud.api.api.v0alpha.RecordingsFileNamingConvention.Builder.class);
   }
 
-  private int bitField0_;
   public static final int INBOUND_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.api.v0alpha.FileNamingConvention inbound_;
   /**
@@ -55,7 +54,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasInbound() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return inbound_ != null;
   }
   /**
    * <pre>
@@ -93,7 +92,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasManual() {
-    return ((bitField0_ & 0x00000002) != 0);
+    return manual_ != null;
   }
   /**
    * <pre>
@@ -131,7 +130,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasOutbound() {
-    return ((bitField0_ & 0x00000004) != 0);
+    return outbound_ != null;
   }
   /**
    * <pre>
@@ -169,7 +168,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasPreview() {
-    return ((bitField0_ & 0x00000008) != 0);
+    return preview_ != null;
   }
   /**
    * <pre>
@@ -224,16 +223,16 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (inbound_ != null) {
       output.writeMessage(1, getInbound());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (manual_ != null) {
       output.writeMessage(2, getManual());
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
+    if (outbound_ != null) {
       output.writeMessage(3, getOutbound());
     }
-    if (((bitField0_ & 0x00000008) != 0)) {
+    if (preview_ != null) {
       output.writeMessage(4, getPreview());
     }
     if (xmlClientPropertySid_ != 0L) {
@@ -248,19 +247,19 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (inbound_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getInbound());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (manual_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getManual());
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
+    if (outbound_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getOutbound());
     }
-    if (((bitField0_ & 0x00000008) != 0)) {
+    if (preview_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getPreview());
     }
@@ -458,22 +457,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.RecordingsFileNamingConvention.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getInboundFieldBuilder();
-        getManualFieldBuilder();
-        getOutboundFieldBuilder();
-        getPreviewFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -533,35 +523,29 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v0alpha.RecordingsFileNamingConvention result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.inbound_ = inboundBuilder_ == null
             ? inbound_
             : inboundBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.manual_ = manualBuilder_ == null
             ? manual_
             : manualBuilder_.build();
-        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.outbound_ = outboundBuilder_ == null
             ? outbound_
             : outboundBuilder_.build();
-        to_bitField0_ |= 0x00000004;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.preview_ = previewBuilder_ == null
             ? preview_
             : previewBuilder_.build();
-        to_bitField0_ |= 0x00000008;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.xmlClientPropertySid_ = xmlClientPropertySid_;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -785,10 +769,8 @@ private static final long serialVersionUID = 0L;
       } else {
         inboundBuilder_.mergeFrom(value);
       }
-      if (inbound_ != null) {
-        bitField0_ |= 0x00000001;
-        onChanged();
-      }
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -942,10 +924,8 @@ private static final long serialVersionUID = 0L;
       } else {
         manualBuilder_.mergeFrom(value);
       }
-      if (manual_ != null) {
-        bitField0_ |= 0x00000002;
-        onChanged();
-      }
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -1099,10 +1079,8 @@ private static final long serialVersionUID = 0L;
       } else {
         outboundBuilder_.mergeFrom(value);
       }
-      if (outbound_ != null) {
-        bitField0_ |= 0x00000004;
-        onChanged();
-      }
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -1256,10 +1234,8 @@ private static final long serialVersionUID = 0L;
       } else {
         previewBuilder_.mergeFrom(value);
       }
-      if (preview_ != null) {
-        bitField0_ |= 0x00000008;
-        onChanged();
-      }
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**

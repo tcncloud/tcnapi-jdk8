@@ -47,7 +47,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.audit.ScorecardsCreateScorecardEvent.class, com.tcn.cloud.api.api.commons.audit.ScorecardsCreateScorecardEvent.Builder.class);
   }
 
-  private int bitField0_;
   public static final int AUTHOR_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object authorId_ = "";
@@ -268,7 +267,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasScorecard() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return scorecard_ != null;
   }
   /**
    * <pre>
@@ -326,7 +325,7 @@ private static final long serialVersionUID = 0L;
     if (evaluationType_ != com.tcn.cloud.api.api.commons.EvaluationType.EVALUATE_MANUAL.getNumber()) {
       output.writeEnum(6, evaluationType_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (scorecard_ != null) {
       output.writeMessage(7, getScorecard());
     }
     getUnknownFields().writeTo(output);
@@ -359,7 +358,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(6, evaluationType_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (scorecard_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, getScorecard());
     }
@@ -545,19 +544,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.audit.ScorecardsCreateScorecardEvent.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getScorecardFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -625,14 +618,11 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.evaluationType_ = evaluationType_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.scorecard_ = scorecardBuilder_ == null
             ? scorecard_
             : scorecardBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1338,10 +1328,8 @@ private static final long serialVersionUID = 0L;
       } else {
         scorecardBuilder_.mergeFrom(value);
       }
-      if (scorecard_ != null) {
-        bitField0_ |= 0x00000040;
-        onChanged();
-      }
+      bitField0_ |= 0x00000040;
+      onChanged();
       return this;
     }
     /**

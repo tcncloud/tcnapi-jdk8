@@ -43,7 +43,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.org.UpdateOrganizationResponse.class, com.tcn.cloud.api.api.v1alpha1.org.UpdateOrganizationResponse.Builder.class);
   }
 
-  private int bitField0_;
   public static final int ORGANIZATION_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.api.commons.org.Organization organization_;
   /**
@@ -52,7 +51,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasOrganization() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return organization_ != null;
   }
   /**
    * <code>.api.commons.org.Organization organization = 1 [json_name = "organization"];</code>
@@ -84,7 +83,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (organization_ != null) {
       output.writeMessage(1, getOrganization());
     }
     getUnknownFields().writeTo(output);
@@ -96,7 +95,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (organization_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getOrganization());
     }
@@ -259,19 +258,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.org.UpdateOrganizationResponse.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getOrganizationFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -315,14 +308,11 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.UpdateOrganizationResponse result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.organization_ = organizationBuilder_ == null
             ? organization_
             : organizationBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -488,10 +478,8 @@ private static final long serialVersionUID = 0L;
       } else {
         organizationBuilder_.mergeFrom(value);
       }
-      if (organization_ != null) {
-        bitField0_ |= 0x00000001;
-        onChanged();
-      }
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**

@@ -694,4 +694,34 @@ public interface GeneralSettingsOrBuilder extends
    * @return The enableAgentIntercom.
    */
   boolean getEnableAgentIntercom();
+
+  /**
+   * <pre>
+   * Enables the delivery of incoming calls to the agent
+   * depending on the dial status prior to them clicking "Dial".
+   * </pre>
+   *
+   * <code>.api.commons.org.GeneralSettings.PrepareStateCallDelivery prepare_state_call_delivery = 804 [json_name = "prepareStateCallDelivery"];</code>
+   * @return Whether the prepareStateCallDelivery field is set.
+   */
+  boolean hasPrepareStateCallDelivery();
+  /**
+   * <pre>
+   * Enables the delivery of incoming calls to the agent
+   * depending on the dial status prior to them clicking "Dial".
+   * </pre>
+   *
+   * <code>.api.commons.org.GeneralSettings.PrepareStateCallDelivery prepare_state_call_delivery = 804 [json_name = "prepareStateCallDelivery"];</code>
+   * @return The prepareStateCallDelivery.
+   */
+  com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDelivery getPrepareStateCallDelivery();
+  /**
+   * <pre>
+   * Enables the delivery of incoming calls to the agent
+   * depending on the dial status prior to them clicking "Dial".
+   * </pre>
+   *
+   * <code>.api.commons.org.GeneralSettings.PrepareStateCallDelivery prepare_state_call_delivery = 804 [json_name = "prepareStateCallDelivery"];</code>
+   */
+  com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDeliveryOrBuilder getPrepareStateCallDeliveryOrBuilder();
 }

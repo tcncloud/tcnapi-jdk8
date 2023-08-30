@@ -39,7 +39,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.CreateDNCLNumbersReq.class, com.tcn.cloud.api.api.v0alpha.CreateDNCLNumbersReq.Builder.class);
   }
 
-  private int bitField0_;
   public static final int DNCLS_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v0alpha.DNCL> dncls_;
@@ -89,7 +88,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAgentLoggingData() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return agentLoggingData_ != null;
   }
   /**
    * <code>.api.v0alpha.AgentLoggingData agent_logging_data = 3 [json_name = "agentLoggingData"];</code>
@@ -124,7 +123,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < dncls_.size(); i++) {
       output.writeMessage(1, dncls_.get(i));
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (agentLoggingData_ != null) {
       output.writeMessage(3, getAgentLoggingData());
     }
     getUnknownFields().writeTo(output);
@@ -140,7 +139,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, dncls_.get(i));
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (agentLoggingData_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getAgentLoggingData());
     }
@@ -304,20 +303,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.CreateDNCLNumbersReq.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getDnclsFieldBuilder();
-        getAgentLoggingDataFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -381,14 +373,11 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v0alpha.CreateDNCLNumbersReq result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.agentLoggingData_ = agentLoggingDataBuilder_ == null
             ? agentLoggingData_
             : agentLoggingDataBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -833,10 +822,8 @@ private static final long serialVersionUID = 0L;
       } else {
         agentLoggingDataBuilder_.mergeFrom(value);
       }
-      if (agentLoggingData_ != null) {
-        bitField0_ |= 0x00000002;
-        onChanged();
-      }
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**

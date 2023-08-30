@@ -42,7 +42,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.DialedNumberFieldSettings.class, com.tcn.cloud.api.api.commons.DialedNumberFieldSettings.Builder.class);
   }
 
-  private int bitField0_;
   public static final int SHOULD_DISPLAY_FIELD_NUMBER = 1;
   private boolean shouldDisplay_ = false;
   /**
@@ -70,7 +69,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasColor() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return color_ != null;
   }
   /**
    * <pre>
@@ -108,7 +107,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasBgColor() {
-    return ((bitField0_ & 0x00000002) != 0);
+    return bgColor_ != null;
   }
   /**
    * <pre>
@@ -166,10 +165,10 @@ private static final long serialVersionUID = 0L;
     if (shouldDisplay_ != false) {
       output.writeBool(1, shouldDisplay_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (color_ != null) {
       output.writeMessage(2, getColor());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (bgColor_ != null) {
       output.writeMessage(3, getBgColor());
     }
     if (allowAgentCopy_ != false) {
@@ -188,11 +187,11 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(1, shouldDisplay_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (color_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getColor());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (bgColor_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getBgColor());
     }
@@ -377,20 +376,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.DialedNumberFieldSettings.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getColorFieldBuilder();
-        getBgColorFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -444,23 +436,19 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.shouldDisplay_ = shouldDisplay_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.color_ = colorBuilder_ == null
             ? color_
             : colorBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.bgColor_ = bgColorBuilder_ == null
             ? bgColor_
             : bgColorBuilder_.build();
-        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.allowAgentCopy_ = allowAgentCopy_;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -716,10 +704,8 @@ private static final long serialVersionUID = 0L;
       } else {
         colorBuilder_.mergeFrom(value);
       }
-      if (color_ != null) {
-        bitField0_ |= 0x00000002;
-        onChanged();
-      }
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -873,10 +859,8 @@ private static final long serialVersionUID = 0L;
       } else {
         bgColorBuilder_.mergeFrom(value);
       }
-      if (bgColor_ != null) {
-        bitField0_ |= 0x00000004;
-        onChanged();
-      }
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**

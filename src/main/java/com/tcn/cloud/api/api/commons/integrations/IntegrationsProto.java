@@ -1139,6 +1139,31 @@ public final class IntegrationsProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_commons_integrations_ExecuteNewzwareAchPayment_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_integrations_ExecuteNewzwareComplaintHistory_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_integrations_ExecuteNewzwareComplaintHistory_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_integrations_ExecuteNewzwareComplaintUpdate_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_integrations_ExecuteNewzwareComplaintUpdate_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_integrations_ExecuteNewzwareVacationRestart_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_integrations_ExecuteNewzwareVacationRestart_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_integrations_ExecuteNewzwareVacationUpdate_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_integrations_ExecuteNewzwareVacationUpdate_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_integrations_ExecuteNewzwarePhoneLookupMulti_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_integrations_ExecuteNewzwarePhoneLookupMulti_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1274,7 +1299,7 @@ public final class IntegrationsProto {
       ".InvoiceDisplayTypeR\013invoiceType\022E\n\013help" +
       "er_text\030\010 \001(\0132$.api.commons.integrations" +
       ".HelperTextR\nhelperText\" \n\nHelperText\022\022\n" +
-      "\004text\030\001 \001(\tR\004text\"\215\256\001\n\013ExecuteFlow\022,\n\022pl" +
+      "\004text\030\001 \001(\tR\004text\"\356\262\001\n\013ExecuteFlow\022,\n\022pl" +
       "ugin_instance_id\030\001 \001(\tR\020pluginInstanceId" +
       "\022j\n\025braintree_credit_sale\030e \001(\01324.api.co" +
       "mmons.integrations.ExecuteBraintreeCredi" +
@@ -1831,504 +1856,529 @@ public final class IntegrationsProto {
       "eCcPaymentH\000R\021newzwareCcPayment\022h\n\024newzw" +
       "are_ach_Payment\030\334\035 \001(\01323.api.commons.int" +
       "egrations.ExecuteNewzwareAchPaymentH\000R\022n" +
-      "ewzwareAchPaymentB\007\n\005value\"\035\n\033InvoiceExp" +
-      "erianQueryBalance\"2\n0InvoiceAuthorizeNet" +
-      "AuthorizedTransactionIdLookup\"\035\n\033Invoice" +
-      "AuthorizeNetLinkData\"\037\n\035InvoiceAuthorize" +
-      "NetCustomHttp\"\020\n\016InvoiceJourney\"\261\002\n\025Invo" +
-      "iceDynamicJourney\022!\n\014match_fields\030\001 \003(\tR" +
-      "\013matchFields\022\037\n\013total_field\030\002 \001(\tR\ntotal" +
-      "Field\022i\n\016journey_fields\030\003 \003(\0132B.api.comm" +
-      "ons.integrations.InvoiceDynamicJourney.J" +
-      "ourneyFieldsEntryR\rjourneyFields\032i\n\022Jour" +
-      "neyFieldsEntry\022\020\n\003key\030\001 \001(\tR\003key\022=\n\005valu" +
-      "e\030\002 \001(\0132\'.api.commons.integrations.ListO" +
-      "fStringsR\005value:\0028\001\"\037\n\035InvoiceNewzwareAc" +
-      "countInquiry\"\"\n VerificationExperianQuer" +
-      "yBalance\"\036\n\034VerificationExperianLinkData" +
-      "\"\034\n\032VerificationExperianZipDob\")\n\'Verifi" +
-      "cationAuthorizeNetCustomerProfile\"\"\n Ver" +
-      "ificationAuthorizeNetLinkData\"\344\001\n\023Verifi" +
-      "cationJourney\0221\n\023date_of_birth_field\030\001 \001" +
-      "(\tB\002\030\001R\020dateOfBirthField\022*\n\017last_name_fi" +
-      "eld\030\002 \001(\tB\002\030\001R\rlastNameField\022,\n\020first_na" +
-      "me_field\030\003 \001(\tB\002\030\001R\016firstNameField\022\037\n\tzi" +
-      "p_field\030\004 \001(\tB\002\030\001R\010zipField\022\037\n\tlast4_ssn" +
-      "\030\005 \001(\tB\002\030\001R\010last4Ssn\"!\n\037VerificationNewz" +
-      "wareLookupPhone\"$\n\"VerificationNewzwareA" +
-      "ccountInquiry\"\023\n\021PaymentExperianCC\"\024\n\022Pa" +
-      "ymentExperianACH\"\027\n\025PaymentAuthorizeNetC" +
-      "C\"\030\n\026PaymentAuthorizeNetACH\"\033\n\031PaymentAu" +
-      "thorizeNetPaypal\"\035\n\033PaymentAuthorizeNetA" +
-      "pplePay\"\036\n\034PaymentAuthorizeNetGooglePay\"" +
-      "$\n\"PaymentPaywaySubmitCardSaleRequest\"$\n" +
-      "\"PaymentPaywaySubmitACHAlertRequest\"\023\n\021P" +
-      "aymentNewzwareCc\"\024\n\022PaymentNewzwareAch\"\034" +
-      "\n\032ExecuteBraintreeCreditSale\"\032\n\030ExecuteB" +
-      "raintreeBankSale\"#\n!ExecuteRelatientGetP" +
-      "atientBalance\"$\n\"ExecuteRelatientGetPati" +
-      "entCcTokens\"\"\n ExecuteRelatientPostPatie" +
-      "ntToken\"$\n\"ExecuteRelatientPostPatientBa" +
-      "lance\"\034\n\032ExecuteRelatientGetPatient\"!\n\037E" +
-      "xecuteRelatientPostBalanceById\"&\n$Execut" +
-      "eRelatientCreateFortisAchtoken\"%\n#Execut" +
-      "eRelatientCreateFortisCctoken\",\n*Execute" +
-      "RelatientFortisTokenAchDebitPayment\"&\n$E" +
-      "xecuteRelatientFortisTokenCcPayment\"!\n\037E" +
-      "xecuteCybersourceCreditPayment\"!\n\037Execut" +
-      "eCybersourceEcheckPayment\"%\n#ExecuteCirc" +
-      "proPhoneLookupWithBundle\"\033\n\031ExecuteCircp" +
-      "roPhoneLookup\"&\n$ExecuteCircproVacationR" +
-      "estartInquiry\" \n\036ExecuteCircproComplaint" +
-      "Inquiry\"\036\n\034ExecuteCircproAccountInquiry\"" +
-      "%\n#ExecuteCircproAccountInquiryWithTax\"+" +
-      "\n)ExecuteCircproAccountInquiryWithTaxBun" +
-      "dle\"\036\n\034ExecuteCircproComplaintCodes\"\037\n\035E" +
-      "xecuteCircproComplaintUpdate\"\036\n\034ExecuteC" +
-      "ircproVacationUpdate\"\035\n\033ExecuteCircproRe" +
-      "startUpdate\"#\n!ExecuteCircproLawImmediat" +
-      "ePayment\"$\n\"ExecuteCircproLawUpdateDataW" +
-      "ithPac\"\037\n\035ExecuteCircproLawGetCustomers\"" +
-      "%\n#ExecuteAuthorizenetChargeCreditCard\"%" +
-      "\n#ExecuteAuthorizenetDebitBankAccount\"1\n" +
-      "/ExecuteAuthorizenetCreateCustomerPaymen" +
-      "tProfile\"&\n$ExecuteAuthorizenetPaypalTra" +
-      "nsaction\")\n\'ExecuteAuthorizenetGooglePay" +
-      "Transaction\"(\n&ExecuteAuthorizenetAppleP" +
-      "ayTransaction\"&\n$ExecuteAuthorizenetPayP" +
-      "alAuthCapture\"\037\n\035ExecuteExpitransCcTrans" +
-      "action\" \n\036ExecuteExpitransAchTransaction" +
-      "\"#\n!ExecuteAxiamedfusionCcTransaction\"$\n" +
-      "\"ExecuteAxiamedfusionAchTransaction\" \n\036E" +
-      "xecuteAxiamedfusionCardVerify\"\034\n\032Execute" +
-      "InstamedPaymentSale\"\034\n\032ExecuteInstamedVo" +
-      "idPayment\" \n\036ExecuteUsaepaySubmitCcPayme" +
-      "nts\"!\n\037ExecuteUsaepaySubmitAchPayments\"\032" +
-      "\n\030ExecuteUsaepayGetCcToken\"!\n\037ExecuteEzi" +
-      "debitSubmitCcPayments\"\"\n ExecuteEzidebit" +
-      "SubmitAchPayments\" \n\036ExecuteBamboraSubmi" +
-      "tCcPayments\"!\n\037ExecuteBamboraSubmitAchPa" +
-      "yments\"\027\n\025ExecuteRepayStoreCard\"\032\n\030Execu" +
-      "teRepayPaymentToken\"\035\n\033ExecuteRepayAchPa" +
-      "ymentToken\"\"\n ExecuteAxiaSubmitSaleReque" +
-      "stByCc\"%\n#ExecuteAxiaSubmitSaleRequestBy" +
-      "Check\"!\n\037ExecuteSecuretradingSendPayment" +
-      "\"/\n-ExecutePaymentVisionSubmitCardSaleRe" +
-      "questByCc\"0\n.ExecutePaymentVisionSubmitC" +
-      "ardSaleRequestByAch\" \n\036ExecuteInterprose" +
-      "LookupAccount\",\n*ExecuteInterproseSubmit" +
-      "CardSaleRequestByCc\"-\n+ExecuteInterprose" +
-      "SubmitCardSaleRequestByAch\"\"\n ExecuteInt" +
-      "erproseLookupPaymentId\"(\n&ExecuteInterpr" +
-      "oseLookupAccountByFormId\" \n\036ExecuteDalla" +
-      "snewsSearchByPhone\"$\n\"ExecuteDallasnewsS" +
-      "earchByZipStreet\"\033\n\031ExecuteDallasnewsSea" +
-      "rchBy\"!\n\037ExecuteDallasnewsCreateVacation" +
-      "\"\036\n\034ExecuteDallasnewsGetVacation\")\n\'Exec" +
-      "uteDallasnewsGetVacationDaysBetween\"(\n&E" +
-      "xecuteDallasnewsGetVacationWithCutoff\"!\n" +
-      "\037ExecuteDallasnewsDeleteVacation\"\037\n\035Exec" +
-      "uteDallasnewsAddComplaint\"$\n\"ExecuteDall" +
-      "asnewsUpdatePhoneNumber\"\036\n\034ExecuteDallas" +
-      "newsStopAccount\"!\n\037ExecuteDallasnewsCcPa" +
-      "ymentToken\"\"\n ExecuteDallasnewsAchPaymen" +
-      "tToken\"$\n\"ExecutePaywaySubmitCardSaleReq" +
-      "uest\"!\n\037ExecutePaywayCreateTokenRequest\"" +
-      "#\n!ExecutePaywaySubmitACHSaleRequest\")\n\'" +
-      "ExecuteBillingtreeSubmitCardSaleRequest\"" +
-      "!\n\037ExecuteExperianCcPaymentRequest\"%\n#Ex" +
-      "ecuteExperianCcPaymentPlanRequest\"\037\n\035Exe" +
-      "cuteExperianBalancerequest\"\"\n ExecuteExp" +
-      "erianAchPaymentRequest\"&\n$ExecuteExperia" +
-      "nAchPaymentPlanRequest\" \n\036ExecuteExperia" +
-      "nStellaCardEntry\"\035\n\033ExecuteExperianStell" +
-      "aECheck\"-\n+ExecuteExperianStellaCardDevi" +
-      "ceTokenization\"#\n!ExecuteExperianStellaT" +
-      "okenPayment\"&\n$ExecuteExperianStellaAchT" +
-      "okenization\"&\n$ExecuteExperianStellaAddu" +
-      "saepaytoken\"#\n!ExecuteExperianStellaPaym" +
-      "entPlans\"\033\n\031ExecuteExperianStellaAuth\"\027\n",
-      "\025ExecuteNewscycleLogin\"\034\n\032ExecuteNewscyc" +
-      "leSearchPage\"\035\n\033ExecuteNewscycleBillingI" +
-      "nfo\"\"\n ExecuteNewscycleServiceErrorInfo\"" +
-      "#\n!ExecuteNewscycleServiceErrorTrans\"\032\n\030" +
-      "ExecuteNewscycleStopInfo\"\033\n\031ExecuteNewsc" +
-      "ycleStopTrans\"\033\n\031ExecuteNewscycleRenewIn" +
-      "fo\"\037\n\035ExecuteNewscycleAutoRenewInfo\"\032\n\030E" +
-      "xecuteNewscycleAutoTran\"\031\n\027ExecuteNewscy" +
-      "clePayInfo\"\031\n\027ExecuteNewscyclePayTran\" \n" +
-      "\036ExecuteTrustcommerceCreditSale\"\035\n\033Execu" +
-      "teTrustcommerceAchSale\"\031\n\027ExecuteVantivC" +
-      "reditSale\"\026\n\024ExecuteVantivAchSale\"\026\n\024Exe" +
-      "cuteJourneyLatest\" \n\036ExecuteAthenahealth" +
-      "GetPatients\"&\n$ExecuteAthenahealthGetPat" +
-      "ientsWithId\"\036\n\034ExecuteAthenahealthCcPaym" +
-      "ent\"&\n$ExecuteBrainworksGetCustomersByPh" +
-      "one\"\036\n\034ExecuteBrainworksGetSuspends\"(\n&E" +
-      "xecuteBrainworksGetCustomerByCustIdV2\" \n" +
-      "\036ExecuteBrainworksGetComplaints\"\"\n Execu" +
-      "teBrainworksGetCodesOrTypes\"\037\n\035ExecuteBr" +
-      "ainworksStopSuspends\" \n\036ExecuteBrainwork" +
-      "sStartSuspends\" \n\036ExecuteBrainworksSendC" +
-      "omplaint\"&\n$ExecuteBrainworksGetCustomer" +
-      "ByCustId\"\035\n\033ExecuteOsgconnectCcPayments\"" +
-      "\036\n\034ExecuteOsgconnectAchPayments\"$\n\"Execu" +
-      "teOsgconnectValidateAccountNo\"!\n\037Execute" +
-      "NtvbCreditMissedDelivery\"\033\n\031ExecuteNtvbC" +
-      "ustomerSearch\"\024\n\022ExecuteNtvbEndCall\"\"\n E" +
-      "xecuteNtvbIntegrationDefinition\"\033\n\031Execu" +
-      "teNtvbMissedDelivery\"\036\n\034ExecuteNtvbRemov" +
-      "eAutorenewal\"\036\n\034ExecuteNtvbRenewSubscrip" +
-      "tion\"\032\n\030ExecuteNtvbRenewalOffers\"\033\n\031Exec" +
-      "uteNtvbSetAutorenewal\"\036\n\034ExecuteNtvbStar" +
-      "tIncomingCall\"\036\n\034ExecuteNtvbStartOutgoin" +
-      "gCall\"\035\n\033ExecuteNtvbSubscriptionInfo\"\031\n\027" +
-      "ExecuteNtvbVacationStop\"\025\n\023ExecuteNtvbAu" +
-      "thtest\"\035\n\033ExecuteElavonCreditCardSale\"\033\n" +
-      "\031ExecuteElavonAddRecurring\"\032\n\030ExecuteEla" +
-      "vonDccResponse\"\036\n\034ExecuteElavonUpdateRec" +
-      "urring\"\036\n\034ExecuteElavonDeleteRecurring\" " +
-      "\n\036ExecuteElavonMccCreditCardSale\"\037\n\035Exec" +
-      "uteElavonHealthCareCCSale\"\035\n\033ExecuteElav" +
-      "onAddInstallment\" \n\036ExecuteElavonDeleteI" +
-      "nstallment\" \n\036ExecuteElavonUpdateInstall" +
-      "ment\"\037\n\035ExecuteGlobalPaymentsCardSale\")\n" +
-      "\'ExecuteGlobalPaymentsGetTransactionByID" +
-      "\"\'\n%ExecuteGlobalPaymentsListTransaction" +
-      "s\"!\n\037ExecuteGlobalPaymentsRefundSale\"*\n(" +
-      "ExecuteGlobalPaymentsReverseSaleOrRefund" +
-      "\"\037\n\035ExecutePayScoutCreditCardSale\"\033\n\031Exe" +
-      "cutePayScoutEcheckSale\"\020\n\016ExecuteI2cEcho" +
-      "\"\032\n\030ExecuteI2cBalanceInquiry\"\026\n\024ExecuteI" +
-      "2cVerifyUser\"\032\n\030ExecuteI2cSearchCustomer" +
-      "\"\027\n\025ExecuteI2cMakePayment\" \n\036ExecuteI2cG" +
-      "etCardholderProfile\"\"\n ExecuteI2cGetCard" +
-      "holderStatement\" \n\036ExecuteI2cGetCardhold" +
-      "erBalance\" \n\036ExecuteI2cGetCreditPaymentI" +
-      "nfo\"\036\n\034ExecuteI2cTransactionHistory\"\030\n\026E" +
-      "xecuteOpayoCcPayments\"\031\n\027ExecuteShift4Cc" +
-      "Payments\"\033\n\031ExecutePoscorpAccesstoken\"\037\n" +
-      "\035ExecutePoscorpLookupGuarantor\"#\n!Execut" +
-      "ePoscorpUpdatePaymentStatus\"\025\n\023ExecutePi" +
-      "anoGetUser\"\030\n\026ExecutePianoUpdateUser\"\025\n\023" +
-      "ExecuteEpicGetToken\"\027\n\025ExecuteEpicGetPat" +
-      "ient\"\031\n\027ExecuteEpicMatchPatient\"\036\n\034Execu" +
-      "teEpicSearchAppointment\"\034\n\032ExecuteEpicFi" +
-      "ndAppointment\"\034\n\032ExecuteEpicBookAppointm" +
-      "ent\"\027\n\025ExecuteEpicGetAccount\"\034\n\032ExecuteN" +
-      "ewzwarePhoneLookup\"\037\n\035ExecuteNewzwareAcc" +
-      "ountInquiry\"\032\n\030ExecuteNewzwareCcPayment\"" +
-      "\033\n\031ExecuteNewzwareAchPayment*\374\t\n\017Integra" +
-      "tionType\022\034\n\030INTEGRATION_TYPE_UNKNOWN\020\000\022\036" +
-      "\n\032INTEGRATION_TYPE_BRAINTREE\020d\022\037\n\032INTEGR" +
-      "ATION_TYPE_RELATIENT\020\310\001\022!\n\034INTEGRATION_T" +
-      "YPE_CYBERSOURCE\020\254\002\022\035\n\030INTEGRATION_TYPE_C" +
-      "IRCPRO\020\220\003\022\"\n\035INTEGRATION_TYPE_AUTHORIZEN" +
-      "ET\020\364\003\022\037\n\032INTEGRATION_TYPE_EXPITRANS\020\330\004\022#" +
-      "\n\036INTEGRATION_TYPE_AXIAMEDFUSION\020\274\005\022\036\n\031I" +
-      "NTEGRATION_TYPE_INSTAMED\020\240\006\022\035\n\030INTEGRATI" +
-      "ON_TYPE_USAEPAY\020\204\007\022\036\n\031INTEGRATION_TYPE_E" +
-      "ZIDEBIT\020\350\007\022\035\n\030INTEGRATION_TYPE_BAMBORA\020\314" +
-      "\010\022\033\n\026INTEGRATION_TYPE_REPAY\020\260\t\022\032\n\025INTEGR" +
-      "ATION_TYPE_AXIA\020\224\n\022#\n\036INTEGRATION_TYPE_S" +
-      "ECURETRADING\020\370\n\022#\n\036INTEGRATION_TYPE_PAYM" +
-      "ENTVISION\020\334\013\022 \n\033INTEGRATION_TYPE_INTERPR" +
-      "OSE\020\300\014\022 \n\033INTEGRATION_TYPE_DALLASNEWS\020\244\r" +
-      "\022\034\n\027INTEGRATION_TYPE_PAYWAY\020\210\016\022!\n\034INTEGR" +
-      "ATION_TYPE_BILLINGTREE\020\354\016\022\036\n\031INTEGRATION" +
-      "_TYPE_EXPERIAN\020\320\017\022\037\n\032INTEGRATION_TYPE_NE" +
-      "WSCYCLE\020\264\020\022#\n\036INTEGRATION_TYPE_TRUSTCOMM" +
-      "ERCE\020\230\021\022\034\n\027INTEGRATION_TYPE_VANTIV\020\374\021\022\035\n" +
-      "\030INTEGRATION_TYPE_JOURNEY\020\340\022\022\"\n\035INTEGRAT" +
-      "ION_TYPE_ATHENAHEALTH\020\304\023\022 \n\033INTEGRATION_" +
-      "TYPE_BRAINWORKS\020\250\024\022 \n\033INTEGRATION_TYPE_O" +
-      "SGCONNECT\020\214\025\022\032\n\025INTEGRATION_TYPE_NTVB\020\360\025" +
-      "\022\034\n\027INTEGRATION_TYPE_ELAVON\020\324\026\022$\n\037INTEGR" +
-      "ATION_TYPE_GLOBALPAYMENTS\020\270\027\022\037\n\032INTEGRAT" +
-      "ION_TYPE_PAY_SCOUT\020\234\030\022\031\n\024INTEGRATION_TYP" +
-      "E_I2C\020\200\031\022\033\n\026INTEGRATION_TYPE_OPAYO\020\344\031\022\034\n" +
-      "\027INTEGRATION_TYPE_SHIFT4\020\310\032\022\035\n\030INTEGRATI" +
-      "ON_TYPE_POSCORP\020\254\033\022\033\n\026INTEGRATION_TYPE_P" +
-      "IANO\020\220\034\022\032\n\025INTEGRATION_TYPE_EPIC\020\364\034\022\036\n\031I" +
-      "NTEGRATION_TYPE_NEWZWARE\020\330\035*\331B\n\rRequestM" +
-      "ethod\022\032\n\026REQUEST_METHOD_UNKNOWN\020\000\022\'\n#REQ" +
-      "UEST_METHOD_BRAINTREE_CREDITSALE\020e\022%\n!RE" +
-      "QUEST_METHOD_BRAINTREE_BANKSALE\020f\022/\n*REQ" +
-      "UEST_METHOD_RELATIENT_GETPATIENTBALANCE\020" +
-      "\311\001\0220\n+REQUEST_METHOD_RELATIENT_GETPATIEN" +
-      "TCCTOKENS\020\312\001\022.\n)REQUEST_METHOD_RELATIENT" +
-      "_POSTPATIENTTOKEN\020\313\001\0220\n+REQUEST_METHOD_R" +
-      "ELATIENT_POSTPATIENTBALANCE\020\314\001\022(\n#REQUES" +
-      "T_METHOD_RELATIENT_GETPATIENT\020\315\001\022-\n(REQU" +
-      "EST_METHOD_RELATIENT_POSTBALANCEBYID\020\316\001\022" +
-      "4\n/REQUEST_METHOD_RELATIENT_CREATE_FORTI" +
-      "S_ACHTOKEN\020\317\001\0223\n.REQUEST_METHOD_RELATIEN" +
-      "T_CREATE_FORTIS_CCTOKEN\020\320\001\022<\n7REQUEST_ME" +
-      "THOD_RELATIENT_FORTIS_TOKEN_ACH_DEBIT_PA" +
-      "YMENT\020\321\001\0225\n0REQUEST_METHOD_RELATIENT_FOR" +
-      "TIS_TOKEN_CC_PAYMENT\020\322\001\022-\n(REQUEST_METHO" +
-      "D_CYBERSOURCE_CREDITPAYMENT\020\255\002\022-\n(REQUES" +
-      "T_METHOD_CYBERSOURCE_ECHECKPAYMENT\020\256\002\0221\n" +
-      ",REQUEST_METHOD_CIRCPRO_PHONELOOKUPWITHB" +
-      "UNDLE\020\221\003\022\'\n\"REQUEST_METHOD_CIRCPRO_PHONE" +
-      "LOOKUP\020\222\003\0222\n-REQUEST_METHOD_CIRCPRO_VACA" +
-      "TIONRESTARTINQUIRY\020\223\003\022,\n\'REQUEST_METHOD_" +
-      "CIRCPRO_COMPLAINTINQUIRY\020\224\003\022*\n%REQUEST_M" +
-      "ETHOD_CIRCPRO_ACCOUNTINQUIRY\020\225\003\0221\n,REQUE" +
-      "ST_METHOD_CIRCPRO_ACCOUNTINQUIRYWITHTAX\020" +
-      "\226\003\0227\n2REQUEST_METHOD_CIRCPRO_ACCOUNTINQU" +
-      "IRYWITHTAXBUNDLE\020\227\003\022*\n%REQUEST_METHOD_CI" +
-      "RCPRO_COMPLAINTCODES\020\230\003\022+\n&REQUEST_METHO" +
-      "D_CIRCPRO_COMPLAINTUPDATE\020\231\003\022*\n%REQUEST_" +
-      "METHOD_CIRCPRO_VACATIONUPDATE\020\232\003\022)\n$REQU" +
-      "EST_METHOD_CIRCPRO_RESTARTUPDATE\020\233\003\0220\n+R" +
-      "EQUEST_METHOD_CIRCPRO_LAW_IMMEDIATEPAYME" +
-      "NT\020\234\003\0221\n,REQUEST_METHOD_CIRCPRO_LAW_UPDA" +
-      "TEDATAWITHPAC\020\235\003\022,\n\'REQUEST_METHOD_CIRCP" +
-      "RO_LAW_GETCUSTOMERS\020\236\003\0221\n,REQUEST_METHOD" +
-      "_AUTHORIZENET_CHARGECREDITCARD\020\365\003\0221\n,REQ" +
-      "UEST_METHOD_AUTHORIZENET_DEBITBANKACCOUN" +
-      "T\020\366\003\022=\n8REQUEST_METHOD_AUTHORIZENET_CREA" +
-      "TECUSTOMERPAYMENTPROFILE\020\367\003\0222\n-REQUEST_M" +
-      "ETHOD_AUTHORIZENET_PAYPALTRANSACTION\020\370\003\022" +
-      "5\n0REQUEST_METHOD_AUTHORIZENET_GOOGLEPAY" +
-      "TRANSACTION\020\371\003\0224\n/REQUEST_METHOD_AUTHORI" +
-      "ZENET_APPLEPAYTRANSACTION\020\372\003\0222\n-REQUEST_" +
-      "METHOD_AUTHORIZENET_PAYPALAUTHCAPTURE\020\373\003" +
-      "\022+\n&REQUEST_METHOD_EXPITRANS_CCTRANSACTI" +
-      "ON\020\331\004\022,\n\'REQUEST_METHOD_EXPITRANS_ACHTRA" +
-      "NSACTION\020\332\004\022/\n*REQUEST_METHOD_AXIAMEDFUS" +
-      "ION_CCTRANSACTION\020\275\005\0220\n+REQUEST_METHOD_A" +
-      "XIAMEDFUSION_ACHTRANSACTION\020\276\005\022,\n\'REQUES" +
-      "T_METHOD_AXIAMEDFUSION_CARDVERIFY\020\277\005\022(\n#" +
-      "REQUEST_METHOD_INSTAMED_PAYMENTSALE\020\241\006\022(" +
-      "\n#REQUEST_METHOD_INSTAMED_VOIDPAYMENT\020\242\006" +
-      "\022,\n\'REQUEST_METHOD_USAEPAY_SUBMITCCPAYME" +
-      "NTS\020\205\007\022-\n(REQUEST_METHOD_USAEPAY_SUBMITA" +
-      "CHPAYMENTS\020\206\007\022&\n!REQUEST_METHOD_USAEPAY_" +
-      "GETCCTOKEN\020\207\007\022-\n(REQUEST_METHOD_EZIDEBIT" +
-      "_SUBMITCCPAYMENTS\020\351\007\022.\n)REQUEST_METHOD_E" +
-      "ZIDEBIT_SUBMITACHPAYMENTS\020\352\007\022,\n\'REQUEST_" +
-      "METHOD_BAMBORA_SUBMITCCPAYMENTS\020\315\010\022-\n(RE" +
-      "QUEST_METHOD_BAMBORA_SUBMITACHPAYMENTS\020\316" +
-      "\010\022#\n\036REQUEST_METHOD_REPAY_STORECARD\020\261\t\022&" +
-      "\n!REQUEST_METHOD_REPAY_PAYMENTTOKEN\020\262\t\022)" +
-      "\n$REQUEST_METHOD_REPAY_ACHPAYMENTTOKEN\020\263" +
-      "\t\022.\n)REQUEST_METHOD_AXIA_SUBMITSALEREQUE" +
-      "STBYCC\020\225\n\0221\n,REQUEST_METHOD_AXIA_SUBMITS" +
-      "ALEREQUESTBYCHECK\020\226\n\022-\n(REQUEST_METHOD_S" +
-      "ECURETRADING_SENDPAYMENT\020\371\n\022;\n6REQUEST_M" +
-      "ETHOD_PAYMENTVISION_SUBMITCARDSALEREQUES" +
-      "TBYCC\020\335\013\022<\n7REQUEST_METHOD_PAYMENTVISION" +
-      "_SUBMITCARDSALEREQUESTBYACH\020\336\013\022,\n\'REQUES" +
-      "T_METHOD_INTERPROSE_LOOKUPACCOUNT\020\301\014\0228\n3" +
-      "REQUEST_METHOD_INTERPROSE_SUBMITCARDSALE" +
-      "REQUESTBYCC\020\302\014\0229\n4REQUEST_METHOD_INTERPR" +
-      "OSE_SUBMITCARDSALEREQUESTBYACH\020\303\014\022.\n)REQ" +
-      "UEST_METHOD_INTERPROSE_LOOKUPPAYMENTID\020\304" +
-      "\014\0224\n/REQUEST_METHOD_INTERPROSE_LOOKUPACC" +
-      "OUNTBYFORMID\020\305\014\022,\n\'REQUEST_METHOD_DALLAS" +
-      "NEWS_SEARCHBYPHONE\020\245\r\0220\n+REQUEST_METHOD_" +
-      "DALLASNEWS_SEARCHBYZIPSTREET\020\246\r\022\'\n\"REQUE" +
-      "ST_METHOD_DALLASNEWS_SEARCHBY\020\247\r\022-\n(REQU" +
-      "EST_METHOD_DALLASNEWS_CREATEVACATION\020\250\r\022" +
-      "*\n%REQUEST_METHOD_DALLASNEWS_GETVACATION" +
-      "\020\251\r\0225\n0REQUEST_METHOD_DALLASNEWS_GETVACA" +
-      "TIONDAYSBETWEEN\020\252\r\0224\n/REQUEST_METHOD_DAL" +
-      "LASNEWS_GETVACATIONWITHCUTOFF\020\253\r\022-\n(REQU" +
-      "EST_METHOD_DALLASNEWS_DELETEVACATION\020\254\r\022" +
-      "+\n&REQUEST_METHOD_DALLASNEWS_ADDCOMPLAIN" +
-      "T\020\255\r\0220\n+REQUEST_METHOD_DALLASNEWS_UPDATE" +
-      "PHONENUMBER\020\256\r\022*\n%REQUEST_METHOD_DALLASN" +
-      "EWS_STOPACCOUNT\020\257\r\022-\n(REQUEST_METHOD_DAL" +
-      "LASNEWS_CCPAYMENTTOKEN\020\260\r\022.\n)REQUEST_MET" +
-      "HOD_DALLASNEWS_ACHPAYMENTTOKEN\020\261\r\0220\n+REQ" +
-      "UEST_METHOD_PAYWAY_SUBMITCARDSALEREQUEST" +
-      "\020\211\016\022-\n(REQUEST_METHOD_PAYWAY_CREATETOKEN" +
-      "REQUEST\020\212\016\022/\n*REQUEST_METHOD_PAYWAY_SUBM" +
-      "ITACHSALEREQUEST\020\213\016\0225\n0REQUEST_METHOD_BI" +
-      "LLINGTREE_SUBMITCARDSALEREQUEST\020\355\016\022/\n*RE" +
-      "QUEST_METHOD_EXPERIAN_CC_PAYMENT_REQUEST" +
-      "\020\321\017\0222\n-REQUEST_METHOD_EXPERIAN_CC_PAYMEN" +
-      "TPLANREQUEST\020\322\017\022+\n&REQUEST_METHOD_EXPERI" +
-      "AN_BALANCEREQUEST\020\323\017\0220\n+REQUEST_METHOD_E" +
-      "XPERIAN_ACH_PAYMENT_REQUEST\020\324\017\0223\n.REQUES" +
-      "T_METHOD_EXPERIAN_ACH_PAYMENTPLANREQUEST" +
-      "\020\325\017\022.\n)REQUEST_METHOD_EXPERIAN_STELLA_CA" +
-      "RD_ENTRY\020\326\017\022*\n%REQUEST_METHOD_EXPERIAN_S" +
-      "TELLA_ECHECK\020\327\017\022<\n7REQUEST_METHOD_EXPERI" +
-      "AN_STELLA_CARD_DEVICE_TOKENIZATION\020\330\017\0221\n" +
-      ",REQUEST_METHOD_EXPERIAN_STELLA_TOKEN_PA" +
-      "YMENT\020\331\017\0224\n/REQUEST_METHOD_EXPERIAN_STEL" +
-      "LA_ACH_TOKENIZATION\020\332\017\0226\n1REQUEST_METHOD" +
-      "_EXPERIAN_STELLA_ADD_USA_EPAY_TOKEN\020\333\017\0221" +
-      "\n,REQUEST_METHOD_EXPERIAN_STELLA_PAYMENT" +
-      "_PLANS\020\334\017\022(\n#REQUEST_METHOD_EXPERIAN_STE" +
-      "LLA_AUTH\020\335\017\022#\n\036REQUEST_METHOD_NEWSCYCLE_" +
-      "LOGIN\020\265\020\022(\n#REQUEST_METHOD_NEWSCYCLE_SEA" +
-      "RCHPAGE\020\266\020\022)\n$REQUEST_METHOD_NEWSCYCLE_B" +
-      "ILLINGINFO\020\267\020\022.\n)REQUEST_METHOD_NEWSCYCL" +
-      "E_SERVICEERRORINFO\020\270\020\022/\n*REQUEST_METHOD_" +
-      "NEWSCYCLE_SERVICEERRORTRANS\020\271\020\022&\n!REQUES" +
-      "T_METHOD_NEWSCYCLE_STOPINFO\020\272\020\022\'\n\"REQUES" +
-      "T_METHOD_NEWSCYCLE_STOPTRANS\020\273\020\022\'\n\"REQUE" +
-      "ST_METHOD_NEWSCYCLE_RENEWINFO\020\274\020\022+\n&REQU" +
-      "EST_METHOD_NEWSCYCLE_AUTORENEWINFO\020\275\020\022&\n" +
-      "!REQUEST_METHOD_NEWSCYCLE_AUTOTRAN\020\276\020\022%\n" +
-      " REQUEST_METHOD_NEWSCYCLE_PAYINFO\020\277\020\022%\n " +
-      "REQUEST_METHOD_NEWSCYCLE_PAYTRAN\020\300\020\022,\n\'R" +
-      "EQUEST_METHOD_TRUSTCOMMERCE_CREDITSALE\020\231" +
-      "\021\022)\n$REQUEST_METHOD_TRUSTCOMMERCE_ACHSAL" +
-      "E\020\232\021\022%\n REQUEST_METHOD_VANTIV_CREDITSALE" +
-      "\020\375\021\022\"\n\035REQUEST_METHOD_VANTIV_ACHSALE\020\376\021\022" +
-      "\"\n\035REQUEST_METHOD_JOURNEY_LATEST\020\341\022\022,\n\'R" +
-      "EQUEST_METHOD_ATHENAHEALTH_GETPATIENTS\020\305" +
-      "\023\0222\n-REQUEST_METHOD_ATHENAHEALTH_GETPATI" +
-      "ENTSWITHID\020\306\023\022*\n%REQUEST_METHOD_ATHENAHE" +
-      "ALTH_CCPAYMENT\020\307\023\0222\n-REQUEST_METHOD_BRAI" +
-      "NWORKS_GETCUSTOMERSBYPHONE\020\251\024\022*\n%REQUEST" +
-      "_METHOD_BRAINWORKS_GETSUSPENDS\020\252\024\0224\n/REQ" +
-      "UEST_METHOD_BRAINWORKS_GETCUSTOMERBYCUST" +
-      "IDV2\020\253\024\022,\n\'REQUEST_METHOD_BRAINWORKS_GET" +
-      "COMPLAINTS\020\254\024\022.\n)REQUEST_METHOD_BRAINWOR" +
-      "KS_GETCODESORTYPES\020\255\024\022+\n&REQUEST_METHOD_" +
-      "BRAINWORKS_STOPSUSPENDS\020\256\024\022,\n\'REQUEST_ME" +
-      "THOD_BRAINWORKS_STARTSUSPENDS\020\257\024\022,\n\'REQU" +
-      "EST_METHOD_BRAINWORKS_SENDCOMPLAINT\020\260\024\0222" +
-      "\n-REQUEST_METHOD_BRAINWORKS_GETCUSTOMERB" +
-      "YCUSTID\020\261\024\022)\n$REQUEST_METHOD_OSGCONNECT_" +
-      "CCPAYMENTS\020\215\025\022*\n%REQUEST_METHOD_OSGCONNE" +
-      "CT_ACHPAYMENTS\020\216\025\0220\n+REQUEST_METHOD_OSGC" +
-      "ONNECT_VALIDATEACCOUNTNO\020\217\025\022/\n*REQUEST_M" +
-      "ETHOD_NTVB_CREDIT_MISSED_DELIVERY\020\361\025\022(\n#" +
-      "REQUEST_METHOD_NTVB_CUSTOMER_SEARCH\020\362\025\022!" +
-      "\n\034REQUEST_METHOD_NTVB_END_CALL\020\363\025\022/\n*REQ" +
-      "UEST_METHOD_NTVB_INTEGRATION_DEFINITION\020" +
-      "\364\025\022(\n#REQUEST_METHOD_NTVB_MISSED_DELIVER" +
-      "Y\020\365\025\022+\n&REQUEST_METHOD_NTVB_REMOVE_AUTOR" +
-      "ENEWAL\020\366\025\022+\n&REQUEST_METHOD_NTVB_RENEW_S" +
-      "UBSCRIPTION\020\367\025\022\'\n\"REQUEST_METHOD_NTVB_RE" +
-      "NEWAL_OFFERS\020\370\025\022(\n#REQUEST_METHOD_NTVB_S" +
-      "ET_AUTORENEWAL\020\371\025\022,\n\'REQUEST_METHOD_NTVB" +
-      "_START_INCOMING_CALL\020\372\025\022,\n\'REQUEST_METHO" +
-      "D_NTVB_START_OUTGOING_CALL\020\373\025\022*\n%REQUEST" +
-      "_METHOD_NTVB_SUBSCRIPTION_INFO\020\374\025\022&\n!REQ" +
-      "UEST_METHOD_NTVB_VACATION_STOP\020\375\025\022!\n\034REQ" +
-      "UEST_METHOD_NTVB_AUTHTEST\020\376\025\022+\n&REQUEST_" +
-      "METHOD_ELAVON_CREDIT_CARD_SALE\020\325\026\022(\n#REQ" +
-      "UEST_METHOD_ELAVON_ADD_RECURRING\020\326\026\022\'\n\"R" +
-      "EQUEST_METHOD_ELAVON_DCC_RESPONSE\020\327\026\022+\n&" +
-      "REQUEST_METHOD_ELAVON_DELETE_RECURRING\020\330" +
-      "\026\022+\n&REQUEST_METHOD_ELAVON_UPDATE_RECURR" +
-      "ING\020\331\026\022.\n)REQUEST_METHOD_ELAVON_HEALTH_C" +
-      "ARE_CC_SALE\020\332\026\022*\n%REQUEST_METHOD_ELAVON_" +
-      "ADD_INSTALLMENT\020\333\026\022-\n(REQUEST_METHOD_ELA" +
-      "VON_UPDATE_INSTALLMENT\020\334\026\022-\n(REQUEST_MET" +
-      "HOD_ELAVON_DELETE_INSTALLMENT\020\335\026\022/\n*REQU" +
-      "EST_METHOD_ELAVON_MCC_CREDIT_CARD_SALE\020\336" +
-      "\026\022+\n&REQUEST_METHOD_GLOBALPAYMENTS_CARDS" +
-      "ALE\020\271\027\0228\n3REQUEST_METHOD_GLOBALPAYMENTS_" +
-      "GET_TRANSACTION_BY_ID\020\272\027\0224\n/REQUEST_METH" +
-      "OD_GLOBALPAYMENTS_LIST_TRANSACTIONS\020\273\027\022." +
-      "\n)REQUEST_METHOD_GLOBALPAYMENTS_REFUND_S" +
-      "ALE\020\274\027\0229\n4REQUEST_METHOD_GLOBALPAYMENTS_" +
-      "REVERSE_SALE_OR_REFUND\020\275\027\022.\n)REQUEST_MET" +
-      "HOD_PAY_SCOUT_CREDIT_CARD_SALE\020\235\030\022)\n$REQ" +
-      "UEST_METHOD_PAY_SCOUT_ECHECK_SALE\020\236\030\022\034\n\027" +
-      "REQUEST_METHOD_I2C_ECHO\020\201\031\022\'\n\"REQUEST_ME" +
-      "THOD_I2C_BALANCE_INQUIRY\020\202\031\022#\n\036REQUEST_M" +
-      "ETHOD_I2C_VERIFY_USER\020\203\031\022\'\n\"REQUEST_METH" +
-      "OD_I2C_SEARCH_CUSTOMER\020\204\031\022$\n\037REQUEST_MET" +
-      "HOD_I2C_MAKE_PAYMENT\020\205\031\022.\n)REQUEST_METHO" +
-      "D_I2C_GET_CARDHOLDER_PROFILE\020\206\031\0220\n+REQUE" +
-      "ST_METHOD_I2C_GET_CARDHOLDER_STATEMENT\020\207" +
-      "\031\022.\n)REQUEST_METHOD_I2C_GET_CARDHOLDER_B" +
-      "ALANCE\020\210\031\022.\n)REQUEST_METHOD_I2C_GET_CRED" +
-      "ITPAYMENT_INFO\020\211\031\022+\n&REQUEST_METHOD_I2C_" +
-      "TRANSACTION_HISTORY\020\212\031\022$\n\037REQUEST_METHOD" +
-      "_OPAYO_CCPAYMENTS\020\345\031\022%\n REQUEST_METHOD_S" +
-      "HIFT4_CCPAYMENTS\020\311\032\022\'\n\"REQUEST_METHOD_PO" +
-      "SCORP_ACCESSTOKEN\020\255\033\022,\n\'REQUEST_METHOD_P" +
-      "OSCORP_LOOKUP_GUARANTOR\020\256\033\0221\n,REQUEST_ME" +
-      "THOD_POSCORP_UPDATE_PAYMENT_STATUS\020\257\033\022\"\n" +
-      "\035REQUEST_METHOD_PIANO_GET_USER\020\221\034\022%\n REQ" +
-      "UEST_METHOD_PIANO_UPDATE_USER\020\222\034\022\"\n\035REQU" +
-      "EST_METHOD_EPIC_GET_TOKEN\020\365\034\022$\n\037REQUEST_" +
-      "METHOD_EPIC_GET_PATIENT\020\366\034\022&\n!REQUEST_ME" +
-      "THOD_EPIC_MATCH_PATIENT\020\367\034\022+\n&REQUEST_ME" +
-      "THOD_EPIC_SEARCH_APPOINTMENT\020\370\034\022)\n$REQUE" +
-      "ST_METHOD_EPIC_FIND_APPOINTMENT\020\371\034\022)\n$RE" +
-      "QUEST_METHOD_EPIC_BOOK_APPOINTMENT\020\372\034\022$\n" +
-      "\037REQUEST_METHOD_EPIC_GET_ACCOUNT\020\373\034\022)\n$R" +
-      "EQUEST_METHOD_NEWZWARE_PHONE_LOOKUP\020\331\035\022," +
-      "\n\'REQUEST_METHOD_NEWZWARE_ACCOUNT_INQUIR" +
-      "Y\020\332\035\022\'\n\"REQUEST_METHOD_NEWZWARE_CC_PAYME" +
-      "NT\020\333\035\022(\n#REQUEST_METHOD_NEWZWARE_ACH_PAY" +
-      "MENT\020\334\035*w\n\017TransactionType\022\034\n\030TRANSACTIO" +
-      "N_TYPE_PAYMENT\020\000\022!\n\035TRANSACTION_TYPE_DAT" +
-      "A_INQUIRY\020\001\022#\n\037TRANSACTION_TYPE_ACCOUNT_" +
-      "VERIFY\020\002*\242\001\n\rRequestSource\022\026\n\022REQUEST_SO" +
-      "URCE_IVR\020\000\022\030\n\024REQUEST_SOURCE_EMAIL\020\001\022\026\n\022" +
-      "REQUEST_SOURCE_WEB\020\002\022\026\n\022REQUEST_SOURCE_S" +
-      "MS\020\003\022\027\n\023REQUEST_SOURCE_CHAT\020\004\022\026\n\022REQUEST" +
-      "_SOURCE_LMS\020\005*R\n\021TransactionResult\022\036\n\032TR" +
-      "ANSACTION_RESULT_SUCCESS\020\000\022\035\n\031TRANSACTIO" +
-      "N_RESULT_FAILED\020\001*\327\001\n\tValueType\022\026\n\022VALUE" +
-      "_TYPE_UNKNOWN\020\000\022\025\n\021VALUE_TYPE_NUMBER\020\001\022\023" +
-      "\n\017VALUE_TYPE_BOOL\020\002\022\022\n\016VALUE_TYPE_MAP\020\003\022" +
-      "\024\n\020VALUE_TYPE_ARRAY\020\004\022\022\n\016VALUE_TYPE_INT\020" +
-      "\005\022\025\n\021VALUE_TYPE_STRING\020\006\022\023\n\017VALUE_TYPE_T" +
-      "IME\020\007\022\034\n\030VALUE_TYPE_COMPOSITE_VAL\020\010*\216\001\n\n" +
-      "Visibility\022\030\n\024VISIBILITY_INVISIBLE\020\000\022\033\n\027" +
-      "VISIBILITY_UNRESTRICTED\020\001\022\026\n\022VISIBILITY_" +
-      "RUNTIME\020d\022\031\n\024VISIBILITY_BY_METHOD\020\226\001\022\026\n\021" +
-      "VISIBILITY_PLUGIN\020\310\001*\256\001\n\020CompareOperatio" +
-      "n\022\030\n\024COMPARE_OPERATION_EQ\020\000\022\030\n\024COMPARE_O" +
-      "PERATION_GT\020\001\022\030\n\024COMPARE_OPERATION_LT\020\002\022" +
-      "\030\n\024COMPARE_OPERATION_GE\020\003\022\030\n\024COMPARE_OPE" +
-      "RATION_LE\020\004\022\030\n\024COMPARE_OPERATION_NE\020\005*N\n" +
-      "\014FlowFieldLoc\022\013\n\007FFL_ANY\020\000\022\014\n\010FFL_LINK\020\001" +
-      "\022\023\n\017FFL_PLUGIN_INST\020\002\022\016\n\nFFL_SUBMIT\020\003*\343\002" +
-      "\n\nValidation\022\023\n\017VALIDATION_NONE\020\000\022\031\n\025VAL" +
-      "IDATION_CREDITCARD\020e\022\022\n\016VALIDATION_CVC\020f" +
-      "\022\034\n\030VALIDATION_MONTH_2_DIGIT\020g\022\033\n\027VALIDA" +
-      "TION_YEAR_4_DIGIT\020h\022\031\n\025VALIDATION_LAST_4" +
-      "_SSN\020i\022\025\n\021VALIDATION_US_ZIP\020j\022\027\n\022VALIDAT" +
-      "ION_INTEGER\020\311\001\022\025\n\020VALIDATION_FLOAT\020\312\001\022\034\n" +
-      "\027VALIDATION_CURRENCY_USD\020\313\001\022\024\n\017VALIDATIO" +
-      "N_DATE\020\255\002\022\023\n\016VALIDATION_DOB\020\256\002\022\024\n\017VALIDA" +
-      "TION_BOOL\020\221\003\022\025\n\020VALIDATION_REGEX\020\222\003*\313\004\n\022" +
-      "InvoiceDisplayType\022\017\n\013UNSPECIFIED\020\000\022\016\n\nA" +
-      "MOUNT_DUE\020\001\022\020\n\014SERVICE_DATE\020\002\022\022\n\016INVOICE" +
-      "_NUMBER\020\003\022\021\n\rITEM_QUANTITY\020\004\022\r\n\tITEM_NAM" +
-      "E\020\005\022\024\n\020ITEM_DESCRIPTION\020\006\022\017\n\013ITEM_AMOUNT" +
-      "\020\007\022\030\n\024PAYOR_ACCOUNT_NUMBER\020e\022\024\n\020PAYOR_FI" +
-      "RST_NAME\020f\022\023\n\017PAYOR_LAST_NAME\020g\022\027\n\023PAYOR" +
-      "_DATE_OF_BIRTH\020h\022\020\n\014PAYOR_SSN_R4\020i\022\024\n\020PA" +
-      "YOR_CELL_PHONE\020j\022\024\n\020PAYOR_HOME_PHONE\020k\022\024" +
-      "\n\020PAYOR_WORK_PHONE\020l\022\022\n\016PAYOR_ZIP_CODE\020m" +
-      "\022\033\n\026PATIENT_ACCOUNT_NUMBER\020\311\001\022\027\n\022PATIENT" +
-      "_FIRST_NAME\020\312\001\022\026\n\021PATIENT_LAST_NAME\020\313\001\022\032" +
-      "\n\025PATIENT_DATE_OF_BIRTH\020\314\001\022\023\n\016PATIENT_SS" +
-      "N_R4\020\315\001\022\027\n\022PATIENT_CELL_PHONE\020\316\001\022\027\n\022PATI" +
-      "ENT_HOME_PHONE\020\317\001\022\027\n\022PATIENT_WORK_PHONE\020" +
-      "\320\001\022\025\n\020PATIENT_ZIP_CODE\020\321\001*\233\002\n\013FieldSourc" +
-      "e\022\025\n\021FIELD_SOURCE_NONE\020\000\022\025\n\021FIELD_SOURCE" +
-      "_LINK\020\001\022\"\n\036FIELD_SOURCE_VERIFICATION_DAT" +
-      "A\020\002\022!\n\035FIELD_SOURCE_VERIFICATION_API\020\003\022\035" +
-      "\n\031FIELD_SOURCE_INVOICE_DATA\020\004\022\034\n\030FIELD_S" +
-      "OURCE_INVOICE_API\020\005\022\035\n\031FIELD_SOURCE_PAYM" +
-      "ENT_DATA\020\006\022\034\n\030FIELD_SOURCE_PAYMENT_API\020\007" +
-      "\022\035\n\031FIELD_SOURCE_PAYMENT_FORM\020\010*\202\001\n\010Flow" +
-      "Type\022\025\n\021FLOW_TYPE_UNKNOWN\020\000\022\025\n\021FLOW_TYPE" +
-      "_INVOICE\020\001\022\025\n\021FLOW_TYPE_PAYMENT\020\002\022\032\n\026FLO" +
-      "W_TYPE_VERIFICATION\020\003\022\025\n\021FLOW_TYPE_EXECU" +
-      "TE\020\004B\301\001\n*com.tcn.cloud.api.api.commons.i" +
-      "ntegrationsB\021IntegrationsProtoP\001\242\002\003ACI\252\002" +
-      "\030Api.Commons.Integrations\312\002\030Api\\Commons\\" +
-      "Integrations\342\002$Api\\Commons\\Integrations\\" +
-      "GPBMetadata\352\002\032Api::Commons::Integrations" +
-      "b\006proto3"
+      "ewzwareAchPayment\022z\n\032newzware_complaint_" +
+      "history\030\335\035 \001(\01329.api.commons.integration" +
+      "s.ExecuteNewzwareComplaintHistoryH\000R\030new" +
+      "zwareComplaintHistory\022w\n\031newzware_compla" +
+      "int_update\030\336\035 \001(\01328.api.commons.integrat" +
+      "ions.ExecuteNewzwareComplaintUpdateH\000R\027n" +
+      "ewzwareComplaintUpdate\022w\n\031newzware_vacat" +
+      "ion_restart\030\337\035 \001(\01328.api.commons.integra" +
+      "tions.ExecuteNewzwareVacationRestartH\000R\027" +
+      "newzwareVacationRestart\022t\n\030newzware_vaca" +
+      "tion_update\030\340\035 \001(\01327.api.commons.integra" +
+      "tions.ExecuteNewzwareVacationUpdateH\000R\026n" +
+      "ewzwareVacationUpdate\022{\n\033newzware_phone_" +
+      "lookup_multi\030\341\035 \001(\01329.api.commons.integr" +
+      "ations.ExecuteNewzwarePhoneLookupMultiH\000" +
+      "R\030newzwarePhoneLookupMultiB\007\n\005value\"\035\n\033I" +
+      "nvoiceExperianQueryBalance\"2\n0InvoiceAut" +
+      "horizeNetAuthorizedTransactionIdLookup\"\035" +
+      "\n\033InvoiceAuthorizeNetLinkData\"\037\n\035Invoice" +
+      "AuthorizeNetCustomHttp\"\020\n\016InvoiceJourney" +
+      "\"\261\002\n\025InvoiceDynamicJourney\022!\n\014match_fiel" +
+      "ds\030\001 \003(\tR\013matchFields\022\037\n\013total_field\030\002 \001" +
+      "(\tR\ntotalField\022i\n\016journey_fields\030\003 \003(\0132B" +
+      ".api.commons.integrations.InvoiceDynamic" +
+      "Journey.JourneyFieldsEntryR\rjourneyField" +
+      "s\032i\n\022JourneyFieldsEntry\022\020\n\003key\030\001 \001(\tR\003ke" +
+      "y\022=\n\005value\030\002 \001(\0132\'.api.commons.integrati" +
+      "ons.ListOfStringsR\005value:\0028\001\"\037\n\035InvoiceN" +
+      "ewzwareAccountInquiry\"\"\n VerificationExp" +
+      "erianQueryBalance\"\036\n\034VerificationExperia" +
+      "nLinkData\"\034\n\032VerificationExperianZipDob\"" +
+      ")\n\'VerificationAuthorizeNetCustomerProfi" +
+      "le\"\"\n VerificationAuthorizeNetLinkData\"\344" +
+      "\001\n\023VerificationJourney\0221\n\023date_of_birth_" +
+      "field\030\001 \001(\tB\002\030\001R\020dateOfBirthField\022*\n\017las" +
+      "t_name_field\030\002 \001(\tB\002\030\001R\rlastNameField\022,\n" +
+      "\020first_name_field\030\003 \001(\tB\002\030\001R\016firstNameFi" +
+      "eld\022\037\n\tzip_field\030\004 \001(\tB\002\030\001R\010zipField\022\037\n\t" +
+      "last4_ssn\030\005 \001(\tB\002\030\001R\010last4Ssn\"!\n\037Verific" +
+      "ationNewzwareLookupPhone\"$\n\"Verification" +
+      "NewzwareAccountInquiry\"\023\n\021PaymentExperia" +
+      "nCC\"\024\n\022PaymentExperianACH\"\027\n\025PaymentAuth" +
+      "orizeNetCC\"\030\n\026PaymentAuthorizeNetACH\"\033\n\031" +
+      "PaymentAuthorizeNetPaypal\"\035\n\033PaymentAuth" +
+      "orizeNetApplePay\"\036\n\034PaymentAuthorizeNetG" +
+      "ooglePay\"$\n\"PaymentPaywaySubmitCardSaleR" +
+      "equest\"$\n\"PaymentPaywaySubmitACHAlertReq" +
+      "uest\"\023\n\021PaymentNewzwareCc\"\024\n\022PaymentNewz" +
+      "wareAch\"\034\n\032ExecuteBraintreeCreditSale\"\032\n" +
+      "\030ExecuteBraintreeBankSale\"#\n!ExecuteRela" +
+      "tientGetPatientBalance\"$\n\"ExecuteRelatie" +
+      "ntGetPatientCcTokens\"\"\n ExecuteRelatient" +
+      "PostPatientToken\"$\n\"ExecuteRelatientPost" +
+      "PatientBalance\"\034\n\032ExecuteRelatientGetPat" +
+      "ient\"!\n\037ExecuteRelatientPostBalanceById\"" +
+      "&\n$ExecuteRelatientCreateFortisAchtoken\"" +
+      "%\n#ExecuteRelatientCreateFortisCctoken\"," +
+      "\n*ExecuteRelatientFortisTokenAchDebitPay" +
+      "ment\"&\n$ExecuteRelatientFortisTokenCcPay" +
+      "ment\"!\n\037ExecuteCybersourceCreditPayment\"" +
+      "!\n\037ExecuteCybersourceEcheckPayment\"%\n#Ex" +
+      "ecuteCircproPhoneLookupWithBundle\"\033\n\031Exe" +
+      "cuteCircproPhoneLookup\"&\n$ExecuteCircpro" +
+      "VacationRestartInquiry\" \n\036ExecuteCircpro" +
+      "ComplaintInquiry\"\036\n\034ExecuteCircproAccoun" +
+      "tInquiry\"%\n#ExecuteCircproAccountInquiry" +
+      "WithTax\"+\n)ExecuteCircproAccountInquiryW" +
+      "ithTaxBundle\"\036\n\034ExecuteCircproComplaintC" +
+      "odes\"\037\n\035ExecuteCircproComplaintUpdate\"\036\n" +
+      "\034ExecuteCircproVacationUpdate\"\035\n\033Execute" +
+      "CircproRestartUpdate\"#\n!ExecuteCircproLa" +
+      "wImmediatePayment\"$\n\"ExecuteCircproLawUp" +
+      "dateDataWithPac\"\037\n\035ExecuteCircproLawGetC" +
+      "ustomers\"%\n#ExecuteAuthorizenetChargeCre" +
+      "ditCard\"%\n#ExecuteAuthorizenetDebitBankA" +
+      "ccount\"1\n/ExecuteAuthorizenetCreateCusto" +
+      "merPaymentProfile\"&\n$ExecuteAuthorizenet" +
+      "PaypalTransaction\")\n\'ExecuteAuthorizenet" +
+      "GooglePayTransaction\"(\n&ExecuteAuthorize" +
+      "netApplePayTransaction\"&\n$ExecuteAuthori" +
+      "zenetPayPalAuthCapture\"\037\n\035ExecuteExpitra" +
+      "nsCcTransaction\" \n\036ExecuteExpitransAchTr" +
+      "ansaction\"#\n!ExecuteAxiamedfusionCcTrans" +
+      "action\"$\n\"ExecuteAxiamedfusionAchTransac" +
+      "tion\" \n\036ExecuteAxiamedfusionCardVerify\"\034" +
+      "\n\032ExecuteInstamedPaymentSale\"\034\n\032ExecuteI" +
+      "nstamedVoidPayment\" \n\036ExecuteUsaepaySubm" +
+      "itCcPayments\"!\n\037ExecuteUsaepaySubmitAchP" +
+      "ayments\"\032\n\030ExecuteUsaepayGetCcToken\"!\n\037E" +
+      "xecuteEzidebitSubmitCcPayments\"\"\n Execut" +
+      "eEzidebitSubmitAchPayments\" \n\036ExecuteBam" +
+      "boraSubmitCcPayments\"!\n\037ExecuteBamboraSu" +
+      "bmitAchPayments\"\027\n\025ExecuteRepayStoreCard" +
+      "\"\032\n\030ExecuteRepayPaymentToken\"\035\n\033ExecuteR" +
+      "epayAchPaymentToken\"\"\n ExecuteAxiaSubmit" +
+      "SaleRequestByCc\"%\n#ExecuteAxiaSubmitSale" +
+      "RequestByCheck\"!\n\037ExecuteSecuretradingSe" +
+      "ndPayment\"/\n-ExecutePaymentVisionSubmitC" +
+      "ardSaleRequestByCc\"0\n.ExecutePaymentVisi" +
+      "onSubmitCardSaleRequestByAch\" \n\036ExecuteI" +
+      "nterproseLookupAccount\",\n*ExecuteInterpr" +
+      "oseSubmitCardSaleRequestByCc\"-\n+ExecuteI" +
+      "nterproseSubmitCardSaleRequestByAch\"\"\n E" +
+      "xecuteInterproseLookupPaymentId\"(\n&Execu" +
+      "teInterproseLookupAccountByFormId\" \n\036Exe" +
+      "cuteDallasnewsSearchByPhone\"$\n\"ExecuteDa" +
+      "llasnewsSearchByZipStreet\"\033\n\031ExecuteDall" +
+      "asnewsSearchBy\"!\n\037ExecuteDallasnewsCreat" +
+      "eVacation\"\036\n\034ExecuteDallasnewsGetVacatio" +
+      "n\")\n\'ExecuteDallasnewsGetVacationDaysBet" +
+      "ween\"(\n&ExecuteDallasnewsGetVacationWith" +
+      "Cutoff\"!\n\037ExecuteDallasnewsDeleteVacatio" +
+      "n\"\037\n\035ExecuteDallasnewsAddComplaint\"$\n\"Ex" +
+      "ecuteDallasnewsUpdatePhoneNumber\"\036\n\034Exec" +
+      "uteDallasnewsStopAccount\"!\n\037ExecuteDalla" +
+      "snewsCcPaymentToken\"\"\n ExecuteDallasnews" +
+      "AchPaymentToken\"$\n\"ExecutePaywaySubmitCa",
+      "rdSaleRequest\"!\n\037ExecutePaywayCreateToke" +
+      "nRequest\"#\n!ExecutePaywaySubmitACHSaleRe" +
+      "quest\")\n\'ExecuteBillingtreeSubmitCardSal" +
+      "eRequest\"!\n\037ExecuteExperianCcPaymentRequ" +
+      "est\"%\n#ExecuteExperianCcPaymentPlanReque" +
+      "st\"\037\n\035ExecuteExperianBalancerequest\"\"\n E" +
+      "xecuteExperianAchPaymentRequest\"&\n$Execu" +
+      "teExperianAchPaymentPlanRequest\" \n\036Execu" +
+      "teExperianStellaCardEntry\"\035\n\033ExecuteExpe" +
+      "rianStellaECheck\"-\n+ExecuteExperianStell" +
+      "aCardDeviceTokenization\"#\n!ExecuteExperi" +
+      "anStellaTokenPayment\"&\n$ExecuteExperianS" +
+      "tellaAchTokenization\"&\n$ExecuteExperianS" +
+      "tellaAddusaepaytoken\"#\n!ExecuteExperianS" +
+      "tellaPaymentPlans\"\033\n\031ExecuteExperianStel" +
+      "laAuth\"\027\n\025ExecuteNewscycleLogin\"\034\n\032Execu" +
+      "teNewscycleSearchPage\"\035\n\033ExecuteNewscycl" +
+      "eBillingInfo\"\"\n ExecuteNewscycleServiceE" +
+      "rrorInfo\"#\n!ExecuteNewscycleServiceError" +
+      "Trans\"\032\n\030ExecuteNewscycleStopInfo\"\033\n\031Exe" +
+      "cuteNewscycleStopTrans\"\033\n\031ExecuteNewscyc" +
+      "leRenewInfo\"\037\n\035ExecuteNewscycleAutoRenew" +
+      "Info\"\032\n\030ExecuteNewscycleAutoTran\"\031\n\027Exec" +
+      "uteNewscyclePayInfo\"\031\n\027ExecuteNewscycleP" +
+      "ayTran\" \n\036ExecuteTrustcommerceCreditSale" +
+      "\"\035\n\033ExecuteTrustcommerceAchSale\"\031\n\027Execu" +
+      "teVantivCreditSale\"\026\n\024ExecuteVantivAchSa" +
+      "le\"\026\n\024ExecuteJourneyLatest\" \n\036ExecuteAth" +
+      "enahealthGetPatients\"&\n$ExecuteAthenahea" +
+      "lthGetPatientsWithId\"\036\n\034ExecuteAthenahea" +
+      "lthCcPayment\"&\n$ExecuteBrainworksGetCust" +
+      "omersByPhone\"\036\n\034ExecuteBrainworksGetSusp" +
+      "ends\"(\n&ExecuteBrainworksGetCustomerByCu" +
+      "stIdV2\" \n\036ExecuteBrainworksGetComplaints" +
+      "\"\"\n ExecuteBrainworksGetCodesOrTypes\"\037\n\035" +
+      "ExecuteBrainworksStopSuspends\" \n\036Execute" +
+      "BrainworksStartSuspends\" \n\036ExecuteBrainw" +
+      "orksSendComplaint\"&\n$ExecuteBrainworksGe" +
+      "tCustomerByCustId\"\035\n\033ExecuteOsgconnectCc" +
+      "Payments\"\036\n\034ExecuteOsgconnectAchPayments" +
+      "\"$\n\"ExecuteOsgconnectValidateAccountNo\"!" +
+      "\n\037ExecuteNtvbCreditMissedDelivery\"\033\n\031Exe" +
+      "cuteNtvbCustomerSearch\"\024\n\022ExecuteNtvbEnd" +
+      "Call\"\"\n ExecuteNtvbIntegrationDefinition" +
+      "\"\033\n\031ExecuteNtvbMissedDelivery\"\036\n\034Execute" +
+      "NtvbRemoveAutorenewal\"\036\n\034ExecuteNtvbRene" +
+      "wSubscription\"\032\n\030ExecuteNtvbRenewalOffer" +
+      "s\"\033\n\031ExecuteNtvbSetAutorenewal\"\036\n\034Execut" +
+      "eNtvbStartIncomingCall\"\036\n\034ExecuteNtvbSta" +
+      "rtOutgoingCall\"\035\n\033ExecuteNtvbSubscriptio" +
+      "nInfo\"\031\n\027ExecuteNtvbVacationStop\"\025\n\023Exec" +
+      "uteNtvbAuthtest\"\035\n\033ExecuteElavonCreditCa" +
+      "rdSale\"\033\n\031ExecuteElavonAddRecurring\"\032\n\030E" +
+      "xecuteElavonDccResponse\"\036\n\034ExecuteElavon" +
+      "UpdateRecurring\"\036\n\034ExecuteElavonDeleteRe" +
+      "curring\" \n\036ExecuteElavonMccCreditCardSal" +
+      "e\"\037\n\035ExecuteElavonHealthCareCCSale\"\035\n\033Ex" +
+      "ecuteElavonAddInstallment\" \n\036ExecuteElav" +
+      "onDeleteInstallment\" \n\036ExecuteElavonUpda" +
+      "teInstallment\"\037\n\035ExecuteGlobalPaymentsCa" +
+      "rdSale\")\n\'ExecuteGlobalPaymentsGetTransa" +
+      "ctionByID\"\'\n%ExecuteGlobalPaymentsListTr" +
+      "ansactions\"!\n\037ExecuteGlobalPaymentsRefun" +
+      "dSale\"*\n(ExecuteGlobalPaymentsReverseSal" +
+      "eOrRefund\"\037\n\035ExecutePayScoutCreditCardSa" +
+      "le\"\033\n\031ExecutePayScoutEcheckSale\"\020\n\016Execu" +
+      "teI2cEcho\"\032\n\030ExecuteI2cBalanceInquiry\"\026\n" +
+      "\024ExecuteI2cVerifyUser\"\032\n\030ExecuteI2cSearc" +
+      "hCustomer\"\027\n\025ExecuteI2cMakePayment\" \n\036Ex" +
+      "ecuteI2cGetCardholderProfile\"\"\n ExecuteI" +
+      "2cGetCardholderStatement\" \n\036ExecuteI2cGe" +
+      "tCardholderBalance\" \n\036ExecuteI2cGetCredi" +
+      "tPaymentInfo\"\036\n\034ExecuteI2cTransactionHis" +
+      "tory\"\030\n\026ExecuteOpayoCcPayments\"\031\n\027Execut" +
+      "eShift4CcPayments\"\033\n\031ExecutePoscorpAcces" +
+      "stoken\"\037\n\035ExecutePoscorpLookupGuarantor\"" +
+      "#\n!ExecutePoscorpUpdatePaymentStatus\"\025\n\023" +
+      "ExecutePianoGetUser\"\030\n\026ExecutePianoUpdat" +
+      "eUser\"\025\n\023ExecuteEpicGetToken\"\027\n\025ExecuteE" +
+      "picGetPatient\"\031\n\027ExecuteEpicMatchPatient" +
+      "\"\036\n\034ExecuteEpicSearchAppointment\"\034\n\032Exec" +
+      "uteEpicFindAppointment\"\034\n\032ExecuteEpicBoo" +
+      "kAppointment\"\027\n\025ExecuteEpicGetAccount\"\034\n" +
+      "\032ExecuteNewzwarePhoneLookup\"\037\n\035ExecuteNe" +
+      "wzwareAccountInquiry\"\032\n\030ExecuteNewzwareC" +
+      "cPayment\"\033\n\031ExecuteNewzwareAchPayment\"!\n" +
+      "\037ExecuteNewzwareComplaintHistory\" \n\036Exec" +
+      "uteNewzwareComplaintUpdate\" \n\036ExecuteNew" +
+      "zwareVacationRestart\"\037\n\035ExecuteNewzwareV" +
+      "acationUpdate\"!\n\037ExecuteNewzwarePhoneLoo" +
+      "kupMulti*\374\t\n\017IntegrationType\022\034\n\030INTEGRAT" +
+      "ION_TYPE_UNKNOWN\020\000\022\036\n\032INTEGRATION_TYPE_B" +
+      "RAINTREE\020d\022\037\n\032INTEGRATION_TYPE_RELATIENT" +
+      "\020\310\001\022!\n\034INTEGRATION_TYPE_CYBERSOURCE\020\254\002\022\035" +
+      "\n\030INTEGRATION_TYPE_CIRCPRO\020\220\003\022\"\n\035INTEGRA" +
+      "TION_TYPE_AUTHORIZENET\020\364\003\022\037\n\032INTEGRATION" +
+      "_TYPE_EXPITRANS\020\330\004\022#\n\036INTEGRATION_TYPE_A" +
+      "XIAMEDFUSION\020\274\005\022\036\n\031INTEGRATION_TYPE_INST" +
+      "AMED\020\240\006\022\035\n\030INTEGRATION_TYPE_USAEPAY\020\204\007\022\036" +
+      "\n\031INTEGRATION_TYPE_EZIDEBIT\020\350\007\022\035\n\030INTEGR" +
+      "ATION_TYPE_BAMBORA\020\314\010\022\033\n\026INTEGRATION_TYP" +
+      "E_REPAY\020\260\t\022\032\n\025INTEGRATION_TYPE_AXIA\020\224\n\022#" +
+      "\n\036INTEGRATION_TYPE_SECURETRADING\020\370\n\022#\n\036I" +
+      "NTEGRATION_TYPE_PAYMENTVISION\020\334\013\022 \n\033INTE" +
+      "GRATION_TYPE_INTERPROSE\020\300\014\022 \n\033INTEGRATIO" +
+      "N_TYPE_DALLASNEWS\020\244\r\022\034\n\027INTEGRATION_TYPE" +
+      "_PAYWAY\020\210\016\022!\n\034INTEGRATION_TYPE_BILLINGTR" +
+      "EE\020\354\016\022\036\n\031INTEGRATION_TYPE_EXPERIAN\020\320\017\022\037\n" +
+      "\032INTEGRATION_TYPE_NEWSCYCLE\020\264\020\022#\n\036INTEGR" +
+      "ATION_TYPE_TRUSTCOMMERCE\020\230\021\022\034\n\027INTEGRATI" +
+      "ON_TYPE_VANTIV\020\374\021\022\035\n\030INTEGRATION_TYPE_JO" +
+      "URNEY\020\340\022\022\"\n\035INTEGRATION_TYPE_ATHENAHEALT" +
+      "H\020\304\023\022 \n\033INTEGRATION_TYPE_BRAINWORKS\020\250\024\022 " +
+      "\n\033INTEGRATION_TYPE_OSGCONNECT\020\214\025\022\032\n\025INTE" +
+      "GRATION_TYPE_NTVB\020\360\025\022\034\n\027INTEGRATION_TYPE" +
+      "_ELAVON\020\324\026\022$\n\037INTEGRATION_TYPE_GLOBALPAY" +
+      "MENTS\020\270\027\022\037\n\032INTEGRATION_TYPE_PAY_SCOUT\020\234" +
+      "\030\022\031\n\024INTEGRATION_TYPE_I2C\020\200\031\022\033\n\026INTEGRAT" +
+      "ION_TYPE_OPAYO\020\344\031\022\034\n\027INTEGRATION_TYPE_SH" +
+      "IFT4\020\310\032\022\035\n\030INTEGRATION_TYPE_POSCORP\020\254\033\022\033" +
+      "\n\026INTEGRATION_TYPE_PIANO\020\220\034\022\032\n\025INTEGRATI" +
+      "ON_TYPE_EPIC\020\364\034\022\036\n\031INTEGRATION_TYPE_NEWZ" +
+      "WARE\020\330\035*\306D\n\rRequestMethod\022\032\n\026REQUEST_MET" +
+      "HOD_UNKNOWN\020\000\022\'\n#REQUEST_METHOD_BRAINTRE" +
+      "E_CREDITSALE\020e\022%\n!REQUEST_METHOD_BRAINTR" +
+      "EE_BANKSALE\020f\022/\n*REQUEST_METHOD_RELATIEN" +
+      "T_GETPATIENTBALANCE\020\311\001\0220\n+REQUEST_METHOD" +
+      "_RELATIENT_GETPATIENTCCTOKENS\020\312\001\022.\n)REQU" +
+      "EST_METHOD_RELATIENT_POSTPATIENTTOKEN\020\313\001" +
+      "\0220\n+REQUEST_METHOD_RELATIENT_POSTPATIENT" +
+      "BALANCE\020\314\001\022(\n#REQUEST_METHOD_RELATIENT_G" +
+      "ETPATIENT\020\315\001\022-\n(REQUEST_METHOD_RELATIENT" +
+      "_POSTBALANCEBYID\020\316\001\0224\n/REQUEST_METHOD_RE" +
+      "LATIENT_CREATE_FORTIS_ACHTOKEN\020\317\001\0223\n.REQ" +
+      "UEST_METHOD_RELATIENT_CREATE_FORTIS_CCTO" +
+      "KEN\020\320\001\022<\n7REQUEST_METHOD_RELATIENT_FORTI" +
+      "S_TOKEN_ACH_DEBIT_PAYMENT\020\321\001\0225\n0REQUEST_" +
+      "METHOD_RELATIENT_FORTIS_TOKEN_CC_PAYMENT" +
+      "\020\322\001\022-\n(REQUEST_METHOD_CYBERSOURCE_CREDIT" +
+      "PAYMENT\020\255\002\022-\n(REQUEST_METHOD_CYBERSOURCE" +
+      "_ECHECKPAYMENT\020\256\002\0221\n,REQUEST_METHOD_CIRC" +
+      "PRO_PHONELOOKUPWITHBUNDLE\020\221\003\022\'\n\"REQUEST_" +
+      "METHOD_CIRCPRO_PHONELOOKUP\020\222\003\0222\n-REQUEST" +
+      "_METHOD_CIRCPRO_VACATIONRESTARTINQUIRY\020\223" +
+      "\003\022,\n\'REQUEST_METHOD_CIRCPRO_COMPLAINTINQ" +
+      "UIRY\020\224\003\022*\n%REQUEST_METHOD_CIRCPRO_ACCOUN" +
+      "TINQUIRY\020\225\003\0221\n,REQUEST_METHOD_CIRCPRO_AC" +
+      "COUNTINQUIRYWITHTAX\020\226\003\0227\n2REQUEST_METHOD" +
+      "_CIRCPRO_ACCOUNTINQUIRYWITHTAXBUNDLE\020\227\003\022" +
+      "*\n%REQUEST_METHOD_CIRCPRO_COMPLAINTCODES" +
+      "\020\230\003\022+\n&REQUEST_METHOD_CIRCPRO_COMPLAINTU" +
+      "PDATE\020\231\003\022*\n%REQUEST_METHOD_CIRCPRO_VACAT" +
+      "IONUPDATE\020\232\003\022)\n$REQUEST_METHOD_CIRCPRO_R" +
+      "ESTARTUPDATE\020\233\003\0220\n+REQUEST_METHOD_CIRCPR" +
+      "O_LAW_IMMEDIATEPAYMENT\020\234\003\0221\n,REQUEST_MET" +
+      "HOD_CIRCPRO_LAW_UPDATEDATAWITHPAC\020\235\003\022,\n\'" +
+      "REQUEST_METHOD_CIRCPRO_LAW_GETCUSTOMERS\020" +
+      "\236\003\0221\n,REQUEST_METHOD_AUTHORIZENET_CHARGE" +
+      "CREDITCARD\020\365\003\0221\n,REQUEST_METHOD_AUTHORIZ" +
+      "ENET_DEBITBANKACCOUNT\020\366\003\022=\n8REQUEST_METH" +
+      "OD_AUTHORIZENET_CREATECUSTOMERPAYMENTPRO" +
+      "FILE\020\367\003\0222\n-REQUEST_METHOD_AUTHORIZENET_P" +
+      "AYPALTRANSACTION\020\370\003\0225\n0REQUEST_METHOD_AU" +
+      "THORIZENET_GOOGLEPAYTRANSACTION\020\371\003\0224\n/RE" +
+      "QUEST_METHOD_AUTHORIZENET_APPLEPAYTRANSA" +
+      "CTION\020\372\003\0222\n-REQUEST_METHOD_AUTHORIZENET_" +
+      "PAYPALAUTHCAPTURE\020\373\003\022+\n&REQUEST_METHOD_E" +
+      "XPITRANS_CCTRANSACTION\020\331\004\022,\n\'REQUEST_MET" +
+      "HOD_EXPITRANS_ACHTRANSACTION\020\332\004\022/\n*REQUE" +
+      "ST_METHOD_AXIAMEDFUSION_CCTRANSACTION\020\275\005" +
+      "\0220\n+REQUEST_METHOD_AXIAMEDFUSION_ACHTRAN" +
+      "SACTION\020\276\005\022,\n\'REQUEST_METHOD_AXIAMEDFUSI" +
+      "ON_CARDVERIFY\020\277\005\022(\n#REQUEST_METHOD_INSTA" +
+      "MED_PAYMENTSALE\020\241\006\022(\n#REQUEST_METHOD_INS" +
+      "TAMED_VOIDPAYMENT\020\242\006\022,\n\'REQUEST_METHOD_U" +
+      "SAEPAY_SUBMITCCPAYMENTS\020\205\007\022-\n(REQUEST_ME" +
+      "THOD_USAEPAY_SUBMITACHPAYMENTS\020\206\007\022&\n!REQ" +
+      "UEST_METHOD_USAEPAY_GETCCTOKEN\020\207\007\022-\n(REQ" +
+      "UEST_METHOD_EZIDEBIT_SUBMITCCPAYMENTS\020\351\007" +
+      "\022.\n)REQUEST_METHOD_EZIDEBIT_SUBMITACHPAY" +
+      "MENTS\020\352\007\022,\n\'REQUEST_METHOD_BAMBORA_SUBMI" +
+      "TCCPAYMENTS\020\315\010\022-\n(REQUEST_METHOD_BAMBORA" +
+      "_SUBMITACHPAYMENTS\020\316\010\022#\n\036REQUEST_METHOD_" +
+      "REPAY_STORECARD\020\261\t\022&\n!REQUEST_METHOD_REP" +
+      "AY_PAYMENTTOKEN\020\262\t\022)\n$REQUEST_METHOD_REP" +
+      "AY_ACHPAYMENTTOKEN\020\263\t\022.\n)REQUEST_METHOD_" +
+      "AXIA_SUBMITSALEREQUESTBYCC\020\225\n\0221\n,REQUEST" +
+      "_METHOD_AXIA_SUBMITSALEREQUESTBYCHECK\020\226\n" +
+      "\022-\n(REQUEST_METHOD_SECURETRADING_SENDPAY" +
+      "MENT\020\371\n\022;\n6REQUEST_METHOD_PAYMENTVISION_" +
+      "SUBMITCARDSALEREQUESTBYCC\020\335\013\022<\n7REQUEST_" +
+      "METHOD_PAYMENTVISION_SUBMITCARDSALEREQUE" +
+      "STBYACH\020\336\013\022,\n\'REQUEST_METHOD_INTERPROSE_" +
+      "LOOKUPACCOUNT\020\301\014\0228\n3REQUEST_METHOD_INTER" +
+      "PROSE_SUBMITCARDSALEREQUESTBYCC\020\302\014\0229\n4RE" +
+      "QUEST_METHOD_INTERPROSE_SUBMITCARDSALERE" +
+      "QUESTBYACH\020\303\014\022.\n)REQUEST_METHOD_INTERPRO" +
+      "SE_LOOKUPPAYMENTID\020\304\014\0224\n/REQUEST_METHOD_" +
+      "INTERPROSE_LOOKUPACCOUNTBYFORMID\020\305\014\022,\n\'R" +
+      "EQUEST_METHOD_DALLASNEWS_SEARCHBYPHONE\020\245" +
+      "\r\0220\n+REQUEST_METHOD_DALLASNEWS_SEARCHBYZ" +
+      "IPSTREET\020\246\r\022\'\n\"REQUEST_METHOD_DALLASNEWS" +
+      "_SEARCHBY\020\247\r\022-\n(REQUEST_METHOD_DALLASNEW" +
+      "S_CREATEVACATION\020\250\r\022*\n%REQUEST_METHOD_DA" +
+      "LLASNEWS_GETVACATION\020\251\r\0225\n0REQUEST_METHO" +
+      "D_DALLASNEWS_GETVACATIONDAYSBETWEEN\020\252\r\0224" +
+      "\n/REQUEST_METHOD_DALLASNEWS_GETVACATIONW" +
+      "ITHCUTOFF\020\253\r\022-\n(REQUEST_METHOD_DALLASNEW" +
+      "S_DELETEVACATION\020\254\r\022+\n&REQUEST_METHOD_DA" +
+      "LLASNEWS_ADDCOMPLAINT\020\255\r\0220\n+REQUEST_METH" +
+      "OD_DALLASNEWS_UPDATEPHONENUMBER\020\256\r\022*\n%RE" +
+      "QUEST_METHOD_DALLASNEWS_STOPACCOUNT\020\257\r\022-" +
+      "\n(REQUEST_METHOD_DALLASNEWS_CCPAYMENTTOK" +
+      "EN\020\260\r\022.\n)REQUEST_METHOD_DALLASNEWS_ACHPA" +
+      "YMENTTOKEN\020\261\r\0220\n+REQUEST_METHOD_PAYWAY_S" +
+      "UBMITCARDSALEREQUEST\020\211\016\022-\n(REQUEST_METHO" +
+      "D_PAYWAY_CREATETOKENREQUEST\020\212\016\022/\n*REQUES" +
+      "T_METHOD_PAYWAY_SUBMITACHSALEREQUEST\020\213\016\022" +
+      "5\n0REQUEST_METHOD_BILLINGTREE_SUBMITCARD" +
+      "SALEREQUEST\020\355\016\022/\n*REQUEST_METHOD_EXPERIA" +
+      "N_CC_PAYMENT_REQUEST\020\321\017\0222\n-REQUEST_METHO" +
+      "D_EXPERIAN_CC_PAYMENTPLANREQUEST\020\322\017\022+\n&R" +
+      "EQUEST_METHOD_EXPERIAN_BALANCEREQUEST\020\323\017" +
+      "\0220\n+REQUEST_METHOD_EXPERIAN_ACH_PAYMENT_" +
+      "REQUEST\020\324\017\0223\n.REQUEST_METHOD_EXPERIAN_AC" +
+      "H_PAYMENTPLANREQUEST\020\325\017\022.\n)REQUEST_METHO" +
+      "D_EXPERIAN_STELLA_CARD_ENTRY\020\326\017\022*\n%REQUE" +
+      "ST_METHOD_EXPERIAN_STELLA_ECHECK\020\327\017\022<\n7R" +
+      "EQUEST_METHOD_EXPERIAN_STELLA_CARD_DEVIC" +
+      "E_TOKENIZATION\020\330\017\0221\n,REQUEST_METHOD_EXPE" +
+      "RIAN_STELLA_TOKEN_PAYMENT\020\331\017\0224\n/REQUEST_" +
+      "METHOD_EXPERIAN_STELLA_ACH_TOKENIZATION\020" +
+      "\332\017\0226\n1REQUEST_METHOD_EXPERIAN_STELLA_ADD" +
+      "_USA_EPAY_TOKEN\020\333\017\0221\n,REQUEST_METHOD_EXP" +
+      "ERIAN_STELLA_PAYMENT_PLANS\020\334\017\022(\n#REQUEST" +
+      "_METHOD_EXPERIAN_STELLA_AUTH\020\335\017\022#\n\036REQUE" +
+      "ST_METHOD_NEWSCYCLE_LOGIN\020\265\020\022(\n#REQUEST_" +
+      "METHOD_NEWSCYCLE_SEARCHPAGE\020\266\020\022)\n$REQUES" +
+      "T_METHOD_NEWSCYCLE_BILLINGINFO\020\267\020\022.\n)REQ" +
+      "UEST_METHOD_NEWSCYCLE_SERVICEERRORINFO\020\270" +
+      "\020\022/\n*REQUEST_METHOD_NEWSCYCLE_SERVICEERR" +
+      "ORTRANS\020\271\020\022&\n!REQUEST_METHOD_NEWSCYCLE_S" +
+      "TOPINFO\020\272\020\022\'\n\"REQUEST_METHOD_NEWSCYCLE_S" +
+      "TOPTRANS\020\273\020\022\'\n\"REQUEST_METHOD_NEWSCYCLE_" +
+      "RENEWINFO\020\274\020\022+\n&REQUEST_METHOD_NEWSCYCLE" +
+      "_AUTORENEWINFO\020\275\020\022&\n!REQUEST_METHOD_NEWS" +
+      "CYCLE_AUTOTRAN\020\276\020\022%\n REQUEST_METHOD_NEWS" +
+      "CYCLE_PAYINFO\020\277\020\022%\n REQUEST_METHOD_NEWSC" +
+      "YCLE_PAYTRAN\020\300\020\022,\n\'REQUEST_METHOD_TRUSTC" +
+      "OMMERCE_CREDITSALE\020\231\021\022)\n$REQUEST_METHOD_" +
+      "TRUSTCOMMERCE_ACHSALE\020\232\021\022%\n REQUEST_METH" +
+      "OD_VANTIV_CREDITSALE\020\375\021\022\"\n\035REQUEST_METHO" +
+      "D_VANTIV_ACHSALE\020\376\021\022\"\n\035REQUEST_METHOD_JO" +
+      "URNEY_LATEST\020\341\022\022,\n\'REQUEST_METHOD_ATHENA" +
+      "HEALTH_GETPATIENTS\020\305\023\0222\n-REQUEST_METHOD_" +
+      "ATHENAHEALTH_GETPATIENTSWITHID\020\306\023\022*\n%REQ" +
+      "UEST_METHOD_ATHENAHEALTH_CCPAYMENT\020\307\023\0222\n" +
+      "-REQUEST_METHOD_BRAINWORKS_GETCUSTOMERSB" +
+      "YPHONE\020\251\024\022*\n%REQUEST_METHOD_BRAINWORKS_G" +
+      "ETSUSPENDS\020\252\024\0224\n/REQUEST_METHOD_BRAINWOR" +
+      "KS_GETCUSTOMERBYCUSTIDV2\020\253\024\022,\n\'REQUEST_M" +
+      "ETHOD_BRAINWORKS_GETCOMPLAINTS\020\254\024\022.\n)REQ" +
+      "UEST_METHOD_BRAINWORKS_GETCODESORTYPES\020\255" +
+      "\024\022+\n&REQUEST_METHOD_BRAINWORKS_STOPSUSPE" +
+      "NDS\020\256\024\022,\n\'REQUEST_METHOD_BRAINWORKS_STAR" +
+      "TSUSPENDS\020\257\024\022,\n\'REQUEST_METHOD_BRAINWORK" +
+      "S_SENDCOMPLAINT\020\260\024\0222\n-REQUEST_METHOD_BRA" +
+      "INWORKS_GETCUSTOMERBYCUSTID\020\261\024\022)\n$REQUES" +
+      "T_METHOD_OSGCONNECT_CCPAYMENTS\020\215\025\022*\n%REQ" +
+      "UEST_METHOD_OSGCONNECT_ACHPAYMENTS\020\216\025\0220\n" +
+      "+REQUEST_METHOD_OSGCONNECT_VALIDATEACCOU" +
+      "NTNO\020\217\025\022/\n*REQUEST_METHOD_NTVB_CREDIT_MI" +
+      "SSED_DELIVERY\020\361\025\022(\n#REQUEST_METHOD_NTVB_" +
+      "CUSTOMER_SEARCH\020\362\025\022!\n\034REQUEST_METHOD_NTV" +
+      "B_END_CALL\020\363\025\022/\n*REQUEST_METHOD_NTVB_INT" +
+      "EGRATION_DEFINITION\020\364\025\022(\n#REQUEST_METHOD" +
+      "_NTVB_MISSED_DELIVERY\020\365\025\022+\n&REQUEST_METH" +
+      "OD_NTVB_REMOVE_AUTORENEWAL\020\366\025\022+\n&REQUEST" +
+      "_METHOD_NTVB_RENEW_SUBSCRIPTION\020\367\025\022\'\n\"RE" +
+      "QUEST_METHOD_NTVB_RENEWAL_OFFERS\020\370\025\022(\n#R" +
+      "EQUEST_METHOD_NTVB_SET_AUTORENEWAL\020\371\025\022,\n" +
+      "\'REQUEST_METHOD_NTVB_START_INCOMING_CALL" +
+      "\020\372\025\022,\n\'REQUEST_METHOD_NTVB_START_OUTGOIN" +
+      "G_CALL\020\373\025\022*\n%REQUEST_METHOD_NTVB_SUBSCRI" +
+      "PTION_INFO\020\374\025\022&\n!REQUEST_METHOD_NTVB_VAC" +
+      "ATION_STOP\020\375\025\022!\n\034REQUEST_METHOD_NTVB_AUT" +
+      "HTEST\020\376\025\022+\n&REQUEST_METHOD_ELAVON_CREDIT" +
+      "_CARD_SALE\020\325\026\022(\n#REQUEST_METHOD_ELAVON_A" +
+      "DD_RECURRING\020\326\026\022\'\n\"REQUEST_METHOD_ELAVON" +
+      "_DCC_RESPONSE\020\327\026\022+\n&REQUEST_METHOD_ELAVO" +
+      "N_DELETE_RECURRING\020\330\026\022+\n&REQUEST_METHOD_" +
+      "ELAVON_UPDATE_RECURRING\020\331\026\022.\n)REQUEST_ME" +
+      "THOD_ELAVON_HEALTH_CARE_CC_SALE\020\332\026\022*\n%RE" +
+      "QUEST_METHOD_ELAVON_ADD_INSTALLMENT\020\333\026\022-" +
+      "\n(REQUEST_METHOD_ELAVON_UPDATE_INSTALLME" +
+      "NT\020\334\026\022-\n(REQUEST_METHOD_ELAVON_DELETE_IN" +
+      "STALLMENT\020\335\026\022/\n*REQUEST_METHOD_ELAVON_MC" +
+      "C_CREDIT_CARD_SALE\020\336\026\022+\n&REQUEST_METHOD_" +
+      "GLOBALPAYMENTS_CARDSALE\020\271\027\0228\n3REQUEST_ME" +
+      "THOD_GLOBALPAYMENTS_GET_TRANSACTION_BY_I" +
+      "D\020\272\027\0224\n/REQUEST_METHOD_GLOBALPAYMENTS_LI" +
+      "ST_TRANSACTIONS\020\273\027\022.\n)REQUEST_METHOD_GLO" +
+      "BALPAYMENTS_REFUND_SALE\020\274\027\0229\n4REQUEST_ME" +
+      "THOD_GLOBALPAYMENTS_REVERSE_SALE_OR_REFU" +
+      "ND\020\275\027\022.\n)REQUEST_METHOD_PAY_SCOUT_CREDIT" +
+      "_CARD_SALE\020\235\030\022)\n$REQUEST_METHOD_PAY_SCOU" +
+      "T_ECHECK_SALE\020\236\030\022\034\n\027REQUEST_METHOD_I2C_E" +
+      "CHO\020\201\031\022\'\n\"REQUEST_METHOD_I2C_BALANCE_INQ" +
+      "UIRY\020\202\031\022#\n\036REQUEST_METHOD_I2C_VERIFY_USE" +
+      "R\020\203\031\022\'\n\"REQUEST_METHOD_I2C_SEARCH_CUSTOM" +
+      "ER\020\204\031\022$\n\037REQUEST_METHOD_I2C_MAKE_PAYMENT" +
+      "\020\205\031\022.\n)REQUEST_METHOD_I2C_GET_CARDHOLDER" +
+      "_PROFILE\020\206\031\0220\n+REQUEST_METHOD_I2C_GET_CA" +
+      "RDHOLDER_STATEMENT\020\207\031\022.\n)REQUEST_METHOD_" +
+      "I2C_GET_CARDHOLDER_BALANCE\020\210\031\022.\n)REQUEST" +
+      "_METHOD_I2C_GET_CREDITPAYMENT_INFO\020\211\031\022+\n" +
+      "&REQUEST_METHOD_I2C_TRANSACTION_HISTORY\020" +
+      "\212\031\022$\n\037REQUEST_METHOD_OPAYO_CCPAYMENTS\020\345\031" +
+      "\022%\n REQUEST_METHOD_SHIFT4_CCPAYMENTS\020\311\032\022" +
+      "\'\n\"REQUEST_METHOD_POSCORP_ACCESSTOKEN\020\255\033" +
+      "\022,\n\'REQUEST_METHOD_POSCORP_LOOKUP_GUARAN" +
+      "TOR\020\256\033\0221\n,REQUEST_METHOD_POSCORP_UPDATE_" +
+      "PAYMENT_STATUS\020\257\033\022\"\n\035REQUEST_METHOD_PIAN" +
+      "O_GET_USER\020\221\034\022%\n REQUEST_METHOD_PIANO_UP" +
+      "DATE_USER\020\222\034\022\"\n\035REQUEST_METHOD_EPIC_GET_" +
+      "TOKEN\020\365\034\022$\n\037REQUEST_METHOD_EPIC_GET_PATI" +
+      "ENT\020\366\034\022&\n!REQUEST_METHOD_EPIC_MATCH_PATI" +
+      "ENT\020\367\034\022+\n&REQUEST_METHOD_EPIC_SEARCH_APP" +
+      "OINTMENT\020\370\034\022)\n$REQUEST_METHOD_EPIC_FIND_" +
+      "APPOINTMENT\020\371\034\022)\n$REQUEST_METHOD_EPIC_BO" +
+      "OK_APPOINTMENT\020\372\034\022$\n\037REQUEST_METHOD_EPIC" +
+      "_GET_ACCOUNT\020\373\034\022)\n$REQUEST_METHOD_NEWZWA" +
+      "RE_PHONE_LOOKUP\020\331\035\022,\n\'REQUEST_METHOD_NEW" +
+      "ZWARE_ACCOUNT_INQUIRY\020\332\035\022\'\n\"REQUEST_METH" +
+      "OD_NEWZWARE_CC_PAYMENT\020\333\035\022(\n#REQUEST_MET" +
+      "HOD_NEWZWARE_ACH_PAYMENT\020\334\035\022.\n)REQUEST_M" +
+      "ETHOD_NEWZWARE_COMPLAINT_HISTORY\020\335\035\022-\n(R" +
+      "EQUEST_METHOD_NEWZWARE_COMPLAINT_UPDATE\020" +
+      "\336\035\022-\n(REQUEST_METHOD_NEWZWARE_VACATION_R" +
+      "ESTART\020\337\035\022,\n\'REQUEST_METHOD_NEWZWARE_VAC" +
+      "ATION_UPDATE\020\340\035\022/\n*REQUEST_METHOD_NEWZWA" +
+      "RE_PHONE_LOOKUP_MULTI\020\341\035*w\n\017TransactionT" +
+      "ype\022\034\n\030TRANSACTION_TYPE_PAYMENT\020\000\022!\n\035TRA" +
+      "NSACTION_TYPE_DATA_INQUIRY\020\001\022#\n\037TRANSACT" +
+      "ION_TYPE_ACCOUNT_VERIFY\020\002*\242\001\n\rRequestSou" +
+      "rce\022\026\n\022REQUEST_SOURCE_IVR\020\000\022\030\n\024REQUEST_S" +
+      "OURCE_EMAIL\020\001\022\026\n\022REQUEST_SOURCE_WEB\020\002\022\026\n" +
+      "\022REQUEST_SOURCE_SMS\020\003\022\027\n\023REQUEST_SOURCE_" +
+      "CHAT\020\004\022\026\n\022REQUEST_SOURCE_LMS\020\005*R\n\021Transa" +
+      "ctionResult\022\036\n\032TRANSACTION_RESULT_SUCCES" +
+      "S\020\000\022\035\n\031TRANSACTION_RESULT_FAILED\020\001*\327\001\n\tV" +
+      "alueType\022\026\n\022VALUE_TYPE_UNKNOWN\020\000\022\025\n\021VALU" +
+      "E_TYPE_NUMBER\020\001\022\023\n\017VALUE_TYPE_BOOL\020\002\022\022\n\016" +
+      "VALUE_TYPE_MAP\020\003\022\024\n\020VALUE_TYPE_ARRAY\020\004\022\022" +
+      "\n\016VALUE_TYPE_INT\020\005\022\025\n\021VALUE_TYPE_STRING\020" +
+      "\006\022\023\n\017VALUE_TYPE_TIME\020\007\022\034\n\030VALUE_TYPE_COM" +
+      "POSITE_VAL\020\010*\216\001\n\nVisibility\022\030\n\024VISIBILIT" +
+      "Y_INVISIBLE\020\000\022\033\n\027VISIBILITY_UNRESTRICTED" +
+      "\020\001\022\026\n\022VISIBILITY_RUNTIME\020d\022\031\n\024VISIBILITY" +
+      "_BY_METHOD\020\226\001\022\026\n\021VISIBILITY_PLUGIN\020\310\001*\256\001" +
+      "\n\020CompareOperation\022\030\n\024COMPARE_OPERATION_" +
+      "EQ\020\000\022\030\n\024COMPARE_OPERATION_GT\020\001\022\030\n\024COMPAR" +
+      "E_OPERATION_LT\020\002\022\030\n\024COMPARE_OPERATION_GE" +
+      "\020\003\022\030\n\024COMPARE_OPERATION_LE\020\004\022\030\n\024COMPARE_" +
+      "OPERATION_NE\020\005*N\n\014FlowFieldLoc\022\013\n\007FFL_AN" +
+      "Y\020\000\022\014\n\010FFL_LINK\020\001\022\023\n\017FFL_PLUGIN_INST\020\002\022\016" +
+      "\n\nFFL_SUBMIT\020\003*\343\002\n\nValidation\022\023\n\017VALIDAT" +
+      "ION_NONE\020\000\022\031\n\025VALIDATION_CREDITCARD\020e\022\022\n" +
+      "\016VALIDATION_CVC\020f\022\034\n\030VALIDATION_MONTH_2_" +
+      "DIGIT\020g\022\033\n\027VALIDATION_YEAR_4_DIGIT\020h\022\031\n\025" +
+      "VALIDATION_LAST_4_SSN\020i\022\025\n\021VALIDATION_US" +
+      "_ZIP\020j\022\027\n\022VALIDATION_INTEGER\020\311\001\022\025\n\020VALID" +
+      "ATION_FLOAT\020\312\001\022\034\n\027VALIDATION_CURRENCY_US" +
+      "D\020\313\001\022\024\n\017VALIDATION_DATE\020\255\002\022\023\n\016VALIDATION" +
+      "_DOB\020\256\002\022\024\n\017VALIDATION_BOOL\020\221\003\022\025\n\020VALIDAT" +
+      "ION_REGEX\020\222\003*\313\004\n\022InvoiceDisplayType\022\017\n\013U" +
+      "NSPECIFIED\020\000\022\016\n\nAMOUNT_DUE\020\001\022\020\n\014SERVICE_" +
+      "DATE\020\002\022\022\n\016INVOICE_NUMBER\020\003\022\021\n\rITEM_QUANT" +
+      "ITY\020\004\022\r\n\tITEM_NAME\020\005\022\024\n\020ITEM_DESCRIPTION" +
+      "\020\006\022\017\n\013ITEM_AMOUNT\020\007\022\030\n\024PAYOR_ACCOUNT_NUM" +
+      "BER\020e\022\024\n\020PAYOR_FIRST_NAME\020f\022\023\n\017PAYOR_LAS" +
+      "T_NAME\020g\022\027\n\023PAYOR_DATE_OF_BIRTH\020h\022\020\n\014PAY" +
+      "OR_SSN_R4\020i\022\024\n\020PAYOR_CELL_PHONE\020j\022\024\n\020PAY" +
+      "OR_HOME_PHONE\020k\022\024\n\020PAYOR_WORK_PHONE\020l\022\022\n" +
+      "\016PAYOR_ZIP_CODE\020m\022\033\n\026PATIENT_ACCOUNT_NUM" +
+      "BER\020\311\001\022\027\n\022PATIENT_FIRST_NAME\020\312\001\022\026\n\021PATIE" +
+      "NT_LAST_NAME\020\313\001\022\032\n\025PATIENT_DATE_OF_BIRTH" +
+      "\020\314\001\022\023\n\016PATIENT_SSN_R4\020\315\001\022\027\n\022PATIENT_CELL" +
+      "_PHONE\020\316\001\022\027\n\022PATIENT_HOME_PHONE\020\317\001\022\027\n\022PA" +
+      "TIENT_WORK_PHONE\020\320\001\022\025\n\020PATIENT_ZIP_CODE\020" +
+      "\321\001*\233\002\n\013FieldSource\022\025\n\021FIELD_SOURCE_NONE\020" +
+      "\000\022\025\n\021FIELD_SOURCE_LINK\020\001\022\"\n\036FIELD_SOURCE" +
+      "_VERIFICATION_DATA\020\002\022!\n\035FIELD_SOURCE_VER" +
+      "IFICATION_API\020\003\022\035\n\031FIELD_SOURCE_INVOICE_" +
+      "DATA\020\004\022\034\n\030FIELD_SOURCE_INVOICE_API\020\005\022\035\n\031" +
+      "FIELD_SOURCE_PAYMENT_DATA\020\006\022\034\n\030FIELD_SOU" +
+      "RCE_PAYMENT_API\020\007\022\035\n\031FIELD_SOURCE_PAYMEN" +
+      "T_FORM\020\010*\202\001\n\010FlowType\022\025\n\021FLOW_TYPE_UNKNO" +
+      "WN\020\000\022\025\n\021FLOW_TYPE_INVOICE\020\001\022\025\n\021FLOW_TYPE" +
+      "_PAYMENT\020\002\022\032\n\026FLOW_TYPE_VERIFICATION\020\003\022\025",
+      "\n\021FLOW_TYPE_EXECUTE\020\004B\301\001\n*com.tcn.cloud." +
+      "api.api.commons.integrationsB\021Integratio" +
+      "nsProtoP\001\242\002\003ACI\252\002\030Api.Commons.Integratio" +
+      "ns\312\002\030Api\\Commons\\Integrations\342\002$Api\\Comm" +
+      "ons\\Integrations\\GPBMetadata\352\002\032Api::Comm" +
+      "ons::Integrationsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2423,7 +2473,7 @@ public final class IntegrationsProto {
     internal_static_api_commons_integrations_ExecuteFlow_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_integrations_ExecuteFlow_descriptor,
-        new java.lang.String[] { "PluginInstanceId", "BraintreeCreditSale", "BraintreeBankSale", "RelatientGetPatientBalance", "RelatientGetPatientCcTokens", "RelatientPostPatientToken", "RelatientPostPatientBalance", "RelatientGetPatient", "RelatientPostBalanceById", "RelatientCreateFortisAchtoken", "RelatientCreateFortisCctoken", "RelatientFortisTokenAchDebitPayment", "RelatientFortisTokenCcPayment", "CybersourceCreditPayment", "CybersourceEcheckPayment", "CircproPhoneLookupWithBundle", "CircproPhoneLookup", "CircproVacationRestartInquiry", "CircproComplaintInquiry", "CircproAccountInquiry", "CircproAccountInquiryWithTax", "CircproAccountInquiryWithTaxBundle", "CircproComplaintCodes", "CircproComplaintUpdate", "CircproVacationUpdate", "CircproRestartUpdate", "CircproLawImmediatePayment", "CircproLawUpdateDataWithPac", "CircproLawGetCustomers", "AuthorizenetChargeCreditCard", "AuthorizenetDebitBankAccount", "AuthorizenetCreateCustomerPaymentProfile", "AuthorizenetPaypalTransaction", "AuthorizenetGooglePayTransaction", "AuthorizenetApplePayTransaction", "AuthorizenetPayPalAuthCapture", "ExpitransCcTransaction", "ExpitransAchTransaction", "AxiamedfusionCcTransaction", "AxiamedfusionAchTransaction", "AxiamedfusionCardVerify", "InstamedPaymentSale", "InstamedVoidPayment", "UsaepaySubmitCcPayments", "UsaepaySubmitAchPayments", "UsaepayGetCcToken", "EzidebitSubmitCcPayments", "EzidebitSubmitAchPayments", "BamboraSubmitCcPayments", "BamboraSubmitAchPayments", "RepayStoreCard", "RepayPaymentToken", "RepayAchPaymentToken", "AxiaSubmitSaleRequestByCc", "AxiaSubmitSaleRequestByCheck", "SecuretradingSendPayment", "PaymentVisionSubmitCardSaleRequestByCc", "PaymentVisionSubmitCardSaleRequestByAch", "InterproseLookupAccount", "InterproseSubmitCardSaleRequestByCc", "InterproseSubmitCardSaleRequestByAch", "InterproseLookupPaymentId", "InterproseLookupAccountByFormId", "DallasnewsSearchByPhone", "DallasnewsSearchByZipStreet", "DallasnewsSearchBy", "DallasnewsCreateVacation", "DallasnewsGetVacation", "DallasnewsGetVacationDaysBetween", "DallasnewsGetVacationWithCutoff", "DallasnewsDeleteVacation", "DallasnewsAddComplaint", "DallasnewsUpdatePhoneNumber", "DallasnewsStopAccount", "DallasnewsCcPaymentToken", "DallasnewsAchPaymentToken", "PaywaySubmitCardSaleRequest", "PaywayCreateTokenRequest", "PaywaySubmitAchSaleRequest", "BillingtreeSubmitCardSaleRequest", "ExperianCcPaymentRequest", "ExperianCcPaymentPlanRequest", "ExperianBalancerequest", "ExperianAchPaymentRequest", "ExperianAchPaymentPlanRequest", "ExperianStellaCardEntry", "ExperianStellaEcheck", "ExperianStellaCardDeviceTokenization", "ExperianStellaTokenPayment", "ExperianStellaAchTokenization", "ExperianStellaAddUsaEpayToken", "ExperianStellaPaymentPlans", "ExperianStellaAuth", "NewscycleLogin", "NewscycleSearchPage", "NewscycleBillingInfo", "NewscycleServiceErrorInfo", "NewscycleServiceErrorTrans", "NewscycleStopInfo", "NewscycleStopTrans", "NewscycleRenewInfo", "NewscycleAutoRenewInfo", "NewscycleAutoTran", "NewscyclePayInfo", "NewscyclePayTran", "TrustcommerceCreditSale", "TrustcommerceAchSale", "VantivCreditSale", "VantivAchSale", "JourneyLatest", "AthenahealthGetPatients", "AthenahealthGetPatientsWithId", "AthenahealthCcPayment", "BrainworksGetCustomersByPhone", "BrainworksGetSuspends", "BrainworksGetCustomerByCustIdV2", "BrainworksGetComplaints", "BrainworksGetCodesOrTypes", "BrainworksStopSuspends", "BrainworksStartSuspends", "BrainworksSendComplaint", "BrainworksGetCustomerByCustId", "OsgconnectCcPayments", "OsgconnectAchPayments", "OsgconnectValidateAccountNo", "NtvbCreditMissedDelivery", "NtvbCustomerSearch", "NtvbEndCall", "NtvbIntegrationDefinition", "NtvbMissedDelivery", "NtvbRemoveAutorenewal", "NtvbRenewSubscription", "NtvbRenewalOffers", "NtvbSetAutorenewal", "NtvbStartIncomingCall", "NtvbStartOutgoingCall", "NtvbSubscriptionInfo", "NtvbVacationStop", "NtvbAuthtest", "ElavonCreditCardSale", "ElavonAddRecurring", "ElavonDccResponse", "ElavonDeleteRecurring", "ElavonUpdateRecurring", "ElavonHealthCareCcSale", "ElavonAddInstallment", "ElavonUpdateInstallment", "ElavonDeleteInstallment", "ElavonMccCreditCardSale", "GlobalPaymentsCardSale", "GlobalPaymentsGetTransactionById", "GlobalPaymentsListTransactions", "GlobalPaymentsRefundSale", "GlobalPaymentsReverseSaleOrRefund", "PayscoutCreditSale", "PayscoutEcheckSale", "I2CEcho", "I2CBalanceInquiry", "I2CVerifyUser", "I2CSearchCustomer", "I2CMakePayment", "I2CGetCardholderProfile", "I2CGetCardholderStatement", "I2CGetCardholderBalance", "I2CGetCreditpaymentInfo", "I2CTransactionHistory", "OpayoCcPayment", "Shift4CcPayment", "PoscorpAccesstoken", "PoscorpLookupGuarantor", "PoscorpUpdatePaymentStatus", "PIANOGETUSER", "PIANOUPDATEUSER", "EpicGetToken", "EpicGetPatient", "EpicMatchPatient", "EpicSearchAppointment", "EpicFindAppointment", "EpicBookAppointment", "EpicGetAccount", "NewzwarePhoneLookup", "NewzwareAccountInquiry", "NewzwareCcPayment", "NewzwareAchPayment", "Value", });
+        new java.lang.String[] { "PluginInstanceId", "BraintreeCreditSale", "BraintreeBankSale", "RelatientGetPatientBalance", "RelatientGetPatientCcTokens", "RelatientPostPatientToken", "RelatientPostPatientBalance", "RelatientGetPatient", "RelatientPostBalanceById", "RelatientCreateFortisAchtoken", "RelatientCreateFortisCctoken", "RelatientFortisTokenAchDebitPayment", "RelatientFortisTokenCcPayment", "CybersourceCreditPayment", "CybersourceEcheckPayment", "CircproPhoneLookupWithBundle", "CircproPhoneLookup", "CircproVacationRestartInquiry", "CircproComplaintInquiry", "CircproAccountInquiry", "CircproAccountInquiryWithTax", "CircproAccountInquiryWithTaxBundle", "CircproComplaintCodes", "CircproComplaintUpdate", "CircproVacationUpdate", "CircproRestartUpdate", "CircproLawImmediatePayment", "CircproLawUpdateDataWithPac", "CircproLawGetCustomers", "AuthorizenetChargeCreditCard", "AuthorizenetDebitBankAccount", "AuthorizenetCreateCustomerPaymentProfile", "AuthorizenetPaypalTransaction", "AuthorizenetGooglePayTransaction", "AuthorizenetApplePayTransaction", "AuthorizenetPayPalAuthCapture", "ExpitransCcTransaction", "ExpitransAchTransaction", "AxiamedfusionCcTransaction", "AxiamedfusionAchTransaction", "AxiamedfusionCardVerify", "InstamedPaymentSale", "InstamedVoidPayment", "UsaepaySubmitCcPayments", "UsaepaySubmitAchPayments", "UsaepayGetCcToken", "EzidebitSubmitCcPayments", "EzidebitSubmitAchPayments", "BamboraSubmitCcPayments", "BamboraSubmitAchPayments", "RepayStoreCard", "RepayPaymentToken", "RepayAchPaymentToken", "AxiaSubmitSaleRequestByCc", "AxiaSubmitSaleRequestByCheck", "SecuretradingSendPayment", "PaymentVisionSubmitCardSaleRequestByCc", "PaymentVisionSubmitCardSaleRequestByAch", "InterproseLookupAccount", "InterproseSubmitCardSaleRequestByCc", "InterproseSubmitCardSaleRequestByAch", "InterproseLookupPaymentId", "InterproseLookupAccountByFormId", "DallasnewsSearchByPhone", "DallasnewsSearchByZipStreet", "DallasnewsSearchBy", "DallasnewsCreateVacation", "DallasnewsGetVacation", "DallasnewsGetVacationDaysBetween", "DallasnewsGetVacationWithCutoff", "DallasnewsDeleteVacation", "DallasnewsAddComplaint", "DallasnewsUpdatePhoneNumber", "DallasnewsStopAccount", "DallasnewsCcPaymentToken", "DallasnewsAchPaymentToken", "PaywaySubmitCardSaleRequest", "PaywayCreateTokenRequest", "PaywaySubmitAchSaleRequest", "BillingtreeSubmitCardSaleRequest", "ExperianCcPaymentRequest", "ExperianCcPaymentPlanRequest", "ExperianBalancerequest", "ExperianAchPaymentRequest", "ExperianAchPaymentPlanRequest", "ExperianStellaCardEntry", "ExperianStellaEcheck", "ExperianStellaCardDeviceTokenization", "ExperianStellaTokenPayment", "ExperianStellaAchTokenization", "ExperianStellaAddUsaEpayToken", "ExperianStellaPaymentPlans", "ExperianStellaAuth", "NewscycleLogin", "NewscycleSearchPage", "NewscycleBillingInfo", "NewscycleServiceErrorInfo", "NewscycleServiceErrorTrans", "NewscycleStopInfo", "NewscycleStopTrans", "NewscycleRenewInfo", "NewscycleAutoRenewInfo", "NewscycleAutoTran", "NewscyclePayInfo", "NewscyclePayTran", "TrustcommerceCreditSale", "TrustcommerceAchSale", "VantivCreditSale", "VantivAchSale", "JourneyLatest", "AthenahealthGetPatients", "AthenahealthGetPatientsWithId", "AthenahealthCcPayment", "BrainworksGetCustomersByPhone", "BrainworksGetSuspends", "BrainworksGetCustomerByCustIdV2", "BrainworksGetComplaints", "BrainworksGetCodesOrTypes", "BrainworksStopSuspends", "BrainworksStartSuspends", "BrainworksSendComplaint", "BrainworksGetCustomerByCustId", "OsgconnectCcPayments", "OsgconnectAchPayments", "OsgconnectValidateAccountNo", "NtvbCreditMissedDelivery", "NtvbCustomerSearch", "NtvbEndCall", "NtvbIntegrationDefinition", "NtvbMissedDelivery", "NtvbRemoveAutorenewal", "NtvbRenewSubscription", "NtvbRenewalOffers", "NtvbSetAutorenewal", "NtvbStartIncomingCall", "NtvbStartOutgoingCall", "NtvbSubscriptionInfo", "NtvbVacationStop", "NtvbAuthtest", "ElavonCreditCardSale", "ElavonAddRecurring", "ElavonDccResponse", "ElavonDeleteRecurring", "ElavonUpdateRecurring", "ElavonHealthCareCcSale", "ElavonAddInstallment", "ElavonUpdateInstallment", "ElavonDeleteInstallment", "ElavonMccCreditCardSale", "GlobalPaymentsCardSale", "GlobalPaymentsGetTransactionById", "GlobalPaymentsListTransactions", "GlobalPaymentsRefundSale", "GlobalPaymentsReverseSaleOrRefund", "PayscoutCreditSale", "PayscoutEcheckSale", "I2CEcho", "I2CBalanceInquiry", "I2CVerifyUser", "I2CSearchCustomer", "I2CMakePayment", "I2CGetCardholderProfile", "I2CGetCardholderStatement", "I2CGetCardholderBalance", "I2CGetCreditpaymentInfo", "I2CTransactionHistory", "OpayoCcPayment", "Shift4CcPayment", "PoscorpAccesstoken", "PoscorpLookupGuarantor", "PoscorpUpdatePaymentStatus", "PIANOGETUSER", "PIANOUPDATEUSER", "EpicGetToken", "EpicGetPatient", "EpicMatchPatient", "EpicSearchAppointment", "EpicFindAppointment", "EpicBookAppointment", "EpicGetAccount", "NewzwarePhoneLookup", "NewzwareAccountInquiry", "NewzwareCcPayment", "NewzwareAchPayment", "NewzwareComplaintHistory", "NewzwareComplaintUpdate", "NewzwareVacationRestart", "NewzwareVacationUpdate", "NewzwarePhoneLookupMulti", "Value", });
     internal_static_api_commons_integrations_InvoiceExperianQueryBalance_descriptor =
       getDescriptor().getMessageTypes().get(15);
     internal_static_api_commons_integrations_InvoiceExperianQueryBalance_fieldAccessorTable = new
@@ -3683,6 +3733,36 @@ public final class IntegrationsProto {
     internal_static_api_commons_integrations_ExecuteNewzwareAchPayment_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_integrations_ExecuteNewzwareAchPayment_descriptor,
+        new java.lang.String[] { });
+    internal_static_api_commons_integrations_ExecuteNewzwareComplaintHistory_descriptor =
+      getDescriptor().getMessageTypes().get(224);
+    internal_static_api_commons_integrations_ExecuteNewzwareComplaintHistory_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_integrations_ExecuteNewzwareComplaintHistory_descriptor,
+        new java.lang.String[] { });
+    internal_static_api_commons_integrations_ExecuteNewzwareComplaintUpdate_descriptor =
+      getDescriptor().getMessageTypes().get(225);
+    internal_static_api_commons_integrations_ExecuteNewzwareComplaintUpdate_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_integrations_ExecuteNewzwareComplaintUpdate_descriptor,
+        new java.lang.String[] { });
+    internal_static_api_commons_integrations_ExecuteNewzwareVacationRestart_descriptor =
+      getDescriptor().getMessageTypes().get(226);
+    internal_static_api_commons_integrations_ExecuteNewzwareVacationRestart_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_integrations_ExecuteNewzwareVacationRestart_descriptor,
+        new java.lang.String[] { });
+    internal_static_api_commons_integrations_ExecuteNewzwareVacationUpdate_descriptor =
+      getDescriptor().getMessageTypes().get(227);
+    internal_static_api_commons_integrations_ExecuteNewzwareVacationUpdate_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_integrations_ExecuteNewzwareVacationUpdate_descriptor,
+        new java.lang.String[] { });
+    internal_static_api_commons_integrations_ExecuteNewzwarePhoneLookupMulti_descriptor =
+      getDescriptor().getMessageTypes().get(228);
+    internal_static_api_commons_integrations_ExecuteNewzwarePhoneLookupMulti_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_integrations_ExecuteNewzwarePhoneLookupMulti_descriptor,
         new java.lang.String[] { });
   }
 

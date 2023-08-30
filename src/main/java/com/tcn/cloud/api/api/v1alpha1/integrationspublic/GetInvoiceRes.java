@@ -51,7 +51,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetInvoiceRes.class, com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetInvoiceRes.Builder.class);
   }
 
-  private int bitField0_;
   public static final int FIELDS_FIELD_NUMBER = 1;
   private static final class FieldsDefaultEntryHolder {
     static final com.google.protobuf.MapEntry<
@@ -209,7 +208,7 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
    */
   @java.lang.Override
   public boolean hasInvoices() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return invoices_ != null;
   }
   /**
    * <pre>
@@ -261,7 +260,7 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amountDueKey_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, amountDueKey_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (invoices_ != null) {
       output.writeMessage(4, getInvoices());
     }
     getUnknownFields().writeTo(output);
@@ -290,7 +289,7 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amountDueKey_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, amountDueKey_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (invoices_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getInvoices());
     }
@@ -486,19 +485,13 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetInvoiceRes.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getInvoicesFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -555,14 +548,11 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.amountDueKey_ = amountDueKey_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.invoices_ = invoicesBuilder_ == null
             ? invoices_
             : invoicesBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1037,10 +1027,8 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
       } else {
         invoicesBuilder_.mergeFrom(value);
       }
-      if (invoices_ != null) {
-        bitField0_ |= 0x00000008;
-        onChanged();
-      }
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**

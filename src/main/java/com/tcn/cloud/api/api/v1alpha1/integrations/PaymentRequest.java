@@ -42,7 +42,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.integrations.PaymentRequest.class, com.tcn.cloud.api.api.v1alpha1.integrations.PaymentRequest.Builder.class);
   }
 
-  private int bitField0_;
   public static final int PAYMENT_FIELDS_FIELD_NUMBER = 5;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.Parameter> paymentFields_;
@@ -202,7 +201,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasPaymentRequest() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return paymentRequest_ != null;
   }
   /**
    * <pre>
@@ -339,7 +338,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < paymentRequestPayload_.size(); i++) {
       output.writeMessage(1, paymentRequestPayload_.get(i));
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (paymentRequest_ != null) {
       output.writeMessage(2, getPaymentRequest());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
@@ -364,7 +363,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, paymentRequestPayload_.get(i));
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (paymentRequest_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getPaymentRequest());
     }
@@ -552,21 +551,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.integrations.PaymentRequest.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getPaymentFieldsFieldBuilder();
-        getPaymentRequestPayloadFieldBuilder();
-        getPaymentRequestFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -648,12 +639,10 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.integrations.PaymentRequest result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.paymentRequest_ = paymentRequestBuilder_ == null
             ? paymentRequest_
             : paymentRequestBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.name_ = name_;
@@ -661,7 +650,6 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.description_ = description_;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1659,10 +1647,8 @@ private static final long serialVersionUID = 0L;
       } else {
         paymentRequestBuilder_.mergeFrom(value);
       }
-      if (paymentRequest_ != null) {
-        bitField0_ |= 0x00000004;
-        onChanged();
-      }
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**

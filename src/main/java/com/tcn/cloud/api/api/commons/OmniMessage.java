@@ -44,7 +44,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.OmniMessage.class, com.tcn.cloud.api.api.commons.OmniMessage.Builder.class);
   }
 
-  private int bitField0_;
   public static final int MESSAGE_SID_FIELD_NUMBER = 1;
   private long messageSid_ = 0L;
   /**
@@ -73,7 +72,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasUserId() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return userId_ != null;
   }
   /**
    * <pre>
@@ -248,7 +247,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasReferenceId() {
-    return ((bitField0_ & 0x00000002) != 0);
+    return referenceId_ != null;
   }
   /**
    * <pre>
@@ -339,7 +338,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasPayload() {
-    return ((bitField0_ & 0x00000004) != 0);
+    return payload_ != null;
   }
   /**
    * <pre>
@@ -378,7 +377,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasConversationSid() {
-    return ((bitField0_ & 0x00000008) != 0);
+    return conversationSid_ != null;
   }
   /**
    * <pre>
@@ -444,7 +443,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasDateCreated() {
-    return ((bitField0_ & 0x00000010) != 0);
+    return dateCreated_ != null;
   }
   /**
    * <pre>
@@ -482,7 +481,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasDateModified() {
-    return ((bitField0_ & 0x00000020) != 0);
+    return dateModified_ != null;
   }
   /**
    * <pre>
@@ -538,7 +537,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasSubject() {
-    return ((bitField0_ & 0x00000040) != 0);
+    return subject_ != null;
   }
   /**
    * <pre>
@@ -608,7 +607,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasStatusMessage() {
-    return ((bitField0_ & 0x00000080) != 0);
+    return statusMessage_ != null;
   }
   /**
    * <pre>
@@ -651,7 +650,7 @@ private static final long serialVersionUID = 0L;
     if (messageSid_ != 0L) {
       output.writeInt64(1, messageSid_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (userId_ != null) {
       output.writeMessage(4, getUserId());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sentFrom_)) {
@@ -663,37 +662,37 @@ private static final long serialVersionUID = 0L;
     if (channelType_ != com.tcn.cloud.api.api.commons.ChannelType.CHANNEL_TYPE_EMAIL.getNumber()) {
       output.writeEnum(7, channelType_);
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (referenceId_ != null) {
       output.writeMessage(8, getReferenceId());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uiReferenceId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 10, uiReferenceId_);
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
+    if (payload_ != null) {
       output.writeMessage(11, getPayload());
     }
-    if (((bitField0_ & 0x00000008) != 0)) {
+    if (conversationSid_ != null) {
       output.writeMessage(12, getConversationSid());
     }
     if (status_ != com.tcn.cloud.api.api.commons.OmniMessageStatus.OMNI_MESSAGE_CREATED.getNumber()) {
       output.writeEnum(14, status_);
     }
-    if (((bitField0_ & 0x00000010) != 0)) {
+    if (dateCreated_ != null) {
       output.writeMessage(15, getDateCreated());
     }
-    if (((bitField0_ & 0x00000020) != 0)) {
+    if (dateModified_ != null) {
       output.writeMessage(16, getDateModified());
     }
     if (campaignSid_ != 0L) {
       output.writeInt64(17, campaignSid_);
     }
-    if (((bitField0_ & 0x00000040) != 0)) {
+    if (subject_ != null) {
       output.writeMessage(19, getSubject());
     }
     if (senderType_ != com.tcn.cloud.api.api.commons.OmniSenderType.OMNI_SENDER_TYPE_AGENT.getNumber()) {
       output.writeEnum(21, senderType_);
     }
-    if (((bitField0_ & 0x00000080) != 0)) {
+    if (statusMessage_ != null) {
       output.writeMessage(22, getStatusMessage());
     }
     getUnknownFields().writeTo(output);
@@ -709,7 +708,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(1, messageSid_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (userId_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getUserId());
     }
@@ -723,18 +722,18 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(7, channelType_);
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (referenceId_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, getReferenceId());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uiReferenceId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, uiReferenceId_);
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
+    if (payload_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(11, getPayload());
     }
-    if (((bitField0_ & 0x00000008) != 0)) {
+    if (conversationSid_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(12, getConversationSid());
     }
@@ -742,11 +741,11 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(14, status_);
     }
-    if (((bitField0_ & 0x00000010) != 0)) {
+    if (dateCreated_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(15, getDateCreated());
     }
-    if (((bitField0_ & 0x00000020) != 0)) {
+    if (dateModified_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(16, getDateModified());
     }
@@ -754,7 +753,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(17, campaignSid_);
     }
-    if (((bitField0_ & 0x00000040) != 0)) {
+    if (subject_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(19, getSubject());
     }
@@ -762,7 +761,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(21, senderType_);
     }
-    if (((bitField0_ & 0x00000080) != 0)) {
+    if (statusMessage_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(22, getStatusMessage());
     }
@@ -1014,26 +1013,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.OmniMessage.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getUserIdFieldBuilder();
-        getReferenceIdFieldBuilder();
-        getPayloadFieldBuilder();
-        getConversationSidFieldBuilder();
-        getDateCreatedFieldBuilder();
-        getDateModifiedFieldBuilder();
-        getSubjectFieldBuilder();
-        getStatusMessageFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -1123,12 +1109,10 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.messageSid_ = messageSid_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.userId_ = userIdBuilder_ == null
             ? userId_
             : userIdBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.sentFrom_ = sentFrom_;
@@ -1143,7 +1127,6 @@ private static final long serialVersionUID = 0L;
         result.referenceId_ = referenceIdBuilder_ == null
             ? referenceId_
             : referenceIdBuilder_.build();
-        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.uiReferenceId_ = uiReferenceId_;
@@ -1152,13 +1135,11 @@ private static final long serialVersionUID = 0L;
         result.payload_ = payloadBuilder_ == null
             ? payload_
             : payloadBuilder_.build();
-        to_bitField0_ |= 0x00000004;
       }
       if (((from_bitField0_ & 0x00000100) != 0)) {
         result.conversationSid_ = conversationSidBuilder_ == null
             ? conversationSid_
             : conversationSidBuilder_.build();
-        to_bitField0_ |= 0x00000008;
       }
       if (((from_bitField0_ & 0x00000200) != 0)) {
         result.status_ = status_;
@@ -1167,13 +1148,11 @@ private static final long serialVersionUID = 0L;
         result.dateCreated_ = dateCreatedBuilder_ == null
             ? dateCreated_
             : dateCreatedBuilder_.build();
-        to_bitField0_ |= 0x00000010;
       }
       if (((from_bitField0_ & 0x00000800) != 0)) {
         result.dateModified_ = dateModifiedBuilder_ == null
             ? dateModified_
             : dateModifiedBuilder_.build();
-        to_bitField0_ |= 0x00000020;
       }
       if (((from_bitField0_ & 0x00001000) != 0)) {
         result.campaignSid_ = campaignSid_;
@@ -1182,7 +1161,6 @@ private static final long serialVersionUID = 0L;
         result.subject_ = subjectBuilder_ == null
             ? subject_
             : subjectBuilder_.build();
-        to_bitField0_ |= 0x00000040;
       }
       if (((from_bitField0_ & 0x00004000) != 0)) {
         result.senderType_ = senderType_;
@@ -1191,9 +1169,7 @@ private static final long serialVersionUID = 0L;
         result.statusMessage_ = statusMessageBuilder_ == null
             ? statusMessage_
             : statusMessageBuilder_.build();
-        to_bitField0_ |= 0x00000080;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1568,10 +1544,8 @@ private static final long serialVersionUID = 0L;
       } else {
         userIdBuilder_.mergeFrom(value);
       }
-      if (userId_ != null) {
-        bitField0_ |= 0x00000002;
-        onChanged();
-      }
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -2031,10 +2005,8 @@ private static final long serialVersionUID = 0L;
       } else {
         referenceIdBuilder_.mergeFrom(value);
       }
-      if (referenceId_ != null) {
-        bitField0_ |= 0x00000020;
-        onChanged();
-      }
+      bitField0_ |= 0x00000020;
+      onChanged();
       return this;
     }
     /**
@@ -2292,10 +2264,8 @@ private static final long serialVersionUID = 0L;
       } else {
         payloadBuilder_.mergeFrom(value);
       }
-      if (payload_ != null) {
-        bitField0_ |= 0x00000080;
-        onChanged();
-      }
+      bitField0_ |= 0x00000080;
+      onChanged();
       return this;
     }
     /**
@@ -2454,10 +2424,8 @@ private static final long serialVersionUID = 0L;
       } else {
         conversationSidBuilder_.mergeFrom(value);
       }
-      if (conversationSid_ != null) {
-        bitField0_ |= 0x00000100;
-        onChanged();
-      }
+      bitField0_ |= 0x00000100;
+      onChanged();
       return this;
     }
     /**
@@ -2688,10 +2656,8 @@ private static final long serialVersionUID = 0L;
       } else {
         dateCreatedBuilder_.mergeFrom(value);
       }
-      if (dateCreated_ != null) {
-        bitField0_ |= 0x00000400;
-        onChanged();
-      }
+      bitField0_ |= 0x00000400;
+      onChanged();
       return this;
     }
     /**
@@ -2845,10 +2811,8 @@ private static final long serialVersionUID = 0L;
       } else {
         dateModifiedBuilder_.mergeFrom(value);
       }
-      if (dateModified_ != null) {
-        bitField0_ |= 0x00000800;
-        onChanged();
-      }
+      bitField0_ |= 0x00000800;
+      onChanged();
       return this;
     }
     /**
@@ -3061,10 +3025,8 @@ private static final long serialVersionUID = 0L;
       } else {
         subjectBuilder_.mergeFrom(value);
       }
-      if (subject_ != null) {
-        bitField0_ |= 0x00002000;
-        onChanged();
-      }
+      bitField0_ |= 0x00002000;
+      onChanged();
       return this;
     }
     /**
@@ -3303,10 +3265,8 @@ private static final long serialVersionUID = 0L;
       } else {
         statusMessageBuilder_.mergeFrom(value);
       }
-      if (statusMessage_ != null) {
-        bitField0_ |= 0x00008000;
-        onChanged();
-      }
+      bitField0_ |= 0x00008000;
+      onChanged();
       return this;
     }
     /**

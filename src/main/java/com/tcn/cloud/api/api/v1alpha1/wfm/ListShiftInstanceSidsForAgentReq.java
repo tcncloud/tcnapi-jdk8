@@ -42,7 +42,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentReq.class, com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentReq.Builder.class);
   }
 
-  private int bitField0_;
   public static final int SCHEDULE_SELECTOR_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.api.commons.ScheduleSelector scheduleSelector_;
   /**
@@ -55,7 +54,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasScheduleSelector() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return scheduleSelector_ != null;
   }
   /**
    * <pre>
@@ -93,7 +92,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasDatetimeRange() {
-    return ((bitField0_ & 0x00000002) != 0);
+    return datetimeRange_ != null;
   }
   /**
    * <pre>
@@ -148,10 +147,10 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (scheduleSelector_ != null) {
       output.writeMessage(1, getScheduleSelector());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (datetimeRange_ != null) {
       output.writeMessage(2, getDatetimeRange());
     }
     if (wfmAgentSid_ != 0L) {
@@ -166,11 +165,11 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (scheduleSelector_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getScheduleSelector());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (datetimeRange_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getDatetimeRange());
     }
@@ -350,20 +349,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentReq.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getScheduleSelectorFieldBuilder();
-        getDatetimeRangeFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -413,23 +405,19 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentReq result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.scheduleSelector_ = scheduleSelectorBuilder_ == null
             ? scheduleSelector_
             : scheduleSelectorBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.datetimeRange_ = datetimeRangeBuilder_ == null
             ? datetimeRange_
             : datetimeRangeBuilder_.build();
-        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.wfmAgentSid_ = wfmAgentSid_;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -633,10 +621,8 @@ private static final long serialVersionUID = 0L;
       } else {
         scheduleSelectorBuilder_.mergeFrom(value);
       }
-      if (scheduleSelector_ != null) {
-        bitField0_ |= 0x00000001;
-        onChanged();
-      }
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -790,10 +776,8 @@ private static final long serialVersionUID = 0L;
       } else {
         datetimeRangeBuilder_.mergeFrom(value);
       }
-      if (datetimeRange_ != null) {
-        bitField0_ |= 0x00000002;
-        onChanged();
-      }
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**

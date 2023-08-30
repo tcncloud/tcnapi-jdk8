@@ -45,7 +45,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.billing.Invoice.class, com.tcn.cloud.api.api.commons.billing.Invoice.Builder.class);
   }
 
-  private int bitField0_;
   public static final int ITEMS_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.commons.billing.InvoiceItem> items_;
@@ -186,7 +185,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCreateTime() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return createTime_ != null;
   }
   /**
    * <pre>
@@ -224,7 +223,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasUpdateTime() {
-    return ((bitField0_ & 0x00000002) != 0);
+    return updateTime_ != null;
   }
   /**
    * <pre>
@@ -273,10 +272,10 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(billingCycle_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, billingCycle_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (createTime_ != null) {
       output.writeMessage(4, getCreateTime());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (updateTime_ != null) {
       output.writeMessage(5, getUpdateTime());
     }
     getUnknownFields().writeTo(output);
@@ -299,11 +298,11 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(billingCycle_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, billingCycle_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (createTime_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getCreateTime());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (updateTime_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getUpdateTime());
     }
@@ -490,21 +489,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.billing.Invoice.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getItemsFieldBuilder();
-        getCreateTimeFieldBuilder();
-        getUpdateTimeFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -581,20 +572,16 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.billingCycle_ = billingCycle_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.createTime_ = createTimeBuilder_ == null
             ? createTime_
             : createTimeBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.updateTime_ = updateTimeBuilder_ == null
             ? updateTime_
             : updateTimeBuilder_.build();
-        to_bitField0_ |= 0x00000002;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1313,10 +1300,8 @@ private static final long serialVersionUID = 0L;
       } else {
         createTimeBuilder_.mergeFrom(value);
       }
-      if (createTime_ != null) {
-        bitField0_ |= 0x00000008;
-        onChanged();
-      }
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -1470,10 +1455,8 @@ private static final long serialVersionUID = 0L;
       } else {
         updateTimeBuilder_.mergeFrom(value);
       }
-      if (updateTime_ != null) {
-        bitField0_ |= 0x00000010;
-        onChanged();
-      }
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**

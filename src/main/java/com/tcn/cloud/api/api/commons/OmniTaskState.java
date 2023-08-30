@@ -141,7 +141,6 @@ private static final long serialVersionUID = 0L;
               com.tcn.cloud.api.api.commons.OmniTaskState.Entry.class, com.tcn.cloud.api.api.commons.OmniTaskState.Entry.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ADDRESS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object address_ = "";
@@ -216,7 +215,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasLastUsed() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return lastUsed_ != null;
     }
     /**
      * <pre>
@@ -262,7 +261,7 @@ private static final long serialVersionUID = 0L;
       if (timesUsed_ != 0L) {
         output.writeInt64(2, timesUsed_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (lastUsed_ != null) {
         output.writeMessage(3, getLastUsed());
       }
       getUnknownFields().writeTo(output);
@@ -281,7 +280,7 @@ private static final long serialVersionUID = 0L;
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, timesUsed_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (lastUsed_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getLastUsed());
       }
@@ -448,19 +447,13 @@ private static final long serialVersionUID = 0L;
 
       // Construct using com.tcn.cloud.api.api.commons.OmniTaskState.Entry.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getLastUsedFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -512,14 +505,11 @@ private static final long serialVersionUID = 0L;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.timesUsed_ = timesUsed_;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.lastUsed_ = lastUsedBuilder_ == null
               ? lastUsed_
               : lastUsedBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -859,10 +849,8 @@ private static final long serialVersionUID = 0L;
         } else {
           lastUsedBuilder_.mergeFrom(value);
         }
-        if (lastUsed_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -993,7 +981,6 @@ private static final long serialVersionUID = 0L;
 
   }
 
-  private int bitField0_;
   public static final int DESTINATIONS_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.commons.OmniTaskState.Entry> destinations_;
@@ -1129,7 +1116,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasRuleSet() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return ruleSet_ != null;
   }
   /**
    * <pre>
@@ -1177,7 +1164,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < sources_.size(); i++) {
       output.writeMessage(2, sources_.get(i));
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (ruleSet_ != null) {
       output.writeMessage(3, getRuleSet());
     }
     getUnknownFields().writeTo(output);
@@ -1197,7 +1184,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, sources_.get(i));
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (ruleSet_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getRuleSet());
     }
@@ -1371,21 +1358,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.OmniTaskState.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getDestinationsFieldBuilder();
-        getSourcesFieldBuilder();
-        getRuleSetFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -1465,14 +1444,11 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.commons.OmniTaskState result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.ruleSet_ = ruleSetBuilder_ == null
             ? ruleSet_
             : ruleSetBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -2365,10 +2341,8 @@ private static final long serialVersionUID = 0L;
       } else {
         ruleSetBuilder_.mergeFrom(value);
       }
-      if (ruleSet_ != null) {
-        bitField0_ |= 0x00000004;
-        onChanged();
-      }
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
