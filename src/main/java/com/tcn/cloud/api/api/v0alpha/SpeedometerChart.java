@@ -41,7 +41,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.SpeedometerChart.class, com.tcn.cloud.api.api.v0alpha.SpeedometerChart.Builder.class);
   }
 
-  private int bitField0_;
   public static final int DATA_POINT_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object dataPointId_ = "";
@@ -128,7 +127,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasWarningThreshold() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return warningThreshold_ != null;
   }
   /**
    * <code>.api.v0alpha.Threshold warning_threshold = 3 [json_name = "warningThreshold"];</code>
@@ -154,7 +153,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasDangerThreshold() {
-    return ((bitField0_ & 0x00000002) != 0);
+    return dangerThreshold_ != null;
   }
   /**
    * <code>.api.v0alpha.Threshold danger_threshold = 4 [json_name = "dangerThreshold"];</code>
@@ -180,7 +179,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasMaxThreshold() {
-    return ((bitField0_ & 0x00000004) != 0);
+    return maxThreshold_ != null;
   }
   /**
    * <code>.api.v0alpha.Threshold max_threshold = 5 [json_name = "maxThreshold"];</code>
@@ -257,13 +256,13 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(label_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, label_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (warningThreshold_ != null) {
       output.writeMessage(3, getWarningThreshold());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (dangerThreshold_ != null) {
       output.writeMessage(4, getDangerThreshold());
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
+    if (maxThreshold_ != null) {
       output.writeMessage(5, getMaxThreshold());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(suffixLabel_)) {
@@ -284,15 +283,15 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(label_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, label_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (warningThreshold_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getWarningThreshold());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (dangerThreshold_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getDangerThreshold());
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
+    if (maxThreshold_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getMaxThreshold());
     }
@@ -483,21 +482,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.SpeedometerChart.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getWarningThresholdFieldBuilder();
-        getDangerThresholdFieldBuilder();
-        getMaxThresholdFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -560,29 +551,24 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.label_ = label_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.warningThreshold_ = warningThresholdBuilder_ == null
             ? warningThreshold_
             : warningThresholdBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.dangerThreshold_ = dangerThresholdBuilder_ == null
             ? dangerThreshold_
             : dangerThresholdBuilder_.build();
-        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.maxThreshold_ = maxThresholdBuilder_ == null
             ? maxThreshold_
             : maxThresholdBuilder_.build();
-        to_bitField0_ |= 0x00000004;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.suffixLabel_ = suffixLabel_;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -942,10 +928,8 @@ private static final long serialVersionUID = 0L;
       } else {
         warningThresholdBuilder_.mergeFrom(value);
       }
-      if (warningThreshold_ != null) {
-        bitField0_ |= 0x00000004;
-        onChanged();
-      }
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -1063,10 +1047,8 @@ private static final long serialVersionUID = 0L;
       } else {
         dangerThresholdBuilder_.mergeFrom(value);
       }
-      if (dangerThreshold_ != null) {
-        bitField0_ |= 0x00000008;
-        onChanged();
-      }
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -1184,10 +1166,8 @@ private static final long serialVersionUID = 0L;
       } else {
         maxThresholdBuilder_.mergeFrom(value);
       }
-      if (maxThreshold_ != null) {
-        bitField0_ |= 0x00000010;
-        onChanged();
-      }
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**

@@ -44,6 +44,16 @@ public final class AutoEvaluationProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_scorecards_DeleteAutoEvaluationResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_scorecards_StreamAutoEvaluationsRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_scorecards_StreamAutoEvaluationsRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_scorecards_StreamAutoEvaluationsResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_scorecards_StreamAutoEvaluationsResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -70,12 +80,17 @@ public final class AutoEvaluationProto {
       " \001(\003R\020autoEvaluationId\"d\n\034DeleteAutoEval" +
       "uationResponse\022D\n\017auto_evaluation\030\001 \001(\0132" +
       "\033.api.commons.AutoEvaluationR\016autoEvalua" +
-      "tionB\276\001\n)com.tcn.cloud.api.api.v1alpha1." +
-      "scorecardsB\023AutoEvaluationProtoP\001\242\002\003AVS\252" +
-      "\002\027Api.V1alpha1.Scorecards\312\002\027Api\\V1alpha1" +
-      "\\Scorecards\342\002#Api\\V1alpha1\\Scorecards\\GP" +
-      "BMetadata\352\002\031Api::V1alpha1::Scorecardsb\006p" +
-      "roto3"
+      "tion\"\177\n\034StreamAutoEvaluationsRequest\022#\n\r" +
+      "scorecard_ids\030\002 \003(\003R\014scorecardIds\022:\n\014com" +
+      "pleted_at\030\003 \001(\0132\027.api.commons.TimeFilter" +
+      "R\013completedAt\"e\n\035StreamAutoEvaluationsRe" +
+      "sponse\022D\n\017auto_evaluation\030\001 \001(\0132\033.api.co" +
+      "mmons.AutoEvaluationR\016autoEvaluationB\276\001\n" +
+      ")com.tcn.cloud.api.api.v1alpha1.scorecar" +
+      "dsB\023AutoEvaluationProtoP\001\242\002\003AVS\252\002\027Api.V1" +
+      "alpha1.Scorecards\312\002\027Api\\V1alpha1\\Scoreca" +
+      "rds\342\002#Api\\V1alpha1\\Scorecards\\GPBMetadat" +
+      "a\352\002\031Api::V1alpha1::Scorecardsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -117,6 +132,18 @@ public final class AutoEvaluationProto {
     internal_static_api_v1alpha1_scorecards_DeleteAutoEvaluationResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_scorecards_DeleteAutoEvaluationResponse_descriptor,
+        new java.lang.String[] { "AutoEvaluation", });
+    internal_static_api_v1alpha1_scorecards_StreamAutoEvaluationsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_api_v1alpha1_scorecards_StreamAutoEvaluationsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_scorecards_StreamAutoEvaluationsRequest_descriptor,
+        new java.lang.String[] { "ScorecardIds", "CompletedAt", });
+    internal_static_api_v1alpha1_scorecards_StreamAutoEvaluationsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_api_v1alpha1_scorecards_StreamAutoEvaluationsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_scorecards_StreamAutoEvaluationsResponse_descriptor,
         new java.lang.String[] { "AutoEvaluation", });
     com.tcn.cloud.api.api.commons.ScorecardsProto.getDescriptor();
   }

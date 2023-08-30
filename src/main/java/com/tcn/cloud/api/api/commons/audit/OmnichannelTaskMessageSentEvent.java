@@ -42,7 +42,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.audit.OmnichannelTaskMessageSentEvent.class, com.tcn.cloud.api.api.commons.audit.OmnichannelTaskMessageSentEvent.Builder.class);
   }
 
-  private int bitField0_;
   public static final int TASK_SID_FIELD_NUMBER = 1;
   private long taskSid_ = 0L;
   /**
@@ -115,7 +114,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCampaign() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return campaign_ != null;
   }
   /**
    * <pre>
@@ -153,7 +152,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasMessage() {
-    return ((bitField0_ & 0x00000002) != 0);
+    return message_ != null;
   }
   /**
    * <pre>
@@ -191,7 +190,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasTask() {
-    return ((bitField0_ & 0x00000004) != 0);
+    return task_ != null;
   }
   /**
    * <pre>
@@ -243,13 +242,13 @@ private static final long serialVersionUID = 0L;
     if (messageUnits_ != 0L) {
       output.writeInt64(4, messageUnits_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (campaign_ != null) {
       output.writeMessage(5, getCampaign());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (message_ != null) {
       output.writeMessage(6, getMessage());
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
+    if (task_ != null) {
       output.writeMessage(7, getTask());
     }
     getUnknownFields().writeTo(output);
@@ -277,15 +276,15 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(4, messageUnits_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (campaign_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getCampaign());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (message_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, getMessage());
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
+    if (task_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, getTask());
     }
@@ -485,21 +484,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.audit.OmnichannelTaskMessageSentEvent.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getCampaignFieldBuilder();
-        getMessageFieldBuilder();
-        getTaskFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -569,26 +560,21 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.messageUnits_ = messageUnits_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.campaign_ = campaignBuilder_ == null
             ? campaign_
             : campaignBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.message_ = messageBuilder_ == null
             ? message_
             : messageBuilder_.build();
-        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.task_ = taskBuilder_ == null
             ? task_
             : taskBuilder_.build();
-        to_bitField0_ |= 0x00000004;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1002,10 +988,8 @@ private static final long serialVersionUID = 0L;
       } else {
         campaignBuilder_.mergeFrom(value);
       }
-      if (campaign_ != null) {
-        bitField0_ |= 0x00000010;
-        onChanged();
-      }
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -1159,10 +1143,8 @@ private static final long serialVersionUID = 0L;
       } else {
         messageBuilder_.mergeFrom(value);
       }
-      if (message_ != null) {
-        bitField0_ |= 0x00000020;
-        onChanged();
-      }
+      bitField0_ |= 0x00000020;
+      onChanged();
       return this;
     }
     /**
@@ -1316,10 +1298,8 @@ private static final long serialVersionUID = 0L;
       } else {
         taskBuilder_.mergeFrom(value);
       }
-      if (task_ != null) {
-        bitField0_ |= 0x00000040;
-        onChanged();
-      }
+      bitField0_ |= 0x00000040;
+      onChanged();
       return this;
     }
     /**

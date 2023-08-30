@@ -41,7 +41,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.LoginEvent.class, com.tcn.cloud.api.api.v0alpha.LoginEvent.Builder.class);
   }
 
-  private int bitField0_;
   public static final int LOGIN_LOG_SID_FIELD_NUMBER = 1;
   private long loginLogSid_ = 0L;
   /**
@@ -200,7 +199,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasDateAttempted() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return dateAttempted_ != null;
   }
   /**
    * <code>.google.protobuf.Timestamp date_attempted = 7 [json_name = "dateAttempted"];</code>
@@ -250,7 +249,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(notes_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 6, notes_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (dateAttempted_ != null) {
       output.writeMessage(7, getDateAttempted());
     }
     getUnknownFields().writeTo(output);
@@ -283,7 +282,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(notes_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, notes_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (dateAttempted_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, getDateAttempted());
     }
@@ -468,19 +467,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.LoginEvent.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getDateAttemptedFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -548,14 +541,11 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.notes_ = notes_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.dateAttempted_ = dateAttemptedBuilder_ == null
             ? dateAttempted_
             : dateAttemptedBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1087,10 +1077,8 @@ private static final long serialVersionUID = 0L;
       } else {
         dateAttemptedBuilder_.mergeFrom(value);
       }
-      if (dateAttempted_ != null) {
-        bitField0_ |= 0x00000040;
-        onChanged();
-      }
+      bitField0_ |= 0x00000040;
+      onChanged();
       return this;
     }
     /**

@@ -42,7 +42,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingActivity.class, com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingActivity.Builder.class);
   }
 
-  private int bitField0_;
   public static final int SCHEDULING_ACTIVITY_SID_FIELD_NUMBER = 1;
   private long schedulingActivitySid_ = 0L;
   /**
@@ -86,7 +85,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasActivitySid() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return activitySid_ != null;
   }
   /**
    * <pre>
@@ -126,7 +125,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasMemberNonSkillActivity() {
-    return ((bitField0_ & 0x00000002) != 0);
+    return memberNonSkillActivity_ != null;
   }
   /**
    * <pre>
@@ -172,10 +171,10 @@ private static final long serialVersionUID = 0L;
     if (isSkillActivity_ != false) {
       output.writeBool(2, isSkillActivity_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (activitySid_ != null) {
       output.writeMessage(3, getActivitySid());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (memberNonSkillActivity_ != null) {
       output.writeMessage(4, getMemberNonSkillActivity());
     }
     getUnknownFields().writeTo(output);
@@ -195,11 +194,11 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(2, isSkillActivity_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (activitySid_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getActivitySid());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (memberNonSkillActivity_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getMemberNonSkillActivity());
     }
@@ -380,20 +379,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingActivity.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getActivitySidFieldBuilder();
-        getMemberNonSkillActivityFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -450,20 +442,16 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.isSkillActivity_ = isSkillActivity_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.activitySid_ = activitySidBuilder_ == null
             ? activitySid_
             : activitySidBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.memberNonSkillActivity_ = memberNonSkillActivityBuilder_ == null
             ? memberNonSkillActivity_
             : memberNonSkillActivityBuilder_.build();
-        to_bitField0_ |= 0x00000002;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -768,10 +756,8 @@ private static final long serialVersionUID = 0L;
       } else {
         activitySidBuilder_.mergeFrom(value);
       }
-      if (activitySid_ != null) {
-        bitField0_ |= 0x00000004;
-        onChanged();
-      }
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -929,10 +915,8 @@ private static final long serialVersionUID = 0L;
       } else {
         memberNonSkillActivityBuilder_.mergeFrom(value);
       }
-      if (memberNonSkillActivity_ != null) {
-        bitField0_ |= 0x00000008;
-        onChanged();
-      }
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**

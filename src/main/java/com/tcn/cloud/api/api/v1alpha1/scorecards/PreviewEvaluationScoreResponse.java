@@ -38,7 +38,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.scorecards.PreviewEvaluationScoreResponse.class, com.tcn.cloud.api.api.v1alpha1.scorecards.PreviewEvaluationScoreResponse.Builder.class);
   }
 
-  private int bitField0_;
   public static final int EVALUATION_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.api.commons.Evaluation evaluation_;
   /**
@@ -51,7 +50,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasEvaluation() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return evaluation_ != null;
   }
   /**
    * <pre>
@@ -91,7 +90,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (evaluation_ != null) {
       output.writeMessage(1, getEvaluation());
     }
     getUnknownFields().writeTo(output);
@@ -103,7 +102,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (evaluation_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getEvaluation());
     }
@@ -261,19 +260,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.scorecards.PreviewEvaluationScoreResponse.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getEvaluationFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -317,14 +310,11 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.scorecards.PreviewEvaluationScoreResponse result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.evaluation_ = evaluationBuilder_ == null
             ? evaluation_
             : evaluationBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -510,10 +500,8 @@ private static final long serialVersionUID = 0L;
       } else {
         evaluationBuilder_.mergeFrom(value);
       }
-      if (evaluation_ != null) {
-        bitField0_ |= 0x00000001;
-        onChanged();
-      }
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**

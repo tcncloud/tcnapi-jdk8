@@ -20,6 +20,21 @@ public final class OmniProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_commons_workflows_OmniNodePrompt_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_workflows_OmniNodeSendMessage_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_workflows_OmniNodeSendMessage_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_workflows_OmniNodeUserInput_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_workflows_OmniNodeUserInput_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_workflows_OmniNodeBranching_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_workflows_OmniNodeBranching_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_commons_workflows_OmniNodeSetSkill_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -29,6 +44,11 @@ public final class OmniProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_commons_workflows_OmniNodeToAgent_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_workflows_OmniNodeToMatcher_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_workflows_OmniNodeToMatcher_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_commons_workflows_OmniNodeError_descriptor;
   static final 
@@ -66,24 +86,30 @@ public final class OmniProto {
       "\n api/commons/workflows/omni.proto\022\025api." +
       "commons.workflows\"]\n\016OmniNodePrompt\022\026\n\006p" +
       "rompt\030\001 \001(\tR\006prompt\022\031\n\010store_to\030\002 \001(\tR\007s" +
-      "toreTo\022\030\n\007options\030\003 \003(\tR\007options\"(\n\020Omni" +
-      "NodeSetSkill\022\024\n\005skill\030\001 \001(\tR\005skill\"\021\n\017Om" +
-      "niNodeToAgent\"%\n\rOmniNodeError\022\024\n\005error\030" +
-      "\001 \001(\tR\005error\"\332\001\n\017OmniNodeWebhook\022\020\n\003url\030" +
-      "\001 \001(\tR\003url\022\026\n\006method\030\002 \001(\tR\006method\022\022\n\004bo" +
-      "dy\030\003 \001(\tR\004body\022M\n\007headers\030\004 \003(\01323.api.co" +
-      "mmons.workflows.OmniNodeWebhook.HeadersE" +
-      "ntryR\007headers\032:\n\014HeadersEntry\022\020\n\003key\030\001 \001" +
-      "(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\"[\n\021Omn" +
-      "iNodeScrublist\022F\n\006action\030\001 \001(\0162..api.com" +
-      "mons.workflows.OmniNodeScrublistActionR\006" +
-      "action\"\031\n\027OmniNodeEndConversation*.\n\027Omn" +
-      "iNodeScrublistAction\022\007\n\003ADD\020\000\022\n\n\006REMOVE\020" +
-      "\001B\252\001\n\'com.tcn.cloud.api.api.commons.work" +
-      "flowsB\tOmniProtoP\001\242\002\003ACW\252\002\025Api.Commons.W" +
-      "orkflows\312\002\025Api\\Commons\\Workflows\342\002!Api\\C" +
-      "ommons\\Workflows\\GPBMetadata\352\002\027Api::Comm" +
-      "ons::Workflowsb\006proto3"
+      "toreTo\022\030\n\007options\030\003 \003(\tR\007options\"G\n\023Omni" +
+      "NodeSendMessage\022\026\n\006prompt\030\001 \001(\tR\006prompt\022" +
+      "\030\n\007options\030\002 \003(\tR\007options\".\n\021OmniNodeUse" +
+      "rInput\022\031\n\010store_id\030\001 \001(\tR\007storeId\"H\n\021Omn" +
+      "iNodeBranching\022\031\n\010store_id\030\001 \001(\tR\007storeI" +
+      "d\022\030\n\007options\030\002 \003(\tR\007options\"D\n\020OmniNodeS" +
+      "etSkill\022\030\n\005skill\030\001 \001(\tB\002\030\001R\005skill\022\026\n\006ski" +
+      "lls\030\002 \003(\tR\006skills\"\021\n\017OmniNodeToAgent\"\023\n\021" +
+      "OmniNodeToMatcher\"%\n\rOmniNodeError\022\024\n\005er" +
+      "ror\030\001 \001(\tR\005error\"\332\001\n\017OmniNodeWebhook\022\020\n\003" +
+      "url\030\001 \001(\tR\003url\022\026\n\006method\030\002 \001(\tR\006method\022\022" +
+      "\n\004body\030\003 \001(\tR\004body\022M\n\007headers\030\004 \003(\01323.ap" +
+      "i.commons.workflows.OmniNodeWebhook.Head" +
+      "ersEntryR\007headers\032:\n\014HeadersEntry\022\020\n\003key" +
+      "\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\"[\n" +
+      "\021OmniNodeScrublist\022F\n\006action\030\001 \001(\0162..api" +
+      ".commons.workflows.OmniNodeScrublistActi" +
+      "onR\006action\"\031\n\027OmniNodeEndConversation*.\n" +
+      "\027OmniNodeScrublistAction\022\007\n\003ADD\020\000\022\n\n\006REM" +
+      "OVE\020\001B\252\001\n\'com.tcn.cloud.api.api.commons." +
+      "workflowsB\tOmniProtoP\001\242\002\003ACW\252\002\025Api.Commo" +
+      "ns.Workflows\312\002\025Api\\Commons\\Workflows\342\002!A" +
+      "pi\\Commons\\Workflows\\GPBMetadata\352\002\027Api::" +
+      "Commons::Workflowsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -95,26 +121,50 @@ public final class OmniProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_workflows_OmniNodePrompt_descriptor,
         new java.lang.String[] { "Prompt", "StoreTo", "Options", });
-    internal_static_api_commons_workflows_OmniNodeSetSkill_descriptor =
+    internal_static_api_commons_workflows_OmniNodeSendMessage_descriptor =
       getDescriptor().getMessageTypes().get(1);
+    internal_static_api_commons_workflows_OmniNodeSendMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_workflows_OmniNodeSendMessage_descriptor,
+        new java.lang.String[] { "Prompt", "Options", });
+    internal_static_api_commons_workflows_OmniNodeUserInput_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_api_commons_workflows_OmniNodeUserInput_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_workflows_OmniNodeUserInput_descriptor,
+        new java.lang.String[] { "StoreId", });
+    internal_static_api_commons_workflows_OmniNodeBranching_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_api_commons_workflows_OmniNodeBranching_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_workflows_OmniNodeBranching_descriptor,
+        new java.lang.String[] { "StoreId", "Options", });
+    internal_static_api_commons_workflows_OmniNodeSetSkill_descriptor =
+      getDescriptor().getMessageTypes().get(4);
     internal_static_api_commons_workflows_OmniNodeSetSkill_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_workflows_OmniNodeSetSkill_descriptor,
-        new java.lang.String[] { "Skill", });
+        new java.lang.String[] { "Skill", "Skills", });
     internal_static_api_commons_workflows_OmniNodeToAgent_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_api_commons_workflows_OmniNodeToAgent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_workflows_OmniNodeToAgent_descriptor,
         new java.lang.String[] { });
+    internal_static_api_commons_workflows_OmniNodeToMatcher_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_api_commons_workflows_OmniNodeToMatcher_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_workflows_OmniNodeToMatcher_descriptor,
+        new java.lang.String[] { });
     internal_static_api_commons_workflows_OmniNodeError_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_api_commons_workflows_OmniNodeError_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_workflows_OmniNodeError_descriptor,
         new java.lang.String[] { "Error", });
     internal_static_api_commons_workflows_OmniNodeWebhook_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_api_commons_workflows_OmniNodeWebhook_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_workflows_OmniNodeWebhook_descriptor,
@@ -126,13 +176,13 @@ public final class OmniProto {
         internal_static_api_commons_workflows_OmniNodeWebhook_HeadersEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_api_commons_workflows_OmniNodeScrublist_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_api_commons_workflows_OmniNodeScrublist_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_workflows_OmniNodeScrublist_descriptor,
         new java.lang.String[] { "Action", });
     internal_static_api_commons_workflows_OmniNodeEndConversation_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_api_commons_workflows_OmniNodeEndConversation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_workflows_OmniNodeEndConversation_descriptor,

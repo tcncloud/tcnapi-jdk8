@@ -42,7 +42,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.wfm.UpdateCallCenterNodeReq.class, com.tcn.cloud.api.api.v1alpha1.wfm.UpdateCallCenterNodeReq.Builder.class);
   }
 
-  private int bitField0_;
   public static final int NODE_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.api.v1alpha1.wfm.CallCenterNode node_;
   /**
@@ -56,7 +55,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasNode() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return node_ != null;
   }
   /**
    * <pre>
@@ -98,7 +97,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (node_ != null) {
       output.writeMessage(1, getNode());
     }
     getUnknownFields().writeTo(output);
@@ -110,7 +109,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (node_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getNode());
     }
@@ -272,19 +271,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.UpdateCallCenterNodeReq.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getNodeFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -328,14 +321,11 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateCallCenterNodeReq result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.node_ = nodeBuilder_ == null
             ? node_
             : nodeBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -526,10 +516,8 @@ private static final long serialVersionUID = 0L;
       } else {
         nodeBuilder_.mergeFrom(value);
       }
-      if (node_ != null) {
-        bitField0_ |= 0x00000001;
-        onChanged();
-      }
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**

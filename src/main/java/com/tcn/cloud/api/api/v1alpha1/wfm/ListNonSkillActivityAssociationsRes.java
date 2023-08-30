@@ -45,8 +45,7 @@ private static final long serialVersionUID = 0L;
 
   public static final int NON_SKILL_ACTIVITY_SIDS_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private com.google.protobuf.Internal.LongList nonSkillActivitySids_ =
-      emptyLongList();
+  private com.google.protobuf.Internal.LongList nonSkillActivitySids_;
   /**
    * <pre>
    * ID of the non skill activities found to have the &#64;relationship_type with the &#64;associated_entity in the request.
@@ -324,17 +323,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivityAssociationsRes buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivityAssociationsRes result = new com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivityAssociationsRes(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivityAssociationsRes result) {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        nonSkillActivitySids_.makeImmutable();
+        bitField0_ = (bitField0_ & ~0x00000001);
+      }
+      result.nonSkillActivitySids_ = nonSkillActivitySids_;
+    }
+
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivityAssociationsRes result) {
       int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        nonSkillActivitySids_.makeImmutable();
-        result.nonSkillActivitySids_ = nonSkillActivitySids_;
-      }
     }
 
     @java.lang.Override
@@ -384,8 +388,7 @@ private static final long serialVersionUID = 0L;
       if (!other.nonSkillActivitySids_.isEmpty()) {
         if (nonSkillActivitySids_.isEmpty()) {
           nonSkillActivitySids_ = other.nonSkillActivitySids_;
-          nonSkillActivitySids_.makeImmutable();
-          bitField0_ |= 0x00000001;
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           ensureNonSkillActivitySidsIsMutable();
           nonSkillActivitySids_.addAll(other.nonSkillActivitySids_);
@@ -453,10 +456,10 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Internal.LongList nonSkillActivitySids_ = emptyLongList();
     private void ensureNonSkillActivitySidsIsMutable() {
-      if (!nonSkillActivitySids_.isModifiable()) {
-        nonSkillActivitySids_ = makeMutableCopy(nonSkillActivitySids_);
+      if (!((bitField0_ & 0x00000001) != 0)) {
+        nonSkillActivitySids_ = mutableCopy(nonSkillActivitySids_);
+        bitField0_ |= 0x00000001;
       }
-      bitField0_ |= 0x00000001;
     }
     /**
      * <pre>
@@ -468,8 +471,8 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Long>
         getNonSkillActivitySidsList() {
-      nonSkillActivitySids_.makeImmutable();
-      return nonSkillActivitySids_;
+      return ((bitField0_ & 0x00000001) != 0) ?
+               java.util.Collections.unmodifiableList(nonSkillActivitySids_) : nonSkillActivitySids_;
     }
     /**
      * <pre>
@@ -509,7 +512,6 @@ private static final long serialVersionUID = 0L;
 
       ensureNonSkillActivitySidsIsMutable();
       nonSkillActivitySids_.setLong(index, value);
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -526,7 +528,6 @@ private static final long serialVersionUID = 0L;
 
       ensureNonSkillActivitySidsIsMutable();
       nonSkillActivitySids_.addLong(value);
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -544,7 +545,6 @@ private static final long serialVersionUID = 0L;
       ensureNonSkillActivitySidsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, nonSkillActivitySids_);
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }

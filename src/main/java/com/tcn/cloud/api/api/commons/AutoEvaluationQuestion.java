@@ -106,8 +106,7 @@ private static final long serialVersionUID = 0L;
 
   public static final int FLAGGED_FIELD_NUMBER = 6;
   @SuppressWarnings("serial")
-  private com.google.protobuf.Internal.LongList flagged_ =
-      emptyLongList();
+  private com.google.protobuf.Internal.LongList flagged_;
   /**
    * <pre>
    * a subset of flag sids found.
@@ -557,9 +556,18 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.AutoEvaluationQuestion buildPartial() {
       com.tcn.cloud.api.api.commons.AutoEvaluationQuestion result = new com.tcn.cloud.api.api.commons.AutoEvaluationQuestion(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.commons.AutoEvaluationQuestion result) {
+      if (((bitField0_ & 0x00000010) != 0)) {
+        flagged_.makeImmutable();
+        bitField0_ = (bitField0_ & ~0x00000010);
+      }
+      result.flagged_ = flagged_;
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.commons.AutoEvaluationQuestion result) {
@@ -575,10 +583,6 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.autoQuestionId_ = autoQuestionId_;
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        flagged_.makeImmutable();
-        result.flagged_ = flagged_;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.passed_ = passed_;
@@ -653,8 +657,7 @@ private static final long serialVersionUID = 0L;
       if (!other.flagged_.isEmpty()) {
         if (flagged_.isEmpty()) {
           flagged_ = other.flagged_;
-          flagged_.makeImmutable();
-          bitField0_ |= 0x00000010;
+          bitField0_ = (bitField0_ & ~0x00000010);
         } else {
           ensureFlaggedIsMutable();
           flagged_.addAll(other.flagged_);
@@ -950,10 +953,10 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Internal.LongList flagged_ = emptyLongList();
     private void ensureFlaggedIsMutable() {
-      if (!flagged_.isModifiable()) {
-        flagged_ = makeMutableCopy(flagged_);
+      if (!((bitField0_ & 0x00000010) != 0)) {
+        flagged_ = mutableCopy(flagged_);
+        bitField0_ |= 0x00000010;
       }
-      bitField0_ |= 0x00000010;
     }
     /**
      * <pre>
@@ -965,8 +968,8 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Long>
         getFlaggedList() {
-      flagged_.makeImmutable();
-      return flagged_;
+      return ((bitField0_ & 0x00000010) != 0) ?
+               java.util.Collections.unmodifiableList(flagged_) : flagged_;
     }
     /**
      * <pre>
@@ -1006,7 +1009,6 @@ private static final long serialVersionUID = 0L;
 
       ensureFlaggedIsMutable();
       flagged_.setLong(index, value);
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1023,7 +1025,6 @@ private static final long serialVersionUID = 0L;
 
       ensureFlaggedIsMutable();
       flagged_.addLong(value);
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1041,7 +1042,6 @@ private static final long serialVersionUID = 0L;
       ensureFlaggedIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, flagged_);
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }

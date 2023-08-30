@@ -47,7 +47,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.audit.AuditEvent.class, com.tcn.cloud.api.api.commons.audit.AuditEvent.Builder.class);
   }
 
-  private int bitField0_;
   private int eventCase_ = 0;
   @SuppressWarnings("serial")
   private java.lang.Object event_;
@@ -139,6 +138,7 @@ private static final long serialVersionUID = 0L;
     TICKET_EVENT(601),
     COMPLIANCE_RND_QUERY_EVENT(700),
     COMPLIANCE_RND_QUERY_CACHED_EVENT(701),
+    AGENT_TRAINING_CREATE_LEARNING_OPPORTUNITY_EVENT(800),
     EVENT_NOT_SET(0);
     private final int value;
     private EventCase(int value) {
@@ -241,6 +241,7 @@ private static final long serialVersionUID = 0L;
         case 601: return TICKET_EVENT;
         case 700: return COMPLIANCE_RND_QUERY_EVENT;
         case 701: return COMPLIANCE_RND_QUERY_CACHED_EVENT;
+        case 800: return AGENT_TRAINING_CREATE_LEARNING_OPPORTUNITY_EVENT;
         case 0: return EVENT_NOT_SET;
         default: return null;
       }
@@ -409,7 +410,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasEventTime() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return eventTime_ != null;
   }
   /**
    * <pre>
@@ -4109,6 +4110,52 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.audit.ComplianceRndQueryEvent.getDefaultInstance();
   }
 
+  public static final int AGENT_TRAINING_CREATE_LEARNING_OPPORTUNITY_EVENT_FIELD_NUMBER = 800;
+  /**
+   * <pre>
+   * Agent Training events class 800
+   * learning opportunity created event
+   * </pre>
+   *
+   * <code>.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent agent_training_create_learning_opportunity_event = 800 [json_name = "agentTrainingCreateLearningOpportunityEvent"];</code>
+   * @return Whether the agentTrainingCreateLearningOpportunityEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasAgentTrainingCreateLearningOpportunityEvent() {
+    return eventCase_ == 800;
+  }
+  /**
+   * <pre>
+   * Agent Training events class 800
+   * learning opportunity created event
+   * </pre>
+   *
+   * <code>.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent agent_training_create_learning_opportunity_event = 800 [json_name = "agentTrainingCreateLearningOpportunityEvent"];</code>
+   * @return The agentTrainingCreateLearningOpportunityEvent.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent getAgentTrainingCreateLearningOpportunityEvent() {
+    if (eventCase_ == 800) {
+       return (com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Agent Training events class 800
+   * learning opportunity created event
+   * </pre>
+   *
+   * <code>.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent agent_training_create_learning_opportunity_event = 800 [json_name = "agentTrainingCreateLearningOpportunityEvent"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEventOrBuilder getAgentTrainingCreateLearningOpportunityEventOrBuilder() {
+    if (eventCase_ == 800) {
+       return (com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -4132,7 +4179,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, clusterId_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (eventTime_ != null) {
       output.writeMessage(4, getEventTime());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(auditId_)) {
@@ -4396,6 +4443,9 @@ private static final long serialVersionUID = 0L;
     if (eventCase_ == 701) {
       output.writeMessage(701, (com.tcn.cloud.api.api.commons.audit.ComplianceRndQueryEvent) event_);
     }
+    if (eventCase_ == 800) {
+      output.writeMessage(800, (com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent) event_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -4414,7 +4464,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, clusterId_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (eventTime_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getEventTime());
     }
@@ -4764,6 +4814,10 @@ private static final long serialVersionUID = 0L;
     if (eventCase_ == 701) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(701, (com.tcn.cloud.api.api.commons.audit.ComplianceRndQueryEvent) event_);
+    }
+    if (eventCase_ == 800) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(800, (com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent) event_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -5136,6 +5190,10 @@ private static final long serialVersionUID = 0L;
         if (!getComplianceRndQueryCachedEvent()
             .equals(other.getComplianceRndQueryCachedEvent())) return false;
         break;
+      case 800:
+        if (!getAgentTrainingCreateLearningOpportunityEvent()
+            .equals(other.getAgentTrainingCreateLearningOpportunityEvent())) return false;
+        break;
       case 0:
       default:
     }
@@ -5505,6 +5563,10 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + COMPLIANCE_RND_QUERY_CACHED_EVENT_FIELD_NUMBER;
         hash = (53 * hash) + getComplianceRndQueryCachedEvent().hashCode();
         break;
+      case 800:
+        hash = (37 * hash) + AGENT_TRAINING_CREATE_LEARNING_OPPORTUNITY_EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getAgentTrainingCreateLearningOpportunityEvent().hashCode();
+        break;
       case 0:
       default:
     }
@@ -5631,19 +5693,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.audit.AuditEvent.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getEventTimeFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -5916,6 +5972,9 @@ private static final long serialVersionUID = 0L;
       if (complianceRndQueryCachedEventBuilder_ != null) {
         complianceRndQueryCachedEventBuilder_.clear();
       }
+      if (agentTrainingCreateLearningOpportunityEventBuilder_ != null) {
+        agentTrainingCreateLearningOpportunityEventBuilder_.clear();
+      }
       eventCase_ = 0;
       event_ = null;
       return this;
@@ -5963,12 +6022,10 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.clusterId_ = clusterId_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.eventTime_ = eventTimeBuilder_ == null
             ? eventTime_
             : eventTimeBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.auditId_ = auditId_;
@@ -5976,7 +6033,6 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.eventType_ = eventType_;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     private void buildPartial1(com.tcn.cloud.api.api.commons.audit.AuditEvent result) {
@@ -6329,6 +6385,10 @@ private static final long serialVersionUID = 0L;
       if (eventCase_ == 701 &&
           complianceRndQueryCachedEventBuilder_ != null) {
         result.event_ = complianceRndQueryCachedEventBuilder_.build();
+      }
+      if (eventCase_ == 800 &&
+          agentTrainingCreateLearningOpportunityEventBuilder_ != null) {
+        result.event_ = agentTrainingCreateLearningOpportunityEventBuilder_.build();
       }
     }
 
@@ -6741,6 +6801,10 @@ private static final long serialVersionUID = 0L;
         }
         case COMPLIANCE_RND_QUERY_CACHED_EVENT: {
           mergeComplianceRndQueryCachedEvent(other.getComplianceRndQueryCachedEvent());
+          break;
+        }
+        case AGENT_TRAINING_CREATE_LEARNING_OPPORTUNITY_EVENT: {
+          mergeAgentTrainingCreateLearningOpportunityEvent(other.getAgentTrainingCreateLearningOpportunityEvent());
           break;
         }
         case EVENT_NOT_SET: {
@@ -7400,6 +7464,13 @@ private static final long serialVersionUID = 0L;
               eventCase_ = 701;
               break;
             } // case 5610
+            case 6402: {
+              input.readMessage(
+                  getAgentTrainingCreateLearningOpportunityEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              eventCase_ = 800;
+              break;
+            } // case 6402
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -7796,10 +7867,8 @@ private static final long serialVersionUID = 0L;
       } else {
         eventTimeBuilder_.mergeFrom(value);
       }
-      if (eventTime_ != null) {
-        bitField0_ |= 0x00000008;
-        onChanged();
-      }
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -22995,6 +23064,193 @@ private static final long serialVersionUID = 0L;
       eventCase_ = 701;
       onChanged();
       return complianceRndQueryCachedEventBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent, com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent.Builder, com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEventOrBuilder> agentTrainingCreateLearningOpportunityEventBuilder_;
+    /**
+     * <pre>
+     * Agent Training events class 800
+     * learning opportunity created event
+     * </pre>
+     *
+     * <code>.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent agent_training_create_learning_opportunity_event = 800 [json_name = "agentTrainingCreateLearningOpportunityEvent"];</code>
+     * @return Whether the agentTrainingCreateLearningOpportunityEvent field is set.
+     */
+    @java.lang.Override
+    public boolean hasAgentTrainingCreateLearningOpportunityEvent() {
+      return eventCase_ == 800;
+    }
+    /**
+     * <pre>
+     * Agent Training events class 800
+     * learning opportunity created event
+     * </pre>
+     *
+     * <code>.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent agent_training_create_learning_opportunity_event = 800 [json_name = "agentTrainingCreateLearningOpportunityEvent"];</code>
+     * @return The agentTrainingCreateLearningOpportunityEvent.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent getAgentTrainingCreateLearningOpportunityEvent() {
+      if (agentTrainingCreateLearningOpportunityEventBuilder_ == null) {
+        if (eventCase_ == 800) {
+          return (com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent.getDefaultInstance();
+      } else {
+        if (eventCase_ == 800) {
+          return agentTrainingCreateLearningOpportunityEventBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Agent Training events class 800
+     * learning opportunity created event
+     * </pre>
+     *
+     * <code>.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent agent_training_create_learning_opportunity_event = 800 [json_name = "agentTrainingCreateLearningOpportunityEvent"];</code>
+     */
+    public Builder setAgentTrainingCreateLearningOpportunityEvent(com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent value) {
+      if (agentTrainingCreateLearningOpportunityEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        event_ = value;
+        onChanged();
+      } else {
+        agentTrainingCreateLearningOpportunityEventBuilder_.setMessage(value);
+      }
+      eventCase_ = 800;
+      return this;
+    }
+    /**
+     * <pre>
+     * Agent Training events class 800
+     * learning opportunity created event
+     * </pre>
+     *
+     * <code>.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent agent_training_create_learning_opportunity_event = 800 [json_name = "agentTrainingCreateLearningOpportunityEvent"];</code>
+     */
+    public Builder setAgentTrainingCreateLearningOpportunityEvent(
+        com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent.Builder builderForValue) {
+      if (agentTrainingCreateLearningOpportunityEventBuilder_ == null) {
+        event_ = builderForValue.build();
+        onChanged();
+      } else {
+        agentTrainingCreateLearningOpportunityEventBuilder_.setMessage(builderForValue.build());
+      }
+      eventCase_ = 800;
+      return this;
+    }
+    /**
+     * <pre>
+     * Agent Training events class 800
+     * learning opportunity created event
+     * </pre>
+     *
+     * <code>.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent agent_training_create_learning_opportunity_event = 800 [json_name = "agentTrainingCreateLearningOpportunityEvent"];</code>
+     */
+    public Builder mergeAgentTrainingCreateLearningOpportunityEvent(com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent value) {
+      if (agentTrainingCreateLearningOpportunityEventBuilder_ == null) {
+        if (eventCase_ == 800 &&
+            event_ != com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent.getDefaultInstance()) {
+          event_ = com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent.newBuilder((com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent) event_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          event_ = value;
+        }
+        onChanged();
+      } else {
+        if (eventCase_ == 800) {
+          agentTrainingCreateLearningOpportunityEventBuilder_.mergeFrom(value);
+        } else {
+          agentTrainingCreateLearningOpportunityEventBuilder_.setMessage(value);
+        }
+      }
+      eventCase_ = 800;
+      return this;
+    }
+    /**
+     * <pre>
+     * Agent Training events class 800
+     * learning opportunity created event
+     * </pre>
+     *
+     * <code>.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent agent_training_create_learning_opportunity_event = 800 [json_name = "agentTrainingCreateLearningOpportunityEvent"];</code>
+     */
+    public Builder clearAgentTrainingCreateLearningOpportunityEvent() {
+      if (agentTrainingCreateLearningOpportunityEventBuilder_ == null) {
+        if (eventCase_ == 800) {
+          eventCase_ = 0;
+          event_ = null;
+          onChanged();
+        }
+      } else {
+        if (eventCase_ == 800) {
+          eventCase_ = 0;
+          event_ = null;
+        }
+        agentTrainingCreateLearningOpportunityEventBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Agent Training events class 800
+     * learning opportunity created event
+     * </pre>
+     *
+     * <code>.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent agent_training_create_learning_opportunity_event = 800 [json_name = "agentTrainingCreateLearningOpportunityEvent"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent.Builder getAgentTrainingCreateLearningOpportunityEventBuilder() {
+      return getAgentTrainingCreateLearningOpportunityEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Agent Training events class 800
+     * learning opportunity created event
+     * </pre>
+     *
+     * <code>.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent agent_training_create_learning_opportunity_event = 800 [json_name = "agentTrainingCreateLearningOpportunityEvent"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEventOrBuilder getAgentTrainingCreateLearningOpportunityEventOrBuilder() {
+      if ((eventCase_ == 800) && (agentTrainingCreateLearningOpportunityEventBuilder_ != null)) {
+        return agentTrainingCreateLearningOpportunityEventBuilder_.getMessageOrBuilder();
+      } else {
+        if (eventCase_ == 800) {
+          return (com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Agent Training events class 800
+     * learning opportunity created event
+     * </pre>
+     *
+     * <code>.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent agent_training_create_learning_opportunity_event = 800 [json_name = "agentTrainingCreateLearningOpportunityEvent"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent, com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent.Builder, com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEventOrBuilder> 
+        getAgentTrainingCreateLearningOpportunityEventFieldBuilder() {
+      if (agentTrainingCreateLearningOpportunityEventBuilder_ == null) {
+        if (!(eventCase_ == 800)) {
+          event_ = com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent.getDefaultInstance();
+        }
+        agentTrainingCreateLearningOpportunityEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent, com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent.Builder, com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEventOrBuilder>(
+                (com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent) event_,
+                getParentForChildren(),
+                isClean());
+        event_ = null;
+      }
+      eventCase_ = 800;
+      onChanged();
+      return agentTrainingCreateLearningOpportunityEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

@@ -45,7 +45,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.SmsReceivedReplies.class, com.tcn.cloud.api.api.v0alpha.SmsReceivedReplies.Builder.class);
   }
 
-  private int bitField0_;
   public static final int SMS_RECEIVED_REPLIES_SID_FIELD_NUMBER = 1;
   private long smsReceivedRepliesSid_ = 0L;
   /**
@@ -232,7 +231,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasReceivedTime() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return receivedTime_ != null;
   }
   /**
    * <code>.google.protobuf.Timestamp received_time = 7 [json_name = "receivedTime"];</code>
@@ -400,7 +399,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(receivedReply_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 6, receivedReply_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (receivedTime_ != null) {
       output.writeMessage(7, getReceivedTime());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(analysisReport_)) {
@@ -447,7 +446,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(receivedReply_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, receivedReply_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (receivedTime_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, getReceivedTime());
     }
@@ -671,19 +670,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.SmsReceivedReplies.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getReceivedTimeFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -756,12 +749,10 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.receivedReply_ = receivedReply_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.receivedTime_ = receivedTimeBuilder_ == null
             ? receivedTime_
             : receivedTimeBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.analysisReport_ = analysisReport_;
@@ -778,7 +769,6 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000800) != 0)) {
         result.units_ = units_;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1396,10 +1386,8 @@ private static final long serialVersionUID = 0L;
       } else {
         receivedTimeBuilder_.mergeFrom(value);
       }
-      if (receivedTime_ != null) {
-        bitField0_ |= 0x00000040;
-        onChanged();
-      }
+      bitField0_ |= 0x00000040;
+      onChanged();
       return this;
     }
     /**

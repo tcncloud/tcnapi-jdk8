@@ -606,6 +606,16 @@ public interface GeneralSettingsOrBuilder extends
 
   /**
    * <pre>
+   * Control whether the reject option is available to the approvers.
+   * </pre>
+   *
+   * <code>bool disable_reject_option_for_approvers = 704 [json_name = "disableRejectOptionForApprovers"];</code>
+   * @return The disableRejectOptionForApprovers.
+   */
+  boolean getDisableRejectOptionForApprovers();
+
+  /**
+   * <pre>
    * Alphanumeric keypad properties. `Alphanumeric Keypad`
    * </pre>
    *
@@ -684,4 +694,34 @@ public interface GeneralSettingsOrBuilder extends
    * @return The enableAgentIntercom.
    */
   boolean getEnableAgentIntercom();
+
+  /**
+   * <pre>
+   * Enables the delivery of incoming calls to the agent
+   * depending on the dial status prior to them clicking "Dial".
+   * </pre>
+   *
+   * <code>.api.commons.org.GeneralSettings.PrepareStateCallDelivery prepare_state_call_delivery = 804 [json_name = "prepareStateCallDelivery"];</code>
+   * @return Whether the prepareStateCallDelivery field is set.
+   */
+  boolean hasPrepareStateCallDelivery();
+  /**
+   * <pre>
+   * Enables the delivery of incoming calls to the agent
+   * depending on the dial status prior to them clicking "Dial".
+   * </pre>
+   *
+   * <code>.api.commons.org.GeneralSettings.PrepareStateCallDelivery prepare_state_call_delivery = 804 [json_name = "prepareStateCallDelivery"];</code>
+   * @return The prepareStateCallDelivery.
+   */
+  com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDelivery getPrepareStateCallDelivery();
+  /**
+   * <pre>
+   * Enables the delivery of incoming calls to the agent
+   * depending on the dial status prior to them clicking "Dial".
+   * </pre>
+   *
+   * <code>.api.commons.org.GeneralSettings.PrepareStateCallDelivery prepare_state_call_delivery = 804 [json_name = "prepareStateCallDelivery"];</code>
+   */
+  com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDeliveryOrBuilder getPrepareStateCallDeliveryOrBuilder();
 }

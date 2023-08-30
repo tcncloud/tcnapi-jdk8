@@ -42,10 +42,6 @@ public interface EditAttributeOrBuilder extends
       getToValBytes();
 
   /**
-   * <pre>
-   *EditColumnType edit_column_type = 5;
-   * </pre>
-   *
    * <code>bool is_edited = 4 [json_name = "isEdited"];</code>
    * @return The isEdited.
    */

@@ -714,6 +714,15 @@ public enum EventType
    * <code>COMPLIANCE_RND_QUERY_CACHED_EVENT = 701;</code>
    */
   COMPLIANCE_RND_QUERY_CACHED_EVENT(701),
+  /**
+   * <pre>
+   * Agent Training
+   * create learning opportunity event
+   * </pre>
+   *
+   * <code>AGENT_TRAINING_CREATE_LEARNING_OPPORTUNITY_EVENT = 800;</code>
+   */
+  AGENT_TRAINING_CREATE_LEARNING_OPPORTUNITY_EVENT(800),
   UNRECOGNIZED(-1),
   ;
 
@@ -1409,6 +1418,15 @@ public enum EventType
    * <code>COMPLIANCE_RND_QUERY_CACHED_EVENT = 701;</code>
    */
   public static final int COMPLIANCE_RND_QUERY_CACHED_EVENT_VALUE = 701;
+  /**
+   * <pre>
+   * Agent Training
+   * create learning opportunity event
+   * </pre>
+   *
+   * <code>AGENT_TRAINING_CREATE_LEARNING_OPPORTUNITY_EVENT = 800;</code>
+   */
+  public static final int AGENT_TRAINING_CREATE_LEARNING_OPPORTUNITY_EVENT_VALUE = 800;
 
 
   public final int getNumber() {
@@ -1526,6 +1544,7 @@ public enum EventType
       case 602: return TICKET_CLOSE_EVENT;
       case 700: return COMPLIANCE_RND_QUERY_EVENT;
       case 701: return COMPLIANCE_RND_QUERY_CACHED_EVENT;
+      case 800: return AGENT_TRAINING_CREATE_LEARNING_OPPORTUNITY_EVENT;
       default: return null;
     }
   }

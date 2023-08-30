@@ -26,6 +26,7 @@ private static final long serialVersionUID = 0L;
     ticketSkills_ = java.util.Collections.emptyList();
     ticketSla_ = java.util.Collections.emptyList();
     assignOther_ = "";
+    ticketAction_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -48,7 +49,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.tickets.CreateTicketReq.class, com.tcn.cloud.api.api.v1alpha1.tickets.CreateTicketReq.Builder.class);
   }
 
-  private int bitField0_;
   public static final int TITLE_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object title_ = "";
@@ -170,7 +170,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasDueDate() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return dueDate_ != null;
   }
   /**
    * <pre>
@@ -444,6 +444,47 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int TICKET_ACTION_FIELD_NUMBER = 15;
+  @SuppressWarnings("serial")
+  private java.util.List<com.tcn.cloud.api.api.commons.TicketAction> ticketAction_;
+  /**
+   * <code>repeated .api.commons.TicketAction ticket_action = 15 [json_name = "ticketAction"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.api.commons.TicketAction> getTicketActionList() {
+    return ticketAction_;
+  }
+  /**
+   * <code>repeated .api.commons.TicketAction ticket_action = 15 [json_name = "ticketAction"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.tcn.cloud.api.api.commons.TicketActionOrBuilder> 
+      getTicketActionOrBuilderList() {
+    return ticketAction_;
+  }
+  /**
+   * <code>repeated .api.commons.TicketAction ticket_action = 15 [json_name = "ticketAction"];</code>
+   */
+  @java.lang.Override
+  public int getTicketActionCount() {
+    return ticketAction_.size();
+  }
+  /**
+   * <code>repeated .api.commons.TicketAction ticket_action = 15 [json_name = "ticketAction"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.TicketAction getTicketAction(int index) {
+    return ticketAction_.get(index);
+  }
+  /**
+   * <code>repeated .api.commons.TicketAction ticket_action = 15 [json_name = "ticketAction"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.TicketActionOrBuilder getTicketActionOrBuilder(
+      int index) {
+    return ticketAction_.get(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -467,7 +508,7 @@ private static final long serialVersionUID = 0L;
     if (projectSid_ != 0L) {
       output.writeInt64(3, projectSid_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (dueDate_ != null) {
       output.writeMessage(8, getDueDate());
     }
     for (int i = 0; i < metadata_.size(); i++) {
@@ -488,6 +529,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(assignOther_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 14, assignOther_);
     }
+    for (int i = 0; i < ticketAction_.size(); i++) {
+      output.writeMessage(15, ticketAction_.get(i));
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -507,7 +551,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(3, projectSid_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (dueDate_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, getDueDate());
     }
@@ -533,6 +577,10 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(assignOther_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, assignOther_);
+    }
+    for (int i = 0; i < ticketAction_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(15, ticketAction_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -572,6 +620,8 @@ private static final long serialVersionUID = 0L;
         != other.getAssignSelf()) return false;
     if (!getAssignOther()
         .equals(other.getAssignOther())) return false;
+    if (!getTicketActionList()
+        .equals(other.getTicketActionList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -614,6 +664,10 @@ private static final long serialVersionUID = 0L;
         getAssignSelf());
     hash = (37 * hash) + ASSIGN_OTHER_FIELD_NUMBER;
     hash = (53 * hash) + getAssignOther().hashCode();
+    if (getTicketActionCount() > 0) {
+      hash = (37 * hash) + TICKET_ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getTicketActionList().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -737,22 +791,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.tickets.CreateTicketReq.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getDueDateFieldBuilder();
-        getMetadataFieldBuilder();
-        getTicketSkillsFieldBuilder();
-        getTicketSlaFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -790,6 +835,13 @@ private static final long serialVersionUID = 0L;
       bitField0_ = (bitField0_ & ~0x00000080);
       assignSelf_ = false;
       assignOther_ = "";
+      if (ticketActionBuilder_ == null) {
+        ticketAction_ = java.util.Collections.emptyList();
+      } else {
+        ticketAction_ = null;
+        ticketActionBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000400);
       return this;
     }
 
@@ -850,6 +902,15 @@ private static final long serialVersionUID = 0L;
       } else {
         result.ticketSla_ = ticketSlaBuilder_.build();
       }
+      if (ticketActionBuilder_ == null) {
+        if (((bitField0_ & 0x00000400) != 0)) {
+          ticketAction_ = java.util.Collections.unmodifiableList(ticketAction_);
+          bitField0_ = (bitField0_ & ~0x00000400);
+        }
+        result.ticketAction_ = ticketAction_;
+      } else {
+        result.ticketAction_ = ticketActionBuilder_.build();
+      }
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.tickets.CreateTicketReq result) {
@@ -863,12 +924,10 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.projectSid_ = projectSid_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.dueDate_ = dueDateBuilder_ == null
             ? dueDate_
             : dueDateBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.status_ = status_;
@@ -879,7 +938,6 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000200) != 0)) {
         result.assignOther_ = assignOther_;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1031,6 +1089,32 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000200;
         onChanged();
       }
+      if (ticketActionBuilder_ == null) {
+        if (!other.ticketAction_.isEmpty()) {
+          if (ticketAction_.isEmpty()) {
+            ticketAction_ = other.ticketAction_;
+            bitField0_ = (bitField0_ & ~0x00000400);
+          } else {
+            ensureTicketActionIsMutable();
+            ticketAction_.addAll(other.ticketAction_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.ticketAction_.isEmpty()) {
+          if (ticketActionBuilder_.isEmpty()) {
+            ticketActionBuilder_.dispose();
+            ticketActionBuilder_ = null;
+            ticketAction_ = other.ticketAction_;
+            bitField0_ = (bitField0_ & ~0x00000400);
+            ticketActionBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getTicketActionFieldBuilder() : null;
+          } else {
+            ticketActionBuilder_.addAllMessages(other.ticketAction_);
+          }
+        }
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1133,6 +1217,19 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000200;
               break;
             } // case 114
+            case 122: {
+              com.tcn.cloud.api.api.commons.TicketAction m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.commons.TicketAction.parser(),
+                      extensionRegistry);
+              if (ticketActionBuilder_ == null) {
+                ensureTicketActionIsMutable();
+                ticketAction_.add(m);
+              } else {
+                ticketActionBuilder_.addMessage(m);
+              }
+              break;
+            } // case 122
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1464,10 +1561,8 @@ private static final long serialVersionUID = 0L;
       } else {
         dueDateBuilder_.mergeFrom(value);
       }
-      if (dueDate_ != null) {
-        bitField0_ |= 0x00000008;
-        onChanged();
-      }
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -2617,6 +2712,246 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000200;
       onChanged();
       return this;
+    }
+
+    private java.util.List<com.tcn.cloud.api.api.commons.TicketAction> ticketAction_ =
+      java.util.Collections.emptyList();
+    private void ensureTicketActionIsMutable() {
+      if (!((bitField0_ & 0x00000400) != 0)) {
+        ticketAction_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.TicketAction>(ticketAction_);
+        bitField0_ |= 0x00000400;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.TicketAction, com.tcn.cloud.api.api.commons.TicketAction.Builder, com.tcn.cloud.api.api.commons.TicketActionOrBuilder> ticketActionBuilder_;
+
+    /**
+     * <code>repeated .api.commons.TicketAction ticket_action = 15 [json_name = "ticketAction"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.TicketAction> getTicketActionList() {
+      if (ticketActionBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(ticketAction_);
+      } else {
+        return ticketActionBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .api.commons.TicketAction ticket_action = 15 [json_name = "ticketAction"];</code>
+     */
+    public int getTicketActionCount() {
+      if (ticketActionBuilder_ == null) {
+        return ticketAction_.size();
+      } else {
+        return ticketActionBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .api.commons.TicketAction ticket_action = 15 [json_name = "ticketAction"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.TicketAction getTicketAction(int index) {
+      if (ticketActionBuilder_ == null) {
+        return ticketAction_.get(index);
+      } else {
+        return ticketActionBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .api.commons.TicketAction ticket_action = 15 [json_name = "ticketAction"];</code>
+     */
+    public Builder setTicketAction(
+        int index, com.tcn.cloud.api.api.commons.TicketAction value) {
+      if (ticketActionBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureTicketActionIsMutable();
+        ticketAction_.set(index, value);
+        onChanged();
+      } else {
+        ticketActionBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.TicketAction ticket_action = 15 [json_name = "ticketAction"];</code>
+     */
+    public Builder setTicketAction(
+        int index, com.tcn.cloud.api.api.commons.TicketAction.Builder builderForValue) {
+      if (ticketActionBuilder_ == null) {
+        ensureTicketActionIsMutable();
+        ticketAction_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        ticketActionBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.TicketAction ticket_action = 15 [json_name = "ticketAction"];</code>
+     */
+    public Builder addTicketAction(com.tcn.cloud.api.api.commons.TicketAction value) {
+      if (ticketActionBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureTicketActionIsMutable();
+        ticketAction_.add(value);
+        onChanged();
+      } else {
+        ticketActionBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.TicketAction ticket_action = 15 [json_name = "ticketAction"];</code>
+     */
+    public Builder addTicketAction(
+        int index, com.tcn.cloud.api.api.commons.TicketAction value) {
+      if (ticketActionBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureTicketActionIsMutable();
+        ticketAction_.add(index, value);
+        onChanged();
+      } else {
+        ticketActionBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.TicketAction ticket_action = 15 [json_name = "ticketAction"];</code>
+     */
+    public Builder addTicketAction(
+        com.tcn.cloud.api.api.commons.TicketAction.Builder builderForValue) {
+      if (ticketActionBuilder_ == null) {
+        ensureTicketActionIsMutable();
+        ticketAction_.add(builderForValue.build());
+        onChanged();
+      } else {
+        ticketActionBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.TicketAction ticket_action = 15 [json_name = "ticketAction"];</code>
+     */
+    public Builder addTicketAction(
+        int index, com.tcn.cloud.api.api.commons.TicketAction.Builder builderForValue) {
+      if (ticketActionBuilder_ == null) {
+        ensureTicketActionIsMutable();
+        ticketAction_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        ticketActionBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.TicketAction ticket_action = 15 [json_name = "ticketAction"];</code>
+     */
+    public Builder addAllTicketAction(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.TicketAction> values) {
+      if (ticketActionBuilder_ == null) {
+        ensureTicketActionIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, ticketAction_);
+        onChanged();
+      } else {
+        ticketActionBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.TicketAction ticket_action = 15 [json_name = "ticketAction"];</code>
+     */
+    public Builder clearTicketAction() {
+      if (ticketActionBuilder_ == null) {
+        ticketAction_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000400);
+        onChanged();
+      } else {
+        ticketActionBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.TicketAction ticket_action = 15 [json_name = "ticketAction"];</code>
+     */
+    public Builder removeTicketAction(int index) {
+      if (ticketActionBuilder_ == null) {
+        ensureTicketActionIsMutable();
+        ticketAction_.remove(index);
+        onChanged();
+      } else {
+        ticketActionBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.TicketAction ticket_action = 15 [json_name = "ticketAction"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.TicketAction.Builder getTicketActionBuilder(
+        int index) {
+      return getTicketActionFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .api.commons.TicketAction ticket_action = 15 [json_name = "ticketAction"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.TicketActionOrBuilder getTicketActionOrBuilder(
+        int index) {
+      if (ticketActionBuilder_ == null) {
+        return ticketAction_.get(index);  } else {
+        return ticketActionBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .api.commons.TicketAction ticket_action = 15 [json_name = "ticketAction"];</code>
+     */
+    public java.util.List<? extends com.tcn.cloud.api.api.commons.TicketActionOrBuilder> 
+         getTicketActionOrBuilderList() {
+      if (ticketActionBuilder_ != null) {
+        return ticketActionBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(ticketAction_);
+      }
+    }
+    /**
+     * <code>repeated .api.commons.TicketAction ticket_action = 15 [json_name = "ticketAction"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.TicketAction.Builder addTicketActionBuilder() {
+      return getTicketActionFieldBuilder().addBuilder(
+          com.tcn.cloud.api.api.commons.TicketAction.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .api.commons.TicketAction ticket_action = 15 [json_name = "ticketAction"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.TicketAction.Builder addTicketActionBuilder(
+        int index) {
+      return getTicketActionFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.api.commons.TicketAction.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .api.commons.TicketAction ticket_action = 15 [json_name = "ticketAction"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.TicketAction.Builder> 
+         getTicketActionBuilderList() {
+      return getTicketActionFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.TicketAction, com.tcn.cloud.api.api.commons.TicketAction.Builder, com.tcn.cloud.api.api.commons.TicketActionOrBuilder> 
+        getTicketActionFieldBuilder() {
+      if (ticketActionBuilder_ == null) {
+        ticketActionBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.TicketAction, com.tcn.cloud.api.api.commons.TicketAction.Builder, com.tcn.cloud.api.api.commons.TicketActionOrBuilder>(
+                ticketAction_,
+                ((bitField0_ & 0x00000400) != 0),
+                getParentForChildren(),
+                isClean());
+        ticketAction_ = null;
+      }
+      return ticketActionBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

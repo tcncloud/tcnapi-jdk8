@@ -38,7 +38,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.services.pbx.v1.UpdatePbxUserResponse.class, com.tcn.cloud.api.services.pbx.v1.UpdatePbxUserResponse.Builder.class);
   }
 
-  private int bitField0_;
   public static final int USER_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.services.pbx.v1.PBXUser user_;
   /**
@@ -47,7 +46,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasUser() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return user_ != null;
   }
   /**
    * <code>.services.pbx.v1.PBXUser user = 1 [json_name = "user"];</code>
@@ -79,7 +78,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (user_ != null) {
       output.writeMessage(1, getUser());
     }
     getUnknownFields().writeTo(output);
@@ -91,7 +90,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (user_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getUser());
     }
@@ -249,19 +248,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.services.pbx.v1.UpdatePbxUserResponse.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getUserFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -305,14 +298,11 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.services.pbx.v1.UpdatePbxUserResponse result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.user_ = userBuilder_ == null
             ? user_
             : userBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -478,10 +468,8 @@ private static final long serialVersionUID = 0L;
       } else {
         userBuilder_.mergeFrom(value);
       }
-      if (user_ != null) {
-        bitField0_ |= 0x00000001;
-        onChanged();
-      }
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**

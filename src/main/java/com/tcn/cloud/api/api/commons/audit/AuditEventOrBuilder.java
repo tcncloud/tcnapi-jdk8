@@ -2374,5 +2374,35 @@ public interface AuditEventOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.audit.ComplianceRndQueryEventOrBuilder getComplianceRndQueryCachedEventOrBuilder();
 
+  /**
+   * <pre>
+   * Agent Training events class 800
+   * learning opportunity created event
+   * </pre>
+   *
+   * <code>.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent agent_training_create_learning_opportunity_event = 800 [json_name = "agentTrainingCreateLearningOpportunityEvent"];</code>
+   * @return Whether the agentTrainingCreateLearningOpportunityEvent field is set.
+   */
+  boolean hasAgentTrainingCreateLearningOpportunityEvent();
+  /**
+   * <pre>
+   * Agent Training events class 800
+   * learning opportunity created event
+   * </pre>
+   *
+   * <code>.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent agent_training_create_learning_opportunity_event = 800 [json_name = "agentTrainingCreateLearningOpportunityEvent"];</code>
+   * @return The agentTrainingCreateLearningOpportunityEvent.
+   */
+  com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent getAgentTrainingCreateLearningOpportunityEvent();
+  /**
+   * <pre>
+   * Agent Training events class 800
+   * learning opportunity created event
+   * </pre>
+   *
+   * <code>.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent agent_training_create_learning_opportunity_event = 800 [json_name = "agentTrainingCreateLearningOpportunityEvent"];</code>
+   */
+  com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEventOrBuilder getAgentTrainingCreateLearningOpportunityEventOrBuilder();
+
   com.tcn.cloud.api.api.commons.audit.AuditEvent.EventCase getEventCase();
 }

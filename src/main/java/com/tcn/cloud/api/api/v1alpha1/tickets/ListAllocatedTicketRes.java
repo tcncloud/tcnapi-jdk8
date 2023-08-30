@@ -45,8 +45,7 @@ private static final long serialVersionUID = 0L;
 
   public static final int TICKET_SID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private com.google.protobuf.Internal.LongList ticketSid_ =
-      emptyLongList();
+  private com.google.protobuf.Internal.LongList ticketSid_;
   /**
    * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", jstype = JS_STRING];</code>
    * @return A list containing the ticketSid.
@@ -312,17 +311,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketRes buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketRes result = new com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketRes(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketRes result) {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        ticketSid_.makeImmutable();
+        bitField0_ = (bitField0_ & ~0x00000001);
+      }
+      result.ticketSid_ = ticketSid_;
+    }
+
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketRes result) {
       int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        ticketSid_.makeImmutable();
-        result.ticketSid_ = ticketSid_;
-      }
     }
 
     @java.lang.Override
@@ -372,8 +376,7 @@ private static final long serialVersionUID = 0L;
       if (!other.ticketSid_.isEmpty()) {
         if (ticketSid_.isEmpty()) {
           ticketSid_ = other.ticketSid_;
-          ticketSid_.makeImmutable();
-          bitField0_ |= 0x00000001;
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           ensureTicketSidIsMutable();
           ticketSid_.addAll(other.ticketSid_);
@@ -441,10 +444,10 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Internal.LongList ticketSid_ = emptyLongList();
     private void ensureTicketSidIsMutable() {
-      if (!ticketSid_.isModifiable()) {
-        ticketSid_ = makeMutableCopy(ticketSid_);
+      if (!((bitField0_ & 0x00000001) != 0)) {
+        ticketSid_ = mutableCopy(ticketSid_);
+        bitField0_ |= 0x00000001;
       }
-      bitField0_ |= 0x00000001;
     }
     /**
      * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", jstype = JS_STRING];</code>
@@ -452,8 +455,8 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Long>
         getTicketSidList() {
-      ticketSid_.makeImmutable();
-      return ticketSid_;
+      return ((bitField0_ & 0x00000001) != 0) ?
+               java.util.Collections.unmodifiableList(ticketSid_) : ticketSid_;
     }
     /**
      * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", jstype = JS_STRING];</code>
@@ -481,7 +484,6 @@ private static final long serialVersionUID = 0L;
 
       ensureTicketSidIsMutable();
       ticketSid_.setLong(index, value);
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -494,7 +496,6 @@ private static final long serialVersionUID = 0L;
 
       ensureTicketSidIsMutable();
       ticketSid_.addLong(value);
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -508,7 +509,6 @@ private static final long serialVersionUID = 0L;
       ensureTicketSidIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, ticketSid_);
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }

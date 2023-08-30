@@ -158,7 +158,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .api.commons.RecordType field_types = 4 [json_name = "fieldTypes", deprecated = true];</code>
    * @deprecated api.v0alpha.ListMetrics.field_types is deprecated.
-   *     See api/v0alpha/lms.proto;l=2246
+   *     See api/v0alpha/lms.proto;l=2247
    * @return A list containing the fieldTypes.
    */
   @java.lang.Override
@@ -174,7 +174,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .api.commons.RecordType field_types = 4 [json_name = "fieldTypes", deprecated = true];</code>
    * @deprecated api.v0alpha.ListMetrics.field_types is deprecated.
-   *     See api/v0alpha/lms.proto;l=2246
+   *     See api/v0alpha/lms.proto;l=2247
    * @return The count of fieldTypes.
    */
   @java.lang.Override
@@ -189,7 +189,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .api.commons.RecordType field_types = 4 [json_name = "fieldTypes", deprecated = true];</code>
    * @deprecated api.v0alpha.ListMetrics.field_types is deprecated.
-   *     See api/v0alpha/lms.proto;l=2246
+   *     See api/v0alpha/lms.proto;l=2247
    * @param index The index of the element to return.
    * @return The fieldTypes at the given index.
    */
@@ -205,7 +205,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .api.commons.RecordType field_types = 4 [json_name = "fieldTypes", deprecated = true];</code>
    * @deprecated api.v0alpha.ListMetrics.field_types is deprecated.
-   *     See api/v0alpha/lms.proto;l=2246
+   *     See api/v0alpha/lms.proto;l=2247
    * @return A list containing the enum numeric values on the wire for fieldTypes.
    */
   @java.lang.Override
@@ -221,7 +221,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .api.commons.RecordType field_types = 4 [json_name = "fieldTypes", deprecated = true];</code>
    * @deprecated api.v0alpha.ListMetrics.field_types is deprecated.
-   *     See api/v0alpha/lms.proto;l=2246
+   *     See api/v0alpha/lms.proto;l=2247
    * @param index The index of the value to return.
    * @return The enum numeric value on the wire of fieldTypes at the given index.
    */
@@ -291,8 +291,7 @@ private static final long serialVersionUID = 0L;
 
   public static final int FIELD_COUNTS_FIELD_NUMBER = 5;
   @SuppressWarnings("serial")
-  private com.google.protobuf.Internal.IntList fieldCounts_ =
-      emptyIntList();
+  private com.google.protobuf.Internal.IntList fieldCounts_;
   /**
    * <pre>
    * the counts of the field_name[i], field_type[i] pairs.
@@ -1181,6 +1180,11 @@ private static final long serialVersionUID = 0L;
         bitField0_ = (bitField0_ & ~0x00000010);
       }
       result.ftypes_ = ftypes_;
+      if (((bitField0_ & 0x00000020) != 0)) {
+        fieldCounts_.makeImmutable();
+        bitField0_ = (bitField0_ & ~0x00000020);
+      }
+      result.fieldCounts_ = fieldCounts_;
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.v0alpha.ListMetrics result) {
@@ -1194,10 +1198,6 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         fieldNames_.makeImmutable();
         result.fieldNames_ = fieldNames_;
-      }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        fieldCounts_.makeImmutable();
-        result.fieldCounts_ = fieldCounts_;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.runType_ = runType_;
@@ -1320,8 +1320,7 @@ private static final long serialVersionUID = 0L;
       if (!other.fieldCounts_.isEmpty()) {
         if (fieldCounts_.isEmpty()) {
           fieldCounts_ = other.fieldCounts_;
-          fieldCounts_.makeImmutable();
-          bitField0_ |= 0x00000020;
+          bitField0_ = (bitField0_ & ~0x00000020);
         } else {
           ensureFieldCountsIsMutable();
           fieldCounts_.addAll(other.fieldCounts_);
@@ -1802,7 +1801,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .api.commons.RecordType field_types = 4 [json_name = "fieldTypes", deprecated = true];</code>
      * @deprecated api.v0alpha.ListMetrics.field_types is deprecated.
-     *     See api/v0alpha/lms.proto;l=2246
+     *     See api/v0alpha/lms.proto;l=2247
      * @return A list containing the fieldTypes.
      */
     @java.lang.Deprecated public java.util.List<com.tcn.cloud.api.api.commons.RecordType> getFieldTypesList() {
@@ -1817,7 +1816,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .api.commons.RecordType field_types = 4 [json_name = "fieldTypes", deprecated = true];</code>
      * @deprecated api.v0alpha.ListMetrics.field_types is deprecated.
-     *     See api/v0alpha/lms.proto;l=2246
+     *     See api/v0alpha/lms.proto;l=2247
      * @return The count of fieldTypes.
      */
     @java.lang.Deprecated public int getFieldTypesCount() {
@@ -1831,7 +1830,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .api.commons.RecordType field_types = 4 [json_name = "fieldTypes", deprecated = true];</code>
      * @deprecated api.v0alpha.ListMetrics.field_types is deprecated.
-     *     See api/v0alpha/lms.proto;l=2246
+     *     See api/v0alpha/lms.proto;l=2247
      * @param index The index of the element to return.
      * @return The fieldTypes at the given index.
      */
@@ -1846,7 +1845,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .api.commons.RecordType field_types = 4 [json_name = "fieldTypes", deprecated = true];</code>
      * @deprecated api.v0alpha.ListMetrics.field_types is deprecated.
-     *     See api/v0alpha/lms.proto;l=2246
+     *     See api/v0alpha/lms.proto;l=2247
      * @param index The index to set the value at.
      * @param value The fieldTypes to set.
      * @return This builder for chaining.
@@ -1869,7 +1868,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .api.commons.RecordType field_types = 4 [json_name = "fieldTypes", deprecated = true];</code>
      * @deprecated api.v0alpha.ListMetrics.field_types is deprecated.
-     *     See api/v0alpha/lms.proto;l=2246
+     *     See api/v0alpha/lms.proto;l=2247
      * @param value The fieldTypes to add.
      * @return This builder for chaining.
      */
@@ -1890,7 +1889,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .api.commons.RecordType field_types = 4 [json_name = "fieldTypes", deprecated = true];</code>
      * @deprecated api.v0alpha.ListMetrics.field_types is deprecated.
-     *     See api/v0alpha/lms.proto;l=2246
+     *     See api/v0alpha/lms.proto;l=2247
      * @param values The fieldTypes to add.
      * @return This builder for chaining.
      */
@@ -1911,7 +1910,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .api.commons.RecordType field_types = 4 [json_name = "fieldTypes", deprecated = true];</code>
      * @deprecated api.v0alpha.ListMetrics.field_types is deprecated.
-     *     See api/v0alpha/lms.proto;l=2246
+     *     See api/v0alpha/lms.proto;l=2247
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearFieldTypes() {
@@ -1928,7 +1927,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .api.commons.RecordType field_types = 4 [json_name = "fieldTypes", deprecated = true];</code>
      * @deprecated api.v0alpha.ListMetrics.field_types is deprecated.
-     *     See api/v0alpha/lms.proto;l=2246
+     *     See api/v0alpha/lms.proto;l=2247
      * @return A list containing the enum numeric values on the wire for fieldTypes.
      */
     @java.lang.Deprecated public java.util.List<java.lang.Integer>
@@ -1943,7 +1942,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .api.commons.RecordType field_types = 4 [json_name = "fieldTypes", deprecated = true];</code>
      * @deprecated api.v0alpha.ListMetrics.field_types is deprecated.
-     *     See api/v0alpha/lms.proto;l=2246
+     *     See api/v0alpha/lms.proto;l=2247
      * @param index The index of the value to return.
      * @return The enum numeric value on the wire of fieldTypes at the given index.
      */
@@ -1958,7 +1957,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .api.commons.RecordType field_types = 4 [json_name = "fieldTypes", deprecated = true];</code>
      * @deprecated api.v0alpha.ListMetrics.field_types is deprecated.
-     *     See api/v0alpha/lms.proto;l=2246
+     *     See api/v0alpha/lms.proto;l=2247
      * @param index The index to set the value at.
      * @param value The enum numeric value on the wire for fieldTypes to set.
      * @return This builder for chaining.
@@ -1978,7 +1977,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .api.commons.RecordType field_types = 4 [json_name = "fieldTypes", deprecated = true];</code>
      * @deprecated api.v0alpha.ListMetrics.field_types is deprecated.
-     *     See api/v0alpha/lms.proto;l=2246
+     *     See api/v0alpha/lms.proto;l=2247
      * @param value The enum numeric value on the wire for fieldTypes to add.
      * @return This builder for chaining.
      */
@@ -1996,7 +1995,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .api.commons.RecordType field_types = 4 [json_name = "fieldTypes", deprecated = true];</code>
      * @deprecated api.v0alpha.ListMetrics.field_types is deprecated.
-     *     See api/v0alpha/lms.proto;l=2246
+     *     See api/v0alpha/lms.proto;l=2247
      * @param values The enum numeric values on the wire for fieldTypes to add.
      * @return This builder for chaining.
      */
@@ -2152,10 +2151,10 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Internal.IntList fieldCounts_ = emptyIntList();
     private void ensureFieldCountsIsMutable() {
-      if (!fieldCounts_.isModifiable()) {
-        fieldCounts_ = makeMutableCopy(fieldCounts_);
+      if (!((bitField0_ & 0x00000020) != 0)) {
+        fieldCounts_ = mutableCopy(fieldCounts_);
+        bitField0_ |= 0x00000020;
       }
-      bitField0_ |= 0x00000020;
     }
     /**
      * <pre>
@@ -2169,8 +2168,8 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Integer>
         getFieldCountsList() {
-      fieldCounts_.makeImmutable();
-      return fieldCounts_;
+      return ((bitField0_ & 0x00000020) != 0) ?
+               java.util.Collections.unmodifiableList(fieldCounts_) : fieldCounts_;
     }
     /**
      * <pre>
@@ -2216,7 +2215,6 @@ private static final long serialVersionUID = 0L;
 
       ensureFieldCountsIsMutable();
       fieldCounts_.setInt(index, value);
-      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -2235,7 +2233,6 @@ private static final long serialVersionUID = 0L;
 
       ensureFieldCountsIsMutable();
       fieldCounts_.addInt(value);
-      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -2255,7 +2252,6 @@ private static final long serialVersionUID = 0L;
       ensureFieldCountsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, fieldCounts_);
-      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }

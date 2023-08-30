@@ -44,7 +44,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.wfm.CreateDraftScheduleReq.class, com.tcn.cloud.api.api.v1alpha1.wfm.CreateDraftScheduleReq.Builder.class);
   }
 
-  private int bitField0_;
   public static final int NAME_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object name_ = "";
@@ -151,7 +150,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasSchedulingRange() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return schedulingRange_ != null;
   }
   /**
    * <pre>
@@ -212,7 +211,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (schedulingRange_ != null) {
       output.writeMessage(3, getSchedulingRange());
     }
     if (scheduleScenarioSid_ != 0L) {
@@ -233,7 +232,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (schedulingRange_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getSchedulingRange());
     }
@@ -412,19 +411,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.CreateDraftScheduleReq.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getSchedulingRangeFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -477,17 +470,14 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.description_ = description_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.schedulingRange_ = schedulingRangeBuilder_ == null
             ? schedulingRange_
             : schedulingRangeBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.scheduleScenarioSid_ = scheduleScenarioSid_;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -885,10 +875,8 @@ private static final long serialVersionUID = 0L;
       } else {
         schedulingRangeBuilder_.mergeFrom(value);
       }
-      if (schedulingRange_ != null) {
-        bitField0_ |= 0x00000004;
-        onChanged();
-      }
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**

@@ -8,14 +8,67 @@ public interface OmniNodeSetSkillOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string skill = 1 [json_name = "skill"];</code>
+   * <pre>
+   * a single skill to add to the conversation (deprecated)
+   * </pre>
+   *
+   * <code>string skill = 1 [json_name = "skill", deprecated = true];</code>
+   * @deprecated api.commons.workflows.OmniNodeSetSkill.skill is deprecated.
+   *     See api/commons/workflows/omni.proto;l=39
    * @return The skill.
    */
-  java.lang.String getSkill();
+  @java.lang.Deprecated java.lang.String getSkill();
   /**
-   * <code>string skill = 1 [json_name = "skill"];</code>
+   * <pre>
+   * a single skill to add to the conversation (deprecated)
+   * </pre>
+   *
+   * <code>string skill = 1 [json_name = "skill", deprecated = true];</code>
+   * @deprecated api.commons.workflows.OmniNodeSetSkill.skill is deprecated.
+   *     See api/commons/workflows/omni.proto;l=39
    * @return The bytes for skill.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getSkillBytes();
+
+  /**
+   * <pre>
+   * list of skills to add to the conversation
+   * </pre>
+   *
+   * <code>repeated string skills = 2 [json_name = "skills"];</code>
+   * @return A list containing the skills.
+   */
+  java.util.List<java.lang.String>
+      getSkillsList();
+  /**
+   * <pre>
+   * list of skills to add to the conversation
+   * </pre>
+   *
+   * <code>repeated string skills = 2 [json_name = "skills"];</code>
+   * @return The count of skills.
+   */
+  int getSkillsCount();
+  /**
+   * <pre>
+   * list of skills to add to the conversation
+   * </pre>
+   *
+   * <code>repeated string skills = 2 [json_name = "skills"];</code>
+   * @param index The index of the element to return.
+   * @return The skills at the given index.
+   */
+  java.lang.String getSkills(int index);
+  /**
+   * <pre>
+   * list of skills to add to the conversation
+   * </pre>
+   *
+   * <code>repeated string skills = 2 [json_name = "skills"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the skills at the given index.
+   */
+  com.google.protobuf.ByteString
+      getSkillsBytes(int index);
 }

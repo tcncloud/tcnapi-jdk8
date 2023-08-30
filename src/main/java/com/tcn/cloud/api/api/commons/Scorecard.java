@@ -53,7 +53,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.Scorecard.class, com.tcn.cloud.api.api.commons.Scorecard.Builder.class);
   }
 
-  private int bitField0_;
   public static final int SCORECARD_ID_FIELD_NUMBER = 2;
   private long scorecardId_ = 0L;
   /**
@@ -319,7 +318,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCategory() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return category_ != null;
   }
   /**
    * <pre>
@@ -637,7 +636,7 @@ private static final long serialVersionUID = 0L;
     if (distributeWeights_ != false) {
       output.writeBool(11, distributeWeights_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (category_ != null) {
       output.writeMessage(12, getCategory());
     }
     for (int i = 0; i < sections_.size(); i++) {
@@ -704,7 +703,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(11, distributeWeights_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (category_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(12, getCategory());
     }
@@ -971,20 +970,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.Scorecard.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getCategoryFieldBuilder();
-        getSectionsFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -1096,12 +1088,10 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000100) != 0)) {
         result.distributeWeights_ = distributeWeights_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000200) != 0)) {
         result.category_ = categoryBuilder_ == null
             ? category_
             : categoryBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000800) != 0)) {
         result.version_ = version_;
@@ -1116,7 +1106,6 @@ private static final long serialVersionUID = 0L;
         customFieldKeys_.makeImmutable();
         result.customFieldKeys_ = customFieldKeys_;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -2084,10 +2073,8 @@ private static final long serialVersionUID = 0L;
       } else {
         categoryBuilder_.mergeFrom(value);
       }
-      if (category_ != null) {
-        bitField0_ |= 0x00000200;
-        onChanged();
-      }
+      bitField0_ |= 0x00000200;
+      onChanged();
       return this;
     }
     /**

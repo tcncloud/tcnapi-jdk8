@@ -5,7 +5,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.57.2)",
+    value = "by gRPC proto compiler (version 1.57.1)",
     comments = "Source: api/v1alpha1/scorecards/service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class ScorecardsGrpc {
@@ -1348,6 +1348,37 @@ public final class ScorecardsGrpc {
     return getListAutoEvaluationsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.StreamAutoEvaluationsRequest,
+      com.tcn.cloud.api.api.v1alpha1.scorecards.StreamAutoEvaluationsResponse> getStreamAutoEvaluationsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "StreamAutoEvaluations",
+      requestType = com.tcn.cloud.api.api.v1alpha1.scorecards.StreamAutoEvaluationsRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.scorecards.StreamAutoEvaluationsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.StreamAutoEvaluationsRequest,
+      com.tcn.cloud.api.api.v1alpha1.scorecards.StreamAutoEvaluationsResponse> getStreamAutoEvaluationsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.StreamAutoEvaluationsRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.StreamAutoEvaluationsResponse> getStreamAutoEvaluationsMethod;
+    if ((getStreamAutoEvaluationsMethod = ScorecardsGrpc.getStreamAutoEvaluationsMethod) == null) {
+      synchronized (ScorecardsGrpc.class) {
+        if ((getStreamAutoEvaluationsMethod = ScorecardsGrpc.getStreamAutoEvaluationsMethod) == null) {
+          ScorecardsGrpc.getStreamAutoEvaluationsMethod = getStreamAutoEvaluationsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.scorecards.StreamAutoEvaluationsRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.StreamAutoEvaluationsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "StreamAutoEvaluations"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.scorecards.StreamAutoEvaluationsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.scorecards.StreamAutoEvaluationsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("StreamAutoEvaluations"))
+              .build();
+        }
+      }
+    }
+    return getStreamAutoEvaluationsMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteAutoEvaluationRequest,
       com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteAutoEvaluationResponse> getDeleteAutoEvaluationMethod;
 
@@ -1891,6 +1922,16 @@ public final class ScorecardsGrpc {
 
     /**
      * <pre>
+     * StreamAutoEvaluations streams a list of auto evaluations
+     * </pre>
+     */
+    default void streamAutoEvaluations(com.tcn.cloud.api.api.v1alpha1.scorecards.StreamAutoEvaluationsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.StreamAutoEvaluationsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getStreamAutoEvaluationsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * DeleteAutoEvaluation deletes an auto evaluations
      * </pre>
      */
@@ -2413,6 +2454,17 @@ public final class ScorecardsGrpc {
 
     /**
      * <pre>
+     * StreamAutoEvaluations streams a list of auto evaluations
+     * </pre>
+     */
+    public void streamAutoEvaluations(com.tcn.cloud.api.api.v1alpha1.scorecards.StreamAutoEvaluationsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.StreamAutoEvaluationsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
+          getChannel().newCall(getStreamAutoEvaluationsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * DeleteAutoEvaluation deletes an auto evaluations
      * </pre>
      */
@@ -2879,6 +2931,17 @@ public final class ScorecardsGrpc {
     public com.tcn.cloud.api.api.v1alpha1.scorecards.ListAutoEvaluationsResponse listAutoEvaluations(com.tcn.cloud.api.api.v1alpha1.scorecards.ListAutoEvaluationsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListAutoEvaluationsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * StreamAutoEvaluations streams a list of auto evaluations
+     * </pre>
+     */
+    public java.util.Iterator<com.tcn.cloud.api.api.v1alpha1.scorecards.StreamAutoEvaluationsResponse> streamAutoEvaluations(
+        com.tcn.cloud.api.api.v1alpha1.scorecards.StreamAutoEvaluationsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
+          getChannel(), getStreamAutoEvaluationsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -3458,8 +3521,9 @@ public final class ScorecardsGrpc {
   private static final int METHODID_GET_AUTO_QUESTION = 40;
   private static final int METHODID_GET_AUTO_EVALUATION = 41;
   private static final int METHODID_LIST_AUTO_EVALUATIONS = 42;
-  private static final int METHODID_DELETE_AUTO_EVALUATION = 43;
-  private static final int METHODID_PREVIEW_EVALUATION_SCORE = 44;
+  private static final int METHODID_STREAM_AUTO_EVALUATIONS = 43;
+  private static final int METHODID_DELETE_AUTO_EVALUATION = 44;
+  private static final int METHODID_PREVIEW_EVALUATION_SCORE = 45;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -3649,6 +3713,10 @@ public final class ScorecardsGrpc {
         case METHODID_LIST_AUTO_EVALUATIONS:
           serviceImpl.listAutoEvaluations((com.tcn.cloud.api.api.v1alpha1.scorecards.ListAutoEvaluationsRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.ListAutoEvaluationsResponse>) responseObserver);
+          break;
+        case METHODID_STREAM_AUTO_EVALUATIONS:
+          serviceImpl.streamAutoEvaluations((com.tcn.cloud.api.api.v1alpha1.scorecards.StreamAutoEvaluationsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.StreamAutoEvaluationsResponse>) responseObserver);
           break;
         case METHODID_DELETE_AUTO_EVALUATION:
           serviceImpl.deleteAutoEvaluation((com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteAutoEvaluationRequest) request,
@@ -3978,6 +4046,13 @@ public final class ScorecardsGrpc {
               com.tcn.cloud.api.api.v1alpha1.scorecards.ListAutoEvaluationsResponse>(
                 service, METHODID_LIST_AUTO_EVALUATIONS)))
         .addMethod(
+          getStreamAutoEvaluationsMethod(),
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.scorecards.StreamAutoEvaluationsRequest,
+              com.tcn.cloud.api.api.v1alpha1.scorecards.StreamAutoEvaluationsResponse>(
+                service, METHODID_STREAM_AUTO_EVALUATIONS)))
+        .addMethod(
           getDeleteAutoEvaluationMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -4082,6 +4157,7 @@ public final class ScorecardsGrpc {
               .addMethod(getGetAutoQuestionMethod())
               .addMethod(getGetAutoEvaluationMethod())
               .addMethod(getListAutoEvaluationsMethod())
+              .addMethod(getStreamAutoEvaluationsMethod())
               .addMethod(getDeleteAutoEvaluationMethod())
               .addMethod(getPreviewEvaluationScoreMethod())
               .build();

@@ -14,19 +14,11 @@ public interface AssignTicketReqOrBuilder extends
   long getTicketSid();
 
   /**
-   * <pre>
-   * type:json - send 0 or null for un-assigning a ticket
-   * </pre>
-   *
    * <code>string assignee_list = 2 [json_name = "assigneeList"];</code>
    * @return The assigneeList.
    */
   java.lang.String getAssigneeList();
   /**
-   * <pre>
-   * type:json - send 0 or null for un-assigning a ticket
-   * </pre>
-   *
    * <code>string assignee_list = 2 [json_name = "assigneeList"];</code>
    * @return The bytes for assigneeList.
    */
@@ -34,19 +26,11 @@ public interface AssignTicketReqOrBuilder extends
       getAssigneeListBytes();
 
   /**
-   * <pre>
-   * uuid
-   * </pre>
-   *
    * <code>string assigned_id = 3 [json_name = "assignedId"];</code>
    * @return The assignedId.
    */
   java.lang.String getAssignedId();
   /**
-   * <pre>
-   * uuid
-   * </pre>
-   *
    * <code>string assigned_id = 3 [json_name = "assignedId"];</code>
    * @return The bytes for assignedId.
    */

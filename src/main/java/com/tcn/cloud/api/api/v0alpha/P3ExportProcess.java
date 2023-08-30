@@ -61,7 +61,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.P3ExportProcess.class, com.tcn.cloud.api.api.v0alpha.P3ExportProcess.Builder.class);
   }
 
-  private int bitField0_;
   public static final int HEADER_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.api.v0alpha.ExportHeader header_;
   /**
@@ -74,7 +73,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasHeader() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return header_ != null;
   }
   /**
    * <pre>
@@ -477,12 +476,12 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.FilePattern file_pattern = 13 [json_name = "filePattern", deprecated = true];</code>
    * @deprecated api.v0alpha.P3ExportProcess.file_pattern is deprecated.
-   *     See api/v0alpha/lms.proto;l=1591
+   *     See api/v0alpha/lms.proto;l=1592
    * @return Whether the filePattern field is set.
    */
   @java.lang.Override
   @java.lang.Deprecated public boolean hasFilePattern() {
-    return ((bitField0_ & 0x00000002) != 0);
+    return filePattern_ != null;
   }
   /**
    * <pre>
@@ -495,7 +494,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.FilePattern file_pattern = 13 [json_name = "filePattern", deprecated = true];</code>
    * @deprecated api.v0alpha.P3ExportProcess.file_pattern is deprecated.
-   *     See api/v0alpha/lms.proto;l=1591
+   *     See api/v0alpha/lms.proto;l=1592
    * @return The filePattern.
    */
   @java.lang.Override
@@ -530,7 +529,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasFilename() {
-    return ((bitField0_ & 0x00000004) != 0);
+    return filename_ != null;
   }
   /**
    * <pre>
@@ -558,8 +557,7 @@ private static final long serialVersionUID = 0L;
 
   public static final int CALLER_IDS_FIELD_NUMBER = 14;
   @SuppressWarnings("serial")
-  private com.google.protobuf.Internal.LongList callerIds_ =
-      emptyLongList();
+  private com.google.protobuf.Internal.LongList callerIds_;
   /**
    * <pre>
    * Advanced options
@@ -631,7 +629,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasStartTime() {
-    return ((bitField0_ & 0x00000008) != 0);
+    return startTime_ != null;
   }
   /**
    * <pre>
@@ -669,7 +667,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasEndTime() {
-    return ((bitField0_ & 0x00000010) != 0);
+    return endTime_ != null;
   }
   /**
    * <pre>
@@ -1573,7 +1571,7 @@ private static final long serialVersionUID = 0L;
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     getSerializedSize();
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (header_ != null) {
       output.writeMessage(1, getHeader());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contactListPrefix_)) {
@@ -1609,7 +1607,7 @@ private static final long serialVersionUID = 0L;
     if (runType_ != com.tcn.cloud.api.api.commons.RunType.RUN_TYPE_ENABLED.getNumber()) {
       output.writeEnum(12, runType_);
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (filePattern_ != null) {
       output.writeMessage(13, getFilePattern());
     }
     if (getCallerIdsList().size() > 0) {
@@ -1622,10 +1620,10 @@ private static final long serialVersionUID = 0L;
     if (cellScrub_ != false) {
       output.writeBool(15, cellScrub_);
     }
-    if (((bitField0_ & 0x00000008) != 0)) {
+    if (startTime_ != null) {
       output.writeMessage(16, getStartTime());
     }
-    if (((bitField0_ & 0x00000010) != 0)) {
+    if (endTime_ != null) {
       output.writeMessage(17, getEndTime());
     }
     if (dialOrder_ != com.tcn.cloud.api.api.commons.DialOrderType.DIAL_ORDER_TYPE_FIRST.getNumber()) {
@@ -1700,7 +1698,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(endHour_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 42, endHour_);
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
+    if (filename_ != null) {
       output.writeMessage(43, getFilename());
     }
     if (scheduleByTimezone_ != false) {
@@ -1727,7 +1725,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (header_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getHeader());
     }
@@ -1770,7 +1768,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(12, runType_);
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (filePattern_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(13, getFilePattern());
     }
@@ -1792,11 +1790,11 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(15, cellScrub_);
     }
-    if (((bitField0_ & 0x00000008) != 0)) {
+    if (startTime_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(16, getStartTime());
     }
-    if (((bitField0_ & 0x00000010) != 0)) {
+    if (endTime_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(17, getEndTime());
     }
@@ -1886,7 +1884,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(endHour_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(42, endHour_);
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
+    if (filename_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(43, getFilename());
     }
@@ -2277,23 +2275,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.P3ExportProcess.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getHeaderFieldBuilder();
-        getFilePatternFieldBuilder();
-        getFilenameFieldBuilder();
-        getStartTimeFieldBuilder();
-        getEndTimeFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -2393,20 +2381,27 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.P3ExportProcess buildPartial() {
       com.tcn.cloud.api.api.v0alpha.P3ExportProcess result = new com.tcn.cloud.api.api.v0alpha.P3ExportProcess(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       if (bitField1_ != 0) { buildPartial1(result); }
       onBuilt();
       return result;
     }
 
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v0alpha.P3ExportProcess result) {
+      if (((bitField0_ & 0x00004000) != 0)) {
+        callerIds_.makeImmutable();
+        bitField0_ = (bitField0_ & ~0x00004000);
+      }
+      result.callerIds_ = callerIds_;
+    }
+
     private void buildPartial0(com.tcn.cloud.api.api.v0alpha.P3ExportProcess result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.header_ = headerBuilder_ == null
             ? header_
             : headerBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.contactListPrefix_ = contactListPrefix_;
@@ -2445,17 +2440,11 @@ private static final long serialVersionUID = 0L;
         result.filePattern_ = filePatternBuilder_ == null
             ? filePattern_
             : filePatternBuilder_.build();
-        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00002000) != 0)) {
         result.filename_ = filenameBuilder_ == null
             ? filename_
             : filenameBuilder_.build();
-        to_bitField0_ |= 0x00000004;
-      }
-      if (((from_bitField0_ & 0x00004000) != 0)) {
-        callerIds_.makeImmutable();
-        result.callerIds_ = callerIds_;
       }
       if (((from_bitField0_ & 0x00008000) != 0)) {
         result.cellScrub_ = cellScrub_;
@@ -2464,13 +2453,11 @@ private static final long serialVersionUID = 0L;
         result.startTime_ = startTimeBuilder_ == null
             ? startTime_
             : startTimeBuilder_.build();
-        to_bitField0_ |= 0x00000008;
       }
       if (((from_bitField0_ & 0x00020000) != 0)) {
         result.endTime_ = endTimeBuilder_ == null
             ? endTime_
             : endTimeBuilder_.build();
-        to_bitField0_ |= 0x00000010;
       }
       if (((from_bitField0_ & 0x00040000) != 0)) {
         result.dialOrder_ = dialOrder_;
@@ -2514,7 +2501,6 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x80000000) != 0)) {
         result.completionThreshold_ = completionThreshold_;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     private void buildPartial1(com.tcn.cloud.api.api.v0alpha.P3ExportProcess result) {
@@ -2665,8 +2651,7 @@ private static final long serialVersionUID = 0L;
       if (!other.callerIds_.isEmpty()) {
         if (callerIds_.isEmpty()) {
           callerIds_ = other.callerIds_;
-          callerIds_.makeImmutable();
-          bitField0_ |= 0x00004000;
+          bitField0_ = (bitField0_ & ~0x00004000);
         } else {
           ensureCallerIdsIsMutable();
           callerIds_.addAll(other.callerIds_);
@@ -3179,10 +3164,8 @@ private static final long serialVersionUID = 0L;
       } else {
         headerBuilder_.mergeFrom(value);
       }
-      if (header_ != null) {
-        bitField0_ |= 0x00000001;
-        onChanged();
-      }
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -4090,7 +4073,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.FilePattern file_pattern = 13 [json_name = "filePattern", deprecated = true];</code>
      * @deprecated api.v0alpha.P3ExportProcess.file_pattern is deprecated.
-     *     See api/v0alpha/lms.proto;l=1591
+     *     See api/v0alpha/lms.proto;l=1592
      * @return Whether the filePattern field is set.
      */
     @java.lang.Deprecated public boolean hasFilePattern() {
@@ -4107,7 +4090,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.FilePattern file_pattern = 13 [json_name = "filePattern", deprecated = true];</code>
      * @deprecated api.v0alpha.P3ExportProcess.file_pattern is deprecated.
-     *     See api/v0alpha/lms.proto;l=1591
+     *     See api/v0alpha/lms.proto;l=1592
      * @return The filePattern.
      */
     @java.lang.Deprecated public com.tcn.cloud.api.api.commons.FilePattern getFilePattern() {
@@ -4186,10 +4169,8 @@ private static final long serialVersionUID = 0L;
       } else {
         filePatternBuilder_.mergeFrom(value);
       }
-      if (filePattern_ != null) {
-        bitField0_ |= 0x00001000;
-        onChanged();
-      }
+      bitField0_ |= 0x00001000;
+      onChanged();
       return this;
     }
     /**
@@ -4359,10 +4340,8 @@ private static final long serialVersionUID = 0L;
       } else {
         filenameBuilder_.mergeFrom(value);
       }
-      if (filename_ != null) {
-        bitField0_ |= 0x00002000;
-        onChanged();
-      }
+      bitField0_ |= 0x00002000;
+      onChanged();
       return this;
     }
     /**
@@ -4432,10 +4411,10 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Internal.LongList callerIds_ = emptyLongList();
     private void ensureCallerIdsIsMutable() {
-      if (!callerIds_.isModifiable()) {
-        callerIds_ = makeMutableCopy(callerIds_);
+      if (!((bitField0_ & 0x00004000) != 0)) {
+        callerIds_ = mutableCopy(callerIds_);
+        bitField0_ |= 0x00004000;
       }
-      bitField0_ |= 0x00004000;
     }
     /**
      * <pre>
@@ -4449,8 +4428,8 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Long>
         getCallerIdsList() {
-      callerIds_.makeImmutable();
-      return callerIds_;
+      return ((bitField0_ & 0x00004000) != 0) ?
+               java.util.Collections.unmodifiableList(callerIds_) : callerIds_;
     }
     /**
      * <pre>
@@ -4496,7 +4475,6 @@ private static final long serialVersionUID = 0L;
 
       ensureCallerIdsIsMutable();
       callerIds_.setLong(index, value);
-      bitField0_ |= 0x00004000;
       onChanged();
       return this;
     }
@@ -4515,7 +4493,6 @@ private static final long serialVersionUID = 0L;
 
       ensureCallerIdsIsMutable();
       callerIds_.addLong(value);
-      bitField0_ |= 0x00004000;
       onChanged();
       return this;
     }
@@ -4535,7 +4512,6 @@ private static final long serialVersionUID = 0L;
       ensureCallerIdsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, callerIds_);
-      bitField0_ |= 0x00004000;
       onChanged();
       return this;
     }
@@ -4686,10 +4662,8 @@ private static final long serialVersionUID = 0L;
       } else {
         startTimeBuilder_.mergeFrom(value);
       }
-      if (startTime_ != null) {
-        bitField0_ |= 0x00010000;
-        onChanged();
-      }
+      bitField0_ |= 0x00010000;
+      onChanged();
       return this;
     }
     /**
@@ -4843,10 +4817,8 @@ private static final long serialVersionUID = 0L;
       } else {
         endTimeBuilder_.mergeFrom(value);
       }
-      if (endTime_ != null) {
-        bitField0_ |= 0x00020000;
-        onChanged();
-      }
+      bitField0_ |= 0x00020000;
+      onChanged();
       return this;
     }
     /**

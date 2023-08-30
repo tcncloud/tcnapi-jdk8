@@ -99,4 +99,51 @@ public interface OmnichannelBeginWrapUpEventOrBuilder extends
    * <code>.api.commons.OmniMessage message = 5 [json_name = "message"];</code>
    */
   com.tcn.cloud.api.api.commons.OmniMessageOrBuilder getMessageOrBuilder();
+
+  /**
+   * <pre>
+   * the AsmSession Sid
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value asm_session_sid = 6 [json_name = "asmSessionSid"];</code>
+   * @return Whether the asmSessionSid field is set.
+   */
+  boolean hasAsmSessionSid();
+  /**
+   * <pre>
+   * the AsmSession Sid
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value asm_session_sid = 6 [json_name = "asmSessionSid"];</code>
+   * @return The asmSessionSid.
+   */
+  com.google.protobuf.Int64Value getAsmSessionSid();
+  /**
+   * <pre>
+   * the AsmSession Sid
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value asm_session_sid = 6 [json_name = "asmSessionSid"];</code>
+   */
+  com.google.protobuf.Int64ValueOrBuilder getAsmSessionSidOrBuilder();
+
+  /**
+   * <pre>
+   * the id of the agent
+   * </pre>
+   *
+   * <code>string user_id = 7 [json_name = "userId"];</code>
+   * @return The userId.
+   */
+  java.lang.String getUserId();
+  /**
+   * <pre>
+   * the id of the agent
+   * </pre>
+   *
+   * <code>string user_id = 7 [json_name = "userId"];</code>
+   * @return The bytes for userId.
+   */
+  com.google.protobuf.ByteString
+      getUserIdBytes();
 }

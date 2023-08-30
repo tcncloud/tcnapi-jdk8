@@ -8,11 +8,19 @@ public interface OmniNodePromptOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * the base message to send
+   * </pre>
+   *
    * <code>string prompt = 1 [json_name = "prompt"];</code>
    * @return The prompt.
    */
   java.lang.String getPrompt();
   /**
+   * <pre>
+   * the base message to send
+   * </pre>
+   *
    * <code>string prompt = 1 [json_name = "prompt"];</code>
    * @return The bytes for prompt.
    */
@@ -20,11 +28,19 @@ public interface OmniNodePromptOrBuilder extends
       getPromptBytes();
 
   /**
+   * <pre>
+   * the name (key in payload) under which to store the user input
+   * </pre>
+   *
    * <code>string store_to = 2 [json_name = "storeTo"];</code>
    * @return The storeTo.
    */
   java.lang.String getStoreTo();
   /**
+   * <pre>
+   * the name (key in payload) under which to store the user input
+   * </pre>
+   *
    * <code>string store_to = 2 [json_name = "storeTo"];</code>
    * @return The bytes for storeTo.
    */
@@ -32,23 +48,39 @@ public interface OmniNodePromptOrBuilder extends
       getStoreToBytes();
 
   /**
+   * <pre>
+   * a list of options to display along with the prompt
+   * </pre>
+   *
    * <code>repeated string options = 3 [json_name = "options"];</code>
    * @return A list containing the options.
    */
   java.util.List<java.lang.String>
       getOptionsList();
   /**
+   * <pre>
+   * a list of options to display along with the prompt
+   * </pre>
+   *
    * <code>repeated string options = 3 [json_name = "options"];</code>
    * @return The count of options.
    */
   int getOptionsCount();
   /**
+   * <pre>
+   * a list of options to display along with the prompt
+   * </pre>
+   *
    * <code>repeated string options = 3 [json_name = "options"];</code>
    * @param index The index of the element to return.
    * @return The options at the given index.
    */
   java.lang.String getOptions(int index);
   /**
+   * <pre>
+   * a list of options to display along with the prompt
+   * </pre>
+   *
    * <code>repeated string options = 3 [json_name = "options"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the options at the given index.

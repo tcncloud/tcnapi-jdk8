@@ -24,4 +24,19 @@ public interface SlaOrBuilder extends
    * @return The slaMin.
    */
   long getSlaMin();
+
+  /**
+   * <code>.api.commons.Duration sla_duration = 4 [json_name = "slaDuration"];</code>
+   * @return Whether the slaDuration field is set.
+   */
+  boolean hasSlaDuration();
+  /**
+   * <code>.api.commons.Duration sla_duration = 4 [json_name = "slaDuration"];</code>
+   * @return The slaDuration.
+   */
+  com.tcn.cloud.api.api.commons.Duration getSlaDuration();
+  /**
+   * <code>.api.commons.Duration sla_duration = 4 [json_name = "slaDuration"];</code>
+   */
+  com.tcn.cloud.api.api.commons.DurationOrBuilder getSlaDurationOrBuilder();
 }

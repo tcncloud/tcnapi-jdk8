@@ -547,13 +547,16 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Control whether the reject option is available to the approvers.
+   * Please use disable_reject_option_for_approvers under GeneralSettings.
    * </pre>
    *
-   * <code>bool enable_reject_option_for_approvers = 29 [json_name = "enableRejectOptionForApprovers"];</code>
+   * <code>bool enable_reject_option_for_approvers = 29 [json_name = "enableRejectOptionForApprovers", deprecated = true];</code>
+   * @deprecated api.v0alpha.ManualDialSettings.enable_reject_option_for_approvers is deprecated.
+   *     See api/v0alpha/p3api.proto;l=1553
    * @return The enableRejectOptionForApprovers.
    */
   @java.lang.Override
-  public boolean getEnableRejectOptionForApprovers() {
+  @java.lang.Deprecated public boolean getEnableRejectOptionForApprovers() {
     return enableRejectOptionForApprovers_;
   }
 
@@ -3089,25 +3092,31 @@ java.lang.String defaultValue) {
     /**
      * <pre>
      * Control whether the reject option is available to the approvers.
+     * Please use disable_reject_option_for_approvers under GeneralSettings.
      * </pre>
      *
-     * <code>bool enable_reject_option_for_approvers = 29 [json_name = "enableRejectOptionForApprovers"];</code>
+     * <code>bool enable_reject_option_for_approvers = 29 [json_name = "enableRejectOptionForApprovers", deprecated = true];</code>
+     * @deprecated api.v0alpha.ManualDialSettings.enable_reject_option_for_approvers is deprecated.
+     *     See api/v0alpha/p3api.proto;l=1553
      * @return The enableRejectOptionForApprovers.
      */
     @java.lang.Override
-    public boolean getEnableRejectOptionForApprovers() {
+    @java.lang.Deprecated public boolean getEnableRejectOptionForApprovers() {
       return enableRejectOptionForApprovers_;
     }
     /**
      * <pre>
      * Control whether the reject option is available to the approvers.
+     * Please use disable_reject_option_for_approvers under GeneralSettings.
      * </pre>
      *
-     * <code>bool enable_reject_option_for_approvers = 29 [json_name = "enableRejectOptionForApprovers"];</code>
+     * <code>bool enable_reject_option_for_approvers = 29 [json_name = "enableRejectOptionForApprovers", deprecated = true];</code>
+     * @deprecated api.v0alpha.ManualDialSettings.enable_reject_option_for_approvers is deprecated.
+     *     See api/v0alpha/p3api.proto;l=1553
      * @param value The enableRejectOptionForApprovers to set.
      * @return This builder for chaining.
      */
-    public Builder setEnableRejectOptionForApprovers(boolean value) {
+    @java.lang.Deprecated public Builder setEnableRejectOptionForApprovers(boolean value) {
 
       enableRejectOptionForApprovers_ = value;
       bitField0_ |= 0x02000000;
@@ -3117,12 +3126,15 @@ java.lang.String defaultValue) {
     /**
      * <pre>
      * Control whether the reject option is available to the approvers.
+     * Please use disable_reject_option_for_approvers under GeneralSettings.
      * </pre>
      *
-     * <code>bool enable_reject_option_for_approvers = 29 [json_name = "enableRejectOptionForApprovers"];</code>
+     * <code>bool enable_reject_option_for_approvers = 29 [json_name = "enableRejectOptionForApprovers", deprecated = true];</code>
+     * @deprecated api.v0alpha.ManualDialSettings.enable_reject_option_for_approvers is deprecated.
+     *     See api/v0alpha/p3api.proto;l=1553
      * @return This builder for chaining.
      */
-    public Builder clearEnableRejectOptionForApprovers() {
+    @java.lang.Deprecated public Builder clearEnableRejectOptionForApprovers() {
       bitField0_ = (bitField0_ & ~0x02000000);
       enableRejectOptionForApprovers_ = false;
       onChanged();

@@ -75,6 +75,11 @@ public final class HuntgroupProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_commons_org_GeneralSettings_InboundComplianceMetadata_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_org_GeneralSettings_PrepareStateCallDelivery_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_org_GeneralSettings_PrepareStateCallDelivery_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_commons_org_CommunicationSettings_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -261,7 +266,7 @@ public final class HuntgroupProto {
       "g.TransferCallSettingsR\024transferCallSett" +
       "ings\022^\n\027number_history_settings\030\007 \001(\0132&." +
       "api.commons.org.NumberHistorySettingsR\025n" +
-      "umberHistorySettings\"\304$\n\017GeneralSettings" +
+      "umberHistorySettings\"\356&\n\017GeneralSettings" +
       "\022B\n\036enable_agent_gateway_title_bar\030\001 \001(\010" +
       "R\032enableAgentGatewayTitleBar\0221\n\025default_" +
       "agent_dial_in\030\002 \001(\tR\022defaultAgentDialIn\022" +
@@ -334,334 +339,342 @@ public final class HuntgroupProto {
       "ble_manual_approval_of_sms\030\276\005 \001(\010R\031enabl" +
       "eManualApprovalOfSms\022K\n\"require_manual_a" +
       "pproval_number_sms\030\277\005 \001(\010R\036requireManual" +
-      "ApprovalNumberSms\022e\n\023alphanumeric_keypad" +
-      "\030\240\006 \001(\01323.api.commons.org.GeneralSetting" +
-      "s.AlphanumericKeypadR\022alphanumericKeypad" +
-      "\022J\n!enable_call_desktop_notifications\030\241\006" +
-      " \001(\010R\036enableCallDesktopNotifications\022{\n\033" +
-      "inbound_compliance_metadata\030\242\006 \001(\0132:.api" +
-      ".commons.org.GeneralSettings.InboundComp" +
-      "lianceMetadataR\031inboundComplianceMetadat" +
-      "a\0223\n\025enable_agent_intercom\030\243\006 \001(\010R\023enabl" +
-      "eAgentIntercom\032C\n\016PauseOptionSet\022\030\n\007enab" +
-      "led\030\001 \001(\010R\007enabled\022\027\n\007set_sid\030\002 \001(\003R\006set" +
-      "Sid\032\357\001\n\023HoldQueueMonitoring\022\030\n\007enabled\030\001" +
-      " \001(\010R\007enabled\022>\n\ragent_routing\030\002 \001(\0162\031.a" +
-      "pi.commons.AgentRoutingR\014agentRouting\022=\n" +
-      "\033required_hunt_group_routing\030\003 \001(\003R\030requ" +
-      "iredHuntGroupRouting\022?\n\034preferred_hunt_g" +
-      "roup_routing\030\004 \001(\003R\031preferredHuntGroupRo" +
-      "uting\032z\n\022DataDipDataDisplay\0221\n\025display_d" +
-      "ata_dip_data\030\001 \001(\010R\022displayDataDipData\0221" +
-      "\n\025data_dip_display_keys\030\002 \003(\tR\022dataDipDi" +
-      "splayKeys\032\214\001\n\026IntegrationDataDisplay\0228\n\030" +
-      "display_integration_data\030\001 \001(\010R\026displayI" +
-      "ntegrationData\0228\n\030integration_display_ke" +
-      "ys\030\002 \003(\tR\026integrationDisplayKeys\032x\n\022Jour" +
-      "neyDataDisplay\0220\n\024display_journey_data\030\001" +
-      " \001(\010R\022displayJourneyData\0220\n\024journey_disp" +
-      "lay_keys\030\002 \003(\tR\022journeyDisplayKeys\032\272\001\n\036A" +
-      "gentLoginGuiStatisticsDisplay\022J\n\"display" +
-      "_agent_login_gui_statistics\030\001 \001(\010R\036displ" +
-      "ayAgentLoginGuiStatistics\022L\n#agent_login" +
-      "_gui_statistics_template\030\002 \001(\003R\037agentLog" +
-      "inGuiStatisticsTemplate\032\265\001\n\027PhoneZipMeta" +
-      "dataDisplay\022;\n\032display_phone_zip_metadat" +
-      "a\030\001 \001(\010R\027displayPhoneZipMetadata\022]\n\027phon" +
-      "e_zip_metadata_keys\030\002 \003(\0162&.api.commons." +
-      "PhonePostalDisplayOptionsR\024phoneZipMetad" +
-      "ataKeys\032Q\n\024DisallowedHuntGroups\022\030\n\007enabl" +
-      "ed\030\001 \001(\010R\007enabled\022\037\n\013hunt_groups\030\002 \003(\003R\n" +
-      "huntGroups\032v\n\022AlphanumericKeypad\022\030\n\007enab" +
-      "led\030\001 \001(\010R\007enabled\022F\n\tdelimiter\030\002 \001(\0162(." +
-      "api.commons.AlphanumericKeypadDelimiterR" +
-      "\tdelimiter\032\177\n\031InboundComplianceMetadata\022" +
-      "\030\n\007enabled\030\001 \001(\010R\007enabled\022#\n\roptional_da" +
-      "ta\030\002 \003(\003R\014optionalData\022#\n\rrequired_data\030" +
-      "\003 \003(\003R\014requiredData\"\354\016\n\025CommunicationSet" +
-      "tings\0227\n\030enable_scrub_list_adding\030\001 \001(\010R" +
-      "\025enableScrubListAdding\022\037\n\013scrub_lists\030\002 " +
-      "\003(\tR\nscrubLists\0229\n\031enable_scrub_list_rem" +
-      "oval\030\003 \001(\010R\026enableScrubListRemoval\022=\n\033sc" +
-      "rub_lists_removal_allowed\030\004 \003(\tR\030scrubLi" +
-      "stsRemovalAllowed\022R\n\032compliance_default_" +
-      "country\030\005 \001(\0162\024.api.commons.CountryR\030com" +
-      "plianceDefaultCountry\0229\n\031display_options" +
-      "_in_wrapup\030\006 \001(\010R\026displayOptionsInWrapup" +
-      "\022}\n\035inbound_scrub_list_expiration\030d \001(\0132" +
-      ":.api.commons.org.CommunicationSettings." +
-      "ScrubListExpirationR\032inboundScrubListExp" +
-      "iration\022{\n\034manual_scrub_list_expiration\030" +
-      "e \001(\0132:.api.commons.org.CommunicationSet" +
-      "tings.ScrubListExpirationR\031manualScrubLi" +
-      "stExpiration\022\177\n\036outbound_scrub_list_expi" +
-      "ration\030f \001(\0132:.api.commons.org.Communica" +
-      "tionSettings.ScrubListExpirationR\033outbou" +
-      "ndScrubListExpiration\022}\n\035preview_scrub_l" +
-      "ist_expiration\030g \001(\0132:.api.commons.org.C" +
-      "ommunicationSettings.ScrubListExpiration" +
-      "R\032previewScrubListExpiration\022M\n#automate" +
-      "_manually_dialed_scrub_list\030\310\001 \001(\010R\037auto" +
-      "mateManuallyDialedScrubList\022K\n\"automate_" +
-      "preview_dialed_scrub_list\030\311\001 \001(\010R\036automa" +
-      "tePreviewDialedScrubList\022u\n\027automate_res" +
-      "ponse_rules\030\312\001 \001(\0132<.api.commons.org.Com" +
-      "municationSettings.AutomateResponseRules" +
-      "R\025automateResponseRules\022\203\001\n\035automate_scr" +
-      "ub_list_call_data\030\313\001 \001(\0132@.api.commons.o" +
-      "rg.CommunicationSettings.AutomateScrubLi" +
-      "stCallDataR\031automateScrubListCallData\032\354\001" +
-      "\n\023ScrubListExpiration\022S\n\022default_expirat" +
-      "ion\030\001 \001(\0162$.api.commons.CommunicationExp" +
-      "irationR\021defaultExpiration\022)\n\020limit_expi" +
-      "ration\030\002 \001(\010R\017limitExpiration\022U\n\023limited" +
-      "_expirations\030\003 \003(\0162$.api.commons.Communi" +
-      "cationExpirationR\022limitedExpirations\032L\n\025" +
-      "AutomateResponseRules\022\030\n\007enabled\030\001 \001(\010R\007" +
-      "enabled\022\031\n\010rule_sid\030\002 \001(\003R\007ruleSid\032\235\002\n\031A" +
-      "utomateScrubListCallData\022\030\n\007enabled\030\001 \001(" +
-      "\010R\007enabled\022\210\001\n\026scrub_list_data_fields\030\002 " +
-      "\003(\0132S.api.commons.org.CommunicationSetti" +
-      "ngs.AutomateScrubListCallData.ScrubListD" +
-      "ataFieldR\023scrubListDataFields\032[\n\022ScrubLi" +
-      "stDataField\022\035\n\nscrub_list\030\001 \001(\tR\tscrubLi" +
-      "st\022&\n\017call_data_field\030\002 \001(\003R\rcallDataFie" +
-      "ld\"\342\007\n\020CallbackSettings\022<\n\032enable_callba" +
-      "ck_scheduling\030\001 \001(\010R\030enableCallbackSched" +
-      "uling\022j\n\030default_callback_routing\030\002 \001(\0132" +
-      "0.api.commons.org.CallbackSettings.Defau" +
-      "ltRoutingR\026defaultCallbackRouting\0226\n\027ena" +
-      "ble_callback_calling\030\003 \001(\010R\025enableCallba" +
-      "ckCalling\022<\n\032enable_automatic_retrieval\030" +
-      "\004 \001(\010R\030enableAutomaticRetrieval\022{\n\033callb" +
-      "ack_routing_disallowed\030\005 \001(\0132;.api.commo" +
-      "ns.org.CallbackSettings.CallbackRoutingD" +
-      "isallowedR\031callbackRoutingDisallowed\022A\n\035" +
-      "enable_customizable_caller_id\030\006 \001(\010R\032ena" +
-      "bleCustomizableCallerId\022*\n\021default_calle" +
-      "r_id\030\007 \001(\tR\017defaultCallerId\0228\n\030enable_ca" +
-      "llback_calendar\030\010 \001(\010R\026enableCallbackCal" +
-      "endar\032\306\001\n\016DefaultRouting\022F\n\014routing_mode" +
-      "\030\001 \001(\0162#.api.commons.DefaultCallbackRout" +
-      "ingR\013routingMode\022\033\n\tagent_sid\030\002 \001(\003R\010age" +
-      "ntSid\022\'\n\017agent_skillsets\030\003 \003(\003R\016agentSki" +
-      "llsets\022&\n\017hunt_group_sids\030\004 \003(\003R\rhuntGro" +
-      "upSids\032\276\001\n\031CallbackRoutingDisallowed\0220\n\024" +
-      "use_routing_limiting\030\001 \001(\010R\022useRoutingLi" +
-      "miting\022\035\n\nagent_sids\030\002 \003(\003R\tagentSids\022&\n" +
-      "\017hunt_group_sids\030\003 \003(\003R\rhuntGroupSids\022(\n" +
-      "\020agent_skill_sids\030\004 \003(\003R\016agentSkillSids\"" +
-      "\253\002\n\023PreviewDialSettings\022;\n\032enable_previe" +
-      "w_dial_cancel\030\001 \001(\010R\027enablePreviewDialCa" +
-      "ncel\022<\n\033enable_auto_pause_on_cancel\030\002 \001(" +
-      "\010R\027enableAutoPauseOnCancel\022\'\n\017timeout_mi" +
-      "nutes\030\003 \001(\003R\016timeoutMinutes\022>\n\033require_n" +
-      "umber_confirmation\030\004 \001(\010R\031requireNumberC" +
-      "onfirmation\0220\n\024preview_queue_config\030\005 \001(" +
-      "\tR\022previewQueueConfig\"\334\026\n\022ManualDialSett" +
-      "ings\022,\n\022enable_manual_dial\030\001 \001(\010R\020enable" +
-      "ManualDial\0228\n\030queue_configuration_name\030\002" +
-      " \001(\tR\026queueConfigurationName\022\\\n\026default_" +
-      "call_recording\030\003 \001(\0162&.api.commons.HuntG" +
-      "roupOrgDefaultCustomR\024defaultCallRecordi" +
-      "ng\022P\n\020cell_phone_scrub\030\004 \001(\0162&.api.commo" +
-      "ns.HuntGroupOrgDefaultCustomR\016cellPhoneS" +
-      "crub\022Z\n\025time_zone_restriction\030\005 \001(\0162&.ap" +
-      "i.commons.HuntGroupOrgDefaultCustomR\023tim" +
-      "eZoneRestriction\022q\n time_zone_validation" +
-      "_postal_code\030\006 \001(\0162).api.commons.ManualD" +
-      "ialTimeZoneValidationR\034timeZoneValidatio" +
-      "nPostalCode\022i\n\030natural_compliance_scrub\030" +
-      "\007 \001(\0132/.api.commons.org.NaturalLanguageC" +
-      "omplianceScrubR\026naturalComplianceScrub\022X" +
-      "\n\016scrub_override\030\010 \001(\01321.api.commons.org" +
-      ".ManualDialSettings.ScrubOverrideR\rscrub" +
-      "Override\022)\n\020enable_whitelist\030\t \001(\010R\017enab" +
-      "leWhitelist\022N\n\030default_outbound_country\030" +
-      "\n \001(\0162\024.api.commons.CountryR\026defaultOutb" +
-      "oundCountry\022K\n\"display_outbound_country_" +
-      "selection\030\013 \001(\010R\037displayOutboundCountryS" +
-      "election\022J\n\"display_outbound_number_phon" +
-      "e_book\030\014 \001(\010R\036displayOutboundNumberPhone" +
-      "Book\022O\n\031default_caller_id_country\030\r \001(\0162" +
-      "\024.api.commons.CountryR\026defaultCallerIdCo" +
-      "untry\022L\n#display_caller_id_country_selec" +
-      "tion\030\016 \001(\010R\037displayCallerIdCountrySelect" +
-      "ion\022>\n\034display_caller_id_phone_book\030\017 \001(" +
-      "\010R\030displayCallerIdPhoneBook\022A\n\035enable_cu" +
-      "stomizable_caller_id\030\020 \001(\010R\032enableCustom" +
-      "izableCallerId\022_\n\021default_caller_id\030\021 \001(" +
-      "\01323.api.commons.org.ManualDialSettings.D" +
-      "efaultCallerIdR\017defaultCallerId\0225\n\027enabl" +
-      "e_caller_id_bucket\030\022 \001(\010R\024enableCallerId" +
-      "Bucket\0225\n\027random_caller_id_bucket\030\023 \001(\003R" +
-      "\024randomCallerIdBucket\0229\n\031automate_random" +
-      "_caller_id\030\024 \001(\010R\026automateRandomCallerId" +
-      "\0221\n\025enable_mask_caller_id\030\025 \001(\010R\022enableM" +
-      "askCallerId\022,\n\022enable_sip_address\030\026 \001(\010R" +
-      "\020enableSipAddress\022\203\001\n$natural_language_c" +
-      "ompliance_metadata\030\027 \001(\01322.api.commons.o" +
-      "rg.NaturalLanguageComplianceMetadataR!na" +
-      "turalLanguageComplianceMetadata\022I\n\016data_" +
-      "dip_scope\030\030 \001(\0162#.api.commons.ManualDial" +
-      "DataDipScopeR\014dataDipScope\022-\n\023data_dip_c" +
-      "onfig_sid\030\031 \001(\003R\020dataDipConfigSid\022_\n\030dat" +
-      "a_dip_result_handling\030\032 \001(\0162&.api.common" +
-      "s.ManualDialDataDipHandlingR\025dataDipResu" +
-      "ltHandling\022\200\001\n\035data_dip_integration_mapp" +
-      "ings\030\033 \003(\0132=.api.commons.org.ManualDialS" +
-      "ettings.DataDipIntegrationMappingR\032dataD" +
-      "ipIntegrationMappings\022i\n\035data_dip_integr" +
-      "ation_handling\030\034 \001(\0162&.api.commons.Manua" +
-      "lDialDataDipHandlingR\032dataDipIntegration" +
-      "Handling\022J\n\"enable_reject_option_for_app" +
-      "rovers\030\035 \001(\010R\036enableRejectOptionForAppro" +
-      "vers\032\204\002\n\rScrubOverride\0220\n\024enable_dncl_ov" +
-      "erride\030\001 \001(\010R\022enableDnclOverride\022;\n\032enab" +
-      "le_cell_scrub_override\030\002 \001(\010R\027enableCell" +
-      "ScrubOverride\022D\n\037enable_time_zone_scrub_" +
-      "override\030\003 \001(\010R\033enableTimeZoneScrubOverr" +
-      "ide\022>\n\033natural_compliance_override\030\004 \001(\010" +
-      "R\031naturalComplianceOverride\032y\n\017DefaultCa" +
-      "llerId\022<\n\005usage\030\001 \001(\0162&.api.commons.Defa" +
-      "ultManualDialCallerIdR\005usage\022(\n\020custom_c" +
-      "aller_id\030\002 \001(\tR\016customCallerId\032\333\001\n\031DataD" +
-      "ipIntegrationMapping\022L\n\014mapping_type\030\001 \001" +
-      "(\0162).api.commons.ManualDialDataDipIntegr" +
-      "ationR\013mappingType\022-\n\023data_dip_return_ke" +
-      "y\030\002 \001(\tR\020dataDipReturnKey\022A\n\035contact_fie" +
-      "ld_description_sid\030\003 \001(\003R\032contactFieldDe" +
-      "scriptionSid\"\223\001\n\036NaturalLanguageComplian" +
-      "ceScrub\022Q\n\020compliance_scrub\030\001 \001(\0162&.api." +
-      "commons.HuntGroupOrgDefaultCustomR\017compl" +
-      "ianceScrub\022\036\n\013rule_set_id\030\002 \001(\tR\truleSet" +
-      "Id\"\207\001\n!NaturalLanguageComplianceMetadata" +
-      "\022\030\n\007enabled\030\001 \001(\010R\007enabled\022#\n\roptional_d" +
-      "ata\030\002 \003(\003R\014optionalData\022#\n\rrequired_data" +
-      "\030\003 \003(\003R\014requiredData\"l\n\022CallerIdBucketDa" +
-      "ta\0225\n\027xml_client_property_sid\030\001 \001(\003R\024xml" +
-      "ClientPropertySid\022\037\n\013bucket_name\030\002 \001(\tR\n" +
-      "bucketName\"\213\027\n\024TransferCallSettings\022\'\n\017e" +
-      "nable_transfer\030\001 \001(\010R\016enableTransfer\022X\n\016" +
-      "hand_off_types\030\002 \001(\01322.api.commons.org.T" +
-      "ransferCallSettings.HandOffTypesR\014handOf" +
-      "fTypes\022O\n\020recording_status\030\003 \001(\0162$.api.c" +
-      "ommons.TransferRecordingStatusR\017recordin" +
-      "gStatus\022Z\n\016transfer_types\030\004 \001(\01323.api.co" +
-      "mmons.org.TransferCallSettings.TransferT" +
-      "ypesR\rtransferTypes\022J\n\"display_transfer_" +
-      "number_phone_book\030\005 \001(\010R\036displayTransfer" +
-      "NumberPhoneBook\022C\n\036enable_transfer_numbe" +
-      "r_editing\030\006 \001(\010R\033enableTransferNumberEdi" +
-      "ting\0226\n\027default_transfer_number\030\007 \001(\tR\025d" +
-      "efaultTransferNumber\0226\n\027start_recording_" +
-      "numbers\030\010 \003(\tR\025startRecordingNumbers\0224\n\026" +
-      "stop_recording_numbers\030\t \003(\tR\024stopRecord" +
-      "ingNumbers\022L\n\027transfer_number_country\030\n " +
-      "\001(\0162\024.api.commons.CountryR\025transferNumbe" +
-      "rCountry\022K\n\"display_transfer_country_sel" +
-      "ection\030\013 \001(\010R\037displayTransferCountrySele" +
-      "ction\022>\n\034display_caller_id_phone_book\030\014 " +
-      "\001(\010R\030displayCallerIdPhoneBook\0227\n\030enable_" +
-      "caller_id_editing\030\r \001(\010R\025enableCallerIdE" +
-      "diting\022a\n\021default_caller_id\030\016 \001(\01325.api." +
-      "commons.org.TransferCallSettings.Default" +
-      "CallerIdR\017defaultCallerId\022@\n\021caller_id_c" +
-      "ountry\030\017 \001(\0162\024.api.commons.CountryR\017call" +
-      "erIdCountry\022L\n#display_caller_id_country" +
-      "_selection\030\020 \001(\010R\037displayCallerIdCountry" +
-      "Selection\022G\n display_agent_transfer_filt" +
-      "ering\030\021 \001(\010R\035displayAgentTransferFilteri" +
-      "ng\022G\n default_agent_transfer_filtering\030\022" +
-      " \001(\010R\035defaultAgentTransferFiltering\022=\n\033e" +
-      "nable_hunt_group_filtering\030\023 \001(\010R\030enable" +
-      "HuntGroupFiltering\022q\n\024requeue_queue_conf" +
-      "ig\030\024 \001(\0132?.api.commons.org.TransferCallS" +
-      "ettings.RequeueQueueConfigurationR\022reque" +
-      "ueQueueConfig\022\177\n\033requeue_transfer_disall" +
-      "owed\030\025 \001(\0132?.api.commons.org.TransferCal" +
-      "lSettings.RequeueTransferDisallowedR\031req" +
-      "ueueTransferDisallowed\022s\n\027pbx_transfer_d" +
-      "isallowed\030\026 \001(\0132;.api.commons.org.Transf" +
-      "erCallSettings.PbxTransferDisallowedR\025pb" +
-      "xTransferDisallowed\0222\n\025enable_scrub_over" +
-      "ride\030\027 \001(\010R\023enableScrubOverride\022)\n\020enabl" +
-      "e_whitelist\030\030 \001(\010R\017enableWhitelist\022i\n\030na" +
-      "tural_compliance_scrub\030\031 \001(\0132/.api.commo" +
-      "ns.org.NaturalLanguageComplianceScrubR\026n" +
-      "aturalComplianceScrub\022\203\001\n$natural_langua" +
-      "ge_compliance_metadata\030\032 \001(\01322.api.commo" +
-      "ns.org.NaturalLanguageComplianceMetadata" +
-      "R!naturalLanguageComplianceMetadata\032}\n\014H" +
-      "andOffTypes\022+\n\021enable_conference\030\001 \001(\010R\020" +
-      "enableConference\022\037\n\013enable_warm\030\002 \001(\010R\ne" +
-      "nableWarm\022\037\n\013enable_cold\030\003 \001(\010R\nenableCo" +
-      "ld\032\254\002\n\rTransferTypes\0222\n\025enable_agent_tra" +
-      "nsfer\030\001 \001(\010R\023enableAgentTransfer\0220\n\024enab" +
-      "le_open_transfer\030\002 \001(\010R\022enableOpenTransf" +
-      "er\0226\n\027enable_requeue_transfer\030\003 \001(\010R\025ena" +
-      "bleRequeueTransfer\022A\n\035enable_pbx_extensi" +
-      "on_transfer\030\004 \001(\010R\032enablePbxExtensionTra" +
-      "nsfer\022:\n\031enable_voicemail_transfer\030\005 \001(\010" +
-      "R\027enableVoicemailTransfer\032\205\001\n\031RequeueTra" +
-      "nsferDisallowed\022\026\n\006enable\030\001 \001(\010R\006enable\022" +
-      "(\n\020agent_skill_sids\030\002 \003(\003R\016agentSkillSid" +
-      "s\022&\n\017hunt_group_sids\030\003 \003(\003R\rhuntGroupSid" +
-      "s\032O\n\025PbxTransferDisallowed\022\026\n\006enable\030\001 \001" +
-      "(\010R\006enable\022\036\n\nextensions\030\002 \003(\tR\nextensio" +
-      "ns\032{\n\031RequeueQueueConfiguration\022=\n\005usage" +
-      "\030\001 \001(\0162\'.api.commons.RequeueTransferQueu" +
-      "eConfigR\005usage\022\037\n\013custom_name\030\002 \001(\tR\ncus" +
-      "tomName\032w\n\017DefaultCallerId\022:\n\005usage\030\001 \001(" +
-      "\0162$.api.commons.DefaultTransferCallerIdR" +
-      "\005usage\022(\n\020custom_caller_id\030\002 \001(\tR\016custom" +
-      "CallerId\"\363\001\n\025NumberHistorySettings\022#\n\ren" +
-      "able_search\030\001 \001(\010R\014enableSearch\0224\n\026enabl" +
-      "e_report_download\030\002 \001(\010R\024enableReportDow" +
-      "nload\022<\n\032enable_recordings_download\030\003 \001(" +
-      "\010R\030enableRecordingsDownload\022A\n\035enable_ag" +
-      "ent_response_editing\030\004 \001(\010R\032enableAgentR" +
-      "esponseEditing\"\344\001\n\030AgentResponseAutoRule" +
-      "Set\022\037\n\013ruleset_sid\030\001 \001(\003R\nrulesetSid\022\022\n\004" +
-      "name\030\002 \001(\tR\004name\022 \n\013description\030\003 \001(\tR\013d" +
-      "escription\022.\n\007country\030\004 \001(\0162\024.api.common" +
-      "s.CountryR\007country\022A\n\tresponses\030\005 \003(\0132#." +
-      "api.commons.org.AutoResponseChoiceR\tresp" +
-      "onses\"\221\001\n\022AutoResponseChoice\022.\n\023agent_ca" +
-      "ll_response\030\001 \001(\tR\021agentCallResponse\022K\n\013" +
-      "comparitors\030\002 \003(\0132).api.commons.org.Agen" +
-      "tResponseComparitorsR\013comparitors\"P\n\030Age" +
-      "ntResponseComparitors\022\024\n\005value\030\001 \001(\tR\005va" +
-      "lue\022\036\n\nexpiration\030\002 \001(\003R\nexpiration\"\352\007\n\r" +
-      "DataDipConfig\022\037\n\013config_name\030\001 \001(\tR\nconf" +
-      "igName\022\037\n\013config_type\030\002 \001(\tR\nconfigType\022" +
-      "\035\n\nremote_url\030\003 \001(\tR\tremoteUrl\022i\n\027param_" +
-      "type_value_tuples\030\004 \003(\01322.api.commons.or" +
-      "g.DataDipConfig.ParamTypeValueTupleR\024par" +
-      "amTypeValueTuples\022<\n\006params\030\005 \003(\0132$.api." +
-      "commons.org.DataDipConfig.ParamR\006params\022" +
-      "=\n\004data\030\006 \003(\0132).api.commons.org.DataDipC" +
-      "onfig.ReturnDataR\004data\022%\n\016request_method" +
-      "\030\007 \001(\tR\rrequestMethod\0225\n\027xml_client_prop",
-      "erty_sid\030\010 \001(\003R\024xmlClientPropertySid\022?\n\007" +
-      "headers\030\t \003(\0132%.api.commons.org.DataDipC" +
-      "onfig.HeaderR\007headers\032\255\001\n\005Param\022\022\n\004name\030" +
-      "\001 \001(\tR\004name\022\024\n\005value\030\002 \001(\tR\005value\022\035\n\npar" +
-      "am_type\030\003 \001(\tR\tparamType\022[\n\017composite_va" +
-      "lue\030\004 \003(\01322.api.commons.org.DataDipConfi" +
-      "g.ParamTypeValueTupleR\016compositeValue\032=\n" +
-      "\023ParamTypeValueTuple\022\020\n\003key\030\001 \001(\tR\003key\022\024" +
-      "\n\005value\030\002 \001(\tR\005value\032A\n\nReturnData\022\022\n\004na" +
-      "me\030\001 \001(\tR\004name\022\037\n\013access_type\030\002 \001(\tR\nacc" +
-      "essType\032\276\001\n\006Header\022\022\n\004name\030\001 \001(\tR\004name\022\024" +
-      "\n\005value\030\002 \001(\tR\005value\022\037\n\013header_type\030\003 \001(" +
-      "\tR\nheaderType\022i\n\027param_type_value_tuples" +
-      "\030\004 \003(\01322.api.commons.org.DataDipConfig.P" +
-      "aramTypeValueTupleR\024paramTypeValueTuples" +
-      "B\221\001\n!com.tcn.cloud.api.api.commons.orgB\016" +
-      "HuntgroupProtoP\001\242\002\003ACO\252\002\017Api.Commons.Org" +
-      "\312\002\017Api\\Commons\\Org\342\002\033Api\\Commons\\Org\\GPB" +
-      "Metadata\352\002\021Api::Commons::Orgb\006proto3"
+      "ApprovalNumberSms\022M\n#disable_reject_opti" +
+      "on_for_approvers\030\300\005 \001(\010R\037disableRejectOp" +
+      "tionForApprovers\022e\n\023alphanumeric_keypad\030" +
+      "\240\006 \001(\01323.api.commons.org.GeneralSettings" +
+      ".AlphanumericKeypadR\022alphanumericKeypad\022" +
+      "J\n!enable_call_desktop_notifications\030\241\006 " +
+      "\001(\010R\036enableCallDesktopNotifications\022{\n\033i" +
+      "nbound_compliance_metadata\030\242\006 \001(\0132:.api." +
+      "commons.org.GeneralSettings.InboundCompl" +
+      "ianceMetadataR\031inboundComplianceMetadata" +
+      "\0223\n\025enable_agent_intercom\030\243\006 \001(\010R\023enable" +
+      "AgentIntercom\022y\n\033prepare_state_call_deli" +
+      "very\030\244\006 \001(\01329.api.commons.org.GeneralSet" +
+      "tings.PrepareStateCallDeliveryR\030prepareS" +
+      "tateCallDelivery\032C\n\016PauseOptionSet\022\030\n\007en" +
+      "abled\030\001 \001(\010R\007enabled\022\027\n\007set_sid\030\002 \001(\003R\006s" +
+      "etSid\032\357\001\n\023HoldQueueMonitoring\022\030\n\007enabled" +
+      "\030\001 \001(\010R\007enabled\022>\n\ragent_routing\030\002 \001(\0162\031" +
+      ".api.commons.AgentRoutingR\014agentRouting\022" +
+      "=\n\033required_hunt_group_routing\030\003 \001(\003R\030re" +
+      "quiredHuntGroupRouting\022?\n\034preferred_hunt" +
+      "_group_routing\030\004 \001(\003R\031preferredHuntGroup" +
+      "Routing\032z\n\022DataDipDataDisplay\0221\n\025display" +
+      "_data_dip_data\030\001 \001(\010R\022displayDataDipData" +
+      "\0221\n\025data_dip_display_keys\030\002 \003(\tR\022dataDip" +
+      "DisplayKeys\032\214\001\n\026IntegrationDataDisplay\0228" +
+      "\n\030display_integration_data\030\001 \001(\010R\026displa" +
+      "yIntegrationData\0228\n\030integration_display_" +
+      "keys\030\002 \003(\tR\026integrationDisplayKeys\032x\n\022Jo" +
+      "urneyDataDisplay\0220\n\024display_journey_data" +
+      "\030\001 \001(\010R\022displayJourneyData\0220\n\024journey_di" +
+      "splay_keys\030\002 \003(\tR\022journeyDisplayKeys\032\272\001\n" +
+      "\036AgentLoginGuiStatisticsDisplay\022J\n\"displ" +
+      "ay_agent_login_gui_statistics\030\001 \001(\010R\036dis" +
+      "playAgentLoginGuiStatistics\022L\n#agent_log" +
+      "in_gui_statistics_template\030\002 \001(\003R\037agentL" +
+      "oginGuiStatisticsTemplate\032\265\001\n\027PhoneZipMe" +
+      "tadataDisplay\022;\n\032display_phone_zip_metad" +
+      "ata\030\001 \001(\010R\027displayPhoneZipMetadata\022]\n\027ph" +
+      "one_zip_metadata_keys\030\002 \003(\0162&.api.common" +
+      "s.PhonePostalDisplayOptionsR\024phoneZipMet" +
+      "adataKeys\032Q\n\024DisallowedHuntGroups\022\030\n\007ena" +
+      "bled\030\001 \001(\010R\007enabled\022\037\n\013hunt_groups\030\002 \003(\003" +
+      "R\nhuntGroups\032v\n\022AlphanumericKeypad\022\030\n\007en" +
+      "abled\030\001 \001(\010R\007enabled\022F\n\tdelimiter\030\002 \001(\0162" +
+      "(.api.commons.AlphanumericKeypadDelimite" +
+      "rR\tdelimiter\032\177\n\031InboundComplianceMetadat" +
+      "a\022\030\n\007enabled\030\001 \001(\010R\007enabled\022#\n\roptional_" +
+      "data\030\002 \003(\003R\014optionalData\022#\n\rrequired_dat" +
+      "a\030\003 \003(\003R\014requiredData\032^\n\030PrepareStateCal" +
+      "lDelivery\022\037\n\013manual_dial\030\001 \001(\010R\nmanualDi" +
+      "al\022!\n\014preview_dial\030\002 \001(\010R\013previewDial\"\354\016" +
+      "\n\025CommunicationSettings\0227\n\030enable_scrub_" +
+      "list_adding\030\001 \001(\010R\025enableScrubListAdding" +
+      "\022\037\n\013scrub_lists\030\002 \003(\tR\nscrubLists\0229\n\031ena" +
+      "ble_scrub_list_removal\030\003 \001(\010R\026enableScru" +
+      "bListRemoval\022=\n\033scrub_lists_removal_allo" +
+      "wed\030\004 \003(\tR\030scrubListsRemovalAllowed\022R\n\032c" +
+      "ompliance_default_country\030\005 \001(\0162\024.api.co" +
+      "mmons.CountryR\030complianceDefaultCountry\022" +
+      "9\n\031display_options_in_wrapup\030\006 \001(\010R\026disp" +
+      "layOptionsInWrapup\022}\n\035inbound_scrub_list" +
+      "_expiration\030d \001(\0132:.api.commons.org.Comm" +
+      "unicationSettings.ScrubListExpirationR\032i" +
+      "nboundScrubListExpiration\022{\n\034manual_scru" +
+      "b_list_expiration\030e \001(\0132:.api.commons.or" +
+      "g.CommunicationSettings.ScrubListExpirat" +
+      "ionR\031manualScrubListExpiration\022\177\n\036outbou" +
+      "nd_scrub_list_expiration\030f \001(\0132:.api.com" +
+      "mons.org.CommunicationSettings.ScrubList" +
+      "ExpirationR\033outboundScrubListExpiration\022" +
+      "}\n\035preview_scrub_list_expiration\030g \001(\0132:" +
+      ".api.commons.org.CommunicationSettings.S" +
+      "crubListExpirationR\032previewScrubListExpi" +
+      "ration\022M\n#automate_manually_dialed_scrub" +
+      "_list\030\310\001 \001(\010R\037automateManuallyDialedScru" +
+      "bList\022K\n\"automate_preview_dialed_scrub_l" +
+      "ist\030\311\001 \001(\010R\036automatePreviewDialedScrubLi" +
+      "st\022u\n\027automate_response_rules\030\312\001 \001(\0132<.a" +
+      "pi.commons.org.CommunicationSettings.Aut" +
+      "omateResponseRulesR\025automateResponseRule" +
+      "s\022\203\001\n\035automate_scrub_list_call_data\030\313\001 \001" +
+      "(\0132@.api.commons.org.CommunicationSettin" +
+      "gs.AutomateScrubListCallDataR\031automateSc" +
+      "rubListCallData\032\354\001\n\023ScrubListExpiration\022" +
+      "S\n\022default_expiration\030\001 \001(\0162$.api.common" +
+      "s.CommunicationExpirationR\021defaultExpira" +
+      "tion\022)\n\020limit_expiration\030\002 \001(\010R\017limitExp" +
+      "iration\022U\n\023limited_expirations\030\003 \003(\0162$.a" +
+      "pi.commons.CommunicationExpirationR\022limi" +
+      "tedExpirations\032L\n\025AutomateResponseRules\022" +
+      "\030\n\007enabled\030\001 \001(\010R\007enabled\022\031\n\010rule_sid\030\002 " +
+      "\001(\003R\007ruleSid\032\235\002\n\031AutomateScrubListCallDa" +
+      "ta\022\030\n\007enabled\030\001 \001(\010R\007enabled\022\210\001\n\026scrub_l" +
+      "ist_data_fields\030\002 \003(\0132S.api.commons.org." +
+      "CommunicationSettings.AutomateScrubListC" +
+      "allData.ScrubListDataFieldR\023scrubListDat" +
+      "aFields\032[\n\022ScrubListDataField\022\035\n\nscrub_l" +
+      "ist\030\001 \001(\tR\tscrubList\022&\n\017call_data_field\030" +
+      "\002 \001(\003R\rcallDataField\"\342\007\n\020CallbackSetting" +
+      "s\022<\n\032enable_callback_scheduling\030\001 \001(\010R\030e" +
+      "nableCallbackScheduling\022j\n\030default_callb" +
+      "ack_routing\030\002 \001(\01320.api.commons.org.Call" +
+      "backSettings.DefaultRoutingR\026defaultCall" +
+      "backRouting\0226\n\027enable_callback_calling\030\003" +
+      " \001(\010R\025enableCallbackCalling\022<\n\032enable_au" +
+      "tomatic_retrieval\030\004 \001(\010R\030enableAutomatic" +
+      "Retrieval\022{\n\033callback_routing_disallowed" +
+      "\030\005 \001(\0132;.api.commons.org.CallbackSetting" +
+      "s.CallbackRoutingDisallowedR\031callbackRou" +
+      "tingDisallowed\022A\n\035enable_customizable_ca" +
+      "ller_id\030\006 \001(\010R\032enableCustomizableCallerI" +
+      "d\022*\n\021default_caller_id\030\007 \001(\tR\017defaultCal" +
+      "lerId\0228\n\030enable_callback_calendar\030\010 \001(\010R" +
+      "\026enableCallbackCalendar\032\306\001\n\016DefaultRouti" +
+      "ng\022F\n\014routing_mode\030\001 \001(\0162#.api.commons.D" +
+      "efaultCallbackRoutingR\013routingMode\022\033\n\tag" +
+      "ent_sid\030\002 \001(\003R\010agentSid\022\'\n\017agent_skillse" +
+      "ts\030\003 \003(\003R\016agentSkillsets\022&\n\017hunt_group_s" +
+      "ids\030\004 \003(\003R\rhuntGroupSids\032\276\001\n\031CallbackRou" +
+      "tingDisallowed\0220\n\024use_routing_limiting\030\001" +
+      " \001(\010R\022useRoutingLimiting\022\035\n\nagent_sids\030\002" +
+      " \003(\003R\tagentSids\022&\n\017hunt_group_sids\030\003 \003(\003" +
+      "R\rhuntGroupSids\022(\n\020agent_skill_sids\030\004 \003(" +
+      "\003R\016agentSkillSids\"\253\002\n\023PreviewDialSetting" +
+      "s\022;\n\032enable_preview_dial_cancel\030\001 \001(\010R\027e" +
+      "nablePreviewDialCancel\022<\n\033enable_auto_pa" +
+      "use_on_cancel\030\002 \001(\010R\027enableAutoPauseOnCa" +
+      "ncel\022\'\n\017timeout_minutes\030\003 \001(\003R\016timeoutMi" +
+      "nutes\022>\n\033require_number_confirmation\030\004 \001" +
+      "(\010R\031requireNumberConfirmation\0220\n\024preview" +
+      "_queue_config\030\005 \001(\tR\022previewQueueConfig\"" +
+      "\340\026\n\022ManualDialSettings\022,\n\022enable_manual_" +
+      "dial\030\001 \001(\010R\020enableManualDial\0228\n\030queue_co" +
+      "nfiguration_name\030\002 \001(\tR\026queueConfigurati" +
+      "onName\022\\\n\026default_call_recording\030\003 \001(\0162&" +
+      ".api.commons.HuntGroupOrgDefaultCustomR\024" +
+      "defaultCallRecording\022P\n\020cell_phone_scrub" +
+      "\030\004 \001(\0162&.api.commons.HuntGroupOrgDefault" +
+      "CustomR\016cellPhoneScrub\022Z\n\025time_zone_rest" +
+      "riction\030\005 \001(\0162&.api.commons.HuntGroupOrg" +
+      "DefaultCustomR\023timeZoneRestriction\022q\n ti" +
+      "me_zone_validation_postal_code\030\006 \001(\0162).a" +
+      "pi.commons.ManualDialTimeZoneValidationR" +
+      "\034timeZoneValidationPostalCode\022i\n\030natural" +
+      "_compliance_scrub\030\007 \001(\0132/.api.commons.or" +
+      "g.NaturalLanguageComplianceScrubR\026natura" +
+      "lComplianceScrub\022X\n\016scrub_override\030\010 \001(\013" +
+      "21.api.commons.org.ManualDialSettings.Sc" +
+      "rubOverrideR\rscrubOverride\022)\n\020enable_whi" +
+      "telist\030\t \001(\010R\017enableWhitelist\022N\n\030default" +
+      "_outbound_country\030\n \001(\0162\024.api.commons.Co" +
+      "untryR\026defaultOutboundCountry\022K\n\"display" +
+      "_outbound_country_selection\030\013 \001(\010R\037displ" +
+      "ayOutboundCountrySelection\022J\n\"display_ou" +
+      "tbound_number_phone_book\030\014 \001(\010R\036displayO" +
+      "utboundNumberPhoneBook\022O\n\031default_caller" +
+      "_id_country\030\r \001(\0162\024.api.commons.CountryR" +
+      "\026defaultCallerIdCountry\022L\n#display_calle" +
+      "r_id_country_selection\030\016 \001(\010R\037displayCal" +
+      "lerIdCountrySelection\022>\n\034display_caller_" +
+      "id_phone_book\030\017 \001(\010R\030displayCallerIdPhon" +
+      "eBook\022A\n\035enable_customizable_caller_id\030\020" +
+      " \001(\010R\032enableCustomizableCallerId\022_\n\021defa" +
+      "ult_caller_id\030\021 \001(\01323.api.commons.org.Ma" +
+      "nualDialSettings.DefaultCallerIdR\017defaul" +
+      "tCallerId\0225\n\027enable_caller_id_bucket\030\022 \001" +
+      "(\010R\024enableCallerIdBucket\0225\n\027random_calle" +
+      "r_id_bucket\030\023 \001(\003R\024randomCallerIdBucket\022" +
+      "9\n\031automate_random_caller_id\030\024 \001(\010R\026auto" +
+      "mateRandomCallerId\0221\n\025enable_mask_caller" +
+      "_id\030\025 \001(\010R\022enableMaskCallerId\022,\n\022enable_" +
+      "sip_address\030\026 \001(\010R\020enableSipAddress\022\203\001\n$" +
+      "natural_language_compliance_metadata\030\027 \001" +
+      "(\01322.api.commons.org.NaturalLanguageComp" +
+      "lianceMetadataR!naturalLanguageComplianc" +
+      "eMetadata\022I\n\016data_dip_scope\030\030 \001(\0162#.api." +
+      "commons.ManualDialDataDipScopeR\014dataDipS" +
+      "cope\022-\n\023data_dip_config_sid\030\031 \001(\003R\020dataD" +
+      "ipConfigSid\022_\n\030data_dip_result_handling\030" +
+      "\032 \001(\0162&.api.commons.ManualDialDataDipHan" +
+      "dlingR\025dataDipResultHandling\022\200\001\n\035data_di" +
+      "p_integration_mappings\030\033 \003(\0132=.api.commo" +
+      "ns.org.ManualDialSettings.DataDipIntegra" +
+      "tionMappingR\032dataDipIntegrationMappings\022" +
+      "i\n\035data_dip_integration_handling\030\034 \001(\0162&" +
+      ".api.commons.ManualDialDataDipHandlingR\032" +
+      "dataDipIntegrationHandling\022N\n\"enable_rej" +
+      "ect_option_for_approvers\030\035 \001(\010B\002\030\001R\036enab" +
+      "leRejectOptionForApprovers\032\204\002\n\rScrubOver" +
+      "ride\0220\n\024enable_dncl_override\030\001 \001(\010R\022enab" +
+      "leDnclOverride\022;\n\032enable_cell_scrub_over" +
+      "ride\030\002 \001(\010R\027enableCellScrubOverride\022D\n\037e" +
+      "nable_time_zone_scrub_override\030\003 \001(\010R\033en" +
+      "ableTimeZoneScrubOverride\022>\n\033natural_com" +
+      "pliance_override\030\004 \001(\010R\031naturalComplianc" +
+      "eOverride\032y\n\017DefaultCallerId\022<\n\005usage\030\001 " +
+      "\001(\0162&.api.commons.DefaultManualDialCalle" +
+      "rIdR\005usage\022(\n\020custom_caller_id\030\002 \001(\tR\016cu" +
+      "stomCallerId\032\333\001\n\031DataDipIntegrationMappi" +
+      "ng\022L\n\014mapping_type\030\001 \001(\0162).api.commons.M" +
+      "anualDialDataDipIntegrationR\013mappingType" +
+      "\022-\n\023data_dip_return_key\030\002 \001(\tR\020dataDipRe" +
+      "turnKey\022A\n\035contact_field_description_sid" +
+      "\030\003 \001(\003R\032contactFieldDescriptionSid\"\223\001\n\036N" +
+      "aturalLanguageComplianceScrub\022Q\n\020complia" +
+      "nce_scrub\030\001 \001(\0162&.api.commons.HuntGroupO" +
+      "rgDefaultCustomR\017complianceScrub\022\036\n\013rule" +
+      "_set_id\030\002 \001(\tR\truleSetId\"\207\001\n!NaturalLang" +
+      "uageComplianceMetadata\022\030\n\007enabled\030\001 \001(\010R" +
+      "\007enabled\022#\n\roptional_data\030\002 \003(\003R\014optiona" +
+      "lData\022#\n\rrequired_data\030\003 \003(\003R\014requiredDa" +
+      "ta\"l\n\022CallerIdBucketData\0225\n\027xml_client_p" +
+      "roperty_sid\030\001 \001(\003R\024xmlClientPropertySid\022" +
+      "\037\n\013bucket_name\030\002 \001(\tR\nbucketName\"\213\027\n\024Tra" +
+      "nsferCallSettings\022\'\n\017enable_transfer\030\001 \001" +
+      "(\010R\016enableTransfer\022X\n\016hand_off_types\030\002 \001" +
+      "(\01322.api.commons.org.TransferCallSetting" +
+      "s.HandOffTypesR\014handOffTypes\022O\n\020recordin" +
+      "g_status\030\003 \001(\0162$.api.commons.TransferRec" +
+      "ordingStatusR\017recordingStatus\022Z\n\016transfe" +
+      "r_types\030\004 \001(\01323.api.commons.org.Transfer" +
+      "CallSettings.TransferTypesR\rtransferType" +
+      "s\022J\n\"display_transfer_number_phone_book\030" +
+      "\005 \001(\010R\036displayTransferNumberPhoneBook\022C\n" +
+      "\036enable_transfer_number_editing\030\006 \001(\010R\033e" +
+      "nableTransferNumberEditing\0226\n\027default_tr" +
+      "ansfer_number\030\007 \001(\tR\025defaultTransferNumb" +
+      "er\0226\n\027start_recording_numbers\030\010 \003(\tR\025sta" +
+      "rtRecordingNumbers\0224\n\026stop_recording_num" +
+      "bers\030\t \003(\tR\024stopRecordingNumbers\022L\n\027tran" +
+      "sfer_number_country\030\n \001(\0162\024.api.commons." +
+      "CountryR\025transferNumberCountry\022K\n\"displa" +
+      "y_transfer_country_selection\030\013 \001(\010R\037disp" +
+      "layTransferCountrySelection\022>\n\034display_c" +
+      "aller_id_phone_book\030\014 \001(\010R\030displayCaller" +
+      "IdPhoneBook\0227\n\030enable_caller_id_editing\030" +
+      "\r \001(\010R\025enableCallerIdEditing\022a\n\021default_" +
+      "caller_id\030\016 \001(\01325.api.commons.org.Transf" +
+      "erCallSettings.DefaultCallerIdR\017defaultC" +
+      "allerId\022@\n\021caller_id_country\030\017 \001(\0162\024.api" +
+      ".commons.CountryR\017callerIdCountry\022L\n#dis" +
+      "play_caller_id_country_selection\030\020 \001(\010R\037" +
+      "displayCallerIdCountrySelection\022G\n displ" +
+      "ay_agent_transfer_filtering\030\021 \001(\010R\035displ" +
+      "ayAgentTransferFiltering\022G\n default_agen" +
+      "t_transfer_filtering\030\022 \001(\010R\035defaultAgent" +
+      "TransferFiltering\022=\n\033enable_hunt_group_f" +
+      "iltering\030\023 \001(\010R\030enableHuntGroupFiltering" +
+      "\022q\n\024requeue_queue_config\030\024 \001(\0132?.api.com" +
+      "mons.org.TransferCallSettings.RequeueQue" +
+      "ueConfigurationR\022requeueQueueConfig\022\177\n\033r" +
+      "equeue_transfer_disallowed\030\025 \001(\0132?.api.c" +
+      "ommons.org.TransferCallSettings.RequeueT" +
+      "ransferDisallowedR\031requeueTransferDisall" +
+      "owed\022s\n\027pbx_transfer_disallowed\030\026 \001(\0132;." +
+      "api.commons.org.TransferCallSettings.Pbx" +
+      "TransferDisallowedR\025pbxTransferDisallowe" +
+      "d\0222\n\025enable_scrub_override\030\027 \001(\010R\023enable" +
+      "ScrubOverride\022)\n\020enable_whitelist\030\030 \001(\010R" +
+      "\017enableWhitelist\022i\n\030natural_compliance_s" +
+      "crub\030\031 \001(\0132/.api.commons.org.NaturalLang" +
+      "uageComplianceScrubR\026naturalComplianceSc" +
+      "rub\022\203\001\n$natural_language_compliance_meta" +
+      "data\030\032 \001(\01322.api.commons.org.NaturalLang" +
+      "uageComplianceMetadataR!naturalLanguageC" +
+      "omplianceMetadata\032}\n\014HandOffTypes\022+\n\021ena" +
+      "ble_conference\030\001 \001(\010R\020enableConference\022\037" +
+      "\n\013enable_warm\030\002 \001(\010R\nenableWarm\022\037\n\013enabl" +
+      "e_cold\030\003 \001(\010R\nenableCold\032\254\002\n\rTransferTyp" +
+      "es\0222\n\025enable_agent_transfer\030\001 \001(\010R\023enabl" +
+      "eAgentTransfer\0220\n\024enable_open_transfer\030\002" +
+      " \001(\010R\022enableOpenTransfer\0226\n\027enable_reque" +
+      "ue_transfer\030\003 \001(\010R\025enableRequeueTransfer" +
+      "\022A\n\035enable_pbx_extension_transfer\030\004 \001(\010R" +
+      "\032enablePbxExtensionTransfer\022:\n\031enable_vo" +
+      "icemail_transfer\030\005 \001(\010R\027enableVoicemailT" +
+      "ransfer\032\205\001\n\031RequeueTransferDisallowed\022\026\n" +
+      "\006enable\030\001 \001(\010R\006enable\022(\n\020agent_skill_sid" +
+      "s\030\002 \003(\003R\016agentSkillSids\022&\n\017hunt_group_si" +
+      "ds\030\003 \003(\003R\rhuntGroupSids\032O\n\025PbxTransferDi" +
+      "sallowed\022\026\n\006enable\030\001 \001(\010R\006enable\022\036\n\nexte" +
+      "nsions\030\002 \003(\tR\nextensions\032{\n\031RequeueQueue" +
+      "Configuration\022=\n\005usage\030\001 \001(\0162\'.api.commo" +
+      "ns.RequeueTransferQueueConfigR\005usage\022\037\n\013" +
+      "custom_name\030\002 \001(\tR\ncustomName\032w\n\017Default" +
+      "CallerId\022:\n\005usage\030\001 \001(\0162$.api.commons.De" +
+      "faultTransferCallerIdR\005usage\022(\n\020custom_c" +
+      "aller_id\030\002 \001(\tR\016customCallerId\"\363\001\n\025Numbe" +
+      "rHistorySettings\022#\n\renable_search\030\001 \001(\010R" +
+      "\014enableSearch\0224\n\026enable_report_download\030" +
+      "\002 \001(\010R\024enableReportDownload\022<\n\032enable_re" +
+      "cordings_download\030\003 \001(\010R\030enableRecording" +
+      "sDownload\022A\n\035enable_agent_response_editi" +
+      "ng\030\004 \001(\010R\032enableAgentResponseEditing\"\344\001\n" +
+      "\030AgentResponseAutoRuleSet\022\037\n\013ruleset_sid" +
+      "\030\001 \001(\003R\nrulesetSid\022\022\n\004name\030\002 \001(\tR\004name\022 " +
+      "\n\013description\030\003 \001(\tR\013description\022.\n\007coun" +
+      "try\030\004 \001(\0162\024.api.commons.CountryR\007country" +
+      "\022A\n\tresponses\030\005 \003(\0132#.api.commons.org.Au" +
+      "toResponseChoiceR\tresponses\"\221\001\n\022AutoResp" +
+      "onseChoice\022.\n\023agent_call_response\030\001 \001(\tR" +
+      "\021agentCallResponse\022K\n\013comparitors\030\002 \003(\0132" +
+      ").api.commons.org.AgentResponseComparito" +
+      "rsR\013comparitors\"P\n\030AgentResponseComparit" +
+      "ors\022\024\n\005value\030\001 \001(\tR\005value\022\036\n\nexpiration\030" +
+      "\002 \001(\003R\nexpiration\"\352\007\n\rDataDipConfig\022\037\n\013c" +
+      "onfig_name\030\001 \001(\tR\nconfigName\022\037\n\013config_t" +
+      "ype\030\002 \001(\tR\nconfigType\022\035\n\nremote_url\030\003 \001(",
+      "\tR\tremoteUrl\022i\n\027param_type_value_tuples\030" +
+      "\004 \003(\01322.api.commons.org.DataDipConfig.Pa" +
+      "ramTypeValueTupleR\024paramTypeValueTuples\022" +
+      "<\n\006params\030\005 \003(\0132$.api.commons.org.DataDi" +
+      "pConfig.ParamR\006params\022=\n\004data\030\006 \003(\0132).ap" +
+      "i.commons.org.DataDipConfig.ReturnDataR\004" +
+      "data\022%\n\016request_method\030\007 \001(\tR\rrequestMet" +
+      "hod\0225\n\027xml_client_property_sid\030\010 \001(\003R\024xm" +
+      "lClientPropertySid\022?\n\007headers\030\t \003(\0132%.ap" +
+      "i.commons.org.DataDipConfig.HeaderR\007head" +
+      "ers\032\255\001\n\005Param\022\022\n\004name\030\001 \001(\tR\004name\022\024\n\005val" +
+      "ue\030\002 \001(\tR\005value\022\035\n\nparam_type\030\003 \001(\tR\tpar" +
+      "amType\022[\n\017composite_value\030\004 \003(\01322.api.co" +
+      "mmons.org.DataDipConfig.ParamTypeValueTu" +
+      "pleR\016compositeValue\032=\n\023ParamTypeValueTup" +
+      "le\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005val" +
+      "ue\032A\n\nReturnData\022\022\n\004name\030\001 \001(\tR\004name\022\037\n\013" +
+      "access_type\030\002 \001(\tR\naccessType\032\276\001\n\006Header" +
+      "\022\022\n\004name\030\001 \001(\tR\004name\022\024\n\005value\030\002 \001(\tR\005val" +
+      "ue\022\037\n\013header_type\030\003 \001(\tR\nheaderType\022i\n\027p" +
+      "aram_type_value_tuples\030\004 \003(\01322.api.commo" +
+      "ns.org.DataDipConfig.ParamTypeValueTuple" +
+      "R\024paramTypeValueTuplesB\221\001\n!com.tcn.cloud" +
+      ".api.api.commons.orgB\016HuntgroupProtoP\001\242\002" +
+      "\003ACO\252\002\017Api.Commons.Org\312\002\017Api\\Commons\\Org" +
+      "\342\002\033Api\\Commons\\Org\\GPBMetadata\352\002\021Api::Co" +
+      "mmons::Orgb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -680,7 +693,7 @@ public final class HuntgroupProto {
     internal_static_api_commons_org_GeneralSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_org_GeneralSettings_descriptor,
-        new java.lang.String[] { "EnableAgentGatewayTitleBar", "DefaultAgentDialIn", "RequireEndCallConfirmation", "EnableAuthorizationByIp", "AuthorizedIpAddresses", "InitialAgentStatus", "EnableAgentPause", "AgentPauseOptionSet", "DefaultAgentPauseOption", "EnablePauseOptionReset", "DisplayRecordingIndicator", "EnableCallRecordingPause", "CallRecordingPauseConfirmation", "CallRecordingDelay", "EnablePauseRecordingOnHold", "EnableEnvisionScreenRecording", "EnableAgentSimpleHold", "EnableAgentMultiAccept", "PauseAgentAfterMultiAccept", "HoldQueueMonitoring", "DisplayMachineDeliver", "DisplayLinkbackHuntGroup", "DisplaySipHeaderData", "DisplayIvrNavigationKeys", "DisplayDataCollectData", "DisplayDataDippedData", "IntegrationDataDisplay", "JourneyDataDisplay", "AgentCallHistoryScope", "AgentLoginGuiStatisticsDisplay", "PhoneZipMetadataDisplay", "DisplaySkills", "DisplayWebLinks", "EnableAgentHuntGroupReassignment", "DisallowedHuntGroups", "EnableManualApprovalOfCalls", "RequireManualApprovalNumber", "EnableManualApprovalOfSms", "RequireManualApprovalNumberSms", "AlphanumericKeypad", "EnableCallDesktopNotifications", "InboundComplianceMetadata", "EnableAgentIntercom", });
+        new java.lang.String[] { "EnableAgentGatewayTitleBar", "DefaultAgentDialIn", "RequireEndCallConfirmation", "EnableAuthorizationByIp", "AuthorizedIpAddresses", "InitialAgentStatus", "EnableAgentPause", "AgentPauseOptionSet", "DefaultAgentPauseOption", "EnablePauseOptionReset", "DisplayRecordingIndicator", "EnableCallRecordingPause", "CallRecordingPauseConfirmation", "CallRecordingDelay", "EnablePauseRecordingOnHold", "EnableEnvisionScreenRecording", "EnableAgentSimpleHold", "EnableAgentMultiAccept", "PauseAgentAfterMultiAccept", "HoldQueueMonitoring", "DisplayMachineDeliver", "DisplayLinkbackHuntGroup", "DisplaySipHeaderData", "DisplayIvrNavigationKeys", "DisplayDataCollectData", "DisplayDataDippedData", "IntegrationDataDisplay", "JourneyDataDisplay", "AgentCallHistoryScope", "AgentLoginGuiStatisticsDisplay", "PhoneZipMetadataDisplay", "DisplaySkills", "DisplayWebLinks", "EnableAgentHuntGroupReassignment", "DisallowedHuntGroups", "EnableManualApprovalOfCalls", "RequireManualApprovalNumber", "EnableManualApprovalOfSms", "RequireManualApprovalNumberSms", "DisableRejectOptionForApprovers", "AlphanumericKeypad", "EnableCallDesktopNotifications", "InboundComplianceMetadata", "EnableAgentIntercom", "PrepareStateCallDelivery", });
     internal_static_api_commons_org_GeneralSettings_PauseOptionSet_descriptor =
       internal_static_api_commons_org_GeneralSettings_descriptor.getNestedTypes().get(0);
     internal_static_api_commons_org_GeneralSettings_PauseOptionSet_fieldAccessorTable = new
@@ -741,6 +754,12 @@ public final class HuntgroupProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_org_GeneralSettings_InboundComplianceMetadata_descriptor,
         new java.lang.String[] { "Enabled", "OptionalData", "RequiredData", });
+    internal_static_api_commons_org_GeneralSettings_PrepareStateCallDelivery_descriptor =
+      internal_static_api_commons_org_GeneralSettings_descriptor.getNestedTypes().get(10);
+    internal_static_api_commons_org_GeneralSettings_PrepareStateCallDelivery_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_org_GeneralSettings_PrepareStateCallDelivery_descriptor,
+        new java.lang.String[] { "ManualDial", "PreviewDial", });
     internal_static_api_commons_org_CommunicationSettings_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_api_commons_org_CommunicationSettings_fieldAccessorTable = new

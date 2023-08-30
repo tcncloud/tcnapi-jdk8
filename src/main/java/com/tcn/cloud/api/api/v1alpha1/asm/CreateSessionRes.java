@@ -38,7 +38,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.asm.CreateSessionRes.class, com.tcn.cloud.api.api.v1alpha1.asm.CreateSessionRes.Builder.class);
   }
 
-  private int bitField0_;
   public static final int ASM_SESSION_SID_FIELD_NUMBER = 1;
   private long asmSessionSid_ = 0L;
   /**
@@ -69,7 +68,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasVoiceRegistration() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return voiceRegistration_ != null;
   }
   /**
    * <code>.api.v1alpha1.asm.VoiceRegistration voice_registration = 3 [json_name = "voiceRegistration"];</code>
@@ -107,7 +106,7 @@ private static final long serialVersionUID = 0L;
     if (voiceSessionSid_ != 0L) {
       output.writeInt64(2, voiceSessionSid_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (voiceRegistration_ != null) {
       output.writeMessage(3, getVoiceRegistration());
     }
     getUnknownFields().writeTo(output);
@@ -127,7 +126,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(2, voiceSessionSid_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (voiceRegistration_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getVoiceRegistration());
     }
@@ -295,19 +294,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.asm.CreateSessionRes.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getVoiceRegistrationFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -359,14 +352,11 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.voiceSessionSid_ = voiceSessionSid_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.voiceRegistration_ = voiceRegistrationBuilder_ == null
             ? voiceRegistration_
             : voiceRegistrationBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -612,10 +602,8 @@ private static final long serialVersionUID = 0L;
       } else {
         voiceRegistrationBuilder_.mergeFrom(value);
       }
-      if (voiceRegistration_ != null) {
-        bitField0_ |= 0x00000004;
-        onChanged();
-      }
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
