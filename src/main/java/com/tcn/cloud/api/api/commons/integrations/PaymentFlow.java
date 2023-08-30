@@ -57,6 +57,8 @@ private static final long serialVersionUID = 0L;
     PAYWAY_SUBMIT_ACH_ALERT_REQUEST(10),
     NEWZWARE_CC(11),
     NEWZWARE_ACH(12),
+    PRIOCOMMERCE_CC(13),
+    PRIOCOMMERCE_ACH(14),
     VALUE_NOT_SET(0);
     private final int value;
     private ValueCase(int value) {
@@ -85,6 +87,8 @@ private static final long serialVersionUID = 0L;
         case 10: return PAYWAY_SUBMIT_ACH_ALERT_REQUEST;
         case 11: return NEWZWARE_CC;
         case 12: return NEWZWARE_ACH;
+        case 13: return PRIOCOMMERCE_CC;
+        case 14: return PRIOCOMMERCE_ACH;
         case 0: return VALUE_NOT_SET;
         default: return null;
       }
@@ -480,6 +484,68 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareAch.getDefaultInstance();
   }
 
+  public static final int PRIOCOMMERCE_CC_FIELD_NUMBER = 13;
+  /**
+   * <code>.api.commons.integrations.PaymentPriocommerceCc priocommerce_cc = 13 [json_name = "priocommerceCc"];</code>
+   * @return Whether the priocommerceCc field is set.
+   */
+  @java.lang.Override
+  public boolean hasPriocommerceCc() {
+    return valueCase_ == 13;
+  }
+  /**
+   * <code>.api.commons.integrations.PaymentPriocommerceCc priocommerce_cc = 13 [json_name = "priocommerceCc"];</code>
+   * @return The priocommerceCc.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceCc getPriocommerceCc() {
+    if (valueCase_ == 13) {
+       return (com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceCc) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceCc.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.PaymentPriocommerceCc priocommerce_cc = 13 [json_name = "priocommerceCc"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceCcOrBuilder getPriocommerceCcOrBuilder() {
+    if (valueCase_ == 13) {
+       return (com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceCc) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceCc.getDefaultInstance();
+  }
+
+  public static final int PRIOCOMMERCE_ACH_FIELD_NUMBER = 14;
+  /**
+   * <code>.api.commons.integrations.PaymentPriocommerceAch priocommerce_ach = 14 [json_name = "priocommerceAch"];</code>
+   * @return Whether the priocommerceAch field is set.
+   */
+  @java.lang.Override
+  public boolean hasPriocommerceAch() {
+    return valueCase_ == 14;
+  }
+  /**
+   * <code>.api.commons.integrations.PaymentPriocommerceAch priocommerce_ach = 14 [json_name = "priocommerceAch"];</code>
+   * @return The priocommerceAch.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceAch getPriocommerceAch() {
+    if (valueCase_ == 14) {
+       return (com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceAch) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceAch.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.PaymentPriocommerceAch priocommerce_ach = 14 [json_name = "priocommerceAch"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceAchOrBuilder getPriocommerceAchOrBuilder() {
+    if (valueCase_ == 14) {
+       return (com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceAch) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceAch.getDefaultInstance();
+  }
+
   public static final int PAYMENT_FIELDS_FIELD_NUMBER = 20;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition> paymentFields_;
@@ -606,6 +672,12 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 12) {
       output.writeMessage(12, (com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareAch) value_);
     }
+    if (valueCase_ == 13) {
+      output.writeMessage(13, (com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceCc) value_);
+    }
+    if (valueCase_ == 14) {
+      output.writeMessage(14, (com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceAch) value_);
+    }
     for (int i = 0; i < paymentFields_.size(); i++) {
       output.writeMessage(20, paymentFields_.get(i));
     }
@@ -664,6 +736,14 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 12) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(12, (com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareAch) value_);
+    }
+    if (valueCase_ == 13) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(13, (com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceCc) value_);
+    }
+    if (valueCase_ == 14) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(14, (com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceAch) value_);
     }
     for (int i = 0; i < paymentFields_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
@@ -734,6 +814,14 @@ private static final long serialVersionUID = 0L;
         if (!getNewzwareAch()
             .equals(other.getNewzwareAch())) return false;
         break;
+      case 13:
+        if (!getPriocommerceCc()
+            .equals(other.getPriocommerceCc())) return false;
+        break;
+      case 14:
+        if (!getPriocommerceAch()
+            .equals(other.getPriocommerceAch())) return false;
+        break;
       case 0:
       default:
     }
@@ -798,6 +886,14 @@ private static final long serialVersionUID = 0L;
       case 12:
         hash = (37 * hash) + NEWZWARE_ACH_FIELD_NUMBER;
         hash = (53 * hash) + getNewzwareAch().hashCode();
+        break;
+      case 13:
+        hash = (37 * hash) + PRIOCOMMERCE_CC_FIELD_NUMBER;
+        hash = (53 * hash) + getPriocommerceCc().hashCode();
+        break;
+      case 14:
+        hash = (37 * hash) + PRIOCOMMERCE_ACH_FIELD_NUMBER;
+        hash = (53 * hash) + getPriocommerceAch().hashCode();
         break;
       case 0:
       default:
@@ -967,13 +1063,19 @@ private static final long serialVersionUID = 0L;
       if (newzwareAchBuilder_ != null) {
         newzwareAchBuilder_.clear();
       }
+      if (priocommerceCcBuilder_ != null) {
+        priocommerceCcBuilder_.clear();
+      }
+      if (priocommerceAchBuilder_ != null) {
+        priocommerceAchBuilder_.clear();
+      }
       if (paymentFieldsBuilder_ == null) {
         paymentFields_ = java.util.Collections.emptyList();
       } else {
         paymentFields_ = null;
         paymentFieldsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00001000);
+      bitField0_ = (bitField0_ & ~0x00004000);
       valueCase_ = 0;
       value_ = null;
       return this;
@@ -1011,9 +1113,9 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartialRepeatedFields(com.tcn.cloud.api.api.commons.integrations.PaymentFlow result) {
       if (paymentFieldsBuilder_ == null) {
-        if (((bitField0_ & 0x00001000) != 0)) {
+        if (((bitField0_ & 0x00004000) != 0)) {
           paymentFields_ = java.util.Collections.unmodifiableList(paymentFields_);
-          bitField0_ = (bitField0_ & ~0x00001000);
+          bitField0_ = (bitField0_ & ~0x00004000);
         }
         result.paymentFields_ = paymentFields_;
       } else {
@@ -1075,6 +1177,14 @@ private static final long serialVersionUID = 0L;
           newzwareAchBuilder_ != null) {
         result.value_ = newzwareAchBuilder_.build();
       }
+      if (valueCase_ == 13 &&
+          priocommerceCcBuilder_ != null) {
+        result.value_ = priocommerceCcBuilder_.build();
+      }
+      if (valueCase_ == 14 &&
+          priocommerceAchBuilder_ != null) {
+        result.value_ = priocommerceAchBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -1130,7 +1240,7 @@ private static final long serialVersionUID = 0L;
         if (!other.paymentFields_.isEmpty()) {
           if (paymentFields_.isEmpty()) {
             paymentFields_ = other.paymentFields_;
-            bitField0_ = (bitField0_ & ~0x00001000);
+            bitField0_ = (bitField0_ & ~0x00004000);
           } else {
             ensurePaymentFieldsIsMutable();
             paymentFields_.addAll(other.paymentFields_);
@@ -1143,7 +1253,7 @@ private static final long serialVersionUID = 0L;
             paymentFieldsBuilder_.dispose();
             paymentFieldsBuilder_ = null;
             paymentFields_ = other.paymentFields_;
-            bitField0_ = (bitField0_ & ~0x00001000);
+            bitField0_ = (bitField0_ & ~0x00004000);
             paymentFieldsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getPaymentFieldsFieldBuilder() : null;
@@ -1195,6 +1305,14 @@ private static final long serialVersionUID = 0L;
         }
         case NEWZWARE_ACH: {
           mergeNewzwareAch(other.getNewzwareAch());
+          break;
+        }
+        case PRIOCOMMERCE_CC: {
+          mergePriocommerceCc(other.getPriocommerceCc());
+          break;
+        }
+        case PRIOCOMMERCE_ACH: {
+          mergePriocommerceAch(other.getPriocommerceAch());
           break;
         }
         case VALUE_NOT_SET: {
@@ -1309,6 +1427,20 @@ private static final long serialVersionUID = 0L;
               valueCase_ = 12;
               break;
             } // case 98
+            case 106: {
+              input.readMessage(
+                  getPriocommerceCcFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 13;
+              break;
+            } // case 106
+            case 114: {
+              input.readMessage(
+                  getPriocommerceAchFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 14;
+              break;
+            } // case 114
             case 162: {
               com.tcn.cloud.api.api.commons.integrations.FieldDefinition m =
                   input.readMessage(
@@ -2988,12 +3120,296 @@ private static final long serialVersionUID = 0L;
       return newzwareAchBuilder_;
     }
 
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceCc, com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceCc.Builder, com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceCcOrBuilder> priocommerceCcBuilder_;
+    /**
+     * <code>.api.commons.integrations.PaymentPriocommerceCc priocommerce_cc = 13 [json_name = "priocommerceCc"];</code>
+     * @return Whether the priocommerceCc field is set.
+     */
+    @java.lang.Override
+    public boolean hasPriocommerceCc() {
+      return valueCase_ == 13;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentPriocommerceCc priocommerce_cc = 13 [json_name = "priocommerceCc"];</code>
+     * @return The priocommerceCc.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceCc getPriocommerceCc() {
+      if (priocommerceCcBuilder_ == null) {
+        if (valueCase_ == 13) {
+          return (com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceCc) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceCc.getDefaultInstance();
+      } else {
+        if (valueCase_ == 13) {
+          return priocommerceCcBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceCc.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentPriocommerceCc priocommerce_cc = 13 [json_name = "priocommerceCc"];</code>
+     */
+    public Builder setPriocommerceCc(com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceCc value) {
+      if (priocommerceCcBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        priocommerceCcBuilder_.setMessage(value);
+      }
+      valueCase_ = 13;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentPriocommerceCc priocommerce_cc = 13 [json_name = "priocommerceCc"];</code>
+     */
+    public Builder setPriocommerceCc(
+        com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceCc.Builder builderForValue) {
+      if (priocommerceCcBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        priocommerceCcBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 13;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentPriocommerceCc priocommerce_cc = 13 [json_name = "priocommerceCc"];</code>
+     */
+    public Builder mergePriocommerceCc(com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceCc value) {
+      if (priocommerceCcBuilder_ == null) {
+        if (valueCase_ == 13 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceCc.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceCc.newBuilder((com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceCc) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 13) {
+          priocommerceCcBuilder_.mergeFrom(value);
+        } else {
+          priocommerceCcBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 13;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentPriocommerceCc priocommerce_cc = 13 [json_name = "priocommerceCc"];</code>
+     */
+    public Builder clearPriocommerceCc() {
+      if (priocommerceCcBuilder_ == null) {
+        if (valueCase_ == 13) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 13) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        priocommerceCcBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentPriocommerceCc priocommerce_cc = 13 [json_name = "priocommerceCc"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceCc.Builder getPriocommerceCcBuilder() {
+      return getPriocommerceCcFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentPriocommerceCc priocommerce_cc = 13 [json_name = "priocommerceCc"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceCcOrBuilder getPriocommerceCcOrBuilder() {
+      if ((valueCase_ == 13) && (priocommerceCcBuilder_ != null)) {
+        return priocommerceCcBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 13) {
+          return (com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceCc) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceCc.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentPriocommerceCc priocommerce_cc = 13 [json_name = "priocommerceCc"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceCc, com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceCc.Builder, com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceCcOrBuilder> 
+        getPriocommerceCcFieldBuilder() {
+      if (priocommerceCcBuilder_ == null) {
+        if (!(valueCase_ == 13)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceCc.getDefaultInstance();
+        }
+        priocommerceCcBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceCc, com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceCc.Builder, com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceCcOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceCc) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 13;
+      onChanged();
+      return priocommerceCcBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceAch, com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceAch.Builder, com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceAchOrBuilder> priocommerceAchBuilder_;
+    /**
+     * <code>.api.commons.integrations.PaymentPriocommerceAch priocommerce_ach = 14 [json_name = "priocommerceAch"];</code>
+     * @return Whether the priocommerceAch field is set.
+     */
+    @java.lang.Override
+    public boolean hasPriocommerceAch() {
+      return valueCase_ == 14;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentPriocommerceAch priocommerce_ach = 14 [json_name = "priocommerceAch"];</code>
+     * @return The priocommerceAch.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceAch getPriocommerceAch() {
+      if (priocommerceAchBuilder_ == null) {
+        if (valueCase_ == 14) {
+          return (com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceAch) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceAch.getDefaultInstance();
+      } else {
+        if (valueCase_ == 14) {
+          return priocommerceAchBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceAch.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentPriocommerceAch priocommerce_ach = 14 [json_name = "priocommerceAch"];</code>
+     */
+    public Builder setPriocommerceAch(com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceAch value) {
+      if (priocommerceAchBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        priocommerceAchBuilder_.setMessage(value);
+      }
+      valueCase_ = 14;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentPriocommerceAch priocommerce_ach = 14 [json_name = "priocommerceAch"];</code>
+     */
+    public Builder setPriocommerceAch(
+        com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceAch.Builder builderForValue) {
+      if (priocommerceAchBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        priocommerceAchBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 14;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentPriocommerceAch priocommerce_ach = 14 [json_name = "priocommerceAch"];</code>
+     */
+    public Builder mergePriocommerceAch(com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceAch value) {
+      if (priocommerceAchBuilder_ == null) {
+        if (valueCase_ == 14 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceAch.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceAch.newBuilder((com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceAch) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 14) {
+          priocommerceAchBuilder_.mergeFrom(value);
+        } else {
+          priocommerceAchBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 14;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentPriocommerceAch priocommerce_ach = 14 [json_name = "priocommerceAch"];</code>
+     */
+    public Builder clearPriocommerceAch() {
+      if (priocommerceAchBuilder_ == null) {
+        if (valueCase_ == 14) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 14) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        priocommerceAchBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentPriocommerceAch priocommerce_ach = 14 [json_name = "priocommerceAch"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceAch.Builder getPriocommerceAchBuilder() {
+      return getPriocommerceAchFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentPriocommerceAch priocommerce_ach = 14 [json_name = "priocommerceAch"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceAchOrBuilder getPriocommerceAchOrBuilder() {
+      if ((valueCase_ == 14) && (priocommerceAchBuilder_ != null)) {
+        return priocommerceAchBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 14) {
+          return (com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceAch) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceAch.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentPriocommerceAch priocommerce_ach = 14 [json_name = "priocommerceAch"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceAch, com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceAch.Builder, com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceAchOrBuilder> 
+        getPriocommerceAchFieldBuilder() {
+      if (priocommerceAchBuilder_ == null) {
+        if (!(valueCase_ == 14)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceAch.getDefaultInstance();
+        }
+        priocommerceAchBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceAch, com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceAch.Builder, com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceAchOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceAch) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 14;
+      onChanged();
+      return priocommerceAchBuilder_;
+    }
+
     private java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition> paymentFields_ =
       java.util.Collections.emptyList();
     private void ensurePaymentFieldsIsMutable() {
-      if (!((bitField0_ & 0x00001000) != 0)) {
+      if (!((bitField0_ & 0x00004000) != 0)) {
         paymentFields_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.integrations.FieldDefinition>(paymentFields_);
-        bitField0_ |= 0x00001000;
+        bitField0_ |= 0x00004000;
        }
     }
 
@@ -3220,7 +3636,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearPaymentFields() {
       if (paymentFieldsBuilder_ == null) {
         paymentFields_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00001000);
+        bitField0_ = (bitField0_ & ~0x00004000);
         onChanged();
       } else {
         paymentFieldsBuilder_.clear();
@@ -3346,7 +3762,7 @@ private static final long serialVersionUID = 0L;
         paymentFieldsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.commons.integrations.FieldDefinition, com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder, com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder>(
                 paymentFields_,
-                ((bitField0_ & 0x00001000) != 0),
+                ((bitField0_ & 0x00004000) != 0),
                 getParentForChildren(),
                 isClean());
         paymentFields_ = null;

@@ -43,6 +43,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivityAssociationsReq.class, com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivityAssociationsReq.Builder.class);
   }
 
+  private int bitField0_;
   public static final int ASSOCIATED_ENTITY_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity associatedEntity_;
   /**
@@ -55,7 +56,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAssociatedEntity() {
-    return associatedEntity_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -121,7 +122,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (associatedEntity_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(1, getAssociatedEntity());
     }
     if (relationshipType_ != com.tcn.cloud.api.api.commons.ConfigRelationshipType.IS_ASSOCIATED_WITH.getNumber()) {
@@ -136,7 +137,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (associatedEntity_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getAssociatedEntity());
     }
@@ -305,13 +306,19 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivityAssociationsReq.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getAssociatedEntityFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -356,14 +363,17 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivityAssociationsReq result) {
       int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.associatedEntity_ = associatedEntityBuilder_ == null
             ? associatedEntity_
             : associatedEntityBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.relationshipType_ = relationshipType_;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -557,8 +567,10 @@ private static final long serialVersionUID = 0L;
       } else {
         associatedEntityBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+      if (associatedEntity_ != null) {
+        bitField0_ |= 0x00000001;
+        onChanged();
+      }
       return this;
     }
     /**

@@ -40,6 +40,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.TimeFilterEventReq.class, com.tcn.cloud.api.api.v0alpha.TimeFilterEventReq.Builder.class);
   }
 
+  private int bitField0_;
   public static final int TIME_FILTER_TYPE_FIELD_NUMBER = 1;
   private int timeFilterType_ = 0;
   /**
@@ -105,7 +106,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasDashPageType() {
-    return dashPageType_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <code>.api.v0alpha.RecommendedDashPageReq dash_page_type = 3 [json_name = "dashPageType"];</code>
@@ -143,7 +144,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timeFilterName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, timeFilterName_);
     }
-    if (dashPageType_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(3, getDashPageType());
     }
     getUnknownFields().writeTo(output);
@@ -162,7 +163,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timeFilterName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, timeFilterName_);
     }
-    if (dashPageType_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getDashPageType());
     }
@@ -327,13 +328,19 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.TimeFilterEventReq.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getDashPageTypeFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -385,11 +392,14 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.timeFilterName_ = timeFilterName_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.dashPageType_ = dashPageTypeBuilder_ == null
             ? dashPageType_
             : dashPageTypeBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -698,8 +708,10 @@ private static final long serialVersionUID = 0L;
       } else {
         dashPageTypeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+      if (dashPageType_ != null) {
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
       return this;
     }
     /**

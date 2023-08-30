@@ -69,6 +69,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.integrations.PaymentLinkConfig.class, com.tcn.cloud.api.api.v1alpha1.integrations.PaymentLinkConfig.Builder.class);
   }
 
+  private int bitField0_;
   public static final int ID_FIELD_NUMBER = 19;
   @SuppressWarnings("serial")
   private volatile java.lang.Object id_ = "";
@@ -588,7 +589,7 @@ java.lang.String defaultValue) {
    */
   @java.lang.Override
   public boolean hasCreatedOn() {
-    return createdOn_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <code>.google.protobuf.Timestamp created_on = 14 [json_name = "createdOn"];</code>
@@ -681,7 +682,7 @@ java.lang.String defaultValue) {
    */
   @java.lang.Override
   public boolean hasVerificationRequest() {
-    return verificationRequest_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <pre>
@@ -720,7 +721,7 @@ java.lang.String defaultValue) {
    */
   @java.lang.Override
   public boolean hasInvoiceRequest() {
-    return invoiceRequest_ != null;
+    return ((bitField0_ & 0x00000004) != 0);
   }
   /**
    * <pre>
@@ -910,7 +911,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
    */
   @java.lang.Override
   public boolean hasTemplates() {
-    return templates_ != null;
+    return ((bitField0_ & 0x00000008) != 0);
   }
   /**
    * <pre>
@@ -1030,7 +1031,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(paymentPortalId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 12, paymentPortalId_);
     }
-    if (createdOn_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(14, getCreatedOn());
     }
     if (expiryDays_ != 0) {
@@ -1048,10 +1049,10 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 19, id_);
     }
-    if (verificationRequest_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(20, getVerificationRequest());
     }
-    if (invoiceRequest_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       output.writeMessage(21, getInvoiceRequest());
     }
     for (int i = 0; i < paymentRequests_.size(); i++) {
@@ -1063,7 +1064,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
         internalGetBaseData(),
         BaseDataDefaultEntryHolder.defaultEntry,
         23);
-    if (templates_ != null) {
+    if (((bitField0_ & 0x00000008) != 0)) {
       output.writeMessage(24, getTemplates());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(paymentProfileName_)) {
@@ -1124,7 +1125,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(paymentPortalId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, paymentPortalId_);
     }
-    if (createdOn_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(14, getCreatedOn());
     }
@@ -1147,11 +1148,11 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(19, id_);
     }
-    if (verificationRequest_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(20, getVerificationRequest());
     }
-    if (invoiceRequest_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(21, getInvoiceRequest());
     }
@@ -1169,7 +1170,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
       size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(23, baseData__);
     }
-    if (templates_ != null) {
+    if (((bitField0_ & 0x00000008) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(24, getTemplates());
     }
@@ -1466,13 +1467,23 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.integrations.PaymentLinkConfig.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getCreatedOnFieldBuilder();
+        getVerificationRequestFieldBuilder();
+        getInvoiceRequestFieldBuilder();
+        getPaymentRequestsFieldBuilder();
+        getTemplatesFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -1604,10 +1615,12 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
       if (((from_bitField0_ & 0x00000400) != 0)) {
         result.paymentPortalId_ = paymentPortalId_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000800) != 0)) {
         result.createdOn_ = createdOnBuilder_ == null
             ? createdOn_
             : createdOnBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00001000) != 0)) {
         result.expiryDays_ = expiryDays_;
@@ -1625,11 +1638,13 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
         result.verificationRequest_ = verificationRequestBuilder_ == null
             ? verificationRequest_
             : verificationRequestBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00020000) != 0)) {
         result.invoiceRequest_ = invoiceRequestBuilder_ == null
             ? invoiceRequest_
             : invoiceRequestBuilder_.build();
+        to_bitField0_ |= 0x00000004;
       }
       if (((from_bitField0_ & 0x00080000) != 0)) {
         result.baseData_ = internalGetBaseData();
@@ -1639,10 +1654,12 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
         result.templates_ = templatesBuilder_ == null
             ? templates_
             : templatesBuilder_.build();
+        to_bitField0_ |= 0x00000008;
       }
       if (((from_bitField0_ & 0x00200000) != 0)) {
         result.paymentProfileName_ = paymentProfileName_;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -3141,8 +3158,10 @@ java.lang.String defaultValue) {
       } else {
         createdOnBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000800;
-      onChanged();
+      if (createdOn_ != null) {
+        bitField0_ |= 0x00000800;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -3465,8 +3484,10 @@ java.lang.String defaultValue) {
       } else {
         verificationRequestBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00010000;
-      onChanged();
+      if (verificationRequest_ != null) {
+        bitField0_ |= 0x00010000;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -3625,8 +3646,10 @@ java.lang.String defaultValue) {
       } else {
         invoiceRequestBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00020000;
-      onChanged();
+      if (invoiceRequest_ != null) {
+        bitField0_ |= 0x00020000;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -4259,8 +4282,10 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
       } else {
         templatesBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00100000;
-      onChanged();
+      if (templates_ != null) {
+        bitField0_ |= 0x00100000;
+        onChanged();
+      }
       return this;
     }
     /**

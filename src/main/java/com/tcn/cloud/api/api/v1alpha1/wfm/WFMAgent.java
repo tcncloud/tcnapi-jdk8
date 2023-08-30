@@ -46,6 +46,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.wfm.WFMAgent.class, com.tcn.cloud.api.api.v1alpha1.wfm.WFMAgent.Builder.class);
   }
 
+  private int bitField0_;
   public static final int WFM_AGENT_SID_FIELD_NUMBER = 1;
   private long wfmAgentSid_ = 0L;
   /**
@@ -74,7 +75,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasTcnAgentSid() {
-    return tcnAgentSid_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -163,7 +164,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasDatetimeSetToInactive() {
-    return datetimeSetToInactive_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <pre>
@@ -384,7 +385,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCreatedAt() {
-    return createdAt_ != null;
+    return ((bitField0_ & 0x00000004) != 0);
   }
   /**
    * <pre>
@@ -443,13 +444,13 @@ private static final long serialVersionUID = 0L;
     if (wfmAgentSid_ != 0L) {
       output.writeInt64(1, wfmAgentSid_);
     }
-    if (tcnAgentSid_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(2, getTcnAgentSid());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
     }
-    if (datetimeSetToInactive_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(4, getDatetimeSetToInactive());
     }
     for (int i = 0; i < memberConstraintRules_.size(); i++) {
@@ -461,7 +462,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < memberAgentAvailabilityPatterns_.size(); i++) {
       output.writeMessage(7, memberAgentAvailabilityPatterns_.get(i));
     }
-    if (createdAt_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       output.writeMessage(8, getCreatedAt());
     }
     if (tcnAgentIsEnabled_ != false) {
@@ -480,14 +481,14 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(1, wfmAgentSid_);
     }
-    if (tcnAgentSid_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getTcnAgentSid());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
     }
-    if (datetimeSetToInactive_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getDatetimeSetToInactive());
     }
@@ -503,7 +504,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, memberAgentAvailabilityPatterns_.get(i));
     }
-    if (createdAt_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, getCreatedAt());
     }
@@ -719,13 +720,24 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.WFMAgent.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getTcnAgentSidFieldBuilder();
+        getDatetimeSetToInactiveFieldBuilder();
+        getMemberConstraintRulesFieldBuilder();
+        getMemberSkillProficienciesFieldBuilder();
+        getMemberAgentAvailabilityPatternsFieldBuilder();
+        getCreatedAtFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -837,10 +849,12 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.wfmAgentSid_ = wfmAgentSid_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.tcnAgentSid_ = tcnAgentSidBuilder_ == null
             ? tcnAgentSid_
             : tcnAgentSidBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.name_ = name_;
@@ -849,15 +863,18 @@ private static final long serialVersionUID = 0L;
         result.datetimeSetToInactive_ = datetimeSetToInactiveBuilder_ == null
             ? datetimeSetToInactive_
             : datetimeSetToInactiveBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.createdAt_ = createdAtBuilder_ == null
             ? createdAt_
             : createdAtBuilder_.build();
+        to_bitField0_ |= 0x00000004;
       }
       if (((from_bitField0_ & 0x00000100) != 0)) {
         result.tcnAgentIsEnabled_ = tcnAgentIsEnabled_;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1255,8 +1272,10 @@ private static final long serialVersionUID = 0L;
       } else {
         tcnAgentSidBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+      if (tcnAgentSid_ != null) {
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1511,8 +1530,10 @@ private static final long serialVersionUID = 0L;
       } else {
         datetimeSetToInactiveBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+      if (datetimeSetToInactive_ != null) {
+        bitField0_ |= 0x00000008;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -2602,8 +2623,10 @@ private static final long serialVersionUID = 0L;
       } else {
         createdAtBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000080;
-      onChanged();
+      if (createdAt_ != null) {
+        bitField0_ |= 0x00000080;
+        onChanged();
+      }
       return this;
     }
     /**

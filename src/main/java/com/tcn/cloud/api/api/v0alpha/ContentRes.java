@@ -45,6 +45,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.ContentRes.class, com.tcn.cloud.api.api.v0alpha.ContentRes.Builder.class);
   }
 
+  private int bitField0_;
   public static final int CONTENT_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object content_ = "";
@@ -96,7 +97,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasLastEditedTimestamp() {
-    return lastEditedTimestamp_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -247,7 +248,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(content_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, content_);
     }
-    if (lastEditedTimestamp_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(2, getLastEditedTimestamp());
     }
     for (int i = 0; i < images_.size(); i++) {
@@ -268,7 +269,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(content_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, content_);
     }
-    if (lastEditedTimestamp_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getLastEditedTimestamp());
     }
@@ -451,13 +452,20 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.ContentRes.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getLastEditedTimestampFieldBuilder();
+        getImagesFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -526,14 +534,17 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.content_ = content_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.lastEditedTimestamp_ = lastEditedTimestampBuilder_ == null
             ? lastEditedTimestamp_
             : lastEditedTimestampBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.title_ = title_;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -850,8 +861,10 @@ private static final long serialVersionUID = 0L;
       } else {
         lastEditedTimestampBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+      if (lastEditedTimestamp_ != null) {
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
       return this;
     }
     /**

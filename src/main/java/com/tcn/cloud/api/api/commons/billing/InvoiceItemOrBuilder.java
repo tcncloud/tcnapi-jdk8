@@ -99,14 +99,4 @@ public interface InvoiceItemOrBuilder extends
    * <code>.google.protobuf.Timestamp date_modified = 5 [json_name = "dateModified"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getDateModifiedOrBuilder();
-
-  /**
-   * <pre>
-   * the invoice identifier
-   * </pre>
-   *
-   * <code>int64 invoice_id = 6 [json_name = "invoiceId", jstype = JS_STRING];</code>
-   * @return The invoiceId.
-   */
-  long getInvoiceId();
 }

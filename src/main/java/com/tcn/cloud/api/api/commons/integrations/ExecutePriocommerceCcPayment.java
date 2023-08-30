@@ -4,38 +4,38 @@
 package com.tcn.cloud.api.api.commons.integrations;
 
 /**
- * Protobuf type {@code api.commons.integrations.ExecuteNewzwareVacationRestart}
+ * Protobuf type {@code api.commons.integrations.ExecutePriocommerceCcPayment}
  */
-public final class ExecuteNewzwareVacationRestart extends
+public final class ExecutePriocommerceCcPayment extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.commons.integrations.ExecuteNewzwareVacationRestart)
-    ExecuteNewzwareVacationRestartOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.commons.integrations.ExecutePriocommerceCcPayment)
+    ExecutePriocommerceCcPaymentOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use ExecuteNewzwareVacationRestart.newBuilder() to construct.
-  private ExecuteNewzwareVacationRestart(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use ExecutePriocommerceCcPayment.newBuilder() to construct.
+  private ExecutePriocommerceCcPayment(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private ExecuteNewzwareVacationRestart() {
+  private ExecutePriocommerceCcPayment() {
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new ExecuteNewzwareVacationRestart();
+    return new ExecutePriocommerceCcPayment();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.commons.integrations.IntegrationsProto.internal_static_api_commons_integrations_ExecuteNewzwareVacationRestart_descriptor;
+    return com.tcn.cloud.api.api.commons.integrations.IntegrationsProto.internal_static_api_commons_integrations_ExecutePriocommerceCcPayment_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.commons.integrations.IntegrationsProto.internal_static_api_commons_integrations_ExecuteNewzwareVacationRestart_fieldAccessorTable
+    return com.tcn.cloud.api.api.commons.integrations.IntegrationsProto.internal_static_api_commons_integrations_ExecutePriocommerceCcPayment_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareVacationRestart.class, com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareVacationRestart.Builder.class);
+            com.tcn.cloud.api.api.commons.integrations.ExecutePriocommerceCcPayment.class, com.tcn.cloud.api.api.commons.integrations.ExecutePriocommerceCcPayment.Builder.class);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -71,10 +71,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareVacationRestart)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.commons.integrations.ExecutePriocommerceCcPayment)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareVacationRestart other = (com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareVacationRestart) obj;
+    com.tcn.cloud.api.api.commons.integrations.ExecutePriocommerceCcPayment other = (com.tcn.cloud.api.api.commons.integrations.ExecutePriocommerceCcPayment) obj;
 
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -92,44 +92,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareVacationRestart parseFrom(
+  public static com.tcn.cloud.api.api.commons.integrations.ExecutePriocommerceCcPayment parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareVacationRestart parseFrom(
+  public static com.tcn.cloud.api.api.commons.integrations.ExecutePriocommerceCcPayment parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareVacationRestart parseFrom(
+  public static com.tcn.cloud.api.api.commons.integrations.ExecutePriocommerceCcPayment parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareVacationRestart parseFrom(
+  public static com.tcn.cloud.api.api.commons.integrations.ExecutePriocommerceCcPayment parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareVacationRestart parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.commons.integrations.ExecutePriocommerceCcPayment parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareVacationRestart parseFrom(
+  public static com.tcn.cloud.api.api.commons.integrations.ExecutePriocommerceCcPayment parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareVacationRestart parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.commons.integrations.ExecutePriocommerceCcPayment parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareVacationRestart parseFrom(
+  public static com.tcn.cloud.api.api.commons.integrations.ExecutePriocommerceCcPayment parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -137,26 +137,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareVacationRestart parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.commons.integrations.ExecutePriocommerceCcPayment parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareVacationRestart parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.commons.integrations.ExecutePriocommerceCcPayment parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareVacationRestart parseFrom(
+  public static com.tcn.cloud.api.api.commons.integrations.ExecutePriocommerceCcPayment parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareVacationRestart parseFrom(
+  public static com.tcn.cloud.api.api.commons.integrations.ExecutePriocommerceCcPayment parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -169,7 +169,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareVacationRestart prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.commons.integrations.ExecutePriocommerceCcPayment prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -185,26 +185,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code api.commons.integrations.ExecuteNewzwareVacationRestart}
+   * Protobuf type {@code api.commons.integrations.ExecutePriocommerceCcPayment}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.commons.integrations.ExecuteNewzwareVacationRestart)
-      com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareVacationRestartOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.commons.integrations.ExecutePriocommerceCcPayment)
+      com.tcn.cloud.api.api.commons.integrations.ExecutePriocommerceCcPaymentOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.commons.integrations.IntegrationsProto.internal_static_api_commons_integrations_ExecuteNewzwareVacationRestart_descriptor;
+      return com.tcn.cloud.api.api.commons.integrations.IntegrationsProto.internal_static_api_commons_integrations_ExecutePriocommerceCcPayment_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.commons.integrations.IntegrationsProto.internal_static_api_commons_integrations_ExecuteNewzwareVacationRestart_fieldAccessorTable
+      return com.tcn.cloud.api.api.commons.integrations.IntegrationsProto.internal_static_api_commons_integrations_ExecutePriocommerceCcPayment_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareVacationRestart.class, com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareVacationRestart.Builder.class);
+              com.tcn.cloud.api.api.commons.integrations.ExecutePriocommerceCcPayment.class, com.tcn.cloud.api.api.commons.integrations.ExecutePriocommerceCcPayment.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareVacationRestart.newBuilder()
+    // Construct using com.tcn.cloud.api.api.commons.integrations.ExecutePriocommerceCcPayment.newBuilder()
     private Builder() {
 
     }
@@ -223,17 +223,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.commons.integrations.IntegrationsProto.internal_static_api_commons_integrations_ExecuteNewzwareVacationRestart_descriptor;
+      return com.tcn.cloud.api.api.commons.integrations.IntegrationsProto.internal_static_api_commons_integrations_ExecutePriocommerceCcPayment_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareVacationRestart getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareVacationRestart.getDefaultInstance();
+    public com.tcn.cloud.api.api.commons.integrations.ExecutePriocommerceCcPayment getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.commons.integrations.ExecutePriocommerceCcPayment.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareVacationRestart build() {
-      com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareVacationRestart result = buildPartial();
+    public com.tcn.cloud.api.api.commons.integrations.ExecutePriocommerceCcPayment build() {
+      com.tcn.cloud.api.api.commons.integrations.ExecutePriocommerceCcPayment result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -241,8 +241,8 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareVacationRestart buildPartial() {
-      com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareVacationRestart result = new com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareVacationRestart(this);
+    public com.tcn.cloud.api.api.commons.integrations.ExecutePriocommerceCcPayment buildPartial() {
+      com.tcn.cloud.api.api.commons.integrations.ExecutePriocommerceCcPayment result = new com.tcn.cloud.api.api.commons.integrations.ExecutePriocommerceCcPayment(this);
       onBuilt();
       return result;
     }
@@ -281,16 +281,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareVacationRestart) {
-        return mergeFrom((com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareVacationRestart)other);
+      if (other instanceof com.tcn.cloud.api.api.commons.integrations.ExecutePriocommerceCcPayment) {
+        return mergeFrom((com.tcn.cloud.api.api.commons.integrations.ExecutePriocommerceCcPayment)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareVacationRestart other) {
-      if (other == com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareVacationRestart.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.api.commons.integrations.ExecutePriocommerceCcPayment other) {
+      if (other == com.tcn.cloud.api.api.commons.integrations.ExecutePriocommerceCcPayment.getDefaultInstance()) return this;
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -345,23 +345,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.commons.integrations.ExecuteNewzwareVacationRestart)
+    // @@protoc_insertion_point(builder_scope:api.commons.integrations.ExecutePriocommerceCcPayment)
   }
 
-  // @@protoc_insertion_point(class_scope:api.commons.integrations.ExecuteNewzwareVacationRestart)
-  private static final com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareVacationRestart DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.commons.integrations.ExecutePriocommerceCcPayment)
+  private static final com.tcn.cloud.api.api.commons.integrations.ExecutePriocommerceCcPayment DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareVacationRestart();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.integrations.ExecutePriocommerceCcPayment();
   }
 
-  public static com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareVacationRestart getDefaultInstance() {
+  public static com.tcn.cloud.api.api.commons.integrations.ExecutePriocommerceCcPayment getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<ExecuteNewzwareVacationRestart>
-      PARSER = new com.google.protobuf.AbstractParser<ExecuteNewzwareVacationRestart>() {
+  private static final com.google.protobuf.Parser<ExecutePriocommerceCcPayment>
+      PARSER = new com.google.protobuf.AbstractParser<ExecutePriocommerceCcPayment>() {
     @java.lang.Override
-    public ExecuteNewzwareVacationRestart parsePartialFrom(
+    public ExecutePriocommerceCcPayment parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -380,17 +380,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<ExecuteNewzwareVacationRestart> parser() {
+  public static com.google.protobuf.Parser<ExecutePriocommerceCcPayment> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<ExecuteNewzwareVacationRestart> getParserForType() {
+  public com.google.protobuf.Parser<ExecutePriocommerceCcPayment> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareVacationRestart getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.commons.integrations.ExecutePriocommerceCcPayment getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

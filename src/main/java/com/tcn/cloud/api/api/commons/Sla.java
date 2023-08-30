@@ -42,6 +42,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.Sla.class, com.tcn.cloud.api.api.commons.Sla.Builder.class);
   }
 
+  private int bitField0_;
   public static final int CONDITION_SID_FIELD_NUMBER = 1;
   private long conditionSid_ = 0L;
   /**
@@ -83,7 +84,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasSlaDuration() {
-    return slaDuration_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <code>.api.commons.Duration sla_duration = 4 [json_name = "slaDuration"];</code>
@@ -124,7 +125,7 @@ private static final long serialVersionUID = 0L;
     if (slaMin_ != 0L) {
       output.writeInt64(3, slaMin_);
     }
-    if (slaDuration_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(4, getSlaDuration());
     }
     getUnknownFields().writeTo(output);
@@ -148,7 +149,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(3, slaMin_);
     }
-    if (slaDuration_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getSlaDuration());
     }
@@ -325,13 +326,19 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.Sla.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getSlaDurationFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -387,11 +394,14 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.slaMin_ = slaMin_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.slaDuration_ = slaDurationBuilder_ == null
             ? slaDuration_
             : slaDurationBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -677,8 +687,10 @@ private static final long serialVersionUID = 0L;
       } else {
         slaDurationBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+      if (slaDuration_ != null) {
+        bitField0_ |= 0x00000008;
+        onChanged();
+      }
       return this;
     }
     /**

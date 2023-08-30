@@ -46,6 +46,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.OmniCampaignModuleConfig.class, com.tcn.cloud.api.api.commons.OmniCampaignModuleConfig.Builder.class);
   }
 
+  private int bitField0_;
   public static final int API_KEY_PRIMARY_FIELD_NUMBER = 1;
   private com.google.protobuf.StringValue apiKeyPrimary_;
   /**
@@ -58,7 +59,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasApiKeyPrimary() {
-    return apiKeyPrimary_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -96,7 +97,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasApiKeySecondary() {
-    return apiKeySecondary_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <pre>
@@ -134,7 +135,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasColorProperties() {
-    return colorProperties_ != null;
+    return ((bitField0_ & 0x00000004) != 0);
   }
   /**
    * <pre>
@@ -172,7 +173,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasConnectedInboxSid() {
-    return connectedInboxSid_ != null;
+    return ((bitField0_ & 0x00000008) != 0);
   }
   /**
    * <pre>
@@ -271,7 +272,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasEmail() {
-    return email_ != null;
+    return ((bitField0_ & 0x00000010) != 0);
   }
   /**
    * <pre>
@@ -309,7 +310,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasMessageBody() {
-    return messageBody_ != null;
+    return ((bitField0_ & 0x00000020) != 0);
   }
   /**
    * <pre>
@@ -347,7 +348,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasEmailSubject() {
-    return emailSubject_ != null;
+    return ((bitField0_ & 0x00000040) != 0);
   }
   /**
    * <pre>
@@ -385,7 +386,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasSmsNumber() {
-    return smsNumber_ != null;
+    return ((bitField0_ & 0x00000080) != 0);
   }
   /**
    * <pre>
@@ -423,7 +424,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasHeader() {
-    return header_ != null;
+    return ((bitField0_ & 0x00000100) != 0);
   }
   /**
    * <pre>
@@ -461,7 +462,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasSlaTimeouts() {
-    return slaTimeouts_ != null;
+    return ((bitField0_ & 0x00000200) != 0);
   }
   /**
    * <pre>
@@ -499,7 +500,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasSendsPerHour() {
-    return sendsPerHour_ != null;
+    return ((bitField0_ & 0x00000400) != 0);
   }
   /**
    * <pre>
@@ -537,7 +538,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasUnsubscribeLinkSid() {
-    return unsubscribeLinkSid_ != null;
+    return ((bitField0_ & 0x00000800) != 0);
   }
   /**
    * <pre>
@@ -575,7 +576,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasVerifiedEmailSid() {
-    return verifiedEmailSid_ != null;
+    return ((bitField0_ & 0x00001000) != 0);
   }
   /**
    * <pre>
@@ -613,7 +614,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasStopOnTaskDeplete() {
-    return stopOnTaskDeplete_ != null;
+    return ((bitField0_ & 0x00002000) != 0);
   }
   /**
    * <pre>
@@ -712,7 +713,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasComplianceRuleSetId() {
-    return complianceRuleSetId_ != null;
+    return ((bitField0_ & 0x00004000) != 0);
   }
   /**
    * <pre>
@@ -803,7 +804,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasFlowId() {
-    return flowId_ != null;
+    return ((bitField0_ & 0x00008000) != 0);
   }
   /**
    * <pre>
@@ -843,61 +844,61 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (apiKeyPrimary_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(1, getApiKeyPrimary());
     }
-    if (apiKeySecondary_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(2, getApiKeySecondary());
     }
-    if (colorProperties_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       output.writeMessage(3, getColorProperties());
     }
-    if (connectedInboxSid_ != null) {
+    if (((bitField0_ & 0x00000008) != 0)) {
       output.writeMessage(4, getConnectedInboxSid());
     }
     for (int i = 0; i < dispositions_.size(); i++) {
       output.writeMessage(5, dispositions_.get(i));
     }
-    if (email_ != null) {
+    if (((bitField0_ & 0x00000010) != 0)) {
       output.writeMessage(6, getEmail());
     }
-    if (messageBody_ != null) {
+    if (((bitField0_ & 0x00000020) != 0)) {
       output.writeMessage(7, getMessageBody());
     }
-    if (emailSubject_ != null) {
+    if (((bitField0_ & 0x00000040) != 0)) {
       output.writeMessage(8, getEmailSubject());
     }
-    if (smsNumber_ != null) {
+    if (((bitField0_ & 0x00000080) != 0)) {
       output.writeMessage(9, getSmsNumber());
     }
-    if (header_ != null) {
+    if (((bitField0_ & 0x00000100) != 0)) {
       output.writeMessage(10, getHeader());
     }
-    if (slaTimeouts_ != null) {
+    if (((bitField0_ & 0x00000200) != 0)) {
       output.writeMessage(11, getSlaTimeouts());
     }
-    if (sendsPerHour_ != null) {
+    if (((bitField0_ & 0x00000400) != 0)) {
       output.writeMessage(12, getSendsPerHour());
     }
-    if (unsubscribeLinkSid_ != null) {
+    if (((bitField0_ & 0x00000800) != 0)) {
       output.writeMessage(13, getUnsubscribeLinkSid());
     }
-    if (verifiedEmailSid_ != null) {
+    if (((bitField0_ & 0x00001000) != 0)) {
       output.writeMessage(15, getVerifiedEmailSid());
     }
-    if (stopOnTaskDeplete_ != null) {
+    if (((bitField0_ & 0x00002000) != 0)) {
       output.writeMessage(16, getStopOnTaskDeplete());
     }
     for (int i = 0; i < attachments_.size(); i++) {
       output.writeMessage(17, attachments_.get(i));
     }
-    if (complianceRuleSetId_ != null) {
+    if (((bitField0_ & 0x00004000) != 0)) {
       output.writeMessage(18, getComplianceRuleSetId());
     }
     for (int i = 0; i < paymentPortalIds_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 19, paymentPortalIds_.getRaw(i));
     }
-    if (flowId_ != null) {
+    if (((bitField0_ & 0x00008000) != 0)) {
       output.writeMessage(20, getFlowId());
     }
     getUnknownFields().writeTo(output);
@@ -909,19 +910,19 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (apiKeyPrimary_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getApiKeyPrimary());
     }
-    if (apiKeySecondary_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getApiKeySecondary());
     }
-    if (colorProperties_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getColorProperties());
     }
-    if (connectedInboxSid_ != null) {
+    if (((bitField0_ & 0x00000008) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getConnectedInboxSid());
     }
@@ -929,43 +930,43 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, dispositions_.get(i));
     }
-    if (email_ != null) {
+    if (((bitField0_ & 0x00000010) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, getEmail());
     }
-    if (messageBody_ != null) {
+    if (((bitField0_ & 0x00000020) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, getMessageBody());
     }
-    if (emailSubject_ != null) {
+    if (((bitField0_ & 0x00000040) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, getEmailSubject());
     }
-    if (smsNumber_ != null) {
+    if (((bitField0_ & 0x00000080) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(9, getSmsNumber());
     }
-    if (header_ != null) {
+    if (((bitField0_ & 0x00000100) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(10, getHeader());
     }
-    if (slaTimeouts_ != null) {
+    if (((bitField0_ & 0x00000200) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(11, getSlaTimeouts());
     }
-    if (sendsPerHour_ != null) {
+    if (((bitField0_ & 0x00000400) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(12, getSendsPerHour());
     }
-    if (unsubscribeLinkSid_ != null) {
+    if (((bitField0_ & 0x00000800) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(13, getUnsubscribeLinkSid());
     }
-    if (verifiedEmailSid_ != null) {
+    if (((bitField0_ & 0x00001000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(15, getVerifiedEmailSid());
     }
-    if (stopOnTaskDeplete_ != null) {
+    if (((bitField0_ & 0x00002000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(16, getStopOnTaskDeplete());
     }
@@ -973,7 +974,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(17, attachments_.get(i));
     }
-    if (complianceRuleSetId_ != null) {
+    if (((bitField0_ & 0x00004000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(18, getComplianceRuleSetId());
     }
@@ -985,7 +986,7 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 2 * getPaymentPortalIdsList().size();
     }
-    if (flowId_ != null) {
+    if (((bitField0_ & 0x00008000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(20, getFlowId());
     }
@@ -1300,13 +1301,36 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.OmniCampaignModuleConfig.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getApiKeyPrimaryFieldBuilder();
+        getApiKeySecondaryFieldBuilder();
+        getColorPropertiesFieldBuilder();
+        getConnectedInboxSidFieldBuilder();
+        getDispositionsFieldBuilder();
+        getEmailFieldBuilder();
+        getMessageBodyFieldBuilder();
+        getEmailSubjectFieldBuilder();
+        getSmsNumberFieldBuilder();
+        getHeaderFieldBuilder();
+        getSlaTimeoutsFieldBuilder();
+        getSendsPerHourFieldBuilder();
+        getUnsubscribeLinkSidFieldBuilder();
+        getVerifiedEmailSidFieldBuilder();
+        getStopOnTaskDepleteFieldBuilder();
+        getAttachmentsFieldBuilder();
+        getComplianceRuleSetIdFieldBuilder();
+        getFlowIdFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -1463,80 +1487,96 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.commons.OmniCampaignModuleConfig result) {
       int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.apiKeyPrimary_ = apiKeyPrimaryBuilder_ == null
             ? apiKeyPrimary_
             : apiKeyPrimaryBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.apiKeySecondary_ = apiKeySecondaryBuilder_ == null
             ? apiKeySecondary_
             : apiKeySecondaryBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.colorProperties_ = colorPropertiesBuilder_ == null
             ? colorProperties_
             : colorPropertiesBuilder_.build();
+        to_bitField0_ |= 0x00000004;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.connectedInboxSid_ = connectedInboxSidBuilder_ == null
             ? connectedInboxSid_
             : connectedInboxSidBuilder_.build();
+        to_bitField0_ |= 0x00000008;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.email_ = emailBuilder_ == null
             ? email_
             : emailBuilder_.build();
+        to_bitField0_ |= 0x00000010;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.messageBody_ = messageBodyBuilder_ == null
             ? messageBody_
             : messageBodyBuilder_.build();
+        to_bitField0_ |= 0x00000020;
       }
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.emailSubject_ = emailSubjectBuilder_ == null
             ? emailSubject_
             : emailSubjectBuilder_.build();
+        to_bitField0_ |= 0x00000040;
       }
       if (((from_bitField0_ & 0x00000100) != 0)) {
         result.smsNumber_ = smsNumberBuilder_ == null
             ? smsNumber_
             : smsNumberBuilder_.build();
+        to_bitField0_ |= 0x00000080;
       }
       if (((from_bitField0_ & 0x00000200) != 0)) {
         result.header_ = headerBuilder_ == null
             ? header_
             : headerBuilder_.build();
+        to_bitField0_ |= 0x00000100;
       }
       if (((from_bitField0_ & 0x00000400) != 0)) {
         result.slaTimeouts_ = slaTimeoutsBuilder_ == null
             ? slaTimeouts_
             : slaTimeoutsBuilder_.build();
+        to_bitField0_ |= 0x00000200;
       }
       if (((from_bitField0_ & 0x00000800) != 0)) {
         result.sendsPerHour_ = sendsPerHourBuilder_ == null
             ? sendsPerHour_
             : sendsPerHourBuilder_.build();
+        to_bitField0_ |= 0x00000400;
       }
       if (((from_bitField0_ & 0x00001000) != 0)) {
         result.unsubscribeLinkSid_ = unsubscribeLinkSidBuilder_ == null
             ? unsubscribeLinkSid_
             : unsubscribeLinkSidBuilder_.build();
+        to_bitField0_ |= 0x00000800;
       }
       if (((from_bitField0_ & 0x00002000) != 0)) {
         result.verifiedEmailSid_ = verifiedEmailSidBuilder_ == null
             ? verifiedEmailSid_
             : verifiedEmailSidBuilder_.build();
+        to_bitField0_ |= 0x00001000;
       }
       if (((from_bitField0_ & 0x00004000) != 0)) {
         result.stopOnTaskDeplete_ = stopOnTaskDepleteBuilder_ == null
             ? stopOnTaskDeplete_
             : stopOnTaskDepleteBuilder_.build();
+        to_bitField0_ |= 0x00002000;
       }
       if (((from_bitField0_ & 0x00010000) != 0)) {
         result.complianceRuleSetId_ = complianceRuleSetIdBuilder_ == null
             ? complianceRuleSetId_
             : complianceRuleSetIdBuilder_.build();
+        to_bitField0_ |= 0x00004000;
       }
       if (((from_bitField0_ & 0x00020000) != 0)) {
         paymentPortalIds_.makeImmutable();
@@ -1546,7 +1586,9 @@ private static final long serialVersionUID = 0L;
         result.flowId_ = flowIdBuilder_ == null
             ? flowId_
             : flowIdBuilder_.build();
+        to_bitField0_ |= 0x00008000;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1976,8 +2018,10 @@ private static final long serialVersionUID = 0L;
       } else {
         apiKeyPrimaryBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+      if (apiKeyPrimary_ != null) {
+        bitField0_ |= 0x00000001;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -2131,8 +2175,10 @@ private static final long serialVersionUID = 0L;
       } else {
         apiKeySecondaryBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+      if (apiKeySecondary_ != null) {
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -2286,8 +2332,10 @@ private static final long serialVersionUID = 0L;
       } else {
         colorPropertiesBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+      if (colorProperties_ != null) {
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -2441,8 +2489,10 @@ private static final long serialVersionUID = 0L;
       } else {
         connectedInboxSidBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+      if (connectedInboxSid_ != null) {
+        bitField0_ |= 0x00000008;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -2908,8 +2958,10 @@ private static final long serialVersionUID = 0L;
       } else {
         emailBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000020;
-      onChanged();
+      if (email_ != null) {
+        bitField0_ |= 0x00000020;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -3063,8 +3115,10 @@ private static final long serialVersionUID = 0L;
       } else {
         messageBodyBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000040;
-      onChanged();
+      if (messageBody_ != null) {
+        bitField0_ |= 0x00000040;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -3218,8 +3272,10 @@ private static final long serialVersionUID = 0L;
       } else {
         emailSubjectBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000080;
-      onChanged();
+      if (emailSubject_ != null) {
+        bitField0_ |= 0x00000080;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -3373,8 +3429,10 @@ private static final long serialVersionUID = 0L;
       } else {
         smsNumberBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000100;
-      onChanged();
+      if (smsNumber_ != null) {
+        bitField0_ |= 0x00000100;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -3528,8 +3586,10 @@ private static final long serialVersionUID = 0L;
       } else {
         headerBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000200;
-      onChanged();
+      if (header_ != null) {
+        bitField0_ |= 0x00000200;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -3683,8 +3743,10 @@ private static final long serialVersionUID = 0L;
       } else {
         slaTimeoutsBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000400;
-      onChanged();
+      if (slaTimeouts_ != null) {
+        bitField0_ |= 0x00000400;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -3838,8 +3900,10 @@ private static final long serialVersionUID = 0L;
       } else {
         sendsPerHourBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000800;
-      onChanged();
+      if (sendsPerHour_ != null) {
+        bitField0_ |= 0x00000800;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -3993,8 +4057,10 @@ private static final long serialVersionUID = 0L;
       } else {
         unsubscribeLinkSidBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00001000;
-      onChanged();
+      if (unsubscribeLinkSid_ != null) {
+        bitField0_ |= 0x00001000;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -4148,8 +4214,10 @@ private static final long serialVersionUID = 0L;
       } else {
         verifiedEmailSidBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00002000;
-      onChanged();
+      if (verifiedEmailSid_ != null) {
+        bitField0_ |= 0x00002000;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -4303,8 +4371,10 @@ private static final long serialVersionUID = 0L;
       } else {
         stopOnTaskDepleteBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00004000;
-      onChanged();
+      if (stopOnTaskDeplete_ != null) {
+        bitField0_ |= 0x00004000;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -4770,8 +4840,10 @@ private static final long serialVersionUID = 0L;
       } else {
         complianceRuleSetIdBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00010000;
-      onChanged();
+      if (complianceRuleSetId_ != null) {
+        bitField0_ |= 0x00010000;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -5072,8 +5144,10 @@ private static final long serialVersionUID = 0L;
       } else {
         flowIdBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00040000;
-      onChanged();
+      if (flowId_ != null) {
+        bitField0_ |= 0x00040000;
+        onChanged();
+      }
       return this;
     }
     /**

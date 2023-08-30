@@ -44,6 +44,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.TicketSla.class, com.tcn.cloud.api.api.commons.TicketSla.Builder.class);
   }
 
+  private int bitField0_;
   public static final int SLA_SID_FIELD_NUMBER = 1;
   private long slaSid_ = 0L;
   /**
@@ -191,7 +192,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasTicketSlaDuration() {
-    return ticketSlaDuration_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <code>.api.commons.Duration ticket_sla_duration = 6 [json_name = "ticketSlaDuration"];</code>
@@ -238,7 +239,7 @@ private static final long serialVersionUID = 0L;
     if (isActive_ != 0L) {
       output.writeInt64(5, isActive_);
     }
-    if (ticketSlaDuration_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(6, getTicketSlaDuration());
     }
     getUnknownFields().writeTo(output);
@@ -268,7 +269,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(5, isActive_);
     }
-    if (ticketSlaDuration_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, getTicketSlaDuration());
     }
@@ -453,13 +454,19 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.TicketSla.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getTicketSlaDurationFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -523,11 +530,14 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.isActive_ = isActive_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.ticketSlaDuration_ = ticketSlaDurationBuilder_ == null
             ? ticketSlaDuration_
             : ticketSlaDurationBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1053,8 +1063,10 @@ private static final long serialVersionUID = 0L;
       } else {
         ticketSlaDurationBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000020;
-      onChanged();
+      if (ticketSlaDuration_ != null) {
+        bitField0_ |= 0x00000020;
+        onChanged();
+      }
       return this;
     }
     /**

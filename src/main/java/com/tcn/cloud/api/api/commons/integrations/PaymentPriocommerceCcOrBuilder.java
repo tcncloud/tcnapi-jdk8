@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.commons.integrations;
 
-public interface ExecuteNewzwareComplaintUpdateOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.commons.integrations.ExecuteNewzwareComplaintUpdate)
+public interface PaymentPriocommerceCcOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.commons.integrations.PaymentPriocommerceCc)
     com.google.protobuf.MessageOrBuilder {
 }

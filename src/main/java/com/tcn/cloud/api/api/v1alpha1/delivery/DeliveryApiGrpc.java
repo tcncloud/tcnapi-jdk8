@@ -5,7 +5,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.57.1)",
+    value = "by gRPC proto compiler (version 1.57.2)",
     comments = "Source: api/v1alpha1/delivery/service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class DeliveryApiGrpc {
@@ -44,68 +44,6 @@ public final class DeliveryApiGrpc {
       }
     }
     return getCreateTransferConfigMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.delivery.CreateDeliveryDefinitionReq,
-      com.tcn.cloud.api.api.v1alpha1.delivery.CreateDeliveryDefinitionRes> getCreateDeliveryDefinitionMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "CreateDeliveryDefinition",
-      requestType = com.tcn.cloud.api.api.v1alpha1.delivery.CreateDeliveryDefinitionReq.class,
-      responseType = com.tcn.cloud.api.api.v1alpha1.delivery.CreateDeliveryDefinitionRes.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.delivery.CreateDeliveryDefinitionReq,
-      com.tcn.cloud.api.api.v1alpha1.delivery.CreateDeliveryDefinitionRes> getCreateDeliveryDefinitionMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.delivery.CreateDeliveryDefinitionReq, com.tcn.cloud.api.api.v1alpha1.delivery.CreateDeliveryDefinitionRes> getCreateDeliveryDefinitionMethod;
-    if ((getCreateDeliveryDefinitionMethod = DeliveryApiGrpc.getCreateDeliveryDefinitionMethod) == null) {
-      synchronized (DeliveryApiGrpc.class) {
-        if ((getCreateDeliveryDefinitionMethod = DeliveryApiGrpc.getCreateDeliveryDefinitionMethod) == null) {
-          DeliveryApiGrpc.getCreateDeliveryDefinitionMethod = getCreateDeliveryDefinitionMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.delivery.CreateDeliveryDefinitionReq, com.tcn.cloud.api.api.v1alpha1.delivery.CreateDeliveryDefinitionRes>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateDeliveryDefinition"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.delivery.CreateDeliveryDefinitionReq.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.delivery.CreateDeliveryDefinitionRes.getDefaultInstance()))
-              .setSchemaDescriptor(new DeliveryApiMethodDescriptorSupplier("CreateDeliveryDefinition"))
-              .build();
-        }
-      }
-    }
-    return getCreateDeliveryDefinitionMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.delivery.CreateEncryptionReq,
-      com.tcn.cloud.api.api.v1alpha1.delivery.CreateEncryptionRes> getCreateEncryptionMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "CreateEncryption",
-      requestType = com.tcn.cloud.api.api.v1alpha1.delivery.CreateEncryptionReq.class,
-      responseType = com.tcn.cloud.api.api.v1alpha1.delivery.CreateEncryptionRes.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.delivery.CreateEncryptionReq,
-      com.tcn.cloud.api.api.v1alpha1.delivery.CreateEncryptionRes> getCreateEncryptionMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.delivery.CreateEncryptionReq, com.tcn.cloud.api.api.v1alpha1.delivery.CreateEncryptionRes> getCreateEncryptionMethod;
-    if ((getCreateEncryptionMethod = DeliveryApiGrpc.getCreateEncryptionMethod) == null) {
-      synchronized (DeliveryApiGrpc.class) {
-        if ((getCreateEncryptionMethod = DeliveryApiGrpc.getCreateEncryptionMethod) == null) {
-          DeliveryApiGrpc.getCreateEncryptionMethod = getCreateEncryptionMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.delivery.CreateEncryptionReq, com.tcn.cloud.api.api.v1alpha1.delivery.CreateEncryptionRes>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateEncryption"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.delivery.CreateEncryptionReq.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.delivery.CreateEncryptionRes.getDefaultInstance()))
-              .setSchemaDescriptor(new DeliveryApiMethodDescriptorSupplier("CreateEncryption"))
-              .build();
-        }
-      }
-    }
-    return getCreateEncryptionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.delivery.ListTransferConfigsReq,
@@ -568,20 +506,6 @@ public final class DeliveryApiGrpc {
 
     /**
      */
-    default void createDeliveryDefinition(com.tcn.cloud.api.api.v1alpha1.delivery.CreateDeliveryDefinitionReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.delivery.CreateDeliveryDefinitionRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateDeliveryDefinitionMethod(), responseObserver);
-    }
-
-    /**
-     */
-    default void createEncryption(com.tcn.cloud.api.api.v1alpha1.delivery.CreateEncryptionReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.delivery.CreateEncryptionRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateEncryptionMethod(), responseObserver);
-    }
-
-    /**
-     */
     default void listTransferConfigs(com.tcn.cloud.api.api.v1alpha1.delivery.ListTransferConfigsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.delivery.ListTransferConfigsRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListTransferConfigsMethod(), responseObserver);
@@ -705,22 +629,6 @@ public final class DeliveryApiGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.delivery.CreateTransferConfigRes> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateTransferConfigMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     */
-    public void createDeliveryDefinition(com.tcn.cloud.api.api.v1alpha1.delivery.CreateDeliveryDefinitionReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.delivery.CreateDeliveryDefinitionRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getCreateDeliveryDefinitionMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     */
-    public void createEncryption(com.tcn.cloud.api.api.v1alpha1.delivery.CreateEncryptionReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.delivery.CreateEncryptionRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getCreateEncryptionMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -853,20 +761,6 @@ public final class DeliveryApiGrpc {
 
     /**
      */
-    public com.tcn.cloud.api.api.v1alpha1.delivery.CreateDeliveryDefinitionRes createDeliveryDefinition(com.tcn.cloud.api.api.v1alpha1.delivery.CreateDeliveryDefinitionReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getCreateDeliveryDefinitionMethod(), getCallOptions(), request);
-    }
-
-    /**
-     */
-    public com.tcn.cloud.api.api.v1alpha1.delivery.CreateEncryptionRes createEncryption(com.tcn.cloud.api.api.v1alpha1.delivery.CreateEncryptionReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getCreateEncryptionMethod(), getCallOptions(), request);
-    }
-
-    /**
-     */
     public com.tcn.cloud.api.api.v1alpha1.delivery.ListTransferConfigsRes listTransferConfigs(com.tcn.cloud.api.api.v1alpha1.delivery.ListTransferConfigsReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListTransferConfigsMethod(), getCallOptions(), request);
@@ -983,22 +877,6 @@ public final class DeliveryApiGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.delivery.CreateDeliveryDefinitionRes> createDeliveryDefinition(
-        com.tcn.cloud.api.api.v1alpha1.delivery.CreateDeliveryDefinitionReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getCreateDeliveryDefinitionMethod(), getCallOptions()), request);
-    }
-
-    /**
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.delivery.CreateEncryptionRes> createEncryption(
-        com.tcn.cloud.api.api.v1alpha1.delivery.CreateEncryptionReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getCreateEncryptionMethod(), getCallOptions()), request);
-    }
-
-    /**
-     */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.delivery.ListTransferConfigsRes> listTransferConfigs(
         com.tcn.cloud.api.api.v1alpha1.delivery.ListTransferConfigsReq request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -1103,21 +981,19 @@ public final class DeliveryApiGrpc {
   }
 
   private static final int METHODID_CREATE_TRANSFER_CONFIG = 0;
-  private static final int METHODID_CREATE_DELIVERY_DEFINITION = 1;
-  private static final int METHODID_CREATE_ENCRYPTION = 2;
-  private static final int METHODID_LIST_TRANSFER_CONFIGS = 3;
-  private static final int METHODID_LIST_TRANSFER_CONFIGS_BY_CREDENTIAL_ID = 4;
-  private static final int METHODID_UPDATE_TRANSFER_CONFIG = 5;
-  private static final int METHODID_DELETE_TRANSFER_CONFIG = 6;
-  private static final int METHODID_GET_TRANSFER_CONFIG = 7;
-  private static final int METHODID_GET_TRANSFER_CONFIG_BY_NAME = 8;
-  private static final int METHODID_LIST_HISTORY = 9;
-  private static final int METHODID_LIST_HISTORY_BY_TRANSFER_CONFIG = 10;
-  private static final int METHODID_LIST_CREDENTIALS = 11;
-  private static final int METHODID_GET_CREDENTIAL = 12;
-  private static final int METHODID_CREATE_CREDENTIAL = 13;
-  private static final int METHODID_DELETE_CREDENTIAL = 14;
-  private static final int METHODID_UPDATE_CREDENTIAL = 15;
+  private static final int METHODID_LIST_TRANSFER_CONFIGS = 1;
+  private static final int METHODID_LIST_TRANSFER_CONFIGS_BY_CREDENTIAL_ID = 2;
+  private static final int METHODID_UPDATE_TRANSFER_CONFIG = 3;
+  private static final int METHODID_DELETE_TRANSFER_CONFIG = 4;
+  private static final int METHODID_GET_TRANSFER_CONFIG = 5;
+  private static final int METHODID_GET_TRANSFER_CONFIG_BY_NAME = 6;
+  private static final int METHODID_LIST_HISTORY = 7;
+  private static final int METHODID_LIST_HISTORY_BY_TRANSFER_CONFIG = 8;
+  private static final int METHODID_LIST_CREDENTIALS = 9;
+  private static final int METHODID_GET_CREDENTIAL = 10;
+  private static final int METHODID_CREATE_CREDENTIAL = 11;
+  private static final int METHODID_DELETE_CREDENTIAL = 12;
+  private static final int METHODID_UPDATE_CREDENTIAL = 13;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1139,14 +1015,6 @@ public final class DeliveryApiGrpc {
         case METHODID_CREATE_TRANSFER_CONFIG:
           serviceImpl.createTransferConfig((com.tcn.cloud.api.api.v1alpha1.delivery.CreateTransferConfigReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.delivery.CreateTransferConfigRes>) responseObserver);
-          break;
-        case METHODID_CREATE_DELIVERY_DEFINITION:
-          serviceImpl.createDeliveryDefinition((com.tcn.cloud.api.api.v1alpha1.delivery.CreateDeliveryDefinitionReq) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.delivery.CreateDeliveryDefinitionRes>) responseObserver);
-          break;
-        case METHODID_CREATE_ENCRYPTION:
-          serviceImpl.createEncryption((com.tcn.cloud.api.api.v1alpha1.delivery.CreateEncryptionReq) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.delivery.CreateEncryptionRes>) responseObserver);
           break;
         case METHODID_LIST_TRANSFER_CONFIGS:
           serviceImpl.listTransferConfigs((com.tcn.cloud.api.api.v1alpha1.delivery.ListTransferConfigsReq) request,
@@ -1225,20 +1093,6 @@ public final class DeliveryApiGrpc {
               com.tcn.cloud.api.api.v1alpha1.delivery.CreateTransferConfigReq,
               com.tcn.cloud.api.api.v1alpha1.delivery.CreateTransferConfigRes>(
                 service, METHODID_CREATE_TRANSFER_CONFIG)))
-        .addMethod(
-          getCreateDeliveryDefinitionMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.delivery.CreateDeliveryDefinitionReq,
-              com.tcn.cloud.api.api.v1alpha1.delivery.CreateDeliveryDefinitionRes>(
-                service, METHODID_CREATE_DELIVERY_DEFINITION)))
-        .addMethod(
-          getCreateEncryptionMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.delivery.CreateEncryptionReq,
-              com.tcn.cloud.api.api.v1alpha1.delivery.CreateEncryptionRes>(
-                service, METHODID_CREATE_ENCRYPTION)))
         .addMethod(
           getListTransferConfigsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -1379,8 +1233,6 @@ public final class DeliveryApiGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new DeliveryApiFileDescriptorSupplier())
               .addMethod(getCreateTransferConfigMethod())
-              .addMethod(getCreateDeliveryDefinitionMethod())
-              .addMethod(getCreateEncryptionMethod())
               .addMethod(getListTransferConfigsMethod())
               .addMethod(getListTransferConfigsByCredentialIDMethod())
               .addMethod(getUpdateTransferConfigMethod())

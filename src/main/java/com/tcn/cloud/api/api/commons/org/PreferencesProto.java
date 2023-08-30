@@ -291,11 +291,9 @@ public final class PreferencesProto {
       "\002id\030\001 \001(\003R\002id\022\022\n\004name\030\002 \001(\tR\004name\"v\n\017Con" +
       "tactAreaCode\022<\n\003cfd\030\001 \001(\0132(.api.commons." +
       "org.ContactFieldDescriptionH\000R\003cfd\022\030\n\006cu" +
-      "stom\030\002 \001(\005H\000R\006customB\013\n\tarea_code\"\227\001\n\027Co" +
-      "ntactFieldDescription\022\016\n\002id\030\001 \001(\003R\002id\022\035\n" +
-      "\nfield_name\030\002 \001(\tR\tfieldName\022\031\n\010is_phone" +
-      "\030\003 \001(\010R\007isPhone\0222\n\025display_format_string" +
-      "\030\004 \001(\tR\023displayFormatString\"\251\001\n\031Authenti" +
+      "stom\030\002 \001(\005H\000R\006customB\013\n\tarea_code\"H\n\027Con" +
+      "tactFieldDescription\022\016\n\002id\030\001 \001(\003R\002id\022\035\n\n" +
+      "field_name\030\002 \001(\tR\tfieldName\"\251\001\n\031Authenti" +
       "cationPreferences\022\025\n\006org_id\030\001 \001(\tR\005orgId" +
       "\0220\n\024authorization_via_ip\030\n \001(\010R\022authoriz" +
       "ationViaIp\022\037\n\013allowed_ips\030\013 \003(\tR\nallowed" +
@@ -601,7 +599,7 @@ public final class PreferencesProto {
     internal_static_api_commons_org_ContactFieldDescription_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_org_ContactFieldDescription_descriptor,
-        new java.lang.String[] { "Id", "FieldName", "IsPhone", "DisplayFormatString", });
+        new java.lang.String[] { "Id", "FieldName", });
     internal_static_api_commons_org_AuthenticationPreferences_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_api_commons_org_AuthenticationPreferences_fieldAccessorTable = new

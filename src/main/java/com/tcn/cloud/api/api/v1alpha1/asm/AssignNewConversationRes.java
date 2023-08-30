@@ -39,6 +39,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.asm.AssignNewConversationRes.class, com.tcn.cloud.api.api.v1alpha1.asm.AssignNewConversationRes.Builder.class);
   }
 
+  private int bitField0_;
   public static final int CONVERSATION_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.api.v1alpha1.asm.Conversation conversation_;
   /**
@@ -47,7 +48,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasConversation() {
-    return conversation_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <code>.api.v1alpha1.asm.Conversation conversation = 1 [json_name = "conversation"];</code>
@@ -126,7 +127,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (conversation_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(1, getConversation());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(referenceId_)) {
@@ -141,7 +142,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (conversation_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getConversation());
     }
@@ -306,13 +307,19 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.asm.AssignNewConversationRes.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getConversationFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -357,14 +364,17 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.asm.AssignNewConversationRes result) {
       int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.conversation_ = conversationBuilder_ == null
             ? conversation_
             : conversationBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.referenceId_ = referenceId_;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -540,8 +550,10 @@ private static final long serialVersionUID = 0L;
       } else {
         conversationBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+      if (conversation_ != null) {
+        bitField0_ |= 0x00000001;
+        onChanged();
+      }
       return this;
     }
     /**

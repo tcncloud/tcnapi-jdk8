@@ -21,7 +21,6 @@ private static final long serialVersionUID = 0L;
   }
   private ContactFieldDescription() {
     fieldName_ = "";
-    displayFormatString_ = "";
   }
 
   @java.lang.Override
@@ -106,68 +105,6 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int IS_PHONE_FIELD_NUMBER = 3;
-  private boolean isPhone_ = false;
-  /**
-   * <pre>
-   * Whether this field holds a phone number.
-   * </pre>
-   *
-   * <code>bool is_phone = 3 [json_name = "isPhone"];</code>
-   * @return The isPhone.
-   */
-  @java.lang.Override
-  public boolean getIsPhone() {
-    return isPhone_;
-  }
-
-  public static final int DISPLAY_FORMAT_STRING_FIELD_NUMBER = 4;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object displayFormatString_ = "";
-  /**
-   * <pre>
-   * Special formatting.
-   * </pre>
-   *
-   * <code>string display_format_string = 4 [json_name = "displayFormatString"];</code>
-   * @return The displayFormatString.
-   */
-  @java.lang.Override
-  public java.lang.String getDisplayFormatString() {
-    java.lang.Object ref = displayFormatString_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      displayFormatString_ = s;
-      return s;
-    }
-  }
-  /**
-   * <pre>
-   * Special formatting.
-   * </pre>
-   *
-   * <code>string display_format_string = 4 [json_name = "displayFormatString"];</code>
-   * @return The bytes for displayFormatString.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getDisplayFormatStringBytes() {
-    java.lang.Object ref = displayFormatString_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      displayFormatString_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -188,12 +125,6 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fieldName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, fieldName_);
     }
-    if (isPhone_ != false) {
-      output.writeBool(3, isPhone_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(displayFormatString_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, displayFormatString_);
-    }
     getUnknownFields().writeTo(output);
   }
 
@@ -209,13 +140,6 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fieldName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, fieldName_);
-    }
-    if (isPhone_ != false) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(3, isPhone_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(displayFormatString_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, displayFormatString_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -236,10 +160,6 @@ private static final long serialVersionUID = 0L;
         != other.getId()) return false;
     if (!getFieldName()
         .equals(other.getFieldName())) return false;
-    if (getIsPhone()
-        != other.getIsPhone()) return false;
-    if (!getDisplayFormatString()
-        .equals(other.getDisplayFormatString())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -256,11 +176,6 @@ private static final long serialVersionUID = 0L;
         getId());
     hash = (37 * hash) + FIELD_NAME_FIELD_NUMBER;
     hash = (53 * hash) + getFieldName().hashCode();
-    hash = (37 * hash) + IS_PHONE_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-        getIsPhone());
-    hash = (37 * hash) + DISPLAY_FORMAT_STRING_FIELD_NUMBER;
-    hash = (53 * hash) + getDisplayFormatString().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -398,8 +313,6 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       id_ = 0L;
       fieldName_ = "";
-      isPhone_ = false;
-      displayFormatString_ = "";
       return this;
     }
 
@@ -438,12 +351,6 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.fieldName_ = fieldName_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.isPhone_ = isPhone_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.displayFormatString_ = displayFormatString_;
       }
     }
 
@@ -499,14 +406,6 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000002;
         onChanged();
       }
-      if (other.getIsPhone() != false) {
-        setIsPhone(other.getIsPhone());
-      }
-      if (!other.getDisplayFormatString().isEmpty()) {
-        displayFormatString_ = other.displayFormatString_;
-        bitField0_ |= 0x00000008;
-        onChanged();
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -543,16 +442,6 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 18
-            case 24: {
-              isPhone_ = input.readBool();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 24
-            case 34: {
-              displayFormatString_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 34
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -702,142 +591,6 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       fieldName_ = value;
       bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-
-    private boolean isPhone_ ;
-    /**
-     * <pre>
-     * Whether this field holds a phone number.
-     * </pre>
-     *
-     * <code>bool is_phone = 3 [json_name = "isPhone"];</code>
-     * @return The isPhone.
-     */
-    @java.lang.Override
-    public boolean getIsPhone() {
-      return isPhone_;
-    }
-    /**
-     * <pre>
-     * Whether this field holds a phone number.
-     * </pre>
-     *
-     * <code>bool is_phone = 3 [json_name = "isPhone"];</code>
-     * @param value The isPhone to set.
-     * @return This builder for chaining.
-     */
-    public Builder setIsPhone(boolean value) {
-
-      isPhone_ = value;
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Whether this field holds a phone number.
-     * </pre>
-     *
-     * <code>bool is_phone = 3 [json_name = "isPhone"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearIsPhone() {
-      bitField0_ = (bitField0_ & ~0x00000004);
-      isPhone_ = false;
-      onChanged();
-      return this;
-    }
-
-    private java.lang.Object displayFormatString_ = "";
-    /**
-     * <pre>
-     * Special formatting.
-     * </pre>
-     *
-     * <code>string display_format_string = 4 [json_name = "displayFormatString"];</code>
-     * @return The displayFormatString.
-     */
-    public java.lang.String getDisplayFormatString() {
-      java.lang.Object ref = displayFormatString_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        displayFormatString_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <pre>
-     * Special formatting.
-     * </pre>
-     *
-     * <code>string display_format_string = 4 [json_name = "displayFormatString"];</code>
-     * @return The bytes for displayFormatString.
-     */
-    public com.google.protobuf.ByteString
-        getDisplayFormatStringBytes() {
-      java.lang.Object ref = displayFormatString_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        displayFormatString_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <pre>
-     * Special formatting.
-     * </pre>
-     *
-     * <code>string display_format_string = 4 [json_name = "displayFormatString"];</code>
-     * @param value The displayFormatString to set.
-     * @return This builder for chaining.
-     */
-    public Builder setDisplayFormatString(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      displayFormatString_ = value;
-      bitField0_ |= 0x00000008;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Special formatting.
-     * </pre>
-     *
-     * <code>string display_format_string = 4 [json_name = "displayFormatString"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearDisplayFormatString() {
-      displayFormatString_ = getDefaultInstance().getDisplayFormatString();
-      bitField0_ = (bitField0_ & ~0x00000008);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Special formatting.
-     * </pre>
-     *
-     * <code>string display_format_string = 4 [json_name = "displayFormatString"];</code>
-     * @param value The bytes for displayFormatString to set.
-     * @return This builder for chaining.
-     */
-    public Builder setDisplayFormatStringBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      displayFormatString_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }

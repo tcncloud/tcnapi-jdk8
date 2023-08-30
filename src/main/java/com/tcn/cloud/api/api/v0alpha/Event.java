@@ -39,6 +39,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.Event.class, com.tcn.cloud.api.api.v0alpha.Event.Builder.class);
   }
 
+  private int bitField0_;
   public static final int EVENT_ID_FIELD_NUMBER = 3;
   private long eventId_ = 0L;
   /**
@@ -66,7 +67,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasParentId() {
-    return parentId_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -104,7 +105,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasInputIds() {
-    return inputIds_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <pre>
@@ -177,7 +178,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasProcess() {
-    return process_ != null;
+    return ((bitField0_ & 0x00000004) != 0);
   }
   /**
    * <code>.api.v0alpha.Process process = 9 [json_name = "process"];</code>
@@ -207,7 +208,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasUploadTs() {
-    return uploadTs_ != null;
+    return ((bitField0_ & 0x00000008) != 0);
   }
   /**
    * <pre>
@@ -245,7 +246,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasStartedTs() {
-    return startedTs_ != null;
+    return ((bitField0_ & 0x00000010) != 0);
   }
   /**
    * <pre>
@@ -283,7 +284,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasFinishedTs() {
-    return finishedTs_ != null;
+    return ((bitField0_ & 0x00000020) != 0);
   }
   /**
    * <pre>
@@ -321,7 +322,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasBackoffTill() {
-    return backoffTill_ != null;
+    return ((bitField0_ & 0x00000040) != 0);
   }
   /**
    * <pre>
@@ -375,7 +376,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasLatestHistory() {
-    return latestHistory_ != null;
+    return ((bitField0_ & 0x00000080) != 0);
   }
   /**
    * <pre>
@@ -420,34 +421,34 @@ private static final long serialVersionUID = 0L;
     if (eventId_ != 0L) {
       output.writeInt64(3, eventId_);
     }
-    if (parentId_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(5, getParentId());
     }
-    if (inputIds_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(6, getInputIds());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(elementId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 7, elementId_);
     }
-    if (process_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       output.writeMessage(9, getProcess());
     }
-    if (uploadTs_ != null) {
+    if (((bitField0_ & 0x00000008) != 0)) {
       output.writeMessage(10, getUploadTs());
     }
-    if (startedTs_ != null) {
+    if (((bitField0_ & 0x00000010) != 0)) {
       output.writeMessage(11, getStartedTs());
     }
-    if (finishedTs_ != null) {
+    if (((bitField0_ & 0x00000020) != 0)) {
       output.writeMessage(12, getFinishedTs());
     }
-    if (backoffTill_ != null) {
+    if (((bitField0_ & 0x00000040) != 0)) {
       output.writeMessage(13, getBackoffTill());
     }
     if (attempts_ != 0) {
       output.writeInt32(14, attempts_);
     }
-    if (latestHistory_ != null) {
+    if (((bitField0_ & 0x00000080) != 0)) {
       output.writeMessage(15, getLatestHistory());
     }
     getUnknownFields().writeTo(output);
@@ -463,34 +464,34 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(3, eventId_);
     }
-    if (parentId_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getParentId());
     }
-    if (inputIds_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, getInputIds());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(elementId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, elementId_);
     }
-    if (process_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(9, getProcess());
     }
-    if (uploadTs_ != null) {
+    if (((bitField0_ & 0x00000008) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(10, getUploadTs());
     }
-    if (startedTs_ != null) {
+    if (((bitField0_ & 0x00000010) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(11, getStartedTs());
     }
-    if (finishedTs_ != null) {
+    if (((bitField0_ & 0x00000020) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(12, getFinishedTs());
     }
-    if (backoffTill_ != null) {
+    if (((bitField0_ & 0x00000040) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(13, getBackoffTill());
     }
@@ -498,7 +499,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(14, attempts_);
     }
-    if (latestHistory_ != null) {
+    if (((bitField0_ & 0x00000080) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(15, getLatestHistory());
     }
@@ -732,13 +733,26 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.Event.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getParentIdFieldBuilder();
+        getInputIdsFieldBuilder();
+        getProcessFieldBuilder();
+        getUploadTsFieldBuilder();
+        getStartedTsFieldBuilder();
+        getFinishedTsFieldBuilder();
+        getBackoffTillFieldBuilder();
+        getLatestHistoryFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -823,15 +837,18 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.eventId_ = eventId_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.parentId_ = parentIdBuilder_ == null
             ? parentId_
             : parentIdBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.inputIds_ = inputIdsBuilder_ == null
             ? inputIds_
             : inputIdsBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.elementId_ = elementId_;
@@ -840,26 +857,31 @@ private static final long serialVersionUID = 0L;
         result.process_ = processBuilder_ == null
             ? process_
             : processBuilder_.build();
+        to_bitField0_ |= 0x00000004;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.uploadTs_ = uploadTsBuilder_ == null
             ? uploadTs_
             : uploadTsBuilder_.build();
+        to_bitField0_ |= 0x00000008;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.startedTs_ = startedTsBuilder_ == null
             ? startedTs_
             : startedTsBuilder_.build();
+        to_bitField0_ |= 0x00000010;
       }
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.finishedTs_ = finishedTsBuilder_ == null
             ? finishedTs_
             : finishedTsBuilder_.build();
+        to_bitField0_ |= 0x00000020;
       }
       if (((from_bitField0_ & 0x00000100) != 0)) {
         result.backoffTill_ = backoffTillBuilder_ == null
             ? backoffTill_
             : backoffTillBuilder_.build();
+        to_bitField0_ |= 0x00000040;
       }
       if (((from_bitField0_ & 0x00000200) != 0)) {
         result.attempts_ = attempts_;
@@ -868,7 +890,9 @@ private static final long serialVersionUID = 0L;
         result.latestHistory_ = latestHistoryBuilder_ == null
             ? latestHistory_
             : latestHistoryBuilder_.build();
+        to_bitField0_ |= 0x00000080;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1194,8 +1218,10 @@ private static final long serialVersionUID = 0L;
       } else {
         parentIdBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+      if (parentId_ != null) {
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1349,8 +1375,10 @@ private static final long serialVersionUID = 0L;
       } else {
         inputIdsBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+      if (inputIds_ != null) {
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1556,8 +1584,10 @@ private static final long serialVersionUID = 0L;
       } else {
         processBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
+      if (process_ != null) {
+        bitField0_ |= 0x00000010;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1695,8 +1725,10 @@ private static final long serialVersionUID = 0L;
       } else {
         uploadTsBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000020;
-      onChanged();
+      if (uploadTs_ != null) {
+        bitField0_ |= 0x00000020;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1850,8 +1882,10 @@ private static final long serialVersionUID = 0L;
       } else {
         startedTsBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000040;
-      onChanged();
+      if (startedTs_ != null) {
+        bitField0_ |= 0x00000040;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -2005,8 +2039,10 @@ private static final long serialVersionUID = 0L;
       } else {
         finishedTsBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000080;
-      onChanged();
+      if (finishedTs_ != null) {
+        bitField0_ |= 0x00000080;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -2160,8 +2196,10 @@ private static final long serialVersionUID = 0L;
       } else {
         backoffTillBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000100;
-      onChanged();
+      if (backoffTill_ != null) {
+        bitField0_ |= 0x00000100;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -2364,8 +2402,10 @@ private static final long serialVersionUID = 0L;
       } else {
         latestHistoryBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000400;
-      onChanged();
+      if (latestHistory_ != null) {
+        bitField0_ |= 0x00000400;
+        onChanged();
+      }
       return this;
     }
     /**

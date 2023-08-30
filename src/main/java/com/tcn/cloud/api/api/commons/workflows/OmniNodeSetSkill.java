@@ -4,10 +4,6 @@
 package com.tcn.cloud.api.api.commons.workflows;
 
 /**
- * <pre>
- * OmniNodeSetSkill adds the given string as a skill on the coversation
- * </pre>
- *
  * Protobuf type {@code api.commons.workflows.OmniNodeSetSkill}
  */
 public final class OmniNodeSetSkill extends
@@ -21,8 +17,6 @@ private static final long serialVersionUID = 0L;
   }
   private OmniNodeSetSkill() {
     skill_ = "";
-    skills_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   @java.lang.Override
@@ -49,17 +43,11 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object skill_ = "";
   /**
-   * <pre>
-   * a single skill to add to the conversation (deprecated)
-   * </pre>
-   *
-   * <code>string skill = 1 [json_name = "skill", deprecated = true];</code>
-   * @deprecated api.commons.workflows.OmniNodeSetSkill.skill is deprecated.
-   *     See api/commons/workflows/omni.proto;l=39
+   * <code>string skill = 1 [json_name = "skill"];</code>
    * @return The skill.
    */
   @java.lang.Override
-  @java.lang.Deprecated public java.lang.String getSkill() {
+  public java.lang.String getSkill() {
     java.lang.Object ref = skill_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -72,17 +60,11 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   * a single skill to add to the conversation (deprecated)
-   * </pre>
-   *
-   * <code>string skill = 1 [json_name = "skill", deprecated = true];</code>
-   * @deprecated api.commons.workflows.OmniNodeSetSkill.skill is deprecated.
-   *     See api/commons/workflows/omni.proto;l=39
+   * <code>string skill = 1 [json_name = "skill"];</code>
    * @return The bytes for skill.
    */
   @java.lang.Override
-  @java.lang.Deprecated public com.google.protobuf.ByteString
+  public com.google.protobuf.ByteString
       getSkillBytes() {
     java.lang.Object ref = skill_;
     if (ref instanceof java.lang.String) {
@@ -94,59 +76,6 @@ private static final long serialVersionUID = 0L;
     } else {
       return (com.google.protobuf.ByteString) ref;
     }
-  }
-
-  public static final int SKILLS_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringArrayList skills_ =
-      com.google.protobuf.LazyStringArrayList.emptyList();
-  /**
-   * <pre>
-   * list of skills to add to the conversation
-   * </pre>
-   *
-   * <code>repeated string skills = 2 [json_name = "skills"];</code>
-   * @return A list containing the skills.
-   */
-  public com.google.protobuf.ProtocolStringList
-      getSkillsList() {
-    return skills_;
-  }
-  /**
-   * <pre>
-   * list of skills to add to the conversation
-   * </pre>
-   *
-   * <code>repeated string skills = 2 [json_name = "skills"];</code>
-   * @return The count of skills.
-   */
-  public int getSkillsCount() {
-    return skills_.size();
-  }
-  /**
-   * <pre>
-   * list of skills to add to the conversation
-   * </pre>
-   *
-   * <code>repeated string skills = 2 [json_name = "skills"];</code>
-   * @param index The index of the element to return.
-   * @return The skills at the given index.
-   */
-  public java.lang.String getSkills(int index) {
-    return skills_.get(index);
-  }
-  /**
-   * <pre>
-   * list of skills to add to the conversation
-   * </pre>
-   *
-   * <code>repeated string skills = 2 [json_name = "skills"];</code>
-   * @param index The index of the value to return.
-   * @return The bytes of the skills at the given index.
-   */
-  public com.google.protobuf.ByteString
-      getSkillsBytes(int index) {
-    return skills_.getByteString(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -166,9 +95,6 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(skill_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, skill_);
     }
-    for (int i = 0; i < skills_.size(); i++) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, skills_.getRaw(i));
-    }
     getUnknownFields().writeTo(output);
   }
 
@@ -180,14 +106,6 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(skill_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, skill_);
-    }
-    {
-      int dataSize = 0;
-      for (int i = 0; i < skills_.size(); i++) {
-        dataSize += computeStringSizeNoTag(skills_.getRaw(i));
-      }
-      size += dataSize;
-      size += 1 * getSkillsList().size();
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -206,8 +124,6 @@ private static final long serialVersionUID = 0L;
 
     if (!getSkill()
         .equals(other.getSkill())) return false;
-    if (!getSkillsList()
-        .equals(other.getSkillsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -221,10 +137,6 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + SKILL_FIELD_NUMBER;
     hash = (53 * hash) + getSkill().hashCode();
-    if (getSkillsCount() > 0) {
-      hash = (37 * hash) + SKILLS_FIELD_NUMBER;
-      hash = (53 * hash) + getSkillsList().hashCode();
-    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -323,10 +235,6 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * <pre>
-   * OmniNodeSetSkill adds the given string as a skill on the coversation
-   * </pre>
-   *
    * Protobuf type {@code api.commons.workflows.OmniNodeSetSkill}
    */
   public static final class Builder extends
@@ -361,8 +269,6 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       skill_ = "";
-      skills_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
     }
 
@@ -398,10 +304,6 @@ private static final long serialVersionUID = 0L;
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.skill_ = skill_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        skills_.makeImmutable();
-        result.skills_ = skills_;
       }
     }
 
@@ -454,16 +356,6 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000001;
         onChanged();
       }
-      if (!other.skills_.isEmpty()) {
-        if (skills_.isEmpty()) {
-          skills_ = other.skills_;
-          bitField0_ |= 0x00000002;
-        } else {
-          ensureSkillsIsMutable();
-          skills_.addAll(other.skills_);
-        }
-        onChanged();
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -495,12 +387,6 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 10
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-              ensureSkillsIsMutable();
-              skills_.add(s);
-              break;
-            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -520,16 +406,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object skill_ = "";
     /**
-     * <pre>
-     * a single skill to add to the conversation (deprecated)
-     * </pre>
-     *
-     * <code>string skill = 1 [json_name = "skill", deprecated = true];</code>
-     * @deprecated api.commons.workflows.OmniNodeSetSkill.skill is deprecated.
-     *     See api/commons/workflows/omni.proto;l=39
+     * <code>string skill = 1 [json_name = "skill"];</code>
      * @return The skill.
      */
-    @java.lang.Deprecated public java.lang.String getSkill() {
+    public java.lang.String getSkill() {
       java.lang.Object ref = skill_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -542,16 +422,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * a single skill to add to the conversation (deprecated)
-     * </pre>
-     *
-     * <code>string skill = 1 [json_name = "skill", deprecated = true];</code>
-     * @deprecated api.commons.workflows.OmniNodeSetSkill.skill is deprecated.
-     *     See api/commons/workflows/omni.proto;l=39
+     * <code>string skill = 1 [json_name = "skill"];</code>
      * @return The bytes for skill.
      */
-    @java.lang.Deprecated public com.google.protobuf.ByteString
+    public com.google.protobuf.ByteString
         getSkillBytes() {
       java.lang.Object ref = skill_;
       if (ref instanceof String) {
@@ -565,17 +439,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * a single skill to add to the conversation (deprecated)
-     * </pre>
-     *
-     * <code>string skill = 1 [json_name = "skill", deprecated = true];</code>
-     * @deprecated api.commons.workflows.OmniNodeSetSkill.skill is deprecated.
-     *     See api/commons/workflows/omni.proto;l=39
+     * <code>string skill = 1 [json_name = "skill"];</code>
      * @param value The skill to set.
      * @return This builder for chaining.
      */
-    @java.lang.Deprecated public Builder setSkill(
+    public Builder setSkill(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       skill_ = value;
@@ -584,185 +452,26 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * a single skill to add to the conversation (deprecated)
-     * </pre>
-     *
-     * <code>string skill = 1 [json_name = "skill", deprecated = true];</code>
-     * @deprecated api.commons.workflows.OmniNodeSetSkill.skill is deprecated.
-     *     See api/commons/workflows/omni.proto;l=39
+     * <code>string skill = 1 [json_name = "skill"];</code>
      * @return This builder for chaining.
      */
-    @java.lang.Deprecated public Builder clearSkill() {
+    public Builder clearSkill() {
       skill_ = getDefaultInstance().getSkill();
       bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
     /**
-     * <pre>
-     * a single skill to add to the conversation (deprecated)
-     * </pre>
-     *
-     * <code>string skill = 1 [json_name = "skill", deprecated = true];</code>
-     * @deprecated api.commons.workflows.OmniNodeSetSkill.skill is deprecated.
-     *     See api/commons/workflows/omni.proto;l=39
+     * <code>string skill = 1 [json_name = "skill"];</code>
      * @param value The bytes for skill to set.
      * @return This builder for chaining.
      */
-    @java.lang.Deprecated public Builder setSkillBytes(
+    public Builder setSkillBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       skill_ = value;
       bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-
-    private com.google.protobuf.LazyStringArrayList skills_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-    private void ensureSkillsIsMutable() {
-      if (!skills_.isModifiable()) {
-        skills_ = new com.google.protobuf.LazyStringArrayList(skills_);
-      }
-      bitField0_ |= 0x00000002;
-    }
-    /**
-     * <pre>
-     * list of skills to add to the conversation
-     * </pre>
-     *
-     * <code>repeated string skills = 2 [json_name = "skills"];</code>
-     * @return A list containing the skills.
-     */
-    public com.google.protobuf.ProtocolStringList
-        getSkillsList() {
-      skills_.makeImmutable();
-      return skills_;
-    }
-    /**
-     * <pre>
-     * list of skills to add to the conversation
-     * </pre>
-     *
-     * <code>repeated string skills = 2 [json_name = "skills"];</code>
-     * @return The count of skills.
-     */
-    public int getSkillsCount() {
-      return skills_.size();
-    }
-    /**
-     * <pre>
-     * list of skills to add to the conversation
-     * </pre>
-     *
-     * <code>repeated string skills = 2 [json_name = "skills"];</code>
-     * @param index The index of the element to return.
-     * @return The skills at the given index.
-     */
-    public java.lang.String getSkills(int index) {
-      return skills_.get(index);
-    }
-    /**
-     * <pre>
-     * list of skills to add to the conversation
-     * </pre>
-     *
-     * <code>repeated string skills = 2 [json_name = "skills"];</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the skills at the given index.
-     */
-    public com.google.protobuf.ByteString
-        getSkillsBytes(int index) {
-      return skills_.getByteString(index);
-    }
-    /**
-     * <pre>
-     * list of skills to add to the conversation
-     * </pre>
-     *
-     * <code>repeated string skills = 2 [json_name = "skills"];</code>
-     * @param index The index to set the value at.
-     * @param value The skills to set.
-     * @return This builder for chaining.
-     */
-    public Builder setSkills(
-        int index, java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureSkillsIsMutable();
-      skills_.set(index, value);
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * list of skills to add to the conversation
-     * </pre>
-     *
-     * <code>repeated string skills = 2 [json_name = "skills"];</code>
-     * @param value The skills to add.
-     * @return This builder for chaining.
-     */
-    public Builder addSkills(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureSkillsIsMutable();
-      skills_.add(value);
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * list of skills to add to the conversation
-     * </pre>
-     *
-     * <code>repeated string skills = 2 [json_name = "skills"];</code>
-     * @param values The skills to add.
-     * @return This builder for chaining.
-     */
-    public Builder addAllSkills(
-        java.lang.Iterable<java.lang.String> values) {
-      ensureSkillsIsMutable();
-      com.google.protobuf.AbstractMessageLite.Builder.addAll(
-          values, skills_);
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * list of skills to add to the conversation
-     * </pre>
-     *
-     * <code>repeated string skills = 2 [json_name = "skills"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearSkills() {
-      skills_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000002);;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * list of skills to add to the conversation
-     * </pre>
-     *
-     * <code>repeated string skills = 2 [json_name = "skills"];</code>
-     * @param value The bytes of the skills to add.
-     * @return This builder for chaining.
-     */
-    public Builder addSkillsBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      ensureSkillsIsMutable();
-      skills_.add(value);
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }

@@ -38,6 +38,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.ActivityLog.class, com.tcn.cloud.api.api.v0alpha.ActivityLog.Builder.class);
   }
 
+  private int bitField0_;
   public static final int USER_NAME_FIELD_NUMBER = 1;
   private com.google.protobuf.StringValue userName_;
   /**
@@ -46,7 +47,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasUserName() {
-    return userName_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <code>.google.protobuf.StringValue user_name = 1 [json_name = "userName"];</code>
@@ -72,7 +73,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasOriginationIp() {
-    return originationIp_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <code>.google.protobuf.StringValue origination_ip = 2 [json_name = "originationIp"];</code>
@@ -98,7 +99,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasActionDate() {
-    return actionDate_ != null;
+    return ((bitField0_ & 0x00000004) != 0);
   }
   /**
    * <code>.google.protobuf.StringValue action_date = 3 [json_name = "actionDate"];</code>
@@ -124,7 +125,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAction() {
-    return action_ != null;
+    return ((bitField0_ & 0x00000008) != 0);
   }
   /**
    * <code>.google.protobuf.StringValue action = 4 [json_name = "action"];</code>
@@ -150,7 +151,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasNotes() {
-    return notes_ != null;
+    return ((bitField0_ & 0x00000010) != 0);
   }
   /**
    * <code>.google.protobuf.StringValue notes = 5 [json_name = "notes"];</code>
@@ -182,19 +183,19 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (userName_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(1, getUserName());
     }
-    if (originationIp_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(2, getOriginationIp());
     }
-    if (actionDate_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       output.writeMessage(3, getActionDate());
     }
-    if (action_ != null) {
+    if (((bitField0_ & 0x00000008) != 0)) {
       output.writeMessage(4, getAction());
     }
-    if (notes_ != null) {
+    if (((bitField0_ & 0x00000010) != 0)) {
       output.writeMessage(5, getNotes());
     }
     getUnknownFields().writeTo(output);
@@ -206,23 +207,23 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (userName_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getUserName());
     }
-    if (originationIp_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getOriginationIp());
     }
-    if (actionDate_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getActionDate());
     }
-    if (action_ != null) {
+    if (((bitField0_ & 0x00000008) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getAction());
     }
-    if (notes_ != null) {
+    if (((bitField0_ & 0x00000010) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getNotes());
     }
@@ -416,13 +417,23 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.ActivityLog.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getUserNameFieldBuilder();
+        getOriginationIpFieldBuilder();
+        getActionDateFieldBuilder();
+        getActionFieldBuilder();
+        getNotesFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -486,31 +497,38 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v0alpha.ActivityLog result) {
       int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.userName_ = userNameBuilder_ == null
             ? userName_
             : userNameBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.originationIp_ = originationIpBuilder_ == null
             ? originationIp_
             : originationIpBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.actionDate_ = actionDateBuilder_ == null
             ? actionDate_
             : actionDateBuilder_.build();
+        to_bitField0_ |= 0x00000004;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.action_ = actionBuilder_ == null
             ? action_
             : actionBuilder_.build();
+        to_bitField0_ |= 0x00000008;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.notes_ = notesBuilder_ == null
             ? notes_
             : notesBuilder_.build();
+        to_bitField0_ |= 0x00000010;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -716,8 +734,10 @@ private static final long serialVersionUID = 0L;
       } else {
         userNameBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+      if (userName_ != null) {
+        bitField0_ |= 0x00000001;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -835,8 +855,10 @@ private static final long serialVersionUID = 0L;
       } else {
         originationIpBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+      if (originationIp_ != null) {
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -954,8 +976,10 @@ private static final long serialVersionUID = 0L;
       } else {
         actionDateBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+      if (actionDate_ != null) {
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1073,8 +1097,10 @@ private static final long serialVersionUID = 0L;
       } else {
         actionBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+      if (action_ != null) {
+        bitField0_ |= 0x00000008;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1192,8 +1218,10 @@ private static final long serialVersionUID = 0L;
       } else {
         notesBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
+      if (notes_ != null) {
+        bitField0_ |= 0x00000010;
+        onChanged();
+      }
       return this;
     }
     /**

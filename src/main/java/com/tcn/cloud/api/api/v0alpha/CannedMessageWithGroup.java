@@ -50,6 +50,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.CannedMessageWithGroup.class, com.tcn.cloud.api.api.v0alpha.CannedMessageWithGroup.Builder.class);
   }
 
+  private int bitField0_;
   public static final int CANNED_MESSAGE_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object cannedMessageId_ = "";
@@ -250,7 +251,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasDateCreated() {
-    return dateCreated_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -288,7 +289,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasLastUpdated() {
-    return lastUpdated_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <pre>
@@ -467,7 +468,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasGroupDateCreated() {
-    return groupDateCreated_ != null;
+    return ((bitField0_ & 0x00000004) != 0);
   }
   /**
    * <pre>
@@ -505,7 +506,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasGroupLastUpdated() {
-    return groupLastUpdated_ != null;
+    return ((bitField0_ & 0x00000008) != 0);
   }
   /**
    * <pre>
@@ -633,10 +634,10 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(messageBody_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, messageBody_);
     }
-    if (dateCreated_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(5, getDateCreated());
     }
-    if (lastUpdated_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(6, getLastUpdated());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cannedMessageGroupId_)) {
@@ -648,10 +649,10 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(groupDescription_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 9, groupDescription_);
     }
-    if (groupDateCreated_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       output.writeMessage(10, getGroupDateCreated());
     }
-    if (groupLastUpdated_ != null) {
+    if (((bitField0_ & 0x00000008) != 0)) {
       output.writeMessage(11, getGroupLastUpdated());
     }
     if (allowsHtml_ != false) {
@@ -681,11 +682,11 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(messageBody_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, messageBody_);
     }
-    if (dateCreated_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getDateCreated());
     }
-    if (lastUpdated_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, getLastUpdated());
     }
@@ -698,11 +699,11 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(groupDescription_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, groupDescription_);
     }
-    if (groupDateCreated_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(10, getGroupDateCreated());
     }
-    if (groupLastUpdated_ != null) {
+    if (((bitField0_ & 0x00000008) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(11, getGroupLastUpdated());
     }
@@ -938,13 +939,23 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.CannedMessageWithGroup.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getDateCreatedFieldBuilder();
+        getLastUpdatedFieldBuilder();
+        getGroupDateCreatedFieldBuilder();
+        getGroupLastUpdatedFieldBuilder();
+        getAttachmentsFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -1043,15 +1054,18 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.messageBody_ = messageBody_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.dateCreated_ = dateCreatedBuilder_ == null
             ? dateCreated_
             : dateCreatedBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.lastUpdated_ = lastUpdatedBuilder_ == null
             ? lastUpdated_
             : lastUpdatedBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.cannedMessageGroupId_ = cannedMessageGroupId_;
@@ -1066,15 +1080,18 @@ private static final long serialVersionUID = 0L;
         result.groupDateCreated_ = groupDateCreatedBuilder_ == null
             ? groupDateCreated_
             : groupDateCreatedBuilder_.build();
+        to_bitField0_ |= 0x00000004;
       }
       if (((from_bitField0_ & 0x00000400) != 0)) {
         result.groupLastUpdated_ = groupLastUpdatedBuilder_ == null
             ? groupLastUpdated_
             : groupLastUpdatedBuilder_.build();
+        to_bitField0_ |= 0x00000008;
       }
       if (((from_bitField0_ & 0x00000800) != 0)) {
         result.allowsHtml_ = allowsHtml_;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1775,8 +1792,10 @@ private static final long serialVersionUID = 0L;
       } else {
         dateCreatedBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
+      if (dateCreated_ != null) {
+        bitField0_ |= 0x00000010;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1930,8 +1949,10 @@ private static final long serialVersionUID = 0L;
       } else {
         lastUpdatedBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000020;
-      onChanged();
+      if (lastUpdated_ != null) {
+        bitField0_ |= 0x00000020;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -2361,8 +2382,10 @@ private static final long serialVersionUID = 0L;
       } else {
         groupDateCreatedBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000200;
-      onChanged();
+      if (groupDateCreated_ != null) {
+        bitField0_ |= 0x00000200;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -2516,8 +2539,10 @@ private static final long serialVersionUID = 0L;
       } else {
         groupLastUpdatedBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000400;
-      onChanged();
+      if (groupLastUpdated_ != null) {
+        bitField0_ |= 0x00000400;
+        onChanged();
+      }
       return this;
     }
     /**

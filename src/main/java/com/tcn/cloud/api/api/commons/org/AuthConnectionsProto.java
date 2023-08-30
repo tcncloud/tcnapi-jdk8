@@ -60,13 +60,12 @@ public final class AuthConnectionsProto {
       "gentProfileGroupId\0223\n\026p3_permission_grou" +
       "p_id\030\004 \001(\tR\023p3PermissionGroupId\0220\n\024permi" +
       "ssion_group_ids\030\005 \003(\tR\022permissionGroupId" +
-      "s*_\n\016ConnectionType\022\030\n\024CONNECTION_TYPE_N" +
-      "ONE\020\000\022\030\n\024CONNECTION_TYPE_OIDC\020\001\022\031\n\025CONNE" +
-      "CTION_TYPE_AZURE\020\002B\227\001\n!com.tcn.cloud.api" +
-      ".api.commons.orgB\024AuthConnectionsProtoP\001" +
-      "\242\002\003ACO\252\002\017Api.Commons.Org\312\002\017Api\\Commons\\O" +
-      "rg\342\002\033Api\\Commons\\Org\\GPBMetadata\352\002\021Api::" +
-      "Commons::Orgb\006proto3"
+      "s*D\n\016ConnectionType\022\030\n\024CONNECTION_TYPE_N" +
+      "ONE\020\000\022\030\n\024CONNECTION_TYPE_OIDC\020\001B\227\001\n!com." +
+      "tcn.cloud.api.api.commons.orgB\024AuthConne" +
+      "ctionsProtoP\001\242\002\003ACO\252\002\017Api.Commons.Org\312\002\017" +
+      "Api\\Commons\\Org\342\002\033Api\\Commons\\Org\\GPBMet" +
+      "adata\352\002\021Api::Commons::Orgb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

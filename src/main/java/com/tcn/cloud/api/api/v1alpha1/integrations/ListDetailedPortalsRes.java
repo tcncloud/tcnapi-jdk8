@@ -133,6 +133,7 @@ private static final long serialVersionUID = 0L;
               com.tcn.cloud.api.api.v1alpha1.integrations.ListDetailedPortalsRes.Entity.class, com.tcn.cloud.api.api.v1alpha1.integrations.ListDetailedPortalsRes.Entity.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PORTAL_FIELD_NUMBER = 1;
     private com.tcn.cloud.api.api.v1alpha1.integrations.Portal portal_;
     /**
@@ -141,7 +142,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasPortal() {
-      return portal_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.api.v1alpha1.integrations.Portal portal = 1 [json_name = "portal"];</code>
@@ -167,7 +168,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasPortalConfig() {
-      return portalConfig_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.api.v1alpha1.integrations.PortalConfig portal_config = 2 [json_name = "portalConfig"];</code>
@@ -240,10 +241,10 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (portal_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getPortal());
       }
-      if (portalConfig_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(2, getPortalConfig());
       }
       for (int i = 0; i < pluginInstances_.size(); i++) {
@@ -258,11 +259,11 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
-      if (portal_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPortal());
       }
-      if (portalConfig_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPortalConfig());
       }
@@ -439,13 +440,21 @@ private static final long serialVersionUID = 0L;
 
       // Construct using com.tcn.cloud.api.api.v1alpha1.integrations.ListDetailedPortalsRes.Entity.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPortalFieldBuilder();
+          getPortalConfigFieldBuilder();
+          getPluginInstancesFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -514,16 +523,20 @@ private static final long serialVersionUID = 0L;
 
       private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.integrations.ListDetailedPortalsRes.Entity result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.portal_ = portalBuilder_ == null
               ? portal_
               : portalBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.portalConfig_ = portalConfigBuilder_ == null
               ? portalConfig_
               : portalConfigBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -738,8 +751,10 @@ private static final long serialVersionUID = 0L;
         } else {
           portalBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (portal_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -857,8 +872,10 @@ private static final long serialVersionUID = 0L;
         } else {
           portalConfigBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (portalConfig_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**

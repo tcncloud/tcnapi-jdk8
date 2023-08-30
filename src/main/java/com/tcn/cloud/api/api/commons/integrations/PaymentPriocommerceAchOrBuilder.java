@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.commons.integrations;
 
-public interface ExecuteNewzwarePhoneLookupMultiOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.commons.integrations.ExecuteNewzwarePhoneLookupMulti)
+public interface PaymentPriocommerceAchOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.commons.integrations.PaymentPriocommerceAch)
     com.google.protobuf.MessageOrBuilder {
 }

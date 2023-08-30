@@ -46,6 +46,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.EpicEntrypoint.class, com.tcn.cloud.api.api.v0alpha.EpicEntrypoint.Builder.class);
   }
 
+  private int bitField0_;
   public static final int CRON_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
   private volatile java.lang.Object cron_ = "";
@@ -306,7 +307,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasRuntimeValues() {
-    return runtimeValues_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -424,7 +425,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(groupFhirId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 6, groupFhirId_);
     }
-    if (runtimeValues_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(7, getRuntimeValues());
     }
     if (flushPageCount_ != 0L) {
@@ -470,7 +471,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(groupFhirId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, groupFhirId_);
     }
-    if (runtimeValues_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, getRuntimeValues());
     }
@@ -682,13 +683,19 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.EpicEntrypoint.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getRuntimeValuesFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -762,10 +769,12 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.groupFhirId_ = groupFhirId_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.runtimeValues_ = runtimeValuesBuilder_ == null
             ? runtimeValues_
             : runtimeValuesBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.flushPageCount_ = flushPageCount_;
@@ -776,6 +785,7 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000100) != 0)) {
         result.flushDuringCheck_ = flushDuringCheck_;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1596,8 +1606,10 @@ private static final long serialVersionUID = 0L;
       } else {
         runtimeValuesBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000020;
-      onChanged();
+      if (runtimeValues_ != null) {
+        bitField0_ |= 0x00000020;
+        onChanged();
+      }
       return this;
     }
     /**

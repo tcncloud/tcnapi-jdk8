@@ -4,10 +4,6 @@
 package com.tcn.cloud.api.api.commons.workflows;
 
 /**
- * <pre>
- * OmniNodePrompt is the PoC all-in-one version to send a message (optionally displaying options) and store the user input
- * </pre>
- *
  * Protobuf type {@code api.commons.workflows.OmniNodePrompt}
  */
 public final class OmniNodePrompt extends
@@ -50,10 +46,6 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object prompt_ = "";
   /**
-   * <pre>
-   * the base message to send
-   * </pre>
-   *
    * <code>string prompt = 1 [json_name = "prompt"];</code>
    * @return The prompt.
    */
@@ -71,10 +63,6 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   * the base message to send
-   * </pre>
-   *
    * <code>string prompt = 1 [json_name = "prompt"];</code>
    * @return The bytes for prompt.
    */
@@ -97,10 +85,6 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object storeTo_ = "";
   /**
-   * <pre>
-   * the name (key in payload) under which to store the user input
-   * </pre>
-   *
    * <code>string store_to = 2 [json_name = "storeTo"];</code>
    * @return The storeTo.
    */
@@ -118,10 +102,6 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   * the name (key in payload) under which to store the user input
-   * </pre>
-   *
    * <code>string store_to = 2 [json_name = "storeTo"];</code>
    * @return The bytes for storeTo.
    */
@@ -145,10 +125,6 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.LazyStringArrayList options_ =
       com.google.protobuf.LazyStringArrayList.emptyList();
   /**
-   * <pre>
-   * a list of options to display along with the prompt
-   * </pre>
-   *
    * <code>repeated string options = 3 [json_name = "options"];</code>
    * @return A list containing the options.
    */
@@ -157,10 +133,6 @@ private static final long serialVersionUID = 0L;
     return options_;
   }
   /**
-   * <pre>
-   * a list of options to display along with the prompt
-   * </pre>
-   *
    * <code>repeated string options = 3 [json_name = "options"];</code>
    * @return The count of options.
    */
@@ -168,10 +140,6 @@ private static final long serialVersionUID = 0L;
     return options_.size();
   }
   /**
-   * <pre>
-   * a list of options to display along with the prompt
-   * </pre>
-   *
    * <code>repeated string options = 3 [json_name = "options"];</code>
    * @param index The index of the element to return.
    * @return The options at the given index.
@@ -180,10 +148,6 @@ private static final long serialVersionUID = 0L;
     return options_.get(index);
   }
   /**
-   * <pre>
-   * a list of options to display along with the prompt
-   * </pre>
-   *
    * <code>repeated string options = 3 [json_name = "options"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the options at the given index.
@@ -377,10 +341,6 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * <pre>
-   * OmniNodePrompt is the PoC all-in-one version to send a message (optionally displaying options) and store the user input
-   * </pre>
-   *
    * Protobuf type {@code api.commons.workflows.OmniNodePrompt}
    */
   public static final class Builder extends
@@ -588,10 +548,6 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object prompt_ = "";
     /**
-     * <pre>
-     * the base message to send
-     * </pre>
-     *
      * <code>string prompt = 1 [json_name = "prompt"];</code>
      * @return The prompt.
      */
@@ -608,10 +564,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * the base message to send
-     * </pre>
-     *
      * <code>string prompt = 1 [json_name = "prompt"];</code>
      * @return The bytes for prompt.
      */
@@ -629,10 +581,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * the base message to send
-     * </pre>
-     *
      * <code>string prompt = 1 [json_name = "prompt"];</code>
      * @param value The prompt to set.
      * @return This builder for chaining.
@@ -646,10 +594,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * the base message to send
-     * </pre>
-     *
      * <code>string prompt = 1 [json_name = "prompt"];</code>
      * @return This builder for chaining.
      */
@@ -660,10 +604,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * the base message to send
-     * </pre>
-     *
      * <code>string prompt = 1 [json_name = "prompt"];</code>
      * @param value The bytes for prompt to set.
      * @return This builder for chaining.
@@ -680,10 +620,6 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object storeTo_ = "";
     /**
-     * <pre>
-     * the name (key in payload) under which to store the user input
-     * </pre>
-     *
      * <code>string store_to = 2 [json_name = "storeTo"];</code>
      * @return The storeTo.
      */
@@ -700,10 +636,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * the name (key in payload) under which to store the user input
-     * </pre>
-     *
      * <code>string store_to = 2 [json_name = "storeTo"];</code>
      * @return The bytes for storeTo.
      */
@@ -721,10 +653,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * the name (key in payload) under which to store the user input
-     * </pre>
-     *
      * <code>string store_to = 2 [json_name = "storeTo"];</code>
      * @param value The storeTo to set.
      * @return This builder for chaining.
@@ -738,10 +666,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * the name (key in payload) under which to store the user input
-     * </pre>
-     *
      * <code>string store_to = 2 [json_name = "storeTo"];</code>
      * @return This builder for chaining.
      */
@@ -752,10 +676,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * the name (key in payload) under which to store the user input
-     * </pre>
-     *
      * <code>string store_to = 2 [json_name = "storeTo"];</code>
      * @param value The bytes for storeTo to set.
      * @return This builder for chaining.
@@ -779,10 +699,6 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000004;
     }
     /**
-     * <pre>
-     * a list of options to display along with the prompt
-     * </pre>
-     *
      * <code>repeated string options = 3 [json_name = "options"];</code>
      * @return A list containing the options.
      */
@@ -792,10 +708,6 @@ private static final long serialVersionUID = 0L;
       return options_;
     }
     /**
-     * <pre>
-     * a list of options to display along with the prompt
-     * </pre>
-     *
      * <code>repeated string options = 3 [json_name = "options"];</code>
      * @return The count of options.
      */
@@ -803,10 +715,6 @@ private static final long serialVersionUID = 0L;
       return options_.size();
     }
     /**
-     * <pre>
-     * a list of options to display along with the prompt
-     * </pre>
-     *
      * <code>repeated string options = 3 [json_name = "options"];</code>
      * @param index The index of the element to return.
      * @return The options at the given index.
@@ -815,10 +723,6 @@ private static final long serialVersionUID = 0L;
       return options_.get(index);
     }
     /**
-     * <pre>
-     * a list of options to display along with the prompt
-     * </pre>
-     *
      * <code>repeated string options = 3 [json_name = "options"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the options at the given index.
@@ -828,10 +732,6 @@ private static final long serialVersionUID = 0L;
       return options_.getByteString(index);
     }
     /**
-     * <pre>
-     * a list of options to display along with the prompt
-     * </pre>
-     *
      * <code>repeated string options = 3 [json_name = "options"];</code>
      * @param index The index to set the value at.
      * @param value The options to set.
@@ -847,10 +747,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * a list of options to display along with the prompt
-     * </pre>
-     *
      * <code>repeated string options = 3 [json_name = "options"];</code>
      * @param value The options to add.
      * @return This builder for chaining.
@@ -865,10 +761,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * a list of options to display along with the prompt
-     * </pre>
-     *
      * <code>repeated string options = 3 [json_name = "options"];</code>
      * @param values The options to add.
      * @return This builder for chaining.
@@ -883,10 +775,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * a list of options to display along with the prompt
-     * </pre>
-     *
      * <code>repeated string options = 3 [json_name = "options"];</code>
      * @return This builder for chaining.
      */
@@ -898,10 +786,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * a list of options to display along with the prompt
-     * </pre>
-     *
      * <code>repeated string options = 3 [json_name = "options"];</code>
      * @param value The bytes of the options to add.
      * @return This builder for chaining.

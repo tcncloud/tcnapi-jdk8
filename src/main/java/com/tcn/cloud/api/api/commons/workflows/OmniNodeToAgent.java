@@ -4,10 +4,6 @@
 package com.tcn.cloud.api.api.commons.workflows;
 
 /**
- * <pre>
- * OmniNodeToAgent removes the conversation from the flow (updates the status)
- * </pre>
- *
  * Protobuf type {@code api.commons.workflows.OmniNodeToAgent}
  */
 public final class OmniNodeToAgent extends
@@ -189,10 +185,6 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * <pre>
-   * OmniNodeToAgent removes the conversation from the flow (updates the status)
-   * </pre>
-   *
    * Protobuf type {@code api.commons.workflows.OmniNodeToAgent}
    */
   public static final class Builder extends

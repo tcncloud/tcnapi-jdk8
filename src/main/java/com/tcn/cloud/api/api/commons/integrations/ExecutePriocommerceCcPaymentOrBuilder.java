@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.commons.integrations;
 
-public interface ExecuteNewzwareVacationRestartOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.commons.integrations.ExecuteNewzwareVacationRestart)
+public interface ExecutePriocommerceCcPaymentOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.commons.integrations.ExecutePriocommerceCcPayment)
     com.google.protobuf.MessageOrBuilder {
 }

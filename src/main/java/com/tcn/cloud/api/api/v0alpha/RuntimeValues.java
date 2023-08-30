@@ -550,7 +550,8 @@ java.lang.String defaultValue) {
 
   public static final int PARENT_EVENT_IDS_FIELD_NUMBER = 11;
   @SuppressWarnings("serial")
-  private com.google.protobuf.Internal.LongList parentEventIds_;
+  private com.google.protobuf.Internal.LongList parentEventIds_ =
+      emptyLongList();
   /**
    * <pre>
    * the events that happened before this one
@@ -1129,11 +1130,6 @@ java.lang.String defaultValue) {
       } else {
         result.dataUrls_ = dataUrlsBuilder_.build();
       }
-      if (((bitField0_ & 0x00000400) != 0)) {
-        parentEventIds_.makeImmutable();
-        bitField0_ = (bitField0_ & ~0x00000400);
-      }
-      result.parentEventIds_ = parentEventIds_;
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.v0alpha.RuntimeValues result) {
@@ -1167,6 +1163,10 @@ java.lang.String defaultValue) {
       if (((from_bitField0_ & 0x00000200) != 0)) {
         result.preliminaryVars_ = internalGetPreliminaryVars();
         result.preliminaryVars_.makeImmutable();
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        parentEventIds_.makeImmutable();
+        result.parentEventIds_ = parentEventIds_;
       }
       if (((from_bitField0_ & 0x00000800) != 0)) {
         result.noMorePages_ = noMorePages_;
@@ -1288,7 +1288,8 @@ java.lang.String defaultValue) {
       if (!other.parentEventIds_.isEmpty()) {
         if (parentEventIds_.isEmpty()) {
           parentEventIds_ = other.parentEventIds_;
-          bitField0_ = (bitField0_ & ~0x00000400);
+          parentEventIds_.makeImmutable();
+          bitField0_ |= 0x00000400;
         } else {
           ensureParentEventIdsIsMutable();
           parentEventIds_.addAll(other.parentEventIds_);
@@ -2638,10 +2639,10 @@ java.lang.String defaultValue) {
 
     private com.google.protobuf.Internal.LongList parentEventIds_ = emptyLongList();
     private void ensureParentEventIdsIsMutable() {
-      if (!((bitField0_ & 0x00000400) != 0)) {
-        parentEventIds_ = mutableCopy(parentEventIds_);
-        bitField0_ |= 0x00000400;
+      if (!parentEventIds_.isModifiable()) {
+        parentEventIds_ = makeMutableCopy(parentEventIds_);
       }
+      bitField0_ |= 0x00000400;
     }
     /**
      * <pre>
@@ -2653,8 +2654,8 @@ java.lang.String defaultValue) {
      */
     public java.util.List<java.lang.Long>
         getParentEventIdsList() {
-      return ((bitField0_ & 0x00000400) != 0) ?
-               java.util.Collections.unmodifiableList(parentEventIds_) : parentEventIds_;
+      parentEventIds_.makeImmutable();
+      return parentEventIds_;
     }
     /**
      * <pre>
@@ -2694,6 +2695,7 @@ java.lang.String defaultValue) {
 
       ensureParentEventIdsIsMutable();
       parentEventIds_.setLong(index, value);
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -2710,6 +2712,7 @@ java.lang.String defaultValue) {
 
       ensureParentEventIdsIsMutable();
       parentEventIds_.addLong(value);
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -2727,6 +2730,7 @@ java.lang.String defaultValue) {
       ensureParentEventIdsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, parentEventIds_);
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }

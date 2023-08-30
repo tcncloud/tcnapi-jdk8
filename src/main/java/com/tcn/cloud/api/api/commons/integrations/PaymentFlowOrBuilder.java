@@ -185,6 +185,36 @@ public interface PaymentFlowOrBuilder extends
   com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareAchOrBuilder getNewzwareAchOrBuilder();
 
   /**
+   * <code>.api.commons.integrations.PaymentPriocommerceCc priocommerce_cc = 13 [json_name = "priocommerceCc"];</code>
+   * @return Whether the priocommerceCc field is set.
+   */
+  boolean hasPriocommerceCc();
+  /**
+   * <code>.api.commons.integrations.PaymentPriocommerceCc priocommerce_cc = 13 [json_name = "priocommerceCc"];</code>
+   * @return The priocommerceCc.
+   */
+  com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceCc getPriocommerceCc();
+  /**
+   * <code>.api.commons.integrations.PaymentPriocommerceCc priocommerce_cc = 13 [json_name = "priocommerceCc"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceCcOrBuilder getPriocommerceCcOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.PaymentPriocommerceAch priocommerce_ach = 14 [json_name = "priocommerceAch"];</code>
+   * @return Whether the priocommerceAch field is set.
+   */
+  boolean hasPriocommerceAch();
+  /**
+   * <code>.api.commons.integrations.PaymentPriocommerceAch priocommerce_ach = 14 [json_name = "priocommerceAch"];</code>
+   * @return The priocommerceAch.
+   */
+  com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceAch getPriocommerceAch();
+  /**
+   * <code>.api.commons.integrations.PaymentPriocommerceAch priocommerce_ach = 14 [json_name = "priocommerceAch"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceAchOrBuilder getPriocommerceAchOrBuilder();
+
+  /**
    * <pre>
    * the fields the user will use for the payment form
    * must be a subset of fields that is enough data to make the api call.

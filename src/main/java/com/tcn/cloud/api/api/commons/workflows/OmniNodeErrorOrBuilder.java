@@ -8,19 +8,11 @@ public interface OmniNodeErrorOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <pre>
-   * the error message to send/log
-   * </pre>
-   *
    * <code>string error = 1 [json_name = "error"];</code>
    * @return The error.
    */
   java.lang.String getError();
   /**
-   * <pre>
-   * the error message to send/log
-   * </pre>
-   *
    * <code>string error = 1 [json_name = "error"];</code>
    * @return The bytes for error.
    */

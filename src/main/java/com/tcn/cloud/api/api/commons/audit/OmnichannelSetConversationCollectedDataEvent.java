@@ -45,6 +45,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.audit.OmnichannelSetConversationCollectedDataEvent.class, com.tcn.cloud.api.api.commons.audit.OmnichannelSetConversationCollectedDataEvent.Builder.class);
   }
 
+  private int bitField0_;
   public static final int CONVERSATION_SID_FIELD_NUMBER = 1;
   private long conversationSid_ = 0L;
   /**
@@ -171,7 +172,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCollectedData() {
-    return collectedData_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -209,7 +210,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAsmSessionSid() {
-    return asmSessionSid_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <pre>
@@ -261,10 +262,10 @@ private static final long serialVersionUID = 0L;
     if (campaignDirection_ != com.tcn.cloud.api.api.commons.CampaignDirection.CAMPAIGN_DIRECTION_INBOUND.getNumber()) {
       output.writeEnum(4, campaignDirection_);
     }
-    if (collectedData_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(5, getCollectedData());
     }
-    if (asmSessionSid_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(6, getAsmSessionSid());
     }
     getUnknownFields().writeTo(output);
@@ -291,11 +292,11 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(4, campaignDirection_);
     }
-    if (collectedData_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getCollectedData());
     }
-    if (asmSessionSid_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, getAsmSessionSid());
     }
@@ -481,13 +482,20 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.audit.OmnichannelSetConversationCollectedDataEvent.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getCollectedDataFieldBuilder();
+        getAsmSessionSidFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -552,16 +560,20 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.campaignDirection_ = campaignDirection_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.collectedData_ = collectedDataBuilder_ == null
             ? collectedData_
             : collectedDataBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.asmSessionSid_ = asmSessionSidBuilder_ == null
             ? asmSessionSid_
             : asmSessionSidBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1073,8 +1085,10 @@ private static final long serialVersionUID = 0L;
       } else {
         collectedDataBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
+      if (collectedData_ != null) {
+        bitField0_ |= 0x00000010;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1228,8 +1242,10 @@ private static final long serialVersionUID = 0L;
       } else {
         asmSessionSidBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000020;
-      onChanged();
+      if (asmSessionSid_ != null) {
+        bitField0_ |= 0x00000020;
+        onChanged();
+      }
       return this;
     }
     /**

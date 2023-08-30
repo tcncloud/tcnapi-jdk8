@@ -46,6 +46,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.audit.OmnichannelAgentReassignConversationEvent.class, com.tcn.cloud.api.api.commons.audit.OmnichannelAgentReassignConversationEvent.Builder.class);
   }
 
+  private int bitField0_;
   public static final int CONVERSATION_SID_FIELD_NUMBER = 1;
   private long conversationSid_ = 0L;
   /**
@@ -255,7 +256,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasConversation() {
-    return conversation_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -293,7 +294,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasMessage() {
-    return message_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <pre>
@@ -331,7 +332,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasNewUserAsmSessionSid() {
-    return newUserAsmSessionSid_ != null;
+    return ((bitField0_ & 0x00000004) != 0);
   }
   /**
    * <pre>
@@ -389,13 +390,13 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newUserId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 6, newUserId_);
     }
-    if (conversation_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(7, getConversation());
     }
-    if (message_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(8, getMessage());
     }
-    if (newUserAsmSessionSid_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       output.writeMessage(9, getNewUserAsmSessionSid());
     }
     getUnknownFields().writeTo(output);
@@ -428,15 +429,15 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newUserId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, newUserId_);
     }
-    if (conversation_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, getConversation());
     }
-    if (message_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, getMessage());
     }
-    if (newUserAsmSessionSid_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(9, getNewUserAsmSessionSid());
     }
@@ -641,13 +642,21 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.audit.OmnichannelAgentReassignConversationEvent.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getConversationFieldBuilder();
+        getMessageFieldBuilder();
+        getNewUserAsmSessionSidFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -725,21 +734,26 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.newUserId_ = newUserId_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.conversation_ = conversationBuilder_ == null
             ? conversation_
             : conversationBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.message_ = messageBuilder_ == null
             ? message_
             : messageBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000100) != 0)) {
         result.newUserAsmSessionSid_ = newUserAsmSessionSidBuilder_ == null
             ? newUserAsmSessionSid_
             : newUserAsmSessionSidBuilder_.build();
+        to_bitField0_ |= 0x00000004;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1436,8 +1450,10 @@ private static final long serialVersionUID = 0L;
       } else {
         conversationBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000040;
-      onChanged();
+      if (conversation_ != null) {
+        bitField0_ |= 0x00000040;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1591,8 +1607,10 @@ private static final long serialVersionUID = 0L;
       } else {
         messageBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000080;
-      onChanged();
+      if (message_ != null) {
+        bitField0_ |= 0x00000080;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1746,8 +1764,10 @@ private static final long serialVersionUID = 0L;
       } else {
         newUserAsmSessionSidBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000100;
-      onChanged();
+      if (newUserAsmSessionSid_ != null) {
+        bitField0_ |= 0x00000100;
+        onChanged();
+      }
       return this;
     }
     /**
