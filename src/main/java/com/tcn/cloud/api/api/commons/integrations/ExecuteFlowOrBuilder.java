@@ -2839,5 +2839,35 @@ public interface ExecuteFlowOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwarePhoneLookupMultiOrBuilder getNewzwarePhoneLookupMultiOrBuilder();
 
+  /**
+   * <code>.api.commons.integrations.ExecutePriocommerceAchPayment priocommerce_ach_payment = 3901 [json_name = "priocommerceAchPayment"];</code>
+   * @return Whether the priocommerceAchPayment field is set.
+   */
+  boolean hasPriocommerceAchPayment();
+  /**
+   * <code>.api.commons.integrations.ExecutePriocommerceAchPayment priocommerce_ach_payment = 3901 [json_name = "priocommerceAchPayment"];</code>
+   * @return The priocommerceAchPayment.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecutePriocommerceAchPayment getPriocommerceAchPayment();
+  /**
+   * <code>.api.commons.integrations.ExecutePriocommerceAchPayment priocommerce_ach_payment = 3901 [json_name = "priocommerceAchPayment"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecutePriocommerceAchPaymentOrBuilder getPriocommerceAchPaymentOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecutePriocommerceCcPayment priocommerce_cc_payment = 3902 [json_name = "priocommerceCcPayment"];</code>
+   * @return Whether the priocommerceCcPayment field is set.
+   */
+  boolean hasPriocommerceCcPayment();
+  /**
+   * <code>.api.commons.integrations.ExecutePriocommerceCcPayment priocommerce_cc_payment = 3902 [json_name = "priocommerceCcPayment"];</code>
+   * @return The priocommerceCcPayment.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecutePriocommerceCcPayment getPriocommerceCcPayment();
+  /**
+   * <code>.api.commons.integrations.ExecutePriocommerceCcPayment priocommerce_cc_payment = 3902 [json_name = "priocommerceCcPayment"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecutePriocommerceCcPaymentOrBuilder getPriocommerceCcPaymentOrBuilder();
+
   com.tcn.cloud.api.api.commons.integrations.ExecuteFlow.ValueCase getValueCase();
 }

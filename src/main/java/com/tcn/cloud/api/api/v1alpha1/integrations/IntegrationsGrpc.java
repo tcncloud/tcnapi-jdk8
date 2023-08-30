@@ -356,6 +356,37 @@ public final class IntegrationsGrpc {
     return getListIntegrationsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.ListIntegrationsForOrgReq,
+      com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationInfos> getListIntegrationsForOrgMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListIntegrationsForOrg",
+      requestType = com.tcn.cloud.api.api.v1alpha1.integrations.ListIntegrationsForOrgReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationInfos.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.ListIntegrationsForOrgReq,
+      com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationInfos> getListIntegrationsForOrgMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.ListIntegrationsForOrgReq, com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationInfos> getListIntegrationsForOrgMethod;
+    if ((getListIntegrationsForOrgMethod = IntegrationsGrpc.getListIntegrationsForOrgMethod) == null) {
+      synchronized (IntegrationsGrpc.class) {
+        if ((getListIntegrationsForOrgMethod = IntegrationsGrpc.getListIntegrationsForOrgMethod) == null) {
+          IntegrationsGrpc.getListIntegrationsForOrgMethod = getListIntegrationsForOrgMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.integrations.ListIntegrationsForOrgReq, com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationInfos>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListIntegrationsForOrg"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.integrations.ListIntegrationsForOrgReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationInfos.getDefaultInstance()))
+              .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("ListIntegrationsForOrg"))
+              .build();
+        }
+      }
+    }
+    return getListIntegrationsForOrgMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.ListIntegrationConfigNamesReq,
       com.tcn.cloud.api.api.v1alpha1.integrations.ListIntegrationConfigNamesRes> getListIntegrationConfigNamesMethod;
 
@@ -912,6 +943,13 @@ public final class IntegrationsGrpc {
     }
 
     /**
+     */
+    default void listIntegrationsForOrg(com.tcn.cloud.api.api.v1alpha1.integrations.ListIntegrationsForOrgReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationInfos> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListIntegrationsForOrgMethod(), responseObserver);
+    }
+
+    /**
      * <pre>
      * lists all the names of the configs for an org's integration type
      * </pre>
@@ -1183,6 +1221,14 @@ public final class IntegrationsGrpc {
     }
 
     /**
+     */
+    public void listIntegrationsForOrg(com.tcn.cloud.api.api.v1alpha1.integrations.ListIntegrationsForOrgReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationInfos> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListIntegrationsForOrgMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
      * <pre>
      * lists all the names of the configs for an org's integration type
      * </pre>
@@ -1442,6 +1488,13 @@ public final class IntegrationsGrpc {
     public com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationInfos listIntegrations(com.tcn.cloud.api.api.v1alpha1.integrations.Empty request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListIntegrationsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationInfos listIntegrationsForOrg(com.tcn.cloud.api.api.v1alpha1.integrations.ListIntegrationsForOrgReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListIntegrationsForOrgMethod(), getCallOptions(), request);
     }
 
     /**
@@ -1705,6 +1758,14 @@ public final class IntegrationsGrpc {
     }
 
     /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationInfos> listIntegrationsForOrg(
+        com.tcn.cloud.api.api.v1alpha1.integrations.ListIntegrationsForOrgReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListIntegrationsForOrgMethod(), getCallOptions()), request);
+    }
+
+    /**
      * <pre>
      * lists all the names of the configs for an org's integration type
      * </pre>
@@ -1857,19 +1918,20 @@ public final class IntegrationsGrpc {
   private static final int METHODID_UPDATE_INTEGRATION_CONFIG = 8;
   private static final int METHODID_DELETE_INTEGRATION_CONFIG = 9;
   private static final int METHODID_LIST_INTEGRATIONS = 10;
-  private static final int METHODID_LIST_INTEGRATION_CONFIG_NAMES = 11;
-  private static final int METHODID_LIST_JOURNEY_CONFIGS = 12;
-  private static final int METHODID_LIST_NON_JOURNEY_CONFIGS = 13;
-  private static final int METHODID_CREATE_PORTAL_CONFIG = 14;
-  private static final int METHODID_LIST_PORTAL_CONFIGS = 15;
-  private static final int METHODID_UPDATE_PORTAL_CONFIG = 16;
-  private static final int METHODID_GET_PORTAL_CONFIG = 17;
-  private static final int METHODID_DELETE_PORTAL_CONFIG = 18;
-  private static final int METHODID_UPDATE_PORTAL_LOGO = 19;
-  private static final int METHODID_GET_PORTAL_LOGO = 20;
-  private static final int METHODID_CREATE_PAYMENT_PORTAL_LINKS = 21;
-  private static final int METHODID_SUMMARY = 22;
-  private static final int METHODID_LIST_INTEGRATION_TEMPLATES_BY_CONFIG = 23;
+  private static final int METHODID_LIST_INTEGRATIONS_FOR_ORG = 11;
+  private static final int METHODID_LIST_INTEGRATION_CONFIG_NAMES = 12;
+  private static final int METHODID_LIST_JOURNEY_CONFIGS = 13;
+  private static final int METHODID_LIST_NON_JOURNEY_CONFIGS = 14;
+  private static final int METHODID_CREATE_PORTAL_CONFIG = 15;
+  private static final int METHODID_LIST_PORTAL_CONFIGS = 16;
+  private static final int METHODID_UPDATE_PORTAL_CONFIG = 17;
+  private static final int METHODID_GET_PORTAL_CONFIG = 18;
+  private static final int METHODID_DELETE_PORTAL_CONFIG = 19;
+  private static final int METHODID_UPDATE_PORTAL_LOGO = 20;
+  private static final int METHODID_GET_PORTAL_LOGO = 21;
+  private static final int METHODID_CREATE_PAYMENT_PORTAL_LINKS = 22;
+  private static final int METHODID_SUMMARY = 23;
+  private static final int METHODID_LIST_INTEGRATION_TEMPLATES_BY_CONFIG = 24;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1930,6 +1992,10 @@ public final class IntegrationsGrpc {
           break;
         case METHODID_LIST_INTEGRATIONS:
           serviceImpl.listIntegrations((com.tcn.cloud.api.api.v1alpha1.integrations.Empty) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationInfos>) responseObserver);
+          break;
+        case METHODID_LIST_INTEGRATIONS_FOR_ORG:
+          serviceImpl.listIntegrationsForOrg((com.tcn.cloud.api.api.v1alpha1.integrations.ListIntegrationsForOrgReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationInfos>) responseObserver);
           break;
         case METHODID_LIST_INTEGRATION_CONFIG_NAMES:
@@ -2080,6 +2146,13 @@ public final class IntegrationsGrpc {
               com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationInfos>(
                 service, METHODID_LIST_INTEGRATIONS)))
         .addMethod(
+          getListIntegrationsForOrgMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.integrations.ListIntegrationsForOrgReq,
+              com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationInfos>(
+                service, METHODID_LIST_INTEGRATIONS_FOR_ORG)))
+        .addMethod(
           getListIntegrationConfigNamesMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -2229,6 +2302,7 @@ public final class IntegrationsGrpc {
               .addMethod(getUpdateIntegrationConfigMethod())
               .addMethod(getDeleteIntegrationConfigMethod())
               .addMethod(getListIntegrationsMethod())
+              .addMethod(getListIntegrationsForOrgMethod())
               .addMethod(getListIntegrationConfigNamesMethod())
               .addMethod(getListJourneyConfigsMethod())
               .addMethod(getListNonJourneyConfigsMethod())
