@@ -7756,6 +7756,564 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  public interface PrepareStateCallDeliveryOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:api.commons.org.GeneralSettings.PrepareStateCallDelivery)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bool manual_dial = 1 [json_name = "manualDial"];</code>
+     * @return The manualDial.
+     */
+    boolean getManualDial();
+
+    /**
+     * <code>bool preview_dial = 2 [json_name = "previewDial"];</code>
+     * @return The previewDial.
+     */
+    boolean getPreviewDial();
+  }
+  /**
+   * <pre>
+   * PrepareStateCallDelivery options (the dial modes).
+   * </pre>
+   *
+   * Protobuf type {@code api.commons.org.GeneralSettings.PrepareStateCallDelivery}
+   */
+  public static final class PrepareStateCallDelivery extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:api.commons.org.GeneralSettings.PrepareStateCallDelivery)
+      PrepareStateCallDeliveryOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PrepareStateCallDelivery.newBuilder() to construct.
+    private PrepareStateCallDelivery(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PrepareStateCallDelivery() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PrepareStateCallDelivery();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.tcn.cloud.api.api.commons.org.HuntgroupProto.internal_static_api_commons_org_GeneralSettings_PrepareStateCallDelivery_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.tcn.cloud.api.api.commons.org.HuntgroupProto.internal_static_api_commons_org_GeneralSettings_PrepareStateCallDelivery_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDelivery.class, com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDelivery.Builder.class);
+    }
+
+    public static final int MANUAL_DIAL_FIELD_NUMBER = 1;
+    private boolean manualDial_ = false;
+    /**
+     * <code>bool manual_dial = 1 [json_name = "manualDial"];</code>
+     * @return The manualDial.
+     */
+    @java.lang.Override
+    public boolean getManualDial() {
+      return manualDial_;
+    }
+
+    public static final int PREVIEW_DIAL_FIELD_NUMBER = 2;
+    private boolean previewDial_ = false;
+    /**
+     * <code>bool preview_dial = 2 [json_name = "previewDial"];</code>
+     * @return The previewDial.
+     */
+    @java.lang.Override
+    public boolean getPreviewDial() {
+      return previewDial_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (manualDial_ != false) {
+        output.writeBool(1, manualDial_);
+      }
+      if (previewDial_ != false) {
+        output.writeBool(2, previewDial_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (manualDial_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, manualDial_);
+      }
+      if (previewDial_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, previewDial_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDelivery)) {
+        return super.equals(obj);
+      }
+      com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDelivery other = (com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDelivery) obj;
+
+      if (getManualDial()
+          != other.getManualDial()) return false;
+      if (getPreviewDial()
+          != other.getPreviewDial()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MANUAL_DIAL_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getManualDial());
+      hash = (37 * hash) + PREVIEW_DIAL_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getPreviewDial());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDelivery parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDelivery parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDelivery parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDelivery parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDelivery parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDelivery parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDelivery parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDelivery parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDelivery parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDelivery parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDelivery parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDelivery parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDelivery prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * PrepareStateCallDelivery options (the dial modes).
+     * </pre>
+     *
+     * Protobuf type {@code api.commons.org.GeneralSettings.PrepareStateCallDelivery}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:api.commons.org.GeneralSettings.PrepareStateCallDelivery)
+        com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDeliveryOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.api.commons.org.HuntgroupProto.internal_static_api_commons_org_GeneralSettings_PrepareStateCallDelivery_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.api.commons.org.HuntgroupProto.internal_static_api_commons_org_GeneralSettings_PrepareStateCallDelivery_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDelivery.class, com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDelivery.Builder.class);
+      }
+
+      // Construct using com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDelivery.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        manualDial_ = false;
+        previewDial_ = false;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.tcn.cloud.api.api.commons.org.HuntgroupProto.internal_static_api_commons_org_GeneralSettings_PrepareStateCallDelivery_descriptor;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDelivery getDefaultInstanceForType() {
+        return com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDelivery.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDelivery build() {
+        com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDelivery result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDelivery buildPartial() {
+        com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDelivery result = new com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDelivery(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDelivery result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.manualDial_ = manualDial_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.previewDial_ = previewDial_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDelivery) {
+          return mergeFrom((com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDelivery)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDelivery other) {
+        if (other == com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDelivery.getDefaultInstance()) return this;
+        if (other.getManualDial() != false) {
+          setManualDial(other.getManualDial());
+        }
+        if (other.getPreviewDial() != false) {
+          setPreviewDial(other.getPreviewDial());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                manualDial_ = input.readBool();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                previewDial_ = input.readBool();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private boolean manualDial_ ;
+      /**
+       * <code>bool manual_dial = 1 [json_name = "manualDial"];</code>
+       * @return The manualDial.
+       */
+      @java.lang.Override
+      public boolean getManualDial() {
+        return manualDial_;
+      }
+      /**
+       * <code>bool manual_dial = 1 [json_name = "manualDial"];</code>
+       * @param value The manualDial to set.
+       * @return This builder for chaining.
+       */
+      public Builder setManualDial(boolean value) {
+
+        manualDial_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool manual_dial = 1 [json_name = "manualDial"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearManualDial() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        manualDial_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean previewDial_ ;
+      /**
+       * <code>bool preview_dial = 2 [json_name = "previewDial"];</code>
+       * @return The previewDial.
+       */
+      @java.lang.Override
+      public boolean getPreviewDial() {
+        return previewDial_;
+      }
+      /**
+       * <code>bool preview_dial = 2 [json_name = "previewDial"];</code>
+       * @param value The previewDial to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPreviewDial(boolean value) {
+
+        previewDial_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool preview_dial = 2 [json_name = "previewDial"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPreviewDial() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        previewDial_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:api.commons.org.GeneralSettings.PrepareStateCallDelivery)
+    }
+
+    // @@protoc_insertion_point(class_scope:api.commons.org.GeneralSettings.PrepareStateCallDelivery)
+    private static final com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDelivery DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDelivery();
+    }
+
+    public static com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDelivery getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PrepareStateCallDelivery>
+        PARSER = new com.google.protobuf.AbstractParser<PrepareStateCallDelivery>() {
+      @java.lang.Override
+      public PrepareStateCallDelivery parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<PrepareStateCallDelivery> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PrepareStateCallDelivery> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDelivery getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public static final int ENABLE_AGENT_GATEWAY_TITLE_BAR_FIELD_NUMBER = 1;
   private boolean enableAgentGatewayTitleBar_ = false;
   /**
@@ -8779,6 +9337,47 @@ private static final long serialVersionUID = 0L;
     return enableAgentIntercom_;
   }
 
+  public static final int PREPARE_STATE_CALL_DELIVERY_FIELD_NUMBER = 804;
+  private com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDelivery prepareStateCallDelivery_;
+  /**
+   * <pre>
+   * Enables the delivery of incoming calls to the agent
+   * depending on the dial status prior to them clicking "Dial".
+   * </pre>
+   *
+   * <code>.api.commons.org.GeneralSettings.PrepareStateCallDelivery prepare_state_call_delivery = 804 [json_name = "prepareStateCallDelivery"];</code>
+   * @return Whether the prepareStateCallDelivery field is set.
+   */
+  @java.lang.Override
+  public boolean hasPrepareStateCallDelivery() {
+    return prepareStateCallDelivery_ != null;
+  }
+  /**
+   * <pre>
+   * Enables the delivery of incoming calls to the agent
+   * depending on the dial status prior to them clicking "Dial".
+   * </pre>
+   *
+   * <code>.api.commons.org.GeneralSettings.PrepareStateCallDelivery prepare_state_call_delivery = 804 [json_name = "prepareStateCallDelivery"];</code>
+   * @return The prepareStateCallDelivery.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDelivery getPrepareStateCallDelivery() {
+    return prepareStateCallDelivery_ == null ? com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDelivery.getDefaultInstance() : prepareStateCallDelivery_;
+  }
+  /**
+   * <pre>
+   * Enables the delivery of incoming calls to the agent
+   * depending on the dial status prior to them clicking "Dial".
+   * </pre>
+   *
+   * <code>.api.commons.org.GeneralSettings.PrepareStateCallDelivery prepare_state_call_delivery = 804 [json_name = "prepareStateCallDelivery"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDeliveryOrBuilder getPrepareStateCallDeliveryOrBuilder() {
+    return prepareStateCallDelivery_ == null ? com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDelivery.getDefaultInstance() : prepareStateCallDelivery_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -8924,6 +9523,9 @@ private static final long serialVersionUID = 0L;
     }
     if (enableAgentIntercom_ != false) {
       output.writeBool(803, enableAgentIntercom_);
+    }
+    if (prepareStateCallDelivery_ != null) {
+      output.writeMessage(804, getPrepareStateCallDelivery());
     }
     getUnknownFields().writeTo(output);
   }
@@ -9112,6 +9714,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(803, enableAgentIntercom_);
     }
+    if (prepareStateCallDelivery_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(804, getPrepareStateCallDelivery());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -9243,6 +9849,11 @@ private static final long serialVersionUID = 0L;
     }
     if (getEnableAgentIntercom()
         != other.getEnableAgentIntercom()) return false;
+    if (hasPrepareStateCallDelivery() != other.hasPrepareStateCallDelivery()) return false;
+    if (hasPrepareStateCallDelivery()) {
+      if (!getPrepareStateCallDelivery()
+          .equals(other.getPrepareStateCallDelivery())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -9393,6 +10004,10 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + ENABLE_AGENT_INTERCOM_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getEnableAgentIntercom());
+    if (hasPrepareStateCallDelivery()) {
+      hash = (37 * hash) + PREPARE_STATE_CALL_DELIVERY_FIELD_NUMBER;
+      hash = (53 * hash) + getPrepareStateCallDelivery().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -9615,6 +10230,11 @@ private static final long serialVersionUID = 0L;
         inboundComplianceMetadataBuilder_ = null;
       }
       enableAgentIntercom_ = false;
+      prepareStateCallDelivery_ = null;
+      if (prepareStateCallDeliveryBuilder_ != null) {
+        prepareStateCallDeliveryBuilder_.dispose();
+        prepareStateCallDeliveryBuilder_ = null;
+      }
       return this;
     }
 
@@ -9806,6 +10426,11 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField1_ & 0x00000800) != 0)) {
         result.enableAgentIntercom_ = enableAgentIntercom_;
       }
+      if (((from_bitField1_ & 0x00001000) != 0)) {
+        result.prepareStateCallDelivery_ = prepareStateCallDeliveryBuilder_ == null
+            ? prepareStateCallDelivery_
+            : prepareStateCallDeliveryBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -9994,6 +10619,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.getEnableAgentIntercom() != false) {
         setEnableAgentIntercom(other.getEnableAgentIntercom());
+      }
+      if (other.hasPrepareStateCallDelivery()) {
+        mergePrepareStateCallDelivery(other.getPrepareStateCallDelivery());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -10262,6 +10890,13 @@ private static final long serialVersionUID = 0L;
               bitField1_ |= 0x00000800;
               break;
             } // case 6424
+            case 6434: {
+              input.readMessage(
+                  getPrepareStateCallDeliveryFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField1_ |= 0x00001000;
+              break;
+            } // case 6434
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -13608,6 +14243,170 @@ private static final long serialVersionUID = 0L;
       enableAgentIntercom_ = false;
       onChanged();
       return this;
+    }
+
+    private com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDelivery prepareStateCallDelivery_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDelivery, com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDelivery.Builder, com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDeliveryOrBuilder> prepareStateCallDeliveryBuilder_;
+    /**
+     * <pre>
+     * Enables the delivery of incoming calls to the agent
+     * depending on the dial status prior to them clicking "Dial".
+     * </pre>
+     *
+     * <code>.api.commons.org.GeneralSettings.PrepareStateCallDelivery prepare_state_call_delivery = 804 [json_name = "prepareStateCallDelivery"];</code>
+     * @return Whether the prepareStateCallDelivery field is set.
+     */
+    public boolean hasPrepareStateCallDelivery() {
+      return ((bitField1_ & 0x00001000) != 0);
+    }
+    /**
+     * <pre>
+     * Enables the delivery of incoming calls to the agent
+     * depending on the dial status prior to them clicking "Dial".
+     * </pre>
+     *
+     * <code>.api.commons.org.GeneralSettings.PrepareStateCallDelivery prepare_state_call_delivery = 804 [json_name = "prepareStateCallDelivery"];</code>
+     * @return The prepareStateCallDelivery.
+     */
+    public com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDelivery getPrepareStateCallDelivery() {
+      if (prepareStateCallDeliveryBuilder_ == null) {
+        return prepareStateCallDelivery_ == null ? com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDelivery.getDefaultInstance() : prepareStateCallDelivery_;
+      } else {
+        return prepareStateCallDeliveryBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Enables the delivery of incoming calls to the agent
+     * depending on the dial status prior to them clicking "Dial".
+     * </pre>
+     *
+     * <code>.api.commons.org.GeneralSettings.PrepareStateCallDelivery prepare_state_call_delivery = 804 [json_name = "prepareStateCallDelivery"];</code>
+     */
+    public Builder setPrepareStateCallDelivery(com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDelivery value) {
+      if (prepareStateCallDeliveryBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        prepareStateCallDelivery_ = value;
+      } else {
+        prepareStateCallDeliveryBuilder_.setMessage(value);
+      }
+      bitField1_ |= 0x00001000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Enables the delivery of incoming calls to the agent
+     * depending on the dial status prior to them clicking "Dial".
+     * </pre>
+     *
+     * <code>.api.commons.org.GeneralSettings.PrepareStateCallDelivery prepare_state_call_delivery = 804 [json_name = "prepareStateCallDelivery"];</code>
+     */
+    public Builder setPrepareStateCallDelivery(
+        com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDelivery.Builder builderForValue) {
+      if (prepareStateCallDeliveryBuilder_ == null) {
+        prepareStateCallDelivery_ = builderForValue.build();
+      } else {
+        prepareStateCallDeliveryBuilder_.setMessage(builderForValue.build());
+      }
+      bitField1_ |= 0x00001000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Enables the delivery of incoming calls to the agent
+     * depending on the dial status prior to them clicking "Dial".
+     * </pre>
+     *
+     * <code>.api.commons.org.GeneralSettings.PrepareStateCallDelivery prepare_state_call_delivery = 804 [json_name = "prepareStateCallDelivery"];</code>
+     */
+    public Builder mergePrepareStateCallDelivery(com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDelivery value) {
+      if (prepareStateCallDeliveryBuilder_ == null) {
+        if (((bitField1_ & 0x00001000) != 0) &&
+          prepareStateCallDelivery_ != null &&
+          prepareStateCallDelivery_ != com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDelivery.getDefaultInstance()) {
+          getPrepareStateCallDeliveryBuilder().mergeFrom(value);
+        } else {
+          prepareStateCallDelivery_ = value;
+        }
+      } else {
+        prepareStateCallDeliveryBuilder_.mergeFrom(value);
+      }
+      bitField1_ |= 0x00001000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Enables the delivery of incoming calls to the agent
+     * depending on the dial status prior to them clicking "Dial".
+     * </pre>
+     *
+     * <code>.api.commons.org.GeneralSettings.PrepareStateCallDelivery prepare_state_call_delivery = 804 [json_name = "prepareStateCallDelivery"];</code>
+     */
+    public Builder clearPrepareStateCallDelivery() {
+      bitField1_ = (bitField1_ & ~0x00001000);
+      prepareStateCallDelivery_ = null;
+      if (prepareStateCallDeliveryBuilder_ != null) {
+        prepareStateCallDeliveryBuilder_.dispose();
+        prepareStateCallDeliveryBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Enables the delivery of incoming calls to the agent
+     * depending on the dial status prior to them clicking "Dial".
+     * </pre>
+     *
+     * <code>.api.commons.org.GeneralSettings.PrepareStateCallDelivery prepare_state_call_delivery = 804 [json_name = "prepareStateCallDelivery"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDelivery.Builder getPrepareStateCallDeliveryBuilder() {
+      bitField1_ |= 0x00001000;
+      onChanged();
+      return getPrepareStateCallDeliveryFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Enables the delivery of incoming calls to the agent
+     * depending on the dial status prior to them clicking "Dial".
+     * </pre>
+     *
+     * <code>.api.commons.org.GeneralSettings.PrepareStateCallDelivery prepare_state_call_delivery = 804 [json_name = "prepareStateCallDelivery"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDeliveryOrBuilder getPrepareStateCallDeliveryOrBuilder() {
+      if (prepareStateCallDeliveryBuilder_ != null) {
+        return prepareStateCallDeliveryBuilder_.getMessageOrBuilder();
+      } else {
+        return prepareStateCallDelivery_ == null ?
+            com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDelivery.getDefaultInstance() : prepareStateCallDelivery_;
+      }
+    }
+    /**
+     * <pre>
+     * Enables the delivery of incoming calls to the agent
+     * depending on the dial status prior to them clicking "Dial".
+     * </pre>
+     *
+     * <code>.api.commons.org.GeneralSettings.PrepareStateCallDelivery prepare_state_call_delivery = 804 [json_name = "prepareStateCallDelivery"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDelivery, com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDelivery.Builder, com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDeliveryOrBuilder> 
+        getPrepareStateCallDeliveryFieldBuilder() {
+      if (prepareStateCallDeliveryBuilder_ == null) {
+        prepareStateCallDeliveryBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDelivery, com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDelivery.Builder, com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDeliveryOrBuilder>(
+                getPrepareStateCallDelivery(),
+                getParentForChildren(),
+                isClean());
+        prepareStateCallDelivery_ = null;
+      }
+      return prepareStateCallDeliveryBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
