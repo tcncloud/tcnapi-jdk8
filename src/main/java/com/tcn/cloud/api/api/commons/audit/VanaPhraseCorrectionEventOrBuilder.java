@@ -9,23 +9,57 @@ public interface VanaPhraseCorrectionEventOrBuilder extends
 
   /**
    * <pre>
-   * Required. Start time (in milliseconds) of the selected words in the transcript.
+   * Required. Start offset of the selected words in the transcript.
    * </pre>
    *
-   * <code>uint32 start_time = 1 [json_name = "startTime"];</code>
-   * @return The startTime.
+   * <code>.google.protobuf.Duration start_offset = 1 [json_name = "startOffset"];</code>
+   * @return Whether the startOffset field is set.
    */
-  int getStartTime();
+  boolean hasStartOffset();
+  /**
+   * <pre>
+   * Required. Start offset of the selected words in the transcript.
+   * </pre>
+   *
+   * <code>.google.protobuf.Duration start_offset = 1 [json_name = "startOffset"];</code>
+   * @return The startOffset.
+   */
+  com.google.protobuf.Duration getStartOffset();
+  /**
+   * <pre>
+   * Required. Start offset of the selected words in the transcript.
+   * </pre>
+   *
+   * <code>.google.protobuf.Duration start_offset = 1 [json_name = "startOffset"];</code>
+   */
+  com.google.protobuf.DurationOrBuilder getStartOffsetOrBuilder();
 
   /**
    * <pre>
-   * Required. End time (in milliseconds) of the selected words in the transcript.
+   * Required. End offset of the selected words in the transcript.
    * </pre>
    *
-   * <code>uint32 end_time = 2 [json_name = "endTime"];</code>
-   * @return The endTime.
+   * <code>.google.protobuf.Duration end_offset = 2 [json_name = "endOffset"];</code>
+   * @return Whether the endOffset field is set.
    */
-  int getEndTime();
+  boolean hasEndOffset();
+  /**
+   * <pre>
+   * Required. End offset of the selected words in the transcript.
+   * </pre>
+   *
+   * <code>.google.protobuf.Duration end_offset = 2 [json_name = "endOffset"];</code>
+   * @return The endOffset.
+   */
+  com.google.protobuf.Duration getEndOffset();
+  /**
+   * <pre>
+   * Required. End offset of the selected words in the transcript.
+   * </pre>
+   *
+   * <code>.google.protobuf.Duration end_offset = 2 [json_name = "endOffset"];</code>
+   */
+  com.google.protobuf.DurationOrBuilder getEndOffsetOrBuilder();
 
   /**
    * <pre>

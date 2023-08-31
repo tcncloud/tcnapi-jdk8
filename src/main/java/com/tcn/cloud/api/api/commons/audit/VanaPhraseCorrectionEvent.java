@@ -46,34 +46,80 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent.class, com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent.Builder.class);
   }
 
-  public static final int START_TIME_FIELD_NUMBER = 1;
-  private int startTime_ = 0;
+  public static final int START_OFFSET_FIELD_NUMBER = 1;
+  private com.google.protobuf.Duration startOffset_;
   /**
    * <pre>
-   * Required. Start time (in milliseconds) of the selected words in the transcript.
+   * Required. Start offset of the selected words in the transcript.
    * </pre>
    *
-   * <code>uint32 start_time = 1 [json_name = "startTime"];</code>
-   * @return The startTime.
+   * <code>.google.protobuf.Duration start_offset = 1 [json_name = "startOffset"];</code>
+   * @return Whether the startOffset field is set.
    */
   @java.lang.Override
-  public int getStartTime() {
-    return startTime_;
+  public boolean hasStartOffset() {
+    return startOffset_ != null;
+  }
+  /**
+   * <pre>
+   * Required. Start offset of the selected words in the transcript.
+   * </pre>
+   *
+   * <code>.google.protobuf.Duration start_offset = 1 [json_name = "startOffset"];</code>
+   * @return The startOffset.
+   */
+  @java.lang.Override
+  public com.google.protobuf.Duration getStartOffset() {
+    return startOffset_ == null ? com.google.protobuf.Duration.getDefaultInstance() : startOffset_;
+  }
+  /**
+   * <pre>
+   * Required. Start offset of the selected words in the transcript.
+   * </pre>
+   *
+   * <code>.google.protobuf.Duration start_offset = 1 [json_name = "startOffset"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.DurationOrBuilder getStartOffsetOrBuilder() {
+    return startOffset_ == null ? com.google.protobuf.Duration.getDefaultInstance() : startOffset_;
   }
 
-  public static final int END_TIME_FIELD_NUMBER = 2;
-  private int endTime_ = 0;
+  public static final int END_OFFSET_FIELD_NUMBER = 2;
+  private com.google.protobuf.Duration endOffset_;
   /**
    * <pre>
-   * Required. End time (in milliseconds) of the selected words in the transcript.
+   * Required. End offset of the selected words in the transcript.
    * </pre>
    *
-   * <code>uint32 end_time = 2 [json_name = "endTime"];</code>
-   * @return The endTime.
+   * <code>.google.protobuf.Duration end_offset = 2 [json_name = "endOffset"];</code>
+   * @return Whether the endOffset field is set.
    */
   @java.lang.Override
-  public int getEndTime() {
-    return endTime_;
+  public boolean hasEndOffset() {
+    return endOffset_ != null;
+  }
+  /**
+   * <pre>
+   * Required. End offset of the selected words in the transcript.
+   * </pre>
+   *
+   * <code>.google.protobuf.Duration end_offset = 2 [json_name = "endOffset"];</code>
+   * @return The endOffset.
+   */
+  @java.lang.Override
+  public com.google.protobuf.Duration getEndOffset() {
+    return endOffset_ == null ? com.google.protobuf.Duration.getDefaultInstance() : endOffset_;
+  }
+  /**
+   * <pre>
+   * Required. End offset of the selected words in the transcript.
+   * </pre>
+   *
+   * <code>.google.protobuf.Duration end_offset = 2 [json_name = "endOffset"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.DurationOrBuilder getEndOffsetOrBuilder() {
+    return endOffset_ == null ? com.google.protobuf.Duration.getDefaultInstance() : endOffset_;
   }
 
   public static final int ORIGINAL_TEXT_FIELD_NUMBER = 3;
@@ -246,11 +292,11 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (startTime_ != 0) {
-      output.writeUInt32(1, startTime_);
+    if (startOffset_ != null) {
+      output.writeMessage(1, getStartOffset());
     }
-    if (endTime_ != 0) {
-      output.writeUInt32(2, endTime_);
+    if (endOffset_ != null) {
+      output.writeMessage(2, getEndOffset());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(originalText_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, originalText_);
@@ -273,13 +319,13 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (startTime_ != 0) {
+    if (startOffset_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeUInt32Size(1, startTime_);
+        .computeMessageSize(1, getStartOffset());
     }
-    if (endTime_ != 0) {
+    if (endOffset_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeUInt32Size(2, endTime_);
+        .computeMessageSize(2, getEndOffset());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(originalText_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, originalText_);
@@ -309,10 +355,16 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent other = (com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent) obj;
 
-    if (getStartTime()
-        != other.getStartTime()) return false;
-    if (getEndTime()
-        != other.getEndTime()) return false;
+    if (hasStartOffset() != other.hasStartOffset()) return false;
+    if (hasStartOffset()) {
+      if (!getStartOffset()
+          .equals(other.getStartOffset())) return false;
+    }
+    if (hasEndOffset() != other.hasEndOffset()) return false;
+    if (hasEndOffset()) {
+      if (!getEndOffset()
+          .equals(other.getEndOffset())) return false;
+    }
     if (!getOriginalText()
         .equals(other.getOriginalText())) return false;
     if (!getProposedText()
@@ -332,10 +384,14 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + START_TIME_FIELD_NUMBER;
-    hash = (53 * hash) + getStartTime();
-    hash = (37 * hash) + END_TIME_FIELD_NUMBER;
-    hash = (53 * hash) + getEndTime();
+    if (hasStartOffset()) {
+      hash = (37 * hash) + START_OFFSET_FIELD_NUMBER;
+      hash = (53 * hash) + getStartOffset().hashCode();
+    }
+    if (hasEndOffset()) {
+      hash = (37 * hash) + END_OFFSET_FIELD_NUMBER;
+      hash = (53 * hash) + getEndOffset().hashCode();
+    }
     hash = (37 * hash) + ORIGINAL_TEXT_FIELD_NUMBER;
     hash = (53 * hash) + getOriginalText().hashCode();
     hash = (37 * hash) + PROPOSED_TEXT_FIELD_NUMBER;
@@ -480,8 +536,16 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      startTime_ = 0;
-      endTime_ = 0;
+      startOffset_ = null;
+      if (startOffsetBuilder_ != null) {
+        startOffsetBuilder_.dispose();
+        startOffsetBuilder_ = null;
+      }
+      endOffset_ = null;
+      if (endOffsetBuilder_ != null) {
+        endOffsetBuilder_.dispose();
+        endOffsetBuilder_ = null;
+      }
       originalText_ = "";
       proposedText_ = "";
       url_ = "";
@@ -520,10 +584,14 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.startTime_ = startTime_;
+        result.startOffset_ = startOffsetBuilder_ == null
+            ? startOffset_
+            : startOffsetBuilder_.build();
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.endTime_ = endTime_;
+        result.endOffset_ = endOffsetBuilder_ == null
+            ? endOffset_
+            : endOffsetBuilder_.build();
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.originalText_ = originalText_;
@@ -583,11 +651,11 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent other) {
       if (other == com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent.getDefaultInstance()) return this;
-      if (other.getStartTime() != 0) {
-        setStartTime(other.getStartTime());
+      if (other.hasStartOffset()) {
+        mergeStartOffset(other.getStartOffset());
       }
-      if (other.getEndTime() != 0) {
-        setEndTime(other.getEndTime());
+      if (other.hasEndOffset()) {
+        mergeEndOffset(other.getEndOffset());
       }
       if (!other.getOriginalText().isEmpty()) {
         originalText_ = other.originalText_;
@@ -633,16 +701,20 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 8: {
-              startTime_ = input.readUInt32();
+            case 10: {
+              input.readMessage(
+                  getStartOffsetFieldBuilder().getBuilder(),
+                  extensionRegistry);
               bitField0_ |= 0x00000001;
               break;
-            } // case 8
-            case 16: {
-              endTime_ = input.readUInt32();
+            } // case 10
+            case 18: {
+              input.readMessage(
+                  getEndOffsetFieldBuilder().getBuilder(),
+                  extensionRegistry);
               bitField0_ |= 0x00000002;
               break;
-            } // case 16
+            } // case 18
             case 26: {
               originalText_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000004;
@@ -680,92 +752,314 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private int startTime_ ;
+    private com.google.protobuf.Duration startOffset_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> startOffsetBuilder_;
     /**
      * <pre>
-     * Required. Start time (in milliseconds) of the selected words in the transcript.
+     * Required. Start offset of the selected words in the transcript.
      * </pre>
      *
-     * <code>uint32 start_time = 1 [json_name = "startTime"];</code>
-     * @return The startTime.
+     * <code>.google.protobuf.Duration start_offset = 1 [json_name = "startOffset"];</code>
+     * @return Whether the startOffset field is set.
      */
-    @java.lang.Override
-    public int getStartTime() {
-      return startTime_;
+    public boolean hasStartOffset() {
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
-     * Required. Start time (in milliseconds) of the selected words in the transcript.
+     * Required. Start offset of the selected words in the transcript.
      * </pre>
      *
-     * <code>uint32 start_time = 1 [json_name = "startTime"];</code>
-     * @param value The startTime to set.
-     * @return This builder for chaining.
+     * <code>.google.protobuf.Duration start_offset = 1 [json_name = "startOffset"];</code>
+     * @return The startOffset.
      */
-    public Builder setStartTime(int value) {
-
-      startTime_ = value;
+    public com.google.protobuf.Duration getStartOffset() {
+      if (startOffsetBuilder_ == null) {
+        return startOffset_ == null ? com.google.protobuf.Duration.getDefaultInstance() : startOffset_;
+      } else {
+        return startOffsetBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Required. Start offset of the selected words in the transcript.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration start_offset = 1 [json_name = "startOffset"];</code>
+     */
+    public Builder setStartOffset(com.google.protobuf.Duration value) {
+      if (startOffsetBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        startOffset_ = value;
+      } else {
+        startOffsetBuilder_.setMessage(value);
+      }
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. Start time (in milliseconds) of the selected words in the transcript.
+     * Required. Start offset of the selected words in the transcript.
      * </pre>
      *
-     * <code>uint32 start_time = 1 [json_name = "startTime"];</code>
-     * @return This builder for chaining.
+     * <code>.google.protobuf.Duration start_offset = 1 [json_name = "startOffset"];</code>
      */
-    public Builder clearStartTime() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      startTime_ = 0;
+    public Builder setStartOffset(
+        com.google.protobuf.Duration.Builder builderForValue) {
+      if (startOffsetBuilder_ == null) {
+        startOffset_ = builderForValue.build();
+      } else {
+        startOffsetBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
-
-    private int endTime_ ;
     /**
      * <pre>
-     * Required. End time (in milliseconds) of the selected words in the transcript.
+     * Required. Start offset of the selected words in the transcript.
      * </pre>
      *
-     * <code>uint32 end_time = 2 [json_name = "endTime"];</code>
-     * @return The endTime.
+     * <code>.google.protobuf.Duration start_offset = 1 [json_name = "startOffset"];</code>
      */
-    @java.lang.Override
-    public int getEndTime() {
-      return endTime_;
+    public Builder mergeStartOffset(com.google.protobuf.Duration value) {
+      if (startOffsetBuilder_ == null) {
+        if (((bitField0_ & 0x00000001) != 0) &&
+          startOffset_ != null &&
+          startOffset_ != com.google.protobuf.Duration.getDefaultInstance()) {
+          getStartOffsetBuilder().mergeFrom(value);
+        } else {
+          startOffset_ = value;
+        }
+      } else {
+        startOffsetBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
     }
     /**
      * <pre>
-     * Required. End time (in milliseconds) of the selected words in the transcript.
+     * Required. Start offset of the selected words in the transcript.
      * </pre>
      *
-     * <code>uint32 end_time = 2 [json_name = "endTime"];</code>
-     * @param value The endTime to set.
-     * @return This builder for chaining.
+     * <code>.google.protobuf.Duration start_offset = 1 [json_name = "startOffset"];</code>
      */
-    public Builder setEndTime(int value) {
+    public Builder clearStartOffset() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      startOffset_ = null;
+      if (startOffsetBuilder_ != null) {
+        startOffsetBuilder_.dispose();
+        startOffsetBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Required. Start offset of the selected words in the transcript.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration start_offset = 1 [json_name = "startOffset"];</code>
+     */
+    public com.google.protobuf.Duration.Builder getStartOffsetBuilder() {
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return getStartOffsetFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Required. Start offset of the selected words in the transcript.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration start_offset = 1 [json_name = "startOffset"];</code>
+     */
+    public com.google.protobuf.DurationOrBuilder getStartOffsetOrBuilder() {
+      if (startOffsetBuilder_ != null) {
+        return startOffsetBuilder_.getMessageOrBuilder();
+      } else {
+        return startOffset_ == null ?
+            com.google.protobuf.Duration.getDefaultInstance() : startOffset_;
+      }
+    }
+    /**
+     * <pre>
+     * Required. Start offset of the selected words in the transcript.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration start_offset = 1 [json_name = "startOffset"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+        getStartOffsetFieldBuilder() {
+      if (startOffsetBuilder_ == null) {
+        startOffsetBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                getStartOffset(),
+                getParentForChildren(),
+                isClean());
+        startOffset_ = null;
+      }
+      return startOffsetBuilder_;
+    }
 
-      endTime_ = value;
+    private com.google.protobuf.Duration endOffset_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> endOffsetBuilder_;
+    /**
+     * <pre>
+     * Required. End offset of the selected words in the transcript.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration end_offset = 2 [json_name = "endOffset"];</code>
+     * @return Whether the endOffset field is set.
+     */
+    public boolean hasEndOffset() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * Required. End offset of the selected words in the transcript.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration end_offset = 2 [json_name = "endOffset"];</code>
+     * @return The endOffset.
+     */
+    public com.google.protobuf.Duration getEndOffset() {
+      if (endOffsetBuilder_ == null) {
+        return endOffset_ == null ? com.google.protobuf.Duration.getDefaultInstance() : endOffset_;
+      } else {
+        return endOffsetBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Required. End offset of the selected words in the transcript.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration end_offset = 2 [json_name = "endOffset"];</code>
+     */
+    public Builder setEndOffset(com.google.protobuf.Duration value) {
+      if (endOffsetBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        endOffset_ = value;
+      } else {
+        endOffsetBuilder_.setMessage(value);
+      }
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. End time (in milliseconds) of the selected words in the transcript.
+     * Required. End offset of the selected words in the transcript.
      * </pre>
      *
-     * <code>uint32 end_time = 2 [json_name = "endTime"];</code>
-     * @return This builder for chaining.
+     * <code>.google.protobuf.Duration end_offset = 2 [json_name = "endOffset"];</code>
      */
-    public Builder clearEndTime() {
-      bitField0_ = (bitField0_ & ~0x00000002);
-      endTime_ = 0;
+    public Builder setEndOffset(
+        com.google.protobuf.Duration.Builder builderForValue) {
+      if (endOffsetBuilder_ == null) {
+        endOffset_ = builderForValue.build();
+      } else {
+        endOffsetBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
+    }
+    /**
+     * <pre>
+     * Required. End offset of the selected words in the transcript.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration end_offset = 2 [json_name = "endOffset"];</code>
+     */
+    public Builder mergeEndOffset(com.google.protobuf.Duration value) {
+      if (endOffsetBuilder_ == null) {
+        if (((bitField0_ & 0x00000002) != 0) &&
+          endOffset_ != null &&
+          endOffset_ != com.google.protobuf.Duration.getDefaultInstance()) {
+          getEndOffsetBuilder().mergeFrom(value);
+        } else {
+          endOffset_ = value;
+        }
+      } else {
+        endOffsetBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Required. End offset of the selected words in the transcript.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration end_offset = 2 [json_name = "endOffset"];</code>
+     */
+    public Builder clearEndOffset() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      endOffset_ = null;
+      if (endOffsetBuilder_ != null) {
+        endOffsetBuilder_.dispose();
+        endOffsetBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Required. End offset of the selected words in the transcript.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration end_offset = 2 [json_name = "endOffset"];</code>
+     */
+    public com.google.protobuf.Duration.Builder getEndOffsetBuilder() {
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return getEndOffsetFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Required. End offset of the selected words in the transcript.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration end_offset = 2 [json_name = "endOffset"];</code>
+     */
+    public com.google.protobuf.DurationOrBuilder getEndOffsetOrBuilder() {
+      if (endOffsetBuilder_ != null) {
+        return endOffsetBuilder_.getMessageOrBuilder();
+      } else {
+        return endOffset_ == null ?
+            com.google.protobuf.Duration.getDefaultInstance() : endOffset_;
+      }
+    }
+    /**
+     * <pre>
+     * Required. End offset of the selected words in the transcript.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration end_offset = 2 [json_name = "endOffset"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+        getEndOffsetFieldBuilder() {
+      if (endOffsetBuilder_ == null) {
+        endOffsetBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                getEndOffset(),
+                getParentForChildren(),
+                isClean());
+        endOffset_ = null;
+      }
+      return endOffsetBuilder_;
     }
 
     private java.lang.Object originalText_ = "";
