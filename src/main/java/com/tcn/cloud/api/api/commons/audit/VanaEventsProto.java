@@ -39,6 +39,11 @@ public final class VanaEventsProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_commons_audit_VanaFlagSummaryEvent_FlagSummary_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_audit_VanaPhraseCorrectionEvent_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_audit_VanaPhraseCorrectionEvent_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -70,11 +75,16 @@ public final class VanaEventsProto {
       "VanaFlagSummaryEvent.FlagSummaryR\rflagSu" +
       "mmaries\032Q\n\013FlagSummary\022%\n\016transcript_sid" +
       "\030\001 \001(\003R\rtranscriptSid\022\033\n\tflag_sids\030\002 \003(\003" +
-      "R\010flagSidsB\234\001\n#com.tcn.cloud.api.api.com" +
-      "mons.auditB\017VanaEventsProtoP\001\242\002\003ACA\252\002\021Ap" +
-      "i.Commons.Audit\312\002\021Api\\Commons\\Audit\342\002\035Ap" +
-      "i\\Commons\\Audit\\GPBMetadata\352\002\023Api::Commo" +
-      "ns::Auditb\006proto3"
+      "R\010flagSids\"\313\001\n\031VanaPhraseCorrectionEvent" +
+      "\022\035\n\nstart_time\030\001 \001(\rR\tstartTime\022\031\n\010end_t" +
+      "ime\030\002 \001(\rR\007endTime\022#\n\roriginal_text\030\003 \001(" +
+      "\tR\014originalText\022#\n\rproposed_text\030\004 \001(\tR\014" +
+      "proposedText\022\020\n\003url\030\005 \001(\tR\003url\022\030\n\007channe" +
+      "l\030\006 \001(\rR\007channelB\234\001\n#com.tcn.cloud.api.a" +
+      "pi.commons.auditB\017VanaEventsProtoP\001\242\002\003AC" +
+      "A\252\002\021Api.Commons.Audit\312\002\021Api\\Commons\\Audi" +
+      "t\342\002\035Api\\Commons\\Audit\\GPBMetadata\352\002\023Api:" +
+      ":Commons::Auditb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -111,6 +121,12 @@ public final class VanaEventsProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_audit_VanaFlagSummaryEvent_FlagSummary_descriptor,
         new java.lang.String[] { "TranscriptSid", "FlagSids", });
+    internal_static_api_commons_audit_VanaPhraseCorrectionEvent_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_api_commons_audit_VanaPhraseCorrectionEvent_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_audit_VanaPhraseCorrectionEvent_descriptor,
+        new java.lang.String[] { "StartTime", "EndTime", "OriginalText", "ProposedText", "Url", "Channel", });
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 
