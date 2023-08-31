@@ -232,6 +232,37 @@ public final class DeliveryApiGrpc {
     return getDeleteTransferConfigMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq,
+      com.tcn.cloud.api.api.v1alpha1.delivery.GetDeliveryDefinitionByNameRes> getGetDeliveryDefinitionByNameMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetDeliveryDefinitionByName",
+      requestType = com.tcn.cloud.api.api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.delivery.GetDeliveryDefinitionByNameRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq,
+      com.tcn.cloud.api.api.v1alpha1.delivery.GetDeliveryDefinitionByNameRes> getGetDeliveryDefinitionByNameMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq, com.tcn.cloud.api.api.v1alpha1.delivery.GetDeliveryDefinitionByNameRes> getGetDeliveryDefinitionByNameMethod;
+    if ((getGetDeliveryDefinitionByNameMethod = DeliveryApiGrpc.getGetDeliveryDefinitionByNameMethod) == null) {
+      synchronized (DeliveryApiGrpc.class) {
+        if ((getGetDeliveryDefinitionByNameMethod = DeliveryApiGrpc.getGetDeliveryDefinitionByNameMethod) == null) {
+          DeliveryApiGrpc.getGetDeliveryDefinitionByNameMethod = getGetDeliveryDefinitionByNameMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq, com.tcn.cloud.api.api.v1alpha1.delivery.GetDeliveryDefinitionByNameRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetDeliveryDefinitionByName"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.delivery.GetDeliveryDefinitionByNameRes.getDefaultInstance()))
+              .setSchemaDescriptor(new DeliveryApiMethodDescriptorSupplier("GetDeliveryDefinitionByName"))
+              .build();
+        }
+      }
+    }
+    return getGetDeliveryDefinitionByNameMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigReq,
       com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigRes> getGetTransferConfigMethod;
 
@@ -610,6 +641,13 @@ public final class DeliveryApiGrpc {
 
     /**
      */
+    default void getDeliveryDefinitionByName(com.tcn.cloud.api.api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.delivery.GetDeliveryDefinitionByNameRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetDeliveryDefinitionByNameMethod(), responseObserver);
+    }
+
+    /**
+     */
     default void getTransferConfig(com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetTransferConfigMethod(), responseObserver);
@@ -757,6 +795,14 @@ public final class DeliveryApiGrpc {
 
     /**
      */
+    public void getDeliveryDefinitionByName(com.tcn.cloud.api.api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.delivery.GetDeliveryDefinitionByNameRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetDeliveryDefinitionByNameMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
     public void getTransferConfig(com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigRes> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -891,6 +937,13 @@ public final class DeliveryApiGrpc {
     public com.tcn.cloud.api.api.v1alpha1.delivery.DeleteTransferConfigRes deleteTransferConfig(com.tcn.cloud.api.api.v1alpha1.delivery.DeleteTransferConfigReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteTransferConfigMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.tcn.cloud.api.api.v1alpha1.delivery.GetDeliveryDefinitionByNameRes getDeliveryDefinitionByName(com.tcn.cloud.api.api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetDeliveryDefinitionByNameMethod(), getCallOptions(), request);
     }
 
     /**
@@ -1031,6 +1084,14 @@ public final class DeliveryApiGrpc {
 
     /**
      */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.delivery.GetDeliveryDefinitionByNameRes> getDeliveryDefinitionByName(
+        com.tcn.cloud.api.api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetDeliveryDefinitionByNameMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigRes> getTransferConfig(
         com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigReq request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -1109,15 +1170,16 @@ public final class DeliveryApiGrpc {
   private static final int METHODID_LIST_TRANSFER_CONFIGS_BY_CREDENTIAL_ID = 4;
   private static final int METHODID_UPDATE_TRANSFER_CONFIG = 5;
   private static final int METHODID_DELETE_TRANSFER_CONFIG = 6;
-  private static final int METHODID_GET_TRANSFER_CONFIG = 7;
-  private static final int METHODID_GET_TRANSFER_CONFIG_BY_NAME = 8;
-  private static final int METHODID_LIST_HISTORY = 9;
-  private static final int METHODID_LIST_HISTORY_BY_TRANSFER_CONFIG = 10;
-  private static final int METHODID_LIST_CREDENTIALS = 11;
-  private static final int METHODID_GET_CREDENTIAL = 12;
-  private static final int METHODID_CREATE_CREDENTIAL = 13;
-  private static final int METHODID_DELETE_CREDENTIAL = 14;
-  private static final int METHODID_UPDATE_CREDENTIAL = 15;
+  private static final int METHODID_GET_DELIVERY_DEFINITION_BY_NAME = 7;
+  private static final int METHODID_GET_TRANSFER_CONFIG = 8;
+  private static final int METHODID_GET_TRANSFER_CONFIG_BY_NAME = 9;
+  private static final int METHODID_LIST_HISTORY = 10;
+  private static final int METHODID_LIST_HISTORY_BY_TRANSFER_CONFIG = 11;
+  private static final int METHODID_LIST_CREDENTIALS = 12;
+  private static final int METHODID_GET_CREDENTIAL = 13;
+  private static final int METHODID_CREATE_CREDENTIAL = 14;
+  private static final int METHODID_DELETE_CREDENTIAL = 15;
+  private static final int METHODID_UPDATE_CREDENTIAL = 16;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1163,6 +1225,10 @@ public final class DeliveryApiGrpc {
         case METHODID_DELETE_TRANSFER_CONFIG:
           serviceImpl.deleteTransferConfig((com.tcn.cloud.api.api.v1alpha1.delivery.DeleteTransferConfigReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.delivery.DeleteTransferConfigRes>) responseObserver);
+          break;
+        case METHODID_GET_DELIVERY_DEFINITION_BY_NAME:
+          serviceImpl.getDeliveryDefinitionByName((com.tcn.cloud.api.api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.delivery.GetDeliveryDefinitionByNameRes>) responseObserver);
           break;
         case METHODID_GET_TRANSFER_CONFIG:
           serviceImpl.getTransferConfig((com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigReq) request,
@@ -1267,6 +1333,13 @@ public final class DeliveryApiGrpc {
               com.tcn.cloud.api.api.v1alpha1.delivery.DeleteTransferConfigReq,
               com.tcn.cloud.api.api.v1alpha1.delivery.DeleteTransferConfigRes>(
                 service, METHODID_DELETE_TRANSFER_CONFIG)))
+        .addMethod(
+          getGetDeliveryDefinitionByNameMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq,
+              com.tcn.cloud.api.api.v1alpha1.delivery.GetDeliveryDefinitionByNameRes>(
+                service, METHODID_GET_DELIVERY_DEFINITION_BY_NAME)))
         .addMethod(
           getGetTransferConfigMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -1385,6 +1458,7 @@ public final class DeliveryApiGrpc {
               .addMethod(getListTransferConfigsByCredentialIDMethod())
               .addMethod(getUpdateTransferConfigMethod())
               .addMethod(getDeleteTransferConfigMethod())
+              .addMethod(getGetDeliveryDefinitionByNameMethod())
               .addMethod(getGetTransferConfigMethod())
               .addMethod(getGetTransferConfigByNameMethod())
               .addMethod(getListHistoryMethod())
