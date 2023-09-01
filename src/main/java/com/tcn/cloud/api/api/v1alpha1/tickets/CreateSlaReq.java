@@ -168,6 +168,32 @@ private static final long serialVersionUID = 0L;
     return interval_;
   }
 
+  public static final int DURATION_FIELD_NUMBER = 5;
+  private com.tcn.cloud.api.api.commons.Duration duration_;
+  /**
+   * <code>.api.commons.Duration duration = 5 [json_name = "duration"];</code>
+   * @return Whether the duration field is set.
+   */
+  @java.lang.Override
+  public boolean hasDuration() {
+    return duration_ != null;
+  }
+  /**
+   * <code>.api.commons.Duration duration = 5 [json_name = "duration"];</code>
+   * @return The duration.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.Duration getDuration() {
+    return duration_ == null ? com.tcn.cloud.api.api.commons.Duration.getDefaultInstance() : duration_;
+  }
+  /**
+   * <code>.api.commons.Duration duration = 5 [json_name = "duration"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.DurationOrBuilder getDurationOrBuilder() {
+    return duration_ == null ? com.tcn.cloud.api.api.commons.Duration.getDefaultInstance() : duration_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -194,6 +220,9 @@ private static final long serialVersionUID = 0L;
     if (interval_ != 0L) {
       output.writeInt64(4, interval_);
     }
+    if (duration_ != null) {
+      output.writeMessage(5, getDuration());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -216,6 +245,10 @@ private static final long serialVersionUID = 0L;
     if (interval_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(4, interval_);
+    }
+    if (duration_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5, getDuration());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -240,6 +273,11 @@ private static final long serialVersionUID = 0L;
         .equals(other.getDescription())) return false;
     if (getInterval()
         != other.getInterval()) return false;
+    if (hasDuration() != other.hasDuration()) return false;
+    if (hasDuration()) {
+      if (!getDuration()
+          .equals(other.getDuration())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -261,6 +299,10 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + INTERVAL_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getInterval());
+    if (hasDuration()) {
+      hash = (37 * hash) + DURATION_FIELD_NUMBER;
+      hash = (53 * hash) + getDuration().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -400,6 +442,11 @@ private static final long serialVersionUID = 0L;
       name_ = "";
       description_ = "";
       interval_ = 0L;
+      duration_ = null;
+      if (durationBuilder_ != null) {
+        durationBuilder_.dispose();
+        durationBuilder_ = null;
+      }
       return this;
     }
 
@@ -444,6 +491,11 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.interval_ = interval_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.duration_ = durationBuilder_ == null
+            ? duration_
+            : durationBuilder_.build();
       }
     }
 
@@ -507,6 +559,9 @@ private static final long serialVersionUID = 0L;
       if (other.getInterval() != 0L) {
         setInterval(other.getInterval());
       }
+      if (other.hasDuration()) {
+        mergeDuration(other.getDuration());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -553,6 +608,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000008;
               break;
             } // case 32
+            case 42: {
+              input.readMessage(
+                  getDurationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -840,6 +902,125 @@ private static final long serialVersionUID = 0L;
       interval_ = 0L;
       onChanged();
       return this;
+    }
+
+    private com.tcn.cloud.api.api.commons.Duration duration_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.Duration, com.tcn.cloud.api.api.commons.Duration.Builder, com.tcn.cloud.api.api.commons.DurationOrBuilder> durationBuilder_;
+    /**
+     * <code>.api.commons.Duration duration = 5 [json_name = "duration"];</code>
+     * @return Whether the duration field is set.
+     */
+    public boolean hasDuration() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>.api.commons.Duration duration = 5 [json_name = "duration"];</code>
+     * @return The duration.
+     */
+    public com.tcn.cloud.api.api.commons.Duration getDuration() {
+      if (durationBuilder_ == null) {
+        return duration_ == null ? com.tcn.cloud.api.api.commons.Duration.getDefaultInstance() : duration_;
+      } else {
+        return durationBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.api.commons.Duration duration = 5 [json_name = "duration"];</code>
+     */
+    public Builder setDuration(com.tcn.cloud.api.api.commons.Duration value) {
+      if (durationBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        duration_ = value;
+      } else {
+        durationBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.Duration duration = 5 [json_name = "duration"];</code>
+     */
+    public Builder setDuration(
+        com.tcn.cloud.api.api.commons.Duration.Builder builderForValue) {
+      if (durationBuilder_ == null) {
+        duration_ = builderForValue.build();
+      } else {
+        durationBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.Duration duration = 5 [json_name = "duration"];</code>
+     */
+    public Builder mergeDuration(com.tcn.cloud.api.api.commons.Duration value) {
+      if (durationBuilder_ == null) {
+        if (((bitField0_ & 0x00000010) != 0) &&
+          duration_ != null &&
+          duration_ != com.tcn.cloud.api.api.commons.Duration.getDefaultInstance()) {
+          getDurationBuilder().mergeFrom(value);
+        } else {
+          duration_ = value;
+        }
+      } else {
+        durationBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.Duration duration = 5 [json_name = "duration"];</code>
+     */
+    public Builder clearDuration() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      duration_ = null;
+      if (durationBuilder_ != null) {
+        durationBuilder_.dispose();
+        durationBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.Duration duration = 5 [json_name = "duration"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.Duration.Builder getDurationBuilder() {
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return getDurationFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.Duration duration = 5 [json_name = "duration"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.DurationOrBuilder getDurationOrBuilder() {
+      if (durationBuilder_ != null) {
+        return durationBuilder_.getMessageOrBuilder();
+      } else {
+        return duration_ == null ?
+            com.tcn.cloud.api.api.commons.Duration.getDefaultInstance() : duration_;
+      }
+    }
+    /**
+     * <code>.api.commons.Duration duration = 5 [json_name = "duration"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.Duration, com.tcn.cloud.api.api.commons.Duration.Builder, com.tcn.cloud.api.api.commons.DurationOrBuilder> 
+        getDurationFieldBuilder() {
+      if (durationBuilder_ == null) {
+        durationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.Duration, com.tcn.cloud.api.api.commons.Duration.Builder, com.tcn.cloud.api.api.commons.DurationOrBuilder>(
+                getDuration(),
+                getParentForChildren(),
+                isClean());
+        duration_ = null;
+      }
+      return durationBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
