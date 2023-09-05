@@ -4191,8 +4191,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Generates a regression forecast using the provided &#64;regression_template.
-     * It will generate forecast intervals for the skill profiles sids in &#64;skill_profile_sids_to_forecast,
-     * if the list is empty or has no valid skill profile sids, it will generate and save forecasts for all active skill profiles.
+     * It will generate forecast intervals for the skill profiles sids in &#64;skill_profile_sids_to_forecast.
      * It will use the client's saved forecasting test range as the start datetime and the forecast range as the end datetime of the forecasted data.
      * It will use the client's saved interval width to divide the resulting forecast intervals.
      * Required permissions:
@@ -6350,8 +6349,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Generates a regression forecast using the provided &#64;regression_template.
-     * It will generate forecast intervals for the skill profiles sids in &#64;skill_profile_sids_to_forecast,
-     * if the list is empty or has no valid skill profile sids, it will generate and save forecasts for all active skill profiles.
+     * It will generate forecast intervals for the skill profiles sids in &#64;skill_profile_sids_to_forecast.
      * It will use the client's saved forecasting test range as the start datetime and the forecast range as the end datetime of the forecasted data.
      * It will use the client's saved interval width to divide the resulting forecast intervals.
      * Required permissions:
@@ -8560,8 +8558,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Generates a regression forecast using the provided &#64;regression_template.
-     * It will generate forecast intervals for the skill profiles sids in &#64;skill_profile_sids_to_forecast,
-     * if the list is empty or has no valid skill profile sids, it will generate and save forecasts for all active skill profiles.
+     * It will generate forecast intervals for the skill profiles sids in &#64;skill_profile_sids_to_forecast.
      * It will use the client's saved forecasting test range as the start datetime and the forecast range as the end datetime of the forecasted data.
      * It will use the client's saved interval width to divide the resulting forecast intervals.
      * Required permissions:
