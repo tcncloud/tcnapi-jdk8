@@ -78,7 +78,6 @@ public interface BuildRegressionForecastByIntervalWithStatsReqOrBuilder extends
   /**
    * <pre>
    * IDs of the skill profiles to generate the forecasts,
-   * if no IDs are sent, it will forecast for all active skill profiles.
    * </pre>
    *
    * <code>repeated int64 skill_profile_sids_to_forecast = 6 [json_name = "skillProfileSidsToForecast"];</code>
@@ -88,7 +87,6 @@ public interface BuildRegressionForecastByIntervalWithStatsReqOrBuilder extends
   /**
    * <pre>
    * IDs of the skill profiles to generate the forecasts,
-   * if no IDs are sent, it will forecast for all active skill profiles.
    * </pre>
    *
    * <code>repeated int64 skill_profile_sids_to_forecast = 6 [json_name = "skillProfileSidsToForecast"];</code>
@@ -98,7 +96,6 @@ public interface BuildRegressionForecastByIntervalWithStatsReqOrBuilder extends
   /**
    * <pre>
    * IDs of the skill profiles to generate the forecasts,
-   * if no IDs are sent, it will forecast for all active skill profiles.
    * </pre>
    *
    * <code>repeated int64 skill_profile_sids_to_forecast = 6 [json_name = "skillProfileSidsToForecast"];</code>
