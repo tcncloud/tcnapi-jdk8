@@ -63,10 +63,6 @@ public enum EventType
    */
   VOICE_ANALYTICS_FLAG_SUMMARY(104),
   /**
-   * <code>VOICE_ANALYTICS_PHRASE_CORRECTION = 105;</code>
-   */
-  VOICE_ANALYTICS_PHRASE_CORRECTION(105),
-  /**
    * <pre>
    * Omnichannel Dashboard Application IDs
    * </pre>
@@ -771,10 +767,6 @@ public enum EventType
    */
   public static final int VOICE_ANALYTICS_FLAG_SUMMARY_VALUE = 104;
   /**
-   * <code>VOICE_ANALYTICS_PHRASE_CORRECTION = 105;</code>
-   */
-  public static final int VOICE_ANALYTICS_PHRASE_CORRECTION_VALUE = 105;
-  /**
    * <pre>
    * Omnichannel Dashboard Application IDs
    * </pre>
@@ -1469,7 +1461,6 @@ public enum EventType
       case 102: return VOICE_ANALYTICS_FLAG_NEEDS_REVIEW;
       case 103: return VOICE_ANALYTICS_BILLING_REPORT;
       case 104: return VOICE_ANALYTICS_FLAG_SUMMARY;
-      case 105: return VOICE_ANALYTICS_PHRASE_CORRECTION;
       case 300: return OMNICHANNEL;
       case 301: return OMNICHANNEL_PROJECT;
       case 302: return OMNICHANNEL_CAMPAIGN;

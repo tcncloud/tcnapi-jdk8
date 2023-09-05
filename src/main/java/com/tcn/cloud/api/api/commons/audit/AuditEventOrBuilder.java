@@ -239,21 +239,6 @@ public interface AuditEventOrBuilder extends
   com.tcn.cloud.api.api.commons.audit.VanaFlagSummaryEventOrBuilder getVanaFlagSummaryEventOrBuilder();
 
   /**
-   * <code>.api.commons.audit.VanaPhraseCorrectionEvent vana_phrase_correction_event = 204 [json_name = "vanaPhraseCorrectionEvent"];</code>
-   * @return Whether the vanaPhraseCorrectionEvent field is set.
-   */
-  boolean hasVanaPhraseCorrectionEvent();
-  /**
-   * <code>.api.commons.audit.VanaPhraseCorrectionEvent vana_phrase_correction_event = 204 [json_name = "vanaPhraseCorrectionEvent"];</code>
-   * @return The vanaPhraseCorrectionEvent.
-   */
-  com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent getVanaPhraseCorrectionEvent();
-  /**
-   * <code>.api.commons.audit.VanaPhraseCorrectionEvent vana_phrase_correction_event = 204 [json_name = "vanaPhraseCorrectionEvent"];</code>
-   */
-  com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEventOrBuilder getVanaPhraseCorrectionEventOrBuilder();
-
-  /**
    * <pre>
    *&#47; Omnichannel Events class 300
    * </pre>

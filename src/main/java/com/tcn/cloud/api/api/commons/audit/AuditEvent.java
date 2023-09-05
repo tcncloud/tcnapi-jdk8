@@ -58,7 +58,6 @@ private static final long serialVersionUID = 0L;
     VANA_FLAG_REVIEW_EVENT(201),
     VANA_BILLING_REPORT_EVENT(202),
     VANA_FLAG_SUMMARY_EVENT(203),
-    VANA_PHRASE_CORRECTION_EVENT(204),
     OMNICHANNEL_CREATE_PROJECT_EVENT(300),
     OMNICHANNEL_CREATE_CAMPAIGN_EVENT(301),
     OMNICHANNEL_DAILY_PROJECT_REPORT_EVENT(302),
@@ -162,7 +161,6 @@ private static final long serialVersionUID = 0L;
         case 201: return VANA_FLAG_REVIEW_EVENT;
         case 202: return VANA_BILLING_REPORT_EVENT;
         case 203: return VANA_FLAG_SUMMARY_EVENT;
-        case 204: return VANA_PHRASE_CORRECTION_EVENT;
         case 300: return OMNICHANNEL_CREATE_PROJECT_EVENT;
         case 301: return OMNICHANNEL_CREATE_CAMPAIGN_EVENT;
         case 302: return OMNICHANNEL_DAILY_PROJECT_REPORT_EVENT;
@@ -694,37 +692,6 @@ private static final long serialVersionUID = 0L;
        return (com.tcn.cloud.api.api.commons.audit.VanaFlagSummaryEvent) event_;
     }
     return com.tcn.cloud.api.api.commons.audit.VanaFlagSummaryEvent.getDefaultInstance();
-  }
-
-  public static final int VANA_PHRASE_CORRECTION_EVENT_FIELD_NUMBER = 204;
-  /**
-   * <code>.api.commons.audit.VanaPhraseCorrectionEvent vana_phrase_correction_event = 204 [json_name = "vanaPhraseCorrectionEvent"];</code>
-   * @return Whether the vanaPhraseCorrectionEvent field is set.
-   */
-  @java.lang.Override
-  public boolean hasVanaPhraseCorrectionEvent() {
-    return eventCase_ == 204;
-  }
-  /**
-   * <code>.api.commons.audit.VanaPhraseCorrectionEvent vana_phrase_correction_event = 204 [json_name = "vanaPhraseCorrectionEvent"];</code>
-   * @return The vanaPhraseCorrectionEvent.
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent getVanaPhraseCorrectionEvent() {
-    if (eventCase_ == 204) {
-       return (com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent) event_;
-    }
-    return com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent.getDefaultInstance();
-  }
-  /**
-   * <code>.api.commons.audit.VanaPhraseCorrectionEvent vana_phrase_correction_event = 204 [json_name = "vanaPhraseCorrectionEvent"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEventOrBuilder getVanaPhraseCorrectionEventOrBuilder() {
-    if (eventCase_ == 204) {
-       return (com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent) event_;
-    }
-    return com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent.getDefaultInstance();
   }
 
   public static final int OMNICHANNEL_CREATE_PROJECT_EVENT_FIELD_NUMBER = 300;
@@ -4236,9 +4203,6 @@ private static final long serialVersionUID = 0L;
     if (eventCase_ == 203) {
       output.writeMessage(203, (com.tcn.cloud.api.api.commons.audit.VanaFlagSummaryEvent) event_);
     }
-    if (eventCase_ == 204) {
-      output.writeMessage(204, (com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent) event_);
-    }
     if (eventCase_ == 300) {
       output.writeMessage(300, (com.tcn.cloud.api.api.commons.audit.OmnichannelCreateProjectEvent) event_);
     }
@@ -4530,10 +4494,6 @@ private static final long serialVersionUID = 0L;
     if (eventCase_ == 203) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(203, (com.tcn.cloud.api.api.commons.audit.VanaFlagSummaryEvent) event_);
-    }
-    if (eventCase_ == 204) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(204, (com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent) event_);
     }
     if (eventCase_ == 300) {
       size += com.google.protobuf.CodedOutputStream
@@ -4910,10 +4870,6 @@ private static final long serialVersionUID = 0L;
         if (!getVanaFlagSummaryEvent()
             .equals(other.getVanaFlagSummaryEvent())) return false;
         break;
-      case 204:
-        if (!getVanaPhraseCorrectionEvent()
-            .equals(other.getVanaPhraseCorrectionEvent())) return false;
-        break;
       case 300:
         if (!getOmnichannelCreateProjectEvent()
             .equals(other.getOmnichannelCreateProjectEvent())) return false;
@@ -5286,10 +5242,6 @@ private static final long serialVersionUID = 0L;
       case 203:
         hash = (37 * hash) + VANA_FLAG_SUMMARY_EVENT_FIELD_NUMBER;
         hash = (53 * hash) + getVanaFlagSummaryEvent().hashCode();
-        break;
-      case 204:
-        hash = (37 * hash) + VANA_PHRASE_CORRECTION_EVENT_FIELD_NUMBER;
-        hash = (53 * hash) + getVanaPhraseCorrectionEvent().hashCode();
         break;
       case 300:
         hash = (37 * hash) + OMNICHANNEL_CREATE_PROJECT_EVENT_FIELD_NUMBER;
@@ -5780,9 +5732,6 @@ private static final long serialVersionUID = 0L;
       if (vanaFlagSummaryEventBuilder_ != null) {
         vanaFlagSummaryEventBuilder_.clear();
       }
-      if (vanaPhraseCorrectionEventBuilder_ != null) {
-        vanaPhraseCorrectionEventBuilder_.clear();
-      }
       if (omnichannelCreateProjectEventBuilder_ != null) {
         omnichannelCreateProjectEventBuilder_.clear();
       }
@@ -6116,10 +6065,6 @@ private static final long serialVersionUID = 0L;
       if (eventCase_ == 203 &&
           vanaFlagSummaryEventBuilder_ != null) {
         result.event_ = vanaFlagSummaryEventBuilder_.build();
-      }
-      if (eventCase_ == 204 &&
-          vanaPhraseCorrectionEventBuilder_ != null) {
-        result.event_ = vanaPhraseCorrectionEventBuilder_.build();
       }
       if (eventCase_ == 300 &&
           omnichannelCreateProjectEventBuilder_ != null) {
@@ -6536,10 +6481,6 @@ private static final long serialVersionUID = 0L;
         }
         case VANA_FLAG_SUMMARY_EVENT: {
           mergeVanaFlagSummaryEvent(other.getVanaFlagSummaryEvent());
-          break;
-        }
-        case VANA_PHRASE_CORRECTION_EVENT: {
-          mergeVanaPhraseCorrectionEvent(other.getVanaPhraseCorrectionEvent());
           break;
         }
         case OMNICHANNEL_CREATE_PROJECT_EVENT: {
@@ -6963,13 +6904,6 @@ private static final long serialVersionUID = 0L;
               eventCase_ = 203;
               break;
             } // case 1626
-            case 1634: {
-              input.readMessage(
-                  getVanaPhraseCorrectionEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 204;
-              break;
-            } // case 1634
             case 2402: {
               input.readMessage(
                   getOmnichannelCreateProjectEventFieldBuilder().getBuilder(),
@@ -8962,148 +8896,6 @@ private static final long serialVersionUID = 0L;
       eventCase_ = 203;
       onChanged();
       return vanaFlagSummaryEventBuilder_;
-    }
-
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent, com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent.Builder, com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEventOrBuilder> vanaPhraseCorrectionEventBuilder_;
-    /**
-     * <code>.api.commons.audit.VanaPhraseCorrectionEvent vana_phrase_correction_event = 204 [json_name = "vanaPhraseCorrectionEvent"];</code>
-     * @return Whether the vanaPhraseCorrectionEvent field is set.
-     */
-    @java.lang.Override
-    public boolean hasVanaPhraseCorrectionEvent() {
-      return eventCase_ == 204;
-    }
-    /**
-     * <code>.api.commons.audit.VanaPhraseCorrectionEvent vana_phrase_correction_event = 204 [json_name = "vanaPhraseCorrectionEvent"];</code>
-     * @return The vanaPhraseCorrectionEvent.
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent getVanaPhraseCorrectionEvent() {
-      if (vanaPhraseCorrectionEventBuilder_ == null) {
-        if (eventCase_ == 204) {
-          return (com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent) event_;
-        }
-        return com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent.getDefaultInstance();
-      } else {
-        if (eventCase_ == 204) {
-          return vanaPhraseCorrectionEventBuilder_.getMessage();
-        }
-        return com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.api.commons.audit.VanaPhraseCorrectionEvent vana_phrase_correction_event = 204 [json_name = "vanaPhraseCorrectionEvent"];</code>
-     */
-    public Builder setVanaPhraseCorrectionEvent(com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent value) {
-      if (vanaPhraseCorrectionEventBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        event_ = value;
-        onChanged();
-      } else {
-        vanaPhraseCorrectionEventBuilder_.setMessage(value);
-      }
-      eventCase_ = 204;
-      return this;
-    }
-    /**
-     * <code>.api.commons.audit.VanaPhraseCorrectionEvent vana_phrase_correction_event = 204 [json_name = "vanaPhraseCorrectionEvent"];</code>
-     */
-    public Builder setVanaPhraseCorrectionEvent(
-        com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent.Builder builderForValue) {
-      if (vanaPhraseCorrectionEventBuilder_ == null) {
-        event_ = builderForValue.build();
-        onChanged();
-      } else {
-        vanaPhraseCorrectionEventBuilder_.setMessage(builderForValue.build());
-      }
-      eventCase_ = 204;
-      return this;
-    }
-    /**
-     * <code>.api.commons.audit.VanaPhraseCorrectionEvent vana_phrase_correction_event = 204 [json_name = "vanaPhraseCorrectionEvent"];</code>
-     */
-    public Builder mergeVanaPhraseCorrectionEvent(com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent value) {
-      if (vanaPhraseCorrectionEventBuilder_ == null) {
-        if (eventCase_ == 204 &&
-            event_ != com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent.getDefaultInstance()) {
-          event_ = com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent.newBuilder((com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent) event_)
-              .mergeFrom(value).buildPartial();
-        } else {
-          event_ = value;
-        }
-        onChanged();
-      } else {
-        if (eventCase_ == 204) {
-          vanaPhraseCorrectionEventBuilder_.mergeFrom(value);
-        } else {
-          vanaPhraseCorrectionEventBuilder_.setMessage(value);
-        }
-      }
-      eventCase_ = 204;
-      return this;
-    }
-    /**
-     * <code>.api.commons.audit.VanaPhraseCorrectionEvent vana_phrase_correction_event = 204 [json_name = "vanaPhraseCorrectionEvent"];</code>
-     */
-    public Builder clearVanaPhraseCorrectionEvent() {
-      if (vanaPhraseCorrectionEventBuilder_ == null) {
-        if (eventCase_ == 204) {
-          eventCase_ = 0;
-          event_ = null;
-          onChanged();
-        }
-      } else {
-        if (eventCase_ == 204) {
-          eventCase_ = 0;
-          event_ = null;
-        }
-        vanaPhraseCorrectionEventBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <code>.api.commons.audit.VanaPhraseCorrectionEvent vana_phrase_correction_event = 204 [json_name = "vanaPhraseCorrectionEvent"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent.Builder getVanaPhraseCorrectionEventBuilder() {
-      return getVanaPhraseCorrectionEventFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.api.commons.audit.VanaPhraseCorrectionEvent vana_phrase_correction_event = 204 [json_name = "vanaPhraseCorrectionEvent"];</code>
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEventOrBuilder getVanaPhraseCorrectionEventOrBuilder() {
-      if ((eventCase_ == 204) && (vanaPhraseCorrectionEventBuilder_ != null)) {
-        return vanaPhraseCorrectionEventBuilder_.getMessageOrBuilder();
-      } else {
-        if (eventCase_ == 204) {
-          return (com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent) event_;
-        }
-        return com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.api.commons.audit.VanaPhraseCorrectionEvent vana_phrase_correction_event = 204 [json_name = "vanaPhraseCorrectionEvent"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent, com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent.Builder, com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEventOrBuilder> 
-        getVanaPhraseCorrectionEventFieldBuilder() {
-      if (vanaPhraseCorrectionEventBuilder_ == null) {
-        if (!(eventCase_ == 204)) {
-          event_ = com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent.getDefaultInstance();
-        }
-        vanaPhraseCorrectionEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent, com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent.Builder, com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEventOrBuilder>(
-                (com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent) event_,
-                getParentForChildren(),
-                isClean());
-        event_ = null;
-      }
-      eventCase_ = 204;
-      onChanged();
-      return vanaPhraseCorrectionEventBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
