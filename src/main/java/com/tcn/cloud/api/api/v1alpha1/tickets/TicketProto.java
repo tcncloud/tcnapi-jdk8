@@ -318,59 +318,60 @@ public final class TicketProto {
       "tReq\022!\n\nticket_sid\030\001 \001(\003B\0020\001R\tticketSid\022" +
       "\030\n\007comment\030\002 \001(\tR\007comment\022#\n\013from_status" +
       "\030\003 \001(\003B\0020\001R\nfromStatus\"-\n\016CloseTicketRes" +
-      "\022\033\n\tis_status\030\001 \001(\010R\010isStatus\"}\n\014CreateS" +
-      "laReq\022\033\n\007sla_sid\030\001 \001(\003B\0020\001R\006slaSid\022\022\n\004na" +
-      "me\030\002 \001(\tR\004name\022 \n\013description\030\003 \001(\tR\013des" +
-      "cription\022\032\n\010interval\030\004 \001(\003R\010interval\"8\n\014" +
-      "CreateSlaRes\022(\n\003sla\030\001 \001(\0132\026.api.commons." +
-      "TicketSlaR\003sla\"\014\n\nListSlaReq\"D\n\nListSlaR" +
-      "es\0226\n\nticketsSla\030\001 \003(\0132\026.api.commons.Tic" +
-      "ketSlaR\nticketsSla\"H\n\014UpdateSlaReq\022\033\n\007sl" +
-      "a_sid\030\001 \001(\003B\0020\001R\006slaSid\022\033\n\tis_active\030\002 \001" +
-      "(\003R\010isActive\"F\n\014UpdateSlaRes\0226\n\nticketsS" +
-      "la\030\001 \001(\0132\026.api.commons.TicketSlaR\nticket" +
-      "sSla\"\025\n\023ListSlaConditionReq\"U\n\023ListSlaCo" +
-      "nditionRes\022>\n\014slaCondition\030\001 \003(\0132\032.api.c" +
-      "ommons.SlaConditionsR\014slaCondition\"\223\001\n\017R" +
-      "eplyCommentReq\022#\n\013comment_sid\030\001 \001(\003B\0020\001R" +
-      "\ncommentSid\022!\n\nticket_sid\030\002 \001(\003B\0020\001R\ttic" +
-      "ketSid\022\024\n\005reply\030\003 \001(\tR\005reply\022\"\n\rcreated_" +
-      "by_id\030\004 \001(\tR\013createdById\"R\n\017ReplyComment" +
-      "Res\022?\n\nis_created\030\001 \001(\0132 .api.commons.Co" +
-      "nfirmReplyCommentR\tisCreated\"8\n\023CreateSe" +
-      "lfAssignReq\022!\n\nticket_sid\030\001 \001(\003B\0020\001R\ttic" +
-      "ketSid\"6\n\023CreateSelfAssignRes\022\037\n\013is_assi" +
-      "gned\030\001 \001(\010R\nisAssigned\"\023\n\021ListSkillsRequ" +
-      "est\"I\n\022ListSkillsResponse\0223\n\006skills\030\001 \003(" +
-      "\0132\033.api.v1alpha1.tickets.SkillR\006skills\"6" +
-      "\n\005Skill\022\031\n\010skill_id\030\001 \001(\tR\007skillId\022\022\n\004na" +
-      "me\030\002 \001(\tR\004name\"\022\n\020ListUsersRequest\"E\n\021Li" +
-      "stUsersResponse\0220\n\005users\030\001 \003(\0132\032.api.v1a" +
-      "lpha1.tickets.UserR\005users\"[\n\004User\022\027\n\007use" +
-      "r_id\030\001 \001(\tR\006userId\022\035\n\nfirst_name\030\002 \001(\tR\t" +
-      "firstName\022\033\n\tlast_name\030\003 \001(\tR\010lastName\"[" +
-      "\n\031CreateTicketActionRequest\022>\n\rticket_ac" +
-      "tion\030\001 \001(\0132\031.api.commons.TicketActionR\014t" +
-      "icketAction\"\\\n\032CreateTicketActionRespons" +
-      "e\022>\n\rticket_action\030\001 \001(\0132\031.api.commons.T" +
-      "icketActionR\014ticketAction\"\203\001\n\030CloseTicke" +
-      "tActionRequest\022,\n\020ticket_action_id\030\001 \001(\003" +
-      "B\0020\001R\016ticketActionId\022\037\n\tticket_id\030\002 \001(\003B" +
-      "\0020\001R\010ticketId\022\030\n\007comment\030\003 \001(\tR\007comment\"" +
-      "8\n\031CloseTicketActionResponse\022\033\n\tis_close" +
-      "d\030\001 \001(\010R\010isClosed\"I\n\031AssignTicketActionR" +
-      "equest\022,\n\020ticket_action_id\030\001 \001(\003B\0020\001R\016ti" +
-      "cketActionId\"=\n\032AssignTicketActionRespon" +
-      "se\022\037\n\013is_assigned\030\001 \001(\010R\nisAssigned\"]\n\031C" +
-      "hangeTicketStatusRequest\022\037\n\tticket_id\030\001 " +
-      "\001(\003B\0020\001R\010ticketId\022\037\n\tstatus_id\030\002 \001(\003B\0020\001" +
-      "R\010statusId\"F\n\032ChangeTicketStatusResponse" +
-      "\022(\n\020is_status_edited\030\001 \001(\010R\016isStatusEdit" +
-      "edB\247\001\n&com.tcn.cloud.api.api.v1alpha1.ti" +
-      "cketsB\013TicketProtoP\001\242\002\003AVT\252\002\024Api.V1alpha" +
-      "1.Tickets\312\002\024Api\\V1alpha1\\Tickets\342\002 Api\\V" +
-      "1alpha1\\Tickets\\GPBMetadata\352\002\026Api::V1alp" +
-      "ha1::Ticketsb\006proto3"
+      "\022\033\n\tis_status\030\001 \001(\010R\010isStatus\"\260\001\n\014Create" +
+      "SlaReq\022\033\n\007sla_sid\030\001 \001(\003B\0020\001R\006slaSid\022\022\n\004n" +
+      "ame\030\002 \001(\tR\004name\022 \n\013description\030\003 \001(\tR\013de" +
+      "scription\022\032\n\010interval\030\004 \001(\003R\010interval\0221\n" +
+      "\010duration\030\005 \001(\0132\025.api.commons.DurationR\010" +
+      "duration\"8\n\014CreateSlaRes\022(\n\003sla\030\001 \001(\0132\026." +
+      "api.commons.TicketSlaR\003sla\"\014\n\nListSlaReq" +
+      "\"D\n\nListSlaRes\0226\n\nticketsSla\030\001 \003(\0132\026.api" +
+      ".commons.TicketSlaR\nticketsSla\"H\n\014Update" +
+      "SlaReq\022\033\n\007sla_sid\030\001 \001(\003B\0020\001R\006slaSid\022\033\n\ti" +
+      "s_active\030\002 \001(\003R\010isActive\"F\n\014UpdateSlaRes" +
+      "\0226\n\nticketsSla\030\001 \001(\0132\026.api.commons.Ticke" +
+      "tSlaR\nticketsSla\"\025\n\023ListSlaConditionReq\"" +
+      "U\n\023ListSlaConditionRes\022>\n\014slaCondition\030\001" +
+      " \003(\0132\032.api.commons.SlaConditionsR\014slaCon" +
+      "dition\"\223\001\n\017ReplyCommentReq\022#\n\013comment_si" +
+      "d\030\001 \001(\003B\0020\001R\ncommentSid\022!\n\nticket_sid\030\002 " +
+      "\001(\003B\0020\001R\tticketSid\022\024\n\005reply\030\003 \001(\tR\005reply" +
+      "\022\"\n\rcreated_by_id\030\004 \001(\tR\013createdById\"R\n\017" +
+      "ReplyCommentRes\022?\n\nis_created\030\001 \001(\0132 .ap" +
+      "i.commons.ConfirmReplyCommentR\tisCreated" +
+      "\"8\n\023CreateSelfAssignReq\022!\n\nticket_sid\030\001 " +
+      "\001(\003B\0020\001R\tticketSid\"6\n\023CreateSelfAssignRe" +
+      "s\022\037\n\013is_assigned\030\001 \001(\010R\nisAssigned\"\023\n\021Li" +
+      "stSkillsRequest\"I\n\022ListSkillsResponse\0223\n" +
+      "\006skills\030\001 \003(\0132\033.api.v1alpha1.tickets.Ski" +
+      "llR\006skills\"6\n\005Skill\022\031\n\010skill_id\030\001 \001(\tR\007s" +
+      "killId\022\022\n\004name\030\002 \001(\tR\004name\"\022\n\020ListUsersR" +
+      "equest\"E\n\021ListUsersResponse\0220\n\005users\030\001 \003" +
+      "(\0132\032.api.v1alpha1.tickets.UserR\005users\"[\n" +
+      "\004User\022\027\n\007user_id\030\001 \001(\tR\006userId\022\035\n\nfirst_" +
+      "name\030\002 \001(\tR\tfirstName\022\033\n\tlast_name\030\003 \001(\t" +
+      "R\010lastName\"[\n\031CreateTicketActionRequest\022" +
+      ">\n\rticket_action\030\001 \001(\0132\031.api.commons.Tic" +
+      "ketActionR\014ticketAction\"\\\n\032CreateTicketA" +
+      "ctionResponse\022>\n\rticket_action\030\001 \001(\0132\031.a" +
+      "pi.commons.TicketActionR\014ticketAction\"\203\001" +
+      "\n\030CloseTicketActionRequest\022,\n\020ticket_act" +
+      "ion_id\030\001 \001(\003B\0020\001R\016ticketActionId\022\037\n\ttick" +
+      "et_id\030\002 \001(\003B\0020\001R\010ticketId\022\030\n\007comment\030\003 \001" +
+      "(\tR\007comment\"8\n\031CloseTicketActionResponse" +
+      "\022\033\n\tis_closed\030\001 \001(\010R\010isClosed\"I\n\031AssignT" +
+      "icketActionRequest\022,\n\020ticket_action_id\030\001" +
+      " \001(\003B\0020\001R\016ticketActionId\"=\n\032AssignTicket" +
+      "ActionResponse\022\037\n\013is_assigned\030\001 \001(\010R\nisA" +
+      "ssigned\"]\n\031ChangeTicketStatusRequest\022\037\n\t" +
+      "ticket_id\030\001 \001(\003B\0020\001R\010ticketId\022\037\n\tstatus_" +
+      "id\030\002 \001(\003B\0020\001R\010statusId\"F\n\032ChangeTicketSt" +
+      "atusResponse\022(\n\020is_status_edited\030\001 \001(\010R\016" +
+      "isStatusEditedB\247\001\n&com.tcn.cloud.api.api" +
+      ".v1alpha1.ticketsB\013TicketProtoP\001\242\002\003AVT\252\002" +
+      "\024Api.V1alpha1.Tickets\312\002\024Api\\V1alpha1\\Tic" +
+      "kets\342\002 Api\\V1alpha1\\Tickets\\GPBMetadata\352" +
+      "\002\026Api::V1alpha1::Ticketsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -516,7 +517,7 @@ public final class TicketProto {
     internal_static_api_v1alpha1_tickets_CreateSlaReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_tickets_CreateSlaReq_descriptor,
-        new java.lang.String[] { "SlaSid", "Name", "Description", "Interval", });
+        new java.lang.String[] { "SlaSid", "Name", "Description", "Interval", "Duration", });
     internal_static_api_v1alpha1_tickets_CreateSlaRes_descriptor =
       getDescriptor().getMessageTypes().get(23);
     internal_static_api_v1alpha1_tickets_CreateSlaRes_fieldAccessorTable = new
