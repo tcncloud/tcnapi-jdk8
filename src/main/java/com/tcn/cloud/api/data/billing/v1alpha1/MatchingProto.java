@@ -14,6 +14,11 @@ public final class MatchingProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_data_billing_v1alpha1_MatchingConfig_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_data_billing_v1alpha1_MatchingConfig_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -24,18 +29,24 @@ public final class MatchingProto {
   static {
     java.lang.String[] descriptorData = {
       "\n$data/billing/v1alpha1/matching.proto\022\025" +
-      "data.billing.v1alpha1*-\n\014MatchingRule\022\035\n" +
-      "\031MATCHING_RULE_UNSPECIFIED\020\000B\256\001\n\'com.tcn" +
-      ".cloud.api.data.billing.v1alpha1B\rMatchi" +
-      "ngProtoP\001\242\002\003DBX\252\002\025Data.Billing.V1alpha1\312" +
-      "\002\025Data\\Billing\\V1alpha1\342\002!Data\\Billing\\V" +
-      "1alpha1\\GPBMetadata\352\002\027Data::Billing::V1a" +
-      "lpha1b\006proto3"
+      "data.billing.v1alpha1\"\020\n\016MatchingConfig*" +
+      "-\n\014MatchingRule\022\035\n\031MATCHING_RULE_UNSPECI" +
+      "FIED\020\000B\256\001\n\'com.tcn.cloud.api.data.billin" +
+      "g.v1alpha1B\rMatchingProtoP\001\242\002\003DBX\252\002\025Data" +
+      ".Billing.V1alpha1\312\002\025Data\\Billing\\V1alpha" +
+      "1\342\002!Data\\Billing\\V1alpha1\\GPBMetadata\352\002\027" +
+      "Data::Billing::V1alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         });
+    internal_static_data_billing_v1alpha1_MatchingConfig_descriptor =
+      getDescriptor().getMessageTypes().get(0);
+    internal_static_data_billing_v1alpha1_MatchingConfig_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_data_billing_v1alpha1_MatchingConfig_descriptor,
+        new java.lang.String[] { });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

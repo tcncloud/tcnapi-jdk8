@@ -133,10 +133,37 @@ public interface RateDefinitionOrBuilder extends
 
   /**
    * <pre>
+   * the matching config for this definition
+   * </pre>
+   *
+   * <code>.data.billing.v1alpha1.MatchingConfig matching_config = 7 [json_name = "matchingConfig"];</code>
+   * @return Whether the matchingConfig field is set.
+   */
+  boolean hasMatchingConfig();
+  /**
+   * <pre>
+   * the matching config for this definition
+   * </pre>
+   *
+   * <code>.data.billing.v1alpha1.MatchingConfig matching_config = 7 [json_name = "matchingConfig"];</code>
+   * @return The matchingConfig.
+   */
+  com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfig getMatchingConfig();
+  /**
+   * <pre>
+   * the matching config for this definition
+   * </pre>
+   *
+   * <code>.data.billing.v1alpha1.MatchingConfig matching_config = 7 [json_name = "matchingConfig"];</code>
+   */
+  com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfigOrBuilder getMatchingConfigOrBuilder();
+
+  /**
+   * <pre>
    * the time the rate definition was created
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp create_time = 7 [json_name = "createTime"];</code>
+   * <code>.google.protobuf.Timestamp create_time = 8 [json_name = "createTime"];</code>
    * @return Whether the createTime field is set.
    */
   boolean hasCreateTime();
@@ -145,7 +172,7 @@ public interface RateDefinitionOrBuilder extends
    * the time the rate definition was created
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp create_time = 7 [json_name = "createTime"];</code>
+   * <code>.google.protobuf.Timestamp create_time = 8 [json_name = "createTime"];</code>
    * @return The createTime.
    */
   com.google.protobuf.Timestamp getCreateTime();
@@ -154,7 +181,7 @@ public interface RateDefinitionOrBuilder extends
    * the time the rate definition was created
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp create_time = 7 [json_name = "createTime"];</code>
+   * <code>.google.protobuf.Timestamp create_time = 8 [json_name = "createTime"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder();
 
@@ -163,7 +190,7 @@ public interface RateDefinitionOrBuilder extends
    * the time the rate definition was last updated
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp update_time = 8 [json_name = "updateTime"];</code>
+   * <code>.google.protobuf.Timestamp update_time = 9 [json_name = "updateTime"];</code>
    * @return Whether the updateTime field is set.
    */
   boolean hasUpdateTime();
@@ -172,7 +199,7 @@ public interface RateDefinitionOrBuilder extends
    * the time the rate definition was last updated
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp update_time = 8 [json_name = "updateTime"];</code>
+   * <code>.google.protobuf.Timestamp update_time = 9 [json_name = "updateTime"];</code>
    * @return The updateTime.
    */
   com.google.protobuf.Timestamp getUpdateTime();
@@ -181,7 +208,7 @@ public interface RateDefinitionOrBuilder extends
    * the time the rate definition was last updated
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp update_time = 8 [json_name = "updateTime"];</code>
+   * <code>.google.protobuf.Timestamp update_time = 9 [json_name = "updateTime"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder();
 }

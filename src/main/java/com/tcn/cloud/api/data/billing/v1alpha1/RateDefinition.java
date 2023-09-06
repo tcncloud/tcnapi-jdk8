@@ -257,14 +257,52 @@ private static final long serialVersionUID = 0L;
     return config_ == null ? com.tcn.cloud.api.data.billing.v1alpha1.RateDefinitionConfig.getDefaultInstance() : config_;
   }
 
-  public static final int CREATE_TIME_FIELD_NUMBER = 7;
+  public static final int MATCHING_CONFIG_FIELD_NUMBER = 7;
+  private com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfig matchingConfig_;
+  /**
+   * <pre>
+   * the matching config for this definition
+   * </pre>
+   *
+   * <code>.data.billing.v1alpha1.MatchingConfig matching_config = 7 [json_name = "matchingConfig"];</code>
+   * @return Whether the matchingConfig field is set.
+   */
+  @java.lang.Override
+  public boolean hasMatchingConfig() {
+    return matchingConfig_ != null;
+  }
+  /**
+   * <pre>
+   * the matching config for this definition
+   * </pre>
+   *
+   * <code>.data.billing.v1alpha1.MatchingConfig matching_config = 7 [json_name = "matchingConfig"];</code>
+   * @return The matchingConfig.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfig getMatchingConfig() {
+    return matchingConfig_ == null ? com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfig.getDefaultInstance() : matchingConfig_;
+  }
+  /**
+   * <pre>
+   * the matching config for this definition
+   * </pre>
+   *
+   * <code>.data.billing.v1alpha1.MatchingConfig matching_config = 7 [json_name = "matchingConfig"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfigOrBuilder getMatchingConfigOrBuilder() {
+    return matchingConfig_ == null ? com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfig.getDefaultInstance() : matchingConfig_;
+  }
+
+  public static final int CREATE_TIME_FIELD_NUMBER = 8;
   private com.google.protobuf.Timestamp createTime_;
   /**
    * <pre>
    * the time the rate definition was created
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp create_time = 7 [json_name = "createTime"];</code>
+   * <code>.google.protobuf.Timestamp create_time = 8 [json_name = "createTime"];</code>
    * @return Whether the createTime field is set.
    */
   @java.lang.Override
@@ -276,7 +314,7 @@ private static final long serialVersionUID = 0L;
    * the time the rate definition was created
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp create_time = 7 [json_name = "createTime"];</code>
+   * <code>.google.protobuf.Timestamp create_time = 8 [json_name = "createTime"];</code>
    * @return The createTime.
    */
   @java.lang.Override
@@ -288,21 +326,21 @@ private static final long serialVersionUID = 0L;
    * the time the rate definition was created
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp create_time = 7 [json_name = "createTime"];</code>
+   * <code>.google.protobuf.Timestamp create_time = 8 [json_name = "createTime"];</code>
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder() {
     return createTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createTime_;
   }
 
-  public static final int UPDATE_TIME_FIELD_NUMBER = 8;
+  public static final int UPDATE_TIME_FIELD_NUMBER = 9;
   private com.google.protobuf.Timestamp updateTime_;
   /**
    * <pre>
    * the time the rate definition was last updated
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp update_time = 8 [json_name = "updateTime"];</code>
+   * <code>.google.protobuf.Timestamp update_time = 9 [json_name = "updateTime"];</code>
    * @return Whether the updateTime field is set.
    */
   @java.lang.Override
@@ -314,7 +352,7 @@ private static final long serialVersionUID = 0L;
    * the time the rate definition was last updated
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp update_time = 8 [json_name = "updateTime"];</code>
+   * <code>.google.protobuf.Timestamp update_time = 9 [json_name = "updateTime"];</code>
    * @return The updateTime.
    */
   @java.lang.Override
@@ -326,7 +364,7 @@ private static final long serialVersionUID = 0L;
    * the time the rate definition was last updated
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp update_time = 8 [json_name = "updateTime"];</code>
+   * <code>.google.protobuf.Timestamp update_time = 9 [json_name = "updateTime"];</code>
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder() {
@@ -365,11 +403,14 @@ private static final long serialVersionUID = 0L;
     if (config_ != null) {
       output.writeMessage(6, getConfig());
     }
+    if (matchingConfig_ != null) {
+      output.writeMessage(7, getMatchingConfig());
+    }
     if (createTime_ != null) {
-      output.writeMessage(7, getCreateTime());
+      output.writeMessage(8, getCreateTime());
     }
     if (updateTime_ != null) {
-      output.writeMessage(8, getUpdateTime());
+      output.writeMessage(9, getUpdateTime());
     }
     getUnknownFields().writeTo(output);
   }
@@ -402,13 +443,17 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, getConfig());
     }
+    if (matchingConfig_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(7, getMatchingConfig());
+    }
     if (createTime_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(7, getCreateTime());
+        .computeMessageSize(8, getCreateTime());
     }
     if (updateTime_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(8, getUpdateTime());
+        .computeMessageSize(9, getUpdateTime());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -436,6 +481,11 @@ private static final long serialVersionUID = 0L;
     if (hasConfig()) {
       if (!getConfig()
           .equals(other.getConfig())) return false;
+    }
+    if (hasMatchingConfig() != other.hasMatchingConfig()) return false;
+    if (hasMatchingConfig()) {
+      if (!getMatchingConfig()
+          .equals(other.getMatchingConfig())) return false;
     }
     if (hasCreateTime() != other.hasCreateTime()) return false;
     if (hasCreateTime()) {
@@ -471,6 +521,10 @@ private static final long serialVersionUID = 0L;
     if (hasConfig()) {
       hash = (37 * hash) + CONFIG_FIELD_NUMBER;
       hash = (53 * hash) + getConfig().hashCode();
+    }
+    if (hasMatchingConfig()) {
+      hash = (37 * hash) + MATCHING_CONFIG_FIELD_NUMBER;
+      hash = (53 * hash) + getMatchingConfig().hashCode();
     }
     if (hasCreateTime()) {
       hash = (37 * hash) + CREATE_TIME_FIELD_NUMBER;
@@ -625,6 +679,11 @@ private static final long serialVersionUID = 0L;
         configBuilder_.dispose();
         configBuilder_ = null;
       }
+      matchingConfig_ = null;
+      if (matchingConfigBuilder_ != null) {
+        matchingConfigBuilder_.dispose();
+        matchingConfigBuilder_ = null;
+      }
       createTime_ = null;
       if (createTimeBuilder_ != null) {
         createTimeBuilder_.dispose();
@@ -689,11 +748,16 @@ private static final long serialVersionUID = 0L;
             : configBuilder_.build();
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.matchingConfig_ = matchingConfigBuilder_ == null
+            ? matchingConfig_
+            : matchingConfigBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
         result.createTime_ = createTimeBuilder_ == null
             ? createTime_
             : createTimeBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00000080) != 0)) {
+      if (((from_bitField0_ & 0x00000100) != 0)) {
         result.updateTime_ = updateTimeBuilder_ == null
             ? updateTime_
             : updateTimeBuilder_.build();
@@ -766,6 +830,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasConfig()) {
         mergeConfig(other.getConfig());
       }
+      if (other.hasMatchingConfig()) {
+        mergeMatchingConfig(other.getMatchingConfig());
+      }
       if (other.hasCreateTime()) {
         mergeCreateTime(other.getCreateTime());
       }
@@ -832,18 +899,25 @@ private static final long serialVersionUID = 0L;
             } // case 50
             case 58: {
               input.readMessage(
-                  getCreateTimeFieldBuilder().getBuilder(),
+                  getMatchingConfigFieldBuilder().getBuilder(),
                   extensionRegistry);
               bitField0_ |= 0x00000040;
               break;
             } // case 58
             case 66: {
               input.readMessage(
-                  getUpdateTimeFieldBuilder().getBuilder(),
+                  getCreateTimeFieldBuilder().getBuilder(),
                   extensionRegistry);
               bitField0_ |= 0x00000080;
               break;
             } // case 66
+            case 74: {
+              input.readMessage(
+                  getUpdateTimeFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 74
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1419,6 +1493,161 @@ private static final long serialVersionUID = 0L;
       return configBuilder_;
     }
 
+    private com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfig matchingConfig_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfig, com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfig.Builder, com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfigOrBuilder> matchingConfigBuilder_;
+    /**
+     * <pre>
+     * the matching config for this definition
+     * </pre>
+     *
+     * <code>.data.billing.v1alpha1.MatchingConfig matching_config = 7 [json_name = "matchingConfig"];</code>
+     * @return Whether the matchingConfig field is set.
+     */
+    public boolean hasMatchingConfig() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <pre>
+     * the matching config for this definition
+     * </pre>
+     *
+     * <code>.data.billing.v1alpha1.MatchingConfig matching_config = 7 [json_name = "matchingConfig"];</code>
+     * @return The matchingConfig.
+     */
+    public com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfig getMatchingConfig() {
+      if (matchingConfigBuilder_ == null) {
+        return matchingConfig_ == null ? com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfig.getDefaultInstance() : matchingConfig_;
+      } else {
+        return matchingConfigBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * the matching config for this definition
+     * </pre>
+     *
+     * <code>.data.billing.v1alpha1.MatchingConfig matching_config = 7 [json_name = "matchingConfig"];</code>
+     */
+    public Builder setMatchingConfig(com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfig value) {
+      if (matchingConfigBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        matchingConfig_ = value;
+      } else {
+        matchingConfigBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the matching config for this definition
+     * </pre>
+     *
+     * <code>.data.billing.v1alpha1.MatchingConfig matching_config = 7 [json_name = "matchingConfig"];</code>
+     */
+    public Builder setMatchingConfig(
+        com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfig.Builder builderForValue) {
+      if (matchingConfigBuilder_ == null) {
+        matchingConfig_ = builderForValue.build();
+      } else {
+        matchingConfigBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the matching config for this definition
+     * </pre>
+     *
+     * <code>.data.billing.v1alpha1.MatchingConfig matching_config = 7 [json_name = "matchingConfig"];</code>
+     */
+    public Builder mergeMatchingConfig(com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfig value) {
+      if (matchingConfigBuilder_ == null) {
+        if (((bitField0_ & 0x00000040) != 0) &&
+          matchingConfig_ != null &&
+          matchingConfig_ != com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfig.getDefaultInstance()) {
+          getMatchingConfigBuilder().mergeFrom(value);
+        } else {
+          matchingConfig_ = value;
+        }
+      } else {
+        matchingConfigBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the matching config for this definition
+     * </pre>
+     *
+     * <code>.data.billing.v1alpha1.MatchingConfig matching_config = 7 [json_name = "matchingConfig"];</code>
+     */
+    public Builder clearMatchingConfig() {
+      bitField0_ = (bitField0_ & ~0x00000040);
+      matchingConfig_ = null;
+      if (matchingConfigBuilder_ != null) {
+        matchingConfigBuilder_.dispose();
+        matchingConfigBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the matching config for this definition
+     * </pre>
+     *
+     * <code>.data.billing.v1alpha1.MatchingConfig matching_config = 7 [json_name = "matchingConfig"];</code>
+     */
+    public com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfig.Builder getMatchingConfigBuilder() {
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return getMatchingConfigFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * the matching config for this definition
+     * </pre>
+     *
+     * <code>.data.billing.v1alpha1.MatchingConfig matching_config = 7 [json_name = "matchingConfig"];</code>
+     */
+    public com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfigOrBuilder getMatchingConfigOrBuilder() {
+      if (matchingConfigBuilder_ != null) {
+        return matchingConfigBuilder_.getMessageOrBuilder();
+      } else {
+        return matchingConfig_ == null ?
+            com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfig.getDefaultInstance() : matchingConfig_;
+      }
+    }
+    /**
+     * <pre>
+     * the matching config for this definition
+     * </pre>
+     *
+     * <code>.data.billing.v1alpha1.MatchingConfig matching_config = 7 [json_name = "matchingConfig"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfig, com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfig.Builder, com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfigOrBuilder> 
+        getMatchingConfigFieldBuilder() {
+      if (matchingConfigBuilder_ == null) {
+        matchingConfigBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfig, com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfig.Builder, com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfigOrBuilder>(
+                getMatchingConfig(),
+                getParentForChildren(),
+                isClean());
+        matchingConfig_ = null;
+      }
+      return matchingConfigBuilder_;
+    }
+
     private com.google.protobuf.Timestamp createTime_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createTimeBuilder_;
@@ -1427,18 +1656,18 @@ private static final long serialVersionUID = 0L;
      * the time the rate definition was created
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp create_time = 7 [json_name = "createTime"];</code>
+     * <code>.google.protobuf.Timestamp create_time = 8 [json_name = "createTime"];</code>
      * @return Whether the createTime field is set.
      */
     public boolean hasCreateTime() {
-      return ((bitField0_ & 0x00000040) != 0);
+      return ((bitField0_ & 0x00000080) != 0);
     }
     /**
      * <pre>
      * the time the rate definition was created
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp create_time = 7 [json_name = "createTime"];</code>
+     * <code>.google.protobuf.Timestamp create_time = 8 [json_name = "createTime"];</code>
      * @return The createTime.
      */
     public com.google.protobuf.Timestamp getCreateTime() {
@@ -1453,7 +1682,7 @@ private static final long serialVersionUID = 0L;
      * the time the rate definition was created
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp create_time = 7 [json_name = "createTime"];</code>
+     * <code>.google.protobuf.Timestamp create_time = 8 [json_name = "createTime"];</code>
      */
     public Builder setCreateTime(com.google.protobuf.Timestamp value) {
       if (createTimeBuilder_ == null) {
@@ -1464,7 +1693,7 @@ private static final long serialVersionUID = 0L;
       } else {
         createTimeBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1473,7 +1702,7 @@ private static final long serialVersionUID = 0L;
      * the time the rate definition was created
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp create_time = 7 [json_name = "createTime"];</code>
+     * <code>.google.protobuf.Timestamp create_time = 8 [json_name = "createTime"];</code>
      */
     public Builder setCreateTime(
         com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -1482,7 +1711,7 @@ private static final long serialVersionUID = 0L;
       } else {
         createTimeBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1491,11 +1720,11 @@ private static final long serialVersionUID = 0L;
      * the time the rate definition was created
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp create_time = 7 [json_name = "createTime"];</code>
+     * <code>.google.protobuf.Timestamp create_time = 8 [json_name = "createTime"];</code>
      */
     public Builder mergeCreateTime(com.google.protobuf.Timestamp value) {
       if (createTimeBuilder_ == null) {
-        if (((bitField0_ & 0x00000040) != 0) &&
+        if (((bitField0_ & 0x00000080) != 0) &&
           createTime_ != null &&
           createTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
           getCreateTimeBuilder().mergeFrom(value);
@@ -1505,7 +1734,7 @@ private static final long serialVersionUID = 0L;
       } else {
         createTimeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1514,10 +1743,10 @@ private static final long serialVersionUID = 0L;
      * the time the rate definition was created
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp create_time = 7 [json_name = "createTime"];</code>
+     * <code>.google.protobuf.Timestamp create_time = 8 [json_name = "createTime"];</code>
      */
     public Builder clearCreateTime() {
-      bitField0_ = (bitField0_ & ~0x00000040);
+      bitField0_ = (bitField0_ & ~0x00000080);
       createTime_ = null;
       if (createTimeBuilder_ != null) {
         createTimeBuilder_.dispose();
@@ -1531,10 +1760,10 @@ private static final long serialVersionUID = 0L;
      * the time the rate definition was created
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp create_time = 7 [json_name = "createTime"];</code>
+     * <code>.google.protobuf.Timestamp create_time = 8 [json_name = "createTime"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getCreateTimeBuilder() {
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000080;
       onChanged();
       return getCreateTimeFieldBuilder().getBuilder();
     }
@@ -1543,7 +1772,7 @@ private static final long serialVersionUID = 0L;
      * the time the rate definition was created
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp create_time = 7 [json_name = "createTime"];</code>
+     * <code>.google.protobuf.Timestamp create_time = 8 [json_name = "createTime"];</code>
      */
     public com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder() {
       if (createTimeBuilder_ != null) {
@@ -1558,7 +1787,7 @@ private static final long serialVersionUID = 0L;
      * the time the rate definition was created
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp create_time = 7 [json_name = "createTime"];</code>
+     * <code>.google.protobuf.Timestamp create_time = 8 [json_name = "createTime"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -1582,18 +1811,18 @@ private static final long serialVersionUID = 0L;
      * the time the rate definition was last updated
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp update_time = 8 [json_name = "updateTime"];</code>
+     * <code>.google.protobuf.Timestamp update_time = 9 [json_name = "updateTime"];</code>
      * @return Whether the updateTime field is set.
      */
     public boolean hasUpdateTime() {
-      return ((bitField0_ & 0x00000080) != 0);
+      return ((bitField0_ & 0x00000100) != 0);
     }
     /**
      * <pre>
      * the time the rate definition was last updated
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp update_time = 8 [json_name = "updateTime"];</code>
+     * <code>.google.protobuf.Timestamp update_time = 9 [json_name = "updateTime"];</code>
      * @return The updateTime.
      */
     public com.google.protobuf.Timestamp getUpdateTime() {
@@ -1608,7 +1837,7 @@ private static final long serialVersionUID = 0L;
      * the time the rate definition was last updated
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp update_time = 8 [json_name = "updateTime"];</code>
+     * <code>.google.protobuf.Timestamp update_time = 9 [json_name = "updateTime"];</code>
      */
     public Builder setUpdateTime(com.google.protobuf.Timestamp value) {
       if (updateTimeBuilder_ == null) {
@@ -1619,7 +1848,7 @@ private static final long serialVersionUID = 0L;
       } else {
         updateTimeBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -1628,7 +1857,7 @@ private static final long serialVersionUID = 0L;
      * the time the rate definition was last updated
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp update_time = 8 [json_name = "updateTime"];</code>
+     * <code>.google.protobuf.Timestamp update_time = 9 [json_name = "updateTime"];</code>
      */
     public Builder setUpdateTime(
         com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -1637,7 +1866,7 @@ private static final long serialVersionUID = 0L;
       } else {
         updateTimeBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -1646,11 +1875,11 @@ private static final long serialVersionUID = 0L;
      * the time the rate definition was last updated
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp update_time = 8 [json_name = "updateTime"];</code>
+     * <code>.google.protobuf.Timestamp update_time = 9 [json_name = "updateTime"];</code>
      */
     public Builder mergeUpdateTime(com.google.protobuf.Timestamp value) {
       if (updateTimeBuilder_ == null) {
-        if (((bitField0_ & 0x00000080) != 0) &&
+        if (((bitField0_ & 0x00000100) != 0) &&
           updateTime_ != null &&
           updateTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
           getUpdateTimeBuilder().mergeFrom(value);
@@ -1660,7 +1889,7 @@ private static final long serialVersionUID = 0L;
       } else {
         updateTimeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -1669,10 +1898,10 @@ private static final long serialVersionUID = 0L;
      * the time the rate definition was last updated
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp update_time = 8 [json_name = "updateTime"];</code>
+     * <code>.google.protobuf.Timestamp update_time = 9 [json_name = "updateTime"];</code>
      */
     public Builder clearUpdateTime() {
-      bitField0_ = (bitField0_ & ~0x00000080);
+      bitField0_ = (bitField0_ & ~0x00000100);
       updateTime_ = null;
       if (updateTimeBuilder_ != null) {
         updateTimeBuilder_.dispose();
@@ -1686,10 +1915,10 @@ private static final long serialVersionUID = 0L;
      * the time the rate definition was last updated
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp update_time = 8 [json_name = "updateTime"];</code>
+     * <code>.google.protobuf.Timestamp update_time = 9 [json_name = "updateTime"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getUpdateTimeBuilder() {
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000100;
       onChanged();
       return getUpdateTimeFieldBuilder().getBuilder();
     }
@@ -1698,7 +1927,7 @@ private static final long serialVersionUID = 0L;
      * the time the rate definition was last updated
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp update_time = 8 [json_name = "updateTime"];</code>
+     * <code>.google.protobuf.Timestamp update_time = 9 [json_name = "updateTime"];</code>
      */
     public com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder() {
       if (updateTimeBuilder_ != null) {
@@ -1713,7 +1942,7 @@ private static final long serialVersionUID = 0L;
      * the time the rate definition was last updated
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp update_time = 8 [json_name = "updateTime"];</code>
+     * <code>.google.protobuf.Timestamp update_time = 9 [json_name = "updateTime"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 

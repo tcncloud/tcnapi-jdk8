@@ -38,7 +38,7 @@ public final class RatesProto {
       "ent_types.proto\032$data/billing/v1alpha1/m" +
       "atching.proto\032#data/billing/v1alpha1/mod" +
       "ules.proto\032\037google/protobuf/timestamp.pr" +
-      "oto\"\376\003\n\016RateDefinition\022,\n\022rate_definitio" +
+      "oto\"\316\004\n\016RateDefinition\022,\n\022rate_definitio" +
       "n_id\030\001 \001(\tR\020rateDefinitionId\022&\n\017billing_" +
       "plan_id\030\002 \001(\tR\rbillingPlanId\022;\n\nevent_ty" +
       "pe\030\003 \001(\0162\034.api.commons.audit.EventTypeR\t" +
@@ -47,9 +47,11 @@ public final class RatesProto {
       "\nconfigType\022H\n\rmatching_rule\030\005 \001(\0162#.dat" +
       "a.billing.v1alpha1.MatchingRuleR\014matchin" +
       "gRule\022C\n\006config\030\006 \001(\0132+.data.billing.v1a" +
-      "lpha1.RateDefinitionConfigR\006config\022;\n\013cr" +
-      "eate_time\030\007 \001(\0132\032.google.protobuf.Timest" +
-      "ampR\ncreateTime\022;\n\013update_time\030\010 \001(\0132\032.g" +
+      "lpha1.RateDefinitionConfigR\006config\022N\n\017ma" +
+      "tching_config\030\007 \001(\0132%.data.billing.v1alp" +
+      "ha1.MatchingConfigR\016matchingConfig\022;\n\013cr" +
+      "eate_time\030\010 \001(\0132\032.google.protobuf.Timest" +
+      "ampR\ncreateTime\022;\n\013update_time\030\t \001(\0132\032.g" +
       "oogle.protobuf.TimestampR\nupdateTime\"\212#\n" +
       "\024RateDefinitionConfig\022R\n\022agent_seats_con" +
       "fig\030\002 \001(\0132\".data.billing.v1alpha1.BasicC" +
@@ -244,7 +246,7 @@ public final class RatesProto {
     internal_static_data_billing_v1alpha1_RateDefinition_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_data_billing_v1alpha1_RateDefinition_descriptor,
-        new java.lang.String[] { "RateDefinitionId", "BillingPlanId", "EventType", "ConfigType", "MatchingRule", "Config", "CreateTime", "UpdateTime", });
+        new java.lang.String[] { "RateDefinitionId", "BillingPlanId", "EventType", "ConfigType", "MatchingRule", "Config", "MatchingConfig", "CreateTime", "UpdateTime", });
     internal_static_data_billing_v1alpha1_RateDefinitionConfig_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_data_billing_v1alpha1_RateDefinitionConfig_fieldAccessorTable = new
