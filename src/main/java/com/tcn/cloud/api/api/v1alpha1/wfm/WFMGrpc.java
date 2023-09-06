@@ -4191,14 +4191,13 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Generates a regression forecast using the provided &#64;regression_template.
-     * It will generate forecast intervals for the skill profiles sids in &#64;skill_profile_sids_to_forecast,
-     * if the list is empty or has no valid skill profile sids, it will generate and save forecasts for all active skill profiles.
+     * It will generate forecast intervals for the skill profiles sids in &#64;skill_profile_sids_to_forecast.
      * It will use the client's saved forecasting test range as the start datetime and the forecast range as the end datetime of the forecasted data.
      * It will use the client's saved interval width to divide the resulting forecast intervals.
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the &#64;regression_template in the request is invalid.
+     *   - grpc.Invalid: no &#64;skill_profile_sids_to_forecast are given or the &#64;regression_template in the request is invalid.
      *   - grpc.Internal: error occurs during the building of the regression forecast.
      * </pre>
      */
@@ -4210,13 +4209,12 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Generates a regression forecast and calculates forecast statistics using the provided &#64;regression_template.
-     * It will generate forecast intervals for the skill profiles sids in &#64;skill_profile_sids_to_forecast,
-     * if the list is empty or has no valid skill profile sids, it will generate and save forecasts for all active skill profiles.
+     * It will generate forecast intervals for the skill profiles sids in &#64;skill_profile_sids_to_forecast.
      * It will use the client's saved forecasting test range as the start datetime and the forecast range as the end datetime of the forecasted data.
      * It will use the client's saved interval width to divide the resulting forecast intervals.
      * The first message received will be the forecast statistics while all subsequent ones will be the forecast intervals.
      * Errors:
-     *   - grpc.Invalid: the &#64;regression_template in the request is invalid.
+     *   - grpc.Invalid: no &#64;skill_profile_sids_to_forecast are given or the &#64;regression_template in the request is invalid.
      *   - grpc.Internal: error occurs either during the when building the forecast or calculating the stats.
      * </pre>
      */
@@ -6350,14 +6348,13 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Generates a regression forecast using the provided &#64;regression_template.
-     * It will generate forecast intervals for the skill profiles sids in &#64;skill_profile_sids_to_forecast,
-     * if the list is empty or has no valid skill profile sids, it will generate and save forecasts for all active skill profiles.
+     * It will generate forecast intervals for the skill profiles sids in &#64;skill_profile_sids_to_forecast.
      * It will use the client's saved forecasting test range as the start datetime and the forecast range as the end datetime of the forecasted data.
      * It will use the client's saved interval width to divide the resulting forecast intervals.
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the &#64;regression_template in the request is invalid.
+     *   - grpc.Invalid: no &#64;skill_profile_sids_to_forecast are given or the &#64;regression_template in the request is invalid.
      *   - grpc.Internal: error occurs during the building of the regression forecast.
      * </pre>
      */
@@ -6370,13 +6367,12 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Generates a regression forecast and calculates forecast statistics using the provided &#64;regression_template.
-     * It will generate forecast intervals for the skill profiles sids in &#64;skill_profile_sids_to_forecast,
-     * if the list is empty or has no valid skill profile sids, it will generate and save forecasts for all active skill profiles.
+     * It will generate forecast intervals for the skill profiles sids in &#64;skill_profile_sids_to_forecast.
      * It will use the client's saved forecasting test range as the start datetime and the forecast range as the end datetime of the forecasted data.
      * It will use the client's saved interval width to divide the resulting forecast intervals.
      * The first message received will be the forecast statistics while all subsequent ones will be the forecast intervals.
      * Errors:
-     *   - grpc.Invalid: the &#64;regression_template in the request is invalid.
+     *   - grpc.Invalid: no &#64;skill_profile_sids_to_forecast are given or the &#64;regression_template in the request is invalid.
      *   - grpc.Internal: error occurs either during the when building the forecast or calculating the stats.
      * </pre>
      */
@@ -8560,14 +8556,13 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Generates a regression forecast using the provided &#64;regression_template.
-     * It will generate forecast intervals for the skill profiles sids in &#64;skill_profile_sids_to_forecast,
-     * if the list is empty or has no valid skill profile sids, it will generate and save forecasts for all active skill profiles.
+     * It will generate forecast intervals for the skill profiles sids in &#64;skill_profile_sids_to_forecast.
      * It will use the client's saved forecasting test range as the start datetime and the forecast range as the end datetime of the forecasted data.
      * It will use the client's saved interval width to divide the resulting forecast intervals.
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the &#64;regression_template in the request is invalid.
+     *   - grpc.Invalid: no &#64;skill_profile_sids_to_forecast are given or the &#64;regression_template in the request is invalid.
      *   - grpc.Internal: error occurs during the building of the regression forecast.
      * </pre>
      */
@@ -8580,13 +8575,12 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Generates a regression forecast and calculates forecast statistics using the provided &#64;regression_template.
-     * It will generate forecast intervals for the skill profiles sids in &#64;skill_profile_sids_to_forecast,
-     * if the list is empty or has no valid skill profile sids, it will generate and save forecasts for all active skill profiles.
+     * It will generate forecast intervals for the skill profiles sids in &#64;skill_profile_sids_to_forecast.
      * It will use the client's saved forecasting test range as the start datetime and the forecast range as the end datetime of the forecasted data.
      * It will use the client's saved interval width to divide the resulting forecast intervals.
      * The first message received will be the forecast statistics while all subsequent ones will be the forecast intervals.
      * Errors:
-     *   - grpc.Invalid: the &#64;regression_template in the request is invalid.
+     *   - grpc.Invalid: no &#64;skill_profile_sids_to_forecast are given or the &#64;regression_template in the request is invalid.
      *   - grpc.Internal: error occurs either during the when building the forecast or calculating the stats.
      * </pre>
      */

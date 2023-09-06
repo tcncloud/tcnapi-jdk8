@@ -85,13 +85,16 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * ID of the skill profile that this interval belongs to.
+   * Deprecated: use skill_profile_category instead.
    * </pre>
    *
-   * <code>int64 skill_profile_sid = 2 [json_name = "skillProfileSid"];</code>
+   * <code>int64 skill_profile_sid = 2 [json_name = "skillProfileSid", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.HistoricalDataInterval.skill_profile_sid is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=2678
    * @return The skillProfileSid.
    */
   @java.lang.Override
-  public long getSkillProfileSid() {
+  @java.lang.Deprecated public long getSkillProfileSid() {
     return skillProfileSid_;
   }
 
@@ -483,6 +486,44 @@ private static final long serialVersionUID = 0L;
     return originalTotalAbandonedCalls_;
   }
 
+  public static final int SKILL_PROFILE_CATEGORY_FIELD_NUMBER = 16;
+  private com.tcn.cloud.api.api.commons.SkillProfileCategory skillProfileCategory_;
+  /**
+   * <pre>
+   * Skill profile category that the interval belongs to.
+   * </pre>
+   *
+   * <code>.api.commons.SkillProfileCategory skill_profile_category = 16 [json_name = "skillProfileCategory"];</code>
+   * @return Whether the skillProfileCategory field is set.
+   */
+  @java.lang.Override
+  public boolean hasSkillProfileCategory() {
+    return skillProfileCategory_ != null;
+  }
+  /**
+   * <pre>
+   * Skill profile category that the interval belongs to.
+   * </pre>
+   *
+   * <code>.api.commons.SkillProfileCategory skill_profile_category = 16 [json_name = "skillProfileCategory"];</code>
+   * @return The skillProfileCategory.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.SkillProfileCategory getSkillProfileCategory() {
+    return skillProfileCategory_ == null ? com.tcn.cloud.api.api.commons.SkillProfileCategory.getDefaultInstance() : skillProfileCategory_;
+  }
+  /**
+   * <pre>
+   * Skill profile category that the interval belongs to.
+   * </pre>
+   *
+   * <code>.api.commons.SkillProfileCategory skill_profile_category = 16 [json_name = "skillProfileCategory"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.SkillProfileCategoryOrBuilder getSkillProfileCategoryOrBuilder() {
+    return skillProfileCategory_ == null ? com.tcn.cloud.api.api.commons.SkillProfileCategory.getDefaultInstance() : skillProfileCategory_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -541,6 +582,9 @@ private static final long serialVersionUID = 0L;
     }
     if (originalTotalAbandonedCalls_ != 0) {
       output.writeInt32(15, originalTotalAbandonedCalls_);
+    }
+    if (skillProfileCategory_ != null) {
+      output.writeMessage(16, getSkillProfileCategory());
     }
     getUnknownFields().writeTo(output);
   }
@@ -610,6 +654,10 @@ private static final long serialVersionUID = 0L;
     if (originalTotalAbandonedCalls_ != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(15, originalTotalAbandonedCalls_);
+    }
+    if (skillProfileCategory_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(16, getSkillProfileCategory());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -683,6 +731,11 @@ private static final long serialVersionUID = 0L;
         != other.getOriginalTotalCalls()) return false;
     if (getOriginalTotalAbandonedCalls()
         != other.getOriginalTotalAbandonedCalls()) return false;
+    if (hasSkillProfileCategory() != other.hasSkillProfileCategory()) return false;
+    if (hasSkillProfileCategory()) {
+      if (!getSkillProfileCategory()
+          .equals(other.getSkillProfileCategory())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -744,6 +797,10 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getOriginalTotalCalls();
     hash = (37 * hash) + ORIGINAL_TOTAL_ABANDONED_CALLS_FIELD_NUMBER;
     hash = (53 * hash) + getOriginalTotalAbandonedCalls();
+    if (hasSkillProfileCategory()) {
+      hash = (37 * hash) + SKILL_PROFILE_CATEGORY_FIELD_NUMBER;
+      hash = (53 * hash) + getSkillProfileCategory().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -930,6 +987,11 @@ private static final long serialVersionUID = 0L;
       }
       originalTotalCalls_ = 0;
       originalTotalAbandonedCalls_ = 0;
+      skillProfileCategory_ = null;
+      if (skillProfileCategoryBuilder_ != null) {
+        skillProfileCategoryBuilder_.dispose();
+        skillProfileCategoryBuilder_ = null;
+      }
       return this;
     }
 
@@ -1026,6 +1088,11 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00004000) != 0)) {
         result.originalTotalAbandonedCalls_ = originalTotalAbandonedCalls_;
       }
+      if (((from_bitField0_ & 0x00008000) != 0)) {
+        result.skillProfileCategory_ = skillProfileCategoryBuilder_ == null
+            ? skillProfileCategory_
+            : skillProfileCategoryBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -1116,6 +1183,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.getOriginalTotalAbandonedCalls() != 0) {
         setOriginalTotalAbandonedCalls(other.getOriginalTotalAbandonedCalls());
+      }
+      if (other.hasSkillProfileCategory()) {
+        mergeSkillProfileCategory(other.getSkillProfileCategory());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -1236,6 +1306,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00004000;
               break;
             } // case 120
+            case 130: {
+              input.readMessage(
+                  getSkillProfileCategoryFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00008000;
+              break;
+            } // case 130
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1412,25 +1489,31 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * ID of the skill profile that this interval belongs to.
+     * Deprecated: use skill_profile_category instead.
      * </pre>
      *
-     * <code>int64 skill_profile_sid = 2 [json_name = "skillProfileSid"];</code>
+     * <code>int64 skill_profile_sid = 2 [json_name = "skillProfileSid", deprecated = true];</code>
+     * @deprecated api.v1alpha1.wfm.HistoricalDataInterval.skill_profile_sid is deprecated.
+     *     See api/v1alpha1/wfm/wfm.proto;l=2678
      * @return The skillProfileSid.
      */
     @java.lang.Override
-    public long getSkillProfileSid() {
+    @java.lang.Deprecated public long getSkillProfileSid() {
       return skillProfileSid_;
     }
     /**
      * <pre>
      * ID of the skill profile that this interval belongs to.
+     * Deprecated: use skill_profile_category instead.
      * </pre>
      *
-     * <code>int64 skill_profile_sid = 2 [json_name = "skillProfileSid"];</code>
+     * <code>int64 skill_profile_sid = 2 [json_name = "skillProfileSid", deprecated = true];</code>
+     * @deprecated api.v1alpha1.wfm.HistoricalDataInterval.skill_profile_sid is deprecated.
+     *     See api/v1alpha1/wfm/wfm.proto;l=2678
      * @param value The skillProfileSid to set.
      * @return This builder for chaining.
      */
-    public Builder setSkillProfileSid(long value) {
+    @java.lang.Deprecated public Builder setSkillProfileSid(long value) {
 
       skillProfileSid_ = value;
       bitField0_ |= 0x00000002;
@@ -1440,12 +1523,15 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * ID of the skill profile that this interval belongs to.
+     * Deprecated: use skill_profile_category instead.
      * </pre>
      *
-     * <code>int64 skill_profile_sid = 2 [json_name = "skillProfileSid"];</code>
+     * <code>int64 skill_profile_sid = 2 [json_name = "skillProfileSid", deprecated = true];</code>
+     * @deprecated api.v1alpha1.wfm.HistoricalDataInterval.skill_profile_sid is deprecated.
+     *     See api/v1alpha1/wfm/wfm.proto;l=2678
      * @return This builder for chaining.
      */
-    public Builder clearSkillProfileSid() {
+    @java.lang.Deprecated public Builder clearSkillProfileSid() {
       bitField0_ = (bitField0_ & ~0x00000002);
       skillProfileSid_ = 0L;
       onChanged();
@@ -2937,6 +3023,161 @@ private static final long serialVersionUID = 0L;
       originalTotalAbandonedCalls_ = 0;
       onChanged();
       return this;
+    }
+
+    private com.tcn.cloud.api.api.commons.SkillProfileCategory skillProfileCategory_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.SkillProfileCategory, com.tcn.cloud.api.api.commons.SkillProfileCategory.Builder, com.tcn.cloud.api.api.commons.SkillProfileCategoryOrBuilder> skillProfileCategoryBuilder_;
+    /**
+     * <pre>
+     * Skill profile category that the interval belongs to.
+     * </pre>
+     *
+     * <code>.api.commons.SkillProfileCategory skill_profile_category = 16 [json_name = "skillProfileCategory"];</code>
+     * @return Whether the skillProfileCategory field is set.
+     */
+    public boolean hasSkillProfileCategory() {
+      return ((bitField0_ & 0x00008000) != 0);
+    }
+    /**
+     * <pre>
+     * Skill profile category that the interval belongs to.
+     * </pre>
+     *
+     * <code>.api.commons.SkillProfileCategory skill_profile_category = 16 [json_name = "skillProfileCategory"];</code>
+     * @return The skillProfileCategory.
+     */
+    public com.tcn.cloud.api.api.commons.SkillProfileCategory getSkillProfileCategory() {
+      if (skillProfileCategoryBuilder_ == null) {
+        return skillProfileCategory_ == null ? com.tcn.cloud.api.api.commons.SkillProfileCategory.getDefaultInstance() : skillProfileCategory_;
+      } else {
+        return skillProfileCategoryBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Skill profile category that the interval belongs to.
+     * </pre>
+     *
+     * <code>.api.commons.SkillProfileCategory skill_profile_category = 16 [json_name = "skillProfileCategory"];</code>
+     */
+    public Builder setSkillProfileCategory(com.tcn.cloud.api.api.commons.SkillProfileCategory value) {
+      if (skillProfileCategoryBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        skillProfileCategory_ = value;
+      } else {
+        skillProfileCategoryBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00008000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Skill profile category that the interval belongs to.
+     * </pre>
+     *
+     * <code>.api.commons.SkillProfileCategory skill_profile_category = 16 [json_name = "skillProfileCategory"];</code>
+     */
+    public Builder setSkillProfileCategory(
+        com.tcn.cloud.api.api.commons.SkillProfileCategory.Builder builderForValue) {
+      if (skillProfileCategoryBuilder_ == null) {
+        skillProfileCategory_ = builderForValue.build();
+      } else {
+        skillProfileCategoryBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00008000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Skill profile category that the interval belongs to.
+     * </pre>
+     *
+     * <code>.api.commons.SkillProfileCategory skill_profile_category = 16 [json_name = "skillProfileCategory"];</code>
+     */
+    public Builder mergeSkillProfileCategory(com.tcn.cloud.api.api.commons.SkillProfileCategory value) {
+      if (skillProfileCategoryBuilder_ == null) {
+        if (((bitField0_ & 0x00008000) != 0) &&
+          skillProfileCategory_ != null &&
+          skillProfileCategory_ != com.tcn.cloud.api.api.commons.SkillProfileCategory.getDefaultInstance()) {
+          getSkillProfileCategoryBuilder().mergeFrom(value);
+        } else {
+          skillProfileCategory_ = value;
+        }
+      } else {
+        skillProfileCategoryBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00008000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Skill profile category that the interval belongs to.
+     * </pre>
+     *
+     * <code>.api.commons.SkillProfileCategory skill_profile_category = 16 [json_name = "skillProfileCategory"];</code>
+     */
+    public Builder clearSkillProfileCategory() {
+      bitField0_ = (bitField0_ & ~0x00008000);
+      skillProfileCategory_ = null;
+      if (skillProfileCategoryBuilder_ != null) {
+        skillProfileCategoryBuilder_.dispose();
+        skillProfileCategoryBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Skill profile category that the interval belongs to.
+     * </pre>
+     *
+     * <code>.api.commons.SkillProfileCategory skill_profile_category = 16 [json_name = "skillProfileCategory"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.SkillProfileCategory.Builder getSkillProfileCategoryBuilder() {
+      bitField0_ |= 0x00008000;
+      onChanged();
+      return getSkillProfileCategoryFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Skill profile category that the interval belongs to.
+     * </pre>
+     *
+     * <code>.api.commons.SkillProfileCategory skill_profile_category = 16 [json_name = "skillProfileCategory"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.SkillProfileCategoryOrBuilder getSkillProfileCategoryOrBuilder() {
+      if (skillProfileCategoryBuilder_ != null) {
+        return skillProfileCategoryBuilder_.getMessageOrBuilder();
+      } else {
+        return skillProfileCategory_ == null ?
+            com.tcn.cloud.api.api.commons.SkillProfileCategory.getDefaultInstance() : skillProfileCategory_;
+      }
+    }
+    /**
+     * <pre>
+     * Skill profile category that the interval belongs to.
+     * </pre>
+     *
+     * <code>.api.commons.SkillProfileCategory skill_profile_category = 16 [json_name = "skillProfileCategory"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.SkillProfileCategory, com.tcn.cloud.api.api.commons.SkillProfileCategory.Builder, com.tcn.cloud.api.api.commons.SkillProfileCategoryOrBuilder> 
+        getSkillProfileCategoryFieldBuilder() {
+      if (skillProfileCategoryBuilder_ == null) {
+        skillProfileCategoryBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.SkillProfileCategory, com.tcn.cloud.api.api.commons.SkillProfileCategory.Builder, com.tcn.cloud.api.api.commons.SkillProfileCategoryOrBuilder>(
+                getSkillProfileCategory(),
+                getParentForChildren(),
+                isClean());
+        skillProfileCategory_ = null;
+      }
+      return skillProfileCategoryBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
