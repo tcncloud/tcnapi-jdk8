@@ -87,22 +87,6 @@ private static final long serialVersionUID = 0L;
     return includeAgentGroups_;
   }
 
-  public static final int AGENT_GROUP_SCHEDULE_SCENARIO_SID_FIELD_NUMBER = 4;
-  private long agentGroupScheduleScenarioSid_ = 0L;
-  /**
-   * <pre>
-   * Indicates the schedule scenario that returned &#64;agent_groups belong to.
-   * Does not effect which &#64;wfm_agents are returned.
-   * </pre>
-   *
-   * <code>int64 agent_group_schedule_scenario_sid = 4 [json_name = "agentGroupScheduleScenarioSid"];</code>
-   * @return The agentGroupScheduleScenarioSid.
-   */
-  @java.lang.Override
-  public long getAgentGroupScheduleScenarioSid() {
-    return agentGroupScheduleScenarioSid_;
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -126,9 +110,6 @@ private static final long serialVersionUID = 0L;
     if (includeAgentGroups_ != false) {
       output.writeBool(3, includeAgentGroups_);
     }
-    if (agentGroupScheduleScenarioSid_ != 0L) {
-      output.writeInt64(4, agentGroupScheduleScenarioSid_);
-    }
     getUnknownFields().writeTo(output);
   }
 
@@ -149,10 +130,6 @@ private static final long serialVersionUID = 0L;
     if (includeAgentGroups_ != false) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(3, includeAgentGroups_);
-    }
-    if (agentGroupScheduleScenarioSid_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(4, agentGroupScheduleScenarioSid_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -175,8 +152,6 @@ private static final long serialVersionUID = 0L;
         != other.getIncludeSkillProficiencies()) return false;
     if (getIncludeAgentGroups()
         != other.getIncludeAgentGroups()) return false;
-    if (getAgentGroupScheduleScenarioSid()
-        != other.getAgentGroupScheduleScenarioSid()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -197,9 +172,6 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + INCLUDE_AGENT_GROUPS_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getIncludeAgentGroups());
-    hash = (37 * hash) + AGENT_GROUP_SCHEDULE_SCENARIO_SID_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getAgentGroupScheduleScenarioSid());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -338,7 +310,6 @@ private static final long serialVersionUID = 0L;
       includeInactive_ = false;
       includeSkillProficiencies_ = false;
       includeAgentGroups_ = false;
-      agentGroupScheduleScenarioSid_ = 0L;
       return this;
     }
 
@@ -380,9 +351,6 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.includeAgentGroups_ = includeAgentGroups_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.agentGroupScheduleScenarioSid_ = agentGroupScheduleScenarioSid_;
       }
     }
 
@@ -439,9 +407,6 @@ private static final long serialVersionUID = 0L;
       if (other.getIncludeAgentGroups() != false) {
         setIncludeAgentGroups(other.getIncludeAgentGroups());
       }
-      if (other.getAgentGroupScheduleScenarioSid() != 0L) {
-        setAgentGroupScheduleScenarioSid(other.getAgentGroupScheduleScenarioSid());
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -483,11 +448,6 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 24
-            case 32: {
-              agentGroupScheduleScenarioSid_ = input.readInt64();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 32
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -633,53 +593,6 @@ private static final long serialVersionUID = 0L;
     public Builder clearIncludeAgentGroups() {
       bitField0_ = (bitField0_ & ~0x00000004);
       includeAgentGroups_ = false;
-      onChanged();
-      return this;
-    }
-
-    private long agentGroupScheduleScenarioSid_ ;
-    /**
-     * <pre>
-     * Indicates the schedule scenario that returned &#64;agent_groups belong to.
-     * Does not effect which &#64;wfm_agents are returned.
-     * </pre>
-     *
-     * <code>int64 agent_group_schedule_scenario_sid = 4 [json_name = "agentGroupScheduleScenarioSid"];</code>
-     * @return The agentGroupScheduleScenarioSid.
-     */
-    @java.lang.Override
-    public long getAgentGroupScheduleScenarioSid() {
-      return agentGroupScheduleScenarioSid_;
-    }
-    /**
-     * <pre>
-     * Indicates the schedule scenario that returned &#64;agent_groups belong to.
-     * Does not effect which &#64;wfm_agents are returned.
-     * </pre>
-     *
-     * <code>int64 agent_group_schedule_scenario_sid = 4 [json_name = "agentGroupScheduleScenarioSid"];</code>
-     * @param value The agentGroupScheduleScenarioSid to set.
-     * @return This builder for chaining.
-     */
-    public Builder setAgentGroupScheduleScenarioSid(long value) {
-
-      agentGroupScheduleScenarioSid_ = value;
-      bitField0_ |= 0x00000008;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Indicates the schedule scenario that returned &#64;agent_groups belong to.
-     * Does not effect which &#64;wfm_agents are returned.
-     * </pre>
-     *
-     * <code>int64 agent_group_schedule_scenario_sid = 4 [json_name = "agentGroupScheduleScenarioSid"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearAgentGroupScheduleScenarioSid() {
-      bitField0_ = (bitField0_ & ~0x00000008);
-      agentGroupScheduleScenarioSid_ = 0L;
       onChanged();
       return this;
     }
