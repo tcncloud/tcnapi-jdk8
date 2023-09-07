@@ -36,32 +36,35 @@ public final class InvoicesProto {
       "\n$data/billing/v1alpha1/invoices.proto\022\025" +
       "data.billing.v1alpha1\032$data/billing/v1al" +
       "pha1/products.proto\032\037google/protobuf/tim" +
-      "estamp.proto\"\252\002\n\007Invoice\022\035\n\ninvoice_id\030\001" +
-      " \001(\tR\tinvoiceId\022\025\n\006org_id\030\002 \001(\tR\005orgId\022#" +
-      "\n\rbilling_cycle\030\003 \001(\tR\014billingCycle\022;\n\013c" +
-      "reate_time\030\004 \001(\0132\032.google.protobuf.Times" +
-      "tampR\ncreateTime\022;\n\013update_time\030\005 \001(\0132\032." +
-      "google.protobuf.TimestampR\nupdateTime\0228\n" +
-      "\005items\030\006 \003(\0132\".data.billing.v1alpha1.Inv" +
-      "oiceItemR\005items\022\020\n\003url\030\007 \001(\tR\003url\"\236\002\n\013In" +
-      "voiceItem\022&\n\017invoice_item_id\030\001 \001(\tR\rinvo" +
-      "iceItemId\022\035\n\ninvoice_id\030\002 \001(\tR\tinvoiceId" +
-      "\0228\n\007product\030\003 \001(\0162\036.data.billing.v1alpha" +
-      "1.ProductR\007product\022\024\n\005price\030\004 \001(\001R\005price" +
-      "\022;\n\013create_time\030\005 \001(\0132\032.google.protobuf." +
-      "TimestampR\ncreateTime\022;\n\013update_time\030\006 \001" +
-      "(\0132\032.google.protobuf.TimestampR\nupdateTi" +
-      "meB\256\001\n\'com.tcn.cloud.api.data.billing.v1" +
-      "alpha1B\rInvoicesProtoP\001\242\002\003DBX\252\002\025Data.Bil" +
-      "ling.V1alpha1\312\002\025Data\\Billing\\V1alpha1\342\002!" +
-      "Data\\Billing\\V1alpha1\\GPBMetadata\352\002\027Data" +
-      "::Billing::V1alpha1b\006proto3"
+      "estamp.proto\032\036google/protobuf/wrappers.p" +
+      "roto\"\310\002\n\007Invoice\022\035\n\ninvoice_id\030\001 \001(\tR\tin" +
+      "voiceId\022\025\n\006org_id\030\002 \001(\tR\005orgId\022#\n\rbillin" +
+      "g_cycle\030\003 \001(\tR\014billingCycle\022;\n\013create_ti" +
+      "me\030\004 \001(\0132\032.google.protobuf.TimestampR\ncr" +
+      "eateTime\022;\n\013update_time\030\005 \001(\0132\032.google.p" +
+      "rotobuf.TimestampR\nupdateTime\0228\n\005items\030\006" +
+      " \003(\0132\".data.billing.v1alpha1.InvoiceItem" +
+      "R\005items\022.\n\003url\030\007 \001(\0132\034.google.protobuf.S" +
+      "tringValueR\003url\"\236\002\n\013InvoiceItem\022&\n\017invoi" +
+      "ce_item_id\030\001 \001(\tR\rinvoiceItemId\022\035\n\ninvoi" +
+      "ce_id\030\002 \001(\tR\tinvoiceId\0228\n\007product\030\003 \001(\0162" +
+      "\036.data.billing.v1alpha1.ProductR\007product" +
+      "\022\024\n\005price\030\004 \001(\001R\005price\022;\n\013create_time\030\005 " +
+      "\001(\0132\032.google.protobuf.TimestampR\ncreateT" +
+      "ime\022;\n\013update_time\030\006 \001(\0132\032.google.protob" +
+      "uf.TimestampR\nupdateTimeB\256\001\n\'com.tcn.clo" +
+      "ud.api.data.billing.v1alpha1B\rInvoicesPr" +
+      "otoP\001\242\002\003DBX\252\002\025Data.Billing.V1alpha1\312\002\025Da" +
+      "ta\\Billing\\V1alpha1\342\002!Data\\Billing\\V1alp" +
+      "ha1\\GPBMetadata\352\002\027Data::Billing::V1alpha" +
+      "1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.tcn.cloud.api.data.billing.v1alpha1.ProductsProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
+          com.google.protobuf.WrappersProto.getDescriptor(),
         });
     internal_static_data_billing_v1alpha1_Invoice_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -77,6 +80,7 @@ public final class InvoicesProto {
         new java.lang.String[] { "InvoiceItemId", "InvoiceId", "Product", "Price", "CreateTime", "UpdateTime", });
     com.tcn.cloud.api.data.billing.v1alpha1.ProductsProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
+    com.google.protobuf.WrappersProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

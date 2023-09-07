@@ -175,18 +175,25 @@ public interface InvoiceOrBuilder extends
    * the url to download the invoice
    * </pre>
    *
-   * <code>string url = 7 [json_name = "url"];</code>
-   * @return The url.
+   * <code>.google.protobuf.StringValue url = 7 [json_name = "url"];</code>
+   * @return Whether the url field is set.
    */
-  java.lang.String getUrl();
+  boolean hasUrl();
   /**
    * <pre>
    * the url to download the invoice
    * </pre>
    *
-   * <code>string url = 7 [json_name = "url"];</code>
-   * @return The bytes for url.
+   * <code>.google.protobuf.StringValue url = 7 [json_name = "url"];</code>
+   * @return The url.
    */
-  com.google.protobuf.ByteString
-      getUrlBytes();
+  com.google.protobuf.StringValue getUrl();
+  /**
+   * <pre>
+   * the url to download the invoice
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue url = 7 [json_name = "url"];</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getUrlOrBuilder();
 }

@@ -25,7 +25,6 @@ private static final long serialVersionUID = 0L;
     orgId_ = "";
     billingCycle_ = "";
     items_ = java.util.Collections.emptyList();
-    url_ = "";
   }
 
   @java.lang.Override
@@ -332,50 +331,41 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int URL_FIELD_NUMBER = 7;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object url_ = "";
+  private com.google.protobuf.StringValue url_;
   /**
    * <pre>
    * the url to download the invoice
    * </pre>
    *
-   * <code>string url = 7 [json_name = "url"];</code>
-   * @return The url.
+   * <code>.google.protobuf.StringValue url = 7 [json_name = "url"];</code>
+   * @return Whether the url field is set.
    */
   @java.lang.Override
-  public java.lang.String getUrl() {
-    java.lang.Object ref = url_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      url_ = s;
-      return s;
-    }
+  public boolean hasUrl() {
+    return url_ != null;
   }
   /**
    * <pre>
    * the url to download the invoice
    * </pre>
    *
-   * <code>string url = 7 [json_name = "url"];</code>
-   * @return The bytes for url.
+   * <code>.google.protobuf.StringValue url = 7 [json_name = "url"];</code>
+   * @return The url.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
-      getUrlBytes() {
-    java.lang.Object ref = url_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      url_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
+  public com.google.protobuf.StringValue getUrl() {
+    return url_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : url_;
+  }
+  /**
+   * <pre>
+   * the url to download the invoice
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue url = 7 [json_name = "url"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.StringValueOrBuilder getUrlOrBuilder() {
+    return url_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : url_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -410,8 +400,8 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < items_.size(); i++) {
       output.writeMessage(6, items_.get(i));
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 7, url_);
+    if (url_ != null) {
+      output.writeMessage(7, getUrl());
     }
     getUnknownFields().writeTo(output);
   }
@@ -443,8 +433,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, items_.get(i));
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, url_);
+    if (url_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(7, getUrl());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -479,8 +470,11 @@ private static final long serialVersionUID = 0L;
     }
     if (!getItemsList()
         .equals(other.getItemsList())) return false;
-    if (!getUrl()
-        .equals(other.getUrl())) return false;
+    if (hasUrl() != other.hasUrl()) return false;
+    if (hasUrl()) {
+      if (!getUrl()
+          .equals(other.getUrl())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -510,8 +504,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + ITEMS_FIELD_NUMBER;
       hash = (53 * hash) + getItemsList().hashCode();
     }
-    hash = (37 * hash) + URL_FIELD_NUMBER;
-    hash = (53 * hash) + getUrl().hashCode();
+    if (hasUrl()) {
+      hash = (37 * hash) + URL_FIELD_NUMBER;
+      hash = (53 * hash) + getUrl().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -668,7 +664,11 @@ private static final long serialVersionUID = 0L;
         itemsBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000020);
-      url_ = "";
+      url_ = null;
+      if (urlBuilder_ != null) {
+        urlBuilder_.dispose();
+        urlBuilder_ = null;
+      }
       return this;
     }
 
@@ -735,7 +735,9 @@ private static final long serialVersionUID = 0L;
             : updateTimeBuilder_.build();
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
-        result.url_ = url_;
+        result.url_ = urlBuilder_ == null
+            ? url_
+            : urlBuilder_.build();
       }
     }
 
@@ -830,10 +832,8 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
-      if (!other.getUrl().isEmpty()) {
-        url_ = other.url_;
-        bitField0_ |= 0x00000040;
-        onChanged();
+      if (other.hasUrl()) {
+        mergeUrl(other.getUrl());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -904,7 +904,9 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 50
             case 58: {
-              url_ = input.readStringRequireUtf8();
+              input.readMessage(
+                  getUrlFieldBuilder().getBuilder(),
+                  extensionRegistry);
               bitField0_ |= 0x00000040;
               break;
             } // case 58
@@ -1841,25 +1843,33 @@ private static final long serialVersionUID = 0L;
       return itemsBuilder_;
     }
 
-    private java.lang.Object url_ = "";
+    private com.google.protobuf.StringValue url_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> urlBuilder_;
     /**
      * <pre>
      * the url to download the invoice
      * </pre>
      *
-     * <code>string url = 7 [json_name = "url"];</code>
+     * <code>.google.protobuf.StringValue url = 7 [json_name = "url"];</code>
+     * @return Whether the url field is set.
+     */
+    public boolean hasUrl() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <pre>
+     * the url to download the invoice
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue url = 7 [json_name = "url"];</code>
      * @return The url.
      */
-    public java.lang.String getUrl() {
-      java.lang.Object ref = url_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        url_ = s;
-        return s;
+    public com.google.protobuf.StringValue getUrl() {
+      if (urlBuilder_ == null) {
+        return url_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : url_;
       } else {
-        return (java.lang.String) ref;
+        return urlBuilder_.getMessage();
       }
     }
     /**
@@ -1867,35 +1877,35 @@ private static final long serialVersionUID = 0L;
      * the url to download the invoice
      * </pre>
      *
-     * <code>string url = 7 [json_name = "url"];</code>
-     * @return The bytes for url.
+     * <code>.google.protobuf.StringValue url = 7 [json_name = "url"];</code>
      */
-    public com.google.protobuf.ByteString
-        getUrlBytes() {
-      java.lang.Object ref = url_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        url_ = b;
-        return b;
+    public Builder setUrl(com.google.protobuf.StringValue value) {
+      if (urlBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        url_ = value;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        urlBuilder_.setMessage(value);
       }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
     }
     /**
      * <pre>
      * the url to download the invoice
      * </pre>
      *
-     * <code>string url = 7 [json_name = "url"];</code>
-     * @param value The url to set.
-     * @return This builder for chaining.
+     * <code>.google.protobuf.StringValue url = 7 [json_name = "url"];</code>
      */
     public Builder setUrl(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      url_ = value;
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (urlBuilder_ == null) {
+        url_ = builderForValue.build();
+      } else {
+        urlBuilder_.setMessage(builderForValue.build());
+      }
       bitField0_ |= 0x00000040;
       onChanged();
       return this;
@@ -1905,12 +1915,38 @@ private static final long serialVersionUID = 0L;
      * the url to download the invoice
      * </pre>
      *
-     * <code>string url = 7 [json_name = "url"];</code>
-     * @return This builder for chaining.
+     * <code>.google.protobuf.StringValue url = 7 [json_name = "url"];</code>
+     */
+    public Builder mergeUrl(com.google.protobuf.StringValue value) {
+      if (urlBuilder_ == null) {
+        if (((bitField0_ & 0x00000040) != 0) &&
+          url_ != null &&
+          url_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+          getUrlBuilder().mergeFrom(value);
+        } else {
+          url_ = value;
+        }
+      } else {
+        urlBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the url to download the invoice
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue url = 7 [json_name = "url"];</code>
      */
     public Builder clearUrl() {
-      url_ = getDefaultInstance().getUrl();
       bitField0_ = (bitField0_ & ~0x00000040);
+      url_ = null;
+      if (urlBuilder_ != null) {
+        urlBuilder_.dispose();
+        urlBuilder_ = null;
+      }
       onChanged();
       return this;
     }
@@ -1919,18 +1955,47 @@ private static final long serialVersionUID = 0L;
      * the url to download the invoice
      * </pre>
      *
-     * <code>string url = 7 [json_name = "url"];</code>
-     * @param value The bytes for url to set.
-     * @return This builder for chaining.
+     * <code>.google.protobuf.StringValue url = 7 [json_name = "url"];</code>
      */
-    public Builder setUrlBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      url_ = value;
+    public com.google.protobuf.StringValue.Builder getUrlBuilder() {
       bitField0_ |= 0x00000040;
       onChanged();
-      return this;
+      return getUrlFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * the url to download the invoice
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue url = 7 [json_name = "url"];</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getUrlOrBuilder() {
+      if (urlBuilder_ != null) {
+        return urlBuilder_.getMessageOrBuilder();
+      } else {
+        return url_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : url_;
+      }
+    }
+    /**
+     * <pre>
+     * the url to download the invoice
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue url = 7 [json_name = "url"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getUrlFieldBuilder() {
+      if (urlBuilder_ == null) {
+        urlBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getUrl(),
+                getParentForChildren(),
+                isClean());
+        url_ = null;
+      }
+      return urlBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
