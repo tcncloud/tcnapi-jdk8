@@ -26,7 +26,7 @@ public final class ServiceProto {
       "\n#api/v1alpha1/newsroom/service.proto\022\025a" +
       "pi.v1alpha1.newsroom\032\027annotations/authz." +
       "proto\032$api/v1alpha1/newsroom/entities.pr" +
-      "oto\032\034google/api/annotations.proto2\347\005\n\013Ne" +
+      "oto\032\034google/api/annotations.proto2\321\014\n\013Ne" +
       "wsroomAPI\022\265\001\n\021CreateNewsArticle\022/.api.v1" +
       "alpha1.newsroom.CreateNewsArticleRequest" +
       "\0320.api.v1alpha1.newsroom.CreateNewsArtic" +
@@ -45,12 +45,33 @@ public final class ServiceProto {
       "m.UpdateNewsArticleRequest\0320.api.v1alpha" +
       "1.newsroom.UpdateNewsArticleResponse\"=\272\270" +
       "\221\002\005\n\003\010\350 \202\323\344\223\002-\"(/api/v1alpha1/newsroom/u" +
-      "pdatenewsarticle:\001*B\255\001\n\'com.tcn.cloud.ap" +
-      "i.api.v1alpha1.newsroomB\014ServiceProtoP\001\242" +
-      "\002\003AVN\252\002\025Api.V1alpha1.Newsroom\312\002\025Api\\V1al" +
-      "pha1\\Newsroom\342\002!Api\\V1alpha1\\Newsroom\\GP" +
-      "BMetadata\352\002\027Api::V1alpha1::Newsroomb\006pro" +
-      "to3"
+      "pdatenewsarticle:\001*\022\331\001\n\032CreatePublishedN" +
+      "ewsArticle\0228.api.v1alpha1.newsroom.Creat" +
+      "ePublishedNewsArticleRequest\0329.api.v1alp" +
+      "ha1.newsroom.CreatePublishedNewsArticleR" +
+      "esponse\"F\272\270\221\002\005\n\003\010\350 \202\323\344\223\0026\"1/api/v1alpha1" +
+      "/newsroom/createpublishednewsarticle:\001*\022" +
+      "\322\001\n\031ListPublishedNewsArticles\0227.api.v1al" +
+      "pha1.newsroom.ListPublishedNewsArticlesR" +
+      "equest\0328.api.v1alpha1.newsroom.ListPubli" +
+      "shedNewsArticlesResponse\"B\272\270\221\002\002\030\001\202\323\344\223\0025\"" +
+      "0/api/v1alpha1/newsroom/listpublishednew" +
+      "sarticles:\001*\022\332\001\n\033GetPublishedNewsArticle" +
+      "ById\0229.api.v1alpha1.newsroom.GetPublishe" +
+      "dNewsArticleByIdRequest\032:.api.v1alpha1.n" +
+      "ewsroom.GetPublishedNewsArticleByIdRespo" +
+      "nse\"D\272\270\221\002\002\030\001\202\323\344\223\0027\"2/api/v1alpha1/newsro" +
+      "om/getpublishednewsarticlebyid:\001*\022\331\001\n\032Up" +
+      "datePublishedNewsArticle\0228.api.v1alpha1." +
+      "newsroom.UpdatePublishedNewsArticleReque" +
+      "st\0329.api.v1alpha1.newsroom.UpdatePublish" +
+      "edNewsArticleResponse\"F\272\270\221\002\005\n\003\010\350 \202\323\344\223\0026\"" +
+      "1/api/v1alpha1/newsroom/updatepublishedn" +
+      "ewsarticle:\001*B\255\001\n\'com.tcn.cloud.api.api." +
+      "v1alpha1.newsroomB\014ServiceProtoP\001\242\002\003AVN\252" +
+      "\002\025Api.V1alpha1.Newsroom\312\002\025Api\\V1alpha1\\N" +
+      "ewsroom\342\002!Api\\V1alpha1\\Newsroom\\GPBMetad" +
+      "ata\352\002\027Api::V1alpha1::Newsroomb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
