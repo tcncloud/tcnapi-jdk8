@@ -224,6 +224,8 @@ private static final long serialVersionUID = 0L;
     POSCORP_UPDATE_PAYMENT_STATUS(3503),
     PIANO_GET_USER(3601),
     PIANO_UPDATE_USER(3602),
+    PIANO_UPDATE_SUBSCRIPTION(3603),
+    PIANO_GET_PAYMENT(3604),
     EPIC_GET_TOKEN(3701),
     EPIC_GET_PATIENT(3702),
     EPIC_MATCH_PATIENT(3703),
@@ -431,6 +433,8 @@ private static final long serialVersionUID = 0L;
         case 3503: return POSCORP_UPDATE_PAYMENT_STATUS;
         case 3601: return PIANO_GET_USER;
         case 3602: return PIANO_UPDATE_USER;
+        case 3603: return PIANO_UPDATE_SUBSCRIPTION;
+        case 3604: return PIANO_GET_PAYMENT;
         case 3701: return EPIC_GET_TOKEN;
         case 3702: return EPIC_GET_PATIENT;
         case 3703: return EPIC_MATCH_PATIENT;
@@ -5835,6 +5839,68 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateUser.getDefaultInstance();
   }
 
+  public static final int PIANO_UPDATE_SUBSCRIPTION_FIELD_NUMBER = 3603;
+  /**
+   * <code>.api.commons.integrations.ExecutePianoUpdateSubscription PIANO_UPDATE_SUBSCRIPTION = 3603 [json_name = "PIANOUPDATESUBSCRIPTION"];</code>
+   * @return Whether the pIANOUPDATESUBSCRIPTION field is set.
+   */
+  @java.lang.Override
+  public boolean hasPIANOUPDATESUBSCRIPTION() {
+    return valueCase_ == 3603;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecutePianoUpdateSubscription PIANO_UPDATE_SUBSCRIPTION = 3603 [json_name = "PIANOUPDATESUBSCRIPTION"];</code>
+   * @return The pIANOUPDATESUBSCRIPTION.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateSubscription getPIANOUPDATESUBSCRIPTION() {
+    if (valueCase_ == 3603) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateSubscription) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateSubscription.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecutePianoUpdateSubscription PIANO_UPDATE_SUBSCRIPTION = 3603 [json_name = "PIANOUPDATESUBSCRIPTION"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateSubscriptionOrBuilder getPIANOUPDATESUBSCRIPTIONOrBuilder() {
+    if (valueCase_ == 3603) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateSubscription) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateSubscription.getDefaultInstance();
+  }
+
+  public static final int PIANO_GET_PAYMENT_FIELD_NUMBER = 3604;
+  /**
+   * <code>.api.commons.integrations.ExecutePianoGetPayment PIANO_GET_PAYMENT = 3604 [json_name = "PIANOGETPAYMENT"];</code>
+   * @return Whether the pIANOGETPAYMENT field is set.
+   */
+  @java.lang.Override
+  public boolean hasPIANOGETPAYMENT() {
+    return valueCase_ == 3604;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecutePianoGetPayment PIANO_GET_PAYMENT = 3604 [json_name = "PIANOGETPAYMENT"];</code>
+   * @return The pIANOGETPAYMENT.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetPayment getPIANOGETPAYMENT() {
+    if (valueCase_ == 3604) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetPayment) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetPayment.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecutePianoGetPayment PIANO_GET_PAYMENT = 3604 [json_name = "PIANOGETPAYMENT"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetPaymentOrBuilder getPIANOGETPAYMENTOrBuilder() {
+    if (valueCase_ == 3604) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetPayment) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetPayment.getDefaultInstance();
+  }
+
   public static final int EPIC_GET_TOKEN_FIELD_NUMBER = 3701;
   /**
    * <code>.api.commons.integrations.ExecuteEpicGetToken epic_get_token = 3701 [json_name = "epicGetToken"];</code>
@@ -6926,6 +6992,12 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 3602) {
       output.writeMessage(3602, (com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateUser) value_);
     }
+    if (valueCase_ == 3603) {
+      output.writeMessage(3603, (com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateSubscription) value_);
+    }
+    if (valueCase_ == 3604) {
+      output.writeMessage(3604, (com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetPayment) value_);
+    }
     if (valueCase_ == 3701) {
       output.writeMessage(3701, (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetToken) value_);
     }
@@ -7679,6 +7751,14 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 3602) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3602, (com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateUser) value_);
+    }
+    if (valueCase_ == 3603) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3603, (com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateSubscription) value_);
+    }
+    if (valueCase_ == 3604) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3604, (com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetPayment) value_);
     }
     if (valueCase_ == 3701) {
       size += com.google.protobuf.CodedOutputStream
@@ -8459,6 +8539,14 @@ private static final long serialVersionUID = 0L;
         if (!getPIANOUPDATEUSER()
             .equals(other.getPIANOUPDATEUSER())) return false;
         break;
+      case 3603:
+        if (!getPIANOUPDATESUBSCRIPTION()
+            .equals(other.getPIANOUPDATESUBSCRIPTION())) return false;
+        break;
+      case 3604:
+        if (!getPIANOGETPAYMENT()
+            .equals(other.getPIANOGETPAYMENT())) return false;
+        break;
       case 3701:
         if (!getEpicGetToken()
             .equals(other.getEpicGetToken())) return false;
@@ -9236,6 +9324,14 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + PIANO_UPDATE_USER_FIELD_NUMBER;
         hash = (53 * hash) + getPIANOUPDATEUSER().hashCode();
         break;
+      case 3603:
+        hash = (37 * hash) + PIANO_UPDATE_SUBSCRIPTION_FIELD_NUMBER;
+        hash = (53 * hash) + getPIANOUPDATESUBSCRIPTION().hashCode();
+        break;
+      case 3604:
+        hash = (37 * hash) + PIANO_GET_PAYMENT_FIELD_NUMBER;
+        hash = (53 * hash) + getPIANOGETPAYMENT().hashCode();
+        break;
       case 3701:
         hash = (37 * hash) + EPIC_GET_TOKEN_FIELD_NUMBER;
         hash = (53 * hash) + getEpicGetToken().hashCode();
@@ -9454,6 +9550,7 @@ private static final long serialVersionUID = 0L;
       bitField3_ = 0;
       bitField4_ = 0;
       bitField5_ = 0;
+      bitField6_ = 0;
       pluginInstanceId_ = "";
       if (braintreeCreditSaleBuilder_ != null) {
         braintreeCreditSaleBuilder_.clear();
@@ -9971,6 +10068,12 @@ private static final long serialVersionUID = 0L;
       if (pIANOUPDATEUSERBuilder_ != null) {
         pIANOUPDATEUSERBuilder_.clear();
       }
+      if (pIANOUPDATESUBSCRIPTIONBuilder_ != null) {
+        pIANOUPDATESUBSCRIPTIONBuilder_.clear();
+      }
+      if (pIANOGETPAYMENTBuilder_ != null) {
+        pIANOGETPAYMENTBuilder_.clear();
+      }
       if (epicGetTokenBuilder_ != null) {
         epicGetTokenBuilder_.clear();
       }
@@ -10059,6 +10162,7 @@ private static final long serialVersionUID = 0L;
       if (bitField3_ != 0) { buildPartial3(result); }
       if (bitField4_ != 0) { buildPartial4(result); }
       if (bitField5_ != 0) { buildPartial5(result); }
+      if (bitField6_ != 0) { buildPartial6(result); }
       buildPartialOneofs(result);
       onBuilt();
       return result;
@@ -10089,6 +10193,10 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial5(com.tcn.cloud.api.api.commons.integrations.ExecuteFlow result) {
       int from_bitField5_ = bitField5_;
+    }
+
+    private void buildPartial6(com.tcn.cloud.api.api.commons.integrations.ExecuteFlow result) {
+      int from_bitField6_ = bitField6_;
     }
 
     private void buildPartialOneofs(com.tcn.cloud.api.api.commons.integrations.ExecuteFlow result) {
@@ -10781,6 +10889,14 @@ private static final long serialVersionUID = 0L;
       if (valueCase_ == 3602 &&
           pIANOUPDATEUSERBuilder_ != null) {
         result.value_ = pIANOUPDATEUSERBuilder_.build();
+      }
+      if (valueCase_ == 3603 &&
+          pIANOUPDATESUBSCRIPTIONBuilder_ != null) {
+        result.value_ = pIANOUPDATESUBSCRIPTIONBuilder_.build();
+      }
+      if (valueCase_ == 3604 &&
+          pIANOGETPAYMENTBuilder_ != null) {
+        result.value_ = pIANOGETPAYMENTBuilder_.build();
       }
       if (valueCase_ == 3701 &&
           epicGetTokenBuilder_ != null) {
@@ -11592,6 +11708,14 @@ private static final long serialVersionUID = 0L;
         }
         case PIANO_UPDATE_USER: {
           mergePIANOUPDATEUSER(other.getPIANOUPDATEUSER());
+          break;
+        }
+        case PIANO_UPDATE_SUBSCRIPTION: {
+          mergePIANOUPDATESUBSCRIPTION(other.getPIANOUPDATESUBSCRIPTION());
+          break;
+        }
+        case PIANO_GET_PAYMENT: {
+          mergePIANOGETPAYMENT(other.getPIANOGETPAYMENT());
           break;
         }
         case EPIC_GET_TOKEN: {
@@ -12905,6 +13029,20 @@ private static final long serialVersionUID = 0L;
               valueCase_ = 3602;
               break;
             } // case 28818
+            case 28826: {
+              input.readMessage(
+                  getPIANOUPDATESUBSCRIPTIONFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 3603;
+              break;
+            } // case 28826
+            case 28834: {
+              input.readMessage(
+                  getPIANOGETPAYMENTFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 3604;
+              break;
+            } // case 28834
             case 29610: {
               input.readMessage(
                   getEpicGetTokenFieldBuilder().getBuilder(),
@@ -13067,6 +13205,7 @@ private static final long serialVersionUID = 0L;
     private int bitField3_;
     private int bitField4_;
     private int bitField5_;
+    private int bitField6_;
 
     private java.lang.Object pluginInstanceId_ = "";
     /**
@@ -37562,6 +37701,290 @@ private static final long serialVersionUID = 0L;
       valueCase_ = 3602;
       onChanged();
       return pIANOUPDATEUSERBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateSubscription, com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateSubscription.Builder, com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateSubscriptionOrBuilder> pIANOUPDATESUBSCRIPTIONBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecutePianoUpdateSubscription PIANO_UPDATE_SUBSCRIPTION = 3603 [json_name = "PIANOUPDATESUBSCRIPTION"];</code>
+     * @return Whether the pIANOUPDATESUBSCRIPTION field is set.
+     */
+    @java.lang.Override
+    public boolean hasPIANOUPDATESUBSCRIPTION() {
+      return valueCase_ == 3603;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePianoUpdateSubscription PIANO_UPDATE_SUBSCRIPTION = 3603 [json_name = "PIANOUPDATESUBSCRIPTION"];</code>
+     * @return The pIANOUPDATESUBSCRIPTION.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateSubscription getPIANOUPDATESUBSCRIPTION() {
+      if (pIANOUPDATESUBSCRIPTIONBuilder_ == null) {
+        if (valueCase_ == 3603) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateSubscription) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateSubscription.getDefaultInstance();
+      } else {
+        if (valueCase_ == 3603) {
+          return pIANOUPDATESUBSCRIPTIONBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateSubscription.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePianoUpdateSubscription PIANO_UPDATE_SUBSCRIPTION = 3603 [json_name = "PIANOUPDATESUBSCRIPTION"];</code>
+     */
+    public Builder setPIANOUPDATESUBSCRIPTION(com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateSubscription value) {
+      if (pIANOUPDATESUBSCRIPTIONBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        pIANOUPDATESUBSCRIPTIONBuilder_.setMessage(value);
+      }
+      valueCase_ = 3603;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePianoUpdateSubscription PIANO_UPDATE_SUBSCRIPTION = 3603 [json_name = "PIANOUPDATESUBSCRIPTION"];</code>
+     */
+    public Builder setPIANOUPDATESUBSCRIPTION(
+        com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateSubscription.Builder builderForValue) {
+      if (pIANOUPDATESUBSCRIPTIONBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        pIANOUPDATESUBSCRIPTIONBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 3603;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePianoUpdateSubscription PIANO_UPDATE_SUBSCRIPTION = 3603 [json_name = "PIANOUPDATESUBSCRIPTION"];</code>
+     */
+    public Builder mergePIANOUPDATESUBSCRIPTION(com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateSubscription value) {
+      if (pIANOUPDATESUBSCRIPTIONBuilder_ == null) {
+        if (valueCase_ == 3603 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateSubscription.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateSubscription.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateSubscription) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 3603) {
+          pIANOUPDATESUBSCRIPTIONBuilder_.mergeFrom(value);
+        } else {
+          pIANOUPDATESUBSCRIPTIONBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 3603;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePianoUpdateSubscription PIANO_UPDATE_SUBSCRIPTION = 3603 [json_name = "PIANOUPDATESUBSCRIPTION"];</code>
+     */
+    public Builder clearPIANOUPDATESUBSCRIPTION() {
+      if (pIANOUPDATESUBSCRIPTIONBuilder_ == null) {
+        if (valueCase_ == 3603) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 3603) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        pIANOUPDATESUBSCRIPTIONBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePianoUpdateSubscription PIANO_UPDATE_SUBSCRIPTION = 3603 [json_name = "PIANOUPDATESUBSCRIPTION"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateSubscription.Builder getPIANOUPDATESUBSCRIPTIONBuilder() {
+      return getPIANOUPDATESUBSCRIPTIONFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePianoUpdateSubscription PIANO_UPDATE_SUBSCRIPTION = 3603 [json_name = "PIANOUPDATESUBSCRIPTION"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateSubscriptionOrBuilder getPIANOUPDATESUBSCRIPTIONOrBuilder() {
+      if ((valueCase_ == 3603) && (pIANOUPDATESUBSCRIPTIONBuilder_ != null)) {
+        return pIANOUPDATESUBSCRIPTIONBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 3603) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateSubscription) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateSubscription.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePianoUpdateSubscription PIANO_UPDATE_SUBSCRIPTION = 3603 [json_name = "PIANOUPDATESUBSCRIPTION"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateSubscription, com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateSubscription.Builder, com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateSubscriptionOrBuilder> 
+        getPIANOUPDATESUBSCRIPTIONFieldBuilder() {
+      if (pIANOUPDATESUBSCRIPTIONBuilder_ == null) {
+        if (!(valueCase_ == 3603)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateSubscription.getDefaultInstance();
+        }
+        pIANOUPDATESUBSCRIPTIONBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateSubscription, com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateSubscription.Builder, com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateSubscriptionOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateSubscription) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 3603;
+      onChanged();
+      return pIANOUPDATESUBSCRIPTIONBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetPayment, com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetPayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetPaymentOrBuilder> pIANOGETPAYMENTBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecutePianoGetPayment PIANO_GET_PAYMENT = 3604 [json_name = "PIANOGETPAYMENT"];</code>
+     * @return Whether the pIANOGETPAYMENT field is set.
+     */
+    @java.lang.Override
+    public boolean hasPIANOGETPAYMENT() {
+      return valueCase_ == 3604;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePianoGetPayment PIANO_GET_PAYMENT = 3604 [json_name = "PIANOGETPAYMENT"];</code>
+     * @return The pIANOGETPAYMENT.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetPayment getPIANOGETPAYMENT() {
+      if (pIANOGETPAYMENTBuilder_ == null) {
+        if (valueCase_ == 3604) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetPayment) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetPayment.getDefaultInstance();
+      } else {
+        if (valueCase_ == 3604) {
+          return pIANOGETPAYMENTBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetPayment.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePianoGetPayment PIANO_GET_PAYMENT = 3604 [json_name = "PIANOGETPAYMENT"];</code>
+     */
+    public Builder setPIANOGETPAYMENT(com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetPayment value) {
+      if (pIANOGETPAYMENTBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        pIANOGETPAYMENTBuilder_.setMessage(value);
+      }
+      valueCase_ = 3604;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePianoGetPayment PIANO_GET_PAYMENT = 3604 [json_name = "PIANOGETPAYMENT"];</code>
+     */
+    public Builder setPIANOGETPAYMENT(
+        com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetPayment.Builder builderForValue) {
+      if (pIANOGETPAYMENTBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        pIANOGETPAYMENTBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 3604;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePianoGetPayment PIANO_GET_PAYMENT = 3604 [json_name = "PIANOGETPAYMENT"];</code>
+     */
+    public Builder mergePIANOGETPAYMENT(com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetPayment value) {
+      if (pIANOGETPAYMENTBuilder_ == null) {
+        if (valueCase_ == 3604 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetPayment.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetPayment.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetPayment) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 3604) {
+          pIANOGETPAYMENTBuilder_.mergeFrom(value);
+        } else {
+          pIANOGETPAYMENTBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 3604;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePianoGetPayment PIANO_GET_PAYMENT = 3604 [json_name = "PIANOGETPAYMENT"];</code>
+     */
+    public Builder clearPIANOGETPAYMENT() {
+      if (pIANOGETPAYMENTBuilder_ == null) {
+        if (valueCase_ == 3604) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 3604) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        pIANOGETPAYMENTBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePianoGetPayment PIANO_GET_PAYMENT = 3604 [json_name = "PIANOGETPAYMENT"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetPayment.Builder getPIANOGETPAYMENTBuilder() {
+      return getPIANOGETPAYMENTFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePianoGetPayment PIANO_GET_PAYMENT = 3604 [json_name = "PIANOGETPAYMENT"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetPaymentOrBuilder getPIANOGETPAYMENTOrBuilder() {
+      if ((valueCase_ == 3604) && (pIANOGETPAYMENTBuilder_ != null)) {
+        return pIANOGETPAYMENTBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 3604) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetPayment) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetPayment.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePianoGetPayment PIANO_GET_PAYMENT = 3604 [json_name = "PIANOGETPAYMENT"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetPayment, com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetPayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetPaymentOrBuilder> 
+        getPIANOGETPAYMENTFieldBuilder() {
+      if (pIANOGETPAYMENTBuilder_ == null) {
+        if (!(valueCase_ == 3604)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetPayment.getDefaultInstance();
+        }
+        pIANOGETPAYMENTBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetPayment, com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetPayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetPaymentOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetPayment) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 3604;
+      onChanged();
+      return pIANOGETPAYMENTBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
