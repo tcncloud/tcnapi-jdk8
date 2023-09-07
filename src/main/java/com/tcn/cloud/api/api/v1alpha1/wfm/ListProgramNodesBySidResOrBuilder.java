@@ -12,42 +12,42 @@ public interface ListProgramNodesBySidResOrBuilder extends
    * The program nodes matching the given &#64;program_node_sids.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.ProgramNode program_node = 1 [json_name = "programNode"];</code>
+   * <code>repeated .api.v1alpha1.wfm.ProgramNode program_nodes = 1 [json_name = "programNodes"];</code>
    */
   java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.ProgramNode> 
-      getProgramNodeList();
+      getProgramNodesList();
   /**
    * <pre>
    * The program nodes matching the given &#64;program_node_sids.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.ProgramNode program_node = 1 [json_name = "programNode"];</code>
+   * <code>repeated .api.v1alpha1.wfm.ProgramNode program_nodes = 1 [json_name = "programNodes"];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.wfm.ProgramNode getProgramNode(int index);
+  com.tcn.cloud.api.api.v1alpha1.wfm.ProgramNode getProgramNodes(int index);
   /**
    * <pre>
    * The program nodes matching the given &#64;program_node_sids.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.ProgramNode program_node = 1 [json_name = "programNode"];</code>
+   * <code>repeated .api.v1alpha1.wfm.ProgramNode program_nodes = 1 [json_name = "programNodes"];</code>
    */
-  int getProgramNodeCount();
+  int getProgramNodesCount();
   /**
    * <pre>
    * The program nodes matching the given &#64;program_node_sids.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.ProgramNode program_node = 1 [json_name = "programNode"];</code>
+   * <code>repeated .api.v1alpha1.wfm.ProgramNode program_nodes = 1 [json_name = "programNodes"];</code>
    */
   java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.ProgramNodeOrBuilder> 
-      getProgramNodeOrBuilderList();
+      getProgramNodesOrBuilderList();
   /**
    * <pre>
    * The program nodes matching the given &#64;program_node_sids.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.ProgramNode program_node = 1 [json_name = "programNode"];</code>
+   * <code>repeated .api.v1alpha1.wfm.ProgramNode program_nodes = 1 [json_name = "programNodes"];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.wfm.ProgramNodeOrBuilder getProgramNodeOrBuilder(
+  com.tcn.cloud.api.api.v1alpha1.wfm.ProgramNodeOrBuilder getProgramNodesOrBuilder(
       int index);
 }
