@@ -3969,6 +3969,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when building the call profile template.
      * </pre>
      */
+    @java.lang.Deprecated
     default void buildCallProfileTemplateForSkillProfile(com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateForSkillProfileReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateForSkillProfileRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBuildCallProfileTemplateForSkillProfileMethod(), responseObserver);
@@ -4101,7 +4102,7 @@ public final class WFMGrpc {
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the &#64;skill_profile_sid or &#64;call_profile_template in the request is invalid.
+     *   - grpc.Invalid: the &#64;skill_profile_category or &#64;call_profile_template in the request is invalid.
      *   - grpc.Internal: error occurs during the building of the profile forecast.
      * </pre>
      */
@@ -6131,6 +6132,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when building the call profile template.
      * </pre>
      */
+    @java.lang.Deprecated
     public void buildCallProfileTemplateForSkillProfile(com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateForSkillProfileReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateForSkillProfileRes> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -6271,7 +6273,7 @@ public final class WFMGrpc {
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the &#64;skill_profile_sid or &#64;call_profile_template in the request is invalid.
+     *   - grpc.Invalid: the &#64;skill_profile_category or &#64;call_profile_template in the request is invalid.
      *   - grpc.Internal: error occurs during the building of the profile forecast.
      * </pre>
      */
@@ -8374,6 +8376,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when building the call profile template.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateForSkillProfileRes buildCallProfileTemplateForSkillProfile(com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateForSkillProfileReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getBuildCallProfileTemplateForSkillProfileMethod(), getCallOptions(), request);
@@ -8506,7 +8509,7 @@ public final class WFMGrpc {
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the &#64;skill_profile_sid or &#64;call_profile_template in the request is invalid.
+     *   - grpc.Invalid: the &#64;skill_profile_category or &#64;call_profile_template in the request is invalid.
      *   - grpc.Internal: error occurs during the building of the profile forecast.
      * </pre>
      */
@@ -10527,6 +10530,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when building the call profile template.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateForSkillProfileRes> buildCallProfileTemplateForSkillProfile(
         com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateForSkillProfileReq request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
