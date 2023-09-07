@@ -140,6 +140,21 @@ public interface VerificationFlowOrBuilder extends
   com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareAccountInquiryOrBuilder getNewzwareAccountInquiryOrBuilder();
 
   /**
+   * <code>.api.commons.integrations.VerificationPriocommerceGetCustomer pricommerce_get_customer = 15 [json_name = "pricommerceGetCustomer"];</code>
+   * @return Whether the pricommerceGetCustomer field is set.
+   */
+  boolean hasPricommerceGetCustomer();
+  /**
+   * <code>.api.commons.integrations.VerificationPriocommerceGetCustomer pricommerce_get_customer = 15 [json_name = "pricommerceGetCustomer"];</code>
+   * @return The pricommerceGetCustomer.
+   */
+  com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomer getPricommerceGetCustomer();
+  /**
+   * <code>.api.commons.integrations.VerificationPriocommerceGetCustomer pricommerce_get_customer = 15 [json_name = "pricommerceGetCustomer"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomerOrBuilder getPricommerceGetCustomerOrBuilder();
+
+  /**
    * <pre>
    * the fields the user must verify for this flow.
    * must conform to the list of fields returned from the flow

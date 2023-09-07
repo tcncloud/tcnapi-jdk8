@@ -777,6 +777,10 @@ public enum RequestMethod
    * <code>REQUEST_METHOD_PRIOCOMMERCE_CC_PAYMENT = 3902;</code>
    */
   REQUEST_METHOD_PRIOCOMMERCE_CC_PAYMENT(3902),
+  /**
+   * <code>REQUEST_METHOD_PRIOCOMMERCE_GET_CUSTOMER = 3903;</code>
+   */
+  REQUEST_METHOD_PRIOCOMMERCE_GET_CUSTOMER(3903),
   UNRECOGNIZED(-1),
   ;
 
@@ -1544,6 +1548,10 @@ public enum RequestMethod
    * <code>REQUEST_METHOD_PRIOCOMMERCE_CC_PAYMENT = 3902;</code>
    */
   public static final int REQUEST_METHOD_PRIOCOMMERCE_CC_PAYMENT_VALUE = 3902;
+  /**
+   * <code>REQUEST_METHOD_PRIOCOMMERCE_GET_CUSTOMER = 3903;</code>
+   */
+  public static final int REQUEST_METHOD_PRIOCOMMERCE_GET_CUSTOMER_VALUE = 3903;
 
 
   public final int getNumber() {
@@ -1761,6 +1769,7 @@ public enum RequestMethod
       case 3809: return REQUEST_METHOD_NEWZWARE_PHONE_LOOKUP_MULTI;
       case 3901: return REQUEST_METHOD_PRIOCOMMERCE_ACH_PAYMENT;
       case 3902: return REQUEST_METHOD_PRIOCOMMERCE_CC_PAYMENT;
+      case 3903: return REQUEST_METHOD_PRIOCOMMERCE_GET_CUSTOMER;
       default: return null;
     }
   }

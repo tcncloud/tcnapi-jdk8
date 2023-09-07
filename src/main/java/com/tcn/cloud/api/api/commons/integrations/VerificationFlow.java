@@ -54,6 +54,7 @@ private static final long serialVersionUID = 0L;
     JOURNEY(12),
     NEWZWARE_LOOKUP_PHONE(13),
     NEWZWARE_ACCOUNT_INQUIRY(14),
+    PRICOMMERCE_GET_CUSTOMER(15),
     VALUE_NOT_SET(0);
     private final int value;
     private ValueCase(int value) {
@@ -79,6 +80,7 @@ private static final long serialVersionUID = 0L;
         case 12: return JOURNEY;
         case 13: return NEWZWARE_LOOKUP_PHONE;
         case 14: return NEWZWARE_ACCOUNT_INQUIRY;
+        case 15: return PRICOMMERCE_GET_CUSTOMER;
         case 0: return VALUE_NOT_SET;
         default: return null;
       }
@@ -381,6 +383,37 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareAccountInquiry.getDefaultInstance();
   }
 
+  public static final int PRICOMMERCE_GET_CUSTOMER_FIELD_NUMBER = 15;
+  /**
+   * <code>.api.commons.integrations.VerificationPriocommerceGetCustomer pricommerce_get_customer = 15 [json_name = "pricommerceGetCustomer"];</code>
+   * @return Whether the pricommerceGetCustomer field is set.
+   */
+  @java.lang.Override
+  public boolean hasPricommerceGetCustomer() {
+    return valueCase_ == 15;
+  }
+  /**
+   * <code>.api.commons.integrations.VerificationPriocommerceGetCustomer pricommerce_get_customer = 15 [json_name = "pricommerceGetCustomer"];</code>
+   * @return The pricommerceGetCustomer.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomer getPricommerceGetCustomer() {
+    if (valueCase_ == 15) {
+       return (com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomer) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomer.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.VerificationPriocommerceGetCustomer pricommerce_get_customer = 15 [json_name = "pricommerceGetCustomer"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomerOrBuilder getPricommerceGetCustomerOrBuilder() {
+    if (valueCase_ == 15) {
+       return (com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomer) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomer.getDefaultInstance();
+  }
+
   public static final int VERIFICATION_FIELDS_FIELD_NUMBER = 20;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition> verificationFields_;
@@ -488,6 +521,9 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 14) {
       output.writeMessage(14, (com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareAccountInquiry) value_);
     }
+    if (valueCase_ == 15) {
+      output.writeMessage(15, (com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomer) value_);
+    }
     for (int i = 0; i < verificationFields_.size(); i++) {
       output.writeMessage(20, verificationFields_.get(i));
     }
@@ -534,6 +570,10 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 14) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(14, (com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareAccountInquiry) value_);
+    }
+    if (valueCase_ == 15) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(15, (com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomer) value_);
     }
     for (int i = 0; i < verificationFields_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
@@ -592,6 +632,10 @@ private static final long serialVersionUID = 0L;
         if (!getNewzwareAccountInquiry()
             .equals(other.getNewzwareAccountInquiry())) return false;
         break;
+      case 15:
+        if (!getPricommerceGetCustomer()
+            .equals(other.getPricommerceGetCustomer())) return false;
+        break;
       case 0:
       default:
     }
@@ -644,6 +688,10 @@ private static final long serialVersionUID = 0L;
       case 14:
         hash = (37 * hash) + NEWZWARE_ACCOUNT_INQUIRY_FIELD_NUMBER;
         hash = (53 * hash) + getNewzwareAccountInquiry().hashCode();
+        break;
+      case 15:
+        hash = (37 * hash) + PRICOMMERCE_GET_CUSTOMER_FIELD_NUMBER;
+        hash = (53 * hash) + getPricommerceGetCustomer().hashCode();
         break;
       case 0:
       default:
@@ -804,13 +852,16 @@ private static final long serialVersionUID = 0L;
       if (newzwareAccountInquiryBuilder_ != null) {
         newzwareAccountInquiryBuilder_.clear();
       }
+      if (pricommerceGetCustomerBuilder_ != null) {
+        pricommerceGetCustomerBuilder_.clear();
+      }
       if (verificationFieldsBuilder_ == null) {
         verificationFields_ = java.util.Collections.emptyList();
       } else {
         verificationFields_ = null;
         verificationFieldsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000200);
+      bitField0_ = (bitField0_ & ~0x00000400);
       valueCase_ = 0;
       value_ = null;
       return this;
@@ -848,9 +899,9 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartialRepeatedFields(com.tcn.cloud.api.api.commons.integrations.VerificationFlow result) {
       if (verificationFieldsBuilder_ == null) {
-        if (((bitField0_ & 0x00000200) != 0)) {
+        if (((bitField0_ & 0x00000400) != 0)) {
           verificationFields_ = java.util.Collections.unmodifiableList(verificationFields_);
-          bitField0_ = (bitField0_ & ~0x00000200);
+          bitField0_ = (bitField0_ & ~0x00000400);
         }
         result.verificationFields_ = verificationFields_;
       } else {
@@ -899,6 +950,10 @@ private static final long serialVersionUID = 0L;
       if (valueCase_ == 14 &&
           newzwareAccountInquiryBuilder_ != null) {
         result.value_ = newzwareAccountInquiryBuilder_.build();
+      }
+      if (valueCase_ == 15 &&
+          pricommerceGetCustomerBuilder_ != null) {
+        result.value_ = pricommerceGetCustomerBuilder_.build();
       }
     }
 
@@ -955,7 +1010,7 @@ private static final long serialVersionUID = 0L;
         if (!other.verificationFields_.isEmpty()) {
           if (verificationFields_.isEmpty()) {
             verificationFields_ = other.verificationFields_;
-            bitField0_ = (bitField0_ & ~0x00000200);
+            bitField0_ = (bitField0_ & ~0x00000400);
           } else {
             ensureVerificationFieldsIsMutable();
             verificationFields_.addAll(other.verificationFields_);
@@ -968,7 +1023,7 @@ private static final long serialVersionUID = 0L;
             verificationFieldsBuilder_.dispose();
             verificationFieldsBuilder_ = null;
             verificationFields_ = other.verificationFields_;
-            bitField0_ = (bitField0_ & ~0x00000200);
+            bitField0_ = (bitField0_ & ~0x00000400);
             verificationFieldsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getVerificationFieldsFieldBuilder() : null;
@@ -1008,6 +1063,10 @@ private static final long serialVersionUID = 0L;
         }
         case NEWZWARE_ACCOUNT_INQUIRY: {
           mergeNewzwareAccountInquiry(other.getNewzwareAccountInquiry());
+          break;
+        }
+        case PRICOMMERCE_GET_CUSTOMER: {
+          mergePricommerceGetCustomer(other.getPricommerceGetCustomer());
           break;
         }
         case VALUE_NOT_SET: {
@@ -1101,6 +1160,13 @@ private static final long serialVersionUID = 0L;
               valueCase_ = 14;
               break;
             } // case 114
+            case 122: {
+              input.readMessage(
+                  getPricommerceGetCustomerFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 15;
+              break;
+            } // case 122
             case 162: {
               com.tcn.cloud.api.api.commons.integrations.FieldDefinition m =
                   input.readMessage(
@@ -2354,12 +2420,154 @@ private static final long serialVersionUID = 0L;
       return newzwareAccountInquiryBuilder_;
     }
 
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomer, com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomer.Builder, com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomerOrBuilder> pricommerceGetCustomerBuilder_;
+    /**
+     * <code>.api.commons.integrations.VerificationPriocommerceGetCustomer pricommerce_get_customer = 15 [json_name = "pricommerceGetCustomer"];</code>
+     * @return Whether the pricommerceGetCustomer field is set.
+     */
+    @java.lang.Override
+    public boolean hasPricommerceGetCustomer() {
+      return valueCase_ == 15;
+    }
+    /**
+     * <code>.api.commons.integrations.VerificationPriocommerceGetCustomer pricommerce_get_customer = 15 [json_name = "pricommerceGetCustomer"];</code>
+     * @return The pricommerceGetCustomer.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomer getPricommerceGetCustomer() {
+      if (pricommerceGetCustomerBuilder_ == null) {
+        if (valueCase_ == 15) {
+          return (com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomer) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomer.getDefaultInstance();
+      } else {
+        if (valueCase_ == 15) {
+          return pricommerceGetCustomerBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomer.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.VerificationPriocommerceGetCustomer pricommerce_get_customer = 15 [json_name = "pricommerceGetCustomer"];</code>
+     */
+    public Builder setPricommerceGetCustomer(com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomer value) {
+      if (pricommerceGetCustomerBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        pricommerceGetCustomerBuilder_.setMessage(value);
+      }
+      valueCase_ = 15;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.VerificationPriocommerceGetCustomer pricommerce_get_customer = 15 [json_name = "pricommerceGetCustomer"];</code>
+     */
+    public Builder setPricommerceGetCustomer(
+        com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomer.Builder builderForValue) {
+      if (pricommerceGetCustomerBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        pricommerceGetCustomerBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 15;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.VerificationPriocommerceGetCustomer pricommerce_get_customer = 15 [json_name = "pricommerceGetCustomer"];</code>
+     */
+    public Builder mergePricommerceGetCustomer(com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomer value) {
+      if (pricommerceGetCustomerBuilder_ == null) {
+        if (valueCase_ == 15 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomer.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomer.newBuilder((com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomer) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 15) {
+          pricommerceGetCustomerBuilder_.mergeFrom(value);
+        } else {
+          pricommerceGetCustomerBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 15;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.VerificationPriocommerceGetCustomer pricommerce_get_customer = 15 [json_name = "pricommerceGetCustomer"];</code>
+     */
+    public Builder clearPricommerceGetCustomer() {
+      if (pricommerceGetCustomerBuilder_ == null) {
+        if (valueCase_ == 15) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 15) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        pricommerceGetCustomerBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.VerificationPriocommerceGetCustomer pricommerce_get_customer = 15 [json_name = "pricommerceGetCustomer"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomer.Builder getPricommerceGetCustomerBuilder() {
+      return getPricommerceGetCustomerFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.VerificationPriocommerceGetCustomer pricommerce_get_customer = 15 [json_name = "pricommerceGetCustomer"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomerOrBuilder getPricommerceGetCustomerOrBuilder() {
+      if ((valueCase_ == 15) && (pricommerceGetCustomerBuilder_ != null)) {
+        return pricommerceGetCustomerBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 15) {
+          return (com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomer) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomer.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.VerificationPriocommerceGetCustomer pricommerce_get_customer = 15 [json_name = "pricommerceGetCustomer"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomer, com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomer.Builder, com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomerOrBuilder> 
+        getPricommerceGetCustomerFieldBuilder() {
+      if (pricommerceGetCustomerBuilder_ == null) {
+        if (!(valueCase_ == 15)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomer.getDefaultInstance();
+        }
+        pricommerceGetCustomerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomer, com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomer.Builder, com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomerOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomer) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 15;
+      onChanged();
+      return pricommerceGetCustomerBuilder_;
+    }
+
     private java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition> verificationFields_ =
       java.util.Collections.emptyList();
     private void ensureVerificationFieldsIsMutable() {
-      if (!((bitField0_ & 0x00000200) != 0)) {
+      if (!((bitField0_ & 0x00000400) != 0)) {
         verificationFields_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.integrations.FieldDefinition>(verificationFields_);
-        bitField0_ |= 0x00000200;
+        bitField0_ |= 0x00000400;
        }
     }
 
@@ -2564,7 +2772,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearVerificationFields() {
       if (verificationFieldsBuilder_ == null) {
         verificationFields_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000200);
+        bitField0_ = (bitField0_ & ~0x00000400);
         onChanged();
       } else {
         verificationFieldsBuilder_.clear();
@@ -2676,7 +2884,7 @@ private static final long serialVersionUID = 0L;
         verificationFieldsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.commons.integrations.FieldDefinition, com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder, com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder>(
                 verificationFields_,
-                ((bitField0_ & 0x00000200) != 0),
+                ((bitField0_ & 0x00000400) != 0),
                 getParentForChildren(),
                 isClean());
         verificationFields_ = null;

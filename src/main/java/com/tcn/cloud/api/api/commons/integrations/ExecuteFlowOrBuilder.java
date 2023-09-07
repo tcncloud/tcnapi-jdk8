@@ -2869,5 +2869,20 @@ public interface ExecuteFlowOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.integrations.ExecutePriocommerceCcPaymentOrBuilder getPriocommerceCcPaymentOrBuilder();
 
+  /**
+   * <code>.api.commons.integrations.ExecutePriocommerceAchGetCustomer priocommerce_get_customer = 3903 [json_name = "priocommerceGetCustomer"];</code>
+   * @return Whether the priocommerceGetCustomer field is set.
+   */
+  boolean hasPriocommerceGetCustomer();
+  /**
+   * <code>.api.commons.integrations.ExecutePriocommerceAchGetCustomer priocommerce_get_customer = 3903 [json_name = "priocommerceGetCustomer"];</code>
+   * @return The priocommerceGetCustomer.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecutePriocommerceAchGetCustomer getPriocommerceGetCustomer();
+  /**
+   * <code>.api.commons.integrations.ExecutePriocommerceAchGetCustomer priocommerce_get_customer = 3903 [json_name = "priocommerceGetCustomer"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecutePriocommerceAchGetCustomerOrBuilder getPriocommerceGetCustomerOrBuilder();
+
   com.tcn.cloud.api.api.commons.integrations.ExecuteFlow.ValueCase getValueCase();
 }
