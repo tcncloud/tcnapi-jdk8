@@ -8,26 +8,17 @@ public interface ListInvoicesResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>repeated .data.billing.v1alpha1.Invoice invoices = 1 [json_name = "invoices"];</code>
+   * <code>.data.billing.v1alpha1.Invoice invoice = 1 [json_name = "invoice"];</code>
+   * @return Whether the invoice field is set.
    */
-  java.util.List<com.tcn.cloud.api.data.billing.v1alpha1.Invoice> 
-      getInvoicesList();
+  boolean hasInvoice();
   /**
-   * <code>repeated .data.billing.v1alpha1.Invoice invoices = 1 [json_name = "invoices"];</code>
+   * <code>.data.billing.v1alpha1.Invoice invoice = 1 [json_name = "invoice"];</code>
+   * @return The invoice.
    */
-  com.tcn.cloud.api.data.billing.v1alpha1.Invoice getInvoices(int index);
+  com.tcn.cloud.api.data.billing.v1alpha1.Invoice getInvoice();
   /**
-   * <code>repeated .data.billing.v1alpha1.Invoice invoices = 1 [json_name = "invoices"];</code>
+   * <code>.data.billing.v1alpha1.Invoice invoice = 1 [json_name = "invoice"];</code>
    */
-  int getInvoicesCount();
-  /**
-   * <code>repeated .data.billing.v1alpha1.Invoice invoices = 1 [json_name = "invoices"];</code>
-   */
-  java.util.List<? extends com.tcn.cloud.api.data.billing.v1alpha1.InvoiceOrBuilder> 
-      getInvoicesOrBuilderList();
-  /**
-   * <code>repeated .data.billing.v1alpha1.Invoice invoices = 1 [json_name = "invoices"];</code>
-   */
-  com.tcn.cloud.api.data.billing.v1alpha1.InvoiceOrBuilder getInvoicesOrBuilder(
-      int index);
+  com.tcn.cloud.api.data.billing.v1alpha1.InvoiceOrBuilder getInvoiceOrBuilder();
 }

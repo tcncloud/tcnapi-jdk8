@@ -93,20 +93,20 @@ public final class InvoicesProto {
       "f.FieldMaskR\016selectorFields\022?\n\rreturn_fi" +
       "elds\030\003 \001(\0132\032.google.protobuf.FieldMaskR\014" +
       "returnFields\022=\n\010order_by\030\004 \001(\0132\".service" +
-      "s.billing.v1alpha1.OrderByR\007orderBy\"R\n\024L" +
-      "istInvoicesResponse\022:\n\010invoices\030\001 \003(\0132\036." +
-      "data.billing.v1alpha1.InvoiceR\010invoices\"" +
-      "\221\001\n\024UpdateInvoiceRequest\0228\n\007invoice\030\001 \001(" +
-      "\0132\036.data.billing.v1alpha1.InvoiceR\007invoi" +
-      "ce\022?\n\rupdate_fields\030\002 \001(\0132\032.google.proto" +
-      "buf.FieldMaskR\014updateFields\"Q\n\025UpdateInv" +
-      "oiceResponse\0228\n\007invoice\030\001 \001(\0132\036.data.bil" +
-      "ling.v1alpha1.InvoiceR\007invoiceB\302\001\n+com.t" +
-      "cn.cloud.api.services.billing.v1alpha1B\r" +
-      "InvoicesProtoP\001\242\002\003SBX\252\002\031Services.Billing" +
-      ".V1alpha1\312\002\031Services\\Billing\\V1alpha1\342\002%" +
-      "Services\\Billing\\V1alpha1\\GPBMetadata\352\002\033" +
-      "Services::Billing::V1alpha1b\006proto3"
+      "s.billing.v1alpha1.OrderByR\007orderBy\"P\n\024L" +
+      "istInvoicesResponse\0228\n\007invoice\030\001 \001(\0132\036.d" +
+      "ata.billing.v1alpha1.InvoiceR\007invoice\"\221\001" +
+      "\n\024UpdateInvoiceRequest\0228\n\007invoice\030\001 \001(\0132" +
+      "\036.data.billing.v1alpha1.InvoiceR\007invoice" +
+      "\022?\n\rupdate_fields\030\002 \001(\0132\032.google.protobu" +
+      "f.FieldMaskR\014updateFields\"Q\n\025UpdateInvoi" +
+      "ceResponse\0228\n\007invoice\030\001 \001(\0132\036.data.billi" +
+      "ng.v1alpha1.InvoiceR\007invoiceB\302\001\n+com.tcn" +
+      ".cloud.api.services.billing.v1alpha1B\rIn" +
+      "voicesProtoP\001\242\002\003SBX\252\002\031Services.Billing.V" +
+      "1alpha1\312\002\031Services\\Billing\\V1alpha1\342\002%Se" +
+      "rvices\\Billing\\V1alpha1\\GPBMetadata\352\002\033Se" +
+      "rvices::Billing::V1alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -162,7 +162,7 @@ public final class InvoicesProto {
     internal_static_services_billing_v1alpha1_ListInvoicesResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_v1alpha1_ListInvoicesResponse_descriptor,
-        new java.lang.String[] { "Invoices", });
+        new java.lang.String[] { "Invoice", });
     internal_static_services_billing_v1alpha1_UpdateInvoiceRequest_descriptor =
       getDescriptor().getMessageTypes().get(8);
     internal_static_services_billing_v1alpha1_UpdateInvoiceRequest_fieldAccessorTable = new
