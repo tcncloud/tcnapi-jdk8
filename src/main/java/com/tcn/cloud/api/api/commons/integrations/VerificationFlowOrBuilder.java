@@ -140,19 +140,19 @@ public interface VerificationFlowOrBuilder extends
   com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareAccountInquiryOrBuilder getNewzwareAccountInquiryOrBuilder();
 
   /**
-   * <code>.api.commons.integrations.VerificationPriocommerceGetCustomer pricommerce_get_customer = 15 [json_name = "pricommerceGetCustomer"];</code>
-   * @return Whether the pricommerceGetCustomer field is set.
+   * <code>.api.commons.integrations.VerificationPriocommerceGetCustomer priocommerce_get_customer = 15 [json_name = "priocommerceGetCustomer"];</code>
+   * @return Whether the priocommerceGetCustomer field is set.
    */
-  boolean hasPricommerceGetCustomer();
+  boolean hasPriocommerceGetCustomer();
   /**
-   * <code>.api.commons.integrations.VerificationPriocommerceGetCustomer pricommerce_get_customer = 15 [json_name = "pricommerceGetCustomer"];</code>
-   * @return The pricommerceGetCustomer.
+   * <code>.api.commons.integrations.VerificationPriocommerceGetCustomer priocommerce_get_customer = 15 [json_name = "priocommerceGetCustomer"];</code>
+   * @return The priocommerceGetCustomer.
    */
-  com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomer getPricommerceGetCustomer();
+  com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomer getPriocommerceGetCustomer();
   /**
-   * <code>.api.commons.integrations.VerificationPriocommerceGetCustomer pricommerce_get_customer = 15 [json_name = "pricommerceGetCustomer"];</code>
+   * <code>.api.commons.integrations.VerificationPriocommerceGetCustomer priocommerce_get_customer = 15 [json_name = "priocommerceGetCustomer"];</code>
    */
-  com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomerOrBuilder getPricommerceGetCustomerOrBuilder();
+  com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomerOrBuilder getPriocommerceGetCustomerOrBuilder();
 
   /**
    * <pre>

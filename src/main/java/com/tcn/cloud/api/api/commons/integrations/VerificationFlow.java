@@ -54,7 +54,7 @@ private static final long serialVersionUID = 0L;
     JOURNEY(12),
     NEWZWARE_LOOKUP_PHONE(13),
     NEWZWARE_ACCOUNT_INQUIRY(14),
-    PRICOMMERCE_GET_CUSTOMER(15),
+    PRIOCOMMERCE_GET_CUSTOMER(15),
     VALUE_NOT_SET(0);
     private final int value;
     private ValueCase(int value) {
@@ -80,7 +80,7 @@ private static final long serialVersionUID = 0L;
         case 12: return JOURNEY;
         case 13: return NEWZWARE_LOOKUP_PHONE;
         case 14: return NEWZWARE_ACCOUNT_INQUIRY;
-        case 15: return PRICOMMERCE_GET_CUSTOMER;
+        case 15: return PRIOCOMMERCE_GET_CUSTOMER;
         case 0: return VALUE_NOT_SET;
         default: return null;
       }
@@ -383,31 +383,31 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareAccountInquiry.getDefaultInstance();
   }
 
-  public static final int PRICOMMERCE_GET_CUSTOMER_FIELD_NUMBER = 15;
+  public static final int PRIOCOMMERCE_GET_CUSTOMER_FIELD_NUMBER = 15;
   /**
-   * <code>.api.commons.integrations.VerificationPriocommerceGetCustomer pricommerce_get_customer = 15 [json_name = "pricommerceGetCustomer"];</code>
-   * @return Whether the pricommerceGetCustomer field is set.
+   * <code>.api.commons.integrations.VerificationPriocommerceGetCustomer priocommerce_get_customer = 15 [json_name = "priocommerceGetCustomer"];</code>
+   * @return Whether the priocommerceGetCustomer field is set.
    */
   @java.lang.Override
-  public boolean hasPricommerceGetCustomer() {
+  public boolean hasPriocommerceGetCustomer() {
     return valueCase_ == 15;
   }
   /**
-   * <code>.api.commons.integrations.VerificationPriocommerceGetCustomer pricommerce_get_customer = 15 [json_name = "pricommerceGetCustomer"];</code>
-   * @return The pricommerceGetCustomer.
+   * <code>.api.commons.integrations.VerificationPriocommerceGetCustomer priocommerce_get_customer = 15 [json_name = "priocommerceGetCustomer"];</code>
+   * @return The priocommerceGetCustomer.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomer getPricommerceGetCustomer() {
+  public com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomer getPriocommerceGetCustomer() {
     if (valueCase_ == 15) {
        return (com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomer) value_;
     }
     return com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomer.getDefaultInstance();
   }
   /**
-   * <code>.api.commons.integrations.VerificationPriocommerceGetCustomer pricommerce_get_customer = 15 [json_name = "pricommerceGetCustomer"];</code>
+   * <code>.api.commons.integrations.VerificationPriocommerceGetCustomer priocommerce_get_customer = 15 [json_name = "priocommerceGetCustomer"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomerOrBuilder getPricommerceGetCustomerOrBuilder() {
+  public com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomerOrBuilder getPriocommerceGetCustomerOrBuilder() {
     if (valueCase_ == 15) {
        return (com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomer) value_;
     }
@@ -633,8 +633,8 @@ private static final long serialVersionUID = 0L;
             .equals(other.getNewzwareAccountInquiry())) return false;
         break;
       case 15:
-        if (!getPricommerceGetCustomer()
-            .equals(other.getPricommerceGetCustomer())) return false;
+        if (!getPriocommerceGetCustomer()
+            .equals(other.getPriocommerceGetCustomer())) return false;
         break;
       case 0:
       default:
@@ -690,8 +690,8 @@ private static final long serialVersionUID = 0L;
         hash = (53 * hash) + getNewzwareAccountInquiry().hashCode();
         break;
       case 15:
-        hash = (37 * hash) + PRICOMMERCE_GET_CUSTOMER_FIELD_NUMBER;
-        hash = (53 * hash) + getPricommerceGetCustomer().hashCode();
+        hash = (37 * hash) + PRIOCOMMERCE_GET_CUSTOMER_FIELD_NUMBER;
+        hash = (53 * hash) + getPriocommerceGetCustomer().hashCode();
         break;
       case 0:
       default:
@@ -852,8 +852,8 @@ private static final long serialVersionUID = 0L;
       if (newzwareAccountInquiryBuilder_ != null) {
         newzwareAccountInquiryBuilder_.clear();
       }
-      if (pricommerceGetCustomerBuilder_ != null) {
-        pricommerceGetCustomerBuilder_.clear();
+      if (priocommerceGetCustomerBuilder_ != null) {
+        priocommerceGetCustomerBuilder_.clear();
       }
       if (verificationFieldsBuilder_ == null) {
         verificationFields_ = java.util.Collections.emptyList();
@@ -952,8 +952,8 @@ private static final long serialVersionUID = 0L;
         result.value_ = newzwareAccountInquiryBuilder_.build();
       }
       if (valueCase_ == 15 &&
-          pricommerceGetCustomerBuilder_ != null) {
-        result.value_ = pricommerceGetCustomerBuilder_.build();
+          priocommerceGetCustomerBuilder_ != null) {
+        result.value_ = priocommerceGetCustomerBuilder_.build();
       }
     }
 
@@ -1065,8 +1065,8 @@ private static final long serialVersionUID = 0L;
           mergeNewzwareAccountInquiry(other.getNewzwareAccountInquiry());
           break;
         }
-        case PRICOMMERCE_GET_CUSTOMER: {
-          mergePricommerceGetCustomer(other.getPricommerceGetCustomer());
+        case PRIOCOMMERCE_GET_CUSTOMER: {
+          mergePriocommerceGetCustomer(other.getPriocommerceGetCustomer());
           break;
         }
         case VALUE_NOT_SET: {
@@ -1162,7 +1162,7 @@ private static final long serialVersionUID = 0L;
             } // case 114
             case 122: {
               input.readMessage(
-                  getPricommerceGetCustomerFieldBuilder().getBuilder(),
+                  getPriocommerceGetCustomerFieldBuilder().getBuilder(),
                   extensionRegistry);
               valueCase_ = 15;
               break;
@@ -2421,68 +2421,68 @@ private static final long serialVersionUID = 0L;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomer, com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomer.Builder, com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomerOrBuilder> pricommerceGetCustomerBuilder_;
+        com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomer, com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomer.Builder, com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomerOrBuilder> priocommerceGetCustomerBuilder_;
     /**
-     * <code>.api.commons.integrations.VerificationPriocommerceGetCustomer pricommerce_get_customer = 15 [json_name = "pricommerceGetCustomer"];</code>
-     * @return Whether the pricommerceGetCustomer field is set.
+     * <code>.api.commons.integrations.VerificationPriocommerceGetCustomer priocommerce_get_customer = 15 [json_name = "priocommerceGetCustomer"];</code>
+     * @return Whether the priocommerceGetCustomer field is set.
      */
     @java.lang.Override
-    public boolean hasPricommerceGetCustomer() {
+    public boolean hasPriocommerceGetCustomer() {
       return valueCase_ == 15;
     }
     /**
-     * <code>.api.commons.integrations.VerificationPriocommerceGetCustomer pricommerce_get_customer = 15 [json_name = "pricommerceGetCustomer"];</code>
-     * @return The pricommerceGetCustomer.
+     * <code>.api.commons.integrations.VerificationPriocommerceGetCustomer priocommerce_get_customer = 15 [json_name = "priocommerceGetCustomer"];</code>
+     * @return The priocommerceGetCustomer.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomer getPricommerceGetCustomer() {
-      if (pricommerceGetCustomerBuilder_ == null) {
+    public com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomer getPriocommerceGetCustomer() {
+      if (priocommerceGetCustomerBuilder_ == null) {
         if (valueCase_ == 15) {
           return (com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomer) value_;
         }
         return com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomer.getDefaultInstance();
       } else {
         if (valueCase_ == 15) {
-          return pricommerceGetCustomerBuilder_.getMessage();
+          return priocommerceGetCustomerBuilder_.getMessage();
         }
         return com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomer.getDefaultInstance();
       }
     }
     /**
-     * <code>.api.commons.integrations.VerificationPriocommerceGetCustomer pricommerce_get_customer = 15 [json_name = "pricommerceGetCustomer"];</code>
+     * <code>.api.commons.integrations.VerificationPriocommerceGetCustomer priocommerce_get_customer = 15 [json_name = "priocommerceGetCustomer"];</code>
      */
-    public Builder setPricommerceGetCustomer(com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomer value) {
-      if (pricommerceGetCustomerBuilder_ == null) {
+    public Builder setPriocommerceGetCustomer(com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomer value) {
+      if (priocommerceGetCustomerBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
         value_ = value;
         onChanged();
       } else {
-        pricommerceGetCustomerBuilder_.setMessage(value);
+        priocommerceGetCustomerBuilder_.setMessage(value);
       }
       valueCase_ = 15;
       return this;
     }
     /**
-     * <code>.api.commons.integrations.VerificationPriocommerceGetCustomer pricommerce_get_customer = 15 [json_name = "pricommerceGetCustomer"];</code>
+     * <code>.api.commons.integrations.VerificationPriocommerceGetCustomer priocommerce_get_customer = 15 [json_name = "priocommerceGetCustomer"];</code>
      */
-    public Builder setPricommerceGetCustomer(
+    public Builder setPriocommerceGetCustomer(
         com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomer.Builder builderForValue) {
-      if (pricommerceGetCustomerBuilder_ == null) {
+      if (priocommerceGetCustomerBuilder_ == null) {
         value_ = builderForValue.build();
         onChanged();
       } else {
-        pricommerceGetCustomerBuilder_.setMessage(builderForValue.build());
+        priocommerceGetCustomerBuilder_.setMessage(builderForValue.build());
       }
       valueCase_ = 15;
       return this;
     }
     /**
-     * <code>.api.commons.integrations.VerificationPriocommerceGetCustomer pricommerce_get_customer = 15 [json_name = "pricommerceGetCustomer"];</code>
+     * <code>.api.commons.integrations.VerificationPriocommerceGetCustomer priocommerce_get_customer = 15 [json_name = "priocommerceGetCustomer"];</code>
      */
-    public Builder mergePricommerceGetCustomer(com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomer value) {
-      if (pricommerceGetCustomerBuilder_ == null) {
+    public Builder mergePriocommerceGetCustomer(com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomer value) {
+      if (priocommerceGetCustomerBuilder_ == null) {
         if (valueCase_ == 15 &&
             value_ != com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomer.getDefaultInstance()) {
           value_ = com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomer.newBuilder((com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomer) value_)
@@ -2493,19 +2493,19 @@ private static final long serialVersionUID = 0L;
         onChanged();
       } else {
         if (valueCase_ == 15) {
-          pricommerceGetCustomerBuilder_.mergeFrom(value);
+          priocommerceGetCustomerBuilder_.mergeFrom(value);
         } else {
-          pricommerceGetCustomerBuilder_.setMessage(value);
+          priocommerceGetCustomerBuilder_.setMessage(value);
         }
       }
       valueCase_ = 15;
       return this;
     }
     /**
-     * <code>.api.commons.integrations.VerificationPriocommerceGetCustomer pricommerce_get_customer = 15 [json_name = "pricommerceGetCustomer"];</code>
+     * <code>.api.commons.integrations.VerificationPriocommerceGetCustomer priocommerce_get_customer = 15 [json_name = "priocommerceGetCustomer"];</code>
      */
-    public Builder clearPricommerceGetCustomer() {
-      if (pricommerceGetCustomerBuilder_ == null) {
+    public Builder clearPriocommerceGetCustomer() {
+      if (priocommerceGetCustomerBuilder_ == null) {
         if (valueCase_ == 15) {
           valueCase_ = 0;
           value_ = null;
@@ -2516,23 +2516,23 @@ private static final long serialVersionUID = 0L;
           valueCase_ = 0;
           value_ = null;
         }
-        pricommerceGetCustomerBuilder_.clear();
+        priocommerceGetCustomerBuilder_.clear();
       }
       return this;
     }
     /**
-     * <code>.api.commons.integrations.VerificationPriocommerceGetCustomer pricommerce_get_customer = 15 [json_name = "pricommerceGetCustomer"];</code>
+     * <code>.api.commons.integrations.VerificationPriocommerceGetCustomer priocommerce_get_customer = 15 [json_name = "priocommerceGetCustomer"];</code>
      */
-    public com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomer.Builder getPricommerceGetCustomerBuilder() {
-      return getPricommerceGetCustomerFieldBuilder().getBuilder();
+    public com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomer.Builder getPriocommerceGetCustomerBuilder() {
+      return getPriocommerceGetCustomerFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.commons.integrations.VerificationPriocommerceGetCustomer pricommerce_get_customer = 15 [json_name = "pricommerceGetCustomer"];</code>
+     * <code>.api.commons.integrations.VerificationPriocommerceGetCustomer priocommerce_get_customer = 15 [json_name = "priocommerceGetCustomer"];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomerOrBuilder getPricommerceGetCustomerOrBuilder() {
-      if ((valueCase_ == 15) && (pricommerceGetCustomerBuilder_ != null)) {
-        return pricommerceGetCustomerBuilder_.getMessageOrBuilder();
+    public com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomerOrBuilder getPriocommerceGetCustomerOrBuilder() {
+      if ((valueCase_ == 15) && (priocommerceGetCustomerBuilder_ != null)) {
+        return priocommerceGetCustomerBuilder_.getMessageOrBuilder();
       } else {
         if (valueCase_ == 15) {
           return (com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomer) value_;
@@ -2541,16 +2541,16 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.integrations.VerificationPriocommerceGetCustomer pricommerce_get_customer = 15 [json_name = "pricommerceGetCustomer"];</code>
+     * <code>.api.commons.integrations.VerificationPriocommerceGetCustomer priocommerce_get_customer = 15 [json_name = "priocommerceGetCustomer"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomer, com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomer.Builder, com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomerOrBuilder> 
-        getPricommerceGetCustomerFieldBuilder() {
-      if (pricommerceGetCustomerBuilder_ == null) {
+        getPriocommerceGetCustomerFieldBuilder() {
+      if (priocommerceGetCustomerBuilder_ == null) {
         if (!(valueCase_ == 15)) {
           value_ = com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomer.getDefaultInstance();
         }
-        pricommerceGetCustomerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        priocommerceGetCustomerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomer, com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomer.Builder, com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomerOrBuilder>(
                 (com.tcn.cloud.api.api.commons.integrations.VerificationPriocommerceGetCustomer) value_,
                 getParentForChildren(),
@@ -2559,7 +2559,7 @@ private static final long serialVersionUID = 0L;
       }
       valueCase_ = 15;
       onChanged();
-      return pricommerceGetCustomerBuilder_;
+      return priocommerceGetCustomerBuilder_;
     }
 
     private java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition> verificationFields_ =
