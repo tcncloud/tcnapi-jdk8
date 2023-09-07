@@ -5,51 +5,51 @@ package com.tcn.cloud.api.api.v1alpha1.newsroom;
 
 /**
  * <pre>
- * Request to update published news article
+ * Request to update published article
  * </pre>
  *
- * Protobuf type {@code api.v1alpha1.newsroom.UpdatePublishedNewsArticleRequest}
+ * Protobuf type {@code api.v1alpha1.newsroom.UpdatePublishedArticleRequest}
  */
-public final class UpdatePublishedNewsArticleRequest extends
+public final class UpdatePublishedArticleRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v1alpha1.newsroom.UpdatePublishedNewsArticleRequest)
-    UpdatePublishedNewsArticleRequestOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v1alpha1.newsroom.UpdatePublishedArticleRequest)
+    UpdatePublishedArticleRequestOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use UpdatePublishedNewsArticleRequest.newBuilder() to construct.
-  private UpdatePublishedNewsArticleRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use UpdatePublishedArticleRequest.newBuilder() to construct.
+  private UpdatePublishedArticleRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private UpdatePublishedNewsArticleRequest() {
+  private UpdatePublishedArticleRequest() {
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new UpdatePublishedNewsArticleRequest();
+    return new UpdatePublishedArticleRequest();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v1alpha1.newsroom.EntitiesProto.internal_static_api_v1alpha1_newsroom_UpdatePublishedNewsArticleRequest_descriptor;
+    return com.tcn.cloud.api.api.v1alpha1.newsroom.EntitiesProto.internal_static_api_v1alpha1_newsroom_UpdatePublishedArticleRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v1alpha1.newsroom.EntitiesProto.internal_static_api_v1alpha1_newsroom_UpdatePublishedNewsArticleRequest_fieldAccessorTable
+    return com.tcn.cloud.api.api.v1alpha1.newsroom.EntitiesProto.internal_static_api_v1alpha1_newsroom_UpdatePublishedArticleRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedNewsArticleRequest.class, com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedNewsArticleRequest.Builder.class);
+            com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedArticleRequest.class, com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedArticleRequest.Builder.class);
   }
 
   public static final int PUBLISHED_ARTICLE_DETAILS_FIELD_NUMBER = 1;
-  private com.tcn.cloud.api.api.v1alpha1.newsroom.PublishedNewsArticleDetails publishedArticleDetails_;
+  private com.tcn.cloud.api.api.v1alpha1.newsroom.PublishedArticleDetails publishedArticleDetails_;
   /**
    * <pre>
-   * the published news article fields specified to be updated
+   * the published article fields specified to be updated
    * </pre>
    *
-   * <code>.api.v1alpha1.newsroom.PublishedNewsArticleDetails published_article_details = 1 [json_name = "publishedArticleDetails"];</code>
+   * <code>.api.v1alpha1.newsroom.PublishedArticleDetails published_article_details = 1 [json_name = "publishedArticleDetails"];</code>
    * @return Whether the publishedArticleDetails field is set.
    */
   @java.lang.Override
@@ -58,26 +58,26 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * the published news article fields specified to be updated
+   * the published article fields specified to be updated
    * </pre>
    *
-   * <code>.api.v1alpha1.newsroom.PublishedNewsArticleDetails published_article_details = 1 [json_name = "publishedArticleDetails"];</code>
+   * <code>.api.v1alpha1.newsroom.PublishedArticleDetails published_article_details = 1 [json_name = "publishedArticleDetails"];</code>
    * @return The publishedArticleDetails.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.newsroom.PublishedNewsArticleDetails getPublishedArticleDetails() {
-    return publishedArticleDetails_ == null ? com.tcn.cloud.api.api.v1alpha1.newsroom.PublishedNewsArticleDetails.getDefaultInstance() : publishedArticleDetails_;
+  public com.tcn.cloud.api.api.v1alpha1.newsroom.PublishedArticleDetails getPublishedArticleDetails() {
+    return publishedArticleDetails_ == null ? com.tcn.cloud.api.api.v1alpha1.newsroom.PublishedArticleDetails.getDefaultInstance() : publishedArticleDetails_;
   }
   /**
    * <pre>
-   * the published news article fields specified to be updated
+   * the published article fields specified to be updated
    * </pre>
    *
-   * <code>.api.v1alpha1.newsroom.PublishedNewsArticleDetails published_article_details = 1 [json_name = "publishedArticleDetails"];</code>
+   * <code>.api.v1alpha1.newsroom.PublishedArticleDetails published_article_details = 1 [json_name = "publishedArticleDetails"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.newsroom.PublishedNewsArticleDetailsOrBuilder getPublishedArticleDetailsOrBuilder() {
-    return publishedArticleDetails_ == null ? com.tcn.cloud.api.api.v1alpha1.newsroom.PublishedNewsArticleDetails.getDefaultInstance() : publishedArticleDetails_;
+  public com.tcn.cloud.api.api.v1alpha1.newsroom.PublishedArticleDetailsOrBuilder getPublishedArticleDetailsOrBuilder() {
+    return publishedArticleDetails_ == null ? com.tcn.cloud.api.api.v1alpha1.newsroom.PublishedArticleDetails.getDefaultInstance() : publishedArticleDetails_;
   }
 
   public static final int FIELD_MASK_FIELD_NUMBER = 100;
@@ -165,10 +165,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedNewsArticleRequest)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedArticleRequest)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedNewsArticleRequest other = (com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedNewsArticleRequest) obj;
+    com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedArticleRequest other = (com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedArticleRequest) obj;
 
     if (hasPublishedArticleDetails() != other.hasPublishedArticleDetails()) return false;
     if (hasPublishedArticleDetails()) {
@@ -204,44 +204,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedNewsArticleRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedArticleRequest parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedNewsArticleRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedArticleRequest parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedNewsArticleRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedArticleRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedNewsArticleRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedArticleRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedNewsArticleRequest parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedArticleRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedNewsArticleRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedArticleRequest parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedNewsArticleRequest parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedArticleRequest parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedNewsArticleRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedArticleRequest parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -249,26 +249,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedNewsArticleRequest parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedArticleRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedNewsArticleRequest parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedArticleRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedNewsArticleRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedArticleRequest parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedNewsArticleRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedArticleRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -281,7 +281,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedNewsArticleRequest prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedArticleRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -298,29 +298,29 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Request to update published news article
+   * Request to update published article
    * </pre>
    *
-   * Protobuf type {@code api.v1alpha1.newsroom.UpdatePublishedNewsArticleRequest}
+   * Protobuf type {@code api.v1alpha1.newsroom.UpdatePublishedArticleRequest}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v1alpha1.newsroom.UpdatePublishedNewsArticleRequest)
-      com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedNewsArticleRequestOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v1alpha1.newsroom.UpdatePublishedArticleRequest)
+      com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedArticleRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v1alpha1.newsroom.EntitiesProto.internal_static_api_v1alpha1_newsroom_UpdatePublishedNewsArticleRequest_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.newsroom.EntitiesProto.internal_static_api_v1alpha1_newsroom_UpdatePublishedArticleRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v1alpha1.newsroom.EntitiesProto.internal_static_api_v1alpha1_newsroom_UpdatePublishedNewsArticleRequest_fieldAccessorTable
+      return com.tcn.cloud.api.api.v1alpha1.newsroom.EntitiesProto.internal_static_api_v1alpha1_newsroom_UpdatePublishedArticleRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedNewsArticleRequest.class, com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedNewsArticleRequest.Builder.class);
+              com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedArticleRequest.class, com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedArticleRequest.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedNewsArticleRequest.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedArticleRequest.newBuilder()
     private Builder() {
 
     }
@@ -350,17 +350,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v1alpha1.newsroom.EntitiesProto.internal_static_api_v1alpha1_newsroom_UpdatePublishedNewsArticleRequest_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.newsroom.EntitiesProto.internal_static_api_v1alpha1_newsroom_UpdatePublishedArticleRequest_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedNewsArticleRequest getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedNewsArticleRequest.getDefaultInstance();
+    public com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedArticleRequest getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedArticleRequest.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedNewsArticleRequest build() {
-      com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedNewsArticleRequest result = buildPartial();
+    public com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedArticleRequest build() {
+      com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedArticleRequest result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -368,14 +368,14 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedNewsArticleRequest buildPartial() {
-      com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedNewsArticleRequest result = new com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedNewsArticleRequest(this);
+    public com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedArticleRequest buildPartial() {
+      com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedArticleRequest result = new com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedArticleRequest(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedNewsArticleRequest result) {
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedArticleRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.publishedArticleDetails_ = publishedArticleDetailsBuilder_ == null
@@ -423,16 +423,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedNewsArticleRequest) {
-        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedNewsArticleRequest)other);
+      if (other instanceof com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedArticleRequest) {
+        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedArticleRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedNewsArticleRequest other) {
-      if (other == com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedNewsArticleRequest.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedArticleRequest other) {
+      if (other == com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedArticleRequest.getDefaultInstance()) return this;
       if (other.hasPublishedArticleDetails()) {
         mergePublishedArticleDetails(other.getPublishedArticleDetails());
       }
@@ -496,15 +496,15 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private com.tcn.cloud.api.api.v1alpha1.newsroom.PublishedNewsArticleDetails publishedArticleDetails_;
+    private com.tcn.cloud.api.api.v1alpha1.newsroom.PublishedArticleDetails publishedArticleDetails_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.v1alpha1.newsroom.PublishedNewsArticleDetails, com.tcn.cloud.api.api.v1alpha1.newsroom.PublishedNewsArticleDetails.Builder, com.tcn.cloud.api.api.v1alpha1.newsroom.PublishedNewsArticleDetailsOrBuilder> publishedArticleDetailsBuilder_;
+        com.tcn.cloud.api.api.v1alpha1.newsroom.PublishedArticleDetails, com.tcn.cloud.api.api.v1alpha1.newsroom.PublishedArticleDetails.Builder, com.tcn.cloud.api.api.v1alpha1.newsroom.PublishedArticleDetailsOrBuilder> publishedArticleDetailsBuilder_;
     /**
      * <pre>
-     * the published news article fields specified to be updated
+     * the published article fields specified to be updated
      * </pre>
      *
-     * <code>.api.v1alpha1.newsroom.PublishedNewsArticleDetails published_article_details = 1 [json_name = "publishedArticleDetails"];</code>
+     * <code>.api.v1alpha1.newsroom.PublishedArticleDetails published_article_details = 1 [json_name = "publishedArticleDetails"];</code>
      * @return Whether the publishedArticleDetails field is set.
      */
     public boolean hasPublishedArticleDetails() {
@@ -512,27 +512,27 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the published news article fields specified to be updated
+     * the published article fields specified to be updated
      * </pre>
      *
-     * <code>.api.v1alpha1.newsroom.PublishedNewsArticleDetails published_article_details = 1 [json_name = "publishedArticleDetails"];</code>
+     * <code>.api.v1alpha1.newsroom.PublishedArticleDetails published_article_details = 1 [json_name = "publishedArticleDetails"];</code>
      * @return The publishedArticleDetails.
      */
-    public com.tcn.cloud.api.api.v1alpha1.newsroom.PublishedNewsArticleDetails getPublishedArticleDetails() {
+    public com.tcn.cloud.api.api.v1alpha1.newsroom.PublishedArticleDetails getPublishedArticleDetails() {
       if (publishedArticleDetailsBuilder_ == null) {
-        return publishedArticleDetails_ == null ? com.tcn.cloud.api.api.v1alpha1.newsroom.PublishedNewsArticleDetails.getDefaultInstance() : publishedArticleDetails_;
+        return publishedArticleDetails_ == null ? com.tcn.cloud.api.api.v1alpha1.newsroom.PublishedArticleDetails.getDefaultInstance() : publishedArticleDetails_;
       } else {
         return publishedArticleDetailsBuilder_.getMessage();
       }
     }
     /**
      * <pre>
-     * the published news article fields specified to be updated
+     * the published article fields specified to be updated
      * </pre>
      *
-     * <code>.api.v1alpha1.newsroom.PublishedNewsArticleDetails published_article_details = 1 [json_name = "publishedArticleDetails"];</code>
+     * <code>.api.v1alpha1.newsroom.PublishedArticleDetails published_article_details = 1 [json_name = "publishedArticleDetails"];</code>
      */
-    public Builder setPublishedArticleDetails(com.tcn.cloud.api.api.v1alpha1.newsroom.PublishedNewsArticleDetails value) {
+    public Builder setPublishedArticleDetails(com.tcn.cloud.api.api.v1alpha1.newsroom.PublishedArticleDetails value) {
       if (publishedArticleDetailsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -547,13 +547,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the published news article fields specified to be updated
+     * the published article fields specified to be updated
      * </pre>
      *
-     * <code>.api.v1alpha1.newsroom.PublishedNewsArticleDetails published_article_details = 1 [json_name = "publishedArticleDetails"];</code>
+     * <code>.api.v1alpha1.newsroom.PublishedArticleDetails published_article_details = 1 [json_name = "publishedArticleDetails"];</code>
      */
     public Builder setPublishedArticleDetails(
-        com.tcn.cloud.api.api.v1alpha1.newsroom.PublishedNewsArticleDetails.Builder builderForValue) {
+        com.tcn.cloud.api.api.v1alpha1.newsroom.PublishedArticleDetails.Builder builderForValue) {
       if (publishedArticleDetailsBuilder_ == null) {
         publishedArticleDetails_ = builderForValue.build();
       } else {
@@ -565,16 +565,16 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the published news article fields specified to be updated
+     * the published article fields specified to be updated
      * </pre>
      *
-     * <code>.api.v1alpha1.newsroom.PublishedNewsArticleDetails published_article_details = 1 [json_name = "publishedArticleDetails"];</code>
+     * <code>.api.v1alpha1.newsroom.PublishedArticleDetails published_article_details = 1 [json_name = "publishedArticleDetails"];</code>
      */
-    public Builder mergePublishedArticleDetails(com.tcn.cloud.api.api.v1alpha1.newsroom.PublishedNewsArticleDetails value) {
+    public Builder mergePublishedArticleDetails(com.tcn.cloud.api.api.v1alpha1.newsroom.PublishedArticleDetails value) {
       if (publishedArticleDetailsBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0) &&
           publishedArticleDetails_ != null &&
-          publishedArticleDetails_ != com.tcn.cloud.api.api.v1alpha1.newsroom.PublishedNewsArticleDetails.getDefaultInstance()) {
+          publishedArticleDetails_ != com.tcn.cloud.api.api.v1alpha1.newsroom.PublishedArticleDetails.getDefaultInstance()) {
           getPublishedArticleDetailsBuilder().mergeFrom(value);
         } else {
           publishedArticleDetails_ = value;
@@ -588,10 +588,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the published news article fields specified to be updated
+     * the published article fields specified to be updated
      * </pre>
      *
-     * <code>.api.v1alpha1.newsroom.PublishedNewsArticleDetails published_article_details = 1 [json_name = "publishedArticleDetails"];</code>
+     * <code>.api.v1alpha1.newsroom.PublishedArticleDetails published_article_details = 1 [json_name = "publishedArticleDetails"];</code>
      */
     public Builder clearPublishedArticleDetails() {
       bitField0_ = (bitField0_ & ~0x00000001);
@@ -605,44 +605,44 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the published news article fields specified to be updated
+     * the published article fields specified to be updated
      * </pre>
      *
-     * <code>.api.v1alpha1.newsroom.PublishedNewsArticleDetails published_article_details = 1 [json_name = "publishedArticleDetails"];</code>
+     * <code>.api.v1alpha1.newsroom.PublishedArticleDetails published_article_details = 1 [json_name = "publishedArticleDetails"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.newsroom.PublishedNewsArticleDetails.Builder getPublishedArticleDetailsBuilder() {
+    public com.tcn.cloud.api.api.v1alpha1.newsroom.PublishedArticleDetails.Builder getPublishedArticleDetailsBuilder() {
       bitField0_ |= 0x00000001;
       onChanged();
       return getPublishedArticleDetailsFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * the published news article fields specified to be updated
+     * the published article fields specified to be updated
      * </pre>
      *
-     * <code>.api.v1alpha1.newsroom.PublishedNewsArticleDetails published_article_details = 1 [json_name = "publishedArticleDetails"];</code>
+     * <code>.api.v1alpha1.newsroom.PublishedArticleDetails published_article_details = 1 [json_name = "publishedArticleDetails"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.newsroom.PublishedNewsArticleDetailsOrBuilder getPublishedArticleDetailsOrBuilder() {
+    public com.tcn.cloud.api.api.v1alpha1.newsroom.PublishedArticleDetailsOrBuilder getPublishedArticleDetailsOrBuilder() {
       if (publishedArticleDetailsBuilder_ != null) {
         return publishedArticleDetailsBuilder_.getMessageOrBuilder();
       } else {
         return publishedArticleDetails_ == null ?
-            com.tcn.cloud.api.api.v1alpha1.newsroom.PublishedNewsArticleDetails.getDefaultInstance() : publishedArticleDetails_;
+            com.tcn.cloud.api.api.v1alpha1.newsroom.PublishedArticleDetails.getDefaultInstance() : publishedArticleDetails_;
       }
     }
     /**
      * <pre>
-     * the published news article fields specified to be updated
+     * the published article fields specified to be updated
      * </pre>
      *
-     * <code>.api.v1alpha1.newsroom.PublishedNewsArticleDetails published_article_details = 1 [json_name = "publishedArticleDetails"];</code>
+     * <code>.api.v1alpha1.newsroom.PublishedArticleDetails published_article_details = 1 [json_name = "publishedArticleDetails"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.v1alpha1.newsroom.PublishedNewsArticleDetails, com.tcn.cloud.api.api.v1alpha1.newsroom.PublishedNewsArticleDetails.Builder, com.tcn.cloud.api.api.v1alpha1.newsroom.PublishedNewsArticleDetailsOrBuilder> 
+        com.tcn.cloud.api.api.v1alpha1.newsroom.PublishedArticleDetails, com.tcn.cloud.api.api.v1alpha1.newsroom.PublishedArticleDetails.Builder, com.tcn.cloud.api.api.v1alpha1.newsroom.PublishedArticleDetailsOrBuilder> 
         getPublishedArticleDetailsFieldBuilder() {
       if (publishedArticleDetailsBuilder_ == null) {
         publishedArticleDetailsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.v1alpha1.newsroom.PublishedNewsArticleDetails, com.tcn.cloud.api.api.v1alpha1.newsroom.PublishedNewsArticleDetails.Builder, com.tcn.cloud.api.api.v1alpha1.newsroom.PublishedNewsArticleDetailsOrBuilder>(
+            com.tcn.cloud.api.api.v1alpha1.newsroom.PublishedArticleDetails, com.tcn.cloud.api.api.v1alpha1.newsroom.PublishedArticleDetails.Builder, com.tcn.cloud.api.api.v1alpha1.newsroom.PublishedArticleDetailsOrBuilder>(
                 getPublishedArticleDetails(),
                 getParentForChildren(),
                 isClean());
@@ -818,23 +818,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v1alpha1.newsroom.UpdatePublishedNewsArticleRequest)
+    // @@protoc_insertion_point(builder_scope:api.v1alpha1.newsroom.UpdatePublishedArticleRequest)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v1alpha1.newsroom.UpdatePublishedNewsArticleRequest)
-  private static final com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedNewsArticleRequest DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v1alpha1.newsroom.UpdatePublishedArticleRequest)
+  private static final com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedArticleRequest DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedNewsArticleRequest();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedArticleRequest();
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedNewsArticleRequest getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedArticleRequest getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<UpdatePublishedNewsArticleRequest>
-      PARSER = new com.google.protobuf.AbstractParser<UpdatePublishedNewsArticleRequest>() {
+  private static final com.google.protobuf.Parser<UpdatePublishedArticleRequest>
+      PARSER = new com.google.protobuf.AbstractParser<UpdatePublishedArticleRequest>() {
     @java.lang.Override
-    public UpdatePublishedNewsArticleRequest parsePartialFrom(
+    public UpdatePublishedArticleRequest parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -853,17 +853,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<UpdatePublishedNewsArticleRequest> parser() {
+  public static com.google.protobuf.Parser<UpdatePublishedArticleRequest> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<UpdatePublishedNewsArticleRequest> getParserForType() {
+  public com.google.protobuf.Parser<UpdatePublishedArticleRequest> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedNewsArticleRequest getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v1alpha1.newsroom.UpdatePublishedArticleRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

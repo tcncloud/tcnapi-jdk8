@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.v1alpha1.newsroom;
 
-public interface GetPublishedNewsArticleByIdRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v1alpha1.newsroom.GetPublishedNewsArticleByIdRequest)
+public interface GetPublishedArticleByIdRequestOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v1alpha1.newsroom.GetPublishedArticleByIdRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**

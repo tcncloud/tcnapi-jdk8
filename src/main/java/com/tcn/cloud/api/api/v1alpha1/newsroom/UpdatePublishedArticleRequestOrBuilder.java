@@ -3,36 +3,36 @@
 
 package com.tcn.cloud.api.api.v1alpha1.newsroom;
 
-public interface UpdatePublishedNewsArticleRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v1alpha1.newsroom.UpdatePublishedNewsArticleRequest)
+public interface UpdatePublishedArticleRequestOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v1alpha1.newsroom.UpdatePublishedArticleRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**
    * <pre>
-   * the published news article fields specified to be updated
+   * the published article fields specified to be updated
    * </pre>
    *
-   * <code>.api.v1alpha1.newsroom.PublishedNewsArticleDetails published_article_details = 1 [json_name = "publishedArticleDetails"];</code>
+   * <code>.api.v1alpha1.newsroom.PublishedArticleDetails published_article_details = 1 [json_name = "publishedArticleDetails"];</code>
    * @return Whether the publishedArticleDetails field is set.
    */
   boolean hasPublishedArticleDetails();
   /**
    * <pre>
-   * the published news article fields specified to be updated
+   * the published article fields specified to be updated
    * </pre>
    *
-   * <code>.api.v1alpha1.newsroom.PublishedNewsArticleDetails published_article_details = 1 [json_name = "publishedArticleDetails"];</code>
+   * <code>.api.v1alpha1.newsroom.PublishedArticleDetails published_article_details = 1 [json_name = "publishedArticleDetails"];</code>
    * @return The publishedArticleDetails.
    */
-  com.tcn.cloud.api.api.v1alpha1.newsroom.PublishedNewsArticleDetails getPublishedArticleDetails();
+  com.tcn.cloud.api.api.v1alpha1.newsroom.PublishedArticleDetails getPublishedArticleDetails();
   /**
    * <pre>
-   * the published news article fields specified to be updated
+   * the published article fields specified to be updated
    * </pre>
    *
-   * <code>.api.v1alpha1.newsroom.PublishedNewsArticleDetails published_article_details = 1 [json_name = "publishedArticleDetails"];</code>
+   * <code>.api.v1alpha1.newsroom.PublishedArticleDetails published_article_details = 1 [json_name = "publishedArticleDetails"];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.newsroom.PublishedNewsArticleDetailsOrBuilder getPublishedArticleDetailsOrBuilder();
+  com.tcn.cloud.api.api.v1alpha1.newsroom.PublishedArticleDetailsOrBuilder getPublishedArticleDetailsOrBuilder();
 
   /**
    * <pre>

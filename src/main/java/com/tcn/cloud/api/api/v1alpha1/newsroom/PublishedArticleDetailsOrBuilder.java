@@ -3,19 +3,19 @@
 
 package com.tcn.cloud.api.api.v1alpha1.newsroom;
 
-public interface PublishedNewsArticleDetailsOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v1alpha1.newsroom.PublishedNewsArticleDetails)
+public interface PublishedArticleDetailsOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v1alpha1.newsroom.PublishedArticleDetails)
     com.google.protobuf.MessageOrBuilder {
 
   /**
    * <pre>
-   * the unique published news article identifier
+   * the unique published article identifier
    * </pre>
    *
-   * <code>int64 published_new_article_sid = 1 [json_name = "publishedNewArticleSid", jstype = JS_STRING];</code>
-   * @return The publishedNewArticleSid.
+   * <code>int64 published_article_sid = 1 [json_name = "publishedArticleSid", jstype = JS_STRING];</code>
+   * @return The publishedArticleSid.
    */
-  long getPublishedNewArticleSid();
+  long getPublishedArticleSid();
 
   /**
    * <pre>
