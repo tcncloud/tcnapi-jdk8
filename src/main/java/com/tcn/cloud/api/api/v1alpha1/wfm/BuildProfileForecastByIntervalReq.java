@@ -115,14 +115,14 @@ private static final long serialVersionUID = 0L;
     return skillProfileSid_;
   }
 
-  public static final int SKILL_PROFILE_CATEGORY_FIELD_NUMBER = 16;
+  public static final int SKILL_PROFILE_CATEGORY_FIELD_NUMBER = 4;
   private com.tcn.cloud.api.api.commons.SkillProfileCategory skillProfileCategory_;
   /**
    * <pre>
    * Skill profile category that the forecast belongs to.
    * </pre>
    *
-   * <code>.api.commons.SkillProfileCategory skill_profile_category = 16 [json_name = "skillProfileCategory"];</code>
+   * <code>.api.commons.SkillProfileCategory skill_profile_category = 4 [json_name = "skillProfileCategory"];</code>
    * @return Whether the skillProfileCategory field is set.
    */
   @java.lang.Override
@@ -134,7 +134,7 @@ private static final long serialVersionUID = 0L;
    * Skill profile category that the forecast belongs to.
    * </pre>
    *
-   * <code>.api.commons.SkillProfileCategory skill_profile_category = 16 [json_name = "skillProfileCategory"];</code>
+   * <code>.api.commons.SkillProfileCategory skill_profile_category = 4 [json_name = "skillProfileCategory"];</code>
    * @return The skillProfileCategory.
    */
   @java.lang.Override
@@ -146,7 +146,7 @@ private static final long serialVersionUID = 0L;
    * Skill profile category that the forecast belongs to.
    * </pre>
    *
-   * <code>.api.commons.SkillProfileCategory skill_profile_category = 16 [json_name = "skillProfileCategory"];</code>
+   * <code>.api.commons.SkillProfileCategory skill_profile_category = 4 [json_name = "skillProfileCategory"];</code>
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.SkillProfileCategoryOrBuilder getSkillProfileCategoryOrBuilder() {
@@ -177,7 +177,7 @@ private static final long serialVersionUID = 0L;
       output.writeInt64(3, skillProfileSid_);
     }
     if (skillProfileCategory_ != null) {
-      output.writeMessage(16, getSkillProfileCategory());
+      output.writeMessage(4, getSkillProfileCategory());
     }
     getUnknownFields().writeTo(output);
   }
@@ -202,7 +202,7 @@ private static final long serialVersionUID = 0L;
     }
     if (skillProfileCategory_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(16, getSkillProfileCategory());
+        .computeMessageSize(4, getSkillProfileCategory());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -555,13 +555,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 24
-            case 130: {
+            case 34: {
               input.readMessage(
                   getSkillProfileCategoryFieldBuilder().getBuilder(),
                   extensionRegistry);
               bitField0_ |= 0x00000008;
               break;
-            } // case 130
+            } // case 34
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -845,7 +845,7 @@ private static final long serialVersionUID = 0L;
      * Skill profile category that the forecast belongs to.
      * </pre>
      *
-     * <code>.api.commons.SkillProfileCategory skill_profile_category = 16 [json_name = "skillProfileCategory"];</code>
+     * <code>.api.commons.SkillProfileCategory skill_profile_category = 4 [json_name = "skillProfileCategory"];</code>
      * @return Whether the skillProfileCategory field is set.
      */
     public boolean hasSkillProfileCategory() {
@@ -856,7 +856,7 @@ private static final long serialVersionUID = 0L;
      * Skill profile category that the forecast belongs to.
      * </pre>
      *
-     * <code>.api.commons.SkillProfileCategory skill_profile_category = 16 [json_name = "skillProfileCategory"];</code>
+     * <code>.api.commons.SkillProfileCategory skill_profile_category = 4 [json_name = "skillProfileCategory"];</code>
      * @return The skillProfileCategory.
      */
     public com.tcn.cloud.api.api.commons.SkillProfileCategory getSkillProfileCategory() {
@@ -871,7 +871,7 @@ private static final long serialVersionUID = 0L;
      * Skill profile category that the forecast belongs to.
      * </pre>
      *
-     * <code>.api.commons.SkillProfileCategory skill_profile_category = 16 [json_name = "skillProfileCategory"];</code>
+     * <code>.api.commons.SkillProfileCategory skill_profile_category = 4 [json_name = "skillProfileCategory"];</code>
      */
     public Builder setSkillProfileCategory(com.tcn.cloud.api.api.commons.SkillProfileCategory value) {
       if (skillProfileCategoryBuilder_ == null) {
@@ -891,7 +891,7 @@ private static final long serialVersionUID = 0L;
      * Skill profile category that the forecast belongs to.
      * </pre>
      *
-     * <code>.api.commons.SkillProfileCategory skill_profile_category = 16 [json_name = "skillProfileCategory"];</code>
+     * <code>.api.commons.SkillProfileCategory skill_profile_category = 4 [json_name = "skillProfileCategory"];</code>
      */
     public Builder setSkillProfileCategory(
         com.tcn.cloud.api.api.commons.SkillProfileCategory.Builder builderForValue) {
@@ -909,7 +909,7 @@ private static final long serialVersionUID = 0L;
      * Skill profile category that the forecast belongs to.
      * </pre>
      *
-     * <code>.api.commons.SkillProfileCategory skill_profile_category = 16 [json_name = "skillProfileCategory"];</code>
+     * <code>.api.commons.SkillProfileCategory skill_profile_category = 4 [json_name = "skillProfileCategory"];</code>
      */
     public Builder mergeSkillProfileCategory(com.tcn.cloud.api.api.commons.SkillProfileCategory value) {
       if (skillProfileCategoryBuilder_ == null) {
@@ -932,7 +932,7 @@ private static final long serialVersionUID = 0L;
      * Skill profile category that the forecast belongs to.
      * </pre>
      *
-     * <code>.api.commons.SkillProfileCategory skill_profile_category = 16 [json_name = "skillProfileCategory"];</code>
+     * <code>.api.commons.SkillProfileCategory skill_profile_category = 4 [json_name = "skillProfileCategory"];</code>
      */
     public Builder clearSkillProfileCategory() {
       bitField0_ = (bitField0_ & ~0x00000008);
@@ -949,7 +949,7 @@ private static final long serialVersionUID = 0L;
      * Skill profile category that the forecast belongs to.
      * </pre>
      *
-     * <code>.api.commons.SkillProfileCategory skill_profile_category = 16 [json_name = "skillProfileCategory"];</code>
+     * <code>.api.commons.SkillProfileCategory skill_profile_category = 4 [json_name = "skillProfileCategory"];</code>
      */
     public com.tcn.cloud.api.api.commons.SkillProfileCategory.Builder getSkillProfileCategoryBuilder() {
       bitField0_ |= 0x00000008;
@@ -961,7 +961,7 @@ private static final long serialVersionUID = 0L;
      * Skill profile category that the forecast belongs to.
      * </pre>
      *
-     * <code>.api.commons.SkillProfileCategory skill_profile_category = 16 [json_name = "skillProfileCategory"];</code>
+     * <code>.api.commons.SkillProfileCategory skill_profile_category = 4 [json_name = "skillProfileCategory"];</code>
      */
     public com.tcn.cloud.api.api.commons.SkillProfileCategoryOrBuilder getSkillProfileCategoryOrBuilder() {
       if (skillProfileCategoryBuilder_ != null) {
@@ -976,7 +976,7 @@ private static final long serialVersionUID = 0L;
      * Skill profile category that the forecast belongs to.
      * </pre>
      *
-     * <code>.api.commons.SkillProfileCategory skill_profile_category = 16 [json_name = "skillProfileCategory"];</code>
+     * <code>.api.commons.SkillProfileCategory skill_profile_category = 4 [json_name = "skillProfileCategory"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.SkillProfileCategory, com.tcn.cloud.api.api.commons.SkillProfileCategory.Builder, com.tcn.cloud.api.api.commons.SkillProfileCategoryOrBuilder> 

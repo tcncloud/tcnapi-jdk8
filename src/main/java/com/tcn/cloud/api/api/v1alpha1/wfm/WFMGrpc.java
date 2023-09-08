@@ -4097,7 +4097,7 @@ public final class WFMGrpc {
      * Builds a profile forecast using the provided &#64;call_profile_template.
      * The forecaster will produce intervals from the following range using the client's saved forecasting parameters:
      * (&#64;training_data_range_end_datetime - &#64;forecast_test_range_in_weeks) to &#64;forecast_range_end_datetime.
-     * The &#64;total_calls in the &#64;call_profile_template will be scaled using the same ranges as BuildCallProfileTemplateForSkillProfile.
+     * The &#64;total_calls in the &#64;call_profile_template will be scaled using the same ranges as BuildCallProfileTemplate.
      * The &#64;fixed_averages_forecast field indicates whether or not to do a fixed averages forecast.
      * Required permissions:
      *   NONE
@@ -4116,13 +4116,13 @@ public final class WFMGrpc {
      * Builds a profile forecast using the provided &#64;call_profile_template.
      * The forecaster will produce intervals from the following range using the client's saved forecasting parameters:
      * (&#64;training_data_range_end_datetime - &#64;forecast_test_range_in_weeks) to &#64;forecast_range_end_datetime.
-     * The &#64;total_calls in the &#64;call_profile_template will be scaled using the same ranges as BuildCallProfileTemplateForSkillProfile.
+     * The &#64;total_calls in the &#64;call_profile_template will be scaled using the same ranges as BuildCallProfileTemplate.
      * The &#64;fixed_averages_forecast field indicates whether or not to do a fixed averages forecast.
-     * It also returns the statistics of the produced forecast by using the test data of the given &#64;skill_profile_sid.
+     * It also returns the statistics of the produced forecast by using the test data of the given &#64;skill_profile_category.
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the &#64;skill_profile_sid or &#64;call_profile_template in the request is invalid.
+     *   - grpc.Invalid: the &#64;skill_profile_category or &#64;call_profile_template in the request is invalid.
      *   - grpc.Internal: error occurs during the building of the profile forecast.
      * </pre>
      */
@@ -6268,7 +6268,7 @@ public final class WFMGrpc {
      * Builds a profile forecast using the provided &#64;call_profile_template.
      * The forecaster will produce intervals from the following range using the client's saved forecasting parameters:
      * (&#64;training_data_range_end_datetime - &#64;forecast_test_range_in_weeks) to &#64;forecast_range_end_datetime.
-     * The &#64;total_calls in the &#64;call_profile_template will be scaled using the same ranges as BuildCallProfileTemplateForSkillProfile.
+     * The &#64;total_calls in the &#64;call_profile_template will be scaled using the same ranges as BuildCallProfileTemplate.
      * The &#64;fixed_averages_forecast field indicates whether or not to do a fixed averages forecast.
      * Required permissions:
      *   NONE
@@ -6288,13 +6288,13 @@ public final class WFMGrpc {
      * Builds a profile forecast using the provided &#64;call_profile_template.
      * The forecaster will produce intervals from the following range using the client's saved forecasting parameters:
      * (&#64;training_data_range_end_datetime - &#64;forecast_test_range_in_weeks) to &#64;forecast_range_end_datetime.
-     * The &#64;total_calls in the &#64;call_profile_template will be scaled using the same ranges as BuildCallProfileTemplateForSkillProfile.
+     * The &#64;total_calls in the &#64;call_profile_template will be scaled using the same ranges as BuildCallProfileTemplate.
      * The &#64;fixed_averages_forecast field indicates whether or not to do a fixed averages forecast.
-     * It also returns the statistics of the produced forecast by using the test data of the given &#64;skill_profile_sid.
+     * It also returns the statistics of the produced forecast by using the test data of the given &#64;skill_profile_category.
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the &#64;skill_profile_sid or &#64;call_profile_template in the request is invalid.
+     *   - grpc.Invalid: the &#64;skill_profile_category or &#64;call_profile_template in the request is invalid.
      *   - grpc.Internal: error occurs during the building of the profile forecast.
      * </pre>
      */
@@ -8504,7 +8504,7 @@ public final class WFMGrpc {
      * Builds a profile forecast using the provided &#64;call_profile_template.
      * The forecaster will produce intervals from the following range using the client's saved forecasting parameters:
      * (&#64;training_data_range_end_datetime - &#64;forecast_test_range_in_weeks) to &#64;forecast_range_end_datetime.
-     * The &#64;total_calls in the &#64;call_profile_template will be scaled using the same ranges as BuildCallProfileTemplateForSkillProfile.
+     * The &#64;total_calls in the &#64;call_profile_template will be scaled using the same ranges as BuildCallProfileTemplate.
      * The &#64;fixed_averages_forecast field indicates whether or not to do a fixed averages forecast.
      * Required permissions:
      *   NONE
@@ -8524,13 +8524,13 @@ public final class WFMGrpc {
      * Builds a profile forecast using the provided &#64;call_profile_template.
      * The forecaster will produce intervals from the following range using the client's saved forecasting parameters:
      * (&#64;training_data_range_end_datetime - &#64;forecast_test_range_in_weeks) to &#64;forecast_range_end_datetime.
-     * The &#64;total_calls in the &#64;call_profile_template will be scaled using the same ranges as BuildCallProfileTemplateForSkillProfile.
+     * The &#64;total_calls in the &#64;call_profile_template will be scaled using the same ranges as BuildCallProfileTemplate.
      * The &#64;fixed_averages_forecast field indicates whether or not to do a fixed averages forecast.
-     * It also returns the statistics of the produced forecast by using the test data of the given &#64;skill_profile_sid.
+     * It also returns the statistics of the produced forecast by using the test data of the given &#64;skill_profile_category.
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the &#64;skill_profile_sid or &#64;call_profile_template in the request is invalid.
+     *   - grpc.Invalid: the &#64;skill_profile_category or &#64;call_profile_template in the request is invalid.
      *   - grpc.Internal: error occurs during the building of the profile forecast.
      * </pre>
      */

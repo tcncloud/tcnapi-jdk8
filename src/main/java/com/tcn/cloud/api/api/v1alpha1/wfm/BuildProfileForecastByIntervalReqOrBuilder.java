@@ -64,7 +64,7 @@ public interface BuildProfileForecastByIntervalReqOrBuilder extends
    * Skill profile category that the forecast belongs to.
    * </pre>
    *
-   * <code>.api.commons.SkillProfileCategory skill_profile_category = 16 [json_name = "skillProfileCategory"];</code>
+   * <code>.api.commons.SkillProfileCategory skill_profile_category = 4 [json_name = "skillProfileCategory"];</code>
    * @return Whether the skillProfileCategory field is set.
    */
   boolean hasSkillProfileCategory();
@@ -73,7 +73,7 @@ public interface BuildProfileForecastByIntervalReqOrBuilder extends
    * Skill profile category that the forecast belongs to.
    * </pre>
    *
-   * <code>.api.commons.SkillProfileCategory skill_profile_category = 16 [json_name = "skillProfileCategory"];</code>
+   * <code>.api.commons.SkillProfileCategory skill_profile_category = 4 [json_name = "skillProfileCategory"];</code>
    * @return The skillProfileCategory.
    */
   com.tcn.cloud.api.api.commons.SkillProfileCategory getSkillProfileCategory();
@@ -82,7 +82,7 @@ public interface BuildProfileForecastByIntervalReqOrBuilder extends
    * Skill profile category that the forecast belongs to.
    * </pre>
    *
-   * <code>.api.commons.SkillProfileCategory skill_profile_category = 16 [json_name = "skillProfileCategory"];</code>
+   * <code>.api.commons.SkillProfileCategory skill_profile_category = 4 [json_name = "skillProfileCategory"];</code>
    */
   com.tcn.cloud.api.api.commons.SkillProfileCategoryOrBuilder getSkillProfileCategoryOrBuilder();
 }
