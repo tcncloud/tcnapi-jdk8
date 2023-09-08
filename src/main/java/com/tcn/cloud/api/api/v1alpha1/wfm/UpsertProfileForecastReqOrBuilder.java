@@ -10,7 +10,7 @@ public interface UpsertProfileForecastReqOrBuilder extends
   /**
    * <pre>
    * ID of the skill profile that the forecast will belong to.
-   * Deprecated: use skill_profile_category instead.
+   * Deprecated as of Sep/8/2023: use skill_profile_category instead.
    * </pre>
    *
    * <code>int64 skill_profile_sid = 1 [json_name = "skillProfileSid", deprecated = true];</code>

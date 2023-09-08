@@ -10,7 +10,7 @@ public interface ListHistoricalDataReqOrBuilder extends
   /**
    * <pre>
    * ID of the skill profile used to examine matching calls in the client's historical data.
-   * Deprecated: use skill_profile_category instead.
+   * Deprecated as of Sep/8/2023: use skill_profile_category instead.
    * </pre>
    *
    * <code>int64 skill_profile_sid = 1 [json_name = "skillProfileSid", deprecated = true];</code>

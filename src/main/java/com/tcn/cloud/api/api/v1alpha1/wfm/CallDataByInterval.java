@@ -85,7 +85,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * ID of the skill profile to forecast for (not set in profile forecasts).
-   * Deprecated: use skill_profile_category instead.
+   * Deprecated as of Sep/8/2023: use skill_profile_category instead.
    * </pre>
    *
    * <code>int64 skill_profile_sid = 2 [json_name = "skillProfileSid", deprecated = true];</code>
@@ -1050,7 +1050,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * ID of the skill profile to forecast for (not set in profile forecasts).
-     * Deprecated: use skill_profile_category instead.
+     * Deprecated as of Sep/8/2023: use skill_profile_category instead.
      * </pre>
      *
      * <code>int64 skill_profile_sid = 2 [json_name = "skillProfileSid", deprecated = true];</code>
@@ -1065,7 +1065,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * ID of the skill profile to forecast for (not set in profile forecasts).
-     * Deprecated: use skill_profile_category instead.
+     * Deprecated as of Sep/8/2023: use skill_profile_category instead.
      * </pre>
      *
      * <code>int64 skill_profile_sid = 2 [json_name = "skillProfileSid", deprecated = true];</code>
@@ -1084,7 +1084,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * ID of the skill profile to forecast for (not set in profile forecasts).
-     * Deprecated: use skill_profile_category instead.
+     * Deprecated as of Sep/8/2023: use skill_profile_category instead.
      * </pre>
      *
      * <code>int64 skill_profile_sid = 2 [json_name = "skillProfileSid", deprecated = true];</code>
