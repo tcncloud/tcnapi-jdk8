@@ -9,7 +9,7 @@ public interface ListWFMAgentSidsReqOrBuilder extends
 
   /**
    * <pre>
-   * ID's of the agents to get the related wfm_agent_sid for.
+   * IDs of the agents to get the related wfm_agent_sid for.
    * </pre>
    *
    * <code>repeated int64 tcn_agent_sids = 1 [json_name = "tcnAgentSids"];</code>
@@ -18,7 +18,7 @@ public interface ListWFMAgentSidsReqOrBuilder extends
   java.util.List<java.lang.Long> getTcnAgentSidsList();
   /**
    * <pre>
-   * ID's of the agents to get the related wfm_agent_sid for.
+   * IDs of the agents to get the related wfm_agent_sid for.
    * </pre>
    *
    * <code>repeated int64 tcn_agent_sids = 1 [json_name = "tcnAgentSids"];</code>
@@ -27,7 +27,7 @@ public interface ListWFMAgentSidsReqOrBuilder extends
   int getTcnAgentSidsCount();
   /**
    * <pre>
-   * ID's of the agents to get the related wfm_agent_sid for.
+   * IDs of the agents to get the related wfm_agent_sid for.
    * </pre>
    *
    * <code>repeated int64 tcn_agent_sids = 1 [json_name = "tcnAgentSids"];</code>
