@@ -5,7 +5,7 @@ package com.tcn.cloud.api.api.v1alpha1.wfm;
 
 /**
  * <pre>
- * Request message for teh ListWFMAgentSids RPC
+ * Request message for the ListWFMAgentSids RPC
  * </pre>
  *
  * Protobuf type {@code api.v1alpha1.wfm.ListWFMAgentSidsReq}
@@ -260,7 +260,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Request message for teh ListWFMAgentSids RPC
+   * Request message for the ListWFMAgentSids RPC
    * </pre>
    *
    * Protobuf type {@code api.v1alpha1.wfm.ListWFMAgentSidsReq}
