@@ -85,12 +85,12 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * ID of the skill profile that this interval belongs to.
-   * Deprecated: use skill_profile_category instead.
+   * Deprecated as of Sep/8/2023: use skill_profile_category instead.
    * </pre>
    *
    * <code>int64 skill_profile_sid = 2 [json_name = "skillProfileSid", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.HistoricalDataInterval.skill_profile_sid is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=2678
+   *     See api/v1alpha1/wfm/wfm.proto;l=2703
    * @return The skillProfileSid.
    */
   @java.lang.Override
@@ -1489,12 +1489,12 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * ID of the skill profile that this interval belongs to.
-     * Deprecated: use skill_profile_category instead.
+     * Deprecated as of Sep/8/2023: use skill_profile_category instead.
      * </pre>
      *
      * <code>int64 skill_profile_sid = 2 [json_name = "skillProfileSid", deprecated = true];</code>
      * @deprecated api.v1alpha1.wfm.HistoricalDataInterval.skill_profile_sid is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=2678
+     *     See api/v1alpha1/wfm/wfm.proto;l=2703
      * @return The skillProfileSid.
      */
     @java.lang.Override
@@ -1504,12 +1504,12 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * ID of the skill profile that this interval belongs to.
-     * Deprecated: use skill_profile_category instead.
+     * Deprecated as of Sep/8/2023: use skill_profile_category instead.
      * </pre>
      *
      * <code>int64 skill_profile_sid = 2 [json_name = "skillProfileSid", deprecated = true];</code>
      * @deprecated api.v1alpha1.wfm.HistoricalDataInterval.skill_profile_sid is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=2678
+     *     See api/v1alpha1/wfm/wfm.proto;l=2703
      * @param value The skillProfileSid to set.
      * @return This builder for chaining.
      */
@@ -1523,12 +1523,12 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * ID of the skill profile that this interval belongs to.
-     * Deprecated: use skill_profile_category instead.
+     * Deprecated as of Sep/8/2023: use skill_profile_category instead.
      * </pre>
      *
      * <code>int64 skill_profile_sid = 2 [json_name = "skillProfileSid", deprecated = true];</code>
      * @deprecated api.v1alpha1.wfm.HistoricalDataInterval.skill_profile_sid is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=2678
+     *     See api/v1alpha1/wfm/wfm.proto;l=2703
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearSkillProfileSid() {
