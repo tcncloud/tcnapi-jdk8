@@ -82,7 +82,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Key:Value pairings of a tcn_agent_sid and their wfm_agent_sid respectively.
+   * Map of WFM agents found.
+   * Key: tcn_agent_sid - Value: wfm_agent_sid.
    * </pre>
    *
    * <code>map&lt;int64, int64&gt; sids = 1 [json_name = "sids"];</code>
@@ -103,7 +104,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Key:Value pairings of a tcn_agent_sid and their wfm_agent_sid respectively.
+   * Map of WFM agents found.
+   * Key: tcn_agent_sid - Value: wfm_agent_sid.
    * </pre>
    *
    * <code>map&lt;int64, int64&gt; sids = 1 [json_name = "sids"];</code>
@@ -114,7 +116,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Key:Value pairings of a tcn_agent_sid and their wfm_agent_sid respectively.
+   * Map of WFM agents found.
+   * Key: tcn_agent_sid - Value: wfm_agent_sid.
    * </pre>
    *
    * <code>map&lt;int64, int64&gt; sids = 1 [json_name = "sids"];</code>
@@ -130,7 +133,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Key:Value pairings of a tcn_agent_sid and their wfm_agent_sid respectively.
+   * Map of WFM agents found.
+   * Key: tcn_agent_sid - Value: wfm_agent_sid.
    * </pre>
    *
    * <code>map&lt;int64, int64&gt; sids = 1 [json_name = "sids"];</code>
@@ -542,7 +546,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Key:Value pairings of a tcn_agent_sid and their wfm_agent_sid respectively.
+     * Map of WFM agents found.
+     * Key: tcn_agent_sid - Value: wfm_agent_sid.
      * </pre>
      *
      * <code>map&lt;int64, int64&gt; sids = 1 [json_name = "sids"];</code>
@@ -563,7 +568,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Key:Value pairings of a tcn_agent_sid and their wfm_agent_sid respectively.
+     * Map of WFM agents found.
+     * Key: tcn_agent_sid - Value: wfm_agent_sid.
      * </pre>
      *
      * <code>map&lt;int64, int64&gt; sids = 1 [json_name = "sids"];</code>
@@ -574,7 +580,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Key:Value pairings of a tcn_agent_sid and their wfm_agent_sid respectively.
+     * Map of WFM agents found.
+     * Key: tcn_agent_sid - Value: wfm_agent_sid.
      * </pre>
      *
      * <code>map&lt;int64, int64&gt; sids = 1 [json_name = "sids"];</code>
@@ -590,7 +597,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Key:Value pairings of a tcn_agent_sid and their wfm_agent_sid respectively.
+     * Map of WFM agents found.
+     * Key: tcn_agent_sid - Value: wfm_agent_sid.
      * </pre>
      *
      * <code>map&lt;int64, int64&gt; sids = 1 [json_name = "sids"];</code>
@@ -614,7 +622,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Key:Value pairings of a tcn_agent_sid and their wfm_agent_sid respectively.
+     * Map of WFM agents found.
+     * Key: tcn_agent_sid - Value: wfm_agent_sid.
      * </pre>
      *
      * <code>map&lt;int64, int64&gt; sids = 1 [json_name = "sids"];</code>
@@ -637,7 +646,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Key:Value pairings of a tcn_agent_sid and their wfm_agent_sid respectively.
+     * Map of WFM agents found.
+     * Key: tcn_agent_sid - Value: wfm_agent_sid.
      * </pre>
      *
      * <code>map&lt;int64, int64&gt; sids = 1 [json_name = "sids"];</code>
@@ -654,7 +664,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Key:Value pairings of a tcn_agent_sid and their wfm_agent_sid respectively.
+     * Map of WFM agents found.
+     * Key: tcn_agent_sid - Value: wfm_agent_sid.
      * </pre>
      *
      * <code>map&lt;int64, int64&gt; sids = 1 [json_name = "sids"];</code>

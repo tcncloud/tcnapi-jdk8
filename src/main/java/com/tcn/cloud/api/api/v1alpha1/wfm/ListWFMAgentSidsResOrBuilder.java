@@ -9,7 +9,8 @@ public interface ListWFMAgentSidsResOrBuilder extends
 
   /**
    * <pre>
-   * Key:Value pairings of a tcn_agent_sid and their wfm_agent_sid respectively.
+   * Map of WFM agents found.
+   * Key: tcn_agent_sid - Value: wfm_agent_sid.
    * </pre>
    *
    * <code>map&lt;int64, int64&gt; sids = 1 [json_name = "sids"];</code>
@@ -17,7 +18,8 @@ public interface ListWFMAgentSidsResOrBuilder extends
   int getSidsCount();
   /**
    * <pre>
-   * Key:Value pairings of a tcn_agent_sid and their wfm_agent_sid respectively.
+   * Map of WFM agents found.
+   * Key: tcn_agent_sid - Value: wfm_agent_sid.
    * </pre>
    *
    * <code>map&lt;int64, int64&gt; sids = 1 [json_name = "sids"];</code>
@@ -32,7 +34,8 @@ public interface ListWFMAgentSidsResOrBuilder extends
   getSids();
   /**
    * <pre>
-   * Key:Value pairings of a tcn_agent_sid and their wfm_agent_sid respectively.
+   * Map of WFM agents found.
+   * Key: tcn_agent_sid - Value: wfm_agent_sid.
    * </pre>
    *
    * <code>map&lt;int64, int64&gt; sids = 1 [json_name = "sids"];</code>
@@ -41,7 +44,8 @@ public interface ListWFMAgentSidsResOrBuilder extends
   getSidsMap();
   /**
    * <pre>
-   * Key:Value pairings of a tcn_agent_sid and their wfm_agent_sid respectively.
+   * Map of WFM agents found.
+   * Key: tcn_agent_sid - Value: wfm_agent_sid.
    * </pre>
    *
    * <code>map&lt;int64, int64&gt; sids = 1 [json_name = "sids"];</code>
@@ -51,7 +55,8 @@ public interface ListWFMAgentSidsResOrBuilder extends
       long defaultValue);
   /**
    * <pre>
-   * Key:Value pairings of a tcn_agent_sid and their wfm_agent_sid respectively.
+   * Map of WFM agents found.
+   * Key: tcn_agent_sid - Value: wfm_agent_sid.
    * </pre>
    *
    * <code>map&lt;int64, int64&gt; sids = 1 [json_name = "sids"];</code>
