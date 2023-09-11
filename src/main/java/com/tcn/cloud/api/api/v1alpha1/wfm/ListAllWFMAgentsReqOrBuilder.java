@@ -36,4 +36,16 @@ public interface ListAllWFMAgentsReqOrBuilder extends
    * @return The includeAgentGroups.
    */
   boolean getIncludeAgentGroups();
+
+  /**
+   * <pre>
+   * Indicates the schedule scenario that returned &#64;agent_groups belong to.
+   * If set to zero, the agent groups will not be filtered by schedule scenario.
+   * Does not effect which &#64;wfm_agents are returned.
+   * </pre>
+   *
+   * <code>int64 agent_group_schedule_scenario_sid = 4 [json_name = "agentGroupScheduleScenarioSid"];</code>
+   * @return The agentGroupScheduleScenarioSid.
+   */
+  long getAgentGroupScheduleScenarioSid();
 }

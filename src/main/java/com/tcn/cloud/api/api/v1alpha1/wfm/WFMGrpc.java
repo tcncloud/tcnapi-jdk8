@@ -4852,6 +4852,10 @@ public final class WFMGrpc {
      * if &#64;include_inactive is true then inactive agents will also be included, otherwise only active agents will be returned.
      * if &#64;include_skill_proficiencies is true then agents returned will include their skill proficiencies.
      * if &#64;include_agent_groups is true then the &#64;agent_groups_by_agent response field will be set with a list of agent groups correlating to each agents index in the &#64;wfm_agents field.
+     * if &#64;include_agent_groups is set to true, the &#64;agent_group_schedule_scenario_sid field must be set, so that the agent groups for the correct scenario are returned.
+     * if &#64;include_agent_groups is set to true, and &#64;agent_group_schedule_scenario_sid is not set, the agent groups will not be filtered by schedule scenario.
+     * if &#64;include_agent_groups is set to false, the &#64;agent_group_schedule_scenario_sid will be ignored.
+     * &#64;agent_group_schedule_scenario_sid does not effect which &#64;wfm_agents are returned.
      * WFM agents with no associated agent_groups will have an empty slice in agent_groups_by_agent at their correlated index.
      * Required Permissions:
      *   NONE
@@ -7094,6 +7098,10 @@ public final class WFMGrpc {
      * if &#64;include_inactive is true then inactive agents will also be included, otherwise only active agents will be returned.
      * if &#64;include_skill_proficiencies is true then agents returned will include their skill proficiencies.
      * if &#64;include_agent_groups is true then the &#64;agent_groups_by_agent response field will be set with a list of agent groups correlating to each agents index in the &#64;wfm_agents field.
+     * if &#64;include_agent_groups is set to true, the &#64;agent_group_schedule_scenario_sid field must be set, so that the agent groups for the correct scenario are returned.
+     * if &#64;include_agent_groups is set to true, and &#64;agent_group_schedule_scenario_sid is not set, the agent groups will not be filtered by schedule scenario.
+     * if &#64;include_agent_groups is set to false, the &#64;agent_group_schedule_scenario_sid will be ignored.
+     * &#64;agent_group_schedule_scenario_sid does not effect which &#64;wfm_agents are returned.
      * WFM agents with no associated agent_groups will have an empty slice in agent_groups_by_agent at their correlated index.
      * Required Permissions:
      *   NONE
@@ -9330,6 +9338,10 @@ public final class WFMGrpc {
      * if &#64;include_inactive is true then inactive agents will also be included, otherwise only active agents will be returned.
      * if &#64;include_skill_proficiencies is true then agents returned will include their skill proficiencies.
      * if &#64;include_agent_groups is true then the &#64;agent_groups_by_agent response field will be set with a list of agent groups correlating to each agents index in the &#64;wfm_agents field.
+     * if &#64;include_agent_groups is set to true, the &#64;agent_group_schedule_scenario_sid field must be set, so that the agent groups for the correct scenario are returned.
+     * if &#64;include_agent_groups is set to true, and &#64;agent_group_schedule_scenario_sid is not set, the agent groups will not be filtered by schedule scenario.
+     * if &#64;include_agent_groups is set to false, the &#64;agent_group_schedule_scenario_sid will be ignored.
+     * &#64;agent_group_schedule_scenario_sid does not effect which &#64;wfm_agents are returned.
      * WFM agents with no associated agent_groups will have an empty slice in agent_groups_by_agent at their correlated index.
      * Required Permissions:
      *   NONE
@@ -11464,6 +11476,10 @@ public final class WFMGrpc {
      * if &#64;include_inactive is true then inactive agents will also be included, otherwise only active agents will be returned.
      * if &#64;include_skill_proficiencies is true then agents returned will include their skill proficiencies.
      * if &#64;include_agent_groups is true then the &#64;agent_groups_by_agent response field will be set with a list of agent groups correlating to each agents index in the &#64;wfm_agents field.
+     * if &#64;include_agent_groups is set to true, the &#64;agent_group_schedule_scenario_sid field must be set, so that the agent groups for the correct scenario are returned.
+     * if &#64;include_agent_groups is set to true, and &#64;agent_group_schedule_scenario_sid is not set, the agent groups will not be filtered by schedule scenario.
+     * if &#64;include_agent_groups is set to false, the &#64;agent_group_schedule_scenario_sid will be ignored.
+     * &#64;agent_group_schedule_scenario_sid does not effect which &#64;wfm_agents are returned.
      * WFM agents with no associated agent_groups will have an empty slice in agent_groups_by_agent at their correlated index.
      * Required Permissions:
      *   NONE
