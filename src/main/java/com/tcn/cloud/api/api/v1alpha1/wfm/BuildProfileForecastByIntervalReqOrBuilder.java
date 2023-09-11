@@ -49,10 +49,40 @@ public interface BuildProfileForecastByIntervalReqOrBuilder extends
   /**
    * <pre>
    * ID of the skill profile that the forecast will belong to.
+   * Deprecated as of Sep/8/2023: use skill_profile_category instead.
    * </pre>
    *
-   * <code>int64 skill_profile_sid = 3 [json_name = "skillProfileSid"];</code>
+   * <code>int64 skill_profile_sid = 3 [json_name = "skillProfileSid", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.BuildProfileForecastByIntervalReq.skill_profile_sid is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=2932
    * @return The skillProfileSid.
    */
-  long getSkillProfileSid();
+  @java.lang.Deprecated long getSkillProfileSid();
+
+  /**
+   * <pre>
+   * Skill profile category that the forecast belongs to.
+   * </pre>
+   *
+   * <code>.api.commons.SkillProfileCategory skill_profile_category = 4 [json_name = "skillProfileCategory"];</code>
+   * @return Whether the skillProfileCategory field is set.
+   */
+  boolean hasSkillProfileCategory();
+  /**
+   * <pre>
+   * Skill profile category that the forecast belongs to.
+   * </pre>
+   *
+   * <code>.api.commons.SkillProfileCategory skill_profile_category = 4 [json_name = "skillProfileCategory"];</code>
+   * @return The skillProfileCategory.
+   */
+  com.tcn.cloud.api.api.commons.SkillProfileCategory getSkillProfileCategory();
+  /**
+   * <pre>
+   * Skill profile category that the forecast belongs to.
+   * </pre>
+   *
+   * <code>.api.commons.SkillProfileCategory skill_profile_category = 4 [json_name = "skillProfileCategory"];</code>
+   */
+  com.tcn.cloud.api.api.commons.SkillProfileCategoryOrBuilder getSkillProfileCategoryOrBuilder();
 }

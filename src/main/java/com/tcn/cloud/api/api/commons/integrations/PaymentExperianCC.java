@@ -42,6 +42,22 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.integrations.PaymentExperianCC.class, com.tcn.cloud.api.api.commons.integrations.PaymentExperianCC.Builder.class);
   }
 
+  public static final int USE_INVOICE_ACCOUNT_NUMBER_FIELD_NUMBER = 1;
+  private boolean useInvoiceAccountNumber_ = false;
+  /**
+   * <pre>
+   * if true instead of using the account number uploaded to textpay,
+   * we send the payment with the account number returned on the invoice
+   * </pre>
+   *
+   * <code>bool use_invoice_account_number = 1 [json_name = "useInvoiceAccountNumber"];</code>
+   * @return The useInvoiceAccountNumber.
+   */
+  @java.lang.Override
+  public boolean getUseInvoiceAccountNumber() {
+    return useInvoiceAccountNumber_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -56,6 +72,9 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    if (useInvoiceAccountNumber_ != false) {
+      output.writeBool(1, useInvoiceAccountNumber_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -65,6 +84,10 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    if (useInvoiceAccountNumber_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(1, useInvoiceAccountNumber_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -80,6 +103,8 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.commons.integrations.PaymentExperianCC other = (com.tcn.cloud.api.api.commons.integrations.PaymentExperianCC) obj;
 
+    if (getUseInvoiceAccountNumber()
+        != other.getUseInvoiceAccountNumber()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -91,6 +116,9 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + USE_INVOICE_ACCOUNT_NUMBER_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getUseInvoiceAccountNumber());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -225,6 +253,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
+      useInvoiceAccountNumber_ = false;
       return this;
     }
 
@@ -251,8 +281,16 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.integrations.PaymentExperianCC buildPartial() {
       com.tcn.cloud.api.api.commons.integrations.PaymentExperianCC result = new com.tcn.cloud.api.api.commons.integrations.PaymentExperianCC(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.commons.integrations.PaymentExperianCC result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.useInvoiceAccountNumber_ = useInvoiceAccountNumber_;
+      }
     }
 
     @java.lang.Override
@@ -299,6 +337,9 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.commons.integrations.PaymentExperianCC other) {
       if (other == com.tcn.cloud.api.api.commons.integrations.PaymentExperianCC.getDefaultInstance()) return this;
+      if (other.getUseInvoiceAccountNumber() != false) {
+        setUseInvoiceAccountNumber(other.getUseInvoiceAccountNumber());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -325,6 +366,11 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
+            case 8: {
+              useInvoiceAccountNumber_ = input.readBool();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -338,6 +384,54 @@ private static final long serialVersionUID = 0L;
       } finally {
         onChanged();
       } // finally
+      return this;
+    }
+    private int bitField0_;
+
+    private boolean useInvoiceAccountNumber_ ;
+    /**
+     * <pre>
+     * if true instead of using the account number uploaded to textpay,
+     * we send the payment with the account number returned on the invoice
+     * </pre>
+     *
+     * <code>bool use_invoice_account_number = 1 [json_name = "useInvoiceAccountNumber"];</code>
+     * @return The useInvoiceAccountNumber.
+     */
+    @java.lang.Override
+    public boolean getUseInvoiceAccountNumber() {
+      return useInvoiceAccountNumber_;
+    }
+    /**
+     * <pre>
+     * if true instead of using the account number uploaded to textpay,
+     * we send the payment with the account number returned on the invoice
+     * </pre>
+     *
+     * <code>bool use_invoice_account_number = 1 [json_name = "useInvoiceAccountNumber"];</code>
+     * @param value The useInvoiceAccountNumber to set.
+     * @return This builder for chaining.
+     */
+    public Builder setUseInvoiceAccountNumber(boolean value) {
+
+      useInvoiceAccountNumber_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * if true instead of using the account number uploaded to textpay,
+     * we send the payment with the account number returned on the invoice
+     * </pre>
+     *
+     * <code>bool use_invoice_account_number = 1 [json_name = "useInvoiceAccountNumber"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearUseInvoiceAccountNumber() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      useInvoiceAccountNumber_ = false;
+      onChanged();
       return this;
     }
     @java.lang.Override
