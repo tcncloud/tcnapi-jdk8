@@ -1475,6 +1475,37 @@ public final class WFMGrpc {
     return getUpdateProgramNodeMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidRes> getListProgramNodesBySidMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListProgramNodesBySid",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidRes> getListProgramNodesBySidMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidReq, com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidRes> getListProgramNodesBySidMethod;
+    if ((getListProgramNodesBySidMethod = WFMGrpc.getListProgramNodesBySidMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getListProgramNodesBySidMethod = WFMGrpc.getListProgramNodesBySidMethod) == null) {
+          WFMGrpc.getListProgramNodesBySidMethod = getListProgramNodesBySidMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidReq, com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListProgramNodesBySid"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidRes.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListProgramNodesBySid"))
+              .build();
+        }
+      }
+    }
+    return getListProgramNodesBySidMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateConstraintRuleReq,
       com.tcn.cloud.api.api.v1alpha1.wfm.CreateConstraintRuleRes> getCreateConstraintRuleMethod;
 
@@ -1907,6 +1938,37 @@ public final class WFMGrpc {
       }
     }
     return getListUngroupedWFMAgentsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsRes> getListWFMAgentSidsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListWFMAgentSids",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsRes> getListWFMAgentSidsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsReq, com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsRes> getListWFMAgentSidsMethod;
+    if ((getListWFMAgentSidsMethod = WFMGrpc.getListWFMAgentSidsMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getListWFMAgentSidsMethod = WFMGrpc.getListWFMAgentSidsMethod) == null) {
+          WFMGrpc.getListWFMAgentSidsMethod = getListWFMAgentSidsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsReq, com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListWFMAgentSids"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsRes.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListWFMAgentSids"))
+              .build();
+        }
+      }
+    }
+    return getListWFMAgentSidsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentsAssociatedWithAgentGroupReq,
@@ -4567,6 +4629,21 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Lists the program nodes with the given &#64;program_node_sids for the org sending the request.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the given &#64;program_node_sids are invalid.
+     *   - grpc.Internal: error occurs when listing the program nodes.
+     * </pre>
+     */
+    default void listProgramNodesBySid(com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListProgramNodesBySidMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Creates the given &#64;constraint_rule for the org sending the request.
      * The &#64;constraint_rule_sid and &#64;skill_proficiency_sid (if one was created) of the new entities will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the &#64;parent_entity.
@@ -4775,6 +4852,10 @@ public final class WFMGrpc {
      * if &#64;include_inactive is true then inactive agents will also be included, otherwise only active agents will be returned.
      * if &#64;include_skill_proficiencies is true then agents returned will include their skill proficiencies.
      * if &#64;include_agent_groups is true then the &#64;agent_groups_by_agent response field will be set with a list of agent groups correlating to each agents index in the &#64;wfm_agents field.
+     * if &#64;include_agent_groups is set to true, the &#64;agent_group_schedule_scenario_sid field must be set, so that the agent groups for the correct scenario are returned.
+     * if &#64;include_agent_groups is set to true, and &#64;agent_group_schedule_scenario_sid is not set, the agent groups will not be filtered by schedule scenario.
+     * if &#64;include_agent_groups is set to false, the &#64;agent_group_schedule_scenario_sid will be ignored.
+     * &#64;agent_group_schedule_scenario_sid does not effect which &#64;wfm_agents are returned.
      * WFM agents with no associated agent_groups will have an empty slice in agent_groups_by_agent at their correlated index.
      * Required Permissions:
      *   NONE
@@ -4820,6 +4901,23 @@ public final class WFMGrpc {
     default void listUngroupedWFMAgents(com.tcn.cloud.api.api.v1alpha1.wfm.ListUngroupedWFMAgentsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListUngroupedWFMAgentsRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListUngroupedWFMAgentsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Gets the wfm_agent_sids with the given &#64;tcn_agent_sids for the org sending the request.
+     * Returns a map where Key: tcn_agent_sid - Value: wfm_agent_sid.
+     * If the wfm_agent_sid is not found for any &#64;tcn_agent_sids, they will not have an entry in the returned &#64;sids.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *  - grpc.Invalid: the &#64;tcn_agent_sids are invalid.
+     *  - grpc.Internal: error occours while listing the wfm_agent_sids.
+     * </pre>
+     */
+    default void listWFMAgentSids(com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListWFMAgentSidsMethod(), responseObserver);
     }
 
     /**
@@ -6765,6 +6863,22 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Lists the program nodes with the given &#64;program_node_sids for the org sending the request.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the given &#64;program_node_sids are invalid.
+     *   - grpc.Internal: error occurs when listing the program nodes.
+     * </pre>
+     */
+    public void listProgramNodesBySid(com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListProgramNodesBySidMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Creates the given &#64;constraint_rule for the org sending the request.
      * The &#64;constraint_rule_sid and &#64;skill_proficiency_sid (if one was created) of the new entities will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the &#64;parent_entity.
@@ -6984,6 +7098,10 @@ public final class WFMGrpc {
      * if &#64;include_inactive is true then inactive agents will also be included, otherwise only active agents will be returned.
      * if &#64;include_skill_proficiencies is true then agents returned will include their skill proficiencies.
      * if &#64;include_agent_groups is true then the &#64;agent_groups_by_agent response field will be set with a list of agent groups correlating to each agents index in the &#64;wfm_agents field.
+     * if &#64;include_agent_groups is set to true, the &#64;agent_group_schedule_scenario_sid field must be set, so that the agent groups for the correct scenario are returned.
+     * if &#64;include_agent_groups is set to true, and &#64;agent_group_schedule_scenario_sid is not set, the agent groups will not be filtered by schedule scenario.
+     * if &#64;include_agent_groups is set to false, the &#64;agent_group_schedule_scenario_sid will be ignored.
+     * &#64;agent_group_schedule_scenario_sid does not effect which &#64;wfm_agents are returned.
      * WFM agents with no associated agent_groups will have an empty slice in agent_groups_by_agent at their correlated index.
      * Required Permissions:
      *   NONE
@@ -7032,6 +7150,24 @@ public final class WFMGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListUngroupedWFMAgentsRes> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListUngroupedWFMAgentsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Gets the wfm_agent_sids with the given &#64;tcn_agent_sids for the org sending the request.
+     * Returns a map where Key: tcn_agent_sid - Value: wfm_agent_sid.
+     * If the wfm_agent_sid is not found for any &#64;tcn_agent_sids, they will not have an entry in the returned &#64;sids.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *  - grpc.Invalid: the &#64;tcn_agent_sids are invalid.
+     *  - grpc.Internal: error occours while listing the wfm_agent_sids.
+     * </pre>
+     */
+    public void listWFMAgentSids(com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListWFMAgentSidsMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -8979,6 +9115,21 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Lists the program nodes with the given &#64;program_node_sids for the org sending the request.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the given &#64;program_node_sids are invalid.
+     *   - grpc.Internal: error occurs when listing the program nodes.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidRes listProgramNodesBySid(com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListProgramNodesBySidMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Creates the given &#64;constraint_rule for the org sending the request.
      * The &#64;constraint_rule_sid and &#64;skill_proficiency_sid (if one was created) of the new entities will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the &#64;parent_entity.
@@ -9187,6 +9338,10 @@ public final class WFMGrpc {
      * if &#64;include_inactive is true then inactive agents will also be included, otherwise only active agents will be returned.
      * if &#64;include_skill_proficiencies is true then agents returned will include their skill proficiencies.
      * if &#64;include_agent_groups is true then the &#64;agent_groups_by_agent response field will be set with a list of agent groups correlating to each agents index in the &#64;wfm_agents field.
+     * if &#64;include_agent_groups is set to true, the &#64;agent_group_schedule_scenario_sid field must be set, so that the agent groups for the correct scenario are returned.
+     * if &#64;include_agent_groups is set to true, and &#64;agent_group_schedule_scenario_sid is not set, the agent groups will not be filtered by schedule scenario.
+     * if &#64;include_agent_groups is set to false, the &#64;agent_group_schedule_scenario_sid will be ignored.
+     * &#64;agent_group_schedule_scenario_sid does not effect which &#64;wfm_agents are returned.
      * WFM agents with no associated agent_groups will have an empty slice in agent_groups_by_agent at their correlated index.
      * Required Permissions:
      *   NONE
@@ -9232,6 +9387,23 @@ public final class WFMGrpc {
     public com.tcn.cloud.api.api.v1alpha1.wfm.ListUngroupedWFMAgentsRes listUngroupedWFMAgents(com.tcn.cloud.api.api.v1alpha1.wfm.ListUngroupedWFMAgentsReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListUngroupedWFMAgentsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Gets the wfm_agent_sids with the given &#64;tcn_agent_sids for the org sending the request.
+     * Returns a map where Key: tcn_agent_sid - Value: wfm_agent_sid.
+     * If the wfm_agent_sid is not found for any &#64;tcn_agent_sids, they will not have an entry in the returned &#64;sids.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *  - grpc.Invalid: the &#64;tcn_agent_sids are invalid.
+     *  - grpc.Internal: error occours while listing the wfm_agent_sids.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsRes listWFMAgentSids(com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListWFMAgentSidsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -11069,6 +11241,22 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Lists the program nodes with the given &#64;program_node_sids for the org sending the request.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the given &#64;program_node_sids are invalid.
+     *   - grpc.Internal: error occurs when listing the program nodes.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidRes> listProgramNodesBySid(
+        com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListProgramNodesBySidMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Creates the given &#64;constraint_rule for the org sending the request.
      * The &#64;constraint_rule_sid and &#64;skill_proficiency_sid (if one was created) of the new entities will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the &#64;parent_entity.
@@ -11288,6 +11476,10 @@ public final class WFMGrpc {
      * if &#64;include_inactive is true then inactive agents will also be included, otherwise only active agents will be returned.
      * if &#64;include_skill_proficiencies is true then agents returned will include their skill proficiencies.
      * if &#64;include_agent_groups is true then the &#64;agent_groups_by_agent response field will be set with a list of agent groups correlating to each agents index in the &#64;wfm_agents field.
+     * if &#64;include_agent_groups is set to true, the &#64;agent_group_schedule_scenario_sid field must be set, so that the agent groups for the correct scenario are returned.
+     * if &#64;include_agent_groups is set to true, and &#64;agent_group_schedule_scenario_sid is not set, the agent groups will not be filtered by schedule scenario.
+     * if &#64;include_agent_groups is set to false, the &#64;agent_group_schedule_scenario_sid will be ignored.
+     * &#64;agent_group_schedule_scenario_sid does not effect which &#64;wfm_agents are returned.
      * WFM agents with no associated agent_groups will have an empty slice in agent_groups_by_agent at their correlated index.
      * Required Permissions:
      *   NONE
@@ -11336,6 +11528,24 @@ public final class WFMGrpc {
         com.tcn.cloud.api.api.v1alpha1.wfm.ListUngroupedWFMAgentsReq request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListUngroupedWFMAgentsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Gets the wfm_agent_sids with the given &#64;tcn_agent_sids for the org sending the request.
+     * Returns a map where Key: tcn_agent_sid - Value: wfm_agent_sid.
+     * If the wfm_agent_sid is not found for any &#64;tcn_agent_sids, they will not have an entry in the returned &#64;sids.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *  - grpc.Invalid: the &#64;tcn_agent_sids are invalid.
+     *  - grpc.Internal: error occours while listing the wfm_agent_sids.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsRes> listWFMAgentSids(
+        com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListWFMAgentSidsMethod(), getCallOptions()), request);
     }
 
     /**
@@ -12497,78 +12707,80 @@ public final class WFMGrpc {
   private static final int METHODID_UPDATE_LOCATION_NODE = 44;
   private static final int METHODID_CREATE_PROGRAM_NODE = 45;
   private static final int METHODID_UPDATE_PROGRAM_NODE = 46;
-  private static final int METHODID_CREATE_CONSTRAINT_RULE = 47;
-  private static final int METHODID_UPDATE_CONSTRAINT_RULE = 48;
-  private static final int METHODID_DELETE_CONSTRAINT_RULE = 49;
-  private static final int METHODID_CREATE_NON_SKILL_ACTIVITY = 50;
-  private static final int METHODID_UPDATE_NON_SKILL_ACTIVITY = 51;
-  private static final int METHODID_LIST_NON_SKILL_ACTIVITIES = 52;
-  private static final int METHODID_LIST_NON_SKILL_ACTIVITY_ASSOCIATIONS = 53;
-  private static final int METHODID_LIST_CANDIDATE_SCHEDULING_ACTIVITIES = 54;
-  private static final int METHODID_CREATE_AGENT_GROUP = 55;
-  private static final int METHODID_UPDATE_AGENT_GROUP = 56;
-  private static final int METHODID_UPDATE_WFMAGENT = 57;
-  private static final int METHODID_LIST_ALL_WFMAGENTS = 58;
-  private static final int METHODID_LIST_CANDIDATE_WFMAGENTS = 59;
-  private static final int METHODID_LIST_UNGROUPED_WFMAGENTS = 60;
-  private static final int METHODID_LIST_WFMAGENTS_ASSOCIATED_WITH_AGENT_GROUP = 61;
-  private static final int METHODID_CREATE_WFMAGENT_MEMBERSHIPS = 62;
-  private static final int METHODID_DELETE_WFMAGENT_MEMBERSHIPS = 63;
-  private static final int METHODID_DELETE_WFMAGENTS_MEMBERSHIPS = 64;
-  private static final int METHODID_BUILD_AGENT_DIAGNOSTICS = 65;
-  private static final int METHODID_CREATE_SHIFT_TEMPLATE = 66;
-  private static final int METHODID_UPDATE_SHIFT_TEMPLATE = 67;
-  private static final int METHODID_LIST_SHIFT_TEMPLATES_BY_SIDS = 68;
-  private static final int METHODID_BUILD_SHIFT_TEMPLATE_DIAGNOSTICS = 69;
-  private static final int METHODID_CREATE_PLACEMENT_RULE = 70;
-  private static final int METHODID_UPDATE_PLACEMENT_RULE = 71;
-  private static final int METHODID_DELETE_PLACEMENT_RULE = 72;
-  private static final int METHODID_CREATE_OPEN_TIMES_PATTERN = 73;
-  private static final int METHODID_UPDATE_OPEN_TIMES_PATTERN = 74;
-  private static final int METHODID_DELETE_OPEN_TIMES_PATTERN = 75;
-  private static final int METHODID_GET_OPEN_TIMES_BITMAPS = 76;
-  private static final int METHODID_CREATE_AGENT_AVAILABILITY_PATTERN = 77;
-  private static final int METHODID_UPDATE_AGENT_AVAILABILITY_PATTERN = 78;
-  private static final int METHODID_DELETE_AGENT_AVAILABILITY_PATTERN = 79;
-  private static final int METHODID_GET_AVAILABILITY_BITMAPS = 80;
-  private static final int METHODID_UPSERT_NON_SKILL_ACTIVITY_ASSOCIATION = 81;
-  private static final int METHODID_CREATE_SKILL_PROFICIENCIES = 82;
-  private static final int METHODID_UPDATE_SKILL_PROFICIENCIES = 83;
-  private static final int METHODID_DELETE_SKILL_PROFICIENCY = 84;
-  private static final int METHODID_COPY_SCENARIO = 85;
-  private static final int METHODID_CREATE_SCHEDULE_SCENARIO_WITH_NODES = 86;
-  private static final int METHODID_UPDATE_SCHEDULE_SCENARIO = 87;
-  private static final int METHODID_LIST_CONFIG_ENTITIES = 88;
-  private static final int METHODID_DELETE_SHIFT_INSTANCES = 89;
-  private static final int METHODID_BUILD_NODE_DIAGNOSTICS = 90;
-  private static final int METHODID_BUILD_GLOBAL_DIAGNOSTICS = 91;
-  private static final int METHODID_GET_PUBLISHED_SCHEDULE = 92;
-  private static final int METHODID_GET_PUBLISHED_SCHEDULE_REQUIRED_CALLS = 93;
-  private static final int METHODID_GET_DRAFT_SCHEDULE_REQUIRED_CALLS = 94;
-  private static final int METHODID_CREATE_DRAFT_SCHEDULE = 95;
-  private static final int METHODID_UPDATE_DRAFT_SCHEDULE = 96;
-  private static final int METHODID_BUILD_DRAFT_SCHEDULE = 97;
-  private static final int METHODID_PUBLISH_DRAFT_SCHEDULE = 98;
-  private static final int METHODID_RESET_DRAFT_SCHEDULE = 99;
-  private static final int METHODID_GET_DRAFT_SCHEDULE = 100;
-  private static final int METHODID_LIST_DRAFT_SCHEDULES = 101;
-  private static final int METHODID_CLEAR_SCHEDULE = 102;
-  private static final int METHODID_DELETE_DRAFT_SCHEDULE = 103;
-  private static final int METHODID_LIST_SHIFT_INSTANCES_BY_SID = 104;
-  private static final int METHODID_COPY_SCHEDULE_TO_SCHEDULE = 105;
-  private static final int METHODID_CREATE_SHIFT_INSTANCE = 106;
-  private static final int METHODID_CREATE_SHIFT_INSTANCE_V2 = 107;
-  private static final int METHODID_SWAP_SHIFT_INSTANCES = 108;
-  private static final int METHODID_UPDATE_SHIFT_INSTANCE = 109;
-  private static final int METHODID_UPDATE_SHIFT_INSTANCE_V2 = 110;
-  private static final int METHODID_COPY_SHIFT_INSTANCES_TO_SCHEDULE = 111;
-  private static final int METHODID_LIST_SHIFT_INSTANCE_SIDS_FOR_AGENT = 112;
-  private static final int METHODID_LIST_SHIFT_SEGMENTS_BY_SHIFT_INSTANCE_SIDS = 113;
-  private static final int METHODID_SET_SCHEDULING_TARGET = 114;
-  private static final int METHODID_GET_SCHEDULING_TARGET = 115;
-  private static final int METHODID_DELETE_SCHEDULING_TARGET = 116;
-  private static final int METHODID_GET_PERFORMANCE_METRICS = 117;
-  private static final int METHODID_LIST_REQUIRED_CALLS_INTERVALS = 118;
+  private static final int METHODID_LIST_PROGRAM_NODES_BY_SID = 47;
+  private static final int METHODID_CREATE_CONSTRAINT_RULE = 48;
+  private static final int METHODID_UPDATE_CONSTRAINT_RULE = 49;
+  private static final int METHODID_DELETE_CONSTRAINT_RULE = 50;
+  private static final int METHODID_CREATE_NON_SKILL_ACTIVITY = 51;
+  private static final int METHODID_UPDATE_NON_SKILL_ACTIVITY = 52;
+  private static final int METHODID_LIST_NON_SKILL_ACTIVITIES = 53;
+  private static final int METHODID_LIST_NON_SKILL_ACTIVITY_ASSOCIATIONS = 54;
+  private static final int METHODID_LIST_CANDIDATE_SCHEDULING_ACTIVITIES = 55;
+  private static final int METHODID_CREATE_AGENT_GROUP = 56;
+  private static final int METHODID_UPDATE_AGENT_GROUP = 57;
+  private static final int METHODID_UPDATE_WFMAGENT = 58;
+  private static final int METHODID_LIST_ALL_WFMAGENTS = 59;
+  private static final int METHODID_LIST_CANDIDATE_WFMAGENTS = 60;
+  private static final int METHODID_LIST_UNGROUPED_WFMAGENTS = 61;
+  private static final int METHODID_LIST_WFMAGENT_SIDS = 62;
+  private static final int METHODID_LIST_WFMAGENTS_ASSOCIATED_WITH_AGENT_GROUP = 63;
+  private static final int METHODID_CREATE_WFMAGENT_MEMBERSHIPS = 64;
+  private static final int METHODID_DELETE_WFMAGENT_MEMBERSHIPS = 65;
+  private static final int METHODID_DELETE_WFMAGENTS_MEMBERSHIPS = 66;
+  private static final int METHODID_BUILD_AGENT_DIAGNOSTICS = 67;
+  private static final int METHODID_CREATE_SHIFT_TEMPLATE = 68;
+  private static final int METHODID_UPDATE_SHIFT_TEMPLATE = 69;
+  private static final int METHODID_LIST_SHIFT_TEMPLATES_BY_SIDS = 70;
+  private static final int METHODID_BUILD_SHIFT_TEMPLATE_DIAGNOSTICS = 71;
+  private static final int METHODID_CREATE_PLACEMENT_RULE = 72;
+  private static final int METHODID_UPDATE_PLACEMENT_RULE = 73;
+  private static final int METHODID_DELETE_PLACEMENT_RULE = 74;
+  private static final int METHODID_CREATE_OPEN_TIMES_PATTERN = 75;
+  private static final int METHODID_UPDATE_OPEN_TIMES_PATTERN = 76;
+  private static final int METHODID_DELETE_OPEN_TIMES_PATTERN = 77;
+  private static final int METHODID_GET_OPEN_TIMES_BITMAPS = 78;
+  private static final int METHODID_CREATE_AGENT_AVAILABILITY_PATTERN = 79;
+  private static final int METHODID_UPDATE_AGENT_AVAILABILITY_PATTERN = 80;
+  private static final int METHODID_DELETE_AGENT_AVAILABILITY_PATTERN = 81;
+  private static final int METHODID_GET_AVAILABILITY_BITMAPS = 82;
+  private static final int METHODID_UPSERT_NON_SKILL_ACTIVITY_ASSOCIATION = 83;
+  private static final int METHODID_CREATE_SKILL_PROFICIENCIES = 84;
+  private static final int METHODID_UPDATE_SKILL_PROFICIENCIES = 85;
+  private static final int METHODID_DELETE_SKILL_PROFICIENCY = 86;
+  private static final int METHODID_COPY_SCENARIO = 87;
+  private static final int METHODID_CREATE_SCHEDULE_SCENARIO_WITH_NODES = 88;
+  private static final int METHODID_UPDATE_SCHEDULE_SCENARIO = 89;
+  private static final int METHODID_LIST_CONFIG_ENTITIES = 90;
+  private static final int METHODID_DELETE_SHIFT_INSTANCES = 91;
+  private static final int METHODID_BUILD_NODE_DIAGNOSTICS = 92;
+  private static final int METHODID_BUILD_GLOBAL_DIAGNOSTICS = 93;
+  private static final int METHODID_GET_PUBLISHED_SCHEDULE = 94;
+  private static final int METHODID_GET_PUBLISHED_SCHEDULE_REQUIRED_CALLS = 95;
+  private static final int METHODID_GET_DRAFT_SCHEDULE_REQUIRED_CALLS = 96;
+  private static final int METHODID_CREATE_DRAFT_SCHEDULE = 97;
+  private static final int METHODID_UPDATE_DRAFT_SCHEDULE = 98;
+  private static final int METHODID_BUILD_DRAFT_SCHEDULE = 99;
+  private static final int METHODID_PUBLISH_DRAFT_SCHEDULE = 100;
+  private static final int METHODID_RESET_DRAFT_SCHEDULE = 101;
+  private static final int METHODID_GET_DRAFT_SCHEDULE = 102;
+  private static final int METHODID_LIST_DRAFT_SCHEDULES = 103;
+  private static final int METHODID_CLEAR_SCHEDULE = 104;
+  private static final int METHODID_DELETE_DRAFT_SCHEDULE = 105;
+  private static final int METHODID_LIST_SHIFT_INSTANCES_BY_SID = 106;
+  private static final int METHODID_COPY_SCHEDULE_TO_SCHEDULE = 107;
+  private static final int METHODID_CREATE_SHIFT_INSTANCE = 108;
+  private static final int METHODID_CREATE_SHIFT_INSTANCE_V2 = 109;
+  private static final int METHODID_SWAP_SHIFT_INSTANCES = 110;
+  private static final int METHODID_UPDATE_SHIFT_INSTANCE = 111;
+  private static final int METHODID_UPDATE_SHIFT_INSTANCE_V2 = 112;
+  private static final int METHODID_COPY_SHIFT_INSTANCES_TO_SCHEDULE = 113;
+  private static final int METHODID_LIST_SHIFT_INSTANCE_SIDS_FOR_AGENT = 114;
+  private static final int METHODID_LIST_SHIFT_SEGMENTS_BY_SHIFT_INSTANCE_SIDS = 115;
+  private static final int METHODID_SET_SCHEDULING_TARGET = 116;
+  private static final int METHODID_GET_SCHEDULING_TARGET = 117;
+  private static final int METHODID_DELETE_SCHEDULING_TARGET = 118;
+  private static final int METHODID_GET_PERFORMANCE_METRICS = 119;
+  private static final int METHODID_LIST_REQUIRED_CALLS_INTERVALS = 120;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -12775,6 +12987,10 @@ public final class WFMGrpc {
           serviceImpl.updateProgramNode((com.tcn.cloud.api.api.v1alpha1.wfm.UpdateProgramNodeReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateProgramNodeRes>) responseObserver);
           break;
+        case METHODID_LIST_PROGRAM_NODES_BY_SID:
+          serviceImpl.listProgramNodesBySid((com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidRes>) responseObserver);
+          break;
         case METHODID_CREATE_CONSTRAINT_RULE:
           serviceImpl.createConstraintRule((com.tcn.cloud.api.api.v1alpha1.wfm.CreateConstraintRuleReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateConstraintRuleRes>) responseObserver);
@@ -12830,6 +13046,10 @@ public final class WFMGrpc {
         case METHODID_LIST_UNGROUPED_WFMAGENTS:
           serviceImpl.listUngroupedWFMAgents((com.tcn.cloud.api.api.v1alpha1.wfm.ListUngroupedWFMAgentsReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListUngroupedWFMAgentsRes>) responseObserver);
+          break;
+        case METHODID_LIST_WFMAGENT_SIDS:
+          serviceImpl.listWFMAgentSids((com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsRes>) responseObserver);
           break;
         case METHODID_LIST_WFMAGENTS_ASSOCIATED_WITH_AGENT_GROUP:
           serviceImpl.listWFMAgentsAssociatedWithAgentGroup((com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentsAssociatedWithAgentGroupReq) request,
@@ -13411,6 +13631,13 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.UpdateProgramNodeRes>(
                 service, METHODID_UPDATE_PROGRAM_NODE)))
         .addMethod(
+          getListProgramNodesBySidMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidRes>(
+                service, METHODID_LIST_PROGRAM_NODES_BY_SID)))
+        .addMethod(
           getCreateConstraintRuleMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -13508,6 +13735,13 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.ListUngroupedWFMAgentsReq,
               com.tcn.cloud.api.api.v1alpha1.wfm.ListUngroupedWFMAgentsRes>(
                 service, METHODID_LIST_UNGROUPED_WFMAGENTS)))
+        .addMethod(
+          getListWFMAgentSidsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsRes>(
+                service, METHODID_LIST_WFMAGENT_SIDS)))
         .addMethod(
           getListWFMAgentsAssociatedWithAgentGroupMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -14009,6 +14243,7 @@ public final class WFMGrpc {
               .addMethod(getUpdateLocationNodeMethod())
               .addMethod(getCreateProgramNodeMethod())
               .addMethod(getUpdateProgramNodeMethod())
+              .addMethod(getListProgramNodesBySidMethod())
               .addMethod(getCreateConstraintRuleMethod())
               .addMethod(getUpdateConstraintRuleMethod())
               .addMethod(getDeleteConstraintRuleMethod())
@@ -14023,6 +14258,7 @@ public final class WFMGrpc {
               .addMethod(getListAllWFMAgentsMethod())
               .addMethod(getListCandidateWFMAgentsMethod())
               .addMethod(getListUngroupedWFMAgentsMethod())
+              .addMethod(getListWFMAgentSidsMethod())
               .addMethod(getListWFMAgentsAssociatedWithAgentGroupMethod())
               .addMethod(getCreateWFMAgentMembershipsMethod())
               .addMethod(getDeleteWFMAgentMembershipsMethod())

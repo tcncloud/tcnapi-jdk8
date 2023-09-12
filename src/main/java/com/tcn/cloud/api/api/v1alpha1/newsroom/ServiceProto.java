@@ -49,7 +49,7 @@ public final class ServiceProto {
       "rticle\0224.api.v1alpha1.newsroom.CreatePub" +
       "lishedArticleRequest\0325.api.v1alpha1.news" +
       "room.CreatePublishedArticleResponse\"B\272\270\221" +
-      "\002\005\n\003\010\350 \202\323\344\223\0022\"-/api/v1alpha1/newsroom/cr" +
+      "\002\005\n\003\010\351 \202\323\344\223\0022\"-/api/v1alpha1/newsroom/cr" +
       "eatepublishedarticle:\001*\022\302\001\n\025ListPublishe" +
       "dArticles\0223.api.v1alpha1.newsroom.ListPu" +
       "blishedArticlesRequest\0324.api.v1alpha1.ne" +
