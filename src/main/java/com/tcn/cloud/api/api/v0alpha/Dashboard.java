@@ -23,6 +23,7 @@ private static final long serialVersionUID = 0L;
     dashboardId_ = "";
     title_ = "";
     description_ = "";
+    permissionType_ = 0;
   }
 
   @java.lang.Override
@@ -300,6 +301,32 @@ private static final long serialVersionUID = 0L;
     return type_ == null ? com.tcn.cloud.api.api.v0alpha.DashboardType.getDefaultInstance() : type_;
   }
 
+  public static final int PERMISSION_TYPE_FIELD_NUMBER = 7;
+  private int permissionType_ = 0;
+  /**
+   * <pre>
+   * permission type (TCN Standard, Custom, etc.)
+   * </pre>
+   *
+   * <code>.api.commons.DashboardPermissionType permission_type = 7 [json_name = "permissionType"];</code>
+   * @return The enum numeric value on the wire for permissionType.
+   */
+  @java.lang.Override public int getPermissionTypeValue() {
+    return permissionType_;
+  }
+  /**
+   * <pre>
+   * permission type (TCN Standard, Custom, etc.)
+   * </pre>
+   *
+   * <code>.api.commons.DashboardPermissionType permission_type = 7 [json_name = "permissionType"];</code>
+   * @return The permissionType.
+   */
+  @java.lang.Override public com.tcn.cloud.api.api.commons.DashboardPermissionType getPermissionType() {
+    com.tcn.cloud.api.api.commons.DashboardPermissionType result = com.tcn.cloud.api.api.commons.DashboardPermissionType.forNumber(permissionType_);
+    return result == null ? com.tcn.cloud.api.api.commons.DashboardPermissionType.UNRECOGNIZED : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -332,6 +359,9 @@ private static final long serialVersionUID = 0L;
     if (type_ != null) {
       output.writeMessage(6, getType());
     }
+    if (permissionType_ != com.tcn.cloud.api.api.commons.DashboardPermissionType.DASHBOARD_PERMISSION_TYPE_ORG_CUSTOM.getNumber()) {
+      output.writeEnum(7, permissionType_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -361,6 +391,10 @@ private static final long serialVersionUID = 0L;
     if (type_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, getType());
+    }
+    if (permissionType_ != com.tcn.cloud.api.api.commons.DashboardPermissionType.DASHBOARD_PERMISSION_TYPE_ORG_CUSTOM.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(7, permissionType_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -398,6 +432,7 @@ private static final long serialVersionUID = 0L;
       if (!getType()
           .equals(other.getType())) return false;
     }
+    if (permissionType_ != other.permissionType_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -427,6 +462,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + TYPE_FIELD_NUMBER;
       hash = (53 * hash) + getType().hashCode();
     }
+    hash = (37 * hash) + PERMISSION_TYPE_FIELD_NUMBER;
+    hash = (53 * hash) + permissionType_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -580,6 +617,7 @@ private static final long serialVersionUID = 0L;
         typeBuilder_.dispose();
         typeBuilder_ = null;
       }
+      permissionType_ = 0;
       return this;
     }
 
@@ -636,6 +674,9 @@ private static final long serialVersionUID = 0L;
         result.type_ = typeBuilder_ == null
             ? type_
             : typeBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.permissionType_ = permissionType_;
       }
     }
 
@@ -707,6 +748,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasType()) {
         mergeType(other.getType());
       }
+      if (other.permissionType_ != 0) {
+        setPermissionTypeValue(other.getPermissionTypeValue());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -769,6 +813,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000020;
               break;
             } // case 50
+            case 56: {
+              permissionType_ = input.readEnum();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 56
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1525,6 +1574,79 @@ private static final long serialVersionUID = 0L;
         type_ = null;
       }
       return typeBuilder_;
+    }
+
+    private int permissionType_ = 0;
+    /**
+     * <pre>
+     * permission type (TCN Standard, Custom, etc.)
+     * </pre>
+     *
+     * <code>.api.commons.DashboardPermissionType permission_type = 7 [json_name = "permissionType"];</code>
+     * @return The enum numeric value on the wire for permissionType.
+     */
+    @java.lang.Override public int getPermissionTypeValue() {
+      return permissionType_;
+    }
+    /**
+     * <pre>
+     * permission type (TCN Standard, Custom, etc.)
+     * </pre>
+     *
+     * <code>.api.commons.DashboardPermissionType permission_type = 7 [json_name = "permissionType"];</code>
+     * @param value The enum numeric value on the wire for permissionType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPermissionTypeValue(int value) {
+      permissionType_ = value;
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * permission type (TCN Standard, Custom, etc.)
+     * </pre>
+     *
+     * <code>.api.commons.DashboardPermissionType permission_type = 7 [json_name = "permissionType"];</code>
+     * @return The permissionType.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.DashboardPermissionType getPermissionType() {
+      com.tcn.cloud.api.api.commons.DashboardPermissionType result = com.tcn.cloud.api.api.commons.DashboardPermissionType.forNumber(permissionType_);
+      return result == null ? com.tcn.cloud.api.api.commons.DashboardPermissionType.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * permission type (TCN Standard, Custom, etc.)
+     * </pre>
+     *
+     * <code>.api.commons.DashboardPermissionType permission_type = 7 [json_name = "permissionType"];</code>
+     * @param value The permissionType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPermissionType(com.tcn.cloud.api.api.commons.DashboardPermissionType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000040;
+      permissionType_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * permission type (TCN Standard, Custom, etc.)
+     * </pre>
+     *
+     * <code>.api.commons.DashboardPermissionType permission_type = 7 [json_name = "permissionType"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearPermissionType() {
+      bitField0_ = (bitField0_ & ~0x00000040);
+      permissionType_ = 0;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

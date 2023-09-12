@@ -147,4 +147,23 @@ public interface DashboardOrBuilder extends
    * <code>.api.v0alpha.DashboardType type = 6 [json_name = "type"];</code>
    */
   com.tcn.cloud.api.api.v0alpha.DashboardTypeOrBuilder getTypeOrBuilder();
+
+  /**
+   * <pre>
+   * permission type (TCN Standard, Custom, etc.)
+   * </pre>
+   *
+   * <code>.api.commons.DashboardPermissionType permission_type = 7 [json_name = "permissionType"];</code>
+   * @return The enum numeric value on the wire for permissionType.
+   */
+  int getPermissionTypeValue();
+  /**
+   * <pre>
+   * permission type (TCN Standard, Custom, etc.)
+   * </pre>
+   *
+   * <code>.api.commons.DashboardPermissionType permission_type = 7 [json_name = "permissionType"];</code>
+   * @return The permissionType.
+   */
+  com.tcn.cloud.api.api.commons.DashboardPermissionType getPermissionType();
 }
