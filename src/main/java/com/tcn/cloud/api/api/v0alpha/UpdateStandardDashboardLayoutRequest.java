@@ -5,21 +5,21 @@ package com.tcn.cloud.api.api.v0alpha;
 
 /**
  * <pre>
- * UpdateDashboardViewRequest used in the update RPC
+ * UpdateDashboardTitleAndDescriptionRequest used to update a standard dashboard
  * </pre>
  *
- * Protobuf type {@code api.v0alpha.UpdateDashboardViewRequest}
+ * Protobuf type {@code api.v0alpha.UpdateStandardDashboardLayoutRequest}
  */
-public final class UpdateDashboardViewRequest extends
+public final class UpdateStandardDashboardLayoutRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v0alpha.UpdateDashboardViewRequest)
-    UpdateDashboardViewRequestOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v0alpha.UpdateStandardDashboardLayoutRequest)
+    UpdateStandardDashboardLayoutRequestOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use UpdateDashboardViewRequest.newBuilder() to construct.
-  private UpdateDashboardViewRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use UpdateStandardDashboardLayoutRequest.newBuilder() to construct.
+  private UpdateStandardDashboardLayoutRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private UpdateDashboardViewRequest() {
+  private UpdateStandardDashboardLayoutRequest() {
     dashboardId_ = "";
   }
 
@@ -27,20 +27,20 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new UpdateDashboardViewRequest();
+    return new UpdateStandardDashboardLayoutRequest();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v0alpha.DashboardsProto.internal_static_api_v0alpha_UpdateDashboardViewRequest_descriptor;
+    return com.tcn.cloud.api.api.v0alpha.DashboardsProto.internal_static_api_v0alpha_UpdateStandardDashboardLayoutRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v0alpha.DashboardsProto.internal_static_api_v0alpha_UpdateDashboardViewRequest_fieldAccessorTable
+    return com.tcn.cloud.api.api.v0alpha.DashboardsProto.internal_static_api_v0alpha_UpdateStandardDashboardLayoutRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest.class, com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest.Builder.class);
+            com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardLayoutRequest.class, com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardLayoutRequest.Builder.class);
   }
 
   public static final int DASHBOARD_ID_FIELD_NUMBER = 1;
@@ -48,7 +48,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object dashboardId_ = "";
   /**
    * <pre>
-   * unique ID of dashboard to update
+   * unique ID for dashboard to update
    * </pre>
    *
    * <code>string dashboard_id = 1 [json_name = "dashboardId"];</code>
@@ -69,7 +69,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * unique ID of dashboard to update
+   * unique ID for dashboard to update
    * </pre>
    *
    * <code>string dashboard_id = 1 [json_name = "dashboardId"];</code>
@@ -90,42 +90,42 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int VIEW_FIELD_NUMBER = 2;
-  private com.tcn.cloud.api.api.v0alpha.DashboardView view_;
+  public static final int LAYOUT_FIELD_NUMBER = 2;
+  private com.tcn.cloud.api.api.v0alpha.DashboardLayout layout_;
   /**
    * <pre>
-   * the dashboards viewing params
+   * layout of associated panels
    * </pre>
    *
-   * <code>.api.v0alpha.DashboardView view = 2 [json_name = "view"];</code>
-   * @return Whether the view field is set.
+   * <code>.api.v0alpha.DashboardLayout layout = 2 [json_name = "layout"];</code>
+   * @return Whether the layout field is set.
    */
   @java.lang.Override
-  public boolean hasView() {
-    return view_ != null;
+  public boolean hasLayout() {
+    return layout_ != null;
   }
   /**
    * <pre>
-   * the dashboards viewing params
+   * layout of associated panels
    * </pre>
    *
-   * <code>.api.v0alpha.DashboardView view = 2 [json_name = "view"];</code>
-   * @return The view.
+   * <code>.api.v0alpha.DashboardLayout layout = 2 [json_name = "layout"];</code>
+   * @return The layout.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v0alpha.DashboardView getView() {
-    return view_ == null ? com.tcn.cloud.api.api.v0alpha.DashboardView.getDefaultInstance() : view_;
+  public com.tcn.cloud.api.api.v0alpha.DashboardLayout getLayout() {
+    return layout_ == null ? com.tcn.cloud.api.api.v0alpha.DashboardLayout.getDefaultInstance() : layout_;
   }
   /**
    * <pre>
-   * the dashboards viewing params
+   * layout of associated panels
    * </pre>
    *
-   * <code>.api.v0alpha.DashboardView view = 2 [json_name = "view"];</code>
+   * <code>.api.v0alpha.DashboardLayout layout = 2 [json_name = "layout"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v0alpha.DashboardViewOrBuilder getViewOrBuilder() {
-    return view_ == null ? com.tcn.cloud.api.api.v0alpha.DashboardView.getDefaultInstance() : view_;
+  public com.tcn.cloud.api.api.v0alpha.DashboardLayoutOrBuilder getLayoutOrBuilder() {
+    return layout_ == null ? com.tcn.cloud.api.api.v0alpha.DashboardLayout.getDefaultInstance() : layout_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -145,8 +145,8 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dashboardId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, dashboardId_);
     }
-    if (view_ != null) {
-      output.writeMessage(2, getView());
+    if (layout_ != null) {
+      output.writeMessage(2, getLayout());
     }
     getUnknownFields().writeTo(output);
   }
@@ -160,9 +160,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dashboardId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, dashboardId_);
     }
-    if (view_ != null) {
+    if (layout_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(2, getView());
+        .computeMessageSize(2, getLayout());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -174,17 +174,17 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardLayoutRequest)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest other = (com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest) obj;
+    com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardLayoutRequest other = (com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardLayoutRequest) obj;
 
     if (!getDashboardId()
         .equals(other.getDashboardId())) return false;
-    if (hasView() != other.hasView()) return false;
-    if (hasView()) {
-      if (!getView()
-          .equals(other.getView())) return false;
+    if (hasLayout() != other.hasLayout()) return false;
+    if (hasLayout()) {
+      if (!getLayout()
+          .equals(other.getLayout())) return false;
     }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -199,53 +199,53 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + DASHBOARD_ID_FIELD_NUMBER;
     hash = (53 * hash) + getDashboardId().hashCode();
-    if (hasView()) {
-      hash = (37 * hash) + VIEW_FIELD_NUMBER;
-      hash = (53 * hash) + getView().hashCode();
+    if (hasLayout()) {
+      hash = (37 * hash) + LAYOUT_FIELD_NUMBER;
+      hash = (53 * hash) + getLayout().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardLayoutRequest parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardLayoutRequest parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardLayoutRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardLayoutRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardLayoutRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardLayoutRequest parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardLayoutRequest parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardLayoutRequest parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -253,26 +253,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardLayoutRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardLayoutRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardLayoutRequest parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardLayoutRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -285,7 +285,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardLayoutRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -302,29 +302,29 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * UpdateDashboardViewRequest used in the update RPC
+   * UpdateDashboardTitleAndDescriptionRequest used to update a standard dashboard
    * </pre>
    *
-   * Protobuf type {@code api.v0alpha.UpdateDashboardViewRequest}
+   * Protobuf type {@code api.v0alpha.UpdateStandardDashboardLayoutRequest}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v0alpha.UpdateDashboardViewRequest)
-      com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequestOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v0alpha.UpdateStandardDashboardLayoutRequest)
+      com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardLayoutRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v0alpha.DashboardsProto.internal_static_api_v0alpha_UpdateDashboardViewRequest_descriptor;
+      return com.tcn.cloud.api.api.v0alpha.DashboardsProto.internal_static_api_v0alpha_UpdateStandardDashboardLayoutRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v0alpha.DashboardsProto.internal_static_api_v0alpha_UpdateDashboardViewRequest_fieldAccessorTable
+      return com.tcn.cloud.api.api.v0alpha.DashboardsProto.internal_static_api_v0alpha_UpdateStandardDashboardLayoutRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest.class, com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest.Builder.class);
+              com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardLayoutRequest.class, com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardLayoutRequest.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardLayoutRequest.newBuilder()
     private Builder() {
 
     }
@@ -339,10 +339,10 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       dashboardId_ = "";
-      view_ = null;
-      if (viewBuilder_ != null) {
-        viewBuilder_.dispose();
-        viewBuilder_ = null;
+      layout_ = null;
+      if (layoutBuilder_ != null) {
+        layoutBuilder_.dispose();
+        layoutBuilder_ = null;
       }
       return this;
     }
@@ -350,17 +350,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v0alpha.DashboardsProto.internal_static_api_v0alpha_UpdateDashboardViewRequest_descriptor;
+      return com.tcn.cloud.api.api.v0alpha.DashboardsProto.internal_static_api_v0alpha_UpdateStandardDashboardLayoutRequest_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest.getDefaultInstance();
+    public com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardLayoutRequest getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardLayoutRequest.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest build() {
-      com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest result = buildPartial();
+    public com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardLayoutRequest build() {
+      com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardLayoutRequest result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -368,22 +368,22 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest buildPartial() {
-      com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest result = new com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest(this);
+    public com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardLayoutRequest buildPartial() {
+      com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardLayoutRequest result = new com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardLayoutRequest(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest result) {
+    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardLayoutRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.dashboardId_ = dashboardId_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.view_ = viewBuilder_ == null
-            ? view_
-            : viewBuilder_.build();
+        result.layout_ = layoutBuilder_ == null
+            ? layout_
+            : layoutBuilder_.build();
       }
     }
 
@@ -421,23 +421,23 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest) {
-        return mergeFrom((com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest)other);
+      if (other instanceof com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardLayoutRequest) {
+        return mergeFrom((com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardLayoutRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest other) {
-      if (other == com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardLayoutRequest other) {
+      if (other == com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardLayoutRequest.getDefaultInstance()) return this;
       if (!other.getDashboardId().isEmpty()) {
         dashboardId_ = other.dashboardId_;
         bitField0_ |= 0x00000001;
         onChanged();
       }
-      if (other.hasView()) {
-        mergeView(other.getView());
+      if (other.hasLayout()) {
+        mergeLayout(other.getLayout());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -472,7 +472,7 @@ private static final long serialVersionUID = 0L;
             } // case 10
             case 18: {
               input.readMessage(
-                  getViewFieldBuilder().getBuilder(),
+                  getLayoutFieldBuilder().getBuilder(),
                   extensionRegistry);
               bitField0_ |= 0x00000002;
               break;
@@ -497,7 +497,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object dashboardId_ = "";
     /**
      * <pre>
-     * unique ID of dashboard to update
+     * unique ID for dashboard to update
      * </pre>
      *
      * <code>string dashboard_id = 1 [json_name = "dashboardId"];</code>
@@ -517,7 +517,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * unique ID of dashboard to update
+     * unique ID for dashboard to update
      * </pre>
      *
      * <code>string dashboard_id = 1 [json_name = "dashboardId"];</code>
@@ -538,7 +538,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * unique ID of dashboard to update
+     * unique ID for dashboard to update
      * </pre>
      *
      * <code>string dashboard_id = 1 [json_name = "dashboardId"];</code>
@@ -555,7 +555,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * unique ID of dashboard to update
+     * unique ID for dashboard to update
      * </pre>
      *
      * <code>string dashboard_id = 1 [json_name = "dashboardId"];</code>
@@ -569,7 +569,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * unique ID of dashboard to update
+     * unique ID for dashboard to update
      * </pre>
      *
      * <code>string dashboard_id = 1 [json_name = "dashboardId"];</code>
@@ -586,50 +586,50 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.tcn.cloud.api.api.v0alpha.DashboardView view_;
+    private com.tcn.cloud.api.api.v0alpha.DashboardLayout layout_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.v0alpha.DashboardView, com.tcn.cloud.api.api.v0alpha.DashboardView.Builder, com.tcn.cloud.api.api.v0alpha.DashboardViewOrBuilder> viewBuilder_;
+        com.tcn.cloud.api.api.v0alpha.DashboardLayout, com.tcn.cloud.api.api.v0alpha.DashboardLayout.Builder, com.tcn.cloud.api.api.v0alpha.DashboardLayoutOrBuilder> layoutBuilder_;
     /**
      * <pre>
-     * the dashboards viewing params
+     * layout of associated panels
      * </pre>
      *
-     * <code>.api.v0alpha.DashboardView view = 2 [json_name = "view"];</code>
-     * @return Whether the view field is set.
+     * <code>.api.v0alpha.DashboardLayout layout = 2 [json_name = "layout"];</code>
+     * @return Whether the layout field is set.
      */
-    public boolean hasView() {
+    public boolean hasLayout() {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
-     * the dashboards viewing params
+     * layout of associated panels
      * </pre>
      *
-     * <code>.api.v0alpha.DashboardView view = 2 [json_name = "view"];</code>
-     * @return The view.
+     * <code>.api.v0alpha.DashboardLayout layout = 2 [json_name = "layout"];</code>
+     * @return The layout.
      */
-    public com.tcn.cloud.api.api.v0alpha.DashboardView getView() {
-      if (viewBuilder_ == null) {
-        return view_ == null ? com.tcn.cloud.api.api.v0alpha.DashboardView.getDefaultInstance() : view_;
+    public com.tcn.cloud.api.api.v0alpha.DashboardLayout getLayout() {
+      if (layoutBuilder_ == null) {
+        return layout_ == null ? com.tcn.cloud.api.api.v0alpha.DashboardLayout.getDefaultInstance() : layout_;
       } else {
-        return viewBuilder_.getMessage();
+        return layoutBuilder_.getMessage();
       }
     }
     /**
      * <pre>
-     * the dashboards viewing params
+     * layout of associated panels
      * </pre>
      *
-     * <code>.api.v0alpha.DashboardView view = 2 [json_name = "view"];</code>
+     * <code>.api.v0alpha.DashboardLayout layout = 2 [json_name = "layout"];</code>
      */
-    public Builder setView(com.tcn.cloud.api.api.v0alpha.DashboardView value) {
-      if (viewBuilder_ == null) {
+    public Builder setLayout(com.tcn.cloud.api.api.v0alpha.DashboardLayout value) {
+      if (layoutBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        view_ = value;
+        layout_ = value;
       } else {
-        viewBuilder_.setMessage(value);
+        layoutBuilder_.setMessage(value);
       }
       bitField0_ |= 0x00000002;
       onChanged();
@@ -637,17 +637,17 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the dashboards viewing params
+     * layout of associated panels
      * </pre>
      *
-     * <code>.api.v0alpha.DashboardView view = 2 [json_name = "view"];</code>
+     * <code>.api.v0alpha.DashboardLayout layout = 2 [json_name = "layout"];</code>
      */
-    public Builder setView(
-        com.tcn.cloud.api.api.v0alpha.DashboardView.Builder builderForValue) {
-      if (viewBuilder_ == null) {
-        view_ = builderForValue.build();
+    public Builder setLayout(
+        com.tcn.cloud.api.api.v0alpha.DashboardLayout.Builder builderForValue) {
+      if (layoutBuilder_ == null) {
+        layout_ = builderForValue.build();
       } else {
-        viewBuilder_.setMessage(builderForValue.build());
+        layoutBuilder_.setMessage(builderForValue.build());
       }
       bitField0_ |= 0x00000002;
       onChanged();
@@ -655,22 +655,22 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the dashboards viewing params
+     * layout of associated panels
      * </pre>
      *
-     * <code>.api.v0alpha.DashboardView view = 2 [json_name = "view"];</code>
+     * <code>.api.v0alpha.DashboardLayout layout = 2 [json_name = "layout"];</code>
      */
-    public Builder mergeView(com.tcn.cloud.api.api.v0alpha.DashboardView value) {
-      if (viewBuilder_ == null) {
+    public Builder mergeLayout(com.tcn.cloud.api.api.v0alpha.DashboardLayout value) {
+      if (layoutBuilder_ == null) {
         if (((bitField0_ & 0x00000002) != 0) &&
-          view_ != null &&
-          view_ != com.tcn.cloud.api.api.v0alpha.DashboardView.getDefaultInstance()) {
-          getViewBuilder().mergeFrom(value);
+          layout_ != null &&
+          layout_ != com.tcn.cloud.api.api.v0alpha.DashboardLayout.getDefaultInstance()) {
+          getLayoutBuilder().mergeFrom(value);
         } else {
-          view_ = value;
+          layout_ = value;
         }
       } else {
-        viewBuilder_.mergeFrom(value);
+        layoutBuilder_.mergeFrom(value);
       }
       bitField0_ |= 0x00000002;
       onChanged();
@@ -678,67 +678,67 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the dashboards viewing params
+     * layout of associated panels
      * </pre>
      *
-     * <code>.api.v0alpha.DashboardView view = 2 [json_name = "view"];</code>
+     * <code>.api.v0alpha.DashboardLayout layout = 2 [json_name = "layout"];</code>
      */
-    public Builder clearView() {
+    public Builder clearLayout() {
       bitField0_ = (bitField0_ & ~0x00000002);
-      view_ = null;
-      if (viewBuilder_ != null) {
-        viewBuilder_.dispose();
-        viewBuilder_ = null;
+      layout_ = null;
+      if (layoutBuilder_ != null) {
+        layoutBuilder_.dispose();
+        layoutBuilder_ = null;
       }
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * the dashboards viewing params
+     * layout of associated panels
      * </pre>
      *
-     * <code>.api.v0alpha.DashboardView view = 2 [json_name = "view"];</code>
+     * <code>.api.v0alpha.DashboardLayout layout = 2 [json_name = "layout"];</code>
      */
-    public com.tcn.cloud.api.api.v0alpha.DashboardView.Builder getViewBuilder() {
+    public com.tcn.cloud.api.api.v0alpha.DashboardLayout.Builder getLayoutBuilder() {
       bitField0_ |= 0x00000002;
       onChanged();
-      return getViewFieldBuilder().getBuilder();
+      return getLayoutFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * the dashboards viewing params
+     * layout of associated panels
      * </pre>
      *
-     * <code>.api.v0alpha.DashboardView view = 2 [json_name = "view"];</code>
+     * <code>.api.v0alpha.DashboardLayout layout = 2 [json_name = "layout"];</code>
      */
-    public com.tcn.cloud.api.api.v0alpha.DashboardViewOrBuilder getViewOrBuilder() {
-      if (viewBuilder_ != null) {
-        return viewBuilder_.getMessageOrBuilder();
+    public com.tcn.cloud.api.api.v0alpha.DashboardLayoutOrBuilder getLayoutOrBuilder() {
+      if (layoutBuilder_ != null) {
+        return layoutBuilder_.getMessageOrBuilder();
       } else {
-        return view_ == null ?
-            com.tcn.cloud.api.api.v0alpha.DashboardView.getDefaultInstance() : view_;
+        return layout_ == null ?
+            com.tcn.cloud.api.api.v0alpha.DashboardLayout.getDefaultInstance() : layout_;
       }
     }
     /**
      * <pre>
-     * the dashboards viewing params
+     * layout of associated panels
      * </pre>
      *
-     * <code>.api.v0alpha.DashboardView view = 2 [json_name = "view"];</code>
+     * <code>.api.v0alpha.DashboardLayout layout = 2 [json_name = "layout"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.v0alpha.DashboardView, com.tcn.cloud.api.api.v0alpha.DashboardView.Builder, com.tcn.cloud.api.api.v0alpha.DashboardViewOrBuilder> 
-        getViewFieldBuilder() {
-      if (viewBuilder_ == null) {
-        viewBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.v0alpha.DashboardView, com.tcn.cloud.api.api.v0alpha.DashboardView.Builder, com.tcn.cloud.api.api.v0alpha.DashboardViewOrBuilder>(
-                getView(),
+        com.tcn.cloud.api.api.v0alpha.DashboardLayout, com.tcn.cloud.api.api.v0alpha.DashboardLayout.Builder, com.tcn.cloud.api.api.v0alpha.DashboardLayoutOrBuilder> 
+        getLayoutFieldBuilder() {
+      if (layoutBuilder_ == null) {
+        layoutBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.v0alpha.DashboardLayout, com.tcn.cloud.api.api.v0alpha.DashboardLayout.Builder, com.tcn.cloud.api.api.v0alpha.DashboardLayoutOrBuilder>(
+                getLayout(),
                 getParentForChildren(),
                 isClean());
-        view_ = null;
+        layout_ = null;
       }
-      return viewBuilder_;
+      return layoutBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
@@ -753,23 +753,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v0alpha.UpdateDashboardViewRequest)
+    // @@protoc_insertion_point(builder_scope:api.v0alpha.UpdateStandardDashboardLayoutRequest)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v0alpha.UpdateDashboardViewRequest)
-  private static final com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v0alpha.UpdateStandardDashboardLayoutRequest)
+  private static final com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardLayoutRequest DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardLayoutRequest();
   }
 
-  public static com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardLayoutRequest getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<UpdateDashboardViewRequest>
-      PARSER = new com.google.protobuf.AbstractParser<UpdateDashboardViewRequest>() {
+  private static final com.google.protobuf.Parser<UpdateStandardDashboardLayoutRequest>
+      PARSER = new com.google.protobuf.AbstractParser<UpdateStandardDashboardLayoutRequest>() {
     @java.lang.Override
-    public UpdateDashboardViewRequest parsePartialFrom(
+    public UpdateStandardDashboardLayoutRequest parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -788,17 +788,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<UpdateDashboardViewRequest> parser() {
+  public static com.google.protobuf.Parser<UpdateStandardDashboardLayoutRequest> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<UpdateDashboardViewRequest> getParserForType() {
+  public com.google.protobuf.Parser<UpdateStandardDashboardLayoutRequest> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardLayoutRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

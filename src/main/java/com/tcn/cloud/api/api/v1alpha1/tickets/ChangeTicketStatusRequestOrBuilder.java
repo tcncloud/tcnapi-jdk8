@@ -18,15 +18,4 @@ public interface ChangeTicketStatusRequestOrBuilder extends
    * @return The statusId.
    */
   long getStatusId();
-
-  /**
-   * <code>.api.commons.TicketStatus ticket_status = 3 [json_name = "ticketStatus"];</code>
-   * @return The enum numeric value on the wire for ticketStatus.
-   */
-  int getTicketStatusValue();
-  /**
-   * <code>.api.commons.TicketStatus ticket_status = 3 [json_name = "ticketStatus"];</code>
-   * @return The ticketStatus.
-   */
-  com.tcn.cloud.api.api.commons.TicketStatus getTicketStatus();
 }

@@ -5,21 +5,21 @@ package com.tcn.cloud.api.api.v0alpha;
 
 /**
  * <pre>
- * UpdateDashboardViewRequest used in the update RPC
+ * UpdateDashboardViewRequest used to update a standard dashboard view
  * </pre>
  *
- * Protobuf type {@code api.v0alpha.UpdateDashboardViewRequest}
+ * Protobuf type {@code api.v0alpha.UpdateStandardDashboardViewRequest}
  */
-public final class UpdateDashboardViewRequest extends
+public final class UpdateStandardDashboardViewRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v0alpha.UpdateDashboardViewRequest)
-    UpdateDashboardViewRequestOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v0alpha.UpdateStandardDashboardViewRequest)
+    UpdateStandardDashboardViewRequestOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use UpdateDashboardViewRequest.newBuilder() to construct.
-  private UpdateDashboardViewRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use UpdateStandardDashboardViewRequest.newBuilder() to construct.
+  private UpdateStandardDashboardViewRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private UpdateDashboardViewRequest() {
+  private UpdateStandardDashboardViewRequest() {
     dashboardId_ = "";
   }
 
@@ -27,20 +27,20 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new UpdateDashboardViewRequest();
+    return new UpdateStandardDashboardViewRequest();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v0alpha.DashboardsProto.internal_static_api_v0alpha_UpdateDashboardViewRequest_descriptor;
+    return com.tcn.cloud.api.api.v0alpha.DashboardsProto.internal_static_api_v0alpha_UpdateStandardDashboardViewRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v0alpha.DashboardsProto.internal_static_api_v0alpha_UpdateDashboardViewRequest_fieldAccessorTable
+    return com.tcn.cloud.api.api.v0alpha.DashboardsProto.internal_static_api_v0alpha_UpdateStandardDashboardViewRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest.class, com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest.Builder.class);
+            com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardViewRequest.class, com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardViewRequest.Builder.class);
   }
 
   public static final int DASHBOARD_ID_FIELD_NUMBER = 1;
@@ -174,10 +174,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardViewRequest)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest other = (com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest) obj;
+    com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardViewRequest other = (com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardViewRequest) obj;
 
     if (!getDashboardId()
         .equals(other.getDashboardId())) return false;
@@ -208,44 +208,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardViewRequest parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardViewRequest parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardViewRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardViewRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardViewRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardViewRequest parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardViewRequest parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardViewRequest parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -253,26 +253,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardViewRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardViewRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardViewRequest parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardViewRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -285,7 +285,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardViewRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -302,29 +302,29 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * UpdateDashboardViewRequest used in the update RPC
+   * UpdateDashboardViewRequest used to update a standard dashboard view
    * </pre>
    *
-   * Protobuf type {@code api.v0alpha.UpdateDashboardViewRequest}
+   * Protobuf type {@code api.v0alpha.UpdateStandardDashboardViewRequest}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v0alpha.UpdateDashboardViewRequest)
-      com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequestOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v0alpha.UpdateStandardDashboardViewRequest)
+      com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardViewRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v0alpha.DashboardsProto.internal_static_api_v0alpha_UpdateDashboardViewRequest_descriptor;
+      return com.tcn.cloud.api.api.v0alpha.DashboardsProto.internal_static_api_v0alpha_UpdateStandardDashboardViewRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v0alpha.DashboardsProto.internal_static_api_v0alpha_UpdateDashboardViewRequest_fieldAccessorTable
+      return com.tcn.cloud.api.api.v0alpha.DashboardsProto.internal_static_api_v0alpha_UpdateStandardDashboardViewRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest.class, com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest.Builder.class);
+              com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardViewRequest.class, com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardViewRequest.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardViewRequest.newBuilder()
     private Builder() {
 
     }
@@ -350,17 +350,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v0alpha.DashboardsProto.internal_static_api_v0alpha_UpdateDashboardViewRequest_descriptor;
+      return com.tcn.cloud.api.api.v0alpha.DashboardsProto.internal_static_api_v0alpha_UpdateStandardDashboardViewRequest_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest.getDefaultInstance();
+    public com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardViewRequest getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardViewRequest.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest build() {
-      com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest result = buildPartial();
+    public com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardViewRequest build() {
+      com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardViewRequest result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -368,14 +368,14 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest buildPartial() {
-      com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest result = new com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest(this);
+    public com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardViewRequest buildPartial() {
+      com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardViewRequest result = new com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardViewRequest(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest result) {
+    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardViewRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.dashboardId_ = dashboardId_;
@@ -421,16 +421,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest) {
-        return mergeFrom((com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest)other);
+      if (other instanceof com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardViewRequest) {
+        return mergeFrom((com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardViewRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest other) {
-      if (other == com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardViewRequest other) {
+      if (other == com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardViewRequest.getDefaultInstance()) return this;
       if (!other.getDashboardId().isEmpty()) {
         dashboardId_ = other.dashboardId_;
         bitField0_ |= 0x00000001;
@@ -753,23 +753,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v0alpha.UpdateDashboardViewRequest)
+    // @@protoc_insertion_point(builder_scope:api.v0alpha.UpdateStandardDashboardViewRequest)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v0alpha.UpdateDashboardViewRequest)
-  private static final com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v0alpha.UpdateStandardDashboardViewRequest)
+  private static final com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardViewRequest DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardViewRequest();
   }
 
-  public static com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardViewRequest getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<UpdateDashboardViewRequest>
-      PARSER = new com.google.protobuf.AbstractParser<UpdateDashboardViewRequest>() {
+  private static final com.google.protobuf.Parser<UpdateStandardDashboardViewRequest>
+      PARSER = new com.google.protobuf.AbstractParser<UpdateStandardDashboardViewRequest>() {
     @java.lang.Override
-    public UpdateDashboardViewRequest parsePartialFrom(
+    public UpdateStandardDashboardViewRequest parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -788,17 +788,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<UpdateDashboardViewRequest> parser() {
+  public static com.google.protobuf.Parser<UpdateStandardDashboardViewRequest> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<UpdateDashboardViewRequest> getParserForType() {
+  public com.google.protobuf.Parser<UpdateStandardDashboardViewRequest> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v0alpha.UpdateDashboardViewRequest getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardViewRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

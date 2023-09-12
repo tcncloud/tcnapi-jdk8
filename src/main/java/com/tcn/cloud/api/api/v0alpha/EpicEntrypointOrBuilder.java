@@ -209,24 +209,4 @@ public interface EpicEntrypointOrBuilder extends
    * @return The flushDuringCheck.
    */
   boolean getFlushDuringCheck();
-
-  /**
-   * <pre>
-   * Specifies the timezone to be used by the cron
-   * </pre>
-   *
-   * <code>string timezone = 11 [json_name = "timezone"];</code>
-   * @return The timezone.
-   */
-  java.lang.String getTimezone();
-  /**
-   * <pre>
-   * Specifies the timezone to be used by the cron
-   * </pre>
-   *
-   * <code>string timezone = 11 [json_name = "timezone"];</code>
-   * @return The bytes for timezone.
-   */
-  com.google.protobuf.ByteString
-      getTimezoneBytes();
 }
