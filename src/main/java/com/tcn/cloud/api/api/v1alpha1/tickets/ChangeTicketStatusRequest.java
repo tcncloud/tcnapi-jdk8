@@ -16,6 +16,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ChangeTicketStatusRequest() {
+    ticketStatus_ = 0;
   }
 
   @java.lang.Override
@@ -60,6 +61,24 @@ private static final long serialVersionUID = 0L;
     return statusId_;
   }
 
+  public static final int TICKET_STATUS_FIELD_NUMBER = 3;
+  private int ticketStatus_ = 0;
+  /**
+   * <code>.api.commons.TicketStatus ticket_status = 3 [json_name = "ticketStatus"];</code>
+   * @return The enum numeric value on the wire for ticketStatus.
+   */
+  @java.lang.Override public int getTicketStatusValue() {
+    return ticketStatus_;
+  }
+  /**
+   * <code>.api.commons.TicketStatus ticket_status = 3 [json_name = "ticketStatus"];</code>
+   * @return The ticketStatus.
+   */
+  @java.lang.Override public com.tcn.cloud.api.api.commons.TicketStatus getTicketStatus() {
+    com.tcn.cloud.api.api.commons.TicketStatus result = com.tcn.cloud.api.api.commons.TicketStatus.forNumber(ticketStatus_);
+    return result == null ? com.tcn.cloud.api.api.commons.TicketStatus.UNRECOGNIZED : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -80,6 +99,9 @@ private static final long serialVersionUID = 0L;
     if (statusId_ != 0L) {
       output.writeInt64(2, statusId_);
     }
+    if (ticketStatus_ != com.tcn.cloud.api.api.commons.TicketStatus.TICKET_STATUS_NEW.getNumber()) {
+      output.writeEnum(3, ticketStatus_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -96,6 +118,10 @@ private static final long serialVersionUID = 0L;
     if (statusId_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(2, statusId_);
+    }
+    if (ticketStatus_ != com.tcn.cloud.api.api.commons.TicketStatus.TICKET_STATUS_NEW.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(3, ticketStatus_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -116,6 +142,7 @@ private static final long serialVersionUID = 0L;
         != other.getTicketId()) return false;
     if (getStatusId()
         != other.getStatusId()) return false;
+    if (ticketStatus_ != other.ticketStatus_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -133,6 +160,8 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + STATUS_ID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getStatusId());
+    hash = (37 * hash) + TICKET_STATUS_FIELD_NUMBER;
+    hash = (53 * hash) + ticketStatus_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -266,6 +295,7 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       ticketId_ = 0L;
       statusId_ = 0L;
+      ticketStatus_ = 0;
       return this;
     }
 
@@ -304,6 +334,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.statusId_ = statusId_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.ticketStatus_ = ticketStatus_;
       }
     }
 
@@ -357,6 +390,9 @@ private static final long serialVersionUID = 0L;
       if (other.getStatusId() != 0L) {
         setStatusId(other.getStatusId());
       }
+      if (other.ticketStatus_ != 0) {
+        setTicketStatusValue(other.getTicketStatusValue());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -393,6 +429,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 16
+            case 24: {
+              ticketStatus_ = input.readEnum();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -470,6 +511,59 @@ private static final long serialVersionUID = 0L;
     public Builder clearStatusId() {
       bitField0_ = (bitField0_ & ~0x00000002);
       statusId_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private int ticketStatus_ = 0;
+    /**
+     * <code>.api.commons.TicketStatus ticket_status = 3 [json_name = "ticketStatus"];</code>
+     * @return The enum numeric value on the wire for ticketStatus.
+     */
+    @java.lang.Override public int getTicketStatusValue() {
+      return ticketStatus_;
+    }
+    /**
+     * <code>.api.commons.TicketStatus ticket_status = 3 [json_name = "ticketStatus"];</code>
+     * @param value The enum numeric value on the wire for ticketStatus to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTicketStatusValue(int value) {
+      ticketStatus_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.TicketStatus ticket_status = 3 [json_name = "ticketStatus"];</code>
+     * @return The ticketStatus.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.TicketStatus getTicketStatus() {
+      com.tcn.cloud.api.api.commons.TicketStatus result = com.tcn.cloud.api.api.commons.TicketStatus.forNumber(ticketStatus_);
+      return result == null ? com.tcn.cloud.api.api.commons.TicketStatus.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.api.commons.TicketStatus ticket_status = 3 [json_name = "ticketStatus"];</code>
+     * @param value The ticketStatus to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTicketStatus(com.tcn.cloud.api.api.commons.TicketStatus value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000004;
+      ticketStatus_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.TicketStatus ticket_status = 3 [json_name = "ticketStatus"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTicketStatus() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      ticketStatus_ = 0;
       onChanged();
       return this;
     }
