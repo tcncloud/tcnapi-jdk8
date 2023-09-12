@@ -12,7 +12,7 @@ public interface CreatePublishedArticleRequestOrBuilder extends
    * news article identifier
    * </pre>
    *
-   * <code>int64 new_article_sid = 1 [json_name = "newArticleSid"];</code>
+   * <code>int64 new_article_sid = 1 [json_name = "newArticleSid", jstype = JS_STRING];</code>
    * @return The newArticleSid.
    */
   long getNewArticleSid();

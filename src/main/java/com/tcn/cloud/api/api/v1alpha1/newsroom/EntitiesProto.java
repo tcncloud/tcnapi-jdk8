@@ -144,28 +144,28 @@ public final class EntitiesProto {
       "R\022newsArticleDetails\022A\n\016date_published\030\003" +
       " \001(\0132\032.google.protobuf.TimestampR\rdatePu" +
       "blished\022&\n\017display_to_user\030\004 \001(\010R\rdispla" +
-      "yToUser\"o\n\035CreatePublishedArticleRequest" +
-      "\022&\n\017new_article_sid\030\001 \001(\003R\rnewArticleSid" +
-      "\022&\n\017display_to_user\030\002 \001(\010R\rdisplayToUser" +
-      "\"\214\001\n\036CreatePublishedArticleResponse\022j\n\031p" +
+      "yToUser\"s\n\035CreatePublishedArticleRequest" +
+      "\022*\n\017new_article_sid\030\001 \001(\003B\0020\001R\rnewArticl" +
+      "eSid\022&\n\017display_to_user\030\002 \001(\010R\rdisplayTo" +
+      "User\"\214\001\n\036CreatePublishedArticleResponse\022" +
+      "j\n\031published_article_details\030\001 \001(\0132..api" +
+      ".v1alpha1.newsroom.PublishedArticleDetai" +
+      "lsR\027publishedArticleDetails\"\036\n\034ListPubli" +
+      "shedArticlesRequest\"\213\001\n\035ListPublishedArt" +
+      "iclesResponse\022j\n\031published_article_detai" +
+      "ls\030\001 \003(\0132..api.v1alpha1.newsroom.Publish" +
+      "edArticleDetailsR\027publishedArticleDetail" +
+      "s\"L\n\036GetPublishedArticleByIdRequest\022*\n\017n" +
+      "ew_article_sid\030\001 \001(\003B\0020\001R\rnewArticleSid\"" +
+      "\215\001\n\037GetPublishedArticleByIdResponse\022j\n\031p" +
       "ublished_article_details\030\001 \001(\0132..api.v1a" +
       "lpha1.newsroom.PublishedArticleDetailsR\027" +
-      "publishedArticleDetails\"\036\n\034ListPublished" +
-      "ArticlesRequest\"\213\001\n\035ListPublishedArticle" +
-      "sResponse\022j\n\031published_article_details\030\001" +
-      " \003(\0132..api.v1alpha1.newsroom.PublishedAr" +
-      "ticleDetailsR\027publishedArticleDetails\"L\n" +
-      "\036GetPublishedArticleByIdRequest\022*\n\017new_a" +
-      "rticle_sid\030\001 \001(\003B\0020\001R\rnewArticleSid\"\215\001\n\037" +
-      "GetPublishedArticleByIdResponse\022j\n\031publi" +
-      "shed_article_details\030\001 \001(\0132..api.v1alpha" +
-      "1.newsroom.PublishedArticleDetailsR\027publ" +
-      "ishedArticleDetailsB\256\001\n\'com.tcn.cloud.ap" +
-      "i.api.v1alpha1.newsroomB\rEntitiesProtoP\001" +
-      "\242\002\003AVN\252\002\025Api.V1alpha1.Newsroom\312\002\025Api\\V1a" +
-      "lpha1\\Newsroom\342\002!Api\\V1alpha1\\Newsroom\\G" +
-      "PBMetadata\352\002\027Api::V1alpha1::Newsroomb\006pr" +
-      "oto3"
+      "publishedArticleDetailsB\256\001\n\'com.tcn.clou" +
+      "d.api.api.v1alpha1.newsroomB\rEntitiesPro" +
+      "toP\001\242\002\003AVN\252\002\025Api.V1alpha1.Newsroom\312\002\025Api" +
+      "\\V1alpha1\\Newsroom\342\002!Api\\V1alpha1\\Newsro" +
+      "om\\GPBMetadata\352\002\027Api::V1alpha1::Newsroom" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
