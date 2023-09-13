@@ -917,6 +917,37 @@ public final class WFMGrpc {
     return getListForecastIntervalsForSkillProfileMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval> getListForecastIntervalsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListForecastIntervals",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval> getListForecastIntervalsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsReq, com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval> getListForecastIntervalsMethod;
+    if ((getListForecastIntervalsMethod = WFMGrpc.getListForecastIntervalsMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getListForecastIntervalsMethod = WFMGrpc.getListForecastIntervalsMethod) == null) {
+          WFMGrpc.getListForecastIntervalsMethod = getListForecastIntervalsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsReq, com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListForecastIntervals"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListForecastIntervals"))
+              .build();
+        }
+      }
+    }
+    return getListForecastIntervalsMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalReq,
       com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval> getBuildRegressionForecastByIntervalMethod;
 
@@ -4291,6 +4322,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Gets the forecast data intervals for the given &#64;skill_profile_sid.
+     * DEPRECATED as of Sep/13/2023 - Use ListForecastIntervals instead.
      * Required permissions:
      *   NONE
      * Errors:
@@ -4298,9 +4330,25 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when getting the forecast data intervals.
      * </pre>
      */
+    @java.lang.Deprecated
     default void listForecastIntervalsForSkillProfile(com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsForSkillProfileReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListForecastIntervalsForSkillProfileMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Gets the forecast data intervals for the given &#64;skill_profile_category.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;skill_profile_category in the request is invalid.
+     *   - grpc.Internal: error occurs when getting the forecast data intervals.
+     * </pre>
+     */
+    default void listForecastIntervals(com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListForecastIntervalsMethod(), responseObserver);
     }
 
     /**
@@ -6506,6 +6554,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Gets the forecast data intervals for the given &#64;skill_profile_sid.
+     * DEPRECATED as of Sep/13/2023 - Use ListForecastIntervals instead.
      * Required permissions:
      *   NONE
      * Errors:
@@ -6513,10 +6562,27 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when getting the forecast data intervals.
      * </pre>
      */
+    @java.lang.Deprecated
     public void listForecastIntervalsForSkillProfile(com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsForSkillProfileReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval> responseObserver) {
       io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getListForecastIntervalsForSkillProfileMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Gets the forecast data intervals for the given &#64;skill_profile_category.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;skill_profile_category in the request is invalid.
+     *   - grpc.Internal: error occurs when getting the forecast data intervals.
+     * </pre>
+     */
+    public void listForecastIntervals(com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
+          getChannel().newCall(getListForecastIntervalsMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -8774,6 +8840,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Gets the forecast data intervals for the given &#64;skill_profile_sid.
+     * DEPRECATED as of Sep/13/2023 - Use ListForecastIntervals instead.
      * Required permissions:
      *   NONE
      * Errors:
@@ -8781,10 +8848,27 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when getting the forecast data intervals.
      * </pre>
      */
+    @java.lang.Deprecated
     public java.util.Iterator<com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval> listForecastIntervalsForSkillProfile(
         com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsForSkillProfileReq request) {
       return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getListForecastIntervalsForSkillProfileMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Gets the forecast data intervals for the given &#64;skill_profile_category.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;skill_profile_category in the request is invalid.
+     *   - grpc.Internal: error occurs when getting the forecast data intervals.
+     * </pre>
+     */
+    public java.util.Iterator<com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval> listForecastIntervals(
+        com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsReq request) {
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
+          getChannel(), getListForecastIntervalsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -12689,98 +12773,99 @@ public final class WFMGrpc {
   private static final int METHODID_DELETE_REGRESSION_TEMPLATE = 26;
   private static final int METHODID_LIST_REGRESSION_TEMPLATES = 27;
   private static final int METHODID_LIST_FORECAST_INTERVALS_FOR_SKILL_PROFILE = 28;
-  private static final int METHODID_BUILD_REGRESSION_FORECAST_BY_INTERVAL = 29;
-  private static final int METHODID_BUILD_REGRESSION_FORECAST_BY_INTERVAL_WITH_STATS = 30;
-  private static final int METHODID_LIST_CALL_PROFILE_TEMPLATES = 31;
-  private static final int METHODID_UPSERT_REGRESSION_FORECAST = 32;
-  private static final int METHODID_UPSERT_FORECAST_DATA_DELTA = 33;
-  private static final int METHODID_UPSERT_FORECAST_DATA_DELTAS = 34;
-  private static final int METHODID_DELETE_FORECAST_INTERVALS = 35;
-  private static final int METHODID_LIST_HISTORICAL_DATA_FOR_ALL_SKILL_PROFILES = 36;
-  private static final int METHODID_BUILD_DOWAND_MOYPROFILES = 37;
-  private static final int METHODID_CALCULATE_TRAINING_DATA_AVERAGES_FOR_SKILL_PROFILE = 38;
-  private static final int METHODID_UPDATE_SKILL_PROFILE_AVERAGES_USING_HISTORICAL_DATA = 39;
-  private static final int METHODID_UPDATE_CALL_CENTER_NODE = 40;
-  private static final int METHODID_CREATE_CLIENT_NODE = 41;
-  private static final int METHODID_UPDATE_CLIENT_NODE = 42;
-  private static final int METHODID_CREATE_LOCATION_NODE = 43;
-  private static final int METHODID_UPDATE_LOCATION_NODE = 44;
-  private static final int METHODID_CREATE_PROGRAM_NODE = 45;
-  private static final int METHODID_UPDATE_PROGRAM_NODE = 46;
-  private static final int METHODID_LIST_PROGRAM_NODES_BY_SID = 47;
-  private static final int METHODID_CREATE_CONSTRAINT_RULE = 48;
-  private static final int METHODID_UPDATE_CONSTRAINT_RULE = 49;
-  private static final int METHODID_DELETE_CONSTRAINT_RULE = 50;
-  private static final int METHODID_CREATE_NON_SKILL_ACTIVITY = 51;
-  private static final int METHODID_UPDATE_NON_SKILL_ACTIVITY = 52;
-  private static final int METHODID_LIST_NON_SKILL_ACTIVITIES = 53;
-  private static final int METHODID_LIST_NON_SKILL_ACTIVITY_ASSOCIATIONS = 54;
-  private static final int METHODID_LIST_CANDIDATE_SCHEDULING_ACTIVITIES = 55;
-  private static final int METHODID_CREATE_AGENT_GROUP = 56;
-  private static final int METHODID_UPDATE_AGENT_GROUP = 57;
-  private static final int METHODID_UPDATE_WFMAGENT = 58;
-  private static final int METHODID_LIST_ALL_WFMAGENTS = 59;
-  private static final int METHODID_LIST_CANDIDATE_WFMAGENTS = 60;
-  private static final int METHODID_LIST_UNGROUPED_WFMAGENTS = 61;
-  private static final int METHODID_LIST_WFMAGENT_SIDS = 62;
-  private static final int METHODID_LIST_WFMAGENTS_ASSOCIATED_WITH_AGENT_GROUP = 63;
-  private static final int METHODID_CREATE_WFMAGENT_MEMBERSHIPS = 64;
-  private static final int METHODID_DELETE_WFMAGENT_MEMBERSHIPS = 65;
-  private static final int METHODID_DELETE_WFMAGENTS_MEMBERSHIPS = 66;
-  private static final int METHODID_BUILD_AGENT_DIAGNOSTICS = 67;
-  private static final int METHODID_CREATE_SHIFT_TEMPLATE = 68;
-  private static final int METHODID_UPDATE_SHIFT_TEMPLATE = 69;
-  private static final int METHODID_LIST_SHIFT_TEMPLATES_BY_SIDS = 70;
-  private static final int METHODID_BUILD_SHIFT_TEMPLATE_DIAGNOSTICS = 71;
-  private static final int METHODID_CREATE_PLACEMENT_RULE = 72;
-  private static final int METHODID_UPDATE_PLACEMENT_RULE = 73;
-  private static final int METHODID_DELETE_PLACEMENT_RULE = 74;
-  private static final int METHODID_CREATE_OPEN_TIMES_PATTERN = 75;
-  private static final int METHODID_UPDATE_OPEN_TIMES_PATTERN = 76;
-  private static final int METHODID_DELETE_OPEN_TIMES_PATTERN = 77;
-  private static final int METHODID_GET_OPEN_TIMES_BITMAPS = 78;
-  private static final int METHODID_CREATE_AGENT_AVAILABILITY_PATTERN = 79;
-  private static final int METHODID_UPDATE_AGENT_AVAILABILITY_PATTERN = 80;
-  private static final int METHODID_DELETE_AGENT_AVAILABILITY_PATTERN = 81;
-  private static final int METHODID_GET_AVAILABILITY_BITMAPS = 82;
-  private static final int METHODID_UPSERT_NON_SKILL_ACTIVITY_ASSOCIATION = 83;
-  private static final int METHODID_CREATE_SKILL_PROFICIENCIES = 84;
-  private static final int METHODID_UPDATE_SKILL_PROFICIENCIES = 85;
-  private static final int METHODID_DELETE_SKILL_PROFICIENCY = 86;
-  private static final int METHODID_COPY_SCENARIO = 87;
-  private static final int METHODID_CREATE_SCHEDULE_SCENARIO_WITH_NODES = 88;
-  private static final int METHODID_UPDATE_SCHEDULE_SCENARIO = 89;
-  private static final int METHODID_LIST_CONFIG_ENTITIES = 90;
-  private static final int METHODID_DELETE_SHIFT_INSTANCES = 91;
-  private static final int METHODID_BUILD_NODE_DIAGNOSTICS = 92;
-  private static final int METHODID_BUILD_GLOBAL_DIAGNOSTICS = 93;
-  private static final int METHODID_GET_PUBLISHED_SCHEDULE = 94;
-  private static final int METHODID_GET_PUBLISHED_SCHEDULE_REQUIRED_CALLS = 95;
-  private static final int METHODID_GET_DRAFT_SCHEDULE_REQUIRED_CALLS = 96;
-  private static final int METHODID_CREATE_DRAFT_SCHEDULE = 97;
-  private static final int METHODID_UPDATE_DRAFT_SCHEDULE = 98;
-  private static final int METHODID_BUILD_DRAFT_SCHEDULE = 99;
-  private static final int METHODID_PUBLISH_DRAFT_SCHEDULE = 100;
-  private static final int METHODID_RESET_DRAFT_SCHEDULE = 101;
-  private static final int METHODID_GET_DRAFT_SCHEDULE = 102;
-  private static final int METHODID_LIST_DRAFT_SCHEDULES = 103;
-  private static final int METHODID_CLEAR_SCHEDULE = 104;
-  private static final int METHODID_DELETE_DRAFT_SCHEDULE = 105;
-  private static final int METHODID_LIST_SHIFT_INSTANCES_BY_SID = 106;
-  private static final int METHODID_COPY_SCHEDULE_TO_SCHEDULE = 107;
-  private static final int METHODID_CREATE_SHIFT_INSTANCE = 108;
-  private static final int METHODID_CREATE_SHIFT_INSTANCE_V2 = 109;
-  private static final int METHODID_SWAP_SHIFT_INSTANCES = 110;
-  private static final int METHODID_UPDATE_SHIFT_INSTANCE = 111;
-  private static final int METHODID_UPDATE_SHIFT_INSTANCE_V2 = 112;
-  private static final int METHODID_COPY_SHIFT_INSTANCES_TO_SCHEDULE = 113;
-  private static final int METHODID_LIST_SHIFT_INSTANCE_SIDS_FOR_AGENT = 114;
-  private static final int METHODID_LIST_SHIFT_SEGMENTS_BY_SHIFT_INSTANCE_SIDS = 115;
-  private static final int METHODID_SET_SCHEDULING_TARGET = 116;
-  private static final int METHODID_GET_SCHEDULING_TARGET = 117;
-  private static final int METHODID_DELETE_SCHEDULING_TARGET = 118;
-  private static final int METHODID_GET_PERFORMANCE_METRICS = 119;
-  private static final int METHODID_LIST_REQUIRED_CALLS_INTERVALS = 120;
+  private static final int METHODID_LIST_FORECAST_INTERVALS = 29;
+  private static final int METHODID_BUILD_REGRESSION_FORECAST_BY_INTERVAL = 30;
+  private static final int METHODID_BUILD_REGRESSION_FORECAST_BY_INTERVAL_WITH_STATS = 31;
+  private static final int METHODID_LIST_CALL_PROFILE_TEMPLATES = 32;
+  private static final int METHODID_UPSERT_REGRESSION_FORECAST = 33;
+  private static final int METHODID_UPSERT_FORECAST_DATA_DELTA = 34;
+  private static final int METHODID_UPSERT_FORECAST_DATA_DELTAS = 35;
+  private static final int METHODID_DELETE_FORECAST_INTERVALS = 36;
+  private static final int METHODID_LIST_HISTORICAL_DATA_FOR_ALL_SKILL_PROFILES = 37;
+  private static final int METHODID_BUILD_DOWAND_MOYPROFILES = 38;
+  private static final int METHODID_CALCULATE_TRAINING_DATA_AVERAGES_FOR_SKILL_PROFILE = 39;
+  private static final int METHODID_UPDATE_SKILL_PROFILE_AVERAGES_USING_HISTORICAL_DATA = 40;
+  private static final int METHODID_UPDATE_CALL_CENTER_NODE = 41;
+  private static final int METHODID_CREATE_CLIENT_NODE = 42;
+  private static final int METHODID_UPDATE_CLIENT_NODE = 43;
+  private static final int METHODID_CREATE_LOCATION_NODE = 44;
+  private static final int METHODID_UPDATE_LOCATION_NODE = 45;
+  private static final int METHODID_CREATE_PROGRAM_NODE = 46;
+  private static final int METHODID_UPDATE_PROGRAM_NODE = 47;
+  private static final int METHODID_LIST_PROGRAM_NODES_BY_SID = 48;
+  private static final int METHODID_CREATE_CONSTRAINT_RULE = 49;
+  private static final int METHODID_UPDATE_CONSTRAINT_RULE = 50;
+  private static final int METHODID_DELETE_CONSTRAINT_RULE = 51;
+  private static final int METHODID_CREATE_NON_SKILL_ACTIVITY = 52;
+  private static final int METHODID_UPDATE_NON_SKILL_ACTIVITY = 53;
+  private static final int METHODID_LIST_NON_SKILL_ACTIVITIES = 54;
+  private static final int METHODID_LIST_NON_SKILL_ACTIVITY_ASSOCIATIONS = 55;
+  private static final int METHODID_LIST_CANDIDATE_SCHEDULING_ACTIVITIES = 56;
+  private static final int METHODID_CREATE_AGENT_GROUP = 57;
+  private static final int METHODID_UPDATE_AGENT_GROUP = 58;
+  private static final int METHODID_UPDATE_WFMAGENT = 59;
+  private static final int METHODID_LIST_ALL_WFMAGENTS = 60;
+  private static final int METHODID_LIST_CANDIDATE_WFMAGENTS = 61;
+  private static final int METHODID_LIST_UNGROUPED_WFMAGENTS = 62;
+  private static final int METHODID_LIST_WFMAGENT_SIDS = 63;
+  private static final int METHODID_LIST_WFMAGENTS_ASSOCIATED_WITH_AGENT_GROUP = 64;
+  private static final int METHODID_CREATE_WFMAGENT_MEMBERSHIPS = 65;
+  private static final int METHODID_DELETE_WFMAGENT_MEMBERSHIPS = 66;
+  private static final int METHODID_DELETE_WFMAGENTS_MEMBERSHIPS = 67;
+  private static final int METHODID_BUILD_AGENT_DIAGNOSTICS = 68;
+  private static final int METHODID_CREATE_SHIFT_TEMPLATE = 69;
+  private static final int METHODID_UPDATE_SHIFT_TEMPLATE = 70;
+  private static final int METHODID_LIST_SHIFT_TEMPLATES_BY_SIDS = 71;
+  private static final int METHODID_BUILD_SHIFT_TEMPLATE_DIAGNOSTICS = 72;
+  private static final int METHODID_CREATE_PLACEMENT_RULE = 73;
+  private static final int METHODID_UPDATE_PLACEMENT_RULE = 74;
+  private static final int METHODID_DELETE_PLACEMENT_RULE = 75;
+  private static final int METHODID_CREATE_OPEN_TIMES_PATTERN = 76;
+  private static final int METHODID_UPDATE_OPEN_TIMES_PATTERN = 77;
+  private static final int METHODID_DELETE_OPEN_TIMES_PATTERN = 78;
+  private static final int METHODID_GET_OPEN_TIMES_BITMAPS = 79;
+  private static final int METHODID_CREATE_AGENT_AVAILABILITY_PATTERN = 80;
+  private static final int METHODID_UPDATE_AGENT_AVAILABILITY_PATTERN = 81;
+  private static final int METHODID_DELETE_AGENT_AVAILABILITY_PATTERN = 82;
+  private static final int METHODID_GET_AVAILABILITY_BITMAPS = 83;
+  private static final int METHODID_UPSERT_NON_SKILL_ACTIVITY_ASSOCIATION = 84;
+  private static final int METHODID_CREATE_SKILL_PROFICIENCIES = 85;
+  private static final int METHODID_UPDATE_SKILL_PROFICIENCIES = 86;
+  private static final int METHODID_DELETE_SKILL_PROFICIENCY = 87;
+  private static final int METHODID_COPY_SCENARIO = 88;
+  private static final int METHODID_CREATE_SCHEDULE_SCENARIO_WITH_NODES = 89;
+  private static final int METHODID_UPDATE_SCHEDULE_SCENARIO = 90;
+  private static final int METHODID_LIST_CONFIG_ENTITIES = 91;
+  private static final int METHODID_DELETE_SHIFT_INSTANCES = 92;
+  private static final int METHODID_BUILD_NODE_DIAGNOSTICS = 93;
+  private static final int METHODID_BUILD_GLOBAL_DIAGNOSTICS = 94;
+  private static final int METHODID_GET_PUBLISHED_SCHEDULE = 95;
+  private static final int METHODID_GET_PUBLISHED_SCHEDULE_REQUIRED_CALLS = 96;
+  private static final int METHODID_GET_DRAFT_SCHEDULE_REQUIRED_CALLS = 97;
+  private static final int METHODID_CREATE_DRAFT_SCHEDULE = 98;
+  private static final int METHODID_UPDATE_DRAFT_SCHEDULE = 99;
+  private static final int METHODID_BUILD_DRAFT_SCHEDULE = 100;
+  private static final int METHODID_PUBLISH_DRAFT_SCHEDULE = 101;
+  private static final int METHODID_RESET_DRAFT_SCHEDULE = 102;
+  private static final int METHODID_GET_DRAFT_SCHEDULE = 103;
+  private static final int METHODID_LIST_DRAFT_SCHEDULES = 104;
+  private static final int METHODID_CLEAR_SCHEDULE = 105;
+  private static final int METHODID_DELETE_DRAFT_SCHEDULE = 106;
+  private static final int METHODID_LIST_SHIFT_INSTANCES_BY_SID = 107;
+  private static final int METHODID_COPY_SCHEDULE_TO_SCHEDULE = 108;
+  private static final int METHODID_CREATE_SHIFT_INSTANCE = 109;
+  private static final int METHODID_CREATE_SHIFT_INSTANCE_V2 = 110;
+  private static final int METHODID_SWAP_SHIFT_INSTANCES = 111;
+  private static final int METHODID_UPDATE_SHIFT_INSTANCE = 112;
+  private static final int METHODID_UPDATE_SHIFT_INSTANCE_V2 = 113;
+  private static final int METHODID_COPY_SHIFT_INSTANCES_TO_SCHEDULE = 114;
+  private static final int METHODID_LIST_SHIFT_INSTANCE_SIDS_FOR_AGENT = 115;
+  private static final int METHODID_LIST_SHIFT_SEGMENTS_BY_SHIFT_INSTANCE_SIDS = 116;
+  private static final int METHODID_SET_SCHEDULING_TARGET = 117;
+  private static final int METHODID_GET_SCHEDULING_TARGET = 118;
+  private static final int METHODID_DELETE_SCHEDULING_TARGET = 119;
+  private static final int METHODID_GET_PERFORMANCE_METRICS = 120;
+  private static final int METHODID_LIST_REQUIRED_CALLS_INTERVALS = 121;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -12913,6 +12998,10 @@ public final class WFMGrpc {
           break;
         case METHODID_LIST_FORECAST_INTERVALS_FOR_SKILL_PROFILE:
           serviceImpl.listForecastIntervalsForSkillProfile((com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsForSkillProfileReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval>) responseObserver);
+          break;
+        case METHODID_LIST_FORECAST_INTERVALS:
+          serviceImpl.listForecastIntervals((com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval>) responseObserver);
           break;
         case METHODID_BUILD_REGRESSION_FORECAST_BY_INTERVAL:
@@ -13504,6 +13593,13 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsForSkillProfileReq,
               com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval>(
                 service, METHODID_LIST_FORECAST_INTERVALS_FOR_SKILL_PROFILE)))
+        .addMethod(
+          getListForecastIntervalsMethod(),
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval>(
+                service, METHODID_LIST_FORECAST_INTERVALS)))
         .addMethod(
           getBuildRegressionForecastByIntervalMethod(),
           io.grpc.stub.ServerCalls.asyncServerStreamingCall(
@@ -14225,6 +14321,7 @@ public final class WFMGrpc {
               .addMethod(getDeleteRegressionTemplateMethod())
               .addMethod(getListRegressionTemplatesMethod())
               .addMethod(getListForecastIntervalsForSkillProfileMethod())
+              .addMethod(getListForecastIntervalsMethod())
               .addMethod(getBuildRegressionForecastByIntervalMethod())
               .addMethod(getBuildRegressionForecastByIntervalWithStatsMethod())
               .addMethod(getListCallProfileTemplatesMethod())
