@@ -155,17 +155,17 @@ public final class EntitiesProto {
       "iclesResponse\022j\n\031published_article_detai" +
       "ls\030\001 \003(\0132..api.v1alpha1.newsroom.Publish" +
       "edArticleDetailsR\027publishedArticleDetail" +
-      "s\"L\n\036GetPublishedArticleByIdRequest\022*\n\017n" +
-      "ew_article_sid\030\001 \001(\003B\0020\001R\rnewArticleSid\"" +
-      "\215\001\n\037GetPublishedArticleByIdResponse\022j\n\031p" +
-      "ublished_article_details\030\001 \001(\0132..api.v1a" +
-      "lpha1.newsroom.PublishedArticleDetailsR\027" +
-      "publishedArticleDetailsB\256\001\n\'com.tcn.clou" +
-      "d.api.api.v1alpha1.newsroomB\rEntitiesPro" +
-      "toP\001\242\002\003AVN\252\002\025Api.V1alpha1.Newsroom\312\002\025Api" +
-      "\\V1alpha1\\Newsroom\342\002!Api\\V1alpha1\\Newsro" +
-      "om\\GPBMetadata\352\002\027Api::V1alpha1::Newsroom" +
-      "b\006proto3"
+      "s\"X\n\036GetPublishedArticleByIdRequest\0226\n\025p" +
+      "ublished_article_sid\030\001 \001(\003B\0020\001R\023publishe" +
+      "dArticleSid\"\215\001\n\037GetPublishedArticleByIdR" +
+      "esponse\022j\n\031published_article_details\030\001 \001" +
+      "(\0132..api.v1alpha1.newsroom.PublishedArti" +
+      "cleDetailsR\027publishedArticleDetailsB\256\001\n\'" +
+      "com.tcn.cloud.api.api.v1alpha1.newsroomB" +
+      "\rEntitiesProtoP\001\242\002\003AVN\252\002\025Api.V1alpha1.Ne" +
+      "wsroom\312\002\025Api\\V1alpha1\\Newsroom\342\002!Api\\V1a" +
+      "lpha1\\Newsroom\\GPBMetadata\352\002\027Api::V1alph" +
+      "a1::Newsroomb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -263,7 +263,7 @@ public final class EntitiesProto {
     internal_static_api_v1alpha1_newsroom_GetPublishedArticleByIdRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_newsroom_GetPublishedArticleByIdRequest_descriptor,
-        new java.lang.String[] { "NewArticleSid", });
+        new java.lang.String[] { "PublishedArticleSid", });
     internal_static_api_v1alpha1_newsroom_GetPublishedArticleByIdResponse_descriptor =
       getDescriptor().getMessageTypes().get(15);
     internal_static_api_v1alpha1_newsroom_GetPublishedArticleByIdResponse_fieldAccessorTable = new

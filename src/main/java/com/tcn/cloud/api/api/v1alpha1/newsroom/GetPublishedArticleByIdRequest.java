@@ -42,19 +42,19 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.newsroom.GetPublishedArticleByIdRequest.class, com.tcn.cloud.api.api.v1alpha1.newsroom.GetPublishedArticleByIdRequest.Builder.class);
   }
 
-  public static final int NEW_ARTICLE_SID_FIELD_NUMBER = 1;
-  private long newArticleSid_ = 0L;
+  public static final int PUBLISHED_ARTICLE_SID_FIELD_NUMBER = 1;
+  private long publishedArticleSid_ = 0L;
   /**
    * <pre>
    * the unique news article identifier
    * </pre>
    *
-   * <code>int64 new_article_sid = 1 [json_name = "newArticleSid", jstype = JS_STRING];</code>
-   * @return The newArticleSid.
+   * <code>int64 published_article_sid = 1 [json_name = "publishedArticleSid", jstype = JS_STRING];</code>
+   * @return The publishedArticleSid.
    */
   @java.lang.Override
-  public long getNewArticleSid() {
-    return newArticleSid_;
+  public long getPublishedArticleSid() {
+    return publishedArticleSid_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -71,8 +71,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (newArticleSid_ != 0L) {
-      output.writeInt64(1, newArticleSid_);
+    if (publishedArticleSid_ != 0L) {
+      output.writeInt64(1, publishedArticleSid_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -83,9 +83,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (newArticleSid_ != 0L) {
+    if (publishedArticleSid_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(1, newArticleSid_);
+        .computeInt64Size(1, publishedArticleSid_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -102,8 +102,8 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v1alpha1.newsroom.GetPublishedArticleByIdRequest other = (com.tcn.cloud.api.api.v1alpha1.newsroom.GetPublishedArticleByIdRequest) obj;
 
-    if (getNewArticleSid()
-        != other.getNewArticleSid()) return false;
+    if (getPublishedArticleSid()
+        != other.getPublishedArticleSid()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -115,9 +115,9 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + NEW_ARTICLE_SID_FIELD_NUMBER;
+    hash = (37 * hash) + PUBLISHED_ARTICLE_SID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getNewArticleSid());
+        getPublishedArticleSid());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -253,7 +253,7 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      newArticleSid_ = 0L;
+      publishedArticleSid_ = 0L;
       return this;
     }
 
@@ -288,7 +288,7 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.newsroom.GetPublishedArticleByIdRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.newArticleSid_ = newArticleSid_;
+        result.publishedArticleSid_ = publishedArticleSid_;
       }
     }
 
@@ -336,8 +336,8 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.newsroom.GetPublishedArticleByIdRequest other) {
       if (other == com.tcn.cloud.api.api.v1alpha1.newsroom.GetPublishedArticleByIdRequest.getDefaultInstance()) return this;
-      if (other.getNewArticleSid() != 0L) {
-        setNewArticleSid(other.getNewArticleSid());
+      if (other.getPublishedArticleSid() != 0L) {
+        setPublishedArticleSid(other.getPublishedArticleSid());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -366,7 +366,7 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 8: {
-              newArticleSid_ = input.readInt64();
+              publishedArticleSid_ = input.readInt64();
               bitField0_ |= 0x00000001;
               break;
             } // case 8
@@ -387,31 +387,31 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private long newArticleSid_ ;
+    private long publishedArticleSid_ ;
     /**
      * <pre>
      * the unique news article identifier
      * </pre>
      *
-     * <code>int64 new_article_sid = 1 [json_name = "newArticleSid", jstype = JS_STRING];</code>
-     * @return The newArticleSid.
+     * <code>int64 published_article_sid = 1 [json_name = "publishedArticleSid", jstype = JS_STRING];</code>
+     * @return The publishedArticleSid.
      */
     @java.lang.Override
-    public long getNewArticleSid() {
-      return newArticleSid_;
+    public long getPublishedArticleSid() {
+      return publishedArticleSid_;
     }
     /**
      * <pre>
      * the unique news article identifier
      * </pre>
      *
-     * <code>int64 new_article_sid = 1 [json_name = "newArticleSid", jstype = JS_STRING];</code>
-     * @param value The newArticleSid to set.
+     * <code>int64 published_article_sid = 1 [json_name = "publishedArticleSid", jstype = JS_STRING];</code>
+     * @param value The publishedArticleSid to set.
      * @return This builder for chaining.
      */
-    public Builder setNewArticleSid(long value) {
+    public Builder setPublishedArticleSid(long value) {
 
-      newArticleSid_ = value;
+      publishedArticleSid_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
@@ -421,12 +421,12 @@ private static final long serialVersionUID = 0L;
      * the unique news article identifier
      * </pre>
      *
-     * <code>int64 new_article_sid = 1 [json_name = "newArticleSid", jstype = JS_STRING];</code>
+     * <code>int64 published_article_sid = 1 [json_name = "publishedArticleSid", jstype = JS_STRING];</code>
      * @return This builder for chaining.
      */
-    public Builder clearNewArticleSid() {
+    public Builder clearPublishedArticleSid() {
       bitField0_ = (bitField0_ & ~0x00000001);
-      newArticleSid_ = 0L;
+      publishedArticleSid_ = 0L;
       onChanged();
       return this;
     }

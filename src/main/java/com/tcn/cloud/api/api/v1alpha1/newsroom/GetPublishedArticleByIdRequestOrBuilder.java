@@ -12,8 +12,8 @@ public interface GetPublishedArticleByIdRequestOrBuilder extends
    * the unique news article identifier
    * </pre>
    *
-   * <code>int64 new_article_sid = 1 [json_name = "newArticleSid", jstype = JS_STRING];</code>
-   * @return The newArticleSid.
+   * <code>int64 published_article_sid = 1 [json_name = "publishedArticleSid", jstype = JS_STRING];</code>
+   * @return The publishedArticleSid.
    */
-  long getNewArticleSid();
+  long getPublishedArticleSid();
 }
