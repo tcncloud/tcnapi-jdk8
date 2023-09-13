@@ -4453,7 +4453,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Deletes forecast data intervals/deltas based on the parameters provided.
-     * If &#64;delete_param is type skill_profile_sid, then the intervals/deltas to be deleted will be
+     * If &#64;delete_param is type skill_profile_category, then the intervals/deltas to be deleted will be
      * associated with that id. If &#64;delete_param is type interval_sids, then the intervals/deltas to be
      * deleted will be contained in the list &#64;interval_sids. The &#64;delete_type field determines which
      * table(s) in the database the intervals/deltas will be deleted from.
@@ -6693,7 +6693,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Deletes forecast data intervals/deltas based on the parameters provided.
-     * If &#64;delete_param is type skill_profile_sid, then the intervals/deltas to be deleted will be
+     * If &#64;delete_param is type skill_profile_category, then the intervals/deltas to be deleted will be
      * associated with that id. If &#64;delete_param is type interval_sids, then the intervals/deltas to be
      * deleted will be contained in the list &#64;interval_sids. The &#64;delete_type field determines which
      * table(s) in the database the intervals/deltas will be deleted from.
@@ -8975,7 +8975,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Deletes forecast data intervals/deltas based on the parameters provided.
-     * If &#64;delete_param is type skill_profile_sid, then the intervals/deltas to be deleted will be
+     * If &#64;delete_param is type skill_profile_category, then the intervals/deltas to be deleted will be
      * associated with that id. If &#64;delete_param is type interval_sids, then the intervals/deltas to be
      * deleted will be contained in the list &#64;interval_sids. The &#64;delete_type field determines which
      * table(s) in the database the intervals/deltas will be deleted from.
@@ -11089,7 +11089,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Deletes forecast data intervals/deltas based on the parameters provided.
-     * If &#64;delete_param is type skill_profile_sid, then the intervals/deltas to be deleted will be
+     * If &#64;delete_param is type skill_profile_category, then the intervals/deltas to be deleted will be
      * associated with that id. If &#64;delete_param is type interval_sids, then the intervals/deltas to be
      * deleted will be contained in the list &#64;interval_sids. The &#64;delete_type field determines which
      * table(s) in the database the intervals/deltas will be deleted from.
