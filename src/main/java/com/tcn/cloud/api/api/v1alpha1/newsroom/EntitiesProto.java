@@ -65,6 +65,16 @@ public final class EntitiesProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_newsroom_PublishedArticleDetails_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_newsroom_UserActivity_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_newsroom_UserActivity_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_newsroom_UserActivity_UserActivityDetails_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_newsroom_UserActivity_UserActivityDetails_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_v1alpha1_newsroom_CreatePublishedArticleRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -94,6 +104,16 @@ public final class EntitiesProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_newsroom_GetPublishedArticleByIdResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_newsroom_UserActivityRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_newsroom_UserActivityRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_newsroom_UserActivityResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_newsroom_UserActivityResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -144,28 +164,42 @@ public final class EntitiesProto {
       "R\022newsArticleDetails\022A\n\016date_published\030\003" +
       " \001(\0132\032.google.protobuf.TimestampR\rdatePu" +
       "blished\022&\n\017display_to_user\030\004 \001(\010R\rdispla" +
-      "yToUser\"s\n\035CreatePublishedArticleRequest" +
-      "\022*\n\017new_article_sid\030\001 \001(\003B\0020\001R\rnewArticl" +
-      "eSid\022&\n\017display_to_user\030\002 \001(\010R\rdisplayTo" +
-      "User\"\214\001\n\036CreatePublishedArticleResponse\022" +
-      "j\n\031published_article_details\030\001 \001(\0132..api" +
-      ".v1alpha1.newsroom.PublishedArticleDetai" +
-      "lsR\027publishedArticleDetails\"\036\n\034ListPubli" +
-      "shedArticlesRequest\"\213\001\n\035ListPublishedArt" +
-      "iclesResponse\022j\n\031published_article_detai" +
-      "ls\030\001 \003(\0132..api.v1alpha1.newsroom.Publish" +
-      "edArticleDetailsR\027publishedArticleDetail" +
-      "s\"X\n\036GetPublishedArticleByIdRequest\0226\n\025p" +
-      "ublished_article_sid\030\001 \001(\003B\0020\001R\023publishe" +
-      "dArticleSid\"\215\001\n\037GetPublishedArticleByIdR" +
-      "esponse\022j\n\031published_article_details\030\001 \001" +
-      "(\0132..api.v1alpha1.newsroom.PublishedArti" +
-      "cleDetailsR\027publishedArticleDetailsB\256\001\n\'" +
-      "com.tcn.cloud.api.api.v1alpha1.newsroomB" +
-      "\rEntitiesProtoP\001\242\002\003AVN\252\002\025Api.V1alpha1.Ne" +
-      "wsroom\312\002\025Api\\V1alpha1\\Newsroom\342\002!Api\\V1a" +
-      "lpha1\\Newsroom\\GPBMetadata\352\002\027Api::V1alph" +
-      "a1::Newsroomb\006proto3"
+      "yToUser\"\300\002\n\014UserActivity\0225\n\025user_activit" +
+      "y_log_sid\030\001 \001(\003B\0020\001R\022userActivityLogSid\022" +
+      "=\n\014date_created\030\002 \001(\0132\032.google.protobuf." +
+      "TimestampR\013dateCreated\022k\n\025user_activity_" +
+      "details\030\003 \001(\01327.api.v1alpha1.newsroom.Us" +
+      "erActivity.UserActivityDetailsR\023userActi" +
+      "vityDetails\032M\n\023UserActivityDetails\0226\n\025pu" +
+      "blished_article_sid\030\001 \001(\003B\0020\001R\023published" +
+      "ArticleSid\"s\n\035CreatePublishedArticleRequ" +
+      "est\022*\n\017new_article_sid\030\001 \001(\003B\0020\001R\rnewArt" +
+      "icleSid\022&\n\017display_to_user\030\002 \001(\010R\rdispla" +
+      "yToUser\"\214\001\n\036CreatePublishedArticleRespon" +
+      "se\022j\n\031published_article_details\030\001 \001(\0132.." +
+      "api.v1alpha1.newsroom.PublishedArticleDe" +
+      "tailsR\027publishedArticleDetails\"\036\n\034ListPu" +
+      "blishedArticlesRequest\"\213\001\n\035ListPublished" +
+      "ArticlesResponse\022j\n\031published_article_de" +
+      "tails\030\001 \003(\0132..api.v1alpha1.newsroom.Publ" +
+      "ishedArticleDetailsR\027publishedArticleDet" +
+      "ails\"\204\001\n\036GetPublishedArticleByIdRequest\022" +
+      "*\n\017new_article_sid\030\001 \001(\003B\002\030\001R\rnewArticle" +
+      "Sid\0226\n\025published_article_sid\030\002 \001(\003B\0020\001R\023" +
+      "publishedArticleSid\"\215\001\n\037GetPublishedArti" +
+      "cleByIdResponse\022j\n\031published_article_det" +
+      "ails\030\001 \001(\0132..api.v1alpha1.newsroom.Publi" +
+      "shedArticleDetailsR\027publishedArticleDeta" +
+      "ils\"M\n\023UserActivityRequest\0226\n\025published_" +
+      "article_sid\030\001 \001(\003B\0020\001R\023publishedArticleS" +
+      "id\"`\n\024UserActivityResponse\022H\n\ruser_activ" +
+      "ity\030\001 \001(\0132#.api.v1alpha1.newsroom.UserAc" +
+      "tivityR\014userActivityB\256\001\n\'com.tcn.cloud.a" +
+      "pi.api.v1alpha1.newsroomB\rEntitiesProtoP" +
+      "\001\242\002\003AVN\252\002\025Api.V1alpha1.Newsroom\312\002\025Api\\V1" +
+      "alpha1\\Newsroom\342\002!Api\\V1alpha1\\Newsroom\\" +
+      "GPBMetadata\352\002\027Api::V1alpha1::Newsroomb\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -234,42 +268,66 @@ public final class EntitiesProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_newsroom_PublishedArticleDetails_descriptor,
         new java.lang.String[] { "PublishedArticleSid", "NewsArticleDetails", "DatePublished", "DisplayToUser", });
-    internal_static_api_v1alpha1_newsroom_CreatePublishedArticleRequest_descriptor =
+    internal_static_api_v1alpha1_newsroom_UserActivity_descriptor =
       getDescriptor().getMessageTypes().get(10);
+    internal_static_api_v1alpha1_newsroom_UserActivity_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_newsroom_UserActivity_descriptor,
+        new java.lang.String[] { "UserActivityLogSid", "DateCreated", "UserActivityDetails", });
+    internal_static_api_v1alpha1_newsroom_UserActivity_UserActivityDetails_descriptor =
+      internal_static_api_v1alpha1_newsroom_UserActivity_descriptor.getNestedTypes().get(0);
+    internal_static_api_v1alpha1_newsroom_UserActivity_UserActivityDetails_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_newsroom_UserActivity_UserActivityDetails_descriptor,
+        new java.lang.String[] { "PublishedArticleSid", });
+    internal_static_api_v1alpha1_newsroom_CreatePublishedArticleRequest_descriptor =
+      getDescriptor().getMessageTypes().get(11);
     internal_static_api_v1alpha1_newsroom_CreatePublishedArticleRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_newsroom_CreatePublishedArticleRequest_descriptor,
         new java.lang.String[] { "NewArticleSid", "DisplayToUser", });
     internal_static_api_v1alpha1_newsroom_CreatePublishedArticleResponse_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_api_v1alpha1_newsroom_CreatePublishedArticleResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_newsroom_CreatePublishedArticleResponse_descriptor,
         new java.lang.String[] { "PublishedArticleDetails", });
     internal_static_api_v1alpha1_newsroom_ListPublishedArticlesRequest_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_api_v1alpha1_newsroom_ListPublishedArticlesRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_newsroom_ListPublishedArticlesRequest_descriptor,
         new java.lang.String[] { });
     internal_static_api_v1alpha1_newsroom_ListPublishedArticlesResponse_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_api_v1alpha1_newsroom_ListPublishedArticlesResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_newsroom_ListPublishedArticlesResponse_descriptor,
         new java.lang.String[] { "PublishedArticleDetails", });
     internal_static_api_v1alpha1_newsroom_GetPublishedArticleByIdRequest_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_api_v1alpha1_newsroom_GetPublishedArticleByIdRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_newsroom_GetPublishedArticleByIdRequest_descriptor,
-        new java.lang.String[] { "PublishedArticleSid", });
+        new java.lang.String[] { "NewArticleSid", "PublishedArticleSid", });
     internal_static_api_v1alpha1_newsroom_GetPublishedArticleByIdResponse_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_api_v1alpha1_newsroom_GetPublishedArticleByIdResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_newsroom_GetPublishedArticleByIdResponse_descriptor,
         new java.lang.String[] { "PublishedArticleDetails", });
+    internal_static_api_v1alpha1_newsroom_UserActivityRequest_descriptor =
+      getDescriptor().getMessageTypes().get(17);
+    internal_static_api_v1alpha1_newsroom_UserActivityRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_newsroom_UserActivityRequest_descriptor,
+        new java.lang.String[] { "PublishedArticleSid", });
+    internal_static_api_v1alpha1_newsroom_UserActivityResponse_descriptor =
+      getDescriptor().getMessageTypes().get(18);
+    internal_static_api_v1alpha1_newsroom_UserActivityResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_newsroom_UserActivityResponse_descriptor,
+        new java.lang.String[] { "UserActivity", });
     com.tcn.cloud.api.api.commons.NewsroomProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
