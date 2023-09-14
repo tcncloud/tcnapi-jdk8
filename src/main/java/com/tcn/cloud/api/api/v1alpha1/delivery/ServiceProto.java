@@ -750,7 +750,7 @@ public final class ServiceProto {
       "ssword\0229\n\ncreated_on\030\n \001(\0132\032.google.prot" +
       "obuf.TimestampR\tcreatedOn\022;\n\013last_edited" +
       "\030\013 \001(\0132\032.google.protobuf.TimestampR\nlast" +
-      "EditedB\014\n\nencryption2\221&\n\013DeliveryApi\022\270\001\n" +
+      "EditedB\014\n\nencryption2\222&\n\013DeliveryApi\022\270\001\n" +
       "\024CreateTransferConfig\022..api.v1alpha1.del" +
       "ivery.CreateTransferConfigReq\032..api.v1al" +
       "pha1.delivery.CreateTransferConfigRes\"@\272" +
@@ -864,20 +864,20 @@ public final class ServiceProto {
       "1.delivery.GetEncryptionReq\032\'.api.v1alph" +
       "a1.delivery.GetEncryptionRes\"9\272\270\221\002\005\n\003\010\320\017" +
       "\202\323\344\223\002)\"$/api/v1alpha1/delivery/getencryp" +
-      "tion:\001*\022\243\001\n\017ListEncryptions\022).api.v1alph" +
+      "tion:\001*\022\244\001\n\017ListEncryptions\022).api.v1alph" +
       "a1.delivery.ListEncryptionsReq\032).api.v1a" +
-      "lpha1.delivery.ListEncryptionsRes\":\272\270\221\002\005" +
-      "\n\003\010\320\017\202\323\344\223\002*\"%/api/v1alpha1/delivery/list" +
-      "encryption:\001*\022\250\001\n\020UpdateEncryption\022*.api" +
-      ".v1alpha1.delivery.UpdateEncryptionReq\032*" +
-      ".api.v1alpha1.delivery.UpdateEncryptionR" +
-      "es\"<\272\270\221\002\005\n\003\010\321\017\202\323\344\223\002,\"\'/api/v1alpha1/deli" +
-      "very/updateencryption:\001*B\255\001\n\'com.tcn.clo" +
-      "ud.api.api.v1alpha1.deliveryB\014ServicePro" +
-      "toP\001\242\002\003AVD\252\002\025Api.V1alpha1.Delivery\312\002\025Api" +
-      "\\V1alpha1\\Delivery\342\002!Api\\V1alpha1\\Delive" +
-      "ry\\GPBMetadata\352\002\027Api::V1alpha1::Delivery" +
-      "b\006proto3"
+      "lpha1.delivery.ListEncryptionsRes\";\272\270\221\002\005" +
+      "\n\003\010\320\017\202\323\344\223\002+\"&/api/v1alpha1/delivery/list" +
+      "encryptions:\001*\022\250\001\n\020UpdateEncryption\022*.ap" +
+      "i.v1alpha1.delivery.UpdateEncryptionReq\032" +
+      "*.api.v1alpha1.delivery.UpdateEncryption" +
+      "Res\"<\272\270\221\002\005\n\003\010\321\017\202\323\344\223\002,\"\'/api/v1alpha1/del" +
+      "ivery/updateencryption:\001*B\255\001\n\'com.tcn.cl" +
+      "oud.api.api.v1alpha1.deliveryB\014ServicePr" +
+      "otoP\001\242\002\003AVD\252\002\025Api.V1alpha1.Delivery\312\002\025Ap" +
+      "i\\V1alpha1\\Delivery\342\002!Api\\V1alpha1\\Deliv" +
+      "ery\\GPBMetadata\352\002\027Api::V1alpha1::Deliver" +
+      "yb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
