@@ -14,7 +14,7 @@ public interface GetTransferConfigByNameReqOrBuilder extends
    *
    * <code>string name = 1 [json_name = "name", deprecated = true];</code>
    * @deprecated api.v1alpha1.delivery.GetTransferConfigByNameReq.name is deprecated.
-   *     See api/v1alpha1/delivery/service.proto;l=245
+   *     See api/v1alpha1/delivery/service.proto;l=344
    * @return The name.
    */
   @java.lang.Deprecated java.lang.String getName();
@@ -25,7 +25,7 @@ public interface GetTransferConfigByNameReqOrBuilder extends
    *
    * <code>string name = 1 [json_name = "name", deprecated = true];</code>
    * @deprecated api.v1alpha1.delivery.GetTransferConfigByNameReq.name is deprecated.
-   *     See api/v1alpha1/delivery/service.proto;l=245
+   *     See api/v1alpha1/delivery/service.proto;l=344
    * @return The bytes for name.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString
