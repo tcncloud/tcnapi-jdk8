@@ -260,11 +260,6 @@ public final class OmnichannelProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_commons_OmniTask_Details_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_commons_OmniTaskConfig_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_commons_OmniTaskConfig_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_commons_OmniTaskState_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -317,463 +312,452 @@ public final class OmnichannelProto {
       "mons\032\026api/commons/chat.proto\032\027api/common" +
       "s/enums.proto\032\025api/commons/lms.proto\032\025ap" +
       "i/commons/org.proto\032\027api/commons/types.p" +
-      "roto\032\036google/protobuf/duration.proto\032\037go" +
-      "ogle/protobuf/timestamp.proto\032\036google/pr" +
-      "otobuf/wrappers.proto\"\231\005\n\014OmniCampaign\022%" +
-      "\n\014campaign_sid\030\001 \001(\003B\0020\001R\013campaignSid\022\022\n" +
-      "\004name\030\002 \001(\tR\004name\022 \n\013description\030\003 \001(\tR\013" +
-      "description\022?\n\006skills\030\004 \001(\0132#.api.common" +
-      "s.OmniConversationSkillsB\002\030\001R\006skills\0229\n\n" +
-      "start_date\030\005 \001(\0132\032.google.protobuf.Times" +
-      "tampR\tstartDate\0227\n\006status\030\006 \001(\0162\037.api.co" +
-      "mmons.OmniCampaignStatusR\006status\022;\n\014chan" +
-      "nel_type\030\007 \001(\0162\030.api.commons.ChannelType" +
-      "R\013channelType\022=\n\014date_created\030\010 \001(\0132\032.go" +
-      "ogle.protobuf.TimestampR\013dateCreated\022?\n\r" +
-      "date_modified\030\t \001(\0132\032.google.protobuf.Ti" +
-      "mestampR\014dateModified\022#\n\013project_sid\030\n \001" +
-      "(\003B\0020\001R\nprojectSid\0229\n\007modules\030\013 \003(\0132\037.ap" +
-      "i.commons.OmniCampaignModuleR\007modules\0229\n" +
-      "\ttime_zone\030\014 \001(\0132\034.api.commons.TimeZoneW" +
-      "rapperR\010timeZone\022\037\n\013shorten_url\030\r \001(\010R\ns" +
-      "hortenUrl\"\364\t\n\022OmniCampaignModule\0222\n\023camp" +
-      "aign_module_sid\030\001 \001(\003B\0020\001R\021campaignModul" +
-      "eSid\022%\n\014campaign_sid\030\002 \001(\003B\0020\001R\013campaign" +
-      "Sid\022D\n\013module_type\030\003 \001(\0162#.api.commons.O" +
-      "mniCampaignModuleTypeR\nmoduleType\022=\n\006sta" +
-      "tus\030\004 \001(\0162%.api.commons.OmniCampaignModu" +
-      "leStatusR\006status\022=\n\006config\030\005 \001(\0132%.api.c" +
-      "ommons.OmniCampaignModuleConfigR\006config\022" +
-      "=\n\014date_created\030\006 \001(\0132\032.google.protobuf." +
-      "TimestampR\013dateCreated\022?\n\rdate_modified\030" +
-      "\007 \001(\0132\032.google.protobuf.TimestampR\014dateM" +
-      "odified\022J\n\023scheduled_stop_date\030\010 \001(\0132\032.g" +
-      "oogle.protobuf.TimestampR\021scheduledStopD" +
-      "ate\022D\n\020actual_stop_date\030\t \001(\0132\032.google.p" +
-      "rotobuf.TimestampR\016actualStopDate\022K\n\022hou" +
-      "rs_of_operation\030\n \001(\0132\035.api.commons.Week" +
-      "dayTimeRangeR\020hoursOfOperation\022A\n\007detail" +
-      "s\030\013 \001(\0132\'.api.commons.OmniCampaignModule" +
-      ".DetailsR\007details\022=\n\013attachments\030\014 \003(\0132\033" +
-      ".api.commons.OmniAttachmentR\013attachments" +
-      "\032\335\003\n\007Details\022E\n\020total_task_count\030\001 \001(\0132\033" +
-      ".google.protobuf.Int64ValueR\016totalTaskCo" +
-      "unt\022M\n\024completed_task_count\030\002 \001(\0132\033.goog" +
-      "le.protobuf.Int64ValueR\022completedTaskCou" +
-      "nt\022T\n\027connected_inbox_address\030\003 \001(\0132\034.go" +
-      "ogle.protobuf.StringValueR\025connectedInbo" +
-      "xAddress\022R\n\026verified_email_address\030\004 \001(\013" +
-      "2\034.google.protobuf.StringValueR\024verified" +
-      "EmailAddress\022I\n\022pending_task_count\030\005 \001(\013" +
-      "2\033.google.protobuf.Int64ValueR\020pendingTa" +
-      "skCount\022G\n\021failed_task_count\030\006 \001(\0132\033.goo" +
-      "gle.protobuf.Int64ValueR\017failedTaskCount" +
-      "\"\240\n\n\030OmniCampaignModuleConfig\022D\n\017api_key" +
-      "_primary\030\001 \001(\0132\034.google.protobuf.StringV" +
-      "alueR\rapiKeyPrimary\022H\n\021api_key_secondary" +
-      "\030\002 \001(\0132\034.google.protobuf.StringValueR\017ap" +
-      "iKeySecondary\022K\n\020color_properties\030\003 \001(\0132" +
-      " .api.commons.ChatColorPropertiesR\017color" +
-      "Properties\022D\n\023connected_inbox_sid\030\004 \001(\0132" +
-      "\024.api.commons.Int64IdR\021connectedInboxSid" +
-      "\022<\n\014dispositions\030\005 \003(\0132\030.api.commons.Dis" +
-      "positionR\014dispositions\0222\n\005email\030\006 \001(\0132\034." +
-      "google.protobuf.StringValueR\005email\022?\n\014me" +
-      "ssage_body\030\007 \001(\0132\034.google.protobuf.Strin" +
-      "gValueR\013messageBody\022A\n\remail_subject\030\010 \001" +
-      "(\0132\034.google.protobuf.StringValueR\014emailS" +
-      "ubject\0225\n\nsms_number\030\t \001(\0132\026.api.commons" +
-      ".SmsNumberR\tsmsNumber\022/\n\006header\030\n \001(\0132\027." +
-      "api.commons.ChatHeaderR\006header\022;\n\014sla_ti" +
-      "meouts\030\013 \001(\0132\030.api.commons.SLATimeoutsR\013" +
-      "slaTimeouts\022A\n\016sends_per_hour\030\014 \001(\0132\033.go" +
-      "ogle.protobuf.Int64ValueR\014sendsPerHour\022F" +
-      "\n\024unsubscribe_link_sid\030\r \001(\0132\024.api.commo" +
-      "ns.Int64IdR\022unsubscribeLinkSid\022B\n\022verifi" +
-      "ed_email_sid\030\017 \001(\0132\024.api.commons.Int64Id" +
-      "R\020verifiedEmailSid\022K\n\024stop_on_task_deple" +
-      "te\030\020 \001(\0132\032.google.protobuf.BoolValueR\021st" +
-      "opOnTaskDeplete\022=\n\013attachments\030\021 \003(\0132\033.a" +
-      "pi.commons.OmniAttachmentR\013attachments\022Q" +
-      "\n\026compliance_rule_set_id\030\022 \001(\0132\034.google." +
-      "protobuf.StringValueR\023complianceRuleSetI" +
-      "d\022,\n\022payment_portal_ids\030\023 \003(\tR\020paymentPo" +
-      "rtalIds\022-\n\007flow_id\030\024 \001(\0132\024.api.commons.I" +
-      "nt64IdR\006flowId\022;\n\006skills\030\025 \001(\0132#.api.com" +
-      "mons.OmniConversationSkillsR\006skills\"\262\001\n\t" +
-      "SmsNumber\022\026\n\006number\030\001 \001(\tR\006number\022.\n\004typ" +
-      "e\030\002 \001(\0162\032.api.commons.SmsNumberTypeR\004typ" +
-      "e\022:\n\010provider\030\003 \001(\0162\036.api.commons.SmsNum" +
-      "berProviderR\010provider\022!\n\014country_code\030\004 " +
-      "\001(\005R\013countryCode\"}\n\037ConversationCustomer" +
-      "Information\022\022\n\004name\030\001 \001(\tR\004name\022!\n\014phone" +
-      "_number\030\002 \001(\tR\013phoneNumber\022#\n\remail_addr" +
-      "ess\030\003 \001(\tR\014emailAddress\"s\n\013SLATimeouts\022\016" +
-      "\n\002t1\030\001 \001(\003R\002t1\022\016\n\002t2\030\002 \001(\003R\002t2\022\016\n\002t3\030\003 \001" +
-      "(\003R\002t3\022\020\n\003t10\030\n \001(\003R\003t10\022\020\n\003t11\030\013 \001(\003R\003t" +
-      "11\022\020\n\003t12\030\014 \001(\003R\003t12\"^\n\031ConversationColl" +
-      "ectedData\022A\n\005items\030\001 \003(\0132+.api.commons.C" +
-      "onversationCollectedData_ItemR\005items\"\322\002\n" +
-      "\036ConversationCollectedData_Item\022I\n\037conve" +
-      "rsation_collected_data_sid\030\001 \001(\003B\0020\001R\034co" +
-      "nversationCollectedDataSid\022-\n\020conversati" +
-      "on_sid\030\002 \001(\003B\0020\001R\017conversationSid\022\033\n\tdat" +
-      "a_name\030\003 \001(\tR\010dataName\022\035\n\ndata_value\030\004 \001" +
-      "(\tR\tdataValue\022C\n\017collection_time\030\005 \001(\0132\032" +
-      ".google.protobuf.TimestampR\016collectionTi" +
-      "me\0225\n\007user_id\030\006 \001(\0132\034.google.protobuf.St" +
-      "ringValueR\006userId\"\333\006\n\013OmniMessage\022#\n\013mes" +
-      "sage_sid\030\001 \001(\003B\0020\001R\nmessageSid\0225\n\007user_i" +
-      "d\030\004 \001(\0132\034.google.protobuf.StringValueR\006u" +
-      "serId\022\033\n\tsent_from\030\005 \001(\tR\010sentFrom\022\027\n\007se" +
-      "nt_to\030\006 \001(\tR\006sentTo\022;\n\014channel_type\030\007 \001(" +
-      "\0162\030.api.commons.ChannelTypeR\013channelType" +
-      "\022?\n\014reference_id\030\010 \001(\0132\034.google.protobuf" +
-      ".StringValueR\013referenceId\022&\n\017ui_referenc" +
-      "e_id\030\n \001(\tR\ruiReferenceId\0229\n\007payload\030\013 \001" +
-      "(\0132\037.api.commons.OmniMessagePayloadR\007pay" +
-      "load\022?\n\020conversation_sid\030\014 \001(\0132\024.api.com" +
-      "mons.Int64IdR\017conversationSid\0226\n\006status\030" +
-      "\016 \001(\0162\036.api.commons.OmniMessageStatusR\006s" +
-      "tatus\022=\n\014date_created\030\017 \001(\0132\032.google.pro" +
+      "roto\032\037google/protobuf/timestamp.proto\032\036g" +
+      "oogle/protobuf/wrappers.proto\"\225\005\n\014OmniCa" +
+      "mpaign\022%\n\014campaign_sid\030\001 \001(\003B\0020\001R\013campai" +
+      "gnSid\022\022\n\004name\030\002 \001(\tR\004name\022 \n\013description" +
+      "\030\003 \001(\tR\013description\022;\n\006skills\030\004 \001(\0132#.ap" +
+      "i.commons.OmniConversationSkillsR\006skills" +
+      "\0229\n\nstart_date\030\005 \001(\0132\032.google.protobuf.T" +
+      "imestampR\tstartDate\0227\n\006status\030\006 \001(\0162\037.ap" +
+      "i.commons.OmniCampaignStatusR\006status\022;\n\014" +
+      "channel_type\030\007 \001(\0162\030.api.commons.Channel" +
+      "TypeR\013channelType\022=\n\014date_created\030\010 \001(\0132" +
+      "\032.google.protobuf.TimestampR\013dateCreated" +
+      "\022?\n\rdate_modified\030\t \001(\0132\032.google.protobu" +
+      "f.TimestampR\014dateModified\022#\n\013project_sid" +
+      "\030\n \001(\003B\0020\001R\nprojectSid\0229\n\007modules\030\013 \003(\0132" +
+      "\037.api.commons.OmniCampaignModuleR\007module" +
+      "s\0229\n\ttime_zone\030\014 \001(\0132\034.api.commons.TimeZ" +
+      "oneWrapperR\010timeZone\022\037\n\013shorten_url\030\r \001(" +
+      "\010R\nshortenUrl\"\364\t\n\022OmniCampaignModule\0222\n\023" +
+      "campaign_module_sid\030\001 \001(\003B\0020\001R\021campaignM" +
+      "oduleSid\022%\n\014campaign_sid\030\002 \001(\003B\0020\001R\013camp" +
+      "aignSid\022D\n\013module_type\030\003 \001(\0162#.api.commo" +
+      "ns.OmniCampaignModuleTypeR\nmoduleType\022=\n" +
+      "\006status\030\004 \001(\0162%.api.commons.OmniCampaign" +
+      "ModuleStatusR\006status\022=\n\006config\030\005 \001(\0132%.a" +
+      "pi.commons.OmniCampaignModuleConfigR\006con" +
+      "fig\022=\n\014date_created\030\006 \001(\0132\032.google.proto" +
+      "buf.TimestampR\013dateCreated\022?\n\rdate_modif" +
+      "ied\030\007 \001(\0132\032.google.protobuf.TimestampR\014d" +
+      "ateModified\022J\n\023scheduled_stop_date\030\010 \001(\013" +
+      "2\032.google.protobuf.TimestampR\021scheduledS" +
+      "topDate\022D\n\020actual_stop_date\030\t \001(\0132\032.goog" +
+      "le.protobuf.TimestampR\016actualStopDate\022K\n" +
+      "\022hours_of_operation\030\n \001(\0132\035.api.commons." +
+      "WeekdayTimeRangeR\020hoursOfOperation\022A\n\007de" +
+      "tails\030\013 \001(\0132\'.api.commons.OmniCampaignMo" +
+      "dule.DetailsR\007details\022=\n\013attachments\030\014 \003" +
+      "(\0132\033.api.commons.OmniAttachmentR\013attachm" +
+      "ents\032\335\003\n\007Details\022E\n\020total_task_count\030\001 \001" +
+      "(\0132\033.google.protobuf.Int64ValueR\016totalTa" +
+      "skCount\022M\n\024completed_task_count\030\002 \001(\0132\033." +
+      "google.protobuf.Int64ValueR\022completedTas" +
+      "kCount\022T\n\027connected_inbox_address\030\003 \001(\0132" +
+      "\034.google.protobuf.StringValueR\025connected" +
+      "InboxAddress\022R\n\026verified_email_address\030\004" +
+      " \001(\0132\034.google.protobuf.StringValueR\024veri" +
+      "fiedEmailAddress\022I\n\022pending_task_count\030\005" +
+      " \001(\0132\033.google.protobuf.Int64ValueR\020pendi" +
+      "ngTaskCount\022G\n\021failed_task_count\030\006 \001(\0132\033" +
+      ".google.protobuf.Int64ValueR\017failedTaskC" +
+      "ount\"\343\t\n\030OmniCampaignModuleConfig\022D\n\017api" +
+      "_key_primary\030\001 \001(\0132\034.google.protobuf.Str" +
+      "ingValueR\rapiKeyPrimary\022H\n\021api_key_secon" +
+      "dary\030\002 \001(\0132\034.google.protobuf.StringValue" +
+      "R\017apiKeySecondary\022K\n\020color_properties\030\003 " +
+      "\001(\0132 .api.commons.ChatColorPropertiesR\017c" +
+      "olorProperties\022D\n\023connected_inbox_sid\030\004 " +
+      "\001(\0132\024.api.commons.Int64IdR\021connectedInbo" +
+      "xSid\022<\n\014dispositions\030\005 \003(\0132\030.api.commons" +
+      ".DispositionR\014dispositions\0222\n\005email\030\006 \001(" +
+      "\0132\034.google.protobuf.StringValueR\005email\022?" +
+      "\n\014message_body\030\007 \001(\0132\034.google.protobuf.S" +
+      "tringValueR\013messageBody\022A\n\remail_subject" +
+      "\030\010 \001(\0132\034.google.protobuf.StringValueR\014em" +
+      "ailSubject\0225\n\nsms_number\030\t \001(\0132\026.api.com" +
+      "mons.SmsNumberR\tsmsNumber\022/\n\006header\030\n \001(" +
+      "\0132\027.api.commons.ChatHeaderR\006header\022;\n\014sl" +
+      "a_timeouts\030\013 \001(\0132\030.api.commons.SLATimeou" +
+      "tsR\013slaTimeouts\022A\n\016sends_per_hour\030\014 \001(\0132" +
+      "\033.google.protobuf.Int64ValueR\014sendsPerHo" +
+      "ur\022F\n\024unsubscribe_link_sid\030\r \001(\0132\024.api.c" +
+      "ommons.Int64IdR\022unsubscribeLinkSid\022B\n\022ve" +
+      "rified_email_sid\030\017 \001(\0132\024.api.commons.Int" +
+      "64IdR\020verifiedEmailSid\022K\n\024stop_on_task_d" +
+      "eplete\030\020 \001(\0132\032.google.protobuf.BoolValue" +
+      "R\021stopOnTaskDeplete\022=\n\013attachments\030\021 \003(\013" +
+      "2\033.api.commons.OmniAttachmentR\013attachmen" +
+      "ts\022Q\n\026compliance_rule_set_id\030\022 \001(\0132\034.goo" +
+      "gle.protobuf.StringValueR\023complianceRule" +
+      "SetId\022,\n\022payment_portal_ids\030\023 \003(\tR\020payme" +
+      "ntPortalIds\022-\n\007flow_id\030\024 \001(\0132\024.api.commo" +
+      "ns.Int64IdR\006flowId\"\262\001\n\tSmsNumber\022\026\n\006numb" +
+      "er\030\001 \001(\tR\006number\022.\n\004type\030\002 \001(\0162\032.api.com" +
+      "mons.SmsNumberTypeR\004type\022:\n\010provider\030\003 \001" +
+      "(\0162\036.api.commons.SmsNumberProviderR\010prov" +
+      "ider\022!\n\014country_code\030\004 \001(\005R\013countryCode\"" +
+      "}\n\037ConversationCustomerInformation\022\022\n\004na" +
+      "me\030\001 \001(\tR\004name\022!\n\014phone_number\030\002 \001(\tR\013ph" +
+      "oneNumber\022#\n\remail_address\030\003 \001(\tR\014emailA" +
+      "ddress\"s\n\013SLATimeouts\022\016\n\002t1\030\001 \001(\003R\002t1\022\016\n" +
+      "\002t2\030\002 \001(\003R\002t2\022\016\n\002t3\030\003 \001(\003R\002t3\022\020\n\003t10\030\n \001" +
+      "(\003R\003t10\022\020\n\003t11\030\013 \001(\003R\003t11\022\020\n\003t12\030\014 \001(\003R\003" +
+      "t12\"^\n\031ConversationCollectedData\022A\n\005item" +
+      "s\030\001 \003(\0132+.api.commons.ConversationCollec" +
+      "tedData_ItemR\005items\"\322\002\n\036ConversationColl" +
+      "ectedData_Item\022I\n\037conversation_collected" +
+      "_data_sid\030\001 \001(\003B\0020\001R\034conversationCollect" +
+      "edDataSid\022-\n\020conversation_sid\030\002 \001(\003B\0020\001R" +
+      "\017conversationSid\022\033\n\tdata_name\030\003 \001(\tR\010dat" +
+      "aName\022\035\n\ndata_value\030\004 \001(\tR\tdataValue\022C\n\017" +
+      "collection_time\030\005 \001(\0132\032.google.protobuf." +
+      "TimestampR\016collectionTime\0225\n\007user_id\030\006 \001" +
+      "(\0132\034.google.protobuf.StringValueR\006userId" +
+      "\"\333\006\n\013OmniMessage\022#\n\013message_sid\030\001 \001(\003B\0020" +
+      "\001R\nmessageSid\0225\n\007user_id\030\004 \001(\0132\034.google." +
+      "protobuf.StringValueR\006userId\022\033\n\tsent_fro" +
+      "m\030\005 \001(\tR\010sentFrom\022\027\n\007sent_to\030\006 \001(\tR\006sent" +
+      "To\022;\n\014channel_type\030\007 \001(\0162\030.api.commons.C" +
+      "hannelTypeR\013channelType\022?\n\014reference_id\030" +
+      "\010 \001(\0132\034.google.protobuf.StringValueR\013ref" +
+      "erenceId\022&\n\017ui_reference_id\030\n \001(\tR\ruiRef" +
+      "erenceId\0229\n\007payload\030\013 \001(\0132\037.api.commons." +
+      "OmniMessagePayloadR\007payload\022?\n\020conversat" +
+      "ion_sid\030\014 \001(\0132\024.api.commons.Int64IdR\017con" +
+      "versationSid\0226\n\006status\030\016 \001(\0162\036.api.commo" +
+      "ns.OmniMessageStatusR\006status\022=\n\014date_cre" +
+      "ated\030\017 \001(\0132\032.google.protobuf.TimestampR\013" +
+      "dateCreated\022?\n\rdate_modified\030\020 \001(\0132\032.goo" +
+      "gle.protobuf.TimestampR\014dateModified\022%\n\014" +
+      "campaign_sid\030\021 \001(\003B\0020\001R\013campaignSid\0226\n\007s" +
+      "ubject\030\023 \001(\0132\034.google.protobuf.StringVal" +
+      "ueR\007subject\022<\n\013sender_type\030\025 \001(\0162\033.api.c" +
+      "ommons.OmniSenderTypeR\nsenderType\022C\n\016sta" +
+      "tus_message\030\026 \001(\0132\034.google.protobuf.Stri" +
+      "ngValueR\rstatusMessage\"\303\002\n\031CustomerChatW" +
+      "idgetMessage\022#\n\013message_sid\030\001 \001(\003B\0020\001R\nm" +
+      "essageSid\0229\n\007payload\030\002 \001(\0132\037.api.commons" +
+      ".OmniMessagePayloadR\007payload\022=\n\014date_cre" +
+      "ated\030\003 \001(\0132\032.google.protobuf.TimestampR\013" +
+      "dateCreated\022&\n\017ui_reference_id\030\004 \001(\tR\rui" +
+      "ReferenceId\022_\n\024customer_information\030\005 \001(" +
+      "\0132,.api.commons.ConversationCustomerInfo" +
+      "rmationR\023customerInformation\"\366\002\n\026AgentCh" +
+      "atWidgetMessage\022#\n\013message_sid\030\001 \001(\003B\0020\001" +
+      "R\nmessageSid\0229\n\007payload\030\002 \001(\0132\037.api.comm" +
+      "ons.OmniMessagePayloadR\007payload\022=\n\014date_" +
+      "created\030\003 \001(\0132\032.google.protobuf.Timestam" +
+      "pR\013dateCreated\022&\n\017ui_reference_id\030\004 \001(\tR" +
+      "\ruiReferenceId\022W\n\020user_information\030\005 \001(\013" +
+      "2,.api.commons.OmniConversationUserInfor" +
+      "mationR\017userInformation\022<\n\013sender_type\030\006" +
+      " \001(\0162\033.api.commons.OmniSenderTypeR\nsende" +
+      "rType\"\307\n\n\022OmniMessagePayload\022A\n\014text_mes" +
+      "sage\030d \001(\0132\034.api.commons.OmniTextMessage" +
+      "H\000R\013textMessage\022V\n\023typing_notification\030e" +
+      " \001(\0132#.api.commons.OmniTypingNotificatio" +
+      "nH\000R\022typingNotification\022O\n\014reassignment\030" +
+      "f \001(\0132).api.commons.OmniReassignmentNoti" +
+      "ficationH\000R\014reassignment\022p\n\035request_atta" +
+      "chment_upload_url\030g \001(\0132+.api.commons.Om" +
+      "niRequestAttachmentUploadURLH\000R\032requestA" +
+      "ttachmentUploadUrl\022Z\n\025attachment_upload_" +
+      "url\030h \001(\0132$.api.commons.OmniAttachmentUp" +
+      "loadURLH\000R\023attachmentUploadUrl\022=\n\nattach" +
+      "ment\030i \001(\0132\033.api.commons.OmniAttachmentH" +
+      "\000R\nattachment\022S\n\022close_conversation\030j \001(" +
+      "\0132\".api.commons.OmniCloseConversationH\000R" +
+      "\021closeConversation\022V\n\023assign_conversatio" +
+      "n\030k \001(\0132#.api.commons.OmniAssignConversa" +
+      "tionH\000R\022assignConversation\022\\\n\025unassign_c" +
+      "onversation\030l \001(\0132%.api.commons.OmniUnas" +
+      "signConversationH\000R\024unassignConversation" +
+      "\022E\n\016finish_wrap_up\030m \001(\0132\035.api.commons.O" +
+      "mniFinishWrapUpH\000R\014finishWrapUp\0224\n\007suspe" +
+      "nd\030n \001(\0132\030.api.commons.OmniSuspendH\000R\007su" +
+      "spend\022B\n\rstart_wrap_up\030o \001(\0132\034.api.commo" +
+      "ns.OmniStartWrapUpH\000R\013startWrapUp\022P\n\021que" +
+      "ue_information\030p \001(\0132!.api.commons.OmniQ" +
+      "ueueInformationH\000R\020queueInformation\022f\n\031r" +
+      "equest_queue_information\030q \001(\0132(.api.com" +
+      "mons.OmniRequestQueueInformationH\000R\027requ" +
+      "estQueueInformation\022^\n\027off_loaded_text_m" +
+      "essage\030r \001(\0132%.api.commons.OmniOffLoaded" +
+      "TextMessageH\000R\024offLoadedTextMessage\022G\n\016c" +
+      "anned_message\030s \001(\0132\036.api.commons.OmniCa" +
+      "nnedMessageH\000R\rcannedMessageB\t\n\007payload\"" +
+      "\276\001\n\017OmniTextMessage\022\030\n\007message\030\001 \001(\tR\007me" +
+      "ssage\022=\n\013attachments\030\002 \003(\0132\033.api.commons" +
+      ".OmniAttachmentR\013attachments\022R\n\027primary_" +
+      "asm_session_sid\030\003 \001(\0132\033.google.protobuf." +
+      "Int64ValueR\024primaryAsmSessionSid\"u\n\030Omni" +
+      "OffLoadedTextMessage\022\032\n\010location\030\001 \001(\tR\010" +
+      "location\022=\n\013attachments\030\002 \003(\0132\033.api.comm" +
+      "ons.OmniAttachmentR\013attachments\"\030\n\026OmniT" +
+      "ypingNotification\"\205\001\n\026OmniAssignConversa" +
+      "tion\022\027\n\007user_id\030\001 \001(\tR\006userId\022\033\n\tuser_na" +
+      "me\030\002 \001(\tR\010userName\0225\n\027primary_asm_sessio" +
+      "n_sid\030\005 \001(\003R\024primaryAsmSessionSid\"\213\002\n\034Om" +
+      "niReassignmentNotification\022&\n\017current_us" +
+      "er_id\030\001 \001(\tR\rcurrentUserId\022*\n\021current_us" +
+      "er_name\030\002 \001(\tR\017currentUserName\022\036\n\013new_us" +
+      "er_id\030\003 \001(\tR\tnewUserId\022\"\n\rnew_user_name\030" +
+      "\004 \001(\tR\013newUserName\022S\n\030new_user_asm_sessi" +
+      "on_sid\030\005 \001(\0132\033.google.protobuf.Int64Valu" +
+      "eR\024newUserAsmSessionSid\"\324\001\n\030OmniUnassign" +
+      "Conversation\0225\n\007user_id\030\001 \001(\0132\034.google.p" +
+      "rotobuf.StringValueR\006userId\022\033\n\tuser_name" +
+      "\030\004 \001(\tR\010userName\022\020\n\003all\030\002 \001(\010R\003all\022R\n\027pr" +
+      "imary_asm_session_sid\030\005 \001(\0132\033.google.pro" +
+      "tobuf.Int64ValueR\024primaryAsmSessionSid\" " +
+      "\n\036OmniRequestAttachmentUploadURL\"H\n\027Omni" +
+      "AttachmentUploadURL\022\035\n\nupload_url\030\001 \001(\tR" +
+      "\tuploadUrl\022\016\n\002id\030\002 \001(\tR\002id\"\247\004\n\016OmniAttac" +
+      "hment\0222\n\023omni_attachment_sid\030\001 \001(\003B\0020\001R\021" +
+      "omniAttachmentSid\022\022\n\004name\030\002 \001(\tR\004name\022\033\n" +
+      "\tfile_type\030\003 \001(\tR\010fileType\022\033\n\tfile_size\030" +
+      "\004 \001(\003R\010fileSize\022\022\n\004path\030\005 \001(\tR\004path\0225\n\007t" +
+      "emp_id\030\006 \001(\0132\034.google.protobuf.StringVal" +
+      "ueR\006tempId\022!\n\014download_url\030\007 \001(\tR\013downlo" +
+      "adUrl\022=\n\014date_created\030\010 \001(\0132\032.google.pro" +
       "tobuf.TimestampR\013dateCreated\022?\n\rdate_mod" +
-      "ified\030\020 \001(\0132\032.google.protobuf.TimestampR" +
-      "\014dateModified\022%\n\014campaign_sid\030\021 \001(\003B\0020\001R" +
-      "\013campaignSid\0226\n\007subject\030\023 \001(\0132\034.google.p" +
-      "rotobuf.StringValueR\007subject\022<\n\013sender_t" +
-      "ype\030\025 \001(\0162\033.api.commons.OmniSenderTypeR\n" +
-      "senderType\022C\n\016status_message\030\026 \001(\0132\034.goo" +
-      "gle.protobuf.StringValueR\rstatusMessage\"" +
-      "\303\002\n\031CustomerChatWidgetMessage\022#\n\013message" +
-      "_sid\030\001 \001(\003B\0020\001R\nmessageSid\0229\n\007payload\030\002 " +
-      "\001(\0132\037.api.commons.OmniMessagePayloadR\007pa" +
-      "yload\022=\n\014date_created\030\003 \001(\0132\032.google.pro" +
-      "tobuf.TimestampR\013dateCreated\022&\n\017ui_refer" +
-      "ence_id\030\004 \001(\tR\ruiReferenceId\022_\n\024customer" +
-      "_information\030\005 \001(\0132,.api.commons.Convers" +
-      "ationCustomerInformationR\023customerInform" +
-      "ation\"\366\002\n\026AgentChatWidgetMessage\022#\n\013mess" +
-      "age_sid\030\001 \001(\003B\0020\001R\nmessageSid\0229\n\007payload" +
-      "\030\002 \001(\0132\037.api.commons.OmniMessagePayloadR" +
-      "\007payload\022=\n\014date_created\030\003 \001(\0132\032.google." +
-      "protobuf.TimestampR\013dateCreated\022&\n\017ui_re" +
-      "ference_id\030\004 \001(\tR\ruiReferenceId\022W\n\020user_" +
-      "information\030\005 \001(\0132,.api.commons.OmniConv" +
-      "ersationUserInformationR\017userInformation" +
-      "\022<\n\013sender_type\030\006 \001(\0162\033.api.commons.Omni" +
-      "SenderTypeR\nsenderType\"\307\n\n\022OmniMessagePa" +
-      "yload\022A\n\014text_message\030d \001(\0132\034.api.common" +
-      "s.OmniTextMessageH\000R\013textMessage\022V\n\023typi" +
-      "ng_notification\030e \001(\0132#.api.commons.Omni" +
-      "TypingNotificationH\000R\022typingNotification" +
-      "\022O\n\014reassignment\030f \001(\0132).api.commons.Omn" +
-      "iReassignmentNotificationH\000R\014reassignmen" +
-      "t\022p\n\035request_attachment_upload_url\030g \001(\013" +
-      "2+.api.commons.OmniRequestAttachmentUplo" +
-      "adURLH\000R\032requestAttachmentUploadUrl\022Z\n\025a" +
-      "ttachment_upload_url\030h \001(\0132$.api.commons" +
-      ".OmniAttachmentUploadURLH\000R\023attachmentUp" +
-      "loadUrl\022=\n\nattachment\030i \001(\0132\033.api.common" +
-      "s.OmniAttachmentH\000R\nattachment\022S\n\022close_" +
-      "conversation\030j \001(\0132\".api.commons.OmniClo" +
-      "seConversationH\000R\021closeConversation\022V\n\023a" +
-      "ssign_conversation\030k \001(\0132#.api.commons.O" +
-      "mniAssignConversationH\000R\022assignConversat" +
-      "ion\022\\\n\025unassign_conversation\030l \001(\0132%.api" +
-      ".commons.OmniUnassignConversationH\000R\024una" +
-      "ssignConversation\022E\n\016finish_wrap_up\030m \001(" +
-      "\0132\035.api.commons.OmniFinishWrapUpH\000R\014fini" +
-      "shWrapUp\0224\n\007suspend\030n \001(\0132\030.api.commons." +
-      "OmniSuspendH\000R\007suspend\022B\n\rstart_wrap_up\030" +
-      "o \001(\0132\034.api.commons.OmniStartWrapUpH\000R\013s" +
-      "tartWrapUp\022P\n\021queue_information\030p \001(\0132!." +
-      "api.commons.OmniQueueInformationH\000R\020queu" +
-      "eInformation\022f\n\031request_queue_informatio" +
-      "n\030q \001(\0132(.api.commons.OmniRequestQueueIn" +
-      "formationH\000R\027requestQueueInformation\022^\n\027" +
-      "off_loaded_text_message\030r \001(\0132%.api.comm" +
-      "ons.OmniOffLoadedTextMessageH\000R\024offLoade" +
-      "dTextMessage\022G\n\016canned_message\030s \001(\0132\036.a" +
-      "pi.commons.OmniCannedMessageH\000R\rcannedMe" +
-      "ssageB\t\n\007payload\"\276\001\n\017OmniTextMessage\022\030\n\007" +
-      "message\030\001 \001(\tR\007message\022=\n\013attachments\030\002 " +
-      "\003(\0132\033.api.commons.OmniAttachmentR\013attach" +
-      "ments\022R\n\027primary_asm_session_sid\030\003 \001(\0132\033" +
-      ".google.protobuf.Int64ValueR\024primaryAsmS" +
-      "essionSid\"u\n\030OmniOffLoadedTextMessage\022\032\n" +
-      "\010location\030\001 \001(\tR\010location\022=\n\013attachments" +
-      "\030\002 \003(\0132\033.api.commons.OmniAttachmentR\013att" +
-      "achments\"\030\n\026OmniTypingNotification\"\205\001\n\026O" +
-      "mniAssignConversation\022\027\n\007user_id\030\001 \001(\tR\006" +
-      "userId\022\033\n\tuser_name\030\002 \001(\tR\010userName\0225\n\027p" +
-      "rimary_asm_session_sid\030\005 \001(\003R\024primaryAsm" +
-      "SessionSid\"\213\002\n\034OmniReassignmentNotificat" +
-      "ion\022&\n\017current_user_id\030\001 \001(\tR\rcurrentUse" +
-      "rId\022*\n\021current_user_name\030\002 \001(\tR\017currentU" +
-      "serName\022\036\n\013new_user_id\030\003 \001(\tR\tnewUserId\022" +
-      "\"\n\rnew_user_name\030\004 \001(\tR\013newUserName\022S\n\030n" +
-      "ew_user_asm_session_sid\030\005 \001(\0132\033.google.p" +
-      "rotobuf.Int64ValueR\024newUserAsmSessionSid" +
-      "\"\324\001\n\030OmniUnassignConversation\0225\n\007user_id" +
-      "\030\001 \001(\0132\034.google.protobuf.StringValueR\006us" +
-      "erId\022\033\n\tuser_name\030\004 \001(\tR\010userName\022\020\n\003all" +
-      "\030\002 \001(\010R\003all\022R\n\027primary_asm_session_sid\030\005" +
-      " \001(\0132\033.google.protobuf.Int64ValueR\024prima" +
-      "ryAsmSessionSid\" \n\036OmniRequestAttachment" +
-      "UploadURL\"H\n\027OmniAttachmentUploadURL\022\035\n\n" +
-      "upload_url\030\001 \001(\tR\tuploadUrl\022\016\n\002id\030\002 \001(\tR" +
-      "\002id\"\247\004\n\016OmniAttachment\0222\n\023omni_attachmen" +
-      "t_sid\030\001 \001(\003B\0020\001R\021omniAttachmentSid\022\022\n\004na" +
-      "me\030\002 \001(\tR\004name\022\033\n\tfile_type\030\003 \001(\tR\010fileT" +
-      "ype\022\033\n\tfile_size\030\004 \001(\003R\010fileSize\022\022\n\004path" +
-      "\030\005 \001(\tR\004path\0225\n\007temp_id\030\006 \001(\0132\034.google.p" +
-      "rotobuf.StringValueR\006tempId\022!\n\014download_" +
-      "url\030\007 \001(\tR\013downloadUrl\022=\n\014date_created\030\010" +
+      "ified\030\t \001(\0132\032.google.protobuf.TimestampR" +
+      "\014dateModified\022;\n\ncontent_id\030\n \001(\0132\034.goog" +
+      "le.protobuf.StringValueR\tcontentId\0222\n\005wi" +
+      "dth\030\013 \001(\0132\034.google.protobuf.StringValueR" +
+      "\005width\0224\n\006height\030\014 \001(\0132\034.google.protobuf" +
+      ".StringValueR\006height\"e\n\017OmniStartWrapUp\022" +
+      "R\n\027primary_asm_session_sid\030\001 \001(\0132\033.googl" +
+      "e.protobuf.Int64ValueR\024primaryAsmSession" +
+      "Sid\"f\n\020OmniFinishWrapUp\022R\n\027primary_asm_s" +
+      "ession_sid\030\001 \001(\0132\033.google.protobuf.Int64" +
+      "ValueR\024primaryAsmSessionSid\"a\n\013OmniSuspe" +
+      "nd\022R\n\027primary_asm_session_sid\030\001 \001(\0132\033.go" +
+      "ogle.protobuf.Int64ValueR\024primaryAsmSess" +
+      "ionSid\"k\n\025OmniCloseConversation\022R\n\027prima" +
+      "ry_asm_session_sid\030\001 \001(\0132\033.google.protob" +
+      "uf.Int64ValueR\024primaryAsmSessionSid\"2\n\024O" +
+      "mniQueueInformation\022\032\n\010position\030\001 \001(\003R\010p" +
+      "osition\"9\n\033OmniRequestQueueInformation\022\032" +
+      "\n\010position\030\001 \001(\010R\010position\"?\n\021OmniCanned" +
+      "Message\022*\n\021canned_message_id\030\001 \001(\tR\017cann" +
+      "edMessageId\"N\n\037OmniConversationUserInfor" +
+      "mation\022\027\n\007user_id\030\001 \001(\tR\006userId\022\022\n\004name\030" +
+      "\002 \001(\tR\004name\"U\n\025CustomerCollectedData\022<\n\005" +
+      "items\030\001 \003(\0132&.api.commons.CustomerCollec" +
+      "tedDataItemR\005items\"C\n\031CustomerCollectedD" +
+      "ataItem\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\t" +
+      "R\005value\"\311\r\n\020OmniConversation\022-\n\020conversa" +
+      "tion_sid\030\001 \001(\003B\0020\001R\017conversationSid\022;\n\014c" +
+      "hannel_type\030\002 \001(\0162\030.api.commons.ChannelT" +
+      "ypeR\013channelType\022;\n\006skills\030\003 \001(\0132#.api.c" +
+      "ommons.OmniConversationSkillsR\006skills\022=\n" +
+      "\014date_created\030\004 \001(\0132\032.google.protobuf.Ti" +
+      "mestampR\013dateCreated\022?\n\rdate_modified\030\005 " +
+      "\001(\0132\032.google.protobuf.TimestampR\014dateMod" +
+      "ified\0227\n\006status\030\006 \001(\0162\037.api.commons.Conv" +
+      "ersationStatusR\006status\022R\n\026customer_email" +
+      "_address\030\007 \001(\0132\034.google.protobuf.StringV" +
+      "alueR\024customerEmailAddress\022P\n\025customer_p" +
+      "hone_number\030\010 \001(\0132\034.google.protobuf.Stri" +
+      "ngValueR\023customerPhoneNumber\022A\n\rcustomer" +
+      "_name\030\t \001(\0132\034.google.protobuf.StringValu" +
+      "eR\014customerName\022%\n\014campaign_sid\030\n \001(\003B\0020" +
+      "\001R\013campaignSid\022?\n\014reference_id\030\013 \001(\0132\034.g" +
+      "oogle.protobuf.StringValueR\013referenceId\022" +
+      "F\n\021last_message_time\030\014 \001(\0132\032.google.prot" +
+      "obuf.TimestampR\017lastMessageTime\022f\n\033conve" +
+      "rsation_collected_data\030\r \001(\0132&.api.commo" +
+      "ns.ConversationCollectedDataR\031conversati" +
+      "onCollectedData\022;\n\014sla_timeouts\030\016 \001(\0132\030." +
+      "api.commons.SLATimeoutsR\013slaTimeouts\022b\n\030" +
+      "conversation_assignments\030\017 \003(\0132\'.api.com" +
+      "mons.OmniConversationAssignmentR\027convers" +
+      "ationAssignments\022M\n\010metadata\030\020 \001(\01321.api" +
+      ".commons.OmniConversation.ConversationDe" +
+      "tailsR\010metadata\0225\n\010end_time\030\022 \001(\0132\032.goog" +
+      "le.protobuf.TimestampR\007endTime\0222\n\023campai" +
+      "gn_module_sid\030\023 \001(\003B\0020\001R\021campaignModuleS" +
+      "id\022Q\n\027last_message_group_time\030\024 \001(\0132\032.go" +
+      "ogle.protobuf.TimestampR\024lastMessageGrou" +
+      "pTime\022R\n\027last_message_group_type\030\025 \001(\0162\033" +
+      ".api.commons.OmniSenderTypeR\024lastMessage" +
+      "GroupType\022;\n\006result\030\026 \001(\0162#.api.commons." +
+      "OmniConversationResultR\006result\022Q\n\027last_s" +
+      "tate_changed_time\030\027 \001(\0132\032.google.protobu" +
+      "f.TimestampR\024lastStateChangedTime\032\277\001\n\023Co" +
+      "nversationDetails\022#\n\rcampaign_name\030\001 \001(\t" +
+      "R\014campaignName\022#\n\rsupport_email\030\002 \001(\tR\014s" +
+      "upportEmail\0220\n\024campaign_shorten_url\030\003 \001(" +
+      "\010R\022campaignShortenUrl\022,\n\022payment_portal_" +
+      "ids\030\004 \003(\tR\020paymentPortalIds\"\345\004\n\032OmniConv" +
+      "ersationAssignment\022B\n\033conversation_assig" +
+      "nment_sid\030\001 \001(\003B\0020\001R\031conversationAssignm" +
+      "entSid\022-\n\020conversation_sid\030\002 \001(\003B\0020\001R\017co" +
+      "nversationSid\022\033\n\tis_active\030\005 \001(\010R\010isActi" +
+      "ve\022U\n\017assignment_type\030\006 \001(\0162,.api.common" +
+      "s.AgentConversationAssignmentTypeR\016assig" +
+      "nmentType\022=\n\014date_created\030\007 \001(\0132\032.google" +
+      ".protobuf.TimestampR\013dateCreated\022?\n\rdate" +
+      "_modified\030\010 \001(\0132\032.google.protobuf.Timest" +
+      "ampR\014dateModified\022\027\n\007user_id\030\t \001(\tR\006user" +
+      "Id\022a\n\010metadata\030\n \001(\0132E.api.commons.OmniC" +
+      "onversationAssignment.ConversationAssign" +
+      "mentDetailsR\010metadata\022&\n\017asm_session_sid" +
+      "\030\013 \001(\003R\rasmSessionSid\032<\n\035ConversationAss" +
+      "ignmentDetails\022\033\n\tuser_name\030\001 \001(\tR\010userN" +
+      "ame\"\234\001\n\026OmniConversationSkills\022G\n\006skills" +
+      "\030\001 \003(\0132/.api.commons.OmniConversationSki" +
+      "lls.SkillsEntryR\006skills\0329\n\013SkillsEntry\022\020" +
+      "\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\010R\005value:\002" +
+      "8\001\"P\n\020WeekdayTimeRange\022<\n\007entries\030\001 \003(\0132" +
+      "\".api.commons.WeekdayTimeRangeEntryR\007ent" +
+      "ries\"\377\001\n\025WeekdayTimeRangeEntry\0226\n\tstart_" +
+      "day\030\001 \001(\0162\031.api.commons.Weekday.EnumR\010st" +
+      "artDay\022\035\n\nstart_hour\030\002 \001(\003R\tstartHour\022!\n" +
+      "\014start_minute\030\003 \001(\003R\013startMinute\0222\n\007end_" +
+      "day\030\004 \001(\0162\031.api.commons.Weekday.EnumR\006en" +
+      "dDay\022\031\n\010end_hour\030\005 \001(\003R\007endHour\022\035\n\nend_m" +
+      "inute\030\006 \001(\003R\tendMinute\"\366\001\n\013Disposition\022+" +
+      "\n\017disposition_sid\030\001 \001(\003B\0020\001R\016disposition" +
+      "Sid\022=\n\014date_created\030\002 \001(\0132\032.google.proto" +
+      "buf.TimestampR\013dateCreated\022?\n\rdate_modif" +
+      "ied\030\003 \001(\0132\032.google.protobuf.TimestampR\014d" +
+      "ateModified\022 \n\013disposition\030\004 \001(\tR\013dispos" +
+      "ition\022\030\n\007deleted\030\005 \001(\010R\007deleted\"\324\001\n\023GetQ" +
+      "ueuesDetailsRes\022R\n\rqueue_details\030\001 \003(\0132-" +
+      ".api.commons.GetQueuesDetailsRes.QueueDe" +
+      "tailsR\014queueDetails\032i\n\014QueueDetails\022;\n\014c" +
+      "hannel_type\030\001 \001(\0162\030.api.commons.ChannelT" +
+      "ypeR\013channelType\022\034\n\tqueueSize\030\002 \001(\003R\tque" +
+      "ueSize\"\263\003\n\031OmniCustomUnsubscribeLink\022A\n\033" +
+      "custom_unsubscribe_link_sid\030\001 \001(\003B\0020\001R\030c" +
+      "ustomUnsubscribeLinkSid\022\033\n\tlink_name\030\002 \001" +
+      "(\tR\010linkName\022\031\n\010link_url\030\003 \001(\tR\007linkUrl\022" +
+      "\034\n\tvalidated\030\004 \001(\010R\tvalidated\022=\n\014date_cr" +
+      "eated\030\005 \001(\0132\032.google.protobuf.TimestampR" +
+      "\013dateCreated\022?\n\rdate_modified\030\006 \001(\0132\032.go" +
+      "ogle.protobuf.TimestampR\014dateModified\022A\n" +
+      "\016date_validated\030\007 \001(\0132\032.google.protobuf." +
+      "TimestampR\rdateValidated\022 \n\013description\030" +
+      "\t \001(\tR\013description\022\030\n\007deleted\030\n \001(\010R\007del" +
+      "eted\"\371\003\n\013ContactList\022,\n\020contact_list_sid" +
+      "\030\001 \001(\003B\0020\001R\016contactListSid\022\022\n\004name\030\002 \001(\t" +
+      "R\004name\022 \n\013description\030\003 \001(\tR\013description" +
+      "\022\037\n\013field_names\030\004 \003(\tR\nfieldNames\0225\n\013pro" +
+      "ject_sid\030\006 \001(\0132\024.api.commons.Int64IdR\npr" +
+      "ojectSid\022=\n\014date_created\030\007 \001(\0132\032.google." +
+      "protobuf.TimestampR\013dateCreated\022?\n\rdate_" +
+      "modified\030\010 \001(\0132\032.google.protobuf.Timesta" +
+      "mpR\014dateModified\022B\n\017contact_entries\030\t \003(" +
+      "\0132\031.api.commons.ContactEntryR\016contactEnt" +
+      "ries\022=\n\010metadata\030\n \001(\0132!.api.commons.Con" +
+      "tactList.MetadataR\010metadata\032+\n\010Metadata\022" +
+      "\037\n\013entry_count\030\001 \001(\003R\nentryCount\"\312\002\n\014Con" +
+      "tactEntry\022.\n\021contact_entry_sid\030\001 \001(\003B\0020\001" +
+      "R\017contactEntrySid\022,\n\020contact_list_sid\030\002 " +
+      "\001(\003B\0020\001R\016contactListSid\022=\n\014date_created\030" +
+      "\003 \001(\0132\032.google.protobuf.TimestampR\013dateC" +
+      "reated\022?\n\rdate_modified\030\004 \001(\0132\032.google.p" +
+      "rotobuf.TimestampR\014dateModified\022\037\n\013field" +
+      "_names\030\005 \003(\tR\nfieldNames\022;\n\013data_fields\030" +
+      "\006 \003(\0132\032.api.commons.OmniDataFieldR\ndataF" +
+      "ields\"\232\006\n\010OmniTask\022\035\n\010task_sid\030\001 \001(\003B\0020\001" +
+      "R\007taskSid\0223\n\006status\030\002 \001(\0162\033.api.commons." +
+      "OmniTaskStatusR\006status\022=\n\014date_created\030\003" +
       " \001(\0132\032.google.protobuf.TimestampR\013dateCr" +
-      "eated\022?\n\rdate_modified\030\t \001(\0132\032.google.pr" +
-      "otobuf.TimestampR\014dateModified\022;\n\nconten" +
-      "t_id\030\n \001(\0132\034.google.protobuf.StringValue" +
-      "R\tcontentId\0222\n\005width\030\013 \001(\0132\034.google.prot" +
-      "obuf.StringValueR\005width\0224\n\006height\030\014 \001(\0132" +
-      "\034.google.protobuf.StringValueR\006height\"e\n" +
-      "\017OmniStartWrapUp\022R\n\027primary_asm_session_" +
-      "sid\030\001 \001(\0132\033.google.protobuf.Int64ValueR\024" +
-      "primaryAsmSessionSid\"f\n\020OmniFinishWrapUp" +
-      "\022R\n\027primary_asm_session_sid\030\001 \001(\0132\033.goog" +
-      "le.protobuf.Int64ValueR\024primaryAsmSessio" +
-      "nSid\"a\n\013OmniSuspend\022R\n\027primary_asm_sessi" +
-      "on_sid\030\001 \001(\0132\033.google.protobuf.Int64Valu" +
-      "eR\024primaryAsmSessionSid\"k\n\025OmniCloseConv" +
-      "ersation\022R\n\027primary_asm_session_sid\030\001 \001(" +
-      "\0132\033.google.protobuf.Int64ValueR\024primaryA" +
-      "smSessionSid\"2\n\024OmniQueueInformation\022\032\n\010" +
-      "position\030\001 \001(\003R\010position\"9\n\033OmniRequestQ" +
-      "ueueInformation\022\032\n\010position\030\001 \001(\010R\010posit" +
-      "ion\"?\n\021OmniCannedMessage\022*\n\021canned_messa" +
-      "ge_id\030\001 \001(\tR\017cannedMessageId\"N\n\037OmniConv" +
-      "ersationUserInformation\022\027\n\007user_id\030\001 \001(\t" +
-      "R\006userId\022\022\n\004name\030\002 \001(\tR\004name\"U\n\025Customer" +
-      "CollectedData\022<\n\005items\030\001 \003(\0132&.api.commo" +
-      "ns.CustomerCollectedDataItemR\005items\"C\n\031C" +
-      "ustomerCollectedDataItem\022\020\n\003key\030\001 \001(\tR\003k" +
-      "ey\022\024\n\005value\030\002 \001(\tR\005value\"\311\r\n\020OmniConvers" +
-      "ation\022-\n\020conversation_sid\030\001 \001(\003B\0020\001R\017con" +
-      "versationSid\022;\n\014channel_type\030\002 \001(\0162\030.api" +
-      ".commons.ChannelTypeR\013channelType\022;\n\006ski" +
-      "lls\030\003 \001(\0132#.api.commons.OmniConversation" +
-      "SkillsR\006skills\022=\n\014date_created\030\004 \001(\0132\032.g" +
-      "oogle.protobuf.TimestampR\013dateCreated\022?\n" +
-      "\rdate_modified\030\005 \001(\0132\032.google.protobuf.T" +
-      "imestampR\014dateModified\0227\n\006status\030\006 \001(\0162\037" +
-      ".api.commons.ConversationStatusR\006status\022" +
-      "R\n\026customer_email_address\030\007 \001(\0132\034.google" +
-      ".protobuf.StringValueR\024customerEmailAddr" +
-      "ess\022P\n\025customer_phone_number\030\010 \001(\0132\034.goo" +
-      "gle.protobuf.StringValueR\023customerPhoneN" +
-      "umber\022A\n\rcustomer_name\030\t \001(\0132\034.google.pr" +
-      "otobuf.StringValueR\014customerName\022%\n\014camp" +
-      "aign_sid\030\n \001(\003B\0020\001R\013campaignSid\022?\n\014refer" +
-      "ence_id\030\013 \001(\0132\034.google.protobuf.StringVa" +
-      "lueR\013referenceId\022F\n\021last_message_time\030\014 " +
-      "\001(\0132\032.google.protobuf.TimestampR\017lastMes" +
-      "sageTime\022f\n\033conversation_collected_data\030" +
-      "\r \001(\0132&.api.commons.ConversationCollecte" +
-      "dDataR\031conversationCollectedData\022;\n\014sla_" +
-      "timeouts\030\016 \001(\0132\030.api.commons.SLATimeouts" +
-      "R\013slaTimeouts\022b\n\030conversation_assignment" +
-      "s\030\017 \003(\0132\'.api.commons.OmniConversationAs" +
-      "signmentR\027conversationAssignments\022M\n\010met" +
-      "adata\030\020 \001(\01321.api.commons.OmniConversati" +
-      "on.ConversationDetailsR\010metadata\0225\n\010end_" +
-      "time\030\022 \001(\0132\032.google.protobuf.TimestampR\007" +
-      "endTime\0222\n\023campaign_module_sid\030\023 \001(\003B\0020\001" +
-      "R\021campaignModuleSid\022Q\n\027last_message_grou" +
-      "p_time\030\024 \001(\0132\032.google.protobuf.Timestamp" +
-      "R\024lastMessageGroupTime\022R\n\027last_message_g" +
-      "roup_type\030\025 \001(\0162\033.api.commons.OmniSender" +
-      "TypeR\024lastMessageGroupType\022;\n\006result\030\026 \001" +
-      "(\0162#.api.commons.OmniConversationResultR" +
-      "\006result\022Q\n\027last_state_changed_time\030\027 \001(\013" +
-      "2\032.google.protobuf.TimestampR\024lastStateC" +
-      "hangedTime\032\277\001\n\023ConversationDetails\022#\n\rca" +
-      "mpaign_name\030\001 \001(\tR\014campaignName\022#\n\rsuppo" +
-      "rt_email\030\002 \001(\tR\014supportEmail\0220\n\024campaign" +
-      "_shorten_url\030\003 \001(\010R\022campaignShortenUrl\022," +
-      "\n\022payment_portal_ids\030\004 \003(\tR\020paymentPorta" +
-      "lIds\"\345\004\n\032OmniConversationAssignment\022B\n\033c" +
-      "onversation_assignment_sid\030\001 \001(\003B\0020\001R\031co" +
-      "nversationAssignmentSid\022-\n\020conversation_" +
-      "sid\030\002 \001(\003B\0020\001R\017conversationSid\022\033\n\tis_act" +
-      "ive\030\005 \001(\010R\010isActive\022U\n\017assignment_type\030\006" +
-      " \001(\0162,.api.commons.AgentConversationAssi" +
-      "gnmentTypeR\016assignmentType\022=\n\014date_creat" +
-      "ed\030\007 \001(\0132\032.google.protobuf.TimestampR\013da" +
-      "teCreated\022?\n\rdate_modified\030\010 \001(\0132\032.googl" +
-      "e.protobuf.TimestampR\014dateModified\022\027\n\007us" +
-      "er_id\030\t \001(\tR\006userId\022a\n\010metadata\030\n \001(\0132E." +
-      "api.commons.OmniConversationAssignment.C" +
-      "onversationAssignmentDetailsR\010metadata\022&" +
-      "\n\017asm_session_sid\030\013 \001(\003R\rasmSessionSid\032<" +
-      "\n\035ConversationAssignmentDetails\022\033\n\tuser_" +
-      "name\030\001 \001(\tR\010userName\"\234\001\n\026OmniConversatio" +
-      "nSkills\022G\n\006skills\030\001 \003(\0132/.api.commons.Om" +
-      "niConversationSkills.SkillsEntryR\006skills" +
-      "\0329\n\013SkillsEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005val" +
-      "ue\030\002 \001(\010R\005value:\0028\001\"P\n\020WeekdayTimeRange\022" +
-      "<\n\007entries\030\001 \003(\0132\".api.commons.WeekdayTi" +
-      "meRangeEntryR\007entries\"\377\001\n\025WeekdayTimeRan" +
-      "geEntry\0226\n\tstart_day\030\001 \001(\0162\031.api.commons" +
-      ".Weekday.EnumR\010startDay\022\035\n\nstart_hour\030\002 " +
-      "\001(\003R\tstartHour\022!\n\014start_minute\030\003 \001(\003R\013st" +
-      "artMinute\0222\n\007end_day\030\004 \001(\0162\031.api.commons" +
-      ".Weekday.EnumR\006endDay\022\031\n\010end_hour\030\005 \001(\003R" +
-      "\007endHour\022\035\n\nend_minute\030\006 \001(\003R\tendMinute\"" +
-      "\366\001\n\013Disposition\022+\n\017disposition_sid\030\001 \001(\003" +
-      "B\0020\001R\016dispositionSid\022=\n\014date_created\030\002 \001" +
-      "(\0132\032.google.protobuf.TimestampR\013dateCrea" +
-      "ted\022?\n\rdate_modified\030\003 \001(\0132\032.google.prot" +
-      "obuf.TimestampR\014dateModified\022 \n\013disposit" +
-      "ion\030\004 \001(\tR\013disposition\022\030\n\007deleted\030\005 \001(\010R" +
-      "\007deleted\"\324\001\n\023GetQueuesDetailsRes\022R\n\rqueu" +
-      "e_details\030\001 \003(\0132-.api.commons.GetQueuesD" +
-      "etailsRes.QueueDetailsR\014queueDetails\032i\n\014" +
-      "QueueDetails\022;\n\014channel_type\030\001 \001(\0162\030.api" +
-      ".commons.ChannelTypeR\013channelType\022\034\n\tque" +
-      "ueSize\030\002 \001(\003R\tqueueSize\"\263\003\n\031OmniCustomUn" +
-      "subscribeLink\022A\n\033custom_unsubscribe_link" +
-      "_sid\030\001 \001(\003B\0020\001R\030customUnsubscribeLinkSid" +
-      "\022\033\n\tlink_name\030\002 \001(\tR\010linkName\022\031\n\010link_ur" +
-      "l\030\003 \001(\tR\007linkUrl\022\034\n\tvalidated\030\004 \001(\010R\tval" +
-      "idated\022=\n\014date_created\030\005 \001(\0132\032.google.pr" +
-      "otobuf.TimestampR\013dateCreated\022?\n\rdate_mo" +
-      "dified\030\006 \001(\0132\032.google.protobuf.Timestamp" +
-      "R\014dateModified\022A\n\016date_validated\030\007 \001(\0132\032" +
-      ".google.protobuf.TimestampR\rdateValidate" +
-      "d\022 \n\013description\030\t \001(\tR\013description\022\030\n\007d" +
-      "eleted\030\n \001(\010R\007deleted\"\371\003\n\013ContactList\022,\n" +
-      "\020contact_list_sid\030\001 \001(\003B\0020\001R\016contactList" +
-      "Sid\022\022\n\004name\030\002 \001(\tR\004name\022 \n\013description\030\003" +
-      " \001(\tR\013description\022\037\n\013field_names\030\004 \003(\tR\n" +
-      "fieldNames\0225\n\013project_sid\030\006 \001(\0132\024.api.co" +
-      "mmons.Int64IdR\nprojectSid\022=\n\014date_create" +
-      "d\030\007 \001(\0132\032.google.protobuf.TimestampR\013dat" +
-      "eCreated\022?\n\rdate_modified\030\010 \001(\0132\032.google" +
-      ".protobuf.TimestampR\014dateModified\022B\n\017con" +
-      "tact_entries\030\t \003(\0132\031.api.commons.Contact" +
-      "EntryR\016contactEntries\022=\n\010metadata\030\n \001(\0132" +
-      "!.api.commons.ContactList.MetadataR\010meta" +
-      "data\032+\n\010Metadata\022\037\n\013entry_count\030\001 \001(\003R\ne" +
-      "ntryCount\"\312\002\n\014ContactEntry\022.\n\021contact_en" +
-      "try_sid\030\001 \001(\003B\0020\001R\017contactEntrySid\022,\n\020co" +
-      "ntact_list_sid\030\002 \001(\003B\0020\001R\016contactListSid" +
-      "\022=\n\014date_created\030\003 \001(\0132\032.google.protobuf" +
-      ".TimestampR\013dateCreated\022?\n\rdate_modified" +
-      "\030\004 \001(\0132\032.google.protobuf.TimestampR\014date" +
-      "Modified\022\037\n\013field_names\030\005 \003(\tR\nfieldName" +
-      "s\022;\n\013data_fields\030\006 \003(\0132\032.api.commons.Omn" +
-      "iDataFieldR\ndataFields\"\330\006\n\010OmniTask\022\035\n\010t" +
-      "ask_sid\030\001 \001(\003B\0020\001R\007taskSid\0223\n\006status\030\002 \001" +
-      "(\0162\033.api.commons.OmniTaskStatusR\006status\022" +
-      "=\n\014date_created\030\003 \001(\0132\032.google.protobuf." +
-      "TimestampR\013dateCreated\022?\n\rdate_modified\030" +
-      "\004 \001(\0132\032.google.protobuf.TimestampR\014dateM" +
-      "odified\0222\n\023campaign_module_sid\030\005 \001(\003B\0020\001" +
-      "R\021campaignModuleSid\022%\n\014campaign_sid\030\006 \001(" +
-      "\003B\0020\001R\013campaignSid\022@\n\021contact_entry_sid\030" +
-      "\007 \001(\0132\024.api.commons.Int64IdR\017contactEntr" +
-      "ySid\0220\n\005state\030\010 \001(\0132\032.api.commons.OmniTa" +
-      "skStateR\005state\022;\n\013data_fields\030\t \003(\0132\032.ap" +
-      "i.commons.OmniDataFieldR\ndataFields\0227\n\007d" +
-      "etails\030\n \001(\0132\035.api.commons.OmniTask.Deta" +
-      "ilsR\007details\022\022\n\004name\030\013 \001(\tR\004name\022C\n\016stat" +
-      "us_message\030\014 \001(\0132\034.google.protobuf.Strin" +
-      "gValueR\rstatusMessage\022A\n\016scheduled_time\030" +
-      "\r \001(\0132\032.google.protobuf.TimestampR\rsched" +
-      "uledTime\022<\n\013task_config\030\017 \001(\0132\033.api.comm" +
-      "ons.OmniTaskConfigR\ntaskConfig\032S\n\007Detail" +
-      "s\022H\n\021contact_list_name\030\001 \001(\0132\034.google.pr" +
-      "otobuf.StringValueR\017contactListNameJ\004\010\016\020" +
-      "\017\"\365\001\n\016OmniTaskConfig\022;\n\006skills\030\001 \001(\0132#.a" +
-      "pi.commons.OmniConversationSkillsR\006skill" +
-      "s\022U\n\031absolute_timeout_duration\030\002 \001(\0132\031.g" +
-      "oogle.protobuf.DurationR\027absoluteTimeout" +
-      "Duration\022O\n\026agent_timeout_duration\030\003 \001(\013" +
-      "2\031.google.protobuf.DurationR\024agentTimeou" +
-      "tDuration\"\307\002\n\rOmniTaskState\022D\n\014destinati" +
-      "ons\030\001 \003(\0132 .api.commons.OmniTaskState.En" +
-      "tryR\014destinations\022:\n\007sources\030\002 \003(\0132 .api" +
-      ".commons.OmniTaskState.EntryR\007sources\0229\n" +
-      "\010rule_set\030\003 \001(\0132\036.api.commons.Compliance" +
-      "RuleSetR\007ruleSet\032y\n\005Entry\022\030\n\007address\030\001 \001" +
-      "(\tR\007address\022\035\n\ntimes_used\030\002 \001(\003R\ttimesUs" +
-      "ed\0227\n\tlast_used\030\003 \001(\0132\032.google.protobuf." +
-      "TimestampR\010lastUsed\"|\n\021ComplianceRuleSet" +
-      "\022\016\n\002id\030\001 \001(\tR\002id\022\022\n\004name\030\002 \001(\tR\004name\022\020\n\003" +
-      "sha\030\003 \001(\tR\003sha\0221\n\005rules\030\004 \003(\0132\033.api.comm" +
-      "ons.ComplianceRuleR\005rules\"e\n\016ComplianceR" +
-      "ule\022\022\n\004text\030\001 \001(\tR\004text\022\026\n\006permit\030\002 \001(\010R" +
-      "\006permit\022\'\n\017plugin_response\030\003 \001(\tR\016plugin",
-      "Response\"\251\001\n\rOmniDataField\022\037\n\tfield_sid\030" +
-      "\001 \001(\003B\0020\001R\010fieldSid\022!\n\nparent_sid\030\002 \001(\003B" +
-      "\0020\001R\tparentSid\022\022\n\004name\030\003 \001(\tR\004name\022\024\n\005va" +
-      "lue\030\004 \001(\tR\005value\022*\n\004type\030\005 \001(\0162\026.api.com" +
-      "mons.FieldTypeR\004type\"\307\t\n\016ConnectedInbox\022" +
-      "2\n\023connected_inbox_sid\030\001 \001(\003B\0020\001R\021connec" +
-      "tedInboxSid\022#\n\remail_address\030\002 \001(\tR\014emai" +
-      "lAddress\022\032\n\010username\030\003 \001(\tR\010username\022\032\n\010" +
-      "password\030\004 \001(\tR\010password\0226\n\027check_freque" +
-      "ncy_minutes\030\005 \001(\003R\025checkFrequencyMinutes" +
-      "\022\037\n\013server_name\030\006 \001(\tR\nserverName\022\037\n\013ser" +
-      "ver_port\030\007 \001(\003R\nserverPort\022J\n\023last_sched" +
-      "uled_time\030\010 \001(\0132\032.google.protobuf.Timest" +
-      "ampR\021lastScheduledTime\022=\n\014last_checked\030\t" +
-      " \001(\0132\032.google.protobuf.TimestampR\013lastCh" +
-      "ecked\022\'\n\017purge_threshold\030\n \001(\003R\016purgeThr" +
-      "eshold\022\035\n\nemail_salt\030\013 \001(\tR\temailSalt\0228\n" +
-      "\030num_consecutive_failures\030\014 \001(\005R\026numCons" +
-      "ecutiveFailures\022;\n\nlast_error\030\r \001(\0132\034.go" +
-      "ogle.protobuf.StringValueR\tlastError\022H\n\022" +
-      "standby_error_time\030\016 \001(\0132\032.google.protob" +
-      "uf.TimestampR\020standbyErrorTime\022=\n\014last_u" +
-      "pdated\030\017 \001(\0132\032.google.protobuf.Timestamp" +
-      "R\013lastUpdated\022(\n\020max_message_size\030\020 \001(\005R" +
-      "\016maxMessageSize\022!\n\014max_messages\030\021 \001(\005R\013m" +
-      "axMessages\022]\n\034google_xoauth2_refresh_tok" +
-      "en\030\022 \001(\0132\034.google.protobuf.StringValueR\031" +
-      "googleXoauth2RefreshToken\022[\n\033google_xoau" +
-      "th2_access_token\030\023 \001(\0132\034.google.protobuf" +
-      ".StringValueR\030googleXoauth2AccessToken\022n" +
-      "\n&google_xoauth2_access_token_expiration" +
-      "\030\024 \001(\0132\032.google.protobuf.TimestampR\"goog" +
-      "leXoauth2AccessTokenExpiration\022^\n\023authen" +
-      "tication_type\030\025 \001(\0162-.api.commons.Connec" +
-      "tedInboxAuthenticationTypeR\022authenticati" +
-      "onType\"\324\002\n\rVerifiedEmail\0220\n\022verified_ema" +
-      "il_sid\030\001 \001(\003B\0020\001R\020verifiedEmailSid\022#\n\rem" +
-      "ail_address\030\003 \001(\tR\014emailAddress\022\032\n\010verif" +
-      "ied\030\004 \001(\010R\010verified\0229\n\ncreated_on\030\005 \001(\0132" +
-      "\032.google.protobuf.TimestampR\tcreatedOn\022;" +
-      "\n\013verified_on\030\006 \001(\0132\032.google.protobuf.Ti" +
-      "mestampR\nverifiedOn\022\030\n\007deleted\030\007 \001(\010R\007de" +
-      "leted\022>\n\013description\030\010 \001(\0132\034.google.prot" +
-      "obuf.StringValueR\013description\"\303\002\n\tSignat" +
-      "ure\022\'\n\rsignature_sid\030\001 \001(\003B\0020\001R\014signatur" +
-      "eSid\022\034\n\tsignature\030\002 \001(\tR\tsignature\022=\n\014da" +
-      "te_created\030\003 \001(\0132\032.google.protobuf.Times" +
-      "tampR\013dateCreated\022?\n\rdate_modified\030\004 \001(\013" +
-      "2\032.google.protobuf.TimestampR\014dateModifi" +
-      "ed\0229\n\ndeleted_on\030\005 \001(\0132\032.google.protobuf" +
-      ".TimestampR\tdeletedOn\022\022\n\004name\030\006 \001(\tR\004nam" +
-      "e\022 \n\013description\030\007 \001(\tR\013description*X\n\rS" +
-      "msNumberType\022\027\n\023SMS_SHORT_CODE_TYPE\020\000\022\031\n" +
-      "\025SMS_ALPHANUMERIC_TYPE\020\001\022\023\n\017SMS_NUMBER_T" +
-      "YPE\020\002*\236\001\n\021SmsNumberProvider\022\024\n\020UNKNOWN_P" +
-      "ROVIDER\020\000\022\026\n\022BANDWIDTH_PROVIDER\020\001\022\026\n\022BUR" +
-      "ST_SMS_PROVIDER\020\002\022\022\n\016PLIVO_PROVIDER\020\003\022\024\n" +
-      "\020APEIRON_PROVIDER\020\004\022\031\n\025AUSBURST_SMS_PROV" +
-      "IDER\020\005*l\n\026OmniCampaignModuleType\022\027\n\023MODU" +
-      "LE_TYPE_INBOUND\020\000\022\030\n\024MODULE_TYPE_OUTBOUN" +
-      "D\020\001\022\037\n\033MODULE_TYPE_MANUAL_APPROVAL\020\002*j\n\013" +
+      "eated\022?\n\rdate_modified\030\004 \001(\0132\032.google.pr" +
+      "otobuf.TimestampR\014dateModified\0222\n\023campai" +
+      "gn_module_sid\030\005 \001(\003B\0020\001R\021campaignModuleS" +
+      "id\022%\n\014campaign_sid\030\006 \001(\003B\0020\001R\013campaignSi" +
+      "d\022@\n\021contact_entry_sid\030\007 \001(\0132\024.api.commo" +
+      "ns.Int64IdR\017contactEntrySid\0220\n\005state\030\010 \001" +
+      "(\0132\032.api.commons.OmniTaskStateR\005state\022;\n" +
+      "\013data_fields\030\t \003(\0132\032.api.commons.OmniDat" +
+      "aFieldR\ndataFields\0227\n\007details\030\n \001(\0132\035.ap" +
+      "i.commons.OmniTask.DetailsR\007details\022\022\n\004n" +
+      "ame\030\013 \001(\tR\004name\022C\n\016status_message\030\014 \001(\0132" +
+      "\034.google.protobuf.StringValueR\rstatusMes" +
+      "sage\022A\n\016scheduled_time\030\r \001(\0132\032.google.pr" +
+      "otobuf.TimestampR\rscheduledTime\032S\n\007Detai" +
+      "ls\022H\n\021contact_list_name\030\001 \001(\0132\034.google.p" +
+      "rotobuf.StringValueR\017contactListNameJ\004\010\016" +
+      "\020\017\"\307\002\n\rOmniTaskState\022D\n\014destinations\030\001 \003" +
+      "(\0132 .api.commons.OmniTaskState.EntryR\014de" +
+      "stinations\022:\n\007sources\030\002 \003(\0132 .api.common" +
+      "s.OmniTaskState.EntryR\007sources\0229\n\010rule_s" +
+      "et\030\003 \001(\0132\036.api.commons.ComplianceRuleSet" +
+      "R\007ruleSet\032y\n\005Entry\022\030\n\007address\030\001 \001(\tR\007add" +
+      "ress\022\035\n\ntimes_used\030\002 \001(\003R\ttimesUsed\0227\n\tl" +
+      "ast_used\030\003 \001(\0132\032.google.protobuf.Timesta" +
+      "mpR\010lastUsed\"|\n\021ComplianceRuleSet\022\016\n\002id\030" +
+      "\001 \001(\tR\002id\022\022\n\004name\030\002 \001(\tR\004name\022\020\n\003sha\030\003 \001" +
+      "(\tR\003sha\0221\n\005rules\030\004 \003(\0132\033.api.commons.Com" +
+      "plianceRuleR\005rules\"e\n\016ComplianceRule\022\022\n\004" +
+      "text\030\001 \001(\tR\004text\022\026\n\006permit\030\002 \001(\010R\006permit" +
+      "\022\'\n\017plugin_response\030\003 \001(\tR\016pluginRespons" +
+      "e\"\251\001\n\rOmniDataField\022\037\n\tfield_sid\030\001 \001(\003B\002" +
+      "0\001R\010fieldSid\022!\n\nparent_sid\030\002 \001(\003B\0020\001R\tpa" +
+      "rentSid\022\022\n\004name\030\003 \001(\tR\004name\022\024\n\005value\030\004 \001" +
+      "(\tR\005value\022*\n\004type\030\005 \001(\0162\026.api.commons.Fi" +
+      "eldTypeR\004type\"\307\t\n\016ConnectedInbox\0222\n\023conn" +
+      "ected_inbox_sid\030\001 \001(\003B\0020\001R\021connectedInbo" +
+      "xSid\022#\n\remail_address\030\002 \001(\tR\014emailAddres" +
+      "s\022\032\n\010username\030\003 \001(\tR\010username\022\032\n\010passwor" +
+      "d\030\004 \001(\tR\010password\0226\n\027check_frequency_min" +
+      "utes\030\005 \001(\003R\025checkFrequencyMinutes\022\037\n\013ser",
+      "ver_name\030\006 \001(\tR\nserverName\022\037\n\013server_por" +
+      "t\030\007 \001(\003R\nserverPort\022J\n\023last_scheduled_ti" +
+      "me\030\010 \001(\0132\032.google.protobuf.TimestampR\021la" +
+      "stScheduledTime\022=\n\014last_checked\030\t \001(\0132\032." +
+      "google.protobuf.TimestampR\013lastChecked\022\'" +
+      "\n\017purge_threshold\030\n \001(\003R\016purgeThreshold\022" +
+      "\035\n\nemail_salt\030\013 \001(\tR\temailSalt\0228\n\030num_co" +
+      "nsecutive_failures\030\014 \001(\005R\026numConsecutive" +
+      "Failures\022;\n\nlast_error\030\r \001(\0132\034.google.pr" +
+      "otobuf.StringValueR\tlastError\022H\n\022standby" +
+      "_error_time\030\016 \001(\0132\032.google.protobuf.Time" +
+      "stampR\020standbyErrorTime\022=\n\014last_updated\030" +
+      "\017 \001(\0132\032.google.protobuf.TimestampR\013lastU" +
+      "pdated\022(\n\020max_message_size\030\020 \001(\005R\016maxMes" +
+      "sageSize\022!\n\014max_messages\030\021 \001(\005R\013maxMessa" +
+      "ges\022]\n\034google_xoauth2_refresh_token\030\022 \001(" +
+      "\0132\034.google.protobuf.StringValueR\031googleX" +
+      "oauth2RefreshToken\022[\n\033google_xoauth2_acc" +
+      "ess_token\030\023 \001(\0132\034.google.protobuf.String" +
+      "ValueR\030googleXoauth2AccessToken\022n\n&googl" +
+      "e_xoauth2_access_token_expiration\030\024 \001(\0132" +
+      "\032.google.protobuf.TimestampR\"googleXoaut" +
+      "h2AccessTokenExpiration\022^\n\023authenticatio" +
+      "n_type\030\025 \001(\0162-.api.commons.ConnectedInbo" +
+      "xAuthenticationTypeR\022authenticationType\"" +
+      "\324\002\n\rVerifiedEmail\0220\n\022verified_email_sid\030" +
+      "\001 \001(\003B\0020\001R\020verifiedEmailSid\022#\n\remail_add" +
+      "ress\030\003 \001(\tR\014emailAddress\022\032\n\010verified\030\004 \001" +
+      "(\010R\010verified\0229\n\ncreated_on\030\005 \001(\0132\032.googl" +
+      "e.protobuf.TimestampR\tcreatedOn\022;\n\013verif" +
+      "ied_on\030\006 \001(\0132\032.google.protobuf.Timestamp" +
+      "R\nverifiedOn\022\030\n\007deleted\030\007 \001(\010R\007deleted\022>" +
+      "\n\013description\030\010 \001(\0132\034.google.protobuf.St" +
+      "ringValueR\013description\"\303\002\n\tSignature\022\'\n\r" +
+      "signature_sid\030\001 \001(\003B\0020\001R\014signatureSid\022\034\n" +
+      "\tsignature\030\002 \001(\tR\tsignature\022=\n\014date_crea" +
+      "ted\030\003 \001(\0132\032.google.protobuf.TimestampR\013d" +
+      "ateCreated\022?\n\rdate_modified\030\004 \001(\0132\032.goog" +
+      "le.protobuf.TimestampR\014dateModified\0229\n\nd" +
+      "eleted_on\030\005 \001(\0132\032.google.protobuf.Timest" +
+      "ampR\tdeletedOn\022\022\n\004name\030\006 \001(\tR\004name\022 \n\013de" +
+      "scription\030\007 \001(\tR\013description*X\n\rSmsNumbe" +
+      "rType\022\027\n\023SMS_SHORT_CODE_TYPE\020\000\022\031\n\025SMS_AL" +
+      "PHANUMERIC_TYPE\020\001\022\023\n\017SMS_NUMBER_TYPE\020\002*\236" +
+      "\001\n\021SmsNumberProvider\022\024\n\020UNKNOWN_PROVIDER" +
+      "\020\000\022\026\n\022BANDWIDTH_PROVIDER\020\001\022\026\n\022BURST_SMS_" +
+      "PROVIDER\020\002\022\022\n\016PLIVO_PROVIDER\020\003\022\024\n\020APEIRO" +
+      "N_PROVIDER\020\004\022\031\n\025AUSBURST_SMS_PROVIDER\020\005*" +
+      "K\n\026OmniCampaignModuleType\022\027\n\023MODULE_TYPE" +
+      "_INBOUND\020\000\022\030\n\024MODULE_TYPE_OUTBOUND\020\001*j\n\013" +
       "ChannelType\022\026\n\022CHANNEL_TYPE_EMAIL\020\000\022\024\n\020C" +
       "HANNEL_TYPE_SMS\020\001\022\025\n\021CHANNEL_TYPE_CHAT\020\002" +
       "\022\026\n\022CHANNEL_TYPE_VOICE\020\003*2\n\025OmniCampaign" +
@@ -835,61 +819,59 @@ public final class OmnichannelProto {
       "ED_AS_SPAM\020\360~\022\"\n\035OMNI_OUTBOUND_MESSAGE_B" +
       "LOCKED\020\372~\022\030\n\023OMNI_SYSTEM_MESSAGE\020\262}*1\n\026O" +
       "mniConversationResult\022\010\n\004NONE\020\000\022\r\n\tABAND" +
-      "ONED\020\001*\360\001\n\016OmniTaskStatus\022\025\n\021OMNI_TASK_W" +
-      "AITING\020\000\022\037\n\033OMNI_TASK_WAITING_FOR_QUEUE\020" +
-      "\001\022\"\n\036OMNI_TASK_WAITING_FOR_APPROVAL\020\002\022\025\n" +
-      "\021OMNI_TASK_SENDING\020d\022\034\n\030OMNI_TASK_SENDIN" +
-      "G_FAILED\020n\022 \n\034OMNI_TASK_SENDING_INCOMPLE" +
-      "TE\020o\022\022\n\016OMNI_TASK_SENT\020x\022\027\n\022OMNI_TASK_RE" +
-      "CEIVED\020\202\001*\241\001\n\016OmniSenderType\022\032\n\026OMNI_SEN" +
-      "DER_TYPE_AGENT\020\000\022\035\n\031OMNI_SENDER_TYPE_CUS" +
-      "TOMER\020\001\022\033\n\027OMNI_SENDER_TYPE_SYSTEM\020\002\022\034\n\030" +
-      "OMNI_SENDER_TYPE_MANAGER\020\003\022\031\n\025OMNI_SENDE" +
-      "R_TYPE_FLOW\020\004*\214\001\n ConnectedInboxAuthenti" +
-      "cationType\0220\n,CONNECTED_INBOX_AUTHENTICA" +
-      "TION_TYPE_PASSWORD\020\000\0226\n2CONNECTED_INBOX_" +
-      "AUTHENTICATION_TYPE_GOOGLE_XOAUTH2\020\001*\341\003\n" +
-      " ConversationStateChangeTimerName\022-\n)CON" +
-      "VERSATION_STATE_CHANGE_TIMER_NAME_WAIT\020\000" +
-      "\022-\n)CONVERSATION_STATE_CHANGE_TIMER_NAME" +
-      "_TALK\020d\022D\n@CONVERSATION_STATE_CHANGE_TIM" +
-      "ER_NAME_TALK_INITIAL_AGENT_RESPONSE\020e\022<\n" +
-      "8CONVERSATION_STATE_CHANGE_TIMER_NAME_TA" +
-      "LK_AGENT_RESPONSE\020f\022?\n;CONVERSATION_STAT" +
-      "E_CHANGE_TIMER_NAME_TALK_CUSTOMER_RESPON" +
-      "SE\020g\0227\n3CONVERSATION_STATE_CHANGE_TIMER_" +
-      "NAME_TALK_SUSPENDED\020h\0221\n,CONVERSATION_ST" +
-      "ATE_CHANGE_TIMER_NAME_WRAP_UP\020\310\001\022.\n)CONV" +
-      "ERSATION_STATE_CHANGE_TIMER_NAME_IDLE\020\254\002" +
-      "*\353\004\n\034OmniConversationMetadataName\022\027\n\023AGE" +
-      "NT_RESPONSE_TIME\020\000\022\026\n\022CUSTOMER_WAIT_TIME" +
-      "\020\001\022\017\n\013HANDLE_TIME\020\002\022\023\n\017TRANSCRIPT_PATH\020\003" +
-      "\022-\n)OMNI_CONVERSATION_METADATA_NAME_FLOW" +
-      "_DATA\020\004\022.\n*OMNI_CONVERSATION_METADATA_NA" +
-      "ME_TIMER_WAIT\020\n\022.\n*OMNI_CONVERSATION_MET" +
-      "ADATA_NAME_TIMER_TALK\020d\022E\nAOMNI_CONVERSA" +
-      "TION_METADATA_NAME_TIMER_TALK_INITIAL_AG" +
-      "ENT_RESPONSE\020e\022=\n9OMNI_CONVERSATION_META" +
-      "DATA_NAME_TIMER_TALK_AGENT_RESPONSE\020f\022@\n" +
-      "<OMNI_CONVERSATION_METADATA_NAME_TIMER_T" +
-      "ALK_CUSTOMER_RESPONSE\020g\0228\n4OMNI_CONVERSA" +
-      "TION_METADATA_NAME_TIMER_TALK_SUSPENDED\020" +
-      "h\0222\n-OMNI_CONVERSATION_METADATA_NAME_TIM" +
-      "ER_WRAP_UP\020\310\001\022/\n*OMNI_CONVERSATION_METAD" +
-      "ATA_NAME_TIMER_IDLE\020\254\002*c\n\rProjectStatus\022" +
-      "\032\n\026PROJECT_STATUS_UNKNOWN\020\000\022\031\n\023PROJECT_S" +
-      "TATUS_OPEN\020\350\204\001\022\033\n\025PROJECT_STATUS_CLOSED\020" +
-      "\362\204\001*\307\001\n\016CampaignStatus\022\035\n\031CAMPAIGN_STATU" +
-      "S_SCHEDULED\020\000\022\033\n\027CAMPAIGN_STATUS_RUNNING" +
-      "\020\001\022\032\n\026CAMPAIGN_STATUS_PAUSED\020\002\022\035\n\031CAMPAI" +
-      "GN_STATUS_COMPLETED\020\003\022\034\n\030CAMPAIGN_STATUS" +
-      "_CANCELED\020\004\022 \n\034CAMPAIGN_STATUS_ERROR_PAU" +
-      "SED\020\005*T\n\021CampaignDirection\022\036\n\032CAMPAIGN_D" +
-      "IRECTION_INBOUND\020\000\022\037\n\033CAMPAIGN_DIRECTION" +
-      "_OUTBOUND\020\001B~\n\035com.tcn.cloud.api.api.com" +
-      "monsB\020OmnichannelProtoP\001\242\002\003ACX\252\002\013Api.Com" +
-      "mons\312\002\013Api\\Commons\342\002\027Api\\Commons\\GPBMeta" +
-      "data\352\002\014Api::Commonsb\006proto3"
+      "ONED\020\001*\253\001\n\016OmniTaskStatus\022\025\n\021OMNI_TASK_W" +
+      "AITING\020\000\022\025\n\021OMNI_TASK_SENDING\020d\022\034\n\030OMNI_" +
+      "TASK_SENDING_FAILED\020n\022 \n\034OMNI_TASK_SENDI" +
+      "NG_INCOMPLETE\020o\022\022\n\016OMNI_TASK_SENT\020x\022\027\n\022O" +
+      "MNI_TASK_RECEIVED\020\202\001*\241\001\n\016OmniSenderType\022" +
+      "\032\n\026OMNI_SENDER_TYPE_AGENT\020\000\022\035\n\031OMNI_SEND" +
+      "ER_TYPE_CUSTOMER\020\001\022\033\n\027OMNI_SENDER_TYPE_S" +
+      "YSTEM\020\002\022\034\n\030OMNI_SENDER_TYPE_MANAGER\020\003\022\031\n" +
+      "\025OMNI_SENDER_TYPE_FLOW\020\004*\214\001\n ConnectedIn" +
+      "boxAuthenticationType\0220\n,CONNECTED_INBOX" +
+      "_AUTHENTICATION_TYPE_PASSWORD\020\000\0226\n2CONNE" +
+      "CTED_INBOX_AUTHENTICATION_TYPE_GOOGLE_XO" +
+      "AUTH2\020\001*\341\003\n ConversationStateChangeTimer" +
+      "Name\022-\n)CONVERSATION_STATE_CHANGE_TIMER_" +
+      "NAME_WAIT\020\000\022-\n)CONVERSATION_STATE_CHANGE" +
+      "_TIMER_NAME_TALK\020d\022D\n@CONVERSATION_STATE" +
+      "_CHANGE_TIMER_NAME_TALK_INITIAL_AGENT_RE" +
+      "SPONSE\020e\022<\n8CONVERSATION_STATE_CHANGE_TI" +
+      "MER_NAME_TALK_AGENT_RESPONSE\020f\022?\n;CONVER" +
+      "SATION_STATE_CHANGE_TIMER_NAME_TALK_CUST" +
+      "OMER_RESPONSE\020g\0227\n3CONVERSATION_STATE_CH" +
+      "ANGE_TIMER_NAME_TALK_SUSPENDED\020h\0221\n,CONV" +
+      "ERSATION_STATE_CHANGE_TIMER_NAME_WRAP_UP" +
+      "\020\310\001\022.\n)CONVERSATION_STATE_CHANGE_TIMER_N" +
+      "AME_IDLE\020\254\002*\353\004\n\034OmniConversationMetadata" +
+      "Name\022\027\n\023AGENT_RESPONSE_TIME\020\000\022\026\n\022CUSTOME" +
+      "R_WAIT_TIME\020\001\022\017\n\013HANDLE_TIME\020\002\022\023\n\017TRANSC" +
+      "RIPT_PATH\020\003\022-\n)OMNI_CONVERSATION_METADAT" +
+      "A_NAME_FLOW_DATA\020\004\022.\n*OMNI_CONVERSATION_" +
+      "METADATA_NAME_TIMER_WAIT\020\n\022.\n*OMNI_CONVE" +
+      "RSATION_METADATA_NAME_TIMER_TALK\020d\022E\nAOM" +
+      "NI_CONVERSATION_METADATA_NAME_TIMER_TALK" +
+      "_INITIAL_AGENT_RESPONSE\020e\022=\n9OMNI_CONVER" +
+      "SATION_METADATA_NAME_TIMER_TALK_AGENT_RE" +
+      "SPONSE\020f\022@\n<OMNI_CONVERSATION_METADATA_N" +
+      "AME_TIMER_TALK_CUSTOMER_RESPONSE\020g\0228\n4OM" +
+      "NI_CONVERSATION_METADATA_NAME_TIMER_TALK" +
+      "_SUSPENDED\020h\0222\n-OMNI_CONVERSATION_METADA" +
+      "TA_NAME_TIMER_WRAP_UP\020\310\001\022/\n*OMNI_CONVERS" +
+      "ATION_METADATA_NAME_TIMER_IDLE\020\254\002*c\n\rPro" +
+      "jectStatus\022\032\n\026PROJECT_STATUS_UNKNOWN\020\000\022\031" +
+      "\n\023PROJECT_STATUS_OPEN\020\350\204\001\022\033\n\025PROJECT_STA" +
+      "TUS_CLOSED\020\362\204\001*\307\001\n\016CampaignStatus\022\035\n\031CAM" +
+      "PAIGN_STATUS_SCHEDULED\020\000\022\033\n\027CAMPAIGN_STA" +
+      "TUS_RUNNING\020\001\022\032\n\026CAMPAIGN_STATUS_PAUSED\020" +
+      "\002\022\035\n\031CAMPAIGN_STATUS_COMPLETED\020\003\022\034\n\030CAMP" +
+      "AIGN_STATUS_CANCELED\020\004\022 \n\034CAMPAIGN_STATU" +
+      "S_ERROR_PAUSED\020\005*T\n\021CampaignDirection\022\036\n" +
+      "\032CAMPAIGN_DIRECTION_INBOUND\020\000\022\037\n\033CAMPAIG" +
+      "N_DIRECTION_OUTBOUND\020\001B~\n\035com.tcn.cloud." +
+      "api.api.commonsB\020OmnichannelProtoP\001\242\002\003AC" +
+      "X\252\002\013Api.Commons\312\002\013Api\\Commons\342\002\027Api\\Comm" +
+      "ons\\GPBMetadata\352\002\014Api::Commonsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -899,7 +881,6 @@ public final class OmnichannelProto {
           com.tcn.cloud.api.api.commons.LmsProto.getDescriptor(),
           com.tcn.cloud.api.api.commons.OrgProto.getDescriptor(),
           com.tcn.cloud.api.api.commons.TypesProto.getDescriptor(),
-          com.google.protobuf.DurationProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
         });
@@ -926,7 +907,7 @@ public final class OmnichannelProto {
     internal_static_api_commons_OmniCampaignModuleConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_OmniCampaignModuleConfig_descriptor,
-        new java.lang.String[] { "ApiKeyPrimary", "ApiKeySecondary", "ColorProperties", "ConnectedInboxSid", "Dispositions", "Email", "MessageBody", "EmailSubject", "SmsNumber", "Header", "SlaTimeouts", "SendsPerHour", "UnsubscribeLinkSid", "VerifiedEmailSid", "StopOnTaskDeplete", "Attachments", "ComplianceRuleSetId", "PaymentPortalIds", "FlowId", "Skills", });
+        new java.lang.String[] { "ApiKeyPrimary", "ApiKeySecondary", "ColorProperties", "ConnectedInboxSid", "Dispositions", "Email", "MessageBody", "EmailSubject", "SmsNumber", "Header", "SlaTimeouts", "SendsPerHour", "UnsubscribeLinkSid", "VerifiedEmailSid", "StopOnTaskDeplete", "Attachments", "ComplianceRuleSetId", "PaymentPortalIds", "FlowId", });
     internal_static_api_commons_SmsNumber_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_api_commons_SmsNumber_fieldAccessorTable = new
@@ -1190,21 +1171,15 @@ public final class OmnichannelProto {
     internal_static_api_commons_OmniTask_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_OmniTask_descriptor,
-        new java.lang.String[] { "TaskSid", "Status", "DateCreated", "DateModified", "CampaignModuleSid", "CampaignSid", "ContactEntrySid", "State", "DataFields", "Details", "Name", "StatusMessage", "ScheduledTime", "TaskConfig", });
+        new java.lang.String[] { "TaskSid", "Status", "DateCreated", "DateModified", "CampaignModuleSid", "CampaignSid", "ContactEntrySid", "State", "DataFields", "Details", "Name", "StatusMessage", "ScheduledTime", });
     internal_static_api_commons_OmniTask_Details_descriptor =
       internal_static_api_commons_OmniTask_descriptor.getNestedTypes().get(0);
     internal_static_api_commons_OmniTask_Details_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_OmniTask_Details_descriptor,
         new java.lang.String[] { "ContactListName", });
-    internal_static_api_commons_OmniTaskConfig_descriptor =
-      getDescriptor().getMessageTypes().get(42);
-    internal_static_api_commons_OmniTaskConfig_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_commons_OmniTaskConfig_descriptor,
-        new java.lang.String[] { "Skills", "AbsoluteTimeoutDuration", "AgentTimeoutDuration", });
     internal_static_api_commons_OmniTaskState_descriptor =
-      getDescriptor().getMessageTypes().get(43);
+      getDescriptor().getMessageTypes().get(42);
     internal_static_api_commons_OmniTaskState_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_OmniTaskState_descriptor,
@@ -1216,37 +1191,37 @@ public final class OmnichannelProto {
         internal_static_api_commons_OmniTaskState_Entry_descriptor,
         new java.lang.String[] { "Address", "TimesUsed", "LastUsed", });
     internal_static_api_commons_ComplianceRuleSet_descriptor =
-      getDescriptor().getMessageTypes().get(44);
+      getDescriptor().getMessageTypes().get(43);
     internal_static_api_commons_ComplianceRuleSet_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_ComplianceRuleSet_descriptor,
         new java.lang.String[] { "Id", "Name", "Sha", "Rules", });
     internal_static_api_commons_ComplianceRule_descriptor =
-      getDescriptor().getMessageTypes().get(45);
+      getDescriptor().getMessageTypes().get(44);
     internal_static_api_commons_ComplianceRule_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_ComplianceRule_descriptor,
         new java.lang.String[] { "Text", "Permit", "PluginResponse", });
     internal_static_api_commons_OmniDataField_descriptor =
-      getDescriptor().getMessageTypes().get(46);
+      getDescriptor().getMessageTypes().get(45);
     internal_static_api_commons_OmniDataField_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_OmniDataField_descriptor,
         new java.lang.String[] { "FieldSid", "ParentSid", "Name", "Value", "Type", });
     internal_static_api_commons_ConnectedInbox_descriptor =
-      getDescriptor().getMessageTypes().get(47);
+      getDescriptor().getMessageTypes().get(46);
     internal_static_api_commons_ConnectedInbox_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_ConnectedInbox_descriptor,
         new java.lang.String[] { "ConnectedInboxSid", "EmailAddress", "Username", "Password", "CheckFrequencyMinutes", "ServerName", "ServerPort", "LastScheduledTime", "LastChecked", "PurgeThreshold", "EmailSalt", "NumConsecutiveFailures", "LastError", "StandbyErrorTime", "LastUpdated", "MaxMessageSize", "MaxMessages", "GoogleXoauth2RefreshToken", "GoogleXoauth2AccessToken", "GoogleXoauth2AccessTokenExpiration", "AuthenticationType", });
     internal_static_api_commons_VerifiedEmail_descriptor =
-      getDescriptor().getMessageTypes().get(48);
+      getDescriptor().getMessageTypes().get(47);
     internal_static_api_commons_VerifiedEmail_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_VerifiedEmail_descriptor,
         new java.lang.String[] { "VerifiedEmailSid", "EmailAddress", "Verified", "CreatedOn", "VerifiedOn", "Deleted", "Description", });
     internal_static_api_commons_Signature_descriptor =
-      getDescriptor().getMessageTypes().get(49);
+      getDescriptor().getMessageTypes().get(48);
     internal_static_api_commons_Signature_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_Signature_descriptor,
@@ -1256,7 +1231,6 @@ public final class OmnichannelProto {
     com.tcn.cloud.api.api.commons.LmsProto.getDescriptor();
     com.tcn.cloud.api.api.commons.OrgProto.getDescriptor();
     com.tcn.cloud.api.api.commons.TypesProto.getDescriptor();
-    com.google.protobuf.DurationProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
   }

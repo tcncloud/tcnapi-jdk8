@@ -163,13 +163,11 @@ private static final long serialVersionUID = 0L;
    * skills associated with the campaign
    * </pre>
    *
-   * <code>.api.commons.OmniConversationSkills skills = 4 [json_name = "skills", deprecated = true];</code>
-   * @deprecated api.commons.OmniCampaign.skills is deprecated.
-   *     See api/commons/omnichannel.proto;l=22
+   * <code>.api.commons.OmniConversationSkills skills = 4 [json_name = "skills"];</code>
    * @return Whether the skills field is set.
    */
   @java.lang.Override
-  @java.lang.Deprecated public boolean hasSkills() {
+  public boolean hasSkills() {
     return skills_ != null;
   }
   /**
@@ -177,13 +175,11 @@ private static final long serialVersionUID = 0L;
    * skills associated with the campaign
    * </pre>
    *
-   * <code>.api.commons.OmniConversationSkills skills = 4 [json_name = "skills", deprecated = true];</code>
-   * @deprecated api.commons.OmniCampaign.skills is deprecated.
-   *     See api/commons/omnichannel.proto;l=22
+   * <code>.api.commons.OmniConversationSkills skills = 4 [json_name = "skills"];</code>
    * @return The skills.
    */
   @java.lang.Override
-  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.OmniConversationSkills getSkills() {
+  public com.tcn.cloud.api.api.commons.OmniConversationSkills getSkills() {
     return skills_ == null ? com.tcn.cloud.api.api.commons.OmniConversationSkills.getDefaultInstance() : skills_;
   }
   /**
@@ -191,10 +187,10 @@ private static final long serialVersionUID = 0L;
    * skills associated with the campaign
    * </pre>
    *
-   * <code>.api.commons.OmniConversationSkills skills = 4 [json_name = "skills", deprecated = true];</code>
+   * <code>.api.commons.OmniConversationSkills skills = 4 [json_name = "skills"];</code>
    */
   @java.lang.Override
-  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.OmniConversationSkillsOrBuilder getSkillsOrBuilder() {
+  public com.tcn.cloud.api.api.commons.OmniConversationSkillsOrBuilder getSkillsOrBuilder() {
     return skills_ == null ? com.tcn.cloud.api.api.commons.OmniConversationSkills.getDefaultInstance() : skills_;
   }
 
@@ -1451,12 +1447,10 @@ private static final long serialVersionUID = 0L;
      * skills associated with the campaign
      * </pre>
      *
-     * <code>.api.commons.OmniConversationSkills skills = 4 [json_name = "skills", deprecated = true];</code>
-     * @deprecated api.commons.OmniCampaign.skills is deprecated.
-     *     See api/commons/omnichannel.proto;l=22
+     * <code>.api.commons.OmniConversationSkills skills = 4 [json_name = "skills"];</code>
      * @return Whether the skills field is set.
      */
-    @java.lang.Deprecated public boolean hasSkills() {
+    public boolean hasSkills() {
       return ((bitField0_ & 0x00000008) != 0);
     }
     /**
@@ -1464,12 +1458,10 @@ private static final long serialVersionUID = 0L;
      * skills associated with the campaign
      * </pre>
      *
-     * <code>.api.commons.OmniConversationSkills skills = 4 [json_name = "skills", deprecated = true];</code>
-     * @deprecated api.commons.OmniCampaign.skills is deprecated.
-     *     See api/commons/omnichannel.proto;l=22
+     * <code>.api.commons.OmniConversationSkills skills = 4 [json_name = "skills"];</code>
      * @return The skills.
      */
-    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.OmniConversationSkills getSkills() {
+    public com.tcn.cloud.api.api.commons.OmniConversationSkills getSkills() {
       if (skillsBuilder_ == null) {
         return skills_ == null ? com.tcn.cloud.api.api.commons.OmniConversationSkills.getDefaultInstance() : skills_;
       } else {
@@ -1481,9 +1473,9 @@ private static final long serialVersionUID = 0L;
      * skills associated with the campaign
      * </pre>
      *
-     * <code>.api.commons.OmniConversationSkills skills = 4 [json_name = "skills", deprecated = true];</code>
+     * <code>.api.commons.OmniConversationSkills skills = 4 [json_name = "skills"];</code>
      */
-    @java.lang.Deprecated public Builder setSkills(com.tcn.cloud.api.api.commons.OmniConversationSkills value) {
+    public Builder setSkills(com.tcn.cloud.api.api.commons.OmniConversationSkills value) {
       if (skillsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1501,9 +1493,9 @@ private static final long serialVersionUID = 0L;
      * skills associated with the campaign
      * </pre>
      *
-     * <code>.api.commons.OmniConversationSkills skills = 4 [json_name = "skills", deprecated = true];</code>
+     * <code>.api.commons.OmniConversationSkills skills = 4 [json_name = "skills"];</code>
      */
-    @java.lang.Deprecated public Builder setSkills(
+    public Builder setSkills(
         com.tcn.cloud.api.api.commons.OmniConversationSkills.Builder builderForValue) {
       if (skillsBuilder_ == null) {
         skills_ = builderForValue.build();
@@ -1519,9 +1511,9 @@ private static final long serialVersionUID = 0L;
      * skills associated with the campaign
      * </pre>
      *
-     * <code>.api.commons.OmniConversationSkills skills = 4 [json_name = "skills", deprecated = true];</code>
+     * <code>.api.commons.OmniConversationSkills skills = 4 [json_name = "skills"];</code>
      */
-    @java.lang.Deprecated public Builder mergeSkills(com.tcn.cloud.api.api.commons.OmniConversationSkills value) {
+    public Builder mergeSkills(com.tcn.cloud.api.api.commons.OmniConversationSkills value) {
       if (skillsBuilder_ == null) {
         if (((bitField0_ & 0x00000008) != 0) &&
           skills_ != null &&
@@ -1542,9 +1534,9 @@ private static final long serialVersionUID = 0L;
      * skills associated with the campaign
      * </pre>
      *
-     * <code>.api.commons.OmniConversationSkills skills = 4 [json_name = "skills", deprecated = true];</code>
+     * <code>.api.commons.OmniConversationSkills skills = 4 [json_name = "skills"];</code>
      */
-    @java.lang.Deprecated public Builder clearSkills() {
+    public Builder clearSkills() {
       bitField0_ = (bitField0_ & ~0x00000008);
       skills_ = null;
       if (skillsBuilder_ != null) {
@@ -1559,9 +1551,9 @@ private static final long serialVersionUID = 0L;
      * skills associated with the campaign
      * </pre>
      *
-     * <code>.api.commons.OmniConversationSkills skills = 4 [json_name = "skills", deprecated = true];</code>
+     * <code>.api.commons.OmniConversationSkills skills = 4 [json_name = "skills"];</code>
      */
-    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.OmniConversationSkills.Builder getSkillsBuilder() {
+    public com.tcn.cloud.api.api.commons.OmniConversationSkills.Builder getSkillsBuilder() {
       bitField0_ |= 0x00000008;
       onChanged();
       return getSkillsFieldBuilder().getBuilder();
@@ -1571,9 +1563,9 @@ private static final long serialVersionUID = 0L;
      * skills associated with the campaign
      * </pre>
      *
-     * <code>.api.commons.OmniConversationSkills skills = 4 [json_name = "skills", deprecated = true];</code>
+     * <code>.api.commons.OmniConversationSkills skills = 4 [json_name = "skills"];</code>
      */
-    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.OmniConversationSkillsOrBuilder getSkillsOrBuilder() {
+    public com.tcn.cloud.api.api.commons.OmniConversationSkillsOrBuilder getSkillsOrBuilder() {
       if (skillsBuilder_ != null) {
         return skillsBuilder_.getMessageOrBuilder();
       } else {
@@ -1586,7 +1578,7 @@ private static final long serialVersionUID = 0L;
      * skills associated with the campaign
      * </pre>
      *
-     * <code>.api.commons.OmniConversationSkills skills = 4 [json_name = "skills", deprecated = true];</code>
+     * <code>.api.commons.OmniConversationSkills skills = 4 [json_name = "skills"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.OmniConversationSkills, com.tcn.cloud.api.api.commons.OmniConversationSkills.Builder, com.tcn.cloud.api.api.commons.OmniConversationSkillsOrBuilder> 

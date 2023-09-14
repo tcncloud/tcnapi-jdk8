@@ -22,22 +22,6 @@ public enum OmniTaskStatus
   OMNI_TASK_WAITING(0),
   /**
    * <pre>
-   * task is waiting to be queue
-   * </pre>
-   *
-   * <code>OMNI_TASK_WAITING_FOR_QUEUE = 1;</code>
-   */
-  OMNI_TASK_WAITING_FOR_QUEUE(1),
-  /**
-   * <pre>
-   * task is waiting for approval
-   * </pre>
-   *
-   * <code>OMNI_TASK_WAITING_FOR_APPROVAL = 2;</code>
-   */
-  OMNI_TASK_WAITING_FOR_APPROVAL(2),
-  /**
-   * <pre>
    * the task is currently being sent
    * </pre>
    *
@@ -87,22 +71,6 @@ public enum OmniTaskStatus
    * <code>OMNI_TASK_WAITING = 0;</code>
    */
   public static final int OMNI_TASK_WAITING_VALUE = 0;
-  /**
-   * <pre>
-   * task is waiting to be queue
-   * </pre>
-   *
-   * <code>OMNI_TASK_WAITING_FOR_QUEUE = 1;</code>
-   */
-  public static final int OMNI_TASK_WAITING_FOR_QUEUE_VALUE = 1;
-  /**
-   * <pre>
-   * task is waiting for approval
-   * </pre>
-   *
-   * <code>OMNI_TASK_WAITING_FOR_APPROVAL = 2;</code>
-   */
-  public static final int OMNI_TASK_WAITING_FOR_APPROVAL_VALUE = 2;
   /**
    * <pre>
    * the task is currently being sent
@@ -170,8 +138,6 @@ public enum OmniTaskStatus
   public static OmniTaskStatus forNumber(int value) {
     switch (value) {
       case 0: return OMNI_TASK_WAITING;
-      case 1: return OMNI_TASK_WAITING_FOR_QUEUE;
-      case 2: return OMNI_TASK_WAITING_FOR_APPROVAL;
       case 100: return OMNI_TASK_SENDING;
       case 110: return OMNI_TASK_SENDING_FAILED;
       case 111: return OMNI_TASK_SENDING_INCOMPLETE;

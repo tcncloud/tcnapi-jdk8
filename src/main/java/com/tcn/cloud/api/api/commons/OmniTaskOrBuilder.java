@@ -308,31 +308,4 @@ public interface OmniTaskOrBuilder extends
    * <code>.google.protobuf.Timestamp scheduled_time = 13 [json_name = "scheduledTime"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getScheduledTimeOrBuilder();
-
-  /**
-   * <pre>
-   * holds extra details about a task should be processed
-   * </pre>
-   *
-   * <code>.api.commons.OmniTaskConfig task_config = 15 [json_name = "taskConfig"];</code>
-   * @return Whether the taskConfig field is set.
-   */
-  boolean hasTaskConfig();
-  /**
-   * <pre>
-   * holds extra details about a task should be processed
-   * </pre>
-   *
-   * <code>.api.commons.OmniTaskConfig task_config = 15 [json_name = "taskConfig"];</code>
-   * @return The taskConfig.
-   */
-  com.tcn.cloud.api.api.commons.OmniTaskConfig getTaskConfig();
-  /**
-   * <pre>
-   * holds extra details about a task should be processed
-   * </pre>
-   *
-   * <code>.api.commons.OmniTaskConfig task_config = 15 [json_name = "taskConfig"];</code>
-   */
-  com.tcn.cloud.api.api.commons.OmniTaskConfigOrBuilder getTaskConfigOrBuilder();
 }
