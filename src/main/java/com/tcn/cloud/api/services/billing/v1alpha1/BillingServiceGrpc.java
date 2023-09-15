@@ -535,7 +535,8 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * UpdateBillingPlan updates the specified billing plan.
+     * UpdateBillingPlan updates the specified billing plan. This is expected to provide
+     * all the rate definitions for the billing plan if updating rates.
      * </pre>
      */
     default void updateBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.UpdateBillingPlanRequest request,
@@ -545,7 +546,8 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * UpdateDefaultBillingPlan updates the default billing plan.
+     * UpdateDefaultBillingPlan updates the default billing plan. This is expected to provide
+     * all the rate definitions for the billing plan.
      * </pre>
      */
     default void updateDefaultBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.UpdateDefaultBillingPlanRequest request,
@@ -700,7 +702,8 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * UpdateBillingPlan updates the specified billing plan.
+     * UpdateBillingPlan updates the specified billing plan. This is expected to provide
+     * all the rate definitions for the billing plan if updating rates.
      * </pre>
      */
     public void updateBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.UpdateBillingPlanRequest request,
@@ -711,7 +714,8 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * UpdateDefaultBillingPlan updates the default billing plan.
+     * UpdateDefaultBillingPlan updates the default billing plan. This is expected to provide
+     * all the rate definitions for the billing plan.
      * </pre>
      */
     public void updateDefaultBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.UpdateDefaultBillingPlanRequest request,
@@ -847,7 +851,8 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * UpdateBillingPlan updates the specified billing plan.
+     * UpdateBillingPlan updates the specified billing plan. This is expected to provide
+     * all the rate definitions for the billing plan if updating rates.
      * </pre>
      */
     public com.tcn.cloud.api.services.billing.v1alpha1.UpdateBillingPlanResponse updateBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.UpdateBillingPlanRequest request) {
@@ -857,7 +862,8 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * UpdateDefaultBillingPlan updates the default billing plan.
+     * UpdateDefaultBillingPlan updates the default billing plan. This is expected to provide
+     * all the rate definitions for the billing plan.
      * </pre>
      */
     public com.tcn.cloud.api.services.billing.v1alpha1.UpdateDefaultBillingPlanResponse updateDefaultBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.UpdateDefaultBillingPlanRequest request) {
@@ -976,7 +982,8 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * UpdateBillingPlan updates the specified billing plan.
+     * UpdateBillingPlan updates the specified billing plan. This is expected to provide
+     * all the rate definitions for the billing plan if updating rates.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.billing.v1alpha1.UpdateBillingPlanResponse> updateBillingPlan(
@@ -987,7 +994,8 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * UpdateDefaultBillingPlan updates the default billing plan.
+     * UpdateDefaultBillingPlan updates the default billing plan. This is expected to provide
+     * all the rate definitions for the billing plan.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.billing.v1alpha1.UpdateDefaultBillingPlanResponse> updateDefaultBillingPlan(
