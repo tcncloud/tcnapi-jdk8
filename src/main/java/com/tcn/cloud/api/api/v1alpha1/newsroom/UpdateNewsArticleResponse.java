@@ -46,7 +46,7 @@ private static final long serialVersionUID = 0L;
   private com.tcn.cloud.api.api.v1alpha1.newsroom.NewsArticleDetails articleDetails_;
   /**
    * <pre>
-   * latest news article
+   * updated news article
    * </pre>
    *
    * <code>.api.v1alpha1.newsroom.NewsArticleDetails article_details = 1 [json_name = "articleDetails"];</code>
@@ -58,7 +58,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * latest news article
+   * updated news article
    * </pre>
    *
    * <code>.api.v1alpha1.newsroom.NewsArticleDetails article_details = 1 [json_name = "articleDetails"];</code>
@@ -70,7 +70,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * latest news article
+   * updated news article
    * </pre>
    *
    * <code>.api.v1alpha1.newsroom.NewsArticleDetails article_details = 1 [json_name = "articleDetails"];</code>
@@ -427,7 +427,7 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.newsroom.NewsArticleDetails, com.tcn.cloud.api.api.v1alpha1.newsroom.NewsArticleDetails.Builder, com.tcn.cloud.api.api.v1alpha1.newsroom.NewsArticleDetailsOrBuilder> articleDetailsBuilder_;
     /**
      * <pre>
-     * latest news article
+     * updated news article
      * </pre>
      *
      * <code>.api.v1alpha1.newsroom.NewsArticleDetails article_details = 1 [json_name = "articleDetails"];</code>
@@ -438,7 +438,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * latest news article
+     * updated news article
      * </pre>
      *
      * <code>.api.v1alpha1.newsroom.NewsArticleDetails article_details = 1 [json_name = "articleDetails"];</code>
@@ -453,7 +453,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * latest news article
+     * updated news article
      * </pre>
      *
      * <code>.api.v1alpha1.newsroom.NewsArticleDetails article_details = 1 [json_name = "articleDetails"];</code>
@@ -473,7 +473,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * latest news article
+     * updated news article
      * </pre>
      *
      * <code>.api.v1alpha1.newsroom.NewsArticleDetails article_details = 1 [json_name = "articleDetails"];</code>
@@ -491,7 +491,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * latest news article
+     * updated news article
      * </pre>
      *
      * <code>.api.v1alpha1.newsroom.NewsArticleDetails article_details = 1 [json_name = "articleDetails"];</code>
@@ -514,7 +514,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * latest news article
+     * updated news article
      * </pre>
      *
      * <code>.api.v1alpha1.newsroom.NewsArticleDetails article_details = 1 [json_name = "articleDetails"];</code>
@@ -531,7 +531,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * latest news article
+     * updated news article
      * </pre>
      *
      * <code>.api.v1alpha1.newsroom.NewsArticleDetails article_details = 1 [json_name = "articleDetails"];</code>
@@ -543,7 +543,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * latest news article
+     * updated news article
      * </pre>
      *
      * <code>.api.v1alpha1.newsroom.NewsArticleDetails article_details = 1 [json_name = "articleDetails"];</code>
@@ -558,7 +558,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * latest news article
+     * updated news article
      * </pre>
      *
      * <code>.api.v1alpha1.newsroom.NewsArticleDetails article_details = 1 [json_name = "articleDetails"];</code>

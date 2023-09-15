@@ -66,4 +66,19 @@ public interface CreateSlaReqOrBuilder extends
    * @return The interval.
    */
   long getInterval();
+
+  /**
+   * <code>.api.commons.Duration duration = 5 [json_name = "duration"];</code>
+   * @return Whether the duration field is set.
+   */
+  boolean hasDuration();
+  /**
+   * <code>.api.commons.Duration duration = 5 [json_name = "duration"];</code>
+   * @return The duration.
+   */
+  com.tcn.cloud.api.api.commons.Duration getDuration();
+  /**
+   * <code>.api.commons.Duration duration = 5 [json_name = "duration"];</code>
+   */
+  com.tcn.cloud.api.api.commons.DurationOrBuilder getDurationOrBuilder();
 }

@@ -54,4 +54,16 @@ public interface CallbackContextOrBuilder extends
    */
   com.google.protobuf.ByteString
       getCallerNameBytes();
+
+  /**
+   * <code>string caller_country_code = 5 [json_name = "callerCountryCode"];</code>
+   * @return The callerCountryCode.
+   */
+  java.lang.String getCallerCountryCode();
+  /**
+   * <code>string caller_country_code = 5 [json_name = "callerCountryCode"];</code>
+   * @return The bytes for callerCountryCode.
+   */
+  com.google.protobuf.ByteString
+      getCallerCountryCodeBytes();
 }

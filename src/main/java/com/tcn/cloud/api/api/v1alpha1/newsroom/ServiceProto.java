@@ -26,7 +26,7 @@ public final class ServiceProto {
       "\n#api/v1alpha1/newsroom/service.proto\022\025a" +
       "pi.v1alpha1.newsroom\032\027annotations/authz." +
       "proto\032$api/v1alpha1/newsroom/entities.pr" +
-      "oto\032\034google/api/annotations.proto2\347\005\n\013Ne" +
+      "oto\032\034google/api/annotations.proto2\217\r\n\013Ne" +
       "wsroomAPI\022\265\001\n\021CreateNewsArticle\022/.api.v1" +
       "alpha1.newsroom.CreateNewsArticleRequest" +
       "\0320.api.v1alpha1.newsroom.CreateNewsArtic" +
@@ -45,12 +45,35 @@ public final class ServiceProto {
       "m.UpdateNewsArticleRequest\0320.api.v1alpha" +
       "1.newsroom.UpdateNewsArticleResponse\"=\272\270" +
       "\221\002\005\n\003\010\350 \202\323\344\223\002-\"(/api/v1alpha1/newsroom/u" +
-      "pdatenewsarticle:\001*B\255\001\n\'com.tcn.cloud.ap" +
-      "i.api.v1alpha1.newsroomB\014ServiceProtoP\001\242" +
-      "\002\003AVN\252\002\025Api.V1alpha1.Newsroom\312\002\025Api\\V1al" +
-      "pha1\\Newsroom\342\002!Api\\V1alpha1\\Newsroom\\GP" +
-      "BMetadata\352\002\027Api::V1alpha1::Newsroomb\006pro" +
-      "to3"
+      "pdatenewsarticle:\001*\022\311\001\n\026CreatePublishedA" +
+      "rticle\0224.api.v1alpha1.newsroom.CreatePub" +
+      "lishedArticleRequest\0325.api.v1alpha1.news" +
+      "room.CreatePublishedArticleResponse\"B\272\270\221" +
+      "\002\005\n\003\010\351 \202\323\344\223\0022\"-/api/v1alpha1/newsroom/cr" +
+      "eatepublishedarticle:\001*\022\302\001\n\025ListPublishe" +
+      "dArticles\0223.api.v1alpha1.newsroom.ListPu" +
+      "blishedArticlesRequest\0324.api.v1alpha1.ne" +
+      "wsroom.ListPublishedArticlesResponse\">\272\270" +
+      "\221\002\002\030\001\202\323\344\223\0021\",/api/v1alpha1/newsroom/list" +
+      "publishedarticles:\001*\022\312\001\n\027GetPublishedArt" +
+      "icleById\0225.api.v1alpha1.newsroom.GetPubl" +
+      "ishedArticleByIdRequest\0326.api.v1alpha1.n" +
+      "ewsroom.GetPublishedArticleByIdResponse\"" +
+      "@\272\270\221\002\002\030\001\202\323\344\223\0023\"./api/v1alpha1/newsroom/g" +
+      "etpublishedarticlebyid:\001*\022\236\001\n\014UserActivi" +
+      "ty\022*.api.v1alpha1.newsroom.UserActivityR" +
+      "equest\032+.api.v1alpha1.newsroom.UserActiv" +
+      "ityResponse\"5\272\270\221\002\002\030\001\202\323\344\223\002(\"#/api/v1alpha" +
+      "1/newsroom/useractivity:\001*\022\246\001\n\016GetNewsFo" +
+      "rUser\022,.api.v1alpha1.newsroom.GetNewsFor" +
+      "UserRequest\032-.api.v1alpha1.newsroom.GetN" +
+      "ewsForUserResponse\"7\272\270\221\002\002\030\001\202\323\344\223\002*\"%/api/" +
+      "v1alpha1/newsroom/getnewsforuser:\001*B\255\001\n\'" +
+      "com.tcn.cloud.api.api.v1alpha1.newsroomB" +
+      "\014ServiceProtoP\001\242\002\003AVN\252\002\025Api.V1alpha1.New" +
+      "sroom\312\002\025Api\\V1alpha1\\Newsroom\342\002!Api\\V1al" +
+      "pha1\\Newsroom\\GPBMetadata\352\002\027Api::V1alpha" +
+      "1::Newsroomb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
