@@ -78,29 +78,65 @@ public interface BuildRegressionForecastByIntervalWithStatsReqOrBuilder extends
   /**
    * <pre>
    * IDs of the skill profiles to generate the forecasts,
+   * Deprecated as of Sep/12/2023: use skill_profile_category instead.
    * </pre>
    *
-   * <code>repeated int64 skill_profile_sids_to_forecast = 6 [json_name = "skillProfileSidsToForecast"];</code>
+   * <code>repeated int64 skill_profile_sids_to_forecast = 6 [json_name = "skillProfileSidsToForecast", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.BuildRegressionForecastByIntervalWithStatsReq.skill_profile_sids_to_forecast is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=3138
    * @return A list containing the skillProfileSidsToForecast.
    */
-  java.util.List<java.lang.Long> getSkillProfileSidsToForecastList();
+  @java.lang.Deprecated java.util.List<java.lang.Long> getSkillProfileSidsToForecastList();
   /**
    * <pre>
    * IDs of the skill profiles to generate the forecasts,
+   * Deprecated as of Sep/12/2023: use skill_profile_category instead.
    * </pre>
    *
-   * <code>repeated int64 skill_profile_sids_to_forecast = 6 [json_name = "skillProfileSidsToForecast"];</code>
+   * <code>repeated int64 skill_profile_sids_to_forecast = 6 [json_name = "skillProfileSidsToForecast", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.BuildRegressionForecastByIntervalWithStatsReq.skill_profile_sids_to_forecast is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=3138
    * @return The count of skillProfileSidsToForecast.
    */
-  int getSkillProfileSidsToForecastCount();
+  @java.lang.Deprecated int getSkillProfileSidsToForecastCount();
   /**
    * <pre>
    * IDs of the skill profiles to generate the forecasts,
+   * Deprecated as of Sep/12/2023: use skill_profile_category instead.
    * </pre>
    *
-   * <code>repeated int64 skill_profile_sids_to_forecast = 6 [json_name = "skillProfileSidsToForecast"];</code>
+   * <code>repeated int64 skill_profile_sids_to_forecast = 6 [json_name = "skillProfileSidsToForecast", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.BuildRegressionForecastByIntervalWithStatsReq.skill_profile_sids_to_forecast is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=3138
    * @param index The index of the element to return.
    * @return The skillProfileSidsToForecast at the given index.
    */
-  long getSkillProfileSidsToForecast(int index);
+  @java.lang.Deprecated long getSkillProfileSidsToForecast(int index);
+
+  /**
+   * <pre>
+   * Skill profile category to forecast for.
+   * </pre>
+   *
+   * <code>.api.commons.SkillProfileCategory skill_profile_category = 7 [json_name = "skillProfileCategory"];</code>
+   * @return Whether the skillProfileCategory field is set.
+   */
+  boolean hasSkillProfileCategory();
+  /**
+   * <pre>
+   * Skill profile category to forecast for.
+   * </pre>
+   *
+   * <code>.api.commons.SkillProfileCategory skill_profile_category = 7 [json_name = "skillProfileCategory"];</code>
+   * @return The skillProfileCategory.
+   */
+  com.tcn.cloud.api.api.commons.SkillProfileCategory getSkillProfileCategory();
+  /**
+   * <pre>
+   * Skill profile category to forecast for.
+   * </pre>
+   *
+   * <code>.api.commons.SkillProfileCategory skill_profile_category = 7 [json_name = "skillProfileCategory"];</code>
+   */
+  com.tcn.cloud.api.api.commons.SkillProfileCategoryOrBuilder getSkillProfileCategoryOrBuilder();
 }
