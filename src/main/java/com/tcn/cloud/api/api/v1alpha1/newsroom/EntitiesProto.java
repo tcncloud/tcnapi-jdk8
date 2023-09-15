@@ -114,6 +114,16 @@ public final class EntitiesProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_newsroom_UserActivityResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_newsroom_GetNewsForUserRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_newsroom_GetNewsForUserRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_newsroom_GetNewsForUserResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_newsroom_GetNewsForUserResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -194,7 +204,11 @@ public final class EntitiesProto {
       "article_sid\030\001 \001(\003B\0020\001R\023publishedArticleS" +
       "id\"`\n\024UserActivityResponse\022H\n\ruser_activ" +
       "ity\030\001 \001(\0132#.api.v1alpha1.newsroom.UserAc" +
-      "tivityR\014userActivityB\256\001\n\'com.tcn.cloud.a" +
+      "tivityR\014userActivity\"\027\n\025GetNewsForUserRe" +
+      "quest\"\204\001\n\026GetNewsForUserResponse\022j\n\031publ" +
+      "ished_article_details\030\001 \003(\0132..api.v1alph" +
+      "a1.newsroom.PublishedArticleDetailsR\027pub" +
+      "lishedArticleDetailsB\256\001\n\'com.tcn.cloud.a" +
       "pi.api.v1alpha1.newsroomB\rEntitiesProtoP" +
       "\001\242\002\003AVN\252\002\025Api.V1alpha1.Newsroom\312\002\025Api\\V1" +
       "alpha1\\Newsroom\342\002!Api\\V1alpha1\\Newsroom\\" +
@@ -328,6 +342,18 @@ public final class EntitiesProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_newsroom_UserActivityResponse_descriptor,
         new java.lang.String[] { "UserActivity", });
+    internal_static_api_v1alpha1_newsroom_GetNewsForUserRequest_descriptor =
+      getDescriptor().getMessageTypes().get(19);
+    internal_static_api_v1alpha1_newsroom_GetNewsForUserRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_newsroom_GetNewsForUserRequest_descriptor,
+        new java.lang.String[] { });
+    internal_static_api_v1alpha1_newsroom_GetNewsForUserResponse_descriptor =
+      getDescriptor().getMessageTypes().get(20);
+    internal_static_api_v1alpha1_newsroom_GetNewsForUserResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_newsroom_GetNewsForUserResponse_descriptor,
+        new java.lang.String[] { "PublishedArticleDetails", });
     com.tcn.cloud.api.api.commons.NewsroomProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
