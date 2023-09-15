@@ -88,6 +88,10 @@ public enum FieldType
    * <code>FIELD_TYPE_STRUCT_VALUE = 20;</code>
    */
   FIELD_TYPE_STRUCT_VALUE(20),
+  /**
+   * <code>FIELD_TYPE_EHR_DETAILS = 21;</code>
+   */
+  FIELD_TYPE_EHR_DETAILS(21),
   UNRECOGNIZED(-1),
   ;
 
@@ -171,6 +175,10 @@ public enum FieldType
    * <code>FIELD_TYPE_STRUCT_VALUE = 20;</code>
    */
   public static final int FIELD_TYPE_STRUCT_VALUE_VALUE = 20;
+  /**
+   * <code>FIELD_TYPE_EHR_DETAILS = 21;</code>
+   */
+  public static final int FIELD_TYPE_EHR_DETAILS_VALUE = 21;
 
 
   public final int getNumber() {
@@ -217,6 +225,7 @@ public enum FieldType
       case 18: return FIELD_TYPE_ACCOUNT_NUMBER;
       case 19: return FIELD_TYPE_ERROR;
       case 20: return FIELD_TYPE_STRUCT_VALUE;
+      case 21: return FIELD_TYPE_EHR_DETAILS;
       default: return null;
     }
   }
