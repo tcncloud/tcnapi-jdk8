@@ -4,90 +4,64 @@
 package com.tcn.cloud.api.api.v1alpha1.delivery;
 
 /**
- * Protobuf type {@code api.v1alpha1.delivery.GetTransferConfigByNameReq}
+ * Protobuf type {@code api.v1alpha1.delivery.ListDeliveryDefinitionsReq}
  */
-public final class GetTransferConfigByNameReq extends
+public final class ListDeliveryDefinitionsReq extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v1alpha1.delivery.GetTransferConfigByNameReq)
-    GetTransferConfigByNameReqOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v1alpha1.delivery.ListDeliveryDefinitionsReq)
+    ListDeliveryDefinitionsReqOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use GetTransferConfigByNameReq.newBuilder() to construct.
-  private GetTransferConfigByNameReq(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use ListDeliveryDefinitionsReq.newBuilder() to construct.
+  private ListDeliveryDefinitionsReq(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private GetTransferConfigByNameReq() {
-    name_ = "";
+  private ListDeliveryDefinitionsReq() {
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new GetTransferConfigByNameReq();
+    return new ListDeliveryDefinitionsReq();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v1alpha1.delivery.ServiceProto.internal_static_api_v1alpha1_delivery_GetTransferConfigByNameReq_descriptor;
+    return com.tcn.cloud.api.api.v1alpha1.delivery.ServiceProto.internal_static_api_v1alpha1_delivery_ListDeliveryDefinitionsReq_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v1alpha1.delivery.ServiceProto.internal_static_api_v1alpha1_delivery_GetTransferConfigByNameReq_fieldAccessorTable
+    return com.tcn.cloud.api.api.v1alpha1.delivery.ServiceProto.internal_static_api_v1alpha1_delivery_ListDeliveryDefinitionsReq_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq.class, com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq.Builder.class);
+            com.tcn.cloud.api.api.v1alpha1.delivery.ListDeliveryDefinitionsReq.class, com.tcn.cloud.api.api.v1alpha1.delivery.ListDeliveryDefinitionsReq.Builder.class);
   }
 
-  public static final int NAME_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object name_ = "";
+  public static final int ENTITY_FIELD_NUMBER = 1;
+  private com.tcn.cloud.api.api.v1alpha1.delivery.DeliveryDefinition entity_;
   /**
-   * <pre>
-   * obsolete dont use
-   * </pre>
-   *
-   * <code>string name = 1 [json_name = "name", deprecated = true];</code>
-   * @deprecated api.v1alpha1.delivery.GetTransferConfigByNameReq.name is deprecated.
-   *     See api/v1alpha1/delivery/service.proto;l=344
-   * @return The name.
+   * <code>.api.v1alpha1.delivery.DeliveryDefinition entity = 1 [json_name = "entity"];</code>
+   * @return Whether the entity field is set.
    */
   @java.lang.Override
-  @java.lang.Deprecated public java.lang.String getName() {
-    java.lang.Object ref = name_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      name_ = s;
-      return s;
-    }
+  public boolean hasEntity() {
+    return entity_ != null;
   }
   /**
-   * <pre>
-   * obsolete dont use
-   * </pre>
-   *
-   * <code>string name = 1 [json_name = "name", deprecated = true];</code>
-   * @deprecated api.v1alpha1.delivery.GetTransferConfigByNameReq.name is deprecated.
-   *     See api/v1alpha1/delivery/service.proto;l=344
-   * @return The bytes for name.
+   * <code>.api.v1alpha1.delivery.DeliveryDefinition entity = 1 [json_name = "entity"];</code>
+   * @return The entity.
    */
   @java.lang.Override
-  @java.lang.Deprecated public com.google.protobuf.ByteString
-      getNameBytes() {
-    java.lang.Object ref = name_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      name_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
+  public com.tcn.cloud.api.api.v1alpha1.delivery.DeliveryDefinition getEntity() {
+    return entity_ == null ? com.tcn.cloud.api.api.v1alpha1.delivery.DeliveryDefinition.getDefaultInstance() : entity_;
+  }
+  /**
+   * <code>.api.v1alpha1.delivery.DeliveryDefinition entity = 1 [json_name = "entity"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.delivery.DeliveryDefinitionOrBuilder getEntityOrBuilder() {
+    return entity_ == null ? com.tcn.cloud.api.api.v1alpha1.delivery.DeliveryDefinition.getDefaultInstance() : entity_;
   }
 
   public static final int MASK_FIELD_NUMBER = 2;
@@ -116,30 +90,30 @@ private static final long serialVersionUID = 0L;
     return mask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : mask_;
   }
 
-  public static final int ENTITY_FIELD_NUMBER = 3;
-  private com.tcn.cloud.api.api.v1alpha1.delivery.TransferConfig entity_;
+  public static final int LIST_REQ_FIELD_NUMBER = 3;
+  private com.tcn.cloud.api.api.v1alpha1.delivery.ListReq listReq_;
   /**
-   * <code>.api.v1alpha1.delivery.TransferConfig entity = 3 [json_name = "entity"];</code>
-   * @return Whether the entity field is set.
+   * <code>.api.v1alpha1.delivery.ListReq list_req = 3 [json_name = "listReq"];</code>
+   * @return Whether the listReq field is set.
    */
   @java.lang.Override
-  public boolean hasEntity() {
-    return entity_ != null;
+  public boolean hasListReq() {
+    return listReq_ != null;
   }
   /**
-   * <code>.api.v1alpha1.delivery.TransferConfig entity = 3 [json_name = "entity"];</code>
-   * @return The entity.
+   * <code>.api.v1alpha1.delivery.ListReq list_req = 3 [json_name = "listReq"];</code>
+   * @return The listReq.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.delivery.TransferConfig getEntity() {
-    return entity_ == null ? com.tcn.cloud.api.api.v1alpha1.delivery.TransferConfig.getDefaultInstance() : entity_;
+  public com.tcn.cloud.api.api.v1alpha1.delivery.ListReq getListReq() {
+    return listReq_ == null ? com.tcn.cloud.api.api.v1alpha1.delivery.ListReq.getDefaultInstance() : listReq_;
   }
   /**
-   * <code>.api.v1alpha1.delivery.TransferConfig entity = 3 [json_name = "entity"];</code>
+   * <code>.api.v1alpha1.delivery.ListReq list_req = 3 [json_name = "listReq"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.delivery.TransferConfigOrBuilder getEntityOrBuilder() {
-    return entity_ == null ? com.tcn.cloud.api.api.v1alpha1.delivery.TransferConfig.getDefaultInstance() : entity_;
+  public com.tcn.cloud.api.api.v1alpha1.delivery.ListReqOrBuilder getListReqOrBuilder() {
+    return listReq_ == null ? com.tcn.cloud.api.api.v1alpha1.delivery.ListReq.getDefaultInstance() : listReq_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -156,14 +130,14 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+    if (entity_ != null) {
+      output.writeMessage(1, getEntity());
     }
     if (mask_ != null) {
       output.writeMessage(2, getMask());
     }
-    if (entity_ != null) {
-      output.writeMessage(3, getEntity());
+    if (listReq_ != null) {
+      output.writeMessage(3, getListReq());
     }
     getUnknownFields().writeTo(output);
   }
@@ -174,16 +148,17 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+    if (entity_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1, getEntity());
     }
     if (mask_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getMask());
     }
-    if (entity_ != null) {
+    if (listReq_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(3, getEntity());
+        .computeMessageSize(3, getListReq());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -195,22 +170,25 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.delivery.ListDeliveryDefinitionsReq)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq other = (com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq) obj;
+    com.tcn.cloud.api.api.v1alpha1.delivery.ListDeliveryDefinitionsReq other = (com.tcn.cloud.api.api.v1alpha1.delivery.ListDeliveryDefinitionsReq) obj;
 
-    if (!getName()
-        .equals(other.getName())) return false;
+    if (hasEntity() != other.hasEntity()) return false;
+    if (hasEntity()) {
+      if (!getEntity()
+          .equals(other.getEntity())) return false;
+    }
     if (hasMask() != other.hasMask()) return false;
     if (hasMask()) {
       if (!getMask()
           .equals(other.getMask())) return false;
     }
-    if (hasEntity() != other.hasEntity()) return false;
-    if (hasEntity()) {
-      if (!getEntity()
-          .equals(other.getEntity())) return false;
+    if (hasListReq() != other.hasListReq()) return false;
+    if (hasListReq()) {
+      if (!getListReq()
+          .equals(other.getListReq())) return false;
     }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -223,59 +201,61 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + NAME_FIELD_NUMBER;
-    hash = (53 * hash) + getName().hashCode();
+    if (hasEntity()) {
+      hash = (37 * hash) + ENTITY_FIELD_NUMBER;
+      hash = (53 * hash) + getEntity().hashCode();
+    }
     if (hasMask()) {
       hash = (37 * hash) + MASK_FIELD_NUMBER;
       hash = (53 * hash) + getMask().hashCode();
     }
-    if (hasEntity()) {
-      hash = (37 * hash) + ENTITY_FIELD_NUMBER;
-      hash = (53 * hash) + getEntity().hashCode();
+    if (hasListReq()) {
+      hash = (37 * hash) + LIST_REQ_FIELD_NUMBER;
+      hash = (53 * hash) + getListReq().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.delivery.ListDeliveryDefinitionsReq parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.delivery.ListDeliveryDefinitionsReq parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.delivery.ListDeliveryDefinitionsReq parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.delivery.ListDeliveryDefinitionsReq parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v1alpha1.delivery.ListDeliveryDefinitionsReq parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.delivery.ListDeliveryDefinitionsReq parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.delivery.ListDeliveryDefinitionsReq parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.delivery.ListDeliveryDefinitionsReq parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -283,26 +263,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.delivery.ListDeliveryDefinitionsReq parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.delivery.ListDeliveryDefinitionsReq parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.delivery.ListDeliveryDefinitionsReq parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.delivery.ListDeliveryDefinitionsReq parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -315,7 +295,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.delivery.ListDeliveryDefinitionsReq prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -331,26 +311,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code api.v1alpha1.delivery.GetTransferConfigByNameReq}
+   * Protobuf type {@code api.v1alpha1.delivery.ListDeliveryDefinitionsReq}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v1alpha1.delivery.GetTransferConfigByNameReq)
-      com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReqOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v1alpha1.delivery.ListDeliveryDefinitionsReq)
+      com.tcn.cloud.api.api.v1alpha1.delivery.ListDeliveryDefinitionsReqOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v1alpha1.delivery.ServiceProto.internal_static_api_v1alpha1_delivery_GetTransferConfigByNameReq_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.delivery.ServiceProto.internal_static_api_v1alpha1_delivery_ListDeliveryDefinitionsReq_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v1alpha1.delivery.ServiceProto.internal_static_api_v1alpha1_delivery_GetTransferConfigByNameReq_fieldAccessorTable
+      return com.tcn.cloud.api.api.v1alpha1.delivery.ServiceProto.internal_static_api_v1alpha1_delivery_ListDeliveryDefinitionsReq_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq.class, com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq.Builder.class);
+              com.tcn.cloud.api.api.v1alpha1.delivery.ListDeliveryDefinitionsReq.class, com.tcn.cloud.api.api.v1alpha1.delivery.ListDeliveryDefinitionsReq.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v1alpha1.delivery.ListDeliveryDefinitionsReq.newBuilder()
     private Builder() {
 
     }
@@ -364,16 +344,20 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      name_ = "";
+      entity_ = null;
+      if (entityBuilder_ != null) {
+        entityBuilder_.dispose();
+        entityBuilder_ = null;
+      }
       mask_ = null;
       if (maskBuilder_ != null) {
         maskBuilder_.dispose();
         maskBuilder_ = null;
       }
-      entity_ = null;
-      if (entityBuilder_ != null) {
-        entityBuilder_.dispose();
-        entityBuilder_ = null;
+      listReq_ = null;
+      if (listReqBuilder_ != null) {
+        listReqBuilder_.dispose();
+        listReqBuilder_ = null;
       }
       return this;
     }
@@ -381,17 +365,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v1alpha1.delivery.ServiceProto.internal_static_api_v1alpha1_delivery_GetTransferConfigByNameReq_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.delivery.ServiceProto.internal_static_api_v1alpha1_delivery_ListDeliveryDefinitionsReq_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq.getDefaultInstance();
+    public com.tcn.cloud.api.api.v1alpha1.delivery.ListDeliveryDefinitionsReq getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v1alpha1.delivery.ListDeliveryDefinitionsReq.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq build() {
-      com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq result = buildPartial();
+    public com.tcn.cloud.api.api.v1alpha1.delivery.ListDeliveryDefinitionsReq build() {
+      com.tcn.cloud.api.api.v1alpha1.delivery.ListDeliveryDefinitionsReq result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -399,17 +383,19 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq buildPartial() {
-      com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq result = new com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq(this);
+    public com.tcn.cloud.api.api.v1alpha1.delivery.ListDeliveryDefinitionsReq buildPartial() {
+      com.tcn.cloud.api.api.v1alpha1.delivery.ListDeliveryDefinitionsReq result = new com.tcn.cloud.api.api.v1alpha1.delivery.ListDeliveryDefinitionsReq(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq result) {
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.delivery.ListDeliveryDefinitionsReq result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.name_ = name_;
+        result.entity_ = entityBuilder_ == null
+            ? entity_
+            : entityBuilder_.build();
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.mask_ = maskBuilder_ == null
@@ -417,9 +403,9 @@ private static final long serialVersionUID = 0L;
             : maskBuilder_.build();
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.entity_ = entityBuilder_ == null
-            ? entity_
-            : entityBuilder_.build();
+        result.listReq_ = listReqBuilder_ == null
+            ? listReq_
+            : listReqBuilder_.build();
       }
     }
 
@@ -457,26 +443,24 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq) {
-        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq)other);
+      if (other instanceof com.tcn.cloud.api.api.v1alpha1.delivery.ListDeliveryDefinitionsReq) {
+        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.delivery.ListDeliveryDefinitionsReq)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq other) {
-      if (other == com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq.getDefaultInstance()) return this;
-      if (!other.getName().isEmpty()) {
-        name_ = other.name_;
-        bitField0_ |= 0x00000001;
-        onChanged();
+    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.delivery.ListDeliveryDefinitionsReq other) {
+      if (other == com.tcn.cloud.api.api.v1alpha1.delivery.ListDeliveryDefinitionsReq.getDefaultInstance()) return this;
+      if (other.hasEntity()) {
+        mergeEntity(other.getEntity());
       }
       if (other.hasMask()) {
         mergeMask(other.getMask());
       }
-      if (other.hasEntity()) {
-        mergeEntity(other.getEntity());
+      if (other.hasListReq()) {
+        mergeListReq(other.getListReq());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -505,7 +489,9 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              name_ = input.readStringRequireUtf8();
+              input.readMessage(
+                  getEntityFieldBuilder().getBuilder(),
+                  extensionRegistry);
               bitField0_ |= 0x00000001;
               break;
             } // case 10
@@ -518,7 +504,7 @@ private static final long serialVersionUID = 0L;
             } // case 18
             case 26: {
               input.readMessage(
-                  getEntityFieldBuilder().getBuilder(),
+                  getListReqFieldBuilder().getBuilder(),
                   extensionRegistry);
               bitField0_ |= 0x00000004;
               break;
@@ -540,106 +526,123 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.lang.Object name_ = "";
+    private com.tcn.cloud.api.api.v1alpha1.delivery.DeliveryDefinition entity_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.delivery.DeliveryDefinition, com.tcn.cloud.api.api.v1alpha1.delivery.DeliveryDefinition.Builder, com.tcn.cloud.api.api.v1alpha1.delivery.DeliveryDefinitionOrBuilder> entityBuilder_;
     /**
-     * <pre>
-     * obsolete dont use
-     * </pre>
-     *
-     * <code>string name = 1 [json_name = "name", deprecated = true];</code>
-     * @deprecated api.v1alpha1.delivery.GetTransferConfigByNameReq.name is deprecated.
-     *     See api/v1alpha1/delivery/service.proto;l=344
-     * @return The name.
+     * <code>.api.v1alpha1.delivery.DeliveryDefinition entity = 1 [json_name = "entity"];</code>
+     * @return Whether the entity field is set.
      */
-    @java.lang.Deprecated public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
+    public boolean hasEntity() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.api.v1alpha1.delivery.DeliveryDefinition entity = 1 [json_name = "entity"];</code>
+     * @return The entity.
+     */
+    public com.tcn.cloud.api.api.v1alpha1.delivery.DeliveryDefinition getEntity() {
+      if (entityBuilder_ == null) {
+        return entity_ == null ? com.tcn.cloud.api.api.v1alpha1.delivery.DeliveryDefinition.getDefaultInstance() : entity_;
       } else {
-        return (java.lang.String) ref;
+        return entityBuilder_.getMessage();
       }
     }
     /**
-     * <pre>
-     * obsolete dont use
-     * </pre>
-     *
-     * <code>string name = 1 [json_name = "name", deprecated = true];</code>
-     * @deprecated api.v1alpha1.delivery.GetTransferConfigByNameReq.name is deprecated.
-     *     See api/v1alpha1/delivery/service.proto;l=344
-     * @return The bytes for name.
+     * <code>.api.v1alpha1.delivery.DeliveryDefinition entity = 1 [json_name = "entity"];</code>
      */
-    @java.lang.Deprecated public com.google.protobuf.ByteString
-        getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
+    public Builder setEntity(com.tcn.cloud.api.api.v1alpha1.delivery.DeliveryDefinition value) {
+      if (entityBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        entity_ = value;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        entityBuilder_.setMessage(value);
       }
-    }
-    /**
-     * <pre>
-     * obsolete dont use
-     * </pre>
-     *
-     * <code>string name = 1 [json_name = "name", deprecated = true];</code>
-     * @deprecated api.v1alpha1.delivery.GetTransferConfigByNameReq.name is deprecated.
-     *     See api/v1alpha1/delivery/service.proto;l=344
-     * @param value The name to set.
-     * @return This builder for chaining.
-     */
-    @java.lang.Deprecated public Builder setName(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      name_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <pre>
-     * obsolete dont use
-     * </pre>
-     *
-     * <code>string name = 1 [json_name = "name", deprecated = true];</code>
-     * @deprecated api.v1alpha1.delivery.GetTransferConfigByNameReq.name is deprecated.
-     *     See api/v1alpha1/delivery/service.proto;l=344
-     * @return This builder for chaining.
+     * <code>.api.v1alpha1.delivery.DeliveryDefinition entity = 1 [json_name = "entity"];</code>
      */
-    @java.lang.Deprecated public Builder clearName() {
-      name_ = getDefaultInstance().getName();
+    public Builder setEntity(
+        com.tcn.cloud.api.api.v1alpha1.delivery.DeliveryDefinition.Builder builderForValue) {
+      if (entityBuilder_ == null) {
+        entity_ = builderForValue.build();
+      } else {
+        entityBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.v1alpha1.delivery.DeliveryDefinition entity = 1 [json_name = "entity"];</code>
+     */
+    public Builder mergeEntity(com.tcn.cloud.api.api.v1alpha1.delivery.DeliveryDefinition value) {
+      if (entityBuilder_ == null) {
+        if (((bitField0_ & 0x00000001) != 0) &&
+          entity_ != null &&
+          entity_ != com.tcn.cloud.api.api.v1alpha1.delivery.DeliveryDefinition.getDefaultInstance()) {
+          getEntityBuilder().mergeFrom(value);
+        } else {
+          entity_ = value;
+        }
+      } else {
+        entityBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.v1alpha1.delivery.DeliveryDefinition entity = 1 [json_name = "entity"];</code>
+     */
+    public Builder clearEntity() {
       bitField0_ = (bitField0_ & ~0x00000001);
+      entity_ = null;
+      if (entityBuilder_ != null) {
+        entityBuilder_.dispose();
+        entityBuilder_ = null;
+      }
       onChanged();
       return this;
     }
     /**
-     * <pre>
-     * obsolete dont use
-     * </pre>
-     *
-     * <code>string name = 1 [json_name = "name", deprecated = true];</code>
-     * @deprecated api.v1alpha1.delivery.GetTransferConfigByNameReq.name is deprecated.
-     *     See api/v1alpha1/delivery/service.proto;l=344
-     * @param value The bytes for name to set.
-     * @return This builder for chaining.
+     * <code>.api.v1alpha1.delivery.DeliveryDefinition entity = 1 [json_name = "entity"];</code>
      */
-    @java.lang.Deprecated public Builder setNameBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      name_ = value;
+    public com.tcn.cloud.api.api.v1alpha1.delivery.DeliveryDefinition.Builder getEntityBuilder() {
       bitField0_ |= 0x00000001;
       onChanged();
-      return this;
+      return getEntityFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.v1alpha1.delivery.DeliveryDefinition entity = 1 [json_name = "entity"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.delivery.DeliveryDefinitionOrBuilder getEntityOrBuilder() {
+      if (entityBuilder_ != null) {
+        return entityBuilder_.getMessageOrBuilder();
+      } else {
+        return entity_ == null ?
+            com.tcn.cloud.api.api.v1alpha1.delivery.DeliveryDefinition.getDefaultInstance() : entity_;
+      }
+    }
+    /**
+     * <code>.api.v1alpha1.delivery.DeliveryDefinition entity = 1 [json_name = "entity"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.delivery.DeliveryDefinition, com.tcn.cloud.api.api.v1alpha1.delivery.DeliveryDefinition.Builder, com.tcn.cloud.api.api.v1alpha1.delivery.DeliveryDefinitionOrBuilder> 
+        getEntityFieldBuilder() {
+      if (entityBuilder_ == null) {
+        entityBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.v1alpha1.delivery.DeliveryDefinition, com.tcn.cloud.api.api.v1alpha1.delivery.DeliveryDefinition.Builder, com.tcn.cloud.api.api.v1alpha1.delivery.DeliveryDefinitionOrBuilder>(
+                getEntity(),
+                getParentForChildren(),
+                isClean());
+        entity_ = null;
+      }
+      return entityBuilder_;
     }
 
     private com.google.protobuf.FieldMask mask_;
@@ -761,123 +764,123 @@ private static final long serialVersionUID = 0L;
       return maskBuilder_;
     }
 
-    private com.tcn.cloud.api.api.v1alpha1.delivery.TransferConfig entity_;
+    private com.tcn.cloud.api.api.v1alpha1.delivery.ListReq listReq_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.v1alpha1.delivery.TransferConfig, com.tcn.cloud.api.api.v1alpha1.delivery.TransferConfig.Builder, com.tcn.cloud.api.api.v1alpha1.delivery.TransferConfigOrBuilder> entityBuilder_;
+        com.tcn.cloud.api.api.v1alpha1.delivery.ListReq, com.tcn.cloud.api.api.v1alpha1.delivery.ListReq.Builder, com.tcn.cloud.api.api.v1alpha1.delivery.ListReqOrBuilder> listReqBuilder_;
     /**
-     * <code>.api.v1alpha1.delivery.TransferConfig entity = 3 [json_name = "entity"];</code>
-     * @return Whether the entity field is set.
+     * <code>.api.v1alpha1.delivery.ListReq list_req = 3 [json_name = "listReq"];</code>
+     * @return Whether the listReq field is set.
      */
-    public boolean hasEntity() {
+    public boolean hasListReq() {
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
-     * <code>.api.v1alpha1.delivery.TransferConfig entity = 3 [json_name = "entity"];</code>
-     * @return The entity.
+     * <code>.api.v1alpha1.delivery.ListReq list_req = 3 [json_name = "listReq"];</code>
+     * @return The listReq.
      */
-    public com.tcn.cloud.api.api.v1alpha1.delivery.TransferConfig getEntity() {
-      if (entityBuilder_ == null) {
-        return entity_ == null ? com.tcn.cloud.api.api.v1alpha1.delivery.TransferConfig.getDefaultInstance() : entity_;
+    public com.tcn.cloud.api.api.v1alpha1.delivery.ListReq getListReq() {
+      if (listReqBuilder_ == null) {
+        return listReq_ == null ? com.tcn.cloud.api.api.v1alpha1.delivery.ListReq.getDefaultInstance() : listReq_;
       } else {
-        return entityBuilder_.getMessage();
+        return listReqBuilder_.getMessage();
       }
     }
     /**
-     * <code>.api.v1alpha1.delivery.TransferConfig entity = 3 [json_name = "entity"];</code>
+     * <code>.api.v1alpha1.delivery.ListReq list_req = 3 [json_name = "listReq"];</code>
      */
-    public Builder setEntity(com.tcn.cloud.api.api.v1alpha1.delivery.TransferConfig value) {
-      if (entityBuilder_ == null) {
+    public Builder setListReq(com.tcn.cloud.api.api.v1alpha1.delivery.ListReq value) {
+      if (listReqBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        entity_ = value;
+        listReq_ = value;
       } else {
-        entityBuilder_.setMessage(value);
+        listReqBuilder_.setMessage(value);
       }
       bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
-     * <code>.api.v1alpha1.delivery.TransferConfig entity = 3 [json_name = "entity"];</code>
+     * <code>.api.v1alpha1.delivery.ListReq list_req = 3 [json_name = "listReq"];</code>
      */
-    public Builder setEntity(
-        com.tcn.cloud.api.api.v1alpha1.delivery.TransferConfig.Builder builderForValue) {
-      if (entityBuilder_ == null) {
-        entity_ = builderForValue.build();
+    public Builder setListReq(
+        com.tcn.cloud.api.api.v1alpha1.delivery.ListReq.Builder builderForValue) {
+      if (listReqBuilder_ == null) {
+        listReq_ = builderForValue.build();
       } else {
-        entityBuilder_.setMessage(builderForValue.build());
+        listReqBuilder_.setMessage(builderForValue.build());
       }
       bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
-     * <code>.api.v1alpha1.delivery.TransferConfig entity = 3 [json_name = "entity"];</code>
+     * <code>.api.v1alpha1.delivery.ListReq list_req = 3 [json_name = "listReq"];</code>
      */
-    public Builder mergeEntity(com.tcn.cloud.api.api.v1alpha1.delivery.TransferConfig value) {
-      if (entityBuilder_ == null) {
+    public Builder mergeListReq(com.tcn.cloud.api.api.v1alpha1.delivery.ListReq value) {
+      if (listReqBuilder_ == null) {
         if (((bitField0_ & 0x00000004) != 0) &&
-          entity_ != null &&
-          entity_ != com.tcn.cloud.api.api.v1alpha1.delivery.TransferConfig.getDefaultInstance()) {
-          getEntityBuilder().mergeFrom(value);
+          listReq_ != null &&
+          listReq_ != com.tcn.cloud.api.api.v1alpha1.delivery.ListReq.getDefaultInstance()) {
+          getListReqBuilder().mergeFrom(value);
         } else {
-          entity_ = value;
+          listReq_ = value;
         }
       } else {
-        entityBuilder_.mergeFrom(value);
+        listReqBuilder_.mergeFrom(value);
       }
       bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
-     * <code>.api.v1alpha1.delivery.TransferConfig entity = 3 [json_name = "entity"];</code>
+     * <code>.api.v1alpha1.delivery.ListReq list_req = 3 [json_name = "listReq"];</code>
      */
-    public Builder clearEntity() {
+    public Builder clearListReq() {
       bitField0_ = (bitField0_ & ~0x00000004);
-      entity_ = null;
-      if (entityBuilder_ != null) {
-        entityBuilder_.dispose();
-        entityBuilder_ = null;
+      listReq_ = null;
+      if (listReqBuilder_ != null) {
+        listReqBuilder_.dispose();
+        listReqBuilder_ = null;
       }
       onChanged();
       return this;
     }
     /**
-     * <code>.api.v1alpha1.delivery.TransferConfig entity = 3 [json_name = "entity"];</code>
+     * <code>.api.v1alpha1.delivery.ListReq list_req = 3 [json_name = "listReq"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.delivery.TransferConfig.Builder getEntityBuilder() {
+    public com.tcn.cloud.api.api.v1alpha1.delivery.ListReq.Builder getListReqBuilder() {
       bitField0_ |= 0x00000004;
       onChanged();
-      return getEntityFieldBuilder().getBuilder();
+      return getListReqFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.v1alpha1.delivery.TransferConfig entity = 3 [json_name = "entity"];</code>
+     * <code>.api.v1alpha1.delivery.ListReq list_req = 3 [json_name = "listReq"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.delivery.TransferConfigOrBuilder getEntityOrBuilder() {
-      if (entityBuilder_ != null) {
-        return entityBuilder_.getMessageOrBuilder();
+    public com.tcn.cloud.api.api.v1alpha1.delivery.ListReqOrBuilder getListReqOrBuilder() {
+      if (listReqBuilder_ != null) {
+        return listReqBuilder_.getMessageOrBuilder();
       } else {
-        return entity_ == null ?
-            com.tcn.cloud.api.api.v1alpha1.delivery.TransferConfig.getDefaultInstance() : entity_;
+        return listReq_ == null ?
+            com.tcn.cloud.api.api.v1alpha1.delivery.ListReq.getDefaultInstance() : listReq_;
       }
     }
     /**
-     * <code>.api.v1alpha1.delivery.TransferConfig entity = 3 [json_name = "entity"];</code>
+     * <code>.api.v1alpha1.delivery.ListReq list_req = 3 [json_name = "listReq"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.v1alpha1.delivery.TransferConfig, com.tcn.cloud.api.api.v1alpha1.delivery.TransferConfig.Builder, com.tcn.cloud.api.api.v1alpha1.delivery.TransferConfigOrBuilder> 
-        getEntityFieldBuilder() {
-      if (entityBuilder_ == null) {
-        entityBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.v1alpha1.delivery.TransferConfig, com.tcn.cloud.api.api.v1alpha1.delivery.TransferConfig.Builder, com.tcn.cloud.api.api.v1alpha1.delivery.TransferConfigOrBuilder>(
-                getEntity(),
+        com.tcn.cloud.api.api.v1alpha1.delivery.ListReq, com.tcn.cloud.api.api.v1alpha1.delivery.ListReq.Builder, com.tcn.cloud.api.api.v1alpha1.delivery.ListReqOrBuilder> 
+        getListReqFieldBuilder() {
+      if (listReqBuilder_ == null) {
+        listReqBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.v1alpha1.delivery.ListReq, com.tcn.cloud.api.api.v1alpha1.delivery.ListReq.Builder, com.tcn.cloud.api.api.v1alpha1.delivery.ListReqOrBuilder>(
+                getListReq(),
                 getParentForChildren(),
                 isClean());
-        entity_ = null;
+        listReq_ = null;
       }
-      return entityBuilder_;
+      return listReqBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
@@ -892,23 +895,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v1alpha1.delivery.GetTransferConfigByNameReq)
+    // @@protoc_insertion_point(builder_scope:api.v1alpha1.delivery.ListDeliveryDefinitionsReq)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v1alpha1.delivery.GetTransferConfigByNameReq)
-  private static final com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v1alpha1.delivery.ListDeliveryDefinitionsReq)
+  private static final com.tcn.cloud.api.api.v1alpha1.delivery.ListDeliveryDefinitionsReq DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.delivery.ListDeliveryDefinitionsReq();
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v1alpha1.delivery.ListDeliveryDefinitionsReq getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<GetTransferConfigByNameReq>
-      PARSER = new com.google.protobuf.AbstractParser<GetTransferConfigByNameReq>() {
+  private static final com.google.protobuf.Parser<ListDeliveryDefinitionsReq>
+      PARSER = new com.google.protobuf.AbstractParser<ListDeliveryDefinitionsReq>() {
     @java.lang.Override
-    public GetTransferConfigByNameReq parsePartialFrom(
+    public ListDeliveryDefinitionsReq parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -927,17 +930,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<GetTransferConfigByNameReq> parser() {
+  public static com.google.protobuf.Parser<ListDeliveryDefinitionsReq> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<GetTransferConfigByNameReq> getParserForType() {
+  public com.google.protobuf.Parser<ListDeliveryDefinitionsReq> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v1alpha1.delivery.ListDeliveryDefinitionsReq getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

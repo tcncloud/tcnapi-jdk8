@@ -4,18 +4,18 @@
 package com.tcn.cloud.api.api.v1alpha1.delivery;
 
 /**
- * Protobuf type {@code api.v1alpha1.delivery.GetTransferConfigByNameReq}
+ * Protobuf type {@code api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq}
  */
-public final class GetTransferConfigByNameReq extends
+public final class GetDeliveryDefinitionByNameReq extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v1alpha1.delivery.GetTransferConfigByNameReq)
-    GetTransferConfigByNameReqOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq)
+    GetDeliveryDefinitionByNameReqOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use GetTransferConfigByNameReq.newBuilder() to construct.
-  private GetTransferConfigByNameReq(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use GetDeliveryDefinitionByNameReq.newBuilder() to construct.
+  private GetDeliveryDefinitionByNameReq(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private GetTransferConfigByNameReq() {
+  private GetDeliveryDefinitionByNameReq() {
     name_ = "";
   }
 
@@ -23,20 +23,20 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new GetTransferConfigByNameReq();
+    return new GetDeliveryDefinitionByNameReq();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v1alpha1.delivery.ServiceProto.internal_static_api_v1alpha1_delivery_GetTransferConfigByNameReq_descriptor;
+    return com.tcn.cloud.api.api.v1alpha1.delivery.ServiceProto.internal_static_api_v1alpha1_delivery_GetDeliveryDefinitionByNameReq_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v1alpha1.delivery.ServiceProto.internal_static_api_v1alpha1_delivery_GetTransferConfigByNameReq_fieldAccessorTable
+    return com.tcn.cloud.api.api.v1alpha1.delivery.ServiceProto.internal_static_api_v1alpha1_delivery_GetDeliveryDefinitionByNameReq_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq.class, com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq.Builder.class);
+            com.tcn.cloud.api.api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq.class, com.tcn.cloud.api.api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq.Builder.class);
   }
 
   public static final int NAME_FIELD_NUMBER = 1;
@@ -48,8 +48,8 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string name = 1 [json_name = "name", deprecated = true];</code>
-   * @deprecated api.v1alpha1.delivery.GetTransferConfigByNameReq.name is deprecated.
-   *     See api/v1alpha1/delivery/service.proto;l=344
+   * @deprecated api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq.name is deprecated.
+   *     See api/v1alpha1/delivery/service.proto;l=398
    * @return The name.
    */
   @java.lang.Override
@@ -71,8 +71,8 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string name = 1 [json_name = "name", deprecated = true];</code>
-   * @deprecated api.v1alpha1.delivery.GetTransferConfigByNameReq.name is deprecated.
-   *     See api/v1alpha1/delivery/service.proto;l=344
+   * @deprecated api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq.name is deprecated.
+   *     See api/v1alpha1/delivery/service.proto;l=398
    * @return The bytes for name.
    */
   @java.lang.Override
@@ -117,9 +117,9 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ENTITY_FIELD_NUMBER = 3;
-  private com.tcn.cloud.api.api.v1alpha1.delivery.TransferConfig entity_;
+  private com.tcn.cloud.api.api.v1alpha1.delivery.DeliveryDefinition entity_;
   /**
-   * <code>.api.v1alpha1.delivery.TransferConfig entity = 3 [json_name = "entity"];</code>
+   * <code>.api.v1alpha1.delivery.DeliveryDefinition entity = 3 [json_name = "entity"];</code>
    * @return Whether the entity field is set.
    */
   @java.lang.Override
@@ -127,19 +127,19 @@ private static final long serialVersionUID = 0L;
     return entity_ != null;
   }
   /**
-   * <code>.api.v1alpha1.delivery.TransferConfig entity = 3 [json_name = "entity"];</code>
+   * <code>.api.v1alpha1.delivery.DeliveryDefinition entity = 3 [json_name = "entity"];</code>
    * @return The entity.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.delivery.TransferConfig getEntity() {
-    return entity_ == null ? com.tcn.cloud.api.api.v1alpha1.delivery.TransferConfig.getDefaultInstance() : entity_;
+  public com.tcn.cloud.api.api.v1alpha1.delivery.DeliveryDefinition getEntity() {
+    return entity_ == null ? com.tcn.cloud.api.api.v1alpha1.delivery.DeliveryDefinition.getDefaultInstance() : entity_;
   }
   /**
-   * <code>.api.v1alpha1.delivery.TransferConfig entity = 3 [json_name = "entity"];</code>
+   * <code>.api.v1alpha1.delivery.DeliveryDefinition entity = 3 [json_name = "entity"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.delivery.TransferConfigOrBuilder getEntityOrBuilder() {
-    return entity_ == null ? com.tcn.cloud.api.api.v1alpha1.delivery.TransferConfig.getDefaultInstance() : entity_;
+  public com.tcn.cloud.api.api.v1alpha1.delivery.DeliveryDefinitionOrBuilder getEntityOrBuilder() {
+    return entity_ == null ? com.tcn.cloud.api.api.v1alpha1.delivery.DeliveryDefinition.getDefaultInstance() : entity_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -195,10 +195,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq other = (com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq) obj;
+    com.tcn.cloud.api.api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq other = (com.tcn.cloud.api.api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq) obj;
 
     if (!getName()
         .equals(other.getName())) return false;
@@ -238,44 +238,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -283,26 +283,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -315,7 +315,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -331,26 +331,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code api.v1alpha1.delivery.GetTransferConfigByNameReq}
+   * Protobuf type {@code api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v1alpha1.delivery.GetTransferConfigByNameReq)
-      com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReqOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq)
+      com.tcn.cloud.api.api.v1alpha1.delivery.GetDeliveryDefinitionByNameReqOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v1alpha1.delivery.ServiceProto.internal_static_api_v1alpha1_delivery_GetTransferConfigByNameReq_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.delivery.ServiceProto.internal_static_api_v1alpha1_delivery_GetDeliveryDefinitionByNameReq_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v1alpha1.delivery.ServiceProto.internal_static_api_v1alpha1_delivery_GetTransferConfigByNameReq_fieldAccessorTable
+      return com.tcn.cloud.api.api.v1alpha1.delivery.ServiceProto.internal_static_api_v1alpha1_delivery_GetDeliveryDefinitionByNameReq_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq.class, com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq.Builder.class);
+              com.tcn.cloud.api.api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq.class, com.tcn.cloud.api.api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq.newBuilder()
     private Builder() {
 
     }
@@ -381,17 +381,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v1alpha1.delivery.ServiceProto.internal_static_api_v1alpha1_delivery_GetTransferConfigByNameReq_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.delivery.ServiceProto.internal_static_api_v1alpha1_delivery_GetDeliveryDefinitionByNameReq_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq.getDefaultInstance();
+    public com.tcn.cloud.api.api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq build() {
-      com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq result = buildPartial();
+    public com.tcn.cloud.api.api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq build() {
+      com.tcn.cloud.api.api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -399,14 +399,14 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq buildPartial() {
-      com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq result = new com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq(this);
+    public com.tcn.cloud.api.api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq buildPartial() {
+      com.tcn.cloud.api.api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq result = new com.tcn.cloud.api.api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq result) {
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.name_ = name_;
@@ -457,16 +457,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq) {
-        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq)other);
+      if (other instanceof com.tcn.cloud.api.api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq) {
+        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq other) {
-      if (other == com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq other) {
+      if (other == com.tcn.cloud.api.api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq.getDefaultInstance()) return this;
       if (!other.getName().isEmpty()) {
         name_ = other.name_;
         bitField0_ |= 0x00000001;
@@ -547,8 +547,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string name = 1 [json_name = "name", deprecated = true];</code>
-     * @deprecated api.v1alpha1.delivery.GetTransferConfigByNameReq.name is deprecated.
-     *     See api/v1alpha1/delivery/service.proto;l=344
+     * @deprecated api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq.name is deprecated.
+     *     See api/v1alpha1/delivery/service.proto;l=398
      * @return The name.
      */
     @java.lang.Deprecated public java.lang.String getName() {
@@ -569,8 +569,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string name = 1 [json_name = "name", deprecated = true];</code>
-     * @deprecated api.v1alpha1.delivery.GetTransferConfigByNameReq.name is deprecated.
-     *     See api/v1alpha1/delivery/service.proto;l=344
+     * @deprecated api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq.name is deprecated.
+     *     See api/v1alpha1/delivery/service.proto;l=398
      * @return The bytes for name.
      */
     @java.lang.Deprecated public com.google.protobuf.ByteString
@@ -592,8 +592,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string name = 1 [json_name = "name", deprecated = true];</code>
-     * @deprecated api.v1alpha1.delivery.GetTransferConfigByNameReq.name is deprecated.
-     *     See api/v1alpha1/delivery/service.proto;l=344
+     * @deprecated api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq.name is deprecated.
+     *     See api/v1alpha1/delivery/service.proto;l=398
      * @param value The name to set.
      * @return This builder for chaining.
      */
@@ -611,8 +611,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string name = 1 [json_name = "name", deprecated = true];</code>
-     * @deprecated api.v1alpha1.delivery.GetTransferConfigByNameReq.name is deprecated.
-     *     See api/v1alpha1/delivery/service.proto;l=344
+     * @deprecated api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq.name is deprecated.
+     *     See api/v1alpha1/delivery/service.proto;l=398
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearName() {
@@ -627,8 +627,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string name = 1 [json_name = "name", deprecated = true];</code>
-     * @deprecated api.v1alpha1.delivery.GetTransferConfigByNameReq.name is deprecated.
-     *     See api/v1alpha1/delivery/service.proto;l=344
+     * @deprecated api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq.name is deprecated.
+     *     See api/v1alpha1/delivery/service.proto;l=398
      * @param value The bytes for name to set.
      * @return This builder for chaining.
      */
@@ -761,31 +761,31 @@ private static final long serialVersionUID = 0L;
       return maskBuilder_;
     }
 
-    private com.tcn.cloud.api.api.v1alpha1.delivery.TransferConfig entity_;
+    private com.tcn.cloud.api.api.v1alpha1.delivery.DeliveryDefinition entity_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.v1alpha1.delivery.TransferConfig, com.tcn.cloud.api.api.v1alpha1.delivery.TransferConfig.Builder, com.tcn.cloud.api.api.v1alpha1.delivery.TransferConfigOrBuilder> entityBuilder_;
+        com.tcn.cloud.api.api.v1alpha1.delivery.DeliveryDefinition, com.tcn.cloud.api.api.v1alpha1.delivery.DeliveryDefinition.Builder, com.tcn.cloud.api.api.v1alpha1.delivery.DeliveryDefinitionOrBuilder> entityBuilder_;
     /**
-     * <code>.api.v1alpha1.delivery.TransferConfig entity = 3 [json_name = "entity"];</code>
+     * <code>.api.v1alpha1.delivery.DeliveryDefinition entity = 3 [json_name = "entity"];</code>
      * @return Whether the entity field is set.
      */
     public boolean hasEntity() {
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
-     * <code>.api.v1alpha1.delivery.TransferConfig entity = 3 [json_name = "entity"];</code>
+     * <code>.api.v1alpha1.delivery.DeliveryDefinition entity = 3 [json_name = "entity"];</code>
      * @return The entity.
      */
-    public com.tcn.cloud.api.api.v1alpha1.delivery.TransferConfig getEntity() {
+    public com.tcn.cloud.api.api.v1alpha1.delivery.DeliveryDefinition getEntity() {
       if (entityBuilder_ == null) {
-        return entity_ == null ? com.tcn.cloud.api.api.v1alpha1.delivery.TransferConfig.getDefaultInstance() : entity_;
+        return entity_ == null ? com.tcn.cloud.api.api.v1alpha1.delivery.DeliveryDefinition.getDefaultInstance() : entity_;
       } else {
         return entityBuilder_.getMessage();
       }
     }
     /**
-     * <code>.api.v1alpha1.delivery.TransferConfig entity = 3 [json_name = "entity"];</code>
+     * <code>.api.v1alpha1.delivery.DeliveryDefinition entity = 3 [json_name = "entity"];</code>
      */
-    public Builder setEntity(com.tcn.cloud.api.api.v1alpha1.delivery.TransferConfig value) {
+    public Builder setEntity(com.tcn.cloud.api.api.v1alpha1.delivery.DeliveryDefinition value) {
       if (entityBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -799,10 +799,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.v1alpha1.delivery.TransferConfig entity = 3 [json_name = "entity"];</code>
+     * <code>.api.v1alpha1.delivery.DeliveryDefinition entity = 3 [json_name = "entity"];</code>
      */
     public Builder setEntity(
-        com.tcn.cloud.api.api.v1alpha1.delivery.TransferConfig.Builder builderForValue) {
+        com.tcn.cloud.api.api.v1alpha1.delivery.DeliveryDefinition.Builder builderForValue) {
       if (entityBuilder_ == null) {
         entity_ = builderForValue.build();
       } else {
@@ -813,13 +813,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.v1alpha1.delivery.TransferConfig entity = 3 [json_name = "entity"];</code>
+     * <code>.api.v1alpha1.delivery.DeliveryDefinition entity = 3 [json_name = "entity"];</code>
      */
-    public Builder mergeEntity(com.tcn.cloud.api.api.v1alpha1.delivery.TransferConfig value) {
+    public Builder mergeEntity(com.tcn.cloud.api.api.v1alpha1.delivery.DeliveryDefinition value) {
       if (entityBuilder_ == null) {
         if (((bitField0_ & 0x00000004) != 0) &&
           entity_ != null &&
-          entity_ != com.tcn.cloud.api.api.v1alpha1.delivery.TransferConfig.getDefaultInstance()) {
+          entity_ != com.tcn.cloud.api.api.v1alpha1.delivery.DeliveryDefinition.getDefaultInstance()) {
           getEntityBuilder().mergeFrom(value);
         } else {
           entity_ = value;
@@ -832,7 +832,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.v1alpha1.delivery.TransferConfig entity = 3 [json_name = "entity"];</code>
+     * <code>.api.v1alpha1.delivery.DeliveryDefinition entity = 3 [json_name = "entity"];</code>
      */
     public Builder clearEntity() {
       bitField0_ = (bitField0_ & ~0x00000004);
@@ -845,33 +845,33 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.v1alpha1.delivery.TransferConfig entity = 3 [json_name = "entity"];</code>
+     * <code>.api.v1alpha1.delivery.DeliveryDefinition entity = 3 [json_name = "entity"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.delivery.TransferConfig.Builder getEntityBuilder() {
+    public com.tcn.cloud.api.api.v1alpha1.delivery.DeliveryDefinition.Builder getEntityBuilder() {
       bitField0_ |= 0x00000004;
       onChanged();
       return getEntityFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.v1alpha1.delivery.TransferConfig entity = 3 [json_name = "entity"];</code>
+     * <code>.api.v1alpha1.delivery.DeliveryDefinition entity = 3 [json_name = "entity"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.delivery.TransferConfigOrBuilder getEntityOrBuilder() {
+    public com.tcn.cloud.api.api.v1alpha1.delivery.DeliveryDefinitionOrBuilder getEntityOrBuilder() {
       if (entityBuilder_ != null) {
         return entityBuilder_.getMessageOrBuilder();
       } else {
         return entity_ == null ?
-            com.tcn.cloud.api.api.v1alpha1.delivery.TransferConfig.getDefaultInstance() : entity_;
+            com.tcn.cloud.api.api.v1alpha1.delivery.DeliveryDefinition.getDefaultInstance() : entity_;
       }
     }
     /**
-     * <code>.api.v1alpha1.delivery.TransferConfig entity = 3 [json_name = "entity"];</code>
+     * <code>.api.v1alpha1.delivery.DeliveryDefinition entity = 3 [json_name = "entity"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.v1alpha1.delivery.TransferConfig, com.tcn.cloud.api.api.v1alpha1.delivery.TransferConfig.Builder, com.tcn.cloud.api.api.v1alpha1.delivery.TransferConfigOrBuilder> 
+        com.tcn.cloud.api.api.v1alpha1.delivery.DeliveryDefinition, com.tcn.cloud.api.api.v1alpha1.delivery.DeliveryDefinition.Builder, com.tcn.cloud.api.api.v1alpha1.delivery.DeliveryDefinitionOrBuilder> 
         getEntityFieldBuilder() {
       if (entityBuilder_ == null) {
         entityBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.v1alpha1.delivery.TransferConfig, com.tcn.cloud.api.api.v1alpha1.delivery.TransferConfig.Builder, com.tcn.cloud.api.api.v1alpha1.delivery.TransferConfigOrBuilder>(
+            com.tcn.cloud.api.api.v1alpha1.delivery.DeliveryDefinition, com.tcn.cloud.api.api.v1alpha1.delivery.DeliveryDefinition.Builder, com.tcn.cloud.api.api.v1alpha1.delivery.DeliveryDefinitionOrBuilder>(
                 getEntity(),
                 getParentForChildren(),
                 isClean());
@@ -892,23 +892,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v1alpha1.delivery.GetTransferConfigByNameReq)
+    // @@protoc_insertion_point(builder_scope:api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v1alpha1.delivery.GetTransferConfigByNameReq)
-  private static final com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq)
+  private static final com.tcn.cloud.api.api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq();
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<GetTransferConfigByNameReq>
-      PARSER = new com.google.protobuf.AbstractParser<GetTransferConfigByNameReq>() {
+  private static final com.google.protobuf.Parser<GetDeliveryDefinitionByNameReq>
+      PARSER = new com.google.protobuf.AbstractParser<GetDeliveryDefinitionByNameReq>() {
     @java.lang.Override
-    public GetTransferConfigByNameReq parsePartialFrom(
+    public GetDeliveryDefinitionByNameReq parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -927,17 +927,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<GetTransferConfigByNameReq> parser() {
+  public static com.google.protobuf.Parser<GetDeliveryDefinitionByNameReq> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<GetTransferConfigByNameReq> getParserForType() {
+  public com.google.protobuf.Parser<GetDeliveryDefinitionByNameReq> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

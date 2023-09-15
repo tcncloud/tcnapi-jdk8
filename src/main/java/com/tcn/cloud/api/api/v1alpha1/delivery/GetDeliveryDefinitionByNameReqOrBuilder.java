@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.v1alpha1.delivery;
 
-public interface GetTransferConfigByNameReqOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v1alpha1.delivery.GetTransferConfigByNameReq)
+public interface GetDeliveryDefinitionByNameReqOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -13,8 +13,8 @@ public interface GetTransferConfigByNameReqOrBuilder extends
    * </pre>
    *
    * <code>string name = 1 [json_name = "name", deprecated = true];</code>
-   * @deprecated api.v1alpha1.delivery.GetTransferConfigByNameReq.name is deprecated.
-   *     See api/v1alpha1/delivery/service.proto;l=344
+   * @deprecated api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq.name is deprecated.
+   *     See api/v1alpha1/delivery/service.proto;l=398
    * @return The name.
    */
   @java.lang.Deprecated java.lang.String getName();
@@ -24,8 +24,8 @@ public interface GetTransferConfigByNameReqOrBuilder extends
    * </pre>
    *
    * <code>string name = 1 [json_name = "name", deprecated = true];</code>
-   * @deprecated api.v1alpha1.delivery.GetTransferConfigByNameReq.name is deprecated.
-   *     See api/v1alpha1/delivery/service.proto;l=344
+   * @deprecated api.v1alpha1.delivery.GetDeliveryDefinitionByNameReq.name is deprecated.
+   *     See api/v1alpha1/delivery/service.proto;l=398
    * @return The bytes for name.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString
@@ -47,17 +47,17 @@ public interface GetTransferConfigByNameReqOrBuilder extends
   com.google.protobuf.FieldMaskOrBuilder getMaskOrBuilder();
 
   /**
-   * <code>.api.v1alpha1.delivery.TransferConfig entity = 3 [json_name = "entity"];</code>
+   * <code>.api.v1alpha1.delivery.DeliveryDefinition entity = 3 [json_name = "entity"];</code>
    * @return Whether the entity field is set.
    */
   boolean hasEntity();
   /**
-   * <code>.api.v1alpha1.delivery.TransferConfig entity = 3 [json_name = "entity"];</code>
+   * <code>.api.v1alpha1.delivery.DeliveryDefinition entity = 3 [json_name = "entity"];</code>
    * @return The entity.
    */
-  com.tcn.cloud.api.api.v1alpha1.delivery.TransferConfig getEntity();
+  com.tcn.cloud.api.api.v1alpha1.delivery.DeliveryDefinition getEntity();
   /**
-   * <code>.api.v1alpha1.delivery.TransferConfig entity = 3 [json_name = "entity"];</code>
+   * <code>.api.v1alpha1.delivery.DeliveryDefinition entity = 3 [json_name = "entity"];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.delivery.TransferConfigOrBuilder getEntityOrBuilder();
+  com.tcn.cloud.api.api.v1alpha1.delivery.DeliveryDefinitionOrBuilder getEntityOrBuilder();
 }
