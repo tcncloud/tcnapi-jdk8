@@ -45,6 +45,10 @@ private static final long serialVersionUID = 0L;
   public static final int USER_ACTIVITY_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.api.v1alpha1.newsroom.UserActivity userActivity_;
   /**
+   * <pre>
+   * user activity details
+   * </pre>
+   *
    * <code>.api.v1alpha1.newsroom.UserActivity user_activity = 1 [json_name = "userActivity"];</code>
    * @return Whether the userActivity field is set.
    */
@@ -53,6 +57,10 @@ private static final long serialVersionUID = 0L;
     return userActivity_ != null;
   }
   /**
+   * <pre>
+   * user activity details
+   * </pre>
+   *
    * <code>.api.v1alpha1.newsroom.UserActivity user_activity = 1 [json_name = "userActivity"];</code>
    * @return The userActivity.
    */
@@ -61,6 +69,10 @@ private static final long serialVersionUID = 0L;
     return userActivity_ == null ? com.tcn.cloud.api.api.v1alpha1.newsroom.UserActivity.getDefaultInstance() : userActivity_;
   }
   /**
+   * <pre>
+   * user activity details
+   * </pre>
+   *
    * <code>.api.v1alpha1.newsroom.UserActivity user_activity = 1 [json_name = "userActivity"];</code>
    */
   @java.lang.Override
@@ -414,6 +426,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.v1alpha1.newsroom.UserActivity, com.tcn.cloud.api.api.v1alpha1.newsroom.UserActivity.Builder, com.tcn.cloud.api.api.v1alpha1.newsroom.UserActivityOrBuilder> userActivityBuilder_;
     /**
+     * <pre>
+     * user activity details
+     * </pre>
+     *
      * <code>.api.v1alpha1.newsroom.UserActivity user_activity = 1 [json_name = "userActivity"];</code>
      * @return Whether the userActivity field is set.
      */
@@ -421,6 +437,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
+     * <pre>
+     * user activity details
+     * </pre>
+     *
      * <code>.api.v1alpha1.newsroom.UserActivity user_activity = 1 [json_name = "userActivity"];</code>
      * @return The userActivity.
      */
@@ -432,6 +452,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * user activity details
+     * </pre>
+     *
      * <code>.api.v1alpha1.newsroom.UserActivity user_activity = 1 [json_name = "userActivity"];</code>
      */
     public Builder setUserActivity(com.tcn.cloud.api.api.v1alpha1.newsroom.UserActivity value) {
@@ -448,6 +472,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * user activity details
+     * </pre>
+     *
      * <code>.api.v1alpha1.newsroom.UserActivity user_activity = 1 [json_name = "userActivity"];</code>
      */
     public Builder setUserActivity(
@@ -462,6 +490,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * user activity details
+     * </pre>
+     *
      * <code>.api.v1alpha1.newsroom.UserActivity user_activity = 1 [json_name = "userActivity"];</code>
      */
     public Builder mergeUserActivity(com.tcn.cloud.api.api.v1alpha1.newsroom.UserActivity value) {
@@ -481,6 +513,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * user activity details
+     * </pre>
+     *
      * <code>.api.v1alpha1.newsroom.UserActivity user_activity = 1 [json_name = "userActivity"];</code>
      */
     public Builder clearUserActivity() {
@@ -494,6 +530,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * user activity details
+     * </pre>
+     *
      * <code>.api.v1alpha1.newsroom.UserActivity user_activity = 1 [json_name = "userActivity"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.newsroom.UserActivity.Builder getUserActivityBuilder() {
@@ -502,6 +542,10 @@ private static final long serialVersionUID = 0L;
       return getUserActivityFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * user activity details
+     * </pre>
+     *
      * <code>.api.v1alpha1.newsroom.UserActivity user_activity = 1 [json_name = "userActivity"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.newsroom.UserActivityOrBuilder getUserActivityOrBuilder() {
@@ -513,6 +557,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * user activity details
+     * </pre>
+     *
      * <code>.api.v1alpha1.newsroom.UserActivity user_activity = 1 [json_name = "userActivity"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<

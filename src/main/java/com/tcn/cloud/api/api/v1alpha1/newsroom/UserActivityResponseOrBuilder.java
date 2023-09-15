@@ -8,16 +8,28 @@ public interface UserActivityResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * user activity details
+   * </pre>
+   *
    * <code>.api.v1alpha1.newsroom.UserActivity user_activity = 1 [json_name = "userActivity"];</code>
    * @return Whether the userActivity field is set.
    */
   boolean hasUserActivity();
   /**
+   * <pre>
+   * user activity details
+   * </pre>
+   *
    * <code>.api.v1alpha1.newsroom.UserActivity user_activity = 1 [json_name = "userActivity"];</code>
    * @return The userActivity.
    */
   com.tcn.cloud.api.api.v1alpha1.newsroom.UserActivity getUserActivity();
   /**
+   * <pre>
+   * user activity details
+   * </pre>
+   *
    * <code>.api.v1alpha1.newsroom.UserActivity user_activity = 1 [json_name = "userActivity"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.newsroom.UserActivityOrBuilder getUserActivityOrBuilder();
