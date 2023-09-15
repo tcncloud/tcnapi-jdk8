@@ -43,6 +43,77 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfig.class, com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfig.Builder.class);
   }
 
+  private int configCase_ = 0;
+  @SuppressWarnings("serial")
+  private java.lang.Object config_;
+  public enum ConfigCase
+      implements com.google.protobuf.Internal.EnumLite,
+          com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+    AREA_CODE(1),
+    CONFIG_NOT_SET(0);
+    private final int value;
+    private ConfigCase(int value) {
+      this.value = value;
+    }
+    /**
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static ConfigCase valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static ConfigCase forNumber(int value) {
+      switch (value) {
+        case 1: return AREA_CODE;
+        case 0: return CONFIG_NOT_SET;
+        default: return null;
+      }
+    }
+    public int getNumber() {
+      return this.value;
+    }
+  };
+
+  public ConfigCase
+  getConfigCase() {
+    return ConfigCase.forNumber(
+        configCase_);
+  }
+
+  public static final int AREA_CODE_FIELD_NUMBER = 1;
+  /**
+   * <code>.data.billing.v1alpha1.MatchingConfigAreaCode area_code = 1 [json_name = "areaCode"];</code>
+   * @return Whether the areaCode field is set.
+   */
+  @java.lang.Override
+  public boolean hasAreaCode() {
+    return configCase_ == 1;
+  }
+  /**
+   * <code>.data.billing.v1alpha1.MatchingConfigAreaCode area_code = 1 [json_name = "areaCode"];</code>
+   * @return The areaCode.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfigAreaCode getAreaCode() {
+    if (configCase_ == 1) {
+       return (com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfigAreaCode) config_;
+    }
+    return com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfigAreaCode.getDefaultInstance();
+  }
+  /**
+   * <code>.data.billing.v1alpha1.MatchingConfigAreaCode area_code = 1 [json_name = "areaCode"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfigAreaCodeOrBuilder getAreaCodeOrBuilder() {
+    if (configCase_ == 1) {
+       return (com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfigAreaCode) config_;
+    }
+    return com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfigAreaCode.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -57,6 +128,9 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    if (configCase_ == 1) {
+      output.writeMessage(1, (com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfigAreaCode) config_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -66,6 +140,10 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    if (configCase_ == 1) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1, (com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfigAreaCode) config_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -81,6 +159,15 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfig other = (com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfig) obj;
 
+    if (!getConfigCase().equals(other.getConfigCase())) return false;
+    switch (configCase_) {
+      case 1:
+        if (!getAreaCode()
+            .equals(other.getAreaCode())) return false;
+        break;
+      case 0:
+      default:
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -92,6 +179,14 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    switch (configCase_) {
+      case 1:
+        hash = (37 * hash) + AREA_CODE_FIELD_NUMBER;
+        hash = (53 * hash) + getAreaCode().hashCode();
+        break;
+      case 0:
+      default:
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -227,6 +322,12 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
+      if (areaCodeBuilder_ != null) {
+        areaCodeBuilder_.clear();
+      }
+      configCase_ = 0;
+      config_ = null;
       return this;
     }
 
@@ -253,8 +354,23 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfig buildPartial() {
       com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfig result = new com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfig(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      buildPartialOneofs(result);
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfig result) {
+      int from_bitField0_ = bitField0_;
+    }
+
+    private void buildPartialOneofs(com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfig result) {
+      result.configCase_ = configCase_;
+      result.config_ = this.config_;
+      if (configCase_ == 1 &&
+          areaCodeBuilder_ != null) {
+        result.config_ = areaCodeBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -301,6 +417,15 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfig other) {
       if (other == com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfig.getDefaultInstance()) return this;
+      switch (other.getConfigCase()) {
+        case AREA_CODE: {
+          mergeAreaCode(other.getAreaCode());
+          break;
+        }
+        case CONFIG_NOT_SET: {
+          break;
+        }
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -327,6 +452,13 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
+            case 10: {
+              input.readMessage(
+                  getAreaCodeFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 1;
+              break;
+            } // case 10
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -341,6 +473,164 @@ private static final long serialVersionUID = 0L;
         onChanged();
       } // finally
       return this;
+    }
+    private int configCase_ = 0;
+    private java.lang.Object config_;
+    public ConfigCase
+        getConfigCase() {
+      return ConfigCase.forNumber(
+          configCase_);
+    }
+
+    public Builder clearConfig() {
+      configCase_ = 0;
+      config_ = null;
+      onChanged();
+      return this;
+    }
+
+    private int bitField0_;
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfigAreaCode, com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfigAreaCode.Builder, com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfigAreaCodeOrBuilder> areaCodeBuilder_;
+    /**
+     * <code>.data.billing.v1alpha1.MatchingConfigAreaCode area_code = 1 [json_name = "areaCode"];</code>
+     * @return Whether the areaCode field is set.
+     */
+    @java.lang.Override
+    public boolean hasAreaCode() {
+      return configCase_ == 1;
+    }
+    /**
+     * <code>.data.billing.v1alpha1.MatchingConfigAreaCode area_code = 1 [json_name = "areaCode"];</code>
+     * @return The areaCode.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfigAreaCode getAreaCode() {
+      if (areaCodeBuilder_ == null) {
+        if (configCase_ == 1) {
+          return (com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfigAreaCode) config_;
+        }
+        return com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfigAreaCode.getDefaultInstance();
+      } else {
+        if (configCase_ == 1) {
+          return areaCodeBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfigAreaCode.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.data.billing.v1alpha1.MatchingConfigAreaCode area_code = 1 [json_name = "areaCode"];</code>
+     */
+    public Builder setAreaCode(com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfigAreaCode value) {
+      if (areaCodeBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        config_ = value;
+        onChanged();
+      } else {
+        areaCodeBuilder_.setMessage(value);
+      }
+      configCase_ = 1;
+      return this;
+    }
+    /**
+     * <code>.data.billing.v1alpha1.MatchingConfigAreaCode area_code = 1 [json_name = "areaCode"];</code>
+     */
+    public Builder setAreaCode(
+        com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfigAreaCode.Builder builderForValue) {
+      if (areaCodeBuilder_ == null) {
+        config_ = builderForValue.build();
+        onChanged();
+      } else {
+        areaCodeBuilder_.setMessage(builderForValue.build());
+      }
+      configCase_ = 1;
+      return this;
+    }
+    /**
+     * <code>.data.billing.v1alpha1.MatchingConfigAreaCode area_code = 1 [json_name = "areaCode"];</code>
+     */
+    public Builder mergeAreaCode(com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfigAreaCode value) {
+      if (areaCodeBuilder_ == null) {
+        if (configCase_ == 1 &&
+            config_ != com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfigAreaCode.getDefaultInstance()) {
+          config_ = com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfigAreaCode.newBuilder((com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfigAreaCode) config_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          config_ = value;
+        }
+        onChanged();
+      } else {
+        if (configCase_ == 1) {
+          areaCodeBuilder_.mergeFrom(value);
+        } else {
+          areaCodeBuilder_.setMessage(value);
+        }
+      }
+      configCase_ = 1;
+      return this;
+    }
+    /**
+     * <code>.data.billing.v1alpha1.MatchingConfigAreaCode area_code = 1 [json_name = "areaCode"];</code>
+     */
+    public Builder clearAreaCode() {
+      if (areaCodeBuilder_ == null) {
+        if (configCase_ == 1) {
+          configCase_ = 0;
+          config_ = null;
+          onChanged();
+        }
+      } else {
+        if (configCase_ == 1) {
+          configCase_ = 0;
+          config_ = null;
+        }
+        areaCodeBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.data.billing.v1alpha1.MatchingConfigAreaCode area_code = 1 [json_name = "areaCode"];</code>
+     */
+    public com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfigAreaCode.Builder getAreaCodeBuilder() {
+      return getAreaCodeFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.data.billing.v1alpha1.MatchingConfigAreaCode area_code = 1 [json_name = "areaCode"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfigAreaCodeOrBuilder getAreaCodeOrBuilder() {
+      if ((configCase_ == 1) && (areaCodeBuilder_ != null)) {
+        return areaCodeBuilder_.getMessageOrBuilder();
+      } else {
+        if (configCase_ == 1) {
+          return (com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfigAreaCode) config_;
+        }
+        return com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfigAreaCode.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.data.billing.v1alpha1.MatchingConfigAreaCode area_code = 1 [json_name = "areaCode"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfigAreaCode, com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfigAreaCode.Builder, com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfigAreaCodeOrBuilder> 
+        getAreaCodeFieldBuilder() {
+      if (areaCodeBuilder_ == null) {
+        if (!(configCase_ == 1)) {
+          config_ = com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfigAreaCode.getDefaultInstance();
+        }
+        areaCodeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfigAreaCode, com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfigAreaCode.Builder, com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfigAreaCodeOrBuilder>(
+                (com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfigAreaCode) config_,
+                getParentForChildren(),
+                isClean());
+        config_ = null;
+      }
+      configCase_ = 1;
+      onChanged();
+      return areaCodeBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

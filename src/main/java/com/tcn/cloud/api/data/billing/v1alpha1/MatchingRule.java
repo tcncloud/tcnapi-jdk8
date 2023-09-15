@@ -17,6 +17,10 @@ public enum MatchingRule
    * <code>MATCHING_RULE_UNSPECIFIED = 0;</code>
    */
   MATCHING_RULE_UNSPECIFIED(0),
+  /**
+   * <code>MATCHING_RULE_AREA_CODE = 1;</code>
+   */
+  MATCHING_RULE_AREA_CODE(1),
   UNRECOGNIZED(-1),
   ;
 
@@ -24,6 +28,10 @@ public enum MatchingRule
    * <code>MATCHING_RULE_UNSPECIFIED = 0;</code>
    */
   public static final int MATCHING_RULE_UNSPECIFIED_VALUE = 0;
+  /**
+   * <code>MATCHING_RULE_AREA_CODE = 1;</code>
+   */
+  public static final int MATCHING_RULE_AREA_CODE_VALUE = 1;
 
 
   public final int getNumber() {
@@ -51,6 +59,7 @@ public enum MatchingRule
   public static MatchingRule forNumber(int value) {
     switch (value) {
       case 0: return MATCHING_RULE_UNSPECIFIED;
+      case 1: return MATCHING_RULE_AREA_CODE;
       default: return null;
     }
   }

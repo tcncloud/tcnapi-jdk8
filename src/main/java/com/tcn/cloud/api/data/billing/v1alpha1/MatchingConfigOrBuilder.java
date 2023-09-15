@@ -6,4 +6,21 @@ package com.tcn.cloud.api.data.billing.v1alpha1;
 public interface MatchingConfigOrBuilder extends
     // @@protoc_insertion_point(interface_extends:data.billing.v1alpha1.MatchingConfig)
     com.google.protobuf.MessageOrBuilder {
+
+  /**
+   * <code>.data.billing.v1alpha1.MatchingConfigAreaCode area_code = 1 [json_name = "areaCode"];</code>
+   * @return Whether the areaCode field is set.
+   */
+  boolean hasAreaCode();
+  /**
+   * <code>.data.billing.v1alpha1.MatchingConfigAreaCode area_code = 1 [json_name = "areaCode"];</code>
+   * @return The areaCode.
+   */
+  com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfigAreaCode getAreaCode();
+  /**
+   * <code>.data.billing.v1alpha1.MatchingConfigAreaCode area_code = 1 [json_name = "areaCode"];</code>
+   */
+  com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfigAreaCodeOrBuilder getAreaCodeOrBuilder();
+
+  com.tcn.cloud.api.data.billing.v1alpha1.MatchingConfig.ConfigCase getConfigCase();
 }

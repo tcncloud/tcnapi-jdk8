@@ -19,6 +19,11 @@ public final class MatchingProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_data_billing_v1alpha1_MatchingConfig_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_data_billing_v1alpha1_MatchingConfigAreaCode_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_data_billing_v1alpha1_MatchingConfigAreaCode_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -29,13 +34,18 @@ public final class MatchingProto {
   static {
     java.lang.String[] descriptorData = {
       "\n$data/billing/v1alpha1/matching.proto\022\025" +
-      "data.billing.v1alpha1\"\020\n\016MatchingConfig*" +
-      "-\n\014MatchingRule\022\035\n\031MATCHING_RULE_UNSPECI" +
-      "FIED\020\000B\256\001\n\'com.tcn.cloud.api.data.billin" +
-      "g.v1alpha1B\rMatchingProtoP\001\242\002\003DBX\252\002\025Data" +
-      ".Billing.V1alpha1\312\002\025Data\\Billing\\V1alpha" +
-      "1\342\002!Data\\Billing\\V1alpha1\\GPBMetadata\352\002\027" +
-      "Data::Billing::V1alpha1b\006proto3"
+      "data.billing.v1alpha1\"h\n\016MatchingConfig\022" +
+      "L\n\tarea_code\030\001 \001(\0132-.data.billing.v1alph" +
+      "a1.MatchingConfigAreaCodeH\000R\010areaCodeB\010\n" +
+      "\006config\"K\n\026MatchingConfigAreaCode\022\022\n\004nam" +
+      "e\030\001 \001(\tR\004name\022\035\n\narea_codes\030\002 \003(\tR\tareaC" +
+      "odes*J\n\014MatchingRule\022\035\n\031MATCHING_RULE_UN" +
+      "SPECIFIED\020\000\022\033\n\027MATCHING_RULE_AREA_CODE\020\001" +
+      "B\256\001\n\'com.tcn.cloud.api.data.billing.v1al" +
+      "pha1B\rMatchingProtoP\001\242\002\003DBX\252\002\025Data.Billi" +
+      "ng.V1alpha1\312\002\025Data\\Billing\\V1alpha1\342\002!Da" +
+      "ta\\Billing\\V1alpha1\\GPBMetadata\352\002\027Data::" +
+      "Billing::V1alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -46,7 +56,13 @@ public final class MatchingProto {
     internal_static_data_billing_v1alpha1_MatchingConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_data_billing_v1alpha1_MatchingConfig_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "AreaCode", "Config", });
+    internal_static_data_billing_v1alpha1_MatchingConfigAreaCode_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_data_billing_v1alpha1_MatchingConfigAreaCode_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_data_billing_v1alpha1_MatchingConfigAreaCode_descriptor,
+        new java.lang.String[] { "Name", "AreaCodes", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
