@@ -159,38 +159,39 @@ public final class ServiceProto {
       "\014RingStrategy\022\035\n\031RING_STRATEGY_UNSPECIFI" +
       "ED\020\000\022\032\n\026RING_STRATEGY_RING_ALL\020\001\022\035\n\031RING" +
       "_STRATEGY_ROUND_ROBIN\020\002\022\030\n\024RING_STRATEGY" +
-      "_RANDOM\020\0032\303\010\n\nPBXService\022\216\001\n\rQueryPbxUse" +
+      "_RANDOM\020\0032\346\010\n\nPBXService\022\223\001\n\rQueryPbxUse" +
       "rs\022%.services.pbx.v1.QueryPbxUsersReques" +
       "t\032&.services.pbx.v1.QueryPbxUsersRespons" +
-      "e\".\272\270\221\002\005\n\003\010\204 \202\323\344\223\002\036\022\031/api/pbx/v1/querypb" +
-      "xusers:\001*\022\226\001\n\017QueryRingGroups\022\'.services" +
-      ".pbx.v1.QueryRingGroupsRequest\032(.service" +
-      "s.pbx.v1.QueryRingGroupsResponse\"0\272\270\221\002\005\n" +
-      "\003\010\204 \202\323\344\223\002 \022\033/api/pbx/v1/queryringgroups:" +
-      "\001*\022\216\001\n\rUpdatePbxUser\022%.services.pbx.v1.U" +
-      "pdatePbxUserRequest\032&.services.pbx.v1.Up" +
-      "datePbxUserResponse\".\272\270\221\002\005\n\003\010\205 \202\323\344\223\002\036\"\031/" +
-      "api/pbx/v1/managepbxuser:\001*\022\226\001\n\017UpdateRi" +
-      "ngGroup\022\'.services.pbx.v1.UpdateRingGrou" +
-      "pRequest\032(.services.pbx.v1.UpdateRingGro" +
-      "upResponse\"0\272\270\221\002\005\n\003\010\205 \202\323\344\223\002 \"\033/api/pbx/v" +
-      "1/manageringgroup:\001*\022\226\001\n\017CreateRingGroup" +
-      "\022\'.services.pbx.v1.CreateRingGroupReques" +
-      "t\032(.services.pbx.v1.CreateRingGroupRespo" +
-      "nse\"0\272\270\221\002\005\n\003\010\205 \202\323\344\223\002 \"\033/api/pbx/v1/creat" +
-      "eringgroup:\001*\022\226\001\n\017DeleteRingGroup\022\'.serv" +
-      "ices.pbx.v1.DeleteRingGroupRequest\032(.ser" +
-      "vices.pbx.v1.DeleteRingGroupResponse\"0\272\270" +
-      "\221\002\005\n\003\010\205 \202\323\344\223\002 *\033/api/pbx/v1/deleteringgr" +
-      "oup:\001*\022\256\001\n\025AssignRandomExtension\022-.servi" +
-      "ces.pbx.v1.AssignRandomExtensionRequest\032" +
-      "..services.pbx.v1.AssignRandomExtensionR" +
-      "esponse\"6\272\270\221\002\005\n\003\010\205 \202\323\344\223\002&\"!/api/pbx/v1/a" +
-      "ssignrandomextension:\001*B\217\001\n!com.tcn.clou" +
-      "d.api.services.pbx.v1B\014ServiceProtoP\001\242\002\003" +
-      "SPX\252\002\017Services.Pbx.V1\312\002\017Services\\Pbx\\V1\342" +
-      "\002\033Services\\Pbx\\V1\\GPBMetadata\352\002\021Services" +
-      "::Pbx::V1b\006proto3"
+      "e\"3\272\270\221\002\005\n\003\010\204 \202\323\344\223\002#\"\036/services/pbx/v1/qu" +
+      "erypbxusers:\001*\022\233\001\n\017QueryRingGroups\022\'.ser" +
+      "vices.pbx.v1.QueryRingGroupsRequest\032(.se" +
+      "rvices.pbx.v1.QueryRingGroupsResponse\"5\272" +
+      "\270\221\002\005\n\003\010\204 \202\323\344\223\002%\" /services/pbx/v1/queryr" +
+      "inggroups:\001*\022\223\001\n\rUpdatePbxUser\022%.service" +
+      "s.pbx.v1.UpdatePbxUserRequest\032&.services" +
+      ".pbx.v1.UpdatePbxUserResponse\"3\272\270\221\002\005\n\003\010\205" +
+      " \202\323\344\223\002#\"\036/services/pbx/v1/managepbxuser:" +
+      "\001*\022\233\001\n\017UpdateRingGroup\022\'.services.pbx.v1" +
+      ".UpdateRingGroupRequest\032(.services.pbx.v" +
+      "1.UpdateRingGroupResponse\"5\272\270\221\002\005\n\003\010\205 \202\323\344" +
+      "\223\002%\" /services/pbx/v1/manageringgroup:\001*" +
+      "\022\233\001\n\017CreateRingGroup\022\'.services.pbx.v1.C" +
+      "reateRingGroupRequest\032(.services.pbx.v1." +
+      "CreateRingGroupResponse\"5\272\270\221\002\005\n\003\010\205 \202\323\344\223\002" +
+      "%\" /services/pbx/v1/createringgroup:\001*\022\233" +
+      "\001\n\017DeleteRingGroup\022\'.services.pbx.v1.Del" +
+      "eteRingGroupRequest\032(.services.pbx.v1.De" +
+      "leteRingGroupResponse\"5\272\270\221\002\005\n\003\010\205 \202\323\344\223\002%\"" +
+      " /services/pbx/v1/deleteringgroup:\001*\022\263\001\n" +
+      "\025AssignRandomExtension\022-.services.pbx.v1" +
+      ".AssignRandomExtensionRequest\032..services" +
+      ".pbx.v1.AssignRandomExtensionResponse\";\272" +
+      "\270\221\002\005\n\003\010\205 \202\323\344\223\002+\"&/services/pbx/v1/assign" +
+      "randomextension:\001*B\217\001\n!com.tcn.cloud.api" +
+      ".services.pbx.v1B\014ServiceProtoP\001\242\002\003SPX\252\002" +
+      "\017Services.Pbx.V1\312\002\017Services\\Pbx\\V1\342\002\033Ser" +
+      "vices\\Pbx\\V1\\GPBMetadata\352\002\021Services::Pbx" +
+      "::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
