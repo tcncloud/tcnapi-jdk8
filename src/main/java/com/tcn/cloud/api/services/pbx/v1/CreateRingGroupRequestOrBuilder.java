@@ -106,4 +106,14 @@ public interface CreateRingGroupRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getPbxUserIdsBytes(int index);
+
+  /**
+   * <pre>
+   * Optional: The extension for the ring group.
+   * </pre>
+   *
+   * <code>int32 extension = 5 [json_name = "extension"];</code>
+   * @return The extension.
+   */
+  int getExtension();
 }
