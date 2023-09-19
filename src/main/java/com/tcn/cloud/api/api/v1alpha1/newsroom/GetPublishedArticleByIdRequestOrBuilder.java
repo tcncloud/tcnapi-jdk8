@@ -9,11 +9,23 @@ public interface GetPublishedArticleByIdRequestOrBuilder extends
 
   /**
    * <pre>
-   * the unique news article identifier
+   * deprecated
    * </pre>
    *
-   * <code>int64 new_article_sid = 1 [json_name = "newArticleSid", jstype = JS_STRING];</code>
+   * <code>int64 new_article_sid = 1 [json_name = "newArticleSid", deprecated = true];</code>
+   * @deprecated api.v1alpha1.newsroom.GetPublishedArticleByIdRequest.new_article_sid is deprecated.
+   *     See api/v1alpha1/newsroom/entities.proto;l=134
    * @return The newArticleSid.
    */
-  long getNewArticleSid();
+  @java.lang.Deprecated long getNewArticleSid();
+
+  /**
+   * <pre>
+   * the unique published article sid
+   * </pre>
+   *
+   * <code>int64 published_article_sid = 2 [json_name = "publishedArticleSid", jstype = JS_STRING];</code>
+   * @return The publishedArticleSid.
+   */
+  long getPublishedArticleSid();
 }

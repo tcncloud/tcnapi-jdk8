@@ -488,6 +488,14 @@ public enum Permission
   PERMISSION_WFM(1500),
   /**
    * <pre>
+   * Enables access to the Agent Portal feature.
+   * </pre>
+   *
+   * <code>PERMISSION_AGENT_PORTAL = 1501 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_AGENT_PORTAL(1501),
+  /**
+   * <pre>
    * Enables access to Scorecards app.
    * </pre>
    *
@@ -1078,6 +1086,14 @@ public enum Permission
   public static final int PERMISSION_WFM_VALUE = 1500;
   /**
    * <pre>
+   * Enables access to the Agent Portal feature.
+   * </pre>
+   *
+   * <code>PERMISSION_AGENT_PORTAL = 1501 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_AGENT_PORTAL_VALUE = 1501;
+  /**
+   * <pre>
    * Enables access to Scorecards app.
    * </pre>
    *
@@ -1275,6 +1291,7 @@ public enum Permission
       case 1301: return PERMISSION_INTEGRATIONS_PAYMENT;
       case 1302: return PERMISSION_INTEGRATIONS_JOURNEY;
       case 1500: return PERMISSION_WFM;
+      case 1501: return PERMISSION_AGENT_PORTAL;
       case 1600: return PERMISSION_SCORECARDS;
       case 1601: return PERMISSION_SCORECARDS_MANAGE;
       case 1602: return PERMISSION_SCORECARDS_EVALUATE;

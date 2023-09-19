@@ -46,15 +46,32 @@ private static final long serialVersionUID = 0L;
   private long newArticleSid_ = 0L;
   /**
    * <pre>
-   * the unique news article identifier
+   * deprecated
    * </pre>
    *
-   * <code>int64 new_article_sid = 1 [json_name = "newArticleSid", jstype = JS_STRING];</code>
+   * <code>int64 new_article_sid = 1 [json_name = "newArticleSid", deprecated = true];</code>
+   * @deprecated api.v1alpha1.newsroom.GetPublishedArticleByIdRequest.new_article_sid is deprecated.
+   *     See api/v1alpha1/newsroom/entities.proto;l=134
    * @return The newArticleSid.
    */
   @java.lang.Override
-  public long getNewArticleSid() {
+  @java.lang.Deprecated public long getNewArticleSid() {
     return newArticleSid_;
+  }
+
+  public static final int PUBLISHED_ARTICLE_SID_FIELD_NUMBER = 2;
+  private long publishedArticleSid_ = 0L;
+  /**
+   * <pre>
+   * the unique published article sid
+   * </pre>
+   *
+   * <code>int64 published_article_sid = 2 [json_name = "publishedArticleSid", jstype = JS_STRING];</code>
+   * @return The publishedArticleSid.
+   */
+  @java.lang.Override
+  public long getPublishedArticleSid() {
+    return publishedArticleSid_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -74,6 +91,9 @@ private static final long serialVersionUID = 0L;
     if (newArticleSid_ != 0L) {
       output.writeInt64(1, newArticleSid_);
     }
+    if (publishedArticleSid_ != 0L) {
+      output.writeInt64(2, publishedArticleSid_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -86,6 +106,10 @@ private static final long serialVersionUID = 0L;
     if (newArticleSid_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(1, newArticleSid_);
+    }
+    if (publishedArticleSid_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(2, publishedArticleSid_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -104,6 +128,8 @@ private static final long serialVersionUID = 0L;
 
     if (getNewArticleSid()
         != other.getNewArticleSid()) return false;
+    if (getPublishedArticleSid()
+        != other.getPublishedArticleSid()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -118,6 +144,9 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + NEW_ARTICLE_SID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getNewArticleSid());
+    hash = (37 * hash) + PUBLISHED_ARTICLE_SID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getPublishedArticleSid());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -254,6 +283,7 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       newArticleSid_ = 0L;
+      publishedArticleSid_ = 0L;
       return this;
     }
 
@@ -289,6 +319,9 @@ private static final long serialVersionUID = 0L;
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.newArticleSid_ = newArticleSid_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.publishedArticleSid_ = publishedArticleSid_;
       }
     }
 
@@ -339,6 +372,9 @@ private static final long serialVersionUID = 0L;
       if (other.getNewArticleSid() != 0L) {
         setNewArticleSid(other.getNewArticleSid());
       }
+      if (other.getPublishedArticleSid() != 0L) {
+        setPublishedArticleSid(other.getPublishedArticleSid());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -370,6 +406,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 8
+            case 16: {
+              publishedArticleSid_ = input.readInt64();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -390,26 +431,30 @@ private static final long serialVersionUID = 0L;
     private long newArticleSid_ ;
     /**
      * <pre>
-     * the unique news article identifier
+     * deprecated
      * </pre>
      *
-     * <code>int64 new_article_sid = 1 [json_name = "newArticleSid", jstype = JS_STRING];</code>
+     * <code>int64 new_article_sid = 1 [json_name = "newArticleSid", deprecated = true];</code>
+     * @deprecated api.v1alpha1.newsroom.GetPublishedArticleByIdRequest.new_article_sid is deprecated.
+     *     See api/v1alpha1/newsroom/entities.proto;l=134
      * @return The newArticleSid.
      */
     @java.lang.Override
-    public long getNewArticleSid() {
+    @java.lang.Deprecated public long getNewArticleSid() {
       return newArticleSid_;
     }
     /**
      * <pre>
-     * the unique news article identifier
+     * deprecated
      * </pre>
      *
-     * <code>int64 new_article_sid = 1 [json_name = "newArticleSid", jstype = JS_STRING];</code>
+     * <code>int64 new_article_sid = 1 [json_name = "newArticleSid", deprecated = true];</code>
+     * @deprecated api.v1alpha1.newsroom.GetPublishedArticleByIdRequest.new_article_sid is deprecated.
+     *     See api/v1alpha1/newsroom/entities.proto;l=134
      * @param value The newArticleSid to set.
      * @return This builder for chaining.
      */
-    public Builder setNewArticleSid(long value) {
+    @java.lang.Deprecated public Builder setNewArticleSid(long value) {
 
       newArticleSid_ = value;
       bitField0_ |= 0x00000001;
@@ -418,15 +463,61 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the unique news article identifier
+     * deprecated
      * </pre>
      *
-     * <code>int64 new_article_sid = 1 [json_name = "newArticleSid", jstype = JS_STRING];</code>
+     * <code>int64 new_article_sid = 1 [json_name = "newArticleSid", deprecated = true];</code>
+     * @deprecated api.v1alpha1.newsroom.GetPublishedArticleByIdRequest.new_article_sid is deprecated.
+     *     See api/v1alpha1/newsroom/entities.proto;l=134
      * @return This builder for chaining.
      */
-    public Builder clearNewArticleSid() {
+    @java.lang.Deprecated public Builder clearNewArticleSid() {
       bitField0_ = (bitField0_ & ~0x00000001);
       newArticleSid_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private long publishedArticleSid_ ;
+    /**
+     * <pre>
+     * the unique published article sid
+     * </pre>
+     *
+     * <code>int64 published_article_sid = 2 [json_name = "publishedArticleSid", jstype = JS_STRING];</code>
+     * @return The publishedArticleSid.
+     */
+    @java.lang.Override
+    public long getPublishedArticleSid() {
+      return publishedArticleSid_;
+    }
+    /**
+     * <pre>
+     * the unique published article sid
+     * </pre>
+     *
+     * <code>int64 published_article_sid = 2 [json_name = "publishedArticleSid", jstype = JS_STRING];</code>
+     * @param value The publishedArticleSid to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPublishedArticleSid(long value) {
+
+      publishedArticleSid_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the unique published article sid
+     * </pre>
+     *
+     * <code>int64 published_article_sid = 2 [json_name = "publishedArticleSid", jstype = JS_STRING];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearPublishedArticleSid() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      publishedArticleSid_ = 0L;
       onChanged();
       return this;
     }
