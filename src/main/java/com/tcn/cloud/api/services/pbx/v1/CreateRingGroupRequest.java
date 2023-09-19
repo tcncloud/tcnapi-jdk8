@@ -216,6 +216,21 @@ private static final long serialVersionUID = 0L;
     return pbxUserIds_.getByteString(index);
   }
 
+  public static final int EXTENSION_FIELD_NUMBER = 5;
+  private int extension_ = 0;
+  /**
+   * <pre>
+   * Optional: The extension for the ring group.
+   * </pre>
+   *
+   * <code>int32 extension = 5 [json_name = "extension"];</code>
+   * @return The extension.
+   */
+  @java.lang.Override
+  public int getExtension() {
+    return extension_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -241,6 +256,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < pbxUserIds_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, pbxUserIds_.getRaw(i));
+    }
+    if (extension_ != 0) {
+      output.writeInt32(5, extension_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -269,6 +287,10 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getPbxUserIdsList().size();
     }
+    if (extension_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(5, extension_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -291,6 +313,8 @@ private static final long serialVersionUID = 0L;
     if (ringStrategy_ != other.ringStrategy_) return false;
     if (!getPbxUserIdsList()
         .equals(other.getPbxUserIdsList())) return false;
+    if (getExtension()
+        != other.getExtension()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -312,6 +336,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + PBX_USER_IDS_FIELD_NUMBER;
       hash = (53 * hash) + getPbxUserIdsList().hashCode();
     }
+    hash = (37 * hash) + EXTENSION_FIELD_NUMBER;
+    hash = (53 * hash) + getExtension();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -448,6 +474,7 @@ private static final long serialVersionUID = 0L;
       ringStrategy_ = 0;
       pbxUserIds_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
+      extension_ = 0;
       return this;
     }
 
@@ -493,6 +520,9 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000008) != 0)) {
         pbxUserIds_.makeImmutable();
         result.pbxUserIds_ = pbxUserIds_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.extension_ = extension_;
       }
     }
 
@@ -563,6 +593,9 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       }
+      if (other.getExtension() != 0) {
+        setExtension(other.getExtension());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -610,6 +643,11 @@ private static final long serialVersionUID = 0L;
               pbxUserIds_.add(s);
               break;
             } // case 34
+            case 40: {
+              extension_ = input.readInt32();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 40
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1027,6 +1065,50 @@ private static final long serialVersionUID = 0L;
       ensurePbxUserIdsIsMutable();
       pbxUserIds_.add(value);
       bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+
+    private int extension_ ;
+    /**
+     * <pre>
+     * Optional: The extension for the ring group.
+     * </pre>
+     *
+     * <code>int32 extension = 5 [json_name = "extension"];</code>
+     * @return The extension.
+     */
+    @java.lang.Override
+    public int getExtension() {
+      return extension_;
+    }
+    /**
+     * <pre>
+     * Optional: The extension for the ring group.
+     * </pre>
+     *
+     * <code>int32 extension = 5 [json_name = "extension"];</code>
+     * @param value The extension to set.
+     * @return This builder for chaining.
+     */
+    public Builder setExtension(int value) {
+
+      extension_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional: The extension for the ring group.
+     * </pre>
+     *
+     * <code>int32 extension = 5 [json_name = "extension"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearExtension() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      extension_ = 0;
       onChanged();
       return this;
     }
