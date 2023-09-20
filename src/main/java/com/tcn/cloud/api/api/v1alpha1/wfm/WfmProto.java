@@ -2951,7 +2951,7 @@ public final class WfmProto {
       "etRes\022O\n\021scheduling_target\030\001 \001(\0132\".api.v" +
       "1alpha1.wfm.SchedulingTargetR\020scheduling" +
       "Target\"p\n\035SetDefaultSchedulingTargetReq\022" +
-      "O\n\021scheduling_target\030\002 \001(\0132\".api.v1alpha" +
+      "O\n\021scheduling_target\030\001 \001(\0132\".api.v1alpha" +
       "1.wfm.SchedulingTargetR\020schedulingTarget" +
       "\"\037\n\035SetDefaultSchedulingTargetRes\"\342\001\n\035Li" +
       "stRequiredCallsIntervalsReq\022C\n\rnode_sele" +

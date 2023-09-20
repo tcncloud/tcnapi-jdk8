@@ -8,17 +8,17 @@ public interface SetDefaultSchedulingTargetReqOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.api.v1alpha1.wfm.SchedulingTarget scheduling_target = 2 [json_name = "schedulingTarget"];</code>
+   * <code>.api.v1alpha1.wfm.SchedulingTarget scheduling_target = 1 [json_name = "schedulingTarget"];</code>
    * @return Whether the schedulingTarget field is set.
    */
   boolean hasSchedulingTarget();
   /**
-   * <code>.api.v1alpha1.wfm.SchedulingTarget scheduling_target = 2 [json_name = "schedulingTarget"];</code>
+   * <code>.api.v1alpha1.wfm.SchedulingTarget scheduling_target = 1 [json_name = "schedulingTarget"];</code>
    * @return The schedulingTarget.
    */
   com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTarget getSchedulingTarget();
   /**
-   * <code>.api.v1alpha1.wfm.SchedulingTarget scheduling_target = 2 [json_name = "schedulingTarget"];</code>
+   * <code>.api.v1alpha1.wfm.SchedulingTarget scheduling_target = 1 [json_name = "schedulingTarget"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTargetOrBuilder getSchedulingTargetOrBuilder();
 }
