@@ -311,7 +311,7 @@ public interface OmniTaskOrBuilder extends
 
   /**
    * <pre>
-   * holds extra details about a task should be processed
+   * holds extra details about how a task should be processed
    * </pre>
    *
    * <code>.api.commons.OmniTaskConfig task_config = 15 [json_name = "taskConfig"];</code>
@@ -320,7 +320,7 @@ public interface OmniTaskOrBuilder extends
   boolean hasTaskConfig();
   /**
    * <pre>
-   * holds extra details about a task should be processed
+   * holds extra details about how a task should be processed
    * </pre>
    *
    * <code>.api.commons.OmniTaskConfig task_config = 15 [json_name = "taskConfig"];</code>
@@ -329,7 +329,7 @@ public interface OmniTaskOrBuilder extends
   com.tcn.cloud.api.api.commons.OmniTaskConfig getTaskConfig();
   /**
    * <pre>
-   * holds extra details about a task should be processed
+   * holds extra details about how a task should be processed
    * </pre>
    *
    * <code>.api.commons.OmniTaskConfig task_config = 15 [json_name = "taskConfig"];</code>

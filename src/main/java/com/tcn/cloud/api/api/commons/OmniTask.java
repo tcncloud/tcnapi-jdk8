@@ -1154,7 +1154,7 @@ private static final long serialVersionUID = 0L;
   private com.tcn.cloud.api.api.commons.OmniTaskConfig taskConfig_;
   /**
    * <pre>
-   * holds extra details about a task should be processed
+   * holds extra details about how a task should be processed
    * </pre>
    *
    * <code>.api.commons.OmniTaskConfig task_config = 15 [json_name = "taskConfig"];</code>
@@ -1166,7 +1166,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * holds extra details about a task should be processed
+   * holds extra details about how a task should be processed
    * </pre>
    *
    * <code>.api.commons.OmniTaskConfig task_config = 15 [json_name = "taskConfig"];</code>
@@ -1178,7 +1178,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * holds extra details about a task should be processed
+   * holds extra details about how a task should be processed
    * </pre>
    *
    * <code>.api.commons.OmniTaskConfig task_config = 15 [json_name = "taskConfig"];</code>
@@ -3671,7 +3671,7 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.OmniTaskConfig, com.tcn.cloud.api.api.commons.OmniTaskConfig.Builder, com.tcn.cloud.api.api.commons.OmniTaskConfigOrBuilder> taskConfigBuilder_;
     /**
      * <pre>
-     * holds extra details about a task should be processed
+     * holds extra details about how a task should be processed
      * </pre>
      *
      * <code>.api.commons.OmniTaskConfig task_config = 15 [json_name = "taskConfig"];</code>
@@ -3682,7 +3682,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * holds extra details about a task should be processed
+     * holds extra details about how a task should be processed
      * </pre>
      *
      * <code>.api.commons.OmniTaskConfig task_config = 15 [json_name = "taskConfig"];</code>
@@ -3697,7 +3697,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * holds extra details about a task should be processed
+     * holds extra details about how a task should be processed
      * </pre>
      *
      * <code>.api.commons.OmniTaskConfig task_config = 15 [json_name = "taskConfig"];</code>
@@ -3717,7 +3717,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * holds extra details about a task should be processed
+     * holds extra details about how a task should be processed
      * </pre>
      *
      * <code>.api.commons.OmniTaskConfig task_config = 15 [json_name = "taskConfig"];</code>
@@ -3735,7 +3735,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * holds extra details about a task should be processed
+     * holds extra details about how a task should be processed
      * </pre>
      *
      * <code>.api.commons.OmniTaskConfig task_config = 15 [json_name = "taskConfig"];</code>
@@ -3758,7 +3758,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * holds extra details about a task should be processed
+     * holds extra details about how a task should be processed
      * </pre>
      *
      * <code>.api.commons.OmniTaskConfig task_config = 15 [json_name = "taskConfig"];</code>
@@ -3775,7 +3775,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * holds extra details about a task should be processed
+     * holds extra details about how a task should be processed
      * </pre>
      *
      * <code>.api.commons.OmniTaskConfig task_config = 15 [json_name = "taskConfig"];</code>
@@ -3787,7 +3787,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * holds extra details about a task should be processed
+     * holds extra details about how a task should be processed
      * </pre>
      *
      * <code>.api.commons.OmniTaskConfig task_config = 15 [json_name = "taskConfig"];</code>
@@ -3802,7 +3802,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * holds extra details about a task should be processed
+     * holds extra details about how a task should be processed
      * </pre>
      *
      * <code>.api.commons.OmniTaskConfig task_config = 15 [json_name = "taskConfig"];</code>
