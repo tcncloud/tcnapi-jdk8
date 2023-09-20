@@ -9,7 +9,7 @@ public interface UpdateNewsArticleResponseOrBuilder extends
 
   /**
    * <pre>
-   * latest news article
+   * updated news article
    * </pre>
    *
    * <code>.api.v1alpha1.newsroom.NewsArticleDetails article_details = 1 [json_name = "articleDetails"];</code>
@@ -18,7 +18,7 @@ public interface UpdateNewsArticleResponseOrBuilder extends
   boolean hasArticleDetails();
   /**
    * <pre>
-   * latest news article
+   * updated news article
    * </pre>
    *
    * <code>.api.v1alpha1.newsroom.NewsArticleDetails article_details = 1 [json_name = "articleDetails"];</code>
@@ -27,7 +27,7 @@ public interface UpdateNewsArticleResponseOrBuilder extends
   com.tcn.cloud.api.api.v1alpha1.newsroom.NewsArticleDetails getArticleDetails();
   /**
    * <pre>
-   * latest news article
+   * updated news article
    * </pre>
    *
    * <code>.api.v1alpha1.newsroom.NewsArticleDetails article_details = 1 [json_name = "articleDetails"];</code>

@@ -24,7 +24,7 @@ public final class PermsProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\034api/commons/auth/perms.proto\022\020api.comm" +
-      "ons.auth\032\033annotations/perms/tcn.proto*\234!" +
+      "ons.auth\032\033annotations/perms/tcn.proto*\320!" +
       "\n\nPermission\022\032\n\026PERMISSION_UNSPECIFIED\020\000" +
       "\022\022\n\016PERMISSION_DEV\020\001\022\031\n\025PERMISSION_LEARN" +
       "_EDIT\020\n\022!\n\023PERMISSION_ORG_EDIT\020d\032\010\212\265\030\004\020\t" +
@@ -113,29 +113,30 @@ public final class PermsProto {
       "\020\017\"\nForecaster\"\016Skill Profiles\"\026Forecast" +
       "ing Parameters\"\023Profile Forecasting\"\026Reg" +
       "ression Forecasting\"\023Current Forecasting" +
-      "\"\tScheduler\"\020Agent Management\022\"\n\025PERMISS" +
-      "ION_SCORECARDS\020\300\014\032\006\212\265\030\002\020\013\022)\n\034PERMISSION_" +
-      "SCORECARDS_MANAGE\020\301\014\032\006\212\265\030\002\020\013\022+\n\036PERMISSI" +
-      "ON_SCORECARDS_EVALUATE\020\302\014\032\006\212\265\030\002\020\013\022,\n\037PER" +
-      "MISSION_SCORECARDS_FLAG_EVAL\020\303\014\032\006\212\265\030\002\020\013\022" +
-      "/\n\024PERMISSION_DEV_TOOLS\020\210\016\032\024\212\265\030\020\020\004\"\014API " +
-      "Explorer\0223\n&PERMISSION_DELIVERY_NOTIFICA" +
-      "TIONS_VIEW\020\320\017\032\006\212\265\030\002\020\003\0223\n&PERMISSION_DELI" +
-      "VERY_NOTIFICATIONS_EDIT\020\321\017\032\006\212\265\030\002\020\003\022%\n\026PE" +
-      "RMISSION_TICKETS_APP\020\234\030\032\010\212\265\030\004\010\001\020\r\022\'\n\030PER" +
-      "MISSION_TICKETS_ADMIN\020\235\030\032\010\212\265\030\004\010\001\020\r\022!\n\024PE" +
-      "RMISSION_WORKFLOWS\020\240\037\032\006\212\265\030\002\020\020\022Y\n\033PERMISS" +
-      "ION_PBX_MANAGER_VIEW\020\204 \0327\212\265\0303\020\t\030\n\"\022PBX U" +
-      "ser Managment\"\031Extension Group Managment" +
-      "\022Y\n\033PERMISSION_PBX_MANAGER_EDIT\020\205 \0327\212\265\0303" +
-      "\020\t\030\n\"\022PBX User Managment\"\031Extension Grou" +
-      "p Managment\022%\n\030PERMISSION_NEWSROOM_EDIT\020" +
-      "\350 \032\006\212\265\030\002\020\021\022(\n\033PERMISSION_NEWSROOM_PUBLIS" +
-      "H\020\351 \032\006\212\265\030\002\020\021B\222\001\n\"com.tcn.cloud.api.api.c" +
-      "ommons.authB\nPermsProtoP\001\242\002\003ACA\252\002\020Api.Co" +
-      "mmons.Auth\312\002\020Api\\Commons\\Auth\342\002\034Api\\Comm" +
-      "ons\\Auth\\GPBMetadata\352\002\022Api::Commons::Aut" +
-      "hb\006proto3"
+      "\"\tScheduler\"\020Agent Management\0222\n\027PERMISS" +
+      "ION_AGENT_PORTAL\020\335\013\032\024\212\265\030\020\020\017\"\014Agent Porta" +
+      "l\022\"\n\025PERMISSION_SCORECARDS\020\300\014\032\006\212\265\030\002\020\013\022)\n" +
+      "\034PERMISSION_SCORECARDS_MANAGE\020\301\014\032\006\212\265\030\002\020\013" +
+      "\022+\n\036PERMISSION_SCORECARDS_EVALUATE\020\302\014\032\006\212" +
+      "\265\030\002\020\013\022,\n\037PERMISSION_SCORECARDS_FLAG_EVAL" +
+      "\020\303\014\032\006\212\265\030\002\020\013\022/\n\024PERMISSION_DEV_TOOLS\020\210\016\032\024" +
+      "\212\265\030\020\020\004\"\014API Explorer\0223\n&PERMISSION_DELIV" +
+      "ERY_NOTIFICATIONS_VIEW\020\320\017\032\006\212\265\030\002\020\003\0223\n&PER" +
+      "MISSION_DELIVERY_NOTIFICATIONS_EDIT\020\321\017\032\006" +
+      "\212\265\030\002\020\003\022%\n\026PERMISSION_TICKETS_APP\020\234\030\032\010\212\265\030" +
+      "\004\010\001\020\r\022\'\n\030PERMISSION_TICKETS_ADMIN\020\235\030\032\010\212\265" +
+      "\030\004\010\001\020\r\022!\n\024PERMISSION_WORKFLOWS\020\240\037\032\006\212\265\030\002\020" +
+      "\020\022Y\n\033PERMISSION_PBX_MANAGER_VIEW\020\204 \0327\212\265\030" +
+      "3\020\t\030\n\"\022PBX User Managment\"\031Extension Gro" +
+      "up Managment\022Y\n\033PERMISSION_PBX_MANAGER_E" +
+      "DIT\020\205 \0327\212\265\0303\020\t\030\n\"\022PBX User Managment\"\031Ex" +
+      "tension Group Managment\022%\n\030PERMISSION_NE" +
+      "WSROOM_EDIT\020\350 \032\006\212\265\030\002\020\021\022(\n\033PERMISSION_NEW" +
+      "SROOM_PUBLISH\020\351 \032\006\212\265\030\002\020\021B\222\001\n\"com.tcn.clo" +
+      "ud.api.api.commons.authB\nPermsProtoP\001\242\002\003" +
+      "ACA\252\002\020Api.Commons.Auth\312\002\020Api\\Commons\\Aut" +
+      "h\342\002\034Api\\Commons\\Auth\\GPBMetadata\352\002\022Api::" +
+      "Commons::Authb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

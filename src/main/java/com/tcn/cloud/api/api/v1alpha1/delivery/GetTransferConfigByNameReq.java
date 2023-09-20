@@ -47,11 +47,13 @@ private static final long serialVersionUID = 0L;
    * obsolete dont use
    * </pre>
    *
-   * <code>string name = 1 [json_name = "name"];</code>
+   * <code>string name = 1 [json_name = "name", deprecated = true];</code>
+   * @deprecated api.v1alpha1.delivery.GetTransferConfigByNameReq.name is deprecated.
+   *     See api/v1alpha1/delivery/service.proto;l=344
    * @return The name.
    */
   @java.lang.Override
-  public java.lang.String getName() {
+  @java.lang.Deprecated public java.lang.String getName() {
     java.lang.Object ref = name_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -68,11 +70,13 @@ private static final long serialVersionUID = 0L;
    * obsolete dont use
    * </pre>
    *
-   * <code>string name = 1 [json_name = "name"];</code>
+   * <code>string name = 1 [json_name = "name", deprecated = true];</code>
+   * @deprecated api.v1alpha1.delivery.GetTransferConfigByNameReq.name is deprecated.
+   *     See api/v1alpha1/delivery/service.proto;l=344
    * @return The bytes for name.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
+  @java.lang.Deprecated public com.google.protobuf.ByteString
       getNameBytes() {
     java.lang.Object ref = name_;
     if (ref instanceof java.lang.String) {
@@ -542,10 +546,12 @@ private static final long serialVersionUID = 0L;
      * obsolete dont use
      * </pre>
      *
-     * <code>string name = 1 [json_name = "name"];</code>
+     * <code>string name = 1 [json_name = "name", deprecated = true];</code>
+     * @deprecated api.v1alpha1.delivery.GetTransferConfigByNameReq.name is deprecated.
+     *     See api/v1alpha1/delivery/service.proto;l=344
      * @return The name.
      */
-    public java.lang.String getName() {
+    @java.lang.Deprecated public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -562,10 +568,12 @@ private static final long serialVersionUID = 0L;
      * obsolete dont use
      * </pre>
      *
-     * <code>string name = 1 [json_name = "name"];</code>
+     * <code>string name = 1 [json_name = "name", deprecated = true];</code>
+     * @deprecated api.v1alpha1.delivery.GetTransferConfigByNameReq.name is deprecated.
+     *     See api/v1alpha1/delivery/service.proto;l=344
      * @return The bytes for name.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
       if (ref instanceof String) {
@@ -583,11 +591,13 @@ private static final long serialVersionUID = 0L;
      * obsolete dont use
      * </pre>
      *
-     * <code>string name = 1 [json_name = "name"];</code>
+     * <code>string name = 1 [json_name = "name", deprecated = true];</code>
+     * @deprecated api.v1alpha1.delivery.GetTransferConfigByNameReq.name is deprecated.
+     *     See api/v1alpha1/delivery/service.proto;l=344
      * @param value The name to set.
      * @return This builder for chaining.
      */
-    public Builder setName(
+    @java.lang.Deprecated public Builder setName(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       name_ = value;
@@ -600,10 +610,12 @@ private static final long serialVersionUID = 0L;
      * obsolete dont use
      * </pre>
      *
-     * <code>string name = 1 [json_name = "name"];</code>
+     * <code>string name = 1 [json_name = "name", deprecated = true];</code>
+     * @deprecated api.v1alpha1.delivery.GetTransferConfigByNameReq.name is deprecated.
+     *     See api/v1alpha1/delivery/service.proto;l=344
      * @return This builder for chaining.
      */
-    public Builder clearName() {
+    @java.lang.Deprecated public Builder clearName() {
       name_ = getDefaultInstance().getName();
       bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
@@ -614,11 +626,13 @@ private static final long serialVersionUID = 0L;
      * obsolete dont use
      * </pre>
      *
-     * <code>string name = 1 [json_name = "name"];</code>
+     * <code>string name = 1 [json_name = "name", deprecated = true];</code>
+     * @deprecated api.v1alpha1.delivery.GetTransferConfigByNameReq.name is deprecated.
+     *     See api/v1alpha1/delivery/service.proto;l=344
      * @param value The bytes for name to set.
      * @return This builder for chaining.
      */
-    public Builder setNameBytes(
+    @java.lang.Deprecated public Builder setNameBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);

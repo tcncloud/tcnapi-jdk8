@@ -49,7 +49,7 @@ private static final long serialVersionUID = 0L;
    * news article identifier
    * </pre>
    *
-   * <code>int64 new_article_sid = 1 [json_name = "newArticleSid"];</code>
+   * <code>int64 new_article_sid = 1 [json_name = "newArticleSid", jstype = JS_STRING];</code>
    * @return The newArticleSid.
    */
   @java.lang.Override
@@ -432,7 +432,7 @@ private static final long serialVersionUID = 0L;
      * news article identifier
      * </pre>
      *
-     * <code>int64 new_article_sid = 1 [json_name = "newArticleSid"];</code>
+     * <code>int64 new_article_sid = 1 [json_name = "newArticleSid", jstype = JS_STRING];</code>
      * @return The newArticleSid.
      */
     @java.lang.Override
@@ -444,7 +444,7 @@ private static final long serialVersionUID = 0L;
      * news article identifier
      * </pre>
      *
-     * <code>int64 new_article_sid = 1 [json_name = "newArticleSid"];</code>
+     * <code>int64 new_article_sid = 1 [json_name = "newArticleSid", jstype = JS_STRING];</code>
      * @param value The newArticleSid to set.
      * @return This builder for chaining.
      */
@@ -460,7 +460,7 @@ private static final long serialVersionUID = 0L;
      * news article identifier
      * </pre>
      *
-     * <code>int64 new_article_sid = 1 [json_name = "newArticleSid"];</code>
+     * <code>int64 new_article_sid = 1 [json_name = "newArticleSid", jstype = JS_STRING];</code>
      * @return This builder for chaining.
      */
     public Builder clearNewArticleSid() {
