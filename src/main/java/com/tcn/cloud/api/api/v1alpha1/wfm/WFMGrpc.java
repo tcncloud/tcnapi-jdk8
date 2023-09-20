@@ -4218,7 +4218,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Updates the given &#64;skill_profile_group that has the &#64;skill_profile_group_sid for the org sending the request.
-     * &#64;skill_profile_group_sids will be ignored since associations cannot be created by this method.
+     * &#64;skill_profile_group_sids will be ignored since associations cannot be updated by this method.
      * Required permissions:
      *   NONE
      * Errors:
@@ -6473,7 +6473,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Updates the given &#64;skill_profile_group that has the &#64;skill_profile_group_sid for the org sending the request.
-     * &#64;skill_profile_group_sids will be ignored since associations cannot be created by this method.
+     * &#64;skill_profile_group_sids will be ignored since associations cannot be updated by this method.
      * Required permissions:
      *   NONE
      * Errors:
@@ -8802,7 +8802,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Updates the given &#64;skill_profile_group that has the &#64;skill_profile_group_sid for the org sending the request.
-     * &#64;skill_profile_group_sids will be ignored since associations cannot be created by this method.
+     * &#64;skill_profile_group_sids will be ignored since associations cannot be updated by this method.
      * Required permissions:
      *   NONE
      * Errors:
@@ -11049,7 +11049,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Updates the given &#64;skill_profile_group that has the &#64;skill_profile_group_sid for the org sending the request.
-     * &#64;skill_profile_group_sids will be ignored since associations cannot be created by this method.
+     * &#64;skill_profile_group_sids will be ignored since associations cannot be updated by this method.
      * Required permissions:
      *   NONE
      * Errors:
