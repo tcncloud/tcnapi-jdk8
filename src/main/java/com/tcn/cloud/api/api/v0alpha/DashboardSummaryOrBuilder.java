@@ -76,4 +76,24 @@ public interface DashboardSummaryOrBuilder extends
    * @return The panelCount.
    */
   int getPanelCount();
+
+  /**
+   * <pre>
+   * resource id of the dashboard
+   * </pre>
+   *
+   * <code>string resource_id = 5 [json_name = "resourceId"];</code>
+   * @return The resourceId.
+   */
+  java.lang.String getResourceId();
+  /**
+   * <pre>
+   * resource id of the dashboard
+   * </pre>
+   *
+   * <code>string resource_id = 5 [json_name = "resourceId"];</code>
+   * @return The bytes for resourceId.
+   */
+  com.google.protobuf.ByteString
+      getResourceIdBytes();
 }

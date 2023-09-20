@@ -150,20 +150,21 @@ public interface DashboardOrBuilder extends
 
   /**
    * <pre>
-   * permission type (TCN Standard, Custom, etc.)
+   * resource id of the dashboard
    * </pre>
    *
-   * <code>.api.commons.DashboardPermissionType permission_type = 7 [json_name = "permissionType"];</code>
-   * @return The enum numeric value on the wire for permissionType.
+   * <code>string resource_id = 7 [json_name = "resourceId"];</code>
+   * @return The resourceId.
    */
-  int getPermissionTypeValue();
+  java.lang.String getResourceId();
   /**
    * <pre>
-   * permission type (TCN Standard, Custom, etc.)
+   * resource id of the dashboard
    * </pre>
    *
-   * <code>.api.commons.DashboardPermissionType permission_type = 7 [json_name = "permissionType"];</code>
-   * @return The permissionType.
+   * <code>string resource_id = 7 [json_name = "resourceId"];</code>
+   * @return The bytes for resourceId.
    */
-  com.tcn.cloud.api.api.commons.DashboardPermissionType getPermissionType();
+  com.google.protobuf.ByteString
+      getResourceIdBytes();
 }

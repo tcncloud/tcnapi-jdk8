@@ -356,192 +356,6 @@ public final class DashboardsGrpc {
     return getUpdateDashboardLayoutMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreateStandardDashboardRequest,
-      com.tcn.cloud.api.api.v0alpha.CreateStandardDashboardResponse> getCreateStandardDashboardMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "CreateStandardDashboard",
-      requestType = com.tcn.cloud.api.api.v0alpha.CreateStandardDashboardRequest.class,
-      responseType = com.tcn.cloud.api.api.v0alpha.CreateStandardDashboardResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreateStandardDashboardRequest,
-      com.tcn.cloud.api.api.v0alpha.CreateStandardDashboardResponse> getCreateStandardDashboardMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreateStandardDashboardRequest, com.tcn.cloud.api.api.v0alpha.CreateStandardDashboardResponse> getCreateStandardDashboardMethod;
-    if ((getCreateStandardDashboardMethod = DashboardsGrpc.getCreateStandardDashboardMethod) == null) {
-      synchronized (DashboardsGrpc.class) {
-        if ((getCreateStandardDashboardMethod = DashboardsGrpc.getCreateStandardDashboardMethod) == null) {
-          DashboardsGrpc.getCreateStandardDashboardMethod = getCreateStandardDashboardMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CreateStandardDashboardRequest, com.tcn.cloud.api.api.v0alpha.CreateStandardDashboardResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateStandardDashboard"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v0alpha.CreateStandardDashboardRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v0alpha.CreateStandardDashboardResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new DashboardsMethodDescriptorSupplier("CreateStandardDashboard"))
-              .build();
-        }
-      }
-    }
-    return getCreateStandardDashboardMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardRequest,
-      com.google.protobuf.Empty> getUpdateStandardDashboardMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "UpdateStandardDashboard",
-      requestType = com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardRequest.class,
-      responseType = com.google.protobuf.Empty.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardRequest,
-      com.google.protobuf.Empty> getUpdateStandardDashboardMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardRequest, com.google.protobuf.Empty> getUpdateStandardDashboardMethod;
-    if ((getUpdateStandardDashboardMethod = DashboardsGrpc.getUpdateStandardDashboardMethod) == null) {
-      synchronized (DashboardsGrpc.class) {
-        if ((getUpdateStandardDashboardMethod = DashboardsGrpc.getUpdateStandardDashboardMethod) == null) {
-          DashboardsGrpc.getUpdateStandardDashboardMethod = getUpdateStandardDashboardMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardRequest, com.google.protobuf.Empty>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateStandardDashboard"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.google.protobuf.Empty.getDefaultInstance()))
-              .setSchemaDescriptor(new DashboardsMethodDescriptorSupplier("UpdateStandardDashboard"))
-              .build();
-        }
-      }
-    }
-    return getUpdateStandardDashboardMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardTitleAndDescriptionRequest,
-      com.google.protobuf.Empty> getUpdateStandardDashboardTitleAndDescriptionMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "UpdateStandardDashboardTitleAndDescription",
-      requestType = com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardTitleAndDescriptionRequest.class,
-      responseType = com.google.protobuf.Empty.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardTitleAndDescriptionRequest,
-      com.google.protobuf.Empty> getUpdateStandardDashboardTitleAndDescriptionMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardTitleAndDescriptionRequest, com.google.protobuf.Empty> getUpdateStandardDashboardTitleAndDescriptionMethod;
-    if ((getUpdateStandardDashboardTitleAndDescriptionMethod = DashboardsGrpc.getUpdateStandardDashboardTitleAndDescriptionMethod) == null) {
-      synchronized (DashboardsGrpc.class) {
-        if ((getUpdateStandardDashboardTitleAndDescriptionMethod = DashboardsGrpc.getUpdateStandardDashboardTitleAndDescriptionMethod) == null) {
-          DashboardsGrpc.getUpdateStandardDashboardTitleAndDescriptionMethod = getUpdateStandardDashboardTitleAndDescriptionMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardTitleAndDescriptionRequest, com.google.protobuf.Empty>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateStandardDashboardTitleAndDescription"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardTitleAndDescriptionRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.google.protobuf.Empty.getDefaultInstance()))
-              .setSchemaDescriptor(new DashboardsMethodDescriptorSupplier("UpdateStandardDashboardTitleAndDescription"))
-              .build();
-        }
-      }
-    }
-    return getUpdateStandardDashboardTitleAndDescriptionMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardViewRequest,
-      com.google.protobuf.Empty> getUpdateStandardDashboardViewMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "UpdateStandardDashboardView",
-      requestType = com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardViewRequest.class,
-      responseType = com.google.protobuf.Empty.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardViewRequest,
-      com.google.protobuf.Empty> getUpdateStandardDashboardViewMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardViewRequest, com.google.protobuf.Empty> getUpdateStandardDashboardViewMethod;
-    if ((getUpdateStandardDashboardViewMethod = DashboardsGrpc.getUpdateStandardDashboardViewMethod) == null) {
-      synchronized (DashboardsGrpc.class) {
-        if ((getUpdateStandardDashboardViewMethod = DashboardsGrpc.getUpdateStandardDashboardViewMethod) == null) {
-          DashboardsGrpc.getUpdateStandardDashboardViewMethod = getUpdateStandardDashboardViewMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardViewRequest, com.google.protobuf.Empty>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateStandardDashboardView"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardViewRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.google.protobuf.Empty.getDefaultInstance()))
-              .setSchemaDescriptor(new DashboardsMethodDescriptorSupplier("UpdateStandardDashboardView"))
-              .build();
-        }
-      }
-    }
-    return getUpdateStandardDashboardViewMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardLayoutRequest,
-      com.google.protobuf.Empty> getUpdateStandardDashboardLayoutMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "UpdateStandardDashboardLayout",
-      requestType = com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardLayoutRequest.class,
-      responseType = com.google.protobuf.Empty.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardLayoutRequest,
-      com.google.protobuf.Empty> getUpdateStandardDashboardLayoutMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardLayoutRequest, com.google.protobuf.Empty> getUpdateStandardDashboardLayoutMethod;
-    if ((getUpdateStandardDashboardLayoutMethod = DashboardsGrpc.getUpdateStandardDashboardLayoutMethod) == null) {
-      synchronized (DashboardsGrpc.class) {
-        if ((getUpdateStandardDashboardLayoutMethod = DashboardsGrpc.getUpdateStandardDashboardLayoutMethod) == null) {
-          DashboardsGrpc.getUpdateStandardDashboardLayoutMethod = getUpdateStandardDashboardLayoutMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardLayoutRequest, com.google.protobuf.Empty>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateStandardDashboardLayout"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardLayoutRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.google.protobuf.Empty.getDefaultInstance()))
-              .setSchemaDescriptor(new DashboardsMethodDescriptorSupplier("UpdateStandardDashboardLayout"))
-              .build();
-        }
-      }
-    }
-    return getUpdateStandardDashboardLayoutMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeleteStandardDashboardRequest,
-      com.google.protobuf.Empty> getDeleteStandardDashboardMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "DeleteStandardDashboard",
-      requestType = com.tcn.cloud.api.api.v0alpha.DeleteStandardDashboardRequest.class,
-      responseType = com.google.protobuf.Empty.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeleteStandardDashboardRequest,
-      com.google.protobuf.Empty> getDeleteStandardDashboardMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeleteStandardDashboardRequest, com.google.protobuf.Empty> getDeleteStandardDashboardMethod;
-    if ((getDeleteStandardDashboardMethod = DashboardsGrpc.getDeleteStandardDashboardMethod) == null) {
-      synchronized (DashboardsGrpc.class) {
-        if ((getDeleteStandardDashboardMethod = DashboardsGrpc.getDeleteStandardDashboardMethod) == null) {
-          DashboardsGrpc.getDeleteStandardDashboardMethod = getDeleteStandardDashboardMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.DeleteStandardDashboardRequest, com.google.protobuf.Empty>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteStandardDashboard"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v0alpha.DeleteStandardDashboardRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.google.protobuf.Empty.getDefaultInstance()))
-              .setSchemaDescriptor(new DashboardsMethodDescriptorSupplier("DeleteStandardDashboard"))
-              .build();
-        }
-      }
-    }
-    return getDeleteStandardDashboardMethod;
-  }
-
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -693,66 +507,6 @@ public final class DashboardsGrpc {
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateDashboardLayoutMethod(), responseObserver);
     }
-
-    /**
-     * <pre>
-     * CreateStandardDashboard creates a TCN standard dashboard
-     * </pre>
-     */
-    default void createStandardDashboard(com.tcn.cloud.api.api.v0alpha.CreateStandardDashboardRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateStandardDashboardResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateStandardDashboardMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
-     * UpdateStandardDashboard updates a TCN standard dashboard
-     * </pre>
-     */
-    default void updateStandardDashboard(com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardRequest request,
-        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateStandardDashboardMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
-     * UpdateStandardDashboardTitleAndDescription updates a TCN standard dashboard title and description
-     * </pre>
-     */
-    default void updateStandardDashboardTitleAndDescription(com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardTitleAndDescriptionRequest request,
-        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateStandardDashboardTitleAndDescriptionMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
-     * UpdateStandardDashboardView updates a TCN standard dashboard view
-     * </pre>
-     */
-    default void updateStandardDashboardView(com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardViewRequest request,
-        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateStandardDashboardViewMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
-     * UpdateStandardDashboardLayout updates a TCN standard dashboard layout
-     * </pre>
-     */
-    default void updateStandardDashboardLayout(com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardLayoutRequest request,
-        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateStandardDashboardLayoutMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
-     * DeleteStandardDashboard deletes a TCN standard dashboard
-     * </pre>
-     */
-    default void deleteStandardDashboard(com.tcn.cloud.api.api.v0alpha.DeleteStandardDashboardRequest request,
-        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteStandardDashboardMethod(), responseObserver);
-    }
   }
 
   /**
@@ -896,72 +650,6 @@ public final class DashboardsGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateDashboardLayoutMethod(), getCallOptions()), request, responseObserver);
     }
-
-    /**
-     * <pre>
-     * CreateStandardDashboard creates a TCN standard dashboard
-     * </pre>
-     */
-    public void createStandardDashboard(com.tcn.cloud.api.api.v0alpha.CreateStandardDashboardRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateStandardDashboardResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getCreateStandardDashboardMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
-     * UpdateStandardDashboard updates a TCN standard dashboard
-     * </pre>
-     */
-    public void updateStandardDashboard(com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardRequest request,
-        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getUpdateStandardDashboardMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
-     * UpdateStandardDashboardTitleAndDescription updates a TCN standard dashboard title and description
-     * </pre>
-     */
-    public void updateStandardDashboardTitleAndDescription(com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardTitleAndDescriptionRequest request,
-        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getUpdateStandardDashboardTitleAndDescriptionMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
-     * UpdateStandardDashboardView updates a TCN standard dashboard view
-     * </pre>
-     */
-    public void updateStandardDashboardView(com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardViewRequest request,
-        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getUpdateStandardDashboardViewMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
-     * UpdateStandardDashboardLayout updates a TCN standard dashboard layout
-     * </pre>
-     */
-    public void updateStandardDashboardLayout(com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardLayoutRequest request,
-        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getUpdateStandardDashboardLayoutMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
-     * DeleteStandardDashboard deletes a TCN standard dashboard
-     * </pre>
-     */
-    public void deleteStandardDashboard(com.tcn.cloud.api.api.v0alpha.DeleteStandardDashboardRequest request,
-        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getDeleteStandardDashboardMethod(), getCallOptions()), request, responseObserver);
-    }
   }
 
   /**
@@ -1082,66 +770,6 @@ public final class DashboardsGrpc {
     public com.google.protobuf.Empty updateDashboardLayout(com.tcn.cloud.api.api.v0alpha.UpdateDashboardLayoutRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateDashboardLayoutMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * CreateStandardDashboard creates a TCN standard dashboard
-     * </pre>
-     */
-    public com.tcn.cloud.api.api.v0alpha.CreateStandardDashboardResponse createStandardDashboard(com.tcn.cloud.api.api.v0alpha.CreateStandardDashboardRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getCreateStandardDashboardMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * UpdateStandardDashboard updates a TCN standard dashboard
-     * </pre>
-     */
-    public com.google.protobuf.Empty updateStandardDashboard(com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getUpdateStandardDashboardMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * UpdateStandardDashboardTitleAndDescription updates a TCN standard dashboard title and description
-     * </pre>
-     */
-    public com.google.protobuf.Empty updateStandardDashboardTitleAndDescription(com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardTitleAndDescriptionRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getUpdateStandardDashboardTitleAndDescriptionMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * UpdateStandardDashboardView updates a TCN standard dashboard view
-     * </pre>
-     */
-    public com.google.protobuf.Empty updateStandardDashboardView(com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardViewRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getUpdateStandardDashboardViewMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * UpdateStandardDashboardLayout updates a TCN standard dashboard layout
-     * </pre>
-     */
-    public com.google.protobuf.Empty updateStandardDashboardLayout(com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardLayoutRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getUpdateStandardDashboardLayoutMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * DeleteStandardDashboard deletes a TCN standard dashboard
-     * </pre>
-     */
-    public com.google.protobuf.Empty deleteStandardDashboard(com.tcn.cloud.api.api.v0alpha.DeleteStandardDashboardRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getDeleteStandardDashboardMethod(), getCallOptions(), request);
     }
   }
 
@@ -1275,72 +903,6 @@ public final class DashboardsGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateDashboardLayoutMethod(), getCallOptions()), request);
     }
-
-    /**
-     * <pre>
-     * CreateStandardDashboard creates a TCN standard dashboard
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CreateStandardDashboardResponse> createStandardDashboard(
-        com.tcn.cloud.api.api.v0alpha.CreateStandardDashboardRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getCreateStandardDashboardMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
-     * UpdateStandardDashboard updates a TCN standard dashboard
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> updateStandardDashboard(
-        com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getUpdateStandardDashboardMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
-     * UpdateStandardDashboardTitleAndDescription updates a TCN standard dashboard title and description
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> updateStandardDashboardTitleAndDescription(
-        com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardTitleAndDescriptionRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getUpdateStandardDashboardTitleAndDescriptionMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
-     * UpdateStandardDashboardView updates a TCN standard dashboard view
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> updateStandardDashboardView(
-        com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardViewRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getUpdateStandardDashboardViewMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
-     * UpdateStandardDashboardLayout updates a TCN standard dashboard layout
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> updateStandardDashboardLayout(
-        com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardLayoutRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getUpdateStandardDashboardLayoutMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
-     * DeleteStandardDashboard deletes a TCN standard dashboard
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteStandardDashboard(
-        com.tcn.cloud.api.api.v0alpha.DeleteStandardDashboardRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getDeleteStandardDashboardMethod(), getCallOptions()), request);
-    }
   }
 
   private static final int METHODID_CREATE_DASHBOARD = 0;
@@ -1354,12 +916,6 @@ public final class DashboardsGrpc {
   private static final int METHODID_UPDATE_DASHBOARD_TITLE_AND_DESCRIPTION = 8;
   private static final int METHODID_UPDATE_DASHBOARD_VIEW = 9;
   private static final int METHODID_UPDATE_DASHBOARD_LAYOUT = 10;
-  private static final int METHODID_CREATE_STANDARD_DASHBOARD = 11;
-  private static final int METHODID_UPDATE_STANDARD_DASHBOARD = 12;
-  private static final int METHODID_UPDATE_STANDARD_DASHBOARD_TITLE_AND_DESCRIPTION = 13;
-  private static final int METHODID_UPDATE_STANDARD_DASHBOARD_VIEW = 14;
-  private static final int METHODID_UPDATE_STANDARD_DASHBOARD_LAYOUT = 15;
-  private static final int METHODID_DELETE_STANDARD_DASHBOARD = 16;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1420,30 +976,6 @@ public final class DashboardsGrpc {
           break;
         case METHODID_UPDATE_DASHBOARD_LAYOUT:
           serviceImpl.updateDashboardLayout((com.tcn.cloud.api.api.v0alpha.UpdateDashboardLayoutRequest) request,
-              (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
-          break;
-        case METHODID_CREATE_STANDARD_DASHBOARD:
-          serviceImpl.createStandardDashboard((com.tcn.cloud.api.api.v0alpha.CreateStandardDashboardRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateStandardDashboardResponse>) responseObserver);
-          break;
-        case METHODID_UPDATE_STANDARD_DASHBOARD:
-          serviceImpl.updateStandardDashboard((com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardRequest) request,
-              (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
-          break;
-        case METHODID_UPDATE_STANDARD_DASHBOARD_TITLE_AND_DESCRIPTION:
-          serviceImpl.updateStandardDashboardTitleAndDescription((com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardTitleAndDescriptionRequest) request,
-              (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
-          break;
-        case METHODID_UPDATE_STANDARD_DASHBOARD_VIEW:
-          serviceImpl.updateStandardDashboardView((com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardViewRequest) request,
-              (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
-          break;
-        case METHODID_UPDATE_STANDARD_DASHBOARD_LAYOUT:
-          serviceImpl.updateStandardDashboardLayout((com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardLayoutRequest) request,
-              (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
-          break;
-        case METHODID_DELETE_STANDARD_DASHBOARD:
-          serviceImpl.deleteStandardDashboard((com.tcn.cloud.api.api.v0alpha.DeleteStandardDashboardRequest) request,
               (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
           break;
         default:
@@ -1541,48 +1073,6 @@ public final class DashboardsGrpc {
               com.tcn.cloud.api.api.v0alpha.UpdateDashboardLayoutRequest,
               com.google.protobuf.Empty>(
                 service, METHODID_UPDATE_DASHBOARD_LAYOUT)))
-        .addMethod(
-          getCreateStandardDashboardMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.CreateStandardDashboardRequest,
-              com.tcn.cloud.api.api.v0alpha.CreateStandardDashboardResponse>(
-                service, METHODID_CREATE_STANDARD_DASHBOARD)))
-        .addMethod(
-          getUpdateStandardDashboardMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardRequest,
-              com.google.protobuf.Empty>(
-                service, METHODID_UPDATE_STANDARD_DASHBOARD)))
-        .addMethod(
-          getUpdateStandardDashboardTitleAndDescriptionMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardTitleAndDescriptionRequest,
-              com.google.protobuf.Empty>(
-                service, METHODID_UPDATE_STANDARD_DASHBOARD_TITLE_AND_DESCRIPTION)))
-        .addMethod(
-          getUpdateStandardDashboardViewMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardViewRequest,
-              com.google.protobuf.Empty>(
-                service, METHODID_UPDATE_STANDARD_DASHBOARD_VIEW)))
-        .addMethod(
-          getUpdateStandardDashboardLayoutMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.UpdateStandardDashboardLayoutRequest,
-              com.google.protobuf.Empty>(
-                service, METHODID_UPDATE_STANDARD_DASHBOARD_LAYOUT)))
-        .addMethod(
-          getDeleteStandardDashboardMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.DeleteStandardDashboardRequest,
-              com.google.protobuf.Empty>(
-                service, METHODID_DELETE_STANDARD_DASHBOARD)))
         .build();
   }
 
@@ -1642,12 +1132,6 @@ public final class DashboardsGrpc {
               .addMethod(getUpdateDashboardTitleAndDescriptionMethod())
               .addMethod(getUpdateDashboardViewMethod())
               .addMethod(getUpdateDashboardLayoutMethod())
-              .addMethod(getCreateStandardDashboardMethod())
-              .addMethod(getUpdateStandardDashboardMethod())
-              .addMethod(getUpdateStandardDashboardTitleAndDescriptionMethod())
-              .addMethod(getUpdateStandardDashboardViewMethod())
-              .addMethod(getUpdateStandardDashboardLayoutMethod())
-              .addMethod(getDeleteStandardDashboardMethod())
               .build();
         }
       }

@@ -26,4 +26,24 @@ public interface GetDashboardRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getDashboardIdBytes();
+
+  /**
+   * <pre>
+   * resource id of the dashboard
+   * </pre>
+   *
+   * <code>string resource_id = 2 [json_name = "resourceId"];</code>
+   * @return The resourceId.
+   */
+  java.lang.String getResourceId();
+  /**
+   * <pre>
+   * resource id of the dashboard
+   * </pre>
+   *
+   * <code>string resource_id = 2 [json_name = "resourceId"];</code>
+   * @return The bytes for resourceId.
+   */
+  com.google.protobuf.ByteString
+      getResourceIdBytes();
 }

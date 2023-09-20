@@ -23,7 +23,7 @@ private static final long serialVersionUID = 0L;
     dashboardId_ = "";
     title_ = "";
     description_ = "";
-    permissionType_ = 0;
+    resourceId_ = "";
   }
 
   @java.lang.Override
@@ -301,30 +301,51 @@ private static final long serialVersionUID = 0L;
     return type_ == null ? com.tcn.cloud.api.api.v0alpha.DashboardType.getDefaultInstance() : type_;
   }
 
-  public static final int PERMISSION_TYPE_FIELD_NUMBER = 7;
-  private int permissionType_ = 0;
+  public static final int RESOURCE_ID_FIELD_NUMBER = 7;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceId_ = "";
   /**
    * <pre>
-   * permission type (TCN Standard, Custom, etc.)
+   * resource id of the dashboard
    * </pre>
    *
-   * <code>.api.commons.DashboardPermissionType permission_type = 7 [json_name = "permissionType"];</code>
-   * @return The enum numeric value on the wire for permissionType.
+   * <code>string resource_id = 7 [json_name = "resourceId"];</code>
+   * @return The resourceId.
    */
-  @java.lang.Override public int getPermissionTypeValue() {
-    return permissionType_;
+  @java.lang.Override
+  public java.lang.String getResourceId() {
+    java.lang.Object ref = resourceId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      resourceId_ = s;
+      return s;
+    }
   }
   /**
    * <pre>
-   * permission type (TCN Standard, Custom, etc.)
+   * resource id of the dashboard
    * </pre>
    *
-   * <code>.api.commons.DashboardPermissionType permission_type = 7 [json_name = "permissionType"];</code>
-   * @return The permissionType.
+   * <code>string resource_id = 7 [json_name = "resourceId"];</code>
+   * @return The bytes for resourceId.
    */
-  @java.lang.Override public com.tcn.cloud.api.api.commons.DashboardPermissionType getPermissionType() {
-    com.tcn.cloud.api.api.commons.DashboardPermissionType result = com.tcn.cloud.api.api.commons.DashboardPermissionType.forNumber(permissionType_);
-    return result == null ? com.tcn.cloud.api.api.commons.DashboardPermissionType.UNRECOGNIZED : result;
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getResourceIdBytes() {
+    java.lang.Object ref = resourceId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      resourceId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
   }
 
   private byte memoizedIsInitialized = -1;
@@ -359,8 +380,8 @@ private static final long serialVersionUID = 0L;
     if (type_ != null) {
       output.writeMessage(6, getType());
     }
-    if (permissionType_ != com.tcn.cloud.api.api.commons.DashboardPermissionType.DASHBOARD_PERMISSION_TYPE_ORG_CUSTOM.getNumber()) {
-      output.writeEnum(7, permissionType_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 7, resourceId_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -392,9 +413,8 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, getType());
     }
-    if (permissionType_ != com.tcn.cloud.api.api.commons.DashboardPermissionType.DASHBOARD_PERMISSION_TYPE_ORG_CUSTOM.getNumber()) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(7, permissionType_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, resourceId_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -432,7 +452,8 @@ private static final long serialVersionUID = 0L;
       if (!getType()
           .equals(other.getType())) return false;
     }
-    if (permissionType_ != other.permissionType_) return false;
+    if (!getResourceId()
+        .equals(other.getResourceId())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -462,8 +483,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + TYPE_FIELD_NUMBER;
       hash = (53 * hash) + getType().hashCode();
     }
-    hash = (37 * hash) + PERMISSION_TYPE_FIELD_NUMBER;
-    hash = (53 * hash) + permissionType_;
+    hash = (37 * hash) + RESOURCE_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getResourceId().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -617,7 +638,7 @@ private static final long serialVersionUID = 0L;
         typeBuilder_.dispose();
         typeBuilder_ = null;
       }
-      permissionType_ = 0;
+      resourceId_ = "";
       return this;
     }
 
@@ -676,7 +697,7 @@ private static final long serialVersionUID = 0L;
             : typeBuilder_.build();
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
-        result.permissionType_ = permissionType_;
+        result.resourceId_ = resourceId_;
       }
     }
 
@@ -748,8 +769,10 @@ private static final long serialVersionUID = 0L;
       if (other.hasType()) {
         mergeType(other.getType());
       }
-      if (other.permissionType_ != 0) {
-        setPermissionTypeValue(other.getPermissionTypeValue());
+      if (!other.getResourceId().isEmpty()) {
+        resourceId_ = other.resourceId_;
+        bitField0_ |= 0x00000040;
+        onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -813,11 +836,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000020;
               break;
             } // case 50
-            case 56: {
-              permissionType_ = input.readEnum();
+            case 58: {
+              resourceId_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000040;
               break;
-            } // case 56
+            } // case 58
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1576,75 +1599,94 @@ private static final long serialVersionUID = 0L;
       return typeBuilder_;
     }
 
-    private int permissionType_ = 0;
+    private java.lang.Object resourceId_ = "";
     /**
      * <pre>
-     * permission type (TCN Standard, Custom, etc.)
+     * resource id of the dashboard
      * </pre>
      *
-     * <code>.api.commons.DashboardPermissionType permission_type = 7 [json_name = "permissionType"];</code>
-     * @return The enum numeric value on the wire for permissionType.
+     * <code>string resource_id = 7 [json_name = "resourceId"];</code>
+     * @return The resourceId.
      */
-    @java.lang.Override public int getPermissionTypeValue() {
-      return permissionType_;
-    }
-    /**
-     * <pre>
-     * permission type (TCN Standard, Custom, etc.)
-     * </pre>
-     *
-     * <code>.api.commons.DashboardPermissionType permission_type = 7 [json_name = "permissionType"];</code>
-     * @param value The enum numeric value on the wire for permissionType to set.
-     * @return This builder for chaining.
-     */
-    public Builder setPermissionTypeValue(int value) {
-      permissionType_ = value;
-      bitField0_ |= 0x00000040;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * permission type (TCN Standard, Custom, etc.)
-     * </pre>
-     *
-     * <code>.api.commons.DashboardPermissionType permission_type = 7 [json_name = "permissionType"];</code>
-     * @return The permissionType.
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.DashboardPermissionType getPermissionType() {
-      com.tcn.cloud.api.api.commons.DashboardPermissionType result = com.tcn.cloud.api.api.commons.DashboardPermissionType.forNumber(permissionType_);
-      return result == null ? com.tcn.cloud.api.api.commons.DashboardPermissionType.UNRECOGNIZED : result;
-    }
-    /**
-     * <pre>
-     * permission type (TCN Standard, Custom, etc.)
-     * </pre>
-     *
-     * <code>.api.commons.DashboardPermissionType permission_type = 7 [json_name = "permissionType"];</code>
-     * @param value The permissionType to set.
-     * @return This builder for chaining.
-     */
-    public Builder setPermissionType(com.tcn.cloud.api.api.commons.DashboardPermissionType value) {
-      if (value == null) {
-        throw new NullPointerException();
+    public java.lang.String getResourceId() {
+      java.lang.Object ref = resourceId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        resourceId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
       }
+    }
+    /**
+     * <pre>
+     * resource id of the dashboard
+     * </pre>
+     *
+     * <code>string resource_id = 7 [json_name = "resourceId"];</code>
+     * @return The bytes for resourceId.
+     */
+    public com.google.protobuf.ByteString
+        getResourceIdBytes() {
+      java.lang.Object ref = resourceId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        resourceId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * resource id of the dashboard
+     * </pre>
+     *
+     * <code>string resource_id = 7 [json_name = "resourceId"];</code>
+     * @param value The resourceId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setResourceId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      resourceId_ = value;
       bitField0_ |= 0x00000040;
-      permissionType_ = value.getNumber();
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * permission type (TCN Standard, Custom, etc.)
+     * resource id of the dashboard
      * </pre>
      *
-     * <code>.api.commons.DashboardPermissionType permission_type = 7 [json_name = "permissionType"];</code>
+     * <code>string resource_id = 7 [json_name = "resourceId"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearPermissionType() {
+    public Builder clearResourceId() {
+      resourceId_ = getDefaultInstance().getResourceId();
       bitField0_ = (bitField0_ & ~0x00000040);
-      permissionType_ = 0;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * resource id of the dashboard
+     * </pre>
+     *
+     * <code>string resource_id = 7 [json_name = "resourceId"];</code>
+     * @param value The bytes for resourceId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setResourceIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      resourceId_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
