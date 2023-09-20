@@ -8,18 +8,6 @@ public interface SetDefaultSchedulingTargetReqOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string org_id = 1 [json_name = "orgId"];</code>
-   * @return The orgId.
-   */
-  java.lang.String getOrgId();
-  /**
-   * <code>string org_id = 1 [json_name = "orgId"];</code>
-   * @return The bytes for orgId.
-   */
-  com.google.protobuf.ByteString
-      getOrgIdBytes();
-
-  /**
    * <code>.api.v1alpha1.wfm.SchedulingTarget scheduling_target = 2 [json_name = "schedulingTarget"];</code>
    * @return Whether the schedulingTarget field is set.
    */

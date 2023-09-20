@@ -3738,6 +3738,68 @@ public final class WFMGrpc {
     return getDeleteSchedulingTargetMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetRes> getGetDefaultSchedulingTargetMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetDefaultSchedulingTarget",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetRes> getGetDefaultSchedulingTargetMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetReq, com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetRes> getGetDefaultSchedulingTargetMethod;
+    if ((getGetDefaultSchedulingTargetMethod = WFMGrpc.getGetDefaultSchedulingTargetMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getGetDefaultSchedulingTargetMethod = WFMGrpc.getGetDefaultSchedulingTargetMethod) == null) {
+          WFMGrpc.getGetDefaultSchedulingTargetMethod = getGetDefaultSchedulingTargetMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetReq, com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetDefaultSchedulingTarget"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetRes.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("GetDefaultSchedulingTarget"))
+              .build();
+        }
+      }
+    }
+    return getGetDefaultSchedulingTargetMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetRes> getSetDefaultSchedulingTargetMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SetDefaultSchedulingTarget",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetRes> getSetDefaultSchedulingTargetMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetReq, com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetRes> getSetDefaultSchedulingTargetMethod;
+    if ((getSetDefaultSchedulingTargetMethod = WFMGrpc.getSetDefaultSchedulingTargetMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getSetDefaultSchedulingTargetMethod = WFMGrpc.getSetDefaultSchedulingTargetMethod) == null) {
+          WFMGrpc.getSetDefaultSchedulingTargetMethod = getSetDefaultSchedulingTargetMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetReq, com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetDefaultSchedulingTarget"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetRes.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("SetDefaultSchedulingTarget"))
+              .build();
+        }
+      }
+    }
+    return getSetDefaultSchedulingTargetMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.GetPerformanceMetricsReq,
       com.tcn.cloud.api.api.v1alpha1.wfm.GetPerformanceMetricsRes> getGetPerformanceMetricsMethod;
 
@@ -5770,7 +5832,7 @@ public final class WFMGrpc {
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the &#64;org_id or &#64;shift_instance_sids in the request are invalid.
+     *   - grpc.Invalid: the &#64;shift_instance_sids in the request are invalid.
      *   - grpc.Internal: error occurs when listing the shift instances or their shift segments.
      * </pre>
      */
@@ -5985,6 +6047,31 @@ public final class WFMGrpc {
     default void deleteSchedulingTarget(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingTargetReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingTargetRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteSchedulingTargetMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Gets the scheduling-target values for the org making the request.
+     * Errors:
+     *   - grpc.Internal: error occours when getting the scheduling-target values.
+     * </pre>
+     */
+    default void getDefaultSchedulingTarget(com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetDefaultSchedulingTargetMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Sets the scheduling-target values for the org making the request.
+     * Errors:
+     *   - grpc.Invalid: any of the given values are invalid.
+     *   - grpc.Internal: error occours when setting the scheduling-target values.
+     * </pre>
+     */
+    default void setDefaultSchedulingTarget(com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetDefaultSchedulingTargetMethod(), responseObserver);
     }
 
     /**
@@ -8081,7 +8168,7 @@ public final class WFMGrpc {
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the &#64;org_id or &#64;shift_instance_sids in the request are invalid.
+     *   - grpc.Invalid: the &#64;shift_instance_sids in the request are invalid.
      *   - grpc.Internal: error occurs when listing the shift instances or their shift segments.
      * </pre>
      */
@@ -8309,6 +8396,33 @@ public final class WFMGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingTargetRes> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteSchedulingTargetMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Gets the scheduling-target values for the org making the request.
+     * Errors:
+     *   - grpc.Internal: error occours when getting the scheduling-target values.
+     * </pre>
+     */
+    public void getDefaultSchedulingTarget(com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetDefaultSchedulingTargetMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Sets the scheduling-target values for the org making the request.
+     * Errors:
+     *   - grpc.Invalid: any of the given values are invalid.
+     *   - grpc.Internal: error occours when setting the scheduling-target values.
+     * </pre>
+     */
+    public void setDefaultSchedulingTarget(com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getSetDefaultSchedulingTargetMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -10292,7 +10406,7 @@ public final class WFMGrpc {
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the &#64;org_id or &#64;shift_instance_sids in the request are invalid.
+     *   - grpc.Invalid: the &#64;shift_instance_sids in the request are invalid.
      *   - grpc.Internal: error occurs when listing the shift instances or their shift segments.
      * </pre>
      */
@@ -10507,6 +10621,31 @@ public final class WFMGrpc {
     public com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingTargetRes deleteSchedulingTarget(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingTargetReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteSchedulingTargetMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Gets the scheduling-target values for the org making the request.
+     * Errors:
+     *   - grpc.Internal: error occours when getting the scheduling-target values.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetRes getDefaultSchedulingTarget(com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetDefaultSchedulingTargetMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Sets the scheduling-target values for the org making the request.
+     * Errors:
+     *   - grpc.Invalid: any of the given values are invalid.
+     *   - grpc.Internal: error occours when setting the scheduling-target values.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetRes setDefaultSchedulingTarget(com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSetDefaultSchedulingTargetMethod(), getCallOptions(), request);
     }
 
     /**
@@ -12477,7 +12616,7 @@ public final class WFMGrpc {
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the &#64;org_id or &#64;shift_instance_sids in the request are invalid.
+     *   - grpc.Invalid: the &#64;shift_instance_sids in the request are invalid.
      *   - grpc.Internal: error occurs when listing the shift instances or their shift segments.
      * </pre>
      */
@@ -12709,6 +12848,33 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Gets the scheduling-target values for the org making the request.
+     * Errors:
+     *   - grpc.Internal: error occours when getting the scheduling-target values.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetRes> getDefaultSchedulingTarget(
+        com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetDefaultSchedulingTargetMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Sets the scheduling-target values for the org making the request.
+     * Errors:
+     *   - grpc.Invalid: any of the given values are invalid.
+     *   - grpc.Internal: error occours when setting the scheduling-target values.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetRes> setDefaultSchedulingTarget(
+        com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getSetDefaultSchedulingTargetMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Gets the performance metrics across &#64;datetime_range for shift instances in &#64;schedule_selector associated with &#64;node_selector for the org making the request.
      * Performance metrics will be generated for each of the given &#64;metric_params.
      * The &#64;interval_width_in_minutes must be a multiple of 5.
@@ -12864,8 +13030,10 @@ public final class WFMGrpc {
   private static final int METHODID_SET_SCHEDULING_TARGET = 117;
   private static final int METHODID_GET_SCHEDULING_TARGET = 118;
   private static final int METHODID_DELETE_SCHEDULING_TARGET = 119;
-  private static final int METHODID_GET_PERFORMANCE_METRICS = 120;
-  private static final int METHODID_LIST_REQUIRED_CALLS_INTERVALS = 121;
+  private static final int METHODID_GET_DEFAULT_SCHEDULING_TARGET = 120;
+  private static final int METHODID_SET_DEFAULT_SCHEDULING_TARGET = 121;
+  private static final int METHODID_GET_PERFORMANCE_METRICS = 122;
+  private static final int METHODID_LIST_REQUIRED_CALLS_INTERVALS = 123;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -13363,6 +13531,14 @@ public final class WFMGrpc {
         case METHODID_DELETE_SCHEDULING_TARGET:
           serviceImpl.deleteSchedulingTarget((com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingTargetReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingTargetRes>) responseObserver);
+          break;
+        case METHODID_GET_DEFAULT_SCHEDULING_TARGET:
+          serviceImpl.getDefaultSchedulingTarget((com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetRes>) responseObserver);
+          break;
+        case METHODID_SET_DEFAULT_SCHEDULING_TARGET:
+          serviceImpl.setDefaultSchedulingTarget((com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetRes>) responseObserver);
           break;
         case METHODID_GET_PERFORMANCE_METRICS:
           serviceImpl.getPerformanceMetrics((com.tcn.cloud.api.api.v1alpha1.wfm.GetPerformanceMetricsReq) request,
@@ -14231,6 +14407,20 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingTargetRes>(
                 service, METHODID_DELETE_SCHEDULING_TARGET)))
         .addMethod(
+          getGetDefaultSchedulingTargetMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetRes>(
+                service, METHODID_GET_DEFAULT_SCHEDULING_TARGET)))
+        .addMethod(
+          getSetDefaultSchedulingTargetMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetRes>(
+                service, METHODID_SET_DEFAULT_SCHEDULING_TARGET)))
+        .addMethod(
           getGetPerformanceMetricsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -14412,6 +14602,8 @@ public final class WFMGrpc {
               .addMethod(getSetSchedulingTargetMethod())
               .addMethod(getGetSchedulingTargetMethod())
               .addMethod(getDeleteSchedulingTargetMethod())
+              .addMethod(getGetDefaultSchedulingTargetMethod())
+              .addMethod(getSetDefaultSchedulingTargetMethod())
               .addMethod(getGetPerformanceMetricsMethod())
               .addMethod(getListRequiredCallsIntervalsMethod())
               .build();

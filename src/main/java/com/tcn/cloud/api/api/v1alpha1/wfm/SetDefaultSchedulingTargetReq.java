@@ -20,7 +20,6 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private SetDefaultSchedulingTargetReq() {
-    orgId_ = "";
   }
 
   @java.lang.Override
@@ -41,45 +40,6 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_SetDefaultSchedulingTargetReq_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetReq.class, com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetReq.Builder.class);
-  }
-
-  public static final int ORG_ID_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object orgId_ = "";
-  /**
-   * <code>string org_id = 1 [json_name = "orgId"];</code>
-   * @return The orgId.
-   */
-  @java.lang.Override
-  public java.lang.String getOrgId() {
-    java.lang.Object ref = orgId_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      orgId_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string org_id = 1 [json_name = "orgId"];</code>
-   * @return The bytes for orgId.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getOrgIdBytes() {
-    java.lang.Object ref = orgId_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      orgId_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
   }
 
   public static final int SCHEDULING_TARGET_FIELD_NUMBER = 2;
@@ -122,9 +82,6 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, orgId_);
-    }
     if (schedulingTarget_ != null) {
       output.writeMessage(2, getSchedulingTarget());
     }
@@ -137,9 +94,6 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, orgId_);
-    }
     if (schedulingTarget_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getSchedulingTarget());
@@ -159,8 +113,6 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetReq other = (com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetReq) obj;
 
-    if (!getOrgId()
-        .equals(other.getOrgId())) return false;
     if (hasSchedulingTarget() != other.hasSchedulingTarget()) return false;
     if (hasSchedulingTarget()) {
       if (!getSchedulingTarget()
@@ -177,8 +129,6 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + ORG_ID_FIELD_NUMBER;
-    hash = (53 * hash) + getOrgId().hashCode();
     if (hasSchedulingTarget()) {
       hash = (37 * hash) + SCHEDULING_TARGET_FIELD_NUMBER;
       hash = (53 * hash) + getSchedulingTarget().hashCode();
@@ -318,7 +268,6 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      orgId_ = "";
       schedulingTarget_ = null;
       if (schedulingTargetBuilder_ != null) {
         schedulingTargetBuilder_.dispose();
@@ -358,9 +307,6 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetReq result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.orgId_ = orgId_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
         result.schedulingTarget_ = schedulingTargetBuilder_ == null
             ? schedulingTarget_
             : schedulingTargetBuilder_.build();
@@ -411,11 +357,6 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetReq other) {
       if (other == com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetReq.getDefaultInstance()) return this;
-      if (!other.getOrgId().isEmpty()) {
-        orgId_ = other.orgId_;
-        bitField0_ |= 0x00000001;
-        onChanged();
-      }
       if (other.hasSchedulingTarget()) {
         mergeSchedulingTarget(other.getSchedulingTarget());
       }
@@ -445,16 +386,11 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 10: {
-              orgId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
             case 18: {
               input.readMessage(
                   getSchedulingTargetFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000001;
               break;
             } // case 18
             default: {
@@ -474,78 +410,6 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.lang.Object orgId_ = "";
-    /**
-     * <code>string org_id = 1 [json_name = "orgId"];</code>
-     * @return The orgId.
-     */
-    public java.lang.String getOrgId() {
-      java.lang.Object ref = orgId_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        orgId_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string org_id = 1 [json_name = "orgId"];</code>
-     * @return The bytes for orgId.
-     */
-    public com.google.protobuf.ByteString
-        getOrgIdBytes() {
-      java.lang.Object ref = orgId_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        orgId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string org_id = 1 [json_name = "orgId"];</code>
-     * @param value The orgId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setOrgId(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      orgId_ = value;
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string org_id = 1 [json_name = "orgId"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearOrgId() {
-      orgId_ = getDefaultInstance().getOrgId();
-      bitField0_ = (bitField0_ & ~0x00000001);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string org_id = 1 [json_name = "orgId"];</code>
-     * @param value The bytes for orgId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setOrgIdBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      orgId_ = value;
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-
     private com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTarget schedulingTarget_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTarget, com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTarget.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTargetOrBuilder> schedulingTargetBuilder_;
@@ -554,7 +418,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the schedulingTarget field is set.
      */
     public boolean hasSchedulingTarget() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.api.v1alpha1.wfm.SchedulingTarget scheduling_target = 2 [json_name = "schedulingTarget"];</code>
@@ -579,7 +443,7 @@ private static final long serialVersionUID = 0L;
       } else {
         schedulingTargetBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -593,7 +457,7 @@ private static final long serialVersionUID = 0L;
       } else {
         schedulingTargetBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -602,7 +466,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeSchedulingTarget(com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTarget value) {
       if (schedulingTargetBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0) &&
+        if (((bitField0_ & 0x00000001) != 0) &&
           schedulingTarget_ != null &&
           schedulingTarget_ != com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTarget.getDefaultInstance()) {
           getSchedulingTargetBuilder().mergeFrom(value);
@@ -612,7 +476,7 @@ private static final long serialVersionUID = 0L;
       } else {
         schedulingTargetBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -620,7 +484,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v1alpha1.wfm.SchedulingTarget scheduling_target = 2 [json_name = "schedulingTarget"];</code>
      */
     public Builder clearSchedulingTarget() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000001);
       schedulingTarget_ = null;
       if (schedulingTargetBuilder_ != null) {
         schedulingTargetBuilder_.dispose();
@@ -633,7 +497,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v1alpha1.wfm.SchedulingTarget scheduling_target = 2 [json_name = "schedulingTarget"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingTarget.Builder getSchedulingTargetBuilder() {
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       onChanged();
       return getSchedulingTargetFieldBuilder().getBuilder();
     }
