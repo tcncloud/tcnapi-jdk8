@@ -79,31 +79,46 @@ public interface UserSubscriptionOrBuilder extends
       getUserIdBytes();
 
   /**
-   * <pre>
-   * TODO: add email, sms, etc.
-   * </pre>
-   *
    * <code>.api.v0alpha.UserSubscription.Room303 room303 = 100 [json_name = "room303"];</code>
    * @return Whether the room303 field is set.
    */
   boolean hasRoom303();
   /**
-   * <pre>
-   * TODO: add email, sms, etc.
-   * </pre>
-   *
    * <code>.api.v0alpha.UserSubscription.Room303 room303 = 100 [json_name = "room303"];</code>
    * @return The room303.
    */
   com.tcn.cloud.api.api.v0alpha.UserSubscription.Room303 getRoom303();
   /**
+   * <code>.api.v0alpha.UserSubscription.Room303 room303 = 100 [json_name = "room303"];</code>
+   */
+  com.tcn.cloud.api.api.v0alpha.UserSubscription.Room303OrBuilder getRoom303OrBuilder();
+
+  /**
    * <pre>
    * TODO: add email, sms, etc.
    * </pre>
    *
-   * <code>.api.v0alpha.UserSubscription.Room303 room303 = 100 [json_name = "room303"];</code>
+   * <code>.api.v0alpha.UserSubscription.Delivery delivery = 200 [json_name = "delivery"];</code>
+   * @return Whether the delivery field is set.
    */
-  com.tcn.cloud.api.api.v0alpha.UserSubscription.Room303OrBuilder getRoom303OrBuilder();
+  boolean hasDelivery();
+  /**
+   * <pre>
+   * TODO: add email, sms, etc.
+   * </pre>
+   *
+   * <code>.api.v0alpha.UserSubscription.Delivery delivery = 200 [json_name = "delivery"];</code>
+   * @return The delivery.
+   */
+  com.tcn.cloud.api.api.v0alpha.UserSubscription.Delivery getDelivery();
+  /**
+   * <pre>
+   * TODO: add email, sms, etc.
+   * </pre>
+   *
+   * <code>.api.v0alpha.UserSubscription.Delivery delivery = 200 [json_name = "delivery"];</code>
+   */
+  com.tcn.cloud.api.api.v0alpha.UserSubscription.DeliveryOrBuilder getDeliveryOrBuilder();
 
   /**
    * <pre>
