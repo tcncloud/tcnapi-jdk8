@@ -32,29 +32,16 @@ public interface LMSPipelineFailureEventOrBuilder extends
       getElementNameBytes();
 
   /**
-   * <code>repeated string file_names = 3 [json_name = "fileNames"];</code>
-   * @return A list containing the fileNames.
+   * <code>string file_name = 3 [json_name = "fileName"];</code>
+   * @return The fileName.
    */
-  java.util.List<java.lang.String>
-      getFileNamesList();
+  java.lang.String getFileName();
   /**
-   * <code>repeated string file_names = 3 [json_name = "fileNames"];</code>
-   * @return The count of fileNames.
-   */
-  int getFileNamesCount();
-  /**
-   * <code>repeated string file_names = 3 [json_name = "fileNames"];</code>
-   * @param index The index of the element to return.
-   * @return The fileNames at the given index.
-   */
-  java.lang.String getFileNames(int index);
-  /**
-   * <code>repeated string file_names = 3 [json_name = "fileNames"];</code>
-   * @param index The index of the value to return.
-   * @return The bytes of the fileNames at the given index.
+   * <code>string file_name = 3 [json_name = "fileName"];</code>
+   * @return The bytes for fileName.
    */
   com.google.protobuf.ByteString
-      getFileNamesBytes(int index);
+      getFileNameBytes();
 
   /**
    * <code>string failure_message = 4 [json_name = "failureMessage"];</code>

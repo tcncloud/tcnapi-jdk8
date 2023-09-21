@@ -29,15 +29,15 @@ public final class LmsEventsProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\"api/commons/audit/lms_events.proto\022\021ap" +
-      "i.commons.audit\"\243\001\n\027LMSPipelineFailureEv" +
+      "i.commons.audit\"\241\001\n\027LMSPipelineFailureEv" +
       "ent\022\035\n\nelement_id\030\001 \001(\tR\telementId\022!\n\014el" +
-      "ement_name\030\002 \001(\tR\013elementName\022\035\n\nfile_na" +
-      "mes\030\003 \003(\tR\tfileNames\022\'\n\017failure_message\030" +
-      "\004 \001(\tR\016failureMessageB\233\001\n#com.tcn.cloud." +
-      "api.api.commons.auditB\016LmsEventsProtoP\001\242" +
-      "\002\003ACA\252\002\021Api.Commons.Audit\312\002\021Api\\Commons\\" +
-      "Audit\342\002\035Api\\Commons\\Audit\\GPBMetadata\352\002\023" +
-      "Api::Commons::Auditb\006proto3"
+      "ement_name\030\002 \001(\tR\013elementName\022\033\n\tfile_na" +
+      "me\030\003 \001(\tR\010fileName\022\'\n\017failure_message\030\004 " +
+      "\001(\tR\016failureMessageB\233\001\n#com.tcn.cloud.ap" +
+      "i.api.commons.auditB\016LmsEventsProtoP\001\242\002\003" +
+      "ACA\252\002\021Api.Commons.Audit\312\002\021Api\\Commons\\Au" +
+      "dit\342\002\035Api\\Commons\\Audit\\GPBMetadata\352\002\023Ap" +
+      "i::Commons::Auditb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -48,7 +48,7 @@ public final class LmsEventsProto {
     internal_static_api_commons_audit_LMSPipelineFailureEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_audit_LMSPipelineFailureEvent_descriptor,
-        new java.lang.String[] { "ElementId", "ElementName", "FileNames", "FailureMessage", });
+        new java.lang.String[] { "ElementId", "ElementName", "FileName", "FailureMessage", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

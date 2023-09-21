@@ -18,8 +18,7 @@ private static final long serialVersionUID = 0L;
   private LMSPipelineFailureEvent() {
     elementId_ = "";
     elementName_ = "";
-    fileNames_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    fileName_ = "";
     failureMessage_ = "";
   }
 
@@ -121,41 +120,43 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int FILE_NAMES_FIELD_NUMBER = 3;
+  public static final int FILE_NAME_FIELD_NUMBER = 3;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringArrayList fileNames_ =
-      com.google.protobuf.LazyStringArrayList.emptyList();
+  private volatile java.lang.Object fileName_ = "";
   /**
-   * <code>repeated string file_names = 3 [json_name = "fileNames"];</code>
-   * @return A list containing the fileNames.
+   * <code>string file_name = 3 [json_name = "fileName"];</code>
+   * @return The fileName.
    */
-  public com.google.protobuf.ProtocolStringList
-      getFileNamesList() {
-    return fileNames_;
+  @java.lang.Override
+  public java.lang.String getFileName() {
+    java.lang.Object ref = fileName_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      fileName_ = s;
+      return s;
+    }
   }
   /**
-   * <code>repeated string file_names = 3 [json_name = "fileNames"];</code>
-   * @return The count of fileNames.
+   * <code>string file_name = 3 [json_name = "fileName"];</code>
+   * @return The bytes for fileName.
    */
-  public int getFileNamesCount() {
-    return fileNames_.size();
-  }
-  /**
-   * <code>repeated string file_names = 3 [json_name = "fileNames"];</code>
-   * @param index The index of the element to return.
-   * @return The fileNames at the given index.
-   */
-  public java.lang.String getFileNames(int index) {
-    return fileNames_.get(index);
-  }
-  /**
-   * <code>repeated string file_names = 3 [json_name = "fileNames"];</code>
-   * @param index The index of the value to return.
-   * @return The bytes of the fileNames at the given index.
-   */
+  @java.lang.Override
   public com.google.protobuf.ByteString
-      getFileNamesBytes(int index) {
-    return fileNames_.getByteString(index);
+      getFileNameBytes() {
+    java.lang.Object ref = fileName_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      fileName_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
   }
 
   public static final int FAILURE_MESSAGE_FIELD_NUMBER = 4;
@@ -217,8 +218,8 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(elementName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, elementName_);
     }
-    for (int i = 0; i < fileNames_.size(); i++) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, fileNames_.getRaw(i));
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fileName_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, fileName_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(failureMessage_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, failureMessage_);
@@ -238,13 +239,8 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(elementName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, elementName_);
     }
-    {
-      int dataSize = 0;
-      for (int i = 0; i < fileNames_.size(); i++) {
-        dataSize += computeStringSizeNoTag(fileNames_.getRaw(i));
-      }
-      size += dataSize;
-      size += 1 * getFileNamesList().size();
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fileName_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, fileName_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(failureMessage_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, failureMessage_);
@@ -268,8 +264,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getElementId())) return false;
     if (!getElementName()
         .equals(other.getElementName())) return false;
-    if (!getFileNamesList()
-        .equals(other.getFileNamesList())) return false;
+    if (!getFileName()
+        .equals(other.getFileName())) return false;
     if (!getFailureMessage()
         .equals(other.getFailureMessage())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -287,10 +283,8 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getElementId().hashCode();
     hash = (37 * hash) + ELEMENT_NAME_FIELD_NUMBER;
     hash = (53 * hash) + getElementName().hashCode();
-    if (getFileNamesCount() > 0) {
-      hash = (37 * hash) + FILE_NAMES_FIELD_NUMBER;
-      hash = (53 * hash) + getFileNamesList().hashCode();
-    }
+    hash = (37 * hash) + FILE_NAME_FIELD_NUMBER;
+    hash = (53 * hash) + getFileName().hashCode();
     hash = (37 * hash) + FAILURE_MESSAGE_FIELD_NUMBER;
     hash = (53 * hash) + getFailureMessage().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
@@ -426,8 +420,7 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       elementId_ = "";
       elementName_ = "";
-      fileNames_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
+      fileName_ = "";
       failureMessage_ = "";
       return this;
     }
@@ -469,8 +462,7 @@ private static final long serialVersionUID = 0L;
         result.elementName_ = elementName_;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
-        fileNames_.makeImmutable();
-        result.fileNames_ = fileNames_;
+        result.fileName_ = fileName_;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.failureMessage_ = failureMessage_;
@@ -531,14 +523,9 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000002;
         onChanged();
       }
-      if (!other.fileNames_.isEmpty()) {
-        if (fileNames_.isEmpty()) {
-          fileNames_ = other.fileNames_;
-          bitField0_ |= 0x00000004;
-        } else {
-          ensureFileNamesIsMutable();
-          fileNames_.addAll(other.fileNames_);
-        }
+      if (!other.getFileName().isEmpty()) {
+        fileName_ = other.fileName_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (!other.getFailureMessage().isEmpty()) {
@@ -583,9 +570,8 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 18
             case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-              ensureFileNamesIsMutable();
-              fileNames_.add(s);
+              fileName_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
               break;
             } // case 26
             case 34: {
@@ -754,112 +740,73 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.LazyStringArrayList fileNames_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-    private void ensureFileNamesIsMutable() {
-      if (!fileNames_.isModifiable()) {
-        fileNames_ = new com.google.protobuf.LazyStringArrayList(fileNames_);
+    private java.lang.Object fileName_ = "";
+    /**
+     * <code>string file_name = 3 [json_name = "fileName"];</code>
+     * @return The fileName.
+     */
+    public java.lang.String getFileName() {
+      java.lang.Object ref = fileName_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        fileName_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
       }
-      bitField0_ |= 0x00000004;
     }
     /**
-     * <code>repeated string file_names = 3 [json_name = "fileNames"];</code>
-     * @return A list containing the fileNames.
-     */
-    public com.google.protobuf.ProtocolStringList
-        getFileNamesList() {
-      fileNames_.makeImmutable();
-      return fileNames_;
-    }
-    /**
-     * <code>repeated string file_names = 3 [json_name = "fileNames"];</code>
-     * @return The count of fileNames.
-     */
-    public int getFileNamesCount() {
-      return fileNames_.size();
-    }
-    /**
-     * <code>repeated string file_names = 3 [json_name = "fileNames"];</code>
-     * @param index The index of the element to return.
-     * @return The fileNames at the given index.
-     */
-    public java.lang.String getFileNames(int index) {
-      return fileNames_.get(index);
-    }
-    /**
-     * <code>repeated string file_names = 3 [json_name = "fileNames"];</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the fileNames at the given index.
+     * <code>string file_name = 3 [json_name = "fileName"];</code>
+     * @return The bytes for fileName.
      */
     public com.google.protobuf.ByteString
-        getFileNamesBytes(int index) {
-      return fileNames_.getByteString(index);
+        getFileNameBytes() {
+      java.lang.Object ref = fileName_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        fileName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
     /**
-     * <code>repeated string file_names = 3 [json_name = "fileNames"];</code>
-     * @param index The index to set the value at.
-     * @param value The fileNames to set.
+     * <code>string file_name = 3 [json_name = "fileName"];</code>
+     * @param value The fileName to set.
      * @return This builder for chaining.
      */
-    public Builder setFileNames(
-        int index, java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureFileNamesIsMutable();
-      fileNames_.set(index, value);
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>repeated string file_names = 3 [json_name = "fileNames"];</code>
-     * @param value The fileNames to add.
-     * @return This builder for chaining.
-     */
-    public Builder addFileNames(
+    public Builder setFileName(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      ensureFileNamesIsMutable();
-      fileNames_.add(value);
+      fileName_ = value;
       bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
-     * <code>repeated string file_names = 3 [json_name = "fileNames"];</code>
-     * @param values The fileNames to add.
+     * <code>string file_name = 3 [json_name = "fileName"];</code>
      * @return This builder for chaining.
      */
-    public Builder addAllFileNames(
-        java.lang.Iterable<java.lang.String> values) {
-      ensureFileNamesIsMutable();
-      com.google.protobuf.AbstractMessageLite.Builder.addAll(
-          values, fileNames_);
-      bitField0_ |= 0x00000004;
+    public Builder clearFileName() {
+      fileName_ = getDefaultInstance().getFileName();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
     /**
-     * <code>repeated string file_names = 3 [json_name = "fileNames"];</code>
+     * <code>string file_name = 3 [json_name = "fileName"];</code>
+     * @param value The bytes for fileName to set.
      * @return This builder for chaining.
      */
-    public Builder clearFileNames() {
-      fileNames_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000004);;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>repeated string file_names = 3 [json_name = "fileNames"];</code>
-     * @param value The bytes of the fileNames to add.
-     * @return This builder for chaining.
-     */
-    public Builder addFileNamesBytes(
+    public Builder setFileNameBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      ensureFileNamesIsMutable();
-      fileNames_.add(value);
+      fileName_ = value;
       bitField0_ |= 0x00000004;
       onChanged();
       return this;
