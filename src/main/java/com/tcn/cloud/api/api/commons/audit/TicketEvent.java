@@ -42,10 +42,6 @@ private static final long serialVersionUID = 0L;
   public static final int EDITTICKET_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.api.commons.EditTicket editticket_;
   /**
-   * <pre>
-   * update ticket
-   * </pre>
-   *
    * <code>.api.commons.EditTicket editticket = 1 [json_name = "editticket"];</code>
    * @return Whether the editticket field is set.
    */
@@ -54,10 +50,6 @@ private static final long serialVersionUID = 0L;
     return editticket_ != null;
   }
   /**
-   * <pre>
-   * update ticket
-   * </pre>
-   *
    * <code>.api.commons.EditTicket editticket = 1 [json_name = "editticket"];</code>
    * @return The editticket.
    */
@@ -66,10 +58,6 @@ private static final long serialVersionUID = 0L;
     return editticket_ == null ? com.tcn.cloud.api.api.commons.EditTicket.getDefaultInstance() : editticket_;
   }
   /**
-   * <pre>
-   * update ticket
-   * </pre>
-   *
    * <code>.api.commons.EditTicket editticket = 1 [json_name = "editticket"];</code>
    */
   @java.lang.Override
@@ -482,10 +470,6 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.EditTicket, com.tcn.cloud.api.api.commons.EditTicket.Builder, com.tcn.cloud.api.api.commons.EditTicketOrBuilder> editticketBuilder_;
     /**
-     * <pre>
-     * update ticket
-     * </pre>
-     *
      * <code>.api.commons.EditTicket editticket = 1 [json_name = "editticket"];</code>
      * @return Whether the editticket field is set.
      */
@@ -493,10 +477,6 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <pre>
-     * update ticket
-     * </pre>
-     *
      * <code>.api.commons.EditTicket editticket = 1 [json_name = "editticket"];</code>
      * @return The editticket.
      */
@@ -508,10 +488,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * update ticket
-     * </pre>
-     *
      * <code>.api.commons.EditTicket editticket = 1 [json_name = "editticket"];</code>
      */
     public Builder setEditticket(com.tcn.cloud.api.api.commons.EditTicket value) {
@@ -528,10 +504,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * update ticket
-     * </pre>
-     *
      * <code>.api.commons.EditTicket editticket = 1 [json_name = "editticket"];</code>
      */
     public Builder setEditticket(
@@ -546,10 +518,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * update ticket
-     * </pre>
-     *
      * <code>.api.commons.EditTicket editticket = 1 [json_name = "editticket"];</code>
      */
     public Builder mergeEditticket(com.tcn.cloud.api.api.commons.EditTicket value) {
@@ -569,10 +537,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * update ticket
-     * </pre>
-     *
      * <code>.api.commons.EditTicket editticket = 1 [json_name = "editticket"];</code>
      */
     public Builder clearEditticket() {
@@ -586,10 +550,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * update ticket
-     * </pre>
-     *
      * <code>.api.commons.EditTicket editticket = 1 [json_name = "editticket"];</code>
      */
     public com.tcn.cloud.api.api.commons.EditTicket.Builder getEditticketBuilder() {
@@ -598,10 +558,6 @@ private static final long serialVersionUID = 0L;
       return getEditticketFieldBuilder().getBuilder();
     }
     /**
-     * <pre>
-     * update ticket
-     * </pre>
-     *
      * <code>.api.commons.EditTicket editticket = 1 [json_name = "editticket"];</code>
      */
     public com.tcn.cloud.api.api.commons.EditTicketOrBuilder getEditticketOrBuilder() {
@@ -613,10 +569,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * update ticket
-     * </pre>
-     *
      * <code>.api.commons.EditTicket editticket = 1 [json_name = "editticket"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
