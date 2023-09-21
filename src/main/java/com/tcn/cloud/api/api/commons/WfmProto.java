@@ -79,6 +79,31 @@ public final class WfmProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_commons_SkillProfileCategory_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_TourShiftSegmentConfig_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_TourShiftSegmentConfig_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_TourShiftInstanceConfig_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_TourShiftInstanceConfig_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_TourWeekPattern_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_TourWeekPattern_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_TourAgentCollection_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_TourAgentCollection_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_TourPattern_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_TourPattern_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -170,108 +195,148 @@ public final class WfmProto {
       "\0162..api.commons.SkillProfileCategory.Cat" +
       "egoryTypeR\030skillProfileCategoryType\"A\n\014C" +
       "ategoryType\022\030\n\024SINGLE_SKILL_PROFILE\020\000\022\027\n" +
-      "\023SKILL_PROFILE_GROUP\020\001*\250\001\n\036RegressionFor" +
-      "ecasterModelTypes\022\021\n\rRANDOM_FOREST\020\000\022\014\n\010" +
-      "ADABOOST\020\001\022\025\n\021GRADIENT_BOOSTING\020\002\022\025\n\021LIN" +
-      "EAR_REGRESSION\020\003\022\016\n\nLINEAR_AVG\020\004\022\024\n\020SEGM" +
-      "ENTED_LINEAR\020\005\022\007\n\003MLP\020\006\022\010\n\004AUTO\020\007*X\n&Reg" +
-      "ressionForecasterAvgsProcessingType\022\014\n\010F" +
-      "ORECAST\020\000\022\014\n\010AVERAGES\020\001\022\022\n\016FIXED_AVERAGE" +
-      "S\020\002*d\n\022ConstraintTimeUnit\022\013\n\007MINUTES\020\000\022\t" +
-      "\n\005HOURS\020\001\022\n\n\006SHIFTS\020\002\022\010\n\004DAYS\020\003\022\t\n\005WEEKS" +
-      "\020\004\022\n\n\006MONTHS\020\005\022\t\n\005YEARS\020\006*\302\002\n\020ConfigEnti" +
-      "tyType\022\024\n\020CALL_CENTER_NODE\020\000\022\017\n\013CLIENT_N" +
-      "ODE\020\001\022\021\n\rLOCATION_NODE\020\002\022\020\n\014PROGRAM_NODE" +
-      "\020\003\022\017\n\013AGENT_GROUP\020\004\022\022\n\016SHIFT_TEMPLATE\020\005\022" +
-      "\r\n\tWFM_AGENT\020\006\022\022\n\016PLACEMENT_RULE\020\007\022\023\n\017CO" +
-      "NSTRAINT_RULE\020\010\022\026\n\022NON_SKILL_ACTIVITY\020\t\022" +
-      "\026\n\022AGENT_AVAILABILITY\020\n\022\016\n\nOPEN_TIMES\020\013\022" +
-      "\027\n\023SCHEDULING_ACTIVITY\020\014\022\025\n\021SKILL_PROFIC" +
-      "IENCY\020\r\022\025\n\021SCHEDULE_SCENARIO\020\016*\301\001\n\022Const" +
-      "raintRuleType\022\021\n\rMIN_CONSEC_ON\020\000\022\021\n\rMAX_" +
-      "CONSEC_ON\020\001\022\022\n\016MIN_CONSEC_OFF\020\002\022\022\n\016MAX_C" +
-      "ONSEC_OFF\020\003\022\020\n\014MIN_TOTAL_ON\020\004\022\020\n\014MAX_TOT" +
-      "AL_ON\020\005\022\021\n\rMIN_TOTAL_OFF\020\006\022\021\n\rMAX_TOTAL_" +
-      "OFF\020\007\022\023\n\017MIN_SKILL_LEVEL\020\010*3\n\020DOWPlaceme" +
-      "ntType\022\014\n\010MUST_NOT\020\000\022\007\n\003MAY\020\001\022\010\n\004MUST\020\002*" +
-      "\'\n\017OpenTimesOption\022\n\n\006CLOSED\020\000\022\010\n\004OPEN\020\001" +
-      "*P\n\022AvailabilityOption\022\r\n\tAVAILABLE\020\000\022\021\n" +
-      "\rNOT_AVAILABLE\020\001\022\030\n\024PREFER_NOT_AVAILABLE" +
-      "\020\002*J\n\tDayOfWeek\022\007\n\003MON\020\000\022\007\n\003TUE\020\001\022\007\n\003WED" +
-      "\020\002\022\007\n\003THU\020\003\022\007\n\003FRI\020\004\022\007\n\003SAT\020\005\022\007\n\003SUN\020\006*^" +
-      "\n\026ConfigRelationshipType\022\026\n\022IS_ASSOCIATE" +
-      "D_WITH\020\000\022\032\n\026IS_NOT_ASSOCIATED_WITH\020\001\022\020\n\014" +
-      "IS_MEMBER_OF\020\002*i\n\017DiagnosticLevel\022\017\n\013INF" +
-      "ORMATION\020\000\022\016\n\nSUGGESTION\020\001\022\013\n\007WARNING\020\002\022" +
-      "\024\n\020DIAGNOSTIC_ERROR\020\003\022\022\n\016INTERNAL_ERROR\020" +
-      "\004*\240\020\n\016DiagnosticCode\022\013\n\007GENERAL\020\000\022\006\n\002OK\020" +
-      "\001\022\033\n\027NO_SKILLS_IN_DICTIONARY\020\002\022$\n AGENT_" +
-      "HAS_NO_SKILL_PROFICIENCIES\020\003\022\027\n\023AGENT_HA" +
-      "S_NO_SKILLS\020\004\0221\n-NO_SCHEDULING_ACTIVITIE" +
-      "S_FOR_CONSTRAINT_RULES\020\005\0225\n1SCHEDULING_A" +
-      "CTIVITY_FOR_CONSTRAINT_RULE_NOT_FOUND\020\006\022" +
-      "!\n\035SHIFT_TEMPLATE_CANNOT_BE_NONE\020\007\022)\n%SH" +
-      "IFT_TEMPLATE_HAS_NO_PLACEMENT_RULES\020\010\022/\n" +
-      "+NO_ONCALL_IN_SHIFT_TEMPLATE_PLACEMENT_R" +
-      "ULES\020\t\0229\n5MIN_GT_MAX_DURATION_IN_SHIFT_T" +
-      "EMPLATE_PLACEMENT_RULES\020\n\022\'\n#MIN_GT_MAX_" +
-      "AGENTS_IN_SHIFT_TEMPLATE\020\013\022)\n%NO_PLACEME" +
-      "NT_RULES_FOR_SHIFT_TEMPLATE\020\014\022!\n\035ACTIVIT" +
-      "IES_SHORTER_THAN_SHIFT\020\r\022\037\n\033NOT_ENOUGH_A" +
-      "GENTS_FOR_SHIFT\020\016\022\037\n\033PROGRAM_HAS_NO_AGEN" +
-      "T_GROUPS\020\017\022\"\n\036PROGRAM_HAS_NO_SHIFT_TEMPL" +
-      "ATES\020\020\022\034\n\030LOCATION_HAS_NO_PROGRAMS\020\021\022\033\n\027" +
-      "CLIENT_HAS_NO_LOCATIONS\020\022\022\036\n\032CALL_CENTER" +
-      "_HAS_NO_CLIENTS\020\023\022\'\n#PROGRAM_HAS_INVALID" +
-      "_PARENT_LOCATION\020\024\022&\n\"LOCATION_HAS_INVAL" +
-      "ID_PARENT_CLIENT\020\025\022)\n%CLIENT_HAS_INVALID" +
-      "_PARENT_CALL_CENTER\020\026\022\'\n#AGENT_GROUP_HAS" +
-      "_INVALID_PARENT_NODE\020\027\022-\n)SHIFT_TEMPLATE" +
-      "_HAS_INVALID_PARENT_PROGRAM\020\030\022B\n>NO_SKIL" +
-      "L_PROFICIENCY_FOR_MIN_SKILL_PROFICIENCY_" +
-      "CONSTRAINT_RULE\020\031\0225\n1TOO_MANY_AGENTS_WIT" +
-      "H_LOCKED_SHIFTS_FOR_MIN_AGENTS\020\032\022+\n\'AGEN" +
-      "T_DOES_NOT_BELONG_TO_AN_AGENT_GROUP\020\033\022 \n" +
-      "\034INVALID_CONSTRAINT_VAL_UNITS\020\034\022\036\n\032CONST" +
-      "RAINT_GENERAL_FAILURE\020\035\022&\n\"CANDIDATE_SHI" +
-      "FT_COLLISION_DETECTED\020\036\022\'\n#CANDIDATE_SHI" +
-      "FT_AGENT_NOT_AVAILABLE\020\037\022\024\n\020CANDIDATE_CL" +
-      "OSED\020 \022!\n\035CONSTRAINT_ACTIVITY_NOT_FOUND\020" +
-      "!\022.\n*CONSTRAINT_AGENT_DOES_NOT_HAVE_PROF" +
-      "ICIENCY\020\"\022(\n$CONSTRAINT_AGENT_PROFICIENC" +
-      "Y_TOO_LOW\020#\022#\n\037CONSTRAINT_MAX_TOTAL_ON_F" +
-      "AILURE\020$\022#\n\037CONSTRAINT_MIN_TOTAL_ON_FAIL" +
-      "URE\020%\022$\n CONSTRAINT_MAX_TOTAL_OFF_FAILUR" +
-      "E\020&\022$\n CONSTRAINT_MIN_TOTAL_OFF_FAILURE\020" +
-      "\'\022$\n CONSTRAINT_MAX_CONSEC_ON_FAILURE\020(\022" +
-      "$\n CONSTRAINT_MIN_CONSEC_ON_FAILURE\020)\022%\n" +
-      "!CONSTRAINT_MAX_CONSEC_OFF_FAILURE\020*\022%\n!" +
-      "CONSTRAINT_MIN_CONSEC_OFF_FAILURE\020+\022?\n;C" +
-      "ONSTRAINT_CANNOT_HAVE_DAY_WEEK_MONTH_YEA" +
-      "R_SHIFT__PER_SHIFT\020,\022A\n=CONSTRAINT_CANNO" +
-      "T_HAVE_DAY_WEEK_MONTH_YEAR__PER_MINUTES_" +
-      "HOURS\020-\0222\n.CONSTRAINT_CONSECUTIVE_SHIFTS" +
-      "_RULE_NOT_ALLOWED\020.\022>\n:CONSTRAINT_WITH_L" +
-      "ARGER_PERIOD_PER_SMALL_PERIOD_NOT_ALLOWE" +
-      "D\020/\0226\n2CONSTRAINT_MIN_MAX_OFF_TIME_FOR_S" +
-      "HIFTS_NOT_ALLOWED\0200\022?\n;CONSTRAINT_CANNOT" +
-      "_HAVE_CONSECUTIVE_TIME_PER_MULTIPLE_SHIF" +
-      "TS\0201*\312\001\n\025PerformanceMetricType\022#\n\037FTE_RE" +
-      "QUIRED_VS_ACHIEVED_SIMPLE\020\000\022%\n!FTE_REQUI" +
-      "RED_VS_ACHIEVED_EXTENDED\020\001\022\032\n\026SERVICE_LE" +
-      "VEL_ANALYSIS\020\002\022\030\n\024SERVICE_LEVEL_MATRIX\020\003" +
-      "\022\034\n\030CONTACT_HANDLING_METRICS\020\004\022\021\n\rLOAD_F" +
-      "ORECAST\020\005*|\n\025ScheduleShouldInclude\022\030\n\024ON" +
-      "LY_SHIFT_INSTANCES\020\000\022\034\n\030ONLY_PERFORMANCE" +
-      "_METRICS\020\001\022+\n\'SHIFT_INSTANCES_AND_PERFOR" +
-      "MANCE_METRICS\020\002*(\n\014ScheduleType\022\t\n\005DRAFT" +
-      "\020\000\022\r\n\tPUBLISHED\020\001*7\n\024SchedulingTargetTyp" +
-      "e\022\014\n\010COVERAGE\020\000\022\021\n\rSERVICE_LEVEL\020\001*F\n\nBi" +
-      "tmapType\022\014\n\010COMPLETE\020\000\022\021\n\rONLY_WEEKMAPS\020" +
-      "\001\022\027\n\023ONLY_CALENDAR_ITEMS\020\002Bv\n\035com.tcn.cl" +
-      "oud.api.api.commonsB\010WfmProtoP\001\242\002\003ACX\252\002\013" +
-      "Api.Commons\312\002\013Api\\Commons\342\002\027Api\\Commons\\" +
-      "GPBMetadata\352\002\014Api::Commonsb\006proto3"
+      "\023SKILL_PROFILE_GROUP\020\001\"\263\002\n\026TourShiftSegm" +
+      "entConfig\022@\n\035tour_shift_segment_config_s" +
+      "id\030\001 \001(\003R\031tourShiftSegmentConfigSid\022B\n\036t" +
+      "our_shift_instance_config_sid\030\002 \001(\003R\032tou" +
+      "rShiftInstanceConfigSid\0221\n\025start_minute_" +
+      "in_shift\030\003 \001(\005R\022startMinuteInShift\022(\n\020wi" +
+      "dth_in_minutes\030\004 \001(\005R\016widthInMinutes\0226\n\027" +
+      "scheduling_activity_sid\030\005 \001(\003R\025schedulin" +
+      "gActivitySid\"\332\002\n\027TourShiftInstanceConfig" +
+      "\022B\n\036tour_shift_instance_config_sid\030\001 \001(\003" +
+      "R\032tourShiftInstanceConfigSid\0221\n\025tour_wee" +
+      "k_pattern_sid\030\002 \001(\003R\022tourWeekPatternSid\022" +
+      "/\n\024start_minute_in_week\030\003 \001(\005R\021startMinu" +
+      "teInWeek\022(\n\020width_in_minutes\030\004 \001(\005R\016widt" +
+      "hInMinutes\022m\n!member_tour_shift_segment_" +
+      "configs\030\005 \003(\0132#.api.commons.TourShiftSeg" +
+      "mentConfigR\035memberTourShiftSegmentConfig" +
+      "s\"\220\002\n\017TourWeekPattern\0221\n\025tour_week_patte" +
+      "rn_sid\030\001 \001(\003R\022tourWeekPatternSid\022(\n\020tour" +
+      "_pattern_sid\030\002 \001(\003R\016tourPatternSid\022.\n\023we" +
+      "ek_pattern_number\030\003 \001(\005R\021weekPatternNumb" +
+      "er\022p\n\"member_tour_shift_instance_configs" +
+      "\030\004 \003(\0132$.api.commons.TourShiftInstanceCo" +
+      "nfigR\036memberTourShiftInstanceConfigs\"\331\002\n" +
+      "\023TourAgentCollection\0229\n\031tour_agent_colle" +
+      "ction_sid\030\001 \001(\003R\026tourAgentCollectionSid\022" +
+      "(\n\020tour_pattern_sid\030\002 \001(\003R\016tourPatternSi" +
+      "d\0223\n\026min_agents_to_schedule\030\003 \001(\005R\023minAg" +
+      "entsToSchedule\0223\n\026max_agents_to_schedule" +
+      "\030\004 \001(\005R\023maxAgentsToSchedule\0229\n\031first_wee" +
+      "k_pattern_number\030\005 \001(\005R\026firstWeekPattern" +
+      "Number\022\022\n\004name\030\006 \001(\tR\004name\022$\n\016wfm_agent_" +
+      "sids\030\007 \003(\003R\014wfmAgentSids\"\241\002\n\013TourPattern" +
+      "\022(\n\020tour_pattern_sid\030\001 \001(\003R\016tourPatternS" +
+      "id\022,\n\022shift_template_sid\030\002 \001(\003R\020shiftTem" +
+      "plateSid\022W\n\031member_tour_week_patterns\030\003 " +
+      "\003(\0132\034.api.commons.TourWeekPatternR\026membe" +
+      "rTourWeekPatterns\022a\n\034member_tour_agent_c" +
+      "ollection\030\004 \003(\0132 .api.commons.TourAgentC" +
+      "ollectionR\031memberTourAgentCollection*\250\001\n" +
+      "\036RegressionForecasterModelTypes\022\021\n\rRANDO" +
+      "M_FOREST\020\000\022\014\n\010ADABOOST\020\001\022\025\n\021GRADIENT_BOO" +
+      "STING\020\002\022\025\n\021LINEAR_REGRESSION\020\003\022\016\n\nLINEAR" +
+      "_AVG\020\004\022\024\n\020SEGMENTED_LINEAR\020\005\022\007\n\003MLP\020\006\022\010\n" +
+      "\004AUTO\020\007*X\n&RegressionForecasterAvgsProce" +
+      "ssingType\022\014\n\010FORECAST\020\000\022\014\n\010AVERAGES\020\001\022\022\n" +
+      "\016FIXED_AVERAGES\020\002*d\n\022ConstraintTimeUnit\022" +
+      "\013\n\007MINUTES\020\000\022\t\n\005HOURS\020\001\022\n\n\006SHIFTS\020\002\022\010\n\004D" +
+      "AYS\020\003\022\t\n\005WEEKS\020\004\022\n\n\006MONTHS\020\005\022\t\n\005YEARS\020\006*" +
+      "\302\002\n\020ConfigEntityType\022\024\n\020CALL_CENTER_NODE" +
+      "\020\000\022\017\n\013CLIENT_NODE\020\001\022\021\n\rLOCATION_NODE\020\002\022\020" +
+      "\n\014PROGRAM_NODE\020\003\022\017\n\013AGENT_GROUP\020\004\022\022\n\016SHI" +
+      "FT_TEMPLATE\020\005\022\r\n\tWFM_AGENT\020\006\022\022\n\016PLACEMEN" +
+      "T_RULE\020\007\022\023\n\017CONSTRAINT_RULE\020\010\022\026\n\022NON_SKI" +
+      "LL_ACTIVITY\020\t\022\026\n\022AGENT_AVAILABILITY\020\n\022\016\n" +
+      "\nOPEN_TIMES\020\013\022\027\n\023SCHEDULING_ACTIVITY\020\014\022\025" +
+      "\n\021SKILL_PROFICIENCY\020\r\022\025\n\021SCHEDULE_SCENAR" +
+      "IO\020\016*\301\001\n\022ConstraintRuleType\022\021\n\rMIN_CONSE" +
+      "C_ON\020\000\022\021\n\rMAX_CONSEC_ON\020\001\022\022\n\016MIN_CONSEC_" +
+      "OFF\020\002\022\022\n\016MAX_CONSEC_OFF\020\003\022\020\n\014MIN_TOTAL_O" +
+      "N\020\004\022\020\n\014MAX_TOTAL_ON\020\005\022\021\n\rMIN_TOTAL_OFF\020\006" +
+      "\022\021\n\rMAX_TOTAL_OFF\020\007\022\023\n\017MIN_SKILL_LEVEL\020\010" +
+      "*3\n\020DOWPlacementType\022\014\n\010MUST_NOT\020\000\022\007\n\003MA" +
+      "Y\020\001\022\010\n\004MUST\020\002*\'\n\017OpenTimesOption\022\n\n\006CLOS" +
+      "ED\020\000\022\010\n\004OPEN\020\001*P\n\022AvailabilityOption\022\r\n\t" +
+      "AVAILABLE\020\000\022\021\n\rNOT_AVAILABLE\020\001\022\030\n\024PREFER" +
+      "_NOT_AVAILABLE\020\002*J\n\tDayOfWeek\022\007\n\003MON\020\000\022\007" +
+      "\n\003TUE\020\001\022\007\n\003WED\020\002\022\007\n\003THU\020\003\022\007\n\003FRI\020\004\022\007\n\003SA" +
+      "T\020\005\022\007\n\003SUN\020\006*^\n\026ConfigRelationshipType\022\026" +
+      "\n\022IS_ASSOCIATED_WITH\020\000\022\032\n\026IS_NOT_ASSOCIA" +
+      "TED_WITH\020\001\022\020\n\014IS_MEMBER_OF\020\002*i\n\017Diagnost" +
+      "icLevel\022\017\n\013INFORMATION\020\000\022\016\n\nSUGGESTION\020\001" +
+      "\022\013\n\007WARNING\020\002\022\024\n\020DIAGNOSTIC_ERROR\020\003\022\022\n\016I" +
+      "NTERNAL_ERROR\020\004*\240\020\n\016DiagnosticCode\022\013\n\007GE" +
+      "NERAL\020\000\022\006\n\002OK\020\001\022\033\n\027NO_SKILLS_IN_DICTIONA" +
+      "RY\020\002\022$\n AGENT_HAS_NO_SKILL_PROFICIENCIES" +
+      "\020\003\022\027\n\023AGENT_HAS_NO_SKILLS\020\004\0221\n-NO_SCHEDU" +
+      "LING_ACTIVITIES_FOR_CONSTRAINT_RULES\020\005\0225" +
+      "\n1SCHEDULING_ACTIVITY_FOR_CONSTRAINT_RUL" +
+      "E_NOT_FOUND\020\006\022!\n\035SHIFT_TEMPLATE_CANNOT_B" +
+      "E_NONE\020\007\022)\n%SHIFT_TEMPLATE_HAS_NO_PLACEM" +
+      "ENT_RULES\020\010\022/\n+NO_ONCALL_IN_SHIFT_TEMPLA" +
+      "TE_PLACEMENT_RULES\020\t\0229\n5MIN_GT_MAX_DURAT" +
+      "ION_IN_SHIFT_TEMPLATE_PLACEMENT_RULES\020\n\022" +
+      "\'\n#MIN_GT_MAX_AGENTS_IN_SHIFT_TEMPLATE\020\013" +
+      "\022)\n%NO_PLACEMENT_RULES_FOR_SHIFT_TEMPLAT" +
+      "E\020\014\022!\n\035ACTIVITIES_SHORTER_THAN_SHIFT\020\r\022\037" +
+      "\n\033NOT_ENOUGH_AGENTS_FOR_SHIFT\020\016\022\037\n\033PROGR" +
+      "AM_HAS_NO_AGENT_GROUPS\020\017\022\"\n\036PROGRAM_HAS_" +
+      "NO_SHIFT_TEMPLATES\020\020\022\034\n\030LOCATION_HAS_NO_" +
+      "PROGRAMS\020\021\022\033\n\027CLIENT_HAS_NO_LOCATIONS\020\022\022" +
+      "\036\n\032CALL_CENTER_HAS_NO_CLIENTS\020\023\022\'\n#PROGR" +
+      "AM_HAS_INVALID_PARENT_LOCATION\020\024\022&\n\"LOCA" +
+      "TION_HAS_INVALID_PARENT_CLIENT\020\025\022)\n%CLIE" +
+      "NT_HAS_INVALID_PARENT_CALL_CENTER\020\026\022\'\n#A" +
+      "GENT_GROUP_HAS_INVALID_PARENT_NODE\020\027\022-\n)" +
+      "SHIFT_TEMPLATE_HAS_INVALID_PARENT_PROGRA" +
+      "M\020\030\022B\n>NO_SKILL_PROFICIENCY_FOR_MIN_SKIL" +
+      "L_PROFICIENCY_CONSTRAINT_RULE\020\031\0225\n1TOO_M" +
+      "ANY_AGENTS_WITH_LOCKED_SHIFTS_FOR_MIN_AG" +
+      "ENTS\020\032\022+\n\'AGENT_DOES_NOT_BELONG_TO_AN_AG" +
+      "ENT_GROUP\020\033\022 \n\034INVALID_CONSTRAINT_VAL_UN" +
+      "ITS\020\034\022\036\n\032CONSTRAINT_GENERAL_FAILURE\020\035\022&\n" +
+      "\"CANDIDATE_SHIFT_COLLISION_DETECTED\020\036\022\'\n" +
+      "#CANDIDATE_SHIFT_AGENT_NOT_AVAILABLE\020\037\022\024" +
+      "\n\020CANDIDATE_CLOSED\020 \022!\n\035CONSTRAINT_ACTIV" +
+      "ITY_NOT_FOUND\020!\022.\n*CONSTRAINT_AGENT_DOES" +
+      "_NOT_HAVE_PROFICIENCY\020\"\022(\n$CONSTRAINT_AG" +
+      "ENT_PROFICIENCY_TOO_LOW\020#\022#\n\037CONSTRAINT_" +
+      "MAX_TOTAL_ON_FAILURE\020$\022#\n\037CONSTRAINT_MIN" +
+      "_TOTAL_ON_FAILURE\020%\022$\n CONSTRAINT_MAX_TO" +
+      "TAL_OFF_FAILURE\020&\022$\n CONSTRAINT_MIN_TOTA" +
+      "L_OFF_FAILURE\020\'\022$\n CONSTRAINT_MAX_CONSEC" +
+      "_ON_FAILURE\020(\022$\n CONSTRAINT_MIN_CONSEC_O" +
+      "N_FAILURE\020)\022%\n!CONSTRAINT_MAX_CONSEC_OFF" +
+      "_FAILURE\020*\022%\n!CONSTRAINT_MIN_CONSEC_OFF_" +
+      "FAILURE\020+\022?\n;CONSTRAINT_CANNOT_HAVE_DAY_" +
+      "WEEK_MONTH_YEAR_SHIFT__PER_SHIFT\020,\022A\n=CO" +
+      "NSTRAINT_CANNOT_HAVE_DAY_WEEK_MONTH_YEAR" +
+      "__PER_MINUTES_HOURS\020-\0222\n.CONSTRAINT_CONS" +
+      "ECUTIVE_SHIFTS_RULE_NOT_ALLOWED\020.\022>\n:CON" +
+      "STRAINT_WITH_LARGER_PERIOD_PER_SMALL_PER" +
+      "IOD_NOT_ALLOWED\020/\0226\n2CONSTRAINT_MIN_MAX_" +
+      "OFF_TIME_FOR_SHIFTS_NOT_ALLOWED\0200\022?\n;CON" +
+      "STRAINT_CANNOT_HAVE_CONSECUTIVE_TIME_PER" +
+      "_MULTIPLE_SHIFTS\0201*\312\001\n\025PerformanceMetric" +
+      "Type\022#\n\037FTE_REQUIRED_VS_ACHIEVED_SIMPLE\020" +
+      "\000\022%\n!FTE_REQUIRED_VS_ACHIEVED_EXTENDED\020\001" +
+      "\022\032\n\026SERVICE_LEVEL_ANALYSIS\020\002\022\030\n\024SERVICE_" +
+      "LEVEL_MATRIX\020\003\022\034\n\030CONTACT_HANDLING_METRI" +
+      "CS\020\004\022\021\n\rLOAD_FORECAST\020\005*|\n\025ScheduleShoul" +
+      "dInclude\022\030\n\024ONLY_SHIFT_INSTANCES\020\000\022\034\n\030ON" +
+      "LY_PERFORMANCE_METRICS\020\001\022+\n\'SHIFT_INSTAN" +
+      "CES_AND_PERFORMANCE_METRICS\020\002*(\n\014Schedul" +
+      "eType\022\t\n\005DRAFT\020\000\022\r\n\tPUBLISHED\020\001*7\n\024Sched" +
+      "ulingTargetType\022\014\n\010COVERAGE\020\000\022\021\n\rSERVICE" +
+      "_LEVEL\020\001*F\n\nBitmapType\022\014\n\010COMPLETE\020\000\022\021\n\r" +
+      "ONLY_WEEKMAPS\020\001\022\027\n\023ONLY_CALENDAR_ITEMS\020\002" +
+      "Bv\n\035com.tcn.cloud.api.api.commonsB\010WfmPr" +
+      "otoP\001\242\002\003ACX\252\002\013Api.Commons\312\002\013Api\\Commons\342" +
+      "\002\027Api\\Commons\\GPBMetadata\352\002\014Api::Commons" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -356,6 +421,36 @@ public final class WfmProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_SkillProfileCategory_descriptor,
         new java.lang.String[] { "SkillProfileCategorySid", "SkillProfileCategoryType", });
+    internal_static_api_commons_TourShiftSegmentConfig_descriptor =
+      getDescriptor().getMessageTypes().get(13);
+    internal_static_api_commons_TourShiftSegmentConfig_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_TourShiftSegmentConfig_descriptor,
+        new java.lang.String[] { "TourShiftSegmentConfigSid", "TourShiftInstanceConfigSid", "StartMinuteInShift", "WidthInMinutes", "SchedulingActivitySid", });
+    internal_static_api_commons_TourShiftInstanceConfig_descriptor =
+      getDescriptor().getMessageTypes().get(14);
+    internal_static_api_commons_TourShiftInstanceConfig_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_TourShiftInstanceConfig_descriptor,
+        new java.lang.String[] { "TourShiftInstanceConfigSid", "TourWeekPatternSid", "StartMinuteInWeek", "WidthInMinutes", "MemberTourShiftSegmentConfigs", });
+    internal_static_api_commons_TourWeekPattern_descriptor =
+      getDescriptor().getMessageTypes().get(15);
+    internal_static_api_commons_TourWeekPattern_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_TourWeekPattern_descriptor,
+        new java.lang.String[] { "TourWeekPatternSid", "TourPatternSid", "WeekPatternNumber", "MemberTourShiftInstanceConfigs", });
+    internal_static_api_commons_TourAgentCollection_descriptor =
+      getDescriptor().getMessageTypes().get(16);
+    internal_static_api_commons_TourAgentCollection_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_TourAgentCollection_descriptor,
+        new java.lang.String[] { "TourAgentCollectionSid", "TourPatternSid", "MinAgentsToSchedule", "MaxAgentsToSchedule", "FirstWeekPatternNumber", "Name", "WfmAgentSids", });
+    internal_static_api_commons_TourPattern_descriptor =
+      getDescriptor().getMessageTypes().get(17);
+    internal_static_api_commons_TourPattern_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_TourPattern_descriptor,
+        new java.lang.String[] { "TourPatternSid", "ShiftTemplateSid", "MemberTourWeekPatterns", "MemberTourAgentCollection", });
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 
