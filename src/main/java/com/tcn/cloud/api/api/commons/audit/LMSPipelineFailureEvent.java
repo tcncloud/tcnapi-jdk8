@@ -20,6 +20,7 @@ private static final long serialVersionUID = 0L;
     elementName_ = "";
     fileNames_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
+    failureMessage_ = "";
   }
 
   @java.lang.Override
@@ -157,6 +158,45 @@ private static final long serialVersionUID = 0L;
     return fileNames_.getByteString(index);
   }
 
+  public static final int FAILURE_MESSAGE_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object failureMessage_ = "";
+  /**
+   * <code>string failure_message = 4 [json_name = "failureMessage"];</code>
+   * @return The failureMessage.
+   */
+  @java.lang.Override
+  public java.lang.String getFailureMessage() {
+    java.lang.Object ref = failureMessage_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      failureMessage_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string failure_message = 4 [json_name = "failureMessage"];</code>
+   * @return The bytes for failureMessage.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getFailureMessageBytes() {
+    java.lang.Object ref = failureMessage_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      failureMessage_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -179,6 +219,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < fileNames_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, fileNames_.getRaw(i));
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(failureMessage_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, failureMessage_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -203,6 +246,9 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getFileNamesList().size();
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(failureMessage_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, failureMessage_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -224,6 +270,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getElementName())) return false;
     if (!getFileNamesList()
         .equals(other.getFileNamesList())) return false;
+    if (!getFailureMessage()
+        .equals(other.getFailureMessage())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -243,6 +291,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + FILE_NAMES_FIELD_NUMBER;
       hash = (53 * hash) + getFileNamesList().hashCode();
     }
+    hash = (37 * hash) + FAILURE_MESSAGE_FIELD_NUMBER;
+    hash = (53 * hash) + getFailureMessage().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -378,6 +428,7 @@ private static final long serialVersionUID = 0L;
       elementName_ = "";
       fileNames_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
+      failureMessage_ = "";
       return this;
     }
 
@@ -420,6 +471,9 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         fileNames_.makeImmutable();
         result.fileNames_ = fileNames_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.failureMessage_ = failureMessage_;
       }
     }
 
@@ -487,6 +541,11 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       }
+      if (!other.getFailureMessage().isEmpty()) {
+        failureMessage_ = other.failureMessage_;
+        bitField0_ |= 0x00000008;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -529,6 +588,11 @@ private static final long serialVersionUID = 0L;
               fileNames_.add(s);
               break;
             } // case 26
+            case 34: {
+              failureMessage_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -797,6 +861,78 @@ private static final long serialVersionUID = 0L;
       ensureFileNamesIsMutable();
       fileNames_.add(value);
       bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object failureMessage_ = "";
+    /**
+     * <code>string failure_message = 4 [json_name = "failureMessage"];</code>
+     * @return The failureMessage.
+     */
+    public java.lang.String getFailureMessage() {
+      java.lang.Object ref = failureMessage_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        failureMessage_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string failure_message = 4 [json_name = "failureMessage"];</code>
+     * @return The bytes for failureMessage.
+     */
+    public com.google.protobuf.ByteString
+        getFailureMessageBytes() {
+      java.lang.Object ref = failureMessage_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        failureMessage_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string failure_message = 4 [json_name = "failureMessage"];</code>
+     * @param value The failureMessage to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFailureMessage(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      failureMessage_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string failure_message = 4 [json_name = "failureMessage"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearFailureMessage() {
+      failureMessage_ = getDefaultInstance().getFailureMessage();
+      bitField0_ = (bitField0_ & ~0x00000008);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string failure_message = 4 [json_name = "failureMessage"];</code>
+     * @param value The bytes for failureMessage to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFailureMessageBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      failureMessage_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }

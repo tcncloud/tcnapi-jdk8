@@ -727,6 +727,14 @@ public enum EventType
    * <code>AGENT_TRAINING_CREATE_LEARNING_OPPORTUNITY_EVENT = 800;</code>
    */
   AGENT_TRAINING_CREATE_LEARNING_OPPORTUNITY_EVENT(800),
+  /**
+   * <pre>
+   * LMS Events
+   * </pre>
+   *
+   * <code>LMS_PIPELINE_FAILURE_EVENT = 900;</code>
+   */
+  LMS_PIPELINE_FAILURE_EVENT(900),
   UNRECOGNIZED(-1),
   ;
 
@@ -1435,6 +1443,14 @@ public enum EventType
    * <code>AGENT_TRAINING_CREATE_LEARNING_OPPORTUNITY_EVENT = 800;</code>
    */
   public static final int AGENT_TRAINING_CREATE_LEARNING_OPPORTUNITY_EVENT_VALUE = 800;
+  /**
+   * <pre>
+   * LMS Events
+   * </pre>
+   *
+   * <code>LMS_PIPELINE_FAILURE_EVENT = 900;</code>
+   */
+  public static final int LMS_PIPELINE_FAILURE_EVENT_VALUE = 900;
 
 
   public final int getNumber() {
@@ -1554,6 +1570,7 @@ public enum EventType
       case 700: return COMPLIANCE_RND_QUERY_EVENT;
       case 701: return COMPLIANCE_RND_QUERY_CACHED_EVENT;
       case 800: return AGENT_TRAINING_CREATE_LEARNING_OPPORTUNITY_EVENT;
+      case 900: return LMS_PIPELINE_FAILURE_EVENT;
       default: return null;
     }
   }

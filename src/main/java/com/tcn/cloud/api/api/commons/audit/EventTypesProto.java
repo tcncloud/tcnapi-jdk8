@@ -24,7 +24,7 @@ public final class EventTypesProto {
   static {
     java.lang.String[] descriptorData = {
       "\n#api/commons/audit/event_types.proto\022\021a" +
-      "pi.commons.audit*\211\032\n\tEventType\022\025\n\021DUMMY_" +
+      "pi.commons.audit*\252\032\n\tEventType\022\025\n\021DUMMY_" +
       "APPLICATION\020\000\022\035\n\031DUMMY_APPLICATION_STORA" +
       "GE\020\001\022\035\n\031DUMMY_APPLICATION_COMPUTE\020\002\022\023\n\017V" +
       "OICE_ANALYTICS\020d\022#\n\037VOICE_ANALYTICS_FLAG" +
@@ -107,12 +107,12 @@ public final class EventTypesProto {
       "\020\331\004\022\027\n\022TICKET_CLOSE_EVENT\020\332\004\022\037\n\032COMPLIAN" +
       "CE_RND_QUERY_EVENT\020\274\005\022&\n!COMPLIANCE_RND_" +
       "QUERY_CACHED_EVENT\020\275\005\0225\n0AGENT_TRAINING_" +
-      "CREATE_LEARNING_OPPORTUNITY_EVENT\020\240\006B\234\001\n" +
-      "#com.tcn.cloud.api.api.commons.auditB\017Ev" +
-      "entTypesProtoP\001\242\002\003ACA\252\002\021Api.Commons.Audi" +
-      "t\312\002\021Api\\Commons\\Audit\342\002\035Api\\Commons\\Audi" +
-      "t\\GPBMetadata\352\002\023Api::Commons::Auditb\006pro" +
-      "to3"
+      "CREATE_LEARNING_OPPORTUNITY_EVENT\020\240\006\022\037\n\032" +
+      "LMS_PIPELINE_FAILURE_EVENT\020\204\007B\234\001\n#com.tc" +
+      "n.cloud.api.api.commons.auditB\017EventType" +
+      "sProtoP\001\242\002\003ACA\252\002\021Api.Commons.Audit\312\002\021Api" +
+      "\\Commons\\Audit\342\002\035Api\\Commons\\Audit\\GPBMe" +
+      "tadata\352\002\023Api::Commons::Auditb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

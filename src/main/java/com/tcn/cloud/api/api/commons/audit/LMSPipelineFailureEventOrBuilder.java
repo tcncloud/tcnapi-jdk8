@@ -55,4 +55,16 @@ public interface LMSPipelineFailureEventOrBuilder extends
    */
   com.google.protobuf.ByteString
       getFileNamesBytes(int index);
+
+  /**
+   * <code>string failure_message = 4 [json_name = "failureMessage"];</code>
+   * @return The failureMessage.
+   */
+  java.lang.String getFailureMessage();
+  /**
+   * <code>string failure_message = 4 [json_name = "failureMessage"];</code>
+   * @return The bytes for failureMessage.
+   */
+  com.google.protobuf.ByteString
+      getFailureMessageBytes();
 }
