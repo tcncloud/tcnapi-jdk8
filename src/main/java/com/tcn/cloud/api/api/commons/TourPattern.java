@@ -21,7 +21,7 @@ private static final long serialVersionUID = 0L;
   }
   private TourPattern() {
     memberTourWeekPatterns_ = java.util.Collections.emptyList();
-    memberTourAgentCollection_ = java.util.Collections.emptyList();
+    memberTourAgentCollections_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -135,65 +135,65 @@ private static final long serialVersionUID = 0L;
     return memberTourWeekPatterns_.get(index);
   }
 
-  public static final int MEMBER_TOUR_AGENT_COLLECTION_FIELD_NUMBER = 4;
+  public static final int MEMBER_TOUR_AGENT_COLLECTIONS_FIELD_NUMBER = 4;
   @SuppressWarnings("serial")
-  private java.util.List<com.tcn.cloud.api.api.commons.TourAgentCollection> memberTourAgentCollection_;
+  private java.util.List<com.tcn.cloud.api.api.commons.TourAgentCollection> memberTourAgentCollections_;
   /**
    * <pre>
    * The tour agent collection associated with &#64;tour_pattern_sid.
    * </pre>
    *
-   * <code>repeated .api.commons.TourAgentCollection member_tour_agent_collection = 4 [json_name = "memberTourAgentCollection"];</code>
+   * <code>repeated .api.commons.TourAgentCollection member_tour_agent_collections = 4 [json_name = "memberTourAgentCollections"];</code>
    */
   @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.api.commons.TourAgentCollection> getMemberTourAgentCollectionList() {
-    return memberTourAgentCollection_;
+  public java.util.List<com.tcn.cloud.api.api.commons.TourAgentCollection> getMemberTourAgentCollectionsList() {
+    return memberTourAgentCollections_;
   }
   /**
    * <pre>
    * The tour agent collection associated with &#64;tour_pattern_sid.
    * </pre>
    *
-   * <code>repeated .api.commons.TourAgentCollection member_tour_agent_collection = 4 [json_name = "memberTourAgentCollection"];</code>
+   * <code>repeated .api.commons.TourAgentCollection member_tour_agent_collections = 4 [json_name = "memberTourAgentCollections"];</code>
    */
   @java.lang.Override
   public java.util.List<? extends com.tcn.cloud.api.api.commons.TourAgentCollectionOrBuilder> 
-      getMemberTourAgentCollectionOrBuilderList() {
-    return memberTourAgentCollection_;
+      getMemberTourAgentCollectionsOrBuilderList() {
+    return memberTourAgentCollections_;
   }
   /**
    * <pre>
    * The tour agent collection associated with &#64;tour_pattern_sid.
    * </pre>
    *
-   * <code>repeated .api.commons.TourAgentCollection member_tour_agent_collection = 4 [json_name = "memberTourAgentCollection"];</code>
+   * <code>repeated .api.commons.TourAgentCollection member_tour_agent_collections = 4 [json_name = "memberTourAgentCollections"];</code>
    */
   @java.lang.Override
-  public int getMemberTourAgentCollectionCount() {
-    return memberTourAgentCollection_.size();
+  public int getMemberTourAgentCollectionsCount() {
+    return memberTourAgentCollections_.size();
   }
   /**
    * <pre>
    * The tour agent collection associated with &#64;tour_pattern_sid.
    * </pre>
    *
-   * <code>repeated .api.commons.TourAgentCollection member_tour_agent_collection = 4 [json_name = "memberTourAgentCollection"];</code>
+   * <code>repeated .api.commons.TourAgentCollection member_tour_agent_collections = 4 [json_name = "memberTourAgentCollections"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.TourAgentCollection getMemberTourAgentCollection(int index) {
-    return memberTourAgentCollection_.get(index);
+  public com.tcn.cloud.api.api.commons.TourAgentCollection getMemberTourAgentCollections(int index) {
+    return memberTourAgentCollections_.get(index);
   }
   /**
    * <pre>
    * The tour agent collection associated with &#64;tour_pattern_sid.
    * </pre>
    *
-   * <code>repeated .api.commons.TourAgentCollection member_tour_agent_collection = 4 [json_name = "memberTourAgentCollection"];</code>
+   * <code>repeated .api.commons.TourAgentCollection member_tour_agent_collections = 4 [json_name = "memberTourAgentCollections"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.TourAgentCollectionOrBuilder getMemberTourAgentCollectionOrBuilder(
+  public com.tcn.cloud.api.api.commons.TourAgentCollectionOrBuilder getMemberTourAgentCollectionsOrBuilder(
       int index) {
-    return memberTourAgentCollection_.get(index);
+    return memberTourAgentCollections_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -219,8 +219,8 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < memberTourWeekPatterns_.size(); i++) {
       output.writeMessage(3, memberTourWeekPatterns_.get(i));
     }
-    for (int i = 0; i < memberTourAgentCollection_.size(); i++) {
-      output.writeMessage(4, memberTourAgentCollection_.get(i));
+    for (int i = 0; i < memberTourAgentCollections_.size(); i++) {
+      output.writeMessage(4, memberTourAgentCollections_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -243,9 +243,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, memberTourWeekPatterns_.get(i));
     }
-    for (int i = 0; i < memberTourAgentCollection_.size(); i++) {
+    for (int i = 0; i < memberTourAgentCollections_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(4, memberTourAgentCollection_.get(i));
+        .computeMessageSize(4, memberTourAgentCollections_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -268,8 +268,8 @@ private static final long serialVersionUID = 0L;
         != other.getShiftTemplateSid()) return false;
     if (!getMemberTourWeekPatternsList()
         .equals(other.getMemberTourWeekPatternsList())) return false;
-    if (!getMemberTourAgentCollectionList()
-        .equals(other.getMemberTourAgentCollectionList())) return false;
+    if (!getMemberTourAgentCollectionsList()
+        .equals(other.getMemberTourAgentCollectionsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -291,9 +291,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + MEMBER_TOUR_WEEK_PATTERNS_FIELD_NUMBER;
       hash = (53 * hash) + getMemberTourWeekPatternsList().hashCode();
     }
-    if (getMemberTourAgentCollectionCount() > 0) {
-      hash = (37 * hash) + MEMBER_TOUR_AGENT_COLLECTION_FIELD_NUMBER;
-      hash = (53 * hash) + getMemberTourAgentCollectionList().hashCode();
+    if (getMemberTourAgentCollectionsCount() > 0) {
+      hash = (37 * hash) + MEMBER_TOUR_AGENT_COLLECTIONS_FIELD_NUMBER;
+      hash = (53 * hash) + getMemberTourAgentCollectionsList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -439,11 +439,11 @@ private static final long serialVersionUID = 0L;
         memberTourWeekPatternsBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000004);
-      if (memberTourAgentCollectionBuilder_ == null) {
-        memberTourAgentCollection_ = java.util.Collections.emptyList();
+      if (memberTourAgentCollectionsBuilder_ == null) {
+        memberTourAgentCollections_ = java.util.Collections.emptyList();
       } else {
-        memberTourAgentCollection_ = null;
-        memberTourAgentCollectionBuilder_.clear();
+        memberTourAgentCollections_ = null;
+        memberTourAgentCollectionsBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000008);
       return this;
@@ -488,14 +488,14 @@ private static final long serialVersionUID = 0L;
       } else {
         result.memberTourWeekPatterns_ = memberTourWeekPatternsBuilder_.build();
       }
-      if (memberTourAgentCollectionBuilder_ == null) {
+      if (memberTourAgentCollectionsBuilder_ == null) {
         if (((bitField0_ & 0x00000008) != 0)) {
-          memberTourAgentCollection_ = java.util.Collections.unmodifiableList(memberTourAgentCollection_);
+          memberTourAgentCollections_ = java.util.Collections.unmodifiableList(memberTourAgentCollections_);
           bitField0_ = (bitField0_ & ~0x00000008);
         }
-        result.memberTourAgentCollection_ = memberTourAgentCollection_;
+        result.memberTourAgentCollections_ = memberTourAgentCollections_;
       } else {
-        result.memberTourAgentCollection_ = memberTourAgentCollectionBuilder_.build();
+        result.memberTourAgentCollections_ = memberTourAgentCollectionsBuilder_.build();
       }
     }
 
@@ -585,29 +585,29 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
-      if (memberTourAgentCollectionBuilder_ == null) {
-        if (!other.memberTourAgentCollection_.isEmpty()) {
-          if (memberTourAgentCollection_.isEmpty()) {
-            memberTourAgentCollection_ = other.memberTourAgentCollection_;
+      if (memberTourAgentCollectionsBuilder_ == null) {
+        if (!other.memberTourAgentCollections_.isEmpty()) {
+          if (memberTourAgentCollections_.isEmpty()) {
+            memberTourAgentCollections_ = other.memberTourAgentCollections_;
             bitField0_ = (bitField0_ & ~0x00000008);
           } else {
-            ensureMemberTourAgentCollectionIsMutable();
-            memberTourAgentCollection_.addAll(other.memberTourAgentCollection_);
+            ensureMemberTourAgentCollectionsIsMutable();
+            memberTourAgentCollections_.addAll(other.memberTourAgentCollections_);
           }
           onChanged();
         }
       } else {
-        if (!other.memberTourAgentCollection_.isEmpty()) {
-          if (memberTourAgentCollectionBuilder_.isEmpty()) {
-            memberTourAgentCollectionBuilder_.dispose();
-            memberTourAgentCollectionBuilder_ = null;
-            memberTourAgentCollection_ = other.memberTourAgentCollection_;
+        if (!other.memberTourAgentCollections_.isEmpty()) {
+          if (memberTourAgentCollectionsBuilder_.isEmpty()) {
+            memberTourAgentCollectionsBuilder_.dispose();
+            memberTourAgentCollectionsBuilder_ = null;
+            memberTourAgentCollections_ = other.memberTourAgentCollections_;
             bitField0_ = (bitField0_ & ~0x00000008);
-            memberTourAgentCollectionBuilder_ = 
+            memberTourAgentCollectionsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getMemberTourAgentCollectionFieldBuilder() : null;
+                 getMemberTourAgentCollectionsFieldBuilder() : null;
           } else {
-            memberTourAgentCollectionBuilder_.addAllMessages(other.memberTourAgentCollection_);
+            memberTourAgentCollectionsBuilder_.addAllMessages(other.memberTourAgentCollections_);
           }
         }
       }
@@ -665,11 +665,11 @@ private static final long serialVersionUID = 0L;
                   input.readMessage(
                       com.tcn.cloud.api.api.commons.TourAgentCollection.parser(),
                       extensionRegistry);
-              if (memberTourAgentCollectionBuilder_ == null) {
-                ensureMemberTourAgentCollectionIsMutable();
-                memberTourAgentCollection_.add(m);
+              if (memberTourAgentCollectionsBuilder_ == null) {
+                ensureMemberTourAgentCollectionsIsMutable();
+                memberTourAgentCollections_.add(m);
               } else {
-                memberTourAgentCollectionBuilder_.addMessage(m);
+                memberTourAgentCollectionsBuilder_.addMessage(m);
               }
               break;
             } // case 34
@@ -1090,30 +1090,30 @@ private static final long serialVersionUID = 0L;
       return memberTourWeekPatternsBuilder_;
     }
 
-    private java.util.List<com.tcn.cloud.api.api.commons.TourAgentCollection> memberTourAgentCollection_ =
+    private java.util.List<com.tcn.cloud.api.api.commons.TourAgentCollection> memberTourAgentCollections_ =
       java.util.Collections.emptyList();
-    private void ensureMemberTourAgentCollectionIsMutable() {
+    private void ensureMemberTourAgentCollectionsIsMutable() {
       if (!((bitField0_ & 0x00000008) != 0)) {
-        memberTourAgentCollection_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.TourAgentCollection>(memberTourAgentCollection_);
+        memberTourAgentCollections_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.TourAgentCollection>(memberTourAgentCollections_);
         bitField0_ |= 0x00000008;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.TourAgentCollection, com.tcn.cloud.api.api.commons.TourAgentCollection.Builder, com.tcn.cloud.api.api.commons.TourAgentCollectionOrBuilder> memberTourAgentCollectionBuilder_;
+        com.tcn.cloud.api.api.commons.TourAgentCollection, com.tcn.cloud.api.api.commons.TourAgentCollection.Builder, com.tcn.cloud.api.api.commons.TourAgentCollectionOrBuilder> memberTourAgentCollectionsBuilder_;
 
     /**
      * <pre>
      * The tour agent collection associated with &#64;tour_pattern_sid.
      * </pre>
      *
-     * <code>repeated .api.commons.TourAgentCollection member_tour_agent_collection = 4 [json_name = "memberTourAgentCollection"];</code>
+     * <code>repeated .api.commons.TourAgentCollection member_tour_agent_collections = 4 [json_name = "memberTourAgentCollections"];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.commons.TourAgentCollection> getMemberTourAgentCollectionList() {
-      if (memberTourAgentCollectionBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(memberTourAgentCollection_);
+    public java.util.List<com.tcn.cloud.api.api.commons.TourAgentCollection> getMemberTourAgentCollectionsList() {
+      if (memberTourAgentCollectionsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(memberTourAgentCollections_);
       } else {
-        return memberTourAgentCollectionBuilder_.getMessageList();
+        return memberTourAgentCollectionsBuilder_.getMessageList();
       }
     }
     /**
@@ -1121,13 +1121,13 @@ private static final long serialVersionUID = 0L;
      * The tour agent collection associated with &#64;tour_pattern_sid.
      * </pre>
      *
-     * <code>repeated .api.commons.TourAgentCollection member_tour_agent_collection = 4 [json_name = "memberTourAgentCollection"];</code>
+     * <code>repeated .api.commons.TourAgentCollection member_tour_agent_collections = 4 [json_name = "memberTourAgentCollections"];</code>
      */
-    public int getMemberTourAgentCollectionCount() {
-      if (memberTourAgentCollectionBuilder_ == null) {
-        return memberTourAgentCollection_.size();
+    public int getMemberTourAgentCollectionsCount() {
+      if (memberTourAgentCollectionsBuilder_ == null) {
+        return memberTourAgentCollections_.size();
       } else {
-        return memberTourAgentCollectionBuilder_.getCount();
+        return memberTourAgentCollectionsBuilder_.getCount();
       }
     }
     /**
@@ -1135,13 +1135,13 @@ private static final long serialVersionUID = 0L;
      * The tour agent collection associated with &#64;tour_pattern_sid.
      * </pre>
      *
-     * <code>repeated .api.commons.TourAgentCollection member_tour_agent_collection = 4 [json_name = "memberTourAgentCollection"];</code>
+     * <code>repeated .api.commons.TourAgentCollection member_tour_agent_collections = 4 [json_name = "memberTourAgentCollections"];</code>
      */
-    public com.tcn.cloud.api.api.commons.TourAgentCollection getMemberTourAgentCollection(int index) {
-      if (memberTourAgentCollectionBuilder_ == null) {
-        return memberTourAgentCollection_.get(index);
+    public com.tcn.cloud.api.api.commons.TourAgentCollection getMemberTourAgentCollections(int index) {
+      if (memberTourAgentCollectionsBuilder_ == null) {
+        return memberTourAgentCollections_.get(index);
       } else {
-        return memberTourAgentCollectionBuilder_.getMessage(index);
+        return memberTourAgentCollectionsBuilder_.getMessage(index);
       }
     }
     /**
@@ -1149,19 +1149,19 @@ private static final long serialVersionUID = 0L;
      * The tour agent collection associated with &#64;tour_pattern_sid.
      * </pre>
      *
-     * <code>repeated .api.commons.TourAgentCollection member_tour_agent_collection = 4 [json_name = "memberTourAgentCollection"];</code>
+     * <code>repeated .api.commons.TourAgentCollection member_tour_agent_collections = 4 [json_name = "memberTourAgentCollections"];</code>
      */
-    public Builder setMemberTourAgentCollection(
+    public Builder setMemberTourAgentCollections(
         int index, com.tcn.cloud.api.api.commons.TourAgentCollection value) {
-      if (memberTourAgentCollectionBuilder_ == null) {
+      if (memberTourAgentCollectionsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureMemberTourAgentCollectionIsMutable();
-        memberTourAgentCollection_.set(index, value);
+        ensureMemberTourAgentCollectionsIsMutable();
+        memberTourAgentCollections_.set(index, value);
         onChanged();
       } else {
-        memberTourAgentCollectionBuilder_.setMessage(index, value);
+        memberTourAgentCollectionsBuilder_.setMessage(index, value);
       }
       return this;
     }
@@ -1170,16 +1170,16 @@ private static final long serialVersionUID = 0L;
      * The tour agent collection associated with &#64;tour_pattern_sid.
      * </pre>
      *
-     * <code>repeated .api.commons.TourAgentCollection member_tour_agent_collection = 4 [json_name = "memberTourAgentCollection"];</code>
+     * <code>repeated .api.commons.TourAgentCollection member_tour_agent_collections = 4 [json_name = "memberTourAgentCollections"];</code>
      */
-    public Builder setMemberTourAgentCollection(
+    public Builder setMemberTourAgentCollections(
         int index, com.tcn.cloud.api.api.commons.TourAgentCollection.Builder builderForValue) {
-      if (memberTourAgentCollectionBuilder_ == null) {
-        ensureMemberTourAgentCollectionIsMutable();
-        memberTourAgentCollection_.set(index, builderForValue.build());
+      if (memberTourAgentCollectionsBuilder_ == null) {
+        ensureMemberTourAgentCollectionsIsMutable();
+        memberTourAgentCollections_.set(index, builderForValue.build());
         onChanged();
       } else {
-        memberTourAgentCollectionBuilder_.setMessage(index, builderForValue.build());
+        memberTourAgentCollectionsBuilder_.setMessage(index, builderForValue.build());
       }
       return this;
     }
@@ -1188,18 +1188,18 @@ private static final long serialVersionUID = 0L;
      * The tour agent collection associated with &#64;tour_pattern_sid.
      * </pre>
      *
-     * <code>repeated .api.commons.TourAgentCollection member_tour_agent_collection = 4 [json_name = "memberTourAgentCollection"];</code>
+     * <code>repeated .api.commons.TourAgentCollection member_tour_agent_collections = 4 [json_name = "memberTourAgentCollections"];</code>
      */
-    public Builder addMemberTourAgentCollection(com.tcn.cloud.api.api.commons.TourAgentCollection value) {
-      if (memberTourAgentCollectionBuilder_ == null) {
+    public Builder addMemberTourAgentCollections(com.tcn.cloud.api.api.commons.TourAgentCollection value) {
+      if (memberTourAgentCollectionsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureMemberTourAgentCollectionIsMutable();
-        memberTourAgentCollection_.add(value);
+        ensureMemberTourAgentCollectionsIsMutable();
+        memberTourAgentCollections_.add(value);
         onChanged();
       } else {
-        memberTourAgentCollectionBuilder_.addMessage(value);
+        memberTourAgentCollectionsBuilder_.addMessage(value);
       }
       return this;
     }
@@ -1208,19 +1208,19 @@ private static final long serialVersionUID = 0L;
      * The tour agent collection associated with &#64;tour_pattern_sid.
      * </pre>
      *
-     * <code>repeated .api.commons.TourAgentCollection member_tour_agent_collection = 4 [json_name = "memberTourAgentCollection"];</code>
+     * <code>repeated .api.commons.TourAgentCollection member_tour_agent_collections = 4 [json_name = "memberTourAgentCollections"];</code>
      */
-    public Builder addMemberTourAgentCollection(
+    public Builder addMemberTourAgentCollections(
         int index, com.tcn.cloud.api.api.commons.TourAgentCollection value) {
-      if (memberTourAgentCollectionBuilder_ == null) {
+      if (memberTourAgentCollectionsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureMemberTourAgentCollectionIsMutable();
-        memberTourAgentCollection_.add(index, value);
+        ensureMemberTourAgentCollectionsIsMutable();
+        memberTourAgentCollections_.add(index, value);
         onChanged();
       } else {
-        memberTourAgentCollectionBuilder_.addMessage(index, value);
+        memberTourAgentCollectionsBuilder_.addMessage(index, value);
       }
       return this;
     }
@@ -1229,16 +1229,16 @@ private static final long serialVersionUID = 0L;
      * The tour agent collection associated with &#64;tour_pattern_sid.
      * </pre>
      *
-     * <code>repeated .api.commons.TourAgentCollection member_tour_agent_collection = 4 [json_name = "memberTourAgentCollection"];</code>
+     * <code>repeated .api.commons.TourAgentCollection member_tour_agent_collections = 4 [json_name = "memberTourAgentCollections"];</code>
      */
-    public Builder addMemberTourAgentCollection(
+    public Builder addMemberTourAgentCollections(
         com.tcn.cloud.api.api.commons.TourAgentCollection.Builder builderForValue) {
-      if (memberTourAgentCollectionBuilder_ == null) {
-        ensureMemberTourAgentCollectionIsMutable();
-        memberTourAgentCollection_.add(builderForValue.build());
+      if (memberTourAgentCollectionsBuilder_ == null) {
+        ensureMemberTourAgentCollectionsIsMutable();
+        memberTourAgentCollections_.add(builderForValue.build());
         onChanged();
       } else {
-        memberTourAgentCollectionBuilder_.addMessage(builderForValue.build());
+        memberTourAgentCollectionsBuilder_.addMessage(builderForValue.build());
       }
       return this;
     }
@@ -1247,16 +1247,16 @@ private static final long serialVersionUID = 0L;
      * The tour agent collection associated with &#64;tour_pattern_sid.
      * </pre>
      *
-     * <code>repeated .api.commons.TourAgentCollection member_tour_agent_collection = 4 [json_name = "memberTourAgentCollection"];</code>
+     * <code>repeated .api.commons.TourAgentCollection member_tour_agent_collections = 4 [json_name = "memberTourAgentCollections"];</code>
      */
-    public Builder addMemberTourAgentCollection(
+    public Builder addMemberTourAgentCollections(
         int index, com.tcn.cloud.api.api.commons.TourAgentCollection.Builder builderForValue) {
-      if (memberTourAgentCollectionBuilder_ == null) {
-        ensureMemberTourAgentCollectionIsMutable();
-        memberTourAgentCollection_.add(index, builderForValue.build());
+      if (memberTourAgentCollectionsBuilder_ == null) {
+        ensureMemberTourAgentCollectionsIsMutable();
+        memberTourAgentCollections_.add(index, builderForValue.build());
         onChanged();
       } else {
-        memberTourAgentCollectionBuilder_.addMessage(index, builderForValue.build());
+        memberTourAgentCollectionsBuilder_.addMessage(index, builderForValue.build());
       }
       return this;
     }
@@ -1265,17 +1265,17 @@ private static final long serialVersionUID = 0L;
      * The tour agent collection associated with &#64;tour_pattern_sid.
      * </pre>
      *
-     * <code>repeated .api.commons.TourAgentCollection member_tour_agent_collection = 4 [json_name = "memberTourAgentCollection"];</code>
+     * <code>repeated .api.commons.TourAgentCollection member_tour_agent_collections = 4 [json_name = "memberTourAgentCollections"];</code>
      */
-    public Builder addAllMemberTourAgentCollection(
+    public Builder addAllMemberTourAgentCollections(
         java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.TourAgentCollection> values) {
-      if (memberTourAgentCollectionBuilder_ == null) {
-        ensureMemberTourAgentCollectionIsMutable();
+      if (memberTourAgentCollectionsBuilder_ == null) {
+        ensureMemberTourAgentCollectionsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, memberTourAgentCollection_);
+            values, memberTourAgentCollections_);
         onChanged();
       } else {
-        memberTourAgentCollectionBuilder_.addAllMessages(values);
+        memberTourAgentCollectionsBuilder_.addAllMessages(values);
       }
       return this;
     }
@@ -1284,15 +1284,15 @@ private static final long serialVersionUID = 0L;
      * The tour agent collection associated with &#64;tour_pattern_sid.
      * </pre>
      *
-     * <code>repeated .api.commons.TourAgentCollection member_tour_agent_collection = 4 [json_name = "memberTourAgentCollection"];</code>
+     * <code>repeated .api.commons.TourAgentCollection member_tour_agent_collections = 4 [json_name = "memberTourAgentCollections"];</code>
      */
-    public Builder clearMemberTourAgentCollection() {
-      if (memberTourAgentCollectionBuilder_ == null) {
-        memberTourAgentCollection_ = java.util.Collections.emptyList();
+    public Builder clearMemberTourAgentCollections() {
+      if (memberTourAgentCollectionsBuilder_ == null) {
+        memberTourAgentCollections_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
       } else {
-        memberTourAgentCollectionBuilder_.clear();
+        memberTourAgentCollectionsBuilder_.clear();
       }
       return this;
     }
@@ -1301,15 +1301,15 @@ private static final long serialVersionUID = 0L;
      * The tour agent collection associated with &#64;tour_pattern_sid.
      * </pre>
      *
-     * <code>repeated .api.commons.TourAgentCollection member_tour_agent_collection = 4 [json_name = "memberTourAgentCollection"];</code>
+     * <code>repeated .api.commons.TourAgentCollection member_tour_agent_collections = 4 [json_name = "memberTourAgentCollections"];</code>
      */
-    public Builder removeMemberTourAgentCollection(int index) {
-      if (memberTourAgentCollectionBuilder_ == null) {
-        ensureMemberTourAgentCollectionIsMutable();
-        memberTourAgentCollection_.remove(index);
+    public Builder removeMemberTourAgentCollections(int index) {
+      if (memberTourAgentCollectionsBuilder_ == null) {
+        ensureMemberTourAgentCollectionsIsMutable();
+        memberTourAgentCollections_.remove(index);
         onChanged();
       } else {
-        memberTourAgentCollectionBuilder_.remove(index);
+        memberTourAgentCollectionsBuilder_.remove(index);
       }
       return this;
     }
@@ -1318,24 +1318,24 @@ private static final long serialVersionUID = 0L;
      * The tour agent collection associated with &#64;tour_pattern_sid.
      * </pre>
      *
-     * <code>repeated .api.commons.TourAgentCollection member_tour_agent_collection = 4 [json_name = "memberTourAgentCollection"];</code>
+     * <code>repeated .api.commons.TourAgentCollection member_tour_agent_collections = 4 [json_name = "memberTourAgentCollections"];</code>
      */
-    public com.tcn.cloud.api.api.commons.TourAgentCollection.Builder getMemberTourAgentCollectionBuilder(
+    public com.tcn.cloud.api.api.commons.TourAgentCollection.Builder getMemberTourAgentCollectionsBuilder(
         int index) {
-      return getMemberTourAgentCollectionFieldBuilder().getBuilder(index);
+      return getMemberTourAgentCollectionsFieldBuilder().getBuilder(index);
     }
     /**
      * <pre>
      * The tour agent collection associated with &#64;tour_pattern_sid.
      * </pre>
      *
-     * <code>repeated .api.commons.TourAgentCollection member_tour_agent_collection = 4 [json_name = "memberTourAgentCollection"];</code>
+     * <code>repeated .api.commons.TourAgentCollection member_tour_agent_collections = 4 [json_name = "memberTourAgentCollections"];</code>
      */
-    public com.tcn.cloud.api.api.commons.TourAgentCollectionOrBuilder getMemberTourAgentCollectionOrBuilder(
+    public com.tcn.cloud.api.api.commons.TourAgentCollectionOrBuilder getMemberTourAgentCollectionsOrBuilder(
         int index) {
-      if (memberTourAgentCollectionBuilder_ == null) {
-        return memberTourAgentCollection_.get(index);  } else {
-        return memberTourAgentCollectionBuilder_.getMessageOrBuilder(index);
+      if (memberTourAgentCollectionsBuilder_ == null) {
+        return memberTourAgentCollections_.get(index);  } else {
+        return memberTourAgentCollectionsBuilder_.getMessageOrBuilder(index);
       }
     }
     /**
@@ -1343,14 +1343,14 @@ private static final long serialVersionUID = 0L;
      * The tour agent collection associated with &#64;tour_pattern_sid.
      * </pre>
      *
-     * <code>repeated .api.commons.TourAgentCollection member_tour_agent_collection = 4 [json_name = "memberTourAgentCollection"];</code>
+     * <code>repeated .api.commons.TourAgentCollection member_tour_agent_collections = 4 [json_name = "memberTourAgentCollections"];</code>
      */
     public java.util.List<? extends com.tcn.cloud.api.api.commons.TourAgentCollectionOrBuilder> 
-         getMemberTourAgentCollectionOrBuilderList() {
-      if (memberTourAgentCollectionBuilder_ != null) {
-        return memberTourAgentCollectionBuilder_.getMessageOrBuilderList();
+         getMemberTourAgentCollectionsOrBuilderList() {
+      if (memberTourAgentCollectionsBuilder_ != null) {
+        return memberTourAgentCollectionsBuilder_.getMessageOrBuilderList();
       } else {
-        return java.util.Collections.unmodifiableList(memberTourAgentCollection_);
+        return java.util.Collections.unmodifiableList(memberTourAgentCollections_);
       }
     }
     /**
@@ -1358,10 +1358,10 @@ private static final long serialVersionUID = 0L;
      * The tour agent collection associated with &#64;tour_pattern_sid.
      * </pre>
      *
-     * <code>repeated .api.commons.TourAgentCollection member_tour_agent_collection = 4 [json_name = "memberTourAgentCollection"];</code>
+     * <code>repeated .api.commons.TourAgentCollection member_tour_agent_collections = 4 [json_name = "memberTourAgentCollections"];</code>
      */
-    public com.tcn.cloud.api.api.commons.TourAgentCollection.Builder addMemberTourAgentCollectionBuilder() {
-      return getMemberTourAgentCollectionFieldBuilder().addBuilder(
+    public com.tcn.cloud.api.api.commons.TourAgentCollection.Builder addMemberTourAgentCollectionsBuilder() {
+      return getMemberTourAgentCollectionsFieldBuilder().addBuilder(
           com.tcn.cloud.api.api.commons.TourAgentCollection.getDefaultInstance());
     }
     /**
@@ -1369,11 +1369,11 @@ private static final long serialVersionUID = 0L;
      * The tour agent collection associated with &#64;tour_pattern_sid.
      * </pre>
      *
-     * <code>repeated .api.commons.TourAgentCollection member_tour_agent_collection = 4 [json_name = "memberTourAgentCollection"];</code>
+     * <code>repeated .api.commons.TourAgentCollection member_tour_agent_collections = 4 [json_name = "memberTourAgentCollections"];</code>
      */
-    public com.tcn.cloud.api.api.commons.TourAgentCollection.Builder addMemberTourAgentCollectionBuilder(
+    public com.tcn.cloud.api.api.commons.TourAgentCollection.Builder addMemberTourAgentCollectionsBuilder(
         int index) {
-      return getMemberTourAgentCollectionFieldBuilder().addBuilder(
+      return getMemberTourAgentCollectionsFieldBuilder().addBuilder(
           index, com.tcn.cloud.api.api.commons.TourAgentCollection.getDefaultInstance());
     }
     /**
@@ -1381,25 +1381,25 @@ private static final long serialVersionUID = 0L;
      * The tour agent collection associated with &#64;tour_pattern_sid.
      * </pre>
      *
-     * <code>repeated .api.commons.TourAgentCollection member_tour_agent_collection = 4 [json_name = "memberTourAgentCollection"];</code>
+     * <code>repeated .api.commons.TourAgentCollection member_tour_agent_collections = 4 [json_name = "memberTourAgentCollections"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.commons.TourAgentCollection.Builder> 
-         getMemberTourAgentCollectionBuilderList() {
-      return getMemberTourAgentCollectionFieldBuilder().getBuilderList();
+         getMemberTourAgentCollectionsBuilderList() {
+      return getMemberTourAgentCollectionsFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
         com.tcn.cloud.api.api.commons.TourAgentCollection, com.tcn.cloud.api.api.commons.TourAgentCollection.Builder, com.tcn.cloud.api.api.commons.TourAgentCollectionOrBuilder> 
-        getMemberTourAgentCollectionFieldBuilder() {
-      if (memberTourAgentCollectionBuilder_ == null) {
-        memberTourAgentCollectionBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+        getMemberTourAgentCollectionsFieldBuilder() {
+      if (memberTourAgentCollectionsBuilder_ == null) {
+        memberTourAgentCollectionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.commons.TourAgentCollection, com.tcn.cloud.api.api.commons.TourAgentCollection.Builder, com.tcn.cloud.api.api.commons.TourAgentCollectionOrBuilder>(
-                memberTourAgentCollection_,
+                memberTourAgentCollections_,
                 ((bitField0_ & 0x00000008) != 0),
                 getParentForChildren(),
                 isClean());
-        memberTourAgentCollection_ = null;
+        memberTourAgentCollections_ = null;
       }
-      return memberTourAgentCollectionBuilder_;
+      return memberTourAgentCollectionsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

@@ -76,42 +76,42 @@ public interface TourPatternOrBuilder extends
    * The tour agent collection associated with &#64;tour_pattern_sid.
    * </pre>
    *
-   * <code>repeated .api.commons.TourAgentCollection member_tour_agent_collection = 4 [json_name = "memberTourAgentCollection"];</code>
+   * <code>repeated .api.commons.TourAgentCollection member_tour_agent_collections = 4 [json_name = "memberTourAgentCollections"];</code>
    */
   java.util.List<com.tcn.cloud.api.api.commons.TourAgentCollection> 
-      getMemberTourAgentCollectionList();
+      getMemberTourAgentCollectionsList();
   /**
    * <pre>
    * The tour agent collection associated with &#64;tour_pattern_sid.
    * </pre>
    *
-   * <code>repeated .api.commons.TourAgentCollection member_tour_agent_collection = 4 [json_name = "memberTourAgentCollection"];</code>
+   * <code>repeated .api.commons.TourAgentCollection member_tour_agent_collections = 4 [json_name = "memberTourAgentCollections"];</code>
    */
-  com.tcn.cloud.api.api.commons.TourAgentCollection getMemberTourAgentCollection(int index);
+  com.tcn.cloud.api.api.commons.TourAgentCollection getMemberTourAgentCollections(int index);
   /**
    * <pre>
    * The tour agent collection associated with &#64;tour_pattern_sid.
    * </pre>
    *
-   * <code>repeated .api.commons.TourAgentCollection member_tour_agent_collection = 4 [json_name = "memberTourAgentCollection"];</code>
+   * <code>repeated .api.commons.TourAgentCollection member_tour_agent_collections = 4 [json_name = "memberTourAgentCollections"];</code>
    */
-  int getMemberTourAgentCollectionCount();
+  int getMemberTourAgentCollectionsCount();
   /**
    * <pre>
    * The tour agent collection associated with &#64;tour_pattern_sid.
    * </pre>
    *
-   * <code>repeated .api.commons.TourAgentCollection member_tour_agent_collection = 4 [json_name = "memberTourAgentCollection"];</code>
+   * <code>repeated .api.commons.TourAgentCollection member_tour_agent_collections = 4 [json_name = "memberTourAgentCollections"];</code>
    */
   java.util.List<? extends com.tcn.cloud.api.api.commons.TourAgentCollectionOrBuilder> 
-      getMemberTourAgentCollectionOrBuilderList();
+      getMemberTourAgentCollectionsOrBuilderList();
   /**
    * <pre>
    * The tour agent collection associated with &#64;tour_pattern_sid.
    * </pre>
    *
-   * <code>repeated .api.commons.TourAgentCollection member_tour_agent_collection = 4 [json_name = "memberTourAgentCollection"];</code>
+   * <code>repeated .api.commons.TourAgentCollection member_tour_agent_collections = 4 [json_name = "memberTourAgentCollections"];</code>
    */
-  com.tcn.cloud.api.api.commons.TourAgentCollectionOrBuilder getMemberTourAgentCollectionOrBuilder(
+  com.tcn.cloud.api.api.commons.TourAgentCollectionOrBuilder getMemberTourAgentCollectionsOrBuilder(
       int index);
 }
