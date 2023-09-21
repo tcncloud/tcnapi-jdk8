@@ -20,6 +20,16 @@ public final class InsightProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_insights_Insight_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_insights_PublishInsightRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_insights_PublishInsightRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_insights_PublishInsightResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_insights_PublishInsightResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_v1alpha1_insights_CreateInsightRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -106,51 +116,59 @@ public final class InsightProto {
       "\n#api/v1alpha1/insights/insight.proto\022\025a" +
       "pi.v1alpha1.insights\032\032api/commons/insigh" +
       "ts.proto\032 google/protobuf/field_mask.pro" +
-      "to\"\270\002\n\007Insight\022!\n\ninsight_id\030\002 \001(\003B\0020\001R\t" +
+      "to\"\331\002\n\007Insight\022!\n\ninsight_id\030\002 \001(\003B\0020\001R\t" +
       "insightId\022\022\n\004name\030\003 \001(\tR\004name\022 \n\013descrip" +
       "tion\030\004 \001(\tR\013description\022;\n\014insight_type\030" +
       "\005 \001(\0162\030.api.commons.InsightTypeR\013insight" +
       "Type\022\'\n\017insight_version\030\006 \001(\rR\016insightVe" +
       "rsion\022\022\n\004body\030\007 \001(\tR\004body\022Z\n\027insight_per" +
       "mission_type\030\010 \001(\0162\".api.commons.Insight" +
-      "PermissionTypeR\025insightPermissionType\"P\n" +
-      "\024CreateInsightRequest\0228\n\007insight\030\001 \001(\0132\036" +
-      ".api.v1alpha1.insights.InsightR\007insight\"" +
-      "Q\n\025CreateInsightResponse\0228\n\007insight\030\001 \001(" +
-      "\0132\036.api.v1alpha1.insights.InsightR\007insig" +
-      "ht\"s\n\023ListInsightsRequest\022\\\n\030insight_per" +
-      "mission_types\030\002 \003(\0162\".api.commons.Insigh" +
-      "tPermissionTypeR\026insightPermissionTypes\"" +
-      "R\n\024ListInsightsResponse\022:\n\010insights\030\001 \003(" +
-      "\0132\036.api.v1alpha1.insights.InsightR\010insig" +
-      "hts\"\215\001\n\024UpdateInsightRequest\0228\n\007insight\030" +
-      "\001 \001(\0132\036.api.v1alpha1.insights.InsightR\007i" +
-      "nsight\022;\n\013update_mask\030\002 \001(\0132\032.google.pro" +
-      "tobuf.FieldMaskR\nupdateMask\"Q\n\025UpdateIns" +
-      "ightResponse\0228\n\007insight\030\001 \001(\0132\036.api.v1al" +
-      "pha1.insights.InsightR\007insight\"9\n\024Delete" +
-      "InsightRequest\022!\n\ninsight_id\030\001 \001(\003B\0020\001R\t" +
-      "insightId\"Q\n\025DeleteInsightResponse\0228\n\007in" +
-      "sight\030\001 \001(\0132\036.api.v1alpha1.insights.Insi" +
-      "ghtR\007insight\"6\n\021GetInsightRequest\022!\n\nins" +
-      "ight_id\030\001 \001(\003B\0020\001R\tinsightId\"N\n\022GetInsig" +
+      "PermissionTypeR\025insightPermissionType\022\037\n" +
+      "\013resource_id\030\t \001(\tR\nresourceId\"p\n\025Publis" +
+      "hInsightRequest\022\037\n\013resource_id\030\001 \001(\tR\nre" +
+      "sourceId\0226\n\027destination_resource_id\030\002 \001(" +
+      "\tR\025destinationResourceId\"R\n\026PublishInsig" +
       "htResponse\0228\n\007insight\030\001 \001(\0132\036.api.v1alph" +
-      "a1.insights.InsightR\007insight\"4\n\023GetVfsSc" +
-      "hemaRequest\022\035\n\nalias_name\030\001 \001(\tR\taliasNa" +
-      "me\"\250\002\n\024GetVfsSchemaResponse\022I\n\006fields\030\001 " +
-      "\003(\01321.api.v1alpha1.insights.GetVfsSchema" +
-      "Response.FieldR\006fields\022\'\n\017vfs_descriptio" +
-      "n\030\002 \001(\tR\016vfsDescription\032\233\001\n\005Field\022\037\n\013col" +
-      "umn_name\030\001 \001(\tR\ncolumnName\022B\n\013column_typ" +
-      "e\030\002 \001(\0162!.api.commons.InsightVfsSchemaTy" +
-      "peR\ncolumnType\022-\n\022column_description\030\003 \001" +
-      "(\tR\021columnDescription\"\022\n\020ListVfsesReques" +
-      "t\"-\n\021ListVfsesResponse\022\030\n\007aliases\030\001 \003(\tR" +
-      "\007aliasesB\255\001\n\'com.tcn.cloud.api.api.v1alp" +
-      "ha1.insightsB\014InsightProtoP\001\242\002\003AVI\252\002\025Api" +
-      ".V1alpha1.Insights\312\002\025Api\\V1alpha1\\Insigh" +
-      "ts\342\002!Api\\V1alpha1\\Insights\\GPBMetadata\352\002" +
-      "\027Api::V1alpha1::Insightsb\006proto3"
+      "a1.insights.InsightR\007insight\"P\n\024CreateIn" +
+      "sightRequest\0228\n\007insight\030\001 \001(\0132\036.api.v1al" +
+      "pha1.insights.InsightR\007insight\"Q\n\025Create" +
+      "InsightResponse\0228\n\007insight\030\001 \001(\0132\036.api.v" +
+      "1alpha1.insights.InsightR\007insight\"s\n\023Lis" +
+      "tInsightsRequest\022\\\n\030insight_permission_t" +
+      "ypes\030\002 \003(\0162\".api.commons.InsightPermissi" +
+      "onTypeR\026insightPermissionTypes\"R\n\024ListIn" +
+      "sightsResponse\022:\n\010insights\030\001 \003(\0132\036.api.v" +
+      "1alpha1.insights.InsightR\010insights\"\215\001\n\024U" +
+      "pdateInsightRequest\0228\n\007insight\030\001 \001(\0132\036.a" +
+      "pi.v1alpha1.insights.InsightR\007insight\022;\n" +
+      "\013update_mask\030\002 \001(\0132\032.google.protobuf.Fie" +
+      "ldMaskR\nupdateMask\"Q\n\025UpdateInsightRespo" +
+      "nse\0228\n\007insight\030\001 \001(\0132\036.api.v1alpha1.insi" +
+      "ghts.InsightR\007insight\"Z\n\024DeleteInsightRe" +
+      "quest\022!\n\ninsight_id\030\001 \001(\003B\0020\001R\tinsightId" +
+      "\022\037\n\013resource_id\030\002 \001(\tR\nresourceId\"Q\n\025Del" +
+      "eteInsightResponse\0228\n\007insight\030\001 \001(\0132\036.ap" +
+      "i.v1alpha1.insights.InsightR\007insight\"W\n\021" +
+      "GetInsightRequest\022!\n\ninsight_id\030\001 \001(\003B\0020" +
+      "\001R\tinsightId\022\037\n\013resource_id\030\002 \001(\tR\nresou" +
+      "rceId\"N\n\022GetInsightResponse\0228\n\007insight\030\001" +
+      " \001(\0132\036.api.v1alpha1.insights.InsightR\007in" +
+      "sight\"4\n\023GetVfsSchemaRequest\022\035\n\nalias_na" +
+      "me\030\001 \001(\tR\taliasName\"\250\002\n\024GetVfsSchemaResp" +
+      "onse\022I\n\006fields\030\001 \003(\01321.api.v1alpha1.insi" +
+      "ghts.GetVfsSchemaResponse.FieldR\006fields\022" +
+      "\'\n\017vfs_description\030\002 \001(\tR\016vfsDescription" +
+      "\032\233\001\n\005Field\022\037\n\013column_name\030\001 \001(\tR\ncolumnN" +
+      "ame\022B\n\013column_type\030\002 \001(\0162!.api.commons.I" +
+      "nsightVfsSchemaTypeR\ncolumnType\022-\n\022colum" +
+      "n_description\030\003 \001(\tR\021columnDescription\"\022" +
+      "\n\020ListVfsesRequest\"-\n\021ListVfsesResponse\022" +
+      "\030\n\007aliases\030\001 \003(\tR\007aliasesB\255\001\n\'com.tcn.cl" +
+      "oud.api.api.v1alpha1.insightsB\014InsightPr" +
+      "otoP\001\242\002\003AVI\252\002\025Api.V1alpha1.Insights\312\002\025Ap" +
+      "i\\V1alpha1\\Insights\342\002!Api\\V1alpha1\\Insig" +
+      "hts\\GPBMetadata\352\002\027Api::V1alpha1::Insight" +
+      "sb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -163,75 +181,87 @@ public final class InsightProto {
     internal_static_api_v1alpha1_insights_Insight_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_insights_Insight_descriptor,
-        new java.lang.String[] { "InsightId", "Name", "Description", "InsightType", "InsightVersion", "Body", "InsightPermissionType", });
-    internal_static_api_v1alpha1_insights_CreateInsightRequest_descriptor =
+        new java.lang.String[] { "InsightId", "Name", "Description", "InsightType", "InsightVersion", "Body", "InsightPermissionType", "ResourceId", });
+    internal_static_api_v1alpha1_insights_PublishInsightRequest_descriptor =
       getDescriptor().getMessageTypes().get(1);
+    internal_static_api_v1alpha1_insights_PublishInsightRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_insights_PublishInsightRequest_descriptor,
+        new java.lang.String[] { "ResourceId", "DestinationResourceId", });
+    internal_static_api_v1alpha1_insights_PublishInsightResponse_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_api_v1alpha1_insights_PublishInsightResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_insights_PublishInsightResponse_descriptor,
+        new java.lang.String[] { "Insight", });
+    internal_static_api_v1alpha1_insights_CreateInsightRequest_descriptor =
+      getDescriptor().getMessageTypes().get(3);
     internal_static_api_v1alpha1_insights_CreateInsightRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_insights_CreateInsightRequest_descriptor,
         new java.lang.String[] { "Insight", });
     internal_static_api_v1alpha1_insights_CreateInsightResponse_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_api_v1alpha1_insights_CreateInsightResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_insights_CreateInsightResponse_descriptor,
         new java.lang.String[] { "Insight", });
     internal_static_api_v1alpha1_insights_ListInsightsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_api_v1alpha1_insights_ListInsightsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_insights_ListInsightsRequest_descriptor,
         new java.lang.String[] { "InsightPermissionTypes", });
     internal_static_api_v1alpha1_insights_ListInsightsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_api_v1alpha1_insights_ListInsightsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_insights_ListInsightsResponse_descriptor,
         new java.lang.String[] { "Insights", });
     internal_static_api_v1alpha1_insights_UpdateInsightRequest_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_api_v1alpha1_insights_UpdateInsightRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_insights_UpdateInsightRequest_descriptor,
         new java.lang.String[] { "Insight", "UpdateMask", });
     internal_static_api_v1alpha1_insights_UpdateInsightResponse_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_api_v1alpha1_insights_UpdateInsightResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_insights_UpdateInsightResponse_descriptor,
         new java.lang.String[] { "Insight", });
     internal_static_api_v1alpha1_insights_DeleteInsightRequest_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_api_v1alpha1_insights_DeleteInsightRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_insights_DeleteInsightRequest_descriptor,
-        new java.lang.String[] { "InsightId", });
+        new java.lang.String[] { "InsightId", "ResourceId", });
     internal_static_api_v1alpha1_insights_DeleteInsightResponse_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_api_v1alpha1_insights_DeleteInsightResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_insights_DeleteInsightResponse_descriptor,
         new java.lang.String[] { "Insight", });
     internal_static_api_v1alpha1_insights_GetInsightRequest_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_api_v1alpha1_insights_GetInsightRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_insights_GetInsightRequest_descriptor,
-        new java.lang.String[] { "InsightId", });
+        new java.lang.String[] { "InsightId", "ResourceId", });
     internal_static_api_v1alpha1_insights_GetInsightResponse_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_api_v1alpha1_insights_GetInsightResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_insights_GetInsightResponse_descriptor,
         new java.lang.String[] { "Insight", });
     internal_static_api_v1alpha1_insights_GetVfsSchemaRequest_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_api_v1alpha1_insights_GetVfsSchemaRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_insights_GetVfsSchemaRequest_descriptor,
         new java.lang.String[] { "AliasName", });
     internal_static_api_v1alpha1_insights_GetVfsSchemaResponse_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_api_v1alpha1_insights_GetVfsSchemaResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_insights_GetVfsSchemaResponse_descriptor,
@@ -243,13 +273,13 @@ public final class InsightProto {
         internal_static_api_v1alpha1_insights_GetVfsSchemaResponse_Field_descriptor,
         new java.lang.String[] { "ColumnName", "ColumnType", "ColumnDescription", });
     internal_static_api_v1alpha1_insights_ListVfsesRequest_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_api_v1alpha1_insights_ListVfsesRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_insights_ListVfsesRequest_descriptor,
         new java.lang.String[] { });
     internal_static_api_v1alpha1_insights_ListVfsesResponse_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_api_v1alpha1_insights_ListVfsesResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_insights_ListVfsesResponse_descriptor,

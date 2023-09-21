@@ -5,68 +5,54 @@ package com.tcn.cloud.api.api.v1alpha1.insights;
 
 /**
  * <pre>
- * DeleteInsightRequest is the request to delete an insight.
+ * PublishInsightRequest is the request to publish an insight.
  * </pre>
  *
- * Protobuf type {@code api.v1alpha1.insights.DeleteInsightRequest}
+ * Protobuf type {@code api.v1alpha1.insights.PublishInsightRequest}
  */
-public final class DeleteInsightRequest extends
+public final class PublishInsightRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v1alpha1.insights.DeleteInsightRequest)
-    DeleteInsightRequestOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v1alpha1.insights.PublishInsightRequest)
+    PublishInsightRequestOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use DeleteInsightRequest.newBuilder() to construct.
-  private DeleteInsightRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use PublishInsightRequest.newBuilder() to construct.
+  private PublishInsightRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private DeleteInsightRequest() {
+  private PublishInsightRequest() {
     resourceId_ = "";
+    destinationResourceId_ = "";
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new DeleteInsightRequest();
+    return new PublishInsightRequest();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v1alpha1.insights.InsightProto.internal_static_api_v1alpha1_insights_DeleteInsightRequest_descriptor;
+    return com.tcn.cloud.api.api.v1alpha1.insights.InsightProto.internal_static_api_v1alpha1_insights_PublishInsightRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v1alpha1.insights.InsightProto.internal_static_api_v1alpha1_insights_DeleteInsightRequest_fieldAccessorTable
+    return com.tcn.cloud.api.api.v1alpha1.insights.InsightProto.internal_static_api_v1alpha1_insights_PublishInsightRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v1alpha1.insights.DeleteInsightRequest.class, com.tcn.cloud.api.api.v1alpha1.insights.DeleteInsightRequest.Builder.class);
+            com.tcn.cloud.api.api.v1alpha1.insights.PublishInsightRequest.class, com.tcn.cloud.api.api.v1alpha1.insights.PublishInsightRequest.Builder.class);
   }
 
-  public static final int INSIGHT_ID_FIELD_NUMBER = 1;
-  private long insightId_ = 0L;
-  /**
-   * <pre>
-   * Required - id of insight to delete
-   * </pre>
-   *
-   * <code>int64 insight_id = 1 [json_name = "insightId", jstype = JS_STRING];</code>
-   * @return The insightId.
-   */
-  @java.lang.Override
-  public long getInsightId() {
-    return insightId_;
-  }
-
-  public static final int RESOURCE_ID_FIELD_NUMBER = 2;
+  public static final int RESOURCE_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object resourceId_ = "";
   /**
    * <pre>
-   * resource id of the insight to delete
+   * Required - resource id of the insight to publish
    * </pre>
    *
-   * <code>string resource_id = 2 [json_name = "resourceId"];</code>
+   * <code>string resource_id = 1 [json_name = "resourceId"];</code>
    * @return The resourceId.
    */
   @java.lang.Override
@@ -84,10 +70,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * resource id of the insight to delete
+   * Required - resource id of the insight to publish
    * </pre>
    *
-   * <code>string resource_id = 2 [json_name = "resourceId"];</code>
+   * <code>string resource_id = 1 [json_name = "resourceId"];</code>
    * @return The bytes for resourceId.
    */
   @java.lang.Override
@@ -99,6 +85,55 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
       resourceId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int DESTINATION_RESOURCE_ID_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object destinationResourceId_ = "";
+  /**
+   * <pre>
+   * Optional - resource id of the destination to publish to
+   * If not provided, a new standard insight will be created
+   * </pre>
+   *
+   * <code>string destination_resource_id = 2 [json_name = "destinationResourceId"];</code>
+   * @return The destinationResourceId.
+   */
+  @java.lang.Override
+  public java.lang.String getDestinationResourceId() {
+    java.lang.Object ref = destinationResourceId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      destinationResourceId_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Optional - resource id of the destination to publish to
+   * If not provided, a new standard insight will be created
+   * </pre>
+   *
+   * <code>string destination_resource_id = 2 [json_name = "destinationResourceId"];</code>
+   * @return The bytes for destinationResourceId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getDestinationResourceIdBytes() {
+    java.lang.Object ref = destinationResourceId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      destinationResourceId_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -119,11 +154,11 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (insightId_ != 0L) {
-      output.writeInt64(1, insightId_);
-    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, resourceId_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceId_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(destinationResourceId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, destinationResourceId_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -134,12 +169,11 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (insightId_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(1, insightId_);
-    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, resourceId_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceId_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(destinationResourceId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, destinationResourceId_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -151,15 +185,15 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.insights.DeleteInsightRequest)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.insights.PublishInsightRequest)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v1alpha1.insights.DeleteInsightRequest other = (com.tcn.cloud.api.api.v1alpha1.insights.DeleteInsightRequest) obj;
+    com.tcn.cloud.api.api.v1alpha1.insights.PublishInsightRequest other = (com.tcn.cloud.api.api.v1alpha1.insights.PublishInsightRequest) obj;
 
-    if (getInsightId()
-        != other.getInsightId()) return false;
     if (!getResourceId()
         .equals(other.getResourceId())) return false;
+    if (!getDestinationResourceId()
+        .equals(other.getDestinationResourceId())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -171,54 +205,53 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + INSIGHT_ID_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getInsightId());
     hash = (37 * hash) + RESOURCE_ID_FIELD_NUMBER;
     hash = (53 * hash) + getResourceId().hashCode();
+    hash = (37 * hash) + DESTINATION_RESOURCE_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getDestinationResourceId().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.insights.DeleteInsightRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.insights.PublishInsightRequest parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.insights.DeleteInsightRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.insights.PublishInsightRequest parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.insights.DeleteInsightRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.insights.PublishInsightRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.insights.DeleteInsightRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.insights.PublishInsightRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.insights.DeleteInsightRequest parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v1alpha1.insights.PublishInsightRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.insights.DeleteInsightRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.insights.PublishInsightRequest parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.insights.DeleteInsightRequest parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.insights.PublishInsightRequest parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.insights.DeleteInsightRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.insights.PublishInsightRequest parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -226,26 +259,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.insights.DeleteInsightRequest parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.insights.PublishInsightRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.insights.DeleteInsightRequest parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.insights.PublishInsightRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.insights.DeleteInsightRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.insights.PublishInsightRequest parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.insights.DeleteInsightRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.insights.PublishInsightRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -258,7 +291,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.insights.DeleteInsightRequest prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.insights.PublishInsightRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -275,29 +308,29 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * DeleteInsightRequest is the request to delete an insight.
+   * PublishInsightRequest is the request to publish an insight.
    * </pre>
    *
-   * Protobuf type {@code api.v1alpha1.insights.DeleteInsightRequest}
+   * Protobuf type {@code api.v1alpha1.insights.PublishInsightRequest}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v1alpha1.insights.DeleteInsightRequest)
-      com.tcn.cloud.api.api.v1alpha1.insights.DeleteInsightRequestOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v1alpha1.insights.PublishInsightRequest)
+      com.tcn.cloud.api.api.v1alpha1.insights.PublishInsightRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v1alpha1.insights.InsightProto.internal_static_api_v1alpha1_insights_DeleteInsightRequest_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.insights.InsightProto.internal_static_api_v1alpha1_insights_PublishInsightRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v1alpha1.insights.InsightProto.internal_static_api_v1alpha1_insights_DeleteInsightRequest_fieldAccessorTable
+      return com.tcn.cloud.api.api.v1alpha1.insights.InsightProto.internal_static_api_v1alpha1_insights_PublishInsightRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v1alpha1.insights.DeleteInsightRequest.class, com.tcn.cloud.api.api.v1alpha1.insights.DeleteInsightRequest.Builder.class);
+              com.tcn.cloud.api.api.v1alpha1.insights.PublishInsightRequest.class, com.tcn.cloud.api.api.v1alpha1.insights.PublishInsightRequest.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v1alpha1.insights.DeleteInsightRequest.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v1alpha1.insights.PublishInsightRequest.newBuilder()
     private Builder() {
 
     }
@@ -311,25 +344,25 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      insightId_ = 0L;
       resourceId_ = "";
+      destinationResourceId_ = "";
       return this;
     }
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v1alpha1.insights.InsightProto.internal_static_api_v1alpha1_insights_DeleteInsightRequest_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.insights.InsightProto.internal_static_api_v1alpha1_insights_PublishInsightRequest_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.insights.DeleteInsightRequest getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v1alpha1.insights.DeleteInsightRequest.getDefaultInstance();
+    public com.tcn.cloud.api.api.v1alpha1.insights.PublishInsightRequest getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v1alpha1.insights.PublishInsightRequest.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.insights.DeleteInsightRequest build() {
-      com.tcn.cloud.api.api.v1alpha1.insights.DeleteInsightRequest result = buildPartial();
+    public com.tcn.cloud.api.api.v1alpha1.insights.PublishInsightRequest build() {
+      com.tcn.cloud.api.api.v1alpha1.insights.PublishInsightRequest result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -337,20 +370,20 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.insights.DeleteInsightRequest buildPartial() {
-      com.tcn.cloud.api.api.v1alpha1.insights.DeleteInsightRequest result = new com.tcn.cloud.api.api.v1alpha1.insights.DeleteInsightRequest(this);
+    public com.tcn.cloud.api.api.v1alpha1.insights.PublishInsightRequest buildPartial() {
+      com.tcn.cloud.api.api.v1alpha1.insights.PublishInsightRequest result = new com.tcn.cloud.api.api.v1alpha1.insights.PublishInsightRequest(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.insights.DeleteInsightRequest result) {
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.insights.PublishInsightRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.insightId_ = insightId_;
+        result.resourceId_ = resourceId_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.resourceId_ = resourceId_;
+        result.destinationResourceId_ = destinationResourceId_;
       }
     }
 
@@ -388,21 +421,23 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v1alpha1.insights.DeleteInsightRequest) {
-        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.insights.DeleteInsightRequest)other);
+      if (other instanceof com.tcn.cloud.api.api.v1alpha1.insights.PublishInsightRequest) {
+        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.insights.PublishInsightRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.insights.DeleteInsightRequest other) {
-      if (other == com.tcn.cloud.api.api.v1alpha1.insights.DeleteInsightRequest.getDefaultInstance()) return this;
-      if (other.getInsightId() != 0L) {
-        setInsightId(other.getInsightId());
-      }
+    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.insights.PublishInsightRequest other) {
+      if (other == com.tcn.cloud.api.api.v1alpha1.insights.PublishInsightRequest.getDefaultInstance()) return this;
       if (!other.getResourceId().isEmpty()) {
         resourceId_ = other.resourceId_;
+        bitField0_ |= 0x00000001;
+        onChanged();
+      }
+      if (!other.getDestinationResourceId().isEmpty()) {
+        destinationResourceId_ = other.destinationResourceId_;
         bitField0_ |= 0x00000002;
         onChanged();
       }
@@ -432,13 +467,13 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 8: {
-              insightId_ = input.readInt64();
+            case 10: {
+              resourceId_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000001;
               break;
-            } // case 8
+            } // case 10
             case 18: {
-              resourceId_ = input.readStringRequireUtf8();
+              destinationResourceId_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000002;
               break;
             } // case 18
@@ -459,57 +494,13 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private long insightId_ ;
-    /**
-     * <pre>
-     * Required - id of insight to delete
-     * </pre>
-     *
-     * <code>int64 insight_id = 1 [json_name = "insightId", jstype = JS_STRING];</code>
-     * @return The insightId.
-     */
-    @java.lang.Override
-    public long getInsightId() {
-      return insightId_;
-    }
-    /**
-     * <pre>
-     * Required - id of insight to delete
-     * </pre>
-     *
-     * <code>int64 insight_id = 1 [json_name = "insightId", jstype = JS_STRING];</code>
-     * @param value The insightId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setInsightId(long value) {
-
-      insightId_ = value;
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Required - id of insight to delete
-     * </pre>
-     *
-     * <code>int64 insight_id = 1 [json_name = "insightId", jstype = JS_STRING];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearInsightId() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      insightId_ = 0L;
-      onChanged();
-      return this;
-    }
-
     private java.lang.Object resourceId_ = "";
     /**
      * <pre>
-     * resource id of the insight to delete
+     * Required - resource id of the insight to publish
      * </pre>
      *
-     * <code>string resource_id = 2 [json_name = "resourceId"];</code>
+     * <code>string resource_id = 1 [json_name = "resourceId"];</code>
      * @return The resourceId.
      */
     public java.lang.String getResourceId() {
@@ -526,10 +517,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * resource id of the insight to delete
+     * Required - resource id of the insight to publish
      * </pre>
      *
-     * <code>string resource_id = 2 [json_name = "resourceId"];</code>
+     * <code>string resource_id = 1 [json_name = "resourceId"];</code>
      * @return The bytes for resourceId.
      */
     public com.google.protobuf.ByteString
@@ -547,10 +538,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * resource id of the insight to delete
+     * Required - resource id of the insight to publish
      * </pre>
      *
-     * <code>string resource_id = 2 [json_name = "resourceId"];</code>
+     * <code>string resource_id = 1 [json_name = "resourceId"];</code>
      * @param value The resourceId to set.
      * @return This builder for chaining.
      */
@@ -558,30 +549,30 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       resourceId_ = value;
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * resource id of the insight to delete
+     * Required - resource id of the insight to publish
      * </pre>
      *
-     * <code>string resource_id = 2 [json_name = "resourceId"];</code>
+     * <code>string resource_id = 1 [json_name = "resourceId"];</code>
      * @return This builder for chaining.
      */
     public Builder clearResourceId() {
       resourceId_ = getDefaultInstance().getResourceId();
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * resource id of the insight to delete
+     * Required - resource id of the insight to publish
      * </pre>
      *
-     * <code>string resource_id = 2 [json_name = "resourceId"];</code>
+     * <code>string resource_id = 1 [json_name = "resourceId"];</code>
      * @param value The bytes for resourceId to set.
      * @return This builder for chaining.
      */
@@ -590,6 +581,103 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       resourceId_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object destinationResourceId_ = "";
+    /**
+     * <pre>
+     * Optional - resource id of the destination to publish to
+     * If not provided, a new standard insight will be created
+     * </pre>
+     *
+     * <code>string destination_resource_id = 2 [json_name = "destinationResourceId"];</code>
+     * @return The destinationResourceId.
+     */
+    public java.lang.String getDestinationResourceId() {
+      java.lang.Object ref = destinationResourceId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        destinationResourceId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Optional - resource id of the destination to publish to
+     * If not provided, a new standard insight will be created
+     * </pre>
+     *
+     * <code>string destination_resource_id = 2 [json_name = "destinationResourceId"];</code>
+     * @return The bytes for destinationResourceId.
+     */
+    public com.google.protobuf.ByteString
+        getDestinationResourceIdBytes() {
+      java.lang.Object ref = destinationResourceId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        destinationResourceId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Optional - resource id of the destination to publish to
+     * If not provided, a new standard insight will be created
+     * </pre>
+     *
+     * <code>string destination_resource_id = 2 [json_name = "destinationResourceId"];</code>
+     * @param value The destinationResourceId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDestinationResourceId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      destinationResourceId_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional - resource id of the destination to publish to
+     * If not provided, a new standard insight will be created
+     * </pre>
+     *
+     * <code>string destination_resource_id = 2 [json_name = "destinationResourceId"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearDestinationResourceId() {
+      destinationResourceId_ = getDefaultInstance().getDestinationResourceId();
+      bitField0_ = (bitField0_ & ~0x00000002);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional - resource id of the destination to publish to
+     * If not provided, a new standard insight will be created
+     * </pre>
+     *
+     * <code>string destination_resource_id = 2 [json_name = "destinationResourceId"];</code>
+     * @param value The bytes for destinationResourceId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDestinationResourceIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      destinationResourceId_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
@@ -607,23 +695,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v1alpha1.insights.DeleteInsightRequest)
+    // @@protoc_insertion_point(builder_scope:api.v1alpha1.insights.PublishInsightRequest)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v1alpha1.insights.DeleteInsightRequest)
-  private static final com.tcn.cloud.api.api.v1alpha1.insights.DeleteInsightRequest DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v1alpha1.insights.PublishInsightRequest)
+  private static final com.tcn.cloud.api.api.v1alpha1.insights.PublishInsightRequest DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.insights.DeleteInsightRequest();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.insights.PublishInsightRequest();
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.insights.DeleteInsightRequest getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v1alpha1.insights.PublishInsightRequest getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<DeleteInsightRequest>
-      PARSER = new com.google.protobuf.AbstractParser<DeleteInsightRequest>() {
+  private static final com.google.protobuf.Parser<PublishInsightRequest>
+      PARSER = new com.google.protobuf.AbstractParser<PublishInsightRequest>() {
     @java.lang.Override
-    public DeleteInsightRequest parsePartialFrom(
+    public PublishInsightRequest parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -642,17 +730,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<DeleteInsightRequest> parser() {
+  public static com.google.protobuf.Parser<PublishInsightRequest> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<DeleteInsightRequest> getParserForType() {
+  public com.google.protobuf.Parser<PublishInsightRequest> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.insights.DeleteInsightRequest getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v1alpha1.insights.PublishInsightRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

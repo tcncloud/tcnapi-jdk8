@@ -26,7 +26,7 @@ public final class ServiceProto {
       "\n#api/v1alpha1/insights/service.proto\022\025a" +
       "pi.v1alpha1.insights\032\027annotations/authz." +
       "proto\032#api/v1alpha1/insights/insight.pro" +
-      "to\032\034google/api/annotations.proto2\265\016\n\010Ins" +
+      "to\032\034google/api/annotations.proto2\355\017\n\010Ins" +
       "ights\022\263\001\n\rCreateInsight\022+.api.v1alpha1.i" +
       "nsights.CreateInsightRequest\032,.api.v1alp" +
       "ha1.insights.CreateInsightResponse\"G\272\270\221\002" +
@@ -73,11 +73,16 @@ public final class ServiceProto {
       "esRequest\032(.api.v1alpha1.insights.ListVf" +
       "sesResponse\"C\272\270\221\002\n\n\003\010\372\001\n\003\010\336\004\202\323\344\223\002.\")/api" +
       "/v1alpha1/insights/insights/listvfses:\001*" +
-      "B\255\001\n\'com.tcn.cloud.api.api.v1alpha1.insi" +
-      "ghtsB\014ServiceProtoP\001\242\002\003AVI\252\002\025Api.V1alpha" +
-      "1.Insights\312\002\025Api\\V1alpha1\\Insights\342\002!Api" +
-      "\\V1alpha1\\Insights\\GPBMetadata\352\002\027Api::V1" +
-      "alpha1::Insightsb\006proto3"
+      "\022\265\001\n\016PublishInsight\022,.api.v1alpha1.insig" +
+      "hts.PublishInsightRequest\032-.api.v1alpha1" +
+      ".insights.PublishInsightResponse\"F\272\270\221\002\010\n" +
+      "\006\010\372\001\010\336\004\202\323\344\223\0023\"./api/v1alpha1/insights/in" +
+      "sights/publishinsight:\001*B\255\001\n\'com.tcn.clo" +
+      "ud.api.api.v1alpha1.insightsB\014ServicePro" +
+      "toP\001\242\002\003AVI\252\002\025Api.V1alpha1.Insights\312\002\025Api" +
+      "\\V1alpha1\\Insights\342\002!Api\\V1alpha1\\Insigh" +
+      "ts\\GPBMetadata\352\002\027Api::V1alpha1::Insights" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
