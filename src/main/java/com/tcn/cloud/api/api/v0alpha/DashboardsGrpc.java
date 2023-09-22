@@ -356,6 +356,37 @@ public final class DashboardsGrpc {
     return getUpdateDashboardLayoutMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.PublishDashboardRequest,
+      com.tcn.cloud.api.api.v0alpha.PublishDashboardResponse> getPublishDashboardMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "PublishDashboard",
+      requestType = com.tcn.cloud.api.api.v0alpha.PublishDashboardRequest.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.PublishDashboardResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.PublishDashboardRequest,
+      com.tcn.cloud.api.api.v0alpha.PublishDashboardResponse> getPublishDashboardMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.PublishDashboardRequest, com.tcn.cloud.api.api.v0alpha.PublishDashboardResponse> getPublishDashboardMethod;
+    if ((getPublishDashboardMethod = DashboardsGrpc.getPublishDashboardMethod) == null) {
+      synchronized (DashboardsGrpc.class) {
+        if ((getPublishDashboardMethod = DashboardsGrpc.getPublishDashboardMethod) == null) {
+          DashboardsGrpc.getPublishDashboardMethod = getPublishDashboardMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.PublishDashboardRequest, com.tcn.cloud.api.api.v0alpha.PublishDashboardResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "PublishDashboard"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.PublishDashboardRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.PublishDashboardResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new DashboardsMethodDescriptorSupplier("PublishDashboard"))
+              .build();
+        }
+      }
+    }
+    return getPublishDashboardMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -507,6 +538,16 @@ public final class DashboardsGrpc {
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateDashboardLayoutMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * PublishDashboard publishes a dashboard
+     * </pre>
+     */
+    default void publishDashboard(com.tcn.cloud.api.api.v0alpha.PublishDashboardRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.PublishDashboardResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getPublishDashboardMethod(), responseObserver);
+    }
   }
 
   /**
@@ -650,6 +691,17 @@ public final class DashboardsGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateDashboardLayoutMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * PublishDashboard publishes a dashboard
+     * </pre>
+     */
+    public void publishDashboard(com.tcn.cloud.api.api.v0alpha.PublishDashboardRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.PublishDashboardResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getPublishDashboardMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -770,6 +822,16 @@ public final class DashboardsGrpc {
     public com.google.protobuf.Empty updateDashboardLayout(com.tcn.cloud.api.api.v0alpha.UpdateDashboardLayoutRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateDashboardLayoutMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * PublishDashboard publishes a dashboard
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v0alpha.PublishDashboardResponse publishDashboard(com.tcn.cloud.api.api.v0alpha.PublishDashboardRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getPublishDashboardMethod(), getCallOptions(), request);
     }
   }
 
@@ -903,6 +965,17 @@ public final class DashboardsGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateDashboardLayoutMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * PublishDashboard publishes a dashboard
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.PublishDashboardResponse> publishDashboard(
+        com.tcn.cloud.api.api.v0alpha.PublishDashboardRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getPublishDashboardMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE_DASHBOARD = 0;
@@ -916,6 +989,7 @@ public final class DashboardsGrpc {
   private static final int METHODID_UPDATE_DASHBOARD_TITLE_AND_DESCRIPTION = 8;
   private static final int METHODID_UPDATE_DASHBOARD_VIEW = 9;
   private static final int METHODID_UPDATE_DASHBOARD_LAYOUT = 10;
+  private static final int METHODID_PUBLISH_DASHBOARD = 11;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -977,6 +1051,10 @@ public final class DashboardsGrpc {
         case METHODID_UPDATE_DASHBOARD_LAYOUT:
           serviceImpl.updateDashboardLayout((com.tcn.cloud.api.api.v0alpha.UpdateDashboardLayoutRequest) request,
               (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
+          break;
+        case METHODID_PUBLISH_DASHBOARD:
+          serviceImpl.publishDashboard((com.tcn.cloud.api.api.v0alpha.PublishDashboardRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.PublishDashboardResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -1073,6 +1151,13 @@ public final class DashboardsGrpc {
               com.tcn.cloud.api.api.v0alpha.UpdateDashboardLayoutRequest,
               com.google.protobuf.Empty>(
                 service, METHODID_UPDATE_DASHBOARD_LAYOUT)))
+        .addMethod(
+          getPublishDashboardMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.PublishDashboardRequest,
+              com.tcn.cloud.api.api.v0alpha.PublishDashboardResponse>(
+                service, METHODID_PUBLISH_DASHBOARD)))
         .build();
   }
 
@@ -1132,6 +1217,7 @@ public final class DashboardsGrpc {
               .addMethod(getUpdateDashboardTitleAndDescriptionMethod())
               .addMethod(getUpdateDashboardViewMethod())
               .addMethod(getUpdateDashboardLayoutMethod())
+              .addMethod(getPublishDashboardMethod())
               .build();
         }
       }

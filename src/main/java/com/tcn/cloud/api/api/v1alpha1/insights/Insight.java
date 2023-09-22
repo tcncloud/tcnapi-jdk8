@@ -27,6 +27,7 @@ private static final long serialVersionUID = 0L;
     insightType_ = 0;
     body_ = "";
     insightPermissionType_ = 0;
+    resourceId_ = "";
   }
 
   @java.lang.Override
@@ -272,6 +273,68 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.tcn.cloud.api.api.commons.InsightPermissionType.UNRECOGNIZED : result;
   }
 
+  public static final int RESOURCE_ID_FIELD_NUMBER = 9;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceId_ = "";
+  /**
+   * <pre>
+   * unique resource id of the insight
+   * </pre>
+   *
+   * <code>string resource_id = 9 [json_name = "resourceId"];</code>
+   * @return The resourceId.
+   */
+  @java.lang.Override
+  public java.lang.String getResourceId() {
+    java.lang.Object ref = resourceId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      resourceId_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * unique resource id of the insight
+   * </pre>
+   *
+   * <code>string resource_id = 9 [json_name = "resourceId"];</code>
+   * @return The bytes for resourceId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getResourceIdBytes() {
+    java.lang.Object ref = resourceId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      resourceId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int STANDARD_INSIGHT_FIELD_NUMBER = 10;
+  private boolean standardInsight_ = false;
+  /**
+   * <pre>
+   * whether the insight is a standard insight
+   * </pre>
+   *
+   * <code>bool standard_insight = 10 [json_name = "standardInsight"];</code>
+   * @return The standardInsight.
+   */
+  @java.lang.Override
+  public boolean getStandardInsight() {
+    return standardInsight_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -307,6 +370,12 @@ private static final long serialVersionUID = 0L;
     if (insightPermissionType_ != com.tcn.cloud.api.api.commons.InsightPermissionType.INSIGHT_PERMISSION_TYPE_COMMON_LIBRARY.getNumber()) {
       output.writeEnum(8, insightPermissionType_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 9, resourceId_);
+    }
+    if (standardInsight_ != false) {
+      output.writeBool(10, standardInsight_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -341,6 +410,13 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(8, insightPermissionType_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, resourceId_);
+    }
+    if (standardInsight_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(10, standardInsight_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -368,6 +444,10 @@ private static final long serialVersionUID = 0L;
     if (!getBody()
         .equals(other.getBody())) return false;
     if (insightPermissionType_ != other.insightPermissionType_) return false;
+    if (!getResourceId()
+        .equals(other.getResourceId())) return false;
+    if (getStandardInsight()
+        != other.getStandardInsight()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -394,6 +474,11 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getBody().hashCode();
     hash = (37 * hash) + INSIGHT_PERMISSION_TYPE_FIELD_NUMBER;
     hash = (53 * hash) + insightPermissionType_;
+    hash = (37 * hash) + RESOURCE_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getResourceId().hashCode();
+    hash = (37 * hash) + STANDARD_INSIGHT_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getStandardInsight());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -538,6 +623,8 @@ private static final long serialVersionUID = 0L;
       insightVersion_ = 0;
       body_ = "";
       insightPermissionType_ = 0;
+      resourceId_ = "";
+      standardInsight_ = false;
       return this;
     }
 
@@ -591,6 +678,12 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.insightPermissionType_ = insightPermissionType_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.resourceId_ = resourceId_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.standardInsight_ = standardInsight_;
       }
     }
 
@@ -665,6 +758,14 @@ private static final long serialVersionUID = 0L;
       if (other.insightPermissionType_ != 0) {
         setInsightPermissionTypeValue(other.getInsightPermissionTypeValue());
       }
+      if (!other.getResourceId().isEmpty()) {
+        resourceId_ = other.resourceId_;
+        bitField0_ |= 0x00000080;
+        onChanged();
+      }
+      if (other.getStandardInsight() != false) {
+        setStandardInsight(other.getStandardInsight());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -726,6 +827,16 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000040;
               break;
             } // case 64
+            case 74: {
+              resourceId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 74
+            case 80: {
+              standardInsight_ = input.readBool();
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 80
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1249,6 +1360,142 @@ private static final long serialVersionUID = 0L;
     public Builder clearInsightPermissionType() {
       bitField0_ = (bitField0_ & ~0x00000040);
       insightPermissionType_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object resourceId_ = "";
+    /**
+     * <pre>
+     * unique resource id of the insight
+     * </pre>
+     *
+     * <code>string resource_id = 9 [json_name = "resourceId"];</code>
+     * @return The resourceId.
+     */
+    public java.lang.String getResourceId() {
+      java.lang.Object ref = resourceId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        resourceId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * unique resource id of the insight
+     * </pre>
+     *
+     * <code>string resource_id = 9 [json_name = "resourceId"];</code>
+     * @return The bytes for resourceId.
+     */
+    public com.google.protobuf.ByteString
+        getResourceIdBytes() {
+      java.lang.Object ref = resourceId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        resourceId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * unique resource id of the insight
+     * </pre>
+     *
+     * <code>string resource_id = 9 [json_name = "resourceId"];</code>
+     * @param value The resourceId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setResourceId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      resourceId_ = value;
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * unique resource id of the insight
+     * </pre>
+     *
+     * <code>string resource_id = 9 [json_name = "resourceId"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearResourceId() {
+      resourceId_ = getDefaultInstance().getResourceId();
+      bitField0_ = (bitField0_ & ~0x00000080);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * unique resource id of the insight
+     * </pre>
+     *
+     * <code>string resource_id = 9 [json_name = "resourceId"];</code>
+     * @param value The bytes for resourceId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setResourceIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      resourceId_ = value;
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+
+    private boolean standardInsight_ ;
+    /**
+     * <pre>
+     * whether the insight is a standard insight
+     * </pre>
+     *
+     * <code>bool standard_insight = 10 [json_name = "standardInsight"];</code>
+     * @return The standardInsight.
+     */
+    @java.lang.Override
+    public boolean getStandardInsight() {
+      return standardInsight_;
+    }
+    /**
+     * <pre>
+     * whether the insight is a standard insight
+     * </pre>
+     *
+     * <code>bool standard_insight = 10 [json_name = "standardInsight"];</code>
+     * @param value The standardInsight to set.
+     * @return This builder for chaining.
+     */
+    public Builder setStandardInsight(boolean value) {
+
+      standardInsight_ = value;
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * whether the insight is a standard insight
+     * </pre>
+     *
+     * <code>bool standard_insight = 10 [json_name = "standardInsight"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearStandardInsight() {
+      bitField0_ = (bitField0_ & ~0x00000100);
+      standardInsight_ = false;
       onChanged();
       return this;
     }

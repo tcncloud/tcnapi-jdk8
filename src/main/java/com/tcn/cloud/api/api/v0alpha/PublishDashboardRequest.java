@@ -5,101 +5,54 @@ package com.tcn.cloud.api.api.v0alpha;
 
 /**
  * <pre>
- * DeleteDashboardRequest used in DeleteDashboard rpc
+ * PublishDashboardRequest used in PublishDashboard rpc
  * </pre>
  *
- * Protobuf type {@code api.v0alpha.DeleteDashboardRequest}
+ * Protobuf type {@code api.v0alpha.PublishDashboardRequest}
  */
-public final class DeleteDashboardRequest extends
+public final class PublishDashboardRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v0alpha.DeleteDashboardRequest)
-    DeleteDashboardRequestOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v0alpha.PublishDashboardRequest)
+    PublishDashboardRequestOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use DeleteDashboardRequest.newBuilder() to construct.
-  private DeleteDashboardRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use PublishDashboardRequest.newBuilder() to construct.
+  private PublishDashboardRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private DeleteDashboardRequest() {
-    dashboardId_ = "";
+  private PublishDashboardRequest() {
     resourceId_ = "";
+    destinationResourceId_ = "";
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new DeleteDashboardRequest();
+    return new PublishDashboardRequest();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v0alpha.DashboardsProto.internal_static_api_v0alpha_DeleteDashboardRequest_descriptor;
+    return com.tcn.cloud.api.api.v0alpha.DashboardsProto.internal_static_api_v0alpha_PublishDashboardRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v0alpha.DashboardsProto.internal_static_api_v0alpha_DeleteDashboardRequest_fieldAccessorTable
+    return com.tcn.cloud.api.api.v0alpha.DashboardsProto.internal_static_api_v0alpha_PublishDashboardRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v0alpha.DeleteDashboardRequest.class, com.tcn.cloud.api.api.v0alpha.DeleteDashboardRequest.Builder.class);
+            com.tcn.cloud.api.api.v0alpha.PublishDashboardRequest.class, com.tcn.cloud.api.api.v0alpha.PublishDashboardRequest.Builder.class);
   }
 
-  public static final int DASHBOARD_ID_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object dashboardId_ = "";
-  /**
-   * <pre>
-   * unique ID of dashboard to be deleted
-   * </pre>
-   *
-   * <code>string dashboard_id = 1 [json_name = "dashboardId"];</code>
-   * @return The dashboardId.
-   */
-  @java.lang.Override
-  public java.lang.String getDashboardId() {
-    java.lang.Object ref = dashboardId_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      dashboardId_ = s;
-      return s;
-    }
-  }
-  /**
-   * <pre>
-   * unique ID of dashboard to be deleted
-   * </pre>
-   *
-   * <code>string dashboard_id = 1 [json_name = "dashboardId"];</code>
-   * @return The bytes for dashboardId.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getDashboardIdBytes() {
-    java.lang.Object ref = dashboardId_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      dashboardId_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int RESOURCE_ID_FIELD_NUMBER = 2;
+  public static final int RESOURCE_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object resourceId_ = "";
   /**
    * <pre>
-   * resource id of the dashboard
+   * resource id of the dashboard to be published
    * </pre>
    *
-   * <code>string resource_id = 2 [json_name = "resourceId"];</code>
+   * <code>string resource_id = 1 [json_name = "resourceId"];</code>
    * @return The resourceId.
    */
   @java.lang.Override
@@ -117,10 +70,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * resource id of the dashboard
+   * resource id of the dashboard to be published
    * </pre>
    *
-   * <code>string resource_id = 2 [json_name = "resourceId"];</code>
+   * <code>string resource_id = 1 [json_name = "resourceId"];</code>
    * @return The bytes for resourceId.
    */
   @java.lang.Override
@@ -132,6 +85,55 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
       resourceId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int DESTINATION_RESOURCE_ID_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object destinationResourceId_ = "";
+  /**
+   * <pre>
+   * destination resource id can be emtpy to create
+   * a new resource or can be used to update an existing
+   * </pre>
+   *
+   * <code>string destination_resource_id = 2 [json_name = "destinationResourceId"];</code>
+   * @return The destinationResourceId.
+   */
+  @java.lang.Override
+  public java.lang.String getDestinationResourceId() {
+    java.lang.Object ref = destinationResourceId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      destinationResourceId_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * destination resource id can be emtpy to create
+   * a new resource or can be used to update an existing
+   * </pre>
+   *
+   * <code>string destination_resource_id = 2 [json_name = "destinationResourceId"];</code>
+   * @return The bytes for destinationResourceId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getDestinationResourceIdBytes() {
+    java.lang.Object ref = destinationResourceId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      destinationResourceId_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -152,11 +154,11 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dashboardId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, dashboardId_);
-    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, resourceId_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceId_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(destinationResourceId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, destinationResourceId_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -167,11 +169,11 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dashboardId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, dashboardId_);
-    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, resourceId_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceId_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(destinationResourceId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, destinationResourceId_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -183,15 +185,15 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v0alpha.DeleteDashboardRequest)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v0alpha.PublishDashboardRequest)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v0alpha.DeleteDashboardRequest other = (com.tcn.cloud.api.api.v0alpha.DeleteDashboardRequest) obj;
+    com.tcn.cloud.api.api.v0alpha.PublishDashboardRequest other = (com.tcn.cloud.api.api.v0alpha.PublishDashboardRequest) obj;
 
-    if (!getDashboardId()
-        .equals(other.getDashboardId())) return false;
     if (!getResourceId()
         .equals(other.getResourceId())) return false;
+    if (!getDestinationResourceId()
+        .equals(other.getDestinationResourceId())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -203,53 +205,53 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + DASHBOARD_ID_FIELD_NUMBER;
-    hash = (53 * hash) + getDashboardId().hashCode();
     hash = (37 * hash) + RESOURCE_ID_FIELD_NUMBER;
     hash = (53 * hash) + getResourceId().hashCode();
+    hash = (37 * hash) + DESTINATION_RESOURCE_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getDestinationResourceId().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v0alpha.DeleteDashboardRequest parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.PublishDashboardRequest parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v0alpha.DeleteDashboardRequest parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.PublishDashboardRequest parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v0alpha.DeleteDashboardRequest parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.PublishDashboardRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v0alpha.DeleteDashboardRequest parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.PublishDashboardRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v0alpha.DeleteDashboardRequest parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v0alpha.PublishDashboardRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v0alpha.DeleteDashboardRequest parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.PublishDashboardRequest parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v0alpha.DeleteDashboardRequest parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v0alpha.PublishDashboardRequest parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v0alpha.DeleteDashboardRequest parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.PublishDashboardRequest parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -257,26 +259,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v0alpha.DeleteDashboardRequest parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v0alpha.PublishDashboardRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v0alpha.DeleteDashboardRequest parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v0alpha.PublishDashboardRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v0alpha.DeleteDashboardRequest parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.PublishDashboardRequest parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v0alpha.DeleteDashboardRequest parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.PublishDashboardRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -289,7 +291,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v0alpha.DeleteDashboardRequest prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v0alpha.PublishDashboardRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -306,29 +308,29 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * DeleteDashboardRequest used in DeleteDashboard rpc
+   * PublishDashboardRequest used in PublishDashboard rpc
    * </pre>
    *
-   * Protobuf type {@code api.v0alpha.DeleteDashboardRequest}
+   * Protobuf type {@code api.v0alpha.PublishDashboardRequest}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v0alpha.DeleteDashboardRequest)
-      com.tcn.cloud.api.api.v0alpha.DeleteDashboardRequestOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v0alpha.PublishDashboardRequest)
+      com.tcn.cloud.api.api.v0alpha.PublishDashboardRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v0alpha.DashboardsProto.internal_static_api_v0alpha_DeleteDashboardRequest_descriptor;
+      return com.tcn.cloud.api.api.v0alpha.DashboardsProto.internal_static_api_v0alpha_PublishDashboardRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v0alpha.DashboardsProto.internal_static_api_v0alpha_DeleteDashboardRequest_fieldAccessorTable
+      return com.tcn.cloud.api.api.v0alpha.DashboardsProto.internal_static_api_v0alpha_PublishDashboardRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v0alpha.DeleteDashboardRequest.class, com.tcn.cloud.api.api.v0alpha.DeleteDashboardRequest.Builder.class);
+              com.tcn.cloud.api.api.v0alpha.PublishDashboardRequest.class, com.tcn.cloud.api.api.v0alpha.PublishDashboardRequest.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v0alpha.DeleteDashboardRequest.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v0alpha.PublishDashboardRequest.newBuilder()
     private Builder() {
 
     }
@@ -342,25 +344,25 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      dashboardId_ = "";
       resourceId_ = "";
+      destinationResourceId_ = "";
       return this;
     }
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v0alpha.DashboardsProto.internal_static_api_v0alpha_DeleteDashboardRequest_descriptor;
+      return com.tcn.cloud.api.api.v0alpha.DashboardsProto.internal_static_api_v0alpha_PublishDashboardRequest_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v0alpha.DeleteDashboardRequest getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v0alpha.DeleteDashboardRequest.getDefaultInstance();
+    public com.tcn.cloud.api.api.v0alpha.PublishDashboardRequest getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v0alpha.PublishDashboardRequest.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v0alpha.DeleteDashboardRequest build() {
-      com.tcn.cloud.api.api.v0alpha.DeleteDashboardRequest result = buildPartial();
+    public com.tcn.cloud.api.api.v0alpha.PublishDashboardRequest build() {
+      com.tcn.cloud.api.api.v0alpha.PublishDashboardRequest result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -368,20 +370,20 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v0alpha.DeleteDashboardRequest buildPartial() {
-      com.tcn.cloud.api.api.v0alpha.DeleteDashboardRequest result = new com.tcn.cloud.api.api.v0alpha.DeleteDashboardRequest(this);
+    public com.tcn.cloud.api.api.v0alpha.PublishDashboardRequest buildPartial() {
+      com.tcn.cloud.api.api.v0alpha.PublishDashboardRequest result = new com.tcn.cloud.api.api.v0alpha.PublishDashboardRequest(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.DeleteDashboardRequest result) {
+    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.PublishDashboardRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.dashboardId_ = dashboardId_;
+        result.resourceId_ = resourceId_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.resourceId_ = resourceId_;
+        result.destinationResourceId_ = destinationResourceId_;
       }
     }
 
@@ -419,23 +421,23 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v0alpha.DeleteDashboardRequest) {
-        return mergeFrom((com.tcn.cloud.api.api.v0alpha.DeleteDashboardRequest)other);
+      if (other instanceof com.tcn.cloud.api.api.v0alpha.PublishDashboardRequest) {
+        return mergeFrom((com.tcn.cloud.api.api.v0alpha.PublishDashboardRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v0alpha.DeleteDashboardRequest other) {
-      if (other == com.tcn.cloud.api.api.v0alpha.DeleteDashboardRequest.getDefaultInstance()) return this;
-      if (!other.getDashboardId().isEmpty()) {
-        dashboardId_ = other.dashboardId_;
+    public Builder mergeFrom(com.tcn.cloud.api.api.v0alpha.PublishDashboardRequest other) {
+      if (other == com.tcn.cloud.api.api.v0alpha.PublishDashboardRequest.getDefaultInstance()) return this;
+      if (!other.getResourceId().isEmpty()) {
+        resourceId_ = other.resourceId_;
         bitField0_ |= 0x00000001;
         onChanged();
       }
-      if (!other.getResourceId().isEmpty()) {
-        resourceId_ = other.resourceId_;
+      if (!other.getDestinationResourceId().isEmpty()) {
+        destinationResourceId_ = other.destinationResourceId_;
         bitField0_ |= 0x00000002;
         onChanged();
       }
@@ -466,12 +468,12 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              dashboardId_ = input.readStringRequireUtf8();
+              resourceId_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
-              resourceId_ = input.readStringRequireUtf8();
+              destinationResourceId_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000002;
               break;
             } // case 18
@@ -492,105 +494,13 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.lang.Object dashboardId_ = "";
-    /**
-     * <pre>
-     * unique ID of dashboard to be deleted
-     * </pre>
-     *
-     * <code>string dashboard_id = 1 [json_name = "dashboardId"];</code>
-     * @return The dashboardId.
-     */
-    public java.lang.String getDashboardId() {
-      java.lang.Object ref = dashboardId_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        dashboardId_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <pre>
-     * unique ID of dashboard to be deleted
-     * </pre>
-     *
-     * <code>string dashboard_id = 1 [json_name = "dashboardId"];</code>
-     * @return The bytes for dashboardId.
-     */
-    public com.google.protobuf.ByteString
-        getDashboardIdBytes() {
-      java.lang.Object ref = dashboardId_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        dashboardId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <pre>
-     * unique ID of dashboard to be deleted
-     * </pre>
-     *
-     * <code>string dashboard_id = 1 [json_name = "dashboardId"];</code>
-     * @param value The dashboardId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setDashboardId(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      dashboardId_ = value;
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * unique ID of dashboard to be deleted
-     * </pre>
-     *
-     * <code>string dashboard_id = 1 [json_name = "dashboardId"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearDashboardId() {
-      dashboardId_ = getDefaultInstance().getDashboardId();
-      bitField0_ = (bitField0_ & ~0x00000001);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * unique ID of dashboard to be deleted
-     * </pre>
-     *
-     * <code>string dashboard_id = 1 [json_name = "dashboardId"];</code>
-     * @param value The bytes for dashboardId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setDashboardIdBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      dashboardId_ = value;
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-
     private java.lang.Object resourceId_ = "";
     /**
      * <pre>
-     * resource id of the dashboard
+     * resource id of the dashboard to be published
      * </pre>
      *
-     * <code>string resource_id = 2 [json_name = "resourceId"];</code>
+     * <code>string resource_id = 1 [json_name = "resourceId"];</code>
      * @return The resourceId.
      */
     public java.lang.String getResourceId() {
@@ -607,10 +517,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * resource id of the dashboard
+     * resource id of the dashboard to be published
      * </pre>
      *
-     * <code>string resource_id = 2 [json_name = "resourceId"];</code>
+     * <code>string resource_id = 1 [json_name = "resourceId"];</code>
      * @return The bytes for resourceId.
      */
     public com.google.protobuf.ByteString
@@ -628,10 +538,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * resource id of the dashboard
+     * resource id of the dashboard to be published
      * </pre>
      *
-     * <code>string resource_id = 2 [json_name = "resourceId"];</code>
+     * <code>string resource_id = 1 [json_name = "resourceId"];</code>
      * @param value The resourceId to set.
      * @return This builder for chaining.
      */
@@ -639,30 +549,30 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       resourceId_ = value;
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * resource id of the dashboard
+     * resource id of the dashboard to be published
      * </pre>
      *
-     * <code>string resource_id = 2 [json_name = "resourceId"];</code>
+     * <code>string resource_id = 1 [json_name = "resourceId"];</code>
      * @return This builder for chaining.
      */
     public Builder clearResourceId() {
       resourceId_ = getDefaultInstance().getResourceId();
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * resource id of the dashboard
+     * resource id of the dashboard to be published
      * </pre>
      *
-     * <code>string resource_id = 2 [json_name = "resourceId"];</code>
+     * <code>string resource_id = 1 [json_name = "resourceId"];</code>
      * @param value The bytes for resourceId to set.
      * @return This builder for chaining.
      */
@@ -671,6 +581,103 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       resourceId_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object destinationResourceId_ = "";
+    /**
+     * <pre>
+     * destination resource id can be emtpy to create
+     * a new resource or can be used to update an existing
+     * </pre>
+     *
+     * <code>string destination_resource_id = 2 [json_name = "destinationResourceId"];</code>
+     * @return The destinationResourceId.
+     */
+    public java.lang.String getDestinationResourceId() {
+      java.lang.Object ref = destinationResourceId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        destinationResourceId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * destination resource id can be emtpy to create
+     * a new resource or can be used to update an existing
+     * </pre>
+     *
+     * <code>string destination_resource_id = 2 [json_name = "destinationResourceId"];</code>
+     * @return The bytes for destinationResourceId.
+     */
+    public com.google.protobuf.ByteString
+        getDestinationResourceIdBytes() {
+      java.lang.Object ref = destinationResourceId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        destinationResourceId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * destination resource id can be emtpy to create
+     * a new resource or can be used to update an existing
+     * </pre>
+     *
+     * <code>string destination_resource_id = 2 [json_name = "destinationResourceId"];</code>
+     * @param value The destinationResourceId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDestinationResourceId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      destinationResourceId_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * destination resource id can be emtpy to create
+     * a new resource or can be used to update an existing
+     * </pre>
+     *
+     * <code>string destination_resource_id = 2 [json_name = "destinationResourceId"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearDestinationResourceId() {
+      destinationResourceId_ = getDefaultInstance().getDestinationResourceId();
+      bitField0_ = (bitField0_ & ~0x00000002);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * destination resource id can be emtpy to create
+     * a new resource or can be used to update an existing
+     * </pre>
+     *
+     * <code>string destination_resource_id = 2 [json_name = "destinationResourceId"];</code>
+     * @param value The bytes for destinationResourceId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDestinationResourceIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      destinationResourceId_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
@@ -688,23 +695,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v0alpha.DeleteDashboardRequest)
+    // @@protoc_insertion_point(builder_scope:api.v0alpha.PublishDashboardRequest)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v0alpha.DeleteDashboardRequest)
-  private static final com.tcn.cloud.api.api.v0alpha.DeleteDashboardRequest DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v0alpha.PublishDashboardRequest)
+  private static final com.tcn.cloud.api.api.v0alpha.PublishDashboardRequest DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v0alpha.DeleteDashboardRequest();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v0alpha.PublishDashboardRequest();
   }
 
-  public static com.tcn.cloud.api.api.v0alpha.DeleteDashboardRequest getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v0alpha.PublishDashboardRequest getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<DeleteDashboardRequest>
-      PARSER = new com.google.protobuf.AbstractParser<DeleteDashboardRequest>() {
+  private static final com.google.protobuf.Parser<PublishDashboardRequest>
+      PARSER = new com.google.protobuf.AbstractParser<PublishDashboardRequest>() {
     @java.lang.Override
-    public DeleteDashboardRequest parsePartialFrom(
+    public PublishDashboardRequest parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -723,17 +730,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<DeleteDashboardRequest> parser() {
+  public static com.google.protobuf.Parser<PublishDashboardRequest> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<DeleteDashboardRequest> getParserForType() {
+  public com.google.protobuf.Parser<PublishDashboardRequest> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v0alpha.DeleteDashboardRequest getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v0alpha.PublishDashboardRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 
