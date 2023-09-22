@@ -23,6 +23,8 @@ private static final long serialVersionUID = 0L;
     callType_ = 0;
     agentUserId_ = "";
     description_ = "";
+    title_ = "";
+    status_ = 0;
   }
 
   @java.lang.Override
@@ -240,6 +242,79 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int TITLE_FIELD_NUMBER = 10;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object title_ = "";
+  /**
+   * <pre>
+   * Title of the learning opportunity.
+   * </pre>
+   *
+   * <code>string title = 10 [json_name = "title"];</code>
+   * @return The title.
+   */
+  @java.lang.Override
+  public java.lang.String getTitle() {
+    java.lang.Object ref = title_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      title_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Title of the learning opportunity.
+   * </pre>
+   *
+   * <code>string title = 10 [json_name = "title"];</code>
+   * @return The bytes for title.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getTitleBytes() {
+    java.lang.Object ref = title_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      title_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int STATUS_FIELD_NUMBER = 11;
+  private int status_ = 0;
+  /**
+   * <pre>
+   * Current status (ex: OPEN, COMPLETED).
+   * </pre>
+   *
+   * <code>.api.commons.LearningOpportunityStatus status = 11 [json_name = "status"];</code>
+   * @return The enum numeric value on the wire for status.
+   */
+  @java.lang.Override public int getStatusValue() {
+    return status_;
+  }
+  /**
+   * <pre>
+   * Current status (ex: OPEN, COMPLETED).
+   * </pre>
+   *
+   * <code>.api.commons.LearningOpportunityStatus status = 11 [json_name = "status"];</code>
+   * @return The status.
+   */
+  @java.lang.Override public com.tcn.cloud.api.api.commons.LearningOpportunityStatus getStatus() {
+    com.tcn.cloud.api.api.commons.LearningOpportunityStatus result = com.tcn.cloud.api.api.commons.LearningOpportunityStatus.forNumber(status_);
+    return result == null ? com.tcn.cloud.api.api.commons.LearningOpportunityStatus.UNRECOGNIZED : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -277,6 +352,12 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 9, description_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 10, title_);
+    }
+    if (status_ != com.tcn.cloud.api.api.commons.LearningOpportunityStatus.STATUS_OPEN.getNumber()) {
+      output.writeEnum(11, status_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -317,6 +398,13 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, description_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, title_);
+    }
+    if (status_ != com.tcn.cloud.api.api.commons.LearningOpportunityStatus.STATUS_OPEN.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(11, status_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -347,6 +435,9 @@ private static final long serialVersionUID = 0L;
         != other.getEndOffset()) return false;
     if (!getDescription()
         .equals(other.getDescription())) return false;
+    if (!getTitle()
+        .equals(other.getTitle())) return false;
+    if (status_ != other.status_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -377,6 +468,10 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getEndOffset();
     hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
     hash = (53 * hash) + getDescription().hashCode();
+    hash = (37 * hash) + TITLE_FIELD_NUMBER;
+    hash = (53 * hash) + getTitle().hashCode();
+    hash = (37 * hash) + STATUS_FIELD_NUMBER;
+    hash = (53 * hash) + status_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -520,6 +615,8 @@ private static final long serialVersionUID = 0L;
       startOffset_ = 0;
       endOffset_ = 0;
       description_ = "";
+      title_ = "";
+      status_ = 0;
       return this;
     }
 
@@ -576,6 +673,12 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.description_ = description_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.title_ = title_;
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.status_ = status_;
       }
     }
 
@@ -651,6 +754,14 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000080;
         onChanged();
       }
+      if (!other.getTitle().isEmpty()) {
+        title_ = other.title_;
+        bitField0_ |= 0x00000100;
+        onChanged();
+      }
+      if (other.status_ != 0) {
+        setStatusValue(other.getStatusValue());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -717,6 +828,16 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000080;
               break;
             } // case 74
+            case 82: {
+              title_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 82
+            case 88: {
+              status_ = input.readEnum();
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 88
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1207,6 +1328,171 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       description_ = value;
       bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object title_ = "";
+    /**
+     * <pre>
+     * Title of the learning opportunity.
+     * </pre>
+     *
+     * <code>string title = 10 [json_name = "title"];</code>
+     * @return The title.
+     */
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Title of the learning opportunity.
+     * </pre>
+     *
+     * <code>string title = 10 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Title of the learning opportunity.
+     * </pre>
+     *
+     * <code>string title = 10 [json_name = "title"];</code>
+     * @param value The title to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTitle(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      title_ = value;
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Title of the learning opportunity.
+     * </pre>
+     *
+     * <code>string title = 10 [json_name = "title"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTitle() {
+      title_ = getDefaultInstance().getTitle();
+      bitField0_ = (bitField0_ & ~0x00000100);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Title of the learning opportunity.
+     * </pre>
+     *
+     * <code>string title = 10 [json_name = "title"];</code>
+     * @param value The bytes for title to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTitleBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      title_ = value;
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+
+    private int status_ = 0;
+    /**
+     * <pre>
+     * Current status (ex: OPEN, COMPLETED).
+     * </pre>
+     *
+     * <code>.api.commons.LearningOpportunityStatus status = 11 [json_name = "status"];</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    @java.lang.Override public int getStatusValue() {
+      return status_;
+    }
+    /**
+     * <pre>
+     * Current status (ex: OPEN, COMPLETED).
+     * </pre>
+     *
+     * <code>.api.commons.LearningOpportunityStatus status = 11 [json_name = "status"];</code>
+     * @param value The enum numeric value on the wire for status to set.
+     * @return This builder for chaining.
+     */
+    public Builder setStatusValue(int value) {
+      status_ = value;
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Current status (ex: OPEN, COMPLETED).
+     * </pre>
+     *
+     * <code>.api.commons.LearningOpportunityStatus status = 11 [json_name = "status"];</code>
+     * @return The status.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.LearningOpportunityStatus getStatus() {
+      com.tcn.cloud.api.api.commons.LearningOpportunityStatus result = com.tcn.cloud.api.api.commons.LearningOpportunityStatus.forNumber(status_);
+      return result == null ? com.tcn.cloud.api.api.commons.LearningOpportunityStatus.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * Current status (ex: OPEN, COMPLETED).
+     * </pre>
+     *
+     * <code>.api.commons.LearningOpportunityStatus status = 11 [json_name = "status"];</code>
+     * @param value The status to set.
+     * @return This builder for chaining.
+     */
+    public Builder setStatus(com.tcn.cloud.api.api.commons.LearningOpportunityStatus value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000200;
+      status_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Current status (ex: OPEN, COMPLETED).
+     * </pre>
+     *
+     * <code>.api.commons.LearningOpportunityStatus status = 11 [json_name = "status"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearStatus() {
+      bitField0_ = (bitField0_ & ~0x00000200);
+      status_ = 0;
       onChanged();
       return this;
     }

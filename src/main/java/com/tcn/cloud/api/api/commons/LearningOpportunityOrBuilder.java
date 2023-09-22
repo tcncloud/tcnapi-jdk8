@@ -115,4 +115,43 @@ public interface LearningOpportunityOrBuilder extends
    */
   com.google.protobuf.ByteString
       getDescriptionBytes();
+
+  /**
+   * <pre>
+   * Title of the learning opportunity.
+   * </pre>
+   *
+   * <code>string title = 10 [json_name = "title"];</code>
+   * @return The title.
+   */
+  java.lang.String getTitle();
+  /**
+   * <pre>
+   * Title of the learning opportunity.
+   * </pre>
+   *
+   * <code>string title = 10 [json_name = "title"];</code>
+   * @return The bytes for title.
+   */
+  com.google.protobuf.ByteString
+      getTitleBytes();
+
+  /**
+   * <pre>
+   * Current status (ex: OPEN, COMPLETED).
+   * </pre>
+   *
+   * <code>.api.commons.LearningOpportunityStatus status = 11 [json_name = "status"];</code>
+   * @return The enum numeric value on the wire for status.
+   */
+  int getStatusValue();
+  /**
+   * <pre>
+   * Current status (ex: OPEN, COMPLETED).
+   * </pre>
+   *
+   * <code>.api.commons.LearningOpportunityStatus status = 11 [json_name = "status"];</code>
+   * @return The status.
+   */
+  com.tcn.cloud.api.api.commons.LearningOpportunityStatus getStatus();
 }

@@ -5,7 +5,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.57.2)",
+    value = "by gRPC proto compiler (version 1.58.0)",
     comments = "Source: api/v1alpha1/agenttraining/service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class AgentTrainingServiceGrpc {
@@ -75,6 +75,37 @@ public final class AgentTrainingServiceGrpc {
       }
     }
     return getListLearningOpportunitiesMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.agenttraining.ListAgentLearningOpportunitiesRequest,
+      com.tcn.cloud.api.api.v1alpha1.agenttraining.ListAgentLearningOpportunitiesResponse> getListAgentLearningOpportunitiesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListAgentLearningOpportunities",
+      requestType = com.tcn.cloud.api.api.v1alpha1.agenttraining.ListAgentLearningOpportunitiesRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.agenttraining.ListAgentLearningOpportunitiesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.agenttraining.ListAgentLearningOpportunitiesRequest,
+      com.tcn.cloud.api.api.v1alpha1.agenttraining.ListAgentLearningOpportunitiesResponse> getListAgentLearningOpportunitiesMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.agenttraining.ListAgentLearningOpportunitiesRequest, com.tcn.cloud.api.api.v1alpha1.agenttraining.ListAgentLearningOpportunitiesResponse> getListAgentLearningOpportunitiesMethod;
+    if ((getListAgentLearningOpportunitiesMethod = AgentTrainingServiceGrpc.getListAgentLearningOpportunitiesMethod) == null) {
+      synchronized (AgentTrainingServiceGrpc.class) {
+        if ((getListAgentLearningOpportunitiesMethod = AgentTrainingServiceGrpc.getListAgentLearningOpportunitiesMethod) == null) {
+          AgentTrainingServiceGrpc.getListAgentLearningOpportunitiesMethod = getListAgentLearningOpportunitiesMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.agenttraining.ListAgentLearningOpportunitiesRequest, com.tcn.cloud.api.api.v1alpha1.agenttraining.ListAgentLearningOpportunitiesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListAgentLearningOpportunities"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.agenttraining.ListAgentLearningOpportunitiesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.agenttraining.ListAgentLearningOpportunitiesResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new AgentTrainingServiceMethodDescriptorSupplier("ListAgentLearningOpportunities"))
+              .build();
+        }
+      }
+    }
+    return getListAgentLearningOpportunitiesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.agenttraining.UpdateLearningOpportunityRequest,
@@ -240,6 +271,16 @@ public final class AgentTrainingServiceGrpc {
 
     /**
      * <pre>
+     * ListAgentLearningOpportunities lists learning opportunities by agent.
+     * </pre>
+     */
+    default void listAgentLearningOpportunities(com.tcn.cloud.api.api.v1alpha1.agenttraining.ListAgentLearningOpportunitiesRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.agenttraining.ListAgentLearningOpportunitiesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAgentLearningOpportunitiesMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * UpdateLearningOpportunity updates a learning opportunity.
      * </pre>
      */
@@ -320,6 +361,17 @@ public final class AgentTrainingServiceGrpc {
 
     /**
      * <pre>
+     * ListAgentLearningOpportunities lists learning opportunities by agent.
+     * </pre>
+     */
+    public void listAgentLearningOpportunities(com.tcn.cloud.api.api.v1alpha1.agenttraining.ListAgentLearningOpportunitiesRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.agenttraining.ListAgentLearningOpportunitiesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListAgentLearningOpportunitiesMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * UpdateLearningOpportunity updates a learning opportunity.
      * </pre>
      */
@@ -386,6 +438,16 @@ public final class AgentTrainingServiceGrpc {
     public com.tcn.cloud.api.api.v1alpha1.agenttraining.ListLearningOpportunitiesResponse listLearningOpportunities(com.tcn.cloud.api.api.v1alpha1.agenttraining.ListLearningOpportunitiesRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListLearningOpportunitiesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * ListAgentLearningOpportunities lists learning opportunities by agent.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.agenttraining.ListAgentLearningOpportunitiesResponse listAgentLearningOpportunities(com.tcn.cloud.api.api.v1alpha1.agenttraining.ListAgentLearningOpportunitiesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListAgentLearningOpportunitiesMethod(), getCallOptions(), request);
     }
 
     /**
@@ -459,6 +521,17 @@ public final class AgentTrainingServiceGrpc {
 
     /**
      * <pre>
+     * ListAgentLearningOpportunities lists learning opportunities by agent.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.agenttraining.ListAgentLearningOpportunitiesResponse> listAgentLearningOpportunities(
+        com.tcn.cloud.api.api.v1alpha1.agenttraining.ListAgentLearningOpportunitiesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListAgentLearningOpportunitiesMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * UpdateLearningOpportunity updates a learning opportunity.
      * </pre>
      */
@@ -493,9 +566,10 @@ public final class AgentTrainingServiceGrpc {
 
   private static final int METHODID_CREATE_LEARNING_OPPORTUNITY = 0;
   private static final int METHODID_LIST_LEARNING_OPPORTUNITIES = 1;
-  private static final int METHODID_UPDATE_LEARNING_OPPORTUNITY = 2;
-  private static final int METHODID_DELETE_LEARNING_OPPORTUNITY = 3;
-  private static final int METHODID_GET_LEARNING_OPPORTUNITY = 4;
+  private static final int METHODID_LIST_AGENT_LEARNING_OPPORTUNITIES = 2;
+  private static final int METHODID_UPDATE_LEARNING_OPPORTUNITY = 3;
+  private static final int METHODID_DELETE_LEARNING_OPPORTUNITY = 4;
+  private static final int METHODID_GET_LEARNING_OPPORTUNITY = 5;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -521,6 +595,10 @@ public final class AgentTrainingServiceGrpc {
         case METHODID_LIST_LEARNING_OPPORTUNITIES:
           serviceImpl.listLearningOpportunities((com.tcn.cloud.api.api.v1alpha1.agenttraining.ListLearningOpportunitiesRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.agenttraining.ListLearningOpportunitiesResponse>) responseObserver);
+          break;
+        case METHODID_LIST_AGENT_LEARNING_OPPORTUNITIES:
+          serviceImpl.listAgentLearningOpportunities((com.tcn.cloud.api.api.v1alpha1.agenttraining.ListAgentLearningOpportunitiesRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.agenttraining.ListAgentLearningOpportunitiesResponse>) responseObserver);
           break;
         case METHODID_UPDATE_LEARNING_OPPORTUNITY:
           serviceImpl.updateLearningOpportunity((com.tcn.cloud.api.api.v1alpha1.agenttraining.UpdateLearningOpportunityRequest) request,
@@ -566,6 +644,13 @@ public final class AgentTrainingServiceGrpc {
               com.tcn.cloud.api.api.v1alpha1.agenttraining.ListLearningOpportunitiesRequest,
               com.tcn.cloud.api.api.v1alpha1.agenttraining.ListLearningOpportunitiesResponse>(
                 service, METHODID_LIST_LEARNING_OPPORTUNITIES)))
+        .addMethod(
+          getListAgentLearningOpportunitiesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.agenttraining.ListAgentLearningOpportunitiesRequest,
+              com.tcn.cloud.api.api.v1alpha1.agenttraining.ListAgentLearningOpportunitiesResponse>(
+                service, METHODID_LIST_AGENT_LEARNING_OPPORTUNITIES)))
         .addMethod(
           getUpdateLearningOpportunityMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -637,6 +722,7 @@ public final class AgentTrainingServiceGrpc {
               .setSchemaDescriptor(new AgentTrainingServiceFileDescriptorSupplier())
               .addMethod(getCreateLearningOpportunityMethod())
               .addMethod(getListLearningOpportunitiesMethod())
+              .addMethod(getListAgentLearningOpportunitiesMethod())
               .addMethod(getUpdateLearningOpportunityMethod())
               .addMethod(getDeleteLearningOpportunityMethod())
               .addMethod(getGetLearningOpportunityMethod())

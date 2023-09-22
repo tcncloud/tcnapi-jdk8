@@ -29,7 +29,7 @@ public final class AgentTrainingProto {
   static {
     java.lang.String[] descriptorData = {
       "\n api/commons/agent_training.proto\022\013api." +
-      "commons\032\025api/commons/acd.proto\"\320\002\n\023Learn" +
+      "commons\032\025api/commons/acd.proto\"\246\003\n\023Learn" +
       "ingOpportunity\0226\n\027learning_opportunity_i" +
       "d\030\002 \001(\003R\025learningOpportunityId\022\031\n\010call_s" +
       "id\030\003 \001(\003R\007callSid\0227\n\tcall_type\030\004 \001(\0162\032.a" +
@@ -38,10 +38,14 @@ public final class AgentTrainingProto {
       "nt_user_id\030\006 \001(\tR\013agentUserId\022!\n\014start_o" +
       "ffset\030\007 \001(\005R\013startOffset\022\035\n\nend_offset\030\010" +
       " \001(\005R\tendOffset\022 \n\013description\030\t \001(\tR\013de" +
-      "scriptionB\200\001\n\035com.tcn.cloud.api.api.comm" +
-      "onsB\022AgentTrainingProtoP\001\242\002\003ACX\252\002\013Api.Co" +
-      "mmons\312\002\013Api\\Commons\342\002\027Api\\Commons\\GPBMet" +
-      "adata\352\002\014Api::Commonsb\006proto3"
+      "scription\022\024\n\005title\030\n \001(\tR\005title\022>\n\006statu" +
+      "s\030\013 \001(\0162&.api.commons.LearningOpportunit" +
+      "yStatusR\006status*B\n\031LearningOpportunitySt" +
+      "atus\022\017\n\013STATUS_OPEN\020\000\022\024\n\020STATUS_COMPLETE" +
+      "D\020\001B\200\001\n\035com.tcn.cloud.api.api.commonsB\022A" +
+      "gentTrainingProtoP\001\242\002\003ACX\252\002\013Api.Commons\312" +
+      "\002\013Api\\Commons\342\002\027Api\\Commons\\GPBMetadata\352" +
+      "\002\014Api::Commonsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -53,7 +57,7 @@ public final class AgentTrainingProto {
     internal_static_api_commons_LearningOpportunity_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_LearningOpportunity_descriptor,
-        new java.lang.String[] { "LearningOpportunityId", "CallSid", "CallType", "TranscriptSid", "AgentUserId", "StartOffset", "EndOffset", "Description", });
+        new java.lang.String[] { "LearningOpportunityId", "CallSid", "CallType", "TranscriptSid", "AgentUserId", "StartOffset", "EndOffset", "Description", "Title", "Status", });
     com.tcn.cloud.api.api.commons.AcdProto.getDescriptor();
   }
 
