@@ -144,4 +144,14 @@ public interface InsightOrBuilder extends
    */
   com.google.protobuf.ByteString
       getResourceIdBytes();
+
+  /**
+   * <pre>
+   * whether the insight is a standard insight
+   * </pre>
+   *
+   * <code>bool standard_insight = 10 [json_name = "standardInsight"];</code>
+   * @return The standardInsight.
+   */
+  boolean getStandardInsight();
 }
