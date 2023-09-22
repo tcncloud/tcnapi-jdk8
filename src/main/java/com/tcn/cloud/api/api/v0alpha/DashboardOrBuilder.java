@@ -167,4 +167,14 @@ public interface DashboardOrBuilder extends
    */
   com.google.protobuf.ByteString
       getResourceIdBytes();
+
+  /**
+   * <pre>
+   * standard dashboard flag
+   * </pre>
+   *
+   * <code>bool standard_dashboard = 8 [json_name = "standardDashboard"];</code>
+   * @return The standardDashboard.
+   */
+  boolean getStandardDashboard();
 }
