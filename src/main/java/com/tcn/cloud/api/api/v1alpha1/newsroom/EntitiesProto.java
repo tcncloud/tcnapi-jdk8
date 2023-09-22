@@ -124,6 +124,21 @@ public final class EntitiesProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_newsroom_GetNewsForUserResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_newsroom_StoreNewsroomImageRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_newsroom_StoreNewsroomImageRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_newsroom_NewsroomImage_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_newsroom_NewsroomImage_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_newsroom_StoreNewsroomImageResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_newsroom_StoreNewsroomImageResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -208,12 +223,19 @@ public final class EntitiesProto {
       "quest\"\204\001\n\026GetNewsForUserResponse\022j\n\031publ" +
       "ished_article_details\030\001 \003(\0132..api.v1alph" +
       "a1.newsroom.PublishedArticleDetailsR\027pub" +
-      "lishedArticleDetailsB\256\001\n\'com.tcn.cloud.a" +
-      "pi.api.v1alpha1.newsroomB\rEntitiesProtoP" +
-      "\001\242\002\003AVN\252\002\025Api.V1alpha1.Newsroom\312\002\025Api\\V1" +
-      "alpha1\\Newsroom\342\002!Api\\V1alpha1\\Newsroom\\" +
-      "GPBMetadata\352\002\027Api::V1alpha1::Newsroomb\006p" +
-      "roto3"
+      "lishedArticleDetails\"W\n\031StoreNewsroomIma" +
+      "geRequest\022:\n\005image\030\001 \001(\0132$.api.v1alpha1." +
+      "newsroom.NewsroomImageR\005image\"`\n\rNewsroo" +
+      "mImage\022\022\n\004uuid\030\001 \001(\tR\004uuid\022\030\n\007content\030\002 " +
+      "\001(\tR\007content\022!\n\014download_url\030\003 \001(\tR\013down" +
+      "loadUrl\"X\n\032StoreNewsroomImageResponse\022:\n" +
+      "\005image\030\001 \001(\0132$.api.v1alpha1.newsroom.New" +
+      "sroomImageR\005imageB\256\001\n\'com.tcn.cloud.api." +
+      "api.v1alpha1.newsroomB\rEntitiesProtoP\001\242\002" +
+      "\003AVN\252\002\025Api.V1alpha1.Newsroom\312\002\025Api\\V1alp" +
+      "ha1\\Newsroom\342\002!Api\\V1alpha1\\Newsroom\\GPB" +
+      "Metadata\352\002\027Api::V1alpha1::Newsroomb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -354,6 +376,24 @@ public final class EntitiesProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_newsroom_GetNewsForUserResponse_descriptor,
         new java.lang.String[] { "PublishedArticleDetails", });
+    internal_static_api_v1alpha1_newsroom_StoreNewsroomImageRequest_descriptor =
+      getDescriptor().getMessageTypes().get(21);
+    internal_static_api_v1alpha1_newsroom_StoreNewsroomImageRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_newsroom_StoreNewsroomImageRequest_descriptor,
+        new java.lang.String[] { "Image", });
+    internal_static_api_v1alpha1_newsroom_NewsroomImage_descriptor =
+      getDescriptor().getMessageTypes().get(22);
+    internal_static_api_v1alpha1_newsroom_NewsroomImage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_newsroom_NewsroomImage_descriptor,
+        new java.lang.String[] { "Uuid", "Content", "DownloadUrl", });
+    internal_static_api_v1alpha1_newsroom_StoreNewsroomImageResponse_descriptor =
+      getDescriptor().getMessageTypes().get(23);
+    internal_static_api_v1alpha1_newsroom_StoreNewsroomImageResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_newsroom_StoreNewsroomImageResponse_descriptor,
+        new java.lang.String[] { "Image", });
     com.tcn.cloud.api.api.commons.NewsroomProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
