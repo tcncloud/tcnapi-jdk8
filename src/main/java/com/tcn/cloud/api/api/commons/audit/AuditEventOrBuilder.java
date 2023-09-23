@@ -2419,5 +2419,32 @@ public interface AuditEventOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEventOrBuilder getAgentTrainingCreateLearningOpportunityEventOrBuilder();
 
+  /**
+   * <pre>
+   * LMS Events class 900
+   * </pre>
+   *
+   * <code>.api.commons.audit.LMSPipelineFailureEvent lms_pipeline_failure_event = 900 [json_name = "lmsPipelineFailureEvent"];</code>
+   * @return Whether the lmsPipelineFailureEvent field is set.
+   */
+  boolean hasLmsPipelineFailureEvent();
+  /**
+   * <pre>
+   * LMS Events class 900
+   * </pre>
+   *
+   * <code>.api.commons.audit.LMSPipelineFailureEvent lms_pipeline_failure_event = 900 [json_name = "lmsPipelineFailureEvent"];</code>
+   * @return The lmsPipelineFailureEvent.
+   */
+  com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent getLmsPipelineFailureEvent();
+  /**
+   * <pre>
+   * LMS Events class 900
+   * </pre>
+   *
+   * <code>.api.commons.audit.LMSPipelineFailureEvent lms_pipeline_failure_event = 900 [json_name = "lmsPipelineFailureEvent"];</code>
+   */
+  com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEventOrBuilder getLmsPipelineFailureEventOrBuilder();
+
   com.tcn.cloud.api.api.commons.audit.AuditEvent.EventCase getEventCase();
 }
