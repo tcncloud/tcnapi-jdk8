@@ -13,10 +13,18 @@ package com.tcn.cloud.api.api.commons;
 public enum LearningOpportunityStatus
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
+   * <pre>
+   * Default status - Ready to be completed by the agent.
+   * </pre>
+   *
    * <code>STATUS_OPEN = 0;</code>
    */
   STATUS_OPEN(0),
   /**
+   * <pre>
+   * Agent has completed the learning opportunity.
+   * </pre>
+   *
    * <code>STATUS_COMPLETED = 1;</code>
    */
   STATUS_COMPLETED(1),
@@ -24,10 +32,18 @@ public enum LearningOpportunityStatus
   ;
 
   /**
+   * <pre>
+   * Default status - Ready to be completed by the agent.
+   * </pre>
+   *
    * <code>STATUS_OPEN = 0;</code>
    */
   public static final int STATUS_OPEN_VALUE = 0;
   /**
+   * <pre>
+   * Agent has completed the learning opportunity.
+   * </pre>
+   *
    * <code>STATUS_COMPLETED = 1;</code>
    */
   public static final int STATUS_COMPLETED_VALUE = 1;
