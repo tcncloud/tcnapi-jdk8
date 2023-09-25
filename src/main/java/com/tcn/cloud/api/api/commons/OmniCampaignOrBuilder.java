@@ -62,27 +62,31 @@ public interface OmniCampaignOrBuilder extends
    * skills associated with the campaign
    * </pre>
    *
-   * <code>.api.commons.OmniConversationSkills skills = 4 [json_name = "skills"];</code>
+   * <code>.api.commons.OmniConversationSkills skills = 4 [json_name = "skills", deprecated = true];</code>
+   * @deprecated api.commons.OmniCampaign.skills is deprecated.
+   *     See api/commons/omnichannel.proto;l=22
    * @return Whether the skills field is set.
    */
-  boolean hasSkills();
+  @java.lang.Deprecated boolean hasSkills();
   /**
    * <pre>
    * skills associated with the campaign
    * </pre>
    *
-   * <code>.api.commons.OmniConversationSkills skills = 4 [json_name = "skills"];</code>
+   * <code>.api.commons.OmniConversationSkills skills = 4 [json_name = "skills", deprecated = true];</code>
+   * @deprecated api.commons.OmniCampaign.skills is deprecated.
+   *     See api/commons/omnichannel.proto;l=22
    * @return The skills.
    */
-  com.tcn.cloud.api.api.commons.OmniConversationSkills getSkills();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.OmniConversationSkills getSkills();
   /**
    * <pre>
    * skills associated with the campaign
    * </pre>
    *
-   * <code>.api.commons.OmniConversationSkills skills = 4 [json_name = "skills"];</code>
+   * <code>.api.commons.OmniConversationSkills skills = 4 [json_name = "skills", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.OmniConversationSkillsOrBuilder getSkillsOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.OmniConversationSkillsOrBuilder getSkillsOrBuilder();
 
   /**
    * <pre>

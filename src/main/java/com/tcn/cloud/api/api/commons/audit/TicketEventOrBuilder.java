@@ -8,28 +8,16 @@ public interface TicketEventOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <pre>
-   * update ticket
-   * </pre>
-   *
    * <code>.api.commons.EditTicket editticket = 1 [json_name = "editticket"];</code>
    * @return Whether the editticket field is set.
    */
   boolean hasEditticket();
   /**
-   * <pre>
-   * update ticket
-   * </pre>
-   *
    * <code>.api.commons.EditTicket editticket = 1 [json_name = "editticket"];</code>
    * @return The editticket.
    */
   com.tcn.cloud.api.api.commons.EditTicket getEditticket();
   /**
-   * <pre>
-   * update ticket
-   * </pre>
-   *
    * <code>.api.commons.EditTicket editticket = 1 [json_name = "editticket"];</code>
    */
   com.tcn.cloud.api.api.commons.EditTicketOrBuilder getEditticketOrBuilder();

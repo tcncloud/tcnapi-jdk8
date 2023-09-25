@@ -140,6 +140,7 @@ private static final long serialVersionUID = 0L;
     COMPLIANCE_RND_QUERY_EVENT(700),
     COMPLIANCE_RND_QUERY_CACHED_EVENT(701),
     AGENT_TRAINING_CREATE_LEARNING_OPPORTUNITY_EVENT(800),
+    LMS_PIPELINE_FAILURE_EVENT(900),
     EVENT_NOT_SET(0);
     private final int value;
     private EventCase(int value) {
@@ -244,6 +245,7 @@ private static final long serialVersionUID = 0L;
         case 700: return COMPLIANCE_RND_QUERY_EVENT;
         case 701: return COMPLIANCE_RND_QUERY_CACHED_EVENT;
         case 800: return AGENT_TRAINING_CREATE_LEARNING_OPPORTUNITY_EVENT;
+        case 900: return LMS_PIPELINE_FAILURE_EVENT;
         case 0: return EVENT_NOT_SET;
         default: return null;
       }
@@ -4189,6 +4191,49 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent.getDefaultInstance();
   }
 
+  public static final int LMS_PIPELINE_FAILURE_EVENT_FIELD_NUMBER = 900;
+  /**
+   * <pre>
+   * LMS Events class 900
+   * </pre>
+   *
+   * <code>.api.commons.audit.LMSPipelineFailureEvent lms_pipeline_failure_event = 900 [json_name = "lmsPipelineFailureEvent"];</code>
+   * @return Whether the lmsPipelineFailureEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasLmsPipelineFailureEvent() {
+    return eventCase_ == 900;
+  }
+  /**
+   * <pre>
+   * LMS Events class 900
+   * </pre>
+   *
+   * <code>.api.commons.audit.LMSPipelineFailureEvent lms_pipeline_failure_event = 900 [json_name = "lmsPipelineFailureEvent"];</code>
+   * @return The lmsPipelineFailureEvent.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent getLmsPipelineFailureEvent() {
+    if (eventCase_ == 900) {
+       return (com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * LMS Events class 900
+   * </pre>
+   *
+   * <code>.api.commons.audit.LMSPipelineFailureEvent lms_pipeline_failure_event = 900 [json_name = "lmsPipelineFailureEvent"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEventOrBuilder getLmsPipelineFailureEventOrBuilder() {
+    if (eventCase_ == 900) {
+       return (com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -4481,6 +4526,9 @@ private static final long serialVersionUID = 0L;
     }
     if (eventCase_ == 800) {
       output.writeMessage(800, (com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent) event_);
+    }
+    if (eventCase_ == 900) {
+      output.writeMessage(900, (com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent) event_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -4858,6 +4906,10 @@ private static final long serialVersionUID = 0L;
     if (eventCase_ == 800) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(800, (com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent) event_);
+    }
+    if (eventCase_ == 900) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(900, (com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent) event_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -5238,6 +5290,10 @@ private static final long serialVersionUID = 0L;
         if (!getAgentTrainingCreateLearningOpportunityEvent()
             .equals(other.getAgentTrainingCreateLearningOpportunityEvent())) return false;
         break;
+      case 900:
+        if (!getLmsPipelineFailureEvent()
+            .equals(other.getLmsPipelineFailureEvent())) return false;
+        break;
       case 0:
       default:
     }
@@ -5614,6 +5670,10 @@ private static final long serialVersionUID = 0L;
       case 800:
         hash = (37 * hash) + AGENT_TRAINING_CREATE_LEARNING_OPPORTUNITY_EVENT_FIELD_NUMBER;
         hash = (53 * hash) + getAgentTrainingCreateLearningOpportunityEvent().hashCode();
+        break;
+      case 900:
+        hash = (37 * hash) + LMS_PIPELINE_FAILURE_EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getLmsPipelineFailureEvent().hashCode();
         break;
       case 0:
       default:
@@ -6025,6 +6085,9 @@ private static final long serialVersionUID = 0L;
       }
       if (agentTrainingCreateLearningOpportunityEventBuilder_ != null) {
         agentTrainingCreateLearningOpportunityEventBuilder_.clear();
+      }
+      if (lmsPipelineFailureEventBuilder_ != null) {
+        lmsPipelineFailureEventBuilder_.clear();
       }
       eventCase_ = 0;
       event_ = null;
@@ -6445,6 +6508,10 @@ private static final long serialVersionUID = 0L;
           agentTrainingCreateLearningOpportunityEventBuilder_ != null) {
         result.event_ = agentTrainingCreateLearningOpportunityEventBuilder_.build();
       }
+      if (eventCase_ == 900 &&
+          lmsPipelineFailureEventBuilder_ != null) {
+        result.event_ = lmsPipelineFailureEventBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -6864,6 +6931,10 @@ private static final long serialVersionUID = 0L;
         }
         case AGENT_TRAINING_CREATE_LEARNING_OPPORTUNITY_EVENT: {
           mergeAgentTrainingCreateLearningOpportunityEvent(other.getAgentTrainingCreateLearningOpportunityEvent());
+          break;
+        }
+        case LMS_PIPELINE_FAILURE_EVENT: {
+          mergeLmsPipelineFailureEvent(other.getLmsPipelineFailureEvent());
           break;
         }
         case EVENT_NOT_SET: {
@@ -7537,6 +7608,13 @@ private static final long serialVersionUID = 0L;
               eventCase_ = 800;
               break;
             } // case 6402
+            case 7202: {
+              input.readMessage(
+                  getLmsPipelineFailureEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              eventCase_ = 900;
+              break;
+            } // case 7202
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -23459,6 +23537,184 @@ private static final long serialVersionUID = 0L;
       eventCase_ = 800;
       onChanged();
       return agentTrainingCreateLearningOpportunityEventBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent, com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent.Builder, com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEventOrBuilder> lmsPipelineFailureEventBuilder_;
+    /**
+     * <pre>
+     * LMS Events class 900
+     * </pre>
+     *
+     * <code>.api.commons.audit.LMSPipelineFailureEvent lms_pipeline_failure_event = 900 [json_name = "lmsPipelineFailureEvent"];</code>
+     * @return Whether the lmsPipelineFailureEvent field is set.
+     */
+    @java.lang.Override
+    public boolean hasLmsPipelineFailureEvent() {
+      return eventCase_ == 900;
+    }
+    /**
+     * <pre>
+     * LMS Events class 900
+     * </pre>
+     *
+     * <code>.api.commons.audit.LMSPipelineFailureEvent lms_pipeline_failure_event = 900 [json_name = "lmsPipelineFailureEvent"];</code>
+     * @return The lmsPipelineFailureEvent.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent getLmsPipelineFailureEvent() {
+      if (lmsPipelineFailureEventBuilder_ == null) {
+        if (eventCase_ == 900) {
+          return (com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent.getDefaultInstance();
+      } else {
+        if (eventCase_ == 900) {
+          return lmsPipelineFailureEventBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * LMS Events class 900
+     * </pre>
+     *
+     * <code>.api.commons.audit.LMSPipelineFailureEvent lms_pipeline_failure_event = 900 [json_name = "lmsPipelineFailureEvent"];</code>
+     */
+    public Builder setLmsPipelineFailureEvent(com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent value) {
+      if (lmsPipelineFailureEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        event_ = value;
+        onChanged();
+      } else {
+        lmsPipelineFailureEventBuilder_.setMessage(value);
+      }
+      eventCase_ = 900;
+      return this;
+    }
+    /**
+     * <pre>
+     * LMS Events class 900
+     * </pre>
+     *
+     * <code>.api.commons.audit.LMSPipelineFailureEvent lms_pipeline_failure_event = 900 [json_name = "lmsPipelineFailureEvent"];</code>
+     */
+    public Builder setLmsPipelineFailureEvent(
+        com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent.Builder builderForValue) {
+      if (lmsPipelineFailureEventBuilder_ == null) {
+        event_ = builderForValue.build();
+        onChanged();
+      } else {
+        lmsPipelineFailureEventBuilder_.setMessage(builderForValue.build());
+      }
+      eventCase_ = 900;
+      return this;
+    }
+    /**
+     * <pre>
+     * LMS Events class 900
+     * </pre>
+     *
+     * <code>.api.commons.audit.LMSPipelineFailureEvent lms_pipeline_failure_event = 900 [json_name = "lmsPipelineFailureEvent"];</code>
+     */
+    public Builder mergeLmsPipelineFailureEvent(com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent value) {
+      if (lmsPipelineFailureEventBuilder_ == null) {
+        if (eventCase_ == 900 &&
+            event_ != com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent.getDefaultInstance()) {
+          event_ = com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent.newBuilder((com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent) event_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          event_ = value;
+        }
+        onChanged();
+      } else {
+        if (eventCase_ == 900) {
+          lmsPipelineFailureEventBuilder_.mergeFrom(value);
+        } else {
+          lmsPipelineFailureEventBuilder_.setMessage(value);
+        }
+      }
+      eventCase_ = 900;
+      return this;
+    }
+    /**
+     * <pre>
+     * LMS Events class 900
+     * </pre>
+     *
+     * <code>.api.commons.audit.LMSPipelineFailureEvent lms_pipeline_failure_event = 900 [json_name = "lmsPipelineFailureEvent"];</code>
+     */
+    public Builder clearLmsPipelineFailureEvent() {
+      if (lmsPipelineFailureEventBuilder_ == null) {
+        if (eventCase_ == 900) {
+          eventCase_ = 0;
+          event_ = null;
+          onChanged();
+        }
+      } else {
+        if (eventCase_ == 900) {
+          eventCase_ = 0;
+          event_ = null;
+        }
+        lmsPipelineFailureEventBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * LMS Events class 900
+     * </pre>
+     *
+     * <code>.api.commons.audit.LMSPipelineFailureEvent lms_pipeline_failure_event = 900 [json_name = "lmsPipelineFailureEvent"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent.Builder getLmsPipelineFailureEventBuilder() {
+      return getLmsPipelineFailureEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * LMS Events class 900
+     * </pre>
+     *
+     * <code>.api.commons.audit.LMSPipelineFailureEvent lms_pipeline_failure_event = 900 [json_name = "lmsPipelineFailureEvent"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEventOrBuilder getLmsPipelineFailureEventOrBuilder() {
+      if ((eventCase_ == 900) && (lmsPipelineFailureEventBuilder_ != null)) {
+        return lmsPipelineFailureEventBuilder_.getMessageOrBuilder();
+      } else {
+        if (eventCase_ == 900) {
+          return (com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * LMS Events class 900
+     * </pre>
+     *
+     * <code>.api.commons.audit.LMSPipelineFailureEvent lms_pipeline_failure_event = 900 [json_name = "lmsPipelineFailureEvent"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent, com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent.Builder, com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEventOrBuilder> 
+        getLmsPipelineFailureEventFieldBuilder() {
+      if (lmsPipelineFailureEventBuilder_ == null) {
+        if (!(eventCase_ == 900)) {
+          event_ = com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent.getDefaultInstance();
+        }
+        lmsPipelineFailureEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent, com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent.Builder, com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEventOrBuilder>(
+                (com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent) event_,
+                getParentForChildren(),
+                isClean());
+        event_ = null;
+      }
+      eventCase_ = 900;
+      onChanged();
+      return lmsPipelineFailureEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

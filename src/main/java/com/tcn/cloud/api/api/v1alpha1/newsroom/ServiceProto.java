@@ -26,7 +26,7 @@ public final class ServiceProto {
       "\n#api/v1alpha1/newsroom/service.proto\022\025a" +
       "pi.v1alpha1.newsroom\032\027annotations/authz." +
       "proto\032$api/v1alpha1/newsroom/entities.pr" +
-      "oto\032\034google/api/annotations.proto2\313\016\n\013Ne" +
+      "oto\032\034google/api/annotations.proto2\250\020\n\013Ne" +
       "wsroomAPI\022\265\001\n\021CreateNewsArticle\022/.api.v1" +
       "alpha1.newsroom.CreateNewsArticleRequest" +
       "\0320.api.v1alpha1.newsroom.CreateNewsArtic" +
@@ -68,17 +68,22 @@ public final class ServiceProto {
       "rUser\022,.api.v1alpha1.newsroom.GetNewsFor" +
       "UserRequest\032-.api.v1alpha1.newsroom.GetN" +
       "ewsForUserResponse\"7\272\270\221\002\002\030\001\202\323\344\223\002*\"%/api/" +
-      "v1alpha1/newsroom/getnewsforuser:\001*\022\271\001\n\022" +
-      "StoreNewsroomImage\0220.api.v1alpha1.newsro" +
-      "om.StoreNewsroomImageRequest\0321.api.v1alp" +
-      "ha1.newsroom.StoreNewsroomImageResponse\"" +
-      ">\272\270\221\002\005\n\003\010\350 \202\323\344\223\002.\")/api/v1alpha1/newsroo" +
-      "m/storenewsroomimage:\001*B\255\001\n\'com.tcn.clou" +
-      "d.api.api.v1alpha1.newsroomB\014ServiceProt" +
-      "oP\001\242\002\003AVN\252\002\025Api.V1alpha1.Newsroom\312\002\025Api\\" +
-      "V1alpha1\\Newsroom\342\002!Api\\V1alpha1\\Newsroo" +
-      "m\\GPBMetadata\352\002\027Api::V1alpha1::Newsroomb" +
-      "\006proto3"
+      "v1alpha1/newsroom/getnewsforuser:\001*\022\305\001\n\025" +
+      "StoreNewsArticleImage\0223.api.v1alpha1.new" +
+      "sroom.StoreNewsArticleImageRequest\0324.api" +
+      ".v1alpha1.newsroom.StoreNewsArticleImage" +
+      "Response\"A\272\270\221\002\005\n\003\010\350 \202\323\344\223\0021\",/api/v1alpha" +
+      "1/newsroom/storenewsarticleimage:\001*\022\316\001\n\030" +
+      "ListImagesForNewsArticle\0226.api.v1alpha1." +
+      "newsroom.ListImagesForNewsArticleRequest" +
+      "\0327.api.v1alpha1.newsroom.ListImagesForNe" +
+      "wsArticleResponse\"A\272\270\221\002\002\030\001\202\323\344\223\0024\"//api/v" +
+      "1alpha1/newsroom/listimagesfornewsarticl" +
+      "e:\001*B\255\001\n\'com.tcn.cloud.api.api.v1alpha1." +
+      "newsroomB\014ServiceProtoP\001\242\002\003AVN\252\002\025Api.V1a" +
+      "lpha1.Newsroom\312\002\025Api\\V1alpha1\\Newsroom\342\002" +
+      "!Api\\V1alpha1\\Newsroom\\GPBMetadata\352\002\027Api" +
+      "::V1alpha1::Newsroomb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

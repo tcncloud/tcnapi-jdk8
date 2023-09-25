@@ -25,6 +25,11 @@ public final class NotificationsProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_org_UserSubscription_Room303_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_UserSubscription_Delivery_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_UserSubscription_Delivery_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_v1alpha1_org_AddUserSubscriptionRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -147,75 +152,78 @@ public final class NotificationsProto {
       "api.v1alpha1.org\032#api/commons/audit/even" +
       "t_types.proto\032\037api/commons/notifications" +
       ".proto\032 google/protobuf/field_mask.proto" +
-      "\"\346\002\n\020UserSubscription\022\'\n\017subscription_id" +
+      "\"\360\003\n\020UserSubscription\022\'\n\017subscription_id" +
       "\030\001 \001(\tR\016subscriptionId\022;\n\nevent_type\030\002 \001" +
       "(\0162\034.api.commons.audit.EventTypeR\teventT" +
       "ype\022\027\n\007user_id\030\003 \001(\tR\006userId\022F\n\007room303\030" +
       "d \001(\0132*.api.v1alpha1.org.UserSubscriptio" +
-      "n.Room303H\000R\007room303\0227\n\007filters\030\004 \003(\0132\035." +
-      "api.commons.FieldValueFilterR\007filters\022\030\n" +
-      "\007version\030\005 \001(\003R\007version\032&\n\007Room303\022\033\n\tro" +
-      "om_name\030\001 \001(\tR\010roomNameB\020\n\016deliver_metho" +
-      "d\"d\n\032AddUserSubscriptionRequest\022F\n\014subsc" +
-      "ription\030\001 \001(\0132\".api.v1alpha1.org.UserSub" +
-      "scriptionR\014subscription\"e\n\033AddUserSubscr" +
-      "iptionResponse\022F\n\014subscription\030\001 \001(\0132\".a" +
-      "pi.v1alpha1.org.UserSubscriptionR\014subscr" +
-      "iption\"\205\001\n\"AddUserSubscriptionByUserIdRe" +
-      "quest\022\027\n\007user_id\030\001 \001(\tR\006userId\022F\n\014subscr" +
-      "iption\030\002 \001(\0132\".api.v1alpha1.org.UserSubs" +
-      "criptionR\014subscription\"m\n#AddUserSubscri" +
-      "ptionByUserIdResponse\022F\n\014subscription\030\001 " +
-      "\001(\0132\".api.v1alpha1.org.UserSubscriptionR" +
-      "\014subscription\"E\n\032GetUserSubscriptionRequ" +
-      "est\022\'\n\017subscription_id\030\001 \001(\tR\016subscripti" +
-      "onId\"e\n\033GetUserSubscriptionResponse\022F\n\014s" +
-      "ubscription\030\001 \001(\0132\".api.v1alpha1.org.Use" +
-      "rSubscriptionR\014subscription\"f\n\"GetUserSu" +
-      "bscriptionByUserIdRequest\022\027\n\007user_id\030\001 \001" +
-      "(\tR\006userId\022\'\n\017subscription_id\030\002 \001(\tR\016sub" +
-      "scriptionId\"m\n#GetUserSubscriptionByUser" +
-      "IdResponse\022F\n\014subscription\030\001 \001(\0132\".api.v" +
-      "1alpha1.org.UserSubscriptionR\014subscripti" +
-      "on\"\242\001\n\035UpdateUserSubscriptionRequest\022F\n\014" +
-      "subscription\030\001 \001(\0132\".api.v1alpha1.org.Us" +
-      "erSubscriptionR\014subscription\0229\n\nfield_ma" +
-      "sk\030\002 \001(\0132\032.google.protobuf.FieldMaskR\tfi" +
-      "eldMask\"h\n\036UpdateUserSubscriptionRespons" +
-      "e\022F\n\014subscription\030\001 \001(\0132\".api.v1alpha1.o" +
-      "rg.UserSubscriptionR\014subscription\"\252\001\n%Up" +
-      "dateUserSubscriptionByUserIdRequest\022F\n\014s" +
-      "ubscription\030\001 \001(\0132\".api.v1alpha1.org.Use" +
-      "rSubscriptionR\014subscription\0229\n\nfield_mas" +
-      "k\030\002 \001(\0132\032.google.protobuf.FieldMaskR\tfie" +
-      "ldMask\"p\n&UpdateUserSubscriptionByUserId" +
-      "Response\022F\n\014subscription\030\001 \001(\0132\".api.v1a" +
+      "n.Room303H\000R\007room303\022J\n\010delivery\030\310\001 \001(\0132" +
+      "+.api.v1alpha1.org.UserSubscription.Deli" +
+      "veryH\000R\010delivery\0227\n\007filters\030\004 \003(\0132\035.api." +
+      "commons.FieldValueFilterR\007filters\022\030\n\007ver" +
+      "sion\030\005 \001(\003R\007version\032&\n\007Room303\022\033\n\troom_n" +
+      "ame\030\001 \001(\tR\010roomName\032<\n\010Delivery\0220\n\024trans" +
+      "fer_config_name\030\001 \001(\tR\022transferConfigNam" +
+      "eB\020\n\016deliver_method\"d\n\032AddUserSubscripti" +
+      "onRequest\022F\n\014subscription\030\001 \001(\0132\".api.v1" +
+      "alpha1.org.UserSubscriptionR\014subscriptio" +
+      "n\"e\n\033AddUserSubscriptionResponse\022F\n\014subs" +
+      "cription\030\001 \001(\0132\".api.v1alpha1.org.UserSu" +
+      "bscriptionR\014subscription\"\205\001\n\"AddUserSubs" +
+      "criptionByUserIdRequest\022\027\n\007user_id\030\001 \001(\t" +
+      "R\006userId\022F\n\014subscription\030\002 \001(\0132\".api.v1a" +
       "lpha1.org.UserSubscriptionR\014subscription" +
-      "\"H\n\035RemoveUserSubscriptionRequest\022\'\n\017sub" +
-      "scription_id\030\001 \001(\tR\016subscriptionId\" \n\036Re" +
-      "moveUserSubscriptionResponse\"i\n%RemoveUs" +
-      "erSubscriptionByUserIdRequest\022\027\n\007user_id" +
-      "\030\001 \001(\tR\006userId\022\'\n\017subscription_id\030\002 \001(\tR" +
-      "\016subscriptionId\"(\n&RemoveUserSubscriptio" +
-      "nByUserIdResponse\"\036\n\034ListUserSubscriptio" +
-      "nsRequest\"i\n\035ListUserSubscriptionsRespon" +
-      "se\022H\n\rsubscriptions\030\001 \003(\0132\".api.v1alpha1" +
-      ".org.UserSubscriptionR\rsubscriptions\"?\n$" +
-      "ListUserSubscriptionsByUserIdRequest\022\027\n\007" +
-      "user_id\030\001 \001(\tR\006userId\"q\n%ListUserSubscri" +
-      "ptionsByUserIdResponse\022H\n\rsubscriptions\030" +
-      "\001 \003(\0132\".api.v1alpha1.org.UserSubscriptio" +
-      "nR\rsubscriptions\"q\n\033ListOrgSubscriptions" +
-      "Request\022\025\n\006org_id\030\001 \001(\tR\005orgId\022;\n\nevent_" +
-      "type\030\002 \001(\0162\034.api.commons.audit.EventType" +
-      "R\teventType\"h\n\034ListOrgSubscriptionsRespo" +
-      "nse\022H\n\rsubscriptions\030\001 \003(\0132\".api.v1alpha" +
-      "1.org.UserSubscriptionR\rsubscriptionsB\232\001" +
-      "\n\"com.tcn.cloud.api.api.v1alpha1.orgB\022No" +
-      "tificationsProtoP\001\242\002\003AVO\252\002\020Api.V1alpha1." +
-      "Org\312\002\020Api\\V1alpha1\\Org\342\002\034Api\\V1alpha1\\Or" +
-      "g\\GPBMetadata\352\002\022Api::V1alpha1::Orgb\006prot" +
-      "o3"
+      "\"m\n#AddUserSubscriptionByUserIdResponse\022" +
+      "F\n\014subscription\030\001 \001(\0132\".api.v1alpha1.org" +
+      ".UserSubscriptionR\014subscription\"E\n\032GetUs" +
+      "erSubscriptionRequest\022\'\n\017subscription_id" +
+      "\030\001 \001(\tR\016subscriptionId\"e\n\033GetUserSubscri" +
+      "ptionResponse\022F\n\014subscription\030\001 \001(\0132\".ap" +
+      "i.v1alpha1.org.UserSubscriptionR\014subscri" +
+      "ption\"f\n\"GetUserSubscriptionByUserIdRequ" +
+      "est\022\027\n\007user_id\030\001 \001(\tR\006userId\022\'\n\017subscrip" +
+      "tion_id\030\002 \001(\tR\016subscriptionId\"m\n#GetUser" +
+      "SubscriptionByUserIdResponse\022F\n\014subscrip" +
+      "tion\030\001 \001(\0132\".api.v1alpha1.org.UserSubscr" +
+      "iptionR\014subscription\"\242\001\n\035UpdateUserSubsc" +
+      "riptionRequest\022F\n\014subscription\030\001 \001(\0132\".a" +
+      "pi.v1alpha1.org.UserSubscriptionR\014subscr" +
+      "iption\0229\n\nfield_mask\030\002 \001(\0132\032.google.prot" +
+      "obuf.FieldMaskR\tfieldMask\"h\n\036UpdateUserS" +
+      "ubscriptionResponse\022F\n\014subscription\030\001 \001(" +
+      "\0132\".api.v1alpha1.org.UserSubscriptionR\014s" +
+      "ubscription\"\252\001\n%UpdateUserSubscriptionBy" +
+      "UserIdRequest\022F\n\014subscription\030\001 \001(\0132\".ap" +
+      "i.v1alpha1.org.UserSubscriptionR\014subscri" +
+      "ption\0229\n\nfield_mask\030\002 \001(\0132\032.google.proto" +
+      "buf.FieldMaskR\tfieldMask\"p\n&UpdateUserSu" +
+      "bscriptionByUserIdResponse\022F\n\014subscripti" +
+      "on\030\001 \001(\0132\".api.v1alpha1.org.UserSubscrip" +
+      "tionR\014subscription\"H\n\035RemoveUserSubscrip" +
+      "tionRequest\022\'\n\017subscription_id\030\001 \001(\tR\016su" +
+      "bscriptionId\" \n\036RemoveUserSubscriptionRe" +
+      "sponse\"i\n%RemoveUserSubscriptionByUserId" +
+      "Request\022\027\n\007user_id\030\001 \001(\tR\006userId\022\'\n\017subs" +
+      "cription_id\030\002 \001(\tR\016subscriptionId\"(\n&Rem" +
+      "oveUserSubscriptionByUserIdResponse\"\036\n\034L" +
+      "istUserSubscriptionsRequest\"i\n\035ListUserS" +
+      "ubscriptionsResponse\022H\n\rsubscriptions\030\001 " +
+      "\003(\0132\".api.v1alpha1.org.UserSubscriptionR" +
+      "\rsubscriptions\"?\n$ListUserSubscriptionsB" +
+      "yUserIdRequest\022\027\n\007user_id\030\001 \001(\tR\006userId\"" +
+      "q\n%ListUserSubscriptionsByUserIdResponse" +
+      "\022H\n\rsubscriptions\030\001 \003(\0132\".api.v1alpha1.o" +
+      "rg.UserSubscriptionR\rsubscriptions\"q\n\033Li" +
+      "stOrgSubscriptionsRequest\022\025\n\006org_id\030\001 \001(" +
+      "\tR\005orgId\022;\n\nevent_type\030\002 \001(\0162\034.api.commo" +
+      "ns.audit.EventTypeR\teventType\"h\n\034ListOrg" +
+      "SubscriptionsResponse\022H\n\rsubscriptions\030\001" +
+      " \003(\0132\".api.v1alpha1.org.UserSubscription" +
+      "R\rsubscriptionsB\232\001\n\"com.tcn.cloud.api.ap" +
+      "i.v1alpha1.orgB\022NotificationsProtoP\001\242\002\003A" +
+      "VO\252\002\020Api.V1alpha1.Org\312\002\020Api\\V1alpha1\\Org" +
+      "\342\002\034Api\\V1alpha1\\Org\\GPBMetadata\352\002\022Api::V" +
+      "1alpha1::Orgb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -229,13 +237,19 @@ public final class NotificationsProto {
     internal_static_api_v1alpha1_org_UserSubscription_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_UserSubscription_descriptor,
-        new java.lang.String[] { "SubscriptionId", "EventType", "UserId", "Room303", "Filters", "Version", "DeliverMethod", });
+        new java.lang.String[] { "SubscriptionId", "EventType", "UserId", "Room303", "Delivery", "Filters", "Version", "DeliverMethod", });
     internal_static_api_v1alpha1_org_UserSubscription_Room303_descriptor =
       internal_static_api_v1alpha1_org_UserSubscription_descriptor.getNestedTypes().get(0);
     internal_static_api_v1alpha1_org_UserSubscription_Room303_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_UserSubscription_Room303_descriptor,
         new java.lang.String[] { "RoomName", });
+    internal_static_api_v1alpha1_org_UserSubscription_Delivery_descriptor =
+      internal_static_api_v1alpha1_org_UserSubscription_descriptor.getNestedTypes().get(1);
+    internal_static_api_v1alpha1_org_UserSubscription_Delivery_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_UserSubscription_Delivery_descriptor,
+        new java.lang.String[] { "TransferConfigName", });
     internal_static_api_v1alpha1_org_AddUserSubscriptionRequest_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_api_v1alpha1_org_AddUserSubscriptionRequest_fieldAccessorTable = new

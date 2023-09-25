@@ -702,6 +702,22 @@ public enum EventType
    */
   TICKET_CLOSE_EVENT(602),
   /**
+   * <code>TICKET_ACTION_CREATE_EVENT = 603;</code>
+   */
+  TICKET_ACTION_CREATE_EVENT(603),
+  /**
+   * <code>TICKET_ACTION_EDIT_EVENT = 604;</code>
+   */
+  TICKET_ACTION_EDIT_EVENT(604),
+  /**
+   * <code>TICKET_ACTION_STATE_CHANGE_EVENT = 605;</code>
+   */
+  TICKET_ACTION_STATE_CHANGE_EVENT(605),
+  /**
+   * <code>TICKET_PARTICIPANT_EVENT = 606;</code>
+   */
+  TICKET_PARTICIPANT_EVENT(606),
+  /**
    * <pre>
    * Compliance Events
    * rnd query event
@@ -727,6 +743,14 @@ public enum EventType
    * <code>AGENT_TRAINING_CREATE_LEARNING_OPPORTUNITY_EVENT = 800;</code>
    */
   AGENT_TRAINING_CREATE_LEARNING_OPPORTUNITY_EVENT(800),
+  /**
+   * <pre>
+   * LMS Events
+   * </pre>
+   *
+   * <code>LMS_PIPELINE_FAILURE_EVENT = 900;</code>
+   */
+  LMS_PIPELINE_FAILURE_EVENT(900),
   UNRECOGNIZED(-1),
   ;
 
@@ -1410,6 +1434,22 @@ public enum EventType
    */
   public static final int TICKET_CLOSE_EVENT_VALUE = 602;
   /**
+   * <code>TICKET_ACTION_CREATE_EVENT = 603;</code>
+   */
+  public static final int TICKET_ACTION_CREATE_EVENT_VALUE = 603;
+  /**
+   * <code>TICKET_ACTION_EDIT_EVENT = 604;</code>
+   */
+  public static final int TICKET_ACTION_EDIT_EVENT_VALUE = 604;
+  /**
+   * <code>TICKET_ACTION_STATE_CHANGE_EVENT = 605;</code>
+   */
+  public static final int TICKET_ACTION_STATE_CHANGE_EVENT_VALUE = 605;
+  /**
+   * <code>TICKET_PARTICIPANT_EVENT = 606;</code>
+   */
+  public static final int TICKET_PARTICIPANT_EVENT_VALUE = 606;
+  /**
    * <pre>
    * Compliance Events
    * rnd query event
@@ -1435,6 +1475,14 @@ public enum EventType
    * <code>AGENT_TRAINING_CREATE_LEARNING_OPPORTUNITY_EVENT = 800;</code>
    */
   public static final int AGENT_TRAINING_CREATE_LEARNING_OPPORTUNITY_EVENT_VALUE = 800;
+  /**
+   * <pre>
+   * LMS Events
+   * </pre>
+   *
+   * <code>LMS_PIPELINE_FAILURE_EVENT = 900;</code>
+   */
+  public static final int LMS_PIPELINE_FAILURE_EVENT_VALUE = 900;
 
 
   public final int getNumber() {
@@ -1551,9 +1599,14 @@ public enum EventType
       case 600: return TICKET_CREATE_EVENT;
       case 601: return TICKET_EDIT_EVENT;
       case 602: return TICKET_CLOSE_EVENT;
+      case 603: return TICKET_ACTION_CREATE_EVENT;
+      case 604: return TICKET_ACTION_EDIT_EVENT;
+      case 605: return TICKET_ACTION_STATE_CHANGE_EVENT;
+      case 606: return TICKET_PARTICIPANT_EVENT;
       case 700: return COMPLIANCE_RND_QUERY_EVENT;
       case 701: return COMPLIANCE_RND_QUERY_CACHED_EVENT;
       case 800: return AGENT_TRAINING_CREATE_LEARNING_OPPORTUNITY_EVENT;
+      case 900: return LMS_PIPELINE_FAILURE_EVENT;
       default: return null;
     }
   }

@@ -5,51 +5,51 @@ package com.tcn.cloud.api.api.v1alpha1.newsroom;
 
 /**
  * <pre>
- * response to upload url for images
+ * request to upload image for the news article
  * </pre>
  *
- * Protobuf type {@code api.v1alpha1.newsroom.StoreNewsroomImageResponse}
+ * Protobuf type {@code api.v1alpha1.newsroom.StoreNewsArticleImageRequest}
  */
-public final class StoreNewsroomImageResponse extends
+public final class StoreNewsArticleImageRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v1alpha1.newsroom.StoreNewsroomImageResponse)
-    StoreNewsroomImageResponseOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v1alpha1.newsroom.StoreNewsArticleImageRequest)
+    StoreNewsArticleImageRequestOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use StoreNewsroomImageResponse.newBuilder() to construct.
-  private StoreNewsroomImageResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use StoreNewsArticleImageRequest.newBuilder() to construct.
+  private StoreNewsArticleImageRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private StoreNewsroomImageResponse() {
+  private StoreNewsArticleImageRequest() {
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new StoreNewsroomImageResponse();
+    return new StoreNewsArticleImageRequest();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v1alpha1.newsroom.EntitiesProto.internal_static_api_v1alpha1_newsroom_StoreNewsroomImageResponse_descriptor;
+    return com.tcn.cloud.api.api.v1alpha1.newsroom.EntitiesProto.internal_static_api_v1alpha1_newsroom_StoreNewsArticleImageRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v1alpha1.newsroom.EntitiesProto.internal_static_api_v1alpha1_newsroom_StoreNewsroomImageResponse_fieldAccessorTable
+    return com.tcn.cloud.api.api.v1alpha1.newsroom.EntitiesProto.internal_static_api_v1alpha1_newsroom_StoreNewsArticleImageRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsroomImageResponse.class, com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsroomImageResponse.Builder.class);
+            com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsArticleImageRequest.class, com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsArticleImageRequest.Builder.class);
   }
 
   public static final int IMAGE_FIELD_NUMBER = 1;
-  private com.tcn.cloud.api.api.v1alpha1.newsroom.NewsroomImage image_;
+  private com.tcn.cloud.api.api.v1alpha1.newsroom.NewsArticleImage image_;
   /**
    * <pre>
-   * updated NewsroomImage details
+   * NewsArticleImage
    * </pre>
    *
-   * <code>.api.v1alpha1.newsroom.NewsroomImage image = 1 [json_name = "image"];</code>
+   * <code>.api.v1alpha1.newsroom.NewsArticleImage image = 1 [json_name = "image"];</code>
    * @return Whether the image field is set.
    */
   @java.lang.Override
@@ -58,26 +58,26 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * updated NewsroomImage details
+   * NewsArticleImage
    * </pre>
    *
-   * <code>.api.v1alpha1.newsroom.NewsroomImage image = 1 [json_name = "image"];</code>
+   * <code>.api.v1alpha1.newsroom.NewsArticleImage image = 1 [json_name = "image"];</code>
    * @return The image.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.newsroom.NewsroomImage getImage() {
-    return image_ == null ? com.tcn.cloud.api.api.v1alpha1.newsroom.NewsroomImage.getDefaultInstance() : image_;
+  public com.tcn.cloud.api.api.v1alpha1.newsroom.NewsArticleImage getImage() {
+    return image_ == null ? com.tcn.cloud.api.api.v1alpha1.newsroom.NewsArticleImage.getDefaultInstance() : image_;
   }
   /**
    * <pre>
-   * updated NewsroomImage details
+   * NewsArticleImage
    * </pre>
    *
-   * <code>.api.v1alpha1.newsroom.NewsroomImage image = 1 [json_name = "image"];</code>
+   * <code>.api.v1alpha1.newsroom.NewsArticleImage image = 1 [json_name = "image"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.newsroom.NewsroomImageOrBuilder getImageOrBuilder() {
-    return image_ == null ? com.tcn.cloud.api.api.v1alpha1.newsroom.NewsroomImage.getDefaultInstance() : image_;
+  public com.tcn.cloud.api.api.v1alpha1.newsroom.NewsArticleImageOrBuilder getImageOrBuilder() {
+    return image_ == null ? com.tcn.cloud.api.api.v1alpha1.newsroom.NewsArticleImage.getDefaultInstance() : image_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -120,10 +120,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsroomImageResponse)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsArticleImageRequest)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsroomImageResponse other = (com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsroomImageResponse) obj;
+    com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsArticleImageRequest other = (com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsArticleImageRequest) obj;
 
     if (hasImage() != other.hasImage()) return false;
     if (hasImage()) {
@@ -150,44 +150,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsroomImageResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsArticleImageRequest parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsroomImageResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsArticleImageRequest parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsroomImageResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsArticleImageRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsroomImageResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsArticleImageRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsroomImageResponse parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsArticleImageRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsroomImageResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsArticleImageRequest parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsroomImageResponse parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsArticleImageRequest parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsroomImageResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsArticleImageRequest parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -195,26 +195,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsroomImageResponse parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsArticleImageRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsroomImageResponse parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsArticleImageRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsroomImageResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsArticleImageRequest parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsroomImageResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsArticleImageRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -227,7 +227,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsroomImageResponse prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsArticleImageRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -244,29 +244,29 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * response to upload url for images
+   * request to upload image for the news article
    * </pre>
    *
-   * Protobuf type {@code api.v1alpha1.newsroom.StoreNewsroomImageResponse}
+   * Protobuf type {@code api.v1alpha1.newsroom.StoreNewsArticleImageRequest}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v1alpha1.newsroom.StoreNewsroomImageResponse)
-      com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsroomImageResponseOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v1alpha1.newsroom.StoreNewsArticleImageRequest)
+      com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsArticleImageRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v1alpha1.newsroom.EntitiesProto.internal_static_api_v1alpha1_newsroom_StoreNewsroomImageResponse_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.newsroom.EntitiesProto.internal_static_api_v1alpha1_newsroom_StoreNewsArticleImageRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v1alpha1.newsroom.EntitiesProto.internal_static_api_v1alpha1_newsroom_StoreNewsroomImageResponse_fieldAccessorTable
+      return com.tcn.cloud.api.api.v1alpha1.newsroom.EntitiesProto.internal_static_api_v1alpha1_newsroom_StoreNewsArticleImageRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsroomImageResponse.class, com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsroomImageResponse.Builder.class);
+              com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsArticleImageRequest.class, com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsArticleImageRequest.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsroomImageResponse.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsArticleImageRequest.newBuilder()
     private Builder() {
 
     }
@@ -291,17 +291,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v1alpha1.newsroom.EntitiesProto.internal_static_api_v1alpha1_newsroom_StoreNewsroomImageResponse_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.newsroom.EntitiesProto.internal_static_api_v1alpha1_newsroom_StoreNewsArticleImageRequest_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsroomImageResponse getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsroomImageResponse.getDefaultInstance();
+    public com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsArticleImageRequest getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsArticleImageRequest.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsroomImageResponse build() {
-      com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsroomImageResponse result = buildPartial();
+    public com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsArticleImageRequest build() {
+      com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsArticleImageRequest result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -309,14 +309,14 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsroomImageResponse buildPartial() {
-      com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsroomImageResponse result = new com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsroomImageResponse(this);
+    public com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsArticleImageRequest buildPartial() {
+      com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsArticleImageRequest result = new com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsArticleImageRequest(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsroomImageResponse result) {
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsArticleImageRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.image_ = imageBuilder_ == null
@@ -359,16 +359,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsroomImageResponse) {
-        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsroomImageResponse)other);
+      if (other instanceof com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsArticleImageRequest) {
+        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsArticleImageRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsroomImageResponse other) {
-      if (other == com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsroomImageResponse.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsArticleImageRequest other) {
+      if (other == com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsArticleImageRequest.getDefaultInstance()) return this;
       if (other.hasImage()) {
         mergeImage(other.getImage());
       }
@@ -422,15 +422,15 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private com.tcn.cloud.api.api.v1alpha1.newsroom.NewsroomImage image_;
+    private com.tcn.cloud.api.api.v1alpha1.newsroom.NewsArticleImage image_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.v1alpha1.newsroom.NewsroomImage, com.tcn.cloud.api.api.v1alpha1.newsroom.NewsroomImage.Builder, com.tcn.cloud.api.api.v1alpha1.newsroom.NewsroomImageOrBuilder> imageBuilder_;
+        com.tcn.cloud.api.api.v1alpha1.newsroom.NewsArticleImage, com.tcn.cloud.api.api.v1alpha1.newsroom.NewsArticleImage.Builder, com.tcn.cloud.api.api.v1alpha1.newsroom.NewsArticleImageOrBuilder> imageBuilder_;
     /**
      * <pre>
-     * updated NewsroomImage details
+     * NewsArticleImage
      * </pre>
      *
-     * <code>.api.v1alpha1.newsroom.NewsroomImage image = 1 [json_name = "image"];</code>
+     * <code>.api.v1alpha1.newsroom.NewsArticleImage image = 1 [json_name = "image"];</code>
      * @return Whether the image field is set.
      */
     public boolean hasImage() {
@@ -438,27 +438,27 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * updated NewsroomImage details
+     * NewsArticleImage
      * </pre>
      *
-     * <code>.api.v1alpha1.newsroom.NewsroomImage image = 1 [json_name = "image"];</code>
+     * <code>.api.v1alpha1.newsroom.NewsArticleImage image = 1 [json_name = "image"];</code>
      * @return The image.
      */
-    public com.tcn.cloud.api.api.v1alpha1.newsroom.NewsroomImage getImage() {
+    public com.tcn.cloud.api.api.v1alpha1.newsroom.NewsArticleImage getImage() {
       if (imageBuilder_ == null) {
-        return image_ == null ? com.tcn.cloud.api.api.v1alpha1.newsroom.NewsroomImage.getDefaultInstance() : image_;
+        return image_ == null ? com.tcn.cloud.api.api.v1alpha1.newsroom.NewsArticleImage.getDefaultInstance() : image_;
       } else {
         return imageBuilder_.getMessage();
       }
     }
     /**
      * <pre>
-     * updated NewsroomImage details
+     * NewsArticleImage
      * </pre>
      *
-     * <code>.api.v1alpha1.newsroom.NewsroomImage image = 1 [json_name = "image"];</code>
+     * <code>.api.v1alpha1.newsroom.NewsArticleImage image = 1 [json_name = "image"];</code>
      */
-    public Builder setImage(com.tcn.cloud.api.api.v1alpha1.newsroom.NewsroomImage value) {
+    public Builder setImage(com.tcn.cloud.api.api.v1alpha1.newsroom.NewsArticleImage value) {
       if (imageBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -473,13 +473,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * updated NewsroomImage details
+     * NewsArticleImage
      * </pre>
      *
-     * <code>.api.v1alpha1.newsroom.NewsroomImage image = 1 [json_name = "image"];</code>
+     * <code>.api.v1alpha1.newsroom.NewsArticleImage image = 1 [json_name = "image"];</code>
      */
     public Builder setImage(
-        com.tcn.cloud.api.api.v1alpha1.newsroom.NewsroomImage.Builder builderForValue) {
+        com.tcn.cloud.api.api.v1alpha1.newsroom.NewsArticleImage.Builder builderForValue) {
       if (imageBuilder_ == null) {
         image_ = builderForValue.build();
       } else {
@@ -491,16 +491,16 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * updated NewsroomImage details
+     * NewsArticleImage
      * </pre>
      *
-     * <code>.api.v1alpha1.newsroom.NewsroomImage image = 1 [json_name = "image"];</code>
+     * <code>.api.v1alpha1.newsroom.NewsArticleImage image = 1 [json_name = "image"];</code>
      */
-    public Builder mergeImage(com.tcn.cloud.api.api.v1alpha1.newsroom.NewsroomImage value) {
+    public Builder mergeImage(com.tcn.cloud.api.api.v1alpha1.newsroom.NewsArticleImage value) {
       if (imageBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0) &&
           image_ != null &&
-          image_ != com.tcn.cloud.api.api.v1alpha1.newsroom.NewsroomImage.getDefaultInstance()) {
+          image_ != com.tcn.cloud.api.api.v1alpha1.newsroom.NewsArticleImage.getDefaultInstance()) {
           getImageBuilder().mergeFrom(value);
         } else {
           image_ = value;
@@ -514,10 +514,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * updated NewsroomImage details
+     * NewsArticleImage
      * </pre>
      *
-     * <code>.api.v1alpha1.newsroom.NewsroomImage image = 1 [json_name = "image"];</code>
+     * <code>.api.v1alpha1.newsroom.NewsArticleImage image = 1 [json_name = "image"];</code>
      */
     public Builder clearImage() {
       bitField0_ = (bitField0_ & ~0x00000001);
@@ -531,44 +531,44 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * updated NewsroomImage details
+     * NewsArticleImage
      * </pre>
      *
-     * <code>.api.v1alpha1.newsroom.NewsroomImage image = 1 [json_name = "image"];</code>
+     * <code>.api.v1alpha1.newsroom.NewsArticleImage image = 1 [json_name = "image"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.newsroom.NewsroomImage.Builder getImageBuilder() {
+    public com.tcn.cloud.api.api.v1alpha1.newsroom.NewsArticleImage.Builder getImageBuilder() {
       bitField0_ |= 0x00000001;
       onChanged();
       return getImageFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * updated NewsroomImage details
+     * NewsArticleImage
      * </pre>
      *
-     * <code>.api.v1alpha1.newsroom.NewsroomImage image = 1 [json_name = "image"];</code>
+     * <code>.api.v1alpha1.newsroom.NewsArticleImage image = 1 [json_name = "image"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.newsroom.NewsroomImageOrBuilder getImageOrBuilder() {
+    public com.tcn.cloud.api.api.v1alpha1.newsroom.NewsArticleImageOrBuilder getImageOrBuilder() {
       if (imageBuilder_ != null) {
         return imageBuilder_.getMessageOrBuilder();
       } else {
         return image_ == null ?
-            com.tcn.cloud.api.api.v1alpha1.newsroom.NewsroomImage.getDefaultInstance() : image_;
+            com.tcn.cloud.api.api.v1alpha1.newsroom.NewsArticleImage.getDefaultInstance() : image_;
       }
     }
     /**
      * <pre>
-     * updated NewsroomImage details
+     * NewsArticleImage
      * </pre>
      *
-     * <code>.api.v1alpha1.newsroom.NewsroomImage image = 1 [json_name = "image"];</code>
+     * <code>.api.v1alpha1.newsroom.NewsArticleImage image = 1 [json_name = "image"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.v1alpha1.newsroom.NewsroomImage, com.tcn.cloud.api.api.v1alpha1.newsroom.NewsroomImage.Builder, com.tcn.cloud.api.api.v1alpha1.newsroom.NewsroomImageOrBuilder> 
+        com.tcn.cloud.api.api.v1alpha1.newsroom.NewsArticleImage, com.tcn.cloud.api.api.v1alpha1.newsroom.NewsArticleImage.Builder, com.tcn.cloud.api.api.v1alpha1.newsroom.NewsArticleImageOrBuilder> 
         getImageFieldBuilder() {
       if (imageBuilder_ == null) {
         imageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.v1alpha1.newsroom.NewsroomImage, com.tcn.cloud.api.api.v1alpha1.newsroom.NewsroomImage.Builder, com.tcn.cloud.api.api.v1alpha1.newsroom.NewsroomImageOrBuilder>(
+            com.tcn.cloud.api.api.v1alpha1.newsroom.NewsArticleImage, com.tcn.cloud.api.api.v1alpha1.newsroom.NewsArticleImage.Builder, com.tcn.cloud.api.api.v1alpha1.newsroom.NewsArticleImageOrBuilder>(
                 getImage(),
                 getParentForChildren(),
                 isClean());
@@ -589,23 +589,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v1alpha1.newsroom.StoreNewsroomImageResponse)
+    // @@protoc_insertion_point(builder_scope:api.v1alpha1.newsroom.StoreNewsArticleImageRequest)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v1alpha1.newsroom.StoreNewsroomImageResponse)
-  private static final com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsroomImageResponse DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v1alpha1.newsroom.StoreNewsArticleImageRequest)
+  private static final com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsArticleImageRequest DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsroomImageResponse();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsArticleImageRequest();
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsroomImageResponse getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsArticleImageRequest getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<StoreNewsroomImageResponse>
-      PARSER = new com.google.protobuf.AbstractParser<StoreNewsroomImageResponse>() {
+  private static final com.google.protobuf.Parser<StoreNewsArticleImageRequest>
+      PARSER = new com.google.protobuf.AbstractParser<StoreNewsArticleImageRequest>() {
     @java.lang.Override
-    public StoreNewsroomImageResponse parsePartialFrom(
+    public StoreNewsArticleImageRequest parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -624,17 +624,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<StoreNewsroomImageResponse> parser() {
+  public static com.google.protobuf.Parser<StoreNewsArticleImageRequest> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<StoreNewsroomImageResponse> getParserForType() {
+  public com.google.protobuf.Parser<StoreNewsArticleImageRequest> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsroomImageResponse getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v1alpha1.newsroom.StoreNewsArticleImageRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

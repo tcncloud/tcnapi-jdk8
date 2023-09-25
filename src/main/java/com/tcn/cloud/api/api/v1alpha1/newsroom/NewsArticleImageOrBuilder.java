@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.v1alpha1.newsroom;
 
-public interface NewsroomImageOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v1alpha1.newsroom.NewsroomImage)
+public interface NewsArticleImageOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v1alpha1.newsroom.NewsArticleImage)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -29,10 +29,20 @@ public interface NewsroomImageOrBuilder extends
 
   /**
    * <pre>
+   * image for the new article
+   * </pre>
+   *
+   * <code>int64 new_article_sid = 2 [json_name = "newArticleSid", jstype = JS_STRING];</code>
+   * @return The newArticleSid.
+   */
+  long getNewArticleSid();
+
+  /**
+   * <pre>
    * image content
    * </pre>
    *
-   * <code>string content = 2 [json_name = "content"];</code>
+   * <code>string content = 3 [json_name = "content"];</code>
    * @return The content.
    */
   java.lang.String getContent();
@@ -41,7 +51,7 @@ public interface NewsroomImageOrBuilder extends
    * image content
    * </pre>
    *
-   * <code>string content = 2 [json_name = "content"];</code>
+   * <code>string content = 3 [json_name = "content"];</code>
    * @return The bytes for content.
    */
   com.google.protobuf.ByteString
@@ -52,7 +62,7 @@ public interface NewsroomImageOrBuilder extends
    * download image url
    * </pre>
    *
-   * <code>string download_url = 3 [json_name = "downloadUrl"];</code>
+   * <code>string download_url = 4 [json_name = "downloadUrl"];</code>
    * @return The downloadUrl.
    */
   java.lang.String getDownloadUrl();
@@ -61,7 +71,7 @@ public interface NewsroomImageOrBuilder extends
    * download image url
    * </pre>
    *
-   * <code>string download_url = 3 [json_name = "downloadUrl"];</code>
+   * <code>string download_url = 4 [json_name = "downloadUrl"];</code>
    * @return The bytes for downloadUrl.
    */
   com.google.protobuf.ByteString

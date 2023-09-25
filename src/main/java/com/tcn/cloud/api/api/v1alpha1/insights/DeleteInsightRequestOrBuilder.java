@@ -16,4 +16,24 @@ public interface DeleteInsightRequestOrBuilder extends
    * @return The insightId.
    */
   long getInsightId();
+
+  /**
+   * <pre>
+   * resource id of the insight to delete
+   * </pre>
+   *
+   * <code>string resource_id = 2 [json_name = "resourceId"];</code>
+   * @return The resourceId.
+   */
+  java.lang.String getResourceId();
+  /**
+   * <pre>
+   * resource id of the insight to delete
+   * </pre>
+   *
+   * <code>string resource_id = 2 [json_name = "resourceId"];</code>
+   * @return The bytes for resourceId.
+   */
+  com.google.protobuf.ByteString
+      getResourceIdBytes();
 }
