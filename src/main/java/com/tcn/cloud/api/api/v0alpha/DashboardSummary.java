@@ -249,6 +249,21 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int STANDARD_DASHBOARD_FIELD_NUMBER = 6;
+  private boolean standardDashboard_ = false;
+  /**
+   * <pre>
+   * standard dashboard flag
+   * </pre>
+   *
+   * <code>bool standard_dashboard = 6 [json_name = "standardDashboard"];</code>
+   * @return The standardDashboard.
+   */
+  @java.lang.Override
+  public boolean getStandardDashboard() {
+    return standardDashboard_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -278,6 +293,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, resourceId_);
     }
+    if (standardDashboard_ != false) {
+      output.writeBool(6, standardDashboard_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -302,6 +320,10 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, resourceId_);
+    }
+    if (standardDashboard_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(6, standardDashboard_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -328,6 +350,8 @@ private static final long serialVersionUID = 0L;
         != other.getPanelCount()) return false;
     if (!getResourceId()
         .equals(other.getResourceId())) return false;
+    if (getStandardDashboard()
+        != other.getStandardDashboard()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -349,6 +373,9 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getPanelCount();
     hash = (37 * hash) + RESOURCE_ID_FIELD_NUMBER;
     hash = (53 * hash) + getResourceId().hashCode();
+    hash = (37 * hash) + STANDARD_DASHBOARD_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getStandardDashboard());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -489,6 +516,7 @@ private static final long serialVersionUID = 0L;
       description_ = "";
       panelCount_ = 0;
       resourceId_ = "";
+      standardDashboard_ = false;
       return this;
     }
 
@@ -536,6 +564,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.resourceId_ = resourceId_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.standardDashboard_ = standardDashboard_;
       }
     }
 
@@ -606,6 +637,9 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000010;
         onChanged();
       }
+      if (other.getStandardDashboard() != false) {
+        setStandardDashboard(other.getStandardDashboard());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -657,6 +691,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000010;
               break;
             } // case 42
+            case 48: {
+              standardDashboard_ = input.readBool();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 48
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1082,6 +1121,50 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       resourceId_ = value;
       bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+
+    private boolean standardDashboard_ ;
+    /**
+     * <pre>
+     * standard dashboard flag
+     * </pre>
+     *
+     * <code>bool standard_dashboard = 6 [json_name = "standardDashboard"];</code>
+     * @return The standardDashboard.
+     */
+    @java.lang.Override
+    public boolean getStandardDashboard() {
+      return standardDashboard_;
+    }
+    /**
+     * <pre>
+     * standard dashboard flag
+     * </pre>
+     *
+     * <code>bool standard_dashboard = 6 [json_name = "standardDashboard"];</code>
+     * @param value The standardDashboard to set.
+     * @return This builder for chaining.
+     */
+    public Builder setStandardDashboard(boolean value) {
+
+      standardDashboard_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * standard dashboard flag
+     * </pre>
+     *
+     * <code>bool standard_dashboard = 6 [json_name = "standardDashboard"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearStandardDashboard() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      standardDashboard_ = false;
       onChanged();
       return this;
     }
