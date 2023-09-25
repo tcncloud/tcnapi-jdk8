@@ -118,10 +118,37 @@ public interface LearningOpportunityOrBuilder extends
 
   /**
    * <pre>
+   * Time the learning opportunity was created at.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp created_at = 10 [json_name = "createdAt"];</code>
+   * @return Whether the createdAt field is set.
+   */
+  boolean hasCreatedAt();
+  /**
+   * <pre>
+   * Time the learning opportunity was created at.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp created_at = 10 [json_name = "createdAt"];</code>
+   * @return The createdAt.
+   */
+  com.google.protobuf.Timestamp getCreatedAt();
+  /**
+   * <pre>
+   * Time the learning opportunity was created at.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp created_at = 10 [json_name = "createdAt"];</code>
+   */
+  com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
+
+  /**
+   * <pre>
    * Title of the learning opportunity.
    * </pre>
    *
-   * <code>string title = 10 [json_name = "title"];</code>
+   * <code>string title = 12 [json_name = "title"];</code>
    * @return The title.
    */
   java.lang.String getTitle();
@@ -130,7 +157,7 @@ public interface LearningOpportunityOrBuilder extends
    * Title of the learning opportunity.
    * </pre>
    *
-   * <code>string title = 10 [json_name = "title"];</code>
+   * <code>string title = 12 [json_name = "title"];</code>
    * @return The bytes for title.
    */
   com.google.protobuf.ByteString
@@ -141,7 +168,7 @@ public interface LearningOpportunityOrBuilder extends
    * Current status (ex: OPEN, COMPLETED).
    * </pre>
    *
-   * <code>.api.commons.LearningOpportunityStatus status = 11 [json_name = "status"];</code>
+   * <code>.api.commons.LearningOpportunityStatus status = 13 [json_name = "status"];</code>
    * @return The enum numeric value on the wire for status.
    */
   int getStatusValue();
@@ -150,7 +177,7 @@ public interface LearningOpportunityOrBuilder extends
    * Current status (ex: OPEN, COMPLETED).
    * </pre>
    *
-   * <code>.api.commons.LearningOpportunityStatus status = 11 [json_name = "status"];</code>
+   * <code>.api.commons.LearningOpportunityStatus status = 13 [json_name = "status"];</code>
    * @return The status.
    */
   com.tcn.cloud.api.api.commons.LearningOpportunityStatus getStatus();
