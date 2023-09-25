@@ -48,7 +48,7 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Internal.LongList tourWeekPatternSids_;
   /**
    * <pre>
-   * IDs of the tour week patterns to get the child tour shift instance configs for.
+   * IDs of the tour week patterns to get the child Tour Shift Instance Configs for.
    * </pre>
    *
    * <code>repeated int64 tour_week_pattern_sids = 1 [json_name = "tourWeekPatternSids"];</code>
@@ -61,7 +61,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * IDs of the tour week patterns to get the child tour shift instance configs for.
+   * IDs of the tour week patterns to get the child Tour Shift Instance Configs for.
    * </pre>
    *
    * <code>repeated int64 tour_week_pattern_sids = 1 [json_name = "tourWeekPatternSids"];</code>
@@ -72,7 +72,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * IDs of the tour week patterns to get the child tour shift instance configs for.
+   * IDs of the tour week patterns to get the child Tour Shift Instance Configs for.
    * </pre>
    *
    * <code>repeated int64 tour_week_pattern_sids = 1 [json_name = "tourWeekPatternSids"];</code>
@@ -463,7 +463,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * IDs of the tour week patterns to get the child tour shift instance configs for.
+     * IDs of the tour week patterns to get the child Tour Shift Instance Configs for.
      * </pre>
      *
      * <code>repeated int64 tour_week_pattern_sids = 1 [json_name = "tourWeekPatternSids"];</code>
@@ -476,7 +476,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * IDs of the tour week patterns to get the child tour shift instance configs for.
+     * IDs of the tour week patterns to get the child Tour Shift Instance Configs for.
      * </pre>
      *
      * <code>repeated int64 tour_week_pattern_sids = 1 [json_name = "tourWeekPatternSids"];</code>
@@ -487,7 +487,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * IDs of the tour week patterns to get the child tour shift instance configs for.
+     * IDs of the tour week patterns to get the child Tour Shift Instance Configs for.
      * </pre>
      *
      * <code>repeated int64 tour_week_pattern_sids = 1 [json_name = "tourWeekPatternSids"];</code>
@@ -499,7 +499,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * IDs of the tour week patterns to get the child tour shift instance configs for.
+     * IDs of the tour week patterns to get the child Tour Shift Instance Configs for.
      * </pre>
      *
      * <code>repeated int64 tour_week_pattern_sids = 1 [json_name = "tourWeekPatternSids"];</code>
@@ -517,7 +517,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * IDs of the tour week patterns to get the child tour shift instance configs for.
+     * IDs of the tour week patterns to get the child Tour Shift Instance Configs for.
      * </pre>
      *
      * <code>repeated int64 tour_week_pattern_sids = 1 [json_name = "tourWeekPatternSids"];</code>
@@ -533,7 +533,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * IDs of the tour week patterns to get the child tour shift instance configs for.
+     * IDs of the tour week patterns to get the child Tour Shift Instance Configs for.
      * </pre>
      *
      * <code>repeated int64 tour_week_pattern_sids = 1 [json_name = "tourWeekPatternSids"];</code>
@@ -550,7 +550,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * IDs of the tour week patterns to get the child tour shift instance configs for.
+     * IDs of the tour week patterns to get the child Tour Shift Instance Configs for.
      * </pre>
      *
      * <code>repeated int64 tour_week_pattern_sids = 1 [json_name = "tourWeekPatternSids"];</code>

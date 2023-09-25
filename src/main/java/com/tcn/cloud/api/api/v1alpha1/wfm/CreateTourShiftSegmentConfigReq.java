@@ -46,7 +46,7 @@ private static final long serialVersionUID = 0L;
   private com.tcn.cloud.api.api.commons.TourShiftSegmentConfig tourShiftSegmentConfig_;
   /**
    * <pre>
-   * The tour shift segment config to create.
+   * The tour Shift Segment Config to Create.
    * </pre>
    *
    * <code>.api.commons.TourShiftSegmentConfig tour_shift_segment_config = 1 [json_name = "tourShiftSegmentConfig"];</code>
@@ -58,7 +58,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The tour shift segment config to create.
+   * The tour Shift Segment Config to Create.
    * </pre>
    *
    * <code>.api.commons.TourShiftSegmentConfig tour_shift_segment_config = 1 [json_name = "tourShiftSegmentConfig"];</code>
@@ -70,7 +70,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The tour shift segment config to create.
+   * The tour Shift Segment Config to Create.
    * </pre>
    *
    * <code>.api.commons.TourShiftSegmentConfig tour_shift_segment_config = 1 [json_name = "tourShiftSegmentConfig"];</code>
@@ -427,7 +427,7 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.TourShiftSegmentConfig, com.tcn.cloud.api.api.commons.TourShiftSegmentConfig.Builder, com.tcn.cloud.api.api.commons.TourShiftSegmentConfigOrBuilder> tourShiftSegmentConfigBuilder_;
     /**
      * <pre>
-     * The tour shift segment config to create.
+     * The tour Shift Segment Config to Create.
      * </pre>
      *
      * <code>.api.commons.TourShiftSegmentConfig tour_shift_segment_config = 1 [json_name = "tourShiftSegmentConfig"];</code>
@@ -438,7 +438,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The tour shift segment config to create.
+     * The tour Shift Segment Config to Create.
      * </pre>
      *
      * <code>.api.commons.TourShiftSegmentConfig tour_shift_segment_config = 1 [json_name = "tourShiftSegmentConfig"];</code>
@@ -453,7 +453,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The tour shift segment config to create.
+     * The tour Shift Segment Config to Create.
      * </pre>
      *
      * <code>.api.commons.TourShiftSegmentConfig tour_shift_segment_config = 1 [json_name = "tourShiftSegmentConfig"];</code>
@@ -473,7 +473,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The tour shift segment config to create.
+     * The tour Shift Segment Config to Create.
      * </pre>
      *
      * <code>.api.commons.TourShiftSegmentConfig tour_shift_segment_config = 1 [json_name = "tourShiftSegmentConfig"];</code>
@@ -491,7 +491,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The tour shift segment config to create.
+     * The tour Shift Segment Config to Create.
      * </pre>
      *
      * <code>.api.commons.TourShiftSegmentConfig tour_shift_segment_config = 1 [json_name = "tourShiftSegmentConfig"];</code>
@@ -514,7 +514,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The tour shift segment config to create.
+     * The tour Shift Segment Config to Create.
      * </pre>
      *
      * <code>.api.commons.TourShiftSegmentConfig tour_shift_segment_config = 1 [json_name = "tourShiftSegmentConfig"];</code>
@@ -531,7 +531,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The tour shift segment config to create.
+     * The tour Shift Segment Config to Create.
      * </pre>
      *
      * <code>.api.commons.TourShiftSegmentConfig tour_shift_segment_config = 1 [json_name = "tourShiftSegmentConfig"];</code>
@@ -543,7 +543,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The tour shift segment config to create.
+     * The tour Shift Segment Config to Create.
      * </pre>
      *
      * <code>.api.commons.TourShiftSegmentConfig tour_shift_segment_config = 1 [json_name = "tourShiftSegmentConfig"];</code>
@@ -558,7 +558,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The tour shift segment config to create.
+     * The tour Shift Segment Config to Create.
      * </pre>
      *
      * <code>.api.commons.TourShiftSegmentConfig tour_shift_segment_config = 1 [json_name = "tourShiftSegmentConfig"];</code>

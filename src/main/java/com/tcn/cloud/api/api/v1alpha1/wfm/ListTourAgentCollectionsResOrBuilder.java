@@ -9,7 +9,7 @@ public interface ListTourAgentCollectionsResOrBuilder extends
 
   /**
    * <pre>
-   * Requested tour agent collections.
+   * Requested Tour Agent Collections.
    * </pre>
    *
    * <code>repeated .api.commons.TourAgentCollection tour_agent_collections = 1 [json_name = "tourAgentCollections"];</code>
@@ -18,7 +18,7 @@ public interface ListTourAgentCollectionsResOrBuilder extends
       getTourAgentCollectionsList();
   /**
    * <pre>
-   * Requested tour agent collections.
+   * Requested Tour Agent Collections.
    * </pre>
    *
    * <code>repeated .api.commons.TourAgentCollection tour_agent_collections = 1 [json_name = "tourAgentCollections"];</code>
@@ -26,7 +26,7 @@ public interface ListTourAgentCollectionsResOrBuilder extends
   com.tcn.cloud.api.api.commons.TourAgentCollection getTourAgentCollections(int index);
   /**
    * <pre>
-   * Requested tour agent collections.
+   * Requested Tour Agent Collections.
    * </pre>
    *
    * <code>repeated .api.commons.TourAgentCollection tour_agent_collections = 1 [json_name = "tourAgentCollections"];</code>
@@ -34,7 +34,7 @@ public interface ListTourAgentCollectionsResOrBuilder extends
   int getTourAgentCollectionsCount();
   /**
    * <pre>
-   * Requested tour agent collections.
+   * Requested Tour Agent Collections.
    * </pre>
    *
    * <code>repeated .api.commons.TourAgentCollection tour_agent_collections = 1 [json_name = "tourAgentCollections"];</code>
@@ -43,7 +43,7 @@ public interface ListTourAgentCollectionsResOrBuilder extends
       getTourAgentCollectionsOrBuilderList();
   /**
    * <pre>
-   * Requested tour agent collections.
+   * Requested Tour Agent Collections.
    * </pre>
    *
    * <code>repeated .api.commons.TourAgentCollection tour_agent_collections = 1 [json_name = "tourAgentCollections"];</code>

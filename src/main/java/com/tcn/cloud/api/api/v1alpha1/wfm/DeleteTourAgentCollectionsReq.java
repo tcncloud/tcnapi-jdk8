@@ -48,7 +48,7 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Internal.LongList tourAgentCollectionSids_;
   /**
    * <pre>
-   * IDs of the tour agent collections to be deleted.
+   * IDs of the Tour Agent Collections to be deleted.
    * Any associations with WFM Agent SIDS for these Collections will also be deleted.
    * </pre>
    *
@@ -62,7 +62,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * IDs of the tour agent collections to be deleted.
+   * IDs of the Tour Agent Collections to be deleted.
    * Any associations with WFM Agent SIDS for these Collections will also be deleted.
    * </pre>
    *
@@ -74,7 +74,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * IDs of the tour agent collections to be deleted.
+   * IDs of the Tour Agent Collections to be deleted.
    * Any associations with WFM Agent SIDS for these Collections will also be deleted.
    * </pre>
    *
@@ -466,7 +466,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * IDs of the tour agent collections to be deleted.
+     * IDs of the Tour Agent Collections to be deleted.
      * Any associations with WFM Agent SIDS for these Collections will also be deleted.
      * </pre>
      *
@@ -480,7 +480,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * IDs of the tour agent collections to be deleted.
+     * IDs of the Tour Agent Collections to be deleted.
      * Any associations with WFM Agent SIDS for these Collections will also be deleted.
      * </pre>
      *
@@ -492,7 +492,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * IDs of the tour agent collections to be deleted.
+     * IDs of the Tour Agent Collections to be deleted.
      * Any associations with WFM Agent SIDS for these Collections will also be deleted.
      * </pre>
      *
@@ -505,7 +505,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * IDs of the tour agent collections to be deleted.
+     * IDs of the Tour Agent Collections to be deleted.
      * Any associations with WFM Agent SIDS for these Collections will also be deleted.
      * </pre>
      *
@@ -524,7 +524,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * IDs of the tour agent collections to be deleted.
+     * IDs of the Tour Agent Collections to be deleted.
      * Any associations with WFM Agent SIDS for these Collections will also be deleted.
      * </pre>
      *
@@ -541,7 +541,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * IDs of the tour agent collections to be deleted.
+     * IDs of the Tour Agent Collections to be deleted.
      * Any associations with WFM Agent SIDS for these Collections will also be deleted.
      * </pre>
      *
@@ -559,7 +559,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * IDs of the tour agent collections to be deleted.
+     * IDs of the Tour Agent Collections to be deleted.
      * Any associations with WFM Agent SIDS for these Collections will also be deleted.
      * </pre>
      *

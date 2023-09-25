@@ -9,7 +9,7 @@ public interface UpdateTourShiftSegmentConfigReqOrBuilder extends
 
   /**
    * <pre>
-   * The tour shift segment config to update.
+   * The Tour Shift Segment Config to update.
    * </pre>
    *
    * <code>.api.commons.TourShiftSegmentConfig tour_shift_segment_config = 1 [json_name = "tourShiftSegmentConfig"];</code>
@@ -18,7 +18,7 @@ public interface UpdateTourShiftSegmentConfigReqOrBuilder extends
   boolean hasTourShiftSegmentConfig();
   /**
    * <pre>
-   * The tour shift segment config to update.
+   * The Tour Shift Segment Config to update.
    * </pre>
    *
    * <code>.api.commons.TourShiftSegmentConfig tour_shift_segment_config = 1 [json_name = "tourShiftSegmentConfig"];</code>
@@ -27,7 +27,7 @@ public interface UpdateTourShiftSegmentConfigReqOrBuilder extends
   com.tcn.cloud.api.api.commons.TourShiftSegmentConfig getTourShiftSegmentConfig();
   /**
    * <pre>
-   * The tour shift segment config to update.
+   * The Tour Shift Segment Config to update.
    * </pre>
    *
    * <code>.api.commons.TourShiftSegmentConfig tour_shift_segment_config = 1 [json_name = "tourShiftSegmentConfig"];</code>

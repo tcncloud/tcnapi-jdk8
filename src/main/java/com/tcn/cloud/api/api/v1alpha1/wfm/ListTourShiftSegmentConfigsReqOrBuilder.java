@@ -9,7 +9,7 @@ public interface ListTourShiftSegmentConfigsReqOrBuilder extends
 
   /**
    * <pre>
-   * IDs of the tour shift instance configs to get the child tour shift segment configs for.
+   * IDs of the Tour Shift Instance Configs to get the child Tour Shift Segment Configs for.
    * </pre>
    *
    * <code>repeated int64 tour_shift_instance_config_sids = 1 [json_name = "tourShiftInstanceConfigSids"];</code>
@@ -18,7 +18,7 @@ public interface ListTourShiftSegmentConfigsReqOrBuilder extends
   java.util.List<java.lang.Long> getTourShiftInstanceConfigSidsList();
   /**
    * <pre>
-   * IDs of the tour shift instance configs to get the child tour shift segment configs for.
+   * IDs of the Tour Shift Instance Configs to get the child Tour Shift Segment Configs for.
    * </pre>
    *
    * <code>repeated int64 tour_shift_instance_config_sids = 1 [json_name = "tourShiftInstanceConfigSids"];</code>
@@ -27,7 +27,7 @@ public interface ListTourShiftSegmentConfigsReqOrBuilder extends
   int getTourShiftInstanceConfigSidsCount();
   /**
    * <pre>
-   * IDs of the tour shift instance configs to get the child tour shift segment configs for.
+   * IDs of the Tour Shift Instance Configs to get the child Tour Shift Segment Configs for.
    * </pre>
    *
    * <code>repeated int64 tour_shift_instance_config_sids = 1 [json_name = "tourShiftInstanceConfigSids"];</code>

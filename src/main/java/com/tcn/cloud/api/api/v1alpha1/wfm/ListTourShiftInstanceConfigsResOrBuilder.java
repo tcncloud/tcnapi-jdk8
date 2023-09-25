@@ -9,7 +9,7 @@ public interface ListTourShiftInstanceConfigsResOrBuilder extends
 
   /**
    * <pre>
-   * Requested tour shift instance configs.
+   * Requested Tour Shift Instance Configs.
    * </pre>
    *
    * <code>repeated .api.commons.TourShiftInstanceConfig tour_shift_instance_configs = 1 [json_name = "tourShiftInstanceConfigs"];</code>
@@ -18,7 +18,7 @@ public interface ListTourShiftInstanceConfigsResOrBuilder extends
       getTourShiftInstanceConfigsList();
   /**
    * <pre>
-   * Requested tour shift instance configs.
+   * Requested Tour Shift Instance Configs.
    * </pre>
    *
    * <code>repeated .api.commons.TourShiftInstanceConfig tour_shift_instance_configs = 1 [json_name = "tourShiftInstanceConfigs"];</code>
@@ -26,7 +26,7 @@ public interface ListTourShiftInstanceConfigsResOrBuilder extends
   com.tcn.cloud.api.api.commons.TourShiftInstanceConfig getTourShiftInstanceConfigs(int index);
   /**
    * <pre>
-   * Requested tour shift instance configs.
+   * Requested Tour Shift Instance Configs.
    * </pre>
    *
    * <code>repeated .api.commons.TourShiftInstanceConfig tour_shift_instance_configs = 1 [json_name = "tourShiftInstanceConfigs"];</code>
@@ -34,7 +34,7 @@ public interface ListTourShiftInstanceConfigsResOrBuilder extends
   int getTourShiftInstanceConfigsCount();
   /**
    * <pre>
-   * Requested tour shift instance configs.
+   * Requested Tour Shift Instance Configs.
    * </pre>
    *
    * <code>repeated .api.commons.TourShiftInstanceConfig tour_shift_instance_configs = 1 [json_name = "tourShiftInstanceConfigs"];</code>
@@ -43,7 +43,7 @@ public interface ListTourShiftInstanceConfigsResOrBuilder extends
       getTourShiftInstanceConfigsOrBuilderList();
   /**
    * <pre>
-   * Requested tour shift instance configs.
+   * Requested Tour Shift Instance Configs.
    * </pre>
    *
    * <code>repeated .api.commons.TourShiftInstanceConfig tour_shift_instance_configs = 1 [json_name = "tourShiftInstanceConfigs"];</code>

@@ -88,7 +88,7 @@ private static final long serialVersionUID = 0L;
   private long tourAgentCollectionSid_ = 0L;
   /**
    * <pre>
-   * ID of the tour agent collection that the &#64;wfm_agent_sids will belong to.
+   * ID of the Tour Agent Collection that the &#64;wfm_agent_sids will belong to.
    * </pre>
    *
    * <code>int64 tour_agent_collection_sid = 2 [json_name = "tourAgentCollectionSid"];</code>
@@ -605,7 +605,7 @@ private static final long serialVersionUID = 0L;
     private long tourAgentCollectionSid_ ;
     /**
      * <pre>
-     * ID of the tour agent collection that the &#64;wfm_agent_sids will belong to.
+     * ID of the Tour Agent Collection that the &#64;wfm_agent_sids will belong to.
      * </pre>
      *
      * <code>int64 tour_agent_collection_sid = 2 [json_name = "tourAgentCollectionSid"];</code>
@@ -617,7 +617,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ID of the tour agent collection that the &#64;wfm_agent_sids will belong to.
+     * ID of the Tour Agent Collection that the &#64;wfm_agent_sids will belong to.
      * </pre>
      *
      * <code>int64 tour_agent_collection_sid = 2 [json_name = "tourAgentCollectionSid"];</code>
@@ -633,7 +633,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ID of the tour agent collection that the &#64;wfm_agent_sids will belong to.
+     * ID of the Tour Agent Collection that the &#64;wfm_agent_sids will belong to.
      * </pre>
      *
      * <code>int64 tour_agent_collection_sid = 2 [json_name = "tourAgentCollectionSid"];</code>

@@ -9,7 +9,7 @@ public interface DeleteTourShiftSegmentConfigsReqOrBuilder extends
 
   /**
    * <pre>
-   * IDs of the tour shift segment configs to delete.
+   * IDs of the Tour Shift Segment Configs to delete.
    * </pre>
    *
    * <code>repeated int64 tour_shift_segment_config_sids = 1 [json_name = "tourShiftSegmentConfigSids"];</code>
@@ -18,7 +18,7 @@ public interface DeleteTourShiftSegmentConfigsReqOrBuilder extends
   java.util.List<java.lang.Long> getTourShiftSegmentConfigSidsList();
   /**
    * <pre>
-   * IDs of the tour shift segment configs to delete.
+   * IDs of the Tour Shift Segment Configs to delete.
    * </pre>
    *
    * <code>repeated int64 tour_shift_segment_config_sids = 1 [json_name = "tourShiftSegmentConfigSids"];</code>
@@ -27,7 +27,7 @@ public interface DeleteTourShiftSegmentConfigsReqOrBuilder extends
   int getTourShiftSegmentConfigSidsCount();
   /**
    * <pre>
-   * IDs of the tour shift segment configs to delete.
+   * IDs of the Tour Shift Segment Configs to delete.
    * </pre>
    *
    * <code>repeated int64 tour_shift_segment_config_sids = 1 [json_name = "tourShiftSegmentConfigSids"];</code>

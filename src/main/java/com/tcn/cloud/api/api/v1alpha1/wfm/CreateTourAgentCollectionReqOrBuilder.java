@@ -9,7 +9,7 @@ public interface CreateTourAgentCollectionReqOrBuilder extends
 
   /**
    * <pre>
-   * The tour agent collection to create.
+   * The Tour Agent Collection to create.
    * </pre>
    *
    * <code>.api.commons.TourAgentCollection tour_agent_collection = 1 [json_name = "tourAgentCollection"];</code>
@@ -18,7 +18,7 @@ public interface CreateTourAgentCollectionReqOrBuilder extends
   boolean hasTourAgentCollection();
   /**
    * <pre>
-   * The tour agent collection to create.
+   * The Tour Agent Collection to create.
    * </pre>
    *
    * <code>.api.commons.TourAgentCollection tour_agent_collection = 1 [json_name = "tourAgentCollection"];</code>
@@ -27,7 +27,7 @@ public interface CreateTourAgentCollectionReqOrBuilder extends
   com.tcn.cloud.api.api.commons.TourAgentCollection getTourAgentCollection();
   /**
    * <pre>
-   * The tour agent collection to create.
+   * The Tour Agent Collection to create.
    * </pre>
    *
    * <code>.api.commons.TourAgentCollection tour_agent_collection = 1 [json_name = "tourAgentCollection"];</code>

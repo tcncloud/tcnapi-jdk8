@@ -46,7 +46,7 @@ private static final long serialVersionUID = 0L;
   private long tourShiftSegmentConfigSid_ = 0L;
   /**
    * <pre>
-   * ID of the newly created tour shift segment config.
+   * ID of the newly created Tour shift Segment Config.
    * </pre>
    *
    * <code>int64 tour_shift_segment_config_sid = 1 [json_name = "tourShiftSegmentConfigSid"];</code>
@@ -390,7 +390,7 @@ private static final long serialVersionUID = 0L;
     private long tourShiftSegmentConfigSid_ ;
     /**
      * <pre>
-     * ID of the newly created tour shift segment config.
+     * ID of the newly created Tour shift Segment Config.
      * </pre>
      *
      * <code>int64 tour_shift_segment_config_sid = 1 [json_name = "tourShiftSegmentConfigSid"];</code>
@@ -402,7 +402,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ID of the newly created tour shift segment config.
+     * ID of the newly created Tour shift Segment Config.
      * </pre>
      *
      * <code>int64 tour_shift_segment_config_sid = 1 [json_name = "tourShiftSegmentConfigSid"];</code>
@@ -418,7 +418,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ID of the newly created tour shift segment config.
+     * ID of the newly created Tour shift Segment Config.
      * </pre>
      *
      * <code>int64 tour_shift_segment_config_sid = 1 [json_name = "tourShiftSegmentConfigSid"];</code>

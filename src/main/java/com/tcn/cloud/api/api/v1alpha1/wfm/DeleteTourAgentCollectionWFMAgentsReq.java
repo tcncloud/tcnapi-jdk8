@@ -48,7 +48,7 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Internal.LongList wfmAgentSids_;
   /**
    * <pre>
-   * ID of the wfm agents to delete from &#64;tour_agent_collection_sid.
+   * ID of the WFM Agents to delete from &#64;tour_agent_collection_sid.
    * If no wfm_angent_sids are provided, all will be removed for &#64;tour_agent_collection_sid.
    * </pre>
    *
@@ -62,7 +62,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * ID of the wfm agents to delete from &#64;tour_agent_collection_sid.
+   * ID of the WFM Agents to delete from &#64;tour_agent_collection_sid.
    * If no wfm_angent_sids are provided, all will be removed for &#64;tour_agent_collection_sid.
    * </pre>
    *
@@ -74,7 +74,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * ID of the wfm agents to delete from &#64;tour_agent_collection_sid.
+   * ID of the WFM Agents to delete from &#64;tour_agent_collection_sid.
    * If no wfm_angent_sids are provided, all will be removed for &#64;tour_agent_collection_sid.
    * </pre>
    *
@@ -505,7 +505,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ID of the wfm agents to delete from &#64;tour_agent_collection_sid.
+     * ID of the WFM Agents to delete from &#64;tour_agent_collection_sid.
      * If no wfm_angent_sids are provided, all will be removed for &#64;tour_agent_collection_sid.
      * </pre>
      *
@@ -519,7 +519,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ID of the wfm agents to delete from &#64;tour_agent_collection_sid.
+     * ID of the WFM Agents to delete from &#64;tour_agent_collection_sid.
      * If no wfm_angent_sids are provided, all will be removed for &#64;tour_agent_collection_sid.
      * </pre>
      *
@@ -531,7 +531,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ID of the wfm agents to delete from &#64;tour_agent_collection_sid.
+     * ID of the WFM Agents to delete from &#64;tour_agent_collection_sid.
      * If no wfm_angent_sids are provided, all will be removed for &#64;tour_agent_collection_sid.
      * </pre>
      *
@@ -544,7 +544,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ID of the wfm agents to delete from &#64;tour_agent_collection_sid.
+     * ID of the WFM Agents to delete from &#64;tour_agent_collection_sid.
      * If no wfm_angent_sids are provided, all will be removed for &#64;tour_agent_collection_sid.
      * </pre>
      *
@@ -563,7 +563,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ID of the wfm agents to delete from &#64;tour_agent_collection_sid.
+     * ID of the WFM Agents to delete from &#64;tour_agent_collection_sid.
      * If no wfm_angent_sids are provided, all will be removed for &#64;tour_agent_collection_sid.
      * </pre>
      *
@@ -580,7 +580,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ID of the wfm agents to delete from &#64;tour_agent_collection_sid.
+     * ID of the WFM Agents to delete from &#64;tour_agent_collection_sid.
      * If no wfm_angent_sids are provided, all will be removed for &#64;tour_agent_collection_sid.
      * </pre>
      *
@@ -598,7 +598,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ID of the wfm agents to delete from &#64;tour_agent_collection_sid.
+     * ID of the WFM Agents to delete from &#64;tour_agent_collection_sid.
      * If no wfm_angent_sids are provided, all will be removed for &#64;tour_agent_collection_sid.
      * </pre>
      *

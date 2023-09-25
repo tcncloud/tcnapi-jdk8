@@ -28,6 +28,14 @@ public enum OmniCampaignModuleType
    * <code>MODULE_TYPE_OUTBOUND = 1;</code>
    */
   MODULE_TYPE_OUTBOUND(1),
+  /**
+   * <pre>
+   * manual approve module
+   * </pre>
+   *
+   * <code>MODULE_TYPE_MANUAL_APPROVAL = 2;</code>
+   */
+  MODULE_TYPE_MANUAL_APPROVAL(2),
   UNRECOGNIZED(-1),
   ;
 
@@ -47,6 +55,14 @@ public enum OmniCampaignModuleType
    * <code>MODULE_TYPE_OUTBOUND = 1;</code>
    */
   public static final int MODULE_TYPE_OUTBOUND_VALUE = 1;
+  /**
+   * <pre>
+   * manual approve module
+   * </pre>
+   *
+   * <code>MODULE_TYPE_MANUAL_APPROVAL = 2;</code>
+   */
+  public static final int MODULE_TYPE_MANUAL_APPROVAL_VALUE = 2;
 
 
   public final int getNumber() {
@@ -75,6 +91,7 @@ public enum OmniCampaignModuleType
     switch (value) {
       case 0: return MODULE_TYPE_INBOUND;
       case 1: return MODULE_TYPE_OUTBOUND;
+      case 2: return MODULE_TYPE_MANUAL_APPROVAL;
       default: return null;
     }
   }

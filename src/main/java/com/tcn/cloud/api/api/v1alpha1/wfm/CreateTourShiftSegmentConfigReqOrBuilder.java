@@ -9,7 +9,7 @@ public interface CreateTourShiftSegmentConfigReqOrBuilder extends
 
   /**
    * <pre>
-   * The tour shift segment config to create.
+   * The tour Shift Segment Config to Create.
    * </pre>
    *
    * <code>.api.commons.TourShiftSegmentConfig tour_shift_segment_config = 1 [json_name = "tourShiftSegmentConfig"];</code>
@@ -18,7 +18,7 @@ public interface CreateTourShiftSegmentConfigReqOrBuilder extends
   boolean hasTourShiftSegmentConfig();
   /**
    * <pre>
-   * The tour shift segment config to create.
+   * The tour Shift Segment Config to Create.
    * </pre>
    *
    * <code>.api.commons.TourShiftSegmentConfig tour_shift_segment_config = 1 [json_name = "tourShiftSegmentConfig"];</code>
@@ -27,7 +27,7 @@ public interface CreateTourShiftSegmentConfigReqOrBuilder extends
   com.tcn.cloud.api.api.commons.TourShiftSegmentConfig getTourShiftSegmentConfig();
   /**
    * <pre>
-   * The tour shift segment config to create.
+   * The tour Shift Segment Config to Create.
    * </pre>
    *
    * <code>.api.commons.TourShiftSegmentConfig tour_shift_segment_config = 1 [json_name = "tourShiftSegmentConfig"];</code>

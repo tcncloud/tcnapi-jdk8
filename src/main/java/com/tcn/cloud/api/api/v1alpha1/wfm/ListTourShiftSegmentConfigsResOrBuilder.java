@@ -9,7 +9,7 @@ public interface ListTourShiftSegmentConfigsResOrBuilder extends
 
   /**
    * <pre>
-   * Requested tour shift segment configs.
+   * Requested Tour Shift Segment Configs.
    * </pre>
    *
    * <code>repeated .api.commons.TourShiftSegmentConfig tour_shift_segment_configs = 1 [json_name = "tourShiftSegmentConfigs"];</code>
@@ -18,7 +18,7 @@ public interface ListTourShiftSegmentConfigsResOrBuilder extends
       getTourShiftSegmentConfigsList();
   /**
    * <pre>
-   * Requested tour shift segment configs.
+   * Requested Tour Shift Segment Configs.
    * </pre>
    *
    * <code>repeated .api.commons.TourShiftSegmentConfig tour_shift_segment_configs = 1 [json_name = "tourShiftSegmentConfigs"];</code>
@@ -26,7 +26,7 @@ public interface ListTourShiftSegmentConfigsResOrBuilder extends
   com.tcn.cloud.api.api.commons.TourShiftSegmentConfig getTourShiftSegmentConfigs(int index);
   /**
    * <pre>
-   * Requested tour shift segment configs.
+   * Requested Tour Shift Segment Configs.
    * </pre>
    *
    * <code>repeated .api.commons.TourShiftSegmentConfig tour_shift_segment_configs = 1 [json_name = "tourShiftSegmentConfigs"];</code>
@@ -34,7 +34,7 @@ public interface ListTourShiftSegmentConfigsResOrBuilder extends
   int getTourShiftSegmentConfigsCount();
   /**
    * <pre>
-   * Requested tour shift segment configs.
+   * Requested Tour Shift Segment Configs.
    * </pre>
    *
    * <code>repeated .api.commons.TourShiftSegmentConfig tour_shift_segment_configs = 1 [json_name = "tourShiftSegmentConfigs"];</code>
@@ -43,7 +43,7 @@ public interface ListTourShiftSegmentConfigsResOrBuilder extends
       getTourShiftSegmentConfigsOrBuilderList();
   /**
    * <pre>
-   * Requested tour shift segment configs.
+   * Requested Tour Shift Segment Configs.
    * </pre>
    *
    * <code>repeated .api.commons.TourShiftSegmentConfig tour_shift_segment_configs = 1 [json_name = "tourShiftSegmentConfigs"];</code>

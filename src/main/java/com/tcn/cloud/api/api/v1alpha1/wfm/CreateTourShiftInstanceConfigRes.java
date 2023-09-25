@@ -46,7 +46,7 @@ private static final long serialVersionUID = 0L;
   private long tourShiftInstanceConfigSid_ = 0L;
   /**
    * <pre>
-   * ID of the newly created tour shift instance config.
+   * ID of the newly created Tour Shift Instance Config.
    * </pre>
    *
    * <code>int64 tour_shift_instance_config_sid = 1 [json_name = "tourShiftInstanceConfigSid"];</code>
@@ -390,7 +390,7 @@ private static final long serialVersionUID = 0L;
     private long tourShiftInstanceConfigSid_ ;
     /**
      * <pre>
-     * ID of the newly created tour shift instance config.
+     * ID of the newly created Tour Shift Instance Config.
      * </pre>
      *
      * <code>int64 tour_shift_instance_config_sid = 1 [json_name = "tourShiftInstanceConfigSid"];</code>
@@ -402,7 +402,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ID of the newly created tour shift instance config.
+     * ID of the newly created Tour Shift Instance Config.
      * </pre>
      *
      * <code>int64 tour_shift_instance_config_sid = 1 [json_name = "tourShiftInstanceConfigSid"];</code>
@@ -418,7 +418,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ID of the newly created tour shift instance config.
+     * ID of the newly created Tour Shift Instance Config.
      * </pre>
      *
      * <code>int64 tour_shift_instance_config_sid = 1 [json_name = "tourShiftInstanceConfigSid"];</code>

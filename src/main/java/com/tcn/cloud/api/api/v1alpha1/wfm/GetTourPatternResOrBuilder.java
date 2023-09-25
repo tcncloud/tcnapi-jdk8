@@ -9,7 +9,7 @@ public interface GetTourPatternResOrBuilder extends
 
   /**
    * <pre>
-   * The requested tour pattern
+   * The requested Tour Pattern
    * </pre>
    *
    * <code>.api.commons.TourPattern tour_pattern = 1 [json_name = "tourPattern"];</code>
@@ -18,7 +18,7 @@ public interface GetTourPatternResOrBuilder extends
   boolean hasTourPattern();
   /**
    * <pre>
-   * The requested tour pattern
+   * The requested Tour Pattern
    * </pre>
    *
    * <code>.api.commons.TourPattern tour_pattern = 1 [json_name = "tourPattern"];</code>
@@ -27,7 +27,7 @@ public interface GetTourPatternResOrBuilder extends
   com.tcn.cloud.api.api.commons.TourPattern getTourPattern();
   /**
    * <pre>
-   * The requested tour pattern
+   * The requested Tour Pattern
    * </pre>
    *
    * <code>.api.commons.TourPattern tour_pattern = 1 [json_name = "tourPattern"];</code>

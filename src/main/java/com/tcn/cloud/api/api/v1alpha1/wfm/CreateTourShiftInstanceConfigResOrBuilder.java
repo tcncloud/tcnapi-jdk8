@@ -9,7 +9,7 @@ public interface CreateTourShiftInstanceConfigResOrBuilder extends
 
   /**
    * <pre>
-   * ID of the newly created tour shift instance config.
+   * ID of the newly created Tour Shift Instance Config.
    * </pre>
    *
    * <code>int64 tour_shift_instance_config_sid = 1 [json_name = "tourShiftInstanceConfigSid"];</code>

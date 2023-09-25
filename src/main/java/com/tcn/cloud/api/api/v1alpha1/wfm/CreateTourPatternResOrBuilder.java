@@ -8,6 +8,10 @@ public interface CreateTourPatternResOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * ID of the newly created Tour Pattern
+   * </pre>
+   *
    * <code>int64 tour_pattern_sid = 1 [json_name = "tourPatternSid"];</code>
    * @return The tourPatternSid.
    */

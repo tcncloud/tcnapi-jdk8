@@ -48,7 +48,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<com.tcn.cloud.api.api.commons.TourShiftInstanceConfig> tourShiftInstanceConfigs_;
   /**
    * <pre>
-   * Requested tour shift instance configs.
+   * Requested Tour Shift Instance Configs.
    * </pre>
    *
    * <code>repeated .api.commons.TourShiftInstanceConfig tour_shift_instance_configs = 1 [json_name = "tourShiftInstanceConfigs"];</code>
@@ -59,7 +59,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Requested tour shift instance configs.
+   * Requested Tour Shift Instance Configs.
    * </pre>
    *
    * <code>repeated .api.commons.TourShiftInstanceConfig tour_shift_instance_configs = 1 [json_name = "tourShiftInstanceConfigs"];</code>
@@ -71,7 +71,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Requested tour shift instance configs.
+   * Requested Tour Shift Instance Configs.
    * </pre>
    *
    * <code>repeated .api.commons.TourShiftInstanceConfig tour_shift_instance_configs = 1 [json_name = "tourShiftInstanceConfigs"];</code>
@@ -82,7 +82,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Requested tour shift instance configs.
+   * Requested Tour Shift Instance Configs.
    * </pre>
    *
    * <code>repeated .api.commons.TourShiftInstanceConfig tour_shift_instance_configs = 1 [json_name = "tourShiftInstanceConfigs"];</code>
@@ -93,7 +93,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Requested tour shift instance configs.
+   * Requested Tour Shift Instance Configs.
    * </pre>
    *
    * <code>repeated .api.commons.TourShiftInstanceConfig tour_shift_instance_configs = 1 [json_name = "tourShiftInstanceConfigs"];</code>
@@ -496,7 +496,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Requested tour shift instance configs.
+     * Requested Tour Shift Instance Configs.
      * </pre>
      *
      * <code>repeated .api.commons.TourShiftInstanceConfig tour_shift_instance_configs = 1 [json_name = "tourShiftInstanceConfigs"];</code>
@@ -510,7 +510,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Requested tour shift instance configs.
+     * Requested Tour Shift Instance Configs.
      * </pre>
      *
      * <code>repeated .api.commons.TourShiftInstanceConfig tour_shift_instance_configs = 1 [json_name = "tourShiftInstanceConfigs"];</code>
@@ -524,7 +524,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Requested tour shift instance configs.
+     * Requested Tour Shift Instance Configs.
      * </pre>
      *
      * <code>repeated .api.commons.TourShiftInstanceConfig tour_shift_instance_configs = 1 [json_name = "tourShiftInstanceConfigs"];</code>
@@ -538,7 +538,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Requested tour shift instance configs.
+     * Requested Tour Shift Instance Configs.
      * </pre>
      *
      * <code>repeated .api.commons.TourShiftInstanceConfig tour_shift_instance_configs = 1 [json_name = "tourShiftInstanceConfigs"];</code>
@@ -559,7 +559,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Requested tour shift instance configs.
+     * Requested Tour Shift Instance Configs.
      * </pre>
      *
      * <code>repeated .api.commons.TourShiftInstanceConfig tour_shift_instance_configs = 1 [json_name = "tourShiftInstanceConfigs"];</code>
@@ -577,7 +577,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Requested tour shift instance configs.
+     * Requested Tour Shift Instance Configs.
      * </pre>
      *
      * <code>repeated .api.commons.TourShiftInstanceConfig tour_shift_instance_configs = 1 [json_name = "tourShiftInstanceConfigs"];</code>
@@ -597,7 +597,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Requested tour shift instance configs.
+     * Requested Tour Shift Instance Configs.
      * </pre>
      *
      * <code>repeated .api.commons.TourShiftInstanceConfig tour_shift_instance_configs = 1 [json_name = "tourShiftInstanceConfigs"];</code>
@@ -618,7 +618,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Requested tour shift instance configs.
+     * Requested Tour Shift Instance Configs.
      * </pre>
      *
      * <code>repeated .api.commons.TourShiftInstanceConfig tour_shift_instance_configs = 1 [json_name = "tourShiftInstanceConfigs"];</code>
@@ -636,7 +636,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Requested tour shift instance configs.
+     * Requested Tour Shift Instance Configs.
      * </pre>
      *
      * <code>repeated .api.commons.TourShiftInstanceConfig tour_shift_instance_configs = 1 [json_name = "tourShiftInstanceConfigs"];</code>
@@ -654,7 +654,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Requested tour shift instance configs.
+     * Requested Tour Shift Instance Configs.
      * </pre>
      *
      * <code>repeated .api.commons.TourShiftInstanceConfig tour_shift_instance_configs = 1 [json_name = "tourShiftInstanceConfigs"];</code>
@@ -673,7 +673,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Requested tour shift instance configs.
+     * Requested Tour Shift Instance Configs.
      * </pre>
      *
      * <code>repeated .api.commons.TourShiftInstanceConfig tour_shift_instance_configs = 1 [json_name = "tourShiftInstanceConfigs"];</code>
@@ -690,7 +690,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Requested tour shift instance configs.
+     * Requested Tour Shift Instance Configs.
      * </pre>
      *
      * <code>repeated .api.commons.TourShiftInstanceConfig tour_shift_instance_configs = 1 [json_name = "tourShiftInstanceConfigs"];</code>
@@ -707,7 +707,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Requested tour shift instance configs.
+     * Requested Tour Shift Instance Configs.
      * </pre>
      *
      * <code>repeated .api.commons.TourShiftInstanceConfig tour_shift_instance_configs = 1 [json_name = "tourShiftInstanceConfigs"];</code>
@@ -718,7 +718,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Requested tour shift instance configs.
+     * Requested Tour Shift Instance Configs.
      * </pre>
      *
      * <code>repeated .api.commons.TourShiftInstanceConfig tour_shift_instance_configs = 1 [json_name = "tourShiftInstanceConfigs"];</code>
@@ -732,7 +732,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Requested tour shift instance configs.
+     * Requested Tour Shift Instance Configs.
      * </pre>
      *
      * <code>repeated .api.commons.TourShiftInstanceConfig tour_shift_instance_configs = 1 [json_name = "tourShiftInstanceConfigs"];</code>
@@ -747,7 +747,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Requested tour shift instance configs.
+     * Requested Tour Shift Instance Configs.
      * </pre>
      *
      * <code>repeated .api.commons.TourShiftInstanceConfig tour_shift_instance_configs = 1 [json_name = "tourShiftInstanceConfigs"];</code>
@@ -758,7 +758,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Requested tour shift instance configs.
+     * Requested Tour Shift Instance Configs.
      * </pre>
      *
      * <code>repeated .api.commons.TourShiftInstanceConfig tour_shift_instance_configs = 1 [json_name = "tourShiftInstanceConfigs"];</code>
@@ -770,7 +770,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Requested tour shift instance configs.
+     * Requested Tour Shift Instance Configs.
      * </pre>
      *
      * <code>repeated .api.commons.TourShiftInstanceConfig tour_shift_instance_configs = 1 [json_name = "tourShiftInstanceConfigs"];</code>

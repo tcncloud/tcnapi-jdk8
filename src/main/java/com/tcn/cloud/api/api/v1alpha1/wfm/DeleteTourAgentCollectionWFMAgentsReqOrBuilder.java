@@ -9,7 +9,7 @@ public interface DeleteTourAgentCollectionWFMAgentsReqOrBuilder extends
 
   /**
    * <pre>
-   * ID of the wfm agents to delete from &#64;tour_agent_collection_sid.
+   * ID of the WFM Agents to delete from &#64;tour_agent_collection_sid.
    * If no wfm_angent_sids are provided, all will be removed for &#64;tour_agent_collection_sid.
    * </pre>
    *
@@ -19,7 +19,7 @@ public interface DeleteTourAgentCollectionWFMAgentsReqOrBuilder extends
   java.util.List<java.lang.Long> getWfmAgentSidsList();
   /**
    * <pre>
-   * ID of the wfm agents to delete from &#64;tour_agent_collection_sid.
+   * ID of the WFM Agents to delete from &#64;tour_agent_collection_sid.
    * If no wfm_angent_sids are provided, all will be removed for &#64;tour_agent_collection_sid.
    * </pre>
    *
@@ -29,7 +29,7 @@ public interface DeleteTourAgentCollectionWFMAgentsReqOrBuilder extends
   int getWfmAgentSidsCount();
   /**
    * <pre>
-   * ID of the wfm agents to delete from &#64;tour_agent_collection_sid.
+   * ID of the WFM Agents to delete from &#64;tour_agent_collection_sid.
    * If no wfm_angent_sids are provided, all will be removed for &#64;tour_agent_collection_sid.
    * </pre>
    *

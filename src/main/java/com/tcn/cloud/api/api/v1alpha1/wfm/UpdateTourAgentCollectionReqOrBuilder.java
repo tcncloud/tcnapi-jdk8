@@ -9,7 +9,7 @@ public interface UpdateTourAgentCollectionReqOrBuilder extends
 
   /**
    * <pre>
-   * The tour agent collection to update.
+   * The Tour Agent Collection to update.
    * </pre>
    *
    * <code>.api.commons.TourAgentCollection tour_agent_collection = 1 [json_name = "tourAgentCollection"];</code>
@@ -18,7 +18,7 @@ public interface UpdateTourAgentCollectionReqOrBuilder extends
   boolean hasTourAgentCollection();
   /**
    * <pre>
-   * The tour agent collection to update.
+   * The Tour Agent Collection to update.
    * </pre>
    *
    * <code>.api.commons.TourAgentCollection tour_agent_collection = 1 [json_name = "tourAgentCollection"];</code>
@@ -27,7 +27,7 @@ public interface UpdateTourAgentCollectionReqOrBuilder extends
   com.tcn.cloud.api.api.commons.TourAgentCollection getTourAgentCollection();
   /**
    * <pre>
-   * The tour agent collection to update.
+   * The Tour Agent Collection to update.
    * </pre>
    *
    * <code>.api.commons.TourAgentCollection tour_agent_collection = 1 [json_name = "tourAgentCollection"];</code>

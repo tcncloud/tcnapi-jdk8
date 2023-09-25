@@ -9,7 +9,7 @@ public interface DeleteTourAgentCollectionsReqOrBuilder extends
 
   /**
    * <pre>
-   * IDs of the tour agent collections to be deleted.
+   * IDs of the Tour Agent Collections to be deleted.
    * Any associations with WFM Agent SIDS for these Collections will also be deleted.
    * </pre>
    *
@@ -19,7 +19,7 @@ public interface DeleteTourAgentCollectionsReqOrBuilder extends
   java.util.List<java.lang.Long> getTourAgentCollectionSidsList();
   /**
    * <pre>
-   * IDs of the tour agent collections to be deleted.
+   * IDs of the Tour Agent Collections to be deleted.
    * Any associations with WFM Agent SIDS for these Collections will also be deleted.
    * </pre>
    *
@@ -29,7 +29,7 @@ public interface DeleteTourAgentCollectionsReqOrBuilder extends
   int getTourAgentCollectionSidsCount();
   /**
    * <pre>
-   * IDs of the tour agent collections to be deleted.
+   * IDs of the Tour Agent Collections to be deleted.
    * Any associations with WFM Agent SIDS for these Collections will also be deleted.
    * </pre>
    *

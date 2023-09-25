@@ -6951,13 +6951,13 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Creates a tour pattern for &#64;shift_template_sid and the org sending the request, returning &#64;tour_pattern_sid.
-     * If there is already a tour shift for &#64;shift_template_sid then the method call will fail to create a new tour pattern.
+     * Creates a Tour Pattern for &#64;shift_template_sid and the org sending the request, returning &#64;tour_pattern_sid.
+     * If there is already a Tour Pattern for &#64;shift_template_sid then the method call will fail to create a new Tour Pattern.
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the request data is invalid or a tour shift already exists for &#64;shift_template_sid.
-     *   - grpc.Internal: error occurs when creating the tour pattern.
+     *   - grpc.Invalid: the request data is invalid or a Tour Pattern already exists for &#64;shift_template_sid.
+     *   - grpc.Internal: error occurs when creating the Tour Pattern.
      * </pre>
      */
     default void createTourPattern(com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourPatternReq request,
@@ -6967,12 +6967,12 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Gets the tour pattern belonging to &#64;shift_template_sid and the org sending the request.
+     * Gets the Tour Pattern belonging to &#64;shift_template_sid and the org sending the request.
      * Required permissions:
      *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
-     *   - grpc.NotFound: the requested tour pattern does not exist.
+     *   - grpc.NotFound: the requested Tour Pattern does not exist.
      *   - grpc.Internal: error occurs when getting the data.
      * </pre>
      */
@@ -6983,7 +6983,7 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Deletes the tour pattern belonging to &#64;tour_pattern_sid and the org sending the request.
+     * Deletes the Tour Pattern belonging to &#64;tour_pattern_sid and the org sending the request.
      * Any member Tour Week Patterns or Agent Collections will be deleted as well.
      * Required permissions:
      *   NONE
@@ -6999,13 +6999,13 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Creates a tour week pattern for &#64;tour_pattern_sid for the org sending the request, returning &#64;tour_week_pattern_sid.
-     * The newly created tour week pattern will be placed at the end of the existing sequence of tour week patterns for &#64;tour_pattern_sid.
+     * Creates a Tour Week Pattern for &#64;tour_pattern_sid for the org sending the request, returning &#64;tour_week_pattern_sid.
+     * The newly created Tour Week Pattern will be placed at the end of the existing sequence of tour week patterns for &#64;tour_pattern_sid.
      * Required permissions:
      *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid, or the given &#64;tour_pattern_sid does not exist for the org sending the request.
-     *   - grpc.Internal: error occurs when creating the tour week pattern.
+     *   - grpc.Internal: error occurs when creating the Tour Week Pattern.
      * </pre>
      */
     default void createTourWeekPattern(com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourWeekPatternReq request,
@@ -7015,12 +7015,12 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Lists the tour week patterns with &#64;tour_pattern_sid for the org sending the request
+     * Lists the Tour Week Patterns with &#64;tour_pattern_sid for the org sending the request
      * Required permissions:
      *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
-     *   - grpc.Internal: error occurs when getting the tour week patterns.
+     *   - grpc.Internal: error occurs when getting the Tour Week Patterns.
      * </pre>
      */
     default void listTourWeekPatterns(com.tcn.cloud.api.api.v1alpha1.wfm.ListTourWeekPatternsReq request,
@@ -7030,9 +7030,9 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Deletes the tour week patterns with the given &#64;tour_week_pattern_sids for the org sending the request.
+     * Deletes the Tour Week Patterns with the given &#64;tour_week_pattern_sids for the org sending the request.
      * Any Tour Week Instance or Segment Configs using &#64;tour_week_pattern_sids will be deleted.
-     * Request will error if any &#64;tour_week_pattern_sids are in use by a Tour Agent Collection.
+     * Request will error if any &#64;tour_week_pattern_sids are in use by a Tour Agent Collection, as those must be removed first.
      * Required permissions:
      *   NONE
      * Errors:
@@ -7070,7 +7070,7 @@ public final class WFMGrpc {
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the request data is invalid or a preexisting tour shift instance config would overlap &#64;tour_shift_instance_config.
+     *   - grpc.Invalid: the request data is invalid or a preexisting Tour Shift Instance Config would overlap &#64;tour_shift_instance_config.
      *   - grpc.Internal: error occurs when updating the data.
      * </pre>
      */
@@ -7081,12 +7081,12 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Lists the tour shift instance configs belonging to &#64;tour_week_pattern_sids for the org sending the request.
+     * Lists the Tour Shift Instance Configs belonging to &#64;tour_week_pattern_sids for the org sending the request.
      * Required permissions:
      *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
-     *   - grpc.Internal: error occurs when getting the tour shift instance configs.
+     *   - grpc.Internal: error occurs when getting the Tour Shift Instance Configs.
      * </pre>
      */
     default void listTourShiftInstanceConfigs(com.tcn.cloud.api.api.v1alpha1.wfm.ListTourShiftInstanceConfigsReq request,
@@ -7096,12 +7096,12 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Deletes the tour shift instance configs matching &#64;tour_shift_instance_config_sids for the org sending the request.
+     * Deletes the Tour Shift Instance Configs matching &#64;tour_shift_instance_config_sids for the org sending the request.
      * Required permissions:
      *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
-     *   - grpc.Internal: error occurs when getting the tour shift instance configs.
+     *   - grpc.Internal: error occurs when getting the Tour Shift Instance Configs.
      * </pre>
      */
     default void deleteTourShiftInstanceConfigs(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourShiftInstanceConfigsReq request,
@@ -7126,8 +7126,8 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Updates the given &#64;tour_shift_segment_config matching &#64;tour_shift_segment_config_sid and the org sending the request.
-     * If the updated Tour Shify Segment Config overlaps another segment or does not fit within the parent Tour Shift Instance Config the update will fail.
+     * Updates the given &#64;tour_shift_segment_config matching &#64;tour_shift_segment_config_sid for the org sending the request.
+     * If the updated Tour Shift Segment Config overlaps another segment or does not fit within the parent Tour Shift Instance Config the update will fail.
      * Required permissions:
      *   NONE
      * Errors:
@@ -7142,12 +7142,12 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Lists the tour shift segment configs belonging to &#64;tour_shift_instance_config_sids for the org sending the request.
+     * Lists the Tour Shift Segment Configs belonging to &#64;tour_shift_instance_config_sids for the org sending the request.
      * Required permissions:
      *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
-     *   - grpc.Internal: error occurs when getting the tour shift segment configs.
+     *   - grpc.Internal: error occurs when getting the Tour Shift Segment Configs.
      * </pre>
      */
     default void listTourShiftSegmentConfigs(com.tcn.cloud.api.api.v1alpha1.wfm.ListTourShiftSegmentConfigsReq request,
@@ -7157,12 +7157,12 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Deletes the tour shift segment configs associated with the given &#64;tour_shift_segment_config_sids for the org sending the request.
+     * Deletes the Tour Shift Segment Configs associated with the given &#64;tour_shift_segment_config_sids for the org sending the request.
      * Required permissions:
      *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
-     *   - grpc.Internal: error occurs when deleting the tour shift segment configs.
+     *   - grpc.Internal: error occurs when deleting the Tour Shift Segment Configs.
      * </pre>
      */
     default void deleteTourShiftSegmentConfigs(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourShiftSegmentConfigsReq request,
@@ -7206,7 +7206,7 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Lists the tour agent collections belonging to &#64;tour_pattern_sid for the org sending the request.
+     * Lists the Tour Agent Collections belonging to &#64;tour_pattern_sid for the org sending the request.
      * Required permissions:
      *   NONE
      * Errors:
@@ -7221,7 +7221,7 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Deletes the tour agent collections belonging matching &#64;tour_agent_collection_sids for the org sending the request.
+     * Deletes the Tour Agent collections matching &#64;tour_agent_collection_sids for the org sending the request.
      * Any existing associations with WFM Agent Sids will be deleted as well.
      * Required permissions:
      *   NONE
@@ -7238,7 +7238,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Creates an assocation between the &#64;tour_agent_collection_sid and the &#64;wfm_agent_sids for the org sending the request.
-     * If there is already an association between any of the &#64;wfm_agent_sids and the tour pattern that &#64;tour_agent_collection_sid belongs to, the method will fail and no associations will be created.
+     * If there is already an association between any of the &#64;wfm_agent_sids and the Tour Pattern that &#64;tour_agent_collection_sid belongs to, the method will fail and no associations will be created.
      * Required permissions:
      *   NONE
      * Errors:
@@ -7275,7 +7275,7 @@ public final class WFMGrpc {
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the request data is invalid or there are no wfm agent associations to delete for &#64;tour_agent_collection_sid .
+     *   - grpc.Invalid: the request data is invalid or there are no WFM Agent associations to delete for &#64;tour_agent_collection_sid .
      *   - grpc.Internal: error occurs when getting the tour agent collections.
      * </pre>
      */
@@ -9709,13 +9709,13 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Creates a tour pattern for &#64;shift_template_sid and the org sending the request, returning &#64;tour_pattern_sid.
-     * If there is already a tour shift for &#64;shift_template_sid then the method call will fail to create a new tour pattern.
+     * Creates a Tour Pattern for &#64;shift_template_sid and the org sending the request, returning &#64;tour_pattern_sid.
+     * If there is already a Tour Pattern for &#64;shift_template_sid then the method call will fail to create a new Tour Pattern.
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the request data is invalid or a tour shift already exists for &#64;shift_template_sid.
-     *   - grpc.Internal: error occurs when creating the tour pattern.
+     *   - grpc.Invalid: the request data is invalid or a Tour Pattern already exists for &#64;shift_template_sid.
+     *   - grpc.Internal: error occurs when creating the Tour Pattern.
      * </pre>
      */
     public void createTourPattern(com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourPatternReq request,
@@ -9726,12 +9726,12 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Gets the tour pattern belonging to &#64;shift_template_sid and the org sending the request.
+     * Gets the Tour Pattern belonging to &#64;shift_template_sid and the org sending the request.
      * Required permissions:
      *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
-     *   - grpc.NotFound: the requested tour pattern does not exist.
+     *   - grpc.NotFound: the requested Tour Pattern does not exist.
      *   - grpc.Internal: error occurs when getting the data.
      * </pre>
      */
@@ -9743,7 +9743,7 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Deletes the tour pattern belonging to &#64;tour_pattern_sid and the org sending the request.
+     * Deletes the Tour Pattern belonging to &#64;tour_pattern_sid and the org sending the request.
      * Any member Tour Week Patterns or Agent Collections will be deleted as well.
      * Required permissions:
      *   NONE
@@ -9760,13 +9760,13 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Creates a tour week pattern for &#64;tour_pattern_sid for the org sending the request, returning &#64;tour_week_pattern_sid.
-     * The newly created tour week pattern will be placed at the end of the existing sequence of tour week patterns for &#64;tour_pattern_sid.
+     * Creates a Tour Week Pattern for &#64;tour_pattern_sid for the org sending the request, returning &#64;tour_week_pattern_sid.
+     * The newly created Tour Week Pattern will be placed at the end of the existing sequence of tour week patterns for &#64;tour_pattern_sid.
      * Required permissions:
      *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid, or the given &#64;tour_pattern_sid does not exist for the org sending the request.
-     *   - grpc.Internal: error occurs when creating the tour week pattern.
+     *   - grpc.Internal: error occurs when creating the Tour Week Pattern.
      * </pre>
      */
     public void createTourWeekPattern(com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourWeekPatternReq request,
@@ -9777,12 +9777,12 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Lists the tour week patterns with &#64;tour_pattern_sid for the org sending the request
+     * Lists the Tour Week Patterns with &#64;tour_pattern_sid for the org sending the request
      * Required permissions:
      *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
-     *   - grpc.Internal: error occurs when getting the tour week patterns.
+     *   - grpc.Internal: error occurs when getting the Tour Week Patterns.
      * </pre>
      */
     public void listTourWeekPatterns(com.tcn.cloud.api.api.v1alpha1.wfm.ListTourWeekPatternsReq request,
@@ -9793,9 +9793,9 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Deletes the tour week patterns with the given &#64;tour_week_pattern_sids for the org sending the request.
+     * Deletes the Tour Week Patterns with the given &#64;tour_week_pattern_sids for the org sending the request.
      * Any Tour Week Instance or Segment Configs using &#64;tour_week_pattern_sids will be deleted.
-     * Request will error if any &#64;tour_week_pattern_sids are in use by a Tour Agent Collection.
+     * Request will error if any &#64;tour_week_pattern_sids are in use by a Tour Agent Collection, as those must be removed first.
      * Required permissions:
      *   NONE
      * Errors:
@@ -9835,7 +9835,7 @@ public final class WFMGrpc {
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the request data is invalid or a preexisting tour shift instance config would overlap &#64;tour_shift_instance_config.
+     *   - grpc.Invalid: the request data is invalid or a preexisting Tour Shift Instance Config would overlap &#64;tour_shift_instance_config.
      *   - grpc.Internal: error occurs when updating the data.
      * </pre>
      */
@@ -9847,12 +9847,12 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Lists the tour shift instance configs belonging to &#64;tour_week_pattern_sids for the org sending the request.
+     * Lists the Tour Shift Instance Configs belonging to &#64;tour_week_pattern_sids for the org sending the request.
      * Required permissions:
      *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
-     *   - grpc.Internal: error occurs when getting the tour shift instance configs.
+     *   - grpc.Internal: error occurs when getting the Tour Shift Instance Configs.
      * </pre>
      */
     public void listTourShiftInstanceConfigs(com.tcn.cloud.api.api.v1alpha1.wfm.ListTourShiftInstanceConfigsReq request,
@@ -9863,12 +9863,12 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Deletes the tour shift instance configs matching &#64;tour_shift_instance_config_sids for the org sending the request.
+     * Deletes the Tour Shift Instance Configs matching &#64;tour_shift_instance_config_sids for the org sending the request.
      * Required permissions:
      *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
-     *   - grpc.Internal: error occurs when getting the tour shift instance configs.
+     *   - grpc.Internal: error occurs when getting the Tour Shift Instance Configs.
      * </pre>
      */
     public void deleteTourShiftInstanceConfigs(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourShiftInstanceConfigsReq request,
@@ -9895,8 +9895,8 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Updates the given &#64;tour_shift_segment_config matching &#64;tour_shift_segment_config_sid and the org sending the request.
-     * If the updated Tour Shify Segment Config overlaps another segment or does not fit within the parent Tour Shift Instance Config the update will fail.
+     * Updates the given &#64;tour_shift_segment_config matching &#64;tour_shift_segment_config_sid for the org sending the request.
+     * If the updated Tour Shift Segment Config overlaps another segment or does not fit within the parent Tour Shift Instance Config the update will fail.
      * Required permissions:
      *   NONE
      * Errors:
@@ -9912,12 +9912,12 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Lists the tour shift segment configs belonging to &#64;tour_shift_instance_config_sids for the org sending the request.
+     * Lists the Tour Shift Segment Configs belonging to &#64;tour_shift_instance_config_sids for the org sending the request.
      * Required permissions:
      *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
-     *   - grpc.Internal: error occurs when getting the tour shift segment configs.
+     *   - grpc.Internal: error occurs when getting the Tour Shift Segment Configs.
      * </pre>
      */
     public void listTourShiftSegmentConfigs(com.tcn.cloud.api.api.v1alpha1.wfm.ListTourShiftSegmentConfigsReq request,
@@ -9928,12 +9928,12 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Deletes the tour shift segment configs associated with the given &#64;tour_shift_segment_config_sids for the org sending the request.
+     * Deletes the Tour Shift Segment Configs associated with the given &#64;tour_shift_segment_config_sids for the org sending the request.
      * Required permissions:
      *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
-     *   - grpc.Internal: error occurs when deleting the tour shift segment configs.
+     *   - grpc.Internal: error occurs when deleting the Tour Shift Segment Configs.
      * </pre>
      */
     public void deleteTourShiftSegmentConfigs(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourShiftSegmentConfigsReq request,
@@ -9980,7 +9980,7 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Lists the tour agent collections belonging to &#64;tour_pattern_sid for the org sending the request.
+     * Lists the Tour Agent Collections belonging to &#64;tour_pattern_sid for the org sending the request.
      * Required permissions:
      *   NONE
      * Errors:
@@ -9996,7 +9996,7 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Deletes the tour agent collections belonging matching &#64;tour_agent_collection_sids for the org sending the request.
+     * Deletes the Tour Agent collections matching &#64;tour_agent_collection_sids for the org sending the request.
      * Any existing associations with WFM Agent Sids will be deleted as well.
      * Required permissions:
      *   NONE
@@ -10014,7 +10014,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Creates an assocation between the &#64;tour_agent_collection_sid and the &#64;wfm_agent_sids for the org sending the request.
-     * If there is already an association between any of the &#64;wfm_agent_sids and the tour pattern that &#64;tour_agent_collection_sid belongs to, the method will fail and no associations will be created.
+     * If there is already an association between any of the &#64;wfm_agent_sids and the Tour Pattern that &#64;tour_agent_collection_sid belongs to, the method will fail and no associations will be created.
      * Required permissions:
      *   NONE
      * Errors:
@@ -10053,7 +10053,7 @@ public final class WFMGrpc {
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the request data is invalid or there are no wfm agent associations to delete for &#64;tour_agent_collection_sid .
+     *   - grpc.Invalid: the request data is invalid or there are no WFM Agent associations to delete for &#64;tour_agent_collection_sid .
      *   - grpc.Internal: error occurs when getting the tour agent collections.
      * </pre>
      */
@@ -12352,13 +12352,13 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Creates a tour pattern for &#64;shift_template_sid and the org sending the request, returning &#64;tour_pattern_sid.
-     * If there is already a tour shift for &#64;shift_template_sid then the method call will fail to create a new tour pattern.
+     * Creates a Tour Pattern for &#64;shift_template_sid and the org sending the request, returning &#64;tour_pattern_sid.
+     * If there is already a Tour Pattern for &#64;shift_template_sid then the method call will fail to create a new Tour Pattern.
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the request data is invalid or a tour shift already exists for &#64;shift_template_sid.
-     *   - grpc.Internal: error occurs when creating the tour pattern.
+     *   - grpc.Invalid: the request data is invalid or a Tour Pattern already exists for &#64;shift_template_sid.
+     *   - grpc.Internal: error occurs when creating the Tour Pattern.
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourPatternRes createTourPattern(com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourPatternReq request) {
@@ -12368,12 +12368,12 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Gets the tour pattern belonging to &#64;shift_template_sid and the org sending the request.
+     * Gets the Tour Pattern belonging to &#64;shift_template_sid and the org sending the request.
      * Required permissions:
      *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
-     *   - grpc.NotFound: the requested tour pattern does not exist.
+     *   - grpc.NotFound: the requested Tour Pattern does not exist.
      *   - grpc.Internal: error occurs when getting the data.
      * </pre>
      */
@@ -12384,7 +12384,7 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Deletes the tour pattern belonging to &#64;tour_pattern_sid and the org sending the request.
+     * Deletes the Tour Pattern belonging to &#64;tour_pattern_sid and the org sending the request.
      * Any member Tour Week Patterns or Agent Collections will be deleted as well.
      * Required permissions:
      *   NONE
@@ -12400,13 +12400,13 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Creates a tour week pattern for &#64;tour_pattern_sid for the org sending the request, returning &#64;tour_week_pattern_sid.
-     * The newly created tour week pattern will be placed at the end of the existing sequence of tour week patterns for &#64;tour_pattern_sid.
+     * Creates a Tour Week Pattern for &#64;tour_pattern_sid for the org sending the request, returning &#64;tour_week_pattern_sid.
+     * The newly created Tour Week Pattern will be placed at the end of the existing sequence of tour week patterns for &#64;tour_pattern_sid.
      * Required permissions:
      *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid, or the given &#64;tour_pattern_sid does not exist for the org sending the request.
-     *   - grpc.Internal: error occurs when creating the tour week pattern.
+     *   - grpc.Internal: error occurs when creating the Tour Week Pattern.
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourWeekPatternRes createTourWeekPattern(com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourWeekPatternReq request) {
@@ -12416,12 +12416,12 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Lists the tour week patterns with &#64;tour_pattern_sid for the org sending the request
+     * Lists the Tour Week Patterns with &#64;tour_pattern_sid for the org sending the request
      * Required permissions:
      *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
-     *   - grpc.Internal: error occurs when getting the tour week patterns.
+     *   - grpc.Internal: error occurs when getting the Tour Week Patterns.
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.ListTourWeekPatternsRes listTourWeekPatterns(com.tcn.cloud.api.api.v1alpha1.wfm.ListTourWeekPatternsReq request) {
@@ -12431,9 +12431,9 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Deletes the tour week patterns with the given &#64;tour_week_pattern_sids for the org sending the request.
+     * Deletes the Tour Week Patterns with the given &#64;tour_week_pattern_sids for the org sending the request.
      * Any Tour Week Instance or Segment Configs using &#64;tour_week_pattern_sids will be deleted.
-     * Request will error if any &#64;tour_week_pattern_sids are in use by a Tour Agent Collection.
+     * Request will error if any &#64;tour_week_pattern_sids are in use by a Tour Agent Collection, as those must be removed first.
      * Required permissions:
      *   NONE
      * Errors:
@@ -12471,7 +12471,7 @@ public final class WFMGrpc {
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the request data is invalid or a preexisting tour shift instance config would overlap &#64;tour_shift_instance_config.
+     *   - grpc.Invalid: the request data is invalid or a preexisting Tour Shift Instance Config would overlap &#64;tour_shift_instance_config.
      *   - grpc.Internal: error occurs when updating the data.
      * </pre>
      */
@@ -12482,12 +12482,12 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Lists the tour shift instance configs belonging to &#64;tour_week_pattern_sids for the org sending the request.
+     * Lists the Tour Shift Instance Configs belonging to &#64;tour_week_pattern_sids for the org sending the request.
      * Required permissions:
      *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
-     *   - grpc.Internal: error occurs when getting the tour shift instance configs.
+     *   - grpc.Internal: error occurs when getting the Tour Shift Instance Configs.
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.ListTourShiftInstanceConfigsRes listTourShiftInstanceConfigs(com.tcn.cloud.api.api.v1alpha1.wfm.ListTourShiftInstanceConfigsReq request) {
@@ -12497,12 +12497,12 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Deletes the tour shift instance configs matching &#64;tour_shift_instance_config_sids for the org sending the request.
+     * Deletes the Tour Shift Instance Configs matching &#64;tour_shift_instance_config_sids for the org sending the request.
      * Required permissions:
      *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
-     *   - grpc.Internal: error occurs when getting the tour shift instance configs.
+     *   - grpc.Internal: error occurs when getting the Tour Shift Instance Configs.
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourShiftInstanceConfigsRes deleteTourShiftInstanceConfigs(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourShiftInstanceConfigsReq request) {
@@ -12527,8 +12527,8 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Updates the given &#64;tour_shift_segment_config matching &#64;tour_shift_segment_config_sid and the org sending the request.
-     * If the updated Tour Shify Segment Config overlaps another segment or does not fit within the parent Tour Shift Instance Config the update will fail.
+     * Updates the given &#64;tour_shift_segment_config matching &#64;tour_shift_segment_config_sid for the org sending the request.
+     * If the updated Tour Shift Segment Config overlaps another segment or does not fit within the parent Tour Shift Instance Config the update will fail.
      * Required permissions:
      *   NONE
      * Errors:
@@ -12543,12 +12543,12 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Lists the tour shift segment configs belonging to &#64;tour_shift_instance_config_sids for the org sending the request.
+     * Lists the Tour Shift Segment Configs belonging to &#64;tour_shift_instance_config_sids for the org sending the request.
      * Required permissions:
      *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
-     *   - grpc.Internal: error occurs when getting the tour shift segment configs.
+     *   - grpc.Internal: error occurs when getting the Tour Shift Segment Configs.
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.ListTourShiftSegmentConfigsRes listTourShiftSegmentConfigs(com.tcn.cloud.api.api.v1alpha1.wfm.ListTourShiftSegmentConfigsReq request) {
@@ -12558,12 +12558,12 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Deletes the tour shift segment configs associated with the given &#64;tour_shift_segment_config_sids for the org sending the request.
+     * Deletes the Tour Shift Segment Configs associated with the given &#64;tour_shift_segment_config_sids for the org sending the request.
      * Required permissions:
      *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
-     *   - grpc.Internal: error occurs when deleting the tour shift segment configs.
+     *   - grpc.Internal: error occurs when deleting the Tour Shift Segment Configs.
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourShiftSegmentConfigsRes deleteTourShiftSegmentConfigs(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourShiftSegmentConfigsReq request) {
@@ -12607,7 +12607,7 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Lists the tour agent collections belonging to &#64;tour_pattern_sid for the org sending the request.
+     * Lists the Tour Agent Collections belonging to &#64;tour_pattern_sid for the org sending the request.
      * Required permissions:
      *   NONE
      * Errors:
@@ -12622,7 +12622,7 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Deletes the tour agent collections belonging matching &#64;tour_agent_collection_sids for the org sending the request.
+     * Deletes the Tour Agent collections matching &#64;tour_agent_collection_sids for the org sending the request.
      * Any existing associations with WFM Agent Sids will be deleted as well.
      * Required permissions:
      *   NONE
@@ -12639,7 +12639,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Creates an assocation between the &#64;tour_agent_collection_sid and the &#64;wfm_agent_sids for the org sending the request.
-     * If there is already an association between any of the &#64;wfm_agent_sids and the tour pattern that &#64;tour_agent_collection_sid belongs to, the method will fail and no associations will be created.
+     * If there is already an association between any of the &#64;wfm_agent_sids and the Tour Pattern that &#64;tour_agent_collection_sid belongs to, the method will fail and no associations will be created.
      * Required permissions:
      *   NONE
      * Errors:
@@ -12676,7 +12676,7 @@ public final class WFMGrpc {
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the request data is invalid or there are no wfm agent associations to delete for &#64;tour_agent_collection_sid .
+     *   - grpc.Invalid: the request data is invalid or there are no WFM Agent associations to delete for &#64;tour_agent_collection_sid .
      *   - grpc.Internal: error occurs when getting the tour agent collections.
      * </pre>
      */
@@ -14984,13 +14984,13 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Creates a tour pattern for &#64;shift_template_sid and the org sending the request, returning &#64;tour_pattern_sid.
-     * If there is already a tour shift for &#64;shift_template_sid then the method call will fail to create a new tour pattern.
+     * Creates a Tour Pattern for &#64;shift_template_sid and the org sending the request, returning &#64;tour_pattern_sid.
+     * If there is already a Tour Pattern for &#64;shift_template_sid then the method call will fail to create a new Tour Pattern.
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the request data is invalid or a tour shift already exists for &#64;shift_template_sid.
-     *   - grpc.Internal: error occurs when creating the tour pattern.
+     *   - grpc.Invalid: the request data is invalid or a Tour Pattern already exists for &#64;shift_template_sid.
+     *   - grpc.Internal: error occurs when creating the Tour Pattern.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourPatternRes> createTourPattern(
@@ -15001,12 +15001,12 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Gets the tour pattern belonging to &#64;shift_template_sid and the org sending the request.
+     * Gets the Tour Pattern belonging to &#64;shift_template_sid and the org sending the request.
      * Required permissions:
      *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
-     *   - grpc.NotFound: the requested tour pattern does not exist.
+     *   - grpc.NotFound: the requested Tour Pattern does not exist.
      *   - grpc.Internal: error occurs when getting the data.
      * </pre>
      */
@@ -15018,7 +15018,7 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Deletes the tour pattern belonging to &#64;tour_pattern_sid and the org sending the request.
+     * Deletes the Tour Pattern belonging to &#64;tour_pattern_sid and the org sending the request.
      * Any member Tour Week Patterns or Agent Collections will be deleted as well.
      * Required permissions:
      *   NONE
@@ -15035,13 +15035,13 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Creates a tour week pattern for &#64;tour_pattern_sid for the org sending the request, returning &#64;tour_week_pattern_sid.
-     * The newly created tour week pattern will be placed at the end of the existing sequence of tour week patterns for &#64;tour_pattern_sid.
+     * Creates a Tour Week Pattern for &#64;tour_pattern_sid for the org sending the request, returning &#64;tour_week_pattern_sid.
+     * The newly created Tour Week Pattern will be placed at the end of the existing sequence of tour week patterns for &#64;tour_pattern_sid.
      * Required permissions:
      *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid, or the given &#64;tour_pattern_sid does not exist for the org sending the request.
-     *   - grpc.Internal: error occurs when creating the tour week pattern.
+     *   - grpc.Internal: error occurs when creating the Tour Week Pattern.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourWeekPatternRes> createTourWeekPattern(
@@ -15052,12 +15052,12 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Lists the tour week patterns with &#64;tour_pattern_sid for the org sending the request
+     * Lists the Tour Week Patterns with &#64;tour_pattern_sid for the org sending the request
      * Required permissions:
      *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
-     *   - grpc.Internal: error occurs when getting the tour week patterns.
+     *   - grpc.Internal: error occurs when getting the Tour Week Patterns.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListTourWeekPatternsRes> listTourWeekPatterns(
@@ -15068,9 +15068,9 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Deletes the tour week patterns with the given &#64;tour_week_pattern_sids for the org sending the request.
+     * Deletes the Tour Week Patterns with the given &#64;tour_week_pattern_sids for the org sending the request.
      * Any Tour Week Instance or Segment Configs using &#64;tour_week_pattern_sids will be deleted.
-     * Request will error if any &#64;tour_week_pattern_sids are in use by a Tour Agent Collection.
+     * Request will error if any &#64;tour_week_pattern_sids are in use by a Tour Agent Collection, as those must be removed first.
      * Required permissions:
      *   NONE
      * Errors:
@@ -15110,7 +15110,7 @@ public final class WFMGrpc {
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the request data is invalid or a preexisting tour shift instance config would overlap &#64;tour_shift_instance_config.
+     *   - grpc.Invalid: the request data is invalid or a preexisting Tour Shift Instance Config would overlap &#64;tour_shift_instance_config.
      *   - grpc.Internal: error occurs when updating the data.
      * </pre>
      */
@@ -15122,12 +15122,12 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Lists the tour shift instance configs belonging to &#64;tour_week_pattern_sids for the org sending the request.
+     * Lists the Tour Shift Instance Configs belonging to &#64;tour_week_pattern_sids for the org sending the request.
      * Required permissions:
      *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
-     *   - grpc.Internal: error occurs when getting the tour shift instance configs.
+     *   - grpc.Internal: error occurs when getting the Tour Shift Instance Configs.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListTourShiftInstanceConfigsRes> listTourShiftInstanceConfigs(
@@ -15138,12 +15138,12 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Deletes the tour shift instance configs matching &#64;tour_shift_instance_config_sids for the org sending the request.
+     * Deletes the Tour Shift Instance Configs matching &#64;tour_shift_instance_config_sids for the org sending the request.
      * Required permissions:
      *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
-     *   - grpc.Internal: error occurs when getting the tour shift instance configs.
+     *   - grpc.Internal: error occurs when getting the Tour Shift Instance Configs.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourShiftInstanceConfigsRes> deleteTourShiftInstanceConfigs(
@@ -15170,8 +15170,8 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Updates the given &#64;tour_shift_segment_config matching &#64;tour_shift_segment_config_sid and the org sending the request.
-     * If the updated Tour Shify Segment Config overlaps another segment or does not fit within the parent Tour Shift Instance Config the update will fail.
+     * Updates the given &#64;tour_shift_segment_config matching &#64;tour_shift_segment_config_sid for the org sending the request.
+     * If the updated Tour Shift Segment Config overlaps another segment or does not fit within the parent Tour Shift Instance Config the update will fail.
      * Required permissions:
      *   NONE
      * Errors:
@@ -15187,12 +15187,12 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Lists the tour shift segment configs belonging to &#64;tour_shift_instance_config_sids for the org sending the request.
+     * Lists the Tour Shift Segment Configs belonging to &#64;tour_shift_instance_config_sids for the org sending the request.
      * Required permissions:
      *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
-     *   - grpc.Internal: error occurs when getting the tour shift segment configs.
+     *   - grpc.Internal: error occurs when getting the Tour Shift Segment Configs.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListTourShiftSegmentConfigsRes> listTourShiftSegmentConfigs(
@@ -15203,12 +15203,12 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Deletes the tour shift segment configs associated with the given &#64;tour_shift_segment_config_sids for the org sending the request.
+     * Deletes the Tour Shift Segment Configs associated with the given &#64;tour_shift_segment_config_sids for the org sending the request.
      * Required permissions:
      *   NONE
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
-     *   - grpc.Internal: error occurs when deleting the tour shift segment configs.
+     *   - grpc.Internal: error occurs when deleting the Tour Shift Segment Configs.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourShiftSegmentConfigsRes> deleteTourShiftSegmentConfigs(
@@ -15255,7 +15255,7 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Lists the tour agent collections belonging to &#64;tour_pattern_sid for the org sending the request.
+     * Lists the Tour Agent Collections belonging to &#64;tour_pattern_sid for the org sending the request.
      * Required permissions:
      *   NONE
      * Errors:
@@ -15271,7 +15271,7 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Deletes the tour agent collections belonging matching &#64;tour_agent_collection_sids for the org sending the request.
+     * Deletes the Tour Agent collections matching &#64;tour_agent_collection_sids for the org sending the request.
      * Any existing associations with WFM Agent Sids will be deleted as well.
      * Required permissions:
      *   NONE
@@ -15289,7 +15289,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Creates an assocation between the &#64;tour_agent_collection_sid and the &#64;wfm_agent_sids for the org sending the request.
-     * If there is already an association between any of the &#64;wfm_agent_sids and the tour pattern that &#64;tour_agent_collection_sid belongs to, the method will fail and no associations will be created.
+     * If there is already an association between any of the &#64;wfm_agent_sids and the Tour Pattern that &#64;tour_agent_collection_sid belongs to, the method will fail and no associations will be created.
      * Required permissions:
      *   NONE
      * Errors:
@@ -15328,7 +15328,7 @@ public final class WFMGrpc {
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the request data is invalid or there are no wfm agent associations to delete for &#64;tour_agent_collection_sid .
+     *   - grpc.Invalid: the request data is invalid or there are no WFM Agent associations to delete for &#64;tour_agent_collection_sid .
      *   - grpc.Internal: error occurs when getting the tour agent collections.
      * </pre>
      */

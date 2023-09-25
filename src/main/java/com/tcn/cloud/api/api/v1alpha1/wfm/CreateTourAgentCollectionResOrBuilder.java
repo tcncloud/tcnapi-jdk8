@@ -9,7 +9,7 @@ public interface CreateTourAgentCollectionResOrBuilder extends
 
   /**
    * <pre>
-   * ID of the newly created tour agent collection.
+   * ID of the newly created Tour Agent Collection.
    * </pre>
    *
    * <code>int64 tour_agent_collection_sid = 1 [json_name = "tourAgentCollectionSid"];</code>

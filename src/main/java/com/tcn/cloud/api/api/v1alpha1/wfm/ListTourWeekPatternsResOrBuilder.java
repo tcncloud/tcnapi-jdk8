@@ -8,24 +8,44 @@ public interface ListTourWeekPatternsResOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * The requested Tour Week Patterns.
+   * </pre>
+   *
    * <code>repeated .api.commons.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
    */
   java.util.List<com.tcn.cloud.api.api.commons.TourWeekPattern> 
       getTourWeekPatternsList();
   /**
+   * <pre>
+   * The requested Tour Week Patterns.
+   * </pre>
+   *
    * <code>repeated .api.commons.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
    */
   com.tcn.cloud.api.api.commons.TourWeekPattern getTourWeekPatterns(int index);
   /**
+   * <pre>
+   * The requested Tour Week Patterns.
+   * </pre>
+   *
    * <code>repeated .api.commons.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
    */
   int getTourWeekPatternsCount();
   /**
+   * <pre>
+   * The requested Tour Week Patterns.
+   * </pre>
+   *
    * <code>repeated .api.commons.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
    */
   java.util.List<? extends com.tcn.cloud.api.api.commons.TourWeekPatternOrBuilder> 
       getTourWeekPatternsOrBuilderList();
   /**
+   * <pre>
+   * The requested Tour Week Patterns.
+   * </pre>
+   *
    * <code>repeated .api.commons.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
    */
   com.tcn.cloud.api.api.commons.TourWeekPatternOrBuilder getTourWeekPatternsOrBuilder(

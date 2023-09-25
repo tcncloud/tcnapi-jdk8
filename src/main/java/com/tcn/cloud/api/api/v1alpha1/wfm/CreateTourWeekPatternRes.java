@@ -46,7 +46,7 @@ private static final long serialVersionUID = 0L;
   private long tourWeekPatternSid_ = 0L;
   /**
    * <pre>
-   * ID of the newly created tour pattern.
+   * ID of the newly created Tour Pattern.
    * </pre>
    *
    * <code>int64 tour_week_pattern_sid = 1 [json_name = "tourWeekPatternSid"];</code>
@@ -390,7 +390,7 @@ private static final long serialVersionUID = 0L;
     private long tourWeekPatternSid_ ;
     /**
      * <pre>
-     * ID of the newly created tour pattern.
+     * ID of the newly created Tour Pattern.
      * </pre>
      *
      * <code>int64 tour_week_pattern_sid = 1 [json_name = "tourWeekPatternSid"];</code>
@@ -402,7 +402,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ID of the newly created tour pattern.
+     * ID of the newly created Tour Pattern.
      * </pre>
      *
      * <code>int64 tour_week_pattern_sid = 1 [json_name = "tourWeekPatternSid"];</code>
@@ -418,7 +418,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ID of the newly created tour pattern.
+     * ID of the newly created Tour Pattern.
      * </pre>
      *
      * <code>int64 tour_week_pattern_sid = 1 [json_name = "tourWeekPatternSid"];</code>

@@ -9,7 +9,7 @@ public interface CreateTourWeekPatternResOrBuilder extends
 
   /**
    * <pre>
-   * ID of the newly created tour pattern.
+   * ID of the newly created Tour Pattern.
    * </pre>
    *
    * <code>int64 tour_week_pattern_sid = 1 [json_name = "tourWeekPatternSid"];</code>

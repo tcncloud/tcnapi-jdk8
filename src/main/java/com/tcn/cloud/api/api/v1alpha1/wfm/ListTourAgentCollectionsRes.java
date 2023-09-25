@@ -48,7 +48,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<com.tcn.cloud.api.api.commons.TourAgentCollection> tourAgentCollections_;
   /**
    * <pre>
-   * Requested tour agent collections.
+   * Requested Tour Agent Collections.
    * </pre>
    *
    * <code>repeated .api.commons.TourAgentCollection tour_agent_collections = 1 [json_name = "tourAgentCollections"];</code>
@@ -59,7 +59,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Requested tour agent collections.
+   * Requested Tour Agent Collections.
    * </pre>
    *
    * <code>repeated .api.commons.TourAgentCollection tour_agent_collections = 1 [json_name = "tourAgentCollections"];</code>
@@ -71,7 +71,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Requested tour agent collections.
+   * Requested Tour Agent Collections.
    * </pre>
    *
    * <code>repeated .api.commons.TourAgentCollection tour_agent_collections = 1 [json_name = "tourAgentCollections"];</code>
@@ -82,7 +82,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Requested tour agent collections.
+   * Requested Tour Agent Collections.
    * </pre>
    *
    * <code>repeated .api.commons.TourAgentCollection tour_agent_collections = 1 [json_name = "tourAgentCollections"];</code>
@@ -93,7 +93,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Requested tour agent collections.
+   * Requested Tour Agent Collections.
    * </pre>
    *
    * <code>repeated .api.commons.TourAgentCollection tour_agent_collections = 1 [json_name = "tourAgentCollections"];</code>
@@ -496,7 +496,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Requested tour agent collections.
+     * Requested Tour Agent Collections.
      * </pre>
      *
      * <code>repeated .api.commons.TourAgentCollection tour_agent_collections = 1 [json_name = "tourAgentCollections"];</code>
@@ -510,7 +510,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Requested tour agent collections.
+     * Requested Tour Agent Collections.
      * </pre>
      *
      * <code>repeated .api.commons.TourAgentCollection tour_agent_collections = 1 [json_name = "tourAgentCollections"];</code>
@@ -524,7 +524,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Requested tour agent collections.
+     * Requested Tour Agent Collections.
      * </pre>
      *
      * <code>repeated .api.commons.TourAgentCollection tour_agent_collections = 1 [json_name = "tourAgentCollections"];</code>
@@ -538,7 +538,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Requested tour agent collections.
+     * Requested Tour Agent Collections.
      * </pre>
      *
      * <code>repeated .api.commons.TourAgentCollection tour_agent_collections = 1 [json_name = "tourAgentCollections"];</code>
@@ -559,7 +559,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Requested tour agent collections.
+     * Requested Tour Agent Collections.
      * </pre>
      *
      * <code>repeated .api.commons.TourAgentCollection tour_agent_collections = 1 [json_name = "tourAgentCollections"];</code>
@@ -577,7 +577,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Requested tour agent collections.
+     * Requested Tour Agent Collections.
      * </pre>
      *
      * <code>repeated .api.commons.TourAgentCollection tour_agent_collections = 1 [json_name = "tourAgentCollections"];</code>
@@ -597,7 +597,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Requested tour agent collections.
+     * Requested Tour Agent Collections.
      * </pre>
      *
      * <code>repeated .api.commons.TourAgentCollection tour_agent_collections = 1 [json_name = "tourAgentCollections"];</code>
@@ -618,7 +618,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Requested tour agent collections.
+     * Requested Tour Agent Collections.
      * </pre>
      *
      * <code>repeated .api.commons.TourAgentCollection tour_agent_collections = 1 [json_name = "tourAgentCollections"];</code>
@@ -636,7 +636,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Requested tour agent collections.
+     * Requested Tour Agent Collections.
      * </pre>
      *
      * <code>repeated .api.commons.TourAgentCollection tour_agent_collections = 1 [json_name = "tourAgentCollections"];</code>
@@ -654,7 +654,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Requested tour agent collections.
+     * Requested Tour Agent Collections.
      * </pre>
      *
      * <code>repeated .api.commons.TourAgentCollection tour_agent_collections = 1 [json_name = "tourAgentCollections"];</code>
@@ -673,7 +673,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Requested tour agent collections.
+     * Requested Tour Agent Collections.
      * </pre>
      *
      * <code>repeated .api.commons.TourAgentCollection tour_agent_collections = 1 [json_name = "tourAgentCollections"];</code>
@@ -690,7 +690,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Requested tour agent collections.
+     * Requested Tour Agent Collections.
      * </pre>
      *
      * <code>repeated .api.commons.TourAgentCollection tour_agent_collections = 1 [json_name = "tourAgentCollections"];</code>
@@ -707,7 +707,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Requested tour agent collections.
+     * Requested Tour Agent Collections.
      * </pre>
      *
      * <code>repeated .api.commons.TourAgentCollection tour_agent_collections = 1 [json_name = "tourAgentCollections"];</code>
@@ -718,7 +718,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Requested tour agent collections.
+     * Requested Tour Agent Collections.
      * </pre>
      *
      * <code>repeated .api.commons.TourAgentCollection tour_agent_collections = 1 [json_name = "tourAgentCollections"];</code>
@@ -732,7 +732,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Requested tour agent collections.
+     * Requested Tour Agent Collections.
      * </pre>
      *
      * <code>repeated .api.commons.TourAgentCollection tour_agent_collections = 1 [json_name = "tourAgentCollections"];</code>
@@ -747,7 +747,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Requested tour agent collections.
+     * Requested Tour Agent Collections.
      * </pre>
      *
      * <code>repeated .api.commons.TourAgentCollection tour_agent_collections = 1 [json_name = "tourAgentCollections"];</code>
@@ -758,7 +758,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Requested tour agent collections.
+     * Requested Tour Agent Collections.
      * </pre>
      *
      * <code>repeated .api.commons.TourAgentCollection tour_agent_collections = 1 [json_name = "tourAgentCollections"];</code>
@@ -770,7 +770,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Requested tour agent collections.
+     * Requested Tour Agent Collections.
      * </pre>
      *
      * <code>repeated .api.commons.TourAgentCollection tour_agent_collections = 1 [json_name = "tourAgentCollections"];</code>

@@ -9,7 +9,7 @@ public interface ListTourAgentCollectionsReqOrBuilder extends
 
   /**
    * <pre>
-   * ID of the tour pattern to get the child tour agent collections for.
+   * ID of the tour pattern to get the child Tour Agent Collections for.
    * </pre>
    *
    * <code>int64 tour_pattern_sid = 1 [json_name = "tourPatternSid"];</code>

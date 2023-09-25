@@ -9,7 +9,7 @@ public interface CreateTourPatternReqOrBuilder extends
 
   /**
    * <pre>
-   * ID of the shift template to create the tour pattern for.
+   * ID of the Shift Template to create the Tour Pattern for.
    * </pre>
    *
    * <code>int64 shift_template_sid = 1 [json_name = "shiftTemplateSid"];</code>

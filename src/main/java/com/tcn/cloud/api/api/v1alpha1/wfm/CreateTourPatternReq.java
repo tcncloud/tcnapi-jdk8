@@ -46,7 +46,7 @@ private static final long serialVersionUID = 0L;
   private long shiftTemplateSid_ = 0L;
   /**
    * <pre>
-   * ID of the shift template to create the tour pattern for.
+   * ID of the Shift Template to create the Tour Pattern for.
    * </pre>
    *
    * <code>int64 shift_template_sid = 1 [json_name = "shiftTemplateSid"];</code>
@@ -390,7 +390,7 @@ private static final long serialVersionUID = 0L;
     private long shiftTemplateSid_ ;
     /**
      * <pre>
-     * ID of the shift template to create the tour pattern for.
+     * ID of the Shift Template to create the Tour Pattern for.
      * </pre>
      *
      * <code>int64 shift_template_sid = 1 [json_name = "shiftTemplateSid"];</code>
@@ -402,7 +402,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ID of the shift template to create the tour pattern for.
+     * ID of the Shift Template to create the Tour Pattern for.
      * </pre>
      *
      * <code>int64 shift_template_sid = 1 [json_name = "shiftTemplateSid"];</code>
@@ -418,7 +418,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ID of the shift template to create the tour pattern for.
+     * ID of the Shift Template to create the Tour Pattern for.
      * </pre>
      *
      * <code>int64 shift_template_sid = 1 [json_name = "shiftTemplateSid"];</code>

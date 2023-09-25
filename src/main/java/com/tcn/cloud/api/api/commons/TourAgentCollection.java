@@ -109,7 +109,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The week pattern number to start scheduling this collection with.
-   * Each week a the next week pattern number in sequence will be scheduled, starting with the &#64;first_week_pattern_number.
+   * Each the next week pattern number in sequence will be scheduled, starting with the &#64;first_week_pattern_number.
    * </pre>
    *
    * <code>int32 first_week_pattern_number = 5 [json_name = "firstWeekPatternNumber"];</code>
@@ -899,7 +899,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The week pattern number to start scheduling this collection with.
-     * Each week a the next week pattern number in sequence will be scheduled, starting with the &#64;first_week_pattern_number.
+     * Each the next week pattern number in sequence will be scheduled, starting with the &#64;first_week_pattern_number.
      * </pre>
      *
      * <code>int32 first_week_pattern_number = 5 [json_name = "firstWeekPatternNumber"];</code>
@@ -912,7 +912,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The week pattern number to start scheduling this collection with.
-     * Each week a the next week pattern number in sequence will be scheduled, starting with the &#64;first_week_pattern_number.
+     * Each the next week pattern number in sequence will be scheduled, starting with the &#64;first_week_pattern_number.
      * </pre>
      *
      * <code>int32 first_week_pattern_number = 5 [json_name = "firstWeekPatternNumber"];</code>
@@ -929,7 +929,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The week pattern number to start scheduling this collection with.
-     * Each week a the next week pattern number in sequence will be scheduled, starting with the &#64;first_week_pattern_number.
+     * Each the next week pattern number in sequence will be scheduled, starting with the &#64;first_week_pattern_number.
      * </pre>
      *
      * <code>int32 first_week_pattern_number = 5 [json_name = "firstWeekPatternNumber"];</code>

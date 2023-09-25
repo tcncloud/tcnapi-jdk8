@@ -46,7 +46,7 @@ private static final long serialVersionUID = 0L;
   private com.tcn.cloud.api.api.commons.TourAgentCollection tourAgentCollection_;
   /**
    * <pre>
-   * The tour agent collection to update.
+   * The Tour Agent Collection to update.
    * </pre>
    *
    * <code>.api.commons.TourAgentCollection tour_agent_collection = 1 [json_name = "tourAgentCollection"];</code>
@@ -58,7 +58,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The tour agent collection to update.
+   * The Tour Agent Collection to update.
    * </pre>
    *
    * <code>.api.commons.TourAgentCollection tour_agent_collection = 1 [json_name = "tourAgentCollection"];</code>
@@ -70,7 +70,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The tour agent collection to update.
+   * The Tour Agent Collection to update.
    * </pre>
    *
    * <code>.api.commons.TourAgentCollection tour_agent_collection = 1 [json_name = "tourAgentCollection"];</code>
@@ -427,7 +427,7 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.TourAgentCollection, com.tcn.cloud.api.api.commons.TourAgentCollection.Builder, com.tcn.cloud.api.api.commons.TourAgentCollectionOrBuilder> tourAgentCollectionBuilder_;
     /**
      * <pre>
-     * The tour agent collection to update.
+     * The Tour Agent Collection to update.
      * </pre>
      *
      * <code>.api.commons.TourAgentCollection tour_agent_collection = 1 [json_name = "tourAgentCollection"];</code>
@@ -438,7 +438,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The tour agent collection to update.
+     * The Tour Agent Collection to update.
      * </pre>
      *
      * <code>.api.commons.TourAgentCollection tour_agent_collection = 1 [json_name = "tourAgentCollection"];</code>
@@ -453,7 +453,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The tour agent collection to update.
+     * The Tour Agent Collection to update.
      * </pre>
      *
      * <code>.api.commons.TourAgentCollection tour_agent_collection = 1 [json_name = "tourAgentCollection"];</code>
@@ -473,7 +473,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The tour agent collection to update.
+     * The Tour Agent Collection to update.
      * </pre>
      *
      * <code>.api.commons.TourAgentCollection tour_agent_collection = 1 [json_name = "tourAgentCollection"];</code>
@@ -491,7 +491,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The tour agent collection to update.
+     * The Tour Agent Collection to update.
      * </pre>
      *
      * <code>.api.commons.TourAgentCollection tour_agent_collection = 1 [json_name = "tourAgentCollection"];</code>
@@ -514,7 +514,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The tour agent collection to update.
+     * The Tour Agent Collection to update.
      * </pre>
      *
      * <code>.api.commons.TourAgentCollection tour_agent_collection = 1 [json_name = "tourAgentCollection"];</code>
@@ -531,7 +531,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The tour agent collection to update.
+     * The Tour Agent Collection to update.
      * </pre>
      *
      * <code>.api.commons.TourAgentCollection tour_agent_collection = 1 [json_name = "tourAgentCollection"];</code>
@@ -543,7 +543,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The tour agent collection to update.
+     * The Tour Agent Collection to update.
      * </pre>
      *
      * <code>.api.commons.TourAgentCollection tour_agent_collection = 1 [json_name = "tourAgentCollection"];</code>
@@ -558,7 +558,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The tour agent collection to update.
+     * The Tour Agent Collection to update.
      * </pre>
      *
      * <code>.api.commons.TourAgentCollection tour_agent_collection = 1 [json_name = "tourAgentCollection"];</code>

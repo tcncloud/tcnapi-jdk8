@@ -48,7 +48,7 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Internal.LongList tourShiftSegmentConfigSids_;
   /**
    * <pre>
-   * IDs of the tour shift segment configs to delete.
+   * IDs of the Tour Shift Segment Configs to delete.
    * </pre>
    *
    * <code>repeated int64 tour_shift_segment_config_sids = 1 [json_name = "tourShiftSegmentConfigSids"];</code>
@@ -61,7 +61,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * IDs of the tour shift segment configs to delete.
+   * IDs of the Tour Shift Segment Configs to delete.
    * </pre>
    *
    * <code>repeated int64 tour_shift_segment_config_sids = 1 [json_name = "tourShiftSegmentConfigSids"];</code>
@@ -72,7 +72,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * IDs of the tour shift segment configs to delete.
+   * IDs of the Tour Shift Segment Configs to delete.
    * </pre>
    *
    * <code>repeated int64 tour_shift_segment_config_sids = 1 [json_name = "tourShiftSegmentConfigSids"];</code>
@@ -463,7 +463,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * IDs of the tour shift segment configs to delete.
+     * IDs of the Tour Shift Segment Configs to delete.
      * </pre>
      *
      * <code>repeated int64 tour_shift_segment_config_sids = 1 [json_name = "tourShiftSegmentConfigSids"];</code>
@@ -476,7 +476,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * IDs of the tour shift segment configs to delete.
+     * IDs of the Tour Shift Segment Configs to delete.
      * </pre>
      *
      * <code>repeated int64 tour_shift_segment_config_sids = 1 [json_name = "tourShiftSegmentConfigSids"];</code>
@@ -487,7 +487,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * IDs of the tour shift segment configs to delete.
+     * IDs of the Tour Shift Segment Configs to delete.
      * </pre>
      *
      * <code>repeated int64 tour_shift_segment_config_sids = 1 [json_name = "tourShiftSegmentConfigSids"];</code>
@@ -499,7 +499,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * IDs of the tour shift segment configs to delete.
+     * IDs of the Tour Shift Segment Configs to delete.
      * </pre>
      *
      * <code>repeated int64 tour_shift_segment_config_sids = 1 [json_name = "tourShiftSegmentConfigSids"];</code>
@@ -517,7 +517,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * IDs of the tour shift segment configs to delete.
+     * IDs of the Tour Shift Segment Configs to delete.
      * </pre>
      *
      * <code>repeated int64 tour_shift_segment_config_sids = 1 [json_name = "tourShiftSegmentConfigSids"];</code>
@@ -533,7 +533,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * IDs of the tour shift segment configs to delete.
+     * IDs of the Tour Shift Segment Configs to delete.
      * </pre>
      *
      * <code>repeated int64 tour_shift_segment_config_sids = 1 [json_name = "tourShiftSegmentConfigSids"];</code>
@@ -550,7 +550,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * IDs of the tour shift segment configs to delete.
+     * IDs of the Tour Shift Segment Configs to delete.
      * </pre>
      *
      * <code>repeated int64 tour_shift_segment_config_sids = 1 [json_name = "tourShiftSegmentConfigSids"];</code>

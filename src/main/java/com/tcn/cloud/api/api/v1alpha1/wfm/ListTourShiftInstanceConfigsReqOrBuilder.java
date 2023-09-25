@@ -9,7 +9,7 @@ public interface ListTourShiftInstanceConfigsReqOrBuilder extends
 
   /**
    * <pre>
-   * IDs of the tour week patterns to get the child tour shift instance configs for.
+   * IDs of the tour week patterns to get the child Tour Shift Instance Configs for.
    * </pre>
    *
    * <code>repeated int64 tour_week_pattern_sids = 1 [json_name = "tourWeekPatternSids"];</code>
@@ -18,7 +18,7 @@ public interface ListTourShiftInstanceConfigsReqOrBuilder extends
   java.util.List<java.lang.Long> getTourWeekPatternSidsList();
   /**
    * <pre>
-   * IDs of the tour week patterns to get the child tour shift instance configs for.
+   * IDs of the tour week patterns to get the child Tour Shift Instance Configs for.
    * </pre>
    *
    * <code>repeated int64 tour_week_pattern_sids = 1 [json_name = "tourWeekPatternSids"];</code>
@@ -27,7 +27,7 @@ public interface ListTourShiftInstanceConfigsReqOrBuilder extends
   int getTourWeekPatternSidsCount();
   /**
    * <pre>
-   * IDs of the tour week patterns to get the child tour shift instance configs for.
+   * IDs of the tour week patterns to get the child Tour Shift Instance Configs for.
    * </pre>
    *
    * <code>repeated int64 tour_week_pattern_sids = 1 [json_name = "tourWeekPatternSids"];</code>

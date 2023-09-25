@@ -46,7 +46,7 @@ private static final long serialVersionUID = 0L;
   private long tourAgentCollectionSid_ = 0L;
   /**
    * <pre>
-   * ID of the newly created tour agent collection.
+   * ID of the newly created Tour Agent Collection.
    * </pre>
    *
    * <code>int64 tour_agent_collection_sid = 1 [json_name = "tourAgentCollectionSid"];</code>
@@ -390,7 +390,7 @@ private static final long serialVersionUID = 0L;
     private long tourAgentCollectionSid_ ;
     /**
      * <pre>
-     * ID of the newly created tour agent collection.
+     * ID of the newly created Tour Agent Collection.
      * </pre>
      *
      * <code>int64 tour_agent_collection_sid = 1 [json_name = "tourAgentCollectionSid"];</code>
@@ -402,7 +402,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ID of the newly created tour agent collection.
+     * ID of the newly created Tour Agent Collection.
      * </pre>
      *
      * <code>int64 tour_agent_collection_sid = 1 [json_name = "tourAgentCollectionSid"];</code>
@@ -418,7 +418,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ID of the newly created tour agent collection.
+     * ID of the newly created Tour Agent Collection.
      * </pre>
      *
      * <code>int64 tour_agent_collection_sid = 1 [json_name = "tourAgentCollectionSid"];</code>
