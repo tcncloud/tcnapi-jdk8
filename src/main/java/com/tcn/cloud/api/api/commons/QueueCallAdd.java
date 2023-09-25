@@ -55,7 +55,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.QueueCallAdd.class, com.tcn.cloud.api.api.commons.QueueCallAdd.Builder.class);
   }
 
-  private int bitField0_;
   public static final int PHONE_NUMBER_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object phoneNumber_ = "";
@@ -162,7 +161,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasStartDate() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return startDate_ != null;
   }
   /**
    * <pre>
@@ -200,7 +199,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasHoldDate() {
-    return ((bitField0_ & 0x00000002) != 0);
+    return holdDate_ != null;
   }
   /**
    * <pre>
@@ -374,7 +373,7 @@ java.lang.String defaultValue) {
    */
   @java.lang.Override
   public boolean hasCallerSid() {
-    return ((bitField0_ & 0x00000004) != 0);
+    return callerSid_ != null;
   }
   /**
    * <pre>
@@ -513,10 +512,10 @@ java.lang.String defaultValue) {
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(callerId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, callerId_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (startDate_ != null) {
       output.writeMessage(3, getStartDate());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (holdDate_ != null) {
       output.writeMessage(4, getHoldDate());
     }
     com.google.protobuf.GeneratedMessageV3
@@ -531,7 +530,7 @@ java.lang.String defaultValue) {
     if (queuedNotificationType_ != com.tcn.cloud.api.api.commons.QueuedNotificationType.QueuedNotificationType_GENERAL_INITIAL.getNumber()) {
       output.writeEnum(7, queuedNotificationType_);
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
+    if (callerSid_ != null) {
       output.writeMessage(8, getCallerSid());
     }
     com.google.protobuf.GeneratedMessageV3
@@ -555,11 +554,11 @@ java.lang.String defaultValue) {
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(callerId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, callerId_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (startDate_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getStartDate());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (holdDate_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getHoldDate());
     }
@@ -581,7 +580,7 @@ java.lang.String defaultValue) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(7, queuedNotificationType_);
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
+    if (callerSid_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, getCallerSid());
     }
@@ -821,21 +820,13 @@ java.lang.String defaultValue) {
 
     // Construct using com.tcn.cloud.api.api.commons.QueueCallAdd.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getStartDateFieldBuilder();
-        getHoldDateFieldBuilder();
-        getCallerSidFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -901,18 +892,15 @@ java.lang.String defaultValue) {
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.callerId_ = callerId_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.startDate_ = startDateBuilder_ == null
             ? startDate_
             : startDateBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.holdDate_ = holdDateBuilder_ == null
             ? holdDate_
             : holdDateBuilder_.build();
-        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.formattedSkills_ = internalGetFormattedSkills();
@@ -928,13 +916,11 @@ java.lang.String defaultValue) {
         result.callerSid_ = callerSidBuilder_ == null
             ? callerSid_
             : callerSidBuilder_.build();
-        to_bitField0_ |= 0x00000004;
       }
       if (((from_bitField0_ & 0x00000100) != 0)) {
         result.skills_ = internalGetSkills();
         result.skills_.makeImmutable();
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1384,10 +1370,8 @@ java.lang.String defaultValue) {
       } else {
         startDateBuilder_.mergeFrom(value);
       }
-      if (startDate_ != null) {
-        bitField0_ |= 0x00000004;
-        onChanged();
-      }
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -1541,10 +1525,8 @@ java.lang.String defaultValue) {
       } else {
         holdDateBuilder_.mergeFrom(value);
       }
-      if (holdDate_ != null) {
-        bitField0_ |= 0x00000008;
-        onChanged();
-      }
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -1970,10 +1952,8 @@ java.lang.String defaultValue) {
       } else {
         callerSidBuilder_.mergeFrom(value);
       }
-      if (callerSid_ != null) {
-        bitField0_ |= 0x00000080;
-        onChanged();
-      }
+      bitField0_ |= 0x00000080;
+      onChanged();
       return this;
     }
     /**

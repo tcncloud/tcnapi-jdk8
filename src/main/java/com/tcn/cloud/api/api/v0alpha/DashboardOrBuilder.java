@@ -147,4 +147,34 @@ public interface DashboardOrBuilder extends
    * <code>.api.v0alpha.DashboardType type = 6 [json_name = "type"];</code>
    */
   com.tcn.cloud.api.api.v0alpha.DashboardTypeOrBuilder getTypeOrBuilder();
+
+  /**
+   * <pre>
+   * resource id of the dashboard
+   * </pre>
+   *
+   * <code>string resource_id = 7 [json_name = "resourceId"];</code>
+   * @return The resourceId.
+   */
+  java.lang.String getResourceId();
+  /**
+   * <pre>
+   * resource id of the dashboard
+   * </pre>
+   *
+   * <code>string resource_id = 7 [json_name = "resourceId"];</code>
+   * @return The bytes for resourceId.
+   */
+  com.google.protobuf.ByteString
+      getResourceIdBytes();
+
+  /**
+   * <pre>
+   * standard dashboard flag
+   * </pre>
+   *
+   * <code>bool standard_dashboard = 8 [json_name = "standardDashboard"];</code>
+   * @return The standardDashboard.
+   */
+  boolean getStandardDashboard();
 }

@@ -40,7 +40,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.GetConsentByContentRes.class, com.tcn.cloud.api.api.v0alpha.GetConsentByContentRes.Builder.class);
   }
 
-  private int bitField0_;
   public static final int ORG_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object orgId_ = "";
@@ -147,7 +146,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasConsent() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return consent_ != null;
   }
   /**
    * <pre>
@@ -208,7 +207,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(profileName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, profileName_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (consent_ != null) {
       output.writeMessage(3, getConsent());
     }
     if (disabled_ != false) {
@@ -229,7 +228,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(profileName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, profileName_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (consent_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getConsent());
     }
@@ -404,19 +403,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.GetConsentByContentRes.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getConsentFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -469,17 +462,14 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.profileName_ = profileName_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.consent_ = consentBuilder_ == null
             ? consent_
             : consentBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.disabled_ = disabled_;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -877,10 +867,8 @@ private static final long serialVersionUID = 0L;
       } else {
         consentBuilder_.mergeFrom(value);
       }
-      if (consent_ != null) {
-        bitField0_ |= 0x00000004;
-        onChanged();
-      }
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**

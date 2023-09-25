@@ -43,7 +43,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.org.legacy.RecordingPreferences.class, com.tcn.cloud.api.api.v1alpha1.org.legacy.RecordingPreferences.Builder.class);
   }
 
-  private int bitField0_;
   public static final int CONVENTION_ENABLED_FIELD_NUMBER = 10;
   private boolean conventionEnabled_ = false;
   /**
@@ -71,7 +70,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasFileNameConvention() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return fileNameConvention_ != null;
   }
   /**
    * <pre>
@@ -124,7 +123,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasZipFileNameConvention() {
-    return ((bitField0_ & 0x00000002) != 0);
+    return zipFileNameConvention_ != null;
   }
   /**
    * <pre>
@@ -193,13 +192,13 @@ private static final long serialVersionUID = 0L;
     if (conventionEnabled_ != false) {
       output.writeBool(10, conventionEnabled_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (fileNameConvention_ != null) {
       output.writeMessage(11, getFileNameConvention());
     }
     if (zipConventionEnabled_ != false) {
       output.writeBool(12, zipConventionEnabled_);
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (zipFileNameConvention_ != null) {
       output.writeMessage(13, getZipFileNameConvention());
     }
     if (exportFileType_ != com.tcn.cloud.api.api.commons.RecordingFileType.RECORDING_FILE_TYPE_WAV.getNumber()) {
@@ -218,7 +217,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(10, conventionEnabled_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (fileNameConvention_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(11, getFileNameConvention());
     }
@@ -226,7 +225,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(12, zipConventionEnabled_);
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (zipFileNameConvention_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(13, getZipFileNameConvention());
     }
@@ -414,20 +413,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.org.legacy.RecordingPreferences.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getFileNameConventionFieldBuilder();
-        getZipFileNameConventionFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -482,12 +474,10 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.conventionEnabled_ = conventionEnabled_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.fileNameConvention_ = fileNameConventionBuilder_ == null
             ? fileNameConvention_
             : fileNameConventionBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.zipConventionEnabled_ = zipConventionEnabled_;
@@ -496,12 +486,10 @@ private static final long serialVersionUID = 0L;
         result.zipFileNameConvention_ = zipFileNameConventionBuilder_ == null
             ? zipFileNameConvention_
             : zipFileNameConventionBuilder_.build();
-        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.exportFileType_ = exportFileType_;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -765,10 +753,8 @@ private static final long serialVersionUID = 0L;
       } else {
         fileNameConventionBuilder_.mergeFrom(value);
       }
-      if (fileNameConvention_ != null) {
-        bitField0_ |= 0x00000002;
-        onChanged();
-      }
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -966,10 +952,8 @@ private static final long serialVersionUID = 0L;
       } else {
         zipFileNameConventionBuilder_.mergeFrom(value);
       }
-      if (zipFileNameConvention_ != null) {
-        bitField0_ |= 0x00000008;
-        onChanged();
-      }
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**

@@ -42,7 +42,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceV2Req.class, com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceV2Req.Builder.class);
   }
 
-  private int bitField0_;
   public static final int SHIFT_INSTANCE_SID_FIELD_NUMBER = 1;
   private long shiftInstanceSid_ = 0L;
   /**
@@ -70,7 +69,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasStartDatetime() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return startDatetime_ != null;
   }
   /**
    * <pre>
@@ -160,7 +159,7 @@ private static final long serialVersionUID = 0L;
     if (shiftInstanceSid_ != 0L) {
       output.writeInt64(1, shiftInstanceSid_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (startDatetime_ != null) {
       output.writeMessage(2, getStartDatetime());
     }
     if (widthInMinutes_ != 0) {
@@ -185,7 +184,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(1, shiftInstanceSid_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (startDatetime_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getStartDatetime());
     }
@@ -378,19 +377,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceV2Req.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getStartDatetimeFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -441,12 +434,10 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.shiftInstanceSid_ = shiftInstanceSid_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.startDatetime_ = startDatetimeBuilder_ == null
             ? startDatetime_
             : startDatetimeBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.widthInMinutes_ = widthInMinutes_;
@@ -457,7 +448,6 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.isLocked_ = isLocked_;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -719,10 +709,8 @@ private static final long serialVersionUID = 0L;
       } else {
         startDatetimeBuilder_.mergeFrom(value);
       }
-      if (startDatetime_ != null) {
-        bitField0_ |= 0x00000002;
-        onChanged();
-      }
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**

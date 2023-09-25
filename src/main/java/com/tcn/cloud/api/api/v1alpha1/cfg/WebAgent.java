@@ -2284,7 +2284,6 @@ private static final long serialVersionUID = 0L;
 
   }
 
-  private int bitField0_;
   public static final int OPEN_SIPS_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.api.v1alpha1.cfg.WebAgent.OpenSips openSips_;
   /**
@@ -2293,7 +2292,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasOpenSips() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return openSips_ != null;
   }
   /**
    * <code>.api.v1alpha1.cfg.WebAgent.OpenSips open_sips = 1 [json_name = "openSips"];</code>
@@ -2319,7 +2318,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasEnginePriority() {
-    return ((bitField0_ & 0x00000002) != 0);
+    return enginePriority_ != null;
   }
   /**
    * <code>.api.v1alpha1.cfg.WebAgent.EnginePriority engine_priority = 2 [json_name = "enginePriority"];</code>
@@ -2422,7 +2421,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasServer() {
-    return ((bitField0_ & 0x00000004) != 0);
+    return server_ != null;
   }
   /**
    * <code>.api.v1alpha1.cfg.WebAgent.Server server = 10 [json_name = "server"];</code>
@@ -2532,10 +2531,10 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (openSips_ != null) {
       output.writeMessage(1, getOpenSips());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (enginePriority_ != null) {
       output.writeMessage(2, getEnginePriority());
     }
     if (logLevel_ != 0L) {
@@ -2559,7 +2558,7 @@ private static final long serialVersionUID = 0L;
     if (useRport_ != 0L) {
       output.writeInt64(9, useRport_);
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
+    if (server_ != null) {
       output.writeMessage(10, getServer());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(baseUrl_)) {
@@ -2577,11 +2576,11 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (openSips_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getOpenSips());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (enginePriority_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getEnginePriority());
     }
@@ -2613,7 +2612,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(9, useRport_);
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
+    if (server_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(10, getServer());
     }
@@ -2842,21 +2841,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.cfg.WebAgent.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getOpenSipsFieldBuilder();
-        getEnginePriorityFieldBuilder();
-        getServerFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -2919,18 +2910,15 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.cfg.WebAgent result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.openSips_ = openSipsBuilder_ == null
             ? openSips_
             : openSipsBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.enginePriority_ = enginePriorityBuilder_ == null
             ? enginePriority_
             : enginePriorityBuilder_.build();
-        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.logLevel_ = logLevel_;
@@ -2957,7 +2945,6 @@ private static final long serialVersionUID = 0L;
         result.server_ = serverBuilder_ == null
             ? server_
             : serverBuilder_.build();
-        to_bitField0_ |= 0x00000004;
       }
       if (((from_bitField0_ & 0x00000400) != 0)) {
         result.baseUrl_ = baseUrl_;
@@ -2965,7 +2952,6 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000800) != 0)) {
         result.stunServerAddress_ = stunServerAddress_;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -3227,10 +3213,8 @@ private static final long serialVersionUID = 0L;
       } else {
         openSipsBuilder_.mergeFrom(value);
       }
-      if (openSips_ != null) {
-        bitField0_ |= 0x00000001;
-        onChanged();
-      }
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -3348,10 +3332,8 @@ private static final long serialVersionUID = 0L;
       } else {
         enginePriorityBuilder_.mergeFrom(value);
       }
-      if (enginePriority_ != null) {
-        bitField0_ |= 0x00000002;
-        onChanged();
-      }
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -3693,10 +3675,8 @@ private static final long serialVersionUID = 0L;
       } else {
         serverBuilder_.mergeFrom(value);
       }
-      if (server_ != null) {
-        bitField0_ |= 0x00000200;
-        onChanged();
-      }
+      bitField0_ |= 0x00000200;
+      onChanged();
       return this;
     }
     /**

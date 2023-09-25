@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v0alpha;
 
 /**
+ * <pre>
+ * ListProductTypesRequest used in ListProductTypes rpc
+ * </pre>
+ *
  * Protobuf type {@code api.v0alpha.ListProductTypesRequest}
  */
 public final class ListProductTypesRequest extends
@@ -185,6 +189,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * ListProductTypesRequest used in ListProductTypes rpc
+   * </pre>
+   *
    * Protobuf type {@code api.v0alpha.ListProductTypesRequest}
    */
   public static final class Builder extends

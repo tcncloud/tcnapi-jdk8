@@ -230,8 +230,7 @@ private static final long serialVersionUID = 0L;
 
     public static final int SIDS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList sids_ =
-        emptyLongList();
+    private com.google.protobuf.Internal.LongList sids_;
     /**
      * <pre>
      * sids of the intervals/deltas to be deleted
@@ -509,17 +508,22 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq.IntervalSids buildPartial() {
         com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq.IntervalSids result = new com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq.IntervalSids(this);
+        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
+      private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq.IntervalSids result) {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          sids_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.sids_ = sids_;
+      }
+
       private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq.IntervalSids result) {
         int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          sids_.makeImmutable();
-          result.sids_ = sids_;
-        }
       }
 
       @java.lang.Override
@@ -569,8 +573,7 @@ private static final long serialVersionUID = 0L;
         if (!other.sids_.isEmpty()) {
           if (sids_.isEmpty()) {
             sids_ = other.sids_;
-            sids_.makeImmutable();
-            bitField0_ |= 0x00000001;
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureSidsIsMutable();
             sids_.addAll(other.sids_);
@@ -638,10 +641,10 @@ private static final long serialVersionUID = 0L;
 
       private com.google.protobuf.Internal.LongList sids_ = emptyLongList();
       private void ensureSidsIsMutable() {
-        if (!sids_.isModifiable()) {
-          sids_ = makeMutableCopy(sids_);
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          sids_ = mutableCopy(sids_);
+          bitField0_ |= 0x00000001;
         }
-        bitField0_ |= 0x00000001;
       }
       /**
        * <pre>
@@ -653,8 +656,8 @@ private static final long serialVersionUID = 0L;
        */
       public java.util.List<java.lang.Long>
           getSidsList() {
-        sids_.makeImmutable();
-        return sids_;
+        return ((bitField0_ & 0x00000001) != 0) ?
+                 java.util.Collections.unmodifiableList(sids_) : sids_;
       }
       /**
        * <pre>
@@ -694,7 +697,6 @@ private static final long serialVersionUID = 0L;
 
         ensureSidsIsMutable();
         sids_.setLong(index, value);
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -711,7 +713,6 @@ private static final long serialVersionUID = 0L;
 
         ensureSidsIsMutable();
         sids_.addLong(value);
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -729,7 +730,6 @@ private static final long serialVersionUID = 0L;
         ensureSidsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, sids_);
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -817,8 +817,9 @@ private static final long serialVersionUID = 0L;
   public enum DeleteParamCase
       implements com.google.protobuf.Internal.EnumLite,
           com.google.protobuf.AbstractMessage.InternalOneOfEnum {
-    SKILL_PROFILE_SID(1),
+    @java.lang.Deprecated SKILL_PROFILE_SID(1),
     FORECAST_INTERVAL_SIDS(2),
+    SKILL_PROFILE_CATEGORY(4),
     DELETEPARAM_NOT_SET(0);
     private final int value;
     private DeleteParamCase(int value) {
@@ -838,6 +839,7 @@ private static final long serialVersionUID = 0L;
       switch (value) {
         case 1: return SKILL_PROFILE_SID;
         case 2: return FORECAST_INTERVAL_SIDS;
+        case 4: return SKILL_PROFILE_CATEGORY;
         case 0: return DELETEPARAM_NOT_SET;
         default: return null;
       }
@@ -857,25 +859,31 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * ID of the skill profile of which to delete the intervas/deltas.
+   * Deprecated as of Sep/13/2023: use skill_profile_category instead.
    * </pre>
    *
-   * <code>int64 skill_profile_sid = 1 [json_name = "skillProfileSid"];</code>
+   * <code>int64 skill_profile_sid = 1 [json_name = "skillProfileSid", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.DeleteForecastIntervalsReq.skill_profile_sid is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=3455
    * @return Whether the skillProfileSid field is set.
    */
   @java.lang.Override
-  public boolean hasSkillProfileSid() {
+  @java.lang.Deprecated public boolean hasSkillProfileSid() {
     return deleteParamCase_ == 1;
   }
   /**
    * <pre>
    * ID of the skill profile of which to delete the intervas/deltas.
+   * Deprecated as of Sep/13/2023: use skill_profile_category instead.
    * </pre>
    *
-   * <code>int64 skill_profile_sid = 1 [json_name = "skillProfileSid"];</code>
+   * <code>int64 skill_profile_sid = 1 [json_name = "skillProfileSid", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.DeleteForecastIntervalsReq.skill_profile_sid is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=3455
    * @return The skillProfileSid.
    */
   @java.lang.Override
-  public long getSkillProfileSid() {
+  @java.lang.Deprecated public long getSkillProfileSid() {
     if (deleteParamCase_ == 1) {
       return (java.lang.Long) deleteParam_;
     }
@@ -923,6 +931,49 @@ private static final long serialVersionUID = 0L;
        return (com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq.IntervalSids) deleteParam_;
     }
     return com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq.IntervalSids.getDefaultInstance();
+  }
+
+  public static final int SKILL_PROFILE_CATEGORY_FIELD_NUMBER = 4;
+  /**
+   * <pre>
+   * Skill profile category of which to delete the intervals/deltas.
+   * </pre>
+   *
+   * <code>.api.commons.SkillProfileCategory skill_profile_category = 4 [json_name = "skillProfileCategory"];</code>
+   * @return Whether the skillProfileCategory field is set.
+   */
+  @java.lang.Override
+  public boolean hasSkillProfileCategory() {
+    return deleteParamCase_ == 4;
+  }
+  /**
+   * <pre>
+   * Skill profile category of which to delete the intervals/deltas.
+   * </pre>
+   *
+   * <code>.api.commons.SkillProfileCategory skill_profile_category = 4 [json_name = "skillProfileCategory"];</code>
+   * @return The skillProfileCategory.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.SkillProfileCategory getSkillProfileCategory() {
+    if (deleteParamCase_ == 4) {
+       return (com.tcn.cloud.api.api.commons.SkillProfileCategory) deleteParam_;
+    }
+    return com.tcn.cloud.api.api.commons.SkillProfileCategory.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Skill profile category of which to delete the intervals/deltas.
+   * </pre>
+   *
+   * <code>.api.commons.SkillProfileCategory skill_profile_category = 4 [json_name = "skillProfileCategory"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.SkillProfileCategoryOrBuilder getSkillProfileCategoryOrBuilder() {
+    if (deleteParamCase_ == 4) {
+       return (com.tcn.cloud.api.api.commons.SkillProfileCategory) deleteParam_;
+    }
+    return com.tcn.cloud.api.api.commons.SkillProfileCategory.getDefaultInstance();
   }
 
   public static final int FORECAST_INTERVAL_DELETE_TYPE_FIELD_NUMBER = 3;
@@ -975,6 +1026,9 @@ private static final long serialVersionUID = 0L;
     if (forecastIntervalDeleteType_ != com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq.ForecastIntervalDeleteType.INTERVALS_AND_DELTAS.getNumber()) {
       output.writeEnum(3, forecastIntervalDeleteType_);
     }
+    if (deleteParamCase_ == 4) {
+      output.writeMessage(4, (com.tcn.cloud.api.api.commons.SkillProfileCategory) deleteParam_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -996,6 +1050,10 @@ private static final long serialVersionUID = 0L;
     if (forecastIntervalDeleteType_ != com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq.ForecastIntervalDeleteType.INTERVALS_AND_DELTAS.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(3, forecastIntervalDeleteType_);
+    }
+    if (deleteParamCase_ == 4) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, (com.tcn.cloud.api.api.commons.SkillProfileCategory) deleteParam_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -1023,6 +1081,10 @@ private static final long serialVersionUID = 0L;
         if (!getForecastIntervalSids()
             .equals(other.getForecastIntervalSids())) return false;
         break;
+      case 4:
+        if (!getSkillProfileCategory()
+            .equals(other.getSkillProfileCategory())) return false;
+        break;
       case 0:
       default:
     }
@@ -1048,6 +1110,10 @@ private static final long serialVersionUID = 0L;
       case 2:
         hash = (37 * hash) + FORECAST_INTERVAL_SIDS_FIELD_NUMBER;
         hash = (53 * hash) + getForecastIntervalSids().hashCode();
+        break;
+      case 4:
+        hash = (37 * hash) + SKILL_PROFILE_CATEGORY_FIELD_NUMBER;
+        hash = (53 * hash) + getSkillProfileCategory().hashCode();
         break;
       case 0:
       default:
@@ -1190,6 +1256,9 @@ private static final long serialVersionUID = 0L;
       if (forecastIntervalSidsBuilder_ != null) {
         forecastIntervalSidsBuilder_.clear();
       }
+      if (skillProfileCategoryBuilder_ != null) {
+        skillProfileCategoryBuilder_.clear();
+      }
       forecastIntervalDeleteType_ = 0;
       deleteParamCase_ = 0;
       deleteParam_ = null;
@@ -1227,7 +1296,7 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq result) {
       int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000004) != 0)) {
+      if (((from_bitField0_ & 0x00000008) != 0)) {
         result.forecastIntervalDeleteType_ = forecastIntervalDeleteType_;
       }
     }
@@ -1238,6 +1307,10 @@ private static final long serialVersionUID = 0L;
       if (deleteParamCase_ == 2 &&
           forecastIntervalSidsBuilder_ != null) {
         result.deleteParam_ = forecastIntervalSidsBuilder_.build();
+      }
+      if (deleteParamCase_ == 4 &&
+          skillProfileCategoryBuilder_ != null) {
+        result.deleteParam_ = skillProfileCategoryBuilder_.build();
       }
     }
 
@@ -1297,6 +1370,10 @@ private static final long serialVersionUID = 0L;
           mergeForecastIntervalSids(other.getForecastIntervalSids());
           break;
         }
+        case SKILL_PROFILE_CATEGORY: {
+          mergeSkillProfileCategory(other.getSkillProfileCategory());
+          break;
+        }
         case DELETEPARAM_NOT_SET: {
           break;
         }
@@ -1341,9 +1418,16 @@ private static final long serialVersionUID = 0L;
             } // case 18
             case 24: {
               forecastIntervalDeleteType_ = input.readEnum();
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000008;
               break;
             } // case 24
+            case 34: {
+              input.readMessage(
+                  getSkillProfileCategoryFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              deleteParamCase_ = 4;
+              break;
+            } // case 34
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1379,23 +1463,29 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * ID of the skill profile of which to delete the intervas/deltas.
+     * Deprecated as of Sep/13/2023: use skill_profile_category instead.
      * </pre>
      *
-     * <code>int64 skill_profile_sid = 1 [json_name = "skillProfileSid"];</code>
+     * <code>int64 skill_profile_sid = 1 [json_name = "skillProfileSid", deprecated = true];</code>
+     * @deprecated api.v1alpha1.wfm.DeleteForecastIntervalsReq.skill_profile_sid is deprecated.
+     *     See api/v1alpha1/wfm/wfm.proto;l=3455
      * @return Whether the skillProfileSid field is set.
      */
-    public boolean hasSkillProfileSid() {
+    @java.lang.Deprecated public boolean hasSkillProfileSid() {
       return deleteParamCase_ == 1;
     }
     /**
      * <pre>
      * ID of the skill profile of which to delete the intervas/deltas.
+     * Deprecated as of Sep/13/2023: use skill_profile_category instead.
      * </pre>
      *
-     * <code>int64 skill_profile_sid = 1 [json_name = "skillProfileSid"];</code>
+     * <code>int64 skill_profile_sid = 1 [json_name = "skillProfileSid", deprecated = true];</code>
+     * @deprecated api.v1alpha1.wfm.DeleteForecastIntervalsReq.skill_profile_sid is deprecated.
+     *     See api/v1alpha1/wfm/wfm.proto;l=3455
      * @return The skillProfileSid.
      */
-    public long getSkillProfileSid() {
+    @java.lang.Deprecated public long getSkillProfileSid() {
       if (deleteParamCase_ == 1) {
         return (java.lang.Long) deleteParam_;
       }
@@ -1404,13 +1494,16 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * ID of the skill profile of which to delete the intervas/deltas.
+     * Deprecated as of Sep/13/2023: use skill_profile_category instead.
      * </pre>
      *
-     * <code>int64 skill_profile_sid = 1 [json_name = "skillProfileSid"];</code>
+     * <code>int64 skill_profile_sid = 1 [json_name = "skillProfileSid", deprecated = true];</code>
+     * @deprecated api.v1alpha1.wfm.DeleteForecastIntervalsReq.skill_profile_sid is deprecated.
+     *     See api/v1alpha1/wfm/wfm.proto;l=3455
      * @param value The skillProfileSid to set.
      * @return This builder for chaining.
      */
-    public Builder setSkillProfileSid(long value) {
+    @java.lang.Deprecated public Builder setSkillProfileSid(long value) {
 
       deleteParamCase_ = 1;
       deleteParam_ = value;
@@ -1420,12 +1513,15 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * ID of the skill profile of which to delete the intervas/deltas.
+     * Deprecated as of Sep/13/2023: use skill_profile_category instead.
      * </pre>
      *
-     * <code>int64 skill_profile_sid = 1 [json_name = "skillProfileSid"];</code>
+     * <code>int64 skill_profile_sid = 1 [json_name = "skillProfileSid", deprecated = true];</code>
+     * @deprecated api.v1alpha1.wfm.DeleteForecastIntervalsReq.skill_profile_sid is deprecated.
+     *     See api/v1alpha1/wfm/wfm.proto;l=3455
      * @return This builder for chaining.
      */
-    public Builder clearSkillProfileSid() {
+    @java.lang.Deprecated public Builder clearSkillProfileSid() {
       if (deleteParamCase_ == 1) {
         deleteParamCase_ = 0;
         deleteParam_ = null;
@@ -1612,6 +1708,184 @@ private static final long serialVersionUID = 0L;
       return forecastIntervalSidsBuilder_;
     }
 
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.SkillProfileCategory, com.tcn.cloud.api.api.commons.SkillProfileCategory.Builder, com.tcn.cloud.api.api.commons.SkillProfileCategoryOrBuilder> skillProfileCategoryBuilder_;
+    /**
+     * <pre>
+     * Skill profile category of which to delete the intervals/deltas.
+     * </pre>
+     *
+     * <code>.api.commons.SkillProfileCategory skill_profile_category = 4 [json_name = "skillProfileCategory"];</code>
+     * @return Whether the skillProfileCategory field is set.
+     */
+    @java.lang.Override
+    public boolean hasSkillProfileCategory() {
+      return deleteParamCase_ == 4;
+    }
+    /**
+     * <pre>
+     * Skill profile category of which to delete the intervals/deltas.
+     * </pre>
+     *
+     * <code>.api.commons.SkillProfileCategory skill_profile_category = 4 [json_name = "skillProfileCategory"];</code>
+     * @return The skillProfileCategory.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.SkillProfileCategory getSkillProfileCategory() {
+      if (skillProfileCategoryBuilder_ == null) {
+        if (deleteParamCase_ == 4) {
+          return (com.tcn.cloud.api.api.commons.SkillProfileCategory) deleteParam_;
+        }
+        return com.tcn.cloud.api.api.commons.SkillProfileCategory.getDefaultInstance();
+      } else {
+        if (deleteParamCase_ == 4) {
+          return skillProfileCategoryBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.SkillProfileCategory.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Skill profile category of which to delete the intervals/deltas.
+     * </pre>
+     *
+     * <code>.api.commons.SkillProfileCategory skill_profile_category = 4 [json_name = "skillProfileCategory"];</code>
+     */
+    public Builder setSkillProfileCategory(com.tcn.cloud.api.api.commons.SkillProfileCategory value) {
+      if (skillProfileCategoryBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        deleteParam_ = value;
+        onChanged();
+      } else {
+        skillProfileCategoryBuilder_.setMessage(value);
+      }
+      deleteParamCase_ = 4;
+      return this;
+    }
+    /**
+     * <pre>
+     * Skill profile category of which to delete the intervals/deltas.
+     * </pre>
+     *
+     * <code>.api.commons.SkillProfileCategory skill_profile_category = 4 [json_name = "skillProfileCategory"];</code>
+     */
+    public Builder setSkillProfileCategory(
+        com.tcn.cloud.api.api.commons.SkillProfileCategory.Builder builderForValue) {
+      if (skillProfileCategoryBuilder_ == null) {
+        deleteParam_ = builderForValue.build();
+        onChanged();
+      } else {
+        skillProfileCategoryBuilder_.setMessage(builderForValue.build());
+      }
+      deleteParamCase_ = 4;
+      return this;
+    }
+    /**
+     * <pre>
+     * Skill profile category of which to delete the intervals/deltas.
+     * </pre>
+     *
+     * <code>.api.commons.SkillProfileCategory skill_profile_category = 4 [json_name = "skillProfileCategory"];</code>
+     */
+    public Builder mergeSkillProfileCategory(com.tcn.cloud.api.api.commons.SkillProfileCategory value) {
+      if (skillProfileCategoryBuilder_ == null) {
+        if (deleteParamCase_ == 4 &&
+            deleteParam_ != com.tcn.cloud.api.api.commons.SkillProfileCategory.getDefaultInstance()) {
+          deleteParam_ = com.tcn.cloud.api.api.commons.SkillProfileCategory.newBuilder((com.tcn.cloud.api.api.commons.SkillProfileCategory) deleteParam_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          deleteParam_ = value;
+        }
+        onChanged();
+      } else {
+        if (deleteParamCase_ == 4) {
+          skillProfileCategoryBuilder_.mergeFrom(value);
+        } else {
+          skillProfileCategoryBuilder_.setMessage(value);
+        }
+      }
+      deleteParamCase_ = 4;
+      return this;
+    }
+    /**
+     * <pre>
+     * Skill profile category of which to delete the intervals/deltas.
+     * </pre>
+     *
+     * <code>.api.commons.SkillProfileCategory skill_profile_category = 4 [json_name = "skillProfileCategory"];</code>
+     */
+    public Builder clearSkillProfileCategory() {
+      if (skillProfileCategoryBuilder_ == null) {
+        if (deleteParamCase_ == 4) {
+          deleteParamCase_ = 0;
+          deleteParam_ = null;
+          onChanged();
+        }
+      } else {
+        if (deleteParamCase_ == 4) {
+          deleteParamCase_ = 0;
+          deleteParam_ = null;
+        }
+        skillProfileCategoryBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Skill profile category of which to delete the intervals/deltas.
+     * </pre>
+     *
+     * <code>.api.commons.SkillProfileCategory skill_profile_category = 4 [json_name = "skillProfileCategory"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.SkillProfileCategory.Builder getSkillProfileCategoryBuilder() {
+      return getSkillProfileCategoryFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Skill profile category of which to delete the intervals/deltas.
+     * </pre>
+     *
+     * <code>.api.commons.SkillProfileCategory skill_profile_category = 4 [json_name = "skillProfileCategory"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.SkillProfileCategoryOrBuilder getSkillProfileCategoryOrBuilder() {
+      if ((deleteParamCase_ == 4) && (skillProfileCategoryBuilder_ != null)) {
+        return skillProfileCategoryBuilder_.getMessageOrBuilder();
+      } else {
+        if (deleteParamCase_ == 4) {
+          return (com.tcn.cloud.api.api.commons.SkillProfileCategory) deleteParam_;
+        }
+        return com.tcn.cloud.api.api.commons.SkillProfileCategory.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Skill profile category of which to delete the intervals/deltas.
+     * </pre>
+     *
+     * <code>.api.commons.SkillProfileCategory skill_profile_category = 4 [json_name = "skillProfileCategory"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.SkillProfileCategory, com.tcn.cloud.api.api.commons.SkillProfileCategory.Builder, com.tcn.cloud.api.api.commons.SkillProfileCategoryOrBuilder> 
+        getSkillProfileCategoryFieldBuilder() {
+      if (skillProfileCategoryBuilder_ == null) {
+        if (!(deleteParamCase_ == 4)) {
+          deleteParam_ = com.tcn.cloud.api.api.commons.SkillProfileCategory.getDefaultInstance();
+        }
+        skillProfileCategoryBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.SkillProfileCategory, com.tcn.cloud.api.api.commons.SkillProfileCategory.Builder, com.tcn.cloud.api.api.commons.SkillProfileCategoryOrBuilder>(
+                (com.tcn.cloud.api.api.commons.SkillProfileCategory) deleteParam_,
+                getParentForChildren(),
+                isClean());
+        deleteParam_ = null;
+      }
+      deleteParamCase_ = 4;
+      onChanged();
+      return skillProfileCategoryBuilder_;
+    }
+
     private int forecastIntervalDeleteType_ = 0;
     /**
      * <pre>
@@ -1635,7 +1909,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setForecastIntervalDeleteTypeValue(int value) {
       forecastIntervalDeleteType_ = value;
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1665,7 +1939,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000008;
       forecastIntervalDeleteType_ = value.getNumber();
       onChanged();
       return this;
@@ -1679,7 +1953,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearForecastIntervalDeleteType() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000008);
       forecastIntervalDeleteType_ = 0;
       onChanged();
       return this;

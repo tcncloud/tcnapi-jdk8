@@ -101,7 +101,7 @@ public interface ProcessOrBuilder extends
    *
    * <code>.api.v0alpha.ComplProcess compl = 45 [json_name = "compl", deprecated = true];</code>
    * @deprecated api.v0alpha.Process.compl is deprecated.
-   *     See api/v0alpha/lms.proto;l=944
+   *     See api/v0alpha/lms.proto;l=993
    * @return Whether the compl field is set.
    */
   @java.lang.Deprecated boolean hasCompl();
@@ -112,7 +112,7 @@ public interface ProcessOrBuilder extends
    *
    * <code>.api.v0alpha.ComplProcess compl = 45 [json_name = "compl", deprecated = true];</code>
    * @deprecated api.v0alpha.Process.compl is deprecated.
-   *     See api/v0alpha/lms.proto;l=944
+   *     See api/v0alpha/lms.proto;l=993
    * @return The compl.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.v0alpha.ComplProcess getCompl();
@@ -207,7 +207,7 @@ public interface ProcessOrBuilder extends
    *
    * <code>.api.v0alpha.EntrypointProcess entrypoint = 51 [json_name = "entrypoint", deprecated = true];</code>
    * @deprecated api.v0alpha.Process.entrypoint is deprecated.
-   *     See api/v0alpha/lms.proto;l=951
+   *     See api/v0alpha/lms.proto;l=1000
    * @return Whether the entrypoint field is set.
    */
   @java.lang.Deprecated boolean hasEntrypoint();
@@ -218,7 +218,7 @@ public interface ProcessOrBuilder extends
    *
    * <code>.api.v0alpha.EntrypointProcess entrypoint = 51 [json_name = "entrypoint", deprecated = true];</code>
    * @deprecated api.v0alpha.Process.entrypoint is deprecated.
-   *     See api/v0alpha/lms.proto;l=951
+   *     See api/v0alpha/lms.proto;l=1000
    * @return The entrypoint.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.v0alpha.EntrypointProcess getEntrypoint();
@@ -447,14 +447,14 @@ public interface ProcessOrBuilder extends
   /**
    * <code>.api.v0alpha.PaymentLinkEnrichment link_enrich = 64 [json_name = "linkEnrich", deprecated = true];</code>
    * @deprecated api.v0alpha.Process.link_enrich is deprecated.
-   *     See api/v0alpha/lms.proto;l=970
+   *     See api/v0alpha/lms.proto;l=1019
    * @return Whether the linkEnrich field is set.
    */
   @java.lang.Deprecated boolean hasLinkEnrich();
   /**
    * <code>.api.v0alpha.PaymentLinkEnrichment link_enrich = 64 [json_name = "linkEnrich", deprecated = true];</code>
    * @deprecated api.v0alpha.Process.link_enrich is deprecated.
-   *     See api/v0alpha/lms.proto;l=970
+   *     See api/v0alpha/lms.proto;l=1019
    * @return The linkEnrich.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.v0alpha.PaymentLinkEnrichment getLinkEnrich();
@@ -675,6 +675,21 @@ public interface ProcessOrBuilder extends
    * <code>.api.v0alpha.SplitCriteria split = 75 [json_name = "split"];</code>
    */
   com.tcn.cloud.api.api.v0alpha.SplitCriteriaOrBuilder getSplitOrBuilder();
+
+  /**
+   * <code>.api.v0alpha.EpicEntrypoint epic_entry_point = 76 [json_name = "epicEntryPoint"];</code>
+   * @return Whether the epicEntryPoint field is set.
+   */
+  boolean hasEpicEntryPoint();
+  /**
+   * <code>.api.v0alpha.EpicEntrypoint epic_entry_point = 76 [json_name = "epicEntryPoint"];</code>
+   * @return The epicEntryPoint.
+   */
+  com.tcn.cloud.api.api.v0alpha.EpicEntrypoint getEpicEntryPoint();
+  /**
+   * <code>.api.v0alpha.EpicEntrypoint epic_entry_point = 76 [json_name = "epicEntryPoint"];</code>
+   */
+  com.tcn.cloud.api.api.v0alpha.EpicEntrypointOrBuilder getEpicEntryPointOrBuilder();
 
   com.tcn.cloud.api.api.v0alpha.Process.ProcCase getProcCase();
 }

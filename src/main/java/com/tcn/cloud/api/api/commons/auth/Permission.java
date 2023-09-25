@@ -232,6 +232,22 @@ public enum Permission
   PERMISSION_TCN_BILLING(240),
   /**
    * <pre>
+   * Enables admin access to insights (TCN standard insights).
+   * </pre>
+   *
+   * <code>PERMISSION_SUPPORT_TCN_INSIGHTS_ADMIN = 250;</code>
+   */
+  PERMISSION_SUPPORT_TCN_INSIGHTS_ADMIN(250),
+  /**
+   * <pre>
+   * Enables admin access to dashboards (TCN standard dashboards).
+   * </pre>
+   *
+   * <code>PERMISSION_SUPPORT_TCN_DASHBOARDS_ADMIN = 251;</code>
+   */
+  PERMISSION_SUPPORT_TCN_DASHBOARDS_ADMIN(251),
+  /**
+   * <pre>
    * Enables access to agent.
    * </pre>
    *
@@ -381,6 +397,7 @@ public enum Permission
   /**
    * <pre>
    * Enables writes for common library insights.
+   * deprecated
    * </pre>
    *
    * <code>PERMISSION_INSIGHTS_COMMON_LIBRARY_MANAGE = 603 [(.annotations.perms.options) = { ... }</code>
@@ -389,11 +406,44 @@ public enum Permission
   /**
    * <pre>
    * Enables access to insights.
+   * deprecated
    * </pre>
    *
    * <code>PERMISSION_INSIGHTS_MANAGE = 604 [(.annotations.perms.options) = { ... }</code>
    */
   PERMISSION_INSIGHTS_MANAGE(604),
+  /**
+   * <pre>
+   * allows access to read insights
+   * </pre>
+   *
+   * <code>PERMISSION_INSIGHTS_INSIGHT_VIEW = 605 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_INSIGHTS_INSIGHT_VIEW(605),
+  /**
+   * <pre>
+   * allows access to edit insights
+   * </pre>
+   *
+   * <code>PERMISSION_INSIGHTS_INSIGHT_EDIT = 606 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_INSIGHTS_INSIGHT_EDIT(606),
+  /**
+   * <pre>
+   * allows user to read insights for dashboards
+   * </pre>
+   *
+   * <code>PERMISSION_INSIGHTS_DASHBOARD_VIEW = 607 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_INSIGHTS_DASHBOARD_VIEW(607),
+  /**
+   * <pre>
+   * allows user to edit insights for dashboards
+   * </pre>
+   *
+   * <code>PERMISSION_INSIGHTS_DASHBOARD_EDIT = 608 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_INSIGHTS_DASHBOARD_EDIT(608),
   /**
    * <pre>
    * Enables access to room 303 chat.
@@ -486,6 +536,14 @@ public enum Permission
    * <code>PERMISSION_WFM = 1500 [(.annotations.perms.options) = { ... }</code>
    */
   PERMISSION_WFM(1500),
+  /**
+   * <pre>
+   * Enables access to the Agent Portal feature.
+   * </pre>
+   *
+   * <code>PERMISSION_AGENT_PORTAL = 1501 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_AGENT_PORTAL(1501),
   /**
    * <pre>
    * Enables access to Scorecards app.
@@ -822,6 +880,22 @@ public enum Permission
   public static final int PERMISSION_TCN_BILLING_VALUE = 240;
   /**
    * <pre>
+   * Enables admin access to insights (TCN standard insights).
+   * </pre>
+   *
+   * <code>PERMISSION_SUPPORT_TCN_INSIGHTS_ADMIN = 250;</code>
+   */
+  public static final int PERMISSION_SUPPORT_TCN_INSIGHTS_ADMIN_VALUE = 250;
+  /**
+   * <pre>
+   * Enables admin access to dashboards (TCN standard dashboards).
+   * </pre>
+   *
+   * <code>PERMISSION_SUPPORT_TCN_DASHBOARDS_ADMIN = 251;</code>
+   */
+  public static final int PERMISSION_SUPPORT_TCN_DASHBOARDS_ADMIN_VALUE = 251;
+  /**
+   * <pre>
    * Enables access to agent.
    * </pre>
    *
@@ -971,6 +1045,7 @@ public enum Permission
   /**
    * <pre>
    * Enables writes for common library insights.
+   * deprecated
    * </pre>
    *
    * <code>PERMISSION_INSIGHTS_COMMON_LIBRARY_MANAGE = 603 [(.annotations.perms.options) = { ... }</code>
@@ -979,11 +1054,44 @@ public enum Permission
   /**
    * <pre>
    * Enables access to insights.
+   * deprecated
    * </pre>
    *
    * <code>PERMISSION_INSIGHTS_MANAGE = 604 [(.annotations.perms.options) = { ... }</code>
    */
   public static final int PERMISSION_INSIGHTS_MANAGE_VALUE = 604;
+  /**
+   * <pre>
+   * allows access to read insights
+   * </pre>
+   *
+   * <code>PERMISSION_INSIGHTS_INSIGHT_VIEW = 605 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_INSIGHTS_INSIGHT_VIEW_VALUE = 605;
+  /**
+   * <pre>
+   * allows access to edit insights
+   * </pre>
+   *
+   * <code>PERMISSION_INSIGHTS_INSIGHT_EDIT = 606 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_INSIGHTS_INSIGHT_EDIT_VALUE = 606;
+  /**
+   * <pre>
+   * allows user to read insights for dashboards
+   * </pre>
+   *
+   * <code>PERMISSION_INSIGHTS_DASHBOARD_VIEW = 607 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_INSIGHTS_DASHBOARD_VIEW_VALUE = 607;
+  /**
+   * <pre>
+   * allows user to edit insights for dashboards
+   * </pre>
+   *
+   * <code>PERMISSION_INSIGHTS_DASHBOARD_EDIT = 608 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_INSIGHTS_DASHBOARD_EDIT_VALUE = 608;
   /**
    * <pre>
    * Enables access to room 303 chat.
@@ -1076,6 +1184,14 @@ public enum Permission
    * <code>PERMISSION_WFM = 1500 [(.annotations.perms.options) = { ... }</code>
    */
   public static final int PERMISSION_WFM_VALUE = 1500;
+  /**
+   * <pre>
+   * Enables access to the Agent Portal feature.
+   * </pre>
+   *
+   * <code>PERMISSION_AGENT_PORTAL = 1501 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_AGENT_PORTAL_VALUE = 1501;
   /**
    * <pre>
    * Enables access to Scorecards app.
@@ -1242,6 +1358,8 @@ public enum Permission
       case 220: return PERMISSION_BILLING_EDIT;
       case 230: return PERMISSION_TCN_ADMIN_SETTINGS;
       case 240: return PERMISSION_TCN_BILLING;
+      case 250: return PERMISSION_SUPPORT_TCN_INSIGHTS_ADMIN;
+      case 251: return PERMISSION_SUPPORT_TCN_DASHBOARDS_ADMIN;
       case 300: return PERMISSION_AGENT;
       case 310: return PERMISSION_ACCEPT_QUEUED_CALLS;
       case 320: return PERMISSION_VIEW_CAMPAIGN_COMPLETION;
@@ -1263,6 +1381,10 @@ public enum Permission
       case 602: return PERMISSION_DASHBOARDS_EDIT;
       case 603: return PERMISSION_INSIGHTS_COMMON_LIBRARY_MANAGE;
       case 604: return PERMISSION_INSIGHTS_MANAGE;
+      case 605: return PERMISSION_INSIGHTS_INSIGHT_VIEW;
+      case 606: return PERMISSION_INSIGHTS_INSIGHT_EDIT;
+      case 607: return PERMISSION_INSIGHTS_DASHBOARD_VIEW;
+      case 608: return PERMISSION_INSIGHTS_DASHBOARD_EDIT;
       case 700: return PERMISSION_ROOM303;
       case 800: return PERMISSION_AGENT_CALL_SCRIPTS;
       case 900: return PERMISSION_COMPLIANCE;
@@ -1275,6 +1397,7 @@ public enum Permission
       case 1301: return PERMISSION_INTEGRATIONS_PAYMENT;
       case 1302: return PERMISSION_INTEGRATIONS_JOURNEY;
       case 1500: return PERMISSION_WFM;
+      case 1501: return PERMISSION_AGENT_PORTAL;
       case 1600: return PERMISSION_SCORECARDS;
       case 1601: return PERMISSION_SCORECARDS_MANAGE;
       case 1602: return PERMISSION_SCORECARDS_EVALUATE;

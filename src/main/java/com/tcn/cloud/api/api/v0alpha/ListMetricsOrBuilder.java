@@ -76,7 +76,7 @@ public interface ListMetricsOrBuilder extends
    *
    * <code>repeated .api.commons.RecordType field_types = 4 [json_name = "fieldTypes", deprecated = true];</code>
    * @deprecated api.v0alpha.ListMetrics.field_types is deprecated.
-   *     See api/v0alpha/lms.proto;l=2246
+   *     See api/v0alpha/lms.proto;l=2296
    * @return A list containing the fieldTypes.
    */
   @java.lang.Deprecated java.util.List<com.tcn.cloud.api.api.commons.RecordType> getFieldTypesList();
@@ -88,7 +88,7 @@ public interface ListMetricsOrBuilder extends
    *
    * <code>repeated .api.commons.RecordType field_types = 4 [json_name = "fieldTypes", deprecated = true];</code>
    * @deprecated api.v0alpha.ListMetrics.field_types is deprecated.
-   *     See api/v0alpha/lms.proto;l=2246
+   *     See api/v0alpha/lms.proto;l=2296
    * @return The count of fieldTypes.
    */
   @java.lang.Deprecated int getFieldTypesCount();
@@ -100,7 +100,7 @@ public interface ListMetricsOrBuilder extends
    *
    * <code>repeated .api.commons.RecordType field_types = 4 [json_name = "fieldTypes", deprecated = true];</code>
    * @deprecated api.v0alpha.ListMetrics.field_types is deprecated.
-   *     See api/v0alpha/lms.proto;l=2246
+   *     See api/v0alpha/lms.proto;l=2296
    * @param index The index of the element to return.
    * @return The fieldTypes at the given index.
    */
@@ -113,7 +113,7 @@ public interface ListMetricsOrBuilder extends
    *
    * <code>repeated .api.commons.RecordType field_types = 4 [json_name = "fieldTypes", deprecated = true];</code>
    * @deprecated api.v0alpha.ListMetrics.field_types is deprecated.
-   *     See api/v0alpha/lms.proto;l=2246
+   *     See api/v0alpha/lms.proto;l=2296
    * @return A list containing the enum numeric values on the wire for fieldTypes.
    */
   @java.lang.Deprecated java.util.List<java.lang.Integer>
@@ -126,7 +126,7 @@ public interface ListMetricsOrBuilder extends
    *
    * <code>repeated .api.commons.RecordType field_types = 4 [json_name = "fieldTypes", deprecated = true];</code>
    * @deprecated api.v0alpha.ListMetrics.field_types is deprecated.
-   *     See api/v0alpha/lms.proto;l=2246
+   *     See api/v0alpha/lms.proto;l=2296
    * @param index The index of the value to return.
    * @return The enum numeric value on the wire of fieldTypes at the given index.
    */

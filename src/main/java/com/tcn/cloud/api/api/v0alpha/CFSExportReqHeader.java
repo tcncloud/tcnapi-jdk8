@@ -41,7 +41,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.CFSExportReqHeader.class, com.tcn.cloud.api.api.v0alpha.CFSExportReqHeader.Builder.class);
   }
 
-  private int bitField0_;
   public static final int EXPORT_HEADER_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.api.v0alpha.ExportHeader exportHeader_;
   /**
@@ -50,7 +49,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasExportHeader() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return exportHeader_ != null;
   }
   /**
    * <code>.api.v0alpha.ExportHeader export_header = 1 [json_name = "exportHeader"];</code>
@@ -201,7 +200,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (exportHeader_ != null) {
       output.writeMessage(1, getExportHeader());
     }
     for (int i = 0; i < configs_.size(); i++) {
@@ -222,7 +221,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (exportHeader_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getExportHeader());
     }
@@ -404,20 +403,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.CFSExportReqHeader.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getExportHeaderFieldBuilder();
-        getConfigsFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -483,12 +475,10 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v0alpha.CFSExportReqHeader result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.exportHeader_ = exportHeaderBuilder_ == null
             ? exportHeader_
             : exportHeaderBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.orgId_ = orgId_;
@@ -496,7 +486,6 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.regionId_ = regionId_;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -721,10 +710,8 @@ private static final long serialVersionUID = 0L;
       } else {
         exportHeaderBuilder_.mergeFrom(value);
       }
-      if (exportHeader_ != null) {
-        bitField0_ |= 0x00000001;
-        onChanged();
-      }
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**

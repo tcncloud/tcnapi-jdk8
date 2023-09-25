@@ -208,8 +208,7 @@ private static final long serialVersionUID = 0L;
 
   public static final int SKILL_PROFILES_FIELD_NUMBER = 6;
   @SuppressWarnings("serial")
-  private com.google.protobuf.Internal.LongList skillProfiles_ =
-      emptyLongList();
+  private com.google.protobuf.Internal.LongList skillProfiles_;
   /**
    * <pre>
    * skill_profiles ids related to category
@@ -748,6 +747,11 @@ private static final long serialVersionUID = 0L;
     }
 
     private void buildPartialRepeatedFields(com.tcn.cloud.api.api.commons.Category result) {
+      if (((bitField0_ & 0x00000010) != 0)) {
+        skillProfiles_.makeImmutable();
+        bitField0_ = (bitField0_ & ~0x00000010);
+      }
+      result.skillProfiles_ = skillProfiles_;
       if (((bitField0_ & 0x00000040) != 0)) {
         callTypes_ = java.util.Collections.unmodifiableList(callTypes_);
         bitField0_ = (bitField0_ & ~0x00000040);
@@ -768,10 +772,6 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.description_ = description_;
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        skillProfiles_.makeImmutable();
-        result.skillProfiles_ = skillProfiles_;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.version_ = version_;
@@ -849,8 +849,7 @@ private static final long serialVersionUID = 0L;
       if (!other.skillProfiles_.isEmpty()) {
         if (skillProfiles_.isEmpty()) {
           skillProfiles_ = other.skillProfiles_;
-          skillProfiles_.makeImmutable();
-          bitField0_ |= 0x00000010;
+          bitField0_ = (bitField0_ & ~0x00000010);
         } else {
           ensureSkillProfilesIsMutable();
           skillProfiles_.addAll(other.skillProfiles_);
@@ -1309,10 +1308,10 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Internal.LongList skillProfiles_ = emptyLongList();
     private void ensureSkillProfilesIsMutable() {
-      if (!skillProfiles_.isModifiable()) {
-        skillProfiles_ = makeMutableCopy(skillProfiles_);
+      if (!((bitField0_ & 0x00000010) != 0)) {
+        skillProfiles_ = mutableCopy(skillProfiles_);
+        bitField0_ |= 0x00000010;
       }
-      bitField0_ |= 0x00000010;
     }
     /**
      * <pre>
@@ -1324,8 +1323,8 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Long>
         getSkillProfilesList() {
-      skillProfiles_.makeImmutable();
-      return skillProfiles_;
+      return ((bitField0_ & 0x00000010) != 0) ?
+               java.util.Collections.unmodifiableList(skillProfiles_) : skillProfiles_;
     }
     /**
      * <pre>
@@ -1365,7 +1364,6 @@ private static final long serialVersionUID = 0L;
 
       ensureSkillProfilesIsMutable();
       skillProfiles_.setLong(index, value);
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1382,7 +1380,6 @@ private static final long serialVersionUID = 0L;
 
       ensureSkillProfilesIsMutable();
       skillProfiles_.addLong(value);
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1400,7 +1397,6 @@ private static final long serialVersionUID = 0L;
       ensureSkillProfilesIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, skillProfiles_);
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }

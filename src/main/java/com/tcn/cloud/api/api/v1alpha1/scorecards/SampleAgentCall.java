@@ -44,7 +44,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.scorecards.SampleAgentCall.class, com.tcn.cloud.api.api.v1alpha1.scorecards.SampleAgentCall.Builder.class);
   }
 
-  private int bitField0_;
   public static final int CALL_SID_FIELD_NUMBER = 1;
   private long callSid_ = 0L;
   /**
@@ -98,7 +97,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCallStart() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return callStart_ != null;
   }
   /**
    * <pre>
@@ -136,7 +135,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCallDuration() {
-    return ((bitField0_ & 0x00000002) != 0);
+    return callDuration_ != null;
   }
   /**
    * <pre>
@@ -174,7 +173,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasSpeech() {
-    return ((bitField0_ & 0x00000004) != 0);
+    return speech_ != null;
   }
   /**
    * <pre>
@@ -212,7 +211,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasSilence() {
-    return ((bitField0_ & 0x00000008) != 0);
+    return silence_ != null;
   }
   /**
    * <pre>
@@ -305,16 +304,16 @@ private static final long serialVersionUID = 0L;
     if (callType_ != com.tcn.cloud.api.api.commons.CallType.Enum.INBOUND.getNumber()) {
       output.writeEnum(2, callType_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (callStart_ != null) {
       output.writeMessage(3, getCallStart());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (callDuration_ != null) {
       output.writeMessage(4, getCallDuration());
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
+    if (speech_ != null) {
       output.writeMessage(5, getSpeech());
     }
-    if (((bitField0_ & 0x00000008) != 0)) {
+    if (silence_ != null) {
       output.writeMessage(6, getSilence());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(agentUserId_)) {
@@ -337,19 +336,19 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(2, callType_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (callStart_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getCallStart());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (callDuration_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getCallDuration());
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
+    if (speech_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getSpeech());
     }
-    if (((bitField0_ & 0x00000008) != 0)) {
+    if (silence_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, getSilence());
     }
@@ -553,22 +552,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.scorecards.SampleAgentCall.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getCallStartFieldBuilder();
-        getCallDurationFieldBuilder();
-        getSpeechFieldBuilder();
-        getSilenceFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -636,35 +626,29 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.callType_ = callType_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.callStart_ = callStartBuilder_ == null
             ? callStart_
             : callStartBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.callDuration_ = callDurationBuilder_ == null
             ? callDuration_
             : callDurationBuilder_.build();
-        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.speech_ = speechBuilder_ == null
             ? speech_
             : speechBuilder_.build();
-        to_bitField0_ |= 0x00000004;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.silence_ = silenceBuilder_ == null
             ? silence_
             : silenceBuilder_.build();
-        to_bitField0_ |= 0x00000008;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.agentUserId_ = agentUserId_;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1023,10 +1007,8 @@ private static final long serialVersionUID = 0L;
       } else {
         callStartBuilder_.mergeFrom(value);
       }
-      if (callStart_ != null) {
-        bitField0_ |= 0x00000004;
-        onChanged();
-      }
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -1180,10 +1162,8 @@ private static final long serialVersionUID = 0L;
       } else {
         callDurationBuilder_.mergeFrom(value);
       }
-      if (callDuration_ != null) {
-        bitField0_ |= 0x00000008;
-        onChanged();
-      }
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -1337,10 +1317,8 @@ private static final long serialVersionUID = 0L;
       } else {
         speechBuilder_.mergeFrom(value);
       }
-      if (speech_ != null) {
-        bitField0_ |= 0x00000010;
-        onChanged();
-      }
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -1494,10 +1472,8 @@ private static final long serialVersionUID = 0L;
       } else {
         silenceBuilder_.mergeFrom(value);
       }
-      if (silence_ != null) {
-        bitField0_ |= 0x00000020;
-        onChanged();
-      }
+      bitField0_ |= 0x00000020;
+      onChanged();
       return this;
     }
     /**

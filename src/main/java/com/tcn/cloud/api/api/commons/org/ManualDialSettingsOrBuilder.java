@@ -506,10 +506,13 @@ public interface ManualDialSettingsOrBuilder extends
   /**
    * <pre>
    * Control whether the reject option is available to the approvers.
+   * Please use disable_reject_option_for_approvers under GeneralSettings.
    * </pre>
    *
-   * <code>bool enable_reject_option_for_approvers = 29 [json_name = "enableRejectOptionForApprovers"];</code>
+   * <code>bool enable_reject_option_for_approvers = 29 [json_name = "enableRejectOptionForApprovers", deprecated = true];</code>
+   * @deprecated api.commons.org.ManualDialSettings.enable_reject_option_for_approvers is deprecated.
+   *     See api/commons/org/huntgroup.proto;l=480
    * @return The enableRejectOptionForApprovers.
    */
-  boolean getEnableRejectOptionForApprovers();
+  @java.lang.Deprecated boolean getEnableRejectOptionForApprovers();
 }

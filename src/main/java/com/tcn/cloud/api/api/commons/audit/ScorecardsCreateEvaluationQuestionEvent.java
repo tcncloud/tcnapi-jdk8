@@ -43,7 +43,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.audit.ScorecardsCreateEvaluationQuestionEvent.class, com.tcn.cloud.api.api.commons.audit.ScorecardsCreateEvaluationQuestionEvent.Builder.class);
   }
 
-  private int bitField0_;
   public static final int EVALUATION_QUESTION_ID_FIELD_NUMBER = 1;
   private long evaluationQuestionId_ = 0L;
   /**
@@ -148,7 +147,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasEvaluationQuestion() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return evaluationQuestion_ != null;
   }
   /**
    * <pre>
@@ -200,7 +199,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, userId_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (evaluationQuestion_ != null) {
       output.writeMessage(5, getEvaluationQuestion());
     }
     getUnknownFields().writeTo(output);
@@ -227,7 +226,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, userId_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (evaluationQuestion_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getEvaluationQuestion());
     }
@@ -408,19 +407,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.audit.ScorecardsCreateEvaluationQuestionEvent.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getEvaluationQuestionFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -480,14 +473,11 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.userId_ = userId_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.evaluationQuestion_ = evaluationQuestionBuilder_ == null
             ? evaluationQuestion_
             : evaluationQuestionBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -931,10 +921,8 @@ private static final long serialVersionUID = 0L;
       } else {
         evaluationQuestionBuilder_.mergeFrom(value);
       }
-      if (evaluationQuestion_ != null) {
-        bitField0_ |= 0x00000010;
-        onChanged();
-      }
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**

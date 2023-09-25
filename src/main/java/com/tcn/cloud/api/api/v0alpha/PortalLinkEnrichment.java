@@ -51,7 +51,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.PortalLinkEnrichment.class, com.tcn.cloud.api.api.v0alpha.PortalLinkEnrichment.Builder.class);
   }
 
-  private int bitField0_;
   public static final int KEY_MAP_FIELD_NUMBER = 1;
   private static final class KeyMapDefaultEntryHolder {
     static final com.google.protobuf.MapEntry<
@@ -206,7 +205,7 @@ java.lang.String defaultValue) {
    */
   @java.lang.Override
   public boolean hasExpiration() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return expiration_ != null;
   }
   /**
    * <pre>
@@ -270,7 +269,7 @@ java.lang.String defaultValue) {
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(portalId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, portalId_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (expiration_ != null) {
       output.writeMessage(6, getExpiration());
     }
     if (demo_ != false) {
@@ -298,7 +297,7 @@ java.lang.String defaultValue) {
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(portalId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, portalId_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (expiration_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, getExpiration());
     }
@@ -497,19 +496,13 @@ java.lang.String defaultValue) {
 
     // Construct using com.tcn.cloud.api.api.v0alpha.PortalLinkEnrichment.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getExpirationFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -563,17 +556,14 @@ java.lang.String defaultValue) {
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.portalId_ = portalId_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.expiration_ = expirationBuilder_ == null
             ? expiration_
             : expirationBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.demo_ = demo_;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1036,10 +1026,8 @@ java.lang.String defaultValue) {
       } else {
         expirationBuilder_.mergeFrom(value);
       }
-      if (expiration_ != null) {
-        bitField0_ |= 0x00000004;
-        onChanged();
-      }
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**

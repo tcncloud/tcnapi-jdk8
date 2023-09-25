@@ -38,7 +38,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.vanalytics.AuditResponse.class, com.tcn.cloud.api.api.v1alpha1.vanalytics.AuditResponse.Builder.class);
   }
 
-  private int bitField0_;
   public static final int AUDIO_TIME_FIELD_NUMBER = 1;
   private double audioTime_ = 0D;
   /**
@@ -82,7 +81,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasLastUsage() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return lastUsage_ != null;
   }
   /**
    * <pre>
@@ -146,7 +145,7 @@ private static final long serialVersionUID = 0L;
     if (java.lang.Double.doubleToRawLongBits(billedAudioTime_) != 0) {
       output.writeDouble(2, billedAudioTime_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (lastUsage_ != null) {
       output.writeMessage(3, getLastUsage());
     }
     if (billedTranscripts_ != 0L) {
@@ -169,7 +168,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(2, billedAudioTime_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (lastUsage_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getLastUsage());
     }
@@ -348,19 +347,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.vanalytics.AuditResponse.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getLastUsageFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -413,17 +406,14 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.billedAudioTime_ = billedAudioTime_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.lastUsage_ = lastUsageBuilder_ == null
             ? lastUsage_
             : lastUsageBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.billedTranscripts_ = billedTranscripts_;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -726,10 +716,8 @@ private static final long serialVersionUID = 0L;
       } else {
         lastUsageBuilder_.mergeFrom(value);
       }
-      if (lastUsage_ != null) {
-        bitField0_ |= 0x00000004;
-        onChanged();
-      }
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**

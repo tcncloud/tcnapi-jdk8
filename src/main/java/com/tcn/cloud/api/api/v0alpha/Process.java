@@ -79,6 +79,7 @@ private static final long serialVersionUID = 0L;
     OMNI_EXCHANGE_PROCESS(73),
     WEB_EXCHANGE_PROCESS(74),
     SPLIT(75),
+    EPIC_ENTRY_POINT(76),
     PROC_NOT_SET(0);
     private final int value;
     private ProcCase(int value) {
@@ -130,6 +131,7 @@ private static final long serialVersionUID = 0L;
         case 73: return OMNI_EXCHANGE_PROCESS;
         case 74: return WEB_EXCHANGE_PROCESS;
         case 75: return SPLIT;
+        case 76: return EPIC_ENTRY_POINT;
         case 0: return PROC_NOT_SET;
         default: return null;
       }
@@ -347,7 +349,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.v0alpha.ComplProcess compl = 45 [json_name = "compl", deprecated = true];</code>
    * @deprecated api.v0alpha.Process.compl is deprecated.
-   *     See api/v0alpha/lms.proto;l=944
+   *     See api/v0alpha/lms.proto;l=993
    * @return Whether the compl field is set.
    */
   @java.lang.Override
@@ -361,7 +363,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.v0alpha.ComplProcess compl = 45 [json_name = "compl", deprecated = true];</code>
    * @deprecated api.v0alpha.Process.compl is deprecated.
-   *     See api/v0alpha/lms.proto;l=944
+   *     See api/v0alpha/lms.proto;l=993
    * @return The compl.
    */
   @java.lang.Override
@@ -549,7 +551,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.v0alpha.EntrypointProcess entrypoint = 51 [json_name = "entrypoint", deprecated = true];</code>
    * @deprecated api.v0alpha.Process.entrypoint is deprecated.
-   *     See api/v0alpha/lms.proto;l=951
+   *     See api/v0alpha/lms.proto;l=1000
    * @return Whether the entrypoint field is set.
    */
   @java.lang.Override
@@ -563,7 +565,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.v0alpha.EntrypointProcess entrypoint = 51 [json_name = "entrypoint", deprecated = true];</code>
    * @deprecated api.v0alpha.Process.entrypoint is deprecated.
-   *     See api/v0alpha/lms.proto;l=951
+   *     See api/v0alpha/lms.proto;l=1000
    * @return The entrypoint.
    */
   @java.lang.Override
@@ -981,7 +983,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.v0alpha.PaymentLinkEnrichment link_enrich = 64 [json_name = "linkEnrich", deprecated = true];</code>
    * @deprecated api.v0alpha.Process.link_enrich is deprecated.
-   *     See api/v0alpha/lms.proto;l=970
+   *     See api/v0alpha/lms.proto;l=1019
    * @return Whether the linkEnrich field is set.
    */
   @java.lang.Override
@@ -991,7 +993,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.v0alpha.PaymentLinkEnrichment link_enrich = 64 [json_name = "linkEnrich", deprecated = true];</code>
    * @deprecated api.v0alpha.Process.link_enrich is deprecated.
-   *     See api/v0alpha/lms.proto;l=970
+   *     See api/v0alpha/lms.proto;l=1019
    * @return The linkEnrich.
    */
   @java.lang.Override
@@ -1385,6 +1387,37 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.v0alpha.SplitCriteria.getDefaultInstance();
   }
 
+  public static final int EPIC_ENTRY_POINT_FIELD_NUMBER = 76;
+  /**
+   * <code>.api.v0alpha.EpicEntrypoint epic_entry_point = 76 [json_name = "epicEntryPoint"];</code>
+   * @return Whether the epicEntryPoint field is set.
+   */
+  @java.lang.Override
+  public boolean hasEpicEntryPoint() {
+    return procCase_ == 76;
+  }
+  /**
+   * <code>.api.v0alpha.EpicEntrypoint epic_entry_point = 76 [json_name = "epicEntryPoint"];</code>
+   * @return The epicEntryPoint.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v0alpha.EpicEntrypoint getEpicEntryPoint() {
+    if (procCase_ == 76) {
+       return (com.tcn.cloud.api.api.v0alpha.EpicEntrypoint) proc_;
+    }
+    return com.tcn.cloud.api.api.v0alpha.EpicEntrypoint.getDefaultInstance();
+  }
+  /**
+   * <code>.api.v0alpha.EpicEntrypoint epic_entry_point = 76 [json_name = "epicEntryPoint"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v0alpha.EpicEntrypointOrBuilder getEpicEntryPointOrBuilder() {
+    if (procCase_ == 76) {
+       return (com.tcn.cloud.api.api.v0alpha.EpicEntrypoint) proc_;
+    }
+    return com.tcn.cloud.api.api.v0alpha.EpicEntrypoint.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1503,6 +1536,9 @@ private static final long serialVersionUID = 0L;
     }
     if (procCase_ == 75) {
       output.writeMessage(75, (com.tcn.cloud.api.api.v0alpha.SplitCriteria) proc_);
+    }
+    if (procCase_ == 76) {
+      output.writeMessage(76, (com.tcn.cloud.api.api.v0alpha.EpicEntrypoint) proc_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -1651,6 +1687,10 @@ private static final long serialVersionUID = 0L;
     if (procCase_ == 75) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(75, (com.tcn.cloud.api.api.v0alpha.SplitCriteria) proc_);
+    }
+    if (procCase_ == 76) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(76, (com.tcn.cloud.api.api.v0alpha.EpicEntrypoint) proc_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -1807,6 +1847,10 @@ private static final long serialVersionUID = 0L;
         if (!getSplit()
             .equals(other.getSplit())) return false;
         break;
+      case 76:
+        if (!getEpicEntryPoint()
+            .equals(other.getEpicEntryPoint())) return false;
+        break;
       case 0:
       default:
     }
@@ -1959,6 +2003,10 @@ private static final long serialVersionUID = 0L;
       case 75:
         hash = (37 * hash) + SPLIT_FIELD_NUMBER;
         hash = (53 * hash) + getSplit().hashCode();
+        break;
+      case 76:
+        hash = (37 * hash) + EPIC_ENTRY_POINT_FIELD_NUMBER;
+        hash = (53 * hash) + getEpicEntryPoint().hashCode();
         break;
       case 0:
       default:
@@ -2198,6 +2246,9 @@ private static final long serialVersionUID = 0L;
       if (splitBuilder_ != null) {
         splitBuilder_.clear();
       }
+      if (epicEntryPointBuilder_ != null) {
+        epicEntryPointBuilder_.clear();
+      }
       procCase_ = 0;
       proc_ = null;
       return this;
@@ -2382,6 +2433,10 @@ private static final long serialVersionUID = 0L;
       if (procCase_ == 75 &&
           splitBuilder_ != null) {
         result.proc_ = splitBuilder_.build();
+      }
+      if (procCase_ == 76 &&
+          epicEntryPointBuilder_ != null) {
+        result.proc_ = epicEntryPointBuilder_.build();
       }
     }
 
@@ -2569,6 +2624,10 @@ private static final long serialVersionUID = 0L;
         }
         case SPLIT: {
           mergeSplit(other.getSplit());
+          break;
+        }
+        case EPIC_ENTRY_POINT: {
+          mergeEpicEntryPoint(other.getEpicEntryPoint());
           break;
         }
         case PROC_NOT_SET: {
@@ -2844,6 +2903,13 @@ private static final long serialVersionUID = 0L;
               procCase_ = 75;
               break;
             } // case 602
+            case 610: {
+              input.readMessage(
+                  getEpicEntryPointFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              procCase_ = 76;
+              break;
+            } // case 610
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -3668,7 +3734,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.v0alpha.ComplProcess compl = 45 [json_name = "compl", deprecated = true];</code>
      * @deprecated api.v0alpha.Process.compl is deprecated.
-     *     See api/v0alpha/lms.proto;l=944
+     *     See api/v0alpha/lms.proto;l=993
      * @return Whether the compl field is set.
      */
     @java.lang.Override
@@ -3682,7 +3748,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.v0alpha.ComplProcess compl = 45 [json_name = "compl", deprecated = true];</code>
      * @deprecated api.v0alpha.Process.compl is deprecated.
-     *     See api/v0alpha/lms.proto;l=944
+     *     See api/v0alpha/lms.proto;l=993
      * @return The compl.
      */
     @java.lang.Override
@@ -4560,7 +4626,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.v0alpha.EntrypointProcess entrypoint = 51 [json_name = "entrypoint", deprecated = true];</code>
      * @deprecated api.v0alpha.Process.entrypoint is deprecated.
-     *     See api/v0alpha/lms.proto;l=951
+     *     See api/v0alpha/lms.proto;l=1000
      * @return Whether the entrypoint field is set.
      */
     @java.lang.Override
@@ -4574,7 +4640,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.v0alpha.EntrypointProcess entrypoint = 51 [json_name = "entrypoint", deprecated = true];</code>
      * @deprecated api.v0alpha.Process.entrypoint is deprecated.
-     *     See api/v0alpha/lms.proto;l=951
+     *     See api/v0alpha/lms.proto;l=1000
      * @return The entrypoint.
      */
     @java.lang.Override
@@ -6444,7 +6510,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.v0alpha.PaymentLinkEnrichment link_enrich = 64 [json_name = "linkEnrich", deprecated = true];</code>
      * @deprecated api.v0alpha.Process.link_enrich is deprecated.
-     *     See api/v0alpha/lms.proto;l=970
+     *     See api/v0alpha/lms.proto;l=1019
      * @return Whether the linkEnrich field is set.
      */
     @java.lang.Override
@@ -6454,7 +6520,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.v0alpha.PaymentLinkEnrichment link_enrich = 64 [json_name = "linkEnrich", deprecated = true];</code>
      * @deprecated api.v0alpha.Process.link_enrich is deprecated.
-     *     See api/v0alpha/lms.proto;l=970
+     *     See api/v0alpha/lms.proto;l=1019
      * @return The linkEnrich.
      */
     @java.lang.Override
@@ -8192,6 +8258,148 @@ private static final long serialVersionUID = 0L;
       procCase_ = 75;
       onChanged();
       return splitBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v0alpha.EpicEntrypoint, com.tcn.cloud.api.api.v0alpha.EpicEntrypoint.Builder, com.tcn.cloud.api.api.v0alpha.EpicEntrypointOrBuilder> epicEntryPointBuilder_;
+    /**
+     * <code>.api.v0alpha.EpicEntrypoint epic_entry_point = 76 [json_name = "epicEntryPoint"];</code>
+     * @return Whether the epicEntryPoint field is set.
+     */
+    @java.lang.Override
+    public boolean hasEpicEntryPoint() {
+      return procCase_ == 76;
+    }
+    /**
+     * <code>.api.v0alpha.EpicEntrypoint epic_entry_point = 76 [json_name = "epicEntryPoint"];</code>
+     * @return The epicEntryPoint.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v0alpha.EpicEntrypoint getEpicEntryPoint() {
+      if (epicEntryPointBuilder_ == null) {
+        if (procCase_ == 76) {
+          return (com.tcn.cloud.api.api.v0alpha.EpicEntrypoint) proc_;
+        }
+        return com.tcn.cloud.api.api.v0alpha.EpicEntrypoint.getDefaultInstance();
+      } else {
+        if (procCase_ == 76) {
+          return epicEntryPointBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.v0alpha.EpicEntrypoint.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.v0alpha.EpicEntrypoint epic_entry_point = 76 [json_name = "epicEntryPoint"];</code>
+     */
+    public Builder setEpicEntryPoint(com.tcn.cloud.api.api.v0alpha.EpicEntrypoint value) {
+      if (epicEntryPointBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        proc_ = value;
+        onChanged();
+      } else {
+        epicEntryPointBuilder_.setMessage(value);
+      }
+      procCase_ = 76;
+      return this;
+    }
+    /**
+     * <code>.api.v0alpha.EpicEntrypoint epic_entry_point = 76 [json_name = "epicEntryPoint"];</code>
+     */
+    public Builder setEpicEntryPoint(
+        com.tcn.cloud.api.api.v0alpha.EpicEntrypoint.Builder builderForValue) {
+      if (epicEntryPointBuilder_ == null) {
+        proc_ = builderForValue.build();
+        onChanged();
+      } else {
+        epicEntryPointBuilder_.setMessage(builderForValue.build());
+      }
+      procCase_ = 76;
+      return this;
+    }
+    /**
+     * <code>.api.v0alpha.EpicEntrypoint epic_entry_point = 76 [json_name = "epicEntryPoint"];</code>
+     */
+    public Builder mergeEpicEntryPoint(com.tcn.cloud.api.api.v0alpha.EpicEntrypoint value) {
+      if (epicEntryPointBuilder_ == null) {
+        if (procCase_ == 76 &&
+            proc_ != com.tcn.cloud.api.api.v0alpha.EpicEntrypoint.getDefaultInstance()) {
+          proc_ = com.tcn.cloud.api.api.v0alpha.EpicEntrypoint.newBuilder((com.tcn.cloud.api.api.v0alpha.EpicEntrypoint) proc_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          proc_ = value;
+        }
+        onChanged();
+      } else {
+        if (procCase_ == 76) {
+          epicEntryPointBuilder_.mergeFrom(value);
+        } else {
+          epicEntryPointBuilder_.setMessage(value);
+        }
+      }
+      procCase_ = 76;
+      return this;
+    }
+    /**
+     * <code>.api.v0alpha.EpicEntrypoint epic_entry_point = 76 [json_name = "epicEntryPoint"];</code>
+     */
+    public Builder clearEpicEntryPoint() {
+      if (epicEntryPointBuilder_ == null) {
+        if (procCase_ == 76) {
+          procCase_ = 0;
+          proc_ = null;
+          onChanged();
+        }
+      } else {
+        if (procCase_ == 76) {
+          procCase_ = 0;
+          proc_ = null;
+        }
+        epicEntryPointBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.v0alpha.EpicEntrypoint epic_entry_point = 76 [json_name = "epicEntryPoint"];</code>
+     */
+    public com.tcn.cloud.api.api.v0alpha.EpicEntrypoint.Builder getEpicEntryPointBuilder() {
+      return getEpicEntryPointFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.v0alpha.EpicEntrypoint epic_entry_point = 76 [json_name = "epicEntryPoint"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v0alpha.EpicEntrypointOrBuilder getEpicEntryPointOrBuilder() {
+      if ((procCase_ == 76) && (epicEntryPointBuilder_ != null)) {
+        return epicEntryPointBuilder_.getMessageOrBuilder();
+      } else {
+        if (procCase_ == 76) {
+          return (com.tcn.cloud.api.api.v0alpha.EpicEntrypoint) proc_;
+        }
+        return com.tcn.cloud.api.api.v0alpha.EpicEntrypoint.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.v0alpha.EpicEntrypoint epic_entry_point = 76 [json_name = "epicEntryPoint"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v0alpha.EpicEntrypoint, com.tcn.cloud.api.api.v0alpha.EpicEntrypoint.Builder, com.tcn.cloud.api.api.v0alpha.EpicEntrypointOrBuilder> 
+        getEpicEntryPointFieldBuilder() {
+      if (epicEntryPointBuilder_ == null) {
+        if (!(procCase_ == 76)) {
+          proc_ = com.tcn.cloud.api.api.v0alpha.EpicEntrypoint.getDefaultInstance();
+        }
+        epicEntryPointBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.v0alpha.EpicEntrypoint, com.tcn.cloud.api.api.v0alpha.EpicEntrypoint.Builder, com.tcn.cloud.api.api.v0alpha.EpicEntrypointOrBuilder>(
+                (com.tcn.cloud.api.api.v0alpha.EpicEntrypoint) proc_,
+                getParentForChildren(),
+                isClean());
+        proc_ = null;
+      }
+      procCase_ = 76;
+      onChanged();
+      return epicEntryPointBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

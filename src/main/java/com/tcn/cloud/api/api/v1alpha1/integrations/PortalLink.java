@@ -57,7 +57,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.integrations.PortalLink.class, com.tcn.cloud.api.api.v1alpha1.integrations.PortalLink.Builder.class);
   }
 
-  private int bitField0_;
   public static final int ID_FIELD_NUMBER = 3;
   @SuppressWarnings("serial")
   private volatile java.lang.Object id_ = "";
@@ -146,7 +145,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>string plugin_instance_id = 5 [json_name = "pluginInstanceId", deprecated = true];</code>
    * @deprecated api.v1alpha1.integrations.PortalLink.plugin_instance_id is deprecated.
-   *     See api/v1alpha1/integrations/service.proto;l=1083
+   *     See api/v1alpha1/integrations/service.proto;l=1097
    * @return The pluginInstanceId.
    */
   @java.lang.Override
@@ -169,7 +168,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>string plugin_instance_id = 5 [json_name = "pluginInstanceId", deprecated = true];</code>
    * @deprecated api.v1alpha1.integrations.PortalLink.plugin_instance_id is deprecated.
-   *     See api/v1alpha1/integrations/service.proto;l=1083
+   *     See api/v1alpha1/integrations/service.proto;l=1097
    * @return The bytes for pluginInstanceId.
    */
   @java.lang.Override
@@ -431,7 +430,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
    */
   @java.lang.Override
   public boolean hasLastEdited() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return lastEdited_ != null;
   }
   /**
    * <code>.google.protobuf.Timestamp last_edited = 10 [json_name = "lastEdited"];</code>
@@ -490,7 +489,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
         internalGetMetadata(),
         MetadataDefaultEntryHolder.defaultEntry,
         9);
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (lastEdited_ != null) {
       output.writeMessage(10, getLastEdited());
     }
     getUnknownFields().writeTo(output);
@@ -537,7 +536,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
       size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, metadata__);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (lastEdited_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(10, getLastEdited());
     }
@@ -753,19 +752,13 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.integrations.PortalLink.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getLastEditedFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -839,14 +832,11 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
         result.metadata_ = internalGetMetadata();
         result.metadata_.makeImmutable();
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.lastEdited_ = lastEditedBuilder_ == null
             ? lastEdited_
             : lastEditedBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1172,7 +1162,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      *
      * <code>string plugin_instance_id = 5 [json_name = "pluginInstanceId", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PortalLink.plugin_instance_id is deprecated.
-     *     See api/v1alpha1/integrations/service.proto;l=1083
+     *     See api/v1alpha1/integrations/service.proto;l=1097
      * @return The pluginInstanceId.
      */
     @java.lang.Deprecated public java.lang.String getPluginInstanceId() {
@@ -1194,7 +1184,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      *
      * <code>string plugin_instance_id = 5 [json_name = "pluginInstanceId", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PortalLink.plugin_instance_id is deprecated.
-     *     See api/v1alpha1/integrations/service.proto;l=1083
+     *     See api/v1alpha1/integrations/service.proto;l=1097
      * @return The bytes for pluginInstanceId.
      */
     @java.lang.Deprecated public com.google.protobuf.ByteString
@@ -1217,7 +1207,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      *
      * <code>string plugin_instance_id = 5 [json_name = "pluginInstanceId", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PortalLink.plugin_instance_id is deprecated.
-     *     See api/v1alpha1/integrations/service.proto;l=1083
+     *     See api/v1alpha1/integrations/service.proto;l=1097
      * @param value The pluginInstanceId to set.
      * @return This builder for chaining.
      */
@@ -1236,7 +1226,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      *
      * <code>string plugin_instance_id = 5 [json_name = "pluginInstanceId", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PortalLink.plugin_instance_id is deprecated.
-     *     See api/v1alpha1/integrations/service.proto;l=1083
+     *     See api/v1alpha1/integrations/service.proto;l=1097
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearPluginInstanceId() {
@@ -1252,7 +1242,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      *
      * <code>string plugin_instance_id = 5 [json_name = "pluginInstanceId", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PortalLink.plugin_instance_id is deprecated.
-     *     See api/v1alpha1/integrations/service.proto;l=1083
+     *     See api/v1alpha1/integrations/service.proto;l=1097
      * @param value The bytes for pluginInstanceId to set.
      * @return This builder for chaining.
      */
@@ -1730,10 +1720,8 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
       } else {
         lastEditedBuilder_.mergeFrom(value);
       }
-      if (lastEdited_ != null) {
-        bitField0_ |= 0x00000080;
-        onChanged();
-      }
+      bitField0_ |= 0x00000080;
+      onChanged();
       return this;
     }
     /**

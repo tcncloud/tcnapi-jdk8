@@ -125,6 +125,126 @@ public final class ServiceProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_delivery_GetHistoryRes_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_delivery_CreateDeliveryDefinitionReq_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_delivery_CreateDeliveryDefinitionReq_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_delivery_CreateDeliveryDefinitionRes_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_delivery_CreateDeliveryDefinitionRes_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_delivery_DeleteDeliveryDefinitionReq_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_delivery_DeleteDeliveryDefinitionReq_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_delivery_DeleteDeliveryDefinitionRes_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_delivery_DeleteDeliveryDefinitionRes_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_delivery_GetDeliveryDefinitionReq_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_delivery_GetDeliveryDefinitionReq_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_delivery_GetDeliveryDefinitionRes_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_delivery_GetDeliveryDefinitionRes_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_delivery_GetDeliveryDefinitionByNameReq_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_delivery_GetDeliveryDefinitionByNameReq_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_delivery_GetDeliveryDefinitionByNameRes_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_delivery_GetDeliveryDefinitionByNameRes_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_delivery_ListDeliveryDefinitionsReq_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_delivery_ListDeliveryDefinitionsReq_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_delivery_ListDeliveryDefinitionsRes_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_delivery_ListDeliveryDefinitionsRes_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_delivery_ListDeliveryDefinitionsByCredentialIDReq_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_delivery_ListDeliveryDefinitionsByCredentialIDReq_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_delivery_ListDeliveryDefinitionsByCredentialIDRes_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_delivery_ListDeliveryDefinitionsByCredentialIDRes_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_delivery_UpdateDeliveryDefinitionReq_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_delivery_UpdateDeliveryDefinitionReq_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_delivery_UpdateDeliveryDefinitionRes_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_delivery_UpdateDeliveryDefinitionRes_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_delivery_CreateEncryptionReq_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_delivery_CreateEncryptionReq_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_delivery_CreateEncryptionRes_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_delivery_CreateEncryptionRes_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_delivery_DeleteEncryptionReq_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_delivery_DeleteEncryptionReq_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_delivery_DeleteEncryptionRes_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_delivery_DeleteEncryptionRes_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_delivery_GetEncryptionReq_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_delivery_GetEncryptionReq_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_delivery_GetEncryptionRes_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_delivery_GetEncryptionRes_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_delivery_ListEncryptionsReq_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_delivery_ListEncryptionsReq_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_delivery_ListEncryptionsRes_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_delivery_ListEncryptionsRes_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_delivery_UpdateEncryptionReq_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_delivery_UpdateEncryptionReq_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_delivery_UpdateEncryptionRes_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_delivery_UpdateEncryptionRes_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_v1alpha1_delivery_TransferConfig_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -274,6 +394,61 @@ public final class ServiceProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_delivery_Credentials_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_delivery_DeliveryDefinition_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_delivery_DeliveryDefinition_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_delivery_SFTPTransport_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_delivery_SFTPTransport_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_delivery_EmailTransport_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_delivery_EmailTransport_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_delivery_Room303Transport_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_delivery_Room303Transport_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_delivery_Room303SystemMessage_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_delivery_Room303SystemMessage_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_delivery_SMSTransport_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_delivery_SMSTransport_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_delivery_AESEncryptionRef_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_delivery_AESEncryptionRef_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_delivery_PGPEncryptionRef_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_delivery_PGPEncryptionRef_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_delivery_PasswordRef_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_delivery_PasswordRef_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_delivery_SSHKeyRef_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_delivery_SSHKeyRef_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_delivery_Encryption_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_delivery_Encryption_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -326,210 +501,383 @@ public final class ServiceProto {
       "ask\030\002 \001(\0132\032.google.protobuf.FieldMaskR\004m" +
       "ask\"U\n\024GetTransferConfigRes\022=\n\006entity\030\001 " +
       "\001(\0132%.api.v1alpha1.delivery.TransferConf" +
-      "igR\006entity\"\237\001\n\032GetTransferConfigByNameRe" +
-      "q\022\022\n\004name\030\001 \001(\tR\004name\022.\n\004mask\030\002 \001(\0132\032.go" +
-      "ogle.protobuf.FieldMaskR\004mask\022=\n\006entity\030" +
-      "\003 \001(\0132%.api.v1alpha1.delivery.TransferCo" +
-      "nfigR\006entity\"[\n\032GetTransferConfigByNameR" +
-      "es\022=\n\006entity\030\001 \001(\0132%.api.v1alpha1.delive" +
-      "ry.TransferConfigR\006entity\"\263\001\n\016ListHistor" +
-      "yReq\0226\n\006entity\030\001 \001(\0132\036.api.v1alpha1.deli" +
-      "very.HistoryR\006entity\022.\n\004mask\030\002 \001(\0132\032.goo" +
-      "gle.protobuf.FieldMaskR\004mask\0229\n\010list_req" +
-      "\030\003 \001(\0132\036.api.v1alpha1.delivery.ListReqR\007" +
-      "listReq\"L\n\016ListHistoryRes\022:\n\010entities\030\001 " +
-      "\003(\0132\036.api.v1alpha1.delivery.HistoryR\010ent" +
-      "ities\"\214\001\n\036ListHistoryByTransferConfigReq" +
-      "\022:\n\006entity\030\001 \001(\0132\".api.v1alpha1.delivery" +
-      ".ListByIDReqR\006entity\022.\n\004mask\030\002 \001(\0132\032.goo" +
-      "gle.protobuf.FieldMaskR\004mask\"\\\n\036ListHist" +
-      "oryByTransferConfigRes\022:\n\010entities\030\001 \003(\013" +
-      "2\036.api.v1alpha1.delivery.HistoryR\010entiti" +
-      "es\"z\n\020CreateHistoryReq\0226\n\006entity\030\001 \001(\0132\036" +
-      ".api.v1alpha1.delivery.HistoryR\006entity\022." +
-      "\n\004mask\030\002 \001(\0132\032.google.protobuf.FieldMask" +
-      "R\004mask\"E\n\020CreateHistoryRes\0221\n\006entity\030\001 \001" +
-      "(\0132\031.api.v1alpha1.delivery.IDR\006entity\"r\n" +
-      "\rGetHistoryReq\0221\n\006entity\030\001 \001(\0132\031.api.v1a" +
-      "lpha1.delivery.IDR\006entity\022.\n\004mask\030\002 \001(\0132" +
-      "\032.google.protobuf.FieldMaskR\004mask\"G\n\rGet" +
-      "HistoryRes\0226\n\006entity\030\001 \001(\0132\036.api.v1alpha" +
-      "1.delivery.HistoryR\006entity\"\246\003\n\016TransferC" +
-      "onfig\022\024\n\003sid\030\001 \001(\003B\0020\001R\003sid\022\022\n\004name\030\003 \001(" +
-      "\tR\004name\022 \n\013description\030\004 \001(\tR\013descriptio" +
-      "n\022\020\n\003ttl\030\007 \001(\005R\003ttl\022A\n\ncredential\030\010 \001(\0132" +
-      "!.api.v1alpha1.delivery.CredentialR\ncred" +
-      "ential\022D\n\013destination\030\t \001(\0132\".api.v1alph" +
-      "a1.delivery.DestinationR\013destination\0225\n\006" +
-      "source\030\n \001(\0132\035.api.v1alpha1.delivery.Sou" +
-      "rceR\006source\0229\n\ncreated_on\030\013 \001(\0132\032.google" +
-      ".protobuf.TimestampR\tcreatedOn\022;\n\013last_e" +
-      "dited\030\014 \001(\0132\032.google.protobuf.TimestampR" +
-      "\nlastEdited\"\032\n\002ID\022\024\n\003sid\030\001 \001(\003B\0020\001R\003sid\"" +
-      ">\n\007ListReq\022\035\n\nbefore_sid\030\002 \001(\003R\tbeforeSi" +
-      "d\022\024\n\005limit\030\003 \001(\003R\005limit\"\315\005\n\007History\022\024\n\003s" +
-      "id\030\001 \001(\003B\0020\001R\003sid\0220\n\024transfer_config_nam" +
-      "e\030\003 \001(\tR\022transferConfigName\0222\n\023transfer_" +
-      "config_sid\030\004 \001(\003B\0020\001R\021transferConfigSid\022" +
-      "#\n\rdelivery_type\030\005 \001(\tR\014deliveryType\022\024\n\005" +
-      "error\030\006 \001(\tR\005error\022\030\n\007success\030\007 \001(\010R\007suc" +
-      "cess\0229\n\ncreated_on\030\010 \001(\0132\032.google.protob" +
-      "uf.TimestampR\tcreatedOn\022A\n\016transfer_star" +
-      "t\030\t \001(\0132\032.google.protobuf.TimestampR\rtra" +
-      "nsferStart\022G\n\021transfer_complete\030\n \001(\0132\032." +
-      "google.protobuf.TimestampR\020transferCompl" +
-      "ete\0229\n\006origin\030\013 \001(\0162!.api.commons.Operat" +
-      "orApplicationsR\006origin\022\025\n\006org_id\030\014 \001(\tR\005" +
-      "orgId\022\'\n\017message_payload\030\r \001(\tR\016messageP" +
-      "ayload\022.\n\023message_payload_len\030\016 \001(\005R\021mes" +
-      "sagePayloadLen\0223\n\006status\030\017 \001(\0162\033.api.com" +
-      "mons.TransferStatusR\006status\022\035\n\nis_inboun" +
-      "d\030\020 \001(\010R\tisInbound\022+\n\017transaction_sid\030\021 " +
-      "\001(\003B\0020\001R\016transactionSid\"_\n\013ListByIDReq\022\035" +
-      "\n\nbefore_sid\030\002 \001(\003R\tbeforeSid\022\024\n\005limit\030\003" +
-      " \001(\003R\005limit\022\033\n\tother_sid\030\004 \001(\003R\010otherSid" +
-      "\"\213\002\n\nCredential\022\024\n\003sid\030\001 \001(\003B\0020\001R\003sid\022\022\n" +
-      "\004name\030\003 \001(\tR\004name\022 \n\013description\030\004 \001(\tR\013" +
-      "description\0229\n\004data\030\005 \001(\0132%.api.v1alpha1" +
-      ".delivery.CredentialDataR\004data\0229\n\ncreate" +
-      "d_on\030\n \001(\0132\032.google.protobuf.TimestampR\t" +
-      "createdOn\022;\n\013last_edited\030\013 \001(\0132\032.google." +
-      "protobuf.TimestampR\nlastEdited\"\320\002\n\013Desti" +
-      "nation\0227\n\nencryption\030\001 \001(\0132\027.api.commons" +
-      ".EncryptionR\nencryption\022?\n\005email\030\002 \001(\0132\'" +
-      ".api.v1alpha1.delivery.EmailDestinationH" +
-      "\000R\005email\022E\n\007room303\030\003 \001(\0132).api.v1alpha1" +
-      ".delivery.Room303DestinationH\000R\007room303\022" +
-      "9\n\003sms\030\004 \001(\0132%.api.v1alpha1.delivery.Sms" +
-      "DestinationH\000R\003sms\022<\n\004sftp\030\005 \001(\0132&.api.v" +
-      "1alpha1.delivery.SftpDestinationH\000R\004sftp" +
-      "B\007\n\005value\"f\n\017SftpDestination\022%\n\016base_dir" +
-      "ectory\030\002 \001(\tR\rbaseDirectory\022\030\n\007address\030\003" +
-      " \001(\tR\007address\022\022\n\004port\030\004 \001(\005R\004port\"D\n\022Roo" +
-      "m303Destination\022\022\n\004room\030\001 \001(\tR\004room\022\032\n\010u" +
-      "sername\030\002 \001(\tR\010username\"`\n\016SmsDestinatio" +
-      "n\022+\n\021destination_phone\030\001 \001(\tR\020destinatio" +
-      "nPhone\022!\n\014source_phone\030\002 \001(\tR\013sourcePhon" +
-      "e\"c\n\020EmailDestination\022\027\n\007to_addr\030\001 \001(\tR\006" +
-      "toAddr\022\031\n\010cc_addrs\030\002 \003(\tR\007ccAddrs\022\033\n\tfro" +
-      "m_addr\030\003 \001(\tR\010fromAddr\"\372\002\n\016CredentialDat" +
-      "a\022J\n\ruser_password\030\001 \001(\0132#.api.v1alpha1." +
-      "delivery.UserPasswordH\000R\014userPassword\022=\n" +
-      "\010password\030\002 \001(\0132\037.api.v1alpha1.delivery." +
-      "PasswordH\000R\010password\022E\n\014ssh_key_pair\030\003 \001" +
-      "(\0132!.api.v1alpha1.delivery.SSHKeyPairH\000R" +
-      "\nsshKeyPair\022E\n\014pgp_key_pair\030\004 \001(\0132!.api." +
-      "v1alpha1.delivery.PGPKeyPairH\000R\npgpKeyPa" +
-      "ir\022G\n\014aes_password\030\005 \001(\0132\".api.v1alpha1." +
-      "delivery.AESPasswordH\000R\013aesPasswordB\006\n\004d" +
-      "ata\"F\n\014UserPassword\022\032\n\010username\030\001 \001(\tR\010u" +
-      "sername\022\032\n\010password\030\002 \001(\tR\010password\"&\n\010P" +
-      "assword\022\032\n\010password\030\001 \001(\tR\010password\"L\n\nS" +
-      "SHKeyPair\022\035\n\npublic_key\030\001 \001(\tR\tpublicKey" +
-      "\022\037\n\013private_key\030\002 \001(\tR\nprivateKey\"L\n\nPGP" +
-      "KeyPair\022\035\n\npublic_key\030\001 \001(\tR\tpublicKey\022\037" +
-      "\n\013private_key\030\002 \001(\tR\nprivateKey\")\n\013AESPa" +
-      "ssword\022\032\n\010password\030\001 \001(\tR\010password\"\203\001\n\006S" +
-      "ource\0227\n\nencryption\030\001 \001(\0132\027.api.commons." +
-      "EncryptionR\nencryption\0227\n\004sftp\030\002 \001(\0132!.a" +
-      "pi.v1alpha1.delivery.SftpSourceH\000R\004sftpB" +
-      "\007\n\005value\"*\n\nSftpSource\022\034\n\tdirectory\030\002 \001(" +
-      "\tR\tdirectory\"}\n\020GetCredentialReq\0229\n\006enti" +
-      "ty\030\001 \001(\0132!.api.v1alpha1.delivery.Credent" +
-      "ialR\006entity\022.\n\004mask\030\002 \001(\0132\032.google.proto" +
-      "buf.FieldMaskR\004mask\"U\n\020GetCredentialRes\022" +
-      "A\n\ncredential\030\001 \001(\0132!.api.v1alpha1.deliv" +
-      "ery.CredentialR\ncredential\"|\n\022ListCreden" +
-      "tialsReq\0226\n\006entity\030\001 \001(\0132\036.api.v1alpha1." +
-      "delivery.ListReqR\006entity\022.\n\004mask\030\002 \001(\0132\032" +
-      ".google.protobuf.FieldMaskR\004mask\"Z\n\022List" +
-      "CredentialsRes\022D\n\013credentials\030\001 \001(\0132\".ap" +
-      "i.v1alpha1.delivery.CredentialsR\013credent" +
-      "ials\"\200\001\n\023CreateCredentialReq\0229\n\006entity\030\001" +
+      "igR\006entity\"\243\001\n\032GetTransferConfigByNameRe" +
+      "q\022\026\n\004name\030\001 \001(\tB\002\030\001R\004name\022.\n\004mask\030\002 \001(\0132" +
+      "\032.google.protobuf.FieldMaskR\004mask\022=\n\006ent" +
+      "ity\030\003 \001(\0132%.api.v1alpha1.delivery.Transf" +
+      "erConfigR\006entity\"[\n\032GetTransferConfigByN" +
+      "ameRes\022=\n\006entity\030\001 \001(\0132%.api.v1alpha1.de" +
+      "livery.TransferConfigR\006entity\"\263\001\n\016ListHi" +
+      "storyReq\0226\n\006entity\030\001 \001(\0132\036.api.v1alpha1." +
+      "delivery.HistoryR\006entity\022.\n\004mask\030\002 \001(\0132\032" +
+      ".google.protobuf.FieldMaskR\004mask\0229\n\010list" +
+      "_req\030\003 \001(\0132\036.api.v1alpha1.delivery.ListR" +
+      "eqR\007listReq\"L\n\016ListHistoryRes\022:\n\010entitie" +
+      "s\030\001 \003(\0132\036.api.v1alpha1.delivery.HistoryR" +
+      "\010entities\"\214\001\n\036ListHistoryByTransferConfi" +
+      "gReq\022:\n\006entity\030\001 \001(\0132\".api.v1alpha1.deli" +
+      "very.ListByIDReqR\006entity\022.\n\004mask\030\002 \001(\0132\032" +
+      ".google.protobuf.FieldMaskR\004mask\"\\\n\036List" +
+      "HistoryByTransferConfigRes\022:\n\010entities\030\001" +
+      " \003(\0132\036.api.v1alpha1.delivery.HistoryR\010en" +
+      "tities\"z\n\020CreateHistoryReq\0226\n\006entity\030\001 \001" +
+      "(\0132\036.api.v1alpha1.delivery.HistoryR\006enti" +
+      "ty\022.\n\004mask\030\002 \001(\0132\032.google.protobuf.Field" +
+      "MaskR\004mask\"E\n\020CreateHistoryRes\0221\n\006entity" +
+      "\030\001 \001(\0132\031.api.v1alpha1.delivery.IDR\006entit" +
+      "y\"r\n\rGetHistoryReq\0221\n\006entity\030\001 \001(\0132\031.api" +
+      ".v1alpha1.delivery.IDR\006entity\022.\n\004mask\030\002 " +
+      "\001(\0132\032.google.protobuf.FieldMaskR\004mask\"G\n" +
+      "\rGetHistoryRes\0226\n\006entity\030\001 \001(\0132\036.api.v1a" +
+      "lpha1.delivery.HistoryR\006entity\"h\n\033Create" +
+      "DeliveryDefinitionReq\022I\n\ndefinition\030\001 \001(" +
+      "\0132).api.v1alpha1.delivery.DeliveryDefini" +
+      "tionR\ndefinition\"P\n\033CreateDeliveryDefini" +
+      "tionRes\0221\n\006entity\030\001 \001(\0132\031.api.v1alpha1.d" +
+      "elivery.IDR\006entity\"P\n\033DeleteDeliveryDefi" +
+      "nitionReq\0221\n\006entity\030\001 \001(\0132\031.api.v1alpha1" +
+      ".delivery.IDR\006entity\"\035\n\033DeleteDeliveryDe" +
+      "finitionRes\"\215\001\n\030GetDeliveryDefinitionReq" +
+      "\022A\n\006entity\030\001 \001(\0132).api.v1alpha1.delivery" +
+      ".DeliveryDefinitionR\006entity\022.\n\004mask\030\002 \001(" +
+      "\0132\032.google.protobuf.FieldMaskR\004mask\"]\n\030G" +
+      "etDeliveryDefinitionRes\022A\n\006entity\030\001 \001(\0132" +
+      ").api.v1alpha1.delivery.DeliveryDefiniti" +
+      "onR\006entity\"\253\001\n\036GetDeliveryDefinitionByNa" +
+      "meReq\022\026\n\004name\030\001 \001(\tB\002\030\001R\004name\022.\n\004mask\030\002 " +
+      "\001(\0132\032.google.protobuf.FieldMaskR\004mask\022A\n" +
+      "\006entity\030\003 \001(\0132).api.v1alpha1.delivery.De" +
+      "liveryDefinitionR\006entity\"c\n\036GetDeliveryD" +
+      "efinitionByNameRes\022A\n\006entity\030\001 \001(\0132).api" +
+      ".v1alpha1.delivery.DeliveryDefinitionR\006e" +
+      "ntity\"\312\001\n\032ListDeliveryDefinitionsReq\022A\n\006" +
+      "entity\030\001 \001(\0132).api.v1alpha1.delivery.Del" +
+      "iveryDefinitionR\006entity\022.\n\004mask\030\002 \001(\0132\032." +
+      "google.protobuf.FieldMaskR\004mask\0229\n\010list_" +
+      "req\030\003 \001(\0132\036.api.v1alpha1.delivery.ListRe" +
+      "qR\007listReq\"c\n\032ListDeliveryDefinitionsRes" +
+      "\022E\n\010entities\030\001 \003(\0132).api.v1alpha1.delive" +
+      "ry.DeliveryDefinitionR\010entities\"\232\002\n(List" +
+      "DeliveryDefinitionsByCredentialIDReq\022A\n\006" +
+      "entity\030\001 \001(\0132).api.v1alpha1.delivery.Del" +
+      "iveryDefinitionR\006entity\022.\n\004mask\030\002 \001(\0132\032." +
+      "google.protobuf.FieldMaskR\004mask\022@\n\016crede" +
+      "ntial_sid\030\003 \001(\0132\031.api.v1alpha1.delivery." +
+      "IDR\rcredentialSid\0229\n\010list_req\030\004 \001(\0132\036.ap" +
+      "i.v1alpha1.delivery.ListReqR\007listReq\"q\n(" +
+      "ListDeliveryDefinitionsByCredentialIDRes" +
+      "\022E\n\010entities\030\001 \003(\0132).api.v1alpha1.delive" +
+      "ry.DeliveryDefinitionR\010entities\"\220\001\n\033Upda" +
+      "teDeliveryDefinitionReq\022A\n\006entity\030\001 \001(\0132" +
+      ").api.v1alpha1.delivery.DeliveryDefiniti" +
+      "onR\006entity\022.\n\004mask\030\002 \001(\0132\032.google.protob" +
+      "uf.FieldMaskR\004mask\"P\n\033UpdateDeliveryDefi" +
+      "nitionRes\0221\n\006entity\030\001 \001(\0132\031.api.v1alpha1" +
+      ".delivery.IDR\006entity\"X\n\023CreateEncryption" +
+      "Req\022A\n\nencryption\030\001 \001(\0132!.api.v1alpha1.d" +
+      "elivery.EncryptionR\nencryption\"H\n\023Create" +
+      "EncryptionRes\0221\n\006entity\030\001 \001(\0132\031.api.v1al" +
+      "pha1.delivery.IDR\006entity\"x\n\023DeleteEncryp" +
+      "tionReq\0221\n\006entity\030\001 \001(\0132\031.api.v1alpha1.d" +
+      "elivery.IDR\006entity\022.\n\004mask\030\002 \001(\0132\032.googl" +
+      "e.protobuf.FieldMaskR\004mask\"\025\n\023DeleteEncr" +
+      "yptionRes\"}\n\020GetEncryptionReq\0229\n\006entity\030" +
+      "\001 \001(\0132!.api.v1alpha1.delivery.Encryption" +
+      "R\006entity\022.\n\004mask\030\002 \001(\0132\032.google.protobuf" +
+      ".FieldMaskR\004mask\"M\n\020GetEncryptionRes\0229\n\006" +
+      "entity\030\001 \001(\0132!.api.v1alpha1.delivery.Enc" +
+      "ryptionR\006entity\"|\n\022ListEncryptionsReq\0226\n" +
+      "\006entity\030\001 \001(\0132\036.api.v1alpha1.delivery.Li" +
+      "stReqR\006entity\022.\n\004mask\030\002 \001(\0132\032.google.pro" +
+      "tobuf.FieldMaskR\004mask\"S\n\022ListEncryptions" +
+      "Res\022=\n\010entities\030\001 \003(\0132!.api.v1alpha1.del" +
+      "ivery.EncryptionR\010entities\"\200\001\n\023UpdateEnc" +
+      "ryptionReq\0229\n\006entity\030\001 \001(\0132!.api.v1alpha" +
+      "1.delivery.EncryptionR\006entity\022.\n\004mask\030\002 " +
+      "\001(\0132\032.google.protobuf.FieldMaskR\004mask\"H\n" +
+      "\023UpdateEncryptionRes\0221\n\006entity\030\001 \001(\0132\031.a" +
+      "pi.v1alpha1.delivery.IDR\006entity\"\246\003\n\016Tran" +
+      "sferConfig\022\024\n\003sid\030\001 \001(\003B\0020\001R\003sid\022\022\n\004name" +
+      "\030\003 \001(\tR\004name\022 \n\013description\030\004 \001(\tR\013descr" +
+      "iption\022\020\n\003ttl\030\007 \001(\005R\003ttl\022A\n\ncredential\030\010" +
       " \001(\0132!.api.v1alpha1.delivery.CredentialR" +
-      "\006entity\022.\n\004mask\030\002 \001(\0132\032.google.protobuf." +
-      "FieldMaskR\004mask\"H\n\023CreateCredentialRes\0221" +
-      "\n\006entity\030\001 \001(\0132\031.api.v1alpha1.delivery.I" +
-      "DR\006entity\"x\n\023DeleteCredentialReq\0221\n\006enti" +
-      "ty\030\001 \001(\0132\031.api.v1alpha1.delivery.IDR\006ent" +
-      "ity\022.\n\004mask\030\002 \001(\0132\032.google.protobuf.Fiel" +
-      "dMaskR\004mask\"\025\n\023DeleteCredentialRes\"\200\001\n\023U" +
-      "pdateCredentialReq\0229\n\006entity\030\001 \001(\0132!.api" +
+      "\ncredential\022D\n\013destination\030\t \001(\0132\".api.v" +
+      "1alpha1.delivery.DestinationR\013destinatio" +
+      "n\0225\n\006source\030\n \001(\0132\035.api.v1alpha1.deliver" +
+      "y.SourceR\006source\0229\n\ncreated_on\030\013 \001(\0132\032.g" +
+      "oogle.protobuf.TimestampR\tcreatedOn\022;\n\013l" +
+      "ast_edited\030\014 \001(\0132\032.google.protobuf.Times" +
+      "tampR\nlastEdited\"\032\n\002ID\022\024\n\003sid\030\001 \001(\003B\0020\001R" +
+      "\003sid\">\n\007ListReq\022\035\n\nbefore_sid\030\002 \001(\003R\tbef" +
+      "oreSid\022\024\n\005limit\030\003 \001(\003R\005limit\"\315\005\n\007History" +
+      "\022\024\n\003sid\030\001 \001(\003B\0020\001R\003sid\0220\n\024transfer_confi" +
+      "g_name\030\003 \001(\tR\022transferConfigName\0222\n\023tran" +
+      "sfer_config_sid\030\004 \001(\003B\0020\001R\021transferConfi" +
+      "gSid\022#\n\rdelivery_type\030\005 \001(\tR\014deliveryTyp" +
+      "e\022\024\n\005error\030\006 \001(\tR\005error\022\030\n\007success\030\007 \001(\010" +
+      "R\007success\0229\n\ncreated_on\030\010 \001(\0132\032.google.p" +
+      "rotobuf.TimestampR\tcreatedOn\022A\n\016transfer" +
+      "_start\030\t \001(\0132\032.google.protobuf.Timestamp" +
+      "R\rtransferStart\022G\n\021transfer_complete\030\n \001" +
+      "(\0132\032.google.protobuf.TimestampR\020transfer" +
+      "Complete\0229\n\006origin\030\013 \001(\0162!.api.commons.O" +
+      "peratorApplicationsR\006origin\022\025\n\006org_id\030\014 " +
+      "\001(\tR\005orgId\022\'\n\017message_payload\030\r \001(\tR\016mes" +
+      "sagePayload\022.\n\023message_payload_len\030\016 \001(\005" +
+      "R\021messagePayloadLen\0223\n\006status\030\017 \001(\0162\033.ap" +
+      "i.commons.TransferStatusR\006status\022\035\n\nis_i" +
+      "nbound\030\020 \001(\010R\tisInbound\022+\n\017transaction_s" +
+      "id\030\021 \001(\003B\0020\001R\016transactionSid\"_\n\013ListByID" +
+      "Req\022\035\n\nbefore_sid\030\002 \001(\003R\tbeforeSid\022\024\n\005li" +
+      "mit\030\003 \001(\003R\005limit\022\033\n\tother_sid\030\004 \001(\003R\010oth" +
+      "erSid\"\213\002\n\nCredential\022\024\n\003sid\030\001 \001(\003B\0020\001R\003s" +
+      "id\022\022\n\004name\030\003 \001(\tR\004name\022 \n\013description\030\004 " +
+      "\001(\tR\013description\0229\n\004data\030\005 \001(\0132%.api.v1a" +
+      "lpha1.delivery.CredentialDataR\004data\0229\n\nc" +
+      "reated_on\030\n \001(\0132\032.google.protobuf.Timest" +
+      "ampR\tcreatedOn\022;\n\013last_edited\030\013 \001(\0132\032.go" +
+      "ogle.protobuf.TimestampR\nlastEdited\"\320\002\n\013" +
+      "Destination\0227\n\nencryption\030\001 \001(\0132\027.api.co" +
+      "mmons.EncryptionR\nencryption\022?\n\005email\030\002 " +
+      "\001(\0132\'.api.v1alpha1.delivery.EmailDestina" +
+      "tionH\000R\005email\022E\n\007room303\030\003 \001(\0132).api.v1a" +
+      "lpha1.delivery.Room303DestinationH\000R\007roo" +
+      "m303\0229\n\003sms\030\004 \001(\0132%.api.v1alpha1.deliver" +
+      "y.SmsDestinationH\000R\003sms\022<\n\004sftp\030\005 \001(\0132&." +
+      "api.v1alpha1.delivery.SftpDestinationH\000R" +
+      "\004sftpB\007\n\005value\"f\n\017SftpDestination\022%\n\016bas" +
+      "e_directory\030\002 \001(\tR\rbaseDirectory\022\030\n\007addr" +
+      "ess\030\003 \001(\tR\007address\022\022\n\004port\030\004 \001(\005R\004port\"]" +
+      "\n\022Room303Destination\022\022\n\004room\030\001 \001(\tR\004room" +
+      "\022\032\n\010username\030\002 \001(\tR\010username\022\027\n\007user_id\030" +
+      "\003 \001(\tR\006userId\"`\n\016SmsDestination\022+\n\021desti" +
+      "nation_phone\030\001 \001(\tR\020destinationPhone\022!\n\014" +
+      "source_phone\030\002 \001(\tR\013sourcePhone\"c\n\020Email" +
+      "Destination\022\027\n\007to_addr\030\001 \001(\tR\006toAddr\022\031\n\010" +
+      "cc_addrs\030\002 \003(\tR\007ccAddrs\022\033\n\tfrom_addr\030\003 \001" +
+      "(\tR\010fromAddr\"\372\002\n\016CredentialData\022J\n\ruser_" +
+      "password\030\001 \001(\0132#.api.v1alpha1.delivery.U" +
+      "serPasswordH\000R\014userPassword\022=\n\010password\030" +
+      "\002 \001(\0132\037.api.v1alpha1.delivery.PasswordH\000" +
+      "R\010password\022E\n\014ssh_key_pair\030\003 \001(\0132!.api.v" +
+      "1alpha1.delivery.SSHKeyPairH\000R\nsshKeyPai" +
+      "r\022E\n\014pgp_key_pair\030\004 \001(\0132!.api.v1alpha1.d" +
+      "elivery.PGPKeyPairH\000R\npgpKeyPair\022G\n\014aes_" +
+      "password\030\005 \001(\0132\".api.v1alpha1.delivery.A" +
+      "ESPasswordH\000R\013aesPasswordB\006\n\004data\"F\n\014Use" +
+      "rPassword\022\032\n\010username\030\001 \001(\tR\010username\022\032\n" +
+      "\010password\030\002 \001(\tR\010password\"&\n\010Password\022\032\n" +
+      "\010password\030\001 \001(\tR\010password\"L\n\nSSHKeyPair\022" +
+      "\035\n\npublic_key\030\001 \001(\tR\tpublicKey\022\037\n\013privat" +
+      "e_key\030\002 \001(\tR\nprivateKey\"L\n\nPGPKeyPair\022\035\n" +
+      "\npublic_key\030\001 \001(\tR\tpublicKey\022\037\n\013private_" +
+      "key\030\002 \001(\tR\nprivateKey\")\n\013AESPassword\022\032\n\010" +
+      "password\030\001 \001(\tR\010password\"\203\001\n\006Source\0227\n\ne" +
+      "ncryption\030\001 \001(\0132\027.api.commons.Encryption" +
+      "R\nencryption\0227\n\004sftp\030\002 \001(\0132!.api.v1alpha" +
+      "1.delivery.SftpSourceH\000R\004sftpB\007\n\005value\"*" +
+      "\n\nSftpSource\022\034\n\tdirectory\030\002 \001(\tR\tdirecto" +
+      "ry\"}\n\020GetCredentialReq\0229\n\006entity\030\001 \001(\0132!" +
+      ".api.v1alpha1.delivery.CredentialR\006entit" +
+      "y\022.\n\004mask\030\002 \001(\0132\032.google.protobuf.FieldM" +
+      "askR\004mask\"U\n\020GetCredentialRes\022A\n\ncredent" +
+      "ial\030\001 \001(\0132!.api.v1alpha1.delivery.Creden" +
+      "tialR\ncredential\"|\n\022ListCredentialsReq\0226" +
+      "\n\006entity\030\001 \001(\0132\036.api.v1alpha1.delivery.L" +
+      "istReqR\006entity\022.\n\004mask\030\002 \001(\0132\032.google.pr" +
+      "otobuf.FieldMaskR\004mask\"Z\n\022ListCredential" +
+      "sRes\022D\n\013credentials\030\001 \001(\0132\".api.v1alpha1" +
+      ".delivery.CredentialsR\013credentials\"\200\001\n\023C" +
+      "reateCredentialReq\0229\n\006entity\030\001 \001(\0132!.api" +
       ".v1alpha1.delivery.CredentialR\006entity\022.\n" +
       "\004mask\030\002 \001(\0132\032.google.protobuf.FieldMaskR" +
-      "\004mask\"H\n\023UpdateCredentialRes\0221\n\006entity\030\001" +
+      "\004mask\"H\n\023CreateCredentialRes\0221\n\006entity\030\001" +
       " \001(\0132\031.api.v1alpha1.delivery.IDR\006entity\"" +
-      "L\n\013Credentials\022=\n\010entities\030\001 \003(\0132!.api.v" +
-      "1alpha1.delivery.CredentialR\010entities2\216\024" +
-      "\n\013DeliveryApi\022\270\001\n\024CreateTransferConfig\022." +
-      ".api.v1alpha1.delivery.CreateTransferCon" +
-      "figReq\032..api.v1alpha1.delivery.CreateTra" +
-      "nsferConfigRes\"@\272\270\221\002\005\n\003\010\321\017\202\323\344\223\0020\"+/api/v" +
-      "1alpha1/delivery/createtransferconfig:\001*" +
-      "\022\264\001\n\023ListTransferConfigs\022-.api.v1alpha1." +
-      "delivery.ListTransferConfigsReq\032-.api.v1" +
-      "alpha1.delivery.ListTransferConfigsRes\"?" +
-      "\272\270\221\002\005\n\003\010\320\017\202\323\344\223\002/\"*/api/v1alpha1/delivery" +
-      "/listtransferconfigs:\001*\022\354\001\n!ListTransfer" +
-      "ConfigsByCredentialID\022;.api.v1alpha1.del" +
-      "ivery.ListTransferConfigsByCredentialIDR" +
-      "eq\032;.api.v1alpha1.delivery.ListTransferC" +
-      "onfigsByCredentialIDRes\"M\272\270\221\002\005\n\003\010\320\017\202\323\344\223\002" +
-      "=\"8/api/v1alpha1/delivery/listtransferco" +
-      "nfigsbycredentialid:\001*\022\270\001\n\024UpdateTransfe" +
-      "rConfig\022..api.v1alpha1.delivery.UpdateTr" +
-      "ansferConfigReq\032..api.v1alpha1.delivery." +
-      "UpdateTransferConfigRes\"@\272\270\221\002\005\n\003\010\321\017\202\323\344\223\002" +
-      "0\"+/api/v1alpha1/delivery/updatetransfer" +
-      "config:\001*\022\270\001\n\024DeleteTransferConfig\022..api" +
-      ".v1alpha1.delivery.DeleteTransferConfigR" +
-      "eq\032..api.v1alpha1.delivery.DeleteTransfe" +
-      "rConfigRes\"@\272\270\221\002\005\n\003\010\321\017\202\323\344\223\0020\"+/api/v1alp" +
-      "ha1/delivery/deletetransferconfig:\001*\022\254\001\n" +
-      "\021GetTransferConfig\022+.api.v1alpha1.delive" +
-      "ry.GetTransferConfigReq\032+.api.v1alpha1.d" +
-      "elivery.GetTransferConfigRes\"=\272\270\221\002\005\n\003\010\320\017" +
-      "\202\323\344\223\002-\"(/api/v1alpha1/delivery/gettransf" +
-      "erconfig:\001*\022\304\001\n\027GetTransferConfigByName\022" +
-      "1.api.v1alpha1.delivery.GetTransferConfi" +
-      "gByNameReq\0321.api.v1alpha1.delivery.GetTr" +
-      "ansferConfigByNameRes\"C\272\270\221\002\005\n\003\010\320\017\202\323\344\223\0023\"" +
-      "./api/v1alpha1/delivery/gettransferconfi" +
-      "gbyname:\001*\022\224\001\n\013ListHistory\022%.api.v1alpha" +
-      "1.delivery.ListHistoryReq\032%.api.v1alpha1" +
-      ".delivery.ListHistoryRes\"7\272\270\221\002\005\n\003\010\320\017\202\323\344\223" +
-      "\002\'\"\"/api/v1alpha1/delivery/listhistory:\001" +
-      "*\022\324\001\n\033ListHistoryByTransferConfig\0225.api." +
-      "v1alpha1.delivery.ListHistoryByTransferC" +
-      "onfigReq\0325.api.v1alpha1.delivery.ListHis" +
-      "toryByTransferConfigRes\"G\272\270\221\002\005\n\003\010\320\017\202\323\344\223\002" +
-      "7\"2/api/v1alpha1/delivery/listhistorybyt" +
-      "ransferconfig:\001*\022\243\001\n\017ListCredentials\022).a" +
-      "pi.v1alpha1.delivery.ListCredentialsReq\032" +
-      ").api.v1alpha1.delivery.ListCredentialsR" +
-      "es\":\272\270\221\002\005\n\003\010\320\017\202\323\344\223\002*\"%/api/v1alpha1/deli" +
-      "very/listcredential:\001*\022\234\001\n\rGetCredential" +
-      "\022\'.api.v1alpha1.delivery.GetCredentialRe" +
-      "q\032\'.api.v1alpha1.delivery.GetCredentialR" +
-      "es\"9\272\270\221\002\005\n\003\010\320\017\202\323\344\223\002)\"$/api/v1alpha1/deli" +
-      "very/getcredential:\001*\022\250\001\n\020CreateCredenti" +
-      "al\022*.api.v1alpha1.delivery.CreateCredent" +
-      "ialReq\032*.api.v1alpha1.delivery.CreateCre" +
-      "dentialRes\"<\272\270\221\002\005\n\003\010\321\017\202\323\344\223\002,\"\'/api/v1alp" +
-      "ha1/delivery/createcredential:\001*\022\250\001\n\020Del" +
-      "eteCredential\022*.api.v1alpha1.delivery.De" +
-      "leteCredentialReq\032*.api.v1alpha1.deliver" +
-      "y.DeleteCredentialRes\"<\272\270\221\002\005\n\003\010\321\017\202\323\344\223\002,\"" +
-      "\'/api/v1alpha1/delivery/deletecredential" +
-      ":\001*\022\250\001\n\020UpdateCredential\022*.api.v1alpha1." +
-      "delivery.UpdateCredentialReq\032*.api.v1alp" +
-      "ha1.delivery.UpdateCredentialRes\"<\272\270\221\002\005\n" +
-      "\003\010\321\017\202\323\344\223\002,\"\'/api/v1alpha1/delivery/updat" +
-      "ecredential:\001*B\255\001\n\'com.tcn.cloud.api.api" +
-      ".v1alpha1.deliveryB\014ServiceProtoP\001\242\002\003AVD" +
-      "\252\002\025Api.V1alpha1.Delivery\312\002\025Api\\V1alpha1\\" +
-      "Delivery\342\002!Api\\V1alpha1\\Delivery\\GPBMeta" +
-      "data\352\002\027Api::V1alpha1::Deliveryb\006proto3"
+      "x\n\023DeleteCredentialReq\0221\n\006entity\030\001 \001(\0132\031" +
+      ".api.v1alpha1.delivery.IDR\006entity\022.\n\004mas" +
+      "k\030\002 \001(\0132\032.google.protobuf.FieldMaskR\004mas" +
+      "k\"\025\n\023DeleteCredentialRes\"\200\001\n\023UpdateCrede" +
+      "ntialReq\0229\n\006entity\030\001 \001(\0132!.api.v1alpha1." +
+      "delivery.CredentialR\006entity\022.\n\004mask\030\002 \001(" +
+      "\0132\032.google.protobuf.FieldMaskR\004mask\"H\n\023U" +
+      "pdateCredentialRes\0221\n\006entity\030\001 \001(\0132\031.api" +
+      ".v1alpha1.delivery.IDR\006entity\"L\n\013Credent" +
+      "ials\022=\n\010entities\030\001 \003(\0132!.api.v1alpha1.de" +
+      "livery.CredentialR\010entities\"\265\005\n\022Delivery" +
+      "Definition\022:\n\027delivery_definition_sid\030\001 " +
+      "\001(\003B\0020\001R\025deliveryDefinitionSid\022\025\n\006org_id" +
+      "\030\002 \001(\tR\005orgId\022\022\n\004name\030\003 \001(\tR\004name\022 \n\013des" +
+      "cription\030\004 \001(\tR\013description\022\020\n\003ttl\030\010 \001(\005" +
+      "R\003ttl\022:\n\004sftp\030\t \001(\0132$.api.v1alpha1.deliv" +
+      "ery.SFTPTransportH\000R\004sftp\022=\n\005email\030\n \001(\013" +
+      "2%.api.v1alpha1.delivery.EmailTransportH" +
+      "\000R\005email\022C\n\007room303\030\013 \001(\0132\'.api.v1alpha1" +
+      ".delivery.Room303TransportH\000R\007room303\0227\n" +
+      "\003sms\030\014 \001(\0132#.api.v1alpha1.delivery.SMSTr" +
+      "ansportH\000R\003sms\022;\n\003aes\030\r \001(\0132\'.api.v1alph" +
+      "a1.delivery.AESEncryptionRefH\001R\003aes\022;\n\003p" +
+      "gp\030\016 \001(\0132\'.api.v1alpha1.delivery.PGPEncr" +
+      "yptionRefH\001R\003pgp\0229\n\ncreated_on\030\017 \001(\0132\032.g" +
+      "oogle.protobuf.TimestampR\tcreatedOn\022;\n\013l" +
+      "ast_edited\030\020 \001(\0132\032.google.protobuf.Times" +
+      "tampR\nlastEditedB\013\n\ttransportB\014\n\nencrypt" +
+      "ion\"\374\001\n\rSFTPTransport\022\022\n\004host\030\001 \001(\tR\004hos" +
+      "t\022\022\n\004port\030\002 \001(\005R\004port\022@\n\010password\030\003 \001(\0132" +
+      "\".api.v1alpha1.delivery.PasswordRefH\000R\010p" +
+      "assword\022;\n\007ssh_key\030\004 \001(\0132 .api.v1alpha1." +
+      "delivery.SSHKeyRefH\000R\006sshKey\022\032\n\010username" +
+      "\030\005 \001(\tR\010username\022\031\n\010base_dir\030\006 \001(\tR\007base" +
+      "DirB\r\n\013credentials\"R\n\016EmailTransport\022!\n\014" +
+      "from_address\030\001 \001(\tR\013fromAddress\022\035\n\nto_ad" +
+      "dress\030\002 \001(\tR\ttoAddress\"u\n\020Room303Transpo" +
+      "rt\022T\n\016system_message\030\001 \001(\0132+.api.v1alpha" +
+      "1.delivery.Room303SystemMessageH\000R\rsyste" +
+      "mMessageB\013\n\ttransport\"k\n\024Room303SystemMe" +
+      "ssage\022\022\n\004room\030\001 \001(\tR\004room\022\034\n\010username\030\002 " +
+      "\001(\tH\000R\010username\022\031\n\007user_id\030\003 \001(\tH\000R\006user" +
+      "IdB\006\n\004user\"\016\n\014SMSTransport\"+\n\020AESEncrypt" +
+      "ionRef\022\027\n\007aes_sid\030\001 \001(\003R\006aesSid\"+\n\020PGPEn" +
+      "cryptionRef\022\027\n\007pgp_sid\030\001 \001(\003R\006pgpSid\"0\n\013" +
+      "PasswordRef\022!\n\014password_sid\030\001 \001(\003R\013passw" +
+      "ordSid\"+\n\tSSHKeyRef\022\036\n\013ssh_key_sid\030\001 \001(\003" +
+      "R\tsshKeySid\"\226\003\n\nEncryption\022%\n\016encryption" +
+      "_sid\030\001 \001(\003R\rencryptionSid\022\025\n\006org_id\030\002 \001(" +
+      "\tR\005orgId\022\022\n\004name\030\003 \001(\tR\004name\022 \n\013descript" +
+      "ion\030\004 \001(\tR\013description\022E\n\014pgp_key_pair\030\005" +
+      " \001(\0132!.api.v1alpha1.delivery.PGPKeyPairH" +
+      "\000R\npgpKeyPair\022G\n\014aes_password\030\006 \001(\0132\".ap" +
+      "i.v1alpha1.delivery.AESPasswordH\000R\013aesPa" +
+      "ssword\0229\n\ncreated_on\030\n \001(\0132\032.google.prot" +
+      "obuf.TimestampR\tcreatedOn\022;\n\013last_edited" +
+      "\030\013 \001(\0132\032.google.protobuf.TimestampR\nlast" +
+      "EditedB\014\n\nencryption2\222&\n\013DeliveryApi\022\270\001\n" +
+      "\024CreateTransferConfig\022..api.v1alpha1.del" +
+      "ivery.CreateTransferConfigReq\032..api.v1al" +
+      "pha1.delivery.CreateTransferConfigRes\"@\272" +
+      "\270\221\002\005\n\003\010\321\017\202\323\344\223\0020\"+/api/v1alpha1/delivery/" +
+      "createtransferconfig:\001*\022\264\001\n\023ListTransfer" +
+      "Configs\022-.api.v1alpha1.delivery.ListTran" +
+      "sferConfigsReq\032-.api.v1alpha1.delivery.L" +
+      "istTransferConfigsRes\"?\272\270\221\002\005\n\003\010\320\017\202\323\344\223\002/\"" +
+      "*/api/v1alpha1/delivery/listtransferconf" +
+      "igs:\001*\022\354\001\n!ListTransferConfigsByCredenti" +
+      "alID\022;.api.v1alpha1.delivery.ListTransfe" +
+      "rConfigsByCredentialIDReq\032;.api.v1alpha1" +
+      ".delivery.ListTransferConfigsByCredentia" +
+      "lIDRes\"M\272\270\221\002\005\n\003\010\320\017\202\323\344\223\002=\"8/api/v1alpha1/" +
+      "delivery/listtransferconfigsbycredential" +
+      "id:\001*\022\270\001\n\024UpdateTransferConfig\022..api.v1a" +
+      "lpha1.delivery.UpdateTransferConfigReq\032." +
+      ".api.v1alpha1.delivery.UpdateTransferCon" +
+      "figRes\"@\272\270\221\002\005\n\003\010\321\017\202\323\344\223\0020\"+/api/v1alpha1/" +
+      "delivery/updatetransferconfig:\001*\022\270\001\n\024Del" +
+      "eteTransferConfig\022..api.v1alpha1.deliver" +
+      "y.DeleteTransferConfigReq\032..api.v1alpha1" +
+      ".delivery.DeleteTransferConfigRes\"@\272\270\221\002\005" +
+      "\n\003\010\321\017\202\323\344\223\0020\"+/api/v1alpha1/delivery/dele" +
+      "tetransferconfig:\001*\022\254\001\n\021GetTransferConfi" +
+      "g\022+.api.v1alpha1.delivery.GetTransferCon" +
+      "figReq\032+.api.v1alpha1.delivery.GetTransf" +
+      "erConfigRes\"=\272\270\221\002\005\n\003\010\320\017\202\323\344\223\002-\"(/api/v1al" +
+      "pha1/delivery/gettransferconfig:\001*\022\304\001\n\027G" +
+      "etTransferConfigByName\0221.api.v1alpha1.de" +
+      "livery.GetTransferConfigByNameReq\0321.api." +
+      "v1alpha1.delivery.GetTransferConfigByNam" +
+      "eRes\"C\272\270\221\002\005\n\003\010\320\017\202\323\344\223\0023\"./api/v1alpha1/de" +
+      "livery/gettransferconfigbyname:\001*\022\224\001\n\013Li" +
+      "stHistory\022%.api.v1alpha1.delivery.ListHi" +
+      "storyReq\032%.api.v1alpha1.delivery.ListHis" +
+      "toryRes\"7\272\270\221\002\005\n\003\010\320\017\202\323\344\223\002\'\"\"/api/v1alpha1" +
+      "/delivery/listhistory:\001*\022\324\001\n\033ListHistory" +
+      "ByTransferConfig\0225.api.v1alpha1.delivery" +
+      ".ListHistoryByTransferConfigReq\0325.api.v1" +
+      "alpha1.delivery.ListHistoryByTransferCon" +
+      "figRes\"G\272\270\221\002\005\n\003\010\320\017\202\323\344\223\0027\"2/api/v1alpha1/" +
+      "delivery/listhistorybytransferconfig:\001*\022" +
+      "\243\001\n\017ListCredentials\022).api.v1alpha1.deliv" +
+      "ery.ListCredentialsReq\032).api.v1alpha1.de" +
+      "livery.ListCredentialsRes\":\272\270\221\002\005\n\003\010\320\017\202\323\344" +
+      "\223\002*\"%/api/v1alpha1/delivery/listcredenti" +
+      "al:\001*\022\234\001\n\rGetCredential\022\'.api.v1alpha1.d" +
+      "elivery.GetCredentialReq\032\'.api.v1alpha1." +
+      "delivery.GetCredentialRes\"9\272\270\221\002\005\n\003\010\320\017\202\323\344" +
+      "\223\002)\"$/api/v1alpha1/delivery/getcredentia" +
+      "l:\001*\022\250\001\n\020CreateCredential\022*.api.v1alpha1" +
+      ".delivery.CreateCredentialReq\032*.api.v1al" +
+      "pha1.delivery.CreateCredentialRes\"<\272\270\221\002\005" +
+      "\n\003\010\321\017\202\323\344\223\002,\"\'/api/v1alpha1/delivery/crea" +
+      "tecredential:\001*\022\250\001\n\020DeleteCredential\022*.a" +
+      "pi.v1alpha1.delivery.DeleteCredentialReq" +
+      "\032*.api.v1alpha1.delivery.DeleteCredentia" +
+      "lRes\"<\272\270\221\002\005\n\003\010\321\017\202\323\344\223\002,\"\'/api/v1alpha1/de" +
+      "livery/deletecredential:\001*\022\250\001\n\020UpdateCre" +
+      "dential\022*.api.v1alpha1.delivery.UpdateCr" +
+      "edentialReq\032*.api.v1alpha1.delivery.Upda" +
+      "teCredentialRes\"<\272\270\221\002\005\n\003\010\321\017\202\323\344\223\002,\"\'/api/" +
+      "v1alpha1/delivery/updatecredential:\001*\022\310\001" +
+      "\n\030CreateDeliveryDefinition\0222.api.v1alpha" +
+      "1.delivery.CreateDeliveryDefinitionReq\0322" +
+      ".api.v1alpha1.delivery.CreateDeliveryDef" +
+      "initionRes\"D\272\270\221\002\005\n\003\010\321\017\202\323\344\223\0024\"//api/v1alp" +
+      "ha1/delivery/createdeliverydefinition:\001*" +
+      "\022\310\001\n\030DeleteDeliveryDefinition\0222.api.v1al" +
+      "pha1.delivery.DeleteDeliveryDefinitionRe" +
+      "q\0322.api.v1alpha1.delivery.DeleteDelivery" +
+      "DefinitionRes\"D\272\270\221\002\005\n\003\010\321\017\202\323\344\223\0024\"//api/v1" +
+      "alpha1/delivery/deletedeliverydefinition" +
+      ":\001*\022\274\001\n\025GetDeliveryDefinition\022/.api.v1al" +
+      "pha1.delivery.GetDeliveryDefinitionReq\032/" +
+      ".api.v1alpha1.delivery.GetDeliveryDefini" +
+      "tionRes\"A\272\270\221\002\005\n\003\010\320\017\202\323\344\223\0021\",/api/v1alpha1" +
+      "/delivery/getdeliverydefinition:\001*\022\324\001\n\033G" +
+      "etDeliveryDefinitionByName\0225.api.v1alpha" +
+      "1.delivery.GetDeliveryDefinitionByNameRe" +
+      "q\0325.api.v1alpha1.delivery.GetDeliveryDef" +
+      "initionByNameRes\"G\272\270\221\002\005\n\003\010\320\017\202\323\344\223\0027\"2/api" +
+      "/v1alpha1/delivery/getdeliverydefinition" +
+      "byname:\001*\022\304\001\n\027ListDeliveryDefinitions\0221." +
+      "api.v1alpha1.delivery.ListDeliveryDefini" +
+      "tionsReq\0321.api.v1alpha1.delivery.ListDel" +
+      "iveryDefinitionsRes\"C\272\270\221\002\005\n\003\010\320\017\202\323\344\223\0023\"./" +
+      "api/v1alpha1/delivery/listdeliverydefini" +
+      "tions:\001*\022\374\001\n%ListDeliveryDefinitionsByCr" +
+      "edentialID\022?.api.v1alpha1.delivery.ListD" +
+      "eliveryDefinitionsByCredentialIDReq\032?.ap" +
+      "i.v1alpha1.delivery.ListDeliveryDefiniti" +
+      "onsByCredentialIDRes\"Q\272\270\221\002\005\n\003\010\320\017\202\323\344\223\002A\"<" +
+      "/api/v1alpha1/delivery/listdeliverydefin" +
+      "itionsbycredentialid:\001*\022\310\001\n\030UpdateDelive" +
+      "ryDefinition\0222.api.v1alpha1.delivery.Upd" +
+      "ateDeliveryDefinitionReq\0322.api.v1alpha1." +
+      "delivery.UpdateDeliveryDefinitionRes\"D\272\270" +
+      "\221\002\005\n\003\010\321\017\202\323\344\223\0024\"//api/v1alpha1/delivery/u" +
+      "pdatedeliverydefinition:\001*\022\250\001\n\020CreateEnc" +
+      "ryption\022*.api.v1alpha1.delivery.CreateEn" +
+      "cryptionReq\032*.api.v1alpha1.delivery.Crea" +
+      "teEncryptionRes\"<\272\270\221\002\005\n\003\010\321\017\202\323\344\223\002,\"\'/api/" +
+      "v1alpha1/delivery/createencryption:\001*\022\250\001" +
+      "\n\020DeleteEncryption\022*.api.v1alpha1.delive" +
+      "ry.DeleteEncryptionReq\032*.api.v1alpha1.de",
+      "livery.DeleteEncryptionRes\"<\272\270\221\002\005\n\003\010\321\017\202\323" +
+      "\344\223\002,\"\'/api/v1alpha1/delivery/deleteencry" +
+      "ption:\001*\022\234\001\n\rGetEncryption\022\'.api.v1alpha" +
+      "1.delivery.GetEncryptionReq\032\'.api.v1alph" +
+      "a1.delivery.GetEncryptionRes\"9\272\270\221\002\005\n\003\010\320\017" +
+      "\202\323\344\223\002)\"$/api/v1alpha1/delivery/getencryp" +
+      "tion:\001*\022\244\001\n\017ListEncryptions\022).api.v1alph" +
+      "a1.delivery.ListEncryptionsReq\032).api.v1a" +
+      "lpha1.delivery.ListEncryptionsRes\";\272\270\221\002\005" +
+      "\n\003\010\320\017\202\323\344\223\002+\"&/api/v1alpha1/delivery/list" +
+      "encryptions:\001*\022\250\001\n\020UpdateEncryption\022*.ap" +
+      "i.v1alpha1.delivery.UpdateEncryptionReq\032" +
+      "*.api.v1alpha1.delivery.UpdateEncryption" +
+      "Res\"<\272\270\221\002\005\n\003\010\321\017\202\323\344\223\002,\"\'/api/v1alpha1/del" +
+      "ivery/updateencryption:\001*B\255\001\n\'com.tcn.cl" +
+      "oud.api.api.v1alpha1.deliveryB\014ServicePr" +
+      "otoP\001\242\002\003AVD\252\002\025Api.V1alpha1.Delivery\312\002\025Ap" +
+      "i\\V1alpha1\\Delivery\342\002!Api\\V1alpha1\\Deliv" +
+      "ery\\GPBMetadata\352\002\027Api::V1alpha1::Deliver" +
+      "yb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -673,186 +1021,396 @@ public final class ServiceProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_delivery_GetHistoryRes_descriptor,
         new java.lang.String[] { "Entity", });
-    internal_static_api_v1alpha1_delivery_TransferConfig_descriptor =
+    internal_static_api_v1alpha1_delivery_CreateDeliveryDefinitionReq_descriptor =
       getDescriptor().getMessageTypes().get(22);
+    internal_static_api_v1alpha1_delivery_CreateDeliveryDefinitionReq_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_delivery_CreateDeliveryDefinitionReq_descriptor,
+        new java.lang.String[] { "Definition", });
+    internal_static_api_v1alpha1_delivery_CreateDeliveryDefinitionRes_descriptor =
+      getDescriptor().getMessageTypes().get(23);
+    internal_static_api_v1alpha1_delivery_CreateDeliveryDefinitionRes_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_delivery_CreateDeliveryDefinitionRes_descriptor,
+        new java.lang.String[] { "Entity", });
+    internal_static_api_v1alpha1_delivery_DeleteDeliveryDefinitionReq_descriptor =
+      getDescriptor().getMessageTypes().get(24);
+    internal_static_api_v1alpha1_delivery_DeleteDeliveryDefinitionReq_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_delivery_DeleteDeliveryDefinitionReq_descriptor,
+        new java.lang.String[] { "Entity", });
+    internal_static_api_v1alpha1_delivery_DeleteDeliveryDefinitionRes_descriptor =
+      getDescriptor().getMessageTypes().get(25);
+    internal_static_api_v1alpha1_delivery_DeleteDeliveryDefinitionRes_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_delivery_DeleteDeliveryDefinitionRes_descriptor,
+        new java.lang.String[] { });
+    internal_static_api_v1alpha1_delivery_GetDeliveryDefinitionReq_descriptor =
+      getDescriptor().getMessageTypes().get(26);
+    internal_static_api_v1alpha1_delivery_GetDeliveryDefinitionReq_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_delivery_GetDeliveryDefinitionReq_descriptor,
+        new java.lang.String[] { "Entity", "Mask", });
+    internal_static_api_v1alpha1_delivery_GetDeliveryDefinitionRes_descriptor =
+      getDescriptor().getMessageTypes().get(27);
+    internal_static_api_v1alpha1_delivery_GetDeliveryDefinitionRes_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_delivery_GetDeliveryDefinitionRes_descriptor,
+        new java.lang.String[] { "Entity", });
+    internal_static_api_v1alpha1_delivery_GetDeliveryDefinitionByNameReq_descriptor =
+      getDescriptor().getMessageTypes().get(28);
+    internal_static_api_v1alpha1_delivery_GetDeliveryDefinitionByNameReq_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_delivery_GetDeliveryDefinitionByNameReq_descriptor,
+        new java.lang.String[] { "Name", "Mask", "Entity", });
+    internal_static_api_v1alpha1_delivery_GetDeliveryDefinitionByNameRes_descriptor =
+      getDescriptor().getMessageTypes().get(29);
+    internal_static_api_v1alpha1_delivery_GetDeliveryDefinitionByNameRes_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_delivery_GetDeliveryDefinitionByNameRes_descriptor,
+        new java.lang.String[] { "Entity", });
+    internal_static_api_v1alpha1_delivery_ListDeliveryDefinitionsReq_descriptor =
+      getDescriptor().getMessageTypes().get(30);
+    internal_static_api_v1alpha1_delivery_ListDeliveryDefinitionsReq_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_delivery_ListDeliveryDefinitionsReq_descriptor,
+        new java.lang.String[] { "Entity", "Mask", "ListReq", });
+    internal_static_api_v1alpha1_delivery_ListDeliveryDefinitionsRes_descriptor =
+      getDescriptor().getMessageTypes().get(31);
+    internal_static_api_v1alpha1_delivery_ListDeliveryDefinitionsRes_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_delivery_ListDeliveryDefinitionsRes_descriptor,
+        new java.lang.String[] { "Entities", });
+    internal_static_api_v1alpha1_delivery_ListDeliveryDefinitionsByCredentialIDReq_descriptor =
+      getDescriptor().getMessageTypes().get(32);
+    internal_static_api_v1alpha1_delivery_ListDeliveryDefinitionsByCredentialIDReq_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_delivery_ListDeliveryDefinitionsByCredentialIDReq_descriptor,
+        new java.lang.String[] { "Entity", "Mask", "CredentialSid", "ListReq", });
+    internal_static_api_v1alpha1_delivery_ListDeliveryDefinitionsByCredentialIDRes_descriptor =
+      getDescriptor().getMessageTypes().get(33);
+    internal_static_api_v1alpha1_delivery_ListDeliveryDefinitionsByCredentialIDRes_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_delivery_ListDeliveryDefinitionsByCredentialIDRes_descriptor,
+        new java.lang.String[] { "Entities", });
+    internal_static_api_v1alpha1_delivery_UpdateDeliveryDefinitionReq_descriptor =
+      getDescriptor().getMessageTypes().get(34);
+    internal_static_api_v1alpha1_delivery_UpdateDeliveryDefinitionReq_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_delivery_UpdateDeliveryDefinitionReq_descriptor,
+        new java.lang.String[] { "Entity", "Mask", });
+    internal_static_api_v1alpha1_delivery_UpdateDeliveryDefinitionRes_descriptor =
+      getDescriptor().getMessageTypes().get(35);
+    internal_static_api_v1alpha1_delivery_UpdateDeliveryDefinitionRes_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_delivery_UpdateDeliveryDefinitionRes_descriptor,
+        new java.lang.String[] { "Entity", });
+    internal_static_api_v1alpha1_delivery_CreateEncryptionReq_descriptor =
+      getDescriptor().getMessageTypes().get(36);
+    internal_static_api_v1alpha1_delivery_CreateEncryptionReq_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_delivery_CreateEncryptionReq_descriptor,
+        new java.lang.String[] { "Encryption", });
+    internal_static_api_v1alpha1_delivery_CreateEncryptionRes_descriptor =
+      getDescriptor().getMessageTypes().get(37);
+    internal_static_api_v1alpha1_delivery_CreateEncryptionRes_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_delivery_CreateEncryptionRes_descriptor,
+        new java.lang.String[] { "Entity", });
+    internal_static_api_v1alpha1_delivery_DeleteEncryptionReq_descriptor =
+      getDescriptor().getMessageTypes().get(38);
+    internal_static_api_v1alpha1_delivery_DeleteEncryptionReq_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_delivery_DeleteEncryptionReq_descriptor,
+        new java.lang.String[] { "Entity", "Mask", });
+    internal_static_api_v1alpha1_delivery_DeleteEncryptionRes_descriptor =
+      getDescriptor().getMessageTypes().get(39);
+    internal_static_api_v1alpha1_delivery_DeleteEncryptionRes_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_delivery_DeleteEncryptionRes_descriptor,
+        new java.lang.String[] { });
+    internal_static_api_v1alpha1_delivery_GetEncryptionReq_descriptor =
+      getDescriptor().getMessageTypes().get(40);
+    internal_static_api_v1alpha1_delivery_GetEncryptionReq_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_delivery_GetEncryptionReq_descriptor,
+        new java.lang.String[] { "Entity", "Mask", });
+    internal_static_api_v1alpha1_delivery_GetEncryptionRes_descriptor =
+      getDescriptor().getMessageTypes().get(41);
+    internal_static_api_v1alpha1_delivery_GetEncryptionRes_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_delivery_GetEncryptionRes_descriptor,
+        new java.lang.String[] { "Entity", });
+    internal_static_api_v1alpha1_delivery_ListEncryptionsReq_descriptor =
+      getDescriptor().getMessageTypes().get(42);
+    internal_static_api_v1alpha1_delivery_ListEncryptionsReq_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_delivery_ListEncryptionsReq_descriptor,
+        new java.lang.String[] { "Entity", "Mask", });
+    internal_static_api_v1alpha1_delivery_ListEncryptionsRes_descriptor =
+      getDescriptor().getMessageTypes().get(43);
+    internal_static_api_v1alpha1_delivery_ListEncryptionsRes_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_delivery_ListEncryptionsRes_descriptor,
+        new java.lang.String[] { "Entities", });
+    internal_static_api_v1alpha1_delivery_UpdateEncryptionReq_descriptor =
+      getDescriptor().getMessageTypes().get(44);
+    internal_static_api_v1alpha1_delivery_UpdateEncryptionReq_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_delivery_UpdateEncryptionReq_descriptor,
+        new java.lang.String[] { "Entity", "Mask", });
+    internal_static_api_v1alpha1_delivery_UpdateEncryptionRes_descriptor =
+      getDescriptor().getMessageTypes().get(45);
+    internal_static_api_v1alpha1_delivery_UpdateEncryptionRes_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_delivery_UpdateEncryptionRes_descriptor,
+        new java.lang.String[] { "Entity", });
+    internal_static_api_v1alpha1_delivery_TransferConfig_descriptor =
+      getDescriptor().getMessageTypes().get(46);
     internal_static_api_v1alpha1_delivery_TransferConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_delivery_TransferConfig_descriptor,
         new java.lang.String[] { "Sid", "Name", "Description", "Ttl", "Credential", "Destination", "Source", "CreatedOn", "LastEdited", });
     internal_static_api_v1alpha1_delivery_ID_descriptor =
-      getDescriptor().getMessageTypes().get(23);
+      getDescriptor().getMessageTypes().get(47);
     internal_static_api_v1alpha1_delivery_ID_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_delivery_ID_descriptor,
         new java.lang.String[] { "Sid", });
     internal_static_api_v1alpha1_delivery_ListReq_descriptor =
-      getDescriptor().getMessageTypes().get(24);
+      getDescriptor().getMessageTypes().get(48);
     internal_static_api_v1alpha1_delivery_ListReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_delivery_ListReq_descriptor,
         new java.lang.String[] { "BeforeSid", "Limit", });
     internal_static_api_v1alpha1_delivery_History_descriptor =
-      getDescriptor().getMessageTypes().get(25);
+      getDescriptor().getMessageTypes().get(49);
     internal_static_api_v1alpha1_delivery_History_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_delivery_History_descriptor,
         new java.lang.String[] { "Sid", "TransferConfigName", "TransferConfigSid", "DeliveryType", "Error", "Success", "CreatedOn", "TransferStart", "TransferComplete", "Origin", "OrgId", "MessagePayload", "MessagePayloadLen", "Status", "IsInbound", "TransactionSid", });
     internal_static_api_v1alpha1_delivery_ListByIDReq_descriptor =
-      getDescriptor().getMessageTypes().get(26);
+      getDescriptor().getMessageTypes().get(50);
     internal_static_api_v1alpha1_delivery_ListByIDReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_delivery_ListByIDReq_descriptor,
         new java.lang.String[] { "BeforeSid", "Limit", "OtherSid", });
     internal_static_api_v1alpha1_delivery_Credential_descriptor =
-      getDescriptor().getMessageTypes().get(27);
+      getDescriptor().getMessageTypes().get(51);
     internal_static_api_v1alpha1_delivery_Credential_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_delivery_Credential_descriptor,
         new java.lang.String[] { "Sid", "Name", "Description", "Data", "CreatedOn", "LastEdited", });
     internal_static_api_v1alpha1_delivery_Destination_descriptor =
-      getDescriptor().getMessageTypes().get(28);
+      getDescriptor().getMessageTypes().get(52);
     internal_static_api_v1alpha1_delivery_Destination_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_delivery_Destination_descriptor,
         new java.lang.String[] { "Encryption", "Email", "Room303", "Sms", "Sftp", "Value", });
     internal_static_api_v1alpha1_delivery_SftpDestination_descriptor =
-      getDescriptor().getMessageTypes().get(29);
+      getDescriptor().getMessageTypes().get(53);
     internal_static_api_v1alpha1_delivery_SftpDestination_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_delivery_SftpDestination_descriptor,
         new java.lang.String[] { "BaseDirectory", "Address", "Port", });
     internal_static_api_v1alpha1_delivery_Room303Destination_descriptor =
-      getDescriptor().getMessageTypes().get(30);
+      getDescriptor().getMessageTypes().get(54);
     internal_static_api_v1alpha1_delivery_Room303Destination_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_delivery_Room303Destination_descriptor,
-        new java.lang.String[] { "Room", "Username", });
+        new java.lang.String[] { "Room", "Username", "UserId", });
     internal_static_api_v1alpha1_delivery_SmsDestination_descriptor =
-      getDescriptor().getMessageTypes().get(31);
+      getDescriptor().getMessageTypes().get(55);
     internal_static_api_v1alpha1_delivery_SmsDestination_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_delivery_SmsDestination_descriptor,
         new java.lang.String[] { "DestinationPhone", "SourcePhone", });
     internal_static_api_v1alpha1_delivery_EmailDestination_descriptor =
-      getDescriptor().getMessageTypes().get(32);
+      getDescriptor().getMessageTypes().get(56);
     internal_static_api_v1alpha1_delivery_EmailDestination_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_delivery_EmailDestination_descriptor,
         new java.lang.String[] { "ToAddr", "CcAddrs", "FromAddr", });
     internal_static_api_v1alpha1_delivery_CredentialData_descriptor =
-      getDescriptor().getMessageTypes().get(33);
+      getDescriptor().getMessageTypes().get(57);
     internal_static_api_v1alpha1_delivery_CredentialData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_delivery_CredentialData_descriptor,
         new java.lang.String[] { "UserPassword", "Password", "SshKeyPair", "PgpKeyPair", "AesPassword", "Data", });
     internal_static_api_v1alpha1_delivery_UserPassword_descriptor =
-      getDescriptor().getMessageTypes().get(34);
+      getDescriptor().getMessageTypes().get(58);
     internal_static_api_v1alpha1_delivery_UserPassword_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_delivery_UserPassword_descriptor,
         new java.lang.String[] { "Username", "Password", });
     internal_static_api_v1alpha1_delivery_Password_descriptor =
-      getDescriptor().getMessageTypes().get(35);
+      getDescriptor().getMessageTypes().get(59);
     internal_static_api_v1alpha1_delivery_Password_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_delivery_Password_descriptor,
         new java.lang.String[] { "Password", });
     internal_static_api_v1alpha1_delivery_SSHKeyPair_descriptor =
-      getDescriptor().getMessageTypes().get(36);
+      getDescriptor().getMessageTypes().get(60);
     internal_static_api_v1alpha1_delivery_SSHKeyPair_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_delivery_SSHKeyPair_descriptor,
         new java.lang.String[] { "PublicKey", "PrivateKey", });
     internal_static_api_v1alpha1_delivery_PGPKeyPair_descriptor =
-      getDescriptor().getMessageTypes().get(37);
+      getDescriptor().getMessageTypes().get(61);
     internal_static_api_v1alpha1_delivery_PGPKeyPair_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_delivery_PGPKeyPair_descriptor,
         new java.lang.String[] { "PublicKey", "PrivateKey", });
     internal_static_api_v1alpha1_delivery_AESPassword_descriptor =
-      getDescriptor().getMessageTypes().get(38);
+      getDescriptor().getMessageTypes().get(62);
     internal_static_api_v1alpha1_delivery_AESPassword_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_delivery_AESPassword_descriptor,
         new java.lang.String[] { "Password", });
     internal_static_api_v1alpha1_delivery_Source_descriptor =
-      getDescriptor().getMessageTypes().get(39);
+      getDescriptor().getMessageTypes().get(63);
     internal_static_api_v1alpha1_delivery_Source_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_delivery_Source_descriptor,
         new java.lang.String[] { "Encryption", "Sftp", "Value", });
     internal_static_api_v1alpha1_delivery_SftpSource_descriptor =
-      getDescriptor().getMessageTypes().get(40);
+      getDescriptor().getMessageTypes().get(64);
     internal_static_api_v1alpha1_delivery_SftpSource_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_delivery_SftpSource_descriptor,
         new java.lang.String[] { "Directory", });
     internal_static_api_v1alpha1_delivery_GetCredentialReq_descriptor =
-      getDescriptor().getMessageTypes().get(41);
+      getDescriptor().getMessageTypes().get(65);
     internal_static_api_v1alpha1_delivery_GetCredentialReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_delivery_GetCredentialReq_descriptor,
         new java.lang.String[] { "Entity", "Mask", });
     internal_static_api_v1alpha1_delivery_GetCredentialRes_descriptor =
-      getDescriptor().getMessageTypes().get(42);
+      getDescriptor().getMessageTypes().get(66);
     internal_static_api_v1alpha1_delivery_GetCredentialRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_delivery_GetCredentialRes_descriptor,
         new java.lang.String[] { "Credential", });
     internal_static_api_v1alpha1_delivery_ListCredentialsReq_descriptor =
-      getDescriptor().getMessageTypes().get(43);
+      getDescriptor().getMessageTypes().get(67);
     internal_static_api_v1alpha1_delivery_ListCredentialsReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_delivery_ListCredentialsReq_descriptor,
         new java.lang.String[] { "Entity", "Mask", });
     internal_static_api_v1alpha1_delivery_ListCredentialsRes_descriptor =
-      getDescriptor().getMessageTypes().get(44);
+      getDescriptor().getMessageTypes().get(68);
     internal_static_api_v1alpha1_delivery_ListCredentialsRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_delivery_ListCredentialsRes_descriptor,
         new java.lang.String[] { "Credentials", });
     internal_static_api_v1alpha1_delivery_CreateCredentialReq_descriptor =
-      getDescriptor().getMessageTypes().get(45);
+      getDescriptor().getMessageTypes().get(69);
     internal_static_api_v1alpha1_delivery_CreateCredentialReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_delivery_CreateCredentialReq_descriptor,
         new java.lang.String[] { "Entity", "Mask", });
     internal_static_api_v1alpha1_delivery_CreateCredentialRes_descriptor =
-      getDescriptor().getMessageTypes().get(46);
+      getDescriptor().getMessageTypes().get(70);
     internal_static_api_v1alpha1_delivery_CreateCredentialRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_delivery_CreateCredentialRes_descriptor,
         new java.lang.String[] { "Entity", });
     internal_static_api_v1alpha1_delivery_DeleteCredentialReq_descriptor =
-      getDescriptor().getMessageTypes().get(47);
+      getDescriptor().getMessageTypes().get(71);
     internal_static_api_v1alpha1_delivery_DeleteCredentialReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_delivery_DeleteCredentialReq_descriptor,
         new java.lang.String[] { "Entity", "Mask", });
     internal_static_api_v1alpha1_delivery_DeleteCredentialRes_descriptor =
-      getDescriptor().getMessageTypes().get(48);
+      getDescriptor().getMessageTypes().get(72);
     internal_static_api_v1alpha1_delivery_DeleteCredentialRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_delivery_DeleteCredentialRes_descriptor,
         new java.lang.String[] { });
     internal_static_api_v1alpha1_delivery_UpdateCredentialReq_descriptor =
-      getDescriptor().getMessageTypes().get(49);
+      getDescriptor().getMessageTypes().get(73);
     internal_static_api_v1alpha1_delivery_UpdateCredentialReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_delivery_UpdateCredentialReq_descriptor,
         new java.lang.String[] { "Entity", "Mask", });
     internal_static_api_v1alpha1_delivery_UpdateCredentialRes_descriptor =
-      getDescriptor().getMessageTypes().get(50);
+      getDescriptor().getMessageTypes().get(74);
     internal_static_api_v1alpha1_delivery_UpdateCredentialRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_delivery_UpdateCredentialRes_descriptor,
         new java.lang.String[] { "Entity", });
     internal_static_api_v1alpha1_delivery_Credentials_descriptor =
-      getDescriptor().getMessageTypes().get(51);
+      getDescriptor().getMessageTypes().get(75);
     internal_static_api_v1alpha1_delivery_Credentials_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_delivery_Credentials_descriptor,
         new java.lang.String[] { "Entities", });
+    internal_static_api_v1alpha1_delivery_DeliveryDefinition_descriptor =
+      getDescriptor().getMessageTypes().get(76);
+    internal_static_api_v1alpha1_delivery_DeliveryDefinition_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_delivery_DeliveryDefinition_descriptor,
+        new java.lang.String[] { "DeliveryDefinitionSid", "OrgId", "Name", "Description", "Ttl", "Sftp", "Email", "Room303", "Sms", "Aes", "Pgp", "CreatedOn", "LastEdited", "Transport", "Encryption", });
+    internal_static_api_v1alpha1_delivery_SFTPTransport_descriptor =
+      getDescriptor().getMessageTypes().get(77);
+    internal_static_api_v1alpha1_delivery_SFTPTransport_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_delivery_SFTPTransport_descriptor,
+        new java.lang.String[] { "Host", "Port", "Password", "SshKey", "Username", "BaseDir", "Credentials", });
+    internal_static_api_v1alpha1_delivery_EmailTransport_descriptor =
+      getDescriptor().getMessageTypes().get(78);
+    internal_static_api_v1alpha1_delivery_EmailTransport_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_delivery_EmailTransport_descriptor,
+        new java.lang.String[] { "FromAddress", "ToAddress", });
+    internal_static_api_v1alpha1_delivery_Room303Transport_descriptor =
+      getDescriptor().getMessageTypes().get(79);
+    internal_static_api_v1alpha1_delivery_Room303Transport_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_delivery_Room303Transport_descriptor,
+        new java.lang.String[] { "SystemMessage", "Transport", });
+    internal_static_api_v1alpha1_delivery_Room303SystemMessage_descriptor =
+      getDescriptor().getMessageTypes().get(80);
+    internal_static_api_v1alpha1_delivery_Room303SystemMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_delivery_Room303SystemMessage_descriptor,
+        new java.lang.String[] { "Room", "Username", "UserId", "User", });
+    internal_static_api_v1alpha1_delivery_SMSTransport_descriptor =
+      getDescriptor().getMessageTypes().get(81);
+    internal_static_api_v1alpha1_delivery_SMSTransport_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_delivery_SMSTransport_descriptor,
+        new java.lang.String[] { });
+    internal_static_api_v1alpha1_delivery_AESEncryptionRef_descriptor =
+      getDescriptor().getMessageTypes().get(82);
+    internal_static_api_v1alpha1_delivery_AESEncryptionRef_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_delivery_AESEncryptionRef_descriptor,
+        new java.lang.String[] { "AesSid", });
+    internal_static_api_v1alpha1_delivery_PGPEncryptionRef_descriptor =
+      getDescriptor().getMessageTypes().get(83);
+    internal_static_api_v1alpha1_delivery_PGPEncryptionRef_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_delivery_PGPEncryptionRef_descriptor,
+        new java.lang.String[] { "PgpSid", });
+    internal_static_api_v1alpha1_delivery_PasswordRef_descriptor =
+      getDescriptor().getMessageTypes().get(84);
+    internal_static_api_v1alpha1_delivery_PasswordRef_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_delivery_PasswordRef_descriptor,
+        new java.lang.String[] { "PasswordSid", });
+    internal_static_api_v1alpha1_delivery_SSHKeyRef_descriptor =
+      getDescriptor().getMessageTypes().get(85);
+    internal_static_api_v1alpha1_delivery_SSHKeyRef_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_delivery_SSHKeyRef_descriptor,
+        new java.lang.String[] { "SshKeySid", });
+    internal_static_api_v1alpha1_delivery_Encryption_descriptor =
+      getDescriptor().getMessageTypes().get(86);
+    internal_static_api_v1alpha1_delivery_Encryption_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_delivery_Encryption_descriptor,
+        new java.lang.String[] { "EncryptionSid", "OrgId", "Name", "Description", "PgpKeyPair", "AesPassword", "CreatedOn", "LastEdited", "Encryption", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.tcn.cloud.api.annotations.AuthzProto.authz);

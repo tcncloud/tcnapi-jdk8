@@ -111,7 +111,6 @@ private static final long serialVersionUID = 0L;
               com.tcn.cloud.api.api.commons.OmniTask.Details.class, com.tcn.cloud.api.api.commons.OmniTask.Details.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CONTACT_LIST_NAME_FIELD_NUMBER = 1;
     private com.google.protobuf.StringValue contactListName_;
     /**
@@ -124,7 +123,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasContactListName() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return contactListName_ != null;
     }
     /**
      * <pre>
@@ -164,7 +163,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (contactListName_ != null) {
         output.writeMessage(1, getContactListName());
       }
       getUnknownFields().writeTo(output);
@@ -176,7 +175,7 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (contactListName_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getContactListName());
       }
@@ -334,19 +333,13 @@ private static final long serialVersionUID = 0L;
 
       // Construct using com.tcn.cloud.api.api.commons.OmniTask.Details.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getContactListNameFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -390,14 +383,11 @@ private static final long serialVersionUID = 0L;
 
       private void buildPartial0(com.tcn.cloud.api.api.commons.OmniTask.Details result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.contactListName_ = contactListNameBuilder_ == null
               ? contactListName_
               : contactListNameBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -583,10 +573,8 @@ private static final long serialVersionUID = 0L;
         } else {
           contactListNameBuilder_.mergeFrom(value);
         }
-        if (contactListName_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -717,7 +705,6 @@ private static final long serialVersionUID = 0L;
 
   }
 
-  private int bitField0_;
   public static final int TASK_SID_FIELD_NUMBER = 1;
   private long taskSid_ = 0L;
   /**
@@ -771,7 +758,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasDateCreated() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return dateCreated_ != null;
   }
   /**
    * <pre>
@@ -809,7 +796,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasDateModified() {
-    return ((bitField0_ & 0x00000002) != 0);
+    return dateModified_ != null;
   }
   /**
    * <pre>
@@ -877,7 +864,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasContactEntrySid() {
-    return ((bitField0_ & 0x00000004) != 0);
+    return contactEntrySid_ != null;
   }
   /**
    * <pre>
@@ -915,7 +902,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasState() {
-    return ((bitField0_ & 0x00000008) != 0);
+    return state_ != null;
   }
   /**
    * <pre>
@@ -1014,7 +1001,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasDetails() {
-    return ((bitField0_ & 0x00000010) != 0);
+    return details_ != null;
   }
   /**
    * <pre>
@@ -1099,7 +1086,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasStatusMessage() {
-    return ((bitField0_ & 0x00000020) != 0);
+    return statusMessage_ != null;
   }
   /**
    * <pre>
@@ -1137,7 +1124,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasScheduledTime() {
-    return ((bitField0_ & 0x00000040) != 0);
+    return scheduledTime_ != null;
   }
   /**
    * <pre>
@@ -1163,6 +1150,44 @@ private static final long serialVersionUID = 0L;
     return scheduledTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : scheduledTime_;
   }
 
+  public static final int TASK_CONFIG_FIELD_NUMBER = 15;
+  private com.tcn.cloud.api.api.commons.OmniTaskConfig taskConfig_;
+  /**
+   * <pre>
+   * holds extra details about how a task should be processed
+   * </pre>
+   *
+   * <code>.api.commons.OmniTaskConfig task_config = 15 [json_name = "taskConfig"];</code>
+   * @return Whether the taskConfig field is set.
+   */
+  @java.lang.Override
+  public boolean hasTaskConfig() {
+    return taskConfig_ != null;
+  }
+  /**
+   * <pre>
+   * holds extra details about how a task should be processed
+   * </pre>
+   *
+   * <code>.api.commons.OmniTaskConfig task_config = 15 [json_name = "taskConfig"];</code>
+   * @return The taskConfig.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.OmniTaskConfig getTaskConfig() {
+    return taskConfig_ == null ? com.tcn.cloud.api.api.commons.OmniTaskConfig.getDefaultInstance() : taskConfig_;
+  }
+  /**
+   * <pre>
+   * holds extra details about how a task should be processed
+   * </pre>
+   *
+   * <code>.api.commons.OmniTaskConfig task_config = 15 [json_name = "taskConfig"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.OmniTaskConfigOrBuilder getTaskConfigOrBuilder() {
+    return taskConfig_ == null ? com.tcn.cloud.api.api.commons.OmniTaskConfig.getDefaultInstance() : taskConfig_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1183,10 +1208,10 @@ private static final long serialVersionUID = 0L;
     if (status_ != com.tcn.cloud.api.api.commons.OmniTaskStatus.OMNI_TASK_WAITING.getNumber()) {
       output.writeEnum(2, status_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (dateCreated_ != null) {
       output.writeMessage(3, getDateCreated());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (dateModified_ != null) {
       output.writeMessage(4, getDateModified());
     }
     if (campaignModuleSid_ != 0L) {
@@ -1195,26 +1220,29 @@ private static final long serialVersionUID = 0L;
     if (campaignSid_ != 0L) {
       output.writeInt64(6, campaignSid_);
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
+    if (contactEntrySid_ != null) {
       output.writeMessage(7, getContactEntrySid());
     }
-    if (((bitField0_ & 0x00000008) != 0)) {
+    if (state_ != null) {
       output.writeMessage(8, getState());
     }
     for (int i = 0; i < dataFields_.size(); i++) {
       output.writeMessage(9, dataFields_.get(i));
     }
-    if (((bitField0_ & 0x00000010) != 0)) {
+    if (details_ != null) {
       output.writeMessage(10, getDetails());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 11, name_);
     }
-    if (((bitField0_ & 0x00000020) != 0)) {
+    if (statusMessage_ != null) {
       output.writeMessage(12, getStatusMessage());
     }
-    if (((bitField0_ & 0x00000040) != 0)) {
+    if (scheduledTime_ != null) {
       output.writeMessage(13, getScheduledTime());
+    }
+    if (taskConfig_ != null) {
+      output.writeMessage(15, getTaskConfig());
     }
     getUnknownFields().writeTo(output);
   }
@@ -1233,11 +1261,11 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(2, status_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (dateCreated_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getDateCreated());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (dateModified_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getDateModified());
     }
@@ -1249,11 +1277,11 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(6, campaignSid_);
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
+    if (contactEntrySid_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, getContactEntrySid());
     }
-    if (((bitField0_ & 0x00000008) != 0)) {
+    if (state_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, getState());
     }
@@ -1261,20 +1289,24 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(9, dataFields_.get(i));
     }
-    if (((bitField0_ & 0x00000010) != 0)) {
+    if (details_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(10, getDetails());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, name_);
     }
-    if (((bitField0_ & 0x00000020) != 0)) {
+    if (statusMessage_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(12, getStatusMessage());
     }
-    if (((bitField0_ & 0x00000040) != 0)) {
+    if (scheduledTime_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(13, getScheduledTime());
+    }
+    if (taskConfig_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(15, getTaskConfig());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -1337,6 +1369,11 @@ private static final long serialVersionUID = 0L;
       if (!getScheduledTime()
           .equals(other.getScheduledTime())) return false;
     }
+    if (hasTaskConfig() != other.hasTaskConfig()) return false;
+    if (hasTaskConfig()) {
+      if (!getTaskConfig()
+          .equals(other.getTaskConfig())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1392,6 +1429,10 @@ private static final long serialVersionUID = 0L;
     if (hasScheduledTime()) {
       hash = (37 * hash) + SCHEDULED_TIME_FIELD_NUMBER;
       hash = (53 * hash) + getScheduledTime().hashCode();
+    }
+    if (hasTaskConfig()) {
+      hash = (37 * hash) + TASK_CONFIG_FIELD_NUMBER;
+      hash = (53 * hash) + getTaskConfig().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -1516,26 +1557,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.OmniTask.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getDateCreatedFieldBuilder();
-        getDateModifiedFieldBuilder();
-        getContactEntrySidFieldBuilder();
-        getStateFieldBuilder();
-        getDataFieldsFieldBuilder();
-        getDetailsFieldBuilder();
-        getStatusMessageFieldBuilder();
-        getScheduledTimeFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -1587,6 +1615,11 @@ private static final long serialVersionUID = 0L;
       if (scheduledTimeBuilder_ != null) {
         scheduledTimeBuilder_.dispose();
         scheduledTimeBuilder_ = null;
+      }
+      taskConfig_ = null;
+      if (taskConfigBuilder_ != null) {
+        taskConfigBuilder_.dispose();
+        taskConfigBuilder_ = null;
       }
       return this;
     }
@@ -1640,18 +1673,15 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.status_ = status_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.dateCreated_ = dateCreatedBuilder_ == null
             ? dateCreated_
             : dateCreatedBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.dateModified_ = dateModifiedBuilder_ == null
             ? dateModified_
             : dateModifiedBuilder_.build();
-        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.campaignModuleSid_ = campaignModuleSid_;
@@ -1663,19 +1693,16 @@ private static final long serialVersionUID = 0L;
         result.contactEntrySid_ = contactEntrySidBuilder_ == null
             ? contactEntrySid_
             : contactEntrySidBuilder_.build();
-        to_bitField0_ |= 0x00000004;
       }
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.state_ = stateBuilder_ == null
             ? state_
             : stateBuilder_.build();
-        to_bitField0_ |= 0x00000008;
       }
       if (((from_bitField0_ & 0x00000200) != 0)) {
         result.details_ = detailsBuilder_ == null
             ? details_
             : detailsBuilder_.build();
-        to_bitField0_ |= 0x00000010;
       }
       if (((from_bitField0_ & 0x00000400) != 0)) {
         result.name_ = name_;
@@ -1684,15 +1711,17 @@ private static final long serialVersionUID = 0L;
         result.statusMessage_ = statusMessageBuilder_ == null
             ? statusMessage_
             : statusMessageBuilder_.build();
-        to_bitField0_ |= 0x00000020;
       }
       if (((from_bitField0_ & 0x00001000) != 0)) {
         result.scheduledTime_ = scheduledTimeBuilder_ == null
             ? scheduledTime_
             : scheduledTimeBuilder_.build();
-        to_bitField0_ |= 0x00000040;
       }
-      result.bitField0_ |= to_bitField0_;
+      if (((from_bitField0_ & 0x00002000) != 0)) {
+        result.taskConfig_ = taskConfigBuilder_ == null
+            ? taskConfig_
+            : taskConfigBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -1802,6 +1831,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasScheduledTime()) {
         mergeScheduledTime(other.getScheduledTime());
+      }
+      if (other.hasTaskConfig()) {
+        mergeTaskConfig(other.getTaskConfig());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -1916,6 +1948,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00001000;
               break;
             } // case 106
+            case 122: {
+              input.readMessage(
+                  getTaskConfigFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00002000;
+              break;
+            } // case 122
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2136,10 +2175,8 @@ private static final long serialVersionUID = 0L;
       } else {
         dateCreatedBuilder_.mergeFrom(value);
       }
-      if (dateCreated_ != null) {
-        bitField0_ |= 0x00000004;
-        onChanged();
-      }
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -2293,10 +2330,8 @@ private static final long serialVersionUID = 0L;
       } else {
         dateModifiedBuilder_.mergeFrom(value);
       }
-      if (dateModified_ != null) {
-        bitField0_ |= 0x00000008;
-        onChanged();
-      }
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -2538,10 +2573,8 @@ private static final long serialVersionUID = 0L;
       } else {
         contactEntrySidBuilder_.mergeFrom(value);
       }
-      if (contactEntrySid_ != null) {
-        bitField0_ |= 0x00000040;
-        onChanged();
-      }
+      bitField0_ |= 0x00000040;
+      onChanged();
       return this;
     }
     /**
@@ -2695,10 +2728,8 @@ private static final long serialVersionUID = 0L;
       } else {
         stateBuilder_.mergeFrom(value);
       }
-      if (state_ != null) {
-        bitField0_ |= 0x00000080;
-        onChanged();
-      }
+      bitField0_ |= 0x00000080;
+      onChanged();
       return this;
     }
     /**
@@ -3164,10 +3195,8 @@ private static final long serialVersionUID = 0L;
       } else {
         detailsBuilder_.mergeFrom(value);
       }
-      if (details_ != null) {
-        bitField0_ |= 0x00000200;
-        onChanged();
-      }
+      bitField0_ |= 0x00000200;
+      onChanged();
       return this;
     }
     /**
@@ -3413,10 +3442,8 @@ private static final long serialVersionUID = 0L;
       } else {
         statusMessageBuilder_.mergeFrom(value);
       }
-      if (statusMessage_ != null) {
-        bitField0_ |= 0x00000800;
-        onChanged();
-      }
+      bitField0_ |= 0x00000800;
+      onChanged();
       return this;
     }
     /**
@@ -3570,10 +3597,8 @@ private static final long serialVersionUID = 0L;
       } else {
         scheduledTimeBuilder_.mergeFrom(value);
       }
-      if (scheduledTime_ != null) {
-        bitField0_ |= 0x00001000;
-        onChanged();
-      }
+      bitField0_ |= 0x00001000;
+      onChanged();
       return this;
     }
     /**
@@ -3639,6 +3664,161 @@ private static final long serialVersionUID = 0L;
         scheduledTime_ = null;
       }
       return scheduledTimeBuilder_;
+    }
+
+    private com.tcn.cloud.api.api.commons.OmniTaskConfig taskConfig_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.OmniTaskConfig, com.tcn.cloud.api.api.commons.OmniTaskConfig.Builder, com.tcn.cloud.api.api.commons.OmniTaskConfigOrBuilder> taskConfigBuilder_;
+    /**
+     * <pre>
+     * holds extra details about how a task should be processed
+     * </pre>
+     *
+     * <code>.api.commons.OmniTaskConfig task_config = 15 [json_name = "taskConfig"];</code>
+     * @return Whether the taskConfig field is set.
+     */
+    public boolean hasTaskConfig() {
+      return ((bitField0_ & 0x00002000) != 0);
+    }
+    /**
+     * <pre>
+     * holds extra details about how a task should be processed
+     * </pre>
+     *
+     * <code>.api.commons.OmniTaskConfig task_config = 15 [json_name = "taskConfig"];</code>
+     * @return The taskConfig.
+     */
+    public com.tcn.cloud.api.api.commons.OmniTaskConfig getTaskConfig() {
+      if (taskConfigBuilder_ == null) {
+        return taskConfig_ == null ? com.tcn.cloud.api.api.commons.OmniTaskConfig.getDefaultInstance() : taskConfig_;
+      } else {
+        return taskConfigBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * holds extra details about how a task should be processed
+     * </pre>
+     *
+     * <code>.api.commons.OmniTaskConfig task_config = 15 [json_name = "taskConfig"];</code>
+     */
+    public Builder setTaskConfig(com.tcn.cloud.api.api.commons.OmniTaskConfig value) {
+      if (taskConfigBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        taskConfig_ = value;
+      } else {
+        taskConfigBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00002000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * holds extra details about how a task should be processed
+     * </pre>
+     *
+     * <code>.api.commons.OmniTaskConfig task_config = 15 [json_name = "taskConfig"];</code>
+     */
+    public Builder setTaskConfig(
+        com.tcn.cloud.api.api.commons.OmniTaskConfig.Builder builderForValue) {
+      if (taskConfigBuilder_ == null) {
+        taskConfig_ = builderForValue.build();
+      } else {
+        taskConfigBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00002000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * holds extra details about how a task should be processed
+     * </pre>
+     *
+     * <code>.api.commons.OmniTaskConfig task_config = 15 [json_name = "taskConfig"];</code>
+     */
+    public Builder mergeTaskConfig(com.tcn.cloud.api.api.commons.OmniTaskConfig value) {
+      if (taskConfigBuilder_ == null) {
+        if (((bitField0_ & 0x00002000) != 0) &&
+          taskConfig_ != null &&
+          taskConfig_ != com.tcn.cloud.api.api.commons.OmniTaskConfig.getDefaultInstance()) {
+          getTaskConfigBuilder().mergeFrom(value);
+        } else {
+          taskConfig_ = value;
+        }
+      } else {
+        taskConfigBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00002000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * holds extra details about how a task should be processed
+     * </pre>
+     *
+     * <code>.api.commons.OmniTaskConfig task_config = 15 [json_name = "taskConfig"];</code>
+     */
+    public Builder clearTaskConfig() {
+      bitField0_ = (bitField0_ & ~0x00002000);
+      taskConfig_ = null;
+      if (taskConfigBuilder_ != null) {
+        taskConfigBuilder_.dispose();
+        taskConfigBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * holds extra details about how a task should be processed
+     * </pre>
+     *
+     * <code>.api.commons.OmniTaskConfig task_config = 15 [json_name = "taskConfig"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.OmniTaskConfig.Builder getTaskConfigBuilder() {
+      bitField0_ |= 0x00002000;
+      onChanged();
+      return getTaskConfigFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * holds extra details about how a task should be processed
+     * </pre>
+     *
+     * <code>.api.commons.OmniTaskConfig task_config = 15 [json_name = "taskConfig"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.OmniTaskConfigOrBuilder getTaskConfigOrBuilder() {
+      if (taskConfigBuilder_ != null) {
+        return taskConfigBuilder_.getMessageOrBuilder();
+      } else {
+        return taskConfig_ == null ?
+            com.tcn.cloud.api.api.commons.OmniTaskConfig.getDefaultInstance() : taskConfig_;
+      }
+    }
+    /**
+     * <pre>
+     * holds extra details about how a task should be processed
+     * </pre>
+     *
+     * <code>.api.commons.OmniTaskConfig task_config = 15 [json_name = "taskConfig"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.OmniTaskConfig, com.tcn.cloud.api.api.commons.OmniTaskConfig.Builder, com.tcn.cloud.api.api.commons.OmniTaskConfigOrBuilder> 
+        getTaskConfigFieldBuilder() {
+      if (taskConfigBuilder_ == null) {
+        taskConfigBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.OmniTaskConfig, com.tcn.cloud.api.api.commons.OmniTaskConfig.Builder, com.tcn.cloud.api.api.commons.OmniTaskConfigOrBuilder>(
+                getTaskConfig(),
+                getParentForChildren(),
+                isClean());
+        taskConfig_ = null;
+      }
+      return taskConfigBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

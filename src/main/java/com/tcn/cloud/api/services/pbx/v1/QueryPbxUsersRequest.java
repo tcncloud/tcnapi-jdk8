@@ -45,7 +45,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.services.pbx.v1.QueryPbxUsersRequest.class, com.tcn.cloud.api.services.pbx.v1.QueryPbxUsersRequest.Builder.class);
   }
 
-  private int bitField0_;
   public static final int PBX_USER_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object pbxUserId_ = "";
@@ -105,7 +104,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasResponseMask() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return responseMask_ != null;
   }
   /**
    * <pre>
@@ -148,7 +147,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pbxUserId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, pbxUserId_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (responseMask_ != null) {
       output.writeMessage(2, getResponseMask());
     }
     getUnknownFields().writeTo(output);
@@ -163,7 +162,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pbxUserId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, pbxUserId_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (responseMask_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getResponseMask());
     }
@@ -331,19 +330,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.services.pbx.v1.QueryPbxUsersRequest.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getResponseMaskFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -391,14 +384,11 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.pbxUserId_ = pbxUserId_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.responseMask_ = responseMaskBuilder_ == null
             ? responseMask_
             : responseMaskBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -686,10 +676,8 @@ private static final long serialVersionUID = 0L;
       } else {
         responseMaskBuilder_.mergeFrom(value);
       }
-      if (responseMask_ != null) {
-        bitField0_ |= 0x00000002;
-        onChanged();
-      }
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**

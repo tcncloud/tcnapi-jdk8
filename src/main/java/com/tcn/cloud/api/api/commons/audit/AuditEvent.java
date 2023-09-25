@@ -47,7 +47,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.audit.AuditEvent.class, com.tcn.cloud.api.api.commons.audit.AuditEvent.Builder.class);
   }
 
-  private int bitField0_;
   private int eventCase_ = 0;
   @SuppressWarnings("serial")
   private java.lang.Object event_;
@@ -59,6 +58,7 @@ private static final long serialVersionUID = 0L;
     VANA_FLAG_REVIEW_EVENT(201),
     VANA_BILLING_REPORT_EVENT(202),
     VANA_FLAG_SUMMARY_EVENT(203),
+    VANA_PHRASE_CORRECTION_EVENT(204),
     OMNICHANNEL_CREATE_PROJECT_EVENT(300),
     OMNICHANNEL_CREATE_CAMPAIGN_EVENT(301),
     OMNICHANNEL_DAILY_PROJECT_REPORT_EVENT(302),
@@ -139,6 +139,8 @@ private static final long serialVersionUID = 0L;
     TICKET_EVENT(601),
     COMPLIANCE_RND_QUERY_EVENT(700),
     COMPLIANCE_RND_QUERY_CACHED_EVENT(701),
+    AGENT_TRAINING_CREATE_LEARNING_OPPORTUNITY_EVENT(800),
+    LMS_PIPELINE_FAILURE_EVENT(900),
     EVENT_NOT_SET(0);
     private final int value;
     private EventCase(int value) {
@@ -161,6 +163,7 @@ private static final long serialVersionUID = 0L;
         case 201: return VANA_FLAG_REVIEW_EVENT;
         case 202: return VANA_BILLING_REPORT_EVENT;
         case 203: return VANA_FLAG_SUMMARY_EVENT;
+        case 204: return VANA_PHRASE_CORRECTION_EVENT;
         case 300: return OMNICHANNEL_CREATE_PROJECT_EVENT;
         case 301: return OMNICHANNEL_CREATE_CAMPAIGN_EVENT;
         case 302: return OMNICHANNEL_DAILY_PROJECT_REPORT_EVENT;
@@ -241,6 +244,8 @@ private static final long serialVersionUID = 0L;
         case 601: return TICKET_EVENT;
         case 700: return COMPLIANCE_RND_QUERY_EVENT;
         case 701: return COMPLIANCE_RND_QUERY_CACHED_EVENT;
+        case 800: return AGENT_TRAINING_CREATE_LEARNING_OPPORTUNITY_EVENT;
+        case 900: return LMS_PIPELINE_FAILURE_EVENT;
         case 0: return EVENT_NOT_SET;
         default: return null;
       }
@@ -409,7 +414,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasEventTime() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return eventTime_ != null;
   }
   /**
    * <pre>
@@ -691,6 +696,37 @@ private static final long serialVersionUID = 0L;
        return (com.tcn.cloud.api.api.commons.audit.VanaFlagSummaryEvent) event_;
     }
     return com.tcn.cloud.api.api.commons.audit.VanaFlagSummaryEvent.getDefaultInstance();
+  }
+
+  public static final int VANA_PHRASE_CORRECTION_EVENT_FIELD_NUMBER = 204;
+  /**
+   * <code>.api.commons.audit.VanaPhraseCorrectionEvent vana_phrase_correction_event = 204 [json_name = "vanaPhraseCorrectionEvent"];</code>
+   * @return Whether the vanaPhraseCorrectionEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasVanaPhraseCorrectionEvent() {
+    return eventCase_ == 204;
+  }
+  /**
+   * <code>.api.commons.audit.VanaPhraseCorrectionEvent vana_phrase_correction_event = 204 [json_name = "vanaPhraseCorrectionEvent"];</code>
+   * @return The vanaPhraseCorrectionEvent.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent getVanaPhraseCorrectionEvent() {
+    if (eventCase_ == 204) {
+       return (com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.audit.VanaPhraseCorrectionEvent vana_phrase_correction_event = 204 [json_name = "vanaPhraseCorrectionEvent"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEventOrBuilder getVanaPhraseCorrectionEventOrBuilder() {
+    if (eventCase_ == 204) {
+       return (com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent.getDefaultInstance();
   }
 
   public static final int OMNICHANNEL_CREATE_PROJECT_EVENT_FIELD_NUMBER = 300;
@@ -4109,6 +4145,95 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.audit.ComplianceRndQueryEvent.getDefaultInstance();
   }
 
+  public static final int AGENT_TRAINING_CREATE_LEARNING_OPPORTUNITY_EVENT_FIELD_NUMBER = 800;
+  /**
+   * <pre>
+   * Agent Training events class 800
+   * learning opportunity created event
+   * </pre>
+   *
+   * <code>.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent agent_training_create_learning_opportunity_event = 800 [json_name = "agentTrainingCreateLearningOpportunityEvent"];</code>
+   * @return Whether the agentTrainingCreateLearningOpportunityEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasAgentTrainingCreateLearningOpportunityEvent() {
+    return eventCase_ == 800;
+  }
+  /**
+   * <pre>
+   * Agent Training events class 800
+   * learning opportunity created event
+   * </pre>
+   *
+   * <code>.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent agent_training_create_learning_opportunity_event = 800 [json_name = "agentTrainingCreateLearningOpportunityEvent"];</code>
+   * @return The agentTrainingCreateLearningOpportunityEvent.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent getAgentTrainingCreateLearningOpportunityEvent() {
+    if (eventCase_ == 800) {
+       return (com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Agent Training events class 800
+   * learning opportunity created event
+   * </pre>
+   *
+   * <code>.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent agent_training_create_learning_opportunity_event = 800 [json_name = "agentTrainingCreateLearningOpportunityEvent"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEventOrBuilder getAgentTrainingCreateLearningOpportunityEventOrBuilder() {
+    if (eventCase_ == 800) {
+       return (com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent.getDefaultInstance();
+  }
+
+  public static final int LMS_PIPELINE_FAILURE_EVENT_FIELD_NUMBER = 900;
+  /**
+   * <pre>
+   * LMS Events class 900
+   * </pre>
+   *
+   * <code>.api.commons.audit.LMSPipelineFailureEvent lms_pipeline_failure_event = 900 [json_name = "lmsPipelineFailureEvent"];</code>
+   * @return Whether the lmsPipelineFailureEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasLmsPipelineFailureEvent() {
+    return eventCase_ == 900;
+  }
+  /**
+   * <pre>
+   * LMS Events class 900
+   * </pre>
+   *
+   * <code>.api.commons.audit.LMSPipelineFailureEvent lms_pipeline_failure_event = 900 [json_name = "lmsPipelineFailureEvent"];</code>
+   * @return The lmsPipelineFailureEvent.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent getLmsPipelineFailureEvent() {
+    if (eventCase_ == 900) {
+       return (com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * LMS Events class 900
+   * </pre>
+   *
+   * <code>.api.commons.audit.LMSPipelineFailureEvent lms_pipeline_failure_event = 900 [json_name = "lmsPipelineFailureEvent"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEventOrBuilder getLmsPipelineFailureEventOrBuilder() {
+    if (eventCase_ == 900) {
+       return (com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -4132,7 +4257,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, clusterId_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (eventTime_ != null) {
       output.writeMessage(4, getEventTime());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(auditId_)) {
@@ -4155,6 +4280,9 @@ private static final long serialVersionUID = 0L;
     }
     if (eventCase_ == 203) {
       output.writeMessage(203, (com.tcn.cloud.api.api.commons.audit.VanaFlagSummaryEvent) event_);
+    }
+    if (eventCase_ == 204) {
+      output.writeMessage(204, (com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent) event_);
     }
     if (eventCase_ == 300) {
       output.writeMessage(300, (com.tcn.cloud.api.api.commons.audit.OmnichannelCreateProjectEvent) event_);
@@ -4396,6 +4524,12 @@ private static final long serialVersionUID = 0L;
     if (eventCase_ == 701) {
       output.writeMessage(701, (com.tcn.cloud.api.api.commons.audit.ComplianceRndQueryEvent) event_);
     }
+    if (eventCase_ == 800) {
+      output.writeMessage(800, (com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent) event_);
+    }
+    if (eventCase_ == 900) {
+      output.writeMessage(900, (com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent) event_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -4414,7 +4548,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, clusterId_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (eventTime_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getEventTime());
     }
@@ -4444,6 +4578,10 @@ private static final long serialVersionUID = 0L;
     if (eventCase_ == 203) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(203, (com.tcn.cloud.api.api.commons.audit.VanaFlagSummaryEvent) event_);
+    }
+    if (eventCase_ == 204) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(204, (com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent) event_);
     }
     if (eventCase_ == 300) {
       size += com.google.protobuf.CodedOutputStream
@@ -4765,6 +4903,14 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(701, (com.tcn.cloud.api.api.commons.audit.ComplianceRndQueryEvent) event_);
     }
+    if (eventCase_ == 800) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(800, (com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent) event_);
+    }
+    if (eventCase_ == 900) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(900, (com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent) event_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -4815,6 +4961,10 @@ private static final long serialVersionUID = 0L;
       case 203:
         if (!getVanaFlagSummaryEvent()
             .equals(other.getVanaFlagSummaryEvent())) return false;
+        break;
+      case 204:
+        if (!getVanaPhraseCorrectionEvent()
+            .equals(other.getVanaPhraseCorrectionEvent())) return false;
         break;
       case 300:
         if (!getOmnichannelCreateProjectEvent()
@@ -5136,6 +5286,14 @@ private static final long serialVersionUID = 0L;
         if (!getComplianceRndQueryCachedEvent()
             .equals(other.getComplianceRndQueryCachedEvent())) return false;
         break;
+      case 800:
+        if (!getAgentTrainingCreateLearningOpportunityEvent()
+            .equals(other.getAgentTrainingCreateLearningOpportunityEvent())) return false;
+        break;
+      case 900:
+        if (!getLmsPipelineFailureEvent()
+            .equals(other.getLmsPipelineFailureEvent())) return false;
+        break;
       case 0:
       default:
     }
@@ -5184,6 +5342,10 @@ private static final long serialVersionUID = 0L;
       case 203:
         hash = (37 * hash) + VANA_FLAG_SUMMARY_EVENT_FIELD_NUMBER;
         hash = (53 * hash) + getVanaFlagSummaryEvent().hashCode();
+        break;
+      case 204:
+        hash = (37 * hash) + VANA_PHRASE_CORRECTION_EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getVanaPhraseCorrectionEvent().hashCode();
         break;
       case 300:
         hash = (37 * hash) + OMNICHANNEL_CREATE_PROJECT_EVENT_FIELD_NUMBER;
@@ -5505,6 +5667,14 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + COMPLIANCE_RND_QUERY_CACHED_EVENT_FIELD_NUMBER;
         hash = (53 * hash) + getComplianceRndQueryCachedEvent().hashCode();
         break;
+      case 800:
+        hash = (37 * hash) + AGENT_TRAINING_CREATE_LEARNING_OPPORTUNITY_EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getAgentTrainingCreateLearningOpportunityEvent().hashCode();
+        break;
+      case 900:
+        hash = (37 * hash) + LMS_PIPELINE_FAILURE_EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getLmsPipelineFailureEvent().hashCode();
+        break;
       case 0:
       default:
     }
@@ -5631,19 +5801,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.audit.AuditEvent.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getEventTimeFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -5675,6 +5839,9 @@ private static final long serialVersionUID = 0L;
       }
       if (vanaFlagSummaryEventBuilder_ != null) {
         vanaFlagSummaryEventBuilder_.clear();
+      }
+      if (vanaPhraseCorrectionEventBuilder_ != null) {
+        vanaPhraseCorrectionEventBuilder_.clear();
       }
       if (omnichannelCreateProjectEventBuilder_ != null) {
         omnichannelCreateProjectEventBuilder_.clear();
@@ -5916,6 +6083,12 @@ private static final long serialVersionUID = 0L;
       if (complianceRndQueryCachedEventBuilder_ != null) {
         complianceRndQueryCachedEventBuilder_.clear();
       }
+      if (agentTrainingCreateLearningOpportunityEventBuilder_ != null) {
+        agentTrainingCreateLearningOpportunityEventBuilder_.clear();
+      }
+      if (lmsPipelineFailureEventBuilder_ != null) {
+        lmsPipelineFailureEventBuilder_.clear();
+      }
       eventCase_ = 0;
       event_ = null;
       return this;
@@ -5963,12 +6136,10 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.clusterId_ = clusterId_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.eventTime_ = eventTimeBuilder_ == null
             ? eventTime_
             : eventTimeBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.auditId_ = auditId_;
@@ -5976,7 +6147,6 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.eventType_ = eventType_;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     private void buildPartial1(com.tcn.cloud.api.api.commons.audit.AuditEvent result) {
@@ -6009,6 +6179,10 @@ private static final long serialVersionUID = 0L;
       if (eventCase_ == 203 &&
           vanaFlagSummaryEventBuilder_ != null) {
         result.event_ = vanaFlagSummaryEventBuilder_.build();
+      }
+      if (eventCase_ == 204 &&
+          vanaPhraseCorrectionEventBuilder_ != null) {
+        result.event_ = vanaPhraseCorrectionEventBuilder_.build();
       }
       if (eventCase_ == 300 &&
           omnichannelCreateProjectEventBuilder_ != null) {
@@ -6330,6 +6504,14 @@ private static final long serialVersionUID = 0L;
           complianceRndQueryCachedEventBuilder_ != null) {
         result.event_ = complianceRndQueryCachedEventBuilder_.build();
       }
+      if (eventCase_ == 800 &&
+          agentTrainingCreateLearningOpportunityEventBuilder_ != null) {
+        result.event_ = agentTrainingCreateLearningOpportunityEventBuilder_.build();
+      }
+      if (eventCase_ == 900 &&
+          lmsPipelineFailureEventBuilder_ != null) {
+        result.event_ = lmsPipelineFailureEventBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -6421,6 +6603,10 @@ private static final long serialVersionUID = 0L;
         }
         case VANA_FLAG_SUMMARY_EVENT: {
           mergeVanaFlagSummaryEvent(other.getVanaFlagSummaryEvent());
+          break;
+        }
+        case VANA_PHRASE_CORRECTION_EVENT: {
+          mergeVanaPhraseCorrectionEvent(other.getVanaPhraseCorrectionEvent());
           break;
         }
         case OMNICHANNEL_CREATE_PROJECT_EVENT: {
@@ -6743,6 +6929,14 @@ private static final long serialVersionUID = 0L;
           mergeComplianceRndQueryCachedEvent(other.getComplianceRndQueryCachedEvent());
           break;
         }
+        case AGENT_TRAINING_CREATE_LEARNING_OPPORTUNITY_EVENT: {
+          mergeAgentTrainingCreateLearningOpportunityEvent(other.getAgentTrainingCreateLearningOpportunityEvent());
+          break;
+        }
+        case LMS_PIPELINE_FAILURE_EVENT: {
+          mergeLmsPipelineFailureEvent(other.getLmsPipelineFailureEvent());
+          break;
+        }
         case EVENT_NOT_SET: {
           break;
         }
@@ -6840,6 +7034,13 @@ private static final long serialVersionUID = 0L;
               eventCase_ = 203;
               break;
             } // case 1626
+            case 1634: {
+              input.readMessage(
+                  getVanaPhraseCorrectionEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              eventCase_ = 204;
+              break;
+            } // case 1634
             case 2402: {
               input.readMessage(
                   getOmnichannelCreateProjectEventFieldBuilder().getBuilder(),
@@ -7400,6 +7601,20 @@ private static final long serialVersionUID = 0L;
               eventCase_ = 701;
               break;
             } // case 5610
+            case 6402: {
+              input.readMessage(
+                  getAgentTrainingCreateLearningOpportunityEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              eventCase_ = 800;
+              break;
+            } // case 6402
+            case 7202: {
+              input.readMessage(
+                  getLmsPipelineFailureEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              eventCase_ = 900;
+              break;
+            } // case 7202
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -7796,10 +8011,8 @@ private static final long serialVersionUID = 0L;
       } else {
         eventTimeBuilder_.mergeFrom(value);
       }
-      if (eventTime_ != null) {
-        bitField0_ |= 0x00000008;
-        onChanged();
-      }
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -8827,6 +9040,148 @@ private static final long serialVersionUID = 0L;
       eventCase_ = 203;
       onChanged();
       return vanaFlagSummaryEventBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent, com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent.Builder, com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEventOrBuilder> vanaPhraseCorrectionEventBuilder_;
+    /**
+     * <code>.api.commons.audit.VanaPhraseCorrectionEvent vana_phrase_correction_event = 204 [json_name = "vanaPhraseCorrectionEvent"];</code>
+     * @return Whether the vanaPhraseCorrectionEvent field is set.
+     */
+    @java.lang.Override
+    public boolean hasVanaPhraseCorrectionEvent() {
+      return eventCase_ == 204;
+    }
+    /**
+     * <code>.api.commons.audit.VanaPhraseCorrectionEvent vana_phrase_correction_event = 204 [json_name = "vanaPhraseCorrectionEvent"];</code>
+     * @return The vanaPhraseCorrectionEvent.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent getVanaPhraseCorrectionEvent() {
+      if (vanaPhraseCorrectionEventBuilder_ == null) {
+        if (eventCase_ == 204) {
+          return (com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent.getDefaultInstance();
+      } else {
+        if (eventCase_ == 204) {
+          return vanaPhraseCorrectionEventBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.audit.VanaPhraseCorrectionEvent vana_phrase_correction_event = 204 [json_name = "vanaPhraseCorrectionEvent"];</code>
+     */
+    public Builder setVanaPhraseCorrectionEvent(com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent value) {
+      if (vanaPhraseCorrectionEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        event_ = value;
+        onChanged();
+      } else {
+        vanaPhraseCorrectionEventBuilder_.setMessage(value);
+      }
+      eventCase_ = 204;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.VanaPhraseCorrectionEvent vana_phrase_correction_event = 204 [json_name = "vanaPhraseCorrectionEvent"];</code>
+     */
+    public Builder setVanaPhraseCorrectionEvent(
+        com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent.Builder builderForValue) {
+      if (vanaPhraseCorrectionEventBuilder_ == null) {
+        event_ = builderForValue.build();
+        onChanged();
+      } else {
+        vanaPhraseCorrectionEventBuilder_.setMessage(builderForValue.build());
+      }
+      eventCase_ = 204;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.VanaPhraseCorrectionEvent vana_phrase_correction_event = 204 [json_name = "vanaPhraseCorrectionEvent"];</code>
+     */
+    public Builder mergeVanaPhraseCorrectionEvent(com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent value) {
+      if (vanaPhraseCorrectionEventBuilder_ == null) {
+        if (eventCase_ == 204 &&
+            event_ != com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent.getDefaultInstance()) {
+          event_ = com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent.newBuilder((com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent) event_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          event_ = value;
+        }
+        onChanged();
+      } else {
+        if (eventCase_ == 204) {
+          vanaPhraseCorrectionEventBuilder_.mergeFrom(value);
+        } else {
+          vanaPhraseCorrectionEventBuilder_.setMessage(value);
+        }
+      }
+      eventCase_ = 204;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.VanaPhraseCorrectionEvent vana_phrase_correction_event = 204 [json_name = "vanaPhraseCorrectionEvent"];</code>
+     */
+    public Builder clearVanaPhraseCorrectionEvent() {
+      if (vanaPhraseCorrectionEventBuilder_ == null) {
+        if (eventCase_ == 204) {
+          eventCase_ = 0;
+          event_ = null;
+          onChanged();
+        }
+      } else {
+        if (eventCase_ == 204) {
+          eventCase_ = 0;
+          event_ = null;
+        }
+        vanaPhraseCorrectionEventBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.VanaPhraseCorrectionEvent vana_phrase_correction_event = 204 [json_name = "vanaPhraseCorrectionEvent"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent.Builder getVanaPhraseCorrectionEventBuilder() {
+      return getVanaPhraseCorrectionEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.audit.VanaPhraseCorrectionEvent vana_phrase_correction_event = 204 [json_name = "vanaPhraseCorrectionEvent"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEventOrBuilder getVanaPhraseCorrectionEventOrBuilder() {
+      if ((eventCase_ == 204) && (vanaPhraseCorrectionEventBuilder_ != null)) {
+        return vanaPhraseCorrectionEventBuilder_.getMessageOrBuilder();
+      } else {
+        if (eventCase_ == 204) {
+          return (com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.audit.VanaPhraseCorrectionEvent vana_phrase_correction_event = 204 [json_name = "vanaPhraseCorrectionEvent"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent, com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent.Builder, com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEventOrBuilder> 
+        getVanaPhraseCorrectionEventFieldBuilder() {
+      if (vanaPhraseCorrectionEventBuilder_ == null) {
+        if (!(eventCase_ == 204)) {
+          event_ = com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent.getDefaultInstance();
+        }
+        vanaPhraseCorrectionEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent, com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent.Builder, com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEventOrBuilder>(
+                (com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent) event_,
+                getParentForChildren(),
+                isClean());
+        event_ = null;
+      }
+      eventCase_ = 204;
+      onChanged();
+      return vanaPhraseCorrectionEventBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -22995,6 +23350,371 @@ private static final long serialVersionUID = 0L;
       eventCase_ = 701;
       onChanged();
       return complianceRndQueryCachedEventBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent, com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent.Builder, com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEventOrBuilder> agentTrainingCreateLearningOpportunityEventBuilder_;
+    /**
+     * <pre>
+     * Agent Training events class 800
+     * learning opportunity created event
+     * </pre>
+     *
+     * <code>.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent agent_training_create_learning_opportunity_event = 800 [json_name = "agentTrainingCreateLearningOpportunityEvent"];</code>
+     * @return Whether the agentTrainingCreateLearningOpportunityEvent field is set.
+     */
+    @java.lang.Override
+    public boolean hasAgentTrainingCreateLearningOpportunityEvent() {
+      return eventCase_ == 800;
+    }
+    /**
+     * <pre>
+     * Agent Training events class 800
+     * learning opportunity created event
+     * </pre>
+     *
+     * <code>.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent agent_training_create_learning_opportunity_event = 800 [json_name = "agentTrainingCreateLearningOpportunityEvent"];</code>
+     * @return The agentTrainingCreateLearningOpportunityEvent.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent getAgentTrainingCreateLearningOpportunityEvent() {
+      if (agentTrainingCreateLearningOpportunityEventBuilder_ == null) {
+        if (eventCase_ == 800) {
+          return (com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent.getDefaultInstance();
+      } else {
+        if (eventCase_ == 800) {
+          return agentTrainingCreateLearningOpportunityEventBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Agent Training events class 800
+     * learning opportunity created event
+     * </pre>
+     *
+     * <code>.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent agent_training_create_learning_opportunity_event = 800 [json_name = "agentTrainingCreateLearningOpportunityEvent"];</code>
+     */
+    public Builder setAgentTrainingCreateLearningOpportunityEvent(com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent value) {
+      if (agentTrainingCreateLearningOpportunityEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        event_ = value;
+        onChanged();
+      } else {
+        agentTrainingCreateLearningOpportunityEventBuilder_.setMessage(value);
+      }
+      eventCase_ = 800;
+      return this;
+    }
+    /**
+     * <pre>
+     * Agent Training events class 800
+     * learning opportunity created event
+     * </pre>
+     *
+     * <code>.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent agent_training_create_learning_opportunity_event = 800 [json_name = "agentTrainingCreateLearningOpportunityEvent"];</code>
+     */
+    public Builder setAgentTrainingCreateLearningOpportunityEvent(
+        com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent.Builder builderForValue) {
+      if (agentTrainingCreateLearningOpportunityEventBuilder_ == null) {
+        event_ = builderForValue.build();
+        onChanged();
+      } else {
+        agentTrainingCreateLearningOpportunityEventBuilder_.setMessage(builderForValue.build());
+      }
+      eventCase_ = 800;
+      return this;
+    }
+    /**
+     * <pre>
+     * Agent Training events class 800
+     * learning opportunity created event
+     * </pre>
+     *
+     * <code>.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent agent_training_create_learning_opportunity_event = 800 [json_name = "agentTrainingCreateLearningOpportunityEvent"];</code>
+     */
+    public Builder mergeAgentTrainingCreateLearningOpportunityEvent(com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent value) {
+      if (agentTrainingCreateLearningOpportunityEventBuilder_ == null) {
+        if (eventCase_ == 800 &&
+            event_ != com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent.getDefaultInstance()) {
+          event_ = com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent.newBuilder((com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent) event_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          event_ = value;
+        }
+        onChanged();
+      } else {
+        if (eventCase_ == 800) {
+          agentTrainingCreateLearningOpportunityEventBuilder_.mergeFrom(value);
+        } else {
+          agentTrainingCreateLearningOpportunityEventBuilder_.setMessage(value);
+        }
+      }
+      eventCase_ = 800;
+      return this;
+    }
+    /**
+     * <pre>
+     * Agent Training events class 800
+     * learning opportunity created event
+     * </pre>
+     *
+     * <code>.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent agent_training_create_learning_opportunity_event = 800 [json_name = "agentTrainingCreateLearningOpportunityEvent"];</code>
+     */
+    public Builder clearAgentTrainingCreateLearningOpportunityEvent() {
+      if (agentTrainingCreateLearningOpportunityEventBuilder_ == null) {
+        if (eventCase_ == 800) {
+          eventCase_ = 0;
+          event_ = null;
+          onChanged();
+        }
+      } else {
+        if (eventCase_ == 800) {
+          eventCase_ = 0;
+          event_ = null;
+        }
+        agentTrainingCreateLearningOpportunityEventBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Agent Training events class 800
+     * learning opportunity created event
+     * </pre>
+     *
+     * <code>.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent agent_training_create_learning_opportunity_event = 800 [json_name = "agentTrainingCreateLearningOpportunityEvent"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent.Builder getAgentTrainingCreateLearningOpportunityEventBuilder() {
+      return getAgentTrainingCreateLearningOpportunityEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Agent Training events class 800
+     * learning opportunity created event
+     * </pre>
+     *
+     * <code>.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent agent_training_create_learning_opportunity_event = 800 [json_name = "agentTrainingCreateLearningOpportunityEvent"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEventOrBuilder getAgentTrainingCreateLearningOpportunityEventOrBuilder() {
+      if ((eventCase_ == 800) && (agentTrainingCreateLearningOpportunityEventBuilder_ != null)) {
+        return agentTrainingCreateLearningOpportunityEventBuilder_.getMessageOrBuilder();
+      } else {
+        if (eventCase_ == 800) {
+          return (com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Agent Training events class 800
+     * learning opportunity created event
+     * </pre>
+     *
+     * <code>.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent agent_training_create_learning_opportunity_event = 800 [json_name = "agentTrainingCreateLearningOpportunityEvent"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent, com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent.Builder, com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEventOrBuilder> 
+        getAgentTrainingCreateLearningOpportunityEventFieldBuilder() {
+      if (agentTrainingCreateLearningOpportunityEventBuilder_ == null) {
+        if (!(eventCase_ == 800)) {
+          event_ = com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent.getDefaultInstance();
+        }
+        agentTrainingCreateLearningOpportunityEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent, com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent.Builder, com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEventOrBuilder>(
+                (com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent) event_,
+                getParentForChildren(),
+                isClean());
+        event_ = null;
+      }
+      eventCase_ = 800;
+      onChanged();
+      return agentTrainingCreateLearningOpportunityEventBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent, com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent.Builder, com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEventOrBuilder> lmsPipelineFailureEventBuilder_;
+    /**
+     * <pre>
+     * LMS Events class 900
+     * </pre>
+     *
+     * <code>.api.commons.audit.LMSPipelineFailureEvent lms_pipeline_failure_event = 900 [json_name = "lmsPipelineFailureEvent"];</code>
+     * @return Whether the lmsPipelineFailureEvent field is set.
+     */
+    @java.lang.Override
+    public boolean hasLmsPipelineFailureEvent() {
+      return eventCase_ == 900;
+    }
+    /**
+     * <pre>
+     * LMS Events class 900
+     * </pre>
+     *
+     * <code>.api.commons.audit.LMSPipelineFailureEvent lms_pipeline_failure_event = 900 [json_name = "lmsPipelineFailureEvent"];</code>
+     * @return The lmsPipelineFailureEvent.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent getLmsPipelineFailureEvent() {
+      if (lmsPipelineFailureEventBuilder_ == null) {
+        if (eventCase_ == 900) {
+          return (com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent.getDefaultInstance();
+      } else {
+        if (eventCase_ == 900) {
+          return lmsPipelineFailureEventBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * LMS Events class 900
+     * </pre>
+     *
+     * <code>.api.commons.audit.LMSPipelineFailureEvent lms_pipeline_failure_event = 900 [json_name = "lmsPipelineFailureEvent"];</code>
+     */
+    public Builder setLmsPipelineFailureEvent(com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent value) {
+      if (lmsPipelineFailureEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        event_ = value;
+        onChanged();
+      } else {
+        lmsPipelineFailureEventBuilder_.setMessage(value);
+      }
+      eventCase_ = 900;
+      return this;
+    }
+    /**
+     * <pre>
+     * LMS Events class 900
+     * </pre>
+     *
+     * <code>.api.commons.audit.LMSPipelineFailureEvent lms_pipeline_failure_event = 900 [json_name = "lmsPipelineFailureEvent"];</code>
+     */
+    public Builder setLmsPipelineFailureEvent(
+        com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent.Builder builderForValue) {
+      if (lmsPipelineFailureEventBuilder_ == null) {
+        event_ = builderForValue.build();
+        onChanged();
+      } else {
+        lmsPipelineFailureEventBuilder_.setMessage(builderForValue.build());
+      }
+      eventCase_ = 900;
+      return this;
+    }
+    /**
+     * <pre>
+     * LMS Events class 900
+     * </pre>
+     *
+     * <code>.api.commons.audit.LMSPipelineFailureEvent lms_pipeline_failure_event = 900 [json_name = "lmsPipelineFailureEvent"];</code>
+     */
+    public Builder mergeLmsPipelineFailureEvent(com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent value) {
+      if (lmsPipelineFailureEventBuilder_ == null) {
+        if (eventCase_ == 900 &&
+            event_ != com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent.getDefaultInstance()) {
+          event_ = com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent.newBuilder((com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent) event_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          event_ = value;
+        }
+        onChanged();
+      } else {
+        if (eventCase_ == 900) {
+          lmsPipelineFailureEventBuilder_.mergeFrom(value);
+        } else {
+          lmsPipelineFailureEventBuilder_.setMessage(value);
+        }
+      }
+      eventCase_ = 900;
+      return this;
+    }
+    /**
+     * <pre>
+     * LMS Events class 900
+     * </pre>
+     *
+     * <code>.api.commons.audit.LMSPipelineFailureEvent lms_pipeline_failure_event = 900 [json_name = "lmsPipelineFailureEvent"];</code>
+     */
+    public Builder clearLmsPipelineFailureEvent() {
+      if (lmsPipelineFailureEventBuilder_ == null) {
+        if (eventCase_ == 900) {
+          eventCase_ = 0;
+          event_ = null;
+          onChanged();
+        }
+      } else {
+        if (eventCase_ == 900) {
+          eventCase_ = 0;
+          event_ = null;
+        }
+        lmsPipelineFailureEventBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * LMS Events class 900
+     * </pre>
+     *
+     * <code>.api.commons.audit.LMSPipelineFailureEvent lms_pipeline_failure_event = 900 [json_name = "lmsPipelineFailureEvent"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent.Builder getLmsPipelineFailureEventBuilder() {
+      return getLmsPipelineFailureEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * LMS Events class 900
+     * </pre>
+     *
+     * <code>.api.commons.audit.LMSPipelineFailureEvent lms_pipeline_failure_event = 900 [json_name = "lmsPipelineFailureEvent"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEventOrBuilder getLmsPipelineFailureEventOrBuilder() {
+      if ((eventCase_ == 900) && (lmsPipelineFailureEventBuilder_ != null)) {
+        return lmsPipelineFailureEventBuilder_.getMessageOrBuilder();
+      } else {
+        if (eventCase_ == 900) {
+          return (com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * LMS Events class 900
+     * </pre>
+     *
+     * <code>.api.commons.audit.LMSPipelineFailureEvent lms_pipeline_failure_event = 900 [json_name = "lmsPipelineFailureEvent"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent, com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent.Builder, com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEventOrBuilder> 
+        getLmsPipelineFailureEventFieldBuilder() {
+      if (lmsPipelineFailureEventBuilder_ == null) {
+        if (!(eventCase_ == 900)) {
+          event_ = com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent.getDefaultInstance();
+        }
+        lmsPipelineFailureEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent, com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent.Builder, com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEventOrBuilder>(
+                (com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent) event_,
+                getParentForChildren(),
+                isClean());
+        event_ = null;
+      }
+      eventCase_ = 900;
+      onChanged();
+      return lmsPipelineFailureEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

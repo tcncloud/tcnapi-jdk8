@@ -382,13 +382,14 @@ public final class ServiceProto {
       "\014conversation\022!\n\014reference_id\030\002 \001(\tR\013ref" +
       "erenceId\"\017\n\rListAgentsReq\"H\n\rListAgentsR" +
       "es\0227\n\006agents\030\001 \003(\0132\037.api.commons.Dashboa" +
-      "rdAgentInfoR\006agents\"\274\002\n\037SetConversationC" +
+      "rdAgentInfoR\006agents\"\344\002\n\037SetConversationC" +
       "ollectedDataReq\022-\n\020conversation_sid\030\001 \001(" +
       "\003B\0020\001R\017conversationSid\022;\n\014channel_type\030\002" +
       " \001(\0162\030.api.commons.ChannelTypeR\013channelT" +
       "ype\022k\n\016collected_data\030\003 \003(\0132D.api.v1alph" +
       "a1.asm.SetConversationCollectedDataReq.C" +
-      "ollectedDataEntryR\rcollectedData\032@\n\022Coll" +
+      "ollectedDataEntryR\rcollectedData\022&\n\017asm_" +
+      "session_sid\030\004 \001(\003R\rasmSessionSid\032@\n\022Coll" +
       "ectedDataEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005valu" +
       "e\030\002 \001(\tR\005value:\0028\001\"!\n\037SetConversationCol" +
       "lectedDataRes\"\342\002\n\024ListConversationsReq\022&" +
@@ -654,7 +655,7 @@ public final class ServiceProto {
     internal_static_api_v1alpha1_asm_SetConversationCollectedDataReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_asm_SetConversationCollectedDataReq_descriptor,
-        new java.lang.String[] { "ConversationSid", "ChannelType", "CollectedData", });
+        new java.lang.String[] { "ConversationSid", "ChannelType", "CollectedData", "AsmSessionSid", });
     internal_static_api_v1alpha1_asm_SetConversationCollectedDataReq_CollectedDataEntry_descriptor =
       internal_static_api_v1alpha1_asm_SetConversationCollectedDataReq_descriptor.getNestedTypes().get(0);
     internal_static_api_v1alpha1_asm_SetConversationCollectedDataReq_CollectedDataEntry_fieldAccessorTable = new

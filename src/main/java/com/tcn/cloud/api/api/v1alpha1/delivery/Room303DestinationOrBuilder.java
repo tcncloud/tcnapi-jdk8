@@ -29,7 +29,8 @@ public interface Room303DestinationOrBuilder extends
 
   /**
    * <pre>
-   * username which sends the message.
+   * will lookup user_sid through org if not provided
+   * username of the intended user
    * </pre>
    *
    * <code>string username = 2 [json_name = "username"];</code>
@@ -38,7 +39,8 @@ public interface Room303DestinationOrBuilder extends
   java.lang.String getUsername();
   /**
    * <pre>
-   * username which sends the message.
+   * will lookup user_sid through org if not provided
+   * username of the intended user
    * </pre>
    *
    * <code>string username = 2 [json_name = "username"];</code>
@@ -46,4 +48,24 @@ public interface Room303DestinationOrBuilder extends
    */
   com.google.protobuf.ByteString
       getUsernameBytes();
+
+  /**
+   * <pre>
+   * user_id of the intended user
+   * </pre>
+   *
+   * <code>string user_id = 3 [json_name = "userId"];</code>
+   * @return The userId.
+   */
+  java.lang.String getUserId();
+  /**
+   * <pre>
+   * user_id of the intended user
+   * </pre>
+   *
+   * <code>string user_id = 3 [json_name = "userId"];</code>
+   * @return The bytes for userId.
+   */
+  com.google.protobuf.ByteString
+      getUserIdBytes();
 }

@@ -43,7 +43,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.audit.OmnichannelPaymentLinkSentEvent.class, com.tcn.cloud.api.api.commons.audit.OmnichannelPaymentLinkSentEvent.Builder.class);
   }
 
-  private int bitField0_;
   public static final int MESSAGE_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.api.commons.OmniMessage message_;
   /**
@@ -56,7 +55,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasMessage() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return message_ != null;
   }
   /**
    * <pre>
@@ -143,7 +142,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (message_ != null) {
       output.writeMessage(1, getMessage());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(link_)) {
@@ -158,7 +157,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (message_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getMessage());
     }
@@ -327,19 +326,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.audit.OmnichannelPaymentLinkSentEvent.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getMessageFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -384,17 +377,14 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.commons.audit.OmnichannelPaymentLinkSentEvent result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.message_ = messageBuilder_ == null
             ? message_
             : messageBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.link_ = link_;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -590,10 +580,8 @@ private static final long serialVersionUID = 0L;
       } else {
         messageBuilder_.mergeFrom(value);
       }
-      if (message_ != null) {
-        bitField0_ |= 0x00000001;
-        onChanged();
-      }
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**

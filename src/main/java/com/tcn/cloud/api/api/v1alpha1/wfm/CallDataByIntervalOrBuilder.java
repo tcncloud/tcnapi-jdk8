@@ -37,12 +37,15 @@ public interface CallDataByIntervalOrBuilder extends
   /**
    * <pre>
    * ID of the skill profile to forecast for (not set in profile forecasts).
+   * Deprecated as of Sep/8/2023: use skill_profile_category instead.
    * </pre>
    *
-   * <code>int64 skill_profile_sid = 2 [json_name = "skillProfileSid"];</code>
+   * <code>int64 skill_profile_sid = 2 [json_name = "skillProfileSid", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.CallDataByInterval.skill_profile_sid is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=3165
    * @return The skillProfileSid.
    */
-  long getSkillProfileSid();
+  @java.lang.Deprecated long getSkillProfileSid();
 
   /**
    * <pre>
@@ -134,4 +137,31 @@ public interface CallDataByIntervalOrBuilder extends
    * @return The intervalWidthInMinutes.
    */
   int getIntervalWidthInMinutes();
+
+  /**
+   * <pre>
+   * Skill profile category that the interval belongs to.
+   * </pre>
+   *
+   * <code>.api.commons.SkillProfileCategory skill_profile_category = 12 [json_name = "skillProfileCategory"];</code>
+   * @return Whether the skillProfileCategory field is set.
+   */
+  boolean hasSkillProfileCategory();
+  /**
+   * <pre>
+   * Skill profile category that the interval belongs to.
+   * </pre>
+   *
+   * <code>.api.commons.SkillProfileCategory skill_profile_category = 12 [json_name = "skillProfileCategory"];</code>
+   * @return The skillProfileCategory.
+   */
+  com.tcn.cloud.api.api.commons.SkillProfileCategory getSkillProfileCategory();
+  /**
+   * <pre>
+   * Skill profile category that the interval belongs to.
+   * </pre>
+   *
+   * <code>.api.commons.SkillProfileCategory skill_profile_category = 12 [json_name = "skillProfileCategory"];</code>
+   */
+  com.tcn.cloud.api.api.commons.SkillProfileCategoryOrBuilder getSkillProfileCategoryOrBuilder();
 }

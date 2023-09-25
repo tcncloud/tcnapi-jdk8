@@ -69,7 +69,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.integrations.PaymentLinkConfig.class, com.tcn.cloud.api.api.v1alpha1.integrations.PaymentLinkConfig.Builder.class);
   }
 
-  private int bitField0_;
   public static final int ID_FIELD_NUMBER = 19;
   @SuppressWarnings("serial")
   private volatile java.lang.Object id_ = "";
@@ -205,7 +204,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>string collection_id = 5 [json_name = "collectionId", deprecated = true];</code>
    * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.collection_id is deprecated.
-   *     See api/v1alpha1/integrations/service.proto;l=674
+   *     See api/v1alpha1/integrations/service.proto;l=688
    * @return The collectionId.
    */
   @java.lang.Override
@@ -228,7 +227,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>string collection_id = 5 [json_name = "collectionId", deprecated = true];</code>
    * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.collection_id is deprecated.
-   *     See api/v1alpha1/integrations/service.proto;l=674
+   *     See api/v1alpha1/integrations/service.proto;l=688
    * @return The bytes for collectionId.
    */
   @java.lang.Override
@@ -255,7 +254,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.integrations.IntegrationType integration_id = 6 [json_name = "integrationId", deprecated = true];</code>
    * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.integration_id is deprecated.
-   *     See api/v1alpha1/integrations/service.proto;l=676
+   *     See api/v1alpha1/integrations/service.proto;l=690
    * @return The enum numeric value on the wire for integrationId.
    */
   @java.lang.Override @java.lang.Deprecated public int getIntegrationIdValue() {
@@ -268,7 +267,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.integrations.IntegrationType integration_id = 6 [json_name = "integrationId", deprecated = true];</code>
    * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.integration_id is deprecated.
-   *     See api/v1alpha1/integrations/service.proto;l=676
+   *     See api/v1alpha1/integrations/service.proto;l=690
    * @return The integrationId.
    */
   @java.lang.Override @java.lang.Deprecated public com.tcn.cloud.api.api.commons.integrations.IntegrationType getIntegrationId() {
@@ -285,7 +284,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.integrations.RequestMethod verification_method_id = 7 [json_name = "verificationMethodId", deprecated = true];</code>
    * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.verification_method_id is deprecated.
-   *     See api/v1alpha1/integrations/service.proto;l=678
+   *     See api/v1alpha1/integrations/service.proto;l=692
    * @return The enum numeric value on the wire for verificationMethodId.
    */
   @java.lang.Override @java.lang.Deprecated public int getVerificationMethodIdValue() {
@@ -298,7 +297,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.integrations.RequestMethod verification_method_id = 7 [json_name = "verificationMethodId", deprecated = true];</code>
    * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.verification_method_id is deprecated.
-   *     See api/v1alpha1/integrations/service.proto;l=678
+   *     See api/v1alpha1/integrations/service.proto;l=692
    * @return The verificationMethodId.
    */
   @java.lang.Override @java.lang.Deprecated public com.tcn.cloud.api.api.commons.integrations.RequestMethod getVerificationMethodId() {
@@ -311,7 +310,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.RequestMethod invoice_method_id = 8 [json_name = "invoiceMethodId", deprecated = true];</code>
    * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.invoice_method_id is deprecated.
-   *     See api/v1alpha1/integrations/service.proto;l=679
+   *     See api/v1alpha1/integrations/service.proto;l=693
    * @return The enum numeric value on the wire for invoiceMethodId.
    */
   @java.lang.Override @java.lang.Deprecated public int getInvoiceMethodIdValue() {
@@ -320,7 +319,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.RequestMethod invoice_method_id = 8 [json_name = "invoiceMethodId", deprecated = true];</code>
    * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.invoice_method_id is deprecated.
-   *     See api/v1alpha1/integrations/service.proto;l=679
+   *     See api/v1alpha1/integrations/service.proto;l=693
    * @return The invoiceMethodId.
    */
   @java.lang.Override @java.lang.Deprecated public com.tcn.cloud.api.api.commons.integrations.RequestMethod getInvoiceMethodId() {
@@ -337,7 +336,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.integrations.RequestMethod payment_method_id = 9 [json_name = "paymentMethodId", deprecated = true];</code>
    * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.payment_method_id is deprecated.
-   *     See api/v1alpha1/integrations/service.proto;l=681
+   *     See api/v1alpha1/integrations/service.proto;l=695
    * @return The enum numeric value on the wire for paymentMethodId.
    */
   @java.lang.Override @java.lang.Deprecated public int getPaymentMethodIdValue() {
@@ -350,7 +349,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.integrations.RequestMethod payment_method_id = 9 [json_name = "paymentMethodId", deprecated = true];</code>
    * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.payment_method_id is deprecated.
-   *     See api/v1alpha1/integrations/service.proto;l=681
+   *     See api/v1alpha1/integrations/service.proto;l=695
    * @return The paymentMethodId.
    */
   @java.lang.Override @java.lang.Deprecated public com.tcn.cloud.api.api.commons.integrations.RequestMethod getPaymentMethodId() {
@@ -480,7 +479,7 @@ java.lang.String defaultValue) {
    *
    * <code>repeated string verification_fields = 11 [json_name = "verificationFields", deprecated = true];</code>
    * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.verification_fields is deprecated.
-   *     See api/v1alpha1/integrations/service.proto;l=689
+   *     See api/v1alpha1/integrations/service.proto;l=703
    * @return A list containing the verificationFields.
    */
   @java.lang.Deprecated public com.google.protobuf.ProtocolStringList
@@ -494,7 +493,7 @@ java.lang.String defaultValue) {
    *
    * <code>repeated string verification_fields = 11 [json_name = "verificationFields", deprecated = true];</code>
    * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.verification_fields is deprecated.
-   *     See api/v1alpha1/integrations/service.proto;l=689
+   *     See api/v1alpha1/integrations/service.proto;l=703
    * @return The count of verificationFields.
    */
   @java.lang.Deprecated public int getVerificationFieldsCount() {
@@ -507,7 +506,7 @@ java.lang.String defaultValue) {
    *
    * <code>repeated string verification_fields = 11 [json_name = "verificationFields", deprecated = true];</code>
    * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.verification_fields is deprecated.
-   *     See api/v1alpha1/integrations/service.proto;l=689
+   *     See api/v1alpha1/integrations/service.proto;l=703
    * @param index The index of the element to return.
    * @return The verificationFields at the given index.
    */
@@ -521,7 +520,7 @@ java.lang.String defaultValue) {
    *
    * <code>repeated string verification_fields = 11 [json_name = "verificationFields", deprecated = true];</code>
    * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.verification_fields is deprecated.
-   *     See api/v1alpha1/integrations/service.proto;l=689
+   *     See api/v1alpha1/integrations/service.proto;l=703
    * @param index The index of the value to return.
    * @return The bytes of the verificationFields at the given index.
    */
@@ -589,7 +588,7 @@ java.lang.String defaultValue) {
    */
   @java.lang.Override
   public boolean hasCreatedOn() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return createdOn_ != null;
   }
   /**
    * <code>.google.protobuf.Timestamp created_on = 14 [json_name = "createdOn"];</code>
@@ -682,7 +681,7 @@ java.lang.String defaultValue) {
    */
   @java.lang.Override
   public boolean hasVerificationRequest() {
-    return ((bitField0_ & 0x00000002) != 0);
+    return verificationRequest_ != null;
   }
   /**
    * <pre>
@@ -721,7 +720,7 @@ java.lang.String defaultValue) {
    */
   @java.lang.Override
   public boolean hasInvoiceRequest() {
-    return ((bitField0_ & 0x00000004) != 0);
+    return invoiceRequest_ != null;
   }
   /**
    * <pre>
@@ -911,7 +910,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
    */
   @java.lang.Override
   public boolean hasTemplates() {
-    return ((bitField0_ & 0x00000008) != 0);
+    return templates_ != null;
   }
   /**
    * <pre>
@@ -1031,7 +1030,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(paymentPortalId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 12, paymentPortalId_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (createdOn_ != null) {
       output.writeMessage(14, getCreatedOn());
     }
     if (expiryDays_ != 0) {
@@ -1049,10 +1048,10 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 19, id_);
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (verificationRequest_ != null) {
       output.writeMessage(20, getVerificationRequest());
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
+    if (invoiceRequest_ != null) {
       output.writeMessage(21, getInvoiceRequest());
     }
     for (int i = 0; i < paymentRequests_.size(); i++) {
@@ -1064,7 +1063,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
         internalGetBaseData(),
         BaseDataDefaultEntryHolder.defaultEntry,
         23);
-    if (((bitField0_ & 0x00000008) != 0)) {
+    if (templates_ != null) {
       output.writeMessage(24, getTemplates());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(paymentProfileName_)) {
@@ -1125,7 +1124,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(paymentPortalId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, paymentPortalId_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (createdOn_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(14, getCreatedOn());
     }
@@ -1148,11 +1147,11 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(19, id_);
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (verificationRequest_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(20, getVerificationRequest());
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
+    if (invoiceRequest_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(21, getInvoiceRequest());
     }
@@ -1170,7 +1169,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
       size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(23, baseData__);
     }
-    if (((bitField0_ & 0x00000008) != 0)) {
+    if (templates_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(24, getTemplates());
     }
@@ -1467,23 +1466,13 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.integrations.PaymentLinkConfig.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getCreatedOnFieldBuilder();
-        getVerificationRequestFieldBuilder();
-        getInvoiceRequestFieldBuilder();
-        getPaymentRequestsFieldBuilder();
-        getTemplatesFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -1615,12 +1604,10 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
       if (((from_bitField0_ & 0x00000400) != 0)) {
         result.paymentPortalId_ = paymentPortalId_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000800) != 0)) {
         result.createdOn_ = createdOnBuilder_ == null
             ? createdOn_
             : createdOnBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00001000) != 0)) {
         result.expiryDays_ = expiryDays_;
@@ -1638,13 +1625,11 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
         result.verificationRequest_ = verificationRequestBuilder_ == null
             ? verificationRequest_
             : verificationRequestBuilder_.build();
-        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00020000) != 0)) {
         result.invoiceRequest_ = invoiceRequestBuilder_ == null
             ? invoiceRequest_
             : invoiceRequestBuilder_.build();
-        to_bitField0_ |= 0x00000004;
       }
       if (((from_bitField0_ & 0x00080000) != 0)) {
         result.baseData_ = internalGetBaseData();
@@ -1654,12 +1639,10 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
         result.templates_ = templatesBuilder_ == null
             ? templates_
             : templatesBuilder_.build();
-        to_bitField0_ |= 0x00000008;
       }
       if (((from_bitField0_ & 0x00200000) != 0)) {
         result.paymentProfileName_ = paymentProfileName_;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -2236,7 +2219,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      *
      * <code>string collection_id = 5 [json_name = "collectionId", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.collection_id is deprecated.
-     *     See api/v1alpha1/integrations/service.proto;l=674
+     *     See api/v1alpha1/integrations/service.proto;l=688
      * @return The collectionId.
      */
     @java.lang.Deprecated public java.lang.String getCollectionId() {
@@ -2258,7 +2241,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      *
      * <code>string collection_id = 5 [json_name = "collectionId", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.collection_id is deprecated.
-     *     See api/v1alpha1/integrations/service.proto;l=674
+     *     See api/v1alpha1/integrations/service.proto;l=688
      * @return The bytes for collectionId.
      */
     @java.lang.Deprecated public com.google.protobuf.ByteString
@@ -2281,7 +2264,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      *
      * <code>string collection_id = 5 [json_name = "collectionId", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.collection_id is deprecated.
-     *     See api/v1alpha1/integrations/service.proto;l=674
+     *     See api/v1alpha1/integrations/service.proto;l=688
      * @param value The collectionId to set.
      * @return This builder for chaining.
      */
@@ -2300,7 +2283,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      *
      * <code>string collection_id = 5 [json_name = "collectionId", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.collection_id is deprecated.
-     *     See api/v1alpha1/integrations/service.proto;l=674
+     *     See api/v1alpha1/integrations/service.proto;l=688
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearCollectionId() {
@@ -2316,7 +2299,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      *
      * <code>string collection_id = 5 [json_name = "collectionId", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.collection_id is deprecated.
-     *     See api/v1alpha1/integrations/service.proto;l=674
+     *     See api/v1alpha1/integrations/service.proto;l=688
      * @param value The bytes for collectionId to set.
      * @return This builder for chaining.
      */
@@ -2338,7 +2321,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      *
      * <code>.api.commons.integrations.IntegrationType integration_id = 6 [json_name = "integrationId", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.integration_id is deprecated.
-     *     See api/v1alpha1/integrations/service.proto;l=676
+     *     See api/v1alpha1/integrations/service.proto;l=690
      * @return The enum numeric value on the wire for integrationId.
      */
     @java.lang.Override @java.lang.Deprecated public int getIntegrationIdValue() {
@@ -2351,7 +2334,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      *
      * <code>.api.commons.integrations.IntegrationType integration_id = 6 [json_name = "integrationId", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.integration_id is deprecated.
-     *     See api/v1alpha1/integrations/service.proto;l=676
+     *     See api/v1alpha1/integrations/service.proto;l=690
      * @param value The enum numeric value on the wire for integrationId to set.
      * @return This builder for chaining.
      */
@@ -2368,7 +2351,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      *
      * <code>.api.commons.integrations.IntegrationType integration_id = 6 [json_name = "integrationId", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.integration_id is deprecated.
-     *     See api/v1alpha1/integrations/service.proto;l=676
+     *     See api/v1alpha1/integrations/service.proto;l=690
      * @return The integrationId.
      */
     @java.lang.Override
@@ -2383,7 +2366,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      *
      * <code>.api.commons.integrations.IntegrationType integration_id = 6 [json_name = "integrationId", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.integration_id is deprecated.
-     *     See api/v1alpha1/integrations/service.proto;l=676
+     *     See api/v1alpha1/integrations/service.proto;l=690
      * @param value The integrationId to set.
      * @return This builder for chaining.
      */
@@ -2403,7 +2386,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      *
      * <code>.api.commons.integrations.IntegrationType integration_id = 6 [json_name = "integrationId", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.integration_id is deprecated.
-     *     See api/v1alpha1/integrations/service.proto;l=676
+     *     See api/v1alpha1/integrations/service.proto;l=690
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearIntegrationId() {
@@ -2421,7 +2404,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      *
      * <code>.api.commons.integrations.RequestMethod verification_method_id = 7 [json_name = "verificationMethodId", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.verification_method_id is deprecated.
-     *     See api/v1alpha1/integrations/service.proto;l=678
+     *     See api/v1alpha1/integrations/service.proto;l=692
      * @return The enum numeric value on the wire for verificationMethodId.
      */
     @java.lang.Override @java.lang.Deprecated public int getVerificationMethodIdValue() {
@@ -2434,7 +2417,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      *
      * <code>.api.commons.integrations.RequestMethod verification_method_id = 7 [json_name = "verificationMethodId", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.verification_method_id is deprecated.
-     *     See api/v1alpha1/integrations/service.proto;l=678
+     *     See api/v1alpha1/integrations/service.proto;l=692
      * @param value The enum numeric value on the wire for verificationMethodId to set.
      * @return This builder for chaining.
      */
@@ -2451,7 +2434,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      *
      * <code>.api.commons.integrations.RequestMethod verification_method_id = 7 [json_name = "verificationMethodId", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.verification_method_id is deprecated.
-     *     See api/v1alpha1/integrations/service.proto;l=678
+     *     See api/v1alpha1/integrations/service.proto;l=692
      * @return The verificationMethodId.
      */
     @java.lang.Override
@@ -2466,7 +2449,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      *
      * <code>.api.commons.integrations.RequestMethod verification_method_id = 7 [json_name = "verificationMethodId", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.verification_method_id is deprecated.
-     *     See api/v1alpha1/integrations/service.proto;l=678
+     *     See api/v1alpha1/integrations/service.proto;l=692
      * @param value The verificationMethodId to set.
      * @return This builder for chaining.
      */
@@ -2486,7 +2469,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      *
      * <code>.api.commons.integrations.RequestMethod verification_method_id = 7 [json_name = "verificationMethodId", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.verification_method_id is deprecated.
-     *     See api/v1alpha1/integrations/service.proto;l=678
+     *     See api/v1alpha1/integrations/service.proto;l=692
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearVerificationMethodId() {
@@ -2500,7 +2483,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
     /**
      * <code>.api.commons.integrations.RequestMethod invoice_method_id = 8 [json_name = "invoiceMethodId", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.invoice_method_id is deprecated.
-     *     See api/v1alpha1/integrations/service.proto;l=679
+     *     See api/v1alpha1/integrations/service.proto;l=693
      * @return The enum numeric value on the wire for invoiceMethodId.
      */
     @java.lang.Override @java.lang.Deprecated public int getInvoiceMethodIdValue() {
@@ -2509,7 +2492,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
     /**
      * <code>.api.commons.integrations.RequestMethod invoice_method_id = 8 [json_name = "invoiceMethodId", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.invoice_method_id is deprecated.
-     *     See api/v1alpha1/integrations/service.proto;l=679
+     *     See api/v1alpha1/integrations/service.proto;l=693
      * @param value The enum numeric value on the wire for invoiceMethodId to set.
      * @return This builder for chaining.
      */
@@ -2522,7 +2505,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
     /**
      * <code>.api.commons.integrations.RequestMethod invoice_method_id = 8 [json_name = "invoiceMethodId", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.invoice_method_id is deprecated.
-     *     See api/v1alpha1/integrations/service.proto;l=679
+     *     See api/v1alpha1/integrations/service.proto;l=693
      * @return The invoiceMethodId.
      */
     @java.lang.Override
@@ -2533,7 +2516,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
     /**
      * <code>.api.commons.integrations.RequestMethod invoice_method_id = 8 [json_name = "invoiceMethodId", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.invoice_method_id is deprecated.
-     *     See api/v1alpha1/integrations/service.proto;l=679
+     *     See api/v1alpha1/integrations/service.proto;l=693
      * @param value The invoiceMethodId to set.
      * @return This builder for chaining.
      */
@@ -2549,7 +2532,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
     /**
      * <code>.api.commons.integrations.RequestMethod invoice_method_id = 8 [json_name = "invoiceMethodId", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.invoice_method_id is deprecated.
-     *     See api/v1alpha1/integrations/service.proto;l=679
+     *     See api/v1alpha1/integrations/service.proto;l=693
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearInvoiceMethodId() {
@@ -2567,7 +2550,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      *
      * <code>.api.commons.integrations.RequestMethod payment_method_id = 9 [json_name = "paymentMethodId", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.payment_method_id is deprecated.
-     *     See api/v1alpha1/integrations/service.proto;l=681
+     *     See api/v1alpha1/integrations/service.proto;l=695
      * @return The enum numeric value on the wire for paymentMethodId.
      */
     @java.lang.Override @java.lang.Deprecated public int getPaymentMethodIdValue() {
@@ -2580,7 +2563,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      *
      * <code>.api.commons.integrations.RequestMethod payment_method_id = 9 [json_name = "paymentMethodId", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.payment_method_id is deprecated.
-     *     See api/v1alpha1/integrations/service.proto;l=681
+     *     See api/v1alpha1/integrations/service.proto;l=695
      * @param value The enum numeric value on the wire for paymentMethodId to set.
      * @return This builder for chaining.
      */
@@ -2597,7 +2580,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      *
      * <code>.api.commons.integrations.RequestMethod payment_method_id = 9 [json_name = "paymentMethodId", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.payment_method_id is deprecated.
-     *     See api/v1alpha1/integrations/service.proto;l=681
+     *     See api/v1alpha1/integrations/service.proto;l=695
      * @return The paymentMethodId.
      */
     @java.lang.Override
@@ -2612,7 +2595,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      *
      * <code>.api.commons.integrations.RequestMethod payment_method_id = 9 [json_name = "paymentMethodId", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.payment_method_id is deprecated.
-     *     See api/v1alpha1/integrations/service.proto;l=681
+     *     See api/v1alpha1/integrations/service.proto;l=695
      * @param value The paymentMethodId to set.
      * @return This builder for chaining.
      */
@@ -2632,7 +2615,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      *
      * <code>.api.commons.integrations.RequestMethod payment_method_id = 9 [json_name = "paymentMethodId", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.payment_method_id is deprecated.
-     *     See api/v1alpha1/integrations/service.proto;l=681
+     *     See api/v1alpha1/integrations/service.proto;l=695
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearPaymentMethodId() {
@@ -2840,7 +2823,7 @@ java.lang.String defaultValue) {
      *
      * <code>repeated string verification_fields = 11 [json_name = "verificationFields", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.verification_fields is deprecated.
-     *     See api/v1alpha1/integrations/service.proto;l=689
+     *     See api/v1alpha1/integrations/service.proto;l=703
      * @return A list containing the verificationFields.
      */
     @java.lang.Deprecated public com.google.protobuf.ProtocolStringList
@@ -2855,7 +2838,7 @@ java.lang.String defaultValue) {
      *
      * <code>repeated string verification_fields = 11 [json_name = "verificationFields", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.verification_fields is deprecated.
-     *     See api/v1alpha1/integrations/service.proto;l=689
+     *     See api/v1alpha1/integrations/service.proto;l=703
      * @return The count of verificationFields.
      */
     @java.lang.Deprecated public int getVerificationFieldsCount() {
@@ -2868,7 +2851,7 @@ java.lang.String defaultValue) {
      *
      * <code>repeated string verification_fields = 11 [json_name = "verificationFields", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.verification_fields is deprecated.
-     *     See api/v1alpha1/integrations/service.proto;l=689
+     *     See api/v1alpha1/integrations/service.proto;l=703
      * @param index The index of the element to return.
      * @return The verificationFields at the given index.
      */
@@ -2882,7 +2865,7 @@ java.lang.String defaultValue) {
      *
      * <code>repeated string verification_fields = 11 [json_name = "verificationFields", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.verification_fields is deprecated.
-     *     See api/v1alpha1/integrations/service.proto;l=689
+     *     See api/v1alpha1/integrations/service.proto;l=703
      * @param index The index of the value to return.
      * @return The bytes of the verificationFields at the given index.
      */
@@ -2897,7 +2880,7 @@ java.lang.String defaultValue) {
      *
      * <code>repeated string verification_fields = 11 [json_name = "verificationFields", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.verification_fields is deprecated.
-     *     See api/v1alpha1/integrations/service.proto;l=689
+     *     See api/v1alpha1/integrations/service.proto;l=703
      * @param index The index to set the value at.
      * @param value The verificationFields to set.
      * @return This builder for chaining.
@@ -2918,7 +2901,7 @@ java.lang.String defaultValue) {
      *
      * <code>repeated string verification_fields = 11 [json_name = "verificationFields", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.verification_fields is deprecated.
-     *     See api/v1alpha1/integrations/service.proto;l=689
+     *     See api/v1alpha1/integrations/service.proto;l=703
      * @param value The verificationFields to add.
      * @return This builder for chaining.
      */
@@ -2938,7 +2921,7 @@ java.lang.String defaultValue) {
      *
      * <code>repeated string verification_fields = 11 [json_name = "verificationFields", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.verification_fields is deprecated.
-     *     See api/v1alpha1/integrations/service.proto;l=689
+     *     See api/v1alpha1/integrations/service.proto;l=703
      * @param values The verificationFields to add.
      * @return This builder for chaining.
      */
@@ -2958,7 +2941,7 @@ java.lang.String defaultValue) {
      *
      * <code>repeated string verification_fields = 11 [json_name = "verificationFields", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.verification_fields is deprecated.
-     *     See api/v1alpha1/integrations/service.proto;l=689
+     *     See api/v1alpha1/integrations/service.proto;l=703
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearVerificationFields() {
@@ -2975,7 +2958,7 @@ java.lang.String defaultValue) {
      *
      * <code>repeated string verification_fields = 11 [json_name = "verificationFields", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.verification_fields is deprecated.
-     *     See api/v1alpha1/integrations/service.proto;l=689
+     *     See api/v1alpha1/integrations/service.proto;l=703
      * @param value The bytes of the verificationFields to add.
      * @return This builder for chaining.
      */
@@ -3158,10 +3141,8 @@ java.lang.String defaultValue) {
       } else {
         createdOnBuilder_.mergeFrom(value);
       }
-      if (createdOn_ != null) {
-        bitField0_ |= 0x00000800;
-        onChanged();
-      }
+      bitField0_ |= 0x00000800;
+      onChanged();
       return this;
     }
     /**
@@ -3484,10 +3465,8 @@ java.lang.String defaultValue) {
       } else {
         verificationRequestBuilder_.mergeFrom(value);
       }
-      if (verificationRequest_ != null) {
-        bitField0_ |= 0x00010000;
-        onChanged();
-      }
+      bitField0_ |= 0x00010000;
+      onChanged();
       return this;
     }
     /**
@@ -3646,10 +3625,8 @@ java.lang.String defaultValue) {
       } else {
         invoiceRequestBuilder_.mergeFrom(value);
       }
-      if (invoiceRequest_ != null) {
-        bitField0_ |= 0x00020000;
-        onChanged();
-      }
+      bitField0_ |= 0x00020000;
+      onChanged();
       return this;
     }
     /**
@@ -4282,10 +4259,8 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
       } else {
         templatesBuilder_.mergeFrom(value);
       }
-      if (templates_ != null) {
-        bitField0_ |= 0x00100000;
-        onChanged();
-      }
+      bitField0_ |= 0x00100000;
+      onChanged();
       return this;
     }
     /**

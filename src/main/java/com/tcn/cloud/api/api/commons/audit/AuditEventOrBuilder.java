@@ -239,6 +239,21 @@ public interface AuditEventOrBuilder extends
   com.tcn.cloud.api.api.commons.audit.VanaFlagSummaryEventOrBuilder getVanaFlagSummaryEventOrBuilder();
 
   /**
+   * <code>.api.commons.audit.VanaPhraseCorrectionEvent vana_phrase_correction_event = 204 [json_name = "vanaPhraseCorrectionEvent"];</code>
+   * @return Whether the vanaPhraseCorrectionEvent field is set.
+   */
+  boolean hasVanaPhraseCorrectionEvent();
+  /**
+   * <code>.api.commons.audit.VanaPhraseCorrectionEvent vana_phrase_correction_event = 204 [json_name = "vanaPhraseCorrectionEvent"];</code>
+   * @return The vanaPhraseCorrectionEvent.
+   */
+  com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent getVanaPhraseCorrectionEvent();
+  /**
+   * <code>.api.commons.audit.VanaPhraseCorrectionEvent vana_phrase_correction_event = 204 [json_name = "vanaPhraseCorrectionEvent"];</code>
+   */
+  com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEventOrBuilder getVanaPhraseCorrectionEventOrBuilder();
+
+  /**
    * <pre>
    *&#47; Omnichannel Events class 300
    * </pre>
@@ -2373,6 +2388,63 @@ public interface AuditEventOrBuilder extends
    * <code>.api.commons.audit.ComplianceRndQueryEvent compliance_rnd_query_cached_event = 701 [json_name = "complianceRndQueryCachedEvent"];</code>
    */
   com.tcn.cloud.api.api.commons.audit.ComplianceRndQueryEventOrBuilder getComplianceRndQueryCachedEventOrBuilder();
+
+  /**
+   * <pre>
+   * Agent Training events class 800
+   * learning opportunity created event
+   * </pre>
+   *
+   * <code>.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent agent_training_create_learning_opportunity_event = 800 [json_name = "agentTrainingCreateLearningOpportunityEvent"];</code>
+   * @return Whether the agentTrainingCreateLearningOpportunityEvent field is set.
+   */
+  boolean hasAgentTrainingCreateLearningOpportunityEvent();
+  /**
+   * <pre>
+   * Agent Training events class 800
+   * learning opportunity created event
+   * </pre>
+   *
+   * <code>.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent agent_training_create_learning_opportunity_event = 800 [json_name = "agentTrainingCreateLearningOpportunityEvent"];</code>
+   * @return The agentTrainingCreateLearningOpportunityEvent.
+   */
+  com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent getAgentTrainingCreateLearningOpportunityEvent();
+  /**
+   * <pre>
+   * Agent Training events class 800
+   * learning opportunity created event
+   * </pre>
+   *
+   * <code>.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent agent_training_create_learning_opportunity_event = 800 [json_name = "agentTrainingCreateLearningOpportunityEvent"];</code>
+   */
+  com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEventOrBuilder getAgentTrainingCreateLearningOpportunityEventOrBuilder();
+
+  /**
+   * <pre>
+   * LMS Events class 900
+   * </pre>
+   *
+   * <code>.api.commons.audit.LMSPipelineFailureEvent lms_pipeline_failure_event = 900 [json_name = "lmsPipelineFailureEvent"];</code>
+   * @return Whether the lmsPipelineFailureEvent field is set.
+   */
+  boolean hasLmsPipelineFailureEvent();
+  /**
+   * <pre>
+   * LMS Events class 900
+   * </pre>
+   *
+   * <code>.api.commons.audit.LMSPipelineFailureEvent lms_pipeline_failure_event = 900 [json_name = "lmsPipelineFailureEvent"];</code>
+   * @return The lmsPipelineFailureEvent.
+   */
+  com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent getLmsPipelineFailureEvent();
+  /**
+   * <pre>
+   * LMS Events class 900
+   * </pre>
+   *
+   * <code>.api.commons.audit.LMSPipelineFailureEvent lms_pipeline_failure_event = 900 [json_name = "lmsPipelineFailureEvent"];</code>
+   */
+  com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEventOrBuilder getLmsPipelineFailureEventOrBuilder();
 
   com.tcn.cloud.api.api.commons.audit.AuditEvent.EventCase getEventCase();
 }

@@ -27,7 +27,7 @@ public final class ServiceProto {
       "i.v1alpha1.tickets\032\027annotations/authz.pr" +
       "oto\032\"api/v1alpha1/tickets/project.proto\032" +
       "!api/v1alpha1/tickets/ticket.proto\032\034goog" +
-      "le/api/annotations.proto2\210\033\n\007Tickets\022\235\001\n" +
+      "le/api/annotations.proto2\210!\n\007Tickets\022\235\001\n" +
       "\014CreateTicket\022%.api.v1alpha1.tickets.Cre" +
       "ateTicketReq\032%.api.v1alpha1.tickets.Crea" +
       "teTicketRes\"?\272\270\221\002\005\n\003\010\234\030\202\323\344\223\002/\"*/api/v1al" +
@@ -114,11 +114,30 @@ public final class ServiceProto {
       "ha1.tickets.ListUsersRequest\032\'.api.v1alp" +
       "ha1.tickets.ListUsersResponse\"<\272\270\221\002\005\n\003\010\234" +
       "\030\202\323\344\223\002,\"\'/api/v1alpha1/tickets/tickets/l" +
-      "istusers:\001*B\250\001\n&com.tcn.cloud.api.api.v1" +
-      "alpha1.ticketsB\014ServiceProtoP\001\242\002\003AVT\252\002\024A" +
-      "pi.V1alpha1.Tickets\312\002\024Api\\V1alpha1\\Ticke" +
-      "ts\342\002 Api\\V1alpha1\\Tickets\\GPBMetadata\352\002\026" +
-      "Api::V1alpha1::Ticketsb\006proto3"
+      "istusers:\001*\022\272\001\n\021CloseTicketAction\022..api." +
+      "v1alpha1.tickets.CloseTicketActionReques" +
+      "t\032/.api.v1alpha1.tickets.CloseTicketActi" +
+      "onResponse\"D\272\270\221\002\005\n\003\010\234\030\202\323\344\223\0024\"//api/v1alp" +
+      "ha1/tickets/tickets/closeticketaction:\001*" +
+      "\022\276\001\n\022AssignTicketAction\022/.api.v1alpha1.t" +
+      "ickets.AssignTicketActionRequest\0320.api.v" +
+      "1alpha1.tickets.AssignTicketActionRespon" +
+      "se\"E\272\270\221\002\005\n\003\010\234\030\202\323\344\223\0025\"0/api/v1alpha1/tick" +
+      "ets/tickets/assignticketaction:\001*\022\276\001\n\022Cr" +
+      "eateTicketAction\022/.api.v1alpha1.tickets." +
+      "CreateTicketActionRequest\0320.api.v1alpha1" +
+      ".tickets.CreateTicketActionResponse\"E\272\270\221" +
+      "\002\005\n\003\010\234\030\202\323\344\223\0025\"0/api/v1alpha1/tickets/tic" +
+      "kets/createticketaction:\001*\022\276\001\n\022ChangeTic" +
+      "ketStatus\022/.api.v1alpha1.tickets.ChangeT" +
+      "icketStatusRequest\0320.api.v1alpha1.ticket" +
+      "s.ChangeTicketStatusResponse\"E\272\270\221\002\005\n\003\010\234\030" +
+      "\202\323\344\223\0025\"0/api/v1alpha1/tickets/tickets/ch" +
+      "angeticketstatus:\001*B\250\001\n&com.tcn.cloud.ap" +
+      "i.api.v1alpha1.ticketsB\014ServiceProtoP\001\242\002" +
+      "\003AVT\252\002\024Api.V1alpha1.Tickets\312\002\024Api\\V1alph" +
+      "a1\\Tickets\342\002 Api\\V1alpha1\\Tickets\\GPBMet" +
+      "adata\352\002\026Api::V1alpha1::Ticketsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

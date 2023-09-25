@@ -6,4 +6,15 @@ package com.tcn.cloud.api.api.commons.integrations;
 public interface PaymentExperianACHOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.commons.integrations.PaymentExperianACH)
     com.google.protobuf.MessageOrBuilder {
+
+  /**
+   * <pre>
+   * if true instead of using the account number uploaded to textpay,
+   * we send the payment with the account number returned on the invoice
+   * </pre>
+   *
+   * <code>bool use_invoice_account_number = 1 [json_name = "useInvoiceAccountNumber"];</code>
+   * @return The useInvoiceAccountNumber.
+   */
+  boolean getUseInvoiceAccountNumber();
 }

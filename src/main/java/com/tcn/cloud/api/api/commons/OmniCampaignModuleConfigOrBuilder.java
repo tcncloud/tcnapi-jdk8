@@ -540,4 +540,58 @@ public interface OmniCampaignModuleConfigOrBuilder extends
    */
   com.google.protobuf.ByteString
       getPaymentPortalIdsBytes(int index);
+
+  /**
+   * <pre>
+   * Flow Id
+   * </pre>
+   *
+   * <code>.api.commons.Int64Id flow_id = 20 [json_name = "flowId"];</code>
+   * @return Whether the flowId field is set.
+   */
+  boolean hasFlowId();
+  /**
+   * <pre>
+   * Flow Id
+   * </pre>
+   *
+   * <code>.api.commons.Int64Id flow_id = 20 [json_name = "flowId"];</code>
+   * @return The flowId.
+   */
+  com.tcn.cloud.api.api.commons.Int64Id getFlowId();
+  /**
+   * <pre>
+   * Flow Id
+   * </pre>
+   *
+   * <code>.api.commons.Int64Id flow_id = 20 [json_name = "flowId"];</code>
+   */
+  com.tcn.cloud.api.api.commons.Int64IdOrBuilder getFlowIdOrBuilder();
+
+  /**
+   * <pre>
+   * skills
+   * </pre>
+   *
+   * <code>.api.commons.OmniConversationSkills skills = 21 [json_name = "skills"];</code>
+   * @return Whether the skills field is set.
+   */
+  boolean hasSkills();
+  /**
+   * <pre>
+   * skills
+   * </pre>
+   *
+   * <code>.api.commons.OmniConversationSkills skills = 21 [json_name = "skills"];</code>
+   * @return The skills.
+   */
+  com.tcn.cloud.api.api.commons.OmniConversationSkills getSkills();
+  /**
+   * <pre>
+   * skills
+   * </pre>
+   *
+   * <code>.api.commons.OmniConversationSkills skills = 21 [json_name = "skills"];</code>
+   */
+  com.tcn.cloud.api.api.commons.OmniConversationSkillsOrBuilder getSkillsOrBuilder();
 }

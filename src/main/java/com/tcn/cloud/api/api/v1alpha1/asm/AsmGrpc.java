@@ -5,7 +5,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.58.0)",
+    value = "by gRPC proto compiler (version 1.57.1)",
     comments = "Source: api/v1alpha1/asm/public_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class AsmGrpc {

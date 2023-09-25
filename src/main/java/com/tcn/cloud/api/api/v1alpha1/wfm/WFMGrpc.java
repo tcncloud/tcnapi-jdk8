@@ -8,7 +8,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.58.0)",
+    value = "by gRPC proto compiler (version 1.57.1)",
     comments = "Source: api/v1alpha1/wfm/wfm.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class WFMGrpc {
@@ -421,6 +421,37 @@ public final class WFMGrpc {
     return getBuildCallProfileTemplateForSkillProfileMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateRes> getBuildCallProfileTemplateMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "BuildCallProfileTemplate",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateRes> getBuildCallProfileTemplateMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateReq, com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateRes> getBuildCallProfileTemplateMethod;
+    if ((getBuildCallProfileTemplateMethod = WFMGrpc.getBuildCallProfileTemplateMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getBuildCallProfileTemplateMethod = WFMGrpc.getBuildCallProfileTemplateMethod) == null) {
+          WFMGrpc.getBuildCallProfileTemplateMethod = getBuildCallProfileTemplateMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateReq, com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "BuildCallProfileTemplate"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateRes.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("BuildCallProfileTemplate"))
+              .build();
+        }
+      }
+    }
+    return getBuildCallProfileTemplateMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateInactiveSkillProfileMappingReq,
       com.tcn.cloud.api.api.v1alpha1.wfm.CreateInactiveSkillProfileMappingRes> getCreateInactiveSkillProfileMappingMethod;
 
@@ -512,6 +543,130 @@ public final class WFMGrpc {
       }
     }
     return getDisconnectInactiveSkillProfileMappingMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProfileGroupReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProfileGroupRes> getCreateSkillProfileGroupMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateSkillProfileGroup",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProfileGroupReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProfileGroupRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProfileGroupReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProfileGroupRes> getCreateSkillProfileGroupMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProfileGroupReq, com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProfileGroupRes> getCreateSkillProfileGroupMethod;
+    if ((getCreateSkillProfileGroupMethod = WFMGrpc.getCreateSkillProfileGroupMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getCreateSkillProfileGroupMethod = WFMGrpc.getCreateSkillProfileGroupMethod) == null) {
+          WFMGrpc.getCreateSkillProfileGroupMethod = getCreateSkillProfileGroupMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProfileGroupReq, com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProfileGroupRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateSkillProfileGroup"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProfileGroupReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProfileGroupRes.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CreateSkillProfileGroup"))
+              .build();
+        }
+      }
+    }
+    return getCreateSkillProfileGroupMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupRes> getUpdateSkillProfileGroupMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateSkillProfileGroup",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupRes> getUpdateSkillProfileGroupMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupReq, com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupRes> getUpdateSkillProfileGroupMethod;
+    if ((getUpdateSkillProfileGroupMethod = WFMGrpc.getUpdateSkillProfileGroupMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getUpdateSkillProfileGroupMethod = WFMGrpc.getUpdateSkillProfileGroupMethod) == null) {
+          WFMGrpc.getUpdateSkillProfileGroupMethod = getUpdateSkillProfileGroupMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupReq, com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateSkillProfileGroup"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupRes.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpdateSkillProfileGroup"))
+              .build();
+        }
+      }
+    }
+    return getUpdateSkillProfileGroupMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfileGroupsReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfileGroupsRes> getListSkillProfileGroupsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListSkillProfileGroups",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfileGroupsReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfileGroupsRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfileGroupsReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfileGroupsRes> getListSkillProfileGroupsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfileGroupsReq, com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfileGroupsRes> getListSkillProfileGroupsMethod;
+    if ((getListSkillProfileGroupsMethod = WFMGrpc.getListSkillProfileGroupsMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getListSkillProfileGroupsMethod = WFMGrpc.getListSkillProfileGroupsMethod) == null) {
+          WFMGrpc.getListSkillProfileGroupsMethod = getListSkillProfileGroupsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfileGroupsReq, com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfileGroupsRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListSkillProfileGroups"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfileGroupsReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfileGroupsRes.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListSkillProfileGroups"))
+              .build();
+        }
+      }
+    }
+    return getListSkillProfileGroupsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupAssociationsReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupAssociationsRes> getUpdateSkillProfileGroupAssociationsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateSkillProfileGroupAssociations",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupAssociationsReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupAssociationsRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupAssociationsReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupAssociationsRes> getUpdateSkillProfileGroupAssociationsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupAssociationsReq, com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupAssociationsRes> getUpdateSkillProfileGroupAssociationsMethod;
+    if ((getUpdateSkillProfileGroupAssociationsMethod = WFMGrpc.getUpdateSkillProfileGroupAssociationsMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getUpdateSkillProfileGroupAssociationsMethod = WFMGrpc.getUpdateSkillProfileGroupAssociationsMethod) == null) {
+          WFMGrpc.getUpdateSkillProfileGroupAssociationsMethod = getUpdateSkillProfileGroupAssociationsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupAssociationsReq, com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupAssociationsRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateSkillProfileGroupAssociations"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupAssociationsReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupAssociationsRes.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpdateSkillProfileGroupAssociations"))
+              .build();
+        }
+      }
+    }
+    return getUpdateSkillProfileGroupAssociationsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteHistoricalDataDeltasReq,
@@ -884,6 +1039,37 @@ public final class WFMGrpc {
       }
     }
     return getListForecastIntervalsForSkillProfileMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval> getListForecastIntervalsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListForecastIntervals",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval> getListForecastIntervalsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsReq, com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval> getListForecastIntervalsMethod;
+    if ((getListForecastIntervalsMethod = WFMGrpc.getListForecastIntervalsMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getListForecastIntervalsMethod = WFMGrpc.getListForecastIntervalsMethod) == null) {
+          WFMGrpc.getListForecastIntervalsMethod = getListForecastIntervalsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsReq, com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListForecastIntervals"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListForecastIntervals"))
+              .build();
+        }
+      }
+    }
+    return getListForecastIntervalsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalReq,
@@ -1444,6 +1630,37 @@ public final class WFMGrpc {
     return getUpdateProgramNodeMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidRes> getListProgramNodesBySidMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListProgramNodesBySid",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidRes> getListProgramNodesBySidMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidReq, com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidRes> getListProgramNodesBySidMethod;
+    if ((getListProgramNodesBySidMethod = WFMGrpc.getListProgramNodesBySidMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getListProgramNodesBySidMethod = WFMGrpc.getListProgramNodesBySidMethod) == null) {
+          WFMGrpc.getListProgramNodesBySidMethod = getListProgramNodesBySidMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidReq, com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListProgramNodesBySid"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidRes.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListProgramNodesBySid"))
+              .build();
+        }
+      }
+    }
+    return getListProgramNodesBySidMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateConstraintRuleReq,
       com.tcn.cloud.api.api.v1alpha1.wfm.CreateConstraintRuleRes> getCreateConstraintRuleMethod;
 
@@ -1597,6 +1814,37 @@ public final class WFMGrpc {
       }
     }
     return getUpdateNonSkillActivityMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivitiesReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivitiesRes> getListNonSkillActivitiesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListNonSkillActivities",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivitiesReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivitiesRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivitiesReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivitiesRes> getListNonSkillActivitiesMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivitiesReq, com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivitiesRes> getListNonSkillActivitiesMethod;
+    if ((getListNonSkillActivitiesMethod = WFMGrpc.getListNonSkillActivitiesMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getListNonSkillActivitiesMethod = WFMGrpc.getListNonSkillActivitiesMethod) == null) {
+          WFMGrpc.getListNonSkillActivitiesMethod = getListNonSkillActivitiesMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivitiesReq, com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivitiesRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListNonSkillActivities"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivitiesReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivitiesRes.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListNonSkillActivities"))
+              .build();
+        }
+      }
+    }
+    return getListNonSkillActivitiesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivityAssociationsReq,
@@ -1845,6 +2093,37 @@ public final class WFMGrpc {
       }
     }
     return getListUngroupedWFMAgentsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsRes> getListWFMAgentSidsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListWFMAgentSids",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsRes> getListWFMAgentSidsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsReq, com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsRes> getListWFMAgentSidsMethod;
+    if ((getListWFMAgentSidsMethod = WFMGrpc.getListWFMAgentSidsMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getListWFMAgentSidsMethod = WFMGrpc.getListWFMAgentSidsMethod) == null) {
+          WFMGrpc.getListWFMAgentSidsMethod = getListWFMAgentSidsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsReq, com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListWFMAgentSids"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsRes.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListWFMAgentSids"))
+              .build();
+        }
+      }
+    }
+    return getListWFMAgentSidsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentsAssociatedWithAgentGroupReq,
@@ -3118,6 +3397,37 @@ public final class WFMGrpc {
     return getListDraftSchedulesMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ClearScheduleReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ClearScheduleRes> getClearScheduleMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ClearSchedule",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.ClearScheduleReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.ClearScheduleRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ClearScheduleReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ClearScheduleRes> getClearScheduleMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ClearScheduleReq, com.tcn.cloud.api.api.v1alpha1.wfm.ClearScheduleRes> getClearScheduleMethod;
+    if ((getClearScheduleMethod = WFMGrpc.getClearScheduleMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getClearScheduleMethod = WFMGrpc.getClearScheduleMethod) == null) {
+          WFMGrpc.getClearScheduleMethod = getClearScheduleMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ClearScheduleReq, com.tcn.cloud.api.api.v1alpha1.wfm.ClearScheduleRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ClearSchedule"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ClearScheduleReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ClearScheduleRes.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ClearSchedule"))
+              .build();
+        }
+      }
+    }
+    return getClearScheduleMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteDraftScheduleReq,
       com.tcn.cloud.api.api.v1alpha1.wfm.DeleteDraftScheduleRes> getDeleteDraftScheduleMethod;
 
@@ -3147,6 +3457,37 @@ public final class WFMGrpc {
       }
     }
     return getDeleteDraftScheduleMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidRes> getListShiftInstancesBySidMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListShiftInstancesBySid",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidRes> getListShiftInstancesBySidMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidReq, com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidRes> getListShiftInstancesBySidMethod;
+    if ((getListShiftInstancesBySidMethod = WFMGrpc.getListShiftInstancesBySidMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getListShiftInstancesBySidMethod = WFMGrpc.getListShiftInstancesBySidMethod) == null) {
+          WFMGrpc.getListShiftInstancesBySidMethod = getListShiftInstancesBySidMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidReq, com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListShiftInstancesBySid"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidRes.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListShiftInstancesBySid"))
+              .build();
+        }
+      }
+    }
+    return getListShiftInstancesBySidMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CopyScheduleToScheduleReq,
@@ -3521,6 +3862,68 @@ public final class WFMGrpc {
     return getDeleteSchedulingTargetMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetRes> getGetDefaultSchedulingTargetMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetDefaultSchedulingTarget",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetRes> getGetDefaultSchedulingTargetMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetReq, com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetRes> getGetDefaultSchedulingTargetMethod;
+    if ((getGetDefaultSchedulingTargetMethod = WFMGrpc.getGetDefaultSchedulingTargetMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getGetDefaultSchedulingTargetMethod = WFMGrpc.getGetDefaultSchedulingTargetMethod) == null) {
+          WFMGrpc.getGetDefaultSchedulingTargetMethod = getGetDefaultSchedulingTargetMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetReq, com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetDefaultSchedulingTarget"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetRes.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("GetDefaultSchedulingTarget"))
+              .build();
+        }
+      }
+    }
+    return getGetDefaultSchedulingTargetMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetRes> getSetDefaultSchedulingTargetMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SetDefaultSchedulingTarget",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetRes> getSetDefaultSchedulingTargetMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetReq, com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetRes> getSetDefaultSchedulingTargetMethod;
+    if ((getSetDefaultSchedulingTargetMethod = WFMGrpc.getSetDefaultSchedulingTargetMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getSetDefaultSchedulingTargetMethod = WFMGrpc.getSetDefaultSchedulingTargetMethod) == null) {
+          WFMGrpc.getSetDefaultSchedulingTargetMethod = getSetDefaultSchedulingTargetMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetReq, com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetDefaultSchedulingTarget"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetRes.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("SetDefaultSchedulingTarget"))
+              .build();
+        }
+      }
+    }
+    return getSetDefaultSchedulingTargetMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.GetPerformanceMetricsReq,
       com.tcn.cloud.api.api.v1alpha1.wfm.GetPerformanceMetricsRes> getGetPerformanceMetricsMethod;
 
@@ -3762,17 +4165,16 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Gets the historical data for the org sending the request and the given &#64;skill_profile_sid.
+     * Gets the historical data for the org sending the request and the given &#64;skill_profile_category.
      * It will look through the client's call history and generate the historical data by using their configured forecasting parameters (historical data period and interval width).
      * The duration of each interval will be the interval width of the org's forecasting parameters.
-     * It also applies any deltas that the client has stored for the given &#64;SkillProfileSid.
+     * It also applies any deltas that the client has stored for the given &#64;skill_profile_category, if the category is a group it will use the deltas of the skill profiles part of that group.
      * If the client has no historical data, only the deltas will be applied to the returned intervals, all other intervals will have nil averages.
-     * If any inactive skill profiles are mapped to the given &#64;skill_profile_sid, the call history and deltas of those skill profiles will be included for the historical data calculation.
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the &#64;skill_profile_sid in the request is invalid.
-     *   - grpc.NotFound: the &#64;skill_profile_sid given is not found for the org.
+     *   - grpc.Invalid: the &#64;skill_profile_category in the request is invalid.
+     *   - grpc.NotFound: the &#64;skill_profile_category given is not found for the org.
      *   - grpc.Internal: error occurs when getting the historical data.
      * </pre>
      */
@@ -3837,6 +4239,7 @@ public final class WFMGrpc {
      * The &#64;total_calls in the returned template be summed from the (&#64;training_data_start_datetime - &#64;averages_calculation_range_in_months) to &#64;training_data_end_datetime,
      * or from &#64;training_data_start_datetime to &#64;training_data_end_datetime if &#64;averages_calculation_range_in_months is 0.
      * The fixed averages fields in the call profile template, will be set to the averages that the skill profile has.
+     * DEPRECATED as of Sep/7/2023 - Use BuildCallProfileTemplate instead.
      * Required permissions:
      *   NONE
      * Errors:
@@ -3845,9 +4248,31 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when building the call profile template.
      * </pre>
      */
+    @java.lang.Deprecated
     default void buildCallProfileTemplateForSkillProfile(com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateForSkillProfileReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateForSkillProfileRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBuildCallProfileTemplateForSkillProfileMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Builds and returns a call profile template for the org sending the request and the given &#64;skill_profile_category.
+     * The template will be generated using the training data for said skill profile category using the &#64;training_data_range and &#64;averages_calculation_range_in_months
+     * from the client's saved forecasting parameters.
+     * The &#64;total_calls in the returned template be summed from the (&#64;training_data_start_datetime - &#64;averages_calculation_range_in_months) to &#64;training_data_end_datetime,
+     * or from &#64;training_data_start_datetime to &#64;training_data_end_datetime if &#64;averages_calculation_range_in_months is 0.
+     * The fixed averages fields in the call profile template, will be set to the averages that the skill profile category has.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;skill_profile_category in the request is invalid.
+     *   - grpc.NotFound: the &#64;skill_profile_category given is not found for the org.
+     *   - grpc.Internal: error occurs when building the call profile template.
+     * </pre>
+     */
+    default void buildCallProfileTemplate(com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBuildCallProfileTemplateMethod(), responseObserver);
     }
 
     /**
@@ -3896,6 +4321,72 @@ public final class WFMGrpc {
     default void disconnectInactiveSkillProfileMapping(com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDisconnectInactiveSkillProfileMappingMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Creates the given &#64;skill_profile_group.
+     * &#64;skill_profile_group_sids will be ignored since associations cannot be created by this method.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;skill_profile_group in the request is invalid.
+     *   - grpc.Internal: error occurs creating the skill profile group.
+     * </pre>
+     */
+    default void createSkillProfileGroup(com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProfileGroupReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProfileGroupRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateSkillProfileGroupMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Updates the given &#64;skill_profile_group that has the &#64;skill_profile_group_sid for the org sending the request.
+     * &#64;skill_profile_group_sids will be ignored since associations cannot be updated by this method.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;skill_profile_group in the request is invalid.
+     *   - grpc.NotFound: the skill profile group to update doesn't exist.
+     *   - grpc.Internal: error occurs updating the skill profile group.
+     * </pre>
+     */
+    default void updateSkillProfileGroup(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateSkillProfileGroupMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Gets the skill profile groups that have the &#64;skill_profile_group_sids for the org sending the request.
+     * If &#64;skill_profile_group_sids is empty it will get all the skill profile groups for the org.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;skill_profile_group_sids in the request is invalid.
+     *   - grpc.Internal: error occurs getting the skill profile groups.
+     * </pre>
+     */
+    default void listSkillProfileGroups(com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfileGroupsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfileGroupsRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListSkillProfileGroupsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Updates associations of the given &#64;skill_profile_group_sid for the org sending the request.
+     * It will create the associations with the &#64;skill_profile_sids_to_associate, and remove the associations with the &#64;skill_profile_sids_to_disassociate.
+     * Only one of the skill_profile_sids fields needs to be set, but both can be set on the same request.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the values in the request are invalid.
+     *   - grpc.Internal: error occurs updating the skill profile group associations.
+     * </pre>
+     */
+    default void updateSkillProfileGroupAssociations(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupAssociationsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupAssociationsRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateSkillProfileGroupAssociationsMethod(), responseObserver);
     }
 
     /**
@@ -3951,12 +4442,12 @@ public final class WFMGrpc {
      * Builds a profile forecast using the provided &#64;call_profile_template.
      * The forecaster will produce intervals from the following range using the client's saved forecasting parameters:
      * (&#64;training_data_range_end_datetime - &#64;forecast_test_range_in_weeks) to &#64;forecast_range_end_datetime.
-     * The &#64;total_calls in the &#64;call_profile_template will be scaled using the same ranges as BuildCallProfileTemplateForSkillProfile.
+     * The &#64;total_calls in the &#64;call_profile_template will be scaled using the same ranges as BuildCallProfileTemplate.
      * The &#64;fixed_averages_forecast field indicates whether or not to do a fixed averages forecast.
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the &#64;skill_profile_sid or &#64;call_profile_template in the request is invalid.
+     *   - grpc.Invalid: the &#64;skill_profile_category or &#64;call_profile_template in the request is invalid.
      *   - grpc.Internal: error occurs during the building of the profile forecast.
      * </pre>
      */
@@ -3970,13 +4461,13 @@ public final class WFMGrpc {
      * Builds a profile forecast using the provided &#64;call_profile_template.
      * The forecaster will produce intervals from the following range using the client's saved forecasting parameters:
      * (&#64;training_data_range_end_datetime - &#64;forecast_test_range_in_weeks) to &#64;forecast_range_end_datetime.
-     * The &#64;total_calls in the &#64;call_profile_template will be scaled using the same ranges as BuildCallProfileTemplateForSkillProfile.
+     * The &#64;total_calls in the &#64;call_profile_template will be scaled using the same ranges as BuildCallProfileTemplate.
      * The &#64;fixed_averages_forecast field indicates whether or not to do a fixed averages forecast.
-     * It also returns the statistics of the produced forecast by using the test data of the given &#64;skill_profile_sid.
+     * It also returns the statistics of the produced forecast by using the test data of the given &#64;skill_profile_category.
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the &#64;skill_profile_sid or &#64;call_profile_template in the request is invalid.
+     *   - grpc.Invalid: the &#64;skill_profile_category or &#64;call_profile_template in the request is invalid.
      *   - grpc.Internal: error occurs during the building of the profile forecast.
      * </pre>
      */
@@ -4083,6 +4574,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Gets the forecast data intervals for the given &#64;skill_profile_sid.
+     * DEPRECATED as of Sep/13/2023 - Use ListForecastIntervals instead.
      * Required permissions:
      *   NONE
      * Errors:
@@ -4090,6 +4582,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when getting the forecast data intervals.
      * </pre>
      */
+    @java.lang.Deprecated
     default void listForecastIntervalsForSkillProfile(com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsForSkillProfileReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListForecastIntervalsForSkillProfileMethod(), responseObserver);
@@ -4097,15 +4590,29 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Gets the forecast data intervals for the given &#64;skill_profile_category.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;skill_profile_category in the request is invalid.
+     *   - grpc.Internal: error occurs when getting the forecast data intervals.
+     * </pre>
+     */
+    default void listForecastIntervals(com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListForecastIntervalsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Generates a regression forecast using the provided &#64;regression_template.
-     * It will generate forecast intervals for the skill profiles sids in &#64;skill_profile_sids_to_forecast,
-     * if the list is empty or has no valid skill profile sids, it will generate and save forecasts for all active skill profiles.
+     * It will generate forecast intervals for the skill profiles sids in &#64;skill_profile_sids_to_forecast.
      * It will use the client's saved forecasting test range as the start datetime and the forecast range as the end datetime of the forecasted data.
      * It will use the client's saved interval width to divide the resulting forecast intervals.
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the &#64;regression_template in the request is invalid.
+     *   - grpc.Invalid: no &#64;skill_profile_sids_to_forecast are given or the &#64;regression_template in the request is invalid.
      *   - grpc.Internal: error occurs during the building of the regression forecast.
      * </pre>
      */
@@ -4117,13 +4624,12 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Generates a regression forecast and calculates forecast statistics using the provided &#64;regression_template.
-     * It will generate forecast intervals for the skill profiles sids in &#64;skill_profile_sids_to_forecast,
-     * if the list is empty or has no valid skill profile sids, it will generate and save forecasts for all active skill profiles.
+     * It will generate forecast intervals for the skill profiles sids in &#64;skill_profile_sids_to_forecast.
      * It will use the client's saved forecasting test range as the start datetime and the forecast range as the end datetime of the forecasted data.
      * It will use the client's saved interval width to divide the resulting forecast intervals.
      * The first message received will be the forecast statistics while all subsequent ones will be the forecast intervals.
      * Errors:
-     *   - grpc.Invalid: the &#64;regression_template in the request is invalid.
+     *   - grpc.Invalid: no &#64;skill_profile_sids_to_forecast are given or the &#64;regression_template in the request is invalid.
      *   - grpc.Internal: error occurs either during the when building the forecast or calculating the stats.
      * </pre>
      */
@@ -4199,7 +4705,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Deletes forecast data intervals/deltas based on the parameters provided.
-     * If &#64;delete_param is type skill_profile_sid, then the intervals/deltas to be deleted will be
+     * If &#64;delete_param is type skill_profile_category, then the intervals/deltas to be deleted will be
      * associated with that id. If &#64;delete_param is type interval_sids, then the intervals/deltas to be
      * deleted will be contained in the list &#64;interval_sids. The &#64;delete_type field determines which
      * table(s) in the database the intervals/deltas will be deleted from.
@@ -4423,6 +4929,21 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Lists the program nodes with the given &#64;program_node_sids for the org sending the request.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the given &#64;program_node_sids are invalid.
+     *   - grpc.Internal: error occurs when listing the program nodes.
+     * </pre>
+     */
+    default void listProgramNodesBySid(com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListProgramNodesBySidMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Creates the given &#64;constraint_rule for the org sending the request.
      * The &#64;constraint_rule_sid and &#64;skill_proficiency_sid (if one was created) of the new entities will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the &#64;parent_entity.
@@ -4516,6 +5037,20 @@ public final class WFMGrpc {
     default void updateNonSkillActivity(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateNonSkillActivityReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateNonSkillActivityRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateNonSkillActivityMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Lists the non skill activities that belong to the org sending the request.
+     * Required permissions:
+     *   NONE
+     * Errors:.
+     *   - grpc.Internal: error occurs when listing the activites.
+     * </pre>
+     */
+    default void listNonSkillActivities(com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivitiesReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivitiesRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListNonSkillActivitiesMethod(), responseObserver);
     }
 
     /**
@@ -4617,6 +5152,10 @@ public final class WFMGrpc {
      * if &#64;include_inactive is true then inactive agents will also be included, otherwise only active agents will be returned.
      * if &#64;include_skill_proficiencies is true then agents returned will include their skill proficiencies.
      * if &#64;include_agent_groups is true then the &#64;agent_groups_by_agent response field will be set with a list of agent groups correlating to each agents index in the &#64;wfm_agents field.
+     * if &#64;include_agent_groups is set to true, the &#64;agent_group_schedule_scenario_sid field must be set, so that the agent groups for the correct scenario are returned.
+     * if &#64;include_agent_groups is set to true, and &#64;agent_group_schedule_scenario_sid is not set, the agent groups will not be filtered by schedule scenario.
+     * if &#64;include_agent_groups is set to false, the &#64;agent_group_schedule_scenario_sid will be ignored.
+     * &#64;agent_group_schedule_scenario_sid does not effect which &#64;wfm_agents are returned.
      * WFM agents with no associated agent_groups will have an empty slice in agent_groups_by_agent at their correlated index.
      * Required Permissions:
      *   NONE
@@ -4662,6 +5201,23 @@ public final class WFMGrpc {
     default void listUngroupedWFMAgents(com.tcn.cloud.api.api.v1alpha1.wfm.ListUngroupedWFMAgentsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListUngroupedWFMAgentsRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListUngroupedWFMAgentsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Gets the wfm_agent_sids with the given &#64;tcn_agent_sids for the org sending the request.
+     * Returns a map where Key: tcn_agent_sid - Value: wfm_agent_sid.
+     * If the wfm_agent_sid is not found for any &#64;tcn_agent_sids, they will not have an entry in the returned &#64;sids.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *  - grpc.Invalid: the &#64;tcn_agent_sids are invalid.
+     *  - grpc.Internal: error occours while listing the wfm_agent_sids.
+     * </pre>
+     */
+    default void listWFMAgentSids(com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListWFMAgentSidsMethod(), responseObserver);
     }
 
     /**
@@ -5413,6 +5969,32 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Clears shift instances from the &#64;schedule_selector for the org sending the request.
+     * If &#64;node_selector is set, only shifts related to the given &#64;node_selector will be cleared.
+     * If &#64;node_selector is not set, all shifts on the &#64;schedule_selector may be cleared, regardless of the shift template they are associated with.
+     * If &#64;datetime_range is set, only the shifts overlapping the &#64;datetime_range will be cleared.
+     * If &#64;datetime_range is not set, all shifts on the schedule will be considered in range to be deleted and &#64;invert_datetime_range and &#64;start_datetimes_only must be set to false.
+     * If &#64;invert_datetime_range is set to true, the shifts overlapping the range before and after the provided &#64;datetime_range will be deleted.
+     * If &#64;invert_datetime_range is set to false, the provided &#64;datetime_range will be used.
+     * If &#64;start_datetimes_only is set to true, deletes the shifts that start within the &#64;datetime range, or start before or after &#64;datetime_range if &#64;invert_datetime_range is true.
+     * If &#64;start_datetimes_only is set to false, deletes the shifts that overlap with the &#64;datetime range, or overlap the range before or after &#64;datetime_range if &#64;invert_datetime_range is true.
+     * If &#64;delete_locked is set to true, both locked and unlocked shifts will be cleared.
+     * If &#64;delete_locked is set to false, only shifts with &#64;is_locked set to false may be cleared.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;node_selector, &#64;schedule_selector, or &#64;datetime_range in the request are invalid.
+     *   - grpc.NotFound: the draft schedule with the given &#64;schedule_selector doesn't exist.
+     *   - grpc.Internal: error occurs when removing the shifts from the schedule.
+     * </pre>
+     */
+    default void clearSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.ClearScheduleReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ClearScheduleRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getClearScheduleMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Deletes a draft schedule with the corresponding &#64;draft_schedule_sid for the org sending the request.
      * It also deletes all of its shift instances and segments.
      * Required permissions:
@@ -5426,6 +6008,27 @@ public final class WFMGrpc {
     default void deleteDraftSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteDraftScheduleReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteDraftScheduleRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteDraftScheduleMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Lists the shift instances with the corresponding &#64;shift_instance_sids for the org sending the request.
+     * If &#64;include_shift_template is set to true then the related shift template for the shift instances will be returned in the shift template field.
+     * If &#64;include_shift_segments is set to true then the related shift segments for the shift instances will be returned in the shift segments field.
+     * If &#64;include_scheduling_activity is set to true then the related scheduling activity for the shift segment will be returned in the scheduling activity field.
+     * &#64;include_shift_segments must be true to take effect.
+     * If &#64;include_activity is set to true then the related non skill activity for the scheduling activity will be returned in the scheduling
+     * activities member non skill activity field. &#64;include_scheduling_activity must be true to take effect.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;shift_instance_sids in the request are invalid.
+     *   - grpc.Internal: error occurs when listing the shift instances or their shift segments.
+     * </pre>
+     */
+    default void listShiftInstancesBySid(com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListShiftInstancesBySidMethod(), responseObserver);
     }
 
     /**
@@ -5494,7 +6097,7 @@ public final class WFMGrpc {
      * NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
-     *   - grpc.NotFound: wfm_agent_sid_1, wfm_agent_sid_2, or shift_instance_sids do not exist for org_id.
+     *   - grpc.NotFound: wfm_agent_sid_1, wfm_agent_sid_2, or shift_instance_sids do not exist for the org sending the request.
      *   - grpc.Internal: error occurs when swapping the shift instances.
      * </pre>
      */
@@ -5634,6 +6237,31 @@ public final class WFMGrpc {
     default void deleteSchedulingTarget(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingTargetReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingTargetRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteSchedulingTargetMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Gets the scheduling-target values for the org making the request.
+     * Errors:
+     *   - grpc.Internal: error occours when getting the scheduling-target values.
+     * </pre>
+     */
+    default void getDefaultSchedulingTarget(com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetDefaultSchedulingTargetMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Sets the scheduling-target values for the org making the request.
+     * Errors:
+     *   - grpc.Invalid: any of the given values are invalid.
+     *   - grpc.Internal: error occours when setting the scheduling-target values.
+     * </pre>
+     */
+    default void setDefaultSchedulingTarget(com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetDefaultSchedulingTargetMethod(), responseObserver);
     }
 
     /**
@@ -5840,17 +6468,16 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Gets the historical data for the org sending the request and the given &#64;skill_profile_sid.
+     * Gets the historical data for the org sending the request and the given &#64;skill_profile_category.
      * It will look through the client's call history and generate the historical data by using their configured forecasting parameters (historical data period and interval width).
      * The duration of each interval will be the interval width of the org's forecasting parameters.
-     * It also applies any deltas that the client has stored for the given &#64;SkillProfileSid.
+     * It also applies any deltas that the client has stored for the given &#64;skill_profile_category, if the category is a group it will use the deltas of the skill profiles part of that group.
      * If the client has no historical data, only the deltas will be applied to the returned intervals, all other intervals will have nil averages.
-     * If any inactive skill profiles are mapped to the given &#64;skill_profile_sid, the call history and deltas of those skill profiles will be included for the historical data calculation.
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the &#64;skill_profile_sid in the request is invalid.
-     *   - grpc.NotFound: the &#64;skill_profile_sid given is not found for the org.
+     *   - grpc.Invalid: the &#64;skill_profile_category in the request is invalid.
+     *   - grpc.NotFound: the &#64;skill_profile_category given is not found for the org.
      *   - grpc.Internal: error occurs when getting the historical data.
      * </pre>
      */
@@ -5919,6 +6546,7 @@ public final class WFMGrpc {
      * The &#64;total_calls in the returned template be summed from the (&#64;training_data_start_datetime - &#64;averages_calculation_range_in_months) to &#64;training_data_end_datetime,
      * or from &#64;training_data_start_datetime to &#64;training_data_end_datetime if &#64;averages_calculation_range_in_months is 0.
      * The fixed averages fields in the call profile template, will be set to the averages that the skill profile has.
+     * DEPRECATED as of Sep/7/2023 - Use BuildCallProfileTemplate instead.
      * Required permissions:
      *   NONE
      * Errors:
@@ -5927,10 +6555,33 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when building the call profile template.
      * </pre>
      */
+    @java.lang.Deprecated
     public void buildCallProfileTemplateForSkillProfile(com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateForSkillProfileReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateForSkillProfileRes> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getBuildCallProfileTemplateForSkillProfileMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Builds and returns a call profile template for the org sending the request and the given &#64;skill_profile_category.
+     * The template will be generated using the training data for said skill profile category using the &#64;training_data_range and &#64;averages_calculation_range_in_months
+     * from the client's saved forecasting parameters.
+     * The &#64;total_calls in the returned template be summed from the (&#64;training_data_start_datetime - &#64;averages_calculation_range_in_months) to &#64;training_data_end_datetime,
+     * or from &#64;training_data_start_datetime to &#64;training_data_end_datetime if &#64;averages_calculation_range_in_months is 0.
+     * The fixed averages fields in the call profile template, will be set to the averages that the skill profile category has.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;skill_profile_category in the request is invalid.
+     *   - grpc.NotFound: the &#64;skill_profile_category given is not found for the org.
+     *   - grpc.Internal: error occurs when building the call profile template.
+     * </pre>
+     */
+    public void buildCallProfileTemplate(com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getBuildCallProfileTemplateMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -5982,6 +6633,76 @@ public final class WFMGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingRes> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDisconnectInactiveSkillProfileMappingMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Creates the given &#64;skill_profile_group.
+     * &#64;skill_profile_group_sids will be ignored since associations cannot be created by this method.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;skill_profile_group in the request is invalid.
+     *   - grpc.Internal: error occurs creating the skill profile group.
+     * </pre>
+     */
+    public void createSkillProfileGroup(com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProfileGroupReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProfileGroupRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateSkillProfileGroupMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Updates the given &#64;skill_profile_group that has the &#64;skill_profile_group_sid for the org sending the request.
+     * &#64;skill_profile_group_sids will be ignored since associations cannot be updated by this method.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;skill_profile_group in the request is invalid.
+     *   - grpc.NotFound: the skill profile group to update doesn't exist.
+     *   - grpc.Internal: error occurs updating the skill profile group.
+     * </pre>
+     */
+    public void updateSkillProfileGroup(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateSkillProfileGroupMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Gets the skill profile groups that have the &#64;skill_profile_group_sids for the org sending the request.
+     * If &#64;skill_profile_group_sids is empty it will get all the skill profile groups for the org.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;skill_profile_group_sids in the request is invalid.
+     *   - grpc.Internal: error occurs getting the skill profile groups.
+     * </pre>
+     */
+    public void listSkillProfileGroups(com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfileGroupsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfileGroupsRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListSkillProfileGroupsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Updates associations of the given &#64;skill_profile_group_sid for the org sending the request.
+     * It will create the associations with the &#64;skill_profile_sids_to_associate, and remove the associations with the &#64;skill_profile_sids_to_disassociate.
+     * Only one of the skill_profile_sids fields needs to be set, but both can be set on the same request.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the values in the request are invalid.
+     *   - grpc.Internal: error occurs updating the skill profile group associations.
+     * </pre>
+     */
+    public void updateSkillProfileGroupAssociations(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupAssociationsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupAssociationsRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateSkillProfileGroupAssociationsMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -6040,12 +6761,12 @@ public final class WFMGrpc {
      * Builds a profile forecast using the provided &#64;call_profile_template.
      * The forecaster will produce intervals from the following range using the client's saved forecasting parameters:
      * (&#64;training_data_range_end_datetime - &#64;forecast_test_range_in_weeks) to &#64;forecast_range_end_datetime.
-     * The &#64;total_calls in the &#64;call_profile_template will be scaled using the same ranges as BuildCallProfileTemplateForSkillProfile.
+     * The &#64;total_calls in the &#64;call_profile_template will be scaled using the same ranges as BuildCallProfileTemplate.
      * The &#64;fixed_averages_forecast field indicates whether or not to do a fixed averages forecast.
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the &#64;skill_profile_sid or &#64;call_profile_template in the request is invalid.
+     *   - grpc.Invalid: the &#64;skill_profile_category or &#64;call_profile_template in the request is invalid.
      *   - grpc.Internal: error occurs during the building of the profile forecast.
      * </pre>
      */
@@ -6060,13 +6781,13 @@ public final class WFMGrpc {
      * Builds a profile forecast using the provided &#64;call_profile_template.
      * The forecaster will produce intervals from the following range using the client's saved forecasting parameters:
      * (&#64;training_data_range_end_datetime - &#64;forecast_test_range_in_weeks) to &#64;forecast_range_end_datetime.
-     * The &#64;total_calls in the &#64;call_profile_template will be scaled using the same ranges as BuildCallProfileTemplateForSkillProfile.
+     * The &#64;total_calls in the &#64;call_profile_template will be scaled using the same ranges as BuildCallProfileTemplate.
      * The &#64;fixed_averages_forecast field indicates whether or not to do a fixed averages forecast.
-     * It also returns the statistics of the produced forecast by using the test data of the given &#64;skill_profile_sid.
+     * It also returns the statistics of the produced forecast by using the test data of the given &#64;skill_profile_category.
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the &#64;skill_profile_sid or &#64;call_profile_template in the request is invalid.
+     *   - grpc.Invalid: the &#64;skill_profile_category or &#64;call_profile_template in the request is invalid.
      *   - grpc.Internal: error occurs during the building of the profile forecast.
      * </pre>
      */
@@ -6180,6 +6901,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Gets the forecast data intervals for the given &#64;skill_profile_sid.
+     * DEPRECATED as of Sep/13/2023 - Use ListForecastIntervals instead.
      * Required permissions:
      *   NONE
      * Errors:
@@ -6187,6 +6909,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when getting the forecast data intervals.
      * </pre>
      */
+    @java.lang.Deprecated
     public void listForecastIntervalsForSkillProfile(com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsForSkillProfileReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval> responseObserver) {
       io.grpc.stub.ClientCalls.asyncServerStreamingCall(
@@ -6195,15 +6918,30 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Gets the forecast data intervals for the given &#64;skill_profile_category.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;skill_profile_category in the request is invalid.
+     *   - grpc.Internal: error occurs when getting the forecast data intervals.
+     * </pre>
+     */
+    public void listForecastIntervals(com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
+          getChannel().newCall(getListForecastIntervalsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Generates a regression forecast using the provided &#64;regression_template.
-     * It will generate forecast intervals for the skill profiles sids in &#64;skill_profile_sids_to_forecast,
-     * if the list is empty or has no valid skill profile sids, it will generate and save forecasts for all active skill profiles.
+     * It will generate forecast intervals for the skill profiles sids in &#64;skill_profile_sids_to_forecast.
      * It will use the client's saved forecasting test range as the start datetime and the forecast range as the end datetime of the forecasted data.
      * It will use the client's saved interval width to divide the resulting forecast intervals.
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the &#64;regression_template in the request is invalid.
+     *   - grpc.Invalid: no &#64;skill_profile_sids_to_forecast are given or the &#64;regression_template in the request is invalid.
      *   - grpc.Internal: error occurs during the building of the regression forecast.
      * </pre>
      */
@@ -6216,13 +6954,12 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Generates a regression forecast and calculates forecast statistics using the provided &#64;regression_template.
-     * It will generate forecast intervals for the skill profiles sids in &#64;skill_profile_sids_to_forecast,
-     * if the list is empty or has no valid skill profile sids, it will generate and save forecasts for all active skill profiles.
+     * It will generate forecast intervals for the skill profiles sids in &#64;skill_profile_sids_to_forecast.
      * It will use the client's saved forecasting test range as the start datetime and the forecast range as the end datetime of the forecasted data.
      * It will use the client's saved interval width to divide the resulting forecast intervals.
      * The first message received will be the forecast statistics while all subsequent ones will be the forecast intervals.
      * Errors:
-     *   - grpc.Invalid: the &#64;regression_template in the request is invalid.
+     *   - grpc.Invalid: no &#64;skill_profile_sids_to_forecast are given or the &#64;regression_template in the request is invalid.
      *   - grpc.Internal: error occurs either during the when building the forecast or calculating the stats.
      * </pre>
      */
@@ -6303,7 +7040,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Deletes forecast data intervals/deltas based on the parameters provided.
-     * If &#64;delete_param is type skill_profile_sid, then the intervals/deltas to be deleted will be
+     * If &#64;delete_param is type skill_profile_category, then the intervals/deltas to be deleted will be
      * associated with that id. If &#64;delete_param is type interval_sids, then the intervals/deltas to be
      * deleted will be contained in the list &#64;interval_sids. The &#64;delete_type field determines which
      * table(s) in the database the intervals/deltas will be deleted from.
@@ -6539,6 +7276,22 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Lists the program nodes with the given &#64;program_node_sids for the org sending the request.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the given &#64;program_node_sids are invalid.
+     *   - grpc.Internal: error occurs when listing the program nodes.
+     * </pre>
+     */
+    public void listProgramNodesBySid(com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListProgramNodesBySidMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Creates the given &#64;constraint_rule for the org sending the request.
      * The &#64;constraint_rule_sid and &#64;skill_proficiency_sid (if one was created) of the new entities will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the &#64;parent_entity.
@@ -6637,6 +7390,21 @@ public final class WFMGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateNonSkillActivityRes> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateNonSkillActivityMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Lists the non skill activities that belong to the org sending the request.
+     * Required permissions:
+     *   NONE
+     * Errors:.
+     *   - grpc.Internal: error occurs when listing the activites.
+     * </pre>
+     */
+    public void listNonSkillActivities(com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivitiesReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivitiesRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListNonSkillActivitiesMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -6743,6 +7511,10 @@ public final class WFMGrpc {
      * if &#64;include_inactive is true then inactive agents will also be included, otherwise only active agents will be returned.
      * if &#64;include_skill_proficiencies is true then agents returned will include their skill proficiencies.
      * if &#64;include_agent_groups is true then the &#64;agent_groups_by_agent response field will be set with a list of agent groups correlating to each agents index in the &#64;wfm_agents field.
+     * if &#64;include_agent_groups is set to true, the &#64;agent_group_schedule_scenario_sid field must be set, so that the agent groups for the correct scenario are returned.
+     * if &#64;include_agent_groups is set to true, and &#64;agent_group_schedule_scenario_sid is not set, the agent groups will not be filtered by schedule scenario.
+     * if &#64;include_agent_groups is set to false, the &#64;agent_group_schedule_scenario_sid will be ignored.
+     * &#64;agent_group_schedule_scenario_sid does not effect which &#64;wfm_agents are returned.
      * WFM agents with no associated agent_groups will have an empty slice in agent_groups_by_agent at their correlated index.
      * Required Permissions:
      *   NONE
@@ -6791,6 +7563,24 @@ public final class WFMGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListUngroupedWFMAgentsRes> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListUngroupedWFMAgentsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Gets the wfm_agent_sids with the given &#64;tcn_agent_sids for the org sending the request.
+     * Returns a map where Key: tcn_agent_sid - Value: wfm_agent_sid.
+     * If the wfm_agent_sid is not found for any &#64;tcn_agent_sids, they will not have an entry in the returned &#64;sids.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *  - grpc.Invalid: the &#64;tcn_agent_sids are invalid.
+     *  - grpc.Internal: error occours while listing the wfm_agent_sids.
+     * </pre>
+     */
+    public void listWFMAgentSids(com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListWFMAgentSidsMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -7583,6 +8373,33 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Clears shift instances from the &#64;schedule_selector for the org sending the request.
+     * If &#64;node_selector is set, only shifts related to the given &#64;node_selector will be cleared.
+     * If &#64;node_selector is not set, all shifts on the &#64;schedule_selector may be cleared, regardless of the shift template they are associated with.
+     * If &#64;datetime_range is set, only the shifts overlapping the &#64;datetime_range will be cleared.
+     * If &#64;datetime_range is not set, all shifts on the schedule will be considered in range to be deleted and &#64;invert_datetime_range and &#64;start_datetimes_only must be set to false.
+     * If &#64;invert_datetime_range is set to true, the shifts overlapping the range before and after the provided &#64;datetime_range will be deleted.
+     * If &#64;invert_datetime_range is set to false, the provided &#64;datetime_range will be used.
+     * If &#64;start_datetimes_only is set to true, deletes the shifts that start within the &#64;datetime range, or start before or after &#64;datetime_range if &#64;invert_datetime_range is true.
+     * If &#64;start_datetimes_only is set to false, deletes the shifts that overlap with the &#64;datetime range, or overlap the range before or after &#64;datetime_range if &#64;invert_datetime_range is true.
+     * If &#64;delete_locked is set to true, both locked and unlocked shifts will be cleared.
+     * If &#64;delete_locked is set to false, only shifts with &#64;is_locked set to false may be cleared.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;node_selector, &#64;schedule_selector, or &#64;datetime_range in the request are invalid.
+     *   - grpc.NotFound: the draft schedule with the given &#64;schedule_selector doesn't exist.
+     *   - grpc.Internal: error occurs when removing the shifts from the schedule.
+     * </pre>
+     */
+    public void clearSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.ClearScheduleReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ClearScheduleRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getClearScheduleMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Deletes a draft schedule with the corresponding &#64;draft_schedule_sid for the org sending the request.
      * It also deletes all of its shift instances and segments.
      * Required permissions:
@@ -7597,6 +8414,28 @@ public final class WFMGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteDraftScheduleRes> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteDraftScheduleMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Lists the shift instances with the corresponding &#64;shift_instance_sids for the org sending the request.
+     * If &#64;include_shift_template is set to true then the related shift template for the shift instances will be returned in the shift template field.
+     * If &#64;include_shift_segments is set to true then the related shift segments for the shift instances will be returned in the shift segments field.
+     * If &#64;include_scheduling_activity is set to true then the related scheduling activity for the shift segment will be returned in the scheduling activity field.
+     * &#64;include_shift_segments must be true to take effect.
+     * If &#64;include_activity is set to true then the related non skill activity for the scheduling activity will be returned in the scheduling
+     * activities member non skill activity field. &#64;include_scheduling_activity must be true to take effect.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;shift_instance_sids in the request are invalid.
+     *   - grpc.Internal: error occurs when listing the shift instances or their shift segments.
+     * </pre>
+     */
+    public void listShiftInstancesBySid(com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListShiftInstancesBySidMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -7668,7 +8507,7 @@ public final class WFMGrpc {
      * NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
-     *   - grpc.NotFound: wfm_agent_sid_1, wfm_agent_sid_2, or shift_instance_sids do not exist for org_id.
+     *   - grpc.NotFound: wfm_agent_sid_1, wfm_agent_sid_2, or shift_instance_sids do not exist for the org sending the request.
      *   - grpc.Internal: error occurs when swapping the shift instances.
      * </pre>
      */
@@ -7817,6 +8656,33 @@ public final class WFMGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingTargetRes> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteSchedulingTargetMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Gets the scheduling-target values for the org making the request.
+     * Errors:
+     *   - grpc.Internal: error occours when getting the scheduling-target values.
+     * </pre>
+     */
+    public void getDefaultSchedulingTarget(com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetDefaultSchedulingTargetMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Sets the scheduling-target values for the org making the request.
+     * Errors:
+     *   - grpc.Invalid: any of the given values are invalid.
+     *   - grpc.Internal: error occours when setting the scheduling-target values.
+     * </pre>
+     */
+    public void setDefaultSchedulingTarget(com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getSetDefaultSchedulingTargetMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -8003,17 +8869,16 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Gets the historical data for the org sending the request and the given &#64;skill_profile_sid.
+     * Gets the historical data for the org sending the request and the given &#64;skill_profile_category.
      * It will look through the client's call history and generate the historical data by using their configured forecasting parameters (historical data period and interval width).
      * The duration of each interval will be the interval width of the org's forecasting parameters.
-     * It also applies any deltas that the client has stored for the given &#64;SkillProfileSid.
+     * It also applies any deltas that the client has stored for the given &#64;skill_profile_category, if the category is a group it will use the deltas of the skill profiles part of that group.
      * If the client has no historical data, only the deltas will be applied to the returned intervals, all other intervals will have nil averages.
-     * If any inactive skill profiles are mapped to the given &#64;skill_profile_sid, the call history and deltas of those skill profiles will be included for the historical data calculation.
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the &#64;skill_profile_sid in the request is invalid.
-     *   - grpc.NotFound: the &#64;skill_profile_sid given is not found for the org.
+     *   - grpc.Invalid: the &#64;skill_profile_category in the request is invalid.
+     *   - grpc.NotFound: the &#64;skill_profile_category given is not found for the org.
      *   - grpc.Internal: error occurs when getting the historical data.
      * </pre>
      */
@@ -8078,6 +8943,7 @@ public final class WFMGrpc {
      * The &#64;total_calls in the returned template be summed from the (&#64;training_data_start_datetime - &#64;averages_calculation_range_in_months) to &#64;training_data_end_datetime,
      * or from &#64;training_data_start_datetime to &#64;training_data_end_datetime if &#64;averages_calculation_range_in_months is 0.
      * The fixed averages fields in the call profile template, will be set to the averages that the skill profile has.
+     * DEPRECATED as of Sep/7/2023 - Use BuildCallProfileTemplate instead.
      * Required permissions:
      *   NONE
      * Errors:
@@ -8086,9 +8952,31 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when building the call profile template.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateForSkillProfileRes buildCallProfileTemplateForSkillProfile(com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateForSkillProfileReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getBuildCallProfileTemplateForSkillProfileMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Builds and returns a call profile template for the org sending the request and the given &#64;skill_profile_category.
+     * The template will be generated using the training data for said skill profile category using the &#64;training_data_range and &#64;averages_calculation_range_in_months
+     * from the client's saved forecasting parameters.
+     * The &#64;total_calls in the returned template be summed from the (&#64;training_data_start_datetime - &#64;averages_calculation_range_in_months) to &#64;training_data_end_datetime,
+     * or from &#64;training_data_start_datetime to &#64;training_data_end_datetime if &#64;averages_calculation_range_in_months is 0.
+     * The fixed averages fields in the call profile template, will be set to the averages that the skill profile category has.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;skill_profile_category in the request is invalid.
+     *   - grpc.NotFound: the &#64;skill_profile_category given is not found for the org.
+     *   - grpc.Internal: error occurs when building the call profile template.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateRes buildCallProfileTemplate(com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getBuildCallProfileTemplateMethod(), getCallOptions(), request);
     }
 
     /**
@@ -8137,6 +9025,72 @@ public final class WFMGrpc {
     public com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingRes disconnectInactiveSkillProfileMapping(com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDisconnectInactiveSkillProfileMappingMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Creates the given &#64;skill_profile_group.
+     * &#64;skill_profile_group_sids will be ignored since associations cannot be created by this method.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;skill_profile_group in the request is invalid.
+     *   - grpc.Internal: error occurs creating the skill profile group.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProfileGroupRes createSkillProfileGroup(com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProfileGroupReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateSkillProfileGroupMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Updates the given &#64;skill_profile_group that has the &#64;skill_profile_group_sid for the org sending the request.
+     * &#64;skill_profile_group_sids will be ignored since associations cannot be updated by this method.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;skill_profile_group in the request is invalid.
+     *   - grpc.NotFound: the skill profile group to update doesn't exist.
+     *   - grpc.Internal: error occurs updating the skill profile group.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupRes updateSkillProfileGroup(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateSkillProfileGroupMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Gets the skill profile groups that have the &#64;skill_profile_group_sids for the org sending the request.
+     * If &#64;skill_profile_group_sids is empty it will get all the skill profile groups for the org.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;skill_profile_group_sids in the request is invalid.
+     *   - grpc.Internal: error occurs getting the skill profile groups.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfileGroupsRes listSkillProfileGroups(com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfileGroupsReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListSkillProfileGroupsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Updates associations of the given &#64;skill_profile_group_sid for the org sending the request.
+     * It will create the associations with the &#64;skill_profile_sids_to_associate, and remove the associations with the &#64;skill_profile_sids_to_disassociate.
+     * Only one of the skill_profile_sids fields needs to be set, but both can be set on the same request.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the values in the request are invalid.
+     *   - grpc.Internal: error occurs updating the skill profile group associations.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupAssociationsRes updateSkillProfileGroupAssociations(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupAssociationsReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateSkillProfileGroupAssociationsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -8192,12 +9146,12 @@ public final class WFMGrpc {
      * Builds a profile forecast using the provided &#64;call_profile_template.
      * The forecaster will produce intervals from the following range using the client's saved forecasting parameters:
      * (&#64;training_data_range_end_datetime - &#64;forecast_test_range_in_weeks) to &#64;forecast_range_end_datetime.
-     * The &#64;total_calls in the &#64;call_profile_template will be scaled using the same ranges as BuildCallProfileTemplateForSkillProfile.
+     * The &#64;total_calls in the &#64;call_profile_template will be scaled using the same ranges as BuildCallProfileTemplate.
      * The &#64;fixed_averages_forecast field indicates whether or not to do a fixed averages forecast.
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the &#64;skill_profile_sid or &#64;call_profile_template in the request is invalid.
+     *   - grpc.Invalid: the &#64;skill_profile_category or &#64;call_profile_template in the request is invalid.
      *   - grpc.Internal: error occurs during the building of the profile forecast.
      * </pre>
      */
@@ -8212,13 +9166,13 @@ public final class WFMGrpc {
      * Builds a profile forecast using the provided &#64;call_profile_template.
      * The forecaster will produce intervals from the following range using the client's saved forecasting parameters:
      * (&#64;training_data_range_end_datetime - &#64;forecast_test_range_in_weeks) to &#64;forecast_range_end_datetime.
-     * The &#64;total_calls in the &#64;call_profile_template will be scaled using the same ranges as BuildCallProfileTemplateForSkillProfile.
+     * The &#64;total_calls in the &#64;call_profile_template will be scaled using the same ranges as BuildCallProfileTemplate.
      * The &#64;fixed_averages_forecast field indicates whether or not to do a fixed averages forecast.
-     * It also returns the statistics of the produced forecast by using the test data of the given &#64;skill_profile_sid.
+     * It also returns the statistics of the produced forecast by using the test data of the given &#64;skill_profile_category.
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the &#64;skill_profile_sid or &#64;call_profile_template in the request is invalid.
+     *   - grpc.Invalid: the &#64;skill_profile_category or &#64;call_profile_template in the request is invalid.
      *   - grpc.Internal: error occurs during the building of the profile forecast.
      * </pre>
      */
@@ -8326,6 +9280,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Gets the forecast data intervals for the given &#64;skill_profile_sid.
+     * DEPRECATED as of Sep/13/2023 - Use ListForecastIntervals instead.
      * Required permissions:
      *   NONE
      * Errors:
@@ -8333,6 +9288,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when getting the forecast data intervals.
      * </pre>
      */
+    @java.lang.Deprecated
     public java.util.Iterator<com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval> listForecastIntervalsForSkillProfile(
         com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsForSkillProfileReq request) {
       return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
@@ -8341,15 +9297,30 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Gets the forecast data intervals for the given &#64;skill_profile_category.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;skill_profile_category in the request is invalid.
+     *   - grpc.Internal: error occurs when getting the forecast data intervals.
+     * </pre>
+     */
+    public java.util.Iterator<com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval> listForecastIntervals(
+        com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsReq request) {
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
+          getChannel(), getListForecastIntervalsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Generates a regression forecast using the provided &#64;regression_template.
-     * It will generate forecast intervals for the skill profiles sids in &#64;skill_profile_sids_to_forecast,
-     * if the list is empty or has no valid skill profile sids, it will generate and save forecasts for all active skill profiles.
+     * It will generate forecast intervals for the skill profiles sids in &#64;skill_profile_sids_to_forecast.
      * It will use the client's saved forecasting test range as the start datetime and the forecast range as the end datetime of the forecasted data.
      * It will use the client's saved interval width to divide the resulting forecast intervals.
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the &#64;regression_template in the request is invalid.
+     *   - grpc.Invalid: no &#64;skill_profile_sids_to_forecast are given or the &#64;regression_template in the request is invalid.
      *   - grpc.Internal: error occurs during the building of the regression forecast.
      * </pre>
      */
@@ -8362,13 +9333,12 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Generates a regression forecast and calculates forecast statistics using the provided &#64;regression_template.
-     * It will generate forecast intervals for the skill profiles sids in &#64;skill_profile_sids_to_forecast,
-     * if the list is empty or has no valid skill profile sids, it will generate and save forecasts for all active skill profiles.
+     * It will generate forecast intervals for the skill profiles sids in &#64;skill_profile_sids_to_forecast.
      * It will use the client's saved forecasting test range as the start datetime and the forecast range as the end datetime of the forecasted data.
      * It will use the client's saved interval width to divide the resulting forecast intervals.
      * The first message received will be the forecast statistics while all subsequent ones will be the forecast intervals.
      * Errors:
-     *   - grpc.Invalid: the &#64;regression_template in the request is invalid.
+     *   - grpc.Invalid: no &#64;skill_profile_sids_to_forecast are given or the &#64;regression_template in the request is invalid.
      *   - grpc.Internal: error occurs either during the when building the forecast or calculating the stats.
      * </pre>
      */
@@ -8445,7 +9415,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Deletes forecast data intervals/deltas based on the parameters provided.
-     * If &#64;delete_param is type skill_profile_sid, then the intervals/deltas to be deleted will be
+     * If &#64;delete_param is type skill_profile_category, then the intervals/deltas to be deleted will be
      * associated with that id. If &#64;delete_param is type interval_sids, then the intervals/deltas to be
      * deleted will be contained in the list &#64;interval_sids. The &#64;delete_type field determines which
      * table(s) in the database the intervals/deltas will be deleted from.
@@ -8669,6 +9639,21 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Lists the program nodes with the given &#64;program_node_sids for the org sending the request.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the given &#64;program_node_sids are invalid.
+     *   - grpc.Internal: error occurs when listing the program nodes.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidRes listProgramNodesBySid(com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListProgramNodesBySidMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Creates the given &#64;constraint_rule for the org sending the request.
      * The &#64;constraint_rule_sid and &#64;skill_proficiency_sid (if one was created) of the new entities will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the &#64;parent_entity.
@@ -8762,6 +9747,20 @@ public final class WFMGrpc {
     public com.tcn.cloud.api.api.v1alpha1.wfm.UpdateNonSkillActivityRes updateNonSkillActivity(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateNonSkillActivityReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateNonSkillActivityMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Lists the non skill activities that belong to the org sending the request.
+     * Required permissions:
+     *   NONE
+     * Errors:.
+     *   - grpc.Internal: error occurs when listing the activites.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivitiesRes listNonSkillActivities(com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivitiesReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListNonSkillActivitiesMethod(), getCallOptions(), request);
     }
 
     /**
@@ -8863,6 +9862,10 @@ public final class WFMGrpc {
      * if &#64;include_inactive is true then inactive agents will also be included, otherwise only active agents will be returned.
      * if &#64;include_skill_proficiencies is true then agents returned will include their skill proficiencies.
      * if &#64;include_agent_groups is true then the &#64;agent_groups_by_agent response field will be set with a list of agent groups correlating to each agents index in the &#64;wfm_agents field.
+     * if &#64;include_agent_groups is set to true, the &#64;agent_group_schedule_scenario_sid field must be set, so that the agent groups for the correct scenario are returned.
+     * if &#64;include_agent_groups is set to true, and &#64;agent_group_schedule_scenario_sid is not set, the agent groups will not be filtered by schedule scenario.
+     * if &#64;include_agent_groups is set to false, the &#64;agent_group_schedule_scenario_sid will be ignored.
+     * &#64;agent_group_schedule_scenario_sid does not effect which &#64;wfm_agents are returned.
      * WFM agents with no associated agent_groups will have an empty slice in agent_groups_by_agent at their correlated index.
      * Required Permissions:
      *   NONE
@@ -8908,6 +9911,23 @@ public final class WFMGrpc {
     public com.tcn.cloud.api.api.v1alpha1.wfm.ListUngroupedWFMAgentsRes listUngroupedWFMAgents(com.tcn.cloud.api.api.v1alpha1.wfm.ListUngroupedWFMAgentsReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListUngroupedWFMAgentsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Gets the wfm_agent_sids with the given &#64;tcn_agent_sids for the org sending the request.
+     * Returns a map where Key: tcn_agent_sid - Value: wfm_agent_sid.
+     * If the wfm_agent_sid is not found for any &#64;tcn_agent_sids, they will not have an entry in the returned &#64;sids.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *  - grpc.Invalid: the &#64;tcn_agent_sids are invalid.
+     *  - grpc.Internal: error occours while listing the wfm_agent_sids.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsRes listWFMAgentSids(com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListWFMAgentSidsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -9659,6 +10679,32 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Clears shift instances from the &#64;schedule_selector for the org sending the request.
+     * If &#64;node_selector is set, only shifts related to the given &#64;node_selector will be cleared.
+     * If &#64;node_selector is not set, all shifts on the &#64;schedule_selector may be cleared, regardless of the shift template they are associated with.
+     * If &#64;datetime_range is set, only the shifts overlapping the &#64;datetime_range will be cleared.
+     * If &#64;datetime_range is not set, all shifts on the schedule will be considered in range to be deleted and &#64;invert_datetime_range and &#64;start_datetimes_only must be set to false.
+     * If &#64;invert_datetime_range is set to true, the shifts overlapping the range before and after the provided &#64;datetime_range will be deleted.
+     * If &#64;invert_datetime_range is set to false, the provided &#64;datetime_range will be used.
+     * If &#64;start_datetimes_only is set to true, deletes the shifts that start within the &#64;datetime range, or start before or after &#64;datetime_range if &#64;invert_datetime_range is true.
+     * If &#64;start_datetimes_only is set to false, deletes the shifts that overlap with the &#64;datetime range, or overlap the range before or after &#64;datetime_range if &#64;invert_datetime_range is true.
+     * If &#64;delete_locked is set to true, both locked and unlocked shifts will be cleared.
+     * If &#64;delete_locked is set to false, only shifts with &#64;is_locked set to false may be cleared.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;node_selector, &#64;schedule_selector, or &#64;datetime_range in the request are invalid.
+     *   - grpc.NotFound: the draft schedule with the given &#64;schedule_selector doesn't exist.
+     *   - grpc.Internal: error occurs when removing the shifts from the schedule.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ClearScheduleRes clearSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.ClearScheduleReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getClearScheduleMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Deletes a draft schedule with the corresponding &#64;draft_schedule_sid for the org sending the request.
      * It also deletes all of its shift instances and segments.
      * Required permissions:
@@ -9672,6 +10718,27 @@ public final class WFMGrpc {
     public com.tcn.cloud.api.api.v1alpha1.wfm.DeleteDraftScheduleRes deleteDraftSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteDraftScheduleReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteDraftScheduleMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Lists the shift instances with the corresponding &#64;shift_instance_sids for the org sending the request.
+     * If &#64;include_shift_template is set to true then the related shift template for the shift instances will be returned in the shift template field.
+     * If &#64;include_shift_segments is set to true then the related shift segments for the shift instances will be returned in the shift segments field.
+     * If &#64;include_scheduling_activity is set to true then the related scheduling activity for the shift segment will be returned in the scheduling activity field.
+     * &#64;include_shift_segments must be true to take effect.
+     * If &#64;include_activity is set to true then the related non skill activity for the scheduling activity will be returned in the scheduling
+     * activities member non skill activity field. &#64;include_scheduling_activity must be true to take effect.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;shift_instance_sids in the request are invalid.
+     *   - grpc.Internal: error occurs when listing the shift instances or their shift segments.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidRes listShiftInstancesBySid(com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListShiftInstancesBySidMethod(), getCallOptions(), request);
     }
 
     /**
@@ -9740,7 +10807,7 @@ public final class WFMGrpc {
      * NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
-     *   - grpc.NotFound: wfm_agent_sid_1, wfm_agent_sid_2, or shift_instance_sids do not exist for org_id.
+     *   - grpc.NotFound: wfm_agent_sid_1, wfm_agent_sid_2, or shift_instance_sids do not exist for the org sending the request.
      *   - grpc.Internal: error occurs when swapping the shift instances.
      * </pre>
      */
@@ -9880,6 +10947,31 @@ public final class WFMGrpc {
     public com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingTargetRes deleteSchedulingTarget(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingTargetReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteSchedulingTargetMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Gets the scheduling-target values for the org making the request.
+     * Errors:
+     *   - grpc.Internal: error occours when getting the scheduling-target values.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetRes getDefaultSchedulingTarget(com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetDefaultSchedulingTargetMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Sets the scheduling-target values for the org making the request.
+     * Errors:
+     *   - grpc.Invalid: any of the given values are invalid.
+     *   - grpc.Internal: error occours when setting the scheduling-target values.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetRes setDefaultSchedulingTarget(com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSetDefaultSchedulingTargetMethod(), getCallOptions(), request);
     }
 
     /**
@@ -10072,17 +11164,16 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Gets the historical data for the org sending the request and the given &#64;skill_profile_sid.
+     * Gets the historical data for the org sending the request and the given &#64;skill_profile_category.
      * It will look through the client's call history and generate the historical data by using their configured forecasting parameters (historical data period and interval width).
      * The duration of each interval will be the interval width of the org's forecasting parameters.
-     * It also applies any deltas that the client has stored for the given &#64;SkillProfileSid.
+     * It also applies any deltas that the client has stored for the given &#64;skill_profile_category, if the category is a group it will use the deltas of the skill profiles part of that group.
      * If the client has no historical data, only the deltas will be applied to the returned intervals, all other intervals will have nil averages.
-     * If any inactive skill profiles are mapped to the given &#64;skill_profile_sid, the call history and deltas of those skill profiles will be included for the historical data calculation.
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the &#64;skill_profile_sid in the request is invalid.
-     *   - grpc.NotFound: the &#64;skill_profile_sid given is not found for the org.
+     *   - grpc.Invalid: the &#64;skill_profile_category in the request is invalid.
+     *   - grpc.NotFound: the &#64;skill_profile_category given is not found for the org.
      *   - grpc.Internal: error occurs when getting the historical data.
      * </pre>
      */
@@ -10151,6 +11242,7 @@ public final class WFMGrpc {
      * The &#64;total_calls in the returned template be summed from the (&#64;training_data_start_datetime - &#64;averages_calculation_range_in_months) to &#64;training_data_end_datetime,
      * or from &#64;training_data_start_datetime to &#64;training_data_end_datetime if &#64;averages_calculation_range_in_months is 0.
      * The fixed averages fields in the call profile template, will be set to the averages that the skill profile has.
+     * DEPRECATED as of Sep/7/2023 - Use BuildCallProfileTemplate instead.
      * Required permissions:
      *   NONE
      * Errors:
@@ -10159,10 +11251,33 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when building the call profile template.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateForSkillProfileRes> buildCallProfileTemplateForSkillProfile(
         com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateForSkillProfileReq request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getBuildCallProfileTemplateForSkillProfileMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Builds and returns a call profile template for the org sending the request and the given &#64;skill_profile_category.
+     * The template will be generated using the training data for said skill profile category using the &#64;training_data_range and &#64;averages_calculation_range_in_months
+     * from the client's saved forecasting parameters.
+     * The &#64;total_calls in the returned template be summed from the (&#64;training_data_start_datetime - &#64;averages_calculation_range_in_months) to &#64;training_data_end_datetime,
+     * or from &#64;training_data_start_datetime to &#64;training_data_end_datetime if &#64;averages_calculation_range_in_months is 0.
+     * The fixed averages fields in the call profile template, will be set to the averages that the skill profile category has.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;skill_profile_category in the request is invalid.
+     *   - grpc.NotFound: the &#64;skill_profile_category given is not found for the org.
+     *   - grpc.Internal: error occurs when building the call profile template.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateRes> buildCallProfileTemplate(
+        com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getBuildCallProfileTemplateMethod(), getCallOptions()), request);
     }
 
     /**
@@ -10214,6 +11329,76 @@ public final class WFMGrpc {
         com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingReq request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDisconnectInactiveSkillProfileMappingMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Creates the given &#64;skill_profile_group.
+     * &#64;skill_profile_group_sids will be ignored since associations cannot be created by this method.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;skill_profile_group in the request is invalid.
+     *   - grpc.Internal: error occurs creating the skill profile group.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProfileGroupRes> createSkillProfileGroup(
+        com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProfileGroupReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateSkillProfileGroupMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Updates the given &#64;skill_profile_group that has the &#64;skill_profile_group_sid for the org sending the request.
+     * &#64;skill_profile_group_sids will be ignored since associations cannot be updated by this method.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;skill_profile_group in the request is invalid.
+     *   - grpc.NotFound: the skill profile group to update doesn't exist.
+     *   - grpc.Internal: error occurs updating the skill profile group.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupRes> updateSkillProfileGroup(
+        com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateSkillProfileGroupMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Gets the skill profile groups that have the &#64;skill_profile_group_sids for the org sending the request.
+     * If &#64;skill_profile_group_sids is empty it will get all the skill profile groups for the org.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;skill_profile_group_sids in the request is invalid.
+     *   - grpc.Internal: error occurs getting the skill profile groups.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfileGroupsRes> listSkillProfileGroups(
+        com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfileGroupsReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListSkillProfileGroupsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Updates associations of the given &#64;skill_profile_group_sid for the org sending the request.
+     * It will create the associations with the &#64;skill_profile_sids_to_associate, and remove the associations with the &#64;skill_profile_sids_to_disassociate.
+     * Only one of the skill_profile_sids fields needs to be set, but both can be set on the same request.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the values in the request are invalid.
+     *   - grpc.Internal: error occurs updating the skill profile group associations.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupAssociationsRes> updateSkillProfileGroupAssociations(
+        com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupAssociationsReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateSkillProfileGroupAssociationsMethod(), getCallOptions()), request);
     }
 
     /**
@@ -10439,7 +11624,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Deletes forecast data intervals/deltas based on the parameters provided.
-     * If &#64;delete_param is type skill_profile_sid, then the intervals/deltas to be deleted will be
+     * If &#64;delete_param is type skill_profile_category, then the intervals/deltas to be deleted will be
      * associated with that id. If &#64;delete_param is type interval_sids, then the intervals/deltas to be
      * deleted will be contained in the list &#64;interval_sids. The &#64;delete_type field determines which
      * table(s) in the database the intervals/deltas will be deleted from.
@@ -10675,6 +11860,22 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Lists the program nodes with the given &#64;program_node_sids for the org sending the request.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the given &#64;program_node_sids are invalid.
+     *   - grpc.Internal: error occurs when listing the program nodes.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidRes> listProgramNodesBySid(
+        com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListProgramNodesBySidMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Creates the given &#64;constraint_rule for the org sending the request.
      * The &#64;constraint_rule_sid and &#64;skill_proficiency_sid (if one was created) of the new entities will be returned in the response.
      * The &#64;schedule_scenario_sid must match the scenario of the &#64;parent_entity.
@@ -10773,6 +11974,21 @@ public final class WFMGrpc {
         com.tcn.cloud.api.api.v1alpha1.wfm.UpdateNonSkillActivityReq request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateNonSkillActivityMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Lists the non skill activities that belong to the org sending the request.
+     * Required permissions:
+     *   NONE
+     * Errors:.
+     *   - grpc.Internal: error occurs when listing the activites.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivitiesRes> listNonSkillActivities(
+        com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivitiesReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListNonSkillActivitiesMethod(), getCallOptions()), request);
     }
 
     /**
@@ -10879,6 +12095,10 @@ public final class WFMGrpc {
      * if &#64;include_inactive is true then inactive agents will also be included, otherwise only active agents will be returned.
      * if &#64;include_skill_proficiencies is true then agents returned will include their skill proficiencies.
      * if &#64;include_agent_groups is true then the &#64;agent_groups_by_agent response field will be set with a list of agent groups correlating to each agents index in the &#64;wfm_agents field.
+     * if &#64;include_agent_groups is set to true, the &#64;agent_group_schedule_scenario_sid field must be set, so that the agent groups for the correct scenario are returned.
+     * if &#64;include_agent_groups is set to true, and &#64;agent_group_schedule_scenario_sid is not set, the agent groups will not be filtered by schedule scenario.
+     * if &#64;include_agent_groups is set to false, the &#64;agent_group_schedule_scenario_sid will be ignored.
+     * &#64;agent_group_schedule_scenario_sid does not effect which &#64;wfm_agents are returned.
      * WFM agents with no associated agent_groups will have an empty slice in agent_groups_by_agent at their correlated index.
      * Required Permissions:
      *   NONE
@@ -10927,6 +12147,24 @@ public final class WFMGrpc {
         com.tcn.cloud.api.api.v1alpha1.wfm.ListUngroupedWFMAgentsReq request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListUngroupedWFMAgentsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Gets the wfm_agent_sids with the given &#64;tcn_agent_sids for the org sending the request.
+     * Returns a map where Key: tcn_agent_sid - Value: wfm_agent_sid.
+     * If the wfm_agent_sid is not found for any &#64;tcn_agent_sids, they will not have an entry in the returned &#64;sids.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *  - grpc.Invalid: the &#64;tcn_agent_sids are invalid.
+     *  - grpc.Internal: error occours while listing the wfm_agent_sids.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsRes> listWFMAgentSids(
+        com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListWFMAgentSidsMethod(), getCallOptions()), request);
     }
 
     /**
@@ -11719,6 +12957,33 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Clears shift instances from the &#64;schedule_selector for the org sending the request.
+     * If &#64;node_selector is set, only shifts related to the given &#64;node_selector will be cleared.
+     * If &#64;node_selector is not set, all shifts on the &#64;schedule_selector may be cleared, regardless of the shift template they are associated with.
+     * If &#64;datetime_range is set, only the shifts overlapping the &#64;datetime_range will be cleared.
+     * If &#64;datetime_range is not set, all shifts on the schedule will be considered in range to be deleted and &#64;invert_datetime_range and &#64;start_datetimes_only must be set to false.
+     * If &#64;invert_datetime_range is set to true, the shifts overlapping the range before and after the provided &#64;datetime_range will be deleted.
+     * If &#64;invert_datetime_range is set to false, the provided &#64;datetime_range will be used.
+     * If &#64;start_datetimes_only is set to true, deletes the shifts that start within the &#64;datetime range, or start before or after &#64;datetime_range if &#64;invert_datetime_range is true.
+     * If &#64;start_datetimes_only is set to false, deletes the shifts that overlap with the &#64;datetime range, or overlap the range before or after &#64;datetime_range if &#64;invert_datetime_range is true.
+     * If &#64;delete_locked is set to true, both locked and unlocked shifts will be cleared.
+     * If &#64;delete_locked is set to false, only shifts with &#64;is_locked set to false may be cleared.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;node_selector, &#64;schedule_selector, or &#64;datetime_range in the request are invalid.
+     *   - grpc.NotFound: the draft schedule with the given &#64;schedule_selector doesn't exist.
+     *   - grpc.Internal: error occurs when removing the shifts from the schedule.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ClearScheduleRes> clearSchedule(
+        com.tcn.cloud.api.api.v1alpha1.wfm.ClearScheduleReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getClearScheduleMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Deletes a draft schedule with the corresponding &#64;draft_schedule_sid for the org sending the request.
      * It also deletes all of its shift instances and segments.
      * Required permissions:
@@ -11733,6 +12998,28 @@ public final class WFMGrpc {
         com.tcn.cloud.api.api.v1alpha1.wfm.DeleteDraftScheduleReq request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteDraftScheduleMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Lists the shift instances with the corresponding &#64;shift_instance_sids for the org sending the request.
+     * If &#64;include_shift_template is set to true then the related shift template for the shift instances will be returned in the shift template field.
+     * If &#64;include_shift_segments is set to true then the related shift segments for the shift instances will be returned in the shift segments field.
+     * If &#64;include_scheduling_activity is set to true then the related scheduling activity for the shift segment will be returned in the scheduling activity field.
+     * &#64;include_shift_segments must be true to take effect.
+     * If &#64;include_activity is set to true then the related non skill activity for the scheduling activity will be returned in the scheduling
+     * activities member non skill activity field. &#64;include_scheduling_activity must be true to take effect.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;shift_instance_sids in the request are invalid.
+     *   - grpc.Internal: error occurs when listing the shift instances or their shift segments.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidRes> listShiftInstancesBySid(
+        com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListShiftInstancesBySidMethod(), getCallOptions()), request);
     }
 
     /**
@@ -11804,7 +13091,7 @@ public final class WFMGrpc {
      * NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
-     *   - grpc.NotFound: wfm_agent_sid_1, wfm_agent_sid_2, or shift_instance_sids do not exist for org_id.
+     *   - grpc.NotFound: wfm_agent_sid_1, wfm_agent_sid_2, or shift_instance_sids do not exist for the org sending the request.
      *   - grpc.Internal: error occurs when swapping the shift instances.
      * </pre>
      */
@@ -11957,6 +13244,33 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Gets the scheduling-target values for the org making the request.
+     * Errors:
+     *   - grpc.Internal: error occours when getting the scheduling-target values.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetRes> getDefaultSchedulingTarget(
+        com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetDefaultSchedulingTargetMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Sets the scheduling-target values for the org making the request.
+     * Errors:
+     *   - grpc.Invalid: any of the given values are invalid.
+     *   - grpc.Internal: error occours when setting the scheduling-target values.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetRes> setDefaultSchedulingTarget(
+        com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getSetDefaultSchedulingTargetMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Gets the performance metrics across &#64;datetime_range for shift instances in &#64;schedule_selector associated with &#64;node_selector for the org making the request.
      * Performance metrics will be generated for each of the given &#64;metric_params.
      * The &#64;interval_width_in_minutes must be a multiple of 5.
@@ -12005,108 +13319,121 @@ public final class WFMGrpc {
   private static final int METHODID_UPSERT_HISTORICAL_DATA_DELTAS = 10;
   private static final int METHODID_LIST_SKILLS = 11;
   private static final int METHODID_BUILD_CALL_PROFILE_TEMPLATE_FOR_SKILL_PROFILE = 12;
-  private static final int METHODID_CREATE_INACTIVE_SKILL_PROFILE_MAPPING = 13;
-  private static final int METHODID_GET_AVAILABLE_REGRESSION_FORECASTER_MODEL_TYPES = 14;
-  private static final int METHODID_DISCONNECT_INACTIVE_SKILL_PROFILE_MAPPING = 15;
-  private static final int METHODID_DELETE_HISTORICAL_DATA_DELTAS = 16;
-  private static final int METHODID_LIST_TOP_SKILL_PROFILES = 17;
-  private static final int METHODID_GET_SKILL_PROFILES_COUNT = 18;
-  private static final int METHODID_BUILD_PROFILE_FORECAST_BY_INTERVAL = 19;
-  private static final int METHODID_BUILD_PROFILE_FORECAST_BY_INTERVAL_WITH_STATS = 20;
-  private static final int METHODID_UPSERT_PROFILE_FORECAST = 21;
-  private static final int METHODID_CREATE_CALL_PROFILE_TEMPLATE = 22;
-  private static final int METHODID_DELETE_CALL_PROFILE_TEMPLATE = 23;
-  private static final int METHODID_CREATE_REGRESSION_TEMPLATE = 24;
-  private static final int METHODID_DELETE_REGRESSION_TEMPLATE = 25;
-  private static final int METHODID_LIST_REGRESSION_TEMPLATES = 26;
-  private static final int METHODID_LIST_FORECAST_INTERVALS_FOR_SKILL_PROFILE = 27;
-  private static final int METHODID_BUILD_REGRESSION_FORECAST_BY_INTERVAL = 28;
-  private static final int METHODID_BUILD_REGRESSION_FORECAST_BY_INTERVAL_WITH_STATS = 29;
-  private static final int METHODID_LIST_CALL_PROFILE_TEMPLATES = 30;
-  private static final int METHODID_UPSERT_REGRESSION_FORECAST = 31;
-  private static final int METHODID_UPSERT_FORECAST_DATA_DELTA = 32;
-  private static final int METHODID_UPSERT_FORECAST_DATA_DELTAS = 33;
-  private static final int METHODID_DELETE_FORECAST_INTERVALS = 34;
-  private static final int METHODID_LIST_HISTORICAL_DATA_FOR_ALL_SKILL_PROFILES = 35;
-  private static final int METHODID_BUILD_DOWAND_MOYPROFILES = 36;
-  private static final int METHODID_CALCULATE_TRAINING_DATA_AVERAGES_FOR_SKILL_PROFILE = 37;
-  private static final int METHODID_UPDATE_SKILL_PROFILE_AVERAGES_USING_HISTORICAL_DATA = 38;
-  private static final int METHODID_UPDATE_CALL_CENTER_NODE = 39;
-  private static final int METHODID_CREATE_CLIENT_NODE = 40;
-  private static final int METHODID_UPDATE_CLIENT_NODE = 41;
-  private static final int METHODID_CREATE_LOCATION_NODE = 42;
-  private static final int METHODID_UPDATE_LOCATION_NODE = 43;
-  private static final int METHODID_CREATE_PROGRAM_NODE = 44;
-  private static final int METHODID_UPDATE_PROGRAM_NODE = 45;
-  private static final int METHODID_CREATE_CONSTRAINT_RULE = 46;
-  private static final int METHODID_UPDATE_CONSTRAINT_RULE = 47;
-  private static final int METHODID_DELETE_CONSTRAINT_RULE = 48;
-  private static final int METHODID_CREATE_NON_SKILL_ACTIVITY = 49;
-  private static final int METHODID_UPDATE_NON_SKILL_ACTIVITY = 50;
-  private static final int METHODID_LIST_NON_SKILL_ACTIVITY_ASSOCIATIONS = 51;
-  private static final int METHODID_LIST_CANDIDATE_SCHEDULING_ACTIVITIES = 52;
-  private static final int METHODID_CREATE_AGENT_GROUP = 53;
-  private static final int METHODID_UPDATE_AGENT_GROUP = 54;
-  private static final int METHODID_UPDATE_WFMAGENT = 55;
-  private static final int METHODID_LIST_ALL_WFMAGENTS = 56;
-  private static final int METHODID_LIST_CANDIDATE_WFMAGENTS = 57;
-  private static final int METHODID_LIST_UNGROUPED_WFMAGENTS = 58;
-  private static final int METHODID_LIST_WFMAGENTS_ASSOCIATED_WITH_AGENT_GROUP = 59;
-  private static final int METHODID_CREATE_WFMAGENT_MEMBERSHIPS = 60;
-  private static final int METHODID_DELETE_WFMAGENT_MEMBERSHIPS = 61;
-  private static final int METHODID_DELETE_WFMAGENTS_MEMBERSHIPS = 62;
-  private static final int METHODID_BUILD_AGENT_DIAGNOSTICS = 63;
-  private static final int METHODID_CREATE_SHIFT_TEMPLATE = 64;
-  private static final int METHODID_UPDATE_SHIFT_TEMPLATE = 65;
-  private static final int METHODID_LIST_SHIFT_TEMPLATES_BY_SIDS = 66;
-  private static final int METHODID_BUILD_SHIFT_TEMPLATE_DIAGNOSTICS = 67;
-  private static final int METHODID_CREATE_PLACEMENT_RULE = 68;
-  private static final int METHODID_UPDATE_PLACEMENT_RULE = 69;
-  private static final int METHODID_DELETE_PLACEMENT_RULE = 70;
-  private static final int METHODID_CREATE_OPEN_TIMES_PATTERN = 71;
-  private static final int METHODID_UPDATE_OPEN_TIMES_PATTERN = 72;
-  private static final int METHODID_DELETE_OPEN_TIMES_PATTERN = 73;
-  private static final int METHODID_GET_OPEN_TIMES_BITMAPS = 74;
-  private static final int METHODID_CREATE_AGENT_AVAILABILITY_PATTERN = 75;
-  private static final int METHODID_UPDATE_AGENT_AVAILABILITY_PATTERN = 76;
-  private static final int METHODID_DELETE_AGENT_AVAILABILITY_PATTERN = 77;
-  private static final int METHODID_GET_AVAILABILITY_BITMAPS = 78;
-  private static final int METHODID_UPSERT_NON_SKILL_ACTIVITY_ASSOCIATION = 79;
-  private static final int METHODID_CREATE_SKILL_PROFICIENCIES = 80;
-  private static final int METHODID_UPDATE_SKILL_PROFICIENCIES = 81;
-  private static final int METHODID_DELETE_SKILL_PROFICIENCY = 82;
-  private static final int METHODID_COPY_SCENARIO = 83;
-  private static final int METHODID_CREATE_SCHEDULE_SCENARIO_WITH_NODES = 84;
-  private static final int METHODID_UPDATE_SCHEDULE_SCENARIO = 85;
-  private static final int METHODID_LIST_CONFIG_ENTITIES = 86;
-  private static final int METHODID_DELETE_SHIFT_INSTANCES = 87;
-  private static final int METHODID_BUILD_NODE_DIAGNOSTICS = 88;
-  private static final int METHODID_BUILD_GLOBAL_DIAGNOSTICS = 89;
-  private static final int METHODID_GET_PUBLISHED_SCHEDULE = 90;
-  private static final int METHODID_GET_PUBLISHED_SCHEDULE_REQUIRED_CALLS = 91;
-  private static final int METHODID_GET_DRAFT_SCHEDULE_REQUIRED_CALLS = 92;
-  private static final int METHODID_CREATE_DRAFT_SCHEDULE = 93;
-  private static final int METHODID_UPDATE_DRAFT_SCHEDULE = 94;
-  private static final int METHODID_BUILD_DRAFT_SCHEDULE = 95;
-  private static final int METHODID_PUBLISH_DRAFT_SCHEDULE = 96;
-  private static final int METHODID_RESET_DRAFT_SCHEDULE = 97;
-  private static final int METHODID_GET_DRAFT_SCHEDULE = 98;
-  private static final int METHODID_LIST_DRAFT_SCHEDULES = 99;
-  private static final int METHODID_DELETE_DRAFT_SCHEDULE = 100;
-  private static final int METHODID_COPY_SCHEDULE_TO_SCHEDULE = 101;
-  private static final int METHODID_CREATE_SHIFT_INSTANCE = 102;
-  private static final int METHODID_CREATE_SHIFT_INSTANCE_V2 = 103;
-  private static final int METHODID_SWAP_SHIFT_INSTANCES = 104;
-  private static final int METHODID_UPDATE_SHIFT_INSTANCE = 105;
-  private static final int METHODID_UPDATE_SHIFT_INSTANCE_V2 = 106;
-  private static final int METHODID_COPY_SHIFT_INSTANCES_TO_SCHEDULE = 107;
-  private static final int METHODID_LIST_SHIFT_INSTANCE_SIDS_FOR_AGENT = 108;
-  private static final int METHODID_LIST_SHIFT_SEGMENTS_BY_SHIFT_INSTANCE_SIDS = 109;
-  private static final int METHODID_SET_SCHEDULING_TARGET = 110;
-  private static final int METHODID_GET_SCHEDULING_TARGET = 111;
-  private static final int METHODID_DELETE_SCHEDULING_TARGET = 112;
-  private static final int METHODID_GET_PERFORMANCE_METRICS = 113;
-  private static final int METHODID_LIST_REQUIRED_CALLS_INTERVALS = 114;
+  private static final int METHODID_BUILD_CALL_PROFILE_TEMPLATE = 13;
+  private static final int METHODID_CREATE_INACTIVE_SKILL_PROFILE_MAPPING = 14;
+  private static final int METHODID_GET_AVAILABLE_REGRESSION_FORECASTER_MODEL_TYPES = 15;
+  private static final int METHODID_DISCONNECT_INACTIVE_SKILL_PROFILE_MAPPING = 16;
+  private static final int METHODID_CREATE_SKILL_PROFILE_GROUP = 17;
+  private static final int METHODID_UPDATE_SKILL_PROFILE_GROUP = 18;
+  private static final int METHODID_LIST_SKILL_PROFILE_GROUPS = 19;
+  private static final int METHODID_UPDATE_SKILL_PROFILE_GROUP_ASSOCIATIONS = 20;
+  private static final int METHODID_DELETE_HISTORICAL_DATA_DELTAS = 21;
+  private static final int METHODID_LIST_TOP_SKILL_PROFILES = 22;
+  private static final int METHODID_GET_SKILL_PROFILES_COUNT = 23;
+  private static final int METHODID_BUILD_PROFILE_FORECAST_BY_INTERVAL = 24;
+  private static final int METHODID_BUILD_PROFILE_FORECAST_BY_INTERVAL_WITH_STATS = 25;
+  private static final int METHODID_UPSERT_PROFILE_FORECAST = 26;
+  private static final int METHODID_CREATE_CALL_PROFILE_TEMPLATE = 27;
+  private static final int METHODID_DELETE_CALL_PROFILE_TEMPLATE = 28;
+  private static final int METHODID_CREATE_REGRESSION_TEMPLATE = 29;
+  private static final int METHODID_DELETE_REGRESSION_TEMPLATE = 30;
+  private static final int METHODID_LIST_REGRESSION_TEMPLATES = 31;
+  private static final int METHODID_LIST_FORECAST_INTERVALS_FOR_SKILL_PROFILE = 32;
+  private static final int METHODID_LIST_FORECAST_INTERVALS = 33;
+  private static final int METHODID_BUILD_REGRESSION_FORECAST_BY_INTERVAL = 34;
+  private static final int METHODID_BUILD_REGRESSION_FORECAST_BY_INTERVAL_WITH_STATS = 35;
+  private static final int METHODID_LIST_CALL_PROFILE_TEMPLATES = 36;
+  private static final int METHODID_UPSERT_REGRESSION_FORECAST = 37;
+  private static final int METHODID_UPSERT_FORECAST_DATA_DELTA = 38;
+  private static final int METHODID_UPSERT_FORECAST_DATA_DELTAS = 39;
+  private static final int METHODID_DELETE_FORECAST_INTERVALS = 40;
+  private static final int METHODID_LIST_HISTORICAL_DATA_FOR_ALL_SKILL_PROFILES = 41;
+  private static final int METHODID_BUILD_DOWAND_MOYPROFILES = 42;
+  private static final int METHODID_CALCULATE_TRAINING_DATA_AVERAGES_FOR_SKILL_PROFILE = 43;
+  private static final int METHODID_UPDATE_SKILL_PROFILE_AVERAGES_USING_HISTORICAL_DATA = 44;
+  private static final int METHODID_UPDATE_CALL_CENTER_NODE = 45;
+  private static final int METHODID_CREATE_CLIENT_NODE = 46;
+  private static final int METHODID_UPDATE_CLIENT_NODE = 47;
+  private static final int METHODID_CREATE_LOCATION_NODE = 48;
+  private static final int METHODID_UPDATE_LOCATION_NODE = 49;
+  private static final int METHODID_CREATE_PROGRAM_NODE = 50;
+  private static final int METHODID_UPDATE_PROGRAM_NODE = 51;
+  private static final int METHODID_LIST_PROGRAM_NODES_BY_SID = 52;
+  private static final int METHODID_CREATE_CONSTRAINT_RULE = 53;
+  private static final int METHODID_UPDATE_CONSTRAINT_RULE = 54;
+  private static final int METHODID_DELETE_CONSTRAINT_RULE = 55;
+  private static final int METHODID_CREATE_NON_SKILL_ACTIVITY = 56;
+  private static final int METHODID_UPDATE_NON_SKILL_ACTIVITY = 57;
+  private static final int METHODID_LIST_NON_SKILL_ACTIVITIES = 58;
+  private static final int METHODID_LIST_NON_SKILL_ACTIVITY_ASSOCIATIONS = 59;
+  private static final int METHODID_LIST_CANDIDATE_SCHEDULING_ACTIVITIES = 60;
+  private static final int METHODID_CREATE_AGENT_GROUP = 61;
+  private static final int METHODID_UPDATE_AGENT_GROUP = 62;
+  private static final int METHODID_UPDATE_WFMAGENT = 63;
+  private static final int METHODID_LIST_ALL_WFMAGENTS = 64;
+  private static final int METHODID_LIST_CANDIDATE_WFMAGENTS = 65;
+  private static final int METHODID_LIST_UNGROUPED_WFMAGENTS = 66;
+  private static final int METHODID_LIST_WFMAGENT_SIDS = 67;
+  private static final int METHODID_LIST_WFMAGENTS_ASSOCIATED_WITH_AGENT_GROUP = 68;
+  private static final int METHODID_CREATE_WFMAGENT_MEMBERSHIPS = 69;
+  private static final int METHODID_DELETE_WFMAGENT_MEMBERSHIPS = 70;
+  private static final int METHODID_DELETE_WFMAGENTS_MEMBERSHIPS = 71;
+  private static final int METHODID_BUILD_AGENT_DIAGNOSTICS = 72;
+  private static final int METHODID_CREATE_SHIFT_TEMPLATE = 73;
+  private static final int METHODID_UPDATE_SHIFT_TEMPLATE = 74;
+  private static final int METHODID_LIST_SHIFT_TEMPLATES_BY_SIDS = 75;
+  private static final int METHODID_BUILD_SHIFT_TEMPLATE_DIAGNOSTICS = 76;
+  private static final int METHODID_CREATE_PLACEMENT_RULE = 77;
+  private static final int METHODID_UPDATE_PLACEMENT_RULE = 78;
+  private static final int METHODID_DELETE_PLACEMENT_RULE = 79;
+  private static final int METHODID_CREATE_OPEN_TIMES_PATTERN = 80;
+  private static final int METHODID_UPDATE_OPEN_TIMES_PATTERN = 81;
+  private static final int METHODID_DELETE_OPEN_TIMES_PATTERN = 82;
+  private static final int METHODID_GET_OPEN_TIMES_BITMAPS = 83;
+  private static final int METHODID_CREATE_AGENT_AVAILABILITY_PATTERN = 84;
+  private static final int METHODID_UPDATE_AGENT_AVAILABILITY_PATTERN = 85;
+  private static final int METHODID_DELETE_AGENT_AVAILABILITY_PATTERN = 86;
+  private static final int METHODID_GET_AVAILABILITY_BITMAPS = 87;
+  private static final int METHODID_UPSERT_NON_SKILL_ACTIVITY_ASSOCIATION = 88;
+  private static final int METHODID_CREATE_SKILL_PROFICIENCIES = 89;
+  private static final int METHODID_UPDATE_SKILL_PROFICIENCIES = 90;
+  private static final int METHODID_DELETE_SKILL_PROFICIENCY = 91;
+  private static final int METHODID_COPY_SCENARIO = 92;
+  private static final int METHODID_CREATE_SCHEDULE_SCENARIO_WITH_NODES = 93;
+  private static final int METHODID_UPDATE_SCHEDULE_SCENARIO = 94;
+  private static final int METHODID_LIST_CONFIG_ENTITIES = 95;
+  private static final int METHODID_DELETE_SHIFT_INSTANCES = 96;
+  private static final int METHODID_BUILD_NODE_DIAGNOSTICS = 97;
+  private static final int METHODID_BUILD_GLOBAL_DIAGNOSTICS = 98;
+  private static final int METHODID_GET_PUBLISHED_SCHEDULE = 99;
+  private static final int METHODID_GET_PUBLISHED_SCHEDULE_REQUIRED_CALLS = 100;
+  private static final int METHODID_GET_DRAFT_SCHEDULE_REQUIRED_CALLS = 101;
+  private static final int METHODID_CREATE_DRAFT_SCHEDULE = 102;
+  private static final int METHODID_UPDATE_DRAFT_SCHEDULE = 103;
+  private static final int METHODID_BUILD_DRAFT_SCHEDULE = 104;
+  private static final int METHODID_PUBLISH_DRAFT_SCHEDULE = 105;
+  private static final int METHODID_RESET_DRAFT_SCHEDULE = 106;
+  private static final int METHODID_GET_DRAFT_SCHEDULE = 107;
+  private static final int METHODID_LIST_DRAFT_SCHEDULES = 108;
+  private static final int METHODID_CLEAR_SCHEDULE = 109;
+  private static final int METHODID_DELETE_DRAFT_SCHEDULE = 110;
+  private static final int METHODID_LIST_SHIFT_INSTANCES_BY_SID = 111;
+  private static final int METHODID_COPY_SCHEDULE_TO_SCHEDULE = 112;
+  private static final int METHODID_CREATE_SHIFT_INSTANCE = 113;
+  private static final int METHODID_CREATE_SHIFT_INSTANCE_V2 = 114;
+  private static final int METHODID_SWAP_SHIFT_INSTANCES = 115;
+  private static final int METHODID_UPDATE_SHIFT_INSTANCE = 116;
+  private static final int METHODID_UPDATE_SHIFT_INSTANCE_V2 = 117;
+  private static final int METHODID_COPY_SHIFT_INSTANCES_TO_SCHEDULE = 118;
+  private static final int METHODID_LIST_SHIFT_INSTANCE_SIDS_FOR_AGENT = 119;
+  private static final int METHODID_LIST_SHIFT_SEGMENTS_BY_SHIFT_INSTANCE_SIDS = 120;
+  private static final int METHODID_SET_SCHEDULING_TARGET = 121;
+  private static final int METHODID_GET_SCHEDULING_TARGET = 122;
+  private static final int METHODID_DELETE_SCHEDULING_TARGET = 123;
+  private static final int METHODID_GET_DEFAULT_SCHEDULING_TARGET = 124;
+  private static final int METHODID_SET_DEFAULT_SCHEDULING_TARGET = 125;
+  private static final int METHODID_GET_PERFORMANCE_METRICS = 126;
+  private static final int METHODID_LIST_REQUIRED_CALLS_INTERVALS = 127;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -12177,6 +13504,10 @@ public final class WFMGrpc {
           serviceImpl.buildCallProfileTemplateForSkillProfile((com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateForSkillProfileReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateForSkillProfileRes>) responseObserver);
           break;
+        case METHODID_BUILD_CALL_PROFILE_TEMPLATE:
+          serviceImpl.buildCallProfileTemplate((com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateRes>) responseObserver);
+          break;
         case METHODID_CREATE_INACTIVE_SKILL_PROFILE_MAPPING:
           serviceImpl.createInactiveSkillProfileMapping((com.tcn.cloud.api.api.v1alpha1.wfm.CreateInactiveSkillProfileMappingReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateInactiveSkillProfileMappingRes>) responseObserver);
@@ -12188,6 +13519,22 @@ public final class WFMGrpc {
         case METHODID_DISCONNECT_INACTIVE_SKILL_PROFILE_MAPPING:
           serviceImpl.disconnectInactiveSkillProfileMapping((com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingRes>) responseObserver);
+          break;
+        case METHODID_CREATE_SKILL_PROFILE_GROUP:
+          serviceImpl.createSkillProfileGroup((com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProfileGroupReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProfileGroupRes>) responseObserver);
+          break;
+        case METHODID_UPDATE_SKILL_PROFILE_GROUP:
+          serviceImpl.updateSkillProfileGroup((com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupRes>) responseObserver);
+          break;
+        case METHODID_LIST_SKILL_PROFILE_GROUPS:
+          serviceImpl.listSkillProfileGroups((com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfileGroupsReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfileGroupsRes>) responseObserver);
+          break;
+        case METHODID_UPDATE_SKILL_PROFILE_GROUP_ASSOCIATIONS:
+          serviceImpl.updateSkillProfileGroupAssociations((com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupAssociationsReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupAssociationsRes>) responseObserver);
           break;
         case METHODID_DELETE_HISTORICAL_DATA_DELTAS:
           serviceImpl.deleteHistoricalDataDeltas((com.tcn.cloud.api.api.v1alpha1.wfm.DeleteHistoricalDataDeltasReq) request,
@@ -12235,6 +13582,10 @@ public final class WFMGrpc {
           break;
         case METHODID_LIST_FORECAST_INTERVALS_FOR_SKILL_PROFILE:
           serviceImpl.listForecastIntervalsForSkillProfile((com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsForSkillProfileReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval>) responseObserver);
+          break;
+        case METHODID_LIST_FORECAST_INTERVALS:
+          serviceImpl.listForecastIntervals((com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval>) responseObserver);
           break;
         case METHODID_BUILD_REGRESSION_FORECAST_BY_INTERVAL:
@@ -12309,6 +13660,10 @@ public final class WFMGrpc {
           serviceImpl.updateProgramNode((com.tcn.cloud.api.api.v1alpha1.wfm.UpdateProgramNodeReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateProgramNodeRes>) responseObserver);
           break;
+        case METHODID_LIST_PROGRAM_NODES_BY_SID:
+          serviceImpl.listProgramNodesBySid((com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidRes>) responseObserver);
+          break;
         case METHODID_CREATE_CONSTRAINT_RULE:
           serviceImpl.createConstraintRule((com.tcn.cloud.api.api.v1alpha1.wfm.CreateConstraintRuleReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateConstraintRuleRes>) responseObserver);
@@ -12328,6 +13683,10 @@ public final class WFMGrpc {
         case METHODID_UPDATE_NON_SKILL_ACTIVITY:
           serviceImpl.updateNonSkillActivity((com.tcn.cloud.api.api.v1alpha1.wfm.UpdateNonSkillActivityReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateNonSkillActivityRes>) responseObserver);
+          break;
+        case METHODID_LIST_NON_SKILL_ACTIVITIES:
+          serviceImpl.listNonSkillActivities((com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivitiesReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivitiesRes>) responseObserver);
           break;
         case METHODID_LIST_NON_SKILL_ACTIVITY_ASSOCIATIONS:
           serviceImpl.listNonSkillActivityAssociations((com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivityAssociationsReq) request,
@@ -12360,6 +13719,10 @@ public final class WFMGrpc {
         case METHODID_LIST_UNGROUPED_WFMAGENTS:
           serviceImpl.listUngroupedWFMAgents((com.tcn.cloud.api.api.v1alpha1.wfm.ListUngroupedWFMAgentsReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListUngroupedWFMAgentsRes>) responseObserver);
+          break;
+        case METHODID_LIST_WFMAGENT_SIDS:
+          serviceImpl.listWFMAgentSids((com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsRes>) responseObserver);
           break;
         case METHODID_LIST_WFMAGENTS_ASSOCIATED_WITH_AGENT_GROUP:
           serviceImpl.listWFMAgentsAssociatedWithAgentGroup((com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentsAssociatedWithAgentGroupReq) request,
@@ -12525,9 +13888,17 @@ public final class WFMGrpc {
           serviceImpl.listDraftSchedules((com.tcn.cloud.api.api.v1alpha1.wfm.ListDraftSchedulesReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListDraftSchedulesRes>) responseObserver);
           break;
+        case METHODID_CLEAR_SCHEDULE:
+          serviceImpl.clearSchedule((com.tcn.cloud.api.api.v1alpha1.wfm.ClearScheduleReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ClearScheduleRes>) responseObserver);
+          break;
         case METHODID_DELETE_DRAFT_SCHEDULE:
           serviceImpl.deleteDraftSchedule((com.tcn.cloud.api.api.v1alpha1.wfm.DeleteDraftScheduleReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteDraftScheduleRes>) responseObserver);
+          break;
+        case METHODID_LIST_SHIFT_INSTANCES_BY_SID:
+          serviceImpl.listShiftInstancesBySid((com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidRes>) responseObserver);
           break;
         case METHODID_COPY_SCHEDULE_TO_SCHEDULE:
           serviceImpl.copyScheduleToSchedule((com.tcn.cloud.api.api.v1alpha1.wfm.CopyScheduleToScheduleReq) request,
@@ -12576,6 +13947,14 @@ public final class WFMGrpc {
         case METHODID_DELETE_SCHEDULING_TARGET:
           serviceImpl.deleteSchedulingTarget((com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingTargetReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingTargetRes>) responseObserver);
+          break;
+        case METHODID_GET_DEFAULT_SCHEDULING_TARGET:
+          serviceImpl.getDefaultSchedulingTarget((com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetRes>) responseObserver);
+          break;
+        case METHODID_SET_DEFAULT_SCHEDULING_TARGET:
+          serviceImpl.setDefaultSchedulingTarget((com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetRes>) responseObserver);
           break;
         case METHODID_GET_PERFORMANCE_METRICS:
           serviceImpl.getPerformanceMetrics((com.tcn.cloud.api.api.v1alpha1.wfm.GetPerformanceMetricsReq) request,
@@ -12695,6 +14074,13 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateForSkillProfileRes>(
                 service, METHODID_BUILD_CALL_PROFILE_TEMPLATE_FOR_SKILL_PROFILE)))
         .addMethod(
+          getBuildCallProfileTemplateMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateRes>(
+                service, METHODID_BUILD_CALL_PROFILE_TEMPLATE)))
+        .addMethod(
           getCreateInactiveSkillProfileMappingMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -12715,6 +14101,34 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingReq,
               com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingRes>(
                 service, METHODID_DISCONNECT_INACTIVE_SKILL_PROFILE_MAPPING)))
+        .addMethod(
+          getCreateSkillProfileGroupMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProfileGroupReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProfileGroupRes>(
+                service, METHODID_CREATE_SKILL_PROFILE_GROUP)))
+        .addMethod(
+          getUpdateSkillProfileGroupMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupRes>(
+                service, METHODID_UPDATE_SKILL_PROFILE_GROUP)))
+        .addMethod(
+          getListSkillProfileGroupsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfileGroupsReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfileGroupsRes>(
+                service, METHODID_LIST_SKILL_PROFILE_GROUPS)))
+        .addMethod(
+          getUpdateSkillProfileGroupAssociationsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupAssociationsReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupAssociationsRes>(
+                service, METHODID_UPDATE_SKILL_PROFILE_GROUP_ASSOCIATIONS)))
         .addMethod(
           getDeleteHistoricalDataDeltasMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -12799,6 +14213,13 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsForSkillProfileReq,
               com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval>(
                 service, METHODID_LIST_FORECAST_INTERVALS_FOR_SKILL_PROFILE)))
+        .addMethod(
+          getListForecastIntervalsMethod(),
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval>(
+                service, METHODID_LIST_FORECAST_INTERVALS)))
         .addMethod(
           getBuildRegressionForecastByIntervalMethod(),
           io.grpc.stub.ServerCalls.asyncServerStreamingCall(
@@ -12926,6 +14347,13 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.UpdateProgramNodeRes>(
                 service, METHODID_UPDATE_PROGRAM_NODE)))
         .addMethod(
+          getListProgramNodesBySidMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidRes>(
+                service, METHODID_LIST_PROGRAM_NODES_BY_SID)))
+        .addMethod(
           getCreateConstraintRuleMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -12960,6 +14388,13 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.UpdateNonSkillActivityReq,
               com.tcn.cloud.api.api.v1alpha1.wfm.UpdateNonSkillActivityRes>(
                 service, METHODID_UPDATE_NON_SKILL_ACTIVITY)))
+        .addMethod(
+          getListNonSkillActivitiesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivitiesReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivitiesRes>(
+                service, METHODID_LIST_NON_SKILL_ACTIVITIES)))
         .addMethod(
           getListNonSkillActivityAssociationsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -13016,6 +14451,13 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.ListUngroupedWFMAgentsReq,
               com.tcn.cloud.api.api.v1alpha1.wfm.ListUngroupedWFMAgentsRes>(
                 service, METHODID_LIST_UNGROUPED_WFMAGENTS)))
+        .addMethod(
+          getListWFMAgentSidsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsRes>(
+                service, METHODID_LIST_WFMAGENT_SIDS)))
         .addMethod(
           getListWFMAgentsAssociatedWithAgentGroupMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -13304,12 +14746,26 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.ListDraftSchedulesRes>(
                 service, METHODID_LIST_DRAFT_SCHEDULES)))
         .addMethod(
+          getClearScheduleMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.ClearScheduleReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.ClearScheduleRes>(
+                service, METHODID_CLEAR_SCHEDULE)))
+        .addMethod(
           getDeleteDraftScheduleMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
               com.tcn.cloud.api.api.v1alpha1.wfm.DeleteDraftScheduleReq,
               com.tcn.cloud.api.api.v1alpha1.wfm.DeleteDraftScheduleRes>(
                 service, METHODID_DELETE_DRAFT_SCHEDULE)))
+        .addMethod(
+          getListShiftInstancesBySidMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidRes>(
+                service, METHODID_LIST_SHIFT_INSTANCES_BY_SID)))
         .addMethod(
           getCopyScheduleToScheduleMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -13395,6 +14851,20 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingTargetRes>(
                 service, METHODID_DELETE_SCHEDULING_TARGET)))
         .addMethod(
+          getGetDefaultSchedulingTargetMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetRes>(
+                service, METHODID_GET_DEFAULT_SCHEDULING_TARGET)))
+        .addMethod(
+          getSetDefaultSchedulingTargetMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetRes>(
+                service, METHODID_SET_DEFAULT_SCHEDULING_TARGET)))
+        .addMethod(
           getGetPerformanceMetricsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -13469,9 +14939,14 @@ public final class WFMGrpc {
               .addMethod(getUpsertHistoricalDataDeltasMethod())
               .addMethod(getListSkillsMethod())
               .addMethod(getBuildCallProfileTemplateForSkillProfileMethod())
+              .addMethod(getBuildCallProfileTemplateMethod())
               .addMethod(getCreateInactiveSkillProfileMappingMethod())
               .addMethod(getGetAvailableRegressionForecasterModelTypesMethod())
               .addMethod(getDisconnectInactiveSkillProfileMappingMethod())
+              .addMethod(getCreateSkillProfileGroupMethod())
+              .addMethod(getUpdateSkillProfileGroupMethod())
+              .addMethod(getListSkillProfileGroupsMethod())
+              .addMethod(getUpdateSkillProfileGroupAssociationsMethod())
               .addMethod(getDeleteHistoricalDataDeltasMethod())
               .addMethod(getListTopSkillProfilesMethod())
               .addMethod(getGetSkillProfilesCountMethod())
@@ -13484,6 +14959,7 @@ public final class WFMGrpc {
               .addMethod(getDeleteRegressionTemplateMethod())
               .addMethod(getListRegressionTemplatesMethod())
               .addMethod(getListForecastIntervalsForSkillProfileMethod())
+              .addMethod(getListForecastIntervalsMethod())
               .addMethod(getBuildRegressionForecastByIntervalMethod())
               .addMethod(getBuildRegressionForecastByIntervalWithStatsMethod())
               .addMethod(getListCallProfileTemplatesMethod())
@@ -13502,11 +14978,13 @@ public final class WFMGrpc {
               .addMethod(getUpdateLocationNodeMethod())
               .addMethod(getCreateProgramNodeMethod())
               .addMethod(getUpdateProgramNodeMethod())
+              .addMethod(getListProgramNodesBySidMethod())
               .addMethod(getCreateConstraintRuleMethod())
               .addMethod(getUpdateConstraintRuleMethod())
               .addMethod(getDeleteConstraintRuleMethod())
               .addMethod(getCreateNonSkillActivityMethod())
               .addMethod(getUpdateNonSkillActivityMethod())
+              .addMethod(getListNonSkillActivitiesMethod())
               .addMethod(getListNonSkillActivityAssociationsMethod())
               .addMethod(getListCandidateSchedulingActivitiesMethod())
               .addMethod(getCreateAgentGroupMethod())
@@ -13515,6 +14993,7 @@ public final class WFMGrpc {
               .addMethod(getListAllWFMAgentsMethod())
               .addMethod(getListCandidateWFMAgentsMethod())
               .addMethod(getListUngroupedWFMAgentsMethod())
+              .addMethod(getListWFMAgentSidsMethod())
               .addMethod(getListWFMAgentsAssociatedWithAgentGroupMethod())
               .addMethod(getCreateWFMAgentMembershipsMethod())
               .addMethod(getDeleteWFMAgentMembershipsMethod())
@@ -13556,7 +15035,9 @@ public final class WFMGrpc {
               .addMethod(getResetDraftScheduleMethod())
               .addMethod(getGetDraftScheduleMethod())
               .addMethod(getListDraftSchedulesMethod())
+              .addMethod(getClearScheduleMethod())
               .addMethod(getDeleteDraftScheduleMethod())
+              .addMethod(getListShiftInstancesBySidMethod())
               .addMethod(getCopyScheduleToScheduleMethod())
               .addMethod(getCreateShiftInstanceMethod())
               .addMethod(getCreateShiftInstanceV2Method())
@@ -13569,6 +15050,8 @@ public final class WFMGrpc {
               .addMethod(getSetSchedulingTargetMethod())
               .addMethod(getGetSchedulingTargetMethod())
               .addMethod(getDeleteSchedulingTargetMethod())
+              .addMethod(getGetDefaultSchedulingTargetMethod())
+              .addMethod(getSetDefaultSchedulingTargetMethod())
               .addMethod(getGetPerformanceMetricsMethod())
               .addMethod(getListRequiredCallsIntervalsMethod())
               .build();

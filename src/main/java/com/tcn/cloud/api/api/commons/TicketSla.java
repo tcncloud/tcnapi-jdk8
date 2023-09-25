@@ -183,6 +183,32 @@ private static final long serialVersionUID = 0L;
     return isActive_;
   }
 
+  public static final int TICKET_SLA_DURATION_FIELD_NUMBER = 6;
+  private com.tcn.cloud.api.api.commons.Duration ticketSlaDuration_;
+  /**
+   * <code>.api.commons.Duration ticket_sla_duration = 6 [json_name = "ticketSlaDuration"];</code>
+   * @return Whether the ticketSlaDuration field is set.
+   */
+  @java.lang.Override
+  public boolean hasTicketSlaDuration() {
+    return ticketSlaDuration_ != null;
+  }
+  /**
+   * <code>.api.commons.Duration ticket_sla_duration = 6 [json_name = "ticketSlaDuration"];</code>
+   * @return The ticketSlaDuration.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.Duration getTicketSlaDuration() {
+    return ticketSlaDuration_ == null ? com.tcn.cloud.api.api.commons.Duration.getDefaultInstance() : ticketSlaDuration_;
+  }
+  /**
+   * <code>.api.commons.Duration ticket_sla_duration = 6 [json_name = "ticketSlaDuration"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.DurationOrBuilder getTicketSlaDurationOrBuilder() {
+    return ticketSlaDuration_ == null ? com.tcn.cloud.api.api.commons.Duration.getDefaultInstance() : ticketSlaDuration_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -212,6 +238,9 @@ private static final long serialVersionUID = 0L;
     if (isActive_ != 0L) {
       output.writeInt64(5, isActive_);
     }
+    if (ticketSlaDuration_ != null) {
+      output.writeMessage(6, getTicketSlaDuration());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -239,6 +268,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(5, isActive_);
     }
+    if (ticketSlaDuration_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(6, getTicketSlaDuration());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -264,6 +297,11 @@ private static final long serialVersionUID = 0L;
         != other.getInterval()) return false;
     if (getIsActive()
         != other.getIsActive()) return false;
+    if (hasTicketSlaDuration() != other.hasTicketSlaDuration()) return false;
+    if (hasTicketSlaDuration()) {
+      if (!getTicketSlaDuration()
+          .equals(other.getTicketSlaDuration())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -288,6 +326,10 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + IS_ACTIVE_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getIsActive());
+    if (hasTicketSlaDuration()) {
+      hash = (37 * hash) + TICKET_SLA_DURATION_FIELD_NUMBER;
+      hash = (53 * hash) + getTicketSlaDuration().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -428,6 +470,11 @@ private static final long serialVersionUID = 0L;
       description_ = "";
       interval_ = 0L;
       isActive_ = 0L;
+      ticketSlaDuration_ = null;
+      if (ticketSlaDurationBuilder_ != null) {
+        ticketSlaDurationBuilder_.dispose();
+        ticketSlaDurationBuilder_ = null;
+      }
       return this;
     }
 
@@ -475,6 +522,11 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.isActive_ = isActive_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.ticketSlaDuration_ = ticketSlaDurationBuilder_ == null
+            ? ticketSlaDuration_
+            : ticketSlaDurationBuilder_.build();
       }
     }
 
@@ -541,6 +593,9 @@ private static final long serialVersionUID = 0L;
       if (other.getIsActive() != 0L) {
         setIsActive(other.getIsActive());
       }
+      if (other.hasTicketSlaDuration()) {
+        mergeTicketSlaDuration(other.getTicketSlaDuration());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -592,6 +647,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000010;
               break;
             } // case 40
+            case 50: {
+              input.readMessage(
+                  getTicketSlaDurationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 50
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -923,6 +985,125 @@ private static final long serialVersionUID = 0L;
       isActive_ = 0L;
       onChanged();
       return this;
+    }
+
+    private com.tcn.cloud.api.api.commons.Duration ticketSlaDuration_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.Duration, com.tcn.cloud.api.api.commons.Duration.Builder, com.tcn.cloud.api.api.commons.DurationOrBuilder> ticketSlaDurationBuilder_;
+    /**
+     * <code>.api.commons.Duration ticket_sla_duration = 6 [json_name = "ticketSlaDuration"];</code>
+     * @return Whether the ticketSlaDuration field is set.
+     */
+    public boolean hasTicketSlaDuration() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <code>.api.commons.Duration ticket_sla_duration = 6 [json_name = "ticketSlaDuration"];</code>
+     * @return The ticketSlaDuration.
+     */
+    public com.tcn.cloud.api.api.commons.Duration getTicketSlaDuration() {
+      if (ticketSlaDurationBuilder_ == null) {
+        return ticketSlaDuration_ == null ? com.tcn.cloud.api.api.commons.Duration.getDefaultInstance() : ticketSlaDuration_;
+      } else {
+        return ticketSlaDurationBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.api.commons.Duration ticket_sla_duration = 6 [json_name = "ticketSlaDuration"];</code>
+     */
+    public Builder setTicketSlaDuration(com.tcn.cloud.api.api.commons.Duration value) {
+      if (ticketSlaDurationBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ticketSlaDuration_ = value;
+      } else {
+        ticketSlaDurationBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.Duration ticket_sla_duration = 6 [json_name = "ticketSlaDuration"];</code>
+     */
+    public Builder setTicketSlaDuration(
+        com.tcn.cloud.api.api.commons.Duration.Builder builderForValue) {
+      if (ticketSlaDurationBuilder_ == null) {
+        ticketSlaDuration_ = builderForValue.build();
+      } else {
+        ticketSlaDurationBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.Duration ticket_sla_duration = 6 [json_name = "ticketSlaDuration"];</code>
+     */
+    public Builder mergeTicketSlaDuration(com.tcn.cloud.api.api.commons.Duration value) {
+      if (ticketSlaDurationBuilder_ == null) {
+        if (((bitField0_ & 0x00000020) != 0) &&
+          ticketSlaDuration_ != null &&
+          ticketSlaDuration_ != com.tcn.cloud.api.api.commons.Duration.getDefaultInstance()) {
+          getTicketSlaDurationBuilder().mergeFrom(value);
+        } else {
+          ticketSlaDuration_ = value;
+        }
+      } else {
+        ticketSlaDurationBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.Duration ticket_sla_duration = 6 [json_name = "ticketSlaDuration"];</code>
+     */
+    public Builder clearTicketSlaDuration() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      ticketSlaDuration_ = null;
+      if (ticketSlaDurationBuilder_ != null) {
+        ticketSlaDurationBuilder_.dispose();
+        ticketSlaDurationBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.Duration ticket_sla_duration = 6 [json_name = "ticketSlaDuration"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.Duration.Builder getTicketSlaDurationBuilder() {
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return getTicketSlaDurationFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.Duration ticket_sla_duration = 6 [json_name = "ticketSlaDuration"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.DurationOrBuilder getTicketSlaDurationOrBuilder() {
+      if (ticketSlaDurationBuilder_ != null) {
+        return ticketSlaDurationBuilder_.getMessageOrBuilder();
+      } else {
+        return ticketSlaDuration_ == null ?
+            com.tcn.cloud.api.api.commons.Duration.getDefaultInstance() : ticketSlaDuration_;
+      }
+    }
+    /**
+     * <code>.api.commons.Duration ticket_sla_duration = 6 [json_name = "ticketSlaDuration"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.Duration, com.tcn.cloud.api.api.commons.Duration.Builder, com.tcn.cloud.api.api.commons.DurationOrBuilder> 
+        getTicketSlaDurationFieldBuilder() {
+      if (ticketSlaDurationBuilder_ == null) {
+        ticketSlaDurationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.Duration, com.tcn.cloud.api.api.commons.Duration.Builder, com.tcn.cloud.api.api.commons.DurationOrBuilder>(
+                getTicketSlaDuration(),
+                getParentForChildren(),
+                isClean());
+        ticketSlaDuration_ = null;
+      }
+      return ticketSlaDurationBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

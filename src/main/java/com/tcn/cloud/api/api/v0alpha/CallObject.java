@@ -67,7 +67,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.CallObject.class, com.tcn.cloud.api.api.v0alpha.CallObject.Builder.class);
   }
 
-  private int bitField0_;
   public static final int OID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object oid_ = "";
@@ -271,7 +270,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasUpdatedDate() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return updatedDate_ != null;
   }
   /**
    * <code>.google.protobuf.Timestamp updated_date = 13 [json_name = "updatedDate"];</code>
@@ -874,7 +873,7 @@ java.lang.String defaultValue) {
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recordingFile_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 12, recordingFile_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (updatedDate_ != null) {
       output.writeMessage(13, getUpdatedDate());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(srcNumber_)) {
@@ -965,7 +964,7 @@ java.lang.String defaultValue) {
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recordingFile_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, recordingFile_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (updatedDate_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(13, getUpdatedDate());
     }
@@ -1312,19 +1311,13 @@ java.lang.String defaultValue) {
 
     // Construct using com.tcn.cloud.api.api.v0alpha.CallObject.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getUpdatedDateFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -1410,12 +1403,10 @@ java.lang.String defaultValue) {
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.recordingFile_ = recordingFile_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.updatedDate_ = updatedDateBuilder_ == null
             ? updatedDate_
             : updatedDateBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.srcNumber_ = srcNumber_;
@@ -1467,7 +1458,6 @@ java.lang.String defaultValue) {
       if (((from_bitField0_ & 0x00400000) != 0)) {
         result.rtpInfo_ = rtpInfo_;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -2235,10 +2225,8 @@ java.lang.String defaultValue) {
       } else {
         updatedDateBuilder_.mergeFrom(value);
       }
-      if (updatedDate_ != null) {
-        bitField0_ |= 0x00000040;
-        onChanged();
-      }
+      bitField0_ |= 0x00000040;
+      onChanged();
       return this;
     }
     /**

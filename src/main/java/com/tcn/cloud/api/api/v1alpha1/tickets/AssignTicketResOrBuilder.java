@@ -26,19 +26,11 @@ public interface AssignTicketResOrBuilder extends
       getAssigneeListBytes();
 
   /**
-   * <pre>
-   * uuid
-   * </pre>
-   *
    * <code>string assigned_id = 3 [json_name = "assignedId"];</code>
    * @return The assignedId.
    */
   java.lang.String getAssignedId();
   /**
-   * <pre>
-   * uuid
-   * </pre>
-   *
    * <code>string assigned_id = 3 [json_name = "assignedId"];</code>
    * @return The bytes for assignedId.
    */

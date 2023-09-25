@@ -40,7 +40,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.SmsTaskInfoRes.class, com.tcn.cloud.api.api.v0alpha.SmsTaskInfoRes.Builder.class);
   }
 
-  private int bitField0_;
   public static final int SMS_TASK_SID_FIELD_NUMBER = 1;
   private long smsTaskSid_ = 0L;
   /**
@@ -171,7 +170,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasMsgUuid() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return msgUuid_ != null;
   }
   /**
    * <code>.google.protobuf.StringValue msg_uuid = 7 [json_name = "msgUuid"];</code>
@@ -197,7 +196,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasMsgTime() {
-    return ((bitField0_ & 0x00000002) != 0);
+    return msgTime_ != null;
   }
   /**
    * <code>.google.protobuf.Timestamp msg_time = 8 [json_name = "msgTime"];</code>
@@ -234,7 +233,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasPhoneNumCol() {
-    return ((bitField0_ & 0x00000004) != 0);
+    return phoneNumCol_ != null;
   }
   /**
    * <code>.google.protobuf.StringValue phone_num_col = 10 [json_name = "phoneNumCol"];</code>
@@ -271,7 +270,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasSmsTaskParent() {
-    return ((bitField0_ & 0x00000008) != 0);
+    return smsTaskParent_ != null;
   }
   /**
    * <code>.google.protobuf.Int64Value sms_task_parent = 12 [json_name = "smsTaskParent"];</code>
@@ -297,7 +296,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasMamAgentResponse() {
-    return ((bitField0_ & 0x00000010) != 0);
+    return mamAgentResponse_ != null;
   }
   /**
    * <code>.api.v0alpha.MamAgentResponse mam_agent_response = 13 [json_name = "mamAgentResponse"];</code>
@@ -347,25 +346,25 @@ private static final long serialVersionUID = 0L;
     if (java.lang.Double.doubleToRawLongBits(cost_) != 0) {
       output.writeDouble(6, cost_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (msgUuid_ != null) {
       output.writeMessage(7, getMsgUuid());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (msgTime_ != null) {
       output.writeMessage(8, getMsgTime());
     }
     if (status_ != 0L) {
       output.writeInt64(9, status_);
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
+    if (phoneNumCol_ != null) {
       output.writeMessage(10, getPhoneNumCol());
     }
     if (units_ != 0L) {
       output.writeInt64(11, units_);
     }
-    if (((bitField0_ & 0x00000008) != 0)) {
+    if (smsTaskParent_ != null) {
       output.writeMessage(12, getSmsTaskParent());
     }
-    if (((bitField0_ & 0x00000010) != 0)) {
+    if (mamAgentResponse_ != null) {
       output.writeMessage(13, getMamAgentResponse());
     }
     getUnknownFields().writeTo(output);
@@ -399,11 +398,11 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(6, cost_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (msgUuid_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, getMsgUuid());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (msgTime_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, getMsgTime());
     }
@@ -411,7 +410,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(9, status_);
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
+    if (phoneNumCol_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(10, getPhoneNumCol());
     }
@@ -419,11 +418,11 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(11, units_);
     }
-    if (((bitField0_ & 0x00000008) != 0)) {
+    if (smsTaskParent_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(12, getSmsTaskParent());
     }
-    if (((bitField0_ & 0x00000010) != 0)) {
+    if (mamAgentResponse_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(13, getMamAgentResponse());
     }
@@ -656,23 +655,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.SmsTaskInfoRes.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getMsgUuidFieldBuilder();
-        getMsgTimeFieldBuilder();
-        getPhoneNumColFieldBuilder();
-        getSmsTaskParentFieldBuilder();
-        getMamAgentResponseFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -762,18 +751,15 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.cost_ = cost_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.msgUuid_ = msgUuidBuilder_ == null
             ? msgUuid_
             : msgUuidBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.msgTime_ = msgTimeBuilder_ == null
             ? msgTime_
             : msgTimeBuilder_.build();
-        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000100) != 0)) {
         result.status_ = status_;
@@ -782,7 +768,6 @@ private static final long serialVersionUID = 0L;
         result.phoneNumCol_ = phoneNumColBuilder_ == null
             ? phoneNumCol_
             : phoneNumColBuilder_.build();
-        to_bitField0_ |= 0x00000004;
       }
       if (((from_bitField0_ & 0x00000400) != 0)) {
         result.units_ = units_;
@@ -791,15 +776,12 @@ private static final long serialVersionUID = 0L;
         result.smsTaskParent_ = smsTaskParentBuilder_ == null
             ? smsTaskParent_
             : smsTaskParentBuilder_.build();
-        to_bitField0_ |= 0x00000008;
       }
       if (((from_bitField0_ & 0x00001000) != 0)) {
         result.mamAgentResponse_ = mamAgentResponseBuilder_ == null
             ? mamAgentResponse_
             : mamAgentResponseBuilder_.build();
-        to_bitField0_ |= 0x00000010;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1345,10 +1327,8 @@ private static final long serialVersionUID = 0L;
       } else {
         msgUuidBuilder_.mergeFrom(value);
       }
-      if (msgUuid_ != null) {
-        bitField0_ |= 0x00000040;
-        onChanged();
-      }
+      bitField0_ |= 0x00000040;
+      onChanged();
       return this;
     }
     /**
@@ -1466,10 +1446,8 @@ private static final long serialVersionUID = 0L;
       } else {
         msgTimeBuilder_.mergeFrom(value);
       }
-      if (msgTime_ != null) {
-        bitField0_ |= 0x00000080;
-        onChanged();
-      }
+      bitField0_ |= 0x00000080;
+      onChanged();
       return this;
     }
     /**
@@ -1619,10 +1597,8 @@ private static final long serialVersionUID = 0L;
       } else {
         phoneNumColBuilder_.mergeFrom(value);
       }
-      if (phoneNumCol_ != null) {
-        bitField0_ |= 0x00000200;
-        onChanged();
-      }
+      bitField0_ |= 0x00000200;
+      onChanged();
       return this;
     }
     /**
@@ -1772,10 +1748,8 @@ private static final long serialVersionUID = 0L;
       } else {
         smsTaskParentBuilder_.mergeFrom(value);
       }
-      if (smsTaskParent_ != null) {
-        bitField0_ |= 0x00000800;
-        onChanged();
-      }
+      bitField0_ |= 0x00000800;
+      onChanged();
       return this;
     }
     /**
@@ -1893,10 +1867,8 @@ private static final long serialVersionUID = 0L;
       } else {
         mamAgentResponseBuilder_.mergeFrom(value);
       }
-      if (mamAgentResponse_ != null) {
-        bitField0_ |= 0x00001000;
-        onChanged();
-      }
+      bitField0_ |= 0x00001000;
+      onChanged();
       return this;
     }
     /**

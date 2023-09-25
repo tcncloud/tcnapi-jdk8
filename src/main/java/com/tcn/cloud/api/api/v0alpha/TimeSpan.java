@@ -290,7 +290,6 @@ private static final long serialVersionUID = 0L;
               com.tcn.cloud.api.api.v0alpha.TimeSpan.Range.class, com.tcn.cloud.api.api.v0alpha.TimeSpan.Range.Builder.class);
     }
 
-    private int bitField0_;
     public static final int START_FIELD_NUMBER = 1;
     private com.google.protobuf.Timestamp start_;
     /**
@@ -299,7 +298,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasStart() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return start_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp start = 1 [json_name = "start"];</code>
@@ -325,7 +324,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasEnd() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return end_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp end = 2 [json_name = "end"];</code>
@@ -357,10 +356,10 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (start_ != null) {
         output.writeMessage(1, getStart());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (end_ != null) {
         output.writeMessage(2, getEnd());
       }
       getUnknownFields().writeTo(output);
@@ -372,11 +371,11 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (start_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getStart());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (end_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getEnd());
       }
@@ -547,20 +546,13 @@ private static final long serialVersionUID = 0L;
 
       // Construct using com.tcn.cloud.api.api.v0alpha.TimeSpan.Range.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getStartFieldBuilder();
-          getEndFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -609,20 +601,16 @@ private static final long serialVersionUID = 0L;
 
       private void buildPartial0(com.tcn.cloud.api.api.v0alpha.TimeSpan.Range result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.start_ = startBuilder_ == null
               ? start_
               : startBuilder_.build();
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.end_ = endBuilder_ == null
               ? end_
               : endBuilder_.build();
-          to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -798,10 +786,8 @@ private static final long serialVersionUID = 0L;
         } else {
           startBuilder_.mergeFrom(value);
         }
-        if (start_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -919,10 +905,8 @@ private static final long serialVersionUID = 0L;
         } else {
           endBuilder_.mergeFrom(value);
         }
-        if (end_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**

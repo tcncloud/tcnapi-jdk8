@@ -44,7 +44,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.billing.Detail.class, com.tcn.cloud.api.api.commons.billing.Detail.Builder.class);
   }
 
-  private int bitField0_;
   public static final int BILLING_DETAIL_SID_FIELD_NUMBER = 1;
   private long billingDetailSid_ = 0L;
   /**
@@ -124,7 +123,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasConfig() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return config_ != null;
   }
   /**
    * <pre>
@@ -162,7 +161,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasDateCreated() {
-    return ((bitField0_ & 0x00000002) != 0);
+    return dateCreated_ != null;
   }
   /**
    * <pre>
@@ -200,7 +199,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasDateModified() {
-    return ((bitField0_ & 0x00000004) != 0);
+    return dateModified_ != null;
   }
   /**
    * <pre>
@@ -238,7 +237,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasDeletedOn() {
-    return ((bitField0_ & 0x00000008) != 0);
+    return deletedOn_ != null;
   }
   /**
    * <pre>
@@ -264,6 +263,21 @@ private static final long serialVersionUID = 0L;
     return deletedOn_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : deletedOn_;
   }
 
+  public static final int BILLING_PLAN_ID_FIELD_NUMBER = 8;
+  private long billingPlanId_ = 0L;
+  /**
+   * <pre>
+   * the billing plan identifier
+   * </pre>
+   *
+   * <code>int64 billing_plan_id = 8 [json_name = "billingPlanId", jstype = JS_STRING];</code>
+   * @return The billingPlanId.
+   */
+  @java.lang.Override
+  public long getBillingPlanId() {
+    return billingPlanId_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -287,17 +301,20 @@ private static final long serialVersionUID = 0L;
     if (configType_ != com.tcn.cloud.api.api.commons.billing.DetailConfigType.DETAIL_CONFIG_TYPE_UNSPECIFIED.getNumber()) {
       output.writeEnum(3, configType_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (config_ != null) {
       output.writeMessage(4, getConfig());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (dateCreated_ != null) {
       output.writeMessage(5, getDateCreated());
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
+    if (dateModified_ != null) {
       output.writeMessage(6, getDateModified());
     }
-    if (((bitField0_ & 0x00000008) != 0)) {
+    if (deletedOn_ != null) {
       output.writeMessage(7, getDeletedOn());
+    }
+    if (billingPlanId_ != 0L) {
+      output.writeInt64(8, billingPlanId_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -320,21 +337,25 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(3, configType_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (config_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getConfig());
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (dateCreated_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getDateCreated());
     }
-    if (((bitField0_ & 0x00000004) != 0)) {
+    if (dateModified_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, getDateModified());
     }
-    if (((bitField0_ & 0x00000008) != 0)) {
+    if (deletedOn_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, getDeletedOn());
+    }
+    if (billingPlanId_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(8, billingPlanId_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -375,6 +396,8 @@ private static final long serialVersionUID = 0L;
       if (!getDeletedOn()
           .equals(other.getDeletedOn())) return false;
     }
+    if (getBillingPlanId()
+        != other.getBillingPlanId()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -409,6 +432,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + DELETED_ON_FIELD_NUMBER;
       hash = (53 * hash) + getDeletedOn().hashCode();
     }
+    hash = (37 * hash) + BILLING_PLAN_ID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getBillingPlanId());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -532,22 +558,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.billing.Detail.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getConfigFieldBuilder();
-        getDateCreatedFieldBuilder();
-        getDateModifiedFieldBuilder();
-        getDeletedOnFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -576,6 +593,7 @@ private static final long serialVersionUID = 0L;
         deletedOnBuilder_.dispose();
         deletedOnBuilder_ = null;
       }
+      billingPlanId_ = 0L;
       return this;
     }
 
@@ -618,32 +636,29 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.configType_ = configType_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.config_ = configBuilder_ == null
             ? config_
             : configBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.dateCreated_ = dateCreatedBuilder_ == null
             ? dateCreated_
             : dateCreatedBuilder_.build();
-        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.dateModified_ = dateModifiedBuilder_ == null
             ? dateModified_
             : dateModifiedBuilder_.build();
-        to_bitField0_ |= 0x00000004;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.deletedOn_ = deletedOnBuilder_ == null
             ? deletedOn_
             : deletedOnBuilder_.build();
-        to_bitField0_ |= 0x00000008;
       }
-      result.bitField0_ |= to_bitField0_;
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.billingPlanId_ = billingPlanId_;
+      }
     }
 
     @java.lang.Override
@@ -710,6 +725,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasDeletedOn()) {
         mergeDeletedOn(other.getDeletedOn());
+      }
+      if (other.getBillingPlanId() != 0L) {
+        setBillingPlanId(other.getBillingPlanId());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -780,6 +798,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000040;
               break;
             } // case 58
+            case 64: {
+              billingPlanId_ = input.readInt64();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 64
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1073,10 +1096,8 @@ private static final long serialVersionUID = 0L;
       } else {
         configBuilder_.mergeFrom(value);
       }
-      if (config_ != null) {
-        bitField0_ |= 0x00000008;
-        onChanged();
-      }
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -1230,10 +1251,8 @@ private static final long serialVersionUID = 0L;
       } else {
         dateCreatedBuilder_.mergeFrom(value);
       }
-      if (dateCreated_ != null) {
-        bitField0_ |= 0x00000010;
-        onChanged();
-      }
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -1387,10 +1406,8 @@ private static final long serialVersionUID = 0L;
       } else {
         dateModifiedBuilder_.mergeFrom(value);
       }
-      if (dateModified_ != null) {
-        bitField0_ |= 0x00000020;
-        onChanged();
-      }
+      bitField0_ |= 0x00000020;
+      onChanged();
       return this;
     }
     /**
@@ -1544,10 +1561,8 @@ private static final long serialVersionUID = 0L;
       } else {
         deletedOnBuilder_.mergeFrom(value);
       }
-      if (deletedOn_ != null) {
-        bitField0_ |= 0x00000040;
-        onChanged();
-      }
+      bitField0_ |= 0x00000040;
+      onChanged();
       return this;
     }
     /**
@@ -1613,6 +1628,50 @@ private static final long serialVersionUID = 0L;
         deletedOn_ = null;
       }
       return deletedOnBuilder_;
+    }
+
+    private long billingPlanId_ ;
+    /**
+     * <pre>
+     * the billing plan identifier
+     * </pre>
+     *
+     * <code>int64 billing_plan_id = 8 [json_name = "billingPlanId", jstype = JS_STRING];</code>
+     * @return The billingPlanId.
+     */
+    @java.lang.Override
+    public long getBillingPlanId() {
+      return billingPlanId_;
+    }
+    /**
+     * <pre>
+     * the billing plan identifier
+     * </pre>
+     *
+     * <code>int64 billing_plan_id = 8 [json_name = "billingPlanId", jstype = JS_STRING];</code>
+     * @param value The billingPlanId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setBillingPlanId(long value) {
+
+      billingPlanId_ = value;
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the billing plan identifier
+     * </pre>
+     *
+     * <code>int64 billing_plan_id = 8 [json_name = "billingPlanId", jstype = JS_STRING];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearBillingPlanId() {
+      bitField0_ = (bitField0_ & ~0x00000080);
+      billingPlanId_ = 0L;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

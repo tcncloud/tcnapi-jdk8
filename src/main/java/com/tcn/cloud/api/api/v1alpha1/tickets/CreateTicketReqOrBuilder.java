@@ -243,4 +243,69 @@ public interface CreateTicketReqOrBuilder extends
    */
   com.google.protobuf.ByteString
       getAssignOtherBytes();
+
+  /**
+   * <code>repeated .api.commons.TicketAction ticket_action = 15 [json_name = "ticketAction"];</code>
+   */
+  java.util.List<com.tcn.cloud.api.api.commons.TicketAction> 
+      getTicketActionList();
+  /**
+   * <code>repeated .api.commons.TicketAction ticket_action = 15 [json_name = "ticketAction"];</code>
+   */
+  com.tcn.cloud.api.api.commons.TicketAction getTicketAction(int index);
+  /**
+   * <code>repeated .api.commons.TicketAction ticket_action = 15 [json_name = "ticketAction"];</code>
+   */
+  int getTicketActionCount();
+  /**
+   * <code>repeated .api.commons.TicketAction ticket_action = 15 [json_name = "ticketAction"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.api.commons.TicketActionOrBuilder> 
+      getTicketActionOrBuilderList();
+  /**
+   * <code>repeated .api.commons.TicketAction ticket_action = 15 [json_name = "ticketAction"];</code>
+   */
+  com.tcn.cloud.api.api.commons.TicketActionOrBuilder getTicketActionOrBuilder(
+      int index);
+
+  /**
+   * <pre>
+   * assignee list
+   * </pre>
+   *
+   * <code>repeated string ticket_assignee = 16 [json_name = "ticketAssignee"];</code>
+   * @return A list containing the ticketAssignee.
+   */
+  java.util.List<java.lang.String>
+      getTicketAssigneeList();
+  /**
+   * <pre>
+   * assignee list
+   * </pre>
+   *
+   * <code>repeated string ticket_assignee = 16 [json_name = "ticketAssignee"];</code>
+   * @return The count of ticketAssignee.
+   */
+  int getTicketAssigneeCount();
+  /**
+   * <pre>
+   * assignee list
+   * </pre>
+   *
+   * <code>repeated string ticket_assignee = 16 [json_name = "ticketAssignee"];</code>
+   * @param index The index of the element to return.
+   * @return The ticketAssignee at the given index.
+   */
+  java.lang.String getTicketAssignee(int index);
+  /**
+   * <pre>
+   * assignee list
+   * </pre>
+   *
+   * <code>repeated string ticket_assignee = 16 [json_name = "ticketAssignee"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the ticketAssignee at the given index.
+   */
+  com.google.protobuf.ByteString
+      getTicketAssigneeBytes(int index);
 }

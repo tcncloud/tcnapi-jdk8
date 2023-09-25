@@ -302,8 +302,7 @@ private static final long serialVersionUID = 0L;
 
   public static final int CALL_RESULTS_FILTER_LIST_FIELD_NUMBER = 4;
   @SuppressWarnings("serial")
-  private com.google.protobuf.Internal.LongList callResultsFilterList_ =
-      emptyLongList();
+  private com.google.protobuf.Internal.LongList callResultsFilterList_;
   /**
    * <pre>
    * List of individual call types to be filtered by
@@ -588,8 +587,7 @@ private static final long serialVersionUID = 0L;
 
   public static final int HUNT_GROUP_SID_INCLUDE_LIST_FIELD_NUMBER = 10;
   @SuppressWarnings("serial")
-  private com.google.protobuf.Internal.LongList huntGroupSidIncludeList_ =
-      emptyLongList();
+  private com.google.protobuf.Internal.LongList huntGroupSidIncludeList_;
   /**
    * <pre>
    * List of hunt groups to include
@@ -630,8 +628,7 @@ private static final long serialVersionUID = 0L;
 
   public static final int HUNT_GROUP_SID_EXCLUDE_LIST_FIELD_NUMBER = 11;
   @SuppressWarnings("serial")
-  private com.google.protobuf.Internal.LongList huntGroupSidExcludeList_ =
-      emptyLongList();
+  private com.google.protobuf.Internal.LongList huntGroupSidExcludeList_;
   /**
    * <pre>
    * List of hunt groups to exclude
@@ -1113,6 +1110,11 @@ private static final long serialVersionUID = 0L;
     }
 
     private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.org.legacy.CustomReportFilter result) {
+      if (((bitField0_ & 0x00000008) != 0)) {
+        callResultsFilterList_.makeImmutable();
+        bitField0_ = (bitField0_ & ~0x00000008);
+      }
+      result.callResultsFilterList_ = callResultsFilterList_;
       if (dtmfExpressionListBuilder_ == null) {
         if (((bitField0_ & 0x00000010) != 0)) {
           dtmfExpressionList_ = java.util.Collections.unmodifiableList(dtmfExpressionList_);
@@ -1149,6 +1151,16 @@ private static final long serialVersionUID = 0L;
       } else {
         result.excludeDtmfExpressionList_ = excludeDtmfExpressionListBuilder_.build();
       }
+      if (((bitField0_ & 0x00000100) != 0)) {
+        huntGroupSidIncludeList_.makeImmutable();
+        bitField0_ = (bitField0_ & ~0x00000100);
+      }
+      result.huntGroupSidIncludeList_ = huntGroupSidIncludeList_;
+      if (((bitField0_ & 0x00000200) != 0)) {
+        huntGroupSidExcludeList_.makeImmutable();
+        bitField0_ = (bitField0_ & ~0x00000200);
+      }
+      result.huntGroupSidExcludeList_ = huntGroupSidExcludeList_;
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.legacy.CustomReportFilter result) {
@@ -1161,18 +1173,6 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.conjunction_ = conjunction_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        callResultsFilterList_.makeImmutable();
-        result.callResultsFilterList_ = callResultsFilterList_;
-      }
-      if (((from_bitField0_ & 0x00000100) != 0)) {
-        huntGroupSidIncludeList_.makeImmutable();
-        result.huntGroupSidIncludeList_ = huntGroupSidIncludeList_;
-      }
-      if (((from_bitField0_ & 0x00000200) != 0)) {
-        huntGroupSidExcludeList_.makeImmutable();
-        result.huntGroupSidExcludeList_ = huntGroupSidExcludeList_;
       }
       if (((from_bitField0_ & 0x00000400) != 0)) {
         result.xmlClientPropertySid_ = xmlClientPropertySid_;
@@ -1239,8 +1239,7 @@ private static final long serialVersionUID = 0L;
       if (!other.callResultsFilterList_.isEmpty()) {
         if (callResultsFilterList_.isEmpty()) {
           callResultsFilterList_ = other.callResultsFilterList_;
-          callResultsFilterList_.makeImmutable();
-          bitField0_ |= 0x00000008;
+          bitField0_ = (bitField0_ & ~0x00000008);
         } else {
           ensureCallResultsFilterListIsMutable();
           callResultsFilterList_.addAll(other.callResultsFilterList_);
@@ -1354,8 +1353,7 @@ private static final long serialVersionUID = 0L;
       if (!other.huntGroupSidIncludeList_.isEmpty()) {
         if (huntGroupSidIncludeList_.isEmpty()) {
           huntGroupSidIncludeList_ = other.huntGroupSidIncludeList_;
-          huntGroupSidIncludeList_.makeImmutable();
-          bitField0_ |= 0x00000100;
+          bitField0_ = (bitField0_ & ~0x00000100);
         } else {
           ensureHuntGroupSidIncludeListIsMutable();
           huntGroupSidIncludeList_.addAll(other.huntGroupSidIncludeList_);
@@ -1365,8 +1363,7 @@ private static final long serialVersionUID = 0L;
       if (!other.huntGroupSidExcludeList_.isEmpty()) {
         if (huntGroupSidExcludeList_.isEmpty()) {
           huntGroupSidExcludeList_ = other.huntGroupSidExcludeList_;
-          huntGroupSidExcludeList_.makeImmutable();
-          bitField0_ |= 0x00000200;
+          bitField0_ = (bitField0_ & ~0x00000200);
         } else {
           ensureHuntGroupSidExcludeListIsMutable();
           huntGroupSidExcludeList_.addAll(other.huntGroupSidExcludeList_);
@@ -1798,10 +1795,10 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Internal.LongList callResultsFilterList_ = emptyLongList();
     private void ensureCallResultsFilterListIsMutable() {
-      if (!callResultsFilterList_.isModifiable()) {
-        callResultsFilterList_ = makeMutableCopy(callResultsFilterList_);
+      if (!((bitField0_ & 0x00000008) != 0)) {
+        callResultsFilterList_ = mutableCopy(callResultsFilterList_);
+        bitField0_ |= 0x00000008;
       }
-      bitField0_ |= 0x00000008;
     }
     /**
      * <pre>
@@ -1813,8 +1810,8 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Long>
         getCallResultsFilterListList() {
-      callResultsFilterList_.makeImmutable();
-      return callResultsFilterList_;
+      return ((bitField0_ & 0x00000008) != 0) ?
+               java.util.Collections.unmodifiableList(callResultsFilterList_) : callResultsFilterList_;
     }
     /**
      * <pre>
@@ -1854,7 +1851,6 @@ private static final long serialVersionUID = 0L;
 
       ensureCallResultsFilterListIsMutable();
       callResultsFilterList_.setLong(index, value);
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1871,7 +1867,6 @@ private static final long serialVersionUID = 0L;
 
       ensureCallResultsFilterListIsMutable();
       callResultsFilterList_.addLong(value);
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1889,7 +1884,6 @@ private static final long serialVersionUID = 0L;
       ensureCallResultsFilterListIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, callResultsFilterList_);
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -3158,10 +3152,10 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Internal.LongList huntGroupSidIncludeList_ = emptyLongList();
     private void ensureHuntGroupSidIncludeListIsMutable() {
-      if (!huntGroupSidIncludeList_.isModifiable()) {
-        huntGroupSidIncludeList_ = makeMutableCopy(huntGroupSidIncludeList_);
+      if (!((bitField0_ & 0x00000100) != 0)) {
+        huntGroupSidIncludeList_ = mutableCopy(huntGroupSidIncludeList_);
+        bitField0_ |= 0x00000100;
       }
-      bitField0_ |= 0x00000100;
     }
     /**
      * <pre>
@@ -3173,8 +3167,8 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Long>
         getHuntGroupSidIncludeListList() {
-      huntGroupSidIncludeList_.makeImmutable();
-      return huntGroupSidIncludeList_;
+      return ((bitField0_ & 0x00000100) != 0) ?
+               java.util.Collections.unmodifiableList(huntGroupSidIncludeList_) : huntGroupSidIncludeList_;
     }
     /**
      * <pre>
@@ -3214,7 +3208,6 @@ private static final long serialVersionUID = 0L;
 
       ensureHuntGroupSidIncludeListIsMutable();
       huntGroupSidIncludeList_.setLong(index, value);
-      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -3231,7 +3224,6 @@ private static final long serialVersionUID = 0L;
 
       ensureHuntGroupSidIncludeListIsMutable();
       huntGroupSidIncludeList_.addLong(value);
-      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -3249,7 +3241,6 @@ private static final long serialVersionUID = 0L;
       ensureHuntGroupSidIncludeListIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, huntGroupSidIncludeList_);
-      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -3270,10 +3261,10 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Internal.LongList huntGroupSidExcludeList_ = emptyLongList();
     private void ensureHuntGroupSidExcludeListIsMutable() {
-      if (!huntGroupSidExcludeList_.isModifiable()) {
-        huntGroupSidExcludeList_ = makeMutableCopy(huntGroupSidExcludeList_);
+      if (!((bitField0_ & 0x00000200) != 0)) {
+        huntGroupSidExcludeList_ = mutableCopy(huntGroupSidExcludeList_);
+        bitField0_ |= 0x00000200;
       }
-      bitField0_ |= 0x00000200;
     }
     /**
      * <pre>
@@ -3285,8 +3276,8 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Long>
         getHuntGroupSidExcludeListList() {
-      huntGroupSidExcludeList_.makeImmutable();
-      return huntGroupSidExcludeList_;
+      return ((bitField0_ & 0x00000200) != 0) ?
+               java.util.Collections.unmodifiableList(huntGroupSidExcludeList_) : huntGroupSidExcludeList_;
     }
     /**
      * <pre>
@@ -3326,7 +3317,6 @@ private static final long serialVersionUID = 0L;
 
       ensureHuntGroupSidExcludeListIsMutable();
       huntGroupSidExcludeList_.setLong(index, value);
-      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -3343,7 +3333,6 @@ private static final long serialVersionUID = 0L;
 
       ensureHuntGroupSidExcludeListIsMutable();
       huntGroupSidExcludeList_.addLong(value);
-      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -3361,7 +3350,6 @@ private static final long serialVersionUID = 0L;
       ensureHuntGroupSidExcludeListIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, huntGroupSidExcludeList_);
-      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }

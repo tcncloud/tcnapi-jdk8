@@ -42,13 +42,12 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastDataDeltaReq.class, com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastDataDeltaReq.Builder.class);
   }
 
-  private int bitField0_;
   public static final int DELTA_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval delta_;
   /**
    * <pre>
    * Delta to store
-   * The &#64;start_datetime, &#64;is_delta, and &#64;skill_profile_sid fields DO NOT need to be set.
+   * The &#64;start_datetime, &#64;is_delta, and &#64;skill_profile_category fields DO NOT need to be set.
    * </pre>
    *
    * <code>.api.v1alpha1.wfm.CallDataByInterval delta = 1 [json_name = "delta"];</code>
@@ -56,12 +55,12 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasDelta() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return delta_ != null;
   }
   /**
    * <pre>
    * Delta to store
-   * The &#64;start_datetime, &#64;is_delta, and &#64;skill_profile_sid fields DO NOT need to be set.
+   * The &#64;start_datetime, &#64;is_delta, and &#64;skill_profile_category fields DO NOT need to be set.
    * </pre>
    *
    * <code>.api.v1alpha1.wfm.CallDataByInterval delta = 1 [json_name = "delta"];</code>
@@ -74,7 +73,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Delta to store
-   * The &#64;start_datetime, &#64;is_delta, and &#64;skill_profile_sid fields DO NOT need to be set.
+   * The &#64;start_datetime, &#64;is_delta, and &#64;skill_profile_category fields DO NOT need to be set.
    * </pre>
    *
    * <code>.api.v1alpha1.wfm.CallDataByInterval delta = 1 [json_name = "delta"];</code>
@@ -98,7 +97,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (delta_ != null) {
       output.writeMessage(1, getDelta());
     }
     getUnknownFields().writeTo(output);
@@ -110,7 +109,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (delta_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getDelta());
     }
@@ -272,19 +271,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastDataDeltaReq.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getDeltaFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -328,14 +321,11 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastDataDeltaReq result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.delta_ = deltaBuilder_ == null
             ? delta_
             : deltaBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -441,7 +431,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Delta to store
-     * The &#64;start_datetime, &#64;is_delta, and &#64;skill_profile_sid fields DO NOT need to be set.
+     * The &#64;start_datetime, &#64;is_delta, and &#64;skill_profile_category fields DO NOT need to be set.
      * </pre>
      *
      * <code>.api.v1alpha1.wfm.CallDataByInterval delta = 1 [json_name = "delta"];</code>
@@ -453,7 +443,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Delta to store
-     * The &#64;start_datetime, &#64;is_delta, and &#64;skill_profile_sid fields DO NOT need to be set.
+     * The &#64;start_datetime, &#64;is_delta, and &#64;skill_profile_category fields DO NOT need to be set.
      * </pre>
      *
      * <code>.api.v1alpha1.wfm.CallDataByInterval delta = 1 [json_name = "delta"];</code>
@@ -469,7 +459,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Delta to store
-     * The &#64;start_datetime, &#64;is_delta, and &#64;skill_profile_sid fields DO NOT need to be set.
+     * The &#64;start_datetime, &#64;is_delta, and &#64;skill_profile_category fields DO NOT need to be set.
      * </pre>
      *
      * <code>.api.v1alpha1.wfm.CallDataByInterval delta = 1 [json_name = "delta"];</code>
@@ -490,7 +480,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Delta to store
-     * The &#64;start_datetime, &#64;is_delta, and &#64;skill_profile_sid fields DO NOT need to be set.
+     * The &#64;start_datetime, &#64;is_delta, and &#64;skill_profile_category fields DO NOT need to be set.
      * </pre>
      *
      * <code>.api.v1alpha1.wfm.CallDataByInterval delta = 1 [json_name = "delta"];</code>
@@ -509,7 +499,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Delta to store
-     * The &#64;start_datetime, &#64;is_delta, and &#64;skill_profile_sid fields DO NOT need to be set.
+     * The &#64;start_datetime, &#64;is_delta, and &#64;skill_profile_category fields DO NOT need to be set.
      * </pre>
      *
      * <code>.api.v1alpha1.wfm.CallDataByInterval delta = 1 [json_name = "delta"];</code>
@@ -526,16 +516,14 @@ private static final long serialVersionUID = 0L;
       } else {
         deltaBuilder_.mergeFrom(value);
       }
-      if (delta_ != null) {
-        bitField0_ |= 0x00000001;
-        onChanged();
-      }
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
      * <pre>
      * Delta to store
-     * The &#64;start_datetime, &#64;is_delta, and &#64;skill_profile_sid fields DO NOT need to be set.
+     * The &#64;start_datetime, &#64;is_delta, and &#64;skill_profile_category fields DO NOT need to be set.
      * </pre>
      *
      * <code>.api.v1alpha1.wfm.CallDataByInterval delta = 1 [json_name = "delta"];</code>
@@ -553,7 +541,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Delta to store
-     * The &#64;start_datetime, &#64;is_delta, and &#64;skill_profile_sid fields DO NOT need to be set.
+     * The &#64;start_datetime, &#64;is_delta, and &#64;skill_profile_category fields DO NOT need to be set.
      * </pre>
      *
      * <code>.api.v1alpha1.wfm.CallDataByInterval delta = 1 [json_name = "delta"];</code>
@@ -566,7 +554,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Delta to store
-     * The &#64;start_datetime, &#64;is_delta, and &#64;skill_profile_sid fields DO NOT need to be set.
+     * The &#64;start_datetime, &#64;is_delta, and &#64;skill_profile_category fields DO NOT need to be set.
      * </pre>
      *
      * <code>.api.v1alpha1.wfm.CallDataByInterval delta = 1 [json_name = "delta"];</code>
@@ -582,7 +570,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Delta to store
-     * The &#64;start_datetime, &#64;is_delta, and &#64;skill_profile_sid fields DO NOT need to be set.
+     * The &#64;start_datetime, &#64;is_delta, and &#64;skill_profile_category fields DO NOT need to be set.
      * </pre>
      *
      * <code>.api.v1alpha1.wfm.CallDataByInterval delta = 1 [json_name = "delta"];</code>

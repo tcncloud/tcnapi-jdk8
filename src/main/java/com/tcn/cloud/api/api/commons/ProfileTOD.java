@@ -52,8 +52,7 @@ private static final long serialVersionUID = 0L;
 
   public static final int SUNDAY_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private com.google.protobuf.Internal.FloatList sunday_ =
-      emptyFloatList();
+  private com.google.protobuf.Internal.FloatList sunday_;
   /**
    * <code>repeated float sunday = 1 [json_name = "sunday"];</code>
    * @return A list containing the sunday.
@@ -82,8 +81,7 @@ private static final long serialVersionUID = 0L;
 
   public static final int MONDAY_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
-  private com.google.protobuf.Internal.FloatList monday_ =
-      emptyFloatList();
+  private com.google.protobuf.Internal.FloatList monday_;
   /**
    * <code>repeated float monday = 2 [json_name = "monday"];</code>
    * @return A list containing the monday.
@@ -112,8 +110,7 @@ private static final long serialVersionUID = 0L;
 
   public static final int TUESDAY_FIELD_NUMBER = 3;
   @SuppressWarnings("serial")
-  private com.google.protobuf.Internal.FloatList tuesday_ =
-      emptyFloatList();
+  private com.google.protobuf.Internal.FloatList tuesday_;
   /**
    * <code>repeated float tuesday = 3 [json_name = "tuesday"];</code>
    * @return A list containing the tuesday.
@@ -142,8 +139,7 @@ private static final long serialVersionUID = 0L;
 
   public static final int WEDNESDAY_FIELD_NUMBER = 4;
   @SuppressWarnings("serial")
-  private com.google.protobuf.Internal.FloatList wednesday_ =
-      emptyFloatList();
+  private com.google.protobuf.Internal.FloatList wednesday_;
   /**
    * <code>repeated float wednesday = 4 [json_name = "wednesday"];</code>
    * @return A list containing the wednesday.
@@ -172,8 +168,7 @@ private static final long serialVersionUID = 0L;
 
   public static final int THURSDAY_FIELD_NUMBER = 5;
   @SuppressWarnings("serial")
-  private com.google.protobuf.Internal.FloatList thursday_ =
-      emptyFloatList();
+  private com.google.protobuf.Internal.FloatList thursday_;
   /**
    * <code>repeated float thursday = 5 [json_name = "thursday"];</code>
    * @return A list containing the thursday.
@@ -202,8 +197,7 @@ private static final long serialVersionUID = 0L;
 
   public static final int FRIDAY_FIELD_NUMBER = 6;
   @SuppressWarnings("serial")
-  private com.google.protobuf.Internal.FloatList friday_ =
-      emptyFloatList();
+  private com.google.protobuf.Internal.FloatList friday_;
   /**
    * <code>repeated float friday = 6 [json_name = "friday"];</code>
    * @return A list containing the friday.
@@ -232,8 +226,7 @@ private static final long serialVersionUID = 0L;
 
   public static final int SATURDAY_FIELD_NUMBER = 7;
   @SuppressWarnings("serial")
-  private com.google.protobuf.Internal.FloatList saturday_ =
-      emptyFloatList();
+  private com.google.protobuf.Internal.FloatList saturday_;
   /**
    * <code>repeated float saturday = 7 [json_name = "saturday"];</code>
    * @return A list containing the saturday.
@@ -647,41 +640,52 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.ProfileTOD buildPartial() {
       com.tcn.cloud.api.api.commons.ProfileTOD result = new com.tcn.cloud.api.api.commons.ProfileTOD(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.commons.ProfileTOD result) {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        sunday_.makeImmutable();
+        bitField0_ = (bitField0_ & ~0x00000001);
+      }
+      result.sunday_ = sunday_;
+      if (((bitField0_ & 0x00000002) != 0)) {
+        monday_.makeImmutable();
+        bitField0_ = (bitField0_ & ~0x00000002);
+      }
+      result.monday_ = monday_;
+      if (((bitField0_ & 0x00000004) != 0)) {
+        tuesday_.makeImmutable();
+        bitField0_ = (bitField0_ & ~0x00000004);
+      }
+      result.tuesday_ = tuesday_;
+      if (((bitField0_ & 0x00000008) != 0)) {
+        wednesday_.makeImmutable();
+        bitField0_ = (bitField0_ & ~0x00000008);
+      }
+      result.wednesday_ = wednesday_;
+      if (((bitField0_ & 0x00000010) != 0)) {
+        thursday_.makeImmutable();
+        bitField0_ = (bitField0_ & ~0x00000010);
+      }
+      result.thursday_ = thursday_;
+      if (((bitField0_ & 0x00000020) != 0)) {
+        friday_.makeImmutable();
+        bitField0_ = (bitField0_ & ~0x00000020);
+      }
+      result.friday_ = friday_;
+      if (((bitField0_ & 0x00000040) != 0)) {
+        saturday_.makeImmutable();
+        bitField0_ = (bitField0_ & ~0x00000040);
+      }
+      result.saturday_ = saturday_;
+    }
+
     private void buildPartial0(com.tcn.cloud.api.api.commons.ProfileTOD result) {
       int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        sunday_.makeImmutable();
-        result.sunday_ = sunday_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        monday_.makeImmutable();
-        result.monday_ = monday_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        tuesday_.makeImmutable();
-        result.tuesday_ = tuesday_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        wednesday_.makeImmutable();
-        result.wednesday_ = wednesday_;
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        thursday_.makeImmutable();
-        result.thursday_ = thursday_;
-      }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        friday_.makeImmutable();
-        result.friday_ = friday_;
-      }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
-        saturday_.makeImmutable();
-        result.saturday_ = saturday_;
-      }
     }
 
     @java.lang.Override
@@ -731,8 +735,7 @@ private static final long serialVersionUID = 0L;
       if (!other.sunday_.isEmpty()) {
         if (sunday_.isEmpty()) {
           sunday_ = other.sunday_;
-          sunday_.makeImmutable();
-          bitField0_ |= 0x00000001;
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           ensureSundayIsMutable();
           sunday_.addAll(other.sunday_);
@@ -742,8 +745,7 @@ private static final long serialVersionUID = 0L;
       if (!other.monday_.isEmpty()) {
         if (monday_.isEmpty()) {
           monday_ = other.monday_;
-          monday_.makeImmutable();
-          bitField0_ |= 0x00000002;
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
           ensureMondayIsMutable();
           monday_.addAll(other.monday_);
@@ -753,8 +755,7 @@ private static final long serialVersionUID = 0L;
       if (!other.tuesday_.isEmpty()) {
         if (tuesday_.isEmpty()) {
           tuesday_ = other.tuesday_;
-          tuesday_.makeImmutable();
-          bitField0_ |= 0x00000004;
+          bitField0_ = (bitField0_ & ~0x00000004);
         } else {
           ensureTuesdayIsMutable();
           tuesday_.addAll(other.tuesday_);
@@ -764,8 +765,7 @@ private static final long serialVersionUID = 0L;
       if (!other.wednesday_.isEmpty()) {
         if (wednesday_.isEmpty()) {
           wednesday_ = other.wednesday_;
-          wednesday_.makeImmutable();
-          bitField0_ |= 0x00000008;
+          bitField0_ = (bitField0_ & ~0x00000008);
         } else {
           ensureWednesdayIsMutable();
           wednesday_.addAll(other.wednesday_);
@@ -775,8 +775,7 @@ private static final long serialVersionUID = 0L;
       if (!other.thursday_.isEmpty()) {
         if (thursday_.isEmpty()) {
           thursday_ = other.thursday_;
-          thursday_.makeImmutable();
-          bitField0_ |= 0x00000010;
+          bitField0_ = (bitField0_ & ~0x00000010);
         } else {
           ensureThursdayIsMutable();
           thursday_.addAll(other.thursday_);
@@ -786,8 +785,7 @@ private static final long serialVersionUID = 0L;
       if (!other.friday_.isEmpty()) {
         if (friday_.isEmpty()) {
           friday_ = other.friday_;
-          friday_.makeImmutable();
-          bitField0_ |= 0x00000020;
+          bitField0_ = (bitField0_ & ~0x00000020);
         } else {
           ensureFridayIsMutable();
           friday_.addAll(other.friday_);
@@ -797,8 +795,7 @@ private static final long serialVersionUID = 0L;
       if (!other.saturday_.isEmpty()) {
         if (saturday_.isEmpty()) {
           saturday_ = other.saturday_;
-          saturday_.makeImmutable();
-          bitField0_ |= 0x00000040;
+          bitField0_ = (bitField0_ & ~0x00000040);
         } else {
           ensureSaturdayIsMutable();
           saturday_.addAll(other.saturday_);
@@ -840,8 +837,7 @@ private static final long serialVersionUID = 0L;
             case 10: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
-              int alloc = length > 4096 ? 4096 : length;
-              ensureSundayIsMutable(alloc / 4);
+              ensureSundayIsMutable();
               while (input.getBytesUntilLimit() > 0) {
                 sunday_.addFloat(input.readFloat());
               }
@@ -857,8 +853,7 @@ private static final long serialVersionUID = 0L;
             case 18: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
-              int alloc = length > 4096 ? 4096 : length;
-              ensureMondayIsMutable(alloc / 4);
+              ensureMondayIsMutable();
               while (input.getBytesUntilLimit() > 0) {
                 monday_.addFloat(input.readFloat());
               }
@@ -874,8 +869,7 @@ private static final long serialVersionUID = 0L;
             case 26: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
-              int alloc = length > 4096 ? 4096 : length;
-              ensureTuesdayIsMutable(alloc / 4);
+              ensureTuesdayIsMutable();
               while (input.getBytesUntilLimit() > 0) {
                 tuesday_.addFloat(input.readFloat());
               }
@@ -891,8 +885,7 @@ private static final long serialVersionUID = 0L;
             case 34: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
-              int alloc = length > 4096 ? 4096 : length;
-              ensureWednesdayIsMutable(alloc / 4);
+              ensureWednesdayIsMutable();
               while (input.getBytesUntilLimit() > 0) {
                 wednesday_.addFloat(input.readFloat());
               }
@@ -908,8 +901,7 @@ private static final long serialVersionUID = 0L;
             case 42: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
-              int alloc = length > 4096 ? 4096 : length;
-              ensureThursdayIsMutable(alloc / 4);
+              ensureThursdayIsMutable();
               while (input.getBytesUntilLimit() > 0) {
                 thursday_.addFloat(input.readFloat());
               }
@@ -925,8 +917,7 @@ private static final long serialVersionUID = 0L;
             case 50: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
-              int alloc = length > 4096 ? 4096 : length;
-              ensureFridayIsMutable(alloc / 4);
+              ensureFridayIsMutable();
               while (input.getBytesUntilLimit() > 0) {
                 friday_.addFloat(input.readFloat());
               }
@@ -942,8 +933,7 @@ private static final long serialVersionUID = 0L;
             case 58: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
-              int alloc = length > 4096 ? 4096 : length;
-              ensureSaturdayIsMutable(alloc / 4);
+              ensureSaturdayIsMutable();
               while (input.getBytesUntilLimit() > 0) {
                 saturday_.addFloat(input.readFloat());
               }
@@ -969,16 +959,10 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Internal.FloatList sunday_ = emptyFloatList();
     private void ensureSundayIsMutable() {
-      if (!sunday_.isModifiable()) {
-        sunday_ = makeMutableCopy(sunday_);
+      if (!((bitField0_ & 0x00000001) != 0)) {
+        sunday_ = mutableCopy(sunday_);
+        bitField0_ |= 0x00000001;
       }
-      bitField0_ |= 0x00000001;
-    }
-    private void ensureSundayIsMutable(int capacity) {
-      if (!sunday_.isModifiable()) {
-        sunday_ = makeMutableCopy(sunday_, capacity);
-      }
-      bitField0_ |= 0x00000001;
     }
     /**
      * <code>repeated float sunday = 1 [json_name = "sunday"];</code>
@@ -986,8 +970,8 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Float>
         getSundayList() {
-      sunday_.makeImmutable();
-      return sunday_;
+      return ((bitField0_ & 0x00000001) != 0) ?
+               java.util.Collections.unmodifiableList(sunday_) : sunday_;
     }
     /**
      * <code>repeated float sunday = 1 [json_name = "sunday"];</code>
@@ -1015,7 +999,6 @@ private static final long serialVersionUID = 0L;
 
       ensureSundayIsMutable();
       sunday_.setFloat(index, value);
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1028,7 +1011,6 @@ private static final long serialVersionUID = 0L;
 
       ensureSundayIsMutable();
       sunday_.addFloat(value);
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1042,7 +1024,6 @@ private static final long serialVersionUID = 0L;
       ensureSundayIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, sunday_);
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1059,16 +1040,10 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Internal.FloatList monday_ = emptyFloatList();
     private void ensureMondayIsMutable() {
-      if (!monday_.isModifiable()) {
-        monday_ = makeMutableCopy(monday_);
+      if (!((bitField0_ & 0x00000002) != 0)) {
+        monday_ = mutableCopy(monday_);
+        bitField0_ |= 0x00000002;
       }
-      bitField0_ |= 0x00000002;
-    }
-    private void ensureMondayIsMutable(int capacity) {
-      if (!monday_.isModifiable()) {
-        monday_ = makeMutableCopy(monday_, capacity);
-      }
-      bitField0_ |= 0x00000002;
     }
     /**
      * <code>repeated float monday = 2 [json_name = "monday"];</code>
@@ -1076,8 +1051,8 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Float>
         getMondayList() {
-      monday_.makeImmutable();
-      return monday_;
+      return ((bitField0_ & 0x00000002) != 0) ?
+               java.util.Collections.unmodifiableList(monday_) : monday_;
     }
     /**
      * <code>repeated float monday = 2 [json_name = "monday"];</code>
@@ -1105,7 +1080,6 @@ private static final long serialVersionUID = 0L;
 
       ensureMondayIsMutable();
       monday_.setFloat(index, value);
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1118,7 +1092,6 @@ private static final long serialVersionUID = 0L;
 
       ensureMondayIsMutable();
       monday_.addFloat(value);
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1132,7 +1105,6 @@ private static final long serialVersionUID = 0L;
       ensureMondayIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, monday_);
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1149,16 +1121,10 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Internal.FloatList tuesday_ = emptyFloatList();
     private void ensureTuesdayIsMutable() {
-      if (!tuesday_.isModifiable()) {
-        tuesday_ = makeMutableCopy(tuesday_);
+      if (!((bitField0_ & 0x00000004) != 0)) {
+        tuesday_ = mutableCopy(tuesday_);
+        bitField0_ |= 0x00000004;
       }
-      bitField0_ |= 0x00000004;
-    }
-    private void ensureTuesdayIsMutable(int capacity) {
-      if (!tuesday_.isModifiable()) {
-        tuesday_ = makeMutableCopy(tuesday_, capacity);
-      }
-      bitField0_ |= 0x00000004;
     }
     /**
      * <code>repeated float tuesday = 3 [json_name = "tuesday"];</code>
@@ -1166,8 +1132,8 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Float>
         getTuesdayList() {
-      tuesday_.makeImmutable();
-      return tuesday_;
+      return ((bitField0_ & 0x00000004) != 0) ?
+               java.util.Collections.unmodifiableList(tuesday_) : tuesday_;
     }
     /**
      * <code>repeated float tuesday = 3 [json_name = "tuesday"];</code>
@@ -1195,7 +1161,6 @@ private static final long serialVersionUID = 0L;
 
       ensureTuesdayIsMutable();
       tuesday_.setFloat(index, value);
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1208,7 +1173,6 @@ private static final long serialVersionUID = 0L;
 
       ensureTuesdayIsMutable();
       tuesday_.addFloat(value);
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1222,7 +1186,6 @@ private static final long serialVersionUID = 0L;
       ensureTuesdayIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, tuesday_);
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1239,16 +1202,10 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Internal.FloatList wednesday_ = emptyFloatList();
     private void ensureWednesdayIsMutable() {
-      if (!wednesday_.isModifiable()) {
-        wednesday_ = makeMutableCopy(wednesday_);
+      if (!((bitField0_ & 0x00000008) != 0)) {
+        wednesday_ = mutableCopy(wednesday_);
+        bitField0_ |= 0x00000008;
       }
-      bitField0_ |= 0x00000008;
-    }
-    private void ensureWednesdayIsMutable(int capacity) {
-      if (!wednesday_.isModifiable()) {
-        wednesday_ = makeMutableCopy(wednesday_, capacity);
-      }
-      bitField0_ |= 0x00000008;
     }
     /**
      * <code>repeated float wednesday = 4 [json_name = "wednesday"];</code>
@@ -1256,8 +1213,8 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Float>
         getWednesdayList() {
-      wednesday_.makeImmutable();
-      return wednesday_;
+      return ((bitField0_ & 0x00000008) != 0) ?
+               java.util.Collections.unmodifiableList(wednesday_) : wednesday_;
     }
     /**
      * <code>repeated float wednesday = 4 [json_name = "wednesday"];</code>
@@ -1285,7 +1242,6 @@ private static final long serialVersionUID = 0L;
 
       ensureWednesdayIsMutable();
       wednesday_.setFloat(index, value);
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1298,7 +1254,6 @@ private static final long serialVersionUID = 0L;
 
       ensureWednesdayIsMutable();
       wednesday_.addFloat(value);
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1312,7 +1267,6 @@ private static final long serialVersionUID = 0L;
       ensureWednesdayIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, wednesday_);
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1329,16 +1283,10 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Internal.FloatList thursday_ = emptyFloatList();
     private void ensureThursdayIsMutable() {
-      if (!thursday_.isModifiable()) {
-        thursday_ = makeMutableCopy(thursday_);
+      if (!((bitField0_ & 0x00000010) != 0)) {
+        thursday_ = mutableCopy(thursday_);
+        bitField0_ |= 0x00000010;
       }
-      bitField0_ |= 0x00000010;
-    }
-    private void ensureThursdayIsMutable(int capacity) {
-      if (!thursday_.isModifiable()) {
-        thursday_ = makeMutableCopy(thursday_, capacity);
-      }
-      bitField0_ |= 0x00000010;
     }
     /**
      * <code>repeated float thursday = 5 [json_name = "thursday"];</code>
@@ -1346,8 +1294,8 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Float>
         getThursdayList() {
-      thursday_.makeImmutable();
-      return thursday_;
+      return ((bitField0_ & 0x00000010) != 0) ?
+               java.util.Collections.unmodifiableList(thursday_) : thursday_;
     }
     /**
      * <code>repeated float thursday = 5 [json_name = "thursday"];</code>
@@ -1375,7 +1323,6 @@ private static final long serialVersionUID = 0L;
 
       ensureThursdayIsMutable();
       thursday_.setFloat(index, value);
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1388,7 +1335,6 @@ private static final long serialVersionUID = 0L;
 
       ensureThursdayIsMutable();
       thursday_.addFloat(value);
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1402,7 +1348,6 @@ private static final long serialVersionUID = 0L;
       ensureThursdayIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, thursday_);
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1419,16 +1364,10 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Internal.FloatList friday_ = emptyFloatList();
     private void ensureFridayIsMutable() {
-      if (!friday_.isModifiable()) {
-        friday_ = makeMutableCopy(friday_);
+      if (!((bitField0_ & 0x00000020) != 0)) {
+        friday_ = mutableCopy(friday_);
+        bitField0_ |= 0x00000020;
       }
-      bitField0_ |= 0x00000020;
-    }
-    private void ensureFridayIsMutable(int capacity) {
-      if (!friday_.isModifiable()) {
-        friday_ = makeMutableCopy(friday_, capacity);
-      }
-      bitField0_ |= 0x00000020;
     }
     /**
      * <code>repeated float friday = 6 [json_name = "friday"];</code>
@@ -1436,8 +1375,8 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Float>
         getFridayList() {
-      friday_.makeImmutable();
-      return friday_;
+      return ((bitField0_ & 0x00000020) != 0) ?
+               java.util.Collections.unmodifiableList(friday_) : friday_;
     }
     /**
      * <code>repeated float friday = 6 [json_name = "friday"];</code>
@@ -1465,7 +1404,6 @@ private static final long serialVersionUID = 0L;
 
       ensureFridayIsMutable();
       friday_.setFloat(index, value);
-      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1478,7 +1416,6 @@ private static final long serialVersionUID = 0L;
 
       ensureFridayIsMutable();
       friday_.addFloat(value);
-      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1492,7 +1429,6 @@ private static final long serialVersionUID = 0L;
       ensureFridayIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, friday_);
-      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1509,16 +1445,10 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Internal.FloatList saturday_ = emptyFloatList();
     private void ensureSaturdayIsMutable() {
-      if (!saturday_.isModifiable()) {
-        saturday_ = makeMutableCopy(saturday_);
+      if (!((bitField0_ & 0x00000040) != 0)) {
+        saturday_ = mutableCopy(saturday_);
+        bitField0_ |= 0x00000040;
       }
-      bitField0_ |= 0x00000040;
-    }
-    private void ensureSaturdayIsMutable(int capacity) {
-      if (!saturday_.isModifiable()) {
-        saturday_ = makeMutableCopy(saturday_, capacity);
-      }
-      bitField0_ |= 0x00000040;
     }
     /**
      * <code>repeated float saturday = 7 [json_name = "saturday"];</code>
@@ -1526,8 +1456,8 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Float>
         getSaturdayList() {
-      saturday_.makeImmutable();
-      return saturday_;
+      return ((bitField0_ & 0x00000040) != 0) ?
+               java.util.Collections.unmodifiableList(saturday_) : saturday_;
     }
     /**
      * <code>repeated float saturday = 7 [json_name = "saturday"];</code>
@@ -1555,7 +1485,6 @@ private static final long serialVersionUID = 0L;
 
       ensureSaturdayIsMutable();
       saturday_.setFloat(index, value);
-      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1568,7 +1497,6 @@ private static final long serialVersionUID = 0L;
 
       ensureSaturdayIsMutable();
       saturday_.addFloat(value);
-      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1582,7 +1510,6 @@ private static final long serialVersionUID = 0L;
       ensureSaturdayIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, saturday_);
-      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }

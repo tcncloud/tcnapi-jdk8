@@ -42,7 +42,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.GetRecordingPreferencesResponse.class, com.tcn.cloud.api.api.v0alpha.GetRecordingPreferencesResponse.Builder.class);
   }
 
-  private int bitField0_;
   public static final int RECORDING_PREFERENCES_FIELD_NUMBER = 10;
   private com.tcn.cloud.api.api.v0alpha.RecordingPreferences recordingPreferences_;
   /**
@@ -55,7 +54,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasRecordingPreferences() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return recordingPreferences_ != null;
   }
   /**
    * <pre>
@@ -113,7 +112,7 @@ private static final long serialVersionUID = 0L;
     if (callRecordingRedaction_ != false) {
       output.writeBool(5, callRecordingRedaction_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (recordingPreferences_ != null) {
       output.writeMessage(10, getRecordingPreferences());
     }
     getUnknownFields().writeTo(output);
@@ -129,7 +128,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(5, callRecordingRedaction_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (recordingPreferences_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(10, getRecordingPreferences());
     }
@@ -296,19 +295,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.GetRecordingPreferencesResponse.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getRecordingPreferencesFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -353,17 +346,14 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v0alpha.GetRecordingPreferencesResponse result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.recordingPreferences_ = recordingPreferencesBuilder_ == null
             ? recordingPreferences_
             : recordingPreferencesBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.callRecordingRedaction_ = callRecordingRedaction_;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -557,10 +547,8 @@ private static final long serialVersionUID = 0L;
       } else {
         recordingPreferencesBuilder_.mergeFrom(value);
       }
-      if (recordingPreferences_ != null) {
-        bitField0_ |= 0x00000001;
-        onChanged();
-      }
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**

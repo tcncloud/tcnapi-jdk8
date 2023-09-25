@@ -41,7 +41,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.DateTime.class, com.tcn.cloud.api.api.v0alpha.DateTime.Builder.class);
   }
 
-  private int bitField0_;
   public static final int RAW_VALUE_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object rawValue_ = "";
@@ -174,7 +173,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasModifier() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return modifier_ != null;
   }
   /**
    * <pre>
@@ -223,7 +222,7 @@ private static final long serialVersionUID = 0L;
     if (precision_ != com.tcn.cloud.api.api.commons.DateTimePrecision.DATETIME_PRECISION_NOW.getNumber()) {
       output.writeEnum(3, precision_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (modifier_ != null) {
       output.writeMessage(11, getModifier());
     }
     getUnknownFields().writeTo(output);
@@ -245,7 +244,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(3, precision_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (modifier_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(11, getModifier());
     }
@@ -414,19 +413,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.DateTime.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getModifierFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -482,14 +475,11 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.precision_ = precision_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.modifier_ = modifierBuilder_ == null
             ? modifier_
             : modifierBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -960,10 +950,8 @@ private static final long serialVersionUID = 0L;
       } else {
         modifierBuilder_.mergeFrom(value);
       }
-      if (modifier_ != null) {
-        bitField0_ |= 0x00000008;
-        onChanged();
-      }
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**

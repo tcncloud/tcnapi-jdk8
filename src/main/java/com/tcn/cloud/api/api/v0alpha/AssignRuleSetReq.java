@@ -40,7 +40,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.AssignRuleSetReq.class, com.tcn.cloud.api.api.v0alpha.AssignRuleSetReq.Builder.class);
   }
 
-  private int bitField0_;
   public static final int COMM_TYPE_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.api.commons.CommType commType_;
   /**
@@ -49,7 +48,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCommType() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return commType_ != null;
   }
   /**
    * <code>.api.commons.CommType comm_type = 1 [json_name = "commType"];</code>
@@ -159,7 +158,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (commType_ != null) {
       output.writeMessage(1, getCommType());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(commId_)) {
@@ -177,7 +176,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (commType_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getCommType());
     }
@@ -349,19 +348,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.AssignRuleSetReq.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getCommTypeFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -407,12 +400,10 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v0alpha.AssignRuleSetReq result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.commType_ = commTypeBuilder_ == null
             ? commType_
             : commTypeBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.commId_ = commId_;
@@ -420,7 +411,6 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.ruleSetId_ = ruleSetId_;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -606,10 +596,8 @@ private static final long serialVersionUID = 0L;
       } else {
         commTypeBuilder_.mergeFrom(value);
       }
-      if (commType_ != null) {
-        bitField0_ |= 0x00000001;
-        onChanged();
-      }
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**

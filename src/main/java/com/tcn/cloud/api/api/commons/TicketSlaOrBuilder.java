@@ -76,4 +76,19 @@ public interface TicketSlaOrBuilder extends
    * @return The isActive.
    */
   long getIsActive();
+
+  /**
+   * <code>.api.commons.Duration ticket_sla_duration = 6 [json_name = "ticketSlaDuration"];</code>
+   * @return Whether the ticketSlaDuration field is set.
+   */
+  boolean hasTicketSlaDuration();
+  /**
+   * <code>.api.commons.Duration ticket_sla_duration = 6 [json_name = "ticketSlaDuration"];</code>
+   * @return The ticketSlaDuration.
+   */
+  com.tcn.cloud.api.api.commons.Duration getTicketSlaDuration();
+  /**
+   * <code>.api.commons.Duration ticket_sla_duration = 6 [json_name = "ticketSlaDuration"];</code>
+   */
+  com.tcn.cloud.api.api.commons.DurationOrBuilder getTicketSlaDurationOrBuilder();
 }

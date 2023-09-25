@@ -45,7 +45,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.asm.ListConversationsReq.class, com.tcn.cloud.api.api.v1alpha1.asm.ListConversationsReq.Builder.class);
   }
 
-  private int bitField0_;
   public static final int ASM_SESSION_SID_FIELD_NUMBER = 1;
   private long asmSessionSid_ = 0L;
   /**
@@ -73,7 +72,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAuthenticatedUser() {
-    return ((bitField0_ & 0x00000001) != 0);
+    return authenticatedUser_ != null;
   }
   /**
    * <pre>
@@ -236,7 +235,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasFieldMask() {
-    return ((bitField0_ & 0x00000002) != 0);
+    return fieldMask_ != null;
   }
   /**
    * <pre>
@@ -358,7 +357,7 @@ private static final long serialVersionUID = 0L;
     if (asmSessionSid_ != 0L) {
       output.writeInt64(1, asmSessionSid_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (authenticatedUser_ != null) {
       output.writeMessage(2, getAuthenticatedUser());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
@@ -371,7 +370,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < statuses_.size(); i++) {
       output.writeEnumNoTag(statuses_.get(i));
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (fieldMask_ != null) {
       output.writeMessage(5, getFieldMask());
     }
     if (getChannelTypesList().size() > 0) {
@@ -394,7 +393,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(1, asmSessionSid_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (authenticatedUser_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getAuthenticatedUser());
     }
@@ -413,7 +412,7 @@ private static final long serialVersionUID = 0L;
           .computeUInt32SizeNoTag(dataSize);
       }statusesMemoizedSerializedSize = dataSize;
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (fieldMask_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getFieldMask());
     }
@@ -615,20 +614,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.asm.ListConversationsReq.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getAuthenticatedUserFieldBuilder();
-        getFieldMaskFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -700,12 +692,10 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.asmSessionSid_ = asmSessionSid_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.authenticatedUser_ = authenticatedUserBuilder_ == null
             ? authenticatedUser_
             : authenticatedUserBuilder_.build();
-        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.userId_ = userId_;
@@ -714,9 +704,7 @@ private static final long serialVersionUID = 0L;
         result.fieldMask_ = fieldMaskBuilder_ == null
             ? fieldMask_
             : fieldMaskBuilder_.build();
-        to_bitField0_ |= 0x00000002;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1028,10 +1016,8 @@ private static final long serialVersionUID = 0L;
       } else {
         authenticatedUserBuilder_.mergeFrom(value);
       }
-      if (authenticatedUser_ != null) {
-        bitField0_ |= 0x00000002;
-        onChanged();
-      }
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -1465,10 +1451,8 @@ private static final long serialVersionUID = 0L;
       } else {
         fieldMaskBuilder_.mergeFrom(value);
       }
-      if (fieldMask_ != null) {
-        bitField0_ |= 0x00000010;
-        onChanged();
-      }
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**

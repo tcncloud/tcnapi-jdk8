@@ -19,6 +19,11 @@ public final class AgentTrainingProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_commons_LearningOpportunity_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_CallIdentifier_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_CallIdentifier_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -40,12 +45,14 @@ public final class AgentTrainingProto {
       " \001(\005R\tendOffset\022 \n\013description\030\t \001(\tR\013de" +
       "scription\022\024\n\005title\030\n \001(\tR\005title\022>\n\006statu" +
       "s\030\013 \001(\0162&.api.commons.LearningOpportunit" +
-      "yStatusR\006status*B\n\031LearningOpportunitySt" +
-      "atus\022\017\n\013STATUS_OPEN\020\000\022\024\n\020STATUS_COMPLETE" +
-      "D\020\001B\200\001\n\035com.tcn.cloud.api.api.commonsB\022A" +
-      "gentTrainingProtoP\001\242\002\003ACX\252\002\013Api.Commons\312" +
-      "\002\013Api\\Commons\342\002\027Api\\Commons\\GPBMetadata\352" +
-      "\002\014Api::Commonsb\006proto3"
+      "yStatusR\006status\"R\n\016CallIdentifier\022\020\n\003sid" +
+      "\030\001 \001(\003R\003sid\022.\n\004type\030\002 \001(\0162\032.api.commons." +
+      "CallType.EnumR\004type*B\n\031LearningOpportuni" +
+      "tyStatus\022\017\n\013STATUS_OPEN\020\000\022\024\n\020STATUS_COMP" +
+      "LETED\020\001B\200\001\n\035com.tcn.cloud.api.api.common" +
+      "sB\022AgentTrainingProtoP\001\242\002\003ACX\252\002\013Api.Comm" +
+      "ons\312\002\013Api\\Commons\342\002\027Api\\Commons\\GPBMetad" +
+      "ata\352\002\014Api::Commonsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -58,6 +65,12 @@ public final class AgentTrainingProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_LearningOpportunity_descriptor,
         new java.lang.String[] { "LearningOpportunityId", "CallSid", "CallType", "TranscriptSid", "AgentUserId", "StartOffset", "EndOffset", "Description", "Title", "Status", });
+    internal_static_api_commons_CallIdentifier_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_api_commons_CallIdentifier_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_CallIdentifier_descriptor,
+        new java.lang.String[] { "Sid", "Type", });
     com.tcn.cloud.api.api.commons.AcdProto.getDescriptor();
   }
 
