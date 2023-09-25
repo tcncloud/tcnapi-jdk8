@@ -45,7 +45,7 @@ public final class ServiceProto {
       "agenttraining.ListAgentLearningOpportuni" +
       "tiesRequest\032B.api.v1alpha1.agenttraining" +
       ".ListAgentLearningOpportunitiesResponse\"" +
-      "d\272\270\221\002\005\n\003\010\301\014\202\323\344\223\002T\"O/api/v1alpha1/agenttr" +
+      "d\272\270\221\002\005\n\003\010\324\002\202\323\344\223\002T\"O/api/v1alpha1/agenttr" +
       "aining/agenttrainingservice/listagentlea" +
       "rningopportunities:\001*\022\371\001\n\031UpdateLearning" +
       "Opportunity\022<.api.v1alpha1.agenttraining" +
