@@ -12,24 +12,24 @@ public interface ListTourShiftInstanceConfigsResOrBuilder extends
    * Requested Tour Shift Instance Configs.
    * </pre>
    *
-   * <code>repeated .api.commons.TourShiftInstanceConfig tour_shift_instance_configs = 1 [json_name = "tourShiftInstanceConfigs"];</code>
+   * <code>repeated .api.v1alpha1.wfm.TourShiftInstanceConfig tour_shift_instance_configs = 1 [json_name = "tourShiftInstanceConfigs"];</code>
    */
-  java.util.List<com.tcn.cloud.api.api.commons.TourShiftInstanceConfig> 
+  java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftInstanceConfig> 
       getTourShiftInstanceConfigsList();
   /**
    * <pre>
    * Requested Tour Shift Instance Configs.
    * </pre>
    *
-   * <code>repeated .api.commons.TourShiftInstanceConfig tour_shift_instance_configs = 1 [json_name = "tourShiftInstanceConfigs"];</code>
+   * <code>repeated .api.v1alpha1.wfm.TourShiftInstanceConfig tour_shift_instance_configs = 1 [json_name = "tourShiftInstanceConfigs"];</code>
    */
-  com.tcn.cloud.api.api.commons.TourShiftInstanceConfig getTourShiftInstanceConfigs(int index);
+  com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftInstanceConfig getTourShiftInstanceConfigs(int index);
   /**
    * <pre>
    * Requested Tour Shift Instance Configs.
    * </pre>
    *
-   * <code>repeated .api.commons.TourShiftInstanceConfig tour_shift_instance_configs = 1 [json_name = "tourShiftInstanceConfigs"];</code>
+   * <code>repeated .api.v1alpha1.wfm.TourShiftInstanceConfig tour_shift_instance_configs = 1 [json_name = "tourShiftInstanceConfigs"];</code>
    */
   int getTourShiftInstanceConfigsCount();
   /**
@@ -37,17 +37,17 @@ public interface ListTourShiftInstanceConfigsResOrBuilder extends
    * Requested Tour Shift Instance Configs.
    * </pre>
    *
-   * <code>repeated .api.commons.TourShiftInstanceConfig tour_shift_instance_configs = 1 [json_name = "tourShiftInstanceConfigs"];</code>
+   * <code>repeated .api.v1alpha1.wfm.TourShiftInstanceConfig tour_shift_instance_configs = 1 [json_name = "tourShiftInstanceConfigs"];</code>
    */
-  java.util.List<? extends com.tcn.cloud.api.api.commons.TourShiftInstanceConfigOrBuilder> 
+  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftInstanceConfigOrBuilder> 
       getTourShiftInstanceConfigsOrBuilderList();
   /**
    * <pre>
    * Requested Tour Shift Instance Configs.
    * </pre>
    *
-   * <code>repeated .api.commons.TourShiftInstanceConfig tour_shift_instance_configs = 1 [json_name = "tourShiftInstanceConfigs"];</code>
+   * <code>repeated .api.v1alpha1.wfm.TourShiftInstanceConfig tour_shift_instance_configs = 1 [json_name = "tourShiftInstanceConfigs"];</code>
    */
-  com.tcn.cloud.api.api.commons.TourShiftInstanceConfigOrBuilder getTourShiftInstanceConfigsOrBuilder(
+  com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftInstanceConfigOrBuilder getTourShiftInstanceConfigsOrBuilder(
       int index);
 }

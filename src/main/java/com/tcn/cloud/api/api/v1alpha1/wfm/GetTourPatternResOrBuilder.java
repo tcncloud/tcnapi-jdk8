@@ -12,7 +12,7 @@ public interface GetTourPatternResOrBuilder extends
    * The requested Tour Pattern
    * </pre>
    *
-   * <code>.api.commons.TourPattern tour_pattern = 1 [json_name = "tourPattern"];</code>
+   * <code>.api.v1alpha1.wfm.TourPattern tour_pattern = 1 [json_name = "tourPattern"];</code>
    * @return Whether the tourPattern field is set.
    */
   boolean hasTourPattern();
@@ -21,16 +21,16 @@ public interface GetTourPatternResOrBuilder extends
    * The requested Tour Pattern
    * </pre>
    *
-   * <code>.api.commons.TourPattern tour_pattern = 1 [json_name = "tourPattern"];</code>
+   * <code>.api.v1alpha1.wfm.TourPattern tour_pattern = 1 [json_name = "tourPattern"];</code>
    * @return The tourPattern.
    */
-  com.tcn.cloud.api.api.commons.TourPattern getTourPattern();
+  com.tcn.cloud.api.api.v1alpha1.wfm.TourPattern getTourPattern();
   /**
    * <pre>
    * The requested Tour Pattern
    * </pre>
    *
-   * <code>.api.commons.TourPattern tour_pattern = 1 [json_name = "tourPattern"];</code>
+   * <code>.api.v1alpha1.wfm.TourPattern tour_pattern = 1 [json_name = "tourPattern"];</code>
    */
-  com.tcn.cloud.api.api.commons.TourPatternOrBuilder getTourPatternOrBuilder();
+  com.tcn.cloud.api.api.v1alpha1.wfm.TourPatternOrBuilder getTourPatternOrBuilder();
 }

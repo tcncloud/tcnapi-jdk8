@@ -12,24 +12,24 @@ public interface ListTourWeekPatternsResOrBuilder extends
    * The requested Tour Week Patterns.
    * </pre>
    *
-   * <code>repeated .api.commons.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
+   * <code>repeated .api.v1alpha1.wfm.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
    */
-  java.util.List<com.tcn.cloud.api.api.commons.TourWeekPattern> 
+  java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.TourWeekPattern> 
       getTourWeekPatternsList();
   /**
    * <pre>
    * The requested Tour Week Patterns.
    * </pre>
    *
-   * <code>repeated .api.commons.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
+   * <code>repeated .api.v1alpha1.wfm.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
    */
-  com.tcn.cloud.api.api.commons.TourWeekPattern getTourWeekPatterns(int index);
+  com.tcn.cloud.api.api.v1alpha1.wfm.TourWeekPattern getTourWeekPatterns(int index);
   /**
    * <pre>
    * The requested Tour Week Patterns.
    * </pre>
    *
-   * <code>repeated .api.commons.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
+   * <code>repeated .api.v1alpha1.wfm.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
    */
   int getTourWeekPatternsCount();
   /**
@@ -37,17 +37,17 @@ public interface ListTourWeekPatternsResOrBuilder extends
    * The requested Tour Week Patterns.
    * </pre>
    *
-   * <code>repeated .api.commons.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
+   * <code>repeated .api.v1alpha1.wfm.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
    */
-  java.util.List<? extends com.tcn.cloud.api.api.commons.TourWeekPatternOrBuilder> 
+  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.TourWeekPatternOrBuilder> 
       getTourWeekPatternsOrBuilderList();
   /**
    * <pre>
    * The requested Tour Week Patterns.
    * </pre>
    *
-   * <code>repeated .api.commons.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
+   * <code>repeated .api.v1alpha1.wfm.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
    */
-  com.tcn.cloud.api.api.commons.TourWeekPatternOrBuilder getTourWeekPatternsOrBuilder(
+  com.tcn.cloud.api.api.v1alpha1.wfm.TourWeekPatternOrBuilder getTourWeekPatternsOrBuilder(
       int index);
 }

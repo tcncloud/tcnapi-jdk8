@@ -12,24 +12,24 @@ public interface ListTourAgentCollectionsResOrBuilder extends
    * Requested Tour Agent Collections.
    * </pre>
    *
-   * <code>repeated .api.commons.TourAgentCollection tour_agent_collections = 1 [json_name = "tourAgentCollections"];</code>
+   * <code>repeated .api.v1alpha1.wfm.TourAgentCollection tour_agent_collections = 1 [json_name = "tourAgentCollections"];</code>
    */
-  java.util.List<com.tcn.cloud.api.api.commons.TourAgentCollection> 
+  java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.TourAgentCollection> 
       getTourAgentCollectionsList();
   /**
    * <pre>
    * Requested Tour Agent Collections.
    * </pre>
    *
-   * <code>repeated .api.commons.TourAgentCollection tour_agent_collections = 1 [json_name = "tourAgentCollections"];</code>
+   * <code>repeated .api.v1alpha1.wfm.TourAgentCollection tour_agent_collections = 1 [json_name = "tourAgentCollections"];</code>
    */
-  com.tcn.cloud.api.api.commons.TourAgentCollection getTourAgentCollections(int index);
+  com.tcn.cloud.api.api.v1alpha1.wfm.TourAgentCollection getTourAgentCollections(int index);
   /**
    * <pre>
    * Requested Tour Agent Collections.
    * </pre>
    *
-   * <code>repeated .api.commons.TourAgentCollection tour_agent_collections = 1 [json_name = "tourAgentCollections"];</code>
+   * <code>repeated .api.v1alpha1.wfm.TourAgentCollection tour_agent_collections = 1 [json_name = "tourAgentCollections"];</code>
    */
   int getTourAgentCollectionsCount();
   /**
@@ -37,17 +37,17 @@ public interface ListTourAgentCollectionsResOrBuilder extends
    * Requested Tour Agent Collections.
    * </pre>
    *
-   * <code>repeated .api.commons.TourAgentCollection tour_agent_collections = 1 [json_name = "tourAgentCollections"];</code>
+   * <code>repeated .api.v1alpha1.wfm.TourAgentCollection tour_agent_collections = 1 [json_name = "tourAgentCollections"];</code>
    */
-  java.util.List<? extends com.tcn.cloud.api.api.commons.TourAgentCollectionOrBuilder> 
+  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.TourAgentCollectionOrBuilder> 
       getTourAgentCollectionsOrBuilderList();
   /**
    * <pre>
    * Requested Tour Agent Collections.
    * </pre>
    *
-   * <code>repeated .api.commons.TourAgentCollection tour_agent_collections = 1 [json_name = "tourAgentCollections"];</code>
+   * <code>repeated .api.v1alpha1.wfm.TourAgentCollection tour_agent_collections = 1 [json_name = "tourAgentCollections"];</code>
    */
-  com.tcn.cloud.api.api.commons.TourAgentCollectionOrBuilder getTourAgentCollectionsOrBuilder(
+  com.tcn.cloud.api.api.v1alpha1.wfm.TourAgentCollectionOrBuilder getTourAgentCollectionsOrBuilder(
       int index);
 }

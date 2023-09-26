@@ -43,13 +43,13 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TOUR_PATTERN_FIELD_NUMBER = 1;
-  private com.tcn.cloud.api.api.commons.TourPattern tourPattern_;
+  private com.tcn.cloud.api.api.v1alpha1.wfm.TourPattern tourPattern_;
   /**
    * <pre>
    * The requested Tour Pattern
    * </pre>
    *
-   * <code>.api.commons.TourPattern tour_pattern = 1 [json_name = "tourPattern"];</code>
+   * <code>.api.v1alpha1.wfm.TourPattern tour_pattern = 1 [json_name = "tourPattern"];</code>
    * @return Whether the tourPattern field is set.
    */
   @java.lang.Override
@@ -61,23 +61,23 @@ private static final long serialVersionUID = 0L;
    * The requested Tour Pattern
    * </pre>
    *
-   * <code>.api.commons.TourPattern tour_pattern = 1 [json_name = "tourPattern"];</code>
+   * <code>.api.v1alpha1.wfm.TourPattern tour_pattern = 1 [json_name = "tourPattern"];</code>
    * @return The tourPattern.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.TourPattern getTourPattern() {
-    return tourPattern_ == null ? com.tcn.cloud.api.api.commons.TourPattern.getDefaultInstance() : tourPattern_;
+  public com.tcn.cloud.api.api.v1alpha1.wfm.TourPattern getTourPattern() {
+    return tourPattern_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.TourPattern.getDefaultInstance() : tourPattern_;
   }
   /**
    * <pre>
    * The requested Tour Pattern
    * </pre>
    *
-   * <code>.api.commons.TourPattern tour_pattern = 1 [json_name = "tourPattern"];</code>
+   * <code>.api.v1alpha1.wfm.TourPattern tour_pattern = 1 [json_name = "tourPattern"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.TourPatternOrBuilder getTourPatternOrBuilder() {
-    return tourPattern_ == null ? com.tcn.cloud.api.api.commons.TourPattern.getDefaultInstance() : tourPattern_;
+  public com.tcn.cloud.api.api.v1alpha1.wfm.TourPatternOrBuilder getTourPatternOrBuilder() {
+    return tourPattern_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.TourPattern.getDefaultInstance() : tourPattern_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -422,15 +422,15 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private com.tcn.cloud.api.api.commons.TourPattern tourPattern_;
+    private com.tcn.cloud.api.api.v1alpha1.wfm.TourPattern tourPattern_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.TourPattern, com.tcn.cloud.api.api.commons.TourPattern.Builder, com.tcn.cloud.api.api.commons.TourPatternOrBuilder> tourPatternBuilder_;
+        com.tcn.cloud.api.api.v1alpha1.wfm.TourPattern, com.tcn.cloud.api.api.v1alpha1.wfm.TourPattern.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.TourPatternOrBuilder> tourPatternBuilder_;
     /**
      * <pre>
      * The requested Tour Pattern
      * </pre>
      *
-     * <code>.api.commons.TourPattern tour_pattern = 1 [json_name = "tourPattern"];</code>
+     * <code>.api.v1alpha1.wfm.TourPattern tour_pattern = 1 [json_name = "tourPattern"];</code>
      * @return Whether the tourPattern field is set.
      */
     public boolean hasTourPattern() {
@@ -441,12 +441,12 @@ private static final long serialVersionUID = 0L;
      * The requested Tour Pattern
      * </pre>
      *
-     * <code>.api.commons.TourPattern tour_pattern = 1 [json_name = "tourPattern"];</code>
+     * <code>.api.v1alpha1.wfm.TourPattern tour_pattern = 1 [json_name = "tourPattern"];</code>
      * @return The tourPattern.
      */
-    public com.tcn.cloud.api.api.commons.TourPattern getTourPattern() {
+    public com.tcn.cloud.api.api.v1alpha1.wfm.TourPattern getTourPattern() {
       if (tourPatternBuilder_ == null) {
-        return tourPattern_ == null ? com.tcn.cloud.api.api.commons.TourPattern.getDefaultInstance() : tourPattern_;
+        return tourPattern_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.TourPattern.getDefaultInstance() : tourPattern_;
       } else {
         return tourPatternBuilder_.getMessage();
       }
@@ -456,9 +456,9 @@ private static final long serialVersionUID = 0L;
      * The requested Tour Pattern
      * </pre>
      *
-     * <code>.api.commons.TourPattern tour_pattern = 1 [json_name = "tourPattern"];</code>
+     * <code>.api.v1alpha1.wfm.TourPattern tour_pattern = 1 [json_name = "tourPattern"];</code>
      */
-    public Builder setTourPattern(com.tcn.cloud.api.api.commons.TourPattern value) {
+    public Builder setTourPattern(com.tcn.cloud.api.api.v1alpha1.wfm.TourPattern value) {
       if (tourPatternBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -476,10 +476,10 @@ private static final long serialVersionUID = 0L;
      * The requested Tour Pattern
      * </pre>
      *
-     * <code>.api.commons.TourPattern tour_pattern = 1 [json_name = "tourPattern"];</code>
+     * <code>.api.v1alpha1.wfm.TourPattern tour_pattern = 1 [json_name = "tourPattern"];</code>
      */
     public Builder setTourPattern(
-        com.tcn.cloud.api.api.commons.TourPattern.Builder builderForValue) {
+        com.tcn.cloud.api.api.v1alpha1.wfm.TourPattern.Builder builderForValue) {
       if (tourPatternBuilder_ == null) {
         tourPattern_ = builderForValue.build();
       } else {
@@ -494,13 +494,13 @@ private static final long serialVersionUID = 0L;
      * The requested Tour Pattern
      * </pre>
      *
-     * <code>.api.commons.TourPattern tour_pattern = 1 [json_name = "tourPattern"];</code>
+     * <code>.api.v1alpha1.wfm.TourPattern tour_pattern = 1 [json_name = "tourPattern"];</code>
      */
-    public Builder mergeTourPattern(com.tcn.cloud.api.api.commons.TourPattern value) {
+    public Builder mergeTourPattern(com.tcn.cloud.api.api.v1alpha1.wfm.TourPattern value) {
       if (tourPatternBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0) &&
           tourPattern_ != null &&
-          tourPattern_ != com.tcn.cloud.api.api.commons.TourPattern.getDefaultInstance()) {
+          tourPattern_ != com.tcn.cloud.api.api.v1alpha1.wfm.TourPattern.getDefaultInstance()) {
           getTourPatternBuilder().mergeFrom(value);
         } else {
           tourPattern_ = value;
@@ -517,7 +517,7 @@ private static final long serialVersionUID = 0L;
      * The requested Tour Pattern
      * </pre>
      *
-     * <code>.api.commons.TourPattern tour_pattern = 1 [json_name = "tourPattern"];</code>
+     * <code>.api.v1alpha1.wfm.TourPattern tour_pattern = 1 [json_name = "tourPattern"];</code>
      */
     public Builder clearTourPattern() {
       bitField0_ = (bitField0_ & ~0x00000001);
@@ -534,9 +534,9 @@ private static final long serialVersionUID = 0L;
      * The requested Tour Pattern
      * </pre>
      *
-     * <code>.api.commons.TourPattern tour_pattern = 1 [json_name = "tourPattern"];</code>
+     * <code>.api.v1alpha1.wfm.TourPattern tour_pattern = 1 [json_name = "tourPattern"];</code>
      */
-    public com.tcn.cloud.api.api.commons.TourPattern.Builder getTourPatternBuilder() {
+    public com.tcn.cloud.api.api.v1alpha1.wfm.TourPattern.Builder getTourPatternBuilder() {
       bitField0_ |= 0x00000001;
       onChanged();
       return getTourPatternFieldBuilder().getBuilder();
@@ -546,14 +546,14 @@ private static final long serialVersionUID = 0L;
      * The requested Tour Pattern
      * </pre>
      *
-     * <code>.api.commons.TourPattern tour_pattern = 1 [json_name = "tourPattern"];</code>
+     * <code>.api.v1alpha1.wfm.TourPattern tour_pattern = 1 [json_name = "tourPattern"];</code>
      */
-    public com.tcn.cloud.api.api.commons.TourPatternOrBuilder getTourPatternOrBuilder() {
+    public com.tcn.cloud.api.api.v1alpha1.wfm.TourPatternOrBuilder getTourPatternOrBuilder() {
       if (tourPatternBuilder_ != null) {
         return tourPatternBuilder_.getMessageOrBuilder();
       } else {
         return tourPattern_ == null ?
-            com.tcn.cloud.api.api.commons.TourPattern.getDefaultInstance() : tourPattern_;
+            com.tcn.cloud.api.api.v1alpha1.wfm.TourPattern.getDefaultInstance() : tourPattern_;
       }
     }
     /**
@@ -561,14 +561,14 @@ private static final long serialVersionUID = 0L;
      * The requested Tour Pattern
      * </pre>
      *
-     * <code>.api.commons.TourPattern tour_pattern = 1 [json_name = "tourPattern"];</code>
+     * <code>.api.v1alpha1.wfm.TourPattern tour_pattern = 1 [json_name = "tourPattern"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.TourPattern, com.tcn.cloud.api.api.commons.TourPattern.Builder, com.tcn.cloud.api.api.commons.TourPatternOrBuilder> 
+        com.tcn.cloud.api.api.v1alpha1.wfm.TourPattern, com.tcn.cloud.api.api.v1alpha1.wfm.TourPattern.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.TourPatternOrBuilder> 
         getTourPatternFieldBuilder() {
       if (tourPatternBuilder_ == null) {
         tourPatternBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.TourPattern, com.tcn.cloud.api.api.commons.TourPattern.Builder, com.tcn.cloud.api.api.commons.TourPatternOrBuilder>(
+            com.tcn.cloud.api.api.v1alpha1.wfm.TourPattern, com.tcn.cloud.api.api.v1alpha1.wfm.TourPattern.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.TourPatternOrBuilder>(
                 getTourPattern(),
                 getParentForChildren(),
                 isClean());

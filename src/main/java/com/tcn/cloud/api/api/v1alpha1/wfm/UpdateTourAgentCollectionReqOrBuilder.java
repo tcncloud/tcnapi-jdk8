@@ -12,7 +12,7 @@ public interface UpdateTourAgentCollectionReqOrBuilder extends
    * The Tour Agent Collection to update.
    * </pre>
    *
-   * <code>.api.commons.TourAgentCollection tour_agent_collection = 1 [json_name = "tourAgentCollection"];</code>
+   * <code>.api.v1alpha1.wfm.TourAgentCollection tour_agent_collection = 1 [json_name = "tourAgentCollection"];</code>
    * @return Whether the tourAgentCollection field is set.
    */
   boolean hasTourAgentCollection();
@@ -21,16 +21,16 @@ public interface UpdateTourAgentCollectionReqOrBuilder extends
    * The Tour Agent Collection to update.
    * </pre>
    *
-   * <code>.api.commons.TourAgentCollection tour_agent_collection = 1 [json_name = "tourAgentCollection"];</code>
+   * <code>.api.v1alpha1.wfm.TourAgentCollection tour_agent_collection = 1 [json_name = "tourAgentCollection"];</code>
    * @return The tourAgentCollection.
    */
-  com.tcn.cloud.api.api.commons.TourAgentCollection getTourAgentCollection();
+  com.tcn.cloud.api.api.v1alpha1.wfm.TourAgentCollection getTourAgentCollection();
   /**
    * <pre>
    * The Tour Agent Collection to update.
    * </pre>
    *
-   * <code>.api.commons.TourAgentCollection tour_agent_collection = 1 [json_name = "tourAgentCollection"];</code>
+   * <code>.api.v1alpha1.wfm.TourAgentCollection tour_agent_collection = 1 [json_name = "tourAgentCollection"];</code>
    */
-  com.tcn.cloud.api.api.commons.TourAgentCollectionOrBuilder getTourAgentCollectionOrBuilder();
+  com.tcn.cloud.api.api.v1alpha1.wfm.TourAgentCollectionOrBuilder getTourAgentCollectionOrBuilder();
 }

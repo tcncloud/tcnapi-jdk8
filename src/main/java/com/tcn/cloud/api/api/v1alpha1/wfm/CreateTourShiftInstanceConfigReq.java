@@ -43,13 +43,13 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TOUR_SHIFT_INSTANCE_CONFIG_FIELD_NUMBER = 1;
-  private com.tcn.cloud.api.api.commons.TourShiftInstanceConfig tourShiftInstanceConfig_;
+  private com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftInstanceConfig tourShiftInstanceConfig_;
   /**
    * <pre>
    * The Tour Shift Instance Config to create.
    * </pre>
    *
-   * <code>.api.commons.TourShiftInstanceConfig tour_shift_instance_config = 1 [json_name = "tourShiftInstanceConfig"];</code>
+   * <code>.api.v1alpha1.wfm.TourShiftInstanceConfig tour_shift_instance_config = 1 [json_name = "tourShiftInstanceConfig"];</code>
    * @return Whether the tourShiftInstanceConfig field is set.
    */
   @java.lang.Override
@@ -61,23 +61,23 @@ private static final long serialVersionUID = 0L;
    * The Tour Shift Instance Config to create.
    * </pre>
    *
-   * <code>.api.commons.TourShiftInstanceConfig tour_shift_instance_config = 1 [json_name = "tourShiftInstanceConfig"];</code>
+   * <code>.api.v1alpha1.wfm.TourShiftInstanceConfig tour_shift_instance_config = 1 [json_name = "tourShiftInstanceConfig"];</code>
    * @return The tourShiftInstanceConfig.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.TourShiftInstanceConfig getTourShiftInstanceConfig() {
-    return tourShiftInstanceConfig_ == null ? com.tcn.cloud.api.api.commons.TourShiftInstanceConfig.getDefaultInstance() : tourShiftInstanceConfig_;
+  public com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftInstanceConfig getTourShiftInstanceConfig() {
+    return tourShiftInstanceConfig_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftInstanceConfig.getDefaultInstance() : tourShiftInstanceConfig_;
   }
   /**
    * <pre>
    * The Tour Shift Instance Config to create.
    * </pre>
    *
-   * <code>.api.commons.TourShiftInstanceConfig tour_shift_instance_config = 1 [json_name = "tourShiftInstanceConfig"];</code>
+   * <code>.api.v1alpha1.wfm.TourShiftInstanceConfig tour_shift_instance_config = 1 [json_name = "tourShiftInstanceConfig"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.TourShiftInstanceConfigOrBuilder getTourShiftInstanceConfigOrBuilder() {
-    return tourShiftInstanceConfig_ == null ? com.tcn.cloud.api.api.commons.TourShiftInstanceConfig.getDefaultInstance() : tourShiftInstanceConfig_;
+  public com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftInstanceConfigOrBuilder getTourShiftInstanceConfigOrBuilder() {
+    return tourShiftInstanceConfig_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftInstanceConfig.getDefaultInstance() : tourShiftInstanceConfig_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -422,15 +422,15 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private com.tcn.cloud.api.api.commons.TourShiftInstanceConfig tourShiftInstanceConfig_;
+    private com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftInstanceConfig tourShiftInstanceConfig_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.TourShiftInstanceConfig, com.tcn.cloud.api.api.commons.TourShiftInstanceConfig.Builder, com.tcn.cloud.api.api.commons.TourShiftInstanceConfigOrBuilder> tourShiftInstanceConfigBuilder_;
+        com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftInstanceConfig, com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftInstanceConfig.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftInstanceConfigOrBuilder> tourShiftInstanceConfigBuilder_;
     /**
      * <pre>
      * The Tour Shift Instance Config to create.
      * </pre>
      *
-     * <code>.api.commons.TourShiftInstanceConfig tour_shift_instance_config = 1 [json_name = "tourShiftInstanceConfig"];</code>
+     * <code>.api.v1alpha1.wfm.TourShiftInstanceConfig tour_shift_instance_config = 1 [json_name = "tourShiftInstanceConfig"];</code>
      * @return Whether the tourShiftInstanceConfig field is set.
      */
     public boolean hasTourShiftInstanceConfig() {
@@ -441,12 +441,12 @@ private static final long serialVersionUID = 0L;
      * The Tour Shift Instance Config to create.
      * </pre>
      *
-     * <code>.api.commons.TourShiftInstanceConfig tour_shift_instance_config = 1 [json_name = "tourShiftInstanceConfig"];</code>
+     * <code>.api.v1alpha1.wfm.TourShiftInstanceConfig tour_shift_instance_config = 1 [json_name = "tourShiftInstanceConfig"];</code>
      * @return The tourShiftInstanceConfig.
      */
-    public com.tcn.cloud.api.api.commons.TourShiftInstanceConfig getTourShiftInstanceConfig() {
+    public com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftInstanceConfig getTourShiftInstanceConfig() {
       if (tourShiftInstanceConfigBuilder_ == null) {
-        return tourShiftInstanceConfig_ == null ? com.tcn.cloud.api.api.commons.TourShiftInstanceConfig.getDefaultInstance() : tourShiftInstanceConfig_;
+        return tourShiftInstanceConfig_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftInstanceConfig.getDefaultInstance() : tourShiftInstanceConfig_;
       } else {
         return tourShiftInstanceConfigBuilder_.getMessage();
       }
@@ -456,9 +456,9 @@ private static final long serialVersionUID = 0L;
      * The Tour Shift Instance Config to create.
      * </pre>
      *
-     * <code>.api.commons.TourShiftInstanceConfig tour_shift_instance_config = 1 [json_name = "tourShiftInstanceConfig"];</code>
+     * <code>.api.v1alpha1.wfm.TourShiftInstanceConfig tour_shift_instance_config = 1 [json_name = "tourShiftInstanceConfig"];</code>
      */
-    public Builder setTourShiftInstanceConfig(com.tcn.cloud.api.api.commons.TourShiftInstanceConfig value) {
+    public Builder setTourShiftInstanceConfig(com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftInstanceConfig value) {
       if (tourShiftInstanceConfigBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -476,10 +476,10 @@ private static final long serialVersionUID = 0L;
      * The Tour Shift Instance Config to create.
      * </pre>
      *
-     * <code>.api.commons.TourShiftInstanceConfig tour_shift_instance_config = 1 [json_name = "tourShiftInstanceConfig"];</code>
+     * <code>.api.v1alpha1.wfm.TourShiftInstanceConfig tour_shift_instance_config = 1 [json_name = "tourShiftInstanceConfig"];</code>
      */
     public Builder setTourShiftInstanceConfig(
-        com.tcn.cloud.api.api.commons.TourShiftInstanceConfig.Builder builderForValue) {
+        com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftInstanceConfig.Builder builderForValue) {
       if (tourShiftInstanceConfigBuilder_ == null) {
         tourShiftInstanceConfig_ = builderForValue.build();
       } else {
@@ -494,13 +494,13 @@ private static final long serialVersionUID = 0L;
      * The Tour Shift Instance Config to create.
      * </pre>
      *
-     * <code>.api.commons.TourShiftInstanceConfig tour_shift_instance_config = 1 [json_name = "tourShiftInstanceConfig"];</code>
+     * <code>.api.v1alpha1.wfm.TourShiftInstanceConfig tour_shift_instance_config = 1 [json_name = "tourShiftInstanceConfig"];</code>
      */
-    public Builder mergeTourShiftInstanceConfig(com.tcn.cloud.api.api.commons.TourShiftInstanceConfig value) {
+    public Builder mergeTourShiftInstanceConfig(com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftInstanceConfig value) {
       if (tourShiftInstanceConfigBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0) &&
           tourShiftInstanceConfig_ != null &&
-          tourShiftInstanceConfig_ != com.tcn.cloud.api.api.commons.TourShiftInstanceConfig.getDefaultInstance()) {
+          tourShiftInstanceConfig_ != com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftInstanceConfig.getDefaultInstance()) {
           getTourShiftInstanceConfigBuilder().mergeFrom(value);
         } else {
           tourShiftInstanceConfig_ = value;
@@ -517,7 +517,7 @@ private static final long serialVersionUID = 0L;
      * The Tour Shift Instance Config to create.
      * </pre>
      *
-     * <code>.api.commons.TourShiftInstanceConfig tour_shift_instance_config = 1 [json_name = "tourShiftInstanceConfig"];</code>
+     * <code>.api.v1alpha1.wfm.TourShiftInstanceConfig tour_shift_instance_config = 1 [json_name = "tourShiftInstanceConfig"];</code>
      */
     public Builder clearTourShiftInstanceConfig() {
       bitField0_ = (bitField0_ & ~0x00000001);
@@ -534,9 +534,9 @@ private static final long serialVersionUID = 0L;
      * The Tour Shift Instance Config to create.
      * </pre>
      *
-     * <code>.api.commons.TourShiftInstanceConfig tour_shift_instance_config = 1 [json_name = "tourShiftInstanceConfig"];</code>
+     * <code>.api.v1alpha1.wfm.TourShiftInstanceConfig tour_shift_instance_config = 1 [json_name = "tourShiftInstanceConfig"];</code>
      */
-    public com.tcn.cloud.api.api.commons.TourShiftInstanceConfig.Builder getTourShiftInstanceConfigBuilder() {
+    public com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftInstanceConfig.Builder getTourShiftInstanceConfigBuilder() {
       bitField0_ |= 0x00000001;
       onChanged();
       return getTourShiftInstanceConfigFieldBuilder().getBuilder();
@@ -546,14 +546,14 @@ private static final long serialVersionUID = 0L;
      * The Tour Shift Instance Config to create.
      * </pre>
      *
-     * <code>.api.commons.TourShiftInstanceConfig tour_shift_instance_config = 1 [json_name = "tourShiftInstanceConfig"];</code>
+     * <code>.api.v1alpha1.wfm.TourShiftInstanceConfig tour_shift_instance_config = 1 [json_name = "tourShiftInstanceConfig"];</code>
      */
-    public com.tcn.cloud.api.api.commons.TourShiftInstanceConfigOrBuilder getTourShiftInstanceConfigOrBuilder() {
+    public com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftInstanceConfigOrBuilder getTourShiftInstanceConfigOrBuilder() {
       if (tourShiftInstanceConfigBuilder_ != null) {
         return tourShiftInstanceConfigBuilder_.getMessageOrBuilder();
       } else {
         return tourShiftInstanceConfig_ == null ?
-            com.tcn.cloud.api.api.commons.TourShiftInstanceConfig.getDefaultInstance() : tourShiftInstanceConfig_;
+            com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftInstanceConfig.getDefaultInstance() : tourShiftInstanceConfig_;
       }
     }
     /**
@@ -561,14 +561,14 @@ private static final long serialVersionUID = 0L;
      * The Tour Shift Instance Config to create.
      * </pre>
      *
-     * <code>.api.commons.TourShiftInstanceConfig tour_shift_instance_config = 1 [json_name = "tourShiftInstanceConfig"];</code>
+     * <code>.api.v1alpha1.wfm.TourShiftInstanceConfig tour_shift_instance_config = 1 [json_name = "tourShiftInstanceConfig"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.TourShiftInstanceConfig, com.tcn.cloud.api.api.commons.TourShiftInstanceConfig.Builder, com.tcn.cloud.api.api.commons.TourShiftInstanceConfigOrBuilder> 
+        com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftInstanceConfig, com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftInstanceConfig.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftInstanceConfigOrBuilder> 
         getTourShiftInstanceConfigFieldBuilder() {
       if (tourShiftInstanceConfigBuilder_ == null) {
         tourShiftInstanceConfigBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.TourShiftInstanceConfig, com.tcn.cloud.api.api.commons.TourShiftInstanceConfig.Builder, com.tcn.cloud.api.api.commons.TourShiftInstanceConfigOrBuilder>(
+            com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftInstanceConfig, com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftInstanceConfig.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftInstanceConfigOrBuilder>(
                 getTourShiftInstanceConfig(),
                 getParentForChildren(),
                 isClean());

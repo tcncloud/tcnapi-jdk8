@@ -45,16 +45,16 @@ private static final long serialVersionUID = 0L;
 
   public static final int TOUR_WEEK_PATTERNS_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private java.util.List<com.tcn.cloud.api.api.commons.TourWeekPattern> tourWeekPatterns_;
+  private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.TourWeekPattern> tourWeekPatterns_;
   /**
    * <pre>
    * The requested Tour Week Patterns.
    * </pre>
    *
-   * <code>repeated .api.commons.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
+   * <code>repeated .api.v1alpha1.wfm.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
    */
   @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.api.commons.TourWeekPattern> getTourWeekPatternsList() {
+  public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.TourWeekPattern> getTourWeekPatternsList() {
     return tourWeekPatterns_;
   }
   /**
@@ -62,10 +62,10 @@ private static final long serialVersionUID = 0L;
    * The requested Tour Week Patterns.
    * </pre>
    *
-   * <code>repeated .api.commons.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
+   * <code>repeated .api.v1alpha1.wfm.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.tcn.cloud.api.api.commons.TourWeekPatternOrBuilder> 
+  public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.TourWeekPatternOrBuilder> 
       getTourWeekPatternsOrBuilderList() {
     return tourWeekPatterns_;
   }
@@ -74,7 +74,7 @@ private static final long serialVersionUID = 0L;
    * The requested Tour Week Patterns.
    * </pre>
    *
-   * <code>repeated .api.commons.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
+   * <code>repeated .api.v1alpha1.wfm.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
    */
   @java.lang.Override
   public int getTourWeekPatternsCount() {
@@ -85,10 +85,10 @@ private static final long serialVersionUID = 0L;
    * The requested Tour Week Patterns.
    * </pre>
    *
-   * <code>repeated .api.commons.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
+   * <code>repeated .api.v1alpha1.wfm.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.TourWeekPattern getTourWeekPatterns(int index) {
+  public com.tcn.cloud.api.api.v1alpha1.wfm.TourWeekPattern getTourWeekPatterns(int index) {
     return tourWeekPatterns_.get(index);
   }
   /**
@@ -96,10 +96,10 @@ private static final long serialVersionUID = 0L;
    * The requested Tour Week Patterns.
    * </pre>
    *
-   * <code>repeated .api.commons.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
+   * <code>repeated .api.v1alpha1.wfm.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.TourWeekPatternOrBuilder getTourWeekPatternsOrBuilder(
+  public com.tcn.cloud.api.api.v1alpha1.wfm.TourWeekPatternOrBuilder getTourWeekPatternsOrBuilder(
       int index) {
     return tourWeekPatterns_.get(index);
   }
@@ -453,9 +453,9 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              com.tcn.cloud.api.api.commons.TourWeekPattern m =
+              com.tcn.cloud.api.api.v1alpha1.wfm.TourWeekPattern m =
                   input.readMessage(
-                      com.tcn.cloud.api.api.commons.TourWeekPattern.parser(),
+                      com.tcn.cloud.api.api.v1alpha1.wfm.TourWeekPattern.parser(),
                       extensionRegistry);
               if (tourWeekPatternsBuilder_ == null) {
                 ensureTourWeekPatternsIsMutable();
@@ -482,26 +482,26 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.util.List<com.tcn.cloud.api.api.commons.TourWeekPattern> tourWeekPatterns_ =
+    private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.TourWeekPattern> tourWeekPatterns_ =
       java.util.Collections.emptyList();
     private void ensureTourWeekPatternsIsMutable() {
       if (!((bitField0_ & 0x00000001) != 0)) {
-        tourWeekPatterns_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.TourWeekPattern>(tourWeekPatterns_);
+        tourWeekPatterns_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.wfm.TourWeekPattern>(tourWeekPatterns_);
         bitField0_ |= 0x00000001;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.TourWeekPattern, com.tcn.cloud.api.api.commons.TourWeekPattern.Builder, com.tcn.cloud.api.api.commons.TourWeekPatternOrBuilder> tourWeekPatternsBuilder_;
+        com.tcn.cloud.api.api.v1alpha1.wfm.TourWeekPattern, com.tcn.cloud.api.api.v1alpha1.wfm.TourWeekPattern.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.TourWeekPatternOrBuilder> tourWeekPatternsBuilder_;
 
     /**
      * <pre>
      * The requested Tour Week Patterns.
      * </pre>
      *
-     * <code>repeated .api.commons.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
+     * <code>repeated .api.v1alpha1.wfm.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.commons.TourWeekPattern> getTourWeekPatternsList() {
+    public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.TourWeekPattern> getTourWeekPatternsList() {
       if (tourWeekPatternsBuilder_ == null) {
         return java.util.Collections.unmodifiableList(tourWeekPatterns_);
       } else {
@@ -513,7 +513,7 @@ private static final long serialVersionUID = 0L;
      * The requested Tour Week Patterns.
      * </pre>
      *
-     * <code>repeated .api.commons.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
+     * <code>repeated .api.v1alpha1.wfm.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
      */
     public int getTourWeekPatternsCount() {
       if (tourWeekPatternsBuilder_ == null) {
@@ -527,9 +527,9 @@ private static final long serialVersionUID = 0L;
      * The requested Tour Week Patterns.
      * </pre>
      *
-     * <code>repeated .api.commons.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
+     * <code>repeated .api.v1alpha1.wfm.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
      */
-    public com.tcn.cloud.api.api.commons.TourWeekPattern getTourWeekPatterns(int index) {
+    public com.tcn.cloud.api.api.v1alpha1.wfm.TourWeekPattern getTourWeekPatterns(int index) {
       if (tourWeekPatternsBuilder_ == null) {
         return tourWeekPatterns_.get(index);
       } else {
@@ -541,10 +541,10 @@ private static final long serialVersionUID = 0L;
      * The requested Tour Week Patterns.
      * </pre>
      *
-     * <code>repeated .api.commons.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
+     * <code>repeated .api.v1alpha1.wfm.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
      */
     public Builder setTourWeekPatterns(
-        int index, com.tcn.cloud.api.api.commons.TourWeekPattern value) {
+        int index, com.tcn.cloud.api.api.v1alpha1.wfm.TourWeekPattern value) {
       if (tourWeekPatternsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -562,10 +562,10 @@ private static final long serialVersionUID = 0L;
      * The requested Tour Week Patterns.
      * </pre>
      *
-     * <code>repeated .api.commons.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
+     * <code>repeated .api.v1alpha1.wfm.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
      */
     public Builder setTourWeekPatterns(
-        int index, com.tcn.cloud.api.api.commons.TourWeekPattern.Builder builderForValue) {
+        int index, com.tcn.cloud.api.api.v1alpha1.wfm.TourWeekPattern.Builder builderForValue) {
       if (tourWeekPatternsBuilder_ == null) {
         ensureTourWeekPatternsIsMutable();
         tourWeekPatterns_.set(index, builderForValue.build());
@@ -580,9 +580,9 @@ private static final long serialVersionUID = 0L;
      * The requested Tour Week Patterns.
      * </pre>
      *
-     * <code>repeated .api.commons.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
+     * <code>repeated .api.v1alpha1.wfm.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
      */
-    public Builder addTourWeekPatterns(com.tcn.cloud.api.api.commons.TourWeekPattern value) {
+    public Builder addTourWeekPatterns(com.tcn.cloud.api.api.v1alpha1.wfm.TourWeekPattern value) {
       if (tourWeekPatternsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -600,10 +600,10 @@ private static final long serialVersionUID = 0L;
      * The requested Tour Week Patterns.
      * </pre>
      *
-     * <code>repeated .api.commons.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
+     * <code>repeated .api.v1alpha1.wfm.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
      */
     public Builder addTourWeekPatterns(
-        int index, com.tcn.cloud.api.api.commons.TourWeekPattern value) {
+        int index, com.tcn.cloud.api.api.v1alpha1.wfm.TourWeekPattern value) {
       if (tourWeekPatternsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -621,10 +621,10 @@ private static final long serialVersionUID = 0L;
      * The requested Tour Week Patterns.
      * </pre>
      *
-     * <code>repeated .api.commons.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
+     * <code>repeated .api.v1alpha1.wfm.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
      */
     public Builder addTourWeekPatterns(
-        com.tcn.cloud.api.api.commons.TourWeekPattern.Builder builderForValue) {
+        com.tcn.cloud.api.api.v1alpha1.wfm.TourWeekPattern.Builder builderForValue) {
       if (tourWeekPatternsBuilder_ == null) {
         ensureTourWeekPatternsIsMutable();
         tourWeekPatterns_.add(builderForValue.build());
@@ -639,10 +639,10 @@ private static final long serialVersionUID = 0L;
      * The requested Tour Week Patterns.
      * </pre>
      *
-     * <code>repeated .api.commons.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
+     * <code>repeated .api.v1alpha1.wfm.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
      */
     public Builder addTourWeekPatterns(
-        int index, com.tcn.cloud.api.api.commons.TourWeekPattern.Builder builderForValue) {
+        int index, com.tcn.cloud.api.api.v1alpha1.wfm.TourWeekPattern.Builder builderForValue) {
       if (tourWeekPatternsBuilder_ == null) {
         ensureTourWeekPatternsIsMutable();
         tourWeekPatterns_.add(index, builderForValue.build());
@@ -657,10 +657,10 @@ private static final long serialVersionUID = 0L;
      * The requested Tour Week Patterns.
      * </pre>
      *
-     * <code>repeated .api.commons.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
+     * <code>repeated .api.v1alpha1.wfm.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
      */
     public Builder addAllTourWeekPatterns(
-        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.TourWeekPattern> values) {
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.v1alpha1.wfm.TourWeekPattern> values) {
       if (tourWeekPatternsBuilder_ == null) {
         ensureTourWeekPatternsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -676,7 +676,7 @@ private static final long serialVersionUID = 0L;
      * The requested Tour Week Patterns.
      * </pre>
      *
-     * <code>repeated .api.commons.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
+     * <code>repeated .api.v1alpha1.wfm.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
      */
     public Builder clearTourWeekPatterns() {
       if (tourWeekPatternsBuilder_ == null) {
@@ -693,7 +693,7 @@ private static final long serialVersionUID = 0L;
      * The requested Tour Week Patterns.
      * </pre>
      *
-     * <code>repeated .api.commons.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
+     * <code>repeated .api.v1alpha1.wfm.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
      */
     public Builder removeTourWeekPatterns(int index) {
       if (tourWeekPatternsBuilder_ == null) {
@@ -710,9 +710,9 @@ private static final long serialVersionUID = 0L;
      * The requested Tour Week Patterns.
      * </pre>
      *
-     * <code>repeated .api.commons.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
+     * <code>repeated .api.v1alpha1.wfm.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
      */
-    public com.tcn.cloud.api.api.commons.TourWeekPattern.Builder getTourWeekPatternsBuilder(
+    public com.tcn.cloud.api.api.v1alpha1.wfm.TourWeekPattern.Builder getTourWeekPatternsBuilder(
         int index) {
       return getTourWeekPatternsFieldBuilder().getBuilder(index);
     }
@@ -721,9 +721,9 @@ private static final long serialVersionUID = 0L;
      * The requested Tour Week Patterns.
      * </pre>
      *
-     * <code>repeated .api.commons.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
+     * <code>repeated .api.v1alpha1.wfm.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
      */
-    public com.tcn.cloud.api.api.commons.TourWeekPatternOrBuilder getTourWeekPatternsOrBuilder(
+    public com.tcn.cloud.api.api.v1alpha1.wfm.TourWeekPatternOrBuilder getTourWeekPatternsOrBuilder(
         int index) {
       if (tourWeekPatternsBuilder_ == null) {
         return tourWeekPatterns_.get(index);  } else {
@@ -735,9 +735,9 @@ private static final long serialVersionUID = 0L;
      * The requested Tour Week Patterns.
      * </pre>
      *
-     * <code>repeated .api.commons.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
+     * <code>repeated .api.v1alpha1.wfm.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
      */
-    public java.util.List<? extends com.tcn.cloud.api.api.commons.TourWeekPatternOrBuilder> 
+    public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.TourWeekPatternOrBuilder> 
          getTourWeekPatternsOrBuilderList() {
       if (tourWeekPatternsBuilder_ != null) {
         return tourWeekPatternsBuilder_.getMessageOrBuilderList();
@@ -750,41 +750,41 @@ private static final long serialVersionUID = 0L;
      * The requested Tour Week Patterns.
      * </pre>
      *
-     * <code>repeated .api.commons.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
+     * <code>repeated .api.v1alpha1.wfm.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
      */
-    public com.tcn.cloud.api.api.commons.TourWeekPattern.Builder addTourWeekPatternsBuilder() {
+    public com.tcn.cloud.api.api.v1alpha1.wfm.TourWeekPattern.Builder addTourWeekPatternsBuilder() {
       return getTourWeekPatternsFieldBuilder().addBuilder(
-          com.tcn.cloud.api.api.commons.TourWeekPattern.getDefaultInstance());
+          com.tcn.cloud.api.api.v1alpha1.wfm.TourWeekPattern.getDefaultInstance());
     }
     /**
      * <pre>
      * The requested Tour Week Patterns.
      * </pre>
      *
-     * <code>repeated .api.commons.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
+     * <code>repeated .api.v1alpha1.wfm.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
      */
-    public com.tcn.cloud.api.api.commons.TourWeekPattern.Builder addTourWeekPatternsBuilder(
+    public com.tcn.cloud.api.api.v1alpha1.wfm.TourWeekPattern.Builder addTourWeekPatternsBuilder(
         int index) {
       return getTourWeekPatternsFieldBuilder().addBuilder(
-          index, com.tcn.cloud.api.api.commons.TourWeekPattern.getDefaultInstance());
+          index, com.tcn.cloud.api.api.v1alpha1.wfm.TourWeekPattern.getDefaultInstance());
     }
     /**
      * <pre>
      * The requested Tour Week Patterns.
      * </pre>
      *
-     * <code>repeated .api.commons.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
+     * <code>repeated .api.v1alpha1.wfm.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.commons.TourWeekPattern.Builder> 
+    public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.TourWeekPattern.Builder> 
          getTourWeekPatternsBuilderList() {
       return getTourWeekPatternsFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.TourWeekPattern, com.tcn.cloud.api.api.commons.TourWeekPattern.Builder, com.tcn.cloud.api.api.commons.TourWeekPatternOrBuilder> 
+        com.tcn.cloud.api.api.v1alpha1.wfm.TourWeekPattern, com.tcn.cloud.api.api.v1alpha1.wfm.TourWeekPattern.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.TourWeekPatternOrBuilder> 
         getTourWeekPatternsFieldBuilder() {
       if (tourWeekPatternsBuilder_ == null) {
         tourWeekPatternsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.TourWeekPattern, com.tcn.cloud.api.api.commons.TourWeekPattern.Builder, com.tcn.cloud.api.api.commons.TourWeekPatternOrBuilder>(
+            com.tcn.cloud.api.api.v1alpha1.wfm.TourWeekPattern, com.tcn.cloud.api.api.v1alpha1.wfm.TourWeekPattern.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.TourWeekPatternOrBuilder>(
                 tourWeekPatterns_,
                 ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),

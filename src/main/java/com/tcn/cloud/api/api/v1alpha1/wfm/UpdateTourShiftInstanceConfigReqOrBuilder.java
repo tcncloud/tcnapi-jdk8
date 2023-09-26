@@ -12,7 +12,7 @@ public interface UpdateTourShiftInstanceConfigReqOrBuilder extends
    * The Tour Shift Instance Config to update.
    * </pre>
    *
-   * <code>.api.commons.TourShiftInstanceConfig tour_shift_instance_config = 1 [json_name = "tourShiftInstanceConfig"];</code>
+   * <code>.api.v1alpha1.wfm.TourShiftInstanceConfig tour_shift_instance_config = 1 [json_name = "tourShiftInstanceConfig"];</code>
    * @return Whether the tourShiftInstanceConfig field is set.
    */
   boolean hasTourShiftInstanceConfig();
@@ -21,16 +21,16 @@ public interface UpdateTourShiftInstanceConfigReqOrBuilder extends
    * The Tour Shift Instance Config to update.
    * </pre>
    *
-   * <code>.api.commons.TourShiftInstanceConfig tour_shift_instance_config = 1 [json_name = "tourShiftInstanceConfig"];</code>
+   * <code>.api.v1alpha1.wfm.TourShiftInstanceConfig tour_shift_instance_config = 1 [json_name = "tourShiftInstanceConfig"];</code>
    * @return The tourShiftInstanceConfig.
    */
-  com.tcn.cloud.api.api.commons.TourShiftInstanceConfig getTourShiftInstanceConfig();
+  com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftInstanceConfig getTourShiftInstanceConfig();
   /**
    * <pre>
    * The Tour Shift Instance Config to update.
    * </pre>
    *
-   * <code>.api.commons.TourShiftInstanceConfig tour_shift_instance_config = 1 [json_name = "tourShiftInstanceConfig"];</code>
+   * <code>.api.v1alpha1.wfm.TourShiftInstanceConfig tour_shift_instance_config = 1 [json_name = "tourShiftInstanceConfig"];</code>
    */
-  com.tcn.cloud.api.api.commons.TourShiftInstanceConfigOrBuilder getTourShiftInstanceConfigOrBuilder();
+  com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftInstanceConfigOrBuilder getTourShiftInstanceConfigOrBuilder();
 }

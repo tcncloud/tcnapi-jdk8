@@ -12,24 +12,24 @@ public interface ListTourShiftSegmentConfigsResOrBuilder extends
    * Requested Tour Shift Segment Configs.
    * </pre>
    *
-   * <code>repeated .api.commons.TourShiftSegmentConfig tour_shift_segment_configs = 1 [json_name = "tourShiftSegmentConfigs"];</code>
+   * <code>repeated .api.v1alpha1.wfm.TourShiftSegmentConfig tour_shift_segment_configs = 1 [json_name = "tourShiftSegmentConfigs"];</code>
    */
-  java.util.List<com.tcn.cloud.api.api.commons.TourShiftSegmentConfig> 
+  java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftSegmentConfig> 
       getTourShiftSegmentConfigsList();
   /**
    * <pre>
    * Requested Tour Shift Segment Configs.
    * </pre>
    *
-   * <code>repeated .api.commons.TourShiftSegmentConfig tour_shift_segment_configs = 1 [json_name = "tourShiftSegmentConfigs"];</code>
+   * <code>repeated .api.v1alpha1.wfm.TourShiftSegmentConfig tour_shift_segment_configs = 1 [json_name = "tourShiftSegmentConfigs"];</code>
    */
-  com.tcn.cloud.api.api.commons.TourShiftSegmentConfig getTourShiftSegmentConfigs(int index);
+  com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftSegmentConfig getTourShiftSegmentConfigs(int index);
   /**
    * <pre>
    * Requested Tour Shift Segment Configs.
    * </pre>
    *
-   * <code>repeated .api.commons.TourShiftSegmentConfig tour_shift_segment_configs = 1 [json_name = "tourShiftSegmentConfigs"];</code>
+   * <code>repeated .api.v1alpha1.wfm.TourShiftSegmentConfig tour_shift_segment_configs = 1 [json_name = "tourShiftSegmentConfigs"];</code>
    */
   int getTourShiftSegmentConfigsCount();
   /**
@@ -37,17 +37,17 @@ public interface ListTourShiftSegmentConfigsResOrBuilder extends
    * Requested Tour Shift Segment Configs.
    * </pre>
    *
-   * <code>repeated .api.commons.TourShiftSegmentConfig tour_shift_segment_configs = 1 [json_name = "tourShiftSegmentConfigs"];</code>
+   * <code>repeated .api.v1alpha1.wfm.TourShiftSegmentConfig tour_shift_segment_configs = 1 [json_name = "tourShiftSegmentConfigs"];</code>
    */
-  java.util.List<? extends com.tcn.cloud.api.api.commons.TourShiftSegmentConfigOrBuilder> 
+  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftSegmentConfigOrBuilder> 
       getTourShiftSegmentConfigsOrBuilderList();
   /**
    * <pre>
    * Requested Tour Shift Segment Configs.
    * </pre>
    *
-   * <code>repeated .api.commons.TourShiftSegmentConfig tour_shift_segment_configs = 1 [json_name = "tourShiftSegmentConfigs"];</code>
+   * <code>repeated .api.v1alpha1.wfm.TourShiftSegmentConfig tour_shift_segment_configs = 1 [json_name = "tourShiftSegmentConfigs"];</code>
    */
-  com.tcn.cloud.api.api.commons.TourShiftSegmentConfigOrBuilder getTourShiftSegmentConfigsOrBuilder(
+  com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftSegmentConfigOrBuilder getTourShiftSegmentConfigsOrBuilder(
       int index);
 }

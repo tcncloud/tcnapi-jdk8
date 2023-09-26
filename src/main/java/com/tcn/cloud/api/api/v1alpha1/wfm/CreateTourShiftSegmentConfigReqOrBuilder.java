@@ -12,7 +12,7 @@ public interface CreateTourShiftSegmentConfigReqOrBuilder extends
    * The tour Shift Segment Config to Create.
    * </pre>
    *
-   * <code>.api.commons.TourShiftSegmentConfig tour_shift_segment_config = 1 [json_name = "tourShiftSegmentConfig"];</code>
+   * <code>.api.v1alpha1.wfm.TourShiftSegmentConfig tour_shift_segment_config = 1 [json_name = "tourShiftSegmentConfig"];</code>
    * @return Whether the tourShiftSegmentConfig field is set.
    */
   boolean hasTourShiftSegmentConfig();
@@ -21,16 +21,16 @@ public interface CreateTourShiftSegmentConfigReqOrBuilder extends
    * The tour Shift Segment Config to Create.
    * </pre>
    *
-   * <code>.api.commons.TourShiftSegmentConfig tour_shift_segment_config = 1 [json_name = "tourShiftSegmentConfig"];</code>
+   * <code>.api.v1alpha1.wfm.TourShiftSegmentConfig tour_shift_segment_config = 1 [json_name = "tourShiftSegmentConfig"];</code>
    * @return The tourShiftSegmentConfig.
    */
-  com.tcn.cloud.api.api.commons.TourShiftSegmentConfig getTourShiftSegmentConfig();
+  com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftSegmentConfig getTourShiftSegmentConfig();
   /**
    * <pre>
    * The tour Shift Segment Config to Create.
    * </pre>
    *
-   * <code>.api.commons.TourShiftSegmentConfig tour_shift_segment_config = 1 [json_name = "tourShiftSegmentConfig"];</code>
+   * <code>.api.v1alpha1.wfm.TourShiftSegmentConfig tour_shift_segment_config = 1 [json_name = "tourShiftSegmentConfig"];</code>
    */
-  com.tcn.cloud.api.api.commons.TourShiftSegmentConfigOrBuilder getTourShiftSegmentConfigOrBuilder();
+  com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftSegmentConfigOrBuilder getTourShiftSegmentConfigOrBuilder();
 }

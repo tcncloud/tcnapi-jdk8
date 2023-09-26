@@ -43,13 +43,13 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TOUR_AGENT_COLLECTION_FIELD_NUMBER = 1;
-  private com.tcn.cloud.api.api.commons.TourAgentCollection tourAgentCollection_;
+  private com.tcn.cloud.api.api.v1alpha1.wfm.TourAgentCollection tourAgentCollection_;
   /**
    * <pre>
    * The Tour Agent Collection to create.
    * </pre>
    *
-   * <code>.api.commons.TourAgentCollection tour_agent_collection = 1 [json_name = "tourAgentCollection"];</code>
+   * <code>.api.v1alpha1.wfm.TourAgentCollection tour_agent_collection = 1 [json_name = "tourAgentCollection"];</code>
    * @return Whether the tourAgentCollection field is set.
    */
   @java.lang.Override
@@ -61,23 +61,23 @@ private static final long serialVersionUID = 0L;
    * The Tour Agent Collection to create.
    * </pre>
    *
-   * <code>.api.commons.TourAgentCollection tour_agent_collection = 1 [json_name = "tourAgentCollection"];</code>
+   * <code>.api.v1alpha1.wfm.TourAgentCollection tour_agent_collection = 1 [json_name = "tourAgentCollection"];</code>
    * @return The tourAgentCollection.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.TourAgentCollection getTourAgentCollection() {
-    return tourAgentCollection_ == null ? com.tcn.cloud.api.api.commons.TourAgentCollection.getDefaultInstance() : tourAgentCollection_;
+  public com.tcn.cloud.api.api.v1alpha1.wfm.TourAgentCollection getTourAgentCollection() {
+    return tourAgentCollection_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.TourAgentCollection.getDefaultInstance() : tourAgentCollection_;
   }
   /**
    * <pre>
    * The Tour Agent Collection to create.
    * </pre>
    *
-   * <code>.api.commons.TourAgentCollection tour_agent_collection = 1 [json_name = "tourAgentCollection"];</code>
+   * <code>.api.v1alpha1.wfm.TourAgentCollection tour_agent_collection = 1 [json_name = "tourAgentCollection"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.TourAgentCollectionOrBuilder getTourAgentCollectionOrBuilder() {
-    return tourAgentCollection_ == null ? com.tcn.cloud.api.api.commons.TourAgentCollection.getDefaultInstance() : tourAgentCollection_;
+  public com.tcn.cloud.api.api.v1alpha1.wfm.TourAgentCollectionOrBuilder getTourAgentCollectionOrBuilder() {
+    return tourAgentCollection_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.TourAgentCollection.getDefaultInstance() : tourAgentCollection_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -422,15 +422,15 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private com.tcn.cloud.api.api.commons.TourAgentCollection tourAgentCollection_;
+    private com.tcn.cloud.api.api.v1alpha1.wfm.TourAgentCollection tourAgentCollection_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.TourAgentCollection, com.tcn.cloud.api.api.commons.TourAgentCollection.Builder, com.tcn.cloud.api.api.commons.TourAgentCollectionOrBuilder> tourAgentCollectionBuilder_;
+        com.tcn.cloud.api.api.v1alpha1.wfm.TourAgentCollection, com.tcn.cloud.api.api.v1alpha1.wfm.TourAgentCollection.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.TourAgentCollectionOrBuilder> tourAgentCollectionBuilder_;
     /**
      * <pre>
      * The Tour Agent Collection to create.
      * </pre>
      *
-     * <code>.api.commons.TourAgentCollection tour_agent_collection = 1 [json_name = "tourAgentCollection"];</code>
+     * <code>.api.v1alpha1.wfm.TourAgentCollection tour_agent_collection = 1 [json_name = "tourAgentCollection"];</code>
      * @return Whether the tourAgentCollection field is set.
      */
     public boolean hasTourAgentCollection() {
@@ -441,12 +441,12 @@ private static final long serialVersionUID = 0L;
      * The Tour Agent Collection to create.
      * </pre>
      *
-     * <code>.api.commons.TourAgentCollection tour_agent_collection = 1 [json_name = "tourAgentCollection"];</code>
+     * <code>.api.v1alpha1.wfm.TourAgentCollection tour_agent_collection = 1 [json_name = "tourAgentCollection"];</code>
      * @return The tourAgentCollection.
      */
-    public com.tcn.cloud.api.api.commons.TourAgentCollection getTourAgentCollection() {
+    public com.tcn.cloud.api.api.v1alpha1.wfm.TourAgentCollection getTourAgentCollection() {
       if (tourAgentCollectionBuilder_ == null) {
-        return tourAgentCollection_ == null ? com.tcn.cloud.api.api.commons.TourAgentCollection.getDefaultInstance() : tourAgentCollection_;
+        return tourAgentCollection_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.TourAgentCollection.getDefaultInstance() : tourAgentCollection_;
       } else {
         return tourAgentCollectionBuilder_.getMessage();
       }
@@ -456,9 +456,9 @@ private static final long serialVersionUID = 0L;
      * The Tour Agent Collection to create.
      * </pre>
      *
-     * <code>.api.commons.TourAgentCollection tour_agent_collection = 1 [json_name = "tourAgentCollection"];</code>
+     * <code>.api.v1alpha1.wfm.TourAgentCollection tour_agent_collection = 1 [json_name = "tourAgentCollection"];</code>
      */
-    public Builder setTourAgentCollection(com.tcn.cloud.api.api.commons.TourAgentCollection value) {
+    public Builder setTourAgentCollection(com.tcn.cloud.api.api.v1alpha1.wfm.TourAgentCollection value) {
       if (tourAgentCollectionBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -476,10 +476,10 @@ private static final long serialVersionUID = 0L;
      * The Tour Agent Collection to create.
      * </pre>
      *
-     * <code>.api.commons.TourAgentCollection tour_agent_collection = 1 [json_name = "tourAgentCollection"];</code>
+     * <code>.api.v1alpha1.wfm.TourAgentCollection tour_agent_collection = 1 [json_name = "tourAgentCollection"];</code>
      */
     public Builder setTourAgentCollection(
-        com.tcn.cloud.api.api.commons.TourAgentCollection.Builder builderForValue) {
+        com.tcn.cloud.api.api.v1alpha1.wfm.TourAgentCollection.Builder builderForValue) {
       if (tourAgentCollectionBuilder_ == null) {
         tourAgentCollection_ = builderForValue.build();
       } else {
@@ -494,13 +494,13 @@ private static final long serialVersionUID = 0L;
      * The Tour Agent Collection to create.
      * </pre>
      *
-     * <code>.api.commons.TourAgentCollection tour_agent_collection = 1 [json_name = "tourAgentCollection"];</code>
+     * <code>.api.v1alpha1.wfm.TourAgentCollection tour_agent_collection = 1 [json_name = "tourAgentCollection"];</code>
      */
-    public Builder mergeTourAgentCollection(com.tcn.cloud.api.api.commons.TourAgentCollection value) {
+    public Builder mergeTourAgentCollection(com.tcn.cloud.api.api.v1alpha1.wfm.TourAgentCollection value) {
       if (tourAgentCollectionBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0) &&
           tourAgentCollection_ != null &&
-          tourAgentCollection_ != com.tcn.cloud.api.api.commons.TourAgentCollection.getDefaultInstance()) {
+          tourAgentCollection_ != com.tcn.cloud.api.api.v1alpha1.wfm.TourAgentCollection.getDefaultInstance()) {
           getTourAgentCollectionBuilder().mergeFrom(value);
         } else {
           tourAgentCollection_ = value;
@@ -517,7 +517,7 @@ private static final long serialVersionUID = 0L;
      * The Tour Agent Collection to create.
      * </pre>
      *
-     * <code>.api.commons.TourAgentCollection tour_agent_collection = 1 [json_name = "tourAgentCollection"];</code>
+     * <code>.api.v1alpha1.wfm.TourAgentCollection tour_agent_collection = 1 [json_name = "tourAgentCollection"];</code>
      */
     public Builder clearTourAgentCollection() {
       bitField0_ = (bitField0_ & ~0x00000001);
@@ -534,9 +534,9 @@ private static final long serialVersionUID = 0L;
      * The Tour Agent Collection to create.
      * </pre>
      *
-     * <code>.api.commons.TourAgentCollection tour_agent_collection = 1 [json_name = "tourAgentCollection"];</code>
+     * <code>.api.v1alpha1.wfm.TourAgentCollection tour_agent_collection = 1 [json_name = "tourAgentCollection"];</code>
      */
-    public com.tcn.cloud.api.api.commons.TourAgentCollection.Builder getTourAgentCollectionBuilder() {
+    public com.tcn.cloud.api.api.v1alpha1.wfm.TourAgentCollection.Builder getTourAgentCollectionBuilder() {
       bitField0_ |= 0x00000001;
       onChanged();
       return getTourAgentCollectionFieldBuilder().getBuilder();
@@ -546,14 +546,14 @@ private static final long serialVersionUID = 0L;
      * The Tour Agent Collection to create.
      * </pre>
      *
-     * <code>.api.commons.TourAgentCollection tour_agent_collection = 1 [json_name = "tourAgentCollection"];</code>
+     * <code>.api.v1alpha1.wfm.TourAgentCollection tour_agent_collection = 1 [json_name = "tourAgentCollection"];</code>
      */
-    public com.tcn.cloud.api.api.commons.TourAgentCollectionOrBuilder getTourAgentCollectionOrBuilder() {
+    public com.tcn.cloud.api.api.v1alpha1.wfm.TourAgentCollectionOrBuilder getTourAgentCollectionOrBuilder() {
       if (tourAgentCollectionBuilder_ != null) {
         return tourAgentCollectionBuilder_.getMessageOrBuilder();
       } else {
         return tourAgentCollection_ == null ?
-            com.tcn.cloud.api.api.commons.TourAgentCollection.getDefaultInstance() : tourAgentCollection_;
+            com.tcn.cloud.api.api.v1alpha1.wfm.TourAgentCollection.getDefaultInstance() : tourAgentCollection_;
       }
     }
     /**
@@ -561,14 +561,14 @@ private static final long serialVersionUID = 0L;
      * The Tour Agent Collection to create.
      * </pre>
      *
-     * <code>.api.commons.TourAgentCollection tour_agent_collection = 1 [json_name = "tourAgentCollection"];</code>
+     * <code>.api.v1alpha1.wfm.TourAgentCollection tour_agent_collection = 1 [json_name = "tourAgentCollection"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.TourAgentCollection, com.tcn.cloud.api.api.commons.TourAgentCollection.Builder, com.tcn.cloud.api.api.commons.TourAgentCollectionOrBuilder> 
+        com.tcn.cloud.api.api.v1alpha1.wfm.TourAgentCollection, com.tcn.cloud.api.api.v1alpha1.wfm.TourAgentCollection.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.TourAgentCollectionOrBuilder> 
         getTourAgentCollectionFieldBuilder() {
       if (tourAgentCollectionBuilder_ == null) {
         tourAgentCollectionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.TourAgentCollection, com.tcn.cloud.api.api.commons.TourAgentCollection.Builder, com.tcn.cloud.api.api.commons.TourAgentCollectionOrBuilder>(
+            com.tcn.cloud.api.api.v1alpha1.wfm.TourAgentCollection, com.tcn.cloud.api.api.v1alpha1.wfm.TourAgentCollection.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.TourAgentCollectionOrBuilder>(
                 getTourAgentCollection(),
                 getParentForChildren(),
                 isClean());

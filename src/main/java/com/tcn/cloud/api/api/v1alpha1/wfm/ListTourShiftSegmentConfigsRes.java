@@ -45,16 +45,16 @@ private static final long serialVersionUID = 0L;
 
   public static final int TOUR_SHIFT_SEGMENT_CONFIGS_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private java.util.List<com.tcn.cloud.api.api.commons.TourShiftSegmentConfig> tourShiftSegmentConfigs_;
+  private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftSegmentConfig> tourShiftSegmentConfigs_;
   /**
    * <pre>
    * Requested Tour Shift Segment Configs.
    * </pre>
    *
-   * <code>repeated .api.commons.TourShiftSegmentConfig tour_shift_segment_configs = 1 [json_name = "tourShiftSegmentConfigs"];</code>
+   * <code>repeated .api.v1alpha1.wfm.TourShiftSegmentConfig tour_shift_segment_configs = 1 [json_name = "tourShiftSegmentConfigs"];</code>
    */
   @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.api.commons.TourShiftSegmentConfig> getTourShiftSegmentConfigsList() {
+  public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftSegmentConfig> getTourShiftSegmentConfigsList() {
     return tourShiftSegmentConfigs_;
   }
   /**
@@ -62,10 +62,10 @@ private static final long serialVersionUID = 0L;
    * Requested Tour Shift Segment Configs.
    * </pre>
    *
-   * <code>repeated .api.commons.TourShiftSegmentConfig tour_shift_segment_configs = 1 [json_name = "tourShiftSegmentConfigs"];</code>
+   * <code>repeated .api.v1alpha1.wfm.TourShiftSegmentConfig tour_shift_segment_configs = 1 [json_name = "tourShiftSegmentConfigs"];</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.tcn.cloud.api.api.commons.TourShiftSegmentConfigOrBuilder> 
+  public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftSegmentConfigOrBuilder> 
       getTourShiftSegmentConfigsOrBuilderList() {
     return tourShiftSegmentConfigs_;
   }
@@ -74,7 +74,7 @@ private static final long serialVersionUID = 0L;
    * Requested Tour Shift Segment Configs.
    * </pre>
    *
-   * <code>repeated .api.commons.TourShiftSegmentConfig tour_shift_segment_configs = 1 [json_name = "tourShiftSegmentConfigs"];</code>
+   * <code>repeated .api.v1alpha1.wfm.TourShiftSegmentConfig tour_shift_segment_configs = 1 [json_name = "tourShiftSegmentConfigs"];</code>
    */
   @java.lang.Override
   public int getTourShiftSegmentConfigsCount() {
@@ -85,10 +85,10 @@ private static final long serialVersionUID = 0L;
    * Requested Tour Shift Segment Configs.
    * </pre>
    *
-   * <code>repeated .api.commons.TourShiftSegmentConfig tour_shift_segment_configs = 1 [json_name = "tourShiftSegmentConfigs"];</code>
+   * <code>repeated .api.v1alpha1.wfm.TourShiftSegmentConfig tour_shift_segment_configs = 1 [json_name = "tourShiftSegmentConfigs"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.TourShiftSegmentConfig getTourShiftSegmentConfigs(int index) {
+  public com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftSegmentConfig getTourShiftSegmentConfigs(int index) {
     return tourShiftSegmentConfigs_.get(index);
   }
   /**
@@ -96,10 +96,10 @@ private static final long serialVersionUID = 0L;
    * Requested Tour Shift Segment Configs.
    * </pre>
    *
-   * <code>repeated .api.commons.TourShiftSegmentConfig tour_shift_segment_configs = 1 [json_name = "tourShiftSegmentConfigs"];</code>
+   * <code>repeated .api.v1alpha1.wfm.TourShiftSegmentConfig tour_shift_segment_configs = 1 [json_name = "tourShiftSegmentConfigs"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.TourShiftSegmentConfigOrBuilder getTourShiftSegmentConfigsOrBuilder(
+  public com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftSegmentConfigOrBuilder getTourShiftSegmentConfigsOrBuilder(
       int index) {
     return tourShiftSegmentConfigs_.get(index);
   }
@@ -453,9 +453,9 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              com.tcn.cloud.api.api.commons.TourShiftSegmentConfig m =
+              com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftSegmentConfig m =
                   input.readMessage(
-                      com.tcn.cloud.api.api.commons.TourShiftSegmentConfig.parser(),
+                      com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftSegmentConfig.parser(),
                       extensionRegistry);
               if (tourShiftSegmentConfigsBuilder_ == null) {
                 ensureTourShiftSegmentConfigsIsMutable();
@@ -482,26 +482,26 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.util.List<com.tcn.cloud.api.api.commons.TourShiftSegmentConfig> tourShiftSegmentConfigs_ =
+    private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftSegmentConfig> tourShiftSegmentConfigs_ =
       java.util.Collections.emptyList();
     private void ensureTourShiftSegmentConfigsIsMutable() {
       if (!((bitField0_ & 0x00000001) != 0)) {
-        tourShiftSegmentConfigs_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.TourShiftSegmentConfig>(tourShiftSegmentConfigs_);
+        tourShiftSegmentConfigs_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftSegmentConfig>(tourShiftSegmentConfigs_);
         bitField0_ |= 0x00000001;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.TourShiftSegmentConfig, com.tcn.cloud.api.api.commons.TourShiftSegmentConfig.Builder, com.tcn.cloud.api.api.commons.TourShiftSegmentConfigOrBuilder> tourShiftSegmentConfigsBuilder_;
+        com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftSegmentConfig, com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftSegmentConfig.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftSegmentConfigOrBuilder> tourShiftSegmentConfigsBuilder_;
 
     /**
      * <pre>
      * Requested Tour Shift Segment Configs.
      * </pre>
      *
-     * <code>repeated .api.commons.TourShiftSegmentConfig tour_shift_segment_configs = 1 [json_name = "tourShiftSegmentConfigs"];</code>
+     * <code>repeated .api.v1alpha1.wfm.TourShiftSegmentConfig tour_shift_segment_configs = 1 [json_name = "tourShiftSegmentConfigs"];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.commons.TourShiftSegmentConfig> getTourShiftSegmentConfigsList() {
+    public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftSegmentConfig> getTourShiftSegmentConfigsList() {
       if (tourShiftSegmentConfigsBuilder_ == null) {
         return java.util.Collections.unmodifiableList(tourShiftSegmentConfigs_);
       } else {
@@ -513,7 +513,7 @@ private static final long serialVersionUID = 0L;
      * Requested Tour Shift Segment Configs.
      * </pre>
      *
-     * <code>repeated .api.commons.TourShiftSegmentConfig tour_shift_segment_configs = 1 [json_name = "tourShiftSegmentConfigs"];</code>
+     * <code>repeated .api.v1alpha1.wfm.TourShiftSegmentConfig tour_shift_segment_configs = 1 [json_name = "tourShiftSegmentConfigs"];</code>
      */
     public int getTourShiftSegmentConfigsCount() {
       if (tourShiftSegmentConfigsBuilder_ == null) {
@@ -527,9 +527,9 @@ private static final long serialVersionUID = 0L;
      * Requested Tour Shift Segment Configs.
      * </pre>
      *
-     * <code>repeated .api.commons.TourShiftSegmentConfig tour_shift_segment_configs = 1 [json_name = "tourShiftSegmentConfigs"];</code>
+     * <code>repeated .api.v1alpha1.wfm.TourShiftSegmentConfig tour_shift_segment_configs = 1 [json_name = "tourShiftSegmentConfigs"];</code>
      */
-    public com.tcn.cloud.api.api.commons.TourShiftSegmentConfig getTourShiftSegmentConfigs(int index) {
+    public com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftSegmentConfig getTourShiftSegmentConfigs(int index) {
       if (tourShiftSegmentConfigsBuilder_ == null) {
         return tourShiftSegmentConfigs_.get(index);
       } else {
@@ -541,10 +541,10 @@ private static final long serialVersionUID = 0L;
      * Requested Tour Shift Segment Configs.
      * </pre>
      *
-     * <code>repeated .api.commons.TourShiftSegmentConfig tour_shift_segment_configs = 1 [json_name = "tourShiftSegmentConfigs"];</code>
+     * <code>repeated .api.v1alpha1.wfm.TourShiftSegmentConfig tour_shift_segment_configs = 1 [json_name = "tourShiftSegmentConfigs"];</code>
      */
     public Builder setTourShiftSegmentConfigs(
-        int index, com.tcn.cloud.api.api.commons.TourShiftSegmentConfig value) {
+        int index, com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftSegmentConfig value) {
       if (tourShiftSegmentConfigsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -562,10 +562,10 @@ private static final long serialVersionUID = 0L;
      * Requested Tour Shift Segment Configs.
      * </pre>
      *
-     * <code>repeated .api.commons.TourShiftSegmentConfig tour_shift_segment_configs = 1 [json_name = "tourShiftSegmentConfigs"];</code>
+     * <code>repeated .api.v1alpha1.wfm.TourShiftSegmentConfig tour_shift_segment_configs = 1 [json_name = "tourShiftSegmentConfigs"];</code>
      */
     public Builder setTourShiftSegmentConfigs(
-        int index, com.tcn.cloud.api.api.commons.TourShiftSegmentConfig.Builder builderForValue) {
+        int index, com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftSegmentConfig.Builder builderForValue) {
       if (tourShiftSegmentConfigsBuilder_ == null) {
         ensureTourShiftSegmentConfigsIsMutable();
         tourShiftSegmentConfigs_.set(index, builderForValue.build());
@@ -580,9 +580,9 @@ private static final long serialVersionUID = 0L;
      * Requested Tour Shift Segment Configs.
      * </pre>
      *
-     * <code>repeated .api.commons.TourShiftSegmentConfig tour_shift_segment_configs = 1 [json_name = "tourShiftSegmentConfigs"];</code>
+     * <code>repeated .api.v1alpha1.wfm.TourShiftSegmentConfig tour_shift_segment_configs = 1 [json_name = "tourShiftSegmentConfigs"];</code>
      */
-    public Builder addTourShiftSegmentConfigs(com.tcn.cloud.api.api.commons.TourShiftSegmentConfig value) {
+    public Builder addTourShiftSegmentConfigs(com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftSegmentConfig value) {
       if (tourShiftSegmentConfigsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -600,10 +600,10 @@ private static final long serialVersionUID = 0L;
      * Requested Tour Shift Segment Configs.
      * </pre>
      *
-     * <code>repeated .api.commons.TourShiftSegmentConfig tour_shift_segment_configs = 1 [json_name = "tourShiftSegmentConfigs"];</code>
+     * <code>repeated .api.v1alpha1.wfm.TourShiftSegmentConfig tour_shift_segment_configs = 1 [json_name = "tourShiftSegmentConfigs"];</code>
      */
     public Builder addTourShiftSegmentConfigs(
-        int index, com.tcn.cloud.api.api.commons.TourShiftSegmentConfig value) {
+        int index, com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftSegmentConfig value) {
       if (tourShiftSegmentConfigsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -621,10 +621,10 @@ private static final long serialVersionUID = 0L;
      * Requested Tour Shift Segment Configs.
      * </pre>
      *
-     * <code>repeated .api.commons.TourShiftSegmentConfig tour_shift_segment_configs = 1 [json_name = "tourShiftSegmentConfigs"];</code>
+     * <code>repeated .api.v1alpha1.wfm.TourShiftSegmentConfig tour_shift_segment_configs = 1 [json_name = "tourShiftSegmentConfigs"];</code>
      */
     public Builder addTourShiftSegmentConfigs(
-        com.tcn.cloud.api.api.commons.TourShiftSegmentConfig.Builder builderForValue) {
+        com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftSegmentConfig.Builder builderForValue) {
       if (tourShiftSegmentConfigsBuilder_ == null) {
         ensureTourShiftSegmentConfigsIsMutable();
         tourShiftSegmentConfigs_.add(builderForValue.build());
@@ -639,10 +639,10 @@ private static final long serialVersionUID = 0L;
      * Requested Tour Shift Segment Configs.
      * </pre>
      *
-     * <code>repeated .api.commons.TourShiftSegmentConfig tour_shift_segment_configs = 1 [json_name = "tourShiftSegmentConfigs"];</code>
+     * <code>repeated .api.v1alpha1.wfm.TourShiftSegmentConfig tour_shift_segment_configs = 1 [json_name = "tourShiftSegmentConfigs"];</code>
      */
     public Builder addTourShiftSegmentConfigs(
-        int index, com.tcn.cloud.api.api.commons.TourShiftSegmentConfig.Builder builderForValue) {
+        int index, com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftSegmentConfig.Builder builderForValue) {
       if (tourShiftSegmentConfigsBuilder_ == null) {
         ensureTourShiftSegmentConfigsIsMutable();
         tourShiftSegmentConfigs_.add(index, builderForValue.build());
@@ -657,10 +657,10 @@ private static final long serialVersionUID = 0L;
      * Requested Tour Shift Segment Configs.
      * </pre>
      *
-     * <code>repeated .api.commons.TourShiftSegmentConfig tour_shift_segment_configs = 1 [json_name = "tourShiftSegmentConfigs"];</code>
+     * <code>repeated .api.v1alpha1.wfm.TourShiftSegmentConfig tour_shift_segment_configs = 1 [json_name = "tourShiftSegmentConfigs"];</code>
      */
     public Builder addAllTourShiftSegmentConfigs(
-        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.TourShiftSegmentConfig> values) {
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftSegmentConfig> values) {
       if (tourShiftSegmentConfigsBuilder_ == null) {
         ensureTourShiftSegmentConfigsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -676,7 +676,7 @@ private static final long serialVersionUID = 0L;
      * Requested Tour Shift Segment Configs.
      * </pre>
      *
-     * <code>repeated .api.commons.TourShiftSegmentConfig tour_shift_segment_configs = 1 [json_name = "tourShiftSegmentConfigs"];</code>
+     * <code>repeated .api.v1alpha1.wfm.TourShiftSegmentConfig tour_shift_segment_configs = 1 [json_name = "tourShiftSegmentConfigs"];</code>
      */
     public Builder clearTourShiftSegmentConfigs() {
       if (tourShiftSegmentConfigsBuilder_ == null) {
@@ -693,7 +693,7 @@ private static final long serialVersionUID = 0L;
      * Requested Tour Shift Segment Configs.
      * </pre>
      *
-     * <code>repeated .api.commons.TourShiftSegmentConfig tour_shift_segment_configs = 1 [json_name = "tourShiftSegmentConfigs"];</code>
+     * <code>repeated .api.v1alpha1.wfm.TourShiftSegmentConfig tour_shift_segment_configs = 1 [json_name = "tourShiftSegmentConfigs"];</code>
      */
     public Builder removeTourShiftSegmentConfigs(int index) {
       if (tourShiftSegmentConfigsBuilder_ == null) {
@@ -710,9 +710,9 @@ private static final long serialVersionUID = 0L;
      * Requested Tour Shift Segment Configs.
      * </pre>
      *
-     * <code>repeated .api.commons.TourShiftSegmentConfig tour_shift_segment_configs = 1 [json_name = "tourShiftSegmentConfigs"];</code>
+     * <code>repeated .api.v1alpha1.wfm.TourShiftSegmentConfig tour_shift_segment_configs = 1 [json_name = "tourShiftSegmentConfigs"];</code>
      */
-    public com.tcn.cloud.api.api.commons.TourShiftSegmentConfig.Builder getTourShiftSegmentConfigsBuilder(
+    public com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftSegmentConfig.Builder getTourShiftSegmentConfigsBuilder(
         int index) {
       return getTourShiftSegmentConfigsFieldBuilder().getBuilder(index);
     }
@@ -721,9 +721,9 @@ private static final long serialVersionUID = 0L;
      * Requested Tour Shift Segment Configs.
      * </pre>
      *
-     * <code>repeated .api.commons.TourShiftSegmentConfig tour_shift_segment_configs = 1 [json_name = "tourShiftSegmentConfigs"];</code>
+     * <code>repeated .api.v1alpha1.wfm.TourShiftSegmentConfig tour_shift_segment_configs = 1 [json_name = "tourShiftSegmentConfigs"];</code>
      */
-    public com.tcn.cloud.api.api.commons.TourShiftSegmentConfigOrBuilder getTourShiftSegmentConfigsOrBuilder(
+    public com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftSegmentConfigOrBuilder getTourShiftSegmentConfigsOrBuilder(
         int index) {
       if (tourShiftSegmentConfigsBuilder_ == null) {
         return tourShiftSegmentConfigs_.get(index);  } else {
@@ -735,9 +735,9 @@ private static final long serialVersionUID = 0L;
      * Requested Tour Shift Segment Configs.
      * </pre>
      *
-     * <code>repeated .api.commons.TourShiftSegmentConfig tour_shift_segment_configs = 1 [json_name = "tourShiftSegmentConfigs"];</code>
+     * <code>repeated .api.v1alpha1.wfm.TourShiftSegmentConfig tour_shift_segment_configs = 1 [json_name = "tourShiftSegmentConfigs"];</code>
      */
-    public java.util.List<? extends com.tcn.cloud.api.api.commons.TourShiftSegmentConfigOrBuilder> 
+    public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftSegmentConfigOrBuilder> 
          getTourShiftSegmentConfigsOrBuilderList() {
       if (tourShiftSegmentConfigsBuilder_ != null) {
         return tourShiftSegmentConfigsBuilder_.getMessageOrBuilderList();
@@ -750,41 +750,41 @@ private static final long serialVersionUID = 0L;
      * Requested Tour Shift Segment Configs.
      * </pre>
      *
-     * <code>repeated .api.commons.TourShiftSegmentConfig tour_shift_segment_configs = 1 [json_name = "tourShiftSegmentConfigs"];</code>
+     * <code>repeated .api.v1alpha1.wfm.TourShiftSegmentConfig tour_shift_segment_configs = 1 [json_name = "tourShiftSegmentConfigs"];</code>
      */
-    public com.tcn.cloud.api.api.commons.TourShiftSegmentConfig.Builder addTourShiftSegmentConfigsBuilder() {
+    public com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftSegmentConfig.Builder addTourShiftSegmentConfigsBuilder() {
       return getTourShiftSegmentConfigsFieldBuilder().addBuilder(
-          com.tcn.cloud.api.api.commons.TourShiftSegmentConfig.getDefaultInstance());
+          com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftSegmentConfig.getDefaultInstance());
     }
     /**
      * <pre>
      * Requested Tour Shift Segment Configs.
      * </pre>
      *
-     * <code>repeated .api.commons.TourShiftSegmentConfig tour_shift_segment_configs = 1 [json_name = "tourShiftSegmentConfigs"];</code>
+     * <code>repeated .api.v1alpha1.wfm.TourShiftSegmentConfig tour_shift_segment_configs = 1 [json_name = "tourShiftSegmentConfigs"];</code>
      */
-    public com.tcn.cloud.api.api.commons.TourShiftSegmentConfig.Builder addTourShiftSegmentConfigsBuilder(
+    public com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftSegmentConfig.Builder addTourShiftSegmentConfigsBuilder(
         int index) {
       return getTourShiftSegmentConfigsFieldBuilder().addBuilder(
-          index, com.tcn.cloud.api.api.commons.TourShiftSegmentConfig.getDefaultInstance());
+          index, com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftSegmentConfig.getDefaultInstance());
     }
     /**
      * <pre>
      * Requested Tour Shift Segment Configs.
      * </pre>
      *
-     * <code>repeated .api.commons.TourShiftSegmentConfig tour_shift_segment_configs = 1 [json_name = "tourShiftSegmentConfigs"];</code>
+     * <code>repeated .api.v1alpha1.wfm.TourShiftSegmentConfig tour_shift_segment_configs = 1 [json_name = "tourShiftSegmentConfigs"];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.commons.TourShiftSegmentConfig.Builder> 
+    public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftSegmentConfig.Builder> 
          getTourShiftSegmentConfigsBuilderList() {
       return getTourShiftSegmentConfigsFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.TourShiftSegmentConfig, com.tcn.cloud.api.api.commons.TourShiftSegmentConfig.Builder, com.tcn.cloud.api.api.commons.TourShiftSegmentConfigOrBuilder> 
+        com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftSegmentConfig, com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftSegmentConfig.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftSegmentConfigOrBuilder> 
         getTourShiftSegmentConfigsFieldBuilder() {
       if (tourShiftSegmentConfigsBuilder_ == null) {
         tourShiftSegmentConfigsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.TourShiftSegmentConfig, com.tcn.cloud.api.api.commons.TourShiftSegmentConfig.Builder, com.tcn.cloud.api.api.commons.TourShiftSegmentConfigOrBuilder>(
+            com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftSegmentConfig, com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftSegmentConfig.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.TourShiftSegmentConfigOrBuilder>(
                 tourShiftSegmentConfigs_,
                 ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
