@@ -300,21 +300,20 @@ public enum Permission
   PERMISSION_VOICEMAIL_DOWNLOAD(1401),
   /**
    * <pre>
+   * Enables agents to view manual approve tasks
+   * </pre>
+   *
+   * <code>PERMISSION_MANUAL_APPROVE = 341 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_MANUAL_APPROVE(341),
+  /**
+   * <pre>
    * Enables Agents to view portals.
    * </pre>
    *
    * <code>PERMISSION_AGENT_PORTALS_VIEW = 340 [(.annotations.perms.options) = { ... }</code>
    */
   PERMISSION_AGENT_PORTALS_VIEW(340),
-  /**
-   * <pre>
-   *
-   * Voice Analytics
-   * </pre>
-   *
-   * <code>PERMISSION_MANUAL_APPROVE = 341 [(.annotations.perms.options) = { ... }</code>
-   */
-  PERMISSION_MANUAL_APPROVE(341),
   /**
    * <pre>
    * Enables access to voice analytics app.
@@ -957,21 +956,20 @@ public enum Permission
   public static final int PERMISSION_VOICEMAIL_DOWNLOAD_VALUE = 1401;
   /**
    * <pre>
+   * Enables agents to view manual approve tasks
+   * </pre>
+   *
+   * <code>PERMISSION_MANUAL_APPROVE = 341 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_MANUAL_APPROVE_VALUE = 341;
+  /**
+   * <pre>
    * Enables Agents to view portals.
    * </pre>
    *
    * <code>PERMISSION_AGENT_PORTALS_VIEW = 340 [(.annotations.perms.options) = { ... }</code>
    */
   public static final int PERMISSION_AGENT_PORTALS_VIEW_VALUE = 340;
-  /**
-   * <pre>
-   *
-   * Voice Analytics
-   * </pre>
-   *
-   * <code>PERMISSION_MANUAL_APPROVE = 341 [(.annotations.perms.options) = { ... }</code>
-   */
-  public static final int PERMISSION_MANUAL_APPROVE_VALUE = 341;
   /**
    * <pre>
    * Enables access to voice analytics app.
@@ -1385,8 +1383,8 @@ public enum Permission
       case 330: return PERMISSION_AGENT_COMPLIANCE_SCRUBLIST_OPTIONS;
       case 1400: return PERMISSION_EXTENSION_EDIT;
       case 1401: return PERMISSION_VOICEMAIL_DOWNLOAD;
-      case 340: return PERMISSION_AGENT_PORTALS_VIEW;
       case 341: return PERMISSION_MANUAL_APPROVE;
+      case 340: return PERMISSION_AGENT_PORTALS_VIEW;
       case 500: return PERMISSION_VOICE_ANALYTICS;
       case 501: return PERMISSION_VOICE_ANALYTICS_FLAG;
       case 502: return PERMISSION_VOICE_ANALYTICS_CONFIG;
