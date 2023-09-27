@@ -97,17 +97,17 @@ public interface FrequencyExpOrBuilder extends
       int index);
 
   /**
-   * <code>.api.commons.ModPredicate predicate = 7 [json_name = "predicate"];</code>
-   * @return Whether the predicate field is set.
+   * <code>.api.commons.MatchingMod matching = 7 [json_name = "matching"];</code>
+   * @return Whether the matching field is set.
    */
-  boolean hasPredicate();
+  boolean hasMatching();
   /**
-   * <code>.api.commons.ModPredicate predicate = 7 [json_name = "predicate"];</code>
-   * @return The predicate.
+   * <code>.api.commons.MatchingMod matching = 7 [json_name = "matching"];</code>
+   * @return The matching.
    */
-  com.tcn.cloud.api.api.commons.ModPredicate getPredicate();
+  com.tcn.cloud.api.api.commons.MatchingMod getMatching();
   /**
-   * <code>.api.commons.ModPredicate predicate = 7 [json_name = "predicate"];</code>
+   * <code>.api.commons.MatchingMod matching = 7 [json_name = "matching"];</code>
    */
-  com.tcn.cloud.api.api.commons.ModPredicateOrBuilder getPredicateOrBuilder();
+  com.tcn.cloud.api.api.commons.MatchingModOrBuilder getMatchingOrBuilder();
 }

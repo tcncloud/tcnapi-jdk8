@@ -77,17 +77,17 @@ public interface RuleOrBuilder extends
       getRuleTextBytes();
 
   /**
-   * <code>.api.commons.Predicate predicates = 7 [json_name = "predicates"];</code>
-   * @return Whether the predicates field is set.
+   * <code>.api.commons.Predicate predicate = 7 [json_name = "predicate"];</code>
+   * @return Whether the predicate field is set.
    */
-  boolean hasPredicates();
+  boolean hasPredicate();
   /**
-   * <code>.api.commons.Predicate predicates = 7 [json_name = "predicates"];</code>
-   * @return The predicates.
+   * <code>.api.commons.Predicate predicate = 7 [json_name = "predicate"];</code>
+   * @return The predicate.
    */
-  com.tcn.cloud.api.api.commons.Predicate getPredicates();
+  com.tcn.cloud.api.api.commons.Predicate getPredicate();
   /**
-   * <code>.api.commons.Predicate predicates = 7 [json_name = "predicates"];</code>
+   * <code>.api.commons.Predicate predicate = 7 [json_name = "predicate"];</code>
    */
-  com.tcn.cloud.api.api.commons.PredicateOrBuilder getPredicatesOrBuilder();
+  com.tcn.cloud.api.api.commons.PredicateOrBuilder getPredicateOrBuilder();
 }

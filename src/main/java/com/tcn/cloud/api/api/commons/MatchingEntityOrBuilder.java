@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.commons;
 
-public interface ModOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.commons.Mod)
+public interface MatchingEntityOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.commons.MatchingEntity)
     com.google.protobuf.MessageOrBuilder {
 
   /**
