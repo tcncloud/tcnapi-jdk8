@@ -5425,14 +5425,15 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Calculates the averages for call characteristics using the historical data of the given &#64;skill_profile_sids and org sending the request.
+     * Calculates the averages for call characteristics using the historical data of the given &#64;skill_profile_sids, &#64;skill_profile_group_sids and org sending the request.
      * If no &#64;skill_profile_sids are given, it will calculate the averages for all skill profiles for the org sending the request.
+     * If no &#64;skill_profile_group_sids are given, it will calculate the averages for all skill profile groups for the org sending the request.
      * Averages will be weighted by the number of calls that each historical data interval has.
      * Once the averages are calculated, they will be updated in the db for those skill profiles.
      * If a nil &#64;datetime_range is given then the range used will be &#64;training_data_range_end_datetime - &#64;averages_calculation_range_in_months to the &#64;training_data_range_end_datetime from the forecasting parameters.
      * If &#64;averages_calculation_range_in_months is 0, it will use the &#64;training_data_range_start_datetime as the start datetime of the range.
-     * If &#64;exclude_skill_profiles_with_manual_averages is true, it will exclude skill profiles that have manual averages from the calculation
-     * even if those skill profiles are in &#64;skill_profile_sids.
+     * If &#64;exclude_skill_profiles_with_manual_averages is true, it will exclude skill profiles and groups that have manual averages from the calculation
+     * even if those skill profiles and groups are in &#64;skill_profile_sids or &#64;skill_profile_group_sids.
      * Errors:
      *   - grpc.Internal: error occurs when calculating the averages from the historical data.
      * </pre>
@@ -8108,14 +8109,15 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Calculates the averages for call characteristics using the historical data of the given &#64;skill_profile_sids and org sending the request.
+     * Calculates the averages for call characteristics using the historical data of the given &#64;skill_profile_sids, &#64;skill_profile_group_sids and org sending the request.
      * If no &#64;skill_profile_sids are given, it will calculate the averages for all skill profiles for the org sending the request.
+     * If no &#64;skill_profile_group_sids are given, it will calculate the averages for all skill profile groups for the org sending the request.
      * Averages will be weighted by the number of calls that each historical data interval has.
      * Once the averages are calculated, they will be updated in the db for those skill profiles.
      * If a nil &#64;datetime_range is given then the range used will be &#64;training_data_range_end_datetime - &#64;averages_calculation_range_in_months to the &#64;training_data_range_end_datetime from the forecasting parameters.
      * If &#64;averages_calculation_range_in_months is 0, it will use the &#64;training_data_range_start_datetime as the start datetime of the range.
-     * If &#64;exclude_skill_profiles_with_manual_averages is true, it will exclude skill profiles that have manual averages from the calculation
-     * even if those skill profiles are in &#64;skill_profile_sids.
+     * If &#64;exclude_skill_profiles_with_manual_averages is true, it will exclude skill profiles and groups that have manual averages from the calculation
+     * even if those skill profiles and groups are in &#64;skill_profile_sids or &#64;skill_profile_group_sids.
      * Errors:
      *   - grpc.Internal: error occurs when calculating the averages from the historical data.
      * </pre>
@@ -10844,14 +10846,15 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Calculates the averages for call characteristics using the historical data of the given &#64;skill_profile_sids and org sending the request.
+     * Calculates the averages for call characteristics using the historical data of the given &#64;skill_profile_sids, &#64;skill_profile_group_sids and org sending the request.
      * If no &#64;skill_profile_sids are given, it will calculate the averages for all skill profiles for the org sending the request.
+     * If no &#64;skill_profile_group_sids are given, it will calculate the averages for all skill profile groups for the org sending the request.
      * Averages will be weighted by the number of calls that each historical data interval has.
      * Once the averages are calculated, they will be updated in the db for those skill profiles.
      * If a nil &#64;datetime_range is given then the range used will be &#64;training_data_range_end_datetime - &#64;averages_calculation_range_in_months to the &#64;training_data_range_end_datetime from the forecasting parameters.
      * If &#64;averages_calculation_range_in_months is 0, it will use the &#64;training_data_range_start_datetime as the start datetime of the range.
-     * If &#64;exclude_skill_profiles_with_manual_averages is true, it will exclude skill profiles that have manual averages from the calculation
-     * even if those skill profiles are in &#64;skill_profile_sids.
+     * If &#64;exclude_skill_profiles_with_manual_averages is true, it will exclude skill profiles and groups that have manual averages from the calculation
+     * even if those skill profiles and groups are in &#64;skill_profile_sids or &#64;skill_profile_group_sids.
      * Errors:
      *   - grpc.Internal: error occurs when calculating the averages from the historical data.
      * </pre>
@@ -13401,14 +13404,15 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Calculates the averages for call characteristics using the historical data of the given &#64;skill_profile_sids and org sending the request.
+     * Calculates the averages for call characteristics using the historical data of the given &#64;skill_profile_sids, &#64;skill_profile_group_sids and org sending the request.
      * If no &#64;skill_profile_sids are given, it will calculate the averages for all skill profiles for the org sending the request.
+     * If no &#64;skill_profile_group_sids are given, it will calculate the averages for all skill profile groups for the org sending the request.
      * Averages will be weighted by the number of calls that each historical data interval has.
      * Once the averages are calculated, they will be updated in the db for those skill profiles.
      * If a nil &#64;datetime_range is given then the range used will be &#64;training_data_range_end_datetime - &#64;averages_calculation_range_in_months to the &#64;training_data_range_end_datetime from the forecasting parameters.
      * If &#64;averages_calculation_range_in_months is 0, it will use the &#64;training_data_range_start_datetime as the start datetime of the range.
-     * If &#64;exclude_skill_profiles_with_manual_averages is true, it will exclude skill profiles that have manual averages from the calculation
-     * even if those skill profiles are in &#64;skill_profile_sids.
+     * If &#64;exclude_skill_profiles_with_manual_averages is true, it will exclude skill profiles and groups that have manual averages from the calculation
+     * even if those skill profiles and groups are in &#64;skill_profile_sids or &#64;skill_profile_group_sids.
      * Errors:
      *   - grpc.Internal: error occurs when calculating the averages from the historical data.
      * </pre>
