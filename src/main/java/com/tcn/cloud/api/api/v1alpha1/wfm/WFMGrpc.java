@@ -5433,7 +5433,7 @@ public final class WFMGrpc {
      * If a nil &#64;datetime_range is given then the range used will be &#64;training_data_range_end_datetime - &#64;averages_calculation_range_in_months to the &#64;training_data_range_end_datetime from the forecasting parameters.
      * If &#64;averages_calculation_range_in_months is 0, it will use the &#64;training_data_range_start_datetime as the start datetime of the range.
      * If &#64;exclude_skill_profiles_with_manual_averages is true, it will exclude skill profiles and groups that have manual averages from the calculation
-     * even if those skill profiles and groups are in &#64;skill_profile_sids or &#64;skill_profile_group_sids.
+     * even if those skill profiles and groups are in &#64;skill_profile_sids or &#64;skill_profile_group_sids respectively.
      * Errors:
      *   - grpc.Internal: error occurs when calculating the averages from the historical data.
      * </pre>
@@ -8117,7 +8117,7 @@ public final class WFMGrpc {
      * If a nil &#64;datetime_range is given then the range used will be &#64;training_data_range_end_datetime - &#64;averages_calculation_range_in_months to the &#64;training_data_range_end_datetime from the forecasting parameters.
      * If &#64;averages_calculation_range_in_months is 0, it will use the &#64;training_data_range_start_datetime as the start datetime of the range.
      * If &#64;exclude_skill_profiles_with_manual_averages is true, it will exclude skill profiles and groups that have manual averages from the calculation
-     * even if those skill profiles and groups are in &#64;skill_profile_sids or &#64;skill_profile_group_sids.
+     * even if those skill profiles and groups are in &#64;skill_profile_sids or &#64;skill_profile_group_sids respectively.
      * Errors:
      *   - grpc.Internal: error occurs when calculating the averages from the historical data.
      * </pre>
@@ -10854,7 +10854,7 @@ public final class WFMGrpc {
      * If a nil &#64;datetime_range is given then the range used will be &#64;training_data_range_end_datetime - &#64;averages_calculation_range_in_months to the &#64;training_data_range_end_datetime from the forecasting parameters.
      * If &#64;averages_calculation_range_in_months is 0, it will use the &#64;training_data_range_start_datetime as the start datetime of the range.
      * If &#64;exclude_skill_profiles_with_manual_averages is true, it will exclude skill profiles and groups that have manual averages from the calculation
-     * even if those skill profiles and groups are in &#64;skill_profile_sids or &#64;skill_profile_group_sids.
+     * even if those skill profiles and groups are in &#64;skill_profile_sids or &#64;skill_profile_group_sids respectively.
      * Errors:
      *   - grpc.Internal: error occurs when calculating the averages from the historical data.
      * </pre>
@@ -13412,7 +13412,7 @@ public final class WFMGrpc {
      * If a nil &#64;datetime_range is given then the range used will be &#64;training_data_range_end_datetime - &#64;averages_calculation_range_in_months to the &#64;training_data_range_end_datetime from the forecasting parameters.
      * If &#64;averages_calculation_range_in_months is 0, it will use the &#64;training_data_range_start_datetime as the start datetime of the range.
      * If &#64;exclude_skill_profiles_with_manual_averages is true, it will exclude skill profiles and groups that have manual averages from the calculation
-     * even if those skill profiles and groups are in &#64;skill_profile_sids or &#64;skill_profile_group_sids.
+     * even if those skill profiles and groups are in &#64;skill_profile_sids or &#64;skill_profile_group_sids respectively.
      * Errors:
      *   - grpc.Internal: error occurs when calculating the averages from the historical data.
      * </pre>
