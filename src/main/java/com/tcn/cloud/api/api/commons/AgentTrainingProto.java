@@ -19,6 +19,11 @@ public final class AgentTrainingProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_commons_LearningOpportunity_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_CallIdentifier_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_CallIdentifier_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -29,32 +34,48 @@ public final class AgentTrainingProto {
   static {
     java.lang.String[] descriptorData = {
       "\n api/commons/agent_training.proto\022\013api." +
-      "commons\032\025api/commons/acd.proto\"\320\002\n\023Learn" +
-      "ingOpportunity\0226\n\027learning_opportunity_i" +
-      "d\030\002 \001(\003R\025learningOpportunityId\022\031\n\010call_s" +
-      "id\030\003 \001(\003R\007callSid\0227\n\tcall_type\030\004 \001(\0162\032.a" +
-      "pi.commons.CallType.EnumR\010callType\022%\n\016tr" +
-      "anscript_sid\030\005 \001(\003R\rtranscriptSid\022\"\n\rage" +
-      "nt_user_id\030\006 \001(\tR\013agentUserId\022!\n\014start_o" +
-      "ffset\030\007 \001(\005R\013startOffset\022\035\n\nend_offset\030\010" +
-      " \001(\005R\tendOffset\022 \n\013description\030\t \001(\tR\013de" +
-      "scriptionB\200\001\n\035com.tcn.cloud.api.api.comm" +
-      "onsB\022AgentTrainingProtoP\001\242\002\003ACX\252\002\013Api.Co" +
-      "mmons\312\002\013Api\\Commons\342\002\027Api\\Commons\\GPBMet" +
-      "adata\352\002\014Api::Commonsb\006proto3"
+      "commons\032\025api/commons/acd.proto\032\037google/p" +
+      "rotobuf/timestamp.proto\"\341\003\n\023LearningOppo" +
+      "rtunity\0226\n\027learning_opportunity_id\030\002 \001(\003" +
+      "R\025learningOpportunityId\022\031\n\010call_sid\030\003 \001(" +
+      "\003R\007callSid\0227\n\tcall_type\030\004 \001(\0162\032.api.comm" +
+      "ons.CallType.EnumR\010callType\022%\n\016transcrip" +
+      "t_sid\030\005 \001(\003R\rtranscriptSid\022\"\n\ragent_user" +
+      "_id\030\006 \001(\tR\013agentUserId\022!\n\014start_offset\030\007" +
+      " \001(\005R\013startOffset\022\035\n\nend_offset\030\010 \001(\005R\te" +
+      "ndOffset\022 \n\013description\030\t \001(\tR\013descripti" +
+      "on\0229\n\ncreated_at\030\n \001(\0132\032.google.protobuf" +
+      ".TimestampR\tcreatedAt\022\024\n\005title\030\014 \001(\tR\005ti" +
+      "tle\022>\n\006status\030\r \001(\0162&.api.commons.Learni" +
+      "ngOpportunityStatusR\006status\"R\n\016CallIdent" +
+      "ifier\022\020\n\003sid\030\001 \001(\003R\003sid\022.\n\004type\030\002 \001(\0162\032." +
+      "api.commons.CallType.EnumR\004type*B\n\031Learn" +
+      "ingOpportunityStatus\022\017\n\013STATUS_OPEN\020\000\022\024\n" +
+      "\020STATUS_COMPLETED\020\001B\200\001\n\035com.tcn.cloud.ap" +
+      "i.api.commonsB\022AgentTrainingProtoP\001\242\002\003AC" +
+      "X\252\002\013Api.Commons\312\002\013Api\\Commons\342\002\027Api\\Comm" +
+      "ons\\GPBMetadata\352\002\014Api::Commonsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.tcn.cloud.api.api.commons.AcdProto.getDescriptor(),
+          com.google.protobuf.TimestampProto.getDescriptor(),
         });
     internal_static_api_commons_LearningOpportunity_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_api_commons_LearningOpportunity_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_LearningOpportunity_descriptor,
-        new java.lang.String[] { "LearningOpportunityId", "CallSid", "CallType", "TranscriptSid", "AgentUserId", "StartOffset", "EndOffset", "Description", });
+        new java.lang.String[] { "LearningOpportunityId", "CallSid", "CallType", "TranscriptSid", "AgentUserId", "StartOffset", "EndOffset", "Description", "CreatedAt", "Title", "Status", });
+    internal_static_api_commons_CallIdentifier_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_api_commons_CallIdentifier_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_CallIdentifier_descriptor,
+        new java.lang.String[] { "Sid", "Type", });
     com.tcn.cloud.api.api.commons.AcdProto.getDescriptor();
+    com.google.protobuf.TimestampProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
