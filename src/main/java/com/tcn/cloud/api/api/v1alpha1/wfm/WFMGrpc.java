@@ -4929,6 +4929,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Creates a mapping entry for the &#64;inactive_skill_profile_sid to the &#64;active_skill_profile_sid for the org sending the request.
+     * DEPRECATED as of Sep/27/2023 - Use skill profile groups instead.
      * Required permissions:
      *   NONE
      * Errors:
@@ -4961,6 +4962,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Changes the current mapping for the given &#64;inactive_skill_profile_sid to be disconnected.
+     * DEPRECATED as of Sep/27/2023 - Use skill profile groups instead.
      * Required permissions:
      *   NONE
      * Errors:
@@ -7585,6 +7587,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Creates a mapping entry for the &#64;inactive_skill_profile_sid to the &#64;active_skill_profile_sid for the org sending the request.
+     * DEPRECATED as of Sep/27/2023 - Use skill profile groups instead.
      * Required permissions:
      *   NONE
      * Errors:
@@ -7619,6 +7622,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Changes the current mapping for the given &#64;inactive_skill_profile_sid to be disconnected.
+     * DEPRECATED as of Sep/27/2023 - Use skill profile groups instead.
      * Required permissions:
      *   NONE
      * Errors:
@@ -10348,6 +10352,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Creates a mapping entry for the &#64;inactive_skill_profile_sid to the &#64;active_skill_profile_sid for the org sending the request.
+     * DEPRECATED as of Sep/27/2023 - Use skill profile groups instead.
      * Required permissions:
      *   NONE
      * Errors:
@@ -10380,6 +10385,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Changes the current mapping for the given &#64;inactive_skill_profile_sid to be disconnected.
+     * DEPRECATED as of Sep/27/2023 - Use skill profile groups instead.
      * Required permissions:
      *   NONE
      * Errors:
@@ -12996,6 +13002,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Creates a mapping entry for the &#64;inactive_skill_profile_sid to the &#64;active_skill_profile_sid for the org sending the request.
+     * DEPRECATED as of Sep/27/2023 - Use skill profile groups instead.
      * Required permissions:
      *   NONE
      * Errors:
@@ -13030,6 +13037,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Changes the current mapping for the given &#64;inactive_skill_profile_sid to be disconnected.
+     * DEPRECATED as of Sep/27/2023 - Use skill profile groups instead.
      * Required permissions:
      *   NONE
      * Errors:
