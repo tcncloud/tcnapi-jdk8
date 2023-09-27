@@ -4938,6 +4938,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when creating the inactive skill profile mapping.
      * </pre>
      */
+    @java.lang.Deprecated
     default void createInactiveSkillProfileMapping(com.tcn.cloud.api.api.v1alpha1.wfm.CreateInactiveSkillProfileMappingReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateInactiveSkillProfileMappingRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateInactiveSkillProfileMappingMethod(), responseObserver);
@@ -4969,6 +4970,7 @@ public final class WFMGrpc {
      *				            the given &#64;inactive_skill_profile_sid is of an active skill profile.
      * </pre>
      */
+    @java.lang.Deprecated
     default void disconnectInactiveSkillProfileMapping(com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDisconnectInactiveSkillProfileMappingMethod(), responseObserver);
@@ -7592,6 +7594,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when creating the inactive skill profile mapping.
      * </pre>
      */
+    @java.lang.Deprecated
     public void createInactiveSkillProfileMapping(com.tcn.cloud.api.api.v1alpha1.wfm.CreateInactiveSkillProfileMappingReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateInactiveSkillProfileMappingRes> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -7625,6 +7628,7 @@ public final class WFMGrpc {
      *				            the given &#64;inactive_skill_profile_sid is of an active skill profile.
      * </pre>
      */
+    @java.lang.Deprecated
     public void disconnectInactiveSkillProfileMapping(com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingRes> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -10353,6 +10357,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when creating the inactive skill profile mapping.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.tcn.cloud.api.api.v1alpha1.wfm.CreateInactiveSkillProfileMappingRes createInactiveSkillProfileMapping(com.tcn.cloud.api.api.v1alpha1.wfm.CreateInactiveSkillProfileMappingReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateInactiveSkillProfileMappingMethod(), getCallOptions(), request);
@@ -10384,6 +10389,7 @@ public final class WFMGrpc {
      *				            the given &#64;inactive_skill_profile_sid is of an active skill profile.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingRes disconnectInactiveSkillProfileMapping(com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDisconnectInactiveSkillProfileMappingMethod(), getCallOptions(), request);
@@ -12999,6 +13005,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when creating the inactive skill profile mapping.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.CreateInactiveSkillProfileMappingRes> createInactiveSkillProfileMapping(
         com.tcn.cloud.api.api.v1alpha1.wfm.CreateInactiveSkillProfileMappingReq request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -13032,6 +13039,7 @@ public final class WFMGrpc {
      *				            the given &#64;inactive_skill_profile_sid is of an active skill profile.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingRes> disconnectInactiveSkillProfileMapping(
         com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingReq request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
