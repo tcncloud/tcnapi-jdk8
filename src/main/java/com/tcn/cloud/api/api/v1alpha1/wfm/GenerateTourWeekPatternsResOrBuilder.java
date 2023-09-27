@@ -9,30 +9,47 @@ public interface GenerateTourWeekPatternsResOrBuilder extends
 
   /**
    * <pre>
-   * A tour pattern containing the newly generated tour pattern weeks in the member field.
+   * A list of tour week patterns containing the newly generated tour pattern weeks in the member field.
    * </pre>
    *
-   * <code>.api.v1alpha1.wfm.TourPattern tour_pattern = 1 [json_name = "tourPattern"];</code>
-   * @return Whether the tourPattern field is set.
+   * <code>repeated .api.v1alpha1.wfm.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
    */
-  boolean hasTourPattern();
+  java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.TourWeekPattern> 
+      getTourWeekPatternsList();
   /**
    * <pre>
-   * A tour pattern containing the newly generated tour pattern weeks in the member field.
+   * A list of tour week patterns containing the newly generated tour pattern weeks in the member field.
    * </pre>
    *
-   * <code>.api.v1alpha1.wfm.TourPattern tour_pattern = 1 [json_name = "tourPattern"];</code>
-   * @return The tourPattern.
+   * <code>repeated .api.v1alpha1.wfm.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.wfm.TourPattern getTourPattern();
+  com.tcn.cloud.api.api.v1alpha1.wfm.TourWeekPattern getTourWeekPatterns(int index);
   /**
    * <pre>
-   * A tour pattern containing the newly generated tour pattern weeks in the member field.
+   * A list of tour week patterns containing the newly generated tour pattern weeks in the member field.
    * </pre>
    *
-   * <code>.api.v1alpha1.wfm.TourPattern tour_pattern = 1 [json_name = "tourPattern"];</code>
+   * <code>repeated .api.v1alpha1.wfm.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.wfm.TourPatternOrBuilder getTourPatternOrBuilder();
+  int getTourWeekPatternsCount();
+  /**
+   * <pre>
+   * A list of tour week patterns containing the newly generated tour pattern weeks in the member field.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.TourWeekPatternOrBuilder> 
+      getTourWeekPatternsOrBuilderList();
+  /**
+   * <pre>
+   * A list of tour week patterns containing the newly generated tour pattern weeks in the member field.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.TourWeekPattern tour_week_patterns = 1 [json_name = "tourWeekPatterns"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.wfm.TourWeekPatternOrBuilder getTourWeekPatternsOrBuilder(
+      int index);
 
   /**
    * <pre>

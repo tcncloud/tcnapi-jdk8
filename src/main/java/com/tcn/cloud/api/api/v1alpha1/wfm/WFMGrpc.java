@@ -7377,11 +7377,12 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Generates a tour pattern for &#64;target_shift_template_sid and the org sending the request.
+     * Generates a list of tour week patterns for &#64;target_shift_template_sid and the org sending the request.
      * Sets the member_tour_week_patterns with a tour week pattern for each of the &#64;num_weeks_in_tour.
      * Each of the tour week patterns will be set with tour shift instances and segment configs based on
      *   the forecasted call data over the next &#64;num_weeks_in_tour, starting on the next Monday.
-     * The returned data will not be persisted. This endpoint will not effect any existing tour week patterns in the database.
+     * The returned data will not be persisted. This method will not effect any existing tour week patterns in the database.
+     * The &#64;tour_week_patterns returned by this method are intended to replace, not append, all currenly existing tour week patterns for &#64;target_shift_template_sid, once persisted.
      * Required permissions:
      *   NONE
      * Errors:
@@ -10206,11 +10207,12 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Generates a tour pattern for &#64;target_shift_template_sid and the org sending the request.
+     * Generates a list of tour week patterns for &#64;target_shift_template_sid and the org sending the request.
      * Sets the member_tour_week_patterns with a tour week pattern for each of the &#64;num_weeks_in_tour.
      * Each of the tour week patterns will be set with tour shift instances and segment configs based on
      *   the forecasted call data over the next &#64;num_weeks_in_tour, starting on the next Monday.
-     * The returned data will not be persisted. This endpoint will not effect any existing tour week patterns in the database.
+     * The returned data will not be persisted. This method will not effect any existing tour week patterns in the database.
+     * The &#64;tour_week_patterns returned by this method are intended to replace, not append, all currenly existing tour week patterns for &#64;target_shift_template_sid, once persisted.
      * Required permissions:
      *   NONE
      * Errors:
@@ -12878,11 +12880,12 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Generates a tour pattern for &#64;target_shift_template_sid and the org sending the request.
+     * Generates a list of tour week patterns for &#64;target_shift_template_sid and the org sending the request.
      * Sets the member_tour_week_patterns with a tour week pattern for each of the &#64;num_weeks_in_tour.
      * Each of the tour week patterns will be set with tour shift instances and segment configs based on
      *   the forecasted call data over the next &#64;num_weeks_in_tour, starting on the next Monday.
-     * The returned data will not be persisted. This endpoint will not effect any existing tour week patterns in the database.
+     * The returned data will not be persisted. This method will not effect any existing tour week patterns in the database.
+     * The &#64;tour_week_patterns returned by this method are intended to replace, not append, all currenly existing tour week patterns for &#64;target_shift_template_sid, once persisted.
      * Required permissions:
      *   NONE
      * Errors:
@@ -15581,11 +15584,12 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Generates a tour pattern for &#64;target_shift_template_sid and the org sending the request.
+     * Generates a list of tour week patterns for &#64;target_shift_template_sid and the org sending the request.
      * Sets the member_tour_week_patterns with a tour week pattern for each of the &#64;num_weeks_in_tour.
      * Each of the tour week patterns will be set with tour shift instances and segment configs based on
      *   the forecasted call data over the next &#64;num_weeks_in_tour, starting on the next Monday.
-     * The returned data will not be persisted. This endpoint will not effect any existing tour week patterns in the database.
+     * The returned data will not be persisted. This method will not effect any existing tour week patterns in the database.
+     * The &#64;tour_week_patterns returned by this method are intended to replace, not append, all currenly existing tour week patterns for &#64;target_shift_template_sid, once persisted.
      * Required permissions:
      *   NONE
      * Errors:
