@@ -7031,7 +7031,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Replaces the existing Tour Pattern and members with &#64;tour_pattern for the &#64;tour_pattern.shift_template_sid and the org sending the request.
-     * Returns the newly created Tour Pattern and members with their updated SIDS and Week Pattern Numbers.
+     * Returns the newly created Tour Pattern and members with their updated SIDs and Week Pattern Numbers.
      * Any existing Tour Week Patterns, Tour Shift Instance and Segment Configs, Tour Agent Collections and their WFM Agent SIDs
      *   belonging to &#64;tour_pattern.shift_template_sid will be replaced with the members on the provided &#64;tour_pattern.
      * At least one Tour Agent Collection and one Tour Week Pattern must be provided in the member fields.
@@ -9839,7 +9839,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Replaces the existing Tour Pattern and members with &#64;tour_pattern for the &#64;tour_pattern.shift_template_sid and the org sending the request.
-     * Returns the newly created Tour Pattern and members with their updated SIDS and Week Pattern Numbers.
+     * Returns the newly created Tour Pattern and members with their updated SIDs and Week Pattern Numbers.
      * Any existing Tour Week Patterns, Tour Shift Instance and Segment Configs, Tour Agent Collections and their WFM Agent SIDs
      *   belonging to &#64;tour_pattern.shift_template_sid will be replaced with the members on the provided &#64;tour_pattern.
      * At least one Tour Agent Collection and one Tour Week Pattern must be provided in the member fields.
@@ -12532,7 +12532,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Replaces the existing Tour Pattern and members with &#64;tour_pattern for the &#64;tour_pattern.shift_template_sid and the org sending the request.
-     * Returns the newly created Tour Pattern and members with their updated SIDS and Week Pattern Numbers.
+     * Returns the newly created Tour Pattern and members with their updated SIDs and Week Pattern Numbers.
      * Any existing Tour Week Patterns, Tour Shift Instance and Segment Configs, Tour Agent Collections and their WFM Agent SIDs
      *   belonging to &#64;tour_pattern.shift_template_sid will be replaced with the members on the provided &#64;tour_pattern.
      * At least one Tour Agent Collection and one Tour Week Pattern must be provided in the member fields.
@@ -15214,7 +15214,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Replaces the existing Tour Pattern and members with &#64;tour_pattern for the &#64;tour_pattern.shift_template_sid and the org sending the request.
-     * Returns the newly created Tour Pattern and members with their updated SIDS and Week Pattern Numbers.
+     * Returns the newly created Tour Pattern and members with their updated SIDs and Week Pattern Numbers.
      * Any existing Tour Week Patterns, Tour Shift Instance and Segment Configs, Tour Agent Collections and their WFM Agent SIDs
      *   belonging to &#64;tour_pattern.shift_template_sid will be replaced with the members on the provided &#64;tour_pattern.
      * At least one Tour Agent Collection and one Tour Week Pattern must be provided in the member fields.
