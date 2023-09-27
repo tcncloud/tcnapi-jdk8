@@ -20,6 +20,11 @@ public final class ComplianceProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_commons_Rule_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_Predicate_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_Predicate_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_commons_Selector_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -44,6 +49,16 @@ public final class ComplianceProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_commons_FrequencyExp_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_Mod_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_Mod_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_ModPredicate_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_ModPredicate_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_commons_LocationExp_descriptor;
   static final 
@@ -167,41 +182,55 @@ public final class ComplianceProto {
       "ons\032\037api/commons/communication.proto\032\027ap" +
       "i/commons/enums.proto\032\037google/protobuf/t" +
       "imestamp.proto\032\036google/protobuf/wrappers" +
-      ".proto\"\343\001\n\004Rule\022%\n\004verb\030\001 \001(\0162\021.api.comm" +
+      ".proto\"\233\002\n\004Rule\022%\n\004verb\030\001 \001(\0162\021.api.comm" +
       "ons.VerbR\004verb\022+\n\006entity\030\002 \001(\0162\023.api.com" +
       "mons.EntityR\006entity\0225\n\nsub_entity\030\003 \001(\0162" +
       "\026.api.commons.SubEntityR\tsubEntity\0223\n\tse" +
       "lectors\030\004 \003(\0132\025.api.commons.SelectorR\tse" +
-      "lectors\022\033\n\trule_text\030\006 \001(\tR\010ruleText\"\305\004\n" +
-      "\010Selector\022*\n\004time\030\001 \001(\0132\024.api.commons.Ti" +
-      "meExpH\000R\004time\022-\n\004week\030\002 \001(\0132\027.api.common" +
-      "s.WeekdayExpH\000R\004week\022*\n\004dncl\030\003 \001(\0132\024.api" +
-      ".commons.DnclExpH\000R\004dncl\0229\n\tfrequency\030\004 " +
-      "\001(\0132\031.api.commons.FrequencyExpH\000R\tfreque" +
-      "ncy\0226\n\010location\030\005 \001(\0132\030.api.commons.Loca" +
-      "tionExpH\000R\010location\022:\n\nphone_type\030\006 \001(\0132" +
-      "\031.api.commons.PhoneTypeExpH\000R\tphoneType\022" +
-      "-\n\005month\030\007 \001(\0132\025.api.commons.MonthExpH\000R" +
-      "\005month\022*\n\004date\030\010 \001(\0132\024.api.commons.DateE" +
-      "xpH\000R\004date\0223\n\007holiday\030\t \001(\0132\027.api.common" +
-      "s.HolidayExpH\000R\007holiday\022/\n\004meta\030\n \001(\0132\031." +
-      "api.commons.MetaFieldExpH\000R\004meta\0220\n\006plug" +
-      "in\030\013 \001(\0132\026.api.commons.PluginExpH\000R\006plug" +
-      "inB\020\n\016selection_rule\"C\n\007TimeExp\022\035\n\nstart" +
-      "_hour\030\001 \001(\tR\tstartHour\022\031\n\010end_hour\030\002 \001(\t" +
-      "R\007endHour\"M\n\nWeekdayExp\022+\n\003day\030\001 \001(\0162\031.a" +
-      "pi.commons.Weekday.EnumR\003day\022\022\n\004text\030\002 \001" +
-      "(\tR\004text\"c\n\007DnclExp\022\033\n\tlist_name\030\001 \001(\tR\010" +
-      "listName\022;\n\013field_names\030\002 \001(\0132\032.api.comm" +
-      "ons.FieldNamesModR\nfieldNames\"\266\002\n\014Freque" +
-      "ncyExp\022\024\n\005count\030\001 \001(\003R\005count\022\032\n\010duration" +
-      "\030\002 \001(\003R\010duration\0221\n\007results\030\003 \001(\0132\027.api." +
-      "commons.ResultsModR\007results\022?\n\014dispositi" +
-      "ons\030\004 \001(\0132\033.api.commons.DispositionModR\014" +
-      "dispositions\022;\n\013field_names\030\005 \001(\0132\032.api." +
-      "commons.FieldNamesModR\nfieldNames\022C\n\021che" +
-      "cking_entities\030\006 \003(\0132\026.api.commons.Entit" +
-      "yExpR\020checkingEntities\"\307\001\n\013LocationExp\022\030" +
+      "lectors\022\033\n\trule_text\030\006 \001(\tR\010ruleText\0226\n\n" +
+      "predicates\030\007 \001(\0132\026.api.commons.Predicate" +
+      "R\npredicates\"\242\001\n\tPredicate\022(\n\003and\030\001 \003(\0132" +
+      "\026.api.commons.PredicateR\003and\022&\n\002or\030\002 \003(\013" +
+      "2\026.api.commons.PredicateR\002or\022\020\n\003not\030\003 \001(" +
+      "\010R\003not\0221\n\010selector\030\004 \001(\0132\025.api.commons.S" +
+      "electorR\010selector\"\305\004\n\010Selector\022*\n\004time\030\001" +
+      " \001(\0132\024.api.commons.TimeExpH\000R\004time\022-\n\004we" +
+      "ek\030\002 \001(\0132\027.api.commons.WeekdayExpH\000R\004wee" +
+      "k\022*\n\004dncl\030\003 \001(\0132\024.api.commons.DnclExpH\000R" +
+      "\004dncl\0229\n\tfrequency\030\004 \001(\0132\031.api.commons.F" +
+      "requencyExpH\000R\tfrequency\0226\n\010location\030\005 \001" +
+      "(\0132\030.api.commons.LocationExpH\000R\010location" +
+      "\022:\n\nphone_type\030\006 \001(\0132\031.api.commons.Phone" +
+      "TypeExpH\000R\tphoneType\022-\n\005month\030\007 \001(\0132\025.ap" +
+      "i.commons.MonthExpH\000R\005month\022*\n\004date\030\010 \001(" +
+      "\0132\024.api.commons.DateExpH\000R\004date\0223\n\007holid" +
+      "ay\030\t \001(\0132\027.api.commons.HolidayExpH\000R\007hol" +
+      "iday\022/\n\004meta\030\n \001(\0132\031.api.commons.MetaFie" +
+      "ldExpH\000R\004meta\0220\n\006plugin\030\013 \001(\0132\026.api.comm" +
+      "ons.PluginExpH\000R\006pluginB\020\n\016selection_rul" +
+      "e\"C\n\007TimeExp\022\035\n\nstart_hour\030\001 \001(\tR\tstartH" +
+      "our\022\031\n\010end_hour\030\002 \001(\tR\007endHour\"M\n\nWeekda" +
+      "yExp\022+\n\003day\030\001 \001(\0162\031.api.commons.Weekday." +
+      "EnumR\003day\022\022\n\004text\030\002 \001(\tR\004text\"c\n\007DnclExp" +
+      "\022\033\n\tlist_name\030\001 \001(\tR\010listName\022;\n\013field_n" +
+      "ames\030\002 \001(\0132\032.api.commons.FieldNamesModR\n" +
+      "fieldNames\"\357\002\n\014FrequencyExp\022\024\n\005count\030\001 \001" +
+      "(\003R\005count\022\032\n\010duration\030\002 \001(\003R\010duration\0221\n" +
+      "\007results\030\003 \001(\0132\027.api.commons.ResultsModR" +
+      "\007results\022?\n\014dispositions\030\004 \001(\0132\033.api.com" +
+      "mons.DispositionModR\014dispositions\022;\n\013fie" +
+      "ld_names\030\005 \001(\0132\032.api.commons.FieldNamesM" +
+      "odR\nfieldNames\022C\n\021checking_entities\030\006 \003(" +
+      "\0132\026.api.commons.EntityExpR\020checkingEntit" +
+      "ies\0227\n\tpredicate\030\007 \001(\0132\031.api.commons.Mod" +
+      "PredicateR\tpredicate\"y\n\003Mod\0221\n\007results\030\001" +
+      " \001(\0132\027.api.commons.ResultsModR\007results\022?" +
+      "\n\014dispositions\030\002 \001(\0132\033.api.commons.Dispo" +
+      "sitionModR\014dispositions\"\234\001\n\014ModPredicate" +
+      "\022+\n\003and\030\001 \003(\0132\031.api.commons.ModPredicate" +
+      "R\003and\022)\n\002or\030\002 \003(\0132\031.api.commons.ModPredi" +
+      "cateR\002or\022\020\n\003not\030\003 \001(\010R\003not\022\"\n\003mod\030\004 \001(\0132" +
+      "\020.api.commons.ModR\003mod\"\307\001\n\013LocationExp\022\030" +
       "\n\007country\030\001 \001(\tR\007country\022\024\n\005state\030\002 \001(\tR" +
       "\005state\022\026\n\006county\030\003 \001(\tR\006county\022\022\n\004city\030\004" +
       " \001(\tR\004city\022\032\n\010province\030\005 \001(\tR\010province\022!" +
@@ -323,129 +352,147 @@ public final class ComplianceProto {
     internal_static_api_commons_Rule_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_Rule_descriptor,
-        new java.lang.String[] { "Verb", "Entity", "SubEntity", "Selectors", "RuleText", });
-    internal_static_api_commons_Selector_descriptor =
+        new java.lang.String[] { "Verb", "Entity", "SubEntity", "Selectors", "RuleText", "Predicates", });
+    internal_static_api_commons_Predicate_descriptor =
       getDescriptor().getMessageTypes().get(1);
+    internal_static_api_commons_Predicate_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_Predicate_descriptor,
+        new java.lang.String[] { "And", "Or", "Not", "Selector", });
+    internal_static_api_commons_Selector_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_api_commons_Selector_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_Selector_descriptor,
         new java.lang.String[] { "Time", "Week", "Dncl", "Frequency", "Location", "PhoneType", "Month", "Date", "Holiday", "Meta", "Plugin", "SelectionRule", });
     internal_static_api_commons_TimeExp_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_api_commons_TimeExp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_TimeExp_descriptor,
         new java.lang.String[] { "StartHour", "EndHour", });
     internal_static_api_commons_WeekdayExp_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_api_commons_WeekdayExp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_WeekdayExp_descriptor,
         new java.lang.String[] { "Day", "Text", });
     internal_static_api_commons_DnclExp_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_api_commons_DnclExp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_DnclExp_descriptor,
         new java.lang.String[] { "ListName", "FieldNames", });
     internal_static_api_commons_FrequencyExp_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_api_commons_FrequencyExp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_FrequencyExp_descriptor,
-        new java.lang.String[] { "Count", "Duration", "Results", "Dispositions", "FieldNames", "CheckingEntities", });
+        new java.lang.String[] { "Count", "Duration", "Results", "Dispositions", "FieldNames", "CheckingEntities", "Predicate", });
+    internal_static_api_commons_Mod_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_api_commons_Mod_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_Mod_descriptor,
+        new java.lang.String[] { "Results", "Dispositions", });
+    internal_static_api_commons_ModPredicate_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_api_commons_ModPredicate_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_ModPredicate_descriptor,
+        new java.lang.String[] { "And", "Or", "Not", "Mod", });
     internal_static_api_commons_LocationExp_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_api_commons_LocationExp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_LocationExp_descriptor,
         new java.lang.String[] { "Country", "State", "County", "City", "Province", "PostalCodes", "AreaCodes", });
     internal_static_api_commons_PhoneTypeExp_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_api_commons_PhoneTypeExp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_PhoneTypeExp_descriptor,
         new java.lang.String[] { "PhoneType", });
     internal_static_api_commons_MonthExp_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_api_commons_MonthExp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_MonthExp_descriptor,
         new java.lang.String[] { "Month", "Text", });
     internal_static_api_commons_DateExp_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_api_commons_DateExp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_DateExp_descriptor,
         new java.lang.String[] { "Month", "Day", "Year", });
     internal_static_api_commons_HolidayExp_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_api_commons_HolidayExp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_HolidayExp_descriptor,
         new java.lang.String[] { "Name", "Country", "Type", });
     internal_static_api_commons_MetaFieldExp_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_api_commons_MetaFieldExp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_MetaFieldExp_descriptor,
         new java.lang.String[] { "Field", });
     internal_static_api_commons_PluginExp_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_api_commons_PluginExp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_PluginExp_descriptor,
         new java.lang.String[] { "Type", "TcnStrict", "LicenseId", "ReferenceKey", "FromNumber", "Env", "ProfileName", "ContentField", "Topic", "AbsentAction", "DateLastContact", });
     internal_static_api_commons_EntityExp_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_api_commons_EntityExp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_EntityExp_descriptor,
         new java.lang.String[] { "SubEntity", "Entity", });
     internal_static_api_commons_FieldNamesMod_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_api_commons_FieldNamesMod_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_FieldNamesMod_descriptor,
         new java.lang.String[] { "FieldNames", });
     internal_static_api_commons_ResultsMod_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_api_commons_ResultsMod_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_ResultsMod_descriptor,
         new java.lang.String[] { "Results", });
     internal_static_api_commons_DispositionMod_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_api_commons_DispositionMod_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_DispositionMod_descriptor,
         new java.lang.String[] { "Dispositions", });
     internal_static_api_commons_DispositionField_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_api_commons_DispositionField_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_DispositionField_descriptor,
         new java.lang.String[] { "Key", "Value", "Pairs", });
     internal_static_api_commons_DispositionPair_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_api_commons_DispositionPair_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_DispositionPair_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_api_commons_Field_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_api_commons_Field_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_Field_descriptor,
         new java.lang.String[] { "Field", "Content", });
     internal_static_api_commons_ConsentCondition_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_api_commons_ConsentCondition_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_ConsentCondition_descriptor,
         new java.lang.String[] { "ConsentConditionId", "ConsentId", "DaysOfTheWeek", "TimeOfDayFrom", "TimeOfDayTo", "FromDate", "ToDate", });
     internal_static_api_commons_ScenarioData_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(24);
     internal_static_api_commons_ScenarioData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_ScenarioData_descriptor,
@@ -457,31 +504,31 @@ public final class ComplianceProto {
         internal_static_api_commons_ScenarioData_CallMetadataEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_api_commons_CountryCode_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(25);
     internal_static_api_commons_CountryCode_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_CountryCode_descriptor,
         new java.lang.String[] { "CountryCode", "CountryName", "CountryId", });
     internal_static_api_commons_ScenarioResult_descriptor =
-      getDescriptor().getMessageTypes().get(23);
+      getDescriptor().getMessageTypes().get(26);
     internal_static_api_commons_ScenarioResult_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_ScenarioResult_descriptor,
         new java.lang.String[] { "PassedValue", "ShouldAllowResponses", "ShouldDenyResponses", "ScenarioName", });
     internal_static_api_commons_ScenarioRuleResponse_descriptor =
-      getDescriptor().getMessageTypes().get(24);
+      getDescriptor().getMessageTypes().get(27);
     internal_static_api_commons_ScenarioRuleResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_ScenarioRuleResponse_descriptor,
         new java.lang.String[] { "RuleText", "PermitValue", });
     internal_static_api_commons_ScrubEntryDetails_descriptor =
-      getDescriptor().getMessageTypes().get(25);
+      getDescriptor().getMessageTypes().get(28);
     internal_static_api_commons_ScrubEntryDetails_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_ScrubEntryDetails_descriptor,
         new java.lang.String[] { "Content", "ExpirationDate", "Notes", });
     internal_static_api_commons_RuleResponse_descriptor =
-      getDescriptor().getMessageTypes().get(26);
+      getDescriptor().getMessageTypes().get(29);
     internal_static_api_commons_RuleResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_RuleResponse_descriptor,

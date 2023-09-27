@@ -75,4 +75,19 @@ public interface RuleOrBuilder extends
    */
   com.google.protobuf.ByteString
       getRuleTextBytes();
+
+  /**
+   * <code>.api.commons.Predicate predicates = 7 [json_name = "predicates"];</code>
+   * @return Whether the predicates field is set.
+   */
+  boolean hasPredicates();
+  /**
+   * <code>.api.commons.Predicate predicates = 7 [json_name = "predicates"];</code>
+   * @return The predicates.
+   */
+  com.tcn.cloud.api.api.commons.Predicate getPredicates();
+  /**
+   * <code>.api.commons.Predicate predicates = 7 [json_name = "predicates"];</code>
+   */
+  com.tcn.cloud.api.api.commons.PredicateOrBuilder getPredicatesOrBuilder();
 }

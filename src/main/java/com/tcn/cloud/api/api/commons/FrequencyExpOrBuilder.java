@@ -95,4 +95,19 @@ public interface FrequencyExpOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.EntityExpOrBuilder getCheckingEntitiesOrBuilder(
       int index);
+
+  /**
+   * <code>.api.commons.ModPredicate predicate = 7 [json_name = "predicate"];</code>
+   * @return Whether the predicate field is set.
+   */
+  boolean hasPredicate();
+  /**
+   * <code>.api.commons.ModPredicate predicate = 7 [json_name = "predicate"];</code>
+   * @return The predicate.
+   */
+  com.tcn.cloud.api.api.commons.ModPredicate getPredicate();
+  /**
+   * <code>.api.commons.ModPredicate predicate = 7 [json_name = "predicate"];</code>
+   */
+  com.tcn.cloud.api.api.commons.ModPredicateOrBuilder getPredicateOrBuilder();
 }

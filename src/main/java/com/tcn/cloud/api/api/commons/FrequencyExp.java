@@ -188,6 +188,32 @@ private static final long serialVersionUID = 0L;
     return checkingEntities_.get(index);
   }
 
+  public static final int PREDICATE_FIELD_NUMBER = 7;
+  private com.tcn.cloud.api.api.commons.ModPredicate predicate_;
+  /**
+   * <code>.api.commons.ModPredicate predicate = 7 [json_name = "predicate"];</code>
+   * @return Whether the predicate field is set.
+   */
+  @java.lang.Override
+  public boolean hasPredicate() {
+    return predicate_ != null;
+  }
+  /**
+   * <code>.api.commons.ModPredicate predicate = 7 [json_name = "predicate"];</code>
+   * @return The predicate.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.ModPredicate getPredicate() {
+    return predicate_ == null ? com.tcn.cloud.api.api.commons.ModPredicate.getDefaultInstance() : predicate_;
+  }
+  /**
+   * <code>.api.commons.ModPredicate predicate = 7 [json_name = "predicate"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.ModPredicateOrBuilder getPredicateOrBuilder() {
+    return predicate_ == null ? com.tcn.cloud.api.api.commons.ModPredicate.getDefaultInstance() : predicate_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -219,6 +245,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < checkingEntities_.size(); i++) {
       output.writeMessage(6, checkingEntities_.get(i));
+    }
+    if (predicate_ != null) {
+      output.writeMessage(7, getPredicate());
     }
     getUnknownFields().writeTo(output);
   }
@@ -252,6 +281,10 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < checkingEntities_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, checkingEntities_.get(i));
+    }
+    if (predicate_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(7, getPredicate());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -289,6 +322,11 @@ private static final long serialVersionUID = 0L;
     }
     if (!getCheckingEntitiesList()
         .equals(other.getCheckingEntitiesList())) return false;
+    if (hasPredicate() != other.hasPredicate()) return false;
+    if (hasPredicate()) {
+      if (!getPredicate()
+          .equals(other.getPredicate())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -321,6 +359,10 @@ private static final long serialVersionUID = 0L;
     if (getCheckingEntitiesCount() > 0) {
       hash = (37 * hash) + CHECKING_ENTITIES_FIELD_NUMBER;
       hash = (53 * hash) + getCheckingEntitiesList().hashCode();
+    }
+    if (hasPredicate()) {
+      hash = (37 * hash) + PREDICATE_FIELD_NUMBER;
+      hash = (53 * hash) + getPredicate().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -477,6 +519,11 @@ private static final long serialVersionUID = 0L;
         checkingEntitiesBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000020);
+      predicate_ = null;
+      if (predicateBuilder_ != null) {
+        predicateBuilder_.dispose();
+        predicateBuilder_ = null;
+      }
       return this;
     }
 
@@ -543,6 +590,11 @@ private static final long serialVersionUID = 0L;
         result.fieldNames_ = fieldNamesBuilder_ == null
             ? fieldNames_
             : fieldNamesBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.predicate_ = predicateBuilder_ == null
+            ? predicate_
+            : predicateBuilder_.build();
       }
     }
 
@@ -631,6 +683,9 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (other.hasPredicate()) {
+        mergePredicate(other.getPredicate());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -701,6 +756,13 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 50
+            case 58: {
+              input.readMessage(
+                  getPredicateFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 58
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1401,6 +1463,125 @@ private static final long serialVersionUID = 0L;
         checkingEntities_ = null;
       }
       return checkingEntitiesBuilder_;
+    }
+
+    private com.tcn.cloud.api.api.commons.ModPredicate predicate_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.ModPredicate, com.tcn.cloud.api.api.commons.ModPredicate.Builder, com.tcn.cloud.api.api.commons.ModPredicateOrBuilder> predicateBuilder_;
+    /**
+     * <code>.api.commons.ModPredicate predicate = 7 [json_name = "predicate"];</code>
+     * @return Whether the predicate field is set.
+     */
+    public boolean hasPredicate() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <code>.api.commons.ModPredicate predicate = 7 [json_name = "predicate"];</code>
+     * @return The predicate.
+     */
+    public com.tcn.cloud.api.api.commons.ModPredicate getPredicate() {
+      if (predicateBuilder_ == null) {
+        return predicate_ == null ? com.tcn.cloud.api.api.commons.ModPredicate.getDefaultInstance() : predicate_;
+      } else {
+        return predicateBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.api.commons.ModPredicate predicate = 7 [json_name = "predicate"];</code>
+     */
+    public Builder setPredicate(com.tcn.cloud.api.api.commons.ModPredicate value) {
+      if (predicateBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        predicate_ = value;
+      } else {
+        predicateBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.ModPredicate predicate = 7 [json_name = "predicate"];</code>
+     */
+    public Builder setPredicate(
+        com.tcn.cloud.api.api.commons.ModPredicate.Builder builderForValue) {
+      if (predicateBuilder_ == null) {
+        predicate_ = builderForValue.build();
+      } else {
+        predicateBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.ModPredicate predicate = 7 [json_name = "predicate"];</code>
+     */
+    public Builder mergePredicate(com.tcn.cloud.api.api.commons.ModPredicate value) {
+      if (predicateBuilder_ == null) {
+        if (((bitField0_ & 0x00000040) != 0) &&
+          predicate_ != null &&
+          predicate_ != com.tcn.cloud.api.api.commons.ModPredicate.getDefaultInstance()) {
+          getPredicateBuilder().mergeFrom(value);
+        } else {
+          predicate_ = value;
+        }
+      } else {
+        predicateBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.ModPredicate predicate = 7 [json_name = "predicate"];</code>
+     */
+    public Builder clearPredicate() {
+      bitField0_ = (bitField0_ & ~0x00000040);
+      predicate_ = null;
+      if (predicateBuilder_ != null) {
+        predicateBuilder_.dispose();
+        predicateBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.ModPredicate predicate = 7 [json_name = "predicate"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.ModPredicate.Builder getPredicateBuilder() {
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return getPredicateFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.ModPredicate predicate = 7 [json_name = "predicate"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.ModPredicateOrBuilder getPredicateOrBuilder() {
+      if (predicateBuilder_ != null) {
+        return predicateBuilder_.getMessageOrBuilder();
+      } else {
+        return predicate_ == null ?
+            com.tcn.cloud.api.api.commons.ModPredicate.getDefaultInstance() : predicate_;
+      }
+    }
+    /**
+     * <code>.api.commons.ModPredicate predicate = 7 [json_name = "predicate"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.ModPredicate, com.tcn.cloud.api.api.commons.ModPredicate.Builder, com.tcn.cloud.api.api.commons.ModPredicateOrBuilder> 
+        getPredicateFieldBuilder() {
+      if (predicateBuilder_ == null) {
+        predicateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.ModPredicate, com.tcn.cloud.api.api.commons.ModPredicate.Builder, com.tcn.cloud.api.api.commons.ModPredicateOrBuilder>(
+                getPredicate(),
+                getParentForChildren(),
+                isClean());
+        predicate_ = null;
+      }
+      return predicateBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
