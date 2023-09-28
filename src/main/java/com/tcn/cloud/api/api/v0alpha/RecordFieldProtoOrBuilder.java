@@ -208,5 +208,20 @@ public interface RecordFieldProtoOrBuilder extends
    */
   com.tcn.cloud.api.api.v0alpha.EnrichedZipOrBuilder getEnrichedZipOrBuilder();
 
+  /**
+   * <code>.api.v0alpha.EHRDetails ehr_details = 18 [json_name = "ehrDetails"];</code>
+   * @return Whether the ehrDetails field is set.
+   */
+  boolean hasEhrDetails();
+  /**
+   * <code>.api.v0alpha.EHRDetails ehr_details = 18 [json_name = "ehrDetails"];</code>
+   * @return The ehrDetails.
+   */
+  com.tcn.cloud.api.api.v0alpha.EHRDetails getEhrDetails();
+  /**
+   * <code>.api.v0alpha.EHRDetails ehr_details = 18 [json_name = "ehrDetails"];</code>
+   */
+  com.tcn.cloud.api.api.v0alpha.EHRDetailsOrBuilder getEhrDetailsOrBuilder();
+
   com.tcn.cloud.api.api.v0alpha.RecordFieldProto.PayloadCase getPayloadCase();
 }

@@ -58,6 +58,7 @@ private static final long serialVersionUID = 0L;
     ERR(15),
     ENRICHED_PHONE(16),
     ENRICHED_ZIP(17),
+    EHR_DETAILS(18),
     PAYLOAD_NOT_SET(0);
     private final int value;
     private PayloadCase(int value) {
@@ -88,6 +89,7 @@ private static final long serialVersionUID = 0L;
         case 15: return ERR;
         case 16: return ENRICHED_PHONE;
         case 17: return ENRICHED_ZIP;
+        case 18: return EHR_DETAILS;
         case 0: return PAYLOAD_NOT_SET;
         default: return null;
       }
@@ -546,6 +548,37 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.v0alpha.EnrichedZip.getDefaultInstance();
   }
 
+  public static final int EHR_DETAILS_FIELD_NUMBER = 18;
+  /**
+   * <code>.api.v0alpha.EHRDetails ehr_details = 18 [json_name = "ehrDetails"];</code>
+   * @return Whether the ehrDetails field is set.
+   */
+  @java.lang.Override
+  public boolean hasEhrDetails() {
+    return payloadCase_ == 18;
+  }
+  /**
+   * <code>.api.v0alpha.EHRDetails ehr_details = 18 [json_name = "ehrDetails"];</code>
+   * @return The ehrDetails.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v0alpha.EHRDetails getEhrDetails() {
+    if (payloadCase_ == 18) {
+       return (com.tcn.cloud.api.api.v0alpha.EHRDetails) payload_;
+    }
+    return com.tcn.cloud.api.api.v0alpha.EHRDetails.getDefaultInstance();
+  }
+  /**
+   * <code>.api.v0alpha.EHRDetails ehr_details = 18 [json_name = "ehrDetails"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v0alpha.EHRDetailsOrBuilder getEhrDetailsOrBuilder() {
+    if (payloadCase_ == 18) {
+       return (com.tcn.cloud.api.api.v0alpha.EHRDetails) payload_;
+    }
+    return com.tcn.cloud.api.api.v0alpha.EHRDetails.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -603,6 +636,9 @@ private static final long serialVersionUID = 0L;
     }
     if (payloadCase_ == 17) {
       output.writeMessage(17, (com.tcn.cloud.api.api.v0alpha.EnrichedZip) payload_);
+    }
+    if (payloadCase_ == 18) {
+      output.writeMessage(18, (com.tcn.cloud.api.api.v0alpha.EHRDetails) payload_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -668,6 +704,10 @@ private static final long serialVersionUID = 0L;
     if (payloadCase_ == 17) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(17, (com.tcn.cloud.api.api.v0alpha.EnrichedZip) payload_);
+    }
+    if (payloadCase_ == 18) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(18, (com.tcn.cloud.api.api.v0alpha.EHRDetails) payload_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -741,6 +781,10 @@ private static final long serialVersionUID = 0L;
         if (!getEnrichedZip()
             .equals(other.getEnrichedZip())) return false;
         break;
+      case 18:
+        if (!getEhrDetails()
+            .equals(other.getEhrDetails())) return false;
+        break;
       case 0:
       default:
     }
@@ -811,6 +855,10 @@ private static final long serialVersionUID = 0L;
       case 17:
         hash = (37 * hash) + ENRICHED_ZIP_FIELD_NUMBER;
         hash = (53 * hash) + getEnrichedZip().hashCode();
+        break;
+      case 18:
+        hash = (37 * hash) + EHR_DETAILS_FIELD_NUMBER;
+        hash = (53 * hash) + getEhrDetails().hashCode();
         break;
       case 0:
       default:
@@ -977,6 +1025,9 @@ private static final long serialVersionUID = 0L;
       if (enrichedZipBuilder_ != null) {
         enrichedZipBuilder_.clear();
       }
+      if (ehrDetailsBuilder_ != null) {
+        ehrDetailsBuilder_.clear();
+      }
       payloadCase_ = 0;
       payload_ = null;
       return this;
@@ -1060,6 +1111,10 @@ private static final long serialVersionUID = 0L;
       if (payloadCase_ == 17 &&
           enrichedZipBuilder_ != null) {
         result.payload_ = enrichedZipBuilder_.build();
+      }
+      if (payloadCase_ == 18 &&
+          ehrDetailsBuilder_ != null) {
+        result.payload_ = ehrDetailsBuilder_.build();
       }
     }
 
@@ -1165,6 +1220,10 @@ private static final long serialVersionUID = 0L;
         }
         case ENRICHED_ZIP: {
           mergeEnrichedZip(other.getEnrichedZip());
+          break;
+        }
+        case EHR_DETAILS: {
+          mergeEhrDetails(other.getEhrDetails());
           break;
         }
         case PAYLOAD_NOT_SET: {
@@ -1288,6 +1347,13 @@ private static final long serialVersionUID = 0L;
               payloadCase_ = 17;
               break;
             } // case 138
+            case 146: {
+              input.readMessage(
+                  getEhrDetailsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              payloadCase_ = 18;
+              break;
+            } // case 146
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2987,6 +3053,148 @@ private static final long serialVersionUID = 0L;
       payloadCase_ = 17;
       onChanged();
       return enrichedZipBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v0alpha.EHRDetails, com.tcn.cloud.api.api.v0alpha.EHRDetails.Builder, com.tcn.cloud.api.api.v0alpha.EHRDetailsOrBuilder> ehrDetailsBuilder_;
+    /**
+     * <code>.api.v0alpha.EHRDetails ehr_details = 18 [json_name = "ehrDetails"];</code>
+     * @return Whether the ehrDetails field is set.
+     */
+    @java.lang.Override
+    public boolean hasEhrDetails() {
+      return payloadCase_ == 18;
+    }
+    /**
+     * <code>.api.v0alpha.EHRDetails ehr_details = 18 [json_name = "ehrDetails"];</code>
+     * @return The ehrDetails.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v0alpha.EHRDetails getEhrDetails() {
+      if (ehrDetailsBuilder_ == null) {
+        if (payloadCase_ == 18) {
+          return (com.tcn.cloud.api.api.v0alpha.EHRDetails) payload_;
+        }
+        return com.tcn.cloud.api.api.v0alpha.EHRDetails.getDefaultInstance();
+      } else {
+        if (payloadCase_ == 18) {
+          return ehrDetailsBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.v0alpha.EHRDetails.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.v0alpha.EHRDetails ehr_details = 18 [json_name = "ehrDetails"];</code>
+     */
+    public Builder setEhrDetails(com.tcn.cloud.api.api.v0alpha.EHRDetails value) {
+      if (ehrDetailsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        payload_ = value;
+        onChanged();
+      } else {
+        ehrDetailsBuilder_.setMessage(value);
+      }
+      payloadCase_ = 18;
+      return this;
+    }
+    /**
+     * <code>.api.v0alpha.EHRDetails ehr_details = 18 [json_name = "ehrDetails"];</code>
+     */
+    public Builder setEhrDetails(
+        com.tcn.cloud.api.api.v0alpha.EHRDetails.Builder builderForValue) {
+      if (ehrDetailsBuilder_ == null) {
+        payload_ = builderForValue.build();
+        onChanged();
+      } else {
+        ehrDetailsBuilder_.setMessage(builderForValue.build());
+      }
+      payloadCase_ = 18;
+      return this;
+    }
+    /**
+     * <code>.api.v0alpha.EHRDetails ehr_details = 18 [json_name = "ehrDetails"];</code>
+     */
+    public Builder mergeEhrDetails(com.tcn.cloud.api.api.v0alpha.EHRDetails value) {
+      if (ehrDetailsBuilder_ == null) {
+        if (payloadCase_ == 18 &&
+            payload_ != com.tcn.cloud.api.api.v0alpha.EHRDetails.getDefaultInstance()) {
+          payload_ = com.tcn.cloud.api.api.v0alpha.EHRDetails.newBuilder((com.tcn.cloud.api.api.v0alpha.EHRDetails) payload_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          payload_ = value;
+        }
+        onChanged();
+      } else {
+        if (payloadCase_ == 18) {
+          ehrDetailsBuilder_.mergeFrom(value);
+        } else {
+          ehrDetailsBuilder_.setMessage(value);
+        }
+      }
+      payloadCase_ = 18;
+      return this;
+    }
+    /**
+     * <code>.api.v0alpha.EHRDetails ehr_details = 18 [json_name = "ehrDetails"];</code>
+     */
+    public Builder clearEhrDetails() {
+      if (ehrDetailsBuilder_ == null) {
+        if (payloadCase_ == 18) {
+          payloadCase_ = 0;
+          payload_ = null;
+          onChanged();
+        }
+      } else {
+        if (payloadCase_ == 18) {
+          payloadCase_ = 0;
+          payload_ = null;
+        }
+        ehrDetailsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.v0alpha.EHRDetails ehr_details = 18 [json_name = "ehrDetails"];</code>
+     */
+    public com.tcn.cloud.api.api.v0alpha.EHRDetails.Builder getEhrDetailsBuilder() {
+      return getEhrDetailsFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.v0alpha.EHRDetails ehr_details = 18 [json_name = "ehrDetails"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v0alpha.EHRDetailsOrBuilder getEhrDetailsOrBuilder() {
+      if ((payloadCase_ == 18) && (ehrDetailsBuilder_ != null)) {
+        return ehrDetailsBuilder_.getMessageOrBuilder();
+      } else {
+        if (payloadCase_ == 18) {
+          return (com.tcn.cloud.api.api.v0alpha.EHRDetails) payload_;
+        }
+        return com.tcn.cloud.api.api.v0alpha.EHRDetails.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.v0alpha.EHRDetails ehr_details = 18 [json_name = "ehrDetails"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v0alpha.EHRDetails, com.tcn.cloud.api.api.v0alpha.EHRDetails.Builder, com.tcn.cloud.api.api.v0alpha.EHRDetailsOrBuilder> 
+        getEhrDetailsFieldBuilder() {
+      if (ehrDetailsBuilder_ == null) {
+        if (!(payloadCase_ == 18)) {
+          payload_ = com.tcn.cloud.api.api.v0alpha.EHRDetails.getDefaultInstance();
+        }
+        ehrDetailsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.v0alpha.EHRDetails, com.tcn.cloud.api.api.v0alpha.EHRDetails.Builder, com.tcn.cloud.api.api.v0alpha.EHRDetailsOrBuilder>(
+                (com.tcn.cloud.api.api.v0alpha.EHRDetails) payload_,
+                getParentForChildren(),
+                isClean());
+        payload_ = null;
+      }
+      payloadCase_ = 18;
+      onChanged();
+      return ehrDetailsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
