@@ -458,4 +458,45 @@ public interface TicketOrBuilder extends
    */
   com.google.protobuf.ByteString
       getTicketAssigneeBytes(int index);
+
+  /**
+   * <pre>
+   *participant list
+   * </pre>
+   *
+   * <code>repeated string ticket_participant = 22 [json_name = "ticketParticipant"];</code>
+   * @return A list containing the ticketParticipant.
+   */
+  java.util.List<java.lang.String>
+      getTicketParticipantList();
+  /**
+   * <pre>
+   *participant list
+   * </pre>
+   *
+   * <code>repeated string ticket_participant = 22 [json_name = "ticketParticipant"];</code>
+   * @return The count of ticketParticipant.
+   */
+  int getTicketParticipantCount();
+  /**
+   * <pre>
+   *participant list
+   * </pre>
+   *
+   * <code>repeated string ticket_participant = 22 [json_name = "ticketParticipant"];</code>
+   * @param index The index of the element to return.
+   * @return The ticketParticipant at the given index.
+   */
+  java.lang.String getTicketParticipant(int index);
+  /**
+   * <pre>
+   *participant list
+   * </pre>
+   *
+   * <code>repeated string ticket_participant = 22 [json_name = "ticketParticipant"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the ticketParticipant at the given index.
+   */
+  com.google.protobuf.ByteString
+      getTicketParticipantBytes(int index);
 }
