@@ -46,6 +46,10 @@ private static final long serialVersionUID = 0L;
   public static final int VALID_FIELD_NUMBER = 1;
   private boolean valid_ = false;
   /**
+   * <pre>
+   * valid is true if the flow definition is valid, false otherwise
+   * </pre>
+   *
    * <code>bool valid = 1 [json_name = "valid"];</code>
    * @return The valid.
    */
@@ -58,6 +62,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object error_ = "";
   /**
+   * <pre>
+   * error is the error message if the flow definition is invalid
+   * </pre>
+   *
    * <code>string error = 2 [json_name = "error"];</code>
    * @return The error.
    */
@@ -75,6 +83,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * error is the error message if the flow definition is invalid
+   * </pre>
+   *
    * <code>string error = 2 [json_name = "error"];</code>
    * @return The bytes for error.
    */
@@ -449,6 +461,10 @@ private static final long serialVersionUID = 0L;
 
     private boolean valid_ ;
     /**
+     * <pre>
+     * valid is true if the flow definition is valid, false otherwise
+     * </pre>
+     *
      * <code>bool valid = 1 [json_name = "valid"];</code>
      * @return The valid.
      */
@@ -457,6 +473,10 @@ private static final long serialVersionUID = 0L;
       return valid_;
     }
     /**
+     * <pre>
+     * valid is true if the flow definition is valid, false otherwise
+     * </pre>
+     *
      * <code>bool valid = 1 [json_name = "valid"];</code>
      * @param value The valid to set.
      * @return This builder for chaining.
@@ -469,6 +489,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * valid is true if the flow definition is valid, false otherwise
+     * </pre>
+     *
      * <code>bool valid = 1 [json_name = "valid"];</code>
      * @return This builder for chaining.
      */
@@ -481,6 +505,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object error_ = "";
     /**
+     * <pre>
+     * error is the error message if the flow definition is invalid
+     * </pre>
+     *
      * <code>string error = 2 [json_name = "error"];</code>
      * @return The error.
      */
@@ -497,6 +525,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * error is the error message if the flow definition is invalid
+     * </pre>
+     *
      * <code>string error = 2 [json_name = "error"];</code>
      * @return The bytes for error.
      */
@@ -514,6 +546,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * error is the error message if the flow definition is invalid
+     * </pre>
+     *
      * <code>string error = 2 [json_name = "error"];</code>
      * @param value The error to set.
      * @return This builder for chaining.
@@ -527,6 +563,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * error is the error message if the flow definition is invalid
+     * </pre>
+     *
      * <code>string error = 2 [json_name = "error"];</code>
      * @return This builder for chaining.
      */
@@ -537,6 +577,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * error is the error message if the flow definition is invalid
+     * </pre>
+     *
      * <code>string error = 2 [json_name = "error"];</code>
      * @param value The bytes for error to set.
      * @return This builder for chaining.

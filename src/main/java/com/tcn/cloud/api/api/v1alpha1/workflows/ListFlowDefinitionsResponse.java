@@ -46,7 +46,7 @@ private static final long serialVersionUID = 0L;
   private com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition flowDefinition_;
   /**
    * <pre>
-   * an array of
+   * flow_definition is the flow definition object
    * </pre>
    *
    * <code>.api.v1alpha1.workflows.PersistedFlowDefinition flow_definition = 1 [json_name = "flowDefinition"];</code>
@@ -58,7 +58,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * an array of
+   * flow_definition is the flow definition object
    * </pre>
    *
    * <code>.api.v1alpha1.workflows.PersistedFlowDefinition flow_definition = 1 [json_name = "flowDefinition"];</code>
@@ -70,7 +70,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * an array of
+   * flow_definition is the flow definition object
    * </pre>
    *
    * <code>.api.v1alpha1.workflows.PersistedFlowDefinition flow_definition = 1 [json_name = "flowDefinition"];</code>
@@ -427,7 +427,7 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition, com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition.Builder, com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinitionOrBuilder> flowDefinitionBuilder_;
     /**
      * <pre>
-     * an array of
+     * flow_definition is the flow definition object
      * </pre>
      *
      * <code>.api.v1alpha1.workflows.PersistedFlowDefinition flow_definition = 1 [json_name = "flowDefinition"];</code>
@@ -438,7 +438,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * an array of
+     * flow_definition is the flow definition object
      * </pre>
      *
      * <code>.api.v1alpha1.workflows.PersistedFlowDefinition flow_definition = 1 [json_name = "flowDefinition"];</code>
@@ -453,7 +453,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * an array of
+     * flow_definition is the flow definition object
      * </pre>
      *
      * <code>.api.v1alpha1.workflows.PersistedFlowDefinition flow_definition = 1 [json_name = "flowDefinition"];</code>
@@ -473,7 +473,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * an array of
+     * flow_definition is the flow definition object
      * </pre>
      *
      * <code>.api.v1alpha1.workflows.PersistedFlowDefinition flow_definition = 1 [json_name = "flowDefinition"];</code>
@@ -491,7 +491,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * an array of
+     * flow_definition is the flow definition object
      * </pre>
      *
      * <code>.api.v1alpha1.workflows.PersistedFlowDefinition flow_definition = 1 [json_name = "flowDefinition"];</code>
@@ -514,7 +514,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * an array of
+     * flow_definition is the flow definition object
      * </pre>
      *
      * <code>.api.v1alpha1.workflows.PersistedFlowDefinition flow_definition = 1 [json_name = "flowDefinition"];</code>
@@ -531,7 +531,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * an array of
+     * flow_definition is the flow definition object
      * </pre>
      *
      * <code>.api.v1alpha1.workflows.PersistedFlowDefinition flow_definition = 1 [json_name = "flowDefinition"];</code>
@@ -543,7 +543,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * an array of
+     * flow_definition is the flow definition object
      * </pre>
      *
      * <code>.api.v1alpha1.workflows.PersistedFlowDefinition flow_definition = 1 [json_name = "flowDefinition"];</code>
@@ -558,7 +558,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * an array of
+     * flow_definition is the flow definition object
      * </pre>
      *
      * <code>.api.v1alpha1.workflows.PersistedFlowDefinition flow_definition = 1 [json_name = "flowDefinition"];</code>

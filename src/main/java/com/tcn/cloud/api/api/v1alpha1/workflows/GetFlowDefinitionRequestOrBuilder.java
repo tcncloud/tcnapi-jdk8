@@ -8,11 +8,19 @@ public interface GetFlowDefinitionRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * flow_definition_id is the identifier for the flow definition to retrieve
+   * </pre>
+   *
    * <code>string flow_definition_id = 1 [json_name = "flowDefinitionId"];</code>
    * @return The flowDefinitionId.
    */
   java.lang.String getFlowDefinitionId();
   /**
+   * <pre>
+   * flow_definition_id is the identifier for the flow definition to retrieve
+   * </pre>
+   *
    * <code>string flow_definition_id = 1 [json_name = "flowDefinitionId"];</code>
    * @return The bytes for flowDefinitionId.
    */

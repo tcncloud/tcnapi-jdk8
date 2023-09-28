@@ -8,17 +8,29 @@ public interface ValidateFlowDefinitionResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * valid is true if the flow definition is valid, false otherwise
+   * </pre>
+   *
    * <code>bool valid = 1 [json_name = "valid"];</code>
    * @return The valid.
    */
   boolean getValid();
 
   /**
+   * <pre>
+   * error is the error message if the flow definition is invalid
+   * </pre>
+   *
    * <code>string error = 2 [json_name = "error"];</code>
    * @return The error.
    */
   java.lang.String getError();
   /**
+   * <pre>
+   * error is the error message if the flow definition is invalid
+   * </pre>
+   *
    * <code>string error = 2 [json_name = "error"];</code>
    * @return The bytes for error.
    */

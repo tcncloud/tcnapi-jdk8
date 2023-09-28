@@ -42,30 +42,42 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.workflows.GetFlowDefinitionResponse.class, com.tcn.cloud.api.api.v1alpha1.workflows.GetFlowDefinitionResponse.Builder.class);
   }
 
-  public static final int DEFINITION_FIELD_NUMBER = 1;
-  private com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition definition_;
+  public static final int FLOW_DEFINITION_FIELD_NUMBER = 1;
+  private com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition flowDefinition_;
   /**
-   * <code>.api.v1alpha1.workflows.PersistedFlowDefinition definition = 1 [json_name = "definition"];</code>
-   * @return Whether the definition field is set.
+   * <pre>
+   * flow_1definition is the flow definition object
+   * </pre>
+   *
+   * <code>.api.v1alpha1.workflows.PersistedFlowDefinition flow_definition = 1 [json_name = "flowDefinition"];</code>
+   * @return Whether the flowDefinition field is set.
    */
   @java.lang.Override
-  public boolean hasDefinition() {
-    return definition_ != null;
+  public boolean hasFlowDefinition() {
+    return flowDefinition_ != null;
   }
   /**
-   * <code>.api.v1alpha1.workflows.PersistedFlowDefinition definition = 1 [json_name = "definition"];</code>
-   * @return The definition.
+   * <pre>
+   * flow_1definition is the flow definition object
+   * </pre>
+   *
+   * <code>.api.v1alpha1.workflows.PersistedFlowDefinition flow_definition = 1 [json_name = "flowDefinition"];</code>
+   * @return The flowDefinition.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition getDefinition() {
-    return definition_ == null ? com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition.getDefaultInstance() : definition_;
+  public com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition getFlowDefinition() {
+    return flowDefinition_ == null ? com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition.getDefaultInstance() : flowDefinition_;
   }
   /**
-   * <code>.api.v1alpha1.workflows.PersistedFlowDefinition definition = 1 [json_name = "definition"];</code>
+   * <pre>
+   * flow_1definition is the flow definition object
+   * </pre>
+   *
+   * <code>.api.v1alpha1.workflows.PersistedFlowDefinition flow_definition = 1 [json_name = "flowDefinition"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinitionOrBuilder getDefinitionOrBuilder() {
-    return definition_ == null ? com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition.getDefaultInstance() : definition_;
+  public com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinitionOrBuilder getFlowDefinitionOrBuilder() {
+    return flowDefinition_ == null ? com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition.getDefaultInstance() : flowDefinition_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -82,8 +94,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (definition_ != null) {
-      output.writeMessage(1, getDefinition());
+    if (flowDefinition_ != null) {
+      output.writeMessage(1, getFlowDefinition());
     }
     getUnknownFields().writeTo(output);
   }
@@ -94,9 +106,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (definition_ != null) {
+    if (flowDefinition_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, getDefinition());
+        .computeMessageSize(1, getFlowDefinition());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -113,10 +125,10 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v1alpha1.workflows.GetFlowDefinitionResponse other = (com.tcn.cloud.api.api.v1alpha1.workflows.GetFlowDefinitionResponse) obj;
 
-    if (hasDefinition() != other.hasDefinition()) return false;
-    if (hasDefinition()) {
-      if (!getDefinition()
-          .equals(other.getDefinition())) return false;
+    if (hasFlowDefinition() != other.hasFlowDefinition()) return false;
+    if (hasFlowDefinition()) {
+      if (!getFlowDefinition()
+          .equals(other.getFlowDefinition())) return false;
     }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -129,9 +141,9 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (hasDefinition()) {
-      hash = (37 * hash) + DEFINITION_FIELD_NUMBER;
-      hash = (53 * hash) + getDefinition().hashCode();
+    if (hasFlowDefinition()) {
+      hash = (37 * hash) + FLOW_DEFINITION_FIELD_NUMBER;
+      hash = (53 * hash) + getFlowDefinition().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -268,10 +280,10 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      definition_ = null;
-      if (definitionBuilder_ != null) {
-        definitionBuilder_.dispose();
-        definitionBuilder_ = null;
+      flowDefinition_ = null;
+      if (flowDefinitionBuilder_ != null) {
+        flowDefinitionBuilder_.dispose();
+        flowDefinitionBuilder_ = null;
       }
       return this;
     }
@@ -307,9 +319,9 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.workflows.GetFlowDefinitionResponse result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.definition_ = definitionBuilder_ == null
-            ? definition_
-            : definitionBuilder_.build();
+        result.flowDefinition_ = flowDefinitionBuilder_ == null
+            ? flowDefinition_
+            : flowDefinitionBuilder_.build();
       }
     }
 
@@ -357,8 +369,8 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.workflows.GetFlowDefinitionResponse other) {
       if (other == com.tcn.cloud.api.api.v1alpha1.workflows.GetFlowDefinitionResponse.getDefaultInstance()) return this;
-      if (other.hasDefinition()) {
-        mergeDefinition(other.getDefinition());
+      if (other.hasFlowDefinition()) {
+        mergeFlowDefinition(other.getFlowDefinition());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -388,7 +400,7 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               input.readMessage(
-                  getDefinitionFieldBuilder().getBuilder(),
+                  getFlowDefinitionFieldBuilder().getBuilder(),
                   extensionRegistry);
               bitField0_ |= 0x00000001;
               break;
@@ -410,123 +422,159 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition definition_;
+    private com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition flowDefinition_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition, com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition.Builder, com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinitionOrBuilder> definitionBuilder_;
+        com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition, com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition.Builder, com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinitionOrBuilder> flowDefinitionBuilder_;
     /**
-     * <code>.api.v1alpha1.workflows.PersistedFlowDefinition definition = 1 [json_name = "definition"];</code>
-     * @return Whether the definition field is set.
+     * <pre>
+     * flow_1definition is the flow definition object
+     * </pre>
+     *
+     * <code>.api.v1alpha1.workflows.PersistedFlowDefinition flow_definition = 1 [json_name = "flowDefinition"];</code>
+     * @return Whether the flowDefinition field is set.
      */
-    public boolean hasDefinition() {
+    public boolean hasFlowDefinition() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>.api.v1alpha1.workflows.PersistedFlowDefinition definition = 1 [json_name = "definition"];</code>
-     * @return The definition.
+     * <pre>
+     * flow_1definition is the flow definition object
+     * </pre>
+     *
+     * <code>.api.v1alpha1.workflows.PersistedFlowDefinition flow_definition = 1 [json_name = "flowDefinition"];</code>
+     * @return The flowDefinition.
      */
-    public com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition getDefinition() {
-      if (definitionBuilder_ == null) {
-        return definition_ == null ? com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition.getDefaultInstance() : definition_;
+    public com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition getFlowDefinition() {
+      if (flowDefinitionBuilder_ == null) {
+        return flowDefinition_ == null ? com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition.getDefaultInstance() : flowDefinition_;
       } else {
-        return definitionBuilder_.getMessage();
+        return flowDefinitionBuilder_.getMessage();
       }
     }
     /**
-     * <code>.api.v1alpha1.workflows.PersistedFlowDefinition definition = 1 [json_name = "definition"];</code>
+     * <pre>
+     * flow_1definition is the flow definition object
+     * </pre>
+     *
+     * <code>.api.v1alpha1.workflows.PersistedFlowDefinition flow_definition = 1 [json_name = "flowDefinition"];</code>
      */
-    public Builder setDefinition(com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition value) {
-      if (definitionBuilder_ == null) {
+    public Builder setFlowDefinition(com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition value) {
+      if (flowDefinitionBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        definition_ = value;
+        flowDefinition_ = value;
       } else {
-        definitionBuilder_.setMessage(value);
+        flowDefinitionBuilder_.setMessage(value);
       }
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>.api.v1alpha1.workflows.PersistedFlowDefinition definition = 1 [json_name = "definition"];</code>
+     * <pre>
+     * flow_1definition is the flow definition object
+     * </pre>
+     *
+     * <code>.api.v1alpha1.workflows.PersistedFlowDefinition flow_definition = 1 [json_name = "flowDefinition"];</code>
      */
-    public Builder setDefinition(
+    public Builder setFlowDefinition(
         com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition.Builder builderForValue) {
-      if (definitionBuilder_ == null) {
-        definition_ = builderForValue.build();
+      if (flowDefinitionBuilder_ == null) {
+        flowDefinition_ = builderForValue.build();
       } else {
-        definitionBuilder_.setMessage(builderForValue.build());
+        flowDefinitionBuilder_.setMessage(builderForValue.build());
       }
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>.api.v1alpha1.workflows.PersistedFlowDefinition definition = 1 [json_name = "definition"];</code>
+     * <pre>
+     * flow_1definition is the flow definition object
+     * </pre>
+     *
+     * <code>.api.v1alpha1.workflows.PersistedFlowDefinition flow_definition = 1 [json_name = "flowDefinition"];</code>
      */
-    public Builder mergeDefinition(com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition value) {
-      if (definitionBuilder_ == null) {
+    public Builder mergeFlowDefinition(com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition value) {
+      if (flowDefinitionBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0) &&
-          definition_ != null &&
-          definition_ != com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition.getDefaultInstance()) {
-          getDefinitionBuilder().mergeFrom(value);
+          flowDefinition_ != null &&
+          flowDefinition_ != com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition.getDefaultInstance()) {
+          getFlowDefinitionBuilder().mergeFrom(value);
         } else {
-          definition_ = value;
+          flowDefinition_ = value;
         }
       } else {
-        definitionBuilder_.mergeFrom(value);
+        flowDefinitionBuilder_.mergeFrom(value);
       }
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>.api.v1alpha1.workflows.PersistedFlowDefinition definition = 1 [json_name = "definition"];</code>
+     * <pre>
+     * flow_1definition is the flow definition object
+     * </pre>
+     *
+     * <code>.api.v1alpha1.workflows.PersistedFlowDefinition flow_definition = 1 [json_name = "flowDefinition"];</code>
      */
-    public Builder clearDefinition() {
+    public Builder clearFlowDefinition() {
       bitField0_ = (bitField0_ & ~0x00000001);
-      definition_ = null;
-      if (definitionBuilder_ != null) {
-        definitionBuilder_.dispose();
-        definitionBuilder_ = null;
+      flowDefinition_ = null;
+      if (flowDefinitionBuilder_ != null) {
+        flowDefinitionBuilder_.dispose();
+        flowDefinitionBuilder_ = null;
       }
       onChanged();
       return this;
     }
     /**
-     * <code>.api.v1alpha1.workflows.PersistedFlowDefinition definition = 1 [json_name = "definition"];</code>
+     * <pre>
+     * flow_1definition is the flow definition object
+     * </pre>
+     *
+     * <code>.api.v1alpha1.workflows.PersistedFlowDefinition flow_definition = 1 [json_name = "flowDefinition"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition.Builder getDefinitionBuilder() {
+    public com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition.Builder getFlowDefinitionBuilder() {
       bitField0_ |= 0x00000001;
       onChanged();
-      return getDefinitionFieldBuilder().getBuilder();
+      return getFlowDefinitionFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.v1alpha1.workflows.PersistedFlowDefinition definition = 1 [json_name = "definition"];</code>
+     * <pre>
+     * flow_1definition is the flow definition object
+     * </pre>
+     *
+     * <code>.api.v1alpha1.workflows.PersistedFlowDefinition flow_definition = 1 [json_name = "flowDefinition"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinitionOrBuilder getDefinitionOrBuilder() {
-      if (definitionBuilder_ != null) {
-        return definitionBuilder_.getMessageOrBuilder();
+    public com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinitionOrBuilder getFlowDefinitionOrBuilder() {
+      if (flowDefinitionBuilder_ != null) {
+        return flowDefinitionBuilder_.getMessageOrBuilder();
       } else {
-        return definition_ == null ?
-            com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition.getDefaultInstance() : definition_;
+        return flowDefinition_ == null ?
+            com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition.getDefaultInstance() : flowDefinition_;
       }
     }
     /**
-     * <code>.api.v1alpha1.workflows.PersistedFlowDefinition definition = 1 [json_name = "definition"];</code>
+     * <pre>
+     * flow_1definition is the flow definition object
+     * </pre>
+     *
+     * <code>.api.v1alpha1.workflows.PersistedFlowDefinition flow_definition = 1 [json_name = "flowDefinition"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition, com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition.Builder, com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinitionOrBuilder> 
-        getDefinitionFieldBuilder() {
-      if (definitionBuilder_ == null) {
-        definitionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        getFlowDefinitionFieldBuilder() {
+      if (flowDefinitionBuilder_ == null) {
+        flowDefinitionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition, com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition.Builder, com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinitionOrBuilder>(
-                getDefinition(),
+                getFlowDefinition(),
                 getParentForChildren(),
                 isClean());
-        definition_ = null;
+        flowDefinition_ = null;
       }
-      return definitionBuilder_;
+      return flowDefinitionBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

@@ -8,11 +8,19 @@ public interface ListFlowDefinitionsRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * org_id is the organization identifier to list flow definitions for
+   * </pre>
+   *
    * <code>string org_id = 1 [json_name = "orgId"];</code>
    * @return The orgId.
    */
   java.lang.String getOrgId();
   /**
+   * <pre>
+   * org_id is the organization identifier to list flow definitions for
+   * </pre>
+   *
    * <code>string org_id = 1 [json_name = "orgId"];</code>
    * @return The bytes for orgId.
    */
@@ -20,11 +28,19 @@ public interface ListFlowDefinitionsRequestOrBuilder extends
       getOrgIdBytes();
 
   /**
+   * <pre>
+   * application is the application identifier to list flow definitions for. If this is specified, the output is filtered to only include flow definitions for the application
+   * </pre>
+   *
    * <code>string application = 2 [json_name = "application"];</code>
    * @return The application.
    */
   java.lang.String getApplication();
   /**
+   * <pre>
+   * application is the application identifier to list flow definitions for. If this is specified, the output is filtered to only include flow definitions for the application
+   * </pre>
+   *
    * <code>string application = 2 [json_name = "application"];</code>
    * @return The bytes for application.
    */

@@ -47,6 +47,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object flowDefinitionId_ = "";
   /**
+   * <pre>
+   * flow_definition_id is the identifier for the flow definition to retrieve
+   * </pre>
+   *
    * <code>string flow_definition_id = 1 [json_name = "flowDefinitionId"];</code>
    * @return The flowDefinitionId.
    */
@@ -64,6 +68,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * flow_definition_id is the identifier for the flow definition to retrieve
+   * </pre>
+   *
    * <code>string flow_definition_id = 1 [json_name = "flowDefinitionId"];</code>
    * @return The bytes for flowDefinitionId.
    */
@@ -414,6 +422,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object flowDefinitionId_ = "";
     /**
+     * <pre>
+     * flow_definition_id is the identifier for the flow definition to retrieve
+     * </pre>
+     *
      * <code>string flow_definition_id = 1 [json_name = "flowDefinitionId"];</code>
      * @return The flowDefinitionId.
      */
@@ -430,6 +442,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * flow_definition_id is the identifier for the flow definition to retrieve
+     * </pre>
+     *
      * <code>string flow_definition_id = 1 [json_name = "flowDefinitionId"];</code>
      * @return The bytes for flowDefinitionId.
      */
@@ -447,6 +463,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * flow_definition_id is the identifier for the flow definition to retrieve
+     * </pre>
+     *
      * <code>string flow_definition_id = 1 [json_name = "flowDefinitionId"];</code>
      * @param value The flowDefinitionId to set.
      * @return This builder for chaining.
@@ -460,6 +480,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * flow_definition_id is the identifier for the flow definition to retrieve
+     * </pre>
+     *
      * <code>string flow_definition_id = 1 [json_name = "flowDefinitionId"];</code>
      * @return This builder for chaining.
      */
@@ -470,6 +494,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * flow_definition_id is the identifier for the flow definition to retrieve
+     * </pre>
+     *
      * <code>string flow_definition_id = 1 [json_name = "flowDefinitionId"];</code>
      * @param value The bytes for flowDefinitionId to set.
      * @return This builder for chaining.

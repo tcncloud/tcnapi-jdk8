@@ -8,14 +8,29 @@ public interface CreateFlowDefinitionResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string flow_definition_id = 1 [json_name = "flowDefinitionId"];</code>
-   * @return The flowDefinitionId.
+   * <pre>
+   * flow_definition is the persisted flow definition object (with the flow_definition_id set)
+   * </pre>
+   *
+   * <code>.api.v1alpha1.workflows.PersistedFlowDefinition flow_definition = 1 [json_name = "flowDefinition"];</code>
+   * @return Whether the flowDefinition field is set.
    */
-  java.lang.String getFlowDefinitionId();
+  boolean hasFlowDefinition();
   /**
-   * <code>string flow_definition_id = 1 [json_name = "flowDefinitionId"];</code>
-   * @return The bytes for flowDefinitionId.
+   * <pre>
+   * flow_definition is the persisted flow definition object (with the flow_definition_id set)
+   * </pre>
+   *
+   * <code>.api.v1alpha1.workflows.PersistedFlowDefinition flow_definition = 1 [json_name = "flowDefinition"];</code>
+   * @return The flowDefinition.
    */
-  com.google.protobuf.ByteString
-      getFlowDefinitionIdBytes();
+  com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition getFlowDefinition();
+  /**
+   * <pre>
+   * flow_definition is the persisted flow definition object (with the flow_definition_id set)
+   * </pre>
+   *
+   * <code>.api.v1alpha1.workflows.PersistedFlowDefinition flow_definition = 1 [json_name = "flowDefinition"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinitionOrBuilder getFlowDefinitionOrBuilder();
 }

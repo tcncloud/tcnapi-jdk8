@@ -8,16 +8,28 @@ public interface ValidateFlowDefinitionRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * flow_definition is the object to be validated
+   * </pre>
+   *
    * <code>.api.v1alpha1.workflows.PersistedFlowDefinition flow_definition = 1 [json_name = "flowDefinition"];</code>
    * @return Whether the flowDefinition field is set.
    */
   boolean hasFlowDefinition();
   /**
+   * <pre>
+   * flow_definition is the object to be validated
+   * </pre>
+   *
    * <code>.api.v1alpha1.workflows.PersistedFlowDefinition flow_definition = 1 [json_name = "flowDefinition"];</code>
    * @return The flowDefinition.
    */
   com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition getFlowDefinition();
   /**
+   * <pre>
+   * flow_definition is the object to be validated
+   * </pre>
+   *
    * <code>.api.v1alpha1.workflows.PersistedFlowDefinition flow_definition = 1 [json_name = "flowDefinition"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinitionOrBuilder getFlowDefinitionOrBuilder();

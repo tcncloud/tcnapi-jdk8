@@ -9,7 +9,7 @@ public interface ListFlowDefinitionsResponseOrBuilder extends
 
   /**
    * <pre>
-   * an array of
+   * flow_definition is the flow definition object
    * </pre>
    *
    * <code>.api.v1alpha1.workflows.PersistedFlowDefinition flow_definition = 1 [json_name = "flowDefinition"];</code>
@@ -18,7 +18,7 @@ public interface ListFlowDefinitionsResponseOrBuilder extends
   boolean hasFlowDefinition();
   /**
    * <pre>
-   * an array of
+   * flow_definition is the flow definition object
    * </pre>
    *
    * <code>.api.v1alpha1.workflows.PersistedFlowDefinition flow_definition = 1 [json_name = "flowDefinition"];</code>
@@ -27,7 +27,7 @@ public interface ListFlowDefinitionsResponseOrBuilder extends
   com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition getFlowDefinition();
   /**
    * <pre>
-   * an array of
+   * flow_definition is the flow definition object
    * </pre>
    *
    * <code>.api.v1alpha1.workflows.PersistedFlowDefinition flow_definition = 1 [json_name = "flowDefinition"];</code>

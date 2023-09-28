@@ -48,6 +48,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object orgId_ = "";
   /**
+   * <pre>
+   * org_id is the organization identifier to list flow definitions for
+   * </pre>
+   *
    * <code>string org_id = 1 [json_name = "orgId"];</code>
    * @return The orgId.
    */
@@ -65,6 +69,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * org_id is the organization identifier to list flow definitions for
+   * </pre>
+   *
    * <code>string org_id = 1 [json_name = "orgId"];</code>
    * @return The bytes for orgId.
    */
@@ -87,6 +95,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object application_ = "";
   /**
+   * <pre>
+   * application is the application identifier to list flow definitions for. If this is specified, the output is filtered to only include flow definitions for the application
+   * </pre>
+   *
    * <code>string application = 2 [json_name = "application"];</code>
    * @return The application.
    */
@@ -104,6 +116,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * application is the application identifier to list flow definitions for. If this is specified, the output is filtered to only include flow definitions for the application
+   * </pre>
+   *
    * <code>string application = 2 [json_name = "application"];</code>
    * @return The bytes for application.
    */
@@ -478,6 +494,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object orgId_ = "";
     /**
+     * <pre>
+     * org_id is the organization identifier to list flow definitions for
+     * </pre>
+     *
      * <code>string org_id = 1 [json_name = "orgId"];</code>
      * @return The orgId.
      */
@@ -494,6 +514,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * org_id is the organization identifier to list flow definitions for
+     * </pre>
+     *
      * <code>string org_id = 1 [json_name = "orgId"];</code>
      * @return The bytes for orgId.
      */
@@ -511,6 +535,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * org_id is the organization identifier to list flow definitions for
+     * </pre>
+     *
      * <code>string org_id = 1 [json_name = "orgId"];</code>
      * @param value The orgId to set.
      * @return This builder for chaining.
@@ -524,6 +552,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * org_id is the organization identifier to list flow definitions for
+     * </pre>
+     *
      * <code>string org_id = 1 [json_name = "orgId"];</code>
      * @return This builder for chaining.
      */
@@ -534,6 +566,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * org_id is the organization identifier to list flow definitions for
+     * </pre>
+     *
      * <code>string org_id = 1 [json_name = "orgId"];</code>
      * @param value The bytes for orgId to set.
      * @return This builder for chaining.
@@ -550,6 +586,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object application_ = "";
     /**
+     * <pre>
+     * application is the application identifier to list flow definitions for. If this is specified, the output is filtered to only include flow definitions for the application
+     * </pre>
+     *
      * <code>string application = 2 [json_name = "application"];</code>
      * @return The application.
      */
@@ -566,6 +606,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * application is the application identifier to list flow definitions for. If this is specified, the output is filtered to only include flow definitions for the application
+     * </pre>
+     *
      * <code>string application = 2 [json_name = "application"];</code>
      * @return The bytes for application.
      */
@@ -583,6 +627,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * application is the application identifier to list flow definitions for. If this is specified, the output is filtered to only include flow definitions for the application
+     * </pre>
+     *
      * <code>string application = 2 [json_name = "application"];</code>
      * @param value The application to set.
      * @return This builder for chaining.
@@ -596,6 +644,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * application is the application identifier to list flow definitions for. If this is specified, the output is filtered to only include flow definitions for the application
+     * </pre>
+     *
      * <code>string application = 2 [json_name = "application"];</code>
      * @return This builder for chaining.
      */
@@ -606,6 +658,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * application is the application identifier to list flow definitions for. If this is specified, the output is filtered to only include flow definitions for the application
+     * </pre>
+     *
      * <code>string application = 2 [json_name = "application"];</code>
      * @param value The bytes for application to set.
      * @return This builder for chaining.

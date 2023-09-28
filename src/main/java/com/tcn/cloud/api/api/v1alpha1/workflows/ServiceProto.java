@@ -90,63 +90,65 @@ public final class ServiceProto {
       "inition\022;\n\013create_time\030\007 \001(\0132\032.google.pr" +
       "otobuf.TimestampR\ncreateTime\022;\n\013update_t" +
       "ime\030\010 \001(\0132\032.google.protobuf.TimestampR\nu" +
-      "pdateTime\022\024\n\005extra\030d \001(\tR\005extra\"n\n\033Creat" +
-      "eFlowDefinitionRequest\022O\n\ndefinition\030\001 \001" +
+      "pdateTime\022\024\n\005extra\030d \001(\tR\005extra\"w\n\033Creat" +
+      "eFlowDefinitionRequest\022X\n\017flow_definitio" +
+      "n\030\001 \001(\0132/.api.v1alpha1.workflows.Persist" +
+      "edFlowDefinitionR\016flowDefinition\"x\n\034Crea" +
+      "teFlowDefinitionResponse\022X\n\017flow_definit" +
+      "ion\030\001 \001(\0132/.api.v1alpha1.workflows.Persi" +
+      "stedFlowDefinitionR\016flowDefinition\"H\n\030Ge" +
+      "tFlowDefinitionRequest\022,\n\022flow_definitio" +
+      "n_id\030\001 \001(\tR\020flowDefinitionId\"u\n\031GetFlowD" +
+      "efinitionResponse\022X\n\017flow_definition\030\001 \001" +
       "(\0132/.api.v1alpha1.workflows.PersistedFlo" +
-      "wDefinitionR\ndefinition\"L\n\034CreateFlowDef" +
-      "initionResponse\022,\n\022flow_definition_id\030\001 " +
-      "\001(\tR\020flowDefinitionId\"H\n\030GetFlowDefiniti" +
-      "onRequest\022,\n\022flow_definition_id\030\001 \001(\tR\020f" +
-      "lowDefinitionId\"l\n\031GetFlowDefinitionResp" +
-      "onse\022O\n\ndefinition\030\001 \001(\0132/.api.v1alpha1." +
-      "workflows.PersistedFlowDefinitionR\ndefin" +
-      "ition\"U\n\032ListFlowDefinitionsRequest\022\025\n\006o" +
-      "rg_id\030\001 \001(\tR\005orgId\022 \n\013application\030\002 \001(\tR" +
-      "\013application\"w\n\033ListFlowDefinitionsRespo" +
-      "nse\022X\n\017flow_definition\030\001 \001(\0132/.api.v1alp" +
-      "ha1.workflows.PersistedFlowDefinitionR\016f" +
-      "lowDefinition\"w\n\033UpdateFlowDefinitionReq" +
-      "uest\022X\n\017flow_definition\030\001 \001(\0132/.api.v1al" +
-      "pha1.workflows.PersistedFlowDefinitionR\016" +
-      "flowDefinition\"x\n\034UpdateFlowDefinitionRe" +
-      "sponse\022X\n\017flow_definition\030\001 \001(\0132/.api.v1" +
-      "alpha1.workflows.PersistedFlowDefinition" +
-      "R\016flowDefinition\"y\n\035ValidateFlowDefiniti" +
-      "onRequest\022X\n\017flow_definition\030\001 \001(\0132/.api" +
-      ".v1alpha1.workflows.PersistedFlowDefinit" +
-      "ionR\016flowDefinition\"L\n\036ValidateFlowDefin" +
-      "itionResponse\022\024\n\005valid\030\001 \001(\010R\005valid\022\024\n\005e" +
-      "rror\030\002 \001(\tR\005error2\376\007\n\034FlowDefinitionPers" +
-      "istService\022\304\001\n\024CreateFlowDefinition\0223.ap" +
-      "i.v1alpha1.workflows.CreateFlowDefinitio" +
-      "nRequest\0324.api.v1alpha1.workflows.Create" +
-      "FlowDefinitionResponse\"A\272\270\221\002\005\n\003\010\240\037\202\323\344\223\0021" +
-      "\",/api/v1alpha1/workflows/createflowdefi" +
-      "nition:\001*\022\273\001\n\021GetFlowDefinition\0220.api.v1" +
-      "alpha1.workflows.GetFlowDefinitionReques" +
-      "t\0321.api.v1alpha1.workflows.GetFlowDefini" +
-      "tionResponse\"A\272\270\221\002\005\n\003\010\240\037\202\323\344\223\0021\",/api/v1a" +
-      "lpha1/workflows/createflowdefinition:\001*\022" +
-      "\302\001\n\023ListFlowDefinitions\0222.api.v1alpha1.w" +
-      "orkflows.ListFlowDefinitionsRequest\0323.ap" +
-      "i.v1alpha1.workflows.ListFlowDefinitions" +
-      "Response\"@\272\270\221\002\005\n\003\010\240\037\202\323\344\223\0020\"+/api/v1alpha" +
-      "1/workflows/listflowdefinitions:\001*0\001\022\304\001\n" +
-      "\024UpdateFlowDefinition\0223.api.v1alpha1.wor" +
-      "kflows.UpdateFlowDefinitionRequest\0324.api" +
-      ".v1alpha1.workflows.UpdateFlowDefinition" +
-      "Response\"A\272\270\221\002\005\n\003\010\240\037\202\323\344\223\0021\",/api/v1alpha" +
-      "1/workflows/updateflowdefinition:\001*\022\314\001\n\026" +
-      "ValidateFlowDefinition\0225.api.v1alpha1.wo" +
-      "rkflows.ValidateFlowDefinitionRequest\0326." +
-      "api.v1alpha1.workflows.ValidateFlowDefin" +
-      "itionResponse\"C\272\270\221\002\005\n\003\010\240\037\202\323\344\223\0023\"./api/v1" +
-      "alpha1/workflows/validateflowdefinition:" +
-      "\001*B\262\001\n(com.tcn.cloud.api.api.v1alpha1.wo" +
-      "rkflowsB\014ServiceProtoP\001\242\002\003AVW\252\002\026Api.V1al" +
-      "pha1.Workflows\312\002\026Api\\V1alpha1\\Workflows\342" +
-      "\002\"Api\\V1alpha1\\Workflows\\GPBMetadata\352\002\030A" +
-      "pi::V1alpha1::Workflowsb\006proto3"
+      "wDefinitionR\016flowDefinition\"U\n\032ListFlowD" +
+      "efinitionsRequest\022\025\n\006org_id\030\001 \001(\tR\005orgId" +
+      "\022 \n\013application\030\002 \001(\tR\013application\"w\n\033Li" +
+      "stFlowDefinitionsResponse\022X\n\017flow_defini" +
+      "tion\030\001 \001(\0132/.api.v1alpha1.workflows.Pers" +
+      "istedFlowDefinitionR\016flowDefinition\"w\n\033U" +
+      "pdateFlowDefinitionRequest\022X\n\017flow_defin" +
+      "ition\030\001 \001(\0132/.api.v1alpha1.workflows.Per" +
+      "sistedFlowDefinitionR\016flowDefinition\"x\n\034" +
+      "UpdateFlowDefinitionResponse\022X\n\017flow_def" +
+      "inition\030\001 \001(\0132/.api.v1alpha1.workflows.P" +
+      "ersistedFlowDefinitionR\016flowDefinition\"y" +
+      "\n\035ValidateFlowDefinitionRequest\022X\n\017flow_" +
+      "definition\030\001 \001(\0132/.api.v1alpha1.workflow" +
+      "s.PersistedFlowDefinitionR\016flowDefinitio" +
+      "n\"L\n\036ValidateFlowDefinitionResponse\022\024\n\005v" +
+      "alid\030\001 \001(\010R\005valid\022\024\n\005error\030\002 \001(\tR\005error2" +
+      "\376\007\n\034FlowDefinitionPersistService\022\304\001\n\024Cre" +
+      "ateFlowDefinition\0223.api.v1alpha1.workflo" +
+      "ws.CreateFlowDefinitionRequest\0324.api.v1a" +
+      "lpha1.workflows.CreateFlowDefinitionResp" +
+      "onse\"A\272\270\221\002\005\n\003\010\240\037\202\323\344\223\0021\",/api/v1alpha1/wo" +
+      "rkflows/createflowdefinition:\001*\022\273\001\n\021GetF" +
+      "lowDefinition\0220.api.v1alpha1.workflows.G" +
+      "etFlowDefinitionRequest\0321.api.v1alpha1.w" +
+      "orkflows.GetFlowDefinitionResponse\"A\272\270\221\002" +
+      "\005\n\003\010\240\037\202\323\344\223\0021\",/api/v1alpha1/workflows/cr" +
+      "eateflowdefinition:\001*\022\302\001\n\023ListFlowDefini" +
+      "tions\0222.api.v1alpha1.workflows.ListFlowD" +
+      "efinitionsRequest\0323.api.v1alpha1.workflo" +
+      "ws.ListFlowDefinitionsResponse\"@\272\270\221\002\005\n\003\010" +
+      "\240\037\202\323\344\223\0020\"+/api/v1alpha1/workflows/listfl" +
+      "owdefinitions:\001*0\001\022\304\001\n\024UpdateFlowDefinit" +
+      "ion\0223.api.v1alpha1.workflows.UpdateFlowD" +
+      "efinitionRequest\0324.api.v1alpha1.workflow" +
+      "s.UpdateFlowDefinitionResponse\"A\272\270\221\002\005\n\003\010" +
+      "\240\037\202\323\344\223\0021\",/api/v1alpha1/workflows/update" +
+      "flowdefinition:\001*\022\314\001\n\026ValidateFlowDefini" +
+      "tion\0225.api.v1alpha1.workflows.ValidateFl" +
+      "owDefinitionRequest\0326.api.v1alpha1.workf" +
+      "lows.ValidateFlowDefinitionResponse\"C\272\270\221" +
+      "\002\005\n\003\010\240\037\202\323\344\223\0023\"./api/v1alpha1/workflows/v" +
+      "alidateflowdefinition:\001*B\262\001\n(com.tcn.clo" +
+      "ud.api.api.v1alpha1.workflowsB\014ServicePr" +
+      "otoP\001\242\002\003AVW\252\002\026Api.V1alpha1.Workflows\312\002\026A" +
+      "pi\\V1alpha1\\Workflows\342\002\"Api\\V1alpha1\\Wor" +
+      "kflows\\GPBMetadata\352\002\030Api::V1alpha1::Work" +
+      "flowsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -166,13 +168,13 @@ public final class ServiceProto {
     internal_static_api_v1alpha1_workflows_CreateFlowDefinitionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_workflows_CreateFlowDefinitionRequest_descriptor,
-        new java.lang.String[] { "Definition", });
+        new java.lang.String[] { "FlowDefinition", });
     internal_static_api_v1alpha1_workflows_CreateFlowDefinitionResponse_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_api_v1alpha1_workflows_CreateFlowDefinitionResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_workflows_CreateFlowDefinitionResponse_descriptor,
-        new java.lang.String[] { "FlowDefinitionId", });
+        new java.lang.String[] { "FlowDefinition", });
     internal_static_api_v1alpha1_workflows_GetFlowDefinitionRequest_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_api_v1alpha1_workflows_GetFlowDefinitionRequest_fieldAccessorTable = new
@@ -184,7 +186,7 @@ public final class ServiceProto {
     internal_static_api_v1alpha1_workflows_GetFlowDefinitionResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_workflows_GetFlowDefinitionResponse_descriptor,
-        new java.lang.String[] { "Definition", });
+        new java.lang.String[] { "FlowDefinition", });
     internal_static_api_v1alpha1_workflows_ListFlowDefinitionsRequest_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_api_v1alpha1_workflows_ListFlowDefinitionsRequest_fieldAccessorTable = new
