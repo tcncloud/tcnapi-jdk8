@@ -4,10 +4,6 @@
 package com.tcn.cloud.api.services.billing.v1alpha1;
 
 /**
- * <pre>
- * GetInvoiceResponse is a response to getting an invoice.
- * </pre>
- *
  * Protobuf type {@code services.billing.v1alpha1.GetInvoiceResponse}
  */
 public final class GetInvoiceResponse extends
@@ -43,9 +39,9 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int INVOICE_FIELD_NUMBER = 1;
-  private com.tcn.cloud.api.data.billing.v1alpha1.Invoice invoice_;
+  private com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice invoice_;
   /**
-   * <code>.data.billing.v1alpha1.Invoice invoice = 1 [json_name = "invoice"];</code>
+   * <code>.services.billing.entities.v1alpha1.Invoice invoice = 1 [json_name = "invoice"];</code>
    * @return Whether the invoice field is set.
    */
   @java.lang.Override
@@ -53,19 +49,19 @@ private static final long serialVersionUID = 0L;
     return invoice_ != null;
   }
   /**
-   * <code>.data.billing.v1alpha1.Invoice invoice = 1 [json_name = "invoice"];</code>
+   * <code>.services.billing.entities.v1alpha1.Invoice invoice = 1 [json_name = "invoice"];</code>
    * @return The invoice.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.data.billing.v1alpha1.Invoice getInvoice() {
-    return invoice_ == null ? com.tcn.cloud.api.data.billing.v1alpha1.Invoice.getDefaultInstance() : invoice_;
+  public com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice getInvoice() {
+    return invoice_ == null ? com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice.getDefaultInstance() : invoice_;
   }
   /**
-   * <code>.data.billing.v1alpha1.Invoice invoice = 1 [json_name = "invoice"];</code>
+   * <code>.services.billing.entities.v1alpha1.Invoice invoice = 1 [json_name = "invoice"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.data.billing.v1alpha1.InvoiceOrBuilder getInvoiceOrBuilder() {
-    return invoice_ == null ? com.tcn.cloud.api.data.billing.v1alpha1.Invoice.getDefaultInstance() : invoice_;
+  public com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceOrBuilder getInvoiceOrBuilder() {
+    return invoice_ == null ? com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice.getDefaultInstance() : invoice_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -231,10 +227,6 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * <pre>
-   * GetInvoiceResponse is a response to getting an invoice.
-   * </pre>
-   *
    * Protobuf type {@code services.billing.v1alpha1.GetInvoiceResponse}
    */
   public static final class Builder extends
@@ -410,31 +402,31 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private com.tcn.cloud.api.data.billing.v1alpha1.Invoice invoice_;
+    private com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice invoice_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.data.billing.v1alpha1.Invoice, com.tcn.cloud.api.data.billing.v1alpha1.Invoice.Builder, com.tcn.cloud.api.data.billing.v1alpha1.InvoiceOrBuilder> invoiceBuilder_;
+        com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice, com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceOrBuilder> invoiceBuilder_;
     /**
-     * <code>.data.billing.v1alpha1.Invoice invoice = 1 [json_name = "invoice"];</code>
+     * <code>.services.billing.entities.v1alpha1.Invoice invoice = 1 [json_name = "invoice"];</code>
      * @return Whether the invoice field is set.
      */
     public boolean hasInvoice() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>.data.billing.v1alpha1.Invoice invoice = 1 [json_name = "invoice"];</code>
+     * <code>.services.billing.entities.v1alpha1.Invoice invoice = 1 [json_name = "invoice"];</code>
      * @return The invoice.
      */
-    public com.tcn.cloud.api.data.billing.v1alpha1.Invoice getInvoice() {
+    public com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice getInvoice() {
       if (invoiceBuilder_ == null) {
-        return invoice_ == null ? com.tcn.cloud.api.data.billing.v1alpha1.Invoice.getDefaultInstance() : invoice_;
+        return invoice_ == null ? com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice.getDefaultInstance() : invoice_;
       } else {
         return invoiceBuilder_.getMessage();
       }
     }
     /**
-     * <code>.data.billing.v1alpha1.Invoice invoice = 1 [json_name = "invoice"];</code>
+     * <code>.services.billing.entities.v1alpha1.Invoice invoice = 1 [json_name = "invoice"];</code>
      */
-    public Builder setInvoice(com.tcn.cloud.api.data.billing.v1alpha1.Invoice value) {
+    public Builder setInvoice(com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice value) {
       if (invoiceBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -448,10 +440,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.data.billing.v1alpha1.Invoice invoice = 1 [json_name = "invoice"];</code>
+     * <code>.services.billing.entities.v1alpha1.Invoice invoice = 1 [json_name = "invoice"];</code>
      */
     public Builder setInvoice(
-        com.tcn.cloud.api.data.billing.v1alpha1.Invoice.Builder builderForValue) {
+        com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice.Builder builderForValue) {
       if (invoiceBuilder_ == null) {
         invoice_ = builderForValue.build();
       } else {
@@ -462,13 +454,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.data.billing.v1alpha1.Invoice invoice = 1 [json_name = "invoice"];</code>
+     * <code>.services.billing.entities.v1alpha1.Invoice invoice = 1 [json_name = "invoice"];</code>
      */
-    public Builder mergeInvoice(com.tcn.cloud.api.data.billing.v1alpha1.Invoice value) {
+    public Builder mergeInvoice(com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice value) {
       if (invoiceBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0) &&
           invoice_ != null &&
-          invoice_ != com.tcn.cloud.api.data.billing.v1alpha1.Invoice.getDefaultInstance()) {
+          invoice_ != com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice.getDefaultInstance()) {
           getInvoiceBuilder().mergeFrom(value);
         } else {
           invoice_ = value;
@@ -481,7 +473,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.data.billing.v1alpha1.Invoice invoice = 1 [json_name = "invoice"];</code>
+     * <code>.services.billing.entities.v1alpha1.Invoice invoice = 1 [json_name = "invoice"];</code>
      */
     public Builder clearInvoice() {
       bitField0_ = (bitField0_ & ~0x00000001);
@@ -494,33 +486,33 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.data.billing.v1alpha1.Invoice invoice = 1 [json_name = "invoice"];</code>
+     * <code>.services.billing.entities.v1alpha1.Invoice invoice = 1 [json_name = "invoice"];</code>
      */
-    public com.tcn.cloud.api.data.billing.v1alpha1.Invoice.Builder getInvoiceBuilder() {
+    public com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice.Builder getInvoiceBuilder() {
       bitField0_ |= 0x00000001;
       onChanged();
       return getInvoiceFieldBuilder().getBuilder();
     }
     /**
-     * <code>.data.billing.v1alpha1.Invoice invoice = 1 [json_name = "invoice"];</code>
+     * <code>.services.billing.entities.v1alpha1.Invoice invoice = 1 [json_name = "invoice"];</code>
      */
-    public com.tcn.cloud.api.data.billing.v1alpha1.InvoiceOrBuilder getInvoiceOrBuilder() {
+    public com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceOrBuilder getInvoiceOrBuilder() {
       if (invoiceBuilder_ != null) {
         return invoiceBuilder_.getMessageOrBuilder();
       } else {
         return invoice_ == null ?
-            com.tcn.cloud.api.data.billing.v1alpha1.Invoice.getDefaultInstance() : invoice_;
+            com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice.getDefaultInstance() : invoice_;
       }
     }
     /**
-     * <code>.data.billing.v1alpha1.Invoice invoice = 1 [json_name = "invoice"];</code>
+     * <code>.services.billing.entities.v1alpha1.Invoice invoice = 1 [json_name = "invoice"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.data.billing.v1alpha1.Invoice, com.tcn.cloud.api.data.billing.v1alpha1.Invoice.Builder, com.tcn.cloud.api.data.billing.v1alpha1.InvoiceOrBuilder> 
+        com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice, com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceOrBuilder> 
         getInvoiceFieldBuilder() {
       if (invoiceBuilder_ == null) {
         invoiceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.data.billing.v1alpha1.Invoice, com.tcn.cloud.api.data.billing.v1alpha1.Invoice.Builder, com.tcn.cloud.api.data.billing.v1alpha1.InvoiceOrBuilder>(
+            com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice, com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceOrBuilder>(
                 getInvoice(),
                 getParentForChildren(),
                 isClean());

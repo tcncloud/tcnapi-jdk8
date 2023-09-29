@@ -8,17 +8,46 @@ public interface ListBillingPlansResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.data.billing.v1alpha1.BillingPlan billing_plan = 1 [json_name = "billingPlan"];</code>
-   * @return Whether the billingPlan field is set.
+   * <code>repeated .services.billing.entities.v1alpha1.BillingPlan billing_plan = 1 [json_name = "billingPlan"];</code>
    */
-  boolean hasBillingPlan();
+  java.util.List<com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlan> 
+      getBillingPlanList();
   /**
-   * <code>.data.billing.v1alpha1.BillingPlan billing_plan = 1 [json_name = "billingPlan"];</code>
-   * @return The billingPlan.
+   * <code>repeated .services.billing.entities.v1alpha1.BillingPlan billing_plan = 1 [json_name = "billingPlan"];</code>
    */
-  com.tcn.cloud.api.data.billing.v1alpha1.BillingPlan getBillingPlan();
+  com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlan getBillingPlan(int index);
   /**
-   * <code>.data.billing.v1alpha1.BillingPlan billing_plan = 1 [json_name = "billingPlan"];</code>
+   * <code>repeated .services.billing.entities.v1alpha1.BillingPlan billing_plan = 1 [json_name = "billingPlan"];</code>
    */
-  com.tcn.cloud.api.data.billing.v1alpha1.BillingPlanOrBuilder getBillingPlanOrBuilder();
+  int getBillingPlanCount();
+  /**
+   * <code>repeated .services.billing.entities.v1alpha1.BillingPlan billing_plan = 1 [json_name = "billingPlan"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlanOrBuilder> 
+      getBillingPlanOrBuilderList();
+  /**
+   * <code>repeated .services.billing.entities.v1alpha1.BillingPlan billing_plan = 1 [json_name = "billingPlan"];</code>
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlanOrBuilder getBillingPlanOrBuilder(
+      int index);
+
+  /**
+   * <pre>
+   * Optional: only present if paginating.
+   * </pre>
+   *
+   * <code>string token = 2 [json_name = "token"];</code>
+   * @return The token.
+   */
+  java.lang.String getToken();
+  /**
+   * <pre>
+   * Optional: only present if paginating.
+   * </pre>
+   *
+   * <code>string token = 2 [json_name = "token"];</code>
+   * @return The bytes for token.
+   */
+  com.google.protobuf.ByteString
+      getTokenBytes();
 }

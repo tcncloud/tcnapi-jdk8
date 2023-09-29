@@ -8,17 +8,14 @@ public interface CreateInvoiceResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.data.billing.v1alpha1.Invoice invoice = 1 [json_name = "invoice"];</code>
-   * @return Whether the invoice field is set.
+   * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+   * @return The invoiceId.
    */
-  boolean hasInvoice();
+  java.lang.String getInvoiceId();
   /**
-   * <code>.data.billing.v1alpha1.Invoice invoice = 1 [json_name = "invoice"];</code>
-   * @return The invoice.
+   * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+   * @return The bytes for invoiceId.
    */
-  com.tcn.cloud.api.data.billing.v1alpha1.Invoice getInvoice();
-  /**
-   * <code>.data.billing.v1alpha1.Invoice invoice = 1 [json_name = "invoice"];</code>
-   */
-  com.tcn.cloud.api.data.billing.v1alpha1.InvoiceOrBuilder getInvoiceOrBuilder();
+  com.google.protobuf.ByteString
+      getInvoiceIdBytes();
 }

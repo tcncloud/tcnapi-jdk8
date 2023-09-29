@@ -4,12 +4,6 @@
 package com.tcn.cloud.api.services.billing.v1alpha1;
 
 /**
- * <pre>
- * CreateInvoiceRequest is a request to create a new invoice for
- * an organization in the specified billing cycle. Only the
- * billing cycle is required, all other fields are ignored.
- * </pre>
- *
  * Protobuf type {@code services.billing.v1alpha1.CreateInvoiceRequest}
  */
 public final class CreateInvoiceRequest extends
@@ -22,6 +16,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private CreateInvoiceRequest() {
+    invoiceId_ = "";
   }
 
   @java.lang.Override
@@ -44,10 +39,49 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.services.billing.v1alpha1.CreateInvoiceRequest.class, com.tcn.cloud.api.services.billing.v1alpha1.CreateInvoiceRequest.Builder.class);
   }
 
-  public static final int INVOICE_FIELD_NUMBER = 1;
-  private com.tcn.cloud.api.data.billing.v1alpha1.Invoice invoice_;
+  public static final int INVOICE_ID_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object invoiceId_ = "";
   /**
-   * <code>.data.billing.v1alpha1.Invoice invoice = 1 [json_name = "invoice"];</code>
+   * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+   * @return The invoiceId.
+   */
+  @java.lang.Override
+  public java.lang.String getInvoiceId() {
+    java.lang.Object ref = invoiceId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      invoiceId_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+   * @return The bytes for invoiceId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getInvoiceIdBytes() {
+    java.lang.Object ref = invoiceId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      invoiceId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int INVOICE_FIELD_NUMBER = 2;
+  private com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice invoice_;
+  /**
+   * <code>.services.billing.entities.v1alpha1.Invoice invoice = 2 [json_name = "invoice"];</code>
    * @return Whether the invoice field is set.
    */
   @java.lang.Override
@@ -55,19 +89,19 @@ private static final long serialVersionUID = 0L;
     return invoice_ != null;
   }
   /**
-   * <code>.data.billing.v1alpha1.Invoice invoice = 1 [json_name = "invoice"];</code>
+   * <code>.services.billing.entities.v1alpha1.Invoice invoice = 2 [json_name = "invoice"];</code>
    * @return The invoice.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.data.billing.v1alpha1.Invoice getInvoice() {
-    return invoice_ == null ? com.tcn.cloud.api.data.billing.v1alpha1.Invoice.getDefaultInstance() : invoice_;
+  public com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice getInvoice() {
+    return invoice_ == null ? com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice.getDefaultInstance() : invoice_;
   }
   /**
-   * <code>.data.billing.v1alpha1.Invoice invoice = 1 [json_name = "invoice"];</code>
+   * <code>.services.billing.entities.v1alpha1.Invoice invoice = 2 [json_name = "invoice"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.data.billing.v1alpha1.InvoiceOrBuilder getInvoiceOrBuilder() {
-    return invoice_ == null ? com.tcn.cloud.api.data.billing.v1alpha1.Invoice.getDefaultInstance() : invoice_;
+  public com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceOrBuilder getInvoiceOrBuilder() {
+    return invoice_ == null ? com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice.getDefaultInstance() : invoice_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -84,8 +118,11 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(invoiceId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, invoiceId_);
+    }
     if (invoice_ != null) {
-      output.writeMessage(1, getInvoice());
+      output.writeMessage(2, getInvoice());
     }
     getUnknownFields().writeTo(output);
   }
@@ -96,9 +133,12 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(invoiceId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, invoiceId_);
+    }
     if (invoice_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, getInvoice());
+        .computeMessageSize(2, getInvoice());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -115,6 +155,8 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.services.billing.v1alpha1.CreateInvoiceRequest other = (com.tcn.cloud.api.services.billing.v1alpha1.CreateInvoiceRequest) obj;
 
+    if (!getInvoiceId()
+        .equals(other.getInvoiceId())) return false;
     if (hasInvoice() != other.hasInvoice()) return false;
     if (hasInvoice()) {
       if (!getInvoice()
@@ -131,6 +173,8 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + INVOICE_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getInvoiceId().hashCode();
     if (hasInvoice()) {
       hash = (37 * hash) + INVOICE_FIELD_NUMBER;
       hash = (53 * hash) + getInvoice().hashCode();
@@ -233,12 +277,6 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * <pre>
-   * CreateInvoiceRequest is a request to create a new invoice for
-   * an organization in the specified billing cycle. Only the
-   * billing cycle is required, all other fields are ignored.
-   * </pre>
-   *
    * Protobuf type {@code services.billing.v1alpha1.CreateInvoiceRequest}
    */
   public static final class Builder extends
@@ -272,6 +310,7 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
+      invoiceId_ = "";
       invoice_ = null;
       if (invoiceBuilder_ != null) {
         invoiceBuilder_.dispose();
@@ -311,6 +350,9 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.tcn.cloud.api.services.billing.v1alpha1.CreateInvoiceRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.invoiceId_ = invoiceId_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
         result.invoice_ = invoiceBuilder_ == null
             ? invoice_
             : invoiceBuilder_.build();
@@ -361,6 +403,11 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.services.billing.v1alpha1.CreateInvoiceRequest other) {
       if (other == com.tcn.cloud.api.services.billing.v1alpha1.CreateInvoiceRequest.getDefaultInstance()) return this;
+      if (!other.getInvoiceId().isEmpty()) {
+        invoiceId_ = other.invoiceId_;
+        bitField0_ |= 0x00000001;
+        onChanged();
+      }
       if (other.hasInvoice()) {
         mergeInvoice(other.getInvoice());
       }
@@ -391,12 +438,17 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              input.readMessage(
-                  getInvoiceFieldBuilder().getBuilder(),
-                  extensionRegistry);
+              invoiceId_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000001;
               break;
             } // case 10
+            case 18: {
+              input.readMessage(
+                  getInvoiceFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -414,31 +466,103 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private com.tcn.cloud.api.data.billing.v1alpha1.Invoice invoice_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.data.billing.v1alpha1.Invoice, com.tcn.cloud.api.data.billing.v1alpha1.Invoice.Builder, com.tcn.cloud.api.data.billing.v1alpha1.InvoiceOrBuilder> invoiceBuilder_;
+    private java.lang.Object invoiceId_ = "";
     /**
-     * <code>.data.billing.v1alpha1.Invoice invoice = 1 [json_name = "invoice"];</code>
+     * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+     * @return The invoiceId.
+     */
+    public java.lang.String getInvoiceId() {
+      java.lang.Object ref = invoiceId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        invoiceId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+     * @return The bytes for invoiceId.
+     */
+    public com.google.protobuf.ByteString
+        getInvoiceIdBytes() {
+      java.lang.Object ref = invoiceId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        invoiceId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+     * @param value The invoiceId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setInvoiceId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      invoiceId_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearInvoiceId() {
+      invoiceId_ = getDefaultInstance().getInvoiceId();
+      bitField0_ = (bitField0_ & ~0x00000001);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+     * @param value The bytes for invoiceId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setInvoiceIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      invoiceId_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+
+    private com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice invoice_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice, com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceOrBuilder> invoiceBuilder_;
+    /**
+     * <code>.services.billing.entities.v1alpha1.Invoice invoice = 2 [json_name = "invoice"];</code>
      * @return Whether the invoice field is set.
      */
     public boolean hasInvoice() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>.data.billing.v1alpha1.Invoice invoice = 1 [json_name = "invoice"];</code>
+     * <code>.services.billing.entities.v1alpha1.Invoice invoice = 2 [json_name = "invoice"];</code>
      * @return The invoice.
      */
-    public com.tcn.cloud.api.data.billing.v1alpha1.Invoice getInvoice() {
+    public com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice getInvoice() {
       if (invoiceBuilder_ == null) {
-        return invoice_ == null ? com.tcn.cloud.api.data.billing.v1alpha1.Invoice.getDefaultInstance() : invoice_;
+        return invoice_ == null ? com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice.getDefaultInstance() : invoice_;
       } else {
         return invoiceBuilder_.getMessage();
       }
     }
     /**
-     * <code>.data.billing.v1alpha1.Invoice invoice = 1 [json_name = "invoice"];</code>
+     * <code>.services.billing.entities.v1alpha1.Invoice invoice = 2 [json_name = "invoice"];</code>
      */
-    public Builder setInvoice(com.tcn.cloud.api.data.billing.v1alpha1.Invoice value) {
+    public Builder setInvoice(com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice value) {
       if (invoiceBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -447,32 +571,32 @@ private static final long serialVersionUID = 0L;
       } else {
         invoiceBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000001;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
-     * <code>.data.billing.v1alpha1.Invoice invoice = 1 [json_name = "invoice"];</code>
+     * <code>.services.billing.entities.v1alpha1.Invoice invoice = 2 [json_name = "invoice"];</code>
      */
     public Builder setInvoice(
-        com.tcn.cloud.api.data.billing.v1alpha1.Invoice.Builder builderForValue) {
+        com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice.Builder builderForValue) {
       if (invoiceBuilder_ == null) {
         invoice_ = builderForValue.build();
       } else {
         invoiceBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000001;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
-     * <code>.data.billing.v1alpha1.Invoice invoice = 1 [json_name = "invoice"];</code>
+     * <code>.services.billing.entities.v1alpha1.Invoice invoice = 2 [json_name = "invoice"];</code>
      */
-    public Builder mergeInvoice(com.tcn.cloud.api.data.billing.v1alpha1.Invoice value) {
+    public Builder mergeInvoice(com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice value) {
       if (invoiceBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0) &&
+        if (((bitField0_ & 0x00000002) != 0) &&
           invoice_ != null &&
-          invoice_ != com.tcn.cloud.api.data.billing.v1alpha1.Invoice.getDefaultInstance()) {
+          invoice_ != com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice.getDefaultInstance()) {
           getInvoiceBuilder().mergeFrom(value);
         } else {
           invoice_ = value;
@@ -480,15 +604,15 @@ private static final long serialVersionUID = 0L;
       } else {
         invoiceBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000001;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
-     * <code>.data.billing.v1alpha1.Invoice invoice = 1 [json_name = "invoice"];</code>
+     * <code>.services.billing.entities.v1alpha1.Invoice invoice = 2 [json_name = "invoice"];</code>
      */
     public Builder clearInvoice() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       invoice_ = null;
       if (invoiceBuilder_ != null) {
         invoiceBuilder_.dispose();
@@ -498,33 +622,33 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.data.billing.v1alpha1.Invoice invoice = 1 [json_name = "invoice"];</code>
+     * <code>.services.billing.entities.v1alpha1.Invoice invoice = 2 [json_name = "invoice"];</code>
      */
-    public com.tcn.cloud.api.data.billing.v1alpha1.Invoice.Builder getInvoiceBuilder() {
-      bitField0_ |= 0x00000001;
+    public com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice.Builder getInvoiceBuilder() {
+      bitField0_ |= 0x00000002;
       onChanged();
       return getInvoiceFieldBuilder().getBuilder();
     }
     /**
-     * <code>.data.billing.v1alpha1.Invoice invoice = 1 [json_name = "invoice"];</code>
+     * <code>.services.billing.entities.v1alpha1.Invoice invoice = 2 [json_name = "invoice"];</code>
      */
-    public com.tcn.cloud.api.data.billing.v1alpha1.InvoiceOrBuilder getInvoiceOrBuilder() {
+    public com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceOrBuilder getInvoiceOrBuilder() {
       if (invoiceBuilder_ != null) {
         return invoiceBuilder_.getMessageOrBuilder();
       } else {
         return invoice_ == null ?
-            com.tcn.cloud.api.data.billing.v1alpha1.Invoice.getDefaultInstance() : invoice_;
+            com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice.getDefaultInstance() : invoice_;
       }
     }
     /**
-     * <code>.data.billing.v1alpha1.Invoice invoice = 1 [json_name = "invoice"];</code>
+     * <code>.services.billing.entities.v1alpha1.Invoice invoice = 2 [json_name = "invoice"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.data.billing.v1alpha1.Invoice, com.tcn.cloud.api.data.billing.v1alpha1.Invoice.Builder, com.tcn.cloud.api.data.billing.v1alpha1.InvoiceOrBuilder> 
+        com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice, com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceOrBuilder> 
         getInvoiceFieldBuilder() {
       if (invoiceBuilder_ == null) {
         invoiceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.data.billing.v1alpha1.Invoice, com.tcn.cloud.api.data.billing.v1alpha1.Invoice.Builder, com.tcn.cloud.api.data.billing.v1alpha1.InvoiceOrBuilder>(
+            com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice, com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceOrBuilder>(
                 getInvoice(),
                 getParentForChildren(),
                 isClean());

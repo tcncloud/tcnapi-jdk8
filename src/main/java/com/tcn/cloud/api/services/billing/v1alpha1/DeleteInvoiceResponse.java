@@ -4,10 +4,6 @@
 package com.tcn.cloud.api.services.billing.v1alpha1;
 
 /**
- * <pre>
- * DeleteInvoiceResponse is a response to deleting an invoice.
- * </pre>
- *
  * Protobuf type {@code services.billing.v1alpha1.DeleteInvoiceResponse}
  */
 public final class DeleteInvoiceResponse extends
@@ -189,10 +185,6 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * <pre>
-   * DeleteInvoiceResponse is a response to deleting an invoice.
-   * </pre>
-   *
    * Protobuf type {@code services.billing.v1alpha1.DeleteInvoiceResponse}
    */
   public static final class Builder extends

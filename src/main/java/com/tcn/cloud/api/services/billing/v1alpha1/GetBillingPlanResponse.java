@@ -4,11 +4,6 @@
 package com.tcn.cloud.api.services.billing.v1alpha1;
 
 /**
- * <pre>
- * GetBillingPlanResponse is a response to a request to get the active
- * billing plan for an organization.
- * </pre>
- *
  * Protobuf type {@code services.billing.v1alpha1.GetBillingPlanResponse}
  */
 public final class GetBillingPlanResponse extends
@@ -44,9 +39,9 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int BILLING_PLAN_FIELD_NUMBER = 1;
-  private com.tcn.cloud.api.data.billing.v1alpha1.BillingPlan billingPlan_;
+  private com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlan billingPlan_;
   /**
-   * <code>.data.billing.v1alpha1.BillingPlan billing_plan = 1 [json_name = "billingPlan"];</code>
+   * <code>.services.billing.entities.v1alpha1.BillingPlan billing_plan = 1 [json_name = "billingPlan"];</code>
    * @return Whether the billingPlan field is set.
    */
   @java.lang.Override
@@ -54,19 +49,19 @@ private static final long serialVersionUID = 0L;
     return billingPlan_ != null;
   }
   /**
-   * <code>.data.billing.v1alpha1.BillingPlan billing_plan = 1 [json_name = "billingPlan"];</code>
+   * <code>.services.billing.entities.v1alpha1.BillingPlan billing_plan = 1 [json_name = "billingPlan"];</code>
    * @return The billingPlan.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.data.billing.v1alpha1.BillingPlan getBillingPlan() {
-    return billingPlan_ == null ? com.tcn.cloud.api.data.billing.v1alpha1.BillingPlan.getDefaultInstance() : billingPlan_;
+  public com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlan getBillingPlan() {
+    return billingPlan_ == null ? com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlan.getDefaultInstance() : billingPlan_;
   }
   /**
-   * <code>.data.billing.v1alpha1.BillingPlan billing_plan = 1 [json_name = "billingPlan"];</code>
+   * <code>.services.billing.entities.v1alpha1.BillingPlan billing_plan = 1 [json_name = "billingPlan"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.data.billing.v1alpha1.BillingPlanOrBuilder getBillingPlanOrBuilder() {
-    return billingPlan_ == null ? com.tcn.cloud.api.data.billing.v1alpha1.BillingPlan.getDefaultInstance() : billingPlan_;
+  public com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlanOrBuilder getBillingPlanOrBuilder() {
+    return billingPlan_ == null ? com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlan.getDefaultInstance() : billingPlan_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -232,11 +227,6 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * <pre>
-   * GetBillingPlanResponse is a response to a request to get the active
-   * billing plan for an organization.
-   * </pre>
-   *
    * Protobuf type {@code services.billing.v1alpha1.GetBillingPlanResponse}
    */
   public static final class Builder extends
@@ -412,31 +402,31 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private com.tcn.cloud.api.data.billing.v1alpha1.BillingPlan billingPlan_;
+    private com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlan billingPlan_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.data.billing.v1alpha1.BillingPlan, com.tcn.cloud.api.data.billing.v1alpha1.BillingPlan.Builder, com.tcn.cloud.api.data.billing.v1alpha1.BillingPlanOrBuilder> billingPlanBuilder_;
+        com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlan, com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlan.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlanOrBuilder> billingPlanBuilder_;
     /**
-     * <code>.data.billing.v1alpha1.BillingPlan billing_plan = 1 [json_name = "billingPlan"];</code>
+     * <code>.services.billing.entities.v1alpha1.BillingPlan billing_plan = 1 [json_name = "billingPlan"];</code>
      * @return Whether the billingPlan field is set.
      */
     public boolean hasBillingPlan() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>.data.billing.v1alpha1.BillingPlan billing_plan = 1 [json_name = "billingPlan"];</code>
+     * <code>.services.billing.entities.v1alpha1.BillingPlan billing_plan = 1 [json_name = "billingPlan"];</code>
      * @return The billingPlan.
      */
-    public com.tcn.cloud.api.data.billing.v1alpha1.BillingPlan getBillingPlan() {
+    public com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlan getBillingPlan() {
       if (billingPlanBuilder_ == null) {
-        return billingPlan_ == null ? com.tcn.cloud.api.data.billing.v1alpha1.BillingPlan.getDefaultInstance() : billingPlan_;
+        return billingPlan_ == null ? com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlan.getDefaultInstance() : billingPlan_;
       } else {
         return billingPlanBuilder_.getMessage();
       }
     }
     /**
-     * <code>.data.billing.v1alpha1.BillingPlan billing_plan = 1 [json_name = "billingPlan"];</code>
+     * <code>.services.billing.entities.v1alpha1.BillingPlan billing_plan = 1 [json_name = "billingPlan"];</code>
      */
-    public Builder setBillingPlan(com.tcn.cloud.api.data.billing.v1alpha1.BillingPlan value) {
+    public Builder setBillingPlan(com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlan value) {
       if (billingPlanBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -450,10 +440,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.data.billing.v1alpha1.BillingPlan billing_plan = 1 [json_name = "billingPlan"];</code>
+     * <code>.services.billing.entities.v1alpha1.BillingPlan billing_plan = 1 [json_name = "billingPlan"];</code>
      */
     public Builder setBillingPlan(
-        com.tcn.cloud.api.data.billing.v1alpha1.BillingPlan.Builder builderForValue) {
+        com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlan.Builder builderForValue) {
       if (billingPlanBuilder_ == null) {
         billingPlan_ = builderForValue.build();
       } else {
@@ -464,13 +454,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.data.billing.v1alpha1.BillingPlan billing_plan = 1 [json_name = "billingPlan"];</code>
+     * <code>.services.billing.entities.v1alpha1.BillingPlan billing_plan = 1 [json_name = "billingPlan"];</code>
      */
-    public Builder mergeBillingPlan(com.tcn.cloud.api.data.billing.v1alpha1.BillingPlan value) {
+    public Builder mergeBillingPlan(com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlan value) {
       if (billingPlanBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0) &&
           billingPlan_ != null &&
-          billingPlan_ != com.tcn.cloud.api.data.billing.v1alpha1.BillingPlan.getDefaultInstance()) {
+          billingPlan_ != com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlan.getDefaultInstance()) {
           getBillingPlanBuilder().mergeFrom(value);
         } else {
           billingPlan_ = value;
@@ -483,7 +473,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.data.billing.v1alpha1.BillingPlan billing_plan = 1 [json_name = "billingPlan"];</code>
+     * <code>.services.billing.entities.v1alpha1.BillingPlan billing_plan = 1 [json_name = "billingPlan"];</code>
      */
     public Builder clearBillingPlan() {
       bitField0_ = (bitField0_ & ~0x00000001);
@@ -496,33 +486,33 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.data.billing.v1alpha1.BillingPlan billing_plan = 1 [json_name = "billingPlan"];</code>
+     * <code>.services.billing.entities.v1alpha1.BillingPlan billing_plan = 1 [json_name = "billingPlan"];</code>
      */
-    public com.tcn.cloud.api.data.billing.v1alpha1.BillingPlan.Builder getBillingPlanBuilder() {
+    public com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlan.Builder getBillingPlanBuilder() {
       bitField0_ |= 0x00000001;
       onChanged();
       return getBillingPlanFieldBuilder().getBuilder();
     }
     /**
-     * <code>.data.billing.v1alpha1.BillingPlan billing_plan = 1 [json_name = "billingPlan"];</code>
+     * <code>.services.billing.entities.v1alpha1.BillingPlan billing_plan = 1 [json_name = "billingPlan"];</code>
      */
-    public com.tcn.cloud.api.data.billing.v1alpha1.BillingPlanOrBuilder getBillingPlanOrBuilder() {
+    public com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlanOrBuilder getBillingPlanOrBuilder() {
       if (billingPlanBuilder_ != null) {
         return billingPlanBuilder_.getMessageOrBuilder();
       } else {
         return billingPlan_ == null ?
-            com.tcn.cloud.api.data.billing.v1alpha1.BillingPlan.getDefaultInstance() : billingPlan_;
+            com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlan.getDefaultInstance() : billingPlan_;
       }
     }
     /**
-     * <code>.data.billing.v1alpha1.BillingPlan billing_plan = 1 [json_name = "billingPlan"];</code>
+     * <code>.services.billing.entities.v1alpha1.BillingPlan billing_plan = 1 [json_name = "billingPlan"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.data.billing.v1alpha1.BillingPlan, com.tcn.cloud.api.data.billing.v1alpha1.BillingPlan.Builder, com.tcn.cloud.api.data.billing.v1alpha1.BillingPlanOrBuilder> 
+        com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlan, com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlan.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlanOrBuilder> 
         getBillingPlanFieldBuilder() {
       if (billingPlanBuilder_ == null) {
         billingPlanBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.data.billing.v1alpha1.BillingPlan, com.tcn.cloud.api.data.billing.v1alpha1.BillingPlan.Builder, com.tcn.cloud.api.data.billing.v1alpha1.BillingPlanOrBuilder>(
+            com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlan, com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlan.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlanOrBuilder>(
                 getBillingPlan(),
                 getParentForChildren(),
                 isClean());

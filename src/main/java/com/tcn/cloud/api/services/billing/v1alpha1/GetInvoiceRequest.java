@@ -4,10 +4,6 @@
 package com.tcn.cloud.api.services.billing.v1alpha1;
 
 /**
- * <pre>
- * GetInvoiceRequest is a request to get an invoice.
- * </pre>
- *
  * Protobuf type {@code services.billing.v1alpha1.GetInvoiceRequest}
  */
 public final class GetInvoiceRequest extends
@@ -239,10 +235,6 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * <pre>
-   * GetInvoiceRequest is a request to get an invoice.
-   * </pre>
-   *
    * Protobuf type {@code services.billing.v1alpha1.GetInvoiceRequest}
    */
   public static final class Builder extends

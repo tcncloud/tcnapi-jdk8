@@ -8,14 +8,14 @@ public interface GetBillingPlanRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string org_id = 1 [json_name = "orgId"];</code>
-   * @return The orgId.
+   * <code>string billing_plan_id = 1 [json_name = "billingPlanId"];</code>
+   * @return The billingPlanId.
    */
-  java.lang.String getOrgId();
+  java.lang.String getBillingPlanId();
   /**
-   * <code>string org_id = 1 [json_name = "orgId"];</code>
-   * @return The bytes for orgId.
+   * <code>string billing_plan_id = 1 [json_name = "billingPlanId"];</code>
+   * @return The bytes for billingPlanId.
    */
   com.google.protobuf.ByteString
-      getOrgIdBytes();
+      getBillingPlanIdBytes();
 }

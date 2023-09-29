@@ -8,17 +8,29 @@ public interface CreateInvoiceRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.data.billing.v1alpha1.Invoice invoice = 1 [json_name = "invoice"];</code>
+   * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+   * @return The invoiceId.
+   */
+  java.lang.String getInvoiceId();
+  /**
+   * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+   * @return The bytes for invoiceId.
+   */
+  com.google.protobuf.ByteString
+      getInvoiceIdBytes();
+
+  /**
+   * <code>.services.billing.entities.v1alpha1.Invoice invoice = 2 [json_name = "invoice"];</code>
    * @return Whether the invoice field is set.
    */
   boolean hasInvoice();
   /**
-   * <code>.data.billing.v1alpha1.Invoice invoice = 1 [json_name = "invoice"];</code>
+   * <code>.services.billing.entities.v1alpha1.Invoice invoice = 2 [json_name = "invoice"];</code>
    * @return The invoice.
    */
-  com.tcn.cloud.api.data.billing.v1alpha1.Invoice getInvoice();
+  com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice getInvoice();
   /**
-   * <code>.data.billing.v1alpha1.Invoice invoice = 1 [json_name = "invoice"];</code>
+   * <code>.services.billing.entities.v1alpha1.Invoice invoice = 2 [json_name = "invoice"];</code>
    */
-  com.tcn.cloud.api.data.billing.v1alpha1.InvoiceOrBuilder getInvoiceOrBuilder();
+  com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceOrBuilder getInvoiceOrBuilder();
 }

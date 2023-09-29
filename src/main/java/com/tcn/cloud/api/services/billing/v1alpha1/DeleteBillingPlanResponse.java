@@ -4,11 +4,6 @@
 package com.tcn.cloud.api.services.billing.v1alpha1;
 
 /**
- * <pre>
- * DeleteBillingPlanResponse is a response to a request to delete
- * a billing plan for an organization.
- * </pre>
- *
  * Protobuf type {@code services.billing.v1alpha1.DeleteBillingPlanResponse}
  */
 public final class DeleteBillingPlanResponse extends
@@ -190,11 +185,6 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * <pre>
-   * DeleteBillingPlanResponse is a response to a request to delete
-   * a billing plan for an organization.
-   * </pre>
-   *
    * Protobuf type {@code services.billing.v1alpha1.DeleteBillingPlanResponse}
    */
   public static final class Builder extends

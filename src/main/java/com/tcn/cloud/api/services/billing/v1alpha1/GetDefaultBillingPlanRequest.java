@@ -4,11 +4,6 @@
 package com.tcn.cloud.api.services.billing.v1alpha1;
 
 /**
- * <pre>
- * GetDefaultBillingPlanRequest is a request to get the default billing
- * plan for a region.
- * </pre>
- *
  * Protobuf type {@code services.billing.v1alpha1.GetDefaultBillingPlanRequest}
  */
 public final class GetDefaultBillingPlanRequest extends
@@ -190,11 +185,6 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * <pre>
-   * GetDefaultBillingPlanRequest is a request to get the default billing
-   * plan for a region.
-   * </pre>
-   *
    * Protobuf type {@code services.billing.v1alpha1.GetDefaultBillingPlanRequest}
    */
   public static final class Builder extends

@@ -8,17 +8,46 @@ public interface ListInvoicesResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.data.billing.v1alpha1.Invoice invoice = 1 [json_name = "invoice"];</code>
-   * @return Whether the invoice field is set.
+   * <code>repeated .services.billing.entities.v1alpha1.Invoice invoices = 1 [json_name = "invoices"];</code>
    */
-  boolean hasInvoice();
+  java.util.List<com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice> 
+      getInvoicesList();
   /**
-   * <code>.data.billing.v1alpha1.Invoice invoice = 1 [json_name = "invoice"];</code>
-   * @return The invoice.
+   * <code>repeated .services.billing.entities.v1alpha1.Invoice invoices = 1 [json_name = "invoices"];</code>
    */
-  com.tcn.cloud.api.data.billing.v1alpha1.Invoice getInvoice();
+  com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice getInvoices(int index);
   /**
-   * <code>.data.billing.v1alpha1.Invoice invoice = 1 [json_name = "invoice"];</code>
+   * <code>repeated .services.billing.entities.v1alpha1.Invoice invoices = 1 [json_name = "invoices"];</code>
    */
-  com.tcn.cloud.api.data.billing.v1alpha1.InvoiceOrBuilder getInvoiceOrBuilder();
+  int getInvoicesCount();
+  /**
+   * <code>repeated .services.billing.entities.v1alpha1.Invoice invoices = 1 [json_name = "invoices"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceOrBuilder> 
+      getInvoicesOrBuilderList();
+  /**
+   * <code>repeated .services.billing.entities.v1alpha1.Invoice invoices = 1 [json_name = "invoices"];</code>
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceOrBuilder getInvoicesOrBuilder(
+      int index);
+
+  /**
+   * <pre>
+   * Optional: only present if paginating.
+   * </pre>
+   *
+   * <code>string token = 2 [json_name = "token"];</code>
+   * @return The token.
+   */
+  java.lang.String getToken();
+  /**
+   * <pre>
+   * Optional: only present if paginating.
+   * </pre>
+   *
+   * <code>string token = 2 [json_name = "token"];</code>
+   * @return The bytes for token.
+   */
+  com.google.protobuf.ByteString
+      getTokenBytes();
 }

@@ -4,11 +4,6 @@
 package com.tcn.cloud.api.services.billing.v1alpha1;
 
 /**
- * <pre>
- * UpdateDefaultBillingPlanResponse is a response to a request to update the
- * default billing plan for a region.
- * </pre>
- *
  * Protobuf type {@code services.billing.v1alpha1.UpdateDefaultBillingPlanResponse}
  */
 public final class UpdateDefaultBillingPlanResponse extends
@@ -43,32 +38,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.services.billing.v1alpha1.UpdateDefaultBillingPlanResponse.class, com.tcn.cloud.api.services.billing.v1alpha1.UpdateDefaultBillingPlanResponse.Builder.class);
   }
 
-  public static final int BILLING_PLAN_FIELD_NUMBER = 1;
-  private com.tcn.cloud.api.data.billing.v1alpha1.BillingPlan billingPlan_;
-  /**
-   * <code>.data.billing.v1alpha1.BillingPlan billing_plan = 1 [json_name = "billingPlan"];</code>
-   * @return Whether the billingPlan field is set.
-   */
-  @java.lang.Override
-  public boolean hasBillingPlan() {
-    return billingPlan_ != null;
-  }
-  /**
-   * <code>.data.billing.v1alpha1.BillingPlan billing_plan = 1 [json_name = "billingPlan"];</code>
-   * @return The billingPlan.
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.data.billing.v1alpha1.BillingPlan getBillingPlan() {
-    return billingPlan_ == null ? com.tcn.cloud.api.data.billing.v1alpha1.BillingPlan.getDefaultInstance() : billingPlan_;
-  }
-  /**
-   * <code>.data.billing.v1alpha1.BillingPlan billing_plan = 1 [json_name = "billingPlan"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.data.billing.v1alpha1.BillingPlanOrBuilder getBillingPlanOrBuilder() {
-    return billingPlan_ == null ? com.tcn.cloud.api.data.billing.v1alpha1.BillingPlan.getDefaultInstance() : billingPlan_;
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -83,9 +52,6 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (billingPlan_ != null) {
-      output.writeMessage(1, getBillingPlan());
-    }
     getUnknownFields().writeTo(output);
   }
 
@@ -95,10 +61,6 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (billingPlan_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, getBillingPlan());
-    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -114,11 +76,6 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.services.billing.v1alpha1.UpdateDefaultBillingPlanResponse other = (com.tcn.cloud.api.services.billing.v1alpha1.UpdateDefaultBillingPlanResponse) obj;
 
-    if (hasBillingPlan() != other.hasBillingPlan()) return false;
-    if (hasBillingPlan()) {
-      if (!getBillingPlan()
-          .equals(other.getBillingPlan())) return false;
-    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -130,10 +87,6 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (hasBillingPlan()) {
-      hash = (37 * hash) + BILLING_PLAN_FIELD_NUMBER;
-      hash = (53 * hash) + getBillingPlan().hashCode();
-    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -232,11 +185,6 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * <pre>
-   * UpdateDefaultBillingPlanResponse is a response to a request to update the
-   * default billing plan for a region.
-   * </pre>
-   *
    * Protobuf type {@code services.billing.v1alpha1.UpdateDefaultBillingPlanResponse}
    */
   public static final class Builder extends
@@ -269,12 +217,6 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
-      billingPlan_ = null;
-      if (billingPlanBuilder_ != null) {
-        billingPlanBuilder_.dispose();
-        billingPlanBuilder_ = null;
-      }
       return this;
     }
 
@@ -301,18 +243,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.services.billing.v1alpha1.UpdateDefaultBillingPlanResponse buildPartial() {
       com.tcn.cloud.api.services.billing.v1alpha1.UpdateDefaultBillingPlanResponse result = new com.tcn.cloud.api.services.billing.v1alpha1.UpdateDefaultBillingPlanResponse(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.services.billing.v1alpha1.UpdateDefaultBillingPlanResponse result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.billingPlan_ = billingPlanBuilder_ == null
-            ? billingPlan_
-            : billingPlanBuilder_.build();
-      }
     }
 
     @java.lang.Override
@@ -359,9 +291,6 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.services.billing.v1alpha1.UpdateDefaultBillingPlanResponse other) {
       if (other == com.tcn.cloud.api.services.billing.v1alpha1.UpdateDefaultBillingPlanResponse.getDefaultInstance()) return this;
-      if (other.hasBillingPlan()) {
-        mergeBillingPlan(other.getBillingPlan());
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -388,13 +317,6 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 10: {
-              input.readMessage(
-                  getBillingPlanFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -409,126 +331,6 @@ private static final long serialVersionUID = 0L;
         onChanged();
       } // finally
       return this;
-    }
-    private int bitField0_;
-
-    private com.tcn.cloud.api.data.billing.v1alpha1.BillingPlan billingPlan_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.data.billing.v1alpha1.BillingPlan, com.tcn.cloud.api.data.billing.v1alpha1.BillingPlan.Builder, com.tcn.cloud.api.data.billing.v1alpha1.BillingPlanOrBuilder> billingPlanBuilder_;
-    /**
-     * <code>.data.billing.v1alpha1.BillingPlan billing_plan = 1 [json_name = "billingPlan"];</code>
-     * @return Whether the billingPlan field is set.
-     */
-    public boolean hasBillingPlan() {
-      return ((bitField0_ & 0x00000001) != 0);
-    }
-    /**
-     * <code>.data.billing.v1alpha1.BillingPlan billing_plan = 1 [json_name = "billingPlan"];</code>
-     * @return The billingPlan.
-     */
-    public com.tcn.cloud.api.data.billing.v1alpha1.BillingPlan getBillingPlan() {
-      if (billingPlanBuilder_ == null) {
-        return billingPlan_ == null ? com.tcn.cloud.api.data.billing.v1alpha1.BillingPlan.getDefaultInstance() : billingPlan_;
-      } else {
-        return billingPlanBuilder_.getMessage();
-      }
-    }
-    /**
-     * <code>.data.billing.v1alpha1.BillingPlan billing_plan = 1 [json_name = "billingPlan"];</code>
-     */
-    public Builder setBillingPlan(com.tcn.cloud.api.data.billing.v1alpha1.BillingPlan value) {
-      if (billingPlanBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        billingPlan_ = value;
-      } else {
-        billingPlanBuilder_.setMessage(value);
-      }
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.data.billing.v1alpha1.BillingPlan billing_plan = 1 [json_name = "billingPlan"];</code>
-     */
-    public Builder setBillingPlan(
-        com.tcn.cloud.api.data.billing.v1alpha1.BillingPlan.Builder builderForValue) {
-      if (billingPlanBuilder_ == null) {
-        billingPlan_ = builderForValue.build();
-      } else {
-        billingPlanBuilder_.setMessage(builderForValue.build());
-      }
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.data.billing.v1alpha1.BillingPlan billing_plan = 1 [json_name = "billingPlan"];</code>
-     */
-    public Builder mergeBillingPlan(com.tcn.cloud.api.data.billing.v1alpha1.BillingPlan value) {
-      if (billingPlanBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0) &&
-          billingPlan_ != null &&
-          billingPlan_ != com.tcn.cloud.api.data.billing.v1alpha1.BillingPlan.getDefaultInstance()) {
-          getBillingPlanBuilder().mergeFrom(value);
-        } else {
-          billingPlan_ = value;
-        }
-      } else {
-        billingPlanBuilder_.mergeFrom(value);
-      }
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.data.billing.v1alpha1.BillingPlan billing_plan = 1 [json_name = "billingPlan"];</code>
-     */
-    public Builder clearBillingPlan() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      billingPlan_ = null;
-      if (billingPlanBuilder_ != null) {
-        billingPlanBuilder_.dispose();
-        billingPlanBuilder_ = null;
-      }
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.data.billing.v1alpha1.BillingPlan billing_plan = 1 [json_name = "billingPlan"];</code>
-     */
-    public com.tcn.cloud.api.data.billing.v1alpha1.BillingPlan.Builder getBillingPlanBuilder() {
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return getBillingPlanFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.data.billing.v1alpha1.BillingPlan billing_plan = 1 [json_name = "billingPlan"];</code>
-     */
-    public com.tcn.cloud.api.data.billing.v1alpha1.BillingPlanOrBuilder getBillingPlanOrBuilder() {
-      if (billingPlanBuilder_ != null) {
-        return billingPlanBuilder_.getMessageOrBuilder();
-      } else {
-        return billingPlan_ == null ?
-            com.tcn.cloud.api.data.billing.v1alpha1.BillingPlan.getDefaultInstance() : billingPlan_;
-      }
-    }
-    /**
-     * <code>.data.billing.v1alpha1.BillingPlan billing_plan = 1 [json_name = "billingPlan"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.data.billing.v1alpha1.BillingPlan, com.tcn.cloud.api.data.billing.v1alpha1.BillingPlan.Builder, com.tcn.cloud.api.data.billing.v1alpha1.BillingPlanOrBuilder> 
-        getBillingPlanFieldBuilder() {
-      if (billingPlanBuilder_ == null) {
-        billingPlanBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.data.billing.v1alpha1.BillingPlan, com.tcn.cloud.api.data.billing.v1alpha1.BillingPlan.Builder, com.tcn.cloud.api.data.billing.v1alpha1.BillingPlanOrBuilder>(
-                getBillingPlan(),
-                getParentForChildren(),
-                isClean());
-        billingPlan_ = null;
-      }
-      return billingPlanBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

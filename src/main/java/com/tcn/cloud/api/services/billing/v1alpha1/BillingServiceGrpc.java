@@ -3,9 +3,6 @@ package com.tcn.cloud.api.services.billing.v1alpha1;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
- * <pre>
- * BillingService handles billing requests.
- * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.57.1)",
@@ -140,6 +137,37 @@ public final class BillingServiceGrpc {
       }
     }
     return getDeleteInvoiceMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.GetActiveBillingPlanRequest,
+      com.tcn.cloud.api.services.billing.v1alpha1.GetActiveBillingPlanResponse> getGetActiveBillingPlanMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetActiveBillingPlan",
+      requestType = com.tcn.cloud.api.services.billing.v1alpha1.GetActiveBillingPlanRequest.class,
+      responseType = com.tcn.cloud.api.services.billing.v1alpha1.GetActiveBillingPlanResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.GetActiveBillingPlanRequest,
+      com.tcn.cloud.api.services.billing.v1alpha1.GetActiveBillingPlanResponse> getGetActiveBillingPlanMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.GetActiveBillingPlanRequest, com.tcn.cloud.api.services.billing.v1alpha1.GetActiveBillingPlanResponse> getGetActiveBillingPlanMethod;
+    if ((getGetActiveBillingPlanMethod = BillingServiceGrpc.getGetActiveBillingPlanMethod) == null) {
+      synchronized (BillingServiceGrpc.class) {
+        if ((getGetActiveBillingPlanMethod = BillingServiceGrpc.getGetActiveBillingPlanMethod) == null) {
+          BillingServiceGrpc.getGetActiveBillingPlanMethod = getGetActiveBillingPlanMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.services.billing.v1alpha1.GetActiveBillingPlanRequest, com.tcn.cloud.api.services.billing.v1alpha1.GetActiveBillingPlanResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetActiveBillingPlan"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.billing.v1alpha1.GetActiveBillingPlanRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.billing.v1alpha1.GetActiveBillingPlanResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new BillingServiceMethodDescriptorSupplier("GetActiveBillingPlan"))
+              .build();
+        }
+      }
+    }
+    return getGetActiveBillingPlanMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.GetBillingPlanRequest,
@@ -435,15 +463,19 @@ public final class BillingServiceGrpc {
   }
 
   /**
-   * <pre>
-   * BillingService handles billing requests.
-   * </pre>
    */
   public interface AsyncService {
 
     /**
      * <pre>
-     * CreateBillingPlan creates a new billing plan for an organization.
+     * Creates a billing plan for the ORG.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
     default void createBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.CreateBillingPlanRequest request,
@@ -453,8 +485,16 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * CreateInvoice creates a new invoice for an organization for the specified
-     * billing cycle. If one already exists, the old one will be deleted first.
+     * Creates an invoice for the ORG for the specified billing cycle.
+     *   - If an invoice already exists for the ORG for the specified billing cycle,
+     *     the old one will be deleted first.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
     default void createInvoice(com.tcn.cloud.api.services.billing.v1alpha1.CreateInvoiceRequest request,
@@ -464,8 +504,15 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * DeleteBillingPlan deletes the specified inactive billing plan. This will fail
-     * if the billing plan is in use, or already deleted.
+     * Deletes an inactive billing plan. A billing plan is inactive if it hasn't started.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified billing plan doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
     default void deleteBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.DeleteBillingPlanRequest request,
@@ -475,7 +522,15 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * DeleteInvoice deletes the specified invoice.
+     * Deletes an invoice.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified invoice doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
     default void deleteInvoice(com.tcn.cloud.api.services.billing.v1alpha1.DeleteInvoiceRequest request,
@@ -485,7 +540,36 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * GetBillingPlan returns the active billing plan for the organization.
+     * Returns the active billing plan for the ORG. The active billing plan is a billing plan whose
+     * start_time has passed and end_time has not passed. If multiple satisfy that requirement, the
+     * newest one is considered active. If no plan is active, it indicates the org is currently using
+     * only the system defaults.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The org does not have an active billing plan.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
+     * </pre>
+     */
+    default void getActiveBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.GetActiveBillingPlanRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.GetActiveBillingPlanResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetActiveBillingPlanMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Returns the specified billing plan.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified billing plan doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
     default void getBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.GetBillingPlanRequest request,
@@ -495,7 +579,13 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * GetDefaultBillingPlan returns the default billing plan for the region.
+     * Returns the default billing plan for the REGION.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
     default void getDefaultBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.GetDefaultBillingPlanRequest request,
@@ -505,7 +595,15 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * GetInvoice returns the specified invoice.
+     * Returns the specified invoice.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified invoice doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
     default void getInvoice(com.tcn.cloud.api.services.billing.v1alpha1.GetInvoiceRequest request,
@@ -515,7 +613,15 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * ListBillingPlans returns the specified list of billing plans.
+     * Lists the billing plans for the ORG. This includes both active and inactive plans, but does not
+     * include deleted plans.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
     default void listBillingPlans(com.tcn.cloud.api.services.billing.v1alpha1.ListBillingPlansRequest request,
@@ -525,7 +631,14 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * ListInvoices returns the specified list of invoices.
+     * Lists the invoices for the ORG.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
     default void listInvoices(com.tcn.cloud.api.services.billing.v1alpha1.ListInvoicesRequest request,
@@ -535,8 +648,15 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * UpdateBillingPlan updates the specified billing plan. This is expected to provide
-     * all the rate definitions for the billing plan if updating rates.
+     * Updates an inactive billing plan. A billing plan is inactive if it hasn't started.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified billing plan doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
     default void updateBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.UpdateBillingPlanRequest request,
@@ -546,8 +666,14 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * UpdateDefaultBillingPlan updates the default billing plan. This is expected to provide
-     * all the rate definitions for the billing plan.
+     * Updates the default billing plan for the REGION.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
     default void updateDefaultBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.UpdateDefaultBillingPlanRequest request,
@@ -557,7 +683,15 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * UpdateInvoice updates the specified invoice.
+     * Updates the specified invoice.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified invoice doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
     default void updateInvoice(com.tcn.cloud.api.services.billing.v1alpha1.UpdateInvoiceRequest request,
@@ -568,9 +702,6 @@ public final class BillingServiceGrpc {
 
   /**
    * Base class for the server implementation of the service BillingService.
-   * <pre>
-   * BillingService handles billing requests.
-   * </pre>
    */
   public static abstract class BillingServiceImplBase
       implements io.grpc.BindableService, AsyncService {
@@ -582,9 +713,6 @@ public final class BillingServiceGrpc {
 
   /**
    * A stub to allow clients to do asynchronous rpc calls to service BillingService.
-   * <pre>
-   * BillingService handles billing requests.
-   * </pre>
    */
   public static final class BillingServiceStub
       extends io.grpc.stub.AbstractAsyncStub<BillingServiceStub> {
@@ -601,7 +729,14 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * CreateBillingPlan creates a new billing plan for an organization.
+     * Creates a billing plan for the ORG.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
     public void createBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.CreateBillingPlanRequest request,
@@ -612,8 +747,16 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * CreateInvoice creates a new invoice for an organization for the specified
-     * billing cycle. If one already exists, the old one will be deleted first.
+     * Creates an invoice for the ORG for the specified billing cycle.
+     *   - If an invoice already exists for the ORG for the specified billing cycle,
+     *     the old one will be deleted first.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
     public void createInvoice(com.tcn.cloud.api.services.billing.v1alpha1.CreateInvoiceRequest request,
@@ -624,8 +767,15 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * DeleteBillingPlan deletes the specified inactive billing plan. This will fail
-     * if the billing plan is in use, or already deleted.
+     * Deletes an inactive billing plan. A billing plan is inactive if it hasn't started.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified billing plan doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
     public void deleteBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.DeleteBillingPlanRequest request,
@@ -636,7 +786,15 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * DeleteInvoice deletes the specified invoice.
+     * Deletes an invoice.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified invoice doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
     public void deleteInvoice(com.tcn.cloud.api.services.billing.v1alpha1.DeleteInvoiceRequest request,
@@ -647,7 +805,37 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * GetBillingPlan returns the active billing plan for the organization.
+     * Returns the active billing plan for the ORG. The active billing plan is a billing plan whose
+     * start_time has passed and end_time has not passed. If multiple satisfy that requirement, the
+     * newest one is considered active. If no plan is active, it indicates the org is currently using
+     * only the system defaults.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The org does not have an active billing plan.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
+     * </pre>
+     */
+    public void getActiveBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.GetActiveBillingPlanRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.GetActiveBillingPlanResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetActiveBillingPlanMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Returns the specified billing plan.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified billing plan doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
     public void getBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.GetBillingPlanRequest request,
@@ -658,7 +846,13 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * GetDefaultBillingPlan returns the default billing plan for the region.
+     * Returns the default billing plan for the REGION.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
     public void getDefaultBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.GetDefaultBillingPlanRequest request,
@@ -669,7 +863,15 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * GetInvoice returns the specified invoice.
+     * Returns the specified invoice.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified invoice doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
     public void getInvoice(com.tcn.cloud.api.services.billing.v1alpha1.GetInvoiceRequest request,
@@ -680,7 +882,15 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * ListBillingPlans returns the specified list of billing plans.
+     * Lists the billing plans for the ORG. This includes both active and inactive plans, but does not
+     * include deleted plans.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
     public void listBillingPlans(com.tcn.cloud.api.services.billing.v1alpha1.ListBillingPlansRequest request,
@@ -691,7 +901,14 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * ListInvoices returns the specified list of invoices.
+     * Lists the invoices for the ORG.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
     public void listInvoices(com.tcn.cloud.api.services.billing.v1alpha1.ListInvoicesRequest request,
@@ -702,8 +919,15 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * UpdateBillingPlan updates the specified billing plan. This is expected to provide
-     * all the rate definitions for the billing plan if updating rates.
+     * Updates an inactive billing plan. A billing plan is inactive if it hasn't started.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified billing plan doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
     public void updateBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.UpdateBillingPlanRequest request,
@@ -714,8 +938,14 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * UpdateDefaultBillingPlan updates the default billing plan. This is expected to provide
-     * all the rate definitions for the billing plan.
+     * Updates the default billing plan for the REGION.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
     public void updateDefaultBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.UpdateDefaultBillingPlanRequest request,
@@ -726,7 +956,15 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * UpdateInvoice updates the specified invoice.
+     * Updates the specified invoice.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified invoice doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
     public void updateInvoice(com.tcn.cloud.api.services.billing.v1alpha1.UpdateInvoiceRequest request,
@@ -738,9 +976,6 @@ public final class BillingServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service BillingService.
-   * <pre>
-   * BillingService handles billing requests.
-   * </pre>
    */
   public static final class BillingServiceBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<BillingServiceBlockingStub> {
@@ -757,7 +992,14 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * CreateBillingPlan creates a new billing plan for an organization.
+     * Creates a billing plan for the ORG.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
     public com.tcn.cloud.api.services.billing.v1alpha1.CreateBillingPlanResponse createBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.CreateBillingPlanRequest request) {
@@ -767,8 +1009,16 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * CreateInvoice creates a new invoice for an organization for the specified
-     * billing cycle. If one already exists, the old one will be deleted first.
+     * Creates an invoice for the ORG for the specified billing cycle.
+     *   - If an invoice already exists for the ORG for the specified billing cycle,
+     *     the old one will be deleted first.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
     public com.tcn.cloud.api.services.billing.v1alpha1.CreateInvoiceResponse createInvoice(com.tcn.cloud.api.services.billing.v1alpha1.CreateInvoiceRequest request) {
@@ -778,8 +1028,15 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * DeleteBillingPlan deletes the specified inactive billing plan. This will fail
-     * if the billing plan is in use, or already deleted.
+     * Deletes an inactive billing plan. A billing plan is inactive if it hasn't started.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified billing plan doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
     public com.tcn.cloud.api.services.billing.v1alpha1.DeleteBillingPlanResponse deleteBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.DeleteBillingPlanRequest request) {
@@ -789,7 +1046,15 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * DeleteInvoice deletes the specified invoice.
+     * Deletes an invoice.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified invoice doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
     public com.tcn.cloud.api.services.billing.v1alpha1.DeleteInvoiceResponse deleteInvoice(com.tcn.cloud.api.services.billing.v1alpha1.DeleteInvoiceRequest request) {
@@ -799,7 +1064,36 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * GetBillingPlan returns the active billing plan for the organization.
+     * Returns the active billing plan for the ORG. The active billing plan is a billing plan whose
+     * start_time has passed and end_time has not passed. If multiple satisfy that requirement, the
+     * newest one is considered active. If no plan is active, it indicates the org is currently using
+     * only the system defaults.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The org does not have an active billing plan.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
+     * </pre>
+     */
+    public com.tcn.cloud.api.services.billing.v1alpha1.GetActiveBillingPlanResponse getActiveBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.GetActiveBillingPlanRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetActiveBillingPlanMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Returns the specified billing plan.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified billing plan doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
     public com.tcn.cloud.api.services.billing.v1alpha1.GetBillingPlanResponse getBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.GetBillingPlanRequest request) {
@@ -809,7 +1103,13 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * GetDefaultBillingPlan returns the default billing plan for the region.
+     * Returns the default billing plan for the REGION.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
     public com.tcn.cloud.api.services.billing.v1alpha1.GetDefaultBillingPlanResponse getDefaultBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.GetDefaultBillingPlanRequest request) {
@@ -819,7 +1119,15 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * GetInvoice returns the specified invoice.
+     * Returns the specified invoice.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified invoice doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
     public com.tcn.cloud.api.services.billing.v1alpha1.GetInvoiceResponse getInvoice(com.tcn.cloud.api.services.billing.v1alpha1.GetInvoiceRequest request) {
@@ -829,7 +1137,15 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * ListBillingPlans returns the specified list of billing plans.
+     * Lists the billing plans for the ORG. This includes both active and inactive plans, but does not
+     * include deleted plans.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
     public java.util.Iterator<com.tcn.cloud.api.services.billing.v1alpha1.ListBillingPlansResponse> listBillingPlans(
@@ -840,7 +1156,14 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * ListInvoices returns the specified list of invoices.
+     * Lists the invoices for the ORG.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
     public java.util.Iterator<com.tcn.cloud.api.services.billing.v1alpha1.ListInvoicesResponse> listInvoices(
@@ -851,8 +1174,15 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * UpdateBillingPlan updates the specified billing plan. This is expected to provide
-     * all the rate definitions for the billing plan if updating rates.
+     * Updates an inactive billing plan. A billing plan is inactive if it hasn't started.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified billing plan doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
     public com.tcn.cloud.api.services.billing.v1alpha1.UpdateBillingPlanResponse updateBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.UpdateBillingPlanRequest request) {
@@ -862,8 +1192,14 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * UpdateDefaultBillingPlan updates the default billing plan. This is expected to provide
-     * all the rate definitions for the billing plan.
+     * Updates the default billing plan for the REGION.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
     public com.tcn.cloud.api.services.billing.v1alpha1.UpdateDefaultBillingPlanResponse updateDefaultBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.UpdateDefaultBillingPlanRequest request) {
@@ -873,7 +1209,15 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * UpdateInvoice updates the specified invoice.
+     * Updates the specified invoice.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified invoice doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
     public com.tcn.cloud.api.services.billing.v1alpha1.UpdateInvoiceResponse updateInvoice(com.tcn.cloud.api.services.billing.v1alpha1.UpdateInvoiceRequest request) {
@@ -884,9 +1228,6 @@ public final class BillingServiceGrpc {
 
   /**
    * A stub to allow clients to do ListenableFuture-style rpc calls to service BillingService.
-   * <pre>
-   * BillingService handles billing requests.
-   * </pre>
    */
   public static final class BillingServiceFutureStub
       extends io.grpc.stub.AbstractFutureStub<BillingServiceFutureStub> {
@@ -903,7 +1244,14 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * CreateBillingPlan creates a new billing plan for an organization.
+     * Creates a billing plan for the ORG.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.billing.v1alpha1.CreateBillingPlanResponse> createBillingPlan(
@@ -914,8 +1262,16 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * CreateInvoice creates a new invoice for an organization for the specified
-     * billing cycle. If one already exists, the old one will be deleted first.
+     * Creates an invoice for the ORG for the specified billing cycle.
+     *   - If an invoice already exists for the ORG for the specified billing cycle,
+     *     the old one will be deleted first.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.billing.v1alpha1.CreateInvoiceResponse> createInvoice(
@@ -926,8 +1282,15 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * DeleteBillingPlan deletes the specified inactive billing plan. This will fail
-     * if the billing plan is in use, or already deleted.
+     * Deletes an inactive billing plan. A billing plan is inactive if it hasn't started.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified billing plan doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.billing.v1alpha1.DeleteBillingPlanResponse> deleteBillingPlan(
@@ -938,7 +1301,15 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * DeleteInvoice deletes the specified invoice.
+     * Deletes an invoice.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified invoice doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.billing.v1alpha1.DeleteInvoiceResponse> deleteInvoice(
@@ -949,7 +1320,37 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * GetBillingPlan returns the active billing plan for the organization.
+     * Returns the active billing plan for the ORG. The active billing plan is a billing plan whose
+     * start_time has passed and end_time has not passed. If multiple satisfy that requirement, the
+     * newest one is considered active. If no plan is active, it indicates the org is currently using
+     * only the system defaults.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The org does not have an active billing plan.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.billing.v1alpha1.GetActiveBillingPlanResponse> getActiveBillingPlan(
+        com.tcn.cloud.api.services.billing.v1alpha1.GetActiveBillingPlanRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetActiveBillingPlanMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Returns the specified billing plan.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified billing plan doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.billing.v1alpha1.GetBillingPlanResponse> getBillingPlan(
@@ -960,7 +1361,13 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * GetDefaultBillingPlan returns the default billing plan for the region.
+     * Returns the default billing plan for the REGION.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.billing.v1alpha1.GetDefaultBillingPlanResponse> getDefaultBillingPlan(
@@ -971,7 +1378,15 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * GetInvoice returns the specified invoice.
+     * Returns the specified invoice.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified invoice doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.billing.v1alpha1.GetInvoiceResponse> getInvoice(
@@ -982,8 +1397,15 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * UpdateBillingPlan updates the specified billing plan. This is expected to provide
-     * all the rate definitions for the billing plan if updating rates.
+     * Updates an inactive billing plan. A billing plan is inactive if it hasn't started.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified billing plan doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.billing.v1alpha1.UpdateBillingPlanResponse> updateBillingPlan(
@@ -994,8 +1416,14 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * UpdateDefaultBillingPlan updates the default billing plan. This is expected to provide
-     * all the rate definitions for the billing plan.
+     * Updates the default billing plan for the REGION.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.billing.v1alpha1.UpdateDefaultBillingPlanResponse> updateDefaultBillingPlan(
@@ -1006,7 +1434,15 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * UpdateInvoice updates the specified invoice.
+     * Updates the specified invoice.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified invoice doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.billing.v1alpha1.UpdateInvoiceResponse> updateInvoice(
@@ -1020,14 +1456,15 @@ public final class BillingServiceGrpc {
   private static final int METHODID_CREATE_INVOICE = 1;
   private static final int METHODID_DELETE_BILLING_PLAN = 2;
   private static final int METHODID_DELETE_INVOICE = 3;
-  private static final int METHODID_GET_BILLING_PLAN = 4;
-  private static final int METHODID_GET_DEFAULT_BILLING_PLAN = 5;
-  private static final int METHODID_GET_INVOICE = 6;
-  private static final int METHODID_LIST_BILLING_PLANS = 7;
-  private static final int METHODID_LIST_INVOICES = 8;
-  private static final int METHODID_UPDATE_BILLING_PLAN = 9;
-  private static final int METHODID_UPDATE_DEFAULT_BILLING_PLAN = 10;
-  private static final int METHODID_UPDATE_INVOICE = 11;
+  private static final int METHODID_GET_ACTIVE_BILLING_PLAN = 4;
+  private static final int METHODID_GET_BILLING_PLAN = 5;
+  private static final int METHODID_GET_DEFAULT_BILLING_PLAN = 6;
+  private static final int METHODID_GET_INVOICE = 7;
+  private static final int METHODID_LIST_BILLING_PLANS = 8;
+  private static final int METHODID_LIST_INVOICES = 9;
+  private static final int METHODID_UPDATE_BILLING_PLAN = 10;
+  private static final int METHODID_UPDATE_DEFAULT_BILLING_PLAN = 11;
+  private static final int METHODID_UPDATE_INVOICE = 12;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1061,6 +1498,10 @@ public final class BillingServiceGrpc {
         case METHODID_DELETE_INVOICE:
           serviceImpl.deleteInvoice((com.tcn.cloud.api.services.billing.v1alpha1.DeleteInvoiceRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.DeleteInvoiceResponse>) responseObserver);
+          break;
+        case METHODID_GET_ACTIVE_BILLING_PLAN:
+          serviceImpl.getActiveBillingPlan((com.tcn.cloud.api.services.billing.v1alpha1.GetActiveBillingPlanRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.GetActiveBillingPlanResponse>) responseObserver);
           break;
         case METHODID_GET_BILLING_PLAN:
           serviceImpl.getBillingPlan((com.tcn.cloud.api.services.billing.v1alpha1.GetBillingPlanRequest) request,
@@ -1140,6 +1581,13 @@ public final class BillingServiceGrpc {
               com.tcn.cloud.api.services.billing.v1alpha1.DeleteInvoiceRequest,
               com.tcn.cloud.api.services.billing.v1alpha1.DeleteInvoiceResponse>(
                 service, METHODID_DELETE_INVOICE)))
+        .addMethod(
+          getGetActiveBillingPlanMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.services.billing.v1alpha1.GetActiveBillingPlanRequest,
+              com.tcn.cloud.api.services.billing.v1alpha1.GetActiveBillingPlanResponse>(
+                service, METHODID_GET_ACTIVE_BILLING_PLAN)))
         .addMethod(
           getGetBillingPlanMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -1248,6 +1696,7 @@ public final class BillingServiceGrpc {
               .addMethod(getCreateInvoiceMethod())
               .addMethod(getDeleteBillingPlanMethod())
               .addMethod(getDeleteInvoiceMethod())
+              .addMethod(getGetActiveBillingPlanMethod())
               .addMethod(getGetBillingPlanMethod())
               .addMethod(getGetDefaultBillingPlanMethod())
               .addMethod(getGetInvoiceMethod())

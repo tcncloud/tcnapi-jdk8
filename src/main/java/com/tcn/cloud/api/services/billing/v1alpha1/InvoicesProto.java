@@ -74,45 +74,48 @@ public final class InvoicesProto {
   static {
     java.lang.String[] descriptorData = {
       "\n(services/billing/v1alpha1/invoices.pro" +
-      "to\022\031services.billing.v1alpha1\032$data/bill" +
-      "ing/v1alpha1/invoices.proto\032 google/prot" +
-      "obuf/field_mask.proto\032$services/billing/" +
-      "v1alpha1/core.proto\"P\n\024CreateInvoiceRequ" +
-      "est\0228\n\007invoice\030\001 \001(\0132\036.data.billing.v1al" +
-      "pha1.InvoiceR\007invoice\"Q\n\025CreateInvoiceRe" +
-      "sponse\0228\n\007invoice\030\001 \001(\0132\036.data.billing.v" +
-      "1alpha1.InvoiceR\007invoice\"5\n\024DeleteInvoic" +
-      "eRequest\022\035\n\ninvoice_id\030\001 \001(\tR\tinvoiceId\"" +
-      "\027\n\025DeleteInvoiceResponse\"2\n\021GetInvoiceRe" +
-      "quest\022\035\n\ninvoice_id\030\001 \001(\tR\tinvoiceId\"N\n\022" +
-      "GetInvoiceResponse\0228\n\007invoice\030\001 \001(\0132\036.da" +
-      "ta.billing.v1alpha1.InvoiceR\007invoice\"\224\002\n" +
-      "\023ListInvoicesRequest\0228\n\007invoice\030\001 \001(\0132\036." +
-      "data.billing.v1alpha1.InvoiceR\007invoice\022C" +
-      "\n\017selector_fields\030\002 \001(\0132\032.google.protobu" +
-      "f.FieldMaskR\016selectorFields\022?\n\rreturn_fi" +
-      "elds\030\003 \001(\0132\032.google.protobuf.FieldMaskR\014" +
-      "returnFields\022=\n\010order_by\030\004 \001(\0132\".service" +
-      "s.billing.v1alpha1.OrderByR\007orderBy\"P\n\024L" +
-      "istInvoicesResponse\0228\n\007invoice\030\001 \001(\0132\036.d" +
-      "ata.billing.v1alpha1.InvoiceR\007invoice\"\221\001" +
-      "\n\024UpdateInvoiceRequest\0228\n\007invoice\030\001 \001(\0132" +
-      "\036.data.billing.v1alpha1.InvoiceR\007invoice" +
-      "\022?\n\rupdate_fields\030\002 \001(\0132\032.google.protobu" +
-      "f.FieldMaskR\014updateFields\"Q\n\025UpdateInvoi" +
-      "ceResponse\0228\n\007invoice\030\001 \001(\0132\036.data.billi" +
-      "ng.v1alpha1.InvoiceR\007invoiceB\302\001\n+com.tcn" +
-      ".cloud.api.services.billing.v1alpha1B\rIn" +
-      "voicesProtoP\001\242\002\003SBX\252\002\031Services.Billing.V" +
-      "1alpha1\312\002\031Services\\Billing\\V1alpha1\342\002%Se" +
-      "rvices\\Billing\\V1alpha1\\GPBMetadata\352\002\033Se" +
-      "rvices::Billing::V1alpha1b\006proto3"
+      "to\022\031services.billing.v1alpha1\032 google/pr" +
+      "otobuf/field_mask.proto\0320services/billin" +
+      "g/entities/v1alpha1/invoice.proto\032$servi" +
+      "ces/billing/v1alpha1/core.proto\"|\n\024Creat" +
+      "eInvoiceRequest\022\035\n\ninvoice_id\030\001 \001(\tR\tinv" +
+      "oiceId\022E\n\007invoice\030\002 \001(\0132+.services.billi" +
+      "ng.entities.v1alpha1.InvoiceR\007invoice\"6\n" +
+      "\025CreateInvoiceResponse\022\035\n\ninvoice_id\030\001 \001" +
+      "(\tR\tinvoiceId\"5\n\024DeleteInvoiceRequest\022\035\n" +
+      "\ninvoice_id\030\001 \001(\tR\tinvoiceId\"\027\n\025DeleteIn" +
+      "voiceResponse\"2\n\021GetInvoiceRequest\022\035\n\nin" +
+      "voice_id\030\001 \001(\tR\tinvoiceId\"[\n\022GetInvoiceR" +
+      "esponse\022E\n\007invoice\030\001 \001(\0132+.services.bill" +
+      "ing.entities.v1alpha1.InvoiceR\007invoice\"\276" +
+      "\002\n\023ListInvoicesRequest\022\035\n\ninvoice_id\030\001 \001" +
+      "(\tR\tinvoiceId\022E\n\007invoice\030\002 \001(\0132+.service" +
+      "s.billing.entities.v1alpha1.InvoiceR\007inv" +
+      "oice\022?\n\rreturn_fields\030\003 \001(\0132\032.google.pro" +
+      "tobuf.FieldMaskR\014returnFields\022\026\n\006filter\030" +
+      "\004 \001(\tR\006filter\0223\n\004sort\030\005 \001(\0132\037.services.b" +
+      "illing.v1alpha1.SortR\004sort\0223\n\004page\030\006 \001(\013" +
+      "2\037.services.billing.v1alpha1.PageR\004page\"" +
+      "u\n\024ListInvoicesResponse\022G\n\010invoices\030\001 \003(" +
+      "\0132+.services.billing.entities.v1alpha1.I" +
+      "nvoiceR\010invoices\022\024\n\005token\030\002 \001(\tR\005token\"\275" +
+      "\001\n\024UpdateInvoiceRequest\022\035\n\ninvoice_id\030\001 " +
+      "\001(\tR\tinvoiceId\022E\n\007invoice\030\002 \001(\0132+.servic" +
+      "es.billing.entities.v1alpha1.InvoiceR\007in" +
+      "voice\022?\n\rupdate_fields\030\003 \001(\0132\032.google.pr" +
+      "otobuf.FieldMaskR\014updateFields\"\027\n\025Update" +
+      "InvoiceResponseB\302\001\n+com.tcn.cloud.api.se" +
+      "rvices.billing.v1alpha1B\rInvoicesProtoP\001" +
+      "\242\002\003SBX\252\002\031Services.Billing.V1alpha1\312\002\031Ser" +
+      "vices\\Billing\\V1alpha1\342\002%Services\\Billin" +
+      "g\\V1alpha1\\GPBMetadata\352\002\033Services::Billi" +
+      "ng::V1alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.tcn.cloud.api.data.billing.v1alpha1.InvoicesProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
+          com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceProto.getDescriptor(),
           com.tcn.cloud.api.services.billing.v1alpha1.CoreProto.getDescriptor(),
         });
     internal_static_services_billing_v1alpha1_CreateInvoiceRequest_descriptor =
@@ -120,13 +123,13 @@ public final class InvoicesProto {
     internal_static_services_billing_v1alpha1_CreateInvoiceRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_v1alpha1_CreateInvoiceRequest_descriptor,
-        new java.lang.String[] { "Invoice", });
+        new java.lang.String[] { "InvoiceId", "Invoice", });
     internal_static_services_billing_v1alpha1_CreateInvoiceResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_services_billing_v1alpha1_CreateInvoiceResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_v1alpha1_CreateInvoiceResponse_descriptor,
-        new java.lang.String[] { "Invoice", });
+        new java.lang.String[] { "InvoiceId", });
     internal_static_services_billing_v1alpha1_DeleteInvoiceRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_services_billing_v1alpha1_DeleteInvoiceRequest_fieldAccessorTable = new
@@ -156,27 +159,27 @@ public final class InvoicesProto {
     internal_static_services_billing_v1alpha1_ListInvoicesRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_v1alpha1_ListInvoicesRequest_descriptor,
-        new java.lang.String[] { "Invoice", "SelectorFields", "ReturnFields", "OrderBy", });
+        new java.lang.String[] { "InvoiceId", "Invoice", "ReturnFields", "Filter", "Sort", "Page", });
     internal_static_services_billing_v1alpha1_ListInvoicesResponse_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_services_billing_v1alpha1_ListInvoicesResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_v1alpha1_ListInvoicesResponse_descriptor,
-        new java.lang.String[] { "Invoice", });
+        new java.lang.String[] { "Invoices", "Token", });
     internal_static_services_billing_v1alpha1_UpdateInvoiceRequest_descriptor =
       getDescriptor().getMessageTypes().get(8);
     internal_static_services_billing_v1alpha1_UpdateInvoiceRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_v1alpha1_UpdateInvoiceRequest_descriptor,
-        new java.lang.String[] { "Invoice", "UpdateFields", });
+        new java.lang.String[] { "InvoiceId", "Invoice", "UpdateFields", });
     internal_static_services_billing_v1alpha1_UpdateInvoiceResponse_descriptor =
       getDescriptor().getMessageTypes().get(9);
     internal_static_services_billing_v1alpha1_UpdateInvoiceResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_v1alpha1_UpdateInvoiceResponse_descriptor,
-        new java.lang.String[] { "Invoice", });
-    com.tcn.cloud.api.data.billing.v1alpha1.InvoicesProto.getDescriptor();
+        new java.lang.String[] { });
     com.google.protobuf.FieldMaskProto.getDescriptor();
+    com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceProto.getDescriptor();
     com.tcn.cloud.api.services.billing.v1alpha1.CoreProto.getDescriptor();
   }
 

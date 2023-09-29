@@ -8,17 +8,14 @@ public interface CreateBillingPlanResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.data.billing.v1alpha1.BillingPlan billing_plan = 1 [json_name = "billingPlan"];</code>
-   * @return Whether the billingPlan field is set.
+   * <code>string billing_plan_id = 1 [json_name = "billingPlanId"];</code>
+   * @return The billingPlanId.
    */
-  boolean hasBillingPlan();
+  java.lang.String getBillingPlanId();
   /**
-   * <code>.data.billing.v1alpha1.BillingPlan billing_plan = 1 [json_name = "billingPlan"];</code>
-   * @return The billingPlan.
+   * <code>string billing_plan_id = 1 [json_name = "billingPlanId"];</code>
+   * @return The bytes for billingPlanId.
    */
-  com.tcn.cloud.api.data.billing.v1alpha1.BillingPlan getBillingPlan();
-  /**
-   * <code>.data.billing.v1alpha1.BillingPlan billing_plan = 1 [json_name = "billingPlan"];</code>
-   */
-  com.tcn.cloud.api.data.billing.v1alpha1.BillingPlanOrBuilder getBillingPlanOrBuilder();
+  com.google.protobuf.ByteString
+      getBillingPlanIdBytes();
 }

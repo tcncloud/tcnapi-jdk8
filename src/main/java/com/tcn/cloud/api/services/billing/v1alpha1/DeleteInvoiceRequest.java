@@ -4,10 +4,6 @@
 package com.tcn.cloud.api.services.billing.v1alpha1;
 
 /**
- * <pre>
- * DeleteInvoiceRequest is a request to delete an invoice.
- * </pre>
- *
  * Protobuf type {@code services.billing.v1alpha1.DeleteInvoiceRequest}
  */
 public final class DeleteInvoiceRequest extends
@@ -239,10 +235,6 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * <pre>
-   * DeleteInvoiceRequest is a request to delete an invoice.
-   * </pre>
-   *
    * Protobuf type {@code services.billing.v1alpha1.DeleteInvoiceRequest}
    */
   public static final class Builder extends

@@ -8,62 +8,130 @@ public interface ListInvoicesRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.data.billing.v1alpha1.Invoice invoice = 1 [json_name = "invoice"];</code>
+   * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+   * @return The invoiceId.
+   */
+  java.lang.String getInvoiceId();
+  /**
+   * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+   * @return The bytes for invoiceId.
+   */
+  com.google.protobuf.ByteString
+      getInvoiceIdBytes();
+
+  /**
+   * <code>.services.billing.entities.v1alpha1.Invoice invoice = 2 [json_name = "invoice"];</code>
    * @return Whether the invoice field is set.
    */
   boolean hasInvoice();
   /**
-   * <code>.data.billing.v1alpha1.Invoice invoice = 1 [json_name = "invoice"];</code>
+   * <code>.services.billing.entities.v1alpha1.Invoice invoice = 2 [json_name = "invoice"];</code>
    * @return The invoice.
    */
-  com.tcn.cloud.api.data.billing.v1alpha1.Invoice getInvoice();
+  com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice getInvoice();
   /**
-   * <code>.data.billing.v1alpha1.Invoice invoice = 1 [json_name = "invoice"];</code>
+   * <code>.services.billing.entities.v1alpha1.Invoice invoice = 2 [json_name = "invoice"];</code>
    */
-  com.tcn.cloud.api.data.billing.v1alpha1.InvoiceOrBuilder getInvoiceOrBuilder();
+  com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceOrBuilder getInvoiceOrBuilder();
 
   /**
-   * <code>.google.protobuf.FieldMask selector_fields = 2 [json_name = "selectorFields"];</code>
-   * @return Whether the selectorFields field is set.
-   */
-  boolean hasSelectorFields();
-  /**
-   * <code>.google.protobuf.FieldMask selector_fields = 2 [json_name = "selectorFields"];</code>
-   * @return The selectorFields.
-   */
-  com.google.protobuf.FieldMask getSelectorFields();
-  /**
-   * <code>.google.protobuf.FieldMask selector_fields = 2 [json_name = "selectorFields"];</code>
-   */
-  com.google.protobuf.FieldMaskOrBuilder getSelectorFieldsOrBuilder();
-
-  /**
+   * <pre>
+   * Optional: defaults to all fields.
+   * </pre>
+   *
    * <code>.google.protobuf.FieldMask return_fields = 3 [json_name = "returnFields"];</code>
    * @return Whether the returnFields field is set.
    */
   boolean hasReturnFields();
   /**
+   * <pre>
+   * Optional: defaults to all fields.
+   * </pre>
+   *
    * <code>.google.protobuf.FieldMask return_fields = 3 [json_name = "returnFields"];</code>
    * @return The returnFields.
    */
   com.google.protobuf.FieldMask getReturnFields();
   /**
+   * <pre>
+   * Optional: defaults to all fields.
+   * </pre>
+   *
    * <code>.google.protobuf.FieldMask return_fields = 3 [json_name = "returnFields"];</code>
    */
   com.google.protobuf.FieldMaskOrBuilder getReturnFieldsOrBuilder();
 
   /**
-   * <code>.services.billing.v1alpha1.OrderBy order_by = 4 [json_name = "orderBy"];</code>
-   * @return Whether the orderBy field is set.
+   * <pre>
+   * Optional: defaults to no filter.
+   * </pre>
+   *
+   * <code>string filter = 4 [json_name = "filter"];</code>
+   * @return The filter.
    */
-  boolean hasOrderBy();
+  java.lang.String getFilter();
   /**
-   * <code>.services.billing.v1alpha1.OrderBy order_by = 4 [json_name = "orderBy"];</code>
-   * @return The orderBy.
+   * <pre>
+   * Optional: defaults to no filter.
+   * </pre>
+   *
+   * <code>string filter = 4 [json_name = "filter"];</code>
+   * @return The bytes for filter.
    */
-  com.tcn.cloud.api.services.billing.v1alpha1.OrderBy getOrderBy();
+  com.google.protobuf.ByteString
+      getFilterBytes();
+
   /**
-   * <code>.services.billing.v1alpha1.OrderBy order_by = 4 [json_name = "orderBy"];</code>
+   * <pre>
+   * Optional: defaults to no sort.
+   * </pre>
+   *
+   * <code>.services.billing.v1alpha1.Sort sort = 5 [json_name = "sort"];</code>
+   * @return Whether the sort field is set.
    */
-  com.tcn.cloud.api.services.billing.v1alpha1.OrderByOrBuilder getOrderByOrBuilder();
+  boolean hasSort();
+  /**
+   * <pre>
+   * Optional: defaults to no sort.
+   * </pre>
+   *
+   * <code>.services.billing.v1alpha1.Sort sort = 5 [json_name = "sort"];</code>
+   * @return The sort.
+   */
+  com.tcn.cloud.api.services.billing.v1alpha1.Sort getSort();
+  /**
+   * <pre>
+   * Optional: defaults to no sort.
+   * </pre>
+   *
+   * <code>.services.billing.v1alpha1.Sort sort = 5 [json_name = "sort"];</code>
+   */
+  com.tcn.cloud.api.services.billing.v1alpha1.SortOrBuilder getSortOrBuilder();
+
+  /**
+   * <pre>
+   * Optional: defaults to no paging.
+   * </pre>
+   *
+   * <code>.services.billing.v1alpha1.Page page = 6 [json_name = "page"];</code>
+   * @return Whether the page field is set.
+   */
+  boolean hasPage();
+  /**
+   * <pre>
+   * Optional: defaults to no paging.
+   * </pre>
+   *
+   * <code>.services.billing.v1alpha1.Page page = 6 [json_name = "page"];</code>
+   * @return The page.
+   */
+  com.tcn.cloud.api.services.billing.v1alpha1.Page getPage();
+  /**
+   * <pre>
+   * Optional: defaults to no paging.
+   * </pre>
+   *
+   * <code>.services.billing.v1alpha1.Page page = 6 [json_name = "page"];</code>
+   */
+  com.tcn.cloud.api.services.billing.v1alpha1.PageOrBuilder getPageOrBuilder();
 }

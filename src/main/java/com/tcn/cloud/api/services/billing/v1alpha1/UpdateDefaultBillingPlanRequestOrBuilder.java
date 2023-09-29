@@ -8,19 +8,19 @@ public interface UpdateDefaultBillingPlanRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.data.billing.v1alpha1.BillingPlan billing_plan = 1 [json_name = "billingPlan"];</code>
+   * <code>.services.billing.entities.v1alpha1.BillingPlan billing_plan = 1 [json_name = "billingPlan"];</code>
    * @return Whether the billingPlan field is set.
    */
   boolean hasBillingPlan();
   /**
-   * <code>.data.billing.v1alpha1.BillingPlan billing_plan = 1 [json_name = "billingPlan"];</code>
+   * <code>.services.billing.entities.v1alpha1.BillingPlan billing_plan = 1 [json_name = "billingPlan"];</code>
    * @return The billingPlan.
    */
-  com.tcn.cloud.api.data.billing.v1alpha1.BillingPlan getBillingPlan();
+  com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlan getBillingPlan();
   /**
-   * <code>.data.billing.v1alpha1.BillingPlan billing_plan = 1 [json_name = "billingPlan"];</code>
+   * <code>.services.billing.entities.v1alpha1.BillingPlan billing_plan = 1 [json_name = "billingPlan"];</code>
    */
-  com.tcn.cloud.api.data.billing.v1alpha1.BillingPlanOrBuilder getBillingPlanOrBuilder();
+  com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlanOrBuilder getBillingPlanOrBuilder();
 
   /**
    * <code>.google.protobuf.FieldMask update_fields = 2 [json_name = "updateFields"];</code>
