@@ -5,7 +5,7 @@ package com.tcn.cloud.api.api.v1alpha1.workflows;
 
 /**
  * <pre>
- * ListFlowDefinitionsResponse is the response object for listing flow definitions
+ * ListWorkflowDefinitionsResponse is the response object for listing flow definitions
  * </pre>
  *
  * Protobuf type {@code api.v1alpha1.workflows.ListWorkflowDefinitionsResponse}
@@ -244,7 +244,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * ListFlowDefinitionsResponse is the response object for listing flow definitions
+   * ListWorkflowDefinitionsResponse is the response object for listing flow definitions
    * </pre>
    *
    * Protobuf type {@code api.v1alpha1.workflows.ListWorkflowDefinitionsResponse}

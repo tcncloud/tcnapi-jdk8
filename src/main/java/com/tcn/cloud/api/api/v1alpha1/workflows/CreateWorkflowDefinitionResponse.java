@@ -5,7 +5,7 @@ package com.tcn.cloud.api.api.v1alpha1.workflows;
 
 /**
  * <pre>
- * CreateFlowDefinitionResponse is the response object for creating a flow definition
+ * CreateWorkflowDefinitionResponse is the response object for creating a flow definition
  * </pre>
  *
  * Protobuf type {@code api.v1alpha1.workflows.CreateWorkflowDefinitionResponse}
@@ -244,7 +244,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * CreateFlowDefinitionResponse is the response object for creating a flow definition
+   * CreateWorkflowDefinitionResponse is the response object for creating a flow definition
    * </pre>
    *
    * Protobuf type {@code api.v1alpha1.workflows.CreateWorkflowDefinitionResponse}

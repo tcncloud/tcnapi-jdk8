@@ -4,7 +4,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
  * <pre>
- * WorkflowDefinitionPersistService is the service that provides CRUD operations for FlowDefinitions.
+ * WorkflowDefinitionPersistService is the service that provides CRUD operations for workflow definitions.
  * PERMISSION_WORKFLOWS is required for all operations
  * </pre>
  */
@@ -220,7 +220,7 @@ public final class WorkflowDefinitionPersistServiceGrpc {
 
   /**
    * <pre>
-   * WorkflowDefinitionPersistService is the service that provides CRUD operations for FlowDefinitions.
+   * WorkflowDefinitionPersistService is the service that provides CRUD operations for workflow definitions.
    * PERMISSION_WORKFLOWS is required for all operations
    * </pre>
    */
@@ -228,7 +228,7 @@ public final class WorkflowDefinitionPersistServiceGrpc {
 
     /**
      * <pre>
-     * CreateFlowDefinition creates a new flow definition in the database
+     * CreateWorkflowDefinition creates a new flow definition in the database
      * </pre>
      */
     default void createWorkflowDefinition(com.tcn.cloud.api.api.v1alpha1.workflows.CreateWorkflowDefinitionRequest request,
@@ -281,7 +281,7 @@ public final class WorkflowDefinitionPersistServiceGrpc {
   /**
    * Base class for the server implementation of the service WorkflowDefinitionPersistService.
    * <pre>
-   * WorkflowDefinitionPersistService is the service that provides CRUD operations for FlowDefinitions.
+   * WorkflowDefinitionPersistService is the service that provides CRUD operations for workflow definitions.
    * PERMISSION_WORKFLOWS is required for all operations
    * </pre>
    */
@@ -296,7 +296,7 @@ public final class WorkflowDefinitionPersistServiceGrpc {
   /**
    * A stub to allow clients to do asynchronous rpc calls to service WorkflowDefinitionPersistService.
    * <pre>
-   * WorkflowDefinitionPersistService is the service that provides CRUD operations for FlowDefinitions.
+   * WorkflowDefinitionPersistService is the service that provides CRUD operations for workflow definitions.
    * PERMISSION_WORKFLOWS is required for all operations
    * </pre>
    */
@@ -315,7 +315,7 @@ public final class WorkflowDefinitionPersistServiceGrpc {
 
     /**
      * <pre>
-     * CreateFlowDefinition creates a new flow definition in the database
+     * CreateWorkflowDefinition creates a new flow definition in the database
      * </pre>
      */
     public void createWorkflowDefinition(com.tcn.cloud.api.api.v1alpha1.workflows.CreateWorkflowDefinitionRequest request,
@@ -373,7 +373,7 @@ public final class WorkflowDefinitionPersistServiceGrpc {
   /**
    * A stub to allow clients to do synchronous rpc calls to service WorkflowDefinitionPersistService.
    * <pre>
-   * WorkflowDefinitionPersistService is the service that provides CRUD operations for FlowDefinitions.
+   * WorkflowDefinitionPersistService is the service that provides CRUD operations for workflow definitions.
    * PERMISSION_WORKFLOWS is required for all operations
    * </pre>
    */
@@ -392,7 +392,7 @@ public final class WorkflowDefinitionPersistServiceGrpc {
 
     /**
      * <pre>
-     * CreateFlowDefinition creates a new flow definition in the database
+     * CreateWorkflowDefinition creates a new flow definition in the database
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.workflows.CreateWorkflowDefinitionResponse createWorkflowDefinition(com.tcn.cloud.api.api.v1alpha1.workflows.CreateWorkflowDefinitionRequest request) {
@@ -446,7 +446,7 @@ public final class WorkflowDefinitionPersistServiceGrpc {
   /**
    * A stub to allow clients to do ListenableFuture-style rpc calls to service WorkflowDefinitionPersistService.
    * <pre>
-   * WorkflowDefinitionPersistService is the service that provides CRUD operations for FlowDefinitions.
+   * WorkflowDefinitionPersistService is the service that provides CRUD operations for workflow definitions.
    * PERMISSION_WORKFLOWS is required for all operations
    * </pre>
    */
@@ -465,7 +465,7 @@ public final class WorkflowDefinitionPersistServiceGrpc {
 
     /**
      * <pre>
-     * CreateFlowDefinition creates a new flow definition in the database
+     * CreateWorkflowDefinition creates a new flow definition in the database
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.workflows.CreateWorkflowDefinitionResponse> createWorkflowDefinition(
