@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.v1alpha1.workflows;
 
-public interface ValidateFlowDefinitionResponseOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v1alpha1.workflows.ValidateFlowDefinitionResponse)
+public interface ValidateWorkflowDefinitionResponseOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v1alpha1.workflows.ValidateWorkflowDefinitionResponse)
     com.google.protobuf.MessageOrBuilder {
 
   /**

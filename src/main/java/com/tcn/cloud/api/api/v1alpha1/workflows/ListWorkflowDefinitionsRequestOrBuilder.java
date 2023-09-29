@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.v1alpha1.workflows;
 
-public interface ListFlowDefinitionsRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v1alpha1.workflows.ListFlowDefinitionsRequest)
+public interface ListWorkflowDefinitionsRequestOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v1alpha1.workflows.ListWorkflowDefinitionsRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**

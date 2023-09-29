@@ -5,100 +5,85 @@ package com.tcn.cloud.api.api.v1alpha1.workflows;
 
 /**
  * <pre>
- * ValidateFlowDefinitionResponse is the response object for validating a flow definition
+ * GetWorkflowDefinitionRequest is the request object for retrieving a flow definition
  * </pre>
  *
- * Protobuf type {@code api.v1alpha1.workflows.ValidateFlowDefinitionResponse}
+ * Protobuf type {@code api.v1alpha1.workflows.GetWorkflowDefinitionRequest}
  */
-public final class ValidateFlowDefinitionResponse extends
+public final class GetWorkflowDefinitionRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v1alpha1.workflows.ValidateFlowDefinitionResponse)
-    ValidateFlowDefinitionResponseOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v1alpha1.workflows.GetWorkflowDefinitionRequest)
+    GetWorkflowDefinitionRequestOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use ValidateFlowDefinitionResponse.newBuilder() to construct.
-  private ValidateFlowDefinitionResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use GetWorkflowDefinitionRequest.newBuilder() to construct.
+  private GetWorkflowDefinitionRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private ValidateFlowDefinitionResponse() {
-    error_ = "";
+  private GetWorkflowDefinitionRequest() {
+    workflowDefinitionId_ = "";
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new ValidateFlowDefinitionResponse();
+    return new GetWorkflowDefinitionRequest();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v1alpha1.workflows.ServiceProto.internal_static_api_v1alpha1_workflows_ValidateFlowDefinitionResponse_descriptor;
+    return com.tcn.cloud.api.api.v1alpha1.workflows.ServiceProto.internal_static_api_v1alpha1_workflows_GetWorkflowDefinitionRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v1alpha1.workflows.ServiceProto.internal_static_api_v1alpha1_workflows_ValidateFlowDefinitionResponse_fieldAccessorTable
+    return com.tcn.cloud.api.api.v1alpha1.workflows.ServiceProto.internal_static_api_v1alpha1_workflows_GetWorkflowDefinitionRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v1alpha1.workflows.ValidateFlowDefinitionResponse.class, com.tcn.cloud.api.api.v1alpha1.workflows.ValidateFlowDefinitionResponse.Builder.class);
+            com.tcn.cloud.api.api.v1alpha1.workflows.GetWorkflowDefinitionRequest.class, com.tcn.cloud.api.api.v1alpha1.workflows.GetWorkflowDefinitionRequest.Builder.class);
   }
 
-  public static final int VALID_FIELD_NUMBER = 1;
-  private boolean valid_ = false;
-  /**
-   * <pre>
-   * valid is true if the flow definition is valid, false otherwise
-   * </pre>
-   *
-   * <code>bool valid = 1 [json_name = "valid"];</code>
-   * @return The valid.
-   */
-  @java.lang.Override
-  public boolean getValid() {
-    return valid_;
-  }
-
-  public static final int ERROR_FIELD_NUMBER = 2;
+  public static final int WORKFLOW_DEFINITION_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object error_ = "";
+  private volatile java.lang.Object workflowDefinitionId_ = "";
   /**
    * <pre>
-   * error is the error message if the flow definition is invalid
+   * flow_definition_id is the identifier for the flow definition to retrieve
    * </pre>
    *
-   * <code>string error = 2 [json_name = "error"];</code>
-   * @return The error.
+   * <code>string workflow_definition_id = 1 [json_name = "workflowDefinitionId"];</code>
+   * @return The workflowDefinitionId.
    */
   @java.lang.Override
-  public java.lang.String getError() {
-    java.lang.Object ref = error_;
+  public java.lang.String getWorkflowDefinitionId() {
+    java.lang.Object ref = workflowDefinitionId_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      error_ = s;
+      workflowDefinitionId_ = s;
       return s;
     }
   }
   /**
    * <pre>
-   * error is the error message if the flow definition is invalid
+   * flow_definition_id is the identifier for the flow definition to retrieve
    * </pre>
    *
-   * <code>string error = 2 [json_name = "error"];</code>
-   * @return The bytes for error.
+   * <code>string workflow_definition_id = 1 [json_name = "workflowDefinitionId"];</code>
+   * @return The bytes for workflowDefinitionId.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getErrorBytes() {
-    java.lang.Object ref = error_;
+      getWorkflowDefinitionIdBytes() {
+    java.lang.Object ref = workflowDefinitionId_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      error_ = b;
+      workflowDefinitionId_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -119,11 +104,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (valid_ != false) {
-      output.writeBool(1, valid_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(error_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, error_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(workflowDefinitionId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, workflowDefinitionId_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -134,12 +116,8 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (valid_ != false) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(1, valid_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(error_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, error_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(workflowDefinitionId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, workflowDefinitionId_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -151,15 +129,13 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.workflows.ValidateFlowDefinitionResponse)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.workflows.GetWorkflowDefinitionRequest)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v1alpha1.workflows.ValidateFlowDefinitionResponse other = (com.tcn.cloud.api.api.v1alpha1.workflows.ValidateFlowDefinitionResponse) obj;
+    com.tcn.cloud.api.api.v1alpha1.workflows.GetWorkflowDefinitionRequest other = (com.tcn.cloud.api.api.v1alpha1.workflows.GetWorkflowDefinitionRequest) obj;
 
-    if (getValid()
-        != other.getValid()) return false;
-    if (!getError()
-        .equals(other.getError())) return false;
+    if (!getWorkflowDefinitionId()
+        .equals(other.getWorkflowDefinitionId())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -171,54 +147,51 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + VALID_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-        getValid());
-    hash = (37 * hash) + ERROR_FIELD_NUMBER;
-    hash = (53 * hash) + getError().hashCode();
+    hash = (37 * hash) + WORKFLOW_DEFINITION_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getWorkflowDefinitionId().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.workflows.ValidateFlowDefinitionResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.workflows.GetWorkflowDefinitionRequest parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.workflows.ValidateFlowDefinitionResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.workflows.GetWorkflowDefinitionRequest parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.workflows.ValidateFlowDefinitionResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.workflows.GetWorkflowDefinitionRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.workflows.ValidateFlowDefinitionResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.workflows.GetWorkflowDefinitionRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.workflows.ValidateFlowDefinitionResponse parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v1alpha1.workflows.GetWorkflowDefinitionRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.workflows.ValidateFlowDefinitionResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.workflows.GetWorkflowDefinitionRequest parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.workflows.ValidateFlowDefinitionResponse parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.workflows.GetWorkflowDefinitionRequest parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.workflows.ValidateFlowDefinitionResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.workflows.GetWorkflowDefinitionRequest parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -226,26 +199,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.workflows.ValidateFlowDefinitionResponse parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.workflows.GetWorkflowDefinitionRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.workflows.ValidateFlowDefinitionResponse parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.workflows.GetWorkflowDefinitionRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.workflows.ValidateFlowDefinitionResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.workflows.GetWorkflowDefinitionRequest parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.workflows.ValidateFlowDefinitionResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.workflows.GetWorkflowDefinitionRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -258,7 +231,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.workflows.ValidateFlowDefinitionResponse prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.workflows.GetWorkflowDefinitionRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -275,29 +248,29 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * ValidateFlowDefinitionResponse is the response object for validating a flow definition
+   * GetWorkflowDefinitionRequest is the request object for retrieving a flow definition
    * </pre>
    *
-   * Protobuf type {@code api.v1alpha1.workflows.ValidateFlowDefinitionResponse}
+   * Protobuf type {@code api.v1alpha1.workflows.GetWorkflowDefinitionRequest}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v1alpha1.workflows.ValidateFlowDefinitionResponse)
-      com.tcn.cloud.api.api.v1alpha1.workflows.ValidateFlowDefinitionResponseOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v1alpha1.workflows.GetWorkflowDefinitionRequest)
+      com.tcn.cloud.api.api.v1alpha1.workflows.GetWorkflowDefinitionRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v1alpha1.workflows.ServiceProto.internal_static_api_v1alpha1_workflows_ValidateFlowDefinitionResponse_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.workflows.ServiceProto.internal_static_api_v1alpha1_workflows_GetWorkflowDefinitionRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v1alpha1.workflows.ServiceProto.internal_static_api_v1alpha1_workflows_ValidateFlowDefinitionResponse_fieldAccessorTable
+      return com.tcn.cloud.api.api.v1alpha1.workflows.ServiceProto.internal_static_api_v1alpha1_workflows_GetWorkflowDefinitionRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v1alpha1.workflows.ValidateFlowDefinitionResponse.class, com.tcn.cloud.api.api.v1alpha1.workflows.ValidateFlowDefinitionResponse.Builder.class);
+              com.tcn.cloud.api.api.v1alpha1.workflows.GetWorkflowDefinitionRequest.class, com.tcn.cloud.api.api.v1alpha1.workflows.GetWorkflowDefinitionRequest.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v1alpha1.workflows.ValidateFlowDefinitionResponse.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v1alpha1.workflows.GetWorkflowDefinitionRequest.newBuilder()
     private Builder() {
 
     }
@@ -311,25 +284,24 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      valid_ = false;
-      error_ = "";
+      workflowDefinitionId_ = "";
       return this;
     }
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v1alpha1.workflows.ServiceProto.internal_static_api_v1alpha1_workflows_ValidateFlowDefinitionResponse_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.workflows.ServiceProto.internal_static_api_v1alpha1_workflows_GetWorkflowDefinitionRequest_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.workflows.ValidateFlowDefinitionResponse getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v1alpha1.workflows.ValidateFlowDefinitionResponse.getDefaultInstance();
+    public com.tcn.cloud.api.api.v1alpha1.workflows.GetWorkflowDefinitionRequest getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v1alpha1.workflows.GetWorkflowDefinitionRequest.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.workflows.ValidateFlowDefinitionResponse build() {
-      com.tcn.cloud.api.api.v1alpha1.workflows.ValidateFlowDefinitionResponse result = buildPartial();
+    public com.tcn.cloud.api.api.v1alpha1.workflows.GetWorkflowDefinitionRequest build() {
+      com.tcn.cloud.api.api.v1alpha1.workflows.GetWorkflowDefinitionRequest result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -337,20 +309,17 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.workflows.ValidateFlowDefinitionResponse buildPartial() {
-      com.tcn.cloud.api.api.v1alpha1.workflows.ValidateFlowDefinitionResponse result = new com.tcn.cloud.api.api.v1alpha1.workflows.ValidateFlowDefinitionResponse(this);
+    public com.tcn.cloud.api.api.v1alpha1.workflows.GetWorkflowDefinitionRequest buildPartial() {
+      com.tcn.cloud.api.api.v1alpha1.workflows.GetWorkflowDefinitionRequest result = new com.tcn.cloud.api.api.v1alpha1.workflows.GetWorkflowDefinitionRequest(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.workflows.ValidateFlowDefinitionResponse result) {
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.workflows.GetWorkflowDefinitionRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.valid_ = valid_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.error_ = error_;
+        result.workflowDefinitionId_ = workflowDefinitionId_;
       }
     }
 
@@ -388,22 +357,19 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v1alpha1.workflows.ValidateFlowDefinitionResponse) {
-        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.workflows.ValidateFlowDefinitionResponse)other);
+      if (other instanceof com.tcn.cloud.api.api.v1alpha1.workflows.GetWorkflowDefinitionRequest) {
+        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.workflows.GetWorkflowDefinitionRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.workflows.ValidateFlowDefinitionResponse other) {
-      if (other == com.tcn.cloud.api.api.v1alpha1.workflows.ValidateFlowDefinitionResponse.getDefaultInstance()) return this;
-      if (other.getValid() != false) {
-        setValid(other.getValid());
-      }
-      if (!other.getError().isEmpty()) {
-        error_ = other.error_;
-        bitField0_ |= 0x00000002;
+    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.workflows.GetWorkflowDefinitionRequest other) {
+      if (other == com.tcn.cloud.api.api.v1alpha1.workflows.GetWorkflowDefinitionRequest.getDefaultInstance()) return this;
+      if (!other.getWorkflowDefinitionId().isEmpty()) {
+        workflowDefinitionId_ = other.workflowDefinitionId_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -432,16 +398,11 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 8: {
-              valid_ = input.readBool();
+            case 10: {
+              workflowDefinitionId_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000001;
               break;
-            } // case 8
-            case 18: {
-              error_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
+            } // case 10
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -459,66 +420,22 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private boolean valid_ ;
+    private java.lang.Object workflowDefinitionId_ = "";
     /**
      * <pre>
-     * valid is true if the flow definition is valid, false otherwise
+     * flow_definition_id is the identifier for the flow definition to retrieve
      * </pre>
      *
-     * <code>bool valid = 1 [json_name = "valid"];</code>
-     * @return The valid.
+     * <code>string workflow_definition_id = 1 [json_name = "workflowDefinitionId"];</code>
+     * @return The workflowDefinitionId.
      */
-    @java.lang.Override
-    public boolean getValid() {
-      return valid_;
-    }
-    /**
-     * <pre>
-     * valid is true if the flow definition is valid, false otherwise
-     * </pre>
-     *
-     * <code>bool valid = 1 [json_name = "valid"];</code>
-     * @param value The valid to set.
-     * @return This builder for chaining.
-     */
-    public Builder setValid(boolean value) {
-
-      valid_ = value;
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * valid is true if the flow definition is valid, false otherwise
-     * </pre>
-     *
-     * <code>bool valid = 1 [json_name = "valid"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearValid() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      valid_ = false;
-      onChanged();
-      return this;
-    }
-
-    private java.lang.Object error_ = "";
-    /**
-     * <pre>
-     * error is the error message if the flow definition is invalid
-     * </pre>
-     *
-     * <code>string error = 2 [json_name = "error"];</code>
-     * @return The error.
-     */
-    public java.lang.String getError() {
-      java.lang.Object ref = error_;
+    public java.lang.String getWorkflowDefinitionId() {
+      java.lang.Object ref = workflowDefinitionId_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        error_ = s;
+        workflowDefinitionId_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
@@ -526,20 +443,20 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * error is the error message if the flow definition is invalid
+     * flow_definition_id is the identifier for the flow definition to retrieve
      * </pre>
      *
-     * <code>string error = 2 [json_name = "error"];</code>
-     * @return The bytes for error.
+     * <code>string workflow_definition_id = 1 [json_name = "workflowDefinitionId"];</code>
+     * @return The bytes for workflowDefinitionId.
      */
     public com.google.protobuf.ByteString
-        getErrorBytes() {
-      java.lang.Object ref = error_;
+        getWorkflowDefinitionIdBytes() {
+      java.lang.Object ref = workflowDefinitionId_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        error_ = b;
+        workflowDefinitionId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -547,50 +464,50 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * error is the error message if the flow definition is invalid
+     * flow_definition_id is the identifier for the flow definition to retrieve
      * </pre>
      *
-     * <code>string error = 2 [json_name = "error"];</code>
-     * @param value The error to set.
+     * <code>string workflow_definition_id = 1 [json_name = "workflowDefinitionId"];</code>
+     * @param value The workflowDefinitionId to set.
      * @return This builder for chaining.
      */
-    public Builder setError(
+    public Builder setWorkflowDefinitionId(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      error_ = value;
-      bitField0_ |= 0x00000002;
+      workflowDefinitionId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * error is the error message if the flow definition is invalid
+     * flow_definition_id is the identifier for the flow definition to retrieve
      * </pre>
      *
-     * <code>string error = 2 [json_name = "error"];</code>
+     * <code>string workflow_definition_id = 1 [json_name = "workflowDefinitionId"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearError() {
-      error_ = getDefaultInstance().getError();
-      bitField0_ = (bitField0_ & ~0x00000002);
+    public Builder clearWorkflowDefinitionId() {
+      workflowDefinitionId_ = getDefaultInstance().getWorkflowDefinitionId();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * error is the error message if the flow definition is invalid
+     * flow_definition_id is the identifier for the flow definition to retrieve
      * </pre>
      *
-     * <code>string error = 2 [json_name = "error"];</code>
-     * @param value The bytes for error to set.
+     * <code>string workflow_definition_id = 1 [json_name = "workflowDefinitionId"];</code>
+     * @param value The bytes for workflowDefinitionId to set.
      * @return This builder for chaining.
      */
-    public Builder setErrorBytes(
+    public Builder setWorkflowDefinitionIdBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      error_ = value;
-      bitField0_ |= 0x00000002;
+      workflowDefinitionId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -607,23 +524,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v1alpha1.workflows.ValidateFlowDefinitionResponse)
+    // @@protoc_insertion_point(builder_scope:api.v1alpha1.workflows.GetWorkflowDefinitionRequest)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v1alpha1.workflows.ValidateFlowDefinitionResponse)
-  private static final com.tcn.cloud.api.api.v1alpha1.workflows.ValidateFlowDefinitionResponse DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v1alpha1.workflows.GetWorkflowDefinitionRequest)
+  private static final com.tcn.cloud.api.api.v1alpha1.workflows.GetWorkflowDefinitionRequest DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.workflows.ValidateFlowDefinitionResponse();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.workflows.GetWorkflowDefinitionRequest();
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.workflows.ValidateFlowDefinitionResponse getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v1alpha1.workflows.GetWorkflowDefinitionRequest getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<ValidateFlowDefinitionResponse>
-      PARSER = new com.google.protobuf.AbstractParser<ValidateFlowDefinitionResponse>() {
+  private static final com.google.protobuf.Parser<GetWorkflowDefinitionRequest>
+      PARSER = new com.google.protobuf.AbstractParser<GetWorkflowDefinitionRequest>() {
     @java.lang.Override
-    public ValidateFlowDefinitionResponse parsePartialFrom(
+    public GetWorkflowDefinitionRequest parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -642,17 +559,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<ValidateFlowDefinitionResponse> parser() {
+  public static com.google.protobuf.Parser<GetWorkflowDefinitionRequest> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<ValidateFlowDefinitionResponse> getParserForType() {
+  public com.google.protobuf.Parser<GetWorkflowDefinitionRequest> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.workflows.ValidateFlowDefinitionResponse getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v1alpha1.workflows.GetWorkflowDefinitionRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

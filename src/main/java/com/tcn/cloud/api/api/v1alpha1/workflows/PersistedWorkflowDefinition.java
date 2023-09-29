@@ -5,21 +5,21 @@ package com.tcn.cloud.api.api.v1alpha1.workflows;
 
 /**
  * <pre>
- * PersistedFlowDefinition is the flow definition object
+ * PersistedWorkflowDefinition is the flow definition object
  * </pre>
  *
- * Protobuf type {@code api.v1alpha1.workflows.PersistedFlowDefinition}
+ * Protobuf type {@code api.v1alpha1.workflows.PersistedWorkflowDefinition}
  */
-public final class PersistedFlowDefinition extends
+public final class PersistedWorkflowDefinition extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v1alpha1.workflows.PersistedFlowDefinition)
-    PersistedFlowDefinitionOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v1alpha1.workflows.PersistedWorkflowDefinition)
+    PersistedWorkflowDefinitionOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use PersistedFlowDefinition.newBuilder() to construct.
-  private PersistedFlowDefinition(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use PersistedWorkflowDefinition.newBuilder() to construct.
+  private PersistedWorkflowDefinition(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private PersistedFlowDefinition() {
+  private PersistedWorkflowDefinition() {
     flowDefinitionId_ = "";
     orgId_ = "";
     application_ = "";
@@ -33,20 +33,20 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new PersistedFlowDefinition();
+    return new PersistedWorkflowDefinition();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v1alpha1.workflows.ServiceProto.internal_static_api_v1alpha1_workflows_PersistedFlowDefinition_descriptor;
+    return com.tcn.cloud.api.api.v1alpha1.workflows.ServiceProto.internal_static_api_v1alpha1_workflows_PersistedWorkflowDefinition_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v1alpha1.workflows.ServiceProto.internal_static_api_v1alpha1_workflows_PersistedFlowDefinition_fieldAccessorTable
+    return com.tcn.cloud.api.api.v1alpha1.workflows.ServiceProto.internal_static_api_v1alpha1_workflows_PersistedWorkflowDefinition_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition.class, com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition.Builder.class);
+            com.tcn.cloud.api.api.v1alpha1.workflows.PersistedWorkflowDefinition.class, com.tcn.cloud.api.api.v1alpha1.workflows.PersistedWorkflowDefinition.Builder.class);
   }
 
   public static final int FLOW_DEFINITION_ID_FIELD_NUMBER = 1;
@@ -543,10 +543,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.workflows.PersistedWorkflowDefinition)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition other = (com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition) obj;
+    com.tcn.cloud.api.api.v1alpha1.workflows.PersistedWorkflowDefinition other = (com.tcn.cloud.api.api.v1alpha1.workflows.PersistedWorkflowDefinition) obj;
 
     if (!getFlowDefinitionId()
         .equals(other.getFlowDefinitionId())) return false;
@@ -610,44 +610,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.workflows.PersistedWorkflowDefinition parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.workflows.PersistedWorkflowDefinition parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.workflows.PersistedWorkflowDefinition parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.workflows.PersistedWorkflowDefinition parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v1alpha1.workflows.PersistedWorkflowDefinition parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.workflows.PersistedWorkflowDefinition parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.workflows.PersistedWorkflowDefinition parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.workflows.PersistedWorkflowDefinition parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -655,26 +655,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.workflows.PersistedWorkflowDefinition parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.workflows.PersistedWorkflowDefinition parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.workflows.PersistedWorkflowDefinition parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.workflows.PersistedWorkflowDefinition parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -687,7 +687,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.workflows.PersistedWorkflowDefinition prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -704,29 +704,29 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * PersistedFlowDefinition is the flow definition object
+   * PersistedWorkflowDefinition is the flow definition object
    * </pre>
    *
-   * Protobuf type {@code api.v1alpha1.workflows.PersistedFlowDefinition}
+   * Protobuf type {@code api.v1alpha1.workflows.PersistedWorkflowDefinition}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v1alpha1.workflows.PersistedFlowDefinition)
-      com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinitionOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v1alpha1.workflows.PersistedWorkflowDefinition)
+      com.tcn.cloud.api.api.v1alpha1.workflows.PersistedWorkflowDefinitionOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v1alpha1.workflows.ServiceProto.internal_static_api_v1alpha1_workflows_PersistedFlowDefinition_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.workflows.ServiceProto.internal_static_api_v1alpha1_workflows_PersistedWorkflowDefinition_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v1alpha1.workflows.ServiceProto.internal_static_api_v1alpha1_workflows_PersistedFlowDefinition_fieldAccessorTable
+      return com.tcn.cloud.api.api.v1alpha1.workflows.ServiceProto.internal_static_api_v1alpha1_workflows_PersistedWorkflowDefinition_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition.class, com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition.Builder.class);
+              com.tcn.cloud.api.api.v1alpha1.workflows.PersistedWorkflowDefinition.class, com.tcn.cloud.api.api.v1alpha1.workflows.PersistedWorkflowDefinition.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v1alpha1.workflows.PersistedWorkflowDefinition.newBuilder()
     private Builder() {
 
     }
@@ -763,17 +763,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v1alpha1.workflows.ServiceProto.internal_static_api_v1alpha1_workflows_PersistedFlowDefinition_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.workflows.ServiceProto.internal_static_api_v1alpha1_workflows_PersistedWorkflowDefinition_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition.getDefaultInstance();
+    public com.tcn.cloud.api.api.v1alpha1.workflows.PersistedWorkflowDefinition getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v1alpha1.workflows.PersistedWorkflowDefinition.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition build() {
-      com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition result = buildPartial();
+    public com.tcn.cloud.api.api.v1alpha1.workflows.PersistedWorkflowDefinition build() {
+      com.tcn.cloud.api.api.v1alpha1.workflows.PersistedWorkflowDefinition result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -781,14 +781,14 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition buildPartial() {
-      com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition result = new com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition(this);
+    public com.tcn.cloud.api.api.v1alpha1.workflows.PersistedWorkflowDefinition buildPartial() {
+      com.tcn.cloud.api.api.v1alpha1.workflows.PersistedWorkflowDefinition result = new com.tcn.cloud.api.api.v1alpha1.workflows.PersistedWorkflowDefinition(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition result) {
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.workflows.PersistedWorkflowDefinition result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.flowDefinitionId_ = flowDefinitionId_;
@@ -857,16 +857,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition) {
-        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition)other);
+      if (other instanceof com.tcn.cloud.api.api.v1alpha1.workflows.PersistedWorkflowDefinition) {
+        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.workflows.PersistedWorkflowDefinition)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition other) {
-      if (other == com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.workflows.PersistedWorkflowDefinition other) {
+      if (other == com.tcn.cloud.api.api.v1alpha1.workflows.PersistedWorkflowDefinition.getDefaultInstance()) return this;
       if (!other.getFlowDefinitionId().isEmpty()) {
         flowDefinitionId_ = other.flowDefinitionId_;
         bitField0_ |= 0x00000001;
@@ -1966,23 +1966,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v1alpha1.workflows.PersistedFlowDefinition)
+    // @@protoc_insertion_point(builder_scope:api.v1alpha1.workflows.PersistedWorkflowDefinition)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v1alpha1.workflows.PersistedFlowDefinition)
-  private static final com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v1alpha1.workflows.PersistedWorkflowDefinition)
+  private static final com.tcn.cloud.api.api.v1alpha1.workflows.PersistedWorkflowDefinition DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.workflows.PersistedWorkflowDefinition();
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v1alpha1.workflows.PersistedWorkflowDefinition getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<PersistedFlowDefinition>
-      PARSER = new com.google.protobuf.AbstractParser<PersistedFlowDefinition>() {
+  private static final com.google.protobuf.Parser<PersistedWorkflowDefinition>
+      PARSER = new com.google.protobuf.AbstractParser<PersistedWorkflowDefinition>() {
     @java.lang.Override
-    public PersistedFlowDefinition parsePartialFrom(
+    public PersistedWorkflowDefinition parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -2001,17 +2001,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<PersistedFlowDefinition> parser() {
+  public static com.google.protobuf.Parser<PersistedWorkflowDefinition> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<PersistedFlowDefinition> getParserForType() {
+  public com.google.protobuf.Parser<PersistedWorkflowDefinition> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.workflows.PersistedFlowDefinition getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v1alpha1.workflows.PersistedWorkflowDefinition getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

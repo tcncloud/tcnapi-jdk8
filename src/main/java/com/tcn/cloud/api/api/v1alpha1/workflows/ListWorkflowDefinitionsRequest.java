@@ -5,21 +5,21 @@ package com.tcn.cloud.api.api.v1alpha1.workflows;
 
 /**
  * <pre>
- * ListFlowDefinitionsRequest is the request object for listing flow definitions
+ * ListWorkflowDefinitionsRequest is the request object for listing flow definitions
  * </pre>
  *
- * Protobuf type {@code api.v1alpha1.workflows.ListFlowDefinitionsRequest}
+ * Protobuf type {@code api.v1alpha1.workflows.ListWorkflowDefinitionsRequest}
  */
-public final class ListFlowDefinitionsRequest extends
+public final class ListWorkflowDefinitionsRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v1alpha1.workflows.ListFlowDefinitionsRequest)
-    ListFlowDefinitionsRequestOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v1alpha1.workflows.ListWorkflowDefinitionsRequest)
+    ListWorkflowDefinitionsRequestOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use ListFlowDefinitionsRequest.newBuilder() to construct.
-  private ListFlowDefinitionsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use ListWorkflowDefinitionsRequest.newBuilder() to construct.
+  private ListWorkflowDefinitionsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private ListFlowDefinitionsRequest() {
+  private ListWorkflowDefinitionsRequest() {
     orgId_ = "";
     application_ = "";
   }
@@ -28,20 +28,20 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new ListFlowDefinitionsRequest();
+    return new ListWorkflowDefinitionsRequest();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v1alpha1.workflows.ServiceProto.internal_static_api_v1alpha1_workflows_ListFlowDefinitionsRequest_descriptor;
+    return com.tcn.cloud.api.api.v1alpha1.workflows.ServiceProto.internal_static_api_v1alpha1_workflows_ListWorkflowDefinitionsRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v1alpha1.workflows.ServiceProto.internal_static_api_v1alpha1_workflows_ListFlowDefinitionsRequest_fieldAccessorTable
+    return com.tcn.cloud.api.api.v1alpha1.workflows.ServiceProto.internal_static_api_v1alpha1_workflows_ListWorkflowDefinitionsRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v1alpha1.workflows.ListFlowDefinitionsRequest.class, com.tcn.cloud.api.api.v1alpha1.workflows.ListFlowDefinitionsRequest.Builder.class);
+            com.tcn.cloud.api.api.v1alpha1.workflows.ListWorkflowDefinitionsRequest.class, com.tcn.cloud.api.api.v1alpha1.workflows.ListWorkflowDefinitionsRequest.Builder.class);
   }
 
   public static final int ORG_ID_FIELD_NUMBER = 1;
@@ -183,10 +183,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.workflows.ListFlowDefinitionsRequest)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.workflows.ListWorkflowDefinitionsRequest)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v1alpha1.workflows.ListFlowDefinitionsRequest other = (com.tcn.cloud.api.api.v1alpha1.workflows.ListFlowDefinitionsRequest) obj;
+    com.tcn.cloud.api.api.v1alpha1.workflows.ListWorkflowDefinitionsRequest other = (com.tcn.cloud.api.api.v1alpha1.workflows.ListWorkflowDefinitionsRequest) obj;
 
     if (!getOrgId()
         .equals(other.getOrgId())) return false;
@@ -212,44 +212,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.workflows.ListFlowDefinitionsRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.workflows.ListWorkflowDefinitionsRequest parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.workflows.ListFlowDefinitionsRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.workflows.ListWorkflowDefinitionsRequest parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.workflows.ListFlowDefinitionsRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.workflows.ListWorkflowDefinitionsRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.workflows.ListFlowDefinitionsRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.workflows.ListWorkflowDefinitionsRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.workflows.ListFlowDefinitionsRequest parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v1alpha1.workflows.ListWorkflowDefinitionsRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.workflows.ListFlowDefinitionsRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.workflows.ListWorkflowDefinitionsRequest parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.workflows.ListFlowDefinitionsRequest parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.workflows.ListWorkflowDefinitionsRequest parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.workflows.ListFlowDefinitionsRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.workflows.ListWorkflowDefinitionsRequest parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -257,26 +257,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.workflows.ListFlowDefinitionsRequest parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.workflows.ListWorkflowDefinitionsRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.workflows.ListFlowDefinitionsRequest parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.workflows.ListWorkflowDefinitionsRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.workflows.ListFlowDefinitionsRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.workflows.ListWorkflowDefinitionsRequest parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.workflows.ListFlowDefinitionsRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.workflows.ListWorkflowDefinitionsRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -289,7 +289,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.workflows.ListFlowDefinitionsRequest prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.workflows.ListWorkflowDefinitionsRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -306,29 +306,29 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * ListFlowDefinitionsRequest is the request object for listing flow definitions
+   * ListWorkflowDefinitionsRequest is the request object for listing flow definitions
    * </pre>
    *
-   * Protobuf type {@code api.v1alpha1.workflows.ListFlowDefinitionsRequest}
+   * Protobuf type {@code api.v1alpha1.workflows.ListWorkflowDefinitionsRequest}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v1alpha1.workflows.ListFlowDefinitionsRequest)
-      com.tcn.cloud.api.api.v1alpha1.workflows.ListFlowDefinitionsRequestOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v1alpha1.workflows.ListWorkflowDefinitionsRequest)
+      com.tcn.cloud.api.api.v1alpha1.workflows.ListWorkflowDefinitionsRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v1alpha1.workflows.ServiceProto.internal_static_api_v1alpha1_workflows_ListFlowDefinitionsRequest_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.workflows.ServiceProto.internal_static_api_v1alpha1_workflows_ListWorkflowDefinitionsRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v1alpha1.workflows.ServiceProto.internal_static_api_v1alpha1_workflows_ListFlowDefinitionsRequest_fieldAccessorTable
+      return com.tcn.cloud.api.api.v1alpha1.workflows.ServiceProto.internal_static_api_v1alpha1_workflows_ListWorkflowDefinitionsRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v1alpha1.workflows.ListFlowDefinitionsRequest.class, com.tcn.cloud.api.api.v1alpha1.workflows.ListFlowDefinitionsRequest.Builder.class);
+              com.tcn.cloud.api.api.v1alpha1.workflows.ListWorkflowDefinitionsRequest.class, com.tcn.cloud.api.api.v1alpha1.workflows.ListWorkflowDefinitionsRequest.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v1alpha1.workflows.ListFlowDefinitionsRequest.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v1alpha1.workflows.ListWorkflowDefinitionsRequest.newBuilder()
     private Builder() {
 
     }
@@ -350,17 +350,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v1alpha1.workflows.ServiceProto.internal_static_api_v1alpha1_workflows_ListFlowDefinitionsRequest_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.workflows.ServiceProto.internal_static_api_v1alpha1_workflows_ListWorkflowDefinitionsRequest_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.workflows.ListFlowDefinitionsRequest getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v1alpha1.workflows.ListFlowDefinitionsRequest.getDefaultInstance();
+    public com.tcn.cloud.api.api.v1alpha1.workflows.ListWorkflowDefinitionsRequest getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v1alpha1.workflows.ListWorkflowDefinitionsRequest.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.workflows.ListFlowDefinitionsRequest build() {
-      com.tcn.cloud.api.api.v1alpha1.workflows.ListFlowDefinitionsRequest result = buildPartial();
+    public com.tcn.cloud.api.api.v1alpha1.workflows.ListWorkflowDefinitionsRequest build() {
+      com.tcn.cloud.api.api.v1alpha1.workflows.ListWorkflowDefinitionsRequest result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -368,14 +368,14 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.workflows.ListFlowDefinitionsRequest buildPartial() {
-      com.tcn.cloud.api.api.v1alpha1.workflows.ListFlowDefinitionsRequest result = new com.tcn.cloud.api.api.v1alpha1.workflows.ListFlowDefinitionsRequest(this);
+    public com.tcn.cloud.api.api.v1alpha1.workflows.ListWorkflowDefinitionsRequest buildPartial() {
+      com.tcn.cloud.api.api.v1alpha1.workflows.ListWorkflowDefinitionsRequest result = new com.tcn.cloud.api.api.v1alpha1.workflows.ListWorkflowDefinitionsRequest(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.workflows.ListFlowDefinitionsRequest result) {
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.workflows.ListWorkflowDefinitionsRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.orgId_ = orgId_;
@@ -419,16 +419,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v1alpha1.workflows.ListFlowDefinitionsRequest) {
-        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.workflows.ListFlowDefinitionsRequest)other);
+      if (other instanceof com.tcn.cloud.api.api.v1alpha1.workflows.ListWorkflowDefinitionsRequest) {
+        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.workflows.ListWorkflowDefinitionsRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.workflows.ListFlowDefinitionsRequest other) {
-      if (other == com.tcn.cloud.api.api.v1alpha1.workflows.ListFlowDefinitionsRequest.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.workflows.ListWorkflowDefinitionsRequest other) {
+      if (other == com.tcn.cloud.api.api.v1alpha1.workflows.ListWorkflowDefinitionsRequest.getDefaultInstance()) return this;
       if (!other.getOrgId().isEmpty()) {
         orgId_ = other.orgId_;
         bitField0_ |= 0x00000001;
@@ -688,23 +688,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v1alpha1.workflows.ListFlowDefinitionsRequest)
+    // @@protoc_insertion_point(builder_scope:api.v1alpha1.workflows.ListWorkflowDefinitionsRequest)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v1alpha1.workflows.ListFlowDefinitionsRequest)
-  private static final com.tcn.cloud.api.api.v1alpha1.workflows.ListFlowDefinitionsRequest DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v1alpha1.workflows.ListWorkflowDefinitionsRequest)
+  private static final com.tcn.cloud.api.api.v1alpha1.workflows.ListWorkflowDefinitionsRequest DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.workflows.ListFlowDefinitionsRequest();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.workflows.ListWorkflowDefinitionsRequest();
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.workflows.ListFlowDefinitionsRequest getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v1alpha1.workflows.ListWorkflowDefinitionsRequest getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<ListFlowDefinitionsRequest>
-      PARSER = new com.google.protobuf.AbstractParser<ListFlowDefinitionsRequest>() {
+  private static final com.google.protobuf.Parser<ListWorkflowDefinitionsRequest>
+      PARSER = new com.google.protobuf.AbstractParser<ListWorkflowDefinitionsRequest>() {
     @java.lang.Override
-    public ListFlowDefinitionsRequest parsePartialFrom(
+    public ListWorkflowDefinitionsRequest parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -723,17 +723,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<ListFlowDefinitionsRequest> parser() {
+  public static com.google.protobuf.Parser<ListWorkflowDefinitionsRequest> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<ListFlowDefinitionsRequest> getParserForType() {
+  public com.google.protobuf.Parser<ListWorkflowDefinitionsRequest> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.workflows.ListFlowDefinitionsRequest getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v1alpha1.workflows.ListWorkflowDefinitionsRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 
