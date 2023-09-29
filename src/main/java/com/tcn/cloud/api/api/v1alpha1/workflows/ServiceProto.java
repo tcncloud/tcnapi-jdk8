@@ -121,39 +121,39 @@ public final class ServiceProto {
       "a1.workflows.PersistedWorkflowDefinition" +
       "R\022workflowDefinition\"P\n\"ValidateWorkflow" +
       "DefinitionResponse\022\024\n\005valid\030\001 \001(\010R\005valid" +
-      "\022\024\n\005error\030\002 \001(\tR\005error2\276\010\n WorkflowDefin" +
-      "itionPersistService\022\320\001\n\030CreateWorkflowDe" +
+      "\022\024\n\005error\030\002 \001(\tR\005error2\322\010\n WorkflowDefin" +
+      "itionPersistService\022\324\001\n\030CreateWorkflowDe" +
       "finition\0227.api.v1alpha1.workflows.Create" +
       "WorkflowDefinitionRequest\0328.api.v1alpha1" +
       ".workflows.CreateWorkflowDefinitionRespo" +
-      "nse\"A\272\270\221\002\005\n\003\010\240\037\202\323\344\223\0021\",/api/v1alpha1/wor" +
-      "kflows/createflowdefinition:\001*\022\307\001\n\025GetWo" +
-      "rkflowDefinition\0224.api.v1alpha1.workflow" +
-      "s.GetWorkflowDefinitionRequest\0325.api.v1a" +
-      "lpha1.workflows.GetWorkflowDefinitionRes" +
-      "ponse\"A\272\270\221\002\005\n\003\010\240\037\202\323\344\223\0021\",/api/v1alpha1/w" +
-      "orkflows/createflowdefinition:\001*\022\316\001\n\027Lis" +
-      "tWorkflowDefinitions\0226.api.v1alpha1.work" +
-      "flows.ListWorkflowDefinitionsRequest\0327.a" +
-      "pi.v1alpha1.workflows.ListWorkflowDefini" +
-      "tionsResponse\"@\272\270\221\002\005\n\003\010\240\037\202\323\344\223\0020\"+/api/v1" +
-      "alpha1/workflows/listflowdefinitions:\001*0" +
-      "\001\022\320\001\n\030UpdateWorkflowDefinition\0227.api.v1a" +
-      "lpha1.workflows.UpdateWorkflowDefinition" +
-      "Request\0328.api.v1alpha1.workflows.UpdateW" +
-      "orkflowDefinitionResponse\"A\272\270\221\002\005\n\003\010\240\037\202\323\344" +
-      "\223\0021\",/api/v1alpha1/workflows/updateflowd" +
-      "efinition:\001*\022\330\001\n\032ValidateWorkflowDefinit" +
-      "ion\0229.api.v1alpha1.workflows.ValidateWor" +
-      "kflowDefinitionRequest\032:.api.v1alpha1.wo" +
-      "rkflows.ValidateWorkflowDefinitionRespon" +
-      "se\"C\272\270\221\002\005\n\003\010\240\037\202\323\344\223\0023\"./api/v1alpha1/work" +
-      "flows/validateflowdefinition:\001*B\262\001\n(com." +
-      "tcn.cloud.api.api.v1alpha1.workflowsB\014Se" +
-      "rviceProtoP\001\242\002\003AVW\252\002\026Api.V1alpha1.Workfl" +
-      "ows\312\002\026Api\\V1alpha1\\Workflows\342\002\"Api\\V1alp" +
-      "ha1\\Workflows\\GPBMetadata\352\002\030Api::V1alpha" +
-      "1::Workflowsb\006proto3"
+      "nse\"E\272\270\221\002\005\n\003\010\240\037\202\323\344\223\0025\"0/api/v1alpha1/wor" +
+      "kflows/createworkflowdefinition:\001*\022\313\001\n\025G" +
+      "etWorkflowDefinition\0224.api.v1alpha1.work" +
+      "flows.GetWorkflowDefinitionRequest\0325.api" +
+      ".v1alpha1.workflows.GetWorkflowDefinitio" +
+      "nResponse\"E\272\270\221\002\005\n\003\010\240\037\202\323\344\223\0025\"0/api/v1alph" +
+      "a1/workflows/createworkflowdefinition:\001*" +
+      "\022\322\001\n\027ListWorkflowDefinitions\0226.api.v1alp" +
+      "ha1.workflows.ListWorkflowDefinitionsReq" +
+      "uest\0327.api.v1alpha1.workflows.ListWorkfl" +
+      "owDefinitionsResponse\"D\272\270\221\002\005\n\003\010\240\037\202\323\344\223\0024\"" +
+      "//api/v1alpha1/workflows/listworkflowdef" +
+      "initions:\001*0\001\022\324\001\n\030UpdateWorkflowDefiniti" +
+      "on\0227.api.v1alpha1.workflows.UpdateWorkfl" +
+      "owDefinitionRequest\0328.api.v1alpha1.workf" +
+      "lows.UpdateWorkflowDefinitionResponse\"E\272" +
+      "\270\221\002\005\n\003\010\240\037\202\323\344\223\0025\"0/api/v1alpha1/workflows" +
+      "/updateworkflowdefinition:\001*\022\334\001\n\032Validat" +
+      "eWorkflowDefinition\0229.api.v1alpha1.workf" +
+      "lows.ValidateWorkflowDefinitionRequest\032:" +
+      ".api.v1alpha1.workflows.ValidateWorkflow" +
+      "DefinitionResponse\"G\272\270\221\002\005\n\003\010\240\037\202\323\344\223\0027\"2/a" +
+      "pi/v1alpha1/workflows/validateworkflowde" +
+      "finition:\001*B\262\001\n(com.tcn.cloud.api.api.v1" +
+      "alpha1.workflowsB\014ServiceProtoP\001\242\002\003AVW\252\002" +
+      "\026Api.V1alpha1.Workflows\312\002\026Api\\V1alpha1\\W" +
+      "orkflows\342\002\"Api\\V1alpha1\\Workflows\\GPBMet" +
+      "adata\352\002\030Api::V1alpha1::Workflowsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
