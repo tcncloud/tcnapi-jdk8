@@ -34,24 +34,22 @@ public final class CoreProto {
   static {
     java.lang.String[] descriptorData = {
       "\n$services/billing/v1alpha1/core.proto\022\031" +
-      "services.billing.v1alpha1\032\037google/protob" +
-      "uf/timestamp.proto\"2\n\004Page\022\024\n\005limit\030\001 \001(" +
-      "\003R\005limit\022\024\n\005token\030\002 \001(\tR\005token\"d\n\004Sort\022\024" +
-      "\n\005field\030\001 \001(\tR\005field\022F\n\tdirection\030\002 \001(\0162" +
-      "(.services.billing.v1alpha1.SortDirectio" +
-      "nR\tdirection*H\n\rSortDirection\022\036\n\032SORT_DI" +
-      "RECTION_UNSPECIFIED\020\000\022\027\n\023SORT_DIRECTION_" +
-      "DESC\020\001B\276\001\n+com.tcn.cloud.api.services.bi" +
-      "lling.v1alpha1B\tCoreProtoP\001\242\002\003SBX\252\002\031Serv" +
-      "ices.Billing.V1alpha1\312\002\031Services\\Billing" +
-      "\\V1alpha1\342\002%Services\\Billing\\V1alpha1\\GP" +
-      "BMetadata\352\002\033Services::Billing::V1alpha1b" +
-      "\006proto3"
+      "services.billing.v1alpha1\"2\n\004Page\022\024\n\005lim" +
+      "it\030\001 \001(\003R\005limit\022\024\n\005token\030\002 \001(\tR\005token\"d\n" +
+      "\004Sort\022\024\n\005field\030\001 \001(\tR\005field\022F\n\tdirection" +
+      "\030\002 \001(\0162(.services.billing.v1alpha1.SortD" +
+      "irectionR\tdirection*H\n\rSortDirection\022\036\n\032" +
+      "SORT_DIRECTION_UNSPECIFIED\020\000\022\027\n\023SORT_DIR" +
+      "ECTION_DESC\020\001B\276\001\n+com.tcn.cloud.api.serv" +
+      "ices.billing.v1alpha1B\tCoreProtoP\001\242\002\003SBX" +
+      "\252\002\031Services.Billing.V1alpha1\312\002\031Services\\" +
+      "Billing\\V1alpha1\342\002%Services\\Billing\\V1al" +
+      "pha1\\GPBMetadata\352\002\033Services::Billing::V1" +
+      "alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.protobuf.TimestampProto.getDescriptor(),
         });
     internal_static_services_billing_v1alpha1_Page_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -65,7 +63,6 @@ public final class CoreProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_v1alpha1_Sort_descriptor,
         new java.lang.String[] { "Field", "Direction", });
-    com.google.protobuf.TimestampProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
