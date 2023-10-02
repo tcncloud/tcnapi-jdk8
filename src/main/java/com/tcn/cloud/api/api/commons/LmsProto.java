@@ -179,15 +179,16 @@ public final class LmsProto {
       "_DAY\020\004*1\n\010HttpVerb\022\021\n\rHTTP_VERB_GET\020\000\022\022\n" +
       "\016HTTP_VERB_POST\020\001*V\n\022ComplianceListType\022" +
       "\036\n\032COMPLIANCE_LIST_TYPE_SCRUB\020\000\022 \n\034COMPL" +
-      "IANCE_LIST_TYPE_CONSENT\020\001*\204\001\n\nEventState" +
+      "IANCE_LIST_TYPE_CONSENT\020\001*\236\001\n\nEventState" +
       "\022\024\n\020EVENT_STATE_NONE\020\000\022\027\n\023EVENT_STATE_KI" +
       "CKOFF\020\001\022\025\n\021EVENT_STATE_CHECK\020\002\022\027\n\023EVENT_" +
       "STATE_PROCESS\020\003\022\027\n\023EVENT_STATE_CLEANUP\020\004" +
-      "*F\n\010TimeUnit\022\013\n\007DEFAULT\020\000\022\016\n\nTIME_WEEKS\020" +
-      "\001\022\r\n\tTIME_DAYS\020\002\022\016\n\nTIME_HOURS\020\003Bv\n\035com." +
-      "tcn.cloud.api.api.commonsB\010LmsProtoP\001\242\002\003" +
-      "ACX\252\002\013Api.Commons\312\002\013Api\\Commons\342\002\027Api\\Co" +
-      "mmons\\GPBMetadata\352\002\014Api::Commonsb\006proto3"
+      "\022\030\n\024EVENT_STATE_FINISHED\020\005*F\n\010TimeUnit\022\013" +
+      "\n\007DEFAULT\020\000\022\016\n\nTIME_WEEKS\020\001\022\r\n\tTIME_DAYS" +
+      "\020\002\022\016\n\nTIME_HOURS\020\003Bv\n\035com.tcn.cloud.api." +
+      "api.commonsB\010LmsProtoP\001\242\002\003ACX\252\002\013Api.Comm" +
+      "ons\312\002\013Api\\Commons\342\002\027Api\\Commons\\GPBMetad" +
+      "ata\352\002\014Api::Commonsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
