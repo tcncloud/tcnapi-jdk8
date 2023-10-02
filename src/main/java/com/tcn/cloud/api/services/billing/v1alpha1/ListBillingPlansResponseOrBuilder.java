@@ -8,27 +8,27 @@ public interface ListBillingPlansResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>repeated .services.billing.entities.v1alpha1.BillingPlan billing_plan = 1 [json_name = "billingPlan"];</code>
+   * <code>repeated .services.billing.entities.v1alpha1.BillingPlan billing_plans = 1 [json_name = "billingPlans"];</code>
    */
   java.util.List<com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlan> 
-      getBillingPlanList();
+      getBillingPlansList();
   /**
-   * <code>repeated .services.billing.entities.v1alpha1.BillingPlan billing_plan = 1 [json_name = "billingPlan"];</code>
+   * <code>repeated .services.billing.entities.v1alpha1.BillingPlan billing_plans = 1 [json_name = "billingPlans"];</code>
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlan getBillingPlan(int index);
+  com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlan getBillingPlans(int index);
   /**
-   * <code>repeated .services.billing.entities.v1alpha1.BillingPlan billing_plan = 1 [json_name = "billingPlan"];</code>
+   * <code>repeated .services.billing.entities.v1alpha1.BillingPlan billing_plans = 1 [json_name = "billingPlans"];</code>
    */
-  int getBillingPlanCount();
+  int getBillingPlansCount();
   /**
-   * <code>repeated .services.billing.entities.v1alpha1.BillingPlan billing_plan = 1 [json_name = "billingPlan"];</code>
+   * <code>repeated .services.billing.entities.v1alpha1.BillingPlan billing_plans = 1 [json_name = "billingPlans"];</code>
    */
   java.util.List<? extends com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlanOrBuilder> 
-      getBillingPlanOrBuilderList();
+      getBillingPlansOrBuilderList();
   /**
-   * <code>repeated .services.billing.entities.v1alpha1.BillingPlan billing_plan = 1 [json_name = "billingPlan"];</code>
+   * <code>repeated .services.billing.entities.v1alpha1.BillingPlan billing_plans = 1 [json_name = "billingPlans"];</code>
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlanOrBuilder getBillingPlanOrBuilder(
+  com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlanOrBuilder getBillingPlansOrBuilder(
       int index);
 
   /**
