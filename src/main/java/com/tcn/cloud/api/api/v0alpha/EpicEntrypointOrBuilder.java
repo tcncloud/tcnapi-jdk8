@@ -229,4 +229,14 @@ public interface EpicEntrypointOrBuilder extends
    */
   com.google.protobuf.ByteString
       getTimezoneBytes();
+
+  /**
+   * <pre>
+   * If process is enabled
+   * </pre>
+   *
+   * <code>bool enabled = 12 [json_name = "enabled"];</code>
+   * @return The enabled.
+   */
+  boolean getEnabled();
 }

@@ -216,4 +216,24 @@ public interface TicketActionOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.SlaOrBuilder getActionSlaIdOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * work done by
+   * </pre>
+   *
+   * <code>string work_done_by = 11 [json_name = "workDoneBy"];</code>
+   * @return The workDoneBy.
+   */
+  java.lang.String getWorkDoneBy();
+  /**
+   * <pre>
+   * work done by
+   * </pre>
+   *
+   * <code>string work_done_by = 11 [json_name = "workDoneBy"];</code>
+   * @return The bytes for workDoneBy.
+   */
+  com.google.protobuf.ByteString
+      getWorkDoneByBytes();
 }
