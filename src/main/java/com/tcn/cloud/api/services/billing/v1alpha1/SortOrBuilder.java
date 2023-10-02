@@ -9,40 +9,45 @@ public interface SortOrBuilder extends
 
   /**
    * <pre>
-   * Required: field to sort by
+   * Required: fields to sort by
    * </pre>
    *
-   * <code>string field = 1 [json_name = "field"];</code>
-   * @return The field.
+   * <code>repeated .services.billing.v1alpha1.SortField fields = 1 [json_name = "fields"];</code>
    */
-  java.lang.String getField();
+  java.util.List<com.tcn.cloud.api.services.billing.v1alpha1.SortField> 
+      getFieldsList();
   /**
    * <pre>
-   * Required: field to sort by
+   * Required: fields to sort by
    * </pre>
    *
-   * <code>string field = 1 [json_name = "field"];</code>
-   * @return The bytes for field.
+   * <code>repeated .services.billing.v1alpha1.SortField fields = 1 [json_name = "fields"];</code>
    */
-  com.google.protobuf.ByteString
-      getFieldBytes();
-
+  com.tcn.cloud.api.services.billing.v1alpha1.SortField getFields(int index);
   /**
    * <pre>
-   * Required: direction to sort by
+   * Required: fields to sort by
    * </pre>
    *
-   * <code>.services.billing.v1alpha1.SortDirection direction = 2 [json_name = "direction"];</code>
-   * @return The enum numeric value on the wire for direction.
+   * <code>repeated .services.billing.v1alpha1.SortField fields = 1 [json_name = "fields"];</code>
    */
-  int getDirectionValue();
+  int getFieldsCount();
   /**
    * <pre>
-   * Required: direction to sort by
+   * Required: fields to sort by
    * </pre>
    *
-   * <code>.services.billing.v1alpha1.SortDirection direction = 2 [json_name = "direction"];</code>
-   * @return The direction.
+   * <code>repeated .services.billing.v1alpha1.SortField fields = 1 [json_name = "fields"];</code>
    */
-  com.tcn.cloud.api.services.billing.v1alpha1.SortDirection getDirection();
+  java.util.List<? extends com.tcn.cloud.api.services.billing.v1alpha1.SortFieldOrBuilder> 
+      getFieldsOrBuilderList();
+  /**
+   * <pre>
+   * Required: fields to sort by
+   * </pre>
+   *
+   * <code>repeated .services.billing.v1alpha1.SortField fields = 1 [json_name = "fields"];</code>
+   */
+  com.tcn.cloud.api.services.billing.v1alpha1.SortFieldOrBuilder getFieldsOrBuilder(
+      int index);
 }

@@ -16,8 +16,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private Sort() {
-    field_ = "";
-    direction_ = 0;
+    fields_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -40,77 +39,65 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.services.billing.v1alpha1.Sort.class, com.tcn.cloud.api.services.billing.v1alpha1.Sort.Builder.class);
   }
 
-  public static final int FIELD_FIELD_NUMBER = 1;
+  public static final int FIELDS_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object field_ = "";
+  private java.util.List<com.tcn.cloud.api.services.billing.v1alpha1.SortField> fields_;
   /**
    * <pre>
-   * Required: field to sort by
+   * Required: fields to sort by
    * </pre>
    *
-   * <code>string field = 1 [json_name = "field"];</code>
-   * @return The field.
+   * <code>repeated .services.billing.v1alpha1.SortField fields = 1 [json_name = "fields"];</code>
    */
   @java.lang.Override
-  public java.lang.String getField() {
-    java.lang.Object ref = field_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      field_ = s;
-      return s;
-    }
+  public java.util.List<com.tcn.cloud.api.services.billing.v1alpha1.SortField> getFieldsList() {
+    return fields_;
   }
   /**
    * <pre>
-   * Required: field to sort by
+   * Required: fields to sort by
    * </pre>
    *
-   * <code>string field = 1 [json_name = "field"];</code>
-   * @return The bytes for field.
+   * <code>repeated .services.billing.v1alpha1.SortField fields = 1 [json_name = "fields"];</code>
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
-      getFieldBytes() {
-    java.lang.Object ref = field_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      field_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int DIRECTION_FIELD_NUMBER = 2;
-  private int direction_ = 0;
-  /**
-   * <pre>
-   * Required: direction to sort by
-   * </pre>
-   *
-   * <code>.services.billing.v1alpha1.SortDirection direction = 2 [json_name = "direction"];</code>
-   * @return The enum numeric value on the wire for direction.
-   */
-  @java.lang.Override public int getDirectionValue() {
-    return direction_;
+  public java.util.List<? extends com.tcn.cloud.api.services.billing.v1alpha1.SortFieldOrBuilder> 
+      getFieldsOrBuilderList() {
+    return fields_;
   }
   /**
    * <pre>
-   * Required: direction to sort by
+   * Required: fields to sort by
    * </pre>
    *
-   * <code>.services.billing.v1alpha1.SortDirection direction = 2 [json_name = "direction"];</code>
-   * @return The direction.
+   * <code>repeated .services.billing.v1alpha1.SortField fields = 1 [json_name = "fields"];</code>
    */
-  @java.lang.Override public com.tcn.cloud.api.services.billing.v1alpha1.SortDirection getDirection() {
-    com.tcn.cloud.api.services.billing.v1alpha1.SortDirection result = com.tcn.cloud.api.services.billing.v1alpha1.SortDirection.forNumber(direction_);
-    return result == null ? com.tcn.cloud.api.services.billing.v1alpha1.SortDirection.UNRECOGNIZED : result;
+  @java.lang.Override
+  public int getFieldsCount() {
+    return fields_.size();
+  }
+  /**
+   * <pre>
+   * Required: fields to sort by
+   * </pre>
+   *
+   * <code>repeated .services.billing.v1alpha1.SortField fields = 1 [json_name = "fields"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.v1alpha1.SortField getFields(int index) {
+    return fields_.get(index);
+  }
+  /**
+   * <pre>
+   * Required: fields to sort by
+   * </pre>
+   *
+   * <code>repeated .services.billing.v1alpha1.SortField fields = 1 [json_name = "fields"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.v1alpha1.SortFieldOrBuilder getFieldsOrBuilder(
+      int index) {
+    return fields_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -127,11 +114,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(field_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, field_);
-    }
-    if (direction_ != com.tcn.cloud.api.services.billing.v1alpha1.SortDirection.SORT_DIRECTION_UNSPECIFIED.getNumber()) {
-      output.writeEnum(2, direction_);
+    for (int i = 0; i < fields_.size(); i++) {
+      output.writeMessage(1, fields_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -142,12 +126,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(field_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, field_);
-    }
-    if (direction_ != com.tcn.cloud.api.services.billing.v1alpha1.SortDirection.SORT_DIRECTION_UNSPECIFIED.getNumber()) {
+    for (int i = 0; i < fields_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(2, direction_);
+        .computeMessageSize(1, fields_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -164,9 +145,8 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.services.billing.v1alpha1.Sort other = (com.tcn.cloud.api.services.billing.v1alpha1.Sort) obj;
 
-    if (!getField()
-        .equals(other.getField())) return false;
-    if (direction_ != other.direction_) return false;
+    if (!getFieldsList()
+        .equals(other.getFieldsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -178,10 +158,10 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + FIELD_FIELD_NUMBER;
-    hash = (53 * hash) + getField().hashCode();
-    hash = (37 * hash) + DIRECTION_FIELD_NUMBER;
-    hash = (53 * hash) + direction_;
+    if (getFieldsCount() > 0) {
+      hash = (37 * hash) + FIELDS_FIELD_NUMBER;
+      hash = (53 * hash) + getFieldsList().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -313,8 +293,13 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      field_ = "";
-      direction_ = 0;
+      if (fieldsBuilder_ == null) {
+        fields_ = java.util.Collections.emptyList();
+      } else {
+        fields_ = null;
+        fieldsBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000001);
       return this;
     }
 
@@ -341,19 +326,26 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.services.billing.v1alpha1.Sort buildPartial() {
       com.tcn.cloud.api.services.billing.v1alpha1.Sort result = new com.tcn.cloud.api.services.billing.v1alpha1.Sort(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.services.billing.v1alpha1.Sort result) {
+      if (fieldsBuilder_ == null) {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          fields_ = java.util.Collections.unmodifiableList(fields_);
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.fields_ = fields_;
+      } else {
+        result.fields_ = fieldsBuilder_.build();
+      }
+    }
+
     private void buildPartial0(com.tcn.cloud.api.services.billing.v1alpha1.Sort result) {
       int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.field_ = field_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.direction_ = direction_;
-      }
     }
 
     @java.lang.Override
@@ -400,13 +392,31 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.services.billing.v1alpha1.Sort other) {
       if (other == com.tcn.cloud.api.services.billing.v1alpha1.Sort.getDefaultInstance()) return this;
-      if (!other.getField().isEmpty()) {
-        field_ = other.field_;
-        bitField0_ |= 0x00000001;
-        onChanged();
-      }
-      if (other.direction_ != 0) {
-        setDirectionValue(other.getDirectionValue());
+      if (fieldsBuilder_ == null) {
+        if (!other.fields_.isEmpty()) {
+          if (fields_.isEmpty()) {
+            fields_ = other.fields_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureFieldsIsMutable();
+            fields_.addAll(other.fields_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.fields_.isEmpty()) {
+          if (fieldsBuilder_.isEmpty()) {
+            fieldsBuilder_.dispose();
+            fieldsBuilder_ = null;
+            fields_ = other.fields_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+            fieldsBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getFieldsFieldBuilder() : null;
+          } else {
+            fieldsBuilder_.addAllMessages(other.fields_);
+          }
+        }
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -435,15 +445,18 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              field_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
+              com.tcn.cloud.api.services.billing.v1alpha1.SortField m =
+                  input.readMessage(
+                      com.tcn.cloud.api.services.billing.v1alpha1.SortField.parser(),
+                      extensionRegistry);
+              if (fieldsBuilder_ == null) {
+                ensureFieldsIsMutable();
+                fields_.add(m);
+              } else {
+                fieldsBuilder_.addMessage(m);
+              }
               break;
             } // case 10
-            case 16: {
-              direction_ = input.readEnum();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 16
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -461,169 +474,316 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.lang.Object field_ = "";
-    /**
-     * <pre>
-     * Required: field to sort by
-     * </pre>
-     *
-     * <code>string field = 1 [json_name = "field"];</code>
-     * @return The field.
-     */
-    public java.lang.String getField() {
-      java.lang.Object ref = field_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        field_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <pre>
-     * Required: field to sort by
-     * </pre>
-     *
-     * <code>string field = 1 [json_name = "field"];</code>
-     * @return The bytes for field.
-     */
-    public com.google.protobuf.ByteString
-        getFieldBytes() {
-      java.lang.Object ref = field_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        field_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <pre>
-     * Required: field to sort by
-     * </pre>
-     *
-     * <code>string field = 1 [json_name = "field"];</code>
-     * @param value The field to set.
-     * @return This builder for chaining.
-     */
-    public Builder setField(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      field_ = value;
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Required: field to sort by
-     * </pre>
-     *
-     * <code>string field = 1 [json_name = "field"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearField() {
-      field_ = getDefaultInstance().getField();
-      bitField0_ = (bitField0_ & ~0x00000001);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Required: field to sort by
-     * </pre>
-     *
-     * <code>string field = 1 [json_name = "field"];</code>
-     * @param value The bytes for field to set.
-     * @return This builder for chaining.
-     */
-    public Builder setFieldBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      field_ = value;
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
+    private java.util.List<com.tcn.cloud.api.services.billing.v1alpha1.SortField> fields_ =
+      java.util.Collections.emptyList();
+    private void ensureFieldsIsMutable() {
+      if (!((bitField0_ & 0x00000001) != 0)) {
+        fields_ = new java.util.ArrayList<com.tcn.cloud.api.services.billing.v1alpha1.SortField>(fields_);
+        bitField0_ |= 0x00000001;
+       }
     }
 
-    private int direction_ = 0;
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.v1alpha1.SortField, com.tcn.cloud.api.services.billing.v1alpha1.SortField.Builder, com.tcn.cloud.api.services.billing.v1alpha1.SortFieldOrBuilder> fieldsBuilder_;
+
     /**
      * <pre>
-     * Required: direction to sort by
+     * Required: fields to sort by
      * </pre>
      *
-     * <code>.services.billing.v1alpha1.SortDirection direction = 2 [json_name = "direction"];</code>
-     * @return The enum numeric value on the wire for direction.
+     * <code>repeated .services.billing.v1alpha1.SortField fields = 1 [json_name = "fields"];</code>
      */
-    @java.lang.Override public int getDirectionValue() {
-      return direction_;
-    }
-    /**
-     * <pre>
-     * Required: direction to sort by
-     * </pre>
-     *
-     * <code>.services.billing.v1alpha1.SortDirection direction = 2 [json_name = "direction"];</code>
-     * @param value The enum numeric value on the wire for direction to set.
-     * @return This builder for chaining.
-     */
-    public Builder setDirectionValue(int value) {
-      direction_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Required: direction to sort by
-     * </pre>
-     *
-     * <code>.services.billing.v1alpha1.SortDirection direction = 2 [json_name = "direction"];</code>
-     * @return The direction.
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.services.billing.v1alpha1.SortDirection getDirection() {
-      com.tcn.cloud.api.services.billing.v1alpha1.SortDirection result = com.tcn.cloud.api.services.billing.v1alpha1.SortDirection.forNumber(direction_);
-      return result == null ? com.tcn.cloud.api.services.billing.v1alpha1.SortDirection.UNRECOGNIZED : result;
-    }
-    /**
-     * <pre>
-     * Required: direction to sort by
-     * </pre>
-     *
-     * <code>.services.billing.v1alpha1.SortDirection direction = 2 [json_name = "direction"];</code>
-     * @param value The direction to set.
-     * @return This builder for chaining.
-     */
-    public Builder setDirection(com.tcn.cloud.api.services.billing.v1alpha1.SortDirection value) {
-      if (value == null) {
-        throw new NullPointerException();
+    public java.util.List<com.tcn.cloud.api.services.billing.v1alpha1.SortField> getFieldsList() {
+      if (fieldsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(fields_);
+      } else {
+        return fieldsBuilder_.getMessageList();
       }
-      bitField0_ |= 0x00000002;
-      direction_ = value.getNumber();
-      onChanged();
+    }
+    /**
+     * <pre>
+     * Required: fields to sort by
+     * </pre>
+     *
+     * <code>repeated .services.billing.v1alpha1.SortField fields = 1 [json_name = "fields"];</code>
+     */
+    public int getFieldsCount() {
+      if (fieldsBuilder_ == null) {
+        return fields_.size();
+      } else {
+        return fieldsBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * Required: fields to sort by
+     * </pre>
+     *
+     * <code>repeated .services.billing.v1alpha1.SortField fields = 1 [json_name = "fields"];</code>
+     */
+    public com.tcn.cloud.api.services.billing.v1alpha1.SortField getFields(int index) {
+      if (fieldsBuilder_ == null) {
+        return fields_.get(index);
+      } else {
+        return fieldsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * Required: fields to sort by
+     * </pre>
+     *
+     * <code>repeated .services.billing.v1alpha1.SortField fields = 1 [json_name = "fields"];</code>
+     */
+    public Builder setFields(
+        int index, com.tcn.cloud.api.services.billing.v1alpha1.SortField value) {
+      if (fieldsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureFieldsIsMutable();
+        fields_.set(index, value);
+        onChanged();
+      } else {
+        fieldsBuilder_.setMessage(index, value);
+      }
       return this;
     }
     /**
      * <pre>
-     * Required: direction to sort by
+     * Required: fields to sort by
      * </pre>
      *
-     * <code>.services.billing.v1alpha1.SortDirection direction = 2 [json_name = "direction"];</code>
-     * @return This builder for chaining.
+     * <code>repeated .services.billing.v1alpha1.SortField fields = 1 [json_name = "fields"];</code>
      */
-    public Builder clearDirection() {
-      bitField0_ = (bitField0_ & ~0x00000002);
-      direction_ = 0;
-      onChanged();
+    public Builder setFields(
+        int index, com.tcn.cloud.api.services.billing.v1alpha1.SortField.Builder builderForValue) {
+      if (fieldsBuilder_ == null) {
+        ensureFieldsIsMutable();
+        fields_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        fieldsBuilder_.setMessage(index, builderForValue.build());
+      }
       return this;
+    }
+    /**
+     * <pre>
+     * Required: fields to sort by
+     * </pre>
+     *
+     * <code>repeated .services.billing.v1alpha1.SortField fields = 1 [json_name = "fields"];</code>
+     */
+    public Builder addFields(com.tcn.cloud.api.services.billing.v1alpha1.SortField value) {
+      if (fieldsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureFieldsIsMutable();
+        fields_.add(value);
+        onChanged();
+      } else {
+        fieldsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Required: fields to sort by
+     * </pre>
+     *
+     * <code>repeated .services.billing.v1alpha1.SortField fields = 1 [json_name = "fields"];</code>
+     */
+    public Builder addFields(
+        int index, com.tcn.cloud.api.services.billing.v1alpha1.SortField value) {
+      if (fieldsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureFieldsIsMutable();
+        fields_.add(index, value);
+        onChanged();
+      } else {
+        fieldsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Required: fields to sort by
+     * </pre>
+     *
+     * <code>repeated .services.billing.v1alpha1.SortField fields = 1 [json_name = "fields"];</code>
+     */
+    public Builder addFields(
+        com.tcn.cloud.api.services.billing.v1alpha1.SortField.Builder builderForValue) {
+      if (fieldsBuilder_ == null) {
+        ensureFieldsIsMutable();
+        fields_.add(builderForValue.build());
+        onChanged();
+      } else {
+        fieldsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Required: fields to sort by
+     * </pre>
+     *
+     * <code>repeated .services.billing.v1alpha1.SortField fields = 1 [json_name = "fields"];</code>
+     */
+    public Builder addFields(
+        int index, com.tcn.cloud.api.services.billing.v1alpha1.SortField.Builder builderForValue) {
+      if (fieldsBuilder_ == null) {
+        ensureFieldsIsMutable();
+        fields_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        fieldsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Required: fields to sort by
+     * </pre>
+     *
+     * <code>repeated .services.billing.v1alpha1.SortField fields = 1 [json_name = "fields"];</code>
+     */
+    public Builder addAllFields(
+        java.lang.Iterable<? extends com.tcn.cloud.api.services.billing.v1alpha1.SortField> values) {
+      if (fieldsBuilder_ == null) {
+        ensureFieldsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, fields_);
+        onChanged();
+      } else {
+        fieldsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Required: fields to sort by
+     * </pre>
+     *
+     * <code>repeated .services.billing.v1alpha1.SortField fields = 1 [json_name = "fields"];</code>
+     */
+    public Builder clearFields() {
+      if (fieldsBuilder_ == null) {
+        fields_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+      } else {
+        fieldsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Required: fields to sort by
+     * </pre>
+     *
+     * <code>repeated .services.billing.v1alpha1.SortField fields = 1 [json_name = "fields"];</code>
+     */
+    public Builder removeFields(int index) {
+      if (fieldsBuilder_ == null) {
+        ensureFieldsIsMutable();
+        fields_.remove(index);
+        onChanged();
+      } else {
+        fieldsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Required: fields to sort by
+     * </pre>
+     *
+     * <code>repeated .services.billing.v1alpha1.SortField fields = 1 [json_name = "fields"];</code>
+     */
+    public com.tcn.cloud.api.services.billing.v1alpha1.SortField.Builder getFieldsBuilder(
+        int index) {
+      return getFieldsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * Required: fields to sort by
+     * </pre>
+     *
+     * <code>repeated .services.billing.v1alpha1.SortField fields = 1 [json_name = "fields"];</code>
+     */
+    public com.tcn.cloud.api.services.billing.v1alpha1.SortFieldOrBuilder getFieldsOrBuilder(
+        int index) {
+      if (fieldsBuilder_ == null) {
+        return fields_.get(index);  } else {
+        return fieldsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * Required: fields to sort by
+     * </pre>
+     *
+     * <code>repeated .services.billing.v1alpha1.SortField fields = 1 [json_name = "fields"];</code>
+     */
+    public java.util.List<? extends com.tcn.cloud.api.services.billing.v1alpha1.SortFieldOrBuilder> 
+         getFieldsOrBuilderList() {
+      if (fieldsBuilder_ != null) {
+        return fieldsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(fields_);
+      }
+    }
+    /**
+     * <pre>
+     * Required: fields to sort by
+     * </pre>
+     *
+     * <code>repeated .services.billing.v1alpha1.SortField fields = 1 [json_name = "fields"];</code>
+     */
+    public com.tcn.cloud.api.services.billing.v1alpha1.SortField.Builder addFieldsBuilder() {
+      return getFieldsFieldBuilder().addBuilder(
+          com.tcn.cloud.api.services.billing.v1alpha1.SortField.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Required: fields to sort by
+     * </pre>
+     *
+     * <code>repeated .services.billing.v1alpha1.SortField fields = 1 [json_name = "fields"];</code>
+     */
+    public com.tcn.cloud.api.services.billing.v1alpha1.SortField.Builder addFieldsBuilder(
+        int index) {
+      return getFieldsFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.services.billing.v1alpha1.SortField.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Required: fields to sort by
+     * </pre>
+     *
+     * <code>repeated .services.billing.v1alpha1.SortField fields = 1 [json_name = "fields"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.services.billing.v1alpha1.SortField.Builder> 
+         getFieldsBuilderList() {
+      return getFieldsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.v1alpha1.SortField, com.tcn.cloud.api.services.billing.v1alpha1.SortField.Builder, com.tcn.cloud.api.services.billing.v1alpha1.SortFieldOrBuilder> 
+        getFieldsFieldBuilder() {
+      if (fieldsBuilder_ == null) {
+        fieldsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.services.billing.v1alpha1.SortField, com.tcn.cloud.api.services.billing.v1alpha1.SortField.Builder, com.tcn.cloud.api.services.billing.v1alpha1.SortFieldOrBuilder>(
+                fields_,
+                ((bitField0_ & 0x00000001) != 0),
+                getParentForChildren(),
+                isClean());
+        fields_ = null;
+      }
+      return fieldsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
