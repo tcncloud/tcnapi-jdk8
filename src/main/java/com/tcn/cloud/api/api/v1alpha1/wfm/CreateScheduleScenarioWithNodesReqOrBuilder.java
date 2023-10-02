@@ -212,4 +212,34 @@ public interface CreateScheduleScenarioWithNodesReqOrBuilder extends
    * @return The timeZoneVal.
    */
   com.tcn.cloud.api.api.commons.TimeZone getTimeZoneVal();
+
+  /**
+   * <pre>
+   * Skill Profile Category to associate with the program node to create.
+   * The predicted calls of this skill profile category will be used when scheduling.
+   * </pre>
+   *
+   * <code>.api.commons.SkillProfileCategory skill_profile_category = 11 [json_name = "skillProfileCategory"];</code>
+   * @return Whether the skillProfileCategory field is set.
+   */
+  boolean hasSkillProfileCategory();
+  /**
+   * <pre>
+   * Skill Profile Category to associate with the program node to create.
+   * The predicted calls of this skill profile category will be used when scheduling.
+   * </pre>
+   *
+   * <code>.api.commons.SkillProfileCategory skill_profile_category = 11 [json_name = "skillProfileCategory"];</code>
+   * @return The skillProfileCategory.
+   */
+  com.tcn.cloud.api.api.commons.SkillProfileCategory getSkillProfileCategory();
+  /**
+   * <pre>
+   * Skill Profile Category to associate with the program node to create.
+   * The predicted calls of this skill profile category will be used when scheduling.
+   * </pre>
+   *
+   * <code>.api.commons.SkillProfileCategory skill_profile_category = 11 [json_name = "skillProfileCategory"];</code>
+   */
+  com.tcn.cloud.api.api.commons.SkillProfileCategoryOrBuilder getSkillProfileCategoryOrBuilder();
 }
