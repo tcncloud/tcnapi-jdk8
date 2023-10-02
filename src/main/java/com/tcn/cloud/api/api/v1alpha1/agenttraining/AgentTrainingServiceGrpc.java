@@ -108,6 +108,37 @@ public final class AgentTrainingServiceGrpc {
     return getListAgentLearningOpportunitiesMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.agenttraining.CompleteAgentLearningOpportunityRequest,
+      com.tcn.cloud.api.api.v1alpha1.agenttraining.CompleteAgentLearningOpportunityResponse> getCompleteAgentLearningOpportunityMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CompleteAgentLearningOpportunity",
+      requestType = com.tcn.cloud.api.api.v1alpha1.agenttraining.CompleteAgentLearningOpportunityRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.agenttraining.CompleteAgentLearningOpportunityResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.agenttraining.CompleteAgentLearningOpportunityRequest,
+      com.tcn.cloud.api.api.v1alpha1.agenttraining.CompleteAgentLearningOpportunityResponse> getCompleteAgentLearningOpportunityMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.agenttraining.CompleteAgentLearningOpportunityRequest, com.tcn.cloud.api.api.v1alpha1.agenttraining.CompleteAgentLearningOpportunityResponse> getCompleteAgentLearningOpportunityMethod;
+    if ((getCompleteAgentLearningOpportunityMethod = AgentTrainingServiceGrpc.getCompleteAgentLearningOpportunityMethod) == null) {
+      synchronized (AgentTrainingServiceGrpc.class) {
+        if ((getCompleteAgentLearningOpportunityMethod = AgentTrainingServiceGrpc.getCompleteAgentLearningOpportunityMethod) == null) {
+          AgentTrainingServiceGrpc.getCompleteAgentLearningOpportunityMethod = getCompleteAgentLearningOpportunityMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.agenttraining.CompleteAgentLearningOpportunityRequest, com.tcn.cloud.api.api.v1alpha1.agenttraining.CompleteAgentLearningOpportunityResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CompleteAgentLearningOpportunity"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.agenttraining.CompleteAgentLearningOpportunityRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.agenttraining.CompleteAgentLearningOpportunityResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new AgentTrainingServiceMethodDescriptorSupplier("CompleteAgentLearningOpportunity"))
+              .build();
+        }
+      }
+    }
+    return getCompleteAgentLearningOpportunityMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.agenttraining.UpdateLearningOpportunityRequest,
       com.tcn.cloud.api.api.v1alpha1.agenttraining.UpdateLearningOpportunityResponse> getUpdateLearningOpportunityMethod;
 
@@ -281,6 +312,16 @@ public final class AgentTrainingServiceGrpc {
 
     /**
      * <pre>
+     * CompleteAgentLearningOpportunity completes an agent's learning opportunity.
+     * </pre>
+     */
+    default void completeAgentLearningOpportunity(com.tcn.cloud.api.api.v1alpha1.agenttraining.CompleteAgentLearningOpportunityRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.agenttraining.CompleteAgentLearningOpportunityResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCompleteAgentLearningOpportunityMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * UpdateLearningOpportunity updates a learning opportunity.
      * </pre>
      */
@@ -372,6 +413,17 @@ public final class AgentTrainingServiceGrpc {
 
     /**
      * <pre>
+     * CompleteAgentLearningOpportunity completes an agent's learning opportunity.
+     * </pre>
+     */
+    public void completeAgentLearningOpportunity(com.tcn.cloud.api.api.v1alpha1.agenttraining.CompleteAgentLearningOpportunityRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.agenttraining.CompleteAgentLearningOpportunityResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCompleteAgentLearningOpportunityMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * UpdateLearningOpportunity updates a learning opportunity.
      * </pre>
      */
@@ -448,6 +500,16 @@ public final class AgentTrainingServiceGrpc {
     public com.tcn.cloud.api.api.v1alpha1.agenttraining.ListAgentLearningOpportunitiesResponse listAgentLearningOpportunities(com.tcn.cloud.api.api.v1alpha1.agenttraining.ListAgentLearningOpportunitiesRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListAgentLearningOpportunitiesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * CompleteAgentLearningOpportunity completes an agent's learning opportunity.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.agenttraining.CompleteAgentLearningOpportunityResponse completeAgentLearningOpportunity(com.tcn.cloud.api.api.v1alpha1.agenttraining.CompleteAgentLearningOpportunityRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCompleteAgentLearningOpportunityMethod(), getCallOptions(), request);
     }
 
     /**
@@ -532,6 +594,17 @@ public final class AgentTrainingServiceGrpc {
 
     /**
      * <pre>
+     * CompleteAgentLearningOpportunity completes an agent's learning opportunity.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.agenttraining.CompleteAgentLearningOpportunityResponse> completeAgentLearningOpportunity(
+        com.tcn.cloud.api.api.v1alpha1.agenttraining.CompleteAgentLearningOpportunityRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCompleteAgentLearningOpportunityMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * UpdateLearningOpportunity updates a learning opportunity.
      * </pre>
      */
@@ -567,9 +640,10 @@ public final class AgentTrainingServiceGrpc {
   private static final int METHODID_CREATE_LEARNING_OPPORTUNITY = 0;
   private static final int METHODID_LIST_LEARNING_OPPORTUNITIES = 1;
   private static final int METHODID_LIST_AGENT_LEARNING_OPPORTUNITIES = 2;
-  private static final int METHODID_UPDATE_LEARNING_OPPORTUNITY = 3;
-  private static final int METHODID_DELETE_LEARNING_OPPORTUNITY = 4;
-  private static final int METHODID_GET_LEARNING_OPPORTUNITY = 5;
+  private static final int METHODID_COMPLETE_AGENT_LEARNING_OPPORTUNITY = 3;
+  private static final int METHODID_UPDATE_LEARNING_OPPORTUNITY = 4;
+  private static final int METHODID_DELETE_LEARNING_OPPORTUNITY = 5;
+  private static final int METHODID_GET_LEARNING_OPPORTUNITY = 6;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -599,6 +673,10 @@ public final class AgentTrainingServiceGrpc {
         case METHODID_LIST_AGENT_LEARNING_OPPORTUNITIES:
           serviceImpl.listAgentLearningOpportunities((com.tcn.cloud.api.api.v1alpha1.agenttraining.ListAgentLearningOpportunitiesRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.agenttraining.ListAgentLearningOpportunitiesResponse>) responseObserver);
+          break;
+        case METHODID_COMPLETE_AGENT_LEARNING_OPPORTUNITY:
+          serviceImpl.completeAgentLearningOpportunity((com.tcn.cloud.api.api.v1alpha1.agenttraining.CompleteAgentLearningOpportunityRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.agenttraining.CompleteAgentLearningOpportunityResponse>) responseObserver);
           break;
         case METHODID_UPDATE_LEARNING_OPPORTUNITY:
           serviceImpl.updateLearningOpportunity((com.tcn.cloud.api.api.v1alpha1.agenttraining.UpdateLearningOpportunityRequest) request,
@@ -651,6 +729,13 @@ public final class AgentTrainingServiceGrpc {
               com.tcn.cloud.api.api.v1alpha1.agenttraining.ListAgentLearningOpportunitiesRequest,
               com.tcn.cloud.api.api.v1alpha1.agenttraining.ListAgentLearningOpportunitiesResponse>(
                 service, METHODID_LIST_AGENT_LEARNING_OPPORTUNITIES)))
+        .addMethod(
+          getCompleteAgentLearningOpportunityMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.agenttraining.CompleteAgentLearningOpportunityRequest,
+              com.tcn.cloud.api.api.v1alpha1.agenttraining.CompleteAgentLearningOpportunityResponse>(
+                service, METHODID_COMPLETE_AGENT_LEARNING_OPPORTUNITY)))
         .addMethod(
           getUpdateLearningOpportunityMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -723,6 +808,7 @@ public final class AgentTrainingServiceGrpc {
               .addMethod(getCreateLearningOpportunityMethod())
               .addMethod(getListLearningOpportunitiesMethod())
               .addMethod(getListAgentLearningOpportunitiesMethod())
+              .addMethod(getCompleteAgentLearningOpportunityMethod())
               .addMethod(getUpdateLearningOpportunityMethod())
               .addMethod(getDeleteLearningOpportunityMethod())
               .addMethod(getGetLearningOpportunityMethod())

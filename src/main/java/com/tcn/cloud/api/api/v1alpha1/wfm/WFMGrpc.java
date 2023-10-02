@@ -4991,6 +4991,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Creates a mapping entry for the &#64;inactive_skill_profile_sid to the &#64;active_skill_profile_sid for the org sending the request.
+     * DEPRECATED as of Sep/27/2023 - Use skill profile groups instead.
      * Required permissions:
      *   NONE
      * Errors:
@@ -5000,6 +5001,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when creating the inactive skill profile mapping.
      * </pre>
      */
+    @java.lang.Deprecated
     default void createInactiveSkillProfileMapping(com.tcn.cloud.api.api.v1alpha1.wfm.CreateInactiveSkillProfileMappingReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateInactiveSkillProfileMappingRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateInactiveSkillProfileMappingMethod(), responseObserver);
@@ -5022,6 +5024,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Changes the current mapping for the given &#64;inactive_skill_profile_sid to be disconnected.
+     * DEPRECATED as of Sep/27/2023 - Use skill profile groups instead.
      * Required permissions:
      *   NONE
      * Errors:
@@ -5031,6 +5034,7 @@ public final class WFMGrpc {
      *				            the given &#64;inactive_skill_profile_sid is of an active skill profile.
      * </pre>
      */
+    @java.lang.Deprecated
     default void disconnectInactiveSkillProfileMapping(com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDisconnectInactiveSkillProfileMappingMethod(), responseObserver);
@@ -5487,14 +5491,15 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Calculates the averages for call characteristics using the historical data of the given &#64;skill_profile_sids and org sending the request.
+     * Calculates the averages for call characteristics using the historical data of the given &#64;skill_profile_sids, &#64;skill_profile_group_sids and org sending the request.
      * If no &#64;skill_profile_sids are given, it will calculate the averages for all skill profiles for the org sending the request.
+     * If no &#64;skill_profile_group_sids are given, it will calculate the averages for all skill profile groups for the org sending the request.
      * Averages will be weighted by the number of calls that each historical data interval has.
      * Once the averages are calculated, they will be updated in the db for those skill profiles.
      * If a nil &#64;datetime_range is given then the range used will be &#64;training_data_range_end_datetime - &#64;averages_calculation_range_in_months to the &#64;training_data_range_end_datetime from the forecasting parameters.
      * If &#64;averages_calculation_range_in_months is 0, it will use the &#64;training_data_range_start_datetime as the start datetime of the range.
-     * If &#64;exclude_skill_profiles_with_manual_averages is true, it will exclude skill profiles that have manual averages from the calculation
-     * even if those skill profiles are in &#64;skill_profile_sids.
+     * If &#64;exclude_skill_profiles_with_manual_averages is true, it will exclude skill profiles and groups that have manual averages from the calculation
+     * even if those skill profiles and groups are in &#64;skill_profile_sids or &#64;skill_profile_group_sids respectively.
      * Errors:
      *   - grpc.Internal: error occurs when calculating the averages from the historical data.
      * </pre>
@@ -7685,6 +7690,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Creates a mapping entry for the &#64;inactive_skill_profile_sid to the &#64;active_skill_profile_sid for the org sending the request.
+     * DEPRECATED as of Sep/27/2023 - Use skill profile groups instead.
      * Required permissions:
      *   NONE
      * Errors:
@@ -7694,6 +7700,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when creating the inactive skill profile mapping.
      * </pre>
      */
+    @java.lang.Deprecated
     public void createInactiveSkillProfileMapping(com.tcn.cloud.api.api.v1alpha1.wfm.CreateInactiveSkillProfileMappingReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateInactiveSkillProfileMappingRes> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -7718,6 +7725,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Changes the current mapping for the given &#64;inactive_skill_profile_sid to be disconnected.
+     * DEPRECATED as of Sep/27/2023 - Use skill profile groups instead.
      * Required permissions:
      *   NONE
      * Errors:
@@ -7727,6 +7735,7 @@ public final class WFMGrpc {
      *				            the given &#64;inactive_skill_profile_sid is of an active skill profile.
      * </pre>
      */
+    @java.lang.Deprecated
     public void disconnectInactiveSkillProfileMapping(com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingRes> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -8211,14 +8220,15 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Calculates the averages for call characteristics using the historical data of the given &#64;skill_profile_sids and org sending the request.
+     * Calculates the averages for call characteristics using the historical data of the given &#64;skill_profile_sids, &#64;skill_profile_group_sids and org sending the request.
      * If no &#64;skill_profile_sids are given, it will calculate the averages for all skill profiles for the org sending the request.
+     * If no &#64;skill_profile_group_sids are given, it will calculate the averages for all skill profile groups for the org sending the request.
      * Averages will be weighted by the number of calls that each historical data interval has.
      * Once the averages are calculated, they will be updated in the db for those skill profiles.
      * If a nil &#64;datetime_range is given then the range used will be &#64;training_data_range_end_datetime - &#64;averages_calculation_range_in_months to the &#64;training_data_range_end_datetime from the forecasting parameters.
      * If &#64;averages_calculation_range_in_months is 0, it will use the &#64;training_data_range_start_datetime as the start datetime of the range.
-     * If &#64;exclude_skill_profiles_with_manual_averages is true, it will exclude skill profiles that have manual averages from the calculation
-     * even if those skill profiles are in &#64;skill_profile_sids.
+     * If &#64;exclude_skill_profiles_with_manual_averages is true, it will exclude skill profiles and groups that have manual averages from the calculation
+     * even if those skill profiles and groups are in &#64;skill_profile_sids or &#64;skill_profile_group_sids respectively.
      * Errors:
      *   - grpc.Internal: error occurs when calculating the averages from the historical data.
      * </pre>
@@ -10488,6 +10498,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Creates a mapping entry for the &#64;inactive_skill_profile_sid to the &#64;active_skill_profile_sid for the org sending the request.
+     * DEPRECATED as of Sep/27/2023 - Use skill profile groups instead.
      * Required permissions:
      *   NONE
      * Errors:
@@ -10497,6 +10508,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when creating the inactive skill profile mapping.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.tcn.cloud.api.api.v1alpha1.wfm.CreateInactiveSkillProfileMappingRes createInactiveSkillProfileMapping(com.tcn.cloud.api.api.v1alpha1.wfm.CreateInactiveSkillProfileMappingReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateInactiveSkillProfileMappingMethod(), getCallOptions(), request);
@@ -10519,6 +10531,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Changes the current mapping for the given &#64;inactive_skill_profile_sid to be disconnected.
+     * DEPRECATED as of Sep/27/2023 - Use skill profile groups instead.
      * Required permissions:
      *   NONE
      * Errors:
@@ -10528,6 +10541,7 @@ public final class WFMGrpc {
      *				            the given &#64;inactive_skill_profile_sid is of an active skill profile.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingRes disconnectInactiveSkillProfileMapping(com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDisconnectInactiveSkillProfileMappingMethod(), getCallOptions(), request);
@@ -10990,14 +11004,15 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Calculates the averages for call characteristics using the historical data of the given &#64;skill_profile_sids and org sending the request.
+     * Calculates the averages for call characteristics using the historical data of the given &#64;skill_profile_sids, &#64;skill_profile_group_sids and org sending the request.
      * If no &#64;skill_profile_sids are given, it will calculate the averages for all skill profiles for the org sending the request.
+     * If no &#64;skill_profile_group_sids are given, it will calculate the averages for all skill profile groups for the org sending the request.
      * Averages will be weighted by the number of calls that each historical data interval has.
      * Once the averages are calculated, they will be updated in the db for those skill profiles.
      * If a nil &#64;datetime_range is given then the range used will be &#64;training_data_range_end_datetime - &#64;averages_calculation_range_in_months to the &#64;training_data_range_end_datetime from the forecasting parameters.
      * If &#64;averages_calculation_range_in_months is 0, it will use the &#64;training_data_range_start_datetime as the start datetime of the range.
-     * If &#64;exclude_skill_profiles_with_manual_averages is true, it will exclude skill profiles that have manual averages from the calculation
-     * even if those skill profiles are in &#64;skill_profile_sids.
+     * If &#64;exclude_skill_profiles_with_manual_averages is true, it will exclude skill profiles and groups that have manual averages from the calculation
+     * even if those skill profiles and groups are in &#64;skill_profile_sids or &#64;skill_profile_group_sids respectively.
      * Errors:
      *   - grpc.Internal: error occurs when calculating the averages from the historical data.
      * </pre>
@@ -13174,6 +13189,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Creates a mapping entry for the &#64;inactive_skill_profile_sid to the &#64;active_skill_profile_sid for the org sending the request.
+     * DEPRECATED as of Sep/27/2023 - Use skill profile groups instead.
      * Required permissions:
      *   NONE
      * Errors:
@@ -13183,6 +13199,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when creating the inactive skill profile mapping.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.CreateInactiveSkillProfileMappingRes> createInactiveSkillProfileMapping(
         com.tcn.cloud.api.api.v1alpha1.wfm.CreateInactiveSkillProfileMappingReq request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -13207,6 +13224,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Changes the current mapping for the given &#64;inactive_skill_profile_sid to be disconnected.
+     * DEPRECATED as of Sep/27/2023 - Use skill profile groups instead.
      * Required permissions:
      *   NONE
      * Errors:
@@ -13216,6 +13234,7 @@ public final class WFMGrpc {
      *				            the given &#64;inactive_skill_profile_sid is of an active skill profile.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingRes> disconnectInactiveSkillProfileMapping(
         com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingReq request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -13588,14 +13607,15 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Calculates the averages for call characteristics using the historical data of the given &#64;skill_profile_sids and org sending the request.
+     * Calculates the averages for call characteristics using the historical data of the given &#64;skill_profile_sids, &#64;skill_profile_group_sids and org sending the request.
      * If no &#64;skill_profile_sids are given, it will calculate the averages for all skill profiles for the org sending the request.
+     * If no &#64;skill_profile_group_sids are given, it will calculate the averages for all skill profile groups for the org sending the request.
      * Averages will be weighted by the number of calls that each historical data interval has.
      * Once the averages are calculated, they will be updated in the db for those skill profiles.
      * If a nil &#64;datetime_range is given then the range used will be &#64;training_data_range_end_datetime - &#64;averages_calculation_range_in_months to the &#64;training_data_range_end_datetime from the forecasting parameters.
      * If &#64;averages_calculation_range_in_months is 0, it will use the &#64;training_data_range_start_datetime as the start datetime of the range.
-     * If &#64;exclude_skill_profiles_with_manual_averages is true, it will exclude skill profiles that have manual averages from the calculation
-     * even if those skill profiles are in &#64;skill_profile_sids.
+     * If &#64;exclude_skill_profiles_with_manual_averages is true, it will exclude skill profiles and groups that have manual averages from the calculation
+     * even if those skill profiles and groups are in &#64;skill_profile_sids or &#64;skill_profile_group_sids respectively.
      * Errors:
      *   - grpc.Internal: error occurs when calculating the averages from the historical data.
      * </pre>

@@ -207,51 +207,52 @@ public final class EntitiesProto {
       "erActivity.UserActivityDetailsR\023userActi" +
       "vityDetails\032M\n\023UserActivityDetails\0226\n\025pu" +
       "blished_article_sid\030\001 \001(\003B\0020\001R\023published" +
-      "ArticleSid\"s\n\035CreatePublishedArticleRequ" +
-      "est\022*\n\017new_article_sid\030\001 \001(\003B\0020\001R\rnewArt" +
-      "icleSid\022&\n\017display_to_user\030\002 \001(\010R\rdispla" +
-      "yToUser\"\214\001\n\036CreatePublishedArticleRespon" +
-      "se\022j\n\031published_article_details\030\001 \001(\0132.." +
-      "api.v1alpha1.newsroom.PublishedArticleDe" +
-      "tailsR\027publishedArticleDetails\"\036\n\034ListPu" +
-      "blishedArticlesRequest\"\213\001\n\035ListPublished" +
-      "ArticlesResponse\022j\n\031published_article_de" +
-      "tails\030\001 \003(\0132..api.v1alpha1.newsroom.Publ" +
-      "ishedArticleDetailsR\027publishedArticleDet" +
-      "ails\"\204\001\n\036GetPublishedArticleByIdRequest\022" +
-      "*\n\017new_article_sid\030\001 \001(\003B\002\030\001R\rnewArticle" +
-      "Sid\0226\n\025published_article_sid\030\002 \001(\003B\0020\001R\023" +
-      "publishedArticleSid\"\215\001\n\037GetPublishedArti" +
-      "cleByIdResponse\022j\n\031published_article_det" +
-      "ails\030\001 \001(\0132..api.v1alpha1.newsroom.Publi" +
-      "shedArticleDetailsR\027publishedArticleDeta" +
-      "ils\"M\n\023UserActivityRequest\0226\n\025published_" +
-      "article_sid\030\001 \001(\003B\0020\001R\023publishedArticleS" +
-      "id\"`\n\024UserActivityResponse\022H\n\ruser_activ" +
-      "ity\030\001 \001(\0132#.api.v1alpha1.newsroom.UserAc" +
-      "tivityR\014userActivity\"\027\n\025GetNewsForUserRe" +
-      "quest\"\204\001\n\026GetNewsForUserResponse\022j\n\031publ" +
-      "ished_article_details\030\001 \003(\0132..api.v1alph" +
-      "a1.newsroom.PublishedArticleDetailsR\027pub" +
-      "lishedArticleDetails\"]\n\034StoreNewsArticle" +
-      "ImageRequest\022=\n\005image\030\001 \001(\0132\'.api.v1alph" +
-      "a1.newsroom.NewsArticleImageR\005image\"\217\001\n\020" +
-      "NewsArticleImage\022\022\n\004uuid\030\001 \001(\tR\004uuid\022*\n\017" +
-      "new_article_sid\030\002 \001(\003B\0020\001R\rnewArticleSid" +
-      "\022\030\n\007content\030\003 \001(\tR\007content\022!\n\014download_u" +
-      "rl\030\004 \001(\tR\013downloadUrl\"^\n\035StoreNewsArticl" +
-      "eImageResponse\022=\n\005image\030\001 \001(\0132\'.api.v1al" +
-      "pha1.newsroom.NewsArticleImageR\005image\"M\n" +
-      "\037ListImagesForNewsArticleRequest\022*\n\017new_" +
-      "article_sid\030\001 \001(\003B\0020\001R\rnewArticleSid\"{\n " +
-      "ListImagesForNewsArticleResponse\022W\n\023news" +
-      "_article_images\030\001 \003(\0132\'.api.v1alpha1.new" +
-      "sroom.NewsArticleImageR\021newsArticleImage" +
-      "sB\256\001\n\'com.tcn.cloud.api.api.v1alpha1.new" +
-      "sroomB\rEntitiesProtoP\001\242\002\003AVN\252\002\025Api.V1alp" +
-      "ha1.Newsroom\312\002\025Api\\V1alpha1\\Newsroom\342\002!A" +
-      "pi\\V1alpha1\\Newsroom\\GPBMetadata\352\002\027Api::" +
-      "V1alpha1::Newsroomb\006proto3"
+      "ArticleSid\"\226\001\n\035CreatePublishedArticleReq" +
+      "uest\022*\n\017new_article_sid\030\001 \001(\003B\0020\001R\rnewAr" +
+      "ticleSid\022&\n\017display_to_user\030\002 \001(\010R\rdispl" +
+      "ayToUser\022!\n\014article_link\030\003 \001(\tR\013articleL" +
+      "ink\"\214\001\n\036CreatePublishedArticleResponse\022j" +
+      "\n\031published_article_details\030\001 \001(\0132..api." +
+      "v1alpha1.newsroom.PublishedArticleDetail" +
+      "sR\027publishedArticleDetails\"\036\n\034ListPublis" +
+      "hedArticlesRequest\"\213\001\n\035ListPublishedArti" +
+      "clesResponse\022j\n\031published_article_detail" +
+      "s\030\001 \003(\0132..api.v1alpha1.newsroom.Publishe" +
+      "dArticleDetailsR\027publishedArticleDetails" +
+      "\"\204\001\n\036GetPublishedArticleByIdRequest\022*\n\017n" +
+      "ew_article_sid\030\001 \001(\003B\002\030\001R\rnewArticleSid\022" +
+      "6\n\025published_article_sid\030\002 \001(\003B\0020\001R\023publ" +
+      "ishedArticleSid\"\215\001\n\037GetPublishedArticleB" +
+      "yIdResponse\022j\n\031published_article_details" +
+      "\030\001 \001(\0132..api.v1alpha1.newsroom.Published" +
+      "ArticleDetailsR\027publishedArticleDetails\"" +
+      "M\n\023UserActivityRequest\0226\n\025published_arti" +
+      "cle_sid\030\001 \001(\003B\0020\001R\023publishedArticleSid\"`" +
+      "\n\024UserActivityResponse\022H\n\ruser_activity\030" +
+      "\001 \001(\0132#.api.v1alpha1.newsroom.UserActivi" +
+      "tyR\014userActivity\"\027\n\025GetNewsForUserReques" +
+      "t\"\204\001\n\026GetNewsForUserResponse\022j\n\031publishe" +
+      "d_article_details\030\001 \003(\0132..api.v1alpha1.n" +
+      "ewsroom.PublishedArticleDetailsR\027publish" +
+      "edArticleDetails\"]\n\034StoreNewsArticleImag" +
+      "eRequest\022=\n\005image\030\001 \001(\0132\'.api.v1alpha1.n" +
+      "ewsroom.NewsArticleImageR\005image\"\217\001\n\020News" +
+      "ArticleImage\022\022\n\004uuid\030\001 \001(\tR\004uuid\022*\n\017new_" +
+      "article_sid\030\002 \001(\003B\0020\001R\rnewArticleSid\022\030\n\007" +
+      "content\030\003 \001(\tR\007content\022!\n\014download_url\030\004" +
+      " \001(\tR\013downloadUrl\"^\n\035StoreNewsArticleIma" +
+      "geResponse\022=\n\005image\030\001 \001(\0132\'.api.v1alpha1" +
+      ".newsroom.NewsArticleImageR\005image\"M\n\037Lis" +
+      "tImagesForNewsArticleRequest\022*\n\017new_arti" +
+      "cle_sid\030\001 \001(\003B\0020\001R\rnewArticleSid\"{\n List" +
+      "ImagesForNewsArticleResponse\022W\n\023news_art" +
+      "icle_images\030\001 \003(\0132\'.api.v1alpha1.newsroo" +
+      "m.NewsArticleImageR\021newsArticleImagesB\256\001" +
+      "\n\'com.tcn.cloud.api.api.v1alpha1.newsroo" +
+      "mB\rEntitiesProtoP\001\242\002\003AVN\252\002\025Api.V1alpha1." +
+      "Newsroom\312\002\025Api\\V1alpha1\\Newsroom\342\002!Api\\V" +
+      "1alpha1\\Newsroom\\GPBMetadata\352\002\027Api::V1al" +
+      "pha1::Newsroomb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -337,7 +338,7 @@ public final class EntitiesProto {
     internal_static_api_v1alpha1_newsroom_CreatePublishedArticleRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_newsroom_CreatePublishedArticleRequest_descriptor,
-        new java.lang.String[] { "NewArticleSid", "DisplayToUser", });
+        new java.lang.String[] { "NewArticleSid", "DisplayToUser", "ArticleLink", });
     internal_static_api_v1alpha1_newsroom_CreatePublishedArticleResponse_descriptor =
       getDescriptor().getMessageTypes().get(12);
     internal_static_api_v1alpha1_newsroom_CreatePublishedArticleResponse_fieldAccessorTable = new
