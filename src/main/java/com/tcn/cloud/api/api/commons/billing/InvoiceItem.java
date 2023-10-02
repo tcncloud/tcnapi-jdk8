@@ -4,13 +4,9 @@
 package com.tcn.cloud.api.api.commons.billing;
 
 /**
- * <pre>
- * InvoiceItem -
- * </pre>
- *
  * Protobuf type {@code api.commons.billing.InvoiceItem}
  */
-public final class InvoiceItem extends
+@java.lang.Deprecated public final class InvoiceItem extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.commons.billing.InvoiceItem)
     InvoiceItemOrBuilder {
@@ -46,40 +42,34 @@ private static final long serialVersionUID = 0L;
   public static final int INVOICE_ITEM_SID_FIELD_NUMBER = 1;
   private long invoiceItemSid_ = 0L;
   /**
-   * <pre>
-   * The unique identifier for this invoice item
-   * </pre>
-   *
-   * <code>int64 invoice_item_sid = 1 [json_name = "invoiceItemSid"];</code>
+   * <code>int64 invoice_item_sid = 1 [json_name = "invoiceItemSid", deprecated = true];</code>
+   * @deprecated api.commons.billing.InvoiceItem.invoice_item_sid is deprecated.
+   *     See api/commons/billing/invoice.proto;l=41
    * @return The invoiceItemSid.
    */
   @java.lang.Override
-  public long getInvoiceItemSid() {
+  @java.lang.Deprecated public long getInvoiceItemSid() {
     return invoiceItemSid_;
   }
 
   public static final int PRODUCT_FIELD_NUMBER = 2;
   private int product_ = 0;
   /**
-   * <pre>
-   * The product this item contains the total for
-   * </pre>
-   *
-   * <code>.api.commons.billing.Product product = 2 [json_name = "product"];</code>
+   * <code>.api.commons.billing.Product product = 2 [json_name = "product", deprecated = true];</code>
+   * @deprecated api.commons.billing.InvoiceItem.product is deprecated.
+   *     See api/commons/billing/invoice.proto;l=42
    * @return The enum numeric value on the wire for product.
    */
-  @java.lang.Override public int getProductValue() {
+  @java.lang.Override @java.lang.Deprecated public int getProductValue() {
     return product_;
   }
   /**
-   * <pre>
-   * The product this item contains the total for
-   * </pre>
-   *
-   * <code>.api.commons.billing.Product product = 2 [json_name = "product"];</code>
+   * <code>.api.commons.billing.Product product = 2 [json_name = "product", deprecated = true];</code>
+   * @deprecated api.commons.billing.InvoiceItem.product is deprecated.
+   *     See api/commons/billing/invoice.proto;l=42
    * @return The product.
    */
-  @java.lang.Override public com.tcn.cloud.api.api.commons.billing.Product getProduct() {
+  @java.lang.Override @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.Product getProduct() {
     com.tcn.cloud.api.api.commons.billing.Product result = com.tcn.cloud.api.api.commons.billing.Product.forNumber(product_);
     return result == null ? com.tcn.cloud.api.api.commons.billing.Product.UNRECOGNIZED : result;
   }
@@ -87,106 +77,86 @@ private static final long serialVersionUID = 0L;
   public static final int AMOUNT_FIELD_NUMBER = 3;
   private double amount_ = 0D;
   /**
-   * <pre>
-   * The total amount billed for the product
-   * </pre>
-   *
-   * <code>double amount = 3 [json_name = "amount"];</code>
+   * <code>double amount = 3 [json_name = "amount", deprecated = true];</code>
+   * @deprecated api.commons.billing.InvoiceItem.amount is deprecated.
+   *     See api/commons/billing/invoice.proto;l=43
    * @return The amount.
    */
   @java.lang.Override
-  public double getAmount() {
+  @java.lang.Deprecated public double getAmount() {
     return amount_;
   }
 
   public static final int DATE_CREATED_FIELD_NUMBER = 4;
   private com.google.protobuf.Timestamp dateCreated_;
   /**
-   * <pre>
-   * time the invoice item was created
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp date_created = 4 [json_name = "dateCreated"];</code>
+   * <code>.google.protobuf.Timestamp date_created = 4 [json_name = "dateCreated", deprecated = true];</code>
+   * @deprecated api.commons.billing.InvoiceItem.date_created is deprecated.
+   *     See api/commons/billing/invoice.proto;l=44
    * @return Whether the dateCreated field is set.
    */
   @java.lang.Override
-  public boolean hasDateCreated() {
+  @java.lang.Deprecated public boolean hasDateCreated() {
     return dateCreated_ != null;
   }
   /**
-   * <pre>
-   * time the invoice item was created
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp date_created = 4 [json_name = "dateCreated"];</code>
+   * <code>.google.protobuf.Timestamp date_created = 4 [json_name = "dateCreated", deprecated = true];</code>
+   * @deprecated api.commons.billing.InvoiceItem.date_created is deprecated.
+   *     See api/commons/billing/invoice.proto;l=44
    * @return The dateCreated.
    */
   @java.lang.Override
-  public com.google.protobuf.Timestamp getDateCreated() {
+  @java.lang.Deprecated public com.google.protobuf.Timestamp getDateCreated() {
     return dateCreated_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : dateCreated_;
   }
   /**
-   * <pre>
-   * time the invoice item was created
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp date_created = 4 [json_name = "dateCreated"];</code>
+   * <code>.google.protobuf.Timestamp date_created = 4 [json_name = "dateCreated", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.google.protobuf.TimestampOrBuilder getDateCreatedOrBuilder() {
+  @java.lang.Deprecated public com.google.protobuf.TimestampOrBuilder getDateCreatedOrBuilder() {
     return dateCreated_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : dateCreated_;
   }
 
   public static final int DATE_MODIFIED_FIELD_NUMBER = 5;
   private com.google.protobuf.Timestamp dateModified_;
   /**
-   * <pre>
-   * time the invoice item was last modified
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp date_modified = 5 [json_name = "dateModified"];</code>
+   * <code>.google.protobuf.Timestamp date_modified = 5 [json_name = "dateModified", deprecated = true];</code>
+   * @deprecated api.commons.billing.InvoiceItem.date_modified is deprecated.
+   *     See api/commons/billing/invoice.proto;l=45
    * @return Whether the dateModified field is set.
    */
   @java.lang.Override
-  public boolean hasDateModified() {
+  @java.lang.Deprecated public boolean hasDateModified() {
     return dateModified_ != null;
   }
   /**
-   * <pre>
-   * time the invoice item was last modified
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp date_modified = 5 [json_name = "dateModified"];</code>
+   * <code>.google.protobuf.Timestamp date_modified = 5 [json_name = "dateModified", deprecated = true];</code>
+   * @deprecated api.commons.billing.InvoiceItem.date_modified is deprecated.
+   *     See api/commons/billing/invoice.proto;l=45
    * @return The dateModified.
    */
   @java.lang.Override
-  public com.google.protobuf.Timestamp getDateModified() {
+  @java.lang.Deprecated public com.google.protobuf.Timestamp getDateModified() {
     return dateModified_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : dateModified_;
   }
   /**
-   * <pre>
-   * time the invoice item was last modified
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp date_modified = 5 [json_name = "dateModified"];</code>
+   * <code>.google.protobuf.Timestamp date_modified = 5 [json_name = "dateModified", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.google.protobuf.TimestampOrBuilder getDateModifiedOrBuilder() {
+  @java.lang.Deprecated public com.google.protobuf.TimestampOrBuilder getDateModifiedOrBuilder() {
     return dateModified_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : dateModified_;
   }
 
   public static final int INVOICE_ID_FIELD_NUMBER = 6;
   private long invoiceId_ = 0L;
   /**
-   * <pre>
-   * the invoice identifier
-   * </pre>
-   *
-   * <code>int64 invoice_id = 6 [json_name = "invoiceId", jstype = JS_STRING];</code>
+   * <code>int64 invoice_id = 6 [json_name = "invoiceId", deprecated = true, jstype = JS_STRING];</code>
+   * @deprecated api.commons.billing.InvoiceItem.invoice_id is deprecated.
+   *     See api/commons/billing/invoice.proto;l=46
    * @return The invoiceId.
    */
   @java.lang.Override
-  public long getInvoiceId() {
+  @java.lang.Deprecated public long getInvoiceId() {
     return invoiceId_;
   }
 
@@ -416,10 +386,6 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * <pre>
-   * InvoiceItem -
-   * </pre>
-   *
    * Protobuf type {@code api.commons.billing.InvoiceItem}
    */
   public static final class Builder extends
@@ -665,27 +631,23 @@ private static final long serialVersionUID = 0L;
 
     private long invoiceItemSid_ ;
     /**
-     * <pre>
-     * The unique identifier for this invoice item
-     * </pre>
-     *
-     * <code>int64 invoice_item_sid = 1 [json_name = "invoiceItemSid"];</code>
+     * <code>int64 invoice_item_sid = 1 [json_name = "invoiceItemSid", deprecated = true];</code>
+     * @deprecated api.commons.billing.InvoiceItem.invoice_item_sid is deprecated.
+     *     See api/commons/billing/invoice.proto;l=41
      * @return The invoiceItemSid.
      */
     @java.lang.Override
-    public long getInvoiceItemSid() {
+    @java.lang.Deprecated public long getInvoiceItemSid() {
       return invoiceItemSid_;
     }
     /**
-     * <pre>
-     * The unique identifier for this invoice item
-     * </pre>
-     *
-     * <code>int64 invoice_item_sid = 1 [json_name = "invoiceItemSid"];</code>
+     * <code>int64 invoice_item_sid = 1 [json_name = "invoiceItemSid", deprecated = true];</code>
+     * @deprecated api.commons.billing.InvoiceItem.invoice_item_sid is deprecated.
+     *     See api/commons/billing/invoice.proto;l=41
      * @param value The invoiceItemSid to set.
      * @return This builder for chaining.
      */
-    public Builder setInvoiceItemSid(long value) {
+    @java.lang.Deprecated public Builder setInvoiceItemSid(long value) {
 
       invoiceItemSid_ = value;
       bitField0_ |= 0x00000001;
@@ -693,14 +655,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * The unique identifier for this invoice item
-     * </pre>
-     *
-     * <code>int64 invoice_item_sid = 1 [json_name = "invoiceItemSid"];</code>
+     * <code>int64 invoice_item_sid = 1 [json_name = "invoiceItemSid", deprecated = true];</code>
+     * @deprecated api.commons.billing.InvoiceItem.invoice_item_sid is deprecated.
+     *     See api/commons/billing/invoice.proto;l=41
      * @return This builder for chaining.
      */
-    public Builder clearInvoiceItemSid() {
+    @java.lang.Deprecated public Builder clearInvoiceItemSid() {
       bitField0_ = (bitField0_ & ~0x00000001);
       invoiceItemSid_ = 0L;
       onChanged();
@@ -709,54 +669,46 @@ private static final long serialVersionUID = 0L;
 
     private int product_ = 0;
     /**
-     * <pre>
-     * The product this item contains the total for
-     * </pre>
-     *
-     * <code>.api.commons.billing.Product product = 2 [json_name = "product"];</code>
+     * <code>.api.commons.billing.Product product = 2 [json_name = "product", deprecated = true];</code>
+     * @deprecated api.commons.billing.InvoiceItem.product is deprecated.
+     *     See api/commons/billing/invoice.proto;l=42
      * @return The enum numeric value on the wire for product.
      */
-    @java.lang.Override public int getProductValue() {
+    @java.lang.Override @java.lang.Deprecated public int getProductValue() {
       return product_;
     }
     /**
-     * <pre>
-     * The product this item contains the total for
-     * </pre>
-     *
-     * <code>.api.commons.billing.Product product = 2 [json_name = "product"];</code>
+     * <code>.api.commons.billing.Product product = 2 [json_name = "product", deprecated = true];</code>
+     * @deprecated api.commons.billing.InvoiceItem.product is deprecated.
+     *     See api/commons/billing/invoice.proto;l=42
      * @param value The enum numeric value on the wire for product to set.
      * @return This builder for chaining.
      */
-    public Builder setProductValue(int value) {
+    @java.lang.Deprecated public Builder setProductValue(int value) {
       product_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
-     * <pre>
-     * The product this item contains the total for
-     * </pre>
-     *
-     * <code>.api.commons.billing.Product product = 2 [json_name = "product"];</code>
+     * <code>.api.commons.billing.Product product = 2 [json_name = "product", deprecated = true];</code>
+     * @deprecated api.commons.billing.InvoiceItem.product is deprecated.
+     *     See api/commons/billing/invoice.proto;l=42
      * @return The product.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.Product getProduct() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.Product getProduct() {
       com.tcn.cloud.api.api.commons.billing.Product result = com.tcn.cloud.api.api.commons.billing.Product.forNumber(product_);
       return result == null ? com.tcn.cloud.api.api.commons.billing.Product.UNRECOGNIZED : result;
     }
     /**
-     * <pre>
-     * The product this item contains the total for
-     * </pre>
-     *
-     * <code>.api.commons.billing.Product product = 2 [json_name = "product"];</code>
+     * <code>.api.commons.billing.Product product = 2 [json_name = "product", deprecated = true];</code>
+     * @deprecated api.commons.billing.InvoiceItem.product is deprecated.
+     *     See api/commons/billing/invoice.proto;l=42
      * @param value The product to set.
      * @return This builder for chaining.
      */
-    public Builder setProduct(com.tcn.cloud.api.api.commons.billing.Product value) {
+    @java.lang.Deprecated public Builder setProduct(com.tcn.cloud.api.api.commons.billing.Product value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -766,14 +718,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * The product this item contains the total for
-     * </pre>
-     *
-     * <code>.api.commons.billing.Product product = 2 [json_name = "product"];</code>
+     * <code>.api.commons.billing.Product product = 2 [json_name = "product", deprecated = true];</code>
+     * @deprecated api.commons.billing.InvoiceItem.product is deprecated.
+     *     See api/commons/billing/invoice.proto;l=42
      * @return This builder for chaining.
      */
-    public Builder clearProduct() {
+    @java.lang.Deprecated public Builder clearProduct() {
       bitField0_ = (bitField0_ & ~0x00000002);
       product_ = 0;
       onChanged();
@@ -782,27 +732,23 @@ private static final long serialVersionUID = 0L;
 
     private double amount_ ;
     /**
-     * <pre>
-     * The total amount billed for the product
-     * </pre>
-     *
-     * <code>double amount = 3 [json_name = "amount"];</code>
+     * <code>double amount = 3 [json_name = "amount", deprecated = true];</code>
+     * @deprecated api.commons.billing.InvoiceItem.amount is deprecated.
+     *     See api/commons/billing/invoice.proto;l=43
      * @return The amount.
      */
     @java.lang.Override
-    public double getAmount() {
+    @java.lang.Deprecated public double getAmount() {
       return amount_;
     }
     /**
-     * <pre>
-     * The total amount billed for the product
-     * </pre>
-     *
-     * <code>double amount = 3 [json_name = "amount"];</code>
+     * <code>double amount = 3 [json_name = "amount", deprecated = true];</code>
+     * @deprecated api.commons.billing.InvoiceItem.amount is deprecated.
+     *     See api/commons/billing/invoice.proto;l=43
      * @param value The amount to set.
      * @return This builder for chaining.
      */
-    public Builder setAmount(double value) {
+    @java.lang.Deprecated public Builder setAmount(double value) {
 
       amount_ = value;
       bitField0_ |= 0x00000004;
@@ -810,14 +756,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * The total amount billed for the product
-     * </pre>
-     *
-     * <code>double amount = 3 [json_name = "amount"];</code>
+     * <code>double amount = 3 [json_name = "amount", deprecated = true];</code>
+     * @deprecated api.commons.billing.InvoiceItem.amount is deprecated.
+     *     See api/commons/billing/invoice.proto;l=43
      * @return This builder for chaining.
      */
-    public Builder clearAmount() {
+    @java.lang.Deprecated public Builder clearAmount() {
       bitField0_ = (bitField0_ & ~0x00000004);
       amount_ = 0D;
       onChanged();
@@ -828,25 +772,21 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> dateCreatedBuilder_;
     /**
-     * <pre>
-     * time the invoice item was created
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp date_created = 4 [json_name = "dateCreated"];</code>
+     * <code>.google.protobuf.Timestamp date_created = 4 [json_name = "dateCreated", deprecated = true];</code>
+     * @deprecated api.commons.billing.InvoiceItem.date_created is deprecated.
+     *     See api/commons/billing/invoice.proto;l=44
      * @return Whether the dateCreated field is set.
      */
-    public boolean hasDateCreated() {
+    @java.lang.Deprecated public boolean hasDateCreated() {
       return ((bitField0_ & 0x00000008) != 0);
     }
     /**
-     * <pre>
-     * time the invoice item was created
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp date_created = 4 [json_name = "dateCreated"];</code>
+     * <code>.google.protobuf.Timestamp date_created = 4 [json_name = "dateCreated", deprecated = true];</code>
+     * @deprecated api.commons.billing.InvoiceItem.date_created is deprecated.
+     *     See api/commons/billing/invoice.proto;l=44
      * @return The dateCreated.
      */
-    public com.google.protobuf.Timestamp getDateCreated() {
+    @java.lang.Deprecated public com.google.protobuf.Timestamp getDateCreated() {
       if (dateCreatedBuilder_ == null) {
         return dateCreated_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : dateCreated_;
       } else {
@@ -854,13 +794,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * time the invoice item was created
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp date_created = 4 [json_name = "dateCreated"];</code>
+     * <code>.google.protobuf.Timestamp date_created = 4 [json_name = "dateCreated", deprecated = true];</code>
      */
-    public Builder setDateCreated(com.google.protobuf.Timestamp value) {
+    @java.lang.Deprecated public Builder setDateCreated(com.google.protobuf.Timestamp value) {
       if (dateCreatedBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -874,13 +810,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * time the invoice item was created
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp date_created = 4 [json_name = "dateCreated"];</code>
+     * <code>.google.protobuf.Timestamp date_created = 4 [json_name = "dateCreated", deprecated = true];</code>
      */
-    public Builder setDateCreated(
+    @java.lang.Deprecated public Builder setDateCreated(
         com.google.protobuf.Timestamp.Builder builderForValue) {
       if (dateCreatedBuilder_ == null) {
         dateCreated_ = builderForValue.build();
@@ -892,13 +824,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * time the invoice item was created
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp date_created = 4 [json_name = "dateCreated"];</code>
+     * <code>.google.protobuf.Timestamp date_created = 4 [json_name = "dateCreated", deprecated = true];</code>
      */
-    public Builder mergeDateCreated(com.google.protobuf.Timestamp value) {
+    @java.lang.Deprecated public Builder mergeDateCreated(com.google.protobuf.Timestamp value) {
       if (dateCreatedBuilder_ == null) {
         if (((bitField0_ & 0x00000008) != 0) &&
           dateCreated_ != null &&
@@ -915,13 +843,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * time the invoice item was created
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp date_created = 4 [json_name = "dateCreated"];</code>
+     * <code>.google.protobuf.Timestamp date_created = 4 [json_name = "dateCreated", deprecated = true];</code>
      */
-    public Builder clearDateCreated() {
+    @java.lang.Deprecated public Builder clearDateCreated() {
       bitField0_ = (bitField0_ & ~0x00000008);
       dateCreated_ = null;
       if (dateCreatedBuilder_ != null) {
@@ -932,25 +856,17 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * time the invoice item was created
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp date_created = 4 [json_name = "dateCreated"];</code>
+     * <code>.google.protobuf.Timestamp date_created = 4 [json_name = "dateCreated", deprecated = true];</code>
      */
-    public com.google.protobuf.Timestamp.Builder getDateCreatedBuilder() {
+    @java.lang.Deprecated public com.google.protobuf.Timestamp.Builder getDateCreatedBuilder() {
       bitField0_ |= 0x00000008;
       onChanged();
       return getDateCreatedFieldBuilder().getBuilder();
     }
     /**
-     * <pre>
-     * time the invoice item was created
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp date_created = 4 [json_name = "dateCreated"];</code>
+     * <code>.google.protobuf.Timestamp date_created = 4 [json_name = "dateCreated", deprecated = true];</code>
      */
-    public com.google.protobuf.TimestampOrBuilder getDateCreatedOrBuilder() {
+    @java.lang.Deprecated public com.google.protobuf.TimestampOrBuilder getDateCreatedOrBuilder() {
       if (dateCreatedBuilder_ != null) {
         return dateCreatedBuilder_.getMessageOrBuilder();
       } else {
@@ -959,11 +875,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * time the invoice item was created
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp date_created = 4 [json_name = "dateCreated"];</code>
+     * <code>.google.protobuf.Timestamp date_created = 4 [json_name = "dateCreated", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -983,25 +895,21 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> dateModifiedBuilder_;
     /**
-     * <pre>
-     * time the invoice item was last modified
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp date_modified = 5 [json_name = "dateModified"];</code>
+     * <code>.google.protobuf.Timestamp date_modified = 5 [json_name = "dateModified", deprecated = true];</code>
+     * @deprecated api.commons.billing.InvoiceItem.date_modified is deprecated.
+     *     See api/commons/billing/invoice.proto;l=45
      * @return Whether the dateModified field is set.
      */
-    public boolean hasDateModified() {
+    @java.lang.Deprecated public boolean hasDateModified() {
       return ((bitField0_ & 0x00000010) != 0);
     }
     /**
-     * <pre>
-     * time the invoice item was last modified
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp date_modified = 5 [json_name = "dateModified"];</code>
+     * <code>.google.protobuf.Timestamp date_modified = 5 [json_name = "dateModified", deprecated = true];</code>
+     * @deprecated api.commons.billing.InvoiceItem.date_modified is deprecated.
+     *     See api/commons/billing/invoice.proto;l=45
      * @return The dateModified.
      */
-    public com.google.protobuf.Timestamp getDateModified() {
+    @java.lang.Deprecated public com.google.protobuf.Timestamp getDateModified() {
       if (dateModifiedBuilder_ == null) {
         return dateModified_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : dateModified_;
       } else {
@@ -1009,13 +917,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * time the invoice item was last modified
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp date_modified = 5 [json_name = "dateModified"];</code>
+     * <code>.google.protobuf.Timestamp date_modified = 5 [json_name = "dateModified", deprecated = true];</code>
      */
-    public Builder setDateModified(com.google.protobuf.Timestamp value) {
+    @java.lang.Deprecated public Builder setDateModified(com.google.protobuf.Timestamp value) {
       if (dateModifiedBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1029,13 +933,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * time the invoice item was last modified
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp date_modified = 5 [json_name = "dateModified"];</code>
+     * <code>.google.protobuf.Timestamp date_modified = 5 [json_name = "dateModified", deprecated = true];</code>
      */
-    public Builder setDateModified(
+    @java.lang.Deprecated public Builder setDateModified(
         com.google.protobuf.Timestamp.Builder builderForValue) {
       if (dateModifiedBuilder_ == null) {
         dateModified_ = builderForValue.build();
@@ -1047,13 +947,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * time the invoice item was last modified
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp date_modified = 5 [json_name = "dateModified"];</code>
+     * <code>.google.protobuf.Timestamp date_modified = 5 [json_name = "dateModified", deprecated = true];</code>
      */
-    public Builder mergeDateModified(com.google.protobuf.Timestamp value) {
+    @java.lang.Deprecated public Builder mergeDateModified(com.google.protobuf.Timestamp value) {
       if (dateModifiedBuilder_ == null) {
         if (((bitField0_ & 0x00000010) != 0) &&
           dateModified_ != null &&
@@ -1070,13 +966,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * time the invoice item was last modified
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp date_modified = 5 [json_name = "dateModified"];</code>
+     * <code>.google.protobuf.Timestamp date_modified = 5 [json_name = "dateModified", deprecated = true];</code>
      */
-    public Builder clearDateModified() {
+    @java.lang.Deprecated public Builder clearDateModified() {
       bitField0_ = (bitField0_ & ~0x00000010);
       dateModified_ = null;
       if (dateModifiedBuilder_ != null) {
@@ -1087,25 +979,17 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * time the invoice item was last modified
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp date_modified = 5 [json_name = "dateModified"];</code>
+     * <code>.google.protobuf.Timestamp date_modified = 5 [json_name = "dateModified", deprecated = true];</code>
      */
-    public com.google.protobuf.Timestamp.Builder getDateModifiedBuilder() {
+    @java.lang.Deprecated public com.google.protobuf.Timestamp.Builder getDateModifiedBuilder() {
       bitField0_ |= 0x00000010;
       onChanged();
       return getDateModifiedFieldBuilder().getBuilder();
     }
     /**
-     * <pre>
-     * time the invoice item was last modified
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp date_modified = 5 [json_name = "dateModified"];</code>
+     * <code>.google.protobuf.Timestamp date_modified = 5 [json_name = "dateModified", deprecated = true];</code>
      */
-    public com.google.protobuf.TimestampOrBuilder getDateModifiedOrBuilder() {
+    @java.lang.Deprecated public com.google.protobuf.TimestampOrBuilder getDateModifiedOrBuilder() {
       if (dateModifiedBuilder_ != null) {
         return dateModifiedBuilder_.getMessageOrBuilder();
       } else {
@@ -1114,11 +998,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * time the invoice item was last modified
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp date_modified = 5 [json_name = "dateModified"];</code>
+     * <code>.google.protobuf.Timestamp date_modified = 5 [json_name = "dateModified", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -1136,27 +1016,23 @@ private static final long serialVersionUID = 0L;
 
     private long invoiceId_ ;
     /**
-     * <pre>
-     * the invoice identifier
-     * </pre>
-     *
-     * <code>int64 invoice_id = 6 [json_name = "invoiceId", jstype = JS_STRING];</code>
+     * <code>int64 invoice_id = 6 [json_name = "invoiceId", deprecated = true, jstype = JS_STRING];</code>
+     * @deprecated api.commons.billing.InvoiceItem.invoice_id is deprecated.
+     *     See api/commons/billing/invoice.proto;l=46
      * @return The invoiceId.
      */
     @java.lang.Override
-    public long getInvoiceId() {
+    @java.lang.Deprecated public long getInvoiceId() {
       return invoiceId_;
     }
     /**
-     * <pre>
-     * the invoice identifier
-     * </pre>
-     *
-     * <code>int64 invoice_id = 6 [json_name = "invoiceId", jstype = JS_STRING];</code>
+     * <code>int64 invoice_id = 6 [json_name = "invoiceId", deprecated = true, jstype = JS_STRING];</code>
+     * @deprecated api.commons.billing.InvoiceItem.invoice_id is deprecated.
+     *     See api/commons/billing/invoice.proto;l=46
      * @param value The invoiceId to set.
      * @return This builder for chaining.
      */
-    public Builder setInvoiceId(long value) {
+    @java.lang.Deprecated public Builder setInvoiceId(long value) {
 
       invoiceId_ = value;
       bitField0_ |= 0x00000020;
@@ -1164,14 +1040,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * the invoice identifier
-     * </pre>
-     *
-     * <code>int64 invoice_id = 6 [json_name = "invoiceId", jstype = JS_STRING];</code>
+     * <code>int64 invoice_id = 6 [json_name = "invoiceId", deprecated = true, jstype = JS_STRING];</code>
+     * @deprecated api.commons.billing.InvoiceItem.invoice_id is deprecated.
+     *     See api/commons/billing/invoice.proto;l=46
      * @return This builder for chaining.
      */
-    public Builder clearInvoiceId() {
+    @java.lang.Deprecated public Builder clearInvoiceId() {
       bitField0_ = (bitField0_ & ~0x00000020);
       invoiceId_ = 0L;
       onChanged();

@@ -469,6 +469,8 @@ public final class BillingServiceGrpc {
     /**
      * <pre>
      * Creates a billing plan for the ORG.
+     *   - The rate definitions must have the rate definition group id populated and it
+     *     must be a valid reference to a rate definition group on the default billing plan.
      * Required permissions:
      *   CUSTOMER_SUPPORT
      * Errors:
@@ -730,6 +732,8 @@ public final class BillingServiceGrpc {
     /**
      * <pre>
      * Creates a billing plan for the ORG.
+     *   - The rate definitions must have the rate definition group id populated and it
+     *     must be a valid reference to a rate definition group on the default billing plan.
      * Required permissions:
      *   CUSTOMER_SUPPORT
      * Errors:
@@ -993,6 +997,8 @@ public final class BillingServiceGrpc {
     /**
      * <pre>
      * Creates a billing plan for the ORG.
+     *   - The rate definitions must have the rate definition group id populated and it
+     *     must be a valid reference to a rate definition group on the default billing plan.
      * Required permissions:
      *   CUSTOMER_SUPPORT
      * Errors:
@@ -1243,6 +1249,8 @@ public final class BillingServiceGrpc {
     /**
      * <pre>
      * Creates a billing plan for the ORG.
+     *   - The rate definitions must have the rate definition group id populated and it
+     *     must be a valid reference to a rate definition group on the default billing plan.
      * Required permissions:
      *   CUSTOMER_SUPPORT
      * Errors:

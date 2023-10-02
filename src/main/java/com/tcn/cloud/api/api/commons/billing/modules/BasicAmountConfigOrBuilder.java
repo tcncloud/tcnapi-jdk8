@@ -3,102 +3,61 @@
 
 package com.tcn.cloud.api.api.commons.billing.modules;
 
-public interface BasicAmountConfigOrBuilder extends
+@java.lang.Deprecated public interface BasicAmountConfigOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.commons.billing.modules.BasicAmountConfig)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <pre>
-   * Required. the amount of a unit to apply the rate to. This is the
-   * increment amount; for example, an amount of 300 (with bytes as a
-   * unit of measurement) and a message of size 400 bytes will get
-   * billed as if it were a size of 600 bytes.
-   * </pre>
-   *
-   * <code>int64 amount = 1 [json_name = "amount"];</code>
+   * <code>int64 amount = 1 [json_name = "amount", deprecated = true];</code>
+   * @deprecated api.commons.billing.modules.BasicAmountConfig.amount is deprecated.
+   *     See api/commons/billing/modules/modules.proto;l=13
    * @return The amount.
    */
-  long getAmount();
+  @java.lang.Deprecated long getAmount();
 
   /**
-   * <pre>
-   * Required. the amount to rate each size increment
-   * </pre>
-   *
-   * <code>double rate = 2 [json_name = "rate"];</code>
+   * <code>double rate = 2 [json_name = "rate", deprecated = true];</code>
+   * @deprecated api.commons.billing.modules.BasicAmountConfig.rate is deprecated.
+   *     See api/commons/billing/modules/modules.proto;l=14
    * @return The rate.
    */
-  double getRate();
+  @java.lang.Deprecated double getRate();
 
   /**
-   * <pre>
-   * Optional. the minimum number of increments to rate; for example,
-   * an amount of 5 seconds and a min_increment of 2 would mean that
-   * any event less than 10 seconds would be billed as if it were 10
-   * seconds.
-   * </pre>
-   *
-   * <code>.google.protobuf.Int64Value min_increment = 3 [json_name = "minIncrement"];</code>
+   * <code>.google.protobuf.Int64Value min_increment = 3 [json_name = "minIncrement", deprecated = true];</code>
+   * @deprecated api.commons.billing.modules.BasicAmountConfig.min_increment is deprecated.
+   *     See api/commons/billing/modules/modules.proto;l=15
    * @return Whether the minIncrement field is set.
    */
-  boolean hasMinIncrement();
+  @java.lang.Deprecated boolean hasMinIncrement();
   /**
-   * <pre>
-   * Optional. the minimum number of increments to rate; for example,
-   * an amount of 5 seconds and a min_increment of 2 would mean that
-   * any event less than 10 seconds would be billed as if it were 10
-   * seconds.
-   * </pre>
-   *
-   * <code>.google.protobuf.Int64Value min_increment = 3 [json_name = "minIncrement"];</code>
+   * <code>.google.protobuf.Int64Value min_increment = 3 [json_name = "minIncrement", deprecated = true];</code>
+   * @deprecated api.commons.billing.modules.BasicAmountConfig.min_increment is deprecated.
+   *     See api/commons/billing/modules/modules.proto;l=15
    * @return The minIncrement.
    */
-  com.google.protobuf.Int64Value getMinIncrement();
+  @java.lang.Deprecated com.google.protobuf.Int64Value getMinIncrement();
   /**
-   * <pre>
-   * Optional. the minimum number of increments to rate; for example,
-   * an amount of 5 seconds and a min_increment of 2 would mean that
-   * any event less than 10 seconds would be billed as if it were 10
-   * seconds.
-   * </pre>
-   *
-   * <code>.google.protobuf.Int64Value min_increment = 3 [json_name = "minIncrement"];</code>
+   * <code>.google.protobuf.Int64Value min_increment = 3 [json_name = "minIncrement", deprecated = true];</code>
    */
-  com.google.protobuf.Int64ValueOrBuilder getMinIncrementOrBuilder();
+  @java.lang.Deprecated com.google.protobuf.Int64ValueOrBuilder getMinIncrementOrBuilder();
 
   /**
-   * <pre>
-   * Optional. the maximum number of increments to rate; for example,
-   * an amount of 5 seconds and a max_increment of 2 would mean that
-   * any event more than 10 seconds would be billed as if it were 10
-   * seconds.
-   * </pre>
-   *
-   * <code>.google.protobuf.Int64Value max_increment = 4 [json_name = "maxIncrement"];</code>
+   * <code>.google.protobuf.Int64Value max_increment = 4 [json_name = "maxIncrement", deprecated = true];</code>
+   * @deprecated api.commons.billing.modules.BasicAmountConfig.max_increment is deprecated.
+   *     See api/commons/billing/modules/modules.proto;l=16
    * @return Whether the maxIncrement field is set.
    */
-  boolean hasMaxIncrement();
+  @java.lang.Deprecated boolean hasMaxIncrement();
   /**
-   * <pre>
-   * Optional. the maximum number of increments to rate; for example,
-   * an amount of 5 seconds and a max_increment of 2 would mean that
-   * any event more than 10 seconds would be billed as if it were 10
-   * seconds.
-   * </pre>
-   *
-   * <code>.google.protobuf.Int64Value max_increment = 4 [json_name = "maxIncrement"];</code>
+   * <code>.google.protobuf.Int64Value max_increment = 4 [json_name = "maxIncrement", deprecated = true];</code>
+   * @deprecated api.commons.billing.modules.BasicAmountConfig.max_increment is deprecated.
+   *     See api/commons/billing/modules/modules.proto;l=16
    * @return The maxIncrement.
    */
-  com.google.protobuf.Int64Value getMaxIncrement();
+  @java.lang.Deprecated com.google.protobuf.Int64Value getMaxIncrement();
   /**
-   * <pre>
-   * Optional. the maximum number of increments to rate; for example,
-   * an amount of 5 seconds and a max_increment of 2 would mean that
-   * any event more than 10 seconds would be billed as if it were 10
-   * seconds.
-   * </pre>
-   *
-   * <code>.google.protobuf.Int64Value max_increment = 4 [json_name = "maxIncrement"];</code>
+   * <code>.google.protobuf.Int64Value max_increment = 4 [json_name = "maxIncrement", deprecated = true];</code>
    */
-  com.google.protobuf.Int64ValueOrBuilder getMaxIncrementOrBuilder();
+  @java.lang.Deprecated com.google.protobuf.Int64ValueOrBuilder getMaxIncrementOrBuilder();
 }

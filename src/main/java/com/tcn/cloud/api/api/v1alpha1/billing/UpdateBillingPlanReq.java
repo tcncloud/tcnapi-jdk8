@@ -4,13 +4,9 @@
 package com.tcn.cloud.api.api.v1alpha1.billing;
 
 /**
- * <pre>
- * UpdateBillingPlanReq - request to update a billing plan.
- * </pre>
- *
  * Protobuf type {@code api.v1alpha1.billing.UpdateBillingPlanReq}
  */
-public final class UpdateBillingPlanReq extends
+@java.lang.Deprecated public final class UpdateBillingPlanReq extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.v1alpha1.billing.UpdateBillingPlanReq)
     UpdateBillingPlanReqOrBuilder {
@@ -48,59 +44,39 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.commons.billing.Detail> billingDetails_;
   /**
-   * <pre>
-   * Required. the billing details to update
-   * </pre>
-   *
-   * <code>repeated .api.commons.billing.Detail billing_details = 1 [json_name = "billingDetails"];</code>
+   * <code>repeated .api.commons.billing.Detail billing_details = 1 [json_name = "billingDetails", deprecated = true];</code>
    */
   @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.api.commons.billing.Detail> getBillingDetailsList() {
+  @java.lang.Deprecated public java.util.List<com.tcn.cloud.api.api.commons.billing.Detail> getBillingDetailsList() {
     return billingDetails_;
   }
   /**
-   * <pre>
-   * Required. the billing details to update
-   * </pre>
-   *
-   * <code>repeated .api.commons.billing.Detail billing_details = 1 [json_name = "billingDetails"];</code>
+   * <code>repeated .api.commons.billing.Detail billing_details = 1 [json_name = "billingDetails", deprecated = true];</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.tcn.cloud.api.api.commons.billing.DetailOrBuilder> 
+  @java.lang.Deprecated public java.util.List<? extends com.tcn.cloud.api.api.commons.billing.DetailOrBuilder> 
       getBillingDetailsOrBuilderList() {
     return billingDetails_;
   }
   /**
-   * <pre>
-   * Required. the billing details to update
-   * </pre>
-   *
-   * <code>repeated .api.commons.billing.Detail billing_details = 1 [json_name = "billingDetails"];</code>
+   * <code>repeated .api.commons.billing.Detail billing_details = 1 [json_name = "billingDetails", deprecated = true];</code>
    */
   @java.lang.Override
-  public int getBillingDetailsCount() {
+  @java.lang.Deprecated public int getBillingDetailsCount() {
     return billingDetails_.size();
   }
   /**
-   * <pre>
-   * Required. the billing details to update
-   * </pre>
-   *
-   * <code>repeated .api.commons.billing.Detail billing_details = 1 [json_name = "billingDetails"];</code>
+   * <code>repeated .api.commons.billing.Detail billing_details = 1 [json_name = "billingDetails", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.Detail getBillingDetails(int index) {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.Detail getBillingDetails(int index) {
     return billingDetails_.get(index);
   }
   /**
-   * <pre>
-   * Required. the billing details to update
-   * </pre>
-   *
-   * <code>repeated .api.commons.billing.Detail billing_details = 1 [json_name = "billingDetails"];</code>
+   * <code>repeated .api.commons.billing.Detail billing_details = 1 [json_name = "billingDetails", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.DetailOrBuilder getBillingDetailsOrBuilder(
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.DetailOrBuilder getBillingDetailsOrBuilder(
       int index) {
     return billingDetails_.get(index);
   }
@@ -109,15 +85,13 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object orgId_ = "";
   /**
-   * <pre>
-   * Required. the identifier of the organization to update the plan for
-   * </pre>
-   *
-   * <code>string org_id = 2 [json_name = "orgId"];</code>
+   * <code>string org_id = 2 [json_name = "orgId", deprecated = true];</code>
+   * @deprecated api.v1alpha1.billing.UpdateBillingPlanReq.org_id is deprecated.
+   *     See api/v1alpha1/billing/entities.proto;l=23
    * @return The orgId.
    */
   @java.lang.Override
-  public java.lang.String getOrgId() {
+  @java.lang.Deprecated public java.lang.String getOrgId() {
     java.lang.Object ref = orgId_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -130,15 +104,13 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   * Required. the identifier of the organization to update the plan for
-   * </pre>
-   *
-   * <code>string org_id = 2 [json_name = "orgId"];</code>
+   * <code>string org_id = 2 [json_name = "orgId", deprecated = true];</code>
+   * @deprecated api.v1alpha1.billing.UpdateBillingPlanReq.org_id is deprecated.
+   *     See api/v1alpha1/billing/entities.proto;l=23
    * @return The bytes for orgId.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
+  @java.lang.Deprecated public com.google.protobuf.ByteString
       getOrgIdBytes() {
     java.lang.Object ref = orgId_;
     if (ref instanceof java.lang.String) {
@@ -322,10 +294,6 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * <pre>
-   * UpdateBillingPlanReq - request to update a billing plan.
-   * </pre>
-   *
    * Protobuf type {@code api.v1alpha1.billing.UpdateBillingPlanReq}
    */
   public static final class Builder extends
@@ -567,13 +535,9 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.billing.Detail, com.tcn.cloud.api.api.commons.billing.Detail.Builder, com.tcn.cloud.api.api.commons.billing.DetailOrBuilder> billingDetailsBuilder_;
 
     /**
-     * <pre>
-     * Required. the billing details to update
-     * </pre>
-     *
-     * <code>repeated .api.commons.billing.Detail billing_details = 1 [json_name = "billingDetails"];</code>
+     * <code>repeated .api.commons.billing.Detail billing_details = 1 [json_name = "billingDetails", deprecated = true];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.commons.billing.Detail> getBillingDetailsList() {
+    @java.lang.Deprecated public java.util.List<com.tcn.cloud.api.api.commons.billing.Detail> getBillingDetailsList() {
       if (billingDetailsBuilder_ == null) {
         return java.util.Collections.unmodifiableList(billingDetails_);
       } else {
@@ -581,13 +545,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Required. the billing details to update
-     * </pre>
-     *
-     * <code>repeated .api.commons.billing.Detail billing_details = 1 [json_name = "billingDetails"];</code>
+     * <code>repeated .api.commons.billing.Detail billing_details = 1 [json_name = "billingDetails", deprecated = true];</code>
      */
-    public int getBillingDetailsCount() {
+    @java.lang.Deprecated public int getBillingDetailsCount() {
       if (billingDetailsBuilder_ == null) {
         return billingDetails_.size();
       } else {
@@ -595,13 +555,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Required. the billing details to update
-     * </pre>
-     *
-     * <code>repeated .api.commons.billing.Detail billing_details = 1 [json_name = "billingDetails"];</code>
+     * <code>repeated .api.commons.billing.Detail billing_details = 1 [json_name = "billingDetails", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.billing.Detail getBillingDetails(int index) {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.Detail getBillingDetails(int index) {
       if (billingDetailsBuilder_ == null) {
         return billingDetails_.get(index);
       } else {
@@ -609,13 +565,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Required. the billing details to update
-     * </pre>
-     *
-     * <code>repeated .api.commons.billing.Detail billing_details = 1 [json_name = "billingDetails"];</code>
+     * <code>repeated .api.commons.billing.Detail billing_details = 1 [json_name = "billingDetails", deprecated = true];</code>
      */
-    public Builder setBillingDetails(
+    @java.lang.Deprecated public Builder setBillingDetails(
         int index, com.tcn.cloud.api.api.commons.billing.Detail value) {
       if (billingDetailsBuilder_ == null) {
         if (value == null) {
@@ -630,13 +582,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Required. the billing details to update
-     * </pre>
-     *
-     * <code>repeated .api.commons.billing.Detail billing_details = 1 [json_name = "billingDetails"];</code>
+     * <code>repeated .api.commons.billing.Detail billing_details = 1 [json_name = "billingDetails", deprecated = true];</code>
      */
-    public Builder setBillingDetails(
+    @java.lang.Deprecated public Builder setBillingDetails(
         int index, com.tcn.cloud.api.api.commons.billing.Detail.Builder builderForValue) {
       if (billingDetailsBuilder_ == null) {
         ensureBillingDetailsIsMutable();
@@ -648,13 +596,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Required. the billing details to update
-     * </pre>
-     *
-     * <code>repeated .api.commons.billing.Detail billing_details = 1 [json_name = "billingDetails"];</code>
+     * <code>repeated .api.commons.billing.Detail billing_details = 1 [json_name = "billingDetails", deprecated = true];</code>
      */
-    public Builder addBillingDetails(com.tcn.cloud.api.api.commons.billing.Detail value) {
+    @java.lang.Deprecated public Builder addBillingDetails(com.tcn.cloud.api.api.commons.billing.Detail value) {
       if (billingDetailsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -668,13 +612,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Required. the billing details to update
-     * </pre>
-     *
-     * <code>repeated .api.commons.billing.Detail billing_details = 1 [json_name = "billingDetails"];</code>
+     * <code>repeated .api.commons.billing.Detail billing_details = 1 [json_name = "billingDetails", deprecated = true];</code>
      */
-    public Builder addBillingDetails(
+    @java.lang.Deprecated public Builder addBillingDetails(
         int index, com.tcn.cloud.api.api.commons.billing.Detail value) {
       if (billingDetailsBuilder_ == null) {
         if (value == null) {
@@ -689,13 +629,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Required. the billing details to update
-     * </pre>
-     *
-     * <code>repeated .api.commons.billing.Detail billing_details = 1 [json_name = "billingDetails"];</code>
+     * <code>repeated .api.commons.billing.Detail billing_details = 1 [json_name = "billingDetails", deprecated = true];</code>
      */
-    public Builder addBillingDetails(
+    @java.lang.Deprecated public Builder addBillingDetails(
         com.tcn.cloud.api.api.commons.billing.Detail.Builder builderForValue) {
       if (billingDetailsBuilder_ == null) {
         ensureBillingDetailsIsMutable();
@@ -707,13 +643,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Required. the billing details to update
-     * </pre>
-     *
-     * <code>repeated .api.commons.billing.Detail billing_details = 1 [json_name = "billingDetails"];</code>
+     * <code>repeated .api.commons.billing.Detail billing_details = 1 [json_name = "billingDetails", deprecated = true];</code>
      */
-    public Builder addBillingDetails(
+    @java.lang.Deprecated public Builder addBillingDetails(
         int index, com.tcn.cloud.api.api.commons.billing.Detail.Builder builderForValue) {
       if (billingDetailsBuilder_ == null) {
         ensureBillingDetailsIsMutable();
@@ -725,13 +657,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Required. the billing details to update
-     * </pre>
-     *
-     * <code>repeated .api.commons.billing.Detail billing_details = 1 [json_name = "billingDetails"];</code>
+     * <code>repeated .api.commons.billing.Detail billing_details = 1 [json_name = "billingDetails", deprecated = true];</code>
      */
-    public Builder addAllBillingDetails(
+    @java.lang.Deprecated public Builder addAllBillingDetails(
         java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.billing.Detail> values) {
       if (billingDetailsBuilder_ == null) {
         ensureBillingDetailsIsMutable();
@@ -744,13 +672,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Required. the billing details to update
-     * </pre>
-     *
-     * <code>repeated .api.commons.billing.Detail billing_details = 1 [json_name = "billingDetails"];</code>
+     * <code>repeated .api.commons.billing.Detail billing_details = 1 [json_name = "billingDetails", deprecated = true];</code>
      */
-    public Builder clearBillingDetails() {
+    @java.lang.Deprecated public Builder clearBillingDetails() {
       if (billingDetailsBuilder_ == null) {
         billingDetails_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -761,13 +685,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Required. the billing details to update
-     * </pre>
-     *
-     * <code>repeated .api.commons.billing.Detail billing_details = 1 [json_name = "billingDetails"];</code>
+     * <code>repeated .api.commons.billing.Detail billing_details = 1 [json_name = "billingDetails", deprecated = true];</code>
      */
-    public Builder removeBillingDetails(int index) {
+    @java.lang.Deprecated public Builder removeBillingDetails(int index) {
       if (billingDetailsBuilder_ == null) {
         ensureBillingDetailsIsMutable();
         billingDetails_.remove(index);
@@ -778,24 +698,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Required. the billing details to update
-     * </pre>
-     *
-     * <code>repeated .api.commons.billing.Detail billing_details = 1 [json_name = "billingDetails"];</code>
+     * <code>repeated .api.commons.billing.Detail billing_details = 1 [json_name = "billingDetails", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.billing.Detail.Builder getBillingDetailsBuilder(
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.Detail.Builder getBillingDetailsBuilder(
         int index) {
       return getBillingDetailsFieldBuilder().getBuilder(index);
     }
     /**
-     * <pre>
-     * Required. the billing details to update
-     * </pre>
-     *
-     * <code>repeated .api.commons.billing.Detail billing_details = 1 [json_name = "billingDetails"];</code>
+     * <code>repeated .api.commons.billing.Detail billing_details = 1 [json_name = "billingDetails", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.billing.DetailOrBuilder getBillingDetailsOrBuilder(
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.DetailOrBuilder getBillingDetailsOrBuilder(
         int index) {
       if (billingDetailsBuilder_ == null) {
         return billingDetails_.get(index);  } else {
@@ -803,13 +715,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Required. the billing details to update
-     * </pre>
-     *
-     * <code>repeated .api.commons.billing.Detail billing_details = 1 [json_name = "billingDetails"];</code>
+     * <code>repeated .api.commons.billing.Detail billing_details = 1 [json_name = "billingDetails", deprecated = true];</code>
      */
-    public java.util.List<? extends com.tcn.cloud.api.api.commons.billing.DetailOrBuilder> 
+    @java.lang.Deprecated public java.util.List<? extends com.tcn.cloud.api.api.commons.billing.DetailOrBuilder> 
          getBillingDetailsOrBuilderList() {
       if (billingDetailsBuilder_ != null) {
         return billingDetailsBuilder_.getMessageOrBuilderList();
@@ -818,36 +726,24 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Required. the billing details to update
-     * </pre>
-     *
-     * <code>repeated .api.commons.billing.Detail billing_details = 1 [json_name = "billingDetails"];</code>
+     * <code>repeated .api.commons.billing.Detail billing_details = 1 [json_name = "billingDetails", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.billing.Detail.Builder addBillingDetailsBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.Detail.Builder addBillingDetailsBuilder() {
       return getBillingDetailsFieldBuilder().addBuilder(
           com.tcn.cloud.api.api.commons.billing.Detail.getDefaultInstance());
     }
     /**
-     * <pre>
-     * Required. the billing details to update
-     * </pre>
-     *
-     * <code>repeated .api.commons.billing.Detail billing_details = 1 [json_name = "billingDetails"];</code>
+     * <code>repeated .api.commons.billing.Detail billing_details = 1 [json_name = "billingDetails", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.billing.Detail.Builder addBillingDetailsBuilder(
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.Detail.Builder addBillingDetailsBuilder(
         int index) {
       return getBillingDetailsFieldBuilder().addBuilder(
           index, com.tcn.cloud.api.api.commons.billing.Detail.getDefaultInstance());
     }
     /**
-     * <pre>
-     * Required. the billing details to update
-     * </pre>
-     *
-     * <code>repeated .api.commons.billing.Detail billing_details = 1 [json_name = "billingDetails"];</code>
+     * <code>repeated .api.commons.billing.Detail billing_details = 1 [json_name = "billingDetails", deprecated = true];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.commons.billing.Detail.Builder> 
+    @java.lang.Deprecated public java.util.List<com.tcn.cloud.api.api.commons.billing.Detail.Builder> 
          getBillingDetailsBuilderList() {
       return getBillingDetailsFieldBuilder().getBuilderList();
     }
@@ -868,14 +764,12 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object orgId_ = "";
     /**
-     * <pre>
-     * Required. the identifier of the organization to update the plan for
-     * </pre>
-     *
-     * <code>string org_id = 2 [json_name = "orgId"];</code>
+     * <code>string org_id = 2 [json_name = "orgId", deprecated = true];</code>
+     * @deprecated api.v1alpha1.billing.UpdateBillingPlanReq.org_id is deprecated.
+     *     See api/v1alpha1/billing/entities.proto;l=23
      * @return The orgId.
      */
-    public java.lang.String getOrgId() {
+    @java.lang.Deprecated public java.lang.String getOrgId() {
       java.lang.Object ref = orgId_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -888,14 +782,12 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Required. the identifier of the organization to update the plan for
-     * </pre>
-     *
-     * <code>string org_id = 2 [json_name = "orgId"];</code>
+     * <code>string org_id = 2 [json_name = "orgId", deprecated = true];</code>
+     * @deprecated api.v1alpha1.billing.UpdateBillingPlanReq.org_id is deprecated.
+     *     See api/v1alpha1/billing/entities.proto;l=23
      * @return The bytes for orgId.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getOrgIdBytes() {
       java.lang.Object ref = orgId_;
       if (ref instanceof String) {
@@ -909,15 +801,13 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Required. the identifier of the organization to update the plan for
-     * </pre>
-     *
-     * <code>string org_id = 2 [json_name = "orgId"];</code>
+     * <code>string org_id = 2 [json_name = "orgId", deprecated = true];</code>
+     * @deprecated api.v1alpha1.billing.UpdateBillingPlanReq.org_id is deprecated.
+     *     See api/v1alpha1/billing/entities.proto;l=23
      * @param value The orgId to set.
      * @return This builder for chaining.
      */
-    public Builder setOrgId(
+    @java.lang.Deprecated public Builder setOrgId(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       orgId_ = value;
@@ -926,29 +816,25 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Required. the identifier of the organization to update the plan for
-     * </pre>
-     *
-     * <code>string org_id = 2 [json_name = "orgId"];</code>
+     * <code>string org_id = 2 [json_name = "orgId", deprecated = true];</code>
+     * @deprecated api.v1alpha1.billing.UpdateBillingPlanReq.org_id is deprecated.
+     *     See api/v1alpha1/billing/entities.proto;l=23
      * @return This builder for chaining.
      */
-    public Builder clearOrgId() {
+    @java.lang.Deprecated public Builder clearOrgId() {
       orgId_ = getDefaultInstance().getOrgId();
       bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
     /**
-     * <pre>
-     * Required. the identifier of the organization to update the plan for
-     * </pre>
-     *
-     * <code>string org_id = 2 [json_name = "orgId"];</code>
+     * <code>string org_id = 2 [json_name = "orgId", deprecated = true];</code>
+     * @deprecated api.v1alpha1.billing.UpdateBillingPlanReq.org_id is deprecated.
+     *     See api/v1alpha1/billing/entities.proto;l=23
      * @param value The bytes for orgId to set.
      * @return This builder for chaining.
      */
-    public Builder setOrgIdBytes(
+    @java.lang.Deprecated public Builder setOrgIdBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);

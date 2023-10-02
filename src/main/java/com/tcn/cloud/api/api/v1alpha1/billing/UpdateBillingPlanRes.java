@@ -4,14 +4,9 @@
 package com.tcn.cloud.api.api.v1alpha1.billing;
 
 /**
- * <pre>
- * UpdateBillingPlanRes - result of updating a billing plan; contains
- * only the details that were provided in the request
- * </pre>
- *
  * Protobuf type {@code api.v1alpha1.billing.UpdateBillingPlanRes}
  */
-public final class UpdateBillingPlanRes extends
+@java.lang.Deprecated public final class UpdateBillingPlanRes extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.v1alpha1.billing.UpdateBillingPlanRes)
     UpdateBillingPlanResOrBuilder {
@@ -46,38 +41,30 @@ private static final long serialVersionUID = 0L;
   public static final int BILLING_PLAN_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.api.commons.billing.Plan billingPlan_;
   /**
-   * <pre>
-   * the updated billing plan
-   * </pre>
-   *
-   * <code>.api.commons.billing.Plan billing_plan = 1 [json_name = "billingPlan"];</code>
+   * <code>.api.commons.billing.Plan billing_plan = 1 [json_name = "billingPlan", deprecated = true];</code>
+   * @deprecated api.v1alpha1.billing.UpdateBillingPlanRes.billing_plan is deprecated.
+   *     See api/v1alpha1/billing/entities.proto;l=28
    * @return Whether the billingPlan field is set.
    */
   @java.lang.Override
-  public boolean hasBillingPlan() {
+  @java.lang.Deprecated public boolean hasBillingPlan() {
     return billingPlan_ != null;
   }
   /**
-   * <pre>
-   * the updated billing plan
-   * </pre>
-   *
-   * <code>.api.commons.billing.Plan billing_plan = 1 [json_name = "billingPlan"];</code>
+   * <code>.api.commons.billing.Plan billing_plan = 1 [json_name = "billingPlan", deprecated = true];</code>
+   * @deprecated api.v1alpha1.billing.UpdateBillingPlanRes.billing_plan is deprecated.
+   *     See api/v1alpha1/billing/entities.proto;l=28
    * @return The billingPlan.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.Plan getBillingPlan() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.Plan getBillingPlan() {
     return billingPlan_ == null ? com.tcn.cloud.api.api.commons.billing.Plan.getDefaultInstance() : billingPlan_;
   }
   /**
-   * <pre>
-   * the updated billing plan
-   * </pre>
-   *
-   * <code>.api.commons.billing.Plan billing_plan = 1 [json_name = "billingPlan"];</code>
+   * <code>.api.commons.billing.Plan billing_plan = 1 [json_name = "billingPlan", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.PlanOrBuilder getBillingPlanOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.PlanOrBuilder getBillingPlanOrBuilder() {
     return billingPlan_ == null ? com.tcn.cloud.api.api.commons.billing.Plan.getDefaultInstance() : billingPlan_;
   }
 
@@ -244,11 +231,6 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * <pre>
-   * UpdateBillingPlanRes - result of updating a billing plan; contains
-   * only the details that were provided in the request
-   * </pre>
-   *
    * Protobuf type {@code api.v1alpha1.billing.UpdateBillingPlanRes}
    */
   public static final class Builder extends
@@ -428,25 +410,21 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.Plan, com.tcn.cloud.api.api.commons.billing.Plan.Builder, com.tcn.cloud.api.api.commons.billing.PlanOrBuilder> billingPlanBuilder_;
     /**
-     * <pre>
-     * the updated billing plan
-     * </pre>
-     *
-     * <code>.api.commons.billing.Plan billing_plan = 1 [json_name = "billingPlan"];</code>
+     * <code>.api.commons.billing.Plan billing_plan = 1 [json_name = "billingPlan", deprecated = true];</code>
+     * @deprecated api.v1alpha1.billing.UpdateBillingPlanRes.billing_plan is deprecated.
+     *     See api/v1alpha1/billing/entities.proto;l=28
      * @return Whether the billingPlan field is set.
      */
-    public boolean hasBillingPlan() {
+    @java.lang.Deprecated public boolean hasBillingPlan() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <pre>
-     * the updated billing plan
-     * </pre>
-     *
-     * <code>.api.commons.billing.Plan billing_plan = 1 [json_name = "billingPlan"];</code>
+     * <code>.api.commons.billing.Plan billing_plan = 1 [json_name = "billingPlan", deprecated = true];</code>
+     * @deprecated api.v1alpha1.billing.UpdateBillingPlanRes.billing_plan is deprecated.
+     *     See api/v1alpha1/billing/entities.proto;l=28
      * @return The billingPlan.
      */
-    public com.tcn.cloud.api.api.commons.billing.Plan getBillingPlan() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.Plan getBillingPlan() {
       if (billingPlanBuilder_ == null) {
         return billingPlan_ == null ? com.tcn.cloud.api.api.commons.billing.Plan.getDefaultInstance() : billingPlan_;
       } else {
@@ -454,13 +432,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * the updated billing plan
-     * </pre>
-     *
-     * <code>.api.commons.billing.Plan billing_plan = 1 [json_name = "billingPlan"];</code>
+     * <code>.api.commons.billing.Plan billing_plan = 1 [json_name = "billingPlan", deprecated = true];</code>
      */
-    public Builder setBillingPlan(com.tcn.cloud.api.api.commons.billing.Plan value) {
+    @java.lang.Deprecated public Builder setBillingPlan(com.tcn.cloud.api.api.commons.billing.Plan value) {
       if (billingPlanBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -474,13 +448,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * the updated billing plan
-     * </pre>
-     *
-     * <code>.api.commons.billing.Plan billing_plan = 1 [json_name = "billingPlan"];</code>
+     * <code>.api.commons.billing.Plan billing_plan = 1 [json_name = "billingPlan", deprecated = true];</code>
      */
-    public Builder setBillingPlan(
+    @java.lang.Deprecated public Builder setBillingPlan(
         com.tcn.cloud.api.api.commons.billing.Plan.Builder builderForValue) {
       if (billingPlanBuilder_ == null) {
         billingPlan_ = builderForValue.build();
@@ -492,13 +462,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * the updated billing plan
-     * </pre>
-     *
-     * <code>.api.commons.billing.Plan billing_plan = 1 [json_name = "billingPlan"];</code>
+     * <code>.api.commons.billing.Plan billing_plan = 1 [json_name = "billingPlan", deprecated = true];</code>
      */
-    public Builder mergeBillingPlan(com.tcn.cloud.api.api.commons.billing.Plan value) {
+    @java.lang.Deprecated public Builder mergeBillingPlan(com.tcn.cloud.api.api.commons.billing.Plan value) {
       if (billingPlanBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0) &&
           billingPlan_ != null &&
@@ -515,13 +481,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * the updated billing plan
-     * </pre>
-     *
-     * <code>.api.commons.billing.Plan billing_plan = 1 [json_name = "billingPlan"];</code>
+     * <code>.api.commons.billing.Plan billing_plan = 1 [json_name = "billingPlan", deprecated = true];</code>
      */
-    public Builder clearBillingPlan() {
+    @java.lang.Deprecated public Builder clearBillingPlan() {
       bitField0_ = (bitField0_ & ~0x00000001);
       billingPlan_ = null;
       if (billingPlanBuilder_ != null) {
@@ -532,25 +494,17 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * the updated billing plan
-     * </pre>
-     *
-     * <code>.api.commons.billing.Plan billing_plan = 1 [json_name = "billingPlan"];</code>
+     * <code>.api.commons.billing.Plan billing_plan = 1 [json_name = "billingPlan", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.billing.Plan.Builder getBillingPlanBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.Plan.Builder getBillingPlanBuilder() {
       bitField0_ |= 0x00000001;
       onChanged();
       return getBillingPlanFieldBuilder().getBuilder();
     }
     /**
-     * <pre>
-     * the updated billing plan
-     * </pre>
-     *
-     * <code>.api.commons.billing.Plan billing_plan = 1 [json_name = "billingPlan"];</code>
+     * <code>.api.commons.billing.Plan billing_plan = 1 [json_name = "billingPlan", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.billing.PlanOrBuilder getBillingPlanOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.PlanOrBuilder getBillingPlanOrBuilder() {
       if (billingPlanBuilder_ != null) {
         return billingPlanBuilder_.getMessageOrBuilder();
       } else {
@@ -559,11 +513,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * the updated billing plan
-     * </pre>
-     *
-     * <code>.api.commons.billing.Plan billing_plan = 1 [json_name = "billingPlan"];</code>
+     * <code>.api.commons.billing.Plan billing_plan = 1 [json_name = "billingPlan", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.Plan, com.tcn.cloud.api.api.commons.billing.Plan.Builder, com.tcn.cloud.api.api.commons.billing.PlanOrBuilder> 

@@ -3,618 +3,774 @@
 
 package com.tcn.cloud.api.api.commons.billing;
 
-public interface DetailConfigOrBuilder extends
+@java.lang.Deprecated public interface DetailConfigOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.commons.billing.DetailConfig)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.api.commons.billing.modules.BasicConfig agent_seats_config = 2 [json_name = "agentSeatsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig agent_seats_config = 2 [json_name = "agentSeatsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.agent_seats_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=40
    * @return Whether the agentSeatsConfig field is set.
    */
-  boolean hasAgentSeatsConfig();
+  @java.lang.Deprecated boolean hasAgentSeatsConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicConfig agent_seats_config = 2 [json_name = "agentSeatsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig agent_seats_config = 2 [json_name = "agentSeatsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.agent_seats_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=40
    * @return The agentSeatsConfig.
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getAgentSeatsConfig();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getAgentSeatsConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicConfig agent_seats_config = 2 [json_name = "agentSeatsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig agent_seats_config = 2 [json_name = "agentSeatsConfig", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getAgentSeatsConfigOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getAgentSeatsConfigOrBuilder();
 
   /**
    * <pre>
    * omni configs
    * </pre>
    *
-   * <code>.api.commons.billing.modules.BasicConfig agent_text_message_chat_config = 100 [json_name = "agentTextMessageChatConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig agent_text_message_chat_config = 100 [json_name = "agentTextMessageChatConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.agent_text_message_chat_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=43
    * @return Whether the agentTextMessageChatConfig field is set.
    */
-  boolean hasAgentTextMessageChatConfig();
+  @java.lang.Deprecated boolean hasAgentTextMessageChatConfig();
   /**
    * <pre>
    * omni configs
    * </pre>
    *
-   * <code>.api.commons.billing.modules.BasicConfig agent_text_message_chat_config = 100 [json_name = "agentTextMessageChatConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig agent_text_message_chat_config = 100 [json_name = "agentTextMessageChatConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.agent_text_message_chat_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=43
    * @return The agentTextMessageChatConfig.
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getAgentTextMessageChatConfig();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getAgentTextMessageChatConfig();
   /**
    * <pre>
    * omni configs
    * </pre>
    *
-   * <code>.api.commons.billing.modules.BasicConfig agent_text_message_chat_config = 100 [json_name = "agentTextMessageChatConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig agent_text_message_chat_config = 100 [json_name = "agentTextMessageChatConfig", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getAgentTextMessageChatConfigOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getAgentTextMessageChatConfigOrBuilder();
 
   /**
-   * <code>.api.commons.billing.modules.BasicConfig agent_text_message_email_message_config = 101 [json_name = "agentTextMessageEmailMessageConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig agent_text_message_email_message_config = 101 [json_name = "agentTextMessageEmailMessageConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.agent_text_message_email_message_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=44
    * @return Whether the agentTextMessageEmailMessageConfig field is set.
    */
-  boolean hasAgentTextMessageEmailMessageConfig();
+  @java.lang.Deprecated boolean hasAgentTextMessageEmailMessageConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicConfig agent_text_message_email_message_config = 101 [json_name = "agentTextMessageEmailMessageConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig agent_text_message_email_message_config = 101 [json_name = "agentTextMessageEmailMessageConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.agent_text_message_email_message_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=44
    * @return The agentTextMessageEmailMessageConfig.
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getAgentTextMessageEmailMessageConfig();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getAgentTextMessageEmailMessageConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicConfig agent_text_message_email_message_config = 101 [json_name = "agentTextMessageEmailMessageConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig agent_text_message_email_message_config = 101 [json_name = "agentTextMessageEmailMessageConfig", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getAgentTextMessageEmailMessageConfigOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getAgentTextMessageEmailMessageConfigOrBuilder();
 
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_email_size_config = 102 [json_name = "agentTextMessageEmailSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_email_size_config = 102 [json_name = "agentTextMessageEmailSizeConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.agent_text_message_email_size_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=45
    * @return Whether the agentTextMessageEmailSizeConfig field is set.
    */
-  boolean hasAgentTextMessageEmailSizeConfig();
+  @java.lang.Deprecated boolean hasAgentTextMessageEmailSizeConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_email_size_config = 102 [json_name = "agentTextMessageEmailSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_email_size_config = 102 [json_name = "agentTextMessageEmailSizeConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.agent_text_message_email_size_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=45
    * @return The agentTextMessageEmailSizeConfig.
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getAgentTextMessageEmailSizeConfig();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getAgentTextMessageEmailSizeConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_email_size_config = 102 [json_name = "agentTextMessageEmailSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_email_size_config = 102 [json_name = "agentTextMessageEmailSizeConfig", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getAgentTextMessageEmailSizeConfigOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getAgentTextMessageEmailSizeConfigOrBuilder();
 
   /**
-   * <code>.api.commons.billing.modules.BasicConfig agent_text_message_sms_config = 103 [json_name = "agentTextMessageSmsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig agent_text_message_sms_config = 103 [json_name = "agentTextMessageSmsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.agent_text_message_sms_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=46
    * @return Whether the agentTextMessageSmsConfig field is set.
    */
-  boolean hasAgentTextMessageSmsConfig();
+  @java.lang.Deprecated boolean hasAgentTextMessageSmsConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicConfig agent_text_message_sms_config = 103 [json_name = "agentTextMessageSmsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig agent_text_message_sms_config = 103 [json_name = "agentTextMessageSmsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.agent_text_message_sms_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=46
    * @return The agentTextMessageSmsConfig.
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getAgentTextMessageSmsConfig();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getAgentTextMessageSmsConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicConfig agent_text_message_sms_config = 103 [json_name = "agentTextMessageSmsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig agent_text_message_sms_config = 103 [json_name = "agentTextMessageSmsConfig", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getAgentTextMessageSmsConfigOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getAgentTextMessageSmsConfigOrBuilder();
 
   /**
-   * <code>.api.commons.billing.modules.BasicConfig task_message_sent_email_message_config = 104 [json_name = "taskMessageSentEmailMessageConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig task_message_sent_email_message_config = 104 [json_name = "taskMessageSentEmailMessageConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.task_message_sent_email_message_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=47
    * @return Whether the taskMessageSentEmailMessageConfig field is set.
    */
-  boolean hasTaskMessageSentEmailMessageConfig();
+  @java.lang.Deprecated boolean hasTaskMessageSentEmailMessageConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicConfig task_message_sent_email_message_config = 104 [json_name = "taskMessageSentEmailMessageConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig task_message_sent_email_message_config = 104 [json_name = "taskMessageSentEmailMessageConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.task_message_sent_email_message_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=47
    * @return The taskMessageSentEmailMessageConfig.
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getTaskMessageSentEmailMessageConfig();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getTaskMessageSentEmailMessageConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicConfig task_message_sent_email_message_config = 104 [json_name = "taskMessageSentEmailMessageConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig task_message_sent_email_message_config = 104 [json_name = "taskMessageSentEmailMessageConfig", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getTaskMessageSentEmailMessageConfigOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getTaskMessageSentEmailMessageConfigOrBuilder();
 
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig task_message_sent_email_size_config = 105 [json_name = "taskMessageSentEmailSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig task_message_sent_email_size_config = 105 [json_name = "taskMessageSentEmailSizeConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.task_message_sent_email_size_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=48
    * @return Whether the taskMessageSentEmailSizeConfig field is set.
    */
-  boolean hasTaskMessageSentEmailSizeConfig();
+  @java.lang.Deprecated boolean hasTaskMessageSentEmailSizeConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig task_message_sent_email_size_config = 105 [json_name = "taskMessageSentEmailSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig task_message_sent_email_size_config = 105 [json_name = "taskMessageSentEmailSizeConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.task_message_sent_email_size_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=48
    * @return The taskMessageSentEmailSizeConfig.
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getTaskMessageSentEmailSizeConfig();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getTaskMessageSentEmailSizeConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig task_message_sent_email_size_config = 105 [json_name = "taskMessageSentEmailSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig task_message_sent_email_size_config = 105 [json_name = "taskMessageSentEmailSizeConfig", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getTaskMessageSentEmailSizeConfigOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getTaskMessageSentEmailSizeConfigOrBuilder();
 
   /**
-   * <code>.api.commons.billing.modules.BasicConfig task_message_sent_sms_config = 106 [json_name = "taskMessageSentSmsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig task_message_sent_sms_config = 106 [json_name = "taskMessageSentSmsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.task_message_sent_sms_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=49
    * @return Whether the taskMessageSentSmsConfig field is set.
    */
-  boolean hasTaskMessageSentSmsConfig();
+  @java.lang.Deprecated boolean hasTaskMessageSentSmsConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicConfig task_message_sent_sms_config = 106 [json_name = "taskMessageSentSmsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig task_message_sent_sms_config = 106 [json_name = "taskMessageSentSmsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.task_message_sent_sms_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=49
    * @return The taskMessageSentSmsConfig.
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getTaskMessageSentSmsConfig();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getTaskMessageSentSmsConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicConfig task_message_sent_sms_config = 106 [json_name = "taskMessageSentSmsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig task_message_sent_sms_config = 106 [json_name = "taskMessageSentSmsConfig", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getTaskMessageSentSmsConfigOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getTaskMessageSentSmsConfigOrBuilder();
 
   /**
-   * <code>.api.commons.billing.modules.BasicConfig connected_inbox_poll_config = 107 [json_name = "connectedInboxPollConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig connected_inbox_poll_config = 107 [json_name = "connectedInboxPollConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.connected_inbox_poll_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=50
    * @return Whether the connectedInboxPollConfig field is set.
    */
-  boolean hasConnectedInboxPollConfig();
+  @java.lang.Deprecated boolean hasConnectedInboxPollConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicConfig connected_inbox_poll_config = 107 [json_name = "connectedInboxPollConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig connected_inbox_poll_config = 107 [json_name = "connectedInboxPollConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.connected_inbox_poll_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=50
    * @return The connectedInboxPollConfig.
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getConnectedInboxPollConfig();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getConnectedInboxPollConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicConfig connected_inbox_poll_config = 107 [json_name = "connectedInboxPollConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig connected_inbox_poll_config = 107 [json_name = "connectedInboxPollConfig", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getConnectedInboxPollConfigOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getConnectedInboxPollConfigOrBuilder();
 
   /**
-   * <code>.api.commons.billing.modules.BasicConfig manager_text_message_chat_config = 108 [json_name = "managerTextMessageChatConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig manager_text_message_chat_config = 108 [json_name = "managerTextMessageChatConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.manager_text_message_chat_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=51
    * @return Whether the managerTextMessageChatConfig field is set.
    */
-  boolean hasManagerTextMessageChatConfig();
+  @java.lang.Deprecated boolean hasManagerTextMessageChatConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicConfig manager_text_message_chat_config = 108 [json_name = "managerTextMessageChatConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig manager_text_message_chat_config = 108 [json_name = "managerTextMessageChatConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.manager_text_message_chat_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=51
    * @return The managerTextMessageChatConfig.
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getManagerTextMessageChatConfig();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getManagerTextMessageChatConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicConfig manager_text_message_chat_config = 108 [json_name = "managerTextMessageChatConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig manager_text_message_chat_config = 108 [json_name = "managerTextMessageChatConfig", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getManagerTextMessageChatConfigOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getManagerTextMessageChatConfigOrBuilder();
 
   /**
-   * <code>.api.commons.billing.modules.BasicConfig manager_text_message_email_message_config = 109 [json_name = "managerTextMessageEmailMessageConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig manager_text_message_email_message_config = 109 [json_name = "managerTextMessageEmailMessageConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.manager_text_message_email_message_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=52
    * @return Whether the managerTextMessageEmailMessageConfig field is set.
    */
-  boolean hasManagerTextMessageEmailMessageConfig();
+  @java.lang.Deprecated boolean hasManagerTextMessageEmailMessageConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicConfig manager_text_message_email_message_config = 109 [json_name = "managerTextMessageEmailMessageConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig manager_text_message_email_message_config = 109 [json_name = "managerTextMessageEmailMessageConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.manager_text_message_email_message_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=52
    * @return The managerTextMessageEmailMessageConfig.
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getManagerTextMessageEmailMessageConfig();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getManagerTextMessageEmailMessageConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicConfig manager_text_message_email_message_config = 109 [json_name = "managerTextMessageEmailMessageConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig manager_text_message_email_message_config = 109 [json_name = "managerTextMessageEmailMessageConfig", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getManagerTextMessageEmailMessageConfigOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getManagerTextMessageEmailMessageConfigOrBuilder();
 
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_email_size_config = 110 [json_name = "managerTextMessageEmailSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_email_size_config = 110 [json_name = "managerTextMessageEmailSizeConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.manager_text_message_email_size_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=53
    * @return Whether the managerTextMessageEmailSizeConfig field is set.
    */
-  boolean hasManagerTextMessageEmailSizeConfig();
+  @java.lang.Deprecated boolean hasManagerTextMessageEmailSizeConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_email_size_config = 110 [json_name = "managerTextMessageEmailSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_email_size_config = 110 [json_name = "managerTextMessageEmailSizeConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.manager_text_message_email_size_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=53
    * @return The managerTextMessageEmailSizeConfig.
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getManagerTextMessageEmailSizeConfig();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getManagerTextMessageEmailSizeConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_email_size_config = 110 [json_name = "managerTextMessageEmailSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_email_size_config = 110 [json_name = "managerTextMessageEmailSizeConfig", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getManagerTextMessageEmailSizeConfigOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getManagerTextMessageEmailSizeConfigOrBuilder();
 
   /**
-   * <code>.api.commons.billing.modules.BasicConfig manager_text_message_sms_config = 111 [json_name = "managerTextMessageSmsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig manager_text_message_sms_config = 111 [json_name = "managerTextMessageSmsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.manager_text_message_sms_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=54
    * @return Whether the managerTextMessageSmsConfig field is set.
    */
-  boolean hasManagerTextMessageSmsConfig();
+  @java.lang.Deprecated boolean hasManagerTextMessageSmsConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicConfig manager_text_message_sms_config = 111 [json_name = "managerTextMessageSmsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig manager_text_message_sms_config = 111 [json_name = "managerTextMessageSmsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.manager_text_message_sms_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=54
    * @return The managerTextMessageSmsConfig.
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getManagerTextMessageSmsConfig();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getManagerTextMessageSmsConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicConfig manager_text_message_sms_config = 111 [json_name = "managerTextMessageSmsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig manager_text_message_sms_config = 111 [json_name = "managerTextMessageSmsConfig", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getManagerTextMessageSmsConfigOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getManagerTextMessageSmsConfigOrBuilder();
 
   /**
-   * <code>.api.commons.billing.modules.BasicConfig customer_text_message_chat_config = 112 [json_name = "customerTextMessageChatConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig customer_text_message_chat_config = 112 [json_name = "customerTextMessageChatConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.customer_text_message_chat_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=55
    * @return Whether the customerTextMessageChatConfig field is set.
    */
-  boolean hasCustomerTextMessageChatConfig();
+  @java.lang.Deprecated boolean hasCustomerTextMessageChatConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicConfig customer_text_message_chat_config = 112 [json_name = "customerTextMessageChatConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig customer_text_message_chat_config = 112 [json_name = "customerTextMessageChatConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.customer_text_message_chat_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=55
    * @return The customerTextMessageChatConfig.
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getCustomerTextMessageChatConfig();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getCustomerTextMessageChatConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicConfig customer_text_message_chat_config = 112 [json_name = "customerTextMessageChatConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig customer_text_message_chat_config = 112 [json_name = "customerTextMessageChatConfig", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getCustomerTextMessageChatConfigOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getCustomerTextMessageChatConfigOrBuilder();
 
   /**
-   * <code>.api.commons.billing.modules.BasicConfig customer_text_message_email_message_config = 113 [json_name = "customerTextMessageEmailMessageConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig customer_text_message_email_message_config = 113 [json_name = "customerTextMessageEmailMessageConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.customer_text_message_email_message_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=56
    * @return Whether the customerTextMessageEmailMessageConfig field is set.
    */
-  boolean hasCustomerTextMessageEmailMessageConfig();
+  @java.lang.Deprecated boolean hasCustomerTextMessageEmailMessageConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicConfig customer_text_message_email_message_config = 113 [json_name = "customerTextMessageEmailMessageConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig customer_text_message_email_message_config = 113 [json_name = "customerTextMessageEmailMessageConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.customer_text_message_email_message_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=56
    * @return The customerTextMessageEmailMessageConfig.
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getCustomerTextMessageEmailMessageConfig();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getCustomerTextMessageEmailMessageConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicConfig customer_text_message_email_message_config = 113 [json_name = "customerTextMessageEmailMessageConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig customer_text_message_email_message_config = 113 [json_name = "customerTextMessageEmailMessageConfig", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getCustomerTextMessageEmailMessageConfigOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getCustomerTextMessageEmailMessageConfigOrBuilder();
 
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_email_size_config = 114 [json_name = "customerTextMessageEmailSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_email_size_config = 114 [json_name = "customerTextMessageEmailSizeConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.customer_text_message_email_size_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=57
    * @return Whether the customerTextMessageEmailSizeConfig field is set.
    */
-  boolean hasCustomerTextMessageEmailSizeConfig();
+  @java.lang.Deprecated boolean hasCustomerTextMessageEmailSizeConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_email_size_config = 114 [json_name = "customerTextMessageEmailSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_email_size_config = 114 [json_name = "customerTextMessageEmailSizeConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.customer_text_message_email_size_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=57
    * @return The customerTextMessageEmailSizeConfig.
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getCustomerTextMessageEmailSizeConfig();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getCustomerTextMessageEmailSizeConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_email_size_config = 114 [json_name = "customerTextMessageEmailSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_email_size_config = 114 [json_name = "customerTextMessageEmailSizeConfig", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getCustomerTextMessageEmailSizeConfigOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getCustomerTextMessageEmailSizeConfigOrBuilder();
 
   /**
-   * <code>.api.commons.billing.modules.BasicConfig customer_text_message_sms_config = 115 [json_name = "customerTextMessageSmsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig customer_text_message_sms_config = 115 [json_name = "customerTextMessageSmsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.customer_text_message_sms_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=58
    * @return Whether the customerTextMessageSmsConfig field is set.
    */
-  boolean hasCustomerTextMessageSmsConfig();
+  @java.lang.Deprecated boolean hasCustomerTextMessageSmsConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicConfig customer_text_message_sms_config = 115 [json_name = "customerTextMessageSmsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig customer_text_message_sms_config = 115 [json_name = "customerTextMessageSmsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.customer_text_message_sms_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=58
    * @return The customerTextMessageSmsConfig.
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getCustomerTextMessageSmsConfig();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getCustomerTextMessageSmsConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicConfig customer_text_message_sms_config = 115 [json_name = "customerTextMessageSmsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig customer_text_message_sms_config = 115 [json_name = "customerTextMessageSmsConfig", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getCustomerTextMessageSmsConfigOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getCustomerTextMessageSmsConfigOrBuilder();
 
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_chat_size_config = 116 [json_name = "agentTextMessageChatSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_chat_size_config = 116 [json_name = "agentTextMessageChatSizeConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.agent_text_message_chat_size_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=59
    * @return Whether the agentTextMessageChatSizeConfig field is set.
    */
-  boolean hasAgentTextMessageChatSizeConfig();
+  @java.lang.Deprecated boolean hasAgentTextMessageChatSizeConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_chat_size_config = 116 [json_name = "agentTextMessageChatSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_chat_size_config = 116 [json_name = "agentTextMessageChatSizeConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.agent_text_message_chat_size_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=59
    * @return The agentTextMessageChatSizeConfig.
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getAgentTextMessageChatSizeConfig();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getAgentTextMessageChatSizeConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_chat_size_config = 116 [json_name = "agentTextMessageChatSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_chat_size_config = 116 [json_name = "agentTextMessageChatSizeConfig", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getAgentTextMessageChatSizeConfigOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getAgentTextMessageChatSizeConfigOrBuilder();
 
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_chat_size_config = 117 [json_name = "managerTextMessageChatSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_chat_size_config = 117 [json_name = "managerTextMessageChatSizeConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.manager_text_message_chat_size_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=60
    * @return Whether the managerTextMessageChatSizeConfig field is set.
    */
-  boolean hasManagerTextMessageChatSizeConfig();
+  @java.lang.Deprecated boolean hasManagerTextMessageChatSizeConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_chat_size_config = 117 [json_name = "managerTextMessageChatSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_chat_size_config = 117 [json_name = "managerTextMessageChatSizeConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.manager_text_message_chat_size_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=60
    * @return The managerTextMessageChatSizeConfig.
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getManagerTextMessageChatSizeConfig();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getManagerTextMessageChatSizeConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_chat_size_config = 117 [json_name = "managerTextMessageChatSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_chat_size_config = 117 [json_name = "managerTextMessageChatSizeConfig", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getManagerTextMessageChatSizeConfigOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getManagerTextMessageChatSizeConfigOrBuilder();
 
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_chat_size_config = 118 [json_name = "customerTextMessageChatSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_chat_size_config = 118 [json_name = "customerTextMessageChatSizeConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.customer_text_message_chat_size_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=61
    * @return Whether the customerTextMessageChatSizeConfig field is set.
    */
-  boolean hasCustomerTextMessageChatSizeConfig();
+  @java.lang.Deprecated boolean hasCustomerTextMessageChatSizeConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_chat_size_config = 118 [json_name = "customerTextMessageChatSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_chat_size_config = 118 [json_name = "customerTextMessageChatSizeConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.customer_text_message_chat_size_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=61
    * @return The customerTextMessageChatSizeConfig.
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getCustomerTextMessageChatSizeConfig();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getCustomerTextMessageChatSizeConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_chat_size_config = 118 [json_name = "customerTextMessageChatSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_chat_size_config = 118 [json_name = "customerTextMessageChatSizeConfig", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getCustomerTextMessageChatSizeConfigOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getCustomerTextMessageChatSizeConfigOrBuilder();
 
   /**
-   * <code>.api.commons.billing.modules.BasicConfig connected_inbox_created_config = 119 [json_name = "connectedInboxCreatedConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig connected_inbox_created_config = 119 [json_name = "connectedInboxCreatedConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.connected_inbox_created_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=62
    * @return Whether the connectedInboxCreatedConfig field is set.
    */
-  boolean hasConnectedInboxCreatedConfig();
+  @java.lang.Deprecated boolean hasConnectedInboxCreatedConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicConfig connected_inbox_created_config = 119 [json_name = "connectedInboxCreatedConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig connected_inbox_created_config = 119 [json_name = "connectedInboxCreatedConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.connected_inbox_created_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=62
    * @return The connectedInboxCreatedConfig.
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getConnectedInboxCreatedConfig();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getConnectedInboxCreatedConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicConfig connected_inbox_created_config = 119 [json_name = "connectedInboxCreatedConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig connected_inbox_created_config = 119 [json_name = "connectedInboxCreatedConfig", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getConnectedInboxCreatedConfigOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getConnectedInboxCreatedConfigOrBuilder();
 
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_sms_size_config = 120 [json_name = "agentTextMessageSmsSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_sms_size_config = 120 [json_name = "agentTextMessageSmsSizeConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.agent_text_message_sms_size_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=63
    * @return Whether the agentTextMessageSmsSizeConfig field is set.
    */
-  boolean hasAgentTextMessageSmsSizeConfig();
+  @java.lang.Deprecated boolean hasAgentTextMessageSmsSizeConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_sms_size_config = 120 [json_name = "agentTextMessageSmsSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_sms_size_config = 120 [json_name = "agentTextMessageSmsSizeConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.agent_text_message_sms_size_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=63
    * @return The agentTextMessageSmsSizeConfig.
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getAgentTextMessageSmsSizeConfig();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getAgentTextMessageSmsSizeConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_sms_size_config = 120 [json_name = "agentTextMessageSmsSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_sms_size_config = 120 [json_name = "agentTextMessageSmsSizeConfig", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getAgentTextMessageSmsSizeConfigOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getAgentTextMessageSmsSizeConfigOrBuilder();
 
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_sms_size_config = 121 [json_name = "managerTextMessageSmsSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_sms_size_config = 121 [json_name = "managerTextMessageSmsSizeConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.manager_text_message_sms_size_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=64
    * @return Whether the managerTextMessageSmsSizeConfig field is set.
    */
-  boolean hasManagerTextMessageSmsSizeConfig();
+  @java.lang.Deprecated boolean hasManagerTextMessageSmsSizeConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_sms_size_config = 121 [json_name = "managerTextMessageSmsSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_sms_size_config = 121 [json_name = "managerTextMessageSmsSizeConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.manager_text_message_sms_size_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=64
    * @return The managerTextMessageSmsSizeConfig.
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getManagerTextMessageSmsSizeConfig();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getManagerTextMessageSmsSizeConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_sms_size_config = 121 [json_name = "managerTextMessageSmsSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_sms_size_config = 121 [json_name = "managerTextMessageSmsSizeConfig", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getManagerTextMessageSmsSizeConfigOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getManagerTextMessageSmsSizeConfigOrBuilder();
 
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_sms_size_config = 122 [json_name = "customerTextMessageSmsSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_sms_size_config = 122 [json_name = "customerTextMessageSmsSizeConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.customer_text_message_sms_size_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=65
    * @return Whether the customerTextMessageSmsSizeConfig field is set.
    */
-  boolean hasCustomerTextMessageSmsSizeConfig();
+  @java.lang.Deprecated boolean hasCustomerTextMessageSmsSizeConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_sms_size_config = 122 [json_name = "customerTextMessageSmsSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_sms_size_config = 122 [json_name = "customerTextMessageSmsSizeConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.customer_text_message_sms_size_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=65
    * @return The customerTextMessageSmsSizeConfig.
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getCustomerTextMessageSmsSizeConfig();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getCustomerTextMessageSmsSizeConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_sms_size_config = 122 [json_name = "customerTextMessageSmsSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_sms_size_config = 122 [json_name = "customerTextMessageSmsSizeConfig", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getCustomerTextMessageSmsSizeConfigOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getCustomerTextMessageSmsSizeConfigOrBuilder();
 
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig task_message_sent_sms_size_config = 123 [json_name = "taskMessageSentSmsSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig task_message_sent_sms_size_config = 123 [json_name = "taskMessageSentSmsSizeConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.task_message_sent_sms_size_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=66
    * @return Whether the taskMessageSentSmsSizeConfig field is set.
    */
-  boolean hasTaskMessageSentSmsSizeConfig();
+  @java.lang.Deprecated boolean hasTaskMessageSentSmsSizeConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig task_message_sent_sms_size_config = 123 [json_name = "taskMessageSentSmsSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig task_message_sent_sms_size_config = 123 [json_name = "taskMessageSentSmsSizeConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.task_message_sent_sms_size_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=66
    * @return The taskMessageSentSmsSizeConfig.
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getTaskMessageSentSmsSizeConfig();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getTaskMessageSentSmsSizeConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig task_message_sent_sms_size_config = 123 [json_name = "taskMessageSentSmsSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig task_message_sent_sms_size_config = 123 [json_name = "taskMessageSentSmsSizeConfig", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getTaskMessageSentSmsSizeConfigOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getTaskMessageSentSmsSizeConfigOrBuilder();
 
   /**
-   * <code>.api.commons.billing.modules.BasicConfig agent_chat_message_units_config = 124 [json_name = "agentChatMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig agent_chat_message_units_config = 124 [json_name = "agentChatMessageUnitsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.agent_chat_message_units_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=67
    * @return Whether the agentChatMessageUnitsConfig field is set.
    */
-  boolean hasAgentChatMessageUnitsConfig();
+  @java.lang.Deprecated boolean hasAgentChatMessageUnitsConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicConfig agent_chat_message_units_config = 124 [json_name = "agentChatMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig agent_chat_message_units_config = 124 [json_name = "agentChatMessageUnitsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.agent_chat_message_units_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=67
    * @return The agentChatMessageUnitsConfig.
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getAgentChatMessageUnitsConfig();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getAgentChatMessageUnitsConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicConfig agent_chat_message_units_config = 124 [json_name = "agentChatMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig agent_chat_message_units_config = 124 [json_name = "agentChatMessageUnitsConfig", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getAgentChatMessageUnitsConfigOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getAgentChatMessageUnitsConfigOrBuilder();
 
   /**
-   * <code>.api.commons.billing.modules.BasicConfig agent_email_message_units_config = 125 [json_name = "agentEmailMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig agent_email_message_units_config = 125 [json_name = "agentEmailMessageUnitsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.agent_email_message_units_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=68
    * @return Whether the agentEmailMessageUnitsConfig field is set.
    */
-  boolean hasAgentEmailMessageUnitsConfig();
+  @java.lang.Deprecated boolean hasAgentEmailMessageUnitsConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicConfig agent_email_message_units_config = 125 [json_name = "agentEmailMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig agent_email_message_units_config = 125 [json_name = "agentEmailMessageUnitsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.agent_email_message_units_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=68
    * @return The agentEmailMessageUnitsConfig.
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getAgentEmailMessageUnitsConfig();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getAgentEmailMessageUnitsConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicConfig agent_email_message_units_config = 125 [json_name = "agentEmailMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig agent_email_message_units_config = 125 [json_name = "agentEmailMessageUnitsConfig", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getAgentEmailMessageUnitsConfigOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getAgentEmailMessageUnitsConfigOrBuilder();
 
   /**
-   * <code>.api.commons.billing.modules.BasicConfig agent_sms_message_units_config = 126 [json_name = "agentSmsMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig agent_sms_message_units_config = 126 [json_name = "agentSmsMessageUnitsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.agent_sms_message_units_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=69
    * @return Whether the agentSmsMessageUnitsConfig field is set.
    */
-  boolean hasAgentSmsMessageUnitsConfig();
+  @java.lang.Deprecated boolean hasAgentSmsMessageUnitsConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicConfig agent_sms_message_units_config = 126 [json_name = "agentSmsMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig agent_sms_message_units_config = 126 [json_name = "agentSmsMessageUnitsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.agent_sms_message_units_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=69
    * @return The agentSmsMessageUnitsConfig.
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getAgentSmsMessageUnitsConfig();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getAgentSmsMessageUnitsConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicConfig agent_sms_message_units_config = 126 [json_name = "agentSmsMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig agent_sms_message_units_config = 126 [json_name = "agentSmsMessageUnitsConfig", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getAgentSmsMessageUnitsConfigOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getAgentSmsMessageUnitsConfigOrBuilder();
 
   /**
-   * <code>.api.commons.billing.modules.BasicConfig manager_chat_message_units_config = 127 [json_name = "managerChatMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig manager_chat_message_units_config = 127 [json_name = "managerChatMessageUnitsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.manager_chat_message_units_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=70
    * @return Whether the managerChatMessageUnitsConfig field is set.
    */
-  boolean hasManagerChatMessageUnitsConfig();
+  @java.lang.Deprecated boolean hasManagerChatMessageUnitsConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicConfig manager_chat_message_units_config = 127 [json_name = "managerChatMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig manager_chat_message_units_config = 127 [json_name = "managerChatMessageUnitsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.manager_chat_message_units_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=70
    * @return The managerChatMessageUnitsConfig.
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getManagerChatMessageUnitsConfig();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getManagerChatMessageUnitsConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicConfig manager_chat_message_units_config = 127 [json_name = "managerChatMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig manager_chat_message_units_config = 127 [json_name = "managerChatMessageUnitsConfig", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getManagerChatMessageUnitsConfigOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getManagerChatMessageUnitsConfigOrBuilder();
 
   /**
-   * <code>.api.commons.billing.modules.BasicConfig manager_email_message_units_config = 128 [json_name = "managerEmailMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig manager_email_message_units_config = 128 [json_name = "managerEmailMessageUnitsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.manager_email_message_units_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=71
    * @return Whether the managerEmailMessageUnitsConfig field is set.
    */
-  boolean hasManagerEmailMessageUnitsConfig();
+  @java.lang.Deprecated boolean hasManagerEmailMessageUnitsConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicConfig manager_email_message_units_config = 128 [json_name = "managerEmailMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig manager_email_message_units_config = 128 [json_name = "managerEmailMessageUnitsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.manager_email_message_units_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=71
    * @return The managerEmailMessageUnitsConfig.
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getManagerEmailMessageUnitsConfig();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getManagerEmailMessageUnitsConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicConfig manager_email_message_units_config = 128 [json_name = "managerEmailMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig manager_email_message_units_config = 128 [json_name = "managerEmailMessageUnitsConfig", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getManagerEmailMessageUnitsConfigOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getManagerEmailMessageUnitsConfigOrBuilder();
 
   /**
-   * <code>.api.commons.billing.modules.BasicConfig manager_sms_message_units_config = 129 [json_name = "managerSmsMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig manager_sms_message_units_config = 129 [json_name = "managerSmsMessageUnitsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.manager_sms_message_units_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=72
    * @return Whether the managerSmsMessageUnitsConfig field is set.
    */
-  boolean hasManagerSmsMessageUnitsConfig();
+  @java.lang.Deprecated boolean hasManagerSmsMessageUnitsConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicConfig manager_sms_message_units_config = 129 [json_name = "managerSmsMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig manager_sms_message_units_config = 129 [json_name = "managerSmsMessageUnitsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.manager_sms_message_units_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=72
    * @return The managerSmsMessageUnitsConfig.
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getManagerSmsMessageUnitsConfig();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getManagerSmsMessageUnitsConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicConfig manager_sms_message_units_config = 129 [json_name = "managerSmsMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig manager_sms_message_units_config = 129 [json_name = "managerSmsMessageUnitsConfig", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getManagerSmsMessageUnitsConfigOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getManagerSmsMessageUnitsConfigOrBuilder();
 
   /**
-   * <code>.api.commons.billing.modules.BasicConfig customer_chat_message_units_config = 130 [json_name = "customerChatMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig customer_chat_message_units_config = 130 [json_name = "customerChatMessageUnitsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.customer_chat_message_units_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=73
    * @return Whether the customerChatMessageUnitsConfig field is set.
    */
-  boolean hasCustomerChatMessageUnitsConfig();
+  @java.lang.Deprecated boolean hasCustomerChatMessageUnitsConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicConfig customer_chat_message_units_config = 130 [json_name = "customerChatMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig customer_chat_message_units_config = 130 [json_name = "customerChatMessageUnitsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.customer_chat_message_units_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=73
    * @return The customerChatMessageUnitsConfig.
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getCustomerChatMessageUnitsConfig();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getCustomerChatMessageUnitsConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicConfig customer_chat_message_units_config = 130 [json_name = "customerChatMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig customer_chat_message_units_config = 130 [json_name = "customerChatMessageUnitsConfig", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getCustomerChatMessageUnitsConfigOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getCustomerChatMessageUnitsConfigOrBuilder();
 
   /**
-   * <code>.api.commons.billing.modules.BasicConfig customer_email_message_units_config = 131 [json_name = "customerEmailMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig customer_email_message_units_config = 131 [json_name = "customerEmailMessageUnitsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.customer_email_message_units_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=74
    * @return Whether the customerEmailMessageUnitsConfig field is set.
    */
-  boolean hasCustomerEmailMessageUnitsConfig();
+  @java.lang.Deprecated boolean hasCustomerEmailMessageUnitsConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicConfig customer_email_message_units_config = 131 [json_name = "customerEmailMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig customer_email_message_units_config = 131 [json_name = "customerEmailMessageUnitsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.customer_email_message_units_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=74
    * @return The customerEmailMessageUnitsConfig.
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getCustomerEmailMessageUnitsConfig();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getCustomerEmailMessageUnitsConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicConfig customer_email_message_units_config = 131 [json_name = "customerEmailMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig customer_email_message_units_config = 131 [json_name = "customerEmailMessageUnitsConfig", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getCustomerEmailMessageUnitsConfigOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getCustomerEmailMessageUnitsConfigOrBuilder();
 
   /**
-   * <code>.api.commons.billing.modules.BasicConfig customer_sms_message_units_config = 132 [json_name = "customerSmsMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig customer_sms_message_units_config = 132 [json_name = "customerSmsMessageUnitsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.customer_sms_message_units_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=75
    * @return Whether the customerSmsMessageUnitsConfig field is set.
    */
-  boolean hasCustomerSmsMessageUnitsConfig();
+  @java.lang.Deprecated boolean hasCustomerSmsMessageUnitsConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicConfig customer_sms_message_units_config = 132 [json_name = "customerSmsMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig customer_sms_message_units_config = 132 [json_name = "customerSmsMessageUnitsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.customer_sms_message_units_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=75
    * @return The customerSmsMessageUnitsConfig.
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getCustomerSmsMessageUnitsConfig();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getCustomerSmsMessageUnitsConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicConfig customer_sms_message_units_config = 132 [json_name = "customerSmsMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig customer_sms_message_units_config = 132 [json_name = "customerSmsMessageUnitsConfig", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getCustomerSmsMessageUnitsConfigOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getCustomerSmsMessageUnitsConfigOrBuilder();
 
   /**
-   * <code>.api.commons.billing.modules.BasicConfig system_chat_message_units_config = 133 [json_name = "systemChatMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig system_chat_message_units_config = 133 [json_name = "systemChatMessageUnitsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.system_chat_message_units_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=76
    * @return Whether the systemChatMessageUnitsConfig field is set.
    */
-  boolean hasSystemChatMessageUnitsConfig();
+  @java.lang.Deprecated boolean hasSystemChatMessageUnitsConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicConfig system_chat_message_units_config = 133 [json_name = "systemChatMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig system_chat_message_units_config = 133 [json_name = "systemChatMessageUnitsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.system_chat_message_units_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=76
    * @return The systemChatMessageUnitsConfig.
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getSystemChatMessageUnitsConfig();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getSystemChatMessageUnitsConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicConfig system_chat_message_units_config = 133 [json_name = "systemChatMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig system_chat_message_units_config = 133 [json_name = "systemChatMessageUnitsConfig", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getSystemChatMessageUnitsConfigOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getSystemChatMessageUnitsConfigOrBuilder();
 
   /**
-   * <code>.api.commons.billing.modules.BasicConfig system_email_message_units_config = 134 [json_name = "systemEmailMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig system_email_message_units_config = 134 [json_name = "systemEmailMessageUnitsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.system_email_message_units_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=77
    * @return Whether the systemEmailMessageUnitsConfig field is set.
    */
-  boolean hasSystemEmailMessageUnitsConfig();
+  @java.lang.Deprecated boolean hasSystemEmailMessageUnitsConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicConfig system_email_message_units_config = 134 [json_name = "systemEmailMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig system_email_message_units_config = 134 [json_name = "systemEmailMessageUnitsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.system_email_message_units_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=77
    * @return The systemEmailMessageUnitsConfig.
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getSystemEmailMessageUnitsConfig();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getSystemEmailMessageUnitsConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicConfig system_email_message_units_config = 134 [json_name = "systemEmailMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig system_email_message_units_config = 134 [json_name = "systemEmailMessageUnitsConfig", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getSystemEmailMessageUnitsConfigOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getSystemEmailMessageUnitsConfigOrBuilder();
 
   /**
-   * <code>.api.commons.billing.modules.BasicConfig system_sms_message_units_config = 135 [json_name = "systemSmsMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig system_sms_message_units_config = 135 [json_name = "systemSmsMessageUnitsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.system_sms_message_units_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=78
    * @return Whether the systemSmsMessageUnitsConfig field is set.
    */
-  boolean hasSystemSmsMessageUnitsConfig();
+  @java.lang.Deprecated boolean hasSystemSmsMessageUnitsConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicConfig system_sms_message_units_config = 135 [json_name = "systemSmsMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig system_sms_message_units_config = 135 [json_name = "systemSmsMessageUnitsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.system_sms_message_units_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=78
    * @return The systemSmsMessageUnitsConfig.
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getSystemSmsMessageUnitsConfig();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getSystemSmsMessageUnitsConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicConfig system_sms_message_units_config = 135 [json_name = "systemSmsMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig system_sms_message_units_config = 135 [json_name = "systemSmsMessageUnitsConfig", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getSystemSmsMessageUnitsConfigOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getSystemSmsMessageUnitsConfigOrBuilder();
 
   /**
    * <pre>
    * compliance configs
    * </pre>
    *
-   * <code>.api.commons.billing.modules.BasicConfig compliance_rnd_query_config = 200 [json_name = "complianceRndQueryConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig compliance_rnd_query_config = 200 [json_name = "complianceRndQueryConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.compliance_rnd_query_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=81
    * @return Whether the complianceRndQueryConfig field is set.
    */
-  boolean hasComplianceRndQueryConfig();
+  @java.lang.Deprecated boolean hasComplianceRndQueryConfig();
   /**
    * <pre>
    * compliance configs
    * </pre>
    *
-   * <code>.api.commons.billing.modules.BasicConfig compliance_rnd_query_config = 200 [json_name = "complianceRndQueryConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig compliance_rnd_query_config = 200 [json_name = "complianceRndQueryConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.compliance_rnd_query_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=81
    * @return The complianceRndQueryConfig.
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getComplianceRndQueryConfig();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getComplianceRndQueryConfig();
   /**
    * <pre>
    * compliance configs
    * </pre>
    *
-   * <code>.api.commons.billing.modules.BasicConfig compliance_rnd_query_config = 200 [json_name = "complianceRndQueryConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig compliance_rnd_query_config = 200 [json_name = "complianceRndQueryConfig", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getComplianceRndQueryConfigOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getComplianceRndQueryConfigOrBuilder();
 
   /**
-   * <code>.api.commons.billing.modules.BasicConfig compliance_rnd_query_cached_config = 201 [json_name = "complianceRndQueryCachedConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig compliance_rnd_query_cached_config = 201 [json_name = "complianceRndQueryCachedConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.compliance_rnd_query_cached_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=82
    * @return Whether the complianceRndQueryCachedConfig field is set.
    */
-  boolean hasComplianceRndQueryCachedConfig();
+  @java.lang.Deprecated boolean hasComplianceRndQueryCachedConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicConfig compliance_rnd_query_cached_config = 201 [json_name = "complianceRndQueryCachedConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig compliance_rnd_query_cached_config = 201 [json_name = "complianceRndQueryCachedConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.compliance_rnd_query_cached_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=82
    * @return The complianceRndQueryCachedConfig.
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getComplianceRndQueryCachedConfig();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getComplianceRndQueryCachedConfig();
   /**
-   * <code>.api.commons.billing.modules.BasicConfig compliance_rnd_query_cached_config = 201 [json_name = "complianceRndQueryCachedConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig compliance_rnd_query_cached_config = 201 [json_name = "complianceRndQueryCachedConfig", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getComplianceRndQueryCachedConfigOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getComplianceRndQueryCachedConfigOrBuilder();
 
   com.tcn.cloud.api.api.commons.billing.DetailConfig.ConfigCase getConfigCase();
 }

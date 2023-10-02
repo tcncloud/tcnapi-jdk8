@@ -3,173 +3,129 @@
 
 package com.tcn.cloud.api.api.commons.billing;
 
-public interface DetailOrBuilder extends
+@java.lang.Deprecated public interface DetailOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.commons.billing.Detail)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <pre>
-   * billing detail identifier
-   * </pre>
-   *
-   * <code>int64 billing_detail_sid = 1 [json_name = "billingDetailSid"];</code>
+   * <code>int64 billing_detail_sid = 1 [json_name = "billingDetailSid", deprecated = true];</code>
+   * @deprecated api.commons.billing.Detail.billing_detail_sid is deprecated.
+   *     See api/commons/billing/detail.proto;l=24
    * @return The billingDetailSid.
    */
-  long getBillingDetailSid();
+  @java.lang.Deprecated long getBillingDetailSid();
 
   /**
-   * <pre>
-   * event type this billing detail is associated with
-   * </pre>
-   *
-   * <code>.api.commons.audit.EventType event_type = 2 [json_name = "eventType"];</code>
+   * <code>.api.commons.audit.EventType event_type = 2 [json_name = "eventType", deprecated = true];</code>
+   * @deprecated api.commons.billing.Detail.event_type is deprecated.
+   *     See api/commons/billing/detail.proto;l=25
    * @return The enum numeric value on the wire for eventType.
    */
-  int getEventTypeValue();
+  @java.lang.Deprecated int getEventTypeValue();
   /**
-   * <pre>
-   * event type this billing detail is associated with
-   * </pre>
-   *
-   * <code>.api.commons.audit.EventType event_type = 2 [json_name = "eventType"];</code>
+   * <code>.api.commons.audit.EventType event_type = 2 [json_name = "eventType", deprecated = true];</code>
+   * @deprecated api.commons.billing.Detail.event_type is deprecated.
+   *     See api/commons/billing/detail.proto;l=25
    * @return The eventType.
    */
-  com.tcn.cloud.api.api.commons.audit.EventType getEventType();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.audit.EventType getEventType();
 
   /**
-   * <pre>
-   * the type of configuration for this detail
-   * </pre>
-   *
-   * <code>.api.commons.billing.DetailConfigType config_type = 3 [json_name = "configType"];</code>
+   * <code>.api.commons.billing.DetailConfigType config_type = 3 [json_name = "configType", deprecated = true];</code>
+   * @deprecated api.commons.billing.Detail.config_type is deprecated.
+   *     See api/commons/billing/detail.proto;l=26
    * @return The enum numeric value on the wire for configType.
    */
-  int getConfigTypeValue();
+  @java.lang.Deprecated int getConfigTypeValue();
   /**
-   * <pre>
-   * the type of configuration for this detail
-   * </pre>
-   *
-   * <code>.api.commons.billing.DetailConfigType config_type = 3 [json_name = "configType"];</code>
+   * <code>.api.commons.billing.DetailConfigType config_type = 3 [json_name = "configType", deprecated = true];</code>
+   * @deprecated api.commons.billing.Detail.config_type is deprecated.
+   *     See api/commons/billing/detail.proto;l=26
    * @return The configType.
    */
-  com.tcn.cloud.api.api.commons.billing.DetailConfigType getConfigType();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.DetailConfigType getConfigType();
 
   /**
-   * <pre>
-   * the configuration details for this detail
-   * </pre>
-   *
-   * <code>.api.commons.billing.DetailConfig config = 4 [json_name = "config"];</code>
+   * <code>.api.commons.billing.DetailConfig config = 4 [json_name = "config", deprecated = true];</code>
+   * @deprecated api.commons.billing.Detail.config is deprecated.
+   *     See api/commons/billing/detail.proto;l=27
    * @return Whether the config field is set.
    */
-  boolean hasConfig();
+  @java.lang.Deprecated boolean hasConfig();
   /**
-   * <pre>
-   * the configuration details for this detail
-   * </pre>
-   *
-   * <code>.api.commons.billing.DetailConfig config = 4 [json_name = "config"];</code>
+   * <code>.api.commons.billing.DetailConfig config = 4 [json_name = "config", deprecated = true];</code>
+   * @deprecated api.commons.billing.Detail.config is deprecated.
+   *     See api/commons/billing/detail.proto;l=27
    * @return The config.
    */
-  com.tcn.cloud.api.api.commons.billing.DetailConfig getConfig();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.DetailConfig getConfig();
   /**
-   * <pre>
-   * the configuration details for this detail
-   * </pre>
-   *
-   * <code>.api.commons.billing.DetailConfig config = 4 [json_name = "config"];</code>
+   * <code>.api.commons.billing.DetailConfig config = 4 [json_name = "config", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.billing.DetailConfigOrBuilder getConfigOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.DetailConfigOrBuilder getConfigOrBuilder();
 
   /**
-   * <pre>
-   * the time the detail was created
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp date_created = 5 [json_name = "dateCreated"];</code>
+   * <code>.google.protobuf.Timestamp date_created = 5 [json_name = "dateCreated", deprecated = true];</code>
+   * @deprecated api.commons.billing.Detail.date_created is deprecated.
+   *     See api/commons/billing/detail.proto;l=28
    * @return Whether the dateCreated field is set.
    */
-  boolean hasDateCreated();
+  @java.lang.Deprecated boolean hasDateCreated();
   /**
-   * <pre>
-   * the time the detail was created
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp date_created = 5 [json_name = "dateCreated"];</code>
+   * <code>.google.protobuf.Timestamp date_created = 5 [json_name = "dateCreated", deprecated = true];</code>
+   * @deprecated api.commons.billing.Detail.date_created is deprecated.
+   *     See api/commons/billing/detail.proto;l=28
    * @return The dateCreated.
    */
-  com.google.protobuf.Timestamp getDateCreated();
+  @java.lang.Deprecated com.google.protobuf.Timestamp getDateCreated();
   /**
-   * <pre>
-   * the time the detail was created
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp date_created = 5 [json_name = "dateCreated"];</code>
+   * <code>.google.protobuf.Timestamp date_created = 5 [json_name = "dateCreated", deprecated = true];</code>
    */
-  com.google.protobuf.TimestampOrBuilder getDateCreatedOrBuilder();
+  @java.lang.Deprecated com.google.protobuf.TimestampOrBuilder getDateCreatedOrBuilder();
 
   /**
-   * <pre>
-   * the time the detail was last modified
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp date_modified = 6 [json_name = "dateModified"];</code>
+   * <code>.google.protobuf.Timestamp date_modified = 6 [json_name = "dateModified", deprecated = true];</code>
+   * @deprecated api.commons.billing.Detail.date_modified is deprecated.
+   *     See api/commons/billing/detail.proto;l=29
    * @return Whether the dateModified field is set.
    */
-  boolean hasDateModified();
+  @java.lang.Deprecated boolean hasDateModified();
   /**
-   * <pre>
-   * the time the detail was last modified
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp date_modified = 6 [json_name = "dateModified"];</code>
+   * <code>.google.protobuf.Timestamp date_modified = 6 [json_name = "dateModified", deprecated = true];</code>
+   * @deprecated api.commons.billing.Detail.date_modified is deprecated.
+   *     See api/commons/billing/detail.proto;l=29
    * @return The dateModified.
    */
-  com.google.protobuf.Timestamp getDateModified();
+  @java.lang.Deprecated com.google.protobuf.Timestamp getDateModified();
   /**
-   * <pre>
-   * the time the detail was last modified
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp date_modified = 6 [json_name = "dateModified"];</code>
+   * <code>.google.protobuf.Timestamp date_modified = 6 [json_name = "dateModified", deprecated = true];</code>
    */
-  com.google.protobuf.TimestampOrBuilder getDateModifiedOrBuilder();
+  @java.lang.Deprecated com.google.protobuf.TimestampOrBuilder getDateModifiedOrBuilder();
 
   /**
-   * <pre>
-   * the time the detail was deleted (if applicable)
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp deleted_on = 7 [json_name = "deletedOn"];</code>
+   * <code>.google.protobuf.Timestamp deleted_on = 7 [json_name = "deletedOn", deprecated = true];</code>
+   * @deprecated api.commons.billing.Detail.deleted_on is deprecated.
+   *     See api/commons/billing/detail.proto;l=30
    * @return Whether the deletedOn field is set.
    */
-  boolean hasDeletedOn();
+  @java.lang.Deprecated boolean hasDeletedOn();
   /**
-   * <pre>
-   * the time the detail was deleted (if applicable)
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp deleted_on = 7 [json_name = "deletedOn"];</code>
+   * <code>.google.protobuf.Timestamp deleted_on = 7 [json_name = "deletedOn", deprecated = true];</code>
+   * @deprecated api.commons.billing.Detail.deleted_on is deprecated.
+   *     See api/commons/billing/detail.proto;l=30
    * @return The deletedOn.
    */
-  com.google.protobuf.Timestamp getDeletedOn();
+  @java.lang.Deprecated com.google.protobuf.Timestamp getDeletedOn();
   /**
-   * <pre>
-   * the time the detail was deleted (if applicable)
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp deleted_on = 7 [json_name = "deletedOn"];</code>
+   * <code>.google.protobuf.Timestamp deleted_on = 7 [json_name = "deletedOn", deprecated = true];</code>
    */
-  com.google.protobuf.TimestampOrBuilder getDeletedOnOrBuilder();
+  @java.lang.Deprecated com.google.protobuf.TimestampOrBuilder getDeletedOnOrBuilder();
 
   /**
-   * <pre>
-   * the billing plan identifier
-   * </pre>
-   *
-   * <code>int64 billing_plan_id = 8 [json_name = "billingPlanId", jstype = JS_STRING];</code>
+   * <code>int64 billing_plan_id = 8 [json_name = "billingPlanId", deprecated = true, jstype = JS_STRING];</code>
+   * @deprecated api.commons.billing.Detail.billing_plan_id is deprecated.
+   *     See api/commons/billing/detail.proto;l=31
    * @return The billingPlanId.
    */
-  long getBillingPlanId();
+  @java.lang.Deprecated long getBillingPlanId();
 }
