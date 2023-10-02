@@ -461,4 +461,31 @@ public interface ProgramNodeOrBuilder extends
    * <code>.google.protobuf.Int64Value origin_sid = 16 [json_name = "originSid"];</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getOriginSidOrBuilder();
+
+  /**
+   * <pre>
+   * The predicted calls of this skill profile category will be used when scheduling.
+   * </pre>
+   *
+   * <code>.api.commons.SkillProfileCategory skill_profile_category = 17 [json_name = "skillProfileCategory"];</code>
+   * @return Whether the skillProfileCategory field is set.
+   */
+  boolean hasSkillProfileCategory();
+  /**
+   * <pre>
+   * The predicted calls of this skill profile category will be used when scheduling.
+   * </pre>
+   *
+   * <code>.api.commons.SkillProfileCategory skill_profile_category = 17 [json_name = "skillProfileCategory"];</code>
+   * @return The skillProfileCategory.
+   */
+  com.tcn.cloud.api.api.commons.SkillProfileCategory getSkillProfileCategory();
+  /**
+   * <pre>
+   * The predicted calls of this skill profile category will be used when scheduling.
+   * </pre>
+   *
+   * <code>.api.commons.SkillProfileCategory skill_profile_category = 17 [json_name = "skillProfileCategory"];</code>
+   */
+  com.tcn.cloud.api.api.commons.SkillProfileCategoryOrBuilder getSkillProfileCategoryOrBuilder();
 }
