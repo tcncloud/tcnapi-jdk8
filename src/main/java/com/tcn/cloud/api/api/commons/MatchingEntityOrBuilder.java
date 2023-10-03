@@ -36,4 +36,6 @@ public interface MatchingEntityOrBuilder extends
    * <code>.api.commons.DispositionMod dispositions = 2 [json_name = "dispositions"];</code>
    */
   com.tcn.cloud.api.api.commons.DispositionModOrBuilder getDispositionsOrBuilder();
+
+  com.tcn.cloud.api.api.commons.MatchingEntity.EntityCase getEntityCase();
 }

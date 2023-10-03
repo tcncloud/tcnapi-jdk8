@@ -38,15 +38,56 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.MatchingEntity.class, com.tcn.cloud.api.api.commons.MatchingEntity.Builder.class);
   }
 
+  private int entityCase_ = 0;
+  @SuppressWarnings("serial")
+  private java.lang.Object entity_;
+  public enum EntityCase
+      implements com.google.protobuf.Internal.EnumLite,
+          com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+    RESULTS(1),
+    DISPOSITIONS(2),
+    ENTITY_NOT_SET(0);
+    private final int value;
+    private EntityCase(int value) {
+      this.value = value;
+    }
+    /**
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static EntityCase valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static EntityCase forNumber(int value) {
+      switch (value) {
+        case 1: return RESULTS;
+        case 2: return DISPOSITIONS;
+        case 0: return ENTITY_NOT_SET;
+        default: return null;
+      }
+    }
+    public int getNumber() {
+      return this.value;
+    }
+  };
+
+  public EntityCase
+  getEntityCase() {
+    return EntityCase.forNumber(
+        entityCase_);
+  }
+
   public static final int RESULTS_FIELD_NUMBER = 1;
-  private com.tcn.cloud.api.api.commons.ResultsMod results_;
   /**
    * <code>.api.commons.ResultsMod results = 1 [json_name = "results"];</code>
    * @return Whether the results field is set.
    */
   @java.lang.Override
   public boolean hasResults() {
-    return results_ != null;
+    return entityCase_ == 1;
   }
   /**
    * <code>.api.commons.ResultsMod results = 1 [json_name = "results"];</code>
@@ -54,25 +95,30 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.ResultsMod getResults() {
-    return results_ == null ? com.tcn.cloud.api.api.commons.ResultsMod.getDefaultInstance() : results_;
+    if (entityCase_ == 1) {
+       return (com.tcn.cloud.api.api.commons.ResultsMod) entity_;
+    }
+    return com.tcn.cloud.api.api.commons.ResultsMod.getDefaultInstance();
   }
   /**
    * <code>.api.commons.ResultsMod results = 1 [json_name = "results"];</code>
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.ResultsModOrBuilder getResultsOrBuilder() {
-    return results_ == null ? com.tcn.cloud.api.api.commons.ResultsMod.getDefaultInstance() : results_;
+    if (entityCase_ == 1) {
+       return (com.tcn.cloud.api.api.commons.ResultsMod) entity_;
+    }
+    return com.tcn.cloud.api.api.commons.ResultsMod.getDefaultInstance();
   }
 
   public static final int DISPOSITIONS_FIELD_NUMBER = 2;
-  private com.tcn.cloud.api.api.commons.DispositionMod dispositions_;
   /**
    * <code>.api.commons.DispositionMod dispositions = 2 [json_name = "dispositions"];</code>
    * @return Whether the dispositions field is set.
    */
   @java.lang.Override
   public boolean hasDispositions() {
-    return dispositions_ != null;
+    return entityCase_ == 2;
   }
   /**
    * <code>.api.commons.DispositionMod dispositions = 2 [json_name = "dispositions"];</code>
@@ -80,14 +126,20 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.DispositionMod getDispositions() {
-    return dispositions_ == null ? com.tcn.cloud.api.api.commons.DispositionMod.getDefaultInstance() : dispositions_;
+    if (entityCase_ == 2) {
+       return (com.tcn.cloud.api.api.commons.DispositionMod) entity_;
+    }
+    return com.tcn.cloud.api.api.commons.DispositionMod.getDefaultInstance();
   }
   /**
    * <code>.api.commons.DispositionMod dispositions = 2 [json_name = "dispositions"];</code>
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.DispositionModOrBuilder getDispositionsOrBuilder() {
-    return dispositions_ == null ? com.tcn.cloud.api.api.commons.DispositionMod.getDefaultInstance() : dispositions_;
+    if (entityCase_ == 2) {
+       return (com.tcn.cloud.api.api.commons.DispositionMod) entity_;
+    }
+    return com.tcn.cloud.api.api.commons.DispositionMod.getDefaultInstance();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -104,11 +156,11 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (results_ != null) {
-      output.writeMessage(1, getResults());
+    if (entityCase_ == 1) {
+      output.writeMessage(1, (com.tcn.cloud.api.api.commons.ResultsMod) entity_);
     }
-    if (dispositions_ != null) {
-      output.writeMessage(2, getDispositions());
+    if (entityCase_ == 2) {
+      output.writeMessage(2, (com.tcn.cloud.api.api.commons.DispositionMod) entity_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -119,13 +171,13 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (results_ != null) {
+    if (entityCase_ == 1) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, getResults());
+        .computeMessageSize(1, (com.tcn.cloud.api.api.commons.ResultsMod) entity_);
     }
-    if (dispositions_ != null) {
+    if (entityCase_ == 2) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(2, getDispositions());
+        .computeMessageSize(2, (com.tcn.cloud.api.api.commons.DispositionMod) entity_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -142,15 +194,18 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.commons.MatchingEntity other = (com.tcn.cloud.api.api.commons.MatchingEntity) obj;
 
-    if (hasResults() != other.hasResults()) return false;
-    if (hasResults()) {
-      if (!getResults()
-          .equals(other.getResults())) return false;
-    }
-    if (hasDispositions() != other.hasDispositions()) return false;
-    if (hasDispositions()) {
-      if (!getDispositions()
-          .equals(other.getDispositions())) return false;
+    if (!getEntityCase().equals(other.getEntityCase())) return false;
+    switch (entityCase_) {
+      case 1:
+        if (!getResults()
+            .equals(other.getResults())) return false;
+        break;
+      case 2:
+        if (!getDispositions()
+            .equals(other.getDispositions())) return false;
+        break;
+      case 0:
+      default:
     }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -163,13 +218,17 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (hasResults()) {
-      hash = (37 * hash) + RESULTS_FIELD_NUMBER;
-      hash = (53 * hash) + getResults().hashCode();
-    }
-    if (hasDispositions()) {
-      hash = (37 * hash) + DISPOSITIONS_FIELD_NUMBER;
-      hash = (53 * hash) + getDispositions().hashCode();
+    switch (entityCase_) {
+      case 1:
+        hash = (37 * hash) + RESULTS_FIELD_NUMBER;
+        hash = (53 * hash) + getResults().hashCode();
+        break;
+      case 2:
+        hash = (37 * hash) + DISPOSITIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getDispositions().hashCode();
+        break;
+      case 0:
+      default:
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -302,16 +361,14 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      results_ = null;
       if (resultsBuilder_ != null) {
-        resultsBuilder_.dispose();
-        resultsBuilder_ = null;
+        resultsBuilder_.clear();
       }
-      dispositions_ = null;
       if (dispositionsBuilder_ != null) {
-        dispositionsBuilder_.dispose();
-        dispositionsBuilder_ = null;
+        dispositionsBuilder_.clear();
       }
+      entityCase_ = 0;
+      entity_ = null;
       return this;
     }
 
@@ -339,21 +396,25 @@ private static final long serialVersionUID = 0L;
     public com.tcn.cloud.api.api.commons.MatchingEntity buildPartial() {
       com.tcn.cloud.api.api.commons.MatchingEntity result = new com.tcn.cloud.api.api.commons.MatchingEntity(this);
       if (bitField0_ != 0) { buildPartial0(result); }
+      buildPartialOneofs(result);
       onBuilt();
       return result;
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.commons.MatchingEntity result) {
       int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.results_ = resultsBuilder_ == null
-            ? results_
-            : resultsBuilder_.build();
+    }
+
+    private void buildPartialOneofs(com.tcn.cloud.api.api.commons.MatchingEntity result) {
+      result.entityCase_ = entityCase_;
+      result.entity_ = this.entity_;
+      if (entityCase_ == 1 &&
+          resultsBuilder_ != null) {
+        result.entity_ = resultsBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.dispositions_ = dispositionsBuilder_ == null
-            ? dispositions_
-            : dispositionsBuilder_.build();
+      if (entityCase_ == 2 &&
+          dispositionsBuilder_ != null) {
+        result.entity_ = dispositionsBuilder_.build();
       }
     }
 
@@ -401,11 +462,18 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.commons.MatchingEntity other) {
       if (other == com.tcn.cloud.api.api.commons.MatchingEntity.getDefaultInstance()) return this;
-      if (other.hasResults()) {
-        mergeResults(other.getResults());
-      }
-      if (other.hasDispositions()) {
-        mergeDispositions(other.getDispositions());
+      switch (other.getEntityCase()) {
+        case RESULTS: {
+          mergeResults(other.getResults());
+          break;
+        }
+        case DISPOSITIONS: {
+          mergeDispositions(other.getDispositions());
+          break;
+        }
+        case ENTITY_NOT_SET: {
+          break;
+        }
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -437,14 +505,14 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getResultsFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000001;
+              entityCase_ = 1;
               break;
             } // case 10
             case 18: {
               input.readMessage(
                   getDispositionsFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000002;
+              entityCase_ = 2;
               break;
             } // case 18
             default: {
@@ -462,27 +530,49 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int entityCase_ = 0;
+    private java.lang.Object entity_;
+    public EntityCase
+        getEntityCase() {
+      return EntityCase.forNumber(
+          entityCase_);
+    }
+
+    public Builder clearEntity() {
+      entityCase_ = 0;
+      entity_ = null;
+      onChanged();
+      return this;
+    }
+
     private int bitField0_;
 
-    private com.tcn.cloud.api.api.commons.ResultsMod results_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.ResultsMod, com.tcn.cloud.api.api.commons.ResultsMod.Builder, com.tcn.cloud.api.api.commons.ResultsModOrBuilder> resultsBuilder_;
     /**
      * <code>.api.commons.ResultsMod results = 1 [json_name = "results"];</code>
      * @return Whether the results field is set.
      */
+    @java.lang.Override
     public boolean hasResults() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return entityCase_ == 1;
     }
     /**
      * <code>.api.commons.ResultsMod results = 1 [json_name = "results"];</code>
      * @return The results.
      */
+    @java.lang.Override
     public com.tcn.cloud.api.api.commons.ResultsMod getResults() {
       if (resultsBuilder_ == null) {
-        return results_ == null ? com.tcn.cloud.api.api.commons.ResultsMod.getDefaultInstance() : results_;
+        if (entityCase_ == 1) {
+          return (com.tcn.cloud.api.api.commons.ResultsMod) entity_;
+        }
+        return com.tcn.cloud.api.api.commons.ResultsMod.getDefaultInstance();
       } else {
-        return resultsBuilder_.getMessage();
+        if (entityCase_ == 1) {
+          return resultsBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.ResultsMod.getDefaultInstance();
       }
     }
     /**
@@ -493,12 +583,12 @@ private static final long serialVersionUID = 0L;
         if (value == null) {
           throw new NullPointerException();
         }
-        results_ = value;
+        entity_ = value;
+        onChanged();
       } else {
         resultsBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+      entityCase_ = 1;
       return this;
     }
     /**
@@ -507,12 +597,12 @@ private static final long serialVersionUID = 0L;
     public Builder setResults(
         com.tcn.cloud.api.api.commons.ResultsMod.Builder builderForValue) {
       if (resultsBuilder_ == null) {
-        results_ = builderForValue.build();
+        entity_ = builderForValue.build();
+        onChanged();
       } else {
         resultsBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+      entityCase_ = 1;
       return this;
     }
     /**
@@ -520,50 +610,61 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeResults(com.tcn.cloud.api.api.commons.ResultsMod value) {
       if (resultsBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0) &&
-          results_ != null &&
-          results_ != com.tcn.cloud.api.api.commons.ResultsMod.getDefaultInstance()) {
-          getResultsBuilder().mergeFrom(value);
+        if (entityCase_ == 1 &&
+            entity_ != com.tcn.cloud.api.api.commons.ResultsMod.getDefaultInstance()) {
+          entity_ = com.tcn.cloud.api.api.commons.ResultsMod.newBuilder((com.tcn.cloud.api.api.commons.ResultsMod) entity_)
+              .mergeFrom(value).buildPartial();
         } else {
-          results_ = value;
+          entity_ = value;
         }
+        onChanged();
       } else {
-        resultsBuilder_.mergeFrom(value);
+        if (entityCase_ == 1) {
+          resultsBuilder_.mergeFrom(value);
+        } else {
+          resultsBuilder_.setMessage(value);
+        }
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+      entityCase_ = 1;
       return this;
     }
     /**
      * <code>.api.commons.ResultsMod results = 1 [json_name = "results"];</code>
      */
     public Builder clearResults() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      results_ = null;
-      if (resultsBuilder_ != null) {
-        resultsBuilder_.dispose();
-        resultsBuilder_ = null;
+      if (resultsBuilder_ == null) {
+        if (entityCase_ == 1) {
+          entityCase_ = 0;
+          entity_ = null;
+          onChanged();
+        }
+      } else {
+        if (entityCase_ == 1) {
+          entityCase_ = 0;
+          entity_ = null;
+        }
+        resultsBuilder_.clear();
       }
-      onChanged();
       return this;
     }
     /**
      * <code>.api.commons.ResultsMod results = 1 [json_name = "results"];</code>
      */
     public com.tcn.cloud.api.api.commons.ResultsMod.Builder getResultsBuilder() {
-      bitField0_ |= 0x00000001;
-      onChanged();
       return getResultsFieldBuilder().getBuilder();
     }
     /**
      * <code>.api.commons.ResultsMod results = 1 [json_name = "results"];</code>
      */
+    @java.lang.Override
     public com.tcn.cloud.api.api.commons.ResultsModOrBuilder getResultsOrBuilder() {
-      if (resultsBuilder_ != null) {
+      if ((entityCase_ == 1) && (resultsBuilder_ != null)) {
         return resultsBuilder_.getMessageOrBuilder();
       } else {
-        return results_ == null ?
-            com.tcn.cloud.api.api.commons.ResultsMod.getDefaultInstance() : results_;
+        if (entityCase_ == 1) {
+          return (com.tcn.cloud.api.api.commons.ResultsMod) entity_;
+        }
+        return com.tcn.cloud.api.api.commons.ResultsMod.getDefaultInstance();
       }
     }
     /**
@@ -573,35 +674,47 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.ResultsMod, com.tcn.cloud.api.api.commons.ResultsMod.Builder, com.tcn.cloud.api.api.commons.ResultsModOrBuilder> 
         getResultsFieldBuilder() {
       if (resultsBuilder_ == null) {
+        if (!(entityCase_ == 1)) {
+          entity_ = com.tcn.cloud.api.api.commons.ResultsMod.getDefaultInstance();
+        }
         resultsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             com.tcn.cloud.api.api.commons.ResultsMod, com.tcn.cloud.api.api.commons.ResultsMod.Builder, com.tcn.cloud.api.api.commons.ResultsModOrBuilder>(
-                getResults(),
+                (com.tcn.cloud.api.api.commons.ResultsMod) entity_,
                 getParentForChildren(),
                 isClean());
-        results_ = null;
+        entity_ = null;
       }
+      entityCase_ = 1;
+      onChanged();
       return resultsBuilder_;
     }
 
-    private com.tcn.cloud.api.api.commons.DispositionMod dispositions_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.DispositionMod, com.tcn.cloud.api.api.commons.DispositionMod.Builder, com.tcn.cloud.api.api.commons.DispositionModOrBuilder> dispositionsBuilder_;
     /**
      * <code>.api.commons.DispositionMod dispositions = 2 [json_name = "dispositions"];</code>
      * @return Whether the dispositions field is set.
      */
+    @java.lang.Override
     public boolean hasDispositions() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return entityCase_ == 2;
     }
     /**
      * <code>.api.commons.DispositionMod dispositions = 2 [json_name = "dispositions"];</code>
      * @return The dispositions.
      */
+    @java.lang.Override
     public com.tcn.cloud.api.api.commons.DispositionMod getDispositions() {
       if (dispositionsBuilder_ == null) {
-        return dispositions_ == null ? com.tcn.cloud.api.api.commons.DispositionMod.getDefaultInstance() : dispositions_;
+        if (entityCase_ == 2) {
+          return (com.tcn.cloud.api.api.commons.DispositionMod) entity_;
+        }
+        return com.tcn.cloud.api.api.commons.DispositionMod.getDefaultInstance();
       } else {
-        return dispositionsBuilder_.getMessage();
+        if (entityCase_ == 2) {
+          return dispositionsBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.DispositionMod.getDefaultInstance();
       }
     }
     /**
@@ -612,12 +725,12 @@ private static final long serialVersionUID = 0L;
         if (value == null) {
           throw new NullPointerException();
         }
-        dispositions_ = value;
+        entity_ = value;
+        onChanged();
       } else {
         dispositionsBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+      entityCase_ = 2;
       return this;
     }
     /**
@@ -626,12 +739,12 @@ private static final long serialVersionUID = 0L;
     public Builder setDispositions(
         com.tcn.cloud.api.api.commons.DispositionMod.Builder builderForValue) {
       if (dispositionsBuilder_ == null) {
-        dispositions_ = builderForValue.build();
+        entity_ = builderForValue.build();
+        onChanged();
       } else {
         dispositionsBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+      entityCase_ = 2;
       return this;
     }
     /**
@@ -639,50 +752,61 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDispositions(com.tcn.cloud.api.api.commons.DispositionMod value) {
       if (dispositionsBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0) &&
-          dispositions_ != null &&
-          dispositions_ != com.tcn.cloud.api.api.commons.DispositionMod.getDefaultInstance()) {
-          getDispositionsBuilder().mergeFrom(value);
+        if (entityCase_ == 2 &&
+            entity_ != com.tcn.cloud.api.api.commons.DispositionMod.getDefaultInstance()) {
+          entity_ = com.tcn.cloud.api.api.commons.DispositionMod.newBuilder((com.tcn.cloud.api.api.commons.DispositionMod) entity_)
+              .mergeFrom(value).buildPartial();
         } else {
-          dispositions_ = value;
+          entity_ = value;
         }
+        onChanged();
       } else {
-        dispositionsBuilder_.mergeFrom(value);
+        if (entityCase_ == 2) {
+          dispositionsBuilder_.mergeFrom(value);
+        } else {
+          dispositionsBuilder_.setMessage(value);
+        }
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+      entityCase_ = 2;
       return this;
     }
     /**
      * <code>.api.commons.DispositionMod dispositions = 2 [json_name = "dispositions"];</code>
      */
     public Builder clearDispositions() {
-      bitField0_ = (bitField0_ & ~0x00000002);
-      dispositions_ = null;
-      if (dispositionsBuilder_ != null) {
-        dispositionsBuilder_.dispose();
-        dispositionsBuilder_ = null;
+      if (dispositionsBuilder_ == null) {
+        if (entityCase_ == 2) {
+          entityCase_ = 0;
+          entity_ = null;
+          onChanged();
+        }
+      } else {
+        if (entityCase_ == 2) {
+          entityCase_ = 0;
+          entity_ = null;
+        }
+        dispositionsBuilder_.clear();
       }
-      onChanged();
       return this;
     }
     /**
      * <code>.api.commons.DispositionMod dispositions = 2 [json_name = "dispositions"];</code>
      */
     public com.tcn.cloud.api.api.commons.DispositionMod.Builder getDispositionsBuilder() {
-      bitField0_ |= 0x00000002;
-      onChanged();
       return getDispositionsFieldBuilder().getBuilder();
     }
     /**
      * <code>.api.commons.DispositionMod dispositions = 2 [json_name = "dispositions"];</code>
      */
+    @java.lang.Override
     public com.tcn.cloud.api.api.commons.DispositionModOrBuilder getDispositionsOrBuilder() {
-      if (dispositionsBuilder_ != null) {
+      if ((entityCase_ == 2) && (dispositionsBuilder_ != null)) {
         return dispositionsBuilder_.getMessageOrBuilder();
       } else {
-        return dispositions_ == null ?
-            com.tcn.cloud.api.api.commons.DispositionMod.getDefaultInstance() : dispositions_;
+        if (entityCase_ == 2) {
+          return (com.tcn.cloud.api.api.commons.DispositionMod) entity_;
+        }
+        return com.tcn.cloud.api.api.commons.DispositionMod.getDefaultInstance();
       }
     }
     /**
@@ -692,13 +816,18 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.DispositionMod, com.tcn.cloud.api.api.commons.DispositionMod.Builder, com.tcn.cloud.api.api.commons.DispositionModOrBuilder> 
         getDispositionsFieldBuilder() {
       if (dispositionsBuilder_ == null) {
+        if (!(entityCase_ == 2)) {
+          entity_ = com.tcn.cloud.api.api.commons.DispositionMod.getDefaultInstance();
+        }
         dispositionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             com.tcn.cloud.api.api.commons.DispositionMod, com.tcn.cloud.api.api.commons.DispositionMod.Builder, com.tcn.cloud.api.api.commons.DispositionModOrBuilder>(
-                getDispositions(),
+                (com.tcn.cloud.api.api.commons.DispositionMod) entity_,
                 getParentForChildren(),
                 isClean());
-        dispositions_ = null;
+        entity_ = null;
       }
+      entityCase_ = 2;
+      onChanged();
       return dispositionsBuilder_;
     }
     @java.lang.Override
