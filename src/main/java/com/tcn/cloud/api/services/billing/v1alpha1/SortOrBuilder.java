@@ -9,45 +9,40 @@ public interface SortOrBuilder extends
 
   /**
    * <pre>
-   * Required: fields to sort by
+   * Required: key to sort by
    * </pre>
    *
-   * <code>repeated .services.billing.v1alpha1.SortField fields = 1 [json_name = "fields"];</code>
+   * <code>string key = 1 [json_name = "key"];</code>
+   * @return The key.
    */
-  java.util.List<com.tcn.cloud.api.services.billing.v1alpha1.SortField> 
-      getFieldsList();
+  java.lang.String getKey();
   /**
    * <pre>
-   * Required: fields to sort by
+   * Required: key to sort by
    * </pre>
    *
-   * <code>repeated .services.billing.v1alpha1.SortField fields = 1 [json_name = "fields"];</code>
+   * <code>string key = 1 [json_name = "key"];</code>
+   * @return The bytes for key.
    */
-  com.tcn.cloud.api.services.billing.v1alpha1.SortField getFields(int index);
+  com.google.protobuf.ByteString
+      getKeyBytes();
+
   /**
    * <pre>
-   * Required: fields to sort by
+   * Required: direction to sort by
    * </pre>
    *
-   * <code>repeated .services.billing.v1alpha1.SortField fields = 1 [json_name = "fields"];</code>
+   * <code>.services.billing.v1alpha1.Order direction = 2 [json_name = "direction"];</code>
+   * @return The enum numeric value on the wire for direction.
    */
-  int getFieldsCount();
+  int getDirectionValue();
   /**
    * <pre>
-   * Required: fields to sort by
+   * Required: direction to sort by
    * </pre>
    *
-   * <code>repeated .services.billing.v1alpha1.SortField fields = 1 [json_name = "fields"];</code>
+   * <code>.services.billing.v1alpha1.Order direction = 2 [json_name = "direction"];</code>
+   * @return The direction.
    */
-  java.util.List<? extends com.tcn.cloud.api.services.billing.v1alpha1.SortFieldOrBuilder> 
-      getFieldsOrBuilderList();
-  /**
-   * <pre>
-   * Required: fields to sort by
-   * </pre>
-   *
-   * <code>repeated .services.billing.v1alpha1.SortField fields = 1 [json_name = "fields"];</code>
-   */
-  com.tcn.cloud.api.services.billing.v1alpha1.SortFieldOrBuilder getFieldsOrBuilder(
-      int index);
+  com.tcn.cloud.api.services.billing.v1alpha1.Order getDirection();
 }

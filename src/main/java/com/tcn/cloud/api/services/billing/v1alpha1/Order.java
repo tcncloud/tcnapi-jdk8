@@ -4,22 +4,22 @@
 package com.tcn.cloud.api.services.billing.v1alpha1;
 
 /**
- * Protobuf enum {@code services.billing.v1alpha1.SortDirection}
+ * Protobuf enum {@code services.billing.v1alpha1.Order}
  */
-public enum SortDirection
+public enum Order
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
    * <pre>
    * If unspecified, sorts ascending
    * </pre>
    *
-   * <code>SORT_DIRECTION_UNSPECIFIED = 0;</code>
+   * <code>ORDER_UNSPECIFIED = 0;</code>
    */
-  SORT_DIRECTION_UNSPECIFIED(0),
+  ORDER_UNSPECIFIED(0),
   /**
-   * <code>SORT_DIRECTION_DESC = 1;</code>
+   * <code>ORDER_DESC = 1;</code>
    */
-  SORT_DIRECTION_DESC(1),
+  ORDER_DESC(1),
   UNRECOGNIZED(-1),
   ;
 
@@ -28,13 +28,13 @@ public enum SortDirection
    * If unspecified, sorts ascending
    * </pre>
    *
-   * <code>SORT_DIRECTION_UNSPECIFIED = 0;</code>
+   * <code>ORDER_UNSPECIFIED = 0;</code>
    */
-  public static final int SORT_DIRECTION_UNSPECIFIED_VALUE = 0;
+  public static final int ORDER_UNSPECIFIED_VALUE = 0;
   /**
-   * <code>SORT_DIRECTION_DESC = 1;</code>
+   * <code>ORDER_DESC = 1;</code>
    */
-  public static final int SORT_DIRECTION_DESC_VALUE = 1;
+  public static final int ORDER_DESC_VALUE = 1;
 
 
   public final int getNumber() {
@@ -51,7 +51,7 @@ public enum SortDirection
    * @deprecated Use {@link #forNumber(int)} instead.
    */
   @java.lang.Deprecated
-  public static SortDirection valueOf(int value) {
+  public static Order valueOf(int value) {
     return forNumber(value);
   }
 
@@ -59,23 +59,23 @@ public enum SortDirection
    * @param value The numeric wire value of the corresponding enum entry.
    * @return The enum associated with the given numeric wire value.
    */
-  public static SortDirection forNumber(int value) {
+  public static Order forNumber(int value) {
     switch (value) {
-      case 0: return SORT_DIRECTION_UNSPECIFIED;
-      case 1: return SORT_DIRECTION_DESC;
+      case 0: return ORDER_UNSPECIFIED;
+      case 1: return ORDER_DESC;
       default: return null;
     }
   }
 
-  public static com.google.protobuf.Internal.EnumLiteMap<SortDirection>
+  public static com.google.protobuf.Internal.EnumLiteMap<Order>
       internalGetValueMap() {
     return internalValueMap;
   }
   private static final com.google.protobuf.Internal.EnumLiteMap<
-      SortDirection> internalValueMap =
-        new com.google.protobuf.Internal.EnumLiteMap<SortDirection>() {
-          public SortDirection findValueByNumber(int number) {
-            return SortDirection.forNumber(number);
+      Order> internalValueMap =
+        new com.google.protobuf.Internal.EnumLiteMap<Order>() {
+          public Order findValueByNumber(int number) {
+            return Order.forNumber(number);
           }
         };
 
@@ -96,9 +96,9 @@ public enum SortDirection
     return com.tcn.cloud.api.services.billing.v1alpha1.CoreProto.getDescriptor().getEnumTypes().get(0);
   }
 
-  private static final SortDirection[] VALUES = values();
+  private static final Order[] VALUES = values();
 
-  public static SortDirection valueOf(
+  public static Order valueOf(
       com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
     if (desc.getType() != getDescriptor()) {
       throw new java.lang.IllegalArgumentException(
@@ -112,10 +112,10 @@ public enum SortDirection
 
   private final int value;
 
-  private SortDirection(int value) {
+  private Order(int value) {
     this.value = value;
   }
 
-  // @@protoc_insertion_point(enum_scope:services.billing.v1alpha1.SortDirection)
+  // @@protoc_insertion_point(enum_scope:services.billing.v1alpha1.Order)
 }
 

@@ -24,11 +24,6 @@ public final class CoreProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_services_billing_v1alpha1_Sort_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_services_billing_v1alpha1_SortField_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_services_billing_v1alpha1_SortField_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -40,19 +35,16 @@ public final class CoreProto {
     java.lang.String[] descriptorData = {
       "\n$services/billing/v1alpha1/core.proto\022\031" +
       "services.billing.v1alpha1\"2\n\004Page\022\024\n\005lim" +
-      "it\030\001 \001(\003R\005limit\022\024\n\005token\030\002 \001(\tR\005token\"D\n" +
-      "\004Sort\022<\n\006fields\030\001 \003(\0132$.services.billing" +
-      ".v1alpha1.SortFieldR\006fields\"i\n\tSortField" +
-      "\022\024\n\005field\030\001 \001(\tR\005field\022F\n\tdirection\030\002 \001(" +
-      "\0162(.services.billing.v1alpha1.SortDirect" +
-      "ionR\tdirection*H\n\rSortDirection\022\036\n\032SORT_" +
-      "DIRECTION_UNSPECIFIED\020\000\022\027\n\023SORT_DIRECTIO" +
-      "N_DESC\020\001B\276\001\n+com.tcn.cloud.api.services." +
-      "billing.v1alpha1B\tCoreProtoP\001\242\002\003SBX\252\002\031Se" +
-      "rvices.Billing.V1alpha1\312\002\031Services\\Billi" +
-      "ng\\V1alpha1\342\002%Services\\Billing\\V1alpha1\\" +
-      "GPBMetadata\352\002\033Services::Billing::V1alpha" +
-      "1b\006proto3"
+      "it\030\001 \001(\003R\005limit\022\024\n\005token\030\002 \001(\tR\005token\"X\n" +
+      "\004Sort\022\020\n\003key\030\001 \001(\tR\003key\022>\n\tdirection\030\002 \001" +
+      "(\0162 .services.billing.v1alpha1.OrderR\tdi" +
+      "rection*.\n\005Order\022\025\n\021ORDER_UNSPECIFIED\020\000\022" +
+      "\016\n\nORDER_DESC\020\001B\276\001\n+com.tcn.cloud.api.se" +
+      "rvices.billing.v1alpha1B\tCoreProtoP\001\242\002\003S" +
+      "BX\252\002\031Services.Billing.V1alpha1\312\002\031Service" +
+      "s\\Billing\\V1alpha1\342\002%Services\\Billing\\V1" +
+      "alpha1\\GPBMetadata\352\002\033Services::Billing::" +
+      "V1alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -69,13 +61,7 @@ public final class CoreProto {
     internal_static_services_billing_v1alpha1_Sort_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_v1alpha1_Sort_descriptor,
-        new java.lang.String[] { "Fields", });
-    internal_static_services_billing_v1alpha1_SortField_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_services_billing_v1alpha1_SortField_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_services_billing_v1alpha1_SortField_descriptor,
-        new java.lang.String[] { "Field", "Direction", });
+        new java.lang.String[] { "Key", "Direction", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
