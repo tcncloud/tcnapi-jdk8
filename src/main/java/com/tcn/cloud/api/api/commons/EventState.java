@@ -48,6 +48,14 @@ public enum EventState
    * <code>EVENT_STATE_CLEANUP = 4;</code>
    */
   EVENT_STATE_CLEANUP(4),
+  /**
+   * <pre>
+   * event is finished executing and cleaning up and can exit out of it's process
+   * </pre>
+   *
+   * <code>EVENT_STATE_FINISHED = 5;</code>
+   */
+  EVENT_STATE_FINISHED(5),
   UNRECOGNIZED(-1),
   ;
 
@@ -91,6 +99,14 @@ public enum EventState
    * <code>EVENT_STATE_CLEANUP = 4;</code>
    */
   public static final int EVENT_STATE_CLEANUP_VALUE = 4;
+  /**
+   * <pre>
+   * event is finished executing and cleaning up and can exit out of it's process
+   * </pre>
+   *
+   * <code>EVENT_STATE_FINISHED = 5;</code>
+   */
+  public static final int EVENT_STATE_FINISHED_VALUE = 5;
 
 
   public final int getNumber() {
@@ -122,6 +138,7 @@ public enum EventState
       case 2: return EVENT_STATE_CHECK;
       case 3: return EVENT_STATE_PROCESS;
       case 4: return EVENT_STATE_CLEANUP;
+      case 5: return EVENT_STATE_FINISHED;
       default: return null;
     }
   }

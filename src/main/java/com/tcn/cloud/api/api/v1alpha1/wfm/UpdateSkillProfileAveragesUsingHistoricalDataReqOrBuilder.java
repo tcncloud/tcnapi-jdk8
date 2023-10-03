@@ -79,4 +79,33 @@ public interface UpdateSkillProfileAveragesUsingHistoricalDataReqOrBuilder exten
    * @return The excludeSkillProfilesWithManualAverages.
    */
   boolean getExcludeSkillProfilesWithManualAverages();
+
+  /**
+   * <pre>
+   * IDs of the skill profile groups to calculate the averages of, if none are sent it calculates it for all skill profile groups that the org has.
+   * </pre>
+   *
+   * <code>repeated int64 skill_profile_group_sids = 4 [json_name = "skillProfileGroupSids"];</code>
+   * @return A list containing the skillProfileGroupSids.
+   */
+  java.util.List<java.lang.Long> getSkillProfileGroupSidsList();
+  /**
+   * <pre>
+   * IDs of the skill profile groups to calculate the averages of, if none are sent it calculates it for all skill profile groups that the org has.
+   * </pre>
+   *
+   * <code>repeated int64 skill_profile_group_sids = 4 [json_name = "skillProfileGroupSids"];</code>
+   * @return The count of skillProfileGroupSids.
+   */
+  int getSkillProfileGroupSidsCount();
+  /**
+   * <pre>
+   * IDs of the skill profile groups to calculate the averages of, if none are sent it calculates it for all skill profile groups that the org has.
+   * </pre>
+   *
+   * <code>repeated int64 skill_profile_group_sids = 4 [json_name = "skillProfileGroupSids"];</code>
+   * @param index The index of the element to return.
+   * @return The skillProfileGroupSids at the given index.
+   */
+  long getSkillProfileGroupSids(int index);
 }

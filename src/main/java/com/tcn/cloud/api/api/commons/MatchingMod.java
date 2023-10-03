@@ -122,21 +122,10 @@ private static final long serialVersionUID = 0L;
     return or_.get(index);
   }
 
-  public static final int NOT_FIELD_NUMBER = 3;
-  private boolean not_ = false;
-  /**
-   * <code>bool not = 3 [json_name = "not"];</code>
-   * @return The not.
-   */
-  @java.lang.Override
-  public boolean getNot() {
-    return not_;
-  }
-
-  public static final int MOD_FIELD_NUMBER = 4;
+  public static final int MOD_FIELD_NUMBER = 3;
   private com.tcn.cloud.api.api.commons.MatchingEntity mod_;
   /**
-   * <code>.api.commons.MatchingEntity mod = 4 [json_name = "mod"];</code>
+   * <code>.api.commons.MatchingEntity mod = 3 [json_name = "mod"];</code>
    * @return Whether the mod field is set.
    */
   @java.lang.Override
@@ -144,7 +133,7 @@ private static final long serialVersionUID = 0L;
     return mod_ != null;
   }
   /**
-   * <code>.api.commons.MatchingEntity mod = 4 [json_name = "mod"];</code>
+   * <code>.api.commons.MatchingEntity mod = 3 [json_name = "mod"];</code>
    * @return The mod.
    */
   @java.lang.Override
@@ -152,7 +141,7 @@ private static final long serialVersionUID = 0L;
     return mod_ == null ? com.tcn.cloud.api.api.commons.MatchingEntity.getDefaultInstance() : mod_;
   }
   /**
-   * <code>.api.commons.MatchingEntity mod = 4 [json_name = "mod"];</code>
+   * <code>.api.commons.MatchingEntity mod = 3 [json_name = "mod"];</code>
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.MatchingEntityOrBuilder getModOrBuilder() {
@@ -179,11 +168,8 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < or_.size(); i++) {
       output.writeMessage(2, or_.get(i));
     }
-    if (not_ != false) {
-      output.writeBool(3, not_);
-    }
     if (mod_ != null) {
-      output.writeMessage(4, getMod());
+      output.writeMessage(3, getMod());
     }
     getUnknownFields().writeTo(output);
   }
@@ -202,13 +188,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, or_.get(i));
     }
-    if (not_ != false) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(3, not_);
-    }
     if (mod_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(4, getMod());
+        .computeMessageSize(3, getMod());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -229,8 +211,6 @@ private static final long serialVersionUID = 0L;
         .equals(other.getAndList())) return false;
     if (!getOrList()
         .equals(other.getOrList())) return false;
-    if (getNot()
-        != other.getNot()) return false;
     if (hasMod() != other.hasMod()) return false;
     if (hasMod()) {
       if (!getMod()
@@ -255,9 +235,6 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + OR_FIELD_NUMBER;
       hash = (53 * hash) + getOrList().hashCode();
     }
-    hash = (37 * hash) + NOT_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-        getNot());
     if (hasMod()) {
       hash = (37 * hash) + MOD_FIELD_NUMBER;
       hash = (53 * hash) + getMod().hashCode();
@@ -407,7 +384,6 @@ private static final long serialVersionUID = 0L;
         orBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000002);
-      not_ = false;
       mod_ = null;
       if (modBuilder_ != null) {
         modBuilder_.dispose();
@@ -469,9 +445,6 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.tcn.cloud.api.api.commons.MatchingMod result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.not_ = not_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
         result.mod_ = modBuilder_ == null
             ? mod_
             : modBuilder_.build();
@@ -574,9 +547,6 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
-      if (other.getNot() != false) {
-        setNot(other.getNot());
-      }
       if (other.hasMod()) {
         mergeMod(other.getMod());
       }
@@ -632,18 +602,13 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 18
-            case 24: {
-              not_ = input.readBool();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 24
-            case 34: {
+            case 26: {
               input.readMessage(
                   getModFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000008;
+              bitField0_ |= 0x00000004;
               break;
-            } // case 34
+            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1141,50 +1106,18 @@ private static final long serialVersionUID = 0L;
       return orBuilder_;
     }
 
-    private boolean not_ ;
-    /**
-     * <code>bool not = 3 [json_name = "not"];</code>
-     * @return The not.
-     */
-    @java.lang.Override
-    public boolean getNot() {
-      return not_;
-    }
-    /**
-     * <code>bool not = 3 [json_name = "not"];</code>
-     * @param value The not to set.
-     * @return This builder for chaining.
-     */
-    public Builder setNot(boolean value) {
-
-      not_ = value;
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>bool not = 3 [json_name = "not"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearNot() {
-      bitField0_ = (bitField0_ & ~0x00000004);
-      not_ = false;
-      onChanged();
-      return this;
-    }
-
     private com.tcn.cloud.api.api.commons.MatchingEntity mod_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.MatchingEntity, com.tcn.cloud.api.api.commons.MatchingEntity.Builder, com.tcn.cloud.api.api.commons.MatchingEntityOrBuilder> modBuilder_;
     /**
-     * <code>.api.commons.MatchingEntity mod = 4 [json_name = "mod"];</code>
+     * <code>.api.commons.MatchingEntity mod = 3 [json_name = "mod"];</code>
      * @return Whether the mod field is set.
      */
     public boolean hasMod() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
-     * <code>.api.commons.MatchingEntity mod = 4 [json_name = "mod"];</code>
+     * <code>.api.commons.MatchingEntity mod = 3 [json_name = "mod"];</code>
      * @return The mod.
      */
     public com.tcn.cloud.api.api.commons.MatchingEntity getMod() {
@@ -1195,7 +1128,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.MatchingEntity mod = 4 [json_name = "mod"];</code>
+     * <code>.api.commons.MatchingEntity mod = 3 [json_name = "mod"];</code>
      */
     public Builder setMod(com.tcn.cloud.api.api.commons.MatchingEntity value) {
       if (modBuilder_ == null) {
@@ -1206,12 +1139,12 @@ private static final long serialVersionUID = 0L;
       } else {
         modBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
-     * <code>.api.commons.MatchingEntity mod = 4 [json_name = "mod"];</code>
+     * <code>.api.commons.MatchingEntity mod = 3 [json_name = "mod"];</code>
      */
     public Builder setMod(
         com.tcn.cloud.api.api.commons.MatchingEntity.Builder builderForValue) {
@@ -1220,16 +1153,16 @@ private static final long serialVersionUID = 0L;
       } else {
         modBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
-     * <code>.api.commons.MatchingEntity mod = 4 [json_name = "mod"];</code>
+     * <code>.api.commons.MatchingEntity mod = 3 [json_name = "mod"];</code>
      */
     public Builder mergeMod(com.tcn.cloud.api.api.commons.MatchingEntity value) {
       if (modBuilder_ == null) {
-        if (((bitField0_ & 0x00000008) != 0) &&
+        if (((bitField0_ & 0x00000004) != 0) &&
           mod_ != null &&
           mod_ != com.tcn.cloud.api.api.commons.MatchingEntity.getDefaultInstance()) {
           getModBuilder().mergeFrom(value);
@@ -1239,15 +1172,15 @@ private static final long serialVersionUID = 0L;
       } else {
         modBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
-     * <code>.api.commons.MatchingEntity mod = 4 [json_name = "mod"];</code>
+     * <code>.api.commons.MatchingEntity mod = 3 [json_name = "mod"];</code>
      */
     public Builder clearMod() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000004);
       mod_ = null;
       if (modBuilder_ != null) {
         modBuilder_.dispose();
@@ -1257,15 +1190,15 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.MatchingEntity mod = 4 [json_name = "mod"];</code>
+     * <code>.api.commons.MatchingEntity mod = 3 [json_name = "mod"];</code>
      */
     public com.tcn.cloud.api.api.commons.MatchingEntity.Builder getModBuilder() {
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000004;
       onChanged();
       return getModFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.commons.MatchingEntity mod = 4 [json_name = "mod"];</code>
+     * <code>.api.commons.MatchingEntity mod = 3 [json_name = "mod"];</code>
      */
     public com.tcn.cloud.api.api.commons.MatchingEntityOrBuilder getModOrBuilder() {
       if (modBuilder_ != null) {
@@ -1276,7 +1209,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.MatchingEntity mod = 4 [json_name = "mod"];</code>
+     * <code>.api.commons.MatchingEntity mod = 3 [json_name = "mod"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.MatchingEntity, com.tcn.cloud.api.api.commons.MatchingEntity.Builder, com.tcn.cloud.api.api.commons.MatchingEntityOrBuilder> 

@@ -27,7 +27,7 @@ public final class ServiceProto {
       "to\022\032api.v1alpha1.agenttraining\032\027annotati" +
       "ons/authz.proto\0325api/v1alpha1/agenttrain" +
       "ing/learning_opportunity.proto\032\034google/a" +
-      "pi/annotations.proto2\206\014\n\024AgentTrainingSe" +
+      "pi/annotations.proto2\236\016\n\024AgentTrainingSe" +
       "rvice\022\371\001\n\031CreateLearningOpportunity\022<.ap" +
       "i.v1alpha1.agenttraining.CreateLearningO" +
       "pportunityRequest\032=.api.v1alpha1.agenttr" +
@@ -47,7 +47,14 @@ public final class ServiceProto {
       ".ListAgentLearningOpportunitiesResponse\"" +
       "d\272\270\221\002\005\n\003\010\324\002\202\323\344\223\002T\"O/api/v1alpha1/agenttr" +
       "aining/agenttrainingservice/listagentlea" +
-      "rningopportunities:\001*\022\371\001\n\031UpdateLearning" +
+      "rningopportunities:\001*\022\225\002\n CompleteAgentL" +
+      "earningOpportunity\022C.api.v1alpha1.agentt" +
+      "raining.CompleteAgentLearningOpportunity" +
+      "Request\032D.api.v1alpha1.agenttraining.Com" +
+      "pleteAgentLearningOpportunityResponse\"f\272" +
+      "\270\221\002\005\n\003\010\324\002\202\323\344\223\002V\"Q/api/v1alpha1/agenttrai" +
+      "ning/agenttrainingservice/completeagentl" +
+      "earningopportunity:\001*\022\371\001\n\031UpdateLearning" +
       "Opportunity\022<.api.v1alpha1.agenttraining" +
       ".UpdateLearningOpportunityRequest\032=.api." +
       "v1alpha1.agenttraining.UpdateLearningOpp" +

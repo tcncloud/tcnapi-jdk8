@@ -14,6 +14,61 @@ public final class ServiceProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_workflows_PersistedWorkflowDefinition_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_workflows_PersistedWorkflowDefinition_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_workflows_CreateWorkflowDefinitionRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_workflows_CreateWorkflowDefinitionRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_workflows_CreateWorkflowDefinitionResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_workflows_CreateWorkflowDefinitionResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_workflows_GetWorkflowDefinitionRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_workflows_GetWorkflowDefinitionRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_workflows_GetWorkflowDefinitionResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_workflows_GetWorkflowDefinitionResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_workflows_ListWorkflowDefinitionsRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_workflows_ListWorkflowDefinitionsRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_workflows_ListWorkflowDefinitionsResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_workflows_ListWorkflowDefinitionsResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_workflows_UpdateWorkflowDefinitionRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_workflows_UpdateWorkflowDefinitionRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_workflows_UpdateWorkflowDefinitionResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_workflows_UpdateWorkflowDefinitionResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_workflows_ValidateWorkflowDefinitionRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_workflows_ValidateWorkflowDefinitionRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_workflows_ValidateWorkflowDefinitionResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_workflows_ValidateWorkflowDefinitionResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -25,41 +80,154 @@ public final class ServiceProto {
     java.lang.String[] descriptorData = {
       "\n$api/v1alpha1/workflows/service.proto\022\026" +
       "api.v1alpha1.workflows\032\027annotations/auth" +
-      "z.proto\032%api/v1alpha1/workflows/entities" +
-      ".proto\032\034google/api/annotations.proto2\240\006\n" +
-      "\032WorkflowsDefinitionService\022\300\001\n\023ListFlow" +
-      "Definitions\0222.api.v1alpha1.workflows.Lis" +
-      "tFlowDefinitionsRequest\0323.api.v1alpha1.w" +
-      "orkflows.ListFlowDefinitionsResponse\"@\272\270" +
-      "\221\002\005\n\003\010\240\037\202\323\344\223\0020\"+/api/v1alpha1/workflows/" +
-      "listflowdefinitions:\001*\022\274\001\n\022SaveFlowDefin" +
-      "ition\0221.api.v1alpha1.workflows.SaveFlowD" +
-      "efinitionRequest\0322.api.v1alpha1.workflow" +
-      "s.SaveFlowDefinitionResponse\"?\272\270\221\002\005\n\003\010\240\037" +
-      "\202\323\344\223\002/\"*/api/v1alpha1/workflows/saveflow" +
-      "definition:\001*\022\270\001\n\021GetFlowDefinition\0220.ap" +
-      "i.v1alpha1.workflows.GetFlowDefinitionRe" +
-      "quest\0321.api.v1alpha1.workflows.GetFlowDe" +
-      "finitionResponse\">\272\270\221\002\005\n\003\010\240\037\202\323\344\223\002.\")/api" +
-      "/v1alpha1/workflows/getflowdefinition:\001*" +
-      "\022\304\001\n\024DeleteFlowDefinition\0223.api.v1alpha1" +
-      ".workflows.DeleteFlowDefinitionRequest\0324" +
-      ".api.v1alpha1.workflows.DeleteFlowDefini" +
-      "tionResponse\"A\272\270\221\002\005\n\003\010\240\037\202\323\344\223\0021\",/api/v1a" +
-      "lpha1/workflows/deleteflowdefinition:\001*B" +
-      "\262\001\n(com.tcn.cloud.api.api.v1alpha1.workf" +
-      "lowsB\014ServiceProtoP\001\242\002\003AVW\252\002\026Api.V1alpha" +
-      "1.Workflows\312\002\026Api\\V1alpha1\\Workflows\342\002\"A" +
-      "pi\\V1alpha1\\Workflows\\GPBMetadata\352\002\030Api:" +
-      ":V1alpha1::Workflowsb\006proto3"
+      "z.proto\032\034google/api/annotations.proto\032\037g" +
+      "oogle/protobuf/timestamp.proto\"\352\002\n\033Persi" +
+      "stedWorkflowDefinition\022,\n\022flow_definitio" +
+      "n_id\030\001 \001(\tR\020flowDefinitionId\022\025\n\006org_id\030\002" +
+      " \001(\tR\005orgId\022 \n\013application\030\003 \001(\tR\013applic" +
+      "ation\022\022\n\004name\030\004 \001(\tR\004name\022 \n\013description" +
+      "\030\005 \001(\tR\013description\022\036\n\ndefinition\030\006 \001(\tR" +
+      "\ndefinition\022;\n\013create_time\030\007 \001(\0132\032.googl" +
+      "e.protobuf.TimestampR\ncreateTime\022;\n\013upda" +
+      "te_time\030\010 \001(\0132\032.google.protobuf.Timestam" +
+      "pR\nupdateTime\022\024\n\005extra\030d \001(\tR\005extra\"\207\001\n\037" +
+      "CreateWorkflowDefinitionRequest\022d\n\023workf" +
+      "low_definition\030\001 \001(\01323.api.v1alpha1.work" +
+      "flows.PersistedWorkflowDefinitionR\022workf" +
+      "lowDefinition\"\210\001\n CreateWorkflowDefiniti" +
+      "onResponse\022d\n\023workflow_definition\030\001 \001(\0132" +
+      "3.api.v1alpha1.workflows.PersistedWorkfl" +
+      "owDefinitionR\022workflowDefinition\"T\n\034GetW" +
+      "orkflowDefinitionRequest\0224\n\026workflow_def" +
+      "inition_id\030\001 \001(\tR\024workflowDefinitionId\"\205" +
+      "\001\n\035GetWorkflowDefinitionResponse\022d\n\023work" +
+      "flow_definition\030\001 \001(\01323.api.v1alpha1.wor" +
+      "kflows.PersistedWorkflowDefinitionR\022work" +
+      "flowDefinition\"Y\n\036ListWorkflowDefinition" +
+      "sRequest\022\025\n\006org_id\030\001 \001(\tR\005orgId\022 \n\013appli" +
+      "cation\030\002 \001(\tR\013application\"\207\001\n\037ListWorkfl" +
+      "owDefinitionsResponse\022d\n\023workflow_defini" +
+      "tion\030\001 \001(\01323.api.v1alpha1.workflows.Pers" +
+      "istedWorkflowDefinitionR\022workflowDefinit" +
+      "ion\"\207\001\n\037UpdateWorkflowDefinitionRequest\022" +
+      "d\n\023workflow_definition\030\001 \001(\01323.api.v1alp" +
+      "ha1.workflows.PersistedWorkflowDefinitio" +
+      "nR\022workflowDefinition\"\210\001\n UpdateWorkflow" +
+      "DefinitionResponse\022d\n\023workflow_definitio" +
+      "n\030\001 \001(\01323.api.v1alpha1.workflows.Persist" +
+      "edWorkflowDefinitionR\022workflowDefinition" +
+      "\"\211\001\n!ValidateWorkflowDefinitionRequest\022d" +
+      "\n\023workflow_definition\030\001 \001(\01323.api.v1alph" +
+      "a1.workflows.PersistedWorkflowDefinition" +
+      "R\022workflowDefinition\"P\n\"ValidateWorkflow" +
+      "DefinitionResponse\022\024\n\005valid\030\001 \001(\010R\005valid" +
+      "\022\024\n\005error\030\002 \001(\tR\005error2\322\010\n WorkflowDefin" +
+      "itionPersistService\022\324\001\n\030CreateWorkflowDe" +
+      "finition\0227.api.v1alpha1.workflows.Create" +
+      "WorkflowDefinitionRequest\0328.api.v1alpha1" +
+      ".workflows.CreateWorkflowDefinitionRespo" +
+      "nse\"E\272\270\221\002\005\n\003\010\240\037\202\323\344\223\0025\"0/api/v1alpha1/wor" +
+      "kflows/createworkflowdefinition:\001*\022\313\001\n\025G" +
+      "etWorkflowDefinition\0224.api.v1alpha1.work" +
+      "flows.GetWorkflowDefinitionRequest\0325.api" +
+      ".v1alpha1.workflows.GetWorkflowDefinitio" +
+      "nResponse\"E\272\270\221\002\005\n\003\010\240\037\202\323\344\223\0025\"0/api/v1alph" +
+      "a1/workflows/createworkflowdefinition:\001*" +
+      "\022\322\001\n\027ListWorkflowDefinitions\0226.api.v1alp" +
+      "ha1.workflows.ListWorkflowDefinitionsReq" +
+      "uest\0327.api.v1alpha1.workflows.ListWorkfl" +
+      "owDefinitionsResponse\"D\272\270\221\002\005\n\003\010\240\037\202\323\344\223\0024\"" +
+      "//api/v1alpha1/workflows/listworkflowdef" +
+      "initions:\001*0\001\022\324\001\n\030UpdateWorkflowDefiniti" +
+      "on\0227.api.v1alpha1.workflows.UpdateWorkfl" +
+      "owDefinitionRequest\0328.api.v1alpha1.workf" +
+      "lows.UpdateWorkflowDefinitionResponse\"E\272" +
+      "\270\221\002\005\n\003\010\240\037\202\323\344\223\0025\"0/api/v1alpha1/workflows" +
+      "/updateworkflowdefinition:\001*\022\334\001\n\032Validat" +
+      "eWorkflowDefinition\0229.api.v1alpha1.workf" +
+      "lows.ValidateWorkflowDefinitionRequest\032:" +
+      ".api.v1alpha1.workflows.ValidateWorkflow" +
+      "DefinitionResponse\"G\272\270\221\002\005\n\003\010\240\037\202\323\344\223\0027\"2/a" +
+      "pi/v1alpha1/workflows/validateworkflowde" +
+      "finition:\001*B\262\001\n(com.tcn.cloud.api.api.v1" +
+      "alpha1.workflowsB\014ServiceProtoP\001\242\002\003AVW\252\002" +
+      "\026Api.V1alpha1.Workflows\312\002\026Api\\V1alpha1\\W" +
+      "orkflows\342\002\"Api\\V1alpha1\\Workflows\\GPBMet" +
+      "adata\352\002\030Api::V1alpha1::Workflowsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.tcn.cloud.api.annotations.AuthzProto.getDescriptor(),
-          com.tcn.cloud.api.api.v1alpha1.workflows.EntitiesProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
+          com.google.protobuf.TimestampProto.getDescriptor(),
         });
+    internal_static_api_v1alpha1_workflows_PersistedWorkflowDefinition_descriptor =
+      getDescriptor().getMessageTypes().get(0);
+    internal_static_api_v1alpha1_workflows_PersistedWorkflowDefinition_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_workflows_PersistedWorkflowDefinition_descriptor,
+        new java.lang.String[] { "FlowDefinitionId", "OrgId", "Application", "Name", "Description", "Definition", "CreateTime", "UpdateTime", "Extra", });
+    internal_static_api_v1alpha1_workflows_CreateWorkflowDefinitionRequest_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_api_v1alpha1_workflows_CreateWorkflowDefinitionRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_workflows_CreateWorkflowDefinitionRequest_descriptor,
+        new java.lang.String[] { "WorkflowDefinition", });
+    internal_static_api_v1alpha1_workflows_CreateWorkflowDefinitionResponse_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_api_v1alpha1_workflows_CreateWorkflowDefinitionResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_workflows_CreateWorkflowDefinitionResponse_descriptor,
+        new java.lang.String[] { "WorkflowDefinition", });
+    internal_static_api_v1alpha1_workflows_GetWorkflowDefinitionRequest_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_api_v1alpha1_workflows_GetWorkflowDefinitionRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_workflows_GetWorkflowDefinitionRequest_descriptor,
+        new java.lang.String[] { "WorkflowDefinitionId", });
+    internal_static_api_v1alpha1_workflows_GetWorkflowDefinitionResponse_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_api_v1alpha1_workflows_GetWorkflowDefinitionResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_workflows_GetWorkflowDefinitionResponse_descriptor,
+        new java.lang.String[] { "WorkflowDefinition", });
+    internal_static_api_v1alpha1_workflows_ListWorkflowDefinitionsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_api_v1alpha1_workflows_ListWorkflowDefinitionsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_workflows_ListWorkflowDefinitionsRequest_descriptor,
+        new java.lang.String[] { "OrgId", "Application", });
+    internal_static_api_v1alpha1_workflows_ListWorkflowDefinitionsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_api_v1alpha1_workflows_ListWorkflowDefinitionsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_workflows_ListWorkflowDefinitionsResponse_descriptor,
+        new java.lang.String[] { "WorkflowDefinition", });
+    internal_static_api_v1alpha1_workflows_UpdateWorkflowDefinitionRequest_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_api_v1alpha1_workflows_UpdateWorkflowDefinitionRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_workflows_UpdateWorkflowDefinitionRequest_descriptor,
+        new java.lang.String[] { "WorkflowDefinition", });
+    internal_static_api_v1alpha1_workflows_UpdateWorkflowDefinitionResponse_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_api_v1alpha1_workflows_UpdateWorkflowDefinitionResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_workflows_UpdateWorkflowDefinitionResponse_descriptor,
+        new java.lang.String[] { "WorkflowDefinition", });
+    internal_static_api_v1alpha1_workflows_ValidateWorkflowDefinitionRequest_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_api_v1alpha1_workflows_ValidateWorkflowDefinitionRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_workflows_ValidateWorkflowDefinitionRequest_descriptor,
+        new java.lang.String[] { "WorkflowDefinition", });
+    internal_static_api_v1alpha1_workflows_ValidateWorkflowDefinitionResponse_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_api_v1alpha1_workflows_ValidateWorkflowDefinitionResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_workflows_ValidateWorkflowDefinitionResponse_descriptor,
+        new java.lang.String[] { "Valid", "Error", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.tcn.cloud.api.annotations.AuthzProto.authz);
@@ -67,8 +235,8 @@ public final class ServiceProto {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.tcn.cloud.api.annotations.AuthzProto.getDescriptor();
-    com.tcn.cloud.api.api.v1alpha1.workflows.EntitiesProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
+    com.google.protobuf.TimestampProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

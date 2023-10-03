@@ -26,4 +26,24 @@ public interface CreatePublishedArticleRequestOrBuilder extends
    * @return The displayToUser.
    */
   boolean getDisplayToUser();
+
+  /**
+   * <pre>
+   * link to the published article
+   * </pre>
+   *
+   * <code>string article_link = 3 [json_name = "articleLink"];</code>
+   * @return The articleLink.
+   */
+  java.lang.String getArticleLink();
+  /**
+   * <pre>
+   * link to the published article
+   * </pre>
+   *
+   * <code>string article_link = 3 [json_name = "articleLink"];</code>
+   * @return The bytes for articleLink.
+   */
+  com.google.protobuf.ByteString
+      getArticleLinkBytes();
 }

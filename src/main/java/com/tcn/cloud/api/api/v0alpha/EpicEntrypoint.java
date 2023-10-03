@@ -438,6 +438,21 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int ENABLED_FIELD_NUMBER = 12;
+  private boolean enabled_ = false;
+  /**
+   * <pre>
+   * If process is enabled
+   * </pre>
+   *
+   * <code>bool enabled = 12 [json_name = "enabled"];</code>
+   * @return The enabled.
+   */
+  @java.lang.Override
+  public boolean getEnabled() {
+    return enabled_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -486,6 +501,9 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timezone_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 11, timezone_);
+    }
+    if (enabled_ != false) {
+      output.writeBool(12, enabled_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -540,6 +558,10 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timezone_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, timezone_);
     }
+    if (enabled_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(12, enabled_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -578,6 +600,8 @@ private static final long serialVersionUID = 0L;
         != other.getFlushDuringCheck()) return false;
     if (!getTimezone()
         .equals(other.getTimezone())) return false;
+    if (getEnabled()
+        != other.getEnabled()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -617,6 +641,9 @@ private static final long serialVersionUID = 0L;
         getFlushDuringCheck());
     hash = (37 * hash) + TIMEZONE_FIELD_NUMBER;
     hash = (53 * hash) + getTimezone().hashCode();
+    hash = (37 * hash) + ENABLED_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getEnabled());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -767,6 +794,7 @@ private static final long serialVersionUID = 0L;
       flushMinuteCount_ = 0L;
       flushDuringCheck_ = false;
       timezone_ = "";
+      enabled_ = false;
       return this;
     }
 
@@ -837,6 +865,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000200) != 0)) {
         result.timezone_ = timezone_;
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        result.enabled_ = enabled_;
       }
     }
 
@@ -929,6 +960,9 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000200;
         onChanged();
       }
+      if (other.getEnabled() != false) {
+        setEnabled(other.getEnabled());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1019,6 +1053,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000200;
               break;
             } // case 90
+            case 96: {
+              enabled_ = input.readBool();
+              bitField0_ |= 0x00000400;
+              break;
+            } // case 96
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1994,6 +2033,50 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       timezone_ = value;
       bitField0_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+
+    private boolean enabled_ ;
+    /**
+     * <pre>
+     * If process is enabled
+     * </pre>
+     *
+     * <code>bool enabled = 12 [json_name = "enabled"];</code>
+     * @return The enabled.
+     */
+    @java.lang.Override
+    public boolean getEnabled() {
+      return enabled_;
+    }
+    /**
+     * <pre>
+     * If process is enabled
+     * </pre>
+     *
+     * <code>bool enabled = 12 [json_name = "enabled"];</code>
+     * @param value The enabled to set.
+     * @return This builder for chaining.
+     */
+    public Builder setEnabled(boolean value) {
+
+      enabled_ = value;
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * If process is enabled
+     * </pre>
+     *
+     * <code>bool enabled = 12 [json_name = "enabled"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearEnabled() {
+      bitField0_ = (bitField0_ & ~0x00000400);
+      enabled_ = false;
       onChanged();
       return this;
     }

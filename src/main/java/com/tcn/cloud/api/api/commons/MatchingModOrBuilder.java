@@ -56,23 +56,17 @@ public interface MatchingModOrBuilder extends
       int index);
 
   /**
-   * <code>bool not = 3 [json_name = "not"];</code>
-   * @return The not.
-   */
-  boolean getNot();
-
-  /**
-   * <code>.api.commons.MatchingEntity mod = 4 [json_name = "mod"];</code>
+   * <code>.api.commons.MatchingEntity mod = 3 [json_name = "mod"];</code>
    * @return Whether the mod field is set.
    */
   boolean hasMod();
   /**
-   * <code>.api.commons.MatchingEntity mod = 4 [json_name = "mod"];</code>
+   * <code>.api.commons.MatchingEntity mod = 3 [json_name = "mod"];</code>
    * @return The mod.
    */
   com.tcn.cloud.api.api.commons.MatchingEntity getMod();
   /**
-   * <code>.api.commons.MatchingEntity mod = 4 [json_name = "mod"];</code>
+   * <code>.api.commons.MatchingEntity mod = 3 [json_name = "mod"];</code>
    */
   com.tcn.cloud.api.api.commons.MatchingEntityOrBuilder getModOrBuilder();
 }

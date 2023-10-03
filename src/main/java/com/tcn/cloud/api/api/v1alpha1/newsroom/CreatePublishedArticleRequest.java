@@ -20,6 +20,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private CreatePublishedArticleRequest() {
+    articleLink_ = "";
   }
 
   @java.lang.Override
@@ -72,6 +73,53 @@ private static final long serialVersionUID = 0L;
     return displayToUser_;
   }
 
+  public static final int ARTICLE_LINK_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object articleLink_ = "";
+  /**
+   * <pre>
+   * link to the published article
+   * </pre>
+   *
+   * <code>string article_link = 3 [json_name = "articleLink"];</code>
+   * @return The articleLink.
+   */
+  @java.lang.Override
+  public java.lang.String getArticleLink() {
+    java.lang.Object ref = articleLink_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      articleLink_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * link to the published article
+   * </pre>
+   *
+   * <code>string article_link = 3 [json_name = "articleLink"];</code>
+   * @return The bytes for articleLink.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getArticleLinkBytes() {
+    java.lang.Object ref = articleLink_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      articleLink_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -92,6 +140,9 @@ private static final long serialVersionUID = 0L;
     if (displayToUser_ != false) {
       output.writeBool(2, displayToUser_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(articleLink_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, articleLink_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -108,6 +159,9 @@ private static final long serialVersionUID = 0L;
     if (displayToUser_ != false) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(2, displayToUser_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(articleLink_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, articleLink_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -128,6 +182,8 @@ private static final long serialVersionUID = 0L;
         != other.getNewArticleSid()) return false;
     if (getDisplayToUser()
         != other.getDisplayToUser()) return false;
+    if (!getArticleLink()
+        .equals(other.getArticleLink())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -145,6 +201,8 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + DISPLAY_TO_USER_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getDisplayToUser());
+    hash = (37 * hash) + ARTICLE_LINK_FIELD_NUMBER;
+    hash = (53 * hash) + getArticleLink().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -282,6 +340,7 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       newArticleSid_ = 0L;
       displayToUser_ = false;
+      articleLink_ = "";
       return this;
     }
 
@@ -320,6 +379,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.displayToUser_ = displayToUser_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.articleLink_ = articleLink_;
       }
     }
 
@@ -373,6 +435,11 @@ private static final long serialVersionUID = 0L;
       if (other.getDisplayToUser() != false) {
         setDisplayToUser(other.getDisplayToUser());
       }
+      if (!other.getArticleLink().isEmpty()) {
+        articleLink_ = other.articleLink_;
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -409,6 +476,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 16
+            case 26: {
+              articleLink_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -510,6 +582,98 @@ private static final long serialVersionUID = 0L;
     public Builder clearDisplayToUser() {
       bitField0_ = (bitField0_ & ~0x00000002);
       displayToUser_ = false;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object articleLink_ = "";
+    /**
+     * <pre>
+     * link to the published article
+     * </pre>
+     *
+     * <code>string article_link = 3 [json_name = "articleLink"];</code>
+     * @return The articleLink.
+     */
+    public java.lang.String getArticleLink() {
+      java.lang.Object ref = articleLink_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        articleLink_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * link to the published article
+     * </pre>
+     *
+     * <code>string article_link = 3 [json_name = "articleLink"];</code>
+     * @return The bytes for articleLink.
+     */
+    public com.google.protobuf.ByteString
+        getArticleLinkBytes() {
+      java.lang.Object ref = articleLink_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        articleLink_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * link to the published article
+     * </pre>
+     *
+     * <code>string article_link = 3 [json_name = "articleLink"];</code>
+     * @param value The articleLink to set.
+     * @return This builder for chaining.
+     */
+    public Builder setArticleLink(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      articleLink_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * link to the published article
+     * </pre>
+     *
+     * <code>string article_link = 3 [json_name = "articleLink"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearArticleLink() {
+      articleLink_ = getDefaultInstance().getArticleLink();
+      bitField0_ = (bitField0_ & ~0x00000004);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * link to the published article
+     * </pre>
+     *
+     * <code>string article_link = 3 [json_name = "articleLink"];</code>
+     * @param value The bytes for articleLink to set.
+     * @return This builder for chaining.
+     */
+    public Builder setArticleLinkBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      articleLink_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }

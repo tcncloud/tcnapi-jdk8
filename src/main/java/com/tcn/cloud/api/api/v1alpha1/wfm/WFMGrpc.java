@@ -4017,6 +4017,37 @@ public final class WFMGrpc {
     return getCreateTourPatternMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersRes> getUpsertTourPatternWithMembersMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpsertTourPatternWithMembers",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersRes> getUpsertTourPatternWithMembersMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersReq, com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersRes> getUpsertTourPatternWithMembersMethod;
+    if ((getUpsertTourPatternWithMembersMethod = WFMGrpc.getUpsertTourPatternWithMembersMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getUpsertTourPatternWithMembersMethod = WFMGrpc.getUpsertTourPatternWithMembersMethod) == null) {
+          WFMGrpc.getUpsertTourPatternWithMembersMethod = getUpsertTourPatternWithMembersMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersReq, com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpsertTourPatternWithMembers"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersRes.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpsertTourPatternWithMembers"))
+              .build();
+        }
+      }
+    }
+    return getUpsertTourPatternWithMembersMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternReq,
       com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternRes> getGetTourPatternMethod;
 
@@ -4637,6 +4668,37 @@ public final class WFMGrpc {
     return getDeleteTourAgentCollectionWFMAgentsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.GenerateTourWeekPatternsReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.GenerateTourWeekPatternsRes> getGenerateTourWeekPatternsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GenerateTourWeekPatterns",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.GenerateTourWeekPatternsReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.GenerateTourWeekPatternsRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.GenerateTourWeekPatternsReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.GenerateTourWeekPatternsRes> getGenerateTourWeekPatternsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.GenerateTourWeekPatternsReq, com.tcn.cloud.api.api.v1alpha1.wfm.GenerateTourWeekPatternsRes> getGenerateTourWeekPatternsMethod;
+    if ((getGenerateTourWeekPatternsMethod = WFMGrpc.getGenerateTourWeekPatternsMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getGenerateTourWeekPatternsMethod = WFMGrpc.getGenerateTourWeekPatternsMethod) == null) {
+          WFMGrpc.getGenerateTourWeekPatternsMethod = getGenerateTourWeekPatternsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.GenerateTourWeekPatternsReq, com.tcn.cloud.api.api.v1alpha1.wfm.GenerateTourWeekPatternsRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GenerateTourWeekPatterns"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.GenerateTourWeekPatternsReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.GenerateTourWeekPatternsRes.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("GenerateTourWeekPatterns"))
+              .build();
+        }
+      }
+    }
+    return getGenerateTourWeekPatternsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -4929,6 +4991,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Creates a mapping entry for the &#64;inactive_skill_profile_sid to the &#64;active_skill_profile_sid for the org sending the request.
+     * DEPRECATED as of Sep/27/2023 - Use skill profile groups instead.
      * Required permissions:
      *   NONE
      * Errors:
@@ -4938,6 +5001,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when creating the inactive skill profile mapping.
      * </pre>
      */
+    @java.lang.Deprecated
     default void createInactiveSkillProfileMapping(com.tcn.cloud.api.api.v1alpha1.wfm.CreateInactiveSkillProfileMappingReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateInactiveSkillProfileMappingRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateInactiveSkillProfileMappingMethod(), responseObserver);
@@ -4960,6 +5024,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Changes the current mapping for the given &#64;inactive_skill_profile_sid to be disconnected.
+     * DEPRECATED as of Sep/27/2023 - Use skill profile groups instead.
      * Required permissions:
      *   NONE
      * Errors:
@@ -4969,6 +5034,7 @@ public final class WFMGrpc {
      *				            the given &#64;inactive_skill_profile_sid is of an active skill profile.
      * </pre>
      */
+    @java.lang.Deprecated
     default void disconnectInactiveSkillProfileMapping(com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDisconnectInactiveSkillProfileMappingMethod(), responseObserver);
@@ -5425,14 +5491,15 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Calculates the averages for call characteristics using the historical data of the given &#64;skill_profile_sids and org sending the request.
+     * Calculates the averages for call characteristics using the historical data of the given &#64;skill_profile_sids, &#64;skill_profile_group_sids and org sending the request.
      * If no &#64;skill_profile_sids are given, it will calculate the averages for all skill profiles for the org sending the request.
+     * If no &#64;skill_profile_group_sids are given, it will calculate the averages for all skill profile groups for the org sending the request.
      * Averages will be weighted by the number of calls that each historical data interval has.
      * Once the averages are calculated, they will be updated in the db for those skill profiles.
      * If a nil &#64;datetime_range is given then the range used will be &#64;training_data_range_end_datetime - &#64;averages_calculation_range_in_months to the &#64;training_data_range_end_datetime from the forecasting parameters.
      * If &#64;averages_calculation_range_in_months is 0, it will use the &#64;training_data_range_start_datetime as the start datetime of the range.
-     * If &#64;exclude_skill_profiles_with_manual_averages is true, it will exclude skill profiles that have manual averages from the calculation
-     * even if those skill profiles are in &#64;skill_profile_sids.
+     * If &#64;exclude_skill_profiles_with_manual_averages is true, it will exclude skill profiles and groups that have manual averages from the calculation
+     * even if those skill profiles and groups are in &#64;skill_profile_sids or &#64;skill_profile_group_sids respectively.
      * Errors:
      *   - grpc.Internal: error occurs when calculating the averages from the historical data.
      * </pre>
@@ -6968,6 +7035,26 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Replaces the existing Tour Pattern and members with &#64;tour_pattern for the &#64;tour_pattern.shift_template_sid and the org sending the request.
+     * Returns the newly created Tour Pattern and members with their updated SIDs and Week Pattern Numbers.
+     * Any existing Tour Week Patterns, Tour Shift Instance and Segment Configs, Tour Agent Collections and their WFM Agent SIDs
+     *   belonging to &#64;tour_pattern.shift_template_sid will be replaced with the members on the provided &#64;tour_pattern.
+     * At least one Tour Agent Collection and one Tour Week Pattern must be provided in the member fields.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.NotFound: the &#64;tour_pattern.shift_template_sid does not exist.
+     *   - grpc.Internal: error occurs when upserting the tour pattern or members.
+     * </pre>
+     */
+    default void upsertTourPatternWithMembers(com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpsertTourPatternWithMembersMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Gets the Tour Pattern belonging to &#64;shift_template_sid and the org sending the request.
      * Required permissions:
      *   NONE
@@ -7292,6 +7379,27 @@ public final class WFMGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourAgentCollectionWFMAgentsRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteTourAgentCollectionWFMAgentsMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * Generates a list of tour week patterns for &#64;target_shift_template_sid and the org sending the request.
+     * Sets the member_tour_week_patterns with a tour week pattern for each of the &#64;num_weeks_in_tour.
+     * Each of the tour week patterns will be set with tour shift instances and segment configs based on
+     *   the forecasted call data over the next &#64;num_weeks_in_tour, starting on the next Monday.
+     * The returned data will not be persisted. This method will not effect any existing tour week patterns in the database.
+     * The &#64;tour_week_patterns returned by this method are intended to replace, not append, all currenly existing tour week patterns for &#64;target_shift_template_sid, once persisted.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.NotFound: there is no call center node or &#64;shift_template_sid associated with &#64;schedule_scenario_sid.
+     *   - grpc.Internal: error occurs when generating the tour week patterns.
+     * </pre>
+     */
+    default void generateTourWeekPatterns(com.tcn.cloud.api.api.v1alpha1.wfm.GenerateTourWeekPatternsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GenerateTourWeekPatternsRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGenerateTourWeekPatternsMethod(), responseObserver);
+    }
   }
 
   /**
@@ -7582,6 +7690,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Creates a mapping entry for the &#64;inactive_skill_profile_sid to the &#64;active_skill_profile_sid for the org sending the request.
+     * DEPRECATED as of Sep/27/2023 - Use skill profile groups instead.
      * Required permissions:
      *   NONE
      * Errors:
@@ -7591,6 +7700,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when creating the inactive skill profile mapping.
      * </pre>
      */
+    @java.lang.Deprecated
     public void createInactiveSkillProfileMapping(com.tcn.cloud.api.api.v1alpha1.wfm.CreateInactiveSkillProfileMappingReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateInactiveSkillProfileMappingRes> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -7615,6 +7725,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Changes the current mapping for the given &#64;inactive_skill_profile_sid to be disconnected.
+     * DEPRECATED as of Sep/27/2023 - Use skill profile groups instead.
      * Required permissions:
      *   NONE
      * Errors:
@@ -7624,6 +7735,7 @@ public final class WFMGrpc {
      *				            the given &#64;inactive_skill_profile_sid is of an active skill profile.
      * </pre>
      */
+    @java.lang.Deprecated
     public void disconnectInactiveSkillProfileMapping(com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingRes> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -8108,14 +8220,15 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Calculates the averages for call characteristics using the historical data of the given &#64;skill_profile_sids and org sending the request.
+     * Calculates the averages for call characteristics using the historical data of the given &#64;skill_profile_sids, &#64;skill_profile_group_sids and org sending the request.
      * If no &#64;skill_profile_sids are given, it will calculate the averages for all skill profiles for the org sending the request.
+     * If no &#64;skill_profile_group_sids are given, it will calculate the averages for all skill profile groups for the org sending the request.
      * Averages will be weighted by the number of calls that each historical data interval has.
      * Once the averages are calculated, they will be updated in the db for those skill profiles.
      * If a nil &#64;datetime_range is given then the range used will be &#64;training_data_range_end_datetime - &#64;averages_calculation_range_in_months to the &#64;training_data_range_end_datetime from the forecasting parameters.
      * If &#64;averages_calculation_range_in_months is 0, it will use the &#64;training_data_range_start_datetime as the start datetime of the range.
-     * If &#64;exclude_skill_profiles_with_manual_averages is true, it will exclude skill profiles that have manual averages from the calculation
-     * even if those skill profiles are in &#64;skill_profile_sids.
+     * If &#64;exclude_skill_profiles_with_manual_averages is true, it will exclude skill profiles and groups that have manual averages from the calculation
+     * even if those skill profiles and groups are in &#64;skill_profile_sids or &#64;skill_profile_group_sids respectively.
      * Errors:
      *   - grpc.Internal: error occurs when calculating the averages from the historical data.
      * </pre>
@@ -9736,6 +9849,27 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Replaces the existing Tour Pattern and members with &#64;tour_pattern for the &#64;tour_pattern.shift_template_sid and the org sending the request.
+     * Returns the newly created Tour Pattern and members with their updated SIDs and Week Pattern Numbers.
+     * Any existing Tour Week Patterns, Tour Shift Instance and Segment Configs, Tour Agent Collections and their WFM Agent SIDs
+     *   belonging to &#64;tour_pattern.shift_template_sid will be replaced with the members on the provided &#64;tour_pattern.
+     * At least one Tour Agent Collection and one Tour Week Pattern must be provided in the member fields.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.NotFound: the &#64;tour_pattern.shift_template_sid does not exist.
+     *   - grpc.Internal: error occurs when upserting the tour pattern or members.
+     * </pre>
+     */
+    public void upsertTourPatternWithMembers(com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpsertTourPatternWithMembersMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Gets the Tour Pattern belonging to &#64;shift_template_sid and the org sending the request.
      * Required permissions:
      *   NONE
@@ -10080,6 +10214,28 @@ public final class WFMGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteTourAgentCollectionWFMAgentsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Generates a list of tour week patterns for &#64;target_shift_template_sid and the org sending the request.
+     * Sets the member_tour_week_patterns with a tour week pattern for each of the &#64;num_weeks_in_tour.
+     * Each of the tour week patterns will be set with tour shift instances and segment configs based on
+     *   the forecasted call data over the next &#64;num_weeks_in_tour, starting on the next Monday.
+     * The returned data will not be persisted. This method will not effect any existing tour week patterns in the database.
+     * The &#64;tour_week_patterns returned by this method are intended to replace, not append, all currenly existing tour week patterns for &#64;target_shift_template_sid, once persisted.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.NotFound: there is no call center node or &#64;shift_template_sid associated with &#64;schedule_scenario_sid.
+     *   - grpc.Internal: error occurs when generating the tour week patterns.
+     * </pre>
+     */
+    public void generateTourWeekPatterns(com.tcn.cloud.api.api.v1alpha1.wfm.GenerateTourWeekPatternsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GenerateTourWeekPatternsRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGenerateTourWeekPatternsMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -10342,6 +10498,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Creates a mapping entry for the &#64;inactive_skill_profile_sid to the &#64;active_skill_profile_sid for the org sending the request.
+     * DEPRECATED as of Sep/27/2023 - Use skill profile groups instead.
      * Required permissions:
      *   NONE
      * Errors:
@@ -10351,6 +10508,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when creating the inactive skill profile mapping.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.tcn.cloud.api.api.v1alpha1.wfm.CreateInactiveSkillProfileMappingRes createInactiveSkillProfileMapping(com.tcn.cloud.api.api.v1alpha1.wfm.CreateInactiveSkillProfileMappingReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateInactiveSkillProfileMappingMethod(), getCallOptions(), request);
@@ -10373,6 +10531,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Changes the current mapping for the given &#64;inactive_skill_profile_sid to be disconnected.
+     * DEPRECATED as of Sep/27/2023 - Use skill profile groups instead.
      * Required permissions:
      *   NONE
      * Errors:
@@ -10382,6 +10541,7 @@ public final class WFMGrpc {
      *				            the given &#64;inactive_skill_profile_sid is of an active skill profile.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingRes disconnectInactiveSkillProfileMapping(com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDisconnectInactiveSkillProfileMappingMethod(), getCallOptions(), request);
@@ -10844,14 +11004,15 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Calculates the averages for call characteristics using the historical data of the given &#64;skill_profile_sids and org sending the request.
+     * Calculates the averages for call characteristics using the historical data of the given &#64;skill_profile_sids, &#64;skill_profile_group_sids and org sending the request.
      * If no &#64;skill_profile_sids are given, it will calculate the averages for all skill profiles for the org sending the request.
+     * If no &#64;skill_profile_group_sids are given, it will calculate the averages for all skill profile groups for the org sending the request.
      * Averages will be weighted by the number of calls that each historical data interval has.
      * Once the averages are calculated, they will be updated in the db for those skill profiles.
      * If a nil &#64;datetime_range is given then the range used will be &#64;training_data_range_end_datetime - &#64;averages_calculation_range_in_months to the &#64;training_data_range_end_datetime from the forecasting parameters.
      * If &#64;averages_calculation_range_in_months is 0, it will use the &#64;training_data_range_start_datetime as the start datetime of the range.
-     * If &#64;exclude_skill_profiles_with_manual_averages is true, it will exclude skill profiles that have manual averages from the calculation
-     * even if those skill profiles are in &#64;skill_profile_sids.
+     * If &#64;exclude_skill_profiles_with_manual_averages is true, it will exclude skill profiles and groups that have manual averages from the calculation
+     * even if those skill profiles and groups are in &#64;skill_profile_sids or &#64;skill_profile_group_sids respectively.
      * Errors:
      *   - grpc.Internal: error occurs when calculating the averages from the historical data.
      * </pre>
@@ -12387,6 +12548,26 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Replaces the existing Tour Pattern and members with &#64;tour_pattern for the &#64;tour_pattern.shift_template_sid and the org sending the request.
+     * Returns the newly created Tour Pattern and members with their updated SIDs and Week Pattern Numbers.
+     * Any existing Tour Week Patterns, Tour Shift Instance and Segment Configs, Tour Agent Collections and their WFM Agent SIDs
+     *   belonging to &#64;tour_pattern.shift_template_sid will be replaced with the members on the provided &#64;tour_pattern.
+     * At least one Tour Agent Collection and one Tour Week Pattern must be provided in the member fields.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.NotFound: the &#64;tour_pattern.shift_template_sid does not exist.
+     *   - grpc.Internal: error occurs when upserting the tour pattern or members.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersRes upsertTourPatternWithMembers(com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpsertTourPatternWithMembersMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Gets the Tour Pattern belonging to &#64;shift_template_sid and the org sending the request.
      * Required permissions:
      *   NONE
@@ -12711,6 +12892,27 @@ public final class WFMGrpc {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteTourAgentCollectionWFMAgentsMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * Generates a list of tour week patterns for &#64;target_shift_template_sid and the org sending the request.
+     * Sets the member_tour_week_patterns with a tour week pattern for each of the &#64;num_weeks_in_tour.
+     * Each of the tour week patterns will be set with tour shift instances and segment configs based on
+     *   the forecasted call data over the next &#64;num_weeks_in_tour, starting on the next Monday.
+     * The returned data will not be persisted. This method will not effect any existing tour week patterns in the database.
+     * The &#64;tour_week_patterns returned by this method are intended to replace, not append, all currenly existing tour week patterns for &#64;target_shift_template_sid, once persisted.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.NotFound: there is no call center node or &#64;shift_template_sid associated with &#64;schedule_scenario_sid.
+     *   - grpc.Internal: error occurs when generating the tour week patterns.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.GenerateTourWeekPatternsRes generateTourWeekPatterns(com.tcn.cloud.api.api.v1alpha1.wfm.GenerateTourWeekPatternsReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGenerateTourWeekPatternsMethod(), getCallOptions(), request);
+    }
   }
 
   /**
@@ -12987,6 +13189,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Creates a mapping entry for the &#64;inactive_skill_profile_sid to the &#64;active_skill_profile_sid for the org sending the request.
+     * DEPRECATED as of Sep/27/2023 - Use skill profile groups instead.
      * Required permissions:
      *   NONE
      * Errors:
@@ -12996,6 +13199,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when creating the inactive skill profile mapping.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.CreateInactiveSkillProfileMappingRes> createInactiveSkillProfileMapping(
         com.tcn.cloud.api.api.v1alpha1.wfm.CreateInactiveSkillProfileMappingReq request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -13020,6 +13224,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Changes the current mapping for the given &#64;inactive_skill_profile_sid to be disconnected.
+     * DEPRECATED as of Sep/27/2023 - Use skill profile groups instead.
      * Required permissions:
      *   NONE
      * Errors:
@@ -13029,6 +13234,7 @@ public final class WFMGrpc {
      *				            the given &#64;inactive_skill_profile_sid is of an active skill profile.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingRes> disconnectInactiveSkillProfileMapping(
         com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingReq request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -13401,14 +13607,15 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Calculates the averages for call characteristics using the historical data of the given &#64;skill_profile_sids and org sending the request.
+     * Calculates the averages for call characteristics using the historical data of the given &#64;skill_profile_sids, &#64;skill_profile_group_sids and org sending the request.
      * If no &#64;skill_profile_sids are given, it will calculate the averages for all skill profiles for the org sending the request.
+     * If no &#64;skill_profile_group_sids are given, it will calculate the averages for all skill profile groups for the org sending the request.
      * Averages will be weighted by the number of calls that each historical data interval has.
      * Once the averages are calculated, they will be updated in the db for those skill profiles.
      * If a nil &#64;datetime_range is given then the range used will be &#64;training_data_range_end_datetime - &#64;averages_calculation_range_in_months to the &#64;training_data_range_end_datetime from the forecasting parameters.
      * If &#64;averages_calculation_range_in_months is 0, it will use the &#64;training_data_range_start_datetime as the start datetime of the range.
-     * If &#64;exclude_skill_profiles_with_manual_averages is true, it will exclude skill profiles that have manual averages from the calculation
-     * even if those skill profiles are in &#64;skill_profile_sids.
+     * If &#64;exclude_skill_profiles_with_manual_averages is true, it will exclude skill profiles and groups that have manual averages from the calculation
+     * even if those skill profiles and groups are in &#64;skill_profile_sids or &#64;skill_profile_group_sids respectively.
      * Errors:
      *   - grpc.Internal: error occurs when calculating the averages from the historical data.
      * </pre>
@@ -15029,6 +15236,27 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Replaces the existing Tour Pattern and members with &#64;tour_pattern for the &#64;tour_pattern.shift_template_sid and the org sending the request.
+     * Returns the newly created Tour Pattern and members with their updated SIDs and Week Pattern Numbers.
+     * Any existing Tour Week Patterns, Tour Shift Instance and Segment Configs, Tour Agent Collections and their WFM Agent SIDs
+     *   belonging to &#64;tour_pattern.shift_template_sid will be replaced with the members on the provided &#64;tour_pattern.
+     * At least one Tour Agent Collection and one Tour Week Pattern must be provided in the member fields.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.NotFound: the &#64;tour_pattern.shift_template_sid does not exist.
+     *   - grpc.Internal: error occurs when upserting the tour pattern or members.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersRes> upsertTourPatternWithMembers(
+        com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpsertTourPatternWithMembersMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Gets the Tour Pattern belonging to &#64;shift_template_sid and the org sending the request.
      * Required permissions:
      *   NONE
@@ -15373,6 +15601,28 @@ public final class WFMGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteTourAgentCollectionWFMAgentsMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Generates a list of tour week patterns for &#64;target_shift_template_sid and the org sending the request.
+     * Sets the member_tour_week_patterns with a tour week pattern for each of the &#64;num_weeks_in_tour.
+     * Each of the tour week patterns will be set with tour shift instances and segment configs based on
+     *   the forecasted call data over the next &#64;num_weeks_in_tour, starting on the next Monday.
+     * The returned data will not be persisted. This method will not effect any existing tour week patterns in the database.
+     * The &#64;tour_week_patterns returned by this method are intended to replace, not append, all currenly existing tour week patterns for &#64;target_shift_template_sid, once persisted.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.NotFound: there is no call center node or &#64;shift_template_sid associated with &#64;schedule_scenario_sid.
+     *   - grpc.Internal: error occurs when generating the tour week patterns.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.GenerateTourWeekPatternsRes> generateTourWeekPatterns(
+        com.tcn.cloud.api.api.v1alpha1.wfm.GenerateTourWeekPatternsReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGenerateTourWeekPatternsMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_LIST_SKILL_PROFILES = 0;
@@ -15504,26 +15754,28 @@ public final class WFMGrpc {
   private static final int METHODID_GET_PERFORMANCE_METRICS = 126;
   private static final int METHODID_LIST_REQUIRED_CALLS_INTERVALS = 127;
   private static final int METHODID_CREATE_TOUR_PATTERN = 128;
-  private static final int METHODID_GET_TOUR_PATTERN = 129;
-  private static final int METHODID_DELETE_TOUR_PATTERN = 130;
-  private static final int METHODID_CREATE_TOUR_WEEK_PATTERN = 131;
-  private static final int METHODID_LIST_TOUR_WEEK_PATTERNS = 132;
-  private static final int METHODID_DELETE_TOUR_WEEK_PATTERNS = 133;
-  private static final int METHODID_CREATE_TOUR_SHIFT_INSTANCE_CONFIG = 134;
-  private static final int METHODID_UPDATE_TOUR_SHIFT_INSTANCE_CONFIG = 135;
-  private static final int METHODID_LIST_TOUR_SHIFT_INSTANCE_CONFIGS = 136;
-  private static final int METHODID_DELETE_TOUR_SHIFT_INSTANCE_CONFIGS = 137;
-  private static final int METHODID_CREATE_TOUR_SHIFT_SEGMENT_CONFIG = 138;
-  private static final int METHODID_UPDATE_TOUR_SHIFT_SEGMENT_CONFIG = 139;
-  private static final int METHODID_LIST_TOUR_SHIFT_SEGMENT_CONFIGS = 140;
-  private static final int METHODID_DELETE_TOUR_SHIFT_SEGMENT_CONFIGS = 141;
-  private static final int METHODID_CREATE_TOUR_AGENT_COLLECTION = 142;
-  private static final int METHODID_UPDATE_TOUR_AGENT_COLLECTION = 143;
-  private static final int METHODID_LIST_TOUR_AGENT_COLLECTIONS = 144;
-  private static final int METHODID_DELETE_TOUR_AGENT_COLLECTIONS = 145;
-  private static final int METHODID_CREATE_TOUR_AGENT_COLLECTION_WFMAGENTS = 146;
-  private static final int METHODID_LIST_TOUR_AGENT_COLLECTION_WFMAGENTS = 147;
-  private static final int METHODID_DELETE_TOUR_AGENT_COLLECTION_WFMAGENTS = 148;
+  private static final int METHODID_UPSERT_TOUR_PATTERN_WITH_MEMBERS = 129;
+  private static final int METHODID_GET_TOUR_PATTERN = 130;
+  private static final int METHODID_DELETE_TOUR_PATTERN = 131;
+  private static final int METHODID_CREATE_TOUR_WEEK_PATTERN = 132;
+  private static final int METHODID_LIST_TOUR_WEEK_PATTERNS = 133;
+  private static final int METHODID_DELETE_TOUR_WEEK_PATTERNS = 134;
+  private static final int METHODID_CREATE_TOUR_SHIFT_INSTANCE_CONFIG = 135;
+  private static final int METHODID_UPDATE_TOUR_SHIFT_INSTANCE_CONFIG = 136;
+  private static final int METHODID_LIST_TOUR_SHIFT_INSTANCE_CONFIGS = 137;
+  private static final int METHODID_DELETE_TOUR_SHIFT_INSTANCE_CONFIGS = 138;
+  private static final int METHODID_CREATE_TOUR_SHIFT_SEGMENT_CONFIG = 139;
+  private static final int METHODID_UPDATE_TOUR_SHIFT_SEGMENT_CONFIG = 140;
+  private static final int METHODID_LIST_TOUR_SHIFT_SEGMENT_CONFIGS = 141;
+  private static final int METHODID_DELETE_TOUR_SHIFT_SEGMENT_CONFIGS = 142;
+  private static final int METHODID_CREATE_TOUR_AGENT_COLLECTION = 143;
+  private static final int METHODID_UPDATE_TOUR_AGENT_COLLECTION = 144;
+  private static final int METHODID_LIST_TOUR_AGENT_COLLECTIONS = 145;
+  private static final int METHODID_DELETE_TOUR_AGENT_COLLECTIONS = 146;
+  private static final int METHODID_CREATE_TOUR_AGENT_COLLECTION_WFMAGENTS = 147;
+  private static final int METHODID_LIST_TOUR_AGENT_COLLECTION_WFMAGENTS = 148;
+  private static final int METHODID_DELETE_TOUR_AGENT_COLLECTION_WFMAGENTS = 149;
+  private static final int METHODID_GENERATE_TOUR_WEEK_PATTERNS = 150;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -16058,6 +16310,10 @@ public final class WFMGrpc {
           serviceImpl.createTourPattern((com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourPatternReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourPatternRes>) responseObserver);
           break;
+        case METHODID_UPSERT_TOUR_PATTERN_WITH_MEMBERS:
+          serviceImpl.upsertTourPatternWithMembers((com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersRes>) responseObserver);
+          break;
         case METHODID_GET_TOUR_PATTERN:
           serviceImpl.getTourPattern((com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternRes>) responseObserver);
@@ -16137,6 +16393,10 @@ public final class WFMGrpc {
         case METHODID_DELETE_TOUR_AGENT_COLLECTION_WFMAGENTS:
           serviceImpl.deleteTourAgentCollectionWFMAgents((com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourAgentCollectionWFMAgentsReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourAgentCollectionWFMAgentsRes>) responseObserver);
+          break;
+        case METHODID_GENERATE_TOUR_WEEK_PATTERNS:
+          serviceImpl.generateTourWeekPatterns((com.tcn.cloud.api.api.v1alpha1.wfm.GenerateTourWeekPatternsReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GenerateTourWeekPatternsRes>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -17060,6 +17320,13 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourPatternRes>(
                 service, METHODID_CREATE_TOUR_PATTERN)))
         .addMethod(
+          getUpsertTourPatternWithMembersMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersRes>(
+                service, METHODID_UPSERT_TOUR_PATTERN_WITH_MEMBERS)))
+        .addMethod(
           getGetTourPatternMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -17199,6 +17466,13 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourAgentCollectionWFMAgentsReq,
               com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourAgentCollectionWFMAgentsRes>(
                 service, METHODID_DELETE_TOUR_AGENT_COLLECTION_WFMAGENTS)))
+        .addMethod(
+          getGenerateTourWeekPatternsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.GenerateTourWeekPatternsReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.GenerateTourWeekPatternsRes>(
+                service, METHODID_GENERATE_TOUR_WEEK_PATTERNS)))
         .build();
   }
 
@@ -17376,6 +17650,7 @@ public final class WFMGrpc {
               .addMethod(getGetPerformanceMetricsMethod())
               .addMethod(getListRequiredCallsIntervalsMethod())
               .addMethod(getCreateTourPatternMethod())
+              .addMethod(getUpsertTourPatternWithMembersMethod())
               .addMethod(getGetTourPatternMethod())
               .addMethod(getDeleteTourPatternMethod())
               .addMethod(getCreateTourWeekPatternMethod())
@@ -17396,6 +17671,7 @@ public final class WFMGrpc {
               .addMethod(getCreateTourAgentCollectionWFMAgentsMethod())
               .addMethod(getListTourAgentCollectionWFMAgentsMethod())
               .addMethod(getDeleteTourAgentCollectionWFMAgentsMethod())
+              .addMethod(getGenerateTourWeekPatternsMethod())
               .build();
         }
       }
