@@ -2899,5 +2899,20 @@ public interface ExecuteFlowOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.integrations.ExecutePriocommerceCcPaymentOrBuilder getPriocommerceCcPaymentOrBuilder();
 
+  /**
+   * <code>.api.commons.integrations.ExecuteNavigaCreatePayment naviga_create_payment = 4001 [json_name = "navigaCreatePayment"];</code>
+   * @return Whether the navigaCreatePayment field is set.
+   */
+  boolean hasNavigaCreatePayment();
+  /**
+   * <code>.api.commons.integrations.ExecuteNavigaCreatePayment naviga_create_payment = 4001 [json_name = "navigaCreatePayment"];</code>
+   * @return The navigaCreatePayment.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePayment getNavigaCreatePayment();
+  /**
+   * <code>.api.commons.integrations.ExecuteNavigaCreatePayment naviga_create_payment = 4001 [json_name = "navigaCreatePayment"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePaymentOrBuilder getNavigaCreatePaymentOrBuilder();
+
   com.tcn.cloud.api.api.commons.integrations.ExecuteFlow.ValueCase getValueCase();
 }

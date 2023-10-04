@@ -244,6 +244,7 @@ private static final long serialVersionUID = 0L;
     NEWZWARE_PHONE_LOOKUP_MULTI(3809),
     PRIOCOMMERCE_ACH_PAYMENT(3901),
     PRIOCOMMERCE_CC_PAYMENT(3902),
+    NAVIGA_CREATE_PAYMENT(4001),
     VALUE_NOT_SET(0);
     private final int value;
     private ValueCase(int value) {
@@ -453,6 +454,7 @@ private static final long serialVersionUID = 0L;
         case 3809: return NEWZWARE_PHONE_LOOKUP_MULTI;
         case 3901: return PRIOCOMMERCE_ACH_PAYMENT;
         case 3902: return PRIOCOMMERCE_CC_PAYMENT;
+        case 4001: return NAVIGA_CREATE_PAYMENT;
         case 0: return VALUE_NOT_SET;
         default: return null;
       }
@@ -6459,6 +6461,37 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.integrations.ExecutePriocommerceCcPayment.getDefaultInstance();
   }
 
+  public static final int NAVIGA_CREATE_PAYMENT_FIELD_NUMBER = 4001;
+  /**
+   * <code>.api.commons.integrations.ExecuteNavigaCreatePayment naviga_create_payment = 4001 [json_name = "navigaCreatePayment"];</code>
+   * @return Whether the navigaCreatePayment field is set.
+   */
+  @java.lang.Override
+  public boolean hasNavigaCreatePayment() {
+    return valueCase_ == 4001;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteNavigaCreatePayment naviga_create_payment = 4001 [json_name = "navigaCreatePayment"];</code>
+   * @return The navigaCreatePayment.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePayment getNavigaCreatePayment() {
+    if (valueCase_ == 4001) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePayment) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePayment.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteNavigaCreatePayment naviga_create_payment = 4001 [json_name = "navigaCreatePayment"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePaymentOrBuilder getNavigaCreatePaymentOrBuilder() {
+    if (valueCase_ == 4001) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePayment) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePayment.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -7051,6 +7084,9 @@ private static final long serialVersionUID = 0L;
     }
     if (valueCase_ == 3902) {
       output.writeMessage(3902, (com.tcn.cloud.api.api.commons.integrations.ExecutePriocommerceCcPayment) value_);
+    }
+    if (valueCase_ == 4001) {
+      output.writeMessage(4001, (com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePayment) value_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -7831,6 +7867,10 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 3902) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3902, (com.tcn.cloud.api.api.commons.integrations.ExecutePriocommerceCcPayment) value_);
+    }
+    if (valueCase_ == 4001) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4001, (com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePayment) value_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -8619,6 +8659,10 @@ private static final long serialVersionUID = 0L;
         if (!getPriocommerceCcPayment()
             .equals(other.getPriocommerceCcPayment())) return false;
         break;
+      case 4001:
+        if (!getNavigaCreatePayment()
+            .equals(other.getNavigaCreatePayment())) return false;
+        break;
       case 0:
       default:
     }
@@ -9404,6 +9448,10 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + PRIOCOMMERCE_CC_PAYMENT_FIELD_NUMBER;
         hash = (53 * hash) + getPriocommerceCcPayment().hashCode();
         break;
+      case 4001:
+        hash = (37 * hash) + NAVIGA_CREATE_PAYMENT_FIELD_NUMBER;
+        hash = (53 * hash) + getNavigaCreatePayment().hashCode();
+        break;
       case 0:
       default:
     }
@@ -10127,6 +10175,9 @@ private static final long serialVersionUID = 0L;
       }
       if (priocommerceCcPaymentBuilder_ != null) {
         priocommerceCcPaymentBuilder_.clear();
+      }
+      if (navigaCreatePaymentBuilder_ != null) {
+        navigaCreatePaymentBuilder_.clear();
       }
       valueCase_ = 0;
       value_ = null;
@@ -10970,6 +11021,10 @@ private static final long serialVersionUID = 0L;
           priocommerceCcPaymentBuilder_ != null) {
         result.value_ = priocommerceCcPaymentBuilder_.build();
       }
+      if (valueCase_ == 4001 &&
+          navigaCreatePaymentBuilder_ != null) {
+        result.value_ = navigaCreatePaymentBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -11788,6 +11843,10 @@ private static final long serialVersionUID = 0L;
         }
         case PRIOCOMMERCE_CC_PAYMENT: {
           mergePriocommerceCcPayment(other.getPriocommerceCcPayment());
+          break;
+        }
+        case NAVIGA_CREATE_PAYMENT: {
+          mergeNavigaCreatePayment(other.getNavigaCreatePayment());
           break;
         }
         case VALUE_NOT_SET: {
@@ -13169,6 +13228,13 @@ private static final long serialVersionUID = 0L;
               valueCase_ = 3902;
               break;
             } // case 31218
+            case 32010: {
+              input.readMessage(
+                  getNavigaCreatePaymentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 4001;
+              break;
+            } // case 32010
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -40541,6 +40607,148 @@ private static final long serialVersionUID = 0L;
       valueCase_ = 3902;
       onChanged();
       return priocommerceCcPaymentBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePayment, com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePaymentOrBuilder> navigaCreatePaymentBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteNavigaCreatePayment naviga_create_payment = 4001 [json_name = "navigaCreatePayment"];</code>
+     * @return Whether the navigaCreatePayment field is set.
+     */
+    @java.lang.Override
+    public boolean hasNavigaCreatePayment() {
+      return valueCase_ == 4001;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteNavigaCreatePayment naviga_create_payment = 4001 [json_name = "navigaCreatePayment"];</code>
+     * @return The navigaCreatePayment.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePayment getNavigaCreatePayment() {
+      if (navigaCreatePaymentBuilder_ == null) {
+        if (valueCase_ == 4001) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePayment) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePayment.getDefaultInstance();
+      } else {
+        if (valueCase_ == 4001) {
+          return navigaCreatePaymentBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePayment.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteNavigaCreatePayment naviga_create_payment = 4001 [json_name = "navigaCreatePayment"];</code>
+     */
+    public Builder setNavigaCreatePayment(com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePayment value) {
+      if (navigaCreatePaymentBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        navigaCreatePaymentBuilder_.setMessage(value);
+      }
+      valueCase_ = 4001;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteNavigaCreatePayment naviga_create_payment = 4001 [json_name = "navigaCreatePayment"];</code>
+     */
+    public Builder setNavigaCreatePayment(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePayment.Builder builderForValue) {
+      if (navigaCreatePaymentBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        navigaCreatePaymentBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 4001;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteNavigaCreatePayment naviga_create_payment = 4001 [json_name = "navigaCreatePayment"];</code>
+     */
+    public Builder mergeNavigaCreatePayment(com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePayment value) {
+      if (navigaCreatePaymentBuilder_ == null) {
+        if (valueCase_ == 4001 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePayment.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePayment.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePayment) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 4001) {
+          navigaCreatePaymentBuilder_.mergeFrom(value);
+        } else {
+          navigaCreatePaymentBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 4001;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteNavigaCreatePayment naviga_create_payment = 4001 [json_name = "navigaCreatePayment"];</code>
+     */
+    public Builder clearNavigaCreatePayment() {
+      if (navigaCreatePaymentBuilder_ == null) {
+        if (valueCase_ == 4001) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 4001) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        navigaCreatePaymentBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteNavigaCreatePayment naviga_create_payment = 4001 [json_name = "navigaCreatePayment"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePayment.Builder getNavigaCreatePaymentBuilder() {
+      return getNavigaCreatePaymentFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteNavigaCreatePayment naviga_create_payment = 4001 [json_name = "navigaCreatePayment"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePaymentOrBuilder getNavigaCreatePaymentOrBuilder() {
+      if ((valueCase_ == 4001) && (navigaCreatePaymentBuilder_ != null)) {
+        return navigaCreatePaymentBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 4001) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePayment) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePayment.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteNavigaCreatePayment naviga_create_payment = 4001 [json_name = "navigaCreatePayment"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePayment, com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePaymentOrBuilder> 
+        getNavigaCreatePaymentFieldBuilder() {
+      if (navigaCreatePaymentBuilder_ == null) {
+        if (!(valueCase_ == 4001)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePayment.getDefaultInstance();
+        }
+        navigaCreatePaymentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePayment, com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePaymentOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePayment) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 4001;
+      onChanged();
+      return navigaCreatePaymentBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

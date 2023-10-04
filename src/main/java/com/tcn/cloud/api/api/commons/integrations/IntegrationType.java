@@ -172,6 +172,10 @@ public enum IntegrationType
    * <code>INTEGRATION_TYPE_PRIOCOMMERCE = 3900;</code>
    */
   INTEGRATION_TYPE_PRIOCOMMERCE(3900),
+  /**
+   * <code>INTEGRATION_TYPE_NAVIGA = 4000;</code>
+   */
+  INTEGRATION_TYPE_NAVIGA(4000),
   UNRECOGNIZED(-1),
   ;
 
@@ -335,6 +339,10 @@ public enum IntegrationType
    * <code>INTEGRATION_TYPE_PRIOCOMMERCE = 3900;</code>
    */
   public static final int INTEGRATION_TYPE_PRIOCOMMERCE_VALUE = 3900;
+  /**
+   * <code>INTEGRATION_TYPE_NAVIGA = 4000;</code>
+   */
+  public static final int INTEGRATION_TYPE_NAVIGA_VALUE = 4000;
 
 
   public final int getNumber() {
@@ -401,6 +409,7 @@ public enum IntegrationType
       case 3700: return INTEGRATION_TYPE_EPIC;
       case 3800: return INTEGRATION_TYPE_NEWZWARE;
       case 3900: return INTEGRATION_TYPE_PRIOCOMMERCE;
+      case 4000: return INTEGRATION_TYPE_NAVIGA;
       default: return null;
     }
   }
