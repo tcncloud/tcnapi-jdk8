@@ -139,6 +139,37 @@ public final class BillingServiceGrpc {
     return getDeleteInvoiceMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.ExportInvoiceRequest,
+      com.tcn.cloud.api.services.billing.v1alpha1.ExportInvoiceResponse> getExportInvoiceMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ExportInvoice",
+      requestType = com.tcn.cloud.api.services.billing.v1alpha1.ExportInvoiceRequest.class,
+      responseType = com.tcn.cloud.api.services.billing.v1alpha1.ExportInvoiceResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.ExportInvoiceRequest,
+      com.tcn.cloud.api.services.billing.v1alpha1.ExportInvoiceResponse> getExportInvoiceMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.ExportInvoiceRequest, com.tcn.cloud.api.services.billing.v1alpha1.ExportInvoiceResponse> getExportInvoiceMethod;
+    if ((getExportInvoiceMethod = BillingServiceGrpc.getExportInvoiceMethod) == null) {
+      synchronized (BillingServiceGrpc.class) {
+        if ((getExportInvoiceMethod = BillingServiceGrpc.getExportInvoiceMethod) == null) {
+          BillingServiceGrpc.getExportInvoiceMethod = getExportInvoiceMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.services.billing.v1alpha1.ExportInvoiceRequest, com.tcn.cloud.api.services.billing.v1alpha1.ExportInvoiceResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ExportInvoice"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.billing.v1alpha1.ExportInvoiceRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.billing.v1alpha1.ExportInvoiceResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new BillingServiceMethodDescriptorSupplier("ExportInvoice"))
+              .build();
+        }
+      }
+    }
+    return getExportInvoiceMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.GetActiveBillingPlanRequest,
       com.tcn.cloud.api.services.billing.v1alpha1.GetActiveBillingPlanResponse> getGetActiveBillingPlanMethod;
 
@@ -542,6 +573,24 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
+     * Exports an invoice.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified invoice doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
+     * </pre>
+     */
+    default void exportInvoice(com.tcn.cloud.api.services.billing.v1alpha1.ExportInvoiceRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.ExportInvoiceResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getExportInvoiceMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Returns the active billing plan for the ORG. The active billing plan is a billing plan whose
      * start_time has passed and end_time has not passed. If multiple satisfy that requirement, the
      * newest one is considered active. If no plan is active, it indicates the org is currently using
@@ -809,6 +858,25 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
+     * Exports an invoice.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified invoice doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
+     * </pre>
+     */
+    public void exportInvoice(com.tcn.cloud.api.services.billing.v1alpha1.ExportInvoiceRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.ExportInvoiceResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getExportInvoiceMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Returns the active billing plan for the ORG. The active billing plan is a billing plan whose
      * start_time has passed and end_time has not passed. If multiple satisfy that requirement, the
      * newest one is considered active. If no plan is active, it indicates the org is currently using
@@ -1070,6 +1138,24 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
+     * Exports an invoice.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified invoice doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
+     * </pre>
+     */
+    public com.tcn.cloud.api.services.billing.v1alpha1.ExportInvoiceResponse exportInvoice(com.tcn.cloud.api.services.billing.v1alpha1.ExportInvoiceRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getExportInvoiceMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Returns the active billing plan for the ORG. The active billing plan is a billing plan whose
      * start_time has passed and end_time has not passed. If multiple satisfy that requirement, the
      * newest one is considered active. If no plan is active, it indicates the org is currently using
@@ -1326,6 +1412,25 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
+     * Exports an invoice.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified invoice doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.billing.v1alpha1.ExportInvoiceResponse> exportInvoice(
+        com.tcn.cloud.api.services.billing.v1alpha1.ExportInvoiceRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getExportInvoiceMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Returns the active billing plan for the ORG. The active billing plan is a billing plan whose
      * start_time has passed and end_time has not passed. If multiple satisfy that requirement, the
      * newest one is considered active. If no plan is active, it indicates the org is currently using
@@ -1499,15 +1604,16 @@ public final class BillingServiceGrpc {
   private static final int METHODID_CREATE_INVOICE = 1;
   private static final int METHODID_DELETE_BILLING_PLAN = 2;
   private static final int METHODID_DELETE_INVOICE = 3;
-  private static final int METHODID_GET_ACTIVE_BILLING_PLAN = 4;
-  private static final int METHODID_GET_BILLING_PLAN = 5;
-  private static final int METHODID_GET_DEFAULT_BILLING_PLAN = 6;
-  private static final int METHODID_GET_INVOICE = 7;
-  private static final int METHODID_LIST_BILLING_PLANS = 8;
-  private static final int METHODID_LIST_INVOICES = 9;
-  private static final int METHODID_UPDATE_BILLING_PLAN = 10;
-  private static final int METHODID_UPDATE_DEFAULT_BILLING_PLAN = 11;
-  private static final int METHODID_UPDATE_INVOICE = 12;
+  private static final int METHODID_EXPORT_INVOICE = 4;
+  private static final int METHODID_GET_ACTIVE_BILLING_PLAN = 5;
+  private static final int METHODID_GET_BILLING_PLAN = 6;
+  private static final int METHODID_GET_DEFAULT_BILLING_PLAN = 7;
+  private static final int METHODID_GET_INVOICE = 8;
+  private static final int METHODID_LIST_BILLING_PLANS = 9;
+  private static final int METHODID_LIST_INVOICES = 10;
+  private static final int METHODID_UPDATE_BILLING_PLAN = 11;
+  private static final int METHODID_UPDATE_DEFAULT_BILLING_PLAN = 12;
+  private static final int METHODID_UPDATE_INVOICE = 13;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1541,6 +1647,10 @@ public final class BillingServiceGrpc {
         case METHODID_DELETE_INVOICE:
           serviceImpl.deleteInvoice((com.tcn.cloud.api.services.billing.v1alpha1.DeleteInvoiceRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.DeleteInvoiceResponse>) responseObserver);
+          break;
+        case METHODID_EXPORT_INVOICE:
+          serviceImpl.exportInvoice((com.tcn.cloud.api.services.billing.v1alpha1.ExportInvoiceRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.ExportInvoiceResponse>) responseObserver);
           break;
         case METHODID_GET_ACTIVE_BILLING_PLAN:
           serviceImpl.getActiveBillingPlan((com.tcn.cloud.api.services.billing.v1alpha1.GetActiveBillingPlanRequest) request,
@@ -1624,6 +1734,13 @@ public final class BillingServiceGrpc {
               com.tcn.cloud.api.services.billing.v1alpha1.DeleteInvoiceRequest,
               com.tcn.cloud.api.services.billing.v1alpha1.DeleteInvoiceResponse>(
                 service, METHODID_DELETE_INVOICE)))
+        .addMethod(
+          getExportInvoiceMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.services.billing.v1alpha1.ExportInvoiceRequest,
+              com.tcn.cloud.api.services.billing.v1alpha1.ExportInvoiceResponse>(
+                service, METHODID_EXPORT_INVOICE)))
         .addMethod(
           getGetActiveBillingPlanMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -1739,6 +1856,7 @@ public final class BillingServiceGrpc {
               .addMethod(getCreateInvoiceMethod())
               .addMethod(getDeleteBillingPlanMethod())
               .addMethod(getDeleteInvoiceMethod())
+              .addMethod(getExportInvoiceMethod())
               .addMethod(getGetActiveBillingPlanMethod())
               .addMethod(getGetBillingPlanMethod())
               .addMethod(getGetDefaultBillingPlanMethod())

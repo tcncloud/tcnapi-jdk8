@@ -28,7 +28,7 @@ public final class ServiceProto {
       "s/authz.proto\032\034google/api/annotations.pr" +
       "oto\032(services/billing/v1alpha1/invoices." +
       "proto\032%services/billing/v1alpha1/plans.p" +
-      "roto2\314\023\n\016BillingService\022\301\001\n\021CreateBillin" +
+      "roto2\200\025\n\016BillingService\022\301\001\n\021CreateBillin" +
       "gPlan\0223.services.billing.v1alpha1.Create" +
       "BillingPlanRequest\0324.services.billing.v1" +
       "alpha1.CreateBillingPlanResponse\"A\272\270\221\002\005\n" +
@@ -47,55 +47,60 @@ public final class ServiceProto {
       "1.DeleteInvoiceRequest\0320.services.billin" +
       "g.v1alpha1.DeleteInvoiceResponse\"=\272\270\221\002\005\n" +
       "\003\010\310\001\202\323\344\223\002-\"(/services/billing/v1alpha1/d" +
-      "eleteinvoice:\001*\022\315\001\n\024GetActiveBillingPlan" +
-      "\0226.services.billing.v1alpha1.GetActiveBi" +
-      "llingPlanRequest\0327.services.billing.v1al" +
-      "pha1.GetActiveBillingPlanResponse\"D\272\270\221\002\005" +
-      "\n\003\010\310\001\202\323\344\223\0024\"//services/billing/v1alpha1/" +
-      "getactivebillingplan:\001*\022\265\001\n\016GetBillingPl" +
-      "an\0220.services.billing.v1alpha1.GetBillin" +
-      "gPlanRequest\0321.services.billing.v1alpha1" +
-      ".GetBillingPlanResponse\">\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002" +
-      ".\")/services/billing/v1alpha1/getbilling" +
-      "plan:\001*\022\321\001\n\025GetDefaultBillingPlan\0227.serv" +
-      "ices.billing.v1alpha1.GetDefaultBillingP" +
-      "lanRequest\0328.services.billing.v1alpha1.G" +
-      "etDefaultBillingPlanResponse\"E\272\270\221\002\005\n\003\010\310\001" +
-      "\202\323\344\223\0025\"0/services/billing/v1alpha1/getde" +
-      "faultbillingplan:\001*\022\245\001\n\nGetInvoice\022,.ser" +
-      "vices.billing.v1alpha1.GetInvoiceRequest" +
-      "\032-.services.billing.v1alpha1.GetInvoiceR" +
-      "esponse\":\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002*\"%/services/bil" +
-      "ling/v1alpha1/getinvoice:\001*\022\275\001\n\020ListBill" +
-      "ingPlans\0222.services.billing.v1alpha1.Lis" +
-      "tBillingPlansRequest\0323.services.billing." +
-      "v1alpha1.ListBillingPlansResponse\"@\272\270\221\002\005" +
-      "\n\003\010\310\001\202\323\344\223\0020\"+/services/billing/v1alpha1/" +
-      "listbillingplans:\001*\022\255\001\n\014ListInvoices\022..s" +
-      "ervices.billing.v1alpha1.ListInvoicesReq" +
-      "uest\032/.services.billing.v1alpha1.ListInv" +
-      "oicesResponse\"<\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002,\"\'/servic" +
-      "es/billing/v1alpha1/listinvoices:\001*\022\301\001\n\021" +
-      "UpdateBillingPlan\0223.services.billing.v1a" +
-      "lpha1.UpdateBillingPlanRequest\0324.service" +
-      "s.billing.v1alpha1.UpdateBillingPlanResp" +
-      "onse\"A\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0021\",/services/billin" +
-      "g/v1alpha1/updatebillingplan:\001*\022\335\001\n\030Upda" +
-      "teDefaultBillingPlan\022:.services.billing." +
-      "v1alpha1.UpdateDefaultBillingPlanRequest" +
-      "\032;.services.billing.v1alpha1.UpdateDefau" +
-      "ltBillingPlanResponse\"H\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0028\"" +
-      "3/services/billing/v1alpha1/updatedefaul" +
-      "tbillingplan:\001*\022\261\001\n\rUpdateInvoice\022/.serv" +
-      "ices.billing.v1alpha1.UpdateInvoiceReque" +
-      "st\0320.services.billing.v1alpha1.UpdateInv" +
+      "eleteinvoice:\001*\022\261\001\n\rExportInvoice\022/.serv" +
+      "ices.billing.v1alpha1.ExportInvoiceReque" +
+      "st\0320.services.billing.v1alpha1.ExportInv" +
       "oiceResponse\"=\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002-\"(/service" +
-      "s/billing/v1alpha1/updateinvoice:\001*B\301\001\n+" +
-      "com.tcn.cloud.api.services.billing.v1alp" +
-      "ha1B\014ServiceProtoP\001\242\002\003SBX\252\002\031Services.Bil" +
-      "ling.V1alpha1\312\002\031Services\\Billing\\V1alpha" +
-      "1\342\002%Services\\Billing\\V1alpha1\\GPBMetadat" +
-      "a\352\002\033Services::Billing::V1alpha1b\006proto3"
+      "s/billing/v1alpha1/exportinvoice:\001*\022\315\001\n\024" +
+      "GetActiveBillingPlan\0226.services.billing." +
+      "v1alpha1.GetActiveBillingPlanRequest\0327.s" +
+      "ervices.billing.v1alpha1.GetActiveBillin" +
+      "gPlanResponse\"D\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0024\"//servic" +
+      "es/billing/v1alpha1/getactivebillingplan" +
+      ":\001*\022\265\001\n\016GetBillingPlan\0220.services.billin" +
+      "g.v1alpha1.GetBillingPlanRequest\0321.servi" +
+      "ces.billing.v1alpha1.GetBillingPlanRespo" +
+      "nse\">\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002.\")/services/billing" +
+      "/v1alpha1/getbillingplan:\001*\022\321\001\n\025GetDefau" +
+      "ltBillingPlan\0227.services.billing.v1alpha" +
+      "1.GetDefaultBillingPlanRequest\0328.service" +
+      "s.billing.v1alpha1.GetDefaultBillingPlan" +
+      "Response\"E\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0025\"0/services/bi" +
+      "lling/v1alpha1/getdefaultbillingplan:\001*\022" +
+      "\245\001\n\nGetInvoice\022,.services.billing.v1alph" +
+      "a1.GetInvoiceRequest\032-.services.billing." +
+      "v1alpha1.GetInvoiceResponse\":\272\270\221\002\005\n\003\010\310\001\202" +
+      "\323\344\223\002*\"%/services/billing/v1alpha1/getinv" +
+      "oice:\001*\022\275\001\n\020ListBillingPlans\0222.services." +
+      "billing.v1alpha1.ListBillingPlansRequest" +
+      "\0323.services.billing.v1alpha1.ListBilling" +
+      "PlansResponse\"@\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0020\"+/servic" +
+      "es/billing/v1alpha1/listbillingplans:\001*\022" +
+      "\255\001\n\014ListInvoices\022..services.billing.v1al" +
+      "pha1.ListInvoicesRequest\032/.services.bill" +
+      "ing.v1alpha1.ListInvoicesResponse\"<\272\270\221\002\005" +
+      "\n\003\010\310\001\202\323\344\223\002,\"\'/services/billing/v1alpha1/" +
+      "listinvoices:\001*\022\301\001\n\021UpdateBillingPlan\0223." +
+      "services.billing.v1alpha1.UpdateBillingP" +
+      "lanRequest\0324.services.billing.v1alpha1.U" +
+      "pdateBillingPlanResponse\"A\272\270\221\002\005\n\003\010\310\001\202\323\344\223" +
+      "\0021\",/services/billing/v1alpha1/updatebil" +
+      "lingplan:\001*\022\335\001\n\030UpdateDefaultBillingPlan" +
+      "\022:.services.billing.v1alpha1.UpdateDefau" +
+      "ltBillingPlanRequest\032;.services.billing." +
+      "v1alpha1.UpdateDefaultBillingPlanRespons" +
+      "e\"H\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0028\"3/services/billing/v" +
+      "1alpha1/updatedefaultbillingplan:\001*\022\261\001\n\r" +
+      "UpdateInvoice\022/.services.billing.v1alpha" +
+      "1.UpdateInvoiceRequest\0320.services.billin" +
+      "g.v1alpha1.UpdateInvoiceResponse\"=\272\270\221\002\005\n" +
+      "\003\010\310\001\202\323\344\223\002-\"(/services/billing/v1alpha1/u" +
+      "pdateinvoice:\001*B\301\001\n+com.tcn.cloud.api.se" +
+      "rvices.billing.v1alpha1B\014ServiceProtoP\001\242" +
+      "\002\003SBX\252\002\031Services.Billing.V1alpha1\312\002\031Serv" +
+      "ices\\Billing\\V1alpha1\342\002%Services\\Billing" +
+      "\\V1alpha1\\GPBMetadata\352\002\033Services::Billin" +
+      "g::V1alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
