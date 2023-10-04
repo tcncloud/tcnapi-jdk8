@@ -412,6 +412,38 @@ public enum EventType
   OMNICHANNEL_PAYMENT_LINK_SENT(357),
   /**
    * <pre>
+   *accepted manual approve task
+   * </pre>
+   *
+   * <code>OMNICHANNEL_MANUAL_APPROVE_TASK_ACCEPTED = 358;</code>
+   */
+  OMNICHANNEL_MANUAL_APPROVE_TASK_ACCEPTED(358),
+  /**
+   * <pre>
+   *rejected manual approve task
+   * </pre>
+   *
+   * <code>OMNICHANNEL_MANUAL_APPROVE_TASK_REJECTED = 359;</code>
+   */
+  OMNICHANNEL_MANUAL_APPROVE_TASK_REJECTED(359),
+  /**
+   * <pre>
+   *timeout of manual approve task
+   * </pre>
+   *
+   * <code>OMNICHANNEL_MANUAL_APPROVE_TASK_TIMEOUT = 360;</code>
+   */
+  OMNICHANNEL_MANUAL_APPROVE_TASK_TIMEOUT(360),
+  /**
+   * <pre>
+   *requeue of manual approve task
+   * </pre>
+   *
+   * <code>OMNICHANNEL_MANUAL_APPROVE_TASK_REQUEUE = 361;</code>
+   */
+  OMNICHANNEL_MANUAL_APPROVE_TASK_REQUEUE(361),
+  /**
+   * <pre>
    * ASM
    * agent logs into asm
    * </pre>
@@ -1144,6 +1176,38 @@ public enum EventType
   public static final int OMNICHANNEL_PAYMENT_LINK_SENT_VALUE = 357;
   /**
    * <pre>
+   *accepted manual approve task
+   * </pre>
+   *
+   * <code>OMNICHANNEL_MANUAL_APPROVE_TASK_ACCEPTED = 358;</code>
+   */
+  public static final int OMNICHANNEL_MANUAL_APPROVE_TASK_ACCEPTED_VALUE = 358;
+  /**
+   * <pre>
+   *rejected manual approve task
+   * </pre>
+   *
+   * <code>OMNICHANNEL_MANUAL_APPROVE_TASK_REJECTED = 359;</code>
+   */
+  public static final int OMNICHANNEL_MANUAL_APPROVE_TASK_REJECTED_VALUE = 359;
+  /**
+   * <pre>
+   *timeout of manual approve task
+   * </pre>
+   *
+   * <code>OMNICHANNEL_MANUAL_APPROVE_TASK_TIMEOUT = 360;</code>
+   */
+  public static final int OMNICHANNEL_MANUAL_APPROVE_TASK_TIMEOUT_VALUE = 360;
+  /**
+   * <pre>
+   *requeue of manual approve task
+   * </pre>
+   *
+   * <code>OMNICHANNEL_MANUAL_APPROVE_TASK_REQUEUE = 361;</code>
+   */
+  public static final int OMNICHANNEL_MANUAL_APPROVE_TASK_REQUEUE_VALUE = 361;
+  /**
+   * <pre>
    * ASM
    * agent logs into asm
    * </pre>
@@ -1563,6 +1627,10 @@ public enum EventType
       case 355: return OMNICHANNEL_CUSTOMER_MESSAGE_UNITS;
       case 356: return OMNICHANNEL_SYSTEM_MESSAGE_UNITS;
       case 357: return OMNICHANNEL_PAYMENT_LINK_SENT;
+      case 358: return OMNICHANNEL_MANUAL_APPROVE_TASK_ACCEPTED;
+      case 359: return OMNICHANNEL_MANUAL_APPROVE_TASK_REJECTED;
+      case 360: return OMNICHANNEL_MANUAL_APPROVE_TASK_TIMEOUT;
+      case 361: return OMNICHANNEL_MANUAL_APPROVE_TASK_REQUEUE;
       case 400: return ASM_AGENT_LOGIN;
       case 401: return ASM_OPEN_VOICE;
       case 402: return ASM_OPEN_OMNI_AGENT;
