@@ -423,6 +423,44 @@ private static final long serialVersionUID = 0L;
     return updateTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updateTime_;
   }
 
+  public static final int DELETE_TIME_FIELD_NUMBER = 11;
+  private com.google.protobuf.Timestamp deleteTime_;
+  /**
+   * <pre>
+   * the time this rate definition was deleted (if applicable)
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp delete_time = 11 [json_name = "deleteTime"];</code>
+   * @return Whether the deleteTime field is set.
+   */
+  @java.lang.Override
+  public boolean hasDeleteTime() {
+    return deleteTime_ != null;
+  }
+  /**
+   * <pre>
+   * the time this rate definition was deleted (if applicable)
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp delete_time = 11 [json_name = "deleteTime"];</code>
+   * @return The deleteTime.
+   */
+  @java.lang.Override
+  public com.google.protobuf.Timestamp getDeleteTime() {
+    return deleteTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : deleteTime_;
+  }
+  /**
+   * <pre>
+   * the time this rate definition was deleted (if applicable)
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp delete_time = 11 [json_name = "deleteTime"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.TimestampOrBuilder getDeleteTimeOrBuilder() {
+    return deleteTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : deleteTime_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -466,6 +504,9 @@ private static final long serialVersionUID = 0L;
     }
     if (updateTime_ != null) {
       output.writeMessage(10, getUpdateTime());
+    }
+    if (deleteTime_ != null) {
+      output.writeMessage(11, getDeleteTime());
     }
     getUnknownFields().writeTo(output);
   }
@@ -513,6 +554,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(10, getUpdateTime());
     }
+    if (deleteTime_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(11, getDeleteTime());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -557,6 +602,11 @@ private static final long serialVersionUID = 0L;
       if (!getUpdateTime()
           .equals(other.getUpdateTime())) return false;
     }
+    if (hasDeleteTime() != other.hasDeleteTime()) return false;
+    if (hasDeleteTime()) {
+      if (!getDeleteTime()
+          .equals(other.getDeleteTime())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -595,6 +645,10 @@ private static final long serialVersionUID = 0L;
     if (hasUpdateTime()) {
       hash = (37 * hash) + UPDATE_TIME_FIELD_NUMBER;
       hash = (53 * hash) + getUpdateTime().hashCode();
+    }
+    if (hasDeleteTime()) {
+      hash = (37 * hash) + DELETE_TIME_FIELD_NUMBER;
+      hash = (53 * hash) + getDeleteTime().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -757,6 +811,11 @@ private static final long serialVersionUID = 0L;
         updateTimeBuilder_.dispose();
         updateTimeBuilder_ = null;
       }
+      deleteTime_ = null;
+      if (deleteTimeBuilder_ != null) {
+        deleteTimeBuilder_.dispose();
+        deleteTimeBuilder_ = null;
+      }
       return this;
     }
 
@@ -827,6 +886,11 @@ private static final long serialVersionUID = 0L;
         result.updateTime_ = updateTimeBuilder_ == null
             ? updateTime_
             : updateTimeBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        result.deleteTime_ = deleteTimeBuilder_ == null
+            ? deleteTime_
+            : deleteTimeBuilder_.build();
       }
     }
 
@@ -909,6 +973,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasUpdateTime()) {
         mergeUpdateTime(other.getUpdateTime());
+      }
+      if (other.hasDeleteTime()) {
+        mergeDeleteTime(other.getDeleteTime());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -994,6 +1061,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000200;
               break;
             } // case 82
+            case 90: {
+              input.readMessage(
+                  getDeleteTimeFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000400;
+              break;
+            } // case 90
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2134,6 +2208,161 @@ private static final long serialVersionUID = 0L;
         updateTime_ = null;
       }
       return updateTimeBuilder_;
+    }
+
+    private com.google.protobuf.Timestamp deleteTime_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> deleteTimeBuilder_;
+    /**
+     * <pre>
+     * the time this rate definition was deleted (if applicable)
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delete_time = 11 [json_name = "deleteTime"];</code>
+     * @return Whether the deleteTime field is set.
+     */
+    public boolean hasDeleteTime() {
+      return ((bitField0_ & 0x00000400) != 0);
+    }
+    /**
+     * <pre>
+     * the time this rate definition was deleted (if applicable)
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delete_time = 11 [json_name = "deleteTime"];</code>
+     * @return The deleteTime.
+     */
+    public com.google.protobuf.Timestamp getDeleteTime() {
+      if (deleteTimeBuilder_ == null) {
+        return deleteTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : deleteTime_;
+      } else {
+        return deleteTimeBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * the time this rate definition was deleted (if applicable)
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delete_time = 11 [json_name = "deleteTime"];</code>
+     */
+    public Builder setDeleteTime(com.google.protobuf.Timestamp value) {
+      if (deleteTimeBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        deleteTime_ = value;
+      } else {
+        deleteTimeBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the time this rate definition was deleted (if applicable)
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delete_time = 11 [json_name = "deleteTime"];</code>
+     */
+    public Builder setDeleteTime(
+        com.google.protobuf.Timestamp.Builder builderForValue) {
+      if (deleteTimeBuilder_ == null) {
+        deleteTime_ = builderForValue.build();
+      } else {
+        deleteTimeBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the time this rate definition was deleted (if applicable)
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delete_time = 11 [json_name = "deleteTime"];</code>
+     */
+    public Builder mergeDeleteTime(com.google.protobuf.Timestamp value) {
+      if (deleteTimeBuilder_ == null) {
+        if (((bitField0_ & 0x00000400) != 0) &&
+          deleteTime_ != null &&
+          deleteTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+          getDeleteTimeBuilder().mergeFrom(value);
+        } else {
+          deleteTime_ = value;
+        }
+      } else {
+        deleteTimeBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the time this rate definition was deleted (if applicable)
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delete_time = 11 [json_name = "deleteTime"];</code>
+     */
+    public Builder clearDeleteTime() {
+      bitField0_ = (bitField0_ & ~0x00000400);
+      deleteTime_ = null;
+      if (deleteTimeBuilder_ != null) {
+        deleteTimeBuilder_.dispose();
+        deleteTimeBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the time this rate definition was deleted (if applicable)
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delete_time = 11 [json_name = "deleteTime"];</code>
+     */
+    public com.google.protobuf.Timestamp.Builder getDeleteTimeBuilder() {
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return getDeleteTimeFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * the time this rate definition was deleted (if applicable)
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delete_time = 11 [json_name = "deleteTime"];</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getDeleteTimeOrBuilder() {
+      if (deleteTimeBuilder_ != null) {
+        return deleteTimeBuilder_.getMessageOrBuilder();
+      } else {
+        return deleteTime_ == null ?
+            com.google.protobuf.Timestamp.getDefaultInstance() : deleteTime_;
+      }
+    }
+    /**
+     * <pre>
+     * the time this rate definition was deleted (if applicable)
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delete_time = 11 [json_name = "deleteTime"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+        getDeleteTimeFieldBuilder() {
+      if (deleteTimeBuilder_ == null) {
+        deleteTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                getDeleteTime(),
+                getParentForChildren(),
+                isClean());
+        deleteTime_ = null;
+      }
+      return deleteTimeBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

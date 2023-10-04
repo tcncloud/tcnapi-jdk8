@@ -39,7 +39,7 @@ public final class RatesProto {
       "o\032\037google/protobuf/timestamp.proto\0321serv" +
       "ices/billing/entities/v1alpha1/matching." +
       "proto\0320services/billing/entities/v1alpha" +
-      "1/modules.proto\"\273\005\n\016RateDefinition\022,\n\022ra" +
+      "1/modules.proto\"\370\005\n\016RateDefinition\022,\n\022ra" +
       "te_definition_id\030\001 \001(\tR\020rateDefinitionId" +
       "\022&\n\017billing_plan_id\030\002 \001(\tR\rbillingPlanId" +
       "\0227\n\030rate_definition_group_id\030\003 \001(\tR\025rate" +
@@ -56,201 +56,202 @@ public final class RatesProto {
       "pha1.MatchingConfigR\016matchingConfig\022;\n\013c" +
       "reate_time\030\t \001(\0132\032.google.protobuf.Times" +
       "tampR\ncreateTime\022;\n\013update_time\030\n \001(\0132\032." +
-      "google.protobuf.TimestampR\nupdateTime\"\225\'" +
-      "\n\024RateDefinitionConfig\022_\n\022agent_seats_co" +
-      "nfig\030\002 \001(\0132/.services.billing.entities.v" +
-      "1alpha1.BasicConfigH\000R\020agentSeatsConfig\022" +
-      "u\n\036agent_text_message_chat_config\030d \001(\0132" +
-      "/.services.billing.entities.v1alpha1.Bas" +
-      "icConfigH\000R\032agentTextMessageChatConfig\022\206" +
-      "\001\n\'agent_text_message_email_message_conf" +
-      "ig\030e \001(\0132/.services.billing.entities.v1a" +
-      "lpha1.BasicConfigH\000R\"agentTextMessageEma" +
-      "ilMessageConfig\022\206\001\n$agent_text_message_e" +
-      "mail_size_config\030f \001(\01325.services.billin" +
-      "g.entities.v1alpha1.BasicAmountConfigH\000R" +
-      "\037agentTextMessageEmailSizeConfig\022s\n\035agen" +
-      "t_text_message_sms_config\030g \001(\0132/.servic" +
+      "google.protobuf.TimestampR\nupdateTime\022;\n" +
+      "\013delete_time\030\013 \001(\0132\032.google.protobuf.Tim" +
+      "estampR\ndeleteTime\"\225\'\n\024RateDefinitionCon" +
+      "fig\022_\n\022agent_seats_config\030\002 \001(\0132/.servic" +
       "es.billing.entities.v1alpha1.BasicConfig" +
-      "H\000R\031agentTextMessageSmsConfig\022\204\001\n&task_m" +
-      "essage_sent_email_message_config\030h \001(\0132/" +
-      ".services.billing.entities.v1alpha1.Basi" +
-      "cConfigH\000R!taskMessageSentEmailMessageCo" +
-      "nfig\022\204\001\n#task_message_sent_email_size_co" +
-      "nfig\030i \001(\01325.services.billing.entities.v" +
-      "1alpha1.BasicAmountConfigH\000R\036taskMessage" +
-      "SentEmailSizeConfig\022q\n\034task_message_sent" +
-      "_sms_config\030j \001(\0132/.services.billing.ent" +
-      "ities.v1alpha1.BasicConfigH\000R\030taskMessag" +
-      "eSentSmsConfig\022p\n\033connected_inbox_poll_c" +
-      "onfig\030k \001(\0132/.services.billing.entities." +
-      "v1alpha1.BasicConfigH\000R\030connectedInboxPo" +
-      "llConfig\022y\n manager_text_message_chat_co" +
-      "nfig\030l \001(\0132/.services.billing.entities.v" +
-      "1alpha1.BasicConfigH\000R\034managerTextMessag" +
-      "eChatConfig\022\212\001\n)manager_text_message_ema" +
-      "il_message_config\030m \001(\0132/.services.billi" +
-      "ng.entities.v1alpha1.BasicConfigH\000R$mana" +
-      "gerTextMessageEmailMessageConfig\022\212\001\n&man" +
-      "ager_text_message_email_size_config\030n \001(" +
-      "\01325.services.billing.entities.v1alpha1.B" +
-      "asicAmountConfigH\000R!managerTextMessageEm" +
-      "ailSizeConfig\022w\n\037manager_text_message_sm" +
-      "s_config\030o \001(\0132/.services.billing.entiti" +
-      "es.v1alpha1.BasicConfigH\000R\033managerTextMe" +
-      "ssageSmsConfig\022{\n!customer_text_message_" +
-      "chat_config\030p \001(\0132/.services.billing.ent" +
-      "ities.v1alpha1.BasicConfigH\000R\035customerTe" +
-      "xtMessageChatConfig\022\214\001\n*customer_text_me" +
-      "ssage_email_message_config\030q \001(\0132/.servi" +
-      "ces.billing.entities.v1alpha1.BasicConfi" +
-      "gH\000R%customerTextMessageEmailMessageConf" +
-      "ig\022\214\001\n\'customer_text_message_email_size_" +
-      "config\030r \001(\01325.services.billing.entities" +
-      ".v1alpha1.BasicAmountConfigH\000R\"customerT" +
-      "extMessageEmailSizeConfig\022y\n customer_te" +
-      "xt_message_sms_config\030s \001(\0132/.services.b" +
-      "illing.entities.v1alpha1.BasicConfigH\000R\034" +
-      "customerTextMessageSmsConfig\022\204\001\n#agent_t" +
-      "ext_message_chat_size_config\030t \001(\01325.ser" +
-      "vices.billing.entities.v1alpha1.BasicAmo" +
-      "untConfigH\000R\036agentTextMessageChatSizeCon" +
-      "fig\022\210\001\n%manager_text_message_chat_size_c" +
-      "onfig\030u \001(\01325.services.billing.entities." +
-      "v1alpha1.BasicAmountConfigH\000R managerTex" +
-      "tMessageChatSizeConfig\022\212\001\n&customer_text" +
-      "_message_chat_size_config\030v \001(\01325.servic" +
-      "es.billing.entities.v1alpha1.BasicAmount" +
-      "ConfigH\000R!customerTextMessageChatSizeCon" +
-      "fig\022v\n\036connected_inbox_created_config\030w " +
-      "\001(\0132/.services.billing.entities.v1alpha1" +
-      ".BasicConfigH\000R\033connectedInboxCreatedCon" +
-      "fig\022\202\001\n\"agent_text_message_sms_size_conf" +
-      "ig\030x \001(\01325.services.billing.entities.v1a" +
-      "lpha1.BasicAmountConfigH\000R\035agentTextMess" +
-      "ageSmsSizeConfig\022\206\001\n$manager_text_messag" +
-      "e_sms_size_config\030y \001(\01325.services.billi" +
-      "ng.entities.v1alpha1.BasicAmountConfigH\000" +
-      "R\037managerTextMessageSmsSizeConfig\022\210\001\n%cu" +
-      "stomer_text_message_sms_size_config\030z \001(" +
-      "\01325.services.billing.entities.v1alpha1.B" +
-      "asicAmountConfigH\000R customerTextMessageS" +
-      "msSizeConfig\022\200\001\n!task_message_sent_sms_s" +
-      "ize_config\030{ \001(\01325.services.billing.enti" +
-      "ties.v1alpha1.BasicAmountConfigH\000R\034taskM" +
-      "essageSentSmsSizeConfig\022w\n\037agent_chat_me" +
-      "ssage_units_config\030| \001(\0132/.services.bill" +
-      "ing.entities.v1alpha1.BasicConfigH\000R\033age" +
-      "ntChatMessageUnitsConfig\022y\n agent_email_" +
-      "message_units_config\030} \001(\0132/.services.bi" +
-      "lling.entities.v1alpha1.BasicConfigH\000R\034a" +
-      "gentEmailMessageUnitsConfig\022u\n\036agent_sms" +
-      "_message_units_config\030~ \001(\0132/.services.b" +
-      "illing.entities.v1alpha1.BasicConfigH\000R\032" +
-      "agentSmsMessageUnitsConfig\022{\n!manager_ch" +
-      "at_message_units_config\030\177 \001(\0132/.services" +
+      "H\000R\020agentSeatsConfig\022u\n\036agent_text_messa" +
+      "ge_chat_config\030d \001(\0132/.services.billing." +
+      "entities.v1alpha1.BasicConfigH\000R\032agentTe" +
+      "xtMessageChatConfig\022\206\001\n\'agent_text_messa" +
+      "ge_email_message_config\030e \001(\0132/.services" +
       ".billing.entities.v1alpha1.BasicConfigH\000" +
-      "R\035managerChatMessageUnitsConfig\022~\n\"manag" +
-      "er_email_message_units_config\030\200\001 \001(\0132/.s" +
-      "ervices.billing.entities.v1alpha1.BasicC" +
-      "onfigH\000R\036managerEmailMessageUnitsConfig\022" +
-      "z\n manager_sms_message_units_config\030\201\001 \001" +
-      "(\0132/.services.billing.entities.v1alpha1." +
-      "BasicConfigH\000R\034managerSmsMessageUnitsCon" +
-      "fig\022~\n\"customer_chat_message_units_confi" +
-      "g\030\202\001 \001(\0132/.services.billing.entities.v1a" +
-      "lpha1.BasicConfigH\000R\036customerChatMessage" +
-      "UnitsConfig\022\200\001\n#customer_email_message_u" +
-      "nits_config\030\203\001 \001(\0132/.services.billing.en" +
-      "tities.v1alpha1.BasicConfigH\000R\037customerE" +
-      "mailMessageUnitsConfig\022|\n!customer_sms_m" +
-      "essage_units_config\030\204\001 \001(\0132/.services.bi" +
-      "lling.entities.v1alpha1.BasicConfigH\000R\035c" +
-      "ustomerSmsMessageUnitsConfig\022z\n system_c" +
-      "hat_message_units_config\030\205\001 \001(\0132/.servic" +
-      "es.billing.entities.v1alpha1.BasicConfig" +
-      "H\000R\034systemChatMessageUnitsConfig\022|\n!syst" +
-      "em_email_message_units_config\030\206\001 \001(\0132/.s" +
-      "ervices.billing.entities.v1alpha1.BasicC" +
-      "onfigH\000R\035systemEmailMessageUnitsConfig\022x" +
-      "\n\037system_sms_message_units_config\030\207\001 \001(\013" +
-      "2/.services.billing.entities.v1alpha1.Ba" +
-      "sicConfigH\000R\033systemSmsMessageUnitsConfig" +
-      "\022q\n\033compliance_rnd_query_config\030\310\001 \001(\0132/" +
+      "R\"agentTextMessageEmailMessageConfig\022\206\001\n" +
+      "$agent_text_message_email_size_config\030f " +
+      "\001(\01325.services.billing.entities.v1alpha1" +
+      ".BasicAmountConfigH\000R\037agentTextMessageEm" +
+      "ailSizeConfig\022s\n\035agent_text_message_sms_" +
+      "config\030g \001(\0132/.services.billing.entities" +
+      ".v1alpha1.BasicConfigH\000R\031agentTextMessag" +
+      "eSmsConfig\022\204\001\n&task_message_sent_email_m" +
+      "essage_config\030h \001(\0132/.services.billing.e" +
+      "ntities.v1alpha1.BasicConfigH\000R!taskMess" +
+      "ageSentEmailMessageConfig\022\204\001\n#task_messa" +
+      "ge_sent_email_size_config\030i \001(\01325.servic" +
+      "es.billing.entities.v1alpha1.BasicAmount" +
+      "ConfigH\000R\036taskMessageSentEmailSizeConfig" +
+      "\022q\n\034task_message_sent_sms_config\030j \001(\0132/" +
       ".services.billing.entities.v1alpha1.Basi" +
-      "cConfigH\000R\030complianceRndQueryConfig\022~\n\"c" +
-      "ompliance_rnd_query_cached_config\030\311\001 \001(\013" +
-      "2/.services.billing.entities.v1alpha1.Ba" +
-      "sicConfigH\000R\036complianceRndQueryCachedCon" +
-      "figB\010\n\006config*\247\023\n\030RateDefinitionConfigTy" +
-      "pe\022+\n\'RATE_DEFINITION_CONFIG_TYPE_UNSPEC" +
-      "IFIED\020\000\022$\n RATE_DEFINITION_CONFIG_TYPE_N" +
-      "OOP\020\001\022+\n\'RATE_DEFINITION_CONFIG_TYPE_AGE" +
-      "NT_SEATS\020\002\0227\n3RATE_DEFINITION_CONFIG_TYP" +
-      "E_AGENT_TEXT_MESSAGE_CHAT\020d\022@\n<RATE_DEFI" +
-      "NITION_CONFIG_TYPE_AGENT_TEXT_MESSAGE_EM" +
-      "AIL_MESSAGE\020e\022=\n9RATE_DEFINITION_CONFIG_" +
-      "TYPE_AGENT_TEXT_MESSAGE_EMAIL_SIZE\020f\0226\n2" +
-      "RATE_DEFINITION_CONFIG_TYPE_AGENT_TEXT_M" +
-      "ESSAGE_SMS\020g\022?\n;RATE_DEFINITION_CONFIG_T" +
-      "YPE_TASK_MESSAGE_SENT_EMAIL_MESSAGE\020h\022<\n" +
-      "8RATE_DEFINITION_CONFIG_TYPE_TASK_MESSAG" +
-      "E_SENT_EMAIL_SIZE\020i\0225\n1RATE_DEFINITION_C" +
-      "ONFIG_TYPE_TASK_MESSAGE_SENT_SMS\020j\0224\n0RA" +
-      "TE_DEFINITION_CONFIG_TYPE_CONNECTED_INBO" +
-      "X_POLL\020k\0229\n5RATE_DEFINITION_CONFIG_TYPE_" +
-      "MANAGER_TEXT_MESSAGE_CHAT\020l\022B\n>RATE_DEFI" +
-      "NITION_CONFIG_TYPE_MANAGER_TEXT_MESSAGE_" +
-      "EMAIL_MESSAGE\020m\022?\n;RATE_DEFINITION_CONFI" +
-      "G_TYPE_MANAGER_TEXT_MESSAGE_EMAIL_SIZE\020n" +
-      "\0228\n4RATE_DEFINITION_CONFIG_TYPE_MANAGER_" +
-      "TEXT_MESSAGE_SMS\020o\022:\n6RATE_DEFINITION_CO" +
-      "NFIG_TYPE_CUSTOMER_TEXT_MESSAGE_CHAT\020p\022C" +
-      "\n?RATE_DEFINITION_CONFIG_TYPE_CUSTOMER_T" +
-      "EXT_MESSAGE_EMAIL_MESSAGE\020q\022@\n<RATE_DEFI" +
-      "NITION_CONFIG_TYPE_CUSTOMER_TEXT_MESSAGE" +
-      "_EMAIL_SIZE\020r\0229\n5RATE_DEFINITION_CONFIG_" +
-      "TYPE_CUSTOMER_TEXT_MESSAGE_SMS\020s\022<\n8RATE" +
-      "_DEFINITION_CONFIG_TYPE_AGENT_TEXT_MESSA" +
-      "GE_CHAT_SIZE\020t\022>\n:RATE_DEFINITION_CONFIG" +
-      "_TYPE_MANAGER_TEXT_MESSAGE_CHAT_SIZE\020u\022?" +
-      "\n;RATE_DEFINITION_CONFIG_TYPE_CUSTOMER_T" +
-      "EXT_MESSAGE_CHAT_SIZE\020v\0227\n3RATE_DEFINITI" +
-      "ON_CONFIG_TYPE_CONNECTED_INBOX_CREATED\020w" +
-      "\022;\n7RATE_DEFINITION_CONFIG_TYPE_AGENT_TE" +
-      "XT_MESSAGE_SMS_SIZE\020x\022=\n9RATE_DEFINITION" +
-      "_CONFIG_TYPE_MANAGER_TEXT_MESSAGE_SMS_SI" +
-      "ZE\020y\022>\n:RATE_DEFINITION_CONFIG_TYPE_CUST" +
-      "OMER_TEXT_MESSAGE_SMS_SIZE\020z\022:\n6RATE_DEF" +
-      "INITION_CONFIG_TYPE_TASK_MESSAGE_SENT_SM" +
-      "S_SIZE\020{\0228\n4RATE_DEFINITION_CONFIG_TYPE_" +
-      "AGENT_CHAT_MESSAGE_UNITS\020|\0229\n5RATE_DEFIN" +
-      "ITION_CONFIG_TYPE_AGENT_EMAIL_MESSAGE_UN" +
-      "ITS\020}\0227\n3RATE_DEFINITION_CONFIG_TYPE_AGE" +
-      "NT_SMS_MESSAGE_UNITS\020~\022:\n6RATE_DEFINITIO" +
-      "N_CONFIG_TYPE_MANAGER_CHAT_MESSAGE_UNITS" +
-      "\020\177\022<\n7RATE_DEFINITION_CONFIG_TYPE_MANAGE" +
-      "R_EMAIL_MESSAGE_UNITS\020\200\001\022:\n5RATE_DEFINIT" +
-      "ION_CONFIG_TYPE_MANAGER_SMS_MESSAGE_UNIT" +
-      "S\020\201\001\022<\n7RATE_DEFINITION_CONFIG_TYPE_CUST" +
-      "OMER_CHAT_MESSAGE_UNITS\020\202\001\022=\n8RATE_DEFIN" +
-      "ITION_CONFIG_TYPE_CUSTOMER_EMAIL_MESSAGE" +
-      "_UNITS\020\203\001\022;\n6RATE_DEFINITION_CONFIG_TYPE" +
-      "_CUSTOMER_SMS_MESSAGE_UNITS\020\204\001\022:\n5RATE_D" +
-      "EFINITION_CONFIG_TYPE_SYSTEM_CHAT_MESSAG" +
-      "E_UNITS\020\205\001\022;\n6RATE_DEFINITION_CONFIG_TYP" +
-      "E_SYSTEM_EMAIL_MESSAGE_UNITS\020\206\001\0229\n4RATE_" +
-      "DEFINITION_CONFIG_TYPE_SYSTEM_SMS_MESSAG" +
-      "E_UNITS\020\207\001\0225\n0RATE_DEFINITION_CONFIG_TYP" +
-      "E_COMPLIANCE_RND_QUERY\020\310\001\022<\n7RATE_DEFINI" +
-      "TION_CONFIG_TYPE_COMPLIANCE_RND_QUERY_CA" +
-      "CHED\020\311\001B\355\001\n4com.tcn.cloud.api.services.b" +
-      "illing.entities.v1alpha1B\nRatesProtoP\001\242\002" +
-      "\003SBE\252\002\"Services.Billing.Entities.V1alpha" +
-      "1\312\002\"Services\\Billing\\Entities\\V1alpha1\342\002" +
-      ".Services\\Billing\\Entities\\V1alpha1\\GPBM" +
-      "etadata\352\002%Services::Billing::Entities::V" +
-      "1alpha1b\006proto3"
+      "cConfigH\000R\030taskMessageSentSmsConfig\022p\n\033c" +
+      "onnected_inbox_poll_config\030k \001(\0132/.servi" +
+      "ces.billing.entities.v1alpha1.BasicConfi" +
+      "gH\000R\030connectedInboxPollConfig\022y\n manager" +
+      "_text_message_chat_config\030l \001(\0132/.servic" +
+      "es.billing.entities.v1alpha1.BasicConfig" +
+      "H\000R\034managerTextMessageChatConfig\022\212\001\n)man" +
+      "ager_text_message_email_message_config\030m" +
+      " \001(\0132/.services.billing.entities.v1alpha" +
+      "1.BasicConfigH\000R$managerTextMessageEmail" +
+      "MessageConfig\022\212\001\n&manager_text_message_e" +
+      "mail_size_config\030n \001(\01325.services.billin" +
+      "g.entities.v1alpha1.BasicAmountConfigH\000R" +
+      "!managerTextMessageEmailSizeConfig\022w\n\037ma" +
+      "nager_text_message_sms_config\030o \001(\0132/.se" +
+      "rvices.billing.entities.v1alpha1.BasicCo" +
+      "nfigH\000R\033managerTextMessageSmsConfig\022{\n!c" +
+      "ustomer_text_message_chat_config\030p \001(\0132/" +
+      ".services.billing.entities.v1alpha1.Basi" +
+      "cConfigH\000R\035customerTextMessageChatConfig" +
+      "\022\214\001\n*customer_text_message_email_message" +
+      "_config\030q \001(\0132/.services.billing.entitie" +
+      "s.v1alpha1.BasicConfigH\000R%customerTextMe" +
+      "ssageEmailMessageConfig\022\214\001\n\'customer_tex" +
+      "t_message_email_size_config\030r \001(\01325.serv" +
+      "ices.billing.entities.v1alpha1.BasicAmou" +
+      "ntConfigH\000R\"customerTextMessageEmailSize" +
+      "Config\022y\n customer_text_message_sms_conf" +
+      "ig\030s \001(\0132/.services.billing.entities.v1a" +
+      "lpha1.BasicConfigH\000R\034customerTextMessage" +
+      "SmsConfig\022\204\001\n#agent_text_message_chat_si" +
+      "ze_config\030t \001(\01325.services.billing.entit" +
+      "ies.v1alpha1.BasicAmountConfigH\000R\036agentT" +
+      "extMessageChatSizeConfig\022\210\001\n%manager_tex" +
+      "t_message_chat_size_config\030u \001(\01325.servi" +
+      "ces.billing.entities.v1alpha1.BasicAmoun" +
+      "tConfigH\000R managerTextMessageChatSizeCon" +
+      "fig\022\212\001\n&customer_text_message_chat_size_" +
+      "config\030v \001(\01325.services.billing.entities" +
+      ".v1alpha1.BasicAmountConfigH\000R!customerT" +
+      "extMessageChatSizeConfig\022v\n\036connected_in" +
+      "box_created_config\030w \001(\0132/.services.bill" +
+      "ing.entities.v1alpha1.BasicConfigH\000R\033con" +
+      "nectedInboxCreatedConfig\022\202\001\n\"agent_text_" +
+      "message_sms_size_config\030x \001(\01325.services" +
+      ".billing.entities.v1alpha1.BasicAmountCo" +
+      "nfigH\000R\035agentTextMessageSmsSizeConfig\022\206\001" +
+      "\n$manager_text_message_sms_size_config\030y" +
+      " \001(\01325.services.billing.entities.v1alpha" +
+      "1.BasicAmountConfigH\000R\037managerTextMessag" +
+      "eSmsSizeConfig\022\210\001\n%customer_text_message" +
+      "_sms_size_config\030z \001(\01325.services.billin" +
+      "g.entities.v1alpha1.BasicAmountConfigH\000R" +
+      " customerTextMessageSmsSizeConfig\022\200\001\n!ta" +
+      "sk_message_sent_sms_size_config\030{ \001(\01325." +
+      "services.billing.entities.v1alpha1.Basic" +
+      "AmountConfigH\000R\034taskMessageSentSmsSizeCo" +
+      "nfig\022w\n\037agent_chat_message_units_config\030" +
+      "| \001(\0132/.services.billing.entities.v1alph" +
+      "a1.BasicConfigH\000R\033agentChatMessageUnitsC" +
+      "onfig\022y\n agent_email_message_units_confi" +
+      "g\030} \001(\0132/.services.billing.entities.v1al" +
+      "pha1.BasicConfigH\000R\034agentEmailMessageUni" +
+      "tsConfig\022u\n\036agent_sms_message_units_conf" +
+      "ig\030~ \001(\0132/.services.billing.entities.v1a" +
+      "lpha1.BasicConfigH\000R\032agentSmsMessageUnit" +
+      "sConfig\022{\n!manager_chat_message_units_co" +
+      "nfig\030\177 \001(\0132/.services.billing.entities.v" +
+      "1alpha1.BasicConfigH\000R\035managerChatMessag" +
+      "eUnitsConfig\022~\n\"manager_email_message_un" +
+      "its_config\030\200\001 \001(\0132/.services.billing.ent" +
+      "ities.v1alpha1.BasicConfigH\000R\036managerEma" +
+      "ilMessageUnitsConfig\022z\n manager_sms_mess" +
+      "age_units_config\030\201\001 \001(\0132/.services.billi" +
+      "ng.entities.v1alpha1.BasicConfigH\000R\034mana" +
+      "gerSmsMessageUnitsConfig\022~\n\"customer_cha" +
+      "t_message_units_config\030\202\001 \001(\0132/.services" +
+      ".billing.entities.v1alpha1.BasicConfigH\000" +
+      "R\036customerChatMessageUnitsConfig\022\200\001\n#cus" +
+      "tomer_email_message_units_config\030\203\001 \001(\0132" +
+      "/.services.billing.entities.v1alpha1.Bas" +
+      "icConfigH\000R\037customerEmailMessageUnitsCon" +
+      "fig\022|\n!customer_sms_message_units_config" +
+      "\030\204\001 \001(\0132/.services.billing.entities.v1al" +
+      "pha1.BasicConfigH\000R\035customerSmsMessageUn" +
+      "itsConfig\022z\n system_chat_message_units_c" +
+      "onfig\030\205\001 \001(\0132/.services.billing.entities" +
+      ".v1alpha1.BasicConfigH\000R\034systemChatMessa" +
+      "geUnitsConfig\022|\n!system_email_message_un" +
+      "its_config\030\206\001 \001(\0132/.services.billing.ent" +
+      "ities.v1alpha1.BasicConfigH\000R\035systemEmai" +
+      "lMessageUnitsConfig\022x\n\037system_sms_messag" +
+      "e_units_config\030\207\001 \001(\0132/.services.billing" +
+      ".entities.v1alpha1.BasicConfigH\000R\033system" +
+      "SmsMessageUnitsConfig\022q\n\033compliance_rnd_" +
+      "query_config\030\310\001 \001(\0132/.services.billing.e" +
+      "ntities.v1alpha1.BasicConfigH\000R\030complian" +
+      "ceRndQueryConfig\022~\n\"compliance_rnd_query" +
+      "_cached_config\030\311\001 \001(\0132/.services.billing" +
+      ".entities.v1alpha1.BasicConfigH\000R\036compli" +
+      "anceRndQueryCachedConfigB\010\n\006config*\247\023\n\030R" +
+      "ateDefinitionConfigType\022+\n\'RATE_DEFINITI" +
+      "ON_CONFIG_TYPE_UNSPECIFIED\020\000\022$\n RATE_DEF" +
+      "INITION_CONFIG_TYPE_NOOP\020\001\022+\n\'RATE_DEFIN" +
+      "ITION_CONFIG_TYPE_AGENT_SEATS\020\002\0227\n3RATE_" +
+      "DEFINITION_CONFIG_TYPE_AGENT_TEXT_MESSAG" +
+      "E_CHAT\020d\022@\n<RATE_DEFINITION_CONFIG_TYPE_" +
+      "AGENT_TEXT_MESSAGE_EMAIL_MESSAGE\020e\022=\n9RA" +
+      "TE_DEFINITION_CONFIG_TYPE_AGENT_TEXT_MES" +
+      "SAGE_EMAIL_SIZE\020f\0226\n2RATE_DEFINITION_CON" +
+      "FIG_TYPE_AGENT_TEXT_MESSAGE_SMS\020g\022?\n;RAT" +
+      "E_DEFINITION_CONFIG_TYPE_TASK_MESSAGE_SE" +
+      "NT_EMAIL_MESSAGE\020h\022<\n8RATE_DEFINITION_CO" +
+      "NFIG_TYPE_TASK_MESSAGE_SENT_EMAIL_SIZE\020i" +
+      "\0225\n1RATE_DEFINITION_CONFIG_TYPE_TASK_MES" +
+      "SAGE_SENT_SMS\020j\0224\n0RATE_DEFINITION_CONFI" +
+      "G_TYPE_CONNECTED_INBOX_POLL\020k\0229\n5RATE_DE" +
+      "FINITION_CONFIG_TYPE_MANAGER_TEXT_MESSAG" +
+      "E_CHAT\020l\022B\n>RATE_DEFINITION_CONFIG_TYPE_" +
+      "MANAGER_TEXT_MESSAGE_EMAIL_MESSAGE\020m\022?\n;" +
+      "RATE_DEFINITION_CONFIG_TYPE_MANAGER_TEXT" +
+      "_MESSAGE_EMAIL_SIZE\020n\0228\n4RATE_DEFINITION" +
+      "_CONFIG_TYPE_MANAGER_TEXT_MESSAGE_SMS\020o\022" +
+      ":\n6RATE_DEFINITION_CONFIG_TYPE_CUSTOMER_" +
+      "TEXT_MESSAGE_CHAT\020p\022C\n?RATE_DEFINITION_C" +
+      "ONFIG_TYPE_CUSTOMER_TEXT_MESSAGE_EMAIL_M" +
+      "ESSAGE\020q\022@\n<RATE_DEFINITION_CONFIG_TYPE_" +
+      "CUSTOMER_TEXT_MESSAGE_EMAIL_SIZE\020r\0229\n5RA" +
+      "TE_DEFINITION_CONFIG_TYPE_CUSTOMER_TEXT_" +
+      "MESSAGE_SMS\020s\022<\n8RATE_DEFINITION_CONFIG_" +
+      "TYPE_AGENT_TEXT_MESSAGE_CHAT_SIZE\020t\022>\n:R" +
+      "ATE_DEFINITION_CONFIG_TYPE_MANAGER_TEXT_" +
+      "MESSAGE_CHAT_SIZE\020u\022?\n;RATE_DEFINITION_C" +
+      "ONFIG_TYPE_CUSTOMER_TEXT_MESSAGE_CHAT_SI" +
+      "ZE\020v\0227\n3RATE_DEFINITION_CONFIG_TYPE_CONN" +
+      "ECTED_INBOX_CREATED\020w\022;\n7RATE_DEFINITION" +
+      "_CONFIG_TYPE_AGENT_TEXT_MESSAGE_SMS_SIZE" +
+      "\020x\022=\n9RATE_DEFINITION_CONFIG_TYPE_MANAGE" +
+      "R_TEXT_MESSAGE_SMS_SIZE\020y\022>\n:RATE_DEFINI" +
+      "TION_CONFIG_TYPE_CUSTOMER_TEXT_MESSAGE_S" +
+      "MS_SIZE\020z\022:\n6RATE_DEFINITION_CONFIG_TYPE" +
+      "_TASK_MESSAGE_SENT_SMS_SIZE\020{\0228\n4RATE_DE" +
+      "FINITION_CONFIG_TYPE_AGENT_CHAT_MESSAGE_" +
+      "UNITS\020|\0229\n5RATE_DEFINITION_CONFIG_TYPE_A" +
+      "GENT_EMAIL_MESSAGE_UNITS\020}\0227\n3RATE_DEFIN" +
+      "ITION_CONFIG_TYPE_AGENT_SMS_MESSAGE_UNIT" +
+      "S\020~\022:\n6RATE_DEFINITION_CONFIG_TYPE_MANAG" +
+      "ER_CHAT_MESSAGE_UNITS\020\177\022<\n7RATE_DEFINITI" +
+      "ON_CONFIG_TYPE_MANAGER_EMAIL_MESSAGE_UNI" +
+      "TS\020\200\001\022:\n5RATE_DEFINITION_CONFIG_TYPE_MAN" +
+      "AGER_SMS_MESSAGE_UNITS\020\201\001\022<\n7RATE_DEFINI" +
+      "TION_CONFIG_TYPE_CUSTOMER_CHAT_MESSAGE_U" +
+      "NITS\020\202\001\022=\n8RATE_DEFINITION_CONFIG_TYPE_C" +
+      "USTOMER_EMAIL_MESSAGE_UNITS\020\203\001\022;\n6RATE_D" +
+      "EFINITION_CONFIG_TYPE_CUSTOMER_SMS_MESSA" +
+      "GE_UNITS\020\204\001\022:\n5RATE_DEFINITION_CONFIG_TY" +
+      "PE_SYSTEM_CHAT_MESSAGE_UNITS\020\205\001\022;\n6RATE_" +
+      "DEFINITION_CONFIG_TYPE_SYSTEM_EMAIL_MESS" +
+      "AGE_UNITS\020\206\001\0229\n4RATE_DEFINITION_CONFIG_T" +
+      "YPE_SYSTEM_SMS_MESSAGE_UNITS\020\207\001\0225\n0RATE_" +
+      "DEFINITION_CONFIG_TYPE_COMPLIANCE_RND_QU" +
+      "ERY\020\310\001\022<\n7RATE_DEFINITION_CONFIG_TYPE_CO" +
+      "MPLIANCE_RND_QUERY_CACHED\020\311\001B\355\001\n4com.tcn" +
+      ".cloud.api.services.billing.entities.v1a" +
+      "lpha1B\nRatesProtoP\001\242\002\003SBE\252\002\"Services.Bil" +
+      "ling.Entities.V1alpha1\312\002\"Services\\Billin" +
+      "g\\Entities\\V1alpha1\342\002.Services\\Billing\\E" +
+      "ntities\\V1alpha1\\GPBMetadata\352\002%Services:" +
+      ":Billing::Entities::V1alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -265,7 +266,7 @@ public final class RatesProto {
     internal_static_services_billing_entities_v1alpha1_RateDefinition_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_entities_v1alpha1_RateDefinition_descriptor,
-        new java.lang.String[] { "RateDefinitionId", "BillingPlanId", "RateDefinitionGroupId", "EventType", "ConfigType", "MatchingRule", "Config", "MatchingConfig", "CreateTime", "UpdateTime", });
+        new java.lang.String[] { "RateDefinitionId", "BillingPlanId", "RateDefinitionGroupId", "EventType", "ConfigType", "MatchingRule", "Config", "MatchingConfig", "CreateTime", "UpdateTime", "DeleteTime", });
     internal_static_services_billing_entities_v1alpha1_RateDefinitionConfig_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_services_billing_entities_v1alpha1_RateDefinitionConfig_fieldAccessorTable = new

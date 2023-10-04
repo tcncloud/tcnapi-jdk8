@@ -123,11 +123,38 @@ public interface InvoiceOrBuilder extends
 
   /**
    * <pre>
+   * the time this invoice was deleted (if applicable)
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp delete_time = 6 [json_name = "deleteTime"];</code>
+   * @return Whether the deleteTime field is set.
+   */
+  boolean hasDeleteTime();
+  /**
+   * <pre>
+   * the time this invoice was deleted (if applicable)
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp delete_time = 6 [json_name = "deleteTime"];</code>
+   * @return The deleteTime.
+   */
+  com.google.protobuf.Timestamp getDeleteTime();
+  /**
+   * <pre>
+   * the time this invoice was deleted (if applicable)
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp delete_time = 6 [json_name = "deleteTime"];</code>
+   */
+  com.google.protobuf.TimestampOrBuilder getDeleteTimeOrBuilder();
+
+  /**
+   * <pre>
    * the invoice items, where each product is
    * a separate item.
    * </pre>
    *
-   * <code>repeated .services.billing.entities.v1alpha1.InvoiceItem items = 6 [json_name = "items"];</code>
+   * <code>repeated .services.billing.entities.v1alpha1.InvoiceItem items = 7 [json_name = "items"];</code>
    */
   java.util.List<com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceItem> 
       getItemsList();
@@ -137,7 +164,7 @@ public interface InvoiceOrBuilder extends
    * a separate item.
    * </pre>
    *
-   * <code>repeated .services.billing.entities.v1alpha1.InvoiceItem items = 6 [json_name = "items"];</code>
+   * <code>repeated .services.billing.entities.v1alpha1.InvoiceItem items = 7 [json_name = "items"];</code>
    */
   com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceItem getItems(int index);
   /**
@@ -146,7 +173,7 @@ public interface InvoiceOrBuilder extends
    * a separate item.
    * </pre>
    *
-   * <code>repeated .services.billing.entities.v1alpha1.InvoiceItem items = 6 [json_name = "items"];</code>
+   * <code>repeated .services.billing.entities.v1alpha1.InvoiceItem items = 7 [json_name = "items"];</code>
    */
   int getItemsCount();
   /**
@@ -155,7 +182,7 @@ public interface InvoiceOrBuilder extends
    * a separate item.
    * </pre>
    *
-   * <code>repeated .services.billing.entities.v1alpha1.InvoiceItem items = 6 [json_name = "items"];</code>
+   * <code>repeated .services.billing.entities.v1alpha1.InvoiceItem items = 7 [json_name = "items"];</code>
    */
   java.util.List<? extends com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceItemOrBuilder> 
       getItemsOrBuilderList();
@@ -165,7 +192,7 @@ public interface InvoiceOrBuilder extends
    * a separate item.
    * </pre>
    *
-   * <code>repeated .services.billing.entities.v1alpha1.InvoiceItem items = 6 [json_name = "items"];</code>
+   * <code>repeated .services.billing.entities.v1alpha1.InvoiceItem items = 7 [json_name = "items"];</code>
    */
   com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceItemOrBuilder getItemsOrBuilder(
       int index);
@@ -175,7 +202,7 @@ public interface InvoiceOrBuilder extends
    * the url to download the invoice
    * </pre>
    *
-   * <code>.google.protobuf.StringValue url = 7 [json_name = "url"];</code>
+   * <code>.google.protobuf.StringValue url = 8 [json_name = "url"];</code>
    * @return Whether the url field is set.
    */
   boolean hasUrl();
@@ -184,7 +211,7 @@ public interface InvoiceOrBuilder extends
    * the url to download the invoice
    * </pre>
    *
-   * <code>.google.protobuf.StringValue url = 7 [json_name = "url"];</code>
+   * <code>.google.protobuf.StringValue url = 8 [json_name = "url"];</code>
    * @return The url.
    */
   com.google.protobuf.StringValue getUrl();
@@ -193,7 +220,7 @@ public interface InvoiceOrBuilder extends
    * the url to download the invoice
    * </pre>
    *
-   * <code>.google.protobuf.StringValue url = 7 [json_name = "url"];</code>
+   * <code>.google.protobuf.StringValue url = 8 [json_name = "url"];</code>
    */
   com.google.protobuf.StringValueOrBuilder getUrlOrBuilder();
 }

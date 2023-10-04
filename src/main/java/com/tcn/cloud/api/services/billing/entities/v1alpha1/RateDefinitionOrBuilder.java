@@ -235,4 +235,31 @@ public interface RateDefinitionOrBuilder extends
    * <code>.google.protobuf.Timestamp update_time = 10 [json_name = "updateTime"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder();
+
+  /**
+   * <pre>
+   * the time this rate definition was deleted (if applicable)
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp delete_time = 11 [json_name = "deleteTime"];</code>
+   * @return Whether the deleteTime field is set.
+   */
+  boolean hasDeleteTime();
+  /**
+   * <pre>
+   * the time this rate definition was deleted (if applicable)
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp delete_time = 11 [json_name = "deleteTime"];</code>
+   * @return The deleteTime.
+   */
+  com.google.protobuf.Timestamp getDeleteTime();
+  /**
+   * <pre>
+   * the time this rate definition was deleted (if applicable)
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp delete_time = 11 [json_name = "deleteTime"];</code>
+   */
+  com.google.protobuf.TimestampOrBuilder getDeleteTimeOrBuilder();
 }
