@@ -39,25 +39,24 @@ public final class RatesProto {
       "o\032\037google/protobuf/timestamp.proto\0321serv" +
       "ices/billing/entities/v1alpha1/matching." +
       "proto\0320services/billing/entities/v1alpha" +
-      "1/modules.proto\"\370\005\n\016RateDefinition\022,\n\022ra" +
+      "1/modules.proto\"\320\005\n\016RateDefinition\022,\n\022ra" +
       "te_definition_id\030\001 \001(\tR\020rateDefinitionId" +
-      "\022&\n\017billing_plan_id\030\002 \001(\tR\rbillingPlanId" +
-      "\0227\n\030rate_definition_group_id\030\003 \001(\tR\025rate" +
-      "DefinitionGroupId\022;\n\nevent_type\030\004 \001(\0162\034." +
+      "\0227\n\030rate_definition_group_id\030\002 \001(\tR\025rate" +
+      "DefinitionGroupId\022;\n\nevent_type\030\003 \001(\0162\034." +
       "api.commons.audit.EventTypeR\teventType\022]" +
-      "\n\013config_type\030\005 \001(\0162<.services.billing.e" +
+      "\n\013config_type\030\004 \001(\0162<.services.billing.e" +
       "ntities.v1alpha1.RateDefinitionConfigTyp" +
-      "eR\nconfigType\022U\n\rmatching_rule\030\006 \001(\01620.s" +
+      "eR\nconfigType\022U\n\rmatching_rule\030\005 \001(\01620.s" +
       "ervices.billing.entities.v1alpha1.Matchi" +
-      "ngRuleR\014matchingRule\022P\n\006config\030\007 \001(\01328.s" +
+      "ngRuleR\014matchingRule\022P\n\006config\030\006 \001(\01328.s" +
       "ervices.billing.entities.v1alpha1.RateDe" +
       "finitionConfigR\006config\022[\n\017matching_confi" +
-      "g\030\010 \001(\01322.services.billing.entities.v1al" +
+      "g\030\007 \001(\01322.services.billing.entities.v1al" +
       "pha1.MatchingConfigR\016matchingConfig\022;\n\013c" +
-      "reate_time\030\t \001(\0132\032.google.protobuf.Times" +
-      "tampR\ncreateTime\022;\n\013update_time\030\n \001(\0132\032." +
+      "reate_time\030\010 \001(\0132\032.google.protobuf.Times" +
+      "tampR\ncreateTime\022;\n\013update_time\030\t \001(\0132\032." +
       "google.protobuf.TimestampR\nupdateTime\022;\n" +
-      "\013delete_time\030\013 \001(\0132\032.google.protobuf.Tim" +
+      "\013delete_time\030\n \001(\0132\032.google.protobuf.Tim" +
       "estampR\ndeleteTime\"\225\'\n\024RateDefinitionCon" +
       "fig\022_\n\022agent_seats_config\030\002 \001(\0132/.servic" +
       "es.billing.entities.v1alpha1.BasicConfig" +
@@ -266,7 +265,7 @@ public final class RatesProto {
     internal_static_services_billing_entities_v1alpha1_RateDefinition_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_entities_v1alpha1_RateDefinition_descriptor,
-        new java.lang.String[] { "RateDefinitionId", "BillingPlanId", "RateDefinitionGroupId", "EventType", "ConfigType", "MatchingRule", "Config", "MatchingConfig", "CreateTime", "UpdateTime", "DeleteTime", });
+        new java.lang.String[] { "RateDefinitionId", "RateDefinitionGroupId", "EventType", "ConfigType", "MatchingRule", "Config", "MatchingConfig", "CreateTime", "UpdateTime", "DeleteTime", });
     internal_static_services_billing_entities_v1alpha1_RateDefinitionConfig_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_services_billing_entities_v1alpha1_RateDefinitionConfig_fieldAccessorTable = new

@@ -29,30 +29,10 @@ public interface InvoiceItemOrBuilder extends
 
   /**
    * <pre>
-   * the invoice identifier
-   * </pre>
-   *
-   * <code>string invoice_id = 2 [json_name = "invoiceId"];</code>
-   * @return The invoiceId.
-   */
-  java.lang.String getInvoiceId();
-  /**
-   * <pre>
-   * the invoice identifier
-   * </pre>
-   *
-   * <code>string invoice_id = 2 [json_name = "invoiceId"];</code>
-   * @return The bytes for invoiceId.
-   */
-  com.google.protobuf.ByteString
-      getInvoiceIdBytes();
-
-  /**
-   * <pre>
    * the product this item represents
    * </pre>
    *
-   * <code>.services.billing.entities.v1alpha1.Product product = 3 [json_name = "product"];</code>
+   * <code>.services.billing.entities.v1alpha1.Product product = 2 [json_name = "product"];</code>
    * @return The enum numeric value on the wire for product.
    */
   int getProductValue();
@@ -61,7 +41,7 @@ public interface InvoiceItemOrBuilder extends
    * the product this item represents
    * </pre>
    *
-   * <code>.services.billing.entities.v1alpha1.Product product = 3 [json_name = "product"];</code>
+   * <code>.services.billing.entities.v1alpha1.Product product = 2 [json_name = "product"];</code>
    * @return The product.
    */
   com.tcn.cloud.api.services.billing.entities.v1alpha1.Product getProduct();
@@ -71,7 +51,7 @@ public interface InvoiceItemOrBuilder extends
    * the price for this product
    * </pre>
    *
-   * <code>double price = 4 [json_name = "price"];</code>
+   * <code>double price = 3 [json_name = "price"];</code>
    * @return The price.
    */
   double getPrice();
@@ -81,7 +61,7 @@ public interface InvoiceItemOrBuilder extends
    * the time this invoice item was created
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp create_time = 5 [json_name = "createTime"];</code>
+   * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime"];</code>
    * @return Whether the createTime field is set.
    */
   boolean hasCreateTime();
@@ -90,7 +70,7 @@ public interface InvoiceItemOrBuilder extends
    * the time this invoice item was created
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp create_time = 5 [json_name = "createTime"];</code>
+   * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime"];</code>
    * @return The createTime.
    */
   com.google.protobuf.Timestamp getCreateTime();
@@ -99,7 +79,7 @@ public interface InvoiceItemOrBuilder extends
    * the time this invoice item was created
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp create_time = 5 [json_name = "createTime"];</code>
+   * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder();
 
@@ -108,7 +88,7 @@ public interface InvoiceItemOrBuilder extends
    * the time this invoice item was last updated
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp update_time = 6 [json_name = "updateTime"];</code>
+   * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
    * @return Whether the updateTime field is set.
    */
   boolean hasUpdateTime();
@@ -117,7 +97,7 @@ public interface InvoiceItemOrBuilder extends
    * the time this invoice item was last updated
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp update_time = 6 [json_name = "updateTime"];</code>
+   * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
    * @return The updateTime.
    */
   com.google.protobuf.Timestamp getUpdateTime();
@@ -126,7 +106,7 @@ public interface InvoiceItemOrBuilder extends
    * the time this invoice item was last updated
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp update_time = 6 [json_name = "updateTime"];</code>
+   * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder();
 }

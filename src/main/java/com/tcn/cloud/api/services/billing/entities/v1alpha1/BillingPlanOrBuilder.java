@@ -29,30 +29,10 @@ public interface BillingPlanOrBuilder extends
 
   /**
    * <pre>
-   * the organization identifier
-   * </pre>
-   *
-   * <code>string org_id = 2 [json_name = "orgId"];</code>
-   * @return The orgId.
-   */
-  java.lang.String getOrgId();
-  /**
-   * <pre>
-   * the organization identifier
-   * </pre>
-   *
-   * <code>string org_id = 2 [json_name = "orgId"];</code>
-   * @return The bytes for orgId.
-   */
-  com.google.protobuf.ByteString
-      getOrgIdBytes();
-
-  /**
-   * <pre>
    * time the billing plan was created
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp create_time = 3 [json_name = "createTime"];</code>
+   * <code>.google.protobuf.Timestamp create_time = 2 [json_name = "createTime"];</code>
    * @return Whether the createTime field is set.
    */
   boolean hasCreateTime();
@@ -61,7 +41,7 @@ public interface BillingPlanOrBuilder extends
    * time the billing plan was created
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp create_time = 3 [json_name = "createTime"];</code>
+   * <code>.google.protobuf.Timestamp create_time = 2 [json_name = "createTime"];</code>
    * @return The createTime.
    */
   com.google.protobuf.Timestamp getCreateTime();
@@ -70,7 +50,7 @@ public interface BillingPlanOrBuilder extends
    * time the billing plan was created
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp create_time = 3 [json_name = "createTime"];</code>
+   * <code>.google.protobuf.Timestamp create_time = 2 [json_name = "createTime"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder();
 
@@ -79,7 +59,7 @@ public interface BillingPlanOrBuilder extends
    * time the billing plan was last updated
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp update_time = 4 [json_name = "updateTime"];</code>
+   * <code>.google.protobuf.Timestamp update_time = 3 [json_name = "updateTime"];</code>
    * @return Whether the updateTime field is set.
    */
   boolean hasUpdateTime();
@@ -88,7 +68,7 @@ public interface BillingPlanOrBuilder extends
    * time the billing plan was last updated
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp update_time = 4 [json_name = "updateTime"];</code>
+   * <code>.google.protobuf.Timestamp update_time = 3 [json_name = "updateTime"];</code>
    * @return The updateTime.
    */
   com.google.protobuf.Timestamp getUpdateTime();
@@ -97,7 +77,7 @@ public interface BillingPlanOrBuilder extends
    * time the billing plan was last updated
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp update_time = 4 [json_name = "updateTime"];</code>
+   * <code>.google.protobuf.Timestamp update_time = 3 [json_name = "updateTime"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder();
 
@@ -106,7 +86,7 @@ public interface BillingPlanOrBuilder extends
    * the time from which this billing plan will take effect
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp start_time = 5 [json_name = "startTime"];</code>
+   * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime"];</code>
    * @return Whether the startTime field is set.
    */
   boolean hasStartTime();
@@ -115,7 +95,7 @@ public interface BillingPlanOrBuilder extends
    * the time from which this billing plan will take effect
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp start_time = 5 [json_name = "startTime"];</code>
+   * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime"];</code>
    * @return The startTime.
    */
   com.google.protobuf.Timestamp getStartTime();
@@ -124,7 +104,7 @@ public interface BillingPlanOrBuilder extends
    * the time from which this billing plan will take effect
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp start_time = 5 [json_name = "startTime"];</code>
+   * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder();
 
@@ -133,7 +113,7 @@ public interface BillingPlanOrBuilder extends
    * the time (if applicable) this billing plan ended; can be null
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp end_time = 6 [json_name = "endTime"];</code>
+   * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime"];</code>
    * @return Whether the endTime field is set.
    */
   boolean hasEndTime();
@@ -142,7 +122,7 @@ public interface BillingPlanOrBuilder extends
    * the time (if applicable) this billing plan ended; can be null
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp end_time = 6 [json_name = "endTime"];</code>
+   * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime"];</code>
    * @return The endTime.
    */
   com.google.protobuf.Timestamp getEndTime();
@@ -151,7 +131,7 @@ public interface BillingPlanOrBuilder extends
    * the time (if applicable) this billing plan ended; can be null
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp end_time = 6 [json_name = "endTime"];</code>
+   * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder();
 
@@ -160,7 +140,7 @@ public interface BillingPlanOrBuilder extends
    * the billing plan rate definitions
    * </pre>
    *
-   * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 7 [json_name = "rateDefinitions"];</code>
+   * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 6 [json_name = "rateDefinitions"];</code>
    */
   java.util.List<com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition> 
       getRateDefinitionsList();
@@ -169,7 +149,7 @@ public interface BillingPlanOrBuilder extends
    * the billing plan rate definitions
    * </pre>
    *
-   * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 7 [json_name = "rateDefinitions"];</code>
+   * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 6 [json_name = "rateDefinitions"];</code>
    */
   com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition getRateDefinitions(int index);
   /**
@@ -177,7 +157,7 @@ public interface BillingPlanOrBuilder extends
    * the billing plan rate definitions
    * </pre>
    *
-   * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 7 [json_name = "rateDefinitions"];</code>
+   * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 6 [json_name = "rateDefinitions"];</code>
    */
   int getRateDefinitionsCount();
   /**
@@ -185,7 +165,7 @@ public interface BillingPlanOrBuilder extends
    * the billing plan rate definitions
    * </pre>
    *
-   * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 7 [json_name = "rateDefinitions"];</code>
+   * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 6 [json_name = "rateDefinitions"];</code>
    */
   java.util.List<? extends com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionOrBuilder> 
       getRateDefinitionsOrBuilderList();
@@ -194,7 +174,7 @@ public interface BillingPlanOrBuilder extends
    * the billing plan rate definitions
    * </pre>
    *
-   * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 7 [json_name = "rateDefinitions"];</code>
+   * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 6 [json_name = "rateDefinitions"];</code>
    */
   com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionOrBuilder getRateDefinitionsOrBuilder(
       int index);

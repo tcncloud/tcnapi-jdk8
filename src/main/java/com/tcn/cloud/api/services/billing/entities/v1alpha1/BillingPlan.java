@@ -21,7 +21,6 @@ private static final long serialVersionUID = 0L;
   }
   private BillingPlan() {
     billingPlanId_ = "";
-    orgId_ = "";
     rateDefinitions_ = java.util.Collections.emptyList();
   }
 
@@ -92,61 +91,14 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int ORG_ID_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object orgId_ = "";
-  /**
-   * <pre>
-   * the organization identifier
-   * </pre>
-   *
-   * <code>string org_id = 2 [json_name = "orgId"];</code>
-   * @return The orgId.
-   */
-  @java.lang.Override
-  public java.lang.String getOrgId() {
-    java.lang.Object ref = orgId_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      orgId_ = s;
-      return s;
-    }
-  }
-  /**
-   * <pre>
-   * the organization identifier
-   * </pre>
-   *
-   * <code>string org_id = 2 [json_name = "orgId"];</code>
-   * @return The bytes for orgId.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getOrgIdBytes() {
-    java.lang.Object ref = orgId_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      orgId_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int CREATE_TIME_FIELD_NUMBER = 3;
+  public static final int CREATE_TIME_FIELD_NUMBER = 2;
   private com.google.protobuf.Timestamp createTime_;
   /**
    * <pre>
    * time the billing plan was created
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp create_time = 3 [json_name = "createTime"];</code>
+   * <code>.google.protobuf.Timestamp create_time = 2 [json_name = "createTime"];</code>
    * @return Whether the createTime field is set.
    */
   @java.lang.Override
@@ -158,7 +110,7 @@ private static final long serialVersionUID = 0L;
    * time the billing plan was created
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp create_time = 3 [json_name = "createTime"];</code>
+   * <code>.google.protobuf.Timestamp create_time = 2 [json_name = "createTime"];</code>
    * @return The createTime.
    */
   @java.lang.Override
@@ -170,21 +122,21 @@ private static final long serialVersionUID = 0L;
    * time the billing plan was created
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp create_time = 3 [json_name = "createTime"];</code>
+   * <code>.google.protobuf.Timestamp create_time = 2 [json_name = "createTime"];</code>
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder() {
     return createTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createTime_;
   }
 
-  public static final int UPDATE_TIME_FIELD_NUMBER = 4;
+  public static final int UPDATE_TIME_FIELD_NUMBER = 3;
   private com.google.protobuf.Timestamp updateTime_;
   /**
    * <pre>
    * time the billing plan was last updated
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp update_time = 4 [json_name = "updateTime"];</code>
+   * <code>.google.protobuf.Timestamp update_time = 3 [json_name = "updateTime"];</code>
    * @return Whether the updateTime field is set.
    */
   @java.lang.Override
@@ -196,7 +148,7 @@ private static final long serialVersionUID = 0L;
    * time the billing plan was last updated
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp update_time = 4 [json_name = "updateTime"];</code>
+   * <code>.google.protobuf.Timestamp update_time = 3 [json_name = "updateTime"];</code>
    * @return The updateTime.
    */
   @java.lang.Override
@@ -208,21 +160,21 @@ private static final long serialVersionUID = 0L;
    * time the billing plan was last updated
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp update_time = 4 [json_name = "updateTime"];</code>
+   * <code>.google.protobuf.Timestamp update_time = 3 [json_name = "updateTime"];</code>
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder() {
     return updateTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updateTime_;
   }
 
-  public static final int START_TIME_FIELD_NUMBER = 5;
+  public static final int START_TIME_FIELD_NUMBER = 4;
   private com.google.protobuf.Timestamp startTime_;
   /**
    * <pre>
    * the time from which this billing plan will take effect
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp start_time = 5 [json_name = "startTime"];</code>
+   * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime"];</code>
    * @return Whether the startTime field is set.
    */
   @java.lang.Override
@@ -234,7 +186,7 @@ private static final long serialVersionUID = 0L;
    * the time from which this billing plan will take effect
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp start_time = 5 [json_name = "startTime"];</code>
+   * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime"];</code>
    * @return The startTime.
    */
   @java.lang.Override
@@ -246,21 +198,21 @@ private static final long serialVersionUID = 0L;
    * the time from which this billing plan will take effect
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp start_time = 5 [json_name = "startTime"];</code>
+   * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime"];</code>
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder() {
     return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
   }
 
-  public static final int END_TIME_FIELD_NUMBER = 6;
+  public static final int END_TIME_FIELD_NUMBER = 5;
   private com.google.protobuf.Timestamp endTime_;
   /**
    * <pre>
    * the time (if applicable) this billing plan ended; can be null
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp end_time = 6 [json_name = "endTime"];</code>
+   * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime"];</code>
    * @return Whether the endTime field is set.
    */
   @java.lang.Override
@@ -272,7 +224,7 @@ private static final long serialVersionUID = 0L;
    * the time (if applicable) this billing plan ended; can be null
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp end_time = 6 [json_name = "endTime"];</code>
+   * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime"];</code>
    * @return The endTime.
    */
   @java.lang.Override
@@ -284,14 +236,14 @@ private static final long serialVersionUID = 0L;
    * the time (if applicable) this billing plan ended; can be null
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp end_time = 6 [json_name = "endTime"];</code>
+   * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime"];</code>
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder() {
     return endTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
   }
 
-  public static final int RATE_DEFINITIONS_FIELD_NUMBER = 7;
+  public static final int RATE_DEFINITIONS_FIELD_NUMBER = 6;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition> rateDefinitions_;
   /**
@@ -299,7 +251,7 @@ private static final long serialVersionUID = 0L;
    * the billing plan rate definitions
    * </pre>
    *
-   * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 7 [json_name = "rateDefinitions"];</code>
+   * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 6 [json_name = "rateDefinitions"];</code>
    */
   @java.lang.Override
   public java.util.List<com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition> getRateDefinitionsList() {
@@ -310,7 +262,7 @@ private static final long serialVersionUID = 0L;
    * the billing plan rate definitions
    * </pre>
    *
-   * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 7 [json_name = "rateDefinitions"];</code>
+   * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 6 [json_name = "rateDefinitions"];</code>
    */
   @java.lang.Override
   public java.util.List<? extends com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionOrBuilder> 
@@ -322,7 +274,7 @@ private static final long serialVersionUID = 0L;
    * the billing plan rate definitions
    * </pre>
    *
-   * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 7 [json_name = "rateDefinitions"];</code>
+   * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 6 [json_name = "rateDefinitions"];</code>
    */
   @java.lang.Override
   public int getRateDefinitionsCount() {
@@ -333,7 +285,7 @@ private static final long serialVersionUID = 0L;
    * the billing plan rate definitions
    * </pre>
    *
-   * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 7 [json_name = "rateDefinitions"];</code>
+   * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 6 [json_name = "rateDefinitions"];</code>
    */
   @java.lang.Override
   public com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition getRateDefinitions(int index) {
@@ -344,7 +296,7 @@ private static final long serialVersionUID = 0L;
    * the billing plan rate definitions
    * </pre>
    *
-   * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 7 [json_name = "rateDefinitions"];</code>
+   * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 6 [json_name = "rateDefinitions"];</code>
    */
   @java.lang.Override
   public com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionOrBuilder getRateDefinitionsOrBuilder(
@@ -369,23 +321,20 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(billingPlanId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, billingPlanId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, orgId_);
-    }
     if (createTime_ != null) {
-      output.writeMessage(3, getCreateTime());
+      output.writeMessage(2, getCreateTime());
     }
     if (updateTime_ != null) {
-      output.writeMessage(4, getUpdateTime());
+      output.writeMessage(3, getUpdateTime());
     }
     if (startTime_ != null) {
-      output.writeMessage(5, getStartTime());
+      output.writeMessage(4, getStartTime());
     }
     if (endTime_ != null) {
-      output.writeMessage(6, getEndTime());
+      output.writeMessage(5, getEndTime());
     }
     for (int i = 0; i < rateDefinitions_.size(); i++) {
-      output.writeMessage(7, rateDefinitions_.get(i));
+      output.writeMessage(6, rateDefinitions_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -399,28 +348,25 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(billingPlanId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, billingPlanId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, orgId_);
-    }
     if (createTime_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(3, getCreateTime());
+        .computeMessageSize(2, getCreateTime());
     }
     if (updateTime_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(4, getUpdateTime());
+        .computeMessageSize(3, getUpdateTime());
     }
     if (startTime_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(5, getStartTime());
+        .computeMessageSize(4, getStartTime());
     }
     if (endTime_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(6, getEndTime());
+        .computeMessageSize(5, getEndTime());
     }
     for (int i = 0; i < rateDefinitions_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(7, rateDefinitions_.get(i));
+        .computeMessageSize(6, rateDefinitions_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -439,8 +385,6 @@ private static final long serialVersionUID = 0L;
 
     if (!getBillingPlanId()
         .equals(other.getBillingPlanId())) return false;
-    if (!getOrgId()
-        .equals(other.getOrgId())) return false;
     if (hasCreateTime() != other.hasCreateTime()) return false;
     if (hasCreateTime()) {
       if (!getCreateTime()
@@ -476,8 +420,6 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + BILLING_PLAN_ID_FIELD_NUMBER;
     hash = (53 * hash) + getBillingPlanId().hashCode();
-    hash = (37 * hash) + ORG_ID_FIELD_NUMBER;
-    hash = (53 * hash) + getOrgId().hashCode();
     if (hasCreateTime()) {
       hash = (37 * hash) + CREATE_TIME_FIELD_NUMBER;
       hash = (53 * hash) + getCreateTime().hashCode();
@@ -634,7 +576,6 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       billingPlanId_ = "";
-      orgId_ = "";
       createTime_ = null;
       if (createTimeBuilder_ != null) {
         createTimeBuilder_.dispose();
@@ -661,7 +602,7 @@ private static final long serialVersionUID = 0L;
         rateDefinitions_ = null;
         rateDefinitionsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000040);
+      bitField0_ = (bitField0_ & ~0x00000020);
       return this;
     }
 
@@ -696,9 +637,9 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartialRepeatedFields(com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlan result) {
       if (rateDefinitionsBuilder_ == null) {
-        if (((bitField0_ & 0x00000040) != 0)) {
+        if (((bitField0_ & 0x00000020) != 0)) {
           rateDefinitions_ = java.util.Collections.unmodifiableList(rateDefinitions_);
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00000020);
         }
         result.rateDefinitions_ = rateDefinitions_;
       } else {
@@ -712,24 +653,21 @@ private static final long serialVersionUID = 0L;
         result.billingPlanId_ = billingPlanId_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.orgId_ = orgId_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
         result.createTime_ = createTimeBuilder_ == null
             ? createTime_
             : createTimeBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
+      if (((from_bitField0_ & 0x00000004) != 0)) {
         result.updateTime_ = updateTimeBuilder_ == null
             ? updateTime_
             : updateTimeBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
+      if (((from_bitField0_ & 0x00000008) != 0)) {
         result.startTime_ = startTimeBuilder_ == null
             ? startTime_
             : startTimeBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
+      if (((from_bitField0_ & 0x00000010) != 0)) {
         result.endTime_ = endTimeBuilder_ == null
             ? endTime_
             : endTimeBuilder_.build();
@@ -785,11 +723,6 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000001;
         onChanged();
       }
-      if (!other.getOrgId().isEmpty()) {
-        orgId_ = other.orgId_;
-        bitField0_ |= 0x00000002;
-        onChanged();
-      }
       if (other.hasCreateTime()) {
         mergeCreateTime(other.getCreateTime());
       }
@@ -806,7 +739,7 @@ private static final long serialVersionUID = 0L;
         if (!other.rateDefinitions_.isEmpty()) {
           if (rateDefinitions_.isEmpty()) {
             rateDefinitions_ = other.rateDefinitions_;
-            bitField0_ = (bitField0_ & ~0x00000040);
+            bitField0_ = (bitField0_ & ~0x00000020);
           } else {
             ensureRateDefinitionsIsMutable();
             rateDefinitions_.addAll(other.rateDefinitions_);
@@ -819,7 +752,7 @@ private static final long serialVersionUID = 0L;
             rateDefinitionsBuilder_.dispose();
             rateDefinitionsBuilder_ = null;
             rateDefinitions_ = other.rateDefinitions_;
-            bitField0_ = (bitField0_ & ~0x00000040);
+            bitField0_ = (bitField0_ & ~0x00000020);
             rateDefinitionsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getRateDefinitionsFieldBuilder() : null;
@@ -860,39 +793,34 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 10
             case 18: {
-              orgId_ = input.readStringRequireUtf8();
+              input.readMessage(
+                  getCreateTimeFieldBuilder().getBuilder(),
+                  extensionRegistry);
               bitField0_ |= 0x00000002;
               break;
             } // case 18
             case 26: {
               input.readMessage(
-                  getCreateTimeFieldBuilder().getBuilder(),
+                  getUpdateTimeFieldBuilder().getBuilder(),
                   extensionRegistry);
               bitField0_ |= 0x00000004;
               break;
             } // case 26
             case 34: {
               input.readMessage(
-                  getUpdateTimeFieldBuilder().getBuilder(),
+                  getStartTimeFieldBuilder().getBuilder(),
                   extensionRegistry);
               bitField0_ |= 0x00000008;
               break;
             } // case 34
             case 42: {
               input.readMessage(
-                  getStartTimeFieldBuilder().getBuilder(),
+                  getEndTimeFieldBuilder().getBuilder(),
                   extensionRegistry);
               bitField0_ |= 0x00000010;
               break;
             } // case 42
             case 50: {
-              input.readMessage(
-                  getEndTimeFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 50
-            case 58: {
               com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition m =
                   input.readMessage(
                       com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition.parser(),
@@ -904,7 +832,7 @@ private static final long serialVersionUID = 0L;
                 rateDefinitionsBuilder_.addMessage(m);
               }
               break;
-            } // case 58
+            } // case 50
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1014,98 +942,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object orgId_ = "";
-    /**
-     * <pre>
-     * the organization identifier
-     * </pre>
-     *
-     * <code>string org_id = 2 [json_name = "orgId"];</code>
-     * @return The orgId.
-     */
-    public java.lang.String getOrgId() {
-      java.lang.Object ref = orgId_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        orgId_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <pre>
-     * the organization identifier
-     * </pre>
-     *
-     * <code>string org_id = 2 [json_name = "orgId"];</code>
-     * @return The bytes for orgId.
-     */
-    public com.google.protobuf.ByteString
-        getOrgIdBytes() {
-      java.lang.Object ref = orgId_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        orgId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <pre>
-     * the organization identifier
-     * </pre>
-     *
-     * <code>string org_id = 2 [json_name = "orgId"];</code>
-     * @param value The orgId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setOrgId(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      orgId_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * the organization identifier
-     * </pre>
-     *
-     * <code>string org_id = 2 [json_name = "orgId"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearOrgId() {
-      orgId_ = getDefaultInstance().getOrgId();
-      bitField0_ = (bitField0_ & ~0x00000002);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * the organization identifier
-     * </pre>
-     *
-     * <code>string org_id = 2 [json_name = "orgId"];</code>
-     * @param value The bytes for orgId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setOrgIdBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      orgId_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-
     private com.google.protobuf.Timestamp createTime_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createTimeBuilder_;
@@ -1114,18 +950,18 @@ private static final long serialVersionUID = 0L;
      * time the billing plan was created
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp create_time = 3 [json_name = "createTime"];</code>
+     * <code>.google.protobuf.Timestamp create_time = 2 [json_name = "createTime"];</code>
      * @return Whether the createTime field is set.
      */
     public boolean hasCreateTime() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
      * time the billing plan was created
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp create_time = 3 [json_name = "createTime"];</code>
+     * <code>.google.protobuf.Timestamp create_time = 2 [json_name = "createTime"];</code>
      * @return The createTime.
      */
     public com.google.protobuf.Timestamp getCreateTime() {
@@ -1140,7 +976,7 @@ private static final long serialVersionUID = 0L;
      * time the billing plan was created
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp create_time = 3 [json_name = "createTime"];</code>
+     * <code>.google.protobuf.Timestamp create_time = 2 [json_name = "createTime"];</code>
      */
     public Builder setCreateTime(com.google.protobuf.Timestamp value) {
       if (createTimeBuilder_ == null) {
@@ -1151,7 +987,7 @@ private static final long serialVersionUID = 0L;
       } else {
         createTimeBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1160,7 +996,7 @@ private static final long serialVersionUID = 0L;
      * time the billing plan was created
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp create_time = 3 [json_name = "createTime"];</code>
+     * <code>.google.protobuf.Timestamp create_time = 2 [json_name = "createTime"];</code>
      */
     public Builder setCreateTime(
         com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -1169,7 +1005,7 @@ private static final long serialVersionUID = 0L;
       } else {
         createTimeBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1178,11 +1014,11 @@ private static final long serialVersionUID = 0L;
      * time the billing plan was created
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp create_time = 3 [json_name = "createTime"];</code>
+     * <code>.google.protobuf.Timestamp create_time = 2 [json_name = "createTime"];</code>
      */
     public Builder mergeCreateTime(com.google.protobuf.Timestamp value) {
       if (createTimeBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0) &&
+        if (((bitField0_ & 0x00000002) != 0) &&
           createTime_ != null &&
           createTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
           getCreateTimeBuilder().mergeFrom(value);
@@ -1192,7 +1028,7 @@ private static final long serialVersionUID = 0L;
       } else {
         createTimeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1201,10 +1037,10 @@ private static final long serialVersionUID = 0L;
      * time the billing plan was created
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp create_time = 3 [json_name = "createTime"];</code>
+     * <code>.google.protobuf.Timestamp create_time = 2 [json_name = "createTime"];</code>
      */
     public Builder clearCreateTime() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000002);
       createTime_ = null;
       if (createTimeBuilder_ != null) {
         createTimeBuilder_.dispose();
@@ -1218,10 +1054,10 @@ private static final long serialVersionUID = 0L;
      * time the billing plan was created
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp create_time = 3 [json_name = "createTime"];</code>
+     * <code>.google.protobuf.Timestamp create_time = 2 [json_name = "createTime"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getCreateTimeBuilder() {
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       onChanged();
       return getCreateTimeFieldBuilder().getBuilder();
     }
@@ -1230,7 +1066,7 @@ private static final long serialVersionUID = 0L;
      * time the billing plan was created
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp create_time = 3 [json_name = "createTime"];</code>
+     * <code>.google.protobuf.Timestamp create_time = 2 [json_name = "createTime"];</code>
      */
     public com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder() {
       if (createTimeBuilder_ != null) {
@@ -1245,7 +1081,7 @@ private static final long serialVersionUID = 0L;
      * time the billing plan was created
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp create_time = 3 [json_name = "createTime"];</code>
+     * <code>.google.protobuf.Timestamp create_time = 2 [json_name = "createTime"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -1269,18 +1105,18 @@ private static final long serialVersionUID = 0L;
      * time the billing plan was last updated
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp update_time = 4 [json_name = "updateTime"];</code>
+     * <code>.google.protobuf.Timestamp update_time = 3 [json_name = "updateTime"];</code>
      * @return Whether the updateTime field is set.
      */
     public boolean hasUpdateTime() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
      * time the billing plan was last updated
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp update_time = 4 [json_name = "updateTime"];</code>
+     * <code>.google.protobuf.Timestamp update_time = 3 [json_name = "updateTime"];</code>
      * @return The updateTime.
      */
     public com.google.protobuf.Timestamp getUpdateTime() {
@@ -1295,7 +1131,7 @@ private static final long serialVersionUID = 0L;
      * time the billing plan was last updated
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp update_time = 4 [json_name = "updateTime"];</code>
+     * <code>.google.protobuf.Timestamp update_time = 3 [json_name = "updateTime"];</code>
      */
     public Builder setUpdateTime(com.google.protobuf.Timestamp value) {
       if (updateTimeBuilder_ == null) {
@@ -1306,7 +1142,7 @@ private static final long serialVersionUID = 0L;
       } else {
         updateTimeBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1315,7 +1151,7 @@ private static final long serialVersionUID = 0L;
      * time the billing plan was last updated
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp update_time = 4 [json_name = "updateTime"];</code>
+     * <code>.google.protobuf.Timestamp update_time = 3 [json_name = "updateTime"];</code>
      */
     public Builder setUpdateTime(
         com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -1324,7 +1160,7 @@ private static final long serialVersionUID = 0L;
       } else {
         updateTimeBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1333,11 +1169,11 @@ private static final long serialVersionUID = 0L;
      * time the billing plan was last updated
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp update_time = 4 [json_name = "updateTime"];</code>
+     * <code>.google.protobuf.Timestamp update_time = 3 [json_name = "updateTime"];</code>
      */
     public Builder mergeUpdateTime(com.google.protobuf.Timestamp value) {
       if (updateTimeBuilder_ == null) {
-        if (((bitField0_ & 0x00000008) != 0) &&
+        if (((bitField0_ & 0x00000004) != 0) &&
           updateTime_ != null &&
           updateTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
           getUpdateTimeBuilder().mergeFrom(value);
@@ -1347,7 +1183,7 @@ private static final long serialVersionUID = 0L;
       } else {
         updateTimeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1356,10 +1192,10 @@ private static final long serialVersionUID = 0L;
      * time the billing plan was last updated
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp update_time = 4 [json_name = "updateTime"];</code>
+     * <code>.google.protobuf.Timestamp update_time = 3 [json_name = "updateTime"];</code>
      */
     public Builder clearUpdateTime() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000004);
       updateTime_ = null;
       if (updateTimeBuilder_ != null) {
         updateTimeBuilder_.dispose();
@@ -1373,10 +1209,10 @@ private static final long serialVersionUID = 0L;
      * time the billing plan was last updated
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp update_time = 4 [json_name = "updateTime"];</code>
+     * <code>.google.protobuf.Timestamp update_time = 3 [json_name = "updateTime"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getUpdateTimeBuilder() {
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000004;
       onChanged();
       return getUpdateTimeFieldBuilder().getBuilder();
     }
@@ -1385,7 +1221,7 @@ private static final long serialVersionUID = 0L;
      * time the billing plan was last updated
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp update_time = 4 [json_name = "updateTime"];</code>
+     * <code>.google.protobuf.Timestamp update_time = 3 [json_name = "updateTime"];</code>
      */
     public com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder() {
       if (updateTimeBuilder_ != null) {
@@ -1400,7 +1236,7 @@ private static final long serialVersionUID = 0L;
      * time the billing plan was last updated
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp update_time = 4 [json_name = "updateTime"];</code>
+     * <code>.google.protobuf.Timestamp update_time = 3 [json_name = "updateTime"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -1424,18 +1260,18 @@ private static final long serialVersionUID = 0L;
      * the time from which this billing plan will take effect
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp start_time = 5 [json_name = "startTime"];</code>
+     * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime"];</code>
      * @return Whether the startTime field is set.
      */
     public boolean hasStartTime() {
-      return ((bitField0_ & 0x00000010) != 0);
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
      * the time from which this billing plan will take effect
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp start_time = 5 [json_name = "startTime"];</code>
+     * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime"];</code>
      * @return The startTime.
      */
     public com.google.protobuf.Timestamp getStartTime() {
@@ -1450,7 +1286,7 @@ private static final long serialVersionUID = 0L;
      * the time from which this billing plan will take effect
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp start_time = 5 [json_name = "startTime"];</code>
+     * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime"];</code>
      */
     public Builder setStartTime(com.google.protobuf.Timestamp value) {
       if (startTimeBuilder_ == null) {
@@ -1461,7 +1297,7 @@ private static final long serialVersionUID = 0L;
       } else {
         startTimeBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1470,7 +1306,7 @@ private static final long serialVersionUID = 0L;
      * the time from which this billing plan will take effect
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp start_time = 5 [json_name = "startTime"];</code>
+     * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime"];</code>
      */
     public Builder setStartTime(
         com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -1479,7 +1315,7 @@ private static final long serialVersionUID = 0L;
       } else {
         startTimeBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1488,11 +1324,11 @@ private static final long serialVersionUID = 0L;
      * the time from which this billing plan will take effect
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp start_time = 5 [json_name = "startTime"];</code>
+     * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime"];</code>
      */
     public Builder mergeStartTime(com.google.protobuf.Timestamp value) {
       if (startTimeBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) != 0) &&
+        if (((bitField0_ & 0x00000008) != 0) &&
           startTime_ != null &&
           startTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
           getStartTimeBuilder().mergeFrom(value);
@@ -1502,7 +1338,7 @@ private static final long serialVersionUID = 0L;
       } else {
         startTimeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1511,10 +1347,10 @@ private static final long serialVersionUID = 0L;
      * the time from which this billing plan will take effect
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp start_time = 5 [json_name = "startTime"];</code>
+     * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime"];</code>
      */
     public Builder clearStartTime() {
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000008);
       startTime_ = null;
       if (startTimeBuilder_ != null) {
         startTimeBuilder_.dispose();
@@ -1528,10 +1364,10 @@ private static final long serialVersionUID = 0L;
      * the time from which this billing plan will take effect
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp start_time = 5 [json_name = "startTime"];</code>
+     * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getStartTimeBuilder() {
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000008;
       onChanged();
       return getStartTimeFieldBuilder().getBuilder();
     }
@@ -1540,7 +1376,7 @@ private static final long serialVersionUID = 0L;
      * the time from which this billing plan will take effect
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp start_time = 5 [json_name = "startTime"];</code>
+     * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime"];</code>
      */
     public com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder() {
       if (startTimeBuilder_ != null) {
@@ -1555,7 +1391,7 @@ private static final long serialVersionUID = 0L;
      * the time from which this billing plan will take effect
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp start_time = 5 [json_name = "startTime"];</code>
+     * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -1579,18 +1415,18 @@ private static final long serialVersionUID = 0L;
      * the time (if applicable) this billing plan ended; can be null
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp end_time = 6 [json_name = "endTime"];</code>
+     * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime"];</code>
      * @return Whether the endTime field is set.
      */
     public boolean hasEndTime() {
-      return ((bitField0_ & 0x00000020) != 0);
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <pre>
      * the time (if applicable) this billing plan ended; can be null
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp end_time = 6 [json_name = "endTime"];</code>
+     * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime"];</code>
      * @return The endTime.
      */
     public com.google.protobuf.Timestamp getEndTime() {
@@ -1605,7 +1441,7 @@ private static final long serialVersionUID = 0L;
      * the time (if applicable) this billing plan ended; can be null
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp end_time = 6 [json_name = "endTime"];</code>
+     * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime"];</code>
      */
     public Builder setEndTime(com.google.protobuf.Timestamp value) {
       if (endTimeBuilder_ == null) {
@@ -1616,7 +1452,7 @@ private static final long serialVersionUID = 0L;
       } else {
         endTimeBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1625,7 +1461,7 @@ private static final long serialVersionUID = 0L;
      * the time (if applicable) this billing plan ended; can be null
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp end_time = 6 [json_name = "endTime"];</code>
+     * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime"];</code>
      */
     public Builder setEndTime(
         com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -1634,7 +1470,7 @@ private static final long serialVersionUID = 0L;
       } else {
         endTimeBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1643,11 +1479,11 @@ private static final long serialVersionUID = 0L;
      * the time (if applicable) this billing plan ended; can be null
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp end_time = 6 [json_name = "endTime"];</code>
+     * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime"];</code>
      */
     public Builder mergeEndTime(com.google.protobuf.Timestamp value) {
       if (endTimeBuilder_ == null) {
-        if (((bitField0_ & 0x00000020) != 0) &&
+        if (((bitField0_ & 0x00000010) != 0) &&
           endTime_ != null &&
           endTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
           getEndTimeBuilder().mergeFrom(value);
@@ -1657,7 +1493,7 @@ private static final long serialVersionUID = 0L;
       } else {
         endTimeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1666,10 +1502,10 @@ private static final long serialVersionUID = 0L;
      * the time (if applicable) this billing plan ended; can be null
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp end_time = 6 [json_name = "endTime"];</code>
+     * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime"];</code>
      */
     public Builder clearEndTime() {
-      bitField0_ = (bitField0_ & ~0x00000020);
+      bitField0_ = (bitField0_ & ~0x00000010);
       endTime_ = null;
       if (endTimeBuilder_ != null) {
         endTimeBuilder_.dispose();
@@ -1683,10 +1519,10 @@ private static final long serialVersionUID = 0L;
      * the time (if applicable) this billing plan ended; can be null
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp end_time = 6 [json_name = "endTime"];</code>
+     * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getEndTimeBuilder() {
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000010;
       onChanged();
       return getEndTimeFieldBuilder().getBuilder();
     }
@@ -1695,7 +1531,7 @@ private static final long serialVersionUID = 0L;
      * the time (if applicable) this billing plan ended; can be null
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp end_time = 6 [json_name = "endTime"];</code>
+     * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime"];</code>
      */
     public com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder() {
       if (endTimeBuilder_ != null) {
@@ -1710,7 +1546,7 @@ private static final long serialVersionUID = 0L;
      * the time (if applicable) this billing plan ended; can be null
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp end_time = 6 [json_name = "endTime"];</code>
+     * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -1729,9 +1565,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition> rateDefinitions_ =
       java.util.Collections.emptyList();
     private void ensureRateDefinitionsIsMutable() {
-      if (!((bitField0_ & 0x00000040) != 0)) {
+      if (!((bitField0_ & 0x00000020) != 0)) {
         rateDefinitions_ = new java.util.ArrayList<com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition>(rateDefinitions_);
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000020;
        }
     }
 
@@ -1743,7 +1579,7 @@ private static final long serialVersionUID = 0L;
      * the billing plan rate definitions
      * </pre>
      *
-     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 7 [json_name = "rateDefinitions"];</code>
+     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 6 [json_name = "rateDefinitions"];</code>
      */
     public java.util.List<com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition> getRateDefinitionsList() {
       if (rateDefinitionsBuilder_ == null) {
@@ -1757,7 +1593,7 @@ private static final long serialVersionUID = 0L;
      * the billing plan rate definitions
      * </pre>
      *
-     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 7 [json_name = "rateDefinitions"];</code>
+     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 6 [json_name = "rateDefinitions"];</code>
      */
     public int getRateDefinitionsCount() {
       if (rateDefinitionsBuilder_ == null) {
@@ -1771,7 +1607,7 @@ private static final long serialVersionUID = 0L;
      * the billing plan rate definitions
      * </pre>
      *
-     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 7 [json_name = "rateDefinitions"];</code>
+     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 6 [json_name = "rateDefinitions"];</code>
      */
     public com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition getRateDefinitions(int index) {
       if (rateDefinitionsBuilder_ == null) {
@@ -1785,7 +1621,7 @@ private static final long serialVersionUID = 0L;
      * the billing plan rate definitions
      * </pre>
      *
-     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 7 [json_name = "rateDefinitions"];</code>
+     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 6 [json_name = "rateDefinitions"];</code>
      */
     public Builder setRateDefinitions(
         int index, com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition value) {
@@ -1806,7 +1642,7 @@ private static final long serialVersionUID = 0L;
      * the billing plan rate definitions
      * </pre>
      *
-     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 7 [json_name = "rateDefinitions"];</code>
+     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 6 [json_name = "rateDefinitions"];</code>
      */
     public Builder setRateDefinitions(
         int index, com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition.Builder builderForValue) {
@@ -1824,7 +1660,7 @@ private static final long serialVersionUID = 0L;
      * the billing plan rate definitions
      * </pre>
      *
-     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 7 [json_name = "rateDefinitions"];</code>
+     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 6 [json_name = "rateDefinitions"];</code>
      */
     public Builder addRateDefinitions(com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition value) {
       if (rateDefinitionsBuilder_ == null) {
@@ -1844,7 +1680,7 @@ private static final long serialVersionUID = 0L;
      * the billing plan rate definitions
      * </pre>
      *
-     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 7 [json_name = "rateDefinitions"];</code>
+     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 6 [json_name = "rateDefinitions"];</code>
      */
     public Builder addRateDefinitions(
         int index, com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition value) {
@@ -1865,7 +1701,7 @@ private static final long serialVersionUID = 0L;
      * the billing plan rate definitions
      * </pre>
      *
-     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 7 [json_name = "rateDefinitions"];</code>
+     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 6 [json_name = "rateDefinitions"];</code>
      */
     public Builder addRateDefinitions(
         com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition.Builder builderForValue) {
@@ -1883,7 +1719,7 @@ private static final long serialVersionUID = 0L;
      * the billing plan rate definitions
      * </pre>
      *
-     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 7 [json_name = "rateDefinitions"];</code>
+     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 6 [json_name = "rateDefinitions"];</code>
      */
     public Builder addRateDefinitions(
         int index, com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition.Builder builderForValue) {
@@ -1901,7 +1737,7 @@ private static final long serialVersionUID = 0L;
      * the billing plan rate definitions
      * </pre>
      *
-     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 7 [json_name = "rateDefinitions"];</code>
+     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 6 [json_name = "rateDefinitions"];</code>
      */
     public Builder addAllRateDefinitions(
         java.lang.Iterable<? extends com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition> values) {
@@ -1920,12 +1756,12 @@ private static final long serialVersionUID = 0L;
      * the billing plan rate definitions
      * </pre>
      *
-     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 7 [json_name = "rateDefinitions"];</code>
+     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 6 [json_name = "rateDefinitions"];</code>
      */
     public Builder clearRateDefinitions() {
       if (rateDefinitionsBuilder_ == null) {
         rateDefinitions_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
       } else {
         rateDefinitionsBuilder_.clear();
@@ -1937,7 +1773,7 @@ private static final long serialVersionUID = 0L;
      * the billing plan rate definitions
      * </pre>
      *
-     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 7 [json_name = "rateDefinitions"];</code>
+     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 6 [json_name = "rateDefinitions"];</code>
      */
     public Builder removeRateDefinitions(int index) {
       if (rateDefinitionsBuilder_ == null) {
@@ -1954,7 +1790,7 @@ private static final long serialVersionUID = 0L;
      * the billing plan rate definitions
      * </pre>
      *
-     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 7 [json_name = "rateDefinitions"];</code>
+     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 6 [json_name = "rateDefinitions"];</code>
      */
     public com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition.Builder getRateDefinitionsBuilder(
         int index) {
@@ -1965,7 +1801,7 @@ private static final long serialVersionUID = 0L;
      * the billing plan rate definitions
      * </pre>
      *
-     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 7 [json_name = "rateDefinitions"];</code>
+     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 6 [json_name = "rateDefinitions"];</code>
      */
     public com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionOrBuilder getRateDefinitionsOrBuilder(
         int index) {
@@ -1979,7 +1815,7 @@ private static final long serialVersionUID = 0L;
      * the billing plan rate definitions
      * </pre>
      *
-     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 7 [json_name = "rateDefinitions"];</code>
+     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 6 [json_name = "rateDefinitions"];</code>
      */
     public java.util.List<? extends com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionOrBuilder> 
          getRateDefinitionsOrBuilderList() {
@@ -1994,7 +1830,7 @@ private static final long serialVersionUID = 0L;
      * the billing plan rate definitions
      * </pre>
      *
-     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 7 [json_name = "rateDefinitions"];</code>
+     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 6 [json_name = "rateDefinitions"];</code>
      */
     public com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition.Builder addRateDefinitionsBuilder() {
       return getRateDefinitionsFieldBuilder().addBuilder(
@@ -2005,7 +1841,7 @@ private static final long serialVersionUID = 0L;
      * the billing plan rate definitions
      * </pre>
      *
-     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 7 [json_name = "rateDefinitions"];</code>
+     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 6 [json_name = "rateDefinitions"];</code>
      */
     public com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition.Builder addRateDefinitionsBuilder(
         int index) {
@@ -2017,7 +1853,7 @@ private static final long serialVersionUID = 0L;
      * the billing plan rate definitions
      * </pre>
      *
-     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 7 [json_name = "rateDefinitions"];</code>
+     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 6 [json_name = "rateDefinitions"];</code>
      */
     public java.util.List<com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition.Builder> 
          getRateDefinitionsBuilderList() {
@@ -2030,7 +1866,7 @@ private static final long serialVersionUID = 0L;
         rateDefinitionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition, com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionOrBuilder>(
                 rateDefinitions_,
-                ((bitField0_ & 0x00000040) != 0),
+                ((bitField0_ & 0x00000020) != 0),
                 getParentForChildren(),
                 isClean());
         rateDefinitions_ = null;

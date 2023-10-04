@@ -21,7 +21,6 @@ private static final long serialVersionUID = 0L;
   }
   private InvoiceItem() {
     invoiceItemId_ = "";
-    invoiceId_ = "";
     product_ = 0;
   }
 
@@ -92,61 +91,14 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int INVOICE_ID_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object invoiceId_ = "";
-  /**
-   * <pre>
-   * the invoice identifier
-   * </pre>
-   *
-   * <code>string invoice_id = 2 [json_name = "invoiceId"];</code>
-   * @return The invoiceId.
-   */
-  @java.lang.Override
-  public java.lang.String getInvoiceId() {
-    java.lang.Object ref = invoiceId_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      invoiceId_ = s;
-      return s;
-    }
-  }
-  /**
-   * <pre>
-   * the invoice identifier
-   * </pre>
-   *
-   * <code>string invoice_id = 2 [json_name = "invoiceId"];</code>
-   * @return The bytes for invoiceId.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getInvoiceIdBytes() {
-    java.lang.Object ref = invoiceId_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      invoiceId_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int PRODUCT_FIELD_NUMBER = 3;
+  public static final int PRODUCT_FIELD_NUMBER = 2;
   private int product_ = 0;
   /**
    * <pre>
    * the product this item represents
    * </pre>
    *
-   * <code>.services.billing.entities.v1alpha1.Product product = 3 [json_name = "product"];</code>
+   * <code>.services.billing.entities.v1alpha1.Product product = 2 [json_name = "product"];</code>
    * @return The enum numeric value on the wire for product.
    */
   @java.lang.Override public int getProductValue() {
@@ -157,7 +109,7 @@ private static final long serialVersionUID = 0L;
    * the product this item represents
    * </pre>
    *
-   * <code>.services.billing.entities.v1alpha1.Product product = 3 [json_name = "product"];</code>
+   * <code>.services.billing.entities.v1alpha1.Product product = 2 [json_name = "product"];</code>
    * @return The product.
    */
   @java.lang.Override public com.tcn.cloud.api.services.billing.entities.v1alpha1.Product getProduct() {
@@ -165,14 +117,14 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.tcn.cloud.api.services.billing.entities.v1alpha1.Product.UNRECOGNIZED : result;
   }
 
-  public static final int PRICE_FIELD_NUMBER = 4;
+  public static final int PRICE_FIELD_NUMBER = 3;
   private double price_ = 0D;
   /**
    * <pre>
    * the price for this product
    * </pre>
    *
-   * <code>double price = 4 [json_name = "price"];</code>
+   * <code>double price = 3 [json_name = "price"];</code>
    * @return The price.
    */
   @java.lang.Override
@@ -180,14 +132,14 @@ private static final long serialVersionUID = 0L;
     return price_;
   }
 
-  public static final int CREATE_TIME_FIELD_NUMBER = 5;
+  public static final int CREATE_TIME_FIELD_NUMBER = 4;
   private com.google.protobuf.Timestamp createTime_;
   /**
    * <pre>
    * the time this invoice item was created
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp create_time = 5 [json_name = "createTime"];</code>
+   * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime"];</code>
    * @return Whether the createTime field is set.
    */
   @java.lang.Override
@@ -199,7 +151,7 @@ private static final long serialVersionUID = 0L;
    * the time this invoice item was created
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp create_time = 5 [json_name = "createTime"];</code>
+   * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime"];</code>
    * @return The createTime.
    */
   @java.lang.Override
@@ -211,21 +163,21 @@ private static final long serialVersionUID = 0L;
    * the time this invoice item was created
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp create_time = 5 [json_name = "createTime"];</code>
+   * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime"];</code>
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder() {
     return createTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createTime_;
   }
 
-  public static final int UPDATE_TIME_FIELD_NUMBER = 6;
+  public static final int UPDATE_TIME_FIELD_NUMBER = 5;
   private com.google.protobuf.Timestamp updateTime_;
   /**
    * <pre>
    * the time this invoice item was last updated
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp update_time = 6 [json_name = "updateTime"];</code>
+   * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
    * @return Whether the updateTime field is set.
    */
   @java.lang.Override
@@ -237,7 +189,7 @@ private static final long serialVersionUID = 0L;
    * the time this invoice item was last updated
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp update_time = 6 [json_name = "updateTime"];</code>
+   * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
    * @return The updateTime.
    */
   @java.lang.Override
@@ -249,7 +201,7 @@ private static final long serialVersionUID = 0L;
    * the time this invoice item was last updated
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp update_time = 6 [json_name = "updateTime"];</code>
+   * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder() {
@@ -273,20 +225,17 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(invoiceItemId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, invoiceItemId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(invoiceId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, invoiceId_);
-    }
     if (product_ != com.tcn.cloud.api.services.billing.entities.v1alpha1.Product.PRODUCT_UNSPECIFIED.getNumber()) {
-      output.writeEnum(3, product_);
+      output.writeEnum(2, product_);
     }
     if (java.lang.Double.doubleToRawLongBits(price_) != 0) {
-      output.writeDouble(4, price_);
+      output.writeDouble(3, price_);
     }
     if (createTime_ != null) {
-      output.writeMessage(5, getCreateTime());
+      output.writeMessage(4, getCreateTime());
     }
     if (updateTime_ != null) {
-      output.writeMessage(6, getUpdateTime());
+      output.writeMessage(5, getUpdateTime());
     }
     getUnknownFields().writeTo(output);
   }
@@ -300,24 +249,21 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(invoiceItemId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, invoiceItemId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(invoiceId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, invoiceId_);
-    }
     if (product_ != com.tcn.cloud.api.services.billing.entities.v1alpha1.Product.PRODUCT_UNSPECIFIED.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(3, product_);
+        .computeEnumSize(2, product_);
     }
     if (java.lang.Double.doubleToRawLongBits(price_) != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeDoubleSize(4, price_);
+        .computeDoubleSize(3, price_);
     }
     if (createTime_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(5, getCreateTime());
+        .computeMessageSize(4, getCreateTime());
     }
     if (updateTime_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(6, getUpdateTime());
+        .computeMessageSize(5, getUpdateTime());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -336,8 +282,6 @@ private static final long serialVersionUID = 0L;
 
     if (!getInvoiceItemId()
         .equals(other.getInvoiceItemId())) return false;
-    if (!getInvoiceId()
-        .equals(other.getInvoiceId())) return false;
     if (product_ != other.product_) return false;
     if (java.lang.Double.doubleToLongBits(getPrice())
         != java.lang.Double.doubleToLongBits(
@@ -365,8 +309,6 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + INVOICE_ITEM_ID_FIELD_NUMBER;
     hash = (53 * hash) + getInvoiceItemId().hashCode();
-    hash = (37 * hash) + INVOICE_ID_FIELD_NUMBER;
-    hash = (53 * hash) + getInvoiceId().hashCode();
     hash = (37 * hash) + PRODUCT_FIELD_NUMBER;
     hash = (53 * hash) + product_;
     hash = (37 * hash) + PRICE_FIELD_NUMBER;
@@ -516,7 +458,6 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       invoiceItemId_ = "";
-      invoiceId_ = "";
       product_ = 0;
       price_ = 0D;
       createTime_ = null;
@@ -566,20 +507,17 @@ private static final long serialVersionUID = 0L;
         result.invoiceItemId_ = invoiceItemId_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.invoiceId_ = invoiceId_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
         result.product_ = product_;
       }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
+      if (((from_bitField0_ & 0x00000004) != 0)) {
         result.price_ = price_;
       }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
+      if (((from_bitField0_ & 0x00000008) != 0)) {
         result.createTime_ = createTimeBuilder_ == null
             ? createTime_
             : createTimeBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
+      if (((from_bitField0_ & 0x00000010) != 0)) {
         result.updateTime_ = updateTimeBuilder_ == null
             ? updateTime_
             : updateTimeBuilder_.build();
@@ -635,11 +573,6 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000001;
         onChanged();
       }
-      if (!other.getInvoiceId().isEmpty()) {
-        invoiceId_ = other.invoiceId_;
-        bitField0_ |= 0x00000002;
-        onChanged();
-      }
       if (other.product_ != 0) {
         setProductValue(other.getProductValue());
       }
@@ -683,35 +616,30 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 10
-            case 18: {
-              invoiceId_ = input.readStringRequireUtf8();
+            case 16: {
+              product_ = input.readEnum();
               bitField0_ |= 0x00000002;
               break;
-            } // case 18
-            case 24: {
-              product_ = input.readEnum();
+            } // case 16
+            case 25: {
+              price_ = input.readDouble();
               bitField0_ |= 0x00000004;
               break;
-            } // case 24
-            case 33: {
-              price_ = input.readDouble();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 33
-            case 42: {
+            } // case 25
+            case 34: {
               input.readMessage(
                   getCreateTimeFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
+            case 42: {
+              input.readMessage(
+                  getUpdateTimeFieldBuilder().getBuilder(),
                   extensionRegistry);
               bitField0_ |= 0x00000010;
               break;
             } // case 42
-            case 50: {
-              input.readMessage(
-                  getUpdateTimeFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 50
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -821,105 +749,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object invoiceId_ = "";
-    /**
-     * <pre>
-     * the invoice identifier
-     * </pre>
-     *
-     * <code>string invoice_id = 2 [json_name = "invoiceId"];</code>
-     * @return The invoiceId.
-     */
-    public java.lang.String getInvoiceId() {
-      java.lang.Object ref = invoiceId_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        invoiceId_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <pre>
-     * the invoice identifier
-     * </pre>
-     *
-     * <code>string invoice_id = 2 [json_name = "invoiceId"];</code>
-     * @return The bytes for invoiceId.
-     */
-    public com.google.protobuf.ByteString
-        getInvoiceIdBytes() {
-      java.lang.Object ref = invoiceId_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        invoiceId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <pre>
-     * the invoice identifier
-     * </pre>
-     *
-     * <code>string invoice_id = 2 [json_name = "invoiceId"];</code>
-     * @param value The invoiceId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setInvoiceId(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      invoiceId_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * the invoice identifier
-     * </pre>
-     *
-     * <code>string invoice_id = 2 [json_name = "invoiceId"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearInvoiceId() {
-      invoiceId_ = getDefaultInstance().getInvoiceId();
-      bitField0_ = (bitField0_ & ~0x00000002);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * the invoice identifier
-     * </pre>
-     *
-     * <code>string invoice_id = 2 [json_name = "invoiceId"];</code>
-     * @param value The bytes for invoiceId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setInvoiceIdBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      invoiceId_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-
     private int product_ = 0;
     /**
      * <pre>
      * the product this item represents
      * </pre>
      *
-     * <code>.services.billing.entities.v1alpha1.Product product = 3 [json_name = "product"];</code>
+     * <code>.services.billing.entities.v1alpha1.Product product = 2 [json_name = "product"];</code>
      * @return The enum numeric value on the wire for product.
      */
     @java.lang.Override public int getProductValue() {
@@ -930,13 +766,13 @@ private static final long serialVersionUID = 0L;
      * the product this item represents
      * </pre>
      *
-     * <code>.services.billing.entities.v1alpha1.Product product = 3 [json_name = "product"];</code>
+     * <code>.services.billing.entities.v1alpha1.Product product = 2 [json_name = "product"];</code>
      * @param value The enum numeric value on the wire for product to set.
      * @return This builder for chaining.
      */
     public Builder setProductValue(int value) {
       product_ = value;
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -945,7 +781,7 @@ private static final long serialVersionUID = 0L;
      * the product this item represents
      * </pre>
      *
-     * <code>.services.billing.entities.v1alpha1.Product product = 3 [json_name = "product"];</code>
+     * <code>.services.billing.entities.v1alpha1.Product product = 2 [json_name = "product"];</code>
      * @return The product.
      */
     @java.lang.Override
@@ -958,7 +794,7 @@ private static final long serialVersionUID = 0L;
      * the product this item represents
      * </pre>
      *
-     * <code>.services.billing.entities.v1alpha1.Product product = 3 [json_name = "product"];</code>
+     * <code>.services.billing.entities.v1alpha1.Product product = 2 [json_name = "product"];</code>
      * @param value The product to set.
      * @return This builder for chaining.
      */
@@ -966,7 +802,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       product_ = value.getNumber();
       onChanged();
       return this;
@@ -976,11 +812,11 @@ private static final long serialVersionUID = 0L;
      * the product this item represents
      * </pre>
      *
-     * <code>.services.billing.entities.v1alpha1.Product product = 3 [json_name = "product"];</code>
+     * <code>.services.billing.entities.v1alpha1.Product product = 2 [json_name = "product"];</code>
      * @return This builder for chaining.
      */
     public Builder clearProduct() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000002);
       product_ = 0;
       onChanged();
       return this;
@@ -992,7 +828,7 @@ private static final long serialVersionUID = 0L;
      * the price for this product
      * </pre>
      *
-     * <code>double price = 4 [json_name = "price"];</code>
+     * <code>double price = 3 [json_name = "price"];</code>
      * @return The price.
      */
     @java.lang.Override
@@ -1004,14 +840,14 @@ private static final long serialVersionUID = 0L;
      * the price for this product
      * </pre>
      *
-     * <code>double price = 4 [json_name = "price"];</code>
+     * <code>double price = 3 [json_name = "price"];</code>
      * @param value The price to set.
      * @return This builder for chaining.
      */
     public Builder setPrice(double value) {
 
       price_ = value;
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1020,11 +856,11 @@ private static final long serialVersionUID = 0L;
      * the price for this product
      * </pre>
      *
-     * <code>double price = 4 [json_name = "price"];</code>
+     * <code>double price = 3 [json_name = "price"];</code>
      * @return This builder for chaining.
      */
     public Builder clearPrice() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000004);
       price_ = 0D;
       onChanged();
       return this;
@@ -1038,18 +874,18 @@ private static final long serialVersionUID = 0L;
      * the time this invoice item was created
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp create_time = 5 [json_name = "createTime"];</code>
+     * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime"];</code>
      * @return Whether the createTime field is set.
      */
     public boolean hasCreateTime() {
-      return ((bitField0_ & 0x00000010) != 0);
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
      * the time this invoice item was created
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp create_time = 5 [json_name = "createTime"];</code>
+     * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime"];</code>
      * @return The createTime.
      */
     public com.google.protobuf.Timestamp getCreateTime() {
@@ -1064,7 +900,7 @@ private static final long serialVersionUID = 0L;
      * the time this invoice item was created
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp create_time = 5 [json_name = "createTime"];</code>
+     * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime"];</code>
      */
     public Builder setCreateTime(com.google.protobuf.Timestamp value) {
       if (createTimeBuilder_ == null) {
@@ -1075,7 +911,7 @@ private static final long serialVersionUID = 0L;
       } else {
         createTimeBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1084,7 +920,7 @@ private static final long serialVersionUID = 0L;
      * the time this invoice item was created
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp create_time = 5 [json_name = "createTime"];</code>
+     * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime"];</code>
      */
     public Builder setCreateTime(
         com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -1093,7 +929,7 @@ private static final long serialVersionUID = 0L;
       } else {
         createTimeBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1102,11 +938,11 @@ private static final long serialVersionUID = 0L;
      * the time this invoice item was created
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp create_time = 5 [json_name = "createTime"];</code>
+     * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime"];</code>
      */
     public Builder mergeCreateTime(com.google.protobuf.Timestamp value) {
       if (createTimeBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) != 0) &&
+        if (((bitField0_ & 0x00000008) != 0) &&
           createTime_ != null &&
           createTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
           getCreateTimeBuilder().mergeFrom(value);
@@ -1116,7 +952,7 @@ private static final long serialVersionUID = 0L;
       } else {
         createTimeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1125,10 +961,10 @@ private static final long serialVersionUID = 0L;
      * the time this invoice item was created
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp create_time = 5 [json_name = "createTime"];</code>
+     * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime"];</code>
      */
     public Builder clearCreateTime() {
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000008);
       createTime_ = null;
       if (createTimeBuilder_ != null) {
         createTimeBuilder_.dispose();
@@ -1142,10 +978,10 @@ private static final long serialVersionUID = 0L;
      * the time this invoice item was created
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp create_time = 5 [json_name = "createTime"];</code>
+     * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getCreateTimeBuilder() {
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000008;
       onChanged();
       return getCreateTimeFieldBuilder().getBuilder();
     }
@@ -1154,7 +990,7 @@ private static final long serialVersionUID = 0L;
      * the time this invoice item was created
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp create_time = 5 [json_name = "createTime"];</code>
+     * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime"];</code>
      */
     public com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder() {
       if (createTimeBuilder_ != null) {
@@ -1169,7 +1005,7 @@ private static final long serialVersionUID = 0L;
      * the time this invoice item was created
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp create_time = 5 [json_name = "createTime"];</code>
+     * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -1193,18 +1029,18 @@ private static final long serialVersionUID = 0L;
      * the time this invoice item was last updated
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp update_time = 6 [json_name = "updateTime"];</code>
+     * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
      * @return Whether the updateTime field is set.
      */
     public boolean hasUpdateTime() {
-      return ((bitField0_ & 0x00000020) != 0);
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <pre>
      * the time this invoice item was last updated
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp update_time = 6 [json_name = "updateTime"];</code>
+     * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
      * @return The updateTime.
      */
     public com.google.protobuf.Timestamp getUpdateTime() {
@@ -1219,7 +1055,7 @@ private static final long serialVersionUID = 0L;
      * the time this invoice item was last updated
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp update_time = 6 [json_name = "updateTime"];</code>
+     * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
      */
     public Builder setUpdateTime(com.google.protobuf.Timestamp value) {
       if (updateTimeBuilder_ == null) {
@@ -1230,7 +1066,7 @@ private static final long serialVersionUID = 0L;
       } else {
         updateTimeBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1239,7 +1075,7 @@ private static final long serialVersionUID = 0L;
      * the time this invoice item was last updated
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp update_time = 6 [json_name = "updateTime"];</code>
+     * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
      */
     public Builder setUpdateTime(
         com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -1248,7 +1084,7 @@ private static final long serialVersionUID = 0L;
       } else {
         updateTimeBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1257,11 +1093,11 @@ private static final long serialVersionUID = 0L;
      * the time this invoice item was last updated
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp update_time = 6 [json_name = "updateTime"];</code>
+     * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
      */
     public Builder mergeUpdateTime(com.google.protobuf.Timestamp value) {
       if (updateTimeBuilder_ == null) {
-        if (((bitField0_ & 0x00000020) != 0) &&
+        if (((bitField0_ & 0x00000010) != 0) &&
           updateTime_ != null &&
           updateTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
           getUpdateTimeBuilder().mergeFrom(value);
@@ -1271,7 +1107,7 @@ private static final long serialVersionUID = 0L;
       } else {
         updateTimeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1280,10 +1116,10 @@ private static final long serialVersionUID = 0L;
      * the time this invoice item was last updated
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp update_time = 6 [json_name = "updateTime"];</code>
+     * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
      */
     public Builder clearUpdateTime() {
-      bitField0_ = (bitField0_ & ~0x00000020);
+      bitField0_ = (bitField0_ & ~0x00000010);
       updateTime_ = null;
       if (updateTimeBuilder_ != null) {
         updateTimeBuilder_.dispose();
@@ -1297,10 +1133,10 @@ private static final long serialVersionUID = 0L;
      * the time this invoice item was last updated
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp update_time = 6 [json_name = "updateTime"];</code>
+     * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getUpdateTimeBuilder() {
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000010;
       onChanged();
       return getUpdateTimeFieldBuilder().getBuilder();
     }
@@ -1309,7 +1145,7 @@ private static final long serialVersionUID = 0L;
      * the time this invoice item was last updated
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp update_time = 6 [json_name = "updateTime"];</code>
+     * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
      */
     public com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder() {
       if (updateTimeBuilder_ != null) {
@@ -1324,7 +1160,7 @@ private static final long serialVersionUID = 0L;
      * the time this invoice item was last updated
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp update_time = 6 [json_name = "updateTime"];</code>
+     * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
