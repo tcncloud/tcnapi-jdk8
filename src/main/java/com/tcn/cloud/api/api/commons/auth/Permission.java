@@ -586,6 +586,14 @@ public enum Permission
   PERMISSION_SCORECARDS_FLAG_EVAL(1603),
   /**
    * <pre>
+   * Enables access to manage learning opportunities.
+   * </pre>
+   *
+   * <code>PERMISSION_SCORECARDS_LEARNING_OPPORTUNITIES = 1604 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_SCORECARDS_LEARNING_OPPORTUNITIES(1604),
+  /**
+   * <pre>
    * Enables access to Dev Tools app.
    * </pre>
    *
@@ -1242,6 +1250,14 @@ public enum Permission
   public static final int PERMISSION_SCORECARDS_FLAG_EVAL_VALUE = 1603;
   /**
    * <pre>
+   * Enables access to manage learning opportunities.
+   * </pre>
+   *
+   * <code>PERMISSION_SCORECARDS_LEARNING_OPPORTUNITIES = 1604 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_SCORECARDS_LEARNING_OPPORTUNITIES_VALUE = 1604;
+  /**
+   * <pre>
    * Enables access to Dev Tools app.
    * </pre>
    *
@@ -1419,6 +1435,7 @@ public enum Permission
       case 1601: return PERMISSION_SCORECARDS_MANAGE;
       case 1602: return PERMISSION_SCORECARDS_EVALUATE;
       case 1603: return PERMISSION_SCORECARDS_FLAG_EVAL;
+      case 1604: return PERMISSION_SCORECARDS_LEARNING_OPPORTUNITIES;
       case 1800: return PERMISSION_DEV_TOOLS;
       case 2000: return PERMISSION_DELIVERY_NOTIFICATIONS_VIEW;
       case 2001: return PERMISSION_DELIVERY_NOTIFICATIONS_EDIT;
