@@ -533,7 +533,7 @@ public final class ServiceProto {
       "lateToOrganization\022:.api.v1alpha1.org.Co" +
       "pyDataDipTemplateToOrganizationRequest\032;" +
       ".api.v1alpha1.org.CopyDataDipTemplateToO" +
-      "rganizationResponse\"R\272\270\221\002\005\n\003\010\354\016\202\323\344\223\002B\"=/" +
+      "rganizationResponse\"R\272\270\221\002\005\n\003\010\252\001\202\323\344\223\002B\"=/" +
       "api/v1alpha1/org/huntgroup/copydatadipte" +
       "mplatetoorganization:\001*\022\324\001\n\032ListAgentRes" +
       "ponseAutoRules\0223.api.v1alpha1.org.ListAg" +
