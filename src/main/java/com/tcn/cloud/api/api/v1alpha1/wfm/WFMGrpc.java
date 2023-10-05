@@ -5618,6 +5618,7 @@ public final class WFMGrpc {
      * Errors:
      *   - grpc.Invalid: one or more fields in the &#64;node have invalid values.
      *   - grpc.NotFound: parent location node doesn't exist or belongs to a different scenario than the one given.
+     *                    the &#64;skill_profile_category does not exist.
      *   - grpc.Internal: error occurs when creating the program node.
      * </pre>
      */
@@ -5638,6 +5639,7 @@ public final class WFMGrpc {
      *   - grpc.Invalid: one or more fields in the &#64;program_node have invalid values.
      *   - grpc.Internal: error occurs when updating the program node.
      *   - grpc.NotFound: entry to be updated doesn't exist, or the given parent &#64;location_node_sid belongs to a different scenario than the program node to update.
+     *                    the &#64;skill_profile_category does not exist.
      * </pre>
      */
     default void updateProgramNode(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateProgramNodeReq request,
@@ -8355,6 +8357,7 @@ public final class WFMGrpc {
      * Errors:
      *   - grpc.Invalid: one or more fields in the &#64;node have invalid values.
      *   - grpc.NotFound: parent location node doesn't exist or belongs to a different scenario than the one given.
+     *                    the &#64;skill_profile_category does not exist.
      *   - grpc.Internal: error occurs when creating the program node.
      * </pre>
      */
@@ -8376,6 +8379,7 @@ public final class WFMGrpc {
      *   - grpc.Invalid: one or more fields in the &#64;program_node have invalid values.
      *   - grpc.Internal: error occurs when updating the program node.
      *   - grpc.NotFound: entry to be updated doesn't exist, or the given parent &#64;location_node_sid belongs to a different scenario than the program node to update.
+     *                    the &#64;skill_profile_category does not exist.
      * </pre>
      */
     public void updateProgramNode(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateProgramNodeReq request,
@@ -11135,6 +11139,7 @@ public final class WFMGrpc {
      * Errors:
      *   - grpc.Invalid: one or more fields in the &#64;node have invalid values.
      *   - grpc.NotFound: parent location node doesn't exist or belongs to a different scenario than the one given.
+     *                    the &#64;skill_profile_category does not exist.
      *   - grpc.Internal: error occurs when creating the program node.
      * </pre>
      */
@@ -11155,6 +11160,7 @@ public final class WFMGrpc {
      *   - grpc.Invalid: one or more fields in the &#64;program_node have invalid values.
      *   - grpc.Internal: error occurs when updating the program node.
      *   - grpc.NotFound: entry to be updated doesn't exist, or the given parent &#64;location_node_sid belongs to a different scenario than the program node to update.
+     *                    the &#64;skill_profile_category does not exist.
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.UpdateProgramNodeRes updateProgramNode(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateProgramNodeReq request) {
@@ -13746,6 +13752,7 @@ public final class WFMGrpc {
      * Errors:
      *   - grpc.Invalid: one or more fields in the &#64;node have invalid values.
      *   - grpc.NotFound: parent location node doesn't exist or belongs to a different scenario than the one given.
+     *                    the &#64;skill_profile_category does not exist.
      *   - grpc.Internal: error occurs when creating the program node.
      * </pre>
      */
@@ -13767,6 +13774,7 @@ public final class WFMGrpc {
      *   - grpc.Invalid: one or more fields in the &#64;program_node have invalid values.
      *   - grpc.Internal: error occurs when updating the program node.
      *   - grpc.NotFound: entry to be updated doesn't exist, or the given parent &#64;location_node_sid belongs to a different scenario than the program node to update.
+     *                    the &#64;skill_profile_category does not exist.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateProgramNodeRes> updateProgramNode(
