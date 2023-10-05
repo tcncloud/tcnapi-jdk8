@@ -105,61 +105,64 @@ public final class PlansProto {
     java.lang.String[] descriptorData = {
       "\n%services/billing/v1alpha1/plans.proto\022" +
       "\031services.billing.v1alpha1\032 google/proto" +
-      "buf/field_mask.proto\032-services/billing/e" +
-      "ntities/v1alpha1/plan.proto\032$services/bi" +
-      "lling/v1alpha1/core.proto\"\226\001\n\030CreateBill" +
-      "ingPlanRequest\022&\n\017billing_plan_id\030\001 \001(\tR" +
-      "\rbillingPlanId\022R\n\014billing_plan\030\002 \001(\0132/.s" +
-      "ervices.billing.entities.v1alpha1.Billin" +
-      "gPlanR\013billingPlan\"C\n\031CreateBillingPlanR" +
-      "esponse\022&\n\017billing_plan_id\030\001 \001(\tR\rbillin" +
-      "gPlanId\"B\n\030DeleteBillingPlanRequest\022&\n\017b" +
-      "illing_plan_id\030\001 \001(\tR\rbillingPlanId\"\033\n\031D" +
-      "eleteBillingPlanResponse\"4\n\033GetActiveBil" +
-      "lingPlanRequest\022\025\n\006org_id\030\001 \001(\tR\005orgId\"r" +
-      "\n\034GetActiveBillingPlanResponse\022R\n\014billin" +
-      "g_plan\030\001 \001(\0132/.services.billing.entities" +
-      ".v1alpha1.BillingPlanR\013billingPlan\"?\n\025Ge" +
-      "tBillingPlanRequest\022&\n\017billing_plan_id\030\001" +
-      " \001(\tR\rbillingPlanId\"l\n\026GetBillingPlanRes" +
-      "ponse\022R\n\014billing_plan\030\001 \001(\0132/.services.b" +
-      "illing.entities.v1alpha1.BillingPlanR\013bi" +
-      "llingPlan\"\036\n\034GetDefaultBillingPlanReques" +
-      "t\"s\n\035GetDefaultBillingPlanResponse\022R\n\014bi" +
-      "lling_plan\030\001 \001(\0132/.services.billing.enti" +
-      "ties.v1alpha1.BillingPlanR\013billingPlan\"\367" +
-      "\001\n\027ListBillingPlansRequest\022&\n\017billing_pl" +
-      "an_id\030\001 \001(\tR\rbillingPlanId\022\026\n\006filter\030\002 \001" +
-      "(\tR\006filter\0222\n\006fields\030\003 \001(\0132\032.google.prot" +
-      "obuf.FieldMaskR\006fields\0223\n\004sort\030\004 \003(\0132\037.s" +
-      "ervices.billing.v1alpha1.SortR\004sort\0223\n\004p" +
-      "age\030\005 \001(\0132\037.services.billing.v1alpha1.Pa" +
-      "geR\004page\"\206\001\n\030ListBillingPlansResponse\022T\n" +
-      "\rbilling_plans\030\001 \003(\0132/.services.billing." +
-      "entities.v1alpha1.BillingPlanR\014billingPl" +
-      "ans\022\024\n\005token\030\002 \001(\tR\005token\"\327\001\n\030UpdateBill" +
-      "ingPlanRequest\022&\n\017billing_plan_id\030\001 \001(\tR" +
-      "\rbillingPlanId\022R\n\014billing_plan\030\002 \001(\0132/.s" +
-      "ervices.billing.entities.v1alpha1.Billin" +
-      "gPlanR\013billingPlan\022?\n\rupdate_fields\030\003 \001(" +
-      "\0132\032.google.protobuf.FieldMaskR\014updateFie" +
-      "lds\"\033\n\031UpdateBillingPlanResponse\"\266\001\n\037Upd" +
-      "ateDefaultBillingPlanRequest\022R\n\014billing_" +
-      "plan\030\001 \001(\0132/.services.billing.entities.v" +
-      "1alpha1.BillingPlanR\013billingPlan\022?\n\rupda" +
-      "te_fields\030\002 \001(\0132\032.google.protobuf.FieldM" +
-      "askR\014updateFields\"\"\n UpdateDefaultBillin" +
-      "gPlanResponseB\277\001\n+com.tcn.cloud.api.serv" +
-      "ices.billing.v1alpha1B\nPlansProtoP\001\242\002\003SB" +
-      "X\252\002\031Services.Billing.V1alpha1\312\002\031Services" +
-      "\\Billing\\V1alpha1\342\002%Services\\Billing\\V1a" +
-      "lpha1\\GPBMetadata\352\002\033Services::Billing::V" +
-      "1alpha1b\006proto3"
+      "buf/field_mask.proto\032\037google/protobuf/ti" +
+      "mestamp.proto\032-services/billing/entities" +
+      "/v1alpha1/plan.proto\032$services/billing/v" +
+      "1alpha1/core.proto\"\226\001\n\030CreateBillingPlan" +
+      "Request\022&\n\017billing_plan_id\030\001 \001(\tR\rbillin" +
+      "gPlanId\022R\n\014billing_plan\030\002 \001(\0132/.services" +
+      ".billing.entities.v1alpha1.BillingPlanR\013" +
+      "billingPlan\"C\n\031CreateBillingPlanResponse" +
+      "\022&\n\017billing_plan_id\030\001 \001(\tR\rbillingPlanId" +
+      "\"B\n\030DeleteBillingPlanRequest\022&\n\017billing_" +
+      "plan_id\030\001 \001(\tR\rbillingPlanId\"\033\n\031DeleteBi" +
+      "llingPlanResponse\"4\n\033GetActiveBillingPla" +
+      "nRequest\022\025\n\006org_id\030\001 \001(\tR\005orgId\"\265\001\n\034GetA" +
+      "ctiveBillingPlanResponse\022R\n\014billing_plan" +
+      "\030\001 \001(\0132/.services.billing.entities.v1alp" +
+      "ha1.BillingPlanR\013billingPlan\022A\n\016effectiv" +
+      "e_time\030\002 \001(\0132\032.google.protobuf.Timestamp" +
+      "R\reffectiveTime\"?\n\025GetBillingPlanRequest" +
+      "\022&\n\017billing_plan_id\030\001 \001(\tR\rbillingPlanId" +
+      "\"l\n\026GetBillingPlanResponse\022R\n\014billing_pl" +
+      "an\030\001 \001(\0132/.services.billing.entities.v1a" +
+      "lpha1.BillingPlanR\013billingPlan\"\036\n\034GetDef" +
+      "aultBillingPlanRequest\"s\n\035GetDefaultBill" +
+      "ingPlanResponse\022R\n\014billing_plan\030\001 \001(\0132/." +
+      "services.billing.entities.v1alpha1.Billi" +
+      "ngPlanR\013billingPlan\"\367\001\n\027ListBillingPlans" +
+      "Request\022&\n\017billing_plan_id\030\001 \001(\tR\rbillin" +
+      "gPlanId\022\026\n\006filter\030\002 \001(\tR\006filter\0222\n\006field" +
+      "s\030\003 \001(\0132\032.google.protobuf.FieldMaskR\006fie" +
+      "lds\0223\n\004sort\030\004 \003(\0132\037.services.billing.v1a" +
+      "lpha1.SortR\004sort\0223\n\004page\030\005 \001(\0132\037.service" +
+      "s.billing.v1alpha1.PageR\004page\"\206\001\n\030ListBi" +
+      "llingPlansResponse\022T\n\rbilling_plans\030\001 \003(" +
+      "\0132/.services.billing.entities.v1alpha1.B" +
+      "illingPlanR\014billingPlans\022\024\n\005token\030\002 \001(\tR" +
+      "\005token\"\327\001\n\030UpdateBillingPlanRequest\022&\n\017b" +
+      "illing_plan_id\030\001 \001(\tR\rbillingPlanId\022R\n\014b" +
+      "illing_plan\030\002 \001(\0132/.services.billing.ent" +
+      "ities.v1alpha1.BillingPlanR\013billingPlan\022" +
+      "?\n\rupdate_fields\030\003 \001(\0132\032.google.protobuf" +
+      ".FieldMaskR\014updateFields\"\033\n\031UpdateBillin" +
+      "gPlanResponse\"\266\001\n\037UpdateDefaultBillingPl" +
+      "anRequest\022R\n\014billing_plan\030\001 \001(\0132/.servic" +
+      "es.billing.entities.v1alpha1.BillingPlan" +
+      "R\013billingPlan\022?\n\rupdate_fields\030\002 \001(\0132\032.g" +
+      "oogle.protobuf.FieldMaskR\014updateFields\"\"" +
+      "\n UpdateDefaultBillingPlanResponseB\277\001\n+c" +
+      "om.tcn.cloud.api.services.billing.v1alph" +
+      "a1B\nPlansProtoP\001\242\002\003SBX\252\002\031Services.Billin" +
+      "g.V1alpha1\312\002\031Services\\Billing\\V1alpha1\342\002" +
+      "%Services\\Billing\\V1alpha1\\GPBMetadata\352\002" +
+      "\033Services::Billing::V1alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.FieldMaskProto.getDescriptor(),
+          com.google.protobuf.TimestampProto.getDescriptor(),
           com.tcn.cloud.api.services.billing.entities.v1alpha1.PlanProto.getDescriptor(),
           com.tcn.cloud.api.services.billing.v1alpha1.CoreProto.getDescriptor(),
         });
@@ -198,7 +201,7 @@ public final class PlansProto {
     internal_static_services_billing_v1alpha1_GetActiveBillingPlanResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_v1alpha1_GetActiveBillingPlanResponse_descriptor,
-        new java.lang.String[] { "BillingPlan", });
+        new java.lang.String[] { "BillingPlan", "EffectiveTime", });
     internal_static_services_billing_v1alpha1_GetBillingPlanRequest_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_services_billing_v1alpha1_GetBillingPlanRequest_fieldAccessorTable = new
@@ -260,6 +263,7 @@ public final class PlansProto {
         internal_static_services_billing_v1alpha1_UpdateDefaultBillingPlanResponse_descriptor,
         new java.lang.String[] { });
     com.google.protobuf.FieldMaskProto.getDescriptor();
+    com.google.protobuf.TimestampProto.getDescriptor();
     com.tcn.cloud.api.services.billing.entities.v1alpha1.PlanProto.getDescriptor();
     com.tcn.cloud.api.services.billing.v1alpha1.CoreProto.getDescriptor();
   }
