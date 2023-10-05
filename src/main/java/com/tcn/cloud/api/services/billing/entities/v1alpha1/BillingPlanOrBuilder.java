@@ -140,42 +140,39 @@ public interface BillingPlanOrBuilder extends
    * the billing plan rate definitions
    * </pre>
    *
-   * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 6 [json_name = "rateDefinitions"];</code>
+   * <code>repeated string rate_definition_ids = 6 [json_name = "rateDefinitionIds"];</code>
+   * @return A list containing the rateDefinitionIds.
    */
-  java.util.List<com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition> 
-      getRateDefinitionsList();
+  java.util.List<java.lang.String>
+      getRateDefinitionIdsList();
   /**
    * <pre>
    * the billing plan rate definitions
    * </pre>
    *
-   * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 6 [json_name = "rateDefinitions"];</code>
+   * <code>repeated string rate_definition_ids = 6 [json_name = "rateDefinitionIds"];</code>
+   * @return The count of rateDefinitionIds.
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition getRateDefinitions(int index);
+  int getRateDefinitionIdsCount();
   /**
    * <pre>
    * the billing plan rate definitions
    * </pre>
    *
-   * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 6 [json_name = "rateDefinitions"];</code>
+   * <code>repeated string rate_definition_ids = 6 [json_name = "rateDefinitionIds"];</code>
+   * @param index The index of the element to return.
+   * @return The rateDefinitionIds at the given index.
    */
-  int getRateDefinitionsCount();
+  java.lang.String getRateDefinitionIds(int index);
   /**
    * <pre>
    * the billing plan rate definitions
    * </pre>
    *
-   * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 6 [json_name = "rateDefinitions"];</code>
+   * <code>repeated string rate_definition_ids = 6 [json_name = "rateDefinitionIds"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the rateDefinitionIds at the given index.
    */
-  java.util.List<? extends com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionOrBuilder> 
-      getRateDefinitionsOrBuilderList();
-  /**
-   * <pre>
-   * the billing plan rate definitions
-   * </pre>
-   *
-   * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 6 [json_name = "rateDefinitions"];</code>
-   */
-  com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionOrBuilder getRateDefinitionsOrBuilder(
-      int index);
+  com.google.protobuf.ByteString
+      getRateDefinitionIdsBytes(int index);
 }

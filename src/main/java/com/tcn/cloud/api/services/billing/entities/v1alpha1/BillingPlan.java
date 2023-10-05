@@ -21,7 +21,8 @@ private static final long serialVersionUID = 0L;
   }
   private BillingPlan() {
     billingPlanId_ = "";
-    rateDefinitions_ = java.util.Collections.emptyList();
+    rateDefinitionIds_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   @java.lang.Override
@@ -243,65 +244,57 @@ private static final long serialVersionUID = 0L;
     return endTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
   }
 
-  public static final int RATE_DEFINITIONS_FIELD_NUMBER = 6;
+  public static final int RATE_DEFINITION_IDS_FIELD_NUMBER = 6;
   @SuppressWarnings("serial")
-  private java.util.List<com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition> rateDefinitions_;
+  private com.google.protobuf.LazyStringArrayList rateDefinitionIds_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * the billing plan rate definitions
    * </pre>
    *
-   * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 6 [json_name = "rateDefinitions"];</code>
+   * <code>repeated string rate_definition_ids = 6 [json_name = "rateDefinitionIds"];</code>
+   * @return A list containing the rateDefinitionIds.
    */
-  @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition> getRateDefinitionsList() {
-    return rateDefinitions_;
+  public com.google.protobuf.ProtocolStringList
+      getRateDefinitionIdsList() {
+    return rateDefinitionIds_;
   }
   /**
    * <pre>
    * the billing plan rate definitions
    * </pre>
    *
-   * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 6 [json_name = "rateDefinitions"];</code>
+   * <code>repeated string rate_definition_ids = 6 [json_name = "rateDefinitionIds"];</code>
+   * @return The count of rateDefinitionIds.
    */
-  @java.lang.Override
-  public java.util.List<? extends com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionOrBuilder> 
-      getRateDefinitionsOrBuilderList() {
-    return rateDefinitions_;
+  public int getRateDefinitionIdsCount() {
+    return rateDefinitionIds_.size();
   }
   /**
    * <pre>
    * the billing plan rate definitions
    * </pre>
    *
-   * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 6 [json_name = "rateDefinitions"];</code>
+   * <code>repeated string rate_definition_ids = 6 [json_name = "rateDefinitionIds"];</code>
+   * @param index The index of the element to return.
+   * @return The rateDefinitionIds at the given index.
    */
-  @java.lang.Override
-  public int getRateDefinitionsCount() {
-    return rateDefinitions_.size();
+  public java.lang.String getRateDefinitionIds(int index) {
+    return rateDefinitionIds_.get(index);
   }
   /**
    * <pre>
    * the billing plan rate definitions
    * </pre>
    *
-   * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 6 [json_name = "rateDefinitions"];</code>
+   * <code>repeated string rate_definition_ids = 6 [json_name = "rateDefinitionIds"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the rateDefinitionIds at the given index.
    */
-  @java.lang.Override
-  public com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition getRateDefinitions(int index) {
-    return rateDefinitions_.get(index);
-  }
-  /**
-   * <pre>
-   * the billing plan rate definitions
-   * </pre>
-   *
-   * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 6 [json_name = "rateDefinitions"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionOrBuilder getRateDefinitionsOrBuilder(
-      int index) {
-    return rateDefinitions_.get(index);
+  public com.google.protobuf.ByteString
+      getRateDefinitionIdsBytes(int index) {
+    return rateDefinitionIds_.getByteString(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -333,8 +326,8 @@ private static final long serialVersionUID = 0L;
     if (endTime_ != null) {
       output.writeMessage(5, getEndTime());
     }
-    for (int i = 0; i < rateDefinitions_.size(); i++) {
-      output.writeMessage(6, rateDefinitions_.get(i));
+    for (int i = 0; i < rateDefinitionIds_.size(); i++) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 6, rateDefinitionIds_.getRaw(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -364,9 +357,13 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getEndTime());
     }
-    for (int i = 0; i < rateDefinitions_.size(); i++) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(6, rateDefinitions_.get(i));
+    {
+      int dataSize = 0;
+      for (int i = 0; i < rateDefinitionIds_.size(); i++) {
+        dataSize += computeStringSizeNoTag(rateDefinitionIds_.getRaw(i));
+      }
+      size += dataSize;
+      size += 1 * getRateDefinitionIdsList().size();
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -405,8 +402,8 @@ private static final long serialVersionUID = 0L;
       if (!getEndTime()
           .equals(other.getEndTime())) return false;
     }
-    if (!getRateDefinitionsList()
-        .equals(other.getRateDefinitionsList())) return false;
+    if (!getRateDefinitionIdsList()
+        .equals(other.getRateDefinitionIdsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -436,9 +433,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + END_TIME_FIELD_NUMBER;
       hash = (53 * hash) + getEndTime().hashCode();
     }
-    if (getRateDefinitionsCount() > 0) {
-      hash = (37 * hash) + RATE_DEFINITIONS_FIELD_NUMBER;
-      hash = (53 * hash) + getRateDefinitionsList().hashCode();
+    if (getRateDefinitionIdsCount() > 0) {
+      hash = (37 * hash) + RATE_DEFINITION_IDS_FIELD_NUMBER;
+      hash = (53 * hash) + getRateDefinitionIdsList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -596,13 +593,8 @@ private static final long serialVersionUID = 0L;
         endTimeBuilder_.dispose();
         endTimeBuilder_ = null;
       }
-      if (rateDefinitionsBuilder_ == null) {
-        rateDefinitions_ = java.util.Collections.emptyList();
-      } else {
-        rateDefinitions_ = null;
-        rateDefinitionsBuilder_.clear();
-      }
-      bitField0_ = (bitField0_ & ~0x00000020);
+      rateDefinitionIds_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
     }
 
@@ -629,22 +621,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlan buildPartial() {
       com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlan result = new com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlan(this);
-      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
-    }
-
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlan result) {
-      if (rateDefinitionsBuilder_ == null) {
-        if (((bitField0_ & 0x00000020) != 0)) {
-          rateDefinitions_ = java.util.Collections.unmodifiableList(rateDefinitions_);
-          bitField0_ = (bitField0_ & ~0x00000020);
-        }
-        result.rateDefinitions_ = rateDefinitions_;
-      } else {
-        result.rateDefinitions_ = rateDefinitionsBuilder_.build();
-      }
     }
 
     private void buildPartial0(com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlan result) {
@@ -671,6 +650,10 @@ private static final long serialVersionUID = 0L;
         result.endTime_ = endTimeBuilder_ == null
             ? endTime_
             : endTimeBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        rateDefinitionIds_.makeImmutable();
+        result.rateDefinitionIds_ = rateDefinitionIds_;
       }
     }
 
@@ -735,31 +718,15 @@ private static final long serialVersionUID = 0L;
       if (other.hasEndTime()) {
         mergeEndTime(other.getEndTime());
       }
-      if (rateDefinitionsBuilder_ == null) {
-        if (!other.rateDefinitions_.isEmpty()) {
-          if (rateDefinitions_.isEmpty()) {
-            rateDefinitions_ = other.rateDefinitions_;
-            bitField0_ = (bitField0_ & ~0x00000020);
-          } else {
-            ensureRateDefinitionsIsMutable();
-            rateDefinitions_.addAll(other.rateDefinitions_);
-          }
-          onChanged();
+      if (!other.rateDefinitionIds_.isEmpty()) {
+        if (rateDefinitionIds_.isEmpty()) {
+          rateDefinitionIds_ = other.rateDefinitionIds_;
+          bitField0_ |= 0x00000020;
+        } else {
+          ensureRateDefinitionIdsIsMutable();
+          rateDefinitionIds_.addAll(other.rateDefinitionIds_);
         }
-      } else {
-        if (!other.rateDefinitions_.isEmpty()) {
-          if (rateDefinitionsBuilder_.isEmpty()) {
-            rateDefinitionsBuilder_.dispose();
-            rateDefinitionsBuilder_ = null;
-            rateDefinitions_ = other.rateDefinitions_;
-            bitField0_ = (bitField0_ & ~0x00000020);
-            rateDefinitionsBuilder_ = 
-              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getRateDefinitionsFieldBuilder() : null;
-          } else {
-            rateDefinitionsBuilder_.addAllMessages(other.rateDefinitions_);
-          }
-        }
+        onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -821,16 +788,9 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 42
             case 50: {
-              com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition m =
-                  input.readMessage(
-                      com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition.parser(),
-                      extensionRegistry);
-              if (rateDefinitionsBuilder_ == null) {
-                ensureRateDefinitionsIsMutable();
-                rateDefinitions_.add(m);
-              } else {
-                rateDefinitionsBuilder_.addMessage(m);
-              }
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureRateDefinitionIdsIsMutable();
+              rateDefinitionIds_.add(s);
               break;
             } // case 50
             default: {
@@ -1562,79 +1522,80 @@ private static final long serialVersionUID = 0L;
       return endTimeBuilder_;
     }
 
-    private java.util.List<com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition> rateDefinitions_ =
-      java.util.Collections.emptyList();
-    private void ensureRateDefinitionsIsMutable() {
-      if (!((bitField0_ & 0x00000020) != 0)) {
-        rateDefinitions_ = new java.util.ArrayList<com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition>(rateDefinitions_);
-        bitField0_ |= 0x00000020;
-       }
-    }
-
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition, com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionOrBuilder> rateDefinitionsBuilder_;
-
-    /**
-     * <pre>
-     * the billing plan rate definitions
-     * </pre>
-     *
-     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 6 [json_name = "rateDefinitions"];</code>
-     */
-    public java.util.List<com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition> getRateDefinitionsList() {
-      if (rateDefinitionsBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(rateDefinitions_);
-      } else {
-        return rateDefinitionsBuilder_.getMessageList();
+    private com.google.protobuf.LazyStringArrayList rateDefinitionIds_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    private void ensureRateDefinitionIdsIsMutable() {
+      if (!rateDefinitionIds_.isModifiable()) {
+        rateDefinitionIds_ = new com.google.protobuf.LazyStringArrayList(rateDefinitionIds_);
       }
+      bitField0_ |= 0x00000020;
     }
     /**
      * <pre>
      * the billing plan rate definitions
      * </pre>
      *
-     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 6 [json_name = "rateDefinitions"];</code>
+     * <code>repeated string rate_definition_ids = 6 [json_name = "rateDefinitionIds"];</code>
+     * @return A list containing the rateDefinitionIds.
      */
-    public int getRateDefinitionsCount() {
-      if (rateDefinitionsBuilder_ == null) {
-        return rateDefinitions_.size();
-      } else {
-        return rateDefinitionsBuilder_.getCount();
-      }
+    public com.google.protobuf.ProtocolStringList
+        getRateDefinitionIdsList() {
+      rateDefinitionIds_.makeImmutable();
+      return rateDefinitionIds_;
     }
     /**
      * <pre>
      * the billing plan rate definitions
      * </pre>
      *
-     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 6 [json_name = "rateDefinitions"];</code>
+     * <code>repeated string rate_definition_ids = 6 [json_name = "rateDefinitionIds"];</code>
+     * @return The count of rateDefinitionIds.
      */
-    public com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition getRateDefinitions(int index) {
-      if (rateDefinitionsBuilder_ == null) {
-        return rateDefinitions_.get(index);
-      } else {
-        return rateDefinitionsBuilder_.getMessage(index);
-      }
+    public int getRateDefinitionIdsCount() {
+      return rateDefinitionIds_.size();
     }
     /**
      * <pre>
      * the billing plan rate definitions
      * </pre>
      *
-     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 6 [json_name = "rateDefinitions"];</code>
+     * <code>repeated string rate_definition_ids = 6 [json_name = "rateDefinitionIds"];</code>
+     * @param index The index of the element to return.
+     * @return The rateDefinitionIds at the given index.
      */
-    public Builder setRateDefinitions(
-        int index, com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition value) {
-      if (rateDefinitionsBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureRateDefinitionsIsMutable();
-        rateDefinitions_.set(index, value);
-        onChanged();
-      } else {
-        rateDefinitionsBuilder_.setMessage(index, value);
-      }
+    public java.lang.String getRateDefinitionIds(int index) {
+      return rateDefinitionIds_.get(index);
+    }
+    /**
+     * <pre>
+     * the billing plan rate definitions
+     * </pre>
+     *
+     * <code>repeated string rate_definition_ids = 6 [json_name = "rateDefinitionIds"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the rateDefinitionIds at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getRateDefinitionIdsBytes(int index) {
+      return rateDefinitionIds_.getByteString(index);
+    }
+    /**
+     * <pre>
+     * the billing plan rate definitions
+     * </pre>
+     *
+     * <code>repeated string rate_definition_ids = 6 [json_name = "rateDefinitionIds"];</code>
+     * @param index The index to set the value at.
+     * @param value The rateDefinitionIds to set.
+     * @return This builder for chaining.
+     */
+    public Builder setRateDefinitionIds(
+        int index, java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureRateDefinitionIdsIsMutable();
+      rateDefinitionIds_.set(index, value);
+      bitField0_ |= 0x00000020;
+      onChanged();
       return this;
     }
     /**
@@ -1642,17 +1603,17 @@ private static final long serialVersionUID = 0L;
      * the billing plan rate definitions
      * </pre>
      *
-     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 6 [json_name = "rateDefinitions"];</code>
+     * <code>repeated string rate_definition_ids = 6 [json_name = "rateDefinitionIds"];</code>
+     * @param value The rateDefinitionIds to add.
+     * @return This builder for chaining.
      */
-    public Builder setRateDefinitions(
-        int index, com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition.Builder builderForValue) {
-      if (rateDefinitionsBuilder_ == null) {
-        ensureRateDefinitionsIsMutable();
-        rateDefinitions_.set(index, builderForValue.build());
-        onChanged();
-      } else {
-        rateDefinitionsBuilder_.setMessage(index, builderForValue.build());
-      }
+    public Builder addRateDefinitionIds(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureRateDefinitionIdsIsMutable();
+      rateDefinitionIds_.add(value);
+      bitField0_ |= 0x00000020;
+      onChanged();
       return this;
     }
     /**
@@ -1660,19 +1621,17 @@ private static final long serialVersionUID = 0L;
      * the billing plan rate definitions
      * </pre>
      *
-     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 6 [json_name = "rateDefinitions"];</code>
+     * <code>repeated string rate_definition_ids = 6 [json_name = "rateDefinitionIds"];</code>
+     * @param values The rateDefinitionIds to add.
+     * @return This builder for chaining.
      */
-    public Builder addRateDefinitions(com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition value) {
-      if (rateDefinitionsBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureRateDefinitionsIsMutable();
-        rateDefinitions_.add(value);
-        onChanged();
-      } else {
-        rateDefinitionsBuilder_.addMessage(value);
-      }
+    public Builder addAllRateDefinitionIds(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureRateDefinitionIdsIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, rateDefinitionIds_);
+      bitField0_ |= 0x00000020;
+      onChanged();
       return this;
     }
     /**
@@ -1680,20 +1639,14 @@ private static final long serialVersionUID = 0L;
      * the billing plan rate definitions
      * </pre>
      *
-     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 6 [json_name = "rateDefinitions"];</code>
+     * <code>repeated string rate_definition_ids = 6 [json_name = "rateDefinitionIds"];</code>
+     * @return This builder for chaining.
      */
-    public Builder addRateDefinitions(
-        int index, com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition value) {
-      if (rateDefinitionsBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureRateDefinitionsIsMutable();
-        rateDefinitions_.add(index, value);
-        onChanged();
-      } else {
-        rateDefinitionsBuilder_.addMessage(index, value);
-      }
+    public Builder clearRateDefinitionIds() {
+      rateDefinitionIds_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000020);;
+      onChanged();
       return this;
     }
     /**
@@ -1701,177 +1654,19 @@ private static final long serialVersionUID = 0L;
      * the billing plan rate definitions
      * </pre>
      *
-     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 6 [json_name = "rateDefinitions"];</code>
+     * <code>repeated string rate_definition_ids = 6 [json_name = "rateDefinitionIds"];</code>
+     * @param value The bytes of the rateDefinitionIds to add.
+     * @return This builder for chaining.
      */
-    public Builder addRateDefinitions(
-        com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition.Builder builderForValue) {
-      if (rateDefinitionsBuilder_ == null) {
-        ensureRateDefinitionsIsMutable();
-        rateDefinitions_.add(builderForValue.build());
-        onChanged();
-      } else {
-        rateDefinitionsBuilder_.addMessage(builderForValue.build());
-      }
+    public Builder addRateDefinitionIdsBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      ensureRateDefinitionIdsIsMutable();
+      rateDefinitionIds_.add(value);
+      bitField0_ |= 0x00000020;
+      onChanged();
       return this;
-    }
-    /**
-     * <pre>
-     * the billing plan rate definitions
-     * </pre>
-     *
-     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 6 [json_name = "rateDefinitions"];</code>
-     */
-    public Builder addRateDefinitions(
-        int index, com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition.Builder builderForValue) {
-      if (rateDefinitionsBuilder_ == null) {
-        ensureRateDefinitionsIsMutable();
-        rateDefinitions_.add(index, builderForValue.build());
-        onChanged();
-      } else {
-        rateDefinitionsBuilder_.addMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * the billing plan rate definitions
-     * </pre>
-     *
-     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 6 [json_name = "rateDefinitions"];</code>
-     */
-    public Builder addAllRateDefinitions(
-        java.lang.Iterable<? extends com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition> values) {
-      if (rateDefinitionsBuilder_ == null) {
-        ensureRateDefinitionsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, rateDefinitions_);
-        onChanged();
-      } else {
-        rateDefinitionsBuilder_.addAllMessages(values);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * the billing plan rate definitions
-     * </pre>
-     *
-     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 6 [json_name = "rateDefinitions"];</code>
-     */
-    public Builder clearRateDefinitions() {
-      if (rateDefinitionsBuilder_ == null) {
-        rateDefinitions_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000020);
-        onChanged();
-      } else {
-        rateDefinitionsBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * the billing plan rate definitions
-     * </pre>
-     *
-     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 6 [json_name = "rateDefinitions"];</code>
-     */
-    public Builder removeRateDefinitions(int index) {
-      if (rateDefinitionsBuilder_ == null) {
-        ensureRateDefinitionsIsMutable();
-        rateDefinitions_.remove(index);
-        onChanged();
-      } else {
-        rateDefinitionsBuilder_.remove(index);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * the billing plan rate definitions
-     * </pre>
-     *
-     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 6 [json_name = "rateDefinitions"];</code>
-     */
-    public com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition.Builder getRateDefinitionsBuilder(
-        int index) {
-      return getRateDefinitionsFieldBuilder().getBuilder(index);
-    }
-    /**
-     * <pre>
-     * the billing plan rate definitions
-     * </pre>
-     *
-     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 6 [json_name = "rateDefinitions"];</code>
-     */
-    public com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionOrBuilder getRateDefinitionsOrBuilder(
-        int index) {
-      if (rateDefinitionsBuilder_ == null) {
-        return rateDefinitions_.get(index);  } else {
-        return rateDefinitionsBuilder_.getMessageOrBuilder(index);
-      }
-    }
-    /**
-     * <pre>
-     * the billing plan rate definitions
-     * </pre>
-     *
-     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 6 [json_name = "rateDefinitions"];</code>
-     */
-    public java.util.List<? extends com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionOrBuilder> 
-         getRateDefinitionsOrBuilderList() {
-      if (rateDefinitionsBuilder_ != null) {
-        return rateDefinitionsBuilder_.getMessageOrBuilderList();
-      } else {
-        return java.util.Collections.unmodifiableList(rateDefinitions_);
-      }
-    }
-    /**
-     * <pre>
-     * the billing plan rate definitions
-     * </pre>
-     *
-     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 6 [json_name = "rateDefinitions"];</code>
-     */
-    public com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition.Builder addRateDefinitionsBuilder() {
-      return getRateDefinitionsFieldBuilder().addBuilder(
-          com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition.getDefaultInstance());
-    }
-    /**
-     * <pre>
-     * the billing plan rate definitions
-     * </pre>
-     *
-     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 6 [json_name = "rateDefinitions"];</code>
-     */
-    public com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition.Builder addRateDefinitionsBuilder(
-        int index) {
-      return getRateDefinitionsFieldBuilder().addBuilder(
-          index, com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition.getDefaultInstance());
-    }
-    /**
-     * <pre>
-     * the billing plan rate definitions
-     * </pre>
-     *
-     * <code>repeated .services.billing.entities.v1alpha1.RateDefinition rate_definitions = 6 [json_name = "rateDefinitions"];</code>
-     */
-    public java.util.List<com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition.Builder> 
-         getRateDefinitionsBuilderList() {
-      return getRateDefinitionsFieldBuilder().getBuilderList();
-    }
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition, com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionOrBuilder> 
-        getRateDefinitionsFieldBuilder() {
-      if (rateDefinitionsBuilder_ == null) {
-        rateDefinitionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition, com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionOrBuilder>(
-                rateDefinitions_,
-                ((bitField0_ & 0x00000020) != 0),
-                getParentForChildren(),
-                isClean());
-        rateDefinitions_ = null;
-      }
-      return rateDefinitionsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

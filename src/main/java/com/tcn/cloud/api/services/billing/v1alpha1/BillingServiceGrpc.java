@@ -15,6 +15,68 @@ public final class BillingServiceGrpc {
   public static final java.lang.String SERVICE_NAME = "services.billing.v1alpha1.BillingService";
 
   // Static method descriptors that strictly reflect the proto.
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.BulkDeleteRateDefinitionsRequest,
+      com.tcn.cloud.api.services.billing.v1alpha1.BulkDeleteRateDefinitionsResponse> getBulkDeleteRateDefinitionsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "BulkDeleteRateDefinitions",
+      requestType = com.tcn.cloud.api.services.billing.v1alpha1.BulkDeleteRateDefinitionsRequest.class,
+      responseType = com.tcn.cloud.api.services.billing.v1alpha1.BulkDeleteRateDefinitionsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.BulkDeleteRateDefinitionsRequest,
+      com.tcn.cloud.api.services.billing.v1alpha1.BulkDeleteRateDefinitionsResponse> getBulkDeleteRateDefinitionsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.BulkDeleteRateDefinitionsRequest, com.tcn.cloud.api.services.billing.v1alpha1.BulkDeleteRateDefinitionsResponse> getBulkDeleteRateDefinitionsMethod;
+    if ((getBulkDeleteRateDefinitionsMethod = BillingServiceGrpc.getBulkDeleteRateDefinitionsMethod) == null) {
+      synchronized (BillingServiceGrpc.class) {
+        if ((getBulkDeleteRateDefinitionsMethod = BillingServiceGrpc.getBulkDeleteRateDefinitionsMethod) == null) {
+          BillingServiceGrpc.getBulkDeleteRateDefinitionsMethod = getBulkDeleteRateDefinitionsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.services.billing.v1alpha1.BulkDeleteRateDefinitionsRequest, com.tcn.cloud.api.services.billing.v1alpha1.BulkDeleteRateDefinitionsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "BulkDeleteRateDefinitions"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.billing.v1alpha1.BulkDeleteRateDefinitionsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.billing.v1alpha1.BulkDeleteRateDefinitionsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new BillingServiceMethodDescriptorSupplier("BulkDeleteRateDefinitions"))
+              .build();
+        }
+      }
+    }
+    return getBulkDeleteRateDefinitionsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.BulkUpdateRateDefinitionsRequest,
+      com.tcn.cloud.api.services.billing.v1alpha1.BulkUpdateRateDefinitionsResponse> getBulkUpdateRateDefinitionsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "BulkUpdateRateDefinitions",
+      requestType = com.tcn.cloud.api.services.billing.v1alpha1.BulkUpdateRateDefinitionsRequest.class,
+      responseType = com.tcn.cloud.api.services.billing.v1alpha1.BulkUpdateRateDefinitionsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.BulkUpdateRateDefinitionsRequest,
+      com.tcn.cloud.api.services.billing.v1alpha1.BulkUpdateRateDefinitionsResponse> getBulkUpdateRateDefinitionsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.BulkUpdateRateDefinitionsRequest, com.tcn.cloud.api.services.billing.v1alpha1.BulkUpdateRateDefinitionsResponse> getBulkUpdateRateDefinitionsMethod;
+    if ((getBulkUpdateRateDefinitionsMethod = BillingServiceGrpc.getBulkUpdateRateDefinitionsMethod) == null) {
+      synchronized (BillingServiceGrpc.class) {
+        if ((getBulkUpdateRateDefinitionsMethod = BillingServiceGrpc.getBulkUpdateRateDefinitionsMethod) == null) {
+          BillingServiceGrpc.getBulkUpdateRateDefinitionsMethod = getBulkUpdateRateDefinitionsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.services.billing.v1alpha1.BulkUpdateRateDefinitionsRequest, com.tcn.cloud.api.services.billing.v1alpha1.BulkUpdateRateDefinitionsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "BulkUpdateRateDefinitions"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.billing.v1alpha1.BulkUpdateRateDefinitionsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.billing.v1alpha1.BulkUpdateRateDefinitionsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new BillingServiceMethodDescriptorSupplier("BulkUpdateRateDefinitions"))
+              .build();
+        }
+      }
+    }
+    return getBulkUpdateRateDefinitionsMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.CreateBillingPlanRequest,
       com.tcn.cloud.api.services.billing.v1alpha1.CreateBillingPlanResponse> getCreateBillingPlanMethod;
 
@@ -77,6 +139,68 @@ public final class BillingServiceGrpc {
     return getCreateInvoiceMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.CreateRateDefinitionRequest,
+      com.tcn.cloud.api.services.billing.v1alpha1.CreateRateDefinitionResponse> getCreateRateDefinitionMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateRateDefinition",
+      requestType = com.tcn.cloud.api.services.billing.v1alpha1.CreateRateDefinitionRequest.class,
+      responseType = com.tcn.cloud.api.services.billing.v1alpha1.CreateRateDefinitionResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.CreateRateDefinitionRequest,
+      com.tcn.cloud.api.services.billing.v1alpha1.CreateRateDefinitionResponse> getCreateRateDefinitionMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.CreateRateDefinitionRequest, com.tcn.cloud.api.services.billing.v1alpha1.CreateRateDefinitionResponse> getCreateRateDefinitionMethod;
+    if ((getCreateRateDefinitionMethod = BillingServiceGrpc.getCreateRateDefinitionMethod) == null) {
+      synchronized (BillingServiceGrpc.class) {
+        if ((getCreateRateDefinitionMethod = BillingServiceGrpc.getCreateRateDefinitionMethod) == null) {
+          BillingServiceGrpc.getCreateRateDefinitionMethod = getCreateRateDefinitionMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.services.billing.v1alpha1.CreateRateDefinitionRequest, com.tcn.cloud.api.services.billing.v1alpha1.CreateRateDefinitionResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateRateDefinition"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.billing.v1alpha1.CreateRateDefinitionRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.billing.v1alpha1.CreateRateDefinitionResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new BillingServiceMethodDescriptorSupplier("CreateRateDefinition"))
+              .build();
+        }
+      }
+    }
+    return getCreateRateDefinitionMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.CreateRateDefinitionGroupRequest,
+      com.tcn.cloud.api.services.billing.v1alpha1.CreateRateDefinitionGroupResponse> getCreateRateDefinitionGroupMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateRateDefinitionGroup",
+      requestType = com.tcn.cloud.api.services.billing.v1alpha1.CreateRateDefinitionGroupRequest.class,
+      responseType = com.tcn.cloud.api.services.billing.v1alpha1.CreateRateDefinitionGroupResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.CreateRateDefinitionGroupRequest,
+      com.tcn.cloud.api.services.billing.v1alpha1.CreateRateDefinitionGroupResponse> getCreateRateDefinitionGroupMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.CreateRateDefinitionGroupRequest, com.tcn.cloud.api.services.billing.v1alpha1.CreateRateDefinitionGroupResponse> getCreateRateDefinitionGroupMethod;
+    if ((getCreateRateDefinitionGroupMethod = BillingServiceGrpc.getCreateRateDefinitionGroupMethod) == null) {
+      synchronized (BillingServiceGrpc.class) {
+        if ((getCreateRateDefinitionGroupMethod = BillingServiceGrpc.getCreateRateDefinitionGroupMethod) == null) {
+          BillingServiceGrpc.getCreateRateDefinitionGroupMethod = getCreateRateDefinitionGroupMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.services.billing.v1alpha1.CreateRateDefinitionGroupRequest, com.tcn.cloud.api.services.billing.v1alpha1.CreateRateDefinitionGroupResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateRateDefinitionGroup"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.billing.v1alpha1.CreateRateDefinitionGroupRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.billing.v1alpha1.CreateRateDefinitionGroupResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new BillingServiceMethodDescriptorSupplier("CreateRateDefinitionGroup"))
+              .build();
+        }
+      }
+    }
+    return getCreateRateDefinitionGroupMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.DeleteBillingPlanRequest,
       com.tcn.cloud.api.services.billing.v1alpha1.DeleteBillingPlanResponse> getDeleteBillingPlanMethod;
 
@@ -137,6 +261,68 @@ public final class BillingServiceGrpc {
       }
     }
     return getDeleteInvoiceMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.DeleteRateDefinitionRequest,
+      com.tcn.cloud.api.services.billing.v1alpha1.DeleteRateDefinitionResponse> getDeleteRateDefinitionMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteRateDefinition",
+      requestType = com.tcn.cloud.api.services.billing.v1alpha1.DeleteRateDefinitionRequest.class,
+      responseType = com.tcn.cloud.api.services.billing.v1alpha1.DeleteRateDefinitionResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.DeleteRateDefinitionRequest,
+      com.tcn.cloud.api.services.billing.v1alpha1.DeleteRateDefinitionResponse> getDeleteRateDefinitionMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.DeleteRateDefinitionRequest, com.tcn.cloud.api.services.billing.v1alpha1.DeleteRateDefinitionResponse> getDeleteRateDefinitionMethod;
+    if ((getDeleteRateDefinitionMethod = BillingServiceGrpc.getDeleteRateDefinitionMethod) == null) {
+      synchronized (BillingServiceGrpc.class) {
+        if ((getDeleteRateDefinitionMethod = BillingServiceGrpc.getDeleteRateDefinitionMethod) == null) {
+          BillingServiceGrpc.getDeleteRateDefinitionMethod = getDeleteRateDefinitionMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.services.billing.v1alpha1.DeleteRateDefinitionRequest, com.tcn.cloud.api.services.billing.v1alpha1.DeleteRateDefinitionResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteRateDefinition"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.billing.v1alpha1.DeleteRateDefinitionRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.billing.v1alpha1.DeleteRateDefinitionResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new BillingServiceMethodDescriptorSupplier("DeleteRateDefinition"))
+              .build();
+        }
+      }
+    }
+    return getDeleteRateDefinitionMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.DeleteRateDefinitionGroupRequest,
+      com.tcn.cloud.api.services.billing.v1alpha1.DeleteRateDefinitionGroupResponse> getDeleteRateDefinitionGroupMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteRateDefinitionGroup",
+      requestType = com.tcn.cloud.api.services.billing.v1alpha1.DeleteRateDefinitionGroupRequest.class,
+      responseType = com.tcn.cloud.api.services.billing.v1alpha1.DeleteRateDefinitionGroupResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.DeleteRateDefinitionGroupRequest,
+      com.tcn.cloud.api.services.billing.v1alpha1.DeleteRateDefinitionGroupResponse> getDeleteRateDefinitionGroupMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.DeleteRateDefinitionGroupRequest, com.tcn.cloud.api.services.billing.v1alpha1.DeleteRateDefinitionGroupResponse> getDeleteRateDefinitionGroupMethod;
+    if ((getDeleteRateDefinitionGroupMethod = BillingServiceGrpc.getDeleteRateDefinitionGroupMethod) == null) {
+      synchronized (BillingServiceGrpc.class) {
+        if ((getDeleteRateDefinitionGroupMethod = BillingServiceGrpc.getDeleteRateDefinitionGroupMethod) == null) {
+          BillingServiceGrpc.getDeleteRateDefinitionGroupMethod = getDeleteRateDefinitionGroupMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.services.billing.v1alpha1.DeleteRateDefinitionGroupRequest, com.tcn.cloud.api.services.billing.v1alpha1.DeleteRateDefinitionGroupResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteRateDefinitionGroup"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.billing.v1alpha1.DeleteRateDefinitionGroupRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.billing.v1alpha1.DeleteRateDefinitionGroupResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new BillingServiceMethodDescriptorSupplier("DeleteRateDefinitionGroup"))
+              .build();
+        }
+      }
+    }
+    return getDeleteRateDefinitionGroupMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.ExportInvoiceRequest,
@@ -294,6 +480,68 @@ public final class BillingServiceGrpc {
     return getGetInvoiceMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.GetRateDefinitionRequest,
+      com.tcn.cloud.api.services.billing.v1alpha1.GetRateDefinitionResponse> getGetRateDefinitionMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetRateDefinition",
+      requestType = com.tcn.cloud.api.services.billing.v1alpha1.GetRateDefinitionRequest.class,
+      responseType = com.tcn.cloud.api.services.billing.v1alpha1.GetRateDefinitionResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.GetRateDefinitionRequest,
+      com.tcn.cloud.api.services.billing.v1alpha1.GetRateDefinitionResponse> getGetRateDefinitionMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.GetRateDefinitionRequest, com.tcn.cloud.api.services.billing.v1alpha1.GetRateDefinitionResponse> getGetRateDefinitionMethod;
+    if ((getGetRateDefinitionMethod = BillingServiceGrpc.getGetRateDefinitionMethod) == null) {
+      synchronized (BillingServiceGrpc.class) {
+        if ((getGetRateDefinitionMethod = BillingServiceGrpc.getGetRateDefinitionMethod) == null) {
+          BillingServiceGrpc.getGetRateDefinitionMethod = getGetRateDefinitionMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.services.billing.v1alpha1.GetRateDefinitionRequest, com.tcn.cloud.api.services.billing.v1alpha1.GetRateDefinitionResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetRateDefinition"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.billing.v1alpha1.GetRateDefinitionRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.billing.v1alpha1.GetRateDefinitionResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new BillingServiceMethodDescriptorSupplier("GetRateDefinition"))
+              .build();
+        }
+      }
+    }
+    return getGetRateDefinitionMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.GetRateDefinitionGroupRequest,
+      com.tcn.cloud.api.services.billing.v1alpha1.GetRateDefinitionGroupResponse> getGetRateDefinitionGroupMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetRateDefinitionGroup",
+      requestType = com.tcn.cloud.api.services.billing.v1alpha1.GetRateDefinitionGroupRequest.class,
+      responseType = com.tcn.cloud.api.services.billing.v1alpha1.GetRateDefinitionGroupResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.GetRateDefinitionGroupRequest,
+      com.tcn.cloud.api.services.billing.v1alpha1.GetRateDefinitionGroupResponse> getGetRateDefinitionGroupMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.GetRateDefinitionGroupRequest, com.tcn.cloud.api.services.billing.v1alpha1.GetRateDefinitionGroupResponse> getGetRateDefinitionGroupMethod;
+    if ((getGetRateDefinitionGroupMethod = BillingServiceGrpc.getGetRateDefinitionGroupMethod) == null) {
+      synchronized (BillingServiceGrpc.class) {
+        if ((getGetRateDefinitionGroupMethod = BillingServiceGrpc.getGetRateDefinitionGroupMethod) == null) {
+          BillingServiceGrpc.getGetRateDefinitionGroupMethod = getGetRateDefinitionGroupMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.services.billing.v1alpha1.GetRateDefinitionGroupRequest, com.tcn.cloud.api.services.billing.v1alpha1.GetRateDefinitionGroupResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetRateDefinitionGroup"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.billing.v1alpha1.GetRateDefinitionGroupRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.billing.v1alpha1.GetRateDefinitionGroupResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new BillingServiceMethodDescriptorSupplier("GetRateDefinitionGroup"))
+              .build();
+        }
+      }
+    }
+    return getGetRateDefinitionGroupMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.ListBillingPlansRequest,
       com.tcn.cloud.api.services.billing.v1alpha1.ListBillingPlansResponse> getListBillingPlansMethod;
 
@@ -354,6 +602,68 @@ public final class BillingServiceGrpc {
       }
     }
     return getListInvoicesMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.ListRateDefinitionsRequest,
+      com.tcn.cloud.api.services.billing.v1alpha1.ListRateDefinitionsResponse> getListRateDefinitionsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListRateDefinitions",
+      requestType = com.tcn.cloud.api.services.billing.v1alpha1.ListRateDefinitionsRequest.class,
+      responseType = com.tcn.cloud.api.services.billing.v1alpha1.ListRateDefinitionsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.ListRateDefinitionsRequest,
+      com.tcn.cloud.api.services.billing.v1alpha1.ListRateDefinitionsResponse> getListRateDefinitionsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.ListRateDefinitionsRequest, com.tcn.cloud.api.services.billing.v1alpha1.ListRateDefinitionsResponse> getListRateDefinitionsMethod;
+    if ((getListRateDefinitionsMethod = BillingServiceGrpc.getListRateDefinitionsMethod) == null) {
+      synchronized (BillingServiceGrpc.class) {
+        if ((getListRateDefinitionsMethod = BillingServiceGrpc.getListRateDefinitionsMethod) == null) {
+          BillingServiceGrpc.getListRateDefinitionsMethod = getListRateDefinitionsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.services.billing.v1alpha1.ListRateDefinitionsRequest, com.tcn.cloud.api.services.billing.v1alpha1.ListRateDefinitionsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListRateDefinitions"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.billing.v1alpha1.ListRateDefinitionsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.billing.v1alpha1.ListRateDefinitionsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new BillingServiceMethodDescriptorSupplier("ListRateDefinitions"))
+              .build();
+        }
+      }
+    }
+    return getListRateDefinitionsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.ListRateDefinitionGroupsRequest,
+      com.tcn.cloud.api.services.billing.v1alpha1.ListRateDefinitionGroupsResponse> getListRateDefinitionGroupsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListRateDefinitionGroups",
+      requestType = com.tcn.cloud.api.services.billing.v1alpha1.ListRateDefinitionGroupsRequest.class,
+      responseType = com.tcn.cloud.api.services.billing.v1alpha1.ListRateDefinitionGroupsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.ListRateDefinitionGroupsRequest,
+      com.tcn.cloud.api.services.billing.v1alpha1.ListRateDefinitionGroupsResponse> getListRateDefinitionGroupsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.ListRateDefinitionGroupsRequest, com.tcn.cloud.api.services.billing.v1alpha1.ListRateDefinitionGroupsResponse> getListRateDefinitionGroupsMethod;
+    if ((getListRateDefinitionGroupsMethod = BillingServiceGrpc.getListRateDefinitionGroupsMethod) == null) {
+      synchronized (BillingServiceGrpc.class) {
+        if ((getListRateDefinitionGroupsMethod = BillingServiceGrpc.getListRateDefinitionGroupsMethod) == null) {
+          BillingServiceGrpc.getListRateDefinitionGroupsMethod = getListRateDefinitionGroupsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.services.billing.v1alpha1.ListRateDefinitionGroupsRequest, com.tcn.cloud.api.services.billing.v1alpha1.ListRateDefinitionGroupsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListRateDefinitionGroups"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.billing.v1alpha1.ListRateDefinitionGroupsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.billing.v1alpha1.ListRateDefinitionGroupsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new BillingServiceMethodDescriptorSupplier("ListRateDefinitionGroups"))
+              .build();
+        }
+      }
+    }
+    return getListRateDefinitionGroupsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.UpdateBillingPlanRequest,
@@ -449,6 +759,68 @@ public final class BillingServiceGrpc {
     return getUpdateInvoiceMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.UpdateRateDefinitionRequest,
+      com.tcn.cloud.api.services.billing.v1alpha1.UpdateRateDefinitionResponse> getUpdateRateDefinitionMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateRateDefinition",
+      requestType = com.tcn.cloud.api.services.billing.v1alpha1.UpdateRateDefinitionRequest.class,
+      responseType = com.tcn.cloud.api.services.billing.v1alpha1.UpdateRateDefinitionResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.UpdateRateDefinitionRequest,
+      com.tcn.cloud.api.services.billing.v1alpha1.UpdateRateDefinitionResponse> getUpdateRateDefinitionMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.UpdateRateDefinitionRequest, com.tcn.cloud.api.services.billing.v1alpha1.UpdateRateDefinitionResponse> getUpdateRateDefinitionMethod;
+    if ((getUpdateRateDefinitionMethod = BillingServiceGrpc.getUpdateRateDefinitionMethod) == null) {
+      synchronized (BillingServiceGrpc.class) {
+        if ((getUpdateRateDefinitionMethod = BillingServiceGrpc.getUpdateRateDefinitionMethod) == null) {
+          BillingServiceGrpc.getUpdateRateDefinitionMethod = getUpdateRateDefinitionMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.services.billing.v1alpha1.UpdateRateDefinitionRequest, com.tcn.cloud.api.services.billing.v1alpha1.UpdateRateDefinitionResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateRateDefinition"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.billing.v1alpha1.UpdateRateDefinitionRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.billing.v1alpha1.UpdateRateDefinitionResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new BillingServiceMethodDescriptorSupplier("UpdateRateDefinition"))
+              .build();
+        }
+      }
+    }
+    return getUpdateRateDefinitionMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.UpdateRateDefinitionGroupRequest,
+      com.tcn.cloud.api.services.billing.v1alpha1.UpdateRateDefinitionGroupResponse> getUpdateRateDefinitionGroupMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateRateDefinitionGroup",
+      requestType = com.tcn.cloud.api.services.billing.v1alpha1.UpdateRateDefinitionGroupRequest.class,
+      responseType = com.tcn.cloud.api.services.billing.v1alpha1.UpdateRateDefinitionGroupResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.UpdateRateDefinitionGroupRequest,
+      com.tcn.cloud.api.services.billing.v1alpha1.UpdateRateDefinitionGroupResponse> getUpdateRateDefinitionGroupMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.UpdateRateDefinitionGroupRequest, com.tcn.cloud.api.services.billing.v1alpha1.UpdateRateDefinitionGroupResponse> getUpdateRateDefinitionGroupMethod;
+    if ((getUpdateRateDefinitionGroupMethod = BillingServiceGrpc.getUpdateRateDefinitionGroupMethod) == null) {
+      synchronized (BillingServiceGrpc.class) {
+        if ((getUpdateRateDefinitionGroupMethod = BillingServiceGrpc.getUpdateRateDefinitionGroupMethod) == null) {
+          BillingServiceGrpc.getUpdateRateDefinitionGroupMethod = getUpdateRateDefinitionGroupMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.services.billing.v1alpha1.UpdateRateDefinitionGroupRequest, com.tcn.cloud.api.services.billing.v1alpha1.UpdateRateDefinitionGroupResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateRateDefinitionGroup"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.billing.v1alpha1.UpdateRateDefinitionGroupRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.billing.v1alpha1.UpdateRateDefinitionGroupResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new BillingServiceMethodDescriptorSupplier("UpdateRateDefinitionGroup"))
+              .build();
+        }
+      }
+    }
+    return getUpdateRateDefinitionGroupMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -499,9 +871,45 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
+     * Bulk deletes rate definitions.
+     *   - The billing plan(s) must be inactive.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.FailedPrecondition: The billing plan(s) are active.
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    default void bulkDeleteRateDefinitions(com.tcn.cloud.api.services.billing.v1alpha1.BulkDeleteRateDefinitionsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.BulkDeleteRateDefinitionsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBulkDeleteRateDefinitionsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Bulk updates rate definitions.
+     *   - The billing plan(s) must be inactive.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.FailedPrecondition: The billing plan(s) are active.
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    default void bulkUpdateRateDefinitions(com.tcn.cloud.api.services.billing.v1alpha1.BulkUpdateRateDefinitionsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.BulkUpdateRateDefinitionsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBulkUpdateRateDefinitionsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Creates a billing plan for the ORG.
-     *   - The rate definitions must have the rate definition group id populated and it
-     *     must be a valid reference to a rate definition group on the default billing plan.
      * Required permissions:
      *   CUSTOMER_SUPPORT
      * Errors:
@@ -532,6 +940,44 @@ public final class BillingServiceGrpc {
     default void createInvoice(com.tcn.cloud.api.services.billing.v1alpha1.CreateInvoiceRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.CreateInvoiceResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateInvoiceMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Creates a rate definition for a Billing Plan in an ORG.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.AlreadyExists: A rate definition with the same group id already exists.
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified billing plan or rate definition group doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
+     * </pre>
+     */
+    default void createRateDefinition(com.tcn.cloud.api.services.billing.v1alpha1.CreateRateDefinitionRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.CreateRateDefinitionResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateRateDefinitionMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Creates a rate definition group.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     *   TCN_BILLING_ADMIN
+     * Errors:
+     *   - grpc.AlreadyExists: A rate definition group with the same data already exists.
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
+     * </pre>
+     */
+    default void createRateDefinitionGroup(com.tcn.cloud.api.services.billing.v1alpha1.CreateRateDefinitionGroupRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.CreateRateDefinitionGroupResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateRateDefinitionGroupMethod(), responseObserver);
     }
 
     /**
@@ -568,6 +1014,46 @@ public final class BillingServiceGrpc {
     default void deleteInvoice(com.tcn.cloud.api.services.billing.v1alpha1.DeleteInvoiceRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.DeleteInvoiceResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteInvoiceMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Deletes a rate definition from a Billing Plan in an ORG.
+     *   - The billing plan must be inactive.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.FailedPrecondition: The billing plan is active.
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified billing plan or rate definition group doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
+     * </pre>
+     */
+    default void deleteRateDefinition(com.tcn.cloud.api.services.billing.v1alpha1.DeleteRateDefinitionRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.DeleteRateDefinitionResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteRateDefinitionMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Deletes a rate definition group.
+     *   - This will stop any rate definitions in the group from generating charges.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     *   TCN_BILLING_ADMIN
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified rate definition group doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
+     * </pre>
+     */
+    default void deleteRateDefinitionGroup(com.tcn.cloud.api.services.billing.v1alpha1.DeleteRateDefinitionGroupRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.DeleteRateDefinitionGroupResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteRateDefinitionGroupMethod(), responseObserver);
     }
 
     /**
@@ -663,8 +1149,43 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * Lists the billing plans for the ORG. This includes both active and inactive plans, but does not
-     * include deleted plans.
+     * Returns the specified rate definition.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified rate definition doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    default void getRateDefinition(com.tcn.cloud.api.services.billing.v1alpha1.GetRateDefinitionRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.GetRateDefinitionResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetRateDefinitionMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Returns the specified rate definition group.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified rate definition group doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    default void getRateDefinitionGroup(com.tcn.cloud.api.services.billing.v1alpha1.GetRateDefinitionGroupRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.GetRateDefinitionGroupResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetRateDefinitionGroupMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Lists billing plans.
      * Required permissions:
      *   CUSTOMER_SUPPORT
      * Errors:
@@ -681,7 +1202,7 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * Lists the invoices for the ORG.
+     * Lists invoices.
      * Required permissions:
      *   CUSTOMER_SUPPORT
      * Errors:
@@ -694,6 +1215,40 @@ public final class BillingServiceGrpc {
     default void listInvoices(com.tcn.cloud.api.services.billing.v1alpha1.ListInvoicesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.ListInvoicesResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListInvoicesMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Lists rate definitions.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    default void listRateDefinitions(com.tcn.cloud.api.services.billing.v1alpha1.ListRateDefinitionsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.ListRateDefinitionsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListRateDefinitionsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Lists rate definition groups.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    default void listRateDefinitionGroups(com.tcn.cloud.api.services.billing.v1alpha1.ListRateDefinitionGroupsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.ListRateDefinitionGroupsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListRateDefinitionGroupsMethod(), responseObserver);
     }
 
     /**
@@ -719,6 +1274,7 @@ public final class BillingServiceGrpc {
      * Updates the default billing plan for the REGION.
      * Required permissions:
      *   CUSTOMER_SUPPORT
+     *   TCN_BILLING_ADMIN
      * Errors:
      *   - grpc.Internal: An internal error occurred.
      *   - grpc.InvalidArgument: The request is invalid.
@@ -747,6 +1303,46 @@ public final class BillingServiceGrpc {
     default void updateInvoice(com.tcn.cloud.api.services.billing.v1alpha1.UpdateInvoiceRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.UpdateInvoiceResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateInvoiceMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Updates a rate definition.
+     *   - The billing plan must be inactive.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.FailedPrecondition: The billing plan is active.
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified rate definition doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    default void updateRateDefinition(com.tcn.cloud.api.services.billing.v1alpha1.UpdateRateDefinitionRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.UpdateRateDefinitionResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateRateDefinitionMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Updates a rate definition group.
+     *   - Any rate definitions using this group will use the new data.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     *   TCN_BILLING_ADMIN
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified rate definition group doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    default void updateRateDefinitionGroup(com.tcn.cloud.api.services.billing.v1alpha1.UpdateRateDefinitionGroupRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.UpdateRateDefinitionGroupResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateRateDefinitionGroupMethod(), responseObserver);
     }
   }
 
@@ -779,9 +1375,47 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
+     * Bulk deletes rate definitions.
+     *   - The billing plan(s) must be inactive.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.FailedPrecondition: The billing plan(s) are active.
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    public void bulkDeleteRateDefinitions(com.tcn.cloud.api.services.billing.v1alpha1.BulkDeleteRateDefinitionsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.BulkDeleteRateDefinitionsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getBulkDeleteRateDefinitionsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Bulk updates rate definitions.
+     *   - The billing plan(s) must be inactive.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.FailedPrecondition: The billing plan(s) are active.
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    public void bulkUpdateRateDefinitions(com.tcn.cloud.api.services.billing.v1alpha1.BulkUpdateRateDefinitionsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.BulkUpdateRateDefinitionsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getBulkUpdateRateDefinitionsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Creates a billing plan for the ORG.
-     *   - The rate definitions must have the rate definition group id populated and it
-     *     must be a valid reference to a rate definition group on the default billing plan.
      * Required permissions:
      *   CUSTOMER_SUPPORT
      * Errors:
@@ -814,6 +1448,46 @@ public final class BillingServiceGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.CreateInvoiceResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateInvoiceMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Creates a rate definition for a Billing Plan in an ORG.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.AlreadyExists: A rate definition with the same group id already exists.
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified billing plan or rate definition group doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
+     * </pre>
+     */
+    public void createRateDefinition(com.tcn.cloud.api.services.billing.v1alpha1.CreateRateDefinitionRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.CreateRateDefinitionResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateRateDefinitionMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Creates a rate definition group.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     *   TCN_BILLING_ADMIN
+     * Errors:
+     *   - grpc.AlreadyExists: A rate definition group with the same data already exists.
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
+     * </pre>
+     */
+    public void createRateDefinitionGroup(com.tcn.cloud.api.services.billing.v1alpha1.CreateRateDefinitionGroupRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.CreateRateDefinitionGroupResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateRateDefinitionGroupMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -852,6 +1526,48 @@ public final class BillingServiceGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.DeleteInvoiceResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteInvoiceMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Deletes a rate definition from a Billing Plan in an ORG.
+     *   - The billing plan must be inactive.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.FailedPrecondition: The billing plan is active.
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified billing plan or rate definition group doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
+     * </pre>
+     */
+    public void deleteRateDefinition(com.tcn.cloud.api.services.billing.v1alpha1.DeleteRateDefinitionRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.DeleteRateDefinitionResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteRateDefinitionMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Deletes a rate definition group.
+     *   - This will stop any rate definitions in the group from generating charges.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     *   TCN_BILLING_ADMIN
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified rate definition group doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
+     * </pre>
+     */
+    public void deleteRateDefinitionGroup(com.tcn.cloud.api.services.billing.v1alpha1.DeleteRateDefinitionGroupRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.DeleteRateDefinitionGroupResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteRateDefinitionGroupMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -952,8 +1668,45 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * Lists the billing plans for the ORG. This includes both active and inactive plans, but does not
-     * include deleted plans.
+     * Returns the specified rate definition.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified rate definition doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    public void getRateDefinition(com.tcn.cloud.api.services.billing.v1alpha1.GetRateDefinitionRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.GetRateDefinitionResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetRateDefinitionMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Returns the specified rate definition group.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified rate definition group doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    public void getRateDefinitionGroup(com.tcn.cloud.api.services.billing.v1alpha1.GetRateDefinitionGroupRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.GetRateDefinitionGroupResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetRateDefinitionGroupMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Lists billing plans.
      * Required permissions:
      *   CUSTOMER_SUPPORT
      * Errors:
@@ -971,7 +1724,7 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * Lists the invoices for the ORG.
+     * Lists invoices.
      * Required permissions:
      *   CUSTOMER_SUPPORT
      * Errors:
@@ -985,6 +1738,42 @@ public final class BillingServiceGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.ListInvoicesResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListInvoicesMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Lists rate definitions.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    public void listRateDefinitions(com.tcn.cloud.api.services.billing.v1alpha1.ListRateDefinitionsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.ListRateDefinitionsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListRateDefinitionsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Lists rate definition groups.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    public void listRateDefinitionGroups(com.tcn.cloud.api.services.billing.v1alpha1.ListRateDefinitionGroupsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.ListRateDefinitionGroupsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListRateDefinitionGroupsMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -1011,6 +1800,7 @@ public final class BillingServiceGrpc {
      * Updates the default billing plan for the REGION.
      * Required permissions:
      *   CUSTOMER_SUPPORT
+     *   TCN_BILLING_ADMIN
      * Errors:
      *   - grpc.Internal: An internal error occurred.
      *   - grpc.InvalidArgument: The request is invalid.
@@ -1042,6 +1832,48 @@ public final class BillingServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateInvoiceMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Updates a rate definition.
+     *   - The billing plan must be inactive.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.FailedPrecondition: The billing plan is active.
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified rate definition doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    public void updateRateDefinition(com.tcn.cloud.api.services.billing.v1alpha1.UpdateRateDefinitionRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.UpdateRateDefinitionResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateRateDefinitionMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Updates a rate definition group.
+     *   - Any rate definitions using this group will use the new data.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     *   TCN_BILLING_ADMIN
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified rate definition group doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    public void updateRateDefinitionGroup(com.tcn.cloud.api.services.billing.v1alpha1.UpdateRateDefinitionGroupRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.UpdateRateDefinitionGroupResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateRateDefinitionGroupMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -1062,9 +1894,45 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
+     * Bulk deletes rate definitions.
+     *   - The billing plan(s) must be inactive.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.FailedPrecondition: The billing plan(s) are active.
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    public com.tcn.cloud.api.services.billing.v1alpha1.BulkDeleteRateDefinitionsResponse bulkDeleteRateDefinitions(com.tcn.cloud.api.services.billing.v1alpha1.BulkDeleteRateDefinitionsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getBulkDeleteRateDefinitionsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Bulk updates rate definitions.
+     *   - The billing plan(s) must be inactive.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.FailedPrecondition: The billing plan(s) are active.
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    public com.tcn.cloud.api.services.billing.v1alpha1.BulkUpdateRateDefinitionsResponse bulkUpdateRateDefinitions(com.tcn.cloud.api.services.billing.v1alpha1.BulkUpdateRateDefinitionsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getBulkUpdateRateDefinitionsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Creates a billing plan for the ORG.
-     *   - The rate definitions must have the rate definition group id populated and it
-     *     must be a valid reference to a rate definition group on the default billing plan.
      * Required permissions:
      *   CUSTOMER_SUPPORT
      * Errors:
@@ -1095,6 +1963,44 @@ public final class BillingServiceGrpc {
     public com.tcn.cloud.api.services.billing.v1alpha1.CreateInvoiceResponse createInvoice(com.tcn.cloud.api.services.billing.v1alpha1.CreateInvoiceRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateInvoiceMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Creates a rate definition for a Billing Plan in an ORG.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.AlreadyExists: A rate definition with the same group id already exists.
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified billing plan or rate definition group doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
+     * </pre>
+     */
+    public com.tcn.cloud.api.services.billing.v1alpha1.CreateRateDefinitionResponse createRateDefinition(com.tcn.cloud.api.services.billing.v1alpha1.CreateRateDefinitionRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateRateDefinitionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Creates a rate definition group.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     *   TCN_BILLING_ADMIN
+     * Errors:
+     *   - grpc.AlreadyExists: A rate definition group with the same data already exists.
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
+     * </pre>
+     */
+    public com.tcn.cloud.api.services.billing.v1alpha1.CreateRateDefinitionGroupResponse createRateDefinitionGroup(com.tcn.cloud.api.services.billing.v1alpha1.CreateRateDefinitionGroupRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateRateDefinitionGroupMethod(), getCallOptions(), request);
     }
 
     /**
@@ -1131,6 +2037,46 @@ public final class BillingServiceGrpc {
     public com.tcn.cloud.api.services.billing.v1alpha1.DeleteInvoiceResponse deleteInvoice(com.tcn.cloud.api.services.billing.v1alpha1.DeleteInvoiceRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteInvoiceMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes a rate definition from a Billing Plan in an ORG.
+     *   - The billing plan must be inactive.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.FailedPrecondition: The billing plan is active.
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified billing plan or rate definition group doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
+     * </pre>
+     */
+    public com.tcn.cloud.api.services.billing.v1alpha1.DeleteRateDefinitionResponse deleteRateDefinition(com.tcn.cloud.api.services.billing.v1alpha1.DeleteRateDefinitionRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteRateDefinitionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes a rate definition group.
+     *   - This will stop any rate definitions in the group from generating charges.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     *   TCN_BILLING_ADMIN
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified rate definition group doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
+     * </pre>
+     */
+    public com.tcn.cloud.api.services.billing.v1alpha1.DeleteRateDefinitionGroupResponse deleteRateDefinitionGroup(com.tcn.cloud.api.services.billing.v1alpha1.DeleteRateDefinitionGroupRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteRateDefinitionGroupMethod(), getCallOptions(), request);
     }
 
     /**
@@ -1226,8 +2172,43 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * Lists the billing plans for the ORG. This includes both active and inactive plans, but does not
-     * include deleted plans.
+     * Returns the specified rate definition.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified rate definition doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    public com.tcn.cloud.api.services.billing.v1alpha1.GetRateDefinitionResponse getRateDefinition(com.tcn.cloud.api.services.billing.v1alpha1.GetRateDefinitionRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetRateDefinitionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Returns the specified rate definition group.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified rate definition group doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    public com.tcn.cloud.api.services.billing.v1alpha1.GetRateDefinitionGroupResponse getRateDefinitionGroup(com.tcn.cloud.api.services.billing.v1alpha1.GetRateDefinitionGroupRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetRateDefinitionGroupMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Lists billing plans.
      * Required permissions:
      *   CUSTOMER_SUPPORT
      * Errors:
@@ -1244,7 +2225,7 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * Lists the invoices for the ORG.
+     * Lists invoices.
      * Required permissions:
      *   CUSTOMER_SUPPORT
      * Errors:
@@ -1257,6 +2238,40 @@ public final class BillingServiceGrpc {
     public com.tcn.cloud.api.services.billing.v1alpha1.ListInvoicesResponse listInvoices(com.tcn.cloud.api.services.billing.v1alpha1.ListInvoicesRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListInvoicesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Lists rate definitions.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    public com.tcn.cloud.api.services.billing.v1alpha1.ListRateDefinitionsResponse listRateDefinitions(com.tcn.cloud.api.services.billing.v1alpha1.ListRateDefinitionsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListRateDefinitionsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Lists rate definition groups.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    public com.tcn.cloud.api.services.billing.v1alpha1.ListRateDefinitionGroupsResponse listRateDefinitionGroups(com.tcn.cloud.api.services.billing.v1alpha1.ListRateDefinitionGroupsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListRateDefinitionGroupsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -1282,6 +2297,7 @@ public final class BillingServiceGrpc {
      * Updates the default billing plan for the REGION.
      * Required permissions:
      *   CUSTOMER_SUPPORT
+     *   TCN_BILLING_ADMIN
      * Errors:
      *   - grpc.Internal: An internal error occurred.
      *   - grpc.InvalidArgument: The request is invalid.
@@ -1311,6 +2327,46 @@ public final class BillingServiceGrpc {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateInvoiceMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * Updates a rate definition.
+     *   - The billing plan must be inactive.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.FailedPrecondition: The billing plan is active.
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified rate definition doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    public com.tcn.cloud.api.services.billing.v1alpha1.UpdateRateDefinitionResponse updateRateDefinition(com.tcn.cloud.api.services.billing.v1alpha1.UpdateRateDefinitionRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateRateDefinitionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Updates a rate definition group.
+     *   - Any rate definitions using this group will use the new data.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     *   TCN_BILLING_ADMIN
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified rate definition group doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    public com.tcn.cloud.api.services.billing.v1alpha1.UpdateRateDefinitionGroupResponse updateRateDefinitionGroup(com.tcn.cloud.api.services.billing.v1alpha1.UpdateRateDefinitionGroupRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateRateDefinitionGroupMethod(), getCallOptions(), request);
+    }
   }
 
   /**
@@ -1331,9 +2387,47 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
+     * Bulk deletes rate definitions.
+     *   - The billing plan(s) must be inactive.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.FailedPrecondition: The billing plan(s) are active.
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.billing.v1alpha1.BulkDeleteRateDefinitionsResponse> bulkDeleteRateDefinitions(
+        com.tcn.cloud.api.services.billing.v1alpha1.BulkDeleteRateDefinitionsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getBulkDeleteRateDefinitionsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Bulk updates rate definitions.
+     *   - The billing plan(s) must be inactive.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.FailedPrecondition: The billing plan(s) are active.
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.billing.v1alpha1.BulkUpdateRateDefinitionsResponse> bulkUpdateRateDefinitions(
+        com.tcn.cloud.api.services.billing.v1alpha1.BulkUpdateRateDefinitionsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getBulkUpdateRateDefinitionsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Creates a billing plan for the ORG.
-     *   - The rate definitions must have the rate definition group id populated and it
-     *     must be a valid reference to a rate definition group on the default billing plan.
      * Required permissions:
      *   CUSTOMER_SUPPORT
      * Errors:
@@ -1366,6 +2460,46 @@ public final class BillingServiceGrpc {
         com.tcn.cloud.api.services.billing.v1alpha1.CreateInvoiceRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateInvoiceMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Creates a rate definition for a Billing Plan in an ORG.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.AlreadyExists: A rate definition with the same group id already exists.
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified billing plan or rate definition group doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.billing.v1alpha1.CreateRateDefinitionResponse> createRateDefinition(
+        com.tcn.cloud.api.services.billing.v1alpha1.CreateRateDefinitionRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateRateDefinitionMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Creates a rate definition group.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     *   TCN_BILLING_ADMIN
+     * Errors:
+     *   - grpc.AlreadyExists: A rate definition group with the same data already exists.
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.billing.v1alpha1.CreateRateDefinitionGroupResponse> createRateDefinitionGroup(
+        com.tcn.cloud.api.services.billing.v1alpha1.CreateRateDefinitionGroupRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateRateDefinitionGroupMethod(), getCallOptions()), request);
     }
 
     /**
@@ -1404,6 +2538,48 @@ public final class BillingServiceGrpc {
         com.tcn.cloud.api.services.billing.v1alpha1.DeleteInvoiceRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteInvoiceMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes a rate definition from a Billing Plan in an ORG.
+     *   - The billing plan must be inactive.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.FailedPrecondition: The billing plan is active.
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified billing plan or rate definition group doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.billing.v1alpha1.DeleteRateDefinitionResponse> deleteRateDefinition(
+        com.tcn.cloud.api.services.billing.v1alpha1.DeleteRateDefinitionRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteRateDefinitionMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes a rate definition group.
+     *   - This will stop any rate definitions in the group from generating charges.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     *   TCN_BILLING_ADMIN
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified rate definition group doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.billing.v1alpha1.DeleteRateDefinitionGroupResponse> deleteRateDefinitionGroup(
+        com.tcn.cloud.api.services.billing.v1alpha1.DeleteRateDefinitionGroupRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteRateDefinitionGroupMethod(), getCallOptions()), request);
     }
 
     /**
@@ -1504,8 +2680,45 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * Lists the billing plans for the ORG. This includes both active and inactive plans, but does not
-     * include deleted plans.
+     * Returns the specified rate definition.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified rate definition doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.billing.v1alpha1.GetRateDefinitionResponse> getRateDefinition(
+        com.tcn.cloud.api.services.billing.v1alpha1.GetRateDefinitionRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetRateDefinitionMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Returns the specified rate definition group.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified rate definition group doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.billing.v1alpha1.GetRateDefinitionGroupResponse> getRateDefinitionGroup(
+        com.tcn.cloud.api.services.billing.v1alpha1.GetRateDefinitionGroupRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetRateDefinitionGroupMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Lists billing plans.
      * Required permissions:
      *   CUSTOMER_SUPPORT
      * Errors:
@@ -1523,7 +2736,7 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * Lists the invoices for the ORG.
+     * Lists invoices.
      * Required permissions:
      *   CUSTOMER_SUPPORT
      * Errors:
@@ -1537,6 +2750,42 @@ public final class BillingServiceGrpc {
         com.tcn.cloud.api.services.billing.v1alpha1.ListInvoicesRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListInvoicesMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Lists rate definitions.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.billing.v1alpha1.ListRateDefinitionsResponse> listRateDefinitions(
+        com.tcn.cloud.api.services.billing.v1alpha1.ListRateDefinitionsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListRateDefinitionsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Lists rate definition groups.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.billing.v1alpha1.ListRateDefinitionGroupsResponse> listRateDefinitionGroups(
+        com.tcn.cloud.api.services.billing.v1alpha1.ListRateDefinitionGroupsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListRateDefinitionGroupsMethod(), getCallOptions()), request);
     }
 
     /**
@@ -1563,6 +2812,7 @@ public final class BillingServiceGrpc {
      * Updates the default billing plan for the REGION.
      * Required permissions:
      *   CUSTOMER_SUPPORT
+     *   TCN_BILLING_ADMIN
      * Errors:
      *   - grpc.Internal: An internal error occurred.
      *   - grpc.InvalidArgument: The request is invalid.
@@ -1594,22 +2844,76 @@ public final class BillingServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateInvoiceMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Updates a rate definition.
+     *   - The billing plan must be inactive.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.FailedPrecondition: The billing plan is active.
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified rate definition doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.billing.v1alpha1.UpdateRateDefinitionResponse> updateRateDefinition(
+        com.tcn.cloud.api.services.billing.v1alpha1.UpdateRateDefinitionRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateRateDefinitionMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Updates a rate definition group.
+     *   - Any rate definitions using this group will use the new data.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     *   TCN_BILLING_ADMIN
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified rate definition group doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.billing.v1alpha1.UpdateRateDefinitionGroupResponse> updateRateDefinitionGroup(
+        com.tcn.cloud.api.services.billing.v1alpha1.UpdateRateDefinitionGroupRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateRateDefinitionGroupMethod(), getCallOptions()), request);
+    }
   }
 
-  private static final int METHODID_CREATE_BILLING_PLAN = 0;
-  private static final int METHODID_CREATE_INVOICE = 1;
-  private static final int METHODID_DELETE_BILLING_PLAN = 2;
-  private static final int METHODID_DELETE_INVOICE = 3;
-  private static final int METHODID_EXPORT_INVOICE = 4;
-  private static final int METHODID_GET_ACTIVE_BILLING_PLAN = 5;
-  private static final int METHODID_GET_BILLING_PLAN = 6;
-  private static final int METHODID_GET_DEFAULT_BILLING_PLAN = 7;
-  private static final int METHODID_GET_INVOICE = 8;
-  private static final int METHODID_LIST_BILLING_PLANS = 9;
-  private static final int METHODID_LIST_INVOICES = 10;
-  private static final int METHODID_UPDATE_BILLING_PLAN = 11;
-  private static final int METHODID_UPDATE_DEFAULT_BILLING_PLAN = 12;
-  private static final int METHODID_UPDATE_INVOICE = 13;
+  private static final int METHODID_BULK_DELETE_RATE_DEFINITIONS = 0;
+  private static final int METHODID_BULK_UPDATE_RATE_DEFINITIONS = 1;
+  private static final int METHODID_CREATE_BILLING_PLAN = 2;
+  private static final int METHODID_CREATE_INVOICE = 3;
+  private static final int METHODID_CREATE_RATE_DEFINITION = 4;
+  private static final int METHODID_CREATE_RATE_DEFINITION_GROUP = 5;
+  private static final int METHODID_DELETE_BILLING_PLAN = 6;
+  private static final int METHODID_DELETE_INVOICE = 7;
+  private static final int METHODID_DELETE_RATE_DEFINITION = 8;
+  private static final int METHODID_DELETE_RATE_DEFINITION_GROUP = 9;
+  private static final int METHODID_EXPORT_INVOICE = 10;
+  private static final int METHODID_GET_ACTIVE_BILLING_PLAN = 11;
+  private static final int METHODID_GET_BILLING_PLAN = 12;
+  private static final int METHODID_GET_DEFAULT_BILLING_PLAN = 13;
+  private static final int METHODID_GET_INVOICE = 14;
+  private static final int METHODID_GET_RATE_DEFINITION = 15;
+  private static final int METHODID_GET_RATE_DEFINITION_GROUP = 16;
+  private static final int METHODID_LIST_BILLING_PLANS = 17;
+  private static final int METHODID_LIST_INVOICES = 18;
+  private static final int METHODID_LIST_RATE_DEFINITIONS = 19;
+  private static final int METHODID_LIST_RATE_DEFINITION_GROUPS = 20;
+  private static final int METHODID_UPDATE_BILLING_PLAN = 21;
+  private static final int METHODID_UPDATE_DEFAULT_BILLING_PLAN = 22;
+  private static final int METHODID_UPDATE_INVOICE = 23;
+  private static final int METHODID_UPDATE_RATE_DEFINITION = 24;
+  private static final int METHODID_UPDATE_RATE_DEFINITION_GROUP = 25;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1628,6 +2932,14 @@ public final class BillingServiceGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
+        case METHODID_BULK_DELETE_RATE_DEFINITIONS:
+          serviceImpl.bulkDeleteRateDefinitions((com.tcn.cloud.api.services.billing.v1alpha1.BulkDeleteRateDefinitionsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.BulkDeleteRateDefinitionsResponse>) responseObserver);
+          break;
+        case METHODID_BULK_UPDATE_RATE_DEFINITIONS:
+          serviceImpl.bulkUpdateRateDefinitions((com.tcn.cloud.api.services.billing.v1alpha1.BulkUpdateRateDefinitionsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.BulkUpdateRateDefinitionsResponse>) responseObserver);
+          break;
         case METHODID_CREATE_BILLING_PLAN:
           serviceImpl.createBillingPlan((com.tcn.cloud.api.services.billing.v1alpha1.CreateBillingPlanRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.CreateBillingPlanResponse>) responseObserver);
@@ -1636,6 +2948,14 @@ public final class BillingServiceGrpc {
           serviceImpl.createInvoice((com.tcn.cloud.api.services.billing.v1alpha1.CreateInvoiceRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.CreateInvoiceResponse>) responseObserver);
           break;
+        case METHODID_CREATE_RATE_DEFINITION:
+          serviceImpl.createRateDefinition((com.tcn.cloud.api.services.billing.v1alpha1.CreateRateDefinitionRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.CreateRateDefinitionResponse>) responseObserver);
+          break;
+        case METHODID_CREATE_RATE_DEFINITION_GROUP:
+          serviceImpl.createRateDefinitionGroup((com.tcn.cloud.api.services.billing.v1alpha1.CreateRateDefinitionGroupRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.CreateRateDefinitionGroupResponse>) responseObserver);
+          break;
         case METHODID_DELETE_BILLING_PLAN:
           serviceImpl.deleteBillingPlan((com.tcn.cloud.api.services.billing.v1alpha1.DeleteBillingPlanRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.DeleteBillingPlanResponse>) responseObserver);
@@ -1643,6 +2963,14 @@ public final class BillingServiceGrpc {
         case METHODID_DELETE_INVOICE:
           serviceImpl.deleteInvoice((com.tcn.cloud.api.services.billing.v1alpha1.DeleteInvoiceRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.DeleteInvoiceResponse>) responseObserver);
+          break;
+        case METHODID_DELETE_RATE_DEFINITION:
+          serviceImpl.deleteRateDefinition((com.tcn.cloud.api.services.billing.v1alpha1.DeleteRateDefinitionRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.DeleteRateDefinitionResponse>) responseObserver);
+          break;
+        case METHODID_DELETE_RATE_DEFINITION_GROUP:
+          serviceImpl.deleteRateDefinitionGroup((com.tcn.cloud.api.services.billing.v1alpha1.DeleteRateDefinitionGroupRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.DeleteRateDefinitionGroupResponse>) responseObserver);
           break;
         case METHODID_EXPORT_INVOICE:
           serviceImpl.exportInvoice((com.tcn.cloud.api.services.billing.v1alpha1.ExportInvoiceRequest) request,
@@ -1664,6 +2992,14 @@ public final class BillingServiceGrpc {
           serviceImpl.getInvoice((com.tcn.cloud.api.services.billing.v1alpha1.GetInvoiceRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.GetInvoiceResponse>) responseObserver);
           break;
+        case METHODID_GET_RATE_DEFINITION:
+          serviceImpl.getRateDefinition((com.tcn.cloud.api.services.billing.v1alpha1.GetRateDefinitionRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.GetRateDefinitionResponse>) responseObserver);
+          break;
+        case METHODID_GET_RATE_DEFINITION_GROUP:
+          serviceImpl.getRateDefinitionGroup((com.tcn.cloud.api.services.billing.v1alpha1.GetRateDefinitionGroupRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.GetRateDefinitionGroupResponse>) responseObserver);
+          break;
         case METHODID_LIST_BILLING_PLANS:
           serviceImpl.listBillingPlans((com.tcn.cloud.api.services.billing.v1alpha1.ListBillingPlansRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.ListBillingPlansResponse>) responseObserver);
@@ -1671,6 +3007,14 @@ public final class BillingServiceGrpc {
         case METHODID_LIST_INVOICES:
           serviceImpl.listInvoices((com.tcn.cloud.api.services.billing.v1alpha1.ListInvoicesRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.ListInvoicesResponse>) responseObserver);
+          break;
+        case METHODID_LIST_RATE_DEFINITIONS:
+          serviceImpl.listRateDefinitions((com.tcn.cloud.api.services.billing.v1alpha1.ListRateDefinitionsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.ListRateDefinitionsResponse>) responseObserver);
+          break;
+        case METHODID_LIST_RATE_DEFINITION_GROUPS:
+          serviceImpl.listRateDefinitionGroups((com.tcn.cloud.api.services.billing.v1alpha1.ListRateDefinitionGroupsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.ListRateDefinitionGroupsResponse>) responseObserver);
           break;
         case METHODID_UPDATE_BILLING_PLAN:
           serviceImpl.updateBillingPlan((com.tcn.cloud.api.services.billing.v1alpha1.UpdateBillingPlanRequest) request,
@@ -1683,6 +3027,14 @@ public final class BillingServiceGrpc {
         case METHODID_UPDATE_INVOICE:
           serviceImpl.updateInvoice((com.tcn.cloud.api.services.billing.v1alpha1.UpdateInvoiceRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.UpdateInvoiceResponse>) responseObserver);
+          break;
+        case METHODID_UPDATE_RATE_DEFINITION:
+          serviceImpl.updateRateDefinition((com.tcn.cloud.api.services.billing.v1alpha1.UpdateRateDefinitionRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.UpdateRateDefinitionResponse>) responseObserver);
+          break;
+        case METHODID_UPDATE_RATE_DEFINITION_GROUP:
+          serviceImpl.updateRateDefinitionGroup((com.tcn.cloud.api.services.billing.v1alpha1.UpdateRateDefinitionGroupRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.UpdateRateDefinitionGroupResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -1703,6 +3055,20 @@ public final class BillingServiceGrpc {
   public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
     return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
         .addMethod(
+          getBulkDeleteRateDefinitionsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.services.billing.v1alpha1.BulkDeleteRateDefinitionsRequest,
+              com.tcn.cloud.api.services.billing.v1alpha1.BulkDeleteRateDefinitionsResponse>(
+                service, METHODID_BULK_DELETE_RATE_DEFINITIONS)))
+        .addMethod(
+          getBulkUpdateRateDefinitionsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.services.billing.v1alpha1.BulkUpdateRateDefinitionsRequest,
+              com.tcn.cloud.api.services.billing.v1alpha1.BulkUpdateRateDefinitionsResponse>(
+                service, METHODID_BULK_UPDATE_RATE_DEFINITIONS)))
+        .addMethod(
           getCreateBillingPlanMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -1717,6 +3083,20 @@ public final class BillingServiceGrpc {
               com.tcn.cloud.api.services.billing.v1alpha1.CreateInvoiceResponse>(
                 service, METHODID_CREATE_INVOICE)))
         .addMethod(
+          getCreateRateDefinitionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.services.billing.v1alpha1.CreateRateDefinitionRequest,
+              com.tcn.cloud.api.services.billing.v1alpha1.CreateRateDefinitionResponse>(
+                service, METHODID_CREATE_RATE_DEFINITION)))
+        .addMethod(
+          getCreateRateDefinitionGroupMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.services.billing.v1alpha1.CreateRateDefinitionGroupRequest,
+              com.tcn.cloud.api.services.billing.v1alpha1.CreateRateDefinitionGroupResponse>(
+                service, METHODID_CREATE_RATE_DEFINITION_GROUP)))
+        .addMethod(
           getDeleteBillingPlanMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -1730,6 +3110,20 @@ public final class BillingServiceGrpc {
               com.tcn.cloud.api.services.billing.v1alpha1.DeleteInvoiceRequest,
               com.tcn.cloud.api.services.billing.v1alpha1.DeleteInvoiceResponse>(
                 service, METHODID_DELETE_INVOICE)))
+        .addMethod(
+          getDeleteRateDefinitionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.services.billing.v1alpha1.DeleteRateDefinitionRequest,
+              com.tcn.cloud.api.services.billing.v1alpha1.DeleteRateDefinitionResponse>(
+                service, METHODID_DELETE_RATE_DEFINITION)))
+        .addMethod(
+          getDeleteRateDefinitionGroupMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.services.billing.v1alpha1.DeleteRateDefinitionGroupRequest,
+              com.tcn.cloud.api.services.billing.v1alpha1.DeleteRateDefinitionGroupResponse>(
+                service, METHODID_DELETE_RATE_DEFINITION_GROUP)))
         .addMethod(
           getExportInvoiceMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -1766,6 +3160,20 @@ public final class BillingServiceGrpc {
               com.tcn.cloud.api.services.billing.v1alpha1.GetInvoiceResponse>(
                 service, METHODID_GET_INVOICE)))
         .addMethod(
+          getGetRateDefinitionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.services.billing.v1alpha1.GetRateDefinitionRequest,
+              com.tcn.cloud.api.services.billing.v1alpha1.GetRateDefinitionResponse>(
+                service, METHODID_GET_RATE_DEFINITION)))
+        .addMethod(
+          getGetRateDefinitionGroupMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.services.billing.v1alpha1.GetRateDefinitionGroupRequest,
+              com.tcn.cloud.api.services.billing.v1alpha1.GetRateDefinitionGroupResponse>(
+                service, METHODID_GET_RATE_DEFINITION_GROUP)))
+        .addMethod(
           getListBillingPlansMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -1779,6 +3187,20 @@ public final class BillingServiceGrpc {
               com.tcn.cloud.api.services.billing.v1alpha1.ListInvoicesRequest,
               com.tcn.cloud.api.services.billing.v1alpha1.ListInvoicesResponse>(
                 service, METHODID_LIST_INVOICES)))
+        .addMethod(
+          getListRateDefinitionsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.services.billing.v1alpha1.ListRateDefinitionsRequest,
+              com.tcn.cloud.api.services.billing.v1alpha1.ListRateDefinitionsResponse>(
+                service, METHODID_LIST_RATE_DEFINITIONS)))
+        .addMethod(
+          getListRateDefinitionGroupsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.services.billing.v1alpha1.ListRateDefinitionGroupsRequest,
+              com.tcn.cloud.api.services.billing.v1alpha1.ListRateDefinitionGroupsResponse>(
+                service, METHODID_LIST_RATE_DEFINITION_GROUPS)))
         .addMethod(
           getUpdateBillingPlanMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -1800,6 +3222,20 @@ public final class BillingServiceGrpc {
               com.tcn.cloud.api.services.billing.v1alpha1.UpdateInvoiceRequest,
               com.tcn.cloud.api.services.billing.v1alpha1.UpdateInvoiceResponse>(
                 service, METHODID_UPDATE_INVOICE)))
+        .addMethod(
+          getUpdateRateDefinitionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.services.billing.v1alpha1.UpdateRateDefinitionRequest,
+              com.tcn.cloud.api.services.billing.v1alpha1.UpdateRateDefinitionResponse>(
+                service, METHODID_UPDATE_RATE_DEFINITION)))
+        .addMethod(
+          getUpdateRateDefinitionGroupMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.services.billing.v1alpha1.UpdateRateDefinitionGroupRequest,
+              com.tcn.cloud.api.services.billing.v1alpha1.UpdateRateDefinitionGroupResponse>(
+                service, METHODID_UPDATE_RATE_DEFINITION_GROUP)))
         .build();
   }
 
@@ -1848,20 +3284,32 @@ public final class BillingServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new BillingServiceFileDescriptorSupplier())
+              .addMethod(getBulkDeleteRateDefinitionsMethod())
+              .addMethod(getBulkUpdateRateDefinitionsMethod())
               .addMethod(getCreateBillingPlanMethod())
               .addMethod(getCreateInvoiceMethod())
+              .addMethod(getCreateRateDefinitionMethod())
+              .addMethod(getCreateRateDefinitionGroupMethod())
               .addMethod(getDeleteBillingPlanMethod())
               .addMethod(getDeleteInvoiceMethod())
+              .addMethod(getDeleteRateDefinitionMethod())
+              .addMethod(getDeleteRateDefinitionGroupMethod())
               .addMethod(getExportInvoiceMethod())
               .addMethod(getGetActiveBillingPlanMethod())
               .addMethod(getGetBillingPlanMethod())
               .addMethod(getGetDefaultBillingPlanMethod())
               .addMethod(getGetInvoiceMethod())
+              .addMethod(getGetRateDefinitionMethod())
+              .addMethod(getGetRateDefinitionGroupMethod())
               .addMethod(getListBillingPlansMethod())
               .addMethod(getListInvoicesMethod())
+              .addMethod(getListRateDefinitionsMethod())
+              .addMethod(getListRateDefinitionGroupsMethod())
               .addMethod(getUpdateBillingPlanMethod())
               .addMethod(getUpdateDefaultBillingPlanMethod())
               .addMethod(getUpdateInvoiceMethod())
+              .addMethod(getUpdateRateDefinitionMethod())
+              .addMethod(getUpdateRateDefinitionGroupMethod())
               .build();
         }
       }

@@ -232,6 +232,14 @@ public enum Permission
   PERMISSION_TCN_BILLING(240),
   /**
    * <pre>
+   * Enables sensitive and specific billing tools for TCN employees only.
+   * </pre>
+   *
+   * <code>PERMISSION_TCN_BILLING_ADMIN = 241;</code>
+   */
+  PERMISSION_TCN_BILLING_ADMIN(241),
+  /**
+   * <pre>
    * Enables access to agent.
    * </pre>
    *
@@ -822,6 +830,14 @@ public enum Permission
   public static final int PERMISSION_TCN_BILLING_VALUE = 240;
   /**
    * <pre>
+   * Enables sensitive and specific billing tools for TCN employees only.
+   * </pre>
+   *
+   * <code>PERMISSION_TCN_BILLING_ADMIN = 241;</code>
+   */
+  public static final int PERMISSION_TCN_BILLING_ADMIN_VALUE = 241;
+  /**
+   * <pre>
    * Enables access to agent.
    * </pre>
    *
@@ -1242,6 +1258,7 @@ public enum Permission
       case 220: return PERMISSION_BILLING_EDIT;
       case 230: return PERMISSION_TCN_ADMIN_SETTINGS;
       case 240: return PERMISSION_TCN_BILLING;
+      case 241: return PERMISSION_TCN_BILLING_ADMIN;
       case 300: return PERMISSION_AGENT;
       case 310: return PERMISSION_ACCEPT_QUEUED_CALLS;
       case 320: return PERMISSION_VIEW_CAMPAIGN_COMPLETION;
