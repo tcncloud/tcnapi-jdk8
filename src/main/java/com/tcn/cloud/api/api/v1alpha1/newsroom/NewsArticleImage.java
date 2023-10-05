@@ -23,6 +23,7 @@ private static final long serialVersionUID = 0L;
     uuid_ = "";
     content_ = "";
     downloadUrl_ = "";
+    imageReferenceId_ = "";
   }
 
   @java.lang.Override
@@ -201,6 +202,53 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int IMAGE_REFERENCE_ID_FIELD_NUMBER = 5;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object imageReferenceId_ = "";
+  /**
+   * <pre>
+   * image reference id
+   * </pre>
+   *
+   * <code>string image_reference_id = 5 [json_name = "imageReferenceId"];</code>
+   * @return The imageReferenceId.
+   */
+  @java.lang.Override
+  public java.lang.String getImageReferenceId() {
+    java.lang.Object ref = imageReferenceId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      imageReferenceId_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * image reference id
+   * </pre>
+   *
+   * <code>string image_reference_id = 5 [json_name = "imageReferenceId"];</code>
+   * @return The bytes for imageReferenceId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getImageReferenceIdBytes() {
+    java.lang.Object ref = imageReferenceId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      imageReferenceId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -227,6 +275,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(downloadUrl_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, downloadUrl_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(imageReferenceId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, imageReferenceId_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -248,6 +299,9 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(downloadUrl_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, downloadUrl_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(imageReferenceId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, imageReferenceId_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -272,6 +326,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getContent())) return false;
     if (!getDownloadUrl()
         .equals(other.getDownloadUrl())) return false;
+    if (!getImageReferenceId()
+        .equals(other.getImageReferenceId())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -292,6 +348,8 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getContent().hashCode();
     hash = (37 * hash) + DOWNLOAD_URL_FIELD_NUMBER;
     hash = (53 * hash) + getDownloadUrl().hashCode();
+    hash = (37 * hash) + IMAGE_REFERENCE_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getImageReferenceId().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -431,6 +489,7 @@ private static final long serialVersionUID = 0L;
       newArticleSid_ = 0L;
       content_ = "";
       downloadUrl_ = "";
+      imageReferenceId_ = "";
       return this;
     }
 
@@ -475,6 +534,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.downloadUrl_ = downloadUrl_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.imageReferenceId_ = imageReferenceId_;
       }
     }
 
@@ -540,6 +602,11 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000008;
         onChanged();
       }
+      if (!other.getImageReferenceId().isEmpty()) {
+        imageReferenceId_ = other.imageReferenceId_;
+        bitField0_ |= 0x00000010;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -586,6 +653,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000008;
               break;
             } // case 34
+            case 42: {
+              imageReferenceId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -919,6 +991,98 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       downloadUrl_ = value;
       bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object imageReferenceId_ = "";
+    /**
+     * <pre>
+     * image reference id
+     * </pre>
+     *
+     * <code>string image_reference_id = 5 [json_name = "imageReferenceId"];</code>
+     * @return The imageReferenceId.
+     */
+    public java.lang.String getImageReferenceId() {
+      java.lang.Object ref = imageReferenceId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        imageReferenceId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * image reference id
+     * </pre>
+     *
+     * <code>string image_reference_id = 5 [json_name = "imageReferenceId"];</code>
+     * @return The bytes for imageReferenceId.
+     */
+    public com.google.protobuf.ByteString
+        getImageReferenceIdBytes() {
+      java.lang.Object ref = imageReferenceId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        imageReferenceId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * image reference id
+     * </pre>
+     *
+     * <code>string image_reference_id = 5 [json_name = "imageReferenceId"];</code>
+     * @param value The imageReferenceId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setImageReferenceId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      imageReferenceId_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * image reference id
+     * </pre>
+     *
+     * <code>string image_reference_id = 5 [json_name = "imageReferenceId"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearImageReferenceId() {
+      imageReferenceId_ = getDefaultInstance().getImageReferenceId();
+      bitField0_ = (bitField0_ & ~0x00000010);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * image reference id
+     * </pre>
+     *
+     * <code>string image_reference_id = 5 [json_name = "imageReferenceId"];</code>
+     * @param value The bytes for imageReferenceId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setImageReferenceIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      imageReferenceId_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }

@@ -46,4 +46,24 @@ public interface CreateNewsArticleRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getContentBytes();
+
+  /**
+   * <pre>
+   * image reference id
+   * </pre>
+   *
+   * <code>string image_reference_id = 3 [json_name = "imageReferenceId"];</code>
+   * @return The imageReferenceId.
+   */
+  java.lang.String getImageReferenceId();
+  /**
+   * <pre>
+   * image reference id
+   * </pre>
+   *
+   * <code>string image_reference_id = 3 [json_name = "imageReferenceId"];</code>
+   * @return The bytes for imageReferenceId.
+   */
+  com.google.protobuf.ByteString
+      getImageReferenceIdBytes();
 }

@@ -51,7 +51,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>int64 new_article_sid = 1 [json_name = "newArticleSid", deprecated = true];</code>
    * @deprecated api.v1alpha1.newsroom.GetPublishedArticleByIdRequest.new_article_sid is deprecated.
-   *     See api/v1alpha1/newsroom/entities.proto;l=136
+   *     See api/v1alpha1/newsroom/entities.proto;l=140
    * @return The newArticleSid.
    */
   @java.lang.Override
@@ -436,7 +436,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>int64 new_article_sid = 1 [json_name = "newArticleSid", deprecated = true];</code>
      * @deprecated api.v1alpha1.newsroom.GetPublishedArticleByIdRequest.new_article_sid is deprecated.
-     *     See api/v1alpha1/newsroom/entities.proto;l=136
+     *     See api/v1alpha1/newsroom/entities.proto;l=140
      * @return The newArticleSid.
      */
     @java.lang.Override
@@ -450,7 +450,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>int64 new_article_sid = 1 [json_name = "newArticleSid", deprecated = true];</code>
      * @deprecated api.v1alpha1.newsroom.GetPublishedArticleByIdRequest.new_article_sid is deprecated.
-     *     See api/v1alpha1/newsroom/entities.proto;l=136
+     *     See api/v1alpha1/newsroom/entities.proto;l=140
      * @param value The newArticleSid to set.
      * @return This builder for chaining.
      */
@@ -468,7 +468,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>int64 new_article_sid = 1 [json_name = "newArticleSid", deprecated = true];</code>
      * @deprecated api.v1alpha1.newsroom.GetPublishedArticleByIdRequest.new_article_sid is deprecated.
-     *     See api/v1alpha1/newsroom/entities.proto;l=136
+     *     See api/v1alpha1/newsroom/entities.proto;l=140
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearNewArticleSid() {

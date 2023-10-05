@@ -129,4 +129,24 @@ public interface NewsArticleDetailsOrBuilder extends
    * <code>.google.protobuf.Timestamp last_edited = 6 [json_name = "lastEdited"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getLastEditedOrBuilder();
+
+  /**
+   * <pre>
+   * image reference id
+   * </pre>
+   *
+   * <code>string image_reference_id = 7 [json_name = "imageReferenceId"];</code>
+   * @return The imageReferenceId.
+   */
+  java.lang.String getImageReferenceId();
+  /**
+   * <pre>
+   * image reference id
+   * </pre>
+   *
+   * <code>string image_reference_id = 7 [json_name = "imageReferenceId"];</code>
+   * @return The bytes for imageReferenceId.
+   */
+  com.google.protobuf.ByteString
+      getImageReferenceIdBytes();
 }
