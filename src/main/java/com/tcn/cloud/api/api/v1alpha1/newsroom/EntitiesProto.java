@@ -239,23 +239,24 @@ public final class EntitiesProto {
       "ilsR\027publishedArticleDetails\"]\n\034StoreNew" +
       "sArticleImageRequest\022=\n\005image\030\001 \001(\0132\'.ap" +
       "i.v1alpha1.newsroom.NewsArticleImageR\005im" +
-      "age\"\275\001\n\020NewsArticleImage\022\022\n\004uuid\030\001 \001(\tR\004" +
+      "age\"\334\001\n\020NewsArticleImage\022\022\n\004uuid\030\001 \001(\tR\004" +
       "uuid\022*\n\017new_article_sid\030\002 \001(\003B\0020\001R\rnewAr" +
       "ticleSid\022\030\n\007content\030\003 \001(\tR\007content\022!\n\014do" +
       "wnload_url\030\004 \001(\tR\013downloadUrl\022,\n\022image_r" +
-      "eference_id\030\005 \001(\tR\020imageReferenceId\"^\n\035S" +
-      "toreNewsArticleImageResponse\022=\n\005image\030\001 " +
-      "\001(\0132\'.api.v1alpha1.newsroom.NewsArticleI" +
-      "mageR\005image\"M\n\037ListImagesForNewsArticleR" +
-      "equest\022*\n\017new_article_sid\030\001 \001(\003B\0020\001R\rnew" +
-      "ArticleSid\"{\n ListImagesForNewsArticleRe" +
-      "sponse\022W\n\023news_article_images\030\001 \003(\0132\'.ap" +
-      "i.v1alpha1.newsroom.NewsArticleImageR\021ne" +
-      "wsArticleImagesB\256\001\n\'com.tcn.cloud.api.ap" +
-      "i.v1alpha1.newsroomB\rEntitiesProtoP\001\242\002\003A" +
-      "VN\252\002\025Api.V1alpha1.Newsroom\312\002\025Api\\V1alpha" +
-      "1\\Newsroom\342\002!Api\\V1alpha1\\Newsroom\\GPBMe" +
-      "tadata\352\002\027Api::V1alpha1::Newsroomb\006proto3"
+      "eference_id\030\005 \001(\tR\020imageReferenceId\022\035\n\ni" +
+      "mage_type\030\006 \001(\tR\timageType\"^\n\035StoreNewsA" +
+      "rticleImageResponse\022=\n\005image\030\001 \001(\0132\'.api" +
+      ".v1alpha1.newsroom.NewsArticleImageR\005ima" +
+      "ge\"M\n\037ListImagesForNewsArticleRequest\022*\n" +
+      "\017new_article_sid\030\001 \001(\003B\0020\001R\rnewArticleSi" +
+      "d\"{\n ListImagesForNewsArticleResponse\022W\n" +
+      "\023news_article_images\030\001 \003(\0132\'.api.v1alpha" +
+      "1.newsroom.NewsArticleImageR\021newsArticle" +
+      "ImagesB\256\001\n\'com.tcn.cloud.api.api.v1alpha" +
+      "1.newsroomB\rEntitiesProtoP\001\242\002\003AVN\252\002\025Api." +
+      "V1alpha1.Newsroom\312\002\025Api\\V1alpha1\\Newsroo" +
+      "m\342\002!Api\\V1alpha1\\Newsroom\\GPBMetadata\352\002\027" +
+      "Api::V1alpha1::Newsroomb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -407,7 +408,7 @@ public final class EntitiesProto {
     internal_static_api_v1alpha1_newsroom_NewsArticleImage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_newsroom_NewsArticleImage_descriptor,
-        new java.lang.String[] { "Uuid", "NewArticleSid", "Content", "DownloadUrl", "ImageReferenceId", });
+        new java.lang.String[] { "Uuid", "NewArticleSid", "Content", "DownloadUrl", "ImageReferenceId", "ImageType", });
     internal_static_api_v1alpha1_newsroom_StoreNewsArticleImageResponse_descriptor =
       getDescriptor().getMessageTypes().get(23);
     internal_static_api_v1alpha1_newsroom_StoreNewsArticleImageResponse_fieldAccessorTable = new

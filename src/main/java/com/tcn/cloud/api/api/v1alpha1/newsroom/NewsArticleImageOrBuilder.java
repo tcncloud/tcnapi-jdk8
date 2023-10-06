@@ -96,4 +96,24 @@ public interface NewsArticleImageOrBuilder extends
    */
   com.google.protobuf.ByteString
       getImageReferenceIdBytes();
+
+  /**
+   * <pre>
+   * image type
+   * </pre>
+   *
+   * <code>string image_type = 6 [json_name = "imageType"];</code>
+   * @return The imageType.
+   */
+  java.lang.String getImageType();
+  /**
+   * <pre>
+   * image type
+   * </pre>
+   *
+   * <code>string image_type = 6 [json_name = "imageType"];</code>
+   * @return The bytes for imageType.
+   */
+  com.google.protobuf.ByteString
+      getImageTypeBytes();
 }
