@@ -23,6 +23,7 @@ private static final long serialVersionUID = 0L;
     title_ = "";
     content_ = "";
     status_ = 0;
+    author_ = "";
     imageReferenceId_ = "";
   }
 
@@ -257,7 +258,54 @@ private static final long serialVersionUID = 0L;
     return lastEdited_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastEdited_;
   }
 
-  public static final int IMAGE_REFERENCE_ID_FIELD_NUMBER = 7;
+  public static final int AUTHOR_FIELD_NUMBER = 7;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object author_ = "";
+  /**
+   * <pre>
+   * article author
+   * </pre>
+   *
+   * <code>string author = 7 [json_name = "author"];</code>
+   * @return The author.
+   */
+  @java.lang.Override
+  public java.lang.String getAuthor() {
+    java.lang.Object ref = author_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      author_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * article author
+   * </pre>
+   *
+   * <code>string author = 7 [json_name = "author"];</code>
+   * @return The bytes for author.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getAuthorBytes() {
+    java.lang.Object ref = author_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      author_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int IMAGE_REFERENCE_ID_FIELD_NUMBER = 8;
   @SuppressWarnings("serial")
   private volatile java.lang.Object imageReferenceId_ = "";
   /**
@@ -265,7 +313,7 @@ private static final long serialVersionUID = 0L;
    * image reference id
    * </pre>
    *
-   * <code>string image_reference_id = 7 [json_name = "imageReferenceId"];</code>
+   * <code>string image_reference_id = 8 [json_name = "imageReferenceId"];</code>
    * @return The imageReferenceId.
    */
   @java.lang.Override
@@ -286,7 +334,7 @@ private static final long serialVersionUID = 0L;
    * image reference id
    * </pre>
    *
-   * <code>string image_reference_id = 7 [json_name = "imageReferenceId"];</code>
+   * <code>string image_reference_id = 8 [json_name = "imageReferenceId"];</code>
    * @return The bytes for imageReferenceId.
    */
   @java.lang.Override
@@ -336,8 +384,11 @@ private static final long serialVersionUID = 0L;
     if (lastEdited_ != null) {
       output.writeMessage(6, getLastEdited());
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(author_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 7, author_);
+    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(imageReferenceId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 7, imageReferenceId_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 8, imageReferenceId_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -370,8 +421,11 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, getLastEdited());
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(author_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, author_);
+    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(imageReferenceId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, imageReferenceId_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, imageReferenceId_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -405,6 +459,8 @@ private static final long serialVersionUID = 0L;
       if (!getLastEdited()
           .equals(other.getLastEdited())) return false;
     }
+    if (!getAuthor()
+        .equals(other.getAuthor())) return false;
     if (!getImageReferenceId()
         .equals(other.getImageReferenceId())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -435,6 +491,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + LAST_EDITED_FIELD_NUMBER;
       hash = (53 * hash) + getLastEdited().hashCode();
     }
+    hash = (37 * hash) + AUTHOR_FIELD_NUMBER;
+    hash = (53 * hash) + getAuthor().hashCode();
     hash = (37 * hash) + IMAGE_REFERENCE_ID_FIELD_NUMBER;
     hash = (53 * hash) + getImageReferenceId().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
@@ -586,6 +644,7 @@ private static final long serialVersionUID = 0L;
         lastEditedBuilder_.dispose();
         lastEditedBuilder_ = null;
       }
+      author_ = "";
       imageReferenceId_ = "";
       return this;
     }
@@ -643,6 +702,9 @@ private static final long serialVersionUID = 0L;
             : lastEditedBuilder_.build();
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.author_ = author_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
         result.imageReferenceId_ = imageReferenceId_;
       }
     }
@@ -713,9 +775,14 @@ private static final long serialVersionUID = 0L;
       if (other.hasLastEdited()) {
         mergeLastEdited(other.getLastEdited());
       }
+      if (!other.getAuthor().isEmpty()) {
+        author_ = other.author_;
+        bitField0_ |= 0x00000040;
+        onChanged();
+      }
       if (!other.getImageReferenceId().isEmpty()) {
         imageReferenceId_ = other.imageReferenceId_;
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000080;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -779,10 +846,15 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 50
             case 58: {
-              imageReferenceId_ = input.readStringRequireUtf8();
+              author_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000040;
               break;
             } // case 58
+            case 66: {
+              imageReferenceId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 66
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1411,13 +1483,105 @@ private static final long serialVersionUID = 0L;
       return lastEditedBuilder_;
     }
 
+    private java.lang.Object author_ = "";
+    /**
+     * <pre>
+     * article author
+     * </pre>
+     *
+     * <code>string author = 7 [json_name = "author"];</code>
+     * @return The author.
+     */
+    public java.lang.String getAuthor() {
+      java.lang.Object ref = author_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        author_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * article author
+     * </pre>
+     *
+     * <code>string author = 7 [json_name = "author"];</code>
+     * @return The bytes for author.
+     */
+    public com.google.protobuf.ByteString
+        getAuthorBytes() {
+      java.lang.Object ref = author_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        author_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * article author
+     * </pre>
+     *
+     * <code>string author = 7 [json_name = "author"];</code>
+     * @param value The author to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAuthor(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      author_ = value;
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * article author
+     * </pre>
+     *
+     * <code>string author = 7 [json_name = "author"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAuthor() {
+      author_ = getDefaultInstance().getAuthor();
+      bitField0_ = (bitField0_ & ~0x00000040);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * article author
+     * </pre>
+     *
+     * <code>string author = 7 [json_name = "author"];</code>
+     * @param value The bytes for author to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAuthorBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      author_ = value;
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+
     private java.lang.Object imageReferenceId_ = "";
     /**
      * <pre>
      * image reference id
      * </pre>
      *
-     * <code>string image_reference_id = 7 [json_name = "imageReferenceId"];</code>
+     * <code>string image_reference_id = 8 [json_name = "imageReferenceId"];</code>
      * @return The imageReferenceId.
      */
     public java.lang.String getImageReferenceId() {
@@ -1437,7 +1601,7 @@ private static final long serialVersionUID = 0L;
      * image reference id
      * </pre>
      *
-     * <code>string image_reference_id = 7 [json_name = "imageReferenceId"];</code>
+     * <code>string image_reference_id = 8 [json_name = "imageReferenceId"];</code>
      * @return The bytes for imageReferenceId.
      */
     public com.google.protobuf.ByteString
@@ -1458,7 +1622,7 @@ private static final long serialVersionUID = 0L;
      * image reference id
      * </pre>
      *
-     * <code>string image_reference_id = 7 [json_name = "imageReferenceId"];</code>
+     * <code>string image_reference_id = 8 [json_name = "imageReferenceId"];</code>
      * @param value The imageReferenceId to set.
      * @return This builder for chaining.
      */
@@ -1466,7 +1630,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       imageReferenceId_ = value;
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1475,12 +1639,12 @@ private static final long serialVersionUID = 0L;
      * image reference id
      * </pre>
      *
-     * <code>string image_reference_id = 7 [json_name = "imageReferenceId"];</code>
+     * <code>string image_reference_id = 8 [json_name = "imageReferenceId"];</code>
      * @return This builder for chaining.
      */
     public Builder clearImageReferenceId() {
       imageReferenceId_ = getDefaultInstance().getImageReferenceId();
-      bitField0_ = (bitField0_ & ~0x00000040);
+      bitField0_ = (bitField0_ & ~0x00000080);
       onChanged();
       return this;
     }
@@ -1489,7 +1653,7 @@ private static final long serialVersionUID = 0L;
      * image reference id
      * </pre>
      *
-     * <code>string image_reference_id = 7 [json_name = "imageReferenceId"];</code>
+     * <code>string image_reference_id = 8 [json_name = "imageReferenceId"];</code>
      * @param value The bytes for imageReferenceId to set.
      * @return This builder for chaining.
      */
@@ -1498,7 +1662,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       imageReferenceId_ = value;
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
