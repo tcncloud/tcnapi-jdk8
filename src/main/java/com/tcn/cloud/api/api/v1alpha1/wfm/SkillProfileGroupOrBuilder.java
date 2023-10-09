@@ -162,4 +162,31 @@ public interface SkillProfileGroupOrBuilder extends
    * @return The skillProfileSids at the given index.
    */
   long getSkillProfileSids(int index);
+
+  /**
+   * <pre>
+   * Datetime that the group was set to inactive, if not set then the group is currently active.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp datetime_set_to_inactive = 11 [json_name = "datetimeSetToInactive"];</code>
+   * @return Whether the datetimeSetToInactive field is set.
+   */
+  boolean hasDatetimeSetToInactive();
+  /**
+   * <pre>
+   * Datetime that the group was set to inactive, if not set then the group is currently active.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp datetime_set_to_inactive = 11 [json_name = "datetimeSetToInactive"];</code>
+   * @return The datetimeSetToInactive.
+   */
+  com.google.protobuf.Timestamp getDatetimeSetToInactive();
+  /**
+   * <pre>
+   * Datetime that the group was set to inactive, if not set then the group is currently active.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp datetime_set_to_inactive = 11 [json_name = "datetimeSetToInactive"];</code>
+   */
+  com.google.protobuf.TimestampOrBuilder getDatetimeSetToInactiveOrBuilder();
 }
