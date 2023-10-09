@@ -491,7 +491,7 @@ public enum DiagnosticCode
   CANNOT_GENERATE_TOUR_PATTERNS_FOR_NON_TOUR_SHIFT_TEMPLATE(50),
   /**
    * <pre>
-   * DiagnosticTourPatternsNeededToScheduleTour integer value for a diagnostic coded as
+   * DiagnosticCodeTourPatternsNeededToScheduleTour integer value for a diagnostic coded as
    * 'Cannot generate shifts for Tour Shift Template that has no Tour Patterns' type.
    * The diagnostic is reporting a tour shift template which does not have a tour pattern.
    * </pre>
@@ -501,7 +501,7 @@ public enum DiagnosticCode
   TOUR_PATTERNS_NEEDED_TO_SCHEDULE_TOUR(51),
   /**
    * <pre>
-   * DiagnosticShiftTemplateActivityPlacementMinMaxMustBeMultipleOf5Minutes integer value for a diagnostic coded as
+   * DiagnosticCodeShiftTemplateActivityPlacementMinMaxMustBeMultipleOf5Minutes integer value for a diagnostic coded as
    * 'Shift Template Activity Placement Min Max Must Be Multiple Of 5 Minutes' type.
    * The diagnostic is reporting the shift template activity placement min max must be a multiple of 5 minutes.
    * </pre>
@@ -1101,7 +1101,7 @@ public enum DiagnosticCode
   public static final int CANNOT_GENERATE_TOUR_PATTERNS_FOR_NON_TOUR_SHIFT_TEMPLATE_VALUE = 50;
   /**
    * <pre>
-   * DiagnosticTourPatternsNeededToScheduleTour integer value for a diagnostic coded as
+   * DiagnosticCodeTourPatternsNeededToScheduleTour integer value for a diagnostic coded as
    * 'Cannot generate shifts for Tour Shift Template that has no Tour Patterns' type.
    * The diagnostic is reporting a tour shift template which does not have a tour pattern.
    * </pre>
@@ -1111,7 +1111,7 @@ public enum DiagnosticCode
   public static final int TOUR_PATTERNS_NEEDED_TO_SCHEDULE_TOUR_VALUE = 51;
   /**
    * <pre>
-   * DiagnosticShiftTemplateActivityPlacementMinMaxMustBeMultipleOf5Minutes integer value for a diagnostic coded as
+   * DiagnosticCodeShiftTemplateActivityPlacementMinMaxMustBeMultipleOf5Minutes integer value for a diagnostic coded as
    * 'Shift Template Activity Placement Min Max Must Be Multiple Of 5 Minutes' type.
    * The diagnostic is reporting the shift template activity placement min max must be a multiple of 5 minutes.
    * </pre>
