@@ -161,6 +161,8 @@ private static final long serialVersionUID = 0L;
     VANTIV_CREDIT_SALE(2301),
     VANTIV_ACH_SALE(2302),
     JOURNEY_LATEST(2401),
+    JOURNEY_LIST(2402),
+    JOURNEY_UPDATE(2403),
     ATHENAHEALTH_GET_PATIENTS(2501),
     ATHENAHEALTH_GET_PATIENTS_WITH_ID(2502),
     ATHENAHEALTH_CC_PAYMENT(2503),
@@ -372,6 +374,8 @@ private static final long serialVersionUID = 0L;
         case 2301: return VANTIV_CREDIT_SALE;
         case 2302: return VANTIV_ACH_SALE;
         case 2401: return JOURNEY_LATEST;
+        case 2402: return JOURNEY_LIST;
+        case 2403: return JOURNEY_UPDATE;
         case 2501: return ATHENAHEALTH_GET_PATIENTS;
         case 2502: return ATHENAHEALTH_GET_PATIENTS_WITH_ID;
         case 2503: return ATHENAHEALTH_CC_PAYMENT;
@@ -3890,6 +3894,68 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyLatest.getDefaultInstance();
   }
 
+  public static final int JOURNEY_LIST_FIELD_NUMBER = 2402;
+  /**
+   * <code>.api.commons.integrations.ExecuteJourneyList journey_list = 2402 [json_name = "journeyList"];</code>
+   * @return Whether the journeyList field is set.
+   */
+  @java.lang.Override
+  public boolean hasJourneyList() {
+    return valueCase_ == 2402;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteJourneyList journey_list = 2402 [json_name = "journeyList"];</code>
+   * @return The journeyList.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyList getJourneyList() {
+    if (valueCase_ == 2402) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyList) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyList.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteJourneyList journey_list = 2402 [json_name = "journeyList"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyListOrBuilder getJourneyListOrBuilder() {
+    if (valueCase_ == 2402) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyList) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyList.getDefaultInstance();
+  }
+
+  public static final int JOURNEY_UPDATE_FIELD_NUMBER = 2403;
+  /**
+   * <code>.api.commons.integrations.ExecuteJourneyUpdate journey_update = 2403 [json_name = "journeyUpdate"];</code>
+   * @return Whether the journeyUpdate field is set.
+   */
+  @java.lang.Override
+  public boolean hasJourneyUpdate() {
+    return valueCase_ == 2403;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteJourneyUpdate journey_update = 2403 [json_name = "journeyUpdate"];</code>
+   * @return The journeyUpdate.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdate getJourneyUpdate() {
+    if (valueCase_ == 2403) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdate) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdate.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteJourneyUpdate journey_update = 2403 [json_name = "journeyUpdate"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdateOrBuilder getJourneyUpdateOrBuilder() {
+    if (valueCase_ == 2403) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdate) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdate.getDefaultInstance();
+  }
+
   public static final int ATHENAHEALTH_GET_PATIENTS_FIELD_NUMBER = 2501;
   /**
    * <code>.api.commons.integrations.ExecuteAthenahealthGetPatients athenahealth_get_patients = 2501 [json_name = "athenahealthGetPatients"];</code>
@@ -6869,6 +6935,12 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 2401) {
       output.writeMessage(2401, (com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyLatest) value_);
     }
+    if (valueCase_ == 2402) {
+      output.writeMessage(2402, (com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyList) value_);
+    }
+    if (valueCase_ == 2403) {
+      output.writeMessage(2403, (com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdate) value_);
+    }
     if (valueCase_ == 2501) {
       output.writeMessage(2501, (com.tcn.cloud.api.api.commons.integrations.ExecuteAthenahealthGetPatients) value_);
     }
@@ -7571,6 +7643,14 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 2401) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2401, (com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyLatest) value_);
+    }
+    if (valueCase_ == 2402) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2402, (com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyList) value_);
+    }
+    if (valueCase_ == 2403) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2403, (com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdate) value_);
     }
     if (valueCase_ == 2501) {
       size += com.google.protobuf.CodedOutputStream
@@ -8367,6 +8447,14 @@ private static final long serialVersionUID = 0L;
         if (!getJourneyLatest()
             .equals(other.getJourneyLatest())) return false;
         break;
+      case 2402:
+        if (!getJourneyList()
+            .equals(other.getJourneyList())) return false;
+        break;
+      case 2403:
+        if (!getJourneyUpdate()
+            .equals(other.getJourneyUpdate())) return false;
+        break;
       case 2501:
         if (!getAthenahealthGetPatients()
             .equals(other.getAthenahealthGetPatients())) return false;
@@ -9159,6 +9247,14 @@ private static final long serialVersionUID = 0L;
       case 2401:
         hash = (37 * hash) + JOURNEY_LATEST_FIELD_NUMBER;
         hash = (53 * hash) + getJourneyLatest().hashCode();
+        break;
+      case 2402:
+        hash = (37 * hash) + JOURNEY_LIST_FIELD_NUMBER;
+        hash = (53 * hash) + getJourneyList().hashCode();
+        break;
+      case 2403:
+        hash = (37 * hash) + JOURNEY_UPDATE_FIELD_NUMBER;
+        hash = (53 * hash) + getJourneyUpdate().hashCode();
         break;
       case 2501:
         hash = (37 * hash) + ATHENAHEALTH_GET_PATIENTS_FIELD_NUMBER;
@@ -9975,6 +10071,12 @@ private static final long serialVersionUID = 0L;
       if (journeyLatestBuilder_ != null) {
         journeyLatestBuilder_.clear();
       }
+      if (journeyListBuilder_ != null) {
+        journeyListBuilder_.clear();
+      }
+      if (journeyUpdateBuilder_ != null) {
+        journeyUpdateBuilder_.clear();
+      }
       if (athenahealthGetPatientsBuilder_ != null) {
         athenahealthGetPatientsBuilder_.clear();
       }
@@ -10739,6 +10841,14 @@ private static final long serialVersionUID = 0L;
       if (valueCase_ == 2401 &&
           journeyLatestBuilder_ != null) {
         result.value_ = journeyLatestBuilder_.build();
+      }
+      if (valueCase_ == 2402 &&
+          journeyListBuilder_ != null) {
+        result.value_ = journeyListBuilder_.build();
+      }
+      if (valueCase_ == 2403 &&
+          journeyUpdateBuilder_ != null) {
+        result.value_ = journeyUpdateBuilder_.build();
       }
       if (valueCase_ == 2501 &&
           athenahealthGetPatientsBuilder_ != null) {
@@ -11566,6 +11676,14 @@ private static final long serialVersionUID = 0L;
         }
         case JOURNEY_LATEST: {
           mergeJourneyLatest(other.getJourneyLatest());
+          break;
+        }
+        case JOURNEY_LIST: {
+          mergeJourneyList(other.getJourneyList());
+          break;
+        }
+        case JOURNEY_UPDATE: {
+          mergeJourneyUpdate(other.getJourneyUpdate());
           break;
         }
         case ATHENAHEALTH_GET_PATIENTS: {
@@ -12706,6 +12824,20 @@ private static final long serialVersionUID = 0L;
               valueCase_ = 2401;
               break;
             } // case 19210
+            case 19218: {
+              input.readMessage(
+                  getJourneyListFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 2402;
+              break;
+            } // case 19218
+            case 19226: {
+              input.readMessage(
+                  getJourneyUpdateFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 2403;
+              break;
+            } // case 19226
             case 20010: {
               input.readMessage(
                   getAthenahealthGetPatientsFieldBuilder().getBuilder(),
@@ -28887,6 +29019,290 @@ private static final long serialVersionUID = 0L;
       valueCase_ = 2401;
       onChanged();
       return journeyLatestBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyList, com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyList.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyListOrBuilder> journeyListBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteJourneyList journey_list = 2402 [json_name = "journeyList"];</code>
+     * @return Whether the journeyList field is set.
+     */
+    @java.lang.Override
+    public boolean hasJourneyList() {
+      return valueCase_ == 2402;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteJourneyList journey_list = 2402 [json_name = "journeyList"];</code>
+     * @return The journeyList.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyList getJourneyList() {
+      if (journeyListBuilder_ == null) {
+        if (valueCase_ == 2402) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyList) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyList.getDefaultInstance();
+      } else {
+        if (valueCase_ == 2402) {
+          return journeyListBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyList.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteJourneyList journey_list = 2402 [json_name = "journeyList"];</code>
+     */
+    public Builder setJourneyList(com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyList value) {
+      if (journeyListBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        journeyListBuilder_.setMessage(value);
+      }
+      valueCase_ = 2402;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteJourneyList journey_list = 2402 [json_name = "journeyList"];</code>
+     */
+    public Builder setJourneyList(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyList.Builder builderForValue) {
+      if (journeyListBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        journeyListBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 2402;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteJourneyList journey_list = 2402 [json_name = "journeyList"];</code>
+     */
+    public Builder mergeJourneyList(com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyList value) {
+      if (journeyListBuilder_ == null) {
+        if (valueCase_ == 2402 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyList.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyList.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyList) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 2402) {
+          journeyListBuilder_.mergeFrom(value);
+        } else {
+          journeyListBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 2402;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteJourneyList journey_list = 2402 [json_name = "journeyList"];</code>
+     */
+    public Builder clearJourneyList() {
+      if (journeyListBuilder_ == null) {
+        if (valueCase_ == 2402) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 2402) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        journeyListBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteJourneyList journey_list = 2402 [json_name = "journeyList"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyList.Builder getJourneyListBuilder() {
+      return getJourneyListFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteJourneyList journey_list = 2402 [json_name = "journeyList"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyListOrBuilder getJourneyListOrBuilder() {
+      if ((valueCase_ == 2402) && (journeyListBuilder_ != null)) {
+        return journeyListBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 2402) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyList) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyList.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteJourneyList journey_list = 2402 [json_name = "journeyList"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyList, com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyList.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyListOrBuilder> 
+        getJourneyListFieldBuilder() {
+      if (journeyListBuilder_ == null) {
+        if (!(valueCase_ == 2402)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyList.getDefaultInstance();
+        }
+        journeyListBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyList, com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyList.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyListOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyList) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 2402;
+      onChanged();
+      return journeyListBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdate, com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdate.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdateOrBuilder> journeyUpdateBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteJourneyUpdate journey_update = 2403 [json_name = "journeyUpdate"];</code>
+     * @return Whether the journeyUpdate field is set.
+     */
+    @java.lang.Override
+    public boolean hasJourneyUpdate() {
+      return valueCase_ == 2403;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteJourneyUpdate journey_update = 2403 [json_name = "journeyUpdate"];</code>
+     * @return The journeyUpdate.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdate getJourneyUpdate() {
+      if (journeyUpdateBuilder_ == null) {
+        if (valueCase_ == 2403) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdate) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdate.getDefaultInstance();
+      } else {
+        if (valueCase_ == 2403) {
+          return journeyUpdateBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdate.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteJourneyUpdate journey_update = 2403 [json_name = "journeyUpdate"];</code>
+     */
+    public Builder setJourneyUpdate(com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdate value) {
+      if (journeyUpdateBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        journeyUpdateBuilder_.setMessage(value);
+      }
+      valueCase_ = 2403;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteJourneyUpdate journey_update = 2403 [json_name = "journeyUpdate"];</code>
+     */
+    public Builder setJourneyUpdate(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdate.Builder builderForValue) {
+      if (journeyUpdateBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        journeyUpdateBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 2403;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteJourneyUpdate journey_update = 2403 [json_name = "journeyUpdate"];</code>
+     */
+    public Builder mergeJourneyUpdate(com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdate value) {
+      if (journeyUpdateBuilder_ == null) {
+        if (valueCase_ == 2403 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdate.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdate.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdate) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 2403) {
+          journeyUpdateBuilder_.mergeFrom(value);
+        } else {
+          journeyUpdateBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 2403;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteJourneyUpdate journey_update = 2403 [json_name = "journeyUpdate"];</code>
+     */
+    public Builder clearJourneyUpdate() {
+      if (journeyUpdateBuilder_ == null) {
+        if (valueCase_ == 2403) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 2403) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        journeyUpdateBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteJourneyUpdate journey_update = 2403 [json_name = "journeyUpdate"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdate.Builder getJourneyUpdateBuilder() {
+      return getJourneyUpdateFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteJourneyUpdate journey_update = 2403 [json_name = "journeyUpdate"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdateOrBuilder getJourneyUpdateOrBuilder() {
+      if ((valueCase_ == 2403) && (journeyUpdateBuilder_ != null)) {
+        return journeyUpdateBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 2403) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdate) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdate.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteJourneyUpdate journey_update = 2403 [json_name = "journeyUpdate"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdate, com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdate.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdateOrBuilder> 
+        getJourneyUpdateFieldBuilder() {
+      if (journeyUpdateBuilder_ == null) {
+        if (!(valueCase_ == 2403)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdate.getDefaultInstance();
+        }
+        journeyUpdateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdate, com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdate.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdateOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdate) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 2403;
+      onChanged();
+      return journeyUpdateBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<

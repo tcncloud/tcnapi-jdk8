@@ -1655,6 +1655,36 @@ public interface ExecuteFlowOrBuilder extends
   com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyLatestOrBuilder getJourneyLatestOrBuilder();
 
   /**
+   * <code>.api.commons.integrations.ExecuteJourneyList journey_list = 2402 [json_name = "journeyList"];</code>
+   * @return Whether the journeyList field is set.
+   */
+  boolean hasJourneyList();
+  /**
+   * <code>.api.commons.integrations.ExecuteJourneyList journey_list = 2402 [json_name = "journeyList"];</code>
+   * @return The journeyList.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyList getJourneyList();
+  /**
+   * <code>.api.commons.integrations.ExecuteJourneyList journey_list = 2402 [json_name = "journeyList"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyListOrBuilder getJourneyListOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteJourneyUpdate journey_update = 2403 [json_name = "journeyUpdate"];</code>
+   * @return Whether the journeyUpdate field is set.
+   */
+  boolean hasJourneyUpdate();
+  /**
+   * <code>.api.commons.integrations.ExecuteJourneyUpdate journey_update = 2403 [json_name = "journeyUpdate"];</code>
+   * @return The journeyUpdate.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdate getJourneyUpdate();
+  /**
+   * <code>.api.commons.integrations.ExecuteJourneyUpdate journey_update = 2403 [json_name = "journeyUpdate"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdateOrBuilder getJourneyUpdateOrBuilder();
+
+  /**
    * <code>.api.commons.integrations.ExecuteAthenahealthGetPatients athenahealth_get_patients = 2501 [json_name = "athenahealthGetPatients"];</code>
    * @return Whether the athenahealthGetPatients field is set.
    */
