@@ -52,7 +52,7 @@ private static final long serialVersionUID = 0L;
      * ID of the Tour Agent Collection that the &#64;wfm_agent_sid is associated with.
      * </pre>
      *
-     * <code>int64 agent_collection_sid = 1 [json_name = "agentCollectionSid"];</code>
+     * <code>int64 agent_collection_sid = 1 [json_name = "agentCollectionSid", jstype = JS_STRING];</code>
      * @return The agentCollectionSid.
      */
     long getAgentCollectionSid();
@@ -133,7 +133,7 @@ private static final long serialVersionUID = 0L;
      * ID of the Tour Agent Collection that the &#64;wfm_agent_sid is associated with.
      * </pre>
      *
-     * <code>int64 agent_collection_sid = 1 [json_name = "agentCollectionSid"];</code>
+     * <code>int64 agent_collection_sid = 1 [json_name = "agentCollectionSid", jstype = JS_STRING];</code>
      * @return The agentCollectionSid.
      */
     @java.lang.Override
@@ -582,7 +582,7 @@ private static final long serialVersionUID = 0L;
        * ID of the Tour Agent Collection that the &#64;wfm_agent_sid is associated with.
        * </pre>
        *
-       * <code>int64 agent_collection_sid = 1 [json_name = "agentCollectionSid"];</code>
+       * <code>int64 agent_collection_sid = 1 [json_name = "agentCollectionSid", jstype = JS_STRING];</code>
        * @return The agentCollectionSid.
        */
       @java.lang.Override
@@ -594,7 +594,7 @@ private static final long serialVersionUID = 0L;
        * ID of the Tour Agent Collection that the &#64;wfm_agent_sid is associated with.
        * </pre>
        *
-       * <code>int64 agent_collection_sid = 1 [json_name = "agentCollectionSid"];</code>
+       * <code>int64 agent_collection_sid = 1 [json_name = "agentCollectionSid", jstype = JS_STRING];</code>
        * @param value The agentCollectionSid to set.
        * @return This builder for chaining.
        */
@@ -610,7 +610,7 @@ private static final long serialVersionUID = 0L;
        * ID of the Tour Agent Collection that the &#64;wfm_agent_sid is associated with.
        * </pre>
        *
-       * <code>int64 agent_collection_sid = 1 [json_name = "agentCollectionSid"];</code>
+       * <code>int64 agent_collection_sid = 1 [json_name = "agentCollectionSid", jstype = JS_STRING];</code>
        * @return This builder for chaining.
        */
       public Builder clearAgentCollectionSid() {
