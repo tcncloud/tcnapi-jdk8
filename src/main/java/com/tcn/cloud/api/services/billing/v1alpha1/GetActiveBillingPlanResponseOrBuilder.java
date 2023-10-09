@@ -21,31 +21,4 @@ public interface GetActiveBillingPlanResponseOrBuilder extends
    * <code>.services.billing.entities.v1alpha1.BillingPlan billing_plan = 1 [json_name = "billingPlan"];</code>
    */
   com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlanOrBuilder getBillingPlanOrBuilder();
-
-  /**
-   * <pre>
-   * Optional: if not set, will use current time
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp effective_time = 2 [json_name = "effectiveTime"];</code>
-   * @return Whether the effectiveTime field is set.
-   */
-  boolean hasEffectiveTime();
-  /**
-   * <pre>
-   * Optional: if not set, will use current time
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp effective_time = 2 [json_name = "effectiveTime"];</code>
-   * @return The effectiveTime.
-   */
-  com.google.protobuf.Timestamp getEffectiveTime();
-  /**
-   * <pre>
-   * Optional: if not set, will use current time
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp effective_time = 2 [json_name = "effectiveTime"];</code>
-   */
-  com.google.protobuf.TimestampOrBuilder getEffectiveTimeOrBuilder();
 }

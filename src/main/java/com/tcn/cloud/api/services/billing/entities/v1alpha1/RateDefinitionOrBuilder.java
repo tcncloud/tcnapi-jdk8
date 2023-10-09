@@ -29,23 +29,47 @@ public interface RateDefinitionOrBuilder extends
 
   /**
    * <pre>
-   * the rate definition group this rate definition is a part of;
+   * the feature this rate definition is a part of (i.e. event_type + config_type);
    * should always be set unless adding a rate definition to the
    * default billing plan.
    * </pre>
    *
-   * <code>string rate_definition_group_id = 2 [json_name = "rateDefinitionGroupId"];</code>
+   * <code>string rate_definition_feature_id = 2 [json_name = "rateDefinitionFeatureId"];</code>
+   * @return The rateDefinitionFeatureId.
+   */
+  java.lang.String getRateDefinitionFeatureId();
+  /**
+   * <pre>
+   * the feature this rate definition is a part of (i.e. event_type + config_type);
+   * should always be set unless adding a rate definition to the
+   * default billing plan.
+   * </pre>
+   *
+   * <code>string rate_definition_feature_id = 2 [json_name = "rateDefinitionFeatureId"];</code>
+   * @return The bytes for rateDefinitionFeatureId.
+   */
+  com.google.protobuf.ByteString
+      getRateDefinitionFeatureIdBytes();
+
+  /**
+   * <pre>
+   * the group this rate definition is a part of (i.e. matching_rule + matching_config);
+   * should always be set unless adding a rate definition to the
+   * default billing plan.
+   * </pre>
+   *
+   * <code>string rate_definition_group_id = 3 [json_name = "rateDefinitionGroupId"];</code>
    * @return The rateDefinitionGroupId.
    */
   java.lang.String getRateDefinitionGroupId();
   /**
    * <pre>
-   * the rate definition group this rate definition is a part of;
+   * the group this rate definition is a part of (i.e. matching_rule + matching_config);
    * should always be set unless adding a rate definition to the
    * default billing plan.
    * </pre>
    *
-   * <code>string rate_definition_group_id = 2 [json_name = "rateDefinitionGroupId"];</code>
+   * <code>string rate_definition_group_id = 3 [json_name = "rateDefinitionGroupId"];</code>
    * @return The bytes for rateDefinitionGroupId.
    */
   com.google.protobuf.ByteString
@@ -53,10 +77,94 @@ public interface RateDefinitionOrBuilder extends
 
   /**
    * <pre>
+   * the event type this definition rates
+   * </pre>
+   *
+   * <code>.api.commons.audit.EventType event_type = 4 [json_name = "eventType"];</code>
+   * @return The enum numeric value on the wire for eventType.
+   */
+  int getEventTypeValue();
+  /**
+   * <pre>
+   * the event type this definition rates
+   * </pre>
+   *
+   * <code>.api.commons.audit.EventType event_type = 4 [json_name = "eventType"];</code>
+   * @return The eventType.
+   */
+  com.tcn.cloud.api.api.commons.audit.EventType getEventType();
+
+  /**
+   * <pre>
+   * the config type of this definitioin
+   * </pre>
+   *
+   * <code>.services.billing.entities.v1alpha1.RateDefinitionConfigType config_type = 5 [json_name = "configType"];</code>
+   * @return The enum numeric value on the wire for configType.
+   */
+  int getConfigTypeValue();
+  /**
+   * <pre>
+   * the config type of this definitioin
+   * </pre>
+   *
+   * <code>.services.billing.entities.v1alpha1.RateDefinitionConfigType config_type = 5 [json_name = "configType"];</code>
+   * @return The configType.
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionConfigType getConfigType();
+
+  /**
+   * <pre>
+   * the matching rule for this definition
+   * </pre>
+   *
+   * <code>.services.billing.entities.v1alpha1.MatchingRule matching_rule = 6 [json_name = "matchingRule"];</code>
+   * @return The enum numeric value on the wire for matchingRule.
+   */
+  int getMatchingRuleValue();
+  /**
+   * <pre>
+   * the matching rule for this definition
+   * </pre>
+   *
+   * <code>.services.billing.entities.v1alpha1.MatchingRule matching_rule = 6 [json_name = "matchingRule"];</code>
+   * @return The matchingRule.
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha1.MatchingRule getMatchingRule();
+
+  /**
+   * <pre>
+   * the matching config for this definition
+   * </pre>
+   *
+   * <code>.services.billing.entities.v1alpha1.MatchingConfig matching_config = 7 [json_name = "matchingConfig"];</code>
+   * @return Whether the matchingConfig field is set.
+   */
+  boolean hasMatchingConfig();
+  /**
+   * <pre>
+   * the matching config for this definition
+   * </pre>
+   *
+   * <code>.services.billing.entities.v1alpha1.MatchingConfig matching_config = 7 [json_name = "matchingConfig"];</code>
+   * @return The matchingConfig.
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha1.MatchingConfig getMatchingConfig();
+  /**
+   * <pre>
+   * the matching config for this definition
+   * </pre>
+   *
+   * <code>.services.billing.entities.v1alpha1.MatchingConfig matching_config = 7 [json_name = "matchingConfig"];</code>
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha1.MatchingConfigOrBuilder getMatchingConfigOrBuilder();
+
+  /**
+   * <pre>
    * the configuration for this definition
    * </pre>
    *
-   * <code>.services.billing.entities.v1alpha1.RateDefinitionConfig config = 3 [json_name = "config"];</code>
+   * <code>.services.billing.entities.v1alpha1.RateDefinitionConfig config = 8 [json_name = "config"];</code>
    * @return Whether the config field is set.
    */
   boolean hasConfig();
@@ -65,7 +173,7 @@ public interface RateDefinitionOrBuilder extends
    * the configuration for this definition
    * </pre>
    *
-   * <code>.services.billing.entities.v1alpha1.RateDefinitionConfig config = 3 [json_name = "config"];</code>
+   * <code>.services.billing.entities.v1alpha1.RateDefinitionConfig config = 8 [json_name = "config"];</code>
    * @return The config.
    */
   com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionConfig getConfig();
@@ -74,7 +182,7 @@ public interface RateDefinitionOrBuilder extends
    * the configuration for this definition
    * </pre>
    *
-   * <code>.services.billing.entities.v1alpha1.RateDefinitionConfig config = 3 [json_name = "config"];</code>
+   * <code>.services.billing.entities.v1alpha1.RateDefinitionConfig config = 8 [json_name = "config"];</code>
    */
   com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionConfigOrBuilder getConfigOrBuilder();
 
@@ -83,7 +191,7 @@ public interface RateDefinitionOrBuilder extends
    * the time the rate definition was created
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime"];</code>
+   * <code>.google.protobuf.Timestamp create_time = 9 [json_name = "createTime"];</code>
    * @return Whether the createTime field is set.
    */
   boolean hasCreateTime();
@@ -92,7 +200,7 @@ public interface RateDefinitionOrBuilder extends
    * the time the rate definition was created
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime"];</code>
+   * <code>.google.protobuf.Timestamp create_time = 9 [json_name = "createTime"];</code>
    * @return The createTime.
    */
   com.google.protobuf.Timestamp getCreateTime();
@@ -101,7 +209,7 @@ public interface RateDefinitionOrBuilder extends
    * the time the rate definition was created
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime"];</code>
+   * <code>.google.protobuf.Timestamp create_time = 9 [json_name = "createTime"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder();
 
@@ -110,7 +218,7 @@ public interface RateDefinitionOrBuilder extends
    * the time the rate definition was last updated
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
+   * <code>.google.protobuf.Timestamp update_time = 10 [json_name = "updateTime"];</code>
    * @return Whether the updateTime field is set.
    */
   boolean hasUpdateTime();
@@ -119,7 +227,7 @@ public interface RateDefinitionOrBuilder extends
    * the time the rate definition was last updated
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
+   * <code>.google.protobuf.Timestamp update_time = 10 [json_name = "updateTime"];</code>
    * @return The updateTime.
    */
   com.google.protobuf.Timestamp getUpdateTime();
@@ -128,7 +236,7 @@ public interface RateDefinitionOrBuilder extends
    * the time the rate definition was last updated
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
+   * <code>.google.protobuf.Timestamp update_time = 10 [json_name = "updateTime"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder();
 
@@ -137,7 +245,7 @@ public interface RateDefinitionOrBuilder extends
    * the time this rate definition was deleted (if applicable)
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp delete_time = 6 [json_name = "deleteTime"];</code>
+   * <code>.google.protobuf.Timestamp delete_time = 11 [json_name = "deleteTime"];</code>
    * @return Whether the deleteTime field is set.
    */
   boolean hasDeleteTime();
@@ -146,7 +254,7 @@ public interface RateDefinitionOrBuilder extends
    * the time this rate definition was deleted (if applicable)
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp delete_time = 6 [json_name = "deleteTime"];</code>
+   * <code>.google.protobuf.Timestamp delete_time = 11 [json_name = "deleteTime"];</code>
    * @return The deleteTime.
    */
   com.google.protobuf.Timestamp getDeleteTime();
@@ -155,7 +263,7 @@ public interface RateDefinitionOrBuilder extends
    * the time this rate definition was deleted (if applicable)
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp delete_time = 6 [json_name = "deleteTime"];</code>
+   * <code>.google.protobuf.Timestamp delete_time = 11 [json_name = "deleteTime"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getDeleteTimeOrBuilder();
 }

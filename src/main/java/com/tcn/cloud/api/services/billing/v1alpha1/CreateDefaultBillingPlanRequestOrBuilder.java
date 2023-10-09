@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.services.billing.v1alpha1;
 
-public interface UpdateDefaultBillingPlanRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:services.billing.v1alpha1.UpdateDefaultBillingPlanRequest)
+public interface CreateDefaultBillingPlanRequestOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:services.billing.v1alpha1.CreateDefaultBillingPlanRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -33,19 +33,4 @@ public interface UpdateDefaultBillingPlanRequestOrBuilder extends
    * <code>.services.billing.entities.v1alpha1.BillingPlan billing_plan = 2 [json_name = "billingPlan"];</code>
    */
   com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlanOrBuilder getBillingPlanOrBuilder();
-
-  /**
-   * <code>.google.protobuf.FieldMask update_fields = 3 [json_name = "updateFields"];</code>
-   * @return Whether the updateFields field is set.
-   */
-  boolean hasUpdateFields();
-  /**
-   * <code>.google.protobuf.FieldMask update_fields = 3 [json_name = "updateFields"];</code>
-   * @return The updateFields.
-   */
-  com.google.protobuf.FieldMask getUpdateFields();
-  /**
-   * <code>.google.protobuf.FieldMask update_fields = 3 [json_name = "updateFields"];</code>
-   */
-  com.google.protobuf.FieldMaskOrBuilder getUpdateFieldsOrBuilder();
 }

@@ -110,7 +110,7 @@ public interface BillingPlanOrBuilder extends
 
   /**
    * <pre>
-   * the time (if applicable) this billing plan ended; can be null
+   * the time this billing plan ended; can be null
    * </pre>
    *
    * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime"];</code>
@@ -119,7 +119,7 @@ public interface BillingPlanOrBuilder extends
   boolean hasEndTime();
   /**
    * <pre>
-   * the time (if applicable) this billing plan ended; can be null
+   * the time this billing plan ended; can be null
    * </pre>
    *
    * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime"];</code>
@@ -128,7 +128,7 @@ public interface BillingPlanOrBuilder extends
   com.google.protobuf.Timestamp getEndTime();
   /**
    * <pre>
-   * the time (if applicable) this billing plan ended; can be null
+   * the time this billing plan ended; can be null
    * </pre>
    *
    * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime"];</code>
@@ -137,10 +137,37 @@ public interface BillingPlanOrBuilder extends
 
   /**
    * <pre>
+   * the time this billing plan was deleted; can be null
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp delete_time = 6 [json_name = "deleteTime"];</code>
+   * @return Whether the deleteTime field is set.
+   */
+  boolean hasDeleteTime();
+  /**
+   * <pre>
+   * the time this billing plan was deleted; can be null
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp delete_time = 6 [json_name = "deleteTime"];</code>
+   * @return The deleteTime.
+   */
+  com.google.protobuf.Timestamp getDeleteTime();
+  /**
+   * <pre>
+   * the time this billing plan was deleted; can be null
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp delete_time = 6 [json_name = "deleteTime"];</code>
+   */
+  com.google.protobuf.TimestampOrBuilder getDeleteTimeOrBuilder();
+
+  /**
+   * <pre>
    * the billing plan rate definitions
    * </pre>
    *
-   * <code>repeated string rate_definition_ids = 6 [json_name = "rateDefinitionIds"];</code>
+   * <code>repeated string rate_definition_ids = 7 [json_name = "rateDefinitionIds"];</code>
    * @return A list containing the rateDefinitionIds.
    */
   java.util.List<java.lang.String>
@@ -150,7 +177,7 @@ public interface BillingPlanOrBuilder extends
    * the billing plan rate definitions
    * </pre>
    *
-   * <code>repeated string rate_definition_ids = 6 [json_name = "rateDefinitionIds"];</code>
+   * <code>repeated string rate_definition_ids = 7 [json_name = "rateDefinitionIds"];</code>
    * @return The count of rateDefinitionIds.
    */
   int getRateDefinitionIdsCount();
@@ -159,7 +186,7 @@ public interface BillingPlanOrBuilder extends
    * the billing plan rate definitions
    * </pre>
    *
-   * <code>repeated string rate_definition_ids = 6 [json_name = "rateDefinitionIds"];</code>
+   * <code>repeated string rate_definition_ids = 7 [json_name = "rateDefinitionIds"];</code>
    * @param index The index of the element to return.
    * @return The rateDefinitionIds at the given index.
    */
@@ -169,7 +196,7 @@ public interface BillingPlanOrBuilder extends
    * the billing plan rate definitions
    * </pre>
    *
-   * <code>repeated string rate_definition_ids = 6 [json_name = "rateDefinitionIds"];</code>
+   * <code>repeated string rate_definition_ids = 7 [json_name = "rateDefinitionIds"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the rateDefinitionIds at the given index.
    */

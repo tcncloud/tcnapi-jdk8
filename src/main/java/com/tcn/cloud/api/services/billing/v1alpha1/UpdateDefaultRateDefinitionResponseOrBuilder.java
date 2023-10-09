@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.services.billing.v1alpha1;
 
-public interface BulkUpdateRateDefinitionsResponseOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:services.billing.v1alpha1.BulkUpdateRateDefinitionsResponse)
+public interface UpdateDefaultRateDefinitionResponseOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:services.billing.v1alpha1.UpdateDefaultRateDefinitionResponse)
     com.google.protobuf.MessageOrBuilder {
 }

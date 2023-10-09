@@ -43,29 +43,28 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfig.class, com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfig.Builder.class);
   }
 
-  public static final int AMOUNT_FIELD_NUMBER = 1;
-  private long amount_ = 0L;
+  public static final int UNIT_SIZE_FIELD_NUMBER = 1;
+  private long unitSize_ = 0L;
   /**
    * <pre>
-   * Required. the amount of a unit to apply the rate to. This is the
-   * increment amount; for example, an amount of 300 (with bytes as a
-   * unit of measurement) and an event of size 400 bytes will get
-   * billed as if it were a size of 600 bytes.
+   * Required. the size of an individual unit. For example, a unit
+   * size of 300 (with bytes as a unit of measurement) and an event
+   * of size 400 bytes will get billed as if it were 2 units.
    * </pre>
    *
-   * <code>int64 amount = 1 [json_name = "amount"];</code>
-   * @return The amount.
+   * <code>int64 unit_size = 1 [json_name = "unitSize"];</code>
+   * @return The unitSize.
    */
   @java.lang.Override
-  public long getAmount() {
-    return amount_;
+  public long getUnitSize() {
+    return unitSize_;
   }
 
   public static final int RATE_FIELD_NUMBER = 2;
   private double rate_ = 0D;
   /**
    * <pre>
-   * Required. the amount to rate each size increment
+   * Required. the amount to rate each unit
    * </pre>
    *
    * <code>double rate = 2 [json_name = "rate"];</code>
@@ -76,98 +75,98 @@ private static final long serialVersionUID = 0L;
     return rate_;
   }
 
-  public static final int MIN_INCREMENT_FIELD_NUMBER = 3;
-  private com.google.protobuf.Int64Value minIncrement_;
+  public static final int MIN_UNITS_FIELD_NUMBER = 3;
+  private com.google.protobuf.Int64Value minUnits_;
   /**
    * <pre>
-   * Optional. the minimum number of increments to rate; for example,
-   * an amount of 5 seconds and a min_increment of 2 would mean that
-   * any event less than 10 seconds would be billed as if it were 10
-   * seconds.
+   * Optional. the minimum number of units to rate; for example, a
+   * unit size of 5 seconds and a min_units of 2 would mean that
+   * any event less than 10 seconds would be billed as if it were
+   * two units (10 seconds).
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value min_increment = 3 [json_name = "minIncrement"];</code>
-   * @return Whether the minIncrement field is set.
+   * <code>.google.protobuf.Int64Value min_units = 3 [json_name = "minUnits"];</code>
+   * @return Whether the minUnits field is set.
    */
   @java.lang.Override
-  public boolean hasMinIncrement() {
-    return minIncrement_ != null;
+  public boolean hasMinUnits() {
+    return minUnits_ != null;
   }
   /**
    * <pre>
-   * Optional. the minimum number of increments to rate; for example,
-   * an amount of 5 seconds and a min_increment of 2 would mean that
-   * any event less than 10 seconds would be billed as if it were 10
-   * seconds.
+   * Optional. the minimum number of units to rate; for example, a
+   * unit size of 5 seconds and a min_units of 2 would mean that
+   * any event less than 10 seconds would be billed as if it were
+   * two units (10 seconds).
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value min_increment = 3 [json_name = "minIncrement"];</code>
-   * @return The minIncrement.
+   * <code>.google.protobuf.Int64Value min_units = 3 [json_name = "minUnits"];</code>
+   * @return The minUnits.
    */
   @java.lang.Override
-  public com.google.protobuf.Int64Value getMinIncrement() {
-    return minIncrement_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : minIncrement_;
+  public com.google.protobuf.Int64Value getMinUnits() {
+    return minUnits_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : minUnits_;
   }
   /**
    * <pre>
-   * Optional. the minimum number of increments to rate; for example,
-   * an amount of 5 seconds and a min_increment of 2 would mean that
-   * any event less than 10 seconds would be billed as if it were 10
-   * seconds.
+   * Optional. the minimum number of units to rate; for example, a
+   * unit size of 5 seconds and a min_units of 2 would mean that
+   * any event less than 10 seconds would be billed as if it were
+   * two units (10 seconds).
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value min_increment = 3 [json_name = "minIncrement"];</code>
+   * <code>.google.protobuf.Int64Value min_units = 3 [json_name = "minUnits"];</code>
    */
   @java.lang.Override
-  public com.google.protobuf.Int64ValueOrBuilder getMinIncrementOrBuilder() {
-    return minIncrement_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : minIncrement_;
+  public com.google.protobuf.Int64ValueOrBuilder getMinUnitsOrBuilder() {
+    return minUnits_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : minUnits_;
   }
 
-  public static final int MAX_INCREMENT_FIELD_NUMBER = 4;
-  private com.google.protobuf.Int64Value maxIncrement_;
+  public static final int MAX_UNITS_FIELD_NUMBER = 4;
+  private com.google.protobuf.Int64Value maxUnits_;
   /**
    * <pre>
-   * Optional. the maximum number of increments to rate; for example,
-   * an amount of 5 seconds and a max_increment of 2 would mean that
-   * any event more than 10 seconds would be billed as if it were 10
-   * seconds.
+   * Optional. the maximum number of units to rate; for example, a
+   * unit size of 5 seconds and a max_units of 2 would mean that
+   * any event more than 10 seconds would be billed as if it were
+   * two units (10 seconds).
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value max_increment = 4 [json_name = "maxIncrement"];</code>
-   * @return Whether the maxIncrement field is set.
+   * <code>.google.protobuf.Int64Value max_units = 4 [json_name = "maxUnits"];</code>
+   * @return Whether the maxUnits field is set.
    */
   @java.lang.Override
-  public boolean hasMaxIncrement() {
-    return maxIncrement_ != null;
+  public boolean hasMaxUnits() {
+    return maxUnits_ != null;
   }
   /**
    * <pre>
-   * Optional. the maximum number of increments to rate; for example,
-   * an amount of 5 seconds and a max_increment of 2 would mean that
-   * any event more than 10 seconds would be billed as if it were 10
-   * seconds.
+   * Optional. the maximum number of units to rate; for example, a
+   * unit size of 5 seconds and a max_units of 2 would mean that
+   * any event more than 10 seconds would be billed as if it were
+   * two units (10 seconds).
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value max_increment = 4 [json_name = "maxIncrement"];</code>
-   * @return The maxIncrement.
+   * <code>.google.protobuf.Int64Value max_units = 4 [json_name = "maxUnits"];</code>
+   * @return The maxUnits.
    */
   @java.lang.Override
-  public com.google.protobuf.Int64Value getMaxIncrement() {
-    return maxIncrement_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxIncrement_;
+  public com.google.protobuf.Int64Value getMaxUnits() {
+    return maxUnits_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxUnits_;
   }
   /**
    * <pre>
-   * Optional. the maximum number of increments to rate; for example,
-   * an amount of 5 seconds and a max_increment of 2 would mean that
-   * any event more than 10 seconds would be billed as if it were 10
-   * seconds.
+   * Optional. the maximum number of units to rate; for example, a
+   * unit size of 5 seconds and a max_units of 2 would mean that
+   * any event more than 10 seconds would be billed as if it were
+   * two units (10 seconds).
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value max_increment = 4 [json_name = "maxIncrement"];</code>
+   * <code>.google.protobuf.Int64Value max_units = 4 [json_name = "maxUnits"];</code>
    */
   @java.lang.Override
-  public com.google.protobuf.Int64ValueOrBuilder getMaxIncrementOrBuilder() {
-    return maxIncrement_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxIncrement_;
+  public com.google.protobuf.Int64ValueOrBuilder getMaxUnitsOrBuilder() {
+    return maxUnits_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxUnits_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -184,17 +183,17 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (amount_ != 0L) {
-      output.writeInt64(1, amount_);
+    if (unitSize_ != 0L) {
+      output.writeInt64(1, unitSize_);
     }
     if (java.lang.Double.doubleToRawLongBits(rate_) != 0) {
       output.writeDouble(2, rate_);
     }
-    if (minIncrement_ != null) {
-      output.writeMessage(3, getMinIncrement());
+    if (minUnits_ != null) {
+      output.writeMessage(3, getMinUnits());
     }
-    if (maxIncrement_ != null) {
-      output.writeMessage(4, getMaxIncrement());
+    if (maxUnits_ != null) {
+      output.writeMessage(4, getMaxUnits());
     }
     getUnknownFields().writeTo(output);
   }
@@ -205,21 +204,21 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (amount_ != 0L) {
+    if (unitSize_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(1, amount_);
+        .computeInt64Size(1, unitSize_);
     }
     if (java.lang.Double.doubleToRawLongBits(rate_) != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(2, rate_);
     }
-    if (minIncrement_ != null) {
+    if (minUnits_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(3, getMinIncrement());
+        .computeMessageSize(3, getMinUnits());
     }
-    if (maxIncrement_ != null) {
+    if (maxUnits_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(4, getMaxIncrement());
+        .computeMessageSize(4, getMaxUnits());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -236,20 +235,20 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfig other = (com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfig) obj;
 
-    if (getAmount()
-        != other.getAmount()) return false;
+    if (getUnitSize()
+        != other.getUnitSize()) return false;
     if (java.lang.Double.doubleToLongBits(getRate())
         != java.lang.Double.doubleToLongBits(
             other.getRate())) return false;
-    if (hasMinIncrement() != other.hasMinIncrement()) return false;
-    if (hasMinIncrement()) {
-      if (!getMinIncrement()
-          .equals(other.getMinIncrement())) return false;
+    if (hasMinUnits() != other.hasMinUnits()) return false;
+    if (hasMinUnits()) {
+      if (!getMinUnits()
+          .equals(other.getMinUnits())) return false;
     }
-    if (hasMaxIncrement() != other.hasMaxIncrement()) return false;
-    if (hasMaxIncrement()) {
-      if (!getMaxIncrement()
-          .equals(other.getMaxIncrement())) return false;
+    if (hasMaxUnits() != other.hasMaxUnits()) return false;
+    if (hasMaxUnits()) {
+      if (!getMaxUnits()
+          .equals(other.getMaxUnits())) return false;
     }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -262,19 +261,19 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+    hash = (37 * hash) + UNIT_SIZE_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getAmount());
+        getUnitSize());
     hash = (37 * hash) + RATE_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         java.lang.Double.doubleToLongBits(getRate()));
-    if (hasMinIncrement()) {
-      hash = (37 * hash) + MIN_INCREMENT_FIELD_NUMBER;
-      hash = (53 * hash) + getMinIncrement().hashCode();
+    if (hasMinUnits()) {
+      hash = (37 * hash) + MIN_UNITS_FIELD_NUMBER;
+      hash = (53 * hash) + getMinUnits().hashCode();
     }
-    if (hasMaxIncrement()) {
-      hash = (37 * hash) + MAX_INCREMENT_FIELD_NUMBER;
-      hash = (53 * hash) + getMaxIncrement().hashCode();
+    if (hasMaxUnits()) {
+      hash = (37 * hash) + MAX_UNITS_FIELD_NUMBER;
+      hash = (53 * hash) + getMaxUnits().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -412,17 +411,17 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      amount_ = 0L;
+      unitSize_ = 0L;
       rate_ = 0D;
-      minIncrement_ = null;
-      if (minIncrementBuilder_ != null) {
-        minIncrementBuilder_.dispose();
-        minIncrementBuilder_ = null;
+      minUnits_ = null;
+      if (minUnitsBuilder_ != null) {
+        minUnitsBuilder_.dispose();
+        minUnitsBuilder_ = null;
       }
-      maxIncrement_ = null;
-      if (maxIncrementBuilder_ != null) {
-        maxIncrementBuilder_.dispose();
-        maxIncrementBuilder_ = null;
+      maxUnits_ = null;
+      if (maxUnitsBuilder_ != null) {
+        maxUnitsBuilder_.dispose();
+        maxUnitsBuilder_ = null;
       }
       return this;
     }
@@ -458,20 +457,20 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfig result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.amount_ = amount_;
+        result.unitSize_ = unitSize_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.rate_ = rate_;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.minIncrement_ = minIncrementBuilder_ == null
-            ? minIncrement_
-            : minIncrementBuilder_.build();
+        result.minUnits_ = minUnitsBuilder_ == null
+            ? minUnits_
+            : minUnitsBuilder_.build();
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.maxIncrement_ = maxIncrementBuilder_ == null
-            ? maxIncrement_
-            : maxIncrementBuilder_.build();
+        result.maxUnits_ = maxUnitsBuilder_ == null
+            ? maxUnits_
+            : maxUnitsBuilder_.build();
       }
     }
 
@@ -519,17 +518,17 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfig other) {
       if (other == com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfig.getDefaultInstance()) return this;
-      if (other.getAmount() != 0L) {
-        setAmount(other.getAmount());
+      if (other.getUnitSize() != 0L) {
+        setUnitSize(other.getUnitSize());
       }
       if (other.getRate() != 0D) {
         setRate(other.getRate());
       }
-      if (other.hasMinIncrement()) {
-        mergeMinIncrement(other.getMinIncrement());
+      if (other.hasMinUnits()) {
+        mergeMinUnits(other.getMinUnits());
       }
-      if (other.hasMaxIncrement()) {
-        mergeMaxIncrement(other.getMaxIncrement());
+      if (other.hasMaxUnits()) {
+        mergeMaxUnits(other.getMaxUnits());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -558,7 +557,7 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 8: {
-              amount_ = input.readInt64();
+              unitSize_ = input.readInt64();
               bitField0_ |= 0x00000001;
               break;
             } // case 8
@@ -569,14 +568,14 @@ private static final long serialVersionUID = 0L;
             } // case 17
             case 26: {
               input.readMessage(
-                  getMinIncrementFieldBuilder().getBuilder(),
+                  getMinUnitsFieldBuilder().getBuilder(),
                   extensionRegistry);
               bitField0_ |= 0x00000004;
               break;
             } // case 26
             case 34: {
               input.readMessage(
-                  getMaxIncrementFieldBuilder().getBuilder(),
+                  getMaxUnitsFieldBuilder().getBuilder(),
                   extensionRegistry);
               bitField0_ |= 0x00000008;
               break;
@@ -598,55 +597,52 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private long amount_ ;
+    private long unitSize_ ;
     /**
      * <pre>
-     * Required. the amount of a unit to apply the rate to. This is the
-     * increment amount; for example, an amount of 300 (with bytes as a
-     * unit of measurement) and an event of size 400 bytes will get
-     * billed as if it were a size of 600 bytes.
+     * Required. the size of an individual unit. For example, a unit
+     * size of 300 (with bytes as a unit of measurement) and an event
+     * of size 400 bytes will get billed as if it were 2 units.
      * </pre>
      *
-     * <code>int64 amount = 1 [json_name = "amount"];</code>
-     * @return The amount.
+     * <code>int64 unit_size = 1 [json_name = "unitSize"];</code>
+     * @return The unitSize.
      */
     @java.lang.Override
-    public long getAmount() {
-      return amount_;
+    public long getUnitSize() {
+      return unitSize_;
     }
     /**
      * <pre>
-     * Required. the amount of a unit to apply the rate to. This is the
-     * increment amount; for example, an amount of 300 (with bytes as a
-     * unit of measurement) and an event of size 400 bytes will get
-     * billed as if it were a size of 600 bytes.
+     * Required. the size of an individual unit. For example, a unit
+     * size of 300 (with bytes as a unit of measurement) and an event
+     * of size 400 bytes will get billed as if it were 2 units.
      * </pre>
      *
-     * <code>int64 amount = 1 [json_name = "amount"];</code>
-     * @param value The amount to set.
+     * <code>int64 unit_size = 1 [json_name = "unitSize"];</code>
+     * @param value The unitSize to set.
      * @return This builder for chaining.
      */
-    public Builder setAmount(long value) {
+    public Builder setUnitSize(long value) {
 
-      amount_ = value;
+      unitSize_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. the amount of a unit to apply the rate to. This is the
-     * increment amount; for example, an amount of 300 (with bytes as a
-     * unit of measurement) and an event of size 400 bytes will get
-     * billed as if it were a size of 600 bytes.
+     * Required. the size of an individual unit. For example, a unit
+     * size of 300 (with bytes as a unit of measurement) and an event
+     * of size 400 bytes will get billed as if it were 2 units.
      * </pre>
      *
-     * <code>int64 amount = 1 [json_name = "amount"];</code>
+     * <code>int64 unit_size = 1 [json_name = "unitSize"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearAmount() {
+    public Builder clearUnitSize() {
       bitField0_ = (bitField0_ & ~0x00000001);
-      amount_ = 0L;
+      unitSize_ = 0L;
       onChanged();
       return this;
     }
@@ -654,7 +650,7 @@ private static final long serialVersionUID = 0L;
     private double rate_ ;
     /**
      * <pre>
-     * Required. the amount to rate each size increment
+     * Required. the amount to rate each unit
      * </pre>
      *
      * <code>double rate = 2 [json_name = "rate"];</code>
@@ -666,7 +662,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. the amount to rate each size increment
+     * Required. the amount to rate each unit
      * </pre>
      *
      * <code>double rate = 2 [json_name = "rate"];</code>
@@ -682,7 +678,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. the amount to rate each size increment
+     * Required. the amount to rate each unit
      * </pre>
      *
      * <code>double rate = 2 [json_name = "rate"];</code>
@@ -695,59 +691,59 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.Int64Value minIncrement_;
+    private com.google.protobuf.Int64Value minUnits_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> minIncrementBuilder_;
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> minUnitsBuilder_;
     /**
      * <pre>
-     * Optional. the minimum number of increments to rate; for example,
-     * an amount of 5 seconds and a min_increment of 2 would mean that
-     * any event less than 10 seconds would be billed as if it were 10
-     * seconds.
+     * Optional. the minimum number of units to rate; for example, a
+     * unit size of 5 seconds and a min_units of 2 would mean that
+     * any event less than 10 seconds would be billed as if it were
+     * two units (10 seconds).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value min_increment = 3 [json_name = "minIncrement"];</code>
-     * @return Whether the minIncrement field is set.
+     * <code>.google.protobuf.Int64Value min_units = 3 [json_name = "minUnits"];</code>
+     * @return Whether the minUnits field is set.
      */
-    public boolean hasMinIncrement() {
+    public boolean hasMinUnits() {
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
-     * Optional. the minimum number of increments to rate; for example,
-     * an amount of 5 seconds and a min_increment of 2 would mean that
-     * any event less than 10 seconds would be billed as if it were 10
-     * seconds.
+     * Optional. the minimum number of units to rate; for example, a
+     * unit size of 5 seconds and a min_units of 2 would mean that
+     * any event less than 10 seconds would be billed as if it were
+     * two units (10 seconds).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value min_increment = 3 [json_name = "minIncrement"];</code>
-     * @return The minIncrement.
+     * <code>.google.protobuf.Int64Value min_units = 3 [json_name = "minUnits"];</code>
+     * @return The minUnits.
      */
-    public com.google.protobuf.Int64Value getMinIncrement() {
-      if (minIncrementBuilder_ == null) {
-        return minIncrement_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : minIncrement_;
+    public com.google.protobuf.Int64Value getMinUnits() {
+      if (minUnitsBuilder_ == null) {
+        return minUnits_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : minUnits_;
       } else {
-        return minIncrementBuilder_.getMessage();
+        return minUnitsBuilder_.getMessage();
       }
     }
     /**
      * <pre>
-     * Optional. the minimum number of increments to rate; for example,
-     * an amount of 5 seconds and a min_increment of 2 would mean that
-     * any event less than 10 seconds would be billed as if it were 10
-     * seconds.
+     * Optional. the minimum number of units to rate; for example, a
+     * unit size of 5 seconds and a min_units of 2 would mean that
+     * any event less than 10 seconds would be billed as if it were
+     * two units (10 seconds).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value min_increment = 3 [json_name = "minIncrement"];</code>
+     * <code>.google.protobuf.Int64Value min_units = 3 [json_name = "minUnits"];</code>
      */
-    public Builder setMinIncrement(com.google.protobuf.Int64Value value) {
-      if (minIncrementBuilder_ == null) {
+    public Builder setMinUnits(com.google.protobuf.Int64Value value) {
+      if (minUnitsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        minIncrement_ = value;
+        minUnits_ = value;
       } else {
-        minIncrementBuilder_.setMessage(value);
+        minUnitsBuilder_.setMessage(value);
       }
       bitField0_ |= 0x00000004;
       onChanged();
@@ -755,20 +751,20 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. the minimum number of increments to rate; for example,
-     * an amount of 5 seconds and a min_increment of 2 would mean that
-     * any event less than 10 seconds would be billed as if it were 10
-     * seconds.
+     * Optional. the minimum number of units to rate; for example, a
+     * unit size of 5 seconds and a min_units of 2 would mean that
+     * any event less than 10 seconds would be billed as if it were
+     * two units (10 seconds).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value min_increment = 3 [json_name = "minIncrement"];</code>
+     * <code>.google.protobuf.Int64Value min_units = 3 [json_name = "minUnits"];</code>
      */
-    public Builder setMinIncrement(
+    public Builder setMinUnits(
         com.google.protobuf.Int64Value.Builder builderForValue) {
-      if (minIncrementBuilder_ == null) {
-        minIncrement_ = builderForValue.build();
+      if (minUnitsBuilder_ == null) {
+        minUnits_ = builderForValue.build();
       } else {
-        minIncrementBuilder_.setMessage(builderForValue.build());
+        minUnitsBuilder_.setMessage(builderForValue.build());
       }
       bitField0_ |= 0x00000004;
       onChanged();
@@ -776,25 +772,25 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. the minimum number of increments to rate; for example,
-     * an amount of 5 seconds and a min_increment of 2 would mean that
-     * any event less than 10 seconds would be billed as if it were 10
-     * seconds.
+     * Optional. the minimum number of units to rate; for example, a
+     * unit size of 5 seconds and a min_units of 2 would mean that
+     * any event less than 10 seconds would be billed as if it were
+     * two units (10 seconds).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value min_increment = 3 [json_name = "minIncrement"];</code>
+     * <code>.google.protobuf.Int64Value min_units = 3 [json_name = "minUnits"];</code>
      */
-    public Builder mergeMinIncrement(com.google.protobuf.Int64Value value) {
-      if (minIncrementBuilder_ == null) {
+    public Builder mergeMinUnits(com.google.protobuf.Int64Value value) {
+      if (minUnitsBuilder_ == null) {
         if (((bitField0_ & 0x00000004) != 0) &&
-          minIncrement_ != null &&
-          minIncrement_ != com.google.protobuf.Int64Value.getDefaultInstance()) {
-          getMinIncrementBuilder().mergeFrom(value);
+          minUnits_ != null &&
+          minUnits_ != com.google.protobuf.Int64Value.getDefaultInstance()) {
+          getMinUnitsBuilder().mergeFrom(value);
         } else {
-          minIncrement_ = value;
+          minUnits_ = value;
         }
       } else {
-        minIncrementBuilder_.mergeFrom(value);
+        minUnitsBuilder_.mergeFrom(value);
       }
       bitField0_ |= 0x00000004;
       onChanged();
@@ -802,134 +798,134 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. the minimum number of increments to rate; for example,
-     * an amount of 5 seconds and a min_increment of 2 would mean that
-     * any event less than 10 seconds would be billed as if it were 10
-     * seconds.
+     * Optional. the minimum number of units to rate; for example, a
+     * unit size of 5 seconds and a min_units of 2 would mean that
+     * any event less than 10 seconds would be billed as if it were
+     * two units (10 seconds).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value min_increment = 3 [json_name = "minIncrement"];</code>
+     * <code>.google.protobuf.Int64Value min_units = 3 [json_name = "minUnits"];</code>
      */
-    public Builder clearMinIncrement() {
+    public Builder clearMinUnits() {
       bitField0_ = (bitField0_ & ~0x00000004);
-      minIncrement_ = null;
-      if (minIncrementBuilder_ != null) {
-        minIncrementBuilder_.dispose();
-        minIncrementBuilder_ = null;
+      minUnits_ = null;
+      if (minUnitsBuilder_ != null) {
+        minUnitsBuilder_.dispose();
+        minUnitsBuilder_ = null;
       }
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Optional. the minimum number of increments to rate; for example,
-     * an amount of 5 seconds and a min_increment of 2 would mean that
-     * any event less than 10 seconds would be billed as if it were 10
-     * seconds.
+     * Optional. the minimum number of units to rate; for example, a
+     * unit size of 5 seconds and a min_units of 2 would mean that
+     * any event less than 10 seconds would be billed as if it were
+     * two units (10 seconds).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value min_increment = 3 [json_name = "minIncrement"];</code>
+     * <code>.google.protobuf.Int64Value min_units = 3 [json_name = "minUnits"];</code>
      */
-    public com.google.protobuf.Int64Value.Builder getMinIncrementBuilder() {
+    public com.google.protobuf.Int64Value.Builder getMinUnitsBuilder() {
       bitField0_ |= 0x00000004;
       onChanged();
-      return getMinIncrementFieldBuilder().getBuilder();
+      return getMinUnitsFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * Optional. the minimum number of increments to rate; for example,
-     * an amount of 5 seconds and a min_increment of 2 would mean that
-     * any event less than 10 seconds would be billed as if it were 10
-     * seconds.
+     * Optional. the minimum number of units to rate; for example, a
+     * unit size of 5 seconds and a min_units of 2 would mean that
+     * any event less than 10 seconds would be billed as if it were
+     * two units (10 seconds).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value min_increment = 3 [json_name = "minIncrement"];</code>
+     * <code>.google.protobuf.Int64Value min_units = 3 [json_name = "minUnits"];</code>
      */
-    public com.google.protobuf.Int64ValueOrBuilder getMinIncrementOrBuilder() {
-      if (minIncrementBuilder_ != null) {
-        return minIncrementBuilder_.getMessageOrBuilder();
+    public com.google.protobuf.Int64ValueOrBuilder getMinUnitsOrBuilder() {
+      if (minUnitsBuilder_ != null) {
+        return minUnitsBuilder_.getMessageOrBuilder();
       } else {
-        return minIncrement_ == null ?
-            com.google.protobuf.Int64Value.getDefaultInstance() : minIncrement_;
+        return minUnits_ == null ?
+            com.google.protobuf.Int64Value.getDefaultInstance() : minUnits_;
       }
     }
     /**
      * <pre>
-     * Optional. the minimum number of increments to rate; for example,
-     * an amount of 5 seconds and a min_increment of 2 would mean that
-     * any event less than 10 seconds would be billed as if it were 10
-     * seconds.
+     * Optional. the minimum number of units to rate; for example, a
+     * unit size of 5 seconds and a min_units of 2 would mean that
+     * any event less than 10 seconds would be billed as if it were
+     * two units (10 seconds).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value min_increment = 3 [json_name = "minIncrement"];</code>
+     * <code>.google.protobuf.Int64Value min_units = 3 [json_name = "minUnits"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
-        getMinIncrementFieldBuilder() {
-      if (minIncrementBuilder_ == null) {
-        minIncrementBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        getMinUnitsFieldBuilder() {
+      if (minUnitsBuilder_ == null) {
+        minUnitsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
-                getMinIncrement(),
+                getMinUnits(),
                 getParentForChildren(),
                 isClean());
-        minIncrement_ = null;
+        minUnits_ = null;
       }
-      return minIncrementBuilder_;
+      return minUnitsBuilder_;
     }
 
-    private com.google.protobuf.Int64Value maxIncrement_;
+    private com.google.protobuf.Int64Value maxUnits_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxIncrementBuilder_;
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxUnitsBuilder_;
     /**
      * <pre>
-     * Optional. the maximum number of increments to rate; for example,
-     * an amount of 5 seconds and a max_increment of 2 would mean that
-     * any event more than 10 seconds would be billed as if it were 10
-     * seconds.
+     * Optional. the maximum number of units to rate; for example, a
+     * unit size of 5 seconds and a max_units of 2 would mean that
+     * any event more than 10 seconds would be billed as if it were
+     * two units (10 seconds).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_increment = 4 [json_name = "maxIncrement"];</code>
-     * @return Whether the maxIncrement field is set.
+     * <code>.google.protobuf.Int64Value max_units = 4 [json_name = "maxUnits"];</code>
+     * @return Whether the maxUnits field is set.
      */
-    public boolean hasMaxIncrement() {
+    public boolean hasMaxUnits() {
       return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
-     * Optional. the maximum number of increments to rate; for example,
-     * an amount of 5 seconds and a max_increment of 2 would mean that
-     * any event more than 10 seconds would be billed as if it were 10
-     * seconds.
+     * Optional. the maximum number of units to rate; for example, a
+     * unit size of 5 seconds and a max_units of 2 would mean that
+     * any event more than 10 seconds would be billed as if it were
+     * two units (10 seconds).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_increment = 4 [json_name = "maxIncrement"];</code>
-     * @return The maxIncrement.
+     * <code>.google.protobuf.Int64Value max_units = 4 [json_name = "maxUnits"];</code>
+     * @return The maxUnits.
      */
-    public com.google.protobuf.Int64Value getMaxIncrement() {
-      if (maxIncrementBuilder_ == null) {
-        return maxIncrement_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxIncrement_;
+    public com.google.protobuf.Int64Value getMaxUnits() {
+      if (maxUnitsBuilder_ == null) {
+        return maxUnits_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxUnits_;
       } else {
-        return maxIncrementBuilder_.getMessage();
+        return maxUnitsBuilder_.getMessage();
       }
     }
     /**
      * <pre>
-     * Optional. the maximum number of increments to rate; for example,
-     * an amount of 5 seconds and a max_increment of 2 would mean that
-     * any event more than 10 seconds would be billed as if it were 10
-     * seconds.
+     * Optional. the maximum number of units to rate; for example, a
+     * unit size of 5 seconds and a max_units of 2 would mean that
+     * any event more than 10 seconds would be billed as if it were
+     * two units (10 seconds).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_increment = 4 [json_name = "maxIncrement"];</code>
+     * <code>.google.protobuf.Int64Value max_units = 4 [json_name = "maxUnits"];</code>
      */
-    public Builder setMaxIncrement(com.google.protobuf.Int64Value value) {
-      if (maxIncrementBuilder_ == null) {
+    public Builder setMaxUnits(com.google.protobuf.Int64Value value) {
+      if (maxUnitsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        maxIncrement_ = value;
+        maxUnits_ = value;
       } else {
-        maxIncrementBuilder_.setMessage(value);
+        maxUnitsBuilder_.setMessage(value);
       }
       bitField0_ |= 0x00000008;
       onChanged();
@@ -937,20 +933,20 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. the maximum number of increments to rate; for example,
-     * an amount of 5 seconds and a max_increment of 2 would mean that
-     * any event more than 10 seconds would be billed as if it were 10
-     * seconds.
+     * Optional. the maximum number of units to rate; for example, a
+     * unit size of 5 seconds and a max_units of 2 would mean that
+     * any event more than 10 seconds would be billed as if it were
+     * two units (10 seconds).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_increment = 4 [json_name = "maxIncrement"];</code>
+     * <code>.google.protobuf.Int64Value max_units = 4 [json_name = "maxUnits"];</code>
      */
-    public Builder setMaxIncrement(
+    public Builder setMaxUnits(
         com.google.protobuf.Int64Value.Builder builderForValue) {
-      if (maxIncrementBuilder_ == null) {
-        maxIncrement_ = builderForValue.build();
+      if (maxUnitsBuilder_ == null) {
+        maxUnits_ = builderForValue.build();
       } else {
-        maxIncrementBuilder_.setMessage(builderForValue.build());
+        maxUnitsBuilder_.setMessage(builderForValue.build());
       }
       bitField0_ |= 0x00000008;
       onChanged();
@@ -958,25 +954,25 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. the maximum number of increments to rate; for example,
-     * an amount of 5 seconds and a max_increment of 2 would mean that
-     * any event more than 10 seconds would be billed as if it were 10
-     * seconds.
+     * Optional. the maximum number of units to rate; for example, a
+     * unit size of 5 seconds and a max_units of 2 would mean that
+     * any event more than 10 seconds would be billed as if it were
+     * two units (10 seconds).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_increment = 4 [json_name = "maxIncrement"];</code>
+     * <code>.google.protobuf.Int64Value max_units = 4 [json_name = "maxUnits"];</code>
      */
-    public Builder mergeMaxIncrement(com.google.protobuf.Int64Value value) {
-      if (maxIncrementBuilder_ == null) {
+    public Builder mergeMaxUnits(com.google.protobuf.Int64Value value) {
+      if (maxUnitsBuilder_ == null) {
         if (((bitField0_ & 0x00000008) != 0) &&
-          maxIncrement_ != null &&
-          maxIncrement_ != com.google.protobuf.Int64Value.getDefaultInstance()) {
-          getMaxIncrementBuilder().mergeFrom(value);
+          maxUnits_ != null &&
+          maxUnits_ != com.google.protobuf.Int64Value.getDefaultInstance()) {
+          getMaxUnitsBuilder().mergeFrom(value);
         } else {
-          maxIncrement_ = value;
+          maxUnits_ = value;
         }
       } else {
-        maxIncrementBuilder_.mergeFrom(value);
+        maxUnitsBuilder_.mergeFrom(value);
       }
       bitField0_ |= 0x00000008;
       onChanged();
@@ -984,79 +980,79 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. the maximum number of increments to rate; for example,
-     * an amount of 5 seconds and a max_increment of 2 would mean that
-     * any event more than 10 seconds would be billed as if it were 10
-     * seconds.
+     * Optional. the maximum number of units to rate; for example, a
+     * unit size of 5 seconds and a max_units of 2 would mean that
+     * any event more than 10 seconds would be billed as if it were
+     * two units (10 seconds).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_increment = 4 [json_name = "maxIncrement"];</code>
+     * <code>.google.protobuf.Int64Value max_units = 4 [json_name = "maxUnits"];</code>
      */
-    public Builder clearMaxIncrement() {
+    public Builder clearMaxUnits() {
       bitField0_ = (bitField0_ & ~0x00000008);
-      maxIncrement_ = null;
-      if (maxIncrementBuilder_ != null) {
-        maxIncrementBuilder_.dispose();
-        maxIncrementBuilder_ = null;
+      maxUnits_ = null;
+      if (maxUnitsBuilder_ != null) {
+        maxUnitsBuilder_.dispose();
+        maxUnitsBuilder_ = null;
       }
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Optional. the maximum number of increments to rate; for example,
-     * an amount of 5 seconds and a max_increment of 2 would mean that
-     * any event more than 10 seconds would be billed as if it were 10
-     * seconds.
+     * Optional. the maximum number of units to rate; for example, a
+     * unit size of 5 seconds and a max_units of 2 would mean that
+     * any event more than 10 seconds would be billed as if it were
+     * two units (10 seconds).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_increment = 4 [json_name = "maxIncrement"];</code>
+     * <code>.google.protobuf.Int64Value max_units = 4 [json_name = "maxUnits"];</code>
      */
-    public com.google.protobuf.Int64Value.Builder getMaxIncrementBuilder() {
+    public com.google.protobuf.Int64Value.Builder getMaxUnitsBuilder() {
       bitField0_ |= 0x00000008;
       onChanged();
-      return getMaxIncrementFieldBuilder().getBuilder();
+      return getMaxUnitsFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * Optional. the maximum number of increments to rate; for example,
-     * an amount of 5 seconds and a max_increment of 2 would mean that
-     * any event more than 10 seconds would be billed as if it were 10
-     * seconds.
+     * Optional. the maximum number of units to rate; for example, a
+     * unit size of 5 seconds and a max_units of 2 would mean that
+     * any event more than 10 seconds would be billed as if it were
+     * two units (10 seconds).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_increment = 4 [json_name = "maxIncrement"];</code>
+     * <code>.google.protobuf.Int64Value max_units = 4 [json_name = "maxUnits"];</code>
      */
-    public com.google.protobuf.Int64ValueOrBuilder getMaxIncrementOrBuilder() {
-      if (maxIncrementBuilder_ != null) {
-        return maxIncrementBuilder_.getMessageOrBuilder();
+    public com.google.protobuf.Int64ValueOrBuilder getMaxUnitsOrBuilder() {
+      if (maxUnitsBuilder_ != null) {
+        return maxUnitsBuilder_.getMessageOrBuilder();
       } else {
-        return maxIncrement_ == null ?
-            com.google.protobuf.Int64Value.getDefaultInstance() : maxIncrement_;
+        return maxUnits_ == null ?
+            com.google.protobuf.Int64Value.getDefaultInstance() : maxUnits_;
       }
     }
     /**
      * <pre>
-     * Optional. the maximum number of increments to rate; for example,
-     * an amount of 5 seconds and a max_increment of 2 would mean that
-     * any event more than 10 seconds would be billed as if it were 10
-     * seconds.
+     * Optional. the maximum number of units to rate; for example, a
+     * unit size of 5 seconds and a max_units of 2 would mean that
+     * any event more than 10 seconds would be billed as if it were
+     * two units (10 seconds).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_increment = 4 [json_name = "maxIncrement"];</code>
+     * <code>.google.protobuf.Int64Value max_units = 4 [json_name = "maxUnits"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
-        getMaxIncrementFieldBuilder() {
-      if (maxIncrementBuilder_ == null) {
-        maxIncrementBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        getMaxUnitsFieldBuilder() {
+      if (maxUnitsBuilder_ == null) {
+        maxUnitsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
-                getMaxIncrement(),
+                getMaxUnits(),
                 getParentForChildren(),
                 isClean());
-        maxIncrement_ = null;
+        maxUnits_ = null;
       }
-      return maxIncrementBuilder_;
+      return maxUnitsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

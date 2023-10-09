@@ -22,41 +22,37 @@ public enum Product
    */
   PRODUCT_AGENT_SEATS(100),
   /**
-   * <code>PRODUCT_EMAILS_SENT = 200;</code>
+   * <code>PRODUCT_OMNI = 200;</code>
    */
-  PRODUCT_EMAILS_SENT(200),
+  PRODUCT_OMNI(200),
   /**
-   * <code>PRODUCT_EMAILS_RECEIVED = 201;</code>
+   * <code>PRODUCT_OMNI_CHAT_SENT = 201;</code>
    */
-  PRODUCT_EMAILS_RECEIVED(201),
+  PRODUCT_OMNI_CHAT_SENT(201),
   /**
-   * <code>PRODUCT_SMS_SENT = 202;</code>
+   * <code>PRODUCT_OMNI_CHAT_RECEIVED = 202;</code>
    */
-  PRODUCT_SMS_SENT(202),
+  PRODUCT_OMNI_CHAT_RECEIVED(202),
   /**
-   * <code>PRODUCT_SMS_RECEIVED = 203;</code>
+   * <code>PRODUCT_OMNI_EMAILS_SENT = 203;</code>
    */
-  PRODUCT_SMS_RECEIVED(203),
+  PRODUCT_OMNI_EMAILS_SENT(203),
   /**
-   * <code>PRODUCT_CHAT_SENT = 204;</code>
+   * <code>PRODUCT_OMNI_EMAILS_RECEIVED = 204;</code>
    */
-  PRODUCT_CHAT_SENT(204),
+  PRODUCT_OMNI_EMAILS_RECEIVED(204),
   /**
-   * <code>PRODUCT_CHAT_RECEIVED = 205;</code>
+   * <code>PRODUCT_OMNI_SMS_SENT = 205;</code>
    */
-  PRODUCT_CHAT_RECEIVED(205),
+  PRODUCT_OMNI_SMS_SENT(205),
   /**
-   * <code>PRODUCT_OMNI = 300;</code>
+   * <code>PRODUCT_OMNI_SMS_RECEIVED = 206;</code>
    */
-  PRODUCT_OMNI(300),
+  PRODUCT_OMNI_SMS_RECEIVED(206),
   /**
-   * <code>PRODUCT_VANA = 400;</code>
+   * <code>PRODUCT_COMPLIANCE = 300;</code>
    */
-  PRODUCT_VANA(400),
-  /**
-   * <code>PRODUCT_COMPLIANCE = 500;</code>
-   */
-  PRODUCT_COMPLIANCE(500),
+  PRODUCT_COMPLIANCE(300),
   UNRECOGNIZED(-1),
   ;
 
@@ -69,41 +65,37 @@ public enum Product
    */
   public static final int PRODUCT_AGENT_SEATS_VALUE = 100;
   /**
-   * <code>PRODUCT_EMAILS_SENT = 200;</code>
+   * <code>PRODUCT_OMNI = 200;</code>
    */
-  public static final int PRODUCT_EMAILS_SENT_VALUE = 200;
+  public static final int PRODUCT_OMNI_VALUE = 200;
   /**
-   * <code>PRODUCT_EMAILS_RECEIVED = 201;</code>
+   * <code>PRODUCT_OMNI_CHAT_SENT = 201;</code>
    */
-  public static final int PRODUCT_EMAILS_RECEIVED_VALUE = 201;
+  public static final int PRODUCT_OMNI_CHAT_SENT_VALUE = 201;
   /**
-   * <code>PRODUCT_SMS_SENT = 202;</code>
+   * <code>PRODUCT_OMNI_CHAT_RECEIVED = 202;</code>
    */
-  public static final int PRODUCT_SMS_SENT_VALUE = 202;
+  public static final int PRODUCT_OMNI_CHAT_RECEIVED_VALUE = 202;
   /**
-   * <code>PRODUCT_SMS_RECEIVED = 203;</code>
+   * <code>PRODUCT_OMNI_EMAILS_SENT = 203;</code>
    */
-  public static final int PRODUCT_SMS_RECEIVED_VALUE = 203;
+  public static final int PRODUCT_OMNI_EMAILS_SENT_VALUE = 203;
   /**
-   * <code>PRODUCT_CHAT_SENT = 204;</code>
+   * <code>PRODUCT_OMNI_EMAILS_RECEIVED = 204;</code>
    */
-  public static final int PRODUCT_CHAT_SENT_VALUE = 204;
+  public static final int PRODUCT_OMNI_EMAILS_RECEIVED_VALUE = 204;
   /**
-   * <code>PRODUCT_CHAT_RECEIVED = 205;</code>
+   * <code>PRODUCT_OMNI_SMS_SENT = 205;</code>
    */
-  public static final int PRODUCT_CHAT_RECEIVED_VALUE = 205;
+  public static final int PRODUCT_OMNI_SMS_SENT_VALUE = 205;
   /**
-   * <code>PRODUCT_OMNI = 300;</code>
+   * <code>PRODUCT_OMNI_SMS_RECEIVED = 206;</code>
    */
-  public static final int PRODUCT_OMNI_VALUE = 300;
+  public static final int PRODUCT_OMNI_SMS_RECEIVED_VALUE = 206;
   /**
-   * <code>PRODUCT_VANA = 400;</code>
+   * <code>PRODUCT_COMPLIANCE = 300;</code>
    */
-  public static final int PRODUCT_VANA_VALUE = 400;
-  /**
-   * <code>PRODUCT_COMPLIANCE = 500;</code>
-   */
-  public static final int PRODUCT_COMPLIANCE_VALUE = 500;
+  public static final int PRODUCT_COMPLIANCE_VALUE = 300;
 
 
   public final int getNumber() {
@@ -132,15 +124,14 @@ public enum Product
     switch (value) {
       case 0: return PRODUCT_UNSPECIFIED;
       case 100: return PRODUCT_AGENT_SEATS;
-      case 200: return PRODUCT_EMAILS_SENT;
-      case 201: return PRODUCT_EMAILS_RECEIVED;
-      case 202: return PRODUCT_SMS_SENT;
-      case 203: return PRODUCT_SMS_RECEIVED;
-      case 204: return PRODUCT_CHAT_SENT;
-      case 205: return PRODUCT_CHAT_RECEIVED;
-      case 300: return PRODUCT_OMNI;
-      case 400: return PRODUCT_VANA;
-      case 500: return PRODUCT_COMPLIANCE;
+      case 200: return PRODUCT_OMNI;
+      case 201: return PRODUCT_OMNI_CHAT_SENT;
+      case 202: return PRODUCT_OMNI_CHAT_RECEIVED;
+      case 203: return PRODUCT_OMNI_EMAILS_SENT;
+      case 204: return PRODUCT_OMNI_EMAILS_RECEIVED;
+      case 205: return PRODUCT_OMNI_SMS_SENT;
+      case 206: return PRODUCT_OMNI_SMS_RECEIVED;
+      case 300: return PRODUCT_COMPLIANCE;
       default: return null;
     }
   }

@@ -9,20 +9,19 @@ public interface BasicAmountConfigOrBuilder extends
 
   /**
    * <pre>
-   * Required. the amount of a unit to apply the rate to. This is the
-   * increment amount; for example, an amount of 300 (with bytes as a
-   * unit of measurement) and an event of size 400 bytes will get
-   * billed as if it were a size of 600 bytes.
+   * Required. the size of an individual unit. For example, a unit
+   * size of 300 (with bytes as a unit of measurement) and an event
+   * of size 400 bytes will get billed as if it were 2 units.
    * </pre>
    *
-   * <code>int64 amount = 1 [json_name = "amount"];</code>
-   * @return The amount.
+   * <code>int64 unit_size = 1 [json_name = "unitSize"];</code>
+   * @return The unitSize.
    */
-  long getAmount();
+  long getUnitSize();
 
   /**
    * <pre>
-   * Required. the amount to rate each size increment
+   * Required. the amount to rate each unit
    * </pre>
    *
    * <code>double rate = 2 [json_name = "rate"];</code>
@@ -32,73 +31,73 @@ public interface BasicAmountConfigOrBuilder extends
 
   /**
    * <pre>
-   * Optional. the minimum number of increments to rate; for example,
-   * an amount of 5 seconds and a min_increment of 2 would mean that
-   * any event less than 10 seconds would be billed as if it were 10
-   * seconds.
+   * Optional. the minimum number of units to rate; for example, a
+   * unit size of 5 seconds and a min_units of 2 would mean that
+   * any event less than 10 seconds would be billed as if it were
+   * two units (10 seconds).
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value min_increment = 3 [json_name = "minIncrement"];</code>
-   * @return Whether the minIncrement field is set.
+   * <code>.google.protobuf.Int64Value min_units = 3 [json_name = "minUnits"];</code>
+   * @return Whether the minUnits field is set.
    */
-  boolean hasMinIncrement();
+  boolean hasMinUnits();
   /**
    * <pre>
-   * Optional. the minimum number of increments to rate; for example,
-   * an amount of 5 seconds and a min_increment of 2 would mean that
-   * any event less than 10 seconds would be billed as if it were 10
-   * seconds.
+   * Optional. the minimum number of units to rate; for example, a
+   * unit size of 5 seconds and a min_units of 2 would mean that
+   * any event less than 10 seconds would be billed as if it were
+   * two units (10 seconds).
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value min_increment = 3 [json_name = "minIncrement"];</code>
-   * @return The minIncrement.
+   * <code>.google.protobuf.Int64Value min_units = 3 [json_name = "minUnits"];</code>
+   * @return The minUnits.
    */
-  com.google.protobuf.Int64Value getMinIncrement();
+  com.google.protobuf.Int64Value getMinUnits();
   /**
    * <pre>
-   * Optional. the minimum number of increments to rate; for example,
-   * an amount of 5 seconds and a min_increment of 2 would mean that
-   * any event less than 10 seconds would be billed as if it were 10
-   * seconds.
+   * Optional. the minimum number of units to rate; for example, a
+   * unit size of 5 seconds and a min_units of 2 would mean that
+   * any event less than 10 seconds would be billed as if it were
+   * two units (10 seconds).
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value min_increment = 3 [json_name = "minIncrement"];</code>
+   * <code>.google.protobuf.Int64Value min_units = 3 [json_name = "minUnits"];</code>
    */
-  com.google.protobuf.Int64ValueOrBuilder getMinIncrementOrBuilder();
+  com.google.protobuf.Int64ValueOrBuilder getMinUnitsOrBuilder();
 
   /**
    * <pre>
-   * Optional. the maximum number of increments to rate; for example,
-   * an amount of 5 seconds and a max_increment of 2 would mean that
-   * any event more than 10 seconds would be billed as if it were 10
-   * seconds.
+   * Optional. the maximum number of units to rate; for example, a
+   * unit size of 5 seconds and a max_units of 2 would mean that
+   * any event more than 10 seconds would be billed as if it were
+   * two units (10 seconds).
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value max_increment = 4 [json_name = "maxIncrement"];</code>
-   * @return Whether the maxIncrement field is set.
+   * <code>.google.protobuf.Int64Value max_units = 4 [json_name = "maxUnits"];</code>
+   * @return Whether the maxUnits field is set.
    */
-  boolean hasMaxIncrement();
+  boolean hasMaxUnits();
   /**
    * <pre>
-   * Optional. the maximum number of increments to rate; for example,
-   * an amount of 5 seconds and a max_increment of 2 would mean that
-   * any event more than 10 seconds would be billed as if it were 10
-   * seconds.
+   * Optional. the maximum number of units to rate; for example, a
+   * unit size of 5 seconds and a max_units of 2 would mean that
+   * any event more than 10 seconds would be billed as if it were
+   * two units (10 seconds).
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value max_increment = 4 [json_name = "maxIncrement"];</code>
-   * @return The maxIncrement.
+   * <code>.google.protobuf.Int64Value max_units = 4 [json_name = "maxUnits"];</code>
+   * @return The maxUnits.
    */
-  com.google.protobuf.Int64Value getMaxIncrement();
+  com.google.protobuf.Int64Value getMaxUnits();
   /**
    * <pre>
-   * Optional. the maximum number of increments to rate; for example,
-   * an amount of 5 seconds and a max_increment of 2 would mean that
-   * any event more than 10 seconds would be billed as if it were 10
-   * seconds.
+   * Optional. the maximum number of units to rate; for example, a
+   * unit size of 5 seconds and a max_units of 2 would mean that
+   * any event more than 10 seconds would be billed as if it were
+   * two units (10 seconds).
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value max_increment = 4 [json_name = "maxIncrement"];</code>
+   * <code>.google.protobuf.Int64Value max_units = 4 [json_name = "maxUnits"];</code>
    */
-  com.google.protobuf.Int64ValueOrBuilder getMaxIncrementOrBuilder();
+  com.google.protobuf.Int64ValueOrBuilder getMaxUnitsOrBuilder();
 }

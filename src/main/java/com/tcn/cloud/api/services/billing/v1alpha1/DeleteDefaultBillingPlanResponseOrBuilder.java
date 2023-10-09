@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.services.billing.v1alpha1;
 
-public interface GetDefaultBillingPlanRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:services.billing.v1alpha1.GetDefaultBillingPlanRequest)
+public interface DeleteDefaultBillingPlanResponseOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:services.billing.v1alpha1.DeleteDefaultBillingPlanResponse)
     com.google.protobuf.MessageOrBuilder {
 }

@@ -21,7 +21,11 @@ private static final long serialVersionUID = 0L;
   }
   private RateDefinition() {
     rateDefinitionId_ = "";
+    rateDefinitionFeatureId_ = "";
     rateDefinitionGroupId_ = "";
+    eventType_ = 0;
+    configType_ = 0;
+    matchingRule_ = 0;
   }
 
   @java.lang.Override
@@ -91,17 +95,68 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int RATE_DEFINITION_GROUP_ID_FIELD_NUMBER = 2;
+  public static final int RATE_DEFINITION_FEATURE_ID_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object rateDefinitionGroupId_ = "";
+  private volatile java.lang.Object rateDefinitionFeatureId_ = "";
   /**
    * <pre>
-   * the rate definition group this rate definition is a part of;
+   * the feature this rate definition is a part of (i.e. event_type + config_type);
    * should always be set unless adding a rate definition to the
    * default billing plan.
    * </pre>
    *
-   * <code>string rate_definition_group_id = 2 [json_name = "rateDefinitionGroupId"];</code>
+   * <code>string rate_definition_feature_id = 2 [json_name = "rateDefinitionFeatureId"];</code>
+   * @return The rateDefinitionFeatureId.
+   */
+  @java.lang.Override
+  public java.lang.String getRateDefinitionFeatureId() {
+    java.lang.Object ref = rateDefinitionFeatureId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      rateDefinitionFeatureId_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * the feature this rate definition is a part of (i.e. event_type + config_type);
+   * should always be set unless adding a rate definition to the
+   * default billing plan.
+   * </pre>
+   *
+   * <code>string rate_definition_feature_id = 2 [json_name = "rateDefinitionFeatureId"];</code>
+   * @return The bytes for rateDefinitionFeatureId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getRateDefinitionFeatureIdBytes() {
+    java.lang.Object ref = rateDefinitionFeatureId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      rateDefinitionFeatureId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int RATE_DEFINITION_GROUP_ID_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object rateDefinitionGroupId_ = "";
+  /**
+   * <pre>
+   * the group this rate definition is a part of (i.e. matching_rule + matching_config);
+   * should always be set unless adding a rate definition to the
+   * default billing plan.
+   * </pre>
+   *
+   * <code>string rate_definition_group_id = 3 [json_name = "rateDefinitionGroupId"];</code>
    * @return The rateDefinitionGroupId.
    */
   @java.lang.Override
@@ -119,12 +174,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * the rate definition group this rate definition is a part of;
+   * the group this rate definition is a part of (i.e. matching_rule + matching_config);
    * should always be set unless adding a rate definition to the
    * default billing plan.
    * </pre>
    *
-   * <code>string rate_definition_group_id = 2 [json_name = "rateDefinitionGroupId"];</code>
+   * <code>string rate_definition_group_id = 3 [json_name = "rateDefinitionGroupId"];</code>
    * @return The bytes for rateDefinitionGroupId.
    */
   @java.lang.Override
@@ -142,14 +197,130 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int CONFIG_FIELD_NUMBER = 3;
+  public static final int EVENT_TYPE_FIELD_NUMBER = 4;
+  private int eventType_ = 0;
+  /**
+   * <pre>
+   * the event type this definition rates
+   * </pre>
+   *
+   * <code>.api.commons.audit.EventType event_type = 4 [json_name = "eventType"];</code>
+   * @return The enum numeric value on the wire for eventType.
+   */
+  @java.lang.Override public int getEventTypeValue() {
+    return eventType_;
+  }
+  /**
+   * <pre>
+   * the event type this definition rates
+   * </pre>
+   *
+   * <code>.api.commons.audit.EventType event_type = 4 [json_name = "eventType"];</code>
+   * @return The eventType.
+   */
+  @java.lang.Override public com.tcn.cloud.api.api.commons.audit.EventType getEventType() {
+    com.tcn.cloud.api.api.commons.audit.EventType result = com.tcn.cloud.api.api.commons.audit.EventType.forNumber(eventType_);
+    return result == null ? com.tcn.cloud.api.api.commons.audit.EventType.UNRECOGNIZED : result;
+  }
+
+  public static final int CONFIG_TYPE_FIELD_NUMBER = 5;
+  private int configType_ = 0;
+  /**
+   * <pre>
+   * the config type of this definitioin
+   * </pre>
+   *
+   * <code>.services.billing.entities.v1alpha1.RateDefinitionConfigType config_type = 5 [json_name = "configType"];</code>
+   * @return The enum numeric value on the wire for configType.
+   */
+  @java.lang.Override public int getConfigTypeValue() {
+    return configType_;
+  }
+  /**
+   * <pre>
+   * the config type of this definitioin
+   * </pre>
+   *
+   * <code>.services.billing.entities.v1alpha1.RateDefinitionConfigType config_type = 5 [json_name = "configType"];</code>
+   * @return The configType.
+   */
+  @java.lang.Override public com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionConfigType getConfigType() {
+    com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionConfigType result = com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionConfigType.forNumber(configType_);
+    return result == null ? com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionConfigType.UNRECOGNIZED : result;
+  }
+
+  public static final int MATCHING_RULE_FIELD_NUMBER = 6;
+  private int matchingRule_ = 0;
+  /**
+   * <pre>
+   * the matching rule for this definition
+   * </pre>
+   *
+   * <code>.services.billing.entities.v1alpha1.MatchingRule matching_rule = 6 [json_name = "matchingRule"];</code>
+   * @return The enum numeric value on the wire for matchingRule.
+   */
+  @java.lang.Override public int getMatchingRuleValue() {
+    return matchingRule_;
+  }
+  /**
+   * <pre>
+   * the matching rule for this definition
+   * </pre>
+   *
+   * <code>.services.billing.entities.v1alpha1.MatchingRule matching_rule = 6 [json_name = "matchingRule"];</code>
+   * @return The matchingRule.
+   */
+  @java.lang.Override public com.tcn.cloud.api.services.billing.entities.v1alpha1.MatchingRule getMatchingRule() {
+    com.tcn.cloud.api.services.billing.entities.v1alpha1.MatchingRule result = com.tcn.cloud.api.services.billing.entities.v1alpha1.MatchingRule.forNumber(matchingRule_);
+    return result == null ? com.tcn.cloud.api.services.billing.entities.v1alpha1.MatchingRule.UNRECOGNIZED : result;
+  }
+
+  public static final int MATCHING_CONFIG_FIELD_NUMBER = 7;
+  private com.tcn.cloud.api.services.billing.entities.v1alpha1.MatchingConfig matchingConfig_;
+  /**
+   * <pre>
+   * the matching config for this definition
+   * </pre>
+   *
+   * <code>.services.billing.entities.v1alpha1.MatchingConfig matching_config = 7 [json_name = "matchingConfig"];</code>
+   * @return Whether the matchingConfig field is set.
+   */
+  @java.lang.Override
+  public boolean hasMatchingConfig() {
+    return matchingConfig_ != null;
+  }
+  /**
+   * <pre>
+   * the matching config for this definition
+   * </pre>
+   *
+   * <code>.services.billing.entities.v1alpha1.MatchingConfig matching_config = 7 [json_name = "matchingConfig"];</code>
+   * @return The matchingConfig.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha1.MatchingConfig getMatchingConfig() {
+    return matchingConfig_ == null ? com.tcn.cloud.api.services.billing.entities.v1alpha1.MatchingConfig.getDefaultInstance() : matchingConfig_;
+  }
+  /**
+   * <pre>
+   * the matching config for this definition
+   * </pre>
+   *
+   * <code>.services.billing.entities.v1alpha1.MatchingConfig matching_config = 7 [json_name = "matchingConfig"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha1.MatchingConfigOrBuilder getMatchingConfigOrBuilder() {
+    return matchingConfig_ == null ? com.tcn.cloud.api.services.billing.entities.v1alpha1.MatchingConfig.getDefaultInstance() : matchingConfig_;
+  }
+
+  public static final int CONFIG_FIELD_NUMBER = 8;
   private com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionConfig config_;
   /**
    * <pre>
    * the configuration for this definition
    * </pre>
    *
-   * <code>.services.billing.entities.v1alpha1.RateDefinitionConfig config = 3 [json_name = "config"];</code>
+   * <code>.services.billing.entities.v1alpha1.RateDefinitionConfig config = 8 [json_name = "config"];</code>
    * @return Whether the config field is set.
    */
   @java.lang.Override
@@ -161,7 +332,7 @@ private static final long serialVersionUID = 0L;
    * the configuration for this definition
    * </pre>
    *
-   * <code>.services.billing.entities.v1alpha1.RateDefinitionConfig config = 3 [json_name = "config"];</code>
+   * <code>.services.billing.entities.v1alpha1.RateDefinitionConfig config = 8 [json_name = "config"];</code>
    * @return The config.
    */
   @java.lang.Override
@@ -173,21 +344,21 @@ private static final long serialVersionUID = 0L;
    * the configuration for this definition
    * </pre>
    *
-   * <code>.services.billing.entities.v1alpha1.RateDefinitionConfig config = 3 [json_name = "config"];</code>
+   * <code>.services.billing.entities.v1alpha1.RateDefinitionConfig config = 8 [json_name = "config"];</code>
    */
   @java.lang.Override
   public com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionConfigOrBuilder getConfigOrBuilder() {
     return config_ == null ? com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionConfig.getDefaultInstance() : config_;
   }
 
-  public static final int CREATE_TIME_FIELD_NUMBER = 4;
+  public static final int CREATE_TIME_FIELD_NUMBER = 9;
   private com.google.protobuf.Timestamp createTime_;
   /**
    * <pre>
    * the time the rate definition was created
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime"];</code>
+   * <code>.google.protobuf.Timestamp create_time = 9 [json_name = "createTime"];</code>
    * @return Whether the createTime field is set.
    */
   @java.lang.Override
@@ -199,7 +370,7 @@ private static final long serialVersionUID = 0L;
    * the time the rate definition was created
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime"];</code>
+   * <code>.google.protobuf.Timestamp create_time = 9 [json_name = "createTime"];</code>
    * @return The createTime.
    */
   @java.lang.Override
@@ -211,21 +382,21 @@ private static final long serialVersionUID = 0L;
    * the time the rate definition was created
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime"];</code>
+   * <code>.google.protobuf.Timestamp create_time = 9 [json_name = "createTime"];</code>
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder() {
     return createTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createTime_;
   }
 
-  public static final int UPDATE_TIME_FIELD_NUMBER = 5;
+  public static final int UPDATE_TIME_FIELD_NUMBER = 10;
   private com.google.protobuf.Timestamp updateTime_;
   /**
    * <pre>
    * the time the rate definition was last updated
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
+   * <code>.google.protobuf.Timestamp update_time = 10 [json_name = "updateTime"];</code>
    * @return Whether the updateTime field is set.
    */
   @java.lang.Override
@@ -237,7 +408,7 @@ private static final long serialVersionUID = 0L;
    * the time the rate definition was last updated
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
+   * <code>.google.protobuf.Timestamp update_time = 10 [json_name = "updateTime"];</code>
    * @return The updateTime.
    */
   @java.lang.Override
@@ -249,21 +420,21 @@ private static final long serialVersionUID = 0L;
    * the time the rate definition was last updated
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
+   * <code>.google.protobuf.Timestamp update_time = 10 [json_name = "updateTime"];</code>
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder() {
     return updateTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updateTime_;
   }
 
-  public static final int DELETE_TIME_FIELD_NUMBER = 6;
+  public static final int DELETE_TIME_FIELD_NUMBER = 11;
   private com.google.protobuf.Timestamp deleteTime_;
   /**
    * <pre>
    * the time this rate definition was deleted (if applicable)
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp delete_time = 6 [json_name = "deleteTime"];</code>
+   * <code>.google.protobuf.Timestamp delete_time = 11 [json_name = "deleteTime"];</code>
    * @return Whether the deleteTime field is set.
    */
   @java.lang.Override
@@ -275,7 +446,7 @@ private static final long serialVersionUID = 0L;
    * the time this rate definition was deleted (if applicable)
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp delete_time = 6 [json_name = "deleteTime"];</code>
+   * <code>.google.protobuf.Timestamp delete_time = 11 [json_name = "deleteTime"];</code>
    * @return The deleteTime.
    */
   @java.lang.Override
@@ -287,7 +458,7 @@ private static final long serialVersionUID = 0L;
    * the time this rate definition was deleted (if applicable)
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp delete_time = 6 [json_name = "deleteTime"];</code>
+   * <code>.google.protobuf.Timestamp delete_time = 11 [json_name = "deleteTime"];</code>
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getDeleteTimeOrBuilder() {
@@ -311,20 +482,35 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rateDefinitionId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, rateDefinitionId_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rateDefinitionFeatureId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, rateDefinitionFeatureId_);
+    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rateDefinitionGroupId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, rateDefinitionGroupId_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, rateDefinitionGroupId_);
+    }
+    if (eventType_ != com.tcn.cloud.api.api.commons.audit.EventType.DUMMY_APPLICATION.getNumber()) {
+      output.writeEnum(4, eventType_);
+    }
+    if (configType_ != com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionConfigType.RATE_DEFINITION_CONFIG_TYPE_UNSPECIFIED.getNumber()) {
+      output.writeEnum(5, configType_);
+    }
+    if (matchingRule_ != com.tcn.cloud.api.services.billing.entities.v1alpha1.MatchingRule.MATCHING_RULE_UNSPECIFIED.getNumber()) {
+      output.writeEnum(6, matchingRule_);
+    }
+    if (matchingConfig_ != null) {
+      output.writeMessage(7, getMatchingConfig());
     }
     if (config_ != null) {
-      output.writeMessage(3, getConfig());
+      output.writeMessage(8, getConfig());
     }
     if (createTime_ != null) {
-      output.writeMessage(4, getCreateTime());
+      output.writeMessage(9, getCreateTime());
     }
     if (updateTime_ != null) {
-      output.writeMessage(5, getUpdateTime());
+      output.writeMessage(10, getUpdateTime());
     }
     if (deleteTime_ != null) {
-      output.writeMessage(6, getDeleteTime());
+      output.writeMessage(11, getDeleteTime());
     }
     getUnknownFields().writeTo(output);
   }
@@ -338,24 +524,43 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rateDefinitionId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, rateDefinitionId_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rateDefinitionFeatureId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, rateDefinitionFeatureId_);
+    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rateDefinitionGroupId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, rateDefinitionGroupId_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, rateDefinitionGroupId_);
+    }
+    if (eventType_ != com.tcn.cloud.api.api.commons.audit.EventType.DUMMY_APPLICATION.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(4, eventType_);
+    }
+    if (configType_ != com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionConfigType.RATE_DEFINITION_CONFIG_TYPE_UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(5, configType_);
+    }
+    if (matchingRule_ != com.tcn.cloud.api.services.billing.entities.v1alpha1.MatchingRule.MATCHING_RULE_UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(6, matchingRule_);
+    }
+    if (matchingConfig_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(7, getMatchingConfig());
     }
     if (config_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(3, getConfig());
+        .computeMessageSize(8, getConfig());
     }
     if (createTime_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(4, getCreateTime());
+        .computeMessageSize(9, getCreateTime());
     }
     if (updateTime_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(5, getUpdateTime());
+        .computeMessageSize(10, getUpdateTime());
     }
     if (deleteTime_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(6, getDeleteTime());
+        .computeMessageSize(11, getDeleteTime());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -374,8 +579,18 @@ private static final long serialVersionUID = 0L;
 
     if (!getRateDefinitionId()
         .equals(other.getRateDefinitionId())) return false;
+    if (!getRateDefinitionFeatureId()
+        .equals(other.getRateDefinitionFeatureId())) return false;
     if (!getRateDefinitionGroupId()
         .equals(other.getRateDefinitionGroupId())) return false;
+    if (eventType_ != other.eventType_) return false;
+    if (configType_ != other.configType_) return false;
+    if (matchingRule_ != other.matchingRule_) return false;
+    if (hasMatchingConfig() != other.hasMatchingConfig()) return false;
+    if (hasMatchingConfig()) {
+      if (!getMatchingConfig()
+          .equals(other.getMatchingConfig())) return false;
+    }
     if (hasConfig() != other.hasConfig()) return false;
     if (hasConfig()) {
       if (!getConfig()
@@ -409,8 +624,20 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + RATE_DEFINITION_ID_FIELD_NUMBER;
     hash = (53 * hash) + getRateDefinitionId().hashCode();
+    hash = (37 * hash) + RATE_DEFINITION_FEATURE_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getRateDefinitionFeatureId().hashCode();
     hash = (37 * hash) + RATE_DEFINITION_GROUP_ID_FIELD_NUMBER;
     hash = (53 * hash) + getRateDefinitionGroupId().hashCode();
+    hash = (37 * hash) + EVENT_TYPE_FIELD_NUMBER;
+    hash = (53 * hash) + eventType_;
+    hash = (37 * hash) + CONFIG_TYPE_FIELD_NUMBER;
+    hash = (53 * hash) + configType_;
+    hash = (37 * hash) + MATCHING_RULE_FIELD_NUMBER;
+    hash = (53 * hash) + matchingRule_;
+    if (hasMatchingConfig()) {
+      hash = (37 * hash) + MATCHING_CONFIG_FIELD_NUMBER;
+      hash = (53 * hash) + getMatchingConfig().hashCode();
+    }
     if (hasConfig()) {
       hash = (37 * hash) + CONFIG_FIELD_NUMBER;
       hash = (53 * hash) + getConfig().hashCode();
@@ -563,7 +790,16 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       rateDefinitionId_ = "";
+      rateDefinitionFeatureId_ = "";
       rateDefinitionGroupId_ = "";
+      eventType_ = 0;
+      configType_ = 0;
+      matchingRule_ = 0;
+      matchingConfig_ = null;
+      if (matchingConfigBuilder_ != null) {
+        matchingConfigBuilder_.dispose();
+        matchingConfigBuilder_ = null;
+      }
       config_ = null;
       if (configBuilder_ != null) {
         configBuilder_.dispose();
@@ -621,24 +857,41 @@ private static final long serialVersionUID = 0L;
         result.rateDefinitionId_ = rateDefinitionId_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.rateDefinitionGroupId_ = rateDefinitionGroupId_;
+        result.rateDefinitionFeatureId_ = rateDefinitionFeatureId_;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.rateDefinitionGroupId_ = rateDefinitionGroupId_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.eventType_ = eventType_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.configType_ = configType_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.matchingRule_ = matchingRule_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.matchingConfig_ = matchingConfigBuilder_ == null
+            ? matchingConfig_
+            : matchingConfigBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
         result.config_ = configBuilder_ == null
             ? config_
             : configBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
+      if (((from_bitField0_ & 0x00000100) != 0)) {
         result.createTime_ = createTimeBuilder_ == null
             ? createTime_
             : createTimeBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
+      if (((from_bitField0_ & 0x00000200) != 0)) {
         result.updateTime_ = updateTimeBuilder_ == null
             ? updateTime_
             : updateTimeBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
+      if (((from_bitField0_ & 0x00000400) != 0)) {
         result.deleteTime_ = deleteTimeBuilder_ == null
             ? deleteTime_
             : deleteTimeBuilder_.build();
@@ -694,10 +947,27 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000001;
         onChanged();
       }
-      if (!other.getRateDefinitionGroupId().isEmpty()) {
-        rateDefinitionGroupId_ = other.rateDefinitionGroupId_;
+      if (!other.getRateDefinitionFeatureId().isEmpty()) {
+        rateDefinitionFeatureId_ = other.rateDefinitionFeatureId_;
         bitField0_ |= 0x00000002;
         onChanged();
+      }
+      if (!other.getRateDefinitionGroupId().isEmpty()) {
+        rateDefinitionGroupId_ = other.rateDefinitionGroupId_;
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
+      if (other.eventType_ != 0) {
+        setEventTypeValue(other.getEventTypeValue());
+      }
+      if (other.configType_ != 0) {
+        setConfigTypeValue(other.getConfigTypeValue());
+      }
+      if (other.matchingRule_ != 0) {
+        setMatchingRuleValue(other.getMatchingRuleValue());
+      }
+      if (other.hasMatchingConfig()) {
+        mergeMatchingConfig(other.getMatchingConfig());
       }
       if (other.hasConfig()) {
         mergeConfig(other.getConfig());
@@ -743,38 +1013,65 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 10
             case 18: {
-              rateDefinitionGroupId_ = input.readStringRequireUtf8();
+              rateDefinitionFeatureId_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000002;
               break;
             } // case 18
             case 26: {
-              input.readMessage(
-                  getConfigFieldBuilder().getBuilder(),
-                  extensionRegistry);
+              rateDefinitionGroupId_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000004;
               break;
             } // case 26
-            case 34: {
+            case 32: {
+              eventType_ = input.readEnum();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
+            case 40: {
+              configType_ = input.readEnum();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 40
+            case 48: {
+              matchingRule_ = input.readEnum();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 48
+            case 58: {
+              input.readMessage(
+                  getMatchingConfigFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 58
+            case 66: {
+              input.readMessage(
+                  getConfigFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 66
+            case 74: {
               input.readMessage(
                   getCreateTimeFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000008;
+              bitField0_ |= 0x00000100;
               break;
-            } // case 34
-            case 42: {
+            } // case 74
+            case 82: {
               input.readMessage(
                   getUpdateTimeFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000010;
+              bitField0_ |= 0x00000200;
               break;
-            } // case 42
-            case 50: {
+            } // case 82
+            case 90: {
               input.readMessage(
                   getDeleteTimeFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000020;
+              bitField0_ |= 0x00000400;
               break;
-            } // case 50
+            } // case 90
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -884,15 +1181,117 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object rateDefinitionGroupId_ = "";
+    private java.lang.Object rateDefinitionFeatureId_ = "";
     /**
      * <pre>
-     * the rate definition group this rate definition is a part of;
+     * the feature this rate definition is a part of (i.e. event_type + config_type);
      * should always be set unless adding a rate definition to the
      * default billing plan.
      * </pre>
      *
-     * <code>string rate_definition_group_id = 2 [json_name = "rateDefinitionGroupId"];</code>
+     * <code>string rate_definition_feature_id = 2 [json_name = "rateDefinitionFeatureId"];</code>
+     * @return The rateDefinitionFeatureId.
+     */
+    public java.lang.String getRateDefinitionFeatureId() {
+      java.lang.Object ref = rateDefinitionFeatureId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        rateDefinitionFeatureId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * the feature this rate definition is a part of (i.e. event_type + config_type);
+     * should always be set unless adding a rate definition to the
+     * default billing plan.
+     * </pre>
+     *
+     * <code>string rate_definition_feature_id = 2 [json_name = "rateDefinitionFeatureId"];</code>
+     * @return The bytes for rateDefinitionFeatureId.
+     */
+    public com.google.protobuf.ByteString
+        getRateDefinitionFeatureIdBytes() {
+      java.lang.Object ref = rateDefinitionFeatureId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        rateDefinitionFeatureId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * the feature this rate definition is a part of (i.e. event_type + config_type);
+     * should always be set unless adding a rate definition to the
+     * default billing plan.
+     * </pre>
+     *
+     * <code>string rate_definition_feature_id = 2 [json_name = "rateDefinitionFeatureId"];</code>
+     * @param value The rateDefinitionFeatureId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setRateDefinitionFeatureId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      rateDefinitionFeatureId_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the feature this rate definition is a part of (i.e. event_type + config_type);
+     * should always be set unless adding a rate definition to the
+     * default billing plan.
+     * </pre>
+     *
+     * <code>string rate_definition_feature_id = 2 [json_name = "rateDefinitionFeatureId"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearRateDefinitionFeatureId() {
+      rateDefinitionFeatureId_ = getDefaultInstance().getRateDefinitionFeatureId();
+      bitField0_ = (bitField0_ & ~0x00000002);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the feature this rate definition is a part of (i.e. event_type + config_type);
+     * should always be set unless adding a rate definition to the
+     * default billing plan.
+     * </pre>
+     *
+     * <code>string rate_definition_feature_id = 2 [json_name = "rateDefinitionFeatureId"];</code>
+     * @param value The bytes for rateDefinitionFeatureId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setRateDefinitionFeatureIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      rateDefinitionFeatureId_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object rateDefinitionGroupId_ = "";
+    /**
+     * <pre>
+     * the group this rate definition is a part of (i.e. matching_rule + matching_config);
+     * should always be set unless adding a rate definition to the
+     * default billing plan.
+     * </pre>
+     *
+     * <code>string rate_definition_group_id = 3 [json_name = "rateDefinitionGroupId"];</code>
      * @return The rateDefinitionGroupId.
      */
     public java.lang.String getRateDefinitionGroupId() {
@@ -909,12 +1308,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the rate definition group this rate definition is a part of;
+     * the group this rate definition is a part of (i.e. matching_rule + matching_config);
      * should always be set unless adding a rate definition to the
      * default billing plan.
      * </pre>
      *
-     * <code>string rate_definition_group_id = 2 [json_name = "rateDefinitionGroupId"];</code>
+     * <code>string rate_definition_group_id = 3 [json_name = "rateDefinitionGroupId"];</code>
      * @return The bytes for rateDefinitionGroupId.
      */
     public com.google.protobuf.ByteString
@@ -932,12 +1331,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the rate definition group this rate definition is a part of;
+     * the group this rate definition is a part of (i.e. matching_rule + matching_config);
      * should always be set unless adding a rate definition to the
      * default billing plan.
      * </pre>
      *
-     * <code>string rate_definition_group_id = 2 [json_name = "rateDefinitionGroupId"];</code>
+     * <code>string rate_definition_group_id = 3 [json_name = "rateDefinitionGroupId"];</code>
      * @param value The rateDefinitionGroupId to set.
      * @return This builder for chaining.
      */
@@ -945,34 +1344,34 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       rateDefinitionGroupId_ = value;
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * the rate definition group this rate definition is a part of;
+     * the group this rate definition is a part of (i.e. matching_rule + matching_config);
      * should always be set unless adding a rate definition to the
      * default billing plan.
      * </pre>
      *
-     * <code>string rate_definition_group_id = 2 [json_name = "rateDefinitionGroupId"];</code>
+     * <code>string rate_definition_group_id = 3 [json_name = "rateDefinitionGroupId"];</code>
      * @return This builder for chaining.
      */
     public Builder clearRateDefinitionGroupId() {
       rateDefinitionGroupId_ = getDefaultInstance().getRateDefinitionGroupId();
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * the rate definition group this rate definition is a part of;
+     * the group this rate definition is a part of (i.e. matching_rule + matching_config);
      * should always be set unless adding a rate definition to the
      * default billing plan.
      * </pre>
      *
-     * <code>string rate_definition_group_id = 2 [json_name = "rateDefinitionGroupId"];</code>
+     * <code>string rate_definition_group_id = 3 [json_name = "rateDefinitionGroupId"];</code>
      * @param value The bytes for rateDefinitionGroupId to set.
      * @return This builder for chaining.
      */
@@ -981,9 +1380,383 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       rateDefinitionGroupId_ = value;
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
+    }
+
+    private int eventType_ = 0;
+    /**
+     * <pre>
+     * the event type this definition rates
+     * </pre>
+     *
+     * <code>.api.commons.audit.EventType event_type = 4 [json_name = "eventType"];</code>
+     * @return The enum numeric value on the wire for eventType.
+     */
+    @java.lang.Override public int getEventTypeValue() {
+      return eventType_;
+    }
+    /**
+     * <pre>
+     * the event type this definition rates
+     * </pre>
+     *
+     * <code>.api.commons.audit.EventType event_type = 4 [json_name = "eventType"];</code>
+     * @param value The enum numeric value on the wire for eventType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setEventTypeValue(int value) {
+      eventType_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the event type this definition rates
+     * </pre>
+     *
+     * <code>.api.commons.audit.EventType event_type = 4 [json_name = "eventType"];</code>
+     * @return The eventType.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.EventType getEventType() {
+      com.tcn.cloud.api.api.commons.audit.EventType result = com.tcn.cloud.api.api.commons.audit.EventType.forNumber(eventType_);
+      return result == null ? com.tcn.cloud.api.api.commons.audit.EventType.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * the event type this definition rates
+     * </pre>
+     *
+     * <code>.api.commons.audit.EventType event_type = 4 [json_name = "eventType"];</code>
+     * @param value The eventType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setEventType(com.tcn.cloud.api.api.commons.audit.EventType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000008;
+      eventType_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the event type this definition rates
+     * </pre>
+     *
+     * <code>.api.commons.audit.EventType event_type = 4 [json_name = "eventType"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearEventType() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      eventType_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int configType_ = 0;
+    /**
+     * <pre>
+     * the config type of this definitioin
+     * </pre>
+     *
+     * <code>.services.billing.entities.v1alpha1.RateDefinitionConfigType config_type = 5 [json_name = "configType"];</code>
+     * @return The enum numeric value on the wire for configType.
+     */
+    @java.lang.Override public int getConfigTypeValue() {
+      return configType_;
+    }
+    /**
+     * <pre>
+     * the config type of this definitioin
+     * </pre>
+     *
+     * <code>.services.billing.entities.v1alpha1.RateDefinitionConfigType config_type = 5 [json_name = "configType"];</code>
+     * @param value The enum numeric value on the wire for configType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setConfigTypeValue(int value) {
+      configType_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the config type of this definitioin
+     * </pre>
+     *
+     * <code>.services.billing.entities.v1alpha1.RateDefinitionConfigType config_type = 5 [json_name = "configType"];</code>
+     * @return The configType.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionConfigType getConfigType() {
+      com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionConfigType result = com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionConfigType.forNumber(configType_);
+      return result == null ? com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionConfigType.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * the config type of this definitioin
+     * </pre>
+     *
+     * <code>.services.billing.entities.v1alpha1.RateDefinitionConfigType config_type = 5 [json_name = "configType"];</code>
+     * @param value The configType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setConfigType(com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionConfigType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000010;
+      configType_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the config type of this definitioin
+     * </pre>
+     *
+     * <code>.services.billing.entities.v1alpha1.RateDefinitionConfigType config_type = 5 [json_name = "configType"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearConfigType() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      configType_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int matchingRule_ = 0;
+    /**
+     * <pre>
+     * the matching rule for this definition
+     * </pre>
+     *
+     * <code>.services.billing.entities.v1alpha1.MatchingRule matching_rule = 6 [json_name = "matchingRule"];</code>
+     * @return The enum numeric value on the wire for matchingRule.
+     */
+    @java.lang.Override public int getMatchingRuleValue() {
+      return matchingRule_;
+    }
+    /**
+     * <pre>
+     * the matching rule for this definition
+     * </pre>
+     *
+     * <code>.services.billing.entities.v1alpha1.MatchingRule matching_rule = 6 [json_name = "matchingRule"];</code>
+     * @param value The enum numeric value on the wire for matchingRule to set.
+     * @return This builder for chaining.
+     */
+    public Builder setMatchingRuleValue(int value) {
+      matchingRule_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the matching rule for this definition
+     * </pre>
+     *
+     * <code>.services.billing.entities.v1alpha1.MatchingRule matching_rule = 6 [json_name = "matchingRule"];</code>
+     * @return The matchingRule.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.services.billing.entities.v1alpha1.MatchingRule getMatchingRule() {
+      com.tcn.cloud.api.services.billing.entities.v1alpha1.MatchingRule result = com.tcn.cloud.api.services.billing.entities.v1alpha1.MatchingRule.forNumber(matchingRule_);
+      return result == null ? com.tcn.cloud.api.services.billing.entities.v1alpha1.MatchingRule.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * the matching rule for this definition
+     * </pre>
+     *
+     * <code>.services.billing.entities.v1alpha1.MatchingRule matching_rule = 6 [json_name = "matchingRule"];</code>
+     * @param value The matchingRule to set.
+     * @return This builder for chaining.
+     */
+    public Builder setMatchingRule(com.tcn.cloud.api.services.billing.entities.v1alpha1.MatchingRule value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000020;
+      matchingRule_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the matching rule for this definition
+     * </pre>
+     *
+     * <code>.services.billing.entities.v1alpha1.MatchingRule matching_rule = 6 [json_name = "matchingRule"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearMatchingRule() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      matchingRule_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private com.tcn.cloud.api.services.billing.entities.v1alpha1.MatchingConfig matchingConfig_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha1.MatchingConfig, com.tcn.cloud.api.services.billing.entities.v1alpha1.MatchingConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha1.MatchingConfigOrBuilder> matchingConfigBuilder_;
+    /**
+     * <pre>
+     * the matching config for this definition
+     * </pre>
+     *
+     * <code>.services.billing.entities.v1alpha1.MatchingConfig matching_config = 7 [json_name = "matchingConfig"];</code>
+     * @return Whether the matchingConfig field is set.
+     */
+    public boolean hasMatchingConfig() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <pre>
+     * the matching config for this definition
+     * </pre>
+     *
+     * <code>.services.billing.entities.v1alpha1.MatchingConfig matching_config = 7 [json_name = "matchingConfig"];</code>
+     * @return The matchingConfig.
+     */
+    public com.tcn.cloud.api.services.billing.entities.v1alpha1.MatchingConfig getMatchingConfig() {
+      if (matchingConfigBuilder_ == null) {
+        return matchingConfig_ == null ? com.tcn.cloud.api.services.billing.entities.v1alpha1.MatchingConfig.getDefaultInstance() : matchingConfig_;
+      } else {
+        return matchingConfigBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * the matching config for this definition
+     * </pre>
+     *
+     * <code>.services.billing.entities.v1alpha1.MatchingConfig matching_config = 7 [json_name = "matchingConfig"];</code>
+     */
+    public Builder setMatchingConfig(com.tcn.cloud.api.services.billing.entities.v1alpha1.MatchingConfig value) {
+      if (matchingConfigBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        matchingConfig_ = value;
+      } else {
+        matchingConfigBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the matching config for this definition
+     * </pre>
+     *
+     * <code>.services.billing.entities.v1alpha1.MatchingConfig matching_config = 7 [json_name = "matchingConfig"];</code>
+     */
+    public Builder setMatchingConfig(
+        com.tcn.cloud.api.services.billing.entities.v1alpha1.MatchingConfig.Builder builderForValue) {
+      if (matchingConfigBuilder_ == null) {
+        matchingConfig_ = builderForValue.build();
+      } else {
+        matchingConfigBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the matching config for this definition
+     * </pre>
+     *
+     * <code>.services.billing.entities.v1alpha1.MatchingConfig matching_config = 7 [json_name = "matchingConfig"];</code>
+     */
+    public Builder mergeMatchingConfig(com.tcn.cloud.api.services.billing.entities.v1alpha1.MatchingConfig value) {
+      if (matchingConfigBuilder_ == null) {
+        if (((bitField0_ & 0x00000040) != 0) &&
+          matchingConfig_ != null &&
+          matchingConfig_ != com.tcn.cloud.api.services.billing.entities.v1alpha1.MatchingConfig.getDefaultInstance()) {
+          getMatchingConfigBuilder().mergeFrom(value);
+        } else {
+          matchingConfig_ = value;
+        }
+      } else {
+        matchingConfigBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the matching config for this definition
+     * </pre>
+     *
+     * <code>.services.billing.entities.v1alpha1.MatchingConfig matching_config = 7 [json_name = "matchingConfig"];</code>
+     */
+    public Builder clearMatchingConfig() {
+      bitField0_ = (bitField0_ & ~0x00000040);
+      matchingConfig_ = null;
+      if (matchingConfigBuilder_ != null) {
+        matchingConfigBuilder_.dispose();
+        matchingConfigBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the matching config for this definition
+     * </pre>
+     *
+     * <code>.services.billing.entities.v1alpha1.MatchingConfig matching_config = 7 [json_name = "matchingConfig"];</code>
+     */
+    public com.tcn.cloud.api.services.billing.entities.v1alpha1.MatchingConfig.Builder getMatchingConfigBuilder() {
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return getMatchingConfigFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * the matching config for this definition
+     * </pre>
+     *
+     * <code>.services.billing.entities.v1alpha1.MatchingConfig matching_config = 7 [json_name = "matchingConfig"];</code>
+     */
+    public com.tcn.cloud.api.services.billing.entities.v1alpha1.MatchingConfigOrBuilder getMatchingConfigOrBuilder() {
+      if (matchingConfigBuilder_ != null) {
+        return matchingConfigBuilder_.getMessageOrBuilder();
+      } else {
+        return matchingConfig_ == null ?
+            com.tcn.cloud.api.services.billing.entities.v1alpha1.MatchingConfig.getDefaultInstance() : matchingConfig_;
+      }
+    }
+    /**
+     * <pre>
+     * the matching config for this definition
+     * </pre>
+     *
+     * <code>.services.billing.entities.v1alpha1.MatchingConfig matching_config = 7 [json_name = "matchingConfig"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha1.MatchingConfig, com.tcn.cloud.api.services.billing.entities.v1alpha1.MatchingConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha1.MatchingConfigOrBuilder> 
+        getMatchingConfigFieldBuilder() {
+      if (matchingConfigBuilder_ == null) {
+        matchingConfigBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.services.billing.entities.v1alpha1.MatchingConfig, com.tcn.cloud.api.services.billing.entities.v1alpha1.MatchingConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha1.MatchingConfigOrBuilder>(
+                getMatchingConfig(),
+                getParentForChildren(),
+                isClean());
+        matchingConfig_ = null;
+      }
+      return matchingConfigBuilder_;
     }
 
     private com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionConfig config_;
@@ -994,18 +1767,18 @@ private static final long serialVersionUID = 0L;
      * the configuration for this definition
      * </pre>
      *
-     * <code>.services.billing.entities.v1alpha1.RateDefinitionConfig config = 3 [json_name = "config"];</code>
+     * <code>.services.billing.entities.v1alpha1.RateDefinitionConfig config = 8 [json_name = "config"];</code>
      * @return Whether the config field is set.
      */
     public boolean hasConfig() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return ((bitField0_ & 0x00000080) != 0);
     }
     /**
      * <pre>
      * the configuration for this definition
      * </pre>
      *
-     * <code>.services.billing.entities.v1alpha1.RateDefinitionConfig config = 3 [json_name = "config"];</code>
+     * <code>.services.billing.entities.v1alpha1.RateDefinitionConfig config = 8 [json_name = "config"];</code>
      * @return The config.
      */
     public com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionConfig getConfig() {
@@ -1020,7 +1793,7 @@ private static final long serialVersionUID = 0L;
      * the configuration for this definition
      * </pre>
      *
-     * <code>.services.billing.entities.v1alpha1.RateDefinitionConfig config = 3 [json_name = "config"];</code>
+     * <code>.services.billing.entities.v1alpha1.RateDefinitionConfig config = 8 [json_name = "config"];</code>
      */
     public Builder setConfig(com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionConfig value) {
       if (configBuilder_ == null) {
@@ -1031,7 +1804,7 @@ private static final long serialVersionUID = 0L;
       } else {
         configBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1040,7 +1813,7 @@ private static final long serialVersionUID = 0L;
      * the configuration for this definition
      * </pre>
      *
-     * <code>.services.billing.entities.v1alpha1.RateDefinitionConfig config = 3 [json_name = "config"];</code>
+     * <code>.services.billing.entities.v1alpha1.RateDefinitionConfig config = 8 [json_name = "config"];</code>
      */
     public Builder setConfig(
         com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionConfig.Builder builderForValue) {
@@ -1049,7 +1822,7 @@ private static final long serialVersionUID = 0L;
       } else {
         configBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1058,11 +1831,11 @@ private static final long serialVersionUID = 0L;
      * the configuration for this definition
      * </pre>
      *
-     * <code>.services.billing.entities.v1alpha1.RateDefinitionConfig config = 3 [json_name = "config"];</code>
+     * <code>.services.billing.entities.v1alpha1.RateDefinitionConfig config = 8 [json_name = "config"];</code>
      */
     public Builder mergeConfig(com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionConfig value) {
       if (configBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0) &&
+        if (((bitField0_ & 0x00000080) != 0) &&
           config_ != null &&
           config_ != com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionConfig.getDefaultInstance()) {
           getConfigBuilder().mergeFrom(value);
@@ -1072,7 +1845,7 @@ private static final long serialVersionUID = 0L;
       } else {
         configBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1081,10 +1854,10 @@ private static final long serialVersionUID = 0L;
      * the configuration for this definition
      * </pre>
      *
-     * <code>.services.billing.entities.v1alpha1.RateDefinitionConfig config = 3 [json_name = "config"];</code>
+     * <code>.services.billing.entities.v1alpha1.RateDefinitionConfig config = 8 [json_name = "config"];</code>
      */
     public Builder clearConfig() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000080);
       config_ = null;
       if (configBuilder_ != null) {
         configBuilder_.dispose();
@@ -1098,10 +1871,10 @@ private static final long serialVersionUID = 0L;
      * the configuration for this definition
      * </pre>
      *
-     * <code>.services.billing.entities.v1alpha1.RateDefinitionConfig config = 3 [json_name = "config"];</code>
+     * <code>.services.billing.entities.v1alpha1.RateDefinitionConfig config = 8 [json_name = "config"];</code>
      */
     public com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionConfig.Builder getConfigBuilder() {
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000080;
       onChanged();
       return getConfigFieldBuilder().getBuilder();
     }
@@ -1110,7 +1883,7 @@ private static final long serialVersionUID = 0L;
      * the configuration for this definition
      * </pre>
      *
-     * <code>.services.billing.entities.v1alpha1.RateDefinitionConfig config = 3 [json_name = "config"];</code>
+     * <code>.services.billing.entities.v1alpha1.RateDefinitionConfig config = 8 [json_name = "config"];</code>
      */
     public com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionConfigOrBuilder getConfigOrBuilder() {
       if (configBuilder_ != null) {
@@ -1125,7 +1898,7 @@ private static final long serialVersionUID = 0L;
      * the configuration for this definition
      * </pre>
      *
-     * <code>.services.billing.entities.v1alpha1.RateDefinitionConfig config = 3 [json_name = "config"];</code>
+     * <code>.services.billing.entities.v1alpha1.RateDefinitionConfig config = 8 [json_name = "config"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionConfig, com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionConfigOrBuilder> 
@@ -1149,18 +1922,18 @@ private static final long serialVersionUID = 0L;
      * the time the rate definition was created
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime"];</code>
+     * <code>.google.protobuf.Timestamp create_time = 9 [json_name = "createTime"];</code>
      * @return Whether the createTime field is set.
      */
     public boolean hasCreateTime() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return ((bitField0_ & 0x00000100) != 0);
     }
     /**
      * <pre>
      * the time the rate definition was created
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime"];</code>
+     * <code>.google.protobuf.Timestamp create_time = 9 [json_name = "createTime"];</code>
      * @return The createTime.
      */
     public com.google.protobuf.Timestamp getCreateTime() {
@@ -1175,7 +1948,7 @@ private static final long serialVersionUID = 0L;
      * the time the rate definition was created
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime"];</code>
+     * <code>.google.protobuf.Timestamp create_time = 9 [json_name = "createTime"];</code>
      */
     public Builder setCreateTime(com.google.protobuf.Timestamp value) {
       if (createTimeBuilder_ == null) {
@@ -1186,7 +1959,7 @@ private static final long serialVersionUID = 0L;
       } else {
         createTimeBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -1195,7 +1968,7 @@ private static final long serialVersionUID = 0L;
      * the time the rate definition was created
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime"];</code>
+     * <code>.google.protobuf.Timestamp create_time = 9 [json_name = "createTime"];</code>
      */
     public Builder setCreateTime(
         com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -1204,7 +1977,7 @@ private static final long serialVersionUID = 0L;
       } else {
         createTimeBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -1213,11 +1986,11 @@ private static final long serialVersionUID = 0L;
      * the time the rate definition was created
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime"];</code>
+     * <code>.google.protobuf.Timestamp create_time = 9 [json_name = "createTime"];</code>
      */
     public Builder mergeCreateTime(com.google.protobuf.Timestamp value) {
       if (createTimeBuilder_ == null) {
-        if (((bitField0_ & 0x00000008) != 0) &&
+        if (((bitField0_ & 0x00000100) != 0) &&
           createTime_ != null &&
           createTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
           getCreateTimeBuilder().mergeFrom(value);
@@ -1227,7 +2000,7 @@ private static final long serialVersionUID = 0L;
       } else {
         createTimeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -1236,10 +2009,10 @@ private static final long serialVersionUID = 0L;
      * the time the rate definition was created
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime"];</code>
+     * <code>.google.protobuf.Timestamp create_time = 9 [json_name = "createTime"];</code>
      */
     public Builder clearCreateTime() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000100);
       createTime_ = null;
       if (createTimeBuilder_ != null) {
         createTimeBuilder_.dispose();
@@ -1253,10 +2026,10 @@ private static final long serialVersionUID = 0L;
      * the time the rate definition was created
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime"];</code>
+     * <code>.google.protobuf.Timestamp create_time = 9 [json_name = "createTime"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getCreateTimeBuilder() {
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000100;
       onChanged();
       return getCreateTimeFieldBuilder().getBuilder();
     }
@@ -1265,7 +2038,7 @@ private static final long serialVersionUID = 0L;
      * the time the rate definition was created
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime"];</code>
+     * <code>.google.protobuf.Timestamp create_time = 9 [json_name = "createTime"];</code>
      */
     public com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder() {
       if (createTimeBuilder_ != null) {
@@ -1280,7 +2053,7 @@ private static final long serialVersionUID = 0L;
      * the time the rate definition was created
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime"];</code>
+     * <code>.google.protobuf.Timestamp create_time = 9 [json_name = "createTime"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -1304,18 +2077,18 @@ private static final long serialVersionUID = 0L;
      * the time the rate definition was last updated
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
+     * <code>.google.protobuf.Timestamp update_time = 10 [json_name = "updateTime"];</code>
      * @return Whether the updateTime field is set.
      */
     public boolean hasUpdateTime() {
-      return ((bitField0_ & 0x00000010) != 0);
+      return ((bitField0_ & 0x00000200) != 0);
     }
     /**
      * <pre>
      * the time the rate definition was last updated
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
+     * <code>.google.protobuf.Timestamp update_time = 10 [json_name = "updateTime"];</code>
      * @return The updateTime.
      */
     public com.google.protobuf.Timestamp getUpdateTime() {
@@ -1330,7 +2103,7 @@ private static final long serialVersionUID = 0L;
      * the time the rate definition was last updated
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
+     * <code>.google.protobuf.Timestamp update_time = 10 [json_name = "updateTime"];</code>
      */
     public Builder setUpdateTime(com.google.protobuf.Timestamp value) {
       if (updateTimeBuilder_ == null) {
@@ -1341,7 +2114,7 @@ private static final long serialVersionUID = 0L;
       } else {
         updateTimeBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -1350,7 +2123,7 @@ private static final long serialVersionUID = 0L;
      * the time the rate definition was last updated
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
+     * <code>.google.protobuf.Timestamp update_time = 10 [json_name = "updateTime"];</code>
      */
     public Builder setUpdateTime(
         com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -1359,7 +2132,7 @@ private static final long serialVersionUID = 0L;
       } else {
         updateTimeBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -1368,11 +2141,11 @@ private static final long serialVersionUID = 0L;
      * the time the rate definition was last updated
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
+     * <code>.google.protobuf.Timestamp update_time = 10 [json_name = "updateTime"];</code>
      */
     public Builder mergeUpdateTime(com.google.protobuf.Timestamp value) {
       if (updateTimeBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) != 0) &&
+        if (((bitField0_ & 0x00000200) != 0) &&
           updateTime_ != null &&
           updateTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
           getUpdateTimeBuilder().mergeFrom(value);
@@ -1382,7 +2155,7 @@ private static final long serialVersionUID = 0L;
       } else {
         updateTimeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -1391,10 +2164,10 @@ private static final long serialVersionUID = 0L;
      * the time the rate definition was last updated
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
+     * <code>.google.protobuf.Timestamp update_time = 10 [json_name = "updateTime"];</code>
      */
     public Builder clearUpdateTime() {
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000200);
       updateTime_ = null;
       if (updateTimeBuilder_ != null) {
         updateTimeBuilder_.dispose();
@@ -1408,10 +2181,10 @@ private static final long serialVersionUID = 0L;
      * the time the rate definition was last updated
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
+     * <code>.google.protobuf.Timestamp update_time = 10 [json_name = "updateTime"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getUpdateTimeBuilder() {
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000200;
       onChanged();
       return getUpdateTimeFieldBuilder().getBuilder();
     }
@@ -1420,7 +2193,7 @@ private static final long serialVersionUID = 0L;
      * the time the rate definition was last updated
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
+     * <code>.google.protobuf.Timestamp update_time = 10 [json_name = "updateTime"];</code>
      */
     public com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder() {
       if (updateTimeBuilder_ != null) {
@@ -1435,7 +2208,7 @@ private static final long serialVersionUID = 0L;
      * the time the rate definition was last updated
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
+     * <code>.google.protobuf.Timestamp update_time = 10 [json_name = "updateTime"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -1459,18 +2232,18 @@ private static final long serialVersionUID = 0L;
      * the time this rate definition was deleted (if applicable)
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp delete_time = 6 [json_name = "deleteTime"];</code>
+     * <code>.google.protobuf.Timestamp delete_time = 11 [json_name = "deleteTime"];</code>
      * @return Whether the deleteTime field is set.
      */
     public boolean hasDeleteTime() {
-      return ((bitField0_ & 0x00000020) != 0);
+      return ((bitField0_ & 0x00000400) != 0);
     }
     /**
      * <pre>
      * the time this rate definition was deleted (if applicable)
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp delete_time = 6 [json_name = "deleteTime"];</code>
+     * <code>.google.protobuf.Timestamp delete_time = 11 [json_name = "deleteTime"];</code>
      * @return The deleteTime.
      */
     public com.google.protobuf.Timestamp getDeleteTime() {
@@ -1485,7 +2258,7 @@ private static final long serialVersionUID = 0L;
      * the time this rate definition was deleted (if applicable)
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp delete_time = 6 [json_name = "deleteTime"];</code>
+     * <code>.google.protobuf.Timestamp delete_time = 11 [json_name = "deleteTime"];</code>
      */
     public Builder setDeleteTime(com.google.protobuf.Timestamp value) {
       if (deleteTimeBuilder_ == null) {
@@ -1496,7 +2269,7 @@ private static final long serialVersionUID = 0L;
       } else {
         deleteTimeBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -1505,7 +2278,7 @@ private static final long serialVersionUID = 0L;
      * the time this rate definition was deleted (if applicable)
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp delete_time = 6 [json_name = "deleteTime"];</code>
+     * <code>.google.protobuf.Timestamp delete_time = 11 [json_name = "deleteTime"];</code>
      */
     public Builder setDeleteTime(
         com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -1514,7 +2287,7 @@ private static final long serialVersionUID = 0L;
       } else {
         deleteTimeBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -1523,11 +2296,11 @@ private static final long serialVersionUID = 0L;
      * the time this rate definition was deleted (if applicable)
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp delete_time = 6 [json_name = "deleteTime"];</code>
+     * <code>.google.protobuf.Timestamp delete_time = 11 [json_name = "deleteTime"];</code>
      */
     public Builder mergeDeleteTime(com.google.protobuf.Timestamp value) {
       if (deleteTimeBuilder_ == null) {
-        if (((bitField0_ & 0x00000020) != 0) &&
+        if (((bitField0_ & 0x00000400) != 0) &&
           deleteTime_ != null &&
           deleteTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
           getDeleteTimeBuilder().mergeFrom(value);
@@ -1537,7 +2310,7 @@ private static final long serialVersionUID = 0L;
       } else {
         deleteTimeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -1546,10 +2319,10 @@ private static final long serialVersionUID = 0L;
      * the time this rate definition was deleted (if applicable)
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp delete_time = 6 [json_name = "deleteTime"];</code>
+     * <code>.google.protobuf.Timestamp delete_time = 11 [json_name = "deleteTime"];</code>
      */
     public Builder clearDeleteTime() {
-      bitField0_ = (bitField0_ & ~0x00000020);
+      bitField0_ = (bitField0_ & ~0x00000400);
       deleteTime_ = null;
       if (deleteTimeBuilder_ != null) {
         deleteTimeBuilder_.dispose();
@@ -1563,10 +2336,10 @@ private static final long serialVersionUID = 0L;
      * the time this rate definition was deleted (if applicable)
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp delete_time = 6 [json_name = "deleteTime"];</code>
+     * <code>.google.protobuf.Timestamp delete_time = 11 [json_name = "deleteTime"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getDeleteTimeBuilder() {
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000400;
       onChanged();
       return getDeleteTimeFieldBuilder().getBuilder();
     }
@@ -1575,7 +2348,7 @@ private static final long serialVersionUID = 0L;
      * the time this rate definition was deleted (if applicable)
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp delete_time = 6 [json_name = "deleteTime"];</code>
+     * <code>.google.protobuf.Timestamp delete_time = 11 [json_name = "deleteTime"];</code>
      */
     public com.google.protobuf.TimestampOrBuilder getDeleteTimeOrBuilder() {
       if (deleteTimeBuilder_ != null) {
@@ -1590,7 +2363,7 @@ private static final long serialVersionUID = 0L;
      * the time this rate definition was deleted (if applicable)
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp delete_time = 6 [json_name = "deleteTime"];</code>
+     * <code>.google.protobuf.Timestamp delete_time = 11 [json_name = "deleteTime"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 

@@ -210,7 +210,7 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Timestamp endTime_;
   /**
    * <pre>
-   * the time (if applicable) this billing plan ended; can be null
+   * the time this billing plan ended; can be null
    * </pre>
    *
    * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime"];</code>
@@ -222,7 +222,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * the time (if applicable) this billing plan ended; can be null
+   * the time this billing plan ended; can be null
    * </pre>
    *
    * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime"];</code>
@@ -234,7 +234,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * the time (if applicable) this billing plan ended; can be null
+   * the time this billing plan ended; can be null
    * </pre>
    *
    * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime"];</code>
@@ -244,7 +244,45 @@ private static final long serialVersionUID = 0L;
     return endTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
   }
 
-  public static final int RATE_DEFINITION_IDS_FIELD_NUMBER = 6;
+  public static final int DELETE_TIME_FIELD_NUMBER = 6;
+  private com.google.protobuf.Timestamp deleteTime_;
+  /**
+   * <pre>
+   * the time this billing plan was deleted; can be null
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp delete_time = 6 [json_name = "deleteTime"];</code>
+   * @return Whether the deleteTime field is set.
+   */
+  @java.lang.Override
+  public boolean hasDeleteTime() {
+    return deleteTime_ != null;
+  }
+  /**
+   * <pre>
+   * the time this billing plan was deleted; can be null
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp delete_time = 6 [json_name = "deleteTime"];</code>
+   * @return The deleteTime.
+   */
+  @java.lang.Override
+  public com.google.protobuf.Timestamp getDeleteTime() {
+    return deleteTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : deleteTime_;
+  }
+  /**
+   * <pre>
+   * the time this billing plan was deleted; can be null
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp delete_time = 6 [json_name = "deleteTime"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.TimestampOrBuilder getDeleteTimeOrBuilder() {
+    return deleteTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : deleteTime_;
+  }
+
+  public static final int RATE_DEFINITION_IDS_FIELD_NUMBER = 7;
   @SuppressWarnings("serial")
   private com.google.protobuf.LazyStringArrayList rateDefinitionIds_ =
       com.google.protobuf.LazyStringArrayList.emptyList();
@@ -253,7 +291,7 @@ private static final long serialVersionUID = 0L;
    * the billing plan rate definitions
    * </pre>
    *
-   * <code>repeated string rate_definition_ids = 6 [json_name = "rateDefinitionIds"];</code>
+   * <code>repeated string rate_definition_ids = 7 [json_name = "rateDefinitionIds"];</code>
    * @return A list containing the rateDefinitionIds.
    */
   public com.google.protobuf.ProtocolStringList
@@ -265,7 +303,7 @@ private static final long serialVersionUID = 0L;
    * the billing plan rate definitions
    * </pre>
    *
-   * <code>repeated string rate_definition_ids = 6 [json_name = "rateDefinitionIds"];</code>
+   * <code>repeated string rate_definition_ids = 7 [json_name = "rateDefinitionIds"];</code>
    * @return The count of rateDefinitionIds.
    */
   public int getRateDefinitionIdsCount() {
@@ -276,7 +314,7 @@ private static final long serialVersionUID = 0L;
    * the billing plan rate definitions
    * </pre>
    *
-   * <code>repeated string rate_definition_ids = 6 [json_name = "rateDefinitionIds"];</code>
+   * <code>repeated string rate_definition_ids = 7 [json_name = "rateDefinitionIds"];</code>
    * @param index The index of the element to return.
    * @return The rateDefinitionIds at the given index.
    */
@@ -288,7 +326,7 @@ private static final long serialVersionUID = 0L;
    * the billing plan rate definitions
    * </pre>
    *
-   * <code>repeated string rate_definition_ids = 6 [json_name = "rateDefinitionIds"];</code>
+   * <code>repeated string rate_definition_ids = 7 [json_name = "rateDefinitionIds"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the rateDefinitionIds at the given index.
    */
@@ -326,8 +364,11 @@ private static final long serialVersionUID = 0L;
     if (endTime_ != null) {
       output.writeMessage(5, getEndTime());
     }
+    if (deleteTime_ != null) {
+      output.writeMessage(6, getDeleteTime());
+    }
     for (int i = 0; i < rateDefinitionIds_.size(); i++) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 6, rateDefinitionIds_.getRaw(i));
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 7, rateDefinitionIds_.getRaw(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -356,6 +397,10 @@ private static final long serialVersionUID = 0L;
     if (endTime_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getEndTime());
+    }
+    if (deleteTime_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(6, getDeleteTime());
     }
     {
       int dataSize = 0;
@@ -402,6 +447,11 @@ private static final long serialVersionUID = 0L;
       if (!getEndTime()
           .equals(other.getEndTime())) return false;
     }
+    if (hasDeleteTime() != other.hasDeleteTime()) return false;
+    if (hasDeleteTime()) {
+      if (!getDeleteTime()
+          .equals(other.getDeleteTime())) return false;
+    }
     if (!getRateDefinitionIdsList()
         .equals(other.getRateDefinitionIdsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -432,6 +482,10 @@ private static final long serialVersionUID = 0L;
     if (hasEndTime()) {
       hash = (37 * hash) + END_TIME_FIELD_NUMBER;
       hash = (53 * hash) + getEndTime().hashCode();
+    }
+    if (hasDeleteTime()) {
+      hash = (37 * hash) + DELETE_TIME_FIELD_NUMBER;
+      hash = (53 * hash) + getDeleteTime().hashCode();
     }
     if (getRateDefinitionIdsCount() > 0) {
       hash = (37 * hash) + RATE_DEFINITION_IDS_FIELD_NUMBER;
@@ -593,6 +647,11 @@ private static final long serialVersionUID = 0L;
         endTimeBuilder_.dispose();
         endTimeBuilder_ = null;
       }
+      deleteTime_ = null;
+      if (deleteTimeBuilder_ != null) {
+        deleteTimeBuilder_.dispose();
+        deleteTimeBuilder_ = null;
+      }
       rateDefinitionIds_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
@@ -652,6 +711,11 @@ private static final long serialVersionUID = 0L;
             : endTimeBuilder_.build();
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.deleteTime_ = deleteTimeBuilder_ == null
+            ? deleteTime_
+            : deleteTimeBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
         rateDefinitionIds_.makeImmutable();
         result.rateDefinitionIds_ = rateDefinitionIds_;
       }
@@ -718,10 +782,13 @@ private static final long serialVersionUID = 0L;
       if (other.hasEndTime()) {
         mergeEndTime(other.getEndTime());
       }
+      if (other.hasDeleteTime()) {
+        mergeDeleteTime(other.getDeleteTime());
+      }
       if (!other.rateDefinitionIds_.isEmpty()) {
         if (rateDefinitionIds_.isEmpty()) {
           rateDefinitionIds_ = other.rateDefinitionIds_;
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00000040;
         } else {
           ensureRateDefinitionIdsIsMutable();
           rateDefinitionIds_.addAll(other.rateDefinitionIds_);
@@ -788,11 +855,18 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 42
             case 50: {
+              input.readMessage(
+                  getDeleteTimeFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 50
+            case 58: {
               java.lang.String s = input.readStringRequireUtf8();
               ensureRateDefinitionIdsIsMutable();
               rateDefinitionIds_.add(s);
               break;
-            } // case 50
+            } // case 58
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1372,7 +1446,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> endTimeBuilder_;
     /**
      * <pre>
-     * the time (if applicable) this billing plan ended; can be null
+     * the time this billing plan ended; can be null
      * </pre>
      *
      * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime"];</code>
@@ -1383,7 +1457,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the time (if applicable) this billing plan ended; can be null
+     * the time this billing plan ended; can be null
      * </pre>
      *
      * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime"];</code>
@@ -1398,7 +1472,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the time (if applicable) this billing plan ended; can be null
+     * the time this billing plan ended; can be null
      * </pre>
      *
      * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime"];</code>
@@ -1418,7 +1492,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the time (if applicable) this billing plan ended; can be null
+     * the time this billing plan ended; can be null
      * </pre>
      *
      * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime"];</code>
@@ -1436,7 +1510,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the time (if applicable) this billing plan ended; can be null
+     * the time this billing plan ended; can be null
      * </pre>
      *
      * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime"];</code>
@@ -1459,7 +1533,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the time (if applicable) this billing plan ended; can be null
+     * the time this billing plan ended; can be null
      * </pre>
      *
      * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime"];</code>
@@ -1476,7 +1550,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the time (if applicable) this billing plan ended; can be null
+     * the time this billing plan ended; can be null
      * </pre>
      *
      * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime"];</code>
@@ -1488,7 +1562,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the time (if applicable) this billing plan ended; can be null
+     * the time this billing plan ended; can be null
      * </pre>
      *
      * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime"];</code>
@@ -1503,7 +1577,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the time (if applicable) this billing plan ended; can be null
+     * the time this billing plan ended; can be null
      * </pre>
      *
      * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime"];</code>
@@ -1522,20 +1596,175 @@ private static final long serialVersionUID = 0L;
       return endTimeBuilder_;
     }
 
+    private com.google.protobuf.Timestamp deleteTime_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> deleteTimeBuilder_;
+    /**
+     * <pre>
+     * the time this billing plan was deleted; can be null
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delete_time = 6 [json_name = "deleteTime"];</code>
+     * @return Whether the deleteTime field is set.
+     */
+    public boolean hasDeleteTime() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <pre>
+     * the time this billing plan was deleted; can be null
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delete_time = 6 [json_name = "deleteTime"];</code>
+     * @return The deleteTime.
+     */
+    public com.google.protobuf.Timestamp getDeleteTime() {
+      if (deleteTimeBuilder_ == null) {
+        return deleteTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : deleteTime_;
+      } else {
+        return deleteTimeBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * the time this billing plan was deleted; can be null
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delete_time = 6 [json_name = "deleteTime"];</code>
+     */
+    public Builder setDeleteTime(com.google.protobuf.Timestamp value) {
+      if (deleteTimeBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        deleteTime_ = value;
+      } else {
+        deleteTimeBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the time this billing plan was deleted; can be null
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delete_time = 6 [json_name = "deleteTime"];</code>
+     */
+    public Builder setDeleteTime(
+        com.google.protobuf.Timestamp.Builder builderForValue) {
+      if (deleteTimeBuilder_ == null) {
+        deleteTime_ = builderForValue.build();
+      } else {
+        deleteTimeBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the time this billing plan was deleted; can be null
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delete_time = 6 [json_name = "deleteTime"];</code>
+     */
+    public Builder mergeDeleteTime(com.google.protobuf.Timestamp value) {
+      if (deleteTimeBuilder_ == null) {
+        if (((bitField0_ & 0x00000020) != 0) &&
+          deleteTime_ != null &&
+          deleteTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+          getDeleteTimeBuilder().mergeFrom(value);
+        } else {
+          deleteTime_ = value;
+        }
+      } else {
+        deleteTimeBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the time this billing plan was deleted; can be null
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delete_time = 6 [json_name = "deleteTime"];</code>
+     */
+    public Builder clearDeleteTime() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      deleteTime_ = null;
+      if (deleteTimeBuilder_ != null) {
+        deleteTimeBuilder_.dispose();
+        deleteTimeBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the time this billing plan was deleted; can be null
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delete_time = 6 [json_name = "deleteTime"];</code>
+     */
+    public com.google.protobuf.Timestamp.Builder getDeleteTimeBuilder() {
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return getDeleteTimeFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * the time this billing plan was deleted; can be null
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delete_time = 6 [json_name = "deleteTime"];</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getDeleteTimeOrBuilder() {
+      if (deleteTimeBuilder_ != null) {
+        return deleteTimeBuilder_.getMessageOrBuilder();
+      } else {
+        return deleteTime_ == null ?
+            com.google.protobuf.Timestamp.getDefaultInstance() : deleteTime_;
+      }
+    }
+    /**
+     * <pre>
+     * the time this billing plan was deleted; can be null
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delete_time = 6 [json_name = "deleteTime"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+        getDeleteTimeFieldBuilder() {
+      if (deleteTimeBuilder_ == null) {
+        deleteTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                getDeleteTime(),
+                getParentForChildren(),
+                isClean());
+        deleteTime_ = null;
+      }
+      return deleteTimeBuilder_;
+    }
+
     private com.google.protobuf.LazyStringArrayList rateDefinitionIds_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureRateDefinitionIdsIsMutable() {
       if (!rateDefinitionIds_.isModifiable()) {
         rateDefinitionIds_ = new com.google.protobuf.LazyStringArrayList(rateDefinitionIds_);
       }
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000040;
     }
     /**
      * <pre>
      * the billing plan rate definitions
      * </pre>
      *
-     * <code>repeated string rate_definition_ids = 6 [json_name = "rateDefinitionIds"];</code>
+     * <code>repeated string rate_definition_ids = 7 [json_name = "rateDefinitionIds"];</code>
      * @return A list containing the rateDefinitionIds.
      */
     public com.google.protobuf.ProtocolStringList
@@ -1548,7 +1777,7 @@ private static final long serialVersionUID = 0L;
      * the billing plan rate definitions
      * </pre>
      *
-     * <code>repeated string rate_definition_ids = 6 [json_name = "rateDefinitionIds"];</code>
+     * <code>repeated string rate_definition_ids = 7 [json_name = "rateDefinitionIds"];</code>
      * @return The count of rateDefinitionIds.
      */
     public int getRateDefinitionIdsCount() {
@@ -1559,7 +1788,7 @@ private static final long serialVersionUID = 0L;
      * the billing plan rate definitions
      * </pre>
      *
-     * <code>repeated string rate_definition_ids = 6 [json_name = "rateDefinitionIds"];</code>
+     * <code>repeated string rate_definition_ids = 7 [json_name = "rateDefinitionIds"];</code>
      * @param index The index of the element to return.
      * @return The rateDefinitionIds at the given index.
      */
@@ -1571,7 +1800,7 @@ private static final long serialVersionUID = 0L;
      * the billing plan rate definitions
      * </pre>
      *
-     * <code>repeated string rate_definition_ids = 6 [json_name = "rateDefinitionIds"];</code>
+     * <code>repeated string rate_definition_ids = 7 [json_name = "rateDefinitionIds"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the rateDefinitionIds at the given index.
      */
@@ -1584,7 +1813,7 @@ private static final long serialVersionUID = 0L;
      * the billing plan rate definitions
      * </pre>
      *
-     * <code>repeated string rate_definition_ids = 6 [json_name = "rateDefinitionIds"];</code>
+     * <code>repeated string rate_definition_ids = 7 [json_name = "rateDefinitionIds"];</code>
      * @param index The index to set the value at.
      * @param value The rateDefinitionIds to set.
      * @return This builder for chaining.
@@ -1594,7 +1823,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureRateDefinitionIdsIsMutable();
       rateDefinitionIds_.set(index, value);
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1603,7 +1832,7 @@ private static final long serialVersionUID = 0L;
      * the billing plan rate definitions
      * </pre>
      *
-     * <code>repeated string rate_definition_ids = 6 [json_name = "rateDefinitionIds"];</code>
+     * <code>repeated string rate_definition_ids = 7 [json_name = "rateDefinitionIds"];</code>
      * @param value The rateDefinitionIds to add.
      * @return This builder for chaining.
      */
@@ -1612,7 +1841,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureRateDefinitionIdsIsMutable();
       rateDefinitionIds_.add(value);
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1621,7 +1850,7 @@ private static final long serialVersionUID = 0L;
      * the billing plan rate definitions
      * </pre>
      *
-     * <code>repeated string rate_definition_ids = 6 [json_name = "rateDefinitionIds"];</code>
+     * <code>repeated string rate_definition_ids = 7 [json_name = "rateDefinitionIds"];</code>
      * @param values The rateDefinitionIds to add.
      * @return This builder for chaining.
      */
@@ -1630,7 +1859,7 @@ private static final long serialVersionUID = 0L;
       ensureRateDefinitionIdsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, rateDefinitionIds_);
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1639,13 +1868,13 @@ private static final long serialVersionUID = 0L;
      * the billing plan rate definitions
      * </pre>
      *
-     * <code>repeated string rate_definition_ids = 6 [json_name = "rateDefinitionIds"];</code>
+     * <code>repeated string rate_definition_ids = 7 [json_name = "rateDefinitionIds"];</code>
      * @return This builder for chaining.
      */
     public Builder clearRateDefinitionIds() {
       rateDefinitionIds_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000020);;
+      bitField0_ = (bitField0_ & ~0x00000040);;
       onChanged();
       return this;
     }
@@ -1654,7 +1883,7 @@ private static final long serialVersionUID = 0L;
      * the billing plan rate definitions
      * </pre>
      *
-     * <code>repeated string rate_definition_ids = 6 [json_name = "rateDefinitionIds"];</code>
+     * <code>repeated string rate_definition_ids = 7 [json_name = "rateDefinitionIds"];</code>
      * @param value The bytes of the rateDefinitionIds to add.
      * @return This builder for chaining.
      */
@@ -1664,7 +1893,7 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureRateDefinitionIdsIsMutable();
       rateDefinitionIds_.add(value);
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }

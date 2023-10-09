@@ -4,18 +4,18 @@
 package com.tcn.cloud.api.services.billing.v1alpha1;
 
 /**
- * Protobuf type {@code services.billing.v1alpha1.BulkDeleteRateDefinitionsRequest}
+ * Protobuf type {@code services.billing.v1alpha1.CreateDefaultRateDefinitionRequest}
  */
-public final class BulkDeleteRateDefinitionsRequest extends
+public final class CreateDefaultRateDefinitionRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:services.billing.v1alpha1.BulkDeleteRateDefinitionsRequest)
-    BulkDeleteRateDefinitionsRequestOrBuilder {
+    // @@protoc_insertion_point(message_implements:services.billing.v1alpha1.CreateDefaultRateDefinitionRequest)
+    CreateDefaultRateDefinitionRequestOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use BulkDeleteRateDefinitionsRequest.newBuilder() to construct.
-  private BulkDeleteRateDefinitionsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use CreateDefaultRateDefinitionRequest.newBuilder() to construct.
+  private CreateDefaultRateDefinitionRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private BulkDeleteRateDefinitionsRequest() {
+  private CreateDefaultRateDefinitionRequest() {
     rateDefinitionId_ = "";
   }
 
@@ -23,20 +23,20 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new BulkDeleteRateDefinitionsRequest();
+    return new CreateDefaultRateDefinitionRequest();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.services.billing.v1alpha1.RatesProto.internal_static_services_billing_v1alpha1_BulkDeleteRateDefinitionsRequest_descriptor;
+    return com.tcn.cloud.api.services.billing.v1alpha1.RatesProto.internal_static_services_billing_v1alpha1_CreateDefaultRateDefinitionRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.services.billing.v1alpha1.RatesProto.internal_static_services_billing_v1alpha1_BulkDeleteRateDefinitionsRequest_fieldAccessorTable
+    return com.tcn.cloud.api.services.billing.v1alpha1.RatesProto.internal_static_services_billing_v1alpha1_CreateDefaultRateDefinitionRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.services.billing.v1alpha1.BulkDeleteRateDefinitionsRequest.class, com.tcn.cloud.api.services.billing.v1alpha1.BulkDeleteRateDefinitionsRequest.Builder.class);
+            com.tcn.cloud.api.services.billing.v1alpha1.CreateDefaultRateDefinitionRequest.class, com.tcn.cloud.api.services.billing.v1alpha1.CreateDefaultRateDefinitionRequest.Builder.class);
   }
 
   public static final int RATE_DEFINITION_ID_FIELD_NUMBER = 1;
@@ -78,6 +78,32 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int RATE_DEFINITION_FIELD_NUMBER = 2;
+  private com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition rateDefinition_;
+  /**
+   * <code>.services.billing.entities.v1alpha1.RateDefinition rate_definition = 2 [json_name = "rateDefinition"];</code>
+   * @return Whether the rateDefinition field is set.
+   */
+  @java.lang.Override
+  public boolean hasRateDefinition() {
+    return rateDefinition_ != null;
+  }
+  /**
+   * <code>.services.billing.entities.v1alpha1.RateDefinition rate_definition = 2 [json_name = "rateDefinition"];</code>
+   * @return The rateDefinition.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition getRateDefinition() {
+    return rateDefinition_ == null ? com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition.getDefaultInstance() : rateDefinition_;
+  }
+  /**
+   * <code>.services.billing.entities.v1alpha1.RateDefinition rate_definition = 2 [json_name = "rateDefinition"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionOrBuilder getRateDefinitionOrBuilder() {
+    return rateDefinition_ == null ? com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition.getDefaultInstance() : rateDefinition_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -95,6 +121,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rateDefinitionId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, rateDefinitionId_);
     }
+    if (rateDefinition_ != null) {
+      output.writeMessage(2, getRateDefinition());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -107,6 +136,10 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rateDefinitionId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, rateDefinitionId_);
     }
+    if (rateDefinition_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, getRateDefinition());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -117,13 +150,18 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.services.billing.v1alpha1.BulkDeleteRateDefinitionsRequest)) {
+    if (!(obj instanceof com.tcn.cloud.api.services.billing.v1alpha1.CreateDefaultRateDefinitionRequest)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.services.billing.v1alpha1.BulkDeleteRateDefinitionsRequest other = (com.tcn.cloud.api.services.billing.v1alpha1.BulkDeleteRateDefinitionsRequest) obj;
+    com.tcn.cloud.api.services.billing.v1alpha1.CreateDefaultRateDefinitionRequest other = (com.tcn.cloud.api.services.billing.v1alpha1.CreateDefaultRateDefinitionRequest) obj;
 
     if (!getRateDefinitionId()
         .equals(other.getRateDefinitionId())) return false;
+    if (hasRateDefinition() != other.hasRateDefinition()) return false;
+    if (hasRateDefinition()) {
+      if (!getRateDefinition()
+          .equals(other.getRateDefinition())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -137,49 +175,53 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + RATE_DEFINITION_ID_FIELD_NUMBER;
     hash = (53 * hash) + getRateDefinitionId().hashCode();
+    if (hasRateDefinition()) {
+      hash = (37 * hash) + RATE_DEFINITION_FIELD_NUMBER;
+      hash = (53 * hash) + getRateDefinition().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static com.tcn.cloud.api.services.billing.v1alpha1.BulkDeleteRateDefinitionsRequest parseFrom(
+  public static com.tcn.cloud.api.services.billing.v1alpha1.CreateDefaultRateDefinitionRequest parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.services.billing.v1alpha1.BulkDeleteRateDefinitionsRequest parseFrom(
+  public static com.tcn.cloud.api.services.billing.v1alpha1.CreateDefaultRateDefinitionRequest parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.billing.v1alpha1.BulkDeleteRateDefinitionsRequest parseFrom(
+  public static com.tcn.cloud.api.services.billing.v1alpha1.CreateDefaultRateDefinitionRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.services.billing.v1alpha1.BulkDeleteRateDefinitionsRequest parseFrom(
+  public static com.tcn.cloud.api.services.billing.v1alpha1.CreateDefaultRateDefinitionRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.billing.v1alpha1.BulkDeleteRateDefinitionsRequest parseFrom(byte[] data)
+  public static com.tcn.cloud.api.services.billing.v1alpha1.CreateDefaultRateDefinitionRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.services.billing.v1alpha1.BulkDeleteRateDefinitionsRequest parseFrom(
+  public static com.tcn.cloud.api.services.billing.v1alpha1.CreateDefaultRateDefinitionRequest parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.billing.v1alpha1.BulkDeleteRateDefinitionsRequest parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.services.billing.v1alpha1.CreateDefaultRateDefinitionRequest parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.services.billing.v1alpha1.BulkDeleteRateDefinitionsRequest parseFrom(
+  public static com.tcn.cloud.api.services.billing.v1alpha1.CreateDefaultRateDefinitionRequest parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -187,26 +229,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.services.billing.v1alpha1.BulkDeleteRateDefinitionsRequest parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.services.billing.v1alpha1.CreateDefaultRateDefinitionRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.services.billing.v1alpha1.BulkDeleteRateDefinitionsRequest parseDelimitedFrom(
+  public static com.tcn.cloud.api.services.billing.v1alpha1.CreateDefaultRateDefinitionRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.billing.v1alpha1.BulkDeleteRateDefinitionsRequest parseFrom(
+  public static com.tcn.cloud.api.services.billing.v1alpha1.CreateDefaultRateDefinitionRequest parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.services.billing.v1alpha1.BulkDeleteRateDefinitionsRequest parseFrom(
+  public static com.tcn.cloud.api.services.billing.v1alpha1.CreateDefaultRateDefinitionRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -219,7 +261,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.services.billing.v1alpha1.BulkDeleteRateDefinitionsRequest prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.services.billing.v1alpha1.CreateDefaultRateDefinitionRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -235,26 +277,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code services.billing.v1alpha1.BulkDeleteRateDefinitionsRequest}
+   * Protobuf type {@code services.billing.v1alpha1.CreateDefaultRateDefinitionRequest}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:services.billing.v1alpha1.BulkDeleteRateDefinitionsRequest)
-      com.tcn.cloud.api.services.billing.v1alpha1.BulkDeleteRateDefinitionsRequestOrBuilder {
+      // @@protoc_insertion_point(builder_implements:services.billing.v1alpha1.CreateDefaultRateDefinitionRequest)
+      com.tcn.cloud.api.services.billing.v1alpha1.CreateDefaultRateDefinitionRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.services.billing.v1alpha1.RatesProto.internal_static_services_billing_v1alpha1_BulkDeleteRateDefinitionsRequest_descriptor;
+      return com.tcn.cloud.api.services.billing.v1alpha1.RatesProto.internal_static_services_billing_v1alpha1_CreateDefaultRateDefinitionRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.services.billing.v1alpha1.RatesProto.internal_static_services_billing_v1alpha1_BulkDeleteRateDefinitionsRequest_fieldAccessorTable
+      return com.tcn.cloud.api.services.billing.v1alpha1.RatesProto.internal_static_services_billing_v1alpha1_CreateDefaultRateDefinitionRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.services.billing.v1alpha1.BulkDeleteRateDefinitionsRequest.class, com.tcn.cloud.api.services.billing.v1alpha1.BulkDeleteRateDefinitionsRequest.Builder.class);
+              com.tcn.cloud.api.services.billing.v1alpha1.CreateDefaultRateDefinitionRequest.class, com.tcn.cloud.api.services.billing.v1alpha1.CreateDefaultRateDefinitionRequest.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.services.billing.v1alpha1.BulkDeleteRateDefinitionsRequest.newBuilder()
+    // Construct using com.tcn.cloud.api.services.billing.v1alpha1.CreateDefaultRateDefinitionRequest.newBuilder()
     private Builder() {
 
     }
@@ -269,23 +311,28 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       rateDefinitionId_ = "";
+      rateDefinition_ = null;
+      if (rateDefinitionBuilder_ != null) {
+        rateDefinitionBuilder_.dispose();
+        rateDefinitionBuilder_ = null;
+      }
       return this;
     }
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.services.billing.v1alpha1.RatesProto.internal_static_services_billing_v1alpha1_BulkDeleteRateDefinitionsRequest_descriptor;
+      return com.tcn.cloud.api.services.billing.v1alpha1.RatesProto.internal_static_services_billing_v1alpha1_CreateDefaultRateDefinitionRequest_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.services.billing.v1alpha1.BulkDeleteRateDefinitionsRequest getDefaultInstanceForType() {
-      return com.tcn.cloud.api.services.billing.v1alpha1.BulkDeleteRateDefinitionsRequest.getDefaultInstance();
+    public com.tcn.cloud.api.services.billing.v1alpha1.CreateDefaultRateDefinitionRequest getDefaultInstanceForType() {
+      return com.tcn.cloud.api.services.billing.v1alpha1.CreateDefaultRateDefinitionRequest.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.services.billing.v1alpha1.BulkDeleteRateDefinitionsRequest build() {
-      com.tcn.cloud.api.services.billing.v1alpha1.BulkDeleteRateDefinitionsRequest result = buildPartial();
+    public com.tcn.cloud.api.services.billing.v1alpha1.CreateDefaultRateDefinitionRequest build() {
+      com.tcn.cloud.api.services.billing.v1alpha1.CreateDefaultRateDefinitionRequest result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -293,17 +340,22 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.services.billing.v1alpha1.BulkDeleteRateDefinitionsRequest buildPartial() {
-      com.tcn.cloud.api.services.billing.v1alpha1.BulkDeleteRateDefinitionsRequest result = new com.tcn.cloud.api.services.billing.v1alpha1.BulkDeleteRateDefinitionsRequest(this);
+    public com.tcn.cloud.api.services.billing.v1alpha1.CreateDefaultRateDefinitionRequest buildPartial() {
+      com.tcn.cloud.api.services.billing.v1alpha1.CreateDefaultRateDefinitionRequest result = new com.tcn.cloud.api.services.billing.v1alpha1.CreateDefaultRateDefinitionRequest(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.services.billing.v1alpha1.BulkDeleteRateDefinitionsRequest result) {
+    private void buildPartial0(com.tcn.cloud.api.services.billing.v1alpha1.CreateDefaultRateDefinitionRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.rateDefinitionId_ = rateDefinitionId_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.rateDefinition_ = rateDefinitionBuilder_ == null
+            ? rateDefinition_
+            : rateDefinitionBuilder_.build();
       }
     }
 
@@ -341,20 +393,23 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.services.billing.v1alpha1.BulkDeleteRateDefinitionsRequest) {
-        return mergeFrom((com.tcn.cloud.api.services.billing.v1alpha1.BulkDeleteRateDefinitionsRequest)other);
+      if (other instanceof com.tcn.cloud.api.services.billing.v1alpha1.CreateDefaultRateDefinitionRequest) {
+        return mergeFrom((com.tcn.cloud.api.services.billing.v1alpha1.CreateDefaultRateDefinitionRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.services.billing.v1alpha1.BulkDeleteRateDefinitionsRequest other) {
-      if (other == com.tcn.cloud.api.services.billing.v1alpha1.BulkDeleteRateDefinitionsRequest.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.services.billing.v1alpha1.CreateDefaultRateDefinitionRequest other) {
+      if (other == com.tcn.cloud.api.services.billing.v1alpha1.CreateDefaultRateDefinitionRequest.getDefaultInstance()) return this;
       if (!other.getRateDefinitionId().isEmpty()) {
         rateDefinitionId_ = other.rateDefinitionId_;
         bitField0_ |= 0x00000001;
         onChanged();
+      }
+      if (other.hasRateDefinition()) {
+        mergeRateDefinition(other.getRateDefinition());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -387,6 +442,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 10
+            case 18: {
+              input.readMessage(
+                  getRateDefinitionFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -475,6 +537,125 @@ private static final long serialVersionUID = 0L;
       onChanged();
       return this;
     }
+
+    private com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition rateDefinition_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition, com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionOrBuilder> rateDefinitionBuilder_;
+    /**
+     * <code>.services.billing.entities.v1alpha1.RateDefinition rate_definition = 2 [json_name = "rateDefinition"];</code>
+     * @return Whether the rateDefinition field is set.
+     */
+    public boolean hasRateDefinition() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha1.RateDefinition rate_definition = 2 [json_name = "rateDefinition"];</code>
+     * @return The rateDefinition.
+     */
+    public com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition getRateDefinition() {
+      if (rateDefinitionBuilder_ == null) {
+        return rateDefinition_ == null ? com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition.getDefaultInstance() : rateDefinition_;
+      } else {
+        return rateDefinitionBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha1.RateDefinition rate_definition = 2 [json_name = "rateDefinition"];</code>
+     */
+    public Builder setRateDefinition(com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition value) {
+      if (rateDefinitionBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        rateDefinition_ = value;
+      } else {
+        rateDefinitionBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha1.RateDefinition rate_definition = 2 [json_name = "rateDefinition"];</code>
+     */
+    public Builder setRateDefinition(
+        com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition.Builder builderForValue) {
+      if (rateDefinitionBuilder_ == null) {
+        rateDefinition_ = builderForValue.build();
+      } else {
+        rateDefinitionBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha1.RateDefinition rate_definition = 2 [json_name = "rateDefinition"];</code>
+     */
+    public Builder mergeRateDefinition(com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition value) {
+      if (rateDefinitionBuilder_ == null) {
+        if (((bitField0_ & 0x00000002) != 0) &&
+          rateDefinition_ != null &&
+          rateDefinition_ != com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition.getDefaultInstance()) {
+          getRateDefinitionBuilder().mergeFrom(value);
+        } else {
+          rateDefinition_ = value;
+        }
+      } else {
+        rateDefinitionBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha1.RateDefinition rate_definition = 2 [json_name = "rateDefinition"];</code>
+     */
+    public Builder clearRateDefinition() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      rateDefinition_ = null;
+      if (rateDefinitionBuilder_ != null) {
+        rateDefinitionBuilder_.dispose();
+        rateDefinitionBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha1.RateDefinition rate_definition = 2 [json_name = "rateDefinition"];</code>
+     */
+    public com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition.Builder getRateDefinitionBuilder() {
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return getRateDefinitionFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha1.RateDefinition rate_definition = 2 [json_name = "rateDefinition"];</code>
+     */
+    public com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionOrBuilder getRateDefinitionOrBuilder() {
+      if (rateDefinitionBuilder_ != null) {
+        return rateDefinitionBuilder_.getMessageOrBuilder();
+      } else {
+        return rateDefinition_ == null ?
+            com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition.getDefaultInstance() : rateDefinition_;
+      }
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha1.RateDefinition rate_definition = 2 [json_name = "rateDefinition"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition, com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionOrBuilder> 
+        getRateDefinitionFieldBuilder() {
+      if (rateDefinitionBuilder_ == null) {
+        rateDefinitionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition, com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionOrBuilder>(
+                getRateDefinition(),
+                getParentForChildren(),
+                isClean());
+        rateDefinition_ = null;
+      }
+      return rateDefinitionBuilder_;
+    }
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -488,23 +669,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:services.billing.v1alpha1.BulkDeleteRateDefinitionsRequest)
+    // @@protoc_insertion_point(builder_scope:services.billing.v1alpha1.CreateDefaultRateDefinitionRequest)
   }
 
-  // @@protoc_insertion_point(class_scope:services.billing.v1alpha1.BulkDeleteRateDefinitionsRequest)
-  private static final com.tcn.cloud.api.services.billing.v1alpha1.BulkDeleteRateDefinitionsRequest DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:services.billing.v1alpha1.CreateDefaultRateDefinitionRequest)
+  private static final com.tcn.cloud.api.services.billing.v1alpha1.CreateDefaultRateDefinitionRequest DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.services.billing.v1alpha1.BulkDeleteRateDefinitionsRequest();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.services.billing.v1alpha1.CreateDefaultRateDefinitionRequest();
   }
 
-  public static com.tcn.cloud.api.services.billing.v1alpha1.BulkDeleteRateDefinitionsRequest getDefaultInstance() {
+  public static com.tcn.cloud.api.services.billing.v1alpha1.CreateDefaultRateDefinitionRequest getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<BulkDeleteRateDefinitionsRequest>
-      PARSER = new com.google.protobuf.AbstractParser<BulkDeleteRateDefinitionsRequest>() {
+  private static final com.google.protobuf.Parser<CreateDefaultRateDefinitionRequest>
+      PARSER = new com.google.protobuf.AbstractParser<CreateDefaultRateDefinitionRequest>() {
     @java.lang.Override
-    public BulkDeleteRateDefinitionsRequest parsePartialFrom(
+    public CreateDefaultRateDefinitionRequest parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -523,17 +704,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<BulkDeleteRateDefinitionsRequest> parser() {
+  public static com.google.protobuf.Parser<CreateDefaultRateDefinitionRequest> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<BulkDeleteRateDefinitionsRequest> getParserForType() {
+  public com.google.protobuf.Parser<CreateDefaultRateDefinitionRequest> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.services.billing.v1alpha1.BulkDeleteRateDefinitionsRequest getDefaultInstanceForType() {
+  public com.tcn.cloud.api.services.billing.v1alpha1.CreateDefaultRateDefinitionRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

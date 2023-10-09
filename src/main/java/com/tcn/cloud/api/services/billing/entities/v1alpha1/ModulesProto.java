@@ -36,19 +36,18 @@ public final class ModulesProto {
       "\n0services/billing/entities/v1alpha1/mod" +
       "ules.proto\022\"services.billing.entities.v1" +
       "alpha1\032\036google/protobuf/wrappers.proto\"!" +
-      "\n\013BasicConfig\022\022\n\004rate\030\001 \001(\001R\004rate\"\303\001\n\021Ba" +
-      "sicAmountConfig\022\026\n\006amount\030\001 \001(\003R\006amount\022" +
-      "\022\n\004rate\030\002 \001(\001R\004rate\022@\n\rmin_increment\030\003 \001" +
-      "(\0132\033.google.protobuf.Int64ValueR\014minIncr" +
-      "ement\022@\n\rmax_increment\030\004 \001(\0132\033.google.pr" +
-      "otobuf.Int64ValueR\014maxIncrementB\357\001\n4com." +
-      "tcn.cloud.api.services.billing.entities." +
-      "v1alpha1B\014ModulesProtoP\001\242\002\003SBE\252\002\"Service" +
-      "s.Billing.Entities.V1alpha1\312\002\"Services\\B" +
-      "illing\\Entities\\V1alpha1\342\002.Services\\Bill" +
-      "ing\\Entities\\V1alpha1\\GPBMetadata\352\002%Serv" +
-      "ices::Billing::Entities::V1alpha1b\006proto" +
-      "3"
+      "\n\013BasicConfig\022\022\n\004rate\030\001 \001(\001R\004rate\"\270\001\n\021Ba" +
+      "sicAmountConfig\022\033\n\tunit_size\030\001 \001(\003R\010unit" +
+      "Size\022\022\n\004rate\030\002 \001(\001R\004rate\0228\n\tmin_units\030\003 " +
+      "\001(\0132\033.google.protobuf.Int64ValueR\010minUni" +
+      "ts\0228\n\tmax_units\030\004 \001(\0132\033.google.protobuf." +
+      "Int64ValueR\010maxUnitsB\357\001\n4com.tcn.cloud.a" +
+      "pi.services.billing.entities.v1alpha1B\014M" +
+      "odulesProtoP\001\242\002\003SBE\252\002\"Services.Billing.E" +
+      "ntities.V1alpha1\312\002\"Services\\Billing\\Enti" +
+      "ties\\V1alpha1\342\002.Services\\Billing\\Entitie" +
+      "s\\V1alpha1\\GPBMetadata\352\002%Services::Billi" +
+      "ng::Entities::V1alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -66,7 +65,7 @@ public final class ModulesProto {
     internal_static_services_billing_entities_v1alpha1_BasicAmountConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_entities_v1alpha1_BasicAmountConfig_descriptor,
-        new java.lang.String[] { "Amount", "Rate", "MinIncrement", "MaxIncrement", });
+        new java.lang.String[] { "UnitSize", "Rate", "MinUnits", "MaxUnits", });
     com.google.protobuf.WrappersProto.getDescriptor();
   }
 

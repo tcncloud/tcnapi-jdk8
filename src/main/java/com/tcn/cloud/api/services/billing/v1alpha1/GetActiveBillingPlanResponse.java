@@ -64,44 +64,6 @@ private static final long serialVersionUID = 0L;
     return billingPlan_ == null ? com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlan.getDefaultInstance() : billingPlan_;
   }
 
-  public static final int EFFECTIVE_TIME_FIELD_NUMBER = 2;
-  private com.google.protobuf.Timestamp effectiveTime_;
-  /**
-   * <pre>
-   * Optional: if not set, will use current time
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp effective_time = 2 [json_name = "effectiveTime"];</code>
-   * @return Whether the effectiveTime field is set.
-   */
-  @java.lang.Override
-  public boolean hasEffectiveTime() {
-    return effectiveTime_ != null;
-  }
-  /**
-   * <pre>
-   * Optional: if not set, will use current time
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp effective_time = 2 [json_name = "effectiveTime"];</code>
-   * @return The effectiveTime.
-   */
-  @java.lang.Override
-  public com.google.protobuf.Timestamp getEffectiveTime() {
-    return effectiveTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : effectiveTime_;
-  }
-  /**
-   * <pre>
-   * Optional: if not set, will use current time
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp effective_time = 2 [json_name = "effectiveTime"];</code>
-   */
-  @java.lang.Override
-  public com.google.protobuf.TimestampOrBuilder getEffectiveTimeOrBuilder() {
-    return effectiveTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : effectiveTime_;
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -119,9 +81,6 @@ private static final long serialVersionUID = 0L;
     if (billingPlan_ != null) {
       output.writeMessage(1, getBillingPlan());
     }
-    if (effectiveTime_ != null) {
-      output.writeMessage(2, getEffectiveTime());
-    }
     getUnknownFields().writeTo(output);
   }
 
@@ -134,10 +93,6 @@ private static final long serialVersionUID = 0L;
     if (billingPlan_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getBillingPlan());
-    }
-    if (effectiveTime_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(2, getEffectiveTime());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -159,11 +114,6 @@ private static final long serialVersionUID = 0L;
       if (!getBillingPlan()
           .equals(other.getBillingPlan())) return false;
     }
-    if (hasEffectiveTime() != other.hasEffectiveTime()) return false;
-    if (hasEffectiveTime()) {
-      if (!getEffectiveTime()
-          .equals(other.getEffectiveTime())) return false;
-    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -178,10 +128,6 @@ private static final long serialVersionUID = 0L;
     if (hasBillingPlan()) {
       hash = (37 * hash) + BILLING_PLAN_FIELD_NUMBER;
       hash = (53 * hash) + getBillingPlan().hashCode();
-    }
-    if (hasEffectiveTime()) {
-      hash = (37 * hash) + EFFECTIVE_TIME_FIELD_NUMBER;
-      hash = (53 * hash) + getEffectiveTime().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -319,11 +265,6 @@ private static final long serialVersionUID = 0L;
         billingPlanBuilder_.dispose();
         billingPlanBuilder_ = null;
       }
-      effectiveTime_ = null;
-      if (effectiveTimeBuilder_ != null) {
-        effectiveTimeBuilder_.dispose();
-        effectiveTimeBuilder_ = null;
-      }
       return this;
     }
 
@@ -361,11 +302,6 @@ private static final long serialVersionUID = 0L;
         result.billingPlan_ = billingPlanBuilder_ == null
             ? billingPlan_
             : billingPlanBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.effectiveTime_ = effectiveTimeBuilder_ == null
-            ? effectiveTime_
-            : effectiveTimeBuilder_.build();
       }
     }
 
@@ -416,9 +352,6 @@ private static final long serialVersionUID = 0L;
       if (other.hasBillingPlan()) {
         mergeBillingPlan(other.getBillingPlan());
       }
-      if (other.hasEffectiveTime()) {
-        mergeEffectiveTime(other.getEffectiveTime());
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -452,13 +385,6 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 10
-            case 18: {
-              input.readMessage(
-                  getEffectiveTimeFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -593,161 +519,6 @@ private static final long serialVersionUID = 0L;
         billingPlan_ = null;
       }
       return billingPlanBuilder_;
-    }
-
-    private com.google.protobuf.Timestamp effectiveTime_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> effectiveTimeBuilder_;
-    /**
-     * <pre>
-     * Optional: if not set, will use current time
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp effective_time = 2 [json_name = "effectiveTime"];</code>
-     * @return Whether the effectiveTime field is set.
-     */
-    public boolean hasEffectiveTime() {
-      return ((bitField0_ & 0x00000002) != 0);
-    }
-    /**
-     * <pre>
-     * Optional: if not set, will use current time
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp effective_time = 2 [json_name = "effectiveTime"];</code>
-     * @return The effectiveTime.
-     */
-    public com.google.protobuf.Timestamp getEffectiveTime() {
-      if (effectiveTimeBuilder_ == null) {
-        return effectiveTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : effectiveTime_;
-      } else {
-        return effectiveTimeBuilder_.getMessage();
-      }
-    }
-    /**
-     * <pre>
-     * Optional: if not set, will use current time
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp effective_time = 2 [json_name = "effectiveTime"];</code>
-     */
-    public Builder setEffectiveTime(com.google.protobuf.Timestamp value) {
-      if (effectiveTimeBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        effectiveTime_ = value;
-      } else {
-        effectiveTimeBuilder_.setMessage(value);
-      }
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Optional: if not set, will use current time
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp effective_time = 2 [json_name = "effectiveTime"];</code>
-     */
-    public Builder setEffectiveTime(
-        com.google.protobuf.Timestamp.Builder builderForValue) {
-      if (effectiveTimeBuilder_ == null) {
-        effectiveTime_ = builderForValue.build();
-      } else {
-        effectiveTimeBuilder_.setMessage(builderForValue.build());
-      }
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Optional: if not set, will use current time
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp effective_time = 2 [json_name = "effectiveTime"];</code>
-     */
-    public Builder mergeEffectiveTime(com.google.protobuf.Timestamp value) {
-      if (effectiveTimeBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0) &&
-          effectiveTime_ != null &&
-          effectiveTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-          getEffectiveTimeBuilder().mergeFrom(value);
-        } else {
-          effectiveTime_ = value;
-        }
-      } else {
-        effectiveTimeBuilder_.mergeFrom(value);
-      }
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Optional: if not set, will use current time
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp effective_time = 2 [json_name = "effectiveTime"];</code>
-     */
-    public Builder clearEffectiveTime() {
-      bitField0_ = (bitField0_ & ~0x00000002);
-      effectiveTime_ = null;
-      if (effectiveTimeBuilder_ != null) {
-        effectiveTimeBuilder_.dispose();
-        effectiveTimeBuilder_ = null;
-      }
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Optional: if not set, will use current time
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp effective_time = 2 [json_name = "effectiveTime"];</code>
-     */
-    public com.google.protobuf.Timestamp.Builder getEffectiveTimeBuilder() {
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return getEffectiveTimeFieldBuilder().getBuilder();
-    }
-    /**
-     * <pre>
-     * Optional: if not set, will use current time
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp effective_time = 2 [json_name = "effectiveTime"];</code>
-     */
-    public com.google.protobuf.TimestampOrBuilder getEffectiveTimeOrBuilder() {
-      if (effectiveTimeBuilder_ != null) {
-        return effectiveTimeBuilder_.getMessageOrBuilder();
-      } else {
-        return effectiveTime_ == null ?
-            com.google.protobuf.Timestamp.getDefaultInstance() : effectiveTime_;
-      }
-    }
-    /**
-     * <pre>
-     * Optional: if not set, will use current time
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp effective_time = 2 [json_name = "effectiveTime"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-        getEffectiveTimeFieldBuilder() {
-      if (effectiveTimeBuilder_ == null) {
-        effectiveTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                getEffectiveTime(),
-                getParentForChildren(),
-                isClean());
-        effectiveTime_ = null;
-      }
-      return effectiveTimeBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

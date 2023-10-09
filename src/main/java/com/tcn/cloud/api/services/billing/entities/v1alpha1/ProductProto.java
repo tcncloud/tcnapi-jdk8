@@ -25,20 +25,20 @@ public final class ProductProto {
     java.lang.String[] descriptorData = {
       "\n0services/billing/entities/v1alpha1/pro" +
       "duct.proto\022\"services.billing.entities.v1" +
-      "alpha1*\230\002\n\007Product\022\027\n\023PRODUCT_UNSPECIFIE" +
-      "D\020\000\022\027\n\023PRODUCT_AGENT_SEATS\020d\022\030\n\023PRODUCT_" +
-      "EMAILS_SENT\020\310\001\022\034\n\027PRODUCT_EMAILS_RECEIVE" +
-      "D\020\311\001\022\025\n\020PRODUCT_SMS_SENT\020\312\001\022\031\n\024PRODUCT_S" +
-      "MS_RECEIVED\020\313\001\022\026\n\021PRODUCT_CHAT_SENT\020\314\001\022\032" +
-      "\n\025PRODUCT_CHAT_RECEIVED\020\315\001\022\021\n\014PRODUCT_OM" +
-      "NI\020\254\002\022\021\n\014PRODUCT_VANA\020\220\003\022\027\n\022PRODUCT_COMP" +
-      "LIANCE\020\364\003B\357\001\n4com.tcn.cloud.api.services" +
-      ".billing.entities.v1alpha1B\014ProductProto" +
-      "P\001\242\002\003SBE\252\002\"Services.Billing.Entities.V1a" +
-      "lpha1\312\002\"Services\\Billing\\Entities\\V1alph" +
-      "a1\342\002.Services\\Billing\\Entities\\V1alpha1\\" +
-      "GPBMetadata\352\002%Services::Billing::Entitie" +
-      "s::V1alpha1b\006proto3"
+      "alpha1*\243\002\n\007Product\022\027\n\023PRODUCT_UNSPECIFIE" +
+      "D\020\000\022\027\n\023PRODUCT_AGENT_SEATS\020d\022\021\n\014PRODUCT_" +
+      "OMNI\020\310\001\022\033\n\026PRODUCT_OMNI_CHAT_SENT\020\311\001\022\037\n\032" +
+      "PRODUCT_OMNI_CHAT_RECEIVED\020\312\001\022\035\n\030PRODUCT" +
+      "_OMNI_EMAILS_SENT\020\313\001\022!\n\034PRODUCT_OMNI_EMA" +
+      "ILS_RECEIVED\020\314\001\022\032\n\025PRODUCT_OMNI_SMS_SENT" +
+      "\020\315\001\022\036\n\031PRODUCT_OMNI_SMS_RECEIVED\020\316\001\022\027\n\022P" +
+      "RODUCT_COMPLIANCE\020\254\002B\357\001\n4com.tcn.cloud.a" +
+      "pi.services.billing.entities.v1alpha1B\014P" +
+      "roductProtoP\001\242\002\003SBE\252\002\"Services.Billing.E" +
+      "ntities.V1alpha1\312\002\"Services\\Billing\\Enti" +
+      "ties\\V1alpha1\342\002.Services\\Billing\\Entitie" +
+      "s\\V1alpha1\\GPBMetadata\352\002%Services::Billi" +
+      "ng::Entities::V1alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.services.billing.v1alpha1;
 
-public interface BulkDeleteRateDefinitionsRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:services.billing.v1alpha1.BulkDeleteRateDefinitionsRequest)
+public interface DeleteDefaultRateDefinitionRequestOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:services.billing.v1alpha1.DeleteDefaultRateDefinitionRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**

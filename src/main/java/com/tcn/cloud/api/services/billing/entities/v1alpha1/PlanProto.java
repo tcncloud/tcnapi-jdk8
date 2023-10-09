@@ -32,21 +32,23 @@ public final class PlanProto {
       "n.proto\022\"services.billing.entities.v1alp" +
       "ha1\032\037google/protobuf/timestamp.proto\032.se" +
       "rvices/billing/entities/v1alpha1/rates.p" +
-      "roto\"\321\002\n\013BillingPlan\022&\n\017billing_plan_id\030" +
+      "roto\"\216\003\n\013BillingPlan\022&\n\017billing_plan_id\030" +
       "\001 \001(\tR\rbillingPlanId\022;\n\013create_time\030\002 \001(" +
       "\0132\032.google.protobuf.TimestampR\ncreateTim" +
       "e\022;\n\013update_time\030\003 \001(\0132\032.google.protobuf" +
       ".TimestampR\nupdateTime\0229\n\nstart_time\030\004 \001" +
       "(\0132\032.google.protobuf.TimestampR\tstartTim" +
       "e\0225\n\010end_time\030\005 \001(\0132\032.google.protobuf.Ti" +
-      "mestampR\007endTime\022.\n\023rate_definition_ids\030" +
-      "\006 \003(\tR\021rateDefinitionIdsB\354\001\n4com.tcn.clo" +
-      "ud.api.services.billing.entities.v1alpha" +
-      "1B\tPlanProtoP\001\242\002\003SBE\252\002\"Services.Billing." +
-      "Entities.V1alpha1\312\002\"Services\\Billing\\Ent" +
-      "ities\\V1alpha1\342\002.Services\\Billing\\Entiti" +
-      "es\\V1alpha1\\GPBMetadata\352\002%Services::Bill" +
-      "ing::Entities::V1alpha1b\006proto3"
+      "mestampR\007endTime\022;\n\013delete_time\030\006 \001(\0132\032." +
+      "google.protobuf.TimestampR\ndeleteTime\022.\n" +
+      "\023rate_definition_ids\030\007 \003(\tR\021rateDefiniti" +
+      "onIdsB\354\001\n4com.tcn.cloud.api.services.bil" +
+      "ling.entities.v1alpha1B\tPlanProtoP\001\242\002\003SB" +
+      "E\252\002\"Services.Billing.Entities.V1alpha1\312\002" +
+      "\"Services\\Billing\\Entities\\V1alpha1\342\002.Se" +
+      "rvices\\Billing\\Entities\\V1alpha1\\GPBMeta" +
+      "data\352\002%Services::Billing::Entities::V1al" +
+      "pha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -59,7 +61,7 @@ public final class PlanProto {
     internal_static_services_billing_entities_v1alpha1_BillingPlan_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_entities_v1alpha1_BillingPlan_descriptor,
-        new java.lang.String[] { "BillingPlanId", "CreateTime", "UpdateTime", "StartTime", "EndTime", "RateDefinitionIds", });
+        new java.lang.String[] { "BillingPlanId", "CreateTime", "UpdateTime", "StartTime", "EndTime", "DeleteTime", "RateDefinitionIds", });
     com.google.protobuf.TimestampProto.getDescriptor();
     com.tcn.cloud.api.services.billing.entities.v1alpha1.RatesProto.getDescriptor();
   }
