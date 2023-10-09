@@ -38,4 +38,14 @@ public interface ListSkillProfileGroupsReqOrBuilder extends
    * @return The skillProfileGroupSids at the given index.
    */
   long getSkillProfileGroupSids(int index);
+
+  /**
+   * <pre>
+   * Indicates whether inactive profile groups will be included in the result.
+   * </pre>
+   *
+   * <code>bool include_inactive = 2 [json_name = "includeInactive"];</code>
+   * @return The includeInactive.
+   */
+  boolean getIncludeInactive();
 }

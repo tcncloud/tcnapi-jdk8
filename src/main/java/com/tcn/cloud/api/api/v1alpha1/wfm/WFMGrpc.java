@@ -5076,6 +5076,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Gets the skill profile groups that have the &#64;skill_profile_group_sids for the org sending the request.
+     * if &#64;include_inactive is true then inactive groups will also be included, otherwise only active groups will be returned.
      * If &#64;skill_profile_group_sids is empty it will get all the skill profile groups for the org.
      * Required permissions:
      *   NONE
@@ -7780,6 +7781,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Gets the skill profile groups that have the &#64;skill_profile_group_sids for the org sending the request.
+     * if &#64;include_inactive is true then inactive groups will also be included, otherwise only active groups will be returned.
      * If &#64;skill_profile_group_sids is empty it will get all the skill profile groups for the org.
      * Required permissions:
      *   NONE
@@ -10583,6 +10585,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Gets the skill profile groups that have the &#64;skill_profile_group_sids for the org sending the request.
+     * if &#64;include_inactive is true then inactive groups will also be included, otherwise only active groups will be returned.
      * If &#64;skill_profile_group_sids is empty it will get all the skill profile groups for the org.
      * Required permissions:
      *   NONE
@@ -13279,6 +13282,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Gets the skill profile groups that have the &#64;skill_profile_group_sids for the org sending the request.
+     * if &#64;include_inactive is true then inactive groups will also be included, otherwise only active groups will be returned.
      * If &#64;skill_profile_group_sids is empty it will get all the skill profile groups for the org.
      * Required permissions:
      *   NONE
