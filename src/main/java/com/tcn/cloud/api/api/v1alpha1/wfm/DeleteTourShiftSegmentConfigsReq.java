@@ -51,7 +51,7 @@ private static final long serialVersionUID = 0L;
    * IDs of the Tour Shift Segment Configs to delete.
    * </pre>
    *
-   * <code>repeated int64 tour_shift_segment_config_sids = 1 [json_name = "tourShiftSegmentConfigSids"];</code>
+   * <code>repeated int64 tour_shift_segment_config_sids = 1 [json_name = "tourShiftSegmentConfigSids", jstype = JS_STRING];</code>
    * @return A list containing the tourShiftSegmentConfigSids.
    */
   @java.lang.Override
@@ -64,7 +64,7 @@ private static final long serialVersionUID = 0L;
    * IDs of the Tour Shift Segment Configs to delete.
    * </pre>
    *
-   * <code>repeated int64 tour_shift_segment_config_sids = 1 [json_name = "tourShiftSegmentConfigSids"];</code>
+   * <code>repeated int64 tour_shift_segment_config_sids = 1 [json_name = "tourShiftSegmentConfigSids", jstype = JS_STRING];</code>
    * @return The count of tourShiftSegmentConfigSids.
    */
   public int getTourShiftSegmentConfigSidsCount() {
@@ -75,7 +75,7 @@ private static final long serialVersionUID = 0L;
    * IDs of the Tour Shift Segment Configs to delete.
    * </pre>
    *
-   * <code>repeated int64 tour_shift_segment_config_sids = 1 [json_name = "tourShiftSegmentConfigSids"];</code>
+   * <code>repeated int64 tour_shift_segment_config_sids = 1 [json_name = "tourShiftSegmentConfigSids", jstype = JS_STRING];</code>
    * @param index The index of the element to return.
    * @return The tourShiftSegmentConfigSids at the given index.
    */
@@ -466,7 +466,7 @@ private static final long serialVersionUID = 0L;
      * IDs of the Tour Shift Segment Configs to delete.
      * </pre>
      *
-     * <code>repeated int64 tour_shift_segment_config_sids = 1 [json_name = "tourShiftSegmentConfigSids"];</code>
+     * <code>repeated int64 tour_shift_segment_config_sids = 1 [json_name = "tourShiftSegmentConfigSids", jstype = JS_STRING];</code>
      * @return A list containing the tourShiftSegmentConfigSids.
      */
     public java.util.List<java.lang.Long>
@@ -479,7 +479,7 @@ private static final long serialVersionUID = 0L;
      * IDs of the Tour Shift Segment Configs to delete.
      * </pre>
      *
-     * <code>repeated int64 tour_shift_segment_config_sids = 1 [json_name = "tourShiftSegmentConfigSids"];</code>
+     * <code>repeated int64 tour_shift_segment_config_sids = 1 [json_name = "tourShiftSegmentConfigSids", jstype = JS_STRING];</code>
      * @return The count of tourShiftSegmentConfigSids.
      */
     public int getTourShiftSegmentConfigSidsCount() {
@@ -490,7 +490,7 @@ private static final long serialVersionUID = 0L;
      * IDs of the Tour Shift Segment Configs to delete.
      * </pre>
      *
-     * <code>repeated int64 tour_shift_segment_config_sids = 1 [json_name = "tourShiftSegmentConfigSids"];</code>
+     * <code>repeated int64 tour_shift_segment_config_sids = 1 [json_name = "tourShiftSegmentConfigSids", jstype = JS_STRING];</code>
      * @param index The index of the element to return.
      * @return The tourShiftSegmentConfigSids at the given index.
      */
@@ -502,7 +502,7 @@ private static final long serialVersionUID = 0L;
      * IDs of the Tour Shift Segment Configs to delete.
      * </pre>
      *
-     * <code>repeated int64 tour_shift_segment_config_sids = 1 [json_name = "tourShiftSegmentConfigSids"];</code>
+     * <code>repeated int64 tour_shift_segment_config_sids = 1 [json_name = "tourShiftSegmentConfigSids", jstype = JS_STRING];</code>
      * @param index The index to set the value at.
      * @param value The tourShiftSegmentConfigSids to set.
      * @return This builder for chaining.
@@ -520,7 +520,7 @@ private static final long serialVersionUID = 0L;
      * IDs of the Tour Shift Segment Configs to delete.
      * </pre>
      *
-     * <code>repeated int64 tour_shift_segment_config_sids = 1 [json_name = "tourShiftSegmentConfigSids"];</code>
+     * <code>repeated int64 tour_shift_segment_config_sids = 1 [json_name = "tourShiftSegmentConfigSids", jstype = JS_STRING];</code>
      * @param value The tourShiftSegmentConfigSids to add.
      * @return This builder for chaining.
      */
@@ -536,7 +536,7 @@ private static final long serialVersionUID = 0L;
      * IDs of the Tour Shift Segment Configs to delete.
      * </pre>
      *
-     * <code>repeated int64 tour_shift_segment_config_sids = 1 [json_name = "tourShiftSegmentConfigSids"];</code>
+     * <code>repeated int64 tour_shift_segment_config_sids = 1 [json_name = "tourShiftSegmentConfigSids", jstype = JS_STRING];</code>
      * @param values The tourShiftSegmentConfigSids to add.
      * @return This builder for chaining.
      */
@@ -553,7 +553,7 @@ private static final long serialVersionUID = 0L;
      * IDs of the Tour Shift Segment Configs to delete.
      * </pre>
      *
-     * <code>repeated int64 tour_shift_segment_config_sids = 1 [json_name = "tourShiftSegmentConfigSids"];</code>
+     * <code>repeated int64 tour_shift_segment_config_sids = 1 [json_name = "tourShiftSegmentConfigSids", jstype = JS_STRING];</code>
      * @return This builder for chaining.
      */
     public Builder clearTourShiftSegmentConfigSids() {

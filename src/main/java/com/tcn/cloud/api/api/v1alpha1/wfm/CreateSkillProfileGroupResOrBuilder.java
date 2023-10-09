@@ -12,7 +12,7 @@ public interface CreateSkillProfileGroupResOrBuilder extends
    * ID of the skill profile group created.
    * </pre>
    *
-   * <code>int64 skill_profile_group_sid = 1 [json_name = "skillProfileGroupSid"];</code>
+   * <code>int64 skill_profile_group_sid = 1 [json_name = "skillProfileGroupSid", jstype = JS_STRING];</code>
    * @return The skillProfileGroupSid.
    */
   long getSkillProfileGroupSid();

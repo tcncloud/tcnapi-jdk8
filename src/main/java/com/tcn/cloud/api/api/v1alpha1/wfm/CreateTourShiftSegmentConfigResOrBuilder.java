@@ -12,7 +12,7 @@ public interface CreateTourShiftSegmentConfigResOrBuilder extends
    * ID of the newly created Tour shift Segment Config.
    * </pre>
    *
-   * <code>int64 tour_shift_segment_config_sid = 1 [json_name = "tourShiftSegmentConfigSid"];</code>
+   * <code>int64 tour_shift_segment_config_sid = 1 [json_name = "tourShiftSegmentConfigSid", jstype = JS_STRING];</code>
    * @return The tourShiftSegmentConfigSid.
    */
   long getTourShiftSegmentConfigSid();

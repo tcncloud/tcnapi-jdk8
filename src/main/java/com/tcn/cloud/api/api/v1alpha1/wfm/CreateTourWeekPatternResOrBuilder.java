@@ -12,7 +12,7 @@ public interface CreateTourWeekPatternResOrBuilder extends
    * ID of the newly created Tour Pattern.
    * </pre>
    *
-   * <code>int64 tour_week_pattern_sid = 1 [json_name = "tourWeekPatternSid"];</code>
+   * <code>int64 tour_week_pattern_sid = 1 [json_name = "tourWeekPatternSid", jstype = JS_STRING];</code>
    * @return The tourWeekPatternSid.
    */
   long getTourWeekPatternSid();

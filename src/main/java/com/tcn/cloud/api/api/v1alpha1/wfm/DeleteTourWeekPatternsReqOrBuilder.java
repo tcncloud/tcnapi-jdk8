@@ -14,7 +14,7 @@ public interface DeleteTourWeekPatternsReqOrBuilder extends
    * If any Tour Agent Collections are using the &#64;tour_week_pattern_sids, they must be deleted first.
    * </pre>
    *
-   * <code>repeated int64 tour_week_pattern_sids = 1 [json_name = "tourWeekPatternSids"];</code>
+   * <code>repeated int64 tour_week_pattern_sids = 1 [json_name = "tourWeekPatternSids", jstype = JS_STRING];</code>
    * @return A list containing the tourWeekPatternSids.
    */
   java.util.List<java.lang.Long> getTourWeekPatternSidsList();
@@ -25,7 +25,7 @@ public interface DeleteTourWeekPatternsReqOrBuilder extends
    * If any Tour Agent Collections are using the &#64;tour_week_pattern_sids, they must be deleted first.
    * </pre>
    *
-   * <code>repeated int64 tour_week_pattern_sids = 1 [json_name = "tourWeekPatternSids"];</code>
+   * <code>repeated int64 tour_week_pattern_sids = 1 [json_name = "tourWeekPatternSids", jstype = JS_STRING];</code>
    * @return The count of tourWeekPatternSids.
    */
   int getTourWeekPatternSidsCount();
@@ -36,7 +36,7 @@ public interface DeleteTourWeekPatternsReqOrBuilder extends
    * If any Tour Agent Collections are using the &#64;tour_week_pattern_sids, they must be deleted first.
    * </pre>
    *
-   * <code>repeated int64 tour_week_pattern_sids = 1 [json_name = "tourWeekPatternSids"];</code>
+   * <code>repeated int64 tour_week_pattern_sids = 1 [json_name = "tourWeekPatternSids", jstype = JS_STRING];</code>
    * @param index The index of the element to return.
    * @return The tourWeekPatternSids at the given index.
    */

@@ -12,7 +12,7 @@ public interface TourWeekPatternOrBuilder extends
    * The unique ID of the tour week pattern.
    * </pre>
    *
-   * <code>int64 tour_week_pattern_sid = 1 [json_name = "tourWeekPatternSid"];</code>
+   * <code>int64 tour_week_pattern_sid = 1 [json_name = "tourWeekPatternSid", jstype = JS_STRING];</code>
    * @return The tourWeekPatternSid.
    */
   long getTourWeekPatternSid();
@@ -22,7 +22,7 @@ public interface TourWeekPatternOrBuilder extends
    * The ID of the tour pattern that the tour week pattern belongs to.
    * </pre>
    *
-   * <code>int64 tour_pattern_sid = 2 [json_name = "tourPatternSid"];</code>
+   * <code>int64 tour_pattern_sid = 2 [json_name = "tourPatternSid", jstype = JS_STRING];</code>
    * @return The tourPatternSid.
    */
   long getTourPatternSid();

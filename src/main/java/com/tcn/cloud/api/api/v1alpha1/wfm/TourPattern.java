@@ -51,7 +51,7 @@ private static final long serialVersionUID = 0L;
    * The unique ID of this tour pattern sid.
    * </pre>
    *
-   * <code>int64 tour_pattern_sid = 1 [json_name = "tourPatternSid"];</code>
+   * <code>int64 tour_pattern_sid = 1 [json_name = "tourPatternSid", jstype = JS_STRING];</code>
    * @return The tourPatternSid.
    */
   @java.lang.Override
@@ -696,7 +696,7 @@ private static final long serialVersionUID = 0L;
      * The unique ID of this tour pattern sid.
      * </pre>
      *
-     * <code>int64 tour_pattern_sid = 1 [json_name = "tourPatternSid"];</code>
+     * <code>int64 tour_pattern_sid = 1 [json_name = "tourPatternSid", jstype = JS_STRING];</code>
      * @return The tourPatternSid.
      */
     @java.lang.Override
@@ -708,7 +708,7 @@ private static final long serialVersionUID = 0L;
      * The unique ID of this tour pattern sid.
      * </pre>
      *
-     * <code>int64 tour_pattern_sid = 1 [json_name = "tourPatternSid"];</code>
+     * <code>int64 tour_pattern_sid = 1 [json_name = "tourPatternSid", jstype = JS_STRING];</code>
      * @param value The tourPatternSid to set.
      * @return This builder for chaining.
      */
@@ -724,7 +724,7 @@ private static final long serialVersionUID = 0L;
      * The unique ID of this tour pattern sid.
      * </pre>
      *
-     * <code>int64 tour_pattern_sid = 1 [json_name = "tourPatternSid"];</code>
+     * <code>int64 tour_pattern_sid = 1 [json_name = "tourPatternSid", jstype = JS_STRING];</code>
      * @return This builder for chaining.
      */
     public Builder clearTourPatternSid() {

@@ -50,7 +50,7 @@ private static final long serialVersionUID = 0L;
    * The unique ID of the tour shift instance config.
    * </pre>
    *
-   * <code>int64 tour_shift_instance_config_sid = 1 [json_name = "tourShiftInstanceConfigSid"];</code>
+   * <code>int64 tour_shift_instance_config_sid = 1 [json_name = "tourShiftInstanceConfigSid", jstype = JS_STRING];</code>
    * @return The tourShiftInstanceConfigSid.
    */
   @java.lang.Override
@@ -65,7 +65,7 @@ private static final long serialVersionUID = 0L;
    * The ID of the tour week pattern that the tour shift instance config belongs to.
    * </pre>
    *
-   * <code>int64 tour_week_pattern_sid = 2 [json_name = "tourWeekPatternSid"];</code>
+   * <code>int64 tour_week_pattern_sid = 2 [json_name = "tourWeekPatternSid", jstype = JS_STRING];</code>
    * @return The tourWeekPatternSid.
    */
   @java.lang.Override
@@ -643,7 +643,7 @@ private static final long serialVersionUID = 0L;
      * The unique ID of the tour shift instance config.
      * </pre>
      *
-     * <code>int64 tour_shift_instance_config_sid = 1 [json_name = "tourShiftInstanceConfigSid"];</code>
+     * <code>int64 tour_shift_instance_config_sid = 1 [json_name = "tourShiftInstanceConfigSid", jstype = JS_STRING];</code>
      * @return The tourShiftInstanceConfigSid.
      */
     @java.lang.Override
@@ -655,7 +655,7 @@ private static final long serialVersionUID = 0L;
      * The unique ID of the tour shift instance config.
      * </pre>
      *
-     * <code>int64 tour_shift_instance_config_sid = 1 [json_name = "tourShiftInstanceConfigSid"];</code>
+     * <code>int64 tour_shift_instance_config_sid = 1 [json_name = "tourShiftInstanceConfigSid", jstype = JS_STRING];</code>
      * @param value The tourShiftInstanceConfigSid to set.
      * @return This builder for chaining.
      */
@@ -671,7 +671,7 @@ private static final long serialVersionUID = 0L;
      * The unique ID of the tour shift instance config.
      * </pre>
      *
-     * <code>int64 tour_shift_instance_config_sid = 1 [json_name = "tourShiftInstanceConfigSid"];</code>
+     * <code>int64 tour_shift_instance_config_sid = 1 [json_name = "tourShiftInstanceConfigSid", jstype = JS_STRING];</code>
      * @return This builder for chaining.
      */
     public Builder clearTourShiftInstanceConfigSid() {
@@ -687,7 +687,7 @@ private static final long serialVersionUID = 0L;
      * The ID of the tour week pattern that the tour shift instance config belongs to.
      * </pre>
      *
-     * <code>int64 tour_week_pattern_sid = 2 [json_name = "tourWeekPatternSid"];</code>
+     * <code>int64 tour_week_pattern_sid = 2 [json_name = "tourWeekPatternSid", jstype = JS_STRING];</code>
      * @return The tourWeekPatternSid.
      */
     @java.lang.Override
@@ -699,7 +699,7 @@ private static final long serialVersionUID = 0L;
      * The ID of the tour week pattern that the tour shift instance config belongs to.
      * </pre>
      *
-     * <code>int64 tour_week_pattern_sid = 2 [json_name = "tourWeekPatternSid"];</code>
+     * <code>int64 tour_week_pattern_sid = 2 [json_name = "tourWeekPatternSid", jstype = JS_STRING];</code>
      * @param value The tourWeekPatternSid to set.
      * @return This builder for chaining.
      */
@@ -715,7 +715,7 @@ private static final long serialVersionUID = 0L;
      * The ID of the tour week pattern that the tour shift instance config belongs to.
      * </pre>
      *
-     * <code>int64 tour_week_pattern_sid = 2 [json_name = "tourWeekPatternSid"];</code>
+     * <code>int64 tour_week_pattern_sid = 2 [json_name = "tourWeekPatternSid", jstype = JS_STRING];</code>
      * @return This builder for chaining.
      */
     public Builder clearTourWeekPatternSid() {
