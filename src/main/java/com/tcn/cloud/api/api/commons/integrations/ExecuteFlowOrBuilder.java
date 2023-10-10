@@ -2959,5 +2959,35 @@ public interface ExecuteFlowOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.integrations.ExecutePriocommerceCcPaymentOrBuilder getPriocommerceCcPaymentOrBuilder();
 
+  /**
+   * <code>.api.commons.integrations.ExecuteNavigaCreatePayment naviga_create_payment = 4001 [json_name = "navigaCreatePayment"];</code>
+   * @return Whether the navigaCreatePayment field is set.
+   */
+  boolean hasNavigaCreatePayment();
+  /**
+   * <code>.api.commons.integrations.ExecuteNavigaCreatePayment naviga_create_payment = 4001 [json_name = "navigaCreatePayment"];</code>
+   * @return The navigaCreatePayment.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePayment getNavigaCreatePayment();
+  /**
+   * <code>.api.commons.integrations.ExecuteNavigaCreatePayment naviga_create_payment = 4001 [json_name = "navigaCreatePayment"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePaymentOrBuilder getNavigaCreatePaymentOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecutePaynsecondsTokenizeCard paynseconds_tokenize_card = 4101 [json_name = "paynsecondsTokenizeCard"];</code>
+   * @return Whether the paynsecondsTokenizeCard field is set.
+   */
+  boolean hasPaynsecondsTokenizeCard();
+  /**
+   * <code>.api.commons.integrations.ExecutePaynsecondsTokenizeCard paynseconds_tokenize_card = 4101 [json_name = "paynsecondsTokenizeCard"];</code>
+   * @return The paynsecondsTokenizeCard.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCard getPaynsecondsTokenizeCard();
+  /**
+   * <code>.api.commons.integrations.ExecutePaynsecondsTokenizeCard paynseconds_tokenize_card = 4101 [json_name = "paynsecondsTokenizeCard"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCardOrBuilder getPaynsecondsTokenizeCardOrBuilder();
+
   com.tcn.cloud.api.api.commons.integrations.ExecuteFlow.ValueCase getValueCase();
 }

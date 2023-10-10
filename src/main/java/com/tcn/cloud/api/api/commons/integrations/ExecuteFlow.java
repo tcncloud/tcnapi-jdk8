@@ -248,6 +248,8 @@ private static final long serialVersionUID = 0L;
     NEWZWARE_PHONE_LOOKUP_MULTI(3809),
     PRIOCOMMERCE_ACH_PAYMENT(3901),
     PRIOCOMMERCE_CC_PAYMENT(3902),
+    NAVIGA_CREATE_PAYMENT(4001),
+    PAYNSECONDS_TOKENIZE_CARD(4101),
     VALUE_NOT_SET(0);
     private final int value;
     private ValueCase(int value) {
@@ -461,6 +463,8 @@ private static final long serialVersionUID = 0L;
         case 3809: return NEWZWARE_PHONE_LOOKUP_MULTI;
         case 3901: return PRIOCOMMERCE_ACH_PAYMENT;
         case 3902: return PRIOCOMMERCE_CC_PAYMENT;
+        case 4001: return NAVIGA_CREATE_PAYMENT;
+        case 4101: return PAYNSECONDS_TOKENIZE_CARD;
         case 0: return VALUE_NOT_SET;
         default: return null;
       }
@@ -6591,6 +6595,68 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.integrations.ExecutePriocommerceCcPayment.getDefaultInstance();
   }
 
+  public static final int NAVIGA_CREATE_PAYMENT_FIELD_NUMBER = 4001;
+  /**
+   * <code>.api.commons.integrations.ExecuteNavigaCreatePayment naviga_create_payment = 4001 [json_name = "navigaCreatePayment"];</code>
+   * @return Whether the navigaCreatePayment field is set.
+   */
+  @java.lang.Override
+  public boolean hasNavigaCreatePayment() {
+    return valueCase_ == 4001;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteNavigaCreatePayment naviga_create_payment = 4001 [json_name = "navigaCreatePayment"];</code>
+   * @return The navigaCreatePayment.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePayment getNavigaCreatePayment() {
+    if (valueCase_ == 4001) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePayment) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePayment.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteNavigaCreatePayment naviga_create_payment = 4001 [json_name = "navigaCreatePayment"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePaymentOrBuilder getNavigaCreatePaymentOrBuilder() {
+    if (valueCase_ == 4001) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePayment) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePayment.getDefaultInstance();
+  }
+
+  public static final int PAYNSECONDS_TOKENIZE_CARD_FIELD_NUMBER = 4101;
+  /**
+   * <code>.api.commons.integrations.ExecutePaynsecondsTokenizeCard paynseconds_tokenize_card = 4101 [json_name = "paynsecondsTokenizeCard"];</code>
+   * @return Whether the paynsecondsTokenizeCard field is set.
+   */
+  @java.lang.Override
+  public boolean hasPaynsecondsTokenizeCard() {
+    return valueCase_ == 4101;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecutePaynsecondsTokenizeCard paynseconds_tokenize_card = 4101 [json_name = "paynsecondsTokenizeCard"];</code>
+   * @return The paynsecondsTokenizeCard.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCard getPaynsecondsTokenizeCard() {
+    if (valueCase_ == 4101) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCard) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCard.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecutePaynsecondsTokenizeCard paynseconds_tokenize_card = 4101 [json_name = "paynsecondsTokenizeCard"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCardOrBuilder getPaynsecondsTokenizeCardOrBuilder() {
+    if (valueCase_ == 4101) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCard) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCard.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -7195,6 +7261,12 @@ private static final long serialVersionUID = 0L;
     }
     if (valueCase_ == 3902) {
       output.writeMessage(3902, (com.tcn.cloud.api.api.commons.integrations.ExecutePriocommerceCcPayment) value_);
+    }
+    if (valueCase_ == 4001) {
+      output.writeMessage(4001, (com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePayment) value_);
+    }
+    if (valueCase_ == 4101) {
+      output.writeMessage(4101, (com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCard) value_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -7991,6 +8063,14 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 3902) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3902, (com.tcn.cloud.api.api.commons.integrations.ExecutePriocommerceCcPayment) value_);
+    }
+    if (valueCase_ == 4001) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4001, (com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePayment) value_);
+    }
+    if (valueCase_ == 4101) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4101, (com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCard) value_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -8795,6 +8875,14 @@ private static final long serialVersionUID = 0L;
         if (!getPriocommerceCcPayment()
             .equals(other.getPriocommerceCcPayment())) return false;
         break;
+      case 4001:
+        if (!getNavigaCreatePayment()
+            .equals(other.getNavigaCreatePayment())) return false;
+        break;
+      case 4101:
+        if (!getPaynsecondsTokenizeCard()
+            .equals(other.getPaynsecondsTokenizeCard())) return false;
+        break;
       case 0:
       default:
     }
@@ -9596,6 +9684,14 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + PRIOCOMMERCE_CC_PAYMENT_FIELD_NUMBER;
         hash = (53 * hash) + getPriocommerceCcPayment().hashCode();
         break;
+      case 4001:
+        hash = (37 * hash) + NAVIGA_CREATE_PAYMENT_FIELD_NUMBER;
+        hash = (53 * hash) + getNavigaCreatePayment().hashCode();
+        break;
+      case 4101:
+        hash = (37 * hash) + PAYNSECONDS_TOKENIZE_CARD_FIELD_NUMBER;
+        hash = (53 * hash) + getPaynsecondsTokenizeCard().hashCode();
+        break;
       case 0:
       default:
     }
@@ -10331,6 +10427,12 @@ private static final long serialVersionUID = 0L;
       }
       if (priocommerceCcPaymentBuilder_ != null) {
         priocommerceCcPaymentBuilder_.clear();
+      }
+      if (navigaCreatePaymentBuilder_ != null) {
+        navigaCreatePaymentBuilder_.clear();
+      }
+      if (paynsecondsTokenizeCardBuilder_ != null) {
+        paynsecondsTokenizeCardBuilder_.clear();
       }
       valueCase_ = 0;
       value_ = null;
@@ -11190,6 +11292,14 @@ private static final long serialVersionUID = 0L;
           priocommerceCcPaymentBuilder_ != null) {
         result.value_ = priocommerceCcPaymentBuilder_.build();
       }
+      if (valueCase_ == 4001 &&
+          navigaCreatePaymentBuilder_ != null) {
+        result.value_ = navigaCreatePaymentBuilder_.build();
+      }
+      if (valueCase_ == 4101 &&
+          paynsecondsTokenizeCardBuilder_ != null) {
+        result.value_ = paynsecondsTokenizeCardBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -12024,6 +12134,14 @@ private static final long serialVersionUID = 0L;
         }
         case PRIOCOMMERCE_CC_PAYMENT: {
           mergePriocommerceCcPayment(other.getPriocommerceCcPayment());
+          break;
+        }
+        case NAVIGA_CREATE_PAYMENT: {
+          mergeNavigaCreatePayment(other.getNavigaCreatePayment());
+          break;
+        }
+        case PAYNSECONDS_TOKENIZE_CARD: {
+          mergePaynsecondsTokenizeCard(other.getPaynsecondsTokenizeCard());
           break;
         }
         case VALUE_NOT_SET: {
@@ -13433,6 +13551,20 @@ private static final long serialVersionUID = 0L;
               valueCase_ = 3902;
               break;
             } // case 31218
+            case 32010: {
+              input.readMessage(
+                  getNavigaCreatePaymentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 4001;
+              break;
+            } // case 32010
+            case 32810: {
+              input.readMessage(
+                  getPaynsecondsTokenizeCardFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 4101;
+              break;
+            } // case 32810
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -41373,6 +41505,290 @@ private static final long serialVersionUID = 0L;
       valueCase_ = 3902;
       onChanged();
       return priocommerceCcPaymentBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePayment, com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePaymentOrBuilder> navigaCreatePaymentBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteNavigaCreatePayment naviga_create_payment = 4001 [json_name = "navigaCreatePayment"];</code>
+     * @return Whether the navigaCreatePayment field is set.
+     */
+    @java.lang.Override
+    public boolean hasNavigaCreatePayment() {
+      return valueCase_ == 4001;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteNavigaCreatePayment naviga_create_payment = 4001 [json_name = "navigaCreatePayment"];</code>
+     * @return The navigaCreatePayment.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePayment getNavigaCreatePayment() {
+      if (navigaCreatePaymentBuilder_ == null) {
+        if (valueCase_ == 4001) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePayment) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePayment.getDefaultInstance();
+      } else {
+        if (valueCase_ == 4001) {
+          return navigaCreatePaymentBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePayment.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteNavigaCreatePayment naviga_create_payment = 4001 [json_name = "navigaCreatePayment"];</code>
+     */
+    public Builder setNavigaCreatePayment(com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePayment value) {
+      if (navigaCreatePaymentBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        navigaCreatePaymentBuilder_.setMessage(value);
+      }
+      valueCase_ = 4001;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteNavigaCreatePayment naviga_create_payment = 4001 [json_name = "navigaCreatePayment"];</code>
+     */
+    public Builder setNavigaCreatePayment(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePayment.Builder builderForValue) {
+      if (navigaCreatePaymentBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        navigaCreatePaymentBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 4001;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteNavigaCreatePayment naviga_create_payment = 4001 [json_name = "navigaCreatePayment"];</code>
+     */
+    public Builder mergeNavigaCreatePayment(com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePayment value) {
+      if (navigaCreatePaymentBuilder_ == null) {
+        if (valueCase_ == 4001 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePayment.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePayment.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePayment) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 4001) {
+          navigaCreatePaymentBuilder_.mergeFrom(value);
+        } else {
+          navigaCreatePaymentBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 4001;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteNavigaCreatePayment naviga_create_payment = 4001 [json_name = "navigaCreatePayment"];</code>
+     */
+    public Builder clearNavigaCreatePayment() {
+      if (navigaCreatePaymentBuilder_ == null) {
+        if (valueCase_ == 4001) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 4001) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        navigaCreatePaymentBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteNavigaCreatePayment naviga_create_payment = 4001 [json_name = "navigaCreatePayment"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePayment.Builder getNavigaCreatePaymentBuilder() {
+      return getNavigaCreatePaymentFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteNavigaCreatePayment naviga_create_payment = 4001 [json_name = "navigaCreatePayment"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePaymentOrBuilder getNavigaCreatePaymentOrBuilder() {
+      if ((valueCase_ == 4001) && (navigaCreatePaymentBuilder_ != null)) {
+        return navigaCreatePaymentBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 4001) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePayment) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePayment.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteNavigaCreatePayment naviga_create_payment = 4001 [json_name = "navigaCreatePayment"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePayment, com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePaymentOrBuilder> 
+        getNavigaCreatePaymentFieldBuilder() {
+      if (navigaCreatePaymentBuilder_ == null) {
+        if (!(valueCase_ == 4001)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePayment.getDefaultInstance();
+        }
+        navigaCreatePaymentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePayment, com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePaymentOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePayment) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 4001;
+      onChanged();
+      return navigaCreatePaymentBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCard, com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCard.Builder, com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCardOrBuilder> paynsecondsTokenizeCardBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecutePaynsecondsTokenizeCard paynseconds_tokenize_card = 4101 [json_name = "paynsecondsTokenizeCard"];</code>
+     * @return Whether the paynsecondsTokenizeCard field is set.
+     */
+    @java.lang.Override
+    public boolean hasPaynsecondsTokenizeCard() {
+      return valueCase_ == 4101;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePaynsecondsTokenizeCard paynseconds_tokenize_card = 4101 [json_name = "paynsecondsTokenizeCard"];</code>
+     * @return The paynsecondsTokenizeCard.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCard getPaynsecondsTokenizeCard() {
+      if (paynsecondsTokenizeCardBuilder_ == null) {
+        if (valueCase_ == 4101) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCard) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCard.getDefaultInstance();
+      } else {
+        if (valueCase_ == 4101) {
+          return paynsecondsTokenizeCardBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCard.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePaynsecondsTokenizeCard paynseconds_tokenize_card = 4101 [json_name = "paynsecondsTokenizeCard"];</code>
+     */
+    public Builder setPaynsecondsTokenizeCard(com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCard value) {
+      if (paynsecondsTokenizeCardBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        paynsecondsTokenizeCardBuilder_.setMessage(value);
+      }
+      valueCase_ = 4101;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePaynsecondsTokenizeCard paynseconds_tokenize_card = 4101 [json_name = "paynsecondsTokenizeCard"];</code>
+     */
+    public Builder setPaynsecondsTokenizeCard(
+        com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCard.Builder builderForValue) {
+      if (paynsecondsTokenizeCardBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        paynsecondsTokenizeCardBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 4101;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePaynsecondsTokenizeCard paynseconds_tokenize_card = 4101 [json_name = "paynsecondsTokenizeCard"];</code>
+     */
+    public Builder mergePaynsecondsTokenizeCard(com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCard value) {
+      if (paynsecondsTokenizeCardBuilder_ == null) {
+        if (valueCase_ == 4101 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCard.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCard.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCard) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 4101) {
+          paynsecondsTokenizeCardBuilder_.mergeFrom(value);
+        } else {
+          paynsecondsTokenizeCardBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 4101;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePaynsecondsTokenizeCard paynseconds_tokenize_card = 4101 [json_name = "paynsecondsTokenizeCard"];</code>
+     */
+    public Builder clearPaynsecondsTokenizeCard() {
+      if (paynsecondsTokenizeCardBuilder_ == null) {
+        if (valueCase_ == 4101) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 4101) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        paynsecondsTokenizeCardBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePaynsecondsTokenizeCard paynseconds_tokenize_card = 4101 [json_name = "paynsecondsTokenizeCard"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCard.Builder getPaynsecondsTokenizeCardBuilder() {
+      return getPaynsecondsTokenizeCardFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePaynsecondsTokenizeCard paynseconds_tokenize_card = 4101 [json_name = "paynsecondsTokenizeCard"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCardOrBuilder getPaynsecondsTokenizeCardOrBuilder() {
+      if ((valueCase_ == 4101) && (paynsecondsTokenizeCardBuilder_ != null)) {
+        return paynsecondsTokenizeCardBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 4101) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCard) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCard.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePaynsecondsTokenizeCard paynseconds_tokenize_card = 4101 [json_name = "paynsecondsTokenizeCard"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCard, com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCard.Builder, com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCardOrBuilder> 
+        getPaynsecondsTokenizeCardFieldBuilder() {
+      if (paynsecondsTokenizeCardBuilder_ == null) {
+        if (!(valueCase_ == 4101)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCard.getDefaultInstance();
+        }
+        paynsecondsTokenizeCardBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCard, com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCard.Builder, com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCardOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCard) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 4101;
+      onChanged();
+      return paynsecondsTokenizeCardBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
