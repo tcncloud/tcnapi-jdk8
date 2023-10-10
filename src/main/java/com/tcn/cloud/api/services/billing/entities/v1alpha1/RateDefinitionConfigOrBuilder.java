@@ -65,19 +65,19 @@ public interface RateDefinitionConfigOrBuilder extends
   com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicConfigOrBuilder getAgentTextMessageEmailMessageConfigOrBuilder();
 
   /**
-   * <code>.services.billing.entities.v1alpha1.BasicAmountConfig agent_text_message_email_size_config = 102 [json_name = "agentTextMessageEmailSizeConfig"];</code>
+   * <code>.services.billing.entities.v1alpha1.BasicUnitConfig agent_text_message_email_size_config = 102 [json_name = "agentTextMessageEmailSizeConfig"];</code>
    * @return Whether the agentTextMessageEmailSizeConfig field is set.
    */
   boolean hasAgentTextMessageEmailSizeConfig();
   /**
-   * <code>.services.billing.entities.v1alpha1.BasicAmountConfig agent_text_message_email_size_config = 102 [json_name = "agentTextMessageEmailSizeConfig"];</code>
+   * <code>.services.billing.entities.v1alpha1.BasicUnitConfig agent_text_message_email_size_config = 102 [json_name = "agentTextMessageEmailSizeConfig"];</code>
    * @return The agentTextMessageEmailSizeConfig.
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfig getAgentTextMessageEmailSizeConfig();
+  com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicUnitConfig getAgentTextMessageEmailSizeConfig();
   /**
-   * <code>.services.billing.entities.v1alpha1.BasicAmountConfig agent_text_message_email_size_config = 102 [json_name = "agentTextMessageEmailSizeConfig"];</code>
+   * <code>.services.billing.entities.v1alpha1.BasicUnitConfig agent_text_message_email_size_config = 102 [json_name = "agentTextMessageEmailSizeConfig"];</code>
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfigOrBuilder getAgentTextMessageEmailSizeConfigOrBuilder();
+  com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicUnitConfigOrBuilder getAgentTextMessageEmailSizeConfigOrBuilder();
 
   /**
    * <code>.services.billing.entities.v1alpha1.BasicConfig agent_text_message_sms_config = 103 [json_name = "agentTextMessageSmsConfig"];</code>
@@ -110,19 +110,19 @@ public interface RateDefinitionConfigOrBuilder extends
   com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicConfigOrBuilder getTaskMessageSentEmailMessageConfigOrBuilder();
 
   /**
-   * <code>.services.billing.entities.v1alpha1.BasicAmountConfig task_message_sent_email_size_config = 105 [json_name = "taskMessageSentEmailSizeConfig"];</code>
+   * <code>.services.billing.entities.v1alpha1.BasicUnitConfig task_message_sent_email_size_config = 105 [json_name = "taskMessageSentEmailSizeConfig"];</code>
    * @return Whether the taskMessageSentEmailSizeConfig field is set.
    */
   boolean hasTaskMessageSentEmailSizeConfig();
   /**
-   * <code>.services.billing.entities.v1alpha1.BasicAmountConfig task_message_sent_email_size_config = 105 [json_name = "taskMessageSentEmailSizeConfig"];</code>
+   * <code>.services.billing.entities.v1alpha1.BasicUnitConfig task_message_sent_email_size_config = 105 [json_name = "taskMessageSentEmailSizeConfig"];</code>
    * @return The taskMessageSentEmailSizeConfig.
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfig getTaskMessageSentEmailSizeConfig();
+  com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicUnitConfig getTaskMessageSentEmailSizeConfig();
   /**
-   * <code>.services.billing.entities.v1alpha1.BasicAmountConfig task_message_sent_email_size_config = 105 [json_name = "taskMessageSentEmailSizeConfig"];</code>
+   * <code>.services.billing.entities.v1alpha1.BasicUnitConfig task_message_sent_email_size_config = 105 [json_name = "taskMessageSentEmailSizeConfig"];</code>
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfigOrBuilder getTaskMessageSentEmailSizeConfigOrBuilder();
+  com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicUnitConfigOrBuilder getTaskMessageSentEmailSizeConfigOrBuilder();
 
   /**
    * <code>.services.billing.entities.v1alpha1.BasicConfig task_message_sent_sms_config = 106 [json_name = "taskMessageSentSmsConfig"];</code>
@@ -185,19 +185,19 @@ public interface RateDefinitionConfigOrBuilder extends
   com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicConfigOrBuilder getManagerTextMessageEmailMessageConfigOrBuilder();
 
   /**
-   * <code>.services.billing.entities.v1alpha1.BasicAmountConfig manager_text_message_email_size_config = 110 [json_name = "managerTextMessageEmailSizeConfig"];</code>
+   * <code>.services.billing.entities.v1alpha1.BasicUnitConfig manager_text_message_email_size_config = 110 [json_name = "managerTextMessageEmailSizeConfig"];</code>
    * @return Whether the managerTextMessageEmailSizeConfig field is set.
    */
   boolean hasManagerTextMessageEmailSizeConfig();
   /**
-   * <code>.services.billing.entities.v1alpha1.BasicAmountConfig manager_text_message_email_size_config = 110 [json_name = "managerTextMessageEmailSizeConfig"];</code>
+   * <code>.services.billing.entities.v1alpha1.BasicUnitConfig manager_text_message_email_size_config = 110 [json_name = "managerTextMessageEmailSizeConfig"];</code>
    * @return The managerTextMessageEmailSizeConfig.
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfig getManagerTextMessageEmailSizeConfig();
+  com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicUnitConfig getManagerTextMessageEmailSizeConfig();
   /**
-   * <code>.services.billing.entities.v1alpha1.BasicAmountConfig manager_text_message_email_size_config = 110 [json_name = "managerTextMessageEmailSizeConfig"];</code>
+   * <code>.services.billing.entities.v1alpha1.BasicUnitConfig manager_text_message_email_size_config = 110 [json_name = "managerTextMessageEmailSizeConfig"];</code>
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfigOrBuilder getManagerTextMessageEmailSizeConfigOrBuilder();
+  com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicUnitConfigOrBuilder getManagerTextMessageEmailSizeConfigOrBuilder();
 
   /**
    * <code>.services.billing.entities.v1alpha1.BasicConfig manager_text_message_sms_config = 111 [json_name = "managerTextMessageSmsConfig"];</code>
@@ -245,19 +245,19 @@ public interface RateDefinitionConfigOrBuilder extends
   com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicConfigOrBuilder getCustomerTextMessageEmailMessageConfigOrBuilder();
 
   /**
-   * <code>.services.billing.entities.v1alpha1.BasicAmountConfig customer_text_message_email_size_config = 114 [json_name = "customerTextMessageEmailSizeConfig"];</code>
+   * <code>.services.billing.entities.v1alpha1.BasicUnitConfig customer_text_message_email_size_config = 114 [json_name = "customerTextMessageEmailSizeConfig"];</code>
    * @return Whether the customerTextMessageEmailSizeConfig field is set.
    */
   boolean hasCustomerTextMessageEmailSizeConfig();
   /**
-   * <code>.services.billing.entities.v1alpha1.BasicAmountConfig customer_text_message_email_size_config = 114 [json_name = "customerTextMessageEmailSizeConfig"];</code>
+   * <code>.services.billing.entities.v1alpha1.BasicUnitConfig customer_text_message_email_size_config = 114 [json_name = "customerTextMessageEmailSizeConfig"];</code>
    * @return The customerTextMessageEmailSizeConfig.
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfig getCustomerTextMessageEmailSizeConfig();
+  com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicUnitConfig getCustomerTextMessageEmailSizeConfig();
   /**
-   * <code>.services.billing.entities.v1alpha1.BasicAmountConfig customer_text_message_email_size_config = 114 [json_name = "customerTextMessageEmailSizeConfig"];</code>
+   * <code>.services.billing.entities.v1alpha1.BasicUnitConfig customer_text_message_email_size_config = 114 [json_name = "customerTextMessageEmailSizeConfig"];</code>
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfigOrBuilder getCustomerTextMessageEmailSizeConfigOrBuilder();
+  com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicUnitConfigOrBuilder getCustomerTextMessageEmailSizeConfigOrBuilder();
 
   /**
    * <code>.services.billing.entities.v1alpha1.BasicConfig customer_text_message_sms_config = 115 [json_name = "customerTextMessageSmsConfig"];</code>
@@ -275,49 +275,49 @@ public interface RateDefinitionConfigOrBuilder extends
   com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicConfigOrBuilder getCustomerTextMessageSmsConfigOrBuilder();
 
   /**
-   * <code>.services.billing.entities.v1alpha1.BasicAmountConfig agent_text_message_chat_size_config = 116 [json_name = "agentTextMessageChatSizeConfig"];</code>
+   * <code>.services.billing.entities.v1alpha1.BasicUnitConfig agent_text_message_chat_size_config = 116 [json_name = "agentTextMessageChatSizeConfig"];</code>
    * @return Whether the agentTextMessageChatSizeConfig field is set.
    */
   boolean hasAgentTextMessageChatSizeConfig();
   /**
-   * <code>.services.billing.entities.v1alpha1.BasicAmountConfig agent_text_message_chat_size_config = 116 [json_name = "agentTextMessageChatSizeConfig"];</code>
+   * <code>.services.billing.entities.v1alpha1.BasicUnitConfig agent_text_message_chat_size_config = 116 [json_name = "agentTextMessageChatSizeConfig"];</code>
    * @return The agentTextMessageChatSizeConfig.
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfig getAgentTextMessageChatSizeConfig();
+  com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicUnitConfig getAgentTextMessageChatSizeConfig();
   /**
-   * <code>.services.billing.entities.v1alpha1.BasicAmountConfig agent_text_message_chat_size_config = 116 [json_name = "agentTextMessageChatSizeConfig"];</code>
+   * <code>.services.billing.entities.v1alpha1.BasicUnitConfig agent_text_message_chat_size_config = 116 [json_name = "agentTextMessageChatSizeConfig"];</code>
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfigOrBuilder getAgentTextMessageChatSizeConfigOrBuilder();
+  com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicUnitConfigOrBuilder getAgentTextMessageChatSizeConfigOrBuilder();
 
   /**
-   * <code>.services.billing.entities.v1alpha1.BasicAmountConfig manager_text_message_chat_size_config = 117 [json_name = "managerTextMessageChatSizeConfig"];</code>
+   * <code>.services.billing.entities.v1alpha1.BasicUnitConfig manager_text_message_chat_size_config = 117 [json_name = "managerTextMessageChatSizeConfig"];</code>
    * @return Whether the managerTextMessageChatSizeConfig field is set.
    */
   boolean hasManagerTextMessageChatSizeConfig();
   /**
-   * <code>.services.billing.entities.v1alpha1.BasicAmountConfig manager_text_message_chat_size_config = 117 [json_name = "managerTextMessageChatSizeConfig"];</code>
+   * <code>.services.billing.entities.v1alpha1.BasicUnitConfig manager_text_message_chat_size_config = 117 [json_name = "managerTextMessageChatSizeConfig"];</code>
    * @return The managerTextMessageChatSizeConfig.
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfig getManagerTextMessageChatSizeConfig();
+  com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicUnitConfig getManagerTextMessageChatSizeConfig();
   /**
-   * <code>.services.billing.entities.v1alpha1.BasicAmountConfig manager_text_message_chat_size_config = 117 [json_name = "managerTextMessageChatSizeConfig"];</code>
+   * <code>.services.billing.entities.v1alpha1.BasicUnitConfig manager_text_message_chat_size_config = 117 [json_name = "managerTextMessageChatSizeConfig"];</code>
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfigOrBuilder getManagerTextMessageChatSizeConfigOrBuilder();
+  com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicUnitConfigOrBuilder getManagerTextMessageChatSizeConfigOrBuilder();
 
   /**
-   * <code>.services.billing.entities.v1alpha1.BasicAmountConfig customer_text_message_chat_size_config = 118 [json_name = "customerTextMessageChatSizeConfig"];</code>
+   * <code>.services.billing.entities.v1alpha1.BasicUnitConfig customer_text_message_chat_size_config = 118 [json_name = "customerTextMessageChatSizeConfig"];</code>
    * @return Whether the customerTextMessageChatSizeConfig field is set.
    */
   boolean hasCustomerTextMessageChatSizeConfig();
   /**
-   * <code>.services.billing.entities.v1alpha1.BasicAmountConfig customer_text_message_chat_size_config = 118 [json_name = "customerTextMessageChatSizeConfig"];</code>
+   * <code>.services.billing.entities.v1alpha1.BasicUnitConfig customer_text_message_chat_size_config = 118 [json_name = "customerTextMessageChatSizeConfig"];</code>
    * @return The customerTextMessageChatSizeConfig.
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfig getCustomerTextMessageChatSizeConfig();
+  com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicUnitConfig getCustomerTextMessageChatSizeConfig();
   /**
-   * <code>.services.billing.entities.v1alpha1.BasicAmountConfig customer_text_message_chat_size_config = 118 [json_name = "customerTextMessageChatSizeConfig"];</code>
+   * <code>.services.billing.entities.v1alpha1.BasicUnitConfig customer_text_message_chat_size_config = 118 [json_name = "customerTextMessageChatSizeConfig"];</code>
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfigOrBuilder getCustomerTextMessageChatSizeConfigOrBuilder();
+  com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicUnitConfigOrBuilder getCustomerTextMessageChatSizeConfigOrBuilder();
 
   /**
    * <code>.services.billing.entities.v1alpha1.BasicConfig connected_inbox_created_config = 119 [json_name = "connectedInboxCreatedConfig"];</code>
@@ -335,64 +335,64 @@ public interface RateDefinitionConfigOrBuilder extends
   com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicConfigOrBuilder getConnectedInboxCreatedConfigOrBuilder();
 
   /**
-   * <code>.services.billing.entities.v1alpha1.BasicAmountConfig agent_text_message_sms_size_config = 120 [json_name = "agentTextMessageSmsSizeConfig"];</code>
+   * <code>.services.billing.entities.v1alpha1.BasicUnitConfig agent_text_message_sms_size_config = 120 [json_name = "agentTextMessageSmsSizeConfig"];</code>
    * @return Whether the agentTextMessageSmsSizeConfig field is set.
    */
   boolean hasAgentTextMessageSmsSizeConfig();
   /**
-   * <code>.services.billing.entities.v1alpha1.BasicAmountConfig agent_text_message_sms_size_config = 120 [json_name = "agentTextMessageSmsSizeConfig"];</code>
+   * <code>.services.billing.entities.v1alpha1.BasicUnitConfig agent_text_message_sms_size_config = 120 [json_name = "agentTextMessageSmsSizeConfig"];</code>
    * @return The agentTextMessageSmsSizeConfig.
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfig getAgentTextMessageSmsSizeConfig();
+  com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicUnitConfig getAgentTextMessageSmsSizeConfig();
   /**
-   * <code>.services.billing.entities.v1alpha1.BasicAmountConfig agent_text_message_sms_size_config = 120 [json_name = "agentTextMessageSmsSizeConfig"];</code>
+   * <code>.services.billing.entities.v1alpha1.BasicUnitConfig agent_text_message_sms_size_config = 120 [json_name = "agentTextMessageSmsSizeConfig"];</code>
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfigOrBuilder getAgentTextMessageSmsSizeConfigOrBuilder();
+  com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicUnitConfigOrBuilder getAgentTextMessageSmsSizeConfigOrBuilder();
 
   /**
-   * <code>.services.billing.entities.v1alpha1.BasicAmountConfig manager_text_message_sms_size_config = 121 [json_name = "managerTextMessageSmsSizeConfig"];</code>
+   * <code>.services.billing.entities.v1alpha1.BasicUnitConfig manager_text_message_sms_size_config = 121 [json_name = "managerTextMessageSmsSizeConfig"];</code>
    * @return Whether the managerTextMessageSmsSizeConfig field is set.
    */
   boolean hasManagerTextMessageSmsSizeConfig();
   /**
-   * <code>.services.billing.entities.v1alpha1.BasicAmountConfig manager_text_message_sms_size_config = 121 [json_name = "managerTextMessageSmsSizeConfig"];</code>
+   * <code>.services.billing.entities.v1alpha1.BasicUnitConfig manager_text_message_sms_size_config = 121 [json_name = "managerTextMessageSmsSizeConfig"];</code>
    * @return The managerTextMessageSmsSizeConfig.
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfig getManagerTextMessageSmsSizeConfig();
+  com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicUnitConfig getManagerTextMessageSmsSizeConfig();
   /**
-   * <code>.services.billing.entities.v1alpha1.BasicAmountConfig manager_text_message_sms_size_config = 121 [json_name = "managerTextMessageSmsSizeConfig"];</code>
+   * <code>.services.billing.entities.v1alpha1.BasicUnitConfig manager_text_message_sms_size_config = 121 [json_name = "managerTextMessageSmsSizeConfig"];</code>
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfigOrBuilder getManagerTextMessageSmsSizeConfigOrBuilder();
+  com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicUnitConfigOrBuilder getManagerTextMessageSmsSizeConfigOrBuilder();
 
   /**
-   * <code>.services.billing.entities.v1alpha1.BasicAmountConfig customer_text_message_sms_size_config = 122 [json_name = "customerTextMessageSmsSizeConfig"];</code>
+   * <code>.services.billing.entities.v1alpha1.BasicUnitConfig customer_text_message_sms_size_config = 122 [json_name = "customerTextMessageSmsSizeConfig"];</code>
    * @return Whether the customerTextMessageSmsSizeConfig field is set.
    */
   boolean hasCustomerTextMessageSmsSizeConfig();
   /**
-   * <code>.services.billing.entities.v1alpha1.BasicAmountConfig customer_text_message_sms_size_config = 122 [json_name = "customerTextMessageSmsSizeConfig"];</code>
+   * <code>.services.billing.entities.v1alpha1.BasicUnitConfig customer_text_message_sms_size_config = 122 [json_name = "customerTextMessageSmsSizeConfig"];</code>
    * @return The customerTextMessageSmsSizeConfig.
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfig getCustomerTextMessageSmsSizeConfig();
+  com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicUnitConfig getCustomerTextMessageSmsSizeConfig();
   /**
-   * <code>.services.billing.entities.v1alpha1.BasicAmountConfig customer_text_message_sms_size_config = 122 [json_name = "customerTextMessageSmsSizeConfig"];</code>
+   * <code>.services.billing.entities.v1alpha1.BasicUnitConfig customer_text_message_sms_size_config = 122 [json_name = "customerTextMessageSmsSizeConfig"];</code>
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfigOrBuilder getCustomerTextMessageSmsSizeConfigOrBuilder();
+  com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicUnitConfigOrBuilder getCustomerTextMessageSmsSizeConfigOrBuilder();
 
   /**
-   * <code>.services.billing.entities.v1alpha1.BasicAmountConfig task_message_sent_sms_size_config = 123 [json_name = "taskMessageSentSmsSizeConfig"];</code>
+   * <code>.services.billing.entities.v1alpha1.BasicUnitConfig task_message_sent_sms_size_config = 123 [json_name = "taskMessageSentSmsSizeConfig"];</code>
    * @return Whether the taskMessageSentSmsSizeConfig field is set.
    */
   boolean hasTaskMessageSentSmsSizeConfig();
   /**
-   * <code>.services.billing.entities.v1alpha1.BasicAmountConfig task_message_sent_sms_size_config = 123 [json_name = "taskMessageSentSmsSizeConfig"];</code>
+   * <code>.services.billing.entities.v1alpha1.BasicUnitConfig task_message_sent_sms_size_config = 123 [json_name = "taskMessageSentSmsSizeConfig"];</code>
    * @return The taskMessageSentSmsSizeConfig.
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfig getTaskMessageSentSmsSizeConfig();
+  com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicUnitConfig getTaskMessageSentSmsSizeConfig();
   /**
-   * <code>.services.billing.entities.v1alpha1.BasicAmountConfig task_message_sent_sms_size_config = 123 [json_name = "taskMessageSentSmsSizeConfig"];</code>
+   * <code>.services.billing.entities.v1alpha1.BasicUnitConfig task_message_sent_sms_size_config = 123 [json_name = "taskMessageSentSmsSizeConfig"];</code>
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfigOrBuilder getTaskMessageSentSmsSizeConfigOrBuilder();
+  com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicUnitConfigOrBuilder getTaskMessageSentSmsSizeConfigOrBuilder();
 
   /**
    * <code>.services.billing.entities.v1alpha1.BasicConfig agent_chat_message_units_config = 124 [json_name = "agentChatMessageUnitsConfig"];</code>

@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.services.billing.entities.v1alpha1;
 
-public interface BasicAmountConfigOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:services.billing.entities.v1alpha1.BasicAmountConfig)
+public interface BasicUnitConfigOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:services.billing.entities.v1alpha1.BasicUnitConfig)
     com.google.protobuf.MessageOrBuilder {
 
   /**

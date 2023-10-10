@@ -5,42 +5,42 @@ package com.tcn.cloud.api.services.billing.entities.v1alpha1;
 
 /**
  * <pre>
- * BasicSizeConfig represents basic config for a rating module that
+ * BasicUnitConfig represents basic config for a rating module that
  * rates based on event units
  * </pre>
  *
- * Protobuf type {@code services.billing.entities.v1alpha1.BasicAmountConfig}
+ * Protobuf type {@code services.billing.entities.v1alpha1.BasicUnitConfig}
  */
-public final class BasicAmountConfig extends
+public final class BasicUnitConfig extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:services.billing.entities.v1alpha1.BasicAmountConfig)
-    BasicAmountConfigOrBuilder {
+    // @@protoc_insertion_point(message_implements:services.billing.entities.v1alpha1.BasicUnitConfig)
+    BasicUnitConfigOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use BasicAmountConfig.newBuilder() to construct.
-  private BasicAmountConfig(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use BasicUnitConfig.newBuilder() to construct.
+  private BasicUnitConfig(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private BasicAmountConfig() {
+  private BasicUnitConfig() {
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new BasicAmountConfig();
+    return new BasicUnitConfig();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.services.billing.entities.v1alpha1.ModulesProto.internal_static_services_billing_entities_v1alpha1_BasicAmountConfig_descriptor;
+    return com.tcn.cloud.api.services.billing.entities.v1alpha1.ModulesProto.internal_static_services_billing_entities_v1alpha1_BasicUnitConfig_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.services.billing.entities.v1alpha1.ModulesProto.internal_static_services_billing_entities_v1alpha1_BasicAmountConfig_fieldAccessorTable
+    return com.tcn.cloud.api.services.billing.entities.v1alpha1.ModulesProto.internal_static_services_billing_entities_v1alpha1_BasicUnitConfig_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfig.class, com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfig.Builder.class);
+            com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicUnitConfig.class, com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicUnitConfig.Builder.class);
   }
 
   public static final int UNIT_SIZE_FIELD_NUMBER = 1;
@@ -230,10 +230,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfig)) {
+    if (!(obj instanceof com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicUnitConfig)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfig other = (com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfig) obj;
+    com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicUnitConfig other = (com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicUnitConfig) obj;
 
     if (getUnitSize()
         != other.getUnitSize()) return false;
@@ -280,44 +280,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfig parseFrom(
+  public static com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicUnitConfig parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfig parseFrom(
+  public static com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicUnitConfig parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfig parseFrom(
+  public static com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicUnitConfig parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfig parseFrom(
+  public static com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicUnitConfig parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfig parseFrom(byte[] data)
+  public static com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicUnitConfig parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfig parseFrom(
+  public static com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicUnitConfig parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfig parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicUnitConfig parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfig parseFrom(
+  public static com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicUnitConfig parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -325,26 +325,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfig parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicUnitConfig parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfig parseDelimitedFrom(
+  public static com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicUnitConfig parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfig parseFrom(
+  public static com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicUnitConfig parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfig parseFrom(
+  public static com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicUnitConfig parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -357,7 +357,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfig prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicUnitConfig prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -374,30 +374,30 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * BasicSizeConfig represents basic config for a rating module that
+   * BasicUnitConfig represents basic config for a rating module that
    * rates based on event units
    * </pre>
    *
-   * Protobuf type {@code services.billing.entities.v1alpha1.BasicAmountConfig}
+   * Protobuf type {@code services.billing.entities.v1alpha1.BasicUnitConfig}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:services.billing.entities.v1alpha1.BasicAmountConfig)
-      com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfigOrBuilder {
+      // @@protoc_insertion_point(builder_implements:services.billing.entities.v1alpha1.BasicUnitConfig)
+      com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicUnitConfigOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.services.billing.entities.v1alpha1.ModulesProto.internal_static_services_billing_entities_v1alpha1_BasicAmountConfig_descriptor;
+      return com.tcn.cloud.api.services.billing.entities.v1alpha1.ModulesProto.internal_static_services_billing_entities_v1alpha1_BasicUnitConfig_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.services.billing.entities.v1alpha1.ModulesProto.internal_static_services_billing_entities_v1alpha1_BasicAmountConfig_fieldAccessorTable
+      return com.tcn.cloud.api.services.billing.entities.v1alpha1.ModulesProto.internal_static_services_billing_entities_v1alpha1_BasicUnitConfig_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfig.class, com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfig.Builder.class);
+              com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicUnitConfig.class, com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicUnitConfig.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfig.newBuilder()
+    // Construct using com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicUnitConfig.newBuilder()
     private Builder() {
 
     }
@@ -429,17 +429,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.services.billing.entities.v1alpha1.ModulesProto.internal_static_services_billing_entities_v1alpha1_BasicAmountConfig_descriptor;
+      return com.tcn.cloud.api.services.billing.entities.v1alpha1.ModulesProto.internal_static_services_billing_entities_v1alpha1_BasicUnitConfig_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfig getDefaultInstanceForType() {
-      return com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfig.getDefaultInstance();
+    public com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicUnitConfig getDefaultInstanceForType() {
+      return com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicUnitConfig.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfig build() {
-      com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfig result = buildPartial();
+    public com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicUnitConfig build() {
+      com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicUnitConfig result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -447,14 +447,14 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfig buildPartial() {
-      com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfig result = new com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfig(this);
+    public com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicUnitConfig buildPartial() {
+      com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicUnitConfig result = new com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicUnitConfig(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfig result) {
+    private void buildPartial0(com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicUnitConfig result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.unitSize_ = unitSize_;
@@ -508,16 +508,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfig) {
-        return mergeFrom((com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfig)other);
+      if (other instanceof com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicUnitConfig) {
+        return mergeFrom((com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicUnitConfig)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfig other) {
-      if (other == com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfig.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicUnitConfig other) {
+      if (other == com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicUnitConfig.getDefaultInstance()) return this;
       if (other.getUnitSize() != 0L) {
         setUnitSize(other.getUnitSize());
       }
@@ -1067,23 +1067,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:services.billing.entities.v1alpha1.BasicAmountConfig)
+    // @@protoc_insertion_point(builder_scope:services.billing.entities.v1alpha1.BasicUnitConfig)
   }
 
-  // @@protoc_insertion_point(class_scope:services.billing.entities.v1alpha1.BasicAmountConfig)
-  private static final com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfig DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:services.billing.entities.v1alpha1.BasicUnitConfig)
+  private static final com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicUnitConfig DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfig();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicUnitConfig();
   }
 
-  public static com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfig getDefaultInstance() {
+  public static com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicUnitConfig getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<BasicAmountConfig>
-      PARSER = new com.google.protobuf.AbstractParser<BasicAmountConfig>() {
+  private static final com.google.protobuf.Parser<BasicUnitConfig>
+      PARSER = new com.google.protobuf.AbstractParser<BasicUnitConfig>() {
     @java.lang.Override
-    public BasicAmountConfig parsePartialFrom(
+    public BasicUnitConfig parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1102,17 +1102,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<BasicAmountConfig> parser() {
+  public static com.google.protobuf.Parser<BasicUnitConfig> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<BasicAmountConfig> getParserForType() {
+  public com.google.protobuf.Parser<BasicUnitConfig> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicAmountConfig getDefaultInstanceForType() {
+  public com.tcn.cloud.api.services.billing.entities.v1alpha1.BasicUnitConfig getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 
