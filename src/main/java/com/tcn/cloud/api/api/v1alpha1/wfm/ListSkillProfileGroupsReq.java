@@ -52,7 +52,7 @@ private static final long serialVersionUID = 0L;
    * If left empty it will get all the skill profile groups for the org
    * </pre>
    *
-   * <code>repeated int64 skill_profile_group_sids = 1 [json_name = "skillProfileGroupSids"];</code>
+   * <code>repeated int64 skill_profile_group_sids = 1 [json_name = "skillProfileGroupSids", jstype = JS_STRING];</code>
    * @return A list containing the skillProfileGroupSids.
    */
   @java.lang.Override
@@ -66,7 +66,7 @@ private static final long serialVersionUID = 0L;
    * If left empty it will get all the skill profile groups for the org
    * </pre>
    *
-   * <code>repeated int64 skill_profile_group_sids = 1 [json_name = "skillProfileGroupSids"];</code>
+   * <code>repeated int64 skill_profile_group_sids = 1 [json_name = "skillProfileGroupSids", jstype = JS_STRING];</code>
    * @return The count of skillProfileGroupSids.
    */
   public int getSkillProfileGroupSidsCount() {
@@ -78,7 +78,7 @@ private static final long serialVersionUID = 0L;
    * If left empty it will get all the skill profile groups for the org
    * </pre>
    *
-   * <code>repeated int64 skill_profile_group_sids = 1 [json_name = "skillProfileGroupSids"];</code>
+   * <code>repeated int64 skill_profile_group_sids = 1 [json_name = "skillProfileGroupSids", jstype = JS_STRING];</code>
    * @param index The index of the element to return.
    * @return The skillProfileGroupSids at the given index.
    */
@@ -86,6 +86,21 @@ private static final long serialVersionUID = 0L;
     return skillProfileGroupSids_.getLong(index);
   }
   private int skillProfileGroupSidsMemoizedSerializedSize = -1;
+
+  public static final int INCLUDE_INACTIVE_FIELD_NUMBER = 2;
+  private boolean includeInactive_ = false;
+  /**
+   * <pre>
+   * Indicates whether inactive profile groups will be included in the result.
+   * </pre>
+   *
+   * <code>bool include_inactive = 2 [json_name = "includeInactive"];</code>
+   * @return The includeInactive.
+   */
+  @java.lang.Override
+  public boolean getIncludeInactive() {
+    return includeInactive_;
+  }
 
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
@@ -108,6 +123,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < skillProfileGroupSids_.size(); i++) {
       output.writeInt64NoTag(skillProfileGroupSids_.getLong(i));
+    }
+    if (includeInactive_ != false) {
+      output.writeBool(2, includeInactive_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -132,6 +150,10 @@ private static final long serialVersionUID = 0L;
       }
       skillProfileGroupSidsMemoizedSerializedSize = dataSize;
     }
+    if (includeInactive_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(2, includeInactive_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -149,6 +171,8 @@ private static final long serialVersionUID = 0L;
 
     if (!getSkillProfileGroupSidsList()
         .equals(other.getSkillProfileGroupSidsList())) return false;
+    if (getIncludeInactive()
+        != other.getIncludeInactive()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -164,6 +188,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + SKILL_PROFILE_GROUP_SIDS_FIELD_NUMBER;
       hash = (53 * hash) + getSkillProfileGroupSidsList().hashCode();
     }
+    hash = (37 * hash) + INCLUDE_INACTIVE_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getIncludeInactive());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -300,6 +327,7 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       skillProfileGroupSids_ = emptyLongList();
+      includeInactive_ = false;
       return this;
     }
 
@@ -342,6 +370,9 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfileGroupsReq result) {
       int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.includeInactive_ = includeInactive_;
+      }
     }
 
     @java.lang.Override
@@ -398,6 +429,9 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       }
+      if (other.getIncludeInactive() != false) {
+        setIncludeInactive(other.getIncludeInactive());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -440,6 +474,11 @@ private static final long serialVersionUID = 0L;
               input.popLimit(limit);
               break;
             } // case 10
+            case 16: {
+              includeInactive_ = input.readBool();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -470,7 +509,7 @@ private static final long serialVersionUID = 0L;
      * If left empty it will get all the skill profile groups for the org
      * </pre>
      *
-     * <code>repeated int64 skill_profile_group_sids = 1 [json_name = "skillProfileGroupSids"];</code>
+     * <code>repeated int64 skill_profile_group_sids = 1 [json_name = "skillProfileGroupSids", jstype = JS_STRING];</code>
      * @return A list containing the skillProfileGroupSids.
      */
     public java.util.List<java.lang.Long>
@@ -484,7 +523,7 @@ private static final long serialVersionUID = 0L;
      * If left empty it will get all the skill profile groups for the org
      * </pre>
      *
-     * <code>repeated int64 skill_profile_group_sids = 1 [json_name = "skillProfileGroupSids"];</code>
+     * <code>repeated int64 skill_profile_group_sids = 1 [json_name = "skillProfileGroupSids", jstype = JS_STRING];</code>
      * @return The count of skillProfileGroupSids.
      */
     public int getSkillProfileGroupSidsCount() {
@@ -496,7 +535,7 @@ private static final long serialVersionUID = 0L;
      * If left empty it will get all the skill profile groups for the org
      * </pre>
      *
-     * <code>repeated int64 skill_profile_group_sids = 1 [json_name = "skillProfileGroupSids"];</code>
+     * <code>repeated int64 skill_profile_group_sids = 1 [json_name = "skillProfileGroupSids", jstype = JS_STRING];</code>
      * @param index The index of the element to return.
      * @return The skillProfileGroupSids at the given index.
      */
@@ -509,7 +548,7 @@ private static final long serialVersionUID = 0L;
      * If left empty it will get all the skill profile groups for the org
      * </pre>
      *
-     * <code>repeated int64 skill_profile_group_sids = 1 [json_name = "skillProfileGroupSids"];</code>
+     * <code>repeated int64 skill_profile_group_sids = 1 [json_name = "skillProfileGroupSids", jstype = JS_STRING];</code>
      * @param index The index to set the value at.
      * @param value The skillProfileGroupSids to set.
      * @return This builder for chaining.
@@ -528,7 +567,7 @@ private static final long serialVersionUID = 0L;
      * If left empty it will get all the skill profile groups for the org
      * </pre>
      *
-     * <code>repeated int64 skill_profile_group_sids = 1 [json_name = "skillProfileGroupSids"];</code>
+     * <code>repeated int64 skill_profile_group_sids = 1 [json_name = "skillProfileGroupSids", jstype = JS_STRING];</code>
      * @param value The skillProfileGroupSids to add.
      * @return This builder for chaining.
      */
@@ -545,7 +584,7 @@ private static final long serialVersionUID = 0L;
      * If left empty it will get all the skill profile groups for the org
      * </pre>
      *
-     * <code>repeated int64 skill_profile_group_sids = 1 [json_name = "skillProfileGroupSids"];</code>
+     * <code>repeated int64 skill_profile_group_sids = 1 [json_name = "skillProfileGroupSids", jstype = JS_STRING];</code>
      * @param values The skillProfileGroupSids to add.
      * @return This builder for chaining.
      */
@@ -563,12 +602,56 @@ private static final long serialVersionUID = 0L;
      * If left empty it will get all the skill profile groups for the org
      * </pre>
      *
-     * <code>repeated int64 skill_profile_group_sids = 1 [json_name = "skillProfileGroupSids"];</code>
+     * <code>repeated int64 skill_profile_group_sids = 1 [json_name = "skillProfileGroupSids", jstype = JS_STRING];</code>
      * @return This builder for chaining.
      */
     public Builder clearSkillProfileGroupSids() {
       skillProfileGroupSids_ = emptyLongList();
       bitField0_ = (bitField0_ & ~0x00000001);
+      onChanged();
+      return this;
+    }
+
+    private boolean includeInactive_ ;
+    /**
+     * <pre>
+     * Indicates whether inactive profile groups will be included in the result.
+     * </pre>
+     *
+     * <code>bool include_inactive = 2 [json_name = "includeInactive"];</code>
+     * @return The includeInactive.
+     */
+    @java.lang.Override
+    public boolean getIncludeInactive() {
+      return includeInactive_;
+    }
+    /**
+     * <pre>
+     * Indicates whether inactive profile groups will be included in the result.
+     * </pre>
+     *
+     * <code>bool include_inactive = 2 [json_name = "includeInactive"];</code>
+     * @param value The includeInactive to set.
+     * @return This builder for chaining.
+     */
+    public Builder setIncludeInactive(boolean value) {
+
+      includeInactive_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Indicates whether inactive profile groups will be included in the result.
+     * </pre>
+     *
+     * <code>bool include_inactive = 2 [json_name = "includeInactive"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearIncludeInactive() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      includeInactive_ = false;
       onChanged();
       return this;
     }

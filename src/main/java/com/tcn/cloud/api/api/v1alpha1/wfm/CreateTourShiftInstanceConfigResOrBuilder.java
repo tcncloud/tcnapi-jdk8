@@ -12,7 +12,7 @@ public interface CreateTourShiftInstanceConfigResOrBuilder extends
    * ID of the newly created Tour Shift Instance Config.
    * </pre>
    *
-   * <code>int64 tour_shift_instance_config_sid = 1 [json_name = "tourShiftInstanceConfigSid"];</code>
+   * <code>int64 tour_shift_instance_config_sid = 1 [json_name = "tourShiftInstanceConfigSid", jstype = JS_STRING];</code>
    * @return The tourShiftInstanceConfigSid.
    */
   long getTourShiftInstanceConfigSid();

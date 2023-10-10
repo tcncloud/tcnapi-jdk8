@@ -12,7 +12,7 @@ public interface ListTourAgentCollectionWFMAgentsReqOrBuilder extends
    * ID of the Tour Agent Collections to get the &#64;wfm_agent_pairings for.
    * </pre>
    *
-   * <code>repeated int64 tour_agent_collection_sids = 1 [json_name = "tourAgentCollectionSids"];</code>
+   * <code>repeated int64 tour_agent_collection_sids = 1 [json_name = "tourAgentCollectionSids", jstype = JS_STRING];</code>
    * @return A list containing the tourAgentCollectionSids.
    */
   java.util.List<java.lang.Long> getTourAgentCollectionSidsList();
@@ -21,7 +21,7 @@ public interface ListTourAgentCollectionWFMAgentsReqOrBuilder extends
    * ID of the Tour Agent Collections to get the &#64;wfm_agent_pairings for.
    * </pre>
    *
-   * <code>repeated int64 tour_agent_collection_sids = 1 [json_name = "tourAgentCollectionSids"];</code>
+   * <code>repeated int64 tour_agent_collection_sids = 1 [json_name = "tourAgentCollectionSids", jstype = JS_STRING];</code>
    * @return The count of tourAgentCollectionSids.
    */
   int getTourAgentCollectionSidsCount();
@@ -30,7 +30,7 @@ public interface ListTourAgentCollectionWFMAgentsReqOrBuilder extends
    * ID of the Tour Agent Collections to get the &#64;wfm_agent_pairings for.
    * </pre>
    *
-   * <code>repeated int64 tour_agent_collection_sids = 1 [json_name = "tourAgentCollectionSids"];</code>
+   * <code>repeated int64 tour_agent_collection_sids = 1 [json_name = "tourAgentCollectionSids", jstype = JS_STRING];</code>
    * @param index The index of the element to return.
    * @return The tourAgentCollectionSids at the given index.
    */

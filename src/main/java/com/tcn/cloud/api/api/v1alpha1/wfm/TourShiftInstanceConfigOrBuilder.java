@@ -12,7 +12,7 @@ public interface TourShiftInstanceConfigOrBuilder extends
    * The unique ID of the tour shift instance config.
    * </pre>
    *
-   * <code>int64 tour_shift_instance_config_sid = 1 [json_name = "tourShiftInstanceConfigSid"];</code>
+   * <code>int64 tour_shift_instance_config_sid = 1 [json_name = "tourShiftInstanceConfigSid", jstype = JS_STRING];</code>
    * @return The tourShiftInstanceConfigSid.
    */
   long getTourShiftInstanceConfigSid();
@@ -22,7 +22,7 @@ public interface TourShiftInstanceConfigOrBuilder extends
    * The ID of the tour week pattern that the tour shift instance config belongs to.
    * </pre>
    *
-   * <code>int64 tour_week_pattern_sid = 2 [json_name = "tourWeekPatternSid"];</code>
+   * <code>int64 tour_week_pattern_sid = 2 [json_name = "tourWeekPatternSid", jstype = JS_STRING];</code>
    * @return The tourWeekPatternSid.
    */
   long getTourWeekPatternSid();

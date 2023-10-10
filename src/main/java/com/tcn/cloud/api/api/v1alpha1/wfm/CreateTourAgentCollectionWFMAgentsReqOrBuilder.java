@@ -41,7 +41,7 @@ public interface CreateTourAgentCollectionWFMAgentsReqOrBuilder extends
    * ID of the Tour Agent Collection that the &#64;wfm_agent_sids will belong to.
    * </pre>
    *
-   * <code>int64 tour_agent_collection_sid = 2 [json_name = "tourAgentCollectionSid"];</code>
+   * <code>int64 tour_agent_collection_sid = 2 [json_name = "tourAgentCollectionSid", jstype = JS_STRING];</code>
    * @return The tourAgentCollectionSid.
    */
   long getTourAgentCollectionSid();
