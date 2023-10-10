@@ -5650,6 +5650,7 @@ public final class WFMGrpc {
      * Errors:
      *   - grpc.Invalid: one or more fields in the &#64;node have invalid values.
      *   - grpc.NotFound: parent location node doesn't exist or belongs to a different scenario than the one given.
+     *                    the &#64;skill_profile_category does not exist.
      *   - grpc.Internal: error occurs when creating the program node.
      * </pre>
      */
@@ -5670,6 +5671,7 @@ public final class WFMGrpc {
      *   - grpc.Invalid: one or more fields in the &#64;program_node have invalid values.
      *   - grpc.Internal: error occurs when updating the program node.
      *   - grpc.NotFound: entry to be updated doesn't exist, or the given parent &#64;location_node_sid belongs to a different scenario than the program node to update.
+     *                    the &#64;skill_profile_category does not exist.
      * </pre>
      */
     default void updateProgramNode(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateProgramNodeReq request,
@@ -6435,10 +6437,12 @@ public final class WFMGrpc {
      * The &#64;node_description fields may optionally be left blank.
      * The &#64;copied_from_scenario_sid field will be ignored, as it will be set to nil in the newly created scenario.
      * The &#64;creation_datetime and &#64;is_default fields will also be ignored and set as the current time and false respectively.
+     * The &#64;skill_profile_category will be associated with the created program node.
      * Required permissions:
      *   NONE
      * Errors:
      *   - grpc.Invalid: parameters in the &#64;req are invalid for the org making the request.
+     *   - grpc.NotFound: the &#64;skill_profile_category does not exist.
      *   - grpc.Internal: error occurs when creating the new scenario, or any of the node entities.
      * </pre>
      */
@@ -8406,6 +8410,7 @@ public final class WFMGrpc {
      * Errors:
      *   - grpc.Invalid: one or more fields in the &#64;node have invalid values.
      *   - grpc.NotFound: parent location node doesn't exist or belongs to a different scenario than the one given.
+     *                    the &#64;skill_profile_category does not exist.
      *   - grpc.Internal: error occurs when creating the program node.
      * </pre>
      */
@@ -8427,6 +8432,7 @@ public final class WFMGrpc {
      *   - grpc.Invalid: one or more fields in the &#64;program_node have invalid values.
      *   - grpc.Internal: error occurs when updating the program node.
      *   - grpc.NotFound: entry to be updated doesn't exist, or the given parent &#64;location_node_sid belongs to a different scenario than the program node to update.
+     *                    the &#64;skill_profile_category does not exist.
      * </pre>
      */
     public void updateProgramNode(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateProgramNodeReq request,
@@ -9234,10 +9240,12 @@ public final class WFMGrpc {
      * The &#64;node_description fields may optionally be left blank.
      * The &#64;copied_from_scenario_sid field will be ignored, as it will be set to nil in the newly created scenario.
      * The &#64;creation_datetime and &#64;is_default fields will also be ignored and set as the current time and false respectively.
+     * The &#64;skill_profile_category will be associated with the created program node.
      * Required permissions:
      *   NONE
      * Errors:
      *   - grpc.Invalid: parameters in the &#64;req are invalid for the org making the request.
+     *   - grpc.NotFound: the &#64;skill_profile_category does not exist.
      *   - grpc.Internal: error occurs when creating the new scenario, or any of the node entities.
      * </pre>
      */
@@ -11206,6 +11214,7 @@ public final class WFMGrpc {
      * Errors:
      *   - grpc.Invalid: one or more fields in the &#64;node have invalid values.
      *   - grpc.NotFound: parent location node doesn't exist or belongs to a different scenario than the one given.
+     *                    the &#64;skill_profile_category does not exist.
      *   - grpc.Internal: error occurs when creating the program node.
      * </pre>
      */
@@ -11226,6 +11235,7 @@ public final class WFMGrpc {
      *   - grpc.Invalid: one or more fields in the &#64;program_node have invalid values.
      *   - grpc.Internal: error occurs when updating the program node.
      *   - grpc.NotFound: entry to be updated doesn't exist, or the given parent &#64;location_node_sid belongs to a different scenario than the program node to update.
+     *                    the &#64;skill_profile_category does not exist.
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.UpdateProgramNodeRes updateProgramNode(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateProgramNodeReq request) {
@@ -11991,10 +12001,12 @@ public final class WFMGrpc {
      * The &#64;node_description fields may optionally be left blank.
      * The &#64;copied_from_scenario_sid field will be ignored, as it will be set to nil in the newly created scenario.
      * The &#64;creation_datetime and &#64;is_default fields will also be ignored and set as the current time and false respectively.
+     * The &#64;skill_profile_category will be associated with the created program node.
      * Required permissions:
      *   NONE
      * Errors:
      *   - grpc.Invalid: parameters in the &#64;req are invalid for the org making the request.
+     *   - grpc.NotFound: the &#64;skill_profile_category does not exist.
      *   - grpc.Internal: error occurs when creating the new scenario, or any of the node entities.
      * </pre>
      */
@@ -13836,6 +13848,7 @@ public final class WFMGrpc {
      * Errors:
      *   - grpc.Invalid: one or more fields in the &#64;node have invalid values.
      *   - grpc.NotFound: parent location node doesn't exist or belongs to a different scenario than the one given.
+     *                    the &#64;skill_profile_category does not exist.
      *   - grpc.Internal: error occurs when creating the program node.
      * </pre>
      */
@@ -13857,6 +13870,7 @@ public final class WFMGrpc {
      *   - grpc.Invalid: one or more fields in the &#64;program_node have invalid values.
      *   - grpc.Internal: error occurs when updating the program node.
      *   - grpc.NotFound: entry to be updated doesn't exist, or the given parent &#64;location_node_sid belongs to a different scenario than the program node to update.
+     *                    the &#64;skill_profile_category does not exist.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateProgramNodeRes> updateProgramNode(
@@ -14664,10 +14678,12 @@ public final class WFMGrpc {
      * The &#64;node_description fields may optionally be left blank.
      * The &#64;copied_from_scenario_sid field will be ignored, as it will be set to nil in the newly created scenario.
      * The &#64;creation_datetime and &#64;is_default fields will also be ignored and set as the current time and false respectively.
+     * The &#64;skill_profile_category will be associated with the created program node.
      * Required permissions:
      *   NONE
      * Errors:
      *   - grpc.Invalid: parameters in the &#64;req are invalid for the org making the request.
+     *   - grpc.NotFound: the &#64;skill_profile_category does not exist.
      *   - grpc.Internal: error occurs when creating the new scenario, or any of the node entities.
      * </pre>
      */
