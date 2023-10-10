@@ -511,14 +511,24 @@ public enum DiagnosticCode
   SHIFT_TEMPLATE_ACTIVITY_PLACEMENT_MIN_MAX_MUST_BE_MULTIPLE_OF_5_MINUTES(52),
   /**
    * <pre>
+   * DiagnosticNoShiftTemplateActivityPlacementSequenciesMatchShiftMinMaxWidth integer value for a diagnostic coded as
+   * 'No Shift Template Activity Placement sequences match any Shift Template widths' type.
+   * The diagnostic is reporting that there are no placements for the shift template, which would comply with the min and max width.
+   * </pre>
+   *
+   * <code>NO_SHIFT_TEMPLATE_ACTIVITY_PLACEMENT_SEQUENCES_MATCH_SHIFT_MIN_MAX_WIDTH = 53;</code>
+   */
+  NO_SHIFT_TEMPLATE_ACTIVITY_PLACEMENT_SEQUENCES_MATCH_SHIFT_MIN_MAX_WIDTH(53),
+  /**
+   * <pre>
    * DiagnosticCodeInvalidTourPattern integer value for a diagnostic coded as
    * 'Invalid Tour Pattern' type.
    * The diagnostic is reporting the Tour Pattern entity is set with invalid values.
    * </pre>
    *
-   * <code>INVALID_TOUR_PATTERN = 53;</code>
+   * <code>INVALID_TOUR_PATTERN = 54;</code>
    */
-  INVALID_TOUR_PATTERN(53),
+  INVALID_TOUR_PATTERN(54),
   /**
    * <pre>
    * DiagnosticCodeInvalidTourAgentCollection integer value for a diagnostic coded as
@@ -526,9 +536,9 @@ public enum DiagnosticCode
    * The diagnostic is reporting the Tour Agent Collection entity is set with invalid values.
    * </pre>
    *
-   * <code>INVALID_TOUR_AGENT_COLLECTION = 54;</code>
+   * <code>INVALID_TOUR_AGENT_COLLECTION = 55;</code>
    */
-  INVALID_TOUR_AGENT_COLLECTION(54),
+  INVALID_TOUR_AGENT_COLLECTION(55),
   /**
    * <pre>
    * DiagnosticCodeInvalidTourShiftInstanceConfig integer value for a diagnostic coded as
@@ -536,9 +546,9 @@ public enum DiagnosticCode
    * The diagnostic is reporting the Tour Shift Instance Config entity is set with invalid values.
    * </pre>
    *
-   * <code>INVALID_TOUR_SHIFT_INSTANCE_CONFIG = 55;</code>
+   * <code>INVALID_TOUR_SHIFT_INSTANCE_CONFIG = 56;</code>
    */
-  INVALID_TOUR_SHIFT_INSTANCE_CONFIG(55),
+  INVALID_TOUR_SHIFT_INSTANCE_CONFIG(56),
   /**
    * <pre>
    * DiagnosticCodeInvalidTourShiftSegmentConfig integer value for a diagnostic coded as
@@ -546,9 +556,9 @@ public enum DiagnosticCode
    * The diagnostic is reporting the Tour Shift Segment Config entity is set with invalid values.
    * </pre>
    *
-   * <code>INVALID_TOUR_SHIFT_SEGMENT_CONFIG = 56;</code>
+   * <code>INVALID_TOUR_SHIFT_SEGMENT_CONFIG = 57;</code>
    */
-  INVALID_TOUR_SHIFT_SEGMENT_CONFIG(56),
+  INVALID_TOUR_SHIFT_SEGMENT_CONFIG(57),
   /**
    * <pre>
    * DiagnosticCodeTourShiftSegmentConfigOverlap integer value for a diagnostic coded as
@@ -556,9 +566,9 @@ public enum DiagnosticCode
    * The diagnostic is reporting an overlap between tour shift segment configs.
    * </pre>
    *
-   * <code>TOUR_SHIFT_SEGMENT_CONFIG_OVERLAP = 57;</code>
+   * <code>TOUR_SHIFT_SEGMENT_CONFIG_OVERLAP = 58;</code>
    */
-  TOUR_SHIFT_SEGMENT_CONFIG_OVERLAP(57),
+  TOUR_SHIFT_SEGMENT_CONFIG_OVERLAP(58),
   /**
    * <pre>
    * DiagnosticCodeTourShiftSegmentConfigDoesNotFit integer value for a diagnostic coded as
@@ -566,9 +576,9 @@ public enum DiagnosticCode
    * The diagnostic is reporting that a tour shift segment config does not fit in the parent instance.
    * </pre>
    *
-   * <code>TOUR_SHIFT_SEGMENT_CONFIG_DOES_NOT_FIT = 58;</code>
+   * <code>TOUR_SHIFT_SEGMENT_CONFIG_DOES_NOT_FIT = 59;</code>
    */
-  TOUR_SHIFT_SEGMENT_CONFIG_DOES_NOT_FIT(58),
+  TOUR_SHIFT_SEGMENT_CONFIG_DOES_NOT_FIT(59),
   /**
    * <pre>
    * DiagnosticCodeTourShiftInstanceConfigOverlap integer value for a diagnostic coded as
@@ -576,9 +586,9 @@ public enum DiagnosticCode
    * The diagnostic is reporting an overlap between tour shift instance configs in a tour week pattern.
    * </pre>
    *
-   * <code>TOUR_SHIFT_INSTANCE_CONFIG_OVERLAP = 59;</code>
+   * <code>TOUR_SHIFT_INSTANCE_CONFIG_OVERLAP = 60;</code>
    */
-  TOUR_SHIFT_INSTANCE_CONFIG_OVERLAP(59),
+  TOUR_SHIFT_INSTANCE_CONFIG_OVERLAP(60),
   /**
    * <pre>
    * DiagnosticCodeWeekPatternNumbersNotUniqueInTourWeekPatterns integer value for a diagnostic coded as
@@ -586,9 +596,9 @@ public enum DiagnosticCode
    * The diagnostic is reporting a Week Pattern Number being shared between multiple Tour Week Patterns
    * </pre>
    *
-   * <code>WEEK_PATTERN_NUMBERS_NOT_UNIQUE_IN_TOUR_WEEK_PATTERNS = 60;</code>
+   * <code>WEEK_PATTERN_NUMBERS_NOT_UNIQUE_IN_TOUR_WEEK_PATTERNS = 61;</code>
    */
-  WEEK_PATTERN_NUMBERS_NOT_UNIQUE_IN_TOUR_WEEK_PATTERNS(60),
+  WEEK_PATTERN_NUMBERS_NOT_UNIQUE_IN_TOUR_WEEK_PATTERNS(61),
   /**
    * <pre>
    * DiagnosticCodeWfmAgentSidsNotUniqueInTourAgentCollections integer value for a diagnostic coded as
@@ -596,9 +606,9 @@ public enum DiagnosticCode
    * The diagnostic is reporting a WFM Agent SID being shared between multiple Tour Agent Collections.
    * </pre>
    *
-   * <code>WFM_AGENT_SIDS_NOT_UNIQUE_IN_TOUR_AGENT_COLLECTIONS = 61;</code>
+   * <code>WFM_AGENT_SIDS_NOT_UNIQUE_IN_TOUR_AGENT_COLLECTIONS = 62;</code>
    */
-  WFM_AGENT_SIDS_NOT_UNIQUE_IN_TOUR_AGENT_COLLECTIONS(61),
+  WFM_AGENT_SIDS_NOT_UNIQUE_IN_TOUR_AGENT_COLLECTIONS(62),
   /**
    * <pre>
    * DiagnosticCodeInvalidFirstWeekPatternNumbersNotUniqueInTourAgentCollections integer value for a diagnostic coded as
@@ -606,9 +616,9 @@ public enum DiagnosticCode
    * The diagnostic is reporting a First Week Pattern Number being shared between multiple Tour Agent Collections.
    * </pre>
    *
-   * <code>FIST_WEEK_PATTERN_NUMBERS_NOT_UNIQUE_IN_TOUR_AGENT_COLLECTIONS = 62;</code>
+   * <code>FIST_WEEK_PATTERN_NUMBERS_NOT_UNIQUE_IN_TOUR_AGENT_COLLECTIONS = 63;</code>
    */
-  FIST_WEEK_PATTERN_NUMBERS_NOT_UNIQUE_IN_TOUR_AGENT_COLLECTIONS(62),
+  FIST_WEEK_PATTERN_NUMBERS_NOT_UNIQUE_IN_TOUR_AGENT_COLLECTIONS(63),
   /**
    * <pre>
    * DiagnosticCodeFirstWeekPatternNumbersNotFoundInTourWeekPatterns integer value for a diagnostic coded as
@@ -616,9 +626,9 @@ public enum DiagnosticCode
    * The diagnostic is reporting a First Week Pattern Number used be a Tour Agent Collection which is not found in the given Tour Week Patterns.
    * </pre>
    *
-   * <code>FIRST_WEEK_PATTERN_NUMBERS_NOT_FOUND_IN_TOUR_WEEK_PATTERNS = 63;</code>
+   * <code>FIRST_WEEK_PATTERN_NUMBERS_NOT_FOUND_IN_TOUR_WEEK_PATTERNS = 64;</code>
    */
-  FIRST_WEEK_PATTERN_NUMBERS_NOT_FOUND_IN_TOUR_WEEK_PATTERNS(63),
+  FIRST_WEEK_PATTERN_NUMBERS_NOT_FOUND_IN_TOUR_WEEK_PATTERNS(64),
   UNRECOGNIZED(-1),
   ;
 
@@ -1121,14 +1131,24 @@ public enum DiagnosticCode
   public static final int SHIFT_TEMPLATE_ACTIVITY_PLACEMENT_MIN_MAX_MUST_BE_MULTIPLE_OF_5_MINUTES_VALUE = 52;
   /**
    * <pre>
+   * DiagnosticNoShiftTemplateActivityPlacementSequenciesMatchShiftMinMaxWidth integer value for a diagnostic coded as
+   * 'No Shift Template Activity Placement sequences match any Shift Template widths' type.
+   * The diagnostic is reporting that there are no placements for the shift template, which would comply with the min and max width.
+   * </pre>
+   *
+   * <code>NO_SHIFT_TEMPLATE_ACTIVITY_PLACEMENT_SEQUENCES_MATCH_SHIFT_MIN_MAX_WIDTH = 53;</code>
+   */
+  public static final int NO_SHIFT_TEMPLATE_ACTIVITY_PLACEMENT_SEQUENCES_MATCH_SHIFT_MIN_MAX_WIDTH_VALUE = 53;
+  /**
+   * <pre>
    * DiagnosticCodeInvalidTourPattern integer value for a diagnostic coded as
    * 'Invalid Tour Pattern' type.
    * The diagnostic is reporting the Tour Pattern entity is set with invalid values.
    * </pre>
    *
-   * <code>INVALID_TOUR_PATTERN = 53;</code>
+   * <code>INVALID_TOUR_PATTERN = 54;</code>
    */
-  public static final int INVALID_TOUR_PATTERN_VALUE = 53;
+  public static final int INVALID_TOUR_PATTERN_VALUE = 54;
   /**
    * <pre>
    * DiagnosticCodeInvalidTourAgentCollection integer value for a diagnostic coded as
@@ -1136,9 +1156,9 @@ public enum DiagnosticCode
    * The diagnostic is reporting the Tour Agent Collection entity is set with invalid values.
    * </pre>
    *
-   * <code>INVALID_TOUR_AGENT_COLLECTION = 54;</code>
+   * <code>INVALID_TOUR_AGENT_COLLECTION = 55;</code>
    */
-  public static final int INVALID_TOUR_AGENT_COLLECTION_VALUE = 54;
+  public static final int INVALID_TOUR_AGENT_COLLECTION_VALUE = 55;
   /**
    * <pre>
    * DiagnosticCodeInvalidTourShiftInstanceConfig integer value for a diagnostic coded as
@@ -1146,9 +1166,9 @@ public enum DiagnosticCode
    * The diagnostic is reporting the Tour Shift Instance Config entity is set with invalid values.
    * </pre>
    *
-   * <code>INVALID_TOUR_SHIFT_INSTANCE_CONFIG = 55;</code>
+   * <code>INVALID_TOUR_SHIFT_INSTANCE_CONFIG = 56;</code>
    */
-  public static final int INVALID_TOUR_SHIFT_INSTANCE_CONFIG_VALUE = 55;
+  public static final int INVALID_TOUR_SHIFT_INSTANCE_CONFIG_VALUE = 56;
   /**
    * <pre>
    * DiagnosticCodeInvalidTourShiftSegmentConfig integer value for a diagnostic coded as
@@ -1156,9 +1176,9 @@ public enum DiagnosticCode
    * The diagnostic is reporting the Tour Shift Segment Config entity is set with invalid values.
    * </pre>
    *
-   * <code>INVALID_TOUR_SHIFT_SEGMENT_CONFIG = 56;</code>
+   * <code>INVALID_TOUR_SHIFT_SEGMENT_CONFIG = 57;</code>
    */
-  public static final int INVALID_TOUR_SHIFT_SEGMENT_CONFIG_VALUE = 56;
+  public static final int INVALID_TOUR_SHIFT_SEGMENT_CONFIG_VALUE = 57;
   /**
    * <pre>
    * DiagnosticCodeTourShiftSegmentConfigOverlap integer value for a diagnostic coded as
@@ -1166,9 +1186,9 @@ public enum DiagnosticCode
    * The diagnostic is reporting an overlap between tour shift segment configs.
    * </pre>
    *
-   * <code>TOUR_SHIFT_SEGMENT_CONFIG_OVERLAP = 57;</code>
+   * <code>TOUR_SHIFT_SEGMENT_CONFIG_OVERLAP = 58;</code>
    */
-  public static final int TOUR_SHIFT_SEGMENT_CONFIG_OVERLAP_VALUE = 57;
+  public static final int TOUR_SHIFT_SEGMENT_CONFIG_OVERLAP_VALUE = 58;
   /**
    * <pre>
    * DiagnosticCodeTourShiftSegmentConfigDoesNotFit integer value for a diagnostic coded as
@@ -1176,9 +1196,9 @@ public enum DiagnosticCode
    * The diagnostic is reporting that a tour shift segment config does not fit in the parent instance.
    * </pre>
    *
-   * <code>TOUR_SHIFT_SEGMENT_CONFIG_DOES_NOT_FIT = 58;</code>
+   * <code>TOUR_SHIFT_SEGMENT_CONFIG_DOES_NOT_FIT = 59;</code>
    */
-  public static final int TOUR_SHIFT_SEGMENT_CONFIG_DOES_NOT_FIT_VALUE = 58;
+  public static final int TOUR_SHIFT_SEGMENT_CONFIG_DOES_NOT_FIT_VALUE = 59;
   /**
    * <pre>
    * DiagnosticCodeTourShiftInstanceConfigOverlap integer value for a diagnostic coded as
@@ -1186,9 +1206,9 @@ public enum DiagnosticCode
    * The diagnostic is reporting an overlap between tour shift instance configs in a tour week pattern.
    * </pre>
    *
-   * <code>TOUR_SHIFT_INSTANCE_CONFIG_OVERLAP = 59;</code>
+   * <code>TOUR_SHIFT_INSTANCE_CONFIG_OVERLAP = 60;</code>
    */
-  public static final int TOUR_SHIFT_INSTANCE_CONFIG_OVERLAP_VALUE = 59;
+  public static final int TOUR_SHIFT_INSTANCE_CONFIG_OVERLAP_VALUE = 60;
   /**
    * <pre>
    * DiagnosticCodeWeekPatternNumbersNotUniqueInTourWeekPatterns integer value for a diagnostic coded as
@@ -1196,9 +1216,9 @@ public enum DiagnosticCode
    * The diagnostic is reporting a Week Pattern Number being shared between multiple Tour Week Patterns
    * </pre>
    *
-   * <code>WEEK_PATTERN_NUMBERS_NOT_UNIQUE_IN_TOUR_WEEK_PATTERNS = 60;</code>
+   * <code>WEEK_PATTERN_NUMBERS_NOT_UNIQUE_IN_TOUR_WEEK_PATTERNS = 61;</code>
    */
-  public static final int WEEK_PATTERN_NUMBERS_NOT_UNIQUE_IN_TOUR_WEEK_PATTERNS_VALUE = 60;
+  public static final int WEEK_PATTERN_NUMBERS_NOT_UNIQUE_IN_TOUR_WEEK_PATTERNS_VALUE = 61;
   /**
    * <pre>
    * DiagnosticCodeWfmAgentSidsNotUniqueInTourAgentCollections integer value for a diagnostic coded as
@@ -1206,9 +1226,9 @@ public enum DiagnosticCode
    * The diagnostic is reporting a WFM Agent SID being shared between multiple Tour Agent Collections.
    * </pre>
    *
-   * <code>WFM_AGENT_SIDS_NOT_UNIQUE_IN_TOUR_AGENT_COLLECTIONS = 61;</code>
+   * <code>WFM_AGENT_SIDS_NOT_UNIQUE_IN_TOUR_AGENT_COLLECTIONS = 62;</code>
    */
-  public static final int WFM_AGENT_SIDS_NOT_UNIQUE_IN_TOUR_AGENT_COLLECTIONS_VALUE = 61;
+  public static final int WFM_AGENT_SIDS_NOT_UNIQUE_IN_TOUR_AGENT_COLLECTIONS_VALUE = 62;
   /**
    * <pre>
    * DiagnosticCodeInvalidFirstWeekPatternNumbersNotUniqueInTourAgentCollections integer value for a diagnostic coded as
@@ -1216,9 +1236,9 @@ public enum DiagnosticCode
    * The diagnostic is reporting a First Week Pattern Number being shared between multiple Tour Agent Collections.
    * </pre>
    *
-   * <code>FIST_WEEK_PATTERN_NUMBERS_NOT_UNIQUE_IN_TOUR_AGENT_COLLECTIONS = 62;</code>
+   * <code>FIST_WEEK_PATTERN_NUMBERS_NOT_UNIQUE_IN_TOUR_AGENT_COLLECTIONS = 63;</code>
    */
-  public static final int FIST_WEEK_PATTERN_NUMBERS_NOT_UNIQUE_IN_TOUR_AGENT_COLLECTIONS_VALUE = 62;
+  public static final int FIST_WEEK_PATTERN_NUMBERS_NOT_UNIQUE_IN_TOUR_AGENT_COLLECTIONS_VALUE = 63;
   /**
    * <pre>
    * DiagnosticCodeFirstWeekPatternNumbersNotFoundInTourWeekPatterns integer value for a diagnostic coded as
@@ -1226,9 +1246,9 @@ public enum DiagnosticCode
    * The diagnostic is reporting a First Week Pattern Number used be a Tour Agent Collection which is not found in the given Tour Week Patterns.
    * </pre>
    *
-   * <code>FIRST_WEEK_PATTERN_NUMBERS_NOT_FOUND_IN_TOUR_WEEK_PATTERNS = 63;</code>
+   * <code>FIRST_WEEK_PATTERN_NUMBERS_NOT_FOUND_IN_TOUR_WEEK_PATTERNS = 64;</code>
    */
-  public static final int FIRST_WEEK_PATTERN_NUMBERS_NOT_FOUND_IN_TOUR_WEEK_PATTERNS_VALUE = 63;
+  public static final int FIRST_WEEK_PATTERN_NUMBERS_NOT_FOUND_IN_TOUR_WEEK_PATTERNS_VALUE = 64;
 
 
   public final int getNumber() {
@@ -1308,17 +1328,18 @@ public enum DiagnosticCode
       case 50: return CANNOT_GENERATE_TOUR_PATTERNS_FOR_NON_TOUR_SHIFT_TEMPLATE;
       case 51: return TOUR_PATTERNS_NEEDED_TO_SCHEDULE_TOUR;
       case 52: return SHIFT_TEMPLATE_ACTIVITY_PLACEMENT_MIN_MAX_MUST_BE_MULTIPLE_OF_5_MINUTES;
-      case 53: return INVALID_TOUR_PATTERN;
-      case 54: return INVALID_TOUR_AGENT_COLLECTION;
-      case 55: return INVALID_TOUR_SHIFT_INSTANCE_CONFIG;
-      case 56: return INVALID_TOUR_SHIFT_SEGMENT_CONFIG;
-      case 57: return TOUR_SHIFT_SEGMENT_CONFIG_OVERLAP;
-      case 58: return TOUR_SHIFT_SEGMENT_CONFIG_DOES_NOT_FIT;
-      case 59: return TOUR_SHIFT_INSTANCE_CONFIG_OVERLAP;
-      case 60: return WEEK_PATTERN_NUMBERS_NOT_UNIQUE_IN_TOUR_WEEK_PATTERNS;
-      case 61: return WFM_AGENT_SIDS_NOT_UNIQUE_IN_TOUR_AGENT_COLLECTIONS;
-      case 62: return FIST_WEEK_PATTERN_NUMBERS_NOT_UNIQUE_IN_TOUR_AGENT_COLLECTIONS;
-      case 63: return FIRST_WEEK_PATTERN_NUMBERS_NOT_FOUND_IN_TOUR_WEEK_PATTERNS;
+      case 53: return NO_SHIFT_TEMPLATE_ACTIVITY_PLACEMENT_SEQUENCES_MATCH_SHIFT_MIN_MAX_WIDTH;
+      case 54: return INVALID_TOUR_PATTERN;
+      case 55: return INVALID_TOUR_AGENT_COLLECTION;
+      case 56: return INVALID_TOUR_SHIFT_INSTANCE_CONFIG;
+      case 57: return INVALID_TOUR_SHIFT_SEGMENT_CONFIG;
+      case 58: return TOUR_SHIFT_SEGMENT_CONFIG_OVERLAP;
+      case 59: return TOUR_SHIFT_SEGMENT_CONFIG_DOES_NOT_FIT;
+      case 60: return TOUR_SHIFT_INSTANCE_CONFIG_OVERLAP;
+      case 61: return WEEK_PATTERN_NUMBERS_NOT_UNIQUE_IN_TOUR_WEEK_PATTERNS;
+      case 62: return WFM_AGENT_SIDS_NOT_UNIQUE_IN_TOUR_AGENT_COLLECTIONS;
+      case 63: return FIST_WEEK_PATTERN_NUMBERS_NOT_UNIQUE_IN_TOUR_AGENT_COLLECTIONS;
+      case 64: return FIRST_WEEK_PATTERN_NUMBERS_NOT_FOUND_IN_TOUR_WEEK_PATTERNS;
       default: return null;
     }
   }
