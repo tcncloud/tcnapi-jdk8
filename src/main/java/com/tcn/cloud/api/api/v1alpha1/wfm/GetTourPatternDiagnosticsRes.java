@@ -5,21 +5,21 @@ package com.tcn.cloud.api.api.v1alpha1.wfm;
 
 /**
  * <pre>
- * Response message for the UpsertTourPatternWithMembers RPC.
+ * Response message for the GetTourPatternDiagnostics RPC.
  * </pre>
  *
- * Protobuf type {@code api.v1alpha1.wfm.UpsertTourPatternWithMembersRes}
+ * Protobuf type {@code api.v1alpha1.wfm.GetTourPatternDiagnosticsRes}
  */
-public final class UpsertTourPatternWithMembersRes extends
+public final class GetTourPatternDiagnosticsRes extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v1alpha1.wfm.UpsertTourPatternWithMembersRes)
-    UpsertTourPatternWithMembersResOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v1alpha1.wfm.GetTourPatternDiagnosticsRes)
+    GetTourPatternDiagnosticsResOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use UpsertTourPatternWithMembersRes.newBuilder() to construct.
-  private UpsertTourPatternWithMembersRes(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use GetTourPatternDiagnosticsRes.newBuilder() to construct.
+  private GetTourPatternDiagnosticsRes(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private UpsertTourPatternWithMembersRes() {
+  private GetTourPatternDiagnosticsRes() {
     diagnostics_ = java.util.Collections.emptyList();
   }
 
@@ -27,69 +27,31 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new UpsertTourPatternWithMembersRes();
+    return new GetTourPatternDiagnosticsRes();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_UpsertTourPatternWithMembersRes_descriptor;
+    return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_GetTourPatternDiagnosticsRes_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_UpsertTourPatternWithMembersRes_fieldAccessorTable
+    return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_GetTourPatternDiagnosticsRes_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersRes.class, com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersRes.Builder.class);
+            com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsRes.class, com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsRes.Builder.class);
   }
 
-  public static final int TOUR_PATTERN_FIELD_NUMBER = 1;
-  private com.tcn.cloud.api.api.v1alpha1.wfm.TourPattern tourPattern_;
-  /**
-   * <pre>
-   * The newly created tour pattern, returned with new SIDs and week pattern numbers.
-   * </pre>
-   *
-   * <code>.api.v1alpha1.wfm.TourPattern tour_pattern = 1 [json_name = "tourPattern"];</code>
-   * @return Whether the tourPattern field is set.
-   */
-  @java.lang.Override
-  public boolean hasTourPattern() {
-    return tourPattern_ != null;
-  }
-  /**
-   * <pre>
-   * The newly created tour pattern, returned with new SIDs and week pattern numbers.
-   * </pre>
-   *
-   * <code>.api.v1alpha1.wfm.TourPattern tour_pattern = 1 [json_name = "tourPattern"];</code>
-   * @return The tourPattern.
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.wfm.TourPattern getTourPattern() {
-    return tourPattern_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.TourPattern.getDefaultInstance() : tourPattern_;
-  }
-  /**
-   * <pre>
-   * The newly created tour pattern, returned with new SIDs and week pattern numbers.
-   * </pre>
-   *
-   * <code>.api.v1alpha1.wfm.TourPattern tour_pattern = 1 [json_name = "tourPattern"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.wfm.TourPatternOrBuilder getTourPatternOrBuilder() {
-    return tourPattern_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.TourPattern.getDefaultInstance() : tourPattern_;
-  }
-
-  public static final int DIAGNOSTICS_FIELD_NUMBER = 2;
+  public static final int DIAGNOSTICS_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic> diagnostics_;
   /**
    * <pre>
-   * Diagnostics for any issues encountered with the fields on the given &#64;tour_pattern.
+   * Diagnostics for any issues encountered with the fields on the given &#64;tour_pattern, or an OK diagnostic if there are no issues.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
+   * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 1 [json_name = "diagnostics"];</code>
    */
   @java.lang.Override
   public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic> getDiagnosticsList() {
@@ -97,10 +59,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Diagnostics for any issues encountered with the fields on the given &#64;tour_pattern.
+   * Diagnostics for any issues encountered with the fields on the given &#64;tour_pattern, or an OK diagnostic if there are no issues.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
+   * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 1 [json_name = "diagnostics"];</code>
    */
   @java.lang.Override
   public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.DiagnosticOrBuilder> 
@@ -109,10 +71,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Diagnostics for any issues encountered with the fields on the given &#64;tour_pattern.
+   * Diagnostics for any issues encountered with the fields on the given &#64;tour_pattern, or an OK diagnostic if there are no issues.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
+   * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 1 [json_name = "diagnostics"];</code>
    */
   @java.lang.Override
   public int getDiagnosticsCount() {
@@ -120,10 +82,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Diagnostics for any issues encountered with the fields on the given &#64;tour_pattern.
+   * Diagnostics for any issues encountered with the fields on the given &#64;tour_pattern, or an OK diagnostic if there are no issues.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
+   * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 1 [json_name = "diagnostics"];</code>
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic getDiagnostics(int index) {
@@ -131,10 +93,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Diagnostics for any issues encountered with the fields on the given &#64;tour_pattern.
+   * Diagnostics for any issues encountered with the fields on the given &#64;tour_pattern, or an OK diagnostic if there are no issues.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
+   * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 1 [json_name = "diagnostics"];</code>
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v1alpha1.wfm.DiagnosticOrBuilder getDiagnosticsOrBuilder(
@@ -156,11 +118,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (tourPattern_ != null) {
-      output.writeMessage(1, getTourPattern());
-    }
     for (int i = 0; i < diagnostics_.size(); i++) {
-      output.writeMessage(2, diagnostics_.get(i));
+      output.writeMessage(1, diagnostics_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -171,13 +130,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (tourPattern_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, getTourPattern());
-    }
     for (int i = 0; i < diagnostics_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(2, diagnostics_.get(i));
+        .computeMessageSize(1, diagnostics_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -189,16 +144,11 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersRes)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsRes)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersRes other = (com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersRes) obj;
+    com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsRes other = (com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsRes) obj;
 
-    if (hasTourPattern() != other.hasTourPattern()) return false;
-    if (hasTourPattern()) {
-      if (!getTourPattern()
-          .equals(other.getTourPattern())) return false;
-    }
     if (!getDiagnosticsList()
         .equals(other.getDiagnosticsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -212,10 +162,6 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (hasTourPattern()) {
-      hash = (37 * hash) + TOUR_PATTERN_FIELD_NUMBER;
-      hash = (53 * hash) + getTourPattern().hashCode();
-    }
     if (getDiagnosticsCount() > 0) {
       hash = (37 * hash) + DIAGNOSTICS_FIELD_NUMBER;
       hash = (53 * hash) + getDiagnosticsList().hashCode();
@@ -225,44 +171,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersRes parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsRes parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersRes parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsRes parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersRes parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsRes parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersRes parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsRes parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersRes parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsRes parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersRes parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsRes parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersRes parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsRes parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersRes parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsRes parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -270,26 +216,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersRes parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsRes parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersRes parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsRes parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersRes parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsRes parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersRes parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsRes parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -302,7 +248,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersRes prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsRes prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -319,29 +265,29 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Response message for the UpsertTourPatternWithMembers RPC.
+   * Response message for the GetTourPatternDiagnostics RPC.
    * </pre>
    *
-   * Protobuf type {@code api.v1alpha1.wfm.UpsertTourPatternWithMembersRes}
+   * Protobuf type {@code api.v1alpha1.wfm.GetTourPatternDiagnosticsRes}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v1alpha1.wfm.UpsertTourPatternWithMembersRes)
-      com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersResOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v1alpha1.wfm.GetTourPatternDiagnosticsRes)
+      com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsResOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_UpsertTourPatternWithMembersRes_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_GetTourPatternDiagnosticsRes_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_UpsertTourPatternWithMembersRes_fieldAccessorTable
+      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_GetTourPatternDiagnosticsRes_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersRes.class, com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersRes.Builder.class);
+              com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsRes.class, com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsRes.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersRes.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsRes.newBuilder()
     private Builder() {
 
     }
@@ -355,35 +301,30 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      tourPattern_ = null;
-      if (tourPatternBuilder_ != null) {
-        tourPatternBuilder_.dispose();
-        tourPatternBuilder_ = null;
-      }
       if (diagnosticsBuilder_ == null) {
         diagnostics_ = java.util.Collections.emptyList();
       } else {
         diagnostics_ = null;
         diagnosticsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000001);
       return this;
     }
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_UpsertTourPatternWithMembersRes_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_GetTourPatternDiagnosticsRes_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersRes getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersRes.getDefaultInstance();
+    public com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsRes getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsRes.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersRes build() {
-      com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersRes result = buildPartial();
+    public com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsRes build() {
+      com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsRes result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -391,19 +332,19 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersRes buildPartial() {
-      com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersRes result = new com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersRes(this);
+    public com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsRes buildPartial() {
+      com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsRes result = new com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsRes(this);
       buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersRes result) {
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsRes result) {
       if (diagnosticsBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           diagnostics_ = java.util.Collections.unmodifiableList(diagnostics_);
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.diagnostics_ = diagnostics_;
       } else {
@@ -411,13 +352,8 @@ private static final long serialVersionUID = 0L;
       }
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersRes result) {
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsRes result) {
       int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.tourPattern_ = tourPatternBuilder_ == null
-            ? tourPattern_
-            : tourPatternBuilder_.build();
-      }
     }
 
     @java.lang.Override
@@ -454,24 +390,21 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersRes) {
-        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersRes)other);
+      if (other instanceof com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsRes) {
+        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsRes)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersRes other) {
-      if (other == com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersRes.getDefaultInstance()) return this;
-      if (other.hasTourPattern()) {
-        mergeTourPattern(other.getTourPattern());
-      }
+    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsRes other) {
+      if (other == com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsRes.getDefaultInstance()) return this;
       if (diagnosticsBuilder_ == null) {
         if (!other.diagnostics_.isEmpty()) {
           if (diagnostics_.isEmpty()) {
             diagnostics_ = other.diagnostics_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureDiagnosticsIsMutable();
             diagnostics_.addAll(other.diagnostics_);
@@ -484,7 +417,7 @@ private static final long serialVersionUID = 0L;
             diagnosticsBuilder_.dispose();
             diagnosticsBuilder_ = null;
             diagnostics_ = other.diagnostics_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
             diagnosticsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getDiagnosticsFieldBuilder() : null;
@@ -520,13 +453,6 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              input.readMessage(
-                  getTourPatternFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            case 18: {
               com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic m =
                   input.readMessage(
                       com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic.parser(),
@@ -538,7 +464,7 @@ private static final long serialVersionUID = 0L;
                 diagnosticsBuilder_.addMessage(m);
               }
               break;
-            } // case 18
+            } // case 10
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -556,167 +482,12 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private com.tcn.cloud.api.api.v1alpha1.wfm.TourPattern tourPattern_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.v1alpha1.wfm.TourPattern, com.tcn.cloud.api.api.v1alpha1.wfm.TourPattern.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.TourPatternOrBuilder> tourPatternBuilder_;
-    /**
-     * <pre>
-     * The newly created tour pattern, returned with new SIDs and week pattern numbers.
-     * </pre>
-     *
-     * <code>.api.v1alpha1.wfm.TourPattern tour_pattern = 1 [json_name = "tourPattern"];</code>
-     * @return Whether the tourPattern field is set.
-     */
-    public boolean hasTourPattern() {
-      return ((bitField0_ & 0x00000001) != 0);
-    }
-    /**
-     * <pre>
-     * The newly created tour pattern, returned with new SIDs and week pattern numbers.
-     * </pre>
-     *
-     * <code>.api.v1alpha1.wfm.TourPattern tour_pattern = 1 [json_name = "tourPattern"];</code>
-     * @return The tourPattern.
-     */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.TourPattern getTourPattern() {
-      if (tourPatternBuilder_ == null) {
-        return tourPattern_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.TourPattern.getDefaultInstance() : tourPattern_;
-      } else {
-        return tourPatternBuilder_.getMessage();
-      }
-    }
-    /**
-     * <pre>
-     * The newly created tour pattern, returned with new SIDs and week pattern numbers.
-     * </pre>
-     *
-     * <code>.api.v1alpha1.wfm.TourPattern tour_pattern = 1 [json_name = "tourPattern"];</code>
-     */
-    public Builder setTourPattern(com.tcn.cloud.api.api.v1alpha1.wfm.TourPattern value) {
-      if (tourPatternBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        tourPattern_ = value;
-      } else {
-        tourPatternBuilder_.setMessage(value);
-      }
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The newly created tour pattern, returned with new SIDs and week pattern numbers.
-     * </pre>
-     *
-     * <code>.api.v1alpha1.wfm.TourPattern tour_pattern = 1 [json_name = "tourPattern"];</code>
-     */
-    public Builder setTourPattern(
-        com.tcn.cloud.api.api.v1alpha1.wfm.TourPattern.Builder builderForValue) {
-      if (tourPatternBuilder_ == null) {
-        tourPattern_ = builderForValue.build();
-      } else {
-        tourPatternBuilder_.setMessage(builderForValue.build());
-      }
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The newly created tour pattern, returned with new SIDs and week pattern numbers.
-     * </pre>
-     *
-     * <code>.api.v1alpha1.wfm.TourPattern tour_pattern = 1 [json_name = "tourPattern"];</code>
-     */
-    public Builder mergeTourPattern(com.tcn.cloud.api.api.v1alpha1.wfm.TourPattern value) {
-      if (tourPatternBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0) &&
-          tourPattern_ != null &&
-          tourPattern_ != com.tcn.cloud.api.api.v1alpha1.wfm.TourPattern.getDefaultInstance()) {
-          getTourPatternBuilder().mergeFrom(value);
-        } else {
-          tourPattern_ = value;
-        }
-      } else {
-        tourPatternBuilder_.mergeFrom(value);
-      }
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The newly created tour pattern, returned with new SIDs and week pattern numbers.
-     * </pre>
-     *
-     * <code>.api.v1alpha1.wfm.TourPattern tour_pattern = 1 [json_name = "tourPattern"];</code>
-     */
-    public Builder clearTourPattern() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      tourPattern_ = null;
-      if (tourPatternBuilder_ != null) {
-        tourPatternBuilder_.dispose();
-        tourPatternBuilder_ = null;
-      }
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The newly created tour pattern, returned with new SIDs and week pattern numbers.
-     * </pre>
-     *
-     * <code>.api.v1alpha1.wfm.TourPattern tour_pattern = 1 [json_name = "tourPattern"];</code>
-     */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.TourPattern.Builder getTourPatternBuilder() {
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return getTourPatternFieldBuilder().getBuilder();
-    }
-    /**
-     * <pre>
-     * The newly created tour pattern, returned with new SIDs and week pattern numbers.
-     * </pre>
-     *
-     * <code>.api.v1alpha1.wfm.TourPattern tour_pattern = 1 [json_name = "tourPattern"];</code>
-     */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.TourPatternOrBuilder getTourPatternOrBuilder() {
-      if (tourPatternBuilder_ != null) {
-        return tourPatternBuilder_.getMessageOrBuilder();
-      } else {
-        return tourPattern_ == null ?
-            com.tcn.cloud.api.api.v1alpha1.wfm.TourPattern.getDefaultInstance() : tourPattern_;
-      }
-    }
-    /**
-     * <pre>
-     * The newly created tour pattern, returned with new SIDs and week pattern numbers.
-     * </pre>
-     *
-     * <code>.api.v1alpha1.wfm.TourPattern tour_pattern = 1 [json_name = "tourPattern"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.v1alpha1.wfm.TourPattern, com.tcn.cloud.api.api.v1alpha1.wfm.TourPattern.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.TourPatternOrBuilder> 
-        getTourPatternFieldBuilder() {
-      if (tourPatternBuilder_ == null) {
-        tourPatternBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.v1alpha1.wfm.TourPattern, com.tcn.cloud.api.api.v1alpha1.wfm.TourPattern.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.TourPatternOrBuilder>(
-                getTourPattern(),
-                getParentForChildren(),
-                isClean());
-        tourPattern_ = null;
-      }
-      return tourPatternBuilder_;
-    }
-
     private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic> diagnostics_ =
       java.util.Collections.emptyList();
     private void ensureDiagnosticsIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         diagnostics_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic>(diagnostics_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -725,10 +496,10 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Diagnostics for any issues encountered with the fields on the given &#64;tour_pattern.
+     * Diagnostics for any issues encountered with the fields on the given &#64;tour_pattern, or an OK diagnostic if there are no issues.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 1 [json_name = "diagnostics"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic> getDiagnosticsList() {
       if (diagnosticsBuilder_ == null) {
@@ -739,10 +510,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Diagnostics for any issues encountered with the fields on the given &#64;tour_pattern.
+     * Diagnostics for any issues encountered with the fields on the given &#64;tour_pattern, or an OK diagnostic if there are no issues.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 1 [json_name = "diagnostics"];</code>
      */
     public int getDiagnosticsCount() {
       if (diagnosticsBuilder_ == null) {
@@ -753,10 +524,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Diagnostics for any issues encountered with the fields on the given &#64;tour_pattern.
+     * Diagnostics for any issues encountered with the fields on the given &#64;tour_pattern, or an OK diagnostic if there are no issues.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 1 [json_name = "diagnostics"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic getDiagnostics(int index) {
       if (diagnosticsBuilder_ == null) {
@@ -767,10 +538,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Diagnostics for any issues encountered with the fields on the given &#64;tour_pattern.
+     * Diagnostics for any issues encountered with the fields on the given &#64;tour_pattern, or an OK diagnostic if there are no issues.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 1 [json_name = "diagnostics"];</code>
      */
     public Builder setDiagnostics(
         int index, com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic value) {
@@ -788,10 +559,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Diagnostics for any issues encountered with the fields on the given &#64;tour_pattern.
+     * Diagnostics for any issues encountered with the fields on the given &#64;tour_pattern, or an OK diagnostic if there are no issues.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 1 [json_name = "diagnostics"];</code>
      */
     public Builder setDiagnostics(
         int index, com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic.Builder builderForValue) {
@@ -806,10 +577,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Diagnostics for any issues encountered with the fields on the given &#64;tour_pattern.
+     * Diagnostics for any issues encountered with the fields on the given &#64;tour_pattern, or an OK diagnostic if there are no issues.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 1 [json_name = "diagnostics"];</code>
      */
     public Builder addDiagnostics(com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic value) {
       if (diagnosticsBuilder_ == null) {
@@ -826,10 +597,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Diagnostics for any issues encountered with the fields on the given &#64;tour_pattern.
+     * Diagnostics for any issues encountered with the fields on the given &#64;tour_pattern, or an OK diagnostic if there are no issues.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 1 [json_name = "diagnostics"];</code>
      */
     public Builder addDiagnostics(
         int index, com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic value) {
@@ -847,10 +618,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Diagnostics for any issues encountered with the fields on the given &#64;tour_pattern.
+     * Diagnostics for any issues encountered with the fields on the given &#64;tour_pattern, or an OK diagnostic if there are no issues.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 1 [json_name = "diagnostics"];</code>
      */
     public Builder addDiagnostics(
         com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic.Builder builderForValue) {
@@ -865,10 +636,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Diagnostics for any issues encountered with the fields on the given &#64;tour_pattern.
+     * Diagnostics for any issues encountered with the fields on the given &#64;tour_pattern, or an OK diagnostic if there are no issues.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 1 [json_name = "diagnostics"];</code>
      */
     public Builder addDiagnostics(
         int index, com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic.Builder builderForValue) {
@@ -883,10 +654,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Diagnostics for any issues encountered with the fields on the given &#64;tour_pattern.
+     * Diagnostics for any issues encountered with the fields on the given &#64;tour_pattern, or an OK diagnostic if there are no issues.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 1 [json_name = "diagnostics"];</code>
      */
     public Builder addAllDiagnostics(
         java.lang.Iterable<? extends com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic> values) {
@@ -902,15 +673,15 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Diagnostics for any issues encountered with the fields on the given &#64;tour_pattern.
+     * Diagnostics for any issues encountered with the fields on the given &#64;tour_pattern, or an OK diagnostic if there are no issues.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 1 [json_name = "diagnostics"];</code>
      */
     public Builder clearDiagnostics() {
       if (diagnosticsBuilder_ == null) {
         diagnostics_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         diagnosticsBuilder_.clear();
@@ -919,10 +690,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Diagnostics for any issues encountered with the fields on the given &#64;tour_pattern.
+     * Diagnostics for any issues encountered with the fields on the given &#64;tour_pattern, or an OK diagnostic if there are no issues.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 1 [json_name = "diagnostics"];</code>
      */
     public Builder removeDiagnostics(int index) {
       if (diagnosticsBuilder_ == null) {
@@ -936,10 +707,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Diagnostics for any issues encountered with the fields on the given &#64;tour_pattern.
+     * Diagnostics for any issues encountered with the fields on the given &#64;tour_pattern, or an OK diagnostic if there are no issues.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 1 [json_name = "diagnostics"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic.Builder getDiagnosticsBuilder(
         int index) {
@@ -947,10 +718,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Diagnostics for any issues encountered with the fields on the given &#64;tour_pattern.
+     * Diagnostics for any issues encountered with the fields on the given &#64;tour_pattern, or an OK diagnostic if there are no issues.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 1 [json_name = "diagnostics"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.DiagnosticOrBuilder getDiagnosticsOrBuilder(
         int index) {
@@ -961,10 +732,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Diagnostics for any issues encountered with the fields on the given &#64;tour_pattern.
+     * Diagnostics for any issues encountered with the fields on the given &#64;tour_pattern, or an OK diagnostic if there are no issues.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 1 [json_name = "diagnostics"];</code>
      */
     public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.DiagnosticOrBuilder> 
          getDiagnosticsOrBuilderList() {
@@ -976,10 +747,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Diagnostics for any issues encountered with the fields on the given &#64;tour_pattern.
+     * Diagnostics for any issues encountered with the fields on the given &#64;tour_pattern, or an OK diagnostic if there are no issues.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 1 [json_name = "diagnostics"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic.Builder addDiagnosticsBuilder() {
       return getDiagnosticsFieldBuilder().addBuilder(
@@ -987,10 +758,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Diagnostics for any issues encountered with the fields on the given &#64;tour_pattern.
+     * Diagnostics for any issues encountered with the fields on the given &#64;tour_pattern, or an OK diagnostic if there are no issues.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 1 [json_name = "diagnostics"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic.Builder addDiagnosticsBuilder(
         int index) {
@@ -999,10 +770,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Diagnostics for any issues encountered with the fields on the given &#64;tour_pattern.
+     * Diagnostics for any issues encountered with the fields on the given &#64;tour_pattern, or an OK diagnostic if there are no issues.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 1 [json_name = "diagnostics"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic.Builder> 
          getDiagnosticsBuilderList() {
@@ -1015,7 +786,7 @@ private static final long serialVersionUID = 0L;
         diagnosticsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic, com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.DiagnosticOrBuilder>(
                 diagnostics_,
-                ((bitField0_ & 0x00000002) != 0),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         diagnostics_ = null;
@@ -1035,23 +806,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v1alpha1.wfm.UpsertTourPatternWithMembersRes)
+    // @@protoc_insertion_point(builder_scope:api.v1alpha1.wfm.GetTourPatternDiagnosticsRes)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v1alpha1.wfm.UpsertTourPatternWithMembersRes)
-  private static final com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersRes DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v1alpha1.wfm.GetTourPatternDiagnosticsRes)
+  private static final com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsRes DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersRes();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsRes();
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersRes getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsRes getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<UpsertTourPatternWithMembersRes>
-      PARSER = new com.google.protobuf.AbstractParser<UpsertTourPatternWithMembersRes>() {
+  private static final com.google.protobuf.Parser<GetTourPatternDiagnosticsRes>
+      PARSER = new com.google.protobuf.AbstractParser<GetTourPatternDiagnosticsRes>() {
     @java.lang.Override
-    public UpsertTourPatternWithMembersRes parsePartialFrom(
+    public GetTourPatternDiagnosticsRes parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1070,17 +841,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<UpsertTourPatternWithMembersRes> parser() {
+  public static com.google.protobuf.Parser<GetTourPatternDiagnosticsRes> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<UpsertTourPatternWithMembersRes> getParserForType() {
+  public com.google.protobuf.Parser<GetTourPatternDiagnosticsRes> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersRes getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsRes getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

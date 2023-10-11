@@ -24,7 +24,7 @@ public final class PermsProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\034api/commons/auth/perms.proto\022\020api.comm" +
-      "ons.auth\032\033annotations/perms/tcn.proto*\211%" +
+      "ons.auth\032\033annotations/perms/tcn.proto*\260%" +
       "\n\nPermission\022\032\n\026PERMISSION_UNSPECIFIED\020\000" +
       "\022\022\n\016PERMISSION_DEV\020\001\022\031\n\025PERMISSION_LEARN" +
       "_EDIT\020\n\022!\n\023PERMISSION_ORG_EDIT\020d\032\010\212\265\030\004\020\t" +
@@ -142,12 +142,13 @@ public final class PermsProto {
       "oup Managment\022Y\n\033PERMISSION_PBX_MANAGER_" +
       "EDIT\020\205 \0327\212\265\0303\020\t\030\n\"\022PBX User Managment\"\031E" +
       "xtension Group Managment\022%\n\030PERMISSION_N" +
-      "EWSROOM_EDIT\020\350 \032\006\212\265\030\002\020\021\022(\n\033PERMISSION_NE" +
-      "WSROOM_PUBLISH\020\351 \032\006\212\265\030\002\020\021B\222\001\n\"com.tcn.cl" +
-      "oud.api.api.commons.authB\nPermsProtoP\001\242\002" +
-      "\003ACA\252\002\020Api.Commons.Auth\312\002\020Api\\Commons\\Au" +
-      "th\342\002\034Api\\Commons\\Auth\\GPBMetadata\352\002\022Api:" +
-      ":Commons::Authb\006proto3"
+      "EWSROOM_VIEW\020\347 \032\006\212\265\030\002\020\021\022%\n\030PERMISSION_NE" +
+      "WSROOM_EDIT\020\350 \032\006\212\265\030\002\020\021\022(\n\033PERMISSION_NEW" +
+      "SROOM_PUBLISH\020\351 \032\006\212\265\030\002\020\021B\222\001\n\"com.tcn.clo" +
+      "ud.api.api.commons.authB\nPermsProtoP\001\242\002\003" +
+      "ACA\252\002\020Api.Commons.Auth\312\002\020Api\\Commons\\Aut" +
+      "h\342\002\034Api\\Commons\\Auth\\GPBMetadata\352\002\022Api::" +
+      "Commons::Authb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
