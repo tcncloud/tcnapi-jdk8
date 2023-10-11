@@ -94,7 +94,7 @@ private static final long serialVersionUID = 0L;
    * ID of the tour agent collection that the &#64;wfm_agent_sids will be deleted from.
    * </pre>
    *
-   * <code>int64 tour_agent_collection_sid = 2 [json_name = "tourAgentCollectionSid"];</code>
+   * <code>int64 tour_agent_collection_sid = 2 [json_name = "tourAgentCollectionSid", jstype = JS_STRING];</code>
    * @return The tourAgentCollectionSid.
    */
   @java.lang.Override
@@ -618,7 +618,7 @@ private static final long serialVersionUID = 0L;
      * ID of the tour agent collection that the &#64;wfm_agent_sids will be deleted from.
      * </pre>
      *
-     * <code>int64 tour_agent_collection_sid = 2 [json_name = "tourAgentCollectionSid"];</code>
+     * <code>int64 tour_agent_collection_sid = 2 [json_name = "tourAgentCollectionSid", jstype = JS_STRING];</code>
      * @return The tourAgentCollectionSid.
      */
     @java.lang.Override
@@ -630,7 +630,7 @@ private static final long serialVersionUID = 0L;
      * ID of the tour agent collection that the &#64;wfm_agent_sids will be deleted from.
      * </pre>
      *
-     * <code>int64 tour_agent_collection_sid = 2 [json_name = "tourAgentCollectionSid"];</code>
+     * <code>int64 tour_agent_collection_sid = 2 [json_name = "tourAgentCollectionSid", jstype = JS_STRING];</code>
      * @param value The tourAgentCollectionSid to set.
      * @return This builder for chaining.
      */
@@ -646,7 +646,7 @@ private static final long serialVersionUID = 0L;
      * ID of the tour agent collection that the &#64;wfm_agent_sids will be deleted from.
      * </pre>
      *
-     * <code>int64 tour_agent_collection_sid = 2 [json_name = "tourAgentCollectionSid"];</code>
+     * <code>int64 tour_agent_collection_sid = 2 [json_name = "tourAgentCollectionSid", jstype = JS_STRING];</code>
      * @return This builder for chaining.
      */
     public Builder clearTourAgentCollectionSid() {

@@ -12,7 +12,7 @@ public interface ListTourShiftInstanceConfigsReqOrBuilder extends
    * IDs of the tour week patterns to get the child Tour Shift Instance Configs for.
    * </pre>
    *
-   * <code>repeated int64 tour_week_pattern_sids = 1 [json_name = "tourWeekPatternSids"];</code>
+   * <code>repeated int64 tour_week_pattern_sids = 1 [json_name = "tourWeekPatternSids", jstype = JS_STRING];</code>
    * @return A list containing the tourWeekPatternSids.
    */
   java.util.List<java.lang.Long> getTourWeekPatternSidsList();
@@ -21,7 +21,7 @@ public interface ListTourShiftInstanceConfigsReqOrBuilder extends
    * IDs of the tour week patterns to get the child Tour Shift Instance Configs for.
    * </pre>
    *
-   * <code>repeated int64 tour_week_pattern_sids = 1 [json_name = "tourWeekPatternSids"];</code>
+   * <code>repeated int64 tour_week_pattern_sids = 1 [json_name = "tourWeekPatternSids", jstype = JS_STRING];</code>
    * @return The count of tourWeekPatternSids.
    */
   int getTourWeekPatternSidsCount();
@@ -30,7 +30,7 @@ public interface ListTourShiftInstanceConfigsReqOrBuilder extends
    * IDs of the tour week patterns to get the child Tour Shift Instance Configs for.
    * </pre>
    *
-   * <code>repeated int64 tour_week_pattern_sids = 1 [json_name = "tourWeekPatternSids"];</code>
+   * <code>repeated int64 tour_week_pattern_sids = 1 [json_name = "tourWeekPatternSids", jstype = JS_STRING];</code>
    * @param index The index of the element to return.
    * @return The tourWeekPatternSids at the given index.
    */

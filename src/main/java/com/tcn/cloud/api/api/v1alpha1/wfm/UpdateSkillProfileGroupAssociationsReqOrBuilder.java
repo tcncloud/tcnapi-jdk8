@@ -12,7 +12,7 @@ public interface UpdateSkillProfileGroupAssociationsReqOrBuilder extends
    * IDs of the skill profile groups to update the associations of.
    * </pre>
    *
-   * <code>int64 skill_profile_group_sid = 1 [json_name = "skillProfileGroupSid"];</code>
+   * <code>int64 skill_profile_group_sid = 1 [json_name = "skillProfileGroupSid", jstype = JS_STRING];</code>
    * @return The skillProfileGroupSid.
    */
   long getSkillProfileGroupSid();
