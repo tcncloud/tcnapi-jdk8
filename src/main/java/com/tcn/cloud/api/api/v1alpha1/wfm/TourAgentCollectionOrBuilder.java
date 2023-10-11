@@ -12,7 +12,7 @@ public interface TourAgentCollectionOrBuilder extends
    * The unique ID of this tour agent collection sid.
    * </pre>
    *
-   * <code>int64 tour_agent_collection_sid = 1 [json_name = "tourAgentCollectionSid"];</code>
+   * <code>int64 tour_agent_collection_sid = 1 [json_name = "tourAgentCollectionSid", jstype = JS_STRING];</code>
    * @return The tourAgentCollectionSid.
    */
   long getTourAgentCollectionSid();
@@ -22,7 +22,7 @@ public interface TourAgentCollectionOrBuilder extends
    * The ID of the tour pattern that the tour agent collection is associated with.
    * </pre>
    *
-   * <code>int64 tour_pattern_sid = 2 [json_name = "tourPatternSid"];</code>
+   * <code>int64 tour_pattern_sid = 2 [json_name = "tourPatternSid", jstype = JS_STRING];</code>
    * @return The tourPatternSid.
    */
   long getTourPatternSid();

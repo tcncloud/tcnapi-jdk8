@@ -103,6 +103,10 @@ private static final long serialVersionUID = 0L;
     OMNICHANNEL_CUSTOMER_MESSAGE_UNITS_EVENT(355),
     OMNICHANNEL_SYSTEM_MESSAGE_UNITS_EVENT(356),
     OMNICHANNEL_PAYMENT_LINK_SENT_EVENT(357),
+    OMNICHANNEL_MANUAL_APPROVE_TASK_ACCEPTED_EVENT(358),
+    OMNICHANNEL_MANUAL_APPROVE_TASK_REJECTED_EVENT(359),
+    OMNICHANNEL_MANUAL_APPROVE_TASK_TIMEOUT_EVENT(360),
+    OMNICHANNEL_MANUAL_APPROVE_TASK_REQUEUE_EVENT(361),
     ASM_AGENT_LOGIN_EVENT(400),
     ASM_OPEN_VOICE_EVENT(401),
     ASM_OPEN_OMNI_AGENT_EVENT(402),
@@ -208,6 +212,10 @@ private static final long serialVersionUID = 0L;
         case 355: return OMNICHANNEL_CUSTOMER_MESSAGE_UNITS_EVENT;
         case 356: return OMNICHANNEL_SYSTEM_MESSAGE_UNITS_EVENT;
         case 357: return OMNICHANNEL_PAYMENT_LINK_SENT_EVENT;
+        case 358: return OMNICHANNEL_MANUAL_APPROVE_TASK_ACCEPTED_EVENT;
+        case 359: return OMNICHANNEL_MANUAL_APPROVE_TASK_REJECTED_EVENT;
+        case 360: return OMNICHANNEL_MANUAL_APPROVE_TASK_TIMEOUT_EVENT;
+        case 361: return OMNICHANNEL_MANUAL_APPROVE_TASK_REQUEUE_EVENT;
         case 400: return ASM_AGENT_LOGIN_EVENT;
         case 401: return ASM_OPEN_VOICE_EVENT;
         case 402: return ASM_OPEN_OMNI_AGENT_EVENT;
@@ -2585,6 +2593,178 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.audit.OmnichannelPaymentLinkSentEvent.getDefaultInstance();
   }
 
+  public static final int OMNICHANNEL_MANUAL_APPROVE_TASK_ACCEPTED_EVENT_FIELD_NUMBER = 358;
+  /**
+   * <pre>
+   *accepted manual approve task
+   * </pre>
+   *
+   * <code>.api.commons.audit.OmnichannelManualApproveTaskAcceptedEvent omnichannel_manual_approve_task_accepted_event = 358 [json_name = "omnichannelManualApproveTaskAcceptedEvent"];</code>
+   * @return Whether the omnichannelManualApproveTaskAcceptedEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasOmnichannelManualApproveTaskAcceptedEvent() {
+    return eventCase_ == 358;
+  }
+  /**
+   * <pre>
+   *accepted manual approve task
+   * </pre>
+   *
+   * <code>.api.commons.audit.OmnichannelManualApproveTaskAcceptedEvent omnichannel_manual_approve_task_accepted_event = 358 [json_name = "omnichannelManualApproveTaskAcceptedEvent"];</code>
+   * @return The omnichannelManualApproveTaskAcceptedEvent.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskAcceptedEvent getOmnichannelManualApproveTaskAcceptedEvent() {
+    if (eventCase_ == 358) {
+       return (com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskAcceptedEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskAcceptedEvent.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   *accepted manual approve task
+   * </pre>
+   *
+   * <code>.api.commons.audit.OmnichannelManualApproveTaskAcceptedEvent omnichannel_manual_approve_task_accepted_event = 358 [json_name = "omnichannelManualApproveTaskAcceptedEvent"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskAcceptedEventOrBuilder getOmnichannelManualApproveTaskAcceptedEventOrBuilder() {
+    if (eventCase_ == 358) {
+       return (com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskAcceptedEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskAcceptedEvent.getDefaultInstance();
+  }
+
+  public static final int OMNICHANNEL_MANUAL_APPROVE_TASK_REJECTED_EVENT_FIELD_NUMBER = 359;
+  /**
+   * <pre>
+   *rejected manual approve task
+   * </pre>
+   *
+   * <code>.api.commons.audit.OmnichannelManualApproveTaskRejectedEvent omnichannel_manual_approve_task_rejected_event = 359 [json_name = "omnichannelManualApproveTaskRejectedEvent"];</code>
+   * @return Whether the omnichannelManualApproveTaskRejectedEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasOmnichannelManualApproveTaskRejectedEvent() {
+    return eventCase_ == 359;
+  }
+  /**
+   * <pre>
+   *rejected manual approve task
+   * </pre>
+   *
+   * <code>.api.commons.audit.OmnichannelManualApproveTaskRejectedEvent omnichannel_manual_approve_task_rejected_event = 359 [json_name = "omnichannelManualApproveTaskRejectedEvent"];</code>
+   * @return The omnichannelManualApproveTaskRejectedEvent.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRejectedEvent getOmnichannelManualApproveTaskRejectedEvent() {
+    if (eventCase_ == 359) {
+       return (com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRejectedEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRejectedEvent.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   *rejected manual approve task
+   * </pre>
+   *
+   * <code>.api.commons.audit.OmnichannelManualApproveTaskRejectedEvent omnichannel_manual_approve_task_rejected_event = 359 [json_name = "omnichannelManualApproveTaskRejectedEvent"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRejectedEventOrBuilder getOmnichannelManualApproveTaskRejectedEventOrBuilder() {
+    if (eventCase_ == 359) {
+       return (com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRejectedEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRejectedEvent.getDefaultInstance();
+  }
+
+  public static final int OMNICHANNEL_MANUAL_APPROVE_TASK_TIMEOUT_EVENT_FIELD_NUMBER = 360;
+  /**
+   * <pre>
+   *timeout of manual approve task
+   * </pre>
+   *
+   * <code>.api.commons.audit.OmnichannelManualApproveTaskTimeoutEvent omnichannel_manual_approve_task_timeout_event = 360 [json_name = "omnichannelManualApproveTaskTimeoutEvent"];</code>
+   * @return Whether the omnichannelManualApproveTaskTimeoutEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasOmnichannelManualApproveTaskTimeoutEvent() {
+    return eventCase_ == 360;
+  }
+  /**
+   * <pre>
+   *timeout of manual approve task
+   * </pre>
+   *
+   * <code>.api.commons.audit.OmnichannelManualApproveTaskTimeoutEvent omnichannel_manual_approve_task_timeout_event = 360 [json_name = "omnichannelManualApproveTaskTimeoutEvent"];</code>
+   * @return The omnichannelManualApproveTaskTimeoutEvent.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskTimeoutEvent getOmnichannelManualApproveTaskTimeoutEvent() {
+    if (eventCase_ == 360) {
+       return (com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskTimeoutEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskTimeoutEvent.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   *timeout of manual approve task
+   * </pre>
+   *
+   * <code>.api.commons.audit.OmnichannelManualApproveTaskTimeoutEvent omnichannel_manual_approve_task_timeout_event = 360 [json_name = "omnichannelManualApproveTaskTimeoutEvent"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskTimeoutEventOrBuilder getOmnichannelManualApproveTaskTimeoutEventOrBuilder() {
+    if (eventCase_ == 360) {
+       return (com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskTimeoutEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskTimeoutEvent.getDefaultInstance();
+  }
+
+  public static final int OMNICHANNEL_MANUAL_APPROVE_TASK_REQUEUE_EVENT_FIELD_NUMBER = 361;
+  /**
+   * <pre>
+   *requeue of manual approve task
+   * </pre>
+   *
+   * <code>.api.commons.audit.OmnichannelManualApproveTaskRequeueEvent omnichannel_manual_approve_task_requeue_event = 361 [json_name = "omnichannelManualApproveTaskRequeueEvent"];</code>
+   * @return Whether the omnichannelManualApproveTaskRequeueEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasOmnichannelManualApproveTaskRequeueEvent() {
+    return eventCase_ == 361;
+  }
+  /**
+   * <pre>
+   *requeue of manual approve task
+   * </pre>
+   *
+   * <code>.api.commons.audit.OmnichannelManualApproveTaskRequeueEvent omnichannel_manual_approve_task_requeue_event = 361 [json_name = "omnichannelManualApproveTaskRequeueEvent"];</code>
+   * @return The omnichannelManualApproveTaskRequeueEvent.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRequeueEvent getOmnichannelManualApproveTaskRequeueEvent() {
+    if (eventCase_ == 361) {
+       return (com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRequeueEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRequeueEvent.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   *requeue of manual approve task
+   * </pre>
+   *
+   * <code>.api.commons.audit.OmnichannelManualApproveTaskRequeueEvent omnichannel_manual_approve_task_requeue_event = 361 [json_name = "omnichannelManualApproveTaskRequeueEvent"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRequeueEventOrBuilder getOmnichannelManualApproveTaskRequeueEventOrBuilder() {
+    if (eventCase_ == 361) {
+       return (com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRequeueEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRequeueEvent.getDefaultInstance();
+  }
+
   public static final int ASM_AGENT_LOGIN_EVENT_FIELD_NUMBER = 400;
   /**
    * <pre>
@@ -4416,6 +4596,18 @@ private static final long serialVersionUID = 0L;
     if (eventCase_ == 357) {
       output.writeMessage(357, (com.tcn.cloud.api.api.commons.audit.OmnichannelPaymentLinkSentEvent) event_);
     }
+    if (eventCase_ == 358) {
+      output.writeMessage(358, (com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskAcceptedEvent) event_);
+    }
+    if (eventCase_ == 359) {
+      output.writeMessage(359, (com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRejectedEvent) event_);
+    }
+    if (eventCase_ == 360) {
+      output.writeMessage(360, (com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskTimeoutEvent) event_);
+    }
+    if (eventCase_ == 361) {
+      output.writeMessage(361, (com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRequeueEvent) event_);
+    }
     if (eventCase_ == 400) {
       output.writeMessage(400, (com.tcn.cloud.api.api.commons.audit.AsmAgentLoginEvent) event_);
     }
@@ -4758,6 +4950,22 @@ private static final long serialVersionUID = 0L;
     if (eventCase_ == 357) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(357, (com.tcn.cloud.api.api.commons.audit.OmnichannelPaymentLinkSentEvent) event_);
+    }
+    if (eventCase_ == 358) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(358, (com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskAcceptedEvent) event_);
+    }
+    if (eventCase_ == 359) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(359, (com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRejectedEvent) event_);
+    }
+    if (eventCase_ == 360) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(360, (com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskTimeoutEvent) event_);
+    }
+    if (eventCase_ == 361) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(361, (com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRequeueEvent) event_);
     }
     if (eventCase_ == 400) {
       size += com.google.protobuf.CodedOutputStream
@@ -5142,6 +5350,22 @@ private static final long serialVersionUID = 0L;
         if (!getOmnichannelPaymentLinkSentEvent()
             .equals(other.getOmnichannelPaymentLinkSentEvent())) return false;
         break;
+      case 358:
+        if (!getOmnichannelManualApproveTaskAcceptedEvent()
+            .equals(other.getOmnichannelManualApproveTaskAcceptedEvent())) return false;
+        break;
+      case 359:
+        if (!getOmnichannelManualApproveTaskRejectedEvent()
+            .equals(other.getOmnichannelManualApproveTaskRejectedEvent())) return false;
+        break;
+      case 360:
+        if (!getOmnichannelManualApproveTaskTimeoutEvent()
+            .equals(other.getOmnichannelManualApproveTaskTimeoutEvent())) return false;
+        break;
+      case 361:
+        if (!getOmnichannelManualApproveTaskRequeueEvent()
+            .equals(other.getOmnichannelManualApproveTaskRequeueEvent())) return false;
+        break;
       case 400:
         if (!getAsmAgentLoginEvent()
             .equals(other.getAsmAgentLoginEvent())) return false;
@@ -5523,6 +5747,22 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + OMNICHANNEL_PAYMENT_LINK_SENT_EVENT_FIELD_NUMBER;
         hash = (53 * hash) + getOmnichannelPaymentLinkSentEvent().hashCode();
         break;
+      case 358:
+        hash = (37 * hash) + OMNICHANNEL_MANUAL_APPROVE_TASK_ACCEPTED_EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getOmnichannelManualApproveTaskAcceptedEvent().hashCode();
+        break;
+      case 359:
+        hash = (37 * hash) + OMNICHANNEL_MANUAL_APPROVE_TASK_REJECTED_EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getOmnichannelManualApproveTaskRejectedEvent().hashCode();
+        break;
+      case 360:
+        hash = (37 * hash) + OMNICHANNEL_MANUAL_APPROVE_TASK_TIMEOUT_EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getOmnichannelManualApproveTaskTimeoutEvent().hashCode();
+        break;
+      case 361:
+        hash = (37 * hash) + OMNICHANNEL_MANUAL_APPROVE_TASK_REQUEUE_EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getOmnichannelManualApproveTaskRequeueEvent().hashCode();
+        break;
       case 400:
         hash = (37 * hash) + ASM_AGENT_LOGIN_EVENT_FIELD_NUMBER;
         hash = (53 * hash) + getAsmAgentLoginEvent().hashCode();
@@ -5815,6 +6055,7 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       bitField1_ = 0;
       bitField2_ = 0;
+      bitField3_ = 0;
       orgId_ = "";
       regionId_ = "";
       clusterId_ = "";
@@ -5975,6 +6216,18 @@ private static final long serialVersionUID = 0L;
       if (omnichannelPaymentLinkSentEventBuilder_ != null) {
         omnichannelPaymentLinkSentEventBuilder_.clear();
       }
+      if (omnichannelManualApproveTaskAcceptedEventBuilder_ != null) {
+        omnichannelManualApproveTaskAcceptedEventBuilder_.clear();
+      }
+      if (omnichannelManualApproveTaskRejectedEventBuilder_ != null) {
+        omnichannelManualApproveTaskRejectedEventBuilder_.clear();
+      }
+      if (omnichannelManualApproveTaskTimeoutEventBuilder_ != null) {
+        omnichannelManualApproveTaskTimeoutEventBuilder_.clear();
+      }
+      if (omnichannelManualApproveTaskRequeueEventBuilder_ != null) {
+        omnichannelManualApproveTaskRequeueEventBuilder_.clear();
+      }
       if (asmAgentLoginEventBuilder_ != null) {
         asmAgentLoginEventBuilder_.clear();
       }
@@ -6120,6 +6373,7 @@ private static final long serialVersionUID = 0L;
       if (bitField0_ != 0) { buildPartial0(result); }
       if (bitField1_ != 0) { buildPartial1(result); }
       if (bitField2_ != 0) { buildPartial2(result); }
+      if (bitField3_ != 0) { buildPartial3(result); }
       buildPartialOneofs(result);
       onBuilt();
       return result;
@@ -6155,6 +6409,10 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial2(com.tcn.cloud.api.api.commons.audit.AuditEvent result) {
       int from_bitField2_ = bitField2_;
+    }
+
+    private void buildPartial3(com.tcn.cloud.api.api.commons.audit.AuditEvent result) {
+      int from_bitField3_ = bitField3_;
     }
 
     private void buildPartialOneofs(com.tcn.cloud.api.api.commons.audit.AuditEvent result) {
@@ -6359,6 +6617,22 @@ private static final long serialVersionUID = 0L;
       if (eventCase_ == 357 &&
           omnichannelPaymentLinkSentEventBuilder_ != null) {
         result.event_ = omnichannelPaymentLinkSentEventBuilder_.build();
+      }
+      if (eventCase_ == 358 &&
+          omnichannelManualApproveTaskAcceptedEventBuilder_ != null) {
+        result.event_ = omnichannelManualApproveTaskAcceptedEventBuilder_.build();
+      }
+      if (eventCase_ == 359 &&
+          omnichannelManualApproveTaskRejectedEventBuilder_ != null) {
+        result.event_ = omnichannelManualApproveTaskRejectedEventBuilder_.build();
+      }
+      if (eventCase_ == 360 &&
+          omnichannelManualApproveTaskTimeoutEventBuilder_ != null) {
+        result.event_ = omnichannelManualApproveTaskTimeoutEventBuilder_.build();
+      }
+      if (eventCase_ == 361 &&
+          omnichannelManualApproveTaskRequeueEventBuilder_ != null) {
+        result.event_ = omnichannelManualApproveTaskRequeueEventBuilder_.build();
       }
       if (eventCase_ == 400 &&
           asmAgentLoginEventBuilder_ != null) {
@@ -6783,6 +7057,22 @@ private static final long serialVersionUID = 0L;
         }
         case OMNICHANNEL_PAYMENT_LINK_SENT_EVENT: {
           mergeOmnichannelPaymentLinkSentEvent(other.getOmnichannelPaymentLinkSentEvent());
+          break;
+        }
+        case OMNICHANNEL_MANUAL_APPROVE_TASK_ACCEPTED_EVENT: {
+          mergeOmnichannelManualApproveTaskAcceptedEvent(other.getOmnichannelManualApproveTaskAcceptedEvent());
+          break;
+        }
+        case OMNICHANNEL_MANUAL_APPROVE_TASK_REJECTED_EVENT: {
+          mergeOmnichannelManualApproveTaskRejectedEvent(other.getOmnichannelManualApproveTaskRejectedEvent());
+          break;
+        }
+        case OMNICHANNEL_MANUAL_APPROVE_TASK_TIMEOUT_EVENT: {
+          mergeOmnichannelManualApproveTaskTimeoutEvent(other.getOmnichannelManualApproveTaskTimeoutEvent());
+          break;
+        }
+        case OMNICHANNEL_MANUAL_APPROVE_TASK_REQUEUE_EVENT: {
+          mergeOmnichannelManualApproveTaskRequeueEvent(other.getOmnichannelManualApproveTaskRequeueEvent());
           break;
         }
         case ASM_AGENT_LOGIN_EVENT: {
@@ -7349,6 +7639,34 @@ private static final long serialVersionUID = 0L;
               eventCase_ = 357;
               break;
             } // case 2858
+            case 2866: {
+              input.readMessage(
+                  getOmnichannelManualApproveTaskAcceptedEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              eventCase_ = 358;
+              break;
+            } // case 2866
+            case 2874: {
+              input.readMessage(
+                  getOmnichannelManualApproveTaskRejectedEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              eventCase_ = 359;
+              break;
+            } // case 2874
+            case 2882: {
+              input.readMessage(
+                  getOmnichannelManualApproveTaskTimeoutEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              eventCase_ = 360;
+              break;
+            } // case 2882
+            case 2890: {
+              input.readMessage(
+                  getOmnichannelManualApproveTaskRequeueEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              eventCase_ = 361;
+              break;
+            } // case 2890
             case 3202: {
               input.readMessage(
                   getAsmAgentLoginEventFieldBuilder().getBuilder(),
@@ -7648,6 +7966,7 @@ private static final long serialVersionUID = 0L;
     private int bitField0_;
     private int bitField1_;
     private int bitField2_;
+    private int bitField3_;
 
     private java.lang.Object orgId_ = "";
     /**
@@ -16906,6 +17225,718 @@ private static final long serialVersionUID = 0L;
       eventCase_ = 357;
       onChanged();
       return omnichannelPaymentLinkSentEventBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskAcceptedEvent, com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskAcceptedEvent.Builder, com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskAcceptedEventOrBuilder> omnichannelManualApproveTaskAcceptedEventBuilder_;
+    /**
+     * <pre>
+     *accepted manual approve task
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelManualApproveTaskAcceptedEvent omnichannel_manual_approve_task_accepted_event = 358 [json_name = "omnichannelManualApproveTaskAcceptedEvent"];</code>
+     * @return Whether the omnichannelManualApproveTaskAcceptedEvent field is set.
+     */
+    @java.lang.Override
+    public boolean hasOmnichannelManualApproveTaskAcceptedEvent() {
+      return eventCase_ == 358;
+    }
+    /**
+     * <pre>
+     *accepted manual approve task
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelManualApproveTaskAcceptedEvent omnichannel_manual_approve_task_accepted_event = 358 [json_name = "omnichannelManualApproveTaskAcceptedEvent"];</code>
+     * @return The omnichannelManualApproveTaskAcceptedEvent.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskAcceptedEvent getOmnichannelManualApproveTaskAcceptedEvent() {
+      if (omnichannelManualApproveTaskAcceptedEventBuilder_ == null) {
+        if (eventCase_ == 358) {
+          return (com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskAcceptedEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskAcceptedEvent.getDefaultInstance();
+      } else {
+        if (eventCase_ == 358) {
+          return omnichannelManualApproveTaskAcceptedEventBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskAcceptedEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     *accepted manual approve task
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelManualApproveTaskAcceptedEvent omnichannel_manual_approve_task_accepted_event = 358 [json_name = "omnichannelManualApproveTaskAcceptedEvent"];</code>
+     */
+    public Builder setOmnichannelManualApproveTaskAcceptedEvent(com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskAcceptedEvent value) {
+      if (omnichannelManualApproveTaskAcceptedEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        event_ = value;
+        onChanged();
+      } else {
+        omnichannelManualApproveTaskAcceptedEventBuilder_.setMessage(value);
+      }
+      eventCase_ = 358;
+      return this;
+    }
+    /**
+     * <pre>
+     *accepted manual approve task
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelManualApproveTaskAcceptedEvent omnichannel_manual_approve_task_accepted_event = 358 [json_name = "omnichannelManualApproveTaskAcceptedEvent"];</code>
+     */
+    public Builder setOmnichannelManualApproveTaskAcceptedEvent(
+        com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskAcceptedEvent.Builder builderForValue) {
+      if (omnichannelManualApproveTaskAcceptedEventBuilder_ == null) {
+        event_ = builderForValue.build();
+        onChanged();
+      } else {
+        omnichannelManualApproveTaskAcceptedEventBuilder_.setMessage(builderForValue.build());
+      }
+      eventCase_ = 358;
+      return this;
+    }
+    /**
+     * <pre>
+     *accepted manual approve task
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelManualApproveTaskAcceptedEvent omnichannel_manual_approve_task_accepted_event = 358 [json_name = "omnichannelManualApproveTaskAcceptedEvent"];</code>
+     */
+    public Builder mergeOmnichannelManualApproveTaskAcceptedEvent(com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskAcceptedEvent value) {
+      if (omnichannelManualApproveTaskAcceptedEventBuilder_ == null) {
+        if (eventCase_ == 358 &&
+            event_ != com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskAcceptedEvent.getDefaultInstance()) {
+          event_ = com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskAcceptedEvent.newBuilder((com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskAcceptedEvent) event_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          event_ = value;
+        }
+        onChanged();
+      } else {
+        if (eventCase_ == 358) {
+          omnichannelManualApproveTaskAcceptedEventBuilder_.mergeFrom(value);
+        } else {
+          omnichannelManualApproveTaskAcceptedEventBuilder_.setMessage(value);
+        }
+      }
+      eventCase_ = 358;
+      return this;
+    }
+    /**
+     * <pre>
+     *accepted manual approve task
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelManualApproveTaskAcceptedEvent omnichannel_manual_approve_task_accepted_event = 358 [json_name = "omnichannelManualApproveTaskAcceptedEvent"];</code>
+     */
+    public Builder clearOmnichannelManualApproveTaskAcceptedEvent() {
+      if (omnichannelManualApproveTaskAcceptedEventBuilder_ == null) {
+        if (eventCase_ == 358) {
+          eventCase_ = 0;
+          event_ = null;
+          onChanged();
+        }
+      } else {
+        if (eventCase_ == 358) {
+          eventCase_ = 0;
+          event_ = null;
+        }
+        omnichannelManualApproveTaskAcceptedEventBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     *accepted manual approve task
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelManualApproveTaskAcceptedEvent omnichannel_manual_approve_task_accepted_event = 358 [json_name = "omnichannelManualApproveTaskAcceptedEvent"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskAcceptedEvent.Builder getOmnichannelManualApproveTaskAcceptedEventBuilder() {
+      return getOmnichannelManualApproveTaskAcceptedEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     *accepted manual approve task
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelManualApproveTaskAcceptedEvent omnichannel_manual_approve_task_accepted_event = 358 [json_name = "omnichannelManualApproveTaskAcceptedEvent"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskAcceptedEventOrBuilder getOmnichannelManualApproveTaskAcceptedEventOrBuilder() {
+      if ((eventCase_ == 358) && (omnichannelManualApproveTaskAcceptedEventBuilder_ != null)) {
+        return omnichannelManualApproveTaskAcceptedEventBuilder_.getMessageOrBuilder();
+      } else {
+        if (eventCase_ == 358) {
+          return (com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskAcceptedEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskAcceptedEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     *accepted manual approve task
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelManualApproveTaskAcceptedEvent omnichannel_manual_approve_task_accepted_event = 358 [json_name = "omnichannelManualApproveTaskAcceptedEvent"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskAcceptedEvent, com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskAcceptedEvent.Builder, com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskAcceptedEventOrBuilder> 
+        getOmnichannelManualApproveTaskAcceptedEventFieldBuilder() {
+      if (omnichannelManualApproveTaskAcceptedEventBuilder_ == null) {
+        if (!(eventCase_ == 358)) {
+          event_ = com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskAcceptedEvent.getDefaultInstance();
+        }
+        omnichannelManualApproveTaskAcceptedEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskAcceptedEvent, com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskAcceptedEvent.Builder, com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskAcceptedEventOrBuilder>(
+                (com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskAcceptedEvent) event_,
+                getParentForChildren(),
+                isClean());
+        event_ = null;
+      }
+      eventCase_ = 358;
+      onChanged();
+      return omnichannelManualApproveTaskAcceptedEventBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRejectedEvent, com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRejectedEvent.Builder, com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRejectedEventOrBuilder> omnichannelManualApproveTaskRejectedEventBuilder_;
+    /**
+     * <pre>
+     *rejected manual approve task
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelManualApproveTaskRejectedEvent omnichannel_manual_approve_task_rejected_event = 359 [json_name = "omnichannelManualApproveTaskRejectedEvent"];</code>
+     * @return Whether the omnichannelManualApproveTaskRejectedEvent field is set.
+     */
+    @java.lang.Override
+    public boolean hasOmnichannelManualApproveTaskRejectedEvent() {
+      return eventCase_ == 359;
+    }
+    /**
+     * <pre>
+     *rejected manual approve task
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelManualApproveTaskRejectedEvent omnichannel_manual_approve_task_rejected_event = 359 [json_name = "omnichannelManualApproveTaskRejectedEvent"];</code>
+     * @return The omnichannelManualApproveTaskRejectedEvent.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRejectedEvent getOmnichannelManualApproveTaskRejectedEvent() {
+      if (omnichannelManualApproveTaskRejectedEventBuilder_ == null) {
+        if (eventCase_ == 359) {
+          return (com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRejectedEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRejectedEvent.getDefaultInstance();
+      } else {
+        if (eventCase_ == 359) {
+          return omnichannelManualApproveTaskRejectedEventBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRejectedEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     *rejected manual approve task
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelManualApproveTaskRejectedEvent omnichannel_manual_approve_task_rejected_event = 359 [json_name = "omnichannelManualApproveTaskRejectedEvent"];</code>
+     */
+    public Builder setOmnichannelManualApproveTaskRejectedEvent(com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRejectedEvent value) {
+      if (omnichannelManualApproveTaskRejectedEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        event_ = value;
+        onChanged();
+      } else {
+        omnichannelManualApproveTaskRejectedEventBuilder_.setMessage(value);
+      }
+      eventCase_ = 359;
+      return this;
+    }
+    /**
+     * <pre>
+     *rejected manual approve task
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelManualApproveTaskRejectedEvent omnichannel_manual_approve_task_rejected_event = 359 [json_name = "omnichannelManualApproveTaskRejectedEvent"];</code>
+     */
+    public Builder setOmnichannelManualApproveTaskRejectedEvent(
+        com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRejectedEvent.Builder builderForValue) {
+      if (omnichannelManualApproveTaskRejectedEventBuilder_ == null) {
+        event_ = builderForValue.build();
+        onChanged();
+      } else {
+        omnichannelManualApproveTaskRejectedEventBuilder_.setMessage(builderForValue.build());
+      }
+      eventCase_ = 359;
+      return this;
+    }
+    /**
+     * <pre>
+     *rejected manual approve task
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelManualApproveTaskRejectedEvent omnichannel_manual_approve_task_rejected_event = 359 [json_name = "omnichannelManualApproveTaskRejectedEvent"];</code>
+     */
+    public Builder mergeOmnichannelManualApproveTaskRejectedEvent(com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRejectedEvent value) {
+      if (omnichannelManualApproveTaskRejectedEventBuilder_ == null) {
+        if (eventCase_ == 359 &&
+            event_ != com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRejectedEvent.getDefaultInstance()) {
+          event_ = com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRejectedEvent.newBuilder((com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRejectedEvent) event_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          event_ = value;
+        }
+        onChanged();
+      } else {
+        if (eventCase_ == 359) {
+          omnichannelManualApproveTaskRejectedEventBuilder_.mergeFrom(value);
+        } else {
+          omnichannelManualApproveTaskRejectedEventBuilder_.setMessage(value);
+        }
+      }
+      eventCase_ = 359;
+      return this;
+    }
+    /**
+     * <pre>
+     *rejected manual approve task
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelManualApproveTaskRejectedEvent omnichannel_manual_approve_task_rejected_event = 359 [json_name = "omnichannelManualApproveTaskRejectedEvent"];</code>
+     */
+    public Builder clearOmnichannelManualApproveTaskRejectedEvent() {
+      if (omnichannelManualApproveTaskRejectedEventBuilder_ == null) {
+        if (eventCase_ == 359) {
+          eventCase_ = 0;
+          event_ = null;
+          onChanged();
+        }
+      } else {
+        if (eventCase_ == 359) {
+          eventCase_ = 0;
+          event_ = null;
+        }
+        omnichannelManualApproveTaskRejectedEventBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     *rejected manual approve task
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelManualApproveTaskRejectedEvent omnichannel_manual_approve_task_rejected_event = 359 [json_name = "omnichannelManualApproveTaskRejectedEvent"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRejectedEvent.Builder getOmnichannelManualApproveTaskRejectedEventBuilder() {
+      return getOmnichannelManualApproveTaskRejectedEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     *rejected manual approve task
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelManualApproveTaskRejectedEvent omnichannel_manual_approve_task_rejected_event = 359 [json_name = "omnichannelManualApproveTaskRejectedEvent"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRejectedEventOrBuilder getOmnichannelManualApproveTaskRejectedEventOrBuilder() {
+      if ((eventCase_ == 359) && (omnichannelManualApproveTaskRejectedEventBuilder_ != null)) {
+        return omnichannelManualApproveTaskRejectedEventBuilder_.getMessageOrBuilder();
+      } else {
+        if (eventCase_ == 359) {
+          return (com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRejectedEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRejectedEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     *rejected manual approve task
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelManualApproveTaskRejectedEvent omnichannel_manual_approve_task_rejected_event = 359 [json_name = "omnichannelManualApproveTaskRejectedEvent"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRejectedEvent, com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRejectedEvent.Builder, com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRejectedEventOrBuilder> 
+        getOmnichannelManualApproveTaskRejectedEventFieldBuilder() {
+      if (omnichannelManualApproveTaskRejectedEventBuilder_ == null) {
+        if (!(eventCase_ == 359)) {
+          event_ = com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRejectedEvent.getDefaultInstance();
+        }
+        omnichannelManualApproveTaskRejectedEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRejectedEvent, com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRejectedEvent.Builder, com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRejectedEventOrBuilder>(
+                (com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRejectedEvent) event_,
+                getParentForChildren(),
+                isClean());
+        event_ = null;
+      }
+      eventCase_ = 359;
+      onChanged();
+      return omnichannelManualApproveTaskRejectedEventBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskTimeoutEvent, com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskTimeoutEvent.Builder, com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskTimeoutEventOrBuilder> omnichannelManualApproveTaskTimeoutEventBuilder_;
+    /**
+     * <pre>
+     *timeout of manual approve task
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelManualApproveTaskTimeoutEvent omnichannel_manual_approve_task_timeout_event = 360 [json_name = "omnichannelManualApproveTaskTimeoutEvent"];</code>
+     * @return Whether the omnichannelManualApproveTaskTimeoutEvent field is set.
+     */
+    @java.lang.Override
+    public boolean hasOmnichannelManualApproveTaskTimeoutEvent() {
+      return eventCase_ == 360;
+    }
+    /**
+     * <pre>
+     *timeout of manual approve task
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelManualApproveTaskTimeoutEvent omnichannel_manual_approve_task_timeout_event = 360 [json_name = "omnichannelManualApproveTaskTimeoutEvent"];</code>
+     * @return The omnichannelManualApproveTaskTimeoutEvent.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskTimeoutEvent getOmnichannelManualApproveTaskTimeoutEvent() {
+      if (omnichannelManualApproveTaskTimeoutEventBuilder_ == null) {
+        if (eventCase_ == 360) {
+          return (com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskTimeoutEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskTimeoutEvent.getDefaultInstance();
+      } else {
+        if (eventCase_ == 360) {
+          return omnichannelManualApproveTaskTimeoutEventBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskTimeoutEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     *timeout of manual approve task
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelManualApproveTaskTimeoutEvent omnichannel_manual_approve_task_timeout_event = 360 [json_name = "omnichannelManualApproveTaskTimeoutEvent"];</code>
+     */
+    public Builder setOmnichannelManualApproveTaskTimeoutEvent(com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskTimeoutEvent value) {
+      if (omnichannelManualApproveTaskTimeoutEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        event_ = value;
+        onChanged();
+      } else {
+        omnichannelManualApproveTaskTimeoutEventBuilder_.setMessage(value);
+      }
+      eventCase_ = 360;
+      return this;
+    }
+    /**
+     * <pre>
+     *timeout of manual approve task
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelManualApproveTaskTimeoutEvent omnichannel_manual_approve_task_timeout_event = 360 [json_name = "omnichannelManualApproveTaskTimeoutEvent"];</code>
+     */
+    public Builder setOmnichannelManualApproveTaskTimeoutEvent(
+        com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskTimeoutEvent.Builder builderForValue) {
+      if (omnichannelManualApproveTaskTimeoutEventBuilder_ == null) {
+        event_ = builderForValue.build();
+        onChanged();
+      } else {
+        omnichannelManualApproveTaskTimeoutEventBuilder_.setMessage(builderForValue.build());
+      }
+      eventCase_ = 360;
+      return this;
+    }
+    /**
+     * <pre>
+     *timeout of manual approve task
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelManualApproveTaskTimeoutEvent omnichannel_manual_approve_task_timeout_event = 360 [json_name = "omnichannelManualApproveTaskTimeoutEvent"];</code>
+     */
+    public Builder mergeOmnichannelManualApproveTaskTimeoutEvent(com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskTimeoutEvent value) {
+      if (omnichannelManualApproveTaskTimeoutEventBuilder_ == null) {
+        if (eventCase_ == 360 &&
+            event_ != com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskTimeoutEvent.getDefaultInstance()) {
+          event_ = com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskTimeoutEvent.newBuilder((com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskTimeoutEvent) event_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          event_ = value;
+        }
+        onChanged();
+      } else {
+        if (eventCase_ == 360) {
+          omnichannelManualApproveTaskTimeoutEventBuilder_.mergeFrom(value);
+        } else {
+          omnichannelManualApproveTaskTimeoutEventBuilder_.setMessage(value);
+        }
+      }
+      eventCase_ = 360;
+      return this;
+    }
+    /**
+     * <pre>
+     *timeout of manual approve task
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelManualApproveTaskTimeoutEvent omnichannel_manual_approve_task_timeout_event = 360 [json_name = "omnichannelManualApproveTaskTimeoutEvent"];</code>
+     */
+    public Builder clearOmnichannelManualApproveTaskTimeoutEvent() {
+      if (omnichannelManualApproveTaskTimeoutEventBuilder_ == null) {
+        if (eventCase_ == 360) {
+          eventCase_ = 0;
+          event_ = null;
+          onChanged();
+        }
+      } else {
+        if (eventCase_ == 360) {
+          eventCase_ = 0;
+          event_ = null;
+        }
+        omnichannelManualApproveTaskTimeoutEventBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     *timeout of manual approve task
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelManualApproveTaskTimeoutEvent omnichannel_manual_approve_task_timeout_event = 360 [json_name = "omnichannelManualApproveTaskTimeoutEvent"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskTimeoutEvent.Builder getOmnichannelManualApproveTaskTimeoutEventBuilder() {
+      return getOmnichannelManualApproveTaskTimeoutEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     *timeout of manual approve task
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelManualApproveTaskTimeoutEvent omnichannel_manual_approve_task_timeout_event = 360 [json_name = "omnichannelManualApproveTaskTimeoutEvent"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskTimeoutEventOrBuilder getOmnichannelManualApproveTaskTimeoutEventOrBuilder() {
+      if ((eventCase_ == 360) && (omnichannelManualApproveTaskTimeoutEventBuilder_ != null)) {
+        return omnichannelManualApproveTaskTimeoutEventBuilder_.getMessageOrBuilder();
+      } else {
+        if (eventCase_ == 360) {
+          return (com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskTimeoutEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskTimeoutEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     *timeout of manual approve task
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelManualApproveTaskTimeoutEvent omnichannel_manual_approve_task_timeout_event = 360 [json_name = "omnichannelManualApproveTaskTimeoutEvent"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskTimeoutEvent, com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskTimeoutEvent.Builder, com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskTimeoutEventOrBuilder> 
+        getOmnichannelManualApproveTaskTimeoutEventFieldBuilder() {
+      if (omnichannelManualApproveTaskTimeoutEventBuilder_ == null) {
+        if (!(eventCase_ == 360)) {
+          event_ = com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskTimeoutEvent.getDefaultInstance();
+        }
+        omnichannelManualApproveTaskTimeoutEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskTimeoutEvent, com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskTimeoutEvent.Builder, com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskTimeoutEventOrBuilder>(
+                (com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskTimeoutEvent) event_,
+                getParentForChildren(),
+                isClean());
+        event_ = null;
+      }
+      eventCase_ = 360;
+      onChanged();
+      return omnichannelManualApproveTaskTimeoutEventBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRequeueEvent, com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRequeueEvent.Builder, com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRequeueEventOrBuilder> omnichannelManualApproveTaskRequeueEventBuilder_;
+    /**
+     * <pre>
+     *requeue of manual approve task
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelManualApproveTaskRequeueEvent omnichannel_manual_approve_task_requeue_event = 361 [json_name = "omnichannelManualApproveTaskRequeueEvent"];</code>
+     * @return Whether the omnichannelManualApproveTaskRequeueEvent field is set.
+     */
+    @java.lang.Override
+    public boolean hasOmnichannelManualApproveTaskRequeueEvent() {
+      return eventCase_ == 361;
+    }
+    /**
+     * <pre>
+     *requeue of manual approve task
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelManualApproveTaskRequeueEvent omnichannel_manual_approve_task_requeue_event = 361 [json_name = "omnichannelManualApproveTaskRequeueEvent"];</code>
+     * @return The omnichannelManualApproveTaskRequeueEvent.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRequeueEvent getOmnichannelManualApproveTaskRequeueEvent() {
+      if (omnichannelManualApproveTaskRequeueEventBuilder_ == null) {
+        if (eventCase_ == 361) {
+          return (com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRequeueEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRequeueEvent.getDefaultInstance();
+      } else {
+        if (eventCase_ == 361) {
+          return omnichannelManualApproveTaskRequeueEventBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRequeueEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     *requeue of manual approve task
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelManualApproveTaskRequeueEvent omnichannel_manual_approve_task_requeue_event = 361 [json_name = "omnichannelManualApproveTaskRequeueEvent"];</code>
+     */
+    public Builder setOmnichannelManualApproveTaskRequeueEvent(com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRequeueEvent value) {
+      if (omnichannelManualApproveTaskRequeueEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        event_ = value;
+        onChanged();
+      } else {
+        omnichannelManualApproveTaskRequeueEventBuilder_.setMessage(value);
+      }
+      eventCase_ = 361;
+      return this;
+    }
+    /**
+     * <pre>
+     *requeue of manual approve task
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelManualApproveTaskRequeueEvent omnichannel_manual_approve_task_requeue_event = 361 [json_name = "omnichannelManualApproveTaskRequeueEvent"];</code>
+     */
+    public Builder setOmnichannelManualApproveTaskRequeueEvent(
+        com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRequeueEvent.Builder builderForValue) {
+      if (omnichannelManualApproveTaskRequeueEventBuilder_ == null) {
+        event_ = builderForValue.build();
+        onChanged();
+      } else {
+        omnichannelManualApproveTaskRequeueEventBuilder_.setMessage(builderForValue.build());
+      }
+      eventCase_ = 361;
+      return this;
+    }
+    /**
+     * <pre>
+     *requeue of manual approve task
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelManualApproveTaskRequeueEvent omnichannel_manual_approve_task_requeue_event = 361 [json_name = "omnichannelManualApproveTaskRequeueEvent"];</code>
+     */
+    public Builder mergeOmnichannelManualApproveTaskRequeueEvent(com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRequeueEvent value) {
+      if (omnichannelManualApproveTaskRequeueEventBuilder_ == null) {
+        if (eventCase_ == 361 &&
+            event_ != com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRequeueEvent.getDefaultInstance()) {
+          event_ = com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRequeueEvent.newBuilder((com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRequeueEvent) event_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          event_ = value;
+        }
+        onChanged();
+      } else {
+        if (eventCase_ == 361) {
+          omnichannelManualApproveTaskRequeueEventBuilder_.mergeFrom(value);
+        } else {
+          omnichannelManualApproveTaskRequeueEventBuilder_.setMessage(value);
+        }
+      }
+      eventCase_ = 361;
+      return this;
+    }
+    /**
+     * <pre>
+     *requeue of manual approve task
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelManualApproveTaskRequeueEvent omnichannel_manual_approve_task_requeue_event = 361 [json_name = "omnichannelManualApproveTaskRequeueEvent"];</code>
+     */
+    public Builder clearOmnichannelManualApproveTaskRequeueEvent() {
+      if (omnichannelManualApproveTaskRequeueEventBuilder_ == null) {
+        if (eventCase_ == 361) {
+          eventCase_ = 0;
+          event_ = null;
+          onChanged();
+        }
+      } else {
+        if (eventCase_ == 361) {
+          eventCase_ = 0;
+          event_ = null;
+        }
+        omnichannelManualApproveTaskRequeueEventBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     *requeue of manual approve task
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelManualApproveTaskRequeueEvent omnichannel_manual_approve_task_requeue_event = 361 [json_name = "omnichannelManualApproveTaskRequeueEvent"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRequeueEvent.Builder getOmnichannelManualApproveTaskRequeueEventBuilder() {
+      return getOmnichannelManualApproveTaskRequeueEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     *requeue of manual approve task
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelManualApproveTaskRequeueEvent omnichannel_manual_approve_task_requeue_event = 361 [json_name = "omnichannelManualApproveTaskRequeueEvent"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRequeueEventOrBuilder getOmnichannelManualApproveTaskRequeueEventOrBuilder() {
+      if ((eventCase_ == 361) && (omnichannelManualApproveTaskRequeueEventBuilder_ != null)) {
+        return omnichannelManualApproveTaskRequeueEventBuilder_.getMessageOrBuilder();
+      } else {
+        if (eventCase_ == 361) {
+          return (com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRequeueEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRequeueEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     *requeue of manual approve task
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelManualApproveTaskRequeueEvent omnichannel_manual_approve_task_requeue_event = 361 [json_name = "omnichannelManualApproveTaskRequeueEvent"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRequeueEvent, com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRequeueEvent.Builder, com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRequeueEventOrBuilder> 
+        getOmnichannelManualApproveTaskRequeueEventFieldBuilder() {
+      if (omnichannelManualApproveTaskRequeueEventBuilder_ == null) {
+        if (!(eventCase_ == 361)) {
+          event_ = com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRequeueEvent.getDefaultInstance();
+        }
+        omnichannelManualApproveTaskRequeueEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRequeueEvent, com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRequeueEvent.Builder, com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRequeueEventOrBuilder>(
+                (com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRequeueEvent) event_,
+                getParentForChildren(),
+                isClean());
+        event_ = null;
+      }
+      eventCase_ = 361;
+      onChanged();
+      return omnichannelManualApproveTaskRequeueEventBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<

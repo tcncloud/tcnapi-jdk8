@@ -53,7 +53,7 @@ private static final long serialVersionUID = 0L;
    * If any Tour Agent Collections are using the &#64;tour_week_pattern_sids, they must be deleted first.
    * </pre>
    *
-   * <code>repeated int64 tour_week_pattern_sids = 1 [json_name = "tourWeekPatternSids"];</code>
+   * <code>repeated int64 tour_week_pattern_sids = 1 [json_name = "tourWeekPatternSids", jstype = JS_STRING];</code>
    * @return A list containing the tourWeekPatternSids.
    */
   @java.lang.Override
@@ -68,7 +68,7 @@ private static final long serialVersionUID = 0L;
    * If any Tour Agent Collections are using the &#64;tour_week_pattern_sids, they must be deleted first.
    * </pre>
    *
-   * <code>repeated int64 tour_week_pattern_sids = 1 [json_name = "tourWeekPatternSids"];</code>
+   * <code>repeated int64 tour_week_pattern_sids = 1 [json_name = "tourWeekPatternSids", jstype = JS_STRING];</code>
    * @return The count of tourWeekPatternSids.
    */
   public int getTourWeekPatternSidsCount() {
@@ -81,7 +81,7 @@ private static final long serialVersionUID = 0L;
    * If any Tour Agent Collections are using the &#64;tour_week_pattern_sids, they must be deleted first.
    * </pre>
    *
-   * <code>repeated int64 tour_week_pattern_sids = 1 [json_name = "tourWeekPatternSids"];</code>
+   * <code>repeated int64 tour_week_pattern_sids = 1 [json_name = "tourWeekPatternSids", jstype = JS_STRING];</code>
    * @param index The index of the element to return.
    * @return The tourWeekPatternSids at the given index.
    */
@@ -474,7 +474,7 @@ private static final long serialVersionUID = 0L;
      * If any Tour Agent Collections are using the &#64;tour_week_pattern_sids, they must be deleted first.
      * </pre>
      *
-     * <code>repeated int64 tour_week_pattern_sids = 1 [json_name = "tourWeekPatternSids"];</code>
+     * <code>repeated int64 tour_week_pattern_sids = 1 [json_name = "tourWeekPatternSids", jstype = JS_STRING];</code>
      * @return A list containing the tourWeekPatternSids.
      */
     public java.util.List<java.lang.Long>
@@ -489,7 +489,7 @@ private static final long serialVersionUID = 0L;
      * If any Tour Agent Collections are using the &#64;tour_week_pattern_sids, they must be deleted first.
      * </pre>
      *
-     * <code>repeated int64 tour_week_pattern_sids = 1 [json_name = "tourWeekPatternSids"];</code>
+     * <code>repeated int64 tour_week_pattern_sids = 1 [json_name = "tourWeekPatternSids", jstype = JS_STRING];</code>
      * @return The count of tourWeekPatternSids.
      */
     public int getTourWeekPatternSidsCount() {
@@ -502,7 +502,7 @@ private static final long serialVersionUID = 0L;
      * If any Tour Agent Collections are using the &#64;tour_week_pattern_sids, they must be deleted first.
      * </pre>
      *
-     * <code>repeated int64 tour_week_pattern_sids = 1 [json_name = "tourWeekPatternSids"];</code>
+     * <code>repeated int64 tour_week_pattern_sids = 1 [json_name = "tourWeekPatternSids", jstype = JS_STRING];</code>
      * @param index The index of the element to return.
      * @return The tourWeekPatternSids at the given index.
      */
@@ -516,7 +516,7 @@ private static final long serialVersionUID = 0L;
      * If any Tour Agent Collections are using the &#64;tour_week_pattern_sids, they must be deleted first.
      * </pre>
      *
-     * <code>repeated int64 tour_week_pattern_sids = 1 [json_name = "tourWeekPatternSids"];</code>
+     * <code>repeated int64 tour_week_pattern_sids = 1 [json_name = "tourWeekPatternSids", jstype = JS_STRING];</code>
      * @param index The index to set the value at.
      * @param value The tourWeekPatternSids to set.
      * @return This builder for chaining.
@@ -536,7 +536,7 @@ private static final long serialVersionUID = 0L;
      * If any Tour Agent Collections are using the &#64;tour_week_pattern_sids, they must be deleted first.
      * </pre>
      *
-     * <code>repeated int64 tour_week_pattern_sids = 1 [json_name = "tourWeekPatternSids"];</code>
+     * <code>repeated int64 tour_week_pattern_sids = 1 [json_name = "tourWeekPatternSids", jstype = JS_STRING];</code>
      * @param value The tourWeekPatternSids to add.
      * @return This builder for chaining.
      */
@@ -554,7 +554,7 @@ private static final long serialVersionUID = 0L;
      * If any Tour Agent Collections are using the &#64;tour_week_pattern_sids, they must be deleted first.
      * </pre>
      *
-     * <code>repeated int64 tour_week_pattern_sids = 1 [json_name = "tourWeekPatternSids"];</code>
+     * <code>repeated int64 tour_week_pattern_sids = 1 [json_name = "tourWeekPatternSids", jstype = JS_STRING];</code>
      * @param values The tourWeekPatternSids to add.
      * @return This builder for chaining.
      */
@@ -573,7 +573,7 @@ private static final long serialVersionUID = 0L;
      * If any Tour Agent Collections are using the &#64;tour_week_pattern_sids, they must be deleted first.
      * </pre>
      *
-     * <code>repeated int64 tour_week_pattern_sids = 1 [json_name = "tourWeekPatternSids"];</code>
+     * <code>repeated int64 tour_week_pattern_sids = 1 [json_name = "tourWeekPatternSids", jstype = JS_STRING];</code>
      * @return This builder for chaining.
      */
     public Builder clearTourWeekPatternSids() {

@@ -12,7 +12,7 @@ public interface ListTourAgentCollectionsReqOrBuilder extends
    * ID of the tour pattern to get the child Tour Agent Collections for.
    * </pre>
    *
-   * <code>int64 tour_pattern_sid = 1 [json_name = "tourPatternSid"];</code>
+   * <code>int64 tour_pattern_sid = 1 [json_name = "tourPatternSid", jstype = JS_STRING];</code>
    * @return The tourPatternSid.
    */
   long getTourPatternSid();

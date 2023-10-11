@@ -13,7 +13,7 @@ public interface DeleteTourPatternReqOrBuilder extends
    * If any entities belong to &#64;tour_pattern_sid they will be deleted too.
    * </pre>
    *
-   * <code>int64 tour_pattern_sid = 1 [json_name = "tourPatternSid"];</code>
+   * <code>int64 tour_pattern_sid = 1 [json_name = "tourPatternSid", jstype = JS_STRING];</code>
    * @return The tourPatternSid.
    */
   long getTourPatternSid();

@@ -4017,6 +4017,37 @@ public final class WFMGrpc {
     return getCreateTourPatternMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsRes> getGetTourPatternDiagnosticsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetTourPatternDiagnostics",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsRes> getGetTourPatternDiagnosticsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsReq, com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsRes> getGetTourPatternDiagnosticsMethod;
+    if ((getGetTourPatternDiagnosticsMethod = WFMGrpc.getGetTourPatternDiagnosticsMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getGetTourPatternDiagnosticsMethod = WFMGrpc.getGetTourPatternDiagnosticsMethod) == null) {
+          WFMGrpc.getGetTourPatternDiagnosticsMethod = getGetTourPatternDiagnosticsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsReq, com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetTourPatternDiagnostics"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsRes.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("GetTourPatternDiagnostics"))
+              .build();
+        }
+      }
+    }
+    return getGetTourPatternDiagnosticsMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersReq,
       com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersRes> getUpsertTourPatternWithMembersMethod;
 
@@ -5619,6 +5650,7 @@ public final class WFMGrpc {
      * Errors:
      *   - grpc.Invalid: one or more fields in the &#64;node have invalid values.
      *   - grpc.NotFound: parent location node doesn't exist or belongs to a different scenario than the one given.
+     *                    the &#64;skill_profile_category does not exist.
      *   - grpc.Internal: error occurs when creating the program node.
      * </pre>
      */
@@ -5639,6 +5671,7 @@ public final class WFMGrpc {
      *   - grpc.Invalid: one or more fields in the &#64;program_node have invalid values.
      *   - grpc.Internal: error occurs when updating the program node.
      *   - grpc.NotFound: entry to be updated doesn't exist, or the given parent &#64;location_node_sid belongs to a different scenario than the program node to update.
+     *                    the &#64;skill_profile_category does not exist.
      * </pre>
      */
     default void updateProgramNode(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateProgramNodeReq request,
@@ -6404,10 +6437,12 @@ public final class WFMGrpc {
      * The &#64;node_description fields may optionally be left blank.
      * The &#64;copied_from_scenario_sid field will be ignored, as it will be set to nil in the newly created scenario.
      * The &#64;creation_datetime and &#64;is_default fields will also be ignored and set as the current time and false respectively.
+     * The &#64;skill_profile_category will be associated with the created program node.
      * Required permissions:
      *   NONE
      * Errors:
      *   - grpc.Invalid: parameters in the &#64;req are invalid for the org making the request.
+     *   - grpc.NotFound: the &#64;skill_profile_category does not exist.
      *   - grpc.Internal: error occurs when creating the new scenario, or any of the node entities.
      * </pre>
      */
@@ -7036,11 +7071,31 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Returns a list of diagnostics describing any issues with the given &#64;tour_pattern.
+     * Checks the internal consistency between the pattern and all members, as well as making sure required fields are set with valid values.
+     * Ignores sid fields, except for &#64;shift_template_sid and &#64;scheduling_activity_sid.
+     * Does not query the database to check that foreign keys exist.
+     * Returns a single diagnostic with an OK code if the given &#64;tour_pattern has no issues.
+     * The &#64;member_tour_week_patterns and &#64;member_tour_agent_collections fields must be set on &#64;tour_pattern.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Internal: error occurs when validating the tour pattern or members.
+     * </pre>
+     */
+    default void getTourPatternDiagnostics(com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetTourPatternDiagnosticsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Replaces the existing Tour Pattern and members with &#64;tour_pattern for the &#64;tour_pattern.shift_template_sid and the org sending the request.
      * Returns the newly created Tour Pattern and members with their updated SIDs and Week Pattern Numbers.
      * Any existing Tour Week Patterns, Tour Shift Instance and Segment Configs, Tour Agent Collections and their WFM Agent SIDs
      *   belonging to &#64;tour_pattern.shift_template_sid will be replaced with the members on the provided &#64;tour_pattern.
      * At least one Tour Agent Collection and one Tour Week Pattern must be provided in the member fields.
+     * If the tour pattern data or members have issues that prevent them from being persisted, a list of diagnostics will be returned describing the issues that must be resolved.
      * Required permissions:
      *   NONE
      * Errors:
@@ -8355,6 +8410,7 @@ public final class WFMGrpc {
      * Errors:
      *   - grpc.Invalid: one or more fields in the &#64;node have invalid values.
      *   - grpc.NotFound: parent location node doesn't exist or belongs to a different scenario than the one given.
+     *                    the &#64;skill_profile_category does not exist.
      *   - grpc.Internal: error occurs when creating the program node.
      * </pre>
      */
@@ -8376,6 +8432,7 @@ public final class WFMGrpc {
      *   - grpc.Invalid: one or more fields in the &#64;program_node have invalid values.
      *   - grpc.Internal: error occurs when updating the program node.
      *   - grpc.NotFound: entry to be updated doesn't exist, or the given parent &#64;location_node_sid belongs to a different scenario than the program node to update.
+     *                    the &#64;skill_profile_category does not exist.
      * </pre>
      */
     public void updateProgramNode(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateProgramNodeReq request,
@@ -9183,10 +9240,12 @@ public final class WFMGrpc {
      * The &#64;node_description fields may optionally be left blank.
      * The &#64;copied_from_scenario_sid field will be ignored, as it will be set to nil in the newly created scenario.
      * The &#64;creation_datetime and &#64;is_default fields will also be ignored and set as the current time and false respectively.
+     * The &#64;skill_profile_category will be associated with the created program node.
      * Required permissions:
      *   NONE
      * Errors:
      *   - grpc.Invalid: parameters in the &#64;req are invalid for the org making the request.
+     *   - grpc.NotFound: the &#64;skill_profile_category does not exist.
      *   - grpc.Internal: error occurs when creating the new scenario, or any of the node entities.
      * </pre>
      */
@@ -9851,11 +9910,32 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Returns a list of diagnostics describing any issues with the given &#64;tour_pattern.
+     * Checks the internal consistency between the pattern and all members, as well as making sure required fields are set with valid values.
+     * Ignores sid fields, except for &#64;shift_template_sid and &#64;scheduling_activity_sid.
+     * Does not query the database to check that foreign keys exist.
+     * Returns a single diagnostic with an OK code if the given &#64;tour_pattern has no issues.
+     * The &#64;member_tour_week_patterns and &#64;member_tour_agent_collections fields must be set on &#64;tour_pattern.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Internal: error occurs when validating the tour pattern or members.
+     * </pre>
+     */
+    public void getTourPatternDiagnostics(com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetTourPatternDiagnosticsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Replaces the existing Tour Pattern and members with &#64;tour_pattern for the &#64;tour_pattern.shift_template_sid and the org sending the request.
      * Returns the newly created Tour Pattern and members with their updated SIDs and Week Pattern Numbers.
      * Any existing Tour Week Patterns, Tour Shift Instance and Segment Configs, Tour Agent Collections and their WFM Agent SIDs
      *   belonging to &#64;tour_pattern.shift_template_sid will be replaced with the members on the provided &#64;tour_pattern.
      * At least one Tour Agent Collection and one Tour Week Pattern must be provided in the member fields.
+     * If the tour pattern data or members have issues that prevent them from being persisted, a list of diagnostics will be returned describing the issues that must be resolved.
      * Required permissions:
      *   NONE
      * Errors:
@@ -11134,6 +11214,7 @@ public final class WFMGrpc {
      * Errors:
      *   - grpc.Invalid: one or more fields in the &#64;node have invalid values.
      *   - grpc.NotFound: parent location node doesn't exist or belongs to a different scenario than the one given.
+     *                    the &#64;skill_profile_category does not exist.
      *   - grpc.Internal: error occurs when creating the program node.
      * </pre>
      */
@@ -11154,6 +11235,7 @@ public final class WFMGrpc {
      *   - grpc.Invalid: one or more fields in the &#64;program_node have invalid values.
      *   - grpc.Internal: error occurs when updating the program node.
      *   - grpc.NotFound: entry to be updated doesn't exist, or the given parent &#64;location_node_sid belongs to a different scenario than the program node to update.
+     *                    the &#64;skill_profile_category does not exist.
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.UpdateProgramNodeRes updateProgramNode(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateProgramNodeReq request) {
@@ -11919,10 +12001,12 @@ public final class WFMGrpc {
      * The &#64;node_description fields may optionally be left blank.
      * The &#64;copied_from_scenario_sid field will be ignored, as it will be set to nil in the newly created scenario.
      * The &#64;creation_datetime and &#64;is_default fields will also be ignored and set as the current time and false respectively.
+     * The &#64;skill_profile_category will be associated with the created program node.
      * Required permissions:
      *   NONE
      * Errors:
      *   - grpc.Invalid: parameters in the &#64;req are invalid for the org making the request.
+     *   - grpc.NotFound: the &#64;skill_profile_category does not exist.
      *   - grpc.Internal: error occurs when creating the new scenario, or any of the node entities.
      * </pre>
      */
@@ -12551,11 +12635,31 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Returns a list of diagnostics describing any issues with the given &#64;tour_pattern.
+     * Checks the internal consistency between the pattern and all members, as well as making sure required fields are set with valid values.
+     * Ignores sid fields, except for &#64;shift_template_sid and &#64;scheduling_activity_sid.
+     * Does not query the database to check that foreign keys exist.
+     * Returns a single diagnostic with an OK code if the given &#64;tour_pattern has no issues.
+     * The &#64;member_tour_week_patterns and &#64;member_tour_agent_collections fields must be set on &#64;tour_pattern.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Internal: error occurs when validating the tour pattern or members.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsRes getTourPatternDiagnostics(com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetTourPatternDiagnosticsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Replaces the existing Tour Pattern and members with &#64;tour_pattern for the &#64;tour_pattern.shift_template_sid and the org sending the request.
      * Returns the newly created Tour Pattern and members with their updated SIDs and Week Pattern Numbers.
      * Any existing Tour Week Patterns, Tour Shift Instance and Segment Configs, Tour Agent Collections and their WFM Agent SIDs
      *   belonging to &#64;tour_pattern.shift_template_sid will be replaced with the members on the provided &#64;tour_pattern.
      * At least one Tour Agent Collection and one Tour Week Pattern must be provided in the member fields.
+     * If the tour pattern data or members have issues that prevent them from being persisted, a list of diagnostics will be returned describing the issues that must be resolved.
      * Required permissions:
      *   NONE
      * Errors:
@@ -13744,6 +13848,7 @@ public final class WFMGrpc {
      * Errors:
      *   - grpc.Invalid: one or more fields in the &#64;node have invalid values.
      *   - grpc.NotFound: parent location node doesn't exist or belongs to a different scenario than the one given.
+     *                    the &#64;skill_profile_category does not exist.
      *   - grpc.Internal: error occurs when creating the program node.
      * </pre>
      */
@@ -13765,6 +13870,7 @@ public final class WFMGrpc {
      *   - grpc.Invalid: one or more fields in the &#64;program_node have invalid values.
      *   - grpc.Internal: error occurs when updating the program node.
      *   - grpc.NotFound: entry to be updated doesn't exist, or the given parent &#64;location_node_sid belongs to a different scenario than the program node to update.
+     *                    the &#64;skill_profile_category does not exist.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateProgramNodeRes> updateProgramNode(
@@ -14572,10 +14678,12 @@ public final class WFMGrpc {
      * The &#64;node_description fields may optionally be left blank.
      * The &#64;copied_from_scenario_sid field will be ignored, as it will be set to nil in the newly created scenario.
      * The &#64;creation_datetime and &#64;is_default fields will also be ignored and set as the current time and false respectively.
+     * The &#64;skill_profile_category will be associated with the created program node.
      * Required permissions:
      *   NONE
      * Errors:
      *   - grpc.Invalid: parameters in the &#64;req are invalid for the org making the request.
+     *   - grpc.NotFound: the &#64;skill_profile_category does not exist.
      *   - grpc.Internal: error occurs when creating the new scenario, or any of the node entities.
      * </pre>
      */
@@ -15240,11 +15348,32 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Returns a list of diagnostics describing any issues with the given &#64;tour_pattern.
+     * Checks the internal consistency between the pattern and all members, as well as making sure required fields are set with valid values.
+     * Ignores sid fields, except for &#64;shift_template_sid and &#64;scheduling_activity_sid.
+     * Does not query the database to check that foreign keys exist.
+     * Returns a single diagnostic with an OK code if the given &#64;tour_pattern has no issues.
+     * The &#64;member_tour_week_patterns and &#64;member_tour_agent_collections fields must be set on &#64;tour_pattern.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Internal: error occurs when validating the tour pattern or members.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsRes> getTourPatternDiagnostics(
+        com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetTourPatternDiagnosticsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Replaces the existing Tour Pattern and members with &#64;tour_pattern for the &#64;tour_pattern.shift_template_sid and the org sending the request.
      * Returns the newly created Tour Pattern and members with their updated SIDs and Week Pattern Numbers.
      * Any existing Tour Week Patterns, Tour Shift Instance and Segment Configs, Tour Agent Collections and their WFM Agent SIDs
      *   belonging to &#64;tour_pattern.shift_template_sid will be replaced with the members on the provided &#64;tour_pattern.
      * At least one Tour Agent Collection and one Tour Week Pattern must be provided in the member fields.
+     * If the tour pattern data or members have issues that prevent them from being persisted, a list of diagnostics will be returned describing the issues that must be resolved.
      * Required permissions:
      *   NONE
      * Errors:
@@ -15758,28 +15887,29 @@ public final class WFMGrpc {
   private static final int METHODID_GET_PERFORMANCE_METRICS = 126;
   private static final int METHODID_LIST_REQUIRED_CALLS_INTERVALS = 127;
   private static final int METHODID_CREATE_TOUR_PATTERN = 128;
-  private static final int METHODID_UPSERT_TOUR_PATTERN_WITH_MEMBERS = 129;
-  private static final int METHODID_GET_TOUR_PATTERN = 130;
-  private static final int METHODID_DELETE_TOUR_PATTERN = 131;
-  private static final int METHODID_CREATE_TOUR_WEEK_PATTERN = 132;
-  private static final int METHODID_LIST_TOUR_WEEK_PATTERNS = 133;
-  private static final int METHODID_DELETE_TOUR_WEEK_PATTERNS = 134;
-  private static final int METHODID_CREATE_TOUR_SHIFT_INSTANCE_CONFIG = 135;
-  private static final int METHODID_UPDATE_TOUR_SHIFT_INSTANCE_CONFIG = 136;
-  private static final int METHODID_LIST_TOUR_SHIFT_INSTANCE_CONFIGS = 137;
-  private static final int METHODID_DELETE_TOUR_SHIFT_INSTANCE_CONFIGS = 138;
-  private static final int METHODID_CREATE_TOUR_SHIFT_SEGMENT_CONFIG = 139;
-  private static final int METHODID_UPDATE_TOUR_SHIFT_SEGMENT_CONFIG = 140;
-  private static final int METHODID_LIST_TOUR_SHIFT_SEGMENT_CONFIGS = 141;
-  private static final int METHODID_DELETE_TOUR_SHIFT_SEGMENT_CONFIGS = 142;
-  private static final int METHODID_CREATE_TOUR_AGENT_COLLECTION = 143;
-  private static final int METHODID_UPDATE_TOUR_AGENT_COLLECTION = 144;
-  private static final int METHODID_LIST_TOUR_AGENT_COLLECTIONS = 145;
-  private static final int METHODID_DELETE_TOUR_AGENT_COLLECTIONS = 146;
-  private static final int METHODID_CREATE_TOUR_AGENT_COLLECTION_WFMAGENTS = 147;
-  private static final int METHODID_LIST_TOUR_AGENT_COLLECTION_WFMAGENTS = 148;
-  private static final int METHODID_DELETE_TOUR_AGENT_COLLECTION_WFMAGENTS = 149;
-  private static final int METHODID_GENERATE_TOUR_WEEK_PATTERNS = 150;
+  private static final int METHODID_GET_TOUR_PATTERN_DIAGNOSTICS = 129;
+  private static final int METHODID_UPSERT_TOUR_PATTERN_WITH_MEMBERS = 130;
+  private static final int METHODID_GET_TOUR_PATTERN = 131;
+  private static final int METHODID_DELETE_TOUR_PATTERN = 132;
+  private static final int METHODID_CREATE_TOUR_WEEK_PATTERN = 133;
+  private static final int METHODID_LIST_TOUR_WEEK_PATTERNS = 134;
+  private static final int METHODID_DELETE_TOUR_WEEK_PATTERNS = 135;
+  private static final int METHODID_CREATE_TOUR_SHIFT_INSTANCE_CONFIG = 136;
+  private static final int METHODID_UPDATE_TOUR_SHIFT_INSTANCE_CONFIG = 137;
+  private static final int METHODID_LIST_TOUR_SHIFT_INSTANCE_CONFIGS = 138;
+  private static final int METHODID_DELETE_TOUR_SHIFT_INSTANCE_CONFIGS = 139;
+  private static final int METHODID_CREATE_TOUR_SHIFT_SEGMENT_CONFIG = 140;
+  private static final int METHODID_UPDATE_TOUR_SHIFT_SEGMENT_CONFIG = 141;
+  private static final int METHODID_LIST_TOUR_SHIFT_SEGMENT_CONFIGS = 142;
+  private static final int METHODID_DELETE_TOUR_SHIFT_SEGMENT_CONFIGS = 143;
+  private static final int METHODID_CREATE_TOUR_AGENT_COLLECTION = 144;
+  private static final int METHODID_UPDATE_TOUR_AGENT_COLLECTION = 145;
+  private static final int METHODID_LIST_TOUR_AGENT_COLLECTIONS = 146;
+  private static final int METHODID_DELETE_TOUR_AGENT_COLLECTIONS = 147;
+  private static final int METHODID_CREATE_TOUR_AGENT_COLLECTION_WFMAGENTS = 148;
+  private static final int METHODID_LIST_TOUR_AGENT_COLLECTION_WFMAGENTS = 149;
+  private static final int METHODID_DELETE_TOUR_AGENT_COLLECTION_WFMAGENTS = 150;
+  private static final int METHODID_GENERATE_TOUR_WEEK_PATTERNS = 151;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -16313,6 +16443,10 @@ public final class WFMGrpc {
         case METHODID_CREATE_TOUR_PATTERN:
           serviceImpl.createTourPattern((com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourPatternReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourPatternRes>) responseObserver);
+          break;
+        case METHODID_GET_TOUR_PATTERN_DIAGNOSTICS:
+          serviceImpl.getTourPatternDiagnostics((com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsRes>) responseObserver);
           break;
         case METHODID_UPSERT_TOUR_PATTERN_WITH_MEMBERS:
           serviceImpl.upsertTourPatternWithMembers((com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersReq) request,
@@ -17324,6 +17458,13 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourPatternRes>(
                 service, METHODID_CREATE_TOUR_PATTERN)))
         .addMethod(
+          getGetTourPatternDiagnosticsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsRes>(
+                service, METHODID_GET_TOUR_PATTERN_DIAGNOSTICS)))
+        .addMethod(
           getUpsertTourPatternWithMembersMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -17654,6 +17795,7 @@ public final class WFMGrpc {
               .addMethod(getGetPerformanceMetricsMethod())
               .addMethod(getListRequiredCallsIntervalsMethod())
               .addMethod(getCreateTourPatternMethod())
+              .addMethod(getGetTourPatternDiagnosticsMethod())
               .addMethod(getUpsertTourPatternWithMembersMethod())
               .addMethod(getGetTourPatternMethod())
               .addMethod(getDeleteTourPatternMethod())

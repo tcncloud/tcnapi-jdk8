@@ -12,7 +12,7 @@ public interface TourPatternOrBuilder extends
    * The unique ID of this tour pattern sid.
    * </pre>
    *
-   * <code>int64 tour_pattern_sid = 1 [json_name = "tourPatternSid"];</code>
+   * <code>int64 tour_pattern_sid = 1 [json_name = "tourPatternSid", jstype = JS_STRING];</code>
    * @return The tourPatternSid.
    */
   long getTourPatternSid();

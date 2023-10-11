@@ -2216,6 +2216,37 @@ public final class P3ApiGrpc {
     return getCreateContactFieldDescriptionMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateContactFieldDescriptionReq,
+      com.tcn.cloud.api.api.v0alpha.UpdateContactFieldDescriptionRes> getUpdateContactFieldDescriptionMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateContactFieldDescription",
+      requestType = com.tcn.cloud.api.api.v0alpha.UpdateContactFieldDescriptionReq.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.UpdateContactFieldDescriptionRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateContactFieldDescriptionReq,
+      com.tcn.cloud.api.api.v0alpha.UpdateContactFieldDescriptionRes> getUpdateContactFieldDescriptionMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateContactFieldDescriptionReq, com.tcn.cloud.api.api.v0alpha.UpdateContactFieldDescriptionRes> getUpdateContactFieldDescriptionMethod;
+    if ((getUpdateContactFieldDescriptionMethod = P3ApiGrpc.getUpdateContactFieldDescriptionMethod) == null) {
+      synchronized (P3ApiGrpc.class) {
+        if ((getUpdateContactFieldDescriptionMethod = P3ApiGrpc.getUpdateContactFieldDescriptionMethod) == null) {
+          P3ApiGrpc.getUpdateContactFieldDescriptionMethod = getUpdateContactFieldDescriptionMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateContactFieldDescriptionReq, com.tcn.cloud.api.api.v0alpha.UpdateContactFieldDescriptionRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateContactFieldDescription"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.UpdateContactFieldDescriptionReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.UpdateContactFieldDescriptionRes.getDefaultInstance()))
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("UpdateContactFieldDescription"))
+              .build();
+        }
+      }
+    }
+    return getUpdateContactFieldDescriptionMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeleteContactFieldDescriptionReq,
       com.tcn.cloud.api.api.v0alpha.DeleteContactFieldDescriptionRes> getDeleteContactFieldDescriptionMethod;
 
@@ -3780,6 +3811,16 @@ public final class P3ApiGrpc {
 
     /**
      * <pre>
+     * Update contact field description details
+     * </pre>
+     */
+    default void updateContactFieldDescription(com.tcn.cloud.api.api.v0alpha.UpdateContactFieldDescriptionReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateContactFieldDescriptionRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateContactFieldDescriptionMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Delete contact field description details
      * </pre>
      */
@@ -4911,6 +4952,17 @@ public final class P3ApiGrpc {
 
     /**
      * <pre>
+     * Update contact field description details
+     * </pre>
+     */
+    public void updateContactFieldDescription(com.tcn.cloud.api.api.v0alpha.UpdateContactFieldDescriptionReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateContactFieldDescriptionRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateContactFieldDescriptionMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Delete contact field description details
      * </pre>
      */
@@ -5983,6 +6035,16 @@ public final class P3ApiGrpc {
     public com.tcn.cloud.api.api.v0alpha.CreateContactFieldDescriptionRes createContactFieldDescription(com.tcn.cloud.api.api.v0alpha.CreateContactFieldDescriptionReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateContactFieldDescriptionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Update contact field description details
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v0alpha.UpdateContactFieldDescriptionRes updateContactFieldDescription(com.tcn.cloud.api.api.v0alpha.UpdateContactFieldDescriptionReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateContactFieldDescriptionMethod(), getCallOptions(), request);
     }
 
     /**
@@ -7100,6 +7162,17 @@ public final class P3ApiGrpc {
 
     /**
      * <pre>
+     * Update contact field description details
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateContactFieldDescriptionRes> updateContactFieldDescription(
+        com.tcn.cloud.api.api.v0alpha.UpdateContactFieldDescriptionReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateContactFieldDescriptionMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Delete contact field description details
      * </pre>
      */
@@ -7507,32 +7580,33 @@ public final class P3ApiGrpc {
   private static final int METHODID_GET_CONTACT_GROUP_DETAILS = 68;
   private static final int METHODID_GET_CONTACT_GROUP_SIZE = 69;
   private static final int METHODID_CREATE_CONTACT_FIELD_DESCRIPTION = 70;
-  private static final int METHODID_DELETE_CONTACT_FIELD_DESCRIPTION = 71;
-  private static final int METHODID_LIST_CONTACT_FIELD_DESCRIPTIONS = 72;
-  private static final int METHODID_LIST_CONTACT_FIELD_DESCRIPTIONS_BY_CGSID = 73;
-  private static final int METHODID_LIST_CONTACT_IMPORT_TEMPLATES = 74;
-  private static final int METHODID_UPDATE_PREVIEW_RECORD_TO_FINISHED = 75;
-  private static final int METHODID_UPDATE_AGENT_HUNT_GROUP = 76;
-  private static final int METHODID_MULTI_AGENT_HUNT_GROUP_ASSIGNMENT = 77;
-  private static final int METHODID_GET_AGENT_PROFILE = 78;
-  private static final int METHODID_RECALCULATE_BILLING = 79;
-  private static final int METHODID_LIST_OUTBOUND_BROADCAST_TEMPLATE_DATA = 80;
-  private static final int METHODID_MULTI_AGENT_SKILL_ASSIGNMENT = 81;
-  private static final int METHODID_MULTI_AGENT_SKILL_UNASSIGNMENT = 82;
-  private static final int METHODID_LIST_MAMAGENT_HUNT_GROUPS_BY_CLIENT_SID = 83;
-  private static final int METHODID_LIST_TTS_VOICES = 84;
-  private static final int METHODID_CREATE_TTS_VOICE = 85;
-  private static final int METHODID_DELETE_TTS_VOICE = 86;
-  private static final int METHODID_LIST_CUSTOM_DATA_KEYS = 87;
-  private static final int METHODID_CREATE_CUSTOM_DATA_KEY = 88;
-  private static final int METHODID_DELETE_CUSTOM_DATA_KEY = 89;
-  private static final int METHODID_UPDATE_CUSTOM_DATA_KEY = 90;
-  private static final int METHODID_GET_ACTIVITY_LOG_HISTORY = 91;
-  private static final int METHODID_LIST_TABLE_TEMPLATE_PROPERTIES = 92;
-  private static final int METHODID_LIST_AGENT_SKILLS_FILTERS = 93;
-  private static final int METHODID_LIST_SCHEDULE_RULES = 94;
-  private static final int METHODID_LIST_CUSTOM_REPORT_FILTERS = 95;
-  private static final int METHODID_LIST_SMS_NUMBERS = 96;
+  private static final int METHODID_UPDATE_CONTACT_FIELD_DESCRIPTION = 71;
+  private static final int METHODID_DELETE_CONTACT_FIELD_DESCRIPTION = 72;
+  private static final int METHODID_LIST_CONTACT_FIELD_DESCRIPTIONS = 73;
+  private static final int METHODID_LIST_CONTACT_FIELD_DESCRIPTIONS_BY_CGSID = 74;
+  private static final int METHODID_LIST_CONTACT_IMPORT_TEMPLATES = 75;
+  private static final int METHODID_UPDATE_PREVIEW_RECORD_TO_FINISHED = 76;
+  private static final int METHODID_UPDATE_AGENT_HUNT_GROUP = 77;
+  private static final int METHODID_MULTI_AGENT_HUNT_GROUP_ASSIGNMENT = 78;
+  private static final int METHODID_GET_AGENT_PROFILE = 79;
+  private static final int METHODID_RECALCULATE_BILLING = 80;
+  private static final int METHODID_LIST_OUTBOUND_BROADCAST_TEMPLATE_DATA = 81;
+  private static final int METHODID_MULTI_AGENT_SKILL_ASSIGNMENT = 82;
+  private static final int METHODID_MULTI_AGENT_SKILL_UNASSIGNMENT = 83;
+  private static final int METHODID_LIST_MAMAGENT_HUNT_GROUPS_BY_CLIENT_SID = 84;
+  private static final int METHODID_LIST_TTS_VOICES = 85;
+  private static final int METHODID_CREATE_TTS_VOICE = 86;
+  private static final int METHODID_DELETE_TTS_VOICE = 87;
+  private static final int METHODID_LIST_CUSTOM_DATA_KEYS = 88;
+  private static final int METHODID_CREATE_CUSTOM_DATA_KEY = 89;
+  private static final int METHODID_DELETE_CUSTOM_DATA_KEY = 90;
+  private static final int METHODID_UPDATE_CUSTOM_DATA_KEY = 91;
+  private static final int METHODID_GET_ACTIVITY_LOG_HISTORY = 92;
+  private static final int METHODID_LIST_TABLE_TEMPLATE_PROPERTIES = 93;
+  private static final int METHODID_LIST_AGENT_SKILLS_FILTERS = 94;
+  private static final int METHODID_LIST_SCHEDULE_RULES = 95;
+  private static final int METHODID_LIST_CUSTOM_REPORT_FILTERS = 96;
+  private static final int METHODID_LIST_SMS_NUMBERS = 97;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -7834,6 +7908,10 @@ public final class P3ApiGrpc {
         case METHODID_CREATE_CONTACT_FIELD_DESCRIPTION:
           serviceImpl.createContactFieldDescription((com.tcn.cloud.api.api.v0alpha.CreateContactFieldDescriptionReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateContactFieldDescriptionRes>) responseObserver);
+          break;
+        case METHODID_UPDATE_CONTACT_FIELD_DESCRIPTION:
+          serviceImpl.updateContactFieldDescription((com.tcn.cloud.api.api.v0alpha.UpdateContactFieldDescriptionReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateContactFieldDescriptionRes>) responseObserver);
           break;
         case METHODID_DELETE_CONTACT_FIELD_DESCRIPTION:
           serviceImpl.deleteContactFieldDescription((com.tcn.cloud.api.api.v0alpha.DeleteContactFieldDescriptionReq) request,
@@ -8455,6 +8533,13 @@ public final class P3ApiGrpc {
               com.tcn.cloud.api.api.v0alpha.CreateContactFieldDescriptionRes>(
                 service, METHODID_CREATE_CONTACT_FIELD_DESCRIPTION)))
         .addMethod(
+          getUpdateContactFieldDescriptionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.UpdateContactFieldDescriptionReq,
+              com.tcn.cloud.api.api.v0alpha.UpdateContactFieldDescriptionRes>(
+                service, METHODID_UPDATE_CONTACT_FIELD_DESCRIPTION)))
+        .addMethod(
           getDeleteContactFieldDescriptionMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -8755,6 +8840,7 @@ public final class P3ApiGrpc {
               .addMethod(getGetContactGroupDetailsMethod())
               .addMethod(getGetContactGroupSizeMethod())
               .addMethod(getCreateContactFieldDescriptionMethod())
+              .addMethod(getUpdateContactFieldDescriptionMethod())
               .addMethod(getDeleteContactFieldDescriptionMethod())
               .addMethod(getListContactFieldDescriptionsMethod())
               .addMethod(getListContactFieldDescriptionsByCGSidMethod())

@@ -48,7 +48,7 @@ private static final long serialVersionUID = 0L;
    * ID of the skill profile group.
    * </pre>
    *
-   * <code>int64 skill_profile_group_sid = 1 [json_name = "skillProfileGroupSid"];</code>
+   * <code>int64 skill_profile_group_sid = 1 [json_name = "skillProfileGroupSid", jstype = JS_STRING];</code>
    * @return The skillProfileGroupSid.
    */
   @java.lang.Override
@@ -982,7 +982,7 @@ private static final long serialVersionUID = 0L;
      * ID of the skill profile group.
      * </pre>
      *
-     * <code>int64 skill_profile_group_sid = 1 [json_name = "skillProfileGroupSid"];</code>
+     * <code>int64 skill_profile_group_sid = 1 [json_name = "skillProfileGroupSid", jstype = JS_STRING];</code>
      * @return The skillProfileGroupSid.
      */
     @java.lang.Override
@@ -994,7 +994,7 @@ private static final long serialVersionUID = 0L;
      * ID of the skill profile group.
      * </pre>
      *
-     * <code>int64 skill_profile_group_sid = 1 [json_name = "skillProfileGroupSid"];</code>
+     * <code>int64 skill_profile_group_sid = 1 [json_name = "skillProfileGroupSid", jstype = JS_STRING];</code>
      * @param value The skillProfileGroupSid to set.
      * @return This builder for chaining.
      */
@@ -1010,7 +1010,7 @@ private static final long serialVersionUID = 0L;
      * ID of the skill profile group.
      * </pre>
      *
-     * <code>int64 skill_profile_group_sid = 1 [json_name = "skillProfileGroupSid"];</code>
+     * <code>int64 skill_profile_group_sid = 1 [json_name = "skillProfileGroupSid", jstype = JS_STRING];</code>
      * @return This builder for chaining.
      */
     public Builder clearSkillProfileGroupSid() {

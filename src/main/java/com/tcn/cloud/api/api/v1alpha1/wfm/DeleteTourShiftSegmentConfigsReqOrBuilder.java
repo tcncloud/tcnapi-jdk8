@@ -12,7 +12,7 @@ public interface DeleteTourShiftSegmentConfigsReqOrBuilder extends
    * IDs of the Tour Shift Segment Configs to delete.
    * </pre>
    *
-   * <code>repeated int64 tour_shift_segment_config_sids = 1 [json_name = "tourShiftSegmentConfigSids"];</code>
+   * <code>repeated int64 tour_shift_segment_config_sids = 1 [json_name = "tourShiftSegmentConfigSids", jstype = JS_STRING];</code>
    * @return A list containing the tourShiftSegmentConfigSids.
    */
   java.util.List<java.lang.Long> getTourShiftSegmentConfigSidsList();
@@ -21,7 +21,7 @@ public interface DeleteTourShiftSegmentConfigsReqOrBuilder extends
    * IDs of the Tour Shift Segment Configs to delete.
    * </pre>
    *
-   * <code>repeated int64 tour_shift_segment_config_sids = 1 [json_name = "tourShiftSegmentConfigSids"];</code>
+   * <code>repeated int64 tour_shift_segment_config_sids = 1 [json_name = "tourShiftSegmentConfigSids", jstype = JS_STRING];</code>
    * @return The count of tourShiftSegmentConfigSids.
    */
   int getTourShiftSegmentConfigSidsCount();
@@ -30,7 +30,7 @@ public interface DeleteTourShiftSegmentConfigsReqOrBuilder extends
    * IDs of the Tour Shift Segment Configs to delete.
    * </pre>
    *
-   * <code>repeated int64 tour_shift_segment_config_sids = 1 [json_name = "tourShiftSegmentConfigSids"];</code>
+   * <code>repeated int64 tour_shift_segment_config_sids = 1 [json_name = "tourShiftSegmentConfigSids", jstype = JS_STRING];</code>
    * @param index The index of the element to return.
    * @return The tourShiftSegmentConfigSids at the given index.
    */

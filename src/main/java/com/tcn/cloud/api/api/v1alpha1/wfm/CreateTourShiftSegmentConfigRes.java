@@ -49,7 +49,7 @@ private static final long serialVersionUID = 0L;
    * ID of the newly created Tour shift Segment Config.
    * </pre>
    *
-   * <code>int64 tour_shift_segment_config_sid = 1 [json_name = "tourShiftSegmentConfigSid"];</code>
+   * <code>int64 tour_shift_segment_config_sid = 1 [json_name = "tourShiftSegmentConfigSid", jstype = JS_STRING];</code>
    * @return The tourShiftSegmentConfigSid.
    */
   @java.lang.Override
@@ -393,7 +393,7 @@ private static final long serialVersionUID = 0L;
      * ID of the newly created Tour shift Segment Config.
      * </pre>
      *
-     * <code>int64 tour_shift_segment_config_sid = 1 [json_name = "tourShiftSegmentConfigSid"];</code>
+     * <code>int64 tour_shift_segment_config_sid = 1 [json_name = "tourShiftSegmentConfigSid", jstype = JS_STRING];</code>
      * @return The tourShiftSegmentConfigSid.
      */
     @java.lang.Override
@@ -405,7 +405,7 @@ private static final long serialVersionUID = 0L;
      * ID of the newly created Tour shift Segment Config.
      * </pre>
      *
-     * <code>int64 tour_shift_segment_config_sid = 1 [json_name = "tourShiftSegmentConfigSid"];</code>
+     * <code>int64 tour_shift_segment_config_sid = 1 [json_name = "tourShiftSegmentConfigSid", jstype = JS_STRING];</code>
      * @param value The tourShiftSegmentConfigSid to set.
      * @return This builder for chaining.
      */
@@ -421,7 +421,7 @@ private static final long serialVersionUID = 0L;
      * ID of the newly created Tour shift Segment Config.
      * </pre>
      *
-     * <code>int64 tour_shift_segment_config_sid = 1 [json_name = "tourShiftSegmentConfigSid"];</code>
+     * <code>int64 tour_shift_segment_config_sid = 1 [json_name = "tourShiftSegmentConfigSid", jstype = JS_STRING];</code>
      * @return This builder for chaining.
      */
     public Builder clearTourShiftSegmentConfigSid() {

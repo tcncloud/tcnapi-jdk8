@@ -33,4 +33,48 @@ public interface UpsertTourPatternWithMembersResOrBuilder extends
    * <code>.api.v1alpha1.wfm.TourPattern tour_pattern = 1 [json_name = "tourPattern"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.wfm.TourPatternOrBuilder getTourPatternOrBuilder();
+
+  /**
+   * <pre>
+   * Diagnostics for any issues encountered with the fields on the given &#64;tour_pattern.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
+   */
+  java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic> 
+      getDiagnosticsList();
+  /**
+   * <pre>
+   * Diagnostics for any issues encountered with the fields on the given &#64;tour_pattern.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic getDiagnostics(int index);
+  /**
+   * <pre>
+   * Diagnostics for any issues encountered with the fields on the given &#64;tour_pattern.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
+   */
+  int getDiagnosticsCount();
+  /**
+   * <pre>
+   * Diagnostics for any issues encountered with the fields on the given &#64;tour_pattern.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.DiagnosticOrBuilder> 
+      getDiagnosticsOrBuilderList();
+  /**
+   * <pre>
+   * Diagnostics for any issues encountered with the fields on the given &#64;tour_pattern.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.wfm.DiagnosticOrBuilder getDiagnosticsOrBuilder(
+      int index);
 }
