@@ -208,6 +208,37 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int ENABLE_2FA_FIELD_NUMBER = 13;
+  private boolean enable2Fa_ = false;
+  /**
+   * <pre>
+   * Whether or not two factor authentication is enabled.
+   * </pre>
+   *
+   * <code>bool enable_2fa = 13 [json_name = "enable2fa"];</code>
+   * @return The enable2fa.
+   */
+  @java.lang.Override
+  public boolean getEnable2Fa() {
+    return enable2Fa_;
+  }
+
+  public static final int BLOCK_UNVERIFIED_USERS_FIELD_NUMBER = 14;
+  private boolean blockUnverifiedUsers_ = false;
+  /**
+   * <pre>
+   * Whether or not to block login from users without a verified email.
+   * This option is only used if two factor authentication is enabled.
+   * </pre>
+   *
+   * <code>bool block_unverified_users = 14 [json_name = "blockUnverifiedUsers"];</code>
+   * @return The blockUnverifiedUsers.
+   */
+  @java.lang.Override
+  public boolean getBlockUnverifiedUsers() {
+    return blockUnverifiedUsers_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -233,6 +264,12 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(agentApiKey_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 12, agentApiKey_);
+    }
+    if (enable2Fa_ != false) {
+      output.writeBool(13, enable2Fa_);
+    }
+    if (blockUnverifiedUsers_ != false) {
+      output.writeBool(14, blockUnverifiedUsers_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -261,6 +298,14 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(agentApiKey_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, agentApiKey_);
     }
+    if (enable2Fa_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(13, enable2Fa_);
+    }
+    if (blockUnverifiedUsers_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(14, blockUnverifiedUsers_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -284,6 +329,10 @@ private static final long serialVersionUID = 0L;
         .equals(other.getAllowedIpsList())) return false;
     if (!getAgentApiKey()
         .equals(other.getAgentApiKey())) return false;
+    if (getEnable2Fa()
+        != other.getEnable2Fa()) return false;
+    if (getBlockUnverifiedUsers()
+        != other.getBlockUnverifiedUsers()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -306,6 +355,12 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + AGENT_API_KEY_FIELD_NUMBER;
     hash = (53 * hash) + getAgentApiKey().hashCode();
+    hash = (37 * hash) + ENABLE_2FA_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getEnable2Fa());
+    hash = (37 * hash) + BLOCK_UNVERIFIED_USERS_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getBlockUnverifiedUsers());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -446,6 +501,8 @@ private static final long serialVersionUID = 0L;
       allowedIps_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
       agentApiKey_ = "";
+      enable2Fa_ = false;
+      blockUnverifiedUsers_ = false;
       return this;
     }
 
@@ -491,6 +548,12 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.agentApiKey_ = agentApiKey_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.enable2Fa_ = enable2Fa_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.blockUnverifiedUsers_ = blockUnverifiedUsers_;
       }
     }
 
@@ -561,6 +624,12 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000008;
         onChanged();
       }
+      if (other.getEnable2Fa() != false) {
+        setEnable2Fa(other.getEnable2Fa());
+      }
+      if (other.getBlockUnverifiedUsers() != false) {
+        setBlockUnverifiedUsers(other.getBlockUnverifiedUsers());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -608,6 +677,16 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000008;
               break;
             } // case 98
+            case 104: {
+              enable2Fa_ = input.readBool();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 104
+            case 112: {
+              blockUnverifiedUsers_ = input.readBool();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 112
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -996,6 +1075,97 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       agentApiKey_ = value;
       bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+
+    private boolean enable2Fa_ ;
+    /**
+     * <pre>
+     * Whether or not two factor authentication is enabled.
+     * </pre>
+     *
+     * <code>bool enable_2fa = 13 [json_name = "enable2fa"];</code>
+     * @return The enable2fa.
+     */
+    @java.lang.Override
+    public boolean getEnable2Fa() {
+      return enable2Fa_;
+    }
+    /**
+     * <pre>
+     * Whether or not two factor authentication is enabled.
+     * </pre>
+     *
+     * <code>bool enable_2fa = 13 [json_name = "enable2fa"];</code>
+     * @param value The enable2fa to set.
+     * @return This builder for chaining.
+     */
+    public Builder setEnable2Fa(boolean value) {
+
+      enable2Fa_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Whether or not two factor authentication is enabled.
+     * </pre>
+     *
+     * <code>bool enable_2fa = 13 [json_name = "enable2fa"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearEnable2Fa() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      enable2Fa_ = false;
+      onChanged();
+      return this;
+    }
+
+    private boolean blockUnverifiedUsers_ ;
+    /**
+     * <pre>
+     * Whether or not to block login from users without a verified email.
+     * This option is only used if two factor authentication is enabled.
+     * </pre>
+     *
+     * <code>bool block_unverified_users = 14 [json_name = "blockUnverifiedUsers"];</code>
+     * @return The blockUnverifiedUsers.
+     */
+    @java.lang.Override
+    public boolean getBlockUnverifiedUsers() {
+      return blockUnverifiedUsers_;
+    }
+    /**
+     * <pre>
+     * Whether or not to block login from users without a verified email.
+     * This option is only used if two factor authentication is enabled.
+     * </pre>
+     *
+     * <code>bool block_unverified_users = 14 [json_name = "blockUnverifiedUsers"];</code>
+     * @param value The blockUnverifiedUsers to set.
+     * @return This builder for chaining.
+     */
+    public Builder setBlockUnverifiedUsers(boolean value) {
+
+      blockUnverifiedUsers_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Whether or not to block login from users without a verified email.
+     * This option is only used if two factor authentication is enabled.
+     * </pre>
+     *
+     * <code>bool block_unverified_users = 14 [json_name = "blockUnverifiedUsers"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearBlockUnverifiedUsers() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      blockUnverifiedUsers_ = false;
       onChanged();
       return this;
     }

@@ -234,6 +234,26 @@ public final class OmnichannelEventsProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_commons_audit_OmnichannelPaymentLinkSentEvent_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_audit_OmnichannelManualApproveTaskAcceptedEvent_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_audit_OmnichannelManualApproveTaskAcceptedEvent_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_audit_OmnichannelManualApproveTaskRejectedEvent_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_audit_OmnichannelManualApproveTaskRejectedEvent_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_audit_OmnichannelManualApproveTaskTimeoutEvent_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_audit_OmnichannelManualApproveTaskTimeoutEvent_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_audit_OmnichannelManualApproveTaskRequeueEvent_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_audit_OmnichannelManualApproveTaskRequeueEvent_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -492,11 +512,27 @@ public final class OmnichannelEventsProto {
       "ge\022#\n\rmessage_units\030\002 \001(\005R\014messageUnits\"" +
       "i\n\037OmnichannelPaymentLinkSentEvent\0222\n\007me" +
       "ssage\030\001 \001(\0132\030.api.commons.OmniMessageR\007m" +
-      "essage\022\022\n\004link\030\002 \001(\tR\004linkB\243\001\n#com.tcn.c" +
-      "loud.api.api.commons.auditB\026OmnichannelE" +
-      "ventsProtoP\001\242\002\003ACA\252\002\021Api.Commons.Audit\312\002" +
-      "\021Api\\Commons\\Audit\342\002\035Api\\Commons\\Audit\\G" +
-      "PBMetadata\352\002\023Api::Commons::Auditb\006proto3"
+      "essage\022\022\n\004link\030\002 \001(\tR\004link\"\227\001\n)Omnichann" +
+      "elManualApproveTaskAcceptedEvent\022)\n\004task" +
+      "\030\001 \001(\0132\025.api.commons.OmniTaskR\004task\022\027\n\007u" +
+      "ser_id\030\002 \001(\tR\006userId\022&\n\017asm_session_sid\030" +
+      "\003 \001(\003R\rasmSessionSid\"\227\001\n)OmnichannelManu" +
+      "alApproveTaskRejectedEvent\022)\n\004task\030\001 \001(\013" +
+      "2\025.api.commons.OmniTaskR\004task\022\027\n\007user_id" +
+      "\030\002 \001(\tR\006userId\022&\n\017asm_session_sid\030\003 \001(\003R" +
+      "\rasmSessionSid\"\226\001\n(OmnichannelManualAppr" +
+      "oveTaskTimeoutEvent\022)\n\004task\030\001 \001(\0132\025.api." +
+      "commons.OmniTaskR\004task\022\027\n\007user_id\030\002 \001(\tR" +
+      "\006userId\022&\n\017asm_session_sid\030\003 \001(\003R\rasmSes" +
+      "sionSid\"\226\001\n(OmnichannelManualApproveTask" +
+      "RequeueEvent\022)\n\004task\030\001 \001(\0132\025.api.commons" +
+      ".OmniTaskR\004task\022\027\n\007user_id\030\002 \001(\tR\006userId" +
+      "\022&\n\017asm_session_sid\030\003 \001(\003R\rasmSessionSid" +
+      "B\243\001\n#com.tcn.cloud.api.api.commons.audit" +
+      "B\026OmnichannelEventsProtoP\001\242\002\003ACA\252\002\021Api.C" +
+      "ommons.Audit\312\002\021Api\\Commons\\Audit\342\002\035Api\\C" +
+      "ommons\\Audit\\GPBMetadata\352\002\023Api::Commons:" +
+      ":Auditb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -768,6 +804,30 @@ public final class OmnichannelEventsProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_audit_OmnichannelPaymentLinkSentEvent_descriptor,
         new java.lang.String[] { "Message", "Link", });
+    internal_static_api_commons_audit_OmnichannelManualApproveTaskAcceptedEvent_descriptor =
+      getDescriptor().getMessageTypes().get(44);
+    internal_static_api_commons_audit_OmnichannelManualApproveTaskAcceptedEvent_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_audit_OmnichannelManualApproveTaskAcceptedEvent_descriptor,
+        new java.lang.String[] { "Task", "UserId", "AsmSessionSid", });
+    internal_static_api_commons_audit_OmnichannelManualApproveTaskRejectedEvent_descriptor =
+      getDescriptor().getMessageTypes().get(45);
+    internal_static_api_commons_audit_OmnichannelManualApproveTaskRejectedEvent_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_audit_OmnichannelManualApproveTaskRejectedEvent_descriptor,
+        new java.lang.String[] { "Task", "UserId", "AsmSessionSid", });
+    internal_static_api_commons_audit_OmnichannelManualApproveTaskTimeoutEvent_descriptor =
+      getDescriptor().getMessageTypes().get(46);
+    internal_static_api_commons_audit_OmnichannelManualApproveTaskTimeoutEvent_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_audit_OmnichannelManualApproveTaskTimeoutEvent_descriptor,
+        new java.lang.String[] { "Task", "UserId", "AsmSessionSid", });
+    internal_static_api_commons_audit_OmnichannelManualApproveTaskRequeueEvent_descriptor =
+      getDescriptor().getMessageTypes().get(47);
+    internal_static_api_commons_audit_OmnichannelManualApproveTaskRequeueEvent_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_audit_OmnichannelManualApproveTaskRequeueEvent_descriptor,
+        new java.lang.String[] { "Task", "UserId", "AsmSessionSid", });
     com.tcn.cloud.api.api.commons.OmnichannelProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
   }

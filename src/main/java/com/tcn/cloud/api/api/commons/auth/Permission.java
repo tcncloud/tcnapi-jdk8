@@ -192,6 +192,14 @@ public enum Permission
   PERMISSION_SUBSCRIPTION_MANAGEMENT(140),
   /**
    * <pre>
+   * Enables copying resources from one organization to another.  eg. Data Dip templates.
+   * </pre>
+   *
+   * <code>PERMISSION_COPY_TO_ORGANIZATION = 170 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_COPY_TO_ORGANIZATION(170),
+  /**
+   * <pre>
    * Enables the customer support tools.
    * </pre>
    *
@@ -848,6 +856,14 @@ public enum Permission
   public static final int PERMISSION_SUBSCRIPTION_MANAGEMENT_VALUE = 140;
   /**
    * <pre>
+   * Enables copying resources from one organization to another.  eg. Data Dip templates.
+   * </pre>
+   *
+   * <code>PERMISSION_COPY_TO_ORGANIZATION = 170 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_COPY_TO_ORGANIZATION_VALUE = 170;
+  /**
+   * <pre>
    * Enables the customer support tools.
    * </pre>
    *
@@ -1369,6 +1385,7 @@ public enum Permission
       case 1700: return PERMISSION_SOUNDBOARD_VIEW;
       case 1701: return PERMISSION_SOUNDBOARD_EDIT;
       case 140: return PERMISSION_SUBSCRIPTION_MANAGEMENT;
+      case 170: return PERMISSION_COPY_TO_ORGANIZATION;
       case 200: return PERMISSION_CUSTOMER_SUPPORT;
       case 210: return PERMISSION_IMITATION;
       case 220: return PERMISSION_BILLING_EDIT;
