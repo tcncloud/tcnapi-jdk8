@@ -9,62 +9,156 @@ public interface OmniComplianceConfigOrBuilder extends
 
   /**
    * <pre>
-   * a list of config keywords
+   * opting in to different compliance settings
    * </pre>
    *
-   * <code>repeated string keywords = 1 [json_name = "keywords"];</code>
-   * @return A list containing the keywords.
+   * <code>.api.commons.OmniComplianceAction opt_in = 1 [json_name = "optIn"];</code>
+   * @return Whether the optIn field is set.
    */
-  java.util.List<java.lang.String>
-      getKeywordsList();
+  boolean hasOptIn();
   /**
    * <pre>
-   * a list of config keywords
+   * opting in to different compliance settings
    * </pre>
    *
-   * <code>repeated string keywords = 1 [json_name = "keywords"];</code>
-   * @return The count of keywords.
+   * <code>.api.commons.OmniComplianceAction opt_in = 1 [json_name = "optIn"];</code>
+   * @return The optIn.
    */
-  int getKeywordsCount();
+  com.tcn.cloud.api.api.commons.OmniComplianceAction getOptIn();
   /**
    * <pre>
-   * a list of config keywords
+   * opting in to different compliance settings
    * </pre>
    *
-   * <code>repeated string keywords = 1 [json_name = "keywords"];</code>
-   * @param index The index of the element to return.
-   * @return The keywords at the given index.
+   * <code>.api.commons.OmniComplianceAction opt_in = 1 [json_name = "optIn"];</code>
    */
-  java.lang.String getKeywords(int index);
-  /**
-   * <pre>
-   * a list of config keywords
-   * </pre>
-   *
-   * <code>repeated string keywords = 1 [json_name = "keywords"];</code>
-   * @param index The index of the value to return.
-   * @return The bytes of the keywords at the given index.
-   */
-  com.google.protobuf.ByteString
-      getKeywordsBytes(int index);
+  com.tcn.cloud.api.api.commons.OmniComplianceActionOrBuilder getOptInOrBuilder();
 
   /**
    * <pre>
-   * confirmation for the config
+   * opting out of different compliance settings
    * </pre>
    *
-   * <code>string confirmation_message = 2 [json_name = "confirmationMessage"];</code>
-   * @return The confirmationMessage.
+   * <code>.api.commons.OmniComplianceAction opt_out = 2 [json_name = "optOut"];</code>
+   * @return Whether the optOut field is set.
    */
-  java.lang.String getConfirmationMessage();
+  boolean hasOptOut();
   /**
    * <pre>
-   * confirmation for the config
+   * opting out of different compliance settings
    * </pre>
    *
-   * <code>string confirmation_message = 2 [json_name = "confirmationMessage"];</code>
-   * @return The bytes for confirmationMessage.
+   * <code>.api.commons.OmniComplianceAction opt_out = 2 [json_name = "optOut"];</code>
+   * @return The optOut.
+   */
+  com.tcn.cloud.api.api.commons.OmniComplianceAction getOptOut();
+  /**
+   * <pre>
+   * opting out of different compliance settings
+   * </pre>
+   *
+   * <code>.api.commons.OmniComplianceAction opt_out = 2 [json_name = "optOut"];</code>
+   */
+  com.tcn.cloud.api.api.commons.OmniComplianceActionOrBuilder getOptOutOrBuilder();
+
+  /**
+   * <pre>
+   * help regarding compliance settings
+   * </pre>
+   *
+   * <code>.api.commons.OmniComplianceAction help = 3 [json_name = "help"];</code>
+   * @return Whether the help field is set.
+   */
+  boolean hasHelp();
+  /**
+   * <pre>
+   * help regarding compliance settings
+   * </pre>
+   *
+   * <code>.api.commons.OmniComplianceAction help = 3 [json_name = "help"];</code>
+   * @return The help.
+   */
+  com.tcn.cloud.api.api.commons.OmniComplianceAction getHelp();
+  /**
+   * <pre>
+   * help regarding compliance settings
+   * </pre>
+   *
+   * <code>.api.commons.OmniComplianceAction help = 3 [json_name = "help"];</code>
+   */
+  com.tcn.cloud.api.api.commons.OmniComplianceActionOrBuilder getHelpOrBuilder();
+
+  /**
+   * <pre>
+   * information regarding compliance settings
+   * </pre>
+   *
+   * <code>.api.commons.OmniComplianceAction information = 4 [json_name = "information"];</code>
+   * @return Whether the information field is set.
+   */
+  boolean hasInformation();
+  /**
+   * <pre>
+   * information regarding compliance settings
+   * </pre>
+   *
+   * <code>.api.commons.OmniComplianceAction information = 4 [json_name = "information"];</code>
+   * @return The information.
+   */
+  com.tcn.cloud.api.api.commons.OmniComplianceAction getInformation();
+  /**
+   * <pre>
+   * information regarding compliance settings
+   * </pre>
+   *
+   * <code>.api.commons.OmniComplianceAction information = 4 [json_name = "information"];</code>
+   */
+  com.tcn.cloud.api.api.commons.OmniComplianceActionOrBuilder getInformationOrBuilder();
+
+  /**
+   * <pre>
+   * scrub list identifier
+   * </pre>
+   *
+   * <code>string scrub_list_id = 5 [json_name = "scrubListId"];</code>
+   * @return The scrubListId.
+   */
+  java.lang.String getScrubListId();
+  /**
+   * <pre>
+   * scrub list identifier
+   * </pre>
+   *
+   * <code>string scrub_list_id = 5 [json_name = "scrubListId"];</code>
+   * @return The bytes for scrubListId.
    */
   com.google.protobuf.ByteString
-      getConfirmationMessageBytes();
+      getScrubListIdBytes();
+
+  /**
+   * <pre>
+   * rule set identifier
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue rule_set_id = 6 [json_name = "ruleSetId"];</code>
+   * @return Whether the ruleSetId field is set.
+   */
+  boolean hasRuleSetId();
+  /**
+   * <pre>
+   * rule set identifier
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue rule_set_id = 6 [json_name = "ruleSetId"];</code>
+   * @return The ruleSetId.
+   */
+  com.google.protobuf.StringValue getRuleSetId();
+  /**
+   * <pre>
+   * rule set identifier
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue rule_set_id = 6 [json_name = "ruleSetId"];</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getRuleSetIdOrBuilder();
 }

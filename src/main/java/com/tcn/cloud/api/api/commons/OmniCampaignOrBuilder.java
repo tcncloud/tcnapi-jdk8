@@ -297,4 +297,31 @@ public interface OmniCampaignOrBuilder extends
    * @return The shortenUrl.
    */
   boolean getShortenUrl();
+
+  /**
+   * <pre>
+   * compliance configuration
+   * </pre>
+   *
+   * <code>.api.commons.OmniComplianceConfig compliance_config = 14 [json_name = "complianceConfig"];</code>
+   * @return Whether the complianceConfig field is set.
+   */
+  boolean hasComplianceConfig();
+  /**
+   * <pre>
+   * compliance configuration
+   * </pre>
+   *
+   * <code>.api.commons.OmniComplianceConfig compliance_config = 14 [json_name = "complianceConfig"];</code>
+   * @return The complianceConfig.
+   */
+  com.tcn.cloud.api.api.commons.OmniComplianceConfig getComplianceConfig();
+  /**
+   * <pre>
+   * compliance configuration
+   * </pre>
+   *
+   * <code>.api.commons.OmniComplianceConfig compliance_config = 14 [json_name = "complianceConfig"];</code>
+   */
+  com.tcn.cloud.api.api.commons.OmniComplianceConfigOrBuilder getComplianceConfigOrBuilder();
 }

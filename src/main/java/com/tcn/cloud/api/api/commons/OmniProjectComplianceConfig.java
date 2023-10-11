@@ -5,51 +5,51 @@ package com.tcn.cloud.api.api.commons;
 
 /**
  * <pre>
- * OmniProjectComplianceSettings - compliance settings for omni projects
+ * OmniProjectComplianceConfig - compliance config for omni projects
  * </pre>
  *
- * Protobuf type {@code api.commons.OmniProjectComplianceSettings}
+ * Protobuf type {@code api.commons.OmniProjectComplianceConfig}
  */
-public final class OmniProjectComplianceSettings extends
+public final class OmniProjectComplianceConfig extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.commons.OmniProjectComplianceSettings)
-    OmniProjectComplianceSettingsOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.commons.OmniProjectComplianceConfig)
+    OmniProjectComplianceConfigOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use OmniProjectComplianceSettings.newBuilder() to construct.
-  private OmniProjectComplianceSettings(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use OmniProjectComplianceConfig.newBuilder() to construct.
+  private OmniProjectComplianceConfig(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private OmniProjectComplianceSettings() {
+  private OmniProjectComplianceConfig() {
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new OmniProjectComplianceSettings();
+    return new OmniProjectComplianceConfig();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.commons.OmnichannelProto.internal_static_api_commons_OmniProjectComplianceSettings_descriptor;
+    return com.tcn.cloud.api.api.commons.OmnichannelProto.internal_static_api_commons_OmniProjectComplianceConfig_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.commons.OmnichannelProto.internal_static_api_commons_OmniProjectComplianceSettings_fieldAccessorTable
+    return com.tcn.cloud.api.api.commons.OmnichannelProto.internal_static_api_commons_OmniProjectComplianceConfig_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.commons.OmniProjectComplianceSettings.class, com.tcn.cloud.api.api.commons.OmniProjectComplianceSettings.Builder.class);
+            com.tcn.cloud.api.api.commons.OmniProjectComplianceConfig.class, com.tcn.cloud.api.api.commons.OmniProjectComplianceConfig.Builder.class);
   }
 
   public static final int EMAIL_FIELD_NUMBER = 1;
-  private com.tcn.cloud.api.api.commons.OmniComplianceSettings email_;
+  private com.tcn.cloud.api.api.commons.OmniComplianceConfig email_;
   /**
    * <pre>
-   * compliance settings for an email
+   * compliance configuration for an email
    * </pre>
    *
-   * <code>.api.commons.OmniComplianceSettings email = 1 [json_name = "email"];</code>
+   * <code>.api.commons.OmniComplianceConfig email = 1 [json_name = "email"];</code>
    * @return Whether the email field is set.
    */
   @java.lang.Override
@@ -58,36 +58,36 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * compliance settings for an email
+   * compliance configuration for an email
    * </pre>
    *
-   * <code>.api.commons.OmniComplianceSettings email = 1 [json_name = "email"];</code>
+   * <code>.api.commons.OmniComplianceConfig email = 1 [json_name = "email"];</code>
    * @return The email.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.OmniComplianceSettings getEmail() {
-    return email_ == null ? com.tcn.cloud.api.api.commons.OmniComplianceSettings.getDefaultInstance() : email_;
+  public com.tcn.cloud.api.api.commons.OmniComplianceConfig getEmail() {
+    return email_ == null ? com.tcn.cloud.api.api.commons.OmniComplianceConfig.getDefaultInstance() : email_;
   }
   /**
    * <pre>
-   * compliance settings for an email
+   * compliance configuration for an email
    * </pre>
    *
-   * <code>.api.commons.OmniComplianceSettings email = 1 [json_name = "email"];</code>
+   * <code>.api.commons.OmniComplianceConfig email = 1 [json_name = "email"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.OmniComplianceSettingsOrBuilder getEmailOrBuilder() {
-    return email_ == null ? com.tcn.cloud.api.api.commons.OmniComplianceSettings.getDefaultInstance() : email_;
+  public com.tcn.cloud.api.api.commons.OmniComplianceConfigOrBuilder getEmailOrBuilder() {
+    return email_ == null ? com.tcn.cloud.api.api.commons.OmniComplianceConfig.getDefaultInstance() : email_;
   }
 
   public static final int SMS_FIELD_NUMBER = 2;
-  private com.tcn.cloud.api.api.commons.OmniComplianceSettings sms_;
+  private com.tcn.cloud.api.api.commons.OmniComplianceConfig sms_;
   /**
    * <pre>
-   * compliance settings for sms
+   * compliance configuration for sms
    * </pre>
    *
-   * <code>.api.commons.OmniComplianceSettings sms = 2 [json_name = "sms"];</code>
+   * <code>.api.commons.OmniComplianceConfig sms = 2 [json_name = "sms"];</code>
    * @return Whether the sms field is set.
    */
   @java.lang.Override
@@ -96,26 +96,26 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * compliance settings for sms
+   * compliance configuration for sms
    * </pre>
    *
-   * <code>.api.commons.OmniComplianceSettings sms = 2 [json_name = "sms"];</code>
+   * <code>.api.commons.OmniComplianceConfig sms = 2 [json_name = "sms"];</code>
    * @return The sms.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.OmniComplianceSettings getSms() {
-    return sms_ == null ? com.tcn.cloud.api.api.commons.OmniComplianceSettings.getDefaultInstance() : sms_;
+  public com.tcn.cloud.api.api.commons.OmniComplianceConfig getSms() {
+    return sms_ == null ? com.tcn.cloud.api.api.commons.OmniComplianceConfig.getDefaultInstance() : sms_;
   }
   /**
    * <pre>
-   * compliance settings for sms
+   * compliance configuration for sms
    * </pre>
    *
-   * <code>.api.commons.OmniComplianceSettings sms = 2 [json_name = "sms"];</code>
+   * <code>.api.commons.OmniComplianceConfig sms = 2 [json_name = "sms"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.OmniComplianceSettingsOrBuilder getSmsOrBuilder() {
-    return sms_ == null ? com.tcn.cloud.api.api.commons.OmniComplianceSettings.getDefaultInstance() : sms_;
+  public com.tcn.cloud.api.api.commons.OmniComplianceConfigOrBuilder getSmsOrBuilder() {
+    return sms_ == null ? com.tcn.cloud.api.api.commons.OmniComplianceConfig.getDefaultInstance() : sms_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -165,10 +165,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.commons.OmniProjectComplianceSettings)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.commons.OmniProjectComplianceConfig)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.commons.OmniProjectComplianceSettings other = (com.tcn.cloud.api.api.commons.OmniProjectComplianceSettings) obj;
+    com.tcn.cloud.api.api.commons.OmniProjectComplianceConfig other = (com.tcn.cloud.api.api.commons.OmniProjectComplianceConfig) obj;
 
     if (hasEmail() != other.hasEmail()) return false;
     if (hasEmail()) {
@@ -204,44 +204,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.commons.OmniProjectComplianceSettings parseFrom(
+  public static com.tcn.cloud.api.api.commons.OmniProjectComplianceConfig parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.OmniProjectComplianceSettings parseFrom(
+  public static com.tcn.cloud.api.api.commons.OmniProjectComplianceConfig parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.OmniProjectComplianceSettings parseFrom(
+  public static com.tcn.cloud.api.api.commons.OmniProjectComplianceConfig parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.OmniProjectComplianceSettings parseFrom(
+  public static com.tcn.cloud.api.api.commons.OmniProjectComplianceConfig parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.OmniProjectComplianceSettings parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.commons.OmniProjectComplianceConfig parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.OmniProjectComplianceSettings parseFrom(
+  public static com.tcn.cloud.api.api.commons.OmniProjectComplianceConfig parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.OmniProjectComplianceSettings parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.commons.OmniProjectComplianceConfig parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.commons.OmniProjectComplianceSettings parseFrom(
+  public static com.tcn.cloud.api.api.commons.OmniProjectComplianceConfig parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -249,26 +249,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.commons.OmniProjectComplianceSettings parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.commons.OmniProjectComplianceConfig parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.commons.OmniProjectComplianceSettings parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.commons.OmniProjectComplianceConfig parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.OmniProjectComplianceSettings parseFrom(
+  public static com.tcn.cloud.api.api.commons.OmniProjectComplianceConfig parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.commons.OmniProjectComplianceSettings parseFrom(
+  public static com.tcn.cloud.api.api.commons.OmniProjectComplianceConfig parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -281,7 +281,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.commons.OmniProjectComplianceSettings prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.commons.OmniProjectComplianceConfig prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -298,29 +298,29 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * OmniProjectComplianceSettings - compliance settings for omni projects
+   * OmniProjectComplianceConfig - compliance config for omni projects
    * </pre>
    *
-   * Protobuf type {@code api.commons.OmniProjectComplianceSettings}
+   * Protobuf type {@code api.commons.OmniProjectComplianceConfig}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.commons.OmniProjectComplianceSettings)
-      com.tcn.cloud.api.api.commons.OmniProjectComplianceSettingsOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.commons.OmniProjectComplianceConfig)
+      com.tcn.cloud.api.api.commons.OmniProjectComplianceConfigOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.commons.OmnichannelProto.internal_static_api_commons_OmniProjectComplianceSettings_descriptor;
+      return com.tcn.cloud.api.api.commons.OmnichannelProto.internal_static_api_commons_OmniProjectComplianceConfig_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.commons.OmnichannelProto.internal_static_api_commons_OmniProjectComplianceSettings_fieldAccessorTable
+      return com.tcn.cloud.api.api.commons.OmnichannelProto.internal_static_api_commons_OmniProjectComplianceConfig_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.commons.OmniProjectComplianceSettings.class, com.tcn.cloud.api.api.commons.OmniProjectComplianceSettings.Builder.class);
+              com.tcn.cloud.api.api.commons.OmniProjectComplianceConfig.class, com.tcn.cloud.api.api.commons.OmniProjectComplianceConfig.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.commons.OmniProjectComplianceSettings.newBuilder()
+    // Construct using com.tcn.cloud.api.api.commons.OmniProjectComplianceConfig.newBuilder()
     private Builder() {
 
     }
@@ -350,17 +350,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.commons.OmnichannelProto.internal_static_api_commons_OmniProjectComplianceSettings_descriptor;
+      return com.tcn.cloud.api.api.commons.OmnichannelProto.internal_static_api_commons_OmniProjectComplianceConfig_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.OmniProjectComplianceSettings getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.commons.OmniProjectComplianceSettings.getDefaultInstance();
+    public com.tcn.cloud.api.api.commons.OmniProjectComplianceConfig getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.commons.OmniProjectComplianceConfig.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.OmniProjectComplianceSettings build() {
-      com.tcn.cloud.api.api.commons.OmniProjectComplianceSettings result = buildPartial();
+    public com.tcn.cloud.api.api.commons.OmniProjectComplianceConfig build() {
+      com.tcn.cloud.api.api.commons.OmniProjectComplianceConfig result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -368,14 +368,14 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.OmniProjectComplianceSettings buildPartial() {
-      com.tcn.cloud.api.api.commons.OmniProjectComplianceSettings result = new com.tcn.cloud.api.api.commons.OmniProjectComplianceSettings(this);
+    public com.tcn.cloud.api.api.commons.OmniProjectComplianceConfig buildPartial() {
+      com.tcn.cloud.api.api.commons.OmniProjectComplianceConfig result = new com.tcn.cloud.api.api.commons.OmniProjectComplianceConfig(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.commons.OmniProjectComplianceSettings result) {
+    private void buildPartial0(com.tcn.cloud.api.api.commons.OmniProjectComplianceConfig result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.email_ = emailBuilder_ == null
@@ -423,16 +423,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.commons.OmniProjectComplianceSettings) {
-        return mergeFrom((com.tcn.cloud.api.api.commons.OmniProjectComplianceSettings)other);
+      if (other instanceof com.tcn.cloud.api.api.commons.OmniProjectComplianceConfig) {
+        return mergeFrom((com.tcn.cloud.api.api.commons.OmniProjectComplianceConfig)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.commons.OmniProjectComplianceSettings other) {
-      if (other == com.tcn.cloud.api.api.commons.OmniProjectComplianceSettings.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.api.commons.OmniProjectComplianceConfig other) {
+      if (other == com.tcn.cloud.api.api.commons.OmniProjectComplianceConfig.getDefaultInstance()) return this;
       if (other.hasEmail()) {
         mergeEmail(other.getEmail());
       }
@@ -496,15 +496,15 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private com.tcn.cloud.api.api.commons.OmniComplianceSettings email_;
+    private com.tcn.cloud.api.api.commons.OmniComplianceConfig email_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.OmniComplianceSettings, com.tcn.cloud.api.api.commons.OmniComplianceSettings.Builder, com.tcn.cloud.api.api.commons.OmniComplianceSettingsOrBuilder> emailBuilder_;
+        com.tcn.cloud.api.api.commons.OmniComplianceConfig, com.tcn.cloud.api.api.commons.OmniComplianceConfig.Builder, com.tcn.cloud.api.api.commons.OmniComplianceConfigOrBuilder> emailBuilder_;
     /**
      * <pre>
-     * compliance settings for an email
+     * compliance configuration for an email
      * </pre>
      *
-     * <code>.api.commons.OmniComplianceSettings email = 1 [json_name = "email"];</code>
+     * <code>.api.commons.OmniComplianceConfig email = 1 [json_name = "email"];</code>
      * @return Whether the email field is set.
      */
     public boolean hasEmail() {
@@ -512,27 +512,27 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * compliance settings for an email
+     * compliance configuration for an email
      * </pre>
      *
-     * <code>.api.commons.OmniComplianceSettings email = 1 [json_name = "email"];</code>
+     * <code>.api.commons.OmniComplianceConfig email = 1 [json_name = "email"];</code>
      * @return The email.
      */
-    public com.tcn.cloud.api.api.commons.OmniComplianceSettings getEmail() {
+    public com.tcn.cloud.api.api.commons.OmniComplianceConfig getEmail() {
       if (emailBuilder_ == null) {
-        return email_ == null ? com.tcn.cloud.api.api.commons.OmniComplianceSettings.getDefaultInstance() : email_;
+        return email_ == null ? com.tcn.cloud.api.api.commons.OmniComplianceConfig.getDefaultInstance() : email_;
       } else {
         return emailBuilder_.getMessage();
       }
     }
     /**
      * <pre>
-     * compliance settings for an email
+     * compliance configuration for an email
      * </pre>
      *
-     * <code>.api.commons.OmniComplianceSettings email = 1 [json_name = "email"];</code>
+     * <code>.api.commons.OmniComplianceConfig email = 1 [json_name = "email"];</code>
      */
-    public Builder setEmail(com.tcn.cloud.api.api.commons.OmniComplianceSettings value) {
+    public Builder setEmail(com.tcn.cloud.api.api.commons.OmniComplianceConfig value) {
       if (emailBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -547,13 +547,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * compliance settings for an email
+     * compliance configuration for an email
      * </pre>
      *
-     * <code>.api.commons.OmniComplianceSettings email = 1 [json_name = "email"];</code>
+     * <code>.api.commons.OmniComplianceConfig email = 1 [json_name = "email"];</code>
      */
     public Builder setEmail(
-        com.tcn.cloud.api.api.commons.OmniComplianceSettings.Builder builderForValue) {
+        com.tcn.cloud.api.api.commons.OmniComplianceConfig.Builder builderForValue) {
       if (emailBuilder_ == null) {
         email_ = builderForValue.build();
       } else {
@@ -565,16 +565,16 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * compliance settings for an email
+     * compliance configuration for an email
      * </pre>
      *
-     * <code>.api.commons.OmniComplianceSettings email = 1 [json_name = "email"];</code>
+     * <code>.api.commons.OmniComplianceConfig email = 1 [json_name = "email"];</code>
      */
-    public Builder mergeEmail(com.tcn.cloud.api.api.commons.OmniComplianceSettings value) {
+    public Builder mergeEmail(com.tcn.cloud.api.api.commons.OmniComplianceConfig value) {
       if (emailBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0) &&
           email_ != null &&
-          email_ != com.tcn.cloud.api.api.commons.OmniComplianceSettings.getDefaultInstance()) {
+          email_ != com.tcn.cloud.api.api.commons.OmniComplianceConfig.getDefaultInstance()) {
           getEmailBuilder().mergeFrom(value);
         } else {
           email_ = value;
@@ -588,10 +588,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * compliance settings for an email
+     * compliance configuration for an email
      * </pre>
      *
-     * <code>.api.commons.OmniComplianceSettings email = 1 [json_name = "email"];</code>
+     * <code>.api.commons.OmniComplianceConfig email = 1 [json_name = "email"];</code>
      */
     public Builder clearEmail() {
       bitField0_ = (bitField0_ & ~0x00000001);
@@ -605,44 +605,44 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * compliance settings for an email
+     * compliance configuration for an email
      * </pre>
      *
-     * <code>.api.commons.OmniComplianceSettings email = 1 [json_name = "email"];</code>
+     * <code>.api.commons.OmniComplianceConfig email = 1 [json_name = "email"];</code>
      */
-    public com.tcn.cloud.api.api.commons.OmniComplianceSettings.Builder getEmailBuilder() {
+    public com.tcn.cloud.api.api.commons.OmniComplianceConfig.Builder getEmailBuilder() {
       bitField0_ |= 0x00000001;
       onChanged();
       return getEmailFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * compliance settings for an email
+     * compliance configuration for an email
      * </pre>
      *
-     * <code>.api.commons.OmniComplianceSettings email = 1 [json_name = "email"];</code>
+     * <code>.api.commons.OmniComplianceConfig email = 1 [json_name = "email"];</code>
      */
-    public com.tcn.cloud.api.api.commons.OmniComplianceSettingsOrBuilder getEmailOrBuilder() {
+    public com.tcn.cloud.api.api.commons.OmniComplianceConfigOrBuilder getEmailOrBuilder() {
       if (emailBuilder_ != null) {
         return emailBuilder_.getMessageOrBuilder();
       } else {
         return email_ == null ?
-            com.tcn.cloud.api.api.commons.OmniComplianceSettings.getDefaultInstance() : email_;
+            com.tcn.cloud.api.api.commons.OmniComplianceConfig.getDefaultInstance() : email_;
       }
     }
     /**
      * <pre>
-     * compliance settings for an email
+     * compliance configuration for an email
      * </pre>
      *
-     * <code>.api.commons.OmniComplianceSettings email = 1 [json_name = "email"];</code>
+     * <code>.api.commons.OmniComplianceConfig email = 1 [json_name = "email"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.OmniComplianceSettings, com.tcn.cloud.api.api.commons.OmniComplianceSettings.Builder, com.tcn.cloud.api.api.commons.OmniComplianceSettingsOrBuilder> 
+        com.tcn.cloud.api.api.commons.OmniComplianceConfig, com.tcn.cloud.api.api.commons.OmniComplianceConfig.Builder, com.tcn.cloud.api.api.commons.OmniComplianceConfigOrBuilder> 
         getEmailFieldBuilder() {
       if (emailBuilder_ == null) {
         emailBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.OmniComplianceSettings, com.tcn.cloud.api.api.commons.OmniComplianceSettings.Builder, com.tcn.cloud.api.api.commons.OmniComplianceSettingsOrBuilder>(
+            com.tcn.cloud.api.api.commons.OmniComplianceConfig, com.tcn.cloud.api.api.commons.OmniComplianceConfig.Builder, com.tcn.cloud.api.api.commons.OmniComplianceConfigOrBuilder>(
                 getEmail(),
                 getParentForChildren(),
                 isClean());
@@ -651,15 +651,15 @@ private static final long serialVersionUID = 0L;
       return emailBuilder_;
     }
 
-    private com.tcn.cloud.api.api.commons.OmniComplianceSettings sms_;
+    private com.tcn.cloud.api.api.commons.OmniComplianceConfig sms_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.OmniComplianceSettings, com.tcn.cloud.api.api.commons.OmniComplianceSettings.Builder, com.tcn.cloud.api.api.commons.OmniComplianceSettingsOrBuilder> smsBuilder_;
+        com.tcn.cloud.api.api.commons.OmniComplianceConfig, com.tcn.cloud.api.api.commons.OmniComplianceConfig.Builder, com.tcn.cloud.api.api.commons.OmniComplianceConfigOrBuilder> smsBuilder_;
     /**
      * <pre>
-     * compliance settings for sms
+     * compliance configuration for sms
      * </pre>
      *
-     * <code>.api.commons.OmniComplianceSettings sms = 2 [json_name = "sms"];</code>
+     * <code>.api.commons.OmniComplianceConfig sms = 2 [json_name = "sms"];</code>
      * @return Whether the sms field is set.
      */
     public boolean hasSms() {
@@ -667,27 +667,27 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * compliance settings for sms
+     * compliance configuration for sms
      * </pre>
      *
-     * <code>.api.commons.OmniComplianceSettings sms = 2 [json_name = "sms"];</code>
+     * <code>.api.commons.OmniComplianceConfig sms = 2 [json_name = "sms"];</code>
      * @return The sms.
      */
-    public com.tcn.cloud.api.api.commons.OmniComplianceSettings getSms() {
+    public com.tcn.cloud.api.api.commons.OmniComplianceConfig getSms() {
       if (smsBuilder_ == null) {
-        return sms_ == null ? com.tcn.cloud.api.api.commons.OmniComplianceSettings.getDefaultInstance() : sms_;
+        return sms_ == null ? com.tcn.cloud.api.api.commons.OmniComplianceConfig.getDefaultInstance() : sms_;
       } else {
         return smsBuilder_.getMessage();
       }
     }
     /**
      * <pre>
-     * compliance settings for sms
+     * compliance configuration for sms
      * </pre>
      *
-     * <code>.api.commons.OmniComplianceSettings sms = 2 [json_name = "sms"];</code>
+     * <code>.api.commons.OmniComplianceConfig sms = 2 [json_name = "sms"];</code>
      */
-    public Builder setSms(com.tcn.cloud.api.api.commons.OmniComplianceSettings value) {
+    public Builder setSms(com.tcn.cloud.api.api.commons.OmniComplianceConfig value) {
       if (smsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -702,13 +702,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * compliance settings for sms
+     * compliance configuration for sms
      * </pre>
      *
-     * <code>.api.commons.OmniComplianceSettings sms = 2 [json_name = "sms"];</code>
+     * <code>.api.commons.OmniComplianceConfig sms = 2 [json_name = "sms"];</code>
      */
     public Builder setSms(
-        com.tcn.cloud.api.api.commons.OmniComplianceSettings.Builder builderForValue) {
+        com.tcn.cloud.api.api.commons.OmniComplianceConfig.Builder builderForValue) {
       if (smsBuilder_ == null) {
         sms_ = builderForValue.build();
       } else {
@@ -720,16 +720,16 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * compliance settings for sms
+     * compliance configuration for sms
      * </pre>
      *
-     * <code>.api.commons.OmniComplianceSettings sms = 2 [json_name = "sms"];</code>
+     * <code>.api.commons.OmniComplianceConfig sms = 2 [json_name = "sms"];</code>
      */
-    public Builder mergeSms(com.tcn.cloud.api.api.commons.OmniComplianceSettings value) {
+    public Builder mergeSms(com.tcn.cloud.api.api.commons.OmniComplianceConfig value) {
       if (smsBuilder_ == null) {
         if (((bitField0_ & 0x00000002) != 0) &&
           sms_ != null &&
-          sms_ != com.tcn.cloud.api.api.commons.OmniComplianceSettings.getDefaultInstance()) {
+          sms_ != com.tcn.cloud.api.api.commons.OmniComplianceConfig.getDefaultInstance()) {
           getSmsBuilder().mergeFrom(value);
         } else {
           sms_ = value;
@@ -743,10 +743,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * compliance settings for sms
+     * compliance configuration for sms
      * </pre>
      *
-     * <code>.api.commons.OmniComplianceSettings sms = 2 [json_name = "sms"];</code>
+     * <code>.api.commons.OmniComplianceConfig sms = 2 [json_name = "sms"];</code>
      */
     public Builder clearSms() {
       bitField0_ = (bitField0_ & ~0x00000002);
@@ -760,44 +760,44 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * compliance settings for sms
+     * compliance configuration for sms
      * </pre>
      *
-     * <code>.api.commons.OmniComplianceSettings sms = 2 [json_name = "sms"];</code>
+     * <code>.api.commons.OmniComplianceConfig sms = 2 [json_name = "sms"];</code>
      */
-    public com.tcn.cloud.api.api.commons.OmniComplianceSettings.Builder getSmsBuilder() {
+    public com.tcn.cloud.api.api.commons.OmniComplianceConfig.Builder getSmsBuilder() {
       bitField0_ |= 0x00000002;
       onChanged();
       return getSmsFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * compliance settings for sms
+     * compliance configuration for sms
      * </pre>
      *
-     * <code>.api.commons.OmniComplianceSettings sms = 2 [json_name = "sms"];</code>
+     * <code>.api.commons.OmniComplianceConfig sms = 2 [json_name = "sms"];</code>
      */
-    public com.tcn.cloud.api.api.commons.OmniComplianceSettingsOrBuilder getSmsOrBuilder() {
+    public com.tcn.cloud.api.api.commons.OmniComplianceConfigOrBuilder getSmsOrBuilder() {
       if (smsBuilder_ != null) {
         return smsBuilder_.getMessageOrBuilder();
       } else {
         return sms_ == null ?
-            com.tcn.cloud.api.api.commons.OmniComplianceSettings.getDefaultInstance() : sms_;
+            com.tcn.cloud.api.api.commons.OmniComplianceConfig.getDefaultInstance() : sms_;
       }
     }
     /**
      * <pre>
-     * compliance settings for sms
+     * compliance configuration for sms
      * </pre>
      *
-     * <code>.api.commons.OmniComplianceSettings sms = 2 [json_name = "sms"];</code>
+     * <code>.api.commons.OmniComplianceConfig sms = 2 [json_name = "sms"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.OmniComplianceSettings, com.tcn.cloud.api.api.commons.OmniComplianceSettings.Builder, com.tcn.cloud.api.api.commons.OmniComplianceSettingsOrBuilder> 
+        com.tcn.cloud.api.api.commons.OmniComplianceConfig, com.tcn.cloud.api.api.commons.OmniComplianceConfig.Builder, com.tcn.cloud.api.api.commons.OmniComplianceConfigOrBuilder> 
         getSmsFieldBuilder() {
       if (smsBuilder_ == null) {
         smsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.OmniComplianceSettings, com.tcn.cloud.api.api.commons.OmniComplianceSettings.Builder, com.tcn.cloud.api.api.commons.OmniComplianceSettingsOrBuilder>(
+            com.tcn.cloud.api.api.commons.OmniComplianceConfig, com.tcn.cloud.api.api.commons.OmniComplianceConfig.Builder, com.tcn.cloud.api.api.commons.OmniComplianceConfigOrBuilder>(
                 getSms(),
                 getParentForChildren(),
                 isClean());
@@ -818,23 +818,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.commons.OmniProjectComplianceSettings)
+    // @@protoc_insertion_point(builder_scope:api.commons.OmniProjectComplianceConfig)
   }
 
-  // @@protoc_insertion_point(class_scope:api.commons.OmniProjectComplianceSettings)
-  private static final com.tcn.cloud.api.api.commons.OmniProjectComplianceSettings DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.commons.OmniProjectComplianceConfig)
+  private static final com.tcn.cloud.api.api.commons.OmniProjectComplianceConfig DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.OmniProjectComplianceSettings();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.OmniProjectComplianceConfig();
   }
 
-  public static com.tcn.cloud.api.api.commons.OmniProjectComplianceSettings getDefaultInstance() {
+  public static com.tcn.cloud.api.api.commons.OmniProjectComplianceConfig getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<OmniProjectComplianceSettings>
-      PARSER = new com.google.protobuf.AbstractParser<OmniProjectComplianceSettings>() {
+  private static final com.google.protobuf.Parser<OmniProjectComplianceConfig>
+      PARSER = new com.google.protobuf.AbstractParser<OmniProjectComplianceConfig>() {
     @java.lang.Override
-    public OmniProjectComplianceSettings parsePartialFrom(
+    public OmniProjectComplianceConfig parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -853,17 +853,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<OmniProjectComplianceSettings> parser() {
+  public static com.google.protobuf.Parser<OmniProjectComplianceConfig> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<OmniProjectComplianceSettings> getParserForType() {
+  public com.google.protobuf.Parser<OmniProjectComplianceConfig> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.OmniProjectComplianceSettings getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.commons.OmniProjectComplianceConfig getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

@@ -5,7 +5,7 @@ package com.tcn.cloud.api.api.commons;
 
 /**
  * <pre>
- * OmniComplianceConfig - configuration for omni compliance
+ * OmniComplianceConfig -
  * </pre>
  *
  * Protobuf type {@code api.commons.OmniComplianceConfig}
@@ -20,9 +20,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private OmniComplianceConfig() {
-    keywords_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-    confirmationMessage_ = "";
+    scrubListId_ = "";
   }
 
   @java.lang.Override
@@ -45,104 +43,241 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.OmniComplianceConfig.class, com.tcn.cloud.api.api.commons.OmniComplianceConfig.Builder.class);
   }
 
-  public static final int KEYWORDS_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringArrayList keywords_ =
-      com.google.protobuf.LazyStringArrayList.emptyList();
+  public static final int OPT_IN_FIELD_NUMBER = 1;
+  private com.tcn.cloud.api.api.commons.OmniComplianceAction optIn_;
   /**
    * <pre>
-   * a list of config keywords
+   * opting in to different compliance settings
    * </pre>
    *
-   * <code>repeated string keywords = 1 [json_name = "keywords"];</code>
-   * @return A list containing the keywords.
-   */
-  public com.google.protobuf.ProtocolStringList
-      getKeywordsList() {
-    return keywords_;
-  }
-  /**
-   * <pre>
-   * a list of config keywords
-   * </pre>
-   *
-   * <code>repeated string keywords = 1 [json_name = "keywords"];</code>
-   * @return The count of keywords.
-   */
-  public int getKeywordsCount() {
-    return keywords_.size();
-  }
-  /**
-   * <pre>
-   * a list of config keywords
-   * </pre>
-   *
-   * <code>repeated string keywords = 1 [json_name = "keywords"];</code>
-   * @param index The index of the element to return.
-   * @return The keywords at the given index.
-   */
-  public java.lang.String getKeywords(int index) {
-    return keywords_.get(index);
-  }
-  /**
-   * <pre>
-   * a list of config keywords
-   * </pre>
-   *
-   * <code>repeated string keywords = 1 [json_name = "keywords"];</code>
-   * @param index The index of the value to return.
-   * @return The bytes of the keywords at the given index.
-   */
-  public com.google.protobuf.ByteString
-      getKeywordsBytes(int index) {
-    return keywords_.getByteString(index);
-  }
-
-  public static final int CONFIRMATION_MESSAGE_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object confirmationMessage_ = "";
-  /**
-   * <pre>
-   * confirmation for the config
-   * </pre>
-   *
-   * <code>string confirmation_message = 2 [json_name = "confirmationMessage"];</code>
-   * @return The confirmationMessage.
+   * <code>.api.commons.OmniComplianceAction opt_in = 1 [json_name = "optIn"];</code>
+   * @return Whether the optIn field is set.
    */
   @java.lang.Override
-  public java.lang.String getConfirmationMessage() {
-    java.lang.Object ref = confirmationMessage_;
+  public boolean hasOptIn() {
+    return optIn_ != null;
+  }
+  /**
+   * <pre>
+   * opting in to different compliance settings
+   * </pre>
+   *
+   * <code>.api.commons.OmniComplianceAction opt_in = 1 [json_name = "optIn"];</code>
+   * @return The optIn.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.OmniComplianceAction getOptIn() {
+    return optIn_ == null ? com.tcn.cloud.api.api.commons.OmniComplianceAction.getDefaultInstance() : optIn_;
+  }
+  /**
+   * <pre>
+   * opting in to different compliance settings
+   * </pre>
+   *
+   * <code>.api.commons.OmniComplianceAction opt_in = 1 [json_name = "optIn"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.OmniComplianceActionOrBuilder getOptInOrBuilder() {
+    return optIn_ == null ? com.tcn.cloud.api.api.commons.OmniComplianceAction.getDefaultInstance() : optIn_;
+  }
+
+  public static final int OPT_OUT_FIELD_NUMBER = 2;
+  private com.tcn.cloud.api.api.commons.OmniComplianceAction optOut_;
+  /**
+   * <pre>
+   * opting out of different compliance settings
+   * </pre>
+   *
+   * <code>.api.commons.OmniComplianceAction opt_out = 2 [json_name = "optOut"];</code>
+   * @return Whether the optOut field is set.
+   */
+  @java.lang.Override
+  public boolean hasOptOut() {
+    return optOut_ != null;
+  }
+  /**
+   * <pre>
+   * opting out of different compliance settings
+   * </pre>
+   *
+   * <code>.api.commons.OmniComplianceAction opt_out = 2 [json_name = "optOut"];</code>
+   * @return The optOut.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.OmniComplianceAction getOptOut() {
+    return optOut_ == null ? com.tcn.cloud.api.api.commons.OmniComplianceAction.getDefaultInstance() : optOut_;
+  }
+  /**
+   * <pre>
+   * opting out of different compliance settings
+   * </pre>
+   *
+   * <code>.api.commons.OmniComplianceAction opt_out = 2 [json_name = "optOut"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.OmniComplianceActionOrBuilder getOptOutOrBuilder() {
+    return optOut_ == null ? com.tcn.cloud.api.api.commons.OmniComplianceAction.getDefaultInstance() : optOut_;
+  }
+
+  public static final int HELP_FIELD_NUMBER = 3;
+  private com.tcn.cloud.api.api.commons.OmniComplianceAction help_;
+  /**
+   * <pre>
+   * help regarding compliance settings
+   * </pre>
+   *
+   * <code>.api.commons.OmniComplianceAction help = 3 [json_name = "help"];</code>
+   * @return Whether the help field is set.
+   */
+  @java.lang.Override
+  public boolean hasHelp() {
+    return help_ != null;
+  }
+  /**
+   * <pre>
+   * help regarding compliance settings
+   * </pre>
+   *
+   * <code>.api.commons.OmniComplianceAction help = 3 [json_name = "help"];</code>
+   * @return The help.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.OmniComplianceAction getHelp() {
+    return help_ == null ? com.tcn.cloud.api.api.commons.OmniComplianceAction.getDefaultInstance() : help_;
+  }
+  /**
+   * <pre>
+   * help regarding compliance settings
+   * </pre>
+   *
+   * <code>.api.commons.OmniComplianceAction help = 3 [json_name = "help"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.OmniComplianceActionOrBuilder getHelpOrBuilder() {
+    return help_ == null ? com.tcn.cloud.api.api.commons.OmniComplianceAction.getDefaultInstance() : help_;
+  }
+
+  public static final int INFORMATION_FIELD_NUMBER = 4;
+  private com.tcn.cloud.api.api.commons.OmniComplianceAction information_;
+  /**
+   * <pre>
+   * information regarding compliance settings
+   * </pre>
+   *
+   * <code>.api.commons.OmniComplianceAction information = 4 [json_name = "information"];</code>
+   * @return Whether the information field is set.
+   */
+  @java.lang.Override
+  public boolean hasInformation() {
+    return information_ != null;
+  }
+  /**
+   * <pre>
+   * information regarding compliance settings
+   * </pre>
+   *
+   * <code>.api.commons.OmniComplianceAction information = 4 [json_name = "information"];</code>
+   * @return The information.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.OmniComplianceAction getInformation() {
+    return information_ == null ? com.tcn.cloud.api.api.commons.OmniComplianceAction.getDefaultInstance() : information_;
+  }
+  /**
+   * <pre>
+   * information regarding compliance settings
+   * </pre>
+   *
+   * <code>.api.commons.OmniComplianceAction information = 4 [json_name = "information"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.OmniComplianceActionOrBuilder getInformationOrBuilder() {
+    return information_ == null ? com.tcn.cloud.api.api.commons.OmniComplianceAction.getDefaultInstance() : information_;
+  }
+
+  public static final int SCRUB_LIST_ID_FIELD_NUMBER = 5;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object scrubListId_ = "";
+  /**
+   * <pre>
+   * scrub list identifier
+   * </pre>
+   *
+   * <code>string scrub_list_id = 5 [json_name = "scrubListId"];</code>
+   * @return The scrubListId.
+   */
+  @java.lang.Override
+  public java.lang.String getScrubListId() {
+    java.lang.Object ref = scrubListId_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      confirmationMessage_ = s;
+      scrubListId_ = s;
       return s;
     }
   }
   /**
    * <pre>
-   * confirmation for the config
+   * scrub list identifier
    * </pre>
    *
-   * <code>string confirmation_message = 2 [json_name = "confirmationMessage"];</code>
-   * @return The bytes for confirmationMessage.
+   * <code>string scrub_list_id = 5 [json_name = "scrubListId"];</code>
+   * @return The bytes for scrubListId.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getConfirmationMessageBytes() {
-    java.lang.Object ref = confirmationMessage_;
+      getScrubListIdBytes() {
+    java.lang.Object ref = scrubListId_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      confirmationMessage_ = b;
+      scrubListId_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
     }
+  }
+
+  public static final int RULE_SET_ID_FIELD_NUMBER = 6;
+  private com.google.protobuf.StringValue ruleSetId_;
+  /**
+   * <pre>
+   * rule set identifier
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue rule_set_id = 6 [json_name = "ruleSetId"];</code>
+   * @return Whether the ruleSetId field is set.
+   */
+  @java.lang.Override
+  public boolean hasRuleSetId() {
+    return ruleSetId_ != null;
+  }
+  /**
+   * <pre>
+   * rule set identifier
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue rule_set_id = 6 [json_name = "ruleSetId"];</code>
+   * @return The ruleSetId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.StringValue getRuleSetId() {
+    return ruleSetId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : ruleSetId_;
+  }
+  /**
+   * <pre>
+   * rule set identifier
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue rule_set_id = 6 [json_name = "ruleSetId"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.StringValueOrBuilder getRuleSetIdOrBuilder() {
+    return ruleSetId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : ruleSetId_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -159,11 +294,23 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    for (int i = 0; i < keywords_.size(); i++) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, keywords_.getRaw(i));
+    if (optIn_ != null) {
+      output.writeMessage(1, getOptIn());
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(confirmationMessage_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, confirmationMessage_);
+    if (optOut_ != null) {
+      output.writeMessage(2, getOptOut());
+    }
+    if (help_ != null) {
+      output.writeMessage(3, getHelp());
+    }
+    if (information_ != null) {
+      output.writeMessage(4, getInformation());
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(scrubListId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, scrubListId_);
+    }
+    if (ruleSetId_ != null) {
+      output.writeMessage(6, getRuleSetId());
     }
     getUnknownFields().writeTo(output);
   }
@@ -174,16 +321,28 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    {
-      int dataSize = 0;
-      for (int i = 0; i < keywords_.size(); i++) {
-        dataSize += computeStringSizeNoTag(keywords_.getRaw(i));
-      }
-      size += dataSize;
-      size += 1 * getKeywordsList().size();
+    if (optIn_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1, getOptIn());
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(confirmationMessage_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, confirmationMessage_);
+    if (optOut_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, getOptOut());
+    }
+    if (help_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, getHelp());
+    }
+    if (information_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, getInformation());
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(scrubListId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, scrubListId_);
+    }
+    if (ruleSetId_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(6, getRuleSetId());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -200,10 +359,33 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.commons.OmniComplianceConfig other = (com.tcn.cloud.api.api.commons.OmniComplianceConfig) obj;
 
-    if (!getKeywordsList()
-        .equals(other.getKeywordsList())) return false;
-    if (!getConfirmationMessage()
-        .equals(other.getConfirmationMessage())) return false;
+    if (hasOptIn() != other.hasOptIn()) return false;
+    if (hasOptIn()) {
+      if (!getOptIn()
+          .equals(other.getOptIn())) return false;
+    }
+    if (hasOptOut() != other.hasOptOut()) return false;
+    if (hasOptOut()) {
+      if (!getOptOut()
+          .equals(other.getOptOut())) return false;
+    }
+    if (hasHelp() != other.hasHelp()) return false;
+    if (hasHelp()) {
+      if (!getHelp()
+          .equals(other.getHelp())) return false;
+    }
+    if (hasInformation() != other.hasInformation()) return false;
+    if (hasInformation()) {
+      if (!getInformation()
+          .equals(other.getInformation())) return false;
+    }
+    if (!getScrubListId()
+        .equals(other.getScrubListId())) return false;
+    if (hasRuleSetId() != other.hasRuleSetId()) return false;
+    if (hasRuleSetId()) {
+      if (!getRuleSetId()
+          .equals(other.getRuleSetId())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -215,12 +397,28 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (getKeywordsCount() > 0) {
-      hash = (37 * hash) + KEYWORDS_FIELD_NUMBER;
-      hash = (53 * hash) + getKeywordsList().hashCode();
+    if (hasOptIn()) {
+      hash = (37 * hash) + OPT_IN_FIELD_NUMBER;
+      hash = (53 * hash) + getOptIn().hashCode();
     }
-    hash = (37 * hash) + CONFIRMATION_MESSAGE_FIELD_NUMBER;
-    hash = (53 * hash) + getConfirmationMessage().hashCode();
+    if (hasOptOut()) {
+      hash = (37 * hash) + OPT_OUT_FIELD_NUMBER;
+      hash = (53 * hash) + getOptOut().hashCode();
+    }
+    if (hasHelp()) {
+      hash = (37 * hash) + HELP_FIELD_NUMBER;
+      hash = (53 * hash) + getHelp().hashCode();
+    }
+    if (hasInformation()) {
+      hash = (37 * hash) + INFORMATION_FIELD_NUMBER;
+      hash = (53 * hash) + getInformation().hashCode();
+    }
+    hash = (37 * hash) + SCRUB_LIST_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getScrubListId().hashCode();
+    if (hasRuleSetId()) {
+      hash = (37 * hash) + RULE_SET_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getRuleSetId().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -320,7 +518,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * OmniComplianceConfig - configuration for omni compliance
+   * OmniComplianceConfig -
    * </pre>
    *
    * Protobuf type {@code api.commons.OmniComplianceConfig}
@@ -356,9 +554,32 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      keywords_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-      confirmationMessage_ = "";
+      optIn_ = null;
+      if (optInBuilder_ != null) {
+        optInBuilder_.dispose();
+        optInBuilder_ = null;
+      }
+      optOut_ = null;
+      if (optOutBuilder_ != null) {
+        optOutBuilder_.dispose();
+        optOutBuilder_ = null;
+      }
+      help_ = null;
+      if (helpBuilder_ != null) {
+        helpBuilder_.dispose();
+        helpBuilder_ = null;
+      }
+      information_ = null;
+      if (informationBuilder_ != null) {
+        informationBuilder_.dispose();
+        informationBuilder_ = null;
+      }
+      scrubListId_ = "";
+      ruleSetId_ = null;
+      if (ruleSetIdBuilder_ != null) {
+        ruleSetIdBuilder_.dispose();
+        ruleSetIdBuilder_ = null;
+      }
       return this;
     }
 
@@ -393,11 +614,32 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.tcn.cloud.api.api.commons.OmniComplianceConfig result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        keywords_.makeImmutable();
-        result.keywords_ = keywords_;
+        result.optIn_ = optInBuilder_ == null
+            ? optIn_
+            : optInBuilder_.build();
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.confirmationMessage_ = confirmationMessage_;
+        result.optOut_ = optOutBuilder_ == null
+            ? optOut_
+            : optOutBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.help_ = helpBuilder_ == null
+            ? help_
+            : helpBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.information_ = informationBuilder_ == null
+            ? information_
+            : informationBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.scrubListId_ = scrubListId_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.ruleSetId_ = ruleSetIdBuilder_ == null
+            ? ruleSetId_
+            : ruleSetIdBuilder_.build();
       }
     }
 
@@ -445,20 +687,25 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.commons.OmniComplianceConfig other) {
       if (other == com.tcn.cloud.api.api.commons.OmniComplianceConfig.getDefaultInstance()) return this;
-      if (!other.keywords_.isEmpty()) {
-        if (keywords_.isEmpty()) {
-          keywords_ = other.keywords_;
-          bitField0_ |= 0x00000001;
-        } else {
-          ensureKeywordsIsMutable();
-          keywords_.addAll(other.keywords_);
-        }
+      if (other.hasOptIn()) {
+        mergeOptIn(other.getOptIn());
+      }
+      if (other.hasOptOut()) {
+        mergeOptOut(other.getOptOut());
+      }
+      if (other.hasHelp()) {
+        mergeHelp(other.getHelp());
+      }
+      if (other.hasInformation()) {
+        mergeInformation(other.getInformation());
+      }
+      if (!other.getScrubListId().isEmpty()) {
+        scrubListId_ = other.scrubListId_;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
-      if (!other.getConfirmationMessage().isEmpty()) {
-        confirmationMessage_ = other.confirmationMessage_;
-        bitField0_ |= 0x00000002;
-        onChanged();
+      if (other.hasRuleSetId()) {
+        mergeRuleSetId(other.getRuleSetId());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -487,16 +734,45 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-              ensureKeywordsIsMutable();
-              keywords_.add(s);
+              input.readMessage(
+                  getOptInFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
-              confirmationMessage_ = input.readStringRequireUtf8();
+              input.readMessage(
+                  getOptOutFieldBuilder().getBuilder(),
+                  extensionRegistry);
               bitField0_ |= 0x00000002;
               break;
             } // case 18
+            case 26: {
+              input.readMessage(
+                  getHelpFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            case 34: {
+              input.readMessage(
+                  getInformationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
+            case 42: {
+              scrubListId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
+            case 50: {
+              input.readMessage(
+                  getRuleSetIdFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 50
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -514,169 +790,642 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private com.google.protobuf.LazyStringArrayList keywords_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-    private void ensureKeywordsIsMutable() {
-      if (!keywords_.isModifiable()) {
-        keywords_ = new com.google.protobuf.LazyStringArrayList(keywords_);
+    private com.tcn.cloud.api.api.commons.OmniComplianceAction optIn_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.OmniComplianceAction, com.tcn.cloud.api.api.commons.OmniComplianceAction.Builder, com.tcn.cloud.api.api.commons.OmniComplianceActionOrBuilder> optInBuilder_;
+    /**
+     * <pre>
+     * opting in to different compliance settings
+     * </pre>
+     *
+     * <code>.api.commons.OmniComplianceAction opt_in = 1 [json_name = "optIn"];</code>
+     * @return Whether the optIn field is set.
+     */
+    public boolean hasOptIn() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * opting in to different compliance settings
+     * </pre>
+     *
+     * <code>.api.commons.OmniComplianceAction opt_in = 1 [json_name = "optIn"];</code>
+     * @return The optIn.
+     */
+    public com.tcn.cloud.api.api.commons.OmniComplianceAction getOptIn() {
+      if (optInBuilder_ == null) {
+        return optIn_ == null ? com.tcn.cloud.api.api.commons.OmniComplianceAction.getDefaultInstance() : optIn_;
+      } else {
+        return optInBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * opting in to different compliance settings
+     * </pre>
+     *
+     * <code>.api.commons.OmniComplianceAction opt_in = 1 [json_name = "optIn"];</code>
+     */
+    public Builder setOptIn(com.tcn.cloud.api.api.commons.OmniComplianceAction value) {
+      if (optInBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        optIn_ = value;
+      } else {
+        optInBuilder_.setMessage(value);
       }
       bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
     }
     /**
      * <pre>
-     * a list of config keywords
+     * opting in to different compliance settings
      * </pre>
      *
-     * <code>repeated string keywords = 1 [json_name = "keywords"];</code>
-     * @return A list containing the keywords.
+     * <code>.api.commons.OmniComplianceAction opt_in = 1 [json_name = "optIn"];</code>
      */
-    public com.google.protobuf.ProtocolStringList
-        getKeywordsList() {
-      keywords_.makeImmutable();
-      return keywords_;
-    }
-    /**
-     * <pre>
-     * a list of config keywords
-     * </pre>
-     *
-     * <code>repeated string keywords = 1 [json_name = "keywords"];</code>
-     * @return The count of keywords.
-     */
-    public int getKeywordsCount() {
-      return keywords_.size();
-    }
-    /**
-     * <pre>
-     * a list of config keywords
-     * </pre>
-     *
-     * <code>repeated string keywords = 1 [json_name = "keywords"];</code>
-     * @param index The index of the element to return.
-     * @return The keywords at the given index.
-     */
-    public java.lang.String getKeywords(int index) {
-      return keywords_.get(index);
-    }
-    /**
-     * <pre>
-     * a list of config keywords
-     * </pre>
-     *
-     * <code>repeated string keywords = 1 [json_name = "keywords"];</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the keywords at the given index.
-     */
-    public com.google.protobuf.ByteString
-        getKeywordsBytes(int index) {
-      return keywords_.getByteString(index);
-    }
-    /**
-     * <pre>
-     * a list of config keywords
-     * </pre>
-     *
-     * <code>repeated string keywords = 1 [json_name = "keywords"];</code>
-     * @param index The index to set the value at.
-     * @param value The keywords to set.
-     * @return This builder for chaining.
-     */
-    public Builder setKeywords(
-        int index, java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureKeywordsIsMutable();
-      keywords_.set(index, value);
+    public Builder setOptIn(
+        com.tcn.cloud.api.api.commons.OmniComplianceAction.Builder builderForValue) {
+      if (optInBuilder_ == null) {
+        optIn_ = builderForValue.build();
+      } else {
+        optInBuilder_.setMessage(builderForValue.build());
+      }
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * a list of config keywords
+     * opting in to different compliance settings
      * </pre>
      *
-     * <code>repeated string keywords = 1 [json_name = "keywords"];</code>
-     * @param value The keywords to add.
-     * @return This builder for chaining.
+     * <code>.api.commons.OmniComplianceAction opt_in = 1 [json_name = "optIn"];</code>
      */
-    public Builder addKeywords(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureKeywordsIsMutable();
-      keywords_.add(value);
+    public Builder mergeOptIn(com.tcn.cloud.api.api.commons.OmniComplianceAction value) {
+      if (optInBuilder_ == null) {
+        if (((bitField0_ & 0x00000001) != 0) &&
+          optIn_ != null &&
+          optIn_ != com.tcn.cloud.api.api.commons.OmniComplianceAction.getDefaultInstance()) {
+          getOptInBuilder().mergeFrom(value);
+        } else {
+          optIn_ = value;
+        }
+      } else {
+        optInBuilder_.mergeFrom(value);
+      }
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * a list of config keywords
+     * opting in to different compliance settings
      * </pre>
      *
-     * <code>repeated string keywords = 1 [json_name = "keywords"];</code>
-     * @param values The keywords to add.
-     * @return This builder for chaining.
+     * <code>.api.commons.OmniComplianceAction opt_in = 1 [json_name = "optIn"];</code>
      */
-    public Builder addAllKeywords(
-        java.lang.Iterable<java.lang.String> values) {
-      ensureKeywordsIsMutable();
-      com.google.protobuf.AbstractMessageLite.Builder.addAll(
-          values, keywords_);
-      bitField0_ |= 0x00000001;
+    public Builder clearOptIn() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      optIn_ = null;
+      if (optInBuilder_ != null) {
+        optInBuilder_.dispose();
+        optInBuilder_ = null;
+      }
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * a list of config keywords
+     * opting in to different compliance settings
      * </pre>
      *
-     * <code>repeated string keywords = 1 [json_name = "keywords"];</code>
-     * @return This builder for chaining.
+     * <code>.api.commons.OmniComplianceAction opt_in = 1 [json_name = "optIn"];</code>
      */
-    public Builder clearKeywords() {
-      keywords_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000001);;
+    public com.tcn.cloud.api.api.commons.OmniComplianceAction.Builder getOptInBuilder() {
+      bitField0_ |= 0x00000001;
       onChanged();
-      return this;
+      return getOptInFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * a list of config keywords
+     * opting in to different compliance settings
      * </pre>
      *
-     * <code>repeated string keywords = 1 [json_name = "keywords"];</code>
-     * @param value The bytes of the keywords to add.
-     * @return This builder for chaining.
+     * <code>.api.commons.OmniComplianceAction opt_in = 1 [json_name = "optIn"];</code>
      */
-    public Builder addKeywordsBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      ensureKeywordsIsMutable();
-      keywords_.add(value);
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
+    public com.tcn.cloud.api.api.commons.OmniComplianceActionOrBuilder getOptInOrBuilder() {
+      if (optInBuilder_ != null) {
+        return optInBuilder_.getMessageOrBuilder();
+      } else {
+        return optIn_ == null ?
+            com.tcn.cloud.api.api.commons.OmniComplianceAction.getDefaultInstance() : optIn_;
+      }
+    }
+    /**
+     * <pre>
+     * opting in to different compliance settings
+     * </pre>
+     *
+     * <code>.api.commons.OmniComplianceAction opt_in = 1 [json_name = "optIn"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.OmniComplianceAction, com.tcn.cloud.api.api.commons.OmniComplianceAction.Builder, com.tcn.cloud.api.api.commons.OmniComplianceActionOrBuilder> 
+        getOptInFieldBuilder() {
+      if (optInBuilder_ == null) {
+        optInBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.OmniComplianceAction, com.tcn.cloud.api.api.commons.OmniComplianceAction.Builder, com.tcn.cloud.api.api.commons.OmniComplianceActionOrBuilder>(
+                getOptIn(),
+                getParentForChildren(),
+                isClean());
+        optIn_ = null;
+      }
+      return optInBuilder_;
     }
 
-    private java.lang.Object confirmationMessage_ = "";
+    private com.tcn.cloud.api.api.commons.OmniComplianceAction optOut_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.OmniComplianceAction, com.tcn.cloud.api.api.commons.OmniComplianceAction.Builder, com.tcn.cloud.api.api.commons.OmniComplianceActionOrBuilder> optOutBuilder_;
     /**
      * <pre>
-     * confirmation for the config
+     * opting out of different compliance settings
      * </pre>
      *
-     * <code>string confirmation_message = 2 [json_name = "confirmationMessage"];</code>
-     * @return The confirmationMessage.
+     * <code>.api.commons.OmniComplianceAction opt_out = 2 [json_name = "optOut"];</code>
+     * @return Whether the optOut field is set.
      */
-    public java.lang.String getConfirmationMessage() {
-      java.lang.Object ref = confirmationMessage_;
+    public boolean hasOptOut() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * opting out of different compliance settings
+     * </pre>
+     *
+     * <code>.api.commons.OmniComplianceAction opt_out = 2 [json_name = "optOut"];</code>
+     * @return The optOut.
+     */
+    public com.tcn.cloud.api.api.commons.OmniComplianceAction getOptOut() {
+      if (optOutBuilder_ == null) {
+        return optOut_ == null ? com.tcn.cloud.api.api.commons.OmniComplianceAction.getDefaultInstance() : optOut_;
+      } else {
+        return optOutBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * opting out of different compliance settings
+     * </pre>
+     *
+     * <code>.api.commons.OmniComplianceAction opt_out = 2 [json_name = "optOut"];</code>
+     */
+    public Builder setOptOut(com.tcn.cloud.api.api.commons.OmniComplianceAction value) {
+      if (optOutBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        optOut_ = value;
+      } else {
+        optOutBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * opting out of different compliance settings
+     * </pre>
+     *
+     * <code>.api.commons.OmniComplianceAction opt_out = 2 [json_name = "optOut"];</code>
+     */
+    public Builder setOptOut(
+        com.tcn.cloud.api.api.commons.OmniComplianceAction.Builder builderForValue) {
+      if (optOutBuilder_ == null) {
+        optOut_ = builderForValue.build();
+      } else {
+        optOutBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * opting out of different compliance settings
+     * </pre>
+     *
+     * <code>.api.commons.OmniComplianceAction opt_out = 2 [json_name = "optOut"];</code>
+     */
+    public Builder mergeOptOut(com.tcn.cloud.api.api.commons.OmniComplianceAction value) {
+      if (optOutBuilder_ == null) {
+        if (((bitField0_ & 0x00000002) != 0) &&
+          optOut_ != null &&
+          optOut_ != com.tcn.cloud.api.api.commons.OmniComplianceAction.getDefaultInstance()) {
+          getOptOutBuilder().mergeFrom(value);
+        } else {
+          optOut_ = value;
+        }
+      } else {
+        optOutBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * opting out of different compliance settings
+     * </pre>
+     *
+     * <code>.api.commons.OmniComplianceAction opt_out = 2 [json_name = "optOut"];</code>
+     */
+    public Builder clearOptOut() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      optOut_ = null;
+      if (optOutBuilder_ != null) {
+        optOutBuilder_.dispose();
+        optOutBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * opting out of different compliance settings
+     * </pre>
+     *
+     * <code>.api.commons.OmniComplianceAction opt_out = 2 [json_name = "optOut"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.OmniComplianceAction.Builder getOptOutBuilder() {
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return getOptOutFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * opting out of different compliance settings
+     * </pre>
+     *
+     * <code>.api.commons.OmniComplianceAction opt_out = 2 [json_name = "optOut"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.OmniComplianceActionOrBuilder getOptOutOrBuilder() {
+      if (optOutBuilder_ != null) {
+        return optOutBuilder_.getMessageOrBuilder();
+      } else {
+        return optOut_ == null ?
+            com.tcn.cloud.api.api.commons.OmniComplianceAction.getDefaultInstance() : optOut_;
+      }
+    }
+    /**
+     * <pre>
+     * opting out of different compliance settings
+     * </pre>
+     *
+     * <code>.api.commons.OmniComplianceAction opt_out = 2 [json_name = "optOut"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.OmniComplianceAction, com.tcn.cloud.api.api.commons.OmniComplianceAction.Builder, com.tcn.cloud.api.api.commons.OmniComplianceActionOrBuilder> 
+        getOptOutFieldBuilder() {
+      if (optOutBuilder_ == null) {
+        optOutBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.OmniComplianceAction, com.tcn.cloud.api.api.commons.OmniComplianceAction.Builder, com.tcn.cloud.api.api.commons.OmniComplianceActionOrBuilder>(
+                getOptOut(),
+                getParentForChildren(),
+                isClean());
+        optOut_ = null;
+      }
+      return optOutBuilder_;
+    }
+
+    private com.tcn.cloud.api.api.commons.OmniComplianceAction help_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.OmniComplianceAction, com.tcn.cloud.api.api.commons.OmniComplianceAction.Builder, com.tcn.cloud.api.api.commons.OmniComplianceActionOrBuilder> helpBuilder_;
+    /**
+     * <pre>
+     * help regarding compliance settings
+     * </pre>
+     *
+     * <code>.api.commons.OmniComplianceAction help = 3 [json_name = "help"];</code>
+     * @return Whether the help field is set.
+     */
+    public boolean hasHelp() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * help regarding compliance settings
+     * </pre>
+     *
+     * <code>.api.commons.OmniComplianceAction help = 3 [json_name = "help"];</code>
+     * @return The help.
+     */
+    public com.tcn.cloud.api.api.commons.OmniComplianceAction getHelp() {
+      if (helpBuilder_ == null) {
+        return help_ == null ? com.tcn.cloud.api.api.commons.OmniComplianceAction.getDefaultInstance() : help_;
+      } else {
+        return helpBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * help regarding compliance settings
+     * </pre>
+     *
+     * <code>.api.commons.OmniComplianceAction help = 3 [json_name = "help"];</code>
+     */
+    public Builder setHelp(com.tcn.cloud.api.api.commons.OmniComplianceAction value) {
+      if (helpBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        help_ = value;
+      } else {
+        helpBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * help regarding compliance settings
+     * </pre>
+     *
+     * <code>.api.commons.OmniComplianceAction help = 3 [json_name = "help"];</code>
+     */
+    public Builder setHelp(
+        com.tcn.cloud.api.api.commons.OmniComplianceAction.Builder builderForValue) {
+      if (helpBuilder_ == null) {
+        help_ = builderForValue.build();
+      } else {
+        helpBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * help regarding compliance settings
+     * </pre>
+     *
+     * <code>.api.commons.OmniComplianceAction help = 3 [json_name = "help"];</code>
+     */
+    public Builder mergeHelp(com.tcn.cloud.api.api.commons.OmniComplianceAction value) {
+      if (helpBuilder_ == null) {
+        if (((bitField0_ & 0x00000004) != 0) &&
+          help_ != null &&
+          help_ != com.tcn.cloud.api.api.commons.OmniComplianceAction.getDefaultInstance()) {
+          getHelpBuilder().mergeFrom(value);
+        } else {
+          help_ = value;
+        }
+      } else {
+        helpBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * help regarding compliance settings
+     * </pre>
+     *
+     * <code>.api.commons.OmniComplianceAction help = 3 [json_name = "help"];</code>
+     */
+    public Builder clearHelp() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      help_ = null;
+      if (helpBuilder_ != null) {
+        helpBuilder_.dispose();
+        helpBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * help regarding compliance settings
+     * </pre>
+     *
+     * <code>.api.commons.OmniComplianceAction help = 3 [json_name = "help"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.OmniComplianceAction.Builder getHelpBuilder() {
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return getHelpFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * help regarding compliance settings
+     * </pre>
+     *
+     * <code>.api.commons.OmniComplianceAction help = 3 [json_name = "help"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.OmniComplianceActionOrBuilder getHelpOrBuilder() {
+      if (helpBuilder_ != null) {
+        return helpBuilder_.getMessageOrBuilder();
+      } else {
+        return help_ == null ?
+            com.tcn.cloud.api.api.commons.OmniComplianceAction.getDefaultInstance() : help_;
+      }
+    }
+    /**
+     * <pre>
+     * help regarding compliance settings
+     * </pre>
+     *
+     * <code>.api.commons.OmniComplianceAction help = 3 [json_name = "help"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.OmniComplianceAction, com.tcn.cloud.api.api.commons.OmniComplianceAction.Builder, com.tcn.cloud.api.api.commons.OmniComplianceActionOrBuilder> 
+        getHelpFieldBuilder() {
+      if (helpBuilder_ == null) {
+        helpBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.OmniComplianceAction, com.tcn.cloud.api.api.commons.OmniComplianceAction.Builder, com.tcn.cloud.api.api.commons.OmniComplianceActionOrBuilder>(
+                getHelp(),
+                getParentForChildren(),
+                isClean());
+        help_ = null;
+      }
+      return helpBuilder_;
+    }
+
+    private com.tcn.cloud.api.api.commons.OmniComplianceAction information_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.OmniComplianceAction, com.tcn.cloud.api.api.commons.OmniComplianceAction.Builder, com.tcn.cloud.api.api.commons.OmniComplianceActionOrBuilder> informationBuilder_;
+    /**
+     * <pre>
+     * information regarding compliance settings
+     * </pre>
+     *
+     * <code>.api.commons.OmniComplianceAction information = 4 [json_name = "information"];</code>
+     * @return Whether the information field is set.
+     */
+    public boolean hasInformation() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <pre>
+     * information regarding compliance settings
+     * </pre>
+     *
+     * <code>.api.commons.OmniComplianceAction information = 4 [json_name = "information"];</code>
+     * @return The information.
+     */
+    public com.tcn.cloud.api.api.commons.OmniComplianceAction getInformation() {
+      if (informationBuilder_ == null) {
+        return information_ == null ? com.tcn.cloud.api.api.commons.OmniComplianceAction.getDefaultInstance() : information_;
+      } else {
+        return informationBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * information regarding compliance settings
+     * </pre>
+     *
+     * <code>.api.commons.OmniComplianceAction information = 4 [json_name = "information"];</code>
+     */
+    public Builder setInformation(com.tcn.cloud.api.api.commons.OmniComplianceAction value) {
+      if (informationBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        information_ = value;
+      } else {
+        informationBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * information regarding compliance settings
+     * </pre>
+     *
+     * <code>.api.commons.OmniComplianceAction information = 4 [json_name = "information"];</code>
+     */
+    public Builder setInformation(
+        com.tcn.cloud.api.api.commons.OmniComplianceAction.Builder builderForValue) {
+      if (informationBuilder_ == null) {
+        information_ = builderForValue.build();
+      } else {
+        informationBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * information regarding compliance settings
+     * </pre>
+     *
+     * <code>.api.commons.OmniComplianceAction information = 4 [json_name = "information"];</code>
+     */
+    public Builder mergeInformation(com.tcn.cloud.api.api.commons.OmniComplianceAction value) {
+      if (informationBuilder_ == null) {
+        if (((bitField0_ & 0x00000008) != 0) &&
+          information_ != null &&
+          information_ != com.tcn.cloud.api.api.commons.OmniComplianceAction.getDefaultInstance()) {
+          getInformationBuilder().mergeFrom(value);
+        } else {
+          information_ = value;
+        }
+      } else {
+        informationBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * information regarding compliance settings
+     * </pre>
+     *
+     * <code>.api.commons.OmniComplianceAction information = 4 [json_name = "information"];</code>
+     */
+    public Builder clearInformation() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      information_ = null;
+      if (informationBuilder_ != null) {
+        informationBuilder_.dispose();
+        informationBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * information regarding compliance settings
+     * </pre>
+     *
+     * <code>.api.commons.OmniComplianceAction information = 4 [json_name = "information"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.OmniComplianceAction.Builder getInformationBuilder() {
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return getInformationFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * information regarding compliance settings
+     * </pre>
+     *
+     * <code>.api.commons.OmniComplianceAction information = 4 [json_name = "information"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.OmniComplianceActionOrBuilder getInformationOrBuilder() {
+      if (informationBuilder_ != null) {
+        return informationBuilder_.getMessageOrBuilder();
+      } else {
+        return information_ == null ?
+            com.tcn.cloud.api.api.commons.OmniComplianceAction.getDefaultInstance() : information_;
+      }
+    }
+    /**
+     * <pre>
+     * information regarding compliance settings
+     * </pre>
+     *
+     * <code>.api.commons.OmniComplianceAction information = 4 [json_name = "information"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.OmniComplianceAction, com.tcn.cloud.api.api.commons.OmniComplianceAction.Builder, com.tcn.cloud.api.api.commons.OmniComplianceActionOrBuilder> 
+        getInformationFieldBuilder() {
+      if (informationBuilder_ == null) {
+        informationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.OmniComplianceAction, com.tcn.cloud.api.api.commons.OmniComplianceAction.Builder, com.tcn.cloud.api.api.commons.OmniComplianceActionOrBuilder>(
+                getInformation(),
+                getParentForChildren(),
+                isClean());
+        information_ = null;
+      }
+      return informationBuilder_;
+    }
+
+    private java.lang.Object scrubListId_ = "";
+    /**
+     * <pre>
+     * scrub list identifier
+     * </pre>
+     *
+     * <code>string scrub_list_id = 5 [json_name = "scrubListId"];</code>
+     * @return The scrubListId.
+     */
+    public java.lang.String getScrubListId() {
+      java.lang.Object ref = scrubListId_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        confirmationMessage_ = s;
+        scrubListId_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
@@ -684,20 +1433,20 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * confirmation for the config
+     * scrub list identifier
      * </pre>
      *
-     * <code>string confirmation_message = 2 [json_name = "confirmationMessage"];</code>
-     * @return The bytes for confirmationMessage.
+     * <code>string scrub_list_id = 5 [json_name = "scrubListId"];</code>
+     * @return The bytes for scrubListId.
      */
     public com.google.protobuf.ByteString
-        getConfirmationMessageBytes() {
-      java.lang.Object ref = confirmationMessage_;
+        getScrubListIdBytes() {
+      java.lang.Object ref = scrubListId_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        confirmationMessage_ = b;
+        scrubListId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -705,52 +1454,207 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * confirmation for the config
+     * scrub list identifier
      * </pre>
      *
-     * <code>string confirmation_message = 2 [json_name = "confirmationMessage"];</code>
-     * @param value The confirmationMessage to set.
+     * <code>string scrub_list_id = 5 [json_name = "scrubListId"];</code>
+     * @param value The scrubListId to set.
      * @return This builder for chaining.
      */
-    public Builder setConfirmationMessage(
+    public Builder setScrubListId(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      confirmationMessage_ = value;
-      bitField0_ |= 0x00000002;
+      scrubListId_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * confirmation for the config
+     * scrub list identifier
      * </pre>
      *
-     * <code>string confirmation_message = 2 [json_name = "confirmationMessage"];</code>
+     * <code>string scrub_list_id = 5 [json_name = "scrubListId"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearConfirmationMessage() {
-      confirmationMessage_ = getDefaultInstance().getConfirmationMessage();
-      bitField0_ = (bitField0_ & ~0x00000002);
+    public Builder clearScrubListId() {
+      scrubListId_ = getDefaultInstance().getScrubListId();
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * confirmation for the config
+     * scrub list identifier
      * </pre>
      *
-     * <code>string confirmation_message = 2 [json_name = "confirmationMessage"];</code>
-     * @param value The bytes for confirmationMessage to set.
+     * <code>string scrub_list_id = 5 [json_name = "scrubListId"];</code>
+     * @param value The bytes for scrubListId to set.
      * @return This builder for chaining.
      */
-    public Builder setConfirmationMessageBytes(
+    public Builder setScrubListIdBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      confirmationMessage_ = value;
-      bitField0_ |= 0x00000002;
+      scrubListId_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
+    }
+
+    private com.google.protobuf.StringValue ruleSetId_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> ruleSetIdBuilder_;
+    /**
+     * <pre>
+     * rule set identifier
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue rule_set_id = 6 [json_name = "ruleSetId"];</code>
+     * @return Whether the ruleSetId field is set.
+     */
+    public boolean hasRuleSetId() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <pre>
+     * rule set identifier
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue rule_set_id = 6 [json_name = "ruleSetId"];</code>
+     * @return The ruleSetId.
+     */
+    public com.google.protobuf.StringValue getRuleSetId() {
+      if (ruleSetIdBuilder_ == null) {
+        return ruleSetId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : ruleSetId_;
+      } else {
+        return ruleSetIdBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * rule set identifier
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue rule_set_id = 6 [json_name = "ruleSetId"];</code>
+     */
+    public Builder setRuleSetId(com.google.protobuf.StringValue value) {
+      if (ruleSetIdBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ruleSetId_ = value;
+      } else {
+        ruleSetIdBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * rule set identifier
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue rule_set_id = 6 [json_name = "ruleSetId"];</code>
+     */
+    public Builder setRuleSetId(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (ruleSetIdBuilder_ == null) {
+        ruleSetId_ = builderForValue.build();
+      } else {
+        ruleSetIdBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * rule set identifier
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue rule_set_id = 6 [json_name = "ruleSetId"];</code>
+     */
+    public Builder mergeRuleSetId(com.google.protobuf.StringValue value) {
+      if (ruleSetIdBuilder_ == null) {
+        if (((bitField0_ & 0x00000020) != 0) &&
+          ruleSetId_ != null &&
+          ruleSetId_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+          getRuleSetIdBuilder().mergeFrom(value);
+        } else {
+          ruleSetId_ = value;
+        }
+      } else {
+        ruleSetIdBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * rule set identifier
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue rule_set_id = 6 [json_name = "ruleSetId"];</code>
+     */
+    public Builder clearRuleSetId() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      ruleSetId_ = null;
+      if (ruleSetIdBuilder_ != null) {
+        ruleSetIdBuilder_.dispose();
+        ruleSetIdBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * rule set identifier
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue rule_set_id = 6 [json_name = "ruleSetId"];</code>
+     */
+    public com.google.protobuf.StringValue.Builder getRuleSetIdBuilder() {
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return getRuleSetIdFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * rule set identifier
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue rule_set_id = 6 [json_name = "ruleSetId"];</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getRuleSetIdOrBuilder() {
+      if (ruleSetIdBuilder_ != null) {
+        return ruleSetIdBuilder_.getMessageOrBuilder();
+      } else {
+        return ruleSetId_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : ruleSetId_;
+      }
+    }
+    /**
+     * <pre>
+     * rule set identifier
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue rule_set_id = 6 [json_name = "ruleSetId"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getRuleSetIdFieldBuilder() {
+      if (ruleSetIdBuilder_ == null) {
+        ruleSetIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getRuleSetId(),
+                getParentForChildren(),
+                isClean());
+        ruleSetId_ = null;
+      }
+      return ruleSetIdBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
