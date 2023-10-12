@@ -2975,6 +2975,21 @@ public interface ExecuteFlowOrBuilder extends
   com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePaymentOrBuilder getNavigaCreatePaymentOrBuilder();
 
   /**
+   * <code>.api.commons.integrations.ExecuteNavigaChangeBilling naviga_change_billing = 4002 [json_name = "navigaChangeBilling"];</code>
+   * @return Whether the navigaChangeBilling field is set.
+   */
+  boolean hasNavigaChangeBilling();
+  /**
+   * <code>.api.commons.integrations.ExecuteNavigaChangeBilling naviga_change_billing = 4002 [json_name = "navigaChangeBilling"];</code>
+   * @return The navigaChangeBilling.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaChangeBilling getNavigaChangeBilling();
+  /**
+   * <code>.api.commons.integrations.ExecuteNavigaChangeBilling naviga_change_billing = 4002 [json_name = "navigaChangeBilling"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaChangeBillingOrBuilder getNavigaChangeBillingOrBuilder();
+
+  /**
    * <code>.api.commons.integrations.ExecutePaynsecondsTokenizeCard paynseconds_tokenize_card = 4101 [json_name = "paynsecondsTokenizeCard"];</code>
    * @return Whether the paynsecondsTokenizeCard field is set.
    */
