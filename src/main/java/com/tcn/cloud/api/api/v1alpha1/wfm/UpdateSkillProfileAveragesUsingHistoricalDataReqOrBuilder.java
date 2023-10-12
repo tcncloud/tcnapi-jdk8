@@ -85,7 +85,7 @@ public interface UpdateSkillProfileAveragesUsingHistoricalDataReqOrBuilder exten
    * IDs of the skill profile groups to calculate the averages of, if none are sent it calculates it for all skill profile groups that the org has.
    * </pre>
    *
-   * <code>repeated int64 skill_profile_group_sids = 4 [json_name = "skillProfileGroupSids"];</code>
+   * <code>repeated int64 skill_profile_group_sids = 4 [json_name = "skillProfileGroupSids", jstype = JS_STRING];</code>
    * @return A list containing the skillProfileGroupSids.
    */
   java.util.List<java.lang.Long> getSkillProfileGroupSidsList();
@@ -94,7 +94,7 @@ public interface UpdateSkillProfileAveragesUsingHistoricalDataReqOrBuilder exten
    * IDs of the skill profile groups to calculate the averages of, if none are sent it calculates it for all skill profile groups that the org has.
    * </pre>
    *
-   * <code>repeated int64 skill_profile_group_sids = 4 [json_name = "skillProfileGroupSids"];</code>
+   * <code>repeated int64 skill_profile_group_sids = 4 [json_name = "skillProfileGroupSids", jstype = JS_STRING];</code>
    * @return The count of skillProfileGroupSids.
    */
   int getSkillProfileGroupSidsCount();
@@ -103,7 +103,7 @@ public interface UpdateSkillProfileAveragesUsingHistoricalDataReqOrBuilder exten
    * IDs of the skill profile groups to calculate the averages of, if none are sent it calculates it for all skill profile groups that the org has.
    * </pre>
    *
-   * <code>repeated int64 skill_profile_group_sids = 4 [json_name = "skillProfileGroupSids"];</code>
+   * <code>repeated int64 skill_profile_group_sids = 4 [json_name = "skillProfileGroupSids", jstype = JS_STRING];</code>
    * @param index The index of the element to return.
    * @return The skillProfileGroupSids at the given index.
    */

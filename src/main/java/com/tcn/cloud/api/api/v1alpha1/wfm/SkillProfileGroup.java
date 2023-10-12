@@ -48,7 +48,7 @@ private static final long serialVersionUID = 0L;
    * ID of the skill profile group.
    * </pre>
    *
-   * <code>int64 skill_profile_group_sid = 1 [json_name = "skillProfileGroupSid"];</code>
+   * <code>int64 skill_profile_group_sid = 1 [json_name = "skillProfileGroupSid", jstype = JS_STRING];</code>
    * @return The skillProfileGroupSid.
    */
   @java.lang.Override
@@ -304,6 +304,44 @@ private static final long serialVersionUID = 0L;
   }
   private int skillProfileSidsMemoizedSerializedSize = -1;
 
+  public static final int DATETIME_SET_TO_INACTIVE_FIELD_NUMBER = 11;
+  private com.google.protobuf.Timestamp datetimeSetToInactive_;
+  /**
+   * <pre>
+   * Datetime that the group was set to inactive, if not set then the group is currently active.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp datetime_set_to_inactive = 11 [json_name = "datetimeSetToInactive"];</code>
+   * @return Whether the datetimeSetToInactive field is set.
+   */
+  @java.lang.Override
+  public boolean hasDatetimeSetToInactive() {
+    return datetimeSetToInactive_ != null;
+  }
+  /**
+   * <pre>
+   * Datetime that the group was set to inactive, if not set then the group is currently active.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp datetime_set_to_inactive = 11 [json_name = "datetimeSetToInactive"];</code>
+   * @return The datetimeSetToInactive.
+   */
+  @java.lang.Override
+  public com.google.protobuf.Timestamp getDatetimeSetToInactive() {
+    return datetimeSetToInactive_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : datetimeSetToInactive_;
+  }
+  /**
+   * <pre>
+   * Datetime that the group was set to inactive, if not set then the group is currently active.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp datetime_set_to_inactive = 11 [json_name = "datetimeSetToInactive"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.TimestampOrBuilder getDatetimeSetToInactiveOrBuilder() {
+    return datetimeSetToInactive_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : datetimeSetToInactive_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -352,6 +390,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < skillProfileSids_.size(); i++) {
       output.writeInt64NoTag(skillProfileSids_.getLong(i));
+    }
+    if (datetimeSetToInactive_ != null) {
+      output.writeMessage(11, getDatetimeSetToInactive());
     }
     getUnknownFields().writeTo(output);
   }
@@ -410,6 +451,10 @@ private static final long serialVersionUID = 0L;
       }
       skillProfileSidsMemoizedSerializedSize = dataSize;
     }
+    if (datetimeSetToInactive_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(11, getDatetimeSetToInactive());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -452,6 +497,11 @@ private static final long serialVersionUID = 0L;
         != other.getAreAveragesManual()) return false;
     if (!getSkillProfileSidsList()
         .equals(other.getSkillProfileSidsList())) return false;
+    if (hasDatetimeSetToInactive() != other.hasDatetimeSetToInactive()) return false;
+    if (hasDatetimeSetToInactive()) {
+      if (!getDatetimeSetToInactive()
+          .equals(other.getDatetimeSetToInactive())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -492,6 +542,10 @@ private static final long serialVersionUID = 0L;
     if (getSkillProfileSidsCount() > 0) {
       hash = (37 * hash) + SKILL_PROFILE_SIDS_FIELD_NUMBER;
       hash = (53 * hash) + getSkillProfileSidsList().hashCode();
+    }
+    if (hasDatetimeSetToInactive()) {
+      hash = (37 * hash) + DATETIME_SET_TO_INACTIVE_FIELD_NUMBER;
+      hash = (53 * hash) + getDatetimeSetToInactive().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -638,6 +692,11 @@ private static final long serialVersionUID = 0L;
       averageTimeToAbortInSeconds_ = 0F;
       areAveragesManual_ = false;
       skillProfileSids_ = emptyLongList();
+      datetimeSetToInactive_ = null;
+      if (datetimeSetToInactiveBuilder_ != null) {
+        datetimeSetToInactiveBuilder_.dispose();
+        datetimeSetToInactiveBuilder_ = null;
+      }
       return this;
     }
 
@@ -708,6 +767,11 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000100) != 0)) {
         result.areAveragesManual_ = areAveragesManual_;
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        result.datetimeSetToInactive_ = datetimeSetToInactiveBuilder_ == null
+            ? datetimeSetToInactive_
+            : datetimeSetToInactiveBuilder_.build();
       }
     }
 
@@ -795,6 +859,9 @@ private static final long serialVersionUID = 0L;
           skillProfileSids_.addAll(other.skillProfileSids_);
         }
         onChanged();
+      }
+      if (other.hasDatetimeSetToInactive()) {
+        mergeDatetimeSetToInactive(other.getDatetimeSetToInactive());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -885,6 +952,13 @@ private static final long serialVersionUID = 0L;
               input.popLimit(limit);
               break;
             } // case 82
+            case 90: {
+              input.readMessage(
+                  getDatetimeSetToInactiveFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000400;
+              break;
+            } // case 90
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -908,7 +982,7 @@ private static final long serialVersionUID = 0L;
      * ID of the skill profile group.
      * </pre>
      *
-     * <code>int64 skill_profile_group_sid = 1 [json_name = "skillProfileGroupSid"];</code>
+     * <code>int64 skill_profile_group_sid = 1 [json_name = "skillProfileGroupSid", jstype = JS_STRING];</code>
      * @return The skillProfileGroupSid.
      */
     @java.lang.Override
@@ -920,7 +994,7 @@ private static final long serialVersionUID = 0L;
      * ID of the skill profile group.
      * </pre>
      *
-     * <code>int64 skill_profile_group_sid = 1 [json_name = "skillProfileGroupSid"];</code>
+     * <code>int64 skill_profile_group_sid = 1 [json_name = "skillProfileGroupSid", jstype = JS_STRING];</code>
      * @param value The skillProfileGroupSid to set.
      * @return This builder for chaining.
      */
@@ -936,7 +1010,7 @@ private static final long serialVersionUID = 0L;
      * ID of the skill profile group.
      * </pre>
      *
-     * <code>int64 skill_profile_group_sid = 1 [json_name = "skillProfileGroupSid"];</code>
+     * <code>int64 skill_profile_group_sid = 1 [json_name = "skillProfileGroupSid", jstype = JS_STRING];</code>
      * @return This builder for chaining.
      */
     public Builder clearSkillProfileGroupSid() {
@@ -1612,6 +1686,161 @@ private static final long serialVersionUID = 0L;
       bitField0_ = (bitField0_ & ~0x00000200);
       onChanged();
       return this;
+    }
+
+    private com.google.protobuf.Timestamp datetimeSetToInactive_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> datetimeSetToInactiveBuilder_;
+    /**
+     * <pre>
+     * Datetime that the group was set to inactive, if not set then the group is currently active.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp datetime_set_to_inactive = 11 [json_name = "datetimeSetToInactive"];</code>
+     * @return Whether the datetimeSetToInactive field is set.
+     */
+    public boolean hasDatetimeSetToInactive() {
+      return ((bitField0_ & 0x00000400) != 0);
+    }
+    /**
+     * <pre>
+     * Datetime that the group was set to inactive, if not set then the group is currently active.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp datetime_set_to_inactive = 11 [json_name = "datetimeSetToInactive"];</code>
+     * @return The datetimeSetToInactive.
+     */
+    public com.google.protobuf.Timestamp getDatetimeSetToInactive() {
+      if (datetimeSetToInactiveBuilder_ == null) {
+        return datetimeSetToInactive_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : datetimeSetToInactive_;
+      } else {
+        return datetimeSetToInactiveBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Datetime that the group was set to inactive, if not set then the group is currently active.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp datetime_set_to_inactive = 11 [json_name = "datetimeSetToInactive"];</code>
+     */
+    public Builder setDatetimeSetToInactive(com.google.protobuf.Timestamp value) {
+      if (datetimeSetToInactiveBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        datetimeSetToInactive_ = value;
+      } else {
+        datetimeSetToInactiveBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Datetime that the group was set to inactive, if not set then the group is currently active.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp datetime_set_to_inactive = 11 [json_name = "datetimeSetToInactive"];</code>
+     */
+    public Builder setDatetimeSetToInactive(
+        com.google.protobuf.Timestamp.Builder builderForValue) {
+      if (datetimeSetToInactiveBuilder_ == null) {
+        datetimeSetToInactive_ = builderForValue.build();
+      } else {
+        datetimeSetToInactiveBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Datetime that the group was set to inactive, if not set then the group is currently active.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp datetime_set_to_inactive = 11 [json_name = "datetimeSetToInactive"];</code>
+     */
+    public Builder mergeDatetimeSetToInactive(com.google.protobuf.Timestamp value) {
+      if (datetimeSetToInactiveBuilder_ == null) {
+        if (((bitField0_ & 0x00000400) != 0) &&
+          datetimeSetToInactive_ != null &&
+          datetimeSetToInactive_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+          getDatetimeSetToInactiveBuilder().mergeFrom(value);
+        } else {
+          datetimeSetToInactive_ = value;
+        }
+      } else {
+        datetimeSetToInactiveBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Datetime that the group was set to inactive, if not set then the group is currently active.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp datetime_set_to_inactive = 11 [json_name = "datetimeSetToInactive"];</code>
+     */
+    public Builder clearDatetimeSetToInactive() {
+      bitField0_ = (bitField0_ & ~0x00000400);
+      datetimeSetToInactive_ = null;
+      if (datetimeSetToInactiveBuilder_ != null) {
+        datetimeSetToInactiveBuilder_.dispose();
+        datetimeSetToInactiveBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Datetime that the group was set to inactive, if not set then the group is currently active.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp datetime_set_to_inactive = 11 [json_name = "datetimeSetToInactive"];</code>
+     */
+    public com.google.protobuf.Timestamp.Builder getDatetimeSetToInactiveBuilder() {
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return getDatetimeSetToInactiveFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Datetime that the group was set to inactive, if not set then the group is currently active.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp datetime_set_to_inactive = 11 [json_name = "datetimeSetToInactive"];</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getDatetimeSetToInactiveOrBuilder() {
+      if (datetimeSetToInactiveBuilder_ != null) {
+        return datetimeSetToInactiveBuilder_.getMessageOrBuilder();
+      } else {
+        return datetimeSetToInactive_ == null ?
+            com.google.protobuf.Timestamp.getDefaultInstance() : datetimeSetToInactive_;
+      }
+    }
+    /**
+     * <pre>
+     * Datetime that the group was set to inactive, if not set then the group is currently active.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp datetime_set_to_inactive = 11 [json_name = "datetimeSetToInactive"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+        getDatetimeSetToInactiveFieldBuilder() {
+      if (datetimeSetToInactiveBuilder_ == null) {
+        datetimeSetToInactiveBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                getDatetimeSetToInactive(),
+                getParentForChildren(),
+                isClean());
+        datetimeSetToInactive_ = null;
+      }
+      return datetimeSetToInactiveBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

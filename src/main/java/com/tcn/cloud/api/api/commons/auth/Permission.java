@@ -192,6 +192,14 @@ public enum Permission
   PERMISSION_SUBSCRIPTION_MANAGEMENT(140),
   /**
    * <pre>
+   * Enables copying resources from one organization to another.  eg. Data Dip templates.
+   * </pre>
+   *
+   * <code>PERMISSION_COPY_TO_ORGANIZATION = 170 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_COPY_TO_ORGANIZATION(170),
+  /**
+   * <pre>
    * Enables the customer support tools.
    * </pre>
    *
@@ -586,6 +594,14 @@ public enum Permission
   PERMISSION_SCORECARDS_FLAG_EVAL(1603),
   /**
    * <pre>
+   * Enables access to manage learning opportunities.
+   * </pre>
+   *
+   * <code>PERMISSION_SCORECARDS_LEARNING_OPPORTUNITIES = 1604 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_SCORECARDS_LEARNING_OPPORTUNITIES(1604),
+  /**
+   * <pre>
    * Enables access to Dev Tools app.
    * </pre>
    *
@@ -650,7 +666,16 @@ public enum Permission
   PERMISSION_PBX_MANAGER_EDIT(4101),
   /**
    * <pre>
-   * No view permissions required for Newsroom home
+   * Enables access to viewing the main newsroom app and showing the popup
+   * This permission will be give to orgs automatically, but can be removed
+   * manually to opt out of newsroom notifications
+   * </pre>
+   *
+   * <code>PERMISSION_NEWSROOM_VIEW = 4199 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_NEWSROOM_VIEW(4199),
+  /**
+   * <pre>
    * Enables access to create, update, and archive in Newsroom manager
    * </pre>
    *
@@ -846,6 +871,14 @@ public enum Permission
    * <code>PERMISSION_SUBSCRIPTION_MANAGEMENT = 140 [(.annotations.perms.options) = { ... }</code>
    */
   public static final int PERMISSION_SUBSCRIPTION_MANAGEMENT_VALUE = 140;
+  /**
+   * <pre>
+   * Enables copying resources from one organization to another.  eg. Data Dip templates.
+   * </pre>
+   *
+   * <code>PERMISSION_COPY_TO_ORGANIZATION = 170 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_COPY_TO_ORGANIZATION_VALUE = 170;
   /**
    * <pre>
    * Enables the customer support tools.
@@ -1242,6 +1275,14 @@ public enum Permission
   public static final int PERMISSION_SCORECARDS_FLAG_EVAL_VALUE = 1603;
   /**
    * <pre>
+   * Enables access to manage learning opportunities.
+   * </pre>
+   *
+   * <code>PERMISSION_SCORECARDS_LEARNING_OPPORTUNITIES = 1604 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_SCORECARDS_LEARNING_OPPORTUNITIES_VALUE = 1604;
+  /**
+   * <pre>
    * Enables access to Dev Tools app.
    * </pre>
    *
@@ -1306,7 +1347,16 @@ public enum Permission
   public static final int PERMISSION_PBX_MANAGER_EDIT_VALUE = 4101;
   /**
    * <pre>
-   * No view permissions required for Newsroom home
+   * Enables access to viewing the main newsroom app and showing the popup
+   * This permission will be give to orgs automatically, but can be removed
+   * manually to opt out of newsroom notifications
+   * </pre>
+   *
+   * <code>PERMISSION_NEWSROOM_VIEW = 4199 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_NEWSROOM_VIEW_VALUE = 4199;
+  /**
+   * <pre>
    * Enables access to create, update, and archive in Newsroom manager
    * </pre>
    *
@@ -1369,6 +1419,7 @@ public enum Permission
       case 1700: return PERMISSION_SOUNDBOARD_VIEW;
       case 1701: return PERMISSION_SOUNDBOARD_EDIT;
       case 140: return PERMISSION_SUBSCRIPTION_MANAGEMENT;
+      case 170: return PERMISSION_COPY_TO_ORGANIZATION;
       case 200: return PERMISSION_CUSTOMER_SUPPORT;
       case 210: return PERMISSION_IMITATION;
       case 220: return PERMISSION_BILLING_EDIT;
@@ -1419,6 +1470,7 @@ public enum Permission
       case 1601: return PERMISSION_SCORECARDS_MANAGE;
       case 1602: return PERMISSION_SCORECARDS_EVALUATE;
       case 1603: return PERMISSION_SCORECARDS_FLAG_EVAL;
+      case 1604: return PERMISSION_SCORECARDS_LEARNING_OPPORTUNITIES;
       case 1800: return PERMISSION_DEV_TOOLS;
       case 2000: return PERMISSION_DELIVERY_NOTIFICATIONS_VIEW;
       case 2001: return PERMISSION_DELIVERY_NOTIFICATIONS_EDIT;
@@ -1427,6 +1479,7 @@ public enum Permission
       case 4000: return PERMISSION_WORKFLOWS;
       case 4100: return PERMISSION_PBX_MANAGER_VIEW;
       case 4101: return PERMISSION_PBX_MANAGER_EDIT;
+      case 4199: return PERMISSION_NEWSROOM_VIEW;
       case 4200: return PERMISSION_NEWSROOM_EDIT;
       case 4201: return PERMISSION_NEWSROOM_PUBLISH;
       default: return null;

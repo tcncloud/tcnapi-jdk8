@@ -13,7 +13,7 @@ public interface DeleteTourAgentCollectionsReqOrBuilder extends
    * Any associations with WFM Agent SIDS for these Collections will also be deleted.
    * </pre>
    *
-   * <code>repeated int64 tour_agent_collection_sids = 1 [json_name = "tourAgentCollectionSids"];</code>
+   * <code>repeated int64 tour_agent_collection_sids = 1 [json_name = "tourAgentCollectionSids", jstype = JS_STRING];</code>
    * @return A list containing the tourAgentCollectionSids.
    */
   java.util.List<java.lang.Long> getTourAgentCollectionSidsList();
@@ -23,7 +23,7 @@ public interface DeleteTourAgentCollectionsReqOrBuilder extends
    * Any associations with WFM Agent SIDS for these Collections will also be deleted.
    * </pre>
    *
-   * <code>repeated int64 tour_agent_collection_sids = 1 [json_name = "tourAgentCollectionSids"];</code>
+   * <code>repeated int64 tour_agent_collection_sids = 1 [json_name = "tourAgentCollectionSids", jstype = JS_STRING];</code>
    * @return The count of tourAgentCollectionSids.
    */
   int getTourAgentCollectionSidsCount();
@@ -33,7 +33,7 @@ public interface DeleteTourAgentCollectionsReqOrBuilder extends
    * Any associations with WFM Agent SIDS for these Collections will also be deleted.
    * </pre>
    *
-   * <code>repeated int64 tour_agent_collection_sids = 1 [json_name = "tourAgentCollectionSids"];</code>
+   * <code>repeated int64 tour_agent_collection_sids = 1 [json_name = "tourAgentCollectionSids", jstype = JS_STRING];</code>
    * @param index The index of the element to return.
    * @return The tourAgentCollectionSids at the given index.
    */

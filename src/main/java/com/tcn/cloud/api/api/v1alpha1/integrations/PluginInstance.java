@@ -21,6 +21,7 @@ private static final long serialVersionUID = 0L;
     description_ = "";
     pluginDefinition_ = "";
     methodId_ = 0;
+    displayMethods_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -288,20 +289,82 @@ private static final long serialVersionUID = 0L;
   public static final int METHOD_ID_FIELD_NUMBER = 12;
   private int methodId_ = 0;
   /**
-   * <code>.api.commons.integrations.RequestMethod method_id = 12 [json_name = "methodId"];</code>
+   * <code>.api.commons.integrations.RequestMethod method_id = 12 [json_name = "methodId", deprecated = true];</code>
+   * @deprecated api.v1alpha1.integrations.PluginInstance.method_id is deprecated.
+   *     See api/v1alpha1/integrations/service.proto;l=1156
    * @return The enum numeric value on the wire for methodId.
    */
-  @java.lang.Override public int getMethodIdValue() {
+  @java.lang.Override @java.lang.Deprecated public int getMethodIdValue() {
     return methodId_;
   }
   /**
-   * <code>.api.commons.integrations.RequestMethod method_id = 12 [json_name = "methodId"];</code>
+   * <code>.api.commons.integrations.RequestMethod method_id = 12 [json_name = "methodId", deprecated = true];</code>
+   * @deprecated api.v1alpha1.integrations.PluginInstance.method_id is deprecated.
+   *     See api/v1alpha1/integrations/service.proto;l=1156
    * @return The methodId.
    */
-  @java.lang.Override public com.tcn.cloud.api.api.commons.integrations.RequestMethod getMethodId() {
+  @java.lang.Override @java.lang.Deprecated public com.tcn.cloud.api.api.commons.integrations.RequestMethod getMethodId() {
     com.tcn.cloud.api.api.commons.integrations.RequestMethod result = com.tcn.cloud.api.api.commons.integrations.RequestMethod.forNumber(methodId_);
     return result == null ? com.tcn.cloud.api.api.commons.integrations.RequestMethod.UNRECOGNIZED : result;
   }
+
+  public static final int DISPLAY_METHODS_FIELD_NUMBER = 13;
+  @SuppressWarnings("serial")
+  private java.util.List<java.lang.Integer> displayMethods_;
+  private static final com.google.protobuf.Internal.ListAdapter.Converter<
+      java.lang.Integer, com.tcn.cloud.api.api.commons.integrations.RequestMethod> displayMethods_converter_ =
+          new com.google.protobuf.Internal.ListAdapter.Converter<
+              java.lang.Integer, com.tcn.cloud.api.api.commons.integrations.RequestMethod>() {
+            public com.tcn.cloud.api.api.commons.integrations.RequestMethod convert(java.lang.Integer from) {
+              com.tcn.cloud.api.api.commons.integrations.RequestMethod result = com.tcn.cloud.api.api.commons.integrations.RequestMethod.forNumber(from);
+              return result == null ? com.tcn.cloud.api.api.commons.integrations.RequestMethod.UNRECOGNIZED : result;
+            }
+          };
+  /**
+   * <code>repeated .api.commons.integrations.RequestMethod display_methods = 13 [json_name = "displayMethods"];</code>
+   * @return A list containing the displayMethods.
+   */
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.api.commons.integrations.RequestMethod> getDisplayMethodsList() {
+    return new com.google.protobuf.Internal.ListAdapter<
+        java.lang.Integer, com.tcn.cloud.api.api.commons.integrations.RequestMethod>(displayMethods_, displayMethods_converter_);
+  }
+  /**
+   * <code>repeated .api.commons.integrations.RequestMethod display_methods = 13 [json_name = "displayMethods"];</code>
+   * @return The count of displayMethods.
+   */
+  @java.lang.Override
+  public int getDisplayMethodsCount() {
+    return displayMethods_.size();
+  }
+  /**
+   * <code>repeated .api.commons.integrations.RequestMethod display_methods = 13 [json_name = "displayMethods"];</code>
+   * @param index The index of the element to return.
+   * @return The displayMethods at the given index.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.RequestMethod getDisplayMethods(int index) {
+    return displayMethods_converter_.convert(displayMethods_.get(index));
+  }
+  /**
+   * <code>repeated .api.commons.integrations.RequestMethod display_methods = 13 [json_name = "displayMethods"];</code>
+   * @return A list containing the enum numeric values on the wire for displayMethods.
+   */
+  @java.lang.Override
+  public java.util.List<java.lang.Integer>
+  getDisplayMethodsValueList() {
+    return displayMethods_;
+  }
+  /**
+   * <code>repeated .api.commons.integrations.RequestMethod display_methods = 13 [json_name = "displayMethods"];</code>
+   * @param index The index of the value to return.
+   * @return The enum numeric value on the wire of displayMethods at the given index.
+   */
+  @java.lang.Override
+  public int getDisplayMethodsValue(int index) {
+    return displayMethods_.get(index);
+  }
+  private int displayMethodsMemoizedSerializedSize;
 
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
@@ -317,6 +380,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    getSerializedSize();
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, id_);
     }
@@ -340,6 +404,13 @@ private static final long serialVersionUID = 0L;
     }
     if (methodId_ != com.tcn.cloud.api.api.commons.integrations.RequestMethod.REQUEST_METHOD_UNKNOWN.getNumber()) {
       output.writeEnum(12, methodId_);
+    }
+    if (getDisplayMethodsList().size() > 0) {
+      output.writeUInt32NoTag(106);
+      output.writeUInt32NoTag(displayMethodsMemoizedSerializedSize);
+    }
+    for (int i = 0; i < displayMethods_.size(); i++) {
+      output.writeEnumNoTag(displayMethods_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -377,6 +448,18 @@ private static final long serialVersionUID = 0L;
     if (methodId_ != com.tcn.cloud.api.api.commons.integrations.RequestMethod.REQUEST_METHOD_UNKNOWN.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(12, methodId_);
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < displayMethods_.size(); i++) {
+        dataSize += com.google.protobuf.CodedOutputStream
+          .computeEnumSizeNoTag(displayMethods_.get(i));
+      }
+      size += dataSize;
+      if (!getDisplayMethodsList().isEmpty()) {  size += 1;
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32SizeNoTag(dataSize);
+      }displayMethodsMemoizedSerializedSize = dataSize;
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -417,6 +500,7 @@ private static final long serialVersionUID = 0L;
           .equals(other.getLastEdited())) return false;
     }
     if (methodId_ != other.methodId_) return false;
+    if (!displayMethods_.equals(other.displayMethods_)) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -450,6 +534,10 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + METHOD_ID_FIELD_NUMBER;
     hash = (53 * hash) + methodId_;
+    if (getDisplayMethodsCount() > 0) {
+      hash = (37 * hash) + DISPLAY_METHODS_FIELD_NUMBER;
+      hash = (53 * hash) + displayMethods_.hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -601,6 +689,8 @@ private static final long serialVersionUID = 0L;
         lastEditedBuilder_ = null;
       }
       methodId_ = 0;
+      displayMethods_ = java.util.Collections.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000100);
       return this;
     }
 
@@ -627,9 +717,18 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.integrations.PluginInstance buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.integrations.PluginInstance result = new com.tcn.cloud.api.api.v1alpha1.integrations.PluginInstance(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.integrations.PluginInstance result) {
+      if (((bitField0_ & 0x00000100) != 0)) {
+        displayMethods_ = java.util.Collections.unmodifiableList(displayMethods_);
+        bitField0_ = (bitField0_ & ~0x00000100);
+      }
+      result.displayMethods_ = displayMethods_;
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.integrations.PluginInstance result) {
@@ -742,6 +841,16 @@ private static final long serialVersionUID = 0L;
       if (other.methodId_ != 0) {
         setMethodIdValue(other.getMethodIdValue());
       }
+      if (!other.displayMethods_.isEmpty()) {
+        if (displayMethods_.isEmpty()) {
+          displayMethods_ = other.displayMethods_;
+          bitField0_ = (bitField0_ & ~0x00000100);
+        } else {
+          ensureDisplayMethodsIsMutable();
+          displayMethods_.addAll(other.displayMethods_);
+        }
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -814,6 +923,23 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000080;
               break;
             } // case 96
+            case 104: {
+              int tmpRaw = input.readEnum();
+              ensureDisplayMethodsIsMutable();
+              displayMethods_.add(tmpRaw);
+              break;
+            } // case 104
+            case 106: {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while(input.getBytesUntilLimit() > 0) {
+                int tmpRaw = input.readEnum();
+                ensureDisplayMethodsIsMutable();
+                displayMethods_.add(tmpRaw);
+              }
+              input.popLimit(oldLimit);
+              break;
+            } // case 106
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1498,38 +1624,46 @@ private static final long serialVersionUID = 0L;
 
     private int methodId_ = 0;
     /**
-     * <code>.api.commons.integrations.RequestMethod method_id = 12 [json_name = "methodId"];</code>
+     * <code>.api.commons.integrations.RequestMethod method_id = 12 [json_name = "methodId", deprecated = true];</code>
+     * @deprecated api.v1alpha1.integrations.PluginInstance.method_id is deprecated.
+     *     See api/v1alpha1/integrations/service.proto;l=1156
      * @return The enum numeric value on the wire for methodId.
      */
-    @java.lang.Override public int getMethodIdValue() {
+    @java.lang.Override @java.lang.Deprecated public int getMethodIdValue() {
       return methodId_;
     }
     /**
-     * <code>.api.commons.integrations.RequestMethod method_id = 12 [json_name = "methodId"];</code>
+     * <code>.api.commons.integrations.RequestMethod method_id = 12 [json_name = "methodId", deprecated = true];</code>
+     * @deprecated api.v1alpha1.integrations.PluginInstance.method_id is deprecated.
+     *     See api/v1alpha1/integrations/service.proto;l=1156
      * @param value The enum numeric value on the wire for methodId to set.
      * @return This builder for chaining.
      */
-    public Builder setMethodIdValue(int value) {
+    @java.lang.Deprecated public Builder setMethodIdValue(int value) {
       methodId_ = value;
       bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
     /**
-     * <code>.api.commons.integrations.RequestMethod method_id = 12 [json_name = "methodId"];</code>
+     * <code>.api.commons.integrations.RequestMethod method_id = 12 [json_name = "methodId", deprecated = true];</code>
+     * @deprecated api.v1alpha1.integrations.PluginInstance.method_id is deprecated.
+     *     See api/v1alpha1/integrations/service.proto;l=1156
      * @return The methodId.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.RequestMethod getMethodId() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.integrations.RequestMethod getMethodId() {
       com.tcn.cloud.api.api.commons.integrations.RequestMethod result = com.tcn.cloud.api.api.commons.integrations.RequestMethod.forNumber(methodId_);
       return result == null ? com.tcn.cloud.api.api.commons.integrations.RequestMethod.UNRECOGNIZED : result;
     }
     /**
-     * <code>.api.commons.integrations.RequestMethod method_id = 12 [json_name = "methodId"];</code>
+     * <code>.api.commons.integrations.RequestMethod method_id = 12 [json_name = "methodId", deprecated = true];</code>
+     * @deprecated api.v1alpha1.integrations.PluginInstance.method_id is deprecated.
+     *     See api/v1alpha1/integrations/service.proto;l=1156
      * @param value The methodId to set.
      * @return This builder for chaining.
      */
-    public Builder setMethodId(com.tcn.cloud.api.api.commons.integrations.RequestMethod value) {
+    @java.lang.Deprecated public Builder setMethodId(com.tcn.cloud.api.api.commons.integrations.RequestMethod value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -1539,12 +1673,154 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.integrations.RequestMethod method_id = 12 [json_name = "methodId"];</code>
+     * <code>.api.commons.integrations.RequestMethod method_id = 12 [json_name = "methodId", deprecated = true];</code>
+     * @deprecated api.v1alpha1.integrations.PluginInstance.method_id is deprecated.
+     *     See api/v1alpha1/integrations/service.proto;l=1156
      * @return This builder for chaining.
      */
-    public Builder clearMethodId() {
+    @java.lang.Deprecated public Builder clearMethodId() {
       bitField0_ = (bitField0_ & ~0x00000080);
       methodId_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private java.util.List<java.lang.Integer> displayMethods_ =
+      java.util.Collections.emptyList();
+    private void ensureDisplayMethodsIsMutable() {
+      if (!((bitField0_ & 0x00000100) != 0)) {
+        displayMethods_ = new java.util.ArrayList<java.lang.Integer>(displayMethods_);
+        bitField0_ |= 0x00000100;
+      }
+    }
+    /**
+     * <code>repeated .api.commons.integrations.RequestMethod display_methods = 13 [json_name = "displayMethods"];</code>
+     * @return A list containing the displayMethods.
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.integrations.RequestMethod> getDisplayMethodsList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, com.tcn.cloud.api.api.commons.integrations.RequestMethod>(displayMethods_, displayMethods_converter_);
+    }
+    /**
+     * <code>repeated .api.commons.integrations.RequestMethod display_methods = 13 [json_name = "displayMethods"];</code>
+     * @return The count of displayMethods.
+     */
+    public int getDisplayMethodsCount() {
+      return displayMethods_.size();
+    }
+    /**
+     * <code>repeated .api.commons.integrations.RequestMethod display_methods = 13 [json_name = "displayMethods"];</code>
+     * @param index The index of the element to return.
+     * @return The displayMethods at the given index.
+     */
+    public com.tcn.cloud.api.api.commons.integrations.RequestMethod getDisplayMethods(int index) {
+      return displayMethods_converter_.convert(displayMethods_.get(index));
+    }
+    /**
+     * <code>repeated .api.commons.integrations.RequestMethod display_methods = 13 [json_name = "displayMethods"];</code>
+     * @param index The index to set the value at.
+     * @param value The displayMethods to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDisplayMethods(
+        int index, com.tcn.cloud.api.api.commons.integrations.RequestMethod value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensureDisplayMethodsIsMutable();
+      displayMethods_.set(index, value.getNumber());
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.integrations.RequestMethod display_methods = 13 [json_name = "displayMethods"];</code>
+     * @param value The displayMethods to add.
+     * @return This builder for chaining.
+     */
+    public Builder addDisplayMethods(com.tcn.cloud.api.api.commons.integrations.RequestMethod value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensureDisplayMethodsIsMutable();
+      displayMethods_.add(value.getNumber());
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.integrations.RequestMethod display_methods = 13 [json_name = "displayMethods"];</code>
+     * @param values The displayMethods to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllDisplayMethods(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.integrations.RequestMethod> values) {
+      ensureDisplayMethodsIsMutable();
+      for (com.tcn.cloud.api.api.commons.integrations.RequestMethod value : values) {
+        displayMethods_.add(value.getNumber());
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.integrations.RequestMethod display_methods = 13 [json_name = "displayMethods"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearDisplayMethods() {
+      displayMethods_ = java.util.Collections.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000100);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.integrations.RequestMethod display_methods = 13 [json_name = "displayMethods"];</code>
+     * @return A list containing the enum numeric values on the wire for displayMethods.
+     */
+    public java.util.List<java.lang.Integer>
+    getDisplayMethodsValueList() {
+      return java.util.Collections.unmodifiableList(displayMethods_);
+    }
+    /**
+     * <code>repeated .api.commons.integrations.RequestMethod display_methods = 13 [json_name = "displayMethods"];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of displayMethods at the given index.
+     */
+    public int getDisplayMethodsValue(int index) {
+      return displayMethods_.get(index);
+    }
+    /**
+     * <code>repeated .api.commons.integrations.RequestMethod display_methods = 13 [json_name = "displayMethods"];</code>
+     * @param index The index to set the value at.
+     * @param value The enum numeric value on the wire for displayMethods to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDisplayMethodsValue(
+        int index, int value) {
+      ensureDisplayMethodsIsMutable();
+      displayMethods_.set(index, value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.integrations.RequestMethod display_methods = 13 [json_name = "displayMethods"];</code>
+     * @param value The enum numeric value on the wire for displayMethods to add.
+     * @return This builder for chaining.
+     */
+    public Builder addDisplayMethodsValue(int value) {
+      ensureDisplayMethodsIsMutable();
+      displayMethods_.add(value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.integrations.RequestMethod display_methods = 13 [json_name = "displayMethods"];</code>
+     * @param values The enum numeric values on the wire for displayMethods to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllDisplayMethodsValue(
+        java.lang.Iterable<java.lang.Integer> values) {
+      ensureDisplayMethodsIsMutable();
+      for (int value : values) {
+        displayMethods_.add(value);
+      }
       onChanged();
       return this;
     }

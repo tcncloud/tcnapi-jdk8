@@ -97,4 +97,25 @@ public interface AuthenticationPreferencesOrBuilder extends
    */
   com.google.protobuf.ByteString
       getAgentApiKeyBytes();
+
+  /**
+   * <pre>
+   * Whether or not two factor authentication is enabled.
+   * </pre>
+   *
+   * <code>bool enable_2fa = 13 [json_name = "enable2fa"];</code>
+   * @return The enable2fa.
+   */
+  boolean getEnable2Fa();
+
+  /**
+   * <pre>
+   * Whether or not to block login from users without a verified email.
+   * This option is only used if two factor authentication is enabled.
+   * </pre>
+   *
+   * <code>bool block_unverified_users = 14 [json_name = "blockUnverifiedUsers"];</code>
+   * @return The blockUnverifiedUsers.
+   */
+  boolean getBlockUnverifiedUsers();
 }

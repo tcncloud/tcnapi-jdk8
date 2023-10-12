@@ -161,6 +161,8 @@ private static final long serialVersionUID = 0L;
     VANTIV_CREDIT_SALE(2301),
     VANTIV_ACH_SALE(2302),
     JOURNEY_LATEST(2401),
+    JOURNEY_LIST(2402),
+    JOURNEY_UPDATE(2403),
     ATHENAHEALTH_GET_PATIENTS(2501),
     ATHENAHEALTH_GET_PATIENTS_WITH_ID(2502),
     ATHENAHEALTH_CC_PAYMENT(2503),
@@ -226,6 +228,8 @@ private static final long serialVersionUID = 0L;
     PIANO_UPDATE_USER(3602),
     PIANO_UPDATE_SUBSCRIPTION(3603),
     PIANO_GET_PAYMENT(3604),
+    PIANO_LIST_SUBSCRIPTION(3605),
+    PIANO_LASTACCESS_CONVERSION(3606),
     EPIC_GET_TOKEN(3701),
     EPIC_GET_PATIENT(3702),
     EPIC_MATCH_PATIENT(3703),
@@ -245,6 +249,7 @@ private static final long serialVersionUID = 0L;
     PRIOCOMMERCE_ACH_PAYMENT(3901),
     PRIOCOMMERCE_CC_PAYMENT(3902),
     NAVIGA_CREATE_PAYMENT(4001),
+    PAYNSECONDS_TOKENIZE_CARD(4101),
     VALUE_NOT_SET(0);
     private final int value;
     private ValueCase(int value) {
@@ -371,6 +376,8 @@ private static final long serialVersionUID = 0L;
         case 2301: return VANTIV_CREDIT_SALE;
         case 2302: return VANTIV_ACH_SALE;
         case 2401: return JOURNEY_LATEST;
+        case 2402: return JOURNEY_LIST;
+        case 2403: return JOURNEY_UPDATE;
         case 2501: return ATHENAHEALTH_GET_PATIENTS;
         case 2502: return ATHENAHEALTH_GET_PATIENTS_WITH_ID;
         case 2503: return ATHENAHEALTH_CC_PAYMENT;
@@ -436,6 +443,8 @@ private static final long serialVersionUID = 0L;
         case 3602: return PIANO_UPDATE_USER;
         case 3603: return PIANO_UPDATE_SUBSCRIPTION;
         case 3604: return PIANO_GET_PAYMENT;
+        case 3605: return PIANO_LIST_SUBSCRIPTION;
+        case 3606: return PIANO_LASTACCESS_CONVERSION;
         case 3701: return EPIC_GET_TOKEN;
         case 3702: return EPIC_GET_PATIENT;
         case 3703: return EPIC_MATCH_PATIENT;
@@ -455,6 +464,7 @@ private static final long serialVersionUID = 0L;
         case 3901: return PRIOCOMMERCE_ACH_PAYMENT;
         case 3902: return PRIOCOMMERCE_CC_PAYMENT;
         case 4001: return NAVIGA_CREATE_PAYMENT;
+        case 4101: return PAYNSECONDS_TOKENIZE_CARD;
         case 0: return VALUE_NOT_SET;
         default: return null;
       }
@@ -3888,6 +3898,68 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyLatest.getDefaultInstance();
   }
 
+  public static final int JOURNEY_LIST_FIELD_NUMBER = 2402;
+  /**
+   * <code>.api.commons.integrations.ExecuteJourneyList journey_list = 2402 [json_name = "journeyList"];</code>
+   * @return Whether the journeyList field is set.
+   */
+  @java.lang.Override
+  public boolean hasJourneyList() {
+    return valueCase_ == 2402;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteJourneyList journey_list = 2402 [json_name = "journeyList"];</code>
+   * @return The journeyList.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyList getJourneyList() {
+    if (valueCase_ == 2402) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyList) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyList.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteJourneyList journey_list = 2402 [json_name = "journeyList"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyListOrBuilder getJourneyListOrBuilder() {
+    if (valueCase_ == 2402) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyList) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyList.getDefaultInstance();
+  }
+
+  public static final int JOURNEY_UPDATE_FIELD_NUMBER = 2403;
+  /**
+   * <code>.api.commons.integrations.ExecuteJourneyUpdate journey_update = 2403 [json_name = "journeyUpdate"];</code>
+   * @return Whether the journeyUpdate field is set.
+   */
+  @java.lang.Override
+  public boolean hasJourneyUpdate() {
+    return valueCase_ == 2403;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteJourneyUpdate journey_update = 2403 [json_name = "journeyUpdate"];</code>
+   * @return The journeyUpdate.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdate getJourneyUpdate() {
+    if (valueCase_ == 2403) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdate) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdate.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteJourneyUpdate journey_update = 2403 [json_name = "journeyUpdate"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdateOrBuilder getJourneyUpdateOrBuilder() {
+    if (valueCase_ == 2403) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdate) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdate.getDefaultInstance();
+  }
+
   public static final int ATHENAHEALTH_GET_PATIENTS_FIELD_NUMBER = 2501;
   /**
    * <code>.api.commons.integrations.ExecuteAthenahealthGetPatients athenahealth_get_patients = 2501 [json_name = "athenahealthGetPatients"];</code>
@@ -5903,6 +5975,68 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetPayment.getDefaultInstance();
   }
 
+  public static final int PIANO_LIST_SUBSCRIPTION_FIELD_NUMBER = 3605;
+  /**
+   * <code>.api.commons.integrations.ExecutePianoListSubscription PIANO_LIST_SUBSCRIPTION = 3605 [json_name = "PIANOLISTSUBSCRIPTION"];</code>
+   * @return Whether the pIANOLISTSUBSCRIPTION field is set.
+   */
+  @java.lang.Override
+  public boolean hasPIANOLISTSUBSCRIPTION() {
+    return valueCase_ == 3605;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecutePianoListSubscription PIANO_LIST_SUBSCRIPTION = 3605 [json_name = "PIANOLISTSUBSCRIPTION"];</code>
+   * @return The pIANOLISTSUBSCRIPTION.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecutePianoListSubscription getPIANOLISTSUBSCRIPTION() {
+    if (valueCase_ == 3605) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecutePianoListSubscription) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecutePianoListSubscription.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecutePianoListSubscription PIANO_LIST_SUBSCRIPTION = 3605 [json_name = "PIANOLISTSUBSCRIPTION"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecutePianoListSubscriptionOrBuilder getPIANOLISTSUBSCRIPTIONOrBuilder() {
+    if (valueCase_ == 3605) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecutePianoListSubscription) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecutePianoListSubscription.getDefaultInstance();
+  }
+
+  public static final int PIANO_LASTACCESS_CONVERSION_FIELD_NUMBER = 3606;
+  /**
+   * <code>.api.commons.integrations.ExecutePianoLastAccessConversion PIANO_LASTACCESS_CONVERSION = 3606 [json_name = "PIANOLASTACCESSCONVERSION"];</code>
+   * @return Whether the pIANOLASTACCESSCONVERSION field is set.
+   */
+  @java.lang.Override
+  public boolean hasPIANOLASTACCESSCONVERSION() {
+    return valueCase_ == 3606;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecutePianoLastAccessConversion PIANO_LASTACCESS_CONVERSION = 3606 [json_name = "PIANOLASTACCESSCONVERSION"];</code>
+   * @return The pIANOLASTACCESSCONVERSION.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecutePianoLastAccessConversion getPIANOLASTACCESSCONVERSION() {
+    if (valueCase_ == 3606) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecutePianoLastAccessConversion) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecutePianoLastAccessConversion.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecutePianoLastAccessConversion PIANO_LASTACCESS_CONVERSION = 3606 [json_name = "PIANOLASTACCESSCONVERSION"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecutePianoLastAccessConversionOrBuilder getPIANOLASTACCESSCONVERSIONOrBuilder() {
+    if (valueCase_ == 3606) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecutePianoLastAccessConversion) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecutePianoLastAccessConversion.getDefaultInstance();
+  }
+
   public static final int EPIC_GET_TOKEN_FIELD_NUMBER = 3701;
   /**
    * <code>.api.commons.integrations.ExecuteEpicGetToken epic_get_token = 3701 [json_name = "epicGetToken"];</code>
@@ -6492,6 +6626,37 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePayment.getDefaultInstance();
   }
 
+  public static final int PAYNSECONDS_TOKENIZE_CARD_FIELD_NUMBER = 4101;
+  /**
+   * <code>.api.commons.integrations.ExecutePaynsecondsTokenizeCard paynseconds_tokenize_card = 4101 [json_name = "paynsecondsTokenizeCard"];</code>
+   * @return Whether the paynsecondsTokenizeCard field is set.
+   */
+  @java.lang.Override
+  public boolean hasPaynsecondsTokenizeCard() {
+    return valueCase_ == 4101;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecutePaynsecondsTokenizeCard paynseconds_tokenize_card = 4101 [json_name = "paynsecondsTokenizeCard"];</code>
+   * @return The paynsecondsTokenizeCard.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCard getPaynsecondsTokenizeCard() {
+    if (valueCase_ == 4101) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCard) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCard.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecutePaynsecondsTokenizeCard paynseconds_tokenize_card = 4101 [json_name = "paynsecondsTokenizeCard"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCardOrBuilder getPaynsecondsTokenizeCardOrBuilder() {
+    if (valueCase_ == 4101) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCard) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCard.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -6836,6 +7001,12 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 2401) {
       output.writeMessage(2401, (com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyLatest) value_);
     }
+    if (valueCase_ == 2402) {
+      output.writeMessage(2402, (com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyList) value_);
+    }
+    if (valueCase_ == 2403) {
+      output.writeMessage(2403, (com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdate) value_);
+    }
     if (valueCase_ == 2501) {
       output.writeMessage(2501, (com.tcn.cloud.api.api.commons.integrations.ExecuteAthenahealthGetPatients) value_);
     }
@@ -7031,6 +7202,12 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 3604) {
       output.writeMessage(3604, (com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetPayment) value_);
     }
+    if (valueCase_ == 3605) {
+      output.writeMessage(3605, (com.tcn.cloud.api.api.commons.integrations.ExecutePianoListSubscription) value_);
+    }
+    if (valueCase_ == 3606) {
+      output.writeMessage(3606, (com.tcn.cloud.api.api.commons.integrations.ExecutePianoLastAccessConversion) value_);
+    }
     if (valueCase_ == 3701) {
       output.writeMessage(3701, (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetToken) value_);
     }
@@ -7087,6 +7264,9 @@ private static final long serialVersionUID = 0L;
     }
     if (valueCase_ == 4001) {
       output.writeMessage(4001, (com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePayment) value_);
+    }
+    if (valueCase_ == 4101) {
+      output.writeMessage(4101, (com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCard) value_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -7536,6 +7716,14 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2401, (com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyLatest) value_);
     }
+    if (valueCase_ == 2402) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2402, (com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyList) value_);
+    }
+    if (valueCase_ == 2403) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2403, (com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdate) value_);
+    }
     if (valueCase_ == 2501) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2501, (com.tcn.cloud.api.api.commons.integrations.ExecuteAthenahealthGetPatients) value_);
@@ -7796,6 +7984,14 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3604, (com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetPayment) value_);
     }
+    if (valueCase_ == 3605) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3605, (com.tcn.cloud.api.api.commons.integrations.ExecutePianoListSubscription) value_);
+    }
+    if (valueCase_ == 3606) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3606, (com.tcn.cloud.api.api.commons.integrations.ExecutePianoLastAccessConversion) value_);
+    }
     if (valueCase_ == 3701) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3701, (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetToken) value_);
@@ -7871,6 +8067,10 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 4001) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4001, (com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePayment) value_);
+    }
+    if (valueCase_ == 4101) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4101, (com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCard) value_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -8327,6 +8527,14 @@ private static final long serialVersionUID = 0L;
         if (!getJourneyLatest()
             .equals(other.getJourneyLatest())) return false;
         break;
+      case 2402:
+        if (!getJourneyList()
+            .equals(other.getJourneyList())) return false;
+        break;
+      case 2403:
+        if (!getJourneyUpdate()
+            .equals(other.getJourneyUpdate())) return false;
+        break;
       case 2501:
         if (!getAthenahealthGetPatients()
             .equals(other.getAthenahealthGetPatients())) return false;
@@ -8587,6 +8795,14 @@ private static final long serialVersionUID = 0L;
         if (!getPIANOGETPAYMENT()
             .equals(other.getPIANOGETPAYMENT())) return false;
         break;
+      case 3605:
+        if (!getPIANOLISTSUBSCRIPTION()
+            .equals(other.getPIANOLISTSUBSCRIPTION())) return false;
+        break;
+      case 3606:
+        if (!getPIANOLASTACCESSCONVERSION()
+            .equals(other.getPIANOLASTACCESSCONVERSION())) return false;
+        break;
       case 3701:
         if (!getEpicGetToken()
             .equals(other.getEpicGetToken())) return false;
@@ -8662,6 +8878,10 @@ private static final long serialVersionUID = 0L;
       case 4001:
         if (!getNavigaCreatePayment()
             .equals(other.getNavigaCreatePayment())) return false;
+        break;
+      case 4101:
+        if (!getPaynsecondsTokenizeCard()
+            .equals(other.getPaynsecondsTokenizeCard())) return false;
         break;
       case 0:
       default:
@@ -9116,6 +9336,14 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + JOURNEY_LATEST_FIELD_NUMBER;
         hash = (53 * hash) + getJourneyLatest().hashCode();
         break;
+      case 2402:
+        hash = (37 * hash) + JOURNEY_LIST_FIELD_NUMBER;
+        hash = (53 * hash) + getJourneyList().hashCode();
+        break;
+      case 2403:
+        hash = (37 * hash) + JOURNEY_UPDATE_FIELD_NUMBER;
+        hash = (53 * hash) + getJourneyUpdate().hashCode();
+        break;
       case 2501:
         hash = (37 * hash) + ATHENAHEALTH_GET_PATIENTS_FIELD_NUMBER;
         hash = (53 * hash) + getAthenahealthGetPatients().hashCode();
@@ -9376,6 +9604,14 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + PIANO_GET_PAYMENT_FIELD_NUMBER;
         hash = (53 * hash) + getPIANOGETPAYMENT().hashCode();
         break;
+      case 3605:
+        hash = (37 * hash) + PIANO_LIST_SUBSCRIPTION_FIELD_NUMBER;
+        hash = (53 * hash) + getPIANOLISTSUBSCRIPTION().hashCode();
+        break;
+      case 3606:
+        hash = (37 * hash) + PIANO_LASTACCESS_CONVERSION_FIELD_NUMBER;
+        hash = (53 * hash) + getPIANOLASTACCESSCONVERSION().hashCode();
+        break;
       case 3701:
         hash = (37 * hash) + EPIC_GET_TOKEN_FIELD_NUMBER;
         hash = (53 * hash) + getEpicGetToken().hashCode();
@@ -9451,6 +9687,10 @@ private static final long serialVersionUID = 0L;
       case 4001:
         hash = (37 * hash) + NAVIGA_CREATE_PAYMENT_FIELD_NUMBER;
         hash = (53 * hash) + getNavigaCreatePayment().hashCode();
+        break;
+      case 4101:
+        hash = (37 * hash) + PAYNSECONDS_TOKENIZE_CARD_FIELD_NUMBER;
+        hash = (53 * hash) + getPaynsecondsTokenizeCard().hashCode();
         break;
       case 0:
       default:
@@ -9927,6 +10167,12 @@ private static final long serialVersionUID = 0L;
       if (journeyLatestBuilder_ != null) {
         journeyLatestBuilder_.clear();
       }
+      if (journeyListBuilder_ != null) {
+        journeyListBuilder_.clear();
+      }
+      if (journeyUpdateBuilder_ != null) {
+        journeyUpdateBuilder_.clear();
+      }
       if (athenahealthGetPatientsBuilder_ != null) {
         athenahealthGetPatientsBuilder_.clear();
       }
@@ -10122,6 +10368,12 @@ private static final long serialVersionUID = 0L;
       if (pIANOGETPAYMENTBuilder_ != null) {
         pIANOGETPAYMENTBuilder_.clear();
       }
+      if (pIANOLISTSUBSCRIPTIONBuilder_ != null) {
+        pIANOLISTSUBSCRIPTIONBuilder_.clear();
+      }
+      if (pIANOLASTACCESSCONVERSIONBuilder_ != null) {
+        pIANOLASTACCESSCONVERSIONBuilder_.clear();
+      }
       if (epicGetTokenBuilder_ != null) {
         epicGetTokenBuilder_.clear();
       }
@@ -10178,6 +10430,9 @@ private static final long serialVersionUID = 0L;
       }
       if (navigaCreatePaymentBuilder_ != null) {
         navigaCreatePaymentBuilder_.clear();
+      }
+      if (paynsecondsTokenizeCardBuilder_ != null) {
+        paynsecondsTokenizeCardBuilder_.clear();
       }
       valueCase_ = 0;
       value_ = null;
@@ -10689,6 +10944,14 @@ private static final long serialVersionUID = 0L;
           journeyLatestBuilder_ != null) {
         result.value_ = journeyLatestBuilder_.build();
       }
+      if (valueCase_ == 2402 &&
+          journeyListBuilder_ != null) {
+        result.value_ = journeyListBuilder_.build();
+      }
+      if (valueCase_ == 2403 &&
+          journeyUpdateBuilder_ != null) {
+        result.value_ = journeyUpdateBuilder_.build();
+      }
       if (valueCase_ == 2501 &&
           athenahealthGetPatientsBuilder_ != null) {
         result.value_ = athenahealthGetPatientsBuilder_.build();
@@ -10949,6 +11212,14 @@ private static final long serialVersionUID = 0L;
           pIANOGETPAYMENTBuilder_ != null) {
         result.value_ = pIANOGETPAYMENTBuilder_.build();
       }
+      if (valueCase_ == 3605 &&
+          pIANOLISTSUBSCRIPTIONBuilder_ != null) {
+        result.value_ = pIANOLISTSUBSCRIPTIONBuilder_.build();
+      }
+      if (valueCase_ == 3606 &&
+          pIANOLASTACCESSCONVERSIONBuilder_ != null) {
+        result.value_ = pIANOLASTACCESSCONVERSIONBuilder_.build();
+      }
       if (valueCase_ == 3701 &&
           epicGetTokenBuilder_ != null) {
         result.value_ = epicGetTokenBuilder_.build();
@@ -11024,6 +11295,10 @@ private static final long serialVersionUID = 0L;
       if (valueCase_ == 4001 &&
           navigaCreatePaymentBuilder_ != null) {
         result.value_ = navigaCreatePaymentBuilder_.build();
+      }
+      if (valueCase_ == 4101 &&
+          paynsecondsTokenizeCardBuilder_ != null) {
+        result.value_ = paynsecondsTokenizeCardBuilder_.build();
       }
     }
 
@@ -11513,6 +11788,14 @@ private static final long serialVersionUID = 0L;
           mergeJourneyLatest(other.getJourneyLatest());
           break;
         }
+        case JOURNEY_LIST: {
+          mergeJourneyList(other.getJourneyList());
+          break;
+        }
+        case JOURNEY_UPDATE: {
+          mergeJourneyUpdate(other.getJourneyUpdate());
+          break;
+        }
         case ATHENAHEALTH_GET_PATIENTS: {
           mergeAthenahealthGetPatients(other.getAthenahealthGetPatients());
           break;
@@ -11773,6 +12056,14 @@ private static final long serialVersionUID = 0L;
           mergePIANOGETPAYMENT(other.getPIANOGETPAYMENT());
           break;
         }
+        case PIANO_LIST_SUBSCRIPTION: {
+          mergePIANOLISTSUBSCRIPTION(other.getPIANOLISTSUBSCRIPTION());
+          break;
+        }
+        case PIANO_LASTACCESS_CONVERSION: {
+          mergePIANOLASTACCESSCONVERSION(other.getPIANOLASTACCESSCONVERSION());
+          break;
+        }
         case EPIC_GET_TOKEN: {
           mergeEpicGetToken(other.getEpicGetToken());
           break;
@@ -11847,6 +12138,10 @@ private static final long serialVersionUID = 0L;
         }
         case NAVIGA_CREATE_PAYMENT: {
           mergeNavigaCreatePayment(other.getNavigaCreatePayment());
+          break;
+        }
+        case PAYNSECONDS_TOKENIZE_CARD: {
+          mergePaynsecondsTokenizeCard(other.getPaynsecondsTokenizeCard());
           break;
         }
         case VALUE_NOT_SET: {
@@ -12647,6 +12942,20 @@ private static final long serialVersionUID = 0L;
               valueCase_ = 2401;
               break;
             } // case 19210
+            case 19218: {
+              input.readMessage(
+                  getJourneyListFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 2402;
+              break;
+            } // case 19218
+            case 19226: {
+              input.readMessage(
+                  getJourneyUpdateFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 2403;
+              break;
+            } // case 19226
             case 20010: {
               input.readMessage(
                   getAthenahealthGetPatientsFieldBuilder().getBuilder(),
@@ -13102,6 +13411,20 @@ private static final long serialVersionUID = 0L;
               valueCase_ = 3604;
               break;
             } // case 28834
+            case 28842: {
+              input.readMessage(
+                  getPIANOLISTSUBSCRIPTIONFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 3605;
+              break;
+            } // case 28842
+            case 28850: {
+              input.readMessage(
+                  getPIANOLASTACCESSCONVERSIONFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 3606;
+              break;
+            } // case 28850
             case 29610: {
               input.readMessage(
                   getEpicGetTokenFieldBuilder().getBuilder(),
@@ -13235,6 +13558,13 @@ private static final long serialVersionUID = 0L;
               valueCase_ = 4001;
               break;
             } // case 32010
+            case 32810: {
+              input.readMessage(
+                  getPaynsecondsTokenizeCardFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 4101;
+              break;
+            } // case 32810
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -28824,6 +29154,290 @@ private static final long serialVersionUID = 0L;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyList, com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyList.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyListOrBuilder> journeyListBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteJourneyList journey_list = 2402 [json_name = "journeyList"];</code>
+     * @return Whether the journeyList field is set.
+     */
+    @java.lang.Override
+    public boolean hasJourneyList() {
+      return valueCase_ == 2402;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteJourneyList journey_list = 2402 [json_name = "journeyList"];</code>
+     * @return The journeyList.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyList getJourneyList() {
+      if (journeyListBuilder_ == null) {
+        if (valueCase_ == 2402) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyList) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyList.getDefaultInstance();
+      } else {
+        if (valueCase_ == 2402) {
+          return journeyListBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyList.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteJourneyList journey_list = 2402 [json_name = "journeyList"];</code>
+     */
+    public Builder setJourneyList(com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyList value) {
+      if (journeyListBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        journeyListBuilder_.setMessage(value);
+      }
+      valueCase_ = 2402;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteJourneyList journey_list = 2402 [json_name = "journeyList"];</code>
+     */
+    public Builder setJourneyList(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyList.Builder builderForValue) {
+      if (journeyListBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        journeyListBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 2402;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteJourneyList journey_list = 2402 [json_name = "journeyList"];</code>
+     */
+    public Builder mergeJourneyList(com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyList value) {
+      if (journeyListBuilder_ == null) {
+        if (valueCase_ == 2402 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyList.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyList.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyList) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 2402) {
+          journeyListBuilder_.mergeFrom(value);
+        } else {
+          journeyListBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 2402;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteJourneyList journey_list = 2402 [json_name = "journeyList"];</code>
+     */
+    public Builder clearJourneyList() {
+      if (journeyListBuilder_ == null) {
+        if (valueCase_ == 2402) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 2402) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        journeyListBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteJourneyList journey_list = 2402 [json_name = "journeyList"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyList.Builder getJourneyListBuilder() {
+      return getJourneyListFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteJourneyList journey_list = 2402 [json_name = "journeyList"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyListOrBuilder getJourneyListOrBuilder() {
+      if ((valueCase_ == 2402) && (journeyListBuilder_ != null)) {
+        return journeyListBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 2402) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyList) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyList.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteJourneyList journey_list = 2402 [json_name = "journeyList"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyList, com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyList.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyListOrBuilder> 
+        getJourneyListFieldBuilder() {
+      if (journeyListBuilder_ == null) {
+        if (!(valueCase_ == 2402)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyList.getDefaultInstance();
+        }
+        journeyListBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyList, com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyList.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyListOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyList) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 2402;
+      onChanged();
+      return journeyListBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdate, com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdate.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdateOrBuilder> journeyUpdateBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteJourneyUpdate journey_update = 2403 [json_name = "journeyUpdate"];</code>
+     * @return Whether the journeyUpdate field is set.
+     */
+    @java.lang.Override
+    public boolean hasJourneyUpdate() {
+      return valueCase_ == 2403;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteJourneyUpdate journey_update = 2403 [json_name = "journeyUpdate"];</code>
+     * @return The journeyUpdate.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdate getJourneyUpdate() {
+      if (journeyUpdateBuilder_ == null) {
+        if (valueCase_ == 2403) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdate) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdate.getDefaultInstance();
+      } else {
+        if (valueCase_ == 2403) {
+          return journeyUpdateBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdate.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteJourneyUpdate journey_update = 2403 [json_name = "journeyUpdate"];</code>
+     */
+    public Builder setJourneyUpdate(com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdate value) {
+      if (journeyUpdateBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        journeyUpdateBuilder_.setMessage(value);
+      }
+      valueCase_ = 2403;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteJourneyUpdate journey_update = 2403 [json_name = "journeyUpdate"];</code>
+     */
+    public Builder setJourneyUpdate(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdate.Builder builderForValue) {
+      if (journeyUpdateBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        journeyUpdateBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 2403;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteJourneyUpdate journey_update = 2403 [json_name = "journeyUpdate"];</code>
+     */
+    public Builder mergeJourneyUpdate(com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdate value) {
+      if (journeyUpdateBuilder_ == null) {
+        if (valueCase_ == 2403 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdate.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdate.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdate) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 2403) {
+          journeyUpdateBuilder_.mergeFrom(value);
+        } else {
+          journeyUpdateBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 2403;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteJourneyUpdate journey_update = 2403 [json_name = "journeyUpdate"];</code>
+     */
+    public Builder clearJourneyUpdate() {
+      if (journeyUpdateBuilder_ == null) {
+        if (valueCase_ == 2403) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 2403) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        journeyUpdateBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteJourneyUpdate journey_update = 2403 [json_name = "journeyUpdate"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdate.Builder getJourneyUpdateBuilder() {
+      return getJourneyUpdateFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteJourneyUpdate journey_update = 2403 [json_name = "journeyUpdate"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdateOrBuilder getJourneyUpdateOrBuilder() {
+      if ((valueCase_ == 2403) && (journeyUpdateBuilder_ != null)) {
+        return journeyUpdateBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 2403) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdate) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdate.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteJourneyUpdate journey_update = 2403 [json_name = "journeyUpdate"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdate, com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdate.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdateOrBuilder> 
+        getJourneyUpdateFieldBuilder() {
+      if (journeyUpdateBuilder_ == null) {
+        if (!(valueCase_ == 2403)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdate.getDefaultInstance();
+        }
+        journeyUpdateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdate, com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdate.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdateOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdate) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 2403;
+      onChanged();
+      return journeyUpdateBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.integrations.ExecuteAthenahealthGetPatients, com.tcn.cloud.api.api.commons.integrations.ExecuteAthenahealthGetPatients.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteAthenahealthGetPatientsOrBuilder> athenahealthGetPatientsBuilder_;
     /**
      * <code>.api.commons.integrations.ExecuteAthenahealthGetPatients athenahealth_get_patients = 2501 [json_name = "athenahealthGetPatients"];</code>
@@ -38054,6 +38668,290 @@ private static final long serialVersionUID = 0L;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecutePianoListSubscription, com.tcn.cloud.api.api.commons.integrations.ExecutePianoListSubscription.Builder, com.tcn.cloud.api.api.commons.integrations.ExecutePianoListSubscriptionOrBuilder> pIANOLISTSUBSCRIPTIONBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecutePianoListSubscription PIANO_LIST_SUBSCRIPTION = 3605 [json_name = "PIANOLISTSUBSCRIPTION"];</code>
+     * @return Whether the pIANOLISTSUBSCRIPTION field is set.
+     */
+    @java.lang.Override
+    public boolean hasPIANOLISTSUBSCRIPTION() {
+      return valueCase_ == 3605;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePianoListSubscription PIANO_LIST_SUBSCRIPTION = 3605 [json_name = "PIANOLISTSUBSCRIPTION"];</code>
+     * @return The pIANOLISTSUBSCRIPTION.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecutePianoListSubscription getPIANOLISTSUBSCRIPTION() {
+      if (pIANOLISTSUBSCRIPTIONBuilder_ == null) {
+        if (valueCase_ == 3605) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecutePianoListSubscription) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecutePianoListSubscription.getDefaultInstance();
+      } else {
+        if (valueCase_ == 3605) {
+          return pIANOLISTSUBSCRIPTIONBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecutePianoListSubscription.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePianoListSubscription PIANO_LIST_SUBSCRIPTION = 3605 [json_name = "PIANOLISTSUBSCRIPTION"];</code>
+     */
+    public Builder setPIANOLISTSUBSCRIPTION(com.tcn.cloud.api.api.commons.integrations.ExecutePianoListSubscription value) {
+      if (pIANOLISTSUBSCRIPTIONBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        pIANOLISTSUBSCRIPTIONBuilder_.setMessage(value);
+      }
+      valueCase_ = 3605;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePianoListSubscription PIANO_LIST_SUBSCRIPTION = 3605 [json_name = "PIANOLISTSUBSCRIPTION"];</code>
+     */
+    public Builder setPIANOLISTSUBSCRIPTION(
+        com.tcn.cloud.api.api.commons.integrations.ExecutePianoListSubscription.Builder builderForValue) {
+      if (pIANOLISTSUBSCRIPTIONBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        pIANOLISTSUBSCRIPTIONBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 3605;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePianoListSubscription PIANO_LIST_SUBSCRIPTION = 3605 [json_name = "PIANOLISTSUBSCRIPTION"];</code>
+     */
+    public Builder mergePIANOLISTSUBSCRIPTION(com.tcn.cloud.api.api.commons.integrations.ExecutePianoListSubscription value) {
+      if (pIANOLISTSUBSCRIPTIONBuilder_ == null) {
+        if (valueCase_ == 3605 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecutePianoListSubscription.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecutePianoListSubscription.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecutePianoListSubscription) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 3605) {
+          pIANOLISTSUBSCRIPTIONBuilder_.mergeFrom(value);
+        } else {
+          pIANOLISTSUBSCRIPTIONBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 3605;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePianoListSubscription PIANO_LIST_SUBSCRIPTION = 3605 [json_name = "PIANOLISTSUBSCRIPTION"];</code>
+     */
+    public Builder clearPIANOLISTSUBSCRIPTION() {
+      if (pIANOLISTSUBSCRIPTIONBuilder_ == null) {
+        if (valueCase_ == 3605) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 3605) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        pIANOLISTSUBSCRIPTIONBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePianoListSubscription PIANO_LIST_SUBSCRIPTION = 3605 [json_name = "PIANOLISTSUBSCRIPTION"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecutePianoListSubscription.Builder getPIANOLISTSUBSCRIPTIONBuilder() {
+      return getPIANOLISTSUBSCRIPTIONFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePianoListSubscription PIANO_LIST_SUBSCRIPTION = 3605 [json_name = "PIANOLISTSUBSCRIPTION"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecutePianoListSubscriptionOrBuilder getPIANOLISTSUBSCRIPTIONOrBuilder() {
+      if ((valueCase_ == 3605) && (pIANOLISTSUBSCRIPTIONBuilder_ != null)) {
+        return pIANOLISTSUBSCRIPTIONBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 3605) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecutePianoListSubscription) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecutePianoListSubscription.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePianoListSubscription PIANO_LIST_SUBSCRIPTION = 3605 [json_name = "PIANOLISTSUBSCRIPTION"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecutePianoListSubscription, com.tcn.cloud.api.api.commons.integrations.ExecutePianoListSubscription.Builder, com.tcn.cloud.api.api.commons.integrations.ExecutePianoListSubscriptionOrBuilder> 
+        getPIANOLISTSUBSCRIPTIONFieldBuilder() {
+      if (pIANOLISTSUBSCRIPTIONBuilder_ == null) {
+        if (!(valueCase_ == 3605)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecutePianoListSubscription.getDefaultInstance();
+        }
+        pIANOLISTSUBSCRIPTIONBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecutePianoListSubscription, com.tcn.cloud.api.api.commons.integrations.ExecutePianoListSubscription.Builder, com.tcn.cloud.api.api.commons.integrations.ExecutePianoListSubscriptionOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecutePianoListSubscription) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 3605;
+      onChanged();
+      return pIANOLISTSUBSCRIPTIONBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecutePianoLastAccessConversion, com.tcn.cloud.api.api.commons.integrations.ExecutePianoLastAccessConversion.Builder, com.tcn.cloud.api.api.commons.integrations.ExecutePianoLastAccessConversionOrBuilder> pIANOLASTACCESSCONVERSIONBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecutePianoLastAccessConversion PIANO_LASTACCESS_CONVERSION = 3606 [json_name = "PIANOLASTACCESSCONVERSION"];</code>
+     * @return Whether the pIANOLASTACCESSCONVERSION field is set.
+     */
+    @java.lang.Override
+    public boolean hasPIANOLASTACCESSCONVERSION() {
+      return valueCase_ == 3606;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePianoLastAccessConversion PIANO_LASTACCESS_CONVERSION = 3606 [json_name = "PIANOLASTACCESSCONVERSION"];</code>
+     * @return The pIANOLASTACCESSCONVERSION.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecutePianoLastAccessConversion getPIANOLASTACCESSCONVERSION() {
+      if (pIANOLASTACCESSCONVERSIONBuilder_ == null) {
+        if (valueCase_ == 3606) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecutePianoLastAccessConversion) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecutePianoLastAccessConversion.getDefaultInstance();
+      } else {
+        if (valueCase_ == 3606) {
+          return pIANOLASTACCESSCONVERSIONBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecutePianoLastAccessConversion.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePianoLastAccessConversion PIANO_LASTACCESS_CONVERSION = 3606 [json_name = "PIANOLASTACCESSCONVERSION"];</code>
+     */
+    public Builder setPIANOLASTACCESSCONVERSION(com.tcn.cloud.api.api.commons.integrations.ExecutePianoLastAccessConversion value) {
+      if (pIANOLASTACCESSCONVERSIONBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        pIANOLASTACCESSCONVERSIONBuilder_.setMessage(value);
+      }
+      valueCase_ = 3606;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePianoLastAccessConversion PIANO_LASTACCESS_CONVERSION = 3606 [json_name = "PIANOLASTACCESSCONVERSION"];</code>
+     */
+    public Builder setPIANOLASTACCESSCONVERSION(
+        com.tcn.cloud.api.api.commons.integrations.ExecutePianoLastAccessConversion.Builder builderForValue) {
+      if (pIANOLASTACCESSCONVERSIONBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        pIANOLASTACCESSCONVERSIONBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 3606;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePianoLastAccessConversion PIANO_LASTACCESS_CONVERSION = 3606 [json_name = "PIANOLASTACCESSCONVERSION"];</code>
+     */
+    public Builder mergePIANOLASTACCESSCONVERSION(com.tcn.cloud.api.api.commons.integrations.ExecutePianoLastAccessConversion value) {
+      if (pIANOLASTACCESSCONVERSIONBuilder_ == null) {
+        if (valueCase_ == 3606 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecutePianoLastAccessConversion.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecutePianoLastAccessConversion.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecutePianoLastAccessConversion) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 3606) {
+          pIANOLASTACCESSCONVERSIONBuilder_.mergeFrom(value);
+        } else {
+          pIANOLASTACCESSCONVERSIONBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 3606;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePianoLastAccessConversion PIANO_LASTACCESS_CONVERSION = 3606 [json_name = "PIANOLASTACCESSCONVERSION"];</code>
+     */
+    public Builder clearPIANOLASTACCESSCONVERSION() {
+      if (pIANOLASTACCESSCONVERSIONBuilder_ == null) {
+        if (valueCase_ == 3606) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 3606) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        pIANOLASTACCESSCONVERSIONBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePianoLastAccessConversion PIANO_LASTACCESS_CONVERSION = 3606 [json_name = "PIANOLASTACCESSCONVERSION"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecutePianoLastAccessConversion.Builder getPIANOLASTACCESSCONVERSIONBuilder() {
+      return getPIANOLASTACCESSCONVERSIONFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePianoLastAccessConversion PIANO_LASTACCESS_CONVERSION = 3606 [json_name = "PIANOLASTACCESSCONVERSION"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecutePianoLastAccessConversionOrBuilder getPIANOLASTACCESSCONVERSIONOrBuilder() {
+      if ((valueCase_ == 3606) && (pIANOLASTACCESSCONVERSIONBuilder_ != null)) {
+        return pIANOLASTACCESSCONVERSIONBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 3606) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecutePianoLastAccessConversion) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecutePianoLastAccessConversion.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePianoLastAccessConversion PIANO_LASTACCESS_CONVERSION = 3606 [json_name = "PIANOLASTACCESSCONVERSION"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecutePianoLastAccessConversion, com.tcn.cloud.api.api.commons.integrations.ExecutePianoLastAccessConversion.Builder, com.tcn.cloud.api.api.commons.integrations.ExecutePianoLastAccessConversionOrBuilder> 
+        getPIANOLASTACCESSCONVERSIONFieldBuilder() {
+      if (pIANOLASTACCESSCONVERSIONBuilder_ == null) {
+        if (!(valueCase_ == 3606)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecutePianoLastAccessConversion.getDefaultInstance();
+        }
+        pIANOLASTACCESSCONVERSIONBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecutePianoLastAccessConversion, com.tcn.cloud.api.api.commons.integrations.ExecutePianoLastAccessConversion.Builder, com.tcn.cloud.api.api.commons.integrations.ExecutePianoLastAccessConversionOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecutePianoLastAccessConversion) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 3606;
+      onChanged();
+      return pIANOLASTACCESSCONVERSIONBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetToken, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetToken.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetTokenOrBuilder> epicGetTokenBuilder_;
     /**
      * <code>.api.commons.integrations.ExecuteEpicGetToken epic_get_token = 3701 [json_name = "epicGetToken"];</code>
@@ -40749,6 +41647,148 @@ private static final long serialVersionUID = 0L;
       valueCase_ = 4001;
       onChanged();
       return navigaCreatePaymentBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCard, com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCard.Builder, com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCardOrBuilder> paynsecondsTokenizeCardBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecutePaynsecondsTokenizeCard paynseconds_tokenize_card = 4101 [json_name = "paynsecondsTokenizeCard"];</code>
+     * @return Whether the paynsecondsTokenizeCard field is set.
+     */
+    @java.lang.Override
+    public boolean hasPaynsecondsTokenizeCard() {
+      return valueCase_ == 4101;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePaynsecondsTokenizeCard paynseconds_tokenize_card = 4101 [json_name = "paynsecondsTokenizeCard"];</code>
+     * @return The paynsecondsTokenizeCard.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCard getPaynsecondsTokenizeCard() {
+      if (paynsecondsTokenizeCardBuilder_ == null) {
+        if (valueCase_ == 4101) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCard) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCard.getDefaultInstance();
+      } else {
+        if (valueCase_ == 4101) {
+          return paynsecondsTokenizeCardBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCard.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePaynsecondsTokenizeCard paynseconds_tokenize_card = 4101 [json_name = "paynsecondsTokenizeCard"];</code>
+     */
+    public Builder setPaynsecondsTokenizeCard(com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCard value) {
+      if (paynsecondsTokenizeCardBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        paynsecondsTokenizeCardBuilder_.setMessage(value);
+      }
+      valueCase_ = 4101;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePaynsecondsTokenizeCard paynseconds_tokenize_card = 4101 [json_name = "paynsecondsTokenizeCard"];</code>
+     */
+    public Builder setPaynsecondsTokenizeCard(
+        com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCard.Builder builderForValue) {
+      if (paynsecondsTokenizeCardBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        paynsecondsTokenizeCardBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 4101;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePaynsecondsTokenizeCard paynseconds_tokenize_card = 4101 [json_name = "paynsecondsTokenizeCard"];</code>
+     */
+    public Builder mergePaynsecondsTokenizeCard(com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCard value) {
+      if (paynsecondsTokenizeCardBuilder_ == null) {
+        if (valueCase_ == 4101 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCard.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCard.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCard) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 4101) {
+          paynsecondsTokenizeCardBuilder_.mergeFrom(value);
+        } else {
+          paynsecondsTokenizeCardBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 4101;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePaynsecondsTokenizeCard paynseconds_tokenize_card = 4101 [json_name = "paynsecondsTokenizeCard"];</code>
+     */
+    public Builder clearPaynsecondsTokenizeCard() {
+      if (paynsecondsTokenizeCardBuilder_ == null) {
+        if (valueCase_ == 4101) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 4101) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        paynsecondsTokenizeCardBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePaynsecondsTokenizeCard paynseconds_tokenize_card = 4101 [json_name = "paynsecondsTokenizeCard"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCard.Builder getPaynsecondsTokenizeCardBuilder() {
+      return getPaynsecondsTokenizeCardFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePaynsecondsTokenizeCard paynseconds_tokenize_card = 4101 [json_name = "paynsecondsTokenizeCard"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCardOrBuilder getPaynsecondsTokenizeCardOrBuilder() {
+      if ((valueCase_ == 4101) && (paynsecondsTokenizeCardBuilder_ != null)) {
+        return paynsecondsTokenizeCardBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 4101) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCard) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCard.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePaynsecondsTokenizeCard paynseconds_tokenize_card = 4101 [json_name = "paynsecondsTokenizeCard"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCard, com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCard.Builder, com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCardOrBuilder> 
+        getPaynsecondsTokenizeCardFieldBuilder() {
+      if (paynsecondsTokenizeCardBuilder_ == null) {
+        if (!(valueCase_ == 4101)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCard.getDefaultInstance();
+        }
+        paynsecondsTokenizeCardBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCard, com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCard.Builder, com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCardOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCard) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 4101;
+      onChanged();
+      return paynsecondsTokenizeCardBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

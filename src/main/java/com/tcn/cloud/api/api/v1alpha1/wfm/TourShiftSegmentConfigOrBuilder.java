@@ -12,7 +12,7 @@ public interface TourShiftSegmentConfigOrBuilder extends
    * The unique ID of the tour shift segment config.
    * </pre>
    *
-   * <code>int64 tour_shift_segment_config_sid = 1 [json_name = "tourShiftSegmentConfigSid"];</code>
+   * <code>int64 tour_shift_segment_config_sid = 1 [json_name = "tourShiftSegmentConfigSid", jstype = JS_STRING];</code>
    * @return The tourShiftSegmentConfigSid.
    */
   long getTourShiftSegmentConfigSid();
@@ -22,7 +22,7 @@ public interface TourShiftSegmentConfigOrBuilder extends
    * The ID of the parent tour shift instance config
    * </pre>
    *
-   * <code>int64 tour_shift_instance_config_sid = 2 [json_name = "tourShiftInstanceConfigSid"];</code>
+   * <code>int64 tour_shift_instance_config_sid = 2 [json_name = "tourShiftInstanceConfigSid", jstype = JS_STRING];</code>
    * @return The tourShiftInstanceConfigSid.
    */
   long getTourShiftInstanceConfigSid();

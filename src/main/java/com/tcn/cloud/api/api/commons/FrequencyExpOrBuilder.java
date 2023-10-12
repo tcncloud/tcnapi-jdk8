@@ -95,4 +95,19 @@ public interface FrequencyExpOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.EntityExpOrBuilder getCheckingEntitiesOrBuilder(
       int index);
+
+  /**
+   * <code>.api.commons.MatchingMod matching = 7 [json_name = "matching"];</code>
+   * @return Whether the matching field is set.
+   */
+  boolean hasMatching();
+  /**
+   * <code>.api.commons.MatchingMod matching = 7 [json_name = "matching"];</code>
+   * @return The matching.
+   */
+  com.tcn.cloud.api.api.commons.MatchingMod getMatching();
+  /**
+   * <code>.api.commons.MatchingMod matching = 7 [json_name = "matching"];</code>
+   */
+  com.tcn.cloud.api.api.commons.MatchingModOrBuilder getMatchingOrBuilder();
 }

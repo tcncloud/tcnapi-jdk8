@@ -51,7 +51,7 @@ private static final long serialVersionUID = 0L;
    * ID of the Tour Agent Collections to get the &#64;wfm_agent_pairings for.
    * </pre>
    *
-   * <code>repeated int64 tour_agent_collection_sids = 1 [json_name = "tourAgentCollectionSids"];</code>
+   * <code>repeated int64 tour_agent_collection_sids = 1 [json_name = "tourAgentCollectionSids", jstype = JS_STRING];</code>
    * @return A list containing the tourAgentCollectionSids.
    */
   @java.lang.Override
@@ -64,7 +64,7 @@ private static final long serialVersionUID = 0L;
    * ID of the Tour Agent Collections to get the &#64;wfm_agent_pairings for.
    * </pre>
    *
-   * <code>repeated int64 tour_agent_collection_sids = 1 [json_name = "tourAgentCollectionSids"];</code>
+   * <code>repeated int64 tour_agent_collection_sids = 1 [json_name = "tourAgentCollectionSids", jstype = JS_STRING];</code>
    * @return The count of tourAgentCollectionSids.
    */
   public int getTourAgentCollectionSidsCount() {
@@ -75,7 +75,7 @@ private static final long serialVersionUID = 0L;
    * ID of the Tour Agent Collections to get the &#64;wfm_agent_pairings for.
    * </pre>
    *
-   * <code>repeated int64 tour_agent_collection_sids = 1 [json_name = "tourAgentCollectionSids"];</code>
+   * <code>repeated int64 tour_agent_collection_sids = 1 [json_name = "tourAgentCollectionSids", jstype = JS_STRING];</code>
    * @param index The index of the element to return.
    * @return The tourAgentCollectionSids at the given index.
    */
@@ -466,7 +466,7 @@ private static final long serialVersionUID = 0L;
      * ID of the Tour Agent Collections to get the &#64;wfm_agent_pairings for.
      * </pre>
      *
-     * <code>repeated int64 tour_agent_collection_sids = 1 [json_name = "tourAgentCollectionSids"];</code>
+     * <code>repeated int64 tour_agent_collection_sids = 1 [json_name = "tourAgentCollectionSids", jstype = JS_STRING];</code>
      * @return A list containing the tourAgentCollectionSids.
      */
     public java.util.List<java.lang.Long>
@@ -479,7 +479,7 @@ private static final long serialVersionUID = 0L;
      * ID of the Tour Agent Collections to get the &#64;wfm_agent_pairings for.
      * </pre>
      *
-     * <code>repeated int64 tour_agent_collection_sids = 1 [json_name = "tourAgentCollectionSids"];</code>
+     * <code>repeated int64 tour_agent_collection_sids = 1 [json_name = "tourAgentCollectionSids", jstype = JS_STRING];</code>
      * @return The count of tourAgentCollectionSids.
      */
     public int getTourAgentCollectionSidsCount() {
@@ -490,7 +490,7 @@ private static final long serialVersionUID = 0L;
      * ID of the Tour Agent Collections to get the &#64;wfm_agent_pairings for.
      * </pre>
      *
-     * <code>repeated int64 tour_agent_collection_sids = 1 [json_name = "tourAgentCollectionSids"];</code>
+     * <code>repeated int64 tour_agent_collection_sids = 1 [json_name = "tourAgentCollectionSids", jstype = JS_STRING];</code>
      * @param index The index of the element to return.
      * @return The tourAgentCollectionSids at the given index.
      */
@@ -502,7 +502,7 @@ private static final long serialVersionUID = 0L;
      * ID of the Tour Agent Collections to get the &#64;wfm_agent_pairings for.
      * </pre>
      *
-     * <code>repeated int64 tour_agent_collection_sids = 1 [json_name = "tourAgentCollectionSids"];</code>
+     * <code>repeated int64 tour_agent_collection_sids = 1 [json_name = "tourAgentCollectionSids", jstype = JS_STRING];</code>
      * @param index The index to set the value at.
      * @param value The tourAgentCollectionSids to set.
      * @return This builder for chaining.
@@ -520,7 +520,7 @@ private static final long serialVersionUID = 0L;
      * ID of the Tour Agent Collections to get the &#64;wfm_agent_pairings for.
      * </pre>
      *
-     * <code>repeated int64 tour_agent_collection_sids = 1 [json_name = "tourAgentCollectionSids"];</code>
+     * <code>repeated int64 tour_agent_collection_sids = 1 [json_name = "tourAgentCollectionSids", jstype = JS_STRING];</code>
      * @param value The tourAgentCollectionSids to add.
      * @return This builder for chaining.
      */
@@ -536,7 +536,7 @@ private static final long serialVersionUID = 0L;
      * ID of the Tour Agent Collections to get the &#64;wfm_agent_pairings for.
      * </pre>
      *
-     * <code>repeated int64 tour_agent_collection_sids = 1 [json_name = "tourAgentCollectionSids"];</code>
+     * <code>repeated int64 tour_agent_collection_sids = 1 [json_name = "tourAgentCollectionSids", jstype = JS_STRING];</code>
      * @param values The tourAgentCollectionSids to add.
      * @return This builder for chaining.
      */
@@ -553,7 +553,7 @@ private static final long serialVersionUID = 0L;
      * ID of the Tour Agent Collections to get the &#64;wfm_agent_pairings for.
      * </pre>
      *
-     * <code>repeated int64 tour_agent_collection_sids = 1 [json_name = "tourAgentCollectionSids"];</code>
+     * <code>repeated int64 tour_agent_collection_sids = 1 [json_name = "tourAgentCollectionSids", jstype = JS_STRING];</code>
      * @return This builder for chaining.
      */
     public Builder clearTourAgentCollectionSids() {

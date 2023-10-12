@@ -188,6 +188,32 @@ private static final long serialVersionUID = 0L;
     return checkingEntities_.get(index);
   }
 
+  public static final int MATCHING_FIELD_NUMBER = 7;
+  private com.tcn.cloud.api.api.commons.MatchingMod matching_;
+  /**
+   * <code>.api.commons.MatchingMod matching = 7 [json_name = "matching"];</code>
+   * @return Whether the matching field is set.
+   */
+  @java.lang.Override
+  public boolean hasMatching() {
+    return matching_ != null;
+  }
+  /**
+   * <code>.api.commons.MatchingMod matching = 7 [json_name = "matching"];</code>
+   * @return The matching.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.MatchingMod getMatching() {
+    return matching_ == null ? com.tcn.cloud.api.api.commons.MatchingMod.getDefaultInstance() : matching_;
+  }
+  /**
+   * <code>.api.commons.MatchingMod matching = 7 [json_name = "matching"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.MatchingModOrBuilder getMatchingOrBuilder() {
+    return matching_ == null ? com.tcn.cloud.api.api.commons.MatchingMod.getDefaultInstance() : matching_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -219,6 +245,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < checkingEntities_.size(); i++) {
       output.writeMessage(6, checkingEntities_.get(i));
+    }
+    if (matching_ != null) {
+      output.writeMessage(7, getMatching());
     }
     getUnknownFields().writeTo(output);
   }
@@ -252,6 +281,10 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < checkingEntities_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, checkingEntities_.get(i));
+    }
+    if (matching_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(7, getMatching());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -289,6 +322,11 @@ private static final long serialVersionUID = 0L;
     }
     if (!getCheckingEntitiesList()
         .equals(other.getCheckingEntitiesList())) return false;
+    if (hasMatching() != other.hasMatching()) return false;
+    if (hasMatching()) {
+      if (!getMatching()
+          .equals(other.getMatching())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -321,6 +359,10 @@ private static final long serialVersionUID = 0L;
     if (getCheckingEntitiesCount() > 0) {
       hash = (37 * hash) + CHECKING_ENTITIES_FIELD_NUMBER;
       hash = (53 * hash) + getCheckingEntitiesList().hashCode();
+    }
+    if (hasMatching()) {
+      hash = (37 * hash) + MATCHING_FIELD_NUMBER;
+      hash = (53 * hash) + getMatching().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -477,6 +519,11 @@ private static final long serialVersionUID = 0L;
         checkingEntitiesBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000020);
+      matching_ = null;
+      if (matchingBuilder_ != null) {
+        matchingBuilder_.dispose();
+        matchingBuilder_ = null;
+      }
       return this;
     }
 
@@ -543,6 +590,11 @@ private static final long serialVersionUID = 0L;
         result.fieldNames_ = fieldNamesBuilder_ == null
             ? fieldNames_
             : fieldNamesBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.matching_ = matchingBuilder_ == null
+            ? matching_
+            : matchingBuilder_.build();
       }
     }
 
@@ -631,6 +683,9 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (other.hasMatching()) {
+        mergeMatching(other.getMatching());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -701,6 +756,13 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 50
+            case 58: {
+              input.readMessage(
+                  getMatchingFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 58
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1401,6 +1463,125 @@ private static final long serialVersionUID = 0L;
         checkingEntities_ = null;
       }
       return checkingEntitiesBuilder_;
+    }
+
+    private com.tcn.cloud.api.api.commons.MatchingMod matching_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.MatchingMod, com.tcn.cloud.api.api.commons.MatchingMod.Builder, com.tcn.cloud.api.api.commons.MatchingModOrBuilder> matchingBuilder_;
+    /**
+     * <code>.api.commons.MatchingMod matching = 7 [json_name = "matching"];</code>
+     * @return Whether the matching field is set.
+     */
+    public boolean hasMatching() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <code>.api.commons.MatchingMod matching = 7 [json_name = "matching"];</code>
+     * @return The matching.
+     */
+    public com.tcn.cloud.api.api.commons.MatchingMod getMatching() {
+      if (matchingBuilder_ == null) {
+        return matching_ == null ? com.tcn.cloud.api.api.commons.MatchingMod.getDefaultInstance() : matching_;
+      } else {
+        return matchingBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.api.commons.MatchingMod matching = 7 [json_name = "matching"];</code>
+     */
+    public Builder setMatching(com.tcn.cloud.api.api.commons.MatchingMod value) {
+      if (matchingBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        matching_ = value;
+      } else {
+        matchingBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.MatchingMod matching = 7 [json_name = "matching"];</code>
+     */
+    public Builder setMatching(
+        com.tcn.cloud.api.api.commons.MatchingMod.Builder builderForValue) {
+      if (matchingBuilder_ == null) {
+        matching_ = builderForValue.build();
+      } else {
+        matchingBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.MatchingMod matching = 7 [json_name = "matching"];</code>
+     */
+    public Builder mergeMatching(com.tcn.cloud.api.api.commons.MatchingMod value) {
+      if (matchingBuilder_ == null) {
+        if (((bitField0_ & 0x00000040) != 0) &&
+          matching_ != null &&
+          matching_ != com.tcn.cloud.api.api.commons.MatchingMod.getDefaultInstance()) {
+          getMatchingBuilder().mergeFrom(value);
+        } else {
+          matching_ = value;
+        }
+      } else {
+        matchingBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.MatchingMod matching = 7 [json_name = "matching"];</code>
+     */
+    public Builder clearMatching() {
+      bitField0_ = (bitField0_ & ~0x00000040);
+      matching_ = null;
+      if (matchingBuilder_ != null) {
+        matchingBuilder_.dispose();
+        matchingBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.MatchingMod matching = 7 [json_name = "matching"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.MatchingMod.Builder getMatchingBuilder() {
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return getMatchingFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.MatchingMod matching = 7 [json_name = "matching"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.MatchingModOrBuilder getMatchingOrBuilder() {
+      if (matchingBuilder_ != null) {
+        return matchingBuilder_.getMessageOrBuilder();
+      } else {
+        return matching_ == null ?
+            com.tcn.cloud.api.api.commons.MatchingMod.getDefaultInstance() : matching_;
+      }
+    }
+    /**
+     * <code>.api.commons.MatchingMod matching = 7 [json_name = "matching"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.MatchingMod, com.tcn.cloud.api.api.commons.MatchingMod.Builder, com.tcn.cloud.api.api.commons.MatchingModOrBuilder> 
+        getMatchingFieldBuilder() {
+      if (matchingBuilder_ == null) {
+        matchingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.MatchingMod, com.tcn.cloud.api.api.commons.MatchingMod.Builder, com.tcn.cloud.api.api.commons.MatchingModOrBuilder>(
+                getMatching(),
+                getParentForChildren(),
+                isClean());
+        matching_ = null;
+      }
+      return matchingBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

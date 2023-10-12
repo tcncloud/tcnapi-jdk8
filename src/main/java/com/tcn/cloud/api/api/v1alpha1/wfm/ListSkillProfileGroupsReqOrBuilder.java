@@ -13,7 +13,7 @@ public interface ListSkillProfileGroupsReqOrBuilder extends
    * If left empty it will get all the skill profile groups for the org
    * </pre>
    *
-   * <code>repeated int64 skill_profile_group_sids = 1 [json_name = "skillProfileGroupSids"];</code>
+   * <code>repeated int64 skill_profile_group_sids = 1 [json_name = "skillProfileGroupSids", jstype = JS_STRING];</code>
    * @return A list containing the skillProfileGroupSids.
    */
   java.util.List<java.lang.Long> getSkillProfileGroupSidsList();
@@ -23,7 +23,7 @@ public interface ListSkillProfileGroupsReqOrBuilder extends
    * If left empty it will get all the skill profile groups for the org
    * </pre>
    *
-   * <code>repeated int64 skill_profile_group_sids = 1 [json_name = "skillProfileGroupSids"];</code>
+   * <code>repeated int64 skill_profile_group_sids = 1 [json_name = "skillProfileGroupSids", jstype = JS_STRING];</code>
    * @return The count of skillProfileGroupSids.
    */
   int getSkillProfileGroupSidsCount();
@@ -33,9 +33,19 @@ public interface ListSkillProfileGroupsReqOrBuilder extends
    * If left empty it will get all the skill profile groups for the org
    * </pre>
    *
-   * <code>repeated int64 skill_profile_group_sids = 1 [json_name = "skillProfileGroupSids"];</code>
+   * <code>repeated int64 skill_profile_group_sids = 1 [json_name = "skillProfileGroupSids", jstype = JS_STRING];</code>
    * @param index The index of the element to return.
    * @return The skillProfileGroupSids at the given index.
    */
   long getSkillProfileGroupSids(int index);
+
+  /**
+   * <pre>
+   * Indicates whether inactive profile groups will be included in the result.
+   * </pre>
+   *
+   * <code>bool include_inactive = 2 [json_name = "includeInactive"];</code>
+   * @return The includeInactive.
+   */
+  boolean getIncludeInactive();
 }

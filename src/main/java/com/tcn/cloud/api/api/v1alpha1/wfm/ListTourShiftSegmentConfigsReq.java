@@ -51,7 +51,7 @@ private static final long serialVersionUID = 0L;
    * IDs of the Tour Shift Instance Configs to get the child Tour Shift Segment Configs for.
    * </pre>
    *
-   * <code>repeated int64 tour_shift_instance_config_sids = 1 [json_name = "tourShiftInstanceConfigSids"];</code>
+   * <code>repeated int64 tour_shift_instance_config_sids = 1 [json_name = "tourShiftInstanceConfigSids", jstype = JS_STRING];</code>
    * @return A list containing the tourShiftInstanceConfigSids.
    */
   @java.lang.Override
@@ -64,7 +64,7 @@ private static final long serialVersionUID = 0L;
    * IDs of the Tour Shift Instance Configs to get the child Tour Shift Segment Configs for.
    * </pre>
    *
-   * <code>repeated int64 tour_shift_instance_config_sids = 1 [json_name = "tourShiftInstanceConfigSids"];</code>
+   * <code>repeated int64 tour_shift_instance_config_sids = 1 [json_name = "tourShiftInstanceConfigSids", jstype = JS_STRING];</code>
    * @return The count of tourShiftInstanceConfigSids.
    */
   public int getTourShiftInstanceConfigSidsCount() {
@@ -75,7 +75,7 @@ private static final long serialVersionUID = 0L;
    * IDs of the Tour Shift Instance Configs to get the child Tour Shift Segment Configs for.
    * </pre>
    *
-   * <code>repeated int64 tour_shift_instance_config_sids = 1 [json_name = "tourShiftInstanceConfigSids"];</code>
+   * <code>repeated int64 tour_shift_instance_config_sids = 1 [json_name = "tourShiftInstanceConfigSids", jstype = JS_STRING];</code>
    * @param index The index of the element to return.
    * @return The tourShiftInstanceConfigSids at the given index.
    */
@@ -466,7 +466,7 @@ private static final long serialVersionUID = 0L;
      * IDs of the Tour Shift Instance Configs to get the child Tour Shift Segment Configs for.
      * </pre>
      *
-     * <code>repeated int64 tour_shift_instance_config_sids = 1 [json_name = "tourShiftInstanceConfigSids"];</code>
+     * <code>repeated int64 tour_shift_instance_config_sids = 1 [json_name = "tourShiftInstanceConfigSids", jstype = JS_STRING];</code>
      * @return A list containing the tourShiftInstanceConfigSids.
      */
     public java.util.List<java.lang.Long>
@@ -479,7 +479,7 @@ private static final long serialVersionUID = 0L;
      * IDs of the Tour Shift Instance Configs to get the child Tour Shift Segment Configs for.
      * </pre>
      *
-     * <code>repeated int64 tour_shift_instance_config_sids = 1 [json_name = "tourShiftInstanceConfigSids"];</code>
+     * <code>repeated int64 tour_shift_instance_config_sids = 1 [json_name = "tourShiftInstanceConfigSids", jstype = JS_STRING];</code>
      * @return The count of tourShiftInstanceConfigSids.
      */
     public int getTourShiftInstanceConfigSidsCount() {
@@ -490,7 +490,7 @@ private static final long serialVersionUID = 0L;
      * IDs of the Tour Shift Instance Configs to get the child Tour Shift Segment Configs for.
      * </pre>
      *
-     * <code>repeated int64 tour_shift_instance_config_sids = 1 [json_name = "tourShiftInstanceConfigSids"];</code>
+     * <code>repeated int64 tour_shift_instance_config_sids = 1 [json_name = "tourShiftInstanceConfigSids", jstype = JS_STRING];</code>
      * @param index The index of the element to return.
      * @return The tourShiftInstanceConfigSids at the given index.
      */
@@ -502,7 +502,7 @@ private static final long serialVersionUID = 0L;
      * IDs of the Tour Shift Instance Configs to get the child Tour Shift Segment Configs for.
      * </pre>
      *
-     * <code>repeated int64 tour_shift_instance_config_sids = 1 [json_name = "tourShiftInstanceConfigSids"];</code>
+     * <code>repeated int64 tour_shift_instance_config_sids = 1 [json_name = "tourShiftInstanceConfigSids", jstype = JS_STRING];</code>
      * @param index The index to set the value at.
      * @param value The tourShiftInstanceConfigSids to set.
      * @return This builder for chaining.
@@ -520,7 +520,7 @@ private static final long serialVersionUID = 0L;
      * IDs of the Tour Shift Instance Configs to get the child Tour Shift Segment Configs for.
      * </pre>
      *
-     * <code>repeated int64 tour_shift_instance_config_sids = 1 [json_name = "tourShiftInstanceConfigSids"];</code>
+     * <code>repeated int64 tour_shift_instance_config_sids = 1 [json_name = "tourShiftInstanceConfigSids", jstype = JS_STRING];</code>
      * @param value The tourShiftInstanceConfigSids to add.
      * @return This builder for chaining.
      */
@@ -536,7 +536,7 @@ private static final long serialVersionUID = 0L;
      * IDs of the Tour Shift Instance Configs to get the child Tour Shift Segment Configs for.
      * </pre>
      *
-     * <code>repeated int64 tour_shift_instance_config_sids = 1 [json_name = "tourShiftInstanceConfigSids"];</code>
+     * <code>repeated int64 tour_shift_instance_config_sids = 1 [json_name = "tourShiftInstanceConfigSids", jstype = JS_STRING];</code>
      * @param values The tourShiftInstanceConfigSids to add.
      * @return This builder for chaining.
      */
@@ -553,7 +553,7 @@ private static final long serialVersionUID = 0L;
      * IDs of the Tour Shift Instance Configs to get the child Tour Shift Segment Configs for.
      * </pre>
      *
-     * <code>repeated int64 tour_shift_instance_config_sids = 1 [json_name = "tourShiftInstanceConfigSids"];</code>
+     * <code>repeated int64 tour_shift_instance_config_sids = 1 [json_name = "tourShiftInstanceConfigSids", jstype = JS_STRING];</code>
      * @return This builder for chaining.
      */
     public Builder clearTourShiftInstanceConfigSids() {
