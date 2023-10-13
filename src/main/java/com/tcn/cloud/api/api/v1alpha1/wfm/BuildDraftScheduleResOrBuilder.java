@@ -80,7 +80,7 @@ public interface BuildDraftScheduleResOrBuilder extends
 
   /**
    * <pre>
-   * The scheduling resulting metric for the built schedule range..
+   * The scheduling resulting metric for the built schedule range.
    * </pre>
    *
    * <code>.api.commons.SchedulingResultMetric scheduling_resulting_metric = 3 [json_name = "schedulingResultingMetric"];</code>
@@ -89,7 +89,7 @@ public interface BuildDraftScheduleResOrBuilder extends
   boolean hasSchedulingResultingMetric();
   /**
    * <pre>
-   * The scheduling resulting metric for the built schedule range..
+   * The scheduling resulting metric for the built schedule range.
    * </pre>
    *
    * <code>.api.commons.SchedulingResultMetric scheduling_resulting_metric = 3 [json_name = "schedulingResultingMetric"];</code>
@@ -98,7 +98,7 @@ public interface BuildDraftScheduleResOrBuilder extends
   com.tcn.cloud.api.api.commons.SchedulingResultMetric getSchedulingResultingMetric();
   /**
    * <pre>
-   * The scheduling resulting metric for the built schedule range..
+   * The scheduling resulting metric for the built schedule range.
    * </pre>
    *
    * <code>.api.commons.SchedulingResultMetric scheduling_resulting_metric = 3 [json_name = "schedulingResultingMetric"];</code>

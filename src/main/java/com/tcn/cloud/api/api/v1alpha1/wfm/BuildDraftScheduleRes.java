@@ -146,7 +146,7 @@ private static final long serialVersionUID = 0L;
   private com.tcn.cloud.api.api.commons.SchedulingResultMetric schedulingResultingMetric_;
   /**
    * <pre>
-   * The scheduling resulting metric for the built schedule range..
+   * The scheduling resulting metric for the built schedule range.
    * </pre>
    *
    * <code>.api.commons.SchedulingResultMetric scheduling_resulting_metric = 3 [json_name = "schedulingResultingMetric"];</code>
@@ -158,7 +158,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The scheduling resulting metric for the built schedule range..
+   * The scheduling resulting metric for the built schedule range.
    * </pre>
    *
    * <code>.api.commons.SchedulingResultMetric scheduling_resulting_metric = 3 [json_name = "schedulingResultingMetric"];</code>
@@ -170,7 +170,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The scheduling resulting metric for the built schedule range..
+   * The scheduling resulting metric for the built schedule range.
    * </pre>
    *
    * <code>.api.commons.SchedulingResultMetric scheduling_resulting_metric = 3 [json_name = "schedulingResultingMetric"];</code>
@@ -1102,7 +1102,7 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.SchedulingResultMetric, com.tcn.cloud.api.api.commons.SchedulingResultMetric.Builder, com.tcn.cloud.api.api.commons.SchedulingResultMetricOrBuilder> schedulingResultingMetricBuilder_;
     /**
      * <pre>
-     * The scheduling resulting metric for the built schedule range..
+     * The scheduling resulting metric for the built schedule range.
      * </pre>
      *
      * <code>.api.commons.SchedulingResultMetric scheduling_resulting_metric = 3 [json_name = "schedulingResultingMetric"];</code>
@@ -1113,7 +1113,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The scheduling resulting metric for the built schedule range..
+     * The scheduling resulting metric for the built schedule range.
      * </pre>
      *
      * <code>.api.commons.SchedulingResultMetric scheduling_resulting_metric = 3 [json_name = "schedulingResultingMetric"];</code>
@@ -1128,7 +1128,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The scheduling resulting metric for the built schedule range..
+     * The scheduling resulting metric for the built schedule range.
      * </pre>
      *
      * <code>.api.commons.SchedulingResultMetric scheduling_resulting_metric = 3 [json_name = "schedulingResultingMetric"];</code>
@@ -1148,7 +1148,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The scheduling resulting metric for the built schedule range..
+     * The scheduling resulting metric for the built schedule range.
      * </pre>
      *
      * <code>.api.commons.SchedulingResultMetric scheduling_resulting_metric = 3 [json_name = "schedulingResultingMetric"];</code>
@@ -1166,7 +1166,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The scheduling resulting metric for the built schedule range..
+     * The scheduling resulting metric for the built schedule range.
      * </pre>
      *
      * <code>.api.commons.SchedulingResultMetric scheduling_resulting_metric = 3 [json_name = "schedulingResultingMetric"];</code>
@@ -1189,7 +1189,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The scheduling resulting metric for the built schedule range..
+     * The scheduling resulting metric for the built schedule range.
      * </pre>
      *
      * <code>.api.commons.SchedulingResultMetric scheduling_resulting_metric = 3 [json_name = "schedulingResultingMetric"];</code>
@@ -1206,7 +1206,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The scheduling resulting metric for the built schedule range..
+     * The scheduling resulting metric for the built schedule range.
      * </pre>
      *
      * <code>.api.commons.SchedulingResultMetric scheduling_resulting_metric = 3 [json_name = "schedulingResultingMetric"];</code>
@@ -1218,7 +1218,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The scheduling resulting metric for the built schedule range..
+     * The scheduling resulting metric for the built schedule range.
      * </pre>
      *
      * <code>.api.commons.SchedulingResultMetric scheduling_resulting_metric = 3 [json_name = "schedulingResultingMetric"];</code>
@@ -1233,7 +1233,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The scheduling resulting metric for the built schedule range..
+     * The scheduling resulting metric for the built schedule range.
      * </pre>
      *
      * <code>.api.commons.SchedulingResultMetric scheduling_resulting_metric = 3 [json_name = "schedulingResultingMetric"];</code>
