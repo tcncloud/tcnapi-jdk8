@@ -128,6 +128,54 @@ public enum ConfigEntityType
    * <code>SCHEDULE_SCENARIO = 14;</code>
    */
   SCHEDULE_SCENARIO(14),
+  /**
+   * <pre>
+   * entity is a skill.
+   * </pre>
+   *
+   * <code>SKILL = 15;</code>
+   */
+  SKILL(15),
+  /**
+   * <pre>
+   * entity is a tour pattern.
+   * </pre>
+   *
+   * <code>TOUR_PATTERN = 16;</code>
+   */
+  TOUR_PATTERN(16),
+  /**
+   * <pre>
+   * entity is a tour week pattern.
+   * </pre>
+   *
+   * <code>TOUR_WEEK_PATTERN = 17;</code>
+   */
+  TOUR_WEEK_PATTERN(17),
+  /**
+   * <pre>
+   * entity is a tour shift instance config.
+   * </pre>
+   *
+   * <code>TOUR_SHIFT_INSTANCE_CONFIG = 18;</code>
+   */
+  TOUR_SHIFT_INSTANCE_CONFIG(18),
+  /**
+   * <pre>
+   * entity is a tour shift segment config.
+   * </pre>
+   *
+   * <code>TOUR_SHIFT_SEGMENT_CONFIG = 19;</code>
+   */
+  TOUR_SHIFT_SEGMENT_CONFIG(19),
+  /**
+   * <pre>
+   * entity is a tour agent collection.
+   * </pre>
+   *
+   * <code>TOUR_AGENT_COLLECTION = 20;</code>
+   */
+  TOUR_AGENT_COLLECTION(20),
   UNRECOGNIZED(-1),
   ;
 
@@ -251,6 +299,54 @@ public enum ConfigEntityType
    * <code>SCHEDULE_SCENARIO = 14;</code>
    */
   public static final int SCHEDULE_SCENARIO_VALUE = 14;
+  /**
+   * <pre>
+   * entity is a skill.
+   * </pre>
+   *
+   * <code>SKILL = 15;</code>
+   */
+  public static final int SKILL_VALUE = 15;
+  /**
+   * <pre>
+   * entity is a tour pattern.
+   * </pre>
+   *
+   * <code>TOUR_PATTERN = 16;</code>
+   */
+  public static final int TOUR_PATTERN_VALUE = 16;
+  /**
+   * <pre>
+   * entity is a tour week pattern.
+   * </pre>
+   *
+   * <code>TOUR_WEEK_PATTERN = 17;</code>
+   */
+  public static final int TOUR_WEEK_PATTERN_VALUE = 17;
+  /**
+   * <pre>
+   * entity is a tour shift instance config.
+   * </pre>
+   *
+   * <code>TOUR_SHIFT_INSTANCE_CONFIG = 18;</code>
+   */
+  public static final int TOUR_SHIFT_INSTANCE_CONFIG_VALUE = 18;
+  /**
+   * <pre>
+   * entity is a tour shift segment config.
+   * </pre>
+   *
+   * <code>TOUR_SHIFT_SEGMENT_CONFIG = 19;</code>
+   */
+  public static final int TOUR_SHIFT_SEGMENT_CONFIG_VALUE = 19;
+  /**
+   * <pre>
+   * entity is a tour agent collection.
+   * </pre>
+   *
+   * <code>TOUR_AGENT_COLLECTION = 20;</code>
+   */
+  public static final int TOUR_AGENT_COLLECTION_VALUE = 20;
 
 
   public final int getNumber() {
@@ -292,6 +388,12 @@ public enum ConfigEntityType
       case 12: return SCHEDULING_ACTIVITY;
       case 13: return SKILL_PROFICIENCY;
       case 14: return SCHEDULE_SCENARIO;
+      case 15: return SKILL;
+      case 16: return TOUR_PATTERN;
+      case 17: return TOUR_WEEK_PATTERN;
+      case 18: return TOUR_SHIFT_INSTANCE_CONFIG;
+      case 19: return TOUR_SHIFT_SEGMENT_CONFIG;
+      case 20: return TOUR_AGENT_COLLECTION;
       default: return null;
     }
   }
