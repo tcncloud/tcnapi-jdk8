@@ -25,6 +25,7 @@ private static final long serialVersionUID = 0L;
     description_ = "";
     title_ = "";
     status_ = 0;
+    origin_ = 0;
   }
 
   @java.lang.Override
@@ -353,6 +354,32 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.tcn.cloud.api.api.commons.LearningOpportunityStatus.UNRECOGNIZED : result;
   }
 
+  public static final int ORIGIN_FIELD_NUMBER = 14;
+  private int origin_ = 0;
+  /**
+   * <pre>
+   * Origin (ie. opportunity created from).
+   * </pre>
+   *
+   * <code>.api.commons.LearningOpportunityOrigin origin = 14 [json_name = "origin"];</code>
+   * @return The enum numeric value on the wire for origin.
+   */
+  @java.lang.Override public int getOriginValue() {
+    return origin_;
+  }
+  /**
+   * <pre>
+   * Origin (ie. opportunity created from).
+   * </pre>
+   *
+   * <code>.api.commons.LearningOpportunityOrigin origin = 14 [json_name = "origin"];</code>
+   * @return The origin.
+   */
+  @java.lang.Override public com.tcn.cloud.api.api.commons.LearningOpportunityOrigin getOrigin() {
+    com.tcn.cloud.api.api.commons.LearningOpportunityOrigin result = com.tcn.cloud.api.api.commons.LearningOpportunityOrigin.forNumber(origin_);
+    return result == null ? com.tcn.cloud.api.api.commons.LearningOpportunityOrigin.UNRECOGNIZED : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -399,6 +426,9 @@ private static final long serialVersionUID = 0L;
     }
     if (status_ != com.tcn.cloud.api.api.commons.LearningOpportunityStatus.STATUS_OPEN.getNumber()) {
       output.writeEnum(13, status_);
+    }
+    if (origin_ != com.tcn.cloud.api.api.commons.LearningOpportunityOrigin.UNDEFINED.getNumber()) {
+      output.writeEnum(14, origin_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -450,6 +480,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(13, status_);
     }
+    if (origin_ != com.tcn.cloud.api.api.commons.LearningOpportunityOrigin.UNDEFINED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(14, origin_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -488,6 +522,7 @@ private static final long serialVersionUID = 0L;
     if (!getTitle()
         .equals(other.getTitle())) return false;
     if (status_ != other.status_) return false;
+    if (origin_ != other.origin_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -526,6 +561,8 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getTitle().hashCode();
     hash = (37 * hash) + STATUS_FIELD_NUMBER;
     hash = (53 * hash) + status_;
+    hash = (37 * hash) + ORIGIN_FIELD_NUMBER;
+    hash = (53 * hash) + origin_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -676,6 +713,7 @@ private static final long serialVersionUID = 0L;
       }
       title_ = "";
       status_ = 0;
+      origin_ = 0;
       return this;
     }
 
@@ -743,6 +781,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000400) != 0)) {
         result.status_ = status_;
+      }
+      if (((from_bitField0_ & 0x00000800) != 0)) {
+        result.origin_ = origin_;
       }
     }
 
@@ -829,6 +870,9 @@ private static final long serialVersionUID = 0L;
       if (other.status_ != 0) {
         setStatusValue(other.getStatusValue());
       }
+      if (other.origin_ != 0) {
+        setOriginValue(other.getOriginValue());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -912,6 +956,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000400;
               break;
             } // case 104
+            case 112: {
+              origin_ = input.readEnum();
+              bitField0_ |= 0x00000800;
+              break;
+            } // case 112
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1722,6 +1771,79 @@ private static final long serialVersionUID = 0L;
     public Builder clearStatus() {
       bitField0_ = (bitField0_ & ~0x00000400);
       status_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int origin_ = 0;
+    /**
+     * <pre>
+     * Origin (ie. opportunity created from).
+     * </pre>
+     *
+     * <code>.api.commons.LearningOpportunityOrigin origin = 14 [json_name = "origin"];</code>
+     * @return The enum numeric value on the wire for origin.
+     */
+    @java.lang.Override public int getOriginValue() {
+      return origin_;
+    }
+    /**
+     * <pre>
+     * Origin (ie. opportunity created from).
+     * </pre>
+     *
+     * <code>.api.commons.LearningOpportunityOrigin origin = 14 [json_name = "origin"];</code>
+     * @param value The enum numeric value on the wire for origin to set.
+     * @return This builder for chaining.
+     */
+    public Builder setOriginValue(int value) {
+      origin_ = value;
+      bitField0_ |= 0x00000800;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Origin (ie. opportunity created from).
+     * </pre>
+     *
+     * <code>.api.commons.LearningOpportunityOrigin origin = 14 [json_name = "origin"];</code>
+     * @return The origin.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.LearningOpportunityOrigin getOrigin() {
+      com.tcn.cloud.api.api.commons.LearningOpportunityOrigin result = com.tcn.cloud.api.api.commons.LearningOpportunityOrigin.forNumber(origin_);
+      return result == null ? com.tcn.cloud.api.api.commons.LearningOpportunityOrigin.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * Origin (ie. opportunity created from).
+     * </pre>
+     *
+     * <code>.api.commons.LearningOpportunityOrigin origin = 14 [json_name = "origin"];</code>
+     * @param value The origin to set.
+     * @return This builder for chaining.
+     */
+    public Builder setOrigin(com.tcn.cloud.api.api.commons.LearningOpportunityOrigin value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000800;
+      origin_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Origin (ie. opportunity created from).
+     * </pre>
+     *
+     * <code>.api.commons.LearningOpportunityOrigin origin = 14 [json_name = "origin"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearOrigin() {
+      bitField0_ = (bitField0_ & ~0x00000800);
+      origin_ = 0;
       onChanged();
       return this;
     }

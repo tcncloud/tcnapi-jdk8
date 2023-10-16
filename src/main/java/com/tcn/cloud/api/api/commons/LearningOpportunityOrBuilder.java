@@ -181,4 +181,23 @@ public interface LearningOpportunityOrBuilder extends
    * @return The status.
    */
   com.tcn.cloud.api.api.commons.LearningOpportunityStatus getStatus();
+
+  /**
+   * <pre>
+   * Origin (ie. opportunity created from).
+   * </pre>
+   *
+   * <code>.api.commons.LearningOpportunityOrigin origin = 14 [json_name = "origin"];</code>
+   * @return The enum numeric value on the wire for origin.
+   */
+  int getOriginValue();
+  /**
+   * <pre>
+   * Origin (ie. opportunity created from).
+   * </pre>
+   *
+   * <code>.api.commons.LearningOpportunityOrigin origin = 14 [json_name = "origin"];</code>
+   * @return The origin.
+   */
+  com.tcn.cloud.api.api.commons.LearningOpportunityOrigin getOrigin();
 }
