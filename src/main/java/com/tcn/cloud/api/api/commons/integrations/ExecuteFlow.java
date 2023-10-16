@@ -249,6 +249,7 @@ private static final long serialVersionUID = 0L;
     PRIOCOMMERCE_ACH_PAYMENT(3901),
     PRIOCOMMERCE_CC_PAYMENT(3902),
     NAVIGA_CREATE_PAYMENT(4001),
+    NAVIGA_CHANGE_BILLING(4002),
     PAYNSECONDS_TOKENIZE_CARD(4101),
     VALUE_NOT_SET(0);
     private final int value;
@@ -464,6 +465,7 @@ private static final long serialVersionUID = 0L;
         case 3901: return PRIOCOMMERCE_ACH_PAYMENT;
         case 3902: return PRIOCOMMERCE_CC_PAYMENT;
         case 4001: return NAVIGA_CREATE_PAYMENT;
+        case 4002: return NAVIGA_CHANGE_BILLING;
         case 4101: return PAYNSECONDS_TOKENIZE_CARD;
         case 0: return VALUE_NOT_SET;
         default: return null;
@@ -6626,6 +6628,37 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePayment.getDefaultInstance();
   }
 
+  public static final int NAVIGA_CHANGE_BILLING_FIELD_NUMBER = 4002;
+  /**
+   * <code>.api.commons.integrations.ExecuteNavigaChangeBilling naviga_change_billing = 4002 [json_name = "navigaChangeBilling"];</code>
+   * @return Whether the navigaChangeBilling field is set.
+   */
+  @java.lang.Override
+  public boolean hasNavigaChangeBilling() {
+    return valueCase_ == 4002;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteNavigaChangeBilling naviga_change_billing = 4002 [json_name = "navigaChangeBilling"];</code>
+   * @return The navigaChangeBilling.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaChangeBilling getNavigaChangeBilling() {
+    if (valueCase_ == 4002) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaChangeBilling) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaChangeBilling.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteNavigaChangeBilling naviga_change_billing = 4002 [json_name = "navigaChangeBilling"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaChangeBillingOrBuilder getNavigaChangeBillingOrBuilder() {
+    if (valueCase_ == 4002) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaChangeBilling) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaChangeBilling.getDefaultInstance();
+  }
+
   public static final int PAYNSECONDS_TOKENIZE_CARD_FIELD_NUMBER = 4101;
   /**
    * <code>.api.commons.integrations.ExecutePaynsecondsTokenizeCard paynseconds_tokenize_card = 4101 [json_name = "paynsecondsTokenizeCard"];</code>
@@ -7264,6 +7297,9 @@ private static final long serialVersionUID = 0L;
     }
     if (valueCase_ == 4001) {
       output.writeMessage(4001, (com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePayment) value_);
+    }
+    if (valueCase_ == 4002) {
+      output.writeMessage(4002, (com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaChangeBilling) value_);
     }
     if (valueCase_ == 4101) {
       output.writeMessage(4101, (com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCard) value_);
@@ -8067,6 +8103,10 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 4001) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4001, (com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePayment) value_);
+    }
+    if (valueCase_ == 4002) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4002, (com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaChangeBilling) value_);
     }
     if (valueCase_ == 4101) {
       size += com.google.protobuf.CodedOutputStream
@@ -8879,6 +8919,10 @@ private static final long serialVersionUID = 0L;
         if (!getNavigaCreatePayment()
             .equals(other.getNavigaCreatePayment())) return false;
         break;
+      case 4002:
+        if (!getNavigaChangeBilling()
+            .equals(other.getNavigaChangeBilling())) return false;
+        break;
       case 4101:
         if (!getPaynsecondsTokenizeCard()
             .equals(other.getPaynsecondsTokenizeCard())) return false;
@@ -9688,6 +9732,10 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + NAVIGA_CREATE_PAYMENT_FIELD_NUMBER;
         hash = (53 * hash) + getNavigaCreatePayment().hashCode();
         break;
+      case 4002:
+        hash = (37 * hash) + NAVIGA_CHANGE_BILLING_FIELD_NUMBER;
+        hash = (53 * hash) + getNavigaChangeBilling().hashCode();
+        break;
       case 4101:
         hash = (37 * hash) + PAYNSECONDS_TOKENIZE_CARD_FIELD_NUMBER;
         hash = (53 * hash) + getPaynsecondsTokenizeCard().hashCode();
@@ -10430,6 +10478,9 @@ private static final long serialVersionUID = 0L;
       }
       if (navigaCreatePaymentBuilder_ != null) {
         navigaCreatePaymentBuilder_.clear();
+      }
+      if (navigaChangeBillingBuilder_ != null) {
+        navigaChangeBillingBuilder_.clear();
       }
       if (paynsecondsTokenizeCardBuilder_ != null) {
         paynsecondsTokenizeCardBuilder_.clear();
@@ -11296,6 +11347,10 @@ private static final long serialVersionUID = 0L;
           navigaCreatePaymentBuilder_ != null) {
         result.value_ = navigaCreatePaymentBuilder_.build();
       }
+      if (valueCase_ == 4002 &&
+          navigaChangeBillingBuilder_ != null) {
+        result.value_ = navigaChangeBillingBuilder_.build();
+      }
       if (valueCase_ == 4101 &&
           paynsecondsTokenizeCardBuilder_ != null) {
         result.value_ = paynsecondsTokenizeCardBuilder_.build();
@@ -12138,6 +12193,10 @@ private static final long serialVersionUID = 0L;
         }
         case NAVIGA_CREATE_PAYMENT: {
           mergeNavigaCreatePayment(other.getNavigaCreatePayment());
+          break;
+        }
+        case NAVIGA_CHANGE_BILLING: {
+          mergeNavigaChangeBilling(other.getNavigaChangeBilling());
           break;
         }
         case PAYNSECONDS_TOKENIZE_CARD: {
@@ -13558,6 +13617,13 @@ private static final long serialVersionUID = 0L;
               valueCase_ = 4001;
               break;
             } // case 32010
+            case 32018: {
+              input.readMessage(
+                  getNavigaChangeBillingFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 4002;
+              break;
+            } // case 32018
             case 32810: {
               input.readMessage(
                   getPaynsecondsTokenizeCardFieldBuilder().getBuilder(),
@@ -41647,6 +41713,148 @@ private static final long serialVersionUID = 0L;
       valueCase_ = 4001;
       onChanged();
       return navigaCreatePaymentBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaChangeBilling, com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaChangeBilling.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaChangeBillingOrBuilder> navigaChangeBillingBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteNavigaChangeBilling naviga_change_billing = 4002 [json_name = "navigaChangeBilling"];</code>
+     * @return Whether the navigaChangeBilling field is set.
+     */
+    @java.lang.Override
+    public boolean hasNavigaChangeBilling() {
+      return valueCase_ == 4002;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteNavigaChangeBilling naviga_change_billing = 4002 [json_name = "navigaChangeBilling"];</code>
+     * @return The navigaChangeBilling.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaChangeBilling getNavigaChangeBilling() {
+      if (navigaChangeBillingBuilder_ == null) {
+        if (valueCase_ == 4002) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaChangeBilling) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaChangeBilling.getDefaultInstance();
+      } else {
+        if (valueCase_ == 4002) {
+          return navigaChangeBillingBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaChangeBilling.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteNavigaChangeBilling naviga_change_billing = 4002 [json_name = "navigaChangeBilling"];</code>
+     */
+    public Builder setNavigaChangeBilling(com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaChangeBilling value) {
+      if (navigaChangeBillingBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        navigaChangeBillingBuilder_.setMessage(value);
+      }
+      valueCase_ = 4002;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteNavigaChangeBilling naviga_change_billing = 4002 [json_name = "navigaChangeBilling"];</code>
+     */
+    public Builder setNavigaChangeBilling(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaChangeBilling.Builder builderForValue) {
+      if (navigaChangeBillingBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        navigaChangeBillingBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 4002;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteNavigaChangeBilling naviga_change_billing = 4002 [json_name = "navigaChangeBilling"];</code>
+     */
+    public Builder mergeNavigaChangeBilling(com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaChangeBilling value) {
+      if (navigaChangeBillingBuilder_ == null) {
+        if (valueCase_ == 4002 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaChangeBilling.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaChangeBilling.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaChangeBilling) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 4002) {
+          navigaChangeBillingBuilder_.mergeFrom(value);
+        } else {
+          navigaChangeBillingBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 4002;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteNavigaChangeBilling naviga_change_billing = 4002 [json_name = "navigaChangeBilling"];</code>
+     */
+    public Builder clearNavigaChangeBilling() {
+      if (navigaChangeBillingBuilder_ == null) {
+        if (valueCase_ == 4002) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 4002) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        navigaChangeBillingBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteNavigaChangeBilling naviga_change_billing = 4002 [json_name = "navigaChangeBilling"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaChangeBilling.Builder getNavigaChangeBillingBuilder() {
+      return getNavigaChangeBillingFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteNavigaChangeBilling naviga_change_billing = 4002 [json_name = "navigaChangeBilling"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaChangeBillingOrBuilder getNavigaChangeBillingOrBuilder() {
+      if ((valueCase_ == 4002) && (navigaChangeBillingBuilder_ != null)) {
+        return navigaChangeBillingBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 4002) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaChangeBilling) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaChangeBilling.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteNavigaChangeBilling naviga_change_billing = 4002 [json_name = "navigaChangeBilling"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaChangeBilling, com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaChangeBilling.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaChangeBillingOrBuilder> 
+        getNavigaChangeBillingFieldBuilder() {
+      if (navigaChangeBillingBuilder_ == null) {
+        if (!(valueCase_ == 4002)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaChangeBilling.getDefaultInstance();
+        }
+        navigaChangeBillingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaChangeBilling, com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaChangeBilling.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaChangeBillingOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaChangeBilling) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 4002;
+      onChanged();
+      return navigaChangeBillingBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
