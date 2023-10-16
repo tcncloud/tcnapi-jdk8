@@ -102,4 +102,31 @@ public interface ProjectOrBuilder extends
    * <code>.google.protobuf.Timestamp date_created = 5 [json_name = "dateCreated"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getDateCreatedOrBuilder();
+
+  /**
+   * <pre>
+   * compliance configuration
+   * </pre>
+   *
+   * <code>.api.commons.OmniProjectComplianceConfig compliance_config = 6 [json_name = "complianceConfig"];</code>
+   * @return Whether the complianceConfig field is set.
+   */
+  boolean hasComplianceConfig();
+  /**
+   * <pre>
+   * compliance configuration
+   * </pre>
+   *
+   * <code>.api.commons.OmniProjectComplianceConfig compliance_config = 6 [json_name = "complianceConfig"];</code>
+   * @return The complianceConfig.
+   */
+  com.tcn.cloud.api.api.commons.OmniProjectComplianceConfig getComplianceConfig();
+  /**
+   * <pre>
+   * compliance configuration
+   * </pre>
+   *
+   * <code>.api.commons.OmniProjectComplianceConfig compliance_config = 6 [json_name = "complianceConfig"];</code>
+   */
+  com.tcn.cloud.api.api.commons.OmniProjectComplianceConfigOrBuilder getComplianceConfigOrBuilder();
 }
