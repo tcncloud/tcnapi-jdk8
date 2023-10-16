@@ -80,28 +80,28 @@ public interface BuildDraftScheduleResOrBuilder extends
 
   /**
    * <pre>
-   * The scheduling resulting metric for the built schedule range.
+   * The scheduling result metric for the built schedule range.
    * </pre>
    *
-   * <code>.api.commons.SchedulingResultMetric scheduling_resulting_metric = 3 [json_name = "schedulingResultingMetric"];</code>
-   * @return Whether the schedulingResultingMetric field is set.
+   * <code>.api.commons.SchedulingResultMetric scheduling_result_metric = 3 [json_name = "schedulingResultMetric"];</code>
+   * @return Whether the schedulingResultMetric field is set.
    */
-  boolean hasSchedulingResultingMetric();
+  boolean hasSchedulingResultMetric();
   /**
    * <pre>
-   * The scheduling resulting metric for the built schedule range.
+   * The scheduling result metric for the built schedule range.
    * </pre>
    *
-   * <code>.api.commons.SchedulingResultMetric scheduling_resulting_metric = 3 [json_name = "schedulingResultingMetric"];</code>
-   * @return The schedulingResultingMetric.
+   * <code>.api.commons.SchedulingResultMetric scheduling_result_metric = 3 [json_name = "schedulingResultMetric"];</code>
+   * @return The schedulingResultMetric.
    */
-  com.tcn.cloud.api.api.commons.SchedulingResultMetric getSchedulingResultingMetric();
+  com.tcn.cloud.api.api.commons.SchedulingResultMetric getSchedulingResultMetric();
   /**
    * <pre>
-   * The scheduling resulting metric for the built schedule range.
+   * The scheduling result metric for the built schedule range.
    * </pre>
    *
-   * <code>.api.commons.SchedulingResultMetric scheduling_resulting_metric = 3 [json_name = "schedulingResultingMetric"];</code>
+   * <code>.api.commons.SchedulingResultMetric scheduling_result_metric = 3 [json_name = "schedulingResultMetric"];</code>
    */
-  com.tcn.cloud.api.api.commons.SchedulingResultMetricOrBuilder getSchedulingResultingMetricOrBuilder();
+  com.tcn.cloud.api.api.commons.SchedulingResultMetricOrBuilder getSchedulingResultMetricOrBuilder();
 }

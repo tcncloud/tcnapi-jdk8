@@ -57,19 +57,19 @@ private static final long serialVersionUID = 0L;
     return totalInternalIntervals_;
   }
 
-  public static final int TOTAL_INTERVAL_INTERVALS_WITH_FTE_REQUIRED_FIELD_NUMBER = 2;
-  private int totalIntervalIntervalsWithFteRequired_ = 0;
+  public static final int TOTAL_INTERVALS_WITH_FTE_REQUIRED_FIELD_NUMBER = 2;
+  private int totalIntervalsWithFteRequired_ = 0;
   /**
    * <pre>
    * The total number of minute-width intervals that had enough scheduled ftes to meet the predicted call FTEs.
    * </pre>
    *
-   * <code>int32 total_interval_intervals_with_fte_required = 2 [json_name = "totalIntervalIntervalsWithFteRequired"];</code>
-   * @return The totalIntervalIntervalsWithFteRequired.
+   * <code>int32 total_intervals_with_fte_required = 2 [json_name = "totalIntervalsWithFteRequired"];</code>
+   * @return The totalIntervalsWithFteRequired.
    */
   @java.lang.Override
-  public int getTotalIntervalIntervalsWithFteRequired() {
-    return totalIntervalIntervalsWithFteRequired_;
+  public int getTotalIntervalsWithFteRequired() {
+    return totalIntervalsWithFteRequired_;
   }
 
   public static final int TOTAL_INTERVALS_WITH_FTES_REMAINING_FIELD_NUMBER = 3;
@@ -150,8 +150,8 @@ private static final long serialVersionUID = 0L;
     if (totalInternalIntervals_ != 0) {
       output.writeInt32(1, totalInternalIntervals_);
     }
-    if (totalIntervalIntervalsWithFteRequired_ != 0) {
-      output.writeInt32(2, totalIntervalIntervalsWithFteRequired_);
+    if (totalIntervalsWithFteRequired_ != 0) {
+      output.writeInt32(2, totalIntervalsWithFteRequired_);
     }
     if (totalIntervalsWithFtesRemaining_ != 0) {
       output.writeInt32(3, totalIntervalsWithFtesRemaining_);
@@ -178,9 +178,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(1, totalInternalIntervals_);
     }
-    if (totalIntervalIntervalsWithFteRequired_ != 0) {
+    if (totalIntervalsWithFteRequired_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(2, totalIntervalIntervalsWithFteRequired_);
+        .computeInt32Size(2, totalIntervalsWithFteRequired_);
     }
     if (totalIntervalsWithFtesRemaining_ != 0) {
       size += com.google.protobuf.CodedOutputStream
@@ -215,8 +215,8 @@ private static final long serialVersionUID = 0L;
 
     if (getTotalInternalIntervals()
         != other.getTotalInternalIntervals()) return false;
-    if (getTotalIntervalIntervalsWithFteRequired()
-        != other.getTotalIntervalIntervalsWithFteRequired()) return false;
+    if (getTotalIntervalsWithFteRequired()
+        != other.getTotalIntervalsWithFteRequired()) return false;
     if (getTotalIntervalsWithFtesRemaining()
         != other.getTotalIntervalsWithFtesRemaining()) return false;
     if (java.lang.Float.floatToIntBits(getCoverage())
@@ -240,8 +240,8 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + TOTAL_INTERNAL_INTERVALS_FIELD_NUMBER;
     hash = (53 * hash) + getTotalInternalIntervals();
-    hash = (37 * hash) + TOTAL_INTERVAL_INTERVALS_WITH_FTE_REQUIRED_FIELD_NUMBER;
-    hash = (53 * hash) + getTotalIntervalIntervalsWithFteRequired();
+    hash = (37 * hash) + TOTAL_INTERVALS_WITH_FTE_REQUIRED_FIELD_NUMBER;
+    hash = (53 * hash) + getTotalIntervalsWithFteRequired();
     hash = (37 * hash) + TOTAL_INTERVALS_WITH_FTES_REMAINING_FIELD_NUMBER;
     hash = (53 * hash) + getTotalIntervalsWithFtesRemaining();
     hash = (37 * hash) + COVERAGE_FIELD_NUMBER;
@@ -389,7 +389,7 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       totalInternalIntervals_ = 0;
-      totalIntervalIntervalsWithFteRequired_ = 0;
+      totalIntervalsWithFteRequired_ = 0;
       totalIntervalsWithFtesRemaining_ = 0;
       coverage_ = 0F;
       rootMeanSquare_ = 0F;
@@ -431,7 +431,7 @@ private static final long serialVersionUID = 0L;
         result.totalInternalIntervals_ = totalInternalIntervals_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.totalIntervalIntervalsWithFteRequired_ = totalIntervalIntervalsWithFteRequired_;
+        result.totalIntervalsWithFteRequired_ = totalIntervalsWithFteRequired_;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.totalIntervalsWithFtesRemaining_ = totalIntervalsWithFtesRemaining_;
@@ -494,8 +494,8 @@ private static final long serialVersionUID = 0L;
       if (other.getTotalInternalIntervals() != 0) {
         setTotalInternalIntervals(other.getTotalInternalIntervals());
       }
-      if (other.getTotalIntervalIntervalsWithFteRequired() != 0) {
-        setTotalIntervalIntervalsWithFteRequired(other.getTotalIntervalIntervalsWithFteRequired());
+      if (other.getTotalIntervalsWithFteRequired() != 0) {
+        setTotalIntervalsWithFteRequired(other.getTotalIntervalsWithFteRequired());
       }
       if (other.getTotalIntervalsWithFtesRemaining() != 0) {
         setTotalIntervalsWithFtesRemaining(other.getTotalIntervalsWithFtesRemaining());
@@ -541,7 +541,7 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 8
             case 16: {
-              totalIntervalIntervalsWithFteRequired_ = input.readInt32();
+              totalIntervalsWithFteRequired_ = input.readInt32();
               bitField0_ |= 0x00000002;
               break;
             } // case 16
@@ -626,31 +626,31 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private int totalIntervalIntervalsWithFteRequired_ ;
+    private int totalIntervalsWithFteRequired_ ;
     /**
      * <pre>
      * The total number of minute-width intervals that had enough scheduled ftes to meet the predicted call FTEs.
      * </pre>
      *
-     * <code>int32 total_interval_intervals_with_fte_required = 2 [json_name = "totalIntervalIntervalsWithFteRequired"];</code>
-     * @return The totalIntervalIntervalsWithFteRequired.
+     * <code>int32 total_intervals_with_fte_required = 2 [json_name = "totalIntervalsWithFteRequired"];</code>
+     * @return The totalIntervalsWithFteRequired.
      */
     @java.lang.Override
-    public int getTotalIntervalIntervalsWithFteRequired() {
-      return totalIntervalIntervalsWithFteRequired_;
+    public int getTotalIntervalsWithFteRequired() {
+      return totalIntervalsWithFteRequired_;
     }
     /**
      * <pre>
      * The total number of minute-width intervals that had enough scheduled ftes to meet the predicted call FTEs.
      * </pre>
      *
-     * <code>int32 total_interval_intervals_with_fte_required = 2 [json_name = "totalIntervalIntervalsWithFteRequired"];</code>
-     * @param value The totalIntervalIntervalsWithFteRequired to set.
+     * <code>int32 total_intervals_with_fte_required = 2 [json_name = "totalIntervalsWithFteRequired"];</code>
+     * @param value The totalIntervalsWithFteRequired to set.
      * @return This builder for chaining.
      */
-    public Builder setTotalIntervalIntervalsWithFteRequired(int value) {
+    public Builder setTotalIntervalsWithFteRequired(int value) {
 
-      totalIntervalIntervalsWithFteRequired_ = value;
+      totalIntervalsWithFteRequired_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
@@ -660,12 +660,12 @@ private static final long serialVersionUID = 0L;
      * The total number of minute-width intervals that had enough scheduled ftes to meet the predicted call FTEs.
      * </pre>
      *
-     * <code>int32 total_interval_intervals_with_fte_required = 2 [json_name = "totalIntervalIntervalsWithFteRequired"];</code>
+     * <code>int32 total_intervals_with_fte_required = 2 [json_name = "totalIntervalsWithFteRequired"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearTotalIntervalIntervalsWithFteRequired() {
+    public Builder clearTotalIntervalsWithFteRequired() {
       bitField0_ = (bitField0_ & ~0x00000002);
-      totalIntervalIntervalsWithFteRequired_ = 0;
+      totalIntervalsWithFteRequired_ = 0;
       onChanged();
       return this;
     }

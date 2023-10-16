@@ -22,10 +22,10 @@ public interface SchedulingResultMetricOrBuilder extends
    * The total number of minute-width intervals that had enough scheduled ftes to meet the predicted call FTEs.
    * </pre>
    *
-   * <code>int32 total_interval_intervals_with_fte_required = 2 [json_name = "totalIntervalIntervalsWithFteRequired"];</code>
-   * @return The totalIntervalIntervalsWithFteRequired.
+   * <code>int32 total_intervals_with_fte_required = 2 [json_name = "totalIntervalsWithFteRequired"];</code>
+   * @return The totalIntervalsWithFteRequired.
    */
-  int getTotalIntervalIntervalsWithFteRequired();
+  int getTotalIntervalsWithFteRequired();
 
   /**
    * <pre>

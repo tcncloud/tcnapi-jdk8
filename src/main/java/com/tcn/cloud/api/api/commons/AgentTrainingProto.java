@@ -35,7 +35,7 @@ public final class AgentTrainingProto {
     java.lang.String[] descriptorData = {
       "\n api/commons/agent_training.proto\022\013api." +
       "commons\032\025api/commons/acd.proto\032\037google/p" +
-      "rotobuf/timestamp.proto\"\341\003\n\023LearningOppo" +
+      "rotobuf/timestamp.proto\"\241\004\n\023LearningOppo" +
       "rtunity\0226\n\027learning_opportunity_id\030\002 \001(\003" +
       "R\025learningOpportunityId\022\031\n\010call_sid\030\003 \001(" +
       "\003R\007callSid\0227\n\tcall_type\030\004 \001(\0162\032.api.comm" +
@@ -47,14 +47,20 @@ public final class AgentTrainingProto {
       "on\0229\n\ncreated_at\030\n \001(\0132\032.google.protobuf" +
       ".TimestampR\tcreatedAt\022\024\n\005title\030\014 \001(\tR\005ti" +
       "tle\022>\n\006status\030\r \001(\0162&.api.commons.Learni" +
-      "ngOpportunityStatusR\006status\"R\n\016CallIdent" +
-      "ifier\022\020\n\003sid\030\001 \001(\003R\003sid\022.\n\004type\030\002 \001(\0162\032." +
-      "api.commons.CallType.EnumR\004type*B\n\031Learn" +
-      "ingOpportunityStatus\022\017\n\013STATUS_OPEN\020\000\022\024\n" +
-      "\020STATUS_COMPLETED\020\001B\200\001\n\035com.tcn.cloud.ap" +
-      "i.api.commonsB\022AgentTrainingProtoP\001\242\002\003AC" +
-      "X\252\002\013Api.Commons\312\002\013Api\\Commons\342\002\027Api\\Comm" +
-      "ons\\GPBMetadata\352\002\014Api::Commonsb\006proto3"
+      "ngOpportunityStatusR\006status\022>\n\006origin\030\016 " +
+      "\001(\0162&.api.commons.LearningOpportunityOri" +
+      "ginR\006origin\"R\n\016CallIdentifier\022\020\n\003sid\030\001 \001" +
+      "(\003R\003sid\022.\n\004type\030\002 \001(\0162\032.api.commons.Call" +
+      "Type.EnumR\004type*B\n\031LearningOpportunitySt" +
+      "atus\022\017\n\013STATUS_OPEN\020\000\022\024\n\020STATUS_COMPLETE" +
+      "D\020\001*\230\001\n\031LearningOpportunityOrigin\022\r\n\tUND" +
+      "EFINED\020\000\022\026\n\022QUALITY_EVALUATION\020\001\022\023\n\017AUTO" +
+      "_EVALUATION\020\002\022\023\n\017FLAG_EVALUATION\020\003\022\020\n\014CO" +
+      "NVERSATION\020\004\022\030\n\024FLAGGED_CONVERSATION\020\005B\200" +
+      "\001\n\035com.tcn.cloud.api.api.commonsB\022AgentT" +
+      "rainingProtoP\001\242\002\003ACX\252\002\013Api.Commons\312\002\013Api" +
+      "\\Commons\342\002\027Api\\Commons\\GPBMetadata\352\002\014Api" +
+      "::Commonsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -67,7 +73,7 @@ public final class AgentTrainingProto {
     internal_static_api_commons_LearningOpportunity_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_LearningOpportunity_descriptor,
-        new java.lang.String[] { "LearningOpportunityId", "CallSid", "CallType", "TranscriptSid", "AgentUserId", "StartOffset", "EndOffset", "Description", "CreatedAt", "Title", "Status", });
+        new java.lang.String[] { "LearningOpportunityId", "CallSid", "CallType", "TranscriptSid", "AgentUserId", "StartOffset", "EndOffset", "Description", "CreatedAt", "Title", "Status", "Origin", });
     internal_static_api_commons_CallIdentifier_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_api_commons_CallIdentifier_fieldAccessorTable = new

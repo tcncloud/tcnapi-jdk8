@@ -32,13 +32,13 @@ public final class ServiceProto {
       "i.v1alpha1.agenttraining.CreateLearningO" +
       "pportunityRequest\032=.api.v1alpha1.agenttr" +
       "aining.CreateLearningOpportunityResponse" +
-      "\"_\272\270\221\002\005\n\003\010\301\014\202\323\344\223\002O\"J/api/v1alpha1/agentt" +
+      "\"_\272\270\221\002\005\n\003\010\304\014\202\323\344\223\002O\"J/api/v1alpha1/agentt" +
       "raining/agenttrainingservice/createlearn" +
       "ingopportunity:\001*\022\371\001\n\031ListLearningOpport" +
       "unities\022<.api.v1alpha1.agenttraining.Lis" +
       "tLearningOpportunitiesRequest\032=.api.v1al" +
       "pha1.agenttraining.ListLearningOpportuni" +
-      "tiesResponse\"_\272\270\221\002\005\n\003\010\301\014\202\323\344\223\002O\"J/api/v1a" +
+      "tiesResponse\"_\272\270\221\002\005\n\003\010\304\014\202\323\344\223\002O\"J/api/v1a" +
       "lpha1/agenttraining/agenttrainingservice" +
       "/listlearningopportunities:\001*\022\215\002\n\036ListAg" +
       "entLearningOpportunities\022A.api.v1alpha1." +
@@ -58,20 +58,20 @@ public final class ServiceProto {
       "Opportunity\022<.api.v1alpha1.agenttraining" +
       ".UpdateLearningOpportunityRequest\032=.api." +
       "v1alpha1.agenttraining.UpdateLearningOpp" +
-      "ortunityResponse\"_\272\270\221\002\005\n\003\010\301\014\202\323\344\223\002O\"J/api" +
+      "ortunityResponse\"_\272\270\221\002\005\n\003\010\304\014\202\323\344\223\002O\"J/api" +
       "/v1alpha1/agenttraining/agenttrainingser" +
       "vice/updatelearningopportunity:\001*\022\371\001\n\031De" +
       "leteLearningOpportunity\022<.api.v1alpha1.a" +
       "genttraining.DeleteLearningOpportunityRe" +
       "quest\032=.api.v1alpha1.agenttraining.Delet" +
-      "eLearningOpportunityResponse\"_\272\270\221\002\005\n\003\010\301\014" +
+      "eLearningOpportunityResponse\"_\272\270\221\002\005\n\003\010\304\014" +
       "\202\323\344\223\002O\"J/api/v1alpha1/agenttraining/agen" +
       "ttrainingservice/deletelearningopportuni" +
       "ty:\001*\022\355\001\n\026GetLearningOpportunity\0229.api.v" +
       "1alpha1.agenttraining.GetLearningOpportu" +
       "nityRequest\032:.api.v1alpha1.agenttraining" +
       ".GetLearningOpportunityResponse\"\\\272\270\221\002\005\n\003" +
-      "\010\301\014\202\323\344\223\002L\"G/api/v1alpha1/agenttraining/a" +
+      "\010\304\014\202\323\344\223\002L\"G/api/v1alpha1/agenttraining/a" +
       "genttrainingservice/getlearningopportuni" +
       "ty:\001*B\306\001\n,com.tcn.cloud.api.api.v1alpha1" +
       ".agenttrainingB\014ServiceProtoP\001\242\002\003AVA\252\002\032A" +
