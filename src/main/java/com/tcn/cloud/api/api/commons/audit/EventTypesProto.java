@@ -24,7 +24,7 @@ public final class EventTypesProto {
   static {
     java.lang.String[] descriptorData = {
       "\n#api/commons/audit/event_types.proto\022\021a" +
-      "pi.commons.audit*\352\034\n\tEventType\022\025\n\021DUMMY_" +
+      "pi.commons.audit*\255\035\n\tEventType\022\025\n\021DUMMY_" +
       "APPLICATION\020\000\022\035\n\031DUMMY_APPLICATION_STORA" +
       "GE\020\001\022\035\n\031DUMMY_APPLICATION_COMPUTE\020\002\022\023\n\017V" +
       "OICE_ANALYTICS\020d\022#\n\037VOICE_ANALYTICS_FLAG" +
@@ -112,15 +112,17 @@ public final class EventTypesProto {
       "CLOSE_EVENT\020\332\004\022\037\n\032TICKET_ACTION_CREATE_E" +
       "VENT\020\333\004\022\035\n\030TICKET_ACTION_EDIT_EVENT\020\334\004\022%" +
       "\n TICKET_ACTION_STATE_CHANGE_EVENT\020\335\004\022\035\n" +
-      "\030TICKET_PARTICIPANT_EVENT\020\336\004\022\037\n\032COMPLIAN" +
-      "CE_RND_QUERY_EVENT\020\274\005\022&\n!COMPLIANCE_RND_" +
-      "QUERY_CACHED_EVENT\020\275\005\0225\n0AGENT_TRAINING_" +
-      "CREATE_LEARNING_OPPORTUNITY_EVENT\020\240\006\022\037\n\032" +
-      "LMS_PIPELINE_FAILURE_EVENT\020\204\007B\234\001\n#com.tc" +
-      "n.cloud.api.api.commons.auditB\017EventType" +
-      "sProtoP\001\242\002\003ACA\252\002\021Api.Commons.Audit\312\002\021Api" +
-      "\\Commons\\Audit\342\002\035Api\\Commons\\Audit\\GPBMe" +
-      "tadata\352\002\023Api::Commons::Auditb\006proto3"
+      "\030TICKET_PARTICIPANT_EVENT\020\336\004\022 \n\033TICKET_C" +
+      "REATE_COMMENT_EVENT\020\337\004\022\037\n\032TICKET_REPLY_C" +
+      "OMMENT_EVENT\020\340\004\022\037\n\032COMPLIANCE_RND_QUERY_" +
+      "EVENT\020\274\005\022&\n!COMPLIANCE_RND_QUERY_CACHED_" +
+      "EVENT\020\275\005\0225\n0AGENT_TRAINING_CREATE_LEARNI" +
+      "NG_OPPORTUNITY_EVENT\020\240\006\022\037\n\032LMS_PIPELINE_" +
+      "FAILURE_EVENT\020\204\007B\234\001\n#com.tcn.cloud.api.a" +
+      "pi.commons.auditB\017EventTypesProtoP\001\242\002\003AC" +
+      "A\252\002\021Api.Commons.Audit\312\002\021Api\\Commons\\Audi" +
+      "t\342\002\035Api\\Commons\\Audit\\GPBMetadata\352\002\023Api:" +
+      ":Commons::Auditb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
