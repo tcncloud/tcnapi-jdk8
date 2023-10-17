@@ -751,6 +751,18 @@ public enum EventType
   TICKET_PARTICIPANT_EVENT(606),
   /**
    * <pre>
+   * Change For Create/Reply Comments
+   * </pre>
+   *
+   * <code>TICKET_CREATE_COMMENT_EVENT = 607;</code>
+   */
+  TICKET_CREATE_COMMENT_EVENT(607),
+  /**
+   * <code>TICKET_REPLY_COMMENT_EVENT = 608;</code>
+   */
+  TICKET_REPLY_COMMENT_EVENT(608),
+  /**
+   * <pre>
    * Compliance Events
    * rnd query event
    * </pre>
@@ -1515,6 +1527,18 @@ public enum EventType
   public static final int TICKET_PARTICIPANT_EVENT_VALUE = 606;
   /**
    * <pre>
+   * Change For Create/Reply Comments
+   * </pre>
+   *
+   * <code>TICKET_CREATE_COMMENT_EVENT = 607;</code>
+   */
+  public static final int TICKET_CREATE_COMMENT_EVENT_VALUE = 607;
+  /**
+   * <code>TICKET_REPLY_COMMENT_EVENT = 608;</code>
+   */
+  public static final int TICKET_REPLY_COMMENT_EVENT_VALUE = 608;
+  /**
+   * <pre>
    * Compliance Events
    * rnd query event
    * </pre>
@@ -1671,6 +1695,8 @@ public enum EventType
       case 604: return TICKET_ACTION_EDIT_EVENT;
       case 605: return TICKET_ACTION_STATE_CHANGE_EVENT;
       case 606: return TICKET_PARTICIPANT_EVENT;
+      case 607: return TICKET_CREATE_COMMENT_EVENT;
+      case 608: return TICKET_REPLY_COMMENT_EVENT;
       case 700: return COMPLIANCE_RND_QUERY_EVENT;
       case 701: return COMPLIANCE_RND_QUERY_CACHED_EVENT;
       case 800: return AGENT_TRAINING_CREATE_LEARNING_OPPORTUNITY_EVENT;
