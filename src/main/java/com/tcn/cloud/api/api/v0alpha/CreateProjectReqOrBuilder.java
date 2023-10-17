@@ -46,4 +46,31 @@ public interface CreateProjectReqOrBuilder extends
    */
   com.google.protobuf.ByteString
       getDescriptionBytes();
+
+  /**
+   * <pre>
+   * compliance configuration
+   * </pre>
+   *
+   * <code>.api.commons.OmniProjectComplianceConfig compliance_config = 3 [json_name = "complianceConfig"];</code>
+   * @return Whether the complianceConfig field is set.
+   */
+  boolean hasComplianceConfig();
+  /**
+   * <pre>
+   * compliance configuration
+   * </pre>
+   *
+   * <code>.api.commons.OmniProjectComplianceConfig compliance_config = 3 [json_name = "complianceConfig"];</code>
+   * @return The complianceConfig.
+   */
+  com.tcn.cloud.api.api.commons.OmniProjectComplianceConfig getComplianceConfig();
+  /**
+   * <pre>
+   * compliance configuration
+   * </pre>
+   *
+   * <code>.api.commons.OmniProjectComplianceConfig compliance_config = 3 [json_name = "complianceConfig"];</code>
+   */
+  com.tcn.cloud.api.api.commons.OmniProjectComplianceConfigOrBuilder getComplianceConfigOrBuilder();
 }
