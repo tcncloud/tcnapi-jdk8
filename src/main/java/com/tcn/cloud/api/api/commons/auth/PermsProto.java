@@ -24,7 +24,7 @@ public final class PermsProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\034api/commons/auth/perms.proto\022\020api.comm" +
-      "ons.auth\032\033annotations/perms/tcn.proto*\353%" +
+      "ons.auth\032\033annotations/perms/tcn.proto*\217\'" +
       "\n\nPermission\022\032\n\026PERMISSION_UNSPECIFIED\020\000" +
       "\022\022\n\016PERMISSION_DEV\020\001\022\031\n\025PERMISSION_LEARN" +
       "_EDIT\020\n\022!\n\023PERMISSION_ORG_EDIT\020d\032\010\212\265\030\004\020\t" +
@@ -101,55 +101,60 @@ public final class PermsProto {
       "D_EDIT\020\340\004\032\031\212\265\030\025\020\002\"\021Dashboard Builder\022Y\n\022" +
       "PERMISSION_ROOM303\020\274\005\032@\212\265\030<\020\n\"\017Unread Me" +
       "ssages\"\005Rooms\"\017Direct Messages\"\017System M" +
-      "essages\022J\n\035PERMISSION_AGENT_CALL_SCRIPTS" +
-      "\020\240\006\032&\212\265\030\"\020\014\"\016Script Builder\"\016Script Mapp" +
-      "ing\022E\n\025PERMISSION_COMPLIANCE\020\204\007\032)\212\265\030%\020\007\"" +
-      "\tRule Sets\"\013Scrub Lists\"\tScenarios\0223\n\035PE" +
-      "RMISSION_COMPLIANCE_CONSENT\020\216\007\032\017\212\265\030\013\020\007\"\007" +
-      "Consent\022\226\001\n\023PERMISSION_LMS_VIEW\020\350\007\032|\212\265\030x" +
-      "\020\006\"\014Data Manager\"\025File Template Manager\"" +
-      "\035File Field Definition Manager\"\025Journey " +
-      "Data Explorer\"\031New File Template Manager" +
-      "\022 \n\023PERMISSION_LMS_EDIT\020\351\007\032\006\212\265\030\002\020\006\022n\n\024PE" +
-      "RMISSION_OMNI_BOSS\020\260\t\032S\212\265\030O\020\010\"\014SSO Setti" +
-      "ngs\"\013Form Emails\"\017Canned Messages\"\014Dispo" +
-      "sitions\"\021Unsubscribe Links\0222\n\034PERMISSION" +
-      "_OMNI_PORTALS_VIEW\020\272\t\032\017\212\265\030\013\020\010\"\007Portals\022K" +
-      "\n\034PERMISSION_INTEGRATIONS_VIEW\020\224\n\032(\212\265\030$\020" +
-      "\005\"\016Configurations\"\007Plugins\"\007Portals\022B\n\037P" +
-      "ERMISSION_INTEGRATIONS_PAYMENT\020\225\n\032\034\212\265\030\030\020" +
-      "\005\"\024Payment Integrations\022B\n\037PERMISSION_IN" +
-      "TEGRATIONS_JOURNEY\020\226\n\032\034\212\265\030\030\020\005\"\024Journey I" +
-      "ntegrations\022\260\001\n\016PERMISSION_WFM\020\334\013\032\232\001\212\265\030\225" +
-      "\001\020\017\"\nForecaster\"\016Skill Profiles\"\026Forecas" +
-      "ting Parameters\"\023Profile Forecasting\"\026Re" +
-      "gression Forecasting\"\023Current Forecastin" +
-      "g\"\tScheduler\"\020Agent Management\0222\n\027PERMIS" +
-      "SION_AGENT_PORTAL\020\335\013\032\024\212\265\030\020\020\017\"\014Agent Port" +
-      "al\022\"\n\025PERMISSION_SCORECARDS\020\300\014\032\006\212\265\030\002\020\013\022)" +
-      "\n\034PERMISSION_SCORECARDS_MANAGE\020\301\014\032\006\212\265\030\002\020" +
-      "\013\022+\n\036PERMISSION_SCORECARDS_EVALUATE\020\302\014\032\006" +
-      "\212\265\030\002\020\013\022,\n\037PERMISSION_SCORECARDS_FLAG_EVA" +
-      "L\020\303\014\032\006\212\265\030\002\020\013\0229\n,PERMISSION_SCORECARDS_LE" +
-      "ARNING_OPPORTUNITIES\020\304\014\032\006\212\265\030\002\020\013\022/\n\024PERMI" +
-      "SSION_DEV_TOOLS\020\210\016\032\024\212\265\030\020\020\004\"\014API Explorer" +
-      "\0223\n&PERMISSION_DELIVERY_NOTIFICATIONS_VI" +
-      "EW\020\320\017\032\006\212\265\030\002\020\003\0223\n&PERMISSION_DELIVERY_NOT" +
-      "IFICATIONS_EDIT\020\321\017\032\006\212\265\030\002\020\003\022%\n\026PERMISSION" +
-      "_TICKETS_APP\020\234\030\032\010\212\265\030\004\010\001\020\r\022\'\n\030PERMISSION_" +
-      "TICKETS_ADMIN\020\235\030\032\010\212\265\030\004\010\001\020\r\022!\n\024PERMISSION" +
-      "_WORKFLOWS\020\240\037\032\006\212\265\030\002\020\020\022Y\n\033PERMISSION_PBX_" +
-      "MANAGER_VIEW\020\204 \0327\212\265\0303\020\t\030\n\"\022PBX User Mana" +
-      "gment\"\031Extension Group Managment\022Y\n\033PERM" +
-      "ISSION_PBX_MANAGER_EDIT\020\205 \0327\212\265\0303\020\t\030\n\"\022PB" +
-      "X User Managment\"\031Extension Group Managm" +
-      "ent\022%\n\030PERMISSION_NEWSROOM_VIEW\020\347 \032\006\212\265\030\002" +
-      "\020\021\022%\n\030PERMISSION_NEWSROOM_EDIT\020\350 \032\006\212\265\030\002\020" +
-      "\021\022(\n\033PERMISSION_NEWSROOM_PUBLISH\020\351 \032\006\212\265\030" +
-      "\002\020\021B\222\001\n\"com.tcn.cloud.api.api.commons.au" +
-      "thB\nPermsProtoP\001\242\002\003ACA\252\002\020Api.Commons.Aut" +
-      "h\312\002\020Api\\Commons\\Auth\342\002\034Api\\Commons\\Auth\\" +
-      "GPBMetadata\352\002\022Api::Commons::Authb\006proto3"
+      "essages\022?\n\031PERMISSION_ROOM303_MEMBER\020\275\005\032" +
+      "\037\212\265\030\033\020\n\"\027Escalatable Permissions\022a\n\035PERM" +
+      "ISSION_ROOM303_SUPERVISOR\020\276\005\032=\212\265\0309\020\n\"\023Co" +
+      "nfigure All Rooms\" Configure Direct Mess" +
+      "aging Rules\022J\n\035PERMISSION_AGENT_CALL_SCR" +
+      "IPTS\020\240\006\032&\212\265\030\"\020\014\"\016Script Builder\"\016Script " +
+      "Mapping\022E\n\025PERMISSION_COMPLIANCE\020\204\007\032)\212\265\030" +
+      "%\020\007\"\tRule Sets\"\013Scrub Lists\"\tScenarios\0223" +
+      "\n\035PERMISSION_COMPLIANCE_CONSENT\020\216\007\032\017\212\265\030\013" +
+      "\020\007\"\007Consent\022\226\001\n\023PERMISSION_LMS_VIEW\020\350\007\032|" +
+      "\212\265\030x\020\006\"\014Data Manager\"\025File Template Mana" +
+      "ger\"\035File Field Definition Manager\"\025Jour" +
+      "ney Data Explorer\"\031New File Template Man" +
+      "ager\022 \n\023PERMISSION_LMS_EDIT\020\351\007\032\006\212\265\030\002\020\006\022n" +
+      "\n\024PERMISSION_OMNI_BOSS\020\260\t\032S\212\265\030O\020\010\"\014SSO S" +
+      "ettings\"\013Form Emails\"\017Canned Messages\"\014D" +
+      "ispositions\"\021Unsubscribe Links\0222\n\034PERMIS" +
+      "SION_OMNI_PORTALS_VIEW\020\272\t\032\017\212\265\030\013\020\010\"\007Porta" +
+      "ls\022K\n\034PERMISSION_INTEGRATIONS_VIEW\020\224\n\032(\212" +
+      "\265\030$\020\005\"\016Configurations\"\007Plugins\"\007Portals\022" +
+      "B\n\037PERMISSION_INTEGRATIONS_PAYMENT\020\225\n\032\034\212" +
+      "\265\030\030\020\005\"\024Payment Integrations\022B\n\037PERMISSIO" +
+      "N_INTEGRATIONS_JOURNEY\020\226\n\032\034\212\265\030\030\020\005\"\024Journ" +
+      "ey Integrations\022\260\001\n\016PERMISSION_WFM\020\334\013\032\232\001" +
+      "\212\265\030\225\001\020\017\"\nForecaster\"\016Skill Profiles\"\026For" +
+      "ecasting Parameters\"\023Profile Forecasting" +
+      "\"\026Regression Forecasting\"\023Current Foreca" +
+      "sting\"\tScheduler\"\020Agent Management\0222\n\027PE" +
+      "RMISSION_AGENT_PORTAL\020\335\013\032\024\212\265\030\020\020\017\"\014Agent " +
+      "Portal\022\"\n\025PERMISSION_SCORECARDS\020\300\014\032\006\212\265\030\002" +
+      "\020\013\022)\n\034PERMISSION_SCORECARDS_MANAGE\020\301\014\032\006\212" +
+      "\265\030\002\020\013\022+\n\036PERMISSION_SCORECARDS_EVALUATE\020" +
+      "\302\014\032\006\212\265\030\002\020\013\022,\n\037PERMISSION_SCORECARDS_FLAG" +
+      "_EVAL\020\303\014\032\006\212\265\030\002\020\013\0229\n,PERMISSION_SCORECARD" +
+      "S_LEARNING_OPPORTUNITIES\020\304\014\032\006\212\265\030\002\020\013\022/\n\024P" +
+      "ERMISSION_DEV_TOOLS\020\210\016\032\024\212\265\030\020\020\004\"\014API Expl" +
+      "orer\0223\n&PERMISSION_DELIVERY_NOTIFICATION" +
+      "S_VIEW\020\320\017\032\006\212\265\030\002\020\003\0223\n&PERMISSION_DELIVERY" +
+      "_NOTIFICATIONS_EDIT\020\321\017\032\006\212\265\030\002\020\003\022%\n\026PERMIS" +
+      "SION_TICKETS_APP\020\234\030\032\010\212\265\030\004\010\001\020\r\022\'\n\030PERMISS" +
+      "ION_TICKETS_ADMIN\020\235\030\032\010\212\265\030\004\010\001\020\r\022!\n\024PERMIS" +
+      "SION_WORKFLOWS\020\240\037\032\006\212\265\030\002\020\020\022Y\n\033PERMISSION_" +
+      "PBX_MANAGER_VIEW\020\204 \0327\212\265\0303\020\t\030\n\"\022PBX User " +
+      "Managment\"\031Extension Group Managment\022Y\n\033" +
+      "PERMISSION_PBX_MANAGER_EDIT\020\205 \0327\212\265\0303\020\t\030\n" +
+      "\"\022PBX User Managment\"\031Extension Group Ma" +
+      "nagment\022%\n\030PERMISSION_NEWSROOM_VIEW\020\347 \032\006" +
+      "\212\265\030\002\020\021\022%\n\030PERMISSION_NEWSROOM_EDIT\020\350 \032\006\212" +
+      "\265\030\002\020\021\022(\n\033PERMISSION_NEWSROOM_PUBLISH\020\351 \032" +
+      "\006\212\265\030\002\020\021B\222\001\n\"com.tcn.cloud.api.api.common" +
+      "s.authB\nPermsProtoP\001\242\002\003ACA\252\002\020Api.Commons" +
+      ".Auth\312\002\020Api\\Commons\\Auth\342\002\034Api\\Commons\\A" +
+      "uth\\GPBMetadata\352\002\022Api::Commons::Authb\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
