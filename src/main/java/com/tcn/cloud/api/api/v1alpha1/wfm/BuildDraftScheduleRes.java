@@ -142,6 +142,44 @@ private static final long serialVersionUID = 0L;
     return diagnostics_.get(index);
   }
 
+  public static final int SCHEDULING_RESULT_METRIC_FIELD_NUMBER = 3;
+  private com.tcn.cloud.api.api.commons.SchedulingResultMetric schedulingResultMetric_;
+  /**
+   * <pre>
+   * The scheduling result metric for the built schedule range.
+   * </pre>
+   *
+   * <code>.api.commons.SchedulingResultMetric scheduling_result_metric = 3 [json_name = "schedulingResultMetric"];</code>
+   * @return Whether the schedulingResultMetric field is set.
+   */
+  @java.lang.Override
+  public boolean hasSchedulingResultMetric() {
+    return schedulingResultMetric_ != null;
+  }
+  /**
+   * <pre>
+   * The scheduling result metric for the built schedule range.
+   * </pre>
+   *
+   * <code>.api.commons.SchedulingResultMetric scheduling_result_metric = 3 [json_name = "schedulingResultMetric"];</code>
+   * @return The schedulingResultMetric.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.SchedulingResultMetric getSchedulingResultMetric() {
+    return schedulingResultMetric_ == null ? com.tcn.cloud.api.api.commons.SchedulingResultMetric.getDefaultInstance() : schedulingResultMetric_;
+  }
+  /**
+   * <pre>
+   * The scheduling result metric for the built schedule range.
+   * </pre>
+   *
+   * <code>.api.commons.SchedulingResultMetric scheduling_result_metric = 3 [json_name = "schedulingResultMetric"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.SchedulingResultMetricOrBuilder getSchedulingResultMetricOrBuilder() {
+    return schedulingResultMetric_ == null ? com.tcn.cloud.api.api.commons.SchedulingResultMetric.getDefaultInstance() : schedulingResultMetric_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -162,6 +200,9 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < diagnostics_.size(); i++) {
       output.writeMessage(2, diagnostics_.get(i));
     }
+    if (schedulingResultMetric_ != null) {
+      output.writeMessage(3, getSchedulingResultMetric());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -178,6 +219,10 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < diagnostics_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, diagnostics_.get(i));
+    }
+    if (schedulingResultMetric_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, getSchedulingResultMetric());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -201,6 +246,11 @@ private static final long serialVersionUID = 0L;
     }
     if (!getDiagnosticsList()
         .equals(other.getDiagnosticsList())) return false;
+    if (hasSchedulingResultMetric() != other.hasSchedulingResultMetric()) return false;
+    if (hasSchedulingResultMetric()) {
+      if (!getSchedulingResultMetric()
+          .equals(other.getSchedulingResultMetric())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -219,6 +269,10 @@ private static final long serialVersionUID = 0L;
     if (getDiagnosticsCount() > 0) {
       hash = (37 * hash) + DIAGNOSTICS_FIELD_NUMBER;
       hash = (53 * hash) + getDiagnosticsList().hashCode();
+    }
+    if (hasSchedulingResultMetric()) {
+      hash = (37 * hash) + SCHEDULING_RESULT_METRIC_FIELD_NUMBER;
+      hash = (53 * hash) + getSchedulingResultMetric().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -367,6 +421,11 @@ private static final long serialVersionUID = 0L;
         diagnosticsBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000002);
+      schedulingResultMetric_ = null;
+      if (schedulingResultMetricBuilder_ != null) {
+        schedulingResultMetricBuilder_.dispose();
+        schedulingResultMetricBuilder_ = null;
+      }
       return this;
     }
 
@@ -417,6 +476,11 @@ private static final long serialVersionUID = 0L;
         result.draftSchedule_ = draftScheduleBuilder_ == null
             ? draftSchedule_
             : draftScheduleBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.schedulingResultMetric_ = schedulingResultMetricBuilder_ == null
+            ? schedulingResultMetric_
+            : schedulingResultMetricBuilder_.build();
       }
     }
 
@@ -493,6 +557,9 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (other.hasSchedulingResultMetric()) {
+        mergeSchedulingResultMetric(other.getSchedulingResultMetric());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -539,6 +606,13 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 18
+            case 26: {
+              input.readMessage(
+                  getSchedulingResultMetricFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1021,6 +1095,161 @@ private static final long serialVersionUID = 0L;
         diagnostics_ = null;
       }
       return diagnosticsBuilder_;
+    }
+
+    private com.tcn.cloud.api.api.commons.SchedulingResultMetric schedulingResultMetric_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.SchedulingResultMetric, com.tcn.cloud.api.api.commons.SchedulingResultMetric.Builder, com.tcn.cloud.api.api.commons.SchedulingResultMetricOrBuilder> schedulingResultMetricBuilder_;
+    /**
+     * <pre>
+     * The scheduling result metric for the built schedule range.
+     * </pre>
+     *
+     * <code>.api.commons.SchedulingResultMetric scheduling_result_metric = 3 [json_name = "schedulingResultMetric"];</code>
+     * @return Whether the schedulingResultMetric field is set.
+     */
+    public boolean hasSchedulingResultMetric() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * The scheduling result metric for the built schedule range.
+     * </pre>
+     *
+     * <code>.api.commons.SchedulingResultMetric scheduling_result_metric = 3 [json_name = "schedulingResultMetric"];</code>
+     * @return The schedulingResultMetric.
+     */
+    public com.tcn.cloud.api.api.commons.SchedulingResultMetric getSchedulingResultMetric() {
+      if (schedulingResultMetricBuilder_ == null) {
+        return schedulingResultMetric_ == null ? com.tcn.cloud.api.api.commons.SchedulingResultMetric.getDefaultInstance() : schedulingResultMetric_;
+      } else {
+        return schedulingResultMetricBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The scheduling result metric for the built schedule range.
+     * </pre>
+     *
+     * <code>.api.commons.SchedulingResultMetric scheduling_result_metric = 3 [json_name = "schedulingResultMetric"];</code>
+     */
+    public Builder setSchedulingResultMetric(com.tcn.cloud.api.api.commons.SchedulingResultMetric value) {
+      if (schedulingResultMetricBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        schedulingResultMetric_ = value;
+      } else {
+        schedulingResultMetricBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The scheduling result metric for the built schedule range.
+     * </pre>
+     *
+     * <code>.api.commons.SchedulingResultMetric scheduling_result_metric = 3 [json_name = "schedulingResultMetric"];</code>
+     */
+    public Builder setSchedulingResultMetric(
+        com.tcn.cloud.api.api.commons.SchedulingResultMetric.Builder builderForValue) {
+      if (schedulingResultMetricBuilder_ == null) {
+        schedulingResultMetric_ = builderForValue.build();
+      } else {
+        schedulingResultMetricBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The scheduling result metric for the built schedule range.
+     * </pre>
+     *
+     * <code>.api.commons.SchedulingResultMetric scheduling_result_metric = 3 [json_name = "schedulingResultMetric"];</code>
+     */
+    public Builder mergeSchedulingResultMetric(com.tcn.cloud.api.api.commons.SchedulingResultMetric value) {
+      if (schedulingResultMetricBuilder_ == null) {
+        if (((bitField0_ & 0x00000004) != 0) &&
+          schedulingResultMetric_ != null &&
+          schedulingResultMetric_ != com.tcn.cloud.api.api.commons.SchedulingResultMetric.getDefaultInstance()) {
+          getSchedulingResultMetricBuilder().mergeFrom(value);
+        } else {
+          schedulingResultMetric_ = value;
+        }
+      } else {
+        schedulingResultMetricBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The scheduling result metric for the built schedule range.
+     * </pre>
+     *
+     * <code>.api.commons.SchedulingResultMetric scheduling_result_metric = 3 [json_name = "schedulingResultMetric"];</code>
+     */
+    public Builder clearSchedulingResultMetric() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      schedulingResultMetric_ = null;
+      if (schedulingResultMetricBuilder_ != null) {
+        schedulingResultMetricBuilder_.dispose();
+        schedulingResultMetricBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The scheduling result metric for the built schedule range.
+     * </pre>
+     *
+     * <code>.api.commons.SchedulingResultMetric scheduling_result_metric = 3 [json_name = "schedulingResultMetric"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.SchedulingResultMetric.Builder getSchedulingResultMetricBuilder() {
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return getSchedulingResultMetricFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The scheduling result metric for the built schedule range.
+     * </pre>
+     *
+     * <code>.api.commons.SchedulingResultMetric scheduling_result_metric = 3 [json_name = "schedulingResultMetric"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.SchedulingResultMetricOrBuilder getSchedulingResultMetricOrBuilder() {
+      if (schedulingResultMetricBuilder_ != null) {
+        return schedulingResultMetricBuilder_.getMessageOrBuilder();
+      } else {
+        return schedulingResultMetric_ == null ?
+            com.tcn.cloud.api.api.commons.SchedulingResultMetric.getDefaultInstance() : schedulingResultMetric_;
+      }
+    }
+    /**
+     * <pre>
+     * The scheduling result metric for the built schedule range.
+     * </pre>
+     *
+     * <code>.api.commons.SchedulingResultMetric scheduling_result_metric = 3 [json_name = "schedulingResultMetric"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.SchedulingResultMetric, com.tcn.cloud.api.api.commons.SchedulingResultMetric.Builder, com.tcn.cloud.api.api.commons.SchedulingResultMetricOrBuilder> 
+        getSchedulingResultMetricFieldBuilder() {
+      if (schedulingResultMetricBuilder_ == null) {
+        schedulingResultMetricBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.SchedulingResultMetric, com.tcn.cloud.api.api.commons.SchedulingResultMetric.Builder, com.tcn.cloud.api.api.commons.SchedulingResultMetricOrBuilder>(
+                getSchedulingResultMetric(),
+                getParentForChildren(),
+                isClean());
+        schedulingResultMetric_ = null;
+      }
+      return schedulingResultMetricBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

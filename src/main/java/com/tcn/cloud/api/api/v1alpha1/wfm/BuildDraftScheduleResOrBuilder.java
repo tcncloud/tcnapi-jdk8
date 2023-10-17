@@ -77,4 +77,31 @@ public interface BuildDraftScheduleResOrBuilder extends
    */
   com.tcn.cloud.api.api.v1alpha1.wfm.DiagnosticOrBuilder getDiagnosticsOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * The scheduling result metric for the built schedule range.
+   * </pre>
+   *
+   * <code>.api.commons.SchedulingResultMetric scheduling_result_metric = 3 [json_name = "schedulingResultMetric"];</code>
+   * @return Whether the schedulingResultMetric field is set.
+   */
+  boolean hasSchedulingResultMetric();
+  /**
+   * <pre>
+   * The scheduling result metric for the built schedule range.
+   * </pre>
+   *
+   * <code>.api.commons.SchedulingResultMetric scheduling_result_metric = 3 [json_name = "schedulingResultMetric"];</code>
+   * @return The schedulingResultMetric.
+   */
+  com.tcn.cloud.api.api.commons.SchedulingResultMetric getSchedulingResultMetric();
+  /**
+   * <pre>
+   * The scheduling result metric for the built schedule range.
+   * </pre>
+   *
+   * <code>.api.commons.SchedulingResultMetric scheduling_result_metric = 3 [json_name = "schedulingResultMetric"];</code>
+   */
+  com.tcn.cloud.api.api.commons.SchedulingResultMetricOrBuilder getSchedulingResultMetricOrBuilder();
 }

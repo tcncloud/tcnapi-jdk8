@@ -79,6 +79,11 @@ public final class WfmProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_commons_SkillProfileCategory_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_SchedulingResultMetric_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_SchedulingResultMetric_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -170,24 +175,36 @@ public final class WfmProto {
       "\0162..api.commons.SkillProfileCategory.Cat" +
       "egoryTypeR\030skillProfileCategoryType\"A\n\014C" +
       "ategoryType\022\030\n\024SINGLE_SKILL_PROFILE\020\000\022\027\n" +
-      "\023SKILL_PROFILE_GROUP\020\001*\250\001\n\036RegressionFor" +
-      "ecasterModelTypes\022\021\n\rRANDOM_FOREST\020\000\022\014\n\010" +
-      "ADABOOST\020\001\022\025\n\021GRADIENT_BOOSTING\020\002\022\025\n\021LIN" +
-      "EAR_REGRESSION\020\003\022\016\n\nLINEAR_AVG\020\004\022\024\n\020SEGM" +
-      "ENTED_LINEAR\020\005\022\007\n\003MLP\020\006\022\010\n\004AUTO\020\007*X\n&Reg" +
-      "ressionForecasterAvgsProcessingType\022\014\n\010F" +
-      "ORECAST\020\000\022\014\n\010AVERAGES\020\001\022\022\n\016FIXED_AVERAGE" +
-      "S\020\002*d\n\022ConstraintTimeUnit\022\013\n\007MINUTES\020\000\022\t" +
-      "\n\005HOURS\020\001\022\n\n\006SHIFTS\020\002\022\010\n\004DAYS\020\003\022\t\n\005WEEKS" +
-      "\020\004\022\n\n\006MONTHS\020\005\022\t\n\005YEARS\020\006*\302\002\n\020ConfigEnti" +
-      "tyType\022\024\n\020CALL_CENTER_NODE\020\000\022\017\n\013CLIENT_N" +
-      "ODE\020\001\022\021\n\rLOCATION_NODE\020\002\022\020\n\014PROGRAM_NODE" +
-      "\020\003\022\017\n\013AGENT_GROUP\020\004\022\022\n\016SHIFT_TEMPLATE\020\005\022" +
-      "\r\n\tWFM_AGENT\020\006\022\022\n\016PLACEMENT_RULE\020\007\022\023\n\017CO" +
-      "NSTRAINT_RULE\020\010\022\026\n\022NON_SKILL_ACTIVITY\020\t\022" +
-      "\026\n\022AGENT_AVAILABILITY\020\n\022\016\n\nOPEN_TIMES\020\013\022" +
-      "\027\n\023SCHEDULING_ACTIVITY\020\014\022\025\n\021SKILL_PROFIC" +
-      "IENCY\020\r\022\025\n\021SCHEDULE_SCENARIO\020\016*\301\001\n\022Const" +
+      "\023SKILL_PROFILE_GROUP\020\001\"\317\002\n\026SchedulingRes" +
+      "ultMetric\0228\n\030total_internal_intervals\030\001 " +
+      "\001(\005R\026totalInternalIntervals\022H\n!total_int" +
+      "ervals_with_fte_required\030\002 \001(\005R\035totalInt" +
+      "ervalsWithFteRequired\022L\n#total_intervals" +
+      "_with_ftes_remaining\030\003 \001(\005R\037totalInterva" +
+      "lsWithFtesRemaining\022\032\n\010coverage\030\004 \001(\002R\010c" +
+      "overage\022(\n\020root_mean_square\030\005 \001(\002R\016rootM" +
+      "eanSquare\022\035\n\nhas_result\030\006 \001(\010R\thasResult" +
+      "*\250\001\n\036RegressionForecasterModelTypes\022\021\n\rR" +
+      "ANDOM_FOREST\020\000\022\014\n\010ADABOOST\020\001\022\025\n\021GRADIENT" +
+      "_BOOSTING\020\002\022\025\n\021LINEAR_REGRESSION\020\003\022\016\n\nLI" +
+      "NEAR_AVG\020\004\022\024\n\020SEGMENTED_LINEAR\020\005\022\007\n\003MLP\020" +
+      "\006\022\010\n\004AUTO\020\007*X\n&RegressionForecasterAvgsP" +
+      "rocessingType\022\014\n\010FORECAST\020\000\022\014\n\010AVERAGES\020" +
+      "\001\022\022\n\016FIXED_AVERAGES\020\002*d\n\022ConstraintTimeU" +
+      "nit\022\013\n\007MINUTES\020\000\022\t\n\005HOURS\020\001\022\n\n\006SHIFTS\020\002\022" +
+      "\010\n\004DAYS\020\003\022\t\n\005WEEKS\020\004\022\n\n\006MONTHS\020\005\022\t\n\005YEAR" +
+      "S\020\006*\320\003\n\020ConfigEntityType\022\024\n\020CALL_CENTER_" +
+      "NODE\020\000\022\017\n\013CLIENT_NODE\020\001\022\021\n\rLOCATION_NODE" +
+      "\020\002\022\020\n\014PROGRAM_NODE\020\003\022\017\n\013AGENT_GROUP\020\004\022\022\n" +
+      "\016SHIFT_TEMPLATE\020\005\022\r\n\tWFM_AGENT\020\006\022\022\n\016PLAC" +
+      "EMENT_RULE\020\007\022\023\n\017CONSTRAINT_RULE\020\010\022\026\n\022NON" +
+      "_SKILL_ACTIVITY\020\t\022\026\n\022AGENT_AVAILABILITY\020" +
+      "\n\022\016\n\nOPEN_TIMES\020\013\022\027\n\023SCHEDULING_ACTIVITY" +
+      "\020\014\022\025\n\021SKILL_PROFICIENCY\020\r\022\025\n\021SCHEDULE_SC" +
+      "ENARIO\020\016\022\t\n\005SKILL\020\017\022\020\n\014TOUR_PATTERN\020\020\022\025\n" +
+      "\021TOUR_WEEK_PATTERN\020\021\022\036\n\032TOUR_SHIFT_INSTA" +
+      "NCE_CONFIG\020\022\022\035\n\031TOUR_SHIFT_SEGMENT_CONFI" +
+      "G\020\023\022\031\n\025TOUR_AGENT_COLLECTION\020\024*\301\001\n\022Const" +
       "raintRuleType\022\021\n\rMIN_CONSEC_ON\020\000\022\021\n\rMAX_" +
       "CONSEC_ON\020\001\022\022\n\016MIN_CONSEC_OFF\020\002\022\022\n\016MAX_C" +
       "ONSEC_OFF\020\003\022\020\n\014MIN_TOTAL_ON\020\004\022\020\n\014MAX_TOT" +
@@ -376,6 +393,12 @@ public final class WfmProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_SkillProfileCategory_descriptor,
         new java.lang.String[] { "SkillProfileCategorySid", "SkillProfileCategoryType", });
+    internal_static_api_commons_SchedulingResultMetric_descriptor =
+      getDescriptor().getMessageTypes().get(13);
+    internal_static_api_commons_SchedulingResultMetric_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_SchedulingResultMetric_descriptor,
+        new java.lang.String[] { "TotalInternalIntervals", "TotalIntervalsWithFteRequired", "TotalIntervalsWithFtesRemaining", "Coverage", "RootMeanSquare", "HasResult", });
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 
