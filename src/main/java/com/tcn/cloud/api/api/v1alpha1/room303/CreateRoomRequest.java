@@ -20,6 +20,7 @@ private static final long serialVersionUID = 0L;
     type_ = 0;
     members_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
+    config_ = "";
   }
 
   @java.lang.Override
@@ -136,6 +137,53 @@ private static final long serialVersionUID = 0L;
     return members_.getByteString(index);
   }
 
+  public static final int CONFIG_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object config_ = "";
+  /**
+   * <pre>
+   * room configuration details
+   * </pre>
+   *
+   * <code>string config = 4 [json_name = "config"];</code>
+   * @return The config.
+   */
+  @java.lang.Override
+  public java.lang.String getConfig() {
+    java.lang.Object ref = config_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      config_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * room configuration details
+   * </pre>
+   *
+   * <code>string config = 4 [json_name = "config"];</code>
+   * @return The bytes for config.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getConfigBytes() {
+    java.lang.Object ref = config_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      config_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -158,6 +206,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < members_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, members_.getRaw(i));
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(config_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, config_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -183,6 +234,9 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getMembersList().size();
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(config_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, config_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -203,6 +257,8 @@ private static final long serialVersionUID = 0L;
     if (type_ != other.type_) return false;
     if (!getMembersList()
         .equals(other.getMembersList())) return false;
+    if (!getConfig()
+        .equals(other.getConfig())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -222,6 +278,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + MEMBERS_FIELD_NUMBER;
       hash = (53 * hash) + getMembersList().hashCode();
     }
+    hash = (37 * hash) + CONFIG_FIELD_NUMBER;
+    hash = (53 * hash) + getConfig().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -357,6 +415,7 @@ private static final long serialVersionUID = 0L;
       type_ = 0;
       members_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
+      config_ = "";
       return this;
     }
 
@@ -399,6 +458,9 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         members_.makeImmutable();
         result.members_ = members_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.config_ = config_;
       }
     }
 
@@ -464,6 +526,11 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       }
+      if (!other.getConfig().isEmpty()) {
+        config_ = other.config_;
+        bitField0_ |= 0x00000008;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -506,6 +573,11 @@ private static final long serialVersionUID = 0L;
               members_.add(s);
               break;
             } // case 26
+            case 34: {
+              config_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -755,6 +827,98 @@ private static final long serialVersionUID = 0L;
       ensureMembersIsMutable();
       members_.add(value);
       bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object config_ = "";
+    /**
+     * <pre>
+     * room configuration details
+     * </pre>
+     *
+     * <code>string config = 4 [json_name = "config"];</code>
+     * @return The config.
+     */
+    public java.lang.String getConfig() {
+      java.lang.Object ref = config_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        config_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * room configuration details
+     * </pre>
+     *
+     * <code>string config = 4 [json_name = "config"];</code>
+     * @return The bytes for config.
+     */
+    public com.google.protobuf.ByteString
+        getConfigBytes() {
+      java.lang.Object ref = config_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        config_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * room configuration details
+     * </pre>
+     *
+     * <code>string config = 4 [json_name = "config"];</code>
+     * @param value The config to set.
+     * @return This builder for chaining.
+     */
+    public Builder setConfig(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      config_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * room configuration details
+     * </pre>
+     *
+     * <code>string config = 4 [json_name = "config"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearConfig() {
+      config_ = getDefaultInstance().getConfig();
+      bitField0_ = (bitField0_ & ~0x00000008);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * room configuration details
+     * </pre>
+     *
+     * <code>string config = 4 [json_name = "config"];</code>
+     * @param value The bytes for config to set.
+     * @return This builder for chaining.
+     */
+    public Builder setConfigBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      config_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }

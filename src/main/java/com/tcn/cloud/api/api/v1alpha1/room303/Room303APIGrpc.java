@@ -666,6 +666,37 @@ public final class Room303APIGrpc {
     return getListUsersNamesMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.room303.EditRoomConfigRequest,
+      com.tcn.cloud.api.api.commons.Room> getEditRoomConfigMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "EditRoomConfig",
+      requestType = com.tcn.cloud.api.api.v1alpha1.room303.EditRoomConfigRequest.class,
+      responseType = com.tcn.cloud.api.api.commons.Room.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.room303.EditRoomConfigRequest,
+      com.tcn.cloud.api.api.commons.Room> getEditRoomConfigMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.room303.EditRoomConfigRequest, com.tcn.cloud.api.api.commons.Room> getEditRoomConfigMethod;
+    if ((getEditRoomConfigMethod = Room303APIGrpc.getEditRoomConfigMethod) == null) {
+      synchronized (Room303APIGrpc.class) {
+        if ((getEditRoomConfigMethod = Room303APIGrpc.getEditRoomConfigMethod) == null) {
+          Room303APIGrpc.getEditRoomConfigMethod = getEditRoomConfigMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.room303.EditRoomConfigRequest, com.tcn.cloud.api.api.commons.Room>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "EditRoomConfig"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.room303.EditRoomConfigRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.commons.Room.getDefaultInstance()))
+              .setSchemaDescriptor(new Room303APIMethodDescriptorSupplier("EditRoomConfig"))
+              .build();
+        }
+      }
+    }
+    return getEditRoomConfigMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -887,6 +918,16 @@ public final class Room303APIGrpc {
     default void listUsersNames(com.tcn.cloud.api.api.v1alpha1.room303.ListUsersNamesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.room303.ListUsersNamesResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListUsersNamesMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * allow room configurations to be edited
+     * </pre>
+     */
+    default void editRoomConfig(com.tcn.cloud.api.api.v1alpha1.room303.EditRoomConfigRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.Room> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEditRoomConfigMethod(), responseObserver);
     }
   }
 
@@ -1112,6 +1153,17 @@ public final class Room303APIGrpc {
       io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getListUsersNamesMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * allow room configurations to be edited
+     * </pre>
+     */
+    public void editRoomConfig(com.tcn.cloud.api.api.v1alpha1.room303.EditRoomConfigRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.Room> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getEditRoomConfigMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -1305,6 +1357,16 @@ public final class Room303APIGrpc {
         com.tcn.cloud.api.api.v1alpha1.room303.ListUsersNamesRequest request) {
       return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getListUsersNamesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * allow room configurations to be edited
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.commons.Room editRoomConfig(com.tcn.cloud.api.api.v1alpha1.room303.EditRoomConfigRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getEditRoomConfigMethod(), getCallOptions(), request);
     }
   }
 
@@ -1500,6 +1562,17 @@ public final class Room303APIGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getArchiveRoomMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * allow room configurations to be edited
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.commons.Room> editRoomConfig(
+        com.tcn.cloud.api.api.v1alpha1.room303.EditRoomConfigRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getEditRoomConfigMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_ADD_ROOM_MEMBER = 0;
@@ -1523,6 +1596,7 @@ public final class Room303APIGrpc {
   private static final int METHODID_LIST_ROOMS_FOR_MEMBER = 18;
   private static final int METHODID_ARCHIVE_ROOM = 19;
   private static final int METHODID_LIST_USERS_NAMES = 20;
+  private static final int METHODID_EDIT_ROOM_CONFIG = 21;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1624,6 +1698,10 @@ public final class Room303APIGrpc {
         case METHODID_LIST_USERS_NAMES:
           serviceImpl.listUsersNames((com.tcn.cloud.api.api.v1alpha1.room303.ListUsersNamesRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.room303.ListUsersNamesResponse>) responseObserver);
+          break;
+        case METHODID_EDIT_ROOM_CONFIG:
+          serviceImpl.editRoomConfig((com.tcn.cloud.api.api.v1alpha1.room303.EditRoomConfigRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.Room>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -1790,6 +1868,13 @@ public final class Room303APIGrpc {
               com.tcn.cloud.api.api.v1alpha1.room303.ListUsersNamesRequest,
               com.tcn.cloud.api.api.v1alpha1.room303.ListUsersNamesResponse>(
                 service, METHODID_LIST_USERS_NAMES)))
+        .addMethod(
+          getEditRoomConfigMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.room303.EditRoomConfigRequest,
+              com.tcn.cloud.api.api.commons.Room>(
+                service, METHODID_EDIT_ROOM_CONFIG)))
         .build();
   }
 
@@ -1859,6 +1944,7 @@ public final class Room303APIGrpc {
               .addMethod(getListRoomsForMemberMethod())
               .addMethod(getArchiveRoomMethod())
               .addMethod(getListUsersNamesMethod())
+              .addMethod(getEditRoomConfigMethod())
               .build();
         }
       }
