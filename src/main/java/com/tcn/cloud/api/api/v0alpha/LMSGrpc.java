@@ -1720,6 +1720,37 @@ public final class LMSGrpc {
     return getUpdateCjsSecureSearchCriteriaMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.TestingBytes,
+      com.google.protobuf.Empty> getTestByteFieldMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "TestByteField",
+      requestType = com.tcn.cloud.api.api.v0alpha.TestingBytes.class,
+      responseType = com.google.protobuf.Empty.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.TestingBytes,
+      com.google.protobuf.Empty> getTestByteFieldMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.TestingBytes, com.google.protobuf.Empty> getTestByteFieldMethod;
+    if ((getTestByteFieldMethod = LMSGrpc.getTestByteFieldMethod) == null) {
+      synchronized (LMSGrpc.class) {
+        if ((getTestByteFieldMethod = LMSGrpc.getTestByteFieldMethod) == null) {
+          LMSGrpc.getTestByteFieldMethod = getTestByteFieldMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.TestingBytes, com.google.protobuf.Empty>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "TestByteField"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.TestingBytes.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.protobuf.Empty.getDefaultInstance()))
+              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("TestByteField"))
+              .build();
+        }
+      }
+    }
+    return getTestByteFieldMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ElementPK,
       com.tcn.cloud.api.api.v0alpha.Events> getGetQueuedEventsStatusByElementIdMethod;
 
@@ -2236,6 +2267,13 @@ public final class LMSGrpc {
     default void updateCjsSecureSearchCriteria(com.tcn.cloud.api.api.v0alpha.CjsSecureSearchCriteria request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateCjsSecureSearchCriteriaMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void testByteField(com.tcn.cloud.api.api.v0alpha.TestingBytes request,
+        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getTestByteFieldMethod(), responseObserver);
     }
 
     /**
@@ -2769,6 +2807,14 @@ public final class LMSGrpc {
 
     /**
      */
+    public void testByteField(com.tcn.cloud.api.api.v0alpha.TestingBytes request,
+        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getTestByteFieldMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
     public void getQueuedEventsStatusByElementId(com.tcn.cloud.api.api.v0alpha.ElementPK request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Events> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -3227,6 +3273,13 @@ public final class LMSGrpc {
     public com.google.protobuf.Empty updateCjsSecureSearchCriteria(com.tcn.cloud.api.api.v0alpha.CjsSecureSearchCriteria request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateCjsSecureSearchCriteriaMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.google.protobuf.Empty testByteField(com.tcn.cloud.api.api.v0alpha.TestingBytes request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getTestByteFieldMethod(), getCallOptions(), request);
     }
 
     /**
@@ -3691,6 +3744,14 @@ public final class LMSGrpc {
 
     /**
      */
+    public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> testByteField(
+        com.tcn.cloud.api.api.v0alpha.TestingBytes request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getTestByteFieldMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.Events> getQueuedEventsStatusByElementId(
         com.tcn.cloud.api.api.v0alpha.ElementPK request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -3752,8 +3813,9 @@ public final class LMSGrpc {
   private static final int METHODID_GET_CJS_SECURE_SEARCH_CRITERIA = 51;
   private static final int METHODID_CREATE_CJS_SECURE_SEARCH_CRITERIA = 52;
   private static final int METHODID_UPDATE_CJS_SECURE_SEARCH_CRITERIA = 53;
-  private static final int METHODID_GET_QUEUED_EVENTS_STATUS_BY_ELEMENT_ID = 54;
-  private static final int METHODID_STREAM_LIST = 55;
+  private static final int METHODID_TEST_BYTE_FIELD = 54;
+  private static final int METHODID_GET_QUEUED_EVENTS_STATUS_BY_ELEMENT_ID = 55;
+  private static final int METHODID_STREAM_LIST = 56;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -3986,6 +4048,10 @@ public final class LMSGrpc {
           break;
         case METHODID_UPDATE_CJS_SECURE_SEARCH_CRITERIA:
           serviceImpl.updateCjsSecureSearchCriteria((com.tcn.cloud.api.api.v0alpha.CjsSecureSearchCriteria) request,
+              (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
+          break;
+        case METHODID_TEST_BYTE_FIELD:
+          serviceImpl.testByteField((com.tcn.cloud.api.api.v0alpha.TestingBytes) request,
               (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
           break;
         case METHODID_GET_QUEUED_EVENTS_STATUS_BY_ELEMENT_ID:
@@ -4399,6 +4465,13 @@ public final class LMSGrpc {
               com.google.protobuf.Empty>(
                 service, METHODID_UPDATE_CJS_SECURE_SEARCH_CRITERIA)))
         .addMethod(
+          getTestByteFieldMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.TestingBytes,
+              com.google.protobuf.Empty>(
+                service, METHODID_TEST_BYTE_FIELD)))
+        .addMethod(
           getGetQueuedEventsStatusByElementIdMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -4508,6 +4581,7 @@ public final class LMSGrpc {
               .addMethod(getGetCjsSecureSearchCriteriaMethod())
               .addMethod(getCreateCjsSecureSearchCriteriaMethod())
               .addMethod(getUpdateCjsSecureSearchCriteriaMethod())
+              .addMethod(getTestByteFieldMethod())
               .addMethod(getGetQueuedEventsStatusByElementIdMethod())
               .build();
         }
