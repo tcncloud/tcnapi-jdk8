@@ -182,24 +182,4 @@ public interface RoomOrBuilder extends
    */
   com.google.protobuf.ByteString
       getDisplayNameBytes();
-
-  /**
-   * <pre>
-   * room configuration details
-   * </pre>
-   *
-   * <code>string config = 10 [json_name = "config"];</code>
-   * @return The config.
-   */
-  java.lang.String getConfig();
-  /**
-   * <pre>
-   * room configuration details
-   * </pre>
-   *
-   * <code>string config = 10 [json_name = "config"];</code>
-   * @return The bytes for config.
-   */
-  com.google.protobuf.ByteString
-      getConfigBytes();
 }

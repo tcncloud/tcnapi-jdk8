@@ -57,7 +57,7 @@ public final class Room303Proto {
       "ed_by\030\002 \001(\0132\024.api.commons.UserSidR\007added" +
       "By\0225\n\010added_at\030\003 \001(\0132\032.google.protobuf.T" +
       "imestampR\007addedAt\022\027\n\007room_id\030\004 \001(\tR\006room" +
-      "Id\022\024\n\005admin\030\005 \001(\010R\005admin\"\331\002\n\004Room\022\025\n\006org" +
+      "Id\022\024\n\005admin\030\005 \001(\010R\005admin\"\301\002\n\004Room\022\025\n\006org" +
       "_id\030\001 \001(\tR\005orgId\022\027\n\007room_id\030\002 \001(\tR\006roomI" +
       "d\022)\n\004type\030\004 \001(\0162\025.api.commons.RoomTypeR\004" +
       "type\0229\n\ncreated_at\030\005 \001(\0132\032.google.protob" +
@@ -65,29 +65,29 @@ public final class Room303Proto {
       "\001(\0132\032.google.protobuf.TimestampR\tupdated" +
       "At\022/\n\006status\030\007 \001(\0162\027.api.commons.RoomSta" +
       "tusR\006status\022\016\n\002id\030\010 \001(\tR\002id\022!\n\014display_n" +
-      "ame\030\t \001(\tR\013displayName\022\026\n\006config\030\n \001(\tR\006" +
-      "configJ\004\010\003\020\004\"\377\002\n\007Message\022\025\n\006org_id\030\001 \001(\t" +
-      "R\005orgId\022\035\n\nmessage_id\030\002 \001(\tR\tmessageId\022\027" +
-      "\n\007room_id\030\003 \001(\tR\006roomId\0221\n\tfrom_user\030\004 \001" +
-      "(\0132\024.api.commons.UserSidR\010fromUser\0222\n\006st" +
-      "atus\030\005 \001(\0162\032.api.commons.MessageStatusR\006" +
-      "status\022;\n\013received_at\030\006 \001(\0132\032.google.pro" +
-      "tobuf.TimestampR\nreceivedAt\0229\n\nupdated_a" +
-      "t\030\007 \001(\0132\032.google.protobuf.TimestampR\tupd" +
-      "atedAt\022\030\n\007payload\030\010 \001(\tR\007payload\022\026\n\006unre" +
-      "ad\030\t \001(\010R\006unread\022\024\n\005nonce\030\n \001(\tR\005nonce\"O" +
-      "\n\013MessageStat\022\027\n\007room_id\030\001 \001(\tR\006roomId\022\'" +
-      "\n\017unread_messages\030\002 \001(\005R\016unreadMessages*" +
-      "K\n\010RoomType\022\024\n\020ROOM_TYPE_DIRECT\020\000\022\023\n\017ROO" +
-      "M_TYPE_MULTI\020\001\022\024\n\020ROOM_TYPE_SYSTEM\020\002*b\n\r" +
-      "MessageStatus\022\031\n\025MESSAGE_STATUS_ACTIVE\020\000" +
-      "\022\031\n\025MESSAGE_STATUS_EDITED\020\001\022\033\n\027MESSAGE_S" +
-      "TATUS_ARCHIVED\020\002*W\n\nRoomStatus\022\026\n\022ROOM_S" +
-      "TATUS_ACTIVE\020\000\022\030\n\024ROOM_STATUS_ARCHIVED\020\001" +
-      "\022\027\n\023ROOM_STATUS_DELETED\020\002Bz\n\035com.tcn.clo" +
-      "ud.api.api.commonsB\014Room303ProtoP\001\242\002\003ACX" +
-      "\252\002\013Api.Commons\312\002\013Api\\Commons\342\002\027Api\\Commo" +
-      "ns\\GPBMetadata\352\002\014Api::Commonsb\006proto3"
+      "ame\030\t \001(\tR\013displayNameJ\004\010\003\020\004\"\377\002\n\007Message" +
+      "\022\025\n\006org_id\030\001 \001(\tR\005orgId\022\035\n\nmessage_id\030\002 " +
+      "\001(\tR\tmessageId\022\027\n\007room_id\030\003 \001(\tR\006roomId\022" +
+      "1\n\tfrom_user\030\004 \001(\0132\024.api.commons.UserSid" +
+      "R\010fromUser\0222\n\006status\030\005 \001(\0162\032.api.commons" +
+      ".MessageStatusR\006status\022;\n\013received_at\030\006 " +
+      "\001(\0132\032.google.protobuf.TimestampR\nreceive" +
+      "dAt\0229\n\nupdated_at\030\007 \001(\0132\032.google.protobu" +
+      "f.TimestampR\tupdatedAt\022\030\n\007payload\030\010 \001(\tR" +
+      "\007payload\022\026\n\006unread\030\t \001(\010R\006unread\022\024\n\005nonc" +
+      "e\030\n \001(\tR\005nonce\"O\n\013MessageStat\022\027\n\007room_id" +
+      "\030\001 \001(\tR\006roomId\022\'\n\017unread_messages\030\002 \001(\005R" +
+      "\016unreadMessages*K\n\010RoomType\022\024\n\020ROOM_TYPE" +
+      "_DIRECT\020\000\022\023\n\017ROOM_TYPE_MULTI\020\001\022\024\n\020ROOM_T" +
+      "YPE_SYSTEM\020\002*b\n\rMessageStatus\022\031\n\025MESSAGE" +
+      "_STATUS_ACTIVE\020\000\022\031\n\025MESSAGE_STATUS_EDITE" +
+      "D\020\001\022\033\n\027MESSAGE_STATUS_ARCHIVED\020\002*W\n\nRoom" +
+      "Status\022\026\n\022ROOM_STATUS_ACTIVE\020\000\022\030\n\024ROOM_S" +
+      "TATUS_ARCHIVED\020\001\022\027\n\023ROOM_STATUS_DELETED\020" +
+      "\002Bz\n\035com.tcn.cloud.api.api.commonsB\014Room" +
+      "303ProtoP\001\242\002\003ACX\252\002\013Api.Commons\312\002\013Api\\Com" +
+      "mons\342\002\027Api\\Commons\\GPBMetadata\352\002\014Api::Co" +
+      "mmonsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -111,7 +111,7 @@ public final class Room303Proto {
     internal_static_api_commons_Room_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_Room_descriptor,
-        new java.lang.String[] { "OrgId", "RoomId", "Type", "CreatedAt", "UpdatedAt", "Status", "Id", "DisplayName", "Config", });
+        new java.lang.String[] { "OrgId", "RoomId", "Type", "CreatedAt", "UpdatedAt", "Status", "Id", "DisplayName", });
     internal_static_api_commons_Message_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_api_commons_Message_fieldAccessorTable = new
