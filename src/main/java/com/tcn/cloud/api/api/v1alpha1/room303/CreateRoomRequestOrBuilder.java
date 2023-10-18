@@ -54,31 +54,4 @@ public interface CreateRoomRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getMembersBytes(int index);
-
-  /**
-   * <pre>
-   * room configuration details
-   * </pre>
-   *
-   * <code>.api.commons.RoomConfig config = 4 [json_name = "config"];</code>
-   * @return Whether the config field is set.
-   */
-  boolean hasConfig();
-  /**
-   * <pre>
-   * room configuration details
-   * </pre>
-   *
-   * <code>.api.commons.RoomConfig config = 4 [json_name = "config"];</code>
-   * @return The config.
-   */
-  com.tcn.cloud.api.api.commons.RoomConfig getConfig();
-  /**
-   * <pre>
-   * room configuration details
-   * </pre>
-   *
-   * <code>.api.commons.RoomConfig config = 4 [json_name = "config"];</code>
-   */
-  com.tcn.cloud.api.api.commons.RoomConfigOrBuilder getConfigOrBuilder();
 }

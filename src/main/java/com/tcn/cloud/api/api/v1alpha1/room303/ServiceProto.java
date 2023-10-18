@@ -29,7 +29,7 @@ public final class ServiceProto {
       "pha1/room303/member.proto\032\"api/v1alpha1/" +
       "room303/message.proto\032\037api/v1alpha1/room" +
       "303/room.proto\032\034google/api/annotations.p" +
-      "roto2\327\035\n\nRoom303API\022\225\001\n\rAddRoomMember\022*." +
+      "roto2\323 \n\nRoom303API\022\225\001\n\rAddRoomMember\022*." +
       "api.v1alpha1.room303.AddRoomMemberReques" +
       "t\032\023.api.commons.Member\"C\272\270\221\002\005\n\003\010\274\005\202\323\344\223\0023" +
       "\"./api/v1alpha1/room303/room303api/addro" +
@@ -124,11 +124,21 @@ public final class ServiceProto {
       "ha1.room303.UpdateRoomConfigRequest\032\021.ap" +
       "i.commons.Room\"F\272\270\221\002\005\n\003\010\274\005\202\323\344\223\0026\"1/api/v" +
       "1alpha1/room303/room303api/updateroomcon" +
-      "fig:\001*B\250\001\n&com.tcn.cloud.api.api.v1alpha" +
-      "1.room303B\014ServiceProtoP\001\242\002\003AVR\252\002\024Api.V1" +
-      "alpha1.Room303\312\002\024Api\\V1alpha1\\Room303\342\002 " +
-      "Api\\V1alpha1\\Room303\\GPBMetadata\352\002\026Api::" +
-      "V1alpha1::Room303b\006proto3"
+      "fig:\001*\022\301\001\n\022UpdateGlobalConfig\022/.api.v1al" +
+      "pha1.room303.UpdateGlobalConfigRequest\0320" +
+      ".api.v1alpha1.room303.UpdateGlobalConfig" +
+      "Response\"H\272\270\221\002\005\n\003\010\274\005\202\323\344\223\0028\"3/api/v1alpha" +
+      "1/room303/room303api/updateglobalconfig:" +
+      "\001*\022\265\001\n\017GetGlobalConfig\022,.api.v1alpha1.ro" +
+      "om303.GetGlobalConfigRequest\032-.api.v1alp" +
+      "ha1.room303.GetGlobalConfigResponse\"E\272\270\221" +
+      "\002\005\n\003\010\274\005\202\323\344\223\0025\"0/api/v1alpha1/room303/roo" +
+      "m303api/getglobalconfig:\001*B\250\001\n&com.tcn.c" +
+      "loud.api.api.v1alpha1.room303B\014ServicePr" +
+      "otoP\001\242\002\003AVR\252\002\024Api.V1alpha1.Room303\312\002\024Api" +
+      "\\V1alpha1\\Room303\342\002 Api\\V1alpha1\\Room303" +
+      "\\GPBMetadata\352\002\026Api::V1alpha1::Room303b\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

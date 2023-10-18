@@ -697,6 +697,68 @@ public final class Room303APIGrpc {
     return getUpdateRoomConfigMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.room303.UpdateGlobalConfigRequest,
+      com.tcn.cloud.api.api.v1alpha1.room303.UpdateGlobalConfigResponse> getUpdateGlobalConfigMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateGlobalConfig",
+      requestType = com.tcn.cloud.api.api.v1alpha1.room303.UpdateGlobalConfigRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.room303.UpdateGlobalConfigResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.room303.UpdateGlobalConfigRequest,
+      com.tcn.cloud.api.api.v1alpha1.room303.UpdateGlobalConfigResponse> getUpdateGlobalConfigMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.room303.UpdateGlobalConfigRequest, com.tcn.cloud.api.api.v1alpha1.room303.UpdateGlobalConfigResponse> getUpdateGlobalConfigMethod;
+    if ((getUpdateGlobalConfigMethod = Room303APIGrpc.getUpdateGlobalConfigMethod) == null) {
+      synchronized (Room303APIGrpc.class) {
+        if ((getUpdateGlobalConfigMethod = Room303APIGrpc.getUpdateGlobalConfigMethod) == null) {
+          Room303APIGrpc.getUpdateGlobalConfigMethod = getUpdateGlobalConfigMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.room303.UpdateGlobalConfigRequest, com.tcn.cloud.api.api.v1alpha1.room303.UpdateGlobalConfigResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateGlobalConfig"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.room303.UpdateGlobalConfigRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.room303.UpdateGlobalConfigResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new Room303APIMethodDescriptorSupplier("UpdateGlobalConfig"))
+              .build();
+        }
+      }
+    }
+    return getUpdateGlobalConfigMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.room303.GetGlobalConfigRequest,
+      com.tcn.cloud.api.api.v1alpha1.room303.GetGlobalConfigResponse> getGetGlobalConfigMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetGlobalConfig",
+      requestType = com.tcn.cloud.api.api.v1alpha1.room303.GetGlobalConfigRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.room303.GetGlobalConfigResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.room303.GetGlobalConfigRequest,
+      com.tcn.cloud.api.api.v1alpha1.room303.GetGlobalConfigResponse> getGetGlobalConfigMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.room303.GetGlobalConfigRequest, com.tcn.cloud.api.api.v1alpha1.room303.GetGlobalConfigResponse> getGetGlobalConfigMethod;
+    if ((getGetGlobalConfigMethod = Room303APIGrpc.getGetGlobalConfigMethod) == null) {
+      synchronized (Room303APIGrpc.class) {
+        if ((getGetGlobalConfigMethod = Room303APIGrpc.getGetGlobalConfigMethod) == null) {
+          Room303APIGrpc.getGetGlobalConfigMethod = getGetGlobalConfigMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.room303.GetGlobalConfigRequest, com.tcn.cloud.api.api.v1alpha1.room303.GetGlobalConfigResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetGlobalConfig"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.room303.GetGlobalConfigRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.room303.GetGlobalConfigResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new Room303APIMethodDescriptorSupplier("GetGlobalConfig"))
+              .build();
+        }
+      }
+    }
+    return getGetGlobalConfigMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -928,6 +990,26 @@ public final class Room303APIGrpc {
     default void updateRoomConfig(com.tcn.cloud.api.api.v1alpha1.room303.UpdateRoomConfigRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.Room> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateRoomConfigMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * update global configuration
+     * </pre>
+     */
+    default void updateGlobalConfig(com.tcn.cloud.api.api.v1alpha1.room303.UpdateGlobalConfigRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.room303.UpdateGlobalConfigResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateGlobalConfigMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * get global configuration
+     * </pre>
+     */
+    default void getGlobalConfig(com.tcn.cloud.api.api.v1alpha1.room303.GetGlobalConfigRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.room303.GetGlobalConfigResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetGlobalConfigMethod(), responseObserver);
     }
   }
 
@@ -1164,6 +1246,28 @@ public final class Room303APIGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateRoomConfigMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * update global configuration
+     * </pre>
+     */
+    public void updateGlobalConfig(com.tcn.cloud.api.api.v1alpha1.room303.UpdateGlobalConfigRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.room303.UpdateGlobalConfigResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateGlobalConfigMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * get global configuration
+     * </pre>
+     */
+    public void getGlobalConfig(com.tcn.cloud.api.api.v1alpha1.room303.GetGlobalConfigRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.room303.GetGlobalConfigResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetGlobalConfigMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -1367,6 +1471,26 @@ public final class Room303APIGrpc {
     public com.tcn.cloud.api.api.commons.Room updateRoomConfig(com.tcn.cloud.api.api.v1alpha1.room303.UpdateRoomConfigRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateRoomConfigMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * update global configuration
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.room303.UpdateGlobalConfigResponse updateGlobalConfig(com.tcn.cloud.api.api.v1alpha1.room303.UpdateGlobalConfigRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateGlobalConfigMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * get global configuration
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.room303.GetGlobalConfigResponse getGlobalConfig(com.tcn.cloud.api.api.v1alpha1.room303.GetGlobalConfigRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetGlobalConfigMethod(), getCallOptions(), request);
     }
   }
 
@@ -1573,6 +1697,28 @@ public final class Room303APIGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateRoomConfigMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * update global configuration
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.room303.UpdateGlobalConfigResponse> updateGlobalConfig(
+        com.tcn.cloud.api.api.v1alpha1.room303.UpdateGlobalConfigRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateGlobalConfigMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * get global configuration
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.room303.GetGlobalConfigResponse> getGlobalConfig(
+        com.tcn.cloud.api.api.v1alpha1.room303.GetGlobalConfigRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetGlobalConfigMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_ADD_ROOM_MEMBER = 0;
@@ -1597,6 +1743,8 @@ public final class Room303APIGrpc {
   private static final int METHODID_ARCHIVE_ROOM = 19;
   private static final int METHODID_LIST_USERS_NAMES = 20;
   private static final int METHODID_UPDATE_ROOM_CONFIG = 21;
+  private static final int METHODID_UPDATE_GLOBAL_CONFIG = 22;
+  private static final int METHODID_GET_GLOBAL_CONFIG = 23;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1702,6 +1850,14 @@ public final class Room303APIGrpc {
         case METHODID_UPDATE_ROOM_CONFIG:
           serviceImpl.updateRoomConfig((com.tcn.cloud.api.api.v1alpha1.room303.UpdateRoomConfigRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.Room>) responseObserver);
+          break;
+        case METHODID_UPDATE_GLOBAL_CONFIG:
+          serviceImpl.updateGlobalConfig((com.tcn.cloud.api.api.v1alpha1.room303.UpdateGlobalConfigRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.room303.UpdateGlobalConfigResponse>) responseObserver);
+          break;
+        case METHODID_GET_GLOBAL_CONFIG:
+          serviceImpl.getGlobalConfig((com.tcn.cloud.api.api.v1alpha1.room303.GetGlobalConfigRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.room303.GetGlobalConfigResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -1875,6 +2031,20 @@ public final class Room303APIGrpc {
               com.tcn.cloud.api.api.v1alpha1.room303.UpdateRoomConfigRequest,
               com.tcn.cloud.api.api.commons.Room>(
                 service, METHODID_UPDATE_ROOM_CONFIG)))
+        .addMethod(
+          getUpdateGlobalConfigMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.room303.UpdateGlobalConfigRequest,
+              com.tcn.cloud.api.api.v1alpha1.room303.UpdateGlobalConfigResponse>(
+                service, METHODID_UPDATE_GLOBAL_CONFIG)))
+        .addMethod(
+          getGetGlobalConfigMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.room303.GetGlobalConfigRequest,
+              com.tcn.cloud.api.api.v1alpha1.room303.GetGlobalConfigResponse>(
+                service, METHODID_GET_GLOBAL_CONFIG)))
         .build();
   }
 
@@ -1945,6 +2115,8 @@ public final class Room303APIGrpc {
               .addMethod(getArchiveRoomMethod())
               .addMethod(getListUsersNamesMethod())
               .addMethod(getUpdateRoomConfigMethod())
+              .addMethod(getUpdateGlobalConfigMethod())
+              .addMethod(getGetGlobalConfigMethod())
               .build();
         }
       }
