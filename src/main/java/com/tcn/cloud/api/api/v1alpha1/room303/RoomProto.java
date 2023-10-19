@@ -123,15 +123,14 @@ public final class RoomProto {
       "_mask\030d \001(\0132\032.google.protobuf.FieldMaskR" +
       "\tfieldMask\"O\n\032UpdateGlobalConfigResponse" +
       "\0221\n\006config\030\001 \001(\0132\031.api.commons.GlobalCon" +
-      "figR\006config\"K\n\026GetGlobalConfigRequest\0221\n" +
-      "\006config\030\001 \001(\0132\031.api.commons.GlobalConfig" +
-      "R\006config\"L\n\027GetGlobalConfigResponse\0221\n\006c" +
-      "onfig\030\001 \001(\0132\031.api.commons.GlobalConfigR\006" +
-      "configB\245\001\n&com.tcn.cloud.api.api.v1alpha" +
-      "1.room303B\tRoomProtoP\001\242\002\003AVR\252\002\024Api.V1alp" +
-      "ha1.Room303\312\002\024Api\\V1alpha1\\Room303\342\002 Api" +
-      "\\V1alpha1\\Room303\\GPBMetadata\352\002\026Api::V1a" +
-      "lpha1::Room303b\006proto3"
+      "figR\006config\"\030\n\026GetGlobalConfigRequest\"L\n" +
+      "\027GetGlobalConfigResponse\0221\n\006config\030\001 \001(\013" +
+      "2\031.api.commons.GlobalConfigR\006configB\245\001\n&" +
+      "com.tcn.cloud.api.api.v1alpha1.room303B\t" +
+      "RoomProtoP\001\242\002\003AVR\252\002\024Api.V1alpha1.Room303" +
+      "\312\002\024Api\\V1alpha1\\Room303\342\002 Api\\V1alpha1\\R" +
+      "oom303\\GPBMetadata\352\002\026Api::V1alpha1::Room" +
+      "303b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -217,7 +216,7 @@ public final class RoomProto {
     internal_static_api_v1alpha1_room303_GetGlobalConfigRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_room303_GetGlobalConfigRequest_descriptor,
-        new java.lang.String[] { "Config", });
+        new java.lang.String[] { });
     internal_static_api_v1alpha1_room303_GetGlobalConfigResponse_descriptor =
       getDescriptor().getMessageTypes().get(13);
     internal_static_api_v1alpha1_room303_GetGlobalConfigResponse_fieldAccessorTable = new

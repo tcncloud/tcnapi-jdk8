@@ -6,31 +6,4 @@ package com.tcn.cloud.api.api.v1alpha1.room303;
 public interface GetGlobalConfigRequestOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v1alpha1.room303.GetGlobalConfigRequest)
     com.google.protobuf.MessageOrBuilder {
-
-  /**
-   * <pre>
-   * global configuration details
-   * </pre>
-   *
-   * <code>.api.commons.GlobalConfig config = 1 [json_name = "config"];</code>
-   * @return Whether the config field is set.
-   */
-  boolean hasConfig();
-  /**
-   * <pre>
-   * global configuration details
-   * </pre>
-   *
-   * <code>.api.commons.GlobalConfig config = 1 [json_name = "config"];</code>
-   * @return The config.
-   */
-  com.tcn.cloud.api.api.commons.GlobalConfig getConfig();
-  /**
-   * <pre>
-   * global configuration details
-   * </pre>
-   *
-   * <code>.api.commons.GlobalConfig config = 1 [json_name = "config"];</code>
-   */
-  com.tcn.cloud.api.api.commons.GlobalConfigOrBuilder getConfigOrBuilder();
 }

@@ -42,44 +42,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.room303.GetGlobalConfigRequest.class, com.tcn.cloud.api.api.v1alpha1.room303.GetGlobalConfigRequest.Builder.class);
   }
 
-  public static final int CONFIG_FIELD_NUMBER = 1;
-  private com.tcn.cloud.api.api.commons.GlobalConfig config_;
-  /**
-   * <pre>
-   * global configuration details
-   * </pre>
-   *
-   * <code>.api.commons.GlobalConfig config = 1 [json_name = "config"];</code>
-   * @return Whether the config field is set.
-   */
-  @java.lang.Override
-  public boolean hasConfig() {
-    return config_ != null;
-  }
-  /**
-   * <pre>
-   * global configuration details
-   * </pre>
-   *
-   * <code>.api.commons.GlobalConfig config = 1 [json_name = "config"];</code>
-   * @return The config.
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.GlobalConfig getConfig() {
-    return config_ == null ? com.tcn.cloud.api.api.commons.GlobalConfig.getDefaultInstance() : config_;
-  }
-  /**
-   * <pre>
-   * global configuration details
-   * </pre>
-   *
-   * <code>.api.commons.GlobalConfig config = 1 [json_name = "config"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.GlobalConfigOrBuilder getConfigOrBuilder() {
-    return config_ == null ? com.tcn.cloud.api.api.commons.GlobalConfig.getDefaultInstance() : config_;
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -94,9 +56,6 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (config_ != null) {
-      output.writeMessage(1, getConfig());
-    }
     getUnknownFields().writeTo(output);
   }
 
@@ -106,10 +65,6 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (config_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, getConfig());
-    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -125,11 +80,6 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v1alpha1.room303.GetGlobalConfigRequest other = (com.tcn.cloud.api.api.v1alpha1.room303.GetGlobalConfigRequest) obj;
 
-    if (hasConfig() != other.hasConfig()) return false;
-    if (hasConfig()) {
-      if (!getConfig()
-          .equals(other.getConfig())) return false;
-    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -141,10 +91,6 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (hasConfig()) {
-      hash = (37 * hash) + CONFIG_FIELD_NUMBER;
-      hash = (53 * hash) + getConfig().hashCode();
-    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -279,12 +225,6 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
-      config_ = null;
-      if (configBuilder_ != null) {
-        configBuilder_.dispose();
-        configBuilder_ = null;
-      }
       return this;
     }
 
@@ -311,18 +251,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.room303.GetGlobalConfigRequest buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.room303.GetGlobalConfigRequest result = new com.tcn.cloud.api.api.v1alpha1.room303.GetGlobalConfigRequest(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.room303.GetGlobalConfigRequest result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.config_ = configBuilder_ == null
-            ? config_
-            : configBuilder_.build();
-      }
     }
 
     @java.lang.Override
@@ -369,9 +299,6 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.room303.GetGlobalConfigRequest other) {
       if (other == com.tcn.cloud.api.api.v1alpha1.room303.GetGlobalConfigRequest.getDefaultInstance()) return this;
-      if (other.hasConfig()) {
-        mergeConfig(other.getConfig());
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -398,13 +325,6 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 10: {
-              input.readMessage(
-                  getConfigFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -419,162 +339,6 @@ private static final long serialVersionUID = 0L;
         onChanged();
       } // finally
       return this;
-    }
-    private int bitField0_;
-
-    private com.tcn.cloud.api.api.commons.GlobalConfig config_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.GlobalConfig, com.tcn.cloud.api.api.commons.GlobalConfig.Builder, com.tcn.cloud.api.api.commons.GlobalConfigOrBuilder> configBuilder_;
-    /**
-     * <pre>
-     * global configuration details
-     * </pre>
-     *
-     * <code>.api.commons.GlobalConfig config = 1 [json_name = "config"];</code>
-     * @return Whether the config field is set.
-     */
-    public boolean hasConfig() {
-      return ((bitField0_ & 0x00000001) != 0);
-    }
-    /**
-     * <pre>
-     * global configuration details
-     * </pre>
-     *
-     * <code>.api.commons.GlobalConfig config = 1 [json_name = "config"];</code>
-     * @return The config.
-     */
-    public com.tcn.cloud.api.api.commons.GlobalConfig getConfig() {
-      if (configBuilder_ == null) {
-        return config_ == null ? com.tcn.cloud.api.api.commons.GlobalConfig.getDefaultInstance() : config_;
-      } else {
-        return configBuilder_.getMessage();
-      }
-    }
-    /**
-     * <pre>
-     * global configuration details
-     * </pre>
-     *
-     * <code>.api.commons.GlobalConfig config = 1 [json_name = "config"];</code>
-     */
-    public Builder setConfig(com.tcn.cloud.api.api.commons.GlobalConfig value) {
-      if (configBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        config_ = value;
-      } else {
-        configBuilder_.setMessage(value);
-      }
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * global configuration details
-     * </pre>
-     *
-     * <code>.api.commons.GlobalConfig config = 1 [json_name = "config"];</code>
-     */
-    public Builder setConfig(
-        com.tcn.cloud.api.api.commons.GlobalConfig.Builder builderForValue) {
-      if (configBuilder_ == null) {
-        config_ = builderForValue.build();
-      } else {
-        configBuilder_.setMessage(builderForValue.build());
-      }
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * global configuration details
-     * </pre>
-     *
-     * <code>.api.commons.GlobalConfig config = 1 [json_name = "config"];</code>
-     */
-    public Builder mergeConfig(com.tcn.cloud.api.api.commons.GlobalConfig value) {
-      if (configBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0) &&
-          config_ != null &&
-          config_ != com.tcn.cloud.api.api.commons.GlobalConfig.getDefaultInstance()) {
-          getConfigBuilder().mergeFrom(value);
-        } else {
-          config_ = value;
-        }
-      } else {
-        configBuilder_.mergeFrom(value);
-      }
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * global configuration details
-     * </pre>
-     *
-     * <code>.api.commons.GlobalConfig config = 1 [json_name = "config"];</code>
-     */
-    public Builder clearConfig() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      config_ = null;
-      if (configBuilder_ != null) {
-        configBuilder_.dispose();
-        configBuilder_ = null;
-      }
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * global configuration details
-     * </pre>
-     *
-     * <code>.api.commons.GlobalConfig config = 1 [json_name = "config"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.GlobalConfig.Builder getConfigBuilder() {
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return getConfigFieldBuilder().getBuilder();
-    }
-    /**
-     * <pre>
-     * global configuration details
-     * </pre>
-     *
-     * <code>.api.commons.GlobalConfig config = 1 [json_name = "config"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.GlobalConfigOrBuilder getConfigOrBuilder() {
-      if (configBuilder_ != null) {
-        return configBuilder_.getMessageOrBuilder();
-      } else {
-        return config_ == null ?
-            com.tcn.cloud.api.api.commons.GlobalConfig.getDefaultInstance() : config_;
-      }
-    }
-    /**
-     * <pre>
-     * global configuration details
-     * </pre>
-     *
-     * <code>.api.commons.GlobalConfig config = 1 [json_name = "config"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.GlobalConfig, com.tcn.cloud.api.api.commons.GlobalConfig.Builder, com.tcn.cloud.api.api.commons.GlobalConfigOrBuilder> 
-        getConfigFieldBuilder() {
-      if (configBuilder_ == null) {
-        configBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.GlobalConfig, com.tcn.cloud.api.api.commons.GlobalConfig.Builder, com.tcn.cloud.api.api.commons.GlobalConfigOrBuilder>(
-                getConfig(),
-                getParentForChildren(),
-                isClean());
-        config_ = null;
-      }
-      return configBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
