@@ -629,6 +629,26 @@ public enum DiagnosticCode
    * <code>FIRST_WEEK_PATTERN_NUMBERS_NOT_FOUND_IN_TOUR_WEEK_PATTERNS = 64;</code>
    */
   FIRST_WEEK_PATTERN_NUMBERS_NOT_FOUND_IN_TOUR_WEEK_PATTERNS(64),
+  /**
+   * <pre>
+   * DiagnosticShiftTemplateHasNoSchedulingAgentGroups integer value for a diagnostic coded as
+   * 'Shift Template Has No Associated Scheduling Agent Groups' type.
+   * The diagnostic is reporting a Shift Template with no associated Schedulable Agent Groups.
+   * </pre>
+   *
+   * <code>SHIFT_TEMPLATE_HAS_NO_ASSOCIATED_SCHEDULING_AGENT_GROUPS = 65;</code>
+   */
+  SHIFT_TEMPLATE_HAS_NO_ASSOCIATED_SCHEDULING_AGENT_GROUPS(65),
+  /**
+   * <pre>
+   * DiagnosticAttemptToBuildSchedulesForInvalidParentNode integer value for a diagnostic coded as
+   * 'Attempt To Build Schedules For Invalid Parent Node' type.
+   * The diagnostic is reporting an attemplt to build a schedule for an invalid Parent Node.
+   * </pre>
+   *
+   * <code>ATTEMPT_TO_BUILD_SCHEDULES_FOR_INVALID_PARENT_NODE = 66;</code>
+   */
+  ATTEMPT_TO_BUILD_SCHEDULES_FOR_INVALID_PARENT_NODE(66),
   UNRECOGNIZED(-1),
   ;
 
@@ -1249,6 +1269,26 @@ public enum DiagnosticCode
    * <code>FIRST_WEEK_PATTERN_NUMBERS_NOT_FOUND_IN_TOUR_WEEK_PATTERNS = 64;</code>
    */
   public static final int FIRST_WEEK_PATTERN_NUMBERS_NOT_FOUND_IN_TOUR_WEEK_PATTERNS_VALUE = 64;
+  /**
+   * <pre>
+   * DiagnosticShiftTemplateHasNoSchedulingAgentGroups integer value for a diagnostic coded as
+   * 'Shift Template Has No Associated Scheduling Agent Groups' type.
+   * The diagnostic is reporting a Shift Template with no associated Schedulable Agent Groups.
+   * </pre>
+   *
+   * <code>SHIFT_TEMPLATE_HAS_NO_ASSOCIATED_SCHEDULING_AGENT_GROUPS = 65;</code>
+   */
+  public static final int SHIFT_TEMPLATE_HAS_NO_ASSOCIATED_SCHEDULING_AGENT_GROUPS_VALUE = 65;
+  /**
+   * <pre>
+   * DiagnosticAttemptToBuildSchedulesForInvalidParentNode integer value for a diagnostic coded as
+   * 'Attempt To Build Schedules For Invalid Parent Node' type.
+   * The diagnostic is reporting an attemplt to build a schedule for an invalid Parent Node.
+   * </pre>
+   *
+   * <code>ATTEMPT_TO_BUILD_SCHEDULES_FOR_INVALID_PARENT_NODE = 66;</code>
+   */
+  public static final int ATTEMPT_TO_BUILD_SCHEDULES_FOR_INVALID_PARENT_NODE_VALUE = 66;
 
 
   public final int getNumber() {
@@ -1340,6 +1380,8 @@ public enum DiagnosticCode
       case 62: return WFM_AGENT_SIDS_NOT_UNIQUE_IN_TOUR_AGENT_COLLECTIONS;
       case 63: return FIST_WEEK_PATTERN_NUMBERS_NOT_UNIQUE_IN_TOUR_AGENT_COLLECTIONS;
       case 64: return FIRST_WEEK_PATTERN_NUMBERS_NOT_FOUND_IN_TOUR_WEEK_PATTERNS;
+      case 65: return SHIFT_TEMPLATE_HAS_NO_ASSOCIATED_SCHEDULING_AGENT_GROUPS;
+      case 66: return ATTEMPT_TO_BUILD_SCHEDULES_FOR_INVALID_PARENT_NODE;
       default: return null;
     }
   }

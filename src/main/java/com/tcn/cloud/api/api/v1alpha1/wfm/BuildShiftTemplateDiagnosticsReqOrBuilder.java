@@ -26,4 +26,31 @@ public interface BuildShiftTemplateDiagnosticsReqOrBuilder extends
    * @return The scheduleScenarioSid.
    */
   long getScheduleScenarioSid();
+
+  /**
+   * <pre>
+   * Program Node to be passed to the endpoint.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.wfm.ProgramNode parent_program_node = 3 [json_name = "parentProgramNode"];</code>
+   * @return Whether the parentProgramNode field is set.
+   */
+  boolean hasParentProgramNode();
+  /**
+   * <pre>
+   * Program Node to be passed to the endpoint.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.wfm.ProgramNode parent_program_node = 3 [json_name = "parentProgramNode"];</code>
+   * @return The parentProgramNode.
+   */
+  com.tcn.cloud.api.api.v1alpha1.wfm.ProgramNode getParentProgramNode();
+  /**
+   * <pre>
+   * Program Node to be passed to the endpoint.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.wfm.ProgramNode parent_program_node = 3 [json_name = "parentProgramNode"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.wfm.ProgramNodeOrBuilder getParentProgramNodeOrBuilder();
 }

@@ -72,6 +72,44 @@ private static final long serialVersionUID = 0L;
     return scheduleScenarioSid_;
   }
 
+  public static final int PARENT_PROGRAM_NODE_FIELD_NUMBER = 3;
+  private com.tcn.cloud.api.api.v1alpha1.wfm.ProgramNode parentProgramNode_;
+  /**
+   * <pre>
+   * Program Node to be passed to the endpoint.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.wfm.ProgramNode parent_program_node = 3 [json_name = "parentProgramNode"];</code>
+   * @return Whether the parentProgramNode field is set.
+   */
+  @java.lang.Override
+  public boolean hasParentProgramNode() {
+    return parentProgramNode_ != null;
+  }
+  /**
+   * <pre>
+   * Program Node to be passed to the endpoint.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.wfm.ProgramNode parent_program_node = 3 [json_name = "parentProgramNode"];</code>
+   * @return The parentProgramNode.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.wfm.ProgramNode getParentProgramNode() {
+    return parentProgramNode_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.ProgramNode.getDefaultInstance() : parentProgramNode_;
+  }
+  /**
+   * <pre>
+   * Program Node to be passed to the endpoint.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.wfm.ProgramNode parent_program_node = 3 [json_name = "parentProgramNode"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.wfm.ProgramNodeOrBuilder getParentProgramNodeOrBuilder() {
+    return parentProgramNode_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.ProgramNode.getDefaultInstance() : parentProgramNode_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -92,6 +130,9 @@ private static final long serialVersionUID = 0L;
     if (scheduleScenarioSid_ != 0L) {
       output.writeInt64(2, scheduleScenarioSid_);
     }
+    if (parentProgramNode_ != null) {
+      output.writeMessage(3, getParentProgramNode());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -108,6 +149,10 @@ private static final long serialVersionUID = 0L;
     if (scheduleScenarioSid_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(2, scheduleScenarioSid_);
+    }
+    if (parentProgramNode_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, getParentProgramNode());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -128,6 +173,11 @@ private static final long serialVersionUID = 0L;
         != other.getShiftTemplateSid()) return false;
     if (getScheduleScenarioSid()
         != other.getScheduleScenarioSid()) return false;
+    if (hasParentProgramNode() != other.hasParentProgramNode()) return false;
+    if (hasParentProgramNode()) {
+      if (!getParentProgramNode()
+          .equals(other.getParentProgramNode())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -145,6 +195,10 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + SCHEDULE_SCENARIO_SID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getScheduleScenarioSid());
+    if (hasParentProgramNode()) {
+      hash = (37 * hash) + PARENT_PROGRAM_NODE_FIELD_NUMBER;
+      hash = (53 * hash) + getParentProgramNode().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -282,6 +336,11 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       shiftTemplateSid_ = 0L;
       scheduleScenarioSid_ = 0L;
+      parentProgramNode_ = null;
+      if (parentProgramNodeBuilder_ != null) {
+        parentProgramNodeBuilder_.dispose();
+        parentProgramNodeBuilder_ = null;
+      }
       return this;
     }
 
@@ -320,6 +379,11 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.scheduleScenarioSid_ = scheduleScenarioSid_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.parentProgramNode_ = parentProgramNodeBuilder_ == null
+            ? parentProgramNode_
+            : parentProgramNodeBuilder_.build();
       }
     }
 
@@ -373,6 +437,9 @@ private static final long serialVersionUID = 0L;
       if (other.getScheduleScenarioSid() != 0L) {
         setScheduleScenarioSid(other.getScheduleScenarioSid());
       }
+      if (other.hasParentProgramNode()) {
+        mergeParentProgramNode(other.getParentProgramNode());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -409,6 +476,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 16
+            case 26: {
+              input.readMessage(
+                  getParentProgramNodeFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -512,6 +586,161 @@ private static final long serialVersionUID = 0L;
       scheduleScenarioSid_ = 0L;
       onChanged();
       return this;
+    }
+
+    private com.tcn.cloud.api.api.v1alpha1.wfm.ProgramNode parentProgramNode_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.wfm.ProgramNode, com.tcn.cloud.api.api.v1alpha1.wfm.ProgramNode.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.ProgramNodeOrBuilder> parentProgramNodeBuilder_;
+    /**
+     * <pre>
+     * Program Node to be passed to the endpoint.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.wfm.ProgramNode parent_program_node = 3 [json_name = "parentProgramNode"];</code>
+     * @return Whether the parentProgramNode field is set.
+     */
+    public boolean hasParentProgramNode() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * Program Node to be passed to the endpoint.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.wfm.ProgramNode parent_program_node = 3 [json_name = "parentProgramNode"];</code>
+     * @return The parentProgramNode.
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ProgramNode getParentProgramNode() {
+      if (parentProgramNodeBuilder_ == null) {
+        return parentProgramNode_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.ProgramNode.getDefaultInstance() : parentProgramNode_;
+      } else {
+        return parentProgramNodeBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Program Node to be passed to the endpoint.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.wfm.ProgramNode parent_program_node = 3 [json_name = "parentProgramNode"];</code>
+     */
+    public Builder setParentProgramNode(com.tcn.cloud.api.api.v1alpha1.wfm.ProgramNode value) {
+      if (parentProgramNodeBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        parentProgramNode_ = value;
+      } else {
+        parentProgramNodeBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Program Node to be passed to the endpoint.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.wfm.ProgramNode parent_program_node = 3 [json_name = "parentProgramNode"];</code>
+     */
+    public Builder setParentProgramNode(
+        com.tcn.cloud.api.api.v1alpha1.wfm.ProgramNode.Builder builderForValue) {
+      if (parentProgramNodeBuilder_ == null) {
+        parentProgramNode_ = builderForValue.build();
+      } else {
+        parentProgramNodeBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Program Node to be passed to the endpoint.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.wfm.ProgramNode parent_program_node = 3 [json_name = "parentProgramNode"];</code>
+     */
+    public Builder mergeParentProgramNode(com.tcn.cloud.api.api.v1alpha1.wfm.ProgramNode value) {
+      if (parentProgramNodeBuilder_ == null) {
+        if (((bitField0_ & 0x00000004) != 0) &&
+          parentProgramNode_ != null &&
+          parentProgramNode_ != com.tcn.cloud.api.api.v1alpha1.wfm.ProgramNode.getDefaultInstance()) {
+          getParentProgramNodeBuilder().mergeFrom(value);
+        } else {
+          parentProgramNode_ = value;
+        }
+      } else {
+        parentProgramNodeBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Program Node to be passed to the endpoint.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.wfm.ProgramNode parent_program_node = 3 [json_name = "parentProgramNode"];</code>
+     */
+    public Builder clearParentProgramNode() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      parentProgramNode_ = null;
+      if (parentProgramNodeBuilder_ != null) {
+        parentProgramNodeBuilder_.dispose();
+        parentProgramNodeBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Program Node to be passed to the endpoint.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.wfm.ProgramNode parent_program_node = 3 [json_name = "parentProgramNode"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ProgramNode.Builder getParentProgramNodeBuilder() {
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return getParentProgramNodeFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Program Node to be passed to the endpoint.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.wfm.ProgramNode parent_program_node = 3 [json_name = "parentProgramNode"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ProgramNodeOrBuilder getParentProgramNodeOrBuilder() {
+      if (parentProgramNodeBuilder_ != null) {
+        return parentProgramNodeBuilder_.getMessageOrBuilder();
+      } else {
+        return parentProgramNode_ == null ?
+            com.tcn.cloud.api.api.v1alpha1.wfm.ProgramNode.getDefaultInstance() : parentProgramNode_;
+      }
+    }
+    /**
+     * <pre>
+     * Program Node to be passed to the endpoint.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.wfm.ProgramNode parent_program_node = 3 [json_name = "parentProgramNode"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.wfm.ProgramNode, com.tcn.cloud.api.api.v1alpha1.wfm.ProgramNode.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.ProgramNodeOrBuilder> 
+        getParentProgramNodeFieldBuilder() {
+      if (parentProgramNodeBuilder_ == null) {
+        parentProgramNodeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.v1alpha1.wfm.ProgramNode, com.tcn.cloud.api.api.v1alpha1.wfm.ProgramNode.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.ProgramNodeOrBuilder>(
+                getParentProgramNode(),
+                getParentForChildren(),
+                isClean());
+        parentProgramNode_ = null;
+      }
+      return parentProgramNodeBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
