@@ -65,6 +65,36 @@ public final class ServiceProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_integrations_ProcessRes_DataEntry_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_integrations_SearchPastTransactionsRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_integrations_SearchPastTransactionsRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_integrations_SearchPastTransactionsRequest_MatchFieldsEntry_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_integrations_SearchPastTransactionsRequest_MatchFieldsEntry_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_integrations_SearchPastTransactionsResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_integrations_SearchPastTransactionsResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_integrations_PastTxEntity_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_integrations_PastTxEntity_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_integrations_PastTxEntity_ReqEntry_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_integrations_PastTxEntity_ReqEntry_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_integrations_PastTxEntity_ResEntry_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_integrations_PastTxEntity_ResEntry_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_v1alpha1_integrations_ListIntegrationsForOrgReq_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -651,628 +681,656 @@ public final class ServiceProto {
       "transaction_id\030\005 \001(\tR\rtransactionId\032Y\n\tD" +
       "ataEntry\022\020\n\003key\030\001 \001(\tR\003key\0226\n\005value\030\002 \001(" +
       "\0132 .api.v1alpha1.integrations.ValueR\005val" +
-      "ue:\0028\001\"\033\n\031ListIntegrationsForOrgReq\"V\n\020I" +
-      "ntegrationInfos\022B\n\006values\030\001 \003(\0132*.api.v1" +
-      "alpha1.integrations.IntegrationInfoR\006val" +
-      "ues\"\240\003\n\017IntegrationInfo\022\022\n\004name\030\001 \001(\tR\004n" +
-      "ame\022P\n\016integration_id\030\002 \001(\0162).api.common" +
-      "s.integrations.IntegrationTypeR\rintegrat" +
-      "ionId\022 \n\013description\030\003 \001(\tR\013description\022" +
-      "?\n\007methods\030\004 \003(\0132%.api.v1alpha1.integrat" +
-      "ions.MethodInfoR\007methods\022^\n\014group_params" +
-      "\030\005 \003(\0132;.api.v1alpha1.integrations.Integ" +
-      "rationInfo.GroupParamsEntryR\013groupParams" +
-      "\032d\n\020GroupParamsEntry\022\020\n\003key\030\001 \001(\005R\003key\022:" +
-      "\n\005value\030\002 \001(\0132$.api.v1alpha1.integration" +
-      "s.ParameterR\005value:\0028\001\"\205\004\n\nMethodInfo\022\022\n" +
-      "\004name\030\001 \001(\tR\004name\022D\n\tmethod_id\030\002 \001(\0162\'.a" +
-      "pi.commons.integrations.RequestMethodR\010m" +
-      "ethodId\022B\n\007tx_type\030\003 \001(\0162).api.commons.i" +
-      "ntegrations.TransactionTypeR\006txType\022<\n\006p" +
-      "arams\030\004 \003(\0132$.api.v1alpha1.integrations." +
-      "ParameterR\006params\022\020\n\003url\030\005 \001(\tR\003url\022@\n\010r" +
-      "esponse\030\006 \003(\0132$.api.v1alpha1.integration" +
-      "s.ParameterR\010response\022_\n\016runtime_params\030" +
-      "\007 \003(\01328.api.v1alpha1.integrations.Method" +
-      "Info.RuntimeParamsEntryR\rruntimeParams\032f" +
-      "\n\022RuntimeParamsEntry\022\020\n\003key\030\001 \001(\005R\003key\022:" +
-      "\n\005value\030\002 \001(\0132$.api.v1alpha1.integration" +
-      "s.ParameterR\005value:\0028\001\"\274\003\n\tParameter\022\022\n\004" +
-      "name\030\001 \001(\tR\004name\022B\n\nparam_type\030\002 \001(\0162#.a" +
-      "pi.commons.integrations.ValueTypeR\tparam" +
-      "Type\022\032\n\010required\030\003 \001(\010R\010required\022E\n\rdefa" +
-      "ult_value\030\004 \001(\0132 .api.v1alpha1.integrati" +
-      "ons.ValueR\014defaultValue\022!\n\014display_name\030" +
-      "\005 \001(\tR\013displayName\022\034\n\tsensitive\030\006 \001(\010R\ts" +
-      "ensitive\022#\n\rruntime_param\030\007 \001(\010R\014runtime" +
-      "Param\022\037\n\013helper_text\030\010 \001(\tR\nhelperText\022\'" +
-      "\n\017template_locked\030\t \001(\010R\016templateLocked\022" +
-      "D\n\nvalidation\030\n \001(\0162$.api.commons.integr" +
-      "ations.ValidationR\nvalidation\"\007\n\005Empty\"\\" +
-      "\n\034GetIntegrationTransactionReq\022<\n\032integr" +
-      "ation_transaction_id\030\001 \001(\tR\030integrationT" +
-      "ransactionId\"\300\001\n\030GetAggregatedMetadataRe" +
-      "q\0220\n\005start\030\003 \001(\0132\032.google.protobuf.Times" +
-      "tampR\005start\022,\n\003end\030\004 \001(\0132\032.google.protob" +
-      "uf.TimestampR\003end\022D\n\tmethod_id\030\005 \001(\0162\'.a" +
-      "pi.commons.integrations.RequestMethodR\010m" +
-      "ethodId\"\233\002\n\030GetAggregatedMetadataRes\022\024\n\005" +
-      "views\030\001 \001(\005R\005views\022\'\n\017verify_attempts\030\002 " +
-      "\001(\005R\016verifyAttempts\022)\n\020verify_successes\030" +
-      "\003 \001(\005R\017verifySuccesses\022)\n\020payment_attemp" +
-      "ts\030\004 \001(\005R\017paymentAttempts\022+\n\021payment_suc" +
-      "cesses\030\005 \001(\005R\020paymentSuccesses\022%\n\016paymen" +
-      "t_amount\030\006 \001(\001R\rpaymentAmount\022\026\n\006fields\030" +
-      "\007 \003(\tR\006fields\"\237\001\n\"GetIntegrationTransact" +
-      "ionReportReq\0220\n\005start\030\003 \001(\0132\032.google.pro" +
-      "tobuf.TimestampR\005start\022,\n\003end\030\004 \001(\0132\032.go" +
-      "ogle.protobuf.TimestampR\003end\022\031\n\010group_by" +
-      "\030\005 \003(\tR\007groupBy\"\235\n\n\037IntegrationTransacti" +
-      "onReportRow\022P\n\016integration_id\030\005 \001(\0162).ap" +
+      "ue:\0028\001\"\332\003\n\035SearchPastTransactionsRequest" +
+      "\022,\n\022plugin_instance_id\030\001 \001(\tR\020pluginInst" +
+      "anceId\022@\n\006int_id\030\002 \001(\0162).api.commons.int" +
+      "egrations.IntegrationTypeR\005intId\022D\n\tmeth" +
+      "od_id\030\003 \001(\0162\'.api.commons.integrations.R" +
+      "equestMethodR\010methodId\022l\n\014match_fields\030\004" +
+      " \003(\0132I.api.v1alpha1.integrations.SearchP" +
+      "astTransactionsRequest.MatchFieldsEntryR" +
+      "\013matchFields\022\024\n\005limit\030\005 \001(\rR\005limit\022?\n\rse" +
+      "arch_before\030\006 \001(\0132\032.google.protobuf.Time" +
+      "stampR\014searchBefore\032>\n\020MatchFieldsEntry\022" +
+      "\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:" +
+      "\0028\001\"a\n\036SearchPastTransactionsResponse\022?\n" +
+      "\006values\030\001 \003(\0132\'.api.v1alpha1.integration" +
+      "s.PastTxEntityR\006values\"\301\002\n\014PastTxEntity\022" +
+      "B\n\003req\030\001 \003(\01320.api.v1alpha1.integrations" +
+      ".PastTxEntity.ReqEntryR\003req\022B\n\003res\030\002 \003(\013" +
+      "20.api.v1alpha1.integrations.PastTxEntit" +
+      "y.ResEntryR\003res\0229\n\ncreated_on\030\003 \001(\0132\032.go" +
+      "ogle.protobuf.TimestampR\tcreatedOn\0326\n\010Re" +
+      "qEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR" +
+      "\005value:\0028\001\0326\n\010ResEntry\022\020\n\003key\030\001 \001(\tR\003key" +
+      "\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\"\033\n\031ListIntegr" +
+      "ationsForOrgReq\"V\n\020IntegrationInfos\022B\n\006v" +
+      "alues\030\001 \003(\0132*.api.v1alpha1.integrations." +
+      "IntegrationInfoR\006values\"\240\003\n\017IntegrationI" +
+      "nfo\022\022\n\004name\030\001 \001(\tR\004name\022P\n\016integration_i" +
+      "d\030\002 \001(\0162).api.commons.integrations.Integ" +
+      "rationTypeR\rintegrationId\022 \n\013description" +
+      "\030\003 \001(\tR\013description\022?\n\007methods\030\004 \003(\0132%.a" +
+      "pi.v1alpha1.integrations.MethodInfoR\007met" +
+      "hods\022^\n\014group_params\030\005 \003(\0132;.api.v1alpha" +
+      "1.integrations.IntegrationInfo.GroupPara" +
+      "msEntryR\013groupParams\032d\n\020GroupParamsEntry" +
+      "\022\020\n\003key\030\001 \001(\005R\003key\022:\n\005value\030\002 \001(\0132$.api." +
+      "v1alpha1.integrations.ParameterR\005value:\002" +
+      "8\001\"\205\004\n\nMethodInfo\022\022\n\004name\030\001 \001(\tR\004name\022D\n" +
+      "\tmethod_id\030\002 \001(\0162\'.api.commons.integrati" +
+      "ons.RequestMethodR\010methodId\022B\n\007tx_type\030\003" +
+      " \001(\0162).api.commons.integrations.Transact" +
+      "ionTypeR\006txType\022<\n\006params\030\004 \003(\0132$.api.v1" +
+      "alpha1.integrations.ParameterR\006params\022\020\n" +
+      "\003url\030\005 \001(\tR\003url\022@\n\010response\030\006 \003(\0132$.api." +
+      "v1alpha1.integrations.ParameterR\010respons" +
+      "e\022_\n\016runtime_params\030\007 \003(\01328.api.v1alpha1" +
+      ".integrations.MethodInfo.RuntimeParamsEn" +
+      "tryR\rruntimeParams\032f\n\022RuntimeParamsEntry" +
+      "\022\020\n\003key\030\001 \001(\005R\003key\022:\n\005value\030\002 \001(\0132$.api." +
+      "v1alpha1.integrations.ParameterR\005value:\002" +
+      "8\001\"\274\003\n\tParameter\022\022\n\004name\030\001 \001(\tR\004name\022B\n\n" +
+      "param_type\030\002 \001(\0162#.api.commons.integrati" +
+      "ons.ValueTypeR\tparamType\022\032\n\010required\030\003 \001" +
+      "(\010R\010required\022E\n\rdefault_value\030\004 \001(\0132 .ap" +
+      "i.v1alpha1.integrations.ValueR\014defaultVa" +
+      "lue\022!\n\014display_name\030\005 \001(\tR\013displayName\022\034" +
+      "\n\tsensitive\030\006 \001(\010R\tsensitive\022#\n\rruntime_" +
+      "param\030\007 \001(\010R\014runtimeParam\022\037\n\013helper_text" +
+      "\030\010 \001(\tR\nhelperText\022\'\n\017template_locked\030\t " +
+      "\001(\010R\016templateLocked\022D\n\nvalidation\030\n \001(\0162" +
+      "$.api.commons.integrations.ValidationR\nv" +
+      "alidation\"\007\n\005Empty\"\\\n\034GetIntegrationTran" +
+      "sactionReq\022<\n\032integration_transaction_id" +
+      "\030\001 \001(\tR\030integrationTransactionId\"\300\001\n\030Get" +
+      "AggregatedMetadataReq\0220\n\005start\030\003 \001(\0132\032.g" +
+      "oogle.protobuf.TimestampR\005start\022,\n\003end\030\004" +
+      " \001(\0132\032.google.protobuf.TimestampR\003end\022D\n" +
+      "\tmethod_id\030\005 \001(\0162\'.api.commons.integrati" +
+      "ons.RequestMethodR\010methodId\"\233\002\n\030GetAggre" +
+      "gatedMetadataRes\022\024\n\005views\030\001 \001(\005R\005views\022\'" +
+      "\n\017verify_attempts\030\002 \001(\005R\016verifyAttempts\022" +
+      ")\n\020verify_successes\030\003 \001(\005R\017verifySuccess" +
+      "es\022)\n\020payment_attempts\030\004 \001(\005R\017paymentAtt" +
+      "empts\022+\n\021payment_successes\030\005 \001(\005R\020paymen" +
+      "tSuccesses\022%\n\016payment_amount\030\006 \001(\001R\rpaym" +
+      "entAmount\022\026\n\006fields\030\007 \003(\tR\006fields\"\237\001\n\"Ge" +
+      "tIntegrationTransactionReportReq\0220\n\005star" +
+      "t\030\003 \001(\0132\032.google.protobuf.TimestampR\005sta" +
+      "rt\022,\n\003end\030\004 \001(\0132\032.google.protobuf.Timest" +
+      "ampR\003end\022\031\n\010group_by\030\005 \003(\tR\007groupBy\"\235\n\n\037" +
+      "IntegrationTransactionReportRow\022P\n\016integ" +
+      "ration_id\030\005 \001(\0162).api.commons.integratio" +
+      "ns.IntegrationTypeR\rintegrationId\022)\n\020int" +
+      "egration_name\030\021 \001(\tR\017integrationName\022D\n\t" +
+      "method_id\030\006 \001(\0162\'.api.commons.integratio" +
+      "ns.RequestMethodR\010methodId\022\037\n\013method_nam" +
+      "e\030\022 \001(\tR\nmethodName\022T\n\020transaction_type\030" +
+      "\007 \001(\0162).api.commons.integrations.Transac" +
+      "tionTypeR\017transactionType\022N\n\016request_sou" +
+      "rce\030\010 \001(\0162\'.api.commons.integrations.Req" +
+      "uestSourceR\rrequestSource\022\033\n\tflow_name\030\024" +
+      " \001(\tR\010flowName\022#\n\rcampaign_type\030\026 \001(\tR\014c" +
+      "ampaignType\022u\n\017group_by_values\030\027 \003(\0132M.a" +
+      "pi.v1alpha1.integrations.IntegrationTran" +
+      "sactionReportRow.GroupByValuesEntryR\rgro" +
+      "upByValues\022\030\n\007revenue\030\n \001(\001R\007revenue\022}\n\021" +
+      "revenue_subtotals\030\023 \003(\0132P.api.v1alpha1.i" +
+      "ntegrations.IntegrationTransactionReport" +
+      "Row.RevenueSubtotalsEntryR\020revenueSubtot" +
+      "als\022#\n\rsuccess_count\030\013 \001(\003R\014successCount" +
+      "\022#\n\rfailure_count\030\014 \001(\003R\014failureCount\022\037\n" +
+      "\013total_count\030\r \001(\003R\ntotalCount\0220\n\024highes" +
+      "t_traffic_date\030\017 \001(\tR\022highestTrafficDate" +
+      "\022.\n\023lowest_traffic_date\030\020 \001(\tR\021lowestTra" +
+      "fficDate\022q\n\rcount_metrics\030\030 \003(\0132L.api.v1" +
+      "alpha1.integrations.IntegrationTransacti" +
+      "onReportRow.CountMetricsEntryR\014countMetr" +
+      "ics\022\026\n\006fields\030\031 \003(\tR\006fields\032@\n\022GroupByVa" +
+      "luesEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001" +
+      "(\tR\005value:\0028\001\032C\n\025RevenueSubtotalsEntry\022\020" +
+      "\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\001R\005value:\002" +
+      "8\001\032?\n\021CountMetricsEntry\022\020\n\003key\030\001 \001(\tR\003ke" +
+      "y\022\024\n\005value\030\002 \001(\003R\005value:\0028\001\"x\n\"GetIntegr" +
+      "ationTransactionReportRes\022R\n\006values\030\001 \003(" +
+      "\0132:.api.v1alpha1.integrations.Integratio" +
+      "nTransactionReportRowR\006values\"\343\003\n&GetInt" +
+      "egrationTransactionReportDataReq\0220\n\005star" +
+      "t\030\003 \001(\0132\032.google.protobuf.TimestampR\005sta" +
+      "rt\022,\n\003end\030\004 \001(\0132\032.google.protobuf.Timest" +
+      "ampR\003end\022i\n\010group_by\030\005 \003(\0132N.api.v1alpha" +
+      "1.integrations.GetIntegrationTransaction" +
+      "ReportDataReq.GroupByEntryR\007groupBy\022\033\n\tp" +
+      "age_size\030\007 \001(\005R\010pageSize\022\031\n\010page_num\030\010 \001" +
+      "(\005R\007pageNum\022P\n\016integration_id\030\t \001(\0162).ap" +
       "i.commons.integrations.IntegrationTypeR\r" +
-      "integrationId\022)\n\020integration_name\030\021 \001(\tR" +
-      "\017integrationName\022D\n\tmethod_id\030\006 \001(\0162\'.ap" +
-      "i.commons.integrations.RequestMethodR\010me" +
-      "thodId\022\037\n\013method_name\030\022 \001(\tR\nmethodName\022" +
-      "T\n\020transaction_type\030\007 \001(\0162).api.commons." +
-      "integrations.TransactionTypeR\017transactio" +
-      "nType\022N\n\016request_source\030\010 \001(\0162\'.api.comm" +
-      "ons.integrations.RequestSourceR\rrequestS" +
-      "ource\022\033\n\tflow_name\030\024 \001(\tR\010flowName\022#\n\rca" +
-      "mpaign_type\030\026 \001(\tR\014campaignType\022u\n\017group" +
-      "_by_values\030\027 \003(\0132M.api.v1alpha1.integrat" +
-      "ions.IntegrationTransactionReportRow.Gro" +
-      "upByValuesEntryR\rgroupByValues\022\030\n\007revenu" +
-      "e\030\n \001(\001R\007revenue\022}\n\021revenue_subtotals\030\023 " +
-      "\003(\0132P.api.v1alpha1.integrations.Integrat" +
-      "ionTransactionReportRow.RevenueSubtotals" +
-      "EntryR\020revenueSubtotals\022#\n\rsuccess_count" +
-      "\030\013 \001(\003R\014successCount\022#\n\rfailure_count\030\014 " +
-      "\001(\003R\014failureCount\022\037\n\013total_count\030\r \001(\003R\n" +
-      "totalCount\0220\n\024highest_traffic_date\030\017 \001(\t" +
-      "R\022highestTrafficDate\022.\n\023lowest_traffic_d" +
-      "ate\030\020 \001(\tR\021lowestTrafficDate\022q\n\rcount_me" +
-      "trics\030\030 \003(\0132L.api.v1alpha1.integrations." +
-      "IntegrationTransactionReportRow.CountMet" +
-      "ricsEntryR\014countMetrics\022\026\n\006fields\030\031 \003(\tR" +
-      "\006fields\032@\n\022GroupByValuesEntry\022\020\n\003key\030\001 \001" +
-      "(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\032C\n\025Rev" +
-      "enueSubtotalsEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005" +
-      "value\030\002 \001(\001R\005value:\0028\001\032?\n\021CountMetricsEn" +
-      "try\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\003R\005va" +
-      "lue:\0028\001\"x\n\"GetIntegrationTransactionRepo" +
-      "rtRes\022R\n\006values\030\001 \003(\0132:.api.v1alpha1.int" +
-      "egrations.IntegrationTransactionReportRo" +
-      "wR\006values\"\343\003\n&GetIntegrationTransactionR" +
-      "eportDataReq\0220\n\005start\030\003 \001(\0132\032.google.pro" +
-      "tobuf.TimestampR\005start\022,\n\003end\030\004 \001(\0132\032.go" +
-      "ogle.protobuf.TimestampR\003end\022i\n\010group_by" +
-      "\030\005 \003(\0132N.api.v1alpha1.integrations.GetIn" +
-      "tegrationTransactionReportDataReq.GroupB" +
-      "yEntryR\007groupBy\022\033\n\tpage_size\030\007 \001(\005R\010page" +
-      "Size\022\031\n\010page_num\030\010 \001(\005R\007pageNum\022P\n\016integ" +
-      "ration_id\030\t \001(\0162).api.commons.integratio" +
-      "ns.IntegrationTypeR\rintegrationId\022(\n\020sea" +
-      "rch_after_sid\030\n \001(\003R\016searchAfterSid\032:\n\014G" +
-      "roupByEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002" +
-      " \001(\tR\005value:\0028\001\"\345\003\n&GetIntegrationTransa" +
-      "ctionReportDataRow\022x\n\rcount_metrics\030\001 \003(" +
-      "\0132S.api.v1alpha1.integrations.GetIntegra" +
-      "tionTransactionReportDataRow.CountMetric" +
-      "sEntryR\014countMetrics\022l\n\tlink_data\030\002 \003(\0132" +
-      "O.api.v1alpha1.integrations.GetIntegrati" +
-      "onTransactionReportDataRow.LinkDataEntry" +
-      "R\010linkData\022.\n\004date\030\003 \001(\0132\032.google.protob" +
-      "uf.TimestampR\004date\022%\n\016payment_amount\030\004 \001" +
-      "(\001R\rpaymentAmount\032?\n\021CountMetricsEntry\022\020" +
-      "\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\003R\005value:\002" +
-      "8\001\032;\n\rLinkDataEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n" +
-      "\005value\030\002 \001(\tR\005value:\0028\001\"\271\001\n&GetIntegrati" +
-      "onTransactionReportDataRes\022]\n\010entities\030\001" +
-      " \003(\0132A.api.v1alpha1.integrations.GetInte" +
-      "grationTransactionReportDataRowR\010entitie" +
-      "s\0220\n\024last_transaction_sid\030\002 \001(\003R\022lastTra" +
-      "nsactionSid\"\303\004\n SearchIntegrationTransac" +
-      "tionsReq\0229\n\nstart_date\030\010 \001(\0132\032.google.pr" +
-      "otobuf.TimestampR\tstartDate\0225\n\010end_date\030" +
-      "\t \001(\0132\032.google.protobuf.TimestampR\007endDa" +
-      "te\022U\n\020integration_type\030\n \001(\0132*.api.v1alp" +
-      "ha1.integrations.IntegrationTypeR\017integr" +
-      "ationType\022O\n\016request_method\030\013 \001(\0132(.api." +
-      "v1alpha1.integrations.RequestMethodR\rreq" +
-      "uestMethod\022U\n\020transaction_type\030\014 \001(\0132*.a" +
-      "pi.v1alpha1.integrations.TransactionType" +
-      "R\017transactionType\022O\n\016request_source\030\r \001(" +
-      "\0132(.api.v1alpha1.integrations.RequestSou" +
-      "rceR\rrequestSource\022D\n\006result\030\016 \001(\0132,.api" +
-      ".v1alpha1.integrations.TransactionResult" +
-      "R\006result\022\027\n\007task_id\030\017 \001(\tR\006taskId\"y\n Sea" +
-      "rchIntegrationTransactionsRes\022U\n\014transac" +
-      "tions\030\001 \003(\01321.api.v1alpha1.integrations." +
-      "IntegrationTransactionR\014transactions\"c\n\017" +
-      "IntegrationType\022P\n\016integration_id\030\001 \001(\0162" +
-      ").api.commons.integrations.IntegrationTy" +
-      "peR\rintegrationId\"U\n\rRequestMethod\022D\n\tme" +
-      "thod_id\030\001 \001(\0162\'.api.commons.integrations" +
-      ".RequestMethodR\010methodId\"g\n\017TransactionT" +
-      "ype\022T\n\020transaction_type\030\001 \001(\0162).api.comm" +
-      "ons.integrations.TransactionTypeR\017transa" +
-      "ctionType\"_\n\rRequestSource\022N\n\016request_so" +
-      "urce\030\001 \001(\0162\'.api.commons.integrations.Re" +
-      "questSourceR\rrequestSource\"X\n\021Transactio" +
-      "nResult\022C\n\006result\030\001 \001(\0162+.api.commons.in" +
-      "tegrations.TransactionResultR\006result\"q\n\035" +
-      "ListIntegrationConfigNamesReq\022P\n\016integra" +
-      "tion_id\030\004 \001(\0162).api.commons.integrations" +
-      ".IntegrationTypeR\rintegrationId\"\207\001\n\035List" +
-      "IntegrationConfigNamesRes\022P\n\016integration" +
-      "_id\030\003 \001(\0162).api.commons.integrations.Int" +
-      "egrationTypeR\rintegrationId\022\024\n\005names\030\004 \003" +
-      "(\tR\005names\")\n\027GetPaymentLinkConfigReq\022\016\n\002" +
-      "id\030\003 \001(\tR\002id\",\n\032DeletePaymentLinkConfigR" +
-      "eq\022\016\n\002id\030\003 \001(\tR\002id\"\034\n\004Logo\022\024\n\005value\030\001 \001(" +
-      "\014R\005value\"\272\001\n\024ListPortalConfigsReq\022A\n\006ent" +
-      "ity\030\001 \001(\0132).api.v1alpha1.integrations.Po" +
-      "rtalConfigIdR\006entity\022.\n\004mask\030\002 \001(\0132\032.goo" +
-      "gle.protobuf.FieldMaskR\004mask\022\033\n\tpage_siz" +
-      "e\030\003 \001(\005R\010pageSize\022\022\n\004page\030\004 \001(\005R\004page\"\227\001" +
-      "\n\022GetPortalConfigReq\022A\n\006entity\030\001 \001(\0132).a" +
-      "pi.v1alpha1.integrations.PortalConfigIdR" +
-      "\006entity\022.\n\004mask\030\002 \001(\0132\032.google.protobuf." +
-      "FieldMaskR\004mask\022\016\n\002id\030\003 \001(\tR\002id\"\232\001\n\025Dele" +
-      "tePortalConfigReq\022A\n\006entity\030\001 \001(\0132).api." +
-      "v1alpha1.integrations.PortalConfigIdR\006en" +
-      "tity\022.\n\004mask\030\002 \001(\0132\032.google.protobuf.Fie" +
-      "ldMaskR\004mask\022\016\n\002id\030\003 \001(\tR\002id\"9\n\023UpdatePo" +
-      "rtalLogoReq\022\016\n\002id\030\003 \001(\tR\002id\022\022\n\004logo\030\004 \001(" +
-      "\014R\004logo\"\"\n\020GetPortalLogoReq\022\016\n\002id\030\003 \001(\tR" +
-      "\002id\")\n\016RefreshLinkReq\022\027\n\007link_id\030\003 \001(\tR\006" +
-      "linkId\"K\n\016RefreshLinkRes\0229\n\nnew_expiry\030\001" +
-      " \001(\0132\032.google.protobuf.TimestampR\tnewExp" +
-      "iry\"\252\014\n\021PaymentLinkConfig\022\016\n\002id\030\023 \001(\tR\002i" +
-      "d\022\022\n\004name\030\003 \001(\tR\004name\022 \n\013description\030\004 \001" +
-      "(\tR\013description\022\'\n\rcollection_id\030\005 \001(\tB\002" +
-      "\030\001R\014collectionId\022T\n\016integration_id\030\006 \001(\016" +
-      "2).api.commons.integrations.IntegrationT" +
-      "ypeB\002\030\001R\rintegrationId\022a\n\026verification_m" +
-      "ethod_id\030\007 \001(\0162\'.api.commons.integration" +
-      "s.RequestMethodB\002\030\001R\024verificationMethodI" +
-      "d\022W\n\021invoice_method_id\030\010 \001(\0162\'.api.commo" +
-      "ns.integrations.RequestMethodB\002\030\001R\017invoi" +
-      "ceMethodId\022W\n\021payment_method_id\030\t \001(\0162\'." +
-      "api.commons.integrations.RequestMethodB\002" +
-      "\030\001R\017paymentMethodId\022`\n\014name_mapping\030\n \003(" +
-      "\0132=.api.v1alpha1.integrations.PaymentLin" +
-      "kConfig.NameMappingEntryR\013nameMapping\0223\n" +
-      "\023verification_fields\030\013 \003(\tB\002\030\001R\022verifica" +
-      "tionFields\022*\n\021payment_portal_id\030\014 \001(\tR\017p" +
-      "aymentPortalId\0229\n\ncreated_on\030\016 \001(\0132\032.goo" +
-      "gle.protobuf.TimestampR\tcreatedOn\022\037\n\013exp" +
-      "iry_days\030\017 \001(\005R\nexpiryDays\022+\n\021links_refr" +
-      "eshable\030\020 \001(\010R\020linksRefreshable\0227\n\030refre" +
-      "sh_link_valid_hours\030\021 \001(\001R\025refreshLinkVa" +
-      "lidHours\022*\n\021max_refresh_times\030\022 \001(\005R\017max" +
-      "RefreshTimes\022a\n\024verification_request\030\024 \001" +
-      "(\0132..api.v1alpha1.integrations.Verificat" +
-      "ionRequestR\023verificationRequest\022R\n\017invoi" +
-      "ce_request\030\025 \001(\0132).api.v1alpha1.integrat" +
-      "ions.InvoiceRequestR\016invoiceRequest\022T\n\020p" +
-      "ayment_requests\030\026 \003(\0132).api.v1alpha1.int" +
-      "egrations.PaymentRequestR\017paymentRequest" +
-      "s\022W\n\tbase_data\030\027 \003(\0132:.api.v1alpha1.inte" +
-      "grations.PaymentLinkConfig.BaseDataEntry" +
-      "R\010baseData\022S\n\ttemplates\030\030 \001(\01325.api.v1al" +
-      "pha1.integrations.PaymentLinkConfigTempl" +
-      "atesR\ttemplates\0220\n\024payment_profile_name\030" +
-      "\031 \001(\tR\022paymentProfileName\032>\n\020NameMapping" +
-      "Entry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005" +
-      "value:\0028\001\032]\n\rBaseDataEntry\022\020\n\003key\030\001 \001(\tR" +
-      "\003key\0226\n\005value\030\002 \001(\0132 .api.v1alpha1.integ" +
-      "rations.ValueR\005value:\0028\001\"\312\002\n\032PaymentLink" +
-      "ConfigTemplates\0220\n\024receipt_sms_template\030" +
-      "\001 \001(\tR\022receiptSmsTemplate\0227\n\030receipt_sms" +
-      "_source_phone\030\002 \001(\tR\025receiptSmsSourcePho" +
-      "ne\0224\n\026receipt_email_template\030\003 \001(\tR\024rece" +
-      "iptEmailTemplate\0225\n\027receipt_email_from_a" +
-      "ddr\030\004 \001(\tR\024receiptEmailFromAddr\022)\n\020recei" +
-      "pt_template\030\005 \001(\tR\017receiptTemplate\022)\n\020in" +
-      "voice_template\030\006 \001(\tR\017invoiceTemplate\"\305\001" +
-      "\n\023VerificationRequest\022W\n\025verification_re" +
-      "quests\030\001 \003(\0132\".api.v1alpha1.integrations" +
-      ".RequestR\024verificationRequests\022U\n\023verifi" +
-      "cation_fields\030\002 \003(\0132$.api.v1alpha1.integ" +
-      "rations.ParameterR\022verificationFields\"\274\002" +
-      "\n\016PaymentRequest\022K\n\016payment_fields\030\005 \003(\013" +
-      "2$.api.v1alpha1.integrations.ParameterR\r" +
-      "paymentFields\022Z\n\027payment_request_payload" +
-      "\030\001 \003(\0132\".api.v1alpha1.integrations.Reque" +
-      "stR\025paymentRequestPayload\022K\n\017payment_req" +
-      "uest\030\002 \001(\0132\".api.v1alpha1.integrations.R" +
-      "equestR\016paymentRequest\022\022\n\004name\030\003 \001(\tR\004na" +
-      "me\022 \n\013description\030\004 \001(\tR\013description\"\353\001\n" +
-      "\016InvoiceRequest\022Z\n\027invoice_request_paylo" +
-      "ad\030\002 \003(\0132\".api.v1alpha1.integrations.Req" +
-      "uestR\025invoiceRequestPayload\022K\n\017invoice_r" +
-      "equest\030\003 \001(\0132\".api.v1alpha1.integrations" +
-      ".RequestR\016invoiceRequest\0220\n\024filter_respo" +
-      "nse_keys\030\004 \003(\tR\022filterResponseKeys\"\371\005\n\007R" +
-      "equest\0224\n\025journey_collection_id\030\003 \001(\tH\000R" +
-      "\023journeyCollectionId\022H\n\013method_call\030\004 \001(" +
-      "\0132%.api.v1alpha1.integrations.MethodCall" +
-      "H\000R\nmethodCall\022\035\n\tconfig_id\030\005 \001(\tH\000R\010con" +
-      "figId\022S\n\013static_data\030\006 \003(\01322.api.v1alpha" +
-      "1.integrations.Request.StaticDataEntryR\n" +
-      "staticData\022l\n\024rename_response_keys\030\007 \003(\013" +
-      "2:.api.v1alpha1.integrations.Request.Ren" +
-      "ameResponseKeysEntryR\022renameResponseKeys" +
-      "\022n\n\024reassign_validations\030\010 \003(\0132;.api.v1a" +
-      "lpha1.integrations.Request.ReassignValid" +
-      "ationsEntryR\023reassignValidations\032_\n\017Stat" +
-      "icDataEntry\022\020\n\003key\030\001 \001(\tR\003key\0226\n\005value\030\002" +
-      " \001(\0132 .api.v1alpha1.integrations.ValueR\005" +
-      "value:\0028\001\032E\n\027RenameResponseKeysEntry\022\020\n\003" +
-      "key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001" +
-      "\032m\n\030ReassignValidationsEntry\022\020\n\003key\030\001 \001(" +
-      "\tR\003key\022;\n\005value\030\002 \001(\0132%.api.v1alpha1.int" +
-      "egrations.ValidationR\005value:\0028\001B\005\n\003val\"F" +
-      "\n\nValidation\0228\n\004enum\030\001 \001(\0162$.api.commons" +
-      ".integrations.ValidationR\004enum\"\244\001\n\nMetho" +
-      "dCall\022P\n\016integration_id\030\001 \001(\0162).api.comm" +
-      "ons.integrations.IntegrationTypeR\rintegr" +
-      "ationId\022D\n\tmethod_id\030\002 \001(\0162\'.api.commons" +
-      ".integrations.RequestMethodR\010methodId\"P\n" +
-      "\rPortalConfigs\022?\n\006values\030\001 \003(\0132\'.api.v1a" +
-      "lpha1.integrations.PortalConfigR\006values\"" +
-      "\033\n\031ListPaymentLinkConfigsReq\"Z\n\022PaymentL" +
-      "inkConfigs\022D\n\006values\030\001 \003(\0132,.api.v1alpha" +
-      "1.integrations.PaymentLinkConfigR\006values" +
-      "\"\016\n\014ListLinksReq\"\265\001\n\033CreatePaymentPortal" +
-      "LinksReq\022$\n\016link_config_id\030\003 \001(\tR\014linkCo" +
-      "nfigId\0222\n\006expiry\030\004 \001(\0132\032.google.protobuf" +
-      ".TimestampR\006expiry\022<\n\tuser_data\030\005 \003(\0132\037." +
-      "api.v1alpha1.integrations.TaskR\010userData" +
-      "\"1\n\033CreatePaymentPortalLinksRes\022\022\n\004urls\030" +
-      "\001 \003(\tR\004urls\" \n\nSummaryReq\022\022\n\004year\030\003 \001(\005R" +
-      "\004year\"\203\002\n\nSummaryRes\022M\n\014year_summary\030\001 \001" +
-      "(\0132*.api.v1alpha1.integrations.CalendarS" +
-      "ummaryR\013yearSummary\022S\n\017month_summaries\030\002" +
-      " \003(\0132*.api.v1alpha1.integrations.Calenda" +
-      "rSummaryR\016monthSummaries\022Q\n\016week_summari" +
-      "es\030\003 \003(\0132*.api.v1alpha1.integrations.Cal" +
-      "endarSummaryR\rweekSummaries\"\327\001\n\017Calendar" +
-      "Summary\022!\n\014calendar_num\030\001 \001(\005R\013calendarN" +
-      "um\022G\n\007summary\030\002 \001(\0132-.api.v1alpha1.integ" +
-      "rations.TransactionSummaryR\007summary\022X\n\016t" +
-      "ype_summaries\030\003 \003(\01321.api.v1alpha1.integ" +
-      "rations.IntegrationTypeSummaryR\rtypeSumm" +
-      "aries\"\316\001\n\026IntegrationTypeSummary\022T\n\020inte" +
-      "gration_type\030\001 \001(\0162).api.commons.integra" +
-      "tions.IntegrationTypeR\017integrationType\022^" +
-      "\n\023integration_summary\030\002 \001(\0132-.api.v1alph" +
-      "a1.integrations.TransactionSummaryR\022inte" +
-      "grationSummary\"\274\002\n\022TransactionSummary\022@\n" +
-      "\034total_transactions_attempted\030\001 \001(\003R\032tot" +
-      "alTransactionsAttempted\022@\n\034total_transac" +
-      "tions_completed\030\002 \001(\003R\032totalTransactions" +
-      "Completed\022:\n\031total_transactions_failed\030\003" +
-      " \001(\003R\027totalTransactionsFailed\0224\n\026total_a" +
-      "mount_collected\030\004 \001(\001R\024totalAmountCollec" +
-      "ted\0220\n\024avg_amount_collected\030\005 \001(\001R\022avgAm" +
-      "ountCollected\"]\n#ListIntegrationTemplate" +
-      "sByConfigReq\0226\n\027integration_config_name\030" +
-      "\002 \001(\tR\025integrationConfigName\"\216\001\n#ListInt" +
-      "egrationTemplatesByConfigRes\022g\n\025integrat" +
-      "ion_templates\030\001 \003(\01322.api.v1alpha1.integ" +
-      "rations.IntegrationTemplateInfoR\024integra" +
-      "tionTemplates\"t\n\027IntegrationTemplateInfo" +
-      "\0224\n\026broadcast_template_sid\030\001 \001(\003R\024broadc" +
-      "astTemplateSid\022#\n\rtemplate_name\030\002 \001(\tR\014t" +
-      "emplateName\"*\n\030CopyPaymentLinkConfigReq\022" +
-      "\016\n\002id\030\003 \001(\tR\002id\"5\n\030CopyPaymentLinkConfig" +
-      "Res\022\031\n\010new_name\030\001 \001(\tR\007newName\"!\n\013Profil" +
-      "eName\022\022\n\004name\030\001 \001(\tR\004name\"T\n\017PaymentProf" +
-      "iles\022A\n\006values\030\001 \003(\0132).api.v1alpha1.inte" +
-      "grations.PaymentProfileR\006values\"j\n\016Payme" +
-      "ntProfile\022\"\n\014verification\030\010 \001(\tR\014verific" +
-      "ation\022\030\n\007invoice\030\t \001(\tR\007invoice\022\032\n\010payme" +
-      "nts\030\n \003(\tR\010payments\"\223\002\n\014UnknownField\022\022\n\004" +
-      "name\030\001 \001(\tR\004name\022!\n\014display_name\030\005 \001(\tR\013" +
-      "displayName\022#\n\rreason_needed\030\002 \001(\tR\014reas" +
-      "onNeeded\022R\n\021potential_sources\030\003 \003(\0162%.ap" +
-      "i.commons.integrations.FieldSourceR\020pote" +
-      "ntialSources\022S\n\020suggested_fields\030\004 \003(\0132(" +
-      ".api.v1alpha1.integrations.ProvidedField" +
-      "R\017suggestedFields\"\227\002\n\rProvidedField\022\022\n\004n" +
-      "ame\030\001 \001(\tR\004name\022!\n\014display_name\030\006 \001(\tR\013d" +
-      "isplayName\022\031\n\010alt_name\030\002 \001(\tR\007altName\022F\n" +
-      "\013provided_by\030\003 \001(\0162%.api.commons.integra" +
-      "tions.FieldSourceR\nprovidedBy\0225\n\027provide" +
-      "d_by_details_num\030\004 \001(\005R\024providedByDetail" +
-      "sNum\0225\n\027provided_by_details_str\030\005 \001(\tR\024p" +
-      "rovidedByDetailsStr\"\254\001\n\006Values\022E\n\006values" +
-      "\030\001 \003(\0132-.api.v1alpha1.integrations.Value" +
-      "s.ValuesEntryR\006values\032[\n\013ValuesEntry\022\020\n\003" +
-      "key\030\001 \001(\tR\003key\0226\n\005value\030\002 \001(\0132 .api.v1al" +
-      "pha1.integrations.ValueR\005value:\0028\001\"\337\002\n\005V" +
-      "alue\022\031\n\007str_val\030\001 \001(\tH\000R\006strVal\022\031\n\007num_v" +
-      "al\030\002 \001(\001H\000R\006numVal\022\033\n\010bool_val\030\003 \001(\010H\000R\007" +
-      "boolVal\0227\n\010time_val\030\004 \001(\0132\032.google.proto" +
-      "buf.TimestampH\000R\007timeVal\022D\n\010comp_val\030\006 \001" +
-      "(\0132\'.api.v1alpha1.integrations.Composite" +
-      "ValH\000R\007compVal\022\031\n\007int_val\030\007 \001(\003H\000R\006intVa" +
-      "l\022\034\n\tsensitive\030\005 \001(\010R\tsensitive\022D\n\nvalid" +
-      "ation\030\010 \001(\0162$.api.commons.integrations.V" +
-      "alidationR\nvalidationB\005\n\003val\"F\n\nFieldOrS" +
-      "tr\022\026\n\005field\030\001 \001(\tH\000R\005field\022\031\n\007str_val\030\002 " +
-      "\001(\tH\000R\006strValB\005\n\003val\"K\n\014CompositeVal\022;\n\005" +
-      "parts\030\001 \003(\0132%.api.v1alpha1.integrations." +
-      "FieldOrStrR\005parts\"\221\001\n\tCondition\022\020\n\003key\030\001" +
-      " \001(\tR\003key\022:\n\002op\030\002 \001(\0162*.api.commons.inte",
-      "grations.CompareOperationR\002op\0226\n\005value\030\003" +
-      " \001(\0132 .api.v1alpha1.integrations.ValueR\005" +
-      "value\"\372\003\n\021IntegrationConfig\022\016\n\002id\030\001 \001(\tR" +
-      "\002id\022P\n\016integration_id\030\004 \001(\0162).api.common" +
-      "s.integrations.IntegrationTypeR\rintegrat" +
-      "ionId\022\022\n\004name\030\006 \001(\tR\004name\022 \n\013description" +
-      "\030\007 \001(\tR\013description\0229\n\006params\030\t \001(\0132!.ap" +
-      "i.v1alpha1.integrations.ValuesR\006params\022\030" +
-      "\n\007deleted\030\n \001(\010R\007deleted\0229\n\ncreated_on\030\013" +
-      " \001(\0132\032.google.protobuf.TimestampR\tcreate" +
-      "dOn\022:\n\005alias\030\r \001(\0132$.api.v1alpha1.integr" +
-      "ations.MapStringR\005alias\022;\n\005conds\030\016 \001(\0132%" +
-      ".api.v1alpha1.integrations.ConditionsR\005c" +
-      "onds\022D\n\tmethod_id\030\017 \001(\0162\'.api.commons.in" +
-      "tegrations.RequestMethodR\010methodId\"\304\006\n\026I" +
-      "ntegrationTransaction\022<\n\032integration_tra" +
-      "nsaction_id\030\001 \001(\tR\030integrationTransactio" +
-      "nId\022\027\n\007task_id\030\004 \001(\tR\006taskId\022P\n\016integrat" +
-      "ion_id\030\005 \001(\0162).api.commons.integrations." +
-      "IntegrationTypeR\rintegrationId\022D\n\tmethod" +
-      "_id\030\006 \001(\0162\'.api.commons.integrations.Req" +
-      "uestMethodR\010methodId\022T\n\020transaction_type" +
-      "\030\007 \001(\0162).api.commons.integrations.Transa" +
-      "ctionTypeR\017transactionType\022N\n\016request_so" +
-      "urce\030\010 \001(\0162\'.api.commons.integrations.Re" +
-      "questSourceR\rrequestSource\022C\n\006result\030\t \001" +
-      "(\0162+.api.commons.integrations.Transactio" +
-      "nResultR\006result\022)\n\020amount_collected\030\n \001(" +
-      "\001R\017amountCollected\022D\n\014request_data\030\013 \001(\013" +
-      "2!.api.v1alpha1.integrations.ValuesR\013req" +
-      "uestData\022F\n\rresponse_data\030\014 \001(\0132!.api.v1" +
-      "alpha1.integrations.ValuesR\014responseData" +
-      "\0229\n\ncreated_on\030\r \001(\0132\032.google.protobuf.T" +
-      "imestampR\tcreatedOn\022\037\n\013config_name\030\016 \001(\t" +
-      "R\nconfigName\022;\n\005conds\030\017 \001(\0132%.api.v1alph" +
-      "a1.integrations.ConditionsR\005conds\"\220\001\n\tMa" +
-      "pString\022H\n\006values\030\001 \003(\01320.api.v1alpha1.i" +
-      "ntegrations.MapString.ValuesEntryR\006value" +
-      "s\0329\n\013ValuesEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005va" +
-      "lue\030\002 \001(\tR\005value:\0028\001\"J\n\nConditions\022<\n\006va" +
-      "lues\030\001 \003(\0132$.api.v1alpha1.integrations.C" +
-      "onditionR\006values\"\374\001\n\004Task\022C\n\006values\030\001 \003(" +
-      "\0132+.api.v1alpha1.integrations.Task.Value" +
-      "sEntryR\006values\022\027\n\007task_id\030\002 \001(\tR\006taskId\022" +
-      "9\n\003src\030\003 \001(\0162\'.api.commons.integrations." +
-      "RequestSourceR\003src\032[\n\013ValuesEntry\022\020\n\003key" +
-      "\030\001 \001(\tR\003key\0226\n\005value\030\002 \001(\0132 .api.v1alpha" +
-      "1.integrations.ValueR\005value:\0028\001\" \n\016Porta" +
-      "lConfigId\022\016\n\002id\030\003 \001(\tR\002id\"\305\003\n\014PortalConf" +
-      "ig\022\016\n\002id\030\025 \001(\tR\002id\022\022\n\004name\030\026 \001(\tR\004name\022 " +
-      "\n\013description\030\027 \001(\tR\013description\022(\n\020chat" +
-      "_client_link\030\002 \001(\tR\016chatClientLink\022#\n\rco" +
-      "ntact_email\030\003 \001(\tR\014contactEmail\022#\n\rconta" +
-      "ct_phone\030\004 \001(\tR\014contactPhone\022\037\n\013postal_c" +
-      "ode\030\005 \001(\tR\npostalCode\022\022\n\004city\030\006 \001(\tR\004cit" +
-      "y\022\024\n\005state\030\007 \001(\tR\005state\022!\n\014company_name\030" +
-      "\010 \001(\tR\013companyName\022\022\n\004logo\030\r \001(\014R\004logo\022#" +
-      "\n\rprimary_color\030\016 \001(\tR\014primaryColor\022\'\n\017s" +
-      "econdary_color\030\017 \001(\tR\016secondaryColor\022%\n\016" +
-      "street_address\030\023 \001(\tR\rstreetAddressJ\004\010\t\020" +
-      "\r\"\036\n\014PortalLinkId\022\016\n\002id\030\003 \001(\tR\002id\"\273\004\n\nPo" +
-      "rtalLink\022\016\n\002id\030\003 \001(\tR\002id\022\033\n\tportal_id\030\004 " +
-      "\001(\tR\010portalId\0220\n\022plugin_instance_id\030\005 \001(" +
-      "\tB\002\030\001R\020pluginInstanceId\022(\n\020portal_config" +
-      "_id\030\006 \001(\tR\016portalConfigId\022\027\n\007task_id\030\007 \001" +
-      "(\tR\006taskId\022C\n\004data\030\010 \003(\0132/.api.v1alpha1." +
-      "integrations.PortalLink.DataEntryR\004data\022" +
-      "O\n\010metadata\030\t \003(\01323.api.v1alpha1.integra" +
-      "tions.PortalLink.MetadataEntryR\010metadata" +
-      "\022;\n\013last_edited\030\n \001(\0132\032.google.protobuf." +
-      "TimestampR\nlastEdited\032Y\n\tDataEntry\022\020\n\003ke" +
-      "y\030\001 \001(\tR\003key\0226\n\005value\030\002 \001(\0132 .api.v1alph" +
-      "a1.integrations.ValueR\005value:\0028\001\032]\n\rMeta" +
-      "dataEntry\022\020\n\003key\030\001 \001(\tR\003key\0226\n\005value\030\002 \001" +
-      "(\0132 .api.v1alpha1.integrations.ValueR\005va" +
-      "lue:\0028\001\"\032\n\010PortalId\022\016\n\002id\030\003 \001(\tR\002id\"\232\002\n\006" +
-      "Portal\022\016\n\002id\030\003 \001(\tR\002id\022\022\n\004name\030\004 \001(\tR\004na" +
-      "me\022 \n\013description\030\005 \001(\tR\013description\022(\n\020" +
-      "portal_config_id\030\006 \001(\tR\016portalConfigId\022&" +
-      "\n\017plugin_inst_ids\030\007 \003(\tR\rpluginInstIds\022;" +
-      "\n\005ptype\030\010 \001(\0132%.api.v1alpha1.integration" +
-      "s.PortalTypeR\005ptype\022;\n\013last_edited\030\t \001(\013" +
-      "2\032.google.protobuf.TimestampR\nlastEdited" +
-      "\"\330\002\n\nPortalText\022/\n\023verification_header\030\001" +
-      " \001(\tR\022verificationHeader\022/\n\023verification" +
-      "_footer\030\002 \001(\tR\022verificationFooter\022%\n\016pay" +
-      "ment_header\030\003 \001(\tR\rpaymentHeader\022%\n\016paym" +
-      "ent_footer\030\004 \001(\tR\rpaymentFooter\022%\n\016recei" +
-      "pt_header\030\005 \001(\tR\rreceiptHeader\022%\n\016receip" +
-      "t_footer\030\006 \001(\tR\rreceiptFooter\022%\n\016invoice" +
-      "_header\030\007 \001(\tR\rinvoiceHeader\022%\n\016invoice_" +
-      "footer\030\010 \001(\tR\rinvoiceFooter\"\256\001\n\nPortalTy" +
-      "pe\022Q\n\016payment_portal\030\001 \001(\0132(.api.v1alpha" +
-      "1.integrations.PaymentPortalH\000R\rpaymentP" +
-      "ortal\022E\n\nivr_portal\030\002 \001(\0132$.api.v1alpha1" +
-      ".integrations.IVRPortalH\000R\tivrPortalB\006\n\004" +
-      "data\"\253\002\n\rPaymentPortal\022N\n\014verification\030\010" +
-      " \001(\0132*.api.commons.integrations.Verifica" +
-      "tionFlowR\014verification\022?\n\007invoice\030\t \001(\0132" +
-      "%.api.commons.integrations.InvoiceFlowR\007" +
-      "invoice\022A\n\010payments\030\n \003(\0132%.api.commons." +
-      "integrations.PaymentFlowR\010payments\022F\n\013po" +
-      "rtal_text\030\024 \001(\0132%.api.v1alpha1.integrati" +
-      "ons.PortalTextR\nportalText\"\013\n\tIVRPortal\"" +
-      "\"\n\020PluginInstanceId\022\016\n\002id\030\003 \001(\tR\002id\"\322\003\n\016" +
-      "PluginInstance\022\016\n\002id\030\003 \001(\tR\002id\022\022\n\004name\030\004" +
-      " \001(\tR\004name\022 \n\013description\030\005 \001(\tR\013descrip" +
-      "tion\022+\n\021plugin_definition\030\006 \001(\tR\020pluginD" +
-      "efinition\0225\n\004data\030\007 \001(\0132!.api.v1alpha1.i" +
-      "ntegrations.ValuesR\004data\022=\n\010metadata\030\n \001" +
-      "(\0132!.api.v1alpha1.integrations.ValuesR\010m" +
-      "etadata\022;\n\013last_edited\030\t \001(\0132\032.google.pr" +
-      "otobuf.TimestampR\nlastEdited\022H\n\tmethod_i" +
-      "d\030\014 \001(\0162\'.api.commons.integrations.Reque" +
-      "stMethodB\002\030\001R\010methodId\022P\n\017display_method" +
-      "s\030\r \003(\0162\'.api.commons.integrations.Reque" +
-      "stMethodR\016displayMethods\"\362\003\n\030PortalLinkT" +
-      "ransactionRow\022\024\n\005views\030\001 \001(\005R\005views\022\'\n\017v" +
-      "erify_attempts\030\002 \001(\005R\016verifyAttempts\022)\n\020" +
-      "verify_successes\030\003 \001(\005R\017verifySuccesses\022" +
-      ")\n\020payment_attempts\030\004 \001(\005R\017paymentAttemp" +
-      "ts\022+\n\021payment_successes\030\005 \001(\005R\020paymentSu" +
-      "ccesses\022%\n\016payment_amount\030\006 \001(\001R\rpayment" +
-      "Amount\022.\n\004date\030\007 \001(\0132\032.google.protobuf.T" +
-      "imestampR\004date\022^\n\tlink_data\030\010 \003(\0132A.api." +
-      "v1alpha1.integrations.PortalLinkTransact" +
-      "ionRow.LinkDataEntryR\010linkData\032]\n\rLinkDa" +
-      "taEntry\022\020\n\003key\030\001 \001(\tR\003key\0226\n\005value\030\002 \001(\013" +
-      "2 .api.v1alpha1.integrations.ValueR\005valu" +
-      "e:\0028\001\"\260\002\n\034GetPortalLinksByDateRangeReq\022\025" +
-      "\n\006org_id\030\001 \001(\tR\005orgId\022\033\n\tregion_id\030\002 \001(\t" +
-      "R\010regionId\0220\n\005start\030\003 \001(\0132\032.google.proto" +
-      "buf.TimestampR\005start\022,\n\003end\030\004 \001(\0132\032.goog" +
-      "le.protobuf.TimestampR\003end\022\033\n\tpage_size\030" +
-      "\005 \001(\005R\010pageSize\022\031\n\010page_num\030\006 \001(\005R\007pageN" +
-      "um\022D\n\tmethod_id\030\007 \001(\0162\'.api.commons.inte" +
-      "grations.RequestMethodR\010methodId\"g\n\034GetP" +
-      "ortalLinksByDateRangeRes\022G\n\004rows\030\002 \003(\01323" +
-      ".api.v1alpha1.integrations.PortalLinkTra" +
-      "nsactionRowR\004rows2\320%\n\014Integrations\022\220\001\n\007P" +
-      "rocess\022%.api.v1alpha1.integrations.Proce" +
-      "ssReq\032%.api.v1alpha1.integrations.Proces" +
-      "sRes\"7\272\270\221\002\005\n\003\010\224\n\202\323\344\223\002\'\"\"/api/v1alpha1/in" +
-      "tegrations/process:\001*\022\322\001\n\031GetIntegration" +
-      "Transaction\0227.api.v1alpha1.integrations." +
-      "GetIntegrationTransactionReq\0321.api.v1alp" +
-      "ha1.integrations.IntegrationTransaction\"" +
-      "I\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0029\"4/api/v1alpha1/integra" +
-      "tions/getintegrationtransaction:\001*\022\360\001\n\037G" +
-      "etIntegrationTransactionReport\022=.api.v1a" +
-      "lpha1.integrations.GetIntegrationTransac" +
-      "tionReportReq\032=.api.v1alpha1.integration" +
-      "s.GetIntegrationTransactionReportRes\"O\272\270" +
-      "\221\002\005\n\003\010\224\n\202\323\344\223\002?\":/api/v1alpha1/integratio" +
-      "ns/getintegrationtransactionreport:\001*\022\200\002" +
-      "\n#GetIntegrationTransactionReportData\022A." +
-      "api.v1alpha1.integrations.GetIntegration" +
-      "TransactionReportDataReq\032A.api.v1alpha1." +
+      "integrationId\022(\n\020search_after_sid\030\n \001(\003R" +
+      "\016searchAfterSid\032:\n\014GroupByEntry\022\020\n\003key\030\001" +
+      " \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\"\345\003\n&" +
+      "GetIntegrationTransactionReportDataRow\022x" +
+      "\n\rcount_metrics\030\001 \003(\0132S.api.v1alpha1.int" +
+      "egrations.GetIntegrationTransactionRepor" +
+      "tDataRow.CountMetricsEntryR\014countMetrics" +
+      "\022l\n\tlink_data\030\002 \003(\0132O.api.v1alpha1.integ" +
+      "rations.GetIntegrationTransactionReportD" +
+      "ataRow.LinkDataEntryR\010linkData\022.\n\004date\030\003" +
+      " \001(\0132\032.google.protobuf.TimestampR\004date\022%" +
+      "\n\016payment_amount\030\004 \001(\001R\rpaymentAmount\032?\n" +
+      "\021CountMetricsEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005" +
+      "value\030\002 \001(\003R\005value:\0028\001\032;\n\rLinkDataEntry\022" +
+      "\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:" +
+      "\0028\001\"\271\001\n&GetIntegrationTransactionReportD" +
+      "ataRes\022]\n\010entities\030\001 \003(\0132A.api.v1alpha1." +
       "integrations.GetIntegrationTransactionRe" +
-      "portDataRes\"S\272\270\221\002\005\n\003\010\224\n\202\323\344\223\002C\">/api/v1al" +
-      "pha1/integrations/getintegrationtransact" +
-      "ionreportdata:\001*\022\307\001\n\025GetAggregatedMetada" +
-      "ta\0223.api.v1alpha1.integrations.GetAggreg" +
-      "atedMetadataReq\0323.api.v1alpha1.integrati" +
-      "ons.GetAggregatedMetadataRes\"D\272\270\221\002\005\n\003\010\224\n" +
-      "\202\323\344\223\0024\"//api/v1alpha1/integrations/getag" +
-      "gregatemetadata:\001*\022\330\001\n\031GetPortalLinksByD" +
-      "ateRange\0227.api.v1alpha1.integrations.Get" +
-      "PortalLinksByDateRangeReq\0327.api.v1alpha1" +
-      ".integrations.GetPortalLinksByDateRangeR" +
-      "es\"I\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0029\"4/api/v1alpha1/inte" +
-      "grations/getportallinksbydaterange:\001*\022\262\001" +
-      "\n\027CreateIntegrationConfig\022,.api.v1alpha1" +
-      ".integrations.IntegrationConfig\032 .api.v1" +
-      "alpha1.integrations.Empty\"G\272\270\221\002\005\n\003\010\224\n\202\323\344" +
-      "\223\0027\"2/api/v1alpha1/integrations/createin" +
-      "tegrationconfig:\001*\022\276\001\n\024GetIntegrationCon" +
-      "fig\0222.api.v1alpha1.integrations.GetInteg" +
-      "rationConfigReq\032,.api.v1alpha1.integrati" +
-      "ons.IntegrationConfig\"D\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0024\"" +
-      "//api/v1alpha1/integrations/getintegrati" +
-      "onconfig:\001*\022\273\001\n\027UpdateIntegrationConfig\022" +
-      "5.api.v1alpha1.integrations.UpdateIntegr" +
-      "ationConfigReq\032 .api.v1alpha1.integratio" +
-      "ns.Empty\"G\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0027\"2/api/v1alpha" +
-      "1/integrations/udpateintegrationconfig:\001" +
-      "*\022\273\001\n\027DeleteIntegrationConfig\0225.api.v1al" +
-      "pha1.integrations.DeleteIntegrationConfi" +
-      "gReq\032 .api.v1alpha1.integrations.Empty\"G" +
-      "\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0027\"2/api/v1alpha1/integrat" +
-      "ions/deleteintegrationconfig:\001*\022\243\001\n\020List" +
-      "Integrations\022 .api.v1alpha1.integrations" +
-      ".Empty\032+.api.v1alpha1.integrations.Integ" +
-      "rationInfos\"@\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0020\"+/api/v1al" +
-      "pha1/integrations/listintegrations:\001*\022\303\001" +
-      "\n\026ListIntegrationsForOrg\0224.api.v1alpha1." +
-      "integrations.ListIntegrationsForOrgReq\032+" +
-      ".api.v1alpha1.integrations.IntegrationIn" +
-      "fos\"F\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0026\"1/api/v1alpha1/int" +
-      "egrations/listintegrationsfororg:\001*\022\334\001\n\032" +
-      "ListIntegrationConfigNames\0228.api.v1alpha" +
-      "1.integrations.ListIntegrationConfigName" +
-      "sReq\0328.api.v1alpha1.integrations.ListInt" +
-      "egrationConfigNamesRes\"J\272\270\221\002\005\n\003\010\224\n\202\323\344\223\002:" +
-      "\"5/api/v1alpha1/integrations/listintegra" +
-      "tionconfignames:\001*\022\271\001\n\022ListJourneyConfig" +
-      "s\0220.api.v1alpha1.integrations.ListJourne" +
-      "yConfigsReq\032-.api.v1alpha1.integrations." +
-      "IntegrationConfigs\"B\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0022\"-/a" +
-      "pi/v1alpha1/integrations/listjourneyconf" +
-      "igs:\001*\022\302\001\n\025ListNonJourneyConfigs\0223.api.v" +
-      "1alpha1.integrations.ListNonJourneyConfi" +
-      "gsReq\032-.api.v1alpha1.integrations.Integr" +
-      "ationConfigs\"E\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0025\"0/api/v1a" +
-      "lpha1/integrations/listnonjourneyconfigs" +
-      ":\001*\022\243\001\n\022CreatePortalConfig\022\'.api.v1alpha" +
-      "1.integrations.PortalConfig\032 .api.v1alph" +
-      "a1.integrations.Empty\"B\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0022\"" +
-      "-/api/v1alpha1/integrations/createportal" +
-      "config:\001*\022\261\001\n\021ListPortalConfigs\022/.api.v1" +
-      "alpha1.integrations.ListPortalConfigsReq" +
-      "\032(.api.v1alpha1.integrations.PortalConfi" +
-      "gs\"A\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0021\",/api/v1alpha1/inte" +
-      "grations/listportalconfigs:\001*\022\243\001\n\022Update" +
-      "PortalConfig\022\'.api.v1alpha1.integrations" +
-      ".PortalConfig\032 .api.v1alpha1.integration" +
-      "s.Empty\"B\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0022\"-/api/v1alpha1" +
-      "/integrations/updateportalconfig:\001*\022\252\001\n\017" +
-      "GetPortalConfig\022-.api.v1alpha1.integrati" +
-      "ons.GetPortalConfigReq\032\'.api.v1alpha1.in" +
-      "tegrations.PortalConfig\"?\272\270\221\002\005\n\003\010\224\n\202\323\344\223\002" +
-      "/\"*/api/v1alpha1/integrations/getportalc" +
-      "onfig:\001*\022\254\001\n\022DeletePortalConfig\0220.api.v1" +
-      "alpha1.integrations.DeletePortalConfigRe" +
-      "q\032 .api.v1alpha1.integrations.Empty\"B\272\270\221" +
-      "\002\005\n\003\010\224\n\202\323\344\223\0022\"-/api/v1alpha1/integration" +
-      "s/deleteportalconfig:\001*\022\246\001\n\020UpdatePortal" +
-      "Logo\022..api.v1alpha1.integrations.UpdateP" +
-      "ortalLogoReq\032 .api.v1alpha1.integrations" +
-      ".Empty\"@\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0020\"+/api/v1alpha1/" +
-      "integrations/updateportallogo:\001*\022\234\001\n\rGet" +
-      "PortalLogo\022+.api.v1alpha1.integrations.G" +
-      "etPortalLogoReq\032\037.api.v1alpha1.integrati" +
-      "ons.Logo\"=\272\270\221\002\005\n\003\010\224\n\202\323\344\223\002-\"(/api/v1alpha" +
-      "1/integrations/getportallogo:\001*\022\324\001\n\030Crea" +
-      "tePaymentPortalLinks\0226.api.v1alpha1.inte" +
-      "grations.CreatePaymentPortalLinksReq\0326.a" +
-      "pi.v1alpha1.integrations.CreatePaymentPo" +
-      "rtalLinksRes\"H\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0028\"3/api/v1a" +
-      "lpha1/integrations/createpaymentportalli" +
-      "nks:\001*\022\220\001\n\007Summary\022%.api.v1alpha1.integr" +
-      "ations.SummaryReq\032%.api.v1alpha1.integra" +
-      "tions.SummaryRes\"7\272\270\221\002\005\n\003\010\224\n\202\323\344\223\002\'\"\"/api" +
-      "/v1alpha1/integrations/summary:\001*\022\360\001\n Li" +
-      "stIntegrationTemplatesByConfig\022>.api.v1a" +
-      "lpha1.integrations.ListIntegrationTempla" +
-      "tesByConfigReq\032>.api.v1alpha1.integratio" +
-      "ns.ListIntegrationTemplatesByConfigRes\"L" +
-      "\272\270\221\002\005\n\003\010\224\n\202\323\344\223\002<\"7/api/v1alpha1/integrat" +
-      "ions/integrationtemplatesbyconfig:\001*B\301\001\n" +
-      "+com.tcn.cloud.api.api.v1alpha1.integrat" +
-      "ionsB\014ServiceProtoP\001\242\002\003AVI\252\002\031Api.V1alpha" +
-      "1.Integrations\312\002\031Api\\V1alpha1\\Integratio" +
-      "ns\342\002%Api\\V1alpha1\\Integrations\\GPBMetada" +
-      "ta\352\002\033Api::V1alpha1::Integrationsb\006proto3"
+      "portDataRowR\010entities\0220\n\024last_transactio" +
+      "n_sid\030\002 \001(\003R\022lastTransactionSid\"\303\004\n Sear" +
+      "chIntegrationTransactionsReq\0229\n\nstart_da" +
+      "te\030\010 \001(\0132\032.google.protobuf.TimestampR\tst" +
+      "artDate\0225\n\010end_date\030\t \001(\0132\032.google.proto" +
+      "buf.TimestampR\007endDate\022U\n\020integration_ty" +
+      "pe\030\n \001(\0132*.api.v1alpha1.integrations.Int" +
+      "egrationTypeR\017integrationType\022O\n\016request" +
+      "_method\030\013 \001(\0132(.api.v1alpha1.integration" +
+      "s.RequestMethodR\rrequestMethod\022U\n\020transa" +
+      "ction_type\030\014 \001(\0132*.api.v1alpha1.integrat" +
+      "ions.TransactionTypeR\017transactionType\022O\n" +
+      "\016request_source\030\r \001(\0132(.api.v1alpha1.int" +
+      "egrations.RequestSourceR\rrequestSource\022D" +
+      "\n\006result\030\016 \001(\0132,.api.v1alpha1.integratio" +
+      "ns.TransactionResultR\006result\022\027\n\007task_id\030" +
+      "\017 \001(\tR\006taskId\"y\n SearchIntegrationTransa" +
+      "ctionsRes\022U\n\014transactions\030\001 \003(\01321.api.v1" +
+      "alpha1.integrations.IntegrationTransacti" +
+      "onR\014transactions\"c\n\017IntegrationType\022P\n\016i" +
+      "ntegration_id\030\001 \001(\0162).api.commons.integr" +
+      "ations.IntegrationTypeR\rintegrationId\"U\n" +
+      "\rRequestMethod\022D\n\tmethod_id\030\001 \001(\0162\'.api." +
+      "commons.integrations.RequestMethodR\010meth" +
+      "odId\"g\n\017TransactionType\022T\n\020transaction_t" +
+      "ype\030\001 \001(\0162).api.commons.integrations.Tra" +
+      "nsactionTypeR\017transactionType\"_\n\rRequest" +
+      "Source\022N\n\016request_source\030\001 \001(\0162\'.api.com" +
+      "mons.integrations.RequestSourceR\rrequest" +
+      "Source\"X\n\021TransactionResult\022C\n\006result\030\001 " +
+      "\001(\0162+.api.commons.integrations.Transacti" +
+      "onResultR\006result\"q\n\035ListIntegrationConfi" +
+      "gNamesReq\022P\n\016integration_id\030\004 \001(\0162).api." +
+      "commons.integrations.IntegrationTypeR\rin" +
+      "tegrationId\"\207\001\n\035ListIntegrationConfigNam" +
+      "esRes\022P\n\016integration_id\030\003 \001(\0162).api.comm" +
+      "ons.integrations.IntegrationTypeR\rintegr" +
+      "ationId\022\024\n\005names\030\004 \003(\tR\005names\")\n\027GetPaym" +
+      "entLinkConfigReq\022\016\n\002id\030\003 \001(\tR\002id\",\n\032Dele" +
+      "tePaymentLinkConfigReq\022\016\n\002id\030\003 \001(\tR\002id\"\034" +
+      "\n\004Logo\022\024\n\005value\030\001 \001(\014R\005value\"\272\001\n\024ListPor" +
+      "talConfigsReq\022A\n\006entity\030\001 \001(\0132).api.v1al" +
+      "pha1.integrations.PortalConfigIdR\006entity" +
+      "\022.\n\004mask\030\002 \001(\0132\032.google.protobuf.FieldMa" +
+      "skR\004mask\022\033\n\tpage_size\030\003 \001(\005R\010pageSize\022\022\n" +
+      "\004page\030\004 \001(\005R\004page\"\227\001\n\022GetPortalConfigReq" +
+      "\022A\n\006entity\030\001 \001(\0132).api.v1alpha1.integrat" +
+      "ions.PortalConfigIdR\006entity\022.\n\004mask\030\002 \001(" +
+      "\0132\032.google.protobuf.FieldMaskR\004mask\022\016\n\002i" +
+      "d\030\003 \001(\tR\002id\"\232\001\n\025DeletePortalConfigReq\022A\n" +
+      "\006entity\030\001 \001(\0132).api.v1alpha1.integration" +
+      "s.PortalConfigIdR\006entity\022.\n\004mask\030\002 \001(\0132\032" +
+      ".google.protobuf.FieldMaskR\004mask\022\016\n\002id\030\003" +
+      " \001(\tR\002id\"9\n\023UpdatePortalLogoReq\022\016\n\002id\030\003 " +
+      "\001(\tR\002id\022\022\n\004logo\030\004 \001(\014R\004logo\"\"\n\020GetPortal" +
+      "LogoReq\022\016\n\002id\030\003 \001(\tR\002id\")\n\016RefreshLinkRe" +
+      "q\022\027\n\007link_id\030\003 \001(\tR\006linkId\"K\n\016RefreshLin" +
+      "kRes\0229\n\nnew_expiry\030\001 \001(\0132\032.google.protob" +
+      "uf.TimestampR\tnewExpiry\"\252\014\n\021PaymentLinkC" +
+      "onfig\022\016\n\002id\030\023 \001(\tR\002id\022\022\n\004name\030\003 \001(\tR\004nam" +
+      "e\022 \n\013description\030\004 \001(\tR\013description\022\'\n\rc" +
+      "ollection_id\030\005 \001(\tB\002\030\001R\014collectionId\022T\n\016" +
+      "integration_id\030\006 \001(\0162).api.commons.integ" +
+      "rations.IntegrationTypeB\002\030\001R\rintegration" +
+      "Id\022a\n\026verification_method_id\030\007 \001(\0162\'.api" +
+      ".commons.integrations.RequestMethodB\002\030\001R" +
+      "\024verificationMethodId\022W\n\021invoice_method_" +
+      "id\030\010 \001(\0162\'.api.commons.integrations.Requ" +
+      "estMethodB\002\030\001R\017invoiceMethodId\022W\n\021paymen" +
+      "t_method_id\030\t \001(\0162\'.api.commons.integrat" +
+      "ions.RequestMethodB\002\030\001R\017paymentMethodId\022" +
+      "`\n\014name_mapping\030\n \003(\0132=.api.v1alpha1.int" +
+      "egrations.PaymentLinkConfig.NameMappingE" +
+      "ntryR\013nameMapping\0223\n\023verification_fields" +
+      "\030\013 \003(\tB\002\030\001R\022verificationFields\022*\n\021paymen" +
+      "t_portal_id\030\014 \001(\tR\017paymentPortalId\0229\n\ncr" +
+      "eated_on\030\016 \001(\0132\032.google.protobuf.Timesta" +
+      "mpR\tcreatedOn\022\037\n\013expiry_days\030\017 \001(\005R\nexpi" +
+      "ryDays\022+\n\021links_refreshable\030\020 \001(\010R\020links" +
+      "Refreshable\0227\n\030refresh_link_valid_hours\030" +
+      "\021 \001(\001R\025refreshLinkValidHours\022*\n\021max_refr" +
+      "esh_times\030\022 \001(\005R\017maxRefreshTimes\022a\n\024veri" +
+      "fication_request\030\024 \001(\0132..api.v1alpha1.in" +
+      "tegrations.VerificationRequestR\023verifica" +
+      "tionRequest\022R\n\017invoice_request\030\025 \001(\0132).a" +
+      "pi.v1alpha1.integrations.InvoiceRequestR" +
+      "\016invoiceRequest\022T\n\020payment_requests\030\026 \003(" +
+      "\0132).api.v1alpha1.integrations.PaymentReq" +
+      "uestR\017paymentRequests\022W\n\tbase_data\030\027 \003(\013" +
+      "2:.api.v1alpha1.integrations.PaymentLink" +
+      "Config.BaseDataEntryR\010baseData\022S\n\ttempla" +
+      "tes\030\030 \001(\01325.api.v1alpha1.integrations.Pa" +
+      "ymentLinkConfigTemplatesR\ttemplates\0220\n\024p" +
+      "ayment_profile_name\030\031 \001(\tR\022paymentProfil" +
+      "eName\032>\n\020NameMappingEntry\022\020\n\003key\030\001 \001(\tR\003" +
+      "key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\032]\n\rBaseDat" +
+      "aEntry\022\020\n\003key\030\001 \001(\tR\003key\0226\n\005value\030\002 \001(\0132" +
+      " .api.v1alpha1.integrations.ValueR\005value" +
+      ":\0028\001\"\312\002\n\032PaymentLinkConfigTemplates\0220\n\024r" +
+      "eceipt_sms_template\030\001 \001(\tR\022receiptSmsTem" +
+      "plate\0227\n\030receipt_sms_source_phone\030\002 \001(\tR" +
+      "\025receiptSmsSourcePhone\0224\n\026receipt_email_" +
+      "template\030\003 \001(\tR\024receiptEmailTemplate\0225\n\027" +
+      "receipt_email_from_addr\030\004 \001(\tR\024receiptEm" +
+      "ailFromAddr\022)\n\020receipt_template\030\005 \001(\tR\017r" +
+      "eceiptTemplate\022)\n\020invoice_template\030\006 \001(\t" +
+      "R\017invoiceTemplate\"\305\001\n\023VerificationReques" +
+      "t\022W\n\025verification_requests\030\001 \003(\0132\".api.v" +
+      "1alpha1.integrations.RequestR\024verificati" +
+      "onRequests\022U\n\023verification_fields\030\002 \003(\0132" +
+      "$.api.v1alpha1.integrations.ParameterR\022v" +
+      "erificationFields\"\274\002\n\016PaymentRequest\022K\n\016" +
+      "payment_fields\030\005 \003(\0132$.api.v1alpha1.inte" +
+      "grations.ParameterR\rpaymentFields\022Z\n\027pay" +
+      "ment_request_payload\030\001 \003(\0132\".api.v1alpha" +
+      "1.integrations.RequestR\025paymentRequestPa" +
+      "yload\022K\n\017payment_request\030\002 \001(\0132\".api.v1a" +
+      "lpha1.integrations.RequestR\016paymentReque" +
+      "st\022\022\n\004name\030\003 \001(\tR\004name\022 \n\013description\030\004 " +
+      "\001(\tR\013description\"\353\001\n\016InvoiceRequest\022Z\n\027i" +
+      "nvoice_request_payload\030\002 \003(\0132\".api.v1alp" +
+      "ha1.integrations.RequestR\025invoiceRequest" +
+      "Payload\022K\n\017invoice_request\030\003 \001(\0132\".api.v" +
+      "1alpha1.integrations.RequestR\016invoiceReq" +
+      "uest\0220\n\024filter_response_keys\030\004 \003(\tR\022filt" +
+      "erResponseKeys\"\371\005\n\007Request\0224\n\025journey_co" +
+      "llection_id\030\003 \001(\tH\000R\023journeyCollectionId" +
+      "\022H\n\013method_call\030\004 \001(\0132%.api.v1alpha1.int" +
+      "egrations.MethodCallH\000R\nmethodCall\022\035\n\tco" +
+      "nfig_id\030\005 \001(\tH\000R\010configId\022S\n\013static_data" +
+      "\030\006 \003(\01322.api.v1alpha1.integrations.Reque" +
+      "st.StaticDataEntryR\nstaticData\022l\n\024rename" +
+      "_response_keys\030\007 \003(\0132:.api.v1alpha1.inte" +
+      "grations.Request.RenameResponseKeysEntry" +
+      "R\022renameResponseKeys\022n\n\024reassign_validat" +
+      "ions\030\010 \003(\0132;.api.v1alpha1.integrations.R" +
+      "equest.ReassignValidationsEntryR\023reassig" +
+      "nValidations\032_\n\017StaticDataEntry\022\020\n\003key\030\001" +
+      " \001(\tR\003key\0226\n\005value\030\002 \001(\0132 .api.v1alpha1." +
+      "integrations.ValueR\005value:\0028\001\032E\n\027RenameR" +
+      "esponseKeysEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005va" +
+      "lue\030\002 \001(\tR\005value:\0028\001\032m\n\030ReassignValidati" +
+      "onsEntry\022\020\n\003key\030\001 \001(\tR\003key\022;\n\005value\030\002 \001(" +
+      "\0132%.api.v1alpha1.integrations.Validation" +
+      "R\005value:\0028\001B\005\n\003val\"F\n\nValidation\0228\n\004enum" +
+      "\030\001 \001(\0162$.api.commons.integrations.Valida" +
+      "tionR\004enum\"\244\001\n\nMethodCall\022P\n\016integration" +
+      "_id\030\001 \001(\0162).api.commons.integrations.Int" +
+      "egrationTypeR\rintegrationId\022D\n\tmethod_id" +
+      "\030\002 \001(\0162\'.api.commons.integrations.Reques" +
+      "tMethodR\010methodId\"P\n\rPortalConfigs\022?\n\006va" +
+      "lues\030\001 \003(\0132\'.api.v1alpha1.integrations.P" +
+      "ortalConfigR\006values\"\033\n\031ListPaymentLinkCo" +
+      "nfigsReq\"Z\n\022PaymentLinkConfigs\022D\n\006values" +
+      "\030\001 \003(\0132,.api.v1alpha1.integrations.Payme" +
+      "ntLinkConfigR\006values\"\016\n\014ListLinksReq\"\265\001\n" +
+      "\033CreatePaymentPortalLinksReq\022$\n\016link_con" +
+      "fig_id\030\003 \001(\tR\014linkConfigId\0222\n\006expiry\030\004 \001" +
+      "(\0132\032.google.protobuf.TimestampR\006expiry\022<" +
+      "\n\tuser_data\030\005 \003(\0132\037.api.v1alpha1.integra" +
+      "tions.TaskR\010userData\"1\n\033CreatePaymentPor" +
+      "talLinksRes\022\022\n\004urls\030\001 \003(\tR\004urls\" \n\nSumma" +
+      "ryReq\022\022\n\004year\030\003 \001(\005R\004year\"\203\002\n\nSummaryRes" +
+      "\022M\n\014year_summary\030\001 \001(\0132*.api.v1alpha1.in" +
+      "tegrations.CalendarSummaryR\013yearSummary\022" +
+      "S\n\017month_summaries\030\002 \003(\0132*.api.v1alpha1." +
+      "integrations.CalendarSummaryR\016monthSumma" +
+      "ries\022Q\n\016week_summaries\030\003 \003(\0132*.api.v1alp" +
+      "ha1.integrations.CalendarSummaryR\rweekSu" +
+      "mmaries\"\327\001\n\017CalendarSummary\022!\n\014calendar_" +
+      "num\030\001 \001(\005R\013calendarNum\022G\n\007summary\030\002 \001(\0132" +
+      "-.api.v1alpha1.integrations.TransactionS" +
+      "ummaryR\007summary\022X\n\016type_summaries\030\003 \003(\0132" +
+      "1.api.v1alpha1.integrations.IntegrationT" +
+      "ypeSummaryR\rtypeSummaries\"\316\001\n\026Integratio" +
+      "nTypeSummary\022T\n\020integration_type\030\001 \001(\0162)" +
+      ".api.commons.integrations.IntegrationTyp" +
+      "eR\017integrationType\022^\n\023integration_summar" +
+      "y\030\002 \001(\0132-.api.v1alpha1.integrations.Tran" +
+      "sactionSummaryR\022integrationSummary\"\274\002\n\022T" +
+      "ransactionSummary\022@\n\034total_transactions_" +
+      "attempted\030\001 \001(\003R\032totalTransactionsAttemp" +
+      "ted\022@\n\034total_transactions_completed\030\002 \001(" +
+      "\003R\032totalTransactionsCompleted\022:\n\031total_t" +
+      "ransactions_failed\030\003 \001(\003R\027totalTransacti" +
+      "onsFailed\0224\n\026total_amount_collected\030\004 \001(" +
+      "\001R\024totalAmountCollected\0220\n\024avg_amount_co" +
+      "llected\030\005 \001(\001R\022avgAmountCollected\"]\n#Lis" +
+      "tIntegrationTemplatesByConfigReq\0226\n\027inte" +
+      "gration_config_name\030\002 \001(\tR\025integrationCo" +
+      "nfigName\"\216\001\n#ListIntegrationTemplatesByC" +
+      "onfigRes\022g\n\025integration_templates\030\001 \003(\0132" +
+      "2.api.v1alpha1.integrations.IntegrationT" +
+      "emplateInfoR\024integrationTemplates\"t\n\027Int" +
+      "egrationTemplateInfo\0224\n\026broadcast_templa" +
+      "te_sid\030\001 \001(\003R\024broadcastTemplateSid\022#\n\rte" +
+      "mplate_name\030\002 \001(\tR\014templateName\"*\n\030CopyP" +
+      "aymentLinkConfigReq\022\016\n\002id\030\003 \001(\tR\002id\"5\n\030C" +
+      "opyPaymentLinkConfigRes\022\031\n\010new_name\030\001 \001(" +
+      "\tR\007newName\"!\n\013ProfileName\022\022\n\004name\030\001 \001(\tR" +
+      "\004name\"T\n\017PaymentProfiles\022A\n\006values\030\001 \003(\013" +
+      "2).api.v1alpha1.integrations.PaymentProf" +
+      "ileR\006values\"j\n\016PaymentProfile\022\"\n\014verific" +
+      "ation\030\010 \001(\tR\014verification\022\030\n\007invoice\030\t \001" +
+      "(\tR\007invoice\022\032\n\010payments\030\n \003(\tR\010payments\"" +
+      "\223\002\n\014UnknownField\022\022\n\004name\030\001 \001(\tR\004name\022!\n\014" +
+      "display_name\030\005 \001(\tR\013displayName\022#\n\rreaso" +
+      "n_needed\030\002 \001(\tR\014reasonNeeded\022R\n\021potentia" +
+      "l_sources\030\003 \003(\0162%.api.commons.integratio" +
+      "ns.FieldSourceR\020potentialSources\022S\n\020sugg" +
+      "ested_fields\030\004 \003(\0132(.api.v1alpha1.integr" +
+      "ations.ProvidedFieldR\017suggestedFields\"\227\002" +
+      "\n\rProvidedField\022\022\n\004name\030\001 \001(\tR\004name\022!\n\014d" +
+      "isplay_name\030\006 \001(\tR\013displayName\022\031\n\010alt_na" +
+      "me\030\002 \001(\tR\007altName\022F\n\013provided_by\030\003 \001(\0162%",
+      ".api.commons.integrations.FieldSourceR\np" +
+      "rovidedBy\0225\n\027provided_by_details_num\030\004 \001" +
+      "(\005R\024providedByDetailsNum\0225\n\027provided_by_" +
+      "details_str\030\005 \001(\tR\024providedByDetailsStr\"" +
+      "\254\001\n\006Values\022E\n\006values\030\001 \003(\0132-.api.v1alpha" +
+      "1.integrations.Values.ValuesEntryR\006value" +
+      "s\032[\n\013ValuesEntry\022\020\n\003key\030\001 \001(\tR\003key\0226\n\005va" +
+      "lue\030\002 \001(\0132 .api.v1alpha1.integrations.Va" +
+      "lueR\005value:\0028\001\"\337\002\n\005Value\022\031\n\007str_val\030\001 \001(" +
+      "\tH\000R\006strVal\022\031\n\007num_val\030\002 \001(\001H\000R\006numVal\022\033" +
+      "\n\010bool_val\030\003 \001(\010H\000R\007boolVal\0227\n\010time_val\030" +
+      "\004 \001(\0132\032.google.protobuf.TimestampH\000R\007tim" +
+      "eVal\022D\n\010comp_val\030\006 \001(\0132\'.api.v1alpha1.in" +
+      "tegrations.CompositeValH\000R\007compVal\022\031\n\007in" +
+      "t_val\030\007 \001(\003H\000R\006intVal\022\034\n\tsensitive\030\005 \001(\010" +
+      "R\tsensitive\022D\n\nvalidation\030\010 \001(\0162$.api.co" +
+      "mmons.integrations.ValidationR\nvalidatio" +
+      "nB\005\n\003val\"F\n\nFieldOrStr\022\026\n\005field\030\001 \001(\tH\000R" +
+      "\005field\022\031\n\007str_val\030\002 \001(\tH\000R\006strValB\005\n\003val" +
+      "\"K\n\014CompositeVal\022;\n\005parts\030\001 \003(\0132%.api.v1" +
+      "alpha1.integrations.FieldOrStrR\005parts\"\221\001" +
+      "\n\tCondition\022\020\n\003key\030\001 \001(\tR\003key\022:\n\002op\030\002 \001(" +
+      "\0162*.api.commons.integrations.CompareOper" +
+      "ationR\002op\0226\n\005value\030\003 \001(\0132 .api.v1alpha1." +
+      "integrations.ValueR\005value\"\372\003\n\021Integratio" +
+      "nConfig\022\016\n\002id\030\001 \001(\tR\002id\022P\n\016integration_i" +
+      "d\030\004 \001(\0162).api.commons.integrations.Integ" +
+      "rationTypeR\rintegrationId\022\022\n\004name\030\006 \001(\tR" +
+      "\004name\022 \n\013description\030\007 \001(\tR\013description\022" +
+      "9\n\006params\030\t \001(\0132!.api.v1alpha1.integrati" +
+      "ons.ValuesR\006params\022\030\n\007deleted\030\n \001(\010R\007del" +
+      "eted\0229\n\ncreated_on\030\013 \001(\0132\032.google.protob" +
+      "uf.TimestampR\tcreatedOn\022:\n\005alias\030\r \001(\0132$" +
+      ".api.v1alpha1.integrations.MapStringR\005al" +
+      "ias\022;\n\005conds\030\016 \001(\0132%.api.v1alpha1.integr" +
+      "ations.ConditionsR\005conds\022D\n\tmethod_id\030\017 " +
+      "\001(\0162\'.api.commons.integrations.RequestMe" +
+      "thodR\010methodId\"\304\006\n\026IntegrationTransactio" +
+      "n\022<\n\032integration_transaction_id\030\001 \001(\tR\030i" +
+      "ntegrationTransactionId\022\027\n\007task_id\030\004 \001(\t" +
+      "R\006taskId\022P\n\016integration_id\030\005 \001(\0162).api.c" +
+      "ommons.integrations.IntegrationTypeR\rint" +
+      "egrationId\022D\n\tmethod_id\030\006 \001(\0162\'.api.comm" +
+      "ons.integrations.RequestMethodR\010methodId" +
+      "\022T\n\020transaction_type\030\007 \001(\0162).api.commons" +
+      ".integrations.TransactionTypeR\017transacti" +
+      "onType\022N\n\016request_source\030\010 \001(\0162\'.api.com" +
+      "mons.integrations.RequestSourceR\rrequest" +
+      "Source\022C\n\006result\030\t \001(\0162+.api.commons.int" +
+      "egrations.TransactionResultR\006result\022)\n\020a" +
+      "mount_collected\030\n \001(\001R\017amountCollected\022D" +
+      "\n\014request_data\030\013 \001(\0132!.api.v1alpha1.inte" +
+      "grations.ValuesR\013requestData\022F\n\rresponse" +
+      "_data\030\014 \001(\0132!.api.v1alpha1.integrations." +
+      "ValuesR\014responseData\0229\n\ncreated_on\030\r \001(\013" +
+      "2\032.google.protobuf.TimestampR\tcreatedOn\022" +
+      "\037\n\013config_name\030\016 \001(\tR\nconfigName\022;\n\005cond" +
+      "s\030\017 \001(\0132%.api.v1alpha1.integrations.Cond" +
+      "itionsR\005conds\"\220\001\n\tMapString\022H\n\006values\030\001 " +
+      "\003(\01320.api.v1alpha1.integrations.MapStrin" +
+      "g.ValuesEntryR\006values\0329\n\013ValuesEntry\022\020\n\003" +
+      "key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001" +
+      "\"J\n\nConditions\022<\n\006values\030\001 \003(\0132$.api.v1a" +
+      "lpha1.integrations.ConditionR\006values\"\374\001\n" +
+      "\004Task\022C\n\006values\030\001 \003(\0132+.api.v1alpha1.int" +
+      "egrations.Task.ValuesEntryR\006values\022\027\n\007ta" +
+      "sk_id\030\002 \001(\tR\006taskId\0229\n\003src\030\003 \001(\0162\'.api.c" +
+      "ommons.integrations.RequestSourceR\003src\032[" +
+      "\n\013ValuesEntry\022\020\n\003key\030\001 \001(\tR\003key\0226\n\005value" +
+      "\030\002 \001(\0132 .api.v1alpha1.integrations.Value" +
+      "R\005value:\0028\001\" \n\016PortalConfigId\022\016\n\002id\030\003 \001(" +
+      "\tR\002id\"\305\003\n\014PortalConfig\022\016\n\002id\030\025 \001(\tR\002id\022\022" +
+      "\n\004name\030\026 \001(\tR\004name\022 \n\013description\030\027 \001(\tR" +
+      "\013description\022(\n\020chat_client_link\030\002 \001(\tR\016" +
+      "chatClientLink\022#\n\rcontact_email\030\003 \001(\tR\014c" +
+      "ontactEmail\022#\n\rcontact_phone\030\004 \001(\tR\014cont" +
+      "actPhone\022\037\n\013postal_code\030\005 \001(\tR\npostalCod" +
+      "e\022\022\n\004city\030\006 \001(\tR\004city\022\024\n\005state\030\007 \001(\tR\005st" +
+      "ate\022!\n\014company_name\030\010 \001(\tR\013companyName\022\022" +
+      "\n\004logo\030\r \001(\014R\004logo\022#\n\rprimary_color\030\016 \001(" +
+      "\tR\014primaryColor\022\'\n\017secondary_color\030\017 \001(\t" +
+      "R\016secondaryColor\022%\n\016street_address\030\023 \001(\t" +
+      "R\rstreetAddressJ\004\010\t\020\r\"\036\n\014PortalLinkId\022\016\n" +
+      "\002id\030\003 \001(\tR\002id\"\273\004\n\nPortalLink\022\016\n\002id\030\003 \001(\t" +
+      "R\002id\022\033\n\tportal_id\030\004 \001(\tR\010portalId\0220\n\022plu" +
+      "gin_instance_id\030\005 \001(\tB\002\030\001R\020pluginInstanc" +
+      "eId\022(\n\020portal_config_id\030\006 \001(\tR\016portalCon" +
+      "figId\022\027\n\007task_id\030\007 \001(\tR\006taskId\022C\n\004data\030\010" +
+      " \003(\0132/.api.v1alpha1.integrations.PortalL" +
+      "ink.DataEntryR\004data\022O\n\010metadata\030\t \003(\01323." +
+      "api.v1alpha1.integrations.PortalLink.Met" +
+      "adataEntryR\010metadata\022;\n\013last_edited\030\n \001(" +
+      "\0132\032.google.protobuf.TimestampR\nlastEdite" +
+      "d\032Y\n\tDataEntry\022\020\n\003key\030\001 \001(\tR\003key\0226\n\005valu" +
+      "e\030\002 \001(\0132 .api.v1alpha1.integrations.Valu" +
+      "eR\005value:\0028\001\032]\n\rMetadataEntry\022\020\n\003key\030\001 \001" +
+      "(\tR\003key\0226\n\005value\030\002 \001(\0132 .api.v1alpha1.in" +
+      "tegrations.ValueR\005value:\0028\001\"\032\n\010PortalId\022" +
+      "\016\n\002id\030\003 \001(\tR\002id\"\232\002\n\006Portal\022\016\n\002id\030\003 \001(\tR\002" +
+      "id\022\022\n\004name\030\004 \001(\tR\004name\022 \n\013description\030\005 " +
+      "\001(\tR\013description\022(\n\020portal_config_id\030\006 \001" +
+      "(\tR\016portalConfigId\022&\n\017plugin_inst_ids\030\007 " +
+      "\003(\tR\rpluginInstIds\022;\n\005ptype\030\010 \001(\0132%.api." +
+      "v1alpha1.integrations.PortalTypeR\005ptype\022" +
+      ";\n\013last_edited\030\t \001(\0132\032.google.protobuf.T" +
+      "imestampR\nlastEdited\"\330\002\n\nPortalText\022/\n\023v" +
+      "erification_header\030\001 \001(\tR\022verificationHe" +
+      "ader\022/\n\023verification_footer\030\002 \001(\tR\022verif" +
+      "icationFooter\022%\n\016payment_header\030\003 \001(\tR\rp" +
+      "aymentHeader\022%\n\016payment_footer\030\004 \001(\tR\rpa" +
+      "ymentFooter\022%\n\016receipt_header\030\005 \001(\tR\rrec" +
+      "eiptHeader\022%\n\016receipt_footer\030\006 \001(\tR\rrece" +
+      "iptFooter\022%\n\016invoice_header\030\007 \001(\tR\rinvoi" +
+      "ceHeader\022%\n\016invoice_footer\030\010 \001(\tR\rinvoic" +
+      "eFooter\"\256\001\n\nPortalType\022Q\n\016payment_portal" +
+      "\030\001 \001(\0132(.api.v1alpha1.integrations.Payme" +
+      "ntPortalH\000R\rpaymentPortal\022E\n\nivr_portal\030" +
+      "\002 \001(\0132$.api.v1alpha1.integrations.IVRPor" +
+      "talH\000R\tivrPortalB\006\n\004data\"\253\002\n\rPaymentPort" +
+      "al\022N\n\014verification\030\010 \001(\0132*.api.commons.i" +
+      "ntegrations.VerificationFlowR\014verificati" +
+      "on\022?\n\007invoice\030\t \001(\0132%.api.commons.integr" +
+      "ations.InvoiceFlowR\007invoice\022A\n\010payments\030" +
+      "\n \003(\0132%.api.commons.integrations.Payment" +
+      "FlowR\010payments\022F\n\013portal_text\030\024 \001(\0132%.ap" +
+      "i.v1alpha1.integrations.PortalTextR\nport" +
+      "alText\"\013\n\tIVRPortal\"\"\n\020PluginInstanceId\022" +
+      "\016\n\002id\030\003 \001(\tR\002id\"\322\003\n\016PluginInstance\022\016\n\002id" +
+      "\030\003 \001(\tR\002id\022\022\n\004name\030\004 \001(\tR\004name\022 \n\013descri" +
+      "ption\030\005 \001(\tR\013description\022+\n\021plugin_defin" +
+      "ition\030\006 \001(\tR\020pluginDefinition\0225\n\004data\030\007 " +
+      "\001(\0132!.api.v1alpha1.integrations.ValuesR\004" +
+      "data\022=\n\010metadata\030\n \001(\0132!.api.v1alpha1.in" +
+      "tegrations.ValuesR\010metadata\022;\n\013last_edit" +
+      "ed\030\t \001(\0132\032.google.protobuf.TimestampR\nla" +
+      "stEdited\022H\n\tmethod_id\030\014 \001(\0162\'.api.common" +
+      "s.integrations.RequestMethodB\002\030\001R\010method" +
+      "Id\022P\n\017display_methods\030\r \003(\0162\'.api.common" +
+      "s.integrations.RequestMethodR\016displayMet" +
+      "hods\"\362\003\n\030PortalLinkTransactionRow\022\024\n\005vie" +
+      "ws\030\001 \001(\005R\005views\022\'\n\017verify_attempts\030\002 \001(\005" +
+      "R\016verifyAttempts\022)\n\020verify_successes\030\003 \001" +
+      "(\005R\017verifySuccesses\022)\n\020payment_attempts\030" +
+      "\004 \001(\005R\017paymentAttempts\022+\n\021payment_succes" +
+      "ses\030\005 \001(\005R\020paymentSuccesses\022%\n\016payment_a" +
+      "mount\030\006 \001(\001R\rpaymentAmount\022.\n\004date\030\007 \001(\013" +
+      "2\032.google.protobuf.TimestampR\004date\022^\n\tli" +
+      "nk_data\030\010 \003(\0132A.api.v1alpha1.integration" +
+      "s.PortalLinkTransactionRow.LinkDataEntry" +
+      "R\010linkData\032]\n\rLinkDataEntry\022\020\n\003key\030\001 \001(\t" +
+      "R\003key\0226\n\005value\030\002 \001(\0132 .api.v1alpha1.inte" +
+      "grations.ValueR\005value:\0028\001\"\260\002\n\034GetPortalL" +
+      "inksByDateRangeReq\022\025\n\006org_id\030\001 \001(\tR\005orgI" +
+      "d\022\033\n\tregion_id\030\002 \001(\tR\010regionId\0220\n\005start\030" +
+      "\003 \001(\0132\032.google.protobuf.TimestampR\005start" +
+      "\022,\n\003end\030\004 \001(\0132\032.google.protobuf.Timestam" +
+      "pR\003end\022\033\n\tpage_size\030\005 \001(\005R\010pageSize\022\031\n\010p" +
+      "age_num\030\006 \001(\005R\007pageNum\022D\n\tmethod_id\030\007 \001(" +
+      "\0162\'.api.commons.integrations.RequestMeth" +
+      "odR\010methodId\"g\n\034GetPortalLinksByDateRang" +
+      "eRes\022G\n\004rows\030\002 \003(\01323.api.v1alpha1.integr" +
+      "ations.PortalLinkTransactionRowR\004rows2\250\'" +
+      "\n\014Integrations\022\220\001\n\007Process\022%.api.v1alpha" +
+      "1.integrations.ProcessReq\032%.api.v1alpha1" +
+      ".integrations.ProcessRes\"7\272\270\221\002\005\n\003\010\224\n\202\323\344\223" +
+      "\002\'\"\"/api/v1alpha1/integrations/process:\001" +
+      "*\022\322\001\n\031GetIntegrationTransaction\0227.api.v1" +
+      "alpha1.integrations.GetIntegrationTransa" +
+      "ctionReq\0321.api.v1alpha1.integrations.Int" +
+      "egrationTransaction\"I\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0029\"4/" +
+      "api/v1alpha1/integrations/getintegration" +
+      "transaction:\001*\022\360\001\n\037GetIntegrationTransac" +
+      "tionReport\022=.api.v1alpha1.integrations.G" +
+      "etIntegrationTransactionReportReq\032=.api." +
+      "v1alpha1.integrations.GetIntegrationTran" +
+      "sactionReportRes\"O\272\270\221\002\005\n\003\010\224\n\202\323\344\223\002?\":/api" +
+      "/v1alpha1/integrations/getintegrationtra" +
+      "nsactionreport:\001*\022\200\002\n#GetIntegrationTran" +
+      "sactionReportData\022A.api.v1alpha1.integra" +
+      "tions.GetIntegrationTransactionReportDat" +
+      "aReq\032A.api.v1alpha1.integrations.GetInte" +
+      "grationTransactionReportDataRes\"S\272\270\221\002\005\n\003" +
+      "\010\224\n\202\323\344\223\002C\">/api/v1alpha1/integrations/ge" +
+      "tintegrationtransactionreportdata:\001*\022\325\001\n" +
+      "\026SearchPastTransactions\0228.api.v1alpha1.i" +
+      "ntegrations.SearchPastTransactionsReques" +
+      "t\0329.api.v1alpha1.integrations.SearchPast" +
+      "TransactionsResponse\"F\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0026\"1" +
+      "/api/v1alpha1/integrations/searchpasttra" +
+      "nsactions:\001*\022\307\001\n\025GetAggregatedMetadata\0223" +
+      ".api.v1alpha1.integrations.GetAggregated" +
+      "MetadataReq\0323.api.v1alpha1.integrations." +
+      "GetAggregatedMetadataRes\"D\272\270\221\002\005\n\003\010\224\n\202\323\344\223" +
+      "\0024\"//api/v1alpha1/integrations/getaggreg" +
+      "atemetadata:\001*\022\330\001\n\031GetPortalLinksByDateR" +
+      "ange\0227.api.v1alpha1.integrations.GetPort" +
+      "alLinksByDateRangeReq\0327.api.v1alpha1.int" +
+      "egrations.GetPortalLinksByDateRangeRes\"I" +
+      "\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0029\"4/api/v1alpha1/integrat" +
+      "ions/getportallinksbydaterange:\001*\022\262\001\n\027Cr" +
+      "eateIntegrationConfig\022,.api.v1alpha1.int" +
+      "egrations.IntegrationConfig\032 .api.v1alph" +
+      "a1.integrations.Empty\"G\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0027\"" +
+      "2/api/v1alpha1/integrations/createintegr" +
+      "ationconfig:\001*\022\276\001\n\024GetIntegrationConfig\022" +
+      "2.api.v1alpha1.integrations.GetIntegrati" +
+      "onConfigReq\032,.api.v1alpha1.integrations." +
+      "IntegrationConfig\"D\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0024\"//ap" +
+      "i/v1alpha1/integrations/getintegrationco" +
+      "nfig:\001*\022\273\001\n\027UpdateIntegrationConfig\0225.ap" +
+      "i.v1alpha1.integrations.UpdateIntegratio" +
+      "nConfigReq\032 .api.v1alpha1.integrations.E" +
+      "mpty\"G\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0027\"2/api/v1alpha1/in" +
+      "tegrations/udpateintegrationconfig:\001*\022\273\001" +
+      "\n\027DeleteIntegrationConfig\0225.api.v1alpha1" +
+      ".integrations.DeleteIntegrationConfigReq" +
+      "\032 .api.v1alpha1.integrations.Empty\"G\272\270\221\002" +
+      "\005\n\003\010\224\n\202\323\344\223\0027\"2/api/v1alpha1/integrations" +
+      "/deleteintegrationconfig:\001*\022\243\001\n\020ListInte" +
+      "grations\022 .api.v1alpha1.integrations.Emp" +
+      "ty\032+.api.v1alpha1.integrations.Integrati" +
+      "onInfos\"@\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0020\"+/api/v1alpha1" +
+      "/integrations/listintegrations:\001*\022\303\001\n\026Li" +
+      "stIntegrationsForOrg\0224.api.v1alpha1.inte" +
+      "grations.ListIntegrationsForOrgReq\032+.api" +
+      ".v1alpha1.integrations.IntegrationInfos\"" +
+      "F\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0026\"1/api/v1alpha1/integra" +
+      "tions/listintegrationsfororg:\001*\022\334\001\n\032List" +
+      "IntegrationConfigNames\0228.api.v1alpha1.in" +
+      "tegrations.ListIntegrationConfigNamesReq" +
+      "\0328.api.v1alpha1.integrations.ListIntegra" +
+      "tionConfigNamesRes\"J\272\270\221\002\005\n\003\010\224\n\202\323\344\223\002:\"5/a" +
+      "pi/v1alpha1/integrations/listintegration" +
+      "confignames:\001*\022\271\001\n\022ListJourneyConfigs\0220." +
+      "api.v1alpha1.integrations.ListJourneyCon" +
+      "figsReq\032-.api.v1alpha1.integrations.Inte" +
+      "grationConfigs\"B\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0022\"-/api/v" +
+      "1alpha1/integrations/listjourneyconfigs:" +
+      "\001*\022\302\001\n\025ListNonJourneyConfigs\0223.api.v1alp" +
+      "ha1.integrations.ListNonJourneyConfigsRe" +
+      "q\032-.api.v1alpha1.integrations.Integratio" +
+      "nConfigs\"E\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0025\"0/api/v1alpha" +
+      "1/integrations/listnonjourneyconfigs:\001*\022" +
+      "\243\001\n\022CreatePortalConfig\022\'.api.v1alpha1.in" +
+      "tegrations.PortalConfig\032 .api.v1alpha1.i" +
+      "ntegrations.Empty\"B\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0022\"-/ap" +
+      "i/v1alpha1/integrations/createportalconf" +
+      "ig:\001*\022\261\001\n\021ListPortalConfigs\022/.api.v1alph" +
+      "a1.integrations.ListPortalConfigsReq\032(.a" +
+      "pi.v1alpha1.integrations.PortalConfigs\"A" +
+      "\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0021\",/api/v1alpha1/integrat" +
+      "ions/listportalconfigs:\001*\022\243\001\n\022UpdatePort" +
+      "alConfig\022\'.api.v1alpha1.integrations.Por" +
+      "talConfig\032 .api.v1alpha1.integrations.Em" +
+      "pty\"B\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0022\"-/api/v1alpha1/int" +
+      "egrations/updateportalconfig:\001*\022\252\001\n\017GetP" +
+      "ortalConfig\022-.api.v1alpha1.integrations." +
+      "GetPortalConfigReq\032\'.api.v1alpha1.integr" +
+      "ations.PortalConfig\"?\272\270\221\002\005\n\003\010\224\n\202\323\344\223\002/\"*/" +
+      "api/v1alpha1/integrations/getportalconfi" +
+      "g:\001*\022\254\001\n\022DeletePortalConfig\0220.api.v1alph" +
+      "a1.integrations.DeletePortalConfigReq\032 ." +
+      "api.v1alpha1.integrations.Empty\"B\272\270\221\002\005\n\003" +
+      "\010\224\n\202\323\344\223\0022\"-/api/v1alpha1/integrations/de" +
+      "leteportalconfig:\001*\022\246\001\n\020UpdatePortalLogo" +
+      "\022..api.v1alpha1.integrations.UpdatePorta" +
+      "lLogoReq\032 .api.v1alpha1.integrations.Emp" +
+      "ty\"@\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0020\"+/api/v1alpha1/inte" +
+      "grations/updateportallogo:\001*\022\234\001\n\rGetPort" +
+      "alLogo\022+.api.v1alpha1.integrations.GetPo" +
+      "rtalLogoReq\032\037.api.v1alpha1.integrations." +
+      "Logo\"=\272\270\221\002\005\n\003\010\224\n\202\323\344\223\002-\"(/api/v1alpha1/in" +
+      "tegrations/getportallogo:\001*\022\324\001\n\030CreatePa" +
+      "ymentPortalLinks\0226.api.v1alpha1.integrat" +
+      "ions.CreatePaymentPortalLinksReq\0326.api.v" +
+      "1alpha1.integrations.CreatePaymentPortal" +
+      "LinksRes\"H\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0028\"3/api/v1alpha" +
+      "1/integrations/createpaymentportallinks:" +
+      "\001*\022\220\001\n\007Summary\022%.api.v1alpha1.integratio" +
+      "ns.SummaryReq\032%.api.v1alpha1.integration" +
+      "s.SummaryRes\"7\272\270\221\002\005\n\003\010\224\n\202\323\344\223\002\'\"\"/api/v1a" +
+      "lpha1/integrations/summary:\001*\022\360\001\n ListIn" +
+      "tegrationTemplatesByConfig\022>.api.v1alpha" +
+      "1.integrations.ListIntegrationTemplatesB" +
+      "yConfigReq\032>.api.v1alpha1.integrations.L" +
+      "istIntegrationTemplatesByConfigRes\"L\272\270\221\002" +
+      "\005\n\003\010\224\n\202\323\344\223\002<\"7/api/v1alpha1/integrations" +
+      "/integrationtemplatesbyconfig:\001*B\301\001\n+com" +
+      ".tcn.cloud.api.api.v1alpha1.integrations" +
+      "B\014ServiceProtoP\001\242\002\003AVI\252\002\031Api.V1alpha1.In" +
+      "tegrations\312\002\031Api\\V1alpha1\\Integrations\342\002" +
+      "%Api\\V1alpha1\\Integrations\\GPBMetadata\352\002" +
+      "\033Api::V1alpha1::Integrationsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1344,20 +1402,56 @@ public final class ServiceProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_ProcessRes_DataEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
-    internal_static_api_v1alpha1_integrations_ListIntegrationsForOrgReq_descriptor =
+    internal_static_api_v1alpha1_integrations_SearchPastTransactionsRequest_descriptor =
       getDescriptor().getMessageTypes().get(8);
+    internal_static_api_v1alpha1_integrations_SearchPastTransactionsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_integrations_SearchPastTransactionsRequest_descriptor,
+        new java.lang.String[] { "PluginInstanceId", "IntId", "MethodId", "MatchFields", "Limit", "SearchBefore", });
+    internal_static_api_v1alpha1_integrations_SearchPastTransactionsRequest_MatchFieldsEntry_descriptor =
+      internal_static_api_v1alpha1_integrations_SearchPastTransactionsRequest_descriptor.getNestedTypes().get(0);
+    internal_static_api_v1alpha1_integrations_SearchPastTransactionsRequest_MatchFieldsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_integrations_SearchPastTransactionsRequest_MatchFieldsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_api_v1alpha1_integrations_SearchPastTransactionsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_api_v1alpha1_integrations_SearchPastTransactionsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_integrations_SearchPastTransactionsResponse_descriptor,
+        new java.lang.String[] { "Values", });
+    internal_static_api_v1alpha1_integrations_PastTxEntity_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_api_v1alpha1_integrations_PastTxEntity_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_integrations_PastTxEntity_descriptor,
+        new java.lang.String[] { "Req", "Res", "CreatedOn", });
+    internal_static_api_v1alpha1_integrations_PastTxEntity_ReqEntry_descriptor =
+      internal_static_api_v1alpha1_integrations_PastTxEntity_descriptor.getNestedTypes().get(0);
+    internal_static_api_v1alpha1_integrations_PastTxEntity_ReqEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_integrations_PastTxEntity_ReqEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_api_v1alpha1_integrations_PastTxEntity_ResEntry_descriptor =
+      internal_static_api_v1alpha1_integrations_PastTxEntity_descriptor.getNestedTypes().get(1);
+    internal_static_api_v1alpha1_integrations_PastTxEntity_ResEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_integrations_PastTxEntity_ResEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_api_v1alpha1_integrations_ListIntegrationsForOrgReq_descriptor =
+      getDescriptor().getMessageTypes().get(11);
     internal_static_api_v1alpha1_integrations_ListIntegrationsForOrgReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_ListIntegrationsForOrgReq_descriptor,
         new java.lang.String[] { });
     internal_static_api_v1alpha1_integrations_IntegrationInfos_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_api_v1alpha1_integrations_IntegrationInfos_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_IntegrationInfos_descriptor,
         new java.lang.String[] { "Values", });
     internal_static_api_v1alpha1_integrations_IntegrationInfo_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_api_v1alpha1_integrations_IntegrationInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_IntegrationInfo_descriptor,
@@ -1369,7 +1463,7 @@ public final class ServiceProto {
         internal_static_api_v1alpha1_integrations_IntegrationInfo_GroupParamsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_api_v1alpha1_integrations_MethodInfo_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_api_v1alpha1_integrations_MethodInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_MethodInfo_descriptor,
@@ -1381,43 +1475,43 @@ public final class ServiceProto {
         internal_static_api_v1alpha1_integrations_MethodInfo_RuntimeParamsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_api_v1alpha1_integrations_Parameter_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_api_v1alpha1_integrations_Parameter_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_Parameter_descriptor,
         new java.lang.String[] { "Name", "ParamType", "Required", "DefaultValue", "DisplayName", "Sensitive", "RuntimeParam", "HelperText", "TemplateLocked", "Validation", });
     internal_static_api_v1alpha1_integrations_Empty_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_api_v1alpha1_integrations_Empty_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_Empty_descriptor,
         new java.lang.String[] { });
     internal_static_api_v1alpha1_integrations_GetIntegrationTransactionReq_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_api_v1alpha1_integrations_GetIntegrationTransactionReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_GetIntegrationTransactionReq_descriptor,
         new java.lang.String[] { "IntegrationTransactionId", });
     internal_static_api_v1alpha1_integrations_GetAggregatedMetadataReq_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_api_v1alpha1_integrations_GetAggregatedMetadataReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_GetAggregatedMetadataReq_descriptor,
         new java.lang.String[] { "Start", "End", "MethodId", });
     internal_static_api_v1alpha1_integrations_GetAggregatedMetadataRes_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_api_v1alpha1_integrations_GetAggregatedMetadataRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_GetAggregatedMetadataRes_descriptor,
         new java.lang.String[] { "Views", "VerifyAttempts", "VerifySuccesses", "PaymentAttempts", "PaymentSuccesses", "PaymentAmount", "Fields", });
     internal_static_api_v1alpha1_integrations_GetIntegrationTransactionReportReq_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_api_v1alpha1_integrations_GetIntegrationTransactionReportReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_GetIntegrationTransactionReportReq_descriptor,
         new java.lang.String[] { "Start", "End", "GroupBy", });
     internal_static_api_v1alpha1_integrations_IntegrationTransactionReportRow_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_api_v1alpha1_integrations_IntegrationTransactionReportRow_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_IntegrationTransactionReportRow_descriptor,
@@ -1441,13 +1535,13 @@ public final class ServiceProto {
         internal_static_api_v1alpha1_integrations_IntegrationTransactionReportRow_CountMetricsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_api_v1alpha1_integrations_GetIntegrationTransactionReportRes_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_api_v1alpha1_integrations_GetIntegrationTransactionReportRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_GetIntegrationTransactionReportRes_descriptor,
         new java.lang.String[] { "Values", });
     internal_static_api_v1alpha1_integrations_GetIntegrationTransactionReportDataReq_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_api_v1alpha1_integrations_GetIntegrationTransactionReportDataReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_GetIntegrationTransactionReportDataReq_descriptor,
@@ -1459,7 +1553,7 @@ public final class ServiceProto {
         internal_static_api_v1alpha1_integrations_GetIntegrationTransactionReportDataReq_GroupByEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_api_v1alpha1_integrations_GetIntegrationTransactionReportDataRow_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(24);
     internal_static_api_v1alpha1_integrations_GetIntegrationTransactionReportDataRow_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_GetIntegrationTransactionReportDataRow_descriptor,
@@ -1477,127 +1571,127 @@ public final class ServiceProto {
         internal_static_api_v1alpha1_integrations_GetIntegrationTransactionReportDataRow_LinkDataEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_api_v1alpha1_integrations_GetIntegrationTransactionReportDataRes_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(25);
     internal_static_api_v1alpha1_integrations_GetIntegrationTransactionReportDataRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_GetIntegrationTransactionReportDataRes_descriptor,
         new java.lang.String[] { "Entities", "LastTransactionSid", });
     internal_static_api_v1alpha1_integrations_SearchIntegrationTransactionsReq_descriptor =
-      getDescriptor().getMessageTypes().get(23);
+      getDescriptor().getMessageTypes().get(26);
     internal_static_api_v1alpha1_integrations_SearchIntegrationTransactionsReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_SearchIntegrationTransactionsReq_descriptor,
         new java.lang.String[] { "StartDate", "EndDate", "IntegrationType", "RequestMethod", "TransactionType", "RequestSource", "Result", "TaskId", });
     internal_static_api_v1alpha1_integrations_SearchIntegrationTransactionsRes_descriptor =
-      getDescriptor().getMessageTypes().get(24);
+      getDescriptor().getMessageTypes().get(27);
     internal_static_api_v1alpha1_integrations_SearchIntegrationTransactionsRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_SearchIntegrationTransactionsRes_descriptor,
         new java.lang.String[] { "Transactions", });
     internal_static_api_v1alpha1_integrations_IntegrationType_descriptor =
-      getDescriptor().getMessageTypes().get(25);
+      getDescriptor().getMessageTypes().get(28);
     internal_static_api_v1alpha1_integrations_IntegrationType_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_IntegrationType_descriptor,
         new java.lang.String[] { "IntegrationId", });
     internal_static_api_v1alpha1_integrations_RequestMethod_descriptor =
-      getDescriptor().getMessageTypes().get(26);
+      getDescriptor().getMessageTypes().get(29);
     internal_static_api_v1alpha1_integrations_RequestMethod_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_RequestMethod_descriptor,
         new java.lang.String[] { "MethodId", });
     internal_static_api_v1alpha1_integrations_TransactionType_descriptor =
-      getDescriptor().getMessageTypes().get(27);
+      getDescriptor().getMessageTypes().get(30);
     internal_static_api_v1alpha1_integrations_TransactionType_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_TransactionType_descriptor,
         new java.lang.String[] { "TransactionType", });
     internal_static_api_v1alpha1_integrations_RequestSource_descriptor =
-      getDescriptor().getMessageTypes().get(28);
+      getDescriptor().getMessageTypes().get(31);
     internal_static_api_v1alpha1_integrations_RequestSource_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_RequestSource_descriptor,
         new java.lang.String[] { "RequestSource", });
     internal_static_api_v1alpha1_integrations_TransactionResult_descriptor =
-      getDescriptor().getMessageTypes().get(29);
+      getDescriptor().getMessageTypes().get(32);
     internal_static_api_v1alpha1_integrations_TransactionResult_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_TransactionResult_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_api_v1alpha1_integrations_ListIntegrationConfigNamesReq_descriptor =
-      getDescriptor().getMessageTypes().get(30);
+      getDescriptor().getMessageTypes().get(33);
     internal_static_api_v1alpha1_integrations_ListIntegrationConfigNamesReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_ListIntegrationConfigNamesReq_descriptor,
         new java.lang.String[] { "IntegrationId", });
     internal_static_api_v1alpha1_integrations_ListIntegrationConfigNamesRes_descriptor =
-      getDescriptor().getMessageTypes().get(31);
+      getDescriptor().getMessageTypes().get(34);
     internal_static_api_v1alpha1_integrations_ListIntegrationConfigNamesRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_ListIntegrationConfigNamesRes_descriptor,
         new java.lang.String[] { "IntegrationId", "Names", });
     internal_static_api_v1alpha1_integrations_GetPaymentLinkConfigReq_descriptor =
-      getDescriptor().getMessageTypes().get(32);
+      getDescriptor().getMessageTypes().get(35);
     internal_static_api_v1alpha1_integrations_GetPaymentLinkConfigReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_GetPaymentLinkConfigReq_descriptor,
         new java.lang.String[] { "Id", });
     internal_static_api_v1alpha1_integrations_DeletePaymentLinkConfigReq_descriptor =
-      getDescriptor().getMessageTypes().get(33);
+      getDescriptor().getMessageTypes().get(36);
     internal_static_api_v1alpha1_integrations_DeletePaymentLinkConfigReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_DeletePaymentLinkConfigReq_descriptor,
         new java.lang.String[] { "Id", });
     internal_static_api_v1alpha1_integrations_Logo_descriptor =
-      getDescriptor().getMessageTypes().get(34);
+      getDescriptor().getMessageTypes().get(37);
     internal_static_api_v1alpha1_integrations_Logo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_Logo_descriptor,
         new java.lang.String[] { "Value", });
     internal_static_api_v1alpha1_integrations_ListPortalConfigsReq_descriptor =
-      getDescriptor().getMessageTypes().get(35);
+      getDescriptor().getMessageTypes().get(38);
     internal_static_api_v1alpha1_integrations_ListPortalConfigsReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_ListPortalConfigsReq_descriptor,
         new java.lang.String[] { "Entity", "Mask", "PageSize", "Page", });
     internal_static_api_v1alpha1_integrations_GetPortalConfigReq_descriptor =
-      getDescriptor().getMessageTypes().get(36);
+      getDescriptor().getMessageTypes().get(39);
     internal_static_api_v1alpha1_integrations_GetPortalConfigReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_GetPortalConfigReq_descriptor,
         new java.lang.String[] { "Entity", "Mask", "Id", });
     internal_static_api_v1alpha1_integrations_DeletePortalConfigReq_descriptor =
-      getDescriptor().getMessageTypes().get(37);
+      getDescriptor().getMessageTypes().get(40);
     internal_static_api_v1alpha1_integrations_DeletePortalConfigReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_DeletePortalConfigReq_descriptor,
         new java.lang.String[] { "Entity", "Mask", "Id", });
     internal_static_api_v1alpha1_integrations_UpdatePortalLogoReq_descriptor =
-      getDescriptor().getMessageTypes().get(38);
+      getDescriptor().getMessageTypes().get(41);
     internal_static_api_v1alpha1_integrations_UpdatePortalLogoReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_UpdatePortalLogoReq_descriptor,
         new java.lang.String[] { "Id", "Logo", });
     internal_static_api_v1alpha1_integrations_GetPortalLogoReq_descriptor =
-      getDescriptor().getMessageTypes().get(39);
+      getDescriptor().getMessageTypes().get(42);
     internal_static_api_v1alpha1_integrations_GetPortalLogoReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_GetPortalLogoReq_descriptor,
         new java.lang.String[] { "Id", });
     internal_static_api_v1alpha1_integrations_RefreshLinkReq_descriptor =
-      getDescriptor().getMessageTypes().get(40);
+      getDescriptor().getMessageTypes().get(43);
     internal_static_api_v1alpha1_integrations_RefreshLinkReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_RefreshLinkReq_descriptor,
         new java.lang.String[] { "LinkId", });
     internal_static_api_v1alpha1_integrations_RefreshLinkRes_descriptor =
-      getDescriptor().getMessageTypes().get(41);
+      getDescriptor().getMessageTypes().get(44);
     internal_static_api_v1alpha1_integrations_RefreshLinkRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_RefreshLinkRes_descriptor,
         new java.lang.String[] { "NewExpiry", });
     internal_static_api_v1alpha1_integrations_PaymentLinkConfig_descriptor =
-      getDescriptor().getMessageTypes().get(42);
+      getDescriptor().getMessageTypes().get(45);
     internal_static_api_v1alpha1_integrations_PaymentLinkConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_PaymentLinkConfig_descriptor,
@@ -1615,31 +1709,31 @@ public final class ServiceProto {
         internal_static_api_v1alpha1_integrations_PaymentLinkConfig_BaseDataEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_api_v1alpha1_integrations_PaymentLinkConfigTemplates_descriptor =
-      getDescriptor().getMessageTypes().get(43);
+      getDescriptor().getMessageTypes().get(46);
     internal_static_api_v1alpha1_integrations_PaymentLinkConfigTemplates_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_PaymentLinkConfigTemplates_descriptor,
         new java.lang.String[] { "ReceiptSmsTemplate", "ReceiptSmsSourcePhone", "ReceiptEmailTemplate", "ReceiptEmailFromAddr", "ReceiptTemplate", "InvoiceTemplate", });
     internal_static_api_v1alpha1_integrations_VerificationRequest_descriptor =
-      getDescriptor().getMessageTypes().get(44);
+      getDescriptor().getMessageTypes().get(47);
     internal_static_api_v1alpha1_integrations_VerificationRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_VerificationRequest_descriptor,
         new java.lang.String[] { "VerificationRequests", "VerificationFields", });
     internal_static_api_v1alpha1_integrations_PaymentRequest_descriptor =
-      getDescriptor().getMessageTypes().get(45);
+      getDescriptor().getMessageTypes().get(48);
     internal_static_api_v1alpha1_integrations_PaymentRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_PaymentRequest_descriptor,
         new java.lang.String[] { "PaymentFields", "PaymentRequestPayload", "PaymentRequest", "Name", "Description", });
     internal_static_api_v1alpha1_integrations_InvoiceRequest_descriptor =
-      getDescriptor().getMessageTypes().get(46);
+      getDescriptor().getMessageTypes().get(49);
     internal_static_api_v1alpha1_integrations_InvoiceRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_InvoiceRequest_descriptor,
         new java.lang.String[] { "InvoiceRequestPayload", "InvoiceRequest", "FilterResponseKeys", });
     internal_static_api_v1alpha1_integrations_Request_descriptor =
-      getDescriptor().getMessageTypes().get(47);
+      getDescriptor().getMessageTypes().get(50);
     internal_static_api_v1alpha1_integrations_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_Request_descriptor,
@@ -1663,145 +1757,145 @@ public final class ServiceProto {
         internal_static_api_v1alpha1_integrations_Request_ReassignValidationsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_api_v1alpha1_integrations_Validation_descriptor =
-      getDescriptor().getMessageTypes().get(48);
+      getDescriptor().getMessageTypes().get(51);
     internal_static_api_v1alpha1_integrations_Validation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_Validation_descriptor,
         new java.lang.String[] { "Enum", });
     internal_static_api_v1alpha1_integrations_MethodCall_descriptor =
-      getDescriptor().getMessageTypes().get(49);
+      getDescriptor().getMessageTypes().get(52);
     internal_static_api_v1alpha1_integrations_MethodCall_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_MethodCall_descriptor,
         new java.lang.String[] { "IntegrationId", "MethodId", });
     internal_static_api_v1alpha1_integrations_PortalConfigs_descriptor =
-      getDescriptor().getMessageTypes().get(50);
+      getDescriptor().getMessageTypes().get(53);
     internal_static_api_v1alpha1_integrations_PortalConfigs_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_PortalConfigs_descriptor,
         new java.lang.String[] { "Values", });
     internal_static_api_v1alpha1_integrations_ListPaymentLinkConfigsReq_descriptor =
-      getDescriptor().getMessageTypes().get(51);
+      getDescriptor().getMessageTypes().get(54);
     internal_static_api_v1alpha1_integrations_ListPaymentLinkConfigsReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_ListPaymentLinkConfigsReq_descriptor,
         new java.lang.String[] { });
     internal_static_api_v1alpha1_integrations_PaymentLinkConfigs_descriptor =
-      getDescriptor().getMessageTypes().get(52);
+      getDescriptor().getMessageTypes().get(55);
     internal_static_api_v1alpha1_integrations_PaymentLinkConfigs_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_PaymentLinkConfigs_descriptor,
         new java.lang.String[] { "Values", });
     internal_static_api_v1alpha1_integrations_ListLinksReq_descriptor =
-      getDescriptor().getMessageTypes().get(53);
+      getDescriptor().getMessageTypes().get(56);
     internal_static_api_v1alpha1_integrations_ListLinksReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_ListLinksReq_descriptor,
         new java.lang.String[] { });
     internal_static_api_v1alpha1_integrations_CreatePaymentPortalLinksReq_descriptor =
-      getDescriptor().getMessageTypes().get(54);
+      getDescriptor().getMessageTypes().get(57);
     internal_static_api_v1alpha1_integrations_CreatePaymentPortalLinksReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_CreatePaymentPortalLinksReq_descriptor,
         new java.lang.String[] { "LinkConfigId", "Expiry", "UserData", });
     internal_static_api_v1alpha1_integrations_CreatePaymentPortalLinksRes_descriptor =
-      getDescriptor().getMessageTypes().get(55);
+      getDescriptor().getMessageTypes().get(58);
     internal_static_api_v1alpha1_integrations_CreatePaymentPortalLinksRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_CreatePaymentPortalLinksRes_descriptor,
         new java.lang.String[] { "Urls", });
     internal_static_api_v1alpha1_integrations_SummaryReq_descriptor =
-      getDescriptor().getMessageTypes().get(56);
+      getDescriptor().getMessageTypes().get(59);
     internal_static_api_v1alpha1_integrations_SummaryReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_SummaryReq_descriptor,
         new java.lang.String[] { "Year", });
     internal_static_api_v1alpha1_integrations_SummaryRes_descriptor =
-      getDescriptor().getMessageTypes().get(57);
+      getDescriptor().getMessageTypes().get(60);
     internal_static_api_v1alpha1_integrations_SummaryRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_SummaryRes_descriptor,
         new java.lang.String[] { "YearSummary", "MonthSummaries", "WeekSummaries", });
     internal_static_api_v1alpha1_integrations_CalendarSummary_descriptor =
-      getDescriptor().getMessageTypes().get(58);
+      getDescriptor().getMessageTypes().get(61);
     internal_static_api_v1alpha1_integrations_CalendarSummary_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_CalendarSummary_descriptor,
         new java.lang.String[] { "CalendarNum", "Summary", "TypeSummaries", });
     internal_static_api_v1alpha1_integrations_IntegrationTypeSummary_descriptor =
-      getDescriptor().getMessageTypes().get(59);
+      getDescriptor().getMessageTypes().get(62);
     internal_static_api_v1alpha1_integrations_IntegrationTypeSummary_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_IntegrationTypeSummary_descriptor,
         new java.lang.String[] { "IntegrationType", "IntegrationSummary", });
     internal_static_api_v1alpha1_integrations_TransactionSummary_descriptor =
-      getDescriptor().getMessageTypes().get(60);
+      getDescriptor().getMessageTypes().get(63);
     internal_static_api_v1alpha1_integrations_TransactionSummary_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_TransactionSummary_descriptor,
         new java.lang.String[] { "TotalTransactionsAttempted", "TotalTransactionsCompleted", "TotalTransactionsFailed", "TotalAmountCollected", "AvgAmountCollected", });
     internal_static_api_v1alpha1_integrations_ListIntegrationTemplatesByConfigReq_descriptor =
-      getDescriptor().getMessageTypes().get(61);
+      getDescriptor().getMessageTypes().get(64);
     internal_static_api_v1alpha1_integrations_ListIntegrationTemplatesByConfigReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_ListIntegrationTemplatesByConfigReq_descriptor,
         new java.lang.String[] { "IntegrationConfigName", });
     internal_static_api_v1alpha1_integrations_ListIntegrationTemplatesByConfigRes_descriptor =
-      getDescriptor().getMessageTypes().get(62);
+      getDescriptor().getMessageTypes().get(65);
     internal_static_api_v1alpha1_integrations_ListIntegrationTemplatesByConfigRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_ListIntegrationTemplatesByConfigRes_descriptor,
         new java.lang.String[] { "IntegrationTemplates", });
     internal_static_api_v1alpha1_integrations_IntegrationTemplateInfo_descriptor =
-      getDescriptor().getMessageTypes().get(63);
+      getDescriptor().getMessageTypes().get(66);
     internal_static_api_v1alpha1_integrations_IntegrationTemplateInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_IntegrationTemplateInfo_descriptor,
         new java.lang.String[] { "BroadcastTemplateSid", "TemplateName", });
     internal_static_api_v1alpha1_integrations_CopyPaymentLinkConfigReq_descriptor =
-      getDescriptor().getMessageTypes().get(64);
+      getDescriptor().getMessageTypes().get(67);
     internal_static_api_v1alpha1_integrations_CopyPaymentLinkConfigReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_CopyPaymentLinkConfigReq_descriptor,
         new java.lang.String[] { "Id", });
     internal_static_api_v1alpha1_integrations_CopyPaymentLinkConfigRes_descriptor =
-      getDescriptor().getMessageTypes().get(65);
+      getDescriptor().getMessageTypes().get(68);
     internal_static_api_v1alpha1_integrations_CopyPaymentLinkConfigRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_CopyPaymentLinkConfigRes_descriptor,
         new java.lang.String[] { "NewName", });
     internal_static_api_v1alpha1_integrations_ProfileName_descriptor =
-      getDescriptor().getMessageTypes().get(66);
+      getDescriptor().getMessageTypes().get(69);
     internal_static_api_v1alpha1_integrations_ProfileName_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_ProfileName_descriptor,
         new java.lang.String[] { "Name", });
     internal_static_api_v1alpha1_integrations_PaymentProfiles_descriptor =
-      getDescriptor().getMessageTypes().get(67);
+      getDescriptor().getMessageTypes().get(70);
     internal_static_api_v1alpha1_integrations_PaymentProfiles_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_PaymentProfiles_descriptor,
         new java.lang.String[] { "Values", });
     internal_static_api_v1alpha1_integrations_PaymentProfile_descriptor =
-      getDescriptor().getMessageTypes().get(68);
+      getDescriptor().getMessageTypes().get(71);
     internal_static_api_v1alpha1_integrations_PaymentProfile_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_PaymentProfile_descriptor,
         new java.lang.String[] { "Verification", "Invoice", "Payments", });
     internal_static_api_v1alpha1_integrations_UnknownField_descriptor =
-      getDescriptor().getMessageTypes().get(69);
+      getDescriptor().getMessageTypes().get(72);
     internal_static_api_v1alpha1_integrations_UnknownField_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_UnknownField_descriptor,
         new java.lang.String[] { "Name", "DisplayName", "ReasonNeeded", "PotentialSources", "SuggestedFields", });
     internal_static_api_v1alpha1_integrations_ProvidedField_descriptor =
-      getDescriptor().getMessageTypes().get(70);
+      getDescriptor().getMessageTypes().get(73);
     internal_static_api_v1alpha1_integrations_ProvidedField_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_ProvidedField_descriptor,
         new java.lang.String[] { "Name", "DisplayName", "AltName", "ProvidedBy", "ProvidedByDetailsNum", "ProvidedByDetailsStr", });
     internal_static_api_v1alpha1_integrations_Values_descriptor =
-      getDescriptor().getMessageTypes().get(71);
+      getDescriptor().getMessageTypes().get(74);
     internal_static_api_v1alpha1_integrations_Values_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_Values_descriptor,
@@ -1813,43 +1907,43 @@ public final class ServiceProto {
         internal_static_api_v1alpha1_integrations_Values_ValuesEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_api_v1alpha1_integrations_Value_descriptor =
-      getDescriptor().getMessageTypes().get(72);
+      getDescriptor().getMessageTypes().get(75);
     internal_static_api_v1alpha1_integrations_Value_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_Value_descriptor,
         new java.lang.String[] { "StrVal", "NumVal", "BoolVal", "TimeVal", "CompVal", "IntVal", "Sensitive", "Validation", "Val", });
     internal_static_api_v1alpha1_integrations_FieldOrStr_descriptor =
-      getDescriptor().getMessageTypes().get(73);
+      getDescriptor().getMessageTypes().get(76);
     internal_static_api_v1alpha1_integrations_FieldOrStr_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_FieldOrStr_descriptor,
         new java.lang.String[] { "Field", "StrVal", "Val", });
     internal_static_api_v1alpha1_integrations_CompositeVal_descriptor =
-      getDescriptor().getMessageTypes().get(74);
+      getDescriptor().getMessageTypes().get(77);
     internal_static_api_v1alpha1_integrations_CompositeVal_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_CompositeVal_descriptor,
         new java.lang.String[] { "Parts", });
     internal_static_api_v1alpha1_integrations_Condition_descriptor =
-      getDescriptor().getMessageTypes().get(75);
+      getDescriptor().getMessageTypes().get(78);
     internal_static_api_v1alpha1_integrations_Condition_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_Condition_descriptor,
         new java.lang.String[] { "Key", "Op", "Value", });
     internal_static_api_v1alpha1_integrations_IntegrationConfig_descriptor =
-      getDescriptor().getMessageTypes().get(76);
+      getDescriptor().getMessageTypes().get(79);
     internal_static_api_v1alpha1_integrations_IntegrationConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_IntegrationConfig_descriptor,
         new java.lang.String[] { "Id", "IntegrationId", "Name", "Description", "Params", "Deleted", "CreatedOn", "Alias", "Conds", "MethodId", });
     internal_static_api_v1alpha1_integrations_IntegrationTransaction_descriptor =
-      getDescriptor().getMessageTypes().get(77);
+      getDescriptor().getMessageTypes().get(80);
     internal_static_api_v1alpha1_integrations_IntegrationTransaction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_IntegrationTransaction_descriptor,
         new java.lang.String[] { "IntegrationTransactionId", "TaskId", "IntegrationId", "MethodId", "TransactionType", "RequestSource", "Result", "AmountCollected", "RequestData", "ResponseData", "CreatedOn", "ConfigName", "Conds", });
     internal_static_api_v1alpha1_integrations_MapString_descriptor =
-      getDescriptor().getMessageTypes().get(78);
+      getDescriptor().getMessageTypes().get(81);
     internal_static_api_v1alpha1_integrations_MapString_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_MapString_descriptor,
@@ -1861,13 +1955,13 @@ public final class ServiceProto {
         internal_static_api_v1alpha1_integrations_MapString_ValuesEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_api_v1alpha1_integrations_Conditions_descriptor =
-      getDescriptor().getMessageTypes().get(79);
+      getDescriptor().getMessageTypes().get(82);
     internal_static_api_v1alpha1_integrations_Conditions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_Conditions_descriptor,
         new java.lang.String[] { "Values", });
     internal_static_api_v1alpha1_integrations_Task_descriptor =
-      getDescriptor().getMessageTypes().get(80);
+      getDescriptor().getMessageTypes().get(83);
     internal_static_api_v1alpha1_integrations_Task_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_Task_descriptor,
@@ -1879,25 +1973,25 @@ public final class ServiceProto {
         internal_static_api_v1alpha1_integrations_Task_ValuesEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_api_v1alpha1_integrations_PortalConfigId_descriptor =
-      getDescriptor().getMessageTypes().get(81);
+      getDescriptor().getMessageTypes().get(84);
     internal_static_api_v1alpha1_integrations_PortalConfigId_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_PortalConfigId_descriptor,
         new java.lang.String[] { "Id", });
     internal_static_api_v1alpha1_integrations_PortalConfig_descriptor =
-      getDescriptor().getMessageTypes().get(82);
+      getDescriptor().getMessageTypes().get(85);
     internal_static_api_v1alpha1_integrations_PortalConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_PortalConfig_descriptor,
         new java.lang.String[] { "Id", "Name", "Description", "ChatClientLink", "ContactEmail", "ContactPhone", "PostalCode", "City", "State", "CompanyName", "Logo", "PrimaryColor", "SecondaryColor", "StreetAddress", });
     internal_static_api_v1alpha1_integrations_PortalLinkId_descriptor =
-      getDescriptor().getMessageTypes().get(83);
+      getDescriptor().getMessageTypes().get(86);
     internal_static_api_v1alpha1_integrations_PortalLinkId_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_PortalLinkId_descriptor,
         new java.lang.String[] { "Id", });
     internal_static_api_v1alpha1_integrations_PortalLink_descriptor =
-      getDescriptor().getMessageTypes().get(84);
+      getDescriptor().getMessageTypes().get(87);
     internal_static_api_v1alpha1_integrations_PortalLink_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_PortalLink_descriptor,
@@ -1915,55 +2009,55 @@ public final class ServiceProto {
         internal_static_api_v1alpha1_integrations_PortalLink_MetadataEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_api_v1alpha1_integrations_PortalId_descriptor =
-      getDescriptor().getMessageTypes().get(85);
+      getDescriptor().getMessageTypes().get(88);
     internal_static_api_v1alpha1_integrations_PortalId_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_PortalId_descriptor,
         new java.lang.String[] { "Id", });
     internal_static_api_v1alpha1_integrations_Portal_descriptor =
-      getDescriptor().getMessageTypes().get(86);
+      getDescriptor().getMessageTypes().get(89);
     internal_static_api_v1alpha1_integrations_Portal_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_Portal_descriptor,
         new java.lang.String[] { "Id", "Name", "Description", "PortalConfigId", "PluginInstIds", "Ptype", "LastEdited", });
     internal_static_api_v1alpha1_integrations_PortalText_descriptor =
-      getDescriptor().getMessageTypes().get(87);
+      getDescriptor().getMessageTypes().get(90);
     internal_static_api_v1alpha1_integrations_PortalText_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_PortalText_descriptor,
         new java.lang.String[] { "VerificationHeader", "VerificationFooter", "PaymentHeader", "PaymentFooter", "ReceiptHeader", "ReceiptFooter", "InvoiceHeader", "InvoiceFooter", });
     internal_static_api_v1alpha1_integrations_PortalType_descriptor =
-      getDescriptor().getMessageTypes().get(88);
+      getDescriptor().getMessageTypes().get(91);
     internal_static_api_v1alpha1_integrations_PortalType_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_PortalType_descriptor,
         new java.lang.String[] { "PaymentPortal", "IvrPortal", "Data", });
     internal_static_api_v1alpha1_integrations_PaymentPortal_descriptor =
-      getDescriptor().getMessageTypes().get(89);
+      getDescriptor().getMessageTypes().get(92);
     internal_static_api_v1alpha1_integrations_PaymentPortal_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_PaymentPortal_descriptor,
         new java.lang.String[] { "Verification", "Invoice", "Payments", "PortalText", });
     internal_static_api_v1alpha1_integrations_IVRPortal_descriptor =
-      getDescriptor().getMessageTypes().get(90);
+      getDescriptor().getMessageTypes().get(93);
     internal_static_api_v1alpha1_integrations_IVRPortal_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_IVRPortal_descriptor,
         new java.lang.String[] { });
     internal_static_api_v1alpha1_integrations_PluginInstanceId_descriptor =
-      getDescriptor().getMessageTypes().get(91);
+      getDescriptor().getMessageTypes().get(94);
     internal_static_api_v1alpha1_integrations_PluginInstanceId_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_PluginInstanceId_descriptor,
         new java.lang.String[] { "Id", });
     internal_static_api_v1alpha1_integrations_PluginInstance_descriptor =
-      getDescriptor().getMessageTypes().get(92);
+      getDescriptor().getMessageTypes().get(95);
     internal_static_api_v1alpha1_integrations_PluginInstance_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_PluginInstance_descriptor,
         new java.lang.String[] { "Id", "Name", "Description", "PluginDefinition", "Data", "Metadata", "LastEdited", "MethodId", "DisplayMethods", });
     internal_static_api_v1alpha1_integrations_PortalLinkTransactionRow_descriptor =
-      getDescriptor().getMessageTypes().get(93);
+      getDescriptor().getMessageTypes().get(96);
     internal_static_api_v1alpha1_integrations_PortalLinkTransactionRow_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_PortalLinkTransactionRow_descriptor,
@@ -1975,13 +2069,13 @@ public final class ServiceProto {
         internal_static_api_v1alpha1_integrations_PortalLinkTransactionRow_LinkDataEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_api_v1alpha1_integrations_GetPortalLinksByDateRangeReq_descriptor =
-      getDescriptor().getMessageTypes().get(94);
+      getDescriptor().getMessageTypes().get(97);
     internal_static_api_v1alpha1_integrations_GetPortalLinksByDateRangeReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_GetPortalLinksByDateRangeReq_descriptor,
         new java.lang.String[] { "OrgId", "RegionId", "Start", "End", "PageSize", "PageNum", "MethodId", });
     internal_static_api_v1alpha1_integrations_GetPortalLinksByDateRangeRes_descriptor =
-      getDescriptor().getMessageTypes().get(95);
+      getDescriptor().getMessageTypes().get(98);
     internal_static_api_v1alpha1_integrations_GetPortalLinksByDateRangeRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_integrations_GetPortalLinksByDateRangeRes_descriptor,
