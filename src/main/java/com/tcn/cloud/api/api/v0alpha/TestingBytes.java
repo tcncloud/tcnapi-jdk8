@@ -16,7 +16,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private TestingBytes() {
-    test_ = com.google.protobuf.ByteString.EMPTY;
+    test_ = "";
   }
 
   @java.lang.Override
@@ -40,14 +40,42 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TEST_FIELD_NUMBER = 1;
-  private com.google.protobuf.ByteString test_ = com.google.protobuf.ByteString.EMPTY;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object test_ = "";
   /**
-   * <code>bytes test = 1 [json_name = "test"];</code>
+   * <code>string test = 1 [json_name = "test"];</code>
    * @return The test.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString getTest() {
-    return test_;
+  public java.lang.String getTest() {
+    java.lang.Object ref = test_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      test_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string test = 1 [json_name = "test"];</code>
+   * @return The bytes for test.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getTestBytes() {
+    java.lang.Object ref = test_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      test_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
   }
 
   private byte memoizedIsInitialized = -1;
@@ -64,8 +92,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!test_.isEmpty()) {
-      output.writeBytes(1, test_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(test_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, test_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -76,9 +104,8 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!test_.isEmpty()) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeBytesSize(1, test_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(test_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, test_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -241,7 +268,7 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      test_ = com.google.protobuf.ByteString.EMPTY;
+      test_ = "";
       return this;
     }
 
@@ -324,8 +351,10 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v0alpha.TestingBytes other) {
       if (other == com.tcn.cloud.api.api.v0alpha.TestingBytes.getDefaultInstance()) return this;
-      if (other.getTest() != com.google.protobuf.ByteString.EMPTY) {
-        setTest(other.getTest());
+      if (!other.getTest().isEmpty()) {
+        test_ = other.test_;
+        bitField0_ |= 0x00000001;
+        onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -354,7 +383,7 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              test_ = input.readBytes();
+              test_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000001;
               break;
             } // case 10
@@ -375,21 +404,47 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private com.google.protobuf.ByteString test_ = com.google.protobuf.ByteString.EMPTY;
+    private java.lang.Object test_ = "";
     /**
-     * <code>bytes test = 1 [json_name = "test"];</code>
+     * <code>string test = 1 [json_name = "test"];</code>
      * @return The test.
      */
-    @java.lang.Override
-    public com.google.protobuf.ByteString getTest() {
-      return test_;
+    public java.lang.String getTest() {
+      java.lang.Object ref = test_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        test_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
     }
     /**
-     * <code>bytes test = 1 [json_name = "test"];</code>
+     * <code>string test = 1 [json_name = "test"];</code>
+     * @return The bytes for test.
+     */
+    public com.google.protobuf.ByteString
+        getTestBytes() {
+      java.lang.Object ref = test_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        test_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string test = 1 [json_name = "test"];</code>
      * @param value The test to set.
      * @return This builder for chaining.
      */
-    public Builder setTest(com.google.protobuf.ByteString value) {
+    public Builder setTest(
+        java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       test_ = value;
       bitField0_ |= 0x00000001;
@@ -397,12 +452,26 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>bytes test = 1 [json_name = "test"];</code>
+     * <code>string test = 1 [json_name = "test"];</code>
      * @return This builder for chaining.
      */
     public Builder clearTest() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       test_ = getDefaultInstance().getTest();
+      bitField0_ = (bitField0_ & ~0x00000001);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string test = 1 [json_name = "test"];</code>
+     * @param value The bytes for test to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTestBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      test_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }

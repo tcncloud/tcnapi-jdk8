@@ -2060,7 +2060,7 @@ public final class LmsProto {
       "\n\tEntityURL\022<\n\013entity_type\030\001 \001(\0162\033.api.v" +
       "0alpha.EpicEntityTypeR\nentityType\022\020\n\003url" +
       "\030\002 \001(\tR\003url\"\"\n\014TestingBytes\022\022\n\004test\030\001 \001(" +
-      "\014R\004test*F\n\010TimeUnit\022\013\n\007DEFAULT\020\000\022\016\n\nTIME" +
+      "\tR\004test*F\n\010TimeUnit\022\013\n\007DEFAULT\020\000\022\016\n\nTIME" +
       "_WEEKS\020\001\022\r\n\tTIME_DAYS\020\002\022\016\n\nTIME_HOURS\020\003*" +
       "\317\001\n\016EpicEntityType\022\025\n\021EPIC_UNKNOWN_TYPE\020" +
       "\000\022\034\n\030EPIC_ENTITY_TYPE_PATIENT\020\001\022 \n\034EPIC_" +

@@ -8,8 +8,14 @@ public interface TestingBytesOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>bytes test = 1 [json_name = "test"];</code>
+   * <code>string test = 1 [json_name = "test"];</code>
    * @return The test.
    */
-  com.google.protobuf.ByteString getTest();
+  java.lang.String getTest();
+  /**
+   * <code>string test = 1 [json_name = "test"];</code>
+   * @return The bytes for test.
+   */
+  com.google.protobuf.ByteString
+      getTestBytes();
 }
