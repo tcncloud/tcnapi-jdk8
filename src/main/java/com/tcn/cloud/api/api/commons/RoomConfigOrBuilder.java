@@ -8,74 +8,68 @@ public interface RoomConfigOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string read_messages = 1 [json_name = "readMessages"];</code>
-   * @return The readMessages.
+   * <code>.api.commons.ConfigPermissionEnum add_user = 1 [json_name = "addUser"];</code>
+   * @return The enum numeric value on the wire for addUser.
    */
-  java.lang.String getReadMessages();
+  int getAddUserValue();
   /**
-   * <code>string read_messages = 1 [json_name = "readMessages"];</code>
-   * @return The bytes for readMessages.
+   * <code>.api.commons.ConfigPermissionEnum add_user = 1 [json_name = "addUser"];</code>
+   * @return The addUser.
    */
-  com.google.protobuf.ByteString
-      getReadMessagesBytes();
+  com.tcn.cloud.api.api.commons.ConfigPermissionEnum getAddUser();
 
   /**
-   * <code>string send_message = 2 [json_name = "sendMessage"];</code>
-   * @return The sendMessage.
+   * <code>.api.commons.ConfigPermissionEnum remove_user = 2 [json_name = "removeUser"];</code>
+   * @return The enum numeric value on the wire for removeUser.
    */
-  java.lang.String getSendMessage();
+  int getRemoveUserValue();
   /**
-   * <code>string send_message = 2 [json_name = "sendMessage"];</code>
-   * @return The bytes for sendMessage.
+   * <code>.api.commons.ConfigPermissionEnum remove_user = 2 [json_name = "removeUser"];</code>
+   * @return The removeUser.
    */
-  com.google.protobuf.ByteString
-      getSendMessageBytes();
+  com.tcn.cloud.api.api.commons.ConfigPermissionEnum getRemoveUser();
 
   /**
-   * <code>string add_member = 3 [json_name = "addMember"];</code>
-   * @return The addMember.
+   * <code>.api.commons.ConfigPermissionEnum promote_to_admin = 3 [json_name = "promoteToAdmin"];</code>
+   * @return The enum numeric value on the wire for promoteToAdmin.
    */
-  java.lang.String getAddMember();
+  int getPromoteToAdminValue();
   /**
-   * <code>string add_member = 3 [json_name = "addMember"];</code>
-   * @return The bytes for addMember.
-   */
-  com.google.protobuf.ByteString
-      getAddMemberBytes();
-
-  /**
-   * <code>string remove_member = 4 [json_name = "removeMember"];</code>
-   * @return The removeMember.
-   */
-  java.lang.String getRemoveMember();
-  /**
-   * <code>string remove_member = 4 [json_name = "removeMember"];</code>
-   * @return The bytes for removeMember.
-   */
-  com.google.protobuf.ByteString
-      getRemoveMemberBytes();
-
-  /**
-   * <code>string promote_to_admin = 5 [json_name = "promoteToAdmin"];</code>
+   * <code>.api.commons.ConfigPermissionEnum promote_to_admin = 3 [json_name = "promoteToAdmin"];</code>
    * @return The promoteToAdmin.
    */
-  java.lang.String getPromoteToAdmin();
-  /**
-   * <code>string promote_to_admin = 5 [json_name = "promoteToAdmin"];</code>
-   * @return The bytes for promoteToAdmin.
-   */
-  com.google.protobuf.ByteString
-      getPromoteToAdminBytes();
+  com.tcn.cloud.api.api.commons.ConfigPermissionEnum getPromoteToAdmin();
 
   /**
-   * <code>string archive = 6 [json_name = "archive"];</code>
-   * @return The archive.
+   * <code>.api.commons.ConfigPermissionEnum read_messages = 4 [json_name = "readMessages"];</code>
+   * @return The enum numeric value on the wire for readMessages.
    */
-  java.lang.String getArchive();
+  int getReadMessagesValue();
   /**
-   * <code>string archive = 6 [json_name = "archive"];</code>
-   * @return The bytes for archive.
+   * <code>.api.commons.ConfigPermissionEnum read_messages = 4 [json_name = "readMessages"];</code>
+   * @return The readMessages.
    */
-  com.google.protobuf.ByteString
-      getArchiveBytes();
+  com.tcn.cloud.api.api.commons.ConfigPermissionEnum getReadMessages();
+
+  /**
+   * <code>.api.commons.ConfigPermissionEnum send_message = 5 [json_name = "sendMessage"];</code>
+   * @return The enum numeric value on the wire for sendMessage.
+   */
+  int getSendMessageValue();
+  /**
+   * <code>.api.commons.ConfigPermissionEnum send_message = 5 [json_name = "sendMessage"];</code>
+   * @return The sendMessage.
+   */
+  com.tcn.cloud.api.api.commons.ConfigPermissionEnum getSendMessage();
+
+  /**
+   * <code>.api.commons.ConfigPermissionEnum archive_room = 6 [json_name = "archiveRoom"];</code>
+   * @return The enum numeric value on the wire for archiveRoom.
+   */
+  int getArchiveRoomValue();
+  /**
+   * <code>.api.commons.ConfigPermissionEnum archive_room = 6 [json_name = "archiveRoom"];</code>
+   * @return The archiveRoom.
+   */
+  com.tcn.cloud.api.api.commons.ConfigPermissionEnum getArchiveRoom();
 }

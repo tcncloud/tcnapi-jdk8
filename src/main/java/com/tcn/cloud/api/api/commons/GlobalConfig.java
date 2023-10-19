@@ -21,9 +21,9 @@ private static final long serialVersionUID = 0L;
   }
   private GlobalConfig() {
     createRoom_ = 0;
-    joinExistingRooms_ = 0;
-    sendMessageToSupervisors_ = 0;
-    sendMessageToNonSupervisors_ = 0;
+    joinExistingRoom_ = 0;
+    sendMessageToSupervisor_ = 0;
+    sendMessageToNonSupervisor_ = 0;
   }
 
   @java.lang.Override
@@ -49,73 +49,73 @@ private static final long serialVersionUID = 0L;
   public static final int CREATE_ROOM_FIELD_NUMBER = 1;
   private int createRoom_ = 0;
   /**
-   * <code>.api.commons.ConfigPermissionOptions create_room = 1 [json_name = "createRoom"];</code>
+   * <code>.api.commons.ConfigPermissionEnum create_room = 1 [json_name = "createRoom"];</code>
    * @return The enum numeric value on the wire for createRoom.
    */
   @java.lang.Override public int getCreateRoomValue() {
     return createRoom_;
   }
   /**
-   * <code>.api.commons.ConfigPermissionOptions create_room = 1 [json_name = "createRoom"];</code>
+   * <code>.api.commons.ConfigPermissionEnum create_room = 1 [json_name = "createRoom"];</code>
    * @return The createRoom.
    */
-  @java.lang.Override public com.tcn.cloud.api.api.commons.ConfigPermissionOptions getCreateRoom() {
-    com.tcn.cloud.api.api.commons.ConfigPermissionOptions result = com.tcn.cloud.api.api.commons.ConfigPermissionOptions.forNumber(createRoom_);
-    return result == null ? com.tcn.cloud.api.api.commons.ConfigPermissionOptions.UNRECOGNIZED : result;
+  @java.lang.Override public com.tcn.cloud.api.api.commons.ConfigPermissionEnum getCreateRoom() {
+    com.tcn.cloud.api.api.commons.ConfigPermissionEnum result = com.tcn.cloud.api.api.commons.ConfigPermissionEnum.forNumber(createRoom_);
+    return result == null ? com.tcn.cloud.api.api.commons.ConfigPermissionEnum.UNRECOGNIZED : result;
   }
 
-  public static final int JOIN_EXISTING_ROOMS_FIELD_NUMBER = 2;
-  private int joinExistingRooms_ = 0;
+  public static final int JOIN_EXISTING_ROOM_FIELD_NUMBER = 2;
+  private int joinExistingRoom_ = 0;
   /**
-   * <code>.api.commons.ConfigPermissionOptions join_existing_rooms = 2 [json_name = "joinExistingRooms"];</code>
-   * @return The enum numeric value on the wire for joinExistingRooms.
+   * <code>.api.commons.ConfigPermissionEnum join_existing_room = 2 [json_name = "joinExistingRoom"];</code>
+   * @return The enum numeric value on the wire for joinExistingRoom.
    */
-  @java.lang.Override public int getJoinExistingRoomsValue() {
-    return joinExistingRooms_;
+  @java.lang.Override public int getJoinExistingRoomValue() {
+    return joinExistingRoom_;
   }
   /**
-   * <code>.api.commons.ConfigPermissionOptions join_existing_rooms = 2 [json_name = "joinExistingRooms"];</code>
-   * @return The joinExistingRooms.
+   * <code>.api.commons.ConfigPermissionEnum join_existing_room = 2 [json_name = "joinExistingRoom"];</code>
+   * @return The joinExistingRoom.
    */
-  @java.lang.Override public com.tcn.cloud.api.api.commons.ConfigPermissionOptions getJoinExistingRooms() {
-    com.tcn.cloud.api.api.commons.ConfigPermissionOptions result = com.tcn.cloud.api.api.commons.ConfigPermissionOptions.forNumber(joinExistingRooms_);
-    return result == null ? com.tcn.cloud.api.api.commons.ConfigPermissionOptions.UNRECOGNIZED : result;
-  }
-
-  public static final int SEND_MESSAGE_TO_SUPERVISORS_FIELD_NUMBER = 3;
-  private int sendMessageToSupervisors_ = 0;
-  /**
-   * <code>.api.commons.ConfigPermissionOptions send_message_to_supervisors = 3 [json_name = "sendMessageToSupervisors"];</code>
-   * @return The enum numeric value on the wire for sendMessageToSupervisors.
-   */
-  @java.lang.Override public int getSendMessageToSupervisorsValue() {
-    return sendMessageToSupervisors_;
-  }
-  /**
-   * <code>.api.commons.ConfigPermissionOptions send_message_to_supervisors = 3 [json_name = "sendMessageToSupervisors"];</code>
-   * @return The sendMessageToSupervisors.
-   */
-  @java.lang.Override public com.tcn.cloud.api.api.commons.ConfigPermissionOptions getSendMessageToSupervisors() {
-    com.tcn.cloud.api.api.commons.ConfigPermissionOptions result = com.tcn.cloud.api.api.commons.ConfigPermissionOptions.forNumber(sendMessageToSupervisors_);
-    return result == null ? com.tcn.cloud.api.api.commons.ConfigPermissionOptions.UNRECOGNIZED : result;
+  @java.lang.Override public com.tcn.cloud.api.api.commons.ConfigPermissionEnum getJoinExistingRoom() {
+    com.tcn.cloud.api.api.commons.ConfigPermissionEnum result = com.tcn.cloud.api.api.commons.ConfigPermissionEnum.forNumber(joinExistingRoom_);
+    return result == null ? com.tcn.cloud.api.api.commons.ConfigPermissionEnum.UNRECOGNIZED : result;
   }
 
-  public static final int SEND_MESSAGE_TO_NON_SUPERVISORS_FIELD_NUMBER = 4;
-  private int sendMessageToNonSupervisors_ = 0;
+  public static final int SEND_MESSAGE_TO_SUPERVISOR_FIELD_NUMBER = 3;
+  private int sendMessageToSupervisor_ = 0;
   /**
-   * <code>.api.commons.ConfigPermissionOptions send_message_to_non_supervisors = 4 [json_name = "sendMessageToNonSupervisors"];</code>
-   * @return The enum numeric value on the wire for sendMessageToNonSupervisors.
+   * <code>.api.commons.ConfigPermissionEnum send_message_to_supervisor = 3 [json_name = "sendMessageToSupervisor"];</code>
+   * @return The enum numeric value on the wire for sendMessageToSupervisor.
    */
-  @java.lang.Override public int getSendMessageToNonSupervisorsValue() {
-    return sendMessageToNonSupervisors_;
+  @java.lang.Override public int getSendMessageToSupervisorValue() {
+    return sendMessageToSupervisor_;
   }
   /**
-   * <code>.api.commons.ConfigPermissionOptions send_message_to_non_supervisors = 4 [json_name = "sendMessageToNonSupervisors"];</code>
-   * @return The sendMessageToNonSupervisors.
+   * <code>.api.commons.ConfigPermissionEnum send_message_to_supervisor = 3 [json_name = "sendMessageToSupervisor"];</code>
+   * @return The sendMessageToSupervisor.
    */
-  @java.lang.Override public com.tcn.cloud.api.api.commons.ConfigPermissionOptions getSendMessageToNonSupervisors() {
-    com.tcn.cloud.api.api.commons.ConfigPermissionOptions result = com.tcn.cloud.api.api.commons.ConfigPermissionOptions.forNumber(sendMessageToNonSupervisors_);
-    return result == null ? com.tcn.cloud.api.api.commons.ConfigPermissionOptions.UNRECOGNIZED : result;
+  @java.lang.Override public com.tcn.cloud.api.api.commons.ConfigPermissionEnum getSendMessageToSupervisor() {
+    com.tcn.cloud.api.api.commons.ConfigPermissionEnum result = com.tcn.cloud.api.api.commons.ConfigPermissionEnum.forNumber(sendMessageToSupervisor_);
+    return result == null ? com.tcn.cloud.api.api.commons.ConfigPermissionEnum.UNRECOGNIZED : result;
+  }
+
+  public static final int SEND_MESSAGE_TO_NON_SUPERVISOR_FIELD_NUMBER = 4;
+  private int sendMessageToNonSupervisor_ = 0;
+  /**
+   * <code>.api.commons.ConfigPermissionEnum send_message_to_non_supervisor = 4 [json_name = "sendMessageToNonSupervisor"];</code>
+   * @return The enum numeric value on the wire for sendMessageToNonSupervisor.
+   */
+  @java.lang.Override public int getSendMessageToNonSupervisorValue() {
+    return sendMessageToNonSupervisor_;
+  }
+  /**
+   * <code>.api.commons.ConfigPermissionEnum send_message_to_non_supervisor = 4 [json_name = "sendMessageToNonSupervisor"];</code>
+   * @return The sendMessageToNonSupervisor.
+   */
+  @java.lang.Override public com.tcn.cloud.api.api.commons.ConfigPermissionEnum getSendMessageToNonSupervisor() {
+    com.tcn.cloud.api.api.commons.ConfigPermissionEnum result = com.tcn.cloud.api.api.commons.ConfigPermissionEnum.forNumber(sendMessageToNonSupervisor_);
+    return result == null ? com.tcn.cloud.api.api.commons.ConfigPermissionEnum.UNRECOGNIZED : result;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -132,17 +132,17 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (createRoom_ != com.tcn.cloud.api.api.commons.ConfigPermissionOptions.LIMITED.getNumber()) {
+    if (createRoom_ != com.tcn.cloud.api.api.commons.ConfigPermissionEnum.LIMITED.getNumber()) {
       output.writeEnum(1, createRoom_);
     }
-    if (joinExistingRooms_ != com.tcn.cloud.api.api.commons.ConfigPermissionOptions.LIMITED.getNumber()) {
-      output.writeEnum(2, joinExistingRooms_);
+    if (joinExistingRoom_ != com.tcn.cloud.api.api.commons.ConfigPermissionEnum.LIMITED.getNumber()) {
+      output.writeEnum(2, joinExistingRoom_);
     }
-    if (sendMessageToSupervisors_ != com.tcn.cloud.api.api.commons.ConfigPermissionOptions.LIMITED.getNumber()) {
-      output.writeEnum(3, sendMessageToSupervisors_);
+    if (sendMessageToSupervisor_ != com.tcn.cloud.api.api.commons.ConfigPermissionEnum.LIMITED.getNumber()) {
+      output.writeEnum(3, sendMessageToSupervisor_);
     }
-    if (sendMessageToNonSupervisors_ != com.tcn.cloud.api.api.commons.ConfigPermissionOptions.LIMITED.getNumber()) {
-      output.writeEnum(4, sendMessageToNonSupervisors_);
+    if (sendMessageToNonSupervisor_ != com.tcn.cloud.api.api.commons.ConfigPermissionEnum.LIMITED.getNumber()) {
+      output.writeEnum(4, sendMessageToNonSupervisor_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -153,21 +153,21 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (createRoom_ != com.tcn.cloud.api.api.commons.ConfigPermissionOptions.LIMITED.getNumber()) {
+    if (createRoom_ != com.tcn.cloud.api.api.commons.ConfigPermissionEnum.LIMITED.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(1, createRoom_);
     }
-    if (joinExistingRooms_ != com.tcn.cloud.api.api.commons.ConfigPermissionOptions.LIMITED.getNumber()) {
+    if (joinExistingRoom_ != com.tcn.cloud.api.api.commons.ConfigPermissionEnum.LIMITED.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(2, joinExistingRooms_);
+        .computeEnumSize(2, joinExistingRoom_);
     }
-    if (sendMessageToSupervisors_ != com.tcn.cloud.api.api.commons.ConfigPermissionOptions.LIMITED.getNumber()) {
+    if (sendMessageToSupervisor_ != com.tcn.cloud.api.api.commons.ConfigPermissionEnum.LIMITED.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(3, sendMessageToSupervisors_);
+        .computeEnumSize(3, sendMessageToSupervisor_);
     }
-    if (sendMessageToNonSupervisors_ != com.tcn.cloud.api.api.commons.ConfigPermissionOptions.LIMITED.getNumber()) {
+    if (sendMessageToNonSupervisor_ != com.tcn.cloud.api.api.commons.ConfigPermissionEnum.LIMITED.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(4, sendMessageToNonSupervisors_);
+        .computeEnumSize(4, sendMessageToNonSupervisor_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -185,9 +185,9 @@ private static final long serialVersionUID = 0L;
     com.tcn.cloud.api.api.commons.GlobalConfig other = (com.tcn.cloud.api.api.commons.GlobalConfig) obj;
 
     if (createRoom_ != other.createRoom_) return false;
-    if (joinExistingRooms_ != other.joinExistingRooms_) return false;
-    if (sendMessageToSupervisors_ != other.sendMessageToSupervisors_) return false;
-    if (sendMessageToNonSupervisors_ != other.sendMessageToNonSupervisors_) return false;
+    if (joinExistingRoom_ != other.joinExistingRoom_) return false;
+    if (sendMessageToSupervisor_ != other.sendMessageToSupervisor_) return false;
+    if (sendMessageToNonSupervisor_ != other.sendMessageToNonSupervisor_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -201,12 +201,12 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + CREATE_ROOM_FIELD_NUMBER;
     hash = (53 * hash) + createRoom_;
-    hash = (37 * hash) + JOIN_EXISTING_ROOMS_FIELD_NUMBER;
-    hash = (53 * hash) + joinExistingRooms_;
-    hash = (37 * hash) + SEND_MESSAGE_TO_SUPERVISORS_FIELD_NUMBER;
-    hash = (53 * hash) + sendMessageToSupervisors_;
-    hash = (37 * hash) + SEND_MESSAGE_TO_NON_SUPERVISORS_FIELD_NUMBER;
-    hash = (53 * hash) + sendMessageToNonSupervisors_;
+    hash = (37 * hash) + JOIN_EXISTING_ROOM_FIELD_NUMBER;
+    hash = (53 * hash) + joinExistingRoom_;
+    hash = (37 * hash) + SEND_MESSAGE_TO_SUPERVISOR_FIELD_NUMBER;
+    hash = (53 * hash) + sendMessageToSupervisor_;
+    hash = (37 * hash) + SEND_MESSAGE_TO_NON_SUPERVISOR_FIELD_NUMBER;
+    hash = (53 * hash) + sendMessageToNonSupervisor_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -343,9 +343,9 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       createRoom_ = 0;
-      joinExistingRooms_ = 0;
-      sendMessageToSupervisors_ = 0;
-      sendMessageToNonSupervisors_ = 0;
+      joinExistingRoom_ = 0;
+      sendMessageToSupervisor_ = 0;
+      sendMessageToNonSupervisor_ = 0;
       return this;
     }
 
@@ -383,13 +383,13 @@ private static final long serialVersionUID = 0L;
         result.createRoom_ = createRoom_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.joinExistingRooms_ = joinExistingRooms_;
+        result.joinExistingRoom_ = joinExistingRoom_;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.sendMessageToSupervisors_ = sendMessageToSupervisors_;
+        result.sendMessageToSupervisor_ = sendMessageToSupervisor_;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.sendMessageToNonSupervisors_ = sendMessageToNonSupervisors_;
+        result.sendMessageToNonSupervisor_ = sendMessageToNonSupervisor_;
       }
     }
 
@@ -440,14 +440,14 @@ private static final long serialVersionUID = 0L;
       if (other.createRoom_ != 0) {
         setCreateRoomValue(other.getCreateRoomValue());
       }
-      if (other.joinExistingRooms_ != 0) {
-        setJoinExistingRoomsValue(other.getJoinExistingRoomsValue());
+      if (other.joinExistingRoom_ != 0) {
+        setJoinExistingRoomValue(other.getJoinExistingRoomValue());
       }
-      if (other.sendMessageToSupervisors_ != 0) {
-        setSendMessageToSupervisorsValue(other.getSendMessageToSupervisorsValue());
+      if (other.sendMessageToSupervisor_ != 0) {
+        setSendMessageToSupervisorValue(other.getSendMessageToSupervisorValue());
       }
-      if (other.sendMessageToNonSupervisors_ != 0) {
-        setSendMessageToNonSupervisorsValue(other.getSendMessageToNonSupervisorsValue());
+      if (other.sendMessageToNonSupervisor_ != 0) {
+        setSendMessageToNonSupervisorValue(other.getSendMessageToNonSupervisorValue());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -481,17 +481,17 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 8
             case 16: {
-              joinExistingRooms_ = input.readEnum();
+              joinExistingRoom_ = input.readEnum();
               bitField0_ |= 0x00000002;
               break;
             } // case 16
             case 24: {
-              sendMessageToSupervisors_ = input.readEnum();
+              sendMessageToSupervisor_ = input.readEnum();
               bitField0_ |= 0x00000004;
               break;
             } // case 24
             case 32: {
-              sendMessageToNonSupervisors_ = input.readEnum();
+              sendMessageToNonSupervisor_ = input.readEnum();
               bitField0_ |= 0x00000008;
               break;
             } // case 32
@@ -514,14 +514,14 @@ private static final long serialVersionUID = 0L;
 
     private int createRoom_ = 0;
     /**
-     * <code>.api.commons.ConfigPermissionOptions create_room = 1 [json_name = "createRoom"];</code>
+     * <code>.api.commons.ConfigPermissionEnum create_room = 1 [json_name = "createRoom"];</code>
      * @return The enum numeric value on the wire for createRoom.
      */
     @java.lang.Override public int getCreateRoomValue() {
       return createRoom_;
     }
     /**
-     * <code>.api.commons.ConfigPermissionOptions create_room = 1 [json_name = "createRoom"];</code>
+     * <code>.api.commons.ConfigPermissionEnum create_room = 1 [json_name = "createRoom"];</code>
      * @param value The enum numeric value on the wire for createRoom to set.
      * @return This builder for chaining.
      */
@@ -532,20 +532,20 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.ConfigPermissionOptions create_room = 1 [json_name = "createRoom"];</code>
+     * <code>.api.commons.ConfigPermissionEnum create_room = 1 [json_name = "createRoom"];</code>
      * @return The createRoom.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.ConfigPermissionOptions getCreateRoom() {
-      com.tcn.cloud.api.api.commons.ConfigPermissionOptions result = com.tcn.cloud.api.api.commons.ConfigPermissionOptions.forNumber(createRoom_);
-      return result == null ? com.tcn.cloud.api.api.commons.ConfigPermissionOptions.UNRECOGNIZED : result;
+    public com.tcn.cloud.api.api.commons.ConfigPermissionEnum getCreateRoom() {
+      com.tcn.cloud.api.api.commons.ConfigPermissionEnum result = com.tcn.cloud.api.api.commons.ConfigPermissionEnum.forNumber(createRoom_);
+      return result == null ? com.tcn.cloud.api.api.commons.ConfigPermissionEnum.UNRECOGNIZED : result;
     }
     /**
-     * <code>.api.commons.ConfigPermissionOptions create_room = 1 [json_name = "createRoom"];</code>
+     * <code>.api.commons.ConfigPermissionEnum create_room = 1 [json_name = "createRoom"];</code>
      * @param value The createRoom to set.
      * @return This builder for chaining.
      */
-    public Builder setCreateRoom(com.tcn.cloud.api.api.commons.ConfigPermissionOptions value) {
+    public Builder setCreateRoom(com.tcn.cloud.api.api.commons.ConfigPermissionEnum value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -555,7 +555,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.ConfigPermissionOptions create_room = 1 [json_name = "createRoom"];</code>
+     * <code>.api.commons.ConfigPermissionEnum create_room = 1 [json_name = "createRoom"];</code>
      * @return This builder for chaining.
      */
     public Builder clearCreateRoom() {
@@ -565,161 +565,161 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private int joinExistingRooms_ = 0;
+    private int joinExistingRoom_ = 0;
     /**
-     * <code>.api.commons.ConfigPermissionOptions join_existing_rooms = 2 [json_name = "joinExistingRooms"];</code>
-     * @return The enum numeric value on the wire for joinExistingRooms.
+     * <code>.api.commons.ConfigPermissionEnum join_existing_room = 2 [json_name = "joinExistingRoom"];</code>
+     * @return The enum numeric value on the wire for joinExistingRoom.
      */
-    @java.lang.Override public int getJoinExistingRoomsValue() {
-      return joinExistingRooms_;
+    @java.lang.Override public int getJoinExistingRoomValue() {
+      return joinExistingRoom_;
     }
     /**
-     * <code>.api.commons.ConfigPermissionOptions join_existing_rooms = 2 [json_name = "joinExistingRooms"];</code>
-     * @param value The enum numeric value on the wire for joinExistingRooms to set.
+     * <code>.api.commons.ConfigPermissionEnum join_existing_room = 2 [json_name = "joinExistingRoom"];</code>
+     * @param value The enum numeric value on the wire for joinExistingRoom to set.
      * @return This builder for chaining.
      */
-    public Builder setJoinExistingRoomsValue(int value) {
-      joinExistingRooms_ = value;
+    public Builder setJoinExistingRoomValue(int value) {
+      joinExistingRoom_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
-     * <code>.api.commons.ConfigPermissionOptions join_existing_rooms = 2 [json_name = "joinExistingRooms"];</code>
-     * @return The joinExistingRooms.
+     * <code>.api.commons.ConfigPermissionEnum join_existing_room = 2 [json_name = "joinExistingRoom"];</code>
+     * @return The joinExistingRoom.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.ConfigPermissionOptions getJoinExistingRooms() {
-      com.tcn.cloud.api.api.commons.ConfigPermissionOptions result = com.tcn.cloud.api.api.commons.ConfigPermissionOptions.forNumber(joinExistingRooms_);
-      return result == null ? com.tcn.cloud.api.api.commons.ConfigPermissionOptions.UNRECOGNIZED : result;
+    public com.tcn.cloud.api.api.commons.ConfigPermissionEnum getJoinExistingRoom() {
+      com.tcn.cloud.api.api.commons.ConfigPermissionEnum result = com.tcn.cloud.api.api.commons.ConfigPermissionEnum.forNumber(joinExistingRoom_);
+      return result == null ? com.tcn.cloud.api.api.commons.ConfigPermissionEnum.UNRECOGNIZED : result;
     }
     /**
-     * <code>.api.commons.ConfigPermissionOptions join_existing_rooms = 2 [json_name = "joinExistingRooms"];</code>
-     * @param value The joinExistingRooms to set.
+     * <code>.api.commons.ConfigPermissionEnum join_existing_room = 2 [json_name = "joinExistingRoom"];</code>
+     * @param value The joinExistingRoom to set.
      * @return This builder for chaining.
      */
-    public Builder setJoinExistingRooms(com.tcn.cloud.api.api.commons.ConfigPermissionOptions value) {
+    public Builder setJoinExistingRoom(com.tcn.cloud.api.api.commons.ConfigPermissionEnum value) {
       if (value == null) {
         throw new NullPointerException();
       }
       bitField0_ |= 0x00000002;
-      joinExistingRooms_ = value.getNumber();
+      joinExistingRoom_ = value.getNumber();
       onChanged();
       return this;
     }
     /**
-     * <code>.api.commons.ConfigPermissionOptions join_existing_rooms = 2 [json_name = "joinExistingRooms"];</code>
+     * <code>.api.commons.ConfigPermissionEnum join_existing_room = 2 [json_name = "joinExistingRoom"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearJoinExistingRooms() {
+    public Builder clearJoinExistingRoom() {
       bitField0_ = (bitField0_ & ~0x00000002);
-      joinExistingRooms_ = 0;
+      joinExistingRoom_ = 0;
       onChanged();
       return this;
     }
 
-    private int sendMessageToSupervisors_ = 0;
+    private int sendMessageToSupervisor_ = 0;
     /**
-     * <code>.api.commons.ConfigPermissionOptions send_message_to_supervisors = 3 [json_name = "sendMessageToSupervisors"];</code>
-     * @return The enum numeric value on the wire for sendMessageToSupervisors.
+     * <code>.api.commons.ConfigPermissionEnum send_message_to_supervisor = 3 [json_name = "sendMessageToSupervisor"];</code>
+     * @return The enum numeric value on the wire for sendMessageToSupervisor.
      */
-    @java.lang.Override public int getSendMessageToSupervisorsValue() {
-      return sendMessageToSupervisors_;
+    @java.lang.Override public int getSendMessageToSupervisorValue() {
+      return sendMessageToSupervisor_;
     }
     /**
-     * <code>.api.commons.ConfigPermissionOptions send_message_to_supervisors = 3 [json_name = "sendMessageToSupervisors"];</code>
-     * @param value The enum numeric value on the wire for sendMessageToSupervisors to set.
+     * <code>.api.commons.ConfigPermissionEnum send_message_to_supervisor = 3 [json_name = "sendMessageToSupervisor"];</code>
+     * @param value The enum numeric value on the wire for sendMessageToSupervisor to set.
      * @return This builder for chaining.
      */
-    public Builder setSendMessageToSupervisorsValue(int value) {
-      sendMessageToSupervisors_ = value;
+    public Builder setSendMessageToSupervisorValue(int value) {
+      sendMessageToSupervisor_ = value;
       bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
-     * <code>.api.commons.ConfigPermissionOptions send_message_to_supervisors = 3 [json_name = "sendMessageToSupervisors"];</code>
-     * @return The sendMessageToSupervisors.
+     * <code>.api.commons.ConfigPermissionEnum send_message_to_supervisor = 3 [json_name = "sendMessageToSupervisor"];</code>
+     * @return The sendMessageToSupervisor.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.ConfigPermissionOptions getSendMessageToSupervisors() {
-      com.tcn.cloud.api.api.commons.ConfigPermissionOptions result = com.tcn.cloud.api.api.commons.ConfigPermissionOptions.forNumber(sendMessageToSupervisors_);
-      return result == null ? com.tcn.cloud.api.api.commons.ConfigPermissionOptions.UNRECOGNIZED : result;
+    public com.tcn.cloud.api.api.commons.ConfigPermissionEnum getSendMessageToSupervisor() {
+      com.tcn.cloud.api.api.commons.ConfigPermissionEnum result = com.tcn.cloud.api.api.commons.ConfigPermissionEnum.forNumber(sendMessageToSupervisor_);
+      return result == null ? com.tcn.cloud.api.api.commons.ConfigPermissionEnum.UNRECOGNIZED : result;
     }
     /**
-     * <code>.api.commons.ConfigPermissionOptions send_message_to_supervisors = 3 [json_name = "sendMessageToSupervisors"];</code>
-     * @param value The sendMessageToSupervisors to set.
+     * <code>.api.commons.ConfigPermissionEnum send_message_to_supervisor = 3 [json_name = "sendMessageToSupervisor"];</code>
+     * @param value The sendMessageToSupervisor to set.
      * @return This builder for chaining.
      */
-    public Builder setSendMessageToSupervisors(com.tcn.cloud.api.api.commons.ConfigPermissionOptions value) {
+    public Builder setSendMessageToSupervisor(com.tcn.cloud.api.api.commons.ConfigPermissionEnum value) {
       if (value == null) {
         throw new NullPointerException();
       }
       bitField0_ |= 0x00000004;
-      sendMessageToSupervisors_ = value.getNumber();
+      sendMessageToSupervisor_ = value.getNumber();
       onChanged();
       return this;
     }
     /**
-     * <code>.api.commons.ConfigPermissionOptions send_message_to_supervisors = 3 [json_name = "sendMessageToSupervisors"];</code>
+     * <code>.api.commons.ConfigPermissionEnum send_message_to_supervisor = 3 [json_name = "sendMessageToSupervisor"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearSendMessageToSupervisors() {
+    public Builder clearSendMessageToSupervisor() {
       bitField0_ = (bitField0_ & ~0x00000004);
-      sendMessageToSupervisors_ = 0;
+      sendMessageToSupervisor_ = 0;
       onChanged();
       return this;
     }
 
-    private int sendMessageToNonSupervisors_ = 0;
+    private int sendMessageToNonSupervisor_ = 0;
     /**
-     * <code>.api.commons.ConfigPermissionOptions send_message_to_non_supervisors = 4 [json_name = "sendMessageToNonSupervisors"];</code>
-     * @return The enum numeric value on the wire for sendMessageToNonSupervisors.
+     * <code>.api.commons.ConfigPermissionEnum send_message_to_non_supervisor = 4 [json_name = "sendMessageToNonSupervisor"];</code>
+     * @return The enum numeric value on the wire for sendMessageToNonSupervisor.
      */
-    @java.lang.Override public int getSendMessageToNonSupervisorsValue() {
-      return sendMessageToNonSupervisors_;
+    @java.lang.Override public int getSendMessageToNonSupervisorValue() {
+      return sendMessageToNonSupervisor_;
     }
     /**
-     * <code>.api.commons.ConfigPermissionOptions send_message_to_non_supervisors = 4 [json_name = "sendMessageToNonSupervisors"];</code>
-     * @param value The enum numeric value on the wire for sendMessageToNonSupervisors to set.
+     * <code>.api.commons.ConfigPermissionEnum send_message_to_non_supervisor = 4 [json_name = "sendMessageToNonSupervisor"];</code>
+     * @param value The enum numeric value on the wire for sendMessageToNonSupervisor to set.
      * @return This builder for chaining.
      */
-    public Builder setSendMessageToNonSupervisorsValue(int value) {
-      sendMessageToNonSupervisors_ = value;
+    public Builder setSendMessageToNonSupervisorValue(int value) {
+      sendMessageToNonSupervisor_ = value;
       bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
     /**
-     * <code>.api.commons.ConfigPermissionOptions send_message_to_non_supervisors = 4 [json_name = "sendMessageToNonSupervisors"];</code>
-     * @return The sendMessageToNonSupervisors.
+     * <code>.api.commons.ConfigPermissionEnum send_message_to_non_supervisor = 4 [json_name = "sendMessageToNonSupervisor"];</code>
+     * @return The sendMessageToNonSupervisor.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.ConfigPermissionOptions getSendMessageToNonSupervisors() {
-      com.tcn.cloud.api.api.commons.ConfigPermissionOptions result = com.tcn.cloud.api.api.commons.ConfigPermissionOptions.forNumber(sendMessageToNonSupervisors_);
-      return result == null ? com.tcn.cloud.api.api.commons.ConfigPermissionOptions.UNRECOGNIZED : result;
+    public com.tcn.cloud.api.api.commons.ConfigPermissionEnum getSendMessageToNonSupervisor() {
+      com.tcn.cloud.api.api.commons.ConfigPermissionEnum result = com.tcn.cloud.api.api.commons.ConfigPermissionEnum.forNumber(sendMessageToNonSupervisor_);
+      return result == null ? com.tcn.cloud.api.api.commons.ConfigPermissionEnum.UNRECOGNIZED : result;
     }
     /**
-     * <code>.api.commons.ConfigPermissionOptions send_message_to_non_supervisors = 4 [json_name = "sendMessageToNonSupervisors"];</code>
-     * @param value The sendMessageToNonSupervisors to set.
+     * <code>.api.commons.ConfigPermissionEnum send_message_to_non_supervisor = 4 [json_name = "sendMessageToNonSupervisor"];</code>
+     * @param value The sendMessageToNonSupervisor to set.
      * @return This builder for chaining.
      */
-    public Builder setSendMessageToNonSupervisors(com.tcn.cloud.api.api.commons.ConfigPermissionOptions value) {
+    public Builder setSendMessageToNonSupervisor(com.tcn.cloud.api.api.commons.ConfigPermissionEnum value) {
       if (value == null) {
         throw new NullPointerException();
       }
       bitField0_ |= 0x00000008;
-      sendMessageToNonSupervisors_ = value.getNumber();
+      sendMessageToNonSupervisor_ = value.getNumber();
       onChanged();
       return this;
     }
     /**
-     * <code>.api.commons.ConfigPermissionOptions send_message_to_non_supervisors = 4 [json_name = "sendMessageToNonSupervisors"];</code>
+     * <code>.api.commons.ConfigPermissionEnum send_message_to_non_supervisor = 4 [json_name = "sendMessageToNonSupervisor"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearSendMessageToNonSupervisors() {
+    public Builder clearSendMessageToNonSupervisor() {
       bitField0_ = (bitField0_ & ~0x00000008);
-      sendMessageToNonSupervisors_ = 0;
+      sendMessageToNonSupervisor_ = 0;
       onChanged();
       return this;
     }

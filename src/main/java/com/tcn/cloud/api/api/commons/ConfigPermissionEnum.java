@@ -5,12 +5,12 @@ package com.tcn.cloud.api.api.commons;
 
 /**
  * <pre>
- * ConfigPermissionOptions -
+ * ConfigPermissionEnum -
  * </pre>
  *
- * Protobuf enum {@code api.commons.ConfigPermissionOptions}
+ * Protobuf enum {@code api.commons.ConfigPermissionEnum}
  */
-public enum ConfigPermissionOptions
+public enum ConfigPermissionEnum
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
    * <code>LIMITED = 0;</code>
@@ -55,7 +55,7 @@ public enum ConfigPermissionOptions
    * @deprecated Use {@link #forNumber(int)} instead.
    */
   @java.lang.Deprecated
-  public static ConfigPermissionOptions valueOf(int value) {
+  public static ConfigPermissionEnum valueOf(int value) {
     return forNumber(value);
   }
 
@@ -63,7 +63,7 @@ public enum ConfigPermissionOptions
    * @param value The numeric wire value of the corresponding enum entry.
    * @return The enum associated with the given numeric wire value.
    */
-  public static ConfigPermissionOptions forNumber(int value) {
+  public static ConfigPermissionEnum forNumber(int value) {
     switch (value) {
       case 0: return LIMITED;
       case 1: return ROOM303_MEMBER;
@@ -72,15 +72,15 @@ public enum ConfigPermissionOptions
     }
   }
 
-  public static com.google.protobuf.Internal.EnumLiteMap<ConfigPermissionOptions>
+  public static com.google.protobuf.Internal.EnumLiteMap<ConfigPermissionEnum>
       internalGetValueMap() {
     return internalValueMap;
   }
   private static final com.google.protobuf.Internal.EnumLiteMap<
-      ConfigPermissionOptions> internalValueMap =
-        new com.google.protobuf.Internal.EnumLiteMap<ConfigPermissionOptions>() {
-          public ConfigPermissionOptions findValueByNumber(int number) {
-            return ConfigPermissionOptions.forNumber(number);
+      ConfigPermissionEnum> internalValueMap =
+        new com.google.protobuf.Internal.EnumLiteMap<ConfigPermissionEnum>() {
+          public ConfigPermissionEnum findValueByNumber(int number) {
+            return ConfigPermissionEnum.forNumber(number);
           }
         };
 
@@ -101,9 +101,9 @@ public enum ConfigPermissionOptions
     return com.tcn.cloud.api.api.commons.Room303Proto.getDescriptor().getEnumTypes().get(3);
   }
 
-  private static final ConfigPermissionOptions[] VALUES = values();
+  private static final ConfigPermissionEnum[] VALUES = values();
 
-  public static ConfigPermissionOptions valueOf(
+  public static ConfigPermissionEnum valueOf(
       com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
     if (desc.getType() != getDescriptor()) {
       throw new java.lang.IllegalArgumentException(
@@ -117,10 +117,10 @@ public enum ConfigPermissionOptions
 
   private final int value;
 
-  private ConfigPermissionOptions(int value) {
+  private ConfigPermissionEnum(int value) {
     this.value = value;
   }
 
-  // @@protoc_insertion_point(enum_scope:api.commons.ConfigPermissionOptions)
+  // @@protoc_insertion_point(enum_scope:api.commons.ConfigPermissionEnum)
 }
 

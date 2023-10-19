@@ -8,46 +8,46 @@ public interface GlobalConfigOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.api.commons.ConfigPermissionOptions create_room = 1 [json_name = "createRoom"];</code>
+   * <code>.api.commons.ConfigPermissionEnum create_room = 1 [json_name = "createRoom"];</code>
    * @return The enum numeric value on the wire for createRoom.
    */
   int getCreateRoomValue();
   /**
-   * <code>.api.commons.ConfigPermissionOptions create_room = 1 [json_name = "createRoom"];</code>
+   * <code>.api.commons.ConfigPermissionEnum create_room = 1 [json_name = "createRoom"];</code>
    * @return The createRoom.
    */
-  com.tcn.cloud.api.api.commons.ConfigPermissionOptions getCreateRoom();
+  com.tcn.cloud.api.api.commons.ConfigPermissionEnum getCreateRoom();
 
   /**
-   * <code>.api.commons.ConfigPermissionOptions join_existing_rooms = 2 [json_name = "joinExistingRooms"];</code>
-   * @return The enum numeric value on the wire for joinExistingRooms.
+   * <code>.api.commons.ConfigPermissionEnum join_existing_room = 2 [json_name = "joinExistingRoom"];</code>
+   * @return The enum numeric value on the wire for joinExistingRoom.
    */
-  int getJoinExistingRoomsValue();
+  int getJoinExistingRoomValue();
   /**
-   * <code>.api.commons.ConfigPermissionOptions join_existing_rooms = 2 [json_name = "joinExistingRooms"];</code>
-   * @return The joinExistingRooms.
+   * <code>.api.commons.ConfigPermissionEnum join_existing_room = 2 [json_name = "joinExistingRoom"];</code>
+   * @return The joinExistingRoom.
    */
-  com.tcn.cloud.api.api.commons.ConfigPermissionOptions getJoinExistingRooms();
+  com.tcn.cloud.api.api.commons.ConfigPermissionEnum getJoinExistingRoom();
 
   /**
-   * <code>.api.commons.ConfigPermissionOptions send_message_to_supervisors = 3 [json_name = "sendMessageToSupervisors"];</code>
-   * @return The enum numeric value on the wire for sendMessageToSupervisors.
+   * <code>.api.commons.ConfigPermissionEnum send_message_to_supervisor = 3 [json_name = "sendMessageToSupervisor"];</code>
+   * @return The enum numeric value on the wire for sendMessageToSupervisor.
    */
-  int getSendMessageToSupervisorsValue();
+  int getSendMessageToSupervisorValue();
   /**
-   * <code>.api.commons.ConfigPermissionOptions send_message_to_supervisors = 3 [json_name = "sendMessageToSupervisors"];</code>
-   * @return The sendMessageToSupervisors.
+   * <code>.api.commons.ConfigPermissionEnum send_message_to_supervisor = 3 [json_name = "sendMessageToSupervisor"];</code>
+   * @return The sendMessageToSupervisor.
    */
-  com.tcn.cloud.api.api.commons.ConfigPermissionOptions getSendMessageToSupervisors();
+  com.tcn.cloud.api.api.commons.ConfigPermissionEnum getSendMessageToSupervisor();
 
   /**
-   * <code>.api.commons.ConfigPermissionOptions send_message_to_non_supervisors = 4 [json_name = "sendMessageToNonSupervisors"];</code>
-   * @return The enum numeric value on the wire for sendMessageToNonSupervisors.
+   * <code>.api.commons.ConfigPermissionEnum send_message_to_non_supervisor = 4 [json_name = "sendMessageToNonSupervisor"];</code>
+   * @return The enum numeric value on the wire for sendMessageToNonSupervisor.
    */
-  int getSendMessageToNonSupervisorsValue();
+  int getSendMessageToNonSupervisorValue();
   /**
-   * <code>.api.commons.ConfigPermissionOptions send_message_to_non_supervisors = 4 [json_name = "sendMessageToNonSupervisors"];</code>
-   * @return The sendMessageToNonSupervisors.
+   * <code>.api.commons.ConfigPermissionEnum send_message_to_non_supervisor = 4 [json_name = "sendMessageToNonSupervisor"];</code>
+   * @return The sendMessageToNonSupervisor.
    */
-  com.tcn.cloud.api.api.commons.ConfigPermissionOptions getSendMessageToNonSupervisors();
+  com.tcn.cloud.api.api.commons.ConfigPermissionEnum getSendMessageToNonSupervisor();
 }

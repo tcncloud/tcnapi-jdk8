@@ -5,7 +5,7 @@ package com.tcn.cloud.api.api.commons;
 
 /**
  * <pre>
- * room confirmation options
+ * room confirmation settings
  * </pre>
  *
  * Protobuf type {@code api.commons.RoomConfig}
@@ -20,12 +20,12 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private RoomConfig() {
-    readMessages_ = "";
-    sendMessage_ = "";
-    addMember_ = "";
-    removeMember_ = "";
-    promoteToAdmin_ = "";
-    archive_ = "";
+    addUser_ = 0;
+    removeUser_ = 0;
+    promoteToAdmin_ = 0;
+    readMessages_ = 0;
+    sendMessage_ = 0;
+    archiveRoom_ = 0;
   }
 
   @java.lang.Override
@@ -48,238 +48,112 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.RoomConfig.class, com.tcn.cloud.api.api.commons.RoomConfig.Builder.class);
   }
 
-  public static final int READ_MESSAGES_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object readMessages_ = "";
+  public static final int ADD_USER_FIELD_NUMBER = 1;
+  private int addUser_ = 0;
   /**
-   * <code>string read_messages = 1 [json_name = "readMessages"];</code>
-   * @return The readMessages.
+   * <code>.api.commons.ConfigPermissionEnum add_user = 1 [json_name = "addUser"];</code>
+   * @return The enum numeric value on the wire for addUser.
    */
-  @java.lang.Override
-  public java.lang.String getReadMessages() {
-    java.lang.Object ref = readMessages_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      readMessages_ = s;
-      return s;
-    }
+  @java.lang.Override public int getAddUserValue() {
+    return addUser_;
   }
   /**
-   * <code>string read_messages = 1 [json_name = "readMessages"];</code>
-   * @return The bytes for readMessages.
+   * <code>.api.commons.ConfigPermissionEnum add_user = 1 [json_name = "addUser"];</code>
+   * @return The addUser.
    */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getReadMessagesBytes() {
-    java.lang.Object ref = readMessages_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      readMessages_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
+  @java.lang.Override public com.tcn.cloud.api.api.commons.ConfigPermissionEnum getAddUser() {
+    com.tcn.cloud.api.api.commons.ConfigPermissionEnum result = com.tcn.cloud.api.api.commons.ConfigPermissionEnum.forNumber(addUser_);
+    return result == null ? com.tcn.cloud.api.api.commons.ConfigPermissionEnum.UNRECOGNIZED : result;
   }
 
-  public static final int SEND_MESSAGE_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object sendMessage_ = "";
+  public static final int REMOVE_USER_FIELD_NUMBER = 2;
+  private int removeUser_ = 0;
   /**
-   * <code>string send_message = 2 [json_name = "sendMessage"];</code>
-   * @return The sendMessage.
+   * <code>.api.commons.ConfigPermissionEnum remove_user = 2 [json_name = "removeUser"];</code>
+   * @return The enum numeric value on the wire for removeUser.
    */
-  @java.lang.Override
-  public java.lang.String getSendMessage() {
-    java.lang.Object ref = sendMessage_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      sendMessage_ = s;
-      return s;
-    }
+  @java.lang.Override public int getRemoveUserValue() {
+    return removeUser_;
   }
   /**
-   * <code>string send_message = 2 [json_name = "sendMessage"];</code>
-   * @return The bytes for sendMessage.
+   * <code>.api.commons.ConfigPermissionEnum remove_user = 2 [json_name = "removeUser"];</code>
+   * @return The removeUser.
    */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getSendMessageBytes() {
-    java.lang.Object ref = sendMessage_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      sendMessage_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
+  @java.lang.Override public com.tcn.cloud.api.api.commons.ConfigPermissionEnum getRemoveUser() {
+    com.tcn.cloud.api.api.commons.ConfigPermissionEnum result = com.tcn.cloud.api.api.commons.ConfigPermissionEnum.forNumber(removeUser_);
+    return result == null ? com.tcn.cloud.api.api.commons.ConfigPermissionEnum.UNRECOGNIZED : result;
   }
 
-  public static final int ADD_MEMBER_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object addMember_ = "";
+  public static final int PROMOTE_TO_ADMIN_FIELD_NUMBER = 3;
+  private int promoteToAdmin_ = 0;
   /**
-   * <code>string add_member = 3 [json_name = "addMember"];</code>
-   * @return The addMember.
+   * <code>.api.commons.ConfigPermissionEnum promote_to_admin = 3 [json_name = "promoteToAdmin"];</code>
+   * @return The enum numeric value on the wire for promoteToAdmin.
    */
-  @java.lang.Override
-  public java.lang.String getAddMember() {
-    java.lang.Object ref = addMember_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      addMember_ = s;
-      return s;
-    }
+  @java.lang.Override public int getPromoteToAdminValue() {
+    return promoteToAdmin_;
   }
   /**
-   * <code>string add_member = 3 [json_name = "addMember"];</code>
-   * @return The bytes for addMember.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getAddMemberBytes() {
-    java.lang.Object ref = addMember_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      addMember_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int REMOVE_MEMBER_FIELD_NUMBER = 4;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object removeMember_ = "";
-  /**
-   * <code>string remove_member = 4 [json_name = "removeMember"];</code>
-   * @return The removeMember.
-   */
-  @java.lang.Override
-  public java.lang.String getRemoveMember() {
-    java.lang.Object ref = removeMember_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      removeMember_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string remove_member = 4 [json_name = "removeMember"];</code>
-   * @return The bytes for removeMember.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getRemoveMemberBytes() {
-    java.lang.Object ref = removeMember_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      removeMember_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int PROMOTE_TO_ADMIN_FIELD_NUMBER = 5;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object promoteToAdmin_ = "";
-  /**
-   * <code>string promote_to_admin = 5 [json_name = "promoteToAdmin"];</code>
+   * <code>.api.commons.ConfigPermissionEnum promote_to_admin = 3 [json_name = "promoteToAdmin"];</code>
    * @return The promoteToAdmin.
    */
-  @java.lang.Override
-  public java.lang.String getPromoteToAdmin() {
-    java.lang.Object ref = promoteToAdmin_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      promoteToAdmin_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string promote_to_admin = 5 [json_name = "promoteToAdmin"];</code>
-   * @return The bytes for promoteToAdmin.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getPromoteToAdminBytes() {
-    java.lang.Object ref = promoteToAdmin_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      promoteToAdmin_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
+  @java.lang.Override public com.tcn.cloud.api.api.commons.ConfigPermissionEnum getPromoteToAdmin() {
+    com.tcn.cloud.api.api.commons.ConfigPermissionEnum result = com.tcn.cloud.api.api.commons.ConfigPermissionEnum.forNumber(promoteToAdmin_);
+    return result == null ? com.tcn.cloud.api.api.commons.ConfigPermissionEnum.UNRECOGNIZED : result;
   }
 
-  public static final int ARCHIVE_FIELD_NUMBER = 6;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object archive_ = "";
+  public static final int READ_MESSAGES_FIELD_NUMBER = 4;
+  private int readMessages_ = 0;
   /**
-   * <code>string archive = 6 [json_name = "archive"];</code>
-   * @return The archive.
+   * <code>.api.commons.ConfigPermissionEnum read_messages = 4 [json_name = "readMessages"];</code>
+   * @return The enum numeric value on the wire for readMessages.
    */
-  @java.lang.Override
-  public java.lang.String getArchive() {
-    java.lang.Object ref = archive_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      archive_ = s;
-      return s;
-    }
+  @java.lang.Override public int getReadMessagesValue() {
+    return readMessages_;
   }
   /**
-   * <code>string archive = 6 [json_name = "archive"];</code>
-   * @return The bytes for archive.
+   * <code>.api.commons.ConfigPermissionEnum read_messages = 4 [json_name = "readMessages"];</code>
+   * @return The readMessages.
    */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getArchiveBytes() {
-    java.lang.Object ref = archive_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      archive_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
+  @java.lang.Override public com.tcn.cloud.api.api.commons.ConfigPermissionEnum getReadMessages() {
+    com.tcn.cloud.api.api.commons.ConfigPermissionEnum result = com.tcn.cloud.api.api.commons.ConfigPermissionEnum.forNumber(readMessages_);
+    return result == null ? com.tcn.cloud.api.api.commons.ConfigPermissionEnum.UNRECOGNIZED : result;
+  }
+
+  public static final int SEND_MESSAGE_FIELD_NUMBER = 5;
+  private int sendMessage_ = 0;
+  /**
+   * <code>.api.commons.ConfigPermissionEnum send_message = 5 [json_name = "sendMessage"];</code>
+   * @return The enum numeric value on the wire for sendMessage.
+   */
+  @java.lang.Override public int getSendMessageValue() {
+    return sendMessage_;
+  }
+  /**
+   * <code>.api.commons.ConfigPermissionEnum send_message = 5 [json_name = "sendMessage"];</code>
+   * @return The sendMessage.
+   */
+  @java.lang.Override public com.tcn.cloud.api.api.commons.ConfigPermissionEnum getSendMessage() {
+    com.tcn.cloud.api.api.commons.ConfigPermissionEnum result = com.tcn.cloud.api.api.commons.ConfigPermissionEnum.forNumber(sendMessage_);
+    return result == null ? com.tcn.cloud.api.api.commons.ConfigPermissionEnum.UNRECOGNIZED : result;
+  }
+
+  public static final int ARCHIVE_ROOM_FIELD_NUMBER = 6;
+  private int archiveRoom_ = 0;
+  /**
+   * <code>.api.commons.ConfigPermissionEnum archive_room = 6 [json_name = "archiveRoom"];</code>
+   * @return The enum numeric value on the wire for archiveRoom.
+   */
+  @java.lang.Override public int getArchiveRoomValue() {
+    return archiveRoom_;
+  }
+  /**
+   * <code>.api.commons.ConfigPermissionEnum archive_room = 6 [json_name = "archiveRoom"];</code>
+   * @return The archiveRoom.
+   */
+  @java.lang.Override public com.tcn.cloud.api.api.commons.ConfigPermissionEnum getArchiveRoom() {
+    com.tcn.cloud.api.api.commons.ConfigPermissionEnum result = com.tcn.cloud.api.api.commons.ConfigPermissionEnum.forNumber(archiveRoom_);
+    return result == null ? com.tcn.cloud.api.api.commons.ConfigPermissionEnum.UNRECOGNIZED : result;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -296,23 +170,23 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(readMessages_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, readMessages_);
+    if (addUser_ != com.tcn.cloud.api.api.commons.ConfigPermissionEnum.LIMITED.getNumber()) {
+      output.writeEnum(1, addUser_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sendMessage_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, sendMessage_);
+    if (removeUser_ != com.tcn.cloud.api.api.commons.ConfigPermissionEnum.LIMITED.getNumber()) {
+      output.writeEnum(2, removeUser_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(addMember_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, addMember_);
+    if (promoteToAdmin_ != com.tcn.cloud.api.api.commons.ConfigPermissionEnum.LIMITED.getNumber()) {
+      output.writeEnum(3, promoteToAdmin_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(removeMember_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, removeMember_);
+    if (readMessages_ != com.tcn.cloud.api.api.commons.ConfigPermissionEnum.LIMITED.getNumber()) {
+      output.writeEnum(4, readMessages_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(promoteToAdmin_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, promoteToAdmin_);
+    if (sendMessage_ != com.tcn.cloud.api.api.commons.ConfigPermissionEnum.LIMITED.getNumber()) {
+      output.writeEnum(5, sendMessage_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(archive_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 6, archive_);
+    if (archiveRoom_ != com.tcn.cloud.api.api.commons.ConfigPermissionEnum.LIMITED.getNumber()) {
+      output.writeEnum(6, archiveRoom_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -323,23 +197,29 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(readMessages_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, readMessages_);
+    if (addUser_ != com.tcn.cloud.api.api.commons.ConfigPermissionEnum.LIMITED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(1, addUser_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sendMessage_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, sendMessage_);
+    if (removeUser_ != com.tcn.cloud.api.api.commons.ConfigPermissionEnum.LIMITED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(2, removeUser_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(addMember_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, addMember_);
+    if (promoteToAdmin_ != com.tcn.cloud.api.api.commons.ConfigPermissionEnum.LIMITED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(3, promoteToAdmin_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(removeMember_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, removeMember_);
+    if (readMessages_ != com.tcn.cloud.api.api.commons.ConfigPermissionEnum.LIMITED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(4, readMessages_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(promoteToAdmin_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, promoteToAdmin_);
+    if (sendMessage_ != com.tcn.cloud.api.api.commons.ConfigPermissionEnum.LIMITED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(5, sendMessage_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(archive_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, archive_);
+    if (archiveRoom_ != com.tcn.cloud.api.api.commons.ConfigPermissionEnum.LIMITED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(6, archiveRoom_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -356,18 +236,12 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.commons.RoomConfig other = (com.tcn.cloud.api.api.commons.RoomConfig) obj;
 
-    if (!getReadMessages()
-        .equals(other.getReadMessages())) return false;
-    if (!getSendMessage()
-        .equals(other.getSendMessage())) return false;
-    if (!getAddMember()
-        .equals(other.getAddMember())) return false;
-    if (!getRemoveMember()
-        .equals(other.getRemoveMember())) return false;
-    if (!getPromoteToAdmin()
-        .equals(other.getPromoteToAdmin())) return false;
-    if (!getArchive()
-        .equals(other.getArchive())) return false;
+    if (addUser_ != other.addUser_) return false;
+    if (removeUser_ != other.removeUser_) return false;
+    if (promoteToAdmin_ != other.promoteToAdmin_) return false;
+    if (readMessages_ != other.readMessages_) return false;
+    if (sendMessage_ != other.sendMessage_) return false;
+    if (archiveRoom_ != other.archiveRoom_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -379,18 +253,18 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + READ_MESSAGES_FIELD_NUMBER;
-    hash = (53 * hash) + getReadMessages().hashCode();
-    hash = (37 * hash) + SEND_MESSAGE_FIELD_NUMBER;
-    hash = (53 * hash) + getSendMessage().hashCode();
-    hash = (37 * hash) + ADD_MEMBER_FIELD_NUMBER;
-    hash = (53 * hash) + getAddMember().hashCode();
-    hash = (37 * hash) + REMOVE_MEMBER_FIELD_NUMBER;
-    hash = (53 * hash) + getRemoveMember().hashCode();
+    hash = (37 * hash) + ADD_USER_FIELD_NUMBER;
+    hash = (53 * hash) + addUser_;
+    hash = (37 * hash) + REMOVE_USER_FIELD_NUMBER;
+    hash = (53 * hash) + removeUser_;
     hash = (37 * hash) + PROMOTE_TO_ADMIN_FIELD_NUMBER;
-    hash = (53 * hash) + getPromoteToAdmin().hashCode();
-    hash = (37 * hash) + ARCHIVE_FIELD_NUMBER;
-    hash = (53 * hash) + getArchive().hashCode();
+    hash = (53 * hash) + promoteToAdmin_;
+    hash = (37 * hash) + READ_MESSAGES_FIELD_NUMBER;
+    hash = (53 * hash) + readMessages_;
+    hash = (37 * hash) + SEND_MESSAGE_FIELD_NUMBER;
+    hash = (53 * hash) + sendMessage_;
+    hash = (37 * hash) + ARCHIVE_ROOM_FIELD_NUMBER;
+    hash = (53 * hash) + archiveRoom_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -490,7 +364,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * room confirmation options
+   * room confirmation settings
    * </pre>
    *
    * Protobuf type {@code api.commons.RoomConfig}
@@ -526,12 +400,12 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      readMessages_ = "";
-      sendMessage_ = "";
-      addMember_ = "";
-      removeMember_ = "";
-      promoteToAdmin_ = "";
-      archive_ = "";
+      addUser_ = 0;
+      removeUser_ = 0;
+      promoteToAdmin_ = 0;
+      readMessages_ = 0;
+      sendMessage_ = 0;
+      archiveRoom_ = 0;
       return this;
     }
 
@@ -566,22 +440,22 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.tcn.cloud.api.api.commons.RoomConfig result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.readMessages_ = readMessages_;
+        result.addUser_ = addUser_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.sendMessage_ = sendMessage_;
+        result.removeUser_ = removeUser_;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.addMember_ = addMember_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.removeMember_ = removeMember_;
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
         result.promoteToAdmin_ = promoteToAdmin_;
       }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.readMessages_ = readMessages_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.sendMessage_ = sendMessage_;
+      }
       if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.archive_ = archive_;
+        result.archiveRoom_ = archiveRoom_;
       }
     }
 
@@ -629,35 +503,23 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.commons.RoomConfig other) {
       if (other == com.tcn.cloud.api.api.commons.RoomConfig.getDefaultInstance()) return this;
-      if (!other.getReadMessages().isEmpty()) {
-        readMessages_ = other.readMessages_;
-        bitField0_ |= 0x00000001;
-        onChanged();
+      if (other.addUser_ != 0) {
+        setAddUserValue(other.getAddUserValue());
       }
-      if (!other.getSendMessage().isEmpty()) {
-        sendMessage_ = other.sendMessage_;
-        bitField0_ |= 0x00000002;
-        onChanged();
+      if (other.removeUser_ != 0) {
+        setRemoveUserValue(other.getRemoveUserValue());
       }
-      if (!other.getAddMember().isEmpty()) {
-        addMember_ = other.addMember_;
-        bitField0_ |= 0x00000004;
-        onChanged();
+      if (other.promoteToAdmin_ != 0) {
+        setPromoteToAdminValue(other.getPromoteToAdminValue());
       }
-      if (!other.getRemoveMember().isEmpty()) {
-        removeMember_ = other.removeMember_;
-        bitField0_ |= 0x00000008;
-        onChanged();
+      if (other.readMessages_ != 0) {
+        setReadMessagesValue(other.getReadMessagesValue());
       }
-      if (!other.getPromoteToAdmin().isEmpty()) {
-        promoteToAdmin_ = other.promoteToAdmin_;
-        bitField0_ |= 0x00000010;
-        onChanged();
+      if (other.sendMessage_ != 0) {
+        setSendMessageValue(other.getSendMessageValue());
       }
-      if (!other.getArchive().isEmpty()) {
-        archive_ = other.archive_;
-        bitField0_ |= 0x00000020;
-        onChanged();
+      if (other.archiveRoom_ != 0) {
+        setArchiveRoomValue(other.getArchiveRoomValue());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -685,36 +547,36 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 10: {
-              readMessages_ = input.readStringRequireUtf8();
+            case 8: {
+              addUser_ = input.readEnum();
               bitField0_ |= 0x00000001;
               break;
-            } // case 10
-            case 18: {
-              sendMessage_ = input.readStringRequireUtf8();
+            } // case 8
+            case 16: {
+              removeUser_ = input.readEnum();
               bitField0_ |= 0x00000002;
               break;
-            } // case 18
-            case 26: {
-              addMember_ = input.readStringRequireUtf8();
+            } // case 16
+            case 24: {
+              promoteToAdmin_ = input.readEnum();
               bitField0_ |= 0x00000004;
               break;
-            } // case 26
-            case 34: {
-              removeMember_ = input.readStringRequireUtf8();
+            } // case 24
+            case 32: {
+              readMessages_ = input.readEnum();
               bitField0_ |= 0x00000008;
               break;
-            } // case 34
-            case 42: {
-              promoteToAdmin_ = input.readStringRequireUtf8();
+            } // case 32
+            case 40: {
+              sendMessage_ = input.readEnum();
               bitField0_ |= 0x00000010;
               break;
-            } // case 42
-            case 50: {
-              archive_ = input.readStringRequireUtf8();
+            } // case 40
+            case 48: {
+              archiveRoom_ = input.readEnum();
               bitField0_ |= 0x00000020;
               break;
-            } // case 50
+            } // case 48
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -732,434 +594,320 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.lang.Object readMessages_ = "";
+    private int addUser_ = 0;
     /**
-     * <code>string read_messages = 1 [json_name = "readMessages"];</code>
-     * @return The readMessages.
+     * <code>.api.commons.ConfigPermissionEnum add_user = 1 [json_name = "addUser"];</code>
+     * @return The enum numeric value on the wire for addUser.
      */
-    public java.lang.String getReadMessages() {
-      java.lang.Object ref = readMessages_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        readMessages_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
+    @java.lang.Override public int getAddUserValue() {
+      return addUser_;
     }
     /**
-     * <code>string read_messages = 1 [json_name = "readMessages"];</code>
-     * @return The bytes for readMessages.
-     */
-    public com.google.protobuf.ByteString
-        getReadMessagesBytes() {
-      java.lang.Object ref = readMessages_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        readMessages_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string read_messages = 1 [json_name = "readMessages"];</code>
-     * @param value The readMessages to set.
+     * <code>.api.commons.ConfigPermissionEnum add_user = 1 [json_name = "addUser"];</code>
+     * @param value The enum numeric value on the wire for addUser to set.
      * @return This builder for chaining.
      */
-    public Builder setReadMessages(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      readMessages_ = value;
+    public Builder setAddUserValue(int value) {
+      addUser_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>string read_messages = 1 [json_name = "readMessages"];</code>
+     * <code>.api.commons.ConfigPermissionEnum add_user = 1 [json_name = "addUser"];</code>
+     * @return The addUser.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.ConfigPermissionEnum getAddUser() {
+      com.tcn.cloud.api.api.commons.ConfigPermissionEnum result = com.tcn.cloud.api.api.commons.ConfigPermissionEnum.forNumber(addUser_);
+      return result == null ? com.tcn.cloud.api.api.commons.ConfigPermissionEnum.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.api.commons.ConfigPermissionEnum add_user = 1 [json_name = "addUser"];</code>
+     * @param value The addUser to set.
      * @return This builder for chaining.
      */
-    public Builder clearReadMessages() {
-      readMessages_ = getDefaultInstance().getReadMessages();
+    public Builder setAddUser(com.tcn.cloud.api.api.commons.ConfigPermissionEnum value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000001;
+      addUser_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.ConfigPermissionEnum add_user = 1 [json_name = "addUser"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAddUser() {
       bitField0_ = (bitField0_ & ~0x00000001);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string read_messages = 1 [json_name = "readMessages"];</code>
-     * @param value The bytes for readMessages to set.
-     * @return This builder for chaining.
-     */
-    public Builder setReadMessagesBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      readMessages_ = value;
-      bitField0_ |= 0x00000001;
+      addUser_ = 0;
       onChanged();
       return this;
     }
 
-    private java.lang.Object sendMessage_ = "";
+    private int removeUser_ = 0;
     /**
-     * <code>string send_message = 2 [json_name = "sendMessage"];</code>
-     * @return The sendMessage.
+     * <code>.api.commons.ConfigPermissionEnum remove_user = 2 [json_name = "removeUser"];</code>
+     * @return The enum numeric value on the wire for removeUser.
      */
-    public java.lang.String getSendMessage() {
-      java.lang.Object ref = sendMessage_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        sendMessage_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
+    @java.lang.Override public int getRemoveUserValue() {
+      return removeUser_;
     }
     /**
-     * <code>string send_message = 2 [json_name = "sendMessage"];</code>
-     * @return The bytes for sendMessage.
-     */
-    public com.google.protobuf.ByteString
-        getSendMessageBytes() {
-      java.lang.Object ref = sendMessage_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        sendMessage_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string send_message = 2 [json_name = "sendMessage"];</code>
-     * @param value The sendMessage to set.
+     * <code>.api.commons.ConfigPermissionEnum remove_user = 2 [json_name = "removeUser"];</code>
+     * @param value The enum numeric value on the wire for removeUser to set.
      * @return This builder for chaining.
      */
-    public Builder setSendMessage(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      sendMessage_ = value;
+    public Builder setRemoveUserValue(int value) {
+      removeUser_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
-     * <code>string send_message = 2 [json_name = "sendMessage"];</code>
+     * <code>.api.commons.ConfigPermissionEnum remove_user = 2 [json_name = "removeUser"];</code>
+     * @return The removeUser.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.ConfigPermissionEnum getRemoveUser() {
+      com.tcn.cloud.api.api.commons.ConfigPermissionEnum result = com.tcn.cloud.api.api.commons.ConfigPermissionEnum.forNumber(removeUser_);
+      return result == null ? com.tcn.cloud.api.api.commons.ConfigPermissionEnum.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.api.commons.ConfigPermissionEnum remove_user = 2 [json_name = "removeUser"];</code>
+     * @param value The removeUser to set.
      * @return This builder for chaining.
      */
-    public Builder clearSendMessage() {
-      sendMessage_ = getDefaultInstance().getSendMessage();
+    public Builder setRemoveUser(com.tcn.cloud.api.api.commons.ConfigPermissionEnum value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000002;
+      removeUser_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.ConfigPermissionEnum remove_user = 2 [json_name = "removeUser"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearRemoveUser() {
       bitField0_ = (bitField0_ & ~0x00000002);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string send_message = 2 [json_name = "sendMessage"];</code>
-     * @param value The bytes for sendMessage to set.
-     * @return This builder for chaining.
-     */
-    public Builder setSendMessageBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      sendMessage_ = value;
-      bitField0_ |= 0x00000002;
+      removeUser_ = 0;
       onChanged();
       return this;
     }
 
-    private java.lang.Object addMember_ = "";
+    private int promoteToAdmin_ = 0;
     /**
-     * <code>string add_member = 3 [json_name = "addMember"];</code>
-     * @return The addMember.
+     * <code>.api.commons.ConfigPermissionEnum promote_to_admin = 3 [json_name = "promoteToAdmin"];</code>
+     * @return The enum numeric value on the wire for promoteToAdmin.
      */
-    public java.lang.String getAddMember() {
-      java.lang.Object ref = addMember_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        addMember_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
+    @java.lang.Override public int getPromoteToAdminValue() {
+      return promoteToAdmin_;
     }
     /**
-     * <code>string add_member = 3 [json_name = "addMember"];</code>
-     * @return The bytes for addMember.
-     */
-    public com.google.protobuf.ByteString
-        getAddMemberBytes() {
-      java.lang.Object ref = addMember_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        addMember_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string add_member = 3 [json_name = "addMember"];</code>
-     * @param value The addMember to set.
+     * <code>.api.commons.ConfigPermissionEnum promote_to_admin = 3 [json_name = "promoteToAdmin"];</code>
+     * @param value The enum numeric value on the wire for promoteToAdmin to set.
      * @return This builder for chaining.
      */
-    public Builder setAddMember(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      addMember_ = value;
+    public Builder setPromoteToAdminValue(int value) {
+      promoteToAdmin_ = value;
       bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
-     * <code>string add_member = 3 [json_name = "addMember"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearAddMember() {
-      addMember_ = getDefaultInstance().getAddMember();
-      bitField0_ = (bitField0_ & ~0x00000004);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string add_member = 3 [json_name = "addMember"];</code>
-     * @param value The bytes for addMember to set.
-     * @return This builder for chaining.
-     */
-    public Builder setAddMemberBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      addMember_ = value;
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-
-    private java.lang.Object removeMember_ = "";
-    /**
-     * <code>string remove_member = 4 [json_name = "removeMember"];</code>
-     * @return The removeMember.
-     */
-    public java.lang.String getRemoveMember() {
-      java.lang.Object ref = removeMember_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        removeMember_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string remove_member = 4 [json_name = "removeMember"];</code>
-     * @return The bytes for removeMember.
-     */
-    public com.google.protobuf.ByteString
-        getRemoveMemberBytes() {
-      java.lang.Object ref = removeMember_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        removeMember_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string remove_member = 4 [json_name = "removeMember"];</code>
-     * @param value The removeMember to set.
-     * @return This builder for chaining.
-     */
-    public Builder setRemoveMember(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      removeMember_ = value;
-      bitField0_ |= 0x00000008;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string remove_member = 4 [json_name = "removeMember"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearRemoveMember() {
-      removeMember_ = getDefaultInstance().getRemoveMember();
-      bitField0_ = (bitField0_ & ~0x00000008);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string remove_member = 4 [json_name = "removeMember"];</code>
-     * @param value The bytes for removeMember to set.
-     * @return This builder for chaining.
-     */
-    public Builder setRemoveMemberBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      removeMember_ = value;
-      bitField0_ |= 0x00000008;
-      onChanged();
-      return this;
-    }
-
-    private java.lang.Object promoteToAdmin_ = "";
-    /**
-     * <code>string promote_to_admin = 5 [json_name = "promoteToAdmin"];</code>
+     * <code>.api.commons.ConfigPermissionEnum promote_to_admin = 3 [json_name = "promoteToAdmin"];</code>
      * @return The promoteToAdmin.
      */
-    public java.lang.String getPromoteToAdmin() {
-      java.lang.Object ref = promoteToAdmin_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        promoteToAdmin_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.ConfigPermissionEnum getPromoteToAdmin() {
+      com.tcn.cloud.api.api.commons.ConfigPermissionEnum result = com.tcn.cloud.api.api.commons.ConfigPermissionEnum.forNumber(promoteToAdmin_);
+      return result == null ? com.tcn.cloud.api.api.commons.ConfigPermissionEnum.UNRECOGNIZED : result;
     }
     /**
-     * <code>string promote_to_admin = 5 [json_name = "promoteToAdmin"];</code>
-     * @return The bytes for promoteToAdmin.
-     */
-    public com.google.protobuf.ByteString
-        getPromoteToAdminBytes() {
-      java.lang.Object ref = promoteToAdmin_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        promoteToAdmin_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string promote_to_admin = 5 [json_name = "promoteToAdmin"];</code>
+     * <code>.api.commons.ConfigPermissionEnum promote_to_admin = 3 [json_name = "promoteToAdmin"];</code>
      * @param value The promoteToAdmin to set.
      * @return This builder for chaining.
      */
-    public Builder setPromoteToAdmin(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      promoteToAdmin_ = value;
-      bitField0_ |= 0x00000010;
+    public Builder setPromoteToAdmin(com.tcn.cloud.api.api.commons.ConfigPermissionEnum value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000004;
+      promoteToAdmin_ = value.getNumber();
       onChanged();
       return this;
     }
     /**
-     * <code>string promote_to_admin = 5 [json_name = "promoteToAdmin"];</code>
+     * <code>.api.commons.ConfigPermissionEnum promote_to_admin = 3 [json_name = "promoteToAdmin"];</code>
      * @return This builder for chaining.
      */
     public Builder clearPromoteToAdmin() {
-      promoteToAdmin_ = getDefaultInstance().getPromoteToAdmin();
-      bitField0_ = (bitField0_ & ~0x00000010);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string promote_to_admin = 5 [json_name = "promoteToAdmin"];</code>
-     * @param value The bytes for promoteToAdmin to set.
-     * @return This builder for chaining.
-     */
-    public Builder setPromoteToAdminBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      promoteToAdmin_ = value;
-      bitField0_ |= 0x00000010;
+      bitField0_ = (bitField0_ & ~0x00000004);
+      promoteToAdmin_ = 0;
       onChanged();
       return this;
     }
 
-    private java.lang.Object archive_ = "";
+    private int readMessages_ = 0;
     /**
-     * <code>string archive = 6 [json_name = "archive"];</code>
-     * @return The archive.
+     * <code>.api.commons.ConfigPermissionEnum read_messages = 4 [json_name = "readMessages"];</code>
+     * @return The enum numeric value on the wire for readMessages.
      */
-    public java.lang.String getArchive() {
-      java.lang.Object ref = archive_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        archive_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
+    @java.lang.Override public int getReadMessagesValue() {
+      return readMessages_;
     }
     /**
-     * <code>string archive = 6 [json_name = "archive"];</code>
-     * @return The bytes for archive.
-     */
-    public com.google.protobuf.ByteString
-        getArchiveBytes() {
-      java.lang.Object ref = archive_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        archive_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string archive = 6 [json_name = "archive"];</code>
-     * @param value The archive to set.
+     * <code>.api.commons.ConfigPermissionEnum read_messages = 4 [json_name = "readMessages"];</code>
+     * @param value The enum numeric value on the wire for readMessages to set.
      * @return This builder for chaining.
      */
-    public Builder setArchive(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      archive_ = value;
+    public Builder setReadMessagesValue(int value) {
+      readMessages_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.ConfigPermissionEnum read_messages = 4 [json_name = "readMessages"];</code>
+     * @return The readMessages.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.ConfigPermissionEnum getReadMessages() {
+      com.tcn.cloud.api.api.commons.ConfigPermissionEnum result = com.tcn.cloud.api.api.commons.ConfigPermissionEnum.forNumber(readMessages_);
+      return result == null ? com.tcn.cloud.api.api.commons.ConfigPermissionEnum.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.api.commons.ConfigPermissionEnum read_messages = 4 [json_name = "readMessages"];</code>
+     * @param value The readMessages to set.
+     * @return This builder for chaining.
+     */
+    public Builder setReadMessages(com.tcn.cloud.api.api.commons.ConfigPermissionEnum value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000008;
+      readMessages_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.ConfigPermissionEnum read_messages = 4 [json_name = "readMessages"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearReadMessages() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      readMessages_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int sendMessage_ = 0;
+    /**
+     * <code>.api.commons.ConfigPermissionEnum send_message = 5 [json_name = "sendMessage"];</code>
+     * @return The enum numeric value on the wire for sendMessage.
+     */
+    @java.lang.Override public int getSendMessageValue() {
+      return sendMessage_;
+    }
+    /**
+     * <code>.api.commons.ConfigPermissionEnum send_message = 5 [json_name = "sendMessage"];</code>
+     * @param value The enum numeric value on the wire for sendMessage to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSendMessageValue(int value) {
+      sendMessage_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.ConfigPermissionEnum send_message = 5 [json_name = "sendMessage"];</code>
+     * @return The sendMessage.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.ConfigPermissionEnum getSendMessage() {
+      com.tcn.cloud.api.api.commons.ConfigPermissionEnum result = com.tcn.cloud.api.api.commons.ConfigPermissionEnum.forNumber(sendMessage_);
+      return result == null ? com.tcn.cloud.api.api.commons.ConfigPermissionEnum.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.api.commons.ConfigPermissionEnum send_message = 5 [json_name = "sendMessage"];</code>
+     * @param value The sendMessage to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSendMessage(com.tcn.cloud.api.api.commons.ConfigPermissionEnum value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000010;
+      sendMessage_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.ConfigPermissionEnum send_message = 5 [json_name = "sendMessage"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearSendMessage() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      sendMessage_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int archiveRoom_ = 0;
+    /**
+     * <code>.api.commons.ConfigPermissionEnum archive_room = 6 [json_name = "archiveRoom"];</code>
+     * @return The enum numeric value on the wire for archiveRoom.
+     */
+    @java.lang.Override public int getArchiveRoomValue() {
+      return archiveRoom_;
+    }
+    /**
+     * <code>.api.commons.ConfigPermissionEnum archive_room = 6 [json_name = "archiveRoom"];</code>
+     * @param value The enum numeric value on the wire for archiveRoom to set.
+     * @return This builder for chaining.
+     */
+    public Builder setArchiveRoomValue(int value) {
+      archiveRoom_ = value;
       bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
     /**
-     * <code>string archive = 6 [json_name = "archive"];</code>
+     * <code>.api.commons.ConfigPermissionEnum archive_room = 6 [json_name = "archiveRoom"];</code>
+     * @return The archiveRoom.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.ConfigPermissionEnum getArchiveRoom() {
+      com.tcn.cloud.api.api.commons.ConfigPermissionEnum result = com.tcn.cloud.api.api.commons.ConfigPermissionEnum.forNumber(archiveRoom_);
+      return result == null ? com.tcn.cloud.api.api.commons.ConfigPermissionEnum.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.api.commons.ConfigPermissionEnum archive_room = 6 [json_name = "archiveRoom"];</code>
+     * @param value The archiveRoom to set.
      * @return This builder for chaining.
      */
-    public Builder clearArchive() {
-      archive_ = getDefaultInstance().getArchive();
+    public Builder setArchiveRoom(com.tcn.cloud.api.api.commons.ConfigPermissionEnum value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000020;
+      archiveRoom_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.ConfigPermissionEnum archive_room = 6 [json_name = "archiveRoom"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearArchiveRoom() {
       bitField0_ = (bitField0_ & ~0x00000020);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string archive = 6 [json_name = "archive"];</code>
-     * @param value The bytes for archive to set.
-     * @return This builder for chaining.
-     */
-    public Builder setArchiveBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      archive_ = value;
-      bitField0_ |= 0x00000020;
+      archiveRoom_ = 0;
       onChanged();
       return this;
     }
