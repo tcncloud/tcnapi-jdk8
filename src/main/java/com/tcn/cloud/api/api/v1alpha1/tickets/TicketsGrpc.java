@@ -824,6 +824,37 @@ public final class TicketsGrpc {
     return getCreateTicketTemplateMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.tickets.EditTicketTemplateRequest,
+      com.tcn.cloud.api.api.v1alpha1.tickets.EditTicketTemplateResponse> getEditTicketTemplateMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "EditTicketTemplate",
+      requestType = com.tcn.cloud.api.api.v1alpha1.tickets.EditTicketTemplateRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.tickets.EditTicketTemplateResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.tickets.EditTicketTemplateRequest,
+      com.tcn.cloud.api.api.v1alpha1.tickets.EditTicketTemplateResponse> getEditTicketTemplateMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.tickets.EditTicketTemplateRequest, com.tcn.cloud.api.api.v1alpha1.tickets.EditTicketTemplateResponse> getEditTicketTemplateMethod;
+    if ((getEditTicketTemplateMethod = TicketsGrpc.getEditTicketTemplateMethod) == null) {
+      synchronized (TicketsGrpc.class) {
+        if ((getEditTicketTemplateMethod = TicketsGrpc.getEditTicketTemplateMethod) == null) {
+          TicketsGrpc.getEditTicketTemplateMethod = getEditTicketTemplateMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.tickets.EditTicketTemplateRequest, com.tcn.cloud.api.api.v1alpha1.tickets.EditTicketTemplateResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "EditTicketTemplate"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.tickets.EditTicketTemplateRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.tickets.EditTicketTemplateResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new TicketsMethodDescriptorSupplier("EditTicketTemplate"))
+              .build();
+        }
+      }
+    }
+    return getEditTicketTemplateMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -1134,6 +1165,16 @@ public final class TicketsGrpc {
     default void createTicketTemplate(com.tcn.cloud.api.api.v1alpha1.tickets.CreateTicketTemplateRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.CreateTicketTemplateResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateTicketTemplateMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Public method to change the Status of a ticket
+     * </pre>
+     */
+    default void editTicketTemplate(com.tcn.cloud.api.api.v1alpha1.tickets.EditTicketTemplateRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.EditTicketTemplateResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEditTicketTemplateMethod(), responseObserver);
     }
   }
 
@@ -1456,6 +1497,17 @@ public final class TicketsGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateTicketTemplateMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Public method to change the Status of a ticket
+     * </pre>
+     */
+    public void editTicketTemplate(com.tcn.cloud.api.api.v1alpha1.tickets.EditTicketTemplateRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.EditTicketTemplateResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getEditTicketTemplateMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -1736,6 +1788,16 @@ public final class TicketsGrpc {
     public com.tcn.cloud.api.api.v1alpha1.tickets.CreateTicketTemplateResponse createTicketTemplate(com.tcn.cloud.api.api.v1alpha1.tickets.CreateTicketTemplateRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateTicketTemplateMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Public method to change the Status of a ticket
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.tickets.EditTicketTemplateResponse editTicketTemplate(com.tcn.cloud.api.api.v1alpha1.tickets.EditTicketTemplateRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getEditTicketTemplateMethod(), getCallOptions(), request);
     }
   }
 
@@ -2044,6 +2106,17 @@ public final class TicketsGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateTicketTemplateMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Public method to change the Status of a ticket
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.tickets.EditTicketTemplateResponse> editTicketTemplate(
+        com.tcn.cloud.api.api.v1alpha1.tickets.EditTicketTemplateRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getEditTicketTemplateMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE_TICKET = 0;
@@ -2072,6 +2145,7 @@ public final class TicketsGrpc {
   private static final int METHODID_CREATE_TICKET_ACTION = 23;
   private static final int METHODID_CHANGE_TICKET_STATUS = 24;
   private static final int METHODID_CREATE_TICKET_TEMPLATE = 25;
+  private static final int METHODID_EDIT_TICKET_TEMPLATE = 26;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -2193,6 +2267,10 @@ public final class TicketsGrpc {
         case METHODID_CREATE_TICKET_TEMPLATE:
           serviceImpl.createTicketTemplate((com.tcn.cloud.api.api.v1alpha1.tickets.CreateTicketTemplateRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.CreateTicketTemplateResponse>) responseObserver);
+          break;
+        case METHODID_EDIT_TICKET_TEMPLATE:
+          serviceImpl.editTicketTemplate((com.tcn.cloud.api.api.v1alpha1.tickets.EditTicketTemplateRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.EditTicketTemplateResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -2394,6 +2472,13 @@ public final class TicketsGrpc {
               com.tcn.cloud.api.api.v1alpha1.tickets.CreateTicketTemplateRequest,
               com.tcn.cloud.api.api.v1alpha1.tickets.CreateTicketTemplateResponse>(
                 service, METHODID_CREATE_TICKET_TEMPLATE)))
+        .addMethod(
+          getEditTicketTemplateMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.tickets.EditTicketTemplateRequest,
+              com.tcn.cloud.api.api.v1alpha1.tickets.EditTicketTemplateResponse>(
+                service, METHODID_EDIT_TICKET_TEMPLATE)))
         .build();
   }
 
@@ -2468,6 +2553,7 @@ public final class TicketsGrpc {
               .addMethod(getCreateTicketActionMethod())
               .addMethod(getChangeTicketStatusMethod())
               .addMethod(getCreateTicketTemplateMethod())
+              .addMethod(getEditTicketTemplateMethod())
               .build();
         }
       }
