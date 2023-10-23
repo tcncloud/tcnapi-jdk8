@@ -2646,1565 +2646,1564 @@ public final class WfmProto {
       "udePlacementRules\"g\n\033ListShiftTemplatesB" +
       "ySidsRes\022H\n\017shift_templates\030\001 \003(\0132\037.api." +
       "v1alpha1.wfm.ShiftTemplateR\016shiftTemplat" +
-      "es\"\273\001\n BuildShiftTemplateDiagnosticsReq\022" +
+      "es\"\204\001\n BuildShiftTemplateDiagnosticsReq\022" +
       ",\n\022shift_template_sid\030\001 \001(\003R\020shiftTempla" +
       "teSid\0222\n\025schedule_scenario_sid\030\002 \001(\003R\023sc" +
-      "heduleScenarioSid\0225\n\027parent_program_node" +
-      "_sid\030\003 \001(\003R\024parentProgramNodeSid\"b\n Buil" +
-      "dShiftTemplateDiagnosticsRes\022>\n\013diagnost" +
-      "ics\030\001 \003(\0132\034.api.v1alpha1.wfm.DiagnosticR" +
-      "\013diagnostics\"\306\003\n\rPlacementRule\022,\n\022placem" +
-      "ent_rule_sid\030\001 \001(\003R\020placementRuleSid\022,\n\022" +
-      "shift_template_sid\030\002 \001(\003R\020shiftTemplateS" +
-      "id\022%\n\016activity_order\030\003 \001(\005R\ractivityOrde" +
-      "r\0220\n\024min_duration_minutes\030\004 \001(\005R\022minDura" +
-      "tionMinutes\0220\n\024max_duration_minutes\030\005 \001(" +
-      "\005R\022maxDurationMinutes\0226\n\027scheduling_acti" +
-      "vity_sid\030\006 \001(\003R\025schedulingActivitySid\0222\n" +
-      "\025schedule_scenario_sid\030\007 \001(\003R\023scheduleSc" +
-      "enarioSid\022b\n\032member_scheduling_activity\030",
-      "\010 \001(\0132$.api.v1alpha1.wfm.SchedulingActiv" +
-      "ityR\030memberSchedulingActivity\"`\n\026CreateP" +
-      "lacementRuleReq\022F\n\016placement_rule\030\001 \001(\0132" +
-      "\037.api.v1alpha1.wfm.PlacementRuleR\rplacem" +
-      "entRule\"F\n\026CreatePlacementRuleRes\022,\n\022pla" +
-      "cement_rule_sid\030\001 \001(\003R\020placementRuleSid\"" +
-      "`\n\026UpdatePlacementRuleReq\022F\n\016placement_r" +
-      "ule\030\001 \001(\0132\037.api.v1alpha1.wfm.PlacementRu" +
-      "leR\rplacementRule\"\030\n\026UpdatePlacementRule" +
-      "Res\"F\n\026DeletePlacementRuleReq\022,\n\022placeme" +
-      "nt_rule_sid\030\001 \001(\003R\020placementRuleSid\"\030\n\026D" +
-      "eletePlacementRuleRes\"\245\005\n\017DatetimePatter" +
-      "n\022F\n\tweek_maps\030\001 \003(\0132).api.v1alpha1.wfm." +
-      "DatetimePattern.WeekMapR\010weekMaps\022U\n\016cal" +
-      "endar_items\030\002 \003(\0132..api.v1alpha1.wfm.Dat" +
-      "etimePattern.CalendarItemR\rcalendarItems" +
-      "\032\356\002\n\007WeekMap\022A\n\016datetime_range\030\001 \001(\0132\032.a" +
-      "pi.commons.DatetimeRangeR\rdatetimeRange\022" +
-      "O\n\010day_maps\030\002 \003(\01324.api.v1alpha1.wfm.Dat" +
-      "etimePattern.WeekMap.WeekMapDOWR\007dayMaps" +
-      "\032\316\001\n\nWeekMapDOW\0226\n\013day_of_week\030\001 \001(\0162\026.a" +
-      "pi.commons.DayOfWeekR\tdayOfWeek\022-\n\023start" +
-      "_minute_in_day\030\002 \001(\005R\020startMinuteInDay\022)" +
-      "\n\021end_minute_in_day\030\003 \001(\005R\016endMinuteInDa" +
-      "y\022.\n\005value\030\004 \001(\0132\030.api.commons.OptionTyp" +
-      "esR\005value\032\201\001\n\014CalendarItem\022A\n\016datetime_r" +
-      "ange\030\001 \001(\0132\032.api.commons.DatetimeRangeR\r" +
-      "datetimeRange\022.\n\005value\030\002 \001(\0132\030.api.commo" +
-      "ns.OptionTypesR\005value\"\216\002\n\020OpenTimesPatte" +
-      "rn\0223\n\026open_times_pattern_sid\030\001 \001(\003R\023open" +
-      "TimesPatternSid\022C\n\rparent_entity\030\002 \001(\0132\036" +
-      ".api.v1alpha1.wfm.ParentEntityR\014parentEn" +
-      "tity\022L\n\020datetime_pattern\030\003 \001(\0132!.api.v1a" +
-      "lpha1.wfm.DatetimePatternR\017datetimePatte" +
-      "rn\0222\n\025schedule_scenario_sid\030\004 \001(\003R\023sched" +
-      "uleScenarioSid\"m\n\031CreateOpenTimesPattern" +
-      "Req\022P\n\022open_times_pattern\030\001 \001(\0132\".api.v1" +
-      "alpha1.wfm.OpenTimesPatternR\020openTimesPa" +
-      "ttern\"P\n\031CreateOpenTimesPatternRes\0223\n\026op" +
-      "en_times_pattern_sid\030\001 \001(\003R\023openTimesPat" +
-      "ternSid\"m\n\031UpdateOpenTimesPatternReq\022P\n\022" +
-      "open_times_pattern\030\001 \001(\0132\".api.v1alpha1." +
-      "wfm.OpenTimesPatternR\020openTimesPattern\"\033" +
-      "\n\031UpdateOpenTimesPatternRes\"P\n\031DeleteOpe" +
-      "nTimesPatternReq\0223\n\026open_times_pattern_s" +
-      "id\030\001 \001(\003R\023openTimesPatternSid\"\033\n\031DeleteO" +
-      "penTimesPatternRes\"\270\002\n\026GetOpenTimesBitma" +
-      "psReq\022B\n\rnode_to_check\030\001 \001(\0132\036.api.v1alp" +
-      "ha1.wfm.ParentEntityR\013nodeToCheck\0222\n\025sch" +
-      "edule_scenario_sid\030\002 \001(\003R\023scheduleScenar" +
-      "ioSid\022)\n\020include_inactive\030\003 \001(\010R\017include" +
-      "Inactive\022A\n\016datetime_range\030\004 \001(\0132\032.api.c" +
-      "ommons.DatetimeRangeR\rdatetimeRange\0228\n\013b" +
-      "itmap_type\030\005 \001(\0162\027.api.commons.BitmapTyp" +
-      "eR\nbitmapType\"\347\001\n\026GetOpenTimesBitmapsRes" +
-      "\022G\n\020inherited_bitmap\030\001 \003(\0162\034.api.commons" +
-      ".OpenTimesOptionR\017inheritedBitmap\022;\n\nown" +
-      "_bitmap\030\002 \003(\0162\034.api.commons.OpenTimesOpt" +
-      "ionR\townBitmap\022G\n\020resulting_bitmap\030\003 \003(\016" +
-      "2\034.api.commons.OpenTimesOptionR\017resultin" +
-      "gBitmap\"\246\002\n\030AgentAvailabilityPattern\022C\n\036" +
-      "agent_availability_pattern_sid\030\001 \001(\003R\033ag" +
-      "entAvailabilityPatternSid\022C\n\rparent_enti" +
-      "ty\030\002 \001(\0132\036.api.v1alpha1.wfm.ParentEntity" +
-      "R\014parentEntity\022L\n\020datetime_pattern\030\003 \001(\013" +
-      "2!.api.v1alpha1.wfm.DatetimePatternR\017dat" +
-      "etimePattern\0222\n\025schedule_scenario_sid\030\004 " +
-      "\001(\003R\023scheduleScenarioSid\"\215\001\n!CreateAgent" +
-      "AvailabilityPatternReq\022h\n\032agent_availabi" +
-      "lity_pattern\030\001 \001(\0132*.api.v1alpha1.wfm.Ag" +
-      "entAvailabilityPatternR\030agentAvailabilit" +
-      "yPattern\"h\n!CreateAgentAvailabilityPatte" +
-      "rnRes\022C\n\036agent_availability_pattern_sid\030" +
-      "\001 \001(\003R\033agentAvailabilityPatternSid\"\215\001\n!U" +
-      "pdateAgentAvailabilityPatternReq\022h\n\032agen" +
-      "t_availability_pattern\030\001 \001(\0132*.api.v1alp" +
-      "ha1.wfm.AgentAvailabilityPatternR\030agentA" +
-      "vailabilityPattern\"#\n!UpdateAgentAvailab" +
-      "ilityPatternRes\"h\n!DeleteAgentAvailabili" +
-      "tyPatternReq\022C\n\036agent_availability_patte" +
-      "rn_sid\030\001 \001(\003R\033agentAvailabilityPatternSi" +
-      "d\"#\n!DeleteAgentAvailabilityPatternRes\"\264" +
-      "\002\n\025AvailabilityBitmapSet\022>\n\nown_bitmap\030\001" +
-      " \003(\0162\037.api.commons.AvailabilityOptionR\to" +
-      "wnBitmap\022J\n\020inherited_bitmap\030\002 \003(\0162\037.api" +
-      ".commons.AvailabilityOptionR\017inheritedBi" +
-      "tmap\022J\n\020resulting_bitmap\030\003 \003(\0162\037.api.com" +
-      "mons.AvailabilityOptionR\017resultingBitmap" +
-      "\022C\n\rparent_entity\030\004 \001(\0132\036.api.v1alpha1.w" +
-      "fm.ParentEntityR\014parentEntity\"\303\002\n\031GetAva" +
-      "ilabilityBitmapsReq\022J\n\021entities_to_check" +
-      "\030\001 \003(\0132\036.api.v1alpha1.wfm.ParentEntityR\017" +
-      "entitiesToCheck\0222\n\025schedule_scenario_sid" +
-      "\030\002 \001(\003R\023scheduleScenarioSid\022)\n\020include_i" +
-      "nactive\030\003 \001(\010R\017includeInactive\022A\n\016dateti" +
-      "me_range\030\004 \001(\0132\032.api.commons.DatetimeRan" +
-      "geR\rdatetimeRange\0228\n\013bitmap_type\030\005 \001(\0162\027" +
-      ".api.commons.BitmapTypeR\nbitmapType\"^\n\031G" +
-      "etAvailabilityBitmapsRes\022A\n\007bitmaps\030\001 \003(" +
-      "\0132\'.api.v1alpha1.wfm.AvailabilityBitmapS" +
-      "etR\007bitmaps\"\223\002\n$UpsertNonSkillActivityAs" +
-      "sociationReq\0223\n\026non_skill_activity_sid\030\001" +
-      " \001(\003R\023nonSkillActivitySid\0222\n\004node\030\002 \001(\0132" +
-      "\036.api.v1alpha1.wfm.ParentEntityR\004node\022N\n" +
-      "\020association_type\030\003 \001(\0162#.api.commons.Co" +
-      "nfigRelationshipTypeR\017associationType\0222\n" +
+      "heduleScenarioSid\"b\n BuildShiftTemplateD" +
+      "iagnosticsRes\022>\n\013diagnostics\030\001 \003(\0132\034.api" +
+      ".v1alpha1.wfm.DiagnosticR\013diagnostics\"\306\003" +
+      "\n\rPlacementRule\022,\n\022placement_rule_sid\030\001 " +
+      "\001(\003R\020placementRuleSid\022,\n\022shift_template_" +
+      "sid\030\002 \001(\003R\020shiftTemplateSid\022%\n\016activity_" +
+      "order\030\003 \001(\005R\ractivityOrder\0220\n\024min_durati" +
+      "on_minutes\030\004 \001(\005R\022minDurationMinutes\0220\n\024" +
+      "max_duration_minutes\030\005 \001(\005R\022maxDurationM" +
+      "inutes\0226\n\027scheduling_activity_sid\030\006 \001(\003R" +
+      "\025schedulingActivitySid\0222\n\025schedule_scena" +
+      "rio_sid\030\007 \001(\003R\023scheduleScenarioSid\022b\n\032me" +
+      "mber_scheduling_activity\030\010 \001(\0132$.api.v1a" +
+      "lpha1.wfm.SchedulingActivityR\030memberSche",
+      "dulingActivity\"`\n\026CreatePlacementRuleReq" +
+      "\022F\n\016placement_rule\030\001 \001(\0132\037.api.v1alpha1." +
+      "wfm.PlacementRuleR\rplacementRule\"F\n\026Crea" +
+      "tePlacementRuleRes\022,\n\022placement_rule_sid" +
+      "\030\001 \001(\003R\020placementRuleSid\"`\n\026UpdatePlacem" +
+      "entRuleReq\022F\n\016placement_rule\030\001 \001(\0132\037.api" +
+      ".v1alpha1.wfm.PlacementRuleR\rplacementRu" +
+      "le\"\030\n\026UpdatePlacementRuleRes\"F\n\026DeletePl" +
+      "acementRuleReq\022,\n\022placement_rule_sid\030\001 \001" +
+      "(\003R\020placementRuleSid\"\030\n\026DeletePlacementR" +
+      "uleRes\"\245\005\n\017DatetimePattern\022F\n\tweek_maps\030" +
+      "\001 \003(\0132).api.v1alpha1.wfm.DatetimePattern" +
+      ".WeekMapR\010weekMaps\022U\n\016calendar_items\030\002 \003" +
+      "(\0132..api.v1alpha1.wfm.DatetimePattern.Ca" +
+      "lendarItemR\rcalendarItems\032\356\002\n\007WeekMap\022A\n" +
+      "\016datetime_range\030\001 \001(\0132\032.api.commons.Date" +
+      "timeRangeR\rdatetimeRange\022O\n\010day_maps\030\002 \003" +
+      "(\01324.api.v1alpha1.wfm.DatetimePattern.We" +
+      "ekMap.WeekMapDOWR\007dayMaps\032\316\001\n\nWeekMapDOW" +
+      "\0226\n\013day_of_week\030\001 \001(\0162\026.api.commons.DayO" +
+      "fWeekR\tdayOfWeek\022-\n\023start_minute_in_day\030" +
+      "\002 \001(\005R\020startMinuteInDay\022)\n\021end_minute_in" +
+      "_day\030\003 \001(\005R\016endMinuteInDay\022.\n\005value\030\004 \001(" +
+      "\0132\030.api.commons.OptionTypesR\005value\032\201\001\n\014C" +
+      "alendarItem\022A\n\016datetime_range\030\001 \001(\0132\032.ap" +
+      "i.commons.DatetimeRangeR\rdatetimeRange\022." +
+      "\n\005value\030\002 \001(\0132\030.api.commons.OptionTypesR" +
+      "\005value\"\216\002\n\020OpenTimesPattern\0223\n\026open_time" +
+      "s_pattern_sid\030\001 \001(\003R\023openTimesPatternSid" +
+      "\022C\n\rparent_entity\030\002 \001(\0132\036.api.v1alpha1.w" +
+      "fm.ParentEntityR\014parentEntity\022L\n\020datetim" +
+      "e_pattern\030\003 \001(\0132!.api.v1alpha1.wfm.Datet" +
+      "imePatternR\017datetimePattern\0222\n\025schedule_" +
+      "scenario_sid\030\004 \001(\003R\023scheduleScenarioSid\"" +
+      "m\n\031CreateOpenTimesPatternReq\022P\n\022open_tim" +
+      "es_pattern\030\001 \001(\0132\".api.v1alpha1.wfm.Open" +
+      "TimesPatternR\020openTimesPattern\"P\n\031Create" +
+      "OpenTimesPatternRes\0223\n\026open_times_patter" +
+      "n_sid\030\001 \001(\003R\023openTimesPatternSid\"m\n\031Upda" +
+      "teOpenTimesPatternReq\022P\n\022open_times_patt" +
+      "ern\030\001 \001(\0132\".api.v1alpha1.wfm.OpenTimesPa" +
+      "tternR\020openTimesPattern\"\033\n\031UpdateOpenTim" +
+      "esPatternRes\"P\n\031DeleteOpenTimesPatternRe" +
+      "q\0223\n\026open_times_pattern_sid\030\001 \001(\003R\023openT" +
+      "imesPatternSid\"\033\n\031DeleteOpenTimesPattern" +
+      "Res\"\270\002\n\026GetOpenTimesBitmapsReq\022B\n\rnode_t" +
+      "o_check\030\001 \001(\0132\036.api.v1alpha1.wfm.ParentE" +
+      "ntityR\013nodeToCheck\0222\n\025schedule_scenario_" +
+      "sid\030\002 \001(\003R\023scheduleScenarioSid\022)\n\020includ" +
+      "e_inactive\030\003 \001(\010R\017includeInactive\022A\n\016dat" +
+      "etime_range\030\004 \001(\0132\032.api.commons.Datetime" +
+      "RangeR\rdatetimeRange\0228\n\013bitmap_type\030\005 \001(" +
+      "\0162\027.api.commons.BitmapTypeR\nbitmapType\"\347" +
+      "\001\n\026GetOpenTimesBitmapsRes\022G\n\020inherited_b" +
+      "itmap\030\001 \003(\0162\034.api.commons.OpenTimesOptio" +
+      "nR\017inheritedBitmap\022;\n\nown_bitmap\030\002 \003(\0162\034" +
+      ".api.commons.OpenTimesOptionR\townBitmap\022" +
+      "G\n\020resulting_bitmap\030\003 \003(\0162\034.api.commons." +
+      "OpenTimesOptionR\017resultingBitmap\"\246\002\n\030Age" +
+      "ntAvailabilityPattern\022C\n\036agent_availabil" +
+      "ity_pattern_sid\030\001 \001(\003R\033agentAvailability" +
+      "PatternSid\022C\n\rparent_entity\030\002 \001(\0132\036.api." +
+      "v1alpha1.wfm.ParentEntityR\014parentEntity\022" +
+      "L\n\020datetime_pattern\030\003 \001(\0132!.api.v1alpha1" +
+      ".wfm.DatetimePatternR\017datetimePattern\0222\n" +
       "\025schedule_scenario_sid\030\004 \001(\003R\023scheduleSc" +
-      "enarioSid\"\246\003\n$UpsertNonSkillActivityAsso" +
-      "ciationRes\022)\n\020upsert_succeeded\030\001 \001(\010R\017up" +
-      "sertSucceeded\022E\n\016nodes_affected\030\002 \003(\0132\036." +
-      "api.v1alpha1.wfm.ParentEntityR\rnodesAffe" +
-      "cted\022v\n\024rules_using_activity\030\003 \003(\0132D.api" +
-      ".v1alpha1.wfm.UpsertNonSkillActivityAsso" +
-      "ciationRes.EntityMappingR\022rulesUsingActi" +
-      "vity\032\223\001\n\rEntityMapping\022?\n\013left_entity\030\001 " +
-      "\001(\0132\036.api.v1alpha1.wfm.ParentEntityR\nlef" +
-      "tEntity\022A\n\014right_entity\030\002 \001(\0132\036.api.v1al" +
-      "pha1.wfm.ParentEntityR\013rightEntity\"\322\003\n\020S" +
-      "killProficiency\0222\n\025skill_proficiency_sid" +
-      "\030\001 \001(\003R\023skillProficiencySid\022\033\n\tskill_sid" +
-      "\030\002 \001(\003R\010skillSid\022Z\n\033preferred_skill_prof" +
-      "ile_sid\030\003 \001(\0132\033.google.protobuf.Int64Val" +
-      "ueR\030preferredSkillProfileSid\0228\n\030manual_p" +
-      "roficiency_value\030\004 \001(\005R\026manualProficienc" +
-      "yValue\022C\n\rparent_entity\030\005 \001(\0132\036.api.v1al" +
-      "pha1.wfm.ParentEntityR\014parentEntity\022\035\n\ns" +
-      "kill_name\030\007 \001(\tR\tskillName\022,\n\022skill_prof" +
-      "ile_name\030\010 \001(\tR\020skillProfileName\022E\n\037skil" +
-      "l_profile_proficiency_value\030\t \001(\005R\034skill" +
-      "ProfileProficiencyValue\"\233\001\n\033CreateSkillP" +
-      "roficienciesReq\022H\n\rproficiencies\030\001 \003(\0132\"" +
-      ".api.v1alpha1.wfm.SkillProficiencyR\rprof" +
-      "iciencies\0222\n\025schedule_scenario_sid\030\002 \001(\003" +
-      "R\023scheduleScenarioSid\"\035\n\033CreateSkillProf" +
-      "icienciesRes\"r\n\033UpdateSkillProficiencies" +
-      "Req\022S\n\023skill_proficiencies\030\001 \003(\0132\".api.v" +
-      "1alpha1.wfm.SkillProficiencyR\022skillProfi" +
-      "ciencies\"\035\n\033UpdateSkillProficienciesRes\"" +
-      "O\n\031DeleteSkillProficiencyReq\0222\n\025skill_pr" +
-      "oficiency_sid\030\001 \001(\003R\023skillProficiencySid" +
-      "\"\033\n\031DeleteSkillProficiencyRes\"\234\004\n\020Schedu" +
-      "leScenario\0222\n\025schedule_scenario_sid\030\001 \001(" +
-      "\003R\023scheduleScenarioSid\022\022\n\004name\030\002 \001(\tR\004na" +
-      "me\022 \n\013description\030\003 \001(\tR\013description\022G\n\021" +
-      "creation_datetime\030\004 \001(\0132\032.google.protobu" +
-      "f.TimestampR\020creationDatetime\022+\n\022created" +
-      "_by_user_id\030\005 \001(\tR\017createdByUserId\022\035\n\nis" +
-      "_default\030\006 \001(\010R\tisDefault\022T\n\030copied_from" +
-      "_scenario_sid\030\007 \001(\0132\033.google.protobuf.In" +
-      "t64ValueR\025copiedFromScenarioSid\022A\n\016sched" +
-      "ule_range\030\010 \001(\0132\032.api.commons.DatetimeRa" +
-      "ngeR\rscheduleRange\022S\n\030datetime_set_to_in" +
-      "active\030\t \001(\0132\032.google.protobuf.Timestamp" +
-      "R\025datetimeSetToInactive\022\033\n\tis_active\030\n \001" +
-      "(\010R\010isActive\"\346\001\n\017CopyScenarioReq\022/\n\024scen" +
-      "ario_sid_to_copy\030\001 \001(\003R\021scenarioSidToCop" +
-      "y\022)\n\020include_inactive\030\002 \001(\010R\017includeInac" +
-      "tive\022\022\n\004name\030\003 \001(\tR\004name\022 \n\013description\030" +
-      "\004 \001(\tR\013description\022A\n\016schedule_range\030\005 \001" +
-      "(\0132\032.api.commons.DatetimeRangeR\rschedule" +
-      "Range\"E\n\017CopyScenarioRes\0222\n\025schedule_sce" +
-      "nario_sid\030\001 \001(\003R\023scheduleScenarioSid\"\257\005\n" +
-      "\"CreateScheduleScenarioWithNodesReq\022O\n\021s" +
-      "chedule_scenario\030\001 \001(\0132\".api.v1alpha1.wf" +
-      "m.ScheduleScenarioR\020scheduleScenario\0221\n\025" +
-      "call_center_node_name\030\002 \001(\tR\022callCenterN" +
-      "odeName\022?\n\034call_center_node_description\030" +
-      "\003 \001(\tR\031callCenterNodeDescription\022(\n\020clie" +
-      "nt_node_name\030\004 \001(\tR\016clientNodeName\0226\n\027cl" +
-      "ient_node_description\030\005 \001(\tR\025clientNodeD" +
-      "escription\022,\n\022location_node_name\030\006 \001(\tR\020" +
-      "locationNodeName\022:\n\031location_node_descri" +
-      "ption\030\007 \001(\tR\027locationNodeDescription\022*\n\021" +
-      "program_node_name\030\010 \001(\tR\017programNodeName" +
-      "\0228\n\030program_node_description\030\t \001(\tR\026prog" +
-      "ramNodeDescription\0229\n\rtime_zone_val\030\n \001(" +
-      "\0162\025.api.commons.TimeZoneR\013timeZoneVal\022W\n" +
-      "\026skill_profile_category\030\013 \001(\0132!.api.comm" +
-      "ons.SkillProfileCategoryR\024skillProfileCa" +
-      "tegory\"X\n\"CreateScheduleScenarioWithNode" +
-      "sRes\0222\n\025schedule_scenario_sid\030\001 \001(\003R\023sch" +
-      "eduleScenarioSid\"k\n\031UpdateScheduleScenar" +
-      "ioReq\022N\n\020scheduleScenario\030\001 \001(\0132\".api.v1" +
-      "alpha1.wfm.ScheduleScenarioR\020scheduleSce" +
-      "nario\"\033\n\031UpdateScheduleScenarioRes\"\245\002\n\025L" +
-      "istConfigEntitiesReq\022>\n\013entity_type\030\001 \001(" +
-      "\0162\035.api.commons.ConfigEntityTypeR\nentity" +
-      "Type\022J\n\021belongs_to_entity\030\002 \001(\0132\036.api.v1" +
-      "alpha1.wfm.ParentEntityR\017belongsToEntity" +
-      "\022)\n\020include_inactive\030\003 \001(\010R\017includeInact" +
-      "ive\022!\n\014member_depth\030\004 \001(\005R\013memberDepth\0222" +
-      "\n\025schedule_scenario_sid\030\005 \001(\003R\023scheduleS" +
-      "cenarioSid\"\304\025\n\025ListConfigEntitiesRes\022L\n\020" +
-      "call_center_node\030\001 \001(\0132 .api.v1alpha1.wf" +
-      "m.CallCenterNodeH\000R\016callCenterNode\022_\n\014cl" +
-      "ient_nodes\030\002 \001(\0132:.api.v1alpha1.wfm.List" +
-      "ConfigEntitiesRes.ClientNodeEntitiesH\000R\013" +
-      "clientNodes\022e\n\016location_nodes\030\003 \001(\0132<.ap" +
-      "i.v1alpha1.wfm.ListConfigEntitiesRes.Loc" +
-      "ationNodeEntitiesH\000R\rlocationNodes\022b\n\rpr" +
-      "ogram_nodes\030\004 \001(\0132;.api.v1alpha1.wfm.Lis" +
-      "tConfigEntitiesRes.ProgramNodeEntitiesH\000" +
-      "R\014programNodes\022_\n\014agent_groups\030\005 \001(\0132:.a" +
-      "pi.v1alpha1.wfm.ListConfigEntitiesRes.Ag" +
-      "entGroupEntitiesH\000R\013agentGroups\022h\n\017shift" +
-      "_templates\030\006 \001(\0132=.api.v1alpha1.wfm.List" +
-      "ConfigEntitiesRes.ShiftTemplateEntitiesH" +
-      "\000R\016shiftTemplates\022Y\n\nwfm_agents\030\007 \001(\01328." +
-      "api.v1alpha1.wfm.ListConfigEntitiesRes.W" +
-      "FMAgentEntitiesH\000R\twfmAgents\022h\n\017placemen" +
-      "t_rules\030\010 \001(\0132=.api.v1alpha1.wfm.ListCon" +
-      "figEntitiesRes.PlacementRuleEntitiesH\000R\016" +
-      "placementRules\022k\n\020constraint_rules\030\t \001(\013" +
-      "2>.api.v1alpha1.wfm.ListConfigEntitiesRe" +
-      "s.ConstraintRuleEntitiesH\000R\017constraintRu" +
-      "les\022t\n\024non_skill_activities\030\n \001(\0132@.api." +
-      "v1alpha1.wfm.ListConfigEntitiesRes.NonSk" +
-      "illActivityEntitiesH\000R\022nonSkillActivitie" +
-      "s\022\212\001\n\033agent_availability_patterns\030\013 \001(\0132" +
-      "H.api.v1alpha1.wfm.ListConfigEntitiesRes" +
-      ".AgentAvailabilityPatternEntitiesH\000R\031age" +
-      "ntAvailabilityPatterns\022r\n\023open_times_pat" +
-      "terns\030\014 \001(\0132@.api.v1alpha1.wfm.ListConfi" +
-      "gEntitiesRes.OpenTimesPatternEntitiesH\000R" +
-      "\021openTimesPatterns\022W\n\023scheduling_activit" +
-      "y\030\r \001(\0132$.api.v1alpha1.wfm.SchedulingAct" +
-      "ivityH\000R\022schedulingActivity\022s\n\023skill_pro" +
-      "ficiencies\030\016 \001(\0132@.api.v1alpha1.wfm.List" +
-      "ConfigEntitiesRes.SkillProficiencyEntiti" +
-      "esH\000R\022skillProficiencies\022q\n\022schedule_sce" +
-      "narios\030\017 \001(\0132@.api.v1alpha1.wfm.ListConf" +
-      "igEntitiesRes.ScheduleScenarioEntitiesH\000" +
-      "R\021scheduleScenarios\032N\n\022ClientNodeEntitie" +
-      "s\0228\n\010entities\030\001 \003(\0132\034.api.v1alpha1.wfm.C" +
-      "lientNodeR\010entities\032R\n\024LocationNodeEntit" +
-      "ies\022:\n\010entities\030\001 \003(\0132\036.api.v1alpha1.wfm" +
-      ".LocationNodeR\010entities\032P\n\023ProgramNodeEn" +
-      "tities\0229\n\010entities\030\001 \003(\0132\035.api.v1alpha1." +
-      "wfm.ProgramNodeR\010entities\032N\n\022AgentGroupE" +
-      "ntities\0228\n\010entities\030\001 \003(\0132\034.api.v1alpha1" +
-      ".wfm.AgentGroupR\010entities\032T\n\025ShiftTempla" +
-      "teEntities\022;\n\010entities\030\001 \003(\0132\037.api.v1alp" +
-      "ha1.wfm.ShiftTemplateR\010entities\032J\n\020WFMAg" +
-      "entEntities\0226\n\010entities\030\001 \003(\0132\032.api.v1al" +
-      "pha1.wfm.WFMAgentR\010entities\032T\n\025Placement" +
-      "RuleEntities\022;\n\010entities\030\001 \003(\0132\037.api.v1a" +
-      "lpha1.wfm.PlacementRuleR\010entities\032V\n\026Con" +
-      "straintRuleEntities\022<\n\010entities\030\001 \003(\0132 ." +
-      "api.v1alpha1.wfm.ConstraintRuleR\010entitie" +
-      "s\032Z\n\030NonSkillActivityEntities\022>\n\010entitie" +
-      "s\030\001 \003(\0132\".api.v1alpha1.wfm.NonSkillActiv" +
-      "ityR\010entities\032j\n AgentAvailabilityPatter" +
-      "nEntities\022F\n\010entities\030\001 \003(\0132*.api.v1alph" +
-      "a1.wfm.AgentAvailabilityPatternR\010entitie" +
-      "s\032Z\n\030OpenTimesPatternEntities\022>\n\010entitie" +
-      "s\030\001 \003(\0132\".api.v1alpha1.wfm.OpenTimesPatt" +
-      "ernR\010entities\032Z\n\030SkillProficiencyEntitie" +
-      "s\022>\n\010entities\030\001 \003(\0132\".api.v1alpha1.wfm.S" +
-      "killProficiencyR\010entities\032Z\n\030ScheduleSce" +
-      "narioEntities\022>\n\010entities\030\001 \003(\0132\".api.v1" +
-      "alpha1.wfm.ScheduleScenarioR\010entitiesB\n\n" +
-      "\010entities\"\320\001\n\nDiagnostic\0222\n\005level\030\001 \001(\0162" +
-      "\034.api.commons.DiagnosticLevelR\005level\022/\n\004" +
-      "code\030\002 \001(\0162\033.api.commons.DiagnosticCodeR" +
-      "\004code\022\030\n\007message\030\003 \001(\tR\007message\022C\n\rsourc" +
-      "e_entity\030\004 \001(\0132\036.api.v1alpha1.wfm.Parent" +
-      "EntityR\014sourceEntity\"\222\001\n\013Diagnostics\022C\n\r" +
-      "source_entity\030\001 \001(\0132\036.api.v1alpha1.wfm.P" +
-      "arentEntityR\014sourceEntity\022>\n\013diagnostics" +
-      "\030\002 \003(\0132\034.api.v1alpha1.wfm.DiagnosticR\013di" +
-      "agnostics\"I\n\027DeleteShiftInstancesReq\022.\n\023" +
-      "shift_instance_sids\030\001 \003(\003R\021shiftInstance" +
-      "Sids\"\031\n\027DeleteShiftInstancesRes\"\221\001\n\027Buil" +
-      "dNodeDiagnosticsReq\022B\n\rnode_to_check\030\001 \001" +
-      "(\0132\036.api.v1alpha1.wfm.ParentEntityR\013node" +
-      "ToCheck\0222\n\025schedule_scenario_sid\030\002 \001(\003R\023" +
-      "scheduleScenarioSid\"\236\001\n\027BuildNodeDiagnos" +
-      "ticsRes\022>\n\013diagnostics\030\001 \003(\0132\034.api.v1alp" +
-      "ha1.wfm.DiagnosticR\013diagnostics\022C\n\rnodes" +
-      "_checked\030\002 \003(\0132\036.api.v1alpha1.wfm.Parent" +
-      "EntityR\014nodesChecked\"O\n\031BuildGlobalDiagn" +
-      "osticsReq\0222\n\025schedule_scenario_sid\030\001 \001(\003" +
-      "R\023scheduleScenarioSid\"\240\001\n\031BuildGlobalDia" +
-      "gnosticsRes\022>\n\013diagnostics\030\001 \003(\0132\034.api.v" +
-      "1alpha1.wfm.DiagnosticR\013diagnostics\022C\n\rn" +
-      "odes_checked\030\002 \003(\0132\036.api.v1alpha1.wfm.Pa" +
-      "rentEntityR\014nodesChecked\"\350\002\n\021PublishedSc" +
-      "hedule\0224\n\026published_schedule_sid\030\001 \001(\003R\024" +
-      "publishedScheduleSid\0229\n\ncreated_at\030\002 \001(\013" +
-      "2\032.google.protobuf.TimestampR\tcreatedAt\022" +
-      "B\n\017last_updated_at\030\003 \001(\0132\032.google.protob" +
-      "uf.TimestampR\rlastUpdatedAt\022H\n\017shift_ins" +
-      "tances\030\004 \003(\0132\037.api.v1alpha1.wfm.ShiftIns" +
-      "tanceR\016shiftInstances\022T\n\023performance_met" +
-      "rics\030\005 \003(\0132#.api.v1alpha1.wfm.Performanc" +
-      "eMetricR\022performanceMetrics\"\266\004\n\rDraftSch" +
-      "edule\022,\n\022draft_schedule_sid\030\001 \001(\003R\020draft" +
-      "ScheduleSid\0229\n\ncreated_at\030\002 \001(\0132\032.google" +
-      ".protobuf.TimestampR\tcreatedAt\022B\n\017last_u" +
-      "pdated_at\030\003 \001(\0132\032.google.protobuf.Timest" +
-      "ampR\rlastUpdatedAt\022\022\n\004name\030\004 \001(\tR\004name\022 " +
-      "\n\013description\030\005 \001(\tR\013description\022A\n\016date" +
-      "time_range\030\006 \001(\0132\032.api.commons.DatetimeR" +
-      "angeR\rdatetimeRange\022+\n\022created_by_user_i" +
-      "d\030\007 \001(\tR\017createdByUserId\022H\n\017shift_instan" +
-      "ces\030\010 \003(\0132\037.api.v1alpha1.wfm.ShiftInstan" +
-      "ceR\016shiftInstances\022T\n\023performance_metric" +
-      "s\030\t \003(\0132#.api.v1alpha1.wfm.PerformanceMe" +
-      "tricR\022performanceMetrics\0222\n\025schedule_sce" +
-      "nario_sid\030\n \001(\003R\023scheduleScenarioSid\"\327\006\n" +
-      "\021PerformanceMetric\0229\n\ndate_range\030\001 \001(\0132\032" +
-      ".api.commons.DatetimeRangeR\tdateRange\0220\n" +
-      "\024total_calls_required\030\002 \001(\005R\022totalCallsR" +
-      "equired\022.\n\023total_ftes_achieved\030\003 \001(\005R\021to" +
-      "talFtesAchieved\022H\n!num_intervals_with_re" +
-      "quired_calls\030\004 \001(\005R\035numIntervalsWithRequ" +
-      "iredCalls\022T\n(num_intervals_with_ftes_but" +
-      "_no_schedules\030\005 \001(\005R\"numIntervalsWithFte" +
-      "sButNoSchedules\022a\n/num_intervals_with_ft" +
-      "es_but_no_forecasted_calls\030\006 \001(\005R(numInt" +
-      "ervalsWithFtesButNoForecastedCalls\0226\n\027to" +
-      "tal_unscheduled_calls\030\007 \001(\005R\025totalUnsche" +
-      "duledCalls\0224\n\026total_unnecessary_ftes\030\010 \001" +
-      "(\005R\024totalUnnecessaryFtes\0229\n\031interval_wid" +
-      "th_in_minutes\030\t \001(\005R\026intervalWidthInMinu" +
-      "tes\022C\n\013metric_type\030\n \001(\0162\".api.commons.P" +
-      "erformanceMetricTypeR\nmetricType\022T\n\rfte_" +
-      "intervals\030\013 \003(\0132/.api.v1alpha1.wfm.FTERe" +
-      "quiredVsAchievedIntervalR\014fteIntervals\022^" +
-      "\n\027service_level_intervals\030\014 \003(\0132&.api.v1" +
-      "alpha1.wfm.ServiceLevelIntervalR\025service" +
-      "LevelIntervals\"\217\001\n\024ServiceLevelInterval\022" +
-      "A\n\016start_datetime\030\001 \001(\0132\032.google.protobu" +
-      "f.TimestampR\rstartDatetime\0224\n\026service_le" +
-      "vel_achieved\030\002 \001(\002R\024serviceLevelAchieved" +
-      "\"\256\001\n\035FTERequiredVsAchievedInterval\022A\n\016st" +
-      "art_datetime\030\001 \001(\0132\032.google.protobuf.Tim" +
-      "estampR\rstartDatetime\022%\n\016required_calls\030" +
-      "\002 \001(\005R\rrequiredCalls\022#\n\rachieved_ftes\030\003 " +
-      "\001(\005R\014achievedFtes\"\201\001\n\025RequiredCallsInter" +
-      "val\022A\n\016start_datetime\030\001 \001(\0132\032.google.pro" +
-      "tobuf.TimestampR\rstartDatetime\022%\n\016requir" +
-      "ed_calls\030\002 \001(\005R\rrequiredCalls\"\314\004\n\rShiftI" +
-      "nstance\022,\n\022shift_instance_sid\030\001 \001(\003R\020shi" +
-      "ftInstanceSid\022A\n\016start_datetime\030\002 \001(\0132\032." +
-      "google.protobuf.TimestampR\rstartDatetime" +
-      "\022\033\n\tis_locked\030\003 \001(\010R\010isLocked\022(\n\020width_i" +
-      "n_minutes\030\004 \001(\005R\016widthInMinutes\022,\n\022shift" +
-      "_template_sid\030\005 \001(\003R\020shiftTemplateSid\022?\n" +
-      "\034originating_program_node_sid\030\006 \001(\003R\031ori" +
-      "ginatingProgramNodeSid\022!\n\014schedule_sid\030\007" +
-      " \001(\003R\013scheduleSid\022\"\n\rwfm_agent_sid\030\010 \001(\003" +
-      "R\013wfmAgentSid\022>\n\rschedule_type\030\t \001(\0162\031.a" +
-      "pi.commons.ScheduleTypeR\014scheduleType\022E\n" +
-      "\016shift_segments\030\n \003(\0132\036.api.v1alpha1.wfm" +
-      ".ShiftSegmentR\rshiftSegments\022F\n\016shift_te" +
-      "mplate\030\013 \001(\0132\037.api.v1alpha1.wfm.ShiftTem" +
-      "plateR\rshiftTemplate\"\213\003\n\014ShiftSegment\022*\n" +
-      "\021shift_segment_sid\030\001 \001(\003R\017shiftSegmentSi" +
-      "d\022,\n\022shift_instance_sid\030\002 \001(\003R\020shiftInst" +
-      "anceSid\0225\n\027order_in_shift_instance\030\003 \001(\005" +
-      "R\024orderInShiftInstance\022(\n\020width_in_minut" +
-      "es\030\004 \001(\005R\016widthInMinutes\0221\n\025start_minute" +
-      "_in_shift\030\005 \001(\005R\022startMinuteInShift\0226\n\027s" +
-      "cheduling_activity_sid\030\007 \001(\003R\025scheduling" +
-      "ActivitySid\022U\n\023scheduling_activity\030\010 \001(\013" +
-      "2$.api.v1alpha1.wfm.SchedulingActivityR\022" +
-      "schedulingActivity\"\260\003\n\027GetPublishedSched" +
-      "uleReq\022A\n\016datetime_range\030\001 \001(\0132\032.api.com" +
-      "mons.DatetimeRangeR\rdatetimeRange\0226\n\027inc" +
-      "lude_shift_instances\030\002 \001(\010R\025includeShift" +
-      "Instances\0224\n\026include_shift_template\030\003 \001(" +
-      "\010R\024includeShiftTemplate\0224\n\026include_shift" +
-      "_segments\030\004 \001(\010R\024includeShiftSegments\022>\n" +
-      "\033include_scheduling_activity\030\005 \001(\010R\031incl" +
-      "udeSchedulingActivity\022)\n\020include_activit" +
-      "y\030\006 \001(\010R\017includeActivity\022C\n\rnode_selecto" +
-      "r\030\007 \001(\0132\036.api.v1alpha1.wfm.ParentEntityR" +
-      "\014nodeSelector\"m\n\027GetPublishedScheduleRes" +
-      "\022R\n\022published_schedule\030\001 \001(\0132#.api.v1alp" +
-      "ha1.wfm.PublishedScheduleR\021publishedSche" +
-      "dule\"\242\001\n$GetPublishedScheduleRequiredCal" +
-      "lsReq\022?\n\rviewing_range\030\001 \001(\0132\032.api.commo" +
-      "ns.DatetimeRangeR\014viewingRange\0229\n\031interv" +
-      "al_width_in_minutes\030\002 \001(\005R\026intervalWidth" +
-      "InMinutes\"\304\001\n$GetPublishedScheduleRequir" +
-      "edCallsRes\0229\n\031interval_width_in_minutes\030" +
-      "\001 \001(\005R\026intervalWidthInMinutes\022a\n\030require" +
-      "d_calls_intervals\030\002 \003(\0132\'.api.v1alpha1.w" +
-      "fm.RequiredCallsIntervalR\026requiredCallsI" +
-      "ntervals\"\314\001\n GetDraftScheduleRequiredCal" +
-      "lsReq\022,\n\022draft_schedule_sid\030\001 \001(\003R\020draft" +
-      "ScheduleSid\022?\n\rviewing_range\030\002 \001(\0132\032.api" +
-      ".commons.DatetimeRangeR\014viewingRange\0229\n\031" +
-      "interval_width_in_minutes\030\003 \001(\005R\026interva" +
-      "lWidthInMinutes\"\300\001\n GetDraftScheduleRequ" +
-      "iredCallsRes\0229\n\031interval_width_in_minute" +
-      "s\030\001 \001(\005R\026intervalWidthInMinutes\022a\n\030requi" +
-      "red_calls_intervals\030\002 \003(\0132\'.api.v1alpha1" +
-      ".wfm.RequiredCallsIntervalR\026requiredCall",
-      "sIntervals\"\311\001\n\026CreateDraftScheduleReq\022\022\n" +
-      "\004name\030\001 \001(\tR\004name\022 \n\013description\030\002 \001(\tR\013" +
-      "description\022E\n\020scheduling_range\030\003 \001(\0132\032." +
-      "api.commons.DatetimeRangeR\017schedulingRan" +
-      "ge\0222\n\025schedule_scenario_sid\030\004 \001(\003R\023sched" +
-      "uleScenarioSid\"F\n\026CreateDraftScheduleRes" +
-      "\022,\n\022draft_schedule_sid\030\001 \001(\003R\020draftSched" +
-      "uleSid\"\345\002\n\026UpdateDraftScheduleReq\022,\n\022dra" +
-      "ft_schedule_sid\030\001 \001(\003R\020draftScheduleSid\022" +
-      "\022\n\004name\030\002 \001(\tR\004name\022 \n\013description\030\003 \001(\t" +
-      "R\013description\022A\n\016datetime_range\030\004 \001(\0132\032." +
-      "api.commons.DatetimeRangeR\rdatetimeRange" +
-      "\022:\n\032delete_shifts_not_in_range\030\005 \001(\010R\026de" +
-      "leteShiftsNotInRange\022:\n\032copy_shifts_into" +
-      "_new_range\030\006 \001(\010R\026copyShiftsIntoNewRange" +
-      "\022,\n\022get_updated_shifts\030\007 \001(\010R\020getUpdated" +
-      "Shifts\"`\n\026UpdateDraftScheduleRes\022F\n\016draf" +
-      "t_schedule\030\001 \001(\0132\037.api.v1alpha1.wfm.Draf" +
-      "tScheduleR\rdraftSchedule\"\266\004\n\025BuildDraftS" +
-      "cheduleReq\022,\n\022draft_schedule_sid\030\001 \001(\003R\020" +
-      "draftScheduleSid\0222\n\025schedule_scenario_si" +
-      "d\030\002 \001(\003R\023scheduleScenarioSid\022g\n\"schedule" +
-      "_scenario_scheduling_range\030\003 \001(\0132\032.api.c" +
-      "ommons.DatetimeRangeR\037scheduleScenarioSc" +
-      "hedulingRange\022C\n\rnode_selector\030\004 \001(\0132\036.a" +
-      "pi.v1alpha1.wfm.ParentEntityR\014nodeSelect" +
-      "or\0226\n\027include_shift_instances\030\005 \001(\010R\025inc" +
-      "ludeShiftInstances\0224\n\026include_shift_temp" +
-      "late\030\006 \001(\010R\024includeShiftTemplate\0224\n\026incl" +
-      "ude_shift_segments\030\007 \001(\010R\024includeShiftSe" +
-      "gments\022>\n\033include_scheduling_activity\030\010 " +
-      "\001(\010R\031includeSchedulingActivity\022)\n\020includ" +
-      "e_activity\030\t \001(\010R\017includeActivity\"\376\001\n\025Bu" +
-      "ildDraftScheduleRes\022F\n\016draft_schedule\030\001 " +
-      "\001(\0132\037.api.v1alpha1.wfm.DraftScheduleR\rdr" +
-      "aftSchedule\022>\n\013diagnostics\030\002 \003(\0132\034.api.v" +
-      "1alpha1.wfm.DiagnosticR\013diagnostics\022]\n\030s" +
-      "cheduling_result_metric\030\003 \001(\0132#.api.comm" +
-      "ons.SchedulingResultMetricR\026schedulingRe" +
-      "sultMetric\"\232\004\n\027PublishDraftScheduleReq\022," +
-      "\n\022draft_schedule_sid\030\001 \001(\003R\020draftSchedul" +
-      "eSid\022C\n\rnode_selector\030\002 \001(\0132\036.api.v1alph" +
-      "a1.wfm.ParentEntityR\014nodeSelector\022A\n\016dat" +
-      "etime_range\030\003 \001(\0132\032.api.commons.Datetime" +
-      "RangeR\rdatetimeRange\0226\n\027include_shift_in" +
-      "stances\030\004 \001(\010R\025includeShiftInstances\0224\n\026" +
-      "include_shift_template\030\005 \001(\010R\024includeShi" +
-      "ftTemplate\0224\n\026include_shift_segments\030\006 \001" +
-      "(\010R\024includeShiftSegments\022>\n\033include_sche" +
-      "duling_activity\030\007 \001(\010R\031includeScheduling" +
-      "Activity\022)\n\020include_activity\030\010 \001(\010R\017incl" +
-      "udeActivity\022:\n\031ignore_diagnostics_errors" +
-      "\030\t \001(\010R\027ignoreDiagnosticsErrors\"\255\001\n\027Publ" +
-      "ishDraftScheduleRes\022R\n\022published_schedul" +
-      "e\030\001 \001(\0132#.api.v1alpha1.wfm.PublishedSche" +
-      "duleR\021publishedSchedule\022>\n\013diagnostics\030\002" +
-      " \003(\0132\034.api.v1alpha1.wfm.DiagnosticR\013diag" +
-      "nostics\"\255\001\n\025ResetDraftScheduleReq\022,\n\022dra" +
-      "ft_schedule_sid\030\001 \001(\003R\020draftScheduleSid\022" +
-      "A\n\016datetime_range\030\002 \001(\0132\032.api.commons.Da" +
-      "tetimeRangeR\rdatetimeRange\022#\n\runlocked_o" +
-      "nly\030\003 \001(\010R\014unlockedOnly\"W\n\025ResetDraftSch" +
-      "eduleRes\022>\n\013diagnostics\030\001 \003(\0132\034.api.v1al" +
-      "pha1.wfm.DiagnosticR\013diagnostics\"\332\003\n\023Get" +
-      "DraftScheduleReq\022,\n\022draft_schedule_sid\030\001" +
-      " \001(\003R\020draftScheduleSid\022A\n\016datetime_range" +
-      "\030\002 \001(\0132\032.api.commons.DatetimeRangeR\rdate" +
-      "timeRange\0226\n\027include_shift_instances\030\003 \001" +
-      "(\010R\025includeShiftInstances\0224\n\026include_shi" +
-      "ft_template\030\004 \001(\010R\024includeShiftTemplate\022" +
-      "4\n\026include_shift_segments\030\005 \001(\010R\024include" +
-      "ShiftSegments\022>\n\033include_scheduling_acti" +
-      "vity\030\006 \001(\010R\031includeSchedulingActivity\022)\n" +
-      "\020include_activity\030\007 \001(\010R\017includeActivity" +
-      "\022C\n\rnode_selector\030\010 \001(\0132\036.api.v1alpha1.w" +
-      "fm.ParentEntityR\014nodeSelector\"]\n\023GetDraf" +
-      "tScheduleRes\022F\n\016draft_schedule\030\001 \001(\0132\037.a" +
-      "pi.v1alpha1.wfm.DraftScheduleR\rdraftSche" +
-      "dule\"Z\n\025ListDraftSchedulesReq\022A\n\016datetim" +
-      "e_range\030\001 \001(\0132\032.api.commons.DatetimeRang" +
-      "eR\rdatetimeRange\"a\n\025ListDraftSchedulesRe" +
-      "s\022H\n\017draft_schedules\030\001 \003(\0132\037.api.v1alpha" +
-      "1.wfm.DraftScheduleR\016draftSchedules\"\361\002\n\020" +
-      "ClearScheduleReq\022J\n\021schedule_selector\030\001 " +
-      "\001(\0132\035.api.commons.ScheduleSelectorR\020sche" +
-      "duleSelector\022C\n\rnode_selector\030\002 \001(\0132\036.ap" +
-      "i.v1alpha1.wfm.ParentEntityR\014nodeSelecto" +
-      "r\022A\n\016datetime_range\030\003 \001(\0132\032.api.commons." +
-      "DatetimeRangeR\rdatetimeRange\0222\n\025invert_d" +
-      "atetime_range\030\004 \001(\010R\023invertDatetimeRange" +
-      "\0220\n\024start_datetimes_only\030\005 \001(\010R\022startDat" +
-      "etimesOnly\022#\n\rdelete_locked\030\006 \001(\010R\014delet" +
-      "eLocked\"R\n\020ClearScheduleRes\022>\n\013diagnosti" +
-      "cs\030\001 \003(\0132\034.api.v1alpha1.wfm.DiagnosticR\013" +
-      "diagnostics\"F\n\026DeleteDraftScheduleReq\022,\n" +
-      "\022draft_schedule_sid\030\001 \001(\003R\020draftSchedule" +
-      "Sid\"\030\n\026DeleteDraftScheduleRes\"\243\002\n\032ListSh" +
-      "iftInstancesBySidReq\022.\n\023shift_instance_s" +
-      "ids\030\001 \003(\003R\021shiftInstanceSids\0224\n\026include_" +
-      "shift_segments\030\002 \001(\010R\024includeShiftSegmen" +
-      "ts\0224\n\026include_shift_template\030\003 \001(\010R\024incl" +
-      "udeShiftTemplate\022>\n\033include_scheduling_a" +
-      "ctivity\030\004 \001(\010R\031includeSchedulingActivity" +
-      "\022)\n\020include_activity\030\005 \001(\010R\017includeActiv" +
-      "ity\"f\n\032ListShiftInstancesBySidRes\022H\n\017shi" +
-      "ft_instances\030\001 \003(\0132\037.api.v1alpha1.wfm.Sh" +
-      "iftInstanceR\016shiftInstances\"\277\003\n\031CopySche" +
-      "duleToScheduleReq\022W\n\030source_schedule_sel" +
-      "ector\030\001 \001(\0132\035.api.commons.ScheduleSelect" +
-      "orR\026sourceScheduleSelector\022a\n\035destinatio" +
-      "n_schedule_selector\030\002 \001(\0132\035.api.commons." +
-      "ScheduleSelectorR\033destinationScheduleSel" +
-      "ector\022C\n\rnode_selector\030\003 \001(\0132\036.api.v1alp" +
-      "ha1.wfm.ParentEntityR\014nodeSelector\022A\n\016da" +
-      "tetime_range\030\004 \001(\0132\032.api.commons.Datetim" +
-      "eRangeR\rdatetimeRange\0220\n\024start_datetimes" +
-      "_only\030\005 \001(\010R\022startDatetimesOnly\022,\n\022overl" +
-      "ap_as_warning\030\006 \001(\010R\020overlapAsWarning\"[\n" +
-      "\031CopyScheduleToScheduleRes\022>\n\013diagnostic" +
-      "s\030\001 \003(\0132\034.api.v1alpha1.wfm.DiagnosticR\013d" +
-      "iagnostics\"\206\003\n\026CreateShiftInstanceReq\022,\n" +
-      "\022draft_schedule_sid\030\001 \001(\003R\020draftSchedule" +
-      "Sid\022,\n\022shift_template_sid\030\002 \001(\003R\020shiftTe" +
-      "mplateSid\022A\n\016start_datetime\030\003 \001(\0132\032.goog" +
-      "le.protobuf.TimestampR\rstartDatetime\022(\n\020" +
-      "width_in_minutes\030\004 \001(\005R\016widthInMinutes\022\033" +
-      "\n\tis_locked\030\005 \001(\010R\010isLocked\022?\n\rwfm_agent" +
-      "_sid\030\006 \001(\0132\033.google.protobuf.Int64ValueR" +
-      "\013wfmAgentSid\022E\n\014metric_types\030\007 \003(\0162\".api" +
-      ".commons.PerformanceMetricTypeR\013metricTy" +
-      "pes\"\266\001\n\026CreateShiftInstanceRes\022F\n\016shift_" +
-      "instance\030\001 \001(\0132\037.api.v1alpha1.wfm.ShiftI" +
-      "nstanceR\rshiftInstance\022T\n\023performance_me" +
-      "trics\030\002 \003(\0132#.api.v1alpha1.wfm.Performan" +
-      "ceMetricR\022performanceMetrics\"\374\001\n\030CreateS" +
-      "hiftInstanceV2Req\022,\n\022draft_schedule_sid\030" +
-      "\001 \001(\003R\020draftScheduleSid\022,\n\022shift_templat" +
-      "e_sid\030\002 \001(\003R\020shiftTemplateSid\022A\n\016start_d" +
-      "atetime\030\003 \001(\0132\032.google.protobuf.Timestam" +
-      "pR\rstartDatetime\022\033\n\tis_locked\030\004 \001(\010R\010isL" +
-      "ocked\022$\n\016wfm_agent_sids\030\005 \003(\003R\014wfmAgentS" +
-      "ids\"\244\001\n\030CreateShiftInstanceV2Res\022H\n\017shif" +
-      "t_instances\030\001 \003(\0132\037.api.v1alpha1.wfm.Shi" +
-      "ftInstanceR\016shiftInstances\022>\n\013diagnostic" +
-      "s\030\002 \003(\0132\034.api.v1alpha1.wfm.DiagnosticR\013d" +
-      "iagnostics\"\223\001\n\025SwapShiftInstancesReq\022$\n\016" +
-      "wfm_agent_sid1\030\001 \001(\003R\014wfmAgentSid1\022$\n\016wf" +
-      "m_agent_sid2\030\002 \001(\003R\014wfmAgentSid2\022.\n\023shif" +
-      "t_instance_sids\030\003 \003(\003R\021shiftInstanceSids" +
-      "\"\241\001\n\025SwapShiftInstancesRes\022H\n\017shift_inst" +
-      "ances\030\001 \003(\0132\037.api.v1alpha1.wfm.ShiftInst" +
-      "anceR\016shiftInstances\022>\n\013diagnostics\030\002 \003(" +
-      "\0132\034.api.v1alpha1.wfm.DiagnosticR\013diagnos" +
-      "tics\"\330\002\n\026UpdateShiftInstanceReq\022,\n\022shift" +
-      "_instance_sid\030\001 \001(\003R\020shiftInstanceSid\022A\n" +
-      "\016start_datetime\030\002 \001(\0132\032.google.protobuf." +
-      "TimestampR\rstartDatetime\022\033\n\tis_locked\030\003 " +
-      "\001(\010R\010isLocked\022(\n\020width_in_minutes\030\004 \001(\005R" +
-      "\016widthInMinutes\022?\n\rwfm_agent_sid\030\005 \001(\0132\033" +
-      ".google.protobuf.Int64ValueR\013wfmAgentSid" +
-      "\022E\n\014metric_types\030\006 \003(\0162\".api.commons.Per" +
-      "formanceMetricTypeR\013metricTypes\"\266\001\n\026Upda" +
-      "teShiftInstanceRes\022F\n\016shift_instance\030\001 \001" +
-      "(\0132\037.api.v1alpha1.wfm.ShiftInstanceR\rshi" +
-      "ftInstance\022T\n\023performance_metrics\030\002 \003(\0132" +
-      "#.api.v1alpha1.wfm.PerformanceMetricR\022pe" +
-      "rformanceMetrics\"\366\001\n\030UpdateShiftInstance" +
-      "V2Req\022,\n\022shift_instance_sid\030\001 \001(\003R\020shift" +
-      "InstanceSid\022A\n\016start_datetime\030\002 \001(\0132\032.go" +
-      "ogle.protobuf.TimestampR\rstartDatetime\022(" +
-      "\n\020width_in_minutes\030\003 \001(\005R\016widthInMinutes" +
-      "\022\"\n\rwfm_agent_sid\030\004 \001(\003R\013wfmAgentSid\022\033\n\t" +
-      "is_locked\030\005 \001(\010R\010isLocked\"\242\001\n\030UpdateShif" +
-      "tInstanceV2Res\022F\n\016shift_instance\030\001 \001(\0132\037" +
-      ".api.v1alpha1.wfm.ShiftInstanceR\rshiftIn" +
-      "stance\022>\n\013diagnostics\030\002 \003(\0132\034.api.v1alph" +
-      "a1.wfm.DiagnosticR\013diagnostics\"\321\001\n\037CopyS" +
-      "hiftInstancesToScheduleReq\022P\n\024destinatio" +
-      "n_schedule\030\001 \001(\0132\035.api.commons.ScheduleS" +
-      "electorR\023destinationSchedule\022.\n\023shift_in" +
-      "stance_sids\030\002 \003(\003R\021shiftInstanceSids\022,\n\022" +
-      "overlap_as_warning\030\003 \001(\010R\020overlapAsWarni" +
-      "ng\"a\n\037CopyShiftInstancesToScheduleRes\022>\n" +
-      "\013diagnostics\030\001 \003(\0132\034.api.v1alpha1.wfm.Di" +
-      "agnosticR\013diagnostics\"\325\001\n ListShiftInsta" +
-      "nceSidsForAgentReq\022J\n\021schedule_selector\030" +
-      "\001 \001(\0132\035.api.commons.ScheduleSelectorR\020sc" +
-      "heduleSelector\022A\n\016datetime_range\030\002 \001(\0132\032" +
-      ".api.commons.DatetimeRangeR\rdatetimeRang" +
-      "e\022\"\n\rwfm_agent_sid\030\003 \001(\003R\013wfmAgentSid\"R\n" +
-      " ListShiftInstanceSidsForAgentRes\022.\n\023shi" +
-      "ft_instance_sids\030\001 \003(\003R\021shiftInstanceSid" +
-      "s\"\304\001\n\'ListShiftSegmentsByShiftInstanceSi" +
-      "dsReq\022.\n\023shift_instance_sids\030\001 \003(\003R\021shif" +
-      "tInstanceSids\022>\n\033include_scheduling_acti" +
-      "vity\030\002 \001(\010R\031includeSchedulingActivity\022)\n" +
-      "\020include_activity\030\003 \001(\010R\017includeActivity" +
-      "\"p\n\'ListShiftSegmentsByShiftInstanceSids" +
-      "Res\022E\n\016shift_segments\030\001 \003(\0132\036.api.v1alph" +
-      "a1.wfm.ShiftSegmentR\rshiftSegments\"\320\001\n\032P" +
-      "erformanceMetricParameter\022C\n\013metric_type" +
-      "\030\001 \001(\0162\".api.commons.PerformanceMetricTy" +
-      "peR\nmetricType\022m\n%service_level_target_d" +
-      "uration_seconds\030\002 \001(\0132\033.google.protobuf." +
-      "Int64ValueR!serviceLevelTargetDurationSe" +
-      "conds\"\374\002\n\030GetPerformanceMetricsReq\022J\n\021sc" +
-      "hedule_selector\030\001 \001(\0132\035.api.commons.Sche" +
-      "duleSelectorR\020scheduleSelector\022C\n\rnode_s" +
-      "elector\030\002 \001(\0132\036.api.v1alpha1.wfm.ParentE" +
-      "ntityR\014nodeSelector\022A\n\016datetime_range\030\003 " +
-      "\001(\0132\032.api.commons.DatetimeRangeR\rdatetim" +
-      "eRange\022Q\n\rmetric_params\030\004 \003(\0132,.api.v1al" +
-      "pha1.wfm.PerformanceMetricParameterR\014met" +
-      "ricParams\0229\n\031interval_width_in_minutes\030\005" +
-      " \001(\005R\026intervalWidthInMinutes\"p\n\030GetPerfo" +
-      "rmanceMetricsRes\022T\n\023performance_metrics\030" +
-      "\001 \003(\0132#.api.v1alpha1.wfm.PerformanceMetr" +
-      "icR\022performanceMetrics\"\221\003\n\020SchedulingTar" +
-      "get\0222\n\025scheduling_target_sid\030\001 \001(\003R\023sche" +
-      "dulingTargetSid\022W\n\026scheduling_target_typ" +
-      "e\030\002 \001(\0162!.api.commons.SchedulingTargetTy" +
-      "peR\024schedulingTargetType\022@\n\034scheduling_t" +
-      "arget_percentage\030\003 \001(\002R\032schedulingTarget" +
-      "Percentage\022m\n%service_level_target_durat" +
-      "ion_seconds\030\004 \001(\0132\033.google.protobuf.Int6" +
-      "4ValueR!serviceLevelTargetDurationSecond" +
-      "s\022?\n\013node_entity\030\005 \001(\0132\036.api.v1alpha1.wf" +
-      "m.ParentEntityR\nnodeEntity\"\235\001\n\026SetSchedu" +
-      "lingTargetReq\022O\n\021scheduling_target\030\001 \001(\013" +
-      "2\".api.v1alpha1.wfm.SchedulingTargetR\020sc" +
-      "hedulingTarget\0222\n\025schedule_scenario_sid\030" +
-      "\002 \001(\003R\023scheduleScenarioSid\"L\n\026SetSchedul" +
-      "ingTargetRes\0222\n\025scheduling_target_sid\030\001 " +
-      "\001(\003R\023schedulingTargetSid\"]\n\026GetSchedulin" +
-      "gTargetReq\022C\n\rnode_selector\030\001 \001(\0132\036.api." +
-      "v1alpha1.wfm.ParentEntityR\014nodeSelector\"" +
-      "\270\002\n\026GetSchedulingTargetRes\022b\n\033inherited_" +
-      "scheduling_target\030\001 \001(\0132\".api.v1alpha1.w" +
-      "fm.SchedulingTargetR\031inheritedScheduling" +
-      "Target\022V\n\025own_scheduling_target\030\002 \001(\0132\"." +
-      "api.v1alpha1.wfm.SchedulingTargetR\023ownSc" +
-      "hedulingTarget\022b\n\033resulting_scheduling_t" +
-      "arget\030\003 \001(\0132\".api.v1alpha1.wfm.Schedulin" +
-      "gTargetR\031resultingSchedulingTarget\"`\n\031De" +
-      "leteSchedulingTargetReq\022C\n\rnode_selector" +
-      "\030\001 \001(\0132\036.api.v1alpha1.wfm.ParentEntityR\014" +
-      "nodeSelector\"\033\n\031DeleteSchedulingTargetRe" +
-      "s\"\037\n\035GetDefaultSchedulingTargetReq\"p\n\035Ge" +
-      "tDefaultSchedulingTargetRes\022O\n\021schedulin" +
-      "g_target\030\001 \001(\0132\".api.v1alpha1.wfm.Schedu" +
-      "lingTargetR\020schedulingTarget\"p\n\035SetDefau" +
-      "ltSchedulingTargetReq\022O\n\021scheduling_targ" +
-      "et\030\001 \001(\0132\".api.v1alpha1.wfm.SchedulingTa" +
-      "rgetR\020schedulingTarget\"\037\n\035SetDefaultSche" +
-      "dulingTargetRes\"\342\001\n\035ListRequiredCallsInt" +
-      "ervalsReq\022C\n\rnode_selector\030\001 \001(\0132\036.api.v" +
-      "1alpha1.wfm.ParentEntityR\014nodeSelector\022A" +
-      "\n\016datetime_range\030\002 \001(\0132\032.api.commons.Dat" +
-      "etimeRangeR\rdatetimeRange\0229\n\031interval_wi" +
-      "dth_in_minutes\030\003 \001(\005R\026intervalWidthInMin" +
-      "utes\"\275\001\n\035ListRequiredCallsIntervalsRes\0229" +
-      "\n\031interval_width_in_minutes\030\001 \001(\005R\026inter" +
-      "valWidthInMinutes\022a\n\030required_calls_inte" +
-      "rvals\030\002 \003(\0132\'.api.v1alpha1.wfm.RequiredC" +
-      "allsIntervalR\026requiredCallsIntervals\"\273\002\n" +
-      "\026TourShiftSegmentConfig\022D\n\035tour_shift_se" +
-      "gment_config_sid\030\001 \001(\003B\0020\001R\031tourShiftSeg" +
-      "mentConfigSid\022F\n\036tour_shift_instance_con" +
-      "fig_sid\030\002 \001(\003B\0020\001R\032tourShiftInstanceConf" +
-      "igSid\0221\n\025start_minute_in_shift\030\003 \001(\005R\022st" +
-      "artMinuteInShift\022(\n\020width_in_minutes\030\004 \001" +
-      "(\005R\016widthInMinutes\0226\n\027scheduling_activit" +
-      "y_sid\030\005 \001(\003R\025schedulingActivitySid\"\347\002\n\027T" +
-      "ourShiftInstanceConfig\022F\n\036tour_shift_ins" +
-      "tance_config_sid\030\001 \001(\003B\0020\001R\032tourShiftIns" +
-      "tanceConfigSid\0225\n\025tour_week_pattern_sid\030" +
-      "\002 \001(\003B\0020\001R\022tourWeekPatternSid\022/\n\024start_m" +
-      "inute_in_week\030\003 \001(\005R\021startMinuteInWeek\022(" +
-      "\n\020width_in_minutes\030\004 \001(\005R\016widthInMinutes" +
-      "\022r\n!member_tour_shift_segment_configs\030\005 " +
-      "\003(\0132(.api.v1alpha1.wfm.TourShiftSegmentC" +
-      "onfigR\035memberTourShiftSegmentConfigs\"\235\002\n" +
-      "\017TourWeekPattern\0225\n\025tour_week_pattern_si" +
-      "d\030\001 \001(\003B\0020\001R\022tourWeekPatternSid\022,\n\020tour_" +
-      "pattern_sid\030\002 \001(\003B\0020\001R\016tourPatternSid\022.\n" +
-      "\023week_pattern_number\030\003 \001(\005R\021weekPatternN" +
-      "umber\022u\n\"member_tour_shift_instance_conf" +
-      "igs\030\004 \003(\0132).api.v1alpha1.wfm.TourShiftIn" +
-      "stanceConfigR\036memberTourShiftInstanceCon" +
-      "figs\"\341\002\n\023TourAgentCollection\022=\n\031tour_age" +
-      "nt_collection_sid\030\001 \001(\003B\0020\001R\026tourAgentCo" +
-      "llectionSid\022,\n\020tour_pattern_sid\030\002 \001(\003B\0020" +
-      "\001R\016tourPatternSid\0223\n\026min_agents_to_sched" +
-      "ule\030\003 \001(\005R\023minAgentsToSchedule\0223\n\026max_ag" +
-      "ents_to_schedule\030\004 \001(\005R\023maxAgentsToSched" +
-      "ule\0229\n\031first_week_pattern_number\030\005 \001(\005R\026" +
-      "firstWeekPatternNumber\022\022\n\004name\030\006 \001(\tR\004na" +
-      "me\022$\n\016wfm_agent_sids\030\007 \003(\003R\014wfmAgentSids" +
-      "\"\261\002\n\013TourPattern\022,\n\020tour_pattern_sid\030\001 \001" +
-      "(\003B\0020\001R\016tourPatternSid\022,\n\022shift_template" +
-      "_sid\030\002 \001(\003R\020shiftTemplateSid\022\\\n\031member_t" +
-      "our_week_patterns\030\003 \003(\0132!.api.v1alpha1.w" +
-      "fm.TourWeekPatternR\026memberTourWeekPatter" +
-      "ns\022h\n\035member_tour_agent_collections\030\004 \003(" +
-      "\0132%.api.v1alpha1.wfm.TourAgentCollection" +
-      "R\032memberTourAgentCollections\"D\n\024CreateTo" +
-      "urPatternReq\022,\n\022shift_template_sid\030\001 \001(\003" +
-      "R\020shiftTemplateSid\"D\n\024CreateTourPatternR" +
-      "es\022,\n\020tour_pattern_sid\030\001 \001(\003B\0020\001R\016tourPa" +
-      "tternSid\"`\n\034GetTourPatternDiagnosticsReq" +
-      "\022@\n\014tour_pattern\030\001 \001(\0132\035.api.v1alpha1.wf" +
-      "m.TourPatternR\013tourPattern\"^\n\034GetTourPat" +
-      "ternDiagnosticsRes\022>\n\013diagnostics\030\001 \003(\0132" +
-      "\034.api.v1alpha1.wfm.DiagnosticR\013diagnosti" +
-      "cs\"c\n\037UpsertTourPatternWithMembersReq\022@\n" +
-      "\014tour_pattern\030\001 \001(\0132\035.api.v1alpha1.wfm.T" +
-      "ourPatternR\013tourPattern\"\243\001\n\037UpsertTourPa" +
-      "tternWithMembersRes\022@\n\014tour_pattern\030\001 \001(" +
-      "\0132\035.api.v1alpha1.wfm.TourPatternR\013tourPa" +
-      "ttern\022>\n\013diagnostics\030\002 \003(\0132\034.api.v1alpha" +
-      "1.wfm.DiagnosticR\013diagnostics\"A\n\021GetTour" +
-      "PatternReq\022,\n\022shift_template_sid\030\001 \001(\003R\020" +
-      "shiftTemplateSid\"U\n\021GetTourPatternRes\022@\n" +
-      "\014tour_pattern\030\001 \001(\0132\035.api.v1alpha1.wfm.T" +
-      "ourPatternR\013tourPattern\"D\n\024DeleteTourPat" +
-      "ternReq\022,\n\020tour_pattern_sid\030\001 \001(\003B\0020\001R\016t" +
-      "ourPatternSid\"\026\n\024DeleteTourPatternRes\"H\n" +
-      "\030CreateTourWeekPatternReq\022,\n\020tour_patter" +
-      "n_sid\030\001 \001(\003B\0020\001R\016tourPatternSid\"Q\n\030Creat" +
-      "eTourWeekPatternRes\0225\n\025tour_week_pattern" +
-      "_sid\030\001 \001(\003B\0020\001R\022tourWeekPatternSid\"G\n\027Li" +
-      "stTourWeekPatternsReq\022,\n\020tour_pattern_si" +
-      "d\030\001 \001(\003B\0020\001R\016tourPatternSid\"j\n\027ListTourW" +
-      "eekPatternsRes\022O\n\022tour_week_patterns\030\001 \003" +
-      "(\0132!.api.v1alpha1.wfm.TourWeekPatternR\020t" +
-      "ourWeekPatterns\"T\n\031DeleteTourWeekPattern" +
-      "sReq\0227\n\026tour_week_pattern_sids\030\001 \003(\003B\0020\001" +
-      "R\023tourWeekPatternSids\"\033\n\031DeleteTourWeekP" +
-      "atternsRes\"\212\001\n CreateTourShiftInstanceCo" +
-      "nfigReq\022f\n\032tour_shift_instance_config\030\001 " +
-      "\001(\0132).api.v1alpha1.wfm.TourShiftInstance" +
-      "ConfigR\027tourShiftInstanceConfig\"j\n Creat" +
-      "eTourShiftInstanceConfigRes\022F\n\036tour_shif" +
-      "t_instance_config_sid\030\001 \001(\003B\0020\001R\032tourShi" +
-      "ftInstanceConfigSid\"\212\001\n UpdateTourShiftI" +
-      "nstanceConfigReq\022f\n\032tour_shift_instance_" +
-      "config\030\001 \001(\0132).api.v1alpha1.wfm.TourShif" +
-      "tInstanceConfigR\027tourShiftInstanceConfig" +
-      "\"\"\n UpdateTourShiftInstanceConfigRes\"Z\n\037" +
-      "ListTourShiftInstanceConfigsReq\0227\n\026tour_" +
-      "week_pattern_sids\030\001 \003(\003B\0020\001R\023tourWeekPat" +
-      "ternSids\"\213\001\n\037ListTourShiftInstanceConfig" +
-      "sRes\022h\n\033tour_shift_instance_configs\030\001 \003(" +
-      "\0132).api.v1alpha1.wfm.TourShiftInstanceCo" +
-      "nfigR\030tourShiftInstanceConfigs\"m\n!Delete" +
-      "TourShiftInstanceConfigsReq\022H\n\037tour_shif" +
-      "t_instance_config_sids\030\001 \003(\003B\0020\001R\033tourSh" +
-      "iftInstanceConfigSids\"#\n!DeleteTourShift" +
-      "InstanceConfigsRes\"\206\001\n\037CreateTourShiftSe" +
-      "gmentConfigReq\022c\n\031tour_shift_segment_con" +
-      "fig\030\001 \001(\0132(.api.v1alpha1.wfm.TourShiftSe" +
-      "gmentConfigR\026tourShiftSegmentConfig\"g\n\037C" +
-      "reateTourShiftSegmentConfigRes\022D\n\035tour_s" +
-      "hift_segment_config_sid\030\001 \001(\003B\0020\001R\031tourS" +
-      "hiftSegmentConfigSid\"\206\001\n\037UpdateTourShift" +
-      "SegmentConfigReq\022c\n\031tour_shift_segment_c" +
-      "onfig\030\001 \001(\0132(.api.v1alpha1.wfm.TourShift" +
-      "SegmentConfigR\026tourShiftSegmentConfig\"!\n" +
-      "\037UpdateTourShiftSegmentConfigRes\"j\n\036List" +
-      "TourShiftSegmentConfigsReq\022H\n\037tour_shift" +
-      "_instance_config_sids\030\001 \003(\003B\0020\001R\033tourShi" +
-      "ftInstanceConfigSids\"\207\001\n\036ListTourShiftSe" +
-      "gmentConfigsRes\022e\n\032tour_shift_segment_co" +
-      "nfigs\030\001 \003(\0132(.api.v1alpha1.wfm.TourShift" +
-      "SegmentConfigR\027tourShiftSegmentConfigs\"j" +
-      "\n DeleteTourShiftSegmentConfigsReq\022F\n\036to" +
-      "ur_shift_segment_config_sids\030\001 \003(\003B\0020\001R\032" +
-      "tourShiftSegmentConfigSids\"\"\n DeleteTour" +
-      "ShiftSegmentConfigsRes\"y\n\034CreateTourAgen" +
-      "tCollectionReq\022Y\n\025tour_agent_collection\030" +
-      "\001 \001(\0132%.api.v1alpha1.wfm.TourAgentCollec" +
-      "tionR\023tourAgentCollection\"]\n\034CreateTourA" +
-      "gentCollectionRes\022=\n\031tour_agent_collecti" +
-      "on_sid\030\001 \001(\003B\0020\001R\026tourAgentCollectionSid" +
-      "\"y\n\034UpdateTourAgentCollectionReq\022Y\n\025tour" +
-      "_agent_collection\030\001 \001(\0132%.api.v1alpha1.w" +
-      "fm.TourAgentCollectionR\023tourAgentCollect" +
-      "ion\"\036\n\034UpdateTourAgentCollectionRes\"K\n\033L" +
-      "istTourAgentCollectionsReq\022,\n\020tour_patte" +
-      "rn_sid\030\001 \001(\003B\0020\001R\016tourPatternSid\"z\n\033List" +
-      "TourAgentCollectionsRes\022[\n\026tour_agent_co" +
-      "llections\030\001 \003(\0132%.api.v1alpha1.wfm.TourA" +
-      "gentCollectionR\024tourAgentCollections\"`\n\035" +
-      "DeleteTourAgentCollectionsReq\022?\n\032tour_ag" +
-      "ent_collection_sids\030\001 \003(\003B\0020\001R\027tourAgent" +
-      "CollectionSids\"\037\n\035DeleteTourAgentCollect" +
-      "ionsRes\"\214\001\n%CreateTourAgentCollectionWFM" +
-      "AgentsReq\022$\n\016wfm_agent_sids\030\001 \003(\003R\014wfmAg" +
-      "entSids\022=\n\031tour_agent_collection_sid\030\002 \001" +
-      "(\003B\0020\001R\026tourAgentCollectionSid\"\'\n%Create",
-      "TourAgentCollectionWFMAgentsRes\"f\n#ListT" +
-      "ourAgentCollectionWFMAgentsReq\022?\n\032tour_a" +
-      "gent_collection_sids\030\001 \003(\003B\0020\001R\027tourAgen" +
-      "tCollectionSids\"\377\001\n#ListTourAgentCollect" +
-      "ionWFMAgentsRes\022n\n\022wfm_agent_pairings\030\001 " +
-      "\003(\0132@.api.v1alpha1.wfm.ListTourAgentColl" +
-      "ectionWFMAgentsRes.SidMappingR\020wfmAgentP" +
-      "airings\032h\n\nSidMapping\0224\n\024agent_collectio" +
-      "n_sid\030\001 \001(\003B\0020\001R\022agentCollectionSid\022$\n\016w" +
-      "fm_agent_sids\030\002 \003(\003R\014wfmAgentSids\"\214\001\n%De" +
-      "leteTourAgentCollectionWFMAgentsReq\022$\n\016w" +
-      "fm_agent_sids\030\001 \003(\003R\014wfmAgentSids\022=\n\031tou" +
-      "r_agent_collection_sid\030\002 \001(\003B\0020\001R\026tourAg" +
-      "entCollectionSid\"\'\n%DeleteTourAgentColle" +
-      "ctionWFMAgentsRes\"\267\001\n\033GenerateTourWeekPa" +
-      "tternsReq\0229\n\031target_shift_template_sid\030\001" +
-      " \001(\003R\026targetShiftTemplateSid\022)\n\021num_week" +
-      "s_in_tour\030\002 \001(\005R\016numWeeksInTour\0222\n\025sched" +
-      "ule_scenario_sid\030\003 \001(\003R\023scheduleScenario" +
-      "Sid\"\256\001\n\033GenerateTourWeekPatternsRes\022O\n\022t" +
-      "our_week_patterns\030\001 \003(\0132!.api.v1alpha1.w" +
-      "fm.TourWeekPatternR\020tourWeekPatterns\022>\n\013" +
+      "enarioSid\"\215\001\n!CreateAgentAvailabilityPat" +
+      "ternReq\022h\n\032agent_availability_pattern\030\001 " +
+      "\001(\0132*.api.v1alpha1.wfm.AgentAvailability" +
+      "PatternR\030agentAvailabilityPattern\"h\n!Cre" +
+      "ateAgentAvailabilityPatternRes\022C\n\036agent_" +
+      "availability_pattern_sid\030\001 \001(\003R\033agentAva" +
+      "ilabilityPatternSid\"\215\001\n!UpdateAgentAvail" +
+      "abilityPatternReq\022h\n\032agent_availability_" +
+      "pattern\030\001 \001(\0132*.api.v1alpha1.wfm.AgentAv" +
+      "ailabilityPatternR\030agentAvailabilityPatt" +
+      "ern\"#\n!UpdateAgentAvailabilityPatternRes" +
+      "\"h\n!DeleteAgentAvailabilityPatternReq\022C\n" +
+      "\036agent_availability_pattern_sid\030\001 \001(\003R\033a" +
+      "gentAvailabilityPatternSid\"#\n!DeleteAgen" +
+      "tAvailabilityPatternRes\"\264\002\n\025Availability" +
+      "BitmapSet\022>\n\nown_bitmap\030\001 \003(\0162\037.api.comm" +
+      "ons.AvailabilityOptionR\townBitmap\022J\n\020inh" +
+      "erited_bitmap\030\002 \003(\0162\037.api.commons.Availa" +
+      "bilityOptionR\017inheritedBitmap\022J\n\020resulti" +
+      "ng_bitmap\030\003 \003(\0162\037.api.commons.Availabili" +
+      "tyOptionR\017resultingBitmap\022C\n\rparent_enti" +
+      "ty\030\004 \001(\0132\036.api.v1alpha1.wfm.ParentEntity" +
+      "R\014parentEntity\"\303\002\n\031GetAvailabilityBitmap" +
+      "sReq\022J\n\021entities_to_check\030\001 \003(\0132\036.api.v1" +
+      "alpha1.wfm.ParentEntityR\017entitiesToCheck" +
+      "\0222\n\025schedule_scenario_sid\030\002 \001(\003R\023schedul" +
+      "eScenarioSid\022)\n\020include_inactive\030\003 \001(\010R\017" +
+      "includeInactive\022A\n\016datetime_range\030\004 \001(\0132" +
+      "\032.api.commons.DatetimeRangeR\rdatetimeRan" +
+      "ge\0228\n\013bitmap_type\030\005 \001(\0162\027.api.commons.Bi" +
+      "tmapTypeR\nbitmapType\"^\n\031GetAvailabilityB" +
+      "itmapsRes\022A\n\007bitmaps\030\001 \003(\0132\'.api.v1alpha" +
+      "1.wfm.AvailabilityBitmapSetR\007bitmaps\"\223\002\n" +
+      "$UpsertNonSkillActivityAssociationReq\0223\n" +
+      "\026non_skill_activity_sid\030\001 \001(\003R\023nonSkillA" +
+      "ctivitySid\0222\n\004node\030\002 \001(\0132\036.api.v1alpha1." +
+      "wfm.ParentEntityR\004node\022N\n\020association_ty" +
+      "pe\030\003 \001(\0162#.api.commons.ConfigRelationshi" +
+      "pTypeR\017associationType\0222\n\025schedule_scena" +
+      "rio_sid\030\004 \001(\003R\023scheduleScenarioSid\"\246\003\n$U" +
+      "psertNonSkillActivityAssociationRes\022)\n\020u" +
+      "psert_succeeded\030\001 \001(\010R\017upsertSucceeded\022E" +
+      "\n\016nodes_affected\030\002 \003(\0132\036.api.v1alpha1.wf" +
+      "m.ParentEntityR\rnodesAffected\022v\n\024rules_u" +
+      "sing_activity\030\003 \003(\0132D.api.v1alpha1.wfm.U" +
+      "psertNonSkillActivityAssociationRes.Enti" +
+      "tyMappingR\022rulesUsingActivity\032\223\001\n\rEntity" +
+      "Mapping\022?\n\013left_entity\030\001 \001(\0132\036.api.v1alp" +
+      "ha1.wfm.ParentEntityR\nleftEntity\022A\n\014righ" +
+      "t_entity\030\002 \001(\0132\036.api.v1alpha1.wfm.Parent" +
+      "EntityR\013rightEntity\"\322\003\n\020SkillProficiency" +
+      "\0222\n\025skill_proficiency_sid\030\001 \001(\003R\023skillPr" +
+      "oficiencySid\022\033\n\tskill_sid\030\002 \001(\003R\010skillSi" +
+      "d\022Z\n\033preferred_skill_profile_sid\030\003 \001(\0132\033" +
+      ".google.protobuf.Int64ValueR\030preferredSk" +
+      "illProfileSid\0228\n\030manual_proficiency_valu" +
+      "e\030\004 \001(\005R\026manualProficiencyValue\022C\n\rparen" +
+      "t_entity\030\005 \001(\0132\036.api.v1alpha1.wfm.Parent" +
+      "EntityR\014parentEntity\022\035\n\nskill_name\030\007 \001(\t" +
+      "R\tskillName\022,\n\022skill_profile_name\030\010 \001(\tR" +
+      "\020skillProfileName\022E\n\037skill_profile_profi" +
+      "ciency_value\030\t \001(\005R\034skillProfileProficie" +
+      "ncyValue\"\233\001\n\033CreateSkillProficienciesReq" +
+      "\022H\n\rproficiencies\030\001 \003(\0132\".api.v1alpha1.w" +
+      "fm.SkillProficiencyR\rproficiencies\0222\n\025sc" +
+      "hedule_scenario_sid\030\002 \001(\003R\023scheduleScena" +
+      "rioSid\"\035\n\033CreateSkillProficienciesRes\"r\n" +
+      "\033UpdateSkillProficienciesReq\022S\n\023skill_pr" +
+      "oficiencies\030\001 \003(\0132\".api.v1alpha1.wfm.Ski" +
+      "llProficiencyR\022skillProficiencies\"\035\n\033Upd" +
+      "ateSkillProficienciesRes\"O\n\031DeleteSkillP" +
+      "roficiencyReq\0222\n\025skill_proficiency_sid\030\001" +
+      " \001(\003R\023skillProficiencySid\"\033\n\031DeleteSkill" +
+      "ProficiencyRes\"\234\004\n\020ScheduleScenario\0222\n\025s" +
+      "chedule_scenario_sid\030\001 \001(\003R\023scheduleScen" +
+      "arioSid\022\022\n\004name\030\002 \001(\tR\004name\022 \n\013descripti" +
+      "on\030\003 \001(\tR\013description\022G\n\021creation_dateti" +
+      "me\030\004 \001(\0132\032.google.protobuf.TimestampR\020cr" +
+      "eationDatetime\022+\n\022created_by_user_id\030\005 \001" +
+      "(\tR\017createdByUserId\022\035\n\nis_default\030\006 \001(\010R" +
+      "\tisDefault\022T\n\030copied_from_scenario_sid\030\007" +
+      " \001(\0132\033.google.protobuf.Int64ValueR\025copie" +
+      "dFromScenarioSid\022A\n\016schedule_range\030\010 \001(\013" +
+      "2\032.api.commons.DatetimeRangeR\rscheduleRa" +
+      "nge\022S\n\030datetime_set_to_inactive\030\t \001(\0132\032." +
+      "google.protobuf.TimestampR\025datetimeSetTo" +
+      "Inactive\022\033\n\tis_active\030\n \001(\010R\010isActive\"\346\001" +
+      "\n\017CopyScenarioReq\022/\n\024scenario_sid_to_cop" +
+      "y\030\001 \001(\003R\021scenarioSidToCopy\022)\n\020include_in" +
+      "active\030\002 \001(\010R\017includeInactive\022\022\n\004name\030\003 " +
+      "\001(\tR\004name\022 \n\013description\030\004 \001(\tR\013descript" +
+      "ion\022A\n\016schedule_range\030\005 \001(\0132\032.api.common" +
+      "s.DatetimeRangeR\rscheduleRange\"E\n\017CopySc" +
+      "enarioRes\0222\n\025schedule_scenario_sid\030\001 \001(\003" +
+      "R\023scheduleScenarioSid\"\257\005\n\"CreateSchedule" +
+      "ScenarioWithNodesReq\022O\n\021schedule_scenari" +
+      "o\030\001 \001(\0132\".api.v1alpha1.wfm.ScheduleScena" +
+      "rioR\020scheduleScenario\0221\n\025call_center_nod" +
+      "e_name\030\002 \001(\tR\022callCenterNodeName\022?\n\034call" +
+      "_center_node_description\030\003 \001(\tR\031callCent" +
+      "erNodeDescription\022(\n\020client_node_name\030\004 " +
+      "\001(\tR\016clientNodeName\0226\n\027client_node_descr" +
+      "iption\030\005 \001(\tR\025clientNodeDescription\022,\n\022l" +
+      "ocation_node_name\030\006 \001(\tR\020locationNodeNam" +
+      "e\022:\n\031location_node_description\030\007 \001(\tR\027lo" +
+      "cationNodeDescription\022*\n\021program_node_na" +
+      "me\030\010 \001(\tR\017programNodeName\0228\n\030program_nod" +
+      "e_description\030\t \001(\tR\026programNodeDescript" +
+      "ion\0229\n\rtime_zone_val\030\n \001(\0162\025.api.commons" +
+      ".TimeZoneR\013timeZoneVal\022W\n\026skill_profile_" +
+      "category\030\013 \001(\0132!.api.commons.SkillProfil" +
+      "eCategoryR\024skillProfileCategory\"X\n\"Creat" +
+      "eScheduleScenarioWithNodesRes\0222\n\025schedul" +
+      "e_scenario_sid\030\001 \001(\003R\023scheduleScenarioSi" +
+      "d\"k\n\031UpdateScheduleScenarioReq\022N\n\020schedu" +
+      "leScenario\030\001 \001(\0132\".api.v1alpha1.wfm.Sche" +
+      "duleScenarioR\020scheduleScenario\"\033\n\031Update" +
+      "ScheduleScenarioRes\"\245\002\n\025ListConfigEntiti" +
+      "esReq\022>\n\013entity_type\030\001 \001(\0162\035.api.commons" +
+      ".ConfigEntityTypeR\nentityType\022J\n\021belongs" +
+      "_to_entity\030\002 \001(\0132\036.api.v1alpha1.wfm.Pare" +
+      "ntEntityR\017belongsToEntity\022)\n\020include_ina" +
+      "ctive\030\003 \001(\010R\017includeInactive\022!\n\014member_d" +
+      "epth\030\004 \001(\005R\013memberDepth\0222\n\025schedule_scen" +
+      "ario_sid\030\005 \001(\003R\023scheduleScenarioSid\"\304\025\n\025" +
+      "ListConfigEntitiesRes\022L\n\020call_center_nod" +
+      "e\030\001 \001(\0132 .api.v1alpha1.wfm.CallCenterNod" +
+      "eH\000R\016callCenterNode\022_\n\014client_nodes\030\002 \001(" +
+      "\0132:.api.v1alpha1.wfm.ListConfigEntitiesR" +
+      "es.ClientNodeEntitiesH\000R\013clientNodes\022e\n\016" +
+      "location_nodes\030\003 \001(\0132<.api.v1alpha1.wfm." +
+      "ListConfigEntitiesRes.LocationNodeEntiti" +
+      "esH\000R\rlocationNodes\022b\n\rprogram_nodes\030\004 \001" +
+      "(\0132;.api.v1alpha1.wfm.ListConfigEntities" +
+      "Res.ProgramNodeEntitiesH\000R\014programNodes\022" +
+      "_\n\014agent_groups\030\005 \001(\0132:.api.v1alpha1.wfm" +
+      ".ListConfigEntitiesRes.AgentGroupEntitie" +
+      "sH\000R\013agentGroups\022h\n\017shift_templates\030\006 \001(" +
+      "\0132=.api.v1alpha1.wfm.ListConfigEntitiesR" +
+      "es.ShiftTemplateEntitiesH\000R\016shiftTemplat" +
+      "es\022Y\n\nwfm_agents\030\007 \001(\01328.api.v1alpha1.wf" +
+      "m.ListConfigEntitiesRes.WFMAgentEntities" +
+      "H\000R\twfmAgents\022h\n\017placement_rules\030\010 \001(\0132=" +
+      ".api.v1alpha1.wfm.ListConfigEntitiesRes." +
+      "PlacementRuleEntitiesH\000R\016placementRules\022" +
+      "k\n\020constraint_rules\030\t \001(\0132>.api.v1alpha1" +
+      ".wfm.ListConfigEntitiesRes.ConstraintRul" +
+      "eEntitiesH\000R\017constraintRules\022t\n\024non_skil" +
+      "l_activities\030\n \001(\0132@.api.v1alpha1.wfm.Li" +
+      "stConfigEntitiesRes.NonSkillActivityEnti" +
+      "tiesH\000R\022nonSkillActivities\022\212\001\n\033agent_ava" +
+      "ilability_patterns\030\013 \001(\0132H.api.v1alpha1." +
+      "wfm.ListConfigEntitiesRes.AgentAvailabil" +
+      "ityPatternEntitiesH\000R\031agentAvailabilityP" +
+      "atterns\022r\n\023open_times_patterns\030\014 \001(\0132@.a" +
+      "pi.v1alpha1.wfm.ListConfigEntitiesRes.Op" +
+      "enTimesPatternEntitiesH\000R\021openTimesPatte" +
+      "rns\022W\n\023scheduling_activity\030\r \001(\0132$.api.v" +
+      "1alpha1.wfm.SchedulingActivityH\000R\022schedu" +
+      "lingActivity\022s\n\023skill_proficiencies\030\016 \001(" +
+      "\0132@.api.v1alpha1.wfm.ListConfigEntitiesR" +
+      "es.SkillProficiencyEntitiesH\000R\022skillProf" +
+      "iciencies\022q\n\022schedule_scenarios\030\017 \001(\0132@." +
+      "api.v1alpha1.wfm.ListConfigEntitiesRes.S" +
+      "cheduleScenarioEntitiesH\000R\021scheduleScena" +
+      "rios\032N\n\022ClientNodeEntities\0228\n\010entities\030\001" +
+      " \003(\0132\034.api.v1alpha1.wfm.ClientNodeR\010enti" +
+      "ties\032R\n\024LocationNodeEntities\022:\n\010entities" +
+      "\030\001 \003(\0132\036.api.v1alpha1.wfm.LocationNodeR\010" +
+      "entities\032P\n\023ProgramNodeEntities\0229\n\010entit" +
+      "ies\030\001 \003(\0132\035.api.v1alpha1.wfm.ProgramNode" +
+      "R\010entities\032N\n\022AgentGroupEntities\0228\n\010enti" +
+      "ties\030\001 \003(\0132\034.api.v1alpha1.wfm.AgentGroup" +
+      "R\010entities\032T\n\025ShiftTemplateEntities\022;\n\010e" +
+      "ntities\030\001 \003(\0132\037.api.v1alpha1.wfm.ShiftTe" +
+      "mplateR\010entities\032J\n\020WFMAgentEntities\0226\n\010" +
+      "entities\030\001 \003(\0132\032.api.v1alpha1.wfm.WFMAge" +
+      "ntR\010entities\032T\n\025PlacementRuleEntities\022;\n" +
+      "\010entities\030\001 \003(\0132\037.api.v1alpha1.wfm.Place" +
+      "mentRuleR\010entities\032V\n\026ConstraintRuleEnti" +
+      "ties\022<\n\010entities\030\001 \003(\0132 .api.v1alpha1.wf" +
+      "m.ConstraintRuleR\010entities\032Z\n\030NonSkillAc" +
+      "tivityEntities\022>\n\010entities\030\001 \003(\0132\".api.v" +
+      "1alpha1.wfm.NonSkillActivityR\010entities\032j" +
+      "\n AgentAvailabilityPatternEntities\022F\n\010en" +
+      "tities\030\001 \003(\0132*.api.v1alpha1.wfm.AgentAva" +
+      "ilabilityPatternR\010entities\032Z\n\030OpenTimesP" +
+      "atternEntities\022>\n\010entities\030\001 \003(\0132\".api.v" +
+      "1alpha1.wfm.OpenTimesPatternR\010entities\032Z" +
+      "\n\030SkillProficiencyEntities\022>\n\010entities\030\001" +
+      " \003(\0132\".api.v1alpha1.wfm.SkillProficiency" +
+      "R\010entities\032Z\n\030ScheduleScenarioEntities\022>" +
+      "\n\010entities\030\001 \003(\0132\".api.v1alpha1.wfm.Sche" +
+      "duleScenarioR\010entitiesB\n\n\010entities\"\320\001\n\nD" +
+      "iagnostic\0222\n\005level\030\001 \001(\0162\034.api.commons.D" +
+      "iagnosticLevelR\005level\022/\n\004code\030\002 \001(\0162\033.ap" +
+      "i.commons.DiagnosticCodeR\004code\022\030\n\007messag" +
+      "e\030\003 \001(\tR\007message\022C\n\rsource_entity\030\004 \001(\0132" +
+      "\036.api.v1alpha1.wfm.ParentEntityR\014sourceE" +
+      "ntity\"\222\001\n\013Diagnostics\022C\n\rsource_entity\030\001" +
+      " \001(\0132\036.api.v1alpha1.wfm.ParentEntityR\014so" +
+      "urceEntity\022>\n\013diagnostics\030\002 \003(\0132\034.api.v1" +
+      "alpha1.wfm.DiagnosticR\013diagnostics\"I\n\027De" +
+      "leteShiftInstancesReq\022.\n\023shift_instance_" +
+      "sids\030\001 \003(\003R\021shiftInstanceSids\"\031\n\027DeleteS" +
+      "hiftInstancesRes\"\221\001\n\027BuildNodeDiagnostic" +
+      "sReq\022B\n\rnode_to_check\030\001 \001(\0132\036.api.v1alph" +
+      "a1.wfm.ParentEntityR\013nodeToCheck\0222\n\025sche" +
+      "dule_scenario_sid\030\002 \001(\003R\023scheduleScenari" +
+      "oSid\"\236\001\n\027BuildNodeDiagnosticsRes\022>\n\013diag" +
+      "nostics\030\001 \003(\0132\034.api.v1alpha1.wfm.Diagnos" +
+      "ticR\013diagnostics\022C\n\rnodes_checked\030\002 \003(\0132" +
+      "\036.api.v1alpha1.wfm.ParentEntityR\014nodesCh" +
+      "ecked\"O\n\031BuildGlobalDiagnosticsReq\0222\n\025sc" +
+      "hedule_scenario_sid\030\001 \001(\003R\023scheduleScena" +
+      "rioSid\"\240\001\n\031BuildGlobalDiagnosticsRes\022>\n\013" +
+      "diagnostics\030\001 \003(\0132\034.api.v1alpha1.wfm.Dia" +
+      "gnosticR\013diagnostics\022C\n\rnodes_checked\030\002 " +
+      "\003(\0132\036.api.v1alpha1.wfm.ParentEntityR\014nod" +
+      "esChecked\"\350\002\n\021PublishedSchedule\0224\n\026publi" +
+      "shed_schedule_sid\030\001 \001(\003R\024publishedSchedu" +
+      "leSid\0229\n\ncreated_at\030\002 \001(\0132\032.google.proto" +
+      "buf.TimestampR\tcreatedAt\022B\n\017last_updated" +
+      "_at\030\003 \001(\0132\032.google.protobuf.TimestampR\rl" +
+      "astUpdatedAt\022H\n\017shift_instances\030\004 \003(\0132\037." +
+      "api.v1alpha1.wfm.ShiftInstanceR\016shiftIns" +
+      "tances\022T\n\023performance_metrics\030\005 \003(\0132#.ap" +
+      "i.v1alpha1.wfm.PerformanceMetricR\022perfor" +
+      "manceMetrics\"\266\004\n\rDraftSchedule\022,\n\022draft_" +
+      "schedule_sid\030\001 \001(\003R\020draftScheduleSid\0229\n\n" +
+      "created_at\030\002 \001(\0132\032.google.protobuf.Times" +
+      "tampR\tcreatedAt\022B\n\017last_updated_at\030\003 \001(\013" +
+      "2\032.google.protobuf.TimestampR\rlastUpdate" +
+      "dAt\022\022\n\004name\030\004 \001(\tR\004name\022 \n\013description\030\005" +
+      " \001(\tR\013description\022A\n\016datetime_range\030\006 \001(" +
+      "\0132\032.api.commons.DatetimeRangeR\rdatetimeR" +
+      "ange\022+\n\022created_by_user_id\030\007 \001(\tR\017create" +
+      "dByUserId\022H\n\017shift_instances\030\010 \003(\0132\037.api" +
+      ".v1alpha1.wfm.ShiftInstanceR\016shiftInstan" +
+      "ces\022T\n\023performance_metrics\030\t \003(\0132#.api.v" +
+      "1alpha1.wfm.PerformanceMetricR\022performan" +
+      "ceMetrics\0222\n\025schedule_scenario_sid\030\n \001(\003" +
+      "R\023scheduleScenarioSid\"\327\006\n\021PerformanceMet" +
+      "ric\0229\n\ndate_range\030\001 \001(\0132\032.api.commons.Da" +
+      "tetimeRangeR\tdateRange\0220\n\024total_calls_re" +
+      "quired\030\002 \001(\005R\022totalCallsRequired\022.\n\023tota" +
+      "l_ftes_achieved\030\003 \001(\005R\021totalFtesAchieved" +
+      "\022H\n!num_intervals_with_required_calls\030\004 " +
+      "\001(\005R\035numIntervalsWithRequiredCalls\022T\n(nu" +
+      "m_intervals_with_ftes_but_no_schedules\030\005" +
+      " \001(\005R\"numIntervalsWithFtesButNoSchedules" +
+      "\022a\n/num_intervals_with_ftes_but_no_forec" +
+      "asted_calls\030\006 \001(\005R(numIntervalsWithFtesB" +
+      "utNoForecastedCalls\0226\n\027total_unscheduled" +
+      "_calls\030\007 \001(\005R\025totalUnscheduledCalls\0224\n\026t" +
+      "otal_unnecessary_ftes\030\010 \001(\005R\024totalUnnece" +
+      "ssaryFtes\0229\n\031interval_width_in_minutes\030\t" +
+      " \001(\005R\026intervalWidthInMinutes\022C\n\013metric_t" +
+      "ype\030\n \001(\0162\".api.commons.PerformanceMetri" +
+      "cTypeR\nmetricType\022T\n\rfte_intervals\030\013 \003(\013" +
+      "2/.api.v1alpha1.wfm.FTERequiredVsAchieve" +
+      "dIntervalR\014fteIntervals\022^\n\027service_level" +
+      "_intervals\030\014 \003(\0132&.api.v1alpha1.wfm.Serv" +
+      "iceLevelIntervalR\025serviceLevelIntervals\"" +
+      "\217\001\n\024ServiceLevelInterval\022A\n\016start_dateti" +
+      "me\030\001 \001(\0132\032.google.protobuf.TimestampR\rst" +
+      "artDatetime\0224\n\026service_level_achieved\030\002 " +
+      "\001(\002R\024serviceLevelAchieved\"\256\001\n\035FTERequire" +
+      "dVsAchievedInterval\022A\n\016start_datetime\030\001 " +
+      "\001(\0132\032.google.protobuf.TimestampR\rstartDa" +
+      "tetime\022%\n\016required_calls\030\002 \001(\005R\rrequired" +
+      "Calls\022#\n\rachieved_ftes\030\003 \001(\005R\014achievedFt" +
+      "es\"\201\001\n\025RequiredCallsInterval\022A\n\016start_da" +
+      "tetime\030\001 \001(\0132\032.google.protobuf.Timestamp" +
+      "R\rstartDatetime\022%\n\016required_calls\030\002 \001(\005R" +
+      "\rrequiredCalls\"\314\004\n\rShiftInstance\022,\n\022shif" +
+      "t_instance_sid\030\001 \001(\003R\020shiftInstanceSid\022A" +
+      "\n\016start_datetime\030\002 \001(\0132\032.google.protobuf" +
+      ".TimestampR\rstartDatetime\022\033\n\tis_locked\030\003" +
+      " \001(\010R\010isLocked\022(\n\020width_in_minutes\030\004 \001(\005" +
+      "R\016widthInMinutes\022,\n\022shift_template_sid\030\005" +
+      " \001(\003R\020shiftTemplateSid\022?\n\034originating_pr" +
+      "ogram_node_sid\030\006 \001(\003R\031originatingProgram" +
+      "NodeSid\022!\n\014schedule_sid\030\007 \001(\003R\013scheduleS" +
+      "id\022\"\n\rwfm_agent_sid\030\010 \001(\003R\013wfmAgentSid\022>" +
+      "\n\rschedule_type\030\t \001(\0162\031.api.commons.Sche" +
+      "duleTypeR\014scheduleType\022E\n\016shift_segments" +
+      "\030\n \003(\0132\036.api.v1alpha1.wfm.ShiftSegmentR\r" +
+      "shiftSegments\022F\n\016shift_template\030\013 \001(\0132\037." +
+      "api.v1alpha1.wfm.ShiftTemplateR\rshiftTem" +
+      "plate\"\213\003\n\014ShiftSegment\022*\n\021shift_segment_" +
+      "sid\030\001 \001(\003R\017shiftSegmentSid\022,\n\022shift_inst" +
+      "ance_sid\030\002 \001(\003R\020shiftInstanceSid\0225\n\027orde" +
+      "r_in_shift_instance\030\003 \001(\005R\024orderInShiftI" +
+      "nstance\022(\n\020width_in_minutes\030\004 \001(\005R\016width" +
+      "InMinutes\0221\n\025start_minute_in_shift\030\005 \001(\005" +
+      "R\022startMinuteInShift\0226\n\027scheduling_activ" +
+      "ity_sid\030\007 \001(\003R\025schedulingActivitySid\022U\n\023" +
+      "scheduling_activity\030\010 \001(\0132$.api.v1alpha1" +
+      ".wfm.SchedulingActivityR\022schedulingActiv" +
+      "ity\"\260\003\n\027GetPublishedScheduleReq\022A\n\016datet" +
+      "ime_range\030\001 \001(\0132\032.api.commons.DatetimeRa" +
+      "ngeR\rdatetimeRange\0226\n\027include_shift_inst" +
+      "ances\030\002 \001(\010R\025includeShiftInstances\0224\n\026in" +
+      "clude_shift_template\030\003 \001(\010R\024includeShift" +
+      "Template\0224\n\026include_shift_segments\030\004 \001(\010" +
+      "R\024includeShiftSegments\022>\n\033include_schedu" +
+      "ling_activity\030\005 \001(\010R\031includeSchedulingAc" +
+      "tivity\022)\n\020include_activity\030\006 \001(\010R\017includ" +
+      "eActivity\022C\n\rnode_selector\030\007 \001(\0132\036.api.v" +
+      "1alpha1.wfm.ParentEntityR\014nodeSelector\"m" +
+      "\n\027GetPublishedScheduleRes\022R\n\022published_s" +
+      "chedule\030\001 \001(\0132#.api.v1alpha1.wfm.Publish" +
+      "edScheduleR\021publishedSchedule\"\242\001\n$GetPub" +
+      "lishedScheduleRequiredCallsReq\022?\n\rviewin" +
+      "g_range\030\001 \001(\0132\032.api.commons.DatetimeRang" +
+      "eR\014viewingRange\0229\n\031interval_width_in_min" +
+      "utes\030\002 \001(\005R\026intervalWidthInMinutes\"\304\001\n$G" +
+      "etPublishedScheduleRequiredCallsRes\0229\n\031i" +
+      "nterval_width_in_minutes\030\001 \001(\005R\026interval" +
+      "WidthInMinutes\022a\n\030required_calls_interva" +
+      "ls\030\002 \003(\0132\'.api.v1alpha1.wfm.RequiredCall" +
+      "sIntervalR\026requiredCallsIntervals\"\314\001\n Ge" +
+      "tDraftScheduleRequiredCallsReq\022,\n\022draft_" +
+      "schedule_sid\030\001 \001(\003R\020draftScheduleSid\022?\n\r" +
+      "viewing_range\030\002 \001(\0132\032.api.commons.Dateti" +
+      "meRangeR\014viewingRange\0229\n\031interval_width_" +
+      "in_minutes\030\003 \001(\005R\026intervalWidthInMinutes" +
+      "\"\300\001\n GetDraftScheduleRequiredCallsRes\0229\n" +
+      "\031interval_width_in_minutes\030\001 \001(\005R\026interv" +
+      "alWidthInMinutes\022a\n\030required_calls_inter" +
+      "vals\030\002 \003(\0132\'.api.v1alpha1.wfm.RequiredCa" +
+      "llsIntervalR\026requiredCallsIntervals\"\311\001\n\026" +
+      "CreateDraftScheduleReq\022\022\n\004name\030\001 \001(\tR\004na",
+      "me\022 \n\013description\030\002 \001(\tR\013description\022E\n\020" +
+      "scheduling_range\030\003 \001(\0132\032.api.commons.Dat" +
+      "etimeRangeR\017schedulingRange\0222\n\025schedule_" +
+      "scenario_sid\030\004 \001(\003R\023scheduleScenarioSid\"" +
+      "F\n\026CreateDraftScheduleRes\022,\n\022draft_sched" +
+      "ule_sid\030\001 \001(\003R\020draftScheduleSid\"\345\002\n\026Upda" +
+      "teDraftScheduleReq\022,\n\022draft_schedule_sid" +
+      "\030\001 \001(\003R\020draftScheduleSid\022\022\n\004name\030\002 \001(\tR\004" +
+      "name\022 \n\013description\030\003 \001(\tR\013description\022A" +
+      "\n\016datetime_range\030\004 \001(\0132\032.api.commons.Dat" +
+      "etimeRangeR\rdatetimeRange\022:\n\032delete_shif" +
+      "ts_not_in_range\030\005 \001(\010R\026deleteShiftsNotIn" +
+      "Range\022:\n\032copy_shifts_into_new_range\030\006 \001(" +
+      "\010R\026copyShiftsIntoNewRange\022,\n\022get_updated" +
+      "_shifts\030\007 \001(\010R\020getUpdatedShifts\"`\n\026Updat" +
+      "eDraftScheduleRes\022F\n\016draft_schedule\030\001 \001(" +
+      "\0132\037.api.v1alpha1.wfm.DraftScheduleR\rdraf" +
+      "tSchedule\"\266\004\n\025BuildDraftScheduleReq\022,\n\022d" +
+      "raft_schedule_sid\030\001 \001(\003R\020draftScheduleSi" +
+      "d\0222\n\025schedule_scenario_sid\030\002 \001(\003R\023schedu" +
+      "leScenarioSid\022g\n\"schedule_scenario_sched" +
+      "uling_range\030\003 \001(\0132\032.api.commons.Datetime" +
+      "RangeR\037scheduleScenarioSchedulingRange\022C" +
+      "\n\rnode_selector\030\004 \001(\0132\036.api.v1alpha1.wfm" +
+      ".ParentEntityR\014nodeSelector\0226\n\027include_s" +
+      "hift_instances\030\005 \001(\010R\025includeShiftInstan" +
+      "ces\0224\n\026include_shift_template\030\006 \001(\010R\024inc" +
+      "ludeShiftTemplate\0224\n\026include_shift_segme" +
+      "nts\030\007 \001(\010R\024includeShiftSegments\022>\n\033inclu" +
+      "de_scheduling_activity\030\010 \001(\010R\031includeSch" +
+      "edulingActivity\022)\n\020include_activity\030\t \001(" +
+      "\010R\017includeActivity\"\376\001\n\025BuildDraftSchedul" +
+      "eRes\022F\n\016draft_schedule\030\001 \001(\0132\037.api.v1alp" +
+      "ha1.wfm.DraftScheduleR\rdraftSchedule\022>\n\013" +
       "diagnostics\030\002 \003(\0132\034.api.v1alpha1.wfm.Dia" +
-      "gnosticR\013diagnostics2\234\337\001\n\003WFM\022\242\001\n\021ListSk" +
-      "illProfiles\022&.api.v1alpha1.wfm.ListSkill" +
-      "ProfilesReq\032&.api.v1alpha1.wfm.ListSkill" +
-      "ProfilesRes\"=\272\270\221\002\n\n\003\010\334\013\n\003\010\300\014\202\323\344\223\002(\"#/api" +
-      "/v1alpha1/wfm/listskillprofiles:\001*\022\241\001\n\022U" +
-      "pdateSkillProfile\022\'.api.v1alpha1.wfm.Upd" +
-      "ateSkillProfileReq\032\'.api.v1alpha1.wfm.Up" +
-      "dateSkillProfileRes\"9\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002)\"$/" +
-      "api/v1alpha1/wfm/updateskillprofile:\001*\022\325" +
-      "\001\n\037UpdateSkillProfileProficiencies\0224.api" +
-      ".v1alpha1.wfm.UpdateSkillProfileProficie" +
-      "nciesReq\0324.api.v1alpha1.wfm.UpdateSkillP" +
-      "rofileProficienciesRes\"F\272\270\221\002\005\n\003\010\334\013\202\323\344\223\0026" +
-      "\"1/api/v1alpha1/wfm/updateskillprofilepr" +
-      "oficiencies:\001*\022\232\001\n\017GetSkillProfile\022$.api" +
-      ".v1alpha1.wfm.GetSkillProfileReq\032$.api.v" +
-      "1alpha1.wfm.GetSkillProfileRes\";\272\270\221\002\n\n\003\010" +
-      "\334\013\n\003\010\300\014\202\323\344\223\002&\"!/api/v1alpha1/wfm/getskil" +
-      "lprofile:\001*\022\252\001\n\023ResyncSkillProfiles\022(.ap" +
-      "i.v1alpha1.wfm.ResyncSkillProfilesReq\032(." +
-      "api.v1alpha1.wfm.ResyncSkillProfilesRes\"" +
-      "?\272\270\221\002\n\n\003\010\334\013\n\003\010\300\014\202\323\344\223\002*\"%/api/v1alpha1/wf" +
-      "m/resyncskillprofiles:\001*\022\322\001\n\035GetLastSkil" +
-      "lProfileResyncDate\0222.api.v1alpha1.wfm.Ge" +
-      "tLastSkillProfileResyncDateReq\0322.api.v1a" +
-      "lpha1.wfm.GetLastSkillProfileResyncDateR" +
-      "es\"I\272\270\221\002\n\n\003\010\334\013\n\003\010\300\014\202\323\344\223\0024\"//api/v1alpha1" +
-      "/wfm/getlastskillprofileresyncdate:\001*\022\305\001" +
-      "\n\033UpsertForecastingParameters\0220.api.v1al" +
-      "pha1.wfm.UpsertForecastingParametersReq\032" +
-      "0.api.v1alpha1.wfm.UpsertForecastingPara" +
-      "metersRes\"B\272\270\221\002\005\n\003\010\334\013\202\323\344\223\0022\"-/api/v1alph" +
-      "a1/wfm/upsertforecastingparameters:\001*\022\271\001" +
-      "\n\030GetForecastingParameters\022-.api.v1alpha" +
-      "1.wfm.GetForecastingParametersReq\032-.api." +
-      "v1alpha1.wfm.GetForecastingParametersRes" +
-      "\"?\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002/\"*/api/v1alpha1/wfm/ge" +
-      "tforecastingparameters:\001*\022\241\001\n\022ListHistor" +
-      "icalData\022\'.api.v1alpha1.wfm.ListHistoric" +
-      "alDataReq\032\'.api.v1alpha1.wfm.ListHistori" +
-      "calDataRes\"9\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002)\"$/api/v1alp" +
-      "ha1/wfm/listhistoricaldata:\001*\022\275\001\n\031Upsert" +
-      "HistoricalDataDelta\022..api.v1alpha1.wfm.U" +
-      "psertHistoricalDataDeltaReq\032..api.v1alph" +
-      "a1.wfm.UpsertHistoricalDataDeltaRes\"@\272\270\221" +
-      "\002\005\n\003\010\334\013\202\323\344\223\0020\"+/api/v1alpha1/wfm/upserth" +
-      "istoricaldatadelta:\001*\022\301\001\n\032UpsertHistoric" +
-      "alDataDeltas\022/.api.v1alpha1.wfm.UpsertHi" +
-      "storicalDataDeltasReq\032/.api.v1alpha1.wfm" +
-      ".UpsertHistoricalDataDeltasRes\"A\272\270\221\002\005\n\003\010" +
-      "\334\013\202\323\344\223\0021\",/api/v1alpha1/wfm/upserthistor" +
-      "icaldatadeltas:\001*\022\201\001\n\nListSkills\022\037.api.v" +
-      "1alpha1.wfm.ListSkillsReq\032\037.api.v1alpha1" +
-      ".wfm.ListSkillsRes\"1\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002!\"\034/a" +
-      "pi/v1alpha1/wfm/listskills:\001*\022\370\001\n\'BuildC" +
-      "allProfileTemplateForSkillProfile\022<.api." +
-      "v1alpha1.wfm.BuildCallProfileTemplateFor" +
-      "SkillProfileReq\032<.api.v1alpha1.wfm.Build" +
-      "CallProfileTemplateForSkillProfileRes\"Q\210" +
-      "\002\001\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002>\"9/api/v1alpha1/wfm/bu" +
-      "ildcallprofiletemplateforskillprofile:\001*" +
-      "\022\271\001\n\030BuildCallProfileTemplate\022-.api.v1al" +
-      "pha1.wfm.BuildCallProfileTemplateReq\032-.a" +
-      "pi.v1alpha1.wfm.BuildCallProfileTemplate" +
-      "Res\"?\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002/\"*/api/v1alpha1/wfm" +
-      "/buildcallprofiletemplate:\001*\022\340\001\n!CreateI" +
-      "nactiveSkillProfileMapping\0226.api.v1alpha" +
-      "1.wfm.CreateInactiveSkillProfileMappingR" +
-      "eq\0326.api.v1alpha1.wfm.CreateInactiveSkil" +
-      "lProfileMappingRes\"K\210\002\001\272\270\221\002\005\n\003\010\334\013\202\323\344\223\0028\"" +
-      "3/api/v1alpha1/wfm/createinactiveskillpr" +
-      "ofilemapping:\001*\022\201\002\n*GetAvailableRegressi" +
-      "onForecasterModelTypes\022?.api.v1alpha1.wf" +
-      "m.GetAvailableRegressionForecasterModelT" +
-      "ypesReq\032?.api.v1alpha1.wfm.GetAvailableR" +
-      "egressionForecasterModelTypesRes\"Q\272\270\221\002\005\n" +
-      "\003\010\334\013\202\323\344\223\002A\"</api/v1alpha1/wfm/getavailab" +
-      "leregressionforecastermodeltypes:\001*\022\360\001\n%" +
-      "DisconnectInactiveSkillProfileMapping\022:." +
-      "api.v1alpha1.wfm.DisconnectInactiveSkill" +
-      "ProfileMappingReq\032:.api.v1alpha1.wfm.Dis" +
-      "connectInactiveSkillProfileMappingRes\"O\210" +
-      "\002\001\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002<\"7/api/v1alpha1/wfm/di" +
-      "sconnectinactiveskillprofilemapping:\001*\022\265" +
-      "\001\n\027CreateSkillProfileGroup\022,.api.v1alpha" +
-      "1.wfm.CreateSkillProfileGroupReq\032,.api.v" +
-      "1alpha1.wfm.CreateSkillProfileGroupRes\">" +
-      "\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002.\")/api/v1alpha1/wfm/crea" +
-      "teskillprofilegroup:\001*\022\265\001\n\027UpdateSkillPr" +
-      "ofileGroup\022,.api.v1alpha1.wfm.UpdateSkil" +
-      "lProfileGroupReq\032,.api.v1alpha1.wfm.Upda" +
-      "teSkillProfileGroupRes\">\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002." +
-      "\")/api/v1alpha1/wfm/updateskillprofilegr" +
-      "oup:\001*\022\261\001\n\026ListSkillProfileGroups\022+.api." +
-      "v1alpha1.wfm.ListSkillProfileGroupsReq\032+" +
-      ".api.v1alpha1.wfm.ListSkillProfileGroups" +
-      "Res\"=\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002-\"(/api/v1alpha1/wfm" +
-      "/listskillprofilegroups:\001*\022\345\001\n#UpdateSki" +
-      "llProfileGroupAssociations\0228.api.v1alpha" +
-      "1.wfm.UpdateSkillProfileGroupAssociation" +
-      "sReq\0328.api.v1alpha1.wfm.UpdateSkillProfi" +
-      "leGroupAssociationsRes\"J\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002:" +
-      "\"5/api/v1alpha1/wfm/updateskillprofilegr" +
-      "oupassociations:\001*\022\301\001\n\032DeleteHistoricalD" +
-      "ataDeltas\022/.api.v1alpha1.wfm.DeleteHisto" +
-      "ricalDataDeltasReq\032/.api.v1alpha1.wfm.De" +
-      "leteHistoricalDataDeltasRes\"A\272\270\221\002\005\n\003\010\334\013\202" +
-      "\323\344\223\0021\",/api/v1alpha1/wfm/deletehistorica" +
-      "ldatadeltas:\001*\022\251\001\n\024ListTopSkillProfiles\022" +
-      ").api.v1alpha1.wfm.ListTopSkillProfilesR" +
-      "eq\032).api.v1alpha1.wfm.ListTopSkillProfil" +
-      "esRes\";\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002+\"&/api/v1alpha1/w" +
-      "fm/listtopskillprofiles:\001*\022\255\001\n\025GetSkillP" +
-      "rofilesCount\022*.api.v1alpha1.wfm.GetSkill" +
-      "ProfilesCountReq\032*.api.v1alpha1.wfm.GetS" +
-      "killProfilesCountRes\"<\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002,\"\'" +
-      "/api/v1alpha1/wfm/getskillprofilescount:" +
-      "\001*\022\304\001\n\036BuildProfileForecastByInterval\0223." +
-      "api.v1alpha1.wfm.BuildProfileForecastByI" +
-      "ntervalReq\032$.api.v1alpha1.wfm.CallDataBy" +
-      "Interval\"E\272\270\221\002\005\n\003\010\334\013\202\323\344\223\0025\"0/api/v1alpha" +
-      "1/wfm/buildprofileforecastbyinterval:\001*0" +
-      "\001\022\367\001\n\'BuildProfileForecastByIntervalWith" +
-      "Stats\022<.api.v1alpha1.wfm.BuildProfileFor" +
-      "ecastByIntervalWithStatsReq\032<.api.v1alph" +
-      "a1.wfm.BuildProfileForecastByIntervalWit" +
-      "hStatsRes\"N\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002>\"9/api/v1alph" +
-      "a1/wfm/buildprofileforecastbyintervalwit" +
-      "hstats:\001*0\001\022\255\001\n\025UpsertProfileForecast\022*." +
-      "api.v1alpha1.wfm.UpsertProfileForecastRe" +
-      "q\032*.api.v1alpha1.wfm.UpsertProfileForeca" +
-      "stRes\"<\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002,\"\'/api/v1alpha1/w" +
-      "fm/upsertprofileforecast:\001*\022\275\001\n\031CreateCa" +
-      "llProfileTemplate\022..api.v1alpha1.wfm.Cre" +
-      "ateCallProfileTemplateReq\032..api.v1alpha1" +
-      ".wfm.CreateCallProfileTemplateRes\"@\272\270\221\002\005" +
-      "\n\003\010\334\013\202\323\344\223\0020\"+/api/v1alpha1/wfm/createcal" +
-      "lprofiletemplate:\001*\022\275\001\n\031DeleteCallProfil" +
-      "eTemplate\022..api.v1alpha1.wfm.DeleteCallP" +
-      "rofileTemplateReq\032..api.v1alpha1.wfm.Del" +
-      "eteCallProfileTemplateRes\"@\272\270\221\002\005\n\003\010\334\013\202\323\344" +
-      "\223\0020\"+/api/v1alpha1/wfm/deletecallprofile" +
-      "template:\001*\022\271\001\n\030CreateRegressionTemplate" +
-      "\022-.api.v1alpha1.wfm.CreateRegressionTemp" +
-      "lateReq\032-.api.v1alpha1.wfm.CreateRegress" +
-      "ionTemplateRes\"?\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002/\"*/api/v" +
-      "1alpha1/wfm/createregressiontemplate:\001*\022" +
-      "\271\001\n\030DeleteRegressionTemplate\022-.api.v1alp" +
-      "ha1.wfm.DeleteRegressionTemplateReq\032-.ap" +
-      "i.v1alpha1.wfm.DeleteRegressionTemplateR" +
-      "es\"?\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002/\"*/api/v1alpha1/wfm/" +
-      "deleteregressiontemplate:\001*\022\265\001\n\027ListRegr" +
-      "essionTemplates\022,.api.v1alpha1.wfm.ListR" +
-      "egressionTemplatesReq\032,.api.v1alpha1.wfm" +
-      ".ListRegressionTemplatesRes\">\272\270\221\002\005\n\003\010\334\013\202" +
-      "\323\344\223\002.\")/api/v1alpha1/wfm/listregressiont" +
-      "emplates:\001*\022\331\001\n$ListForecastIntervalsFor" +
-      "SkillProfile\0229.api.v1alpha1.wfm.ListFore" +
-      "castIntervalsForSkillProfileReq\032$.api.v1" +
-      "alpha1.wfm.CallDataByInterval\"N\210\002\001\272\270\221\002\005\n" +
-      "\003\010\334\013\202\323\344\223\002;\"6/api/v1alpha1/wfm/listforeca" +
-      "stintervalsforskillprofile:\001*0\001\022\251\001\n\025List" +
-      "ForecastIntervals\022*.api.v1alpha1.wfm.Lis" +
-      "tForecastIntervalsReq\032$.api.v1alpha1.wfm" +
-      ".CallDataByInterval\"<\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002,\"\'/" +
-      "api/v1alpha1/wfm/listforecastintervals:\001" +
-      "*0\001\022\315\001\n!BuildRegressionForecastByInterva" +
-      "l\0226.api.v1alpha1.wfm.BuildRegressionFore" +
-      "castByIntervalReq\032$.api.v1alpha1.wfm.Cal" +
-      "lDataByInterval\"H\272\270\221\002\005\n\003\010\334\013\202\323\344\223\0028\"3/api/" +
-      "v1alpha1/wfm/buildregressionforecastbyin" +
-      "terval:\001*0\001\022\203\002\n*BuildRegressionForecastB" +
-      "yIntervalWithStats\022?.api.v1alpha1.wfm.Bu" +
-      "ildRegressionForecastByIntervalWithStats" +
-      "Req\032?.api.v1alpha1.wfm.BuildRegressionFo" +
-      "recastByIntervalWithStatsRes\"Q\272\270\221\002\005\n\003\010\334\013" +
-      "\202\323\344\223\002A\"</api/v1alpha1/wfm/buildregressio" +
-      "nforecastbyintervalwithstats:\001*0\001\022\271\001\n\030Li" +
-      "stCallProfileTemplates\022-.api.v1alpha1.wf" +
-      "m.ListCallProfileTemplatesReq\032-.api.v1al" +
-      "pha1.wfm.ListCallProfileTemplatesRes\"?\272\270" +
-      "\221\002\005\n\003\010\334\013\202\323\344\223\002/\"*/api/v1alpha1/wfm/listca" +
-      "llprofiletemplates:\001*\022\271\001\n\030UpsertRegressi" +
-      "onForecast\022-.api.v1alpha1.wfm.UpsertRegr" +
-      "essionForecastReq\032-.api.v1alpha1.wfm.Ups" +
-      "ertRegressionForecastRes\"?\272\270\221\002\005\n\003\010\334\013\202\323\344\223" +
-      "\002/\"*/api/v1alpha1/wfm/upsertregressionfo" +
-      "recast:\001*\022\265\001\n\027UpsertForecastDataDelta\022,." +
-      "api.v1alpha1.wfm.UpsertForecastDataDelta" +
-      "Req\032,.api.v1alpha1.wfm.UpsertForecastDat" +
-      "aDeltaRes\">\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002.\")/api/v1alph" +
-      "a1/wfm/upsertforecastdatadelta:\001*\022\271\001\n\030Up" +
-      "sertForecastDataDeltas\022-.api.v1alpha1.wf" +
-      "m.UpsertForecastDataDeltasReq\032-.api.v1al" +
-      "pha1.wfm.UpsertForecastDataDeltasRes\"?\272\270" +
-      "\221\002\005\n\003\010\334\013\202\323\344\223\002/\"*/api/v1alpha1/wfm/upsert" +
-      "forecastdatadeltas:\001*\022\265\001\n\027DeleteForecast" +
-      "Intervals\022,.api.v1alpha1.wfm.DeleteForec" +
-      "astIntervalsReq\032,.api.v1alpha1.wfm.Delet" +
-      "eForecastIntervalsRes\">\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002.\"" +
-      ")/api/v1alpha1/wfm/deleteforecastinterva" +
-      "ls:\001*\022\355\001\n%ListHistoricalDataForAllSkillP" +
-      "rofiles\022:.api.v1alpha1.wfm.ListHistorica" +
-      "lDataForAllSkillProfilesReq\032:.api.v1alph" +
-      "a1.wfm.ListHistoricalDataForAllSkillProf" +
-      "ilesRes\"L\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002<\"7/api/v1alpha1" +
-      "/wfm/listhistoricaldataforallskillprofil" +
-      "es:\001*\022\261\001\n\026BuildDOWAndMOYProfiles\022+.api.v" +
-      "1alpha1.wfm.BuildDOWAndMOYProfilesReq\032+." +
-      "api.v1alpha1.wfm.BuildDOWAndMOYProfilesR" +
-      "es\"=\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002-\"(/api/v1alpha1/wfm/" +
-      "builddowandmoyprofiles:\001*\022\211\002\n,CalculateT" +
-      "rainingDataAveragesForSkillProfile\022A.api" +
-      ".v1alpha1.wfm.CalculateTrainingDataAvera" +
-      "gesForSkillProfileReq\032A.api.v1alpha1.wfm" +
-      ".CalculateTrainingDataAveragesForSkillPr" +
-      "ofileRes\"S\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002C\">/api/v1alpha" +
-      "1/wfm/calculatetrainingdataaveragesforsk" +
-      "illprofile:\001*\022\222\002\n-UpdateSkillProfileAver" +
-      "agesUsingHistoricalData\022B.api.v1alpha1.w" +
-      "fm.UpdateSkillProfileAveragesUsingHistor" +
-      "icalDataReq\032B.api.v1alpha1.wfm.UpdateSki" +
-      "llProfileAveragesUsingHistoricalDataRes\"" +
-      "Y\272\270\221\002\n\n\003\010\334\013\n\003\010\300\014\202\323\344\223\002D\"?/api/v1alpha1/wf" +
-      "m/updateskillprofileaveragesusinghistori" +
-      "caldata:\001*\022\251\001\n\024UpdateCallCenterNode\022).ap" +
-      "i.v1alpha1.wfm.UpdateCallCenterNodeReq\032)" +
-      ".api.v1alpha1.wfm.UpdateCallCenterNodeRe" +
-      "s\";\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002+\"&/api/v1alpha1/wfm/u" +
-      "pdatecallcenternode:\001*\022\231\001\n\020CreateClientN" +
-      "ode\022%.api.v1alpha1.wfm.CreateClientNodeR" +
-      "eq\032%.api.v1alpha1.wfm.CreateClientNodeRe" +
-      "s\"7\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002\'\"\"/api/v1alpha1/wfm/c" +
-      "reateclientnode:\001*\022\231\001\n\020UpdateClientNode\022" +
-      "%.api.v1alpha1.wfm.UpdateClientNodeReq\032%" +
-      ".api.v1alpha1.wfm.UpdateClientNodeRes\"7\272" +
-      "\270\221\002\005\n\003\010\334\013\202\323\344\223\002\'\"\"/api/v1alpha1/wfm/updat" +
-      "eclientnode:\001*\022\241\001\n\022CreateLocationNode\022\'." +
-      "api.v1alpha1.wfm.CreateLocationNodeReq\032\'" +
-      ".api.v1alpha1.wfm.CreateLocationNodeRes\"" +
-      "9\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002)\"$/api/v1alpha1/wfm/cre" +
-      "atelocationnode:\001*\022\241\001\n\022UpdateLocationNod" +
-      "e\022\'.api.v1alpha1.wfm.UpdateLocationNodeR" +
-      "eq\032\'.api.v1alpha1.wfm.UpdateLocationNode" +
-      "Res\"9\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002)\"$/api/v1alpha1/wfm" +
-      "/updatelocationnode:\001*\022\235\001\n\021CreateProgram" +
-      "Node\022&.api.v1alpha1.wfm.CreateProgramNod" +
-      "eReq\032&.api.v1alpha1.wfm.CreateProgramNod" +
-      "eRes\"8\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002(\"#/api/v1alpha1/wf" +
-      "m/createprogramnode:\001*\022\234\001\n\021UpdateProgram" +
-      "Node\022&.api.v1alpha1.wfm.UpdateProgramNod" +
-      "eReq\032&.api.v1alpha1.wfm.UpdateProgramNod" +
-      "eRes\"7\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002\'\"\"/api/v1alpha/wfm" +
-      "/updateprogramnode:\001*\022\254\001\n\025ListProgramNod" +
-      "esBySid\022*.api.v1alpha1.wfm.ListProgramNo" +
-      "desBySidReq\032*.api.v1alpha1.wfm.ListProgr" +
-      "amNodesBySidRes\";\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002+\"&/api/" +
-      "v1alpha/wfm/listprogramnodesbysid:\001*\022\251\001\n" +
-      "\024CreateConstraintRule\022).api.v1alpha1.wfm" +
-      ".CreateConstraintRuleReq\032).api.v1alpha1." +
-      "wfm.CreateConstraintRuleRes\";\272\270\221\002\005\n\003\010\334\013\202" +
-      "\323\344\223\002+\"&/api/v1alpha1/wfm/createconstrain" +
-      "trule:\001*\022\251\001\n\024UpdateConstraintRule\022).api." +
-      "v1alpha1.wfm.UpdateConstraintRuleReq\032).a" +
-      "pi.v1alpha1.wfm.UpdateConstraintRuleRes\"" +
-      ";\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002+\"&/api/v1alpha1/wfm/upd" +
-      "ateconstraintrule:\001*\022\251\001\n\024DeleteConstrain" +
-      "tRule\022).api.v1alpha1.wfm.DeleteConstrain" +
-      "tRuleReq\032).api.v1alpha1.wfm.DeleteConstr" +
-      "aintRuleRes\";\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002+\"&/api/v1al" +
-      "pha1/wfm/deleteconstraintrule:\001*\022\261\001\n\026Cre" +
-      "ateNonSkillActivity\022+.api.v1alpha1.wfm.C" +
-      "reateNonSkillActivityReq\032+.api.v1alpha1." +
-      "wfm.CreateNonSkillActivityRes\"=\272\270\221\002\005\n\003\010\334" +
-      "\013\202\323\344\223\002-\"(/api/v1alpha1/wfm/createnonskil" +
-      "lactivity:\001*\022\261\001\n\026UpdateNonSkillActivity\022" +
-      "+.api.v1alpha1.wfm.UpdateNonSkillActivit" +
-      "yReq\032+.api.v1alpha1.wfm.UpdateNonSkillAc" +
-      "tivityRes\"=\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002-\"(/api/v1alph" +
-      "a1/wfm/updatenonskillactivity:\001*\022\261\001\n\026Lis" +
-      "tNonSkillActivities\022+.api.v1alpha1.wfm.L" +
-      "istNonSkillActivitiesReq\032+.api.v1alpha1." +
-      "wfm.ListNonSkillActivitiesRes\"=\272\270\221\002\005\n\003\010\334" +
-      "\013\202\323\344\223\002-\"(/api/v1alpha1/wfm/listnonskilla" +
-      "ctivities:\001*\022\331\001\n ListNonSkillActivityAss" +
-      "ociations\0225.api.v1alpha1.wfm.ListNonSkil" +
-      "lActivityAssociationsReq\0325.api.v1alpha1." +
-      "wfm.ListNonSkillActivityAssociationsRes\"" +
-      "G\272\270\221\002\005\n\003\010\334\013\202\323\344\223\0027\"2/api/v1alpha1/wfm/lis" +
-      "tnonskillactivityassociations:\001*\022\335\001\n!Lis" +
-      "tCandidateSchedulingActivities\0226.api.v1a" +
-      "lpha1.wfm.ListCandidateSchedulingActivit" +
-      "iesReq\0326.api.v1alpha1.wfm.ListCandidateS" +
-      "chedulingActivitiesRes\"H\272\270\221\002\005\n\003\010\334\013\202\323\344\223\0028" +
-      "\"3/api/v1alpha1/wfm/listcandidateschedul" +
-      "ingactivities:\001*\022\231\001\n\020CreateAgentGroup\022%." +
-      "api.v1alpha1.wfm.CreateAgentGroupReq\032%.a" +
-      "pi.v1alpha1.wfm.CreateAgentGroupRes\"7\272\270\221" +
-      "\002\005\n\003\010\334\013\202\323\344\223\002\'\"\"/api/v1alpha1/wfm/createa" +
-      "gentgroup:\001*\022\231\001\n\020UpdateAgentGroup\022%.api." +
-      "v1alpha1.wfm.UpdateAgentGroupReq\032%.api.v" +
-      "1alpha1.wfm.UpdateAgentGroupRes\"7\272\270\221\002\005\n\003" +
-      "\010\334\013\202\323\344\223\002\'\"\"/api/v1alpha1/wfm/updateagent" +
-      "group:\001*\022\221\001\n\016UpdateWFMAgent\022#.api.v1alph" +
-      "a1.wfm.UpdateWFMAgentReq\032#.api.v1alpha1." +
-      "wfm.UpdateWFMAgentRes\"5\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002%\"" +
-      " /api/v1alpha1/wfm/updatewfmagent:\001*\022\231\001\n" +
-      "\020ListAllWFMAgents\022%.api.v1alpha1.wfm.Lis" +
-      "tAllWFMAgentsReq\032%.api.v1alpha1.wfm.List" +
-      "AllWFMAgentsRes\"7\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002\'\"\"/api/" +
-      "v1alpha1/wfm/listallwfmagents:\001*\022\261\001\n\026Lis" +
-      "tCandidateWFMAgents\022+.api.v1alpha1.wfm.L" +
-      "istCandidateWFMAgentsReq\032+.api.v1alpha1." +
-      "wfm.ListCandidateWFMAgentsRes\"=\272\270\221\002\005\n\003\010\334" +
-      "\013\202\323\344\223\002-\"(/api/v1alpha1/wfm/listcandidate" +
-      "wfmagents:\001*\022\261\001\n\026ListUngroupedWFMAgents\022" +
-      "+.api.v1alpha1.wfm.ListUngroupedWFMAgent" +
-      "sReq\032+.api.v1alpha1.wfm.ListUngroupedWFM" +
-      "AgentsRes\"=\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002-\"(/api/v1alph" +
-      "a1/wfm/listungroupedwfmagents:\001*\022\231\001\n\020Lis" +
-      "tWFMAgentSids\022%.api.v1alpha1.wfm.ListWFM" +
-      "AgentSidsReq\032%.api.v1alpha1.wfm.ListWFMA" +
-      "gentSidsRes\"7\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002\'\"\"/api/v1al" +
-      "pha1/wfm/listwfmagentsids:\001*\022\355\001\n%ListWFM" +
-      "AgentsAssociatedWithAgentGroup\022:.api.v1a" +
-      "lpha1.wfm.ListWFMAgentsAssociatedWithAge" +
-      "ntGroupReq\032:.api.v1alpha1.wfm.ListWFMAge" +
-      "ntsAssociatedWithAgentGroupRes\"L\272\270\221\002\005\n\003\010" +
-      "\334\013\202\323\344\223\002<\"7/api/v1alpha1/wfm/listwfmagent" +
-      "sassociatedwithagentgroup:\001*\022\275\001\n\031CreateW" +
-      "FMAgentMemberships\022..api.v1alpha1.wfm.Cr" +
-      "eateWFMAgentMembershipsReq\032..api.v1alpha" +
-      "1.wfm.CreateWFMAgentMembershipsRes\"@\272\270\221\002" +
-      "\005\n\003\010\334\013\202\323\344\223\0020\"+/api/v1alpha1/wfm/createwf" +
-      "magentmemberships:\001*\022\275\001\n\031DeleteWFMAgentM" +
-      "emberships\022..api.v1alpha1.wfm.DeleteWFMA" +
-      "gentMembershipsReq\032..api.v1alpha1.wfm.De" +
-      "leteWFMAgentMembershipsRes\"@\272\270\221\002\005\n\003\010\334\013\202\323" +
-      "\344\223\0020\"+/api/v1alpha1/wfm/deletewfmagentme" +
-      "mberships:\001*\022\301\001\n\032DeleteWFMAgentsMembersh" +
-      "ips\022/.api.v1alpha1.wfm.DeleteWFMAgentsMe" +
-      "mbershipsReq\032/.api.v1alpha1.wfm.DeleteWF" +
-      "MAgentsMembershipsRes\"A\272\270\221\002\005\n\003\010\334\013\202\323\344\223\0021\"" +
-      ",/api/v1alpha1/wfm/deletewfmagentsmember" +
-      "ships:\001*\022\255\001\n\025BuildAgentDiagnostics\022*.api" +
-      ".v1alpha1.wfm.BuildAgentDiagnosticsReq\032*" +
-      ".api.v1alpha1.wfm.BuildAgentDiagnosticsR" +
-      "es\"<\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002,\"\'/api/v1alpha1/wfm/" +
-      "buildagentdiagnostics:\001*\022\245\001\n\023CreateShift" +
-      "Template\022(.api.v1alpha1.wfm.CreateShiftT" +
-      "emplateReq\032(.api.v1alpha1.wfm.CreateShif" +
-      "tTemplateRes\":\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002*\"%/api/v1a" +
-      "lpha1/wfm/createshifttemplate:\001*\022\245\001\n\023Upd" +
-      "ateShiftTemplate\022(.api.v1alpha1.wfm.Upda" +
-      "teShiftTemplateReq\032(.api.v1alpha1.wfm.Up" +
-      "dateShiftTemplateRes\":\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002*\"%" +
-      "/api/v1alpha1/wfm/updateshifttemplate:\001*" +
-      "\022\271\001\n\030ListShiftTemplatesBySids\022-.api.v1al" +
-      "pha1.wfm.ListShiftTemplatesBySidsReq\032-.a" +
-      "pi.v1alpha1.wfm.ListShiftTemplatesBySids" +
-      "Res\"?\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002/\"*/api/v1alpha1/wfm" +
-      "/listshifttemplatesbysids:\001*\022\315\001\n\035BuildSh" +
-      "iftTemplateDiagnostics\0222.api.v1alpha1.wf" +
-      "m.BuildShiftTemplateDiagnosticsReq\0322.api" +
-      ".v1alpha1.wfm.BuildShiftTemplateDiagnost" +
-      "icsRes\"D\272\270\221\002\005\n\003\010\334\013\202\323\344\223\0024\"//api/v1alpha1/" +
-      "wfm/buildshifttemplatediagnostics:\001*\022\245\001\n" +
-      "\023CreatePlacementRule\022(.api.v1alpha1.wfm." +
-      "CreatePlacementRuleReq\032(.api.v1alpha1.wf" +
-      "m.CreatePlacementRuleRes\":\272\270\221\002\005\n\003\010\334\013\202\323\344\223" +
-      "\002*\"%/api/v1alpha1/wfm/createplacementrul" +
-      "e:\001*\022\244\001\n\023UpdatePlacementRule\022(.api.v1alp" +
-      "ha1.wfm.UpdatePlacementRuleReq\032(.api.v1a" +
-      "lpha1.wfm.UpdatePlacementRuleRes\"9\272\270\221\002\005\n" +
-      "\003\010\334\013\202\323\344\223\002)\"$/api/v1alpha/wfm/updateplace" +
-      "mentrule:\001*\022\245\001\n\023DeletePlacementRule\022(.ap" +
-      "i.v1alpha1.wfm.DeletePlacementRuleReq\032(.",
-      "api.v1alpha1.wfm.DeletePlacementRuleRes\"" +
-      ":\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002*\"%/api/v1alpha1/wfm/del" +
-      "eteplacementrule:\001*\022\261\001\n\026CreateOpenTimesP" +
-      "attern\022+.api.v1alpha1.wfm.CreateOpenTime" +
-      "sPatternReq\032+.api.v1alpha1.wfm.CreateOpe" +
-      "nTimesPatternRes\"=\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002-\"(/api" +
-      "/v1alpha1/wfm/createopentimespattern:\001*\022" +
-      "\261\001\n\026UpdateOpenTimesPattern\022+.api.v1alpha" +
-      "1.wfm.UpdateOpenTimesPatternReq\032+.api.v1" +
-      "alpha1.wfm.UpdateOpenTimesPatternRes\"=\272\270" +
-      "\221\002\005\n\003\010\334\013\202\323\344\223\002-\"(/api/v1alpha1/wfm/update" +
-      "opentimespattern:\001*\022\261\001\n\026DeleteOpenTimesP" +
-      "attern\022+.api.v1alpha1.wfm.DeleteOpenTime" +
-      "sPatternReq\032+.api.v1alpha1.wfm.DeleteOpe" +
-      "nTimesPatternRes\"=\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002-\"(/api" +
-      "/v1alpha1/wfm/deleteopentimespattern:\001*\022" +
-      "\245\001\n\023GetOpenTimesBitmaps\022(.api.v1alpha1.w" +
-      "fm.GetOpenTimesBitmapsReq\032(.api.v1alpha1" +
-      ".wfm.GetOpenTimesBitmapsRes\":\272\270\221\002\005\n\003\010\334\013\202" +
-      "\323\344\223\002*\"%/api/v1alpha1/wfm/getopentimesbit" +
-      "maps:\001*\022\321\001\n\036CreateAgentAvailabilityPatte" +
-      "rn\0223.api.v1alpha1.wfm.CreateAgentAvailab" +
-      "ilityPatternReq\0323.api.v1alpha1.wfm.Creat" +
-      "eAgentAvailabilityPatternRes\"E\272\270\221\002\005\n\003\010\334\013" +
-      "\202\323\344\223\0025\"0/api/v1alpha1/wfm/createagentava" +
-      "ilabilitypattern:\001*\022\321\001\n\036UpdateAgentAvail" +
-      "abilityPattern\0223.api.v1alpha1.wfm.Update" +
-      "AgentAvailabilityPatternReq\0323.api.v1alph" +
-      "a1.wfm.UpdateAgentAvailabilityPatternRes" +
-      "\"E\272\270\221\002\005\n\003\010\334\013\202\323\344\223\0025\"0/api/v1alpha1/wfm/up" +
-      "dateagentavailabilitypattern:\001*\022\321\001\n\036Dele" +
-      "teAgentAvailabilityPattern\0223.api.v1alpha" +
-      "1.wfm.DeleteAgentAvailabilityPatternReq\032" +
-      "3.api.v1alpha1.wfm.DeleteAgentAvailabili" +
-      "tyPatternRes\"E\272\270\221\002\005\n\003\010\334\013\202\323\344\223\0025\"0/api/v1a" +
-      "lpha1/wfm/deleteagentavailabilitypattern" +
-      ":\001*\022\261\001\n\026GetAvailabilityBitmaps\022+.api.v1a" +
-      "lpha1.wfm.GetAvailabilityBitmapsReq\032+.ap" +
-      "i.v1alpha1.wfm.GetAvailabilityBitmapsRes" +
-      "\"=\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002-\"(/api/v1alpha1/wfm/ge" +
-      "tavailabilitybitmaps:\001*\022\335\001\n!UpsertNonSki" +
-      "llActivityAssociation\0226.api.v1alpha1.wfm" +
-      ".UpsertNonSkillActivityAssociationReq\0326." +
-      "api.v1alpha1.wfm.UpsertNonSkillActivityA" +
-      "ssociationRes\"H\272\270\221\002\005\n\003\010\334\013\202\323\344\223\0028\"3/api/v1" +
-      "alpha1/wfm/upsertnonskillactivityassocia" +
-      "tion:\001*\022\271\001\n\030CreateSkillProficiencies\022-.a" +
-      "pi.v1alpha1.wfm.CreateSkillProficiencies" +
-      "Req\032-.api.v1alpha1.wfm.CreateSkillProfic" +
-      "ienciesRes\"?\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002/\"*/api/v1alp" +
-      "ha1/wfm/createskillproficiencies:\001*\022\271\001\n\030" +
-      "UpdateSkillProficiencies\022-.api.v1alpha1." +
-      "wfm.UpdateSkillProficienciesReq\032-.api.v1" +
-      "alpha1.wfm.UpdateSkillProficienciesRes\"?" +
-      "\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002/\"*/api/v1alpha1/wfm/upda" +
-      "teskillproficiencies:\001*\022\261\001\n\026DeleteSkillP" +
-      "roficiency\022+.api.v1alpha1.wfm.DeleteSkil" +
-      "lProficiencyReq\032+.api.v1alpha1.wfm.Delet" +
-      "eSkillProficiencyRes\"=\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002-\"(" +
-      "/api/v1alpha1/wfm/deleteskillproficiency" +
-      ":\001*\022\211\001\n\014CopyScenario\022!.api.v1alpha1.wfm." +
-      "CopyScenarioReq\032!.api.v1alpha1.wfm.CopyS" +
-      "cenarioRes\"3\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002#\"\036/api/v1alp" +
-      "ha1/wfm/copyscenario:\001*\022\325\001\n\037CreateSchedu" +
-      "leScenarioWithNodes\0224.api.v1alpha1.wfm.C" +
-      "reateScheduleScenarioWithNodesReq\0324.api." +
-      "v1alpha1.wfm.CreateScheduleScenarioWithN" +
-      "odesRes\"F\272\270\221\002\005\n\003\010\334\013\202\323\344\223\0026\"1/api/v1alpha1" +
-      "/wfm/createschedulescenariowithnodes:\001*\022" +
-      "\261\001\n\026UpdateScheduleScenario\022+.api.v1alpha" +
-      "1.wfm.UpdateScheduleScenarioReq\032+.api.v1" +
-      "alpha1.wfm.UpdateScheduleScenarioRes\"=\272\270" +
-      "\221\002\005\n\003\010\334\013\202\323\344\223\002-\"(/api/v1alpha1/wfm/update" +
-      "schedulescenario:\001*\022\241\001\n\022ListConfigEntiti" +
-      "es\022\'.api.v1alpha1.wfm.ListConfigEntities" +
-      "Req\032\'.api.v1alpha1.wfm.ListConfigEntitie" +
-      "sRes\"9\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002)\"$/api/v1alpha1/wf" +
-      "m/listconfigentities:\001*\022\251\001\n\024DeleteShiftI" +
-      "nstances\022).api.v1alpha1.wfm.DeleteShiftI" +
-      "nstancesReq\032).api.v1alpha1.wfm.DeleteShi" +
-      "ftInstancesRes\";\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002+\"&/api/v" +
-      "1alpha1/wfm/deleteshiftinstances:\001*\022\251\001\n\024" +
-      "BuildNodeDiagnostics\022).api.v1alpha1.wfm." +
-      "BuildNodeDiagnosticsReq\032).api.v1alpha1.w" +
-      "fm.BuildNodeDiagnosticsRes\";\272\270\221\002\005\n\003\010\334\013\202\323" +
-      "\344\223\002+\"&/api/v1alpha1/wfm/buildnodediagnos" +
-      "tics:\001*\022\261\001\n\026BuildGlobalDiagnostics\022+.api" +
-      ".v1alpha1.wfm.BuildGlobalDiagnosticsReq\032" +
-      "+.api.v1alpha1.wfm.BuildGlobalDiagnostic" +
-      "sRes\"=\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002-\"(/api/v1alpha1/wf" +
-      "m/buildglobaldiagnostics:\001*\022\251\001\n\024GetPubli" +
-      "shedSchedule\022).api.v1alpha1.wfm.GetPubli" +
-      "shedScheduleReq\032).api.v1alpha1.wfm.GetPu" +
-      "blishedScheduleRes\";\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002+\"&/a" +
-      "pi/v1alpha1/wfm/getpublishedschedule:\001*\022" +
-      "\335\001\n!GetPublishedScheduleRequiredCalls\0226." +
-      "api.v1alpha1.wfm.GetPublishedScheduleReq" +
-      "uiredCallsReq\0326.api.v1alpha1.wfm.GetPubl" +
-      "ishedScheduleRequiredCallsRes\"H\272\270\221\002\005\n\003\010\334" +
-      "\013\202\323\344\223\0028\"3/api/v1alpha1/wfm/getpublisheds" +
-      "chedulerequiredcalls:\001*\022\315\001\n\035GetDraftSche" +
-      "duleRequiredCalls\0222.api.v1alpha1.wfm.Get" +
-      "DraftScheduleRequiredCallsReq\0322.api.v1al" +
-      "pha1.wfm.GetDraftScheduleRequiredCallsRe" +
-      "s\"D\272\270\221\002\005\n\003\010\334\013\202\323\344\223\0024\"//api/v1alpha1/wfm/g" +
-      "etdraftschedulerequiredcalls:\001*\022\245\001\n\023Crea" +
-      "teDraftSchedule\022(.api.v1alpha1.wfm.Creat" +
-      "eDraftScheduleReq\032(.api.v1alpha1.wfm.Cre" +
-      "ateDraftScheduleRes\":\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002*\"%/" +
-      "api/v1alpha1/wfm/createdraftschedule:\001*\022" +
-      "\245\001\n\023UpdateDraftSchedule\022(.api.v1alpha1.w" +
-      "fm.UpdateDraftScheduleReq\032(.api.v1alpha1" +
-      ".wfm.UpdateDraftScheduleRes\":\272\270\221\002\005\n\003\010\334\013\202" +
-      "\323\344\223\002*\"%/api/v1alpha1/wfm/updatedraftsche" +
-      "dule:\001*\022\241\001\n\022BuildDraftSchedule\022\'.api.v1a" +
-      "lpha1.wfm.BuildDraftScheduleReq\032\'.api.v1" +
-      "alpha1.wfm.BuildDraftScheduleRes\"9\272\270\221\002\005\n" +
-      "\003\010\334\013\202\323\344\223\002)\"$/api/v1alpha1/wfm/builddraft" +
-      "schedule:\001*\022\251\001\n\024PublishDraftSchedule\022).a" +
-      "pi.v1alpha1.wfm.PublishDraftScheduleReq\032" +
-      ").api.v1alpha1.wfm.PublishDraftScheduleR" +
-      "es\";\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002+\"&/api/v1alpha1/wfm/" +
-      "publishdraftschedule:\001*\022\241\001\n\022ResetDraftSc" +
-      "hedule\022\'.api.v1alpha1.wfm.ResetDraftSche" +
-      "duleReq\032\'.api.v1alpha1.wfm.ResetDraftSch" +
-      "eduleRes\"9\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002)\"$/api/v1alpha" +
-      "1/wfm/resetdraftschedule:\001*\022\231\001\n\020GetDraft" +
-      "Schedule\022%.api.v1alpha1.wfm.GetDraftSche" +
-      "duleReq\032%.api.v1alpha1.wfm.GetDraftSched" +
-      "uleRes\"7\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002\'\"\"/api/v1alpha1/" +
-      "wfm/getdraftschedule:\001*\022\241\001\n\022ListDraftSch" +
-      "edules\022\'.api.v1alpha1.wfm.ListDraftSched" +
-      "ulesReq\032\'.api.v1alpha1.wfm.ListDraftSche" +
-      "dulesRes\"9\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002)\"$/api/v1alpha" +
-      "1/wfm/listdraftschedules:\001*\022\215\001\n\rClearSch" +
-      "edule\022\".api.v1alpha1.wfm.ClearScheduleRe" +
-      "q\032\".api.v1alpha1.wfm.ClearScheduleRes\"4\272" +
-      "\270\221\002\005\n\003\010\334\013\202\323\344\223\002$\"\037/api/v1alpha1/wfm/clear" +
-      "schedule:\001*\022\245\001\n\023DeleteDraftSchedule\022(.ap" +
-      "i.v1alpha1.wfm.DeleteDraftScheduleReq\032(." +
-      "api.v1alpha1.wfm.DeleteDraftScheduleRes\"" +
-      ":\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002*\"%/api/v1alpha1/wfm/del" +
-      "etedraftschedule:\001*\022\265\001\n\027ListShiftInstanc" +
-      "esBySid\022,.api.v1alpha1.wfm.ListShiftInst" +
-      "ancesBySidReq\032,.api.v1alpha1.wfm.ListShi" +
-      "ftInstancesBySidRes\">\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002.\")/" +
-      "api/v1alpha1/wfm/listshiftinstancesbysid" +
-      ":\001*\022\261\001\n\026CopyScheduleToSchedule\022+.api.v1a" +
-      "lpha1.wfm.CopyScheduleToScheduleReq\032+.ap" +
-      "i.v1alpha1.wfm.CopyScheduleToScheduleRes" +
-      "\"=\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002-\"(/api/v1alpha1/wfm/co" +
-      "pyscheduletoschedule:\001*\022\245\001\n\023CreateShiftI" +
-      "nstance\022(.api.v1alpha1.wfm.CreateShiftIn" +
-      "stanceReq\032(.api.v1alpha1.wfm.CreateShift" +
-      "InstanceRes\":\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002*\"%/api/v1al" +
-      "pha1/wfm/createshiftinstance:\001*\022\255\001\n\025Crea" +
-      "teShiftInstanceV2\022*.api.v1alpha1.wfm.Cre" +
-      "ateShiftInstanceV2Req\032*.api.v1alpha1.wfm" +
-      ".CreateShiftInstanceV2Res\"<\272\270\221\002\005\n\003\010\334\013\202\323\344" +
-      "\223\002,\"\'/api/v1alpha1/wfm/createshiftinstan" +
-      "cev2:\001*\022\241\001\n\022SwapShiftInstances\022\'.api.v1a" +
-      "lpha1.wfm.SwapShiftInstancesReq\032\'.api.v1" +
-      "alpha1.wfm.SwapShiftInstancesRes\"9\272\270\221\002\005\n" +
-      "\003\010\334\013\202\323\344\223\002)\"$/api/v1alpha1/wfm/swapshifti" +
-      "nstances:\001*\022\245\001\n\023UpdateShiftInstance\022(.ap" +
-      "i.v1alpha1.wfm.UpdateShiftInstanceReq\032(." +
-      "api.v1alpha1.wfm.UpdateShiftInstanceRes\"" +
-      ":\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002*\"%/api/v1alpha1/wfm/upd" +
-      "ateshiftinstance:\001*\022\255\001\n\025UpdateShiftInsta" +
-      "nceV2\022*.api.v1alpha1.wfm.UpdateShiftInst" +
-      "anceV2Req\032*.api.v1alpha1.wfm.UpdateShift" +
-      "InstanceV2Res\"<\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002,\"\'/api/v1" +
-      "alpha1/wfm/updateshiftinstancev2:\001*\022\311\001\n\034" +
-      "CopyShiftInstancesToSchedule\0221.api.v1alp" +
-      "ha1.wfm.CopyShiftInstancesToScheduleReq\032" +
-      "1.api.v1alpha1.wfm.CopyShiftInstancesToS" +
-      "cheduleRes\"C\272\270\221\002\005\n\003\010\334\013\202\323\344\223\0023\"./api/v1alp" +
-      "ha1/wfm/copyshiftinstancestoschedule:\001*\022" +
-      "\315\001\n\035ListShiftInstanceSidsForAgent\0222.api." +
-      "v1alpha1.wfm.ListShiftInstanceSidsForAge" +
-      "ntReq\0322.api.v1alpha1.wfm.ListShiftInstan" +
-      "ceSidsForAgentRes\"D\272\270\221\002\005\n\003\010\334\013\202\323\344\223\0024\"//ap" +
-      "i/v1alpha1/wfm/listshiftinstancesidsfora" +
-      "gent:\001*\022\351\001\n$ListShiftSegmentsByShiftInst" +
-      "anceSids\0229.api.v1alpha1.wfm.ListShiftSeg" +
-      "mentsByShiftInstanceSidsReq\0329.api.v1alph" +
-      "a1.wfm.ListShiftSegmentsByShiftInstanceS" +
-      "idsRes\"K\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002;\"6/api/v1alpha1/" +
-      "wfm/listshiftsegmentsbyshiftinstancesids" +
-      ":\001*\022\245\001\n\023SetSchedulingTarget\022(.api.v1alph" +
-      "a1.wfm.SetSchedulingTargetReq\032(.api.v1al" +
-      "pha1.wfm.SetSchedulingTargetRes\":\272\270\221\002\005\n\003" +
-      "\010\334\013\202\323\344\223\002*\"%/api/v1alpha1/wfm/setscheduli" +
-      "ngtarget:\001*\022\245\001\n\023GetSchedulingTarget\022(.ap" +
-      "i.v1alpha1.wfm.GetSchedulingTargetReq\032(." +
-      "api.v1alpha1.wfm.GetSchedulingTargetRes\"" +
-      ":\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002*\"%/api/v1alpha1/wfm/get" +
-      "schedulingtarget:\001*\022\261\001\n\026DeleteScheduling" +
-      "Target\022+.api.v1alpha1.wfm.DeleteScheduli" +
-      "ngTargetReq\032+.api.v1alpha1.wfm.DeleteSch" +
-      "edulingTargetRes\"=\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002-\"(/api" +
-      "/v1alpha1/wfm/deleteschedulingtarget:\001*\022" +
-      "\301\001\n\032GetDefaultSchedulingTarget\022/.api.v1a" +
-      "lpha1.wfm.GetDefaultSchedulingTargetReq\032" +
-      "/.api.v1alpha1.wfm.GetDefaultSchedulingT" +
-      "argetRes\"A\272\270\221\002\005\n\003\010\334\013\202\323\344\223\0021\",/api/v1alpha" +
-      "1/wfm/getdefaultschedulingtarget:\001*\022\301\001\n\032" +
-      "SetDefaultSchedulingTarget\022/.api.v1alpha" +
-      "1.wfm.SetDefaultSchedulingTargetReq\032/.ap" +
-      "i.v1alpha1.wfm.SetDefaultSchedulingTarge" +
-      "tRes\"A\272\270\221\002\005\n\003\010\334\013\202\323\344\223\0021\",/api/v1alpha1/wf" +
-      "m/setdefaultschedulingtarget:\001*\022\255\001\n\025GetP" +
-      "erformanceMetrics\022*.api.v1alpha1.wfm.Get" +
-      "PerformanceMetricsReq\032*.api.v1alpha1.wfm" +
-      ".GetPerformanceMetricsRes\"<\272\270\221\002\005\n\003\010\334\013\202\323\344" +
-      "\223\002,\"\'/api/v1alpha1/wfm/getperformancemet" +
-      "rics:\001*\022\301\001\n\032ListRequiredCallsIntervals\022/" +
-      ".api.v1alpha1.wfm.ListRequiredCallsInter" +
-      "valsReq\032/.api.v1alpha1.wfm.ListRequiredC" +
-      "allsIntervalsRes\"A\272\270\221\002\005\n\003\010\334\013\202\323\344\223\0021\",/api" +
-      "/v1alpha1/wfm/listrequiredcallsintervals" +
-      ":\001*\022\235\001\n\021CreateTourPattern\022&.api.v1alpha1" +
-      ".wfm.CreateTourPatternReq\032&.api.v1alpha1" +
-      ".wfm.CreateTourPatternRes\"8\272\270\221\002\005\n\003\010\334\013\202\323\344" +
-      "\223\002(\"#/api/v1alpha1/wfm/createtourpattern" +
-      ":\001*\022\275\001\n\031GetTourPatternDiagnostics\022..api." +
-      "v1alpha1.wfm.GetTourPatternDiagnosticsRe" +
-      "q\032..api.v1alpha1.wfm.GetTourPatternDiagn" +
-      "osticsRes\"@\272\270\221\002\005\n\003\010\334\013\202\323\344\223\0020\"+/api/v1alph" +
-      "a1/wfm/gettourpatterndiagnostics:\001*\022\311\001\n\034" +
-      "UpsertTourPatternWithMembers\0221.api.v1alp" +
-      "ha1.wfm.UpsertTourPatternWithMembersReq\032" +
-      "1.api.v1alpha1.wfm.UpsertTourPatternWith" +
-      "MembersRes\"C\272\270\221\002\005\n\003\010\334\013\202\323\344\223\0023\"./api/v1alp" +
-      "ha1/wfm/upserttourpatternwithmembers:\001*\022" +
-      "\221\001\n\016GetTourPattern\022#.api.v1alpha1.wfm.Ge" +
-      "tTourPatternReq\032#.api.v1alpha1.wfm.GetTo" +
-      "urPatternRes\"5\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002%\" /api/v1a" +
-      "lpha1/wfm/gettourpattern:\001*\022\235\001\n\021DeleteTo" +
-      "urPattern\022&.api.v1alpha1.wfm.DeleteTourP" +
-      "atternReq\032&.api.v1alpha1.wfm.DeleteTourP" +
-      "atternRes\"8\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002(\"#/api/v1alph" +
-      "a1/wfm/deletetourpattern:\001*\022\255\001\n\025CreateTo" +
-      "urWeekPattern\022*.api.v1alpha1.wfm.CreateT" +
-      "ourWeekPatternReq\032*.api.v1alpha1.wfm.Cre" +
-      "ateTourWeekPatternRes\"<\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002,\"" +
-      "\'/api/v1alpha1/wfm/createtourweekpattern" +
-      ":\001*\022\251\001\n\024ListTourWeekPatterns\022).api.v1alp" +
-      "ha1.wfm.ListTourWeekPatternsReq\032).api.v1" +
-      "alpha1.wfm.ListTourWeekPatternsRes\";\272\270\221\002" +
-      "\005\n\003\010\334\013\202\323\344\223\002+\"&/api/v1alpha1/wfm/listtour" +
-      "weekpatterns:\001*\022\261\001\n\026DeleteTourWeekPatter" +
-      "ns\022+.api.v1alpha1.wfm.DeleteTourWeekPatt" +
-      "ernsReq\032+.api.v1alpha1.wfm.DeleteTourWee" +
-      "kPatternsRes\"=\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002-\"(/api/v1a" +
-      "lpha1/wfm/deletetourweekpatterns:\001*\022\315\001\n\035" +
-      "CreateTourShiftInstanceConfig\0222.api.v1al" +
-      "pha1.wfm.CreateTourShiftInstanceConfigRe" +
-      "q\0322.api.v1alpha1.wfm.CreateTourShiftInst" +
-      "anceConfigRes\"D\272\270\221\002\005\n\003\010\334\013\202\323\344\223\0024\"//api/v1" +
-      "alpha1/wfm/createtourshiftinstanceconfig" +
-      ":\001*\022\316\001\n\035UpdateTourShiftInstanceConfig\0222." +
-      "api.v1alpha1.wfm.UpdateTourShiftInstance" +
-      "ConfigReq\0322.api.v1alpha1.wfm.UpdateTourS" +
-      "hiftInstanceConfigRes\"E\272\270\221\002\005\n\003\010\334\013\202\323\344\223\0025\"" +
-      "0/api/v1alpha1/wfm/updatetourshiftinstan" +
-      "ceconfigs:\001*\022\311\001\n\034ListTourShiftInstanceCo" +
-      "nfigs\0221.api.v1alpha1.wfm.ListTourShiftIn" +
-      "stanceConfigsReq\0321.api.v1alpha1.wfm.List" +
-      "TourShiftInstanceConfigsRes\"C\272\270\221\002\005\n\003\010\334\013\202" +
-      "\323\344\223\0023\"./api/v1alpha1/wfm/listtourshiftin" +
-      "stanceconfigs:\001*\022\321\001\n\036DeleteTourShiftInst" +
-      "anceConfigs\0223.api.v1alpha1.wfm.DeleteTou" +
-      "rShiftInstanceConfigsReq\0323.api.v1alpha1." +
-      "wfm.DeleteTourShiftInstanceConfigsRes\"E\272" +
+      "gnosticR\013diagnostics\022]\n\030scheduling_resul" +
+      "t_metric\030\003 \001(\0132#.api.commons.SchedulingR" +
+      "esultMetricR\026schedulingResultMetric\"\232\004\n\027" +
+      "PublishDraftScheduleReq\022,\n\022draft_schedul" +
+      "e_sid\030\001 \001(\003R\020draftScheduleSid\022C\n\rnode_se" +
+      "lector\030\002 \001(\0132\036.api.v1alpha1.wfm.ParentEn" +
+      "tityR\014nodeSelector\022A\n\016datetime_range\030\003 \001" +
+      "(\0132\032.api.commons.DatetimeRangeR\rdatetime" +
+      "Range\0226\n\027include_shift_instances\030\004 \001(\010R\025" +
+      "includeShiftInstances\0224\n\026include_shift_t" +
+      "emplate\030\005 \001(\010R\024includeShiftTemplate\0224\n\026i" +
+      "nclude_shift_segments\030\006 \001(\010R\024includeShif" +
+      "tSegments\022>\n\033include_scheduling_activity" +
+      "\030\007 \001(\010R\031includeSchedulingActivity\022)\n\020inc" +
+      "lude_activity\030\010 \001(\010R\017includeActivity\022:\n\031" +
+      "ignore_diagnostics_errors\030\t \001(\010R\027ignoreD" +
+      "iagnosticsErrors\"\255\001\n\027PublishDraftSchedul" +
+      "eRes\022R\n\022published_schedule\030\001 \001(\0132#.api.v" +
+      "1alpha1.wfm.PublishedScheduleR\021published" +
+      "Schedule\022>\n\013diagnostics\030\002 \003(\0132\034.api.v1al" +
+      "pha1.wfm.DiagnosticR\013diagnostics\"\255\001\n\025Res" +
+      "etDraftScheduleReq\022,\n\022draft_schedule_sid" +
+      "\030\001 \001(\003R\020draftScheduleSid\022A\n\016datetime_ran" +
+      "ge\030\002 \001(\0132\032.api.commons.DatetimeRangeR\rda" +
+      "tetimeRange\022#\n\runlocked_only\030\003 \001(\010R\014unlo" +
+      "ckedOnly\"W\n\025ResetDraftScheduleRes\022>\n\013dia" +
+      "gnostics\030\001 \003(\0132\034.api.v1alpha1.wfm.Diagno" +
+      "sticR\013diagnostics\"\332\003\n\023GetDraftScheduleRe" +
+      "q\022,\n\022draft_schedule_sid\030\001 \001(\003R\020draftSche" +
+      "duleSid\022A\n\016datetime_range\030\002 \001(\0132\032.api.co" +
+      "mmons.DatetimeRangeR\rdatetimeRange\0226\n\027in" +
+      "clude_shift_instances\030\003 \001(\010R\025includeShif" +
+      "tInstances\0224\n\026include_shift_template\030\004 \001" +
+      "(\010R\024includeShiftTemplate\0224\n\026include_shif" +
+      "t_segments\030\005 \001(\010R\024includeShiftSegments\022>" +
+      "\n\033include_scheduling_activity\030\006 \001(\010R\031inc" +
+      "ludeSchedulingActivity\022)\n\020include_activi" +
+      "ty\030\007 \001(\010R\017includeActivity\022C\n\rnode_select" +
+      "or\030\010 \001(\0132\036.api.v1alpha1.wfm.ParentEntity" +
+      "R\014nodeSelector\"]\n\023GetDraftScheduleRes\022F\n" +
+      "\016draft_schedule\030\001 \001(\0132\037.api.v1alpha1.wfm" +
+      ".DraftScheduleR\rdraftSchedule\"Z\n\025ListDra" +
+      "ftSchedulesReq\022A\n\016datetime_range\030\001 \001(\0132\032" +
+      ".api.commons.DatetimeRangeR\rdatetimeRang" +
+      "e\"a\n\025ListDraftSchedulesRes\022H\n\017draft_sche" +
+      "dules\030\001 \003(\0132\037.api.v1alpha1.wfm.DraftSche" +
+      "duleR\016draftSchedules\"\361\002\n\020ClearScheduleRe" +
+      "q\022J\n\021schedule_selector\030\001 \001(\0132\035.api.commo" +
+      "ns.ScheduleSelectorR\020scheduleSelector\022C\n" +
+      "\rnode_selector\030\002 \001(\0132\036.api.v1alpha1.wfm." +
+      "ParentEntityR\014nodeSelector\022A\n\016datetime_r" +
+      "ange\030\003 \001(\0132\032.api.commons.DatetimeRangeR\r" +
+      "datetimeRange\0222\n\025invert_datetime_range\030\004" +
+      " \001(\010R\023invertDatetimeRange\0220\n\024start_datet" +
+      "imes_only\030\005 \001(\010R\022startDatetimesOnly\022#\n\rd" +
+      "elete_locked\030\006 \001(\010R\014deleteLocked\"R\n\020Clea" +
+      "rScheduleRes\022>\n\013diagnostics\030\001 \003(\0132\034.api." +
+      "v1alpha1.wfm.DiagnosticR\013diagnostics\"F\n\026" +
+      "DeleteDraftScheduleReq\022,\n\022draft_schedule" +
+      "_sid\030\001 \001(\003R\020draftScheduleSid\"\030\n\026DeleteDr" +
+      "aftScheduleRes\"\243\002\n\032ListShiftInstancesByS" +
+      "idReq\022.\n\023shift_instance_sids\030\001 \003(\003R\021shif" +
+      "tInstanceSids\0224\n\026include_shift_segments\030" +
+      "\002 \001(\010R\024includeShiftSegments\0224\n\026include_s" +
+      "hift_template\030\003 \001(\010R\024includeShiftTemplat" +
+      "e\022>\n\033include_scheduling_activity\030\004 \001(\010R\031" +
+      "includeSchedulingActivity\022)\n\020include_act" +
+      "ivity\030\005 \001(\010R\017includeActivity\"f\n\032ListShif" +
+      "tInstancesBySidRes\022H\n\017shift_instances\030\001 " +
+      "\003(\0132\037.api.v1alpha1.wfm.ShiftInstanceR\016sh" +
+      "iftInstances\"\277\003\n\031CopyScheduleToScheduleR" +
+      "eq\022W\n\030source_schedule_selector\030\001 \001(\0132\035.a" +
+      "pi.commons.ScheduleSelectorR\026sourceSched" +
+      "uleSelector\022a\n\035destination_schedule_sele" +
+      "ctor\030\002 \001(\0132\035.api.commons.ScheduleSelecto" +
+      "rR\033destinationScheduleSelector\022C\n\rnode_s" +
+      "elector\030\003 \001(\0132\036.api.v1alpha1.wfm.ParentE" +
+      "ntityR\014nodeSelector\022A\n\016datetime_range\030\004 " +
+      "\001(\0132\032.api.commons.DatetimeRangeR\rdatetim" +
+      "eRange\0220\n\024start_datetimes_only\030\005 \001(\010R\022st" +
+      "artDatetimesOnly\022,\n\022overlap_as_warning\030\006" +
+      " \001(\010R\020overlapAsWarning\"[\n\031CopyScheduleTo" +
+      "ScheduleRes\022>\n\013diagnostics\030\001 \003(\0132\034.api.v" +
+      "1alpha1.wfm.DiagnosticR\013diagnostics\"\206\003\n\026" +
+      "CreateShiftInstanceReq\022,\n\022draft_schedule" +
+      "_sid\030\001 \001(\003R\020draftScheduleSid\022,\n\022shift_te" +
+      "mplate_sid\030\002 \001(\003R\020shiftTemplateSid\022A\n\016st" +
+      "art_datetime\030\003 \001(\0132\032.google.protobuf.Tim" +
+      "estampR\rstartDatetime\022(\n\020width_in_minute" +
+      "s\030\004 \001(\005R\016widthInMinutes\022\033\n\tis_locked\030\005 \001" +
+      "(\010R\010isLocked\022?\n\rwfm_agent_sid\030\006 \001(\0132\033.go" +
+      "ogle.protobuf.Int64ValueR\013wfmAgentSid\022E\n" +
+      "\014metric_types\030\007 \003(\0162\".api.commons.Perfor" +
+      "manceMetricTypeR\013metricTypes\"\266\001\n\026CreateS" +
+      "hiftInstanceRes\022F\n\016shift_instance\030\001 \001(\0132" +
+      "\037.api.v1alpha1.wfm.ShiftInstanceR\rshiftI" +
+      "nstance\022T\n\023performance_metrics\030\002 \003(\0132#.a" +
+      "pi.v1alpha1.wfm.PerformanceMetricR\022perfo" +
+      "rmanceMetrics\"\374\001\n\030CreateShiftInstanceV2R" +
+      "eq\022,\n\022draft_schedule_sid\030\001 \001(\003R\020draftSch" +
+      "eduleSid\022,\n\022shift_template_sid\030\002 \001(\003R\020sh" +
+      "iftTemplateSid\022A\n\016start_datetime\030\003 \001(\0132\032" +
+      ".google.protobuf.TimestampR\rstartDatetim" +
+      "e\022\033\n\tis_locked\030\004 \001(\010R\010isLocked\022$\n\016wfm_ag" +
+      "ent_sids\030\005 \003(\003R\014wfmAgentSids\"\244\001\n\030CreateS" +
+      "hiftInstanceV2Res\022H\n\017shift_instances\030\001 \003" +
+      "(\0132\037.api.v1alpha1.wfm.ShiftInstanceR\016shi" +
+      "ftInstances\022>\n\013diagnostics\030\002 \003(\0132\034.api.v" +
+      "1alpha1.wfm.DiagnosticR\013diagnostics\"\223\001\n\025" +
+      "SwapShiftInstancesReq\022$\n\016wfm_agent_sid1\030" +
+      "\001 \001(\003R\014wfmAgentSid1\022$\n\016wfm_agent_sid2\030\002 " +
+      "\001(\003R\014wfmAgentSid2\022.\n\023shift_instance_sids" +
+      "\030\003 \003(\003R\021shiftInstanceSids\"\241\001\n\025SwapShiftI" +
+      "nstancesRes\022H\n\017shift_instances\030\001 \003(\0132\037.a" +
+      "pi.v1alpha1.wfm.ShiftInstanceR\016shiftInst" +
+      "ances\022>\n\013diagnostics\030\002 \003(\0132\034.api.v1alpha" +
+      "1.wfm.DiagnosticR\013diagnostics\"\330\002\n\026Update" +
+      "ShiftInstanceReq\022,\n\022shift_instance_sid\030\001" +
+      " \001(\003R\020shiftInstanceSid\022A\n\016start_datetime" +
+      "\030\002 \001(\0132\032.google.protobuf.TimestampR\rstar" +
+      "tDatetime\022\033\n\tis_locked\030\003 \001(\010R\010isLocked\022(" +
+      "\n\020width_in_minutes\030\004 \001(\005R\016widthInMinutes" +
+      "\022?\n\rwfm_agent_sid\030\005 \001(\0132\033.google.protobu" +
+      "f.Int64ValueR\013wfmAgentSid\022E\n\014metric_type" +
+      "s\030\006 \003(\0162\".api.commons.PerformanceMetricT" +
+      "ypeR\013metricTypes\"\266\001\n\026UpdateShiftInstance" +
+      "Res\022F\n\016shift_instance\030\001 \001(\0132\037.api.v1alph" +
+      "a1.wfm.ShiftInstanceR\rshiftInstance\022T\n\023p" +
+      "erformance_metrics\030\002 \003(\0132#.api.v1alpha1." +
+      "wfm.PerformanceMetricR\022performanceMetric" +
+      "s\"\366\001\n\030UpdateShiftInstanceV2Req\022,\n\022shift_" +
+      "instance_sid\030\001 \001(\003R\020shiftInstanceSid\022A\n\016" +
+      "start_datetime\030\002 \001(\0132\032.google.protobuf.T" +
+      "imestampR\rstartDatetime\022(\n\020width_in_minu" +
+      "tes\030\003 \001(\005R\016widthInMinutes\022\"\n\rwfm_agent_s" +
+      "id\030\004 \001(\003R\013wfmAgentSid\022\033\n\tis_locked\030\005 \001(\010" +
+      "R\010isLocked\"\242\001\n\030UpdateShiftInstanceV2Res\022" +
+      "F\n\016shift_instance\030\001 \001(\0132\037.api.v1alpha1.w" +
+      "fm.ShiftInstanceR\rshiftInstance\022>\n\013diagn" +
+      "ostics\030\002 \003(\0132\034.api.v1alpha1.wfm.Diagnost" +
+      "icR\013diagnostics\"\321\001\n\037CopyShiftInstancesTo" +
+      "ScheduleReq\022P\n\024destination_schedule\030\001 \001(" +
+      "\0132\035.api.commons.ScheduleSelectorR\023destin" +
+      "ationSchedule\022.\n\023shift_instance_sids\030\002 \003" +
+      "(\003R\021shiftInstanceSids\022,\n\022overlap_as_warn" +
+      "ing\030\003 \001(\010R\020overlapAsWarning\"a\n\037CopyShift" +
+      "InstancesToScheduleRes\022>\n\013diagnostics\030\001 " +
+      "\003(\0132\034.api.v1alpha1.wfm.DiagnosticR\013diagn" +
+      "ostics\"\325\001\n ListShiftInstanceSidsForAgent" +
+      "Req\022J\n\021schedule_selector\030\001 \001(\0132\035.api.com" +
+      "mons.ScheduleSelectorR\020scheduleSelector\022" +
+      "A\n\016datetime_range\030\002 \001(\0132\032.api.commons.Da" +
+      "tetimeRangeR\rdatetimeRange\022\"\n\rwfm_agent_" +
+      "sid\030\003 \001(\003R\013wfmAgentSid\"R\n ListShiftInsta" +
+      "nceSidsForAgentRes\022.\n\023shift_instance_sid" +
+      "s\030\001 \003(\003R\021shiftInstanceSids\"\304\001\n\'ListShift" +
+      "SegmentsByShiftInstanceSidsReq\022.\n\023shift_" +
+      "instance_sids\030\001 \003(\003R\021shiftInstanceSids\022>" +
+      "\n\033include_scheduling_activity\030\002 \001(\010R\031inc" +
+      "ludeSchedulingActivity\022)\n\020include_activi" +
+      "ty\030\003 \001(\010R\017includeActivity\"p\n\'ListShiftSe" +
+      "gmentsByShiftInstanceSidsRes\022E\n\016shift_se" +
+      "gments\030\001 \003(\0132\036.api.v1alpha1.wfm.ShiftSeg" +
+      "mentR\rshiftSegments\"\320\001\n\032PerformanceMetri" +
+      "cParameter\022C\n\013metric_type\030\001 \001(\0162\".api.co" +
+      "mmons.PerformanceMetricTypeR\nmetricType\022" +
+      "m\n%service_level_target_duration_seconds" +
+      "\030\002 \001(\0132\033.google.protobuf.Int64ValueR!ser" +
+      "viceLevelTargetDurationSeconds\"\374\002\n\030GetPe" +
+      "rformanceMetricsReq\022J\n\021schedule_selector" +
+      "\030\001 \001(\0132\035.api.commons.ScheduleSelectorR\020s" +
+      "cheduleSelector\022C\n\rnode_selector\030\002 \001(\0132\036" +
+      ".api.v1alpha1.wfm.ParentEntityR\014nodeSele" +
+      "ctor\022A\n\016datetime_range\030\003 \001(\0132\032.api.commo" +
+      "ns.DatetimeRangeR\rdatetimeRange\022Q\n\rmetri" +
+      "c_params\030\004 \003(\0132,.api.v1alpha1.wfm.Perfor" +
+      "manceMetricParameterR\014metricParams\0229\n\031in" +
+      "terval_width_in_minutes\030\005 \001(\005R\026intervalW" +
+      "idthInMinutes\"p\n\030GetPerformanceMetricsRe" +
+      "s\022T\n\023performance_metrics\030\001 \003(\0132#.api.v1a" +
+      "lpha1.wfm.PerformanceMetricR\022performance" +
+      "Metrics\"\221\003\n\020SchedulingTarget\0222\n\025scheduli" +
+      "ng_target_sid\030\001 \001(\003R\023schedulingTargetSid" +
+      "\022W\n\026scheduling_target_type\030\002 \001(\0162!.api.c" +
+      "ommons.SchedulingTargetTypeR\024schedulingT" +
+      "argetType\022@\n\034scheduling_target_percentag" +
+      "e\030\003 \001(\002R\032schedulingTargetPercentage\022m\n%s" +
+      "ervice_level_target_duration_seconds\030\004 \001" +
+      "(\0132\033.google.protobuf.Int64ValueR!service" +
+      "LevelTargetDurationSeconds\022?\n\013node_entit" +
+      "y\030\005 \001(\0132\036.api.v1alpha1.wfm.ParentEntityR" +
+      "\nnodeEntity\"\235\001\n\026SetSchedulingTargetReq\022O" +
+      "\n\021scheduling_target\030\001 \001(\0132\".api.v1alpha1" +
+      ".wfm.SchedulingTargetR\020schedulingTarget\022" +
+      "2\n\025schedule_scenario_sid\030\002 \001(\003R\023schedule" +
+      "ScenarioSid\"L\n\026SetSchedulingTargetRes\0222\n" +
+      "\025scheduling_target_sid\030\001 \001(\003R\023scheduling" +
+      "TargetSid\"]\n\026GetSchedulingTargetReq\022C\n\rn" +
+      "ode_selector\030\001 \001(\0132\036.api.v1alpha1.wfm.Pa" +
+      "rentEntityR\014nodeSelector\"\270\002\n\026GetScheduli" +
+      "ngTargetRes\022b\n\033inherited_scheduling_targ" +
+      "et\030\001 \001(\0132\".api.v1alpha1.wfm.SchedulingTa" +
+      "rgetR\031inheritedSchedulingTarget\022V\n\025own_s" +
+      "cheduling_target\030\002 \001(\0132\".api.v1alpha1.wf" +
+      "m.SchedulingTargetR\023ownSchedulingTarget\022" +
+      "b\n\033resulting_scheduling_target\030\003 \001(\0132\".a" +
+      "pi.v1alpha1.wfm.SchedulingTargetR\031result" +
+      "ingSchedulingTarget\"`\n\031DeleteSchedulingT" +
+      "argetReq\022C\n\rnode_selector\030\001 \001(\0132\036.api.v1" +
+      "alpha1.wfm.ParentEntityR\014nodeSelector\"\033\n" +
+      "\031DeleteSchedulingTargetRes\"\037\n\035GetDefault" +
+      "SchedulingTargetReq\"p\n\035GetDefaultSchedul" +
+      "ingTargetRes\022O\n\021scheduling_target\030\001 \001(\0132" +
+      "\".api.v1alpha1.wfm.SchedulingTargetR\020sch" +
+      "edulingTarget\"p\n\035SetDefaultSchedulingTar" +
+      "getReq\022O\n\021scheduling_target\030\001 \001(\0132\".api." +
+      "v1alpha1.wfm.SchedulingTargetR\020schedulin" +
+      "gTarget\"\037\n\035SetDefaultSchedulingTargetRes" +
+      "\"\342\001\n\035ListRequiredCallsIntervalsReq\022C\n\rno" +
+      "de_selector\030\001 \001(\0132\036.api.v1alpha1.wfm.Par" +
+      "entEntityR\014nodeSelector\022A\n\016datetime_rang" +
+      "e\030\002 \001(\0132\032.api.commons.DatetimeRangeR\rdat" +
+      "etimeRange\0229\n\031interval_width_in_minutes\030" +
+      "\003 \001(\005R\026intervalWidthInMinutes\"\275\001\n\035ListRe" +
+      "quiredCallsIntervalsRes\0229\n\031interval_widt" +
+      "h_in_minutes\030\001 \001(\005R\026intervalWidthInMinut" +
+      "es\022a\n\030required_calls_intervals\030\002 \003(\0132\'.a" +
+      "pi.v1alpha1.wfm.RequiredCallsIntervalR\026r" +
+      "equiredCallsIntervals\"\273\002\n\026TourShiftSegme" +
+      "ntConfig\022D\n\035tour_shift_segment_config_si" +
+      "d\030\001 \001(\003B\0020\001R\031tourShiftSegmentConfigSid\022F" +
+      "\n\036tour_shift_instance_config_sid\030\002 \001(\003B\002" +
+      "0\001R\032tourShiftInstanceConfigSid\0221\n\025start_" +
+      "minute_in_shift\030\003 \001(\005R\022startMinuteInShif" +
+      "t\022(\n\020width_in_minutes\030\004 \001(\005R\016widthInMinu" +
+      "tes\0226\n\027scheduling_activity_sid\030\005 \001(\003R\025sc" +
+      "hedulingActivitySid\"\347\002\n\027TourShiftInstanc" +
+      "eConfig\022F\n\036tour_shift_instance_config_si" +
+      "d\030\001 \001(\003B\0020\001R\032tourShiftInstanceConfigSid\022" +
+      "5\n\025tour_week_pattern_sid\030\002 \001(\003B\0020\001R\022tour" +
+      "WeekPatternSid\022/\n\024start_minute_in_week\030\003" +
+      " \001(\005R\021startMinuteInWeek\022(\n\020width_in_minu" +
+      "tes\030\004 \001(\005R\016widthInMinutes\022r\n!member_tour" +
+      "_shift_segment_configs\030\005 \003(\0132(.api.v1alp" +
+      "ha1.wfm.TourShiftSegmentConfigR\035memberTo" +
+      "urShiftSegmentConfigs\"\235\002\n\017TourWeekPatter" +
+      "n\0225\n\025tour_week_pattern_sid\030\001 \001(\003B\0020\001R\022to" +
+      "urWeekPatternSid\022,\n\020tour_pattern_sid\030\002 \001" +
+      "(\003B\0020\001R\016tourPatternSid\022.\n\023week_pattern_n" +
+      "umber\030\003 \001(\005R\021weekPatternNumber\022u\n\"member" +
+      "_tour_shift_instance_configs\030\004 \003(\0132).api" +
+      ".v1alpha1.wfm.TourShiftInstanceConfigR\036m" +
+      "emberTourShiftInstanceConfigs\"\341\002\n\023TourAg" +
+      "entCollection\022=\n\031tour_agent_collection_s" +
+      "id\030\001 \001(\003B\0020\001R\026tourAgentCollectionSid\022,\n\020" +
+      "tour_pattern_sid\030\002 \001(\003B\0020\001R\016tourPatternS" +
+      "id\0223\n\026min_agents_to_schedule\030\003 \001(\005R\023minA" +
+      "gentsToSchedule\0223\n\026max_agents_to_schedul" +
+      "e\030\004 \001(\005R\023maxAgentsToSchedule\0229\n\031first_we" +
+      "ek_pattern_number\030\005 \001(\005R\026firstWeekPatter" +
+      "nNumber\022\022\n\004name\030\006 \001(\tR\004name\022$\n\016wfm_agent" +
+      "_sids\030\007 \003(\003R\014wfmAgentSids\"\261\002\n\013TourPatter" +
+      "n\022,\n\020tour_pattern_sid\030\001 \001(\003B\0020\001R\016tourPat" +
+      "ternSid\022,\n\022shift_template_sid\030\002 \001(\003R\020shi" +
+      "ftTemplateSid\022\\\n\031member_tour_week_patter" +
+      "ns\030\003 \003(\0132!.api.v1alpha1.wfm.TourWeekPatt" +
+      "ernR\026memberTourWeekPatterns\022h\n\035member_to" +
+      "ur_agent_collections\030\004 \003(\0132%.api.v1alpha" +
+      "1.wfm.TourAgentCollectionR\032memberTourAge" +
+      "ntCollections\"D\n\024CreateTourPatternReq\022,\n" +
+      "\022shift_template_sid\030\001 \001(\003R\020shiftTemplate" +
+      "Sid\"D\n\024CreateTourPatternRes\022,\n\020tour_patt" +
+      "ern_sid\030\001 \001(\003B\0020\001R\016tourPatternSid\"`\n\034Get" +
+      "TourPatternDiagnosticsReq\022@\n\014tour_patter" +
+      "n\030\001 \001(\0132\035.api.v1alpha1.wfm.TourPatternR\013" +
+      "tourPattern\"^\n\034GetTourPatternDiagnostics" +
+      "Res\022>\n\013diagnostics\030\001 \003(\0132\034.api.v1alpha1." +
+      "wfm.DiagnosticR\013diagnostics\"c\n\037UpsertTou" +
+      "rPatternWithMembersReq\022@\n\014tour_pattern\030\001" +
+      " \001(\0132\035.api.v1alpha1.wfm.TourPatternR\013tou" +
+      "rPattern\"\243\001\n\037UpsertTourPatternWithMember" +
+      "sRes\022@\n\014tour_pattern\030\001 \001(\0132\035.api.v1alpha" +
+      "1.wfm.TourPatternR\013tourPattern\022>\n\013diagno" +
+      "stics\030\002 \003(\0132\034.api.v1alpha1.wfm.Diagnosti" +
+      "cR\013diagnostics\"A\n\021GetTourPatternReq\022,\n\022s" +
+      "hift_template_sid\030\001 \001(\003R\020shiftTemplateSi" +
+      "d\"U\n\021GetTourPatternRes\022@\n\014tour_pattern\030\001" +
+      " \001(\0132\035.api.v1alpha1.wfm.TourPatternR\013tou" +
+      "rPattern\"D\n\024DeleteTourPatternReq\022,\n\020tour" +
+      "_pattern_sid\030\001 \001(\003B\0020\001R\016tourPatternSid\"\026" +
+      "\n\024DeleteTourPatternRes\"H\n\030CreateTourWeek" +
+      "PatternReq\022,\n\020tour_pattern_sid\030\001 \001(\003B\0020\001" +
+      "R\016tourPatternSid\"Q\n\030CreateTourWeekPatter" +
+      "nRes\0225\n\025tour_week_pattern_sid\030\001 \001(\003B\0020\001R" +
+      "\022tourWeekPatternSid\"G\n\027ListTourWeekPatte" +
+      "rnsReq\022,\n\020tour_pattern_sid\030\001 \001(\003B\0020\001R\016to" +
+      "urPatternSid\"j\n\027ListTourWeekPatternsRes\022" +
+      "O\n\022tour_week_patterns\030\001 \003(\0132!.api.v1alph" +
+      "a1.wfm.TourWeekPatternR\020tourWeekPatterns" +
+      "\"T\n\031DeleteTourWeekPatternsReq\0227\n\026tour_we" +
+      "ek_pattern_sids\030\001 \003(\003B\0020\001R\023tourWeekPatte" +
+      "rnSids\"\033\n\031DeleteTourWeekPatternsRes\"\212\001\n " +
+      "CreateTourShiftInstanceConfigReq\022f\n\032tour" +
+      "_shift_instance_config\030\001 \001(\0132).api.v1alp" +
+      "ha1.wfm.TourShiftInstanceConfigR\027tourShi" +
+      "ftInstanceConfig\"j\n CreateTourShiftInsta" +
+      "nceConfigRes\022F\n\036tour_shift_instance_conf" +
+      "ig_sid\030\001 \001(\003B\0020\001R\032tourShiftInstanceConfi" +
+      "gSid\"\212\001\n UpdateTourShiftInstanceConfigRe" +
+      "q\022f\n\032tour_shift_instance_config\030\001 \001(\0132)." +
+      "api.v1alpha1.wfm.TourShiftInstanceConfig" +
+      "R\027tourShiftInstanceConfig\"\"\n UpdateTourS" +
+      "hiftInstanceConfigRes\"Z\n\037ListTourShiftIn" +
+      "stanceConfigsReq\0227\n\026tour_week_pattern_si" +
+      "ds\030\001 \003(\003B\0020\001R\023tourWeekPatternSids\"\213\001\n\037Li" +
+      "stTourShiftInstanceConfigsRes\022h\n\033tour_sh" +
+      "ift_instance_configs\030\001 \003(\0132).api.v1alpha" +
+      "1.wfm.TourShiftInstanceConfigR\030tourShift" +
+      "InstanceConfigs\"m\n!DeleteTourShiftInstan" +
+      "ceConfigsReq\022H\n\037tour_shift_instance_conf" +
+      "ig_sids\030\001 \003(\003B\0020\001R\033tourShiftInstanceConf" +
+      "igSids\"#\n!DeleteTourShiftInstanceConfigs" +
+      "Res\"\206\001\n\037CreateTourShiftSegmentConfigReq\022" +
+      "c\n\031tour_shift_segment_config\030\001 \001(\0132(.api" +
+      ".v1alpha1.wfm.TourShiftSegmentConfigR\026to" +
+      "urShiftSegmentConfig\"g\n\037CreateTourShiftS" +
+      "egmentConfigRes\022D\n\035tour_shift_segment_co" +
+      "nfig_sid\030\001 \001(\003B\0020\001R\031tourShiftSegmentConf" +
+      "igSid\"\206\001\n\037UpdateTourShiftSegmentConfigRe" +
+      "q\022c\n\031tour_shift_segment_config\030\001 \001(\0132(.a" +
+      "pi.v1alpha1.wfm.TourShiftSegmentConfigR\026" +
+      "tourShiftSegmentConfig\"!\n\037UpdateTourShif" +
+      "tSegmentConfigRes\"j\n\036ListTourShiftSegmen" +
+      "tConfigsReq\022H\n\037tour_shift_instance_confi" +
+      "g_sids\030\001 \003(\003B\0020\001R\033tourShiftInstanceConfi" +
+      "gSids\"\207\001\n\036ListTourShiftSegmentConfigsRes" +
+      "\022e\n\032tour_shift_segment_configs\030\001 \003(\0132(.a" +
+      "pi.v1alpha1.wfm.TourShiftSegmentConfigR\027" +
+      "tourShiftSegmentConfigs\"j\n DeleteTourShi" +
+      "ftSegmentConfigsReq\022F\n\036tour_shift_segmen" +
+      "t_config_sids\030\001 \003(\003B\0020\001R\032tourShiftSegmen" +
+      "tConfigSids\"\"\n DeleteTourShiftSegmentCon" +
+      "figsRes\"y\n\034CreateTourAgentCollectionReq\022" +
+      "Y\n\025tour_agent_collection\030\001 \001(\0132%.api.v1a" +
+      "lpha1.wfm.TourAgentCollectionR\023tourAgent" +
+      "Collection\"]\n\034CreateTourAgentCollectionR" +
+      "es\022=\n\031tour_agent_collection_sid\030\001 \001(\003B\0020" +
+      "\001R\026tourAgentCollectionSid\"y\n\034UpdateTourA" +
+      "gentCollectionReq\022Y\n\025tour_agent_collecti" +
+      "on\030\001 \001(\0132%.api.v1alpha1.wfm.TourAgentCol" +
+      "lectionR\023tourAgentCollection\"\036\n\034UpdateTo" +
+      "urAgentCollectionRes\"K\n\033ListTourAgentCol" +
+      "lectionsReq\022,\n\020tour_pattern_sid\030\001 \001(\003B\0020" +
+      "\001R\016tourPatternSid\"z\n\033ListTourAgentCollec" +
+      "tionsRes\022[\n\026tour_agent_collections\030\001 \003(\013" +
+      "2%.api.v1alpha1.wfm.TourAgentCollectionR" +
+      "\024tourAgentCollections\"`\n\035DeleteTourAgent" +
+      "CollectionsReq\022?\n\032tour_agent_collection_" +
+      "sids\030\001 \003(\003B\0020\001R\027tourAgentCollectionSids\"" +
+      "\037\n\035DeleteTourAgentCollectionsRes\"\214\001\n%Cre" +
+      "ateTourAgentCollectionWFMAgentsReq\022$\n\016wf" +
+      "m_agent_sids\030\001 \003(\003R\014wfmAgentSids\022=\n\031tour" +
+      "_agent_collection_sid\030\002 \001(\003B\0020\001R\026tourAge" +
+      "ntCollectionSid\"\'\n%CreateTourAgentCollec" +
+      "tionWFMAgentsRes\"f\n#ListTourAgentCollect",
+      "ionWFMAgentsReq\022?\n\032tour_agent_collection" +
+      "_sids\030\001 \003(\003B\0020\001R\027tourAgentCollectionSids" +
+      "\"\377\001\n#ListTourAgentCollectionWFMAgentsRes" +
+      "\022n\n\022wfm_agent_pairings\030\001 \003(\0132@.api.v1alp" +
+      "ha1.wfm.ListTourAgentCollectionWFMAgents" +
+      "Res.SidMappingR\020wfmAgentPairings\032h\n\nSidM" +
+      "apping\0224\n\024agent_collection_sid\030\001 \001(\003B\0020\001" +
+      "R\022agentCollectionSid\022$\n\016wfm_agent_sids\030\002" +
+      " \003(\003R\014wfmAgentSids\"\214\001\n%DeleteTourAgentCo" +
+      "llectionWFMAgentsReq\022$\n\016wfm_agent_sids\030\001" +
+      " \003(\003R\014wfmAgentSids\022=\n\031tour_agent_collect" +
+      "ion_sid\030\002 \001(\003B\0020\001R\026tourAgentCollectionSi" +
+      "d\"\'\n%DeleteTourAgentCollectionWFMAgentsR" +
+      "es\"\267\001\n\033GenerateTourWeekPatternsReq\0229\n\031ta" +
+      "rget_shift_template_sid\030\001 \001(\003R\026targetShi" +
+      "ftTemplateSid\022)\n\021num_weeks_in_tour\030\002 \001(\005" +
+      "R\016numWeeksInTour\0222\n\025schedule_scenario_si" +
+      "d\030\003 \001(\003R\023scheduleScenarioSid\"\256\001\n\033Generat" +
+      "eTourWeekPatternsRes\022O\n\022tour_week_patter" +
+      "ns\030\001 \003(\0132!.api.v1alpha1.wfm.TourWeekPatt" +
+      "ernR\020tourWeekPatterns\022>\n\013diagnostics\030\002 \003" +
+      "(\0132\034.api.v1alpha1.wfm.DiagnosticR\013diagno" +
+      "stics2\234\337\001\n\003WFM\022\242\001\n\021ListSkillProfiles\022&.a" +
+      "pi.v1alpha1.wfm.ListSkillProfilesReq\032&.a" +
+      "pi.v1alpha1.wfm.ListSkillProfilesRes\"=\272\270" +
+      "\221\002\n\n\003\010\334\013\n\003\010\300\014\202\323\344\223\002(\"#/api/v1alpha1/wfm/l" +
+      "istskillprofiles:\001*\022\241\001\n\022UpdateSkillProfi" +
+      "le\022\'.api.v1alpha1.wfm.UpdateSkillProfile" +
+      "Req\032\'.api.v1alpha1.wfm.UpdateSkillProfil" +
+      "eRes\"9\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002)\"$/api/v1alpha1/wf" +
+      "m/updateskillprofile:\001*\022\325\001\n\037UpdateSkillP" +
+      "rofileProficiencies\0224.api.v1alpha1.wfm.U" +
+      "pdateSkillProfileProficienciesReq\0324.api." +
+      "v1alpha1.wfm.UpdateSkillProfileProficien" +
+      "ciesRes\"F\272\270\221\002\005\n\003\010\334\013\202\323\344\223\0026\"1/api/v1alpha1" +
+      "/wfm/updateskillprofileproficiencies:\001*\022" +
+      "\232\001\n\017GetSkillProfile\022$.api.v1alpha1.wfm.G" +
+      "etSkillProfileReq\032$.api.v1alpha1.wfm.Get" +
+      "SkillProfileRes\";\272\270\221\002\n\n\003\010\334\013\n\003\010\300\014\202\323\344\223\002&\"!" +
+      "/api/v1alpha1/wfm/getskillprofile:\001*\022\252\001\n" +
+      "\023ResyncSkillProfiles\022(.api.v1alpha1.wfm." +
+      "ResyncSkillProfilesReq\032(.api.v1alpha1.wf" +
+      "m.ResyncSkillProfilesRes\"?\272\270\221\002\n\n\003\010\334\013\n\003\010\300" +
+      "\014\202\323\344\223\002*\"%/api/v1alpha1/wfm/resyncskillpr" +
+      "ofiles:\001*\022\322\001\n\035GetLastSkillProfileResyncD" +
+      "ate\0222.api.v1alpha1.wfm.GetLastSkillProfi" +
+      "leResyncDateReq\0322.api.v1alpha1.wfm.GetLa" +
+      "stSkillProfileResyncDateRes\"I\272\270\221\002\n\n\003\010\334\013\n" +
+      "\003\010\300\014\202\323\344\223\0024\"//api/v1alpha1/wfm/getlastski" +
+      "llprofileresyncdate:\001*\022\305\001\n\033UpsertForecas" +
+      "tingParameters\0220.api.v1alpha1.wfm.Upsert" +
+      "ForecastingParametersReq\0320.api.v1alpha1." +
+      "wfm.UpsertForecastingParametersRes\"B\272\270\221\002" +
+      "\005\n\003\010\334\013\202\323\344\223\0022\"-/api/v1alpha1/wfm/upsertfo" +
+      "recastingparameters:\001*\022\271\001\n\030GetForecastin" +
+      "gParameters\022-.api.v1alpha1.wfm.GetForeca" +
+      "stingParametersReq\032-.api.v1alpha1.wfm.Ge" +
+      "tForecastingParametersRes\"?\272\270\221\002\005\n\003\010\334\013\202\323\344" +
+      "\223\002/\"*/api/v1alpha1/wfm/getforecastingpar" +
+      "ameters:\001*\022\241\001\n\022ListHistoricalData\022\'.api." +
+      "v1alpha1.wfm.ListHistoricalDataReq\032\'.api" +
+      ".v1alpha1.wfm.ListHistoricalDataRes\"9\272\270\221" +
+      "\002\005\n\003\010\334\013\202\323\344\223\002)\"$/api/v1alpha1/wfm/listhis" +
+      "toricaldata:\001*\022\275\001\n\031UpsertHistoricalDataD" +
+      "elta\022..api.v1alpha1.wfm.UpsertHistorical" +
+      "DataDeltaReq\032..api.v1alpha1.wfm.UpsertHi" +
+      "storicalDataDeltaRes\"@\272\270\221\002\005\n\003\010\334\013\202\323\344\223\0020\"+" +
+      "/api/v1alpha1/wfm/upserthistoricaldatade" +
+      "lta:\001*\022\301\001\n\032UpsertHistoricalDataDeltas\022/." +
+      "api.v1alpha1.wfm.UpsertHistoricalDataDel" +
+      "tasReq\032/.api.v1alpha1.wfm.UpsertHistoric" +
+      "alDataDeltasRes\"A\272\270\221\002\005\n\003\010\334\013\202\323\344\223\0021\",/api/" +
+      "v1alpha1/wfm/upserthistoricaldatadeltas:" +
+      "\001*\022\201\001\n\nListSkills\022\037.api.v1alpha1.wfm.Lis" +
+      "tSkillsReq\032\037.api.v1alpha1.wfm.ListSkills" +
+      "Res\"1\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002!\"\034/api/v1alpha1/wfm" +
+      "/listskills:\001*\022\370\001\n\'BuildCallProfileTempl" +
+      "ateForSkillProfile\022<.api.v1alpha1.wfm.Bu" +
+      "ildCallProfileTemplateForSkillProfileReq" +
+      "\032<.api.v1alpha1.wfm.BuildCallProfileTemp" +
+      "lateForSkillProfileRes\"Q\210\002\001\272\270\221\002\005\n\003\010\334\013\202\323\344" +
+      "\223\002>\"9/api/v1alpha1/wfm/buildcallprofilet" +
+      "emplateforskillprofile:\001*\022\271\001\n\030BuildCallP" +
+      "rofileTemplate\022-.api.v1alpha1.wfm.BuildC" +
+      "allProfileTemplateReq\032-.api.v1alpha1.wfm" +
+      ".BuildCallProfileTemplateRes\"?\272\270\221\002\005\n\003\010\334\013" +
+      "\202\323\344\223\002/\"*/api/v1alpha1/wfm/buildcallprofi" +
+      "letemplate:\001*\022\340\001\n!CreateInactiveSkillPro" +
+      "fileMapping\0226.api.v1alpha1.wfm.CreateIna" +
+      "ctiveSkillProfileMappingReq\0326.api.v1alph" +
+      "a1.wfm.CreateInactiveSkillProfileMapping" +
+      "Res\"K\210\002\001\272\270\221\002\005\n\003\010\334\013\202\323\344\223\0028\"3/api/v1alpha1/" +
+      "wfm/createinactiveskillprofilemapping:\001*" +
+      "\022\201\002\n*GetAvailableRegressionForecasterMod" +
+      "elTypes\022?.api.v1alpha1.wfm.GetAvailableR" +
+      "egressionForecasterModelTypesReq\032?.api.v" +
+      "1alpha1.wfm.GetAvailableRegressionForeca" +
+      "sterModelTypesRes\"Q\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002A\"</ap" +
+      "i/v1alpha1/wfm/getavailableregressionfor" +
+      "ecastermodeltypes:\001*\022\360\001\n%DisconnectInact" +
+      "iveSkillProfileMapping\022:.api.v1alpha1.wf" +
+      "m.DisconnectInactiveSkillProfileMappingR" +
+      "eq\032:.api.v1alpha1.wfm.DisconnectInactive" +
+      "SkillProfileMappingRes\"O\210\002\001\272\270\221\002\005\n\003\010\334\013\202\323\344" +
+      "\223\002<\"7/api/v1alpha1/wfm/disconnectinactiv" +
+      "eskillprofilemapping:\001*\022\265\001\n\027CreateSkillP" +
+      "rofileGroup\022,.api.v1alpha1.wfm.CreateSki" +
+      "llProfileGroupReq\032,.api.v1alpha1.wfm.Cre" +
+      "ateSkillProfileGroupRes\">\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002" +
+      ".\")/api/v1alpha1/wfm/createskillprofileg" +
+      "roup:\001*\022\265\001\n\027UpdateSkillProfileGroup\022,.ap" +
+      "i.v1alpha1.wfm.UpdateSkillProfileGroupRe" +
+      "q\032,.api.v1alpha1.wfm.UpdateSkillProfileG" +
+      "roupRes\">\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002.\")/api/v1alpha1" +
+      "/wfm/updateskillprofilegroup:\001*\022\261\001\n\026List" +
+      "SkillProfileGroups\022+.api.v1alpha1.wfm.Li" +
+      "stSkillProfileGroupsReq\032+.api.v1alpha1.w" +
+      "fm.ListSkillProfileGroupsRes\"=\272\270\221\002\005\n\003\010\334\013" +
+      "\202\323\344\223\002-\"(/api/v1alpha1/wfm/listskillprofi" +
+      "legroups:\001*\022\345\001\n#UpdateSkillProfileGroupA" +
+      "ssociations\0228.api.v1alpha1.wfm.UpdateSki" +
+      "llProfileGroupAssociationsReq\0328.api.v1al" +
+      "pha1.wfm.UpdateSkillProfileGroupAssociat" +
+      "ionsRes\"J\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002:\"5/api/v1alpha1" +
+      "/wfm/updateskillprofilegroupassociations" +
+      ":\001*\022\301\001\n\032DeleteHistoricalDataDeltas\022/.api" +
+      ".v1alpha1.wfm.DeleteHistoricalDataDeltas" +
+      "Req\032/.api.v1alpha1.wfm.DeleteHistoricalD" +
+      "ataDeltasRes\"A\272\270\221\002\005\n\003\010\334\013\202\323\344\223\0021\",/api/v1a" +
+      "lpha1/wfm/deletehistoricaldatadeltas:\001*\022" +
+      "\251\001\n\024ListTopSkillProfiles\022).api.v1alpha1." +
+      "wfm.ListTopSkillProfilesReq\032).api.v1alph" +
+      "a1.wfm.ListTopSkillProfilesRes\";\272\270\221\002\005\n\003\010" +
+      "\334\013\202\323\344\223\002+\"&/api/v1alpha1/wfm/listtopskill" +
+      "profiles:\001*\022\255\001\n\025GetSkillProfilesCount\022*." +
+      "api.v1alpha1.wfm.GetSkillProfilesCountRe" +
+      "q\032*.api.v1alpha1.wfm.GetSkillProfilesCou" +
+      "ntRes\"<\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002,\"\'/api/v1alpha1/w" +
+      "fm/getskillprofilescount:\001*\022\304\001\n\036BuildPro" +
+      "fileForecastByInterval\0223.api.v1alpha1.wf" +
+      "m.BuildProfileForecastByIntervalReq\032$.ap" +
+      "i.v1alpha1.wfm.CallDataByInterval\"E\272\270\221\002\005" +
+      "\n\003\010\334\013\202\323\344\223\0025\"0/api/v1alpha1/wfm/buildprof" +
+      "ileforecastbyinterval:\001*0\001\022\367\001\n\'BuildProf" +
+      "ileForecastByIntervalWithStats\022<.api.v1a" +
+      "lpha1.wfm.BuildProfileForecastByInterval" +
+      "WithStatsReq\032<.api.v1alpha1.wfm.BuildPro" +
+      "fileForecastByIntervalWithStatsRes\"N\272\270\221\002" +
+      "\005\n\003\010\334\013\202\323\344\223\002>\"9/api/v1alpha1/wfm/buildpro" +
+      "fileforecastbyintervalwithstats:\001*0\001\022\255\001\n" +
+      "\025UpsertProfileForecast\022*.api.v1alpha1.wf" +
+      "m.UpsertProfileForecastReq\032*.api.v1alpha" +
+      "1.wfm.UpsertProfileForecastRes\"<\272\270\221\002\005\n\003\010" +
+      "\334\013\202\323\344\223\002,\"\'/api/v1alpha1/wfm/upsertprofil" +
+      "eforecast:\001*\022\275\001\n\031CreateCallProfileTempla" +
+      "te\022..api.v1alpha1.wfm.CreateCallProfileT" +
+      "emplateReq\032..api.v1alpha1.wfm.CreateCall" +
+      "ProfileTemplateRes\"@\272\270\221\002\005\n\003\010\334\013\202\323\344\223\0020\"+/a" +
+      "pi/v1alpha1/wfm/createcallprofiletemplat" +
+      "e:\001*\022\275\001\n\031DeleteCallProfileTemplate\022..api" +
+      ".v1alpha1.wfm.DeleteCallProfileTemplateR" +
+      "eq\032..api.v1alpha1.wfm.DeleteCallProfileT" +
+      "emplateRes\"@\272\270\221\002\005\n\003\010\334\013\202\323\344\223\0020\"+/api/v1alp" +
+      "ha1/wfm/deletecallprofiletemplate:\001*\022\271\001\n" +
+      "\030CreateRegressionTemplate\022-.api.v1alpha1" +
+      ".wfm.CreateRegressionTemplateReq\032-.api.v" +
+      "1alpha1.wfm.CreateRegressionTemplateRes\"" +
+      "?\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002/\"*/api/v1alpha1/wfm/cre" +
+      "ateregressiontemplate:\001*\022\271\001\n\030DeleteRegre" +
+      "ssionTemplate\022-.api.v1alpha1.wfm.DeleteR" +
+      "egressionTemplateReq\032-.api.v1alpha1.wfm." +
+      "DeleteRegressionTemplateRes\"?\272\270\221\002\005\n\003\010\334\013\202" +
+      "\323\344\223\002/\"*/api/v1alpha1/wfm/deleteregressio" +
+      "ntemplate:\001*\022\265\001\n\027ListRegressionTemplates" +
+      "\022,.api.v1alpha1.wfm.ListRegressionTempla" +
+      "tesReq\032,.api.v1alpha1.wfm.ListRegression" +
+      "TemplatesRes\">\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002.\")/api/v1a" +
+      "lpha1/wfm/listregressiontemplates:\001*\022\331\001\n" +
+      "$ListForecastIntervalsForSkillProfile\0229." +
+      "api.v1alpha1.wfm.ListForecastIntervalsFo" +
+      "rSkillProfileReq\032$.api.v1alpha1.wfm.Call" +
+      "DataByInterval\"N\210\002\001\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002;\"6/ap" +
+      "i/v1alpha1/wfm/listforecastintervalsfors" +
+      "killprofile:\001*0\001\022\251\001\n\025ListForecastInterva" +
+      "ls\022*.api.v1alpha1.wfm.ListForecastInterv" +
+      "alsReq\032$.api.v1alpha1.wfm.CallDataByInte" +
+      "rval\"<\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002,\"\'/api/v1alpha1/wf" +
+      "m/listforecastintervals:\001*0\001\022\315\001\n!BuildRe" +
+      "gressionForecastByInterval\0226.api.v1alpha" +
+      "1.wfm.BuildRegressionForecastByIntervalR" +
+      "eq\032$.api.v1alpha1.wfm.CallDataByInterval" +
+      "\"H\272\270\221\002\005\n\003\010\334\013\202\323\344\223\0028\"3/api/v1alpha1/wfm/bu" +
+      "ildregressionforecastbyinterval:\001*0\001\022\203\002\n" +
+      "*BuildRegressionForecastByIntervalWithSt" +
+      "ats\022?.api.v1alpha1.wfm.BuildRegressionFo" +
+      "recastByIntervalWithStatsReq\032?.api.v1alp" +
+      "ha1.wfm.BuildRegressionForecastByInterva" +
+      "lWithStatsRes\"Q\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002A\"</api/v1" +
+      "alpha1/wfm/buildregressionforecastbyinte" +
+      "rvalwithstats:\001*0\001\022\271\001\n\030ListCallProfileTe" +
+      "mplates\022-.api.v1alpha1.wfm.ListCallProfi" +
+      "leTemplatesReq\032-.api.v1alpha1.wfm.ListCa" +
+      "llProfileTemplatesRes\"?\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002/\"" +
+      "*/api/v1alpha1/wfm/listcallprofiletempla" +
+      "tes:\001*\022\271\001\n\030UpsertRegressionForecast\022-.ap" +
+      "i.v1alpha1.wfm.UpsertRegressionForecastR" +
+      "eq\032-.api.v1alpha1.wfm.UpsertRegressionFo" +
+      "recastRes\"?\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002/\"*/api/v1alph" +
+      "a1/wfm/upsertregressionforecast:\001*\022\265\001\n\027U" +
+      "psertForecastDataDelta\022,.api.v1alpha1.wf" +
+      "m.UpsertForecastDataDeltaReq\032,.api.v1alp" +
+      "ha1.wfm.UpsertForecastDataDeltaRes\">\272\270\221\002" +
+      "\005\n\003\010\334\013\202\323\344\223\002.\")/api/v1alpha1/wfm/upsertfo" +
+      "recastdatadelta:\001*\022\271\001\n\030UpsertForecastDat" +
+      "aDeltas\022-.api.v1alpha1.wfm.UpsertForecas" +
+      "tDataDeltasReq\032-.api.v1alpha1.wfm.Upsert" +
+      "ForecastDataDeltasRes\"?\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002/\"" +
+      "*/api/v1alpha1/wfm/upsertforecastdatadel" +
+      "tas:\001*\022\265\001\n\027DeleteForecastIntervals\022,.api" +
+      ".v1alpha1.wfm.DeleteForecastIntervalsReq" +
+      "\032,.api.v1alpha1.wfm.DeleteForecastInterv" +
+      "alsRes\">\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002.\")/api/v1alpha1/" +
+      "wfm/deleteforecastintervals:\001*\022\355\001\n%ListH" +
+      "istoricalDataForAllSkillProfiles\022:.api.v" +
+      "1alpha1.wfm.ListHistoricalDataForAllSkil" +
+      "lProfilesReq\032:.api.v1alpha1.wfm.ListHist" +
+      "oricalDataForAllSkillProfilesRes\"L\272\270\221\002\005\n" +
+      "\003\010\334\013\202\323\344\223\002<\"7/api/v1alpha1/wfm/listhistor" +
+      "icaldataforallskillprofiles:\001*\022\261\001\n\026Build" +
+      "DOWAndMOYProfiles\022+.api.v1alpha1.wfm.Bui" +
+      "ldDOWAndMOYProfilesReq\032+.api.v1alpha1.wf" +
+      "m.BuildDOWAndMOYProfilesRes\"=\272\270\221\002\005\n\003\010\334\013\202" +
+      "\323\344\223\002-\"(/api/v1alpha1/wfm/builddowandmoyp" +
+      "rofiles:\001*\022\211\002\n,CalculateTrainingDataAver" +
+      "agesForSkillProfile\022A.api.v1alpha1.wfm.C" +
+      "alculateTrainingDataAveragesForSkillProf" +
+      "ileReq\032A.api.v1alpha1.wfm.CalculateTrain" +
+      "ingDataAveragesForSkillProfileRes\"S\272\270\221\002\005" +
+      "\n\003\010\334\013\202\323\344\223\002C\">/api/v1alpha1/wfm/calculate" +
+      "trainingdataaveragesforskillprofile:\001*\022\222" +
+      "\002\n-UpdateSkillProfileAveragesUsingHistor" +
+      "icalData\022B.api.v1alpha1.wfm.UpdateSkillP" +
+      "rofileAveragesUsingHistoricalDataReq\032B.a" +
+      "pi.v1alpha1.wfm.UpdateSkillProfileAverag" +
+      "esUsingHistoricalDataRes\"Y\272\270\221\002\n\n\003\010\334\013\n\003\010\300" +
+      "\014\202\323\344\223\002D\"?/api/v1alpha1/wfm/updateskillpr" +
+      "ofileaveragesusinghistoricaldata:\001*\022\251\001\n\024" +
+      "UpdateCallCenterNode\022).api.v1alpha1.wfm." +
+      "UpdateCallCenterNodeReq\032).api.v1alpha1.w" +
+      "fm.UpdateCallCenterNodeRes\";\272\270\221\002\005\n\003\010\334\013\202\323" +
+      "\344\223\002+\"&/api/v1alpha1/wfm/updatecallcenter" +
+      "node:\001*\022\231\001\n\020CreateClientNode\022%.api.v1alp" +
+      "ha1.wfm.CreateClientNodeReq\032%.api.v1alph" +
+      "a1.wfm.CreateClientNodeRes\"7\272\270\221\002\005\n\003\010\334\013\202\323" +
+      "\344\223\002\'\"\"/api/v1alpha1/wfm/createclientnode" +
+      ":\001*\022\231\001\n\020UpdateClientNode\022%.api.v1alpha1." +
+      "wfm.UpdateClientNodeReq\032%.api.v1alpha1.w" +
+      "fm.UpdateClientNodeRes\"7\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002\'" +
+      "\"\"/api/v1alpha1/wfm/updateclientnode:\001*\022" +
+      "\241\001\n\022CreateLocationNode\022\'.api.v1alpha1.wf" +
+      "m.CreateLocationNodeReq\032\'.api.v1alpha1.w" +
+      "fm.CreateLocationNodeRes\"9\272\270\221\002\005\n\003\010\334\013\202\323\344\223" +
+      "\002)\"$/api/v1alpha1/wfm/createlocationnode" +
+      ":\001*\022\241\001\n\022UpdateLocationNode\022\'.api.v1alpha" +
+      "1.wfm.UpdateLocationNodeReq\032\'.api.v1alph" +
+      "a1.wfm.UpdateLocationNodeRes\"9\272\270\221\002\005\n\003\010\334\013" +
+      "\202\323\344\223\002)\"$/api/v1alpha1/wfm/updatelocation" +
+      "node:\001*\022\235\001\n\021CreateProgramNode\022&.api.v1al" +
+      "pha1.wfm.CreateProgramNodeReq\032&.api.v1al" +
+      "pha1.wfm.CreateProgramNodeRes\"8\272\270\221\002\005\n\003\010\334" +
+      "\013\202\323\344\223\002(\"#/api/v1alpha1/wfm/createprogram" +
+      "node:\001*\022\234\001\n\021UpdateProgramNode\022&.api.v1al" +
+      "pha1.wfm.UpdateProgramNodeReq\032&.api.v1al" +
+      "pha1.wfm.UpdateProgramNodeRes\"7\272\270\221\002\005\n\003\010\334" +
+      "\013\202\323\344\223\002\'\"\"/api/v1alpha/wfm/updateprogramn" +
+      "ode:\001*\022\254\001\n\025ListProgramNodesBySid\022*.api.v" +
+      "1alpha1.wfm.ListProgramNodesBySidReq\032*.a" +
+      "pi.v1alpha1.wfm.ListProgramNodesBySidRes" +
+      "\";\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002+\"&/api/v1alpha/wfm/lis" +
+      "tprogramnodesbysid:\001*\022\251\001\n\024CreateConstrai" +
+      "ntRule\022).api.v1alpha1.wfm.CreateConstrai" +
+      "ntRuleReq\032).api.v1alpha1.wfm.CreateConst" +
+      "raintRuleRes\";\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002+\"&/api/v1a" +
+      "lpha1/wfm/createconstraintrule:\001*\022\251\001\n\024Up" +
+      "dateConstraintRule\022).api.v1alpha1.wfm.Up" +
+      "dateConstraintRuleReq\032).api.v1alpha1.wfm" +
+      ".UpdateConstraintRuleRes\";\272\270\221\002\005\n\003\010\334\013\202\323\344\223" +
+      "\002+\"&/api/v1alpha1/wfm/updateconstraintru" +
+      "le:\001*\022\251\001\n\024DeleteConstraintRule\022).api.v1a" +
+      "lpha1.wfm.DeleteConstraintRuleReq\032).api." +
+      "v1alpha1.wfm.DeleteConstraintRuleRes\";\272\270" +
+      "\221\002\005\n\003\010\334\013\202\323\344\223\002+\"&/api/v1alpha1/wfm/delete" +
+      "constraintrule:\001*\022\261\001\n\026CreateNonSkillActi" +
+      "vity\022+.api.v1alpha1.wfm.CreateNonSkillAc" +
+      "tivityReq\032+.api.v1alpha1.wfm.CreateNonSk" +
+      "illActivityRes\"=\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002-\"(/api/v" +
+      "1alpha1/wfm/createnonskillactivity:\001*\022\261\001" +
+      "\n\026UpdateNonSkillActivity\022+.api.v1alpha1." +
+      "wfm.UpdateNonSkillActivityReq\032+.api.v1al" +
+      "pha1.wfm.UpdateNonSkillActivityRes\"=\272\270\221\002" +
+      "\005\n\003\010\334\013\202\323\344\223\002-\"(/api/v1alpha1/wfm/updateno" +
+      "nskillactivity:\001*\022\261\001\n\026ListNonSkillActivi" +
+      "ties\022+.api.v1alpha1.wfm.ListNonSkillActi" +
+      "vitiesReq\032+.api.v1alpha1.wfm.ListNonSkil" +
+      "lActivitiesRes\"=\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002-\"(/api/v" +
+      "1alpha1/wfm/listnonskillactivities:\001*\022\331\001" +
+      "\n ListNonSkillActivityAssociations\0225.api" +
+      ".v1alpha1.wfm.ListNonSkillActivityAssoci" +
+      "ationsReq\0325.api.v1alpha1.wfm.ListNonSkil" +
+      "lActivityAssociationsRes\"G\272\270\221\002\005\n\003\010\334\013\202\323\344\223" +
+      "\0027\"2/api/v1alpha1/wfm/listnonskillactivi" +
+      "tyassociations:\001*\022\335\001\n!ListCandidateSched" +
+      "ulingActivities\0226.api.v1alpha1.wfm.ListC" +
+      "andidateSchedulingActivitiesReq\0326.api.v1" +
+      "alpha1.wfm.ListCandidateSchedulingActivi" +
+      "tiesRes\"H\272\270\221\002\005\n\003\010\334\013\202\323\344\223\0028\"3/api/v1alpha1" +
+      "/wfm/listcandidateschedulingactivities:\001" +
+      "*\022\231\001\n\020CreateAgentGroup\022%.api.v1alpha1.wf" +
+      "m.CreateAgentGroupReq\032%.api.v1alpha1.wfm" +
+      ".CreateAgentGroupRes\"7\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002\'\"\"" +
+      "/api/v1alpha1/wfm/createagentgroup:\001*\022\231\001" +
+      "\n\020UpdateAgentGroup\022%.api.v1alpha1.wfm.Up" +
+      "dateAgentGroupReq\032%.api.v1alpha1.wfm.Upd" +
+      "ateAgentGroupRes\"7\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002\'\"\"/api" +
+      "/v1alpha1/wfm/updateagentgroup:\001*\022\221\001\n\016Up" +
+      "dateWFMAgent\022#.api.v1alpha1.wfm.UpdateWF" +
+      "MAgentReq\032#.api.v1alpha1.wfm.UpdateWFMAg" +
+      "entRes\"5\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002%\" /api/v1alpha1/" +
+      "wfm/updatewfmagent:\001*\022\231\001\n\020ListAllWFMAgen" +
+      "ts\022%.api.v1alpha1.wfm.ListAllWFMAgentsRe" +
+      "q\032%.api.v1alpha1.wfm.ListAllWFMAgentsRes" +
+      "\"7\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002\'\"\"/api/v1alpha1/wfm/li" +
+      "stallwfmagents:\001*\022\261\001\n\026ListCandidateWFMAg" +
+      "ents\022+.api.v1alpha1.wfm.ListCandidateWFM" +
+      "AgentsReq\032+.api.v1alpha1.wfm.ListCandida" +
+      "teWFMAgentsRes\"=\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002-\"(/api/v" +
+      "1alpha1/wfm/listcandidatewfmagents:\001*\022\261\001" +
+      "\n\026ListUngroupedWFMAgents\022+.api.v1alpha1." +
+      "wfm.ListUngroupedWFMAgentsReq\032+.api.v1al" +
+      "pha1.wfm.ListUngroupedWFMAgentsRes\"=\272\270\221\002" +
+      "\005\n\003\010\334\013\202\323\344\223\002-\"(/api/v1alpha1/wfm/listungr" +
+      "oupedwfmagents:\001*\022\231\001\n\020ListWFMAgentSids\022%" +
+      ".api.v1alpha1.wfm.ListWFMAgentSidsReq\032%." +
+      "api.v1alpha1.wfm.ListWFMAgentSidsRes\"7\272\270" +
+      "\221\002\005\n\003\010\334\013\202\323\344\223\002\'\"\"/api/v1alpha1/wfm/listwf" +
+      "magentsids:\001*\022\355\001\n%ListWFMAgentsAssociate" +
+      "dWithAgentGroup\022:.api.v1alpha1.wfm.ListW" +
+      "FMAgentsAssociatedWithAgentGroupReq\032:.ap" +
+      "i.v1alpha1.wfm.ListWFMAgentsAssociatedWi" +
+      "thAgentGroupRes\"L\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002<\"7/api/" +
+      "v1alpha1/wfm/listwfmagentsassociatedwith" +
+      "agentgroup:\001*\022\275\001\n\031CreateWFMAgentMembersh" +
+      "ips\022..api.v1alpha1.wfm.CreateWFMAgentMem" +
+      "bershipsReq\032..api.v1alpha1.wfm.CreateWFM" +
+      "AgentMembershipsRes\"@\272\270\221\002\005\n\003\010\334\013\202\323\344\223\0020\"+/" +
+      "api/v1alpha1/wfm/createwfmagentmembershi" +
+      "ps:\001*\022\275\001\n\031DeleteWFMAgentMemberships\022..ap" +
+      "i.v1alpha1.wfm.DeleteWFMAgentMemberships" +
+      "Req\032..api.v1alpha1.wfm.DeleteWFMAgentMem" +
+      "bershipsRes\"@\272\270\221\002\005\n\003\010\334\013\202\323\344\223\0020\"+/api/v1al" +
+      "pha1/wfm/deletewfmagentmemberships:\001*\022\301\001" +
+      "\n\032DeleteWFMAgentsMemberships\022/.api.v1alp" +
+      "ha1.wfm.DeleteWFMAgentsMembershipsReq\032/." +
+      "api.v1alpha1.wfm.DeleteWFMAgentsMembersh" +
+      "ipsRes\"A\272\270\221\002\005\n\003\010\334\013\202\323\344\223\0021\",/api/v1alpha1/" +
+      "wfm/deletewfmagentsmemberships:\001*\022\255\001\n\025Bu" +
+      "ildAgentDiagnostics\022*.api.v1alpha1.wfm.B" +
+      "uildAgentDiagnosticsReq\032*.api.v1alpha1.w" +
+      "fm.BuildAgentDiagnosticsRes\"<\272\270\221\002\005\n\003\010\334\013\202" +
+      "\323\344\223\002,\"\'/api/v1alpha1/wfm/buildagentdiagn" +
+      "ostics:\001*\022\245\001\n\023CreateShiftTemplate\022(.api." +
+      "v1alpha1.wfm.CreateShiftTemplateReq\032(.ap" +
+      "i.v1alpha1.wfm.CreateShiftTemplateRes\":\272" +
+      "\270\221\002\005\n\003\010\334\013\202\323\344\223\002*\"%/api/v1alpha1/wfm/creat" +
+      "eshifttemplate:\001*\022\245\001\n\023UpdateShiftTemplat" +
+      "e\022(.api.v1alpha1.wfm.UpdateShiftTemplate" +
+      "Req\032(.api.v1alpha1.wfm.UpdateShiftTempla" +
+      "teRes\":\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002*\"%/api/v1alpha1/w" +
+      "fm/updateshifttemplate:\001*\022\271\001\n\030ListShiftT" +
+      "emplatesBySids\022-.api.v1alpha1.wfm.ListSh" +
+      "iftTemplatesBySidsReq\032-.api.v1alpha1.wfm" +
+      ".ListShiftTemplatesBySidsRes\"?\272\270\221\002\005\n\003\010\334\013" +
+      "\202\323\344\223\002/\"*/api/v1alpha1/wfm/listshifttempl" +
+      "atesbysids:\001*\022\315\001\n\035BuildShiftTemplateDiag" +
+      "nostics\0222.api.v1alpha1.wfm.BuildShiftTem" +
+      "plateDiagnosticsReq\0322.api.v1alpha1.wfm.B" +
+      "uildShiftTemplateDiagnosticsRes\"D\272\270\221\002\005\n\003" +
+      "\010\334\013\202\323\344\223\0024\"//api/v1alpha1/wfm/buildshiftt" +
+      "emplatediagnostics:\001*\022\245\001\n\023CreatePlacemen" +
+      "tRule\022(.api.v1alpha1.wfm.CreatePlacement" +
+      "RuleReq\032(.api.v1alpha1.wfm.CreatePlaceme" +
+      "ntRuleRes\":\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002*\"%/api/v1alph" +
+      "a1/wfm/createplacementrule:\001*\022\244\001\n\023Update" +
+      "PlacementRule\022(.api.v1alpha1.wfm.UpdateP" +
+      "lacementRuleReq\032(.api.v1alpha1.wfm.Updat" +
+      "ePlacementRuleRes\"9\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002)\"$/ap" +
+      "i/v1alpha/wfm/updateplacementrule:\001*\022\245\001\n" +
+      "\023DeletePlacementRule\022(.api.v1alpha1.wfm." +
+      "DeletePlacementRuleReq\032(.api.v1alpha1.wf" +
+      "m.DeletePlacementRuleRes\":\272\270\221\002\005\n\003\010\334\013\202\323\344\223",
+      "\002*\"%/api/v1alpha1/wfm/deleteplacementrul" +
+      "e:\001*\022\261\001\n\026CreateOpenTimesPattern\022+.api.v1" +
+      "alpha1.wfm.CreateOpenTimesPatternReq\032+.a" +
+      "pi.v1alpha1.wfm.CreateOpenTimesPatternRe" +
+      "s\"=\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002-\"(/api/v1alpha1/wfm/c" +
+      "reateopentimespattern:\001*\022\261\001\n\026UpdateOpenT" +
+      "imesPattern\022+.api.v1alpha1.wfm.UpdateOpe" +
+      "nTimesPatternReq\032+.api.v1alpha1.wfm.Upda" +
+      "teOpenTimesPatternRes\"=\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002-\"" +
+      "(/api/v1alpha1/wfm/updateopentimespatter" +
+      "n:\001*\022\261\001\n\026DeleteOpenTimesPattern\022+.api.v1" +
+      "alpha1.wfm.DeleteOpenTimesPatternReq\032+.a" +
+      "pi.v1alpha1.wfm.DeleteOpenTimesPatternRe" +
+      "s\"=\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002-\"(/api/v1alpha1/wfm/d" +
+      "eleteopentimespattern:\001*\022\245\001\n\023GetOpenTime" +
+      "sBitmaps\022(.api.v1alpha1.wfm.GetOpenTimes" +
+      "BitmapsReq\032(.api.v1alpha1.wfm.GetOpenTim" +
+      "esBitmapsRes\":\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002*\"%/api/v1a" +
+      "lpha1/wfm/getopentimesbitmaps:\001*\022\321\001\n\036Cre" +
+      "ateAgentAvailabilityPattern\0223.api.v1alph" +
+      "a1.wfm.CreateAgentAvailabilityPatternReq" +
+      "\0323.api.v1alpha1.wfm.CreateAgentAvailabil" +
+      "ityPatternRes\"E\272\270\221\002\005\n\003\010\334\013\202\323\344\223\0025\"0/api/v1" +
+      "alpha1/wfm/createagentavailabilitypatter" +
+      "n:\001*\022\321\001\n\036UpdateAgentAvailabilityPattern\022" +
+      "3.api.v1alpha1.wfm.UpdateAgentAvailabili" +
+      "tyPatternReq\0323.api.v1alpha1.wfm.UpdateAg" +
+      "entAvailabilityPatternRes\"E\272\270\221\002\005\n\003\010\334\013\202\323\344" +
+      "\223\0025\"0/api/v1alpha1/wfm/updateagentavaila" +
+      "bilitypattern:\001*\022\321\001\n\036DeleteAgentAvailabi" +
+      "lityPattern\0223.api.v1alpha1.wfm.DeleteAge" +
+      "ntAvailabilityPatternReq\0323.api.v1alpha1." +
+      "wfm.DeleteAgentAvailabilityPatternRes\"E\272" +
       "\270\221\002\005\n\003\010\334\013\202\323\344\223\0025\"0/api/v1alpha1/wfm/delet" +
-      "etourshiftinstanceconfigs:\001*\022\311\001\n\034CreateT" +
-      "ourShiftSegmentConfig\0221.api.v1alpha1.wfm" +
-      ".CreateTourShiftSegmentConfigReq\0321.api.v" +
-      "1alpha1.wfm.CreateTourShiftSegmentConfig" +
-      "Res\"C\272\270\221\002\005\n\003\010\334\013\202\323\344\223\0023\"./api/v1alpha1/wfm" +
-      "/createtourshiftsegmentconfig:\001*\022\311\001\n\034Upd" +
-      "ateTourShiftSegmentConfig\0221.api.v1alpha1" +
-      ".wfm.UpdateTourShiftSegmentConfigReq\0321.a" +
-      "pi.v1alpha1.wfm.UpdateTourShiftSegmentCo" +
-      "nfigRes\"C\272\270\221\002\005\n\003\010\334\013\202\323\344\223\0023\"./api/v1alpha1" +
-      "/wfm/updatetourshiftsegmentconfig:\001*\022\305\001\n" +
-      "\033ListTourShiftSegmentConfigs\0220.api.v1alp" +
-      "ha1.wfm.ListTourShiftSegmentConfigsReq\0320" +
-      ".api.v1alpha1.wfm.ListTourShiftSegmentCo" +
-      "nfigsRes\"B\272\270\221\002\005\n\003\010\334\013\202\323\344\223\0022\"-/api/v1alpha" +
-      "1/wfm/listtourshiftsegmentconfigs:\001*\022\315\001\n" +
-      "\035DeleteTourShiftSegmentConfigs\0222.api.v1a" +
-      "lpha1.wfm.DeleteTourShiftSegmentConfigsR" +
-      "eq\0322.api.v1alpha1.wfm.DeleteTourShiftSeg" +
-      "mentConfigsRes\"D\272\270\221\002\005\n\003\010\334\013\202\323\344\223\0024\"//api/v" +
-      "1alpha1/wfm/deletetourshiftsegmentconfig" +
-      "s:\001*\022\275\001\n\031CreateTourAgentCollection\022..api" +
-      ".v1alpha1.wfm.CreateTourAgentCollectionR" +
-      "eq\032..api.v1alpha1.wfm.CreateTourAgentCol" +
-      "lectionRes\"@\272\270\221\002\005\n\003\010\334\013\202\323\344\223\0020\"+/api/v1alp" +
-      "ha1/wfm/createtouragentcollection:\001*\022\275\001\n" +
-      "\031UpdateTourAgentCollection\022..api.v1alpha" +
-      "1.wfm.UpdateTourAgentCollectionReq\032..api" +
-      ".v1alpha1.wfm.UpdateTourAgentCollectionR" +
-      "es\"@\272\270\221\002\005\n\003\010\334\013\202\323\344\223\0020\"+/api/v1alpha1/wfm/" +
-      "updatetouragentcollection:\001*\022\271\001\n\030ListTou" +
-      "rAgentCollections\022-.api.v1alpha1.wfm.Lis" +
-      "tTourAgentCollectionsReq\032-.api.v1alpha1." +
-      "wfm.ListTourAgentCollectionsRes\"?\272\270\221\002\005\n\003" +
-      "\010\334\013\202\323\344\223\002/\"*/api/v1alpha1/wfm/listtourage" +
-      "ntcollections:\001*\022\301\001\n\032DeleteTourAgentColl" +
-      "ections\022/.api.v1alpha1.wfm.DeleteTourAge" +
-      "ntCollectionsReq\032/.api.v1alpha1.wfm.Dele" +
-      "teTourAgentCollectionsRes\"A\272\270\221\002\005\n\003\010\334\013\202\323\344" +
-      "\223\0021\",/api/v1alpha1/wfm/deletetouragentco" +
-      "llections:\001*\022\341\001\n\"CreateTourAgentCollecti" +
-      "onWFMAgents\0227.api.v1alpha1.wfm.CreateTou" +
-      "rAgentCollectionWFMAgentsReq\0327.api.v1alp" +
-      "ha1.wfm.CreateTourAgentCollectionWFMAgen" +
-      "tsRes\"I\272\270\221\002\005\n\003\010\334\013\202\323\344\223\0029\"4/api/v1alpha1/w" +
-      "fm/createtouragentcollectionwfmagents:\001*" +
-      "\022\331\001\n ListTourAgentCollectionWFMAgents\0225." +
+      "eagentavailabilitypattern:\001*\022\261\001\n\026GetAvai" +
+      "labilityBitmaps\022+.api.v1alpha1.wfm.GetAv" +
+      "ailabilityBitmapsReq\032+.api.v1alpha1.wfm." +
+      "GetAvailabilityBitmapsRes\"=\272\270\221\002\005\n\003\010\334\013\202\323\344" +
+      "\223\002-\"(/api/v1alpha1/wfm/getavailabilitybi" +
+      "tmaps:\001*\022\335\001\n!UpsertNonSkillActivityAssoc" +
+      "iation\0226.api.v1alpha1.wfm.UpsertNonSkill" +
+      "ActivityAssociationReq\0326.api.v1alpha1.wf" +
+      "m.UpsertNonSkillActivityAssociationRes\"H" +
+      "\272\270\221\002\005\n\003\010\334\013\202\323\344\223\0028\"3/api/v1alpha1/wfm/upse" +
+      "rtnonskillactivityassociation:\001*\022\271\001\n\030Cre" +
+      "ateSkillProficiencies\022-.api.v1alpha1.wfm" +
+      ".CreateSkillProficienciesReq\032-.api.v1alp" +
+      "ha1.wfm.CreateSkillProficienciesRes\"?\272\270\221" +
+      "\002\005\n\003\010\334\013\202\323\344\223\002/\"*/api/v1alpha1/wfm/creates" +
+      "killproficiencies:\001*\022\271\001\n\030UpdateSkillProf" +
+      "iciencies\022-.api.v1alpha1.wfm.UpdateSkill" +
+      "ProficienciesReq\032-.api.v1alpha1.wfm.Upda" +
+      "teSkillProficienciesRes\"?\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002" +
+      "/\"*/api/v1alpha1/wfm/updateskillproficie" +
+      "ncies:\001*\022\261\001\n\026DeleteSkillProficiency\022+.ap" +
+      "i.v1alpha1.wfm.DeleteSkillProficiencyReq" +
+      "\032+.api.v1alpha1.wfm.DeleteSkillProficien" +
+      "cyRes\"=\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002-\"(/api/v1alpha1/w" +
+      "fm/deleteskillproficiency:\001*\022\211\001\n\014CopySce" +
+      "nario\022!.api.v1alpha1.wfm.CopyScenarioReq" +
+      "\032!.api.v1alpha1.wfm.CopyScenarioRes\"3\272\270\221" +
+      "\002\005\n\003\010\334\013\202\323\344\223\002#\"\036/api/v1alpha1/wfm/copysce" +
+      "nario:\001*\022\325\001\n\037CreateScheduleScenarioWithN" +
+      "odes\0224.api.v1alpha1.wfm.CreateScheduleSc" +
+      "enarioWithNodesReq\0324.api.v1alpha1.wfm.Cr" +
+      "eateScheduleScenarioWithNodesRes\"F\272\270\221\002\005\n" +
+      "\003\010\334\013\202\323\344\223\0026\"1/api/v1alpha1/wfm/createsche" +
+      "dulescenariowithnodes:\001*\022\261\001\n\026UpdateSched" +
+      "uleScenario\022+.api.v1alpha1.wfm.UpdateSch" +
+      "eduleScenarioReq\032+.api.v1alpha1.wfm.Upda" +
+      "teScheduleScenarioRes\"=\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002-\"" +
+      "(/api/v1alpha1/wfm/updateschedulescenari" +
+      "o:\001*\022\241\001\n\022ListConfigEntities\022\'.api.v1alph" +
+      "a1.wfm.ListConfigEntitiesReq\032\'.api.v1alp" +
+      "ha1.wfm.ListConfigEntitiesRes\"9\272\270\221\002\005\n\003\010\334" +
+      "\013\202\323\344\223\002)\"$/api/v1alpha1/wfm/listconfigent" +
+      "ities:\001*\022\251\001\n\024DeleteShiftInstances\022).api." +
+      "v1alpha1.wfm.DeleteShiftInstancesReq\032).a" +
+      "pi.v1alpha1.wfm.DeleteShiftInstancesRes\"" +
+      ";\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002+\"&/api/v1alpha1/wfm/del" +
+      "eteshiftinstances:\001*\022\251\001\n\024BuildNodeDiagno" +
+      "stics\022).api.v1alpha1.wfm.BuildNodeDiagno" +
+      "sticsReq\032).api.v1alpha1.wfm.BuildNodeDia" +
+      "gnosticsRes\";\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002+\"&/api/v1al" +
+      "pha1/wfm/buildnodediagnostics:\001*\022\261\001\n\026Bui" +
+      "ldGlobalDiagnostics\022+.api.v1alpha1.wfm.B" +
+      "uildGlobalDiagnosticsReq\032+.api.v1alpha1." +
+      "wfm.BuildGlobalDiagnosticsRes\"=\272\270\221\002\005\n\003\010\334" +
+      "\013\202\323\344\223\002-\"(/api/v1alpha1/wfm/buildglobaldi" +
+      "agnostics:\001*\022\251\001\n\024GetPublishedSchedule\022)." +
+      "api.v1alpha1.wfm.GetPublishedScheduleReq" +
+      "\032).api.v1alpha1.wfm.GetPublishedSchedule" +
+      "Res\";\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002+\"&/api/v1alpha1/wfm" +
+      "/getpublishedschedule:\001*\022\335\001\n!GetPublishe" +
+      "dScheduleRequiredCalls\0226.api.v1alpha1.wf" +
+      "m.GetPublishedScheduleRequiredCallsReq\0326" +
+      ".api.v1alpha1.wfm.GetPublishedScheduleRe" +
+      "quiredCallsRes\"H\272\270\221\002\005\n\003\010\334\013\202\323\344\223\0028\"3/api/v" +
+      "1alpha1/wfm/getpublishedschedulerequired" +
+      "calls:\001*\022\315\001\n\035GetDraftScheduleRequiredCal" +
+      "ls\0222.api.v1alpha1.wfm.GetDraftScheduleRe" +
+      "quiredCallsReq\0322.api.v1alpha1.wfm.GetDra" +
+      "ftScheduleRequiredCallsRes\"D\272\270\221\002\005\n\003\010\334\013\202\323" +
+      "\344\223\0024\"//api/v1alpha1/wfm/getdraftschedule" +
+      "requiredcalls:\001*\022\245\001\n\023CreateDraftSchedule" +
+      "\022(.api.v1alpha1.wfm.CreateDraftScheduleR" +
+      "eq\032(.api.v1alpha1.wfm.CreateDraftSchedul" +
+      "eRes\":\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002*\"%/api/v1alpha1/wf" +
+      "m/createdraftschedule:\001*\022\245\001\n\023UpdateDraft" +
+      "Schedule\022(.api.v1alpha1.wfm.UpdateDraftS" +
+      "cheduleReq\032(.api.v1alpha1.wfm.UpdateDraf" +
+      "tScheduleRes\":\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002*\"%/api/v1a" +
+      "lpha1/wfm/updatedraftschedule:\001*\022\241\001\n\022Bui" +
+      "ldDraftSchedule\022\'.api.v1alpha1.wfm.Build" +
+      "DraftScheduleReq\032\'.api.v1alpha1.wfm.Buil" +
+      "dDraftScheduleRes\"9\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002)\"$/ap" +
+      "i/v1alpha1/wfm/builddraftschedule:\001*\022\251\001\n" +
+      "\024PublishDraftSchedule\022).api.v1alpha1.wfm" +
+      ".PublishDraftScheduleReq\032).api.v1alpha1." +
+      "wfm.PublishDraftScheduleRes\";\272\270\221\002\005\n\003\010\334\013\202" +
+      "\323\344\223\002+\"&/api/v1alpha1/wfm/publishdraftsch" +
+      "edule:\001*\022\241\001\n\022ResetDraftSchedule\022\'.api.v1" +
+      "alpha1.wfm.ResetDraftScheduleReq\032\'.api.v" +
+      "1alpha1.wfm.ResetDraftScheduleRes\"9\272\270\221\002\005" +
+      "\n\003\010\334\013\202\323\344\223\002)\"$/api/v1alpha1/wfm/resetdraf" +
+      "tschedule:\001*\022\231\001\n\020GetDraftSchedule\022%.api." +
+      "v1alpha1.wfm.GetDraftScheduleReq\032%.api.v" +
+      "1alpha1.wfm.GetDraftScheduleRes\"7\272\270\221\002\005\n\003" +
+      "\010\334\013\202\323\344\223\002\'\"\"/api/v1alpha1/wfm/getdraftsch" +
+      "edule:\001*\022\241\001\n\022ListDraftSchedules\022\'.api.v1" +
+      "alpha1.wfm.ListDraftSchedulesReq\032\'.api.v" +
+      "1alpha1.wfm.ListDraftSchedulesRes\"9\272\270\221\002\005" +
+      "\n\003\010\334\013\202\323\344\223\002)\"$/api/v1alpha1/wfm/listdraft" +
+      "schedules:\001*\022\215\001\n\rClearSchedule\022\".api.v1a" +
+      "lpha1.wfm.ClearScheduleReq\032\".api.v1alpha" +
+      "1.wfm.ClearScheduleRes\"4\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002$" +
+      "\"\037/api/v1alpha1/wfm/clearschedule:\001*\022\245\001\n" +
+      "\023DeleteDraftSchedule\022(.api.v1alpha1.wfm." +
+      "DeleteDraftScheduleReq\032(.api.v1alpha1.wf" +
+      "m.DeleteDraftScheduleRes\":\272\270\221\002\005\n\003\010\334\013\202\323\344\223" +
+      "\002*\"%/api/v1alpha1/wfm/deletedraftschedul" +
+      "e:\001*\022\265\001\n\027ListShiftInstancesBySid\022,.api.v" +
+      "1alpha1.wfm.ListShiftInstancesBySidReq\032," +
+      ".api.v1alpha1.wfm.ListShiftInstancesBySi" +
+      "dRes\">\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002.\")/api/v1alpha1/wf" +
+      "m/listshiftinstancesbysid:\001*\022\261\001\n\026CopySch" +
+      "eduleToSchedule\022+.api.v1alpha1.wfm.CopyS" +
+      "cheduleToScheduleReq\032+.api.v1alpha1.wfm." +
+      "CopyScheduleToScheduleRes\"=\272\270\221\002\005\n\003\010\334\013\202\323\344" +
+      "\223\002-\"(/api/v1alpha1/wfm/copyscheduletosch" +
+      "edule:\001*\022\245\001\n\023CreateShiftInstance\022(.api.v" +
+      "1alpha1.wfm.CreateShiftInstanceReq\032(.api" +
+      ".v1alpha1.wfm.CreateShiftInstanceRes\":\272\270" +
+      "\221\002\005\n\003\010\334\013\202\323\344\223\002*\"%/api/v1alpha1/wfm/create" +
+      "shiftinstance:\001*\022\255\001\n\025CreateShiftInstance" +
+      "V2\022*.api.v1alpha1.wfm.CreateShiftInstanc" +
+      "eV2Req\032*.api.v1alpha1.wfm.CreateShiftIns" +
+      "tanceV2Res\"<\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002,\"\'/api/v1alp" +
+      "ha1/wfm/createshiftinstancev2:\001*\022\241\001\n\022Swa" +
+      "pShiftInstances\022\'.api.v1alpha1.wfm.SwapS" +
+      "hiftInstancesReq\032\'.api.v1alpha1.wfm.Swap" +
+      "ShiftInstancesRes\"9\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002)\"$/ap" +
+      "i/v1alpha1/wfm/swapshiftinstances:\001*\022\245\001\n" +
+      "\023UpdateShiftInstance\022(.api.v1alpha1.wfm." +
+      "UpdateShiftInstanceReq\032(.api.v1alpha1.wf" +
+      "m.UpdateShiftInstanceRes\":\272\270\221\002\005\n\003\010\334\013\202\323\344\223" +
+      "\002*\"%/api/v1alpha1/wfm/updateshiftinstanc" +
+      "e:\001*\022\255\001\n\025UpdateShiftInstanceV2\022*.api.v1a" +
+      "lpha1.wfm.UpdateShiftInstanceV2Req\032*.api" +
+      ".v1alpha1.wfm.UpdateShiftInstanceV2Res\"<" +
+      "\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002,\"\'/api/v1alpha1/wfm/upda" +
+      "teshiftinstancev2:\001*\022\311\001\n\034CopyShiftInstan" +
+      "cesToSchedule\0221.api.v1alpha1.wfm.CopyShi" +
+      "ftInstancesToScheduleReq\0321.api.v1alpha1." +
+      "wfm.CopyShiftInstancesToScheduleRes\"C\272\270\221" +
+      "\002\005\n\003\010\334\013\202\323\344\223\0023\"./api/v1alpha1/wfm/copyshi" +
+      "ftinstancestoschedule:\001*\022\315\001\n\035ListShiftIn" +
+      "stanceSidsForAgent\0222.api.v1alpha1.wfm.Li" +
+      "stShiftInstanceSidsForAgentReq\0322.api.v1a" +
+      "lpha1.wfm.ListShiftInstanceSidsForAgentR" +
+      "es\"D\272\270\221\002\005\n\003\010\334\013\202\323\344\223\0024\"//api/v1alpha1/wfm/" +
+      "listshiftinstancesidsforagent:\001*\022\351\001\n$Lis" +
+      "tShiftSegmentsByShiftInstanceSids\0229.api." +
+      "v1alpha1.wfm.ListShiftSegmentsByShiftIns" +
+      "tanceSidsReq\0329.api.v1alpha1.wfm.ListShif" +
+      "tSegmentsByShiftInstanceSidsRes\"K\272\270\221\002\005\n\003" +
+      "\010\334\013\202\323\344\223\002;\"6/api/v1alpha1/wfm/listshiftse" +
+      "gmentsbyshiftinstancesids:\001*\022\245\001\n\023SetSche" +
+      "dulingTarget\022(.api.v1alpha1.wfm.SetSched" +
+      "ulingTargetReq\032(.api.v1alpha1.wfm.SetSch" +
+      "edulingTargetRes\":\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002*\"%/api" +
+      "/v1alpha1/wfm/setschedulingtarget:\001*\022\245\001\n" +
+      "\023GetSchedulingTarget\022(.api.v1alpha1.wfm." +
+      "GetSchedulingTargetReq\032(.api.v1alpha1.wf" +
+      "m.GetSchedulingTargetRes\":\272\270\221\002\005\n\003\010\334\013\202\323\344\223" +
+      "\002*\"%/api/v1alpha1/wfm/getschedulingtarge" +
+      "t:\001*\022\261\001\n\026DeleteSchedulingTarget\022+.api.v1" +
+      "alpha1.wfm.DeleteSchedulingTargetReq\032+.a" +
+      "pi.v1alpha1.wfm.DeleteSchedulingTargetRe" +
+      "s\"=\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002-\"(/api/v1alpha1/wfm/d" +
+      "eleteschedulingtarget:\001*\022\301\001\n\032GetDefaultS" +
+      "chedulingTarget\022/.api.v1alpha1.wfm.GetDe" +
+      "faultSchedulingTargetReq\032/.api.v1alpha1." +
+      "wfm.GetDefaultSchedulingTargetRes\"A\272\270\221\002\005" +
+      "\n\003\010\334\013\202\323\344\223\0021\",/api/v1alpha1/wfm/getdefaul" +
+      "tschedulingtarget:\001*\022\301\001\n\032SetDefaultSched" +
+      "ulingTarget\022/.api.v1alpha1.wfm.SetDefaul" +
+      "tSchedulingTargetReq\032/.api.v1alpha1.wfm." +
+      "SetDefaultSchedulingTargetRes\"A\272\270\221\002\005\n\003\010\334" +
+      "\013\202\323\344\223\0021\",/api/v1alpha1/wfm/setdefaultsch" +
+      "edulingtarget:\001*\022\255\001\n\025GetPerformanceMetri" +
+      "cs\022*.api.v1alpha1.wfm.GetPerformanceMetr" +
+      "icsReq\032*.api.v1alpha1.wfm.GetPerformance" +
+      "MetricsRes\"<\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002,\"\'/api/v1alp" +
+      "ha1/wfm/getperformancemetrics:\001*\022\301\001\n\032Lis" +
+      "tRequiredCallsIntervals\022/.api.v1alpha1.w" +
+      "fm.ListRequiredCallsIntervalsReq\032/.api.v" +
+      "1alpha1.wfm.ListRequiredCallsIntervalsRe" +
+      "s\"A\272\270\221\002\005\n\003\010\334\013\202\323\344\223\0021\",/api/v1alpha1/wfm/l" +
+      "istrequiredcallsintervals:\001*\022\235\001\n\021CreateT" +
+      "ourPattern\022&.api.v1alpha1.wfm.CreateTour" +
+      "PatternReq\032&.api.v1alpha1.wfm.CreateTour" +
+      "PatternRes\"8\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002(\"#/api/v1alp" +
+      "ha1/wfm/createtourpattern:\001*\022\275\001\n\031GetTour" +
+      "PatternDiagnostics\022..api.v1alpha1.wfm.Ge" +
+      "tTourPatternDiagnosticsReq\032..api.v1alpha" +
+      "1.wfm.GetTourPatternDiagnosticsRes\"@\272\270\221\002" +
+      "\005\n\003\010\334\013\202\323\344\223\0020\"+/api/v1alpha1/wfm/gettourp" +
+      "atterndiagnostics:\001*\022\311\001\n\034UpsertTourPatte" +
+      "rnWithMembers\0221.api.v1alpha1.wfm.UpsertT" +
+      "ourPatternWithMembersReq\0321.api.v1alpha1." +
+      "wfm.UpsertTourPatternWithMembersRes\"C\272\270\221" +
+      "\002\005\n\003\010\334\013\202\323\344\223\0023\"./api/v1alpha1/wfm/upsertt" +
+      "ourpatternwithmembers:\001*\022\221\001\n\016GetTourPatt" +
+      "ern\022#.api.v1alpha1.wfm.GetTourPatternReq" +
+      "\032#.api.v1alpha1.wfm.GetTourPatternRes\"5\272" +
+      "\270\221\002\005\n\003\010\334\013\202\323\344\223\002%\" /api/v1alpha1/wfm/getto" +
+      "urpattern:\001*\022\235\001\n\021DeleteTourPattern\022&.api" +
+      ".v1alpha1.wfm.DeleteTourPatternReq\032&.api" +
+      ".v1alpha1.wfm.DeleteTourPatternRes\"8\272\270\221\002" +
+      "\005\n\003\010\334\013\202\323\344\223\002(\"#/api/v1alpha1/wfm/deleteto" +
+      "urpattern:\001*\022\255\001\n\025CreateTourWeekPattern\022*" +
+      ".api.v1alpha1.wfm.CreateTourWeekPatternR" +
+      "eq\032*.api.v1alpha1.wfm.CreateTourWeekPatt" +
+      "ernRes\"<\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002,\"\'/api/v1alpha1/" +
+      "wfm/createtourweekpattern:\001*\022\251\001\n\024ListTou" +
+      "rWeekPatterns\022).api.v1alpha1.wfm.ListTou" +
+      "rWeekPatternsReq\032).api.v1alpha1.wfm.List" +
+      "TourWeekPatternsRes\";\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002+\"&/" +
+      "api/v1alpha1/wfm/listtourweekpatterns:\001*" +
+      "\022\261\001\n\026DeleteTourWeekPatterns\022+.api.v1alph" +
+      "a1.wfm.DeleteTourWeekPatternsReq\032+.api.v" +
+      "1alpha1.wfm.DeleteTourWeekPatternsRes\"=\272" +
+      "\270\221\002\005\n\003\010\334\013\202\323\344\223\002-\"(/api/v1alpha1/wfm/delet" +
+      "etourweekpatterns:\001*\022\315\001\n\035CreateTourShift" +
+      "InstanceConfig\0222.api.v1alpha1.wfm.Create" +
+      "TourShiftInstanceConfigReq\0322.api.v1alpha" +
+      "1.wfm.CreateTourShiftInstanceConfigRes\"D" +
+      "\272\270\221\002\005\n\003\010\334\013\202\323\344\223\0024\"//api/v1alpha1/wfm/crea" +
+      "tetourshiftinstanceconfig:\001*\022\316\001\n\035UpdateT" +
+      "ourShiftInstanceConfig\0222.api.v1alpha1.wf" +
+      "m.UpdateTourShiftInstanceConfigReq\0322.api" +
+      ".v1alpha1.wfm.UpdateTourShiftInstanceCon" +
+      "figRes\"E\272\270\221\002\005\n\003\010\334\013\202\323\344\223\0025\"0/api/v1alpha1/" +
+      "wfm/updatetourshiftinstanceconfigs:\001*\022\311\001" +
+      "\n\034ListTourShiftInstanceConfigs\0221.api.v1a" +
+      "lpha1.wfm.ListTourShiftInstanceConfigsRe" +
+      "q\0321.api.v1alpha1.wfm.ListTourShiftInstan" +
+      "ceConfigsRes\"C\272\270\221\002\005\n\003\010\334\013\202\323\344\223\0023\"./api/v1a" +
+      "lpha1/wfm/listtourshiftinstanceconfigs:\001" +
+      "*\022\321\001\n\036DeleteTourShiftInstanceConfigs\0223.a" +
+      "pi.v1alpha1.wfm.DeleteTourShiftInstanceC" +
+      "onfigsReq\0323.api.v1alpha1.wfm.DeleteTourS" +
+      "hiftInstanceConfigsRes\"E\272\270\221\002\005\n\003\010\334\013\202\323\344\223\0025" +
+      "\"0/api/v1alpha1/wfm/deletetourshiftinsta" +
+      "nceconfigs:\001*\022\311\001\n\034CreateTourShiftSegment" +
+      "Config\0221.api.v1alpha1.wfm.CreateTourShif" +
+      "tSegmentConfigReq\0321.api.v1alpha1.wfm.Cre" +
+      "ateTourShiftSegmentConfigRes\"C\272\270\221\002\005\n\003\010\334\013" +
+      "\202\323\344\223\0023\"./api/v1alpha1/wfm/createtourshif" +
+      "tsegmentconfig:\001*\022\311\001\n\034UpdateTourShiftSeg" +
+      "mentConfig\0221.api.v1alpha1.wfm.UpdateTour" +
+      "ShiftSegmentConfigReq\0321.api.v1alpha1.wfm" +
+      ".UpdateTourShiftSegmentConfigRes\"C\272\270\221\002\005\n" +
+      "\003\010\334\013\202\323\344\223\0023\"./api/v1alpha1/wfm/updatetour" +
+      "shiftsegmentconfig:\001*\022\305\001\n\033ListTourShiftS" +
+      "egmentConfigs\0220.api.v1alpha1.wfm.ListTou" +
+      "rShiftSegmentConfigsReq\0320.api.v1alpha1.w" +
+      "fm.ListTourShiftSegmentConfigsRes\"B\272\270\221\002\005" +
+      "\n\003\010\334\013\202\323\344\223\0022\"-/api/v1alpha1/wfm/listtours" +
+      "hiftsegmentconfigs:\001*\022\315\001\n\035DeleteTourShif" +
+      "tSegmentConfigs\0222.api.v1alpha1.wfm.Delet" +
+      "eTourShiftSegmentConfigsReq\0322.api.v1alph" +
+      "a1.wfm.DeleteTourShiftSegmentConfigsRes\"" +
+      "D\272\270\221\002\005\n\003\010\334\013\202\323\344\223\0024\"//api/v1alpha1/wfm/del" +
+      "etetourshiftsegmentconfigs:\001*\022\275\001\n\031Create" +
+      "TourAgentCollection\022..api.v1alpha1.wfm.C" +
+      "reateTourAgentCollectionReq\032..api.v1alph" +
+      "a1.wfm.CreateTourAgentCollectionRes\"@\272\270\221" +
+      "\002\005\n\003\010\334\013\202\323\344\223\0020\"+/api/v1alpha1/wfm/createt" +
+      "ouragentcollection:\001*\022\275\001\n\031UpdateTourAgen" +
+      "tCollection\022..api.v1alpha1.wfm.UpdateTou" +
+      "rAgentCollectionReq\032..api.v1alpha1.wfm.U" +
+      "pdateTourAgentCollectionRes\"@\272\270\221\002\005\n\003\010\334\013\202" +
+      "\323\344\223\0020\"+/api/v1alpha1/wfm/updatetouragent" +
+      "collection:\001*\022\271\001\n\030ListTourAgentCollectio" +
+      "ns\022-.api.v1alpha1.wfm.ListTourAgentColle" +
+      "ctionsReq\032-.api.v1alpha1.wfm.ListTourAge" +
+      "ntCollectionsRes\"?\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002/\"*/api" +
+      "/v1alpha1/wfm/listtouragentcollections:\001" +
+      "*\022\301\001\n\032DeleteTourAgentCollections\022/.api.v" +
+      "1alpha1.wfm.DeleteTourAgentCollectionsRe" +
+      "q\032/.api.v1alpha1.wfm.DeleteTourAgentColl" +
+      "ectionsRes\"A\272\270\221\002\005\n\003\010\334\013\202\323\344\223\0021\",/api/v1alp" +
+      "ha1/wfm/deletetouragentcollections:\001*\022\341\001" +
+      "\n\"CreateTourAgentCollectionWFMAgents\0227.a" +
+      "pi.v1alpha1.wfm.CreateTourAgentCollectio" +
+      "nWFMAgentsReq\0327.api.v1alpha1.wfm.CreateT" +
+      "ourAgentCollectionWFMAgentsRes\"I\272\270\221\002\005\n\003\010" +
+      "\334\013\202\323\344\223\0029\"4/api/v1alpha1/wfm/createtourag" +
+      "entcollectionwfmagents:\001*\022\331\001\n ListTourAg" +
+      "entCollectionWFMAgents\0225.api.v1alpha1.wf" +
+      "m.ListTourAgentCollectionWFMAgentsReq\0325." +
       "api.v1alpha1.wfm.ListTourAgentCollection" +
-      "WFMAgentsReq\0325.api.v1alpha1.wfm.ListTour" +
-      "AgentCollectionWFMAgentsRes\"G\272\270\221\002\005\n\003\010\334\013\202" +
-      "\323\344\223\0027\"2/api/v1alpha1/wfm/listtouragentco" +
-      "llectionwfmagents:\001*\022\341\001\n\"DeleteTourAgent" +
-      "CollectionWFMAgents\0227.api.v1alpha1.wfm.D" +
-      "eleteTourAgentCollectionWFMAgentsReq\0327.a" +
-      "pi.v1alpha1.wfm.DeleteTourAgentCollectio" +
-      "nWFMAgentsRes\"I\272\270\221\002\005\n\003\010\334\013\202\323\344\223\0029\"4/api/v1" +
-      "alpha1/wfm/deletetouragentcollectionwfma" +
-      "gents:\001*\022\271\001\n\030GenerateTourWeekPatterns\022-." +
-      "api.v1alpha1.wfm.GenerateTourWeekPattern" +
-      "sReq\032-.api.v1alpha1.wfm.GenerateTourWeek" +
-      "PatternsRes\"?\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002/\"*/api/v1al" +
-      "pha1/wfm/generatetourweekpatterns:\001*B\220\001\n" +
-      "\"com.tcn.cloud.api.api.v1alpha1.wfmB\010Wfm" +
-      "ProtoP\001\242\002\003AVW\252\002\020Api.V1alpha1.Wfm\312\002\020Api\\V" +
-      "1alpha1\\Wfm\342\002\034Api\\V1alpha1\\Wfm\\GPBMetada" +
-      "ta\352\002\022Api::V1alpha1::Wfmb\006proto3"
+      "WFMAgentsRes\"G\272\270\221\002\005\n\003\010\334\013\202\323\344\223\0027\"2/api/v1a" +
+      "lpha1/wfm/listtouragentcollectionwfmagen" +
+      "ts:\001*\022\341\001\n\"DeleteTourAgentCollectionWFMAg" +
+      "ents\0227.api.v1alpha1.wfm.DeleteTourAgentC" +
+      "ollectionWFMAgentsReq\0327.api.v1alpha1.wfm" +
+      ".DeleteTourAgentCollectionWFMAgentsRes\"I" +
+      "\272\270\221\002\005\n\003\010\334\013\202\323\344\223\0029\"4/api/v1alpha1/wfm/dele" +
+      "tetouragentcollectionwfmagents:\001*\022\271\001\n\030Ge" +
+      "nerateTourWeekPatterns\022-.api.v1alpha1.wf" +
+      "m.GenerateTourWeekPatternsReq\032-.api.v1al" +
+      "pha1.wfm.GenerateTourWeekPatternsRes\"?\272\270" +
+      "\221\002\005\n\003\010\334\013\202\323\344\223\002/\"*/api/v1alpha1/wfm/genera" +
+      "tetourweekpatterns:\001*B\220\001\n\"com.tcn.cloud." +
+      "api.api.v1alpha1.wfmB\010WfmProtoP\001\242\002\003AVW\252\002" +
+      "\020Api.V1alpha1.Wfm\312\002\020Api\\V1alpha1\\Wfm\342\002\034A" +
+      "pi\\V1alpha1\\Wfm\\GPBMetadata\352\002\022Api::V1alp" +
+      "ha1::Wfmb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -5265,7 +5264,7 @@ public final class WfmProto {
     internal_static_api_v1alpha1_wfm_BuildShiftTemplateDiagnosticsReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_wfm_BuildShiftTemplateDiagnosticsReq_descriptor,
-        new java.lang.String[] { "ShiftTemplateSid", "ScheduleScenarioSid", "ParentProgramNodeSid", });
+        new java.lang.String[] { "ShiftTemplateSid", "ScheduleScenarioSid", });
     internal_static_api_v1alpha1_wfm_BuildShiftTemplateDiagnosticsRes_descriptor =
       getDescriptor().getMessageTypes().get(170);
     internal_static_api_v1alpha1_wfm_BuildShiftTemplateDiagnosticsRes_fieldAccessorTable = new

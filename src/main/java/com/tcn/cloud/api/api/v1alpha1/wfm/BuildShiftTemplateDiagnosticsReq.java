@@ -72,21 +72,6 @@ private static final long serialVersionUID = 0L;
     return scheduleScenarioSid_;
   }
 
-  public static final int PARENT_PROGRAM_NODE_SID_FIELD_NUMBER = 3;
-  private long parentProgramNodeSid_ = 0L;
-  /**
-   * <pre>
-   * ID of the Program Node to be passed to the endpoint.
-   * </pre>
-   *
-   * <code>int64 parent_program_node_sid = 3 [json_name = "parentProgramNodeSid"];</code>
-   * @return The parentProgramNodeSid.
-   */
-  @java.lang.Override
-  public long getParentProgramNodeSid() {
-    return parentProgramNodeSid_;
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -107,9 +92,6 @@ private static final long serialVersionUID = 0L;
     if (scheduleScenarioSid_ != 0L) {
       output.writeInt64(2, scheduleScenarioSid_);
     }
-    if (parentProgramNodeSid_ != 0L) {
-      output.writeInt64(3, parentProgramNodeSid_);
-    }
     getUnknownFields().writeTo(output);
   }
 
@@ -126,10 +108,6 @@ private static final long serialVersionUID = 0L;
     if (scheduleScenarioSid_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(2, scheduleScenarioSid_);
-    }
-    if (parentProgramNodeSid_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(3, parentProgramNodeSid_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -150,8 +128,6 @@ private static final long serialVersionUID = 0L;
         != other.getShiftTemplateSid()) return false;
     if (getScheduleScenarioSid()
         != other.getScheduleScenarioSid()) return false;
-    if (getParentProgramNodeSid()
-        != other.getParentProgramNodeSid()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -169,9 +145,6 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + SCHEDULE_SCENARIO_SID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getScheduleScenarioSid());
-    hash = (37 * hash) + PARENT_PROGRAM_NODE_SID_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getParentProgramNodeSid());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -309,7 +282,6 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       shiftTemplateSid_ = 0L;
       scheduleScenarioSid_ = 0L;
-      parentProgramNodeSid_ = 0L;
       return this;
     }
 
@@ -348,9 +320,6 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.scheduleScenarioSid_ = scheduleScenarioSid_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.parentProgramNodeSid_ = parentProgramNodeSid_;
       }
     }
 
@@ -404,9 +373,6 @@ private static final long serialVersionUID = 0L;
       if (other.getScheduleScenarioSid() != 0L) {
         setScheduleScenarioSid(other.getScheduleScenarioSid());
       }
-      if (other.getParentProgramNodeSid() != 0L) {
-        setParentProgramNodeSid(other.getParentProgramNodeSid());
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -443,11 +409,6 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 16
-            case 24: {
-              parentProgramNodeSid_ = input.readInt64();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 24
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -549,50 +510,6 @@ private static final long serialVersionUID = 0L;
     public Builder clearScheduleScenarioSid() {
       bitField0_ = (bitField0_ & ~0x00000002);
       scheduleScenarioSid_ = 0L;
-      onChanged();
-      return this;
-    }
-
-    private long parentProgramNodeSid_ ;
-    /**
-     * <pre>
-     * ID of the Program Node to be passed to the endpoint.
-     * </pre>
-     *
-     * <code>int64 parent_program_node_sid = 3 [json_name = "parentProgramNodeSid"];</code>
-     * @return The parentProgramNodeSid.
-     */
-    @java.lang.Override
-    public long getParentProgramNodeSid() {
-      return parentProgramNodeSid_;
-    }
-    /**
-     * <pre>
-     * ID of the Program Node to be passed to the endpoint.
-     * </pre>
-     *
-     * <code>int64 parent_program_node_sid = 3 [json_name = "parentProgramNodeSid"];</code>
-     * @param value The parentProgramNodeSid to set.
-     * @return This builder for chaining.
-     */
-    public Builder setParentProgramNodeSid(long value) {
-
-      parentProgramNodeSid_ = value;
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * ID of the Program Node to be passed to the endpoint.
-     * </pre>
-     *
-     * <code>int64 parent_program_node_sid = 3 [json_name = "parentProgramNodeSid"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearParentProgramNodeSid() {
-      bitField0_ = (bitField0_ & ~0x00000004);
-      parentProgramNodeSid_ = 0L;
       onChanged();
       return this;
     }

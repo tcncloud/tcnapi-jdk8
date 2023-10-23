@@ -26,14 +26,4 @@ public interface BuildShiftTemplateDiagnosticsReqOrBuilder extends
    * @return The scheduleScenarioSid.
    */
   long getScheduleScenarioSid();
-
-  /**
-   * <pre>
-   * ID of the Program Node to be passed to the endpoint.
-   * </pre>
-   *
-   * <code>int64 parent_program_node_sid = 3 [json_name = "parentProgramNodeSid"];</code>
-   * @return The parentProgramNodeSid.
-   */
-  long getParentProgramNodeSid();
 }

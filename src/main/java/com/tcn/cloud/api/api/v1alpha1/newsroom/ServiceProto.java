@@ -26,64 +26,65 @@ public final class ServiceProto {
       "\n#api/v1alpha1/newsroom/service.proto\022\025a" +
       "pi.v1alpha1.newsroom\032\027annotations/authz." +
       "proto\032$api/v1alpha1/newsroom/entities.pr" +
-      "oto\032\034google/api/annotations.proto2\250\020\n\013Ne" +
+      "oto\032\034google/api/annotations.proto2\275\020\n\013Ne" +
       "wsroomAPI\022\265\001\n\021CreateNewsArticle\022/.api.v1" +
       "alpha1.newsroom.CreateNewsArticleRequest" +
       "\0320.api.v1alpha1.newsroom.CreateNewsArtic" +
       "leResponse\"=\272\270\221\002\005\n\003\010\350 \202\323\344\223\002-\"(/api/v1alp" +
-      "ha1/newsroom/createnewsarticle:\001*\022\256\001\n\020Li" +
+      "ha1/newsroom/createnewsarticle:\001*\022\261\001\n\020Li" +
       "stNewsArticles\022..api.v1alpha1.newsroom.L" +
       "istNewsArticlesRequest\032/.api.v1alpha1.ne" +
-      "wsroom.ListNewsArticlesResponse\"9\272\270\221\002\002\030\001" +
-      "\202\323\344\223\002,\"\'/api/v1alpha1/newsroom/listnewsa" +
-      "rticles:\001*\022\266\001\n\022GetNewsArticleById\0220.api." +
-      "v1alpha1.newsroom.GetNewsArticleByIdRequ" +
-      "est\0321.api.v1alpha1.newsroom.GetNewsArtic" +
-      "leByIdResponse\";\272\270\221\002\002\030\001\202\323\344\223\002.\")/api/v1al" +
-      "pha1/newsroom/getnewsarticlebyid:\001*\022\265\001\n\021" +
-      "UpdateNewsArticle\022/.api.v1alpha1.newsroo" +
-      "m.UpdateNewsArticleRequest\0320.api.v1alpha" +
-      "1.newsroom.UpdateNewsArticleResponse\"=\272\270" +
-      "\221\002\005\n\003\010\350 \202\323\344\223\002-\"(/api/v1alpha1/newsroom/u" +
-      "pdatenewsarticle:\001*\022\311\001\n\026CreatePublishedA" +
-      "rticle\0224.api.v1alpha1.newsroom.CreatePub" +
-      "lishedArticleRequest\0325.api.v1alpha1.news" +
-      "room.CreatePublishedArticleResponse\"B\272\270\221" +
-      "\002\005\n\003\010\351 \202\323\344\223\0022\"-/api/v1alpha1/newsroom/cr" +
-      "eatepublishedarticle:\001*\022\302\001\n\025ListPublishe" +
-      "dArticles\0223.api.v1alpha1.newsroom.ListPu" +
-      "blishedArticlesRequest\0324.api.v1alpha1.ne" +
-      "wsroom.ListPublishedArticlesResponse\">\272\270" +
-      "\221\002\002\030\001\202\323\344\223\0021\",/api/v1alpha1/newsroom/list" +
-      "publishedarticles:\001*\022\312\001\n\027GetPublishedArt" +
-      "icleById\0225.api.v1alpha1.newsroom.GetPubl" +
-      "ishedArticleByIdRequest\0326.api.v1alpha1.n" +
-      "ewsroom.GetPublishedArticleByIdResponse\"" +
-      "@\272\270\221\002\002\030\001\202\323\344\223\0023\"./api/v1alpha1/newsroom/g" +
-      "etpublishedarticlebyid:\001*\022\236\001\n\014UserActivi" +
-      "ty\022*.api.v1alpha1.newsroom.UserActivityR" +
-      "equest\032+.api.v1alpha1.newsroom.UserActiv" +
-      "ityResponse\"5\272\270\221\002\002\030\001\202\323\344\223\002(\"#/api/v1alpha" +
-      "1/newsroom/useractivity:\001*\022\246\001\n\016GetNewsFo" +
-      "rUser\022,.api.v1alpha1.newsroom.GetNewsFor" +
-      "UserRequest\032-.api.v1alpha1.newsroom.GetN" +
-      "ewsForUserResponse\"7\272\270\221\002\002\030\001\202\323\344\223\002*\"%/api/" +
-      "v1alpha1/newsroom/getnewsforuser:\001*\022\305\001\n\025" +
-      "StoreNewsArticleImage\0223.api.v1alpha1.new" +
-      "sroom.StoreNewsArticleImageRequest\0324.api" +
-      ".v1alpha1.newsroom.StoreNewsArticleImage" +
-      "Response\"A\272\270\221\002\005\n\003\010\350 \202\323\344\223\0021\",/api/v1alpha" +
-      "1/newsroom/storenewsarticleimage:\001*\022\316\001\n\030" +
-      "ListImagesForNewsArticle\0226.api.v1alpha1." +
-      "newsroom.ListImagesForNewsArticleRequest" +
-      "\0327.api.v1alpha1.newsroom.ListImagesForNe" +
-      "wsArticleResponse\"A\272\270\221\002\002\030\001\202\323\344\223\0024\"//api/v" +
-      "1alpha1/newsroom/listimagesfornewsarticl" +
-      "e:\001*B\255\001\n\'com.tcn.cloud.api.api.v1alpha1." +
-      "newsroomB\014ServiceProtoP\001\242\002\003AVN\252\002\025Api.V1a" +
-      "lpha1.Newsroom\312\002\025Api\\V1alpha1\\Newsroom\342\002" +
-      "!Api\\V1alpha1\\Newsroom\\GPBMetadata\352\002\027Api" +
-      "::V1alpha1::Newsroomb\006proto3"
+      "wsroom.ListNewsArticlesResponse\"<\272\270\221\002\005\n\003" +
+      "\010\347 \202\323\344\223\002,\"\'/api/v1alpha1/newsroom/listne" +
+      "wsarticles:\001*\022\271\001\n\022GetNewsArticleById\0220.a" +
+      "pi.v1alpha1.newsroom.GetNewsArticleByIdR" +
+      "equest\0321.api.v1alpha1.newsroom.GetNewsAr" +
+      "ticleByIdResponse\">\272\270\221\002\005\n\003\010\347 \202\323\344\223\002.\")/ap" +
+      "i/v1alpha1/newsroom/getnewsarticlebyid:\001" +
+      "*\022\265\001\n\021UpdateNewsArticle\022/.api.v1alpha1.n" +
+      "ewsroom.UpdateNewsArticleRequest\0320.api.v" +
+      "1alpha1.newsroom.UpdateNewsArticleRespon" +
+      "se\"=\272\270\221\002\005\n\003\010\350 \202\323\344\223\002-\"(/api/v1alpha1/news" +
+      "room/updatenewsarticle:\001*\022\311\001\n\026CreatePubl" +
+      "ishedArticle\0224.api.v1alpha1.newsroom.Cre" +
+      "atePublishedArticleRequest\0325.api.v1alpha" +
+      "1.newsroom.CreatePublishedArticleRespons" +
+      "e\"B\272\270\221\002\005\n\003\010\351 \202\323\344\223\0022\"-/api/v1alpha1/newsr" +
+      "oom/createpublishedarticle:\001*\022\305\001\n\025ListPu" +
+      "blishedArticles\0223.api.v1alpha1.newsroom." +
+      "ListPublishedArticlesRequest\0324.api.v1alp" +
+      "ha1.newsroom.ListPublishedArticlesRespon" +
+      "se\"A\272\270\221\002\005\n\003\010\347 \202\323\344\223\0021\",/api/v1alpha1/news" +
+      "room/listpublishedarticles:\001*\022\315\001\n\027GetPub" +
+      "lishedArticleById\0225.api.v1alpha1.newsroo" +
+      "m.GetPublishedArticleByIdRequest\0326.api.v" +
+      "1alpha1.newsroom.GetPublishedArticleById" +
+      "Response\"C\272\270\221\002\005\n\003\010\347 \202\323\344\223\0023\"./api/v1alpha" +
+      "1/newsroom/getpublishedarticlebyid:\001*\022\241\001" +
+      "\n\014UserActivity\022*.api.v1alpha1.newsroom.U" +
+      "serActivityRequest\032+.api.v1alpha1.newsro" +
+      "om.UserActivityResponse\"8\272\270\221\002\005\n\003\010\347 \202\323\344\223\002" +
+      "(\"#/api/v1alpha1/newsroom/useractivity:\001" +
+      "*\022\251\001\n\016GetNewsForUser\022,.api.v1alpha1.news" +
+      "room.GetNewsForUserRequest\032-.api.v1alpha" +
+      "1.newsroom.GetNewsForUserResponse\":\272\270\221\002\005" +
+      "\n\003\010\347 \202\323\344\223\002*\"%/api/v1alpha1/newsroom/getn" +
+      "ewsforuser:\001*\022\305\001\n\025StoreNewsArticleImage\022" +
+      "3.api.v1alpha1.newsroom.StoreNewsArticle" +
+      "ImageRequest\0324.api.v1alpha1.newsroom.Sto" +
+      "reNewsArticleImageResponse\"A\272\270\221\002\005\n\003\010\350 \202\323" +
+      "\344\223\0021\",/api/v1alpha1/newsroom/storenewsar" +
+      "ticleimage:\001*\022\321\001\n\030ListImagesForNewsArtic" +
+      "le\0226.api.v1alpha1.newsroom.ListImagesFor" +
+      "NewsArticleRequest\0327.api.v1alpha1.newsro" +
+      "om.ListImagesForNewsArticleResponse\"D\272\270\221" +
+      "\002\005\n\003\010\347 \202\323\344\223\0024\"//api/v1alpha1/newsroom/li" +
+      "stimagesfornewsarticle:\001*B\255\001\n\'com.tcn.cl" +
+      "oud.api.api.v1alpha1.newsroomB\014ServicePr" +
+      "otoP\001\242\002\003AVN\252\002\025Api.V1alpha1.Newsroom\312\002\025Ap" +
+      "i\\V1alpha1\\Newsroom\342\002!Api\\V1alpha1\\Newsr" +
+      "oom\\GPBMetadata\352\002\027Api::V1alpha1::Newsroo" +
+      "mb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
