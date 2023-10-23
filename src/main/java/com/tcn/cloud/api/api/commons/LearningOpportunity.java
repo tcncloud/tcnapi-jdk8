@@ -26,6 +26,7 @@ private static final long serialVersionUID = 0L;
     title_ = "";
     status_ = 0;
     origin_ = 0;
+    reviewerUserId_ = "";
   }
 
   @java.lang.Override
@@ -380,6 +381,53 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.tcn.cloud.api.api.commons.LearningOpportunityOrigin.UNRECOGNIZED : result;
   }
 
+  public static final int REVIEWER_USER_ID_FIELD_NUMBER = 15;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object reviewerUserId_ = "";
+  /**
+   * <pre>
+   * User id of the reviewer (creator of learning opportunity).
+   * </pre>
+   *
+   * <code>string reviewer_user_id = 15 [json_name = "reviewerUserId"];</code>
+   * @return The reviewerUserId.
+   */
+  @java.lang.Override
+  public java.lang.String getReviewerUserId() {
+    java.lang.Object ref = reviewerUserId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      reviewerUserId_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * User id of the reviewer (creator of learning opportunity).
+   * </pre>
+   *
+   * <code>string reviewer_user_id = 15 [json_name = "reviewerUserId"];</code>
+   * @return The bytes for reviewerUserId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getReviewerUserIdBytes() {
+    java.lang.Object ref = reviewerUserId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      reviewerUserId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -429,6 +477,9 @@ private static final long serialVersionUID = 0L;
     }
     if (origin_ != com.tcn.cloud.api.api.commons.LearningOpportunityOrigin.UNDEFINED.getNumber()) {
       output.writeEnum(14, origin_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reviewerUserId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 15, reviewerUserId_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -484,6 +535,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(14, origin_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reviewerUserId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, reviewerUserId_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -523,6 +577,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getTitle())) return false;
     if (status_ != other.status_) return false;
     if (origin_ != other.origin_) return false;
+    if (!getReviewerUserId()
+        .equals(other.getReviewerUserId())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -563,6 +619,8 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + status_;
     hash = (37 * hash) + ORIGIN_FIELD_NUMBER;
     hash = (53 * hash) + origin_;
+    hash = (37 * hash) + REVIEWER_USER_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getReviewerUserId().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -714,6 +772,7 @@ private static final long serialVersionUID = 0L;
       title_ = "";
       status_ = 0;
       origin_ = 0;
+      reviewerUserId_ = "";
       return this;
     }
 
@@ -784,6 +843,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000800) != 0)) {
         result.origin_ = origin_;
+      }
+      if (((from_bitField0_ & 0x00001000) != 0)) {
+        result.reviewerUserId_ = reviewerUserId_;
       }
     }
 
@@ -873,6 +935,11 @@ private static final long serialVersionUID = 0L;
       if (other.origin_ != 0) {
         setOriginValue(other.getOriginValue());
       }
+      if (!other.getReviewerUserId().isEmpty()) {
+        reviewerUserId_ = other.reviewerUserId_;
+        bitField0_ |= 0x00001000;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -961,6 +1028,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000800;
               break;
             } // case 112
+            case 122: {
+              reviewerUserId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00001000;
+              break;
+            } // case 122
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1844,6 +1916,98 @@ private static final long serialVersionUID = 0L;
     public Builder clearOrigin() {
       bitField0_ = (bitField0_ & ~0x00000800);
       origin_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object reviewerUserId_ = "";
+    /**
+     * <pre>
+     * User id of the reviewer (creator of learning opportunity).
+     * </pre>
+     *
+     * <code>string reviewer_user_id = 15 [json_name = "reviewerUserId"];</code>
+     * @return The reviewerUserId.
+     */
+    public java.lang.String getReviewerUserId() {
+      java.lang.Object ref = reviewerUserId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        reviewerUserId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * User id of the reviewer (creator of learning opportunity).
+     * </pre>
+     *
+     * <code>string reviewer_user_id = 15 [json_name = "reviewerUserId"];</code>
+     * @return The bytes for reviewerUserId.
+     */
+    public com.google.protobuf.ByteString
+        getReviewerUserIdBytes() {
+      java.lang.Object ref = reviewerUserId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        reviewerUserId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * User id of the reviewer (creator of learning opportunity).
+     * </pre>
+     *
+     * <code>string reviewer_user_id = 15 [json_name = "reviewerUserId"];</code>
+     * @param value The reviewerUserId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setReviewerUserId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      reviewerUserId_ = value;
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * User id of the reviewer (creator of learning opportunity).
+     * </pre>
+     *
+     * <code>string reviewer_user_id = 15 [json_name = "reviewerUserId"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearReviewerUserId() {
+      reviewerUserId_ = getDefaultInstance().getReviewerUserId();
+      bitField0_ = (bitField0_ & ~0x00001000);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * User id of the reviewer (creator of learning opportunity).
+     * </pre>
+     *
+     * <code>string reviewer_user_id = 15 [json_name = "reviewerUserId"];</code>
+     * @param value The bytes for reviewerUserId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setReviewerUserIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      reviewerUserId_ = value;
+      bitField0_ |= 0x00001000;
       onChanged();
       return this;
     }

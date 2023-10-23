@@ -200,4 +200,24 @@ public interface LearningOpportunityOrBuilder extends
    * @return The origin.
    */
   com.tcn.cloud.api.api.commons.LearningOpportunityOrigin getOrigin();
+
+  /**
+   * <pre>
+   * User id of the reviewer (creator of learning opportunity).
+   * </pre>
+   *
+   * <code>string reviewer_user_id = 15 [json_name = "reviewerUserId"];</code>
+   * @return The reviewerUserId.
+   */
+  java.lang.String getReviewerUserId();
+  /**
+   * <pre>
+   * User id of the reviewer (creator of learning opportunity).
+   * </pre>
+   *
+   * <code>string reviewer_user_id = 15 [json_name = "reviewerUserId"];</code>
+   * @return The bytes for reviewerUserId.
+   */
+  com.google.protobuf.ByteString
+      getReviewerUserIdBytes();
 }
