@@ -127,7 +127,7 @@ public final class ServiceProto {
       "fig:\001*\022\301\001\n\022UpdateGlobalConfig\022/.api.v1al" +
       "pha1.room303.UpdateGlobalConfigRequest\0320" +
       ".api.v1alpha1.room303.UpdateGlobalConfig" +
-      "Response\"H\272\270\221\002\005\n\003\010\274\005\202\323\344\223\0028\"3/api/v1alpha" +
+      "Response\"H\272\270\221\002\005\n\003\010\276\005\202\323\344\223\0028\"3/api/v1alpha" +
       "1/room303/room303api/updateglobalconfig:" +
       "\001*\022\265\001\n\017GetGlobalConfig\022,.api.v1alpha1.ro" +
       "om303.GetGlobalConfigRequest\032-.api.v1alp" +
