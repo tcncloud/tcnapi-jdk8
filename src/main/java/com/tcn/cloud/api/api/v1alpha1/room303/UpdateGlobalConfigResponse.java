@@ -20,6 +20,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private UpdateGlobalConfigResponse() {
+    editedBy_ = "";
   }
 
   @java.lang.Override
@@ -80,6 +81,91 @@ private static final long serialVersionUID = 0L;
     return config_ == null ? com.tcn.cloud.api.api.commons.GlobalConfig.getDefaultInstance() : config_;
   }
 
+  public static final int EDITED_BY_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object editedBy_ = "";
+  /**
+   * <pre>
+   * last edited_by user
+   * </pre>
+   *
+   * <code>string edited_by = 2 [json_name = "editedBy"];</code>
+   * @return The editedBy.
+   */
+  @java.lang.Override
+  public java.lang.String getEditedBy() {
+    java.lang.Object ref = editedBy_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      editedBy_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * last edited_by user
+   * </pre>
+   *
+   * <code>string edited_by = 2 [json_name = "editedBy"];</code>
+   * @return The bytes for editedBy.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getEditedByBytes() {
+    java.lang.Object ref = editedBy_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      editedBy_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int LAST_EDITED_FIELD_NUMBER = 3;
+  private com.google.protobuf.Timestamp lastEdited_;
+  /**
+   * <pre>
+   * last edited on
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp last_edited = 3 [json_name = "lastEdited"];</code>
+   * @return Whether the lastEdited field is set.
+   */
+  @java.lang.Override
+  public boolean hasLastEdited() {
+    return lastEdited_ != null;
+  }
+  /**
+   * <pre>
+   * last edited on
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp last_edited = 3 [json_name = "lastEdited"];</code>
+   * @return The lastEdited.
+   */
+  @java.lang.Override
+  public com.google.protobuf.Timestamp getLastEdited() {
+    return lastEdited_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastEdited_;
+  }
+  /**
+   * <pre>
+   * last edited on
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp last_edited = 3 [json_name = "lastEdited"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.TimestampOrBuilder getLastEditedOrBuilder() {
+    return lastEdited_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastEdited_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -97,6 +183,12 @@ private static final long serialVersionUID = 0L;
     if (config_ != null) {
       output.writeMessage(1, getConfig());
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(editedBy_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, editedBy_);
+    }
+    if (lastEdited_ != null) {
+      output.writeMessage(3, getLastEdited());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -109,6 +201,13 @@ private static final long serialVersionUID = 0L;
     if (config_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getConfig());
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(editedBy_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, editedBy_);
+    }
+    if (lastEdited_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, getLastEdited());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -130,6 +229,13 @@ private static final long serialVersionUID = 0L;
       if (!getConfig()
           .equals(other.getConfig())) return false;
     }
+    if (!getEditedBy()
+        .equals(other.getEditedBy())) return false;
+    if (hasLastEdited() != other.hasLastEdited()) return false;
+    if (hasLastEdited()) {
+      if (!getLastEdited()
+          .equals(other.getLastEdited())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -144,6 +250,12 @@ private static final long serialVersionUID = 0L;
     if (hasConfig()) {
       hash = (37 * hash) + CONFIG_FIELD_NUMBER;
       hash = (53 * hash) + getConfig().hashCode();
+    }
+    hash = (37 * hash) + EDITED_BY_FIELD_NUMBER;
+    hash = (53 * hash) + getEditedBy().hashCode();
+    if (hasLastEdited()) {
+      hash = (37 * hash) + LAST_EDITED_FIELD_NUMBER;
+      hash = (53 * hash) + getLastEdited().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -285,6 +397,12 @@ private static final long serialVersionUID = 0L;
         configBuilder_.dispose();
         configBuilder_ = null;
       }
+      editedBy_ = "";
+      lastEdited_ = null;
+      if (lastEditedBuilder_ != null) {
+        lastEditedBuilder_.dispose();
+        lastEditedBuilder_ = null;
+      }
       return this;
     }
 
@@ -322,6 +440,14 @@ private static final long serialVersionUID = 0L;
         result.config_ = configBuilder_ == null
             ? config_
             : configBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.editedBy_ = editedBy_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.lastEdited_ = lastEditedBuilder_ == null
+            ? lastEdited_
+            : lastEditedBuilder_.build();
       }
     }
 
@@ -372,6 +498,14 @@ private static final long serialVersionUID = 0L;
       if (other.hasConfig()) {
         mergeConfig(other.getConfig());
       }
+      if (!other.getEditedBy().isEmpty()) {
+        editedBy_ = other.editedBy_;
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
+      if (other.hasLastEdited()) {
+        mergeLastEdited(other.getLastEdited());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -405,6 +539,18 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 10
+            case 18: {
+              editedBy_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 26: {
+              input.readMessage(
+                  getLastEditedFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -575,6 +721,253 @@ private static final long serialVersionUID = 0L;
         config_ = null;
       }
       return configBuilder_;
+    }
+
+    private java.lang.Object editedBy_ = "";
+    /**
+     * <pre>
+     * last edited_by user
+     * </pre>
+     *
+     * <code>string edited_by = 2 [json_name = "editedBy"];</code>
+     * @return The editedBy.
+     */
+    public java.lang.String getEditedBy() {
+      java.lang.Object ref = editedBy_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        editedBy_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * last edited_by user
+     * </pre>
+     *
+     * <code>string edited_by = 2 [json_name = "editedBy"];</code>
+     * @return The bytes for editedBy.
+     */
+    public com.google.protobuf.ByteString
+        getEditedByBytes() {
+      java.lang.Object ref = editedBy_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        editedBy_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * last edited_by user
+     * </pre>
+     *
+     * <code>string edited_by = 2 [json_name = "editedBy"];</code>
+     * @param value The editedBy to set.
+     * @return This builder for chaining.
+     */
+    public Builder setEditedBy(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      editedBy_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * last edited_by user
+     * </pre>
+     *
+     * <code>string edited_by = 2 [json_name = "editedBy"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearEditedBy() {
+      editedBy_ = getDefaultInstance().getEditedBy();
+      bitField0_ = (bitField0_ & ~0x00000002);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * last edited_by user
+     * </pre>
+     *
+     * <code>string edited_by = 2 [json_name = "editedBy"];</code>
+     * @param value The bytes for editedBy to set.
+     * @return This builder for chaining.
+     */
+    public Builder setEditedByBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      editedBy_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.Timestamp lastEdited_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> lastEditedBuilder_;
+    /**
+     * <pre>
+     * last edited on
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_edited = 3 [json_name = "lastEdited"];</code>
+     * @return Whether the lastEdited field is set.
+     */
+    public boolean hasLastEdited() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * last edited on
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_edited = 3 [json_name = "lastEdited"];</code>
+     * @return The lastEdited.
+     */
+    public com.google.protobuf.Timestamp getLastEdited() {
+      if (lastEditedBuilder_ == null) {
+        return lastEdited_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastEdited_;
+      } else {
+        return lastEditedBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * last edited on
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_edited = 3 [json_name = "lastEdited"];</code>
+     */
+    public Builder setLastEdited(com.google.protobuf.Timestamp value) {
+      if (lastEditedBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        lastEdited_ = value;
+      } else {
+        lastEditedBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * last edited on
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_edited = 3 [json_name = "lastEdited"];</code>
+     */
+    public Builder setLastEdited(
+        com.google.protobuf.Timestamp.Builder builderForValue) {
+      if (lastEditedBuilder_ == null) {
+        lastEdited_ = builderForValue.build();
+      } else {
+        lastEditedBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * last edited on
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_edited = 3 [json_name = "lastEdited"];</code>
+     */
+    public Builder mergeLastEdited(com.google.protobuf.Timestamp value) {
+      if (lastEditedBuilder_ == null) {
+        if (((bitField0_ & 0x00000004) != 0) &&
+          lastEdited_ != null &&
+          lastEdited_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+          getLastEditedBuilder().mergeFrom(value);
+        } else {
+          lastEdited_ = value;
+        }
+      } else {
+        lastEditedBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * last edited on
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_edited = 3 [json_name = "lastEdited"];</code>
+     */
+    public Builder clearLastEdited() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      lastEdited_ = null;
+      if (lastEditedBuilder_ != null) {
+        lastEditedBuilder_.dispose();
+        lastEditedBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * last edited on
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_edited = 3 [json_name = "lastEdited"];</code>
+     */
+    public com.google.protobuf.Timestamp.Builder getLastEditedBuilder() {
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return getLastEditedFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * last edited on
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_edited = 3 [json_name = "lastEdited"];</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getLastEditedOrBuilder() {
+      if (lastEditedBuilder_ != null) {
+        return lastEditedBuilder_.getMessageOrBuilder();
+      } else {
+        return lastEdited_ == null ?
+            com.google.protobuf.Timestamp.getDefaultInstance() : lastEdited_;
+      }
+    }
+    /**
+     * <pre>
+     * last edited on
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_edited = 3 [json_name = "lastEdited"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+        getLastEditedFieldBuilder() {
+      if (lastEditedBuilder_ == null) {
+        lastEditedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                getLastEdited(),
+                getParentForChildren(),
+                isClean());
+        lastEdited_ = null;
+      }
+      return lastEditedBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

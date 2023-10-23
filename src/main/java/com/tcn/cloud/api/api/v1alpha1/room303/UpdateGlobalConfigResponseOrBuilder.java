@@ -33,4 +33,51 @@ public interface UpdateGlobalConfigResponseOrBuilder extends
    * <code>.api.commons.GlobalConfig config = 1 [json_name = "config"];</code>
    */
   com.tcn.cloud.api.api.commons.GlobalConfigOrBuilder getConfigOrBuilder();
+
+  /**
+   * <pre>
+   * last edited_by user
+   * </pre>
+   *
+   * <code>string edited_by = 2 [json_name = "editedBy"];</code>
+   * @return The editedBy.
+   */
+  java.lang.String getEditedBy();
+  /**
+   * <pre>
+   * last edited_by user
+   * </pre>
+   *
+   * <code>string edited_by = 2 [json_name = "editedBy"];</code>
+   * @return The bytes for editedBy.
+   */
+  com.google.protobuf.ByteString
+      getEditedByBytes();
+
+  /**
+   * <pre>
+   * last edited on
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp last_edited = 3 [json_name = "lastEdited"];</code>
+   * @return Whether the lastEdited field is set.
+   */
+  boolean hasLastEdited();
+  /**
+   * <pre>
+   * last edited on
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp last_edited = 3 [json_name = "lastEdited"];</code>
+   * @return The lastEdited.
+   */
+  com.google.protobuf.Timestamp getLastEdited();
+  /**
+   * <pre>
+   * last edited on
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp last_edited = 3 [json_name = "lastEdited"];</code>
+   */
+  com.google.protobuf.TimestampOrBuilder getLastEditedOrBuilder();
 }
