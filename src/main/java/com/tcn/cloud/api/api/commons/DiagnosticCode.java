@@ -631,7 +631,7 @@ public enum DiagnosticCode
   FIRST_WEEK_PATTERN_NUMBERS_NOT_FOUND_IN_TOUR_WEEK_PATTERNS(64),
   /**
    * <pre>
-   * DiagnosticShiftTemplateHasNoSchedulingAgentGroups integer value for a diagnostic coded as
+   * DiagnosticCodeShiftTemplateHasNotAssociatedSchedulingAgentGroups integer value for a diagnostic coded as
    * 'Shift Template Has No Associated Scheduling Agent Groups' type.
    * The diagnostic is reporting a Shift Template with no associated Schedulable Agent Groups.
    * </pre>
@@ -641,7 +641,7 @@ public enum DiagnosticCode
   SHIFT_TEMPLATE_HAS_NO_ASSOCIATED_SCHEDULING_AGENT_GROUPS(65),
   /**
    * <pre>
-   * DiagnosticAttemptToBuildSchedulesForInvalidParentNode integer value for a diagnostic coded as
+   * DiagnosticCodeAttemptToBuildSchedulesForInvalidParentNode integer value for a diagnostic coded as
    * 'Attempt To Build Schedules For Invalid Parent Node' type.
    * The diagnostic is reporting an attemplt to build a schedule for an invalid Parent Node.
    * </pre>
@@ -1271,7 +1271,7 @@ public enum DiagnosticCode
   public static final int FIRST_WEEK_PATTERN_NUMBERS_NOT_FOUND_IN_TOUR_WEEK_PATTERNS_VALUE = 64;
   /**
    * <pre>
-   * DiagnosticShiftTemplateHasNoSchedulingAgentGroups integer value for a diagnostic coded as
+   * DiagnosticCodeShiftTemplateHasNotAssociatedSchedulingAgentGroups integer value for a diagnostic coded as
    * 'Shift Template Has No Associated Scheduling Agent Groups' type.
    * The diagnostic is reporting a Shift Template with no associated Schedulable Agent Groups.
    * </pre>
@@ -1281,7 +1281,7 @@ public enum DiagnosticCode
   public static final int SHIFT_TEMPLATE_HAS_NO_ASSOCIATED_SCHEDULING_AGENT_GROUPS_VALUE = 65;
   /**
    * <pre>
-   * DiagnosticAttemptToBuildSchedulesForInvalidParentNode integer value for a diagnostic coded as
+   * DiagnosticCodeAttemptToBuildSchedulesForInvalidParentNode integer value for a diagnostic coded as
    * 'Attempt To Build Schedules For Invalid Parent Node' type.
    * The diagnostic is reporting an attemplt to build a schedule for an invalid Parent Node.
    * </pre>
