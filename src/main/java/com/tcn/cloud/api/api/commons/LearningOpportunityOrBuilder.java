@@ -203,21 +203,21 @@ public interface LearningOpportunityOrBuilder extends
 
   /**
    * <pre>
-   * User id of the reviewer (creator of learning opportunity).
+   * User id for the creator of the learning opportunity.
    * </pre>
    *
-   * <code>string reviewer_user_id = 15 [json_name = "reviewerUserId"];</code>
-   * @return The reviewerUserId.
+   * <code>string creator_user_id = 15 [json_name = "creatorUserId"];</code>
+   * @return The creatorUserId.
    */
-  java.lang.String getReviewerUserId();
+  java.lang.String getCreatorUserId();
   /**
    * <pre>
-   * User id of the reviewer (creator of learning opportunity).
+   * User id for the creator of the learning opportunity.
    * </pre>
    *
-   * <code>string reviewer_user_id = 15 [json_name = "reviewerUserId"];</code>
-   * @return The bytes for reviewerUserId.
+   * <code>string creator_user_id = 15 [json_name = "creatorUserId"];</code>
+   * @return The bytes for creatorUserId.
    */
   com.google.protobuf.ByteString
-      getReviewerUserIdBytes();
+      getCreatorUserIdBytes();
 }

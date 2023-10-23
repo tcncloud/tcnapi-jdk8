@@ -714,7 +714,7 @@ public enum Permission
    * Enables access to publish in Newsroom manager
    * </pre>
    *
-   * <code>PERMISSION_NEWSROOM_PUBLISH = 4201 [(.annotations.perms.options) = { ... }</code>
+   * <code>PERMISSION_NEWSROOM_PUBLISH = 4201;</code>
    */
   PERMISSION_NEWSROOM_PUBLISH(4201),
   UNRECOGNIZED(-1),
@@ -1422,7 +1422,7 @@ public enum Permission
    * Enables access to publish in Newsroom manager
    * </pre>
    *
-   * <code>PERMISSION_NEWSROOM_PUBLISH = 4201 [(.annotations.perms.options) = { ... }</code>
+   * <code>PERMISSION_NEWSROOM_PUBLISH = 4201;</code>
    */
   public static final int PERMISSION_NEWSROOM_PUBLISH_VALUE = 4201;
 

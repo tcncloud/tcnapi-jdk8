@@ -26,7 +26,7 @@ private static final long serialVersionUID = 0L;
     title_ = "";
     status_ = 0;
     origin_ = 0;
-    reviewerUserId_ = "";
+    creatorUserId_ = "";
   }
 
   @java.lang.Override
@@ -381,47 +381,47 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.tcn.cloud.api.api.commons.LearningOpportunityOrigin.UNRECOGNIZED : result;
   }
 
-  public static final int REVIEWER_USER_ID_FIELD_NUMBER = 15;
+  public static final int CREATOR_USER_ID_FIELD_NUMBER = 15;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object reviewerUserId_ = "";
+  private volatile java.lang.Object creatorUserId_ = "";
   /**
    * <pre>
-   * User id of the reviewer (creator of learning opportunity).
+   * User id for the creator of the learning opportunity.
    * </pre>
    *
-   * <code>string reviewer_user_id = 15 [json_name = "reviewerUserId"];</code>
-   * @return The reviewerUserId.
+   * <code>string creator_user_id = 15 [json_name = "creatorUserId"];</code>
+   * @return The creatorUserId.
    */
   @java.lang.Override
-  public java.lang.String getReviewerUserId() {
-    java.lang.Object ref = reviewerUserId_;
+  public java.lang.String getCreatorUserId() {
+    java.lang.Object ref = creatorUserId_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      reviewerUserId_ = s;
+      creatorUserId_ = s;
       return s;
     }
   }
   /**
    * <pre>
-   * User id of the reviewer (creator of learning opportunity).
+   * User id for the creator of the learning opportunity.
    * </pre>
    *
-   * <code>string reviewer_user_id = 15 [json_name = "reviewerUserId"];</code>
-   * @return The bytes for reviewerUserId.
+   * <code>string creator_user_id = 15 [json_name = "creatorUserId"];</code>
+   * @return The bytes for creatorUserId.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getReviewerUserIdBytes() {
-    java.lang.Object ref = reviewerUserId_;
+      getCreatorUserIdBytes() {
+    java.lang.Object ref = creatorUserId_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      reviewerUserId_ = b;
+      creatorUserId_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -478,8 +478,8 @@ private static final long serialVersionUID = 0L;
     if (origin_ != com.tcn.cloud.api.api.commons.LearningOpportunityOrigin.UNDEFINED.getNumber()) {
       output.writeEnum(14, origin_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reviewerUserId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 15, reviewerUserId_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creatorUserId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 15, creatorUserId_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -535,8 +535,8 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(14, origin_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reviewerUserId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, reviewerUserId_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creatorUserId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, creatorUserId_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -577,8 +577,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getTitle())) return false;
     if (status_ != other.status_) return false;
     if (origin_ != other.origin_) return false;
-    if (!getReviewerUserId()
-        .equals(other.getReviewerUserId())) return false;
+    if (!getCreatorUserId()
+        .equals(other.getCreatorUserId())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -619,8 +619,8 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + status_;
     hash = (37 * hash) + ORIGIN_FIELD_NUMBER;
     hash = (53 * hash) + origin_;
-    hash = (37 * hash) + REVIEWER_USER_ID_FIELD_NUMBER;
-    hash = (53 * hash) + getReviewerUserId().hashCode();
+    hash = (37 * hash) + CREATOR_USER_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getCreatorUserId().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -772,7 +772,7 @@ private static final long serialVersionUID = 0L;
       title_ = "";
       status_ = 0;
       origin_ = 0;
-      reviewerUserId_ = "";
+      creatorUserId_ = "";
       return this;
     }
 
@@ -845,7 +845,7 @@ private static final long serialVersionUID = 0L;
         result.origin_ = origin_;
       }
       if (((from_bitField0_ & 0x00001000) != 0)) {
-        result.reviewerUserId_ = reviewerUserId_;
+        result.creatorUserId_ = creatorUserId_;
       }
     }
 
@@ -935,8 +935,8 @@ private static final long serialVersionUID = 0L;
       if (other.origin_ != 0) {
         setOriginValue(other.getOriginValue());
       }
-      if (!other.getReviewerUserId().isEmpty()) {
-        reviewerUserId_ = other.reviewerUserId_;
+      if (!other.getCreatorUserId().isEmpty()) {
+        creatorUserId_ = other.creatorUserId_;
         bitField0_ |= 0x00001000;
         onChanged();
       }
@@ -1029,7 +1029,7 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 112
             case 122: {
-              reviewerUserId_ = input.readStringRequireUtf8();
+              creatorUserId_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00001000;
               break;
             } // case 122
@@ -1920,22 +1920,22 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object reviewerUserId_ = "";
+    private java.lang.Object creatorUserId_ = "";
     /**
      * <pre>
-     * User id of the reviewer (creator of learning opportunity).
+     * User id for the creator of the learning opportunity.
      * </pre>
      *
-     * <code>string reviewer_user_id = 15 [json_name = "reviewerUserId"];</code>
-     * @return The reviewerUserId.
+     * <code>string creator_user_id = 15 [json_name = "creatorUserId"];</code>
+     * @return The creatorUserId.
      */
-    public java.lang.String getReviewerUserId() {
-      java.lang.Object ref = reviewerUserId_;
+    public java.lang.String getCreatorUserId() {
+      java.lang.Object ref = creatorUserId_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        reviewerUserId_ = s;
+        creatorUserId_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
@@ -1943,20 +1943,20 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * User id of the reviewer (creator of learning opportunity).
+     * User id for the creator of the learning opportunity.
      * </pre>
      *
-     * <code>string reviewer_user_id = 15 [json_name = "reviewerUserId"];</code>
-     * @return The bytes for reviewerUserId.
+     * <code>string creator_user_id = 15 [json_name = "creatorUserId"];</code>
+     * @return The bytes for creatorUserId.
      */
     public com.google.protobuf.ByteString
-        getReviewerUserIdBytes() {
-      java.lang.Object ref = reviewerUserId_;
+        getCreatorUserIdBytes() {
+      java.lang.Object ref = creatorUserId_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        reviewerUserId_ = b;
+        creatorUserId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -1964,49 +1964,49 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * User id of the reviewer (creator of learning opportunity).
+     * User id for the creator of the learning opportunity.
      * </pre>
      *
-     * <code>string reviewer_user_id = 15 [json_name = "reviewerUserId"];</code>
-     * @param value The reviewerUserId to set.
+     * <code>string creator_user_id = 15 [json_name = "creatorUserId"];</code>
+     * @param value The creatorUserId to set.
      * @return This builder for chaining.
      */
-    public Builder setReviewerUserId(
+    public Builder setCreatorUserId(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      reviewerUserId_ = value;
+      creatorUserId_ = value;
       bitField0_ |= 0x00001000;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * User id of the reviewer (creator of learning opportunity).
+     * User id for the creator of the learning opportunity.
      * </pre>
      *
-     * <code>string reviewer_user_id = 15 [json_name = "reviewerUserId"];</code>
+     * <code>string creator_user_id = 15 [json_name = "creatorUserId"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearReviewerUserId() {
-      reviewerUserId_ = getDefaultInstance().getReviewerUserId();
+    public Builder clearCreatorUserId() {
+      creatorUserId_ = getDefaultInstance().getCreatorUserId();
       bitField0_ = (bitField0_ & ~0x00001000);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * User id of the reviewer (creator of learning opportunity).
+     * User id for the creator of the learning opportunity.
      * </pre>
      *
-     * <code>string reviewer_user_id = 15 [json_name = "reviewerUserId"];</code>
-     * @param value The bytes for reviewerUserId to set.
+     * <code>string creator_user_id = 15 [json_name = "creatorUserId"];</code>
+     * @param value The bytes for creatorUserId to set.
      * @return This builder for chaining.
      */
-    public Builder setReviewerUserIdBytes(
+    public Builder setCreatorUserIdBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      reviewerUserId_ = value;
+      creatorUserId_ = value;
       bitField0_ |= 0x00001000;
       onChanged();
       return this;
