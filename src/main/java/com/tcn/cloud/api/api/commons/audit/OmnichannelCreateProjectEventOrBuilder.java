@@ -36,19 +36,4 @@ public interface OmnichannelCreateProjectEventOrBuilder extends
    */
   com.google.protobuf.ByteString
       getDescriptionBytes();
-
-  /**
-   * <code>.api.commons.OmniProjectComplianceConfig compliance_config = 4 [json_name = "complianceConfig"];</code>
-   * @return Whether the complianceConfig field is set.
-   */
-  boolean hasComplianceConfig();
-  /**
-   * <code>.api.commons.OmniProjectComplianceConfig compliance_config = 4 [json_name = "complianceConfig"];</code>
-   * @return The complianceConfig.
-   */
-  com.tcn.cloud.api.api.commons.OmniProjectComplianceConfig getComplianceConfig();
-  /**
-   * <code>.api.commons.OmniProjectComplianceConfig compliance_config = 4 [json_name = "complianceConfig"];</code>
-   */
-  com.tcn.cloud.api.api.commons.OmniProjectComplianceConfigOrBuilder getComplianceConfigOrBuilder();
 }
