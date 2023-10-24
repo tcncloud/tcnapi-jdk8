@@ -139,6 +139,37 @@ public final class IntegrationsGrpc {
     return getGetIntegrationTransactionReportDataMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.SearchPastTransactionsRequest,
+      com.tcn.cloud.api.api.v1alpha1.integrations.SearchPastTransactionsResponse> getSearchPastTransactionsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SearchPastTransactions",
+      requestType = com.tcn.cloud.api.api.v1alpha1.integrations.SearchPastTransactionsRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.integrations.SearchPastTransactionsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.SearchPastTransactionsRequest,
+      com.tcn.cloud.api.api.v1alpha1.integrations.SearchPastTransactionsResponse> getSearchPastTransactionsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.SearchPastTransactionsRequest, com.tcn.cloud.api.api.v1alpha1.integrations.SearchPastTransactionsResponse> getSearchPastTransactionsMethod;
+    if ((getSearchPastTransactionsMethod = IntegrationsGrpc.getSearchPastTransactionsMethod) == null) {
+      synchronized (IntegrationsGrpc.class) {
+        if ((getSearchPastTransactionsMethod = IntegrationsGrpc.getSearchPastTransactionsMethod) == null) {
+          IntegrationsGrpc.getSearchPastTransactionsMethod = getSearchPastTransactionsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.integrations.SearchPastTransactionsRequest, com.tcn.cloud.api.api.v1alpha1.integrations.SearchPastTransactionsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SearchPastTransactions"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.integrations.SearchPastTransactionsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.integrations.SearchPastTransactionsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("SearchPastTransactions"))
+              .build();
+        }
+      }
+    }
+    return getSearchPastTransactionsMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.GetAggregatedMetadataReq,
       com.tcn.cloud.api.api.v1alpha1.integrations.GetAggregatedMetadataRes> getGetAggregatedMetadataMethod;
 
@@ -873,6 +904,13 @@ public final class IntegrationsGrpc {
     }
 
     /**
+     */
+    default void searchPastTransactions(com.tcn.cloud.api.api.v1alpha1.integrations.SearchPastTransactionsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.SearchPastTransactionsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSearchPastTransactionsMethod(), responseObserver);
+    }
+
+    /**
      * <pre>
      * GetAggregatedMetadata returns the aggregated metrics about the portal links for a specified date range
      * </pre>
@@ -1141,6 +1179,14 @@ public final class IntegrationsGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.GetIntegrationTransactionReportDataRes> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetIntegrationTransactionReportDataMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void searchPastTransactions(com.tcn.cloud.api.api.v1alpha1.integrations.SearchPastTransactionsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.SearchPastTransactionsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getSearchPastTransactionsMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -1421,6 +1467,13 @@ public final class IntegrationsGrpc {
     }
 
     /**
+     */
+    public com.tcn.cloud.api.api.v1alpha1.integrations.SearchPastTransactionsResponse searchPastTransactions(com.tcn.cloud.api.api.v1alpha1.integrations.SearchPastTransactionsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSearchPastTransactionsMethod(), getCallOptions(), request);
+    }
+
+    /**
      * <pre>
      * GetAggregatedMetadata returns the aggregated metrics about the portal links for a specified date range
      * </pre>
@@ -1681,6 +1734,14 @@ public final class IntegrationsGrpc {
     }
 
     /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrations.SearchPastTransactionsResponse> searchPastTransactions(
+        com.tcn.cloud.api.api.v1alpha1.integrations.SearchPastTransactionsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getSearchPastTransactionsMethod(), getCallOptions()), request);
+    }
+
+    /**
      * <pre>
      * GetAggregatedMetadata returns the aggregated metrics about the portal links for a specified date range
      * </pre>
@@ -1911,27 +1972,28 @@ public final class IntegrationsGrpc {
   private static final int METHODID_GET_INTEGRATION_TRANSACTION = 1;
   private static final int METHODID_GET_INTEGRATION_TRANSACTION_REPORT = 2;
   private static final int METHODID_GET_INTEGRATION_TRANSACTION_REPORT_DATA = 3;
-  private static final int METHODID_GET_AGGREGATED_METADATA = 4;
-  private static final int METHODID_GET_PORTAL_LINKS_BY_DATE_RANGE = 5;
-  private static final int METHODID_CREATE_INTEGRATION_CONFIG = 6;
-  private static final int METHODID_GET_INTEGRATION_CONFIG = 7;
-  private static final int METHODID_UPDATE_INTEGRATION_CONFIG = 8;
-  private static final int METHODID_DELETE_INTEGRATION_CONFIG = 9;
-  private static final int METHODID_LIST_INTEGRATIONS = 10;
-  private static final int METHODID_LIST_INTEGRATIONS_FOR_ORG = 11;
-  private static final int METHODID_LIST_INTEGRATION_CONFIG_NAMES = 12;
-  private static final int METHODID_LIST_JOURNEY_CONFIGS = 13;
-  private static final int METHODID_LIST_NON_JOURNEY_CONFIGS = 14;
-  private static final int METHODID_CREATE_PORTAL_CONFIG = 15;
-  private static final int METHODID_LIST_PORTAL_CONFIGS = 16;
-  private static final int METHODID_UPDATE_PORTAL_CONFIG = 17;
-  private static final int METHODID_GET_PORTAL_CONFIG = 18;
-  private static final int METHODID_DELETE_PORTAL_CONFIG = 19;
-  private static final int METHODID_UPDATE_PORTAL_LOGO = 20;
-  private static final int METHODID_GET_PORTAL_LOGO = 21;
-  private static final int METHODID_CREATE_PAYMENT_PORTAL_LINKS = 22;
-  private static final int METHODID_SUMMARY = 23;
-  private static final int METHODID_LIST_INTEGRATION_TEMPLATES_BY_CONFIG = 24;
+  private static final int METHODID_SEARCH_PAST_TRANSACTIONS = 4;
+  private static final int METHODID_GET_AGGREGATED_METADATA = 5;
+  private static final int METHODID_GET_PORTAL_LINKS_BY_DATE_RANGE = 6;
+  private static final int METHODID_CREATE_INTEGRATION_CONFIG = 7;
+  private static final int METHODID_GET_INTEGRATION_CONFIG = 8;
+  private static final int METHODID_UPDATE_INTEGRATION_CONFIG = 9;
+  private static final int METHODID_DELETE_INTEGRATION_CONFIG = 10;
+  private static final int METHODID_LIST_INTEGRATIONS = 11;
+  private static final int METHODID_LIST_INTEGRATIONS_FOR_ORG = 12;
+  private static final int METHODID_LIST_INTEGRATION_CONFIG_NAMES = 13;
+  private static final int METHODID_LIST_JOURNEY_CONFIGS = 14;
+  private static final int METHODID_LIST_NON_JOURNEY_CONFIGS = 15;
+  private static final int METHODID_CREATE_PORTAL_CONFIG = 16;
+  private static final int METHODID_LIST_PORTAL_CONFIGS = 17;
+  private static final int METHODID_UPDATE_PORTAL_CONFIG = 18;
+  private static final int METHODID_GET_PORTAL_CONFIG = 19;
+  private static final int METHODID_DELETE_PORTAL_CONFIG = 20;
+  private static final int METHODID_UPDATE_PORTAL_LOGO = 21;
+  private static final int METHODID_GET_PORTAL_LOGO = 22;
+  private static final int METHODID_CREATE_PAYMENT_PORTAL_LINKS = 23;
+  private static final int METHODID_SUMMARY = 24;
+  private static final int METHODID_LIST_INTEGRATION_TEMPLATES_BY_CONFIG = 25;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1965,6 +2027,10 @@ public final class IntegrationsGrpc {
         case METHODID_GET_INTEGRATION_TRANSACTION_REPORT_DATA:
           serviceImpl.getIntegrationTransactionReportData((com.tcn.cloud.api.api.v1alpha1.integrations.GetIntegrationTransactionReportDataReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.GetIntegrationTransactionReportDataRes>) responseObserver);
+          break;
+        case METHODID_SEARCH_PAST_TRANSACTIONS:
+          serviceImpl.searchPastTransactions((com.tcn.cloud.api.api.v1alpha1.integrations.SearchPastTransactionsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.SearchPastTransactionsResponse>) responseObserver);
           break;
         case METHODID_GET_AGGREGATED_METADATA:
           serviceImpl.getAggregatedMetadata((com.tcn.cloud.api.api.v1alpha1.integrations.GetAggregatedMetadataReq) request,
@@ -2096,6 +2162,13 @@ public final class IntegrationsGrpc {
               com.tcn.cloud.api.api.v1alpha1.integrations.GetIntegrationTransactionReportDataReq,
               com.tcn.cloud.api.api.v1alpha1.integrations.GetIntegrationTransactionReportDataRes>(
                 service, METHODID_GET_INTEGRATION_TRANSACTION_REPORT_DATA)))
+        .addMethod(
+          getSearchPastTransactionsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.integrations.SearchPastTransactionsRequest,
+              com.tcn.cloud.api.api.v1alpha1.integrations.SearchPastTransactionsResponse>(
+                service, METHODID_SEARCH_PAST_TRANSACTIONS)))
         .addMethod(
           getGetAggregatedMetadataMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -2295,6 +2368,7 @@ public final class IntegrationsGrpc {
               .addMethod(getGetIntegrationTransactionMethod())
               .addMethod(getGetIntegrationTransactionReportMethod())
               .addMethod(getGetIntegrationTransactionReportDataMethod())
+              .addMethod(getSearchPastTransactionsMethod())
               .addMethod(getGetAggregatedMetadataMethod())
               .addMethod(getGetPortalLinksByDateRangeMethod())
               .addMethod(getCreateIntegrationConfigMethod())

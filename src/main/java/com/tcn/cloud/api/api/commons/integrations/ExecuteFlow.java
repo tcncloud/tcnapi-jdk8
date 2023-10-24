@@ -221,6 +221,7 @@ private static final long serialVersionUID = 0L;
     I2C_TRANSACTION_HISTORY(3210),
     OPAYO_CC_PAYMENT(3301),
     SHIFT4_CC_PAYMENT(3401),
+    SHIFT4_ACCESS_TOKEN(3402),
     POSCORP_ACCESSTOKEN(3501),
     POSCORP_LOOKUP_GUARANTOR(3502),
     POSCORP_UPDATE_PAYMENT_STATUS(3503),
@@ -437,6 +438,7 @@ private static final long serialVersionUID = 0L;
         case 3210: return I2C_TRANSACTION_HISTORY;
         case 3301: return OPAYO_CC_PAYMENT;
         case 3401: return SHIFT4_CC_PAYMENT;
+        case 3402: return SHIFT4_ACCESS_TOKEN;
         case 3501: return POSCORP_ACCESSTOKEN;
         case 3502: return POSCORP_LOOKUP_GUARANTOR;
         case 3503: return POSCORP_UPDATE_PAYMENT_STATUS;
@@ -5760,6 +5762,37 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.integrations.ExecuteShift4CcPayments.getDefaultInstance();
   }
 
+  public static final int SHIFT4_ACCESS_TOKEN_FIELD_NUMBER = 3402;
+  /**
+   * <code>.api.commons.integrations.ExecuteShift4CcPayments shift4_access_token = 3402 [json_name = "shift4AccessToken"];</code>
+   * @return Whether the shift4AccessToken field is set.
+   */
+  @java.lang.Override
+  public boolean hasShift4AccessToken() {
+    return valueCase_ == 3402;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteShift4CcPayments shift4_access_token = 3402 [json_name = "shift4AccessToken"];</code>
+   * @return The shift4AccessToken.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteShift4CcPayments getShift4AccessToken() {
+    if (valueCase_ == 3402) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteShift4CcPayments) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteShift4CcPayments.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteShift4CcPayments shift4_access_token = 3402 [json_name = "shift4AccessToken"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteShift4CcPaymentsOrBuilder getShift4AccessTokenOrBuilder() {
+    if (valueCase_ == 3402) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteShift4CcPayments) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteShift4CcPayments.getDefaultInstance();
+  }
+
   public static final int POSCORP_ACCESSTOKEN_FIELD_NUMBER = 3501;
   /**
    * <code>.api.commons.integrations.ExecutePoscorpAccesstoken poscorp_accesstoken = 3501 [json_name = "poscorpAccesstoken"];</code>
@@ -7214,6 +7247,9 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 3401) {
       output.writeMessage(3401, (com.tcn.cloud.api.api.commons.integrations.ExecuteShift4CcPayments) value_);
     }
+    if (valueCase_ == 3402) {
+      output.writeMessage(3402, (com.tcn.cloud.api.api.commons.integrations.ExecuteShift4CcPayments) value_);
+    }
     if (valueCase_ == 3501) {
       output.writeMessage(3501, (com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpAccesstoken) value_);
     }
@@ -7991,6 +8027,10 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 3401) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3401, (com.tcn.cloud.api.api.commons.integrations.ExecuteShift4CcPayments) value_);
+    }
+    if (valueCase_ == 3402) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3402, (com.tcn.cloud.api.api.commons.integrations.ExecuteShift4CcPayments) value_);
     }
     if (valueCase_ == 3501) {
       size += com.google.protobuf.CodedOutputStream
@@ -8807,6 +8847,10 @@ private static final long serialVersionUID = 0L;
         if (!getShift4CcPayment()
             .equals(other.getShift4CcPayment())) return false;
         break;
+      case 3402:
+        if (!getShift4AccessToken()
+            .equals(other.getShift4AccessToken())) return false;
+        break;
       case 3501:
         if (!getPoscorpAccesstoken()
             .equals(other.getPoscorpAccesstoken())) return false;
@@ -9620,6 +9664,10 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + SHIFT4_CC_PAYMENT_FIELD_NUMBER;
         hash = (53 * hash) + getShift4CcPayment().hashCode();
         break;
+      case 3402:
+        hash = (37 * hash) + SHIFT4_ACCESS_TOKEN_FIELD_NUMBER;
+        hash = (53 * hash) + getShift4AccessToken().hashCode();
+        break;
       case 3501:
         hash = (37 * hash) + POSCORP_ACCESSTOKEN_FIELD_NUMBER;
         hash = (53 * hash) + getPoscorpAccesstoken().hashCode();
@@ -10394,6 +10442,9 @@ private static final long serialVersionUID = 0L;
       }
       if (shift4CcPaymentBuilder_ != null) {
         shift4CcPaymentBuilder_.clear();
+      }
+      if (shift4AccessTokenBuilder_ != null) {
+        shift4AccessTokenBuilder_.clear();
       }
       if (poscorpAccesstokenBuilder_ != null) {
         poscorpAccesstokenBuilder_.clear();
@@ -11234,6 +11285,10 @@ private static final long serialVersionUID = 0L;
       if (valueCase_ == 3401 &&
           shift4CcPaymentBuilder_ != null) {
         result.value_ = shift4CcPaymentBuilder_.build();
+      }
+      if (valueCase_ == 3402 &&
+          shift4AccessTokenBuilder_ != null) {
+        result.value_ = shift4AccessTokenBuilder_.build();
       }
       if (valueCase_ == 3501 &&
           poscorpAccesstokenBuilder_ != null) {
@@ -12081,6 +12136,10 @@ private static final long serialVersionUID = 0L;
         }
         case SHIFT4_CC_PAYMENT: {
           mergeShift4CcPayment(other.getShift4CcPayment());
+          break;
+        }
+        case SHIFT4_ACCESS_TOKEN: {
+          mergeShift4AccessToken(other.getShift4AccessToken());
           break;
         }
         case POSCORP_ACCESSTOKEN: {
@@ -13421,6 +13480,13 @@ private static final long serialVersionUID = 0L;
               valueCase_ = 3401;
               break;
             } // case 27210
+            case 27218: {
+              input.readMessage(
+                  getShift4AccessTokenFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 3402;
+              break;
+            } // case 27218
             case 28010: {
               input.readMessage(
                   getPoscorpAccesstokenFieldBuilder().getBuilder(),
@@ -37737,6 +37803,148 @@ private static final long serialVersionUID = 0L;
       valueCase_ = 3401;
       onChanged();
       return shift4CcPaymentBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteShift4CcPayments, com.tcn.cloud.api.api.commons.integrations.ExecuteShift4CcPayments.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteShift4CcPaymentsOrBuilder> shift4AccessTokenBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteShift4CcPayments shift4_access_token = 3402 [json_name = "shift4AccessToken"];</code>
+     * @return Whether the shift4AccessToken field is set.
+     */
+    @java.lang.Override
+    public boolean hasShift4AccessToken() {
+      return valueCase_ == 3402;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteShift4CcPayments shift4_access_token = 3402 [json_name = "shift4AccessToken"];</code>
+     * @return The shift4AccessToken.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteShift4CcPayments getShift4AccessToken() {
+      if (shift4AccessTokenBuilder_ == null) {
+        if (valueCase_ == 3402) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteShift4CcPayments) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteShift4CcPayments.getDefaultInstance();
+      } else {
+        if (valueCase_ == 3402) {
+          return shift4AccessTokenBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteShift4CcPayments.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteShift4CcPayments shift4_access_token = 3402 [json_name = "shift4AccessToken"];</code>
+     */
+    public Builder setShift4AccessToken(com.tcn.cloud.api.api.commons.integrations.ExecuteShift4CcPayments value) {
+      if (shift4AccessTokenBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        shift4AccessTokenBuilder_.setMessage(value);
+      }
+      valueCase_ = 3402;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteShift4CcPayments shift4_access_token = 3402 [json_name = "shift4AccessToken"];</code>
+     */
+    public Builder setShift4AccessToken(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteShift4CcPayments.Builder builderForValue) {
+      if (shift4AccessTokenBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        shift4AccessTokenBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 3402;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteShift4CcPayments shift4_access_token = 3402 [json_name = "shift4AccessToken"];</code>
+     */
+    public Builder mergeShift4AccessToken(com.tcn.cloud.api.api.commons.integrations.ExecuteShift4CcPayments value) {
+      if (shift4AccessTokenBuilder_ == null) {
+        if (valueCase_ == 3402 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteShift4CcPayments.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteShift4CcPayments.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteShift4CcPayments) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 3402) {
+          shift4AccessTokenBuilder_.mergeFrom(value);
+        } else {
+          shift4AccessTokenBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 3402;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteShift4CcPayments shift4_access_token = 3402 [json_name = "shift4AccessToken"];</code>
+     */
+    public Builder clearShift4AccessToken() {
+      if (shift4AccessTokenBuilder_ == null) {
+        if (valueCase_ == 3402) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 3402) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        shift4AccessTokenBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteShift4CcPayments shift4_access_token = 3402 [json_name = "shift4AccessToken"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteShift4CcPayments.Builder getShift4AccessTokenBuilder() {
+      return getShift4AccessTokenFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteShift4CcPayments shift4_access_token = 3402 [json_name = "shift4AccessToken"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteShift4CcPaymentsOrBuilder getShift4AccessTokenOrBuilder() {
+      if ((valueCase_ == 3402) && (shift4AccessTokenBuilder_ != null)) {
+        return shift4AccessTokenBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 3402) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteShift4CcPayments) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteShift4CcPayments.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteShift4CcPayments shift4_access_token = 3402 [json_name = "shift4AccessToken"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteShift4CcPayments, com.tcn.cloud.api.api.commons.integrations.ExecuteShift4CcPayments.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteShift4CcPaymentsOrBuilder> 
+        getShift4AccessTokenFieldBuilder() {
+      if (shift4AccessTokenBuilder_ == null) {
+        if (!(valueCase_ == 3402)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteShift4CcPayments.getDefaultInstance();
+        }
+        shift4AccessTokenBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteShift4CcPayments, com.tcn.cloud.api.api.commons.integrations.ExecuteShift4CcPayments.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteShift4CcPaymentsOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteShift4CcPayments) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 3402;
+      onChanged();
+      return shift4AccessTokenBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<

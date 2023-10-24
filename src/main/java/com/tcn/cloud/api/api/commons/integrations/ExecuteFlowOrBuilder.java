@@ -2555,6 +2555,21 @@ public interface ExecuteFlowOrBuilder extends
   com.tcn.cloud.api.api.commons.integrations.ExecuteShift4CcPaymentsOrBuilder getShift4CcPaymentOrBuilder();
 
   /**
+   * <code>.api.commons.integrations.ExecuteShift4CcPayments shift4_access_token = 3402 [json_name = "shift4AccessToken"];</code>
+   * @return Whether the shift4AccessToken field is set.
+   */
+  boolean hasShift4AccessToken();
+  /**
+   * <code>.api.commons.integrations.ExecuteShift4CcPayments shift4_access_token = 3402 [json_name = "shift4AccessToken"];</code>
+   * @return The shift4AccessToken.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteShift4CcPayments getShift4AccessToken();
+  /**
+   * <code>.api.commons.integrations.ExecuteShift4CcPayments shift4_access_token = 3402 [json_name = "shift4AccessToken"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteShift4CcPaymentsOrBuilder getShift4AccessTokenOrBuilder();
+
+  /**
    * <code>.api.commons.integrations.ExecutePoscorpAccesstoken poscorp_accesstoken = 3501 [json_name = "poscorpAccesstoken"];</code>
    * @return Whether the poscorpAccesstoken field is set.
    */
