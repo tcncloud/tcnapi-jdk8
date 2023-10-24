@@ -59,6 +59,31 @@ public final class RoomProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_room303_UserDetails_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_room303_UpdateRoomConfigRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_room303_UpdateRoomConfigRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_room303_UpdateGlobalConfigRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_room303_UpdateGlobalConfigRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_room303_UpdateGlobalConfigResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_room303_UpdateGlobalConfigResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_room303_GetGlobalConfigRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_room303_GetGlobalConfigRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_room303_GetGlobalConfigResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_room303_GetGlobalConfigResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -70,35 +95,58 @@ public final class RoomProto {
     java.lang.String[] descriptorData = {
       "\n\037api/v1alpha1/room303/room.proto\022\024api.v" +
       "1alpha1.room303\032\031api/commons/room303.pro" +
-      "to\032\026api/commons/user.proto\"l\n\021CreateRoom" +
-      "Request\022\022\n\004name\030\001 \001(\tR\004name\022)\n\004type\030\002 \001(" +
-      "\0162\025.api.commons.RoomTypeR\004type\022\030\n\007member" +
-      "s\030\003 \003(\tR\007members\")\n\016GetRoomRequest\022\027\n\007ro" +
-      "om_id\030\001 \001(\tR\006roomId\"\025\n\023ListAllRoomsReque" +
-      "st\"\033\n\031ListRoomsForMemberRequest\"<\n\021ListR" +
-      "oomsResponse\022\'\n\005rooms\030\001 \003(\0132\021.api.common" +
-      "s.RoomR\005rooms\"-\n\022ArchiveRoomRequest\022\027\n\007r" +
-      "oom_id\030\001 \001(\tR\006roomId\"\223\001\n\025ListUsersNamesR" +
-      "equest\022\025\n\006org_id\030\001 \001(\tR\005orgId\022\024\n\005agent\030\002" +
-      " \001(\010R\005agent\022M\n\017archived_filter\030\003 \001(\0162$.a" +
-      "pi.commons.UserArchivedStateFilterR\016arch" +
-      "ivedFilter\"^\n\026ListUsersNamesResponse\022D\n\014" +
-      "user_details\030\001 \003(\0132!.api.v1alpha1.room30" +
-      "3.UserDetailsR\013userDetails\"\177\n\013UserDetail" +
-      "s\022\027\n\007user_id\030\001 \001(\tR\006userId\022\033\n\tuser_name\030" +
-      "\002 \001(\tR\010userName\022\035\n\nfirst_name\030\003 \001(\tR\tfir" +
-      "stName\022\033\n\tlast_name\030\004 \001(\tR\010lastNameB\245\001\n&" +
-      "com.tcn.cloud.api.api.v1alpha1.room303B\t" +
-      "RoomProtoP\001\242\002\003AVR\252\002\024Api.V1alpha1.Room303" +
-      "\312\002\024Api\\V1alpha1\\Room303\342\002 Api\\V1alpha1\\R" +
-      "oom303\\GPBMetadata\352\002\026Api::V1alpha1::Room" +
-      "303b\006proto3"
+      "to\032\026api/commons/user.proto\032 google/proto" +
+      "buf/field_mask.proto\032\037google/protobuf/ti" +
+      "mestamp.proto\"l\n\021CreateRoomRequest\022\022\n\004na" +
+      "me\030\001 \001(\tR\004name\022)\n\004type\030\002 \001(\0162\025.api.commo" +
+      "ns.RoomTypeR\004type\022\030\n\007members\030\003 \003(\tR\007memb" +
+      "ers\")\n\016GetRoomRequest\022\027\n\007room_id\030\001 \001(\tR\006" +
+      "roomId\"\025\n\023ListAllRoomsRequest\"\033\n\031ListRoo" +
+      "msForMemberRequest\"<\n\021ListRoomsResponse\022" +
+      "\'\n\005rooms\030\001 \003(\0132\021.api.commons.RoomR\005rooms" +
+      "\"-\n\022ArchiveRoomRequest\022\027\n\007room_id\030\001 \001(\tR" +
+      "\006roomId\"\223\001\n\025ListUsersNamesRequest\022\025\n\006org" +
+      "_id\030\001 \001(\tR\005orgId\022\024\n\005agent\030\002 \001(\010R\005agent\022M" +
+      "\n\017archived_filter\030\003 \001(\0162$.api.commons.Us" +
+      "erArchivedStateFilterR\016archivedFilter\"^\n" +
+      "\026ListUsersNamesResponse\022D\n\014user_details\030" +
+      "\001 \003(\0132!.api.v1alpha1.room303.UserDetails" +
+      "R\013userDetails\"\177\n\013UserDetails\022\027\n\007user_id\030" +
+      "\001 \001(\tR\006userId\022\033\n\tuser_name\030\002 \001(\tR\010userNa" +
+      "me\022\035\n\nfirst_name\030\003 \001(\tR\tfirstName\022\033\n\tlas" +
+      "t_name\030\004 \001(\tR\010lastName\"\236\001\n\027UpdateRoomCon" +
+      "figRequest\022\027\n\007room_id\030\001 \001(\tR\006roomId\022/\n\006c" +
+      "onfig\030\002 \001(\0132\027.api.commons.RoomConfigR\006co" +
+      "nfig\0229\n\nfield_mask\030d \001(\0132\032.google.protob" +
+      "uf.FieldMaskR\tfieldMask\"\211\001\n\031UpdateGlobal" +
+      "ConfigRequest\0221\n\006config\030\001 \001(\0132\031.api.comm" +
+      "ons.GlobalConfigR\006config\0229\n\nfield_mask\030d" +
+      " \001(\0132\032.google.protobuf.FieldMaskR\tfieldM" +
+      "ask\"\350\001\n\032UpdateGlobalConfigResponse\022\033\n\ted" +
+      "ited_by\030\001 \001(\tR\010editedBy\0221\n\006config\030\002 \001(\0132" +
+      "\031.api.commons.GlobalConfigR\006config\022=\n\014da" +
+      "te_created\030\003 \001(\0132\032.google.protobuf.Times" +
+      "tampR\013dateCreated\022;\n\013last_edited\030\004 \001(\0132\032" +
+      ".google.protobuf.TimestampR\nlastEdited\"\030" +
+      "\n\026GetGlobalConfigRequest\"\345\001\n\027GetGlobalCo" +
+      "nfigResponse\022\033\n\tedited_by\030\001 \001(\tR\010editedB" +
+      "y\0221\n\006config\030\002 \001(\0132\031.api.commons.GlobalCo" +
+      "nfigR\006config\022=\n\014date_created\030\003 \001(\0132\032.goo" +
+      "gle.protobuf.TimestampR\013dateCreated\022;\n\013l" +
+      "ast_edited\030\004 \001(\0132\032.google.protobuf.Times" +
+      "tampR\nlastEditedB\245\001\n&com.tcn.cloud.api.a" +
+      "pi.v1alpha1.room303B\tRoomProtoP\001\242\002\003AVR\252\002" +
+      "\024Api.V1alpha1.Room303\312\002\024Api\\V1alpha1\\Roo" +
+      "m303\342\002 Api\\V1alpha1\\Room303\\GPBMetadata\352" +
+      "\002\026Api::V1alpha1::Room303b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.tcn.cloud.api.api.commons.Room303Proto.getDescriptor(),
           com.tcn.cloud.api.api.commons.UserProto.getDescriptor(),
+          com.google.protobuf.FieldMaskProto.getDescriptor(),
+          com.google.protobuf.TimestampProto.getDescriptor(),
         });
     internal_static_api_v1alpha1_room303_CreateRoomRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -154,8 +202,40 @@ public final class RoomProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_room303_UserDetails_descriptor,
         new java.lang.String[] { "UserId", "UserName", "FirstName", "LastName", });
+    internal_static_api_v1alpha1_room303_UpdateRoomConfigRequest_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_api_v1alpha1_room303_UpdateRoomConfigRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_room303_UpdateRoomConfigRequest_descriptor,
+        new java.lang.String[] { "RoomId", "Config", "FieldMask", });
+    internal_static_api_v1alpha1_room303_UpdateGlobalConfigRequest_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_api_v1alpha1_room303_UpdateGlobalConfigRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_room303_UpdateGlobalConfigRequest_descriptor,
+        new java.lang.String[] { "Config", "FieldMask", });
+    internal_static_api_v1alpha1_room303_UpdateGlobalConfigResponse_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_api_v1alpha1_room303_UpdateGlobalConfigResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_room303_UpdateGlobalConfigResponse_descriptor,
+        new java.lang.String[] { "EditedBy", "Config", "DateCreated", "LastEdited", });
+    internal_static_api_v1alpha1_room303_GetGlobalConfigRequest_descriptor =
+      getDescriptor().getMessageTypes().get(12);
+    internal_static_api_v1alpha1_room303_GetGlobalConfigRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_room303_GetGlobalConfigRequest_descriptor,
+        new java.lang.String[] { });
+    internal_static_api_v1alpha1_room303_GetGlobalConfigResponse_descriptor =
+      getDescriptor().getMessageTypes().get(13);
+    internal_static_api_v1alpha1_room303_GetGlobalConfigResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_room303_GetGlobalConfigResponse_descriptor,
+        new java.lang.String[] { "EditedBy", "Config", "DateCreated", "LastEdited", });
     com.tcn.cloud.api.api.commons.Room303Proto.getDescriptor();
     com.tcn.cloud.api.api.commons.UserProto.getDescriptor();
+    com.google.protobuf.FieldMaskProto.getDescriptor();
+    com.google.protobuf.TimestampProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
