@@ -8,17 +8,26 @@ public interface AssignProjectTemplateRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.api.commons.AssignProjectTemplate project_template = 1 [json_name = "projectTemplate"];</code>
-   * @return Whether the projectTemplate field is set.
+   * <code>repeated .api.commons.AssignProjectTemplate project_template = 1 [json_name = "projectTemplate"];</code>
    */
-  boolean hasProjectTemplate();
+  java.util.List<com.tcn.cloud.api.api.commons.AssignProjectTemplate> 
+      getProjectTemplateList();
   /**
-   * <code>.api.commons.AssignProjectTemplate project_template = 1 [json_name = "projectTemplate"];</code>
-   * @return The projectTemplate.
+   * <code>repeated .api.commons.AssignProjectTemplate project_template = 1 [json_name = "projectTemplate"];</code>
    */
-  com.tcn.cloud.api.api.commons.AssignProjectTemplate getProjectTemplate();
+  com.tcn.cloud.api.api.commons.AssignProjectTemplate getProjectTemplate(int index);
   /**
-   * <code>.api.commons.AssignProjectTemplate project_template = 1 [json_name = "projectTemplate"];</code>
+   * <code>repeated .api.commons.AssignProjectTemplate project_template = 1 [json_name = "projectTemplate"];</code>
    */
-  com.tcn.cloud.api.api.commons.AssignProjectTemplateOrBuilder getProjectTemplateOrBuilder();
+  int getProjectTemplateCount();
+  /**
+   * <code>repeated .api.commons.AssignProjectTemplate project_template = 1 [json_name = "projectTemplate"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.api.commons.AssignProjectTemplateOrBuilder> 
+      getProjectTemplateOrBuilderList();
+  /**
+   * <code>repeated .api.commons.AssignProjectTemplate project_template = 1 [json_name = "projectTemplate"];</code>
+   */
+  com.tcn.cloud.api.api.commons.AssignProjectTemplateOrBuilder getProjectTemplateOrBuilder(
+      int index);
 }

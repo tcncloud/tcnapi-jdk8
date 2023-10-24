@@ -19,6 +19,7 @@ private static final long serialVersionUID = 0L;
     templateName_ = "";
     projectCode_ = "";
     actionType_ = "";
+    projectTitle_ = "";
   }
 
   @java.lang.Override
@@ -180,6 +181,45 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int PROJECT_TITLE_FIELD_NUMBER = 6;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object projectTitle_ = "";
+  /**
+   * <code>string project_title = 6 [json_name = "projectTitle"];</code>
+   * @return The projectTitle.
+   */
+  @java.lang.Override
+  public java.lang.String getProjectTitle() {
+    java.lang.Object ref = projectTitle_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      projectTitle_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string project_title = 6 [json_name = "projectTitle"];</code>
+   * @return The bytes for projectTitle.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getProjectTitleBytes() {
+    java.lang.Object ref = projectTitle_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      projectTitle_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -209,6 +249,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(actionType_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, actionType_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectTitle_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 6, projectTitle_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -235,6 +278,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(actionType_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, actionType_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectTitle_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, projectTitle_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -260,6 +306,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getProjectCode())) return false;
     if (!getActionType()
         .equals(other.getActionType())) return false;
+    if (!getProjectTitle()
+        .equals(other.getProjectTitle())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -283,6 +331,8 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getProjectCode().hashCode();
     hash = (37 * hash) + ACTION_TYPE_FIELD_NUMBER;
     hash = (53 * hash) + getActionType().hashCode();
+    hash = (37 * hash) + PROJECT_TITLE_FIELD_NUMBER;
+    hash = (53 * hash) + getProjectTitle().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -419,6 +469,7 @@ private static final long serialVersionUID = 0L;
       projectSid_ = 0L;
       projectCode_ = "";
       actionType_ = "";
+      projectTitle_ = "";
       return this;
     }
 
@@ -466,6 +517,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.actionType_ = actionType_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.projectTitle_ = projectTitle_;
       }
     }
 
@@ -534,6 +588,11 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000010;
         onChanged();
       }
+      if (!other.getProjectTitle().isEmpty()) {
+        projectTitle_ = other.projectTitle_;
+        bitField0_ |= 0x00000020;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -585,6 +644,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000010;
               break;
             } // case 42
+            case 50: {
+              projectTitle_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 50
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -878,6 +942,78 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       actionType_ = value;
       bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object projectTitle_ = "";
+    /**
+     * <code>string project_title = 6 [json_name = "projectTitle"];</code>
+     * @return The projectTitle.
+     */
+    public java.lang.String getProjectTitle() {
+      java.lang.Object ref = projectTitle_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        projectTitle_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string project_title = 6 [json_name = "projectTitle"];</code>
+     * @return The bytes for projectTitle.
+     */
+    public com.google.protobuf.ByteString
+        getProjectTitleBytes() {
+      java.lang.Object ref = projectTitle_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        projectTitle_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string project_title = 6 [json_name = "projectTitle"];</code>
+     * @param value The projectTitle to set.
+     * @return This builder for chaining.
+     */
+    public Builder setProjectTitle(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      projectTitle_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string project_title = 6 [json_name = "projectTitle"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearProjectTitle() {
+      projectTitle_ = getDefaultInstance().getProjectTitle();
+      bitField0_ = (bitField0_ & ~0x00000020);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string project_title = 6 [json_name = "projectTitle"];</code>
+     * @param value The bytes for projectTitle to set.
+     * @return This builder for chaining.
+     */
+    public Builder setProjectTitleBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      projectTitle_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }

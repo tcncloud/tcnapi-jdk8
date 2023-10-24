@@ -79,37 +79,11 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int CALLER_ID_CONDITION_FIELD_NUMBER = 2;
-  private com.tcn.cloud.api.api.commons.TemplateCondition callerIdCondition_;
-  /**
-   * <code>.api.commons.TemplateCondition caller_id_condition = 2 [json_name = "callerIdCondition"];</code>
-   * @return Whether the callerIdCondition field is set.
-   */
-  @java.lang.Override
-  public boolean hasCallerIdCondition() {
-    return callerIdCondition_ != null;
-  }
-  /**
-   * <code>.api.commons.TemplateCondition caller_id_condition = 2 [json_name = "callerIdCondition"];</code>
-   * @return The callerIdCondition.
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.TemplateCondition getCallerIdCondition() {
-    return callerIdCondition_ == null ? com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance() : callerIdCondition_;
-  }
-  /**
-   * <code>.api.commons.TemplateCondition caller_id_condition = 2 [json_name = "callerIdCondition"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder getCallerIdConditionOrBuilder() {
-    return callerIdCondition_ == null ? com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance() : callerIdCondition_;
-  }
-
-  public static final int COUNTRY_CODE_FIELD_NUMBER = 3;
+  public static final int COUNTRY_CODE_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
   private volatile java.lang.Object countryCode_ = "";
   /**
-   * <code>string country_code = 3 [json_name = "countryCode"];</code>
+   * <code>string country_code = 2 [json_name = "countryCode"];</code>
    * @return The countryCode.
    */
   @java.lang.Override
@@ -126,7 +100,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string country_code = 3 [json_name = "countryCode"];</code>
+   * <code>string country_code = 2 [json_name = "countryCode"];</code>
    * @return The bytes for countryCode.
    */
   @java.lang.Override
@@ -142,32 +116,6 @@ private static final long serialVersionUID = 0L;
     } else {
       return (com.google.protobuf.ByteString) ref;
     }
-  }
-
-  public static final int COUNTRY_CODE_CONDITION_FIELD_NUMBER = 4;
-  private com.tcn.cloud.api.api.commons.TemplateCondition countryCodeCondition_;
-  /**
-   * <code>.api.commons.TemplateCondition country_code_condition = 4 [json_name = "countryCodeCondition"];</code>
-   * @return Whether the countryCodeCondition field is set.
-   */
-  @java.lang.Override
-  public boolean hasCountryCodeCondition() {
-    return countryCodeCondition_ != null;
-  }
-  /**
-   * <code>.api.commons.TemplateCondition country_code_condition = 4 [json_name = "countryCodeCondition"];</code>
-   * @return The countryCodeCondition.
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.TemplateCondition getCountryCodeCondition() {
-    return countryCodeCondition_ == null ? com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance() : countryCodeCondition_;
-  }
-  /**
-   * <code>.api.commons.TemplateCondition country_code_condition = 4 [json_name = "countryCodeCondition"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder getCountryCodeConditionOrBuilder() {
-    return countryCodeCondition_ == null ? com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance() : countryCodeCondition_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -187,14 +135,8 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(callerId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, callerId_);
     }
-    if (callerIdCondition_ != null) {
-      output.writeMessage(2, getCallerIdCondition());
-    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(countryCode_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, countryCode_);
-    }
-    if (countryCodeCondition_ != null) {
-      output.writeMessage(4, getCountryCodeCondition());
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, countryCode_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -208,16 +150,8 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(callerId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, callerId_);
     }
-    if (callerIdCondition_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(2, getCallerIdCondition());
-    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(countryCode_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, countryCode_);
-    }
-    if (countryCodeCondition_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(4, getCountryCodeCondition());
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, countryCode_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -236,18 +170,8 @@ private static final long serialVersionUID = 0L;
 
     if (!getCallerId()
         .equals(other.getCallerId())) return false;
-    if (hasCallerIdCondition() != other.hasCallerIdCondition()) return false;
-    if (hasCallerIdCondition()) {
-      if (!getCallerIdCondition()
-          .equals(other.getCallerIdCondition())) return false;
-    }
     if (!getCountryCode()
         .equals(other.getCountryCode())) return false;
-    if (hasCountryCodeCondition() != other.hasCountryCodeCondition()) return false;
-    if (hasCountryCodeCondition()) {
-      if (!getCountryCodeCondition()
-          .equals(other.getCountryCodeCondition())) return false;
-    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -261,16 +185,8 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + CALLER_ID_FIELD_NUMBER;
     hash = (53 * hash) + getCallerId().hashCode();
-    if (hasCallerIdCondition()) {
-      hash = (37 * hash) + CALLER_ID_CONDITION_FIELD_NUMBER;
-      hash = (53 * hash) + getCallerIdCondition().hashCode();
-    }
     hash = (37 * hash) + COUNTRY_CODE_FIELD_NUMBER;
     hash = (53 * hash) + getCountryCode().hashCode();
-    if (hasCountryCodeCondition()) {
-      hash = (37 * hash) + COUNTRY_CODE_CONDITION_FIELD_NUMBER;
-      hash = (53 * hash) + getCountryCodeCondition().hashCode();
-    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -403,17 +319,7 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       callerId_ = "";
-      callerIdCondition_ = null;
-      if (callerIdConditionBuilder_ != null) {
-        callerIdConditionBuilder_.dispose();
-        callerIdConditionBuilder_ = null;
-      }
       countryCode_ = "";
-      countryCodeCondition_ = null;
-      if (countryCodeConditionBuilder_ != null) {
-        countryCodeConditionBuilder_.dispose();
-        countryCodeConditionBuilder_ = null;
-      }
       return this;
     }
 
@@ -451,17 +357,7 @@ private static final long serialVersionUID = 0L;
         result.callerId_ = callerId_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.callerIdCondition_ = callerIdConditionBuilder_ == null
-            ? callerIdCondition_
-            : callerIdConditionBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
         result.countryCode_ = countryCode_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.countryCodeCondition_ = countryCodeConditionBuilder_ == null
-            ? countryCodeCondition_
-            : countryCodeConditionBuilder_.build();
       }
     }
 
@@ -514,16 +410,10 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000001;
         onChanged();
       }
-      if (other.hasCallerIdCondition()) {
-        mergeCallerIdCondition(other.getCallerIdCondition());
-      }
       if (!other.getCountryCode().isEmpty()) {
         countryCode_ = other.countryCode_;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000002;
         onChanged();
-      }
-      if (other.hasCountryCodeCondition()) {
-        mergeCountryCodeCondition(other.getCountryCodeCondition());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -557,24 +447,10 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 10
             case 18: {
-              input.readMessage(
-                  getCallerIdConditionFieldBuilder().getBuilder(),
-                  extensionRegistry);
+              countryCode_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000002;
               break;
             } // case 18
-            case 26: {
-              countryCode_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 26
-            case 34: {
-              input.readMessage(
-                  getCountryCodeConditionFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 34
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -664,128 +540,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.tcn.cloud.api.api.commons.TemplateCondition callerIdCondition_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.TemplateCondition, com.tcn.cloud.api.api.commons.TemplateCondition.Builder, com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder> callerIdConditionBuilder_;
-    /**
-     * <code>.api.commons.TemplateCondition caller_id_condition = 2 [json_name = "callerIdCondition"];</code>
-     * @return Whether the callerIdCondition field is set.
-     */
-    public boolean hasCallerIdCondition() {
-      return ((bitField0_ & 0x00000002) != 0);
-    }
-    /**
-     * <code>.api.commons.TemplateCondition caller_id_condition = 2 [json_name = "callerIdCondition"];</code>
-     * @return The callerIdCondition.
-     */
-    public com.tcn.cloud.api.api.commons.TemplateCondition getCallerIdCondition() {
-      if (callerIdConditionBuilder_ == null) {
-        return callerIdCondition_ == null ? com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance() : callerIdCondition_;
-      } else {
-        return callerIdConditionBuilder_.getMessage();
-      }
-    }
-    /**
-     * <code>.api.commons.TemplateCondition caller_id_condition = 2 [json_name = "callerIdCondition"];</code>
-     */
-    public Builder setCallerIdCondition(com.tcn.cloud.api.api.commons.TemplateCondition value) {
-      if (callerIdConditionBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        callerIdCondition_ = value;
-      } else {
-        callerIdConditionBuilder_.setMessage(value);
-      }
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.api.commons.TemplateCondition caller_id_condition = 2 [json_name = "callerIdCondition"];</code>
-     */
-    public Builder setCallerIdCondition(
-        com.tcn.cloud.api.api.commons.TemplateCondition.Builder builderForValue) {
-      if (callerIdConditionBuilder_ == null) {
-        callerIdCondition_ = builderForValue.build();
-      } else {
-        callerIdConditionBuilder_.setMessage(builderForValue.build());
-      }
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.api.commons.TemplateCondition caller_id_condition = 2 [json_name = "callerIdCondition"];</code>
-     */
-    public Builder mergeCallerIdCondition(com.tcn.cloud.api.api.commons.TemplateCondition value) {
-      if (callerIdConditionBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0) &&
-          callerIdCondition_ != null &&
-          callerIdCondition_ != com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance()) {
-          getCallerIdConditionBuilder().mergeFrom(value);
-        } else {
-          callerIdCondition_ = value;
-        }
-      } else {
-        callerIdConditionBuilder_.mergeFrom(value);
-      }
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.api.commons.TemplateCondition caller_id_condition = 2 [json_name = "callerIdCondition"];</code>
-     */
-    public Builder clearCallerIdCondition() {
-      bitField0_ = (bitField0_ & ~0x00000002);
-      callerIdCondition_ = null;
-      if (callerIdConditionBuilder_ != null) {
-        callerIdConditionBuilder_.dispose();
-        callerIdConditionBuilder_ = null;
-      }
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.api.commons.TemplateCondition caller_id_condition = 2 [json_name = "callerIdCondition"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.TemplateCondition.Builder getCallerIdConditionBuilder() {
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return getCallerIdConditionFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.api.commons.TemplateCondition caller_id_condition = 2 [json_name = "callerIdCondition"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder getCallerIdConditionOrBuilder() {
-      if (callerIdConditionBuilder_ != null) {
-        return callerIdConditionBuilder_.getMessageOrBuilder();
-      } else {
-        return callerIdCondition_ == null ?
-            com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance() : callerIdCondition_;
-      }
-    }
-    /**
-     * <code>.api.commons.TemplateCondition caller_id_condition = 2 [json_name = "callerIdCondition"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.TemplateCondition, com.tcn.cloud.api.api.commons.TemplateCondition.Builder, com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder> 
-        getCallerIdConditionFieldBuilder() {
-      if (callerIdConditionBuilder_ == null) {
-        callerIdConditionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.TemplateCondition, com.tcn.cloud.api.api.commons.TemplateCondition.Builder, com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder>(
-                getCallerIdCondition(),
-                getParentForChildren(),
-                isClean());
-        callerIdCondition_ = null;
-      }
-      return callerIdConditionBuilder_;
-    }
-
     private java.lang.Object countryCode_ = "";
     /**
-     * <code>string country_code = 3 [json_name = "countryCode"];</code>
+     * <code>string country_code = 2 [json_name = "countryCode"];</code>
      * @return The countryCode.
      */
     public java.lang.String getCountryCode() {
@@ -801,7 +558,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string country_code = 3 [json_name = "countryCode"];</code>
+     * <code>string country_code = 2 [json_name = "countryCode"];</code>
      * @return The bytes for countryCode.
      */
     public com.google.protobuf.ByteString
@@ -818,7 +575,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string country_code = 3 [json_name = "countryCode"];</code>
+     * <code>string country_code = 2 [json_name = "countryCode"];</code>
      * @param value The countryCode to set.
      * @return This builder for chaining.
      */
@@ -826,22 +583,22 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       countryCode_ = value;
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
-     * <code>string country_code = 3 [json_name = "countryCode"];</code>
+     * <code>string country_code = 2 [json_name = "countryCode"];</code>
      * @return This builder for chaining.
      */
     public Builder clearCountryCode() {
       countryCode_ = getDefaultInstance().getCountryCode();
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
     /**
-     * <code>string country_code = 3 [json_name = "countryCode"];</code>
+     * <code>string country_code = 2 [json_name = "countryCode"];</code>
      * @param value The bytes for countryCode to set.
      * @return This builder for chaining.
      */
@@ -850,128 +607,9 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       countryCode_ = value;
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
-    }
-
-    private com.tcn.cloud.api.api.commons.TemplateCondition countryCodeCondition_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.TemplateCondition, com.tcn.cloud.api.api.commons.TemplateCondition.Builder, com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder> countryCodeConditionBuilder_;
-    /**
-     * <code>.api.commons.TemplateCondition country_code_condition = 4 [json_name = "countryCodeCondition"];</code>
-     * @return Whether the countryCodeCondition field is set.
-     */
-    public boolean hasCountryCodeCondition() {
-      return ((bitField0_ & 0x00000008) != 0);
-    }
-    /**
-     * <code>.api.commons.TemplateCondition country_code_condition = 4 [json_name = "countryCodeCondition"];</code>
-     * @return The countryCodeCondition.
-     */
-    public com.tcn.cloud.api.api.commons.TemplateCondition getCountryCodeCondition() {
-      if (countryCodeConditionBuilder_ == null) {
-        return countryCodeCondition_ == null ? com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance() : countryCodeCondition_;
-      } else {
-        return countryCodeConditionBuilder_.getMessage();
-      }
-    }
-    /**
-     * <code>.api.commons.TemplateCondition country_code_condition = 4 [json_name = "countryCodeCondition"];</code>
-     */
-    public Builder setCountryCodeCondition(com.tcn.cloud.api.api.commons.TemplateCondition value) {
-      if (countryCodeConditionBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        countryCodeCondition_ = value;
-      } else {
-        countryCodeConditionBuilder_.setMessage(value);
-      }
-      bitField0_ |= 0x00000008;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.api.commons.TemplateCondition country_code_condition = 4 [json_name = "countryCodeCondition"];</code>
-     */
-    public Builder setCountryCodeCondition(
-        com.tcn.cloud.api.api.commons.TemplateCondition.Builder builderForValue) {
-      if (countryCodeConditionBuilder_ == null) {
-        countryCodeCondition_ = builderForValue.build();
-      } else {
-        countryCodeConditionBuilder_.setMessage(builderForValue.build());
-      }
-      bitField0_ |= 0x00000008;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.api.commons.TemplateCondition country_code_condition = 4 [json_name = "countryCodeCondition"];</code>
-     */
-    public Builder mergeCountryCodeCondition(com.tcn.cloud.api.api.commons.TemplateCondition value) {
-      if (countryCodeConditionBuilder_ == null) {
-        if (((bitField0_ & 0x00000008) != 0) &&
-          countryCodeCondition_ != null &&
-          countryCodeCondition_ != com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance()) {
-          getCountryCodeConditionBuilder().mergeFrom(value);
-        } else {
-          countryCodeCondition_ = value;
-        }
-      } else {
-        countryCodeConditionBuilder_.mergeFrom(value);
-      }
-      bitField0_ |= 0x00000008;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.api.commons.TemplateCondition country_code_condition = 4 [json_name = "countryCodeCondition"];</code>
-     */
-    public Builder clearCountryCodeCondition() {
-      bitField0_ = (bitField0_ & ~0x00000008);
-      countryCodeCondition_ = null;
-      if (countryCodeConditionBuilder_ != null) {
-        countryCodeConditionBuilder_.dispose();
-        countryCodeConditionBuilder_ = null;
-      }
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.api.commons.TemplateCondition country_code_condition = 4 [json_name = "countryCodeCondition"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.TemplateCondition.Builder getCountryCodeConditionBuilder() {
-      bitField0_ |= 0x00000008;
-      onChanged();
-      return getCountryCodeConditionFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.api.commons.TemplateCondition country_code_condition = 4 [json_name = "countryCodeCondition"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder getCountryCodeConditionOrBuilder() {
-      if (countryCodeConditionBuilder_ != null) {
-        return countryCodeConditionBuilder_.getMessageOrBuilder();
-      } else {
-        return countryCodeCondition_ == null ?
-            com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance() : countryCodeCondition_;
-      }
-    }
-    /**
-     * <code>.api.commons.TemplateCondition country_code_condition = 4 [json_name = "countryCodeCondition"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.TemplateCondition, com.tcn.cloud.api.api.commons.TemplateCondition.Builder, com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder> 
-        getCountryCodeConditionFieldBuilder() {
-      if (countryCodeConditionBuilder_ == null) {
-        countryCodeConditionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.TemplateCondition, com.tcn.cloud.api.api.commons.TemplateCondition.Builder, com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder>(
-                getCountryCodeCondition(),
-                getParentForChildren(),
-                isClean());
-        countryCodeCondition_ = null;
-      }
-      return countryCodeConditionBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

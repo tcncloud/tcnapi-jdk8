@@ -54,4 +54,16 @@ public interface AssignProjectTemplateOrBuilder extends
    */
   com.google.protobuf.ByteString
       getActionTypeBytes();
+
+  /**
+   * <code>string project_title = 6 [json_name = "projectTitle"];</code>
+   * @return The projectTitle.
+   */
+  java.lang.String getProjectTitle();
+  /**
+   * <code>string project_title = 6 [json_name = "projectTitle"];</code>
+   * @return The bytes for projectTitle.
+   */
+  com.google.protobuf.ByteString
+      getProjectTitleBytes();
 }

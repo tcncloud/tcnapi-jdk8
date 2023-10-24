@@ -26,6 +26,7 @@ private static final long serialVersionUID = 0L;
     title_ = "";
     status_ = 0;
     origin_ = 0;
+    creatorUserId_ = "";
   }
 
   @java.lang.Override
@@ -380,6 +381,53 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.tcn.cloud.api.api.commons.LearningOpportunityOrigin.UNRECOGNIZED : result;
   }
 
+  public static final int CREATOR_USER_ID_FIELD_NUMBER = 15;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object creatorUserId_ = "";
+  /**
+   * <pre>
+   * User id for the creator of the learning opportunity.
+   * </pre>
+   *
+   * <code>string creator_user_id = 15 [json_name = "creatorUserId"];</code>
+   * @return The creatorUserId.
+   */
+  @java.lang.Override
+  public java.lang.String getCreatorUserId() {
+    java.lang.Object ref = creatorUserId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      creatorUserId_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * User id for the creator of the learning opportunity.
+   * </pre>
+   *
+   * <code>string creator_user_id = 15 [json_name = "creatorUserId"];</code>
+   * @return The bytes for creatorUserId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getCreatorUserIdBytes() {
+    java.lang.Object ref = creatorUserId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      creatorUserId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -429,6 +477,9 @@ private static final long serialVersionUID = 0L;
     }
     if (origin_ != com.tcn.cloud.api.api.commons.LearningOpportunityOrigin.UNDEFINED.getNumber()) {
       output.writeEnum(14, origin_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creatorUserId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 15, creatorUserId_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -484,6 +535,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(14, origin_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creatorUserId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, creatorUserId_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -523,6 +577,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getTitle())) return false;
     if (status_ != other.status_) return false;
     if (origin_ != other.origin_) return false;
+    if (!getCreatorUserId()
+        .equals(other.getCreatorUserId())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -563,6 +619,8 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + status_;
     hash = (37 * hash) + ORIGIN_FIELD_NUMBER;
     hash = (53 * hash) + origin_;
+    hash = (37 * hash) + CREATOR_USER_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getCreatorUserId().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -714,6 +772,7 @@ private static final long serialVersionUID = 0L;
       title_ = "";
       status_ = 0;
       origin_ = 0;
+      creatorUserId_ = "";
       return this;
     }
 
@@ -784,6 +843,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000800) != 0)) {
         result.origin_ = origin_;
+      }
+      if (((from_bitField0_ & 0x00001000) != 0)) {
+        result.creatorUserId_ = creatorUserId_;
       }
     }
 
@@ -873,6 +935,11 @@ private static final long serialVersionUID = 0L;
       if (other.origin_ != 0) {
         setOriginValue(other.getOriginValue());
       }
+      if (!other.getCreatorUserId().isEmpty()) {
+        creatorUserId_ = other.creatorUserId_;
+        bitField0_ |= 0x00001000;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -961,6 +1028,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000800;
               break;
             } // case 112
+            case 122: {
+              creatorUserId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00001000;
+              break;
+            } // case 122
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1844,6 +1916,98 @@ private static final long serialVersionUID = 0L;
     public Builder clearOrigin() {
       bitField0_ = (bitField0_ & ~0x00000800);
       origin_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object creatorUserId_ = "";
+    /**
+     * <pre>
+     * User id for the creator of the learning opportunity.
+     * </pre>
+     *
+     * <code>string creator_user_id = 15 [json_name = "creatorUserId"];</code>
+     * @return The creatorUserId.
+     */
+    public java.lang.String getCreatorUserId() {
+      java.lang.Object ref = creatorUserId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        creatorUserId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * User id for the creator of the learning opportunity.
+     * </pre>
+     *
+     * <code>string creator_user_id = 15 [json_name = "creatorUserId"];</code>
+     * @return The bytes for creatorUserId.
+     */
+    public com.google.protobuf.ByteString
+        getCreatorUserIdBytes() {
+      java.lang.Object ref = creatorUserId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        creatorUserId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * User id for the creator of the learning opportunity.
+     * </pre>
+     *
+     * <code>string creator_user_id = 15 [json_name = "creatorUserId"];</code>
+     * @param value The creatorUserId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCreatorUserId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      creatorUserId_ = value;
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * User id for the creator of the learning opportunity.
+     * </pre>
+     *
+     * <code>string creator_user_id = 15 [json_name = "creatorUserId"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCreatorUserId() {
+      creatorUserId_ = getDefaultInstance().getCreatorUserId();
+      bitField0_ = (bitField0_ & ~0x00001000);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * User id for the creator of the learning opportunity.
+     * </pre>
+     *
+     * <code>string creator_user_id = 15 [json_name = "creatorUserId"];</code>
+     * @param value The bytes for creatorUserId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCreatorUserIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      creatorUserId_ = value;
+      bitField0_ |= 0x00001000;
       onChanged();
       return this;
     }

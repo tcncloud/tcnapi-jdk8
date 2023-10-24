@@ -35,7 +35,7 @@ public final class AgentTrainingProto {
     java.lang.String[] descriptorData = {
       "\n api/commons/agent_training.proto\022\013api." +
       "commons\032\025api/commons/acd.proto\032\037google/p" +
-      "rotobuf/timestamp.proto\"\241\004\n\023LearningOppo" +
+      "rotobuf/timestamp.proto\"\311\004\n\023LearningOppo" +
       "rtunity\0226\n\027learning_opportunity_id\030\002 \001(\003" +
       "R\025learningOpportunityId\022\031\n\010call_sid\030\003 \001(" +
       "\003R\007callSid\0227\n\tcall_type\030\004 \001(\0162\032.api.comm" +
@@ -49,7 +49,8 @@ public final class AgentTrainingProto {
       "tle\022>\n\006status\030\r \001(\0162&.api.commons.Learni" +
       "ngOpportunityStatusR\006status\022>\n\006origin\030\016 " +
       "\001(\0162&.api.commons.LearningOpportunityOri" +
-      "ginR\006origin\"R\n\016CallIdentifier\022\020\n\003sid\030\001 \001" +
+      "ginR\006origin\022&\n\017creator_user_id\030\017 \001(\tR\rcr" +
+      "eatorUserId\"R\n\016CallIdentifier\022\020\n\003sid\030\001 \001" +
       "(\003R\003sid\022.\n\004type\030\002 \001(\0162\032.api.commons.Call" +
       "Type.EnumR\004type*B\n\031LearningOpportunitySt" +
       "atus\022\017\n\013STATUS_OPEN\020\000\022\024\n\020STATUS_COMPLETE" +
@@ -73,7 +74,7 @@ public final class AgentTrainingProto {
     internal_static_api_commons_LearningOpportunity_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_LearningOpportunity_descriptor,
-        new java.lang.String[] { "LearningOpportunityId", "CallSid", "CallType", "TranscriptSid", "AgentUserId", "StartOffset", "EndOffset", "Description", "CreatedAt", "Title", "Status", "Origin", });
+        new java.lang.String[] { "LearningOpportunityId", "CallSid", "CallType", "TranscriptSid", "AgentUserId", "StartOffset", "EndOffset", "Description", "CreatedAt", "Title", "Status", "Origin", "CreatorUserId", });
     internal_static_api_commons_CallIdentifier_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_api_commons_CallIdentifier_fieldAccessorTable = new

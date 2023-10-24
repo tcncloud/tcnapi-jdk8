@@ -87,4 +87,16 @@ public interface ListTemplateOrBuilder extends
    * <code>.google.protobuf.Timestamp created_date = 8 [json_name = "createdDate"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getCreatedDateOrBuilder();
+
+  /**
+   * <code>string project_title = 9 [json_name = "projectTitle"];</code>
+   * @return The projectTitle.
+   */
+  java.lang.String getProjectTitle();
+  /**
+   * <code>string project_title = 9 [json_name = "projectTitle"];</code>
+   * @return The bytes for projectTitle.
+   */
+  com.google.protobuf.ByteString
+      getProjectTitleBytes();
 }

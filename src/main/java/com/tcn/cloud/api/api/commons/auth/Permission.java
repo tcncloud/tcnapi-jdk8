@@ -470,12 +470,31 @@ public enum Permission
   PERMISSION_INSIGHTS_DASHBOARD_EDIT(608),
   /**
    * <pre>
-   * Enables access to room 303 chat.
+   * Enables access to room 303 chat at a base level
+   * Lowest tier permissions for unconfigured rooms and direct messaging
    * </pre>
    *
    * <code>PERMISSION_ROOM303 = 700 [(.annotations.perms.options) = { ... }</code>
    */
   PERMISSION_ROOM303(700),
+  /**
+   * <pre>
+   * Provides middle level permissions for unconfigured
+   * rooms and direct messaging in room303
+   * </pre>
+   *
+   * <code>PERMISSION_ROOM303_MEMBER = 701 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_ROOM303_MEMBER(701),
+  /**
+   * <pre>
+   * Provides top level permissions rooms and direct
+   * messaging for all users in room303
+   * </pre>
+   *
+   * <code>PERMISSION_ROOM303_SUPERVISOR = 702 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_ROOM303_SUPERVISOR(702),
   /**
    * <pre>
    * Enables access to the call scripts builder app.
@@ -695,7 +714,7 @@ public enum Permission
    * Enables access to publish in Newsroom manager
    * </pre>
    *
-   * <code>PERMISSION_NEWSROOM_PUBLISH = 4201 [(.annotations.perms.options) = { ... }</code>
+   * <code>PERMISSION_NEWSROOM_PUBLISH = 4201;</code>
    */
   PERMISSION_NEWSROOM_PUBLISH(4201),
   UNRECOGNIZED(-1),
@@ -1159,12 +1178,31 @@ public enum Permission
   public static final int PERMISSION_INSIGHTS_DASHBOARD_EDIT_VALUE = 608;
   /**
    * <pre>
-   * Enables access to room 303 chat.
+   * Enables access to room 303 chat at a base level
+   * Lowest tier permissions for unconfigured rooms and direct messaging
    * </pre>
    *
    * <code>PERMISSION_ROOM303 = 700 [(.annotations.perms.options) = { ... }</code>
    */
   public static final int PERMISSION_ROOM303_VALUE = 700;
+  /**
+   * <pre>
+   * Provides middle level permissions for unconfigured
+   * rooms and direct messaging in room303
+   * </pre>
+   *
+   * <code>PERMISSION_ROOM303_MEMBER = 701 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_ROOM303_MEMBER_VALUE = 701;
+  /**
+   * <pre>
+   * Provides top level permissions rooms and direct
+   * messaging for all users in room303
+   * </pre>
+   *
+   * <code>PERMISSION_ROOM303_SUPERVISOR = 702 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_ROOM303_SUPERVISOR_VALUE = 702;
   /**
    * <pre>
    * Enables access to the call scripts builder app.
@@ -1384,7 +1422,7 @@ public enum Permission
    * Enables access to publish in Newsroom manager
    * </pre>
    *
-   * <code>PERMISSION_NEWSROOM_PUBLISH = 4201 [(.annotations.perms.options) = { ... }</code>
+   * <code>PERMISSION_NEWSROOM_PUBLISH = 4201;</code>
    */
   public static final int PERMISSION_NEWSROOM_PUBLISH_VALUE = 4201;
 
@@ -1471,6 +1509,8 @@ public enum Permission
       case 607: return PERMISSION_INSIGHTS_DASHBOARD_VIEW;
       case 608: return PERMISSION_INSIGHTS_DASHBOARD_EDIT;
       case 700: return PERMISSION_ROOM303;
+      case 701: return PERMISSION_ROOM303_MEMBER;
+      case 702: return PERMISSION_ROOM303_SUPERVISOR;
       case 800: return PERMISSION_AGENT_CALL_SCRIPTS;
       case 900: return PERMISSION_COMPLIANCE;
       case 910: return PERMISSION_COMPLIANCE_CONSENT;

@@ -98,56 +98,56 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int TEPLATE_START_DATE_FIELD_NUMBER = 3;
-  private com.google.protobuf.Timestamp teplateStartDate_;
+  public static final int TEMPLATE_START_DATE_FIELD_NUMBER = 3;
+  private com.google.protobuf.Timestamp templateStartDate_;
   /**
-   * <code>.google.protobuf.Timestamp teplate_start_date = 3 [json_name = "teplateStartDate"];</code>
-   * @return Whether the teplateStartDate field is set.
+   * <code>.google.protobuf.Timestamp template_start_date = 3 [json_name = "templateStartDate"];</code>
+   * @return Whether the templateStartDate field is set.
    */
   @java.lang.Override
-  public boolean hasTeplateStartDate() {
-    return teplateStartDate_ != null;
+  public boolean hasTemplateStartDate() {
+    return templateStartDate_ != null;
   }
   /**
-   * <code>.google.protobuf.Timestamp teplate_start_date = 3 [json_name = "teplateStartDate"];</code>
-   * @return The teplateStartDate.
+   * <code>.google.protobuf.Timestamp template_start_date = 3 [json_name = "templateStartDate"];</code>
+   * @return The templateStartDate.
    */
   @java.lang.Override
-  public com.google.protobuf.Timestamp getTeplateStartDate() {
-    return teplateStartDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : teplateStartDate_;
+  public com.google.protobuf.Timestamp getTemplateStartDate() {
+    return templateStartDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : templateStartDate_;
   }
   /**
-   * <code>.google.protobuf.Timestamp teplate_start_date = 3 [json_name = "teplateStartDate"];</code>
+   * <code>.google.protobuf.Timestamp template_start_date = 3 [json_name = "templateStartDate"];</code>
    */
   @java.lang.Override
-  public com.google.protobuf.TimestampOrBuilder getTeplateStartDateOrBuilder() {
-    return teplateStartDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : teplateStartDate_;
+  public com.google.protobuf.TimestampOrBuilder getTemplateStartDateOrBuilder() {
+    return templateStartDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : templateStartDate_;
   }
 
-  public static final int TEPLATE_END_DATE_FIELD_NUMBER = 4;
-  private com.google.protobuf.Timestamp teplateEndDate_;
+  public static final int TEMPLATE_END_DATE_FIELD_NUMBER = 4;
+  private com.google.protobuf.Timestamp templateEndDate_;
   /**
-   * <code>.google.protobuf.Timestamp teplate_end_date = 4 [json_name = "teplateEndDate"];</code>
-   * @return Whether the teplateEndDate field is set.
+   * <code>.google.protobuf.Timestamp template_end_date = 4 [json_name = "templateEndDate"];</code>
+   * @return Whether the templateEndDate field is set.
    */
   @java.lang.Override
-  public boolean hasTeplateEndDate() {
-    return teplateEndDate_ != null;
+  public boolean hasTemplateEndDate() {
+    return templateEndDate_ != null;
   }
   /**
-   * <code>.google.protobuf.Timestamp teplate_end_date = 4 [json_name = "teplateEndDate"];</code>
-   * @return The teplateEndDate.
+   * <code>.google.protobuf.Timestamp template_end_date = 4 [json_name = "templateEndDate"];</code>
+   * @return The templateEndDate.
    */
   @java.lang.Override
-  public com.google.protobuf.Timestamp getTeplateEndDate() {
-    return teplateEndDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : teplateEndDate_;
+  public com.google.protobuf.Timestamp getTemplateEndDate() {
+    return templateEndDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : templateEndDate_;
   }
   /**
-   * <code>.google.protobuf.Timestamp teplate_end_date = 4 [json_name = "teplateEndDate"];</code>
+   * <code>.google.protobuf.Timestamp template_end_date = 4 [json_name = "templateEndDate"];</code>
    */
   @java.lang.Override
-  public com.google.protobuf.TimestampOrBuilder getTeplateEndDateOrBuilder() {
-    return teplateEndDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : teplateEndDate_;
+  public com.google.protobuf.TimestampOrBuilder getTemplateEndDateOrBuilder() {
+    return templateEndDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : templateEndDate_;
   }
 
   public static final int TICKET_TITLE_FIELD_NUMBER = 5;
@@ -384,32 +384,6 @@ private static final long serialVersionUID = 0L;
     return ticketSla_.get(index);
   }
 
-  public static final int TICKET_SLA_CONDITION_FIELD_NUMBER = 12;
-  private com.tcn.cloud.api.api.commons.TemplateCondition ticketSlaCondition_;
-  /**
-   * <code>.api.commons.TemplateCondition ticket_sla_condition = 12 [json_name = "ticketSlaCondition"];</code>
-   * @return Whether the ticketSlaCondition field is set.
-   */
-  @java.lang.Override
-  public boolean hasTicketSlaCondition() {
-    return ticketSlaCondition_ != null;
-  }
-  /**
-   * <code>.api.commons.TemplateCondition ticket_sla_condition = 12 [json_name = "ticketSlaCondition"];</code>
-   * @return The ticketSlaCondition.
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.TemplateCondition getTicketSlaCondition() {
-    return ticketSlaCondition_ == null ? com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance() : ticketSlaCondition_;
-  }
-  /**
-   * <code>.api.commons.TemplateCondition ticket_sla_condition = 12 [json_name = "ticketSlaCondition"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder getTicketSlaConditionOrBuilder() {
-    return ticketSlaCondition_ == null ? com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance() : ticketSlaCondition_;
-  }
-
   public static final int ACTION_TYPE_FIELD_NUMBER = 13;
   @SuppressWarnings("serial")
   private volatile java.lang.Object actionType_ = "";
@@ -524,58 +498,6 @@ private static final long serialVersionUID = 0L;
     return actionSkillsCondition_ == null ? com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance() : actionSkillsCondition_;
   }
 
-  public static final int ACTION_START_DATE_FIELD_NUMBER = 16;
-  private com.google.protobuf.Timestamp actionStartDate_;
-  /**
-   * <code>.google.protobuf.Timestamp action_start_date = 16 [json_name = "actionStartDate"];</code>
-   * @return Whether the actionStartDate field is set.
-   */
-  @java.lang.Override
-  public boolean hasActionStartDate() {
-    return actionStartDate_ != null;
-  }
-  /**
-   * <code>.google.protobuf.Timestamp action_start_date = 16 [json_name = "actionStartDate"];</code>
-   * @return The actionStartDate.
-   */
-  @java.lang.Override
-  public com.google.protobuf.Timestamp getActionStartDate() {
-    return actionStartDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : actionStartDate_;
-  }
-  /**
-   * <code>.google.protobuf.Timestamp action_start_date = 16 [json_name = "actionStartDate"];</code>
-   */
-  @java.lang.Override
-  public com.google.protobuf.TimestampOrBuilder getActionStartDateOrBuilder() {
-    return actionStartDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : actionStartDate_;
-  }
-
-  public static final int ACTION_START_DATE_CONDITION_FIELD_NUMBER = 17;
-  private com.tcn.cloud.api.api.commons.TemplateCondition actionStartDateCondition_;
-  /**
-   * <code>.api.commons.TemplateCondition action_start_date_condition = 17 [json_name = "actionStartDateCondition"];</code>
-   * @return Whether the actionStartDateCondition field is set.
-   */
-  @java.lang.Override
-  public boolean hasActionStartDateCondition() {
-    return actionStartDateCondition_ != null;
-  }
-  /**
-   * <code>.api.commons.TemplateCondition action_start_date_condition = 17 [json_name = "actionStartDateCondition"];</code>
-   * @return The actionStartDateCondition.
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.TemplateCondition getActionStartDateCondition() {
-    return actionStartDateCondition_ == null ? com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance() : actionStartDateCondition_;
-  }
-  /**
-   * <code>.api.commons.TemplateCondition action_start_date_condition = 17 [json_name = "actionStartDateCondition"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder getActionStartDateConditionOrBuilder() {
-    return actionStartDateCondition_ == null ? com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance() : actionStartDateCondition_;
-  }
-
   public static final int ACTION_EXPIRY_DATE_FIELD_NUMBER = 18;
   private com.google.protobuf.Timestamp actionExpiryDate_;
   /**
@@ -667,32 +589,6 @@ private static final long serialVersionUID = 0L;
   public com.tcn.cloud.api.api.commons.SlaOrBuilder getActionSlaOrBuilder(
       int index) {
     return actionSla_.get(index);
-  }
-
-  public static final int ACTION_SLA_CONDITION_FIELD_NUMBER = 21;
-  private com.tcn.cloud.api.api.commons.TemplateCondition actionSlaCondition_;
-  /**
-   * <code>.api.commons.TemplateCondition action_sla_condition = 21 [json_name = "actionSlaCondition"];</code>
-   * @return Whether the actionSlaCondition field is set.
-   */
-  @java.lang.Override
-  public boolean hasActionSlaCondition() {
-    return actionSlaCondition_ != null;
-  }
-  /**
-   * <code>.api.commons.TemplateCondition action_sla_condition = 21 [json_name = "actionSlaCondition"];</code>
-   * @return The actionSlaCondition.
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.TemplateCondition getActionSlaCondition() {
-    return actionSlaCondition_ == null ? com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance() : actionSlaCondition_;
-  }
-  /**
-   * <code>.api.commons.TemplateCondition action_sla_condition = 21 [json_name = "actionSlaCondition"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder getActionSlaConditionOrBuilder() {
-    return actionSlaCondition_ == null ? com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance() : actionSlaCondition_;
   }
 
   public static final int IS_VALID_FIELD_NUMBER = 22;
@@ -809,6 +705,32 @@ private static final long serialVersionUID = 0L;
     return createdDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdDate_;
   }
 
+  public static final int TICKET_CALLBACK_TEMPLATE_CONDITION_FIELD_NUMBER = 26;
+  private com.tcn.cloud.api.api.commons.TemplateCondition ticketCallbackTemplateCondition_;
+  /**
+   * <code>.api.commons.TemplateCondition ticket_callback_template_condition = 26 [json_name = "ticketCallbackTemplateCondition"];</code>
+   * @return Whether the ticketCallbackTemplateCondition field is set.
+   */
+  @java.lang.Override
+  public boolean hasTicketCallbackTemplateCondition() {
+    return ticketCallbackTemplateCondition_ != null;
+  }
+  /**
+   * <code>.api.commons.TemplateCondition ticket_callback_template_condition = 26 [json_name = "ticketCallbackTemplateCondition"];</code>
+   * @return The ticketCallbackTemplateCondition.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.TemplateCondition getTicketCallbackTemplateCondition() {
+    return ticketCallbackTemplateCondition_ == null ? com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance() : ticketCallbackTemplateCondition_;
+  }
+  /**
+   * <code>.api.commons.TemplateCondition ticket_callback_template_condition = 26 [json_name = "ticketCallbackTemplateCondition"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder getTicketCallbackTemplateConditionOrBuilder() {
+    return ticketCallbackTemplateCondition_ == null ? com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance() : ticketCallbackTemplateCondition_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -829,11 +751,11 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(templateName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, templateName_);
     }
-    if (teplateStartDate_ != null) {
-      output.writeMessage(3, getTeplateStartDate());
+    if (templateStartDate_ != null) {
+      output.writeMessage(3, getTemplateStartDate());
     }
-    if (teplateEndDate_ != null) {
-      output.writeMessage(4, getTeplateEndDate());
+    if (templateEndDate_ != null) {
+      output.writeMessage(4, getTemplateEndDate());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ticketTitle_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, ticketTitle_);
@@ -856,9 +778,6 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < ticketSla_.size(); i++) {
       output.writeMessage(11, ticketSla_.get(i));
     }
-    if (ticketSlaCondition_ != null) {
-      output.writeMessage(12, getTicketSlaCondition());
-    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(actionType_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 13, actionType_);
     }
@@ -868,12 +787,6 @@ private static final long serialVersionUID = 0L;
     if (actionSkillsCondition_ != null) {
       output.writeMessage(15, getActionSkillsCondition());
     }
-    if (actionStartDate_ != null) {
-      output.writeMessage(16, getActionStartDate());
-    }
-    if (actionStartDateCondition_ != null) {
-      output.writeMessage(17, getActionStartDateCondition());
-    }
     if (actionExpiryDate_ != null) {
       output.writeMessage(18, getActionExpiryDate());
     }
@@ -882,9 +795,6 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < actionSla_.size(); i++) {
       output.writeMessage(20, actionSla_.get(i));
-    }
-    if (actionSlaCondition_ != null) {
-      output.writeMessage(21, getActionSlaCondition());
     }
     if (isValid_ != false) {
       output.writeBool(22, isValid_);
@@ -897,6 +807,9 @@ private static final long serialVersionUID = 0L;
     }
     if (createdDate_ != null) {
       output.writeMessage(25, getCreatedDate());
+    }
+    if (ticketCallbackTemplateCondition_ != null) {
+      output.writeMessage(26, getTicketCallbackTemplateCondition());
     }
     getUnknownFields().writeTo(output);
   }
@@ -914,13 +827,13 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(templateName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, templateName_);
     }
-    if (teplateStartDate_ != null) {
+    if (templateStartDate_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(3, getTeplateStartDate());
+        .computeMessageSize(3, getTemplateStartDate());
     }
-    if (teplateEndDate_ != null) {
+    if (templateEndDate_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(4, getTeplateEndDate());
+        .computeMessageSize(4, getTemplateEndDate());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ticketTitle_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, ticketTitle_);
@@ -952,10 +865,6 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(11, ticketSla_.get(i));
     }
-    if (ticketSlaCondition_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(12, getTicketSlaCondition());
-    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(actionType_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, actionType_);
     }
@@ -966,14 +875,6 @@ private static final long serialVersionUID = 0L;
     if (actionSkillsCondition_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(15, getActionSkillsCondition());
-    }
-    if (actionStartDate_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(16, getActionStartDate());
-    }
-    if (actionStartDateCondition_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(17, getActionStartDateCondition());
     }
     if (actionExpiryDate_ != null) {
       size += com.google.protobuf.CodedOutputStream
@@ -986,10 +887,6 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < actionSla_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(20, actionSla_.get(i));
-    }
-    if (actionSlaCondition_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(21, getActionSlaCondition());
     }
     if (isValid_ != false) {
       size += com.google.protobuf.CodedOutputStream
@@ -1005,6 +902,10 @@ private static final long serialVersionUID = 0L;
     if (createdDate_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(25, getCreatedDate());
+    }
+    if (ticketCallbackTemplateCondition_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(26, getTicketCallbackTemplateCondition());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -1025,15 +926,15 @@ private static final long serialVersionUID = 0L;
         != other.getTicketTemplateId()) return false;
     if (!getTemplateName()
         .equals(other.getTemplateName())) return false;
-    if (hasTeplateStartDate() != other.hasTeplateStartDate()) return false;
-    if (hasTeplateStartDate()) {
-      if (!getTeplateStartDate()
-          .equals(other.getTeplateStartDate())) return false;
+    if (hasTemplateStartDate() != other.hasTemplateStartDate()) return false;
+    if (hasTemplateStartDate()) {
+      if (!getTemplateStartDate()
+          .equals(other.getTemplateStartDate())) return false;
     }
-    if (hasTeplateEndDate() != other.hasTeplateEndDate()) return false;
-    if (hasTeplateEndDate()) {
-      if (!getTeplateEndDate()
-          .equals(other.getTeplateEndDate())) return false;
+    if (hasTemplateEndDate() != other.hasTemplateEndDate()) return false;
+    if (hasTemplateEndDate()) {
+      if (!getTemplateEndDate()
+          .equals(other.getTemplateEndDate())) return false;
     }
     if (!getTicketTitle()
         .equals(other.getTicketTitle())) return false;
@@ -1058,11 +959,6 @@ private static final long serialVersionUID = 0L;
     }
     if (!getTicketSlaList()
         .equals(other.getTicketSlaList())) return false;
-    if (hasTicketSlaCondition() != other.hasTicketSlaCondition()) return false;
-    if (hasTicketSlaCondition()) {
-      if (!getTicketSlaCondition()
-          .equals(other.getTicketSlaCondition())) return false;
-    }
     if (!getActionType()
         .equals(other.getActionType())) return false;
     if (!getActionSkillsList()
@@ -1071,16 +967,6 @@ private static final long serialVersionUID = 0L;
     if (hasActionSkillsCondition()) {
       if (!getActionSkillsCondition()
           .equals(other.getActionSkillsCondition())) return false;
-    }
-    if (hasActionStartDate() != other.hasActionStartDate()) return false;
-    if (hasActionStartDate()) {
-      if (!getActionStartDate()
-          .equals(other.getActionStartDate())) return false;
-    }
-    if (hasActionStartDateCondition() != other.hasActionStartDateCondition()) return false;
-    if (hasActionStartDateCondition()) {
-      if (!getActionStartDateCondition()
-          .equals(other.getActionStartDateCondition())) return false;
     }
     if (hasActionExpiryDate() != other.hasActionExpiryDate()) return false;
     if (hasActionExpiryDate()) {
@@ -1094,11 +980,6 @@ private static final long serialVersionUID = 0L;
     }
     if (!getActionSlaList()
         .equals(other.getActionSlaList())) return false;
-    if (hasActionSlaCondition() != other.hasActionSlaCondition()) return false;
-    if (hasActionSlaCondition()) {
-      if (!getActionSlaCondition()
-          .equals(other.getActionSlaCondition())) return false;
-    }
     if (getIsValid()
         != other.getIsValid()) return false;
     if (hasCallbackDefault() != other.hasCallbackDefault()) return false;
@@ -1112,6 +993,11 @@ private static final long serialVersionUID = 0L;
     if (hasCreatedDate()) {
       if (!getCreatedDate()
           .equals(other.getCreatedDate())) return false;
+    }
+    if (hasTicketCallbackTemplateCondition() != other.hasTicketCallbackTemplateCondition()) return false;
+    if (hasTicketCallbackTemplateCondition()) {
+      if (!getTicketCallbackTemplateCondition()
+          .equals(other.getTicketCallbackTemplateCondition())) return false;
     }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -1129,13 +1015,13 @@ private static final long serialVersionUID = 0L;
         getTicketTemplateId());
     hash = (37 * hash) + TEMPLATE_NAME_FIELD_NUMBER;
     hash = (53 * hash) + getTemplateName().hashCode();
-    if (hasTeplateStartDate()) {
-      hash = (37 * hash) + TEPLATE_START_DATE_FIELD_NUMBER;
-      hash = (53 * hash) + getTeplateStartDate().hashCode();
+    if (hasTemplateStartDate()) {
+      hash = (37 * hash) + TEMPLATE_START_DATE_FIELD_NUMBER;
+      hash = (53 * hash) + getTemplateStartDate().hashCode();
     }
-    if (hasTeplateEndDate()) {
-      hash = (37 * hash) + TEPLATE_END_DATE_FIELD_NUMBER;
-      hash = (53 * hash) + getTeplateEndDate().hashCode();
+    if (hasTemplateEndDate()) {
+      hash = (37 * hash) + TEMPLATE_END_DATE_FIELD_NUMBER;
+      hash = (53 * hash) + getTemplateEndDate().hashCode();
     }
     hash = (37 * hash) + TICKET_TITLE_FIELD_NUMBER;
     hash = (53 * hash) + getTicketTitle().hashCode();
@@ -1161,10 +1047,6 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + TICKET_SLA_FIELD_NUMBER;
       hash = (53 * hash) + getTicketSlaList().hashCode();
     }
-    if (hasTicketSlaCondition()) {
-      hash = (37 * hash) + TICKET_SLA_CONDITION_FIELD_NUMBER;
-      hash = (53 * hash) + getTicketSlaCondition().hashCode();
-    }
     hash = (37 * hash) + ACTION_TYPE_FIELD_NUMBER;
     hash = (53 * hash) + getActionType().hashCode();
     if (getActionSkillsCount() > 0) {
@@ -1174,14 +1056,6 @@ private static final long serialVersionUID = 0L;
     if (hasActionSkillsCondition()) {
       hash = (37 * hash) + ACTION_SKILLS_CONDITION_FIELD_NUMBER;
       hash = (53 * hash) + getActionSkillsCondition().hashCode();
-    }
-    if (hasActionStartDate()) {
-      hash = (37 * hash) + ACTION_START_DATE_FIELD_NUMBER;
-      hash = (53 * hash) + getActionStartDate().hashCode();
-    }
-    if (hasActionStartDateCondition()) {
-      hash = (37 * hash) + ACTION_START_DATE_CONDITION_FIELD_NUMBER;
-      hash = (53 * hash) + getActionStartDateCondition().hashCode();
     }
     if (hasActionExpiryDate()) {
       hash = (37 * hash) + ACTION_EXPIRY_DATE_FIELD_NUMBER;
@@ -1195,10 +1069,6 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + ACTION_SLA_FIELD_NUMBER;
       hash = (53 * hash) + getActionSlaList().hashCode();
     }
-    if (hasActionSlaCondition()) {
-      hash = (37 * hash) + ACTION_SLA_CONDITION_FIELD_NUMBER;
-      hash = (53 * hash) + getActionSlaCondition().hashCode();
-    }
     hash = (37 * hash) + IS_VALID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getIsValid());
@@ -1211,6 +1081,10 @@ private static final long serialVersionUID = 0L;
     if (hasCreatedDate()) {
       hash = (37 * hash) + CREATED_DATE_FIELD_NUMBER;
       hash = (53 * hash) + getCreatedDate().hashCode();
+    }
+    if (hasTicketCallbackTemplateCondition()) {
+      hash = (37 * hash) + TICKET_CALLBACK_TEMPLATE_CONDITION_FIELD_NUMBER;
+      hash = (53 * hash) + getTicketCallbackTemplateCondition().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -1345,15 +1219,15 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       ticketTemplateId_ = 0L;
       templateName_ = "";
-      teplateStartDate_ = null;
-      if (teplateStartDateBuilder_ != null) {
-        teplateStartDateBuilder_.dispose();
-        teplateStartDateBuilder_ = null;
+      templateStartDate_ = null;
+      if (templateStartDateBuilder_ != null) {
+        templateStartDateBuilder_.dispose();
+        templateStartDateBuilder_ = null;
       }
-      teplateEndDate_ = null;
-      if (teplateEndDateBuilder_ != null) {
-        teplateEndDateBuilder_.dispose();
-        teplateEndDateBuilder_ = null;
+      templateEndDate_ = null;
+      if (templateEndDateBuilder_ != null) {
+        templateEndDateBuilder_.dispose();
+        templateEndDateBuilder_ = null;
       }
       ticketTitle_ = "";
       ticketDescription_ = "";
@@ -1381,11 +1255,6 @@ private static final long serialVersionUID = 0L;
         ticketSlaBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000400);
-      ticketSlaCondition_ = null;
-      if (ticketSlaConditionBuilder_ != null) {
-        ticketSlaConditionBuilder_.dispose();
-        ticketSlaConditionBuilder_ = null;
-      }
       actionType_ = "";
       if (actionSkillsBuilder_ == null) {
         actionSkills_ = java.util.Collections.emptyList();
@@ -1393,21 +1262,11 @@ private static final long serialVersionUID = 0L;
         actionSkills_ = null;
         actionSkillsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00002000);
+      bitField0_ = (bitField0_ & ~0x00001000);
       actionSkillsCondition_ = null;
       if (actionSkillsConditionBuilder_ != null) {
         actionSkillsConditionBuilder_.dispose();
         actionSkillsConditionBuilder_ = null;
-      }
-      actionStartDate_ = null;
-      if (actionStartDateBuilder_ != null) {
-        actionStartDateBuilder_.dispose();
-        actionStartDateBuilder_ = null;
-      }
-      actionStartDateCondition_ = null;
-      if (actionStartDateConditionBuilder_ != null) {
-        actionStartDateConditionBuilder_.dispose();
-        actionStartDateConditionBuilder_ = null;
       }
       actionExpiryDate_ = null;
       if (actionExpiryDateBuilder_ != null) {
@@ -1425,12 +1284,7 @@ private static final long serialVersionUID = 0L;
         actionSla_ = null;
         actionSlaBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00080000);
-      actionSlaCondition_ = null;
-      if (actionSlaConditionBuilder_ != null) {
-        actionSlaConditionBuilder_.dispose();
-        actionSlaConditionBuilder_ = null;
-      }
+      bitField0_ = (bitField0_ & ~0x00010000);
       isValid_ = false;
       callbackDefault_ = null;
       if (callbackDefaultBuilder_ != null) {
@@ -1442,6 +1296,11 @@ private static final long serialVersionUID = 0L;
       if (createdDateBuilder_ != null) {
         createdDateBuilder_.dispose();
         createdDateBuilder_ = null;
+      }
+      ticketCallbackTemplateCondition_ = null;
+      if (ticketCallbackTemplateConditionBuilder_ != null) {
+        ticketCallbackTemplateConditionBuilder_.dispose();
+        ticketCallbackTemplateConditionBuilder_ = null;
       }
       return this;
     }
@@ -1486,18 +1345,18 @@ private static final long serialVersionUID = 0L;
         result.ticketSla_ = ticketSlaBuilder_.build();
       }
       if (actionSkillsBuilder_ == null) {
-        if (((bitField0_ & 0x00002000) != 0)) {
+        if (((bitField0_ & 0x00001000) != 0)) {
           actionSkills_ = java.util.Collections.unmodifiableList(actionSkills_);
-          bitField0_ = (bitField0_ & ~0x00002000);
+          bitField0_ = (bitField0_ & ~0x00001000);
         }
         result.actionSkills_ = actionSkills_;
       } else {
         result.actionSkills_ = actionSkillsBuilder_.build();
       }
       if (actionSlaBuilder_ == null) {
-        if (((bitField0_ & 0x00080000) != 0)) {
+        if (((bitField0_ & 0x00010000) != 0)) {
           actionSla_ = java.util.Collections.unmodifiableList(actionSla_);
-          bitField0_ = (bitField0_ & ~0x00080000);
+          bitField0_ = (bitField0_ & ~0x00010000);
         }
         result.actionSla_ = actionSla_;
       } else {
@@ -1514,14 +1373,14 @@ private static final long serialVersionUID = 0L;
         result.templateName_ = templateName_;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.teplateStartDate_ = teplateStartDateBuilder_ == null
-            ? teplateStartDate_
-            : teplateStartDateBuilder_.build();
+        result.templateStartDate_ = templateStartDateBuilder_ == null
+            ? templateStartDate_
+            : templateStartDateBuilder_.build();
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.teplateEndDate_ = teplateEndDateBuilder_ == null
-            ? teplateEndDate_
-            : teplateEndDateBuilder_.build();
+        result.templateEndDate_ = templateEndDateBuilder_ == null
+            ? templateEndDate_
+            : templateEndDateBuilder_.build();
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.ticketTitle_ = ticketTitle_;
@@ -1549,58 +1408,43 @@ private static final long serialVersionUID = 0L;
             : assigneeConditionBuilder_.build();
       }
       if (((from_bitField0_ & 0x00000800) != 0)) {
-        result.ticketSlaCondition_ = ticketSlaConditionBuilder_ == null
-            ? ticketSlaCondition_
-            : ticketSlaConditionBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00001000) != 0)) {
         result.actionType_ = actionType_;
       }
-      if (((from_bitField0_ & 0x00004000) != 0)) {
+      if (((from_bitField0_ & 0x00002000) != 0)) {
         result.actionSkillsCondition_ = actionSkillsConditionBuilder_ == null
             ? actionSkillsCondition_
             : actionSkillsConditionBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00008000) != 0)) {
-        result.actionStartDate_ = actionStartDateBuilder_ == null
-            ? actionStartDate_
-            : actionStartDateBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00010000) != 0)) {
-        result.actionStartDateCondition_ = actionStartDateConditionBuilder_ == null
-            ? actionStartDateCondition_
-            : actionStartDateConditionBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00020000) != 0)) {
+      if (((from_bitField0_ & 0x00004000) != 0)) {
         result.actionExpiryDate_ = actionExpiryDateBuilder_ == null
             ? actionExpiryDate_
             : actionExpiryDateBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00040000) != 0)) {
+      if (((from_bitField0_ & 0x00008000) != 0)) {
         result.actionExpiryDateCondition_ = actionExpiryDateConditionBuilder_ == null
             ? actionExpiryDateCondition_
             : actionExpiryDateConditionBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00100000) != 0)) {
-        result.actionSlaCondition_ = actionSlaConditionBuilder_ == null
-            ? actionSlaCondition_
-            : actionSlaConditionBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00200000) != 0)) {
+      if (((from_bitField0_ & 0x00020000) != 0)) {
         result.isValid_ = isValid_;
       }
-      if (((from_bitField0_ & 0x00400000) != 0)) {
+      if (((from_bitField0_ & 0x00040000) != 0)) {
         result.callbackDefault_ = callbackDefaultBuilder_ == null
             ? callbackDefault_
             : callbackDefaultBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00800000) != 0)) {
+      if (((from_bitField0_ & 0x00080000) != 0)) {
         result.createdById_ = createdById_;
       }
-      if (((from_bitField0_ & 0x01000000) != 0)) {
+      if (((from_bitField0_ & 0x00100000) != 0)) {
         result.createdDate_ = createdDateBuilder_ == null
             ? createdDate_
             : createdDateBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00200000) != 0)) {
+        result.ticketCallbackTemplateCondition_ = ticketCallbackTemplateConditionBuilder_ == null
+            ? ticketCallbackTemplateCondition_
+            : ticketCallbackTemplateConditionBuilder_.build();
       }
     }
 
@@ -1656,11 +1500,11 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000002;
         onChanged();
       }
-      if (other.hasTeplateStartDate()) {
-        mergeTeplateStartDate(other.getTeplateStartDate());
+      if (other.hasTemplateStartDate()) {
+        mergeTemplateStartDate(other.getTemplateStartDate());
       }
-      if (other.hasTeplateEndDate()) {
-        mergeTeplateEndDate(other.getTeplateEndDate());
+      if (other.hasTemplateEndDate()) {
+        mergeTemplateEndDate(other.getTemplateEndDate());
       }
       if (!other.getTicketTitle().isEmpty()) {
         ticketTitle_ = other.ticketTitle_;
@@ -1717,19 +1561,16 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
-      if (other.hasTicketSlaCondition()) {
-        mergeTicketSlaCondition(other.getTicketSlaCondition());
-      }
       if (!other.getActionType().isEmpty()) {
         actionType_ = other.actionType_;
-        bitField0_ |= 0x00001000;
+        bitField0_ |= 0x00000800;
         onChanged();
       }
       if (actionSkillsBuilder_ == null) {
         if (!other.actionSkills_.isEmpty()) {
           if (actionSkills_.isEmpty()) {
             actionSkills_ = other.actionSkills_;
-            bitField0_ = (bitField0_ & ~0x00002000);
+            bitField0_ = (bitField0_ & ~0x00001000);
           } else {
             ensureActionSkillsIsMutable();
             actionSkills_.addAll(other.actionSkills_);
@@ -1742,7 +1583,7 @@ private static final long serialVersionUID = 0L;
             actionSkillsBuilder_.dispose();
             actionSkillsBuilder_ = null;
             actionSkills_ = other.actionSkills_;
-            bitField0_ = (bitField0_ & ~0x00002000);
+            bitField0_ = (bitField0_ & ~0x00001000);
             actionSkillsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getActionSkillsFieldBuilder() : null;
@@ -1754,12 +1595,6 @@ private static final long serialVersionUID = 0L;
       if (other.hasActionSkillsCondition()) {
         mergeActionSkillsCondition(other.getActionSkillsCondition());
       }
-      if (other.hasActionStartDate()) {
-        mergeActionStartDate(other.getActionStartDate());
-      }
-      if (other.hasActionStartDateCondition()) {
-        mergeActionStartDateCondition(other.getActionStartDateCondition());
-      }
       if (other.hasActionExpiryDate()) {
         mergeActionExpiryDate(other.getActionExpiryDate());
       }
@@ -1770,7 +1605,7 @@ private static final long serialVersionUID = 0L;
         if (!other.actionSla_.isEmpty()) {
           if (actionSla_.isEmpty()) {
             actionSla_ = other.actionSla_;
-            bitField0_ = (bitField0_ & ~0x00080000);
+            bitField0_ = (bitField0_ & ~0x00010000);
           } else {
             ensureActionSlaIsMutable();
             actionSla_.addAll(other.actionSla_);
@@ -1783,7 +1618,7 @@ private static final long serialVersionUID = 0L;
             actionSlaBuilder_.dispose();
             actionSlaBuilder_ = null;
             actionSla_ = other.actionSla_;
-            bitField0_ = (bitField0_ & ~0x00080000);
+            bitField0_ = (bitField0_ & ~0x00010000);
             actionSlaBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getActionSlaFieldBuilder() : null;
@@ -1791,9 +1626,6 @@ private static final long serialVersionUID = 0L;
             actionSlaBuilder_.addAllMessages(other.actionSla_);
           }
         }
-      }
-      if (other.hasActionSlaCondition()) {
-        mergeActionSlaCondition(other.getActionSlaCondition());
       }
       if (other.getIsValid() != false) {
         setIsValid(other.getIsValid());
@@ -1803,11 +1635,14 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getCreatedById().isEmpty()) {
         createdById_ = other.createdById_;
-        bitField0_ |= 0x00800000;
+        bitField0_ |= 0x00080000;
         onChanged();
       }
       if (other.hasCreatedDate()) {
         mergeCreatedDate(other.getCreatedDate());
+      }
+      if (other.hasTicketCallbackTemplateCondition()) {
+        mergeTicketCallbackTemplateCondition(other.getTicketCallbackTemplateCondition());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -1847,14 +1682,14 @@ private static final long serialVersionUID = 0L;
             } // case 18
             case 26: {
               input.readMessage(
-                  getTeplateStartDateFieldBuilder().getBuilder(),
+                  getTemplateStartDateFieldBuilder().getBuilder(),
                   extensionRegistry);
               bitField0_ |= 0x00000004;
               break;
             } // case 26
             case 34: {
               input.readMessage(
-                  getTeplateEndDateFieldBuilder().getBuilder(),
+                  getTemplateEndDateFieldBuilder().getBuilder(),
                   extensionRegistry);
               bitField0_ |= 0x00000008;
               break;
@@ -1909,16 +1744,9 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 90
-            case 98: {
-              input.readMessage(
-                  getTicketSlaConditionFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000800;
-              break;
-            } // case 98
             case 106: {
               actionType_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00001000;
+              bitField0_ |= 0x00000800;
               break;
             } // case 106
             case 114: {
@@ -1938,35 +1766,21 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getActionSkillsConditionFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00004000;
+              bitField0_ |= 0x00002000;
               break;
             } // case 122
-            case 130: {
-              input.readMessage(
-                  getActionStartDateFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00008000;
-              break;
-            } // case 130
-            case 138: {
-              input.readMessage(
-                  getActionStartDateConditionFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00010000;
-              break;
-            } // case 138
             case 146: {
               input.readMessage(
                   getActionExpiryDateFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00020000;
+              bitField0_ |= 0x00004000;
               break;
             } // case 146
             case 154: {
               input.readMessage(
                   getActionExpiryDateConditionFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00040000;
+              bitField0_ |= 0x00008000;
               break;
             } // case 154
             case 162: {
@@ -1982,37 +1796,37 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 162
-            case 170: {
-              input.readMessage(
-                  getActionSlaConditionFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00100000;
-              break;
-            } // case 170
             case 176: {
               isValid_ = input.readBool();
-              bitField0_ |= 0x00200000;
+              bitField0_ |= 0x00020000;
               break;
             } // case 176
             case 186: {
               input.readMessage(
                   getCallbackDefaultFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00400000;
+              bitField0_ |= 0x00040000;
               break;
             } // case 186
             case 194: {
               createdById_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00800000;
+              bitField0_ |= 0x00080000;
               break;
             } // case 194
             case 202: {
               input.readMessage(
                   getCreatedDateFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x01000000;
+              bitField0_ |= 0x00100000;
               break;
             } // case 202
+            case 210: {
+              input.readMessage(
+                  getTicketCallbackTemplateConditionFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00200000;
+              break;
+            } // case 210
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2134,242 +1948,242 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.Timestamp teplateStartDate_;
+    private com.google.protobuf.Timestamp templateStartDate_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> teplateStartDateBuilder_;
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> templateStartDateBuilder_;
     /**
-     * <code>.google.protobuf.Timestamp teplate_start_date = 3 [json_name = "teplateStartDate"];</code>
-     * @return Whether the teplateStartDate field is set.
+     * <code>.google.protobuf.Timestamp template_start_date = 3 [json_name = "templateStartDate"];</code>
+     * @return Whether the templateStartDate field is set.
      */
-    public boolean hasTeplateStartDate() {
+    public boolean hasTemplateStartDate() {
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
-     * <code>.google.protobuf.Timestamp teplate_start_date = 3 [json_name = "teplateStartDate"];</code>
-     * @return The teplateStartDate.
+     * <code>.google.protobuf.Timestamp template_start_date = 3 [json_name = "templateStartDate"];</code>
+     * @return The templateStartDate.
      */
-    public com.google.protobuf.Timestamp getTeplateStartDate() {
-      if (teplateStartDateBuilder_ == null) {
-        return teplateStartDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : teplateStartDate_;
+    public com.google.protobuf.Timestamp getTemplateStartDate() {
+      if (templateStartDateBuilder_ == null) {
+        return templateStartDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : templateStartDate_;
       } else {
-        return teplateStartDateBuilder_.getMessage();
+        return templateStartDateBuilder_.getMessage();
       }
     }
     /**
-     * <code>.google.protobuf.Timestamp teplate_start_date = 3 [json_name = "teplateStartDate"];</code>
+     * <code>.google.protobuf.Timestamp template_start_date = 3 [json_name = "templateStartDate"];</code>
      */
-    public Builder setTeplateStartDate(com.google.protobuf.Timestamp value) {
-      if (teplateStartDateBuilder_ == null) {
+    public Builder setTemplateStartDate(com.google.protobuf.Timestamp value) {
+      if (templateStartDateBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        teplateStartDate_ = value;
+        templateStartDate_ = value;
       } else {
-        teplateStartDateBuilder_.setMessage(value);
+        templateStartDateBuilder_.setMessage(value);
       }
       bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
-     * <code>.google.protobuf.Timestamp teplate_start_date = 3 [json_name = "teplateStartDate"];</code>
+     * <code>.google.protobuf.Timestamp template_start_date = 3 [json_name = "templateStartDate"];</code>
      */
-    public Builder setTeplateStartDate(
+    public Builder setTemplateStartDate(
         com.google.protobuf.Timestamp.Builder builderForValue) {
-      if (teplateStartDateBuilder_ == null) {
-        teplateStartDate_ = builderForValue.build();
+      if (templateStartDateBuilder_ == null) {
+        templateStartDate_ = builderForValue.build();
       } else {
-        teplateStartDateBuilder_.setMessage(builderForValue.build());
+        templateStartDateBuilder_.setMessage(builderForValue.build());
       }
       bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
-     * <code>.google.protobuf.Timestamp teplate_start_date = 3 [json_name = "teplateStartDate"];</code>
+     * <code>.google.protobuf.Timestamp template_start_date = 3 [json_name = "templateStartDate"];</code>
      */
-    public Builder mergeTeplateStartDate(com.google.protobuf.Timestamp value) {
-      if (teplateStartDateBuilder_ == null) {
+    public Builder mergeTemplateStartDate(com.google.protobuf.Timestamp value) {
+      if (templateStartDateBuilder_ == null) {
         if (((bitField0_ & 0x00000004) != 0) &&
-          teplateStartDate_ != null &&
-          teplateStartDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-          getTeplateStartDateBuilder().mergeFrom(value);
+          templateStartDate_ != null &&
+          templateStartDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+          getTemplateStartDateBuilder().mergeFrom(value);
         } else {
-          teplateStartDate_ = value;
+          templateStartDate_ = value;
         }
       } else {
-        teplateStartDateBuilder_.mergeFrom(value);
+        templateStartDateBuilder_.mergeFrom(value);
       }
       bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
-     * <code>.google.protobuf.Timestamp teplate_start_date = 3 [json_name = "teplateStartDate"];</code>
+     * <code>.google.protobuf.Timestamp template_start_date = 3 [json_name = "templateStartDate"];</code>
      */
-    public Builder clearTeplateStartDate() {
+    public Builder clearTemplateStartDate() {
       bitField0_ = (bitField0_ & ~0x00000004);
-      teplateStartDate_ = null;
-      if (teplateStartDateBuilder_ != null) {
-        teplateStartDateBuilder_.dispose();
-        teplateStartDateBuilder_ = null;
+      templateStartDate_ = null;
+      if (templateStartDateBuilder_ != null) {
+        templateStartDateBuilder_.dispose();
+        templateStartDateBuilder_ = null;
       }
       onChanged();
       return this;
     }
     /**
-     * <code>.google.protobuf.Timestamp teplate_start_date = 3 [json_name = "teplateStartDate"];</code>
+     * <code>.google.protobuf.Timestamp template_start_date = 3 [json_name = "templateStartDate"];</code>
      */
-    public com.google.protobuf.Timestamp.Builder getTeplateStartDateBuilder() {
+    public com.google.protobuf.Timestamp.Builder getTemplateStartDateBuilder() {
       bitField0_ |= 0x00000004;
       onChanged();
-      return getTeplateStartDateFieldBuilder().getBuilder();
+      return getTemplateStartDateFieldBuilder().getBuilder();
     }
     /**
-     * <code>.google.protobuf.Timestamp teplate_start_date = 3 [json_name = "teplateStartDate"];</code>
+     * <code>.google.protobuf.Timestamp template_start_date = 3 [json_name = "templateStartDate"];</code>
      */
-    public com.google.protobuf.TimestampOrBuilder getTeplateStartDateOrBuilder() {
-      if (teplateStartDateBuilder_ != null) {
-        return teplateStartDateBuilder_.getMessageOrBuilder();
+    public com.google.protobuf.TimestampOrBuilder getTemplateStartDateOrBuilder() {
+      if (templateStartDateBuilder_ != null) {
+        return templateStartDateBuilder_.getMessageOrBuilder();
       } else {
-        return teplateStartDate_ == null ?
-            com.google.protobuf.Timestamp.getDefaultInstance() : teplateStartDate_;
+        return templateStartDate_ == null ?
+            com.google.protobuf.Timestamp.getDefaultInstance() : templateStartDate_;
       }
     }
     /**
-     * <code>.google.protobuf.Timestamp teplate_start_date = 3 [json_name = "teplateStartDate"];</code>
+     * <code>.google.protobuf.Timestamp template_start_date = 3 [json_name = "templateStartDate"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-        getTeplateStartDateFieldBuilder() {
-      if (teplateStartDateBuilder_ == null) {
-        teplateStartDateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        getTemplateStartDateFieldBuilder() {
+      if (templateStartDateBuilder_ == null) {
+        templateStartDateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                getTeplateStartDate(),
+                getTemplateStartDate(),
                 getParentForChildren(),
                 isClean());
-        teplateStartDate_ = null;
+        templateStartDate_ = null;
       }
-      return teplateStartDateBuilder_;
+      return templateStartDateBuilder_;
     }
 
-    private com.google.protobuf.Timestamp teplateEndDate_;
+    private com.google.protobuf.Timestamp templateEndDate_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> teplateEndDateBuilder_;
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> templateEndDateBuilder_;
     /**
-     * <code>.google.protobuf.Timestamp teplate_end_date = 4 [json_name = "teplateEndDate"];</code>
-     * @return Whether the teplateEndDate field is set.
+     * <code>.google.protobuf.Timestamp template_end_date = 4 [json_name = "templateEndDate"];</code>
+     * @return Whether the templateEndDate field is set.
      */
-    public boolean hasTeplateEndDate() {
+    public boolean hasTemplateEndDate() {
       return ((bitField0_ & 0x00000008) != 0);
     }
     /**
-     * <code>.google.protobuf.Timestamp teplate_end_date = 4 [json_name = "teplateEndDate"];</code>
-     * @return The teplateEndDate.
+     * <code>.google.protobuf.Timestamp template_end_date = 4 [json_name = "templateEndDate"];</code>
+     * @return The templateEndDate.
      */
-    public com.google.protobuf.Timestamp getTeplateEndDate() {
-      if (teplateEndDateBuilder_ == null) {
-        return teplateEndDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : teplateEndDate_;
+    public com.google.protobuf.Timestamp getTemplateEndDate() {
+      if (templateEndDateBuilder_ == null) {
+        return templateEndDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : templateEndDate_;
       } else {
-        return teplateEndDateBuilder_.getMessage();
+        return templateEndDateBuilder_.getMessage();
       }
     }
     /**
-     * <code>.google.protobuf.Timestamp teplate_end_date = 4 [json_name = "teplateEndDate"];</code>
+     * <code>.google.protobuf.Timestamp template_end_date = 4 [json_name = "templateEndDate"];</code>
      */
-    public Builder setTeplateEndDate(com.google.protobuf.Timestamp value) {
-      if (teplateEndDateBuilder_ == null) {
+    public Builder setTemplateEndDate(com.google.protobuf.Timestamp value) {
+      if (templateEndDateBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        teplateEndDate_ = value;
+        templateEndDate_ = value;
       } else {
-        teplateEndDateBuilder_.setMessage(value);
+        templateEndDateBuilder_.setMessage(value);
       }
       bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
     /**
-     * <code>.google.protobuf.Timestamp teplate_end_date = 4 [json_name = "teplateEndDate"];</code>
+     * <code>.google.protobuf.Timestamp template_end_date = 4 [json_name = "templateEndDate"];</code>
      */
-    public Builder setTeplateEndDate(
+    public Builder setTemplateEndDate(
         com.google.protobuf.Timestamp.Builder builderForValue) {
-      if (teplateEndDateBuilder_ == null) {
-        teplateEndDate_ = builderForValue.build();
+      if (templateEndDateBuilder_ == null) {
+        templateEndDate_ = builderForValue.build();
       } else {
-        teplateEndDateBuilder_.setMessage(builderForValue.build());
+        templateEndDateBuilder_.setMessage(builderForValue.build());
       }
       bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
     /**
-     * <code>.google.protobuf.Timestamp teplate_end_date = 4 [json_name = "teplateEndDate"];</code>
+     * <code>.google.protobuf.Timestamp template_end_date = 4 [json_name = "templateEndDate"];</code>
      */
-    public Builder mergeTeplateEndDate(com.google.protobuf.Timestamp value) {
-      if (teplateEndDateBuilder_ == null) {
+    public Builder mergeTemplateEndDate(com.google.protobuf.Timestamp value) {
+      if (templateEndDateBuilder_ == null) {
         if (((bitField0_ & 0x00000008) != 0) &&
-          teplateEndDate_ != null &&
-          teplateEndDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-          getTeplateEndDateBuilder().mergeFrom(value);
+          templateEndDate_ != null &&
+          templateEndDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+          getTemplateEndDateBuilder().mergeFrom(value);
         } else {
-          teplateEndDate_ = value;
+          templateEndDate_ = value;
         }
       } else {
-        teplateEndDateBuilder_.mergeFrom(value);
+        templateEndDateBuilder_.mergeFrom(value);
       }
       bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
     /**
-     * <code>.google.protobuf.Timestamp teplate_end_date = 4 [json_name = "teplateEndDate"];</code>
+     * <code>.google.protobuf.Timestamp template_end_date = 4 [json_name = "templateEndDate"];</code>
      */
-    public Builder clearTeplateEndDate() {
+    public Builder clearTemplateEndDate() {
       bitField0_ = (bitField0_ & ~0x00000008);
-      teplateEndDate_ = null;
-      if (teplateEndDateBuilder_ != null) {
-        teplateEndDateBuilder_.dispose();
-        teplateEndDateBuilder_ = null;
+      templateEndDate_ = null;
+      if (templateEndDateBuilder_ != null) {
+        templateEndDateBuilder_.dispose();
+        templateEndDateBuilder_ = null;
       }
       onChanged();
       return this;
     }
     /**
-     * <code>.google.protobuf.Timestamp teplate_end_date = 4 [json_name = "teplateEndDate"];</code>
+     * <code>.google.protobuf.Timestamp template_end_date = 4 [json_name = "templateEndDate"];</code>
      */
-    public com.google.protobuf.Timestamp.Builder getTeplateEndDateBuilder() {
+    public com.google.protobuf.Timestamp.Builder getTemplateEndDateBuilder() {
       bitField0_ |= 0x00000008;
       onChanged();
-      return getTeplateEndDateFieldBuilder().getBuilder();
+      return getTemplateEndDateFieldBuilder().getBuilder();
     }
     /**
-     * <code>.google.protobuf.Timestamp teplate_end_date = 4 [json_name = "teplateEndDate"];</code>
+     * <code>.google.protobuf.Timestamp template_end_date = 4 [json_name = "templateEndDate"];</code>
      */
-    public com.google.protobuf.TimestampOrBuilder getTeplateEndDateOrBuilder() {
-      if (teplateEndDateBuilder_ != null) {
-        return teplateEndDateBuilder_.getMessageOrBuilder();
+    public com.google.protobuf.TimestampOrBuilder getTemplateEndDateOrBuilder() {
+      if (templateEndDateBuilder_ != null) {
+        return templateEndDateBuilder_.getMessageOrBuilder();
       } else {
-        return teplateEndDate_ == null ?
-            com.google.protobuf.Timestamp.getDefaultInstance() : teplateEndDate_;
+        return templateEndDate_ == null ?
+            com.google.protobuf.Timestamp.getDefaultInstance() : templateEndDate_;
       }
     }
     /**
-     * <code>.google.protobuf.Timestamp teplate_end_date = 4 [json_name = "teplateEndDate"];</code>
+     * <code>.google.protobuf.Timestamp template_end_date = 4 [json_name = "templateEndDate"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-        getTeplateEndDateFieldBuilder() {
-      if (teplateEndDateBuilder_ == null) {
-        teplateEndDateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        getTemplateEndDateFieldBuilder() {
+      if (templateEndDateBuilder_ == null) {
+        templateEndDateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                getTeplateEndDate(),
+                getTemplateEndDate(),
                 getParentForChildren(),
                 isClean());
-        teplateEndDate_ = null;
+        templateEndDate_ = null;
       }
-      return teplateEndDateBuilder_;
+      return templateEndDateBuilder_;
     }
 
     private java.lang.Object ticketTitle_ = "";
@@ -3224,125 +3038,6 @@ private static final long serialVersionUID = 0L;
       return ticketSlaBuilder_;
     }
 
-    private com.tcn.cloud.api.api.commons.TemplateCondition ticketSlaCondition_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.TemplateCondition, com.tcn.cloud.api.api.commons.TemplateCondition.Builder, com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder> ticketSlaConditionBuilder_;
-    /**
-     * <code>.api.commons.TemplateCondition ticket_sla_condition = 12 [json_name = "ticketSlaCondition"];</code>
-     * @return Whether the ticketSlaCondition field is set.
-     */
-    public boolean hasTicketSlaCondition() {
-      return ((bitField0_ & 0x00000800) != 0);
-    }
-    /**
-     * <code>.api.commons.TemplateCondition ticket_sla_condition = 12 [json_name = "ticketSlaCondition"];</code>
-     * @return The ticketSlaCondition.
-     */
-    public com.tcn.cloud.api.api.commons.TemplateCondition getTicketSlaCondition() {
-      if (ticketSlaConditionBuilder_ == null) {
-        return ticketSlaCondition_ == null ? com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance() : ticketSlaCondition_;
-      } else {
-        return ticketSlaConditionBuilder_.getMessage();
-      }
-    }
-    /**
-     * <code>.api.commons.TemplateCondition ticket_sla_condition = 12 [json_name = "ticketSlaCondition"];</code>
-     */
-    public Builder setTicketSlaCondition(com.tcn.cloud.api.api.commons.TemplateCondition value) {
-      if (ticketSlaConditionBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ticketSlaCondition_ = value;
-      } else {
-        ticketSlaConditionBuilder_.setMessage(value);
-      }
-      bitField0_ |= 0x00000800;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.api.commons.TemplateCondition ticket_sla_condition = 12 [json_name = "ticketSlaCondition"];</code>
-     */
-    public Builder setTicketSlaCondition(
-        com.tcn.cloud.api.api.commons.TemplateCondition.Builder builderForValue) {
-      if (ticketSlaConditionBuilder_ == null) {
-        ticketSlaCondition_ = builderForValue.build();
-      } else {
-        ticketSlaConditionBuilder_.setMessage(builderForValue.build());
-      }
-      bitField0_ |= 0x00000800;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.api.commons.TemplateCondition ticket_sla_condition = 12 [json_name = "ticketSlaCondition"];</code>
-     */
-    public Builder mergeTicketSlaCondition(com.tcn.cloud.api.api.commons.TemplateCondition value) {
-      if (ticketSlaConditionBuilder_ == null) {
-        if (((bitField0_ & 0x00000800) != 0) &&
-          ticketSlaCondition_ != null &&
-          ticketSlaCondition_ != com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance()) {
-          getTicketSlaConditionBuilder().mergeFrom(value);
-        } else {
-          ticketSlaCondition_ = value;
-        }
-      } else {
-        ticketSlaConditionBuilder_.mergeFrom(value);
-      }
-      bitField0_ |= 0x00000800;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.api.commons.TemplateCondition ticket_sla_condition = 12 [json_name = "ticketSlaCondition"];</code>
-     */
-    public Builder clearTicketSlaCondition() {
-      bitField0_ = (bitField0_ & ~0x00000800);
-      ticketSlaCondition_ = null;
-      if (ticketSlaConditionBuilder_ != null) {
-        ticketSlaConditionBuilder_.dispose();
-        ticketSlaConditionBuilder_ = null;
-      }
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.api.commons.TemplateCondition ticket_sla_condition = 12 [json_name = "ticketSlaCondition"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.TemplateCondition.Builder getTicketSlaConditionBuilder() {
-      bitField0_ |= 0x00000800;
-      onChanged();
-      return getTicketSlaConditionFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.api.commons.TemplateCondition ticket_sla_condition = 12 [json_name = "ticketSlaCondition"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder getTicketSlaConditionOrBuilder() {
-      if (ticketSlaConditionBuilder_ != null) {
-        return ticketSlaConditionBuilder_.getMessageOrBuilder();
-      } else {
-        return ticketSlaCondition_ == null ?
-            com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance() : ticketSlaCondition_;
-      }
-    }
-    /**
-     * <code>.api.commons.TemplateCondition ticket_sla_condition = 12 [json_name = "ticketSlaCondition"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.TemplateCondition, com.tcn.cloud.api.api.commons.TemplateCondition.Builder, com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder> 
-        getTicketSlaConditionFieldBuilder() {
-      if (ticketSlaConditionBuilder_ == null) {
-        ticketSlaConditionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.TemplateCondition, com.tcn.cloud.api.api.commons.TemplateCondition.Builder, com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder>(
-                getTicketSlaCondition(),
-                getParentForChildren(),
-                isClean());
-        ticketSlaCondition_ = null;
-      }
-      return ticketSlaConditionBuilder_;
-    }
-
     private java.lang.Object actionType_ = "";
     /**
      * <pre>
@@ -3398,7 +3093,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       actionType_ = value;
-      bitField0_ |= 0x00001000;
+      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -3412,7 +3107,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearActionType() {
       actionType_ = getDefaultInstance().getActionType();
-      bitField0_ = (bitField0_ & ~0x00001000);
+      bitField0_ = (bitField0_ & ~0x00000800);
       onChanged();
       return this;
     }
@@ -3430,7 +3125,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       actionType_ = value;
-      bitField0_ |= 0x00001000;
+      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -3438,9 +3133,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.tcn.cloud.api.api.commons.Skills> actionSkills_ =
       java.util.Collections.emptyList();
     private void ensureActionSkillsIsMutable() {
-      if (!((bitField0_ & 0x00002000) != 0)) {
+      if (!((bitField0_ & 0x00001000) != 0)) {
         actionSkills_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.Skills>(actionSkills_);
-        bitField0_ |= 0x00002000;
+        bitField0_ |= 0x00001000;
        }
     }
 
@@ -3590,7 +3285,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearActionSkills() {
       if (actionSkillsBuilder_ == null) {
         actionSkills_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00002000);
+        bitField0_ = (bitField0_ & ~0x00001000);
         onChanged();
       } else {
         actionSkillsBuilder_.clear();
@@ -3667,7 +3362,7 @@ private static final long serialVersionUID = 0L;
         actionSkillsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.commons.Skills, com.tcn.cloud.api.api.commons.Skills.Builder, com.tcn.cloud.api.api.commons.SkillsOrBuilder>(
                 actionSkills_,
-                ((bitField0_ & 0x00002000) != 0),
+                ((bitField0_ & 0x00001000) != 0),
                 getParentForChildren(),
                 isClean());
         actionSkills_ = null;
@@ -3683,7 +3378,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the actionSkillsCondition field is set.
      */
     public boolean hasActionSkillsCondition() {
-      return ((bitField0_ & 0x00004000) != 0);
+      return ((bitField0_ & 0x00002000) != 0);
     }
     /**
      * <code>.api.commons.TemplateCondition action_skills_condition = 15 [json_name = "actionSkillsCondition"];</code>
@@ -3708,7 +3403,7 @@ private static final long serialVersionUID = 0L;
       } else {
         actionSkillsConditionBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00004000;
+      bitField0_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -3722,7 +3417,7 @@ private static final long serialVersionUID = 0L;
       } else {
         actionSkillsConditionBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00004000;
+      bitField0_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -3731,7 +3426,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeActionSkillsCondition(com.tcn.cloud.api.api.commons.TemplateCondition value) {
       if (actionSkillsConditionBuilder_ == null) {
-        if (((bitField0_ & 0x00004000) != 0) &&
+        if (((bitField0_ & 0x00002000) != 0) &&
           actionSkillsCondition_ != null &&
           actionSkillsCondition_ != com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance()) {
           getActionSkillsConditionBuilder().mergeFrom(value);
@@ -3741,7 +3436,7 @@ private static final long serialVersionUID = 0L;
       } else {
         actionSkillsConditionBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00004000;
+      bitField0_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -3749,7 +3444,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.TemplateCondition action_skills_condition = 15 [json_name = "actionSkillsCondition"];</code>
      */
     public Builder clearActionSkillsCondition() {
-      bitField0_ = (bitField0_ & ~0x00004000);
+      bitField0_ = (bitField0_ & ~0x00002000);
       actionSkillsCondition_ = null;
       if (actionSkillsConditionBuilder_ != null) {
         actionSkillsConditionBuilder_.dispose();
@@ -3762,7 +3457,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.TemplateCondition action_skills_condition = 15 [json_name = "actionSkillsCondition"];</code>
      */
     public com.tcn.cloud.api.api.commons.TemplateCondition.Builder getActionSkillsConditionBuilder() {
-      bitField0_ |= 0x00004000;
+      bitField0_ |= 0x00002000;
       onChanged();
       return getActionSkillsConditionFieldBuilder().getBuilder();
     }
@@ -3794,244 +3489,6 @@ private static final long serialVersionUID = 0L;
       return actionSkillsConditionBuilder_;
     }
 
-    private com.google.protobuf.Timestamp actionStartDate_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> actionStartDateBuilder_;
-    /**
-     * <code>.google.protobuf.Timestamp action_start_date = 16 [json_name = "actionStartDate"];</code>
-     * @return Whether the actionStartDate field is set.
-     */
-    public boolean hasActionStartDate() {
-      return ((bitField0_ & 0x00008000) != 0);
-    }
-    /**
-     * <code>.google.protobuf.Timestamp action_start_date = 16 [json_name = "actionStartDate"];</code>
-     * @return The actionStartDate.
-     */
-    public com.google.protobuf.Timestamp getActionStartDate() {
-      if (actionStartDateBuilder_ == null) {
-        return actionStartDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : actionStartDate_;
-      } else {
-        return actionStartDateBuilder_.getMessage();
-      }
-    }
-    /**
-     * <code>.google.protobuf.Timestamp action_start_date = 16 [json_name = "actionStartDate"];</code>
-     */
-    public Builder setActionStartDate(com.google.protobuf.Timestamp value) {
-      if (actionStartDateBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        actionStartDate_ = value;
-      } else {
-        actionStartDateBuilder_.setMessage(value);
-      }
-      bitField0_ |= 0x00008000;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.google.protobuf.Timestamp action_start_date = 16 [json_name = "actionStartDate"];</code>
-     */
-    public Builder setActionStartDate(
-        com.google.protobuf.Timestamp.Builder builderForValue) {
-      if (actionStartDateBuilder_ == null) {
-        actionStartDate_ = builderForValue.build();
-      } else {
-        actionStartDateBuilder_.setMessage(builderForValue.build());
-      }
-      bitField0_ |= 0x00008000;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.google.protobuf.Timestamp action_start_date = 16 [json_name = "actionStartDate"];</code>
-     */
-    public Builder mergeActionStartDate(com.google.protobuf.Timestamp value) {
-      if (actionStartDateBuilder_ == null) {
-        if (((bitField0_ & 0x00008000) != 0) &&
-          actionStartDate_ != null &&
-          actionStartDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-          getActionStartDateBuilder().mergeFrom(value);
-        } else {
-          actionStartDate_ = value;
-        }
-      } else {
-        actionStartDateBuilder_.mergeFrom(value);
-      }
-      bitField0_ |= 0x00008000;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.google.protobuf.Timestamp action_start_date = 16 [json_name = "actionStartDate"];</code>
-     */
-    public Builder clearActionStartDate() {
-      bitField0_ = (bitField0_ & ~0x00008000);
-      actionStartDate_ = null;
-      if (actionStartDateBuilder_ != null) {
-        actionStartDateBuilder_.dispose();
-        actionStartDateBuilder_ = null;
-      }
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.google.protobuf.Timestamp action_start_date = 16 [json_name = "actionStartDate"];</code>
-     */
-    public com.google.protobuf.Timestamp.Builder getActionStartDateBuilder() {
-      bitField0_ |= 0x00008000;
-      onChanged();
-      return getActionStartDateFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.google.protobuf.Timestamp action_start_date = 16 [json_name = "actionStartDate"];</code>
-     */
-    public com.google.protobuf.TimestampOrBuilder getActionStartDateOrBuilder() {
-      if (actionStartDateBuilder_ != null) {
-        return actionStartDateBuilder_.getMessageOrBuilder();
-      } else {
-        return actionStartDate_ == null ?
-            com.google.protobuf.Timestamp.getDefaultInstance() : actionStartDate_;
-      }
-    }
-    /**
-     * <code>.google.protobuf.Timestamp action_start_date = 16 [json_name = "actionStartDate"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-        getActionStartDateFieldBuilder() {
-      if (actionStartDateBuilder_ == null) {
-        actionStartDateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                getActionStartDate(),
-                getParentForChildren(),
-                isClean());
-        actionStartDate_ = null;
-      }
-      return actionStartDateBuilder_;
-    }
-
-    private com.tcn.cloud.api.api.commons.TemplateCondition actionStartDateCondition_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.TemplateCondition, com.tcn.cloud.api.api.commons.TemplateCondition.Builder, com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder> actionStartDateConditionBuilder_;
-    /**
-     * <code>.api.commons.TemplateCondition action_start_date_condition = 17 [json_name = "actionStartDateCondition"];</code>
-     * @return Whether the actionStartDateCondition field is set.
-     */
-    public boolean hasActionStartDateCondition() {
-      return ((bitField0_ & 0x00010000) != 0);
-    }
-    /**
-     * <code>.api.commons.TemplateCondition action_start_date_condition = 17 [json_name = "actionStartDateCondition"];</code>
-     * @return The actionStartDateCondition.
-     */
-    public com.tcn.cloud.api.api.commons.TemplateCondition getActionStartDateCondition() {
-      if (actionStartDateConditionBuilder_ == null) {
-        return actionStartDateCondition_ == null ? com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance() : actionStartDateCondition_;
-      } else {
-        return actionStartDateConditionBuilder_.getMessage();
-      }
-    }
-    /**
-     * <code>.api.commons.TemplateCondition action_start_date_condition = 17 [json_name = "actionStartDateCondition"];</code>
-     */
-    public Builder setActionStartDateCondition(com.tcn.cloud.api.api.commons.TemplateCondition value) {
-      if (actionStartDateConditionBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        actionStartDateCondition_ = value;
-      } else {
-        actionStartDateConditionBuilder_.setMessage(value);
-      }
-      bitField0_ |= 0x00010000;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.api.commons.TemplateCondition action_start_date_condition = 17 [json_name = "actionStartDateCondition"];</code>
-     */
-    public Builder setActionStartDateCondition(
-        com.tcn.cloud.api.api.commons.TemplateCondition.Builder builderForValue) {
-      if (actionStartDateConditionBuilder_ == null) {
-        actionStartDateCondition_ = builderForValue.build();
-      } else {
-        actionStartDateConditionBuilder_.setMessage(builderForValue.build());
-      }
-      bitField0_ |= 0x00010000;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.api.commons.TemplateCondition action_start_date_condition = 17 [json_name = "actionStartDateCondition"];</code>
-     */
-    public Builder mergeActionStartDateCondition(com.tcn.cloud.api.api.commons.TemplateCondition value) {
-      if (actionStartDateConditionBuilder_ == null) {
-        if (((bitField0_ & 0x00010000) != 0) &&
-          actionStartDateCondition_ != null &&
-          actionStartDateCondition_ != com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance()) {
-          getActionStartDateConditionBuilder().mergeFrom(value);
-        } else {
-          actionStartDateCondition_ = value;
-        }
-      } else {
-        actionStartDateConditionBuilder_.mergeFrom(value);
-      }
-      bitField0_ |= 0x00010000;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.api.commons.TemplateCondition action_start_date_condition = 17 [json_name = "actionStartDateCondition"];</code>
-     */
-    public Builder clearActionStartDateCondition() {
-      bitField0_ = (bitField0_ & ~0x00010000);
-      actionStartDateCondition_ = null;
-      if (actionStartDateConditionBuilder_ != null) {
-        actionStartDateConditionBuilder_.dispose();
-        actionStartDateConditionBuilder_ = null;
-      }
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.api.commons.TemplateCondition action_start_date_condition = 17 [json_name = "actionStartDateCondition"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.TemplateCondition.Builder getActionStartDateConditionBuilder() {
-      bitField0_ |= 0x00010000;
-      onChanged();
-      return getActionStartDateConditionFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.api.commons.TemplateCondition action_start_date_condition = 17 [json_name = "actionStartDateCondition"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder getActionStartDateConditionOrBuilder() {
-      if (actionStartDateConditionBuilder_ != null) {
-        return actionStartDateConditionBuilder_.getMessageOrBuilder();
-      } else {
-        return actionStartDateCondition_ == null ?
-            com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance() : actionStartDateCondition_;
-      }
-    }
-    /**
-     * <code>.api.commons.TemplateCondition action_start_date_condition = 17 [json_name = "actionStartDateCondition"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.TemplateCondition, com.tcn.cloud.api.api.commons.TemplateCondition.Builder, com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder> 
-        getActionStartDateConditionFieldBuilder() {
-      if (actionStartDateConditionBuilder_ == null) {
-        actionStartDateConditionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.TemplateCondition, com.tcn.cloud.api.api.commons.TemplateCondition.Builder, com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder>(
-                getActionStartDateCondition(),
-                getParentForChildren(),
-                isClean());
-        actionStartDateCondition_ = null;
-      }
-      return actionStartDateConditionBuilder_;
-    }
-
     private com.google.protobuf.Timestamp actionExpiryDate_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> actionExpiryDateBuilder_;
@@ -4040,7 +3497,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the actionExpiryDate field is set.
      */
     public boolean hasActionExpiryDate() {
-      return ((bitField0_ & 0x00020000) != 0);
+      return ((bitField0_ & 0x00004000) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp action_expiry_date = 18 [json_name = "actionExpiryDate"];</code>
@@ -4065,7 +3522,7 @@ private static final long serialVersionUID = 0L;
       } else {
         actionExpiryDateBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00020000;
+      bitField0_ |= 0x00004000;
       onChanged();
       return this;
     }
@@ -4079,7 +3536,7 @@ private static final long serialVersionUID = 0L;
       } else {
         actionExpiryDateBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00020000;
+      bitField0_ |= 0x00004000;
       onChanged();
       return this;
     }
@@ -4088,7 +3545,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeActionExpiryDate(com.google.protobuf.Timestamp value) {
       if (actionExpiryDateBuilder_ == null) {
-        if (((bitField0_ & 0x00020000) != 0) &&
+        if (((bitField0_ & 0x00004000) != 0) &&
           actionExpiryDate_ != null &&
           actionExpiryDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
           getActionExpiryDateBuilder().mergeFrom(value);
@@ -4098,7 +3555,7 @@ private static final long serialVersionUID = 0L;
       } else {
         actionExpiryDateBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00020000;
+      bitField0_ |= 0x00004000;
       onChanged();
       return this;
     }
@@ -4106,7 +3563,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp action_expiry_date = 18 [json_name = "actionExpiryDate"];</code>
      */
     public Builder clearActionExpiryDate() {
-      bitField0_ = (bitField0_ & ~0x00020000);
+      bitField0_ = (bitField0_ & ~0x00004000);
       actionExpiryDate_ = null;
       if (actionExpiryDateBuilder_ != null) {
         actionExpiryDateBuilder_.dispose();
@@ -4119,7 +3576,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp action_expiry_date = 18 [json_name = "actionExpiryDate"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getActionExpiryDateBuilder() {
-      bitField0_ |= 0x00020000;
+      bitField0_ |= 0x00004000;
       onChanged();
       return getActionExpiryDateFieldBuilder().getBuilder();
     }
@@ -4159,7 +3616,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the actionExpiryDateCondition field is set.
      */
     public boolean hasActionExpiryDateCondition() {
-      return ((bitField0_ & 0x00040000) != 0);
+      return ((bitField0_ & 0x00008000) != 0);
     }
     /**
      * <code>.api.commons.TemplateCondition action_expiry_date_condition = 19 [json_name = "actionExpiryDateCondition"];</code>
@@ -4184,7 +3641,7 @@ private static final long serialVersionUID = 0L;
       } else {
         actionExpiryDateConditionBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00040000;
+      bitField0_ |= 0x00008000;
       onChanged();
       return this;
     }
@@ -4198,7 +3655,7 @@ private static final long serialVersionUID = 0L;
       } else {
         actionExpiryDateConditionBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00040000;
+      bitField0_ |= 0x00008000;
       onChanged();
       return this;
     }
@@ -4207,7 +3664,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeActionExpiryDateCondition(com.tcn.cloud.api.api.commons.TemplateCondition value) {
       if (actionExpiryDateConditionBuilder_ == null) {
-        if (((bitField0_ & 0x00040000) != 0) &&
+        if (((bitField0_ & 0x00008000) != 0) &&
           actionExpiryDateCondition_ != null &&
           actionExpiryDateCondition_ != com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance()) {
           getActionExpiryDateConditionBuilder().mergeFrom(value);
@@ -4217,7 +3674,7 @@ private static final long serialVersionUID = 0L;
       } else {
         actionExpiryDateConditionBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00040000;
+      bitField0_ |= 0x00008000;
       onChanged();
       return this;
     }
@@ -4225,7 +3682,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.TemplateCondition action_expiry_date_condition = 19 [json_name = "actionExpiryDateCondition"];</code>
      */
     public Builder clearActionExpiryDateCondition() {
-      bitField0_ = (bitField0_ & ~0x00040000);
+      bitField0_ = (bitField0_ & ~0x00008000);
       actionExpiryDateCondition_ = null;
       if (actionExpiryDateConditionBuilder_ != null) {
         actionExpiryDateConditionBuilder_.dispose();
@@ -4238,7 +3695,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.TemplateCondition action_expiry_date_condition = 19 [json_name = "actionExpiryDateCondition"];</code>
      */
     public com.tcn.cloud.api.api.commons.TemplateCondition.Builder getActionExpiryDateConditionBuilder() {
-      bitField0_ |= 0x00040000;
+      bitField0_ |= 0x00008000;
       onChanged();
       return getActionExpiryDateConditionFieldBuilder().getBuilder();
     }
@@ -4273,9 +3730,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.tcn.cloud.api.api.commons.Sla> actionSla_ =
       java.util.Collections.emptyList();
     private void ensureActionSlaIsMutable() {
-      if (!((bitField0_ & 0x00080000) != 0)) {
+      if (!((bitField0_ & 0x00010000) != 0)) {
         actionSla_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.Sla>(actionSla_);
-        bitField0_ |= 0x00080000;
+        bitField0_ |= 0x00010000;
        }
     }
 
@@ -4425,7 +3882,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearActionSla() {
       if (actionSlaBuilder_ == null) {
         actionSla_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00080000);
+        bitField0_ = (bitField0_ & ~0x00010000);
         onChanged();
       } else {
         actionSlaBuilder_.clear();
@@ -4502,131 +3959,12 @@ private static final long serialVersionUID = 0L;
         actionSlaBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.commons.Sla, com.tcn.cloud.api.api.commons.Sla.Builder, com.tcn.cloud.api.api.commons.SlaOrBuilder>(
                 actionSla_,
-                ((bitField0_ & 0x00080000) != 0),
+                ((bitField0_ & 0x00010000) != 0),
                 getParentForChildren(),
                 isClean());
         actionSla_ = null;
       }
       return actionSlaBuilder_;
-    }
-
-    private com.tcn.cloud.api.api.commons.TemplateCondition actionSlaCondition_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.TemplateCondition, com.tcn.cloud.api.api.commons.TemplateCondition.Builder, com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder> actionSlaConditionBuilder_;
-    /**
-     * <code>.api.commons.TemplateCondition action_sla_condition = 21 [json_name = "actionSlaCondition"];</code>
-     * @return Whether the actionSlaCondition field is set.
-     */
-    public boolean hasActionSlaCondition() {
-      return ((bitField0_ & 0x00100000) != 0);
-    }
-    /**
-     * <code>.api.commons.TemplateCondition action_sla_condition = 21 [json_name = "actionSlaCondition"];</code>
-     * @return The actionSlaCondition.
-     */
-    public com.tcn.cloud.api.api.commons.TemplateCondition getActionSlaCondition() {
-      if (actionSlaConditionBuilder_ == null) {
-        return actionSlaCondition_ == null ? com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance() : actionSlaCondition_;
-      } else {
-        return actionSlaConditionBuilder_.getMessage();
-      }
-    }
-    /**
-     * <code>.api.commons.TemplateCondition action_sla_condition = 21 [json_name = "actionSlaCondition"];</code>
-     */
-    public Builder setActionSlaCondition(com.tcn.cloud.api.api.commons.TemplateCondition value) {
-      if (actionSlaConditionBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        actionSlaCondition_ = value;
-      } else {
-        actionSlaConditionBuilder_.setMessage(value);
-      }
-      bitField0_ |= 0x00100000;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.api.commons.TemplateCondition action_sla_condition = 21 [json_name = "actionSlaCondition"];</code>
-     */
-    public Builder setActionSlaCondition(
-        com.tcn.cloud.api.api.commons.TemplateCondition.Builder builderForValue) {
-      if (actionSlaConditionBuilder_ == null) {
-        actionSlaCondition_ = builderForValue.build();
-      } else {
-        actionSlaConditionBuilder_.setMessage(builderForValue.build());
-      }
-      bitField0_ |= 0x00100000;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.api.commons.TemplateCondition action_sla_condition = 21 [json_name = "actionSlaCondition"];</code>
-     */
-    public Builder mergeActionSlaCondition(com.tcn.cloud.api.api.commons.TemplateCondition value) {
-      if (actionSlaConditionBuilder_ == null) {
-        if (((bitField0_ & 0x00100000) != 0) &&
-          actionSlaCondition_ != null &&
-          actionSlaCondition_ != com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance()) {
-          getActionSlaConditionBuilder().mergeFrom(value);
-        } else {
-          actionSlaCondition_ = value;
-        }
-      } else {
-        actionSlaConditionBuilder_.mergeFrom(value);
-      }
-      bitField0_ |= 0x00100000;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.api.commons.TemplateCondition action_sla_condition = 21 [json_name = "actionSlaCondition"];</code>
-     */
-    public Builder clearActionSlaCondition() {
-      bitField0_ = (bitField0_ & ~0x00100000);
-      actionSlaCondition_ = null;
-      if (actionSlaConditionBuilder_ != null) {
-        actionSlaConditionBuilder_.dispose();
-        actionSlaConditionBuilder_ = null;
-      }
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.api.commons.TemplateCondition action_sla_condition = 21 [json_name = "actionSlaCondition"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.TemplateCondition.Builder getActionSlaConditionBuilder() {
-      bitField0_ |= 0x00100000;
-      onChanged();
-      return getActionSlaConditionFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.api.commons.TemplateCondition action_sla_condition = 21 [json_name = "actionSlaCondition"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder getActionSlaConditionOrBuilder() {
-      if (actionSlaConditionBuilder_ != null) {
-        return actionSlaConditionBuilder_.getMessageOrBuilder();
-      } else {
-        return actionSlaCondition_ == null ?
-            com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance() : actionSlaCondition_;
-      }
-    }
-    /**
-     * <code>.api.commons.TemplateCondition action_sla_condition = 21 [json_name = "actionSlaCondition"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.TemplateCondition, com.tcn.cloud.api.api.commons.TemplateCondition.Builder, com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder> 
-        getActionSlaConditionFieldBuilder() {
-      if (actionSlaConditionBuilder_ == null) {
-        actionSlaConditionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.TemplateCondition, com.tcn.cloud.api.api.commons.TemplateCondition.Builder, com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder>(
-                getActionSlaCondition(),
-                getParentForChildren(),
-                isClean());
-        actionSlaCondition_ = null;
-      }
-      return actionSlaConditionBuilder_;
     }
 
     private boolean isValid_ ;
@@ -4646,7 +3984,7 @@ private static final long serialVersionUID = 0L;
     public Builder setIsValid(boolean value) {
 
       isValid_ = value;
-      bitField0_ |= 0x00200000;
+      bitField0_ |= 0x00020000;
       onChanged();
       return this;
     }
@@ -4655,7 +3993,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearIsValid() {
-      bitField0_ = (bitField0_ & ~0x00200000);
+      bitField0_ = (bitField0_ & ~0x00020000);
       isValid_ = false;
       onChanged();
       return this;
@@ -4673,7 +4011,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the callbackDefault field is set.
      */
     public boolean hasCallbackDefault() {
-      return ((bitField0_ & 0x00400000) != 0);
+      return ((bitField0_ & 0x00040000) != 0);
     }
     /**
      * <pre>
@@ -4706,7 +4044,7 @@ private static final long serialVersionUID = 0L;
       } else {
         callbackDefaultBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00400000;
+      bitField0_ |= 0x00040000;
       onChanged();
       return this;
     }
@@ -4724,7 +4062,7 @@ private static final long serialVersionUID = 0L;
       } else {
         callbackDefaultBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00400000;
+      bitField0_ |= 0x00040000;
       onChanged();
       return this;
     }
@@ -4737,7 +4075,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCallbackDefault(com.tcn.cloud.api.api.commons.TicketCallbackTemplate value) {
       if (callbackDefaultBuilder_ == null) {
-        if (((bitField0_ & 0x00400000) != 0) &&
+        if (((bitField0_ & 0x00040000) != 0) &&
           callbackDefault_ != null &&
           callbackDefault_ != com.tcn.cloud.api.api.commons.TicketCallbackTemplate.getDefaultInstance()) {
           getCallbackDefaultBuilder().mergeFrom(value);
@@ -4747,7 +4085,7 @@ private static final long serialVersionUID = 0L;
       } else {
         callbackDefaultBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00400000;
+      bitField0_ |= 0x00040000;
       onChanged();
       return this;
     }
@@ -4759,7 +4097,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.TicketCallbackTemplate callback_default = 23 [json_name = "callbackDefault"];</code>
      */
     public Builder clearCallbackDefault() {
-      bitField0_ = (bitField0_ & ~0x00400000);
+      bitField0_ = (bitField0_ & ~0x00040000);
       callbackDefault_ = null;
       if (callbackDefaultBuilder_ != null) {
         callbackDefaultBuilder_.dispose();
@@ -4776,7 +4114,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.TicketCallbackTemplate callback_default = 23 [json_name = "callbackDefault"];</code>
      */
     public com.tcn.cloud.api.api.commons.TicketCallbackTemplate.Builder getCallbackDefaultBuilder() {
-      bitField0_ |= 0x00400000;
+      bitField0_ |= 0x00040000;
       onChanged();
       return getCallbackDefaultFieldBuilder().getBuilder();
     }
@@ -4859,7 +4197,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       createdById_ = value;
-      bitField0_ |= 0x00800000;
+      bitField0_ |= 0x00080000;
       onChanged();
       return this;
     }
@@ -4869,7 +4207,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearCreatedById() {
       createdById_ = getDefaultInstance().getCreatedById();
-      bitField0_ = (bitField0_ & ~0x00800000);
+      bitField0_ = (bitField0_ & ~0x00080000);
       onChanged();
       return this;
     }
@@ -4883,7 +4221,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       createdById_ = value;
-      bitField0_ |= 0x00800000;
+      bitField0_ |= 0x00080000;
       onChanged();
       return this;
     }
@@ -4896,7 +4234,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the createdDate field is set.
      */
     public boolean hasCreatedDate() {
-      return ((bitField0_ & 0x01000000) != 0);
+      return ((bitField0_ & 0x00100000) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp created_date = 25 [json_name = "createdDate"];</code>
@@ -4921,7 +4259,7 @@ private static final long serialVersionUID = 0L;
       } else {
         createdDateBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x01000000;
+      bitField0_ |= 0x00100000;
       onChanged();
       return this;
     }
@@ -4935,7 +4273,7 @@ private static final long serialVersionUID = 0L;
       } else {
         createdDateBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x01000000;
+      bitField0_ |= 0x00100000;
       onChanged();
       return this;
     }
@@ -4944,7 +4282,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCreatedDate(com.google.protobuf.Timestamp value) {
       if (createdDateBuilder_ == null) {
-        if (((bitField0_ & 0x01000000) != 0) &&
+        if (((bitField0_ & 0x00100000) != 0) &&
           createdDate_ != null &&
           createdDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
           getCreatedDateBuilder().mergeFrom(value);
@@ -4954,7 +4292,7 @@ private static final long serialVersionUID = 0L;
       } else {
         createdDateBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x01000000;
+      bitField0_ |= 0x00100000;
       onChanged();
       return this;
     }
@@ -4962,7 +4300,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp created_date = 25 [json_name = "createdDate"];</code>
      */
     public Builder clearCreatedDate() {
-      bitField0_ = (bitField0_ & ~0x01000000);
+      bitField0_ = (bitField0_ & ~0x00100000);
       createdDate_ = null;
       if (createdDateBuilder_ != null) {
         createdDateBuilder_.dispose();
@@ -4975,7 +4313,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp created_date = 25 [json_name = "createdDate"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getCreatedDateBuilder() {
-      bitField0_ |= 0x01000000;
+      bitField0_ |= 0x00100000;
       onChanged();
       return getCreatedDateFieldBuilder().getBuilder();
     }
@@ -5005,6 +4343,125 @@ private static final long serialVersionUID = 0L;
         createdDate_ = null;
       }
       return createdDateBuilder_;
+    }
+
+    private com.tcn.cloud.api.api.commons.TemplateCondition ticketCallbackTemplateCondition_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.TemplateCondition, com.tcn.cloud.api.api.commons.TemplateCondition.Builder, com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder> ticketCallbackTemplateConditionBuilder_;
+    /**
+     * <code>.api.commons.TemplateCondition ticket_callback_template_condition = 26 [json_name = "ticketCallbackTemplateCondition"];</code>
+     * @return Whether the ticketCallbackTemplateCondition field is set.
+     */
+    public boolean hasTicketCallbackTemplateCondition() {
+      return ((bitField0_ & 0x00200000) != 0);
+    }
+    /**
+     * <code>.api.commons.TemplateCondition ticket_callback_template_condition = 26 [json_name = "ticketCallbackTemplateCondition"];</code>
+     * @return The ticketCallbackTemplateCondition.
+     */
+    public com.tcn.cloud.api.api.commons.TemplateCondition getTicketCallbackTemplateCondition() {
+      if (ticketCallbackTemplateConditionBuilder_ == null) {
+        return ticketCallbackTemplateCondition_ == null ? com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance() : ticketCallbackTemplateCondition_;
+      } else {
+        return ticketCallbackTemplateConditionBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.api.commons.TemplateCondition ticket_callback_template_condition = 26 [json_name = "ticketCallbackTemplateCondition"];</code>
+     */
+    public Builder setTicketCallbackTemplateCondition(com.tcn.cloud.api.api.commons.TemplateCondition value) {
+      if (ticketCallbackTemplateConditionBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ticketCallbackTemplateCondition_ = value;
+      } else {
+        ticketCallbackTemplateConditionBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00200000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.TemplateCondition ticket_callback_template_condition = 26 [json_name = "ticketCallbackTemplateCondition"];</code>
+     */
+    public Builder setTicketCallbackTemplateCondition(
+        com.tcn.cloud.api.api.commons.TemplateCondition.Builder builderForValue) {
+      if (ticketCallbackTemplateConditionBuilder_ == null) {
+        ticketCallbackTemplateCondition_ = builderForValue.build();
+      } else {
+        ticketCallbackTemplateConditionBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00200000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.TemplateCondition ticket_callback_template_condition = 26 [json_name = "ticketCallbackTemplateCondition"];</code>
+     */
+    public Builder mergeTicketCallbackTemplateCondition(com.tcn.cloud.api.api.commons.TemplateCondition value) {
+      if (ticketCallbackTemplateConditionBuilder_ == null) {
+        if (((bitField0_ & 0x00200000) != 0) &&
+          ticketCallbackTemplateCondition_ != null &&
+          ticketCallbackTemplateCondition_ != com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance()) {
+          getTicketCallbackTemplateConditionBuilder().mergeFrom(value);
+        } else {
+          ticketCallbackTemplateCondition_ = value;
+        }
+      } else {
+        ticketCallbackTemplateConditionBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00200000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.TemplateCondition ticket_callback_template_condition = 26 [json_name = "ticketCallbackTemplateCondition"];</code>
+     */
+    public Builder clearTicketCallbackTemplateCondition() {
+      bitField0_ = (bitField0_ & ~0x00200000);
+      ticketCallbackTemplateCondition_ = null;
+      if (ticketCallbackTemplateConditionBuilder_ != null) {
+        ticketCallbackTemplateConditionBuilder_.dispose();
+        ticketCallbackTemplateConditionBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.TemplateCondition ticket_callback_template_condition = 26 [json_name = "ticketCallbackTemplateCondition"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.TemplateCondition.Builder getTicketCallbackTemplateConditionBuilder() {
+      bitField0_ |= 0x00200000;
+      onChanged();
+      return getTicketCallbackTemplateConditionFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.TemplateCondition ticket_callback_template_condition = 26 [json_name = "ticketCallbackTemplateCondition"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder getTicketCallbackTemplateConditionOrBuilder() {
+      if (ticketCallbackTemplateConditionBuilder_ != null) {
+        return ticketCallbackTemplateConditionBuilder_.getMessageOrBuilder();
+      } else {
+        return ticketCallbackTemplateCondition_ == null ?
+            com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance() : ticketCallbackTemplateCondition_;
+      }
+    }
+    /**
+     * <code>.api.commons.TemplateCondition ticket_callback_template_condition = 26 [json_name = "ticketCallbackTemplateCondition"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.TemplateCondition, com.tcn.cloud.api.api.commons.TemplateCondition.Builder, com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder> 
+        getTicketCallbackTemplateConditionFieldBuilder() {
+      if (ticketCallbackTemplateConditionBuilder_ == null) {
+        ticketCallbackTemplateConditionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.TemplateCondition, com.tcn.cloud.api.api.commons.TemplateCondition.Builder, com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder>(
+                getTicketCallbackTemplateCondition(),
+                getParentForChildren(),
+                isClean());
+        ticketCallbackTemplateCondition_ = null;
+      }
+      return ticketCallbackTemplateConditionBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

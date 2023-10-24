@@ -20,44 +20,14 @@ public interface TicketCallbackTemplateOrBuilder extends
       getCallerIdBytes();
 
   /**
-   * <code>.api.commons.TemplateCondition caller_id_condition = 2 [json_name = "callerIdCondition"];</code>
-   * @return Whether the callerIdCondition field is set.
-   */
-  boolean hasCallerIdCondition();
-  /**
-   * <code>.api.commons.TemplateCondition caller_id_condition = 2 [json_name = "callerIdCondition"];</code>
-   * @return The callerIdCondition.
-   */
-  com.tcn.cloud.api.api.commons.TemplateCondition getCallerIdCondition();
-  /**
-   * <code>.api.commons.TemplateCondition caller_id_condition = 2 [json_name = "callerIdCondition"];</code>
-   */
-  com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder getCallerIdConditionOrBuilder();
-
-  /**
-   * <code>string country_code = 3 [json_name = "countryCode"];</code>
+   * <code>string country_code = 2 [json_name = "countryCode"];</code>
    * @return The countryCode.
    */
   java.lang.String getCountryCode();
   /**
-   * <code>string country_code = 3 [json_name = "countryCode"];</code>
+   * <code>string country_code = 2 [json_name = "countryCode"];</code>
    * @return The bytes for countryCode.
    */
   com.google.protobuf.ByteString
       getCountryCodeBytes();
-
-  /**
-   * <code>.api.commons.TemplateCondition country_code_condition = 4 [json_name = "countryCodeCondition"];</code>
-   * @return Whether the countryCodeCondition field is set.
-   */
-  boolean hasCountryCodeCondition();
-  /**
-   * <code>.api.commons.TemplateCondition country_code_condition = 4 [json_name = "countryCodeCondition"];</code>
-   * @return The countryCodeCondition.
-   */
-  com.tcn.cloud.api.api.commons.TemplateCondition getCountryCodeCondition();
-  /**
-   * <code>.api.commons.TemplateCondition country_code_condition = 4 [json_name = "countryCodeCondition"];</code>
-   */
-  com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder getCountryCodeConditionOrBuilder();
 }

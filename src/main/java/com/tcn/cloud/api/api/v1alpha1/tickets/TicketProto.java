@@ -334,9 +334,9 @@ public final class TicketProto {
       "tTicketTemplateResponse\022\033\n\tis_edited\030\001 \001" +
       "(\010R\010isEdited\"\033\n\031ListTicketTemplateReques" +
       "t\"d\n\032ListTicketTemplateResponse\022F\n\021enabl" +
-      "ed_templates\030\001 \001(\0132\031.api.commons.ListTem" +
+      "ed_templates\030\001 \003(\0132\031.api.commons.ListTem" +
       "plateR\020enabledTemplates\"m\n\034AssignProject" +
-      "TemplateRequest\022M\n\020project_template\030\001 \001(" +
+      "TemplateRequest\022M\n\020project_template\030\001 \003(" +
       "\0132\".api.commons.AssignProjectTemplateR\017p" +
       "rojectTemplate\"@\n\035AssignProjectTemplateR" +
       "esponse\022\037\n\013is_assigned\030\001 \001(\010R\nisAssigned" +

@@ -26,34 +26,34 @@ public interface TicketTemplateOrBuilder extends
       getTemplateNameBytes();
 
   /**
-   * <code>.google.protobuf.Timestamp teplate_start_date = 3 [json_name = "teplateStartDate"];</code>
-   * @return Whether the teplateStartDate field is set.
+   * <code>.google.protobuf.Timestamp template_start_date = 3 [json_name = "templateStartDate"];</code>
+   * @return Whether the templateStartDate field is set.
    */
-  boolean hasTeplateStartDate();
+  boolean hasTemplateStartDate();
   /**
-   * <code>.google.protobuf.Timestamp teplate_start_date = 3 [json_name = "teplateStartDate"];</code>
-   * @return The teplateStartDate.
+   * <code>.google.protobuf.Timestamp template_start_date = 3 [json_name = "templateStartDate"];</code>
+   * @return The templateStartDate.
    */
-  com.google.protobuf.Timestamp getTeplateStartDate();
+  com.google.protobuf.Timestamp getTemplateStartDate();
   /**
-   * <code>.google.protobuf.Timestamp teplate_start_date = 3 [json_name = "teplateStartDate"];</code>
+   * <code>.google.protobuf.Timestamp template_start_date = 3 [json_name = "templateStartDate"];</code>
    */
-  com.google.protobuf.TimestampOrBuilder getTeplateStartDateOrBuilder();
+  com.google.protobuf.TimestampOrBuilder getTemplateStartDateOrBuilder();
 
   /**
-   * <code>.google.protobuf.Timestamp teplate_end_date = 4 [json_name = "teplateEndDate"];</code>
-   * @return Whether the teplateEndDate field is set.
+   * <code>.google.protobuf.Timestamp template_end_date = 4 [json_name = "templateEndDate"];</code>
+   * @return Whether the templateEndDate field is set.
    */
-  boolean hasTeplateEndDate();
+  boolean hasTemplateEndDate();
   /**
-   * <code>.google.protobuf.Timestamp teplate_end_date = 4 [json_name = "teplateEndDate"];</code>
-   * @return The teplateEndDate.
+   * <code>.google.protobuf.Timestamp template_end_date = 4 [json_name = "templateEndDate"];</code>
+   * @return The templateEndDate.
    */
-  com.google.protobuf.Timestamp getTeplateEndDate();
+  com.google.protobuf.Timestamp getTemplateEndDate();
   /**
-   * <code>.google.protobuf.Timestamp teplate_end_date = 4 [json_name = "teplateEndDate"];</code>
+   * <code>.google.protobuf.Timestamp template_end_date = 4 [json_name = "templateEndDate"];</code>
    */
-  com.google.protobuf.TimestampOrBuilder getTeplateEndDateOrBuilder();
+  com.google.protobuf.TimestampOrBuilder getTemplateEndDateOrBuilder();
 
   /**
    * <code>string ticket_title = 5 [json_name = "ticketTitle"];</code>
@@ -174,21 +174,6 @@ public interface TicketTemplateOrBuilder extends
       int index);
 
   /**
-   * <code>.api.commons.TemplateCondition ticket_sla_condition = 12 [json_name = "ticketSlaCondition"];</code>
-   * @return Whether the ticketSlaCondition field is set.
-   */
-  boolean hasTicketSlaCondition();
-  /**
-   * <code>.api.commons.TemplateCondition ticket_sla_condition = 12 [json_name = "ticketSlaCondition"];</code>
-   * @return The ticketSlaCondition.
-   */
-  com.tcn.cloud.api.api.commons.TemplateCondition getTicketSlaCondition();
-  /**
-   * <code>.api.commons.TemplateCondition ticket_sla_condition = 12 [json_name = "ticketSlaCondition"];</code>
-   */
-  com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder getTicketSlaConditionOrBuilder();
-
-  /**
    * <pre>
    * Action
    * </pre>
@@ -248,36 +233,6 @@ public interface TicketTemplateOrBuilder extends
   com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder getActionSkillsConditionOrBuilder();
 
   /**
-   * <code>.google.protobuf.Timestamp action_start_date = 16 [json_name = "actionStartDate"];</code>
-   * @return Whether the actionStartDate field is set.
-   */
-  boolean hasActionStartDate();
-  /**
-   * <code>.google.protobuf.Timestamp action_start_date = 16 [json_name = "actionStartDate"];</code>
-   * @return The actionStartDate.
-   */
-  com.google.protobuf.Timestamp getActionStartDate();
-  /**
-   * <code>.google.protobuf.Timestamp action_start_date = 16 [json_name = "actionStartDate"];</code>
-   */
-  com.google.protobuf.TimestampOrBuilder getActionStartDateOrBuilder();
-
-  /**
-   * <code>.api.commons.TemplateCondition action_start_date_condition = 17 [json_name = "actionStartDateCondition"];</code>
-   * @return Whether the actionStartDateCondition field is set.
-   */
-  boolean hasActionStartDateCondition();
-  /**
-   * <code>.api.commons.TemplateCondition action_start_date_condition = 17 [json_name = "actionStartDateCondition"];</code>
-   * @return The actionStartDateCondition.
-   */
-  com.tcn.cloud.api.api.commons.TemplateCondition getActionStartDateCondition();
-  /**
-   * <code>.api.commons.TemplateCondition action_start_date_condition = 17 [json_name = "actionStartDateCondition"];</code>
-   */
-  com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder getActionStartDateConditionOrBuilder();
-
-  /**
    * <code>.google.protobuf.Timestamp action_expiry_date = 18 [json_name = "actionExpiryDate"];</code>
    * @return Whether the actionExpiryDate field is set.
    */
@@ -330,21 +285,6 @@ public interface TicketTemplateOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.SlaOrBuilder getActionSlaOrBuilder(
       int index);
-
-  /**
-   * <code>.api.commons.TemplateCondition action_sla_condition = 21 [json_name = "actionSlaCondition"];</code>
-   * @return Whether the actionSlaCondition field is set.
-   */
-  boolean hasActionSlaCondition();
-  /**
-   * <code>.api.commons.TemplateCondition action_sla_condition = 21 [json_name = "actionSlaCondition"];</code>
-   * @return The actionSlaCondition.
-   */
-  com.tcn.cloud.api.api.commons.TemplateCondition getActionSlaCondition();
-  /**
-   * <code>.api.commons.TemplateCondition action_sla_condition = 21 [json_name = "actionSlaCondition"];</code>
-   */
-  com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder getActionSlaConditionOrBuilder();
 
   /**
    * <code>bool is_valid = 22 [json_name = "isValid"];</code>
@@ -405,4 +345,19 @@ public interface TicketTemplateOrBuilder extends
    * <code>.google.protobuf.Timestamp created_date = 25 [json_name = "createdDate"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getCreatedDateOrBuilder();
+
+  /**
+   * <code>.api.commons.TemplateCondition ticket_callback_template_condition = 26 [json_name = "ticketCallbackTemplateCondition"];</code>
+   * @return Whether the ticketCallbackTemplateCondition field is set.
+   */
+  boolean hasTicketCallbackTemplateCondition();
+  /**
+   * <code>.api.commons.TemplateCondition ticket_callback_template_condition = 26 [json_name = "ticketCallbackTemplateCondition"];</code>
+   * @return The ticketCallbackTemplateCondition.
+   */
+  com.tcn.cloud.api.api.commons.TemplateCondition getTicketCallbackTemplateCondition();
+  /**
+   * <code>.api.commons.TemplateCondition ticket_callback_template_condition = 26 [json_name = "ticketCallbackTemplateCondition"];</code>
+   */
+  com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder getTicketCallbackTemplateConditionOrBuilder();
 }

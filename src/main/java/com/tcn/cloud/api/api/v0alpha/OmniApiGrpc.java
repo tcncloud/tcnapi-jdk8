@@ -733,6 +733,68 @@ public final class OmniApiGrpc {
     return getGetAvailableHeadersMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ApproveTaskRequest,
+      com.tcn.cloud.api.api.v0alpha.ApproveTaskResponse> getApproveTaskMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ApproveTask",
+      requestType = com.tcn.cloud.api.api.v0alpha.ApproveTaskRequest.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.ApproveTaskResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ApproveTaskRequest,
+      com.tcn.cloud.api.api.v0alpha.ApproveTaskResponse> getApproveTaskMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ApproveTaskRequest, com.tcn.cloud.api.api.v0alpha.ApproveTaskResponse> getApproveTaskMethod;
+    if ((getApproveTaskMethod = OmniApiGrpc.getApproveTaskMethod) == null) {
+      synchronized (OmniApiGrpc.class) {
+        if ((getApproveTaskMethod = OmniApiGrpc.getApproveTaskMethod) == null) {
+          OmniApiGrpc.getApproveTaskMethod = getApproveTaskMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ApproveTaskRequest, com.tcn.cloud.api.api.v0alpha.ApproveTaskResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ApproveTask"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.ApproveTaskRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.ApproveTaskResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("ApproveTask"))
+              .build();
+        }
+      }
+    }
+    return getApproveTaskMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetNextQueuedTaskRequest,
+      com.tcn.cloud.api.api.v0alpha.GetNextQueuedTaskResponse> getGetNextQueuedTaskMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetNextQueuedTask",
+      requestType = com.tcn.cloud.api.api.v0alpha.GetNextQueuedTaskRequest.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.GetNextQueuedTaskResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetNextQueuedTaskRequest,
+      com.tcn.cloud.api.api.v0alpha.GetNextQueuedTaskResponse> getGetNextQueuedTaskMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetNextQueuedTaskRequest, com.tcn.cloud.api.api.v0alpha.GetNextQueuedTaskResponse> getGetNextQueuedTaskMethod;
+    if ((getGetNextQueuedTaskMethod = OmniApiGrpc.getGetNextQueuedTaskMethod) == null) {
+      synchronized (OmniApiGrpc.class) {
+        if ((getGetNextQueuedTaskMethod = OmniApiGrpc.getGetNextQueuedTaskMethod) == null) {
+          OmniApiGrpc.getGetNextQueuedTaskMethod = getGetNextQueuedTaskMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetNextQueuedTaskRequest, com.tcn.cloud.api.api.v0alpha.GetNextQueuedTaskResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetNextQueuedTask"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.GetNextQueuedTaskRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.GetNextQueuedTaskResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("GetNextQueuedTask"))
+              .build();
+        }
+      }
+    }
+    return getGetNextQueuedTaskMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetTaskReq,
       com.tcn.cloud.api.api.commons.OmniTask> getGetTaskMethod;
 
@@ -793,6 +855,68 @@ public final class OmniApiGrpc {
       }
     }
     return getListTasksMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.RejectTaskRequest,
+      com.tcn.cloud.api.api.v0alpha.RejectTaskResponse> getRejectTaskMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "RejectTask",
+      requestType = com.tcn.cloud.api.api.v0alpha.RejectTaskRequest.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.RejectTaskResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.RejectTaskRequest,
+      com.tcn.cloud.api.api.v0alpha.RejectTaskResponse> getRejectTaskMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.RejectTaskRequest, com.tcn.cloud.api.api.v0alpha.RejectTaskResponse> getRejectTaskMethod;
+    if ((getRejectTaskMethod = OmniApiGrpc.getRejectTaskMethod) == null) {
+      synchronized (OmniApiGrpc.class) {
+        if ((getRejectTaskMethod = OmniApiGrpc.getRejectTaskMethod) == null) {
+          OmniApiGrpc.getRejectTaskMethod = getRejectTaskMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.RejectTaskRequest, com.tcn.cloud.api.api.v0alpha.RejectTaskResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RejectTask"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.RejectTaskRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.RejectTaskResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("RejectTask"))
+              .build();
+        }
+      }
+    }
+    return getRejectTaskMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.RequeueTaskRequest,
+      com.tcn.cloud.api.api.v0alpha.RequeueTaskResponse> getRequeueTaskMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "RequeueTask",
+      requestType = com.tcn.cloud.api.api.v0alpha.RequeueTaskRequest.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.RequeueTaskResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.RequeueTaskRequest,
+      com.tcn.cloud.api.api.v0alpha.RequeueTaskResponse> getRequeueTaskMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.RequeueTaskRequest, com.tcn.cloud.api.api.v0alpha.RequeueTaskResponse> getRequeueTaskMethod;
+    if ((getRequeueTaskMethod = OmniApiGrpc.getRequeueTaskMethod) == null) {
+      synchronized (OmniApiGrpc.class) {
+        if ((getRequeueTaskMethod = OmniApiGrpc.getRequeueTaskMethod) == null) {
+          OmniApiGrpc.getRequeueTaskMethod = getRequeueTaskMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.RequeueTaskRequest, com.tcn.cloud.api.api.v0alpha.RequeueTaskResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RequeueTask"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.RequeueTaskRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.RequeueTaskResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("RequeueTask"))
+              .build();
+        }
+      }
+    }
+    return getRequeueTaskMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.commons.ConnectedInbox,
@@ -2334,6 +2458,26 @@ public final class OmniApiGrpc {
 
     /**
      * <pre>
+     * ApproveTask approves a task.
+     * </pre>
+     */
+    default void approveTask(com.tcn.cloud.api.api.v0alpha.ApproveTaskRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ApproveTaskResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getApproveTaskMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetNextQueuedTask retrieves the next queued task for the agent.
+     * </pre>
+     */
+    default void getNextQueuedTask(com.tcn.cloud.api.api.v0alpha.GetNextQueuedTaskRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetNextQueuedTaskResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetNextQueuedTaskMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * GetTask - retrieves a task using the provided criteria
      * Required permissions:
      *    OMNI_AGENT
@@ -2354,6 +2498,26 @@ public final class OmniApiGrpc {
     default void listTasks(com.tcn.cloud.api.api.v0alpha.ListTasksReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListTasksRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListTasksMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * RejectTask rejects a task.
+     * </pre>
+     */
+    default void rejectTask(com.tcn.cloud.api.api.v0alpha.RejectTaskRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.RejectTaskResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRejectTaskMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * RequeueTask requeues a task.
+     * </pre>
+     */
+    default void requeueTask(com.tcn.cloud.api.api.v0alpha.RequeueTaskRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.RequeueTaskResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRequeueTaskMethod(), responseObserver);
     }
 
     /**
@@ -3180,6 +3344,28 @@ public final class OmniApiGrpc {
 
     /**
      * <pre>
+     * ApproveTask approves a task.
+     * </pre>
+     */
+    public void approveTask(com.tcn.cloud.api.api.v0alpha.ApproveTaskRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ApproveTaskResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getApproveTaskMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetNextQueuedTask retrieves the next queued task for the agent.
+     * </pre>
+     */
+    public void getNextQueuedTask(com.tcn.cloud.api.api.v0alpha.GetNextQueuedTaskRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetNextQueuedTaskResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetNextQueuedTaskMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * GetTask - retrieves a task using the provided criteria
      * Required permissions:
      *    OMNI_AGENT
@@ -3202,6 +3388,28 @@ public final class OmniApiGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListTasksRes> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListTasksMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * RejectTask rejects a task.
+     * </pre>
+     */
+    public void rejectTask(com.tcn.cloud.api.api.v0alpha.RejectTaskRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.RejectTaskResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getRejectTaskMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * RequeueTask requeues a task.
+     * </pre>
+     */
+    public void requeueTask(com.tcn.cloud.api.api.v0alpha.RequeueTaskRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.RequeueTaskResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getRequeueTaskMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -4031,6 +4239,26 @@ public final class OmniApiGrpc {
 
     /**
      * <pre>
+     * ApproveTask approves a task.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v0alpha.ApproveTaskResponse approveTask(com.tcn.cloud.api.api.v0alpha.ApproveTaskRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getApproveTaskMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetNextQueuedTask retrieves the next queued task for the agent.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v0alpha.GetNextQueuedTaskResponse getNextQueuedTask(com.tcn.cloud.api.api.v0alpha.GetNextQueuedTaskRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetNextQueuedTaskMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * GetTask - retrieves a task using the provided criteria
      * Required permissions:
      *    OMNI_AGENT
@@ -4051,6 +4279,26 @@ public final class OmniApiGrpc {
     public com.tcn.cloud.api.api.v0alpha.ListTasksRes listTasks(com.tcn.cloud.api.api.v0alpha.ListTasksReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListTasksMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * RejectTask rejects a task.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v0alpha.RejectTaskResponse rejectTask(com.tcn.cloud.api.api.v0alpha.RejectTaskRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getRejectTaskMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * RequeueTask requeues a task.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v0alpha.RequeueTaskResponse requeueTask(com.tcn.cloud.api.api.v0alpha.RequeueTaskRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getRequeueTaskMethod(), getCallOptions(), request);
     }
 
     /**
@@ -4837,6 +5085,28 @@ public final class OmniApiGrpc {
 
     /**
      * <pre>
+     * ApproveTask approves a task.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ApproveTaskResponse> approveTask(
+        com.tcn.cloud.api.api.v0alpha.ApproveTaskRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getApproveTaskMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * GetNextQueuedTask retrieves the next queued task for the agent.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetNextQueuedTaskResponse> getNextQueuedTask(
+        com.tcn.cloud.api.api.v0alpha.GetNextQueuedTaskRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetNextQueuedTaskMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * GetTask - retrieves a task using the provided criteria
      * Required permissions:
      *    OMNI_AGENT
@@ -4859,6 +5129,28 @@ public final class OmniApiGrpc {
         com.tcn.cloud.api.api.v0alpha.ListTasksReq request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListTasksMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * RejectTask rejects a task.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.RejectTaskResponse> rejectTask(
+        com.tcn.cloud.api.api.v0alpha.RejectTaskRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getRejectTaskMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * RequeueTask requeues a task.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.RequeueTaskResponse> requeueTask(
+        com.tcn.cloud.api.api.v0alpha.RequeueTaskRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getRequeueTaskMethod(), getCallOptions()), request);
     }
 
     /**
@@ -5442,48 +5734,52 @@ public final class OmniApiGrpc {
   private static final int METHODID_MANAGER_LIST_CONVERSATIONS = 20;
   private static final int METHODID_LIST_CONTACT_LISTS = 21;
   private static final int METHODID_GET_AVAILABLE_HEADERS = 22;
-  private static final int METHODID_GET_TASK = 23;
-  private static final int METHODID_LIST_TASKS = 24;
-  private static final int METHODID_CREATE_CONNECTED_INBOX = 25;
-  private static final int METHODID_DELETE_CONNECTED_INBOX_BY_SID = 26;
-  private static final int METHODID_GET_CONNECTED_INBOX_BY_SID = 27;
-  private static final int METHODID_PERFORM_SENDGRID_ACCOUNT_CHECKS = 28;
-  private static final int METHODID_LIST_CONNECTED_INBOXES = 29;
-  private static final int METHODID_TEST_CONNECTED_INBOX = 30;
-  private static final int METHODID_UPDATE_CONNECTED_INBOX = 31;
-  private static final int METHODID_CREATE_VERIFIED_EMAIL = 32;
-  private static final int METHODID_DELETE_VERIFIED_EMAIL = 33;
-  private static final int METHODID_GET_VERIFIED_EMAIL_BY_SID = 34;
-  private static final int METHODID_LIST_VERIFIED_EMAILS = 35;
-  private static final int METHODID_RESEND_VERIFIED_EMAIL = 36;
-  private static final int METHODID_UPDATE_VERIFIED_EMAIL = 37;
-  private static final int METHODID_GET_PENDING_GOOGLE_XOAUTH2DATA = 38;
-  private static final int METHODID_SEND_EMAIL_NOTIFICATION = 39;
-  private static final int METHODID_SEND_FEEDBACK_EMAIL = 40;
-  private static final int METHODID_GET_OMNI_ATTACHMENT = 41;
-  private static final int METHODID_CREATE_TASKS = 42;
-  private static final int METHODID_CREATE_SIGNATURE = 43;
-  private static final int METHODID_DELETE_SIGNATURE = 44;
-  private static final int METHODID_LIST_SIGNATURES = 45;
-  private static final int METHODID_UPDATE_SIGNATURE = 46;
-  private static final int METHODID_SUGGEST_RESPONSE = 47;
-  private static final int METHODID_CREATE_PROJECT = 48;
-  private static final int METHODID_LIST_PROJECTS = 49;
-  private static final int METHODID_EDIT_PROJECT_BY_ID = 50;
-  private static final int METHODID_CLOSE_PROJECT_BY_ID = 51;
-  private static final int METHODID_GET_PROJECT_BY_ID = 52;
-  private static final int METHODID_CREATE_CANNED_MESSAGE = 53;
-  private static final int METHODID_LIST_CANNED_MESSAGES = 54;
-  private static final int METHODID_UPDATE_CANNED_MESSAGE = 55;
-  private static final int METHODID_GET_CANNED_MESSAGE_BY_ID = 56;
-  private static final int METHODID_DELETE_CANNED_MESSAGE_BY_ID = 57;
-  private static final int METHODID_CREATE_CANNED_MESSAGE_GROUP = 58;
-  private static final int METHODID_LIST_CANNED_MESSAGE_GROUPS = 59;
-  private static final int METHODID_UPDATE_CANNED_MESSAGE_GROUP = 60;
-  private static final int METHODID_DELETE_CANNED_MESSAGE_GROUP = 61;
-  private static final int METHODID_LIST_CANNED_MESSAGES_BY_GROUP_ID = 62;
-  private static final int METHODID_GET_CANNED_MESSAGE_GROUP_BY_ID = 63;
-  private static final int METHODID_LIST_USER_SKILLS = 64;
+  private static final int METHODID_APPROVE_TASK = 23;
+  private static final int METHODID_GET_NEXT_QUEUED_TASK = 24;
+  private static final int METHODID_GET_TASK = 25;
+  private static final int METHODID_LIST_TASKS = 26;
+  private static final int METHODID_REJECT_TASK = 27;
+  private static final int METHODID_REQUEUE_TASK = 28;
+  private static final int METHODID_CREATE_CONNECTED_INBOX = 29;
+  private static final int METHODID_DELETE_CONNECTED_INBOX_BY_SID = 30;
+  private static final int METHODID_GET_CONNECTED_INBOX_BY_SID = 31;
+  private static final int METHODID_PERFORM_SENDGRID_ACCOUNT_CHECKS = 32;
+  private static final int METHODID_LIST_CONNECTED_INBOXES = 33;
+  private static final int METHODID_TEST_CONNECTED_INBOX = 34;
+  private static final int METHODID_UPDATE_CONNECTED_INBOX = 35;
+  private static final int METHODID_CREATE_VERIFIED_EMAIL = 36;
+  private static final int METHODID_DELETE_VERIFIED_EMAIL = 37;
+  private static final int METHODID_GET_VERIFIED_EMAIL_BY_SID = 38;
+  private static final int METHODID_LIST_VERIFIED_EMAILS = 39;
+  private static final int METHODID_RESEND_VERIFIED_EMAIL = 40;
+  private static final int METHODID_UPDATE_VERIFIED_EMAIL = 41;
+  private static final int METHODID_GET_PENDING_GOOGLE_XOAUTH2DATA = 42;
+  private static final int METHODID_SEND_EMAIL_NOTIFICATION = 43;
+  private static final int METHODID_SEND_FEEDBACK_EMAIL = 44;
+  private static final int METHODID_GET_OMNI_ATTACHMENT = 45;
+  private static final int METHODID_CREATE_TASKS = 46;
+  private static final int METHODID_CREATE_SIGNATURE = 47;
+  private static final int METHODID_DELETE_SIGNATURE = 48;
+  private static final int METHODID_LIST_SIGNATURES = 49;
+  private static final int METHODID_UPDATE_SIGNATURE = 50;
+  private static final int METHODID_SUGGEST_RESPONSE = 51;
+  private static final int METHODID_CREATE_PROJECT = 52;
+  private static final int METHODID_LIST_PROJECTS = 53;
+  private static final int METHODID_EDIT_PROJECT_BY_ID = 54;
+  private static final int METHODID_CLOSE_PROJECT_BY_ID = 55;
+  private static final int METHODID_GET_PROJECT_BY_ID = 56;
+  private static final int METHODID_CREATE_CANNED_MESSAGE = 57;
+  private static final int METHODID_LIST_CANNED_MESSAGES = 58;
+  private static final int METHODID_UPDATE_CANNED_MESSAGE = 59;
+  private static final int METHODID_GET_CANNED_MESSAGE_BY_ID = 60;
+  private static final int METHODID_DELETE_CANNED_MESSAGE_BY_ID = 61;
+  private static final int METHODID_CREATE_CANNED_MESSAGE_GROUP = 62;
+  private static final int METHODID_LIST_CANNED_MESSAGE_GROUPS = 63;
+  private static final int METHODID_UPDATE_CANNED_MESSAGE_GROUP = 64;
+  private static final int METHODID_DELETE_CANNED_MESSAGE_GROUP = 65;
+  private static final int METHODID_LIST_CANNED_MESSAGES_BY_GROUP_ID = 66;
+  private static final int METHODID_GET_CANNED_MESSAGE_GROUP_BY_ID = 67;
+  private static final int METHODID_LIST_USER_SKILLS = 68;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -5594,6 +5890,14 @@ public final class OmniApiGrpc {
           serviceImpl.getAvailableHeaders((com.tcn.cloud.api.api.v0alpha.GetAvailableHeadersReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetAvailableHeadersRes>) responseObserver);
           break;
+        case METHODID_APPROVE_TASK:
+          serviceImpl.approveTask((com.tcn.cloud.api.api.v0alpha.ApproveTaskRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ApproveTaskResponse>) responseObserver);
+          break;
+        case METHODID_GET_NEXT_QUEUED_TASK:
+          serviceImpl.getNextQueuedTask((com.tcn.cloud.api.api.v0alpha.GetNextQueuedTaskRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetNextQueuedTaskResponse>) responseObserver);
+          break;
         case METHODID_GET_TASK:
           serviceImpl.getTask((com.tcn.cloud.api.api.v0alpha.GetTaskReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.OmniTask>) responseObserver);
@@ -5601,6 +5905,14 @@ public final class OmniApiGrpc {
         case METHODID_LIST_TASKS:
           serviceImpl.listTasks((com.tcn.cloud.api.api.v0alpha.ListTasksReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListTasksRes>) responseObserver);
+          break;
+        case METHODID_REJECT_TASK:
+          serviceImpl.rejectTask((com.tcn.cloud.api.api.v0alpha.RejectTaskRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.RejectTaskResponse>) responseObserver);
+          break;
+        case METHODID_REQUEUE_TASK:
+          serviceImpl.requeueTask((com.tcn.cloud.api.api.v0alpha.RequeueTaskRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.RequeueTaskResponse>) responseObserver);
           break;
         case METHODID_CREATE_CONNECTED_INBOX:
           serviceImpl.createConnectedInbox((com.tcn.cloud.api.api.commons.ConnectedInbox) request,
@@ -5942,6 +6254,20 @@ public final class OmniApiGrpc {
               com.tcn.cloud.api.api.v0alpha.GetAvailableHeadersRes>(
                 service, METHODID_GET_AVAILABLE_HEADERS)))
         .addMethod(
+          getApproveTaskMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ApproveTaskRequest,
+              com.tcn.cloud.api.api.v0alpha.ApproveTaskResponse>(
+                service, METHODID_APPROVE_TASK)))
+        .addMethod(
+          getGetNextQueuedTaskMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetNextQueuedTaskRequest,
+              com.tcn.cloud.api.api.v0alpha.GetNextQueuedTaskResponse>(
+                service, METHODID_GET_NEXT_QUEUED_TASK)))
+        .addMethod(
           getGetTaskMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -5955,6 +6281,20 @@ public final class OmniApiGrpc {
               com.tcn.cloud.api.api.v0alpha.ListTasksReq,
               com.tcn.cloud.api.api.v0alpha.ListTasksRes>(
                 service, METHODID_LIST_TASKS)))
+        .addMethod(
+          getRejectTaskMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.RejectTaskRequest,
+              com.tcn.cloud.api.api.v0alpha.RejectTaskResponse>(
+                service, METHODID_REJECT_TASK)))
+        .addMethod(
+          getRequeueTaskMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.RequeueTaskRequest,
+              com.tcn.cloud.api.api.v0alpha.RequeueTaskResponse>(
+                service, METHODID_REQUEUE_TASK)))
         .addMethod(
           getCreateConnectedInboxMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -6306,8 +6646,12 @@ public final class OmniApiGrpc {
               .addMethod(getManagerListConversationsMethod())
               .addMethod(getListContactListsMethod())
               .addMethod(getGetAvailableHeadersMethod())
+              .addMethod(getApproveTaskMethod())
+              .addMethod(getGetNextQueuedTaskMethod())
               .addMethod(getGetTaskMethod())
               .addMethod(getListTasksMethod())
+              .addMethod(getRejectTaskMethod())
+              .addMethod(getRequeueTaskMethod())
               .addMethod(getCreateConnectedInboxMethod())
               .addMethod(getDeleteConnectedInboxBySidMethod())
               .addMethod(getGetConnectedInboxBySidMethod())

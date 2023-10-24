@@ -16,6 +16,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ListTicketTemplateResponse() {
+    enabledTemplates_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -39,29 +40,44 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ENABLED_TEMPLATES_FIELD_NUMBER = 1;
-  private com.tcn.cloud.api.api.commons.ListTemplate enabledTemplates_;
+  @SuppressWarnings("serial")
+  private java.util.List<com.tcn.cloud.api.api.commons.ListTemplate> enabledTemplates_;
   /**
-   * <code>.api.commons.ListTemplate enabled_templates = 1 [json_name = "enabledTemplates"];</code>
-   * @return Whether the enabledTemplates field is set.
+   * <code>repeated .api.commons.ListTemplate enabled_templates = 1 [json_name = "enabledTemplates"];</code>
    */
   @java.lang.Override
-  public boolean hasEnabledTemplates() {
-    return enabledTemplates_ != null;
+  public java.util.List<com.tcn.cloud.api.api.commons.ListTemplate> getEnabledTemplatesList() {
+    return enabledTemplates_;
   }
   /**
-   * <code>.api.commons.ListTemplate enabled_templates = 1 [json_name = "enabledTemplates"];</code>
-   * @return The enabledTemplates.
+   * <code>repeated .api.commons.ListTemplate enabled_templates = 1 [json_name = "enabledTemplates"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.ListTemplate getEnabledTemplates() {
-    return enabledTemplates_ == null ? com.tcn.cloud.api.api.commons.ListTemplate.getDefaultInstance() : enabledTemplates_;
+  public java.util.List<? extends com.tcn.cloud.api.api.commons.ListTemplateOrBuilder> 
+      getEnabledTemplatesOrBuilderList() {
+    return enabledTemplates_;
   }
   /**
-   * <code>.api.commons.ListTemplate enabled_templates = 1 [json_name = "enabledTemplates"];</code>
+   * <code>repeated .api.commons.ListTemplate enabled_templates = 1 [json_name = "enabledTemplates"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.ListTemplateOrBuilder getEnabledTemplatesOrBuilder() {
-    return enabledTemplates_ == null ? com.tcn.cloud.api.api.commons.ListTemplate.getDefaultInstance() : enabledTemplates_;
+  public int getEnabledTemplatesCount() {
+    return enabledTemplates_.size();
+  }
+  /**
+   * <code>repeated .api.commons.ListTemplate enabled_templates = 1 [json_name = "enabledTemplates"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.ListTemplate getEnabledTemplates(int index) {
+    return enabledTemplates_.get(index);
+  }
+  /**
+   * <code>repeated .api.commons.ListTemplate enabled_templates = 1 [json_name = "enabledTemplates"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.ListTemplateOrBuilder getEnabledTemplatesOrBuilder(
+      int index) {
+    return enabledTemplates_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -78,8 +94,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (enabledTemplates_ != null) {
-      output.writeMessage(1, getEnabledTemplates());
+    for (int i = 0; i < enabledTemplates_.size(); i++) {
+      output.writeMessage(1, enabledTemplates_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -90,9 +106,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (enabledTemplates_ != null) {
+    for (int i = 0; i < enabledTemplates_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, getEnabledTemplates());
+        .computeMessageSize(1, enabledTemplates_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -109,11 +125,8 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v1alpha1.tickets.ListTicketTemplateResponse other = (com.tcn.cloud.api.api.v1alpha1.tickets.ListTicketTemplateResponse) obj;
 
-    if (hasEnabledTemplates() != other.hasEnabledTemplates()) return false;
-    if (hasEnabledTemplates()) {
-      if (!getEnabledTemplates()
-          .equals(other.getEnabledTemplates())) return false;
-    }
+    if (!getEnabledTemplatesList()
+        .equals(other.getEnabledTemplatesList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -125,9 +138,9 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (hasEnabledTemplates()) {
+    if (getEnabledTemplatesCount() > 0) {
       hash = (37 * hash) + ENABLED_TEMPLATES_FIELD_NUMBER;
-      hash = (53 * hash) + getEnabledTemplates().hashCode();
+      hash = (53 * hash) + getEnabledTemplatesList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -260,11 +273,13 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      enabledTemplates_ = null;
-      if (enabledTemplatesBuilder_ != null) {
-        enabledTemplatesBuilder_.dispose();
-        enabledTemplatesBuilder_ = null;
+      if (enabledTemplatesBuilder_ == null) {
+        enabledTemplates_ = java.util.Collections.emptyList();
+      } else {
+        enabledTemplates_ = null;
+        enabledTemplatesBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000001);
       return this;
     }
 
@@ -291,18 +306,26 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.tickets.ListTicketTemplateResponse buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.tickets.ListTicketTemplateResponse result = new com.tcn.cloud.api.api.v1alpha1.tickets.ListTicketTemplateResponse(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.tickets.ListTicketTemplateResponse result) {
+      if (enabledTemplatesBuilder_ == null) {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          enabledTemplates_ = java.util.Collections.unmodifiableList(enabledTemplates_);
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.enabledTemplates_ = enabledTemplates_;
+      } else {
+        result.enabledTemplates_ = enabledTemplatesBuilder_.build();
+      }
+    }
+
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.tickets.ListTicketTemplateResponse result) {
       int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.enabledTemplates_ = enabledTemplatesBuilder_ == null
-            ? enabledTemplates_
-            : enabledTemplatesBuilder_.build();
-      }
     }
 
     @java.lang.Override
@@ -349,8 +372,31 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.tickets.ListTicketTemplateResponse other) {
       if (other == com.tcn.cloud.api.api.v1alpha1.tickets.ListTicketTemplateResponse.getDefaultInstance()) return this;
-      if (other.hasEnabledTemplates()) {
-        mergeEnabledTemplates(other.getEnabledTemplates());
+      if (enabledTemplatesBuilder_ == null) {
+        if (!other.enabledTemplates_.isEmpty()) {
+          if (enabledTemplates_.isEmpty()) {
+            enabledTemplates_ = other.enabledTemplates_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureEnabledTemplatesIsMutable();
+            enabledTemplates_.addAll(other.enabledTemplates_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.enabledTemplates_.isEmpty()) {
+          if (enabledTemplatesBuilder_.isEmpty()) {
+            enabledTemplatesBuilder_.dispose();
+            enabledTemplatesBuilder_ = null;
+            enabledTemplates_ = other.enabledTemplates_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+            enabledTemplatesBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getEnabledTemplatesFieldBuilder() : null;
+          } else {
+            enabledTemplatesBuilder_.addAllMessages(other.enabledTemplates_);
+          }
+        }
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -379,10 +425,16 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              input.readMessage(
-                  getEnabledTemplatesFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000001;
+              com.tcn.cloud.api.api.commons.ListTemplate m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.commons.ListTemplate.parser(),
+                      extensionRegistry);
+              if (enabledTemplatesBuilder_ == null) {
+                ensureEnabledTemplatesIsMutable();
+                enabledTemplates_.add(m);
+              } else {
+                enabledTemplatesBuilder_.addMessage(m);
+              }
               break;
             } // case 10
             default: {
@@ -402,118 +454,239 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private com.tcn.cloud.api.api.commons.ListTemplate enabledTemplates_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.ListTemplate, com.tcn.cloud.api.api.commons.ListTemplate.Builder, com.tcn.cloud.api.api.commons.ListTemplateOrBuilder> enabledTemplatesBuilder_;
-    /**
-     * <code>.api.commons.ListTemplate enabled_templates = 1 [json_name = "enabledTemplates"];</code>
-     * @return Whether the enabledTemplates field is set.
-     */
-    public boolean hasEnabledTemplates() {
-      return ((bitField0_ & 0x00000001) != 0);
+    private java.util.List<com.tcn.cloud.api.api.commons.ListTemplate> enabledTemplates_ =
+      java.util.Collections.emptyList();
+    private void ensureEnabledTemplatesIsMutable() {
+      if (!((bitField0_ & 0x00000001) != 0)) {
+        enabledTemplates_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.ListTemplate>(enabledTemplates_);
+        bitField0_ |= 0x00000001;
+       }
     }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.ListTemplate, com.tcn.cloud.api.api.commons.ListTemplate.Builder, com.tcn.cloud.api.api.commons.ListTemplateOrBuilder> enabledTemplatesBuilder_;
+
     /**
-     * <code>.api.commons.ListTemplate enabled_templates = 1 [json_name = "enabledTemplates"];</code>
-     * @return The enabledTemplates.
+     * <code>repeated .api.commons.ListTemplate enabled_templates = 1 [json_name = "enabledTemplates"];</code>
      */
-    public com.tcn.cloud.api.api.commons.ListTemplate getEnabledTemplates() {
+    public java.util.List<com.tcn.cloud.api.api.commons.ListTemplate> getEnabledTemplatesList() {
       if (enabledTemplatesBuilder_ == null) {
-        return enabledTemplates_ == null ? com.tcn.cloud.api.api.commons.ListTemplate.getDefaultInstance() : enabledTemplates_;
+        return java.util.Collections.unmodifiableList(enabledTemplates_);
       } else {
-        return enabledTemplatesBuilder_.getMessage();
+        return enabledTemplatesBuilder_.getMessageList();
       }
     }
     /**
-     * <code>.api.commons.ListTemplate enabled_templates = 1 [json_name = "enabledTemplates"];</code>
+     * <code>repeated .api.commons.ListTemplate enabled_templates = 1 [json_name = "enabledTemplates"];</code>
      */
-    public Builder setEnabledTemplates(com.tcn.cloud.api.api.commons.ListTemplate value) {
+    public int getEnabledTemplatesCount() {
+      if (enabledTemplatesBuilder_ == null) {
+        return enabledTemplates_.size();
+      } else {
+        return enabledTemplatesBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .api.commons.ListTemplate enabled_templates = 1 [json_name = "enabledTemplates"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.ListTemplate getEnabledTemplates(int index) {
+      if (enabledTemplatesBuilder_ == null) {
+        return enabledTemplates_.get(index);
+      } else {
+        return enabledTemplatesBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .api.commons.ListTemplate enabled_templates = 1 [json_name = "enabledTemplates"];</code>
+     */
+    public Builder setEnabledTemplates(
+        int index, com.tcn.cloud.api.api.commons.ListTemplate value) {
       if (enabledTemplatesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        enabledTemplates_ = value;
+        ensureEnabledTemplatesIsMutable();
+        enabledTemplates_.set(index, value);
+        onChanged();
       } else {
-        enabledTemplatesBuilder_.setMessage(value);
+        enabledTemplatesBuilder_.setMessage(index, value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
       return this;
     }
     /**
-     * <code>.api.commons.ListTemplate enabled_templates = 1 [json_name = "enabledTemplates"];</code>
+     * <code>repeated .api.commons.ListTemplate enabled_templates = 1 [json_name = "enabledTemplates"];</code>
      */
     public Builder setEnabledTemplates(
+        int index, com.tcn.cloud.api.api.commons.ListTemplate.Builder builderForValue) {
+      if (enabledTemplatesBuilder_ == null) {
+        ensureEnabledTemplatesIsMutable();
+        enabledTemplates_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        enabledTemplatesBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.ListTemplate enabled_templates = 1 [json_name = "enabledTemplates"];</code>
+     */
+    public Builder addEnabledTemplates(com.tcn.cloud.api.api.commons.ListTemplate value) {
+      if (enabledTemplatesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureEnabledTemplatesIsMutable();
+        enabledTemplates_.add(value);
+        onChanged();
+      } else {
+        enabledTemplatesBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.ListTemplate enabled_templates = 1 [json_name = "enabledTemplates"];</code>
+     */
+    public Builder addEnabledTemplates(
+        int index, com.tcn.cloud.api.api.commons.ListTemplate value) {
+      if (enabledTemplatesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureEnabledTemplatesIsMutable();
+        enabledTemplates_.add(index, value);
+        onChanged();
+      } else {
+        enabledTemplatesBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.ListTemplate enabled_templates = 1 [json_name = "enabledTemplates"];</code>
+     */
+    public Builder addEnabledTemplates(
         com.tcn.cloud.api.api.commons.ListTemplate.Builder builderForValue) {
       if (enabledTemplatesBuilder_ == null) {
-        enabledTemplates_ = builderForValue.build();
+        ensureEnabledTemplatesIsMutable();
+        enabledTemplates_.add(builderForValue.build());
+        onChanged();
       } else {
-        enabledTemplatesBuilder_.setMessage(builderForValue.build());
+        enabledTemplatesBuilder_.addMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
       return this;
     }
     /**
-     * <code>.api.commons.ListTemplate enabled_templates = 1 [json_name = "enabledTemplates"];</code>
+     * <code>repeated .api.commons.ListTemplate enabled_templates = 1 [json_name = "enabledTemplates"];</code>
      */
-    public Builder mergeEnabledTemplates(com.tcn.cloud.api.api.commons.ListTemplate value) {
+    public Builder addEnabledTemplates(
+        int index, com.tcn.cloud.api.api.commons.ListTemplate.Builder builderForValue) {
       if (enabledTemplatesBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0) &&
-          enabledTemplates_ != null &&
-          enabledTemplates_ != com.tcn.cloud.api.api.commons.ListTemplate.getDefaultInstance()) {
-          getEnabledTemplatesBuilder().mergeFrom(value);
-        } else {
-          enabledTemplates_ = value;
-        }
+        ensureEnabledTemplatesIsMutable();
+        enabledTemplates_.add(index, builderForValue.build());
+        onChanged();
       } else {
-        enabledTemplatesBuilder_.mergeFrom(value);
+        enabledTemplatesBuilder_.addMessage(index, builderForValue.build());
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
       return this;
     }
     /**
-     * <code>.api.commons.ListTemplate enabled_templates = 1 [json_name = "enabledTemplates"];</code>
+     * <code>repeated .api.commons.ListTemplate enabled_templates = 1 [json_name = "enabledTemplates"];</code>
+     */
+    public Builder addAllEnabledTemplates(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.ListTemplate> values) {
+      if (enabledTemplatesBuilder_ == null) {
+        ensureEnabledTemplatesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, enabledTemplates_);
+        onChanged();
+      } else {
+        enabledTemplatesBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.ListTemplate enabled_templates = 1 [json_name = "enabledTemplates"];</code>
      */
     public Builder clearEnabledTemplates() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      enabledTemplates_ = null;
-      if (enabledTemplatesBuilder_ != null) {
-        enabledTemplatesBuilder_.dispose();
-        enabledTemplatesBuilder_ = null;
+      if (enabledTemplatesBuilder_ == null) {
+        enabledTemplates_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+      } else {
+        enabledTemplatesBuilder_.clear();
       }
-      onChanged();
       return this;
     }
     /**
-     * <code>.api.commons.ListTemplate enabled_templates = 1 [json_name = "enabledTemplates"];</code>
+     * <code>repeated .api.commons.ListTemplate enabled_templates = 1 [json_name = "enabledTemplates"];</code>
      */
-    public com.tcn.cloud.api.api.commons.ListTemplate.Builder getEnabledTemplatesBuilder() {
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return getEnabledTemplatesFieldBuilder().getBuilder();
+    public Builder removeEnabledTemplates(int index) {
+      if (enabledTemplatesBuilder_ == null) {
+        ensureEnabledTemplatesIsMutable();
+        enabledTemplates_.remove(index);
+        onChanged();
+      } else {
+        enabledTemplatesBuilder_.remove(index);
+      }
+      return this;
     }
     /**
-     * <code>.api.commons.ListTemplate enabled_templates = 1 [json_name = "enabledTemplates"];</code>
+     * <code>repeated .api.commons.ListTemplate enabled_templates = 1 [json_name = "enabledTemplates"];</code>
      */
-    public com.tcn.cloud.api.api.commons.ListTemplateOrBuilder getEnabledTemplatesOrBuilder() {
-      if (enabledTemplatesBuilder_ != null) {
-        return enabledTemplatesBuilder_.getMessageOrBuilder();
-      } else {
-        return enabledTemplates_ == null ?
-            com.tcn.cloud.api.api.commons.ListTemplate.getDefaultInstance() : enabledTemplates_;
+    public com.tcn.cloud.api.api.commons.ListTemplate.Builder getEnabledTemplatesBuilder(
+        int index) {
+      return getEnabledTemplatesFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .api.commons.ListTemplate enabled_templates = 1 [json_name = "enabledTemplates"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.ListTemplateOrBuilder getEnabledTemplatesOrBuilder(
+        int index) {
+      if (enabledTemplatesBuilder_ == null) {
+        return enabledTemplates_.get(index);  } else {
+        return enabledTemplatesBuilder_.getMessageOrBuilder(index);
       }
     }
     /**
-     * <code>.api.commons.ListTemplate enabled_templates = 1 [json_name = "enabledTemplates"];</code>
+     * <code>repeated .api.commons.ListTemplate enabled_templates = 1 [json_name = "enabledTemplates"];</code>
      */
-    private com.google.protobuf.SingleFieldBuilderV3<
+    public java.util.List<? extends com.tcn.cloud.api.api.commons.ListTemplateOrBuilder> 
+         getEnabledTemplatesOrBuilderList() {
+      if (enabledTemplatesBuilder_ != null) {
+        return enabledTemplatesBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(enabledTemplates_);
+      }
+    }
+    /**
+     * <code>repeated .api.commons.ListTemplate enabled_templates = 1 [json_name = "enabledTemplates"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.ListTemplate.Builder addEnabledTemplatesBuilder() {
+      return getEnabledTemplatesFieldBuilder().addBuilder(
+          com.tcn.cloud.api.api.commons.ListTemplate.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .api.commons.ListTemplate enabled_templates = 1 [json_name = "enabledTemplates"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.ListTemplate.Builder addEnabledTemplatesBuilder(
+        int index) {
+      return getEnabledTemplatesFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.api.commons.ListTemplate.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .api.commons.ListTemplate enabled_templates = 1 [json_name = "enabledTemplates"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.ListTemplate.Builder> 
+         getEnabledTemplatesBuilderList() {
+      return getEnabledTemplatesFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
         com.tcn.cloud.api.api.commons.ListTemplate, com.tcn.cloud.api.api.commons.ListTemplate.Builder, com.tcn.cloud.api.api.commons.ListTemplateOrBuilder> 
         getEnabledTemplatesFieldBuilder() {
       if (enabledTemplatesBuilder_ == null) {
-        enabledTemplatesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        enabledTemplatesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.commons.ListTemplate, com.tcn.cloud.api.api.commons.ListTemplate.Builder, com.tcn.cloud.api.api.commons.ListTemplateOrBuilder>(
-                getEnabledTemplates(),
+                enabledTemplates_,
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         enabledTemplates_ = null;

@@ -8,17 +8,26 @@ public interface ListTicketTemplateResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.api.commons.ListTemplate enabled_templates = 1 [json_name = "enabledTemplates"];</code>
-   * @return Whether the enabledTemplates field is set.
+   * <code>repeated .api.commons.ListTemplate enabled_templates = 1 [json_name = "enabledTemplates"];</code>
    */
-  boolean hasEnabledTemplates();
+  java.util.List<com.tcn.cloud.api.api.commons.ListTemplate> 
+      getEnabledTemplatesList();
   /**
-   * <code>.api.commons.ListTemplate enabled_templates = 1 [json_name = "enabledTemplates"];</code>
-   * @return The enabledTemplates.
+   * <code>repeated .api.commons.ListTemplate enabled_templates = 1 [json_name = "enabledTemplates"];</code>
    */
-  com.tcn.cloud.api.api.commons.ListTemplate getEnabledTemplates();
+  com.tcn.cloud.api.api.commons.ListTemplate getEnabledTemplates(int index);
   /**
-   * <code>.api.commons.ListTemplate enabled_templates = 1 [json_name = "enabledTemplates"];</code>
+   * <code>repeated .api.commons.ListTemplate enabled_templates = 1 [json_name = "enabledTemplates"];</code>
    */
-  com.tcn.cloud.api.api.commons.ListTemplateOrBuilder getEnabledTemplatesOrBuilder();
+  int getEnabledTemplatesCount();
+  /**
+   * <code>repeated .api.commons.ListTemplate enabled_templates = 1 [json_name = "enabledTemplates"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.api.commons.ListTemplateOrBuilder> 
+      getEnabledTemplatesOrBuilderList();
+  /**
+   * <code>repeated .api.commons.ListTemplate enabled_templates = 1 [json_name = "enabledTemplates"];</code>
+   */
+  com.tcn.cloud.api.api.commons.ListTemplateOrBuilder getEnabledTemplatesOrBuilder(
+      int index);
 }
