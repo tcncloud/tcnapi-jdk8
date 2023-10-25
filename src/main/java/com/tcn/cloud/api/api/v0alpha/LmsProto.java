@@ -2068,7 +2068,7 @@ public final class LmsProto {
       "_PATIENT\020\001\022 \n\034EPIC_ENTITY_TYPE_APPOINTME" +
       "NT\020\002\022\037\n\033EPIC_ENTITY_TYPE_MEDICATION\020\003\022\'\n" +
       "#EPIC_ENTITY_TYPE_MEDICATION_REQUEST\020\004\022\034" +
-      "\n\030EPIC_ENTITY_TYPE_ACCOUNT\020\0052\232?\n\003LMS\022v\n\014" +
+      "\n\030EPIC_ENTITY_TYPE_ACCOUNT\020\0052\222?\n\003LMS\022v\n\014" +
       "GetPublicKey\022\034.api.v0alpha.GetPublicKeyR" +
       "eq\032\026.api.v0alpha.PublicKey\"0\272\270\221\002\005\n\003\010\351\007\202\323" +
       "\344\223\002 \"\033/api/v0alpha/lms/pgpkey/get:\001*\022\207\001\n" +
@@ -2263,18 +2263,18 @@ public final class LmsProto {
       "chCriteria\022$.api.v0alpha.CjsSecureSearch" +
       "Criteria\032\026.google.protobuf.Empty\"M\272\270\221\002\005\n" +
       "\003\010\351\007\202\323\344\223\002=\"8/api/v0alpha/lms/collections" +
-      "/updatesecuresearchdcriteria:\001*\022z\n\016Sampl" +
+      "/updatesecuresearchdcriteria:\001*\022r\n\016Sampl" +
       "eEndpoint\022\032.api.v0alpha.SampleRequest\032\026." +
-      "google.protobuf.Empty\"4\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002$\"" +
-      "\027/api/v0alpha/lms/sample:\thttp_body\022\243\001\n " +
-      "GetQueuedEventsStatusByElementId\022\026.api.v" +
-      "0alpha.ElementPK\032\023.api.v0alpha.Events\"R\272" +
-      "\270\221\002\005\n\003\010\350\007\202\323\344\223\002B\"=/api/v0alpha/lms/collec" +
-      "tions/getqueuedeventsstatusbyelementid:\001" +
-      "*Bv\n\035com.tcn.cloud.api.api.v0alphaB\010LmsP" +
-      "rotoP\001\242\002\003AVX\252\002\013Api.V0alpha\312\002\013Api\\V0alpha" +
-      "\342\002\027Api\\V0alpha\\GPBMetadata\352\002\014Api::V0alph" +
-      "ab\006proto3"
+      "google.protobuf.Empty\",\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002\034\"" +
+      "\027/api/v0alpha/lms/sample:\001*\022\243\001\n GetQueue" +
+      "dEventsStatusByElementId\022\026.api.v0alpha.E" +
+      "lementPK\032\023.api.v0alpha.Events\"R\272\270\221\002\005\n\003\010\350" +
+      "\007\202\323\344\223\002B\"=/api/v0alpha/lms/collections/ge" +
+      "tqueuedeventsstatusbyelementid:\001*Bv\n\035com" +
+      ".tcn.cloud.api.api.v0alphaB\010LmsProtoP\001\242\002" +
+      "\003AVX\252\002\013Api.V0alpha\312\002\013Api\\V0alpha\342\002\027Api\\V" +
+      "0alpha\\GPBMetadata\352\002\014Api::V0alphab\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
