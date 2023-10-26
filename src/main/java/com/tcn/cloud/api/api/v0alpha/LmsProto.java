@@ -2156,7 +2156,7 @@ public final class LmsProto {
       "eamList\022\036.api.v0alpha.StreamListRequest\032" +
       "\037.api.v0alpha.StreamListResponse\"G\272\270\221\002\005\n" +
       "\003\010\351\007\202\323\344\223\0027\"2/api/v0alpha/lms/pipelines/s" +
-      "treamlist/{element_id}:\001o(\001\022\200\001\n\022GetAvail" +
+      "treamlist/{element_id}:\001*(\001\022\200\001\n\022GetAvail" +
       "ableFields\022\026.google.protobuf.Empty\032\032.api" +
       ".v0alpha.ProcessFields\"6\272\270\221\002\005\n\003\010\350\007\202\323\344\223\002&" +
       "\"!/api/v0alpha/lms/available-fields:\001*\022r" +
