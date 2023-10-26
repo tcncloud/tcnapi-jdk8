@@ -693,6 +693,14 @@ public enum Permission
   PERMISSION_PBX_MANAGER_EDIT(4101),
   /**
    * <pre>
+   * Enables access to the PBX Softphone Widget in the GlobalTopBar.
+   * </pre>
+   *
+   * <code>PERMISSION_PBX_SOFTPHONE_WIDGET = 4110 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_PBX_SOFTPHONE_WIDGET(4110),
+  /**
+   * <pre>
    * Enables access to viewing the main newsroom app and showing the popup
    * This permission will be give to orgs automatically, but can be removed
    * manually to opt out of newsroom notifications
@@ -1401,6 +1409,14 @@ public enum Permission
   public static final int PERMISSION_PBX_MANAGER_EDIT_VALUE = 4101;
   /**
    * <pre>
+   * Enables access to the PBX Softphone Widget in the GlobalTopBar.
+   * </pre>
+   *
+   * <code>PERMISSION_PBX_SOFTPHONE_WIDGET = 4110 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_PBX_SOFTPHONE_WIDGET_VALUE = 4110;
+  /**
+   * <pre>
    * Enables access to viewing the main newsroom app and showing the popup
    * This permission will be give to orgs automatically, but can be removed
    * manually to opt out of newsroom notifications
@@ -1536,6 +1552,7 @@ public enum Permission
       case 4000: return PERMISSION_WORKFLOWS;
       case 4100: return PERMISSION_PBX_MANAGER_VIEW;
       case 4101: return PERMISSION_PBX_MANAGER_EDIT;
+      case 4110: return PERMISSION_PBX_SOFTPHONE_WIDGET;
       case 4199: return PERMISSION_NEWSROOM_VIEW;
       case 4200: return PERMISSION_NEWSROOM_EDIT;
       case 4201: return PERMISSION_NEWSROOM_PUBLISH;

@@ -24,7 +24,7 @@ public final class PermsProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\034api/commons/auth/perms.proto\022\020api.comm" +
-      "ons.auth\032\033annotations/perms/tcn.proto*\252\'" +
+      "ons.auth\032\033annotations/perms/tcn.proto*\360\'" +
       "\n\nPermission\022\032\n\026PERMISSION_UNSPECIFIED\020\000" +
       "\022\022\n\016PERMISSION_DEV\020\001\022\031\n\025PERMISSION_LEARN" +
       "_EDIT\020\n\022!\n\023PERMISSION_ORG_EDIT\020d\032\010\212\265\030\004\020\t" +
@@ -148,13 +148,15 @@ public final class PermsProto {
       "ment\"\031Extension Group Managment\022Y\n\033PERMI" +
       "SSION_PBX_MANAGER_EDIT\020\205 \0327\212\265\0303\020\t\030\n\"\022PBX" +
       " User Managment\"\031Extension Group Managme" +
-      "nt\022%\n\030PERMISSION_NEWSROOM_VIEW\020\347 \032\006\212\265\030\002\020" +
-      "\021\022%\n\030PERMISSION_NEWSROOM_EDIT\020\350 \032\006\212\265\030\002\020\021" +
-      "\022 \n\033PERMISSION_NEWSROOM_PUBLISH\020\351 B\222\001\n\"c" +
-      "om.tcn.cloud.api.api.commons.authB\nPerms" +
-      "ProtoP\001\242\002\003ACA\252\002\020Api.Commons.Auth\312\002\020Api\\C" +
-      "ommons\\Auth\342\002\034Api\\Commons\\Auth\\GPBMetada" +
-      "ta\352\002\022Api::Commons::Authb\006proto3"
+      "nt\022D\n\037PERMISSION_PBX_SOFTPHONE_WIDGET\020\216 " +
+      "\032\036\212\265\030\032\020\t\030\n\"\024PBX Softphone Widget\022%\n\030PERM" +
+      "ISSION_NEWSROOM_VIEW\020\347 \032\006\212\265\030\002\020\021\022%\n\030PERMI" +
+      "SSION_NEWSROOM_EDIT\020\350 \032\006\212\265\030\002\020\021\022 \n\033PERMIS" +
+      "SION_NEWSROOM_PUBLISH\020\351 B\222\001\n\"com.tcn.clo" +
+      "ud.api.api.commons.authB\nPermsProtoP\001\242\002\003" +
+      "ACA\252\002\020Api.Commons.Auth\312\002\020Api\\Commons\\Aut" +
+      "h\342\002\034Api\\Commons\\Auth\\GPBMetadata\352\002\022Api::" +
+      "Commons::Authb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
