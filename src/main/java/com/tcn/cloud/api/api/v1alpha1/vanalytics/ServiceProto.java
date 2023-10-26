@@ -92,7 +92,7 @@ public final class ServiceProto {
       "\n\005hours\030\002 \001(\003R\005hours\022\022\n\004cost\030\003 \001(\001R\004cost" +
       "\0229\n\nstart_time\030\004 \001(\0132\032.google.protobuf.T" +
       "imestampR\tstartTime\0225\n\010end_time\030\005 \001(\0132\032." +
-      "google.protobuf.TimestampR\007endTime2\353*\n\nV" +
+      "google.protobuf.TimestampR\007endTime2\3440\n\nV" +
       "analytics\022\226\001\n\005Audit\022%.api.v1alpha1.vanal" +
       "ytics.AuditRequest\032&.api.v1alpha1.vanaly" +
       "tics.AuditResponse\">\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002.\")/a" +
@@ -230,11 +230,30 @@ public final class ServiceProto {
       ".v1alpha1.vanalytics.CreateCorrectionRes" +
       "ponse\"I\272\270\221\002\005\n\003\010\364\003\202\323\344\223\0029\"4/api/v1alpha1/v" +
       "analytics/vanalytics/createcorrection:\001*" +
-      "B\267\001\n)com.tcn.cloud.api.api.v1alpha1.vana" +
-      "lyticsB\014ServiceProtoP\001\242\002\003AVV\252\002\027Api.V1alp" +
-      "ha1.Vanalytics\312\002\027Api\\V1alpha1\\Vanalytics" +
-      "\342\002#Api\\V1alpha1\\Vanalytics\\GPBMetadata\352\002" +
-      "\031Api::V1alpha1::Vanalyticsb\006proto3"
+      "\022\253\001\n\rGetCorrection\022-.api.v1alpha1.vanaly" +
+      "tics.GetCorrectionRequest\032#.api.v1alpha1" +
+      ".vanalytics.Correction\"F\272\270\221\002\005\n\003\010\364\003\202\323\344\223\0026" +
+      "\"1/api/v1alpha1/vanalytics/vanalytics/ge" +
+      "tcorrection:\001*\022\302\001\n\020DeleteCorrection\0220.ap" +
+      "i.v1alpha1.vanalytics.DeleteCorrectionRe" +
+      "quest\0321.api.v1alpha1.vanalytics.DeleteCo" +
+      "rrectionResponse\"I\272\270\221\002\005\n\003\010\364\003\202\323\344\223\0029\"4/api" +
+      "/v1alpha1/vanalytics/vanalytics/deleteco" +
+      "rrection:\001*\022\276\001\n\017ListCorrections\022/.api.v1" +
+      "alpha1.vanalytics.ListCorrectionsRequest" +
+      "\0320.api.v1alpha1.vanalytics.ListCorrectio" +
+      "nsResponse\"H\272\270\221\002\005\n\003\010\364\003\202\323\344\223\0028\"3/api/v1alp" +
+      "ha1/vanalytics/vanalytics/listcorrection" +
+      "s:\001*\022\302\001\n\020UpdateCorrection\0220.api.v1alpha1" +
+      ".vanalytics.UpdateCorrectionRequest\0321.ap" +
+      "i.v1alpha1.vanalytics.UpdateCorrectionRe" +
+      "sponse\"I\272\270\221\002\005\n\003\010\364\003\202\323\344\223\0029\"4/api/v1alpha1/" +
+      "vanalytics/vanalytics/updatecorrection:\001" +
+      "*B\267\001\n)com.tcn.cloud.api.api.v1alpha1.van" +
+      "alyticsB\014ServiceProtoP\001\242\002\003AVV\252\002\027Api.V1al" +
+      "pha1.Vanalytics\312\002\027Api\\V1alpha1\\Vanalytic" +
+      "s\342\002#Api\\V1alpha1\\Vanalytics\\GPBMetadata\352" +
+      "\002\031Api::V1alpha1::Vanalyticsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
