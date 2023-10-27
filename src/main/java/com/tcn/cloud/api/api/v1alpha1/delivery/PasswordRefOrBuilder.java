@@ -8,7 +8,7 @@ public interface PasswordRefOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>int64 password_sid = 1 [json_name = "passwordSid", jstype = JS_STRING];</code>
+   * <code>int64 password_sid = 1 [json_name = "passwordSid"];</code>
    * @return The passwordSid.
    */
   long getPasswordSid();

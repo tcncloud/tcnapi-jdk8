@@ -8,7 +8,7 @@ public interface SSHKeyRefOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>int64 ssh_key_sid = 1 [json_name = "sshKeySid", jstype = JS_STRING];</code>
+   * <code>int64 ssh_key_sid = 1 [json_name = "sshKeySid"];</code>
    * @return The sshKeySid.
    */
   long getSshKeySid();
