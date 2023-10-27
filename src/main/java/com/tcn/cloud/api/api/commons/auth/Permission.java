@@ -324,6 +324,14 @@ public enum Permission
   PERMISSION_MANUAL_APPROVE(341),
   /**
    * <pre>
+   * Enables Agents to view plugins.
+   * </pre>
+   *
+   * <code>PERMISSION_AGENT_PLUGINS_VIEW = 342 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_AGENT_PLUGINS_VIEW(342),
+  /**
+   * <pre>
    * Enables Agents to view portals.
    * </pre>
    *
@@ -1040,6 +1048,14 @@ public enum Permission
   public static final int PERMISSION_MANUAL_APPROVE_VALUE = 341;
   /**
    * <pre>
+   * Enables Agents to view plugins.
+   * </pre>
+   *
+   * <code>PERMISSION_AGENT_PLUGINS_VIEW = 342 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_AGENT_PLUGINS_VIEW_VALUE = 342;
+  /**
+   * <pre>
    * Enables Agents to view portals.
    * </pre>
    *
@@ -1506,6 +1522,7 @@ public enum Permission
       case 1400: return PERMISSION_EXTENSION_EDIT;
       case 1401: return PERMISSION_VOICEMAIL_DOWNLOAD;
       case 341: return PERMISSION_MANUAL_APPROVE;
+      case 342: return PERMISSION_AGENT_PLUGINS_VIEW;
       case 340: return PERMISSION_AGENT_PORTALS_VIEW;
       case 500: return PERMISSION_VOICE_ANALYTICS;
       case 501: return PERMISSION_VOICE_ANALYTICS_FLAG;

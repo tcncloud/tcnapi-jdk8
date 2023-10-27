@@ -1199,7 +1199,7 @@ public final class ServiceProto {
       "\0162\'.api.commons.integrations.RequestMeth" +
       "odR\010methodId\"g\n\034GetPortalLinksByDateRang" +
       "eRes\022G\n\004rows\030\002 \003(\01323.api.v1alpha1.integr" +
-      "ations.PortalLinkTransactionRowR\004rows2\250\'" +
+      "ations.PortalLinkTransactionRowR\004rows2\267\'" +
       "\n\014Integrations\022\220\001\n\007Process\022%.api.v1alpha" +
       "1.integrations.ProcessReq\032%.api.v1alpha1" +
       ".integrations.ProcessRes\"7\272\270\221\002\005\n\003\010\224\n\202\323\344\223" +
@@ -1221,116 +1221,117 @@ public final class ServiceProto {
       "aReq\032A.api.v1alpha1.integrations.GetInte" +
       "grationTransactionReportDataRes\"S\272\270\221\002\005\n\003" +
       "\010\224\n\202\323\344\223\002C\">/api/v1alpha1/integrations/ge" +
-      "tintegrationtransactionreportdata:\001*\022\325\001\n" +
+      "tintegrationtransactionreportdata:\001*\022\332\001\n" +
       "\026SearchPastTransactions\0228.api.v1alpha1.i" +
       "ntegrations.SearchPastTransactionsReques" +
       "t\0329.api.v1alpha1.integrations.SearchPast" +
-      "TransactionsResponse\"F\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0026\"1" +
-      "/api/v1alpha1/integrations/searchpasttra" +
-      "nsactions:\001*\022\307\001\n\025GetAggregatedMetadata\0223" +
-      ".api.v1alpha1.integrations.GetAggregated" +
-      "MetadataReq\0323.api.v1alpha1.integrations." +
-      "GetAggregatedMetadataRes\"D\272\270\221\002\005\n\003\010\224\n\202\323\344\223" +
-      "\0024\"//api/v1alpha1/integrations/getaggreg" +
-      "atemetadata:\001*\022\330\001\n\031GetPortalLinksByDateR" +
-      "ange\0227.api.v1alpha1.integrations.GetPort" +
-      "alLinksByDateRangeReq\0327.api.v1alpha1.int" +
-      "egrations.GetPortalLinksByDateRangeRes\"I" +
-      "\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0029\"4/api/v1alpha1/integrat" +
-      "ions/getportallinksbydaterange:\001*\022\262\001\n\027Cr" +
-      "eateIntegrationConfig\022,.api.v1alpha1.int" +
-      "egrations.IntegrationConfig\032 .api.v1alph" +
-      "a1.integrations.Empty\"G\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0027\"" +
-      "2/api/v1alpha1/integrations/createintegr" +
-      "ationconfig:\001*\022\276\001\n\024GetIntegrationConfig\022" +
-      "2.api.v1alpha1.integrations.GetIntegrati" +
-      "onConfigReq\032,.api.v1alpha1.integrations." +
-      "IntegrationConfig\"D\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0024\"//ap" +
-      "i/v1alpha1/integrations/getintegrationco" +
-      "nfig:\001*\022\273\001\n\027UpdateIntegrationConfig\0225.ap" +
-      "i.v1alpha1.integrations.UpdateIntegratio" +
-      "nConfigReq\032 .api.v1alpha1.integrations.E" +
-      "mpty\"G\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0027\"2/api/v1alpha1/in" +
-      "tegrations/udpateintegrationconfig:\001*\022\273\001" +
-      "\n\027DeleteIntegrationConfig\0225.api.v1alpha1" +
-      ".integrations.DeleteIntegrationConfigReq" +
-      "\032 .api.v1alpha1.integrations.Empty\"G\272\270\221\002" +
-      "\005\n\003\010\224\n\202\323\344\223\0027\"2/api/v1alpha1/integrations" +
-      "/deleteintegrationconfig:\001*\022\243\001\n\020ListInte" +
-      "grations\022 .api.v1alpha1.integrations.Emp" +
-      "ty\032+.api.v1alpha1.integrations.Integrati" +
-      "onInfos\"@\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0020\"+/api/v1alpha1" +
-      "/integrations/listintegrations:\001*\022\303\001\n\026Li" +
-      "stIntegrationsForOrg\0224.api.v1alpha1.inte" +
-      "grations.ListIntegrationsForOrgReq\032+.api" +
-      ".v1alpha1.integrations.IntegrationInfos\"" +
-      "F\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0026\"1/api/v1alpha1/integra" +
-      "tions/listintegrationsfororg:\001*\022\334\001\n\032List" +
-      "IntegrationConfigNames\0228.api.v1alpha1.in" +
-      "tegrations.ListIntegrationConfigNamesReq" +
-      "\0328.api.v1alpha1.integrations.ListIntegra" +
-      "tionConfigNamesRes\"J\272\270\221\002\005\n\003\010\224\n\202\323\344\223\002:\"5/a" +
-      "pi/v1alpha1/integrations/listintegration" +
-      "confignames:\001*\022\271\001\n\022ListJourneyConfigs\0220." +
-      "api.v1alpha1.integrations.ListJourneyCon" +
-      "figsReq\032-.api.v1alpha1.integrations.Inte" +
-      "grationConfigs\"B\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0022\"-/api/v" +
-      "1alpha1/integrations/listjourneyconfigs:" +
-      "\001*\022\302\001\n\025ListNonJourneyConfigs\0223.api.v1alp" +
-      "ha1.integrations.ListNonJourneyConfigsRe" +
-      "q\032-.api.v1alpha1.integrations.Integratio" +
-      "nConfigs\"E\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0025\"0/api/v1alpha" +
-      "1/integrations/listnonjourneyconfigs:\001*\022" +
-      "\243\001\n\022CreatePortalConfig\022\'.api.v1alpha1.in" +
-      "tegrations.PortalConfig\032 .api.v1alpha1.i" +
-      "ntegrations.Empty\"B\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0022\"-/ap" +
-      "i/v1alpha1/integrations/createportalconf" +
-      "ig:\001*\022\261\001\n\021ListPortalConfigs\022/.api.v1alph" +
-      "a1.integrations.ListPortalConfigsReq\032(.a" +
-      "pi.v1alpha1.integrations.PortalConfigs\"A" +
-      "\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0021\",/api/v1alpha1/integrat" +
-      "ions/listportalconfigs:\001*\022\243\001\n\022UpdatePort" +
-      "alConfig\022\'.api.v1alpha1.integrations.Por" +
-      "talConfig\032 .api.v1alpha1.integrations.Em" +
-      "pty\"B\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0022\"-/api/v1alpha1/int" +
-      "egrations/updateportalconfig:\001*\022\252\001\n\017GetP" +
-      "ortalConfig\022-.api.v1alpha1.integrations." +
-      "GetPortalConfigReq\032\'.api.v1alpha1.integr" +
-      "ations.PortalConfig\"?\272\270\221\002\005\n\003\010\224\n\202\323\344\223\002/\"*/" +
-      "api/v1alpha1/integrations/getportalconfi" +
-      "g:\001*\022\254\001\n\022DeletePortalConfig\0220.api.v1alph" +
-      "a1.integrations.DeletePortalConfigReq\032 ." +
-      "api.v1alpha1.integrations.Empty\"B\272\270\221\002\005\n\003" +
-      "\010\224\n\202\323\344\223\0022\"-/api/v1alpha1/integrations/de" +
-      "leteportalconfig:\001*\022\246\001\n\020UpdatePortalLogo" +
-      "\022..api.v1alpha1.integrations.UpdatePorta" +
-      "lLogoReq\032 .api.v1alpha1.integrations.Emp" +
-      "ty\"@\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0020\"+/api/v1alpha1/inte" +
-      "grations/updateportallogo:\001*\022\234\001\n\rGetPort" +
-      "alLogo\022+.api.v1alpha1.integrations.GetPo" +
-      "rtalLogoReq\032\037.api.v1alpha1.integrations." +
-      "Logo\"=\272\270\221\002\005\n\003\010\224\n\202\323\344\223\002-\"(/api/v1alpha1/in" +
-      "tegrations/getportallogo:\001*\022\324\001\n\030CreatePa" +
-      "ymentPortalLinks\0226.api.v1alpha1.integrat" +
-      "ions.CreatePaymentPortalLinksReq\0326.api.v" +
-      "1alpha1.integrations.CreatePaymentPortal" +
-      "LinksRes\"H\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0028\"3/api/v1alpha" +
-      "1/integrations/createpaymentportallinks:" +
-      "\001*\022\220\001\n\007Summary\022%.api.v1alpha1.integratio" +
-      "ns.SummaryReq\032%.api.v1alpha1.integration" +
-      "s.SummaryRes\"7\272\270\221\002\005\n\003\010\224\n\202\323\344\223\002\'\"\"/api/v1a" +
-      "lpha1/integrations/summary:\001*\022\360\001\n ListIn" +
-      "tegrationTemplatesByConfig\022>.api.v1alpha" +
-      "1.integrations.ListIntegrationTemplatesB" +
-      "yConfigReq\032>.api.v1alpha1.integrations.L" +
-      "istIntegrationTemplatesByConfigRes\"L\272\270\221\002" +
-      "\005\n\003\010\224\n\202\323\344\223\002<\"7/api/v1alpha1/integrations" +
-      "/integrationtemplatesbyconfig:\001*B\301\001\n+com" +
-      ".tcn.cloud.api.api.v1alpha1.integrations" +
-      "B\014ServiceProtoP\001\242\002\003AVI\252\002\031Api.V1alpha1.In" +
-      "tegrations\312\002\031Api\\V1alpha1\\Integrations\342\002" +
-      "%Api\\V1alpha1\\Integrations\\GPBMetadata\352\002" +
-      "\033Api::V1alpha1::Integrationsb\006proto3"
+      "TransactionsResponse\"K\272\270\221\002\n\n\003\010\224\n\n\003\010\326\002\202\323\344" +
+      "\223\0026\"1/api/v1alpha1/integrations/searchpa" +
+      "sttransactions:\001*\022\307\001\n\025GetAggregatedMetad" +
+      "ata\0223.api.v1alpha1.integrations.GetAggre" +
+      "gatedMetadataReq\0323.api.v1alpha1.integrat" +
+      "ions.GetAggregatedMetadataRes\"D\272\270\221\002\005\n\003\010\224" +
+      "\n\202\323\344\223\0024\"//api/v1alpha1/integrations/geta" +
+      "ggregatemetadata:\001*\022\330\001\n\031GetPortalLinksBy" +
+      "DateRange\0227.api.v1alpha1.integrations.Ge" +
+      "tPortalLinksByDateRangeReq\0327.api.v1alpha" +
+      "1.integrations.GetPortalLinksByDateRange" +
+      "Res\"I\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0029\"4/api/v1alpha1/int" +
+      "egrations/getportallinksbydaterange:\001*\022\262" +
+      "\001\n\027CreateIntegrationConfig\022,.api.v1alpha" +
+      "1.integrations.IntegrationConfig\032 .api.v" +
+      "1alpha1.integrations.Empty\"G\272\270\221\002\005\n\003\010\224\n\202\323" +
+      "\344\223\0027\"2/api/v1alpha1/integrations/createi" +
+      "ntegrationconfig:\001*\022\276\001\n\024GetIntegrationCo" +
+      "nfig\0222.api.v1alpha1.integrations.GetInte" +
+      "grationConfigReq\032,.api.v1alpha1.integrat" +
+      "ions.IntegrationConfig\"D\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0024" +
+      "\"//api/v1alpha1/integrations/getintegrat" +
+      "ionconfig:\001*\022\273\001\n\027UpdateIntegrationConfig" +
+      "\0225.api.v1alpha1.integrations.UpdateInteg" +
+      "rationConfigReq\032 .api.v1alpha1.integrati" +
+      "ons.Empty\"G\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0027\"2/api/v1alph" +
+      "a1/integrations/udpateintegrationconfig:" +
+      "\001*\022\273\001\n\027DeleteIntegrationConfig\0225.api.v1a" +
+      "lpha1.integrations.DeleteIntegrationConf" +
+      "igReq\032 .api.v1alpha1.integrations.Empty\"" +
+      "G\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0027\"2/api/v1alpha1/integra" +
+      "tions/deleteintegrationconfig:\001*\022\250\001\n\020Lis" +
+      "tIntegrations\022 .api.v1alpha1.integration" +
+      "s.Empty\032+.api.v1alpha1.integrations.Inte" +
+      "grationInfos\"E\272\270\221\002\n\n\003\010\224\n\n\003\010\326\002\202\323\344\223\0020\"+/ap" +
+      "i/v1alpha1/integrations/listintegrations" +
+      ":\001*\022\310\001\n\026ListIntegrationsForOrg\0224.api.v1a" +
+      "lpha1.integrations.ListIntegrationsForOr" +
+      "gReq\032+.api.v1alpha1.integrations.Integra" +
+      "tionInfos\"K\272\270\221\002\n\n\003\010\224\n\n\003\010\326\002\202\323\344\223\0026\"1/api/v" +
+      "1alpha1/integrations/listintegrationsfor" +
+      "org:\001*\022\334\001\n\032ListIntegrationConfigNames\0228." +
+      "api.v1alpha1.integrations.ListIntegratio" +
+      "nConfigNamesReq\0328.api.v1alpha1.integrati" +
+      "ons.ListIntegrationConfigNamesRes\"J\272\270\221\002\005" +
+      "\n\003\010\224\n\202\323\344\223\002:\"5/api/v1alpha1/integrations/" +
+      "listintegrationconfignames:\001*\022\271\001\n\022ListJo" +
+      "urneyConfigs\0220.api.v1alpha1.integrations" +
+      ".ListJourneyConfigsReq\032-.api.v1alpha1.in" +
+      "tegrations.IntegrationConfigs\"B\272\270\221\002\005\n\003\010\224" +
+      "\n\202\323\344\223\0022\"-/api/v1alpha1/integrations/list" +
+      "journeyconfigs:\001*\022\302\001\n\025ListNonJourneyConf" +
+      "igs\0223.api.v1alpha1.integrations.ListNonJ" +
+      "ourneyConfigsReq\032-.api.v1alpha1.integrat" +
+      "ions.IntegrationConfigs\"E\272\270\221\002\005\n\003\010\224\n\202\323\344\223\002" +
+      "5\"0/api/v1alpha1/integrations/listnonjou" +
+      "rneyconfigs:\001*\022\243\001\n\022CreatePortalConfig\022\'." +
+      "api.v1alpha1.integrations.PortalConfig\032 " +
+      ".api.v1alpha1.integrations.Empty\"B\272\270\221\002\005\n" +
+      "\003\010\224\n\202\323\344\223\0022\"-/api/v1alpha1/integrations/c" +
+      "reateportalconfig:\001*\022\261\001\n\021ListPortalConfi" +
+      "gs\022/.api.v1alpha1.integrations.ListPorta" +
+      "lConfigsReq\032(.api.v1alpha1.integrations." +
+      "PortalConfigs\"A\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0021\",/api/v1" +
+      "alpha1/integrations/listportalconfigs:\001*" +
+      "\022\243\001\n\022UpdatePortalConfig\022\'.api.v1alpha1.i" +
+      "ntegrations.PortalConfig\032 .api.v1alpha1." +
+      "integrations.Empty\"B\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0022\"-/a" +
+      "pi/v1alpha1/integrations/updateportalcon" +
+      "fig:\001*\022\252\001\n\017GetPortalConfig\022-.api.v1alpha" +
+      "1.integrations.GetPortalConfigReq\032\'.api." +
+      "v1alpha1.integrations.PortalConfig\"?\272\270\221\002" +
+      "\005\n\003\010\224\n\202\323\344\223\002/\"*/api/v1alpha1/integrations" +
+      "/getportalconfig:\001*\022\254\001\n\022DeletePortalConf" +
+      "ig\0220.api.v1alpha1.integrations.DeletePor" +
+      "talConfigReq\032 .api.v1alpha1.integrations" +
+      ".Empty\"B\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0022\"-/api/v1alpha1/" +
+      "integrations/deleteportalconfig:\001*\022\246\001\n\020U" +
+      "pdatePortalLogo\022..api.v1alpha1.integrati" +
+      "ons.UpdatePortalLogoReq\032 .api.v1alpha1.i" +
+      "ntegrations.Empty\"@\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0020\"+/ap" +
+      "i/v1alpha1/integrations/updateportallogo" +
+      ":\001*\022\234\001\n\rGetPortalLogo\022+.api.v1alpha1.int" +
+      "egrations.GetPortalLogoReq\032\037.api.v1alpha" +
+      "1.integrations.Logo\"=\272\270\221\002\005\n\003\010\224\n\202\323\344\223\002-\"(/" +
+      "api/v1alpha1/integrations/getportallogo:" +
+      "\001*\022\324\001\n\030CreatePaymentPortalLinks\0226.api.v1" +
+      "alpha1.integrations.CreatePaymentPortalL" +
+      "inksReq\0326.api.v1alpha1.integrations.Crea" +
+      "tePaymentPortalLinksRes\"H\272\270\221\002\005\n\003\010\224\n\202\323\344\223\002" +
+      "8\"3/api/v1alpha1/integrations/createpaym" +
+      "entportallinks:\001*\022\220\001\n\007Summary\022%.api.v1al" +
+      "pha1.integrations.SummaryReq\032%.api.v1alp" +
+      "ha1.integrations.SummaryRes\"7\272\270\221\002\005\n\003\010\224\n\202" +
+      "\323\344\223\002\'\"\"/api/v1alpha1/integrations/summar" +
+      "y:\001*\022\360\001\n ListIntegrationTemplatesByConfi" +
+      "g\022>.api.v1alpha1.integrations.ListIntegr" +
+      "ationTemplatesByConfigReq\032>.api.v1alpha1" +
+      ".integrations.ListIntegrationTemplatesBy" +
+      "ConfigRes\"L\272\270\221\002\005\n\003\010\224\n\202\323\344\223\002<\"7/api/v1alph" +
+      "a1/integrations/integrationtemplatesbyco" +
+      "nfig:\001*B\301\001\n+com.tcn.cloud.api.api.v1alph" +
+      "a1.integrationsB\014ServiceProtoP\001\242\002\003AVI\252\002\031" +
+      "Api.V1alpha1.Integrations\312\002\031Api\\V1alpha1" +
+      "\\Integrations\342\002%Api\\V1alpha1\\Integration" +
+      "s\\GPBMetadata\352\002\033Api::V1alpha1::Integrati" +
+      "onsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
