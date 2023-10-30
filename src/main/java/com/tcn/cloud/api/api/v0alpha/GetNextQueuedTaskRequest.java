@@ -30,6 +30,18 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.v0alpha.OmniapiProto.internal_static_api_v0alpha_GetNextQueuedTaskRequest_descriptor;
   }
 
+  @SuppressWarnings({"rawtypes"})
+  @java.lang.Override
+  protected com.google.protobuf.MapField internalGetMapField(
+      int number) {
+    switch (number) {
+      case 2:
+        return internalGetAgentSkills();
+      default:
+        throw new RuntimeException(
+            "Invalid map field number: " + number);
+    }
+  }
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
@@ -41,27 +53,108 @@ private static final long serialVersionUID = 0L;
   public static final int SKILLS_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.api.commons.OmniConversationSkills skills_;
   /**
-   * <code>.api.commons.OmniConversationSkills skills = 1 [json_name = "skills"];</code>
+   * <code>.api.commons.OmniConversationSkills skills = 1 [json_name = "skills", deprecated = true];</code>
+   * @deprecated api.v0alpha.GetNextQueuedTaskRequest.skills is deprecated.
+   *     See api/v0alpha/omniapi.proto;l=1524
    * @return Whether the skills field is set.
    */
   @java.lang.Override
-  public boolean hasSkills() {
+  @java.lang.Deprecated public boolean hasSkills() {
     return skills_ != null;
   }
   /**
-   * <code>.api.commons.OmniConversationSkills skills = 1 [json_name = "skills"];</code>
+   * <code>.api.commons.OmniConversationSkills skills = 1 [json_name = "skills", deprecated = true];</code>
+   * @deprecated api.v0alpha.GetNextQueuedTaskRequest.skills is deprecated.
+   *     See api/v0alpha/omniapi.proto;l=1524
    * @return The skills.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.OmniConversationSkills getSkills() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.OmniConversationSkills getSkills() {
     return skills_ == null ? com.tcn.cloud.api.api.commons.OmniConversationSkills.getDefaultInstance() : skills_;
   }
   /**
-   * <code>.api.commons.OmniConversationSkills skills = 1 [json_name = "skills"];</code>
+   * <code>.api.commons.OmniConversationSkills skills = 1 [json_name = "skills", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.OmniConversationSkillsOrBuilder getSkillsOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.OmniConversationSkillsOrBuilder getSkillsOrBuilder() {
     return skills_ == null ? com.tcn.cloud.api.api.commons.OmniConversationSkills.getDefaultInstance() : skills_;
+  }
+
+  public static final int AGENT_SKILLS_FIELD_NUMBER = 2;
+  private static final class AgentSkillsDefaultEntryHolder {
+    static final com.google.protobuf.MapEntry<
+        java.lang.String, java.lang.Long> defaultEntry =
+            com.google.protobuf.MapEntry
+            .<java.lang.String, java.lang.Long>newDefaultInstance(
+                com.tcn.cloud.api.api.v0alpha.OmniapiProto.internal_static_api_v0alpha_GetNextQueuedTaskRequest_AgentSkillsEntry_descriptor, 
+                com.google.protobuf.WireFormat.FieldType.STRING,
+                "",
+                com.google.protobuf.WireFormat.FieldType.INT64,
+                0L);
+  }
+  @SuppressWarnings("serial")
+  private com.google.protobuf.MapField<
+      java.lang.String, java.lang.Long> agentSkills_;
+  private com.google.protobuf.MapField<java.lang.String, java.lang.Long>
+  internalGetAgentSkills() {
+    if (agentSkills_ == null) {
+      return com.google.protobuf.MapField.emptyMapField(
+          AgentSkillsDefaultEntryHolder.defaultEntry);
+    }
+    return agentSkills_;
+  }
+  public int getAgentSkillsCount() {
+    return internalGetAgentSkills().getMap().size();
+  }
+  /**
+   * <code>map&lt;string, int64&gt; agent_skills = 2 [json_name = "agentSkills"];</code>
+   */
+  @java.lang.Override
+  public boolean containsAgentSkills(
+      java.lang.String key) {
+    if (key == null) { throw new NullPointerException("map key"); }
+    return internalGetAgentSkills().getMap().containsKey(key);
+  }
+  /**
+   * Use {@link #getAgentSkillsMap()} instead.
+   */
+  @java.lang.Override
+  @java.lang.Deprecated
+  public java.util.Map<java.lang.String, java.lang.Long> getAgentSkills() {
+    return getAgentSkillsMap();
+  }
+  /**
+   * <code>map&lt;string, int64&gt; agent_skills = 2 [json_name = "agentSkills"];</code>
+   */
+  @java.lang.Override
+  public java.util.Map<java.lang.String, java.lang.Long> getAgentSkillsMap() {
+    return internalGetAgentSkills().getMap();
+  }
+  /**
+   * <code>map&lt;string, int64&gt; agent_skills = 2 [json_name = "agentSkills"];</code>
+   */
+  @java.lang.Override
+  public long getAgentSkillsOrDefault(
+      java.lang.String key,
+      long defaultValue) {
+    if (key == null) { throw new NullPointerException("map key"); }
+    java.util.Map<java.lang.String, java.lang.Long> map =
+        internalGetAgentSkills().getMap();
+    return map.containsKey(key) ? map.get(key) : defaultValue;
+  }
+  /**
+   * <code>map&lt;string, int64&gt; agent_skills = 2 [json_name = "agentSkills"];</code>
+   */
+  @java.lang.Override
+  public long getAgentSkillsOrThrow(
+      java.lang.String key) {
+    if (key == null) { throw new NullPointerException("map key"); }
+    java.util.Map<java.lang.String, java.lang.Long> map =
+        internalGetAgentSkills().getMap();
+    if (!map.containsKey(key)) {
+      throw new java.lang.IllegalArgumentException();
+    }
+    return map.get(key);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -81,6 +174,12 @@ private static final long serialVersionUID = 0L;
     if (skills_ != null) {
       output.writeMessage(1, getSkills());
     }
+    com.google.protobuf.GeneratedMessageV3
+      .serializeStringMapTo(
+        output,
+        internalGetAgentSkills(),
+        AgentSkillsDefaultEntryHolder.defaultEntry,
+        2);
     getUnknownFields().writeTo(output);
   }
 
@@ -93,6 +192,16 @@ private static final long serialVersionUID = 0L;
     if (skills_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getSkills());
+    }
+    for (java.util.Map.Entry<java.lang.String, java.lang.Long> entry
+         : internalGetAgentSkills().getMap().entrySet()) {
+      com.google.protobuf.MapEntry<java.lang.String, java.lang.Long>
+      agentSkills__ = AgentSkillsDefaultEntryHolder.defaultEntry.newBuilderForType()
+          .setKey(entry.getKey())
+          .setValue(entry.getValue())
+          .build();
+      size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, agentSkills__);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -114,6 +223,8 @@ private static final long serialVersionUID = 0L;
       if (!getSkills()
           .equals(other.getSkills())) return false;
     }
+    if (!internalGetAgentSkills().equals(
+        other.internalGetAgentSkills())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -128,6 +239,10 @@ private static final long serialVersionUID = 0L;
     if (hasSkills()) {
       hash = (37 * hash) + SKILLS_FIELD_NUMBER;
       hash = (53 * hash) + getSkills().hashCode();
+    }
+    if (!internalGetAgentSkills().getMap().isEmpty()) {
+      hash = (37 * hash) + AGENT_SKILLS_FIELD_NUMBER;
+      hash = (53 * hash) + internalGetAgentSkills().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -238,6 +353,28 @@ private static final long serialVersionUID = 0L;
       return com.tcn.cloud.api.api.v0alpha.OmniapiProto.internal_static_api_v0alpha_GetNextQueuedTaskRequest_descriptor;
     }
 
+    @SuppressWarnings({"rawtypes"})
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 2:
+          return internalGetAgentSkills();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    @SuppressWarnings({"rawtypes"})
+    protected com.google.protobuf.MapField internalGetMutableMapField(
+        int number) {
+      switch (number) {
+        case 2:
+          return internalGetMutableAgentSkills();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -265,6 +402,7 @@ private static final long serialVersionUID = 0L;
         skillsBuilder_.dispose();
         skillsBuilder_ = null;
       }
+      internalGetMutableAgentSkills().clear();
       return this;
     }
 
@@ -302,6 +440,10 @@ private static final long serialVersionUID = 0L;
         result.skills_ = skillsBuilder_ == null
             ? skills_
             : skillsBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.agentSkills_ = internalGetAgentSkills();
+        result.agentSkills_.makeImmutable();
       }
     }
 
@@ -352,6 +494,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasSkills()) {
         mergeSkills(other.getSkills());
       }
+      internalGetMutableAgentSkills().mergeFrom(
+          other.internalGetAgentSkills());
+      bitField0_ |= 0x00000002;
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -385,6 +530,15 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 10
+            case 18: {
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.Long>
+              agentSkills__ = input.readMessage(
+                  AgentSkillsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              internalGetMutableAgentSkills().getMutableMap().put(
+                  agentSkills__.getKey(), agentSkills__.getValue());
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -406,17 +560,21 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.OmniConversationSkills, com.tcn.cloud.api.api.commons.OmniConversationSkills.Builder, com.tcn.cloud.api.api.commons.OmniConversationSkillsOrBuilder> skillsBuilder_;
     /**
-     * <code>.api.commons.OmniConversationSkills skills = 1 [json_name = "skills"];</code>
+     * <code>.api.commons.OmniConversationSkills skills = 1 [json_name = "skills", deprecated = true];</code>
+     * @deprecated api.v0alpha.GetNextQueuedTaskRequest.skills is deprecated.
+     *     See api/v0alpha/omniapi.proto;l=1524
      * @return Whether the skills field is set.
      */
-    public boolean hasSkills() {
+    @java.lang.Deprecated public boolean hasSkills() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>.api.commons.OmniConversationSkills skills = 1 [json_name = "skills"];</code>
+     * <code>.api.commons.OmniConversationSkills skills = 1 [json_name = "skills", deprecated = true];</code>
+     * @deprecated api.v0alpha.GetNextQueuedTaskRequest.skills is deprecated.
+     *     See api/v0alpha/omniapi.proto;l=1524
      * @return The skills.
      */
-    public com.tcn.cloud.api.api.commons.OmniConversationSkills getSkills() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.OmniConversationSkills getSkills() {
       if (skillsBuilder_ == null) {
         return skills_ == null ? com.tcn.cloud.api.api.commons.OmniConversationSkills.getDefaultInstance() : skills_;
       } else {
@@ -424,9 +582,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.OmniConversationSkills skills = 1 [json_name = "skills"];</code>
+     * <code>.api.commons.OmniConversationSkills skills = 1 [json_name = "skills", deprecated = true];</code>
      */
-    public Builder setSkills(com.tcn.cloud.api.api.commons.OmniConversationSkills value) {
+    @java.lang.Deprecated public Builder setSkills(com.tcn.cloud.api.api.commons.OmniConversationSkills value) {
       if (skillsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -440,9 +598,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.OmniConversationSkills skills = 1 [json_name = "skills"];</code>
+     * <code>.api.commons.OmniConversationSkills skills = 1 [json_name = "skills", deprecated = true];</code>
      */
-    public Builder setSkills(
+    @java.lang.Deprecated public Builder setSkills(
         com.tcn.cloud.api.api.commons.OmniConversationSkills.Builder builderForValue) {
       if (skillsBuilder_ == null) {
         skills_ = builderForValue.build();
@@ -454,9 +612,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.OmniConversationSkills skills = 1 [json_name = "skills"];</code>
+     * <code>.api.commons.OmniConversationSkills skills = 1 [json_name = "skills", deprecated = true];</code>
      */
-    public Builder mergeSkills(com.tcn.cloud.api.api.commons.OmniConversationSkills value) {
+    @java.lang.Deprecated public Builder mergeSkills(com.tcn.cloud.api.api.commons.OmniConversationSkills value) {
       if (skillsBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0) &&
           skills_ != null &&
@@ -473,9 +631,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.OmniConversationSkills skills = 1 [json_name = "skills"];</code>
+     * <code>.api.commons.OmniConversationSkills skills = 1 [json_name = "skills", deprecated = true];</code>
      */
-    public Builder clearSkills() {
+    @java.lang.Deprecated public Builder clearSkills() {
       bitField0_ = (bitField0_ & ~0x00000001);
       skills_ = null;
       if (skillsBuilder_ != null) {
@@ -486,17 +644,17 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.OmniConversationSkills skills = 1 [json_name = "skills"];</code>
+     * <code>.api.commons.OmniConversationSkills skills = 1 [json_name = "skills", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.OmniConversationSkills.Builder getSkillsBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.OmniConversationSkills.Builder getSkillsBuilder() {
       bitField0_ |= 0x00000001;
       onChanged();
       return getSkillsFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.commons.OmniConversationSkills skills = 1 [json_name = "skills"];</code>
+     * <code>.api.commons.OmniConversationSkills skills = 1 [json_name = "skills", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.OmniConversationSkillsOrBuilder getSkillsOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.OmniConversationSkillsOrBuilder getSkillsOrBuilder() {
       if (skillsBuilder_ != null) {
         return skillsBuilder_.getMessageOrBuilder();
       } else {
@@ -505,7 +663,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.OmniConversationSkills skills = 1 [json_name = "skills"];</code>
+     * <code>.api.commons.OmniConversationSkills skills = 1 [json_name = "skills", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.OmniConversationSkills, com.tcn.cloud.api.api.commons.OmniConversationSkills.Builder, com.tcn.cloud.api.api.commons.OmniConversationSkillsOrBuilder> 
@@ -519,6 +677,131 @@ private static final long serialVersionUID = 0L;
         skills_ = null;
       }
       return skillsBuilder_;
+    }
+
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.Long> agentSkills_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.Long>
+        internalGetAgentSkills() {
+      if (agentSkills_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            AgentSkillsDefaultEntryHolder.defaultEntry);
+      }
+      return agentSkills_;
+    }
+    private com.google.protobuf.MapField<java.lang.String, java.lang.Long>
+        internalGetMutableAgentSkills() {
+      if (agentSkills_ == null) {
+        agentSkills_ = com.google.protobuf.MapField.newMapField(
+            AgentSkillsDefaultEntryHolder.defaultEntry);
+      }
+      if (!agentSkills_.isMutable()) {
+        agentSkills_ = agentSkills_.copy();
+      }
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return agentSkills_;
+    }
+    public int getAgentSkillsCount() {
+      return internalGetAgentSkills().getMap().size();
+    }
+    /**
+     * <code>map&lt;string, int64&gt; agent_skills = 2 [json_name = "agentSkills"];</code>
+     */
+    @java.lang.Override
+    public boolean containsAgentSkills(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetAgentSkills().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getAgentSkillsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.Long> getAgentSkills() {
+      return getAgentSkillsMap();
+    }
+    /**
+     * <code>map&lt;string, int64&gt; agent_skills = 2 [json_name = "agentSkills"];</code>
+     */
+    @java.lang.Override
+    public java.util.Map<java.lang.String, java.lang.Long> getAgentSkillsMap() {
+      return internalGetAgentSkills().getMap();
+    }
+    /**
+     * <code>map&lt;string, int64&gt; agent_skills = 2 [json_name = "agentSkills"];</code>
+     */
+    @java.lang.Override
+    public long getAgentSkillsOrDefault(
+        java.lang.String key,
+        long defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.Long> map =
+          internalGetAgentSkills().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, int64&gt; agent_skills = 2 [json_name = "agentSkills"];</code>
+     */
+    @java.lang.Override
+    public long getAgentSkillsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.Long> map =
+          internalGetAgentSkills().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+    public Builder clearAgentSkills() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      internalGetMutableAgentSkills().getMutableMap()
+          .clear();
+      return this;
+    }
+    /**
+     * <code>map&lt;string, int64&gt; agent_skills = 2 [json_name = "agentSkills"];</code>
+     */
+    public Builder removeAgentSkills(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      internalGetMutableAgentSkills().getMutableMap()
+          .remove(key);
+      return this;
+    }
+    /**
+     * Use alternate mutation accessors instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.Long>
+        getMutableAgentSkills() {
+      bitField0_ |= 0x00000002;
+      return internalGetMutableAgentSkills().getMutableMap();
+    }
+    /**
+     * <code>map&lt;string, int64&gt; agent_skills = 2 [json_name = "agentSkills"];</code>
+     */
+    public Builder putAgentSkills(
+        java.lang.String key,
+        long value) {
+      if (key == null) { throw new NullPointerException("map key"); }
+
+      internalGetMutableAgentSkills().getMutableMap()
+          .put(key, value);
+      bitField0_ |= 0x00000002;
+      return this;
+    }
+    /**
+     * <code>map&lt;string, int64&gt; agent_skills = 2 [json_name = "agentSkills"];</code>
+     */
+    public Builder putAllAgentSkills(
+        java.util.Map<java.lang.String, java.lang.Long> values) {
+      internalGetMutableAgentSkills().getMutableMap()
+          .putAll(values);
+      bitField0_ |= 0x00000002;
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
