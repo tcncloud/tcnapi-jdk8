@@ -98,58 +98,6 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int TEMPLATE_START_DATE_FIELD_NUMBER = 3;
-  private com.google.protobuf.Timestamp templateStartDate_;
-  /**
-   * <code>.google.protobuf.Timestamp template_start_date = 3 [json_name = "templateStartDate"];</code>
-   * @return Whether the templateStartDate field is set.
-   */
-  @java.lang.Override
-  public boolean hasTemplateStartDate() {
-    return templateStartDate_ != null;
-  }
-  /**
-   * <code>.google.protobuf.Timestamp template_start_date = 3 [json_name = "templateStartDate"];</code>
-   * @return The templateStartDate.
-   */
-  @java.lang.Override
-  public com.google.protobuf.Timestamp getTemplateStartDate() {
-    return templateStartDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : templateStartDate_;
-  }
-  /**
-   * <code>.google.protobuf.Timestamp template_start_date = 3 [json_name = "templateStartDate"];</code>
-   */
-  @java.lang.Override
-  public com.google.protobuf.TimestampOrBuilder getTemplateStartDateOrBuilder() {
-    return templateStartDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : templateStartDate_;
-  }
-
-  public static final int TEMPLATE_END_DATE_FIELD_NUMBER = 4;
-  private com.google.protobuf.Timestamp templateEndDate_;
-  /**
-   * <code>.google.protobuf.Timestamp template_end_date = 4 [json_name = "templateEndDate"];</code>
-   * @return Whether the templateEndDate field is set.
-   */
-  @java.lang.Override
-  public boolean hasTemplateEndDate() {
-    return templateEndDate_ != null;
-  }
-  /**
-   * <code>.google.protobuf.Timestamp template_end_date = 4 [json_name = "templateEndDate"];</code>
-   * @return The templateEndDate.
-   */
-  @java.lang.Override
-  public com.google.protobuf.Timestamp getTemplateEndDate() {
-    return templateEndDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : templateEndDate_;
-  }
-  /**
-   * <code>.google.protobuf.Timestamp template_end_date = 4 [json_name = "templateEndDate"];</code>
-   */
-  @java.lang.Override
-  public com.google.protobuf.TimestampOrBuilder getTemplateEndDateOrBuilder() {
-    return templateEndDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : templateEndDate_;
-  }
-
   public static final int TICKET_TITLE_FIELD_NUMBER = 5;
   @SuppressWarnings("serial")
   private volatile java.lang.Object ticketTitle_ = "";
@@ -751,12 +699,6 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(templateName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, templateName_);
     }
-    if (templateStartDate_ != null) {
-      output.writeMessage(3, getTemplateStartDate());
-    }
-    if (templateEndDate_ != null) {
-      output.writeMessage(4, getTemplateEndDate());
-    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ticketTitle_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, ticketTitle_);
     }
@@ -826,14 +768,6 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(templateName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, templateName_);
-    }
-    if (templateStartDate_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(3, getTemplateStartDate());
-    }
-    if (templateEndDate_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(4, getTemplateEndDate());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ticketTitle_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, ticketTitle_);
@@ -926,16 +860,6 @@ private static final long serialVersionUID = 0L;
         != other.getTicketTemplateId()) return false;
     if (!getTemplateName()
         .equals(other.getTemplateName())) return false;
-    if (hasTemplateStartDate() != other.hasTemplateStartDate()) return false;
-    if (hasTemplateStartDate()) {
-      if (!getTemplateStartDate()
-          .equals(other.getTemplateStartDate())) return false;
-    }
-    if (hasTemplateEndDate() != other.hasTemplateEndDate()) return false;
-    if (hasTemplateEndDate()) {
-      if (!getTemplateEndDate()
-          .equals(other.getTemplateEndDate())) return false;
-    }
     if (!getTicketTitle()
         .equals(other.getTicketTitle())) return false;
     if (!getTicketDescription()
@@ -1015,14 +939,6 @@ private static final long serialVersionUID = 0L;
         getTicketTemplateId());
     hash = (37 * hash) + TEMPLATE_NAME_FIELD_NUMBER;
     hash = (53 * hash) + getTemplateName().hashCode();
-    if (hasTemplateStartDate()) {
-      hash = (37 * hash) + TEMPLATE_START_DATE_FIELD_NUMBER;
-      hash = (53 * hash) + getTemplateStartDate().hashCode();
-    }
-    if (hasTemplateEndDate()) {
-      hash = (37 * hash) + TEMPLATE_END_DATE_FIELD_NUMBER;
-      hash = (53 * hash) + getTemplateEndDate().hashCode();
-    }
     hash = (37 * hash) + TICKET_TITLE_FIELD_NUMBER;
     hash = (53 * hash) + getTicketTitle().hashCode();
     hash = (37 * hash) + TICKET_DESCRIPTION_FIELD_NUMBER;
@@ -1219,16 +1135,6 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       ticketTemplateId_ = 0L;
       templateName_ = "";
-      templateStartDate_ = null;
-      if (templateStartDateBuilder_ != null) {
-        templateStartDateBuilder_.dispose();
-        templateStartDateBuilder_ = null;
-      }
-      templateEndDate_ = null;
-      if (templateEndDateBuilder_ != null) {
-        templateEndDateBuilder_.dispose();
-        templateEndDateBuilder_ = null;
-      }
       ticketTitle_ = "";
       ticketDescription_ = "";
       titleCondition_ = null;
@@ -1254,7 +1160,7 @@ private static final long serialVersionUID = 0L;
         ticketSla_ = null;
         ticketSlaBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000400);
+      bitField0_ = (bitField0_ & ~0x00000100);
       actionType_ = "";
       if (actionSkillsBuilder_ == null) {
         actionSkills_ = java.util.Collections.emptyList();
@@ -1262,7 +1168,7 @@ private static final long serialVersionUID = 0L;
         actionSkills_ = null;
         actionSkillsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00001000);
+      bitField0_ = (bitField0_ & ~0x00000400);
       actionSkillsCondition_ = null;
       if (actionSkillsConditionBuilder_ != null) {
         actionSkillsConditionBuilder_.dispose();
@@ -1284,7 +1190,7 @@ private static final long serialVersionUID = 0L;
         actionSla_ = null;
         actionSlaBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00010000);
+      bitField0_ = (bitField0_ & ~0x00004000);
       isValid_ = false;
       callbackDefault_ = null;
       if (callbackDefaultBuilder_ != null) {
@@ -1336,27 +1242,27 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartialRepeatedFields(com.tcn.cloud.api.api.commons.TicketTemplate result) {
       if (ticketSlaBuilder_ == null) {
-        if (((bitField0_ & 0x00000400) != 0)) {
+        if (((bitField0_ & 0x00000100) != 0)) {
           ticketSla_ = java.util.Collections.unmodifiableList(ticketSla_);
-          bitField0_ = (bitField0_ & ~0x00000400);
+          bitField0_ = (bitField0_ & ~0x00000100);
         }
         result.ticketSla_ = ticketSla_;
       } else {
         result.ticketSla_ = ticketSlaBuilder_.build();
       }
       if (actionSkillsBuilder_ == null) {
-        if (((bitField0_ & 0x00001000) != 0)) {
+        if (((bitField0_ & 0x00000400) != 0)) {
           actionSkills_ = java.util.Collections.unmodifiableList(actionSkills_);
-          bitField0_ = (bitField0_ & ~0x00001000);
+          bitField0_ = (bitField0_ & ~0x00000400);
         }
         result.actionSkills_ = actionSkills_;
       } else {
         result.actionSkills_ = actionSkillsBuilder_.build();
       }
       if (actionSlaBuilder_ == null) {
-        if (((bitField0_ & 0x00010000) != 0)) {
+        if (((bitField0_ & 0x00004000) != 0)) {
           actionSla_ = java.util.Collections.unmodifiableList(actionSla_);
-          bitField0_ = (bitField0_ & ~0x00010000);
+          bitField0_ = (bitField0_ & ~0x00004000);
         }
         result.actionSla_ = actionSla_;
       } else {
@@ -1373,75 +1279,65 @@ private static final long serialVersionUID = 0L;
         result.templateName_ = templateName_;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.templateStartDate_ = templateStartDateBuilder_ == null
-            ? templateStartDate_
-            : templateStartDateBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.templateEndDate_ = templateEndDateBuilder_ == null
-            ? templateEndDate_
-            : templateEndDateBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
         result.ticketTitle_ = ticketTitle_;
       }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
+      if (((from_bitField0_ & 0x00000008) != 0)) {
         result.ticketDescription_ = ticketDescription_;
       }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
+      if (((from_bitField0_ & 0x00000010) != 0)) {
         result.titleCondition_ = titleConditionBuilder_ == null
             ? titleCondition_
             : titleConditionBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00000080) != 0)) {
+      if (((from_bitField0_ & 0x00000020) != 0)) {
         result.descriptionCondition_ = descriptionConditionBuilder_ == null
             ? descriptionCondition_
             : descriptionConditionBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00000100) != 0)) {
+      if (((from_bitField0_ & 0x00000040) != 0)) {
         ticketAssignee_.makeImmutable();
         result.ticketAssignee_ = ticketAssignee_;
       }
-      if (((from_bitField0_ & 0x00000200) != 0)) {
+      if (((from_bitField0_ & 0x00000080) != 0)) {
         result.assigneeCondition_ = assigneeConditionBuilder_ == null
             ? assigneeCondition_
             : assigneeConditionBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00000800) != 0)) {
+      if (((from_bitField0_ & 0x00000200) != 0)) {
         result.actionType_ = actionType_;
       }
-      if (((from_bitField0_ & 0x00002000) != 0)) {
+      if (((from_bitField0_ & 0x00000800) != 0)) {
         result.actionSkillsCondition_ = actionSkillsConditionBuilder_ == null
             ? actionSkillsCondition_
             : actionSkillsConditionBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00004000) != 0)) {
+      if (((from_bitField0_ & 0x00001000) != 0)) {
         result.actionExpiryDate_ = actionExpiryDateBuilder_ == null
             ? actionExpiryDate_
             : actionExpiryDateBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00008000) != 0)) {
+      if (((from_bitField0_ & 0x00002000) != 0)) {
         result.actionExpiryDateCondition_ = actionExpiryDateConditionBuilder_ == null
             ? actionExpiryDateCondition_
             : actionExpiryDateConditionBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00020000) != 0)) {
+      if (((from_bitField0_ & 0x00008000) != 0)) {
         result.isValid_ = isValid_;
       }
-      if (((from_bitField0_ & 0x00040000) != 0)) {
+      if (((from_bitField0_ & 0x00010000) != 0)) {
         result.callbackDefault_ = callbackDefaultBuilder_ == null
             ? callbackDefault_
             : callbackDefaultBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00080000) != 0)) {
+      if (((from_bitField0_ & 0x00020000) != 0)) {
         result.createdById_ = createdById_;
       }
-      if (((from_bitField0_ & 0x00100000) != 0)) {
+      if (((from_bitField0_ & 0x00040000) != 0)) {
         result.createdDate_ = createdDateBuilder_ == null
             ? createdDate_
             : createdDateBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00200000) != 0)) {
+      if (((from_bitField0_ & 0x00080000) != 0)) {
         result.ticketCallbackTemplateCondition_ = ticketCallbackTemplateConditionBuilder_ == null
             ? ticketCallbackTemplateCondition_
             : ticketCallbackTemplateConditionBuilder_.build();
@@ -1500,20 +1396,14 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000002;
         onChanged();
       }
-      if (other.hasTemplateStartDate()) {
-        mergeTemplateStartDate(other.getTemplateStartDate());
-      }
-      if (other.hasTemplateEndDate()) {
-        mergeTemplateEndDate(other.getTemplateEndDate());
-      }
       if (!other.getTicketTitle().isEmpty()) {
         ticketTitle_ = other.ticketTitle_;
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (!other.getTicketDescription().isEmpty()) {
         ticketDescription_ = other.ticketDescription_;
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (other.hasTitleCondition()) {
@@ -1525,7 +1415,7 @@ private static final long serialVersionUID = 0L;
       if (!other.ticketAssignee_.isEmpty()) {
         if (ticketAssignee_.isEmpty()) {
           ticketAssignee_ = other.ticketAssignee_;
-          bitField0_ |= 0x00000100;
+          bitField0_ |= 0x00000040;
         } else {
           ensureTicketAssigneeIsMutable();
           ticketAssignee_.addAll(other.ticketAssignee_);
@@ -1539,7 +1429,7 @@ private static final long serialVersionUID = 0L;
         if (!other.ticketSla_.isEmpty()) {
           if (ticketSla_.isEmpty()) {
             ticketSla_ = other.ticketSla_;
-            bitField0_ = (bitField0_ & ~0x00000400);
+            bitField0_ = (bitField0_ & ~0x00000100);
           } else {
             ensureTicketSlaIsMutable();
             ticketSla_.addAll(other.ticketSla_);
@@ -1552,7 +1442,7 @@ private static final long serialVersionUID = 0L;
             ticketSlaBuilder_.dispose();
             ticketSlaBuilder_ = null;
             ticketSla_ = other.ticketSla_;
-            bitField0_ = (bitField0_ & ~0x00000400);
+            bitField0_ = (bitField0_ & ~0x00000100);
             ticketSlaBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getTicketSlaFieldBuilder() : null;
@@ -1563,14 +1453,14 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getActionType().isEmpty()) {
         actionType_ = other.actionType_;
-        bitField0_ |= 0x00000800;
+        bitField0_ |= 0x00000200;
         onChanged();
       }
       if (actionSkillsBuilder_ == null) {
         if (!other.actionSkills_.isEmpty()) {
           if (actionSkills_.isEmpty()) {
             actionSkills_ = other.actionSkills_;
-            bitField0_ = (bitField0_ & ~0x00001000);
+            bitField0_ = (bitField0_ & ~0x00000400);
           } else {
             ensureActionSkillsIsMutable();
             actionSkills_.addAll(other.actionSkills_);
@@ -1583,7 +1473,7 @@ private static final long serialVersionUID = 0L;
             actionSkillsBuilder_.dispose();
             actionSkillsBuilder_ = null;
             actionSkills_ = other.actionSkills_;
-            bitField0_ = (bitField0_ & ~0x00001000);
+            bitField0_ = (bitField0_ & ~0x00000400);
             actionSkillsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getActionSkillsFieldBuilder() : null;
@@ -1605,7 +1495,7 @@ private static final long serialVersionUID = 0L;
         if (!other.actionSla_.isEmpty()) {
           if (actionSla_.isEmpty()) {
             actionSla_ = other.actionSla_;
-            bitField0_ = (bitField0_ & ~0x00010000);
+            bitField0_ = (bitField0_ & ~0x00004000);
           } else {
             ensureActionSlaIsMutable();
             actionSla_.addAll(other.actionSla_);
@@ -1618,7 +1508,7 @@ private static final long serialVersionUID = 0L;
             actionSlaBuilder_.dispose();
             actionSlaBuilder_ = null;
             actionSla_ = other.actionSla_;
-            bitField0_ = (bitField0_ & ~0x00010000);
+            bitField0_ = (bitField0_ & ~0x00004000);
             actionSlaBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getActionSlaFieldBuilder() : null;
@@ -1635,7 +1525,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getCreatedById().isEmpty()) {
         createdById_ = other.createdById_;
-        bitField0_ |= 0x00080000;
+        bitField0_ |= 0x00020000;
         onChanged();
       }
       if (other.hasCreatedDate()) {
@@ -1680,42 +1570,28 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 18
-            case 26: {
-              input.readMessage(
-                  getTemplateStartDateFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 26
-            case 34: {
-              input.readMessage(
-                  getTemplateEndDateFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 34
             case 42: {
               ticketTitle_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000010;
+              bitField0_ |= 0x00000004;
               break;
             } // case 42
             case 50: {
               ticketDescription_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000020;
+              bitField0_ |= 0x00000008;
               break;
             } // case 50
             case 58: {
               input.readMessage(
                   getTitleConditionFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000040;
+              bitField0_ |= 0x00000010;
               break;
             } // case 58
             case 66: {
               input.readMessage(
                   getDescriptionConditionFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000080;
+              bitField0_ |= 0x00000020;
               break;
             } // case 66
             case 74: {
@@ -1728,7 +1604,7 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getAssigneeConditionFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000200;
+              bitField0_ |= 0x00000080;
               break;
             } // case 82
             case 90: {
@@ -1746,7 +1622,7 @@ private static final long serialVersionUID = 0L;
             } // case 90
             case 106: {
               actionType_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000800;
+              bitField0_ |= 0x00000200;
               break;
             } // case 106
             case 114: {
@@ -1766,21 +1642,21 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getActionSkillsConditionFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00002000;
+              bitField0_ |= 0x00000800;
               break;
             } // case 122
             case 146: {
               input.readMessage(
                   getActionExpiryDateFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00004000;
+              bitField0_ |= 0x00001000;
               break;
             } // case 146
             case 154: {
               input.readMessage(
                   getActionExpiryDateConditionFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00008000;
+              bitField0_ |= 0x00002000;
               break;
             } // case 154
             case 162: {
@@ -1798,33 +1674,33 @@ private static final long serialVersionUID = 0L;
             } // case 162
             case 176: {
               isValid_ = input.readBool();
-              bitField0_ |= 0x00020000;
+              bitField0_ |= 0x00008000;
               break;
             } // case 176
             case 186: {
               input.readMessage(
                   getCallbackDefaultFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00040000;
+              bitField0_ |= 0x00010000;
               break;
             } // case 186
             case 194: {
               createdById_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00080000;
+              bitField0_ |= 0x00020000;
               break;
             } // case 194
             case 202: {
               input.readMessage(
                   getCreatedDateFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00100000;
+              bitField0_ |= 0x00040000;
               break;
             } // case 202
             case 210: {
               input.readMessage(
                   getTicketCallbackTemplateConditionFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00200000;
+              bitField0_ |= 0x00080000;
               break;
             } // case 210
             default: {
@@ -1948,244 +1824,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.Timestamp templateStartDate_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> templateStartDateBuilder_;
-    /**
-     * <code>.google.protobuf.Timestamp template_start_date = 3 [json_name = "templateStartDate"];</code>
-     * @return Whether the templateStartDate field is set.
-     */
-    public boolean hasTemplateStartDate() {
-      return ((bitField0_ & 0x00000004) != 0);
-    }
-    /**
-     * <code>.google.protobuf.Timestamp template_start_date = 3 [json_name = "templateStartDate"];</code>
-     * @return The templateStartDate.
-     */
-    public com.google.protobuf.Timestamp getTemplateStartDate() {
-      if (templateStartDateBuilder_ == null) {
-        return templateStartDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : templateStartDate_;
-      } else {
-        return templateStartDateBuilder_.getMessage();
-      }
-    }
-    /**
-     * <code>.google.protobuf.Timestamp template_start_date = 3 [json_name = "templateStartDate"];</code>
-     */
-    public Builder setTemplateStartDate(com.google.protobuf.Timestamp value) {
-      if (templateStartDateBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        templateStartDate_ = value;
-      } else {
-        templateStartDateBuilder_.setMessage(value);
-      }
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.google.protobuf.Timestamp template_start_date = 3 [json_name = "templateStartDate"];</code>
-     */
-    public Builder setTemplateStartDate(
-        com.google.protobuf.Timestamp.Builder builderForValue) {
-      if (templateStartDateBuilder_ == null) {
-        templateStartDate_ = builderForValue.build();
-      } else {
-        templateStartDateBuilder_.setMessage(builderForValue.build());
-      }
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.google.protobuf.Timestamp template_start_date = 3 [json_name = "templateStartDate"];</code>
-     */
-    public Builder mergeTemplateStartDate(com.google.protobuf.Timestamp value) {
-      if (templateStartDateBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0) &&
-          templateStartDate_ != null &&
-          templateStartDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-          getTemplateStartDateBuilder().mergeFrom(value);
-        } else {
-          templateStartDate_ = value;
-        }
-      } else {
-        templateStartDateBuilder_.mergeFrom(value);
-      }
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.google.protobuf.Timestamp template_start_date = 3 [json_name = "templateStartDate"];</code>
-     */
-    public Builder clearTemplateStartDate() {
-      bitField0_ = (bitField0_ & ~0x00000004);
-      templateStartDate_ = null;
-      if (templateStartDateBuilder_ != null) {
-        templateStartDateBuilder_.dispose();
-        templateStartDateBuilder_ = null;
-      }
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.google.protobuf.Timestamp template_start_date = 3 [json_name = "templateStartDate"];</code>
-     */
-    public com.google.protobuf.Timestamp.Builder getTemplateStartDateBuilder() {
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return getTemplateStartDateFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.google.protobuf.Timestamp template_start_date = 3 [json_name = "templateStartDate"];</code>
-     */
-    public com.google.protobuf.TimestampOrBuilder getTemplateStartDateOrBuilder() {
-      if (templateStartDateBuilder_ != null) {
-        return templateStartDateBuilder_.getMessageOrBuilder();
-      } else {
-        return templateStartDate_ == null ?
-            com.google.protobuf.Timestamp.getDefaultInstance() : templateStartDate_;
-      }
-    }
-    /**
-     * <code>.google.protobuf.Timestamp template_start_date = 3 [json_name = "templateStartDate"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-        getTemplateStartDateFieldBuilder() {
-      if (templateStartDateBuilder_ == null) {
-        templateStartDateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                getTemplateStartDate(),
-                getParentForChildren(),
-                isClean());
-        templateStartDate_ = null;
-      }
-      return templateStartDateBuilder_;
-    }
-
-    private com.google.protobuf.Timestamp templateEndDate_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> templateEndDateBuilder_;
-    /**
-     * <code>.google.protobuf.Timestamp template_end_date = 4 [json_name = "templateEndDate"];</code>
-     * @return Whether the templateEndDate field is set.
-     */
-    public boolean hasTemplateEndDate() {
-      return ((bitField0_ & 0x00000008) != 0);
-    }
-    /**
-     * <code>.google.protobuf.Timestamp template_end_date = 4 [json_name = "templateEndDate"];</code>
-     * @return The templateEndDate.
-     */
-    public com.google.protobuf.Timestamp getTemplateEndDate() {
-      if (templateEndDateBuilder_ == null) {
-        return templateEndDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : templateEndDate_;
-      } else {
-        return templateEndDateBuilder_.getMessage();
-      }
-    }
-    /**
-     * <code>.google.protobuf.Timestamp template_end_date = 4 [json_name = "templateEndDate"];</code>
-     */
-    public Builder setTemplateEndDate(com.google.protobuf.Timestamp value) {
-      if (templateEndDateBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        templateEndDate_ = value;
-      } else {
-        templateEndDateBuilder_.setMessage(value);
-      }
-      bitField0_ |= 0x00000008;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.google.protobuf.Timestamp template_end_date = 4 [json_name = "templateEndDate"];</code>
-     */
-    public Builder setTemplateEndDate(
-        com.google.protobuf.Timestamp.Builder builderForValue) {
-      if (templateEndDateBuilder_ == null) {
-        templateEndDate_ = builderForValue.build();
-      } else {
-        templateEndDateBuilder_.setMessage(builderForValue.build());
-      }
-      bitField0_ |= 0x00000008;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.google.protobuf.Timestamp template_end_date = 4 [json_name = "templateEndDate"];</code>
-     */
-    public Builder mergeTemplateEndDate(com.google.protobuf.Timestamp value) {
-      if (templateEndDateBuilder_ == null) {
-        if (((bitField0_ & 0x00000008) != 0) &&
-          templateEndDate_ != null &&
-          templateEndDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-          getTemplateEndDateBuilder().mergeFrom(value);
-        } else {
-          templateEndDate_ = value;
-        }
-      } else {
-        templateEndDateBuilder_.mergeFrom(value);
-      }
-      bitField0_ |= 0x00000008;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.google.protobuf.Timestamp template_end_date = 4 [json_name = "templateEndDate"];</code>
-     */
-    public Builder clearTemplateEndDate() {
-      bitField0_ = (bitField0_ & ~0x00000008);
-      templateEndDate_ = null;
-      if (templateEndDateBuilder_ != null) {
-        templateEndDateBuilder_.dispose();
-        templateEndDateBuilder_ = null;
-      }
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.google.protobuf.Timestamp template_end_date = 4 [json_name = "templateEndDate"];</code>
-     */
-    public com.google.protobuf.Timestamp.Builder getTemplateEndDateBuilder() {
-      bitField0_ |= 0x00000008;
-      onChanged();
-      return getTemplateEndDateFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.google.protobuf.Timestamp template_end_date = 4 [json_name = "templateEndDate"];</code>
-     */
-    public com.google.protobuf.TimestampOrBuilder getTemplateEndDateOrBuilder() {
-      if (templateEndDateBuilder_ != null) {
-        return templateEndDateBuilder_.getMessageOrBuilder();
-      } else {
-        return templateEndDate_ == null ?
-            com.google.protobuf.Timestamp.getDefaultInstance() : templateEndDate_;
-      }
-    }
-    /**
-     * <code>.google.protobuf.Timestamp template_end_date = 4 [json_name = "templateEndDate"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-        getTemplateEndDateFieldBuilder() {
-      if (templateEndDateBuilder_ == null) {
-        templateEndDateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                getTemplateEndDate(),
-                getParentForChildren(),
-                isClean());
-        templateEndDate_ = null;
-      }
-      return templateEndDateBuilder_;
-    }
-
     private java.lang.Object ticketTitle_ = "";
     /**
      * <code>string ticket_title = 5 [json_name = "ticketTitle"];</code>
@@ -2229,7 +1867,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       ticketTitle_ = value;
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -2239,7 +1877,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearTicketTitle() {
       ticketTitle_ = getDefaultInstance().getTicketTitle();
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -2253,7 +1891,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       ticketTitle_ = value;
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -2301,7 +1939,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       ticketDescription_ = value;
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -2311,7 +1949,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearTicketDescription() {
       ticketDescription_ = getDefaultInstance().getTicketDescription();
-      bitField0_ = (bitField0_ & ~0x00000020);
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -2325,7 +1963,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       ticketDescription_ = value;
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -2338,7 +1976,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the titleCondition field is set.
      */
     public boolean hasTitleCondition() {
-      return ((bitField0_ & 0x00000040) != 0);
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <code>.api.commons.TemplateCondition title_condition = 7 [json_name = "titleCondition"];</code>
@@ -2363,7 +2001,7 @@ private static final long serialVersionUID = 0L;
       } else {
         titleConditionBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -2377,7 +2015,7 @@ private static final long serialVersionUID = 0L;
       } else {
         titleConditionBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -2386,7 +2024,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeTitleCondition(com.tcn.cloud.api.api.commons.TemplateCondition value) {
       if (titleConditionBuilder_ == null) {
-        if (((bitField0_ & 0x00000040) != 0) &&
+        if (((bitField0_ & 0x00000010) != 0) &&
           titleCondition_ != null &&
           titleCondition_ != com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance()) {
           getTitleConditionBuilder().mergeFrom(value);
@@ -2396,7 +2034,7 @@ private static final long serialVersionUID = 0L;
       } else {
         titleConditionBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -2404,7 +2042,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.TemplateCondition title_condition = 7 [json_name = "titleCondition"];</code>
      */
     public Builder clearTitleCondition() {
-      bitField0_ = (bitField0_ & ~0x00000040);
+      bitField0_ = (bitField0_ & ~0x00000010);
       titleCondition_ = null;
       if (titleConditionBuilder_ != null) {
         titleConditionBuilder_.dispose();
@@ -2417,7 +2055,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.TemplateCondition title_condition = 7 [json_name = "titleCondition"];</code>
      */
     public com.tcn.cloud.api.api.commons.TemplateCondition.Builder getTitleConditionBuilder() {
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000010;
       onChanged();
       return getTitleConditionFieldBuilder().getBuilder();
     }
@@ -2457,7 +2095,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the descriptionCondition field is set.
      */
     public boolean hasDescriptionCondition() {
-      return ((bitField0_ & 0x00000080) != 0);
+      return ((bitField0_ & 0x00000020) != 0);
     }
     /**
      * <code>.api.commons.TemplateCondition description_condition = 8 [json_name = "descriptionCondition"];</code>
@@ -2482,7 +2120,7 @@ private static final long serialVersionUID = 0L;
       } else {
         descriptionConditionBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -2496,7 +2134,7 @@ private static final long serialVersionUID = 0L;
       } else {
         descriptionConditionBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -2505,7 +2143,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDescriptionCondition(com.tcn.cloud.api.api.commons.TemplateCondition value) {
       if (descriptionConditionBuilder_ == null) {
-        if (((bitField0_ & 0x00000080) != 0) &&
+        if (((bitField0_ & 0x00000020) != 0) &&
           descriptionCondition_ != null &&
           descriptionCondition_ != com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance()) {
           getDescriptionConditionBuilder().mergeFrom(value);
@@ -2515,7 +2153,7 @@ private static final long serialVersionUID = 0L;
       } else {
         descriptionConditionBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -2523,7 +2161,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.TemplateCondition description_condition = 8 [json_name = "descriptionCondition"];</code>
      */
     public Builder clearDescriptionCondition() {
-      bitField0_ = (bitField0_ & ~0x00000080);
+      bitField0_ = (bitField0_ & ~0x00000020);
       descriptionCondition_ = null;
       if (descriptionConditionBuilder_ != null) {
         descriptionConditionBuilder_.dispose();
@@ -2536,7 +2174,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.TemplateCondition description_condition = 8 [json_name = "descriptionCondition"];</code>
      */
     public com.tcn.cloud.api.api.commons.TemplateCondition.Builder getDescriptionConditionBuilder() {
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000020;
       onChanged();
       return getDescriptionConditionFieldBuilder().getBuilder();
     }
@@ -2574,7 +2212,7 @@ private static final long serialVersionUID = 0L;
       if (!ticketAssignee_.isModifiable()) {
         ticketAssignee_ = new com.google.protobuf.LazyStringArrayList(ticketAssignee_);
       }
-      bitField0_ |= 0x00000100;
+      bitField0_ |= 0x00000040;
     }
     /**
      * <code>repeated string ticket_assignee = 9 [json_name = "ticketAssignee"];</code>
@@ -2620,7 +2258,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureTicketAssigneeIsMutable();
       ticketAssignee_.set(index, value);
-      bitField0_ |= 0x00000100;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -2634,7 +2272,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureTicketAssigneeIsMutable();
       ticketAssignee_.add(value);
-      bitField0_ |= 0x00000100;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -2648,7 +2286,7 @@ private static final long serialVersionUID = 0L;
       ensureTicketAssigneeIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, ticketAssignee_);
-      bitField0_ |= 0x00000100;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -2659,7 +2297,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearTicketAssignee() {
       ticketAssignee_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000100);;
+      bitField0_ = (bitField0_ & ~0x00000040);;
       onChanged();
       return this;
     }
@@ -2674,7 +2312,7 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureTicketAssigneeIsMutable();
       ticketAssignee_.add(value);
-      bitField0_ |= 0x00000100;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -2687,7 +2325,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the assigneeCondition field is set.
      */
     public boolean hasAssigneeCondition() {
-      return ((bitField0_ & 0x00000200) != 0);
+      return ((bitField0_ & 0x00000080) != 0);
     }
     /**
      * <code>.api.commons.TemplateCondition assignee_condition = 10 [json_name = "assigneeCondition"];</code>
@@ -2712,7 +2350,7 @@ private static final long serialVersionUID = 0L;
       } else {
         assigneeConditionBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000200;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -2726,7 +2364,7 @@ private static final long serialVersionUID = 0L;
       } else {
         assigneeConditionBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000200;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -2735,7 +2373,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeAssigneeCondition(com.tcn.cloud.api.api.commons.TemplateCondition value) {
       if (assigneeConditionBuilder_ == null) {
-        if (((bitField0_ & 0x00000200) != 0) &&
+        if (((bitField0_ & 0x00000080) != 0) &&
           assigneeCondition_ != null &&
           assigneeCondition_ != com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance()) {
           getAssigneeConditionBuilder().mergeFrom(value);
@@ -2745,7 +2383,7 @@ private static final long serialVersionUID = 0L;
       } else {
         assigneeConditionBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000200;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -2753,7 +2391,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.TemplateCondition assignee_condition = 10 [json_name = "assigneeCondition"];</code>
      */
     public Builder clearAssigneeCondition() {
-      bitField0_ = (bitField0_ & ~0x00000200);
+      bitField0_ = (bitField0_ & ~0x00000080);
       assigneeCondition_ = null;
       if (assigneeConditionBuilder_ != null) {
         assigneeConditionBuilder_.dispose();
@@ -2766,7 +2404,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.TemplateCondition assignee_condition = 10 [json_name = "assigneeCondition"];</code>
      */
     public com.tcn.cloud.api.api.commons.TemplateCondition.Builder getAssigneeConditionBuilder() {
-      bitField0_ |= 0x00000200;
+      bitField0_ |= 0x00000080;
       onChanged();
       return getAssigneeConditionFieldBuilder().getBuilder();
     }
@@ -2801,9 +2439,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.tcn.cloud.api.api.commons.Sla> ticketSla_ =
       java.util.Collections.emptyList();
     private void ensureTicketSlaIsMutable() {
-      if (!((bitField0_ & 0x00000400) != 0)) {
+      if (!((bitField0_ & 0x00000100) != 0)) {
         ticketSla_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.Sla>(ticketSla_);
-        bitField0_ |= 0x00000400;
+        bitField0_ |= 0x00000100;
        }
     }
 
@@ -2953,7 +2591,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearTicketSla() {
       if (ticketSlaBuilder_ == null) {
         ticketSla_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000400);
+        bitField0_ = (bitField0_ & ~0x00000100);
         onChanged();
       } else {
         ticketSlaBuilder_.clear();
@@ -3030,7 +2668,7 @@ private static final long serialVersionUID = 0L;
         ticketSlaBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.commons.Sla, com.tcn.cloud.api.api.commons.Sla.Builder, com.tcn.cloud.api.api.commons.SlaOrBuilder>(
                 ticketSla_,
-                ((bitField0_ & 0x00000400) != 0),
+                ((bitField0_ & 0x00000100) != 0),
                 getParentForChildren(),
                 isClean());
         ticketSla_ = null;
@@ -3093,7 +2731,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       actionType_ = value;
-      bitField0_ |= 0x00000800;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -3107,7 +2745,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearActionType() {
       actionType_ = getDefaultInstance().getActionType();
-      bitField0_ = (bitField0_ & ~0x00000800);
+      bitField0_ = (bitField0_ & ~0x00000200);
       onChanged();
       return this;
     }
@@ -3125,7 +2763,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       actionType_ = value;
-      bitField0_ |= 0x00000800;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -3133,9 +2771,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.tcn.cloud.api.api.commons.Skills> actionSkills_ =
       java.util.Collections.emptyList();
     private void ensureActionSkillsIsMutable() {
-      if (!((bitField0_ & 0x00001000) != 0)) {
+      if (!((bitField0_ & 0x00000400) != 0)) {
         actionSkills_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.Skills>(actionSkills_);
-        bitField0_ |= 0x00001000;
+        bitField0_ |= 0x00000400;
        }
     }
 
@@ -3285,7 +2923,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearActionSkills() {
       if (actionSkillsBuilder_ == null) {
         actionSkills_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00001000);
+        bitField0_ = (bitField0_ & ~0x00000400);
         onChanged();
       } else {
         actionSkillsBuilder_.clear();
@@ -3362,7 +3000,7 @@ private static final long serialVersionUID = 0L;
         actionSkillsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.commons.Skills, com.tcn.cloud.api.api.commons.Skills.Builder, com.tcn.cloud.api.api.commons.SkillsOrBuilder>(
                 actionSkills_,
-                ((bitField0_ & 0x00001000) != 0),
+                ((bitField0_ & 0x00000400) != 0),
                 getParentForChildren(),
                 isClean());
         actionSkills_ = null;
@@ -3378,7 +3016,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the actionSkillsCondition field is set.
      */
     public boolean hasActionSkillsCondition() {
-      return ((bitField0_ & 0x00002000) != 0);
+      return ((bitField0_ & 0x00000800) != 0);
     }
     /**
      * <code>.api.commons.TemplateCondition action_skills_condition = 15 [json_name = "actionSkillsCondition"];</code>
@@ -3403,7 +3041,7 @@ private static final long serialVersionUID = 0L;
       } else {
         actionSkillsConditionBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00002000;
+      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -3417,7 +3055,7 @@ private static final long serialVersionUID = 0L;
       } else {
         actionSkillsConditionBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00002000;
+      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -3426,7 +3064,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeActionSkillsCondition(com.tcn.cloud.api.api.commons.TemplateCondition value) {
       if (actionSkillsConditionBuilder_ == null) {
-        if (((bitField0_ & 0x00002000) != 0) &&
+        if (((bitField0_ & 0x00000800) != 0) &&
           actionSkillsCondition_ != null &&
           actionSkillsCondition_ != com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance()) {
           getActionSkillsConditionBuilder().mergeFrom(value);
@@ -3436,7 +3074,7 @@ private static final long serialVersionUID = 0L;
       } else {
         actionSkillsConditionBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00002000;
+      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -3444,7 +3082,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.TemplateCondition action_skills_condition = 15 [json_name = "actionSkillsCondition"];</code>
      */
     public Builder clearActionSkillsCondition() {
-      bitField0_ = (bitField0_ & ~0x00002000);
+      bitField0_ = (bitField0_ & ~0x00000800);
       actionSkillsCondition_ = null;
       if (actionSkillsConditionBuilder_ != null) {
         actionSkillsConditionBuilder_.dispose();
@@ -3457,7 +3095,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.TemplateCondition action_skills_condition = 15 [json_name = "actionSkillsCondition"];</code>
      */
     public com.tcn.cloud.api.api.commons.TemplateCondition.Builder getActionSkillsConditionBuilder() {
-      bitField0_ |= 0x00002000;
+      bitField0_ |= 0x00000800;
       onChanged();
       return getActionSkillsConditionFieldBuilder().getBuilder();
     }
@@ -3497,7 +3135,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the actionExpiryDate field is set.
      */
     public boolean hasActionExpiryDate() {
-      return ((bitField0_ & 0x00004000) != 0);
+      return ((bitField0_ & 0x00001000) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp action_expiry_date = 18 [json_name = "actionExpiryDate"];</code>
@@ -3522,7 +3160,7 @@ private static final long serialVersionUID = 0L;
       } else {
         actionExpiryDateBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00004000;
+      bitField0_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -3536,7 +3174,7 @@ private static final long serialVersionUID = 0L;
       } else {
         actionExpiryDateBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00004000;
+      bitField0_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -3545,7 +3183,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeActionExpiryDate(com.google.protobuf.Timestamp value) {
       if (actionExpiryDateBuilder_ == null) {
-        if (((bitField0_ & 0x00004000) != 0) &&
+        if (((bitField0_ & 0x00001000) != 0) &&
           actionExpiryDate_ != null &&
           actionExpiryDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
           getActionExpiryDateBuilder().mergeFrom(value);
@@ -3555,7 +3193,7 @@ private static final long serialVersionUID = 0L;
       } else {
         actionExpiryDateBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00004000;
+      bitField0_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -3563,7 +3201,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp action_expiry_date = 18 [json_name = "actionExpiryDate"];</code>
      */
     public Builder clearActionExpiryDate() {
-      bitField0_ = (bitField0_ & ~0x00004000);
+      bitField0_ = (bitField0_ & ~0x00001000);
       actionExpiryDate_ = null;
       if (actionExpiryDateBuilder_ != null) {
         actionExpiryDateBuilder_.dispose();
@@ -3576,7 +3214,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp action_expiry_date = 18 [json_name = "actionExpiryDate"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getActionExpiryDateBuilder() {
-      bitField0_ |= 0x00004000;
+      bitField0_ |= 0x00001000;
       onChanged();
       return getActionExpiryDateFieldBuilder().getBuilder();
     }
@@ -3616,7 +3254,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the actionExpiryDateCondition field is set.
      */
     public boolean hasActionExpiryDateCondition() {
-      return ((bitField0_ & 0x00008000) != 0);
+      return ((bitField0_ & 0x00002000) != 0);
     }
     /**
      * <code>.api.commons.TemplateCondition action_expiry_date_condition = 19 [json_name = "actionExpiryDateCondition"];</code>
@@ -3641,7 +3279,7 @@ private static final long serialVersionUID = 0L;
       } else {
         actionExpiryDateConditionBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00008000;
+      bitField0_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -3655,7 +3293,7 @@ private static final long serialVersionUID = 0L;
       } else {
         actionExpiryDateConditionBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00008000;
+      bitField0_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -3664,7 +3302,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeActionExpiryDateCondition(com.tcn.cloud.api.api.commons.TemplateCondition value) {
       if (actionExpiryDateConditionBuilder_ == null) {
-        if (((bitField0_ & 0x00008000) != 0) &&
+        if (((bitField0_ & 0x00002000) != 0) &&
           actionExpiryDateCondition_ != null &&
           actionExpiryDateCondition_ != com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance()) {
           getActionExpiryDateConditionBuilder().mergeFrom(value);
@@ -3674,7 +3312,7 @@ private static final long serialVersionUID = 0L;
       } else {
         actionExpiryDateConditionBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00008000;
+      bitField0_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -3682,7 +3320,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.TemplateCondition action_expiry_date_condition = 19 [json_name = "actionExpiryDateCondition"];</code>
      */
     public Builder clearActionExpiryDateCondition() {
-      bitField0_ = (bitField0_ & ~0x00008000);
+      bitField0_ = (bitField0_ & ~0x00002000);
       actionExpiryDateCondition_ = null;
       if (actionExpiryDateConditionBuilder_ != null) {
         actionExpiryDateConditionBuilder_.dispose();
@@ -3695,7 +3333,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.TemplateCondition action_expiry_date_condition = 19 [json_name = "actionExpiryDateCondition"];</code>
      */
     public com.tcn.cloud.api.api.commons.TemplateCondition.Builder getActionExpiryDateConditionBuilder() {
-      bitField0_ |= 0x00008000;
+      bitField0_ |= 0x00002000;
       onChanged();
       return getActionExpiryDateConditionFieldBuilder().getBuilder();
     }
@@ -3730,9 +3368,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.tcn.cloud.api.api.commons.Sla> actionSla_ =
       java.util.Collections.emptyList();
     private void ensureActionSlaIsMutable() {
-      if (!((bitField0_ & 0x00010000) != 0)) {
+      if (!((bitField0_ & 0x00004000) != 0)) {
         actionSla_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.Sla>(actionSla_);
-        bitField0_ |= 0x00010000;
+        bitField0_ |= 0x00004000;
        }
     }
 
@@ -3882,7 +3520,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearActionSla() {
       if (actionSlaBuilder_ == null) {
         actionSla_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00010000);
+        bitField0_ = (bitField0_ & ~0x00004000);
         onChanged();
       } else {
         actionSlaBuilder_.clear();
@@ -3959,7 +3597,7 @@ private static final long serialVersionUID = 0L;
         actionSlaBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.commons.Sla, com.tcn.cloud.api.api.commons.Sla.Builder, com.tcn.cloud.api.api.commons.SlaOrBuilder>(
                 actionSla_,
-                ((bitField0_ & 0x00010000) != 0),
+                ((bitField0_ & 0x00004000) != 0),
                 getParentForChildren(),
                 isClean());
         actionSla_ = null;
@@ -3984,7 +3622,7 @@ private static final long serialVersionUID = 0L;
     public Builder setIsValid(boolean value) {
 
       isValid_ = value;
-      bitField0_ |= 0x00020000;
+      bitField0_ |= 0x00008000;
       onChanged();
       return this;
     }
@@ -3993,7 +3631,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearIsValid() {
-      bitField0_ = (bitField0_ & ~0x00020000);
+      bitField0_ = (bitField0_ & ~0x00008000);
       isValid_ = false;
       onChanged();
       return this;
@@ -4011,7 +3649,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the callbackDefault field is set.
      */
     public boolean hasCallbackDefault() {
-      return ((bitField0_ & 0x00040000) != 0);
+      return ((bitField0_ & 0x00010000) != 0);
     }
     /**
      * <pre>
@@ -4044,7 +3682,7 @@ private static final long serialVersionUID = 0L;
       } else {
         callbackDefaultBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00040000;
+      bitField0_ |= 0x00010000;
       onChanged();
       return this;
     }
@@ -4062,7 +3700,7 @@ private static final long serialVersionUID = 0L;
       } else {
         callbackDefaultBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00040000;
+      bitField0_ |= 0x00010000;
       onChanged();
       return this;
     }
@@ -4075,7 +3713,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCallbackDefault(com.tcn.cloud.api.api.commons.TicketCallbackTemplate value) {
       if (callbackDefaultBuilder_ == null) {
-        if (((bitField0_ & 0x00040000) != 0) &&
+        if (((bitField0_ & 0x00010000) != 0) &&
           callbackDefault_ != null &&
           callbackDefault_ != com.tcn.cloud.api.api.commons.TicketCallbackTemplate.getDefaultInstance()) {
           getCallbackDefaultBuilder().mergeFrom(value);
@@ -4085,7 +3723,7 @@ private static final long serialVersionUID = 0L;
       } else {
         callbackDefaultBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00040000;
+      bitField0_ |= 0x00010000;
       onChanged();
       return this;
     }
@@ -4097,7 +3735,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.TicketCallbackTemplate callback_default = 23 [json_name = "callbackDefault"];</code>
      */
     public Builder clearCallbackDefault() {
-      bitField0_ = (bitField0_ & ~0x00040000);
+      bitField0_ = (bitField0_ & ~0x00010000);
       callbackDefault_ = null;
       if (callbackDefaultBuilder_ != null) {
         callbackDefaultBuilder_.dispose();
@@ -4114,7 +3752,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.TicketCallbackTemplate callback_default = 23 [json_name = "callbackDefault"];</code>
      */
     public com.tcn.cloud.api.api.commons.TicketCallbackTemplate.Builder getCallbackDefaultBuilder() {
-      bitField0_ |= 0x00040000;
+      bitField0_ |= 0x00010000;
       onChanged();
       return getCallbackDefaultFieldBuilder().getBuilder();
     }
@@ -4197,7 +3835,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       createdById_ = value;
-      bitField0_ |= 0x00080000;
+      bitField0_ |= 0x00020000;
       onChanged();
       return this;
     }
@@ -4207,7 +3845,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearCreatedById() {
       createdById_ = getDefaultInstance().getCreatedById();
-      bitField0_ = (bitField0_ & ~0x00080000);
+      bitField0_ = (bitField0_ & ~0x00020000);
       onChanged();
       return this;
     }
@@ -4221,7 +3859,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       createdById_ = value;
-      bitField0_ |= 0x00080000;
+      bitField0_ |= 0x00020000;
       onChanged();
       return this;
     }
@@ -4234,7 +3872,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the createdDate field is set.
      */
     public boolean hasCreatedDate() {
-      return ((bitField0_ & 0x00100000) != 0);
+      return ((bitField0_ & 0x00040000) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp created_date = 25 [json_name = "createdDate"];</code>
@@ -4259,7 +3897,7 @@ private static final long serialVersionUID = 0L;
       } else {
         createdDateBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00100000;
+      bitField0_ |= 0x00040000;
       onChanged();
       return this;
     }
@@ -4273,7 +3911,7 @@ private static final long serialVersionUID = 0L;
       } else {
         createdDateBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00100000;
+      bitField0_ |= 0x00040000;
       onChanged();
       return this;
     }
@@ -4282,7 +3920,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCreatedDate(com.google.protobuf.Timestamp value) {
       if (createdDateBuilder_ == null) {
-        if (((bitField0_ & 0x00100000) != 0) &&
+        if (((bitField0_ & 0x00040000) != 0) &&
           createdDate_ != null &&
           createdDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
           getCreatedDateBuilder().mergeFrom(value);
@@ -4292,7 +3930,7 @@ private static final long serialVersionUID = 0L;
       } else {
         createdDateBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00100000;
+      bitField0_ |= 0x00040000;
       onChanged();
       return this;
     }
@@ -4300,7 +3938,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp created_date = 25 [json_name = "createdDate"];</code>
      */
     public Builder clearCreatedDate() {
-      bitField0_ = (bitField0_ & ~0x00100000);
+      bitField0_ = (bitField0_ & ~0x00040000);
       createdDate_ = null;
       if (createdDateBuilder_ != null) {
         createdDateBuilder_.dispose();
@@ -4313,7 +3951,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp created_date = 25 [json_name = "createdDate"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getCreatedDateBuilder() {
-      bitField0_ |= 0x00100000;
+      bitField0_ |= 0x00040000;
       onChanged();
       return getCreatedDateFieldBuilder().getBuilder();
     }
@@ -4353,7 +3991,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the ticketCallbackTemplateCondition field is set.
      */
     public boolean hasTicketCallbackTemplateCondition() {
-      return ((bitField0_ & 0x00200000) != 0);
+      return ((bitField0_ & 0x00080000) != 0);
     }
     /**
      * <code>.api.commons.TemplateCondition ticket_callback_template_condition = 26 [json_name = "ticketCallbackTemplateCondition"];</code>
@@ -4378,7 +4016,7 @@ private static final long serialVersionUID = 0L;
       } else {
         ticketCallbackTemplateConditionBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00200000;
+      bitField0_ |= 0x00080000;
       onChanged();
       return this;
     }
@@ -4392,7 +4030,7 @@ private static final long serialVersionUID = 0L;
       } else {
         ticketCallbackTemplateConditionBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00200000;
+      bitField0_ |= 0x00080000;
       onChanged();
       return this;
     }
@@ -4401,7 +4039,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeTicketCallbackTemplateCondition(com.tcn.cloud.api.api.commons.TemplateCondition value) {
       if (ticketCallbackTemplateConditionBuilder_ == null) {
-        if (((bitField0_ & 0x00200000) != 0) &&
+        if (((bitField0_ & 0x00080000) != 0) &&
           ticketCallbackTemplateCondition_ != null &&
           ticketCallbackTemplateCondition_ != com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance()) {
           getTicketCallbackTemplateConditionBuilder().mergeFrom(value);
@@ -4411,7 +4049,7 @@ private static final long serialVersionUID = 0L;
       } else {
         ticketCallbackTemplateConditionBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00200000;
+      bitField0_ |= 0x00080000;
       onChanged();
       return this;
     }
@@ -4419,7 +4057,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.TemplateCondition ticket_callback_template_condition = 26 [json_name = "ticketCallbackTemplateCondition"];</code>
      */
     public Builder clearTicketCallbackTemplateCondition() {
-      bitField0_ = (bitField0_ & ~0x00200000);
+      bitField0_ = (bitField0_ & ~0x00080000);
       ticketCallbackTemplateCondition_ = null;
       if (ticketCallbackTemplateConditionBuilder_ != null) {
         ticketCallbackTemplateConditionBuilder_.dispose();
@@ -4432,7 +4070,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.TemplateCondition ticket_callback_template_condition = 26 [json_name = "ticketCallbackTemplateCondition"];</code>
      */
     public com.tcn.cloud.api.api.commons.TemplateCondition.Builder getTicketCallbackTemplateConditionBuilder() {
-      bitField0_ |= 0x00200000;
+      bitField0_ |= 0x00080000;
       onChanged();
       return getTicketCallbackTemplateConditionFieldBuilder().getBuilder();
     }

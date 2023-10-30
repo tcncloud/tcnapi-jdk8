@@ -15,6 +15,16 @@ public final class CorrectionProto {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_vanalytics_UpdateCorrectionRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_vanalytics_UpdateCorrectionRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_vanalytics_UpdateCorrectionResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_vanalytics_UpdateCorrectionResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_v1alpha1_vanalytics_CreateCorrectionRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -24,6 +34,31 @@ public final class CorrectionProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_vanalytics_CreateCorrectionResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_vanalytics_GetCorrectionRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_vanalytics_GetCorrectionRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_vanalytics_ListCorrectionsRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_vanalytics_ListCorrectionsRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_vanalytics_ListCorrectionsResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_vanalytics_ListCorrectionsResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_vanalytics_DeleteCorrectionRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_vanalytics_DeleteCorrectionRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_vanalytics_DeleteCorrectionResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_vanalytics_DeleteCorrectionResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_v1alpha1_vanalytics_Correction_descriptor;
   static final 
@@ -40,49 +75,110 @@ public final class CorrectionProto {
     java.lang.String[] descriptorData = {
       "\n(api/v1alpha1/vanalytics/correction.pro" +
       "to\022\027api.v1alpha1.vanalytics\032\036google/prot" +
-      "obuf/duration.proto\"^\n\027CreateCorrectionR" +
-      "equest\022C\n\ncorrection\030\001 \001(\0132#.api.v1alpha" +
-      "1.vanalytics.CorrectionR\ncorrection\"_\n\030C" +
-      "reateCorrectionResponse\022C\n\ncorrection\030\001 " +
-      "\001(\0132#.api.v1alpha1.vanalytics.Correction" +
-      "R\ncorrection\"\221\002\n\nCorrection\022%\n\016correctio" +
-      "n_sid\030\001 \001(\003R\rcorrectionSid\022%\n\016transcript" +
-      "_sid\030\003 \001(\003R\rtranscriptSid\022<\n\014start_offse" +
-      "t\030\004 \001(\0132\031.google.protobuf.DurationR\013star" +
-      "tOffset\0228\n\nend_offset\030\005 \001(\0132\031.google.pro" +
-      "tobuf.DurationR\tendOffset\022#\n\rproposed_te" +
-      "xt\030\006 \001(\tR\014proposedText\022\030\n\007channel\030\007 \001(\rR" +
-      "\007channelB\272\001\n)com.tcn.cloud.api.api.v1alp" +
-      "ha1.vanalyticsB\017CorrectionProtoP\001\242\002\003AVV\252" +
-      "\002\027Api.V1alpha1.Vanalytics\312\002\027Api\\V1alpha1" +
-      "\\Vanalytics\342\002#Api\\V1alpha1\\Vanalytics\\GP" +
-      "BMetadata\352\002\031Api::V1alpha1::Vanalyticsb\006p" +
-      "roto3"
+      "obuf/duration.proto\032 google/protobuf/fie" +
+      "ld_mask.proto\"\233\001\n\027UpdateCorrectionReques" +
+      "t\022C\n\ncorrection\030\001 \001(\0132#.api.v1alpha1.van" +
+      "alytics.CorrectionR\ncorrection\022;\n\013update" +
+      "_mask\030\002 \001(\0132\032.google.protobuf.FieldMaskR" +
+      "\nupdateMask\"_\n\030UpdateCorrectionResponse\022" +
+      "C\n\ncorrection\030\001 \001(\0132#.api.v1alpha1.vanal" +
+      "ytics.CorrectionR\ncorrection\"^\n\027CreateCo" +
+      "rrectionRequest\022C\n\ncorrection\030\001 \001(\0132#.ap" +
+      "i.v1alpha1.vanalytics.CorrectionR\ncorrec" +
+      "tion\"_\n\030CreateCorrectionResponse\022C\n\ncorr" +
+      "ection\030\001 \001(\0132#.api.v1alpha1.vanalytics.C" +
+      "orrectionR\ncorrection\"=\n\024GetCorrectionRe" +
+      "quest\022%\n\016correction_sid\030\002 \001(\003R\rcorrectio" +
+      "nSid\"?\n\026ListCorrectionsRequest\022%\n\016transc" +
+      "ript_sid\030\002 \001(\003R\rtranscriptSid\"`\n\027ListCor" +
+      "rectionsResponse\022E\n\013corrections\030\001 \003(\0132#." +
+      "api.v1alpha1.vanalytics.CorrectionR\013corr" +
+      "ections\"X\n\027DeleteCorrectionRequest\022%\n\016co" +
+      "rrection_sid\030\001 \001(\003R\rcorrectionSid\022\026\n\006ret" +
+      "urn\030\003 \001(\010R\006return\"_\n\030DeleteCorrectionRes" +
+      "ponse\022C\n\ncorrection\030\001 \001(\0132#.api.v1alpha1" +
+      ".vanalytics.CorrectionR\ncorrection\"\221\002\n\nC" +
+      "orrection\022%\n\016correction_sid\030\001 \001(\003R\rcorre" +
+      "ctionSid\022%\n\016transcript_sid\030\003 \001(\003R\rtransc" +
+      "riptSid\022<\n\014start_offset\030\004 \001(\0132\031.google.p" +
+      "rotobuf.DurationR\013startOffset\0228\n\nend_off" +
+      "set\030\005 \001(\0132\031.google.protobuf.DurationR\ten" +
+      "dOffset\022#\n\rproposed_text\030\006 \001(\tR\014proposed" +
+      "Text\022\030\n\007channel\030\007 \001(\rR\007channelB\272\001\n)com.t" +
+      "cn.cloud.api.api.v1alpha1.vanalyticsB\017Co" +
+      "rrectionProtoP\001\242\002\003AVV\252\002\027Api.V1alpha1.Van" +
+      "alytics\312\002\027Api\\V1alpha1\\Vanalytics\342\002#Api\\" +
+      "V1alpha1\\Vanalytics\\GPBMetadata\352\002\031Api::V" +
+      "1alpha1::Vanalyticsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.DurationProto.getDescriptor(),
+          com.google.protobuf.FieldMaskProto.getDescriptor(),
         });
-    internal_static_api_v1alpha1_vanalytics_CreateCorrectionRequest_descriptor =
+    internal_static_api_v1alpha1_vanalytics_UpdateCorrectionRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_api_v1alpha1_vanalytics_UpdateCorrectionRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_vanalytics_UpdateCorrectionRequest_descriptor,
+        new java.lang.String[] { "Correction", "UpdateMask", });
+    internal_static_api_v1alpha1_vanalytics_UpdateCorrectionResponse_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_api_v1alpha1_vanalytics_UpdateCorrectionResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_vanalytics_UpdateCorrectionResponse_descriptor,
+        new java.lang.String[] { "Correction", });
+    internal_static_api_v1alpha1_vanalytics_CreateCorrectionRequest_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_api_v1alpha1_vanalytics_CreateCorrectionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_vanalytics_CreateCorrectionRequest_descriptor,
         new java.lang.String[] { "Correction", });
     internal_static_api_v1alpha1_vanalytics_CreateCorrectionResponse_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_api_v1alpha1_vanalytics_CreateCorrectionResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_vanalytics_CreateCorrectionResponse_descriptor,
         new java.lang.String[] { "Correction", });
+    internal_static_api_v1alpha1_vanalytics_GetCorrectionRequest_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_api_v1alpha1_vanalytics_GetCorrectionRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_vanalytics_GetCorrectionRequest_descriptor,
+        new java.lang.String[] { "CorrectionSid", });
+    internal_static_api_v1alpha1_vanalytics_ListCorrectionsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_api_v1alpha1_vanalytics_ListCorrectionsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_vanalytics_ListCorrectionsRequest_descriptor,
+        new java.lang.String[] { "TranscriptSid", });
+    internal_static_api_v1alpha1_vanalytics_ListCorrectionsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_api_v1alpha1_vanalytics_ListCorrectionsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_vanalytics_ListCorrectionsResponse_descriptor,
+        new java.lang.String[] { "Corrections", });
+    internal_static_api_v1alpha1_vanalytics_DeleteCorrectionRequest_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_api_v1alpha1_vanalytics_DeleteCorrectionRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_vanalytics_DeleteCorrectionRequest_descriptor,
+        new java.lang.String[] { "CorrectionSid", "Return", });
+    internal_static_api_v1alpha1_vanalytics_DeleteCorrectionResponse_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_api_v1alpha1_vanalytics_DeleteCorrectionResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_vanalytics_DeleteCorrectionResponse_descriptor,
+        new java.lang.String[] { "Correction", });
     internal_static_api_v1alpha1_vanalytics_Correction_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_api_v1alpha1_vanalytics_Correction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_vanalytics_Correction_descriptor,
         new java.lang.String[] { "CorrectionSid", "TranscriptSid", "StartOffset", "EndOffset", "ProposedText", "Channel", });
     com.google.protobuf.DurationProto.getDescriptor();
+    com.google.protobuf.FieldMaskProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

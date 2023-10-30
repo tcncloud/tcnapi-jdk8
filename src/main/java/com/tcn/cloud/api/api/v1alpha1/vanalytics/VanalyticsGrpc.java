@@ -914,6 +914,130 @@ public final class VanalyticsGrpc {
     return getCreateCorrectionMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.vanalytics.GetCorrectionRequest,
+      com.tcn.cloud.api.api.v1alpha1.vanalytics.Correction> getGetCorrectionMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetCorrection",
+      requestType = com.tcn.cloud.api.api.v1alpha1.vanalytics.GetCorrectionRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.vanalytics.Correction.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.vanalytics.GetCorrectionRequest,
+      com.tcn.cloud.api.api.v1alpha1.vanalytics.Correction> getGetCorrectionMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.vanalytics.GetCorrectionRequest, com.tcn.cloud.api.api.v1alpha1.vanalytics.Correction> getGetCorrectionMethod;
+    if ((getGetCorrectionMethod = VanalyticsGrpc.getGetCorrectionMethod) == null) {
+      synchronized (VanalyticsGrpc.class) {
+        if ((getGetCorrectionMethod = VanalyticsGrpc.getGetCorrectionMethod) == null) {
+          VanalyticsGrpc.getGetCorrectionMethod = getGetCorrectionMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.vanalytics.GetCorrectionRequest, com.tcn.cloud.api.api.v1alpha1.vanalytics.Correction>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetCorrection"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.vanalytics.GetCorrectionRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.vanalytics.Correction.getDefaultInstance()))
+              .setSchemaDescriptor(new VanalyticsMethodDescriptorSupplier("GetCorrection"))
+              .build();
+        }
+      }
+    }
+    return getGetCorrectionMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteCorrectionRequest,
+      com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteCorrectionResponse> getDeleteCorrectionMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteCorrection",
+      requestType = com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteCorrectionRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteCorrectionResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteCorrectionRequest,
+      com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteCorrectionResponse> getDeleteCorrectionMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteCorrectionRequest, com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteCorrectionResponse> getDeleteCorrectionMethod;
+    if ((getDeleteCorrectionMethod = VanalyticsGrpc.getDeleteCorrectionMethod) == null) {
+      synchronized (VanalyticsGrpc.class) {
+        if ((getDeleteCorrectionMethod = VanalyticsGrpc.getDeleteCorrectionMethod) == null) {
+          VanalyticsGrpc.getDeleteCorrectionMethod = getDeleteCorrectionMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteCorrectionRequest, com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteCorrectionResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteCorrection"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteCorrectionRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteCorrectionResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new VanalyticsMethodDescriptorSupplier("DeleteCorrection"))
+              .build();
+        }
+      }
+    }
+    return getDeleteCorrectionMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.vanalytics.ListCorrectionsRequest,
+      com.tcn.cloud.api.api.v1alpha1.vanalytics.ListCorrectionsResponse> getListCorrectionsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListCorrections",
+      requestType = com.tcn.cloud.api.api.v1alpha1.vanalytics.ListCorrectionsRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.vanalytics.ListCorrectionsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.vanalytics.ListCorrectionsRequest,
+      com.tcn.cloud.api.api.v1alpha1.vanalytics.ListCorrectionsResponse> getListCorrectionsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.vanalytics.ListCorrectionsRequest, com.tcn.cloud.api.api.v1alpha1.vanalytics.ListCorrectionsResponse> getListCorrectionsMethod;
+    if ((getListCorrectionsMethod = VanalyticsGrpc.getListCorrectionsMethod) == null) {
+      synchronized (VanalyticsGrpc.class) {
+        if ((getListCorrectionsMethod = VanalyticsGrpc.getListCorrectionsMethod) == null) {
+          VanalyticsGrpc.getListCorrectionsMethod = getListCorrectionsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.vanalytics.ListCorrectionsRequest, com.tcn.cloud.api.api.v1alpha1.vanalytics.ListCorrectionsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListCorrections"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.vanalytics.ListCorrectionsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.vanalytics.ListCorrectionsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new VanalyticsMethodDescriptorSupplier("ListCorrections"))
+              .build();
+        }
+      }
+    }
+    return getListCorrectionsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.vanalytics.UpdateCorrectionRequest,
+      com.tcn.cloud.api.api.v1alpha1.vanalytics.UpdateCorrectionResponse> getUpdateCorrectionMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateCorrection",
+      requestType = com.tcn.cloud.api.api.v1alpha1.vanalytics.UpdateCorrectionRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.vanalytics.UpdateCorrectionResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.vanalytics.UpdateCorrectionRequest,
+      com.tcn.cloud.api.api.v1alpha1.vanalytics.UpdateCorrectionResponse> getUpdateCorrectionMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.vanalytics.UpdateCorrectionRequest, com.tcn.cloud.api.api.v1alpha1.vanalytics.UpdateCorrectionResponse> getUpdateCorrectionMethod;
+    if ((getUpdateCorrectionMethod = VanalyticsGrpc.getUpdateCorrectionMethod) == null) {
+      synchronized (VanalyticsGrpc.class) {
+        if ((getUpdateCorrectionMethod = VanalyticsGrpc.getUpdateCorrectionMethod) == null) {
+          VanalyticsGrpc.getUpdateCorrectionMethod = getUpdateCorrectionMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.vanalytics.UpdateCorrectionRequest, com.tcn.cloud.api.api.v1alpha1.vanalytics.UpdateCorrectionResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateCorrection"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.vanalytics.UpdateCorrectionRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.vanalytics.UpdateCorrectionResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new VanalyticsMethodDescriptorSupplier("UpdateCorrection"))
+              .build();
+        }
+      }
+    }
+    return getUpdateCorrectionMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -1255,6 +1379,46 @@ public final class VanalyticsGrpc {
     default void createCorrection(com.tcn.cloud.api.api.v1alpha1.vanalytics.CreateCorrectionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.vanalytics.CreateCorrectionResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateCorrectionMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetCorrection gets a correction.
+     * </pre>
+     */
+    default void getCorrection(com.tcn.cloud.api.api.v1alpha1.vanalytics.GetCorrectionRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.vanalytics.Correction> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetCorrectionMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * DeleteCorrection deletes a correction.
+     * </pre>
+     */
+    default void deleteCorrection(com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteCorrectionRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteCorrectionResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteCorrectionMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * ListCorrections lists corrections.
+     * </pre>
+     */
+    default void listCorrections(com.tcn.cloud.api.api.v1alpha1.vanalytics.ListCorrectionsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.vanalytics.ListCorrectionsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListCorrectionsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * UpdateCorrection updates a correction.
+     * </pre>
+     */
+    default void updateCorrection(com.tcn.cloud.api.api.v1alpha1.vanalytics.UpdateCorrectionRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.vanalytics.UpdateCorrectionResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateCorrectionMethod(), responseObserver);
     }
   }
 
@@ -1608,6 +1772,50 @@ public final class VanalyticsGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateCorrectionMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * GetCorrection gets a correction.
+     * </pre>
+     */
+    public void getCorrection(com.tcn.cloud.api.api.v1alpha1.vanalytics.GetCorrectionRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.vanalytics.Correction> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetCorrectionMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * DeleteCorrection deletes a correction.
+     * </pre>
+     */
+    public void deleteCorrection(com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteCorrectionRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteCorrectionResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteCorrectionMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * ListCorrections lists corrections.
+     * </pre>
+     */
+    public void listCorrections(com.tcn.cloud.api.api.v1alpha1.vanalytics.ListCorrectionsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.vanalytics.ListCorrectionsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListCorrectionsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * UpdateCorrection updates a correction.
+     * </pre>
+     */
+    public void updateCorrection(com.tcn.cloud.api.api.v1alpha1.vanalytics.UpdateCorrectionRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.vanalytics.UpdateCorrectionResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateCorrectionMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -1919,6 +2127,46 @@ public final class VanalyticsGrpc {
     public com.tcn.cloud.api.api.v1alpha1.vanalytics.CreateCorrectionResponse createCorrection(com.tcn.cloud.api.api.v1alpha1.vanalytics.CreateCorrectionRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateCorrectionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetCorrection gets a correction.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.Correction getCorrection(com.tcn.cloud.api.api.v1alpha1.vanalytics.GetCorrectionRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetCorrectionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * DeleteCorrection deletes a correction.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteCorrectionResponse deleteCorrection(com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteCorrectionRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteCorrectionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * ListCorrections lists corrections.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.ListCorrectionsResponse listCorrections(com.tcn.cloud.api.api.v1alpha1.vanalytics.ListCorrectionsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListCorrectionsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * UpdateCorrection updates a correction.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.UpdateCorrectionResponse updateCorrection(com.tcn.cloud.api.api.v1alpha1.vanalytics.UpdateCorrectionRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateCorrectionMethod(), getCallOptions(), request);
     }
   }
 
@@ -2261,6 +2509,50 @@ public final class VanalyticsGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateCorrectionMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * GetCorrection gets a correction.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.vanalytics.Correction> getCorrection(
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.GetCorrectionRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetCorrectionMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * DeleteCorrection deletes a correction.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteCorrectionResponse> deleteCorrection(
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteCorrectionRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteCorrectionMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * ListCorrections lists corrections.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.vanalytics.ListCorrectionsResponse> listCorrections(
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.ListCorrectionsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListCorrectionsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * UpdateCorrection updates a correction.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.vanalytics.UpdateCorrectionResponse> updateCorrection(
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.UpdateCorrectionRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateCorrectionMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_AUDIT = 0;
@@ -2292,6 +2584,10 @@ public final class VanalyticsGrpc {
   private static final int METHODID_LIST_FLAG_SNAPSHOTS = 26;
   private static final int METHODID_LIST_FLAG_TRANSCRIPT_FILTERS = 27;
   private static final int METHODID_CREATE_CORRECTION = 28;
+  private static final int METHODID_GET_CORRECTION = 29;
+  private static final int METHODID_DELETE_CORRECTION = 30;
+  private static final int METHODID_LIST_CORRECTIONS = 31;
+  private static final int METHODID_UPDATE_CORRECTION = 32;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -2425,6 +2721,22 @@ public final class VanalyticsGrpc {
         case METHODID_CREATE_CORRECTION:
           serviceImpl.createCorrection((com.tcn.cloud.api.api.v1alpha1.vanalytics.CreateCorrectionRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.vanalytics.CreateCorrectionResponse>) responseObserver);
+          break;
+        case METHODID_GET_CORRECTION:
+          serviceImpl.getCorrection((com.tcn.cloud.api.api.v1alpha1.vanalytics.GetCorrectionRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.vanalytics.Correction>) responseObserver);
+          break;
+        case METHODID_DELETE_CORRECTION:
+          serviceImpl.deleteCorrection((com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteCorrectionRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteCorrectionResponse>) responseObserver);
+          break;
+        case METHODID_LIST_CORRECTIONS:
+          serviceImpl.listCorrections((com.tcn.cloud.api.api.v1alpha1.vanalytics.ListCorrectionsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.vanalytics.ListCorrectionsResponse>) responseObserver);
+          break;
+        case METHODID_UPDATE_CORRECTION:
+          serviceImpl.updateCorrection((com.tcn.cloud.api.api.v1alpha1.vanalytics.UpdateCorrectionRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.vanalytics.UpdateCorrectionResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -2647,6 +2959,34 @@ public final class VanalyticsGrpc {
               com.tcn.cloud.api.api.v1alpha1.vanalytics.CreateCorrectionRequest,
               com.tcn.cloud.api.api.v1alpha1.vanalytics.CreateCorrectionResponse>(
                 service, METHODID_CREATE_CORRECTION)))
+        .addMethod(
+          getGetCorrectionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.vanalytics.GetCorrectionRequest,
+              com.tcn.cloud.api.api.v1alpha1.vanalytics.Correction>(
+                service, METHODID_GET_CORRECTION)))
+        .addMethod(
+          getDeleteCorrectionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteCorrectionRequest,
+              com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteCorrectionResponse>(
+                service, METHODID_DELETE_CORRECTION)))
+        .addMethod(
+          getListCorrectionsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.vanalytics.ListCorrectionsRequest,
+              com.tcn.cloud.api.api.v1alpha1.vanalytics.ListCorrectionsResponse>(
+                service, METHODID_LIST_CORRECTIONS)))
+        .addMethod(
+          getUpdateCorrectionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.vanalytics.UpdateCorrectionRequest,
+              com.tcn.cloud.api.api.v1alpha1.vanalytics.UpdateCorrectionResponse>(
+                service, METHODID_UPDATE_CORRECTION)))
         .build();
   }
 
@@ -2724,6 +3064,10 @@ public final class VanalyticsGrpc {
               .addMethod(getListFlagSnapshotsMethod())
               .addMethod(getListFlagTranscriptFiltersMethod())
               .addMethod(getCreateCorrectionMethod())
+              .addMethod(getGetCorrectionMethod())
+              .addMethod(getDeleteCorrectionMethod())
+              .addMethod(getListCorrectionsMethod())
+              .addMethod(getUpdateCorrectionMethod())
               .build();
         }
       }

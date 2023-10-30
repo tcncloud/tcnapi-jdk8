@@ -324,6 +324,14 @@ public enum Permission
   PERMISSION_MANUAL_APPROVE(341),
   /**
    * <pre>
+   * Enables Agents to view plugins.
+   * </pre>
+   *
+   * <code>PERMISSION_AGENT_PLUGINS_VIEW = 342 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_AGENT_PLUGINS_VIEW(342),
+  /**
+   * <pre>
    * Enables Agents to view portals.
    * </pre>
    *
@@ -693,6 +701,14 @@ public enum Permission
   PERMISSION_PBX_MANAGER_EDIT(4101),
   /**
    * <pre>
+   * Enables access to the PBX Softphone Widget in the GlobalTopBar.
+   * </pre>
+   *
+   * <code>PERMISSION_PBX_SOFTPHONE_WIDGET = 4110 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_PBX_SOFTPHONE_WIDGET(4110),
+  /**
+   * <pre>
    * Enables access to viewing the main newsroom app and showing the popup
    * This permission will be give to orgs automatically, but can be removed
    * manually to opt out of newsroom notifications
@@ -1030,6 +1046,14 @@ public enum Permission
    * <code>PERMISSION_MANUAL_APPROVE = 341 [(.annotations.perms.options) = { ... }</code>
    */
   public static final int PERMISSION_MANUAL_APPROVE_VALUE = 341;
+  /**
+   * <pre>
+   * Enables Agents to view plugins.
+   * </pre>
+   *
+   * <code>PERMISSION_AGENT_PLUGINS_VIEW = 342 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_AGENT_PLUGINS_VIEW_VALUE = 342;
   /**
    * <pre>
    * Enables Agents to view portals.
@@ -1401,6 +1425,14 @@ public enum Permission
   public static final int PERMISSION_PBX_MANAGER_EDIT_VALUE = 4101;
   /**
    * <pre>
+   * Enables access to the PBX Softphone Widget in the GlobalTopBar.
+   * </pre>
+   *
+   * <code>PERMISSION_PBX_SOFTPHONE_WIDGET = 4110 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_PBX_SOFTPHONE_WIDGET_VALUE = 4110;
+  /**
+   * <pre>
    * Enables access to viewing the main newsroom app and showing the popup
    * This permission will be give to orgs automatically, but can be removed
    * manually to opt out of newsroom notifications
@@ -1490,6 +1522,7 @@ public enum Permission
       case 1400: return PERMISSION_EXTENSION_EDIT;
       case 1401: return PERMISSION_VOICEMAIL_DOWNLOAD;
       case 341: return PERMISSION_MANUAL_APPROVE;
+      case 342: return PERMISSION_AGENT_PLUGINS_VIEW;
       case 340: return PERMISSION_AGENT_PORTALS_VIEW;
       case 500: return PERMISSION_VOICE_ANALYTICS;
       case 501: return PERMISSION_VOICE_ANALYTICS_FLAG;
@@ -1536,6 +1569,7 @@ public enum Permission
       case 4000: return PERMISSION_WORKFLOWS;
       case 4100: return PERMISSION_PBX_MANAGER_VIEW;
       case 4101: return PERMISSION_PBX_MANAGER_EDIT;
+      case 4110: return PERMISSION_PBX_SOFTPHONE_WIDGET;
       case 4199: return PERMISSION_NEWSROOM_VIEW;
       case 4200: return PERMISSION_NEWSROOM_EDIT;
       case 4201: return PERMISSION_NEWSROOM_PUBLISH;

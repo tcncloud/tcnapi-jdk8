@@ -26,36 +26,6 @@ public interface TicketTemplateOrBuilder extends
       getTemplateNameBytes();
 
   /**
-   * <code>.google.protobuf.Timestamp template_start_date = 3 [json_name = "templateStartDate"];</code>
-   * @return Whether the templateStartDate field is set.
-   */
-  boolean hasTemplateStartDate();
-  /**
-   * <code>.google.protobuf.Timestamp template_start_date = 3 [json_name = "templateStartDate"];</code>
-   * @return The templateStartDate.
-   */
-  com.google.protobuf.Timestamp getTemplateStartDate();
-  /**
-   * <code>.google.protobuf.Timestamp template_start_date = 3 [json_name = "templateStartDate"];</code>
-   */
-  com.google.protobuf.TimestampOrBuilder getTemplateStartDateOrBuilder();
-
-  /**
-   * <code>.google.protobuf.Timestamp template_end_date = 4 [json_name = "templateEndDate"];</code>
-   * @return Whether the templateEndDate field is set.
-   */
-  boolean hasTemplateEndDate();
-  /**
-   * <code>.google.protobuf.Timestamp template_end_date = 4 [json_name = "templateEndDate"];</code>
-   * @return The templateEndDate.
-   */
-  com.google.protobuf.Timestamp getTemplateEndDate();
-  /**
-   * <code>.google.protobuf.Timestamp template_end_date = 4 [json_name = "templateEndDate"];</code>
-   */
-  com.google.protobuf.TimestampOrBuilder getTemplateEndDateOrBuilder();
-
-  /**
    * <code>string ticket_title = 5 [json_name = "ticketTitle"];</code>
    * @return The ticketTitle.
    */
