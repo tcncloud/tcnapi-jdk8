@@ -310,11 +310,6 @@ public final class OmniapiProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v0alpha_GetNextQueuedTaskRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v0alpha_GetNextQueuedTaskRequest_AgentSkillsEntry_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v0alpha_GetNextQueuedTaskRequest_AgentSkillsEntry_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_v0alpha_GetNextQueuedTaskResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -903,13 +898,9 @@ public final class OmniapiProto {
       "aders\";\n\013HeaderGroup\022\022\n\004name\030\001 \001(\tR\004name" +
       "\022\030\n\007headers\030\002 \003(\tR\007headers\"3\n\022ApproveTas" +
       "kRequest\022\035\n\010task_sid\030\001 \001(\003B\0020\001R\007taskSid\"" +
-      "\025\n\023ApproveTaskResponse\"\366\001\n\030GetNextQueued" +
-      "TaskRequest\022?\n\006skills\030\001 \001(\0132#.api.common" +
-      "s.OmniConversationSkillsB\002\030\001R\006skills\022Y\n\014" +
-      "agent_skills\030\002 \003(\01326.api.v0alpha.GetNext" +
-      "QueuedTaskRequest.AgentSkillsEntryR\013agen" +
-      "tSkills\032>\n\020AgentSkillsEntry\022\020\n\003key\030\001 \001(\t" +
-      "R\003key\022\024\n\005value\030\002 \001(\003R\005value:\0028\001\"F\n\031GetNe" +
+      "\025\n\023ApproveTaskResponse\"W\n\030GetNextQueuedT" +
+      "askRequest\022;\n\006skills\030\001 \001(\0132#.api.commons" +
+      ".OmniConversationSkillsR\006skills\"F\n\031GetNe" +
       "xtQueuedTaskResponse\022)\n\004task\030\001 \001(\0132\025.api" +
       ".commons.OmniTaskR\004task\"\345\001\n\nGetTaskReq\0229" +
       "\n\nfield_mask\030\001 \001(\0132\032.google.protobuf.Fie" +
@@ -1117,11 +1108,11 @@ public final class OmniapiProto {
       "ListUserSkillsRes\022.\n\006skills\030\001 \003(\0132\026.api." +
       "v0alpha.OmniSkillR\006skills\"\237\001\n\tOmniSkill\022" +
       "\026\n\006region\030\001 \001(\tR\006region\022\023\n\005p3_id\030\002 \001(\tR\004" +
-      "p3Id\022\022\n\004name\030\003 \001(\tR\004name\022 \n\013description\030",
+      "p3Id\022\022\n\004name\030\003 \001(\tR\004name\022 \n\013description\030" +
       "\004 \001(\tR\013description\022/\n\004type\030\005 \001(\0162\033.api.c" +
       "ommons.SkillType.EnumR\004type2\206S\n\007OmniApi\022" +
       "\216\001\n\017ArchiveCampaign\022\037.api.v0alpha.Archiv" +
-      "eCampaignReq\032\037.api.v0alpha.ArchiveCampai" +
+      "eCampaignReq\032\037.api.v0alpha.ArchiveCampai",
       "gnRes\"9\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002)\"$/api/v0alpha/om" +
       "niapi/archivecampaign:\001*\022\205\001\n\016CreateCampa" +
       "ign\022\036.api.v0alpha.CreateCampaignReq\032\031.ap" +
@@ -1754,13 +1745,7 @@ public final class OmniapiProto {
     internal_static_api_v0alpha_GetNextQueuedTaskRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_GetNextQueuedTaskRequest_descriptor,
-        new java.lang.String[] { "Skills", "AgentSkills", });
-    internal_static_api_v0alpha_GetNextQueuedTaskRequest_AgentSkillsEntry_descriptor =
-      internal_static_api_v0alpha_GetNextQueuedTaskRequest_descriptor.getNestedTypes().get(0);
-    internal_static_api_v0alpha_GetNextQueuedTaskRequest_AgentSkillsEntry_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v0alpha_GetNextQueuedTaskRequest_AgentSkillsEntry_descriptor,
-        new java.lang.String[] { "Key", "Value", });
+        new java.lang.String[] { "Skills", });
     internal_static_api_v0alpha_GetNextQueuedTaskResponse_descriptor =
       getDescriptor().getMessageTypes().get(45);
     internal_static_api_v0alpha_GetNextQueuedTaskResponse_fieldAccessorTable = new
