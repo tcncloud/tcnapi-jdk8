@@ -17,7 +17,8 @@ private static final long serialVersionUID = 0L;
   }
   private ListTemplate() {
     templateName_ = "";
-    projectCode_ = "";
+    template_ = "";
+    templateEntityVersion_ = "";
     createdById_ = "";
     projectTitle_ = "";
   }
@@ -103,39 +104,78 @@ private static final long serialVersionUID = 0L;
     return projectId_;
   }
 
-  public static final int PROJECT_CODE_FIELD_NUMBER = 4;
+  public static final int TEMPLATE_FIELD_NUMBER = 4;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object projectCode_ = "";
+  private volatile java.lang.Object template_ = "";
   /**
-   * <code>string project_code = 4 [json_name = "projectCode"];</code>
-   * @return The projectCode.
+   * <code>string template = 4 [json_name = "template"];</code>
+   * @return The template.
    */
   @java.lang.Override
-  public java.lang.String getProjectCode() {
-    java.lang.Object ref = projectCode_;
+  public java.lang.String getTemplate() {
+    java.lang.Object ref = template_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      projectCode_ = s;
+      template_ = s;
       return s;
     }
   }
   /**
-   * <code>string project_code = 4 [json_name = "projectCode"];</code>
-   * @return The bytes for projectCode.
+   * <code>string template = 4 [json_name = "template"];</code>
+   * @return The bytes for template.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getProjectCodeBytes() {
-    java.lang.Object ref = projectCode_;
+      getTemplateBytes() {
+    java.lang.Object ref = template_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      projectCode_ = b;
+      template_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int TEMPLATE_ENTITY_VERSION_FIELD_NUMBER = 5;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object templateEntityVersion_ = "";
+  /**
+   * <code>string template_entity_version = 5 [json_name = "templateEntityVersion"];</code>
+   * @return The templateEntityVersion.
+   */
+  @java.lang.Override
+  public java.lang.String getTemplateEntityVersion() {
+    java.lang.Object ref = templateEntityVersion_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      templateEntityVersion_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string template_entity_version = 5 [json_name = "templateEntityVersion"];</code>
+   * @return The bytes for templateEntityVersion.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getTemplateEntityVersionBytes() {
+    java.lang.Object ref = templateEntityVersion_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      templateEntityVersion_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -280,8 +320,11 @@ private static final long serialVersionUID = 0L;
     if (projectId_ != 0L) {
       output.writeInt64(3, projectId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectCode_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, projectCode_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(template_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, template_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(templateEntityVersion_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, templateEntityVersion_);
     }
     if (isActive_ != false) {
       output.writeBool(6, isActive_);
@@ -315,8 +358,11 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(3, projectId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectCode_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, projectCode_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(template_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, template_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(templateEntityVersion_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, templateEntityVersion_);
     }
     if (isActive_ != false) {
       size += com.google.protobuf.CodedOutputStream
@@ -353,8 +399,10 @@ private static final long serialVersionUID = 0L;
         .equals(other.getTemplateName())) return false;
     if (getProjectId()
         != other.getProjectId()) return false;
-    if (!getProjectCode()
-        .equals(other.getProjectCode())) return false;
+    if (!getTemplate()
+        .equals(other.getTemplate())) return false;
+    if (!getTemplateEntityVersion()
+        .equals(other.getTemplateEntityVersion())) return false;
     if (getIsActive()
         != other.getIsActive()) return false;
     if (!getCreatedById()
@@ -385,8 +433,10 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + PROJECT_ID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getProjectId());
-    hash = (37 * hash) + PROJECT_CODE_FIELD_NUMBER;
-    hash = (53 * hash) + getProjectCode().hashCode();
+    hash = (37 * hash) + TEMPLATE_FIELD_NUMBER;
+    hash = (53 * hash) + getTemplate().hashCode();
+    hash = (37 * hash) + TEMPLATE_ENTITY_VERSION_FIELD_NUMBER;
+    hash = (53 * hash) + getTemplateEntityVersion().hashCode();
     hash = (37 * hash) + IS_ACTIVE_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getIsActive());
@@ -532,7 +582,8 @@ private static final long serialVersionUID = 0L;
       ticketTemplateId_ = 0L;
       templateName_ = "";
       projectId_ = 0L;
-      projectCode_ = "";
+      template_ = "";
+      templateEntityVersion_ = "";
       isActive_ = false;
       createdById_ = "";
       createdDate_ = null;
@@ -584,20 +635,23 @@ private static final long serialVersionUID = 0L;
         result.projectId_ = projectId_;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.projectCode_ = projectCode_;
+        result.template_ = template_;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.isActive_ = isActive_;
+        result.templateEntityVersion_ = templateEntityVersion_;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.createdById_ = createdById_;
+        result.isActive_ = isActive_;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.createdById_ = createdById_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
         result.createdDate_ = createdDateBuilder_ == null
             ? createdDate_
             : createdDateBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00000080) != 0)) {
+      if (((from_bitField0_ & 0x00000100) != 0)) {
         result.projectTitle_ = projectTitle_;
       }
     }
@@ -657,9 +711,14 @@ private static final long serialVersionUID = 0L;
       if (other.getProjectId() != 0L) {
         setProjectId(other.getProjectId());
       }
-      if (!other.getProjectCode().isEmpty()) {
-        projectCode_ = other.projectCode_;
+      if (!other.getTemplate().isEmpty()) {
+        template_ = other.template_;
         bitField0_ |= 0x00000008;
+        onChanged();
+      }
+      if (!other.getTemplateEntityVersion().isEmpty()) {
+        templateEntityVersion_ = other.templateEntityVersion_;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       if (other.getIsActive() != false) {
@@ -667,7 +726,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getCreatedById().isEmpty()) {
         createdById_ = other.createdById_;
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000040;
         onChanged();
       }
       if (other.hasCreatedDate()) {
@@ -675,7 +734,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getProjectTitle().isEmpty()) {
         projectTitle_ = other.projectTitle_;
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000100;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -720,30 +779,35 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 24
             case 34: {
-              projectCode_ = input.readStringRequireUtf8();
+              template_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000008;
               break;
             } // case 34
+            case 42: {
+              templateEntityVersion_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
             case 48: {
               isActive_ = input.readBool();
-              bitField0_ |= 0x00000010;
+              bitField0_ |= 0x00000020;
               break;
             } // case 48
             case 58: {
               createdById_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000020;
+              bitField0_ |= 0x00000040;
               break;
             } // case 58
             case 66: {
               input.readMessage(
                   getCreatedDateFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000040;
+              bitField0_ |= 0x00000080;
               break;
             } // case 66
             case 74: {
               projectTitle_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000080;
+              bitField0_ |= 0x00000100;
               break;
             } // case 74
             default: {
@@ -899,74 +963,146 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object projectCode_ = "";
+    private java.lang.Object template_ = "";
     /**
-     * <code>string project_code = 4 [json_name = "projectCode"];</code>
-     * @return The projectCode.
+     * <code>string template = 4 [json_name = "template"];</code>
+     * @return The template.
      */
-    public java.lang.String getProjectCode() {
-      java.lang.Object ref = projectCode_;
+    public java.lang.String getTemplate() {
+      java.lang.Object ref = template_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        projectCode_ = s;
+        template_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
       }
     }
     /**
-     * <code>string project_code = 4 [json_name = "projectCode"];</code>
-     * @return The bytes for projectCode.
+     * <code>string template = 4 [json_name = "template"];</code>
+     * @return The bytes for template.
      */
     public com.google.protobuf.ByteString
-        getProjectCodeBytes() {
-      java.lang.Object ref = projectCode_;
+        getTemplateBytes() {
+      java.lang.Object ref = template_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        projectCode_ = b;
+        template_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <code>string project_code = 4 [json_name = "projectCode"];</code>
-     * @param value The projectCode to set.
+     * <code>string template = 4 [json_name = "template"];</code>
+     * @param value The template to set.
      * @return This builder for chaining.
      */
-    public Builder setProjectCode(
+    public Builder setTemplate(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      projectCode_ = value;
+      template_ = value;
       bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
     /**
-     * <code>string project_code = 4 [json_name = "projectCode"];</code>
+     * <code>string template = 4 [json_name = "template"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearProjectCode() {
-      projectCode_ = getDefaultInstance().getProjectCode();
+    public Builder clearTemplate() {
+      template_ = getDefaultInstance().getTemplate();
       bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
     /**
-     * <code>string project_code = 4 [json_name = "projectCode"];</code>
-     * @param value The bytes for projectCode to set.
+     * <code>string template = 4 [json_name = "template"];</code>
+     * @param value The bytes for template to set.
      * @return This builder for chaining.
      */
-    public Builder setProjectCodeBytes(
+    public Builder setTemplateBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      projectCode_ = value;
+      template_ = value;
       bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object templateEntityVersion_ = "";
+    /**
+     * <code>string template_entity_version = 5 [json_name = "templateEntityVersion"];</code>
+     * @return The templateEntityVersion.
+     */
+    public java.lang.String getTemplateEntityVersion() {
+      java.lang.Object ref = templateEntityVersion_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        templateEntityVersion_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string template_entity_version = 5 [json_name = "templateEntityVersion"];</code>
+     * @return The bytes for templateEntityVersion.
+     */
+    public com.google.protobuf.ByteString
+        getTemplateEntityVersionBytes() {
+      java.lang.Object ref = templateEntityVersion_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        templateEntityVersion_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string template_entity_version = 5 [json_name = "templateEntityVersion"];</code>
+     * @param value The templateEntityVersion to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTemplateEntityVersion(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      templateEntityVersion_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string template_entity_version = 5 [json_name = "templateEntityVersion"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTemplateEntityVersion() {
+      templateEntityVersion_ = getDefaultInstance().getTemplateEntityVersion();
+      bitField0_ = (bitField0_ & ~0x00000010);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string template_entity_version = 5 [json_name = "templateEntityVersion"];</code>
+     * @param value The bytes for templateEntityVersion to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTemplateEntityVersionBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      templateEntityVersion_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -988,7 +1124,7 @@ private static final long serialVersionUID = 0L;
     public Builder setIsActive(boolean value) {
 
       isActive_ = value;
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -997,7 +1133,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearIsActive() {
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000020);
       isActive_ = false;
       onChanged();
       return this;
@@ -1046,7 +1182,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       createdById_ = value;
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1056,7 +1192,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearCreatedById() {
       createdById_ = getDefaultInstance().getCreatedById();
-      bitField0_ = (bitField0_ & ~0x00000020);
+      bitField0_ = (bitField0_ & ~0x00000040);
       onChanged();
       return this;
     }
@@ -1070,7 +1206,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       createdById_ = value;
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1083,7 +1219,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the createdDate field is set.
      */
     public boolean hasCreatedDate() {
-      return ((bitField0_ & 0x00000040) != 0);
+      return ((bitField0_ & 0x00000080) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp created_date = 8 [json_name = "createdDate"];</code>
@@ -1108,7 +1244,7 @@ private static final long serialVersionUID = 0L;
       } else {
         createdDateBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1122,7 +1258,7 @@ private static final long serialVersionUID = 0L;
       } else {
         createdDateBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1131,7 +1267,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCreatedDate(com.google.protobuf.Timestamp value) {
       if (createdDateBuilder_ == null) {
-        if (((bitField0_ & 0x00000040) != 0) &&
+        if (((bitField0_ & 0x00000080) != 0) &&
           createdDate_ != null &&
           createdDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
           getCreatedDateBuilder().mergeFrom(value);
@@ -1141,7 +1277,7 @@ private static final long serialVersionUID = 0L;
       } else {
         createdDateBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1149,7 +1285,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp created_date = 8 [json_name = "createdDate"];</code>
      */
     public Builder clearCreatedDate() {
-      bitField0_ = (bitField0_ & ~0x00000040);
+      bitField0_ = (bitField0_ & ~0x00000080);
       createdDate_ = null;
       if (createdDateBuilder_ != null) {
         createdDateBuilder_.dispose();
@@ -1162,7 +1298,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp created_date = 8 [json_name = "createdDate"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getCreatedDateBuilder() {
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000080;
       onChanged();
       return getCreatedDateFieldBuilder().getBuilder();
     }
@@ -1237,7 +1373,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       projectTitle_ = value;
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -1247,7 +1383,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearProjectTitle() {
       projectTitle_ = getDefaultInstance().getProjectTitle();
-      bitField0_ = (bitField0_ & ~0x00000080);
+      bitField0_ = (bitField0_ & ~0x00000100);
       onChanged();
       return this;
     }
@@ -1261,7 +1397,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       projectTitle_ = value;
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }

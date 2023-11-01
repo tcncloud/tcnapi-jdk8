@@ -32,16 +32,28 @@ public interface ListTemplateOrBuilder extends
   long getProjectId();
 
   /**
-   * <code>string project_code = 4 [json_name = "projectCode"];</code>
-   * @return The projectCode.
+   * <code>string template = 4 [json_name = "template"];</code>
+   * @return The template.
    */
-  java.lang.String getProjectCode();
+  java.lang.String getTemplate();
   /**
-   * <code>string project_code = 4 [json_name = "projectCode"];</code>
-   * @return The bytes for projectCode.
+   * <code>string template = 4 [json_name = "template"];</code>
+   * @return The bytes for template.
    */
   com.google.protobuf.ByteString
-      getProjectCodeBytes();
+      getTemplateBytes();
+
+  /**
+   * <code>string template_entity_version = 5 [json_name = "templateEntityVersion"];</code>
+   * @return The templateEntityVersion.
+   */
+  java.lang.String getTemplateEntityVersion();
+  /**
+   * <code>string template_entity_version = 5 [json_name = "templateEntityVersion"];</code>
+   * @return The bytes for templateEntityVersion.
+   */
+  com.google.protobuf.ByteString
+      getTemplateEntityVersionBytes();
 
   /**
    * <code>bool is_active = 6 [json_name = "isActive"];</code>

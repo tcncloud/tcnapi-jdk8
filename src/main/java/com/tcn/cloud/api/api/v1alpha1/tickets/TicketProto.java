@@ -340,7 +340,7 @@ public final class TicketProto {
       "lateResponse\022F\n\021enabled_templates\030\001 \003(\0132" +
       "\031.api.commons.ListTemplateR\020enabledTempl" +
       "ates\"m\n\034AssignProjectTemplateRequest\022M\n\020" +
-      "project_template\030\001 \003(\0132\".api.commons.Ass" +
+      "project_template\030\001 \001(\0132\".api.commons.Ass" +
       "ignProjectTemplateR\017projectTemplate\"@\n\035A" +
       "ssignProjectTemplateResponse\022\037\n\013is_assig" +
       "ned\030\001 \001(\010R\nisAssigned\">\n\017CreateTicketRes" +

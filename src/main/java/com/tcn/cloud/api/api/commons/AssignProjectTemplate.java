@@ -16,10 +16,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private AssignProjectTemplate() {
-    templateName_ = "";
-    projectCode_ = "";
-    actionType_ = "";
-    projectTitle_ = "";
+    ticketTemplateId_ = emptyLongList();
   }
 
   @java.lang.Override
@@ -43,181 +40,43 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TICKET_TEMPLATE_ID_FIELD_NUMBER = 1;
-  private long ticketTemplateId_ = 0L;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.Internal.LongList ticketTemplateId_;
   /**
-   * <code>int64 ticket_template_id = 1 [json_name = "ticketTemplateId", jstype = JS_STRING];</code>
-   * @return The ticketTemplateId.
+   * <code>repeated int64 ticket_template_id = 1 [json_name = "ticketTemplateId", jstype = JS_STRING];</code>
+   * @return A list containing the ticketTemplateId.
    */
   @java.lang.Override
-  public long getTicketTemplateId() {
+  public java.util.List<java.lang.Long>
+      getTicketTemplateIdList() {
     return ticketTemplateId_;
   }
+  /**
+   * <code>repeated int64 ticket_template_id = 1 [json_name = "ticketTemplateId", jstype = JS_STRING];</code>
+   * @return The count of ticketTemplateId.
+   */
+  public int getTicketTemplateIdCount() {
+    return ticketTemplateId_.size();
+  }
+  /**
+   * <code>repeated int64 ticket_template_id = 1 [json_name = "ticketTemplateId", jstype = JS_STRING];</code>
+   * @param index The index of the element to return.
+   * @return The ticketTemplateId at the given index.
+   */
+  public long getTicketTemplateId(int index) {
+    return ticketTemplateId_.getLong(index);
+  }
+  private int ticketTemplateIdMemoizedSerializedSize = -1;
 
-  public static final int TEMPLATE_NAME_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object templateName_ = "";
+  public static final int PROJECT_ID_FIELD_NUMBER = 2;
+  private long projectId_ = 0L;
   /**
-   * <code>string template_name = 2 [json_name = "templateName"];</code>
-   * @return The templateName.
+   * <code>int64 project_id = 2 [json_name = "projectId", jstype = JS_STRING];</code>
+   * @return The projectId.
    */
   @java.lang.Override
-  public java.lang.String getTemplateName() {
-    java.lang.Object ref = templateName_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      templateName_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string template_name = 2 [json_name = "templateName"];</code>
-   * @return The bytes for templateName.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getTemplateNameBytes() {
-    java.lang.Object ref = templateName_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      templateName_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int PROJECT_SID_FIELD_NUMBER = 3;
-  private long projectSid_ = 0L;
-  /**
-   * <code>int64 project_sid = 3 [json_name = "projectSid", jstype = JS_STRING];</code>
-   * @return The projectSid.
-   */
-  @java.lang.Override
-  public long getProjectSid() {
-    return projectSid_;
-  }
-
-  public static final int PROJECT_CODE_FIELD_NUMBER = 4;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object projectCode_ = "";
-  /**
-   * <code>string project_code = 4 [json_name = "projectCode"];</code>
-   * @return The projectCode.
-   */
-  @java.lang.Override
-  public java.lang.String getProjectCode() {
-    java.lang.Object ref = projectCode_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      projectCode_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string project_code = 4 [json_name = "projectCode"];</code>
-   * @return The bytes for projectCode.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getProjectCodeBytes() {
-    java.lang.Object ref = projectCode_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      projectCode_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int ACTION_TYPE_FIELD_NUMBER = 5;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object actionType_ = "";
-  /**
-   * <code>string action_type = 5 [json_name = "actionType"];</code>
-   * @return The actionType.
-   */
-  @java.lang.Override
-  public java.lang.String getActionType() {
-    java.lang.Object ref = actionType_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      actionType_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string action_type = 5 [json_name = "actionType"];</code>
-   * @return The bytes for actionType.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getActionTypeBytes() {
-    java.lang.Object ref = actionType_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      actionType_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int PROJECT_TITLE_FIELD_NUMBER = 6;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object projectTitle_ = "";
-  /**
-   * <code>string project_title = 6 [json_name = "projectTitle"];</code>
-   * @return The projectTitle.
-   */
-  @java.lang.Override
-  public java.lang.String getProjectTitle() {
-    java.lang.Object ref = projectTitle_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      projectTitle_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string project_title = 6 [json_name = "projectTitle"];</code>
-   * @return The bytes for projectTitle.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getProjectTitleBytes() {
-    java.lang.Object ref = projectTitle_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      projectTitle_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
+  public long getProjectId() {
+    return projectId_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -234,23 +93,16 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (ticketTemplateId_ != 0L) {
-      output.writeInt64(1, ticketTemplateId_);
+    getSerializedSize();
+    if (getTicketTemplateIdList().size() > 0) {
+      output.writeUInt32NoTag(10);
+      output.writeUInt32NoTag(ticketTemplateIdMemoizedSerializedSize);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(templateName_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, templateName_);
+    for (int i = 0; i < ticketTemplateId_.size(); i++) {
+      output.writeInt64NoTag(ticketTemplateId_.getLong(i));
     }
-    if (projectSid_ != 0L) {
-      output.writeInt64(3, projectSid_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectCode_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, projectCode_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(actionType_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, actionType_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectTitle_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 6, projectTitle_);
+    if (projectId_ != 0L) {
+      output.writeInt64(2, projectId_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -261,25 +113,23 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (ticketTemplateId_ != 0L) {
+    {
+      int dataSize = 0;
+      for (int i = 0; i < ticketTemplateId_.size(); i++) {
+        dataSize += com.google.protobuf.CodedOutputStream
+          .computeInt64SizeNoTag(ticketTemplateId_.getLong(i));
+      }
+      size += dataSize;
+      if (!getTicketTemplateIdList().isEmpty()) {
+        size += 1;
+        size += com.google.protobuf.CodedOutputStream
+            .computeInt32SizeNoTag(dataSize);
+      }
+      ticketTemplateIdMemoizedSerializedSize = dataSize;
+    }
+    if (projectId_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(1, ticketTemplateId_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(templateName_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, templateName_);
-    }
-    if (projectSid_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(3, projectSid_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectCode_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, projectCode_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(actionType_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, actionType_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectTitle_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, projectTitle_);
+        .computeInt64Size(2, projectId_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -296,18 +146,10 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.commons.AssignProjectTemplate other = (com.tcn.cloud.api.api.commons.AssignProjectTemplate) obj;
 
-    if (getTicketTemplateId()
-        != other.getTicketTemplateId()) return false;
-    if (!getTemplateName()
-        .equals(other.getTemplateName())) return false;
-    if (getProjectSid()
-        != other.getProjectSid()) return false;
-    if (!getProjectCode()
-        .equals(other.getProjectCode())) return false;
-    if (!getActionType()
-        .equals(other.getActionType())) return false;
-    if (!getProjectTitle()
-        .equals(other.getProjectTitle())) return false;
+    if (!getTicketTemplateIdList()
+        .equals(other.getTicketTemplateIdList())) return false;
+    if (getProjectId()
+        != other.getProjectId()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -319,20 +161,13 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + TICKET_TEMPLATE_ID_FIELD_NUMBER;
+    if (getTicketTemplateIdCount() > 0) {
+      hash = (37 * hash) + TICKET_TEMPLATE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getTicketTemplateIdList().hashCode();
+    }
+    hash = (37 * hash) + PROJECT_ID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getTicketTemplateId());
-    hash = (37 * hash) + TEMPLATE_NAME_FIELD_NUMBER;
-    hash = (53 * hash) + getTemplateName().hashCode();
-    hash = (37 * hash) + PROJECT_SID_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getProjectSid());
-    hash = (37 * hash) + PROJECT_CODE_FIELD_NUMBER;
-    hash = (53 * hash) + getProjectCode().hashCode();
-    hash = (37 * hash) + ACTION_TYPE_FIELD_NUMBER;
-    hash = (53 * hash) + getActionType().hashCode();
-    hash = (37 * hash) + PROJECT_TITLE_FIELD_NUMBER;
-    hash = (53 * hash) + getProjectTitle().hashCode();
+        getProjectId());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -464,12 +299,8 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      ticketTemplateId_ = 0L;
-      templateName_ = "";
-      projectSid_ = 0L;
-      projectCode_ = "";
-      actionType_ = "";
-      projectTitle_ = "";
+      ticketTemplateId_ = emptyLongList();
+      projectId_ = 0L;
       return this;
     }
 
@@ -496,30 +327,24 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.AssignProjectTemplate buildPartial() {
       com.tcn.cloud.api.api.commons.AssignProjectTemplate result = new com.tcn.cloud.api.api.commons.AssignProjectTemplate(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.commons.AssignProjectTemplate result) {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        ticketTemplateId_.makeImmutable();
+        bitField0_ = (bitField0_ & ~0x00000001);
+      }
+      result.ticketTemplateId_ = ticketTemplateId_;
+    }
+
     private void buildPartial0(com.tcn.cloud.api.api.commons.AssignProjectTemplate result) {
       int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.ticketTemplateId_ = ticketTemplateId_;
-      }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.templateName_ = templateName_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.projectSid_ = projectSid_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.projectCode_ = projectCode_;
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.actionType_ = actionType_;
-      }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.projectTitle_ = projectTitle_;
+        result.projectId_ = projectId_;
       }
     }
 
@@ -567,31 +392,18 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.commons.AssignProjectTemplate other) {
       if (other == com.tcn.cloud.api.api.commons.AssignProjectTemplate.getDefaultInstance()) return this;
-      if (other.getTicketTemplateId() != 0L) {
-        setTicketTemplateId(other.getTicketTemplateId());
-      }
-      if (!other.getTemplateName().isEmpty()) {
-        templateName_ = other.templateName_;
-        bitField0_ |= 0x00000002;
+      if (!other.ticketTemplateId_.isEmpty()) {
+        if (ticketTemplateId_.isEmpty()) {
+          ticketTemplateId_ = other.ticketTemplateId_;
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          ensureTicketTemplateIdIsMutable();
+          ticketTemplateId_.addAll(other.ticketTemplateId_);
+        }
         onChanged();
       }
-      if (other.getProjectSid() != 0L) {
-        setProjectSid(other.getProjectSid());
-      }
-      if (!other.getProjectCode().isEmpty()) {
-        projectCode_ = other.projectCode_;
-        bitField0_ |= 0x00000008;
-        onChanged();
-      }
-      if (!other.getActionType().isEmpty()) {
-        actionType_ = other.actionType_;
-        bitField0_ |= 0x00000010;
-        onChanged();
-      }
-      if (!other.getProjectTitle().isEmpty()) {
-        projectTitle_ = other.projectTitle_;
-        bitField0_ |= 0x00000020;
-        onChanged();
+      if (other.getProjectId() != 0L) {
+        setProjectId(other.getProjectId());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -620,35 +432,26 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 8: {
-              ticketTemplateId_ = input.readInt64();
-              bitField0_ |= 0x00000001;
+              long v = input.readInt64();
+              ensureTicketTemplateIdIsMutable();
+              ticketTemplateId_.addLong(v);
               break;
             } // case 8
-            case 18: {
-              templateName_ = input.readStringRequireUtf8();
+            case 10: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              ensureTicketTemplateIdIsMutable();
+              while (input.getBytesUntilLimit() > 0) {
+                ticketTemplateId_.addLong(input.readInt64());
+              }
+              input.popLimit(limit);
+              break;
+            } // case 10
+            case 16: {
+              projectId_ = input.readInt64();
               bitField0_ |= 0x00000002;
               break;
-            } // case 18
-            case 24: {
-              projectSid_ = input.readInt64();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 24
-            case 34: {
-              projectCode_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 34
-            case 42: {
-              actionType_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 42
-            case 50: {
-              projectTitle_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 50
+            } // case 16
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -666,354 +469,115 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private long ticketTemplateId_ ;
-    /**
-     * <code>int64 ticket_template_id = 1 [json_name = "ticketTemplateId", jstype = JS_STRING];</code>
-     * @return The ticketTemplateId.
-     */
-    @java.lang.Override
-    public long getTicketTemplateId() {
-      return ticketTemplateId_;
+    private com.google.protobuf.Internal.LongList ticketTemplateId_ = emptyLongList();
+    private void ensureTicketTemplateIdIsMutable() {
+      if (!((bitField0_ & 0x00000001) != 0)) {
+        ticketTemplateId_ = mutableCopy(ticketTemplateId_);
+        bitField0_ |= 0x00000001;
+      }
     }
     /**
-     * <code>int64 ticket_template_id = 1 [json_name = "ticketTemplateId", jstype = JS_STRING];</code>
+     * <code>repeated int64 ticket_template_id = 1 [json_name = "ticketTemplateId", jstype = JS_STRING];</code>
+     * @return A list containing the ticketTemplateId.
+     */
+    public java.util.List<java.lang.Long>
+        getTicketTemplateIdList() {
+      return ((bitField0_ & 0x00000001) != 0) ?
+               java.util.Collections.unmodifiableList(ticketTemplateId_) : ticketTemplateId_;
+    }
+    /**
+     * <code>repeated int64 ticket_template_id = 1 [json_name = "ticketTemplateId", jstype = JS_STRING];</code>
+     * @return The count of ticketTemplateId.
+     */
+    public int getTicketTemplateIdCount() {
+      return ticketTemplateId_.size();
+    }
+    /**
+     * <code>repeated int64 ticket_template_id = 1 [json_name = "ticketTemplateId", jstype = JS_STRING];</code>
+     * @param index The index of the element to return.
+     * @return The ticketTemplateId at the given index.
+     */
+    public long getTicketTemplateId(int index) {
+      return ticketTemplateId_.getLong(index);
+    }
+    /**
+     * <code>repeated int64 ticket_template_id = 1 [json_name = "ticketTemplateId", jstype = JS_STRING];</code>
+     * @param index The index to set the value at.
      * @param value The ticketTemplateId to set.
      * @return This builder for chaining.
      */
-    public Builder setTicketTemplateId(long value) {
+    public Builder setTicketTemplateId(
+        int index, long value) {
 
-      ticketTemplateId_ = value;
-      bitField0_ |= 0x00000001;
+      ensureTicketTemplateIdIsMutable();
+      ticketTemplateId_.setLong(index, value);
       onChanged();
       return this;
     }
     /**
-     * <code>int64 ticket_template_id = 1 [json_name = "ticketTemplateId", jstype = JS_STRING];</code>
+     * <code>repeated int64 ticket_template_id = 1 [json_name = "ticketTemplateId", jstype = JS_STRING];</code>
+     * @param value The ticketTemplateId to add.
+     * @return This builder for chaining.
+     */
+    public Builder addTicketTemplateId(long value) {
+
+      ensureTicketTemplateIdIsMutable();
+      ticketTemplateId_.addLong(value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated int64 ticket_template_id = 1 [json_name = "ticketTemplateId", jstype = JS_STRING];</code>
+     * @param values The ticketTemplateId to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllTicketTemplateId(
+        java.lang.Iterable<? extends java.lang.Long> values) {
+      ensureTicketTemplateIdIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, ticketTemplateId_);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated int64 ticket_template_id = 1 [json_name = "ticketTemplateId", jstype = JS_STRING];</code>
      * @return This builder for chaining.
      */
     public Builder clearTicketTemplateId() {
+      ticketTemplateId_ = emptyLongList();
       bitField0_ = (bitField0_ & ~0x00000001);
-      ticketTemplateId_ = 0L;
       onChanged();
       return this;
     }
 
-    private java.lang.Object templateName_ = "";
+    private long projectId_ ;
     /**
-     * <code>string template_name = 2 [json_name = "templateName"];</code>
-     * @return The templateName.
-     */
-    public java.lang.String getTemplateName() {
-      java.lang.Object ref = templateName_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        templateName_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string template_name = 2 [json_name = "templateName"];</code>
-     * @return The bytes for templateName.
-     */
-    public com.google.protobuf.ByteString
-        getTemplateNameBytes() {
-      java.lang.Object ref = templateName_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        templateName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string template_name = 2 [json_name = "templateName"];</code>
-     * @param value The templateName to set.
-     * @return This builder for chaining.
-     */
-    public Builder setTemplateName(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      templateName_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string template_name = 2 [json_name = "templateName"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearTemplateName() {
-      templateName_ = getDefaultInstance().getTemplateName();
-      bitField0_ = (bitField0_ & ~0x00000002);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string template_name = 2 [json_name = "templateName"];</code>
-     * @param value The bytes for templateName to set.
-     * @return This builder for chaining.
-     */
-    public Builder setTemplateNameBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      templateName_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-
-    private long projectSid_ ;
-    /**
-     * <code>int64 project_sid = 3 [json_name = "projectSid", jstype = JS_STRING];</code>
-     * @return The projectSid.
+     * <code>int64 project_id = 2 [json_name = "projectId", jstype = JS_STRING];</code>
+     * @return The projectId.
      */
     @java.lang.Override
-    public long getProjectSid() {
-      return projectSid_;
+    public long getProjectId() {
+      return projectId_;
     }
     /**
-     * <code>int64 project_sid = 3 [json_name = "projectSid", jstype = JS_STRING];</code>
-     * @param value The projectSid to set.
+     * <code>int64 project_id = 2 [json_name = "projectId", jstype = JS_STRING];</code>
+     * @param value The projectId to set.
      * @return This builder for chaining.
      */
-    public Builder setProjectSid(long value) {
+    public Builder setProjectId(long value) {
 
-      projectSid_ = value;
-      bitField0_ |= 0x00000004;
+      projectId_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
-     * <code>int64 project_sid = 3 [json_name = "projectSid", jstype = JS_STRING];</code>
+     * <code>int64 project_id = 2 [json_name = "projectId", jstype = JS_STRING];</code>
      * @return This builder for chaining.
      */
-    public Builder clearProjectSid() {
-      bitField0_ = (bitField0_ & ~0x00000004);
-      projectSid_ = 0L;
-      onChanged();
-      return this;
-    }
-
-    private java.lang.Object projectCode_ = "";
-    /**
-     * <code>string project_code = 4 [json_name = "projectCode"];</code>
-     * @return The projectCode.
-     */
-    public java.lang.String getProjectCode() {
-      java.lang.Object ref = projectCode_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        projectCode_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string project_code = 4 [json_name = "projectCode"];</code>
-     * @return The bytes for projectCode.
-     */
-    public com.google.protobuf.ByteString
-        getProjectCodeBytes() {
-      java.lang.Object ref = projectCode_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        projectCode_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string project_code = 4 [json_name = "projectCode"];</code>
-     * @param value The projectCode to set.
-     * @return This builder for chaining.
-     */
-    public Builder setProjectCode(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      projectCode_ = value;
-      bitField0_ |= 0x00000008;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string project_code = 4 [json_name = "projectCode"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearProjectCode() {
-      projectCode_ = getDefaultInstance().getProjectCode();
-      bitField0_ = (bitField0_ & ~0x00000008);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string project_code = 4 [json_name = "projectCode"];</code>
-     * @param value The bytes for projectCode to set.
-     * @return This builder for chaining.
-     */
-    public Builder setProjectCodeBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      projectCode_ = value;
-      bitField0_ |= 0x00000008;
-      onChanged();
-      return this;
-    }
-
-    private java.lang.Object actionType_ = "";
-    /**
-     * <code>string action_type = 5 [json_name = "actionType"];</code>
-     * @return The actionType.
-     */
-    public java.lang.String getActionType() {
-      java.lang.Object ref = actionType_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        actionType_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string action_type = 5 [json_name = "actionType"];</code>
-     * @return The bytes for actionType.
-     */
-    public com.google.protobuf.ByteString
-        getActionTypeBytes() {
-      java.lang.Object ref = actionType_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        actionType_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string action_type = 5 [json_name = "actionType"];</code>
-     * @param value The actionType to set.
-     * @return This builder for chaining.
-     */
-    public Builder setActionType(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      actionType_ = value;
-      bitField0_ |= 0x00000010;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string action_type = 5 [json_name = "actionType"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearActionType() {
-      actionType_ = getDefaultInstance().getActionType();
-      bitField0_ = (bitField0_ & ~0x00000010);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string action_type = 5 [json_name = "actionType"];</code>
-     * @param value The bytes for actionType to set.
-     * @return This builder for chaining.
-     */
-    public Builder setActionTypeBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      actionType_ = value;
-      bitField0_ |= 0x00000010;
-      onChanged();
-      return this;
-    }
-
-    private java.lang.Object projectTitle_ = "";
-    /**
-     * <code>string project_title = 6 [json_name = "projectTitle"];</code>
-     * @return The projectTitle.
-     */
-    public java.lang.String getProjectTitle() {
-      java.lang.Object ref = projectTitle_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        projectTitle_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string project_title = 6 [json_name = "projectTitle"];</code>
-     * @return The bytes for projectTitle.
-     */
-    public com.google.protobuf.ByteString
-        getProjectTitleBytes() {
-      java.lang.Object ref = projectTitle_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        projectTitle_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string project_title = 6 [json_name = "projectTitle"];</code>
-     * @param value The projectTitle to set.
-     * @return This builder for chaining.
-     */
-    public Builder setProjectTitle(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      projectTitle_ = value;
-      bitField0_ |= 0x00000020;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string project_title = 6 [json_name = "projectTitle"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearProjectTitle() {
-      projectTitle_ = getDefaultInstance().getProjectTitle();
-      bitField0_ = (bitField0_ & ~0x00000020);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string project_title = 6 [json_name = "projectTitle"];</code>
-     * @param value The bytes for projectTitle to set.
-     * @return This builder for chaining.
-     */
-    public Builder setProjectTitleBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      projectTitle_ = value;
-      bitField0_ |= 0x00000020;
+    public Builder clearProjectId() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      projectId_ = 0L;
       onChanged();
       return this;
     }

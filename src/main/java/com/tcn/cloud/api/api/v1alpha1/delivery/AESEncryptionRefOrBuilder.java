@@ -8,7 +8,7 @@ public interface AESEncryptionRefOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>int64 aes_sid = 1 [json_name = "aesSid"];</code>
+   * <code>int64 aes_sid = 1 [json_name = "aesSid", jstype = JS_STRING];</code>
    * @return The aesSid.
    */
   long getAesSid();

@@ -41,7 +41,7 @@ private static final long serialVersionUID = 0L;
   public static final int PASSWORD_SID_FIELD_NUMBER = 1;
   private long passwordSid_ = 0L;
   /**
-   * <code>int64 password_sid = 1 [json_name = "passwordSid"];</code>
+   * <code>int64 password_sid = 1 [json_name = "passwordSid", jstype = JS_STRING];</code>
    * @return The passwordSid.
    */
   @java.lang.Override
@@ -377,7 +377,7 @@ private static final long serialVersionUID = 0L;
 
     private long passwordSid_ ;
     /**
-     * <code>int64 password_sid = 1 [json_name = "passwordSid"];</code>
+     * <code>int64 password_sid = 1 [json_name = "passwordSid", jstype = JS_STRING];</code>
      * @return The passwordSid.
      */
     @java.lang.Override
@@ -385,7 +385,7 @@ private static final long serialVersionUID = 0L;
       return passwordSid_;
     }
     /**
-     * <code>int64 password_sid = 1 [json_name = "passwordSid"];</code>
+     * <code>int64 password_sid = 1 [json_name = "passwordSid", jstype = JS_STRING];</code>
      * @param value The passwordSid to set.
      * @return This builder for chaining.
      */
@@ -397,7 +397,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int64 password_sid = 1 [json_name = "passwordSid"];</code>
+     * <code>int64 password_sid = 1 [json_name = "passwordSid", jstype = JS_STRING];</code>
      * @return This builder for chaining.
      */
     public Builder clearPasswordSid() {

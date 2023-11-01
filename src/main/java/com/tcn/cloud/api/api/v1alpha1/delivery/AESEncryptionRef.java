@@ -41,7 +41,7 @@ private static final long serialVersionUID = 0L;
   public static final int AES_SID_FIELD_NUMBER = 1;
   private long aesSid_ = 0L;
   /**
-   * <code>int64 aes_sid = 1 [json_name = "aesSid"];</code>
+   * <code>int64 aes_sid = 1 [json_name = "aesSid", jstype = JS_STRING];</code>
    * @return The aesSid.
    */
   @java.lang.Override
@@ -377,7 +377,7 @@ private static final long serialVersionUID = 0L;
 
     private long aesSid_ ;
     /**
-     * <code>int64 aes_sid = 1 [json_name = "aesSid"];</code>
+     * <code>int64 aes_sid = 1 [json_name = "aesSid", jstype = JS_STRING];</code>
      * @return The aesSid.
      */
     @java.lang.Override
@@ -385,7 +385,7 @@ private static final long serialVersionUID = 0L;
       return aesSid_;
     }
     /**
-     * <code>int64 aes_sid = 1 [json_name = "aesSid"];</code>
+     * <code>int64 aes_sid = 1 [json_name = "aesSid", jstype = JS_STRING];</code>
      * @param value The aesSid to set.
      * @return This builder for chaining.
      */
@@ -397,7 +397,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int64 aes_sid = 1 [json_name = "aesSid"];</code>
+     * <code>int64 aes_sid = 1 [json_name = "aesSid", jstype = JS_STRING];</code>
      * @return This builder for chaining.
      */
     public Builder clearAesSid() {

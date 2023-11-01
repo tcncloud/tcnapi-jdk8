@@ -8,7 +8,7 @@ public interface PGPEncryptionRefOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>int64 pgp_sid = 1 [json_name = "pgpSid"];</code>
+   * <code>int64 pgp_sid = 1 [json_name = "pgpSid", jstype = JS_STRING];</code>
    * @return The pgpSid.
    */
   long getPgpSid();

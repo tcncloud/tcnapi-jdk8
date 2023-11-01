@@ -8,62 +8,25 @@ public interface AssignProjectTemplateOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>int64 ticket_template_id = 1 [json_name = "ticketTemplateId", jstype = JS_STRING];</code>
-   * @return The ticketTemplateId.
+   * <code>repeated int64 ticket_template_id = 1 [json_name = "ticketTemplateId", jstype = JS_STRING];</code>
+   * @return A list containing the ticketTemplateId.
    */
-  long getTicketTemplateId();
+  java.util.List<java.lang.Long> getTicketTemplateIdList();
+  /**
+   * <code>repeated int64 ticket_template_id = 1 [json_name = "ticketTemplateId", jstype = JS_STRING];</code>
+   * @return The count of ticketTemplateId.
+   */
+  int getTicketTemplateIdCount();
+  /**
+   * <code>repeated int64 ticket_template_id = 1 [json_name = "ticketTemplateId", jstype = JS_STRING];</code>
+   * @param index The index of the element to return.
+   * @return The ticketTemplateId at the given index.
+   */
+  long getTicketTemplateId(int index);
 
   /**
-   * <code>string template_name = 2 [json_name = "templateName"];</code>
-   * @return The templateName.
+   * <code>int64 project_id = 2 [json_name = "projectId", jstype = JS_STRING];</code>
+   * @return The projectId.
    */
-  java.lang.String getTemplateName();
-  /**
-   * <code>string template_name = 2 [json_name = "templateName"];</code>
-   * @return The bytes for templateName.
-   */
-  com.google.protobuf.ByteString
-      getTemplateNameBytes();
-
-  /**
-   * <code>int64 project_sid = 3 [json_name = "projectSid", jstype = JS_STRING];</code>
-   * @return The projectSid.
-   */
-  long getProjectSid();
-
-  /**
-   * <code>string project_code = 4 [json_name = "projectCode"];</code>
-   * @return The projectCode.
-   */
-  java.lang.String getProjectCode();
-  /**
-   * <code>string project_code = 4 [json_name = "projectCode"];</code>
-   * @return The bytes for projectCode.
-   */
-  com.google.protobuf.ByteString
-      getProjectCodeBytes();
-
-  /**
-   * <code>string action_type = 5 [json_name = "actionType"];</code>
-   * @return The actionType.
-   */
-  java.lang.String getActionType();
-  /**
-   * <code>string action_type = 5 [json_name = "actionType"];</code>
-   * @return The bytes for actionType.
-   */
-  com.google.protobuf.ByteString
-      getActionTypeBytes();
-
-  /**
-   * <code>string project_title = 6 [json_name = "projectTitle"];</code>
-   * @return The projectTitle.
-   */
-  java.lang.String getProjectTitle();
-  /**
-   * <code>string project_title = 6 [json_name = "projectTitle"];</code>
-   * @return The bytes for projectTitle.
-   */
-  com.google.protobuf.ByteString
-      getProjectTitleBytes();
+  long getProjectId();
 }

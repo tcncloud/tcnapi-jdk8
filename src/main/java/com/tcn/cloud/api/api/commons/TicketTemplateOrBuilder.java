@@ -62,61 +62,61 @@ public interface TicketTemplateOrBuilder extends
       getTemplateNameBytes();
 
   /**
-   * <code>string created_by_id = 7 [json_name = "createdById"];</code>
+   * <code>string created_by_id = 6 [json_name = "createdById"];</code>
    * @return The createdById.
    */
   java.lang.String getCreatedById();
   /**
-   * <code>string created_by_id = 7 [json_name = "createdById"];</code>
+   * <code>string created_by_id = 6 [json_name = "createdById"];</code>
    * @return The bytes for createdById.
    */
   com.google.protobuf.ByteString
       getCreatedByIdBytes();
 
   /**
-   * <code>string modified_by = 8 [json_name = "modifiedBy"];</code>
+   * <code>string modified_by = 7 [json_name = "modifiedBy"];</code>
    * @return The modifiedBy.
    */
   java.lang.String getModifiedBy();
   /**
-   * <code>string modified_by = 8 [json_name = "modifiedBy"];</code>
+   * <code>string modified_by = 7 [json_name = "modifiedBy"];</code>
    * @return The bytes for modifiedBy.
    */
   com.google.protobuf.ByteString
       getModifiedByBytes();
 
   /**
-   * <code>.google.protobuf.Timestamp created_date = 9 [json_name = "createdDate"];</code>
+   * <code>.google.protobuf.Timestamp created_date = 8 [json_name = "createdDate"];</code>
    * @return Whether the createdDate field is set.
    */
   boolean hasCreatedDate();
   /**
-   * <code>.google.protobuf.Timestamp created_date = 9 [json_name = "createdDate"];</code>
+   * <code>.google.protobuf.Timestamp created_date = 8 [json_name = "createdDate"];</code>
    * @return The createdDate.
    */
   com.google.protobuf.Timestamp getCreatedDate();
   /**
-   * <code>.google.protobuf.Timestamp created_date = 9 [json_name = "createdDate"];</code>
+   * <code>.google.protobuf.Timestamp created_date = 8 [json_name = "createdDate"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getCreatedDateOrBuilder();
 
   /**
-   * <code>.google.protobuf.Timestamp modified_date = 10 [json_name = "modifiedDate"];</code>
+   * <code>.google.protobuf.Timestamp modified_date = 9 [json_name = "modifiedDate"];</code>
    * @return Whether the modifiedDate field is set.
    */
   boolean hasModifiedDate();
   /**
-   * <code>.google.protobuf.Timestamp modified_date = 10 [json_name = "modifiedDate"];</code>
+   * <code>.google.protobuf.Timestamp modified_date = 9 [json_name = "modifiedDate"];</code>
    * @return The modifiedDate.
    */
   com.google.protobuf.Timestamp getModifiedDate();
   /**
-   * <code>.google.protobuf.Timestamp modified_date = 10 [json_name = "modifiedDate"];</code>
+   * <code>.google.protobuf.Timestamp modified_date = 9 [json_name = "modifiedDate"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getModifiedDateOrBuilder();
 
   /**
-   * <code>bool is_active = 11 [json_name = "isActive"];</code>
+   * <code>bool is_active = 10 [json_name = "isActive"];</code>
    * @return The isActive.
    */
   boolean getIsActive();
