@@ -6,4 +6,43 @@ package com.tcn.cloud.api.api.v1alpha1.tickets;
 public interface ListTicketTemplateRequestOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v1alpha1.tickets.ListTicketTemplateRequest)
     com.google.protobuf.MessageOrBuilder {
+
+  /**
+   * <code>int64 ticket_template_id = 1 [json_name = "ticketTemplateId"];</code>
+   * @return The ticketTemplateId.
+   */
+  long getTicketTemplateId();
+
+  /**
+   * <code>int64 project_id = 2 [json_name = "projectId"];</code>
+   * @return The projectId.
+   */
+  long getProjectId();
+
+  /**
+   * <pre>
+   * List values based on TemplateId OR ProjectId. If no mask is sent, return all template's based on ORG Id
+   * </pre>
+   *
+   * <code>.google.protobuf.FieldMask request_mask = 3 [json_name = "requestMask"];</code>
+   * @return Whether the requestMask field is set.
+   */
+  boolean hasRequestMask();
+  /**
+   * <pre>
+   * List values based on TemplateId OR ProjectId. If no mask is sent, return all template's based on ORG Id
+   * </pre>
+   *
+   * <code>.google.protobuf.FieldMask request_mask = 3 [json_name = "requestMask"];</code>
+   * @return The requestMask.
+   */
+  com.google.protobuf.FieldMask getRequestMask();
+  /**
+   * <pre>
+   * List values based on TemplateId OR ProjectId. If no mask is sent, return all template's based on ORG Id
+   * </pre>
+   *
+   * <code>.google.protobuf.FieldMask request_mask = 3 [json_name = "requestMask"];</code>
+   */
+  com.google.protobuf.FieldMaskOrBuilder getRequestMaskOrBuilder();
 }

@@ -38,6 +38,66 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.tickets.ListTicketTemplateRequest.class, com.tcn.cloud.api.api.v1alpha1.tickets.ListTicketTemplateRequest.Builder.class);
   }
 
+  public static final int TICKET_TEMPLATE_ID_FIELD_NUMBER = 1;
+  private long ticketTemplateId_ = 0L;
+  /**
+   * <code>int64 ticket_template_id = 1 [json_name = "ticketTemplateId"];</code>
+   * @return The ticketTemplateId.
+   */
+  @java.lang.Override
+  public long getTicketTemplateId() {
+    return ticketTemplateId_;
+  }
+
+  public static final int PROJECT_ID_FIELD_NUMBER = 2;
+  private long projectId_ = 0L;
+  /**
+   * <code>int64 project_id = 2 [json_name = "projectId"];</code>
+   * @return The projectId.
+   */
+  @java.lang.Override
+  public long getProjectId() {
+    return projectId_;
+  }
+
+  public static final int REQUEST_MASK_FIELD_NUMBER = 3;
+  private com.google.protobuf.FieldMask requestMask_;
+  /**
+   * <pre>
+   * List values based on TemplateId OR ProjectId. If no mask is sent, return all template's based on ORG Id
+   * </pre>
+   *
+   * <code>.google.protobuf.FieldMask request_mask = 3 [json_name = "requestMask"];</code>
+   * @return Whether the requestMask field is set.
+   */
+  @java.lang.Override
+  public boolean hasRequestMask() {
+    return requestMask_ != null;
+  }
+  /**
+   * <pre>
+   * List values based on TemplateId OR ProjectId. If no mask is sent, return all template's based on ORG Id
+   * </pre>
+   *
+   * <code>.google.protobuf.FieldMask request_mask = 3 [json_name = "requestMask"];</code>
+   * @return The requestMask.
+   */
+  @java.lang.Override
+  public com.google.protobuf.FieldMask getRequestMask() {
+    return requestMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : requestMask_;
+  }
+  /**
+   * <pre>
+   * List values based on TemplateId OR ProjectId. If no mask is sent, return all template's based on ORG Id
+   * </pre>
+   *
+   * <code>.google.protobuf.FieldMask request_mask = 3 [json_name = "requestMask"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.FieldMaskOrBuilder getRequestMaskOrBuilder() {
+    return requestMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : requestMask_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -52,6 +112,15 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    if (ticketTemplateId_ != 0L) {
+      output.writeInt64(1, ticketTemplateId_);
+    }
+    if (projectId_ != 0L) {
+      output.writeInt64(2, projectId_);
+    }
+    if (requestMask_ != null) {
+      output.writeMessage(3, getRequestMask());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -61,6 +130,18 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    if (ticketTemplateId_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(1, ticketTemplateId_);
+    }
+    if (projectId_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(2, projectId_);
+    }
+    if (requestMask_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, getRequestMask());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -76,6 +157,15 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v1alpha1.tickets.ListTicketTemplateRequest other = (com.tcn.cloud.api.api.v1alpha1.tickets.ListTicketTemplateRequest) obj;
 
+    if (getTicketTemplateId()
+        != other.getTicketTemplateId()) return false;
+    if (getProjectId()
+        != other.getProjectId()) return false;
+    if (hasRequestMask() != other.hasRequestMask()) return false;
+    if (hasRequestMask()) {
+      if (!getRequestMask()
+          .equals(other.getRequestMask())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -87,6 +177,16 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + TICKET_TEMPLATE_ID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getTicketTemplateId());
+    hash = (37 * hash) + PROJECT_ID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getProjectId());
+    if (hasRequestMask()) {
+      hash = (37 * hash) + REQUEST_MASK_FIELD_NUMBER;
+      hash = (53 * hash) + getRequestMask().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -217,6 +317,14 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
+      ticketTemplateId_ = 0L;
+      projectId_ = 0L;
+      requestMask_ = null;
+      if (requestMaskBuilder_ != null) {
+        requestMaskBuilder_.dispose();
+        requestMaskBuilder_ = null;
+      }
       return this;
     }
 
@@ -243,8 +351,24 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.tickets.ListTicketTemplateRequest buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.tickets.ListTicketTemplateRequest result = new com.tcn.cloud.api.api.v1alpha1.tickets.ListTicketTemplateRequest(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.tickets.ListTicketTemplateRequest result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.ticketTemplateId_ = ticketTemplateId_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.projectId_ = projectId_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.requestMask_ = requestMaskBuilder_ == null
+            ? requestMask_
+            : requestMaskBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -291,6 +415,15 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.tickets.ListTicketTemplateRequest other) {
       if (other == com.tcn.cloud.api.api.v1alpha1.tickets.ListTicketTemplateRequest.getDefaultInstance()) return this;
+      if (other.getTicketTemplateId() != 0L) {
+        setTicketTemplateId(other.getTicketTemplateId());
+      }
+      if (other.getProjectId() != 0L) {
+        setProjectId(other.getProjectId());
+      }
+      if (other.hasRequestMask()) {
+        mergeRequestMask(other.getRequestMask());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -317,6 +450,23 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
+            case 8: {
+              ticketTemplateId_ = input.readInt64();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 16: {
+              projectId_ = input.readInt64();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
+            case 26: {
+              input.readMessage(
+                  getRequestMaskFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -331,6 +481,226 @@ private static final long serialVersionUID = 0L;
         onChanged();
       } // finally
       return this;
+    }
+    private int bitField0_;
+
+    private long ticketTemplateId_ ;
+    /**
+     * <code>int64 ticket_template_id = 1 [json_name = "ticketTemplateId"];</code>
+     * @return The ticketTemplateId.
+     */
+    @java.lang.Override
+    public long getTicketTemplateId() {
+      return ticketTemplateId_;
+    }
+    /**
+     * <code>int64 ticket_template_id = 1 [json_name = "ticketTemplateId"];</code>
+     * @param value The ticketTemplateId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTicketTemplateId(long value) {
+
+      ticketTemplateId_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int64 ticket_template_id = 1 [json_name = "ticketTemplateId"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTicketTemplateId() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      ticketTemplateId_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private long projectId_ ;
+    /**
+     * <code>int64 project_id = 2 [json_name = "projectId"];</code>
+     * @return The projectId.
+     */
+    @java.lang.Override
+    public long getProjectId() {
+      return projectId_;
+    }
+    /**
+     * <code>int64 project_id = 2 [json_name = "projectId"];</code>
+     * @param value The projectId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setProjectId(long value) {
+
+      projectId_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int64 project_id = 2 [json_name = "projectId"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearProjectId() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      projectId_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.FieldMask requestMask_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> requestMaskBuilder_;
+    /**
+     * <pre>
+     * List values based on TemplateId OR ProjectId. If no mask is sent, return all template's based on ORG Id
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask request_mask = 3 [json_name = "requestMask"];</code>
+     * @return Whether the requestMask field is set.
+     */
+    public boolean hasRequestMask() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * List values based on TemplateId OR ProjectId. If no mask is sent, return all template's based on ORG Id
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask request_mask = 3 [json_name = "requestMask"];</code>
+     * @return The requestMask.
+     */
+    public com.google.protobuf.FieldMask getRequestMask() {
+      if (requestMaskBuilder_ == null) {
+        return requestMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : requestMask_;
+      } else {
+        return requestMaskBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * List values based on TemplateId OR ProjectId. If no mask is sent, return all template's based on ORG Id
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask request_mask = 3 [json_name = "requestMask"];</code>
+     */
+    public Builder setRequestMask(com.google.protobuf.FieldMask value) {
+      if (requestMaskBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        requestMask_ = value;
+      } else {
+        requestMaskBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * List values based on TemplateId OR ProjectId. If no mask is sent, return all template's based on ORG Id
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask request_mask = 3 [json_name = "requestMask"];</code>
+     */
+    public Builder setRequestMask(
+        com.google.protobuf.FieldMask.Builder builderForValue) {
+      if (requestMaskBuilder_ == null) {
+        requestMask_ = builderForValue.build();
+      } else {
+        requestMaskBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * List values based on TemplateId OR ProjectId. If no mask is sent, return all template's based on ORG Id
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask request_mask = 3 [json_name = "requestMask"];</code>
+     */
+    public Builder mergeRequestMask(com.google.protobuf.FieldMask value) {
+      if (requestMaskBuilder_ == null) {
+        if (((bitField0_ & 0x00000004) != 0) &&
+          requestMask_ != null &&
+          requestMask_ != com.google.protobuf.FieldMask.getDefaultInstance()) {
+          getRequestMaskBuilder().mergeFrom(value);
+        } else {
+          requestMask_ = value;
+        }
+      } else {
+        requestMaskBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * List values based on TemplateId OR ProjectId. If no mask is sent, return all template's based on ORG Id
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask request_mask = 3 [json_name = "requestMask"];</code>
+     */
+    public Builder clearRequestMask() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      requestMask_ = null;
+      if (requestMaskBuilder_ != null) {
+        requestMaskBuilder_.dispose();
+        requestMaskBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * List values based on TemplateId OR ProjectId. If no mask is sent, return all template's based on ORG Id
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask request_mask = 3 [json_name = "requestMask"];</code>
+     */
+    public com.google.protobuf.FieldMask.Builder getRequestMaskBuilder() {
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return getRequestMaskFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * List values based on TemplateId OR ProjectId. If no mask is sent, return all template's based on ORG Id
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask request_mask = 3 [json_name = "requestMask"];</code>
+     */
+    public com.google.protobuf.FieldMaskOrBuilder getRequestMaskOrBuilder() {
+      if (requestMaskBuilder_ != null) {
+        return requestMaskBuilder_.getMessageOrBuilder();
+      } else {
+        return requestMask_ == null ?
+            com.google.protobuf.FieldMask.getDefaultInstance() : requestMask_;
+      }
+    }
+    /**
+     * <pre>
+     * List values based on TemplateId OR ProjectId. If no mask is sent, return all template's based on ORG Id
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask request_mask = 3 [json_name = "requestMask"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> 
+        getRequestMaskFieldBuilder() {
+      if (requestMaskBuilder_ == null) {
+        requestMaskBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder>(
+                getRequestMask(),
+                getParentForChildren(),
+                isClean());
+        requestMask_ = null;
+      }
+      return requestMaskBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
