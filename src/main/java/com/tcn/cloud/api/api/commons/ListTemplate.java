@@ -18,7 +18,6 @@ private static final long serialVersionUID = 0L;
   private ListTemplate() {
     templateName_ = "";
     projectCode_ = "";
-    actionType_ = "";
     createdById_ = "";
     projectTitle_ = "";
   }
@@ -93,15 +92,15 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int PROJECT_SID_FIELD_NUMBER = 3;
-  private long projectSid_ = 0L;
+  public static final int PROJECT_ID_FIELD_NUMBER = 3;
+  private long projectId_ = 0L;
   /**
-   * <code>int64 project_sid = 3 [json_name = "projectSid", jstype = JS_STRING];</code>
-   * @return The projectSid.
+   * <code>int64 project_id = 3 [json_name = "projectId", jstype = JS_STRING];</code>
+   * @return The projectId.
    */
   @java.lang.Override
-  public long getProjectSid() {
-    return projectSid_;
+  public long getProjectId() {
+    return projectId_;
   }
 
   public static final int PROJECT_CODE_FIELD_NUMBER = 4;
@@ -143,54 +142,15 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int ACTION_TYPE_FIELD_NUMBER = 5;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object actionType_ = "";
+  public static final int IS_ACTIVE_FIELD_NUMBER = 6;
+  private boolean isActive_ = false;
   /**
-   * <code>string action_type = 5 [json_name = "actionType"];</code>
-   * @return The actionType.
+   * <code>bool is_active = 6 [json_name = "isActive"];</code>
+   * @return The isActive.
    */
   @java.lang.Override
-  public java.lang.String getActionType() {
-    java.lang.Object ref = actionType_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      actionType_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string action_type = 5 [json_name = "actionType"];</code>
-   * @return The bytes for actionType.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getActionTypeBytes() {
-    java.lang.Object ref = actionType_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      actionType_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int IS_VALID_FIELD_NUMBER = 6;
-  private boolean isValid_ = false;
-  /**
-   * <code>bool is_valid = 6 [json_name = "isValid"];</code>
-   * @return The isValid.
-   */
-  @java.lang.Override
-  public boolean getIsValid() {
-    return isValid_;
+  public boolean getIsActive() {
+    return isActive_;
   }
 
   public static final int CREATED_BY_ID_FIELD_NUMBER = 7;
@@ -317,17 +277,14 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(templateName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, templateName_);
     }
-    if (projectSid_ != 0L) {
-      output.writeInt64(3, projectSid_);
+    if (projectId_ != 0L) {
+      output.writeInt64(3, projectId_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectCode_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, projectCode_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(actionType_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, actionType_);
-    }
-    if (isValid_ != false) {
-      output.writeBool(6, isValid_);
+    if (isActive_ != false) {
+      output.writeBool(6, isActive_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createdById_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 7, createdById_);
@@ -354,19 +311,16 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(templateName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, templateName_);
     }
-    if (projectSid_ != 0L) {
+    if (projectId_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(3, projectSid_);
+        .computeInt64Size(3, projectId_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectCode_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, projectCode_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(actionType_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, actionType_);
-    }
-    if (isValid_ != false) {
+    if (isActive_ != false) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(6, isValid_);
+        .computeBoolSize(6, isActive_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createdById_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, createdById_);
@@ -397,14 +351,12 @@ private static final long serialVersionUID = 0L;
         != other.getTicketTemplateId()) return false;
     if (!getTemplateName()
         .equals(other.getTemplateName())) return false;
-    if (getProjectSid()
-        != other.getProjectSid()) return false;
+    if (getProjectId()
+        != other.getProjectId()) return false;
     if (!getProjectCode()
         .equals(other.getProjectCode())) return false;
-    if (!getActionType()
-        .equals(other.getActionType())) return false;
-    if (getIsValid()
-        != other.getIsValid()) return false;
+    if (getIsActive()
+        != other.getIsActive()) return false;
     if (!getCreatedById()
         .equals(other.getCreatedById())) return false;
     if (hasCreatedDate() != other.hasCreatedDate()) return false;
@@ -430,16 +382,14 @@ private static final long serialVersionUID = 0L;
         getTicketTemplateId());
     hash = (37 * hash) + TEMPLATE_NAME_FIELD_NUMBER;
     hash = (53 * hash) + getTemplateName().hashCode();
-    hash = (37 * hash) + PROJECT_SID_FIELD_NUMBER;
+    hash = (37 * hash) + PROJECT_ID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getProjectSid());
+        getProjectId());
     hash = (37 * hash) + PROJECT_CODE_FIELD_NUMBER;
     hash = (53 * hash) + getProjectCode().hashCode();
-    hash = (37 * hash) + ACTION_TYPE_FIELD_NUMBER;
-    hash = (53 * hash) + getActionType().hashCode();
-    hash = (37 * hash) + IS_VALID_FIELD_NUMBER;
+    hash = (37 * hash) + IS_ACTIVE_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-        getIsValid());
+        getIsActive());
     hash = (37 * hash) + CREATED_BY_ID_FIELD_NUMBER;
     hash = (53 * hash) + getCreatedById().hashCode();
     if (hasCreatedDate()) {
@@ -581,10 +531,9 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       ticketTemplateId_ = 0L;
       templateName_ = "";
-      projectSid_ = 0L;
+      projectId_ = 0L;
       projectCode_ = "";
-      actionType_ = "";
-      isValid_ = false;
+      isActive_ = false;
       createdById_ = "";
       createdDate_ = null;
       if (createdDateBuilder_ != null) {
@@ -632,26 +581,23 @@ private static final long serialVersionUID = 0L;
         result.templateName_ = templateName_;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.projectSid_ = projectSid_;
+        result.projectId_ = projectId_;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.projectCode_ = projectCode_;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.actionType_ = actionType_;
+        result.isActive_ = isActive_;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.isValid_ = isValid_;
-      }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
         result.createdById_ = createdById_;
       }
-      if (((from_bitField0_ & 0x00000080) != 0)) {
+      if (((from_bitField0_ & 0x00000040) != 0)) {
         result.createdDate_ = createdDateBuilder_ == null
             ? createdDate_
             : createdDateBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00000100) != 0)) {
+      if (((from_bitField0_ & 0x00000080) != 0)) {
         result.projectTitle_ = projectTitle_;
       }
     }
@@ -708,25 +654,20 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000002;
         onChanged();
       }
-      if (other.getProjectSid() != 0L) {
-        setProjectSid(other.getProjectSid());
+      if (other.getProjectId() != 0L) {
+        setProjectId(other.getProjectId());
       }
       if (!other.getProjectCode().isEmpty()) {
         projectCode_ = other.projectCode_;
         bitField0_ |= 0x00000008;
         onChanged();
       }
-      if (!other.getActionType().isEmpty()) {
-        actionType_ = other.actionType_;
-        bitField0_ |= 0x00000010;
-        onChanged();
-      }
-      if (other.getIsValid() != false) {
-        setIsValid(other.getIsValid());
+      if (other.getIsActive() != false) {
+        setIsActive(other.getIsActive());
       }
       if (!other.getCreatedById().isEmpty()) {
         createdById_ = other.createdById_;
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000020;
         onChanged();
       }
       if (other.hasCreatedDate()) {
@@ -734,7 +675,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getProjectTitle().isEmpty()) {
         projectTitle_ = other.projectTitle_;
-        bitField0_ |= 0x00000100;
+        bitField0_ |= 0x00000080;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -774,7 +715,7 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 18
             case 24: {
-              projectSid_ = input.readInt64();
+              projectId_ = input.readInt64();
               bitField0_ |= 0x00000004;
               break;
             } // case 24
@@ -783,31 +724,26 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000008;
               break;
             } // case 34
-            case 42: {
-              actionType_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 42
             case 48: {
-              isValid_ = input.readBool();
-              bitField0_ |= 0x00000020;
+              isActive_ = input.readBool();
+              bitField0_ |= 0x00000010;
               break;
             } // case 48
             case 58: {
               createdById_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000040;
+              bitField0_ |= 0x00000020;
               break;
             } // case 58
             case 66: {
               input.readMessage(
                   getCreatedDateFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000080;
+              bitField0_ |= 0x00000040;
               break;
             } // case 66
             case 74: {
               projectTitle_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000100;
+              bitField0_ |= 0x00000080;
               break;
             } // case 74
             default: {
@@ -931,34 +867,34 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private long projectSid_ ;
+    private long projectId_ ;
     /**
-     * <code>int64 project_sid = 3 [json_name = "projectSid", jstype = JS_STRING];</code>
-     * @return The projectSid.
+     * <code>int64 project_id = 3 [json_name = "projectId", jstype = JS_STRING];</code>
+     * @return The projectId.
      */
     @java.lang.Override
-    public long getProjectSid() {
-      return projectSid_;
+    public long getProjectId() {
+      return projectId_;
     }
     /**
-     * <code>int64 project_sid = 3 [json_name = "projectSid", jstype = JS_STRING];</code>
-     * @param value The projectSid to set.
+     * <code>int64 project_id = 3 [json_name = "projectId", jstype = JS_STRING];</code>
+     * @param value The projectId to set.
      * @return This builder for chaining.
      */
-    public Builder setProjectSid(long value) {
+    public Builder setProjectId(long value) {
 
-      projectSid_ = value;
+      projectId_ = value;
       bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
-     * <code>int64 project_sid = 3 [json_name = "projectSid", jstype = JS_STRING];</code>
+     * <code>int64 project_id = 3 [json_name = "projectId", jstype = JS_STRING];</code>
      * @return This builder for chaining.
      */
-    public Builder clearProjectSid() {
+    public Builder clearProjectId() {
       bitField0_ = (bitField0_ & ~0x00000004);
-      projectSid_ = 0L;
+      projectId_ = 0L;
       onChanged();
       return this;
     }
@@ -1035,106 +971,34 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object actionType_ = "";
+    private boolean isActive_ ;
     /**
-     * <code>string action_type = 5 [json_name = "actionType"];</code>
-     * @return The actionType.
-     */
-    public java.lang.String getActionType() {
-      java.lang.Object ref = actionType_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        actionType_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string action_type = 5 [json_name = "actionType"];</code>
-     * @return The bytes for actionType.
-     */
-    public com.google.protobuf.ByteString
-        getActionTypeBytes() {
-      java.lang.Object ref = actionType_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        actionType_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string action_type = 5 [json_name = "actionType"];</code>
-     * @param value The actionType to set.
-     * @return This builder for chaining.
-     */
-    public Builder setActionType(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      actionType_ = value;
-      bitField0_ |= 0x00000010;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string action_type = 5 [json_name = "actionType"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearActionType() {
-      actionType_ = getDefaultInstance().getActionType();
-      bitField0_ = (bitField0_ & ~0x00000010);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string action_type = 5 [json_name = "actionType"];</code>
-     * @param value The bytes for actionType to set.
-     * @return This builder for chaining.
-     */
-    public Builder setActionTypeBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      actionType_ = value;
-      bitField0_ |= 0x00000010;
-      onChanged();
-      return this;
-    }
-
-    private boolean isValid_ ;
-    /**
-     * <code>bool is_valid = 6 [json_name = "isValid"];</code>
-     * @return The isValid.
+     * <code>bool is_active = 6 [json_name = "isActive"];</code>
+     * @return The isActive.
      */
     @java.lang.Override
-    public boolean getIsValid() {
-      return isValid_;
+    public boolean getIsActive() {
+      return isActive_;
     }
     /**
-     * <code>bool is_valid = 6 [json_name = "isValid"];</code>
-     * @param value The isValid to set.
+     * <code>bool is_active = 6 [json_name = "isActive"];</code>
+     * @param value The isActive to set.
      * @return This builder for chaining.
      */
-    public Builder setIsValid(boolean value) {
+    public Builder setIsActive(boolean value) {
 
-      isValid_ = value;
-      bitField0_ |= 0x00000020;
+      isActive_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
     /**
-     * <code>bool is_valid = 6 [json_name = "isValid"];</code>
+     * <code>bool is_active = 6 [json_name = "isActive"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearIsValid() {
-      bitField0_ = (bitField0_ & ~0x00000020);
-      isValid_ = false;
+    public Builder clearIsActive() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      isActive_ = false;
       onChanged();
       return this;
     }
@@ -1182,7 +1046,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       createdById_ = value;
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1192,7 +1056,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearCreatedById() {
       createdById_ = getDefaultInstance().getCreatedById();
-      bitField0_ = (bitField0_ & ~0x00000040);
+      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
@@ -1206,7 +1070,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       createdById_ = value;
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1219,7 +1083,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the createdDate field is set.
      */
     public boolean hasCreatedDate() {
-      return ((bitField0_ & 0x00000080) != 0);
+      return ((bitField0_ & 0x00000040) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp created_date = 8 [json_name = "createdDate"];</code>
@@ -1244,7 +1108,7 @@ private static final long serialVersionUID = 0L;
       } else {
         createdDateBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1258,7 +1122,7 @@ private static final long serialVersionUID = 0L;
       } else {
         createdDateBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1267,7 +1131,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCreatedDate(com.google.protobuf.Timestamp value) {
       if (createdDateBuilder_ == null) {
-        if (((bitField0_ & 0x00000080) != 0) &&
+        if (((bitField0_ & 0x00000040) != 0) &&
           createdDate_ != null &&
           createdDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
           getCreatedDateBuilder().mergeFrom(value);
@@ -1277,7 +1141,7 @@ private static final long serialVersionUID = 0L;
       } else {
         createdDateBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1285,7 +1149,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp created_date = 8 [json_name = "createdDate"];</code>
      */
     public Builder clearCreatedDate() {
-      bitField0_ = (bitField0_ & ~0x00000080);
+      bitField0_ = (bitField0_ & ~0x00000040);
       createdDate_ = null;
       if (createdDateBuilder_ != null) {
         createdDateBuilder_.dispose();
@@ -1298,7 +1162,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp created_date = 8 [json_name = "createdDate"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getCreatedDateBuilder() {
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000040;
       onChanged();
       return getCreatedDateFieldBuilder().getBuilder();
     }
@@ -1373,7 +1237,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       projectTitle_ = value;
-      bitField0_ |= 0x00000100;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1383,7 +1247,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearProjectTitle() {
       projectTitle_ = getDefaultInstance().getProjectTitle();
-      bitField0_ = (bitField0_ & ~0x00000100);
+      bitField0_ = (bitField0_ & ~0x00000080);
       onChanged();
       return this;
     }
@@ -1397,7 +1261,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       projectTitle_ = value;
-      bitField0_ |= 0x00000100;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }

@@ -26,10 +26,10 @@ public interface ListTemplateOrBuilder extends
       getTemplateNameBytes();
 
   /**
-   * <code>int64 project_sid = 3 [json_name = "projectSid", jstype = JS_STRING];</code>
-   * @return The projectSid.
+   * <code>int64 project_id = 3 [json_name = "projectId", jstype = JS_STRING];</code>
+   * @return The projectId.
    */
-  long getProjectSid();
+  long getProjectId();
 
   /**
    * <code>string project_code = 4 [json_name = "projectCode"];</code>
@@ -44,22 +44,10 @@ public interface ListTemplateOrBuilder extends
       getProjectCodeBytes();
 
   /**
-   * <code>string action_type = 5 [json_name = "actionType"];</code>
-   * @return The actionType.
+   * <code>bool is_active = 6 [json_name = "isActive"];</code>
+   * @return The isActive.
    */
-  java.lang.String getActionType();
-  /**
-   * <code>string action_type = 5 [json_name = "actionType"];</code>
-   * @return The bytes for actionType.
-   */
-  com.google.protobuf.ByteString
-      getActionTypeBytes();
-
-  /**
-   * <code>bool is_valid = 6 [json_name = "isValid"];</code>
-   * @return The isValid.
-   */
-  boolean getIsValid();
+  boolean getIsActive();
 
   /**
    * <code>string created_by_id = 7 [json_name = "createdById"];</code>
