@@ -16,16 +16,12 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private TicketTemplate() {
+    orgId_ = "";
+    template_ = "";
+    templateEntityVersion_ = "";
     templateName_ = "";
-    ticketTitle_ = "";
-    ticketDescription_ = "";
-    ticketAssignee_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-    ticketSla_ = java.util.Collections.emptyList();
-    actionType_ = "";
-    actionSkills_ = java.util.Collections.emptyList();
-    actionSla_ = java.util.Collections.emptyList();
     createdById_ = "";
+    modifiedBy_ = "";
   }
 
   @java.lang.Override
@@ -51,7 +47,7 @@ private static final long serialVersionUID = 0L;
   public static final int TICKET_TEMPLATE_ID_FIELD_NUMBER = 1;
   private long ticketTemplateId_ = 0L;
   /**
-   * <code>int64 ticket_template_id = 1 [json_name = "ticketTemplateId", jstype = JS_STRING];</code>
+   * <code>int64 ticket_template_id = 1 [json_name = "ticketTemplateId"];</code>
    * @return The ticketTemplateId.
    */
   @java.lang.Override
@@ -59,11 +55,128 @@ private static final long serialVersionUID = 0L;
     return ticketTemplateId_;
   }
 
-  public static final int TEMPLATE_NAME_FIELD_NUMBER = 2;
+  public static final int ORG_ID_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object orgId_ = "";
+  /**
+   * <code>string org_id = 2 [json_name = "orgId"];</code>
+   * @return The orgId.
+   */
+  @java.lang.Override
+  public java.lang.String getOrgId() {
+    java.lang.Object ref = orgId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      orgId_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string org_id = 2 [json_name = "orgId"];</code>
+   * @return The bytes for orgId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getOrgIdBytes() {
+    java.lang.Object ref = orgId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      orgId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int TEMPLATE_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object template_ = "";
+  /**
+   * <code>string template = 3 [json_name = "template"];</code>
+   * @return The template.
+   */
+  @java.lang.Override
+  public java.lang.String getTemplate() {
+    java.lang.Object ref = template_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      template_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string template = 3 [json_name = "template"];</code>
+   * @return The bytes for template.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getTemplateBytes() {
+    java.lang.Object ref = template_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      template_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int TEMPLATE_ENTITY_VERSION_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object templateEntityVersion_ = "";
+  /**
+   * <code>string template_entity_version = 4 [json_name = "templateEntityVersion"];</code>
+   * @return The templateEntityVersion.
+   */
+  @java.lang.Override
+  public java.lang.String getTemplateEntityVersion() {
+    java.lang.Object ref = templateEntityVersion_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      templateEntityVersion_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string template_entity_version = 4 [json_name = "templateEntityVersion"];</code>
+   * @return The bytes for templateEntityVersion.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getTemplateEntityVersionBytes() {
+    java.lang.Object ref = templateEntityVersion_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      templateEntityVersion_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int TEMPLATE_NAME_FIELD_NUMBER = 5;
   @SuppressWarnings("serial")
   private volatile java.lang.Object templateName_ = "";
   /**
-   * <code>string template_name = 2 [json_name = "templateName"];</code>
+   * <code>string template_name = 5 [json_name = "templateName"];</code>
    * @return The templateName.
    */
   @java.lang.Override
@@ -80,7 +193,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string template_name = 2 [json_name = "templateName"];</code>
+   * <code>string template_name = 5 [json_name = "templateName"];</code>
    * @return The bytes for templateName.
    */
   @java.lang.Override
@@ -98,501 +211,11 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int TICKET_TITLE_FIELD_NUMBER = 5;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object ticketTitle_ = "";
-  /**
-   * <code>string ticket_title = 5 [json_name = "ticketTitle"];</code>
-   * @return The ticketTitle.
-   */
-  @java.lang.Override
-  public java.lang.String getTicketTitle() {
-    java.lang.Object ref = ticketTitle_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      ticketTitle_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string ticket_title = 5 [json_name = "ticketTitle"];</code>
-   * @return The bytes for ticketTitle.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getTicketTitleBytes() {
-    java.lang.Object ref = ticketTitle_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      ticketTitle_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int TICKET_DESCRIPTION_FIELD_NUMBER = 6;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object ticketDescription_ = "";
-  /**
-   * <code>string ticket_description = 6 [json_name = "ticketDescription"];</code>
-   * @return The ticketDescription.
-   */
-  @java.lang.Override
-  public java.lang.String getTicketDescription() {
-    java.lang.Object ref = ticketDescription_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      ticketDescription_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string ticket_description = 6 [json_name = "ticketDescription"];</code>
-   * @return The bytes for ticketDescription.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getTicketDescriptionBytes() {
-    java.lang.Object ref = ticketDescription_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      ticketDescription_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int TITLE_CONDITION_FIELD_NUMBER = 7;
-  private com.tcn.cloud.api.api.commons.TemplateCondition titleCondition_;
-  /**
-   * <code>.api.commons.TemplateCondition title_condition = 7 [json_name = "titleCondition"];</code>
-   * @return Whether the titleCondition field is set.
-   */
-  @java.lang.Override
-  public boolean hasTitleCondition() {
-    return titleCondition_ != null;
-  }
-  /**
-   * <code>.api.commons.TemplateCondition title_condition = 7 [json_name = "titleCondition"];</code>
-   * @return The titleCondition.
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.TemplateCondition getTitleCondition() {
-    return titleCondition_ == null ? com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance() : titleCondition_;
-  }
-  /**
-   * <code>.api.commons.TemplateCondition title_condition = 7 [json_name = "titleCondition"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder getTitleConditionOrBuilder() {
-    return titleCondition_ == null ? com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance() : titleCondition_;
-  }
-
-  public static final int DESCRIPTION_CONDITION_FIELD_NUMBER = 8;
-  private com.tcn.cloud.api.api.commons.TemplateCondition descriptionCondition_;
-  /**
-   * <code>.api.commons.TemplateCondition description_condition = 8 [json_name = "descriptionCondition"];</code>
-   * @return Whether the descriptionCondition field is set.
-   */
-  @java.lang.Override
-  public boolean hasDescriptionCondition() {
-    return descriptionCondition_ != null;
-  }
-  /**
-   * <code>.api.commons.TemplateCondition description_condition = 8 [json_name = "descriptionCondition"];</code>
-   * @return The descriptionCondition.
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.TemplateCondition getDescriptionCondition() {
-    return descriptionCondition_ == null ? com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance() : descriptionCondition_;
-  }
-  /**
-   * <code>.api.commons.TemplateCondition description_condition = 8 [json_name = "descriptionCondition"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder getDescriptionConditionOrBuilder() {
-    return descriptionCondition_ == null ? com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance() : descriptionCondition_;
-  }
-
-  public static final int TICKET_ASSIGNEE_FIELD_NUMBER = 9;
-  @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringArrayList ticketAssignee_ =
-      com.google.protobuf.LazyStringArrayList.emptyList();
-  /**
-   * <code>repeated string ticket_assignee = 9 [json_name = "ticketAssignee"];</code>
-   * @return A list containing the ticketAssignee.
-   */
-  public com.google.protobuf.ProtocolStringList
-      getTicketAssigneeList() {
-    return ticketAssignee_;
-  }
-  /**
-   * <code>repeated string ticket_assignee = 9 [json_name = "ticketAssignee"];</code>
-   * @return The count of ticketAssignee.
-   */
-  public int getTicketAssigneeCount() {
-    return ticketAssignee_.size();
-  }
-  /**
-   * <code>repeated string ticket_assignee = 9 [json_name = "ticketAssignee"];</code>
-   * @param index The index of the element to return.
-   * @return The ticketAssignee at the given index.
-   */
-  public java.lang.String getTicketAssignee(int index) {
-    return ticketAssignee_.get(index);
-  }
-  /**
-   * <code>repeated string ticket_assignee = 9 [json_name = "ticketAssignee"];</code>
-   * @param index The index of the value to return.
-   * @return The bytes of the ticketAssignee at the given index.
-   */
-  public com.google.protobuf.ByteString
-      getTicketAssigneeBytes(int index) {
-    return ticketAssignee_.getByteString(index);
-  }
-
-  public static final int ASSIGNEE_CONDITION_FIELD_NUMBER = 10;
-  private com.tcn.cloud.api.api.commons.TemplateCondition assigneeCondition_;
-  /**
-   * <code>.api.commons.TemplateCondition assignee_condition = 10 [json_name = "assigneeCondition"];</code>
-   * @return Whether the assigneeCondition field is set.
-   */
-  @java.lang.Override
-  public boolean hasAssigneeCondition() {
-    return assigneeCondition_ != null;
-  }
-  /**
-   * <code>.api.commons.TemplateCondition assignee_condition = 10 [json_name = "assigneeCondition"];</code>
-   * @return The assigneeCondition.
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.TemplateCondition getAssigneeCondition() {
-    return assigneeCondition_ == null ? com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance() : assigneeCondition_;
-  }
-  /**
-   * <code>.api.commons.TemplateCondition assignee_condition = 10 [json_name = "assigneeCondition"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder getAssigneeConditionOrBuilder() {
-    return assigneeCondition_ == null ? com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance() : assigneeCondition_;
-  }
-
-  public static final int TICKET_SLA_FIELD_NUMBER = 11;
-  @SuppressWarnings("serial")
-  private java.util.List<com.tcn.cloud.api.api.commons.Sla> ticketSla_;
-  /**
-   * <code>repeated .api.commons.Sla ticket_sla = 11 [json_name = "ticketSla"];</code>
-   */
-  @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.api.commons.Sla> getTicketSlaList() {
-    return ticketSla_;
-  }
-  /**
-   * <code>repeated .api.commons.Sla ticket_sla = 11 [json_name = "ticketSla"];</code>
-   */
-  @java.lang.Override
-  public java.util.List<? extends com.tcn.cloud.api.api.commons.SlaOrBuilder> 
-      getTicketSlaOrBuilderList() {
-    return ticketSla_;
-  }
-  /**
-   * <code>repeated .api.commons.Sla ticket_sla = 11 [json_name = "ticketSla"];</code>
-   */
-  @java.lang.Override
-  public int getTicketSlaCount() {
-    return ticketSla_.size();
-  }
-  /**
-   * <code>repeated .api.commons.Sla ticket_sla = 11 [json_name = "ticketSla"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.Sla getTicketSla(int index) {
-    return ticketSla_.get(index);
-  }
-  /**
-   * <code>repeated .api.commons.Sla ticket_sla = 11 [json_name = "ticketSla"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.SlaOrBuilder getTicketSlaOrBuilder(
-      int index) {
-    return ticketSla_.get(index);
-  }
-
-  public static final int ACTION_TYPE_FIELD_NUMBER = 13;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object actionType_ = "";
-  /**
-   * <pre>
-   * Action
-   * </pre>
-   *
-   * <code>string action_type = 13 [json_name = "actionType"];</code>
-   * @return The actionType.
-   */
-  @java.lang.Override
-  public java.lang.String getActionType() {
-    java.lang.Object ref = actionType_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      actionType_ = s;
-      return s;
-    }
-  }
-  /**
-   * <pre>
-   * Action
-   * </pre>
-   *
-   * <code>string action_type = 13 [json_name = "actionType"];</code>
-   * @return The bytes for actionType.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getActionTypeBytes() {
-    java.lang.Object ref = actionType_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      actionType_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int ACTION_SKILLS_FIELD_NUMBER = 14;
-  @SuppressWarnings("serial")
-  private java.util.List<com.tcn.cloud.api.api.commons.Skills> actionSkills_;
-  /**
-   * <code>repeated .api.commons.Skills action_skills = 14 [json_name = "actionSkills"];</code>
-   */
-  @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.api.commons.Skills> getActionSkillsList() {
-    return actionSkills_;
-  }
-  /**
-   * <code>repeated .api.commons.Skills action_skills = 14 [json_name = "actionSkills"];</code>
-   */
-  @java.lang.Override
-  public java.util.List<? extends com.tcn.cloud.api.api.commons.SkillsOrBuilder> 
-      getActionSkillsOrBuilderList() {
-    return actionSkills_;
-  }
-  /**
-   * <code>repeated .api.commons.Skills action_skills = 14 [json_name = "actionSkills"];</code>
-   */
-  @java.lang.Override
-  public int getActionSkillsCount() {
-    return actionSkills_.size();
-  }
-  /**
-   * <code>repeated .api.commons.Skills action_skills = 14 [json_name = "actionSkills"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.Skills getActionSkills(int index) {
-    return actionSkills_.get(index);
-  }
-  /**
-   * <code>repeated .api.commons.Skills action_skills = 14 [json_name = "actionSkills"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.SkillsOrBuilder getActionSkillsOrBuilder(
-      int index) {
-    return actionSkills_.get(index);
-  }
-
-  public static final int ACTION_SKILLS_CONDITION_FIELD_NUMBER = 15;
-  private com.tcn.cloud.api.api.commons.TemplateCondition actionSkillsCondition_;
-  /**
-   * <code>.api.commons.TemplateCondition action_skills_condition = 15 [json_name = "actionSkillsCondition"];</code>
-   * @return Whether the actionSkillsCondition field is set.
-   */
-  @java.lang.Override
-  public boolean hasActionSkillsCondition() {
-    return actionSkillsCondition_ != null;
-  }
-  /**
-   * <code>.api.commons.TemplateCondition action_skills_condition = 15 [json_name = "actionSkillsCondition"];</code>
-   * @return The actionSkillsCondition.
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.TemplateCondition getActionSkillsCondition() {
-    return actionSkillsCondition_ == null ? com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance() : actionSkillsCondition_;
-  }
-  /**
-   * <code>.api.commons.TemplateCondition action_skills_condition = 15 [json_name = "actionSkillsCondition"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder getActionSkillsConditionOrBuilder() {
-    return actionSkillsCondition_ == null ? com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance() : actionSkillsCondition_;
-  }
-
-  public static final int ACTION_EXPIRY_DATE_FIELD_NUMBER = 18;
-  private com.google.protobuf.Timestamp actionExpiryDate_;
-  /**
-   * <code>.google.protobuf.Timestamp action_expiry_date = 18 [json_name = "actionExpiryDate"];</code>
-   * @return Whether the actionExpiryDate field is set.
-   */
-  @java.lang.Override
-  public boolean hasActionExpiryDate() {
-    return actionExpiryDate_ != null;
-  }
-  /**
-   * <code>.google.protobuf.Timestamp action_expiry_date = 18 [json_name = "actionExpiryDate"];</code>
-   * @return The actionExpiryDate.
-   */
-  @java.lang.Override
-  public com.google.protobuf.Timestamp getActionExpiryDate() {
-    return actionExpiryDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : actionExpiryDate_;
-  }
-  /**
-   * <code>.google.protobuf.Timestamp action_expiry_date = 18 [json_name = "actionExpiryDate"];</code>
-   */
-  @java.lang.Override
-  public com.google.protobuf.TimestampOrBuilder getActionExpiryDateOrBuilder() {
-    return actionExpiryDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : actionExpiryDate_;
-  }
-
-  public static final int ACTION_EXPIRY_DATE_CONDITION_FIELD_NUMBER = 19;
-  private com.tcn.cloud.api.api.commons.TemplateCondition actionExpiryDateCondition_;
-  /**
-   * <code>.api.commons.TemplateCondition action_expiry_date_condition = 19 [json_name = "actionExpiryDateCondition"];</code>
-   * @return Whether the actionExpiryDateCondition field is set.
-   */
-  @java.lang.Override
-  public boolean hasActionExpiryDateCondition() {
-    return actionExpiryDateCondition_ != null;
-  }
-  /**
-   * <code>.api.commons.TemplateCondition action_expiry_date_condition = 19 [json_name = "actionExpiryDateCondition"];</code>
-   * @return The actionExpiryDateCondition.
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.TemplateCondition getActionExpiryDateCondition() {
-    return actionExpiryDateCondition_ == null ? com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance() : actionExpiryDateCondition_;
-  }
-  /**
-   * <code>.api.commons.TemplateCondition action_expiry_date_condition = 19 [json_name = "actionExpiryDateCondition"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder getActionExpiryDateConditionOrBuilder() {
-    return actionExpiryDateCondition_ == null ? com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance() : actionExpiryDateCondition_;
-  }
-
-  public static final int ACTION_SLA_FIELD_NUMBER = 20;
-  @SuppressWarnings("serial")
-  private java.util.List<com.tcn.cloud.api.api.commons.Sla> actionSla_;
-  /**
-   * <code>repeated .api.commons.Sla action_sla = 20 [json_name = "actionSla"];</code>
-   */
-  @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.api.commons.Sla> getActionSlaList() {
-    return actionSla_;
-  }
-  /**
-   * <code>repeated .api.commons.Sla action_sla = 20 [json_name = "actionSla"];</code>
-   */
-  @java.lang.Override
-  public java.util.List<? extends com.tcn.cloud.api.api.commons.SlaOrBuilder> 
-      getActionSlaOrBuilderList() {
-    return actionSla_;
-  }
-  /**
-   * <code>repeated .api.commons.Sla action_sla = 20 [json_name = "actionSla"];</code>
-   */
-  @java.lang.Override
-  public int getActionSlaCount() {
-    return actionSla_.size();
-  }
-  /**
-   * <code>repeated .api.commons.Sla action_sla = 20 [json_name = "actionSla"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.Sla getActionSla(int index) {
-    return actionSla_.get(index);
-  }
-  /**
-   * <code>repeated .api.commons.Sla action_sla = 20 [json_name = "actionSla"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.SlaOrBuilder getActionSlaOrBuilder(
-      int index) {
-    return actionSla_.get(index);
-  }
-
-  public static final int IS_VALID_FIELD_NUMBER = 22;
-  private boolean isValid_ = false;
-  /**
-   * <code>bool is_valid = 22 [json_name = "isValid"];</code>
-   * @return The isValid.
-   */
-  @java.lang.Override
-  public boolean getIsValid() {
-    return isValid_;
-  }
-
-  public static final int CALLBACK_DEFAULT_FIELD_NUMBER = 23;
-  private com.tcn.cloud.api.api.commons.TicketCallbackTemplate callbackDefault_;
-  /**
-   * <pre>
-   * Action Types
-   * </pre>
-   *
-   * <code>.api.commons.TicketCallbackTemplate callback_default = 23 [json_name = "callbackDefault"];</code>
-   * @return Whether the callbackDefault field is set.
-   */
-  @java.lang.Override
-  public boolean hasCallbackDefault() {
-    return callbackDefault_ != null;
-  }
-  /**
-   * <pre>
-   * Action Types
-   * </pre>
-   *
-   * <code>.api.commons.TicketCallbackTemplate callback_default = 23 [json_name = "callbackDefault"];</code>
-   * @return The callbackDefault.
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.TicketCallbackTemplate getCallbackDefault() {
-    return callbackDefault_ == null ? com.tcn.cloud.api.api.commons.TicketCallbackTemplate.getDefaultInstance() : callbackDefault_;
-  }
-  /**
-   * <pre>
-   * Action Types
-   * </pre>
-   *
-   * <code>.api.commons.TicketCallbackTemplate callback_default = 23 [json_name = "callbackDefault"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.TicketCallbackTemplateOrBuilder getCallbackDefaultOrBuilder() {
-    return callbackDefault_ == null ? com.tcn.cloud.api.api.commons.TicketCallbackTemplate.getDefaultInstance() : callbackDefault_;
-  }
-
-  public static final int CREATED_BY_ID_FIELD_NUMBER = 24;
+  public static final int CREATED_BY_ID_FIELD_NUMBER = 7;
   @SuppressWarnings("serial")
   private volatile java.lang.Object createdById_ = "";
   /**
-   * <code>string created_by_id = 24 [json_name = "createdById"];</code>
+   * <code>string created_by_id = 7 [json_name = "createdById"];</code>
    * @return The createdById.
    */
   @java.lang.Override
@@ -609,7 +232,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string created_by_id = 24 [json_name = "createdById"];</code>
+   * <code>string created_by_id = 7 [json_name = "createdById"];</code>
    * @return The bytes for createdById.
    */
   @java.lang.Override
@@ -627,10 +250,49 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int CREATED_DATE_FIELD_NUMBER = 25;
+  public static final int MODIFIED_BY_FIELD_NUMBER = 8;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object modifiedBy_ = "";
+  /**
+   * <code>string modified_by = 8 [json_name = "modifiedBy"];</code>
+   * @return The modifiedBy.
+   */
+  @java.lang.Override
+  public java.lang.String getModifiedBy() {
+    java.lang.Object ref = modifiedBy_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      modifiedBy_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string modified_by = 8 [json_name = "modifiedBy"];</code>
+   * @return The bytes for modifiedBy.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getModifiedByBytes() {
+    java.lang.Object ref = modifiedBy_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      modifiedBy_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int CREATED_DATE_FIELD_NUMBER = 9;
   private com.google.protobuf.Timestamp createdDate_;
   /**
-   * <code>.google.protobuf.Timestamp created_date = 25 [json_name = "createdDate"];</code>
+   * <code>.google.protobuf.Timestamp created_date = 9 [json_name = "createdDate"];</code>
    * @return Whether the createdDate field is set.
    */
   @java.lang.Override
@@ -638,7 +300,7 @@ private static final long serialVersionUID = 0L;
     return createdDate_ != null;
   }
   /**
-   * <code>.google.protobuf.Timestamp created_date = 25 [json_name = "createdDate"];</code>
+   * <code>.google.protobuf.Timestamp created_date = 9 [json_name = "createdDate"];</code>
    * @return The createdDate.
    */
   @java.lang.Override
@@ -646,37 +308,48 @@ private static final long serialVersionUID = 0L;
     return createdDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdDate_;
   }
   /**
-   * <code>.google.protobuf.Timestamp created_date = 25 [json_name = "createdDate"];</code>
+   * <code>.google.protobuf.Timestamp created_date = 9 [json_name = "createdDate"];</code>
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getCreatedDateOrBuilder() {
     return createdDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdDate_;
   }
 
-  public static final int TICKET_CALLBACK_TEMPLATE_CONDITION_FIELD_NUMBER = 26;
-  private com.tcn.cloud.api.api.commons.TemplateCondition ticketCallbackTemplateCondition_;
+  public static final int MODIFIED_DATE_FIELD_NUMBER = 10;
+  private com.google.protobuf.Timestamp modifiedDate_;
   /**
-   * <code>.api.commons.TemplateCondition ticket_callback_template_condition = 26 [json_name = "ticketCallbackTemplateCondition"];</code>
-   * @return Whether the ticketCallbackTemplateCondition field is set.
+   * <code>.google.protobuf.Timestamp modified_date = 10 [json_name = "modifiedDate"];</code>
+   * @return Whether the modifiedDate field is set.
    */
   @java.lang.Override
-  public boolean hasTicketCallbackTemplateCondition() {
-    return ticketCallbackTemplateCondition_ != null;
+  public boolean hasModifiedDate() {
+    return modifiedDate_ != null;
   }
   /**
-   * <code>.api.commons.TemplateCondition ticket_callback_template_condition = 26 [json_name = "ticketCallbackTemplateCondition"];</code>
-   * @return The ticketCallbackTemplateCondition.
+   * <code>.google.protobuf.Timestamp modified_date = 10 [json_name = "modifiedDate"];</code>
+   * @return The modifiedDate.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.TemplateCondition getTicketCallbackTemplateCondition() {
-    return ticketCallbackTemplateCondition_ == null ? com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance() : ticketCallbackTemplateCondition_;
+  public com.google.protobuf.Timestamp getModifiedDate() {
+    return modifiedDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : modifiedDate_;
   }
   /**
-   * <code>.api.commons.TemplateCondition ticket_callback_template_condition = 26 [json_name = "ticketCallbackTemplateCondition"];</code>
+   * <code>.google.protobuf.Timestamp modified_date = 10 [json_name = "modifiedDate"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder getTicketCallbackTemplateConditionOrBuilder() {
-    return ticketCallbackTemplateCondition_ == null ? com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance() : ticketCallbackTemplateCondition_;
+  public com.google.protobuf.TimestampOrBuilder getModifiedDateOrBuilder() {
+    return modifiedDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : modifiedDate_;
+  }
+
+  public static final int IS_ACTIVE_FIELD_NUMBER = 11;
+  private boolean isActive_ = false;
+  /**
+   * <code>bool is_active = 11 [json_name = "isActive"];</code>
+   * @return The isActive.
+   */
+  @java.lang.Override
+  public boolean getIsActive() {
+    return isActive_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -696,62 +369,32 @@ private static final long serialVersionUID = 0L;
     if (ticketTemplateId_ != 0L) {
       output.writeInt64(1, ticketTemplateId_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, orgId_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(template_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, template_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(templateEntityVersion_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, templateEntityVersion_);
+    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(templateName_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, templateName_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ticketTitle_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, ticketTitle_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ticketDescription_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 6, ticketDescription_);
-    }
-    if (titleCondition_ != null) {
-      output.writeMessage(7, getTitleCondition());
-    }
-    if (descriptionCondition_ != null) {
-      output.writeMessage(8, getDescriptionCondition());
-    }
-    for (int i = 0; i < ticketAssignee_.size(); i++) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 9, ticketAssignee_.getRaw(i));
-    }
-    if (assigneeCondition_ != null) {
-      output.writeMessage(10, getAssigneeCondition());
-    }
-    for (int i = 0; i < ticketSla_.size(); i++) {
-      output.writeMessage(11, ticketSla_.get(i));
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(actionType_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 13, actionType_);
-    }
-    for (int i = 0; i < actionSkills_.size(); i++) {
-      output.writeMessage(14, actionSkills_.get(i));
-    }
-    if (actionSkillsCondition_ != null) {
-      output.writeMessage(15, getActionSkillsCondition());
-    }
-    if (actionExpiryDate_ != null) {
-      output.writeMessage(18, getActionExpiryDate());
-    }
-    if (actionExpiryDateCondition_ != null) {
-      output.writeMessage(19, getActionExpiryDateCondition());
-    }
-    for (int i = 0; i < actionSla_.size(); i++) {
-      output.writeMessage(20, actionSla_.get(i));
-    }
-    if (isValid_ != false) {
-      output.writeBool(22, isValid_);
-    }
-    if (callbackDefault_ != null) {
-      output.writeMessage(23, getCallbackDefault());
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, templateName_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createdById_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 24, createdById_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 7, createdById_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(modifiedBy_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 8, modifiedBy_);
     }
     if (createdDate_ != null) {
-      output.writeMessage(25, getCreatedDate());
+      output.writeMessage(9, getCreatedDate());
     }
-    if (ticketCallbackTemplateCondition_ != null) {
-      output.writeMessage(26, getTicketCallbackTemplateCondition());
+    if (modifiedDate_ != null) {
+      output.writeMessage(10, getModifiedDate());
+    }
+    if (isActive_ != false) {
+      output.writeBool(11, isActive_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -766,80 +409,35 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(1, ticketTemplateId_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, orgId_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(template_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, template_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(templateEntityVersion_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, templateEntityVersion_);
+    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(templateName_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, templateName_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ticketTitle_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, ticketTitle_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ticketDescription_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, ticketDescription_);
-    }
-    if (titleCondition_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(7, getTitleCondition());
-    }
-    if (descriptionCondition_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(8, getDescriptionCondition());
-    }
-    {
-      int dataSize = 0;
-      for (int i = 0; i < ticketAssignee_.size(); i++) {
-        dataSize += computeStringSizeNoTag(ticketAssignee_.getRaw(i));
-      }
-      size += dataSize;
-      size += 1 * getTicketAssigneeList().size();
-    }
-    if (assigneeCondition_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(10, getAssigneeCondition());
-    }
-    for (int i = 0; i < ticketSla_.size(); i++) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(11, ticketSla_.get(i));
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(actionType_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, actionType_);
-    }
-    for (int i = 0; i < actionSkills_.size(); i++) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(14, actionSkills_.get(i));
-    }
-    if (actionSkillsCondition_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(15, getActionSkillsCondition());
-    }
-    if (actionExpiryDate_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(18, getActionExpiryDate());
-    }
-    if (actionExpiryDateCondition_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(19, getActionExpiryDateCondition());
-    }
-    for (int i = 0; i < actionSla_.size(); i++) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(20, actionSla_.get(i));
-    }
-    if (isValid_ != false) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(22, isValid_);
-    }
-    if (callbackDefault_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(23, getCallbackDefault());
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, templateName_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createdById_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(24, createdById_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, createdById_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(modifiedBy_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, modifiedBy_);
     }
     if (createdDate_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(25, getCreatedDate());
+        .computeMessageSize(9, getCreatedDate());
     }
-    if (ticketCallbackTemplateCondition_ != null) {
+    if (modifiedDate_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(26, getTicketCallbackTemplateCondition());
+        .computeMessageSize(10, getModifiedDate());
+    }
+    if (isActive_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(11, isActive_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -858,71 +456,30 @@ private static final long serialVersionUID = 0L;
 
     if (getTicketTemplateId()
         != other.getTicketTemplateId()) return false;
+    if (!getOrgId()
+        .equals(other.getOrgId())) return false;
+    if (!getTemplate()
+        .equals(other.getTemplate())) return false;
+    if (!getTemplateEntityVersion()
+        .equals(other.getTemplateEntityVersion())) return false;
     if (!getTemplateName()
         .equals(other.getTemplateName())) return false;
-    if (!getTicketTitle()
-        .equals(other.getTicketTitle())) return false;
-    if (!getTicketDescription()
-        .equals(other.getTicketDescription())) return false;
-    if (hasTitleCondition() != other.hasTitleCondition()) return false;
-    if (hasTitleCondition()) {
-      if (!getTitleCondition()
-          .equals(other.getTitleCondition())) return false;
-    }
-    if (hasDescriptionCondition() != other.hasDescriptionCondition()) return false;
-    if (hasDescriptionCondition()) {
-      if (!getDescriptionCondition()
-          .equals(other.getDescriptionCondition())) return false;
-    }
-    if (!getTicketAssigneeList()
-        .equals(other.getTicketAssigneeList())) return false;
-    if (hasAssigneeCondition() != other.hasAssigneeCondition()) return false;
-    if (hasAssigneeCondition()) {
-      if (!getAssigneeCondition()
-          .equals(other.getAssigneeCondition())) return false;
-    }
-    if (!getTicketSlaList()
-        .equals(other.getTicketSlaList())) return false;
-    if (!getActionType()
-        .equals(other.getActionType())) return false;
-    if (!getActionSkillsList()
-        .equals(other.getActionSkillsList())) return false;
-    if (hasActionSkillsCondition() != other.hasActionSkillsCondition()) return false;
-    if (hasActionSkillsCondition()) {
-      if (!getActionSkillsCondition()
-          .equals(other.getActionSkillsCondition())) return false;
-    }
-    if (hasActionExpiryDate() != other.hasActionExpiryDate()) return false;
-    if (hasActionExpiryDate()) {
-      if (!getActionExpiryDate()
-          .equals(other.getActionExpiryDate())) return false;
-    }
-    if (hasActionExpiryDateCondition() != other.hasActionExpiryDateCondition()) return false;
-    if (hasActionExpiryDateCondition()) {
-      if (!getActionExpiryDateCondition()
-          .equals(other.getActionExpiryDateCondition())) return false;
-    }
-    if (!getActionSlaList()
-        .equals(other.getActionSlaList())) return false;
-    if (getIsValid()
-        != other.getIsValid()) return false;
-    if (hasCallbackDefault() != other.hasCallbackDefault()) return false;
-    if (hasCallbackDefault()) {
-      if (!getCallbackDefault()
-          .equals(other.getCallbackDefault())) return false;
-    }
     if (!getCreatedById()
         .equals(other.getCreatedById())) return false;
+    if (!getModifiedBy()
+        .equals(other.getModifiedBy())) return false;
     if (hasCreatedDate() != other.hasCreatedDate()) return false;
     if (hasCreatedDate()) {
       if (!getCreatedDate()
           .equals(other.getCreatedDate())) return false;
     }
-    if (hasTicketCallbackTemplateCondition() != other.hasTicketCallbackTemplateCondition()) return false;
-    if (hasTicketCallbackTemplateCondition()) {
-      if (!getTicketCallbackTemplateCondition()
-          .equals(other.getTicketCallbackTemplateCondition())) return false;
+    if (hasModifiedDate() != other.hasModifiedDate()) return false;
+    if (hasModifiedDate()) {
+      if (!getModifiedDate()
+          .equals(other.getModifiedDate())) return false;
     }
+    if (getIsActive()
+        != other.getIsActive()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -937,71 +494,29 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + TICKET_TEMPLATE_ID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getTicketTemplateId());
+    hash = (37 * hash) + ORG_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getOrgId().hashCode();
+    hash = (37 * hash) + TEMPLATE_FIELD_NUMBER;
+    hash = (53 * hash) + getTemplate().hashCode();
+    hash = (37 * hash) + TEMPLATE_ENTITY_VERSION_FIELD_NUMBER;
+    hash = (53 * hash) + getTemplateEntityVersion().hashCode();
     hash = (37 * hash) + TEMPLATE_NAME_FIELD_NUMBER;
     hash = (53 * hash) + getTemplateName().hashCode();
-    hash = (37 * hash) + TICKET_TITLE_FIELD_NUMBER;
-    hash = (53 * hash) + getTicketTitle().hashCode();
-    hash = (37 * hash) + TICKET_DESCRIPTION_FIELD_NUMBER;
-    hash = (53 * hash) + getTicketDescription().hashCode();
-    if (hasTitleCondition()) {
-      hash = (37 * hash) + TITLE_CONDITION_FIELD_NUMBER;
-      hash = (53 * hash) + getTitleCondition().hashCode();
-    }
-    if (hasDescriptionCondition()) {
-      hash = (37 * hash) + DESCRIPTION_CONDITION_FIELD_NUMBER;
-      hash = (53 * hash) + getDescriptionCondition().hashCode();
-    }
-    if (getTicketAssigneeCount() > 0) {
-      hash = (37 * hash) + TICKET_ASSIGNEE_FIELD_NUMBER;
-      hash = (53 * hash) + getTicketAssigneeList().hashCode();
-    }
-    if (hasAssigneeCondition()) {
-      hash = (37 * hash) + ASSIGNEE_CONDITION_FIELD_NUMBER;
-      hash = (53 * hash) + getAssigneeCondition().hashCode();
-    }
-    if (getTicketSlaCount() > 0) {
-      hash = (37 * hash) + TICKET_SLA_FIELD_NUMBER;
-      hash = (53 * hash) + getTicketSlaList().hashCode();
-    }
-    hash = (37 * hash) + ACTION_TYPE_FIELD_NUMBER;
-    hash = (53 * hash) + getActionType().hashCode();
-    if (getActionSkillsCount() > 0) {
-      hash = (37 * hash) + ACTION_SKILLS_FIELD_NUMBER;
-      hash = (53 * hash) + getActionSkillsList().hashCode();
-    }
-    if (hasActionSkillsCondition()) {
-      hash = (37 * hash) + ACTION_SKILLS_CONDITION_FIELD_NUMBER;
-      hash = (53 * hash) + getActionSkillsCondition().hashCode();
-    }
-    if (hasActionExpiryDate()) {
-      hash = (37 * hash) + ACTION_EXPIRY_DATE_FIELD_NUMBER;
-      hash = (53 * hash) + getActionExpiryDate().hashCode();
-    }
-    if (hasActionExpiryDateCondition()) {
-      hash = (37 * hash) + ACTION_EXPIRY_DATE_CONDITION_FIELD_NUMBER;
-      hash = (53 * hash) + getActionExpiryDateCondition().hashCode();
-    }
-    if (getActionSlaCount() > 0) {
-      hash = (37 * hash) + ACTION_SLA_FIELD_NUMBER;
-      hash = (53 * hash) + getActionSlaList().hashCode();
-    }
-    hash = (37 * hash) + IS_VALID_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-        getIsValid());
-    if (hasCallbackDefault()) {
-      hash = (37 * hash) + CALLBACK_DEFAULT_FIELD_NUMBER;
-      hash = (53 * hash) + getCallbackDefault().hashCode();
-    }
     hash = (37 * hash) + CREATED_BY_ID_FIELD_NUMBER;
     hash = (53 * hash) + getCreatedById().hashCode();
+    hash = (37 * hash) + MODIFIED_BY_FIELD_NUMBER;
+    hash = (53 * hash) + getModifiedBy().hashCode();
     if (hasCreatedDate()) {
       hash = (37 * hash) + CREATED_DATE_FIELD_NUMBER;
       hash = (53 * hash) + getCreatedDate().hashCode();
     }
-    if (hasTicketCallbackTemplateCondition()) {
-      hash = (37 * hash) + TICKET_CALLBACK_TEMPLATE_CONDITION_FIELD_NUMBER;
-      hash = (53 * hash) + getTicketCallbackTemplateCondition().hashCode();
+    if (hasModifiedDate()) {
+      hash = (37 * hash) + MODIFIED_DATE_FIELD_NUMBER;
+      hash = (53 * hash) + getModifiedDate().hashCode();
     }
+    hash = (37 * hash) + IS_ACTIVE_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getIsActive());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -1134,80 +649,23 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       ticketTemplateId_ = 0L;
+      orgId_ = "";
+      template_ = "";
+      templateEntityVersion_ = "";
       templateName_ = "";
-      ticketTitle_ = "";
-      ticketDescription_ = "";
-      titleCondition_ = null;
-      if (titleConditionBuilder_ != null) {
-        titleConditionBuilder_.dispose();
-        titleConditionBuilder_ = null;
-      }
-      descriptionCondition_ = null;
-      if (descriptionConditionBuilder_ != null) {
-        descriptionConditionBuilder_.dispose();
-        descriptionConditionBuilder_ = null;
-      }
-      ticketAssignee_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-      assigneeCondition_ = null;
-      if (assigneeConditionBuilder_ != null) {
-        assigneeConditionBuilder_.dispose();
-        assigneeConditionBuilder_ = null;
-      }
-      if (ticketSlaBuilder_ == null) {
-        ticketSla_ = java.util.Collections.emptyList();
-      } else {
-        ticketSla_ = null;
-        ticketSlaBuilder_.clear();
-      }
-      bitField0_ = (bitField0_ & ~0x00000100);
-      actionType_ = "";
-      if (actionSkillsBuilder_ == null) {
-        actionSkills_ = java.util.Collections.emptyList();
-      } else {
-        actionSkills_ = null;
-        actionSkillsBuilder_.clear();
-      }
-      bitField0_ = (bitField0_ & ~0x00000400);
-      actionSkillsCondition_ = null;
-      if (actionSkillsConditionBuilder_ != null) {
-        actionSkillsConditionBuilder_.dispose();
-        actionSkillsConditionBuilder_ = null;
-      }
-      actionExpiryDate_ = null;
-      if (actionExpiryDateBuilder_ != null) {
-        actionExpiryDateBuilder_.dispose();
-        actionExpiryDateBuilder_ = null;
-      }
-      actionExpiryDateCondition_ = null;
-      if (actionExpiryDateConditionBuilder_ != null) {
-        actionExpiryDateConditionBuilder_.dispose();
-        actionExpiryDateConditionBuilder_ = null;
-      }
-      if (actionSlaBuilder_ == null) {
-        actionSla_ = java.util.Collections.emptyList();
-      } else {
-        actionSla_ = null;
-        actionSlaBuilder_.clear();
-      }
-      bitField0_ = (bitField0_ & ~0x00004000);
-      isValid_ = false;
-      callbackDefault_ = null;
-      if (callbackDefaultBuilder_ != null) {
-        callbackDefaultBuilder_.dispose();
-        callbackDefaultBuilder_ = null;
-      }
       createdById_ = "";
+      modifiedBy_ = "";
       createdDate_ = null;
       if (createdDateBuilder_ != null) {
         createdDateBuilder_.dispose();
         createdDateBuilder_ = null;
       }
-      ticketCallbackTemplateCondition_ = null;
-      if (ticketCallbackTemplateConditionBuilder_ != null) {
-        ticketCallbackTemplateConditionBuilder_.dispose();
-        ticketCallbackTemplateConditionBuilder_ = null;
+      modifiedDate_ = null;
+      if (modifiedDateBuilder_ != null) {
+        modifiedDateBuilder_.dispose();
+        modifiedDateBuilder_ = null;
       }
+      isActive_ = false;
       return this;
     }
 
@@ -1234,40 +692,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.TicketTemplate buildPartial() {
       com.tcn.cloud.api.api.commons.TicketTemplate result = new com.tcn.cloud.api.api.commons.TicketTemplate(this);
-      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
-    }
-
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.commons.TicketTemplate result) {
-      if (ticketSlaBuilder_ == null) {
-        if (((bitField0_ & 0x00000100) != 0)) {
-          ticketSla_ = java.util.Collections.unmodifiableList(ticketSla_);
-          bitField0_ = (bitField0_ & ~0x00000100);
-        }
-        result.ticketSla_ = ticketSla_;
-      } else {
-        result.ticketSla_ = ticketSlaBuilder_.build();
-      }
-      if (actionSkillsBuilder_ == null) {
-        if (((bitField0_ & 0x00000400) != 0)) {
-          actionSkills_ = java.util.Collections.unmodifiableList(actionSkills_);
-          bitField0_ = (bitField0_ & ~0x00000400);
-        }
-        result.actionSkills_ = actionSkills_;
-      } else {
-        result.actionSkills_ = actionSkillsBuilder_.build();
-      }
-      if (actionSlaBuilder_ == null) {
-        if (((bitField0_ & 0x00004000) != 0)) {
-          actionSla_ = java.util.Collections.unmodifiableList(actionSla_);
-          bitField0_ = (bitField0_ & ~0x00004000);
-        }
-        result.actionSla_ = actionSla_;
-      } else {
-        result.actionSla_ = actionSlaBuilder_.build();
-      }
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.commons.TicketTemplate result) {
@@ -1276,71 +703,35 @@ private static final long serialVersionUID = 0L;
         result.ticketTemplateId_ = ticketTemplateId_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.templateName_ = templateName_;
+        result.orgId_ = orgId_;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.ticketTitle_ = ticketTitle_;
+        result.template_ = template_;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.ticketDescription_ = ticketDescription_;
+        result.templateEntityVersion_ = templateEntityVersion_;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.titleCondition_ = titleConditionBuilder_ == null
-            ? titleCondition_
-            : titleConditionBuilder_.build();
+        result.templateName_ = templateName_;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.descriptionCondition_ = descriptionConditionBuilder_ == null
-            ? descriptionCondition_
-            : descriptionConditionBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
-        ticketAssignee_.makeImmutable();
-        result.ticketAssignee_ = ticketAssignee_;
-      }
-      if (((from_bitField0_ & 0x00000080) != 0)) {
-        result.assigneeCondition_ = assigneeConditionBuilder_ == null
-            ? assigneeCondition_
-            : assigneeConditionBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000200) != 0)) {
-        result.actionType_ = actionType_;
-      }
-      if (((from_bitField0_ & 0x00000800) != 0)) {
-        result.actionSkillsCondition_ = actionSkillsConditionBuilder_ == null
-            ? actionSkillsCondition_
-            : actionSkillsConditionBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00001000) != 0)) {
-        result.actionExpiryDate_ = actionExpiryDateBuilder_ == null
-            ? actionExpiryDate_
-            : actionExpiryDateBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00002000) != 0)) {
-        result.actionExpiryDateCondition_ = actionExpiryDateConditionBuilder_ == null
-            ? actionExpiryDateCondition_
-            : actionExpiryDateConditionBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00008000) != 0)) {
-        result.isValid_ = isValid_;
-      }
-      if (((from_bitField0_ & 0x00010000) != 0)) {
-        result.callbackDefault_ = callbackDefaultBuilder_ == null
-            ? callbackDefault_
-            : callbackDefaultBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00020000) != 0)) {
         result.createdById_ = createdById_;
       }
-      if (((from_bitField0_ & 0x00040000) != 0)) {
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.modifiedBy_ = modifiedBy_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
         result.createdDate_ = createdDateBuilder_ == null
             ? createdDate_
             : createdDateBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00080000) != 0)) {
-        result.ticketCallbackTemplateCondition_ = ticketCallbackTemplateConditionBuilder_ == null
-            ? ticketCallbackTemplateCondition_
-            : ticketCallbackTemplateConditionBuilder_.build();
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.modifiedDate_ = modifiedDateBuilder_ == null
+            ? modifiedDate_
+            : modifiedDateBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.isActive_ = isActive_;
       }
     }
 
@@ -1391,148 +782,44 @@ private static final long serialVersionUID = 0L;
       if (other.getTicketTemplateId() != 0L) {
         setTicketTemplateId(other.getTicketTemplateId());
       }
-      if (!other.getTemplateName().isEmpty()) {
-        templateName_ = other.templateName_;
+      if (!other.getOrgId().isEmpty()) {
+        orgId_ = other.orgId_;
         bitField0_ |= 0x00000002;
         onChanged();
       }
-      if (!other.getTicketTitle().isEmpty()) {
-        ticketTitle_ = other.ticketTitle_;
+      if (!other.getTemplate().isEmpty()) {
+        template_ = other.template_;
         bitField0_ |= 0x00000004;
         onChanged();
       }
-      if (!other.getTicketDescription().isEmpty()) {
-        ticketDescription_ = other.ticketDescription_;
+      if (!other.getTemplateEntityVersion().isEmpty()) {
+        templateEntityVersion_ = other.templateEntityVersion_;
         bitField0_ |= 0x00000008;
         onChanged();
       }
-      if (other.hasTitleCondition()) {
-        mergeTitleCondition(other.getTitleCondition());
-      }
-      if (other.hasDescriptionCondition()) {
-        mergeDescriptionCondition(other.getDescriptionCondition());
-      }
-      if (!other.ticketAssignee_.isEmpty()) {
-        if (ticketAssignee_.isEmpty()) {
-          ticketAssignee_ = other.ticketAssignee_;
-          bitField0_ |= 0x00000040;
-        } else {
-          ensureTicketAssigneeIsMutable();
-          ticketAssignee_.addAll(other.ticketAssignee_);
-        }
+      if (!other.getTemplateName().isEmpty()) {
+        templateName_ = other.templateName_;
+        bitField0_ |= 0x00000010;
         onChanged();
-      }
-      if (other.hasAssigneeCondition()) {
-        mergeAssigneeCondition(other.getAssigneeCondition());
-      }
-      if (ticketSlaBuilder_ == null) {
-        if (!other.ticketSla_.isEmpty()) {
-          if (ticketSla_.isEmpty()) {
-            ticketSla_ = other.ticketSla_;
-            bitField0_ = (bitField0_ & ~0x00000100);
-          } else {
-            ensureTicketSlaIsMutable();
-            ticketSla_.addAll(other.ticketSla_);
-          }
-          onChanged();
-        }
-      } else {
-        if (!other.ticketSla_.isEmpty()) {
-          if (ticketSlaBuilder_.isEmpty()) {
-            ticketSlaBuilder_.dispose();
-            ticketSlaBuilder_ = null;
-            ticketSla_ = other.ticketSla_;
-            bitField0_ = (bitField0_ & ~0x00000100);
-            ticketSlaBuilder_ = 
-              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getTicketSlaFieldBuilder() : null;
-          } else {
-            ticketSlaBuilder_.addAllMessages(other.ticketSla_);
-          }
-        }
-      }
-      if (!other.getActionType().isEmpty()) {
-        actionType_ = other.actionType_;
-        bitField0_ |= 0x00000200;
-        onChanged();
-      }
-      if (actionSkillsBuilder_ == null) {
-        if (!other.actionSkills_.isEmpty()) {
-          if (actionSkills_.isEmpty()) {
-            actionSkills_ = other.actionSkills_;
-            bitField0_ = (bitField0_ & ~0x00000400);
-          } else {
-            ensureActionSkillsIsMutable();
-            actionSkills_.addAll(other.actionSkills_);
-          }
-          onChanged();
-        }
-      } else {
-        if (!other.actionSkills_.isEmpty()) {
-          if (actionSkillsBuilder_.isEmpty()) {
-            actionSkillsBuilder_.dispose();
-            actionSkillsBuilder_ = null;
-            actionSkills_ = other.actionSkills_;
-            bitField0_ = (bitField0_ & ~0x00000400);
-            actionSkillsBuilder_ = 
-              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getActionSkillsFieldBuilder() : null;
-          } else {
-            actionSkillsBuilder_.addAllMessages(other.actionSkills_);
-          }
-        }
-      }
-      if (other.hasActionSkillsCondition()) {
-        mergeActionSkillsCondition(other.getActionSkillsCondition());
-      }
-      if (other.hasActionExpiryDate()) {
-        mergeActionExpiryDate(other.getActionExpiryDate());
-      }
-      if (other.hasActionExpiryDateCondition()) {
-        mergeActionExpiryDateCondition(other.getActionExpiryDateCondition());
-      }
-      if (actionSlaBuilder_ == null) {
-        if (!other.actionSla_.isEmpty()) {
-          if (actionSla_.isEmpty()) {
-            actionSla_ = other.actionSla_;
-            bitField0_ = (bitField0_ & ~0x00004000);
-          } else {
-            ensureActionSlaIsMutable();
-            actionSla_.addAll(other.actionSla_);
-          }
-          onChanged();
-        }
-      } else {
-        if (!other.actionSla_.isEmpty()) {
-          if (actionSlaBuilder_.isEmpty()) {
-            actionSlaBuilder_.dispose();
-            actionSlaBuilder_ = null;
-            actionSla_ = other.actionSla_;
-            bitField0_ = (bitField0_ & ~0x00004000);
-            actionSlaBuilder_ = 
-              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getActionSlaFieldBuilder() : null;
-          } else {
-            actionSlaBuilder_.addAllMessages(other.actionSla_);
-          }
-        }
-      }
-      if (other.getIsValid() != false) {
-        setIsValid(other.getIsValid());
-      }
-      if (other.hasCallbackDefault()) {
-        mergeCallbackDefault(other.getCallbackDefault());
       }
       if (!other.getCreatedById().isEmpty()) {
         createdById_ = other.createdById_;
-        bitField0_ |= 0x00020000;
+        bitField0_ |= 0x00000020;
+        onChanged();
+      }
+      if (!other.getModifiedBy().isEmpty()) {
+        modifiedBy_ = other.modifiedBy_;
+        bitField0_ |= 0x00000040;
         onChanged();
       }
       if (other.hasCreatedDate()) {
         mergeCreatedDate(other.getCreatedDate());
       }
-      if (other.hasTicketCallbackTemplateCondition()) {
-        mergeTicketCallbackTemplateCondition(other.getTicketCallbackTemplateCondition());
+      if (other.hasModifiedDate()) {
+        mergeModifiedDate(other.getModifiedDate());
+      }
+      if (other.getIsActive() != false) {
+        setIsActive(other.getIsActive());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -1566,143 +853,54 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 8
             case 18: {
-              templateName_ = input.readStringRequireUtf8();
+              orgId_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000002;
               break;
             } // case 18
-            case 42: {
-              ticketTitle_ = input.readStringRequireUtf8();
+            case 26: {
+              template_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000004;
               break;
-            } // case 42
-            case 50: {
-              ticketDescription_ = input.readStringRequireUtf8();
+            } // case 26
+            case 34: {
+              templateEntityVersion_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000008;
               break;
-            } // case 50
-            case 58: {
-              input.readMessage(
-                  getTitleConditionFieldBuilder().getBuilder(),
-                  extensionRegistry);
+            } // case 34
+            case 42: {
+              templateName_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000010;
+              break;
+            } // case 42
+            case 58: {
+              createdById_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000020;
               break;
             } // case 58
             case 66: {
-              input.readMessage(
-                  getDescriptionConditionFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000020;
+              modifiedBy_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000040;
               break;
             } // case 66
             case 74: {
-              java.lang.String s = input.readStringRequireUtf8();
-              ensureTicketAssigneeIsMutable();
-              ticketAssignee_.add(s);
+              input.readMessage(
+                  getCreatedDateFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000080;
               break;
             } // case 74
             case 82: {
               input.readMessage(
-                  getAssigneeConditionFieldBuilder().getBuilder(),
+                  getModifiedDateFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000080;
+              bitField0_ |= 0x00000100;
               break;
             } // case 82
-            case 90: {
-              com.tcn.cloud.api.api.commons.Sla m =
-                  input.readMessage(
-                      com.tcn.cloud.api.api.commons.Sla.parser(),
-                      extensionRegistry);
-              if (ticketSlaBuilder_ == null) {
-                ensureTicketSlaIsMutable();
-                ticketSla_.add(m);
-              } else {
-                ticketSlaBuilder_.addMessage(m);
-              }
-              break;
-            } // case 90
-            case 106: {
-              actionType_ = input.readStringRequireUtf8();
+            case 88: {
+              isActive_ = input.readBool();
               bitField0_ |= 0x00000200;
               break;
-            } // case 106
-            case 114: {
-              com.tcn.cloud.api.api.commons.Skills m =
-                  input.readMessage(
-                      com.tcn.cloud.api.api.commons.Skills.parser(),
-                      extensionRegistry);
-              if (actionSkillsBuilder_ == null) {
-                ensureActionSkillsIsMutable();
-                actionSkills_.add(m);
-              } else {
-                actionSkillsBuilder_.addMessage(m);
-              }
-              break;
-            } // case 114
-            case 122: {
-              input.readMessage(
-                  getActionSkillsConditionFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000800;
-              break;
-            } // case 122
-            case 146: {
-              input.readMessage(
-                  getActionExpiryDateFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00001000;
-              break;
-            } // case 146
-            case 154: {
-              input.readMessage(
-                  getActionExpiryDateConditionFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00002000;
-              break;
-            } // case 154
-            case 162: {
-              com.tcn.cloud.api.api.commons.Sla m =
-                  input.readMessage(
-                      com.tcn.cloud.api.api.commons.Sla.parser(),
-                      extensionRegistry);
-              if (actionSlaBuilder_ == null) {
-                ensureActionSlaIsMutable();
-                actionSla_.add(m);
-              } else {
-                actionSlaBuilder_.addMessage(m);
-              }
-              break;
-            } // case 162
-            case 176: {
-              isValid_ = input.readBool();
-              bitField0_ |= 0x00008000;
-              break;
-            } // case 176
-            case 186: {
-              input.readMessage(
-                  getCallbackDefaultFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00010000;
-              break;
-            } // case 186
-            case 194: {
-              createdById_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00020000;
-              break;
-            } // case 194
-            case 202: {
-              input.readMessage(
-                  getCreatedDateFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00040000;
-              break;
-            } // case 202
-            case 210: {
-              input.readMessage(
-                  getTicketCallbackTemplateConditionFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00080000;
-              break;
-            } // case 210
+            } // case 88
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1722,7 +920,7 @@ private static final long serialVersionUID = 0L;
 
     private long ticketTemplateId_ ;
     /**
-     * <code>int64 ticket_template_id = 1 [json_name = "ticketTemplateId", jstype = JS_STRING];</code>
+     * <code>int64 ticket_template_id = 1 [json_name = "ticketTemplateId"];</code>
      * @return The ticketTemplateId.
      */
     @java.lang.Override
@@ -1730,7 +928,7 @@ private static final long serialVersionUID = 0L;
       return ticketTemplateId_;
     }
     /**
-     * <code>int64 ticket_template_id = 1 [json_name = "ticketTemplateId", jstype = JS_STRING];</code>
+     * <code>int64 ticket_template_id = 1 [json_name = "ticketTemplateId"];</code>
      * @param value The ticketTemplateId to set.
      * @return This builder for chaining.
      */
@@ -1742,7 +940,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int64 ticket_template_id = 1 [json_name = "ticketTemplateId", jstype = JS_STRING];</code>
+     * <code>int64 ticket_template_id = 1 [json_name = "ticketTemplateId"];</code>
      * @return This builder for chaining.
      */
     public Builder clearTicketTemplateId() {
@@ -1752,9 +950,225 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private java.lang.Object orgId_ = "";
+    /**
+     * <code>string org_id = 2 [json_name = "orgId"];</code>
+     * @return The orgId.
+     */
+    public java.lang.String getOrgId() {
+      java.lang.Object ref = orgId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        orgId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string org_id = 2 [json_name = "orgId"];</code>
+     * @return The bytes for orgId.
+     */
+    public com.google.protobuf.ByteString
+        getOrgIdBytes() {
+      java.lang.Object ref = orgId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        orgId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string org_id = 2 [json_name = "orgId"];</code>
+     * @param value The orgId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setOrgId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      orgId_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string org_id = 2 [json_name = "orgId"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearOrgId() {
+      orgId_ = getDefaultInstance().getOrgId();
+      bitField0_ = (bitField0_ & ~0x00000002);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string org_id = 2 [json_name = "orgId"];</code>
+     * @param value The bytes for orgId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setOrgIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      orgId_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object template_ = "";
+    /**
+     * <code>string template = 3 [json_name = "template"];</code>
+     * @return The template.
+     */
+    public java.lang.String getTemplate() {
+      java.lang.Object ref = template_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        template_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string template = 3 [json_name = "template"];</code>
+     * @return The bytes for template.
+     */
+    public com.google.protobuf.ByteString
+        getTemplateBytes() {
+      java.lang.Object ref = template_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        template_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string template = 3 [json_name = "template"];</code>
+     * @param value The template to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTemplate(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      template_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string template = 3 [json_name = "template"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTemplate() {
+      template_ = getDefaultInstance().getTemplate();
+      bitField0_ = (bitField0_ & ~0x00000004);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string template = 3 [json_name = "template"];</code>
+     * @param value The bytes for template to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTemplateBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      template_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object templateEntityVersion_ = "";
+    /**
+     * <code>string template_entity_version = 4 [json_name = "templateEntityVersion"];</code>
+     * @return The templateEntityVersion.
+     */
+    public java.lang.String getTemplateEntityVersion() {
+      java.lang.Object ref = templateEntityVersion_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        templateEntityVersion_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string template_entity_version = 4 [json_name = "templateEntityVersion"];</code>
+     * @return The bytes for templateEntityVersion.
+     */
+    public com.google.protobuf.ByteString
+        getTemplateEntityVersionBytes() {
+      java.lang.Object ref = templateEntityVersion_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        templateEntityVersion_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string template_entity_version = 4 [json_name = "templateEntityVersion"];</code>
+     * @param value The templateEntityVersion to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTemplateEntityVersion(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      templateEntityVersion_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string template_entity_version = 4 [json_name = "templateEntityVersion"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTemplateEntityVersion() {
+      templateEntityVersion_ = getDefaultInstance().getTemplateEntityVersion();
+      bitField0_ = (bitField0_ & ~0x00000008);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string template_entity_version = 4 [json_name = "templateEntityVersion"];</code>
+     * @param value The bytes for templateEntityVersion to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTemplateEntityVersionBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      templateEntityVersion_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+
     private java.lang.Object templateName_ = "";
     /**
-     * <code>string template_name = 2 [json_name = "templateName"];</code>
+     * <code>string template_name = 5 [json_name = "templateName"];</code>
      * @return The templateName.
      */
     public java.lang.String getTemplateName() {
@@ -1770,7 +1184,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string template_name = 2 [json_name = "templateName"];</code>
+     * <code>string template_name = 5 [json_name = "templateName"];</code>
      * @return The bytes for templateName.
      */
     public com.google.protobuf.ByteString
@@ -1787,7 +1201,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string template_name = 2 [json_name = "templateName"];</code>
+     * <code>string template_name = 5 [json_name = "templateName"];</code>
      * @param value The templateName to set.
      * @return This builder for chaining.
      */
@@ -1795,22 +1209,22 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       templateName_ = value;
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
     /**
-     * <code>string template_name = 2 [json_name = "templateName"];</code>
+     * <code>string template_name = 5 [json_name = "templateName"];</code>
      * @return This builder for chaining.
      */
     public Builder clearTemplateName() {
       templateName_ = getDefaultInstance().getTemplateName();
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
     /**
-     * <code>string template_name = 2 [json_name = "templateName"];</code>
+     * <code>string template_name = 5 [json_name = "templateName"];</code>
      * @param value The bytes for templateName to set.
      * @return This builder for chaining.
      */
@@ -1819,1982 +1233,14 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       templateName_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-
-    private java.lang.Object ticketTitle_ = "";
-    /**
-     * <code>string ticket_title = 5 [json_name = "ticketTitle"];</code>
-     * @return The ticketTitle.
-     */
-    public java.lang.String getTicketTitle() {
-      java.lang.Object ref = ticketTitle_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        ticketTitle_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string ticket_title = 5 [json_name = "ticketTitle"];</code>
-     * @return The bytes for ticketTitle.
-     */
-    public com.google.protobuf.ByteString
-        getTicketTitleBytes() {
-      java.lang.Object ref = ticketTitle_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        ticketTitle_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string ticket_title = 5 [json_name = "ticketTitle"];</code>
-     * @param value The ticketTitle to set.
-     * @return This builder for chaining.
-     */
-    public Builder setTicketTitle(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ticketTitle_ = value;
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string ticket_title = 5 [json_name = "ticketTitle"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearTicketTitle() {
-      ticketTitle_ = getDefaultInstance().getTicketTitle();
-      bitField0_ = (bitField0_ & ~0x00000004);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string ticket_title = 5 [json_name = "ticketTitle"];</code>
-     * @param value The bytes for ticketTitle to set.
-     * @return This builder for chaining.
-     */
-    public Builder setTicketTitleBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      ticketTitle_ = value;
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-
-    private java.lang.Object ticketDescription_ = "";
-    /**
-     * <code>string ticket_description = 6 [json_name = "ticketDescription"];</code>
-     * @return The ticketDescription.
-     */
-    public java.lang.String getTicketDescription() {
-      java.lang.Object ref = ticketDescription_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        ticketDescription_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string ticket_description = 6 [json_name = "ticketDescription"];</code>
-     * @return The bytes for ticketDescription.
-     */
-    public com.google.protobuf.ByteString
-        getTicketDescriptionBytes() {
-      java.lang.Object ref = ticketDescription_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        ticketDescription_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string ticket_description = 6 [json_name = "ticketDescription"];</code>
-     * @param value The ticketDescription to set.
-     * @return This builder for chaining.
-     */
-    public Builder setTicketDescription(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ticketDescription_ = value;
-      bitField0_ |= 0x00000008;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string ticket_description = 6 [json_name = "ticketDescription"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearTicketDescription() {
-      ticketDescription_ = getDefaultInstance().getTicketDescription();
-      bitField0_ = (bitField0_ & ~0x00000008);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string ticket_description = 6 [json_name = "ticketDescription"];</code>
-     * @param value The bytes for ticketDescription to set.
-     * @return This builder for chaining.
-     */
-    public Builder setTicketDescriptionBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      ticketDescription_ = value;
-      bitField0_ |= 0x00000008;
-      onChanged();
-      return this;
-    }
-
-    private com.tcn.cloud.api.api.commons.TemplateCondition titleCondition_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.TemplateCondition, com.tcn.cloud.api.api.commons.TemplateCondition.Builder, com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder> titleConditionBuilder_;
-    /**
-     * <code>.api.commons.TemplateCondition title_condition = 7 [json_name = "titleCondition"];</code>
-     * @return Whether the titleCondition field is set.
-     */
-    public boolean hasTitleCondition() {
-      return ((bitField0_ & 0x00000010) != 0);
-    }
-    /**
-     * <code>.api.commons.TemplateCondition title_condition = 7 [json_name = "titleCondition"];</code>
-     * @return The titleCondition.
-     */
-    public com.tcn.cloud.api.api.commons.TemplateCondition getTitleCondition() {
-      if (titleConditionBuilder_ == null) {
-        return titleCondition_ == null ? com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance() : titleCondition_;
-      } else {
-        return titleConditionBuilder_.getMessage();
-      }
-    }
-    /**
-     * <code>.api.commons.TemplateCondition title_condition = 7 [json_name = "titleCondition"];</code>
-     */
-    public Builder setTitleCondition(com.tcn.cloud.api.api.commons.TemplateCondition value) {
-      if (titleConditionBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        titleCondition_ = value;
-      } else {
-        titleConditionBuilder_.setMessage(value);
-      }
       bitField0_ |= 0x00000010;
       onChanged();
       return this;
-    }
-    /**
-     * <code>.api.commons.TemplateCondition title_condition = 7 [json_name = "titleCondition"];</code>
-     */
-    public Builder setTitleCondition(
-        com.tcn.cloud.api.api.commons.TemplateCondition.Builder builderForValue) {
-      if (titleConditionBuilder_ == null) {
-        titleCondition_ = builderForValue.build();
-      } else {
-        titleConditionBuilder_.setMessage(builderForValue.build());
-      }
-      bitField0_ |= 0x00000010;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.api.commons.TemplateCondition title_condition = 7 [json_name = "titleCondition"];</code>
-     */
-    public Builder mergeTitleCondition(com.tcn.cloud.api.api.commons.TemplateCondition value) {
-      if (titleConditionBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) != 0) &&
-          titleCondition_ != null &&
-          titleCondition_ != com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance()) {
-          getTitleConditionBuilder().mergeFrom(value);
-        } else {
-          titleCondition_ = value;
-        }
-      } else {
-        titleConditionBuilder_.mergeFrom(value);
-      }
-      bitField0_ |= 0x00000010;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.api.commons.TemplateCondition title_condition = 7 [json_name = "titleCondition"];</code>
-     */
-    public Builder clearTitleCondition() {
-      bitField0_ = (bitField0_ & ~0x00000010);
-      titleCondition_ = null;
-      if (titleConditionBuilder_ != null) {
-        titleConditionBuilder_.dispose();
-        titleConditionBuilder_ = null;
-      }
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.api.commons.TemplateCondition title_condition = 7 [json_name = "titleCondition"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.TemplateCondition.Builder getTitleConditionBuilder() {
-      bitField0_ |= 0x00000010;
-      onChanged();
-      return getTitleConditionFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.api.commons.TemplateCondition title_condition = 7 [json_name = "titleCondition"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder getTitleConditionOrBuilder() {
-      if (titleConditionBuilder_ != null) {
-        return titleConditionBuilder_.getMessageOrBuilder();
-      } else {
-        return titleCondition_ == null ?
-            com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance() : titleCondition_;
-      }
-    }
-    /**
-     * <code>.api.commons.TemplateCondition title_condition = 7 [json_name = "titleCondition"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.TemplateCondition, com.tcn.cloud.api.api.commons.TemplateCondition.Builder, com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder> 
-        getTitleConditionFieldBuilder() {
-      if (titleConditionBuilder_ == null) {
-        titleConditionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.TemplateCondition, com.tcn.cloud.api.api.commons.TemplateCondition.Builder, com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder>(
-                getTitleCondition(),
-                getParentForChildren(),
-                isClean());
-        titleCondition_ = null;
-      }
-      return titleConditionBuilder_;
-    }
-
-    private com.tcn.cloud.api.api.commons.TemplateCondition descriptionCondition_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.TemplateCondition, com.tcn.cloud.api.api.commons.TemplateCondition.Builder, com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder> descriptionConditionBuilder_;
-    /**
-     * <code>.api.commons.TemplateCondition description_condition = 8 [json_name = "descriptionCondition"];</code>
-     * @return Whether the descriptionCondition field is set.
-     */
-    public boolean hasDescriptionCondition() {
-      return ((bitField0_ & 0x00000020) != 0);
-    }
-    /**
-     * <code>.api.commons.TemplateCondition description_condition = 8 [json_name = "descriptionCondition"];</code>
-     * @return The descriptionCondition.
-     */
-    public com.tcn.cloud.api.api.commons.TemplateCondition getDescriptionCondition() {
-      if (descriptionConditionBuilder_ == null) {
-        return descriptionCondition_ == null ? com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance() : descriptionCondition_;
-      } else {
-        return descriptionConditionBuilder_.getMessage();
-      }
-    }
-    /**
-     * <code>.api.commons.TemplateCondition description_condition = 8 [json_name = "descriptionCondition"];</code>
-     */
-    public Builder setDescriptionCondition(com.tcn.cloud.api.api.commons.TemplateCondition value) {
-      if (descriptionConditionBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        descriptionCondition_ = value;
-      } else {
-        descriptionConditionBuilder_.setMessage(value);
-      }
-      bitField0_ |= 0x00000020;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.api.commons.TemplateCondition description_condition = 8 [json_name = "descriptionCondition"];</code>
-     */
-    public Builder setDescriptionCondition(
-        com.tcn.cloud.api.api.commons.TemplateCondition.Builder builderForValue) {
-      if (descriptionConditionBuilder_ == null) {
-        descriptionCondition_ = builderForValue.build();
-      } else {
-        descriptionConditionBuilder_.setMessage(builderForValue.build());
-      }
-      bitField0_ |= 0x00000020;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.api.commons.TemplateCondition description_condition = 8 [json_name = "descriptionCondition"];</code>
-     */
-    public Builder mergeDescriptionCondition(com.tcn.cloud.api.api.commons.TemplateCondition value) {
-      if (descriptionConditionBuilder_ == null) {
-        if (((bitField0_ & 0x00000020) != 0) &&
-          descriptionCondition_ != null &&
-          descriptionCondition_ != com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance()) {
-          getDescriptionConditionBuilder().mergeFrom(value);
-        } else {
-          descriptionCondition_ = value;
-        }
-      } else {
-        descriptionConditionBuilder_.mergeFrom(value);
-      }
-      bitField0_ |= 0x00000020;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.api.commons.TemplateCondition description_condition = 8 [json_name = "descriptionCondition"];</code>
-     */
-    public Builder clearDescriptionCondition() {
-      bitField0_ = (bitField0_ & ~0x00000020);
-      descriptionCondition_ = null;
-      if (descriptionConditionBuilder_ != null) {
-        descriptionConditionBuilder_.dispose();
-        descriptionConditionBuilder_ = null;
-      }
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.api.commons.TemplateCondition description_condition = 8 [json_name = "descriptionCondition"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.TemplateCondition.Builder getDescriptionConditionBuilder() {
-      bitField0_ |= 0x00000020;
-      onChanged();
-      return getDescriptionConditionFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.api.commons.TemplateCondition description_condition = 8 [json_name = "descriptionCondition"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder getDescriptionConditionOrBuilder() {
-      if (descriptionConditionBuilder_ != null) {
-        return descriptionConditionBuilder_.getMessageOrBuilder();
-      } else {
-        return descriptionCondition_ == null ?
-            com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance() : descriptionCondition_;
-      }
-    }
-    /**
-     * <code>.api.commons.TemplateCondition description_condition = 8 [json_name = "descriptionCondition"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.TemplateCondition, com.tcn.cloud.api.api.commons.TemplateCondition.Builder, com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder> 
-        getDescriptionConditionFieldBuilder() {
-      if (descriptionConditionBuilder_ == null) {
-        descriptionConditionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.TemplateCondition, com.tcn.cloud.api.api.commons.TemplateCondition.Builder, com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder>(
-                getDescriptionCondition(),
-                getParentForChildren(),
-                isClean());
-        descriptionCondition_ = null;
-      }
-      return descriptionConditionBuilder_;
-    }
-
-    private com.google.protobuf.LazyStringArrayList ticketAssignee_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-    private void ensureTicketAssigneeIsMutable() {
-      if (!ticketAssignee_.isModifiable()) {
-        ticketAssignee_ = new com.google.protobuf.LazyStringArrayList(ticketAssignee_);
-      }
-      bitField0_ |= 0x00000040;
-    }
-    /**
-     * <code>repeated string ticket_assignee = 9 [json_name = "ticketAssignee"];</code>
-     * @return A list containing the ticketAssignee.
-     */
-    public com.google.protobuf.ProtocolStringList
-        getTicketAssigneeList() {
-      ticketAssignee_.makeImmutable();
-      return ticketAssignee_;
-    }
-    /**
-     * <code>repeated string ticket_assignee = 9 [json_name = "ticketAssignee"];</code>
-     * @return The count of ticketAssignee.
-     */
-    public int getTicketAssigneeCount() {
-      return ticketAssignee_.size();
-    }
-    /**
-     * <code>repeated string ticket_assignee = 9 [json_name = "ticketAssignee"];</code>
-     * @param index The index of the element to return.
-     * @return The ticketAssignee at the given index.
-     */
-    public java.lang.String getTicketAssignee(int index) {
-      return ticketAssignee_.get(index);
-    }
-    /**
-     * <code>repeated string ticket_assignee = 9 [json_name = "ticketAssignee"];</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the ticketAssignee at the given index.
-     */
-    public com.google.protobuf.ByteString
-        getTicketAssigneeBytes(int index) {
-      return ticketAssignee_.getByteString(index);
-    }
-    /**
-     * <code>repeated string ticket_assignee = 9 [json_name = "ticketAssignee"];</code>
-     * @param index The index to set the value at.
-     * @param value The ticketAssignee to set.
-     * @return This builder for chaining.
-     */
-    public Builder setTicketAssignee(
-        int index, java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureTicketAssigneeIsMutable();
-      ticketAssignee_.set(index, value);
-      bitField0_ |= 0x00000040;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>repeated string ticket_assignee = 9 [json_name = "ticketAssignee"];</code>
-     * @param value The ticketAssignee to add.
-     * @return This builder for chaining.
-     */
-    public Builder addTicketAssignee(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureTicketAssigneeIsMutable();
-      ticketAssignee_.add(value);
-      bitField0_ |= 0x00000040;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>repeated string ticket_assignee = 9 [json_name = "ticketAssignee"];</code>
-     * @param values The ticketAssignee to add.
-     * @return This builder for chaining.
-     */
-    public Builder addAllTicketAssignee(
-        java.lang.Iterable<java.lang.String> values) {
-      ensureTicketAssigneeIsMutable();
-      com.google.protobuf.AbstractMessageLite.Builder.addAll(
-          values, ticketAssignee_);
-      bitField0_ |= 0x00000040;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>repeated string ticket_assignee = 9 [json_name = "ticketAssignee"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearTicketAssignee() {
-      ticketAssignee_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000040);;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>repeated string ticket_assignee = 9 [json_name = "ticketAssignee"];</code>
-     * @param value The bytes of the ticketAssignee to add.
-     * @return This builder for chaining.
-     */
-    public Builder addTicketAssigneeBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      ensureTicketAssigneeIsMutable();
-      ticketAssignee_.add(value);
-      bitField0_ |= 0x00000040;
-      onChanged();
-      return this;
-    }
-
-    private com.tcn.cloud.api.api.commons.TemplateCondition assigneeCondition_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.TemplateCondition, com.tcn.cloud.api.api.commons.TemplateCondition.Builder, com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder> assigneeConditionBuilder_;
-    /**
-     * <code>.api.commons.TemplateCondition assignee_condition = 10 [json_name = "assigneeCondition"];</code>
-     * @return Whether the assigneeCondition field is set.
-     */
-    public boolean hasAssigneeCondition() {
-      return ((bitField0_ & 0x00000080) != 0);
-    }
-    /**
-     * <code>.api.commons.TemplateCondition assignee_condition = 10 [json_name = "assigneeCondition"];</code>
-     * @return The assigneeCondition.
-     */
-    public com.tcn.cloud.api.api.commons.TemplateCondition getAssigneeCondition() {
-      if (assigneeConditionBuilder_ == null) {
-        return assigneeCondition_ == null ? com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance() : assigneeCondition_;
-      } else {
-        return assigneeConditionBuilder_.getMessage();
-      }
-    }
-    /**
-     * <code>.api.commons.TemplateCondition assignee_condition = 10 [json_name = "assigneeCondition"];</code>
-     */
-    public Builder setAssigneeCondition(com.tcn.cloud.api.api.commons.TemplateCondition value) {
-      if (assigneeConditionBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        assigneeCondition_ = value;
-      } else {
-        assigneeConditionBuilder_.setMessage(value);
-      }
-      bitField0_ |= 0x00000080;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.api.commons.TemplateCondition assignee_condition = 10 [json_name = "assigneeCondition"];</code>
-     */
-    public Builder setAssigneeCondition(
-        com.tcn.cloud.api.api.commons.TemplateCondition.Builder builderForValue) {
-      if (assigneeConditionBuilder_ == null) {
-        assigneeCondition_ = builderForValue.build();
-      } else {
-        assigneeConditionBuilder_.setMessage(builderForValue.build());
-      }
-      bitField0_ |= 0x00000080;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.api.commons.TemplateCondition assignee_condition = 10 [json_name = "assigneeCondition"];</code>
-     */
-    public Builder mergeAssigneeCondition(com.tcn.cloud.api.api.commons.TemplateCondition value) {
-      if (assigneeConditionBuilder_ == null) {
-        if (((bitField0_ & 0x00000080) != 0) &&
-          assigneeCondition_ != null &&
-          assigneeCondition_ != com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance()) {
-          getAssigneeConditionBuilder().mergeFrom(value);
-        } else {
-          assigneeCondition_ = value;
-        }
-      } else {
-        assigneeConditionBuilder_.mergeFrom(value);
-      }
-      bitField0_ |= 0x00000080;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.api.commons.TemplateCondition assignee_condition = 10 [json_name = "assigneeCondition"];</code>
-     */
-    public Builder clearAssigneeCondition() {
-      bitField0_ = (bitField0_ & ~0x00000080);
-      assigneeCondition_ = null;
-      if (assigneeConditionBuilder_ != null) {
-        assigneeConditionBuilder_.dispose();
-        assigneeConditionBuilder_ = null;
-      }
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.api.commons.TemplateCondition assignee_condition = 10 [json_name = "assigneeCondition"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.TemplateCondition.Builder getAssigneeConditionBuilder() {
-      bitField0_ |= 0x00000080;
-      onChanged();
-      return getAssigneeConditionFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.api.commons.TemplateCondition assignee_condition = 10 [json_name = "assigneeCondition"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder getAssigneeConditionOrBuilder() {
-      if (assigneeConditionBuilder_ != null) {
-        return assigneeConditionBuilder_.getMessageOrBuilder();
-      } else {
-        return assigneeCondition_ == null ?
-            com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance() : assigneeCondition_;
-      }
-    }
-    /**
-     * <code>.api.commons.TemplateCondition assignee_condition = 10 [json_name = "assigneeCondition"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.TemplateCondition, com.tcn.cloud.api.api.commons.TemplateCondition.Builder, com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder> 
-        getAssigneeConditionFieldBuilder() {
-      if (assigneeConditionBuilder_ == null) {
-        assigneeConditionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.TemplateCondition, com.tcn.cloud.api.api.commons.TemplateCondition.Builder, com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder>(
-                getAssigneeCondition(),
-                getParentForChildren(),
-                isClean());
-        assigneeCondition_ = null;
-      }
-      return assigneeConditionBuilder_;
-    }
-
-    private java.util.List<com.tcn.cloud.api.api.commons.Sla> ticketSla_ =
-      java.util.Collections.emptyList();
-    private void ensureTicketSlaIsMutable() {
-      if (!((bitField0_ & 0x00000100) != 0)) {
-        ticketSla_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.Sla>(ticketSla_);
-        bitField0_ |= 0x00000100;
-       }
-    }
-
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.Sla, com.tcn.cloud.api.api.commons.Sla.Builder, com.tcn.cloud.api.api.commons.SlaOrBuilder> ticketSlaBuilder_;
-
-    /**
-     * <code>repeated .api.commons.Sla ticket_sla = 11 [json_name = "ticketSla"];</code>
-     */
-    public java.util.List<com.tcn.cloud.api.api.commons.Sla> getTicketSlaList() {
-      if (ticketSlaBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(ticketSla_);
-      } else {
-        return ticketSlaBuilder_.getMessageList();
-      }
-    }
-    /**
-     * <code>repeated .api.commons.Sla ticket_sla = 11 [json_name = "ticketSla"];</code>
-     */
-    public int getTicketSlaCount() {
-      if (ticketSlaBuilder_ == null) {
-        return ticketSla_.size();
-      } else {
-        return ticketSlaBuilder_.getCount();
-      }
-    }
-    /**
-     * <code>repeated .api.commons.Sla ticket_sla = 11 [json_name = "ticketSla"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.Sla getTicketSla(int index) {
-      if (ticketSlaBuilder_ == null) {
-        return ticketSla_.get(index);
-      } else {
-        return ticketSlaBuilder_.getMessage(index);
-      }
-    }
-    /**
-     * <code>repeated .api.commons.Sla ticket_sla = 11 [json_name = "ticketSla"];</code>
-     */
-    public Builder setTicketSla(
-        int index, com.tcn.cloud.api.api.commons.Sla value) {
-      if (ticketSlaBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureTicketSlaIsMutable();
-        ticketSla_.set(index, value);
-        onChanged();
-      } else {
-        ticketSlaBuilder_.setMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .api.commons.Sla ticket_sla = 11 [json_name = "ticketSla"];</code>
-     */
-    public Builder setTicketSla(
-        int index, com.tcn.cloud.api.api.commons.Sla.Builder builderForValue) {
-      if (ticketSlaBuilder_ == null) {
-        ensureTicketSlaIsMutable();
-        ticketSla_.set(index, builderForValue.build());
-        onChanged();
-      } else {
-        ticketSlaBuilder_.setMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .api.commons.Sla ticket_sla = 11 [json_name = "ticketSla"];</code>
-     */
-    public Builder addTicketSla(com.tcn.cloud.api.api.commons.Sla value) {
-      if (ticketSlaBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureTicketSlaIsMutable();
-        ticketSla_.add(value);
-        onChanged();
-      } else {
-        ticketSlaBuilder_.addMessage(value);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .api.commons.Sla ticket_sla = 11 [json_name = "ticketSla"];</code>
-     */
-    public Builder addTicketSla(
-        int index, com.tcn.cloud.api.api.commons.Sla value) {
-      if (ticketSlaBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureTicketSlaIsMutable();
-        ticketSla_.add(index, value);
-        onChanged();
-      } else {
-        ticketSlaBuilder_.addMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .api.commons.Sla ticket_sla = 11 [json_name = "ticketSla"];</code>
-     */
-    public Builder addTicketSla(
-        com.tcn.cloud.api.api.commons.Sla.Builder builderForValue) {
-      if (ticketSlaBuilder_ == null) {
-        ensureTicketSlaIsMutable();
-        ticketSla_.add(builderForValue.build());
-        onChanged();
-      } else {
-        ticketSlaBuilder_.addMessage(builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .api.commons.Sla ticket_sla = 11 [json_name = "ticketSla"];</code>
-     */
-    public Builder addTicketSla(
-        int index, com.tcn.cloud.api.api.commons.Sla.Builder builderForValue) {
-      if (ticketSlaBuilder_ == null) {
-        ensureTicketSlaIsMutable();
-        ticketSla_.add(index, builderForValue.build());
-        onChanged();
-      } else {
-        ticketSlaBuilder_.addMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .api.commons.Sla ticket_sla = 11 [json_name = "ticketSla"];</code>
-     */
-    public Builder addAllTicketSla(
-        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.Sla> values) {
-      if (ticketSlaBuilder_ == null) {
-        ensureTicketSlaIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, ticketSla_);
-        onChanged();
-      } else {
-        ticketSlaBuilder_.addAllMessages(values);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .api.commons.Sla ticket_sla = 11 [json_name = "ticketSla"];</code>
-     */
-    public Builder clearTicketSla() {
-      if (ticketSlaBuilder_ == null) {
-        ticketSla_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000100);
-        onChanged();
-      } else {
-        ticketSlaBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .api.commons.Sla ticket_sla = 11 [json_name = "ticketSla"];</code>
-     */
-    public Builder removeTicketSla(int index) {
-      if (ticketSlaBuilder_ == null) {
-        ensureTicketSlaIsMutable();
-        ticketSla_.remove(index);
-        onChanged();
-      } else {
-        ticketSlaBuilder_.remove(index);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .api.commons.Sla ticket_sla = 11 [json_name = "ticketSla"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.Sla.Builder getTicketSlaBuilder(
-        int index) {
-      return getTicketSlaFieldBuilder().getBuilder(index);
-    }
-    /**
-     * <code>repeated .api.commons.Sla ticket_sla = 11 [json_name = "ticketSla"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.SlaOrBuilder getTicketSlaOrBuilder(
-        int index) {
-      if (ticketSlaBuilder_ == null) {
-        return ticketSla_.get(index);  } else {
-        return ticketSlaBuilder_.getMessageOrBuilder(index);
-      }
-    }
-    /**
-     * <code>repeated .api.commons.Sla ticket_sla = 11 [json_name = "ticketSla"];</code>
-     */
-    public java.util.List<? extends com.tcn.cloud.api.api.commons.SlaOrBuilder> 
-         getTicketSlaOrBuilderList() {
-      if (ticketSlaBuilder_ != null) {
-        return ticketSlaBuilder_.getMessageOrBuilderList();
-      } else {
-        return java.util.Collections.unmodifiableList(ticketSla_);
-      }
-    }
-    /**
-     * <code>repeated .api.commons.Sla ticket_sla = 11 [json_name = "ticketSla"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.Sla.Builder addTicketSlaBuilder() {
-      return getTicketSlaFieldBuilder().addBuilder(
-          com.tcn.cloud.api.api.commons.Sla.getDefaultInstance());
-    }
-    /**
-     * <code>repeated .api.commons.Sla ticket_sla = 11 [json_name = "ticketSla"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.Sla.Builder addTicketSlaBuilder(
-        int index) {
-      return getTicketSlaFieldBuilder().addBuilder(
-          index, com.tcn.cloud.api.api.commons.Sla.getDefaultInstance());
-    }
-    /**
-     * <code>repeated .api.commons.Sla ticket_sla = 11 [json_name = "ticketSla"];</code>
-     */
-    public java.util.List<com.tcn.cloud.api.api.commons.Sla.Builder> 
-         getTicketSlaBuilderList() {
-      return getTicketSlaFieldBuilder().getBuilderList();
-    }
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.Sla, com.tcn.cloud.api.api.commons.Sla.Builder, com.tcn.cloud.api.api.commons.SlaOrBuilder> 
-        getTicketSlaFieldBuilder() {
-      if (ticketSlaBuilder_ == null) {
-        ticketSlaBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.Sla, com.tcn.cloud.api.api.commons.Sla.Builder, com.tcn.cloud.api.api.commons.SlaOrBuilder>(
-                ticketSla_,
-                ((bitField0_ & 0x00000100) != 0),
-                getParentForChildren(),
-                isClean());
-        ticketSla_ = null;
-      }
-      return ticketSlaBuilder_;
-    }
-
-    private java.lang.Object actionType_ = "";
-    /**
-     * <pre>
-     * Action
-     * </pre>
-     *
-     * <code>string action_type = 13 [json_name = "actionType"];</code>
-     * @return The actionType.
-     */
-    public java.lang.String getActionType() {
-      java.lang.Object ref = actionType_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        actionType_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <pre>
-     * Action
-     * </pre>
-     *
-     * <code>string action_type = 13 [json_name = "actionType"];</code>
-     * @return The bytes for actionType.
-     */
-    public com.google.protobuf.ByteString
-        getActionTypeBytes() {
-      java.lang.Object ref = actionType_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        actionType_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <pre>
-     * Action
-     * </pre>
-     *
-     * <code>string action_type = 13 [json_name = "actionType"];</code>
-     * @param value The actionType to set.
-     * @return This builder for chaining.
-     */
-    public Builder setActionType(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      actionType_ = value;
-      bitField0_ |= 0x00000200;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Action
-     * </pre>
-     *
-     * <code>string action_type = 13 [json_name = "actionType"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearActionType() {
-      actionType_ = getDefaultInstance().getActionType();
-      bitField0_ = (bitField0_ & ~0x00000200);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Action
-     * </pre>
-     *
-     * <code>string action_type = 13 [json_name = "actionType"];</code>
-     * @param value The bytes for actionType to set.
-     * @return This builder for chaining.
-     */
-    public Builder setActionTypeBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      actionType_ = value;
-      bitField0_ |= 0x00000200;
-      onChanged();
-      return this;
-    }
-
-    private java.util.List<com.tcn.cloud.api.api.commons.Skills> actionSkills_ =
-      java.util.Collections.emptyList();
-    private void ensureActionSkillsIsMutable() {
-      if (!((bitField0_ & 0x00000400) != 0)) {
-        actionSkills_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.Skills>(actionSkills_);
-        bitField0_ |= 0x00000400;
-       }
-    }
-
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.Skills, com.tcn.cloud.api.api.commons.Skills.Builder, com.tcn.cloud.api.api.commons.SkillsOrBuilder> actionSkillsBuilder_;
-
-    /**
-     * <code>repeated .api.commons.Skills action_skills = 14 [json_name = "actionSkills"];</code>
-     */
-    public java.util.List<com.tcn.cloud.api.api.commons.Skills> getActionSkillsList() {
-      if (actionSkillsBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(actionSkills_);
-      } else {
-        return actionSkillsBuilder_.getMessageList();
-      }
-    }
-    /**
-     * <code>repeated .api.commons.Skills action_skills = 14 [json_name = "actionSkills"];</code>
-     */
-    public int getActionSkillsCount() {
-      if (actionSkillsBuilder_ == null) {
-        return actionSkills_.size();
-      } else {
-        return actionSkillsBuilder_.getCount();
-      }
-    }
-    /**
-     * <code>repeated .api.commons.Skills action_skills = 14 [json_name = "actionSkills"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.Skills getActionSkills(int index) {
-      if (actionSkillsBuilder_ == null) {
-        return actionSkills_.get(index);
-      } else {
-        return actionSkillsBuilder_.getMessage(index);
-      }
-    }
-    /**
-     * <code>repeated .api.commons.Skills action_skills = 14 [json_name = "actionSkills"];</code>
-     */
-    public Builder setActionSkills(
-        int index, com.tcn.cloud.api.api.commons.Skills value) {
-      if (actionSkillsBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureActionSkillsIsMutable();
-        actionSkills_.set(index, value);
-        onChanged();
-      } else {
-        actionSkillsBuilder_.setMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .api.commons.Skills action_skills = 14 [json_name = "actionSkills"];</code>
-     */
-    public Builder setActionSkills(
-        int index, com.tcn.cloud.api.api.commons.Skills.Builder builderForValue) {
-      if (actionSkillsBuilder_ == null) {
-        ensureActionSkillsIsMutable();
-        actionSkills_.set(index, builderForValue.build());
-        onChanged();
-      } else {
-        actionSkillsBuilder_.setMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .api.commons.Skills action_skills = 14 [json_name = "actionSkills"];</code>
-     */
-    public Builder addActionSkills(com.tcn.cloud.api.api.commons.Skills value) {
-      if (actionSkillsBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureActionSkillsIsMutable();
-        actionSkills_.add(value);
-        onChanged();
-      } else {
-        actionSkillsBuilder_.addMessage(value);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .api.commons.Skills action_skills = 14 [json_name = "actionSkills"];</code>
-     */
-    public Builder addActionSkills(
-        int index, com.tcn.cloud.api.api.commons.Skills value) {
-      if (actionSkillsBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureActionSkillsIsMutable();
-        actionSkills_.add(index, value);
-        onChanged();
-      } else {
-        actionSkillsBuilder_.addMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .api.commons.Skills action_skills = 14 [json_name = "actionSkills"];</code>
-     */
-    public Builder addActionSkills(
-        com.tcn.cloud.api.api.commons.Skills.Builder builderForValue) {
-      if (actionSkillsBuilder_ == null) {
-        ensureActionSkillsIsMutable();
-        actionSkills_.add(builderForValue.build());
-        onChanged();
-      } else {
-        actionSkillsBuilder_.addMessage(builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .api.commons.Skills action_skills = 14 [json_name = "actionSkills"];</code>
-     */
-    public Builder addActionSkills(
-        int index, com.tcn.cloud.api.api.commons.Skills.Builder builderForValue) {
-      if (actionSkillsBuilder_ == null) {
-        ensureActionSkillsIsMutable();
-        actionSkills_.add(index, builderForValue.build());
-        onChanged();
-      } else {
-        actionSkillsBuilder_.addMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .api.commons.Skills action_skills = 14 [json_name = "actionSkills"];</code>
-     */
-    public Builder addAllActionSkills(
-        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.Skills> values) {
-      if (actionSkillsBuilder_ == null) {
-        ensureActionSkillsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, actionSkills_);
-        onChanged();
-      } else {
-        actionSkillsBuilder_.addAllMessages(values);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .api.commons.Skills action_skills = 14 [json_name = "actionSkills"];</code>
-     */
-    public Builder clearActionSkills() {
-      if (actionSkillsBuilder_ == null) {
-        actionSkills_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000400);
-        onChanged();
-      } else {
-        actionSkillsBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .api.commons.Skills action_skills = 14 [json_name = "actionSkills"];</code>
-     */
-    public Builder removeActionSkills(int index) {
-      if (actionSkillsBuilder_ == null) {
-        ensureActionSkillsIsMutable();
-        actionSkills_.remove(index);
-        onChanged();
-      } else {
-        actionSkillsBuilder_.remove(index);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .api.commons.Skills action_skills = 14 [json_name = "actionSkills"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.Skills.Builder getActionSkillsBuilder(
-        int index) {
-      return getActionSkillsFieldBuilder().getBuilder(index);
-    }
-    /**
-     * <code>repeated .api.commons.Skills action_skills = 14 [json_name = "actionSkills"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.SkillsOrBuilder getActionSkillsOrBuilder(
-        int index) {
-      if (actionSkillsBuilder_ == null) {
-        return actionSkills_.get(index);  } else {
-        return actionSkillsBuilder_.getMessageOrBuilder(index);
-      }
-    }
-    /**
-     * <code>repeated .api.commons.Skills action_skills = 14 [json_name = "actionSkills"];</code>
-     */
-    public java.util.List<? extends com.tcn.cloud.api.api.commons.SkillsOrBuilder> 
-         getActionSkillsOrBuilderList() {
-      if (actionSkillsBuilder_ != null) {
-        return actionSkillsBuilder_.getMessageOrBuilderList();
-      } else {
-        return java.util.Collections.unmodifiableList(actionSkills_);
-      }
-    }
-    /**
-     * <code>repeated .api.commons.Skills action_skills = 14 [json_name = "actionSkills"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.Skills.Builder addActionSkillsBuilder() {
-      return getActionSkillsFieldBuilder().addBuilder(
-          com.tcn.cloud.api.api.commons.Skills.getDefaultInstance());
-    }
-    /**
-     * <code>repeated .api.commons.Skills action_skills = 14 [json_name = "actionSkills"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.Skills.Builder addActionSkillsBuilder(
-        int index) {
-      return getActionSkillsFieldBuilder().addBuilder(
-          index, com.tcn.cloud.api.api.commons.Skills.getDefaultInstance());
-    }
-    /**
-     * <code>repeated .api.commons.Skills action_skills = 14 [json_name = "actionSkills"];</code>
-     */
-    public java.util.List<com.tcn.cloud.api.api.commons.Skills.Builder> 
-         getActionSkillsBuilderList() {
-      return getActionSkillsFieldBuilder().getBuilderList();
-    }
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.Skills, com.tcn.cloud.api.api.commons.Skills.Builder, com.tcn.cloud.api.api.commons.SkillsOrBuilder> 
-        getActionSkillsFieldBuilder() {
-      if (actionSkillsBuilder_ == null) {
-        actionSkillsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.Skills, com.tcn.cloud.api.api.commons.Skills.Builder, com.tcn.cloud.api.api.commons.SkillsOrBuilder>(
-                actionSkills_,
-                ((bitField0_ & 0x00000400) != 0),
-                getParentForChildren(),
-                isClean());
-        actionSkills_ = null;
-      }
-      return actionSkillsBuilder_;
-    }
-
-    private com.tcn.cloud.api.api.commons.TemplateCondition actionSkillsCondition_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.TemplateCondition, com.tcn.cloud.api.api.commons.TemplateCondition.Builder, com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder> actionSkillsConditionBuilder_;
-    /**
-     * <code>.api.commons.TemplateCondition action_skills_condition = 15 [json_name = "actionSkillsCondition"];</code>
-     * @return Whether the actionSkillsCondition field is set.
-     */
-    public boolean hasActionSkillsCondition() {
-      return ((bitField0_ & 0x00000800) != 0);
-    }
-    /**
-     * <code>.api.commons.TemplateCondition action_skills_condition = 15 [json_name = "actionSkillsCondition"];</code>
-     * @return The actionSkillsCondition.
-     */
-    public com.tcn.cloud.api.api.commons.TemplateCondition getActionSkillsCondition() {
-      if (actionSkillsConditionBuilder_ == null) {
-        return actionSkillsCondition_ == null ? com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance() : actionSkillsCondition_;
-      } else {
-        return actionSkillsConditionBuilder_.getMessage();
-      }
-    }
-    /**
-     * <code>.api.commons.TemplateCondition action_skills_condition = 15 [json_name = "actionSkillsCondition"];</code>
-     */
-    public Builder setActionSkillsCondition(com.tcn.cloud.api.api.commons.TemplateCondition value) {
-      if (actionSkillsConditionBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        actionSkillsCondition_ = value;
-      } else {
-        actionSkillsConditionBuilder_.setMessage(value);
-      }
-      bitField0_ |= 0x00000800;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.api.commons.TemplateCondition action_skills_condition = 15 [json_name = "actionSkillsCondition"];</code>
-     */
-    public Builder setActionSkillsCondition(
-        com.tcn.cloud.api.api.commons.TemplateCondition.Builder builderForValue) {
-      if (actionSkillsConditionBuilder_ == null) {
-        actionSkillsCondition_ = builderForValue.build();
-      } else {
-        actionSkillsConditionBuilder_.setMessage(builderForValue.build());
-      }
-      bitField0_ |= 0x00000800;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.api.commons.TemplateCondition action_skills_condition = 15 [json_name = "actionSkillsCondition"];</code>
-     */
-    public Builder mergeActionSkillsCondition(com.tcn.cloud.api.api.commons.TemplateCondition value) {
-      if (actionSkillsConditionBuilder_ == null) {
-        if (((bitField0_ & 0x00000800) != 0) &&
-          actionSkillsCondition_ != null &&
-          actionSkillsCondition_ != com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance()) {
-          getActionSkillsConditionBuilder().mergeFrom(value);
-        } else {
-          actionSkillsCondition_ = value;
-        }
-      } else {
-        actionSkillsConditionBuilder_.mergeFrom(value);
-      }
-      bitField0_ |= 0x00000800;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.api.commons.TemplateCondition action_skills_condition = 15 [json_name = "actionSkillsCondition"];</code>
-     */
-    public Builder clearActionSkillsCondition() {
-      bitField0_ = (bitField0_ & ~0x00000800);
-      actionSkillsCondition_ = null;
-      if (actionSkillsConditionBuilder_ != null) {
-        actionSkillsConditionBuilder_.dispose();
-        actionSkillsConditionBuilder_ = null;
-      }
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.api.commons.TemplateCondition action_skills_condition = 15 [json_name = "actionSkillsCondition"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.TemplateCondition.Builder getActionSkillsConditionBuilder() {
-      bitField0_ |= 0x00000800;
-      onChanged();
-      return getActionSkillsConditionFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.api.commons.TemplateCondition action_skills_condition = 15 [json_name = "actionSkillsCondition"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder getActionSkillsConditionOrBuilder() {
-      if (actionSkillsConditionBuilder_ != null) {
-        return actionSkillsConditionBuilder_.getMessageOrBuilder();
-      } else {
-        return actionSkillsCondition_ == null ?
-            com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance() : actionSkillsCondition_;
-      }
-    }
-    /**
-     * <code>.api.commons.TemplateCondition action_skills_condition = 15 [json_name = "actionSkillsCondition"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.TemplateCondition, com.tcn.cloud.api.api.commons.TemplateCondition.Builder, com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder> 
-        getActionSkillsConditionFieldBuilder() {
-      if (actionSkillsConditionBuilder_ == null) {
-        actionSkillsConditionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.TemplateCondition, com.tcn.cloud.api.api.commons.TemplateCondition.Builder, com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder>(
-                getActionSkillsCondition(),
-                getParentForChildren(),
-                isClean());
-        actionSkillsCondition_ = null;
-      }
-      return actionSkillsConditionBuilder_;
-    }
-
-    private com.google.protobuf.Timestamp actionExpiryDate_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> actionExpiryDateBuilder_;
-    /**
-     * <code>.google.protobuf.Timestamp action_expiry_date = 18 [json_name = "actionExpiryDate"];</code>
-     * @return Whether the actionExpiryDate field is set.
-     */
-    public boolean hasActionExpiryDate() {
-      return ((bitField0_ & 0x00001000) != 0);
-    }
-    /**
-     * <code>.google.protobuf.Timestamp action_expiry_date = 18 [json_name = "actionExpiryDate"];</code>
-     * @return The actionExpiryDate.
-     */
-    public com.google.protobuf.Timestamp getActionExpiryDate() {
-      if (actionExpiryDateBuilder_ == null) {
-        return actionExpiryDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : actionExpiryDate_;
-      } else {
-        return actionExpiryDateBuilder_.getMessage();
-      }
-    }
-    /**
-     * <code>.google.protobuf.Timestamp action_expiry_date = 18 [json_name = "actionExpiryDate"];</code>
-     */
-    public Builder setActionExpiryDate(com.google.protobuf.Timestamp value) {
-      if (actionExpiryDateBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        actionExpiryDate_ = value;
-      } else {
-        actionExpiryDateBuilder_.setMessage(value);
-      }
-      bitField0_ |= 0x00001000;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.google.protobuf.Timestamp action_expiry_date = 18 [json_name = "actionExpiryDate"];</code>
-     */
-    public Builder setActionExpiryDate(
-        com.google.protobuf.Timestamp.Builder builderForValue) {
-      if (actionExpiryDateBuilder_ == null) {
-        actionExpiryDate_ = builderForValue.build();
-      } else {
-        actionExpiryDateBuilder_.setMessage(builderForValue.build());
-      }
-      bitField0_ |= 0x00001000;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.google.protobuf.Timestamp action_expiry_date = 18 [json_name = "actionExpiryDate"];</code>
-     */
-    public Builder mergeActionExpiryDate(com.google.protobuf.Timestamp value) {
-      if (actionExpiryDateBuilder_ == null) {
-        if (((bitField0_ & 0x00001000) != 0) &&
-          actionExpiryDate_ != null &&
-          actionExpiryDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-          getActionExpiryDateBuilder().mergeFrom(value);
-        } else {
-          actionExpiryDate_ = value;
-        }
-      } else {
-        actionExpiryDateBuilder_.mergeFrom(value);
-      }
-      bitField0_ |= 0x00001000;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.google.protobuf.Timestamp action_expiry_date = 18 [json_name = "actionExpiryDate"];</code>
-     */
-    public Builder clearActionExpiryDate() {
-      bitField0_ = (bitField0_ & ~0x00001000);
-      actionExpiryDate_ = null;
-      if (actionExpiryDateBuilder_ != null) {
-        actionExpiryDateBuilder_.dispose();
-        actionExpiryDateBuilder_ = null;
-      }
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.google.protobuf.Timestamp action_expiry_date = 18 [json_name = "actionExpiryDate"];</code>
-     */
-    public com.google.protobuf.Timestamp.Builder getActionExpiryDateBuilder() {
-      bitField0_ |= 0x00001000;
-      onChanged();
-      return getActionExpiryDateFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.google.protobuf.Timestamp action_expiry_date = 18 [json_name = "actionExpiryDate"];</code>
-     */
-    public com.google.protobuf.TimestampOrBuilder getActionExpiryDateOrBuilder() {
-      if (actionExpiryDateBuilder_ != null) {
-        return actionExpiryDateBuilder_.getMessageOrBuilder();
-      } else {
-        return actionExpiryDate_ == null ?
-            com.google.protobuf.Timestamp.getDefaultInstance() : actionExpiryDate_;
-      }
-    }
-    /**
-     * <code>.google.protobuf.Timestamp action_expiry_date = 18 [json_name = "actionExpiryDate"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-        getActionExpiryDateFieldBuilder() {
-      if (actionExpiryDateBuilder_ == null) {
-        actionExpiryDateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                getActionExpiryDate(),
-                getParentForChildren(),
-                isClean());
-        actionExpiryDate_ = null;
-      }
-      return actionExpiryDateBuilder_;
-    }
-
-    private com.tcn.cloud.api.api.commons.TemplateCondition actionExpiryDateCondition_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.TemplateCondition, com.tcn.cloud.api.api.commons.TemplateCondition.Builder, com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder> actionExpiryDateConditionBuilder_;
-    /**
-     * <code>.api.commons.TemplateCondition action_expiry_date_condition = 19 [json_name = "actionExpiryDateCondition"];</code>
-     * @return Whether the actionExpiryDateCondition field is set.
-     */
-    public boolean hasActionExpiryDateCondition() {
-      return ((bitField0_ & 0x00002000) != 0);
-    }
-    /**
-     * <code>.api.commons.TemplateCondition action_expiry_date_condition = 19 [json_name = "actionExpiryDateCondition"];</code>
-     * @return The actionExpiryDateCondition.
-     */
-    public com.tcn.cloud.api.api.commons.TemplateCondition getActionExpiryDateCondition() {
-      if (actionExpiryDateConditionBuilder_ == null) {
-        return actionExpiryDateCondition_ == null ? com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance() : actionExpiryDateCondition_;
-      } else {
-        return actionExpiryDateConditionBuilder_.getMessage();
-      }
-    }
-    /**
-     * <code>.api.commons.TemplateCondition action_expiry_date_condition = 19 [json_name = "actionExpiryDateCondition"];</code>
-     */
-    public Builder setActionExpiryDateCondition(com.tcn.cloud.api.api.commons.TemplateCondition value) {
-      if (actionExpiryDateConditionBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        actionExpiryDateCondition_ = value;
-      } else {
-        actionExpiryDateConditionBuilder_.setMessage(value);
-      }
-      bitField0_ |= 0x00002000;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.api.commons.TemplateCondition action_expiry_date_condition = 19 [json_name = "actionExpiryDateCondition"];</code>
-     */
-    public Builder setActionExpiryDateCondition(
-        com.tcn.cloud.api.api.commons.TemplateCondition.Builder builderForValue) {
-      if (actionExpiryDateConditionBuilder_ == null) {
-        actionExpiryDateCondition_ = builderForValue.build();
-      } else {
-        actionExpiryDateConditionBuilder_.setMessage(builderForValue.build());
-      }
-      bitField0_ |= 0x00002000;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.api.commons.TemplateCondition action_expiry_date_condition = 19 [json_name = "actionExpiryDateCondition"];</code>
-     */
-    public Builder mergeActionExpiryDateCondition(com.tcn.cloud.api.api.commons.TemplateCondition value) {
-      if (actionExpiryDateConditionBuilder_ == null) {
-        if (((bitField0_ & 0x00002000) != 0) &&
-          actionExpiryDateCondition_ != null &&
-          actionExpiryDateCondition_ != com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance()) {
-          getActionExpiryDateConditionBuilder().mergeFrom(value);
-        } else {
-          actionExpiryDateCondition_ = value;
-        }
-      } else {
-        actionExpiryDateConditionBuilder_.mergeFrom(value);
-      }
-      bitField0_ |= 0x00002000;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.api.commons.TemplateCondition action_expiry_date_condition = 19 [json_name = "actionExpiryDateCondition"];</code>
-     */
-    public Builder clearActionExpiryDateCondition() {
-      bitField0_ = (bitField0_ & ~0x00002000);
-      actionExpiryDateCondition_ = null;
-      if (actionExpiryDateConditionBuilder_ != null) {
-        actionExpiryDateConditionBuilder_.dispose();
-        actionExpiryDateConditionBuilder_ = null;
-      }
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.api.commons.TemplateCondition action_expiry_date_condition = 19 [json_name = "actionExpiryDateCondition"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.TemplateCondition.Builder getActionExpiryDateConditionBuilder() {
-      bitField0_ |= 0x00002000;
-      onChanged();
-      return getActionExpiryDateConditionFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.api.commons.TemplateCondition action_expiry_date_condition = 19 [json_name = "actionExpiryDateCondition"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder getActionExpiryDateConditionOrBuilder() {
-      if (actionExpiryDateConditionBuilder_ != null) {
-        return actionExpiryDateConditionBuilder_.getMessageOrBuilder();
-      } else {
-        return actionExpiryDateCondition_ == null ?
-            com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance() : actionExpiryDateCondition_;
-      }
-    }
-    /**
-     * <code>.api.commons.TemplateCondition action_expiry_date_condition = 19 [json_name = "actionExpiryDateCondition"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.TemplateCondition, com.tcn.cloud.api.api.commons.TemplateCondition.Builder, com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder> 
-        getActionExpiryDateConditionFieldBuilder() {
-      if (actionExpiryDateConditionBuilder_ == null) {
-        actionExpiryDateConditionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.TemplateCondition, com.tcn.cloud.api.api.commons.TemplateCondition.Builder, com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder>(
-                getActionExpiryDateCondition(),
-                getParentForChildren(),
-                isClean());
-        actionExpiryDateCondition_ = null;
-      }
-      return actionExpiryDateConditionBuilder_;
-    }
-
-    private java.util.List<com.tcn.cloud.api.api.commons.Sla> actionSla_ =
-      java.util.Collections.emptyList();
-    private void ensureActionSlaIsMutable() {
-      if (!((bitField0_ & 0x00004000) != 0)) {
-        actionSla_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.Sla>(actionSla_);
-        bitField0_ |= 0x00004000;
-       }
-    }
-
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.Sla, com.tcn.cloud.api.api.commons.Sla.Builder, com.tcn.cloud.api.api.commons.SlaOrBuilder> actionSlaBuilder_;
-
-    /**
-     * <code>repeated .api.commons.Sla action_sla = 20 [json_name = "actionSla"];</code>
-     */
-    public java.util.List<com.tcn.cloud.api.api.commons.Sla> getActionSlaList() {
-      if (actionSlaBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(actionSla_);
-      } else {
-        return actionSlaBuilder_.getMessageList();
-      }
-    }
-    /**
-     * <code>repeated .api.commons.Sla action_sla = 20 [json_name = "actionSla"];</code>
-     */
-    public int getActionSlaCount() {
-      if (actionSlaBuilder_ == null) {
-        return actionSla_.size();
-      } else {
-        return actionSlaBuilder_.getCount();
-      }
-    }
-    /**
-     * <code>repeated .api.commons.Sla action_sla = 20 [json_name = "actionSla"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.Sla getActionSla(int index) {
-      if (actionSlaBuilder_ == null) {
-        return actionSla_.get(index);
-      } else {
-        return actionSlaBuilder_.getMessage(index);
-      }
-    }
-    /**
-     * <code>repeated .api.commons.Sla action_sla = 20 [json_name = "actionSla"];</code>
-     */
-    public Builder setActionSla(
-        int index, com.tcn.cloud.api.api.commons.Sla value) {
-      if (actionSlaBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureActionSlaIsMutable();
-        actionSla_.set(index, value);
-        onChanged();
-      } else {
-        actionSlaBuilder_.setMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .api.commons.Sla action_sla = 20 [json_name = "actionSla"];</code>
-     */
-    public Builder setActionSla(
-        int index, com.tcn.cloud.api.api.commons.Sla.Builder builderForValue) {
-      if (actionSlaBuilder_ == null) {
-        ensureActionSlaIsMutable();
-        actionSla_.set(index, builderForValue.build());
-        onChanged();
-      } else {
-        actionSlaBuilder_.setMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .api.commons.Sla action_sla = 20 [json_name = "actionSla"];</code>
-     */
-    public Builder addActionSla(com.tcn.cloud.api.api.commons.Sla value) {
-      if (actionSlaBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureActionSlaIsMutable();
-        actionSla_.add(value);
-        onChanged();
-      } else {
-        actionSlaBuilder_.addMessage(value);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .api.commons.Sla action_sla = 20 [json_name = "actionSla"];</code>
-     */
-    public Builder addActionSla(
-        int index, com.tcn.cloud.api.api.commons.Sla value) {
-      if (actionSlaBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureActionSlaIsMutable();
-        actionSla_.add(index, value);
-        onChanged();
-      } else {
-        actionSlaBuilder_.addMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .api.commons.Sla action_sla = 20 [json_name = "actionSla"];</code>
-     */
-    public Builder addActionSla(
-        com.tcn.cloud.api.api.commons.Sla.Builder builderForValue) {
-      if (actionSlaBuilder_ == null) {
-        ensureActionSlaIsMutable();
-        actionSla_.add(builderForValue.build());
-        onChanged();
-      } else {
-        actionSlaBuilder_.addMessage(builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .api.commons.Sla action_sla = 20 [json_name = "actionSla"];</code>
-     */
-    public Builder addActionSla(
-        int index, com.tcn.cloud.api.api.commons.Sla.Builder builderForValue) {
-      if (actionSlaBuilder_ == null) {
-        ensureActionSlaIsMutable();
-        actionSla_.add(index, builderForValue.build());
-        onChanged();
-      } else {
-        actionSlaBuilder_.addMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .api.commons.Sla action_sla = 20 [json_name = "actionSla"];</code>
-     */
-    public Builder addAllActionSla(
-        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.Sla> values) {
-      if (actionSlaBuilder_ == null) {
-        ensureActionSlaIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, actionSla_);
-        onChanged();
-      } else {
-        actionSlaBuilder_.addAllMessages(values);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .api.commons.Sla action_sla = 20 [json_name = "actionSla"];</code>
-     */
-    public Builder clearActionSla() {
-      if (actionSlaBuilder_ == null) {
-        actionSla_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00004000);
-        onChanged();
-      } else {
-        actionSlaBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .api.commons.Sla action_sla = 20 [json_name = "actionSla"];</code>
-     */
-    public Builder removeActionSla(int index) {
-      if (actionSlaBuilder_ == null) {
-        ensureActionSlaIsMutable();
-        actionSla_.remove(index);
-        onChanged();
-      } else {
-        actionSlaBuilder_.remove(index);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .api.commons.Sla action_sla = 20 [json_name = "actionSla"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.Sla.Builder getActionSlaBuilder(
-        int index) {
-      return getActionSlaFieldBuilder().getBuilder(index);
-    }
-    /**
-     * <code>repeated .api.commons.Sla action_sla = 20 [json_name = "actionSla"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.SlaOrBuilder getActionSlaOrBuilder(
-        int index) {
-      if (actionSlaBuilder_ == null) {
-        return actionSla_.get(index);  } else {
-        return actionSlaBuilder_.getMessageOrBuilder(index);
-      }
-    }
-    /**
-     * <code>repeated .api.commons.Sla action_sla = 20 [json_name = "actionSla"];</code>
-     */
-    public java.util.List<? extends com.tcn.cloud.api.api.commons.SlaOrBuilder> 
-         getActionSlaOrBuilderList() {
-      if (actionSlaBuilder_ != null) {
-        return actionSlaBuilder_.getMessageOrBuilderList();
-      } else {
-        return java.util.Collections.unmodifiableList(actionSla_);
-      }
-    }
-    /**
-     * <code>repeated .api.commons.Sla action_sla = 20 [json_name = "actionSla"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.Sla.Builder addActionSlaBuilder() {
-      return getActionSlaFieldBuilder().addBuilder(
-          com.tcn.cloud.api.api.commons.Sla.getDefaultInstance());
-    }
-    /**
-     * <code>repeated .api.commons.Sla action_sla = 20 [json_name = "actionSla"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.Sla.Builder addActionSlaBuilder(
-        int index) {
-      return getActionSlaFieldBuilder().addBuilder(
-          index, com.tcn.cloud.api.api.commons.Sla.getDefaultInstance());
-    }
-    /**
-     * <code>repeated .api.commons.Sla action_sla = 20 [json_name = "actionSla"];</code>
-     */
-    public java.util.List<com.tcn.cloud.api.api.commons.Sla.Builder> 
-         getActionSlaBuilderList() {
-      return getActionSlaFieldBuilder().getBuilderList();
-    }
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.Sla, com.tcn.cloud.api.api.commons.Sla.Builder, com.tcn.cloud.api.api.commons.SlaOrBuilder> 
-        getActionSlaFieldBuilder() {
-      if (actionSlaBuilder_ == null) {
-        actionSlaBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.Sla, com.tcn.cloud.api.api.commons.Sla.Builder, com.tcn.cloud.api.api.commons.SlaOrBuilder>(
-                actionSla_,
-                ((bitField0_ & 0x00004000) != 0),
-                getParentForChildren(),
-                isClean());
-        actionSla_ = null;
-      }
-      return actionSlaBuilder_;
-    }
-
-    private boolean isValid_ ;
-    /**
-     * <code>bool is_valid = 22 [json_name = "isValid"];</code>
-     * @return The isValid.
-     */
-    @java.lang.Override
-    public boolean getIsValid() {
-      return isValid_;
-    }
-    /**
-     * <code>bool is_valid = 22 [json_name = "isValid"];</code>
-     * @param value The isValid to set.
-     * @return This builder for chaining.
-     */
-    public Builder setIsValid(boolean value) {
-
-      isValid_ = value;
-      bitField0_ |= 0x00008000;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>bool is_valid = 22 [json_name = "isValid"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearIsValid() {
-      bitField0_ = (bitField0_ & ~0x00008000);
-      isValid_ = false;
-      onChanged();
-      return this;
-    }
-
-    private com.tcn.cloud.api.api.commons.TicketCallbackTemplate callbackDefault_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.TicketCallbackTemplate, com.tcn.cloud.api.api.commons.TicketCallbackTemplate.Builder, com.tcn.cloud.api.api.commons.TicketCallbackTemplateOrBuilder> callbackDefaultBuilder_;
-    /**
-     * <pre>
-     * Action Types
-     * </pre>
-     *
-     * <code>.api.commons.TicketCallbackTemplate callback_default = 23 [json_name = "callbackDefault"];</code>
-     * @return Whether the callbackDefault field is set.
-     */
-    public boolean hasCallbackDefault() {
-      return ((bitField0_ & 0x00010000) != 0);
-    }
-    /**
-     * <pre>
-     * Action Types
-     * </pre>
-     *
-     * <code>.api.commons.TicketCallbackTemplate callback_default = 23 [json_name = "callbackDefault"];</code>
-     * @return The callbackDefault.
-     */
-    public com.tcn.cloud.api.api.commons.TicketCallbackTemplate getCallbackDefault() {
-      if (callbackDefaultBuilder_ == null) {
-        return callbackDefault_ == null ? com.tcn.cloud.api.api.commons.TicketCallbackTemplate.getDefaultInstance() : callbackDefault_;
-      } else {
-        return callbackDefaultBuilder_.getMessage();
-      }
-    }
-    /**
-     * <pre>
-     * Action Types
-     * </pre>
-     *
-     * <code>.api.commons.TicketCallbackTemplate callback_default = 23 [json_name = "callbackDefault"];</code>
-     */
-    public Builder setCallbackDefault(com.tcn.cloud.api.api.commons.TicketCallbackTemplate value) {
-      if (callbackDefaultBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        callbackDefault_ = value;
-      } else {
-        callbackDefaultBuilder_.setMessage(value);
-      }
-      bitField0_ |= 0x00010000;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Action Types
-     * </pre>
-     *
-     * <code>.api.commons.TicketCallbackTemplate callback_default = 23 [json_name = "callbackDefault"];</code>
-     */
-    public Builder setCallbackDefault(
-        com.tcn.cloud.api.api.commons.TicketCallbackTemplate.Builder builderForValue) {
-      if (callbackDefaultBuilder_ == null) {
-        callbackDefault_ = builderForValue.build();
-      } else {
-        callbackDefaultBuilder_.setMessage(builderForValue.build());
-      }
-      bitField0_ |= 0x00010000;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Action Types
-     * </pre>
-     *
-     * <code>.api.commons.TicketCallbackTemplate callback_default = 23 [json_name = "callbackDefault"];</code>
-     */
-    public Builder mergeCallbackDefault(com.tcn.cloud.api.api.commons.TicketCallbackTemplate value) {
-      if (callbackDefaultBuilder_ == null) {
-        if (((bitField0_ & 0x00010000) != 0) &&
-          callbackDefault_ != null &&
-          callbackDefault_ != com.tcn.cloud.api.api.commons.TicketCallbackTemplate.getDefaultInstance()) {
-          getCallbackDefaultBuilder().mergeFrom(value);
-        } else {
-          callbackDefault_ = value;
-        }
-      } else {
-        callbackDefaultBuilder_.mergeFrom(value);
-      }
-      bitField0_ |= 0x00010000;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Action Types
-     * </pre>
-     *
-     * <code>.api.commons.TicketCallbackTemplate callback_default = 23 [json_name = "callbackDefault"];</code>
-     */
-    public Builder clearCallbackDefault() {
-      bitField0_ = (bitField0_ & ~0x00010000);
-      callbackDefault_ = null;
-      if (callbackDefaultBuilder_ != null) {
-        callbackDefaultBuilder_.dispose();
-        callbackDefaultBuilder_ = null;
-      }
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Action Types
-     * </pre>
-     *
-     * <code>.api.commons.TicketCallbackTemplate callback_default = 23 [json_name = "callbackDefault"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.TicketCallbackTemplate.Builder getCallbackDefaultBuilder() {
-      bitField0_ |= 0x00010000;
-      onChanged();
-      return getCallbackDefaultFieldBuilder().getBuilder();
-    }
-    /**
-     * <pre>
-     * Action Types
-     * </pre>
-     *
-     * <code>.api.commons.TicketCallbackTemplate callback_default = 23 [json_name = "callbackDefault"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.TicketCallbackTemplateOrBuilder getCallbackDefaultOrBuilder() {
-      if (callbackDefaultBuilder_ != null) {
-        return callbackDefaultBuilder_.getMessageOrBuilder();
-      } else {
-        return callbackDefault_ == null ?
-            com.tcn.cloud.api.api.commons.TicketCallbackTemplate.getDefaultInstance() : callbackDefault_;
-      }
-    }
-    /**
-     * <pre>
-     * Action Types
-     * </pre>
-     *
-     * <code>.api.commons.TicketCallbackTemplate callback_default = 23 [json_name = "callbackDefault"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.TicketCallbackTemplate, com.tcn.cloud.api.api.commons.TicketCallbackTemplate.Builder, com.tcn.cloud.api.api.commons.TicketCallbackTemplateOrBuilder> 
-        getCallbackDefaultFieldBuilder() {
-      if (callbackDefaultBuilder_ == null) {
-        callbackDefaultBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.TicketCallbackTemplate, com.tcn.cloud.api.api.commons.TicketCallbackTemplate.Builder, com.tcn.cloud.api.api.commons.TicketCallbackTemplateOrBuilder>(
-                getCallbackDefault(),
-                getParentForChildren(),
-                isClean());
-        callbackDefault_ = null;
-      }
-      return callbackDefaultBuilder_;
     }
 
     private java.lang.Object createdById_ = "";
     /**
-     * <code>string created_by_id = 24 [json_name = "createdById"];</code>
+     * <code>string created_by_id = 7 [json_name = "createdById"];</code>
      * @return The createdById.
      */
     public java.lang.String getCreatedById() {
@@ -3810,7 +1256,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string created_by_id = 24 [json_name = "createdById"];</code>
+     * <code>string created_by_id = 7 [json_name = "createdById"];</code>
      * @return The bytes for createdById.
      */
     public com.google.protobuf.ByteString
@@ -3827,7 +1273,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string created_by_id = 24 [json_name = "createdById"];</code>
+     * <code>string created_by_id = 7 [json_name = "createdById"];</code>
      * @param value The createdById to set.
      * @return This builder for chaining.
      */
@@ -3835,22 +1281,22 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       createdById_ = value;
-      bitField0_ |= 0x00020000;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
     /**
-     * <code>string created_by_id = 24 [json_name = "createdById"];</code>
+     * <code>string created_by_id = 7 [json_name = "createdById"];</code>
      * @return This builder for chaining.
      */
     public Builder clearCreatedById() {
       createdById_ = getDefaultInstance().getCreatedById();
-      bitField0_ = (bitField0_ & ~0x00020000);
+      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
     /**
-     * <code>string created_by_id = 24 [json_name = "createdById"];</code>
+     * <code>string created_by_id = 7 [json_name = "createdById"];</code>
      * @param value The bytes for createdById to set.
      * @return This builder for chaining.
      */
@@ -3859,7 +1305,79 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       createdById_ = value;
-      bitField0_ |= 0x00020000;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object modifiedBy_ = "";
+    /**
+     * <code>string modified_by = 8 [json_name = "modifiedBy"];</code>
+     * @return The modifiedBy.
+     */
+    public java.lang.String getModifiedBy() {
+      java.lang.Object ref = modifiedBy_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        modifiedBy_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string modified_by = 8 [json_name = "modifiedBy"];</code>
+     * @return The bytes for modifiedBy.
+     */
+    public com.google.protobuf.ByteString
+        getModifiedByBytes() {
+      java.lang.Object ref = modifiedBy_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        modifiedBy_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string modified_by = 8 [json_name = "modifiedBy"];</code>
+     * @param value The modifiedBy to set.
+     * @return This builder for chaining.
+     */
+    public Builder setModifiedBy(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      modifiedBy_ = value;
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string modified_by = 8 [json_name = "modifiedBy"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearModifiedBy() {
+      modifiedBy_ = getDefaultInstance().getModifiedBy();
+      bitField0_ = (bitField0_ & ~0x00000040);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string modified_by = 8 [json_name = "modifiedBy"];</code>
+     * @param value The bytes for modifiedBy to set.
+     * @return This builder for chaining.
+     */
+    public Builder setModifiedByBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      modifiedBy_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -3868,14 +1386,14 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdDateBuilder_;
     /**
-     * <code>.google.protobuf.Timestamp created_date = 25 [json_name = "createdDate"];</code>
+     * <code>.google.protobuf.Timestamp created_date = 9 [json_name = "createdDate"];</code>
      * @return Whether the createdDate field is set.
      */
     public boolean hasCreatedDate() {
-      return ((bitField0_ & 0x00040000) != 0);
+      return ((bitField0_ & 0x00000080) != 0);
     }
     /**
-     * <code>.google.protobuf.Timestamp created_date = 25 [json_name = "createdDate"];</code>
+     * <code>.google.protobuf.Timestamp created_date = 9 [json_name = "createdDate"];</code>
      * @return The createdDate.
      */
     public com.google.protobuf.Timestamp getCreatedDate() {
@@ -3886,7 +1404,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.google.protobuf.Timestamp created_date = 25 [json_name = "createdDate"];</code>
+     * <code>.google.protobuf.Timestamp created_date = 9 [json_name = "createdDate"];</code>
      */
     public Builder setCreatedDate(com.google.protobuf.Timestamp value) {
       if (createdDateBuilder_ == null) {
@@ -3897,12 +1415,12 @@ private static final long serialVersionUID = 0L;
       } else {
         createdDateBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00040000;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
     /**
-     * <code>.google.protobuf.Timestamp created_date = 25 [json_name = "createdDate"];</code>
+     * <code>.google.protobuf.Timestamp created_date = 9 [json_name = "createdDate"];</code>
      */
     public Builder setCreatedDate(
         com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -3911,16 +1429,16 @@ private static final long serialVersionUID = 0L;
       } else {
         createdDateBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00040000;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
     /**
-     * <code>.google.protobuf.Timestamp created_date = 25 [json_name = "createdDate"];</code>
+     * <code>.google.protobuf.Timestamp created_date = 9 [json_name = "createdDate"];</code>
      */
     public Builder mergeCreatedDate(com.google.protobuf.Timestamp value) {
       if (createdDateBuilder_ == null) {
-        if (((bitField0_ & 0x00040000) != 0) &&
+        if (((bitField0_ & 0x00000080) != 0) &&
           createdDate_ != null &&
           createdDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
           getCreatedDateBuilder().mergeFrom(value);
@@ -3930,15 +1448,15 @@ private static final long serialVersionUID = 0L;
       } else {
         createdDateBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00040000;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
     /**
-     * <code>.google.protobuf.Timestamp created_date = 25 [json_name = "createdDate"];</code>
+     * <code>.google.protobuf.Timestamp created_date = 9 [json_name = "createdDate"];</code>
      */
     public Builder clearCreatedDate() {
-      bitField0_ = (bitField0_ & ~0x00040000);
+      bitField0_ = (bitField0_ & ~0x00000080);
       createdDate_ = null;
       if (createdDateBuilder_ != null) {
         createdDateBuilder_.dispose();
@@ -3948,15 +1466,15 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.google.protobuf.Timestamp created_date = 25 [json_name = "createdDate"];</code>
+     * <code>.google.protobuf.Timestamp created_date = 9 [json_name = "createdDate"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getCreatedDateBuilder() {
-      bitField0_ |= 0x00040000;
+      bitField0_ |= 0x00000080;
       onChanged();
       return getCreatedDateFieldBuilder().getBuilder();
     }
     /**
-     * <code>.google.protobuf.Timestamp created_date = 25 [json_name = "createdDate"];</code>
+     * <code>.google.protobuf.Timestamp created_date = 9 [json_name = "createdDate"];</code>
      */
     public com.google.protobuf.TimestampOrBuilder getCreatedDateOrBuilder() {
       if (createdDateBuilder_ != null) {
@@ -3967,7 +1485,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.google.protobuf.Timestamp created_date = 25 [json_name = "createdDate"];</code>
+     * <code>.google.protobuf.Timestamp created_date = 9 [json_name = "createdDate"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -3983,123 +1501,155 @@ private static final long serialVersionUID = 0L;
       return createdDateBuilder_;
     }
 
-    private com.tcn.cloud.api.api.commons.TemplateCondition ticketCallbackTemplateCondition_;
+    private com.google.protobuf.Timestamp modifiedDate_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.TemplateCondition, com.tcn.cloud.api.api.commons.TemplateCondition.Builder, com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder> ticketCallbackTemplateConditionBuilder_;
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> modifiedDateBuilder_;
     /**
-     * <code>.api.commons.TemplateCondition ticket_callback_template_condition = 26 [json_name = "ticketCallbackTemplateCondition"];</code>
-     * @return Whether the ticketCallbackTemplateCondition field is set.
+     * <code>.google.protobuf.Timestamp modified_date = 10 [json_name = "modifiedDate"];</code>
+     * @return Whether the modifiedDate field is set.
      */
-    public boolean hasTicketCallbackTemplateCondition() {
-      return ((bitField0_ & 0x00080000) != 0);
+    public boolean hasModifiedDate() {
+      return ((bitField0_ & 0x00000100) != 0);
     }
     /**
-     * <code>.api.commons.TemplateCondition ticket_callback_template_condition = 26 [json_name = "ticketCallbackTemplateCondition"];</code>
-     * @return The ticketCallbackTemplateCondition.
+     * <code>.google.protobuf.Timestamp modified_date = 10 [json_name = "modifiedDate"];</code>
+     * @return The modifiedDate.
      */
-    public com.tcn.cloud.api.api.commons.TemplateCondition getTicketCallbackTemplateCondition() {
-      if (ticketCallbackTemplateConditionBuilder_ == null) {
-        return ticketCallbackTemplateCondition_ == null ? com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance() : ticketCallbackTemplateCondition_;
+    public com.google.protobuf.Timestamp getModifiedDate() {
+      if (modifiedDateBuilder_ == null) {
+        return modifiedDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : modifiedDate_;
       } else {
-        return ticketCallbackTemplateConditionBuilder_.getMessage();
+        return modifiedDateBuilder_.getMessage();
       }
     }
     /**
-     * <code>.api.commons.TemplateCondition ticket_callback_template_condition = 26 [json_name = "ticketCallbackTemplateCondition"];</code>
+     * <code>.google.protobuf.Timestamp modified_date = 10 [json_name = "modifiedDate"];</code>
      */
-    public Builder setTicketCallbackTemplateCondition(com.tcn.cloud.api.api.commons.TemplateCondition value) {
-      if (ticketCallbackTemplateConditionBuilder_ == null) {
+    public Builder setModifiedDate(com.google.protobuf.Timestamp value) {
+      if (modifiedDateBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ticketCallbackTemplateCondition_ = value;
+        modifiedDate_ = value;
       } else {
-        ticketCallbackTemplateConditionBuilder_.setMessage(value);
+        modifiedDateBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00080000;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
     /**
-     * <code>.api.commons.TemplateCondition ticket_callback_template_condition = 26 [json_name = "ticketCallbackTemplateCondition"];</code>
+     * <code>.google.protobuf.Timestamp modified_date = 10 [json_name = "modifiedDate"];</code>
      */
-    public Builder setTicketCallbackTemplateCondition(
-        com.tcn.cloud.api.api.commons.TemplateCondition.Builder builderForValue) {
-      if (ticketCallbackTemplateConditionBuilder_ == null) {
-        ticketCallbackTemplateCondition_ = builderForValue.build();
+    public Builder setModifiedDate(
+        com.google.protobuf.Timestamp.Builder builderForValue) {
+      if (modifiedDateBuilder_ == null) {
+        modifiedDate_ = builderForValue.build();
       } else {
-        ticketCallbackTemplateConditionBuilder_.setMessage(builderForValue.build());
+        modifiedDateBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00080000;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
     /**
-     * <code>.api.commons.TemplateCondition ticket_callback_template_condition = 26 [json_name = "ticketCallbackTemplateCondition"];</code>
+     * <code>.google.protobuf.Timestamp modified_date = 10 [json_name = "modifiedDate"];</code>
      */
-    public Builder mergeTicketCallbackTemplateCondition(com.tcn.cloud.api.api.commons.TemplateCondition value) {
-      if (ticketCallbackTemplateConditionBuilder_ == null) {
-        if (((bitField0_ & 0x00080000) != 0) &&
-          ticketCallbackTemplateCondition_ != null &&
-          ticketCallbackTemplateCondition_ != com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance()) {
-          getTicketCallbackTemplateConditionBuilder().mergeFrom(value);
+    public Builder mergeModifiedDate(com.google.protobuf.Timestamp value) {
+      if (modifiedDateBuilder_ == null) {
+        if (((bitField0_ & 0x00000100) != 0) &&
+          modifiedDate_ != null &&
+          modifiedDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+          getModifiedDateBuilder().mergeFrom(value);
         } else {
-          ticketCallbackTemplateCondition_ = value;
+          modifiedDate_ = value;
         }
       } else {
-        ticketCallbackTemplateConditionBuilder_.mergeFrom(value);
+        modifiedDateBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00080000;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
     /**
-     * <code>.api.commons.TemplateCondition ticket_callback_template_condition = 26 [json_name = "ticketCallbackTemplateCondition"];</code>
+     * <code>.google.protobuf.Timestamp modified_date = 10 [json_name = "modifiedDate"];</code>
      */
-    public Builder clearTicketCallbackTemplateCondition() {
-      bitField0_ = (bitField0_ & ~0x00080000);
-      ticketCallbackTemplateCondition_ = null;
-      if (ticketCallbackTemplateConditionBuilder_ != null) {
-        ticketCallbackTemplateConditionBuilder_.dispose();
-        ticketCallbackTemplateConditionBuilder_ = null;
+    public Builder clearModifiedDate() {
+      bitField0_ = (bitField0_ & ~0x00000100);
+      modifiedDate_ = null;
+      if (modifiedDateBuilder_ != null) {
+        modifiedDateBuilder_.dispose();
+        modifiedDateBuilder_ = null;
       }
       onChanged();
       return this;
     }
     /**
-     * <code>.api.commons.TemplateCondition ticket_callback_template_condition = 26 [json_name = "ticketCallbackTemplateCondition"];</code>
+     * <code>.google.protobuf.Timestamp modified_date = 10 [json_name = "modifiedDate"];</code>
      */
-    public com.tcn.cloud.api.api.commons.TemplateCondition.Builder getTicketCallbackTemplateConditionBuilder() {
-      bitField0_ |= 0x00080000;
+    public com.google.protobuf.Timestamp.Builder getModifiedDateBuilder() {
+      bitField0_ |= 0x00000100;
       onChanged();
-      return getTicketCallbackTemplateConditionFieldBuilder().getBuilder();
+      return getModifiedDateFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.commons.TemplateCondition ticket_callback_template_condition = 26 [json_name = "ticketCallbackTemplateCondition"];</code>
+     * <code>.google.protobuf.Timestamp modified_date = 10 [json_name = "modifiedDate"];</code>
      */
-    public com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder getTicketCallbackTemplateConditionOrBuilder() {
-      if (ticketCallbackTemplateConditionBuilder_ != null) {
-        return ticketCallbackTemplateConditionBuilder_.getMessageOrBuilder();
+    public com.google.protobuf.TimestampOrBuilder getModifiedDateOrBuilder() {
+      if (modifiedDateBuilder_ != null) {
+        return modifiedDateBuilder_.getMessageOrBuilder();
       } else {
-        return ticketCallbackTemplateCondition_ == null ?
-            com.tcn.cloud.api.api.commons.TemplateCondition.getDefaultInstance() : ticketCallbackTemplateCondition_;
+        return modifiedDate_ == null ?
+            com.google.protobuf.Timestamp.getDefaultInstance() : modifiedDate_;
       }
     }
     /**
-     * <code>.api.commons.TemplateCondition ticket_callback_template_condition = 26 [json_name = "ticketCallbackTemplateCondition"];</code>
+     * <code>.google.protobuf.Timestamp modified_date = 10 [json_name = "modifiedDate"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.TemplateCondition, com.tcn.cloud.api.api.commons.TemplateCondition.Builder, com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder> 
-        getTicketCallbackTemplateConditionFieldBuilder() {
-      if (ticketCallbackTemplateConditionBuilder_ == null) {
-        ticketCallbackTemplateConditionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.TemplateCondition, com.tcn.cloud.api.api.commons.TemplateCondition.Builder, com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder>(
-                getTicketCallbackTemplateCondition(),
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+        getModifiedDateFieldBuilder() {
+      if (modifiedDateBuilder_ == null) {
+        modifiedDateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                getModifiedDate(),
                 getParentForChildren(),
                 isClean());
-        ticketCallbackTemplateCondition_ = null;
+        modifiedDate_ = null;
       }
-      return ticketCallbackTemplateConditionBuilder_;
+      return modifiedDateBuilder_;
+    }
+
+    private boolean isActive_ ;
+    /**
+     * <code>bool is_active = 11 [json_name = "isActive"];</code>
+     * @return The isActive.
+     */
+    @java.lang.Override
+    public boolean getIsActive() {
+      return isActive_;
+    }
+    /**
+     * <code>bool is_active = 11 [json_name = "isActive"];</code>
+     * @param value The isActive to set.
+     * @return This builder for chaining.
+     */
+    public Builder setIsActive(boolean value) {
+
+      isActive_ = value;
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>bool is_active = 11 [json_name = "isActive"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearIsActive() {
+      bitField0_ = (bitField0_ & ~0x00000200);
+      isActive_ = false;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

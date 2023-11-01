@@ -8,326 +8,116 @@ public interface TicketTemplateOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>int64 ticket_template_id = 1 [json_name = "ticketTemplateId", jstype = JS_STRING];</code>
+   * <code>int64 ticket_template_id = 1 [json_name = "ticketTemplateId"];</code>
    * @return The ticketTemplateId.
    */
   long getTicketTemplateId();
 
   /**
-   * <code>string template_name = 2 [json_name = "templateName"];</code>
+   * <code>string org_id = 2 [json_name = "orgId"];</code>
+   * @return The orgId.
+   */
+  java.lang.String getOrgId();
+  /**
+   * <code>string org_id = 2 [json_name = "orgId"];</code>
+   * @return The bytes for orgId.
+   */
+  com.google.protobuf.ByteString
+      getOrgIdBytes();
+
+  /**
+   * <code>string template = 3 [json_name = "template"];</code>
+   * @return The template.
+   */
+  java.lang.String getTemplate();
+  /**
+   * <code>string template = 3 [json_name = "template"];</code>
+   * @return The bytes for template.
+   */
+  com.google.protobuf.ByteString
+      getTemplateBytes();
+
+  /**
+   * <code>string template_entity_version = 4 [json_name = "templateEntityVersion"];</code>
+   * @return The templateEntityVersion.
+   */
+  java.lang.String getTemplateEntityVersion();
+  /**
+   * <code>string template_entity_version = 4 [json_name = "templateEntityVersion"];</code>
+   * @return The bytes for templateEntityVersion.
+   */
+  com.google.protobuf.ByteString
+      getTemplateEntityVersionBytes();
+
+  /**
+   * <code>string template_name = 5 [json_name = "templateName"];</code>
    * @return The templateName.
    */
   java.lang.String getTemplateName();
   /**
-   * <code>string template_name = 2 [json_name = "templateName"];</code>
+   * <code>string template_name = 5 [json_name = "templateName"];</code>
    * @return The bytes for templateName.
    */
   com.google.protobuf.ByteString
       getTemplateNameBytes();
 
   /**
-   * <code>string ticket_title = 5 [json_name = "ticketTitle"];</code>
-   * @return The ticketTitle.
-   */
-  java.lang.String getTicketTitle();
-  /**
-   * <code>string ticket_title = 5 [json_name = "ticketTitle"];</code>
-   * @return The bytes for ticketTitle.
-   */
-  com.google.protobuf.ByteString
-      getTicketTitleBytes();
-
-  /**
-   * <code>string ticket_description = 6 [json_name = "ticketDescription"];</code>
-   * @return The ticketDescription.
-   */
-  java.lang.String getTicketDescription();
-  /**
-   * <code>string ticket_description = 6 [json_name = "ticketDescription"];</code>
-   * @return The bytes for ticketDescription.
-   */
-  com.google.protobuf.ByteString
-      getTicketDescriptionBytes();
-
-  /**
-   * <code>.api.commons.TemplateCondition title_condition = 7 [json_name = "titleCondition"];</code>
-   * @return Whether the titleCondition field is set.
-   */
-  boolean hasTitleCondition();
-  /**
-   * <code>.api.commons.TemplateCondition title_condition = 7 [json_name = "titleCondition"];</code>
-   * @return The titleCondition.
-   */
-  com.tcn.cloud.api.api.commons.TemplateCondition getTitleCondition();
-  /**
-   * <code>.api.commons.TemplateCondition title_condition = 7 [json_name = "titleCondition"];</code>
-   */
-  com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder getTitleConditionOrBuilder();
-
-  /**
-   * <code>.api.commons.TemplateCondition description_condition = 8 [json_name = "descriptionCondition"];</code>
-   * @return Whether the descriptionCondition field is set.
-   */
-  boolean hasDescriptionCondition();
-  /**
-   * <code>.api.commons.TemplateCondition description_condition = 8 [json_name = "descriptionCondition"];</code>
-   * @return The descriptionCondition.
-   */
-  com.tcn.cloud.api.api.commons.TemplateCondition getDescriptionCondition();
-  /**
-   * <code>.api.commons.TemplateCondition description_condition = 8 [json_name = "descriptionCondition"];</code>
-   */
-  com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder getDescriptionConditionOrBuilder();
-
-  /**
-   * <code>repeated string ticket_assignee = 9 [json_name = "ticketAssignee"];</code>
-   * @return A list containing the ticketAssignee.
-   */
-  java.util.List<java.lang.String>
-      getTicketAssigneeList();
-  /**
-   * <code>repeated string ticket_assignee = 9 [json_name = "ticketAssignee"];</code>
-   * @return The count of ticketAssignee.
-   */
-  int getTicketAssigneeCount();
-  /**
-   * <code>repeated string ticket_assignee = 9 [json_name = "ticketAssignee"];</code>
-   * @param index The index of the element to return.
-   * @return The ticketAssignee at the given index.
-   */
-  java.lang.String getTicketAssignee(int index);
-  /**
-   * <code>repeated string ticket_assignee = 9 [json_name = "ticketAssignee"];</code>
-   * @param index The index of the value to return.
-   * @return The bytes of the ticketAssignee at the given index.
-   */
-  com.google.protobuf.ByteString
-      getTicketAssigneeBytes(int index);
-
-  /**
-   * <code>.api.commons.TemplateCondition assignee_condition = 10 [json_name = "assigneeCondition"];</code>
-   * @return Whether the assigneeCondition field is set.
-   */
-  boolean hasAssigneeCondition();
-  /**
-   * <code>.api.commons.TemplateCondition assignee_condition = 10 [json_name = "assigneeCondition"];</code>
-   * @return The assigneeCondition.
-   */
-  com.tcn.cloud.api.api.commons.TemplateCondition getAssigneeCondition();
-  /**
-   * <code>.api.commons.TemplateCondition assignee_condition = 10 [json_name = "assigneeCondition"];</code>
-   */
-  com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder getAssigneeConditionOrBuilder();
-
-  /**
-   * <code>repeated .api.commons.Sla ticket_sla = 11 [json_name = "ticketSla"];</code>
-   */
-  java.util.List<com.tcn.cloud.api.api.commons.Sla> 
-      getTicketSlaList();
-  /**
-   * <code>repeated .api.commons.Sla ticket_sla = 11 [json_name = "ticketSla"];</code>
-   */
-  com.tcn.cloud.api.api.commons.Sla getTicketSla(int index);
-  /**
-   * <code>repeated .api.commons.Sla ticket_sla = 11 [json_name = "ticketSla"];</code>
-   */
-  int getTicketSlaCount();
-  /**
-   * <code>repeated .api.commons.Sla ticket_sla = 11 [json_name = "ticketSla"];</code>
-   */
-  java.util.List<? extends com.tcn.cloud.api.api.commons.SlaOrBuilder> 
-      getTicketSlaOrBuilderList();
-  /**
-   * <code>repeated .api.commons.Sla ticket_sla = 11 [json_name = "ticketSla"];</code>
-   */
-  com.tcn.cloud.api.api.commons.SlaOrBuilder getTicketSlaOrBuilder(
-      int index);
-
-  /**
-   * <pre>
-   * Action
-   * </pre>
-   *
-   * <code>string action_type = 13 [json_name = "actionType"];</code>
-   * @return The actionType.
-   */
-  java.lang.String getActionType();
-  /**
-   * <pre>
-   * Action
-   * </pre>
-   *
-   * <code>string action_type = 13 [json_name = "actionType"];</code>
-   * @return The bytes for actionType.
-   */
-  com.google.protobuf.ByteString
-      getActionTypeBytes();
-
-  /**
-   * <code>repeated .api.commons.Skills action_skills = 14 [json_name = "actionSkills"];</code>
-   */
-  java.util.List<com.tcn.cloud.api.api.commons.Skills> 
-      getActionSkillsList();
-  /**
-   * <code>repeated .api.commons.Skills action_skills = 14 [json_name = "actionSkills"];</code>
-   */
-  com.tcn.cloud.api.api.commons.Skills getActionSkills(int index);
-  /**
-   * <code>repeated .api.commons.Skills action_skills = 14 [json_name = "actionSkills"];</code>
-   */
-  int getActionSkillsCount();
-  /**
-   * <code>repeated .api.commons.Skills action_skills = 14 [json_name = "actionSkills"];</code>
-   */
-  java.util.List<? extends com.tcn.cloud.api.api.commons.SkillsOrBuilder> 
-      getActionSkillsOrBuilderList();
-  /**
-   * <code>repeated .api.commons.Skills action_skills = 14 [json_name = "actionSkills"];</code>
-   */
-  com.tcn.cloud.api.api.commons.SkillsOrBuilder getActionSkillsOrBuilder(
-      int index);
-
-  /**
-   * <code>.api.commons.TemplateCondition action_skills_condition = 15 [json_name = "actionSkillsCondition"];</code>
-   * @return Whether the actionSkillsCondition field is set.
-   */
-  boolean hasActionSkillsCondition();
-  /**
-   * <code>.api.commons.TemplateCondition action_skills_condition = 15 [json_name = "actionSkillsCondition"];</code>
-   * @return The actionSkillsCondition.
-   */
-  com.tcn.cloud.api.api.commons.TemplateCondition getActionSkillsCondition();
-  /**
-   * <code>.api.commons.TemplateCondition action_skills_condition = 15 [json_name = "actionSkillsCondition"];</code>
-   */
-  com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder getActionSkillsConditionOrBuilder();
-
-  /**
-   * <code>.google.protobuf.Timestamp action_expiry_date = 18 [json_name = "actionExpiryDate"];</code>
-   * @return Whether the actionExpiryDate field is set.
-   */
-  boolean hasActionExpiryDate();
-  /**
-   * <code>.google.protobuf.Timestamp action_expiry_date = 18 [json_name = "actionExpiryDate"];</code>
-   * @return The actionExpiryDate.
-   */
-  com.google.protobuf.Timestamp getActionExpiryDate();
-  /**
-   * <code>.google.protobuf.Timestamp action_expiry_date = 18 [json_name = "actionExpiryDate"];</code>
-   */
-  com.google.protobuf.TimestampOrBuilder getActionExpiryDateOrBuilder();
-
-  /**
-   * <code>.api.commons.TemplateCondition action_expiry_date_condition = 19 [json_name = "actionExpiryDateCondition"];</code>
-   * @return Whether the actionExpiryDateCondition field is set.
-   */
-  boolean hasActionExpiryDateCondition();
-  /**
-   * <code>.api.commons.TemplateCondition action_expiry_date_condition = 19 [json_name = "actionExpiryDateCondition"];</code>
-   * @return The actionExpiryDateCondition.
-   */
-  com.tcn.cloud.api.api.commons.TemplateCondition getActionExpiryDateCondition();
-  /**
-   * <code>.api.commons.TemplateCondition action_expiry_date_condition = 19 [json_name = "actionExpiryDateCondition"];</code>
-   */
-  com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder getActionExpiryDateConditionOrBuilder();
-
-  /**
-   * <code>repeated .api.commons.Sla action_sla = 20 [json_name = "actionSla"];</code>
-   */
-  java.util.List<com.tcn.cloud.api.api.commons.Sla> 
-      getActionSlaList();
-  /**
-   * <code>repeated .api.commons.Sla action_sla = 20 [json_name = "actionSla"];</code>
-   */
-  com.tcn.cloud.api.api.commons.Sla getActionSla(int index);
-  /**
-   * <code>repeated .api.commons.Sla action_sla = 20 [json_name = "actionSla"];</code>
-   */
-  int getActionSlaCount();
-  /**
-   * <code>repeated .api.commons.Sla action_sla = 20 [json_name = "actionSla"];</code>
-   */
-  java.util.List<? extends com.tcn.cloud.api.api.commons.SlaOrBuilder> 
-      getActionSlaOrBuilderList();
-  /**
-   * <code>repeated .api.commons.Sla action_sla = 20 [json_name = "actionSla"];</code>
-   */
-  com.tcn.cloud.api.api.commons.SlaOrBuilder getActionSlaOrBuilder(
-      int index);
-
-  /**
-   * <code>bool is_valid = 22 [json_name = "isValid"];</code>
-   * @return The isValid.
-   */
-  boolean getIsValid();
-
-  /**
-   * <pre>
-   * Action Types
-   * </pre>
-   *
-   * <code>.api.commons.TicketCallbackTemplate callback_default = 23 [json_name = "callbackDefault"];</code>
-   * @return Whether the callbackDefault field is set.
-   */
-  boolean hasCallbackDefault();
-  /**
-   * <pre>
-   * Action Types
-   * </pre>
-   *
-   * <code>.api.commons.TicketCallbackTemplate callback_default = 23 [json_name = "callbackDefault"];</code>
-   * @return The callbackDefault.
-   */
-  com.tcn.cloud.api.api.commons.TicketCallbackTemplate getCallbackDefault();
-  /**
-   * <pre>
-   * Action Types
-   * </pre>
-   *
-   * <code>.api.commons.TicketCallbackTemplate callback_default = 23 [json_name = "callbackDefault"];</code>
-   */
-  com.tcn.cloud.api.api.commons.TicketCallbackTemplateOrBuilder getCallbackDefaultOrBuilder();
-
-  /**
-   * <code>string created_by_id = 24 [json_name = "createdById"];</code>
+   * <code>string created_by_id = 7 [json_name = "createdById"];</code>
    * @return The createdById.
    */
   java.lang.String getCreatedById();
   /**
-   * <code>string created_by_id = 24 [json_name = "createdById"];</code>
+   * <code>string created_by_id = 7 [json_name = "createdById"];</code>
    * @return The bytes for createdById.
    */
   com.google.protobuf.ByteString
       getCreatedByIdBytes();
 
   /**
-   * <code>.google.protobuf.Timestamp created_date = 25 [json_name = "createdDate"];</code>
+   * <code>string modified_by = 8 [json_name = "modifiedBy"];</code>
+   * @return The modifiedBy.
+   */
+  java.lang.String getModifiedBy();
+  /**
+   * <code>string modified_by = 8 [json_name = "modifiedBy"];</code>
+   * @return The bytes for modifiedBy.
+   */
+  com.google.protobuf.ByteString
+      getModifiedByBytes();
+
+  /**
+   * <code>.google.protobuf.Timestamp created_date = 9 [json_name = "createdDate"];</code>
    * @return Whether the createdDate field is set.
    */
   boolean hasCreatedDate();
   /**
-   * <code>.google.protobuf.Timestamp created_date = 25 [json_name = "createdDate"];</code>
+   * <code>.google.protobuf.Timestamp created_date = 9 [json_name = "createdDate"];</code>
    * @return The createdDate.
    */
   com.google.protobuf.Timestamp getCreatedDate();
   /**
-   * <code>.google.protobuf.Timestamp created_date = 25 [json_name = "createdDate"];</code>
+   * <code>.google.protobuf.Timestamp created_date = 9 [json_name = "createdDate"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getCreatedDateOrBuilder();
 
   /**
-   * <code>.api.commons.TemplateCondition ticket_callback_template_condition = 26 [json_name = "ticketCallbackTemplateCondition"];</code>
-   * @return Whether the ticketCallbackTemplateCondition field is set.
+   * <code>.google.protobuf.Timestamp modified_date = 10 [json_name = "modifiedDate"];</code>
+   * @return Whether the modifiedDate field is set.
    */
-  boolean hasTicketCallbackTemplateCondition();
+  boolean hasModifiedDate();
   /**
-   * <code>.api.commons.TemplateCondition ticket_callback_template_condition = 26 [json_name = "ticketCallbackTemplateCondition"];</code>
-   * @return The ticketCallbackTemplateCondition.
+   * <code>.google.protobuf.Timestamp modified_date = 10 [json_name = "modifiedDate"];</code>
+   * @return The modifiedDate.
    */
-  com.tcn.cloud.api.api.commons.TemplateCondition getTicketCallbackTemplateCondition();
+  com.google.protobuf.Timestamp getModifiedDate();
   /**
-   * <code>.api.commons.TemplateCondition ticket_callback_template_condition = 26 [json_name = "ticketCallbackTemplateCondition"];</code>
+   * <code>.google.protobuf.Timestamp modified_date = 10 [json_name = "modifiedDate"];</code>
    */
-  com.tcn.cloud.api.api.commons.TemplateConditionOrBuilder getTicketCallbackTemplateConditionOrBuilder();
+  com.google.protobuf.TimestampOrBuilder getModifiedDateOrBuilder();
+
+  /**
+   * <code>bool is_active = 11 [json_name = "isActive"];</code>
+   * @return The isActive.
+   */
+  boolean getIsActive();
 }
