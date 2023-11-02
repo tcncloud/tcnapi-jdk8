@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.commons;
 
-public interface ClientHistoryCacheOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.commons.ClientHistoryCache)
+public interface ClientHistoryCacheInfoOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.commons.ClientHistoryCacheInfo)
     com.google.protobuf.MessageOrBuilder {
 
   /**

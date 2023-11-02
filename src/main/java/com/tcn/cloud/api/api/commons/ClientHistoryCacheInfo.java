@@ -4,18 +4,18 @@
 package com.tcn.cloud.api.api.commons;
 
 /**
- * Protobuf type {@code api.commons.ClientHistoryCache}
+ * Protobuf type {@code api.commons.ClientHistoryCacheInfo}
  */
-public final class ClientHistoryCache extends
+public final class ClientHistoryCacheInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.commons.ClientHistoryCache)
-    ClientHistoryCacheOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.commons.ClientHistoryCacheInfo)
+    ClientHistoryCacheInfoOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use ClientHistoryCache.newBuilder() to construct.
-  private ClientHistoryCache(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use ClientHistoryCacheInfo.newBuilder() to construct.
+  private ClientHistoryCacheInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private ClientHistoryCache() {
+  private ClientHistoryCacheInfo() {
     state_ = 0;
   }
 
@@ -23,20 +23,20 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new ClientHistoryCache();
+    return new ClientHistoryCacheInfo();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.commons.WfmProto.internal_static_api_commons_ClientHistoryCache_descriptor;
+    return com.tcn.cloud.api.api.commons.WfmProto.internal_static_api_commons_ClientHistoryCacheInfo_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.commons.WfmProto.internal_static_api_commons_ClientHistoryCache_fieldAccessorTable
+    return com.tcn.cloud.api.api.commons.WfmProto.internal_static_api_commons_ClientHistoryCacheInfo_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.commons.ClientHistoryCache.class, com.tcn.cloud.api.api.commons.ClientHistoryCache.Builder.class);
+            com.tcn.cloud.api.api.commons.ClientHistoryCacheInfo.class, com.tcn.cloud.api.api.commons.ClientHistoryCacheInfo.Builder.class);
   }
 
   public static final int STATE_FIELD_NUMBER = 1;
@@ -127,10 +127,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.commons.ClientHistoryCache)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.commons.ClientHistoryCacheInfo)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.commons.ClientHistoryCache other = (com.tcn.cloud.api.api.commons.ClientHistoryCache) obj;
+    com.tcn.cloud.api.api.commons.ClientHistoryCacheInfo other = (com.tcn.cloud.api.api.commons.ClientHistoryCacheInfo) obj;
 
     if (state_ != other.state_) return false;
     if (getProgressPercentage()
@@ -155,44 +155,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.commons.ClientHistoryCache parseFrom(
+  public static com.tcn.cloud.api.api.commons.ClientHistoryCacheInfo parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.ClientHistoryCache parseFrom(
+  public static com.tcn.cloud.api.api.commons.ClientHistoryCacheInfo parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.ClientHistoryCache parseFrom(
+  public static com.tcn.cloud.api.api.commons.ClientHistoryCacheInfo parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.ClientHistoryCache parseFrom(
+  public static com.tcn.cloud.api.api.commons.ClientHistoryCacheInfo parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.ClientHistoryCache parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.commons.ClientHistoryCacheInfo parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.ClientHistoryCache parseFrom(
+  public static com.tcn.cloud.api.api.commons.ClientHistoryCacheInfo parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.ClientHistoryCache parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.commons.ClientHistoryCacheInfo parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.commons.ClientHistoryCache parseFrom(
+  public static com.tcn.cloud.api.api.commons.ClientHistoryCacheInfo parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -200,26 +200,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.commons.ClientHistoryCache parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.commons.ClientHistoryCacheInfo parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.commons.ClientHistoryCache parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.commons.ClientHistoryCacheInfo parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.ClientHistoryCache parseFrom(
+  public static com.tcn.cloud.api.api.commons.ClientHistoryCacheInfo parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.commons.ClientHistoryCache parseFrom(
+  public static com.tcn.cloud.api.api.commons.ClientHistoryCacheInfo parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -232,7 +232,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.commons.ClientHistoryCache prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.commons.ClientHistoryCacheInfo prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -248,26 +248,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code api.commons.ClientHistoryCache}
+   * Protobuf type {@code api.commons.ClientHistoryCacheInfo}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.commons.ClientHistoryCache)
-      com.tcn.cloud.api.api.commons.ClientHistoryCacheOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.commons.ClientHistoryCacheInfo)
+      com.tcn.cloud.api.api.commons.ClientHistoryCacheInfoOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.commons.WfmProto.internal_static_api_commons_ClientHistoryCache_descriptor;
+      return com.tcn.cloud.api.api.commons.WfmProto.internal_static_api_commons_ClientHistoryCacheInfo_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.commons.WfmProto.internal_static_api_commons_ClientHistoryCache_fieldAccessorTable
+      return com.tcn.cloud.api.api.commons.WfmProto.internal_static_api_commons_ClientHistoryCacheInfo_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.commons.ClientHistoryCache.class, com.tcn.cloud.api.api.commons.ClientHistoryCache.Builder.class);
+              com.tcn.cloud.api.api.commons.ClientHistoryCacheInfo.class, com.tcn.cloud.api.api.commons.ClientHistoryCacheInfo.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.commons.ClientHistoryCache.newBuilder()
+    // Construct using com.tcn.cloud.api.api.commons.ClientHistoryCacheInfo.newBuilder()
     private Builder() {
 
     }
@@ -289,17 +289,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.commons.WfmProto.internal_static_api_commons_ClientHistoryCache_descriptor;
+      return com.tcn.cloud.api.api.commons.WfmProto.internal_static_api_commons_ClientHistoryCacheInfo_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.ClientHistoryCache getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.commons.ClientHistoryCache.getDefaultInstance();
+    public com.tcn.cloud.api.api.commons.ClientHistoryCacheInfo getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.commons.ClientHistoryCacheInfo.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.ClientHistoryCache build() {
-      com.tcn.cloud.api.api.commons.ClientHistoryCache result = buildPartial();
+    public com.tcn.cloud.api.api.commons.ClientHistoryCacheInfo build() {
+      com.tcn.cloud.api.api.commons.ClientHistoryCacheInfo result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -307,14 +307,14 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.ClientHistoryCache buildPartial() {
-      com.tcn.cloud.api.api.commons.ClientHistoryCache result = new com.tcn.cloud.api.api.commons.ClientHistoryCache(this);
+    public com.tcn.cloud.api.api.commons.ClientHistoryCacheInfo buildPartial() {
+      com.tcn.cloud.api.api.commons.ClientHistoryCacheInfo result = new com.tcn.cloud.api.api.commons.ClientHistoryCacheInfo(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.commons.ClientHistoryCache result) {
+    private void buildPartial0(com.tcn.cloud.api.api.commons.ClientHistoryCacheInfo result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.state_ = state_;
@@ -358,16 +358,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.commons.ClientHistoryCache) {
-        return mergeFrom((com.tcn.cloud.api.api.commons.ClientHistoryCache)other);
+      if (other instanceof com.tcn.cloud.api.api.commons.ClientHistoryCacheInfo) {
+        return mergeFrom((com.tcn.cloud.api.api.commons.ClientHistoryCacheInfo)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.commons.ClientHistoryCache other) {
-      if (other == com.tcn.cloud.api.api.commons.ClientHistoryCache.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.api.commons.ClientHistoryCacheInfo other) {
+      if (other == com.tcn.cloud.api.api.commons.ClientHistoryCacheInfo.getDefaultInstance()) return this;
       if (other.state_ != 0) {
         setStateValue(other.getStateValue());
       }
@@ -556,23 +556,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.commons.ClientHistoryCache)
+    // @@protoc_insertion_point(builder_scope:api.commons.ClientHistoryCacheInfo)
   }
 
-  // @@protoc_insertion_point(class_scope:api.commons.ClientHistoryCache)
-  private static final com.tcn.cloud.api.api.commons.ClientHistoryCache DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.commons.ClientHistoryCacheInfo)
+  private static final com.tcn.cloud.api.api.commons.ClientHistoryCacheInfo DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.ClientHistoryCache();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.ClientHistoryCacheInfo();
   }
 
-  public static com.tcn.cloud.api.api.commons.ClientHistoryCache getDefaultInstance() {
+  public static com.tcn.cloud.api.api.commons.ClientHistoryCacheInfo getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<ClientHistoryCache>
-      PARSER = new com.google.protobuf.AbstractParser<ClientHistoryCache>() {
+  private static final com.google.protobuf.Parser<ClientHistoryCacheInfo>
+      PARSER = new com.google.protobuf.AbstractParser<ClientHistoryCacheInfo>() {
     @java.lang.Override
-    public ClientHistoryCache parsePartialFrom(
+    public ClientHistoryCacheInfo parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -591,17 +591,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<ClientHistoryCache> parser() {
+  public static com.google.protobuf.Parser<ClientHistoryCacheInfo> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<ClientHistoryCache> getParserForType() {
+  public com.google.protobuf.Parser<ClientHistoryCacheInfo> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.ClientHistoryCache getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.commons.ClientHistoryCacheInfo getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 
