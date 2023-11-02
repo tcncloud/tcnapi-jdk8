@@ -8,7 +8,7 @@ public interface TemplateDescriptionOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>int64 ticket_template_id = 1 [json_name = "ticketTemplateId"];</code>
+   * <code>int64 ticket_template_id = 1 [json_name = "ticketTemplateId", jstype = JS_STRING];</code>
    * @return The ticketTemplateId.
    */
   long getTicketTemplateId();

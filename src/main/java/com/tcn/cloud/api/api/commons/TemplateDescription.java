@@ -42,7 +42,7 @@ private static final long serialVersionUID = 0L;
   public static final int TICKET_TEMPLATE_ID_FIELD_NUMBER = 1;
   private long ticketTemplateId_ = 0L;
   /**
-   * <code>int64 ticket_template_id = 1 [json_name = "ticketTemplateId"];</code>
+   * <code>int64 ticket_template_id = 1 [json_name = "ticketTemplateId", jstype = JS_STRING];</code>
    * @return The ticketTemplateId.
    */
   @java.lang.Override
@@ -441,7 +441,7 @@ private static final long serialVersionUID = 0L;
 
     private long ticketTemplateId_ ;
     /**
-     * <code>int64 ticket_template_id = 1 [json_name = "ticketTemplateId"];</code>
+     * <code>int64 ticket_template_id = 1 [json_name = "ticketTemplateId", jstype = JS_STRING];</code>
      * @return The ticketTemplateId.
      */
     @java.lang.Override
@@ -449,7 +449,7 @@ private static final long serialVersionUID = 0L;
       return ticketTemplateId_;
     }
     /**
-     * <code>int64 ticket_template_id = 1 [json_name = "ticketTemplateId"];</code>
+     * <code>int64 ticket_template_id = 1 [json_name = "ticketTemplateId", jstype = JS_STRING];</code>
      * @param value The ticketTemplateId to set.
      * @return This builder for chaining.
      */
@@ -461,7 +461,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int64 ticket_template_id = 1 [json_name = "ticketTemplateId"];</code>
+     * <code>int64 ticket_template_id = 1 [json_name = "ticketTemplateId", jstype = JS_STRING];</code>
      * @return This builder for chaining.
      */
     public Builder clearTicketTemplateId() {
