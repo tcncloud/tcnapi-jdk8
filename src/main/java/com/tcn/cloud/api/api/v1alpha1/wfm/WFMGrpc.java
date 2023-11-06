@@ -4141,6 +4141,37 @@ public final class WFMGrpc {
     return getGetTourPatternMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternWithMembersReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternWithMembersRes> getGetTourPatternWithMembersMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetTourPatternWithMembers",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternWithMembersReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternWithMembersRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternWithMembersReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternWithMembersRes> getGetTourPatternWithMembersMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternWithMembersReq, com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternWithMembersRes> getGetTourPatternWithMembersMethod;
+    if ((getGetTourPatternWithMembersMethod = WFMGrpc.getGetTourPatternWithMembersMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getGetTourPatternWithMembersMethod = WFMGrpc.getGetTourPatternWithMembersMethod) == null) {
+          WFMGrpc.getGetTourPatternWithMembersMethod = getGetTourPatternWithMembersMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternWithMembersReq, com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternWithMembersRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetTourPatternWithMembers"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternWithMembersReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternWithMembersRes.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("GetTourPatternWithMembers"))
+              .build();
+        }
+      }
+    }
+    return getGetTourPatternWithMembersMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourPatternReq,
       com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourPatternRes> getDeleteTourPatternMethod;
 
@@ -7177,6 +7208,23 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Gets the Tour Pattern belonging to &#64;shift_template_sid and the org sending the request.
+     * The &#64;tour_pattern will be returned with all member entities.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.NotFound: the requested Tour Pattern does not exist.
+     *   - grpc.Internal: error occurs when getting the data.
+     * </pre>
+     */
+    default void getTourPatternWithMembers(com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternWithMembersReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternWithMembersRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetTourPatternWithMembersMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Deletes the Tour Pattern belonging to &#64;tour_pattern_sid and the org sending the request.
      * Any member Tour Week Patterns or Agent Collections will be deleted as well.
      * Required permissions:
@@ -10039,6 +10087,24 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Gets the Tour Pattern belonging to &#64;shift_template_sid and the org sending the request.
+     * The &#64;tour_pattern will be returned with all member entities.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.NotFound: the requested Tour Pattern does not exist.
+     *   - grpc.Internal: error occurs when getting the data.
+     * </pre>
+     */
+    public void getTourPatternWithMembers(com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternWithMembersReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternWithMembersRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetTourPatternWithMembersMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Deletes the Tour Pattern belonging to &#64;tour_pattern_sid and the org sending the request.
      * Any member Tour Week Patterns or Agent Collections will be deleted as well.
      * Required permissions:
@@ -12780,6 +12846,23 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Gets the Tour Pattern belonging to &#64;shift_template_sid and the org sending the request.
+     * The &#64;tour_pattern will be returned with all member entities.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.NotFound: the requested Tour Pattern does not exist.
+     *   - grpc.Internal: error occurs when getting the data.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternWithMembersRes getTourPatternWithMembers(com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternWithMembersReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetTourPatternWithMembersMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Deletes the Tour Pattern belonging to &#64;tour_pattern_sid and the org sending the request.
      * Any member Tour Week Patterns or Agent Collections will be deleted as well.
      * Required permissions:
@@ -15516,6 +15599,24 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Gets the Tour Pattern belonging to &#64;shift_template_sid and the org sending the request.
+     * The &#64;tour_pattern will be returned with all member entities.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.NotFound: the requested Tour Pattern does not exist.
+     *   - grpc.Internal: error occurs when getting the data.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternWithMembersRes> getTourPatternWithMembers(
+        com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternWithMembersReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetTourPatternWithMembersMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Deletes the Tour Pattern belonging to &#64;tour_pattern_sid and the org sending the request.
      * Any member Tour Week Patterns or Agent Collections will be deleted as well.
      * Required permissions:
@@ -16000,26 +16101,27 @@ public final class WFMGrpc {
   private static final int METHODID_GET_TOUR_PATTERN_DIAGNOSTICS = 130;
   private static final int METHODID_UPSERT_TOUR_PATTERN_WITH_MEMBERS = 131;
   private static final int METHODID_GET_TOUR_PATTERN = 132;
-  private static final int METHODID_DELETE_TOUR_PATTERN = 133;
-  private static final int METHODID_CREATE_TOUR_WEEK_PATTERN = 134;
-  private static final int METHODID_LIST_TOUR_WEEK_PATTERNS = 135;
-  private static final int METHODID_DELETE_TOUR_WEEK_PATTERNS = 136;
-  private static final int METHODID_CREATE_TOUR_SHIFT_INSTANCE_CONFIG = 137;
-  private static final int METHODID_UPDATE_TOUR_SHIFT_INSTANCE_CONFIG = 138;
-  private static final int METHODID_LIST_TOUR_SHIFT_INSTANCE_CONFIGS = 139;
-  private static final int METHODID_DELETE_TOUR_SHIFT_INSTANCE_CONFIGS = 140;
-  private static final int METHODID_CREATE_TOUR_SHIFT_SEGMENT_CONFIG = 141;
-  private static final int METHODID_UPDATE_TOUR_SHIFT_SEGMENT_CONFIG = 142;
-  private static final int METHODID_LIST_TOUR_SHIFT_SEGMENT_CONFIGS = 143;
-  private static final int METHODID_DELETE_TOUR_SHIFT_SEGMENT_CONFIGS = 144;
-  private static final int METHODID_CREATE_TOUR_AGENT_COLLECTION = 145;
-  private static final int METHODID_UPDATE_TOUR_AGENT_COLLECTION = 146;
-  private static final int METHODID_LIST_TOUR_AGENT_COLLECTIONS = 147;
-  private static final int METHODID_DELETE_TOUR_AGENT_COLLECTIONS = 148;
-  private static final int METHODID_CREATE_TOUR_AGENT_COLLECTION_WFMAGENTS = 149;
-  private static final int METHODID_LIST_TOUR_AGENT_COLLECTION_WFMAGENTS = 150;
-  private static final int METHODID_DELETE_TOUR_AGENT_COLLECTION_WFMAGENTS = 151;
-  private static final int METHODID_GENERATE_TOUR_WEEK_PATTERNS = 152;
+  private static final int METHODID_GET_TOUR_PATTERN_WITH_MEMBERS = 133;
+  private static final int METHODID_DELETE_TOUR_PATTERN = 134;
+  private static final int METHODID_CREATE_TOUR_WEEK_PATTERN = 135;
+  private static final int METHODID_LIST_TOUR_WEEK_PATTERNS = 136;
+  private static final int METHODID_DELETE_TOUR_WEEK_PATTERNS = 137;
+  private static final int METHODID_CREATE_TOUR_SHIFT_INSTANCE_CONFIG = 138;
+  private static final int METHODID_UPDATE_TOUR_SHIFT_INSTANCE_CONFIG = 139;
+  private static final int METHODID_LIST_TOUR_SHIFT_INSTANCE_CONFIGS = 140;
+  private static final int METHODID_DELETE_TOUR_SHIFT_INSTANCE_CONFIGS = 141;
+  private static final int METHODID_CREATE_TOUR_SHIFT_SEGMENT_CONFIG = 142;
+  private static final int METHODID_UPDATE_TOUR_SHIFT_SEGMENT_CONFIG = 143;
+  private static final int METHODID_LIST_TOUR_SHIFT_SEGMENT_CONFIGS = 144;
+  private static final int METHODID_DELETE_TOUR_SHIFT_SEGMENT_CONFIGS = 145;
+  private static final int METHODID_CREATE_TOUR_AGENT_COLLECTION = 146;
+  private static final int METHODID_UPDATE_TOUR_AGENT_COLLECTION = 147;
+  private static final int METHODID_LIST_TOUR_AGENT_COLLECTIONS = 148;
+  private static final int METHODID_DELETE_TOUR_AGENT_COLLECTIONS = 149;
+  private static final int METHODID_CREATE_TOUR_AGENT_COLLECTION_WFMAGENTS = 150;
+  private static final int METHODID_LIST_TOUR_AGENT_COLLECTION_WFMAGENTS = 151;
+  private static final int METHODID_DELETE_TOUR_AGENT_COLLECTION_WFMAGENTS = 152;
+  private static final int METHODID_GENERATE_TOUR_WEEK_PATTERNS = 153;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -16569,6 +16671,10 @@ public final class WFMGrpc {
         case METHODID_GET_TOUR_PATTERN:
           serviceImpl.getTourPattern((com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternRes>) responseObserver);
+          break;
+        case METHODID_GET_TOUR_PATTERN_WITH_MEMBERS:
+          serviceImpl.getTourPatternWithMembers((com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternWithMembersReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternWithMembersRes>) responseObserver);
           break;
         case METHODID_DELETE_TOUR_PATTERN:
           serviceImpl.deleteTourPattern((com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourPatternReq) request,
@@ -17600,6 +17706,13 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternRes>(
                 service, METHODID_GET_TOUR_PATTERN)))
         .addMethod(
+          getGetTourPatternWithMembersMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternWithMembersReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternWithMembersRes>(
+                service, METHODID_GET_TOUR_PATTERN_WITH_MEMBERS)))
+        .addMethod(
           getDeleteTourPatternMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -17920,6 +18033,7 @@ public final class WFMGrpc {
               .addMethod(getGetTourPatternDiagnosticsMethod())
               .addMethod(getUpsertTourPatternWithMembersMethod())
               .addMethod(getGetTourPatternMethod())
+              .addMethod(getGetTourPatternWithMembersMethod())
               .addMethod(getDeleteTourPatternMethod())
               .addMethod(getCreateTourWeekPatternMethod())
               .addMethod(getListTourWeekPatternsMethod())
