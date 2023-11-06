@@ -46,7 +46,7 @@ private static final long serialVersionUID = 0L;
   private com.tcn.cloud.api.api.v1alpha1.wfm.TourPattern tourPattern_;
   /**
    * <pre>
-   * The requested Tour Pattern
+   * The requested Tour Pattern with all member entities.
    * </pre>
    *
    * <code>.api.v1alpha1.wfm.TourPattern tour_pattern = 1 [json_name = "tourPattern"];</code>
@@ -58,7 +58,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The requested Tour Pattern
+   * The requested Tour Pattern with all member entities.
    * </pre>
    *
    * <code>.api.v1alpha1.wfm.TourPattern tour_pattern = 1 [json_name = "tourPattern"];</code>
@@ -70,7 +70,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The requested Tour Pattern
+   * The requested Tour Pattern with all member entities.
    * </pre>
    *
    * <code>.api.v1alpha1.wfm.TourPattern tour_pattern = 1 [json_name = "tourPattern"];</code>
@@ -427,7 +427,7 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.wfm.TourPattern, com.tcn.cloud.api.api.v1alpha1.wfm.TourPattern.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.TourPatternOrBuilder> tourPatternBuilder_;
     /**
      * <pre>
-     * The requested Tour Pattern
+     * The requested Tour Pattern with all member entities.
      * </pre>
      *
      * <code>.api.v1alpha1.wfm.TourPattern tour_pattern = 1 [json_name = "tourPattern"];</code>
@@ -438,7 +438,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The requested Tour Pattern
+     * The requested Tour Pattern with all member entities.
      * </pre>
      *
      * <code>.api.v1alpha1.wfm.TourPattern tour_pattern = 1 [json_name = "tourPattern"];</code>
@@ -453,7 +453,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The requested Tour Pattern
+     * The requested Tour Pattern with all member entities.
      * </pre>
      *
      * <code>.api.v1alpha1.wfm.TourPattern tour_pattern = 1 [json_name = "tourPattern"];</code>
@@ -473,7 +473,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The requested Tour Pattern
+     * The requested Tour Pattern with all member entities.
      * </pre>
      *
      * <code>.api.v1alpha1.wfm.TourPattern tour_pattern = 1 [json_name = "tourPattern"];</code>
@@ -491,7 +491,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The requested Tour Pattern
+     * The requested Tour Pattern with all member entities.
      * </pre>
      *
      * <code>.api.v1alpha1.wfm.TourPattern tour_pattern = 1 [json_name = "tourPattern"];</code>
@@ -514,7 +514,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The requested Tour Pattern
+     * The requested Tour Pattern with all member entities.
      * </pre>
      *
      * <code>.api.v1alpha1.wfm.TourPattern tour_pattern = 1 [json_name = "tourPattern"];</code>
@@ -531,7 +531,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The requested Tour Pattern
+     * The requested Tour Pattern with all member entities.
      * </pre>
      *
      * <code>.api.v1alpha1.wfm.TourPattern tour_pattern = 1 [json_name = "tourPattern"];</code>
@@ -543,7 +543,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The requested Tour Pattern
+     * The requested Tour Pattern with all member entities.
      * </pre>
      *
      * <code>.api.v1alpha1.wfm.TourPattern tour_pattern = 1 [json_name = "tourPattern"];</code>
@@ -558,7 +558,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The requested Tour Pattern
+     * The requested Tour Pattern with all member entities.
      * </pre>
      *
      * <code>.api.v1alpha1.wfm.TourPattern tour_pattern = 1 [json_name = "tourPattern"];</code>

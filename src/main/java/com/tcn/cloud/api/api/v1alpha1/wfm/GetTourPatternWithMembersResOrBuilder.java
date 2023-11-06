@@ -9,7 +9,7 @@ public interface GetTourPatternWithMembersResOrBuilder extends
 
   /**
    * <pre>
-   * The requested Tour Pattern
+   * The requested Tour Pattern with all member entities.
    * </pre>
    *
    * <code>.api.v1alpha1.wfm.TourPattern tour_pattern = 1 [json_name = "tourPattern"];</code>
@@ -18,7 +18,7 @@ public interface GetTourPatternWithMembersResOrBuilder extends
   boolean hasTourPattern();
   /**
    * <pre>
-   * The requested Tour Pattern
+   * The requested Tour Pattern with all member entities.
    * </pre>
    *
    * <code>.api.v1alpha1.wfm.TourPattern tour_pattern = 1 [json_name = "tourPattern"];</code>
@@ -27,7 +27,7 @@ public interface GetTourPatternWithMembersResOrBuilder extends
   com.tcn.cloud.api.api.v1alpha1.wfm.TourPattern getTourPattern();
   /**
    * <pre>
-   * The requested Tour Pattern
+   * The requested Tour Pattern with all member entities.
    * </pre>
    *
    * <code>.api.v1alpha1.wfm.TourPattern tour_pattern = 1 [json_name = "tourPattern"];</code>
