@@ -124,4 +124,31 @@ public interface OmniTaskStateOrBuilder extends
    * <code>.api.commons.ComplianceRuleSet rule_set = 3 [json_name = "ruleSet"];</code>
    */
   com.tcn.cloud.api.api.commons.ComplianceRuleSetOrBuilder getRuleSetOrBuilder();
+
+  /**
+   * <pre>
+   * scrub list id the task uses
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue scrub_list_id = 4 [json_name = "scrubListId"];</code>
+   * @return Whether the scrubListId field is set.
+   */
+  boolean hasScrubListId();
+  /**
+   * <pre>
+   * scrub list id the task uses
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue scrub_list_id = 4 [json_name = "scrubListId"];</code>
+   * @return The scrubListId.
+   */
+  com.google.protobuf.StringValue getScrubListId();
+  /**
+   * <pre>
+   * scrub list id the task uses
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue scrub_list_id = 4 [json_name = "scrubListId"];</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getScrubListIdOrBuilder();
 }
