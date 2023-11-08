@@ -1144,6 +1144,44 @@ private static final long serialVersionUID = 0L;
     return ruleSet_ == null ? com.tcn.cloud.api.api.commons.ComplianceRuleSet.getDefaultInstance() : ruleSet_;
   }
 
+  public static final int SCRUB_LIST_ID_FIELD_NUMBER = 4;
+  private com.google.protobuf.StringValue scrubListId_;
+  /**
+   * <pre>
+   * scrub list id the task uses
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue scrub_list_id = 4 [json_name = "scrubListId"];</code>
+   * @return Whether the scrubListId field is set.
+   */
+  @java.lang.Override
+  public boolean hasScrubListId() {
+    return scrubListId_ != null;
+  }
+  /**
+   * <pre>
+   * scrub list id the task uses
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue scrub_list_id = 4 [json_name = "scrubListId"];</code>
+   * @return The scrubListId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.StringValue getScrubListId() {
+    return scrubListId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : scrubListId_;
+  }
+  /**
+   * <pre>
+   * scrub list id the task uses
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue scrub_list_id = 4 [json_name = "scrubListId"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.StringValueOrBuilder getScrubListIdOrBuilder() {
+    return scrubListId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : scrubListId_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1167,6 +1205,9 @@ private static final long serialVersionUID = 0L;
     if (ruleSet_ != null) {
       output.writeMessage(3, getRuleSet());
     }
+    if (scrubListId_ != null) {
+      output.writeMessage(4, getScrubListId());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -1187,6 +1228,10 @@ private static final long serialVersionUID = 0L;
     if (ruleSet_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getRuleSet());
+    }
+    if (scrubListId_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, getScrubListId());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -1212,6 +1257,11 @@ private static final long serialVersionUID = 0L;
       if (!getRuleSet()
           .equals(other.getRuleSet())) return false;
     }
+    if (hasScrubListId() != other.hasScrubListId()) return false;
+    if (hasScrubListId()) {
+      if (!getScrubListId()
+          .equals(other.getScrubListId())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1234,6 +1284,10 @@ private static final long serialVersionUID = 0L;
     if (hasRuleSet()) {
       hash = (37 * hash) + RULE_SET_FIELD_NUMBER;
       hash = (53 * hash) + getRuleSet().hashCode();
+    }
+    if (hasScrubListId()) {
+      hash = (37 * hash) + SCRUB_LIST_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getScrubListId().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -1389,6 +1443,11 @@ private static final long serialVersionUID = 0L;
         ruleSetBuilder_.dispose();
         ruleSetBuilder_ = null;
       }
+      scrubListId_ = null;
+      if (scrubListIdBuilder_ != null) {
+        scrubListIdBuilder_.dispose();
+        scrubListIdBuilder_ = null;
+      }
       return this;
     }
 
@@ -1448,6 +1507,11 @@ private static final long serialVersionUID = 0L;
         result.ruleSet_ = ruleSetBuilder_ == null
             ? ruleSet_
             : ruleSetBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.scrubListId_ = scrubListIdBuilder_ == null
+            ? scrubListId_
+            : scrubListIdBuilder_.build();
       }
     }
 
@@ -1550,6 +1614,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasRuleSet()) {
         mergeRuleSet(other.getRuleSet());
       }
+      if (other.hasScrubListId()) {
+        mergeScrubListId(other.getScrubListId());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1609,6 +1676,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 26
+            case 34: {
+              input.readMessage(
+                  getScrubListIdFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2412,6 +2486,161 @@ private static final long serialVersionUID = 0L;
         ruleSet_ = null;
       }
       return ruleSetBuilder_;
+    }
+
+    private com.google.protobuf.StringValue scrubListId_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> scrubListIdBuilder_;
+    /**
+     * <pre>
+     * scrub list id the task uses
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue scrub_list_id = 4 [json_name = "scrubListId"];</code>
+     * @return Whether the scrubListId field is set.
+     */
+    public boolean hasScrubListId() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <pre>
+     * scrub list id the task uses
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue scrub_list_id = 4 [json_name = "scrubListId"];</code>
+     * @return The scrubListId.
+     */
+    public com.google.protobuf.StringValue getScrubListId() {
+      if (scrubListIdBuilder_ == null) {
+        return scrubListId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : scrubListId_;
+      } else {
+        return scrubListIdBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * scrub list id the task uses
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue scrub_list_id = 4 [json_name = "scrubListId"];</code>
+     */
+    public Builder setScrubListId(com.google.protobuf.StringValue value) {
+      if (scrubListIdBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        scrubListId_ = value;
+      } else {
+        scrubListIdBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * scrub list id the task uses
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue scrub_list_id = 4 [json_name = "scrubListId"];</code>
+     */
+    public Builder setScrubListId(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (scrubListIdBuilder_ == null) {
+        scrubListId_ = builderForValue.build();
+      } else {
+        scrubListIdBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * scrub list id the task uses
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue scrub_list_id = 4 [json_name = "scrubListId"];</code>
+     */
+    public Builder mergeScrubListId(com.google.protobuf.StringValue value) {
+      if (scrubListIdBuilder_ == null) {
+        if (((bitField0_ & 0x00000008) != 0) &&
+          scrubListId_ != null &&
+          scrubListId_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+          getScrubListIdBuilder().mergeFrom(value);
+        } else {
+          scrubListId_ = value;
+        }
+      } else {
+        scrubListIdBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * scrub list id the task uses
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue scrub_list_id = 4 [json_name = "scrubListId"];</code>
+     */
+    public Builder clearScrubListId() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      scrubListId_ = null;
+      if (scrubListIdBuilder_ != null) {
+        scrubListIdBuilder_.dispose();
+        scrubListIdBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * scrub list id the task uses
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue scrub_list_id = 4 [json_name = "scrubListId"];</code>
+     */
+    public com.google.protobuf.StringValue.Builder getScrubListIdBuilder() {
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return getScrubListIdFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * scrub list id the task uses
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue scrub_list_id = 4 [json_name = "scrubListId"];</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getScrubListIdOrBuilder() {
+      if (scrubListIdBuilder_ != null) {
+        return scrubListIdBuilder_.getMessageOrBuilder();
+      } else {
+        return scrubListId_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : scrubListId_;
+      }
+    }
+    /**
+     * <pre>
+     * scrub list id the task uses
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue scrub_list_id = 4 [json_name = "scrubListId"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getScrubListIdFieldBuilder() {
+      if (scrubListIdBuilder_ == null) {
+        scrubListIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getScrubListId(),
+                getParentForChildren(),
+                isClean());
+        scrubListId_ = null;
+      }
+      return scrubListIdBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
