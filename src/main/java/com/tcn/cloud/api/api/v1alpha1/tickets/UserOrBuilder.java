@@ -42,4 +42,10 @@ public interface UserOrBuilder extends
    */
   com.google.protobuf.ByteString
       getLastNameBytes();
+
+  /**
+   * <code>bool is_active = 4 [json_name = "isActive"];</code>
+   * @return The isActive.
+   */
+  boolean getIsActive();
 }

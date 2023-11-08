@@ -412,32 +412,33 @@ public final class TicketProto {
       "\001(\tR\007skillId\022\022\n\004name\030\002 \001(\tR\004name\"\022\n\020List" +
       "UsersRequest\"E\n\021ListUsersResponse\0220\n\005use" +
       "rs\030\001 \003(\0132\032.api.v1alpha1.tickets.UserR\005us" +
-      "ers\"[\n\004User\022\027\n\007user_id\030\001 \001(\tR\006userId\022\035\n\n" +
+      "ers\"x\n\004User\022\027\n\007user_id\030\001 \001(\tR\006userId\022\035\n\n" +
       "first_name\030\002 \001(\tR\tfirstName\022\033\n\tlast_name" +
-      "\030\003 \001(\tR\010lastName\"[\n\031CreateTicketActionRe" +
-      "quest\022>\n\rticket_action\030\001 \001(\0132\031.api.commo" +
-      "ns.TicketActionR\014ticketAction\"\\\n\032CreateT" +
-      "icketActionResponse\022>\n\rticket_action\030\001 \001" +
-      "(\0132\031.api.commons.TicketActionR\014ticketAct" +
-      "ion\"\203\001\n\030CloseTicketActionRequest\022,\n\020tick" +
-      "et_action_id\030\001 \001(\003B\0020\001R\016ticketActionId\022\037" +
-      "\n\tticket_id\030\002 \001(\003B\0020\001R\010ticketId\022\030\n\007comme" +
-      "nt\030\003 \001(\tR\007comment\"8\n\031CloseTicketActionRe" +
-      "sponse\022\033\n\tis_closed\030\001 \001(\010R\010isClosed\"I\n\031A" +
-      "ssignTicketActionRequest\022,\n\020ticket_actio" +
-      "n_id\030\001 \001(\003B\0020\001R\016ticketActionId\"=\n\032Assign" +
-      "TicketActionResponse\022\037\n\013is_assigned\030\001 \001(" +
-      "\010R\nisAssigned\"\235\001\n\031ChangeTicketStatusRequ" +
-      "est\022\037\n\tticket_id\030\001 \001(\003B\0020\001R\010ticketId\022\037\n\t" +
-      "status_id\030\002 \001(\003B\0020\001R\010statusId\022>\n\rticket_" +
-      "status\030\003 \001(\0162\031.api.commons.TicketStatusR" +
-      "\014ticketStatus\"F\n\032ChangeTicketStatusRespo" +
-      "nse\022(\n\020is_status_edited\030\001 \001(\010R\016isStatusE" +
-      "ditedB\247\001\n&com.tcn.cloud.api.api.v1alpha1" +
-      ".ticketsB\013TicketProtoP\001\242\002\003AVT\252\002\024Api.V1al" +
-      "pha1.Tickets\312\002\024Api\\V1alpha1\\Tickets\342\002 Ap" +
-      "i\\V1alpha1\\Tickets\\GPBMetadata\352\002\026Api::V1" +
-      "alpha1::Ticketsb\006proto3"
+      "\030\003 \001(\tR\010lastName\022\033\n\tis_active\030\004 \001(\010R\010isA" +
+      "ctive\"[\n\031CreateTicketActionRequest\022>\n\rti" +
+      "cket_action\030\001 \001(\0132\031.api.commons.TicketAc" +
+      "tionR\014ticketAction\"\\\n\032CreateTicketAction" +
+      "Response\022>\n\rticket_action\030\001 \001(\0132\031.api.co" +
+      "mmons.TicketActionR\014ticketAction\"\203\001\n\030Clo" +
+      "seTicketActionRequest\022,\n\020ticket_action_i" +
+      "d\030\001 \001(\003B\0020\001R\016ticketActionId\022\037\n\tticket_id" +
+      "\030\002 \001(\003B\0020\001R\010ticketId\022\030\n\007comment\030\003 \001(\tR\007c" +
+      "omment\"8\n\031CloseTicketActionResponse\022\033\n\ti" +
+      "s_closed\030\001 \001(\010R\010isClosed\"I\n\031AssignTicket" +
+      "ActionRequest\022,\n\020ticket_action_id\030\001 \001(\003B" +
+      "\0020\001R\016ticketActionId\"=\n\032AssignTicketActio" +
+      "nResponse\022\037\n\013is_assigned\030\001 \001(\010R\nisAssign" +
+      "ed\"\235\001\n\031ChangeTicketStatusRequest\022\037\n\ttick" +
+      "et_id\030\001 \001(\003B\0020\001R\010ticketId\022\037\n\tstatus_id\030\002" +
+      " \001(\003B\0020\001R\010statusId\022>\n\rticket_status\030\003 \001(" +
+      "\0162\031.api.commons.TicketStatusR\014ticketStat" +
+      "us\"F\n\032ChangeTicketStatusResponse\022(\n\020is_s" +
+      "tatus_edited\030\001 \001(\010R\016isStatusEditedB\247\001\n&c" +
+      "om.tcn.cloud.api.api.v1alpha1.ticketsB\013T" +
+      "icketProtoP\001\242\002\003AVT\252\002\024Api.V1alpha1.Ticket" +
+      "s\312\002\024Api\\V1alpha1\\Tickets\342\002 Api\\V1alpha1\\" +
+      "Tickets\\GPBMetadata\352\002\026Api::V1alpha1::Tic" +
+      "ketsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -733,7 +734,7 @@ public final class TicketProto {
     internal_static_api_v1alpha1_tickets_User_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_tickets_User_descriptor,
-        new java.lang.String[] { "UserId", "FirstName", "LastName", });
+        new java.lang.String[] { "UserId", "FirstName", "LastName", "IsActive", });
     internal_static_api_v1alpha1_tickets_CreateTicketActionRequest_descriptor =
       getDescriptor().getMessageTypes().get(48);
     internal_static_api_v1alpha1_tickets_CreateTicketActionRequest_fieldAccessorTable = new
