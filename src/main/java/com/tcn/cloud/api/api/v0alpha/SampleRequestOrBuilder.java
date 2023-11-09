@@ -6,19 +6,4 @@ package com.tcn.cloud.api.api.v0alpha;
 public interface SampleRequestOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v0alpha.SampleRequest)
     com.google.protobuf.MessageOrBuilder {
-
-  /**
-   * <code>.google.api.HttpBody http_body = 2 [json_name = "httpBody"];</code>
-   * @return Whether the httpBody field is set.
-   */
-  boolean hasHttpBody();
-  /**
-   * <code>.google.api.HttpBody http_body = 2 [json_name = "httpBody"];</code>
-   * @return The httpBody.
-   */
-  com.google.api.HttpBody getHttpBody();
-  /**
-   * <code>.google.api.HttpBody http_body = 2 [json_name = "httpBody"];</code>
-   */
-  com.google.api.HttpBodyOrBuilder getHttpBodyOrBuilder();
 }
