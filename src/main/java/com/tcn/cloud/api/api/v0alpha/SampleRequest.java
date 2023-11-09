@@ -38,32 +38,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.SampleRequest.class, com.tcn.cloud.api.api.v0alpha.SampleRequest.Builder.class);
   }
 
-  public static final int HTTP_BODY_FIELD_NUMBER = 2;
-  private com.google.api.HttpBody httpBody_;
-  /**
-   * <code>.google.api.HttpBody http_body = 2 [json_name = "httpBody"];</code>
-   * @return Whether the httpBody field is set.
-   */
-  @java.lang.Override
-  public boolean hasHttpBody() {
-    return httpBody_ != null;
-  }
-  /**
-   * <code>.google.api.HttpBody http_body = 2 [json_name = "httpBody"];</code>
-   * @return The httpBody.
-   */
-  @java.lang.Override
-  public com.google.api.HttpBody getHttpBody() {
-    return httpBody_ == null ? com.google.api.HttpBody.getDefaultInstance() : httpBody_;
-  }
-  /**
-   * <code>.google.api.HttpBody http_body = 2 [json_name = "httpBody"];</code>
-   */
-  @java.lang.Override
-  public com.google.api.HttpBodyOrBuilder getHttpBodyOrBuilder() {
-    return httpBody_ == null ? com.google.api.HttpBody.getDefaultInstance() : httpBody_;
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -78,9 +52,6 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (httpBody_ != null) {
-      output.writeMessage(2, getHttpBody());
-    }
     getUnknownFields().writeTo(output);
   }
 
@@ -90,10 +61,6 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (httpBody_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(2, getHttpBody());
-    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -109,11 +76,6 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v0alpha.SampleRequest other = (com.tcn.cloud.api.api.v0alpha.SampleRequest) obj;
 
-    if (hasHttpBody() != other.hasHttpBody()) return false;
-    if (hasHttpBody()) {
-      if (!getHttpBody()
-          .equals(other.getHttpBody())) return false;
-    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -125,10 +87,6 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (hasHttpBody()) {
-      hash = (37 * hash) + HTTP_BODY_FIELD_NUMBER;
-      hash = (53 * hash) + getHttpBody().hashCode();
-    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -259,12 +217,6 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
-      httpBody_ = null;
-      if (httpBodyBuilder_ != null) {
-        httpBodyBuilder_.dispose();
-        httpBodyBuilder_ = null;
-      }
       return this;
     }
 
@@ -291,18 +243,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.SampleRequest buildPartial() {
       com.tcn.cloud.api.api.v0alpha.SampleRequest result = new com.tcn.cloud.api.api.v0alpha.SampleRequest(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.SampleRequest result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.httpBody_ = httpBodyBuilder_ == null
-            ? httpBody_
-            : httpBodyBuilder_.build();
-      }
     }
 
     @java.lang.Override
@@ -349,9 +291,6 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v0alpha.SampleRequest other) {
       if (other == com.tcn.cloud.api.api.v0alpha.SampleRequest.getDefaultInstance()) return this;
-      if (other.hasHttpBody()) {
-        mergeHttpBody(other.getHttpBody());
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -378,13 +317,6 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 18: {
-              input.readMessage(
-                  getHttpBodyFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -399,126 +331,6 @@ private static final long serialVersionUID = 0L;
         onChanged();
       } // finally
       return this;
-    }
-    private int bitField0_;
-
-    private com.google.api.HttpBody httpBody_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.api.HttpBody, com.google.api.HttpBody.Builder, com.google.api.HttpBodyOrBuilder> httpBodyBuilder_;
-    /**
-     * <code>.google.api.HttpBody http_body = 2 [json_name = "httpBody"];</code>
-     * @return Whether the httpBody field is set.
-     */
-    public boolean hasHttpBody() {
-      return ((bitField0_ & 0x00000001) != 0);
-    }
-    /**
-     * <code>.google.api.HttpBody http_body = 2 [json_name = "httpBody"];</code>
-     * @return The httpBody.
-     */
-    public com.google.api.HttpBody getHttpBody() {
-      if (httpBodyBuilder_ == null) {
-        return httpBody_ == null ? com.google.api.HttpBody.getDefaultInstance() : httpBody_;
-      } else {
-        return httpBodyBuilder_.getMessage();
-      }
-    }
-    /**
-     * <code>.google.api.HttpBody http_body = 2 [json_name = "httpBody"];</code>
-     */
-    public Builder setHttpBody(com.google.api.HttpBody value) {
-      if (httpBodyBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        httpBody_ = value;
-      } else {
-        httpBodyBuilder_.setMessage(value);
-      }
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.google.api.HttpBody http_body = 2 [json_name = "httpBody"];</code>
-     */
-    public Builder setHttpBody(
-        com.google.api.HttpBody.Builder builderForValue) {
-      if (httpBodyBuilder_ == null) {
-        httpBody_ = builderForValue.build();
-      } else {
-        httpBodyBuilder_.setMessage(builderForValue.build());
-      }
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.google.api.HttpBody http_body = 2 [json_name = "httpBody"];</code>
-     */
-    public Builder mergeHttpBody(com.google.api.HttpBody value) {
-      if (httpBodyBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0) &&
-          httpBody_ != null &&
-          httpBody_ != com.google.api.HttpBody.getDefaultInstance()) {
-          getHttpBodyBuilder().mergeFrom(value);
-        } else {
-          httpBody_ = value;
-        }
-      } else {
-        httpBodyBuilder_.mergeFrom(value);
-      }
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.google.api.HttpBody http_body = 2 [json_name = "httpBody"];</code>
-     */
-    public Builder clearHttpBody() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      httpBody_ = null;
-      if (httpBodyBuilder_ != null) {
-        httpBodyBuilder_.dispose();
-        httpBodyBuilder_ = null;
-      }
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.google.api.HttpBody http_body = 2 [json_name = "httpBody"];</code>
-     */
-    public com.google.api.HttpBody.Builder getHttpBodyBuilder() {
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return getHttpBodyFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.google.api.HttpBody http_body = 2 [json_name = "httpBody"];</code>
-     */
-    public com.google.api.HttpBodyOrBuilder getHttpBodyOrBuilder() {
-      if (httpBodyBuilder_ != null) {
-        return httpBodyBuilder_.getMessageOrBuilder();
-      } else {
-        return httpBody_ == null ?
-            com.google.api.HttpBody.getDefaultInstance() : httpBody_;
-      }
-    }
-    /**
-     * <code>.google.api.HttpBody http_body = 2 [json_name = "httpBody"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.api.HttpBody, com.google.api.HttpBody.Builder, com.google.api.HttpBodyOrBuilder> 
-        getHttpBodyFieldBuilder() {
-      if (httpBodyBuilder_ == null) {
-        httpBodyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.api.HttpBody, com.google.api.HttpBody.Builder, com.google.api.HttpBodyOrBuilder>(
-                getHttpBody(),
-                getParentForChildren(),
-                isClean());
-        httpBody_ = null;
-      }
-      return httpBodyBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
