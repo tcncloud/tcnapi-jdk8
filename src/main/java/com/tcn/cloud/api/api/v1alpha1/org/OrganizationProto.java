@@ -240,20 +240,22 @@ public final class OrganizationProto {
       "R\007addDate\022J\n\023last_scheduled_date\030\007 \001(\0132\032" +
       ".google.protobuf.TimestampR\021lastSchedule" +
       "dDate\"\"\n ListArchivedOrganizationsReques" +
-      "t\"\204\003\n!ListArchivedOrganizationsResponse\022" +
+      "t\"\300\003\n!ListArchivedOrganizationsResponse\022" +
       "z\n\024organization_details\030\001 \003(\0132G.api.v1al" +
       "pha1.org.ListArchivedOrganizationsRespon" +
       "se.OrganizationDetailsR\023organizationDeta" +
-      "ils\032\342\001\n\023OrganizationDetails\022\025\n\006org_id\030\001 " +
+      "ils\032\236\002\n\023OrganizationDetails\022\025\n\006org_id\030\001 " +
       "\001(\tR\005orgId\022\022\n\004name\030\002 \001(\tR\004name\022\035\n\nbillin" +
       "g_id\030\003 \001(\tR\tbillingId\0225\n\010add_date\030\004 \001(\0132" +
       "\032.google.protobuf.TimestampR\007addDate\022J\n\023" +
       "last_scheduled_date\030\005 \001(\0132\032.google.proto" +
-      "buf.TimestampR\021lastScheduledDateB\231\001\n\"com" +
-      ".tcn.cloud.api.api.v1alpha1.orgB\021Organiz" +
-      "ationProtoP\001\242\002\003AVO\252\002\020Api.V1alpha1.Org\312\002\020" +
-      "Api\\V1alpha1\\Org\342\002\034Api\\V1alpha1\\Org\\GPBM" +
-      "etadata\352\002\022Api::V1alpha1::Orgb\006proto3"
+      "buf.TimestampR\021lastScheduledDate\022\035\n\nclie" +
+      "nt_sid\030\006 \001(\003R\tclientSid\022\033\n\tregion_id\030\007 \001" +
+      "(\tR\010regionIdB\231\001\n\"com.tcn.cloud.api.api.v" +
+      "1alpha1.orgB\021OrganizationProtoP\001\242\002\003AVO\252\002" +
+      "\020Api.V1alpha1.Org\312\002\020Api\\V1alpha1\\Org\342\002\034A" +
+      "pi\\V1alpha1\\Org\\GPBMetadata\352\002\022Api::V1alp" +
+      "ha1::Orgb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -430,7 +432,7 @@ public final class OrganizationProto {
     internal_static_api_v1alpha1_org_ListArchivedOrganizationsResponse_OrganizationDetails_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_ListArchivedOrganizationsResponse_OrganizationDetails_descriptor,
-        new java.lang.String[] { "OrgId", "Name", "BillingId", "AddDate", "LastScheduledDate", });
+        new java.lang.String[] { "OrgId", "Name", "BillingId", "AddDate", "LastScheduledDate", "ClientSid", "RegionId", });
     com.tcn.cloud.api.api.commons.CountryProto.getDescriptor();
     com.tcn.cloud.api.api.commons.OrgProto.getDescriptor();
     com.tcn.cloud.api.api.commons.org.OrganizationProto.getDescriptor();
