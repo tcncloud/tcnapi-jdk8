@@ -160,6 +160,37 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp last_scheduled_date = 5 [json_name = "lastScheduledDate"];</code>
      */
     com.google.protobuf.TimestampOrBuilder getLastScheduledDateOrBuilder();
+
+    /**
+     * <pre>
+     * First enabled region's clientSid; will be deprecated for
+     * enabled_regions map.
+     * </pre>
+     *
+     * <code>int64 client_sid = 6 [json_name = "clientSid"];</code>
+     * @return The clientSid.
+     */
+    long getClientSid();
+
+    /**
+     * <pre>
+     * Default region org was first enbabled for.
+     * </pre>
+     *
+     * <code>string region_id = 7 [json_name = "regionId"];</code>
+     * @return The regionId.
+     */
+    java.lang.String getRegionId();
+    /**
+     * <pre>
+     * Default region org was first enbabled for.
+     * </pre>
+     *
+     * <code>string region_id = 7 [json_name = "regionId"];</code>
+     * @return The bytes for regionId.
+     */
+    com.google.protobuf.ByteString
+        getRegionIdBytes();
   }
   /**
    * Protobuf type {@code api.v1alpha1.org.ListArchivedOrganizationsResponse.OrganizationDetails}
@@ -177,6 +208,7 @@ private static final long serialVersionUID = 0L;
       orgId_ = "";
       name_ = "";
       billingId_ = "";
+      regionId_ = "";
     }
 
     @java.lang.Override
@@ -416,6 +448,69 @@ private static final long serialVersionUID = 0L;
       return lastScheduledDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastScheduledDate_;
     }
 
+    public static final int CLIENT_SID_FIELD_NUMBER = 6;
+    private long clientSid_ = 0L;
+    /**
+     * <pre>
+     * First enabled region's clientSid; will be deprecated for
+     * enabled_regions map.
+     * </pre>
+     *
+     * <code>int64 client_sid = 6 [json_name = "clientSid"];</code>
+     * @return The clientSid.
+     */
+    @java.lang.Override
+    public long getClientSid() {
+      return clientSid_;
+    }
+
+    public static final int REGION_ID_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object regionId_ = "";
+    /**
+     * <pre>
+     * Default region org was first enbabled for.
+     * </pre>
+     *
+     * <code>string region_id = 7 [json_name = "regionId"];</code>
+     * @return The regionId.
+     */
+    @java.lang.Override
+    public java.lang.String getRegionId() {
+      java.lang.Object ref = regionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        regionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Default region org was first enbabled for.
+     * </pre>
+     *
+     * <code>string region_id = 7 [json_name = "regionId"];</code>
+     * @return The bytes for regionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRegionIdBytes() {
+      java.lang.Object ref = regionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        regionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -445,6 +540,12 @@ private static final long serialVersionUID = 0L;
       if (lastScheduledDate_ != null) {
         output.writeMessage(5, getLastScheduledDate());
       }
+      if (clientSid_ != 0L) {
+        output.writeInt64(6, clientSid_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(regionId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, regionId_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -470,6 +571,13 @@ private static final long serialVersionUID = 0L;
       if (lastScheduledDate_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getLastScheduledDate());
+      }
+      if (clientSid_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(6, clientSid_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(regionId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, regionId_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -502,6 +610,10 @@ private static final long serialVersionUID = 0L;
         if (!getLastScheduledDate()
             .equals(other.getLastScheduledDate())) return false;
       }
+      if (getClientSid()
+          != other.getClientSid()) return false;
+      if (!getRegionId()
+          .equals(other.getRegionId())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -527,6 +639,11 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + LAST_SCHEDULED_DATE_FIELD_NUMBER;
         hash = (53 * hash) + getLastScheduledDate().hashCode();
       }
+      hash = (37 * hash) + CLIENT_SID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getClientSid());
+      hash = (37 * hash) + REGION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getRegionId().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -671,6 +788,8 @@ private static final long serialVersionUID = 0L;
           lastScheduledDateBuilder_.dispose();
           lastScheduledDateBuilder_ = null;
         }
+        clientSid_ = 0L;
+        regionId_ = "";
         return this;
       }
 
@@ -722,6 +841,12 @@ private static final long serialVersionUID = 0L;
           result.lastScheduledDate_ = lastScheduledDateBuilder_ == null
               ? lastScheduledDate_
               : lastScheduledDateBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.clientSid_ = clientSid_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.regionId_ = regionId_;
         }
       }
 
@@ -790,6 +915,14 @@ private static final long serialVersionUID = 0L;
         if (other.hasLastScheduledDate()) {
           mergeLastScheduledDate(other.getLastScheduledDate());
         }
+        if (other.getClientSid() != 0L) {
+          setClientSid(other.getClientSid());
+        }
+        if (!other.getRegionId().isEmpty()) {
+          regionId_ = other.regionId_;
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -845,6 +978,16 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000010;
                 break;
               } // case 42
+              case 48: {
+                clientSid_ = input.readInt64();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 48
+              case 58: {
+                regionId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -1446,6 +1589,145 @@ private static final long serialVersionUID = 0L;
           lastScheduledDate_ = null;
         }
         return lastScheduledDateBuilder_;
+      }
+
+      private long clientSid_ ;
+      /**
+       * <pre>
+       * First enabled region's clientSid; will be deprecated for
+       * enabled_regions map.
+       * </pre>
+       *
+       * <code>int64 client_sid = 6 [json_name = "clientSid"];</code>
+       * @return The clientSid.
+       */
+      @java.lang.Override
+      public long getClientSid() {
+        return clientSid_;
+      }
+      /**
+       * <pre>
+       * First enabled region's clientSid; will be deprecated for
+       * enabled_regions map.
+       * </pre>
+       *
+       * <code>int64 client_sid = 6 [json_name = "clientSid"];</code>
+       * @param value The clientSid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClientSid(long value) {
+
+        clientSid_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * First enabled region's clientSid; will be deprecated for
+       * enabled_regions map.
+       * </pre>
+       *
+       * <code>int64 client_sid = 6 [json_name = "clientSid"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClientSid() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        clientSid_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object regionId_ = "";
+      /**
+       * <pre>
+       * Default region org was first enbabled for.
+       * </pre>
+       *
+       * <code>string region_id = 7 [json_name = "regionId"];</code>
+       * @return The regionId.
+       */
+      public java.lang.String getRegionId() {
+        java.lang.Object ref = regionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          regionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Default region org was first enbabled for.
+       * </pre>
+       *
+       * <code>string region_id = 7 [json_name = "regionId"];</code>
+       * @return The bytes for regionId.
+       */
+      public com.google.protobuf.ByteString
+          getRegionIdBytes() {
+        java.lang.Object ref = regionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          regionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Default region org was first enbabled for.
+       * </pre>
+       *
+       * <code>string region_id = 7 [json_name = "regionId"];</code>
+       * @param value The regionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegionId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        regionId_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Default region org was first enbabled for.
+       * </pre>
+       *
+       * <code>string region_id = 7 [json_name = "regionId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRegionId() {
+        regionId_ = getDefaultInstance().getRegionId();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Default region org was first enbabled for.
+       * </pre>
+       *
+       * <code>string region_id = 7 [json_name = "regionId"];</code>
+       * @param value The bytes for regionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        regionId_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
