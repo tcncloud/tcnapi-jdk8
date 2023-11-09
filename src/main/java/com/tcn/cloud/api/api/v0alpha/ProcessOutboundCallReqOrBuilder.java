@@ -170,4 +170,141 @@ java.lang.String defaultValue);
    */
   com.google.protobuf.ByteString
       getCallerIdBytes();
+
+  /**
+   * <pre>
+   * The client id
+   * </pre>
+   *
+   * <code>int64 client_sid = 8 [json_name = "clientSid"];</code>
+   * @return The clientSid.
+   */
+  long getClientSid();
+
+  /**
+   * <pre>
+   * The communication type
+   * </pre>
+   *
+   * <code>.api.commons.CommType comm_type = 9 [json_name = "commType"];</code>
+   * @return Whether the commType field is set.
+   */
+  boolean hasCommType();
+  /**
+   * <pre>
+   * The communication type
+   * </pre>
+   *
+   * <code>.api.commons.CommType comm_type = 9 [json_name = "commType"];</code>
+   * @return The commType.
+   */
+  com.tcn.cloud.api.api.commons.CommType getCommType();
+  /**
+   * <pre>
+   * The communication type
+   * </pre>
+   *
+   * <code>.api.commons.CommType comm_type = 9 [json_name = "commType"];</code>
+   */
+  com.tcn.cloud.api.api.commons.CommTypeOrBuilder getCommTypeOrBuilder();
+
+  /**
+   * <pre>
+   * The call type
+   * </pre>
+   *
+   * <code>string call_type = 10 [json_name = "callType"];</code>
+   * @return The callType.
+   */
+  java.lang.String getCallType();
+  /**
+   * <pre>
+   * The call type
+   * </pre>
+   *
+   * <code>string call_type = 10 [json_name = "callType"];</code>
+   * @return The bytes for callType.
+   */
+  com.google.protobuf.ByteString
+      getCallTypeBytes();
+
+  /**
+   * <pre>
+   * The organization id
+   * </pre>
+   *
+   * <code>string org_id = 11 [json_name = "orgId"];</code>
+   * @return The orgId.
+   */
+  java.lang.String getOrgId();
+  /**
+   * <pre>
+   * The organization id
+   * </pre>
+   *
+   * <code>string org_id = 11 [json_name = "orgId"];</code>
+   * @return The bytes for orgId.
+   */
+  com.google.protobuf.ByteString
+      getOrgIdBytes();
+
+  /**
+   * <pre>
+   * The region id
+   * </pre>
+   *
+   * <code>string region_id = 12 [json_name = "regionId"];</code>
+   * @return The regionId.
+   */
+  java.lang.String getRegionId();
+  /**
+   * <pre>
+   * The region id
+   * </pre>
+   *
+   * <code>string region_id = 12 [json_name = "regionId"];</code>
+   * @return The bytes for regionId.
+   */
+  com.google.protobuf.ByteString
+      getRegionIdBytes();
+
+  /**
+   * <pre>
+   * The email address to process
+   * </pre>
+   *
+   * <code>string email = 13 [json_name = "email"];</code>
+   * @return The email.
+   */
+  java.lang.String getEmail();
+  /**
+   * <pre>
+   * The email address to process
+   * </pre>
+   *
+   * <code>string email = 13 [json_name = "email"];</code>
+   * @return The bytes for email.
+   */
+  com.google.protobuf.ByteString
+      getEmailBytes();
+
+  /**
+   * <pre>
+   * The zip code
+   * </pre>
+   *
+   * <code>string zip_code = 14 [json_name = "zipCode"];</code>
+   * @return The zipCode.
+   */
+  java.lang.String getZipCode();
+  /**
+   * <pre>
+   * The zip code
+   * </pre>
+   *
+   * <code>string zip_code = 14 [json_name = "zipCode"];</code>
+   * @return The bytes for zipCode.
+   */
+  com.google.protobuf.ByteString
+      getZipCodeBytes();
 }
