@@ -45,4 +45,24 @@ public interface CallerSidOrBuilder extends
    * @return The tenantSid.
    */
   long getTenantSid();
+
+  /**
+   * <pre>
+   * org id of the caller
+   * </pre>
+   *
+   * <code>string org_id = 4 [json_name = "orgId"];</code>
+   * @return The orgId.
+   */
+  java.lang.String getOrgId();
+  /**
+   * <pre>
+   * org id of the caller
+   * </pre>
+   *
+   * <code>string org_id = 4 [json_name = "orgId"];</code>
+   * @return The bytes for orgId.
+   */
+  com.google.protobuf.ByteString
+      getOrgIdBytes();
 }

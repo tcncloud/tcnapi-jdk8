@@ -138,6 +138,44 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int COMPLIANCE_CONFIG_FIELD_NUMBER = 3;
+  private com.tcn.cloud.api.api.commons.OmniProjectComplianceConfig complianceConfig_;
+  /**
+   * <pre>
+   * compliance configuration
+   * </pre>
+   *
+   * <code>.api.commons.OmniProjectComplianceConfig compliance_config = 3 [json_name = "complianceConfig"];</code>
+   * @return Whether the complianceConfig field is set.
+   */
+  @java.lang.Override
+  public boolean hasComplianceConfig() {
+    return complianceConfig_ != null;
+  }
+  /**
+   * <pre>
+   * compliance configuration
+   * </pre>
+   *
+   * <code>.api.commons.OmniProjectComplianceConfig compliance_config = 3 [json_name = "complianceConfig"];</code>
+   * @return The complianceConfig.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.OmniProjectComplianceConfig getComplianceConfig() {
+    return complianceConfig_ == null ? com.tcn.cloud.api.api.commons.OmniProjectComplianceConfig.getDefaultInstance() : complianceConfig_;
+  }
+  /**
+   * <pre>
+   * compliance configuration
+   * </pre>
+   *
+   * <code>.api.commons.OmniProjectComplianceConfig compliance_config = 3 [json_name = "complianceConfig"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.OmniProjectComplianceConfigOrBuilder getComplianceConfigOrBuilder() {
+    return complianceConfig_ == null ? com.tcn.cloud.api.api.commons.OmniProjectComplianceConfig.getDefaultInstance() : complianceConfig_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -158,6 +196,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
     }
+    if (complianceConfig_ != null) {
+      output.writeMessage(3, getComplianceConfig());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -172,6 +213,10 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+    }
+    if (complianceConfig_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, getComplianceConfig());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -192,6 +237,11 @@ private static final long serialVersionUID = 0L;
         .equals(other.getName())) return false;
     if (!getDescription()
         .equals(other.getDescription())) return false;
+    if (hasComplianceConfig() != other.hasComplianceConfig()) return false;
+    if (hasComplianceConfig()) {
+      if (!getComplianceConfig()
+          .equals(other.getComplianceConfig())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -207,6 +257,10 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getName().hashCode();
     hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
     hash = (53 * hash) + getDescription().hashCode();
+    if (hasComplianceConfig()) {
+      hash = (37 * hash) + COMPLIANCE_CONFIG_FIELD_NUMBER;
+      hash = (53 * hash) + getComplianceConfig().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -344,6 +398,11 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       name_ = "";
       description_ = "";
+      complianceConfig_ = null;
+      if (complianceConfigBuilder_ != null) {
+        complianceConfigBuilder_.dispose();
+        complianceConfigBuilder_ = null;
+      }
       return this;
     }
 
@@ -382,6 +441,11 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.description_ = description_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.complianceConfig_ = complianceConfigBuilder_ == null
+            ? complianceConfig_
+            : complianceConfigBuilder_.build();
       }
     }
 
@@ -439,6 +503,9 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000002;
         onChanged();
       }
+      if (other.hasComplianceConfig()) {
+        mergeComplianceConfig(other.getComplianceConfig());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -475,6 +542,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 18
+            case 26: {
+              input.readMessage(
+                  getComplianceConfigFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -674,6 +748,161 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
+    }
+
+    private com.tcn.cloud.api.api.commons.OmniProjectComplianceConfig complianceConfig_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.OmniProjectComplianceConfig, com.tcn.cloud.api.api.commons.OmniProjectComplianceConfig.Builder, com.tcn.cloud.api.api.commons.OmniProjectComplianceConfigOrBuilder> complianceConfigBuilder_;
+    /**
+     * <pre>
+     * compliance configuration
+     * </pre>
+     *
+     * <code>.api.commons.OmniProjectComplianceConfig compliance_config = 3 [json_name = "complianceConfig"];</code>
+     * @return Whether the complianceConfig field is set.
+     */
+    public boolean hasComplianceConfig() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * compliance configuration
+     * </pre>
+     *
+     * <code>.api.commons.OmniProjectComplianceConfig compliance_config = 3 [json_name = "complianceConfig"];</code>
+     * @return The complianceConfig.
+     */
+    public com.tcn.cloud.api.api.commons.OmniProjectComplianceConfig getComplianceConfig() {
+      if (complianceConfigBuilder_ == null) {
+        return complianceConfig_ == null ? com.tcn.cloud.api.api.commons.OmniProjectComplianceConfig.getDefaultInstance() : complianceConfig_;
+      } else {
+        return complianceConfigBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * compliance configuration
+     * </pre>
+     *
+     * <code>.api.commons.OmniProjectComplianceConfig compliance_config = 3 [json_name = "complianceConfig"];</code>
+     */
+    public Builder setComplianceConfig(com.tcn.cloud.api.api.commons.OmniProjectComplianceConfig value) {
+      if (complianceConfigBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        complianceConfig_ = value;
+      } else {
+        complianceConfigBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * compliance configuration
+     * </pre>
+     *
+     * <code>.api.commons.OmniProjectComplianceConfig compliance_config = 3 [json_name = "complianceConfig"];</code>
+     */
+    public Builder setComplianceConfig(
+        com.tcn.cloud.api.api.commons.OmniProjectComplianceConfig.Builder builderForValue) {
+      if (complianceConfigBuilder_ == null) {
+        complianceConfig_ = builderForValue.build();
+      } else {
+        complianceConfigBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * compliance configuration
+     * </pre>
+     *
+     * <code>.api.commons.OmniProjectComplianceConfig compliance_config = 3 [json_name = "complianceConfig"];</code>
+     */
+    public Builder mergeComplianceConfig(com.tcn.cloud.api.api.commons.OmniProjectComplianceConfig value) {
+      if (complianceConfigBuilder_ == null) {
+        if (((bitField0_ & 0x00000004) != 0) &&
+          complianceConfig_ != null &&
+          complianceConfig_ != com.tcn.cloud.api.api.commons.OmniProjectComplianceConfig.getDefaultInstance()) {
+          getComplianceConfigBuilder().mergeFrom(value);
+        } else {
+          complianceConfig_ = value;
+        }
+      } else {
+        complianceConfigBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * compliance configuration
+     * </pre>
+     *
+     * <code>.api.commons.OmniProjectComplianceConfig compliance_config = 3 [json_name = "complianceConfig"];</code>
+     */
+    public Builder clearComplianceConfig() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      complianceConfig_ = null;
+      if (complianceConfigBuilder_ != null) {
+        complianceConfigBuilder_.dispose();
+        complianceConfigBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * compliance configuration
+     * </pre>
+     *
+     * <code>.api.commons.OmniProjectComplianceConfig compliance_config = 3 [json_name = "complianceConfig"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.OmniProjectComplianceConfig.Builder getComplianceConfigBuilder() {
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return getComplianceConfigFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * compliance configuration
+     * </pre>
+     *
+     * <code>.api.commons.OmniProjectComplianceConfig compliance_config = 3 [json_name = "complianceConfig"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.OmniProjectComplianceConfigOrBuilder getComplianceConfigOrBuilder() {
+      if (complianceConfigBuilder_ != null) {
+        return complianceConfigBuilder_.getMessageOrBuilder();
+      } else {
+        return complianceConfig_ == null ?
+            com.tcn.cloud.api.api.commons.OmniProjectComplianceConfig.getDefaultInstance() : complianceConfig_;
+      }
+    }
+    /**
+     * <pre>
+     * compliance configuration
+     * </pre>
+     *
+     * <code>.api.commons.OmniProjectComplianceConfig compliance_config = 3 [json_name = "complianceConfig"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.OmniProjectComplianceConfig, com.tcn.cloud.api.api.commons.OmniProjectComplianceConfig.Builder, com.tcn.cloud.api.api.commons.OmniProjectComplianceConfigOrBuilder> 
+        getComplianceConfigFieldBuilder() {
+      if (complianceConfigBuilder_ == null) {
+        complianceConfigBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.OmniProjectComplianceConfig, com.tcn.cloud.api.api.commons.OmniProjectComplianceConfig.Builder, com.tcn.cloud.api.api.commons.OmniProjectComplianceConfigOrBuilder>(
+                getComplianceConfig(),
+                getParentForChildren(),
+                isClean());
+        complianceConfig_ = null;
+      }
+      return complianceConfigBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

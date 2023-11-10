@@ -124,4 +124,34 @@ public interface InsightOrBuilder extends
    * @return The insightPermissionType.
    */
   com.tcn.cloud.api.api.commons.InsightPermissionType getInsightPermissionType();
+
+  /**
+   * <pre>
+   * unique resource id of the insight
+   * </pre>
+   *
+   * <code>string resource_id = 9 [json_name = "resourceId"];</code>
+   * @return The resourceId.
+   */
+  java.lang.String getResourceId();
+  /**
+   * <pre>
+   * unique resource id of the insight
+   * </pre>
+   *
+   * <code>string resource_id = 9 [json_name = "resourceId"];</code>
+   * @return The bytes for resourceId.
+   */
+  com.google.protobuf.ByteString
+      getResourceIdBytes();
+
+  /**
+   * <pre>
+   * whether the insight is a standard insight
+   * </pre>
+   *
+   * <code>bool standard_insight = 10 [json_name = "standardInsight"];</code>
+   * @return The standardInsight.
+   */
+  boolean getStandardInsight();
 }

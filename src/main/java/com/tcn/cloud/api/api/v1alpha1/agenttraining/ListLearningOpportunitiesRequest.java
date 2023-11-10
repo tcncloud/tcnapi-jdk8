@@ -20,6 +20,10 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ListLearningOpportunitiesRequest() {
+    callIdentifiers_ = java.util.Collections.emptyList();
+    transcriptSids_ = emptyLongList();
+    agentUserIds_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   @java.lang.Override
@@ -42,6 +46,199 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.agenttraining.ListLearningOpportunitiesRequest.class, com.tcn.cloud.api.api.v1alpha1.agenttraining.ListLearningOpportunitiesRequest.Builder.class);
   }
 
+  public static final int CALL_IDENTIFIERS_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
+  private java.util.List<com.tcn.cloud.api.api.commons.CallIdentifier> callIdentifiers_;
+  /**
+   * <pre>
+   * Optional - 'any of' if provided.
+   * </pre>
+   *
+   * <code>repeated .api.commons.CallIdentifier call_identifiers = 2 [json_name = "callIdentifiers"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.api.commons.CallIdentifier> getCallIdentifiersList() {
+    return callIdentifiers_;
+  }
+  /**
+   * <pre>
+   * Optional - 'any of' if provided.
+   * </pre>
+   *
+   * <code>repeated .api.commons.CallIdentifier call_identifiers = 2 [json_name = "callIdentifiers"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.tcn.cloud.api.api.commons.CallIdentifierOrBuilder> 
+      getCallIdentifiersOrBuilderList() {
+    return callIdentifiers_;
+  }
+  /**
+   * <pre>
+   * Optional - 'any of' if provided.
+   * </pre>
+   *
+   * <code>repeated .api.commons.CallIdentifier call_identifiers = 2 [json_name = "callIdentifiers"];</code>
+   */
+  @java.lang.Override
+  public int getCallIdentifiersCount() {
+    return callIdentifiers_.size();
+  }
+  /**
+   * <pre>
+   * Optional - 'any of' if provided.
+   * </pre>
+   *
+   * <code>repeated .api.commons.CallIdentifier call_identifiers = 2 [json_name = "callIdentifiers"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.CallIdentifier getCallIdentifiers(int index) {
+    return callIdentifiers_.get(index);
+  }
+  /**
+   * <pre>
+   * Optional - 'any of' if provided.
+   * </pre>
+   *
+   * <code>repeated .api.commons.CallIdentifier call_identifiers = 2 [json_name = "callIdentifiers"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.CallIdentifierOrBuilder getCallIdentifiersOrBuilder(
+      int index) {
+    return callIdentifiers_.get(index);
+  }
+
+  public static final int TRANSCRIPT_SIDS_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.Internal.LongList transcriptSids_;
+  /**
+   * <pre>
+   * Optional - 'any of' if provided.
+   * </pre>
+   *
+   * <code>repeated int64 transcript_sids = 3 [json_name = "transcriptSids"];</code>
+   * @return A list containing the transcriptSids.
+   */
+  @java.lang.Override
+  public java.util.List<java.lang.Long>
+      getTranscriptSidsList() {
+    return transcriptSids_;
+  }
+  /**
+   * <pre>
+   * Optional - 'any of' if provided.
+   * </pre>
+   *
+   * <code>repeated int64 transcript_sids = 3 [json_name = "transcriptSids"];</code>
+   * @return The count of transcriptSids.
+   */
+  public int getTranscriptSidsCount() {
+    return transcriptSids_.size();
+  }
+  /**
+   * <pre>
+   * Optional - 'any of' if provided.
+   * </pre>
+   *
+   * <code>repeated int64 transcript_sids = 3 [json_name = "transcriptSids"];</code>
+   * @param index The index of the element to return.
+   * @return The transcriptSids at the given index.
+   */
+  public long getTranscriptSids(int index) {
+    return transcriptSids_.getLong(index);
+  }
+  private int transcriptSidsMemoizedSerializedSize = -1;
+
+  public static final int AGENT_USER_IDS_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.LazyStringArrayList agentUserIds_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
+  /**
+   * <pre>
+   * Optional - 'any of' if provided.
+   * </pre>
+   *
+   * <code>repeated string agent_user_ids = 4 [json_name = "agentUserIds"];</code>
+   * @return A list containing the agentUserIds.
+   */
+  public com.google.protobuf.ProtocolStringList
+      getAgentUserIdsList() {
+    return agentUserIds_;
+  }
+  /**
+   * <pre>
+   * Optional - 'any of' if provided.
+   * </pre>
+   *
+   * <code>repeated string agent_user_ids = 4 [json_name = "agentUserIds"];</code>
+   * @return The count of agentUserIds.
+   */
+  public int getAgentUserIdsCount() {
+    return agentUserIds_.size();
+  }
+  /**
+   * <pre>
+   * Optional - 'any of' if provided.
+   * </pre>
+   *
+   * <code>repeated string agent_user_ids = 4 [json_name = "agentUserIds"];</code>
+   * @param index The index of the element to return.
+   * @return The agentUserIds at the given index.
+   */
+  public java.lang.String getAgentUserIds(int index) {
+    return agentUserIds_.get(index);
+  }
+  /**
+   * <pre>
+   * Optional - 'any of' if provided.
+   * </pre>
+   *
+   * <code>repeated string agent_user_ids = 4 [json_name = "agentUserIds"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the agentUserIds at the given index.
+   */
+  public com.google.protobuf.ByteString
+      getAgentUserIdsBytes(int index) {
+    return agentUserIds_.getByteString(index);
+  }
+
+  public static final int CREATED_AT_FIELD_NUMBER = 5;
+  private com.tcn.cloud.api.api.commons.TimeFilter createdAt_;
+  /**
+   * <pre>
+   * Optional.
+   * </pre>
+   *
+   * <code>.api.commons.TimeFilter created_at = 5 [json_name = "createdAt"];</code>
+   * @return Whether the createdAt field is set.
+   */
+  @java.lang.Override
+  public boolean hasCreatedAt() {
+    return createdAt_ != null;
+  }
+  /**
+   * <pre>
+   * Optional.
+   * </pre>
+   *
+   * <code>.api.commons.TimeFilter created_at = 5 [json_name = "createdAt"];</code>
+   * @return The createdAt.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.TimeFilter getCreatedAt() {
+    return createdAt_ == null ? com.tcn.cloud.api.api.commons.TimeFilter.getDefaultInstance() : createdAt_;
+  }
+  /**
+   * <pre>
+   * Optional.
+   * </pre>
+   *
+   * <code>.api.commons.TimeFilter created_at = 5 [json_name = "createdAt"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.TimeFilterOrBuilder getCreatedAtOrBuilder() {
+    return createdAt_ == null ? com.tcn.cloud.api.api.commons.TimeFilter.getDefaultInstance() : createdAt_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -56,6 +253,23 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    getSerializedSize();
+    for (int i = 0; i < callIdentifiers_.size(); i++) {
+      output.writeMessage(2, callIdentifiers_.get(i));
+    }
+    if (getTranscriptSidsList().size() > 0) {
+      output.writeUInt32NoTag(26);
+      output.writeUInt32NoTag(transcriptSidsMemoizedSerializedSize);
+    }
+    for (int i = 0; i < transcriptSids_.size(); i++) {
+      output.writeInt64NoTag(transcriptSids_.getLong(i));
+    }
+    for (int i = 0; i < agentUserIds_.size(); i++) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, agentUserIds_.getRaw(i));
+    }
+    if (createdAt_ != null) {
+      output.writeMessage(5, getCreatedAt());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -65,6 +279,36 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    for (int i = 0; i < callIdentifiers_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, callIdentifiers_.get(i));
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < transcriptSids_.size(); i++) {
+        dataSize += com.google.protobuf.CodedOutputStream
+          .computeInt64SizeNoTag(transcriptSids_.getLong(i));
+      }
+      size += dataSize;
+      if (!getTranscriptSidsList().isEmpty()) {
+        size += 1;
+        size += com.google.protobuf.CodedOutputStream
+            .computeInt32SizeNoTag(dataSize);
+      }
+      transcriptSidsMemoizedSerializedSize = dataSize;
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < agentUserIds_.size(); i++) {
+        dataSize += computeStringSizeNoTag(agentUserIds_.getRaw(i));
+      }
+      size += dataSize;
+      size += 1 * getAgentUserIdsList().size();
+    }
+    if (createdAt_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5, getCreatedAt());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -80,6 +324,17 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v1alpha1.agenttraining.ListLearningOpportunitiesRequest other = (com.tcn.cloud.api.api.v1alpha1.agenttraining.ListLearningOpportunitiesRequest) obj;
 
+    if (!getCallIdentifiersList()
+        .equals(other.getCallIdentifiersList())) return false;
+    if (!getTranscriptSidsList()
+        .equals(other.getTranscriptSidsList())) return false;
+    if (!getAgentUserIdsList()
+        .equals(other.getAgentUserIdsList())) return false;
+    if (hasCreatedAt() != other.hasCreatedAt()) return false;
+    if (hasCreatedAt()) {
+      if (!getCreatedAt()
+          .equals(other.getCreatedAt())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -91,6 +346,22 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    if (getCallIdentifiersCount() > 0) {
+      hash = (37 * hash) + CALL_IDENTIFIERS_FIELD_NUMBER;
+      hash = (53 * hash) + getCallIdentifiersList().hashCode();
+    }
+    if (getTranscriptSidsCount() > 0) {
+      hash = (37 * hash) + TRANSCRIPT_SIDS_FIELD_NUMBER;
+      hash = (53 * hash) + getTranscriptSidsList().hashCode();
+    }
+    if (getAgentUserIdsCount() > 0) {
+      hash = (37 * hash) + AGENT_USER_IDS_FIELD_NUMBER;
+      hash = (53 * hash) + getAgentUserIdsList().hashCode();
+    }
+    if (hasCreatedAt()) {
+      hash = (37 * hash) + CREATED_AT_FIELD_NUMBER;
+      hash = (53 * hash) + getCreatedAt().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -225,6 +496,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
+      if (callIdentifiersBuilder_ == null) {
+        callIdentifiers_ = java.util.Collections.emptyList();
+      } else {
+        callIdentifiers_ = null;
+        callIdentifiersBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000001);
+      transcriptSids_ = emptyLongList();
+      agentUserIds_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      createdAt_ = null;
+      if (createdAtBuilder_ != null) {
+        createdAtBuilder_.dispose();
+        createdAtBuilder_ = null;
+      }
       return this;
     }
 
@@ -251,8 +538,40 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.agenttraining.ListLearningOpportunitiesRequest buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.agenttraining.ListLearningOpportunitiesRequest result = new com.tcn.cloud.api.api.v1alpha1.agenttraining.ListLearningOpportunitiesRequest(this);
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.agenttraining.ListLearningOpportunitiesRequest result) {
+      if (callIdentifiersBuilder_ == null) {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          callIdentifiers_ = java.util.Collections.unmodifiableList(callIdentifiers_);
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.callIdentifiers_ = callIdentifiers_;
+      } else {
+        result.callIdentifiers_ = callIdentifiersBuilder_.build();
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        transcriptSids_.makeImmutable();
+        bitField0_ = (bitField0_ & ~0x00000002);
+      }
+      result.transcriptSids_ = transcriptSids_;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.agenttraining.ListLearningOpportunitiesRequest result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        agentUserIds_.makeImmutable();
+        result.agentUserIds_ = agentUserIds_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.createdAt_ = createdAtBuilder_ == null
+            ? createdAt_
+            : createdAtBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -299,6 +618,55 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.agenttraining.ListLearningOpportunitiesRequest other) {
       if (other == com.tcn.cloud.api.api.v1alpha1.agenttraining.ListLearningOpportunitiesRequest.getDefaultInstance()) return this;
+      if (callIdentifiersBuilder_ == null) {
+        if (!other.callIdentifiers_.isEmpty()) {
+          if (callIdentifiers_.isEmpty()) {
+            callIdentifiers_ = other.callIdentifiers_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureCallIdentifiersIsMutable();
+            callIdentifiers_.addAll(other.callIdentifiers_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.callIdentifiers_.isEmpty()) {
+          if (callIdentifiersBuilder_.isEmpty()) {
+            callIdentifiersBuilder_.dispose();
+            callIdentifiersBuilder_ = null;
+            callIdentifiers_ = other.callIdentifiers_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+            callIdentifiersBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getCallIdentifiersFieldBuilder() : null;
+          } else {
+            callIdentifiersBuilder_.addAllMessages(other.callIdentifiers_);
+          }
+        }
+      }
+      if (!other.transcriptSids_.isEmpty()) {
+        if (transcriptSids_.isEmpty()) {
+          transcriptSids_ = other.transcriptSids_;
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          ensureTranscriptSidsIsMutable();
+          transcriptSids_.addAll(other.transcriptSids_);
+        }
+        onChanged();
+      }
+      if (!other.agentUserIds_.isEmpty()) {
+        if (agentUserIds_.isEmpty()) {
+          agentUserIds_ = other.agentUserIds_;
+          bitField0_ |= 0x00000004;
+        } else {
+          ensureAgentUserIdsIsMutable();
+          agentUserIds_.addAll(other.agentUserIds_);
+        }
+        onChanged();
+      }
+      if (other.hasCreatedAt()) {
+        mergeCreatedAt(other.getCreatedAt());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -325,6 +693,48 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
+            case 18: {
+              com.tcn.cloud.api.api.commons.CallIdentifier m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.commons.CallIdentifier.parser(),
+                      extensionRegistry);
+              if (callIdentifiersBuilder_ == null) {
+                ensureCallIdentifiersIsMutable();
+                callIdentifiers_.add(m);
+              } else {
+                callIdentifiersBuilder_.addMessage(m);
+              }
+              break;
+            } // case 18
+            case 24: {
+              long v = input.readInt64();
+              ensureTranscriptSidsIsMutable();
+              transcriptSids_.addLong(v);
+              break;
+            } // case 24
+            case 26: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              ensureTranscriptSidsIsMutable();
+              while (input.getBytesUntilLimit() > 0) {
+                transcriptSids_.addLong(input.readInt64());
+              }
+              input.popLimit(limit);
+              break;
+            } // case 26
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureAgentUserIdsIsMutable();
+              agentUserIds_.add(s);
+              break;
+            } // case 34
+            case 42: {
+              input.readMessage(
+                  getCreatedAtFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 42
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -339,6 +749,730 @@ private static final long serialVersionUID = 0L;
         onChanged();
       } // finally
       return this;
+    }
+    private int bitField0_;
+
+    private java.util.List<com.tcn.cloud.api.api.commons.CallIdentifier> callIdentifiers_ =
+      java.util.Collections.emptyList();
+    private void ensureCallIdentifiersIsMutable() {
+      if (!((bitField0_ & 0x00000001) != 0)) {
+        callIdentifiers_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.CallIdentifier>(callIdentifiers_);
+        bitField0_ |= 0x00000001;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.CallIdentifier, com.tcn.cloud.api.api.commons.CallIdentifier.Builder, com.tcn.cloud.api.api.commons.CallIdentifierOrBuilder> callIdentifiersBuilder_;
+
+    /**
+     * <pre>
+     * Optional - 'any of' if provided.
+     * </pre>
+     *
+     * <code>repeated .api.commons.CallIdentifier call_identifiers = 2 [json_name = "callIdentifiers"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.CallIdentifier> getCallIdentifiersList() {
+      if (callIdentifiersBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(callIdentifiers_);
+      } else {
+        return callIdentifiersBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * Optional - 'any of' if provided.
+     * </pre>
+     *
+     * <code>repeated .api.commons.CallIdentifier call_identifiers = 2 [json_name = "callIdentifiers"];</code>
+     */
+    public int getCallIdentifiersCount() {
+      if (callIdentifiersBuilder_ == null) {
+        return callIdentifiers_.size();
+      } else {
+        return callIdentifiersBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * Optional - 'any of' if provided.
+     * </pre>
+     *
+     * <code>repeated .api.commons.CallIdentifier call_identifiers = 2 [json_name = "callIdentifiers"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.CallIdentifier getCallIdentifiers(int index) {
+      if (callIdentifiersBuilder_ == null) {
+        return callIdentifiers_.get(index);
+      } else {
+        return callIdentifiersBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * Optional - 'any of' if provided.
+     * </pre>
+     *
+     * <code>repeated .api.commons.CallIdentifier call_identifiers = 2 [json_name = "callIdentifiers"];</code>
+     */
+    public Builder setCallIdentifiers(
+        int index, com.tcn.cloud.api.api.commons.CallIdentifier value) {
+      if (callIdentifiersBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureCallIdentifiersIsMutable();
+        callIdentifiers_.set(index, value);
+        onChanged();
+      } else {
+        callIdentifiersBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional - 'any of' if provided.
+     * </pre>
+     *
+     * <code>repeated .api.commons.CallIdentifier call_identifiers = 2 [json_name = "callIdentifiers"];</code>
+     */
+    public Builder setCallIdentifiers(
+        int index, com.tcn.cloud.api.api.commons.CallIdentifier.Builder builderForValue) {
+      if (callIdentifiersBuilder_ == null) {
+        ensureCallIdentifiersIsMutable();
+        callIdentifiers_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        callIdentifiersBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional - 'any of' if provided.
+     * </pre>
+     *
+     * <code>repeated .api.commons.CallIdentifier call_identifiers = 2 [json_name = "callIdentifiers"];</code>
+     */
+    public Builder addCallIdentifiers(com.tcn.cloud.api.api.commons.CallIdentifier value) {
+      if (callIdentifiersBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureCallIdentifiersIsMutable();
+        callIdentifiers_.add(value);
+        onChanged();
+      } else {
+        callIdentifiersBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional - 'any of' if provided.
+     * </pre>
+     *
+     * <code>repeated .api.commons.CallIdentifier call_identifiers = 2 [json_name = "callIdentifiers"];</code>
+     */
+    public Builder addCallIdentifiers(
+        int index, com.tcn.cloud.api.api.commons.CallIdentifier value) {
+      if (callIdentifiersBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureCallIdentifiersIsMutable();
+        callIdentifiers_.add(index, value);
+        onChanged();
+      } else {
+        callIdentifiersBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional - 'any of' if provided.
+     * </pre>
+     *
+     * <code>repeated .api.commons.CallIdentifier call_identifiers = 2 [json_name = "callIdentifiers"];</code>
+     */
+    public Builder addCallIdentifiers(
+        com.tcn.cloud.api.api.commons.CallIdentifier.Builder builderForValue) {
+      if (callIdentifiersBuilder_ == null) {
+        ensureCallIdentifiersIsMutable();
+        callIdentifiers_.add(builderForValue.build());
+        onChanged();
+      } else {
+        callIdentifiersBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional - 'any of' if provided.
+     * </pre>
+     *
+     * <code>repeated .api.commons.CallIdentifier call_identifiers = 2 [json_name = "callIdentifiers"];</code>
+     */
+    public Builder addCallIdentifiers(
+        int index, com.tcn.cloud.api.api.commons.CallIdentifier.Builder builderForValue) {
+      if (callIdentifiersBuilder_ == null) {
+        ensureCallIdentifiersIsMutable();
+        callIdentifiers_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        callIdentifiersBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional - 'any of' if provided.
+     * </pre>
+     *
+     * <code>repeated .api.commons.CallIdentifier call_identifiers = 2 [json_name = "callIdentifiers"];</code>
+     */
+    public Builder addAllCallIdentifiers(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.CallIdentifier> values) {
+      if (callIdentifiersBuilder_ == null) {
+        ensureCallIdentifiersIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, callIdentifiers_);
+        onChanged();
+      } else {
+        callIdentifiersBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional - 'any of' if provided.
+     * </pre>
+     *
+     * <code>repeated .api.commons.CallIdentifier call_identifiers = 2 [json_name = "callIdentifiers"];</code>
+     */
+    public Builder clearCallIdentifiers() {
+      if (callIdentifiersBuilder_ == null) {
+        callIdentifiers_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+      } else {
+        callIdentifiersBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional - 'any of' if provided.
+     * </pre>
+     *
+     * <code>repeated .api.commons.CallIdentifier call_identifiers = 2 [json_name = "callIdentifiers"];</code>
+     */
+    public Builder removeCallIdentifiers(int index) {
+      if (callIdentifiersBuilder_ == null) {
+        ensureCallIdentifiersIsMutable();
+        callIdentifiers_.remove(index);
+        onChanged();
+      } else {
+        callIdentifiersBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional - 'any of' if provided.
+     * </pre>
+     *
+     * <code>repeated .api.commons.CallIdentifier call_identifiers = 2 [json_name = "callIdentifiers"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.CallIdentifier.Builder getCallIdentifiersBuilder(
+        int index) {
+      return getCallIdentifiersFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * Optional - 'any of' if provided.
+     * </pre>
+     *
+     * <code>repeated .api.commons.CallIdentifier call_identifiers = 2 [json_name = "callIdentifiers"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.CallIdentifierOrBuilder getCallIdentifiersOrBuilder(
+        int index) {
+      if (callIdentifiersBuilder_ == null) {
+        return callIdentifiers_.get(index);  } else {
+        return callIdentifiersBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * Optional - 'any of' if provided.
+     * </pre>
+     *
+     * <code>repeated .api.commons.CallIdentifier call_identifiers = 2 [json_name = "callIdentifiers"];</code>
+     */
+    public java.util.List<? extends com.tcn.cloud.api.api.commons.CallIdentifierOrBuilder> 
+         getCallIdentifiersOrBuilderList() {
+      if (callIdentifiersBuilder_ != null) {
+        return callIdentifiersBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(callIdentifiers_);
+      }
+    }
+    /**
+     * <pre>
+     * Optional - 'any of' if provided.
+     * </pre>
+     *
+     * <code>repeated .api.commons.CallIdentifier call_identifiers = 2 [json_name = "callIdentifiers"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.CallIdentifier.Builder addCallIdentifiersBuilder() {
+      return getCallIdentifiersFieldBuilder().addBuilder(
+          com.tcn.cloud.api.api.commons.CallIdentifier.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Optional - 'any of' if provided.
+     * </pre>
+     *
+     * <code>repeated .api.commons.CallIdentifier call_identifiers = 2 [json_name = "callIdentifiers"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.CallIdentifier.Builder addCallIdentifiersBuilder(
+        int index) {
+      return getCallIdentifiersFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.api.commons.CallIdentifier.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Optional - 'any of' if provided.
+     * </pre>
+     *
+     * <code>repeated .api.commons.CallIdentifier call_identifiers = 2 [json_name = "callIdentifiers"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.CallIdentifier.Builder> 
+         getCallIdentifiersBuilderList() {
+      return getCallIdentifiersFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.CallIdentifier, com.tcn.cloud.api.api.commons.CallIdentifier.Builder, com.tcn.cloud.api.api.commons.CallIdentifierOrBuilder> 
+        getCallIdentifiersFieldBuilder() {
+      if (callIdentifiersBuilder_ == null) {
+        callIdentifiersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.CallIdentifier, com.tcn.cloud.api.api.commons.CallIdentifier.Builder, com.tcn.cloud.api.api.commons.CallIdentifierOrBuilder>(
+                callIdentifiers_,
+                ((bitField0_ & 0x00000001) != 0),
+                getParentForChildren(),
+                isClean());
+        callIdentifiers_ = null;
+      }
+      return callIdentifiersBuilder_;
+    }
+
+    private com.google.protobuf.Internal.LongList transcriptSids_ = emptyLongList();
+    private void ensureTranscriptSidsIsMutable() {
+      if (!((bitField0_ & 0x00000002) != 0)) {
+        transcriptSids_ = mutableCopy(transcriptSids_);
+        bitField0_ |= 0x00000002;
+      }
+    }
+    /**
+     * <pre>
+     * Optional - 'any of' if provided.
+     * </pre>
+     *
+     * <code>repeated int64 transcript_sids = 3 [json_name = "transcriptSids"];</code>
+     * @return A list containing the transcriptSids.
+     */
+    public java.util.List<java.lang.Long>
+        getTranscriptSidsList() {
+      return ((bitField0_ & 0x00000002) != 0) ?
+               java.util.Collections.unmodifiableList(transcriptSids_) : transcriptSids_;
+    }
+    /**
+     * <pre>
+     * Optional - 'any of' if provided.
+     * </pre>
+     *
+     * <code>repeated int64 transcript_sids = 3 [json_name = "transcriptSids"];</code>
+     * @return The count of transcriptSids.
+     */
+    public int getTranscriptSidsCount() {
+      return transcriptSids_.size();
+    }
+    /**
+     * <pre>
+     * Optional - 'any of' if provided.
+     * </pre>
+     *
+     * <code>repeated int64 transcript_sids = 3 [json_name = "transcriptSids"];</code>
+     * @param index The index of the element to return.
+     * @return The transcriptSids at the given index.
+     */
+    public long getTranscriptSids(int index) {
+      return transcriptSids_.getLong(index);
+    }
+    /**
+     * <pre>
+     * Optional - 'any of' if provided.
+     * </pre>
+     *
+     * <code>repeated int64 transcript_sids = 3 [json_name = "transcriptSids"];</code>
+     * @param index The index to set the value at.
+     * @param value The transcriptSids to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTranscriptSids(
+        int index, long value) {
+
+      ensureTranscriptSidsIsMutable();
+      transcriptSids_.setLong(index, value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional - 'any of' if provided.
+     * </pre>
+     *
+     * <code>repeated int64 transcript_sids = 3 [json_name = "transcriptSids"];</code>
+     * @param value The transcriptSids to add.
+     * @return This builder for chaining.
+     */
+    public Builder addTranscriptSids(long value) {
+
+      ensureTranscriptSidsIsMutable();
+      transcriptSids_.addLong(value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional - 'any of' if provided.
+     * </pre>
+     *
+     * <code>repeated int64 transcript_sids = 3 [json_name = "transcriptSids"];</code>
+     * @param values The transcriptSids to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllTranscriptSids(
+        java.lang.Iterable<? extends java.lang.Long> values) {
+      ensureTranscriptSidsIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, transcriptSids_);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional - 'any of' if provided.
+     * </pre>
+     *
+     * <code>repeated int64 transcript_sids = 3 [json_name = "transcriptSids"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTranscriptSids() {
+      transcriptSids_ = emptyLongList();
+      bitField0_ = (bitField0_ & ~0x00000002);
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.LazyStringArrayList agentUserIds_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    private void ensureAgentUserIdsIsMutable() {
+      if (!agentUserIds_.isModifiable()) {
+        agentUserIds_ = new com.google.protobuf.LazyStringArrayList(agentUserIds_);
+      }
+      bitField0_ |= 0x00000004;
+    }
+    /**
+     * <pre>
+     * Optional - 'any of' if provided.
+     * </pre>
+     *
+     * <code>repeated string agent_user_ids = 4 [json_name = "agentUserIds"];</code>
+     * @return A list containing the agentUserIds.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getAgentUserIdsList() {
+      agentUserIds_.makeImmutable();
+      return agentUserIds_;
+    }
+    /**
+     * <pre>
+     * Optional - 'any of' if provided.
+     * </pre>
+     *
+     * <code>repeated string agent_user_ids = 4 [json_name = "agentUserIds"];</code>
+     * @return The count of agentUserIds.
+     */
+    public int getAgentUserIdsCount() {
+      return agentUserIds_.size();
+    }
+    /**
+     * <pre>
+     * Optional - 'any of' if provided.
+     * </pre>
+     *
+     * <code>repeated string agent_user_ids = 4 [json_name = "agentUserIds"];</code>
+     * @param index The index of the element to return.
+     * @return The agentUserIds at the given index.
+     */
+    public java.lang.String getAgentUserIds(int index) {
+      return agentUserIds_.get(index);
+    }
+    /**
+     * <pre>
+     * Optional - 'any of' if provided.
+     * </pre>
+     *
+     * <code>repeated string agent_user_ids = 4 [json_name = "agentUserIds"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the agentUserIds at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getAgentUserIdsBytes(int index) {
+      return agentUserIds_.getByteString(index);
+    }
+    /**
+     * <pre>
+     * Optional - 'any of' if provided.
+     * </pre>
+     *
+     * <code>repeated string agent_user_ids = 4 [json_name = "agentUserIds"];</code>
+     * @param index The index to set the value at.
+     * @param value The agentUserIds to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAgentUserIds(
+        int index, java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureAgentUserIdsIsMutable();
+      agentUserIds_.set(index, value);
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional - 'any of' if provided.
+     * </pre>
+     *
+     * <code>repeated string agent_user_ids = 4 [json_name = "agentUserIds"];</code>
+     * @param value The agentUserIds to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAgentUserIds(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureAgentUserIdsIsMutable();
+      agentUserIds_.add(value);
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional - 'any of' if provided.
+     * </pre>
+     *
+     * <code>repeated string agent_user_ids = 4 [json_name = "agentUserIds"];</code>
+     * @param values The agentUserIds to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllAgentUserIds(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureAgentUserIdsIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, agentUserIds_);
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional - 'any of' if provided.
+     * </pre>
+     *
+     * <code>repeated string agent_user_ids = 4 [json_name = "agentUserIds"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAgentUserIds() {
+      agentUserIds_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000004);;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional - 'any of' if provided.
+     * </pre>
+     *
+     * <code>repeated string agent_user_ids = 4 [json_name = "agentUserIds"];</code>
+     * @param value The bytes of the agentUserIds to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAgentUserIdsBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      ensureAgentUserIdsIsMutable();
+      agentUserIds_.add(value);
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+
+    private com.tcn.cloud.api.api.commons.TimeFilter createdAt_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.TimeFilter, com.tcn.cloud.api.api.commons.TimeFilter.Builder, com.tcn.cloud.api.api.commons.TimeFilterOrBuilder> createdAtBuilder_;
+    /**
+     * <pre>
+     * Optional.
+     * </pre>
+     *
+     * <code>.api.commons.TimeFilter created_at = 5 [json_name = "createdAt"];</code>
+     * @return Whether the createdAt field is set.
+     */
+    public boolean hasCreatedAt() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <pre>
+     * Optional.
+     * </pre>
+     *
+     * <code>.api.commons.TimeFilter created_at = 5 [json_name = "createdAt"];</code>
+     * @return The createdAt.
+     */
+    public com.tcn.cloud.api.api.commons.TimeFilter getCreatedAt() {
+      if (createdAtBuilder_ == null) {
+        return createdAt_ == null ? com.tcn.cloud.api.api.commons.TimeFilter.getDefaultInstance() : createdAt_;
+      } else {
+        return createdAtBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Optional.
+     * </pre>
+     *
+     * <code>.api.commons.TimeFilter created_at = 5 [json_name = "createdAt"];</code>
+     */
+    public Builder setCreatedAt(com.tcn.cloud.api.api.commons.TimeFilter value) {
+      if (createdAtBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        createdAt_ = value;
+      } else {
+        createdAtBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional.
+     * </pre>
+     *
+     * <code>.api.commons.TimeFilter created_at = 5 [json_name = "createdAt"];</code>
+     */
+    public Builder setCreatedAt(
+        com.tcn.cloud.api.api.commons.TimeFilter.Builder builderForValue) {
+      if (createdAtBuilder_ == null) {
+        createdAt_ = builderForValue.build();
+      } else {
+        createdAtBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional.
+     * </pre>
+     *
+     * <code>.api.commons.TimeFilter created_at = 5 [json_name = "createdAt"];</code>
+     */
+    public Builder mergeCreatedAt(com.tcn.cloud.api.api.commons.TimeFilter value) {
+      if (createdAtBuilder_ == null) {
+        if (((bitField0_ & 0x00000008) != 0) &&
+          createdAt_ != null &&
+          createdAt_ != com.tcn.cloud.api.api.commons.TimeFilter.getDefaultInstance()) {
+          getCreatedAtBuilder().mergeFrom(value);
+        } else {
+          createdAt_ = value;
+        }
+      } else {
+        createdAtBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional.
+     * </pre>
+     *
+     * <code>.api.commons.TimeFilter created_at = 5 [json_name = "createdAt"];</code>
+     */
+    public Builder clearCreatedAt() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      createdAt_ = null;
+      if (createdAtBuilder_ != null) {
+        createdAtBuilder_.dispose();
+        createdAtBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional.
+     * </pre>
+     *
+     * <code>.api.commons.TimeFilter created_at = 5 [json_name = "createdAt"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.TimeFilter.Builder getCreatedAtBuilder() {
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return getCreatedAtFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Optional.
+     * </pre>
+     *
+     * <code>.api.commons.TimeFilter created_at = 5 [json_name = "createdAt"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.TimeFilterOrBuilder getCreatedAtOrBuilder() {
+      if (createdAtBuilder_ != null) {
+        return createdAtBuilder_.getMessageOrBuilder();
+      } else {
+        return createdAt_ == null ?
+            com.tcn.cloud.api.api.commons.TimeFilter.getDefaultInstance() : createdAt_;
+      }
+    }
+    /**
+     * <pre>
+     * Optional.
+     * </pre>
+     *
+     * <code>.api.commons.TimeFilter created_at = 5 [json_name = "createdAt"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.TimeFilter, com.tcn.cloud.api.api.commons.TimeFilter.Builder, com.tcn.cloud.api.api.commons.TimeFilterOrBuilder> 
+        getCreatedAtFieldBuilder() {
+      if (createdAtBuilder_ == null) {
+        createdAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.TimeFilter, com.tcn.cloud.api.api.commons.TimeFilter.Builder, com.tcn.cloud.api.api.commons.TimeFilterOrBuilder>(
+                getCreatedAt(),
+                getParentForChildren(),
+                isClean());
+        createdAt_ = null;
+      }
+      return createdAtBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

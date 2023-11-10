@@ -192,6 +192,14 @@ public enum Permission
   PERMISSION_SUBSCRIPTION_MANAGEMENT(140),
   /**
    * <pre>
+   * Enables copying resources from one organization to another.  eg. Data Dip templates.
+   * </pre>
+   *
+   * <code>PERMISSION_COPY_TO_ORGANIZATION = 170 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_COPY_TO_ORGANIZATION(170),
+  /**
+   * <pre>
    * Enables the customer support tools.
    * </pre>
    *
@@ -238,6 +246,22 @@ public enum Permission
    * <code>PERMISSION_TCN_BILLING_ADMIN = 241;</code>
    */
   PERMISSION_TCN_BILLING_ADMIN(241),
+  /**
+   * <pre>
+   * Enables admin access to insights (TCN standard insights).
+   * </pre>
+   *
+   * <code>PERMISSION_SUPPORT_TCN_INSIGHTS_ADMIN = 250;</code>
+   */
+  PERMISSION_SUPPORT_TCN_INSIGHTS_ADMIN(250),
+  /**
+   * <pre>
+   * Enables admin access to dashboards (TCN standard dashboards).
+   * </pre>
+   *
+   * <code>PERMISSION_SUPPORT_TCN_DASHBOARDS_ADMIN = 251;</code>
+   */
+  PERMISSION_SUPPORT_TCN_DASHBOARDS_ADMIN(251),
   /**
    * <pre>
    * Enables access to agent.
@@ -290,6 +314,22 @@ public enum Permission
    * <code>PERMISSION_VOICEMAIL_DOWNLOAD = 1401 [(.annotations.perms.options) = { ... }</code>
    */
   PERMISSION_VOICEMAIL_DOWNLOAD(1401),
+  /**
+   * <pre>
+   * Enables agents to view manual approve tasks
+   * </pre>
+   *
+   * <code>PERMISSION_MANUAL_APPROVE = 341 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_MANUAL_APPROVE(341),
+  /**
+   * <pre>
+   * Enables Agents to view plugins.
+   * </pre>
+   *
+   * <code>PERMISSION_AGENT_PLUGINS_VIEW = 342 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_AGENT_PLUGINS_VIEW(342),
   /**
    * <pre>
    * Enables Agents to view portals.
@@ -389,6 +429,7 @@ public enum Permission
   /**
    * <pre>
    * Enables writes for common library insights.
+   * deprecated
    * </pre>
    *
    * <code>PERMISSION_INSIGHTS_COMMON_LIBRARY_MANAGE = 603 [(.annotations.perms.options) = { ... }</code>
@@ -397,6 +438,7 @@ public enum Permission
   /**
    * <pre>
    * Enables access to insights.
+   * deprecated
    * </pre>
    *
    * <code>PERMISSION_INSIGHTS_MANAGE = 604 [(.annotations.perms.options) = { ... }</code>
@@ -404,12 +446,63 @@ public enum Permission
   PERMISSION_INSIGHTS_MANAGE(604),
   /**
    * <pre>
-   * Enables access to room 303 chat.
+   * allows access to read insights
+   * </pre>
+   *
+   * <code>PERMISSION_INSIGHTS_INSIGHT_VIEW = 605 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_INSIGHTS_INSIGHT_VIEW(605),
+  /**
+   * <pre>
+   * allows access to edit insights
+   * </pre>
+   *
+   * <code>PERMISSION_INSIGHTS_INSIGHT_EDIT = 606 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_INSIGHTS_INSIGHT_EDIT(606),
+  /**
+   * <pre>
+   * allows user to read insights for dashboards
+   * </pre>
+   *
+   * <code>PERMISSION_INSIGHTS_DASHBOARD_VIEW = 607 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_INSIGHTS_DASHBOARD_VIEW(607),
+  /**
+   * <pre>
+   * allows user to edit insights for dashboards
+   * </pre>
+   *
+   * <code>PERMISSION_INSIGHTS_DASHBOARD_EDIT = 608 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_INSIGHTS_DASHBOARD_EDIT(608),
+  /**
+   * <pre>
+   * Enables access to room 303 chat at a base level
+   * Lowest tier permissions for unconfigured rooms and direct messaging
    * </pre>
    *
    * <code>PERMISSION_ROOM303 = 700 [(.annotations.perms.options) = { ... }</code>
    */
   PERMISSION_ROOM303(700),
+  /**
+   * <pre>
+   * Provides middle level permissions for unconfigured
+   * rooms and direct messaging in room303
+   * </pre>
+   *
+   * <code>PERMISSION_ROOM303_MEMBER = 701 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_ROOM303_MEMBER(701),
+  /**
+   * <pre>
+   * Provides top level permissions rooms and direct
+   * messaging for all users in room303
+   * </pre>
+   *
+   * <code>PERMISSION_ROOM303_SUPERVISOR = 702 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_ROOM303_SUPERVISOR(702),
   /**
    * <pre>
    * Enables access to the call scripts builder app.
@@ -496,6 +589,14 @@ public enum Permission
   PERMISSION_WFM(1500),
   /**
    * <pre>
+   * Enables access to the Agent Portal feature.
+   * </pre>
+   *
+   * <code>PERMISSION_AGENT_PORTAL = 1501 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_AGENT_PORTAL(1501),
+  /**
+   * <pre>
    * Enables access to Scorecards app.
    * </pre>
    *
@@ -526,6 +627,14 @@ public enum Permission
    * <code>PERMISSION_SCORECARDS_FLAG_EVAL = 1603 [(.annotations.perms.options) = { ... }</code>
    */
   PERMISSION_SCORECARDS_FLAG_EVAL(1603),
+  /**
+   * <pre>
+   * Enables access to manage learning opportunities.
+   * </pre>
+   *
+   * <code>PERMISSION_SCORECARDS_LEARNING_OPPORTUNITIES = 1604 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_SCORECARDS_LEARNING_OPPORTUNITIES(1604),
   /**
    * <pre>
    * Enables access to Dev Tools app.
@@ -592,7 +701,24 @@ public enum Permission
   PERMISSION_PBX_MANAGER_EDIT(4101),
   /**
    * <pre>
-   * No view permissions required for Newsroom home
+   * Enables access to the PBX Softphone Widget in the GlobalTopBar.
+   * </pre>
+   *
+   * <code>PERMISSION_PBX_SOFTPHONE_WIDGET = 4110 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_PBX_SOFTPHONE_WIDGET(4110),
+  /**
+   * <pre>
+   * Enables access to viewing the main newsroom app and showing the popup
+   * This permission will be give to orgs automatically, but can be removed
+   * manually to opt out of newsroom notifications
+   * </pre>
+   *
+   * <code>PERMISSION_NEWSROOM_VIEW = 4199 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_NEWSROOM_VIEW(4199),
+  /**
+   * <pre>
    * Enables access to create, update, and archive in Newsroom manager
    * </pre>
    *
@@ -604,7 +730,7 @@ public enum Permission
    * Enables access to publish in Newsroom manager
    * </pre>
    *
-   * <code>PERMISSION_NEWSROOM_PUBLISH = 4201 [(.annotations.perms.options) = { ... }</code>
+   * <code>PERMISSION_NEWSROOM_PUBLISH = 4201;</code>
    */
   PERMISSION_NEWSROOM_PUBLISH(4201),
   UNRECOGNIZED(-1),
@@ -790,6 +916,14 @@ public enum Permission
   public static final int PERMISSION_SUBSCRIPTION_MANAGEMENT_VALUE = 140;
   /**
    * <pre>
+   * Enables copying resources from one organization to another.  eg. Data Dip templates.
+   * </pre>
+   *
+   * <code>PERMISSION_COPY_TO_ORGANIZATION = 170 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_COPY_TO_ORGANIZATION_VALUE = 170;
+  /**
+   * <pre>
    * Enables the customer support tools.
    * </pre>
    *
@@ -836,6 +970,22 @@ public enum Permission
    * <code>PERMISSION_TCN_BILLING_ADMIN = 241;</code>
    */
   public static final int PERMISSION_TCN_BILLING_ADMIN_VALUE = 241;
+  /**
+   * <pre>
+   * Enables admin access to insights (TCN standard insights).
+   * </pre>
+   *
+   * <code>PERMISSION_SUPPORT_TCN_INSIGHTS_ADMIN = 250;</code>
+   */
+  public static final int PERMISSION_SUPPORT_TCN_INSIGHTS_ADMIN_VALUE = 250;
+  /**
+   * <pre>
+   * Enables admin access to dashboards (TCN standard dashboards).
+   * </pre>
+   *
+   * <code>PERMISSION_SUPPORT_TCN_DASHBOARDS_ADMIN = 251;</code>
+   */
+  public static final int PERMISSION_SUPPORT_TCN_DASHBOARDS_ADMIN_VALUE = 251;
   /**
    * <pre>
    * Enables access to agent.
@@ -888,6 +1038,22 @@ public enum Permission
    * <code>PERMISSION_VOICEMAIL_DOWNLOAD = 1401 [(.annotations.perms.options) = { ... }</code>
    */
   public static final int PERMISSION_VOICEMAIL_DOWNLOAD_VALUE = 1401;
+  /**
+   * <pre>
+   * Enables agents to view manual approve tasks
+   * </pre>
+   *
+   * <code>PERMISSION_MANUAL_APPROVE = 341 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_MANUAL_APPROVE_VALUE = 341;
+  /**
+   * <pre>
+   * Enables Agents to view plugins.
+   * </pre>
+   *
+   * <code>PERMISSION_AGENT_PLUGINS_VIEW = 342 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_AGENT_PLUGINS_VIEW_VALUE = 342;
   /**
    * <pre>
    * Enables Agents to view portals.
@@ -987,6 +1153,7 @@ public enum Permission
   /**
    * <pre>
    * Enables writes for common library insights.
+   * deprecated
    * </pre>
    *
    * <code>PERMISSION_INSIGHTS_COMMON_LIBRARY_MANAGE = 603 [(.annotations.perms.options) = { ... }</code>
@@ -995,6 +1162,7 @@ public enum Permission
   /**
    * <pre>
    * Enables access to insights.
+   * deprecated
    * </pre>
    *
    * <code>PERMISSION_INSIGHTS_MANAGE = 604 [(.annotations.perms.options) = { ... }</code>
@@ -1002,12 +1170,63 @@ public enum Permission
   public static final int PERMISSION_INSIGHTS_MANAGE_VALUE = 604;
   /**
    * <pre>
-   * Enables access to room 303 chat.
+   * allows access to read insights
+   * </pre>
+   *
+   * <code>PERMISSION_INSIGHTS_INSIGHT_VIEW = 605 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_INSIGHTS_INSIGHT_VIEW_VALUE = 605;
+  /**
+   * <pre>
+   * allows access to edit insights
+   * </pre>
+   *
+   * <code>PERMISSION_INSIGHTS_INSIGHT_EDIT = 606 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_INSIGHTS_INSIGHT_EDIT_VALUE = 606;
+  /**
+   * <pre>
+   * allows user to read insights for dashboards
+   * </pre>
+   *
+   * <code>PERMISSION_INSIGHTS_DASHBOARD_VIEW = 607 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_INSIGHTS_DASHBOARD_VIEW_VALUE = 607;
+  /**
+   * <pre>
+   * allows user to edit insights for dashboards
+   * </pre>
+   *
+   * <code>PERMISSION_INSIGHTS_DASHBOARD_EDIT = 608 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_INSIGHTS_DASHBOARD_EDIT_VALUE = 608;
+  /**
+   * <pre>
+   * Enables access to room 303 chat at a base level
+   * Lowest tier permissions for unconfigured rooms and direct messaging
    * </pre>
    *
    * <code>PERMISSION_ROOM303 = 700 [(.annotations.perms.options) = { ... }</code>
    */
   public static final int PERMISSION_ROOM303_VALUE = 700;
+  /**
+   * <pre>
+   * Provides middle level permissions for unconfigured
+   * rooms and direct messaging in room303
+   * </pre>
+   *
+   * <code>PERMISSION_ROOM303_MEMBER = 701 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_ROOM303_MEMBER_VALUE = 701;
+  /**
+   * <pre>
+   * Provides top level permissions rooms and direct
+   * messaging for all users in room303
+   * </pre>
+   *
+   * <code>PERMISSION_ROOM303_SUPERVISOR = 702 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_ROOM303_SUPERVISOR_VALUE = 702;
   /**
    * <pre>
    * Enables access to the call scripts builder app.
@@ -1094,6 +1313,14 @@ public enum Permission
   public static final int PERMISSION_WFM_VALUE = 1500;
   /**
    * <pre>
+   * Enables access to the Agent Portal feature.
+   * </pre>
+   *
+   * <code>PERMISSION_AGENT_PORTAL = 1501 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_AGENT_PORTAL_VALUE = 1501;
+  /**
+   * <pre>
    * Enables access to Scorecards app.
    * </pre>
    *
@@ -1124,6 +1351,14 @@ public enum Permission
    * <code>PERMISSION_SCORECARDS_FLAG_EVAL = 1603 [(.annotations.perms.options) = { ... }</code>
    */
   public static final int PERMISSION_SCORECARDS_FLAG_EVAL_VALUE = 1603;
+  /**
+   * <pre>
+   * Enables access to manage learning opportunities.
+   * </pre>
+   *
+   * <code>PERMISSION_SCORECARDS_LEARNING_OPPORTUNITIES = 1604 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_SCORECARDS_LEARNING_OPPORTUNITIES_VALUE = 1604;
   /**
    * <pre>
    * Enables access to Dev Tools app.
@@ -1190,7 +1425,24 @@ public enum Permission
   public static final int PERMISSION_PBX_MANAGER_EDIT_VALUE = 4101;
   /**
    * <pre>
-   * No view permissions required for Newsroom home
+   * Enables access to the PBX Softphone Widget in the GlobalTopBar.
+   * </pre>
+   *
+   * <code>PERMISSION_PBX_SOFTPHONE_WIDGET = 4110 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_PBX_SOFTPHONE_WIDGET_VALUE = 4110;
+  /**
+   * <pre>
+   * Enables access to viewing the main newsroom app and showing the popup
+   * This permission will be give to orgs automatically, but can be removed
+   * manually to opt out of newsroom notifications
+   * </pre>
+   *
+   * <code>PERMISSION_NEWSROOM_VIEW = 4199 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_NEWSROOM_VIEW_VALUE = 4199;
+  /**
+   * <pre>
    * Enables access to create, update, and archive in Newsroom manager
    * </pre>
    *
@@ -1202,7 +1454,7 @@ public enum Permission
    * Enables access to publish in Newsroom manager
    * </pre>
    *
-   * <code>PERMISSION_NEWSROOM_PUBLISH = 4201 [(.annotations.perms.options) = { ... }</code>
+   * <code>PERMISSION_NEWSROOM_PUBLISH = 4201;</code>
    */
   public static final int PERMISSION_NEWSROOM_PUBLISH_VALUE = 4201;
 
@@ -1253,12 +1505,15 @@ public enum Permission
       case 1700: return PERMISSION_SOUNDBOARD_VIEW;
       case 1701: return PERMISSION_SOUNDBOARD_EDIT;
       case 140: return PERMISSION_SUBSCRIPTION_MANAGEMENT;
+      case 170: return PERMISSION_COPY_TO_ORGANIZATION;
       case 200: return PERMISSION_CUSTOMER_SUPPORT;
       case 210: return PERMISSION_IMITATION;
       case 220: return PERMISSION_BILLING_EDIT;
       case 230: return PERMISSION_TCN_ADMIN_SETTINGS;
       case 240: return PERMISSION_TCN_BILLING;
       case 241: return PERMISSION_TCN_BILLING_ADMIN;
+      case 250: return PERMISSION_SUPPORT_TCN_INSIGHTS_ADMIN;
+      case 251: return PERMISSION_SUPPORT_TCN_DASHBOARDS_ADMIN;
       case 300: return PERMISSION_AGENT;
       case 310: return PERMISSION_ACCEPT_QUEUED_CALLS;
       case 320: return PERMISSION_VIEW_CAMPAIGN_COMPLETION;
@@ -1266,6 +1521,8 @@ public enum Permission
       case 330: return PERMISSION_AGENT_COMPLIANCE_SCRUBLIST_OPTIONS;
       case 1400: return PERMISSION_EXTENSION_EDIT;
       case 1401: return PERMISSION_VOICEMAIL_DOWNLOAD;
+      case 341: return PERMISSION_MANUAL_APPROVE;
+      case 342: return PERMISSION_AGENT_PLUGINS_VIEW;
       case 340: return PERMISSION_AGENT_PORTALS_VIEW;
       case 500: return PERMISSION_VOICE_ANALYTICS;
       case 501: return PERMISSION_VOICE_ANALYTICS_FLAG;
@@ -1280,7 +1537,13 @@ public enum Permission
       case 602: return PERMISSION_DASHBOARDS_EDIT;
       case 603: return PERMISSION_INSIGHTS_COMMON_LIBRARY_MANAGE;
       case 604: return PERMISSION_INSIGHTS_MANAGE;
+      case 605: return PERMISSION_INSIGHTS_INSIGHT_VIEW;
+      case 606: return PERMISSION_INSIGHTS_INSIGHT_EDIT;
+      case 607: return PERMISSION_INSIGHTS_DASHBOARD_VIEW;
+      case 608: return PERMISSION_INSIGHTS_DASHBOARD_EDIT;
       case 700: return PERMISSION_ROOM303;
+      case 701: return PERMISSION_ROOM303_MEMBER;
+      case 702: return PERMISSION_ROOM303_SUPERVISOR;
       case 800: return PERMISSION_AGENT_CALL_SCRIPTS;
       case 900: return PERMISSION_COMPLIANCE;
       case 910: return PERMISSION_COMPLIANCE_CONSENT;
@@ -1292,10 +1555,12 @@ public enum Permission
       case 1301: return PERMISSION_INTEGRATIONS_PAYMENT;
       case 1302: return PERMISSION_INTEGRATIONS_JOURNEY;
       case 1500: return PERMISSION_WFM;
+      case 1501: return PERMISSION_AGENT_PORTAL;
       case 1600: return PERMISSION_SCORECARDS;
       case 1601: return PERMISSION_SCORECARDS_MANAGE;
       case 1602: return PERMISSION_SCORECARDS_EVALUATE;
       case 1603: return PERMISSION_SCORECARDS_FLAG_EVAL;
+      case 1604: return PERMISSION_SCORECARDS_LEARNING_OPPORTUNITIES;
       case 1800: return PERMISSION_DEV_TOOLS;
       case 2000: return PERMISSION_DELIVERY_NOTIFICATIONS_VIEW;
       case 2001: return PERMISSION_DELIVERY_NOTIFICATIONS_EDIT;
@@ -1304,6 +1569,8 @@ public enum Permission
       case 4000: return PERMISSION_WORKFLOWS;
       case 4100: return PERMISSION_PBX_MANAGER_VIEW;
       case 4101: return PERMISSION_PBX_MANAGER_EDIT;
+      case 4110: return PERMISSION_PBX_SOFTPHONE_WIDGET;
+      case 4199: return PERMISSION_NEWSROOM_VIEW;
       case 4200: return PERMISSION_NEWSROOM_EDIT;
       case 4201: return PERMISSION_NEWSROOM_PUBLISH;
       default: return null;

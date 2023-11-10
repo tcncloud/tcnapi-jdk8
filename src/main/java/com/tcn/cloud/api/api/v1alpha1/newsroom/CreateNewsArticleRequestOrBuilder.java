@@ -46,4 +46,44 @@ public interface CreateNewsArticleRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getContentBytes();
+
+  /**
+   * <pre>
+   * article author
+   * </pre>
+   *
+   * <code>string author = 3 [json_name = "author"];</code>
+   * @return The author.
+   */
+  java.lang.String getAuthor();
+  /**
+   * <pre>
+   * article author
+   * </pre>
+   *
+   * <code>string author = 3 [json_name = "author"];</code>
+   * @return The bytes for author.
+   */
+  com.google.protobuf.ByteString
+      getAuthorBytes();
+
+  /**
+   * <pre>
+   * image reference id
+   * </pre>
+   *
+   * <code>string image_reference_id = 4 [json_name = "imageReferenceId"];</code>
+   * @return The imageReferenceId.
+   */
+  java.lang.String getImageReferenceId();
+  /**
+   * <pre>
+   * image reference id
+   * </pre>
+   *
+   * <code>string image_reference_id = 4 [json_name = "imageReferenceId"];</code>
+   * @return The bytes for imageReferenceId.
+   */
+  com.google.protobuf.ByteString
+      getImageReferenceIdBytes();
 }

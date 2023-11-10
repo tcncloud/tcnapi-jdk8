@@ -109,13 +109,46 @@ public interface PluginInstanceOrBuilder extends
   com.google.protobuf.TimestampOrBuilder getLastEditedOrBuilder();
 
   /**
-   * <code>.api.commons.integrations.RequestMethod method_id = 12 [json_name = "methodId"];</code>
+   * <code>.api.commons.integrations.RequestMethod method_id = 12 [json_name = "methodId", deprecated = true];</code>
+   * @deprecated api.v1alpha1.integrations.PluginInstance.method_id is deprecated.
+   *     See api/v1alpha1/integrations/service.proto;l=1207
    * @return The enum numeric value on the wire for methodId.
    */
-  int getMethodIdValue();
+  @java.lang.Deprecated int getMethodIdValue();
   /**
-   * <code>.api.commons.integrations.RequestMethod method_id = 12 [json_name = "methodId"];</code>
+   * <code>.api.commons.integrations.RequestMethod method_id = 12 [json_name = "methodId", deprecated = true];</code>
+   * @deprecated api.v1alpha1.integrations.PluginInstance.method_id is deprecated.
+   *     See api/v1alpha1/integrations/service.proto;l=1207
    * @return The methodId.
    */
-  com.tcn.cloud.api.api.commons.integrations.RequestMethod getMethodId();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.integrations.RequestMethod getMethodId();
+
+  /**
+   * <code>repeated .api.commons.integrations.RequestMethod display_methods = 13 [json_name = "displayMethods"];</code>
+   * @return A list containing the displayMethods.
+   */
+  java.util.List<com.tcn.cloud.api.api.commons.integrations.RequestMethod> getDisplayMethodsList();
+  /**
+   * <code>repeated .api.commons.integrations.RequestMethod display_methods = 13 [json_name = "displayMethods"];</code>
+   * @return The count of displayMethods.
+   */
+  int getDisplayMethodsCount();
+  /**
+   * <code>repeated .api.commons.integrations.RequestMethod display_methods = 13 [json_name = "displayMethods"];</code>
+   * @param index The index of the element to return.
+   * @return The displayMethods at the given index.
+   */
+  com.tcn.cloud.api.api.commons.integrations.RequestMethod getDisplayMethods(int index);
+  /**
+   * <code>repeated .api.commons.integrations.RequestMethod display_methods = 13 [json_name = "displayMethods"];</code>
+   * @return A list containing the enum numeric values on the wire for displayMethods.
+   */
+  java.util.List<java.lang.Integer>
+  getDisplayMethodsValueList();
+  /**
+   * <code>repeated .api.commons.integrations.RequestMethod display_methods = 13 [json_name = "displayMethods"];</code>
+   * @param index The index of the value to return.
+   * @return The enum numeric value on the wire of displayMethods at the given index.
+   */
+  int getDisplayMethodsValue(int index);
 }

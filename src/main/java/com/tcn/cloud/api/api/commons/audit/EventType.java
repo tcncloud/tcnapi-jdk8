@@ -412,6 +412,38 @@ public enum EventType
   OMNICHANNEL_PAYMENT_LINK_SENT(357),
   /**
    * <pre>
+   *accepted manual approve task
+   * </pre>
+   *
+   * <code>OMNICHANNEL_MANUAL_APPROVE_TASK_ACCEPTED = 358;</code>
+   */
+  OMNICHANNEL_MANUAL_APPROVE_TASK_ACCEPTED(358),
+  /**
+   * <pre>
+   *rejected manual approve task
+   * </pre>
+   *
+   * <code>OMNICHANNEL_MANUAL_APPROVE_TASK_REJECTED = 359;</code>
+   */
+  OMNICHANNEL_MANUAL_APPROVE_TASK_REJECTED(359),
+  /**
+   * <pre>
+   *timeout of manual approve task
+   * </pre>
+   *
+   * <code>OMNICHANNEL_MANUAL_APPROVE_TASK_TIMEOUT = 360;</code>
+   */
+  OMNICHANNEL_MANUAL_APPROVE_TASK_TIMEOUT(360),
+  /**
+   * <pre>
+   *requeue of manual approve task
+   * </pre>
+   *
+   * <code>OMNICHANNEL_MANUAL_APPROVE_TASK_REQUEUE = 361;</code>
+   */
+  OMNICHANNEL_MANUAL_APPROVE_TASK_REQUEUE(361),
+  /**
+   * <pre>
    * ASM
    * agent logs into asm
    * </pre>
@@ -702,6 +734,34 @@ public enum EventType
    */
   TICKET_CLOSE_EVENT(602),
   /**
+   * <code>TICKET_ACTION_CREATE_EVENT = 603;</code>
+   */
+  TICKET_ACTION_CREATE_EVENT(603),
+  /**
+   * <code>TICKET_ACTION_EDIT_EVENT = 604;</code>
+   */
+  TICKET_ACTION_EDIT_EVENT(604),
+  /**
+   * <code>TICKET_ACTION_STATE_CHANGE_EVENT = 605;</code>
+   */
+  TICKET_ACTION_STATE_CHANGE_EVENT(605),
+  /**
+   * <code>TICKET_PARTICIPANT_EVENT = 606;</code>
+   */
+  TICKET_PARTICIPANT_EVENT(606),
+  /**
+   * <pre>
+   * Change For Create/Reply Comments
+   * </pre>
+   *
+   * <code>TICKET_CREATE_COMMENT_EVENT = 607;</code>
+   */
+  TICKET_CREATE_COMMENT_EVENT(607),
+  /**
+   * <code>TICKET_REPLY_COMMENT_EVENT = 608;</code>
+   */
+  TICKET_REPLY_COMMENT_EVENT(608),
+  /**
    * <pre>
    * Compliance Events
    * rnd query event
@@ -727,6 +787,14 @@ public enum EventType
    * <code>AGENT_TRAINING_CREATE_LEARNING_OPPORTUNITY_EVENT = 800;</code>
    */
   AGENT_TRAINING_CREATE_LEARNING_OPPORTUNITY_EVENT(800),
+  /**
+   * <pre>
+   * LMS Events
+   * </pre>
+   *
+   * <code>LMS_PIPELINE_FAILURE_EVENT = 900;</code>
+   */
+  LMS_PIPELINE_FAILURE_EVENT(900),
   UNRECOGNIZED(-1),
   ;
 
@@ -1120,6 +1188,38 @@ public enum EventType
   public static final int OMNICHANNEL_PAYMENT_LINK_SENT_VALUE = 357;
   /**
    * <pre>
+   *accepted manual approve task
+   * </pre>
+   *
+   * <code>OMNICHANNEL_MANUAL_APPROVE_TASK_ACCEPTED = 358;</code>
+   */
+  public static final int OMNICHANNEL_MANUAL_APPROVE_TASK_ACCEPTED_VALUE = 358;
+  /**
+   * <pre>
+   *rejected manual approve task
+   * </pre>
+   *
+   * <code>OMNICHANNEL_MANUAL_APPROVE_TASK_REJECTED = 359;</code>
+   */
+  public static final int OMNICHANNEL_MANUAL_APPROVE_TASK_REJECTED_VALUE = 359;
+  /**
+   * <pre>
+   *timeout of manual approve task
+   * </pre>
+   *
+   * <code>OMNICHANNEL_MANUAL_APPROVE_TASK_TIMEOUT = 360;</code>
+   */
+  public static final int OMNICHANNEL_MANUAL_APPROVE_TASK_TIMEOUT_VALUE = 360;
+  /**
+   * <pre>
+   *requeue of manual approve task
+   * </pre>
+   *
+   * <code>OMNICHANNEL_MANUAL_APPROVE_TASK_REQUEUE = 361;</code>
+   */
+  public static final int OMNICHANNEL_MANUAL_APPROVE_TASK_REQUEUE_VALUE = 361;
+  /**
+   * <pre>
    * ASM
    * agent logs into asm
    * </pre>
@@ -1410,6 +1510,34 @@ public enum EventType
    */
   public static final int TICKET_CLOSE_EVENT_VALUE = 602;
   /**
+   * <code>TICKET_ACTION_CREATE_EVENT = 603;</code>
+   */
+  public static final int TICKET_ACTION_CREATE_EVENT_VALUE = 603;
+  /**
+   * <code>TICKET_ACTION_EDIT_EVENT = 604;</code>
+   */
+  public static final int TICKET_ACTION_EDIT_EVENT_VALUE = 604;
+  /**
+   * <code>TICKET_ACTION_STATE_CHANGE_EVENT = 605;</code>
+   */
+  public static final int TICKET_ACTION_STATE_CHANGE_EVENT_VALUE = 605;
+  /**
+   * <code>TICKET_PARTICIPANT_EVENT = 606;</code>
+   */
+  public static final int TICKET_PARTICIPANT_EVENT_VALUE = 606;
+  /**
+   * <pre>
+   * Change For Create/Reply Comments
+   * </pre>
+   *
+   * <code>TICKET_CREATE_COMMENT_EVENT = 607;</code>
+   */
+  public static final int TICKET_CREATE_COMMENT_EVENT_VALUE = 607;
+  /**
+   * <code>TICKET_REPLY_COMMENT_EVENT = 608;</code>
+   */
+  public static final int TICKET_REPLY_COMMENT_EVENT_VALUE = 608;
+  /**
    * <pre>
    * Compliance Events
    * rnd query event
@@ -1435,6 +1563,14 @@ public enum EventType
    * <code>AGENT_TRAINING_CREATE_LEARNING_OPPORTUNITY_EVENT = 800;</code>
    */
   public static final int AGENT_TRAINING_CREATE_LEARNING_OPPORTUNITY_EVENT_VALUE = 800;
+  /**
+   * <pre>
+   * LMS Events
+   * </pre>
+   *
+   * <code>LMS_PIPELINE_FAILURE_EVENT = 900;</code>
+   */
+  public static final int LMS_PIPELINE_FAILURE_EVENT_VALUE = 900;
 
 
   public final int getNumber() {
@@ -1515,6 +1651,10 @@ public enum EventType
       case 355: return OMNICHANNEL_CUSTOMER_MESSAGE_UNITS;
       case 356: return OMNICHANNEL_SYSTEM_MESSAGE_UNITS;
       case 357: return OMNICHANNEL_PAYMENT_LINK_SENT;
+      case 358: return OMNICHANNEL_MANUAL_APPROVE_TASK_ACCEPTED;
+      case 359: return OMNICHANNEL_MANUAL_APPROVE_TASK_REJECTED;
+      case 360: return OMNICHANNEL_MANUAL_APPROVE_TASK_TIMEOUT;
+      case 361: return OMNICHANNEL_MANUAL_APPROVE_TASK_REQUEUE;
       case 400: return ASM_AGENT_LOGIN;
       case 401: return ASM_OPEN_VOICE;
       case 402: return ASM_OPEN_OMNI_AGENT;
@@ -1551,9 +1691,16 @@ public enum EventType
       case 600: return TICKET_CREATE_EVENT;
       case 601: return TICKET_EDIT_EVENT;
       case 602: return TICKET_CLOSE_EVENT;
+      case 603: return TICKET_ACTION_CREATE_EVENT;
+      case 604: return TICKET_ACTION_EDIT_EVENT;
+      case 605: return TICKET_ACTION_STATE_CHANGE_EVENT;
+      case 606: return TICKET_PARTICIPANT_EVENT;
+      case 607: return TICKET_CREATE_COMMENT_EVENT;
+      case 608: return TICKET_REPLY_COMMENT_EVENT;
       case 700: return COMPLIANCE_RND_QUERY_EVENT;
       case 701: return COMPLIANCE_RND_QUERY_CACHED_EVENT;
       case 800: return AGENT_TRAINING_CREATE_LEARNING_OPPORTUNITY_EVENT;
+      case 900: return LMS_PIPELINE_FAILURE_EVENT;
       default: return null;
     }
   }

@@ -100,6 +100,10 @@ public enum RecordType
    * <code>RECORD_TYPE_STRUCT_VALUE = 23;</code>
    */
   RECORD_TYPE_STRUCT_VALUE(23),
+  /**
+   * <code>RECORD_TYPE_EHR_DETAILS = 24;</code>
+   */
+  RECORD_TYPE_EHR_DETAILS(24),
   UNRECOGNIZED(-1),
   ;
 
@@ -195,6 +199,10 @@ public enum RecordType
    * <code>RECORD_TYPE_STRUCT_VALUE = 23;</code>
    */
   public static final int RECORD_TYPE_STRUCT_VALUE_VALUE = 23;
+  /**
+   * <code>RECORD_TYPE_EHR_DETAILS = 24;</code>
+   */
+  public static final int RECORD_TYPE_EHR_DETAILS_VALUE = 24;
 
 
   public final int getNumber() {
@@ -244,6 +252,7 @@ public enum RecordType
       case 21: return RECORD_TYPE_FULL_NAME;
       case 22: return RECORD_TYPE_ACCOUNT_NUMBER;
       case 23: return RECORD_TYPE_STRUCT_VALUE;
+      case 24: return RECORD_TYPE_EHR_DETAILS;
       default: return null;
     }
   }

@@ -266,6 +266,37 @@ public final class WFMGrpc {
     return getGetForecastingParametersMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.GetClientHistoryCacheInfoReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.GetClientHistoryCacheInfoRes> getGetClientHistoryCacheInfoMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetClientHistoryCacheInfo",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.GetClientHistoryCacheInfoReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.GetClientHistoryCacheInfoRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.GetClientHistoryCacheInfoReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.GetClientHistoryCacheInfoRes> getGetClientHistoryCacheInfoMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.GetClientHistoryCacheInfoReq, com.tcn.cloud.api.api.v1alpha1.wfm.GetClientHistoryCacheInfoRes> getGetClientHistoryCacheInfoMethod;
+    if ((getGetClientHistoryCacheInfoMethod = WFMGrpc.getGetClientHistoryCacheInfoMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getGetClientHistoryCacheInfoMethod = WFMGrpc.getGetClientHistoryCacheInfoMethod) == null) {
+          WFMGrpc.getGetClientHistoryCacheInfoMethod = getGetClientHistoryCacheInfoMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.GetClientHistoryCacheInfoReq, com.tcn.cloud.api.api.v1alpha1.wfm.GetClientHistoryCacheInfoRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetClientHistoryCacheInfo"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.GetClientHistoryCacheInfoReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.GetClientHistoryCacheInfoRes.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("GetClientHistoryCacheInfo"))
+              .build();
+        }
+      }
+    }
+    return getGetClientHistoryCacheInfoMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataReq,
       com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataRes> getListHistoricalDataMethod;
 
@@ -421,6 +452,37 @@ public final class WFMGrpc {
     return getBuildCallProfileTemplateForSkillProfileMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateRes> getBuildCallProfileTemplateMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "BuildCallProfileTemplate",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateRes> getBuildCallProfileTemplateMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateReq, com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateRes> getBuildCallProfileTemplateMethod;
+    if ((getBuildCallProfileTemplateMethod = WFMGrpc.getBuildCallProfileTemplateMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getBuildCallProfileTemplateMethod = WFMGrpc.getBuildCallProfileTemplateMethod) == null) {
+          WFMGrpc.getBuildCallProfileTemplateMethod = getBuildCallProfileTemplateMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateReq, com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "BuildCallProfileTemplate"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateRes.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("BuildCallProfileTemplate"))
+              .build();
+        }
+      }
+    }
+    return getBuildCallProfileTemplateMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateInactiveSkillProfileMappingReq,
       com.tcn.cloud.api.api.v1alpha1.wfm.CreateInactiveSkillProfileMappingRes> getCreateInactiveSkillProfileMappingMethod;
 
@@ -512,6 +574,130 @@ public final class WFMGrpc {
       }
     }
     return getDisconnectInactiveSkillProfileMappingMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProfileGroupReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProfileGroupRes> getCreateSkillProfileGroupMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateSkillProfileGroup",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProfileGroupReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProfileGroupRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProfileGroupReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProfileGroupRes> getCreateSkillProfileGroupMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProfileGroupReq, com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProfileGroupRes> getCreateSkillProfileGroupMethod;
+    if ((getCreateSkillProfileGroupMethod = WFMGrpc.getCreateSkillProfileGroupMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getCreateSkillProfileGroupMethod = WFMGrpc.getCreateSkillProfileGroupMethod) == null) {
+          WFMGrpc.getCreateSkillProfileGroupMethod = getCreateSkillProfileGroupMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProfileGroupReq, com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProfileGroupRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateSkillProfileGroup"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProfileGroupReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProfileGroupRes.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CreateSkillProfileGroup"))
+              .build();
+        }
+      }
+    }
+    return getCreateSkillProfileGroupMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupRes> getUpdateSkillProfileGroupMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateSkillProfileGroup",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupRes> getUpdateSkillProfileGroupMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupReq, com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupRes> getUpdateSkillProfileGroupMethod;
+    if ((getUpdateSkillProfileGroupMethod = WFMGrpc.getUpdateSkillProfileGroupMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getUpdateSkillProfileGroupMethod = WFMGrpc.getUpdateSkillProfileGroupMethod) == null) {
+          WFMGrpc.getUpdateSkillProfileGroupMethod = getUpdateSkillProfileGroupMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupReq, com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateSkillProfileGroup"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupRes.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpdateSkillProfileGroup"))
+              .build();
+        }
+      }
+    }
+    return getUpdateSkillProfileGroupMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfileGroupsReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfileGroupsRes> getListSkillProfileGroupsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListSkillProfileGroups",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfileGroupsReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfileGroupsRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfileGroupsReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfileGroupsRes> getListSkillProfileGroupsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfileGroupsReq, com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfileGroupsRes> getListSkillProfileGroupsMethod;
+    if ((getListSkillProfileGroupsMethod = WFMGrpc.getListSkillProfileGroupsMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getListSkillProfileGroupsMethod = WFMGrpc.getListSkillProfileGroupsMethod) == null) {
+          WFMGrpc.getListSkillProfileGroupsMethod = getListSkillProfileGroupsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfileGroupsReq, com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfileGroupsRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListSkillProfileGroups"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfileGroupsReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfileGroupsRes.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListSkillProfileGroups"))
+              .build();
+        }
+      }
+    }
+    return getListSkillProfileGroupsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupAssociationsReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupAssociationsRes> getUpdateSkillProfileGroupAssociationsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateSkillProfileGroupAssociations",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupAssociationsReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupAssociationsRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupAssociationsReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupAssociationsRes> getUpdateSkillProfileGroupAssociationsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupAssociationsReq, com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupAssociationsRes> getUpdateSkillProfileGroupAssociationsMethod;
+    if ((getUpdateSkillProfileGroupAssociationsMethod = WFMGrpc.getUpdateSkillProfileGroupAssociationsMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getUpdateSkillProfileGroupAssociationsMethod = WFMGrpc.getUpdateSkillProfileGroupAssociationsMethod) == null) {
+          WFMGrpc.getUpdateSkillProfileGroupAssociationsMethod = getUpdateSkillProfileGroupAssociationsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupAssociationsReq, com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupAssociationsRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateSkillProfileGroupAssociations"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupAssociationsReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupAssociationsRes.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpdateSkillProfileGroupAssociations"))
+              .build();
+        }
+      }
+    }
+    return getUpdateSkillProfileGroupAssociationsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteHistoricalDataDeltasReq,
@@ -884,6 +1070,37 @@ public final class WFMGrpc {
       }
     }
     return getListForecastIntervalsForSkillProfileMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval> getListForecastIntervalsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListForecastIntervals",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval> getListForecastIntervalsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsReq, com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval> getListForecastIntervalsMethod;
+    if ((getListForecastIntervalsMethod = WFMGrpc.getListForecastIntervalsMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getListForecastIntervalsMethod = WFMGrpc.getListForecastIntervalsMethod) == null) {
+          WFMGrpc.getListForecastIntervalsMethod = getListForecastIntervalsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsReq, com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListForecastIntervals"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListForecastIntervals"))
+              .build();
+        }
+      }
+    }
+    return getListForecastIntervalsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalReq,
@@ -1444,6 +1661,37 @@ public final class WFMGrpc {
     return getUpdateProgramNodeMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidRes> getListProgramNodesBySidMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListProgramNodesBySid",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidRes> getListProgramNodesBySidMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidReq, com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidRes> getListProgramNodesBySidMethod;
+    if ((getListProgramNodesBySidMethod = WFMGrpc.getListProgramNodesBySidMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getListProgramNodesBySidMethod = WFMGrpc.getListProgramNodesBySidMethod) == null) {
+          WFMGrpc.getListProgramNodesBySidMethod = getListProgramNodesBySidMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidReq, com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListProgramNodesBySid"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidRes.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListProgramNodesBySid"))
+              .build();
+        }
+      }
+    }
+    return getListProgramNodesBySidMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateConstraintRuleReq,
       com.tcn.cloud.api.api.v1alpha1.wfm.CreateConstraintRuleRes> getCreateConstraintRuleMethod;
 
@@ -1723,6 +1971,37 @@ public final class WFMGrpc {
     return getCreateAgentGroupMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentScheduleGroupsRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentScheduleGroupsResponse> getListAgentScheduleGroupsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListAgentScheduleGroups",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentScheduleGroupsRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentScheduleGroupsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentScheduleGroupsRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentScheduleGroupsResponse> getListAgentScheduleGroupsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentScheduleGroupsRequest, com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentScheduleGroupsResponse> getListAgentScheduleGroupsMethod;
+    if ((getListAgentScheduleGroupsMethod = WFMGrpc.getListAgentScheduleGroupsMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getListAgentScheduleGroupsMethod = WFMGrpc.getListAgentScheduleGroupsMethod) == null) {
+          WFMGrpc.getListAgentScheduleGroupsMethod = getListAgentScheduleGroupsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentScheduleGroupsRequest, com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentScheduleGroupsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListAgentScheduleGroups"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentScheduleGroupsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentScheduleGroupsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListAgentScheduleGroups"))
+              .build();
+        }
+      }
+    }
+    return getListAgentScheduleGroupsMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAgentGroupReq,
       com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAgentGroupRes> getUpdateAgentGroupMethod;
 
@@ -1876,6 +2155,37 @@ public final class WFMGrpc {
       }
     }
     return getListUngroupedWFMAgentsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsRes> getListWFMAgentSidsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListWFMAgentSids",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsRes> getListWFMAgentSidsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsReq, com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsRes> getListWFMAgentSidsMethod;
+    if ((getListWFMAgentSidsMethod = WFMGrpc.getListWFMAgentSidsMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getListWFMAgentSidsMethod = WFMGrpc.getListWFMAgentSidsMethod) == null) {
+          WFMGrpc.getListWFMAgentSidsMethod = getListWFMAgentSidsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsReq, com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListWFMAgentSids"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsRes.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListWFMAgentSids"))
+              .build();
+        }
+      }
+    }
+    return getListWFMAgentSidsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentsAssociatedWithAgentGroupReq,
@@ -3335,6 +3645,37 @@ public final class WFMGrpc {
     return getCreateShiftInstanceV2Method;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.SplitShiftInstanceReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.SplitShiftInstanceRes> getSplitShiftInstanceMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SplitShiftInstance",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.SplitShiftInstanceReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.SplitShiftInstanceRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.SplitShiftInstanceReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.SplitShiftInstanceRes> getSplitShiftInstanceMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.SplitShiftInstanceReq, com.tcn.cloud.api.api.v1alpha1.wfm.SplitShiftInstanceRes> getSplitShiftInstanceMethod;
+    if ((getSplitShiftInstanceMethod = WFMGrpc.getSplitShiftInstanceMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getSplitShiftInstanceMethod = WFMGrpc.getSplitShiftInstanceMethod) == null) {
+          WFMGrpc.getSplitShiftInstanceMethod = getSplitShiftInstanceMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.SplitShiftInstanceReq, com.tcn.cloud.api.api.v1alpha1.wfm.SplitShiftInstanceRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SplitShiftInstance"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.SplitShiftInstanceReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.SplitShiftInstanceRes.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("SplitShiftInstance"))
+              .build();
+        }
+      }
+    }
+    return getSplitShiftInstanceMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq,
       com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesRes> getSwapShiftInstancesMethod;
 
@@ -3614,6 +3955,68 @@ public final class WFMGrpc {
     return getDeleteSchedulingTargetMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetRes> getGetDefaultSchedulingTargetMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetDefaultSchedulingTarget",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetRes> getGetDefaultSchedulingTargetMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetReq, com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetRes> getGetDefaultSchedulingTargetMethod;
+    if ((getGetDefaultSchedulingTargetMethod = WFMGrpc.getGetDefaultSchedulingTargetMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getGetDefaultSchedulingTargetMethod = WFMGrpc.getGetDefaultSchedulingTargetMethod) == null) {
+          WFMGrpc.getGetDefaultSchedulingTargetMethod = getGetDefaultSchedulingTargetMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetReq, com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetDefaultSchedulingTarget"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetRes.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("GetDefaultSchedulingTarget"))
+              .build();
+        }
+      }
+    }
+    return getGetDefaultSchedulingTargetMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetRes> getSetDefaultSchedulingTargetMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SetDefaultSchedulingTarget",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetRes> getSetDefaultSchedulingTargetMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetReq, com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetRes> getSetDefaultSchedulingTargetMethod;
+    if ((getSetDefaultSchedulingTargetMethod = WFMGrpc.getSetDefaultSchedulingTargetMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getSetDefaultSchedulingTargetMethod = WFMGrpc.getSetDefaultSchedulingTargetMethod) == null) {
+          WFMGrpc.getSetDefaultSchedulingTargetMethod = getSetDefaultSchedulingTargetMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetReq, com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetDefaultSchedulingTarget"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetRes.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("SetDefaultSchedulingTarget"))
+              .build();
+        }
+      }
+    }
+    return getSetDefaultSchedulingTargetMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.GetPerformanceMetricsReq,
       com.tcn.cloud.api.api.v1alpha1.wfm.GetPerformanceMetricsRes> getGetPerformanceMetricsMethod;
 
@@ -3674,6 +4077,781 @@ public final class WFMGrpc {
       }
     }
     return getListRequiredCallsIntervalsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourPatternReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourPatternRes> getCreateTourPatternMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateTourPattern",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourPatternReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourPatternRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourPatternReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourPatternRes> getCreateTourPatternMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourPatternReq, com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourPatternRes> getCreateTourPatternMethod;
+    if ((getCreateTourPatternMethod = WFMGrpc.getCreateTourPatternMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getCreateTourPatternMethod = WFMGrpc.getCreateTourPatternMethod) == null) {
+          WFMGrpc.getCreateTourPatternMethod = getCreateTourPatternMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourPatternReq, com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourPatternRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateTourPattern"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourPatternReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourPatternRes.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CreateTourPattern"))
+              .build();
+        }
+      }
+    }
+    return getCreateTourPatternMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsRes> getGetTourPatternDiagnosticsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetTourPatternDiagnostics",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsRes> getGetTourPatternDiagnosticsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsReq, com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsRes> getGetTourPatternDiagnosticsMethod;
+    if ((getGetTourPatternDiagnosticsMethod = WFMGrpc.getGetTourPatternDiagnosticsMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getGetTourPatternDiagnosticsMethod = WFMGrpc.getGetTourPatternDiagnosticsMethod) == null) {
+          WFMGrpc.getGetTourPatternDiagnosticsMethod = getGetTourPatternDiagnosticsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsReq, com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetTourPatternDiagnostics"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsRes.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("GetTourPatternDiagnostics"))
+              .build();
+        }
+      }
+    }
+    return getGetTourPatternDiagnosticsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersRes> getUpsertTourPatternWithMembersMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpsertTourPatternWithMembers",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersRes> getUpsertTourPatternWithMembersMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersReq, com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersRes> getUpsertTourPatternWithMembersMethod;
+    if ((getUpsertTourPatternWithMembersMethod = WFMGrpc.getUpsertTourPatternWithMembersMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getUpsertTourPatternWithMembersMethod = WFMGrpc.getUpsertTourPatternWithMembersMethod) == null) {
+          WFMGrpc.getUpsertTourPatternWithMembersMethod = getUpsertTourPatternWithMembersMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersReq, com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpsertTourPatternWithMembers"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersRes.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpsertTourPatternWithMembers"))
+              .build();
+        }
+      }
+    }
+    return getUpsertTourPatternWithMembersMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternRes> getGetTourPatternMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetTourPattern",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternRes> getGetTourPatternMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternReq, com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternRes> getGetTourPatternMethod;
+    if ((getGetTourPatternMethod = WFMGrpc.getGetTourPatternMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getGetTourPatternMethod = WFMGrpc.getGetTourPatternMethod) == null) {
+          WFMGrpc.getGetTourPatternMethod = getGetTourPatternMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternReq, com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetTourPattern"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternRes.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("GetTourPattern"))
+              .build();
+        }
+      }
+    }
+    return getGetTourPatternMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternWithMembersReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternWithMembersRes> getGetTourPatternWithMembersMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetTourPatternWithMembers",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternWithMembersReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternWithMembersRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternWithMembersReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternWithMembersRes> getGetTourPatternWithMembersMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternWithMembersReq, com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternWithMembersRes> getGetTourPatternWithMembersMethod;
+    if ((getGetTourPatternWithMembersMethod = WFMGrpc.getGetTourPatternWithMembersMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getGetTourPatternWithMembersMethod = WFMGrpc.getGetTourPatternWithMembersMethod) == null) {
+          WFMGrpc.getGetTourPatternWithMembersMethod = getGetTourPatternWithMembersMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternWithMembersReq, com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternWithMembersRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetTourPatternWithMembers"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternWithMembersReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternWithMembersRes.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("GetTourPatternWithMembers"))
+              .build();
+        }
+      }
+    }
+    return getGetTourPatternWithMembersMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourPatternReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourPatternRes> getDeleteTourPatternMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteTourPattern",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourPatternReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourPatternRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourPatternReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourPatternRes> getDeleteTourPatternMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourPatternReq, com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourPatternRes> getDeleteTourPatternMethod;
+    if ((getDeleteTourPatternMethod = WFMGrpc.getDeleteTourPatternMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getDeleteTourPatternMethod = WFMGrpc.getDeleteTourPatternMethod) == null) {
+          WFMGrpc.getDeleteTourPatternMethod = getDeleteTourPatternMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourPatternReq, com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourPatternRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteTourPattern"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourPatternReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourPatternRes.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("DeleteTourPattern"))
+              .build();
+        }
+      }
+    }
+    return getDeleteTourPatternMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourWeekPatternReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourWeekPatternRes> getCreateTourWeekPatternMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateTourWeekPattern",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourWeekPatternReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourWeekPatternRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourWeekPatternReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourWeekPatternRes> getCreateTourWeekPatternMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourWeekPatternReq, com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourWeekPatternRes> getCreateTourWeekPatternMethod;
+    if ((getCreateTourWeekPatternMethod = WFMGrpc.getCreateTourWeekPatternMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getCreateTourWeekPatternMethod = WFMGrpc.getCreateTourWeekPatternMethod) == null) {
+          WFMGrpc.getCreateTourWeekPatternMethod = getCreateTourWeekPatternMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourWeekPatternReq, com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourWeekPatternRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateTourWeekPattern"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourWeekPatternReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourWeekPatternRes.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CreateTourWeekPattern"))
+              .build();
+        }
+      }
+    }
+    return getCreateTourWeekPatternMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListTourWeekPatternsReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListTourWeekPatternsRes> getListTourWeekPatternsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListTourWeekPatterns",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.ListTourWeekPatternsReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.ListTourWeekPatternsRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListTourWeekPatternsReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListTourWeekPatternsRes> getListTourWeekPatternsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListTourWeekPatternsReq, com.tcn.cloud.api.api.v1alpha1.wfm.ListTourWeekPatternsRes> getListTourWeekPatternsMethod;
+    if ((getListTourWeekPatternsMethod = WFMGrpc.getListTourWeekPatternsMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getListTourWeekPatternsMethod = WFMGrpc.getListTourWeekPatternsMethod) == null) {
+          WFMGrpc.getListTourWeekPatternsMethod = getListTourWeekPatternsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ListTourWeekPatternsReq, com.tcn.cloud.api.api.v1alpha1.wfm.ListTourWeekPatternsRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListTourWeekPatterns"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListTourWeekPatternsReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListTourWeekPatternsRes.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListTourWeekPatterns"))
+              .build();
+        }
+      }
+    }
+    return getListTourWeekPatternsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourWeekPatternsReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourWeekPatternsRes> getDeleteTourWeekPatternsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteTourWeekPatterns",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourWeekPatternsReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourWeekPatternsRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourWeekPatternsReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourWeekPatternsRes> getDeleteTourWeekPatternsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourWeekPatternsReq, com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourWeekPatternsRes> getDeleteTourWeekPatternsMethod;
+    if ((getDeleteTourWeekPatternsMethod = WFMGrpc.getDeleteTourWeekPatternsMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getDeleteTourWeekPatternsMethod = WFMGrpc.getDeleteTourWeekPatternsMethod) == null) {
+          WFMGrpc.getDeleteTourWeekPatternsMethod = getDeleteTourWeekPatternsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourWeekPatternsReq, com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourWeekPatternsRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteTourWeekPatterns"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourWeekPatternsReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourWeekPatternsRes.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("DeleteTourWeekPatterns"))
+              .build();
+        }
+      }
+    }
+    return getDeleteTourWeekPatternsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourShiftInstanceConfigReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourShiftInstanceConfigRes> getCreateTourShiftInstanceConfigMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateTourShiftInstanceConfig",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourShiftInstanceConfigReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourShiftInstanceConfigRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourShiftInstanceConfigReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourShiftInstanceConfigRes> getCreateTourShiftInstanceConfigMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourShiftInstanceConfigReq, com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourShiftInstanceConfigRes> getCreateTourShiftInstanceConfigMethod;
+    if ((getCreateTourShiftInstanceConfigMethod = WFMGrpc.getCreateTourShiftInstanceConfigMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getCreateTourShiftInstanceConfigMethod = WFMGrpc.getCreateTourShiftInstanceConfigMethod) == null) {
+          WFMGrpc.getCreateTourShiftInstanceConfigMethod = getCreateTourShiftInstanceConfigMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourShiftInstanceConfigReq, com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourShiftInstanceConfigRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateTourShiftInstanceConfig"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourShiftInstanceConfigReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourShiftInstanceConfigRes.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CreateTourShiftInstanceConfig"))
+              .build();
+        }
+      }
+    }
+    return getCreateTourShiftInstanceConfigMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourShiftInstanceConfigReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourShiftInstanceConfigRes> getUpdateTourShiftInstanceConfigMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateTourShiftInstanceConfig",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourShiftInstanceConfigReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourShiftInstanceConfigRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourShiftInstanceConfigReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourShiftInstanceConfigRes> getUpdateTourShiftInstanceConfigMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourShiftInstanceConfigReq, com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourShiftInstanceConfigRes> getUpdateTourShiftInstanceConfigMethod;
+    if ((getUpdateTourShiftInstanceConfigMethod = WFMGrpc.getUpdateTourShiftInstanceConfigMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getUpdateTourShiftInstanceConfigMethod = WFMGrpc.getUpdateTourShiftInstanceConfigMethod) == null) {
+          WFMGrpc.getUpdateTourShiftInstanceConfigMethod = getUpdateTourShiftInstanceConfigMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourShiftInstanceConfigReq, com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourShiftInstanceConfigRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateTourShiftInstanceConfig"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourShiftInstanceConfigReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourShiftInstanceConfigRes.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpdateTourShiftInstanceConfig"))
+              .build();
+        }
+      }
+    }
+    return getUpdateTourShiftInstanceConfigMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListTourShiftInstanceConfigsReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListTourShiftInstanceConfigsRes> getListTourShiftInstanceConfigsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListTourShiftInstanceConfigs",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.ListTourShiftInstanceConfigsReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.ListTourShiftInstanceConfigsRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListTourShiftInstanceConfigsReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListTourShiftInstanceConfigsRes> getListTourShiftInstanceConfigsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListTourShiftInstanceConfigsReq, com.tcn.cloud.api.api.v1alpha1.wfm.ListTourShiftInstanceConfigsRes> getListTourShiftInstanceConfigsMethod;
+    if ((getListTourShiftInstanceConfigsMethod = WFMGrpc.getListTourShiftInstanceConfigsMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getListTourShiftInstanceConfigsMethod = WFMGrpc.getListTourShiftInstanceConfigsMethod) == null) {
+          WFMGrpc.getListTourShiftInstanceConfigsMethod = getListTourShiftInstanceConfigsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ListTourShiftInstanceConfigsReq, com.tcn.cloud.api.api.v1alpha1.wfm.ListTourShiftInstanceConfigsRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListTourShiftInstanceConfigs"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListTourShiftInstanceConfigsReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListTourShiftInstanceConfigsRes.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListTourShiftInstanceConfigs"))
+              .build();
+        }
+      }
+    }
+    return getListTourShiftInstanceConfigsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourShiftInstanceConfigsReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourShiftInstanceConfigsRes> getDeleteTourShiftInstanceConfigsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteTourShiftInstanceConfigs",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourShiftInstanceConfigsReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourShiftInstanceConfigsRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourShiftInstanceConfigsReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourShiftInstanceConfigsRes> getDeleteTourShiftInstanceConfigsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourShiftInstanceConfigsReq, com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourShiftInstanceConfigsRes> getDeleteTourShiftInstanceConfigsMethod;
+    if ((getDeleteTourShiftInstanceConfigsMethod = WFMGrpc.getDeleteTourShiftInstanceConfigsMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getDeleteTourShiftInstanceConfigsMethod = WFMGrpc.getDeleteTourShiftInstanceConfigsMethod) == null) {
+          WFMGrpc.getDeleteTourShiftInstanceConfigsMethod = getDeleteTourShiftInstanceConfigsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourShiftInstanceConfigsReq, com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourShiftInstanceConfigsRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteTourShiftInstanceConfigs"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourShiftInstanceConfigsReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourShiftInstanceConfigsRes.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("DeleteTourShiftInstanceConfigs"))
+              .build();
+        }
+      }
+    }
+    return getDeleteTourShiftInstanceConfigsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourShiftSegmentConfigReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourShiftSegmentConfigRes> getCreateTourShiftSegmentConfigMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateTourShiftSegmentConfig",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourShiftSegmentConfigReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourShiftSegmentConfigRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourShiftSegmentConfigReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourShiftSegmentConfigRes> getCreateTourShiftSegmentConfigMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourShiftSegmentConfigReq, com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourShiftSegmentConfigRes> getCreateTourShiftSegmentConfigMethod;
+    if ((getCreateTourShiftSegmentConfigMethod = WFMGrpc.getCreateTourShiftSegmentConfigMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getCreateTourShiftSegmentConfigMethod = WFMGrpc.getCreateTourShiftSegmentConfigMethod) == null) {
+          WFMGrpc.getCreateTourShiftSegmentConfigMethod = getCreateTourShiftSegmentConfigMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourShiftSegmentConfigReq, com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourShiftSegmentConfigRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateTourShiftSegmentConfig"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourShiftSegmentConfigReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourShiftSegmentConfigRes.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CreateTourShiftSegmentConfig"))
+              .build();
+        }
+      }
+    }
+    return getCreateTourShiftSegmentConfigMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourShiftSegmentConfigReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourShiftSegmentConfigRes> getUpdateTourShiftSegmentConfigMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateTourShiftSegmentConfig",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourShiftSegmentConfigReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourShiftSegmentConfigRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourShiftSegmentConfigReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourShiftSegmentConfigRes> getUpdateTourShiftSegmentConfigMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourShiftSegmentConfigReq, com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourShiftSegmentConfigRes> getUpdateTourShiftSegmentConfigMethod;
+    if ((getUpdateTourShiftSegmentConfigMethod = WFMGrpc.getUpdateTourShiftSegmentConfigMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getUpdateTourShiftSegmentConfigMethod = WFMGrpc.getUpdateTourShiftSegmentConfigMethod) == null) {
+          WFMGrpc.getUpdateTourShiftSegmentConfigMethod = getUpdateTourShiftSegmentConfigMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourShiftSegmentConfigReq, com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourShiftSegmentConfigRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateTourShiftSegmentConfig"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourShiftSegmentConfigReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourShiftSegmentConfigRes.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpdateTourShiftSegmentConfig"))
+              .build();
+        }
+      }
+    }
+    return getUpdateTourShiftSegmentConfigMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListTourShiftSegmentConfigsReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListTourShiftSegmentConfigsRes> getListTourShiftSegmentConfigsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListTourShiftSegmentConfigs",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.ListTourShiftSegmentConfigsReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.ListTourShiftSegmentConfigsRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListTourShiftSegmentConfigsReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListTourShiftSegmentConfigsRes> getListTourShiftSegmentConfigsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListTourShiftSegmentConfigsReq, com.tcn.cloud.api.api.v1alpha1.wfm.ListTourShiftSegmentConfigsRes> getListTourShiftSegmentConfigsMethod;
+    if ((getListTourShiftSegmentConfigsMethod = WFMGrpc.getListTourShiftSegmentConfigsMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getListTourShiftSegmentConfigsMethod = WFMGrpc.getListTourShiftSegmentConfigsMethod) == null) {
+          WFMGrpc.getListTourShiftSegmentConfigsMethod = getListTourShiftSegmentConfigsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ListTourShiftSegmentConfigsReq, com.tcn.cloud.api.api.v1alpha1.wfm.ListTourShiftSegmentConfigsRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListTourShiftSegmentConfigs"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListTourShiftSegmentConfigsReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListTourShiftSegmentConfigsRes.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListTourShiftSegmentConfigs"))
+              .build();
+        }
+      }
+    }
+    return getListTourShiftSegmentConfigsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourShiftSegmentConfigsReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourShiftSegmentConfigsRes> getDeleteTourShiftSegmentConfigsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteTourShiftSegmentConfigs",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourShiftSegmentConfigsReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourShiftSegmentConfigsRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourShiftSegmentConfigsReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourShiftSegmentConfigsRes> getDeleteTourShiftSegmentConfigsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourShiftSegmentConfigsReq, com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourShiftSegmentConfigsRes> getDeleteTourShiftSegmentConfigsMethod;
+    if ((getDeleteTourShiftSegmentConfigsMethod = WFMGrpc.getDeleteTourShiftSegmentConfigsMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getDeleteTourShiftSegmentConfigsMethod = WFMGrpc.getDeleteTourShiftSegmentConfigsMethod) == null) {
+          WFMGrpc.getDeleteTourShiftSegmentConfigsMethod = getDeleteTourShiftSegmentConfigsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourShiftSegmentConfigsReq, com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourShiftSegmentConfigsRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteTourShiftSegmentConfigs"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourShiftSegmentConfigsReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourShiftSegmentConfigsRes.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("DeleteTourShiftSegmentConfigs"))
+              .build();
+        }
+      }
+    }
+    return getDeleteTourShiftSegmentConfigsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourAgentCollectionReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourAgentCollectionRes> getCreateTourAgentCollectionMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateTourAgentCollection",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourAgentCollectionReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourAgentCollectionRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourAgentCollectionReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourAgentCollectionRes> getCreateTourAgentCollectionMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourAgentCollectionReq, com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourAgentCollectionRes> getCreateTourAgentCollectionMethod;
+    if ((getCreateTourAgentCollectionMethod = WFMGrpc.getCreateTourAgentCollectionMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getCreateTourAgentCollectionMethod = WFMGrpc.getCreateTourAgentCollectionMethod) == null) {
+          WFMGrpc.getCreateTourAgentCollectionMethod = getCreateTourAgentCollectionMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourAgentCollectionReq, com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourAgentCollectionRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateTourAgentCollection"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourAgentCollectionReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourAgentCollectionRes.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CreateTourAgentCollection"))
+              .build();
+        }
+      }
+    }
+    return getCreateTourAgentCollectionMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourAgentCollectionReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourAgentCollectionRes> getUpdateTourAgentCollectionMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateTourAgentCollection",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourAgentCollectionReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourAgentCollectionRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourAgentCollectionReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourAgentCollectionRes> getUpdateTourAgentCollectionMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourAgentCollectionReq, com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourAgentCollectionRes> getUpdateTourAgentCollectionMethod;
+    if ((getUpdateTourAgentCollectionMethod = WFMGrpc.getUpdateTourAgentCollectionMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getUpdateTourAgentCollectionMethod = WFMGrpc.getUpdateTourAgentCollectionMethod) == null) {
+          WFMGrpc.getUpdateTourAgentCollectionMethod = getUpdateTourAgentCollectionMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourAgentCollectionReq, com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourAgentCollectionRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateTourAgentCollection"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourAgentCollectionReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourAgentCollectionRes.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpdateTourAgentCollection"))
+              .build();
+        }
+      }
+    }
+    return getUpdateTourAgentCollectionMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListTourAgentCollectionsReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListTourAgentCollectionsRes> getListTourAgentCollectionsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListTourAgentCollections",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.ListTourAgentCollectionsReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.ListTourAgentCollectionsRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListTourAgentCollectionsReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListTourAgentCollectionsRes> getListTourAgentCollectionsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListTourAgentCollectionsReq, com.tcn.cloud.api.api.v1alpha1.wfm.ListTourAgentCollectionsRes> getListTourAgentCollectionsMethod;
+    if ((getListTourAgentCollectionsMethod = WFMGrpc.getListTourAgentCollectionsMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getListTourAgentCollectionsMethod = WFMGrpc.getListTourAgentCollectionsMethod) == null) {
+          WFMGrpc.getListTourAgentCollectionsMethod = getListTourAgentCollectionsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ListTourAgentCollectionsReq, com.tcn.cloud.api.api.v1alpha1.wfm.ListTourAgentCollectionsRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListTourAgentCollections"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListTourAgentCollectionsReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListTourAgentCollectionsRes.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListTourAgentCollections"))
+              .build();
+        }
+      }
+    }
+    return getListTourAgentCollectionsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourAgentCollectionsReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourAgentCollectionsRes> getDeleteTourAgentCollectionsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteTourAgentCollections",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourAgentCollectionsReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourAgentCollectionsRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourAgentCollectionsReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourAgentCollectionsRes> getDeleteTourAgentCollectionsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourAgentCollectionsReq, com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourAgentCollectionsRes> getDeleteTourAgentCollectionsMethod;
+    if ((getDeleteTourAgentCollectionsMethod = WFMGrpc.getDeleteTourAgentCollectionsMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getDeleteTourAgentCollectionsMethod = WFMGrpc.getDeleteTourAgentCollectionsMethod) == null) {
+          WFMGrpc.getDeleteTourAgentCollectionsMethod = getDeleteTourAgentCollectionsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourAgentCollectionsReq, com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourAgentCollectionsRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteTourAgentCollections"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourAgentCollectionsReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourAgentCollectionsRes.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("DeleteTourAgentCollections"))
+              .build();
+        }
+      }
+    }
+    return getDeleteTourAgentCollectionsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourAgentCollectionWFMAgentsReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourAgentCollectionWFMAgentsRes> getCreateTourAgentCollectionWFMAgentsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateTourAgentCollectionWFMAgents",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourAgentCollectionWFMAgentsReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourAgentCollectionWFMAgentsRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourAgentCollectionWFMAgentsReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourAgentCollectionWFMAgentsRes> getCreateTourAgentCollectionWFMAgentsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourAgentCollectionWFMAgentsReq, com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourAgentCollectionWFMAgentsRes> getCreateTourAgentCollectionWFMAgentsMethod;
+    if ((getCreateTourAgentCollectionWFMAgentsMethod = WFMGrpc.getCreateTourAgentCollectionWFMAgentsMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getCreateTourAgentCollectionWFMAgentsMethod = WFMGrpc.getCreateTourAgentCollectionWFMAgentsMethod) == null) {
+          WFMGrpc.getCreateTourAgentCollectionWFMAgentsMethod = getCreateTourAgentCollectionWFMAgentsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourAgentCollectionWFMAgentsReq, com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourAgentCollectionWFMAgentsRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateTourAgentCollectionWFMAgents"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourAgentCollectionWFMAgentsReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourAgentCollectionWFMAgentsRes.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CreateTourAgentCollectionWFMAgents"))
+              .build();
+        }
+      }
+    }
+    return getCreateTourAgentCollectionWFMAgentsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListTourAgentCollectionWFMAgentsReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListTourAgentCollectionWFMAgentsRes> getListTourAgentCollectionWFMAgentsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListTourAgentCollectionWFMAgents",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.ListTourAgentCollectionWFMAgentsReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.ListTourAgentCollectionWFMAgentsRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListTourAgentCollectionWFMAgentsReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListTourAgentCollectionWFMAgentsRes> getListTourAgentCollectionWFMAgentsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListTourAgentCollectionWFMAgentsReq, com.tcn.cloud.api.api.v1alpha1.wfm.ListTourAgentCollectionWFMAgentsRes> getListTourAgentCollectionWFMAgentsMethod;
+    if ((getListTourAgentCollectionWFMAgentsMethod = WFMGrpc.getListTourAgentCollectionWFMAgentsMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getListTourAgentCollectionWFMAgentsMethod = WFMGrpc.getListTourAgentCollectionWFMAgentsMethod) == null) {
+          WFMGrpc.getListTourAgentCollectionWFMAgentsMethod = getListTourAgentCollectionWFMAgentsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ListTourAgentCollectionWFMAgentsReq, com.tcn.cloud.api.api.v1alpha1.wfm.ListTourAgentCollectionWFMAgentsRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListTourAgentCollectionWFMAgents"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListTourAgentCollectionWFMAgentsReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListTourAgentCollectionWFMAgentsRes.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListTourAgentCollectionWFMAgents"))
+              .build();
+        }
+      }
+    }
+    return getListTourAgentCollectionWFMAgentsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourAgentCollectionWFMAgentsReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourAgentCollectionWFMAgentsRes> getDeleteTourAgentCollectionWFMAgentsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteTourAgentCollectionWFMAgents",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourAgentCollectionWFMAgentsReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourAgentCollectionWFMAgentsRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourAgentCollectionWFMAgentsReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourAgentCollectionWFMAgentsRes> getDeleteTourAgentCollectionWFMAgentsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourAgentCollectionWFMAgentsReq, com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourAgentCollectionWFMAgentsRes> getDeleteTourAgentCollectionWFMAgentsMethod;
+    if ((getDeleteTourAgentCollectionWFMAgentsMethod = WFMGrpc.getDeleteTourAgentCollectionWFMAgentsMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getDeleteTourAgentCollectionWFMAgentsMethod = WFMGrpc.getDeleteTourAgentCollectionWFMAgentsMethod) == null) {
+          WFMGrpc.getDeleteTourAgentCollectionWFMAgentsMethod = getDeleteTourAgentCollectionWFMAgentsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourAgentCollectionWFMAgentsReq, com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourAgentCollectionWFMAgentsRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteTourAgentCollectionWFMAgents"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourAgentCollectionWFMAgentsReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourAgentCollectionWFMAgentsRes.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("DeleteTourAgentCollectionWFMAgents"))
+              .build();
+        }
+      }
+    }
+    return getDeleteTourAgentCollectionWFMAgentsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.GenerateTourWeekPatternsReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.GenerateTourWeekPatternsRes> getGenerateTourWeekPatternsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GenerateTourWeekPatterns",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.GenerateTourWeekPatternsReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.GenerateTourWeekPatternsRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.GenerateTourWeekPatternsReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.GenerateTourWeekPatternsRes> getGenerateTourWeekPatternsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.GenerateTourWeekPatternsReq, com.tcn.cloud.api.api.v1alpha1.wfm.GenerateTourWeekPatternsRes> getGenerateTourWeekPatternsMethod;
+    if ((getGenerateTourWeekPatternsMethod = WFMGrpc.getGenerateTourWeekPatternsMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getGenerateTourWeekPatternsMethod = WFMGrpc.getGenerateTourWeekPatternsMethod) == null) {
+          WFMGrpc.getGenerateTourWeekPatternsMethod = getGenerateTourWeekPatternsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.GenerateTourWeekPatternsReq, com.tcn.cloud.api.api.v1alpha1.wfm.GenerateTourWeekPatternsRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GenerateTourWeekPatterns"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.GenerateTourWeekPatternsReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.GenerateTourWeekPatternsRes.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("GenerateTourWeekPatterns"))
+              .build();
+        }
+      }
+    }
+    return getGenerateTourWeekPatternsMethod;
   }
 
   /**
@@ -3855,17 +5033,31 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Gets the historical data for the org sending the request and the given &#64;skill_profile_sid.
+     * Gets the state of the cache for the given &#64;org_id, and if the cache's state is not_loaded, or loading_failed,
+     * it will start the loading task before returning the current state.
+     * Required permissions:
+     *  NONE
+     * Errors:
+     *  -grpc.Internal: error occurs when getting the cache info.
+     * </pre>
+     */
+    default void getClientHistoryCacheInfo(com.tcn.cloud.api.api.v1alpha1.wfm.GetClientHistoryCacheInfoReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetClientHistoryCacheInfoRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetClientHistoryCacheInfoMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Gets the historical data for the org sending the request and the given &#64;skill_profile_category.
      * It will look through the client's call history and generate the historical data by using their configured forecasting parameters (historical data period and interval width).
      * The duration of each interval will be the interval width of the org's forecasting parameters.
-     * It also applies any deltas that the client has stored for the given &#64;SkillProfileSid.
+     * It also applies any deltas that the client has stored for the given &#64;skill_profile_category, if the category is a group it will use the deltas of the skill profiles part of that group.
      * If the client has no historical data, only the deltas will be applied to the returned intervals, all other intervals will have nil averages.
-     * If any inactive skill profiles are mapped to the given &#64;skill_profile_sid, the call history and deltas of those skill profiles will be included for the historical data calculation.
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the &#64;skill_profile_sid in the request is invalid.
-     *   - grpc.NotFound: the &#64;skill_profile_sid given is not found for the org.
+     *   - grpc.Invalid: the &#64;skill_profile_category in the request is invalid.
+     *   - grpc.NotFound: the &#64;skill_profile_category given is not found for the org.
      *   - grpc.Internal: error occurs when getting the historical data.
      * </pre>
      */
@@ -3930,6 +5122,7 @@ public final class WFMGrpc {
      * The &#64;total_calls in the returned template be summed from the (&#64;training_data_start_datetime - &#64;averages_calculation_range_in_months) to &#64;training_data_end_datetime,
      * or from &#64;training_data_start_datetime to &#64;training_data_end_datetime if &#64;averages_calculation_range_in_months is 0.
      * The fixed averages fields in the call profile template, will be set to the averages that the skill profile has.
+     * DEPRECATED as of Sep/7/2023 - Use BuildCallProfileTemplate instead.
      * Required permissions:
      *   NONE
      * Errors:
@@ -3938,6 +5131,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when building the call profile template.
      * </pre>
      */
+    @java.lang.Deprecated
     default void buildCallProfileTemplateForSkillProfile(com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateForSkillProfileReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateForSkillProfileRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBuildCallProfileTemplateForSkillProfileMethod(), responseObserver);
@@ -3945,7 +5139,29 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Builds and returns a call profile template for the org sending the request and the given &#64;skill_profile_category.
+     * The template will be generated using the training data for said skill profile category using the &#64;training_data_range and &#64;averages_calculation_range_in_months
+     * from the client's saved forecasting parameters.
+     * The &#64;total_calls in the returned template be summed from the (&#64;training_data_start_datetime - &#64;averages_calculation_range_in_months) to &#64;training_data_end_datetime,
+     * or from &#64;training_data_start_datetime to &#64;training_data_end_datetime if &#64;averages_calculation_range_in_months is 0.
+     * The fixed averages fields in the call profile template, will be set to the averages that the skill profile category has.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;skill_profile_category in the request is invalid.
+     *   - grpc.NotFound: the &#64;skill_profile_category given is not found for the org.
+     *   - grpc.Internal: error occurs when building the call profile template.
+     * </pre>
+     */
+    default void buildCallProfileTemplate(com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBuildCallProfileTemplateMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Creates a mapping entry for the &#64;inactive_skill_profile_sid to the &#64;active_skill_profile_sid for the org sending the request.
+     * DEPRECATED as of Sep/27/2023 - Use skill profile groups instead.
      * Required permissions:
      *   NONE
      * Errors:
@@ -3955,6 +5171,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when creating the inactive skill profile mapping.
      * </pre>
      */
+    @java.lang.Deprecated
     default void createInactiveSkillProfileMapping(com.tcn.cloud.api.api.v1alpha1.wfm.CreateInactiveSkillProfileMappingReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateInactiveSkillProfileMappingRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateInactiveSkillProfileMappingMethod(), responseObserver);
@@ -3977,6 +5194,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Changes the current mapping for the given &#64;inactive_skill_profile_sid to be disconnected.
+     * DEPRECATED as of Sep/27/2023 - Use skill profile groups instead.
      * Required permissions:
      *   NONE
      * Errors:
@@ -3986,9 +5204,77 @@ public final class WFMGrpc {
      *				            the given &#64;inactive_skill_profile_sid is of an active skill profile.
      * </pre>
      */
+    @java.lang.Deprecated
     default void disconnectInactiveSkillProfileMapping(com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDisconnectInactiveSkillProfileMappingMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Creates the given &#64;skill_profile_group.
+     * &#64;skill_profile_group_sids will be ignored since associations cannot be created by this method.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;skill_profile_group in the request is invalid.
+     *   - grpc.Internal: error occurs creating the skill profile group.
+     * </pre>
+     */
+    default void createSkillProfileGroup(com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProfileGroupReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProfileGroupRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateSkillProfileGroupMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Updates the given &#64;skill_profile_group that has the &#64;skill_profile_group_sid for the org sending the request.
+     * &#64;skill_profile_group_sids will be ignored since associations cannot be updated by this method.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;skill_profile_group in the request is invalid.
+     *   - grpc.NotFound: the skill profile group to update doesn't exist.
+     *   - grpc.Internal: error occurs updating the skill profile group.
+     * </pre>
+     */
+    default void updateSkillProfileGroup(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateSkillProfileGroupMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Gets the skill profile groups that have the &#64;skill_profile_group_sids for the org sending the request.
+     * if &#64;include_inactive is true then inactive groups will also be included, otherwise only active groups will be returned.
+     * If &#64;skill_profile_group_sids is empty it will get all the skill profile groups for the org.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;skill_profile_group_sids in the request is invalid.
+     *   - grpc.Internal: error occurs getting the skill profile groups.
+     * </pre>
+     */
+    default void listSkillProfileGroups(com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfileGroupsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfileGroupsRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListSkillProfileGroupsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Updates associations of the given &#64;skill_profile_group_sid for the org sending the request.
+     * It will create the associations with the &#64;skill_profile_sids_to_associate, and remove the associations with the &#64;skill_profile_sids_to_disassociate.
+     * Only one of the skill_profile_sids fields needs to be set, but both can be set on the same request.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the values in the request are invalid.
+     *   - grpc.Internal: error occurs updating the skill profile group associations.
+     * </pre>
+     */
+    default void updateSkillProfileGroupAssociations(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupAssociationsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupAssociationsRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateSkillProfileGroupAssociationsMethod(), responseObserver);
     }
 
     /**
@@ -4044,12 +5330,12 @@ public final class WFMGrpc {
      * Builds a profile forecast using the provided &#64;call_profile_template.
      * The forecaster will produce intervals from the following range using the client's saved forecasting parameters:
      * (&#64;training_data_range_end_datetime - &#64;forecast_test_range_in_weeks) to &#64;forecast_range_end_datetime.
-     * The &#64;total_calls in the &#64;call_profile_template will be scaled using the same ranges as BuildCallProfileTemplateForSkillProfile.
+     * The &#64;total_calls in the &#64;call_profile_template will be scaled using the same ranges as BuildCallProfileTemplate.
      * The &#64;fixed_averages_forecast field indicates whether or not to do a fixed averages forecast.
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the &#64;skill_profile_sid or &#64;call_profile_template in the request is invalid.
+     *   - grpc.Invalid: the &#64;skill_profile_category or &#64;call_profile_template in the request is invalid.
      *   - grpc.Internal: error occurs during the building of the profile forecast.
      * </pre>
      */
@@ -4063,13 +5349,13 @@ public final class WFMGrpc {
      * Builds a profile forecast using the provided &#64;call_profile_template.
      * The forecaster will produce intervals from the following range using the client's saved forecasting parameters:
      * (&#64;training_data_range_end_datetime - &#64;forecast_test_range_in_weeks) to &#64;forecast_range_end_datetime.
-     * The &#64;total_calls in the &#64;call_profile_template will be scaled using the same ranges as BuildCallProfileTemplateForSkillProfile.
+     * The &#64;total_calls in the &#64;call_profile_template will be scaled using the same ranges as BuildCallProfileTemplate.
      * The &#64;fixed_averages_forecast field indicates whether or not to do a fixed averages forecast.
-     * It also returns the statistics of the produced forecast by using the test data of the given &#64;skill_profile_sid.
+     * It also returns the statistics of the produced forecast by using the test data of the given &#64;skill_profile_category.
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the &#64;skill_profile_sid or &#64;call_profile_template in the request is invalid.
+     *   - grpc.Invalid: the &#64;skill_profile_category or &#64;call_profile_template in the request is invalid.
      *   - grpc.Internal: error occurs during the building of the profile forecast.
      * </pre>
      */
@@ -4176,6 +5462,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Gets the forecast data intervals for the given &#64;skill_profile_sid.
+     * DEPRECATED as of Sep/13/2023 - Use ListForecastIntervals instead.
      * Required permissions:
      *   NONE
      * Errors:
@@ -4183,9 +5470,25 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when getting the forecast data intervals.
      * </pre>
      */
+    @java.lang.Deprecated
     default void listForecastIntervalsForSkillProfile(com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsForSkillProfileReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListForecastIntervalsForSkillProfileMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Gets the forecast data intervals for the given &#64;skill_profile_category.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;skill_profile_category in the request is invalid.
+     *   - grpc.Internal: error occurs when getting the forecast data intervals.
+     * </pre>
+     */
+    default void listForecastIntervals(com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListForecastIntervalsMethod(), responseObserver);
     }
 
     /**
@@ -4290,7 +5593,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Deletes forecast data intervals/deltas based on the parameters provided.
-     * If &#64;delete_param is type skill_profile_sid, then the intervals/deltas to be deleted will be
+     * If &#64;delete_param is type skill_profile_category, then the intervals/deltas to be deleted will be
      * associated with that id. If &#64;delete_param is type interval_sids, then the intervals/deltas to be
      * deleted will be contained in the list &#64;interval_sids. The &#64;delete_type field determines which
      * table(s) in the database the intervals/deltas will be deleted from.
@@ -4359,14 +5662,15 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Calculates the averages for call characteristics using the historical data of the given &#64;skill_profile_sids and org sending the request.
+     * Calculates the averages for call characteristics using the historical data of the given &#64;skill_profile_sids, &#64;skill_profile_group_sids and org sending the request.
      * If no &#64;skill_profile_sids are given, it will calculate the averages for all skill profiles for the org sending the request.
+     * If no &#64;skill_profile_group_sids are given, it will calculate the averages for all skill profile groups for the org sending the request.
      * Averages will be weighted by the number of calls that each historical data interval has.
      * Once the averages are calculated, they will be updated in the db for those skill profiles.
      * If a nil &#64;datetime_range is given then the range used will be &#64;training_data_range_end_datetime - &#64;averages_calculation_range_in_months to the &#64;training_data_range_end_datetime from the forecasting parameters.
      * If &#64;averages_calculation_range_in_months is 0, it will use the &#64;training_data_range_start_datetime as the start datetime of the range.
-     * If &#64;exclude_skill_profiles_with_manual_averages is true, it will exclude skill profiles that have manual averages from the calculation
-     * even if those skill profiles are in &#64;skill_profile_sids.
+     * If &#64;exclude_skill_profiles_with_manual_averages is true, it will exclude skill profiles and groups that have manual averages from the calculation
+     * even if those skill profiles and groups are in &#64;skill_profile_sids or &#64;skill_profile_group_sids respectively.
      * Errors:
      *   - grpc.Internal: error occurs when calculating the averages from the historical data.
      * </pre>
@@ -4485,6 +5789,7 @@ public final class WFMGrpc {
      * Errors:
      *   - grpc.Invalid: one or more fields in the &#64;node have invalid values.
      *   - grpc.NotFound: parent location node doesn't exist or belongs to a different scenario than the one given.
+     *                    the &#64;skill_profile_category does not exist.
      *   - grpc.Internal: error occurs when creating the program node.
      * </pre>
      */
@@ -4505,11 +5810,27 @@ public final class WFMGrpc {
      *   - grpc.Invalid: one or more fields in the &#64;program_node have invalid values.
      *   - grpc.Internal: error occurs when updating the program node.
      *   - grpc.NotFound: entry to be updated doesn't exist, or the given parent &#64;location_node_sid belongs to a different scenario than the program node to update.
+     *                    the &#64;skill_profile_category does not exist.
      * </pre>
      */
     default void updateProgramNode(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateProgramNodeReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateProgramNodeRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateProgramNodeMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Lists the program nodes with the given &#64;program_node_sids for the org sending the request.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the given &#64;program_node_sids are invalid.
+     *   - grpc.Internal: error occurs when listing the program nodes.
+     * </pre>
+     */
+    default void listProgramNodesBySid(com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListProgramNodesBySidMethod(), responseObserver);
     }
 
     /**
@@ -4679,6 +6000,16 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Lists all schedulable AgentGroups on or under the given Node or ShiftTemplate.
+     * </pre>
+     */
+    default void listAgentScheduleGroups(com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentScheduleGroupsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentScheduleGroupsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAgentScheduleGroupsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Updates the agent group corresponding to the &#64;agent_group_sid, &#64;name, and &#64;parent_entity.
      * All of the entity's parameters that are not desired to be updated must be filled with their current values.
      * The &#64;schedule_scenario_sid must be the original for this agent group since it cannot be changed.
@@ -4722,6 +6053,10 @@ public final class WFMGrpc {
      * if &#64;include_inactive is true then inactive agents will also be included, otherwise only active agents will be returned.
      * if &#64;include_skill_proficiencies is true then agents returned will include their skill proficiencies.
      * if &#64;include_agent_groups is true then the &#64;agent_groups_by_agent response field will be set with a list of agent groups correlating to each agents index in the &#64;wfm_agents field.
+     * if &#64;include_agent_groups is set to true, the &#64;agent_group_schedule_scenario_sid field must be set, so that the agent groups for the correct scenario are returned.
+     * if &#64;include_agent_groups is set to true, and &#64;agent_group_schedule_scenario_sid is not set, the agent groups will not be filtered by schedule scenario.
+     * if &#64;include_agent_groups is set to false, the &#64;agent_group_schedule_scenario_sid will be ignored.
+     * &#64;agent_group_schedule_scenario_sid does not effect which &#64;wfm_agents are returned.
      * WFM agents with no associated agent_groups will have an empty slice in agent_groups_by_agent at their correlated index.
      * Required Permissions:
      *   NONE
@@ -4767,6 +6102,23 @@ public final class WFMGrpc {
     default void listUngroupedWFMAgents(com.tcn.cloud.api.api.v1alpha1.wfm.ListUngroupedWFMAgentsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListUngroupedWFMAgentsRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListUngroupedWFMAgentsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Gets the wfm_agent_sids with the given &#64;tcn_agent_sids for the org sending the request.
+     * Returns a map where Key: tcn_agent_sid - Value: wfm_agent_sid.
+     * If the wfm_agent_sid is not found for any &#64;tcn_agent_sids, they will not have an entry in the returned &#64;sids.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *  - grpc.Invalid: the &#64;tcn_agent_sids are invalid.
+     *  - grpc.Internal: error occours while listing the wfm_agent_sids.
+     * </pre>
+     */
+    default void listWFMAgentSids(com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListWFMAgentSidsMethod(), responseObserver);
     }
 
     /**
@@ -5234,10 +6586,12 @@ public final class WFMGrpc {
      * The &#64;node_description fields may optionally be left blank.
      * The &#64;copied_from_scenario_sid field will be ignored, as it will be set to nil in the newly created scenario.
      * The &#64;creation_datetime and &#64;is_default fields will also be ignored and set as the current time and false respectively.
+     * The &#64;skill_profile_category will be associated with the created program node.
      * Required permissions:
      *   NONE
      * Errors:
      *   - grpc.Invalid: parameters in the &#64;req are invalid for the org making the request.
+     *   - grpc.NotFound: the &#64;skill_profile_category does not exist.
      *   - grpc.Internal: error occurs when creating the new scenario, or any of the node entities.
      * </pre>
      */
@@ -5571,7 +6925,7 @@ public final class WFMGrpc {
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the &#64;org_id or &#64;shift_instance_sids in the request are invalid.
+     *   - grpc.Invalid: &#64;shift_instance_sids in the request are invalid.
      *   - grpc.Internal: error occurs when listing the shift instances or their shift segments.
      * </pre>
      */
@@ -5634,6 +6988,25 @@ public final class WFMGrpc {
     default void createShiftInstanceV2(com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceV2Req request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceV2Res> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateShiftInstanceV2Method(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Splits the &#64;shift_instance_sid into two, at the given &#64;time_to_split, returning the updated and new &#64;shift_instances.
+     * Any shift segments will be split between the two shift instances at &#64;time_to_split.
+     * If the &#64;time_to_split creates instances shorter then the minimum length specified by the shift template,
+     *   warning diagnostics will be returned and the instance will still be split.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   -grpc.Invalid: one or more fields in the request have invalid values, or &#64;time_to_split is not at least 5 minutes from the start or end of &#64;shift_instance_sid.
+     *   -grpc.NotFound: the &#64;shift_instance_sid does't exist for the org sending the request.
+     *   -grpc.Internal: error occurs when creating or updating the shift instances.
+     * </pre>
+     */
+    default void splitShiftInstance(com.tcn.cloud.api.api.v1alpha1.wfm.SplitShiftInstanceReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.SplitShiftInstanceRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSplitShiftInstanceMethod(), responseObserver);
     }
 
     /**
@@ -5790,6 +7163,31 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Gets the scheduling-target values for the org making the request.
+     * Errors:
+     *   - grpc.Internal: error occours when getting the scheduling-target values.
+     * </pre>
+     */
+    default void getDefaultSchedulingTarget(com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetDefaultSchedulingTargetMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Sets the scheduling-target values for the org making the request.
+     * Errors:
+     *   - grpc.Invalid: any of the given values are invalid.
+     *   - grpc.Internal: error occours when setting the scheduling-target values.
+     * </pre>
+     */
+    default void setDefaultSchedulingTarget(com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetDefaultSchedulingTargetMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Gets the performance metrics across &#64;datetime_range for shift instances in &#64;schedule_selector associated with &#64;node_selector for the org making the request.
      * Performance metrics will be generated for each of the given &#64;metric_params.
      * The &#64;interval_width_in_minutes must be a multiple of 5.
@@ -5820,6 +7218,428 @@ public final class WFMGrpc {
     default void listRequiredCallsIntervals(com.tcn.cloud.api.api.v1alpha1.wfm.ListRequiredCallsIntervalsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListRequiredCallsIntervalsRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListRequiredCallsIntervalsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Creates a Tour Pattern for &#64;shift_template_sid and the org sending the request, returning &#64;tour_pattern_sid.
+     * If there is already a Tour Pattern for &#64;shift_template_sid then the method call will fail to create a new Tour Pattern.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.AlreadyExists: A Tour Pattern already exists for &#64;shift_template_sid.
+     *   - grpc.Internal: error occurs when creating the Tour Pattern.
+     * </pre>
+     */
+    default void createTourPattern(com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourPatternReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourPatternRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateTourPatternMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Returns a list of diagnostics describing any issues with the given &#64;tour_pattern.
+     * Checks the internal consistency between the pattern and all members, as well as making sure required fields are set with valid values.
+     * Ignores sid fields, except for &#64;shift_template_sid and &#64;scheduling_activity_sid.
+     * Does not query the database to check that foreign keys exist.
+     * Returns a single diagnostic with an OK code if the given &#64;tour_pattern has no issues.
+     * The &#64;member_tour_week_patterns and &#64;member_tour_agent_collections fields must be set on &#64;tour_pattern.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Internal: error occurs when validating the tour pattern or members.
+     * </pre>
+     */
+    default void getTourPatternDiagnostics(com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetTourPatternDiagnosticsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Replaces the existing Tour Pattern and members with &#64;tour_pattern for the &#64;tour_pattern.shift_template_sid and the org sending the request.
+     * Returns the newly created Tour Pattern and members with their updated SIDs and Week Pattern Numbers.
+     * Any existing Tour Week Patterns, Tour Shift Instance and Segment Configs, Tour Agent Collections and their WFM Agent SIDs
+     *   belonging to &#64;tour_pattern.shift_template_sid will be replaced with the members on the provided &#64;tour_pattern.
+     * At least one Tour Agent Collection and one Tour Week Pattern must be provided in the member fields.
+     * If the tour pattern data or members have issues that prevent them from being persisted, a list of diagnostics will be returned describing the issues that must be resolved.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.NotFound: the &#64;tour_pattern.shift_template_sid does not exist.
+     *   - grpc.Internal: error occurs when upserting the tour pattern or members.
+     * </pre>
+     */
+    default void upsertTourPatternWithMembers(com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpsertTourPatternWithMembersMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Gets the Tour Pattern belonging to &#64;shift_template_sid and the org sending the request.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.NotFound: the requested Tour Pattern does not exist.
+     *   - grpc.Internal: error occurs when getting the data.
+     * </pre>
+     */
+    default void getTourPattern(com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetTourPatternMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Gets the Tour Pattern belonging to &#64;shift_template_sid and the org sending the request.
+     * The &#64;tour_pattern will be returned with all member entities.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.NotFound: the requested Tour Pattern does not exist.
+     *   - grpc.Internal: error occurs when getting the data.
+     * </pre>
+     */
+    default void getTourPatternWithMembers(com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternWithMembersReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternWithMembersRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetTourPatternWithMembersMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Deletes the Tour Pattern belonging to &#64;tour_pattern_sid and the org sending the request.
+     * Any member Tour Week Patterns or Agent Collections will be deleted as well.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when deleting the data or it's children.
+     * </pre>
+     */
+    default void deleteTourPattern(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourPatternReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourPatternRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteTourPatternMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Creates a Tour Week Pattern for &#64;tour_pattern_sid for the org sending the request, returning &#64;tour_week_pattern_sid.
+     * The newly created Tour Week Pattern will be placed at the end of the existing sequence of tour week patterns for &#64;tour_pattern_sid.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.NotFound: the given &#64;tour_pattern_sid does not exist for the org sending the request.
+     *   - grpc.Internal: error occurs when creating the Tour Week Pattern.
+     * </pre>
+     */
+    default void createTourWeekPattern(com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourWeekPatternReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourWeekPatternRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateTourWeekPatternMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Lists the Tour Week Patterns with &#64;tour_pattern_sid for the org sending the request
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when getting the Tour Week Patterns.
+     * </pre>
+     */
+    default void listTourWeekPatterns(com.tcn.cloud.api.api.v1alpha1.wfm.ListTourWeekPatternsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListTourWeekPatternsRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListTourWeekPatternsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Deletes the Tour Week Patterns with the given &#64;tour_week_pattern_sids for the org sending the request.
+     * Any Tour Week Instance or Segment Configs using &#64;tour_week_pattern_sids will be deleted.
+     * Request will error if any &#64;tour_week_pattern_sids are in use by a Tour Agent Collection, as those must be removed first.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.FailedPrecondition: a &#64;tour_week_pattern_sid is in use by a Tour Agent Collection.
+     *   - grpc.Internal: error occurs when deleting the tour week patterns or configs.
+     * </pre>
+     */
+    default void deleteTourWeekPatterns(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourWeekPatternsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourWeekPatternsRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteTourWeekPatternsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Creates the &#64;tour_shift_instance_config for the org sending the request, returning &#64;tour_shift_instance_config_sid.
+     * The given &#64;tour_shift_instance_config will not be created if it will overlap another tour shift instance config belonging to &#64;tour_week_pattern_sid.
+     * The &#64;member_tour_shift_segment_configs field will be ignored, and will not be created if passed through this endpoint.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid or a preexisting tour shift instance config would overlap &#64;tour_shift_instance_config.
+     *   - grpc.Internal: error occurs when creating the data.
+     * </pre>
+     */
+    default void createTourShiftInstanceConfig(com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourShiftInstanceConfigReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourShiftInstanceConfigRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateTourShiftInstanceConfigMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Updates the &#64;tour_shift_instance_config for the org sending the request, returning &#64;tour_shift_instance_config_sid.
+     * The given &#64;tour_shift_instance_config will not be created if it will overlap another tour shift instance config belonging to &#64;tour_week_pattern_sid.
+     * The &#64;member_tour_shift_segment_configs field will be ignored, and will not be updated if passed through this endpoint.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid or a preexisting Tour Shift Instance Config would overlap &#64;tour_shift_instance_config.
+     *   - grpc.Internal: error occurs when updating the data.
+     * </pre>
+     */
+    default void updateTourShiftInstanceConfig(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourShiftInstanceConfigReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourShiftInstanceConfigRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateTourShiftInstanceConfigMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Lists the Tour Shift Instance Configs belonging to &#64;tour_week_pattern_sids for the org sending the request.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when getting the Tour Shift Instance Configs.
+     * </pre>
+     */
+    default void listTourShiftInstanceConfigs(com.tcn.cloud.api.api.v1alpha1.wfm.ListTourShiftInstanceConfigsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListTourShiftInstanceConfigsRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListTourShiftInstanceConfigsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Deletes the Tour Shift Instance Configs matching &#64;tour_shift_instance_config_sids for the org sending the request.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when getting the Tour Shift Instance Configs.
+     * </pre>
+     */
+    default void deleteTourShiftInstanceConfigs(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourShiftInstanceConfigsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourShiftInstanceConfigsRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteTourShiftInstanceConfigsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Creates the given &#64;tour_shift_segment_config for the org sending the request, returning &#64;tour_shift_segment_config_sid.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.NotFound: the &#64;tour_shift_instance_config_sid does not exist for the org sending the request.
+     *   - grpc.Internal: error occurs when creating the entity.
+     * </pre>
+     */
+    default void createTourShiftSegmentConfig(com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourShiftSegmentConfigReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourShiftSegmentConfigRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateTourShiftSegmentConfigMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Updates the given &#64;tour_shift_segment_config matching &#64;tour_shift_segment_config_sid for the org sending the request.
+     * If the updated Tour Shift Segment Config overlaps another segment or does not fit within the parent Tour Shift Instance Config the update will fail.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid or the resulting update would result in a conflict.
+     *   - grpc.NotFound: the &#64;tour_shift_instance_config_sid does not exist for the org sending the request.
+     *   - grpc.Internal: error occurs when updating the entity.
+     * </pre>
+     */
+    default void updateTourShiftSegmentConfig(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourShiftSegmentConfigReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourShiftSegmentConfigRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateTourShiftSegmentConfigMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Lists the Tour Shift Segment Configs belonging to &#64;tour_shift_instance_config_sids for the org sending the request.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when getting the Tour Shift Segment Configs.
+     * </pre>
+     */
+    default void listTourShiftSegmentConfigs(com.tcn.cloud.api.api.v1alpha1.wfm.ListTourShiftSegmentConfigsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListTourShiftSegmentConfigsRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListTourShiftSegmentConfigsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Deletes the Tour Shift Segment Configs associated with the given &#64;tour_shift_segment_config_sids for the org sending the request.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when deleting the Tour Shift Segment Configs.
+     * </pre>
+     */
+    default void deleteTourShiftSegmentConfigs(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourShiftSegmentConfigsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourShiftSegmentConfigsRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteTourShiftSegmentConfigsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Creates the given &#64;tour_agent_collection for the org sending the request and return the &#64;tour_agent_collection_sid.
+     * The &#64;wfm_agent_sids will be ignored and will not be created through this endpoint.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.AlreadyExists: the first_week_pattern_number for &#64;tour_pattern_sid is already in use by another tour agent collection.
+     *   - grpc.NotFound: the given &#64;tour_pattern_sid does not exist for the org sending the request.
+     *   - grpc.Internal: error occurs when creating the entity.
+     * </pre>
+     */
+    default void createTourAgentCollection(com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourAgentCollectionReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourAgentCollectionRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateTourAgentCollectionMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Updates the given &#64;tour_agent_collection matching the &#64;tour_agent_collection_sid for the org sending the request.
+     * The &#64;wfm_agent_sids will be ignored and will not be updated through this endpoint.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.AlreadyExists: the first_week_pattern_number for &#64;tour_pattern_sid is already in use by another tour agent collection.
+     *   - grpc.NotFound: the given &#64;tour_pattern_sid does not exist for the org sending the request.
+     *   - grpc.Internal: error occurs when updating the entity.
+     * </pre>
+     */
+    default void updateTourAgentCollection(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourAgentCollectionReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourAgentCollectionRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateTourAgentCollectionMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Lists the Tour Agent Collections belonging to &#64;tour_pattern_sid for the org sending the request.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when getting the tour agent collections.
+     * </pre>
+     */
+    default void listTourAgentCollections(com.tcn.cloud.api.api.v1alpha1.wfm.ListTourAgentCollectionsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListTourAgentCollectionsRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListTourAgentCollectionsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Deletes the Tour Agent collections matching &#64;tour_agent_collection_sids for the org sending the request.
+     * Any existing associations with WFM Agent Sids will be deleted as well.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when deleting the tour agent collections.
+     * </pre>
+     */
+    default void deleteTourAgentCollections(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourAgentCollectionsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourAgentCollectionsRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteTourAgentCollectionsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Creates an assocation between the &#64;tour_agent_collection_sid and the &#64;wfm_agent_sids for the org sending the request.
+     * If there is already an association between any of the &#64;wfm_agent_sids and the Tour Pattern that &#64;tour_agent_collection_sid belongs to, the method will fail and no associations will be created.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid
+     *   - grpc.AlreadyExists: an association already exists for at least one SID in &#64;wfm_agent_sids.
+     *   - grpc.Internal: error occurs when creating the association.
+     * </pre>
+     */
+    default void createTourAgentCollectionWFMAgents(com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourAgentCollectionWFMAgentsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourAgentCollectionWFMAgentsRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateTourAgentCollectionWFMAgentsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Lists the WFM Agent SIDs belonging to &#64;tour_agent_collection_sids for the org sending the request.
+     * The resulting sids will be returned in &#64;wfm_agent_pairings each containing an &#64;agent_collection_sid and &#64;wfm_agent_sids.
+     * If no agents are found for a sid in the given &#64;tour_agent_collection_sids, that &#64;agent_collection_sid will have an empty slice in &#64;wfm_agent_sids.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when getting the tour agent collections.
+     * </pre>
+     */
+    default void listTourAgentCollectionWFMAgents(com.tcn.cloud.api.api.v1alpha1.wfm.ListTourAgentCollectionWFMAgentsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListTourAgentCollectionWFMAgentsRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListTourAgentCollectionWFMAgentsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Deletes association between the &#64;wfm_agent_sids and &#64;tour_agent_collection_sid for the org sending the request.
+     * If no &#64;wfm_agent_sids are provided, all existing &#64;wfm_agent_sids for the given &#64;tour_agent_collection_sid will be deleted.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.NotFound: there are no WFM Agent associations to delete for &#64;tour_agent_collection_sid.
+     *   - grpc.Internal: error occurs when getting the tour agent collections.
+     * </pre>
+     */
+    default void deleteTourAgentCollectionWFMAgents(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourAgentCollectionWFMAgentsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourAgentCollectionWFMAgentsRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteTourAgentCollectionWFMAgentsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Generates a list of tour week patterns for &#64;target_shift_template_sid and the org sending the request.
+     * Sets the member_tour_week_patterns with a tour week pattern for each of the &#64;num_weeks_in_tour.
+     * Each of the tour week patterns will be set with tour shift instances and segment configs based on
+     *   the forecasted call data over the next &#64;num_weeks_in_tour, starting on the next Monday.
+     * The returned data will not be persisted. This method will not effect any existing tour week patterns in the database.
+     * The &#64;tour_week_patterns returned by this method are intended to replace, not append, all currenly existing tour week patterns for &#64;target_shift_template_sid, once persisted.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.NotFound: there is no call center node or &#64;shift_template_sid associated with &#64;schedule_scenario_sid.
+     *   - grpc.Internal: error occurs when generating the tour week patterns.
+     * </pre>
+     */
+    default void generateTourWeekPatterns(com.tcn.cloud.api.api.v1alpha1.wfm.GenerateTourWeekPatternsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GenerateTourWeekPatternsRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGenerateTourWeekPatternsMethod(), responseObserver);
     }
   }
 
@@ -5992,17 +7812,32 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Gets the historical data for the org sending the request and the given &#64;skill_profile_sid.
+     * Gets the state of the cache for the given &#64;org_id, and if the cache's state is not_loaded, or loading_failed,
+     * it will start the loading task before returning the current state.
+     * Required permissions:
+     *  NONE
+     * Errors:
+     *  -grpc.Internal: error occurs when getting the cache info.
+     * </pre>
+     */
+    public void getClientHistoryCacheInfo(com.tcn.cloud.api.api.v1alpha1.wfm.GetClientHistoryCacheInfoReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetClientHistoryCacheInfoRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetClientHistoryCacheInfoMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Gets the historical data for the org sending the request and the given &#64;skill_profile_category.
      * It will look through the client's call history and generate the historical data by using their configured forecasting parameters (historical data period and interval width).
      * The duration of each interval will be the interval width of the org's forecasting parameters.
-     * It also applies any deltas that the client has stored for the given &#64;SkillProfileSid.
+     * It also applies any deltas that the client has stored for the given &#64;skill_profile_category, if the category is a group it will use the deltas of the skill profiles part of that group.
      * If the client has no historical data, only the deltas will be applied to the returned intervals, all other intervals will have nil averages.
-     * If any inactive skill profiles are mapped to the given &#64;skill_profile_sid, the call history and deltas of those skill profiles will be included for the historical data calculation.
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the &#64;skill_profile_sid in the request is invalid.
-     *   - grpc.NotFound: the &#64;skill_profile_sid given is not found for the org.
+     *   - grpc.Invalid: the &#64;skill_profile_category in the request is invalid.
+     *   - grpc.NotFound: the &#64;skill_profile_category given is not found for the org.
      *   - grpc.Internal: error occurs when getting the historical data.
      * </pre>
      */
@@ -6071,6 +7906,7 @@ public final class WFMGrpc {
      * The &#64;total_calls in the returned template be summed from the (&#64;training_data_start_datetime - &#64;averages_calculation_range_in_months) to &#64;training_data_end_datetime,
      * or from &#64;training_data_start_datetime to &#64;training_data_end_datetime if &#64;averages_calculation_range_in_months is 0.
      * The fixed averages fields in the call profile template, will be set to the averages that the skill profile has.
+     * DEPRECATED as of Sep/7/2023 - Use BuildCallProfileTemplate instead.
      * Required permissions:
      *   NONE
      * Errors:
@@ -6079,6 +7915,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when building the call profile template.
      * </pre>
      */
+    @java.lang.Deprecated
     public void buildCallProfileTemplateForSkillProfile(com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateForSkillProfileReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateForSkillProfileRes> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -6087,7 +7924,30 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Builds and returns a call profile template for the org sending the request and the given &#64;skill_profile_category.
+     * The template will be generated using the training data for said skill profile category using the &#64;training_data_range and &#64;averages_calculation_range_in_months
+     * from the client's saved forecasting parameters.
+     * The &#64;total_calls in the returned template be summed from the (&#64;training_data_start_datetime - &#64;averages_calculation_range_in_months) to &#64;training_data_end_datetime,
+     * or from &#64;training_data_start_datetime to &#64;training_data_end_datetime if &#64;averages_calculation_range_in_months is 0.
+     * The fixed averages fields in the call profile template, will be set to the averages that the skill profile category has.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;skill_profile_category in the request is invalid.
+     *   - grpc.NotFound: the &#64;skill_profile_category given is not found for the org.
+     *   - grpc.Internal: error occurs when building the call profile template.
+     * </pre>
+     */
+    public void buildCallProfileTemplate(com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getBuildCallProfileTemplateMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Creates a mapping entry for the &#64;inactive_skill_profile_sid to the &#64;active_skill_profile_sid for the org sending the request.
+     * DEPRECATED as of Sep/27/2023 - Use skill profile groups instead.
      * Required permissions:
      *   NONE
      * Errors:
@@ -6097,6 +7957,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when creating the inactive skill profile mapping.
      * </pre>
      */
+    @java.lang.Deprecated
     public void createInactiveSkillProfileMapping(com.tcn.cloud.api.api.v1alpha1.wfm.CreateInactiveSkillProfileMappingReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateInactiveSkillProfileMappingRes> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -6121,6 +7982,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Changes the current mapping for the given &#64;inactive_skill_profile_sid to be disconnected.
+     * DEPRECATED as of Sep/27/2023 - Use skill profile groups instead.
      * Required permissions:
      *   NONE
      * Errors:
@@ -6130,10 +7992,82 @@ public final class WFMGrpc {
      *				            the given &#64;inactive_skill_profile_sid is of an active skill profile.
      * </pre>
      */
+    @java.lang.Deprecated
     public void disconnectInactiveSkillProfileMapping(com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingRes> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDisconnectInactiveSkillProfileMappingMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Creates the given &#64;skill_profile_group.
+     * &#64;skill_profile_group_sids will be ignored since associations cannot be created by this method.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;skill_profile_group in the request is invalid.
+     *   - grpc.Internal: error occurs creating the skill profile group.
+     * </pre>
+     */
+    public void createSkillProfileGroup(com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProfileGroupReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProfileGroupRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateSkillProfileGroupMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Updates the given &#64;skill_profile_group that has the &#64;skill_profile_group_sid for the org sending the request.
+     * &#64;skill_profile_group_sids will be ignored since associations cannot be updated by this method.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;skill_profile_group in the request is invalid.
+     *   - grpc.NotFound: the skill profile group to update doesn't exist.
+     *   - grpc.Internal: error occurs updating the skill profile group.
+     * </pre>
+     */
+    public void updateSkillProfileGroup(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateSkillProfileGroupMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Gets the skill profile groups that have the &#64;skill_profile_group_sids for the org sending the request.
+     * if &#64;include_inactive is true then inactive groups will also be included, otherwise only active groups will be returned.
+     * If &#64;skill_profile_group_sids is empty it will get all the skill profile groups for the org.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;skill_profile_group_sids in the request is invalid.
+     *   - grpc.Internal: error occurs getting the skill profile groups.
+     * </pre>
+     */
+    public void listSkillProfileGroups(com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfileGroupsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfileGroupsRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListSkillProfileGroupsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Updates associations of the given &#64;skill_profile_group_sid for the org sending the request.
+     * It will create the associations with the &#64;skill_profile_sids_to_associate, and remove the associations with the &#64;skill_profile_sids_to_disassociate.
+     * Only one of the skill_profile_sids fields needs to be set, but both can be set on the same request.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the values in the request are invalid.
+     *   - grpc.Internal: error occurs updating the skill profile group associations.
+     * </pre>
+     */
+    public void updateSkillProfileGroupAssociations(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupAssociationsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupAssociationsRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateSkillProfileGroupAssociationsMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -6192,12 +8126,12 @@ public final class WFMGrpc {
      * Builds a profile forecast using the provided &#64;call_profile_template.
      * The forecaster will produce intervals from the following range using the client's saved forecasting parameters:
      * (&#64;training_data_range_end_datetime - &#64;forecast_test_range_in_weeks) to &#64;forecast_range_end_datetime.
-     * The &#64;total_calls in the &#64;call_profile_template will be scaled using the same ranges as BuildCallProfileTemplateForSkillProfile.
+     * The &#64;total_calls in the &#64;call_profile_template will be scaled using the same ranges as BuildCallProfileTemplate.
      * The &#64;fixed_averages_forecast field indicates whether or not to do a fixed averages forecast.
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the &#64;skill_profile_sid or &#64;call_profile_template in the request is invalid.
+     *   - grpc.Invalid: the &#64;skill_profile_category or &#64;call_profile_template in the request is invalid.
      *   - grpc.Internal: error occurs during the building of the profile forecast.
      * </pre>
      */
@@ -6212,13 +8146,13 @@ public final class WFMGrpc {
      * Builds a profile forecast using the provided &#64;call_profile_template.
      * The forecaster will produce intervals from the following range using the client's saved forecasting parameters:
      * (&#64;training_data_range_end_datetime - &#64;forecast_test_range_in_weeks) to &#64;forecast_range_end_datetime.
-     * The &#64;total_calls in the &#64;call_profile_template will be scaled using the same ranges as BuildCallProfileTemplateForSkillProfile.
+     * The &#64;total_calls in the &#64;call_profile_template will be scaled using the same ranges as BuildCallProfileTemplate.
      * The &#64;fixed_averages_forecast field indicates whether or not to do a fixed averages forecast.
-     * It also returns the statistics of the produced forecast by using the test data of the given &#64;skill_profile_sid.
+     * It also returns the statistics of the produced forecast by using the test data of the given &#64;skill_profile_category.
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the &#64;skill_profile_sid or &#64;call_profile_template in the request is invalid.
+     *   - grpc.Invalid: the &#64;skill_profile_category or &#64;call_profile_template in the request is invalid.
      *   - grpc.Internal: error occurs during the building of the profile forecast.
      * </pre>
      */
@@ -6332,6 +8266,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Gets the forecast data intervals for the given &#64;skill_profile_sid.
+     * DEPRECATED as of Sep/13/2023 - Use ListForecastIntervals instead.
      * Required permissions:
      *   NONE
      * Errors:
@@ -6339,10 +8274,27 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when getting the forecast data intervals.
      * </pre>
      */
+    @java.lang.Deprecated
     public void listForecastIntervalsForSkillProfile(com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsForSkillProfileReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval> responseObserver) {
       io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getListForecastIntervalsForSkillProfileMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Gets the forecast data intervals for the given &#64;skill_profile_category.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;skill_profile_category in the request is invalid.
+     *   - grpc.Internal: error occurs when getting the forecast data intervals.
+     * </pre>
+     */
+    public void listForecastIntervals(com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
+          getChannel().newCall(getListForecastIntervalsMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -6453,7 +8405,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Deletes forecast data intervals/deltas based on the parameters provided.
-     * If &#64;delete_param is type skill_profile_sid, then the intervals/deltas to be deleted will be
+     * If &#64;delete_param is type skill_profile_category, then the intervals/deltas to be deleted will be
      * associated with that id. If &#64;delete_param is type interval_sids, then the intervals/deltas to be
      * deleted will be contained in the list &#64;interval_sids. The &#64;delete_type field determines which
      * table(s) in the database the intervals/deltas will be deleted from.
@@ -6526,14 +8478,15 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Calculates the averages for call characteristics using the historical data of the given &#64;skill_profile_sids and org sending the request.
+     * Calculates the averages for call characteristics using the historical data of the given &#64;skill_profile_sids, &#64;skill_profile_group_sids and org sending the request.
      * If no &#64;skill_profile_sids are given, it will calculate the averages for all skill profiles for the org sending the request.
+     * If no &#64;skill_profile_group_sids are given, it will calculate the averages for all skill profile groups for the org sending the request.
      * Averages will be weighted by the number of calls that each historical data interval has.
      * Once the averages are calculated, they will be updated in the db for those skill profiles.
      * If a nil &#64;datetime_range is given then the range used will be &#64;training_data_range_end_datetime - &#64;averages_calculation_range_in_months to the &#64;training_data_range_end_datetime from the forecasting parameters.
      * If &#64;averages_calculation_range_in_months is 0, it will use the &#64;training_data_range_start_datetime as the start datetime of the range.
-     * If &#64;exclude_skill_profiles_with_manual_averages is true, it will exclude skill profiles that have manual averages from the calculation
-     * even if those skill profiles are in &#64;skill_profile_sids.
+     * If &#64;exclude_skill_profiles_with_manual_averages is true, it will exclude skill profiles and groups that have manual averages from the calculation
+     * even if those skill profiles and groups are in &#64;skill_profile_sids or &#64;skill_profile_group_sids respectively.
      * Errors:
      *   - grpc.Internal: error occurs when calculating the averages from the historical data.
      * </pre>
@@ -6658,6 +8611,7 @@ public final class WFMGrpc {
      * Errors:
      *   - grpc.Invalid: one or more fields in the &#64;node have invalid values.
      *   - grpc.NotFound: parent location node doesn't exist or belongs to a different scenario than the one given.
+     *                    the &#64;skill_profile_category does not exist.
      *   - grpc.Internal: error occurs when creating the program node.
      * </pre>
      */
@@ -6679,12 +8633,29 @@ public final class WFMGrpc {
      *   - grpc.Invalid: one or more fields in the &#64;program_node have invalid values.
      *   - grpc.Internal: error occurs when updating the program node.
      *   - grpc.NotFound: entry to be updated doesn't exist, or the given parent &#64;location_node_sid belongs to a different scenario than the program node to update.
+     *                    the &#64;skill_profile_category does not exist.
      * </pre>
      */
     public void updateProgramNode(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateProgramNodeReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateProgramNodeRes> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateProgramNodeMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Lists the program nodes with the given &#64;program_node_sids for the org sending the request.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the given &#64;program_node_sids are invalid.
+     *   - grpc.Internal: error occurs when listing the program nodes.
+     * </pre>
+     */
+    public void listProgramNodesBySid(com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListProgramNodesBySidMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -6863,6 +8834,17 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Lists all schedulable AgentGroups on or under the given Node or ShiftTemplate.
+     * </pre>
+     */
+    public void listAgentScheduleGroups(com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentScheduleGroupsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentScheduleGroupsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListAgentScheduleGroupsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Updates the agent group corresponding to the &#64;agent_group_sid, &#64;name, and &#64;parent_entity.
      * All of the entity's parameters that are not desired to be updated must be filled with their current values.
      * The &#64;schedule_scenario_sid must be the original for this agent group since it cannot be changed.
@@ -6908,6 +8890,10 @@ public final class WFMGrpc {
      * if &#64;include_inactive is true then inactive agents will also be included, otherwise only active agents will be returned.
      * if &#64;include_skill_proficiencies is true then agents returned will include their skill proficiencies.
      * if &#64;include_agent_groups is true then the &#64;agent_groups_by_agent response field will be set with a list of agent groups correlating to each agents index in the &#64;wfm_agents field.
+     * if &#64;include_agent_groups is set to true, the &#64;agent_group_schedule_scenario_sid field must be set, so that the agent groups for the correct scenario are returned.
+     * if &#64;include_agent_groups is set to true, and &#64;agent_group_schedule_scenario_sid is not set, the agent groups will not be filtered by schedule scenario.
+     * if &#64;include_agent_groups is set to false, the &#64;agent_group_schedule_scenario_sid will be ignored.
+     * &#64;agent_group_schedule_scenario_sid does not effect which &#64;wfm_agents are returned.
      * WFM agents with no associated agent_groups will have an empty slice in agent_groups_by_agent at their correlated index.
      * Required Permissions:
      *   NONE
@@ -6956,6 +8942,24 @@ public final class WFMGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListUngroupedWFMAgentsRes> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListUngroupedWFMAgentsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Gets the wfm_agent_sids with the given &#64;tcn_agent_sids for the org sending the request.
+     * Returns a map where Key: tcn_agent_sid - Value: wfm_agent_sid.
+     * If the wfm_agent_sid is not found for any &#64;tcn_agent_sids, they will not have an entry in the returned &#64;sids.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *  - grpc.Invalid: the &#64;tcn_agent_sids are invalid.
+     *  - grpc.Internal: error occours while listing the wfm_agent_sids.
+     * </pre>
+     */
+    public void listWFMAgentSids(com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListWFMAgentSidsMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -7448,10 +9452,12 @@ public final class WFMGrpc {
      * The &#64;node_description fields may optionally be left blank.
      * The &#64;copied_from_scenario_sid field will be ignored, as it will be set to nil in the newly created scenario.
      * The &#64;creation_datetime and &#64;is_default fields will also be ignored and set as the current time and false respectively.
+     * The &#64;skill_profile_category will be associated with the created program node.
      * Required permissions:
      *   NONE
      * Errors:
      *   - grpc.Invalid: parameters in the &#64;req are invalid for the org making the request.
+     *   - grpc.NotFound: the &#64;skill_profile_category does not exist.
      *   - grpc.Internal: error occurs when creating the new scenario, or any of the node entities.
      * </pre>
      */
@@ -7803,7 +9809,7 @@ public final class WFMGrpc {
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the &#64;org_id or &#64;shift_instance_sids in the request are invalid.
+     *   - grpc.Invalid: &#64;shift_instance_sids in the request are invalid.
      *   - grpc.Internal: error occurs when listing the shift instances or their shift segments.
      * </pre>
      */
@@ -7870,6 +9876,26 @@ public final class WFMGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceV2Res> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateShiftInstanceV2Method(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Splits the &#64;shift_instance_sid into two, at the given &#64;time_to_split, returning the updated and new &#64;shift_instances.
+     * Any shift segments will be split between the two shift instances at &#64;time_to_split.
+     * If the &#64;time_to_split creates instances shorter then the minimum length specified by the shift template,
+     *   warning diagnostics will be returned and the instance will still be split.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   -grpc.Invalid: one or more fields in the request have invalid values, or &#64;time_to_split is not at least 5 minutes from the start or end of &#64;shift_instance_sid.
+     *   -grpc.NotFound: the &#64;shift_instance_sid does't exist for the org sending the request.
+     *   -grpc.Internal: error occurs when creating or updating the shift instances.
+     * </pre>
+     */
+    public void splitShiftInstance(com.tcn.cloud.api.api.v1alpha1.wfm.SplitShiftInstanceReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.SplitShiftInstanceRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getSplitShiftInstanceMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -8035,6 +10061,33 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Gets the scheduling-target values for the org making the request.
+     * Errors:
+     *   - grpc.Internal: error occours when getting the scheduling-target values.
+     * </pre>
+     */
+    public void getDefaultSchedulingTarget(com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetDefaultSchedulingTargetMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Sets the scheduling-target values for the org making the request.
+     * Errors:
+     *   - grpc.Invalid: any of the given values are invalid.
+     *   - grpc.Internal: error occours when setting the scheduling-target values.
+     * </pre>
+     */
+    public void setDefaultSchedulingTarget(com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getSetDefaultSchedulingTargetMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Gets the performance metrics across &#64;datetime_range for shift instances in &#64;schedule_selector associated with &#64;node_selector for the org making the request.
      * Performance metrics will be generated for each of the given &#64;metric_params.
      * The &#64;interval_width_in_minutes must be a multiple of 5.
@@ -8067,6 +10120,453 @@ public final class WFMGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListRequiredCallsIntervalsRes> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListRequiredCallsIntervalsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Creates a Tour Pattern for &#64;shift_template_sid and the org sending the request, returning &#64;tour_pattern_sid.
+     * If there is already a Tour Pattern for &#64;shift_template_sid then the method call will fail to create a new Tour Pattern.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.AlreadyExists: A Tour Pattern already exists for &#64;shift_template_sid.
+     *   - grpc.Internal: error occurs when creating the Tour Pattern.
+     * </pre>
+     */
+    public void createTourPattern(com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourPatternReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourPatternRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateTourPatternMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Returns a list of diagnostics describing any issues with the given &#64;tour_pattern.
+     * Checks the internal consistency between the pattern and all members, as well as making sure required fields are set with valid values.
+     * Ignores sid fields, except for &#64;shift_template_sid and &#64;scheduling_activity_sid.
+     * Does not query the database to check that foreign keys exist.
+     * Returns a single diagnostic with an OK code if the given &#64;tour_pattern has no issues.
+     * The &#64;member_tour_week_patterns and &#64;member_tour_agent_collections fields must be set on &#64;tour_pattern.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Internal: error occurs when validating the tour pattern or members.
+     * </pre>
+     */
+    public void getTourPatternDiagnostics(com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetTourPatternDiagnosticsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Replaces the existing Tour Pattern and members with &#64;tour_pattern for the &#64;tour_pattern.shift_template_sid and the org sending the request.
+     * Returns the newly created Tour Pattern and members with their updated SIDs and Week Pattern Numbers.
+     * Any existing Tour Week Patterns, Tour Shift Instance and Segment Configs, Tour Agent Collections and their WFM Agent SIDs
+     *   belonging to &#64;tour_pattern.shift_template_sid will be replaced with the members on the provided &#64;tour_pattern.
+     * At least one Tour Agent Collection and one Tour Week Pattern must be provided in the member fields.
+     * If the tour pattern data or members have issues that prevent them from being persisted, a list of diagnostics will be returned describing the issues that must be resolved.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.NotFound: the &#64;tour_pattern.shift_template_sid does not exist.
+     *   - grpc.Internal: error occurs when upserting the tour pattern or members.
+     * </pre>
+     */
+    public void upsertTourPatternWithMembers(com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpsertTourPatternWithMembersMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Gets the Tour Pattern belonging to &#64;shift_template_sid and the org sending the request.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.NotFound: the requested Tour Pattern does not exist.
+     *   - grpc.Internal: error occurs when getting the data.
+     * </pre>
+     */
+    public void getTourPattern(com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetTourPatternMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Gets the Tour Pattern belonging to &#64;shift_template_sid and the org sending the request.
+     * The &#64;tour_pattern will be returned with all member entities.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.NotFound: the requested Tour Pattern does not exist.
+     *   - grpc.Internal: error occurs when getting the data.
+     * </pre>
+     */
+    public void getTourPatternWithMembers(com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternWithMembersReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternWithMembersRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetTourPatternWithMembersMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Deletes the Tour Pattern belonging to &#64;tour_pattern_sid and the org sending the request.
+     * Any member Tour Week Patterns or Agent Collections will be deleted as well.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when deleting the data or it's children.
+     * </pre>
+     */
+    public void deleteTourPattern(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourPatternReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourPatternRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteTourPatternMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Creates a Tour Week Pattern for &#64;tour_pattern_sid for the org sending the request, returning &#64;tour_week_pattern_sid.
+     * The newly created Tour Week Pattern will be placed at the end of the existing sequence of tour week patterns for &#64;tour_pattern_sid.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.NotFound: the given &#64;tour_pattern_sid does not exist for the org sending the request.
+     *   - grpc.Internal: error occurs when creating the Tour Week Pattern.
+     * </pre>
+     */
+    public void createTourWeekPattern(com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourWeekPatternReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourWeekPatternRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateTourWeekPatternMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Lists the Tour Week Patterns with &#64;tour_pattern_sid for the org sending the request
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when getting the Tour Week Patterns.
+     * </pre>
+     */
+    public void listTourWeekPatterns(com.tcn.cloud.api.api.v1alpha1.wfm.ListTourWeekPatternsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListTourWeekPatternsRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListTourWeekPatternsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Deletes the Tour Week Patterns with the given &#64;tour_week_pattern_sids for the org sending the request.
+     * Any Tour Week Instance or Segment Configs using &#64;tour_week_pattern_sids will be deleted.
+     * Request will error if any &#64;tour_week_pattern_sids are in use by a Tour Agent Collection, as those must be removed first.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.FailedPrecondition: a &#64;tour_week_pattern_sid is in use by a Tour Agent Collection.
+     *   - grpc.Internal: error occurs when deleting the tour week patterns or configs.
+     * </pre>
+     */
+    public void deleteTourWeekPatterns(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourWeekPatternsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourWeekPatternsRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteTourWeekPatternsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Creates the &#64;tour_shift_instance_config for the org sending the request, returning &#64;tour_shift_instance_config_sid.
+     * The given &#64;tour_shift_instance_config will not be created if it will overlap another tour shift instance config belonging to &#64;tour_week_pattern_sid.
+     * The &#64;member_tour_shift_segment_configs field will be ignored, and will not be created if passed through this endpoint.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid or a preexisting tour shift instance config would overlap &#64;tour_shift_instance_config.
+     *   - grpc.Internal: error occurs when creating the data.
+     * </pre>
+     */
+    public void createTourShiftInstanceConfig(com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourShiftInstanceConfigReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourShiftInstanceConfigRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateTourShiftInstanceConfigMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Updates the &#64;tour_shift_instance_config for the org sending the request, returning &#64;tour_shift_instance_config_sid.
+     * The given &#64;tour_shift_instance_config will not be created if it will overlap another tour shift instance config belonging to &#64;tour_week_pattern_sid.
+     * The &#64;member_tour_shift_segment_configs field will be ignored, and will not be updated if passed through this endpoint.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid or a preexisting Tour Shift Instance Config would overlap &#64;tour_shift_instance_config.
+     *   - grpc.Internal: error occurs when updating the data.
+     * </pre>
+     */
+    public void updateTourShiftInstanceConfig(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourShiftInstanceConfigReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourShiftInstanceConfigRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateTourShiftInstanceConfigMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Lists the Tour Shift Instance Configs belonging to &#64;tour_week_pattern_sids for the org sending the request.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when getting the Tour Shift Instance Configs.
+     * </pre>
+     */
+    public void listTourShiftInstanceConfigs(com.tcn.cloud.api.api.v1alpha1.wfm.ListTourShiftInstanceConfigsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListTourShiftInstanceConfigsRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListTourShiftInstanceConfigsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Deletes the Tour Shift Instance Configs matching &#64;tour_shift_instance_config_sids for the org sending the request.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when getting the Tour Shift Instance Configs.
+     * </pre>
+     */
+    public void deleteTourShiftInstanceConfigs(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourShiftInstanceConfigsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourShiftInstanceConfigsRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteTourShiftInstanceConfigsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Creates the given &#64;tour_shift_segment_config for the org sending the request, returning &#64;tour_shift_segment_config_sid.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.NotFound: the &#64;tour_shift_instance_config_sid does not exist for the org sending the request.
+     *   - grpc.Internal: error occurs when creating the entity.
+     * </pre>
+     */
+    public void createTourShiftSegmentConfig(com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourShiftSegmentConfigReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourShiftSegmentConfigRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateTourShiftSegmentConfigMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Updates the given &#64;tour_shift_segment_config matching &#64;tour_shift_segment_config_sid for the org sending the request.
+     * If the updated Tour Shift Segment Config overlaps another segment or does not fit within the parent Tour Shift Instance Config the update will fail.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid or the resulting update would result in a conflict.
+     *   - grpc.NotFound: the &#64;tour_shift_instance_config_sid does not exist for the org sending the request.
+     *   - grpc.Internal: error occurs when updating the entity.
+     * </pre>
+     */
+    public void updateTourShiftSegmentConfig(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourShiftSegmentConfigReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourShiftSegmentConfigRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateTourShiftSegmentConfigMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Lists the Tour Shift Segment Configs belonging to &#64;tour_shift_instance_config_sids for the org sending the request.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when getting the Tour Shift Segment Configs.
+     * </pre>
+     */
+    public void listTourShiftSegmentConfigs(com.tcn.cloud.api.api.v1alpha1.wfm.ListTourShiftSegmentConfigsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListTourShiftSegmentConfigsRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListTourShiftSegmentConfigsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Deletes the Tour Shift Segment Configs associated with the given &#64;tour_shift_segment_config_sids for the org sending the request.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when deleting the Tour Shift Segment Configs.
+     * </pre>
+     */
+    public void deleteTourShiftSegmentConfigs(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourShiftSegmentConfigsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourShiftSegmentConfigsRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteTourShiftSegmentConfigsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Creates the given &#64;tour_agent_collection for the org sending the request and return the &#64;tour_agent_collection_sid.
+     * The &#64;wfm_agent_sids will be ignored and will not be created through this endpoint.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.AlreadyExists: the first_week_pattern_number for &#64;tour_pattern_sid is already in use by another tour agent collection.
+     *   - grpc.NotFound: the given &#64;tour_pattern_sid does not exist for the org sending the request.
+     *   - grpc.Internal: error occurs when creating the entity.
+     * </pre>
+     */
+    public void createTourAgentCollection(com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourAgentCollectionReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourAgentCollectionRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateTourAgentCollectionMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Updates the given &#64;tour_agent_collection matching the &#64;tour_agent_collection_sid for the org sending the request.
+     * The &#64;wfm_agent_sids will be ignored and will not be updated through this endpoint.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.AlreadyExists: the first_week_pattern_number for &#64;tour_pattern_sid is already in use by another tour agent collection.
+     *   - grpc.NotFound: the given &#64;tour_pattern_sid does not exist for the org sending the request.
+     *   - grpc.Internal: error occurs when updating the entity.
+     * </pre>
+     */
+    public void updateTourAgentCollection(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourAgentCollectionReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourAgentCollectionRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateTourAgentCollectionMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Lists the Tour Agent Collections belonging to &#64;tour_pattern_sid for the org sending the request.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when getting the tour agent collections.
+     * </pre>
+     */
+    public void listTourAgentCollections(com.tcn.cloud.api.api.v1alpha1.wfm.ListTourAgentCollectionsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListTourAgentCollectionsRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListTourAgentCollectionsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Deletes the Tour Agent collections matching &#64;tour_agent_collection_sids for the org sending the request.
+     * Any existing associations with WFM Agent Sids will be deleted as well.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when deleting the tour agent collections.
+     * </pre>
+     */
+    public void deleteTourAgentCollections(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourAgentCollectionsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourAgentCollectionsRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteTourAgentCollectionsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Creates an assocation between the &#64;tour_agent_collection_sid and the &#64;wfm_agent_sids for the org sending the request.
+     * If there is already an association between any of the &#64;wfm_agent_sids and the Tour Pattern that &#64;tour_agent_collection_sid belongs to, the method will fail and no associations will be created.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid
+     *   - grpc.AlreadyExists: an association already exists for at least one SID in &#64;wfm_agent_sids.
+     *   - grpc.Internal: error occurs when creating the association.
+     * </pre>
+     */
+    public void createTourAgentCollectionWFMAgents(com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourAgentCollectionWFMAgentsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourAgentCollectionWFMAgentsRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateTourAgentCollectionWFMAgentsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Lists the WFM Agent SIDs belonging to &#64;tour_agent_collection_sids for the org sending the request.
+     * The resulting sids will be returned in &#64;wfm_agent_pairings each containing an &#64;agent_collection_sid and &#64;wfm_agent_sids.
+     * If no agents are found for a sid in the given &#64;tour_agent_collection_sids, that &#64;agent_collection_sid will have an empty slice in &#64;wfm_agent_sids.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when getting the tour agent collections.
+     * </pre>
+     */
+    public void listTourAgentCollectionWFMAgents(com.tcn.cloud.api.api.v1alpha1.wfm.ListTourAgentCollectionWFMAgentsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListTourAgentCollectionWFMAgentsRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListTourAgentCollectionWFMAgentsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Deletes association between the &#64;wfm_agent_sids and &#64;tour_agent_collection_sid for the org sending the request.
+     * If no &#64;wfm_agent_sids are provided, all existing &#64;wfm_agent_sids for the given &#64;tour_agent_collection_sid will be deleted.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.NotFound: there are no WFM Agent associations to delete for &#64;tour_agent_collection_sid.
+     *   - grpc.Internal: error occurs when getting the tour agent collections.
+     * </pre>
+     */
+    public void deleteTourAgentCollectionWFMAgents(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourAgentCollectionWFMAgentsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourAgentCollectionWFMAgentsRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteTourAgentCollectionWFMAgentsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Generates a list of tour week patterns for &#64;target_shift_template_sid and the org sending the request.
+     * Sets the member_tour_week_patterns with a tour week pattern for each of the &#64;num_weeks_in_tour.
+     * Each of the tour week patterns will be set with tour shift instances and segment configs based on
+     *   the forecasted call data over the next &#64;num_weeks_in_tour, starting on the next Monday.
+     * The returned data will not be persisted. This method will not effect any existing tour week patterns in the database.
+     * The &#64;tour_week_patterns returned by this method are intended to replace, not append, all currenly existing tour week patterns for &#64;target_shift_template_sid, once persisted.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.NotFound: there is no call center node or &#64;shift_template_sid associated with &#64;schedule_scenario_sid.
+     *   - grpc.Internal: error occurs when generating the tour week patterns.
+     * </pre>
+     */
+    public void generateTourWeekPatterns(com.tcn.cloud.api.api.v1alpha1.wfm.GenerateTourWeekPatternsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GenerateTourWeekPatternsRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGenerateTourWeekPatternsMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -8217,17 +10717,31 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Gets the historical data for the org sending the request and the given &#64;skill_profile_sid.
+     * Gets the state of the cache for the given &#64;org_id, and if the cache's state is not_loaded, or loading_failed,
+     * it will start the loading task before returning the current state.
+     * Required permissions:
+     *  NONE
+     * Errors:
+     *  -grpc.Internal: error occurs when getting the cache info.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.GetClientHistoryCacheInfoRes getClientHistoryCacheInfo(com.tcn.cloud.api.api.v1alpha1.wfm.GetClientHistoryCacheInfoReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetClientHistoryCacheInfoMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Gets the historical data for the org sending the request and the given &#64;skill_profile_category.
      * It will look through the client's call history and generate the historical data by using their configured forecasting parameters (historical data period and interval width).
      * The duration of each interval will be the interval width of the org's forecasting parameters.
-     * It also applies any deltas that the client has stored for the given &#64;SkillProfileSid.
+     * It also applies any deltas that the client has stored for the given &#64;skill_profile_category, if the category is a group it will use the deltas of the skill profiles part of that group.
      * If the client has no historical data, only the deltas will be applied to the returned intervals, all other intervals will have nil averages.
-     * If any inactive skill profiles are mapped to the given &#64;skill_profile_sid, the call history and deltas of those skill profiles will be included for the historical data calculation.
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the &#64;skill_profile_sid in the request is invalid.
-     *   - grpc.NotFound: the &#64;skill_profile_sid given is not found for the org.
+     *   - grpc.Invalid: the &#64;skill_profile_category in the request is invalid.
+     *   - grpc.NotFound: the &#64;skill_profile_category given is not found for the org.
      *   - grpc.Internal: error occurs when getting the historical data.
      * </pre>
      */
@@ -8292,6 +10806,7 @@ public final class WFMGrpc {
      * The &#64;total_calls in the returned template be summed from the (&#64;training_data_start_datetime - &#64;averages_calculation_range_in_months) to &#64;training_data_end_datetime,
      * or from &#64;training_data_start_datetime to &#64;training_data_end_datetime if &#64;averages_calculation_range_in_months is 0.
      * The fixed averages fields in the call profile template, will be set to the averages that the skill profile has.
+     * DEPRECATED as of Sep/7/2023 - Use BuildCallProfileTemplate instead.
      * Required permissions:
      *   NONE
      * Errors:
@@ -8300,6 +10815,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when building the call profile template.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateForSkillProfileRes buildCallProfileTemplateForSkillProfile(com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateForSkillProfileReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getBuildCallProfileTemplateForSkillProfileMethod(), getCallOptions(), request);
@@ -8307,7 +10823,29 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Builds and returns a call profile template for the org sending the request and the given &#64;skill_profile_category.
+     * The template will be generated using the training data for said skill profile category using the &#64;training_data_range and &#64;averages_calculation_range_in_months
+     * from the client's saved forecasting parameters.
+     * The &#64;total_calls in the returned template be summed from the (&#64;training_data_start_datetime - &#64;averages_calculation_range_in_months) to &#64;training_data_end_datetime,
+     * or from &#64;training_data_start_datetime to &#64;training_data_end_datetime if &#64;averages_calculation_range_in_months is 0.
+     * The fixed averages fields in the call profile template, will be set to the averages that the skill profile category has.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;skill_profile_category in the request is invalid.
+     *   - grpc.NotFound: the &#64;skill_profile_category given is not found for the org.
+     *   - grpc.Internal: error occurs when building the call profile template.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateRes buildCallProfileTemplate(com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getBuildCallProfileTemplateMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Creates a mapping entry for the &#64;inactive_skill_profile_sid to the &#64;active_skill_profile_sid for the org sending the request.
+     * DEPRECATED as of Sep/27/2023 - Use skill profile groups instead.
      * Required permissions:
      *   NONE
      * Errors:
@@ -8317,6 +10855,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when creating the inactive skill profile mapping.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.tcn.cloud.api.api.v1alpha1.wfm.CreateInactiveSkillProfileMappingRes createInactiveSkillProfileMapping(com.tcn.cloud.api.api.v1alpha1.wfm.CreateInactiveSkillProfileMappingReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateInactiveSkillProfileMappingMethod(), getCallOptions(), request);
@@ -8339,6 +10878,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Changes the current mapping for the given &#64;inactive_skill_profile_sid to be disconnected.
+     * DEPRECATED as of Sep/27/2023 - Use skill profile groups instead.
      * Required permissions:
      *   NONE
      * Errors:
@@ -8348,9 +10888,77 @@ public final class WFMGrpc {
      *				            the given &#64;inactive_skill_profile_sid is of an active skill profile.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingRes disconnectInactiveSkillProfileMapping(com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDisconnectInactiveSkillProfileMappingMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Creates the given &#64;skill_profile_group.
+     * &#64;skill_profile_group_sids will be ignored since associations cannot be created by this method.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;skill_profile_group in the request is invalid.
+     *   - grpc.Internal: error occurs creating the skill profile group.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProfileGroupRes createSkillProfileGroup(com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProfileGroupReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateSkillProfileGroupMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Updates the given &#64;skill_profile_group that has the &#64;skill_profile_group_sid for the org sending the request.
+     * &#64;skill_profile_group_sids will be ignored since associations cannot be updated by this method.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;skill_profile_group in the request is invalid.
+     *   - grpc.NotFound: the skill profile group to update doesn't exist.
+     *   - grpc.Internal: error occurs updating the skill profile group.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupRes updateSkillProfileGroup(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateSkillProfileGroupMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Gets the skill profile groups that have the &#64;skill_profile_group_sids for the org sending the request.
+     * if &#64;include_inactive is true then inactive groups will also be included, otherwise only active groups will be returned.
+     * If &#64;skill_profile_group_sids is empty it will get all the skill profile groups for the org.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;skill_profile_group_sids in the request is invalid.
+     *   - grpc.Internal: error occurs getting the skill profile groups.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfileGroupsRes listSkillProfileGroups(com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfileGroupsReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListSkillProfileGroupsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Updates associations of the given &#64;skill_profile_group_sid for the org sending the request.
+     * It will create the associations with the &#64;skill_profile_sids_to_associate, and remove the associations with the &#64;skill_profile_sids_to_disassociate.
+     * Only one of the skill_profile_sids fields needs to be set, but both can be set on the same request.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the values in the request are invalid.
+     *   - grpc.Internal: error occurs updating the skill profile group associations.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupAssociationsRes updateSkillProfileGroupAssociations(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupAssociationsReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateSkillProfileGroupAssociationsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -8406,12 +11014,12 @@ public final class WFMGrpc {
      * Builds a profile forecast using the provided &#64;call_profile_template.
      * The forecaster will produce intervals from the following range using the client's saved forecasting parameters:
      * (&#64;training_data_range_end_datetime - &#64;forecast_test_range_in_weeks) to &#64;forecast_range_end_datetime.
-     * The &#64;total_calls in the &#64;call_profile_template will be scaled using the same ranges as BuildCallProfileTemplateForSkillProfile.
+     * The &#64;total_calls in the &#64;call_profile_template will be scaled using the same ranges as BuildCallProfileTemplate.
      * The &#64;fixed_averages_forecast field indicates whether or not to do a fixed averages forecast.
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the &#64;skill_profile_sid or &#64;call_profile_template in the request is invalid.
+     *   - grpc.Invalid: the &#64;skill_profile_category or &#64;call_profile_template in the request is invalid.
      *   - grpc.Internal: error occurs during the building of the profile forecast.
      * </pre>
      */
@@ -8426,13 +11034,13 @@ public final class WFMGrpc {
      * Builds a profile forecast using the provided &#64;call_profile_template.
      * The forecaster will produce intervals from the following range using the client's saved forecasting parameters:
      * (&#64;training_data_range_end_datetime - &#64;forecast_test_range_in_weeks) to &#64;forecast_range_end_datetime.
-     * The &#64;total_calls in the &#64;call_profile_template will be scaled using the same ranges as BuildCallProfileTemplateForSkillProfile.
+     * The &#64;total_calls in the &#64;call_profile_template will be scaled using the same ranges as BuildCallProfileTemplate.
      * The &#64;fixed_averages_forecast field indicates whether or not to do a fixed averages forecast.
-     * It also returns the statistics of the produced forecast by using the test data of the given &#64;skill_profile_sid.
+     * It also returns the statistics of the produced forecast by using the test data of the given &#64;skill_profile_category.
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the &#64;skill_profile_sid or &#64;call_profile_template in the request is invalid.
+     *   - grpc.Invalid: the &#64;skill_profile_category or &#64;call_profile_template in the request is invalid.
      *   - grpc.Internal: error occurs during the building of the profile forecast.
      * </pre>
      */
@@ -8540,6 +11148,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Gets the forecast data intervals for the given &#64;skill_profile_sid.
+     * DEPRECATED as of Sep/13/2023 - Use ListForecastIntervals instead.
      * Required permissions:
      *   NONE
      * Errors:
@@ -8547,10 +11156,27 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when getting the forecast data intervals.
      * </pre>
      */
+    @java.lang.Deprecated
     public java.util.Iterator<com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval> listForecastIntervalsForSkillProfile(
         com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsForSkillProfileReq request) {
       return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getListForecastIntervalsForSkillProfileMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Gets the forecast data intervals for the given &#64;skill_profile_category.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;skill_profile_category in the request is invalid.
+     *   - grpc.Internal: error occurs when getting the forecast data intervals.
+     * </pre>
+     */
+    public java.util.Iterator<com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval> listForecastIntervals(
+        com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsReq request) {
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
+          getChannel(), getListForecastIntervalsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -8657,7 +11283,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Deletes forecast data intervals/deltas based on the parameters provided.
-     * If &#64;delete_param is type skill_profile_sid, then the intervals/deltas to be deleted will be
+     * If &#64;delete_param is type skill_profile_category, then the intervals/deltas to be deleted will be
      * associated with that id. If &#64;delete_param is type interval_sids, then the intervals/deltas to be
      * deleted will be contained in the list &#64;interval_sids. The &#64;delete_type field determines which
      * table(s) in the database the intervals/deltas will be deleted from.
@@ -8726,14 +11352,15 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Calculates the averages for call characteristics using the historical data of the given &#64;skill_profile_sids and org sending the request.
+     * Calculates the averages for call characteristics using the historical data of the given &#64;skill_profile_sids, &#64;skill_profile_group_sids and org sending the request.
      * If no &#64;skill_profile_sids are given, it will calculate the averages for all skill profiles for the org sending the request.
+     * If no &#64;skill_profile_group_sids are given, it will calculate the averages for all skill profile groups for the org sending the request.
      * Averages will be weighted by the number of calls that each historical data interval has.
      * Once the averages are calculated, they will be updated in the db for those skill profiles.
      * If a nil &#64;datetime_range is given then the range used will be &#64;training_data_range_end_datetime - &#64;averages_calculation_range_in_months to the &#64;training_data_range_end_datetime from the forecasting parameters.
      * If &#64;averages_calculation_range_in_months is 0, it will use the &#64;training_data_range_start_datetime as the start datetime of the range.
-     * If &#64;exclude_skill_profiles_with_manual_averages is true, it will exclude skill profiles that have manual averages from the calculation
-     * even if those skill profiles are in &#64;skill_profile_sids.
+     * If &#64;exclude_skill_profiles_with_manual_averages is true, it will exclude skill profiles and groups that have manual averages from the calculation
+     * even if those skill profiles and groups are in &#64;skill_profile_sids or &#64;skill_profile_group_sids respectively.
      * Errors:
      *   - grpc.Internal: error occurs when calculating the averages from the historical data.
      * </pre>
@@ -8852,6 +11479,7 @@ public final class WFMGrpc {
      * Errors:
      *   - grpc.Invalid: one or more fields in the &#64;node have invalid values.
      *   - grpc.NotFound: parent location node doesn't exist or belongs to a different scenario than the one given.
+     *                    the &#64;skill_profile_category does not exist.
      *   - grpc.Internal: error occurs when creating the program node.
      * </pre>
      */
@@ -8872,11 +11500,27 @@ public final class WFMGrpc {
      *   - grpc.Invalid: one or more fields in the &#64;program_node have invalid values.
      *   - grpc.Internal: error occurs when updating the program node.
      *   - grpc.NotFound: entry to be updated doesn't exist, or the given parent &#64;location_node_sid belongs to a different scenario than the program node to update.
+     *                    the &#64;skill_profile_category does not exist.
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.UpdateProgramNodeRes updateProgramNode(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateProgramNodeReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateProgramNodeMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Lists the program nodes with the given &#64;program_node_sids for the org sending the request.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the given &#64;program_node_sids are invalid.
+     *   - grpc.Internal: error occurs when listing the program nodes.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidRes listProgramNodesBySid(com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListProgramNodesBySidMethod(), getCallOptions(), request);
     }
 
     /**
@@ -9046,6 +11690,16 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Lists all schedulable AgentGroups on or under the given Node or ShiftTemplate.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentScheduleGroupsResponse listAgentScheduleGroups(com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentScheduleGroupsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListAgentScheduleGroupsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Updates the agent group corresponding to the &#64;agent_group_sid, &#64;name, and &#64;parent_entity.
      * All of the entity's parameters that are not desired to be updated must be filled with their current values.
      * The &#64;schedule_scenario_sid must be the original for this agent group since it cannot be changed.
@@ -9089,6 +11743,10 @@ public final class WFMGrpc {
      * if &#64;include_inactive is true then inactive agents will also be included, otherwise only active agents will be returned.
      * if &#64;include_skill_proficiencies is true then agents returned will include their skill proficiencies.
      * if &#64;include_agent_groups is true then the &#64;agent_groups_by_agent response field will be set with a list of agent groups correlating to each agents index in the &#64;wfm_agents field.
+     * if &#64;include_agent_groups is set to true, the &#64;agent_group_schedule_scenario_sid field must be set, so that the agent groups for the correct scenario are returned.
+     * if &#64;include_agent_groups is set to true, and &#64;agent_group_schedule_scenario_sid is not set, the agent groups will not be filtered by schedule scenario.
+     * if &#64;include_agent_groups is set to false, the &#64;agent_group_schedule_scenario_sid will be ignored.
+     * &#64;agent_group_schedule_scenario_sid does not effect which &#64;wfm_agents are returned.
      * WFM agents with no associated agent_groups will have an empty slice in agent_groups_by_agent at their correlated index.
      * Required Permissions:
      *   NONE
@@ -9134,6 +11792,23 @@ public final class WFMGrpc {
     public com.tcn.cloud.api.api.v1alpha1.wfm.ListUngroupedWFMAgentsRes listUngroupedWFMAgents(com.tcn.cloud.api.api.v1alpha1.wfm.ListUngroupedWFMAgentsReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListUngroupedWFMAgentsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Gets the wfm_agent_sids with the given &#64;tcn_agent_sids for the org sending the request.
+     * Returns a map where Key: tcn_agent_sid - Value: wfm_agent_sid.
+     * If the wfm_agent_sid is not found for any &#64;tcn_agent_sids, they will not have an entry in the returned &#64;sids.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *  - grpc.Invalid: the &#64;tcn_agent_sids are invalid.
+     *  - grpc.Internal: error occours while listing the wfm_agent_sids.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsRes listWFMAgentSids(com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListWFMAgentSidsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -9601,10 +12276,12 @@ public final class WFMGrpc {
      * The &#64;node_description fields may optionally be left blank.
      * The &#64;copied_from_scenario_sid field will be ignored, as it will be set to nil in the newly created scenario.
      * The &#64;creation_datetime and &#64;is_default fields will also be ignored and set as the current time and false respectively.
+     * The &#64;skill_profile_category will be associated with the created program node.
      * Required permissions:
      *   NONE
      * Errors:
      *   - grpc.Invalid: parameters in the &#64;req are invalid for the org making the request.
+     *   - grpc.NotFound: the &#64;skill_profile_category does not exist.
      *   - grpc.Internal: error occurs when creating the new scenario, or any of the node entities.
      * </pre>
      */
@@ -9938,7 +12615,7 @@ public final class WFMGrpc {
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the &#64;org_id or &#64;shift_instance_sids in the request are invalid.
+     *   - grpc.Invalid: &#64;shift_instance_sids in the request are invalid.
      *   - grpc.Internal: error occurs when listing the shift instances or their shift segments.
      * </pre>
      */
@@ -10001,6 +12678,25 @@ public final class WFMGrpc {
     public com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceV2Res createShiftInstanceV2(com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceV2Req request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateShiftInstanceV2Method(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Splits the &#64;shift_instance_sid into two, at the given &#64;time_to_split, returning the updated and new &#64;shift_instances.
+     * Any shift segments will be split between the two shift instances at &#64;time_to_split.
+     * If the &#64;time_to_split creates instances shorter then the minimum length specified by the shift template,
+     *   warning diagnostics will be returned and the instance will still be split.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   -grpc.Invalid: one or more fields in the request have invalid values, or &#64;time_to_split is not at least 5 minutes from the start or end of &#64;shift_instance_sid.
+     *   -grpc.NotFound: the &#64;shift_instance_sid does't exist for the org sending the request.
+     *   -grpc.Internal: error occurs when creating or updating the shift instances.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.SplitShiftInstanceRes splitShiftInstance(com.tcn.cloud.api.api.v1alpha1.wfm.SplitShiftInstanceReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSplitShiftInstanceMethod(), getCallOptions(), request);
     }
 
     /**
@@ -10157,6 +12853,31 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Gets the scheduling-target values for the org making the request.
+     * Errors:
+     *   - grpc.Internal: error occours when getting the scheduling-target values.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetRes getDefaultSchedulingTarget(com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetDefaultSchedulingTargetMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Sets the scheduling-target values for the org making the request.
+     * Errors:
+     *   - grpc.Invalid: any of the given values are invalid.
+     *   - grpc.Internal: error occours when setting the scheduling-target values.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetRes setDefaultSchedulingTarget(com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSetDefaultSchedulingTargetMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Gets the performance metrics across &#64;datetime_range for shift instances in &#64;schedule_selector associated with &#64;node_selector for the org making the request.
      * Performance metrics will be generated for each of the given &#64;metric_params.
      * The &#64;interval_width_in_minutes must be a multiple of 5.
@@ -10187,6 +12908,428 @@ public final class WFMGrpc {
     public com.tcn.cloud.api.api.v1alpha1.wfm.ListRequiredCallsIntervalsRes listRequiredCallsIntervals(com.tcn.cloud.api.api.v1alpha1.wfm.ListRequiredCallsIntervalsReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListRequiredCallsIntervalsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Creates a Tour Pattern for &#64;shift_template_sid and the org sending the request, returning &#64;tour_pattern_sid.
+     * If there is already a Tour Pattern for &#64;shift_template_sid then the method call will fail to create a new Tour Pattern.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.AlreadyExists: A Tour Pattern already exists for &#64;shift_template_sid.
+     *   - grpc.Internal: error occurs when creating the Tour Pattern.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourPatternRes createTourPattern(com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourPatternReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateTourPatternMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Returns a list of diagnostics describing any issues with the given &#64;tour_pattern.
+     * Checks the internal consistency between the pattern and all members, as well as making sure required fields are set with valid values.
+     * Ignores sid fields, except for &#64;shift_template_sid and &#64;scheduling_activity_sid.
+     * Does not query the database to check that foreign keys exist.
+     * Returns a single diagnostic with an OK code if the given &#64;tour_pattern has no issues.
+     * The &#64;member_tour_week_patterns and &#64;member_tour_agent_collections fields must be set on &#64;tour_pattern.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Internal: error occurs when validating the tour pattern or members.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsRes getTourPatternDiagnostics(com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetTourPatternDiagnosticsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Replaces the existing Tour Pattern and members with &#64;tour_pattern for the &#64;tour_pattern.shift_template_sid and the org sending the request.
+     * Returns the newly created Tour Pattern and members with their updated SIDs and Week Pattern Numbers.
+     * Any existing Tour Week Patterns, Tour Shift Instance and Segment Configs, Tour Agent Collections and their WFM Agent SIDs
+     *   belonging to &#64;tour_pattern.shift_template_sid will be replaced with the members on the provided &#64;tour_pattern.
+     * At least one Tour Agent Collection and one Tour Week Pattern must be provided in the member fields.
+     * If the tour pattern data or members have issues that prevent them from being persisted, a list of diagnostics will be returned describing the issues that must be resolved.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.NotFound: the &#64;tour_pattern.shift_template_sid does not exist.
+     *   - grpc.Internal: error occurs when upserting the tour pattern or members.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersRes upsertTourPatternWithMembers(com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpsertTourPatternWithMembersMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Gets the Tour Pattern belonging to &#64;shift_template_sid and the org sending the request.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.NotFound: the requested Tour Pattern does not exist.
+     *   - grpc.Internal: error occurs when getting the data.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternRes getTourPattern(com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetTourPatternMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Gets the Tour Pattern belonging to &#64;shift_template_sid and the org sending the request.
+     * The &#64;tour_pattern will be returned with all member entities.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.NotFound: the requested Tour Pattern does not exist.
+     *   - grpc.Internal: error occurs when getting the data.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternWithMembersRes getTourPatternWithMembers(com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternWithMembersReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetTourPatternWithMembersMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes the Tour Pattern belonging to &#64;tour_pattern_sid and the org sending the request.
+     * Any member Tour Week Patterns or Agent Collections will be deleted as well.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when deleting the data or it's children.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourPatternRes deleteTourPattern(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourPatternReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteTourPatternMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Creates a Tour Week Pattern for &#64;tour_pattern_sid for the org sending the request, returning &#64;tour_week_pattern_sid.
+     * The newly created Tour Week Pattern will be placed at the end of the existing sequence of tour week patterns for &#64;tour_pattern_sid.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.NotFound: the given &#64;tour_pattern_sid does not exist for the org sending the request.
+     *   - grpc.Internal: error occurs when creating the Tour Week Pattern.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourWeekPatternRes createTourWeekPattern(com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourWeekPatternReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateTourWeekPatternMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Lists the Tour Week Patterns with &#64;tour_pattern_sid for the org sending the request
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when getting the Tour Week Patterns.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ListTourWeekPatternsRes listTourWeekPatterns(com.tcn.cloud.api.api.v1alpha1.wfm.ListTourWeekPatternsReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListTourWeekPatternsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes the Tour Week Patterns with the given &#64;tour_week_pattern_sids for the org sending the request.
+     * Any Tour Week Instance or Segment Configs using &#64;tour_week_pattern_sids will be deleted.
+     * Request will error if any &#64;tour_week_pattern_sids are in use by a Tour Agent Collection, as those must be removed first.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.FailedPrecondition: a &#64;tour_week_pattern_sid is in use by a Tour Agent Collection.
+     *   - grpc.Internal: error occurs when deleting the tour week patterns or configs.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourWeekPatternsRes deleteTourWeekPatterns(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourWeekPatternsReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteTourWeekPatternsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Creates the &#64;tour_shift_instance_config for the org sending the request, returning &#64;tour_shift_instance_config_sid.
+     * The given &#64;tour_shift_instance_config will not be created if it will overlap another tour shift instance config belonging to &#64;tour_week_pattern_sid.
+     * The &#64;member_tour_shift_segment_configs field will be ignored, and will not be created if passed through this endpoint.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid or a preexisting tour shift instance config would overlap &#64;tour_shift_instance_config.
+     *   - grpc.Internal: error occurs when creating the data.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourShiftInstanceConfigRes createTourShiftInstanceConfig(com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourShiftInstanceConfigReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateTourShiftInstanceConfigMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Updates the &#64;tour_shift_instance_config for the org sending the request, returning &#64;tour_shift_instance_config_sid.
+     * The given &#64;tour_shift_instance_config will not be created if it will overlap another tour shift instance config belonging to &#64;tour_week_pattern_sid.
+     * The &#64;member_tour_shift_segment_configs field will be ignored, and will not be updated if passed through this endpoint.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid or a preexisting Tour Shift Instance Config would overlap &#64;tour_shift_instance_config.
+     *   - grpc.Internal: error occurs when updating the data.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourShiftInstanceConfigRes updateTourShiftInstanceConfig(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourShiftInstanceConfigReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateTourShiftInstanceConfigMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Lists the Tour Shift Instance Configs belonging to &#64;tour_week_pattern_sids for the org sending the request.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when getting the Tour Shift Instance Configs.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ListTourShiftInstanceConfigsRes listTourShiftInstanceConfigs(com.tcn.cloud.api.api.v1alpha1.wfm.ListTourShiftInstanceConfigsReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListTourShiftInstanceConfigsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes the Tour Shift Instance Configs matching &#64;tour_shift_instance_config_sids for the org sending the request.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when getting the Tour Shift Instance Configs.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourShiftInstanceConfigsRes deleteTourShiftInstanceConfigs(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourShiftInstanceConfigsReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteTourShiftInstanceConfigsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Creates the given &#64;tour_shift_segment_config for the org sending the request, returning &#64;tour_shift_segment_config_sid.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.NotFound: the &#64;tour_shift_instance_config_sid does not exist for the org sending the request.
+     *   - grpc.Internal: error occurs when creating the entity.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourShiftSegmentConfigRes createTourShiftSegmentConfig(com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourShiftSegmentConfigReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateTourShiftSegmentConfigMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Updates the given &#64;tour_shift_segment_config matching &#64;tour_shift_segment_config_sid for the org sending the request.
+     * If the updated Tour Shift Segment Config overlaps another segment or does not fit within the parent Tour Shift Instance Config the update will fail.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid or the resulting update would result in a conflict.
+     *   - grpc.NotFound: the &#64;tour_shift_instance_config_sid does not exist for the org sending the request.
+     *   - grpc.Internal: error occurs when updating the entity.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourShiftSegmentConfigRes updateTourShiftSegmentConfig(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourShiftSegmentConfigReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateTourShiftSegmentConfigMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Lists the Tour Shift Segment Configs belonging to &#64;tour_shift_instance_config_sids for the org sending the request.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when getting the Tour Shift Segment Configs.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ListTourShiftSegmentConfigsRes listTourShiftSegmentConfigs(com.tcn.cloud.api.api.v1alpha1.wfm.ListTourShiftSegmentConfigsReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListTourShiftSegmentConfigsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes the Tour Shift Segment Configs associated with the given &#64;tour_shift_segment_config_sids for the org sending the request.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when deleting the Tour Shift Segment Configs.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourShiftSegmentConfigsRes deleteTourShiftSegmentConfigs(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourShiftSegmentConfigsReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteTourShiftSegmentConfigsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Creates the given &#64;tour_agent_collection for the org sending the request and return the &#64;tour_agent_collection_sid.
+     * The &#64;wfm_agent_sids will be ignored and will not be created through this endpoint.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.AlreadyExists: the first_week_pattern_number for &#64;tour_pattern_sid is already in use by another tour agent collection.
+     *   - grpc.NotFound: the given &#64;tour_pattern_sid does not exist for the org sending the request.
+     *   - grpc.Internal: error occurs when creating the entity.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourAgentCollectionRes createTourAgentCollection(com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourAgentCollectionReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateTourAgentCollectionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Updates the given &#64;tour_agent_collection matching the &#64;tour_agent_collection_sid for the org sending the request.
+     * The &#64;wfm_agent_sids will be ignored and will not be updated through this endpoint.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.AlreadyExists: the first_week_pattern_number for &#64;tour_pattern_sid is already in use by another tour agent collection.
+     *   - grpc.NotFound: the given &#64;tour_pattern_sid does not exist for the org sending the request.
+     *   - grpc.Internal: error occurs when updating the entity.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourAgentCollectionRes updateTourAgentCollection(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourAgentCollectionReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateTourAgentCollectionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Lists the Tour Agent Collections belonging to &#64;tour_pattern_sid for the org sending the request.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when getting the tour agent collections.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ListTourAgentCollectionsRes listTourAgentCollections(com.tcn.cloud.api.api.v1alpha1.wfm.ListTourAgentCollectionsReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListTourAgentCollectionsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes the Tour Agent collections matching &#64;tour_agent_collection_sids for the org sending the request.
+     * Any existing associations with WFM Agent Sids will be deleted as well.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when deleting the tour agent collections.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourAgentCollectionsRes deleteTourAgentCollections(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourAgentCollectionsReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteTourAgentCollectionsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Creates an assocation between the &#64;tour_agent_collection_sid and the &#64;wfm_agent_sids for the org sending the request.
+     * If there is already an association between any of the &#64;wfm_agent_sids and the Tour Pattern that &#64;tour_agent_collection_sid belongs to, the method will fail and no associations will be created.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid
+     *   - grpc.AlreadyExists: an association already exists for at least one SID in &#64;wfm_agent_sids.
+     *   - grpc.Internal: error occurs when creating the association.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourAgentCollectionWFMAgentsRes createTourAgentCollectionWFMAgents(com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourAgentCollectionWFMAgentsReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateTourAgentCollectionWFMAgentsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Lists the WFM Agent SIDs belonging to &#64;tour_agent_collection_sids for the org sending the request.
+     * The resulting sids will be returned in &#64;wfm_agent_pairings each containing an &#64;agent_collection_sid and &#64;wfm_agent_sids.
+     * If no agents are found for a sid in the given &#64;tour_agent_collection_sids, that &#64;agent_collection_sid will have an empty slice in &#64;wfm_agent_sids.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when getting the tour agent collections.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ListTourAgentCollectionWFMAgentsRes listTourAgentCollectionWFMAgents(com.tcn.cloud.api.api.v1alpha1.wfm.ListTourAgentCollectionWFMAgentsReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListTourAgentCollectionWFMAgentsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes association between the &#64;wfm_agent_sids and &#64;tour_agent_collection_sid for the org sending the request.
+     * If no &#64;wfm_agent_sids are provided, all existing &#64;wfm_agent_sids for the given &#64;tour_agent_collection_sid will be deleted.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.NotFound: there are no WFM Agent associations to delete for &#64;tour_agent_collection_sid.
+     *   - grpc.Internal: error occurs when getting the tour agent collections.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourAgentCollectionWFMAgentsRes deleteTourAgentCollectionWFMAgents(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourAgentCollectionWFMAgentsReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteTourAgentCollectionWFMAgentsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Generates a list of tour week patterns for &#64;target_shift_template_sid and the org sending the request.
+     * Sets the member_tour_week_patterns with a tour week pattern for each of the &#64;num_weeks_in_tour.
+     * Each of the tour week patterns will be set with tour shift instances and segment configs based on
+     *   the forecasted call data over the next &#64;num_weeks_in_tour, starting on the next Monday.
+     * The returned data will not be persisted. This method will not effect any existing tour week patterns in the database.
+     * The &#64;tour_week_patterns returned by this method are intended to replace, not append, all currenly existing tour week patterns for &#64;target_shift_template_sid, once persisted.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.NotFound: there is no call center node or &#64;shift_template_sid associated with &#64;schedule_scenario_sid.
+     *   - grpc.Internal: error occurs when generating the tour week patterns.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.GenerateTourWeekPatternsRes generateTourWeekPatterns(com.tcn.cloud.api.api.v1alpha1.wfm.GenerateTourWeekPatternsReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGenerateTourWeekPatternsMethod(), getCallOptions(), request);
     }
   }
 
@@ -10345,17 +13488,32 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Gets the historical data for the org sending the request and the given &#64;skill_profile_sid.
+     * Gets the state of the cache for the given &#64;org_id, and if the cache's state is not_loaded, or loading_failed,
+     * it will start the loading task before returning the current state.
+     * Required permissions:
+     *  NONE
+     * Errors:
+     *  -grpc.Internal: error occurs when getting the cache info.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.GetClientHistoryCacheInfoRes> getClientHistoryCacheInfo(
+        com.tcn.cloud.api.api.v1alpha1.wfm.GetClientHistoryCacheInfoReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetClientHistoryCacheInfoMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Gets the historical data for the org sending the request and the given &#64;skill_profile_category.
      * It will look through the client's call history and generate the historical data by using their configured forecasting parameters (historical data period and interval width).
      * The duration of each interval will be the interval width of the org's forecasting parameters.
-     * It also applies any deltas that the client has stored for the given &#64;SkillProfileSid.
+     * It also applies any deltas that the client has stored for the given &#64;skill_profile_category, if the category is a group it will use the deltas of the skill profiles part of that group.
      * If the client has no historical data, only the deltas will be applied to the returned intervals, all other intervals will have nil averages.
-     * If any inactive skill profiles are mapped to the given &#64;skill_profile_sid, the call history and deltas of those skill profiles will be included for the historical data calculation.
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the &#64;skill_profile_sid in the request is invalid.
-     *   - grpc.NotFound: the &#64;skill_profile_sid given is not found for the org.
+     *   - grpc.Invalid: the &#64;skill_profile_category in the request is invalid.
+     *   - grpc.NotFound: the &#64;skill_profile_category given is not found for the org.
      *   - grpc.Internal: error occurs when getting the historical data.
      * </pre>
      */
@@ -10424,6 +13582,7 @@ public final class WFMGrpc {
      * The &#64;total_calls in the returned template be summed from the (&#64;training_data_start_datetime - &#64;averages_calculation_range_in_months) to &#64;training_data_end_datetime,
      * or from &#64;training_data_start_datetime to &#64;training_data_end_datetime if &#64;averages_calculation_range_in_months is 0.
      * The fixed averages fields in the call profile template, will be set to the averages that the skill profile has.
+     * DEPRECATED as of Sep/7/2023 - Use BuildCallProfileTemplate instead.
      * Required permissions:
      *   NONE
      * Errors:
@@ -10432,6 +13591,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when building the call profile template.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateForSkillProfileRes> buildCallProfileTemplateForSkillProfile(
         com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateForSkillProfileReq request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -10440,7 +13600,30 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Builds and returns a call profile template for the org sending the request and the given &#64;skill_profile_category.
+     * The template will be generated using the training data for said skill profile category using the &#64;training_data_range and &#64;averages_calculation_range_in_months
+     * from the client's saved forecasting parameters.
+     * The &#64;total_calls in the returned template be summed from the (&#64;training_data_start_datetime - &#64;averages_calculation_range_in_months) to &#64;training_data_end_datetime,
+     * or from &#64;training_data_start_datetime to &#64;training_data_end_datetime if &#64;averages_calculation_range_in_months is 0.
+     * The fixed averages fields in the call profile template, will be set to the averages that the skill profile category has.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;skill_profile_category in the request is invalid.
+     *   - grpc.NotFound: the &#64;skill_profile_category given is not found for the org.
+     *   - grpc.Internal: error occurs when building the call profile template.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateRes> buildCallProfileTemplate(
+        com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getBuildCallProfileTemplateMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Creates a mapping entry for the &#64;inactive_skill_profile_sid to the &#64;active_skill_profile_sid for the org sending the request.
+     * DEPRECATED as of Sep/27/2023 - Use skill profile groups instead.
      * Required permissions:
      *   NONE
      * Errors:
@@ -10450,6 +13633,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when creating the inactive skill profile mapping.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.CreateInactiveSkillProfileMappingRes> createInactiveSkillProfileMapping(
         com.tcn.cloud.api.api.v1alpha1.wfm.CreateInactiveSkillProfileMappingReq request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -10474,6 +13658,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Changes the current mapping for the given &#64;inactive_skill_profile_sid to be disconnected.
+     * DEPRECATED as of Sep/27/2023 - Use skill profile groups instead.
      * Required permissions:
      *   NONE
      * Errors:
@@ -10483,10 +13668,82 @@ public final class WFMGrpc {
      *				            the given &#64;inactive_skill_profile_sid is of an active skill profile.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingRes> disconnectInactiveSkillProfileMapping(
         com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingReq request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDisconnectInactiveSkillProfileMappingMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Creates the given &#64;skill_profile_group.
+     * &#64;skill_profile_group_sids will be ignored since associations cannot be created by this method.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;skill_profile_group in the request is invalid.
+     *   - grpc.Internal: error occurs creating the skill profile group.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProfileGroupRes> createSkillProfileGroup(
+        com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProfileGroupReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateSkillProfileGroupMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Updates the given &#64;skill_profile_group that has the &#64;skill_profile_group_sid for the org sending the request.
+     * &#64;skill_profile_group_sids will be ignored since associations cannot be updated by this method.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;skill_profile_group in the request is invalid.
+     *   - grpc.NotFound: the skill profile group to update doesn't exist.
+     *   - grpc.Internal: error occurs updating the skill profile group.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupRes> updateSkillProfileGroup(
+        com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateSkillProfileGroupMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Gets the skill profile groups that have the &#64;skill_profile_group_sids for the org sending the request.
+     * if &#64;include_inactive is true then inactive groups will also be included, otherwise only active groups will be returned.
+     * If &#64;skill_profile_group_sids is empty it will get all the skill profile groups for the org.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;skill_profile_group_sids in the request is invalid.
+     *   - grpc.Internal: error occurs getting the skill profile groups.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfileGroupsRes> listSkillProfileGroups(
+        com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfileGroupsReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListSkillProfileGroupsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Updates associations of the given &#64;skill_profile_group_sid for the org sending the request.
+     * It will create the associations with the &#64;skill_profile_sids_to_associate, and remove the associations with the &#64;skill_profile_sids_to_disassociate.
+     * Only one of the skill_profile_sids fields needs to be set, but both can be set on the same request.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the values in the request are invalid.
+     *   - grpc.Internal: error occurs updating the skill profile group associations.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupAssociationsRes> updateSkillProfileGroupAssociations(
+        com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupAssociationsReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateSkillProfileGroupAssociationsMethod(), getCallOptions()), request);
     }
 
     /**
@@ -10712,7 +13969,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Deletes forecast data intervals/deltas based on the parameters provided.
-     * If &#64;delete_param is type skill_profile_sid, then the intervals/deltas to be deleted will be
+     * If &#64;delete_param is type skill_profile_category, then the intervals/deltas to be deleted will be
      * associated with that id. If &#64;delete_param is type interval_sids, then the intervals/deltas to be
      * deleted will be contained in the list &#64;interval_sids. The &#64;delete_type field determines which
      * table(s) in the database the intervals/deltas will be deleted from.
@@ -10785,14 +14042,15 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Calculates the averages for call characteristics using the historical data of the given &#64;skill_profile_sids and org sending the request.
+     * Calculates the averages for call characteristics using the historical data of the given &#64;skill_profile_sids, &#64;skill_profile_group_sids and org sending the request.
      * If no &#64;skill_profile_sids are given, it will calculate the averages for all skill profiles for the org sending the request.
+     * If no &#64;skill_profile_group_sids are given, it will calculate the averages for all skill profile groups for the org sending the request.
      * Averages will be weighted by the number of calls that each historical data interval has.
      * Once the averages are calculated, they will be updated in the db for those skill profiles.
      * If a nil &#64;datetime_range is given then the range used will be &#64;training_data_range_end_datetime - &#64;averages_calculation_range_in_months to the &#64;training_data_range_end_datetime from the forecasting parameters.
      * If &#64;averages_calculation_range_in_months is 0, it will use the &#64;training_data_range_start_datetime as the start datetime of the range.
-     * If &#64;exclude_skill_profiles_with_manual_averages is true, it will exclude skill profiles that have manual averages from the calculation
-     * even if those skill profiles are in &#64;skill_profile_sids.
+     * If &#64;exclude_skill_profiles_with_manual_averages is true, it will exclude skill profiles and groups that have manual averages from the calculation
+     * even if those skill profiles and groups are in &#64;skill_profile_sids or &#64;skill_profile_group_sids respectively.
      * Errors:
      *   - grpc.Internal: error occurs when calculating the averages from the historical data.
      * </pre>
@@ -10917,6 +14175,7 @@ public final class WFMGrpc {
      * Errors:
      *   - grpc.Invalid: one or more fields in the &#64;node have invalid values.
      *   - grpc.NotFound: parent location node doesn't exist or belongs to a different scenario than the one given.
+     *                    the &#64;skill_profile_category does not exist.
      *   - grpc.Internal: error occurs when creating the program node.
      * </pre>
      */
@@ -10938,12 +14197,29 @@ public final class WFMGrpc {
      *   - grpc.Invalid: one or more fields in the &#64;program_node have invalid values.
      *   - grpc.Internal: error occurs when updating the program node.
      *   - grpc.NotFound: entry to be updated doesn't exist, or the given parent &#64;location_node_sid belongs to a different scenario than the program node to update.
+     *                    the &#64;skill_profile_category does not exist.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateProgramNodeRes> updateProgramNode(
         com.tcn.cloud.api.api.v1alpha1.wfm.UpdateProgramNodeReq request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateProgramNodeMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Lists the program nodes with the given &#64;program_node_sids for the org sending the request.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the given &#64;program_node_sids are invalid.
+     *   - grpc.Internal: error occurs when listing the program nodes.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidRes> listProgramNodesBySid(
+        com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListProgramNodesBySidMethod(), getCallOptions()), request);
     }
 
     /**
@@ -11122,6 +14398,17 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Lists all schedulable AgentGroups on or under the given Node or ShiftTemplate.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentScheduleGroupsResponse> listAgentScheduleGroups(
+        com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentScheduleGroupsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListAgentScheduleGroupsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Updates the agent group corresponding to the &#64;agent_group_sid, &#64;name, and &#64;parent_entity.
      * All of the entity's parameters that are not desired to be updated must be filled with their current values.
      * The &#64;schedule_scenario_sid must be the original for this agent group since it cannot be changed.
@@ -11167,6 +14454,10 @@ public final class WFMGrpc {
      * if &#64;include_inactive is true then inactive agents will also be included, otherwise only active agents will be returned.
      * if &#64;include_skill_proficiencies is true then agents returned will include their skill proficiencies.
      * if &#64;include_agent_groups is true then the &#64;agent_groups_by_agent response field will be set with a list of agent groups correlating to each agents index in the &#64;wfm_agents field.
+     * if &#64;include_agent_groups is set to true, the &#64;agent_group_schedule_scenario_sid field must be set, so that the agent groups for the correct scenario are returned.
+     * if &#64;include_agent_groups is set to true, and &#64;agent_group_schedule_scenario_sid is not set, the agent groups will not be filtered by schedule scenario.
+     * if &#64;include_agent_groups is set to false, the &#64;agent_group_schedule_scenario_sid will be ignored.
+     * &#64;agent_group_schedule_scenario_sid does not effect which &#64;wfm_agents are returned.
      * WFM agents with no associated agent_groups will have an empty slice in agent_groups_by_agent at their correlated index.
      * Required Permissions:
      *   NONE
@@ -11215,6 +14506,24 @@ public final class WFMGrpc {
         com.tcn.cloud.api.api.v1alpha1.wfm.ListUngroupedWFMAgentsReq request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListUngroupedWFMAgentsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Gets the wfm_agent_sids with the given &#64;tcn_agent_sids for the org sending the request.
+     * Returns a map where Key: tcn_agent_sid - Value: wfm_agent_sid.
+     * If the wfm_agent_sid is not found for any &#64;tcn_agent_sids, they will not have an entry in the returned &#64;sids.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *  - grpc.Invalid: the &#64;tcn_agent_sids are invalid.
+     *  - grpc.Internal: error occours while listing the wfm_agent_sids.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsRes> listWFMAgentSids(
+        com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListWFMAgentSidsMethod(), getCallOptions()), request);
     }
 
     /**
@@ -11707,10 +15016,12 @@ public final class WFMGrpc {
      * The &#64;node_description fields may optionally be left blank.
      * The &#64;copied_from_scenario_sid field will be ignored, as it will be set to nil in the newly created scenario.
      * The &#64;creation_datetime and &#64;is_default fields will also be ignored and set as the current time and false respectively.
+     * The &#64;skill_profile_category will be associated with the created program node.
      * Required permissions:
      *   NONE
      * Errors:
      *   - grpc.Invalid: parameters in the &#64;req are invalid for the org making the request.
+     *   - grpc.NotFound: the &#64;skill_profile_category does not exist.
      *   - grpc.Internal: error occurs when creating the new scenario, or any of the node entities.
      * </pre>
      */
@@ -12062,7 +15373,7 @@ public final class WFMGrpc {
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the &#64;org_id or &#64;shift_instance_sids in the request are invalid.
+     *   - grpc.Invalid: &#64;shift_instance_sids in the request are invalid.
      *   - grpc.Internal: error occurs when listing the shift instances or their shift segments.
      * </pre>
      */
@@ -12129,6 +15440,26 @@ public final class WFMGrpc {
         com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceV2Req request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateShiftInstanceV2Method(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Splits the &#64;shift_instance_sid into two, at the given &#64;time_to_split, returning the updated and new &#64;shift_instances.
+     * Any shift segments will be split between the two shift instances at &#64;time_to_split.
+     * If the &#64;time_to_split creates instances shorter then the minimum length specified by the shift template,
+     *   warning diagnostics will be returned and the instance will still be split.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   -grpc.Invalid: one or more fields in the request have invalid values, or &#64;time_to_split is not at least 5 minutes from the start or end of &#64;shift_instance_sid.
+     *   -grpc.NotFound: the &#64;shift_instance_sid does't exist for the org sending the request.
+     *   -grpc.Internal: error occurs when creating or updating the shift instances.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.SplitShiftInstanceRes> splitShiftInstance(
+        com.tcn.cloud.api.api.v1alpha1.wfm.SplitShiftInstanceReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getSplitShiftInstanceMethod(), getCallOptions()), request);
     }
 
     /**
@@ -12294,6 +15625,33 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Gets the scheduling-target values for the org making the request.
+     * Errors:
+     *   - grpc.Internal: error occours when getting the scheduling-target values.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetRes> getDefaultSchedulingTarget(
+        com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetDefaultSchedulingTargetMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Sets the scheduling-target values for the org making the request.
+     * Errors:
+     *   - grpc.Invalid: any of the given values are invalid.
+     *   - grpc.Internal: error occours when setting the scheduling-target values.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetRes> setDefaultSchedulingTarget(
+        com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getSetDefaultSchedulingTargetMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Gets the performance metrics across &#64;datetime_range for shift instances in &#64;schedule_selector associated with &#64;node_selector for the org making the request.
      * Performance metrics will be generated for each of the given &#64;metric_params.
      * The &#64;interval_width_in_minutes must be a multiple of 5.
@@ -12327,6 +15685,453 @@ public final class WFMGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListRequiredCallsIntervalsMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Creates a Tour Pattern for &#64;shift_template_sid and the org sending the request, returning &#64;tour_pattern_sid.
+     * If there is already a Tour Pattern for &#64;shift_template_sid then the method call will fail to create a new Tour Pattern.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.AlreadyExists: A Tour Pattern already exists for &#64;shift_template_sid.
+     *   - grpc.Internal: error occurs when creating the Tour Pattern.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourPatternRes> createTourPattern(
+        com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourPatternReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateTourPatternMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Returns a list of diagnostics describing any issues with the given &#64;tour_pattern.
+     * Checks the internal consistency between the pattern and all members, as well as making sure required fields are set with valid values.
+     * Ignores sid fields, except for &#64;shift_template_sid and &#64;scheduling_activity_sid.
+     * Does not query the database to check that foreign keys exist.
+     * Returns a single diagnostic with an OK code if the given &#64;tour_pattern has no issues.
+     * The &#64;member_tour_week_patterns and &#64;member_tour_agent_collections fields must be set on &#64;tour_pattern.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Internal: error occurs when validating the tour pattern or members.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsRes> getTourPatternDiagnostics(
+        com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetTourPatternDiagnosticsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Replaces the existing Tour Pattern and members with &#64;tour_pattern for the &#64;tour_pattern.shift_template_sid and the org sending the request.
+     * Returns the newly created Tour Pattern and members with their updated SIDs and Week Pattern Numbers.
+     * Any existing Tour Week Patterns, Tour Shift Instance and Segment Configs, Tour Agent Collections and their WFM Agent SIDs
+     *   belonging to &#64;tour_pattern.shift_template_sid will be replaced with the members on the provided &#64;tour_pattern.
+     * At least one Tour Agent Collection and one Tour Week Pattern must be provided in the member fields.
+     * If the tour pattern data or members have issues that prevent them from being persisted, a list of diagnostics will be returned describing the issues that must be resolved.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.NotFound: the &#64;tour_pattern.shift_template_sid does not exist.
+     *   - grpc.Internal: error occurs when upserting the tour pattern or members.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersRes> upsertTourPatternWithMembers(
+        com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpsertTourPatternWithMembersMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Gets the Tour Pattern belonging to &#64;shift_template_sid and the org sending the request.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.NotFound: the requested Tour Pattern does not exist.
+     *   - grpc.Internal: error occurs when getting the data.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternRes> getTourPattern(
+        com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetTourPatternMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Gets the Tour Pattern belonging to &#64;shift_template_sid and the org sending the request.
+     * The &#64;tour_pattern will be returned with all member entities.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.NotFound: the requested Tour Pattern does not exist.
+     *   - grpc.Internal: error occurs when getting the data.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternWithMembersRes> getTourPatternWithMembers(
+        com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternWithMembersReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetTourPatternWithMembersMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes the Tour Pattern belonging to &#64;tour_pattern_sid and the org sending the request.
+     * Any member Tour Week Patterns or Agent Collections will be deleted as well.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when deleting the data or it's children.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourPatternRes> deleteTourPattern(
+        com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourPatternReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteTourPatternMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Creates a Tour Week Pattern for &#64;tour_pattern_sid for the org sending the request, returning &#64;tour_week_pattern_sid.
+     * The newly created Tour Week Pattern will be placed at the end of the existing sequence of tour week patterns for &#64;tour_pattern_sid.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.NotFound: the given &#64;tour_pattern_sid does not exist for the org sending the request.
+     *   - grpc.Internal: error occurs when creating the Tour Week Pattern.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourWeekPatternRes> createTourWeekPattern(
+        com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourWeekPatternReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateTourWeekPatternMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Lists the Tour Week Patterns with &#64;tour_pattern_sid for the org sending the request
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when getting the Tour Week Patterns.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListTourWeekPatternsRes> listTourWeekPatterns(
+        com.tcn.cloud.api.api.v1alpha1.wfm.ListTourWeekPatternsReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListTourWeekPatternsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes the Tour Week Patterns with the given &#64;tour_week_pattern_sids for the org sending the request.
+     * Any Tour Week Instance or Segment Configs using &#64;tour_week_pattern_sids will be deleted.
+     * Request will error if any &#64;tour_week_pattern_sids are in use by a Tour Agent Collection, as those must be removed first.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.FailedPrecondition: a &#64;tour_week_pattern_sid is in use by a Tour Agent Collection.
+     *   - grpc.Internal: error occurs when deleting the tour week patterns or configs.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourWeekPatternsRes> deleteTourWeekPatterns(
+        com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourWeekPatternsReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteTourWeekPatternsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Creates the &#64;tour_shift_instance_config for the org sending the request, returning &#64;tour_shift_instance_config_sid.
+     * The given &#64;tour_shift_instance_config will not be created if it will overlap another tour shift instance config belonging to &#64;tour_week_pattern_sid.
+     * The &#64;member_tour_shift_segment_configs field will be ignored, and will not be created if passed through this endpoint.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid or a preexisting tour shift instance config would overlap &#64;tour_shift_instance_config.
+     *   - grpc.Internal: error occurs when creating the data.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourShiftInstanceConfigRes> createTourShiftInstanceConfig(
+        com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourShiftInstanceConfigReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateTourShiftInstanceConfigMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Updates the &#64;tour_shift_instance_config for the org sending the request, returning &#64;tour_shift_instance_config_sid.
+     * The given &#64;tour_shift_instance_config will not be created if it will overlap another tour shift instance config belonging to &#64;tour_week_pattern_sid.
+     * The &#64;member_tour_shift_segment_configs field will be ignored, and will not be updated if passed through this endpoint.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid or a preexisting Tour Shift Instance Config would overlap &#64;tour_shift_instance_config.
+     *   - grpc.Internal: error occurs when updating the data.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourShiftInstanceConfigRes> updateTourShiftInstanceConfig(
+        com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourShiftInstanceConfigReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateTourShiftInstanceConfigMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Lists the Tour Shift Instance Configs belonging to &#64;tour_week_pattern_sids for the org sending the request.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when getting the Tour Shift Instance Configs.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListTourShiftInstanceConfigsRes> listTourShiftInstanceConfigs(
+        com.tcn.cloud.api.api.v1alpha1.wfm.ListTourShiftInstanceConfigsReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListTourShiftInstanceConfigsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes the Tour Shift Instance Configs matching &#64;tour_shift_instance_config_sids for the org sending the request.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when getting the Tour Shift Instance Configs.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourShiftInstanceConfigsRes> deleteTourShiftInstanceConfigs(
+        com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourShiftInstanceConfigsReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteTourShiftInstanceConfigsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Creates the given &#64;tour_shift_segment_config for the org sending the request, returning &#64;tour_shift_segment_config_sid.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.NotFound: the &#64;tour_shift_instance_config_sid does not exist for the org sending the request.
+     *   - grpc.Internal: error occurs when creating the entity.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourShiftSegmentConfigRes> createTourShiftSegmentConfig(
+        com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourShiftSegmentConfigReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateTourShiftSegmentConfigMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Updates the given &#64;tour_shift_segment_config matching &#64;tour_shift_segment_config_sid for the org sending the request.
+     * If the updated Tour Shift Segment Config overlaps another segment or does not fit within the parent Tour Shift Instance Config the update will fail.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid or the resulting update would result in a conflict.
+     *   - grpc.NotFound: the &#64;tour_shift_instance_config_sid does not exist for the org sending the request.
+     *   - grpc.Internal: error occurs when updating the entity.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourShiftSegmentConfigRes> updateTourShiftSegmentConfig(
+        com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourShiftSegmentConfigReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateTourShiftSegmentConfigMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Lists the Tour Shift Segment Configs belonging to &#64;tour_shift_instance_config_sids for the org sending the request.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when getting the Tour Shift Segment Configs.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListTourShiftSegmentConfigsRes> listTourShiftSegmentConfigs(
+        com.tcn.cloud.api.api.v1alpha1.wfm.ListTourShiftSegmentConfigsReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListTourShiftSegmentConfigsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes the Tour Shift Segment Configs associated with the given &#64;tour_shift_segment_config_sids for the org sending the request.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when deleting the Tour Shift Segment Configs.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourShiftSegmentConfigsRes> deleteTourShiftSegmentConfigs(
+        com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourShiftSegmentConfigsReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteTourShiftSegmentConfigsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Creates the given &#64;tour_agent_collection for the org sending the request and return the &#64;tour_agent_collection_sid.
+     * The &#64;wfm_agent_sids will be ignored and will not be created through this endpoint.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.AlreadyExists: the first_week_pattern_number for &#64;tour_pattern_sid is already in use by another tour agent collection.
+     *   - grpc.NotFound: the given &#64;tour_pattern_sid does not exist for the org sending the request.
+     *   - grpc.Internal: error occurs when creating the entity.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourAgentCollectionRes> createTourAgentCollection(
+        com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourAgentCollectionReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateTourAgentCollectionMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Updates the given &#64;tour_agent_collection matching the &#64;tour_agent_collection_sid for the org sending the request.
+     * The &#64;wfm_agent_sids will be ignored and will not be updated through this endpoint.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.AlreadyExists: the first_week_pattern_number for &#64;tour_pattern_sid is already in use by another tour agent collection.
+     *   - grpc.NotFound: the given &#64;tour_pattern_sid does not exist for the org sending the request.
+     *   - grpc.Internal: error occurs when updating the entity.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourAgentCollectionRes> updateTourAgentCollection(
+        com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourAgentCollectionReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateTourAgentCollectionMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Lists the Tour Agent Collections belonging to &#64;tour_pattern_sid for the org sending the request.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when getting the tour agent collections.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListTourAgentCollectionsRes> listTourAgentCollections(
+        com.tcn.cloud.api.api.v1alpha1.wfm.ListTourAgentCollectionsReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListTourAgentCollectionsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes the Tour Agent collections matching &#64;tour_agent_collection_sids for the org sending the request.
+     * Any existing associations with WFM Agent Sids will be deleted as well.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when deleting the tour agent collections.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourAgentCollectionsRes> deleteTourAgentCollections(
+        com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourAgentCollectionsReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteTourAgentCollectionsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Creates an assocation between the &#64;tour_agent_collection_sid and the &#64;wfm_agent_sids for the org sending the request.
+     * If there is already an association between any of the &#64;wfm_agent_sids and the Tour Pattern that &#64;tour_agent_collection_sid belongs to, the method will fail and no associations will be created.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid
+     *   - grpc.AlreadyExists: an association already exists for at least one SID in &#64;wfm_agent_sids.
+     *   - grpc.Internal: error occurs when creating the association.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourAgentCollectionWFMAgentsRes> createTourAgentCollectionWFMAgents(
+        com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourAgentCollectionWFMAgentsReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateTourAgentCollectionWFMAgentsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Lists the WFM Agent SIDs belonging to &#64;tour_agent_collection_sids for the org sending the request.
+     * The resulting sids will be returned in &#64;wfm_agent_pairings each containing an &#64;agent_collection_sid and &#64;wfm_agent_sids.
+     * If no agents are found for a sid in the given &#64;tour_agent_collection_sids, that &#64;agent_collection_sid will have an empty slice in &#64;wfm_agent_sids.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when getting the tour agent collections.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListTourAgentCollectionWFMAgentsRes> listTourAgentCollectionWFMAgents(
+        com.tcn.cloud.api.api.v1alpha1.wfm.ListTourAgentCollectionWFMAgentsReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListTourAgentCollectionWFMAgentsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes association between the &#64;wfm_agent_sids and &#64;tour_agent_collection_sid for the org sending the request.
+     * If no &#64;wfm_agent_sids are provided, all existing &#64;wfm_agent_sids for the given &#64;tour_agent_collection_sid will be deleted.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.NotFound: there are no WFM Agent associations to delete for &#64;tour_agent_collection_sid.
+     *   - grpc.Internal: error occurs when getting the tour agent collections.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourAgentCollectionWFMAgentsRes> deleteTourAgentCollectionWFMAgents(
+        com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourAgentCollectionWFMAgentsReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteTourAgentCollectionWFMAgentsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Generates a list of tour week patterns for &#64;target_shift_template_sid and the org sending the request.
+     * Sets the member_tour_week_patterns with a tour week pattern for each of the &#64;num_weeks_in_tour.
+     * Each of the tour week patterns will be set with tour shift instances and segment configs based on
+     *   the forecasted call data over the next &#64;num_weeks_in_tour, starting on the next Monday.
+     * The returned data will not be persisted. This method will not effect any existing tour week patterns in the database.
+     * The &#64;tour_week_patterns returned by this method are intended to replace, not append, all currenly existing tour week patterns for &#64;target_shift_template_sid, once persisted.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.NotFound: there is no call center node or &#64;shift_template_sid associated with &#64;schedule_scenario_sid.
+     *   - grpc.Internal: error occurs when generating the tour week patterns.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.GenerateTourWeekPatternsRes> generateTourWeekPatterns(
+        com.tcn.cloud.api.api.v1alpha1.wfm.GenerateTourWeekPatternsReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGenerateTourWeekPatternsMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_LIST_SKILL_PROFILES = 0;
@@ -12337,116 +16142,154 @@ public final class WFMGrpc {
   private static final int METHODID_GET_LAST_SKILL_PROFILE_RESYNC_DATE = 5;
   private static final int METHODID_UPSERT_FORECASTING_PARAMETERS = 6;
   private static final int METHODID_GET_FORECASTING_PARAMETERS = 7;
-  private static final int METHODID_LIST_HISTORICAL_DATA = 8;
-  private static final int METHODID_UPSERT_HISTORICAL_DATA_DELTA = 9;
-  private static final int METHODID_UPSERT_HISTORICAL_DATA_DELTAS = 10;
-  private static final int METHODID_LIST_SKILLS = 11;
-  private static final int METHODID_BUILD_CALL_PROFILE_TEMPLATE_FOR_SKILL_PROFILE = 12;
-  private static final int METHODID_CREATE_INACTIVE_SKILL_PROFILE_MAPPING = 13;
-  private static final int METHODID_GET_AVAILABLE_REGRESSION_FORECASTER_MODEL_TYPES = 14;
-  private static final int METHODID_DISCONNECT_INACTIVE_SKILL_PROFILE_MAPPING = 15;
-  private static final int METHODID_DELETE_HISTORICAL_DATA_DELTAS = 16;
-  private static final int METHODID_LIST_TOP_SKILL_PROFILES = 17;
-  private static final int METHODID_GET_SKILL_PROFILES_COUNT = 18;
-  private static final int METHODID_BUILD_PROFILE_FORECAST_BY_INTERVAL = 19;
-  private static final int METHODID_BUILD_PROFILE_FORECAST_BY_INTERVAL_WITH_STATS = 20;
-  private static final int METHODID_UPSERT_PROFILE_FORECAST = 21;
-  private static final int METHODID_CREATE_CALL_PROFILE_TEMPLATE = 22;
-  private static final int METHODID_DELETE_CALL_PROFILE_TEMPLATE = 23;
-  private static final int METHODID_CREATE_REGRESSION_TEMPLATE = 24;
-  private static final int METHODID_DELETE_REGRESSION_TEMPLATE = 25;
-  private static final int METHODID_LIST_REGRESSION_TEMPLATES = 26;
-  private static final int METHODID_LIST_FORECAST_INTERVALS_FOR_SKILL_PROFILE = 27;
-  private static final int METHODID_BUILD_REGRESSION_FORECAST_BY_INTERVAL = 28;
-  private static final int METHODID_BUILD_REGRESSION_FORECAST_BY_INTERVAL_WITH_STATS = 29;
-  private static final int METHODID_LIST_CALL_PROFILE_TEMPLATES = 30;
-  private static final int METHODID_UPSERT_REGRESSION_FORECAST = 31;
-  private static final int METHODID_UPSERT_FORECAST_DATA_DELTA = 32;
-  private static final int METHODID_UPSERT_FORECAST_DATA_DELTAS = 33;
-  private static final int METHODID_DELETE_FORECAST_INTERVALS = 34;
-  private static final int METHODID_LIST_HISTORICAL_DATA_FOR_ALL_SKILL_PROFILES = 35;
-  private static final int METHODID_BUILD_DOWAND_MOYPROFILES = 36;
-  private static final int METHODID_CALCULATE_TRAINING_DATA_AVERAGES_FOR_SKILL_PROFILE = 37;
-  private static final int METHODID_UPDATE_SKILL_PROFILE_AVERAGES_USING_HISTORICAL_DATA = 38;
-  private static final int METHODID_UPDATE_CALL_CENTER_NODE = 39;
-  private static final int METHODID_CREATE_CLIENT_NODE = 40;
-  private static final int METHODID_UPDATE_CLIENT_NODE = 41;
-  private static final int METHODID_CREATE_LOCATION_NODE = 42;
-  private static final int METHODID_UPDATE_LOCATION_NODE = 43;
-  private static final int METHODID_CREATE_PROGRAM_NODE = 44;
-  private static final int METHODID_UPDATE_PROGRAM_NODE = 45;
-  private static final int METHODID_CREATE_CONSTRAINT_RULE = 46;
-  private static final int METHODID_UPDATE_CONSTRAINT_RULE = 47;
-  private static final int METHODID_DELETE_CONSTRAINT_RULE = 48;
-  private static final int METHODID_CREATE_NON_SKILL_ACTIVITY = 49;
-  private static final int METHODID_UPDATE_NON_SKILL_ACTIVITY = 50;
-  private static final int METHODID_LIST_NON_SKILL_ACTIVITIES = 51;
-  private static final int METHODID_LIST_NON_SKILL_ACTIVITY_ASSOCIATIONS = 52;
-  private static final int METHODID_LIST_CANDIDATE_SCHEDULING_ACTIVITIES = 53;
-  private static final int METHODID_CREATE_AGENT_GROUP = 54;
-  private static final int METHODID_UPDATE_AGENT_GROUP = 55;
-  private static final int METHODID_UPDATE_WFMAGENT = 56;
-  private static final int METHODID_LIST_ALL_WFMAGENTS = 57;
-  private static final int METHODID_LIST_CANDIDATE_WFMAGENTS = 58;
-  private static final int METHODID_LIST_UNGROUPED_WFMAGENTS = 59;
-  private static final int METHODID_LIST_WFMAGENTS_ASSOCIATED_WITH_AGENT_GROUP = 60;
-  private static final int METHODID_CREATE_WFMAGENT_MEMBERSHIPS = 61;
-  private static final int METHODID_DELETE_WFMAGENT_MEMBERSHIPS = 62;
-  private static final int METHODID_DELETE_WFMAGENTS_MEMBERSHIPS = 63;
-  private static final int METHODID_BUILD_AGENT_DIAGNOSTICS = 64;
-  private static final int METHODID_CREATE_SHIFT_TEMPLATE = 65;
-  private static final int METHODID_UPDATE_SHIFT_TEMPLATE = 66;
-  private static final int METHODID_LIST_SHIFT_TEMPLATES_BY_SIDS = 67;
-  private static final int METHODID_BUILD_SHIFT_TEMPLATE_DIAGNOSTICS = 68;
-  private static final int METHODID_CREATE_PLACEMENT_RULE = 69;
-  private static final int METHODID_UPDATE_PLACEMENT_RULE = 70;
-  private static final int METHODID_DELETE_PLACEMENT_RULE = 71;
-  private static final int METHODID_CREATE_OPEN_TIMES_PATTERN = 72;
-  private static final int METHODID_UPDATE_OPEN_TIMES_PATTERN = 73;
-  private static final int METHODID_DELETE_OPEN_TIMES_PATTERN = 74;
-  private static final int METHODID_GET_OPEN_TIMES_BITMAPS = 75;
-  private static final int METHODID_CREATE_AGENT_AVAILABILITY_PATTERN = 76;
-  private static final int METHODID_UPDATE_AGENT_AVAILABILITY_PATTERN = 77;
-  private static final int METHODID_DELETE_AGENT_AVAILABILITY_PATTERN = 78;
-  private static final int METHODID_GET_AVAILABILITY_BITMAPS = 79;
-  private static final int METHODID_UPSERT_NON_SKILL_ACTIVITY_ASSOCIATION = 80;
-  private static final int METHODID_CREATE_SKILL_PROFICIENCIES = 81;
-  private static final int METHODID_UPDATE_SKILL_PROFICIENCIES = 82;
-  private static final int METHODID_DELETE_SKILL_PROFICIENCY = 83;
-  private static final int METHODID_COPY_SCENARIO = 84;
-  private static final int METHODID_CREATE_SCHEDULE_SCENARIO_WITH_NODES = 85;
-  private static final int METHODID_UPDATE_SCHEDULE_SCENARIO = 86;
-  private static final int METHODID_LIST_CONFIG_ENTITIES = 87;
-  private static final int METHODID_DELETE_SHIFT_INSTANCES = 88;
-  private static final int METHODID_BUILD_NODE_DIAGNOSTICS = 89;
-  private static final int METHODID_BUILD_GLOBAL_DIAGNOSTICS = 90;
-  private static final int METHODID_GET_PUBLISHED_SCHEDULE = 91;
-  private static final int METHODID_GET_PUBLISHED_SCHEDULE_REQUIRED_CALLS = 92;
-  private static final int METHODID_GET_DRAFT_SCHEDULE_REQUIRED_CALLS = 93;
-  private static final int METHODID_CREATE_DRAFT_SCHEDULE = 94;
-  private static final int METHODID_UPDATE_DRAFT_SCHEDULE = 95;
-  private static final int METHODID_BUILD_DRAFT_SCHEDULE = 96;
-  private static final int METHODID_PUBLISH_DRAFT_SCHEDULE = 97;
-  private static final int METHODID_RESET_DRAFT_SCHEDULE = 98;
-  private static final int METHODID_GET_DRAFT_SCHEDULE = 99;
-  private static final int METHODID_LIST_DRAFT_SCHEDULES = 100;
-  private static final int METHODID_CLEAR_SCHEDULE = 101;
-  private static final int METHODID_DELETE_DRAFT_SCHEDULE = 102;
-  private static final int METHODID_LIST_SHIFT_INSTANCES_BY_SID = 103;
-  private static final int METHODID_COPY_SCHEDULE_TO_SCHEDULE = 104;
-  private static final int METHODID_CREATE_SHIFT_INSTANCE = 105;
-  private static final int METHODID_CREATE_SHIFT_INSTANCE_V2 = 106;
-  private static final int METHODID_SWAP_SHIFT_INSTANCES = 107;
-  private static final int METHODID_UPDATE_SHIFT_INSTANCE = 108;
-  private static final int METHODID_UPDATE_SHIFT_INSTANCE_V2 = 109;
-  private static final int METHODID_COPY_SHIFT_INSTANCES_TO_SCHEDULE = 110;
-  private static final int METHODID_LIST_SHIFT_INSTANCE_SIDS_FOR_AGENT = 111;
-  private static final int METHODID_LIST_SHIFT_SEGMENTS_BY_SHIFT_INSTANCE_SIDS = 112;
-  private static final int METHODID_SET_SCHEDULING_TARGET = 113;
-  private static final int METHODID_GET_SCHEDULING_TARGET = 114;
-  private static final int METHODID_DELETE_SCHEDULING_TARGET = 115;
-  private static final int METHODID_GET_PERFORMANCE_METRICS = 116;
-  private static final int METHODID_LIST_REQUIRED_CALLS_INTERVALS = 117;
+  private static final int METHODID_GET_CLIENT_HISTORY_CACHE_INFO = 8;
+  private static final int METHODID_LIST_HISTORICAL_DATA = 9;
+  private static final int METHODID_UPSERT_HISTORICAL_DATA_DELTA = 10;
+  private static final int METHODID_UPSERT_HISTORICAL_DATA_DELTAS = 11;
+  private static final int METHODID_LIST_SKILLS = 12;
+  private static final int METHODID_BUILD_CALL_PROFILE_TEMPLATE_FOR_SKILL_PROFILE = 13;
+  private static final int METHODID_BUILD_CALL_PROFILE_TEMPLATE = 14;
+  private static final int METHODID_CREATE_INACTIVE_SKILL_PROFILE_MAPPING = 15;
+  private static final int METHODID_GET_AVAILABLE_REGRESSION_FORECASTER_MODEL_TYPES = 16;
+  private static final int METHODID_DISCONNECT_INACTIVE_SKILL_PROFILE_MAPPING = 17;
+  private static final int METHODID_CREATE_SKILL_PROFILE_GROUP = 18;
+  private static final int METHODID_UPDATE_SKILL_PROFILE_GROUP = 19;
+  private static final int METHODID_LIST_SKILL_PROFILE_GROUPS = 20;
+  private static final int METHODID_UPDATE_SKILL_PROFILE_GROUP_ASSOCIATIONS = 21;
+  private static final int METHODID_DELETE_HISTORICAL_DATA_DELTAS = 22;
+  private static final int METHODID_LIST_TOP_SKILL_PROFILES = 23;
+  private static final int METHODID_GET_SKILL_PROFILES_COUNT = 24;
+  private static final int METHODID_BUILD_PROFILE_FORECAST_BY_INTERVAL = 25;
+  private static final int METHODID_BUILD_PROFILE_FORECAST_BY_INTERVAL_WITH_STATS = 26;
+  private static final int METHODID_UPSERT_PROFILE_FORECAST = 27;
+  private static final int METHODID_CREATE_CALL_PROFILE_TEMPLATE = 28;
+  private static final int METHODID_DELETE_CALL_PROFILE_TEMPLATE = 29;
+  private static final int METHODID_CREATE_REGRESSION_TEMPLATE = 30;
+  private static final int METHODID_DELETE_REGRESSION_TEMPLATE = 31;
+  private static final int METHODID_LIST_REGRESSION_TEMPLATES = 32;
+  private static final int METHODID_LIST_FORECAST_INTERVALS_FOR_SKILL_PROFILE = 33;
+  private static final int METHODID_LIST_FORECAST_INTERVALS = 34;
+  private static final int METHODID_BUILD_REGRESSION_FORECAST_BY_INTERVAL = 35;
+  private static final int METHODID_BUILD_REGRESSION_FORECAST_BY_INTERVAL_WITH_STATS = 36;
+  private static final int METHODID_LIST_CALL_PROFILE_TEMPLATES = 37;
+  private static final int METHODID_UPSERT_REGRESSION_FORECAST = 38;
+  private static final int METHODID_UPSERT_FORECAST_DATA_DELTA = 39;
+  private static final int METHODID_UPSERT_FORECAST_DATA_DELTAS = 40;
+  private static final int METHODID_DELETE_FORECAST_INTERVALS = 41;
+  private static final int METHODID_LIST_HISTORICAL_DATA_FOR_ALL_SKILL_PROFILES = 42;
+  private static final int METHODID_BUILD_DOWAND_MOYPROFILES = 43;
+  private static final int METHODID_CALCULATE_TRAINING_DATA_AVERAGES_FOR_SKILL_PROFILE = 44;
+  private static final int METHODID_UPDATE_SKILL_PROFILE_AVERAGES_USING_HISTORICAL_DATA = 45;
+  private static final int METHODID_UPDATE_CALL_CENTER_NODE = 46;
+  private static final int METHODID_CREATE_CLIENT_NODE = 47;
+  private static final int METHODID_UPDATE_CLIENT_NODE = 48;
+  private static final int METHODID_CREATE_LOCATION_NODE = 49;
+  private static final int METHODID_UPDATE_LOCATION_NODE = 50;
+  private static final int METHODID_CREATE_PROGRAM_NODE = 51;
+  private static final int METHODID_UPDATE_PROGRAM_NODE = 52;
+  private static final int METHODID_LIST_PROGRAM_NODES_BY_SID = 53;
+  private static final int METHODID_CREATE_CONSTRAINT_RULE = 54;
+  private static final int METHODID_UPDATE_CONSTRAINT_RULE = 55;
+  private static final int METHODID_DELETE_CONSTRAINT_RULE = 56;
+  private static final int METHODID_CREATE_NON_SKILL_ACTIVITY = 57;
+  private static final int METHODID_UPDATE_NON_SKILL_ACTIVITY = 58;
+  private static final int METHODID_LIST_NON_SKILL_ACTIVITIES = 59;
+  private static final int METHODID_LIST_NON_SKILL_ACTIVITY_ASSOCIATIONS = 60;
+  private static final int METHODID_LIST_CANDIDATE_SCHEDULING_ACTIVITIES = 61;
+  private static final int METHODID_CREATE_AGENT_GROUP = 62;
+  private static final int METHODID_LIST_AGENT_SCHEDULE_GROUPS = 63;
+  private static final int METHODID_UPDATE_AGENT_GROUP = 64;
+  private static final int METHODID_UPDATE_WFMAGENT = 65;
+  private static final int METHODID_LIST_ALL_WFMAGENTS = 66;
+  private static final int METHODID_LIST_CANDIDATE_WFMAGENTS = 67;
+  private static final int METHODID_LIST_UNGROUPED_WFMAGENTS = 68;
+  private static final int METHODID_LIST_WFMAGENT_SIDS = 69;
+  private static final int METHODID_LIST_WFMAGENTS_ASSOCIATED_WITH_AGENT_GROUP = 70;
+  private static final int METHODID_CREATE_WFMAGENT_MEMBERSHIPS = 71;
+  private static final int METHODID_DELETE_WFMAGENT_MEMBERSHIPS = 72;
+  private static final int METHODID_DELETE_WFMAGENTS_MEMBERSHIPS = 73;
+  private static final int METHODID_BUILD_AGENT_DIAGNOSTICS = 74;
+  private static final int METHODID_CREATE_SHIFT_TEMPLATE = 75;
+  private static final int METHODID_UPDATE_SHIFT_TEMPLATE = 76;
+  private static final int METHODID_LIST_SHIFT_TEMPLATES_BY_SIDS = 77;
+  private static final int METHODID_BUILD_SHIFT_TEMPLATE_DIAGNOSTICS = 78;
+  private static final int METHODID_CREATE_PLACEMENT_RULE = 79;
+  private static final int METHODID_UPDATE_PLACEMENT_RULE = 80;
+  private static final int METHODID_DELETE_PLACEMENT_RULE = 81;
+  private static final int METHODID_CREATE_OPEN_TIMES_PATTERN = 82;
+  private static final int METHODID_UPDATE_OPEN_TIMES_PATTERN = 83;
+  private static final int METHODID_DELETE_OPEN_TIMES_PATTERN = 84;
+  private static final int METHODID_GET_OPEN_TIMES_BITMAPS = 85;
+  private static final int METHODID_CREATE_AGENT_AVAILABILITY_PATTERN = 86;
+  private static final int METHODID_UPDATE_AGENT_AVAILABILITY_PATTERN = 87;
+  private static final int METHODID_DELETE_AGENT_AVAILABILITY_PATTERN = 88;
+  private static final int METHODID_GET_AVAILABILITY_BITMAPS = 89;
+  private static final int METHODID_UPSERT_NON_SKILL_ACTIVITY_ASSOCIATION = 90;
+  private static final int METHODID_CREATE_SKILL_PROFICIENCIES = 91;
+  private static final int METHODID_UPDATE_SKILL_PROFICIENCIES = 92;
+  private static final int METHODID_DELETE_SKILL_PROFICIENCY = 93;
+  private static final int METHODID_COPY_SCENARIO = 94;
+  private static final int METHODID_CREATE_SCHEDULE_SCENARIO_WITH_NODES = 95;
+  private static final int METHODID_UPDATE_SCHEDULE_SCENARIO = 96;
+  private static final int METHODID_LIST_CONFIG_ENTITIES = 97;
+  private static final int METHODID_DELETE_SHIFT_INSTANCES = 98;
+  private static final int METHODID_BUILD_NODE_DIAGNOSTICS = 99;
+  private static final int METHODID_BUILD_GLOBAL_DIAGNOSTICS = 100;
+  private static final int METHODID_GET_PUBLISHED_SCHEDULE = 101;
+  private static final int METHODID_GET_PUBLISHED_SCHEDULE_REQUIRED_CALLS = 102;
+  private static final int METHODID_GET_DRAFT_SCHEDULE_REQUIRED_CALLS = 103;
+  private static final int METHODID_CREATE_DRAFT_SCHEDULE = 104;
+  private static final int METHODID_UPDATE_DRAFT_SCHEDULE = 105;
+  private static final int METHODID_BUILD_DRAFT_SCHEDULE = 106;
+  private static final int METHODID_PUBLISH_DRAFT_SCHEDULE = 107;
+  private static final int METHODID_RESET_DRAFT_SCHEDULE = 108;
+  private static final int METHODID_GET_DRAFT_SCHEDULE = 109;
+  private static final int METHODID_LIST_DRAFT_SCHEDULES = 110;
+  private static final int METHODID_CLEAR_SCHEDULE = 111;
+  private static final int METHODID_DELETE_DRAFT_SCHEDULE = 112;
+  private static final int METHODID_LIST_SHIFT_INSTANCES_BY_SID = 113;
+  private static final int METHODID_COPY_SCHEDULE_TO_SCHEDULE = 114;
+  private static final int METHODID_CREATE_SHIFT_INSTANCE = 115;
+  private static final int METHODID_CREATE_SHIFT_INSTANCE_V2 = 116;
+  private static final int METHODID_SPLIT_SHIFT_INSTANCE = 117;
+  private static final int METHODID_SWAP_SHIFT_INSTANCES = 118;
+  private static final int METHODID_UPDATE_SHIFT_INSTANCE = 119;
+  private static final int METHODID_UPDATE_SHIFT_INSTANCE_V2 = 120;
+  private static final int METHODID_COPY_SHIFT_INSTANCES_TO_SCHEDULE = 121;
+  private static final int METHODID_LIST_SHIFT_INSTANCE_SIDS_FOR_AGENT = 122;
+  private static final int METHODID_LIST_SHIFT_SEGMENTS_BY_SHIFT_INSTANCE_SIDS = 123;
+  private static final int METHODID_SET_SCHEDULING_TARGET = 124;
+  private static final int METHODID_GET_SCHEDULING_TARGET = 125;
+  private static final int METHODID_DELETE_SCHEDULING_TARGET = 126;
+  private static final int METHODID_GET_DEFAULT_SCHEDULING_TARGET = 127;
+  private static final int METHODID_SET_DEFAULT_SCHEDULING_TARGET = 128;
+  private static final int METHODID_GET_PERFORMANCE_METRICS = 129;
+  private static final int METHODID_LIST_REQUIRED_CALLS_INTERVALS = 130;
+  private static final int METHODID_CREATE_TOUR_PATTERN = 131;
+  private static final int METHODID_GET_TOUR_PATTERN_DIAGNOSTICS = 132;
+  private static final int METHODID_UPSERT_TOUR_PATTERN_WITH_MEMBERS = 133;
+  private static final int METHODID_GET_TOUR_PATTERN = 134;
+  private static final int METHODID_GET_TOUR_PATTERN_WITH_MEMBERS = 135;
+  private static final int METHODID_DELETE_TOUR_PATTERN = 136;
+  private static final int METHODID_CREATE_TOUR_WEEK_PATTERN = 137;
+  private static final int METHODID_LIST_TOUR_WEEK_PATTERNS = 138;
+  private static final int METHODID_DELETE_TOUR_WEEK_PATTERNS = 139;
+  private static final int METHODID_CREATE_TOUR_SHIFT_INSTANCE_CONFIG = 140;
+  private static final int METHODID_UPDATE_TOUR_SHIFT_INSTANCE_CONFIG = 141;
+  private static final int METHODID_LIST_TOUR_SHIFT_INSTANCE_CONFIGS = 142;
+  private static final int METHODID_DELETE_TOUR_SHIFT_INSTANCE_CONFIGS = 143;
+  private static final int METHODID_CREATE_TOUR_SHIFT_SEGMENT_CONFIG = 144;
+  private static final int METHODID_UPDATE_TOUR_SHIFT_SEGMENT_CONFIG = 145;
+  private static final int METHODID_LIST_TOUR_SHIFT_SEGMENT_CONFIGS = 146;
+  private static final int METHODID_DELETE_TOUR_SHIFT_SEGMENT_CONFIGS = 147;
+  private static final int METHODID_CREATE_TOUR_AGENT_COLLECTION = 148;
+  private static final int METHODID_UPDATE_TOUR_AGENT_COLLECTION = 149;
+  private static final int METHODID_LIST_TOUR_AGENT_COLLECTIONS = 150;
+  private static final int METHODID_DELETE_TOUR_AGENT_COLLECTIONS = 151;
+  private static final int METHODID_CREATE_TOUR_AGENT_COLLECTION_WFMAGENTS = 152;
+  private static final int METHODID_LIST_TOUR_AGENT_COLLECTION_WFMAGENTS = 153;
+  private static final int METHODID_DELETE_TOUR_AGENT_COLLECTION_WFMAGENTS = 154;
+  private static final int METHODID_GENERATE_TOUR_WEEK_PATTERNS = 155;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -12497,6 +16340,10 @@ public final class WFMGrpc {
           serviceImpl.getForecastingParameters((com.tcn.cloud.api.api.v1alpha1.wfm.GetForecastingParametersReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetForecastingParametersRes>) responseObserver);
           break;
+        case METHODID_GET_CLIENT_HISTORY_CACHE_INFO:
+          serviceImpl.getClientHistoryCacheInfo((com.tcn.cloud.api.api.v1alpha1.wfm.GetClientHistoryCacheInfoReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetClientHistoryCacheInfoRes>) responseObserver);
+          break;
         case METHODID_LIST_HISTORICAL_DATA:
           serviceImpl.listHistoricalData((com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataRes>) responseObserver);
@@ -12517,6 +16364,10 @@ public final class WFMGrpc {
           serviceImpl.buildCallProfileTemplateForSkillProfile((com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateForSkillProfileReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateForSkillProfileRes>) responseObserver);
           break;
+        case METHODID_BUILD_CALL_PROFILE_TEMPLATE:
+          serviceImpl.buildCallProfileTemplate((com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateRes>) responseObserver);
+          break;
         case METHODID_CREATE_INACTIVE_SKILL_PROFILE_MAPPING:
           serviceImpl.createInactiveSkillProfileMapping((com.tcn.cloud.api.api.v1alpha1.wfm.CreateInactiveSkillProfileMappingReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateInactiveSkillProfileMappingRes>) responseObserver);
@@ -12528,6 +16379,22 @@ public final class WFMGrpc {
         case METHODID_DISCONNECT_INACTIVE_SKILL_PROFILE_MAPPING:
           serviceImpl.disconnectInactiveSkillProfileMapping((com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingRes>) responseObserver);
+          break;
+        case METHODID_CREATE_SKILL_PROFILE_GROUP:
+          serviceImpl.createSkillProfileGroup((com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProfileGroupReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProfileGroupRes>) responseObserver);
+          break;
+        case METHODID_UPDATE_SKILL_PROFILE_GROUP:
+          serviceImpl.updateSkillProfileGroup((com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupRes>) responseObserver);
+          break;
+        case METHODID_LIST_SKILL_PROFILE_GROUPS:
+          serviceImpl.listSkillProfileGroups((com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfileGroupsReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfileGroupsRes>) responseObserver);
+          break;
+        case METHODID_UPDATE_SKILL_PROFILE_GROUP_ASSOCIATIONS:
+          serviceImpl.updateSkillProfileGroupAssociations((com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupAssociationsReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupAssociationsRes>) responseObserver);
           break;
         case METHODID_DELETE_HISTORICAL_DATA_DELTAS:
           serviceImpl.deleteHistoricalDataDeltas((com.tcn.cloud.api.api.v1alpha1.wfm.DeleteHistoricalDataDeltasReq) request,
@@ -12575,6 +16442,10 @@ public final class WFMGrpc {
           break;
         case METHODID_LIST_FORECAST_INTERVALS_FOR_SKILL_PROFILE:
           serviceImpl.listForecastIntervalsForSkillProfile((com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsForSkillProfileReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval>) responseObserver);
+          break;
+        case METHODID_LIST_FORECAST_INTERVALS:
+          serviceImpl.listForecastIntervals((com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval>) responseObserver);
           break;
         case METHODID_BUILD_REGRESSION_FORECAST_BY_INTERVAL:
@@ -12649,6 +16520,10 @@ public final class WFMGrpc {
           serviceImpl.updateProgramNode((com.tcn.cloud.api.api.v1alpha1.wfm.UpdateProgramNodeReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateProgramNodeRes>) responseObserver);
           break;
+        case METHODID_LIST_PROGRAM_NODES_BY_SID:
+          serviceImpl.listProgramNodesBySid((com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidRes>) responseObserver);
+          break;
         case METHODID_CREATE_CONSTRAINT_RULE:
           serviceImpl.createConstraintRule((com.tcn.cloud.api.api.v1alpha1.wfm.CreateConstraintRuleReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateConstraintRuleRes>) responseObserver);
@@ -12685,6 +16560,10 @@ public final class WFMGrpc {
           serviceImpl.createAgentGroup((com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentGroupReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentGroupRes>) responseObserver);
           break;
+        case METHODID_LIST_AGENT_SCHEDULE_GROUPS:
+          serviceImpl.listAgentScheduleGroups((com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentScheduleGroupsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentScheduleGroupsResponse>) responseObserver);
+          break;
         case METHODID_UPDATE_AGENT_GROUP:
           serviceImpl.updateAgentGroup((com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAgentGroupReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAgentGroupRes>) responseObserver);
@@ -12704,6 +16583,10 @@ public final class WFMGrpc {
         case METHODID_LIST_UNGROUPED_WFMAGENTS:
           serviceImpl.listUngroupedWFMAgents((com.tcn.cloud.api.api.v1alpha1.wfm.ListUngroupedWFMAgentsReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListUngroupedWFMAgentsRes>) responseObserver);
+          break;
+        case METHODID_LIST_WFMAGENT_SIDS:
+          serviceImpl.listWFMAgentSids((com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsRes>) responseObserver);
           break;
         case METHODID_LIST_WFMAGENTS_ASSOCIATED_WITH_AGENT_GROUP:
           serviceImpl.listWFMAgentsAssociatedWithAgentGroup((com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentsAssociatedWithAgentGroupReq) request,
@@ -12893,6 +16776,10 @@ public final class WFMGrpc {
           serviceImpl.createShiftInstanceV2((com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceV2Req) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceV2Res>) responseObserver);
           break;
+        case METHODID_SPLIT_SHIFT_INSTANCE:
+          serviceImpl.splitShiftInstance((com.tcn.cloud.api.api.v1alpha1.wfm.SplitShiftInstanceReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.SplitShiftInstanceRes>) responseObserver);
+          break;
         case METHODID_SWAP_SHIFT_INSTANCES:
           serviceImpl.swapShiftInstances((com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesRes>) responseObserver);
@@ -12929,6 +16816,14 @@ public final class WFMGrpc {
           serviceImpl.deleteSchedulingTarget((com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingTargetReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingTargetRes>) responseObserver);
           break;
+        case METHODID_GET_DEFAULT_SCHEDULING_TARGET:
+          serviceImpl.getDefaultSchedulingTarget((com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetRes>) responseObserver);
+          break;
+        case METHODID_SET_DEFAULT_SCHEDULING_TARGET:
+          serviceImpl.setDefaultSchedulingTarget((com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetRes>) responseObserver);
+          break;
         case METHODID_GET_PERFORMANCE_METRICS:
           serviceImpl.getPerformanceMetrics((com.tcn.cloud.api.api.v1alpha1.wfm.GetPerformanceMetricsReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetPerformanceMetricsRes>) responseObserver);
@@ -12936,6 +16831,106 @@ public final class WFMGrpc {
         case METHODID_LIST_REQUIRED_CALLS_INTERVALS:
           serviceImpl.listRequiredCallsIntervals((com.tcn.cloud.api.api.v1alpha1.wfm.ListRequiredCallsIntervalsReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListRequiredCallsIntervalsRes>) responseObserver);
+          break;
+        case METHODID_CREATE_TOUR_PATTERN:
+          serviceImpl.createTourPattern((com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourPatternReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourPatternRes>) responseObserver);
+          break;
+        case METHODID_GET_TOUR_PATTERN_DIAGNOSTICS:
+          serviceImpl.getTourPatternDiagnostics((com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsRes>) responseObserver);
+          break;
+        case METHODID_UPSERT_TOUR_PATTERN_WITH_MEMBERS:
+          serviceImpl.upsertTourPatternWithMembers((com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersRes>) responseObserver);
+          break;
+        case METHODID_GET_TOUR_PATTERN:
+          serviceImpl.getTourPattern((com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternRes>) responseObserver);
+          break;
+        case METHODID_GET_TOUR_PATTERN_WITH_MEMBERS:
+          serviceImpl.getTourPatternWithMembers((com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternWithMembersReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternWithMembersRes>) responseObserver);
+          break;
+        case METHODID_DELETE_TOUR_PATTERN:
+          serviceImpl.deleteTourPattern((com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourPatternReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourPatternRes>) responseObserver);
+          break;
+        case METHODID_CREATE_TOUR_WEEK_PATTERN:
+          serviceImpl.createTourWeekPattern((com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourWeekPatternReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourWeekPatternRes>) responseObserver);
+          break;
+        case METHODID_LIST_TOUR_WEEK_PATTERNS:
+          serviceImpl.listTourWeekPatterns((com.tcn.cloud.api.api.v1alpha1.wfm.ListTourWeekPatternsReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListTourWeekPatternsRes>) responseObserver);
+          break;
+        case METHODID_DELETE_TOUR_WEEK_PATTERNS:
+          serviceImpl.deleteTourWeekPatterns((com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourWeekPatternsReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourWeekPatternsRes>) responseObserver);
+          break;
+        case METHODID_CREATE_TOUR_SHIFT_INSTANCE_CONFIG:
+          serviceImpl.createTourShiftInstanceConfig((com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourShiftInstanceConfigReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourShiftInstanceConfigRes>) responseObserver);
+          break;
+        case METHODID_UPDATE_TOUR_SHIFT_INSTANCE_CONFIG:
+          serviceImpl.updateTourShiftInstanceConfig((com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourShiftInstanceConfigReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourShiftInstanceConfigRes>) responseObserver);
+          break;
+        case METHODID_LIST_TOUR_SHIFT_INSTANCE_CONFIGS:
+          serviceImpl.listTourShiftInstanceConfigs((com.tcn.cloud.api.api.v1alpha1.wfm.ListTourShiftInstanceConfigsReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListTourShiftInstanceConfigsRes>) responseObserver);
+          break;
+        case METHODID_DELETE_TOUR_SHIFT_INSTANCE_CONFIGS:
+          serviceImpl.deleteTourShiftInstanceConfigs((com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourShiftInstanceConfigsReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourShiftInstanceConfigsRes>) responseObserver);
+          break;
+        case METHODID_CREATE_TOUR_SHIFT_SEGMENT_CONFIG:
+          serviceImpl.createTourShiftSegmentConfig((com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourShiftSegmentConfigReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourShiftSegmentConfigRes>) responseObserver);
+          break;
+        case METHODID_UPDATE_TOUR_SHIFT_SEGMENT_CONFIG:
+          serviceImpl.updateTourShiftSegmentConfig((com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourShiftSegmentConfigReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourShiftSegmentConfigRes>) responseObserver);
+          break;
+        case METHODID_LIST_TOUR_SHIFT_SEGMENT_CONFIGS:
+          serviceImpl.listTourShiftSegmentConfigs((com.tcn.cloud.api.api.v1alpha1.wfm.ListTourShiftSegmentConfigsReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListTourShiftSegmentConfigsRes>) responseObserver);
+          break;
+        case METHODID_DELETE_TOUR_SHIFT_SEGMENT_CONFIGS:
+          serviceImpl.deleteTourShiftSegmentConfigs((com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourShiftSegmentConfigsReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourShiftSegmentConfigsRes>) responseObserver);
+          break;
+        case METHODID_CREATE_TOUR_AGENT_COLLECTION:
+          serviceImpl.createTourAgentCollection((com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourAgentCollectionReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourAgentCollectionRes>) responseObserver);
+          break;
+        case METHODID_UPDATE_TOUR_AGENT_COLLECTION:
+          serviceImpl.updateTourAgentCollection((com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourAgentCollectionReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourAgentCollectionRes>) responseObserver);
+          break;
+        case METHODID_LIST_TOUR_AGENT_COLLECTIONS:
+          serviceImpl.listTourAgentCollections((com.tcn.cloud.api.api.v1alpha1.wfm.ListTourAgentCollectionsReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListTourAgentCollectionsRes>) responseObserver);
+          break;
+        case METHODID_DELETE_TOUR_AGENT_COLLECTIONS:
+          serviceImpl.deleteTourAgentCollections((com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourAgentCollectionsReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourAgentCollectionsRes>) responseObserver);
+          break;
+        case METHODID_CREATE_TOUR_AGENT_COLLECTION_WFMAGENTS:
+          serviceImpl.createTourAgentCollectionWFMAgents((com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourAgentCollectionWFMAgentsReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourAgentCollectionWFMAgentsRes>) responseObserver);
+          break;
+        case METHODID_LIST_TOUR_AGENT_COLLECTION_WFMAGENTS:
+          serviceImpl.listTourAgentCollectionWFMAgents((com.tcn.cloud.api.api.v1alpha1.wfm.ListTourAgentCollectionWFMAgentsReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListTourAgentCollectionWFMAgentsRes>) responseObserver);
+          break;
+        case METHODID_DELETE_TOUR_AGENT_COLLECTION_WFMAGENTS:
+          serviceImpl.deleteTourAgentCollectionWFMAgents((com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourAgentCollectionWFMAgentsReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourAgentCollectionWFMAgentsRes>) responseObserver);
+          break;
+        case METHODID_GENERATE_TOUR_WEEK_PATTERNS:
+          serviceImpl.generateTourWeekPatterns((com.tcn.cloud.api.api.v1alpha1.wfm.GenerateTourWeekPatternsReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GenerateTourWeekPatternsRes>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -13012,6 +17007,13 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.GetForecastingParametersRes>(
                 service, METHODID_GET_FORECASTING_PARAMETERS)))
         .addMethod(
+          getGetClientHistoryCacheInfoMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.GetClientHistoryCacheInfoReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.GetClientHistoryCacheInfoRes>(
+                service, METHODID_GET_CLIENT_HISTORY_CACHE_INFO)))
+        .addMethod(
           getListHistoricalDataMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -13047,6 +17049,13 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateForSkillProfileRes>(
                 service, METHODID_BUILD_CALL_PROFILE_TEMPLATE_FOR_SKILL_PROFILE)))
         .addMethod(
+          getBuildCallProfileTemplateMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateRes>(
+                service, METHODID_BUILD_CALL_PROFILE_TEMPLATE)))
+        .addMethod(
           getCreateInactiveSkillProfileMappingMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -13067,6 +17076,34 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingReq,
               com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingRes>(
                 service, METHODID_DISCONNECT_INACTIVE_SKILL_PROFILE_MAPPING)))
+        .addMethod(
+          getCreateSkillProfileGroupMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProfileGroupReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProfileGroupRes>(
+                service, METHODID_CREATE_SKILL_PROFILE_GROUP)))
+        .addMethod(
+          getUpdateSkillProfileGroupMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupRes>(
+                service, METHODID_UPDATE_SKILL_PROFILE_GROUP)))
+        .addMethod(
+          getListSkillProfileGroupsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfileGroupsReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfileGroupsRes>(
+                service, METHODID_LIST_SKILL_PROFILE_GROUPS)))
+        .addMethod(
+          getUpdateSkillProfileGroupAssociationsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupAssociationsReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileGroupAssociationsRes>(
+                service, METHODID_UPDATE_SKILL_PROFILE_GROUP_ASSOCIATIONS)))
         .addMethod(
           getDeleteHistoricalDataDeltasMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -13151,6 +17188,13 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsForSkillProfileReq,
               com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval>(
                 service, METHODID_LIST_FORECAST_INTERVALS_FOR_SKILL_PROFILE)))
+        .addMethod(
+          getListForecastIntervalsMethod(),
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval>(
+                service, METHODID_LIST_FORECAST_INTERVALS)))
         .addMethod(
           getBuildRegressionForecastByIntervalMethod(),
           io.grpc.stub.ServerCalls.asyncServerStreamingCall(
@@ -13278,6 +17322,13 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.UpdateProgramNodeRes>(
                 service, METHODID_UPDATE_PROGRAM_NODE)))
         .addMethod(
+          getListProgramNodesBySidMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListProgramNodesBySidRes>(
+                service, METHODID_LIST_PROGRAM_NODES_BY_SID)))
+        .addMethod(
           getCreateConstraintRuleMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -13341,6 +17392,13 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentGroupRes>(
                 service, METHODID_CREATE_AGENT_GROUP)))
         .addMethod(
+          getListAgentScheduleGroupsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentScheduleGroupsRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentScheduleGroupsResponse>(
+                service, METHODID_LIST_AGENT_SCHEDULE_GROUPS)))
+        .addMethod(
           getUpdateAgentGroupMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -13375,6 +17433,13 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.ListUngroupedWFMAgentsReq,
               com.tcn.cloud.api.api.v1alpha1.wfm.ListUngroupedWFMAgentsRes>(
                 service, METHODID_LIST_UNGROUPED_WFMAGENTS)))
+        .addMethod(
+          getListWFMAgentSidsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentSidsRes>(
+                service, METHODID_LIST_WFMAGENT_SIDS)))
         .addMethod(
           getListWFMAgentsAssociatedWithAgentGroupMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -13705,6 +17770,13 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceV2Res>(
                 service, METHODID_CREATE_SHIFT_INSTANCE_V2)))
         .addMethod(
+          getSplitShiftInstanceMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.SplitShiftInstanceReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.SplitShiftInstanceRes>(
+                service, METHODID_SPLIT_SHIFT_INSTANCE)))
+        .addMethod(
           getSwapShiftInstancesMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -13768,6 +17840,20 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingTargetRes>(
                 service, METHODID_DELETE_SCHEDULING_TARGET)))
         .addMethod(
+          getGetDefaultSchedulingTargetMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.GetDefaultSchedulingTargetRes>(
+                service, METHODID_GET_DEFAULT_SCHEDULING_TARGET)))
+        .addMethod(
+          getSetDefaultSchedulingTargetMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.SetDefaultSchedulingTargetRes>(
+                service, METHODID_SET_DEFAULT_SCHEDULING_TARGET)))
+        .addMethod(
           getGetPerformanceMetricsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -13781,6 +17867,181 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.ListRequiredCallsIntervalsReq,
               com.tcn.cloud.api.api.v1alpha1.wfm.ListRequiredCallsIntervalsRes>(
                 service, METHODID_LIST_REQUIRED_CALLS_INTERVALS)))
+        .addMethod(
+          getCreateTourPatternMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourPatternReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourPatternRes>(
+                service, METHODID_CREATE_TOUR_PATTERN)))
+        .addMethod(
+          getGetTourPatternDiagnosticsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternDiagnosticsRes>(
+                service, METHODID_GET_TOUR_PATTERN_DIAGNOSTICS)))
+        .addMethod(
+          getUpsertTourPatternWithMembersMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpsertTourPatternWithMembersRes>(
+                service, METHODID_UPSERT_TOUR_PATTERN_WITH_MEMBERS)))
+        .addMethod(
+          getGetTourPatternMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternRes>(
+                service, METHODID_GET_TOUR_PATTERN)))
+        .addMethod(
+          getGetTourPatternWithMembersMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternWithMembersReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.GetTourPatternWithMembersRes>(
+                service, METHODID_GET_TOUR_PATTERN_WITH_MEMBERS)))
+        .addMethod(
+          getDeleteTourPatternMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourPatternReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourPatternRes>(
+                service, METHODID_DELETE_TOUR_PATTERN)))
+        .addMethod(
+          getCreateTourWeekPatternMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourWeekPatternReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourWeekPatternRes>(
+                service, METHODID_CREATE_TOUR_WEEK_PATTERN)))
+        .addMethod(
+          getListTourWeekPatternsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListTourWeekPatternsReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListTourWeekPatternsRes>(
+                service, METHODID_LIST_TOUR_WEEK_PATTERNS)))
+        .addMethod(
+          getDeleteTourWeekPatternsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourWeekPatternsReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourWeekPatternsRes>(
+                service, METHODID_DELETE_TOUR_WEEK_PATTERNS)))
+        .addMethod(
+          getCreateTourShiftInstanceConfigMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourShiftInstanceConfigReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourShiftInstanceConfigRes>(
+                service, METHODID_CREATE_TOUR_SHIFT_INSTANCE_CONFIG)))
+        .addMethod(
+          getUpdateTourShiftInstanceConfigMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourShiftInstanceConfigReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourShiftInstanceConfigRes>(
+                service, METHODID_UPDATE_TOUR_SHIFT_INSTANCE_CONFIG)))
+        .addMethod(
+          getListTourShiftInstanceConfigsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListTourShiftInstanceConfigsReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListTourShiftInstanceConfigsRes>(
+                service, METHODID_LIST_TOUR_SHIFT_INSTANCE_CONFIGS)))
+        .addMethod(
+          getDeleteTourShiftInstanceConfigsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourShiftInstanceConfigsReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourShiftInstanceConfigsRes>(
+                service, METHODID_DELETE_TOUR_SHIFT_INSTANCE_CONFIGS)))
+        .addMethod(
+          getCreateTourShiftSegmentConfigMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourShiftSegmentConfigReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourShiftSegmentConfigRes>(
+                service, METHODID_CREATE_TOUR_SHIFT_SEGMENT_CONFIG)))
+        .addMethod(
+          getUpdateTourShiftSegmentConfigMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourShiftSegmentConfigReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourShiftSegmentConfigRes>(
+                service, METHODID_UPDATE_TOUR_SHIFT_SEGMENT_CONFIG)))
+        .addMethod(
+          getListTourShiftSegmentConfigsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListTourShiftSegmentConfigsReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListTourShiftSegmentConfigsRes>(
+                service, METHODID_LIST_TOUR_SHIFT_SEGMENT_CONFIGS)))
+        .addMethod(
+          getDeleteTourShiftSegmentConfigsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourShiftSegmentConfigsReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourShiftSegmentConfigsRes>(
+                service, METHODID_DELETE_TOUR_SHIFT_SEGMENT_CONFIGS)))
+        .addMethod(
+          getCreateTourAgentCollectionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourAgentCollectionReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourAgentCollectionRes>(
+                service, METHODID_CREATE_TOUR_AGENT_COLLECTION)))
+        .addMethod(
+          getUpdateTourAgentCollectionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourAgentCollectionReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateTourAgentCollectionRes>(
+                service, METHODID_UPDATE_TOUR_AGENT_COLLECTION)))
+        .addMethod(
+          getListTourAgentCollectionsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListTourAgentCollectionsReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListTourAgentCollectionsRes>(
+                service, METHODID_LIST_TOUR_AGENT_COLLECTIONS)))
+        .addMethod(
+          getDeleteTourAgentCollectionsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourAgentCollectionsReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourAgentCollectionsRes>(
+                service, METHODID_DELETE_TOUR_AGENT_COLLECTIONS)))
+        .addMethod(
+          getCreateTourAgentCollectionWFMAgentsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourAgentCollectionWFMAgentsReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateTourAgentCollectionWFMAgentsRes>(
+                service, METHODID_CREATE_TOUR_AGENT_COLLECTION_WFMAGENTS)))
+        .addMethod(
+          getListTourAgentCollectionWFMAgentsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListTourAgentCollectionWFMAgentsReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListTourAgentCollectionWFMAgentsRes>(
+                service, METHODID_LIST_TOUR_AGENT_COLLECTION_WFMAGENTS)))
+        .addMethod(
+          getDeleteTourAgentCollectionWFMAgentsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourAgentCollectionWFMAgentsReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteTourAgentCollectionWFMAgentsRes>(
+                service, METHODID_DELETE_TOUR_AGENT_COLLECTION_WFMAGENTS)))
+        .addMethod(
+          getGenerateTourWeekPatternsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.GenerateTourWeekPatternsReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.GenerateTourWeekPatternsRes>(
+                service, METHODID_GENERATE_TOUR_WEEK_PATTERNS)))
         .build();
   }
 
@@ -13837,14 +18098,20 @@ public final class WFMGrpc {
               .addMethod(getGetLastSkillProfileResyncDateMethod())
               .addMethod(getUpsertForecastingParametersMethod())
               .addMethod(getGetForecastingParametersMethod())
+              .addMethod(getGetClientHistoryCacheInfoMethod())
               .addMethod(getListHistoricalDataMethod())
               .addMethod(getUpsertHistoricalDataDeltaMethod())
               .addMethod(getUpsertHistoricalDataDeltasMethod())
               .addMethod(getListSkillsMethod())
               .addMethod(getBuildCallProfileTemplateForSkillProfileMethod())
+              .addMethod(getBuildCallProfileTemplateMethod())
               .addMethod(getCreateInactiveSkillProfileMappingMethod())
               .addMethod(getGetAvailableRegressionForecasterModelTypesMethod())
               .addMethod(getDisconnectInactiveSkillProfileMappingMethod())
+              .addMethod(getCreateSkillProfileGroupMethod())
+              .addMethod(getUpdateSkillProfileGroupMethod())
+              .addMethod(getListSkillProfileGroupsMethod())
+              .addMethod(getUpdateSkillProfileGroupAssociationsMethod())
               .addMethod(getDeleteHistoricalDataDeltasMethod())
               .addMethod(getListTopSkillProfilesMethod())
               .addMethod(getGetSkillProfilesCountMethod())
@@ -13857,6 +18124,7 @@ public final class WFMGrpc {
               .addMethod(getDeleteRegressionTemplateMethod())
               .addMethod(getListRegressionTemplatesMethod())
               .addMethod(getListForecastIntervalsForSkillProfileMethod())
+              .addMethod(getListForecastIntervalsMethod())
               .addMethod(getBuildRegressionForecastByIntervalMethod())
               .addMethod(getBuildRegressionForecastByIntervalWithStatsMethod())
               .addMethod(getListCallProfileTemplatesMethod())
@@ -13875,6 +18143,7 @@ public final class WFMGrpc {
               .addMethod(getUpdateLocationNodeMethod())
               .addMethod(getCreateProgramNodeMethod())
               .addMethod(getUpdateProgramNodeMethod())
+              .addMethod(getListProgramNodesBySidMethod())
               .addMethod(getCreateConstraintRuleMethod())
               .addMethod(getUpdateConstraintRuleMethod())
               .addMethod(getDeleteConstraintRuleMethod())
@@ -13884,11 +18153,13 @@ public final class WFMGrpc {
               .addMethod(getListNonSkillActivityAssociationsMethod())
               .addMethod(getListCandidateSchedulingActivitiesMethod())
               .addMethod(getCreateAgentGroupMethod())
+              .addMethod(getListAgentScheduleGroupsMethod())
               .addMethod(getUpdateAgentGroupMethod())
               .addMethod(getUpdateWFMAgentMethod())
               .addMethod(getListAllWFMAgentsMethod())
               .addMethod(getListCandidateWFMAgentsMethod())
               .addMethod(getListUngroupedWFMAgentsMethod())
+              .addMethod(getListWFMAgentSidsMethod())
               .addMethod(getListWFMAgentsAssociatedWithAgentGroupMethod())
               .addMethod(getCreateWFMAgentMembershipsMethod())
               .addMethod(getDeleteWFMAgentMembershipsMethod())
@@ -13936,6 +18207,7 @@ public final class WFMGrpc {
               .addMethod(getCopyScheduleToScheduleMethod())
               .addMethod(getCreateShiftInstanceMethod())
               .addMethod(getCreateShiftInstanceV2Method())
+              .addMethod(getSplitShiftInstanceMethod())
               .addMethod(getSwapShiftInstancesMethod())
               .addMethod(getUpdateShiftInstanceMethod())
               .addMethod(getUpdateShiftInstanceV2Method())
@@ -13945,8 +18217,35 @@ public final class WFMGrpc {
               .addMethod(getSetSchedulingTargetMethod())
               .addMethod(getGetSchedulingTargetMethod())
               .addMethod(getDeleteSchedulingTargetMethod())
+              .addMethod(getGetDefaultSchedulingTargetMethod())
+              .addMethod(getSetDefaultSchedulingTargetMethod())
               .addMethod(getGetPerformanceMetricsMethod())
               .addMethod(getListRequiredCallsIntervalsMethod())
+              .addMethod(getCreateTourPatternMethod())
+              .addMethod(getGetTourPatternDiagnosticsMethod())
+              .addMethod(getUpsertTourPatternWithMembersMethod())
+              .addMethod(getGetTourPatternMethod())
+              .addMethod(getGetTourPatternWithMembersMethod())
+              .addMethod(getDeleteTourPatternMethod())
+              .addMethod(getCreateTourWeekPatternMethod())
+              .addMethod(getListTourWeekPatternsMethod())
+              .addMethod(getDeleteTourWeekPatternsMethod())
+              .addMethod(getCreateTourShiftInstanceConfigMethod())
+              .addMethod(getUpdateTourShiftInstanceConfigMethod())
+              .addMethod(getListTourShiftInstanceConfigsMethod())
+              .addMethod(getDeleteTourShiftInstanceConfigsMethod())
+              .addMethod(getCreateTourShiftSegmentConfigMethod())
+              .addMethod(getUpdateTourShiftSegmentConfigMethod())
+              .addMethod(getListTourShiftSegmentConfigsMethod())
+              .addMethod(getDeleteTourShiftSegmentConfigsMethod())
+              .addMethod(getCreateTourAgentCollectionMethod())
+              .addMethod(getUpdateTourAgentCollectionMethod())
+              .addMethod(getListTourAgentCollectionsMethod())
+              .addMethod(getDeleteTourAgentCollectionsMethod())
+              .addMethod(getCreateTourAgentCollectionWFMAgentsMethod())
+              .addMethod(getListTourAgentCollectionWFMAgentsMethod())
+              .addMethod(getDeleteTourAgentCollectionWFMAgentsMethod())
+              .addMethod(getGenerateTourWeekPatternsMethod())
               .build();
         }
       }

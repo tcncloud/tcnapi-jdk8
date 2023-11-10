@@ -790,6 +790,68 @@ public final class LMSGrpc {
     return getProcessElementMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ProcessListRequest,
+      com.tcn.cloud.api.api.v0alpha.ProcessListResponse> getProcessListMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ProcessList",
+      requestType = com.tcn.cloud.api.api.v0alpha.ProcessListRequest.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.ProcessListResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ProcessListRequest,
+      com.tcn.cloud.api.api.v0alpha.ProcessListResponse> getProcessListMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ProcessListRequest, com.tcn.cloud.api.api.v0alpha.ProcessListResponse> getProcessListMethod;
+    if ((getProcessListMethod = LMSGrpc.getProcessListMethod) == null) {
+      synchronized (LMSGrpc.class) {
+        if ((getProcessListMethod = LMSGrpc.getProcessListMethod) == null) {
+          LMSGrpc.getProcessListMethod = getProcessListMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ProcessListRequest, com.tcn.cloud.api.api.v0alpha.ProcessListResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ProcessList"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.ProcessListRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.ProcessListResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("ProcessList"))
+              .build();
+        }
+      }
+    }
+    return getProcessListMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.StreamListRequest,
+      com.tcn.cloud.api.api.v0alpha.StreamListResponse> getStreamListMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "StreamList",
+      requestType = com.tcn.cloud.api.api.v0alpha.StreamListRequest.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.StreamListResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.StreamListRequest,
+      com.tcn.cloud.api.api.v0alpha.StreamListResponse> getStreamListMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.StreamListRequest, com.tcn.cloud.api.api.v0alpha.StreamListResponse> getStreamListMethod;
+    if ((getStreamListMethod = LMSGrpc.getStreamListMethod) == null) {
+      synchronized (LMSGrpc.class) {
+        if ((getStreamListMethod = LMSGrpc.getStreamListMethod) == null) {
+          LMSGrpc.getStreamListMethod = getStreamListMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.StreamListRequest, com.tcn.cloud.api.api.v0alpha.StreamListResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "StreamList"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.StreamListRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.StreamListResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("StreamList"))
+              .build();
+        }
+      }
+    }
+    return getStreamListMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.google.protobuf.Empty,
       com.tcn.cloud.api.api.v0alpha.ProcessFields> getGetAvailableFieldsMethod;
 
@@ -1658,6 +1720,68 @@ public final class LMSGrpc {
     return getUpdateCjsSecureSearchCriteriaMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SampleRequest,
+      com.google.protobuf.Empty> getSampleEndpointMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SampleEndpoint",
+      requestType = com.tcn.cloud.api.api.v0alpha.SampleRequest.class,
+      responseType = com.google.protobuf.Empty.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SampleRequest,
+      com.google.protobuf.Empty> getSampleEndpointMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SampleRequest, com.google.protobuf.Empty> getSampleEndpointMethod;
+    if ((getSampleEndpointMethod = LMSGrpc.getSampleEndpointMethod) == null) {
+      synchronized (LMSGrpc.class) {
+        if ((getSampleEndpointMethod = LMSGrpc.getSampleEndpointMethod) == null) {
+          LMSGrpc.getSampleEndpointMethod = getSampleEndpointMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.SampleRequest, com.google.protobuf.Empty>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SampleEndpoint"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.SampleRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.protobuf.Empty.getDefaultInstance()))
+              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("SampleEndpoint"))
+              .build();
+        }
+      }
+    }
+    return getSampleEndpointMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.EHREntityType,
+      com.tcn.cloud.api.api.v0alpha.Fields> getGetAvailableEHRFieldsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetAvailableEHRFields",
+      requestType = com.tcn.cloud.api.api.v0alpha.EHREntityType.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.Fields.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.EHREntityType,
+      com.tcn.cloud.api.api.v0alpha.Fields> getGetAvailableEHRFieldsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.EHREntityType, com.tcn.cloud.api.api.v0alpha.Fields> getGetAvailableEHRFieldsMethod;
+    if ((getGetAvailableEHRFieldsMethod = LMSGrpc.getGetAvailableEHRFieldsMethod) == null) {
+      synchronized (LMSGrpc.class) {
+        if ((getGetAvailableEHRFieldsMethod = LMSGrpc.getGetAvailableEHRFieldsMethod) == null) {
+          LMSGrpc.getGetAvailableEHRFieldsMethod = getGetAvailableEHRFieldsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.EHREntityType, com.tcn.cloud.api.api.v0alpha.Fields>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAvailableEHRFields"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.EHREntityType.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.Fields.getDefaultInstance()))
+              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("GetAvailableEHRFields"))
+              .build();
+        }
+      }
+    }
+    return getGetAvailableEHRFieldsMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ElementPK,
       com.tcn.cloud.api.api.v0alpha.Events> getGetQueuedEventsStatusByElementIdMethod;
 
@@ -1923,6 +2047,20 @@ public final class LMSGrpc {
 
     /**
      */
+    default void processList(com.tcn.cloud.api.api.v0alpha.ProcessListRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ProcessListResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getProcessListMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.StreamListRequest> streamList(
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.StreamListResponse> responseObserver) {
+      return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getStreamListMethod(), responseObserver);
+    }
+
+    /**
+     */
     default void getAvailableFields(com.google.protobuf.Empty request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ProcessFields> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAvailableFieldsMethod(), responseObserver);
@@ -2160,6 +2298,26 @@ public final class LMSGrpc {
     default void updateCjsSecureSearchCriteria(com.tcn.cloud.api.api.v0alpha.CjsSecureSearchCriteria request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateCjsSecureSearchCriteriaMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     *SampleEndpoint is to test that values come through to the api appropriately
+     * </pre>
+     */
+    default void sampleEndpoint(com.tcn.cloud.api.api.v0alpha.SampleRequest request,
+        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSampleEndpointMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * returns all fields possible that an ehr entity type could return (that we know of)
+     * </pre>
+     */
+    default void getAvailableEHRFields(com.tcn.cloud.api.api.v0alpha.EHREntityType request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Fields> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAvailableEHRFieldsMethod(), responseObserver);
     }
 
     /**
@@ -2404,6 +2562,22 @@ public final class LMSGrpc {
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getProcessElementMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void processList(com.tcn.cloud.api.api.v0alpha.ProcessListRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ProcessListResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getProcessListMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.StreamListRequest> streamList(
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.StreamListResponse> responseObserver) {
+      return io.grpc.stub.ClientCalls.asyncClientStreamingCall(
+          getChannel().newCall(getStreamListMethod(), getCallOptions()), responseObserver);
     }
 
     /**
@@ -2676,6 +2850,28 @@ public final class LMSGrpc {
     }
 
     /**
+     * <pre>
+     *SampleEndpoint is to test that values come through to the api appropriately
+     * </pre>
+     */
+    public void sampleEndpoint(com.tcn.cloud.api.api.v0alpha.SampleRequest request,
+        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getSampleEndpointMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * returns all fields possible that an ehr entity type could return (that we know of)
+     * </pre>
+     */
+    public void getAvailableEHRFields(com.tcn.cloud.api.api.v0alpha.EHREntityType request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Fields> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetAvailableEHRFieldsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
      */
     public void getQueuedEventsStatusByElementId(com.tcn.cloud.api.api.v0alpha.ElementPK request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Events> responseObserver) {
@@ -2886,6 +3082,13 @@ public final class LMSGrpc {
     public com.google.protobuf.Empty processElement(com.tcn.cloud.api.api.v0alpha.ProcessElementReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getProcessElementMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.tcn.cloud.api.api.v0alpha.ProcessListResponse processList(com.tcn.cloud.api.api.v0alpha.ProcessListRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getProcessListMethod(), getCallOptions(), request);
     }
 
     /**
@@ -3131,6 +3334,26 @@ public final class LMSGrpc {
     }
 
     /**
+     * <pre>
+     *SampleEndpoint is to test that values come through to the api appropriately
+     * </pre>
+     */
+    public com.google.protobuf.Empty sampleEndpoint(com.tcn.cloud.api.api.v0alpha.SampleRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSampleEndpointMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * returns all fields possible that an ehr entity type could return (that we know of)
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v0alpha.Fields getAvailableEHRFields(com.tcn.cloud.api.api.v0alpha.EHREntityType request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetAvailableEHRFieldsMethod(), getCallOptions(), request);
+    }
+
+    /**
      */
     public com.tcn.cloud.api.api.v0alpha.Events getQueuedEventsStatusByElementId(com.tcn.cloud.api.api.v0alpha.ElementPK request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -3323,6 +3546,14 @@ public final class LMSGrpc {
         com.tcn.cloud.api.api.v0alpha.ProcessElementReq request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getProcessElementMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ProcessListResponse> processList(
+        com.tcn.cloud.api.api.v0alpha.ProcessListRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getProcessListMethod(), getCallOptions()), request);
     }
 
     /**
@@ -3583,6 +3814,28 @@ public final class LMSGrpc {
     }
 
     /**
+     * <pre>
+     *SampleEndpoint is to test that values come through to the api appropriately
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> sampleEndpoint(
+        com.tcn.cloud.api.api.v0alpha.SampleRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getSampleEndpointMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * returns all fields possible that an ehr entity type could return (that we know of)
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.Fields> getAvailableEHRFields(
+        com.tcn.cloud.api.api.v0alpha.EHREntityType request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetAvailableEHRFieldsMethod(), getCallOptions()), request);
+    }
+
+    /**
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.Events> getQueuedEventsStatusByElementId(
         com.tcn.cloud.api.api.v0alpha.ElementPK request) {
@@ -3616,35 +3869,39 @@ public final class LMSGrpc {
   private static final int METHODID_COPY_PIPELINE_UPSTREAM = 22;
   private static final int METHODID_COPY_PIPELINE_DOWNSTREAM = 23;
   private static final int METHODID_PROCESS_ELEMENT = 24;
-  private static final int METHODID_GET_AVAILABLE_FIELDS = 25;
-  private static final int METHODID_LIST_NEW_EVENTS = 26;
-  private static final int METHODID_VIEW_QUEUE = 27;
-  private static final int METHODID_AUTOCOMPLETE = 28;
-  private static final int METHODID_GET_COMPLIANCE_SCRUB_LISTS = 29;
-  private static final int METHODID_FIND_FIELD_USAGES = 30;
-  private static final int METHODID_FIND_INVALID_ELEMENTS = 31;
-  private static final int METHODID_CREATE_COLLECTION = 32;
-  private static final int METHODID_GET_COLLECTION = 33;
-  private static final int METHODID_UPDATE_COLLECTION = 34;
-  private static final int METHODID_DELETE_COLLECTION = 35;
-  private static final int METHODID_LIST_COLLECTIONS = 36;
-  private static final int METHODID_RESET_COLLECTION = 37;
-  private static final int METHODID_ADD_COLLECTION_ENTRY = 38;
-  private static final int METHODID_DELETE_COLLECTION_ENTRY = 39;
-  private static final int METHODID_UPDATE_COLLECTION_ENTRY = 40;
-  private static final int METHODID_STREAM_COLLECTION = 41;
-  private static final int METHODID_SEARCH_COLLECTIONS_PAGINATED = 42;
-  private static final int METHODID_GET_COLLECTION_ENTRIES = 43;
-  private static final int METHODID_CREATE_CJS_SEARCH_DEFINITION = 44;
-  private static final int METHODID_GET_CJS_SEARCH_DEFINITION = 45;
-  private static final int METHODID_UPDATE_CJS_SEARCH_DEFINITION = 46;
-  private static final int METHODID_DELETE_CJS_SEARCH_DEFINITION = 47;
-  private static final int METHODID_LIST_CJS_SEARCH_DEFINITIONS = 48;
-  private static final int METHODID_EXECUTE_CJS_SEARCH_DEFINITION = 49;
-  private static final int METHODID_GET_CJS_SECURE_SEARCH_CRITERIA = 50;
-  private static final int METHODID_CREATE_CJS_SECURE_SEARCH_CRITERIA = 51;
-  private static final int METHODID_UPDATE_CJS_SECURE_SEARCH_CRITERIA = 52;
-  private static final int METHODID_GET_QUEUED_EVENTS_STATUS_BY_ELEMENT_ID = 53;
+  private static final int METHODID_PROCESS_LIST = 25;
+  private static final int METHODID_GET_AVAILABLE_FIELDS = 26;
+  private static final int METHODID_LIST_NEW_EVENTS = 27;
+  private static final int METHODID_VIEW_QUEUE = 28;
+  private static final int METHODID_AUTOCOMPLETE = 29;
+  private static final int METHODID_GET_COMPLIANCE_SCRUB_LISTS = 30;
+  private static final int METHODID_FIND_FIELD_USAGES = 31;
+  private static final int METHODID_FIND_INVALID_ELEMENTS = 32;
+  private static final int METHODID_CREATE_COLLECTION = 33;
+  private static final int METHODID_GET_COLLECTION = 34;
+  private static final int METHODID_UPDATE_COLLECTION = 35;
+  private static final int METHODID_DELETE_COLLECTION = 36;
+  private static final int METHODID_LIST_COLLECTIONS = 37;
+  private static final int METHODID_RESET_COLLECTION = 38;
+  private static final int METHODID_ADD_COLLECTION_ENTRY = 39;
+  private static final int METHODID_DELETE_COLLECTION_ENTRY = 40;
+  private static final int METHODID_UPDATE_COLLECTION_ENTRY = 41;
+  private static final int METHODID_STREAM_COLLECTION = 42;
+  private static final int METHODID_SEARCH_COLLECTIONS_PAGINATED = 43;
+  private static final int METHODID_GET_COLLECTION_ENTRIES = 44;
+  private static final int METHODID_CREATE_CJS_SEARCH_DEFINITION = 45;
+  private static final int METHODID_GET_CJS_SEARCH_DEFINITION = 46;
+  private static final int METHODID_UPDATE_CJS_SEARCH_DEFINITION = 47;
+  private static final int METHODID_DELETE_CJS_SEARCH_DEFINITION = 48;
+  private static final int METHODID_LIST_CJS_SEARCH_DEFINITIONS = 49;
+  private static final int METHODID_EXECUTE_CJS_SEARCH_DEFINITION = 50;
+  private static final int METHODID_GET_CJS_SECURE_SEARCH_CRITERIA = 51;
+  private static final int METHODID_CREATE_CJS_SECURE_SEARCH_CRITERIA = 52;
+  private static final int METHODID_UPDATE_CJS_SECURE_SEARCH_CRITERIA = 53;
+  private static final int METHODID_SAMPLE_ENDPOINT = 54;
+  private static final int METHODID_GET_AVAILABLE_EHRFIELDS = 55;
+  private static final int METHODID_GET_QUEUED_EVENTS_STATUS_BY_ELEMENT_ID = 56;
+  private static final int METHODID_STREAM_LIST = 57;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -3763,6 +4020,10 @@ public final class LMSGrpc {
           serviceImpl.processElement((com.tcn.cloud.api.api.v0alpha.ProcessElementReq) request,
               (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
           break;
+        case METHODID_PROCESS_LIST:
+          serviceImpl.processList((com.tcn.cloud.api.api.v0alpha.ProcessListRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ProcessListResponse>) responseObserver);
+          break;
         case METHODID_GET_AVAILABLE_FIELDS:
           serviceImpl.getAvailableFields((com.google.protobuf.Empty) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ProcessFields>) responseObserver);
@@ -3875,6 +4136,14 @@ public final class LMSGrpc {
           serviceImpl.updateCjsSecureSearchCriteria((com.tcn.cloud.api.api.v0alpha.CjsSecureSearchCriteria) request,
               (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
           break;
+        case METHODID_SAMPLE_ENDPOINT:
+          serviceImpl.sampleEndpoint((com.tcn.cloud.api.api.v0alpha.SampleRequest) request,
+              (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
+          break;
+        case METHODID_GET_AVAILABLE_EHRFIELDS:
+          serviceImpl.getAvailableEHRFields((com.tcn.cloud.api.api.v0alpha.EHREntityType) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Fields>) responseObserver);
+          break;
         case METHODID_GET_QUEUED_EVENTS_STATUS_BY_ELEMENT_ID:
           serviceImpl.getQueuedEventsStatusByElementId((com.tcn.cloud.api.api.v0alpha.ElementPK) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Events>) responseObserver);
@@ -3889,6 +4158,9 @@ public final class LMSGrpc {
     public io.grpc.stub.StreamObserver<Req> invoke(
         io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
+        case METHODID_STREAM_LIST:
+          return (io.grpc.stub.StreamObserver<Req>) serviceImpl.streamList(
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.StreamListResponse>) responseObserver);
         default:
           throw new AssertionError();
       }
@@ -4072,6 +4344,20 @@ public final class LMSGrpc {
               com.tcn.cloud.api.api.v0alpha.ProcessElementReq,
               com.google.protobuf.Empty>(
                 service, METHODID_PROCESS_ELEMENT)))
+        .addMethod(
+          getProcessListMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ProcessListRequest,
+              com.tcn.cloud.api.api.v0alpha.ProcessListResponse>(
+                service, METHODID_PROCESS_LIST)))
+        .addMethod(
+          getStreamListMethod(),
+          io.grpc.stub.ServerCalls.asyncClientStreamingCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.StreamListRequest,
+              com.tcn.cloud.api.api.v0alpha.StreamListResponse>(
+                service, METHODID_STREAM_LIST)))
         .addMethod(
           getGetAvailableFieldsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -4269,6 +4555,20 @@ public final class LMSGrpc {
               com.google.protobuf.Empty>(
                 service, METHODID_UPDATE_CJS_SECURE_SEARCH_CRITERIA)))
         .addMethod(
+          getSampleEndpointMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.SampleRequest,
+              com.google.protobuf.Empty>(
+                service, METHODID_SAMPLE_ENDPOINT)))
+        .addMethod(
+          getGetAvailableEHRFieldsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.EHREntityType,
+              com.tcn.cloud.api.api.v0alpha.Fields>(
+                service, METHODID_GET_AVAILABLE_EHRFIELDS)))
+        .addMethod(
           getGetQueuedEventsStatusByElementIdMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -4348,6 +4648,8 @@ public final class LMSGrpc {
               .addMethod(getCopyPipelineUpstreamMethod())
               .addMethod(getCopyPipelineDownstreamMethod())
               .addMethod(getProcessElementMethod())
+              .addMethod(getProcessListMethod())
+              .addMethod(getStreamListMethod())
               .addMethod(getGetAvailableFieldsMethod())
               .addMethod(getListNewEventsMethod())
               .addMethod(getViewQueueMethod())
@@ -4376,6 +4678,8 @@ public final class LMSGrpc {
               .addMethod(getGetCjsSecureSearchCriteriaMethod())
               .addMethod(getCreateCjsSecureSearchCriteriaMethod())
               .addMethod(getUpdateCjsSecureSearchCriteriaMethod())
+              .addMethod(getSampleEndpointMethod())
+              .addMethod(getGetAvailableEHRFieldsMethod())
               .addMethod(getGetQueuedEventsStatusByElementIdMethod())
               .build();
         }

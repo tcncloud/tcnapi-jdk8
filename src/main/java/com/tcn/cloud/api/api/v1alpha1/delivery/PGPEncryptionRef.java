@@ -41,7 +41,7 @@ private static final long serialVersionUID = 0L;
   public static final int PGP_SID_FIELD_NUMBER = 1;
   private long pgpSid_ = 0L;
   /**
-   * <code>int64 pgp_sid = 1 [json_name = "pgpSid"];</code>
+   * <code>int64 pgp_sid = 1 [json_name = "pgpSid", jstype = JS_STRING];</code>
    * @return The pgpSid.
    */
   @java.lang.Override
@@ -377,7 +377,7 @@ private static final long serialVersionUID = 0L;
 
     private long pgpSid_ ;
     /**
-     * <code>int64 pgp_sid = 1 [json_name = "pgpSid"];</code>
+     * <code>int64 pgp_sid = 1 [json_name = "pgpSid", jstype = JS_STRING];</code>
      * @return The pgpSid.
      */
     @java.lang.Override
@@ -385,7 +385,7 @@ private static final long serialVersionUID = 0L;
       return pgpSid_;
     }
     /**
-     * <code>int64 pgp_sid = 1 [json_name = "pgpSid"];</code>
+     * <code>int64 pgp_sid = 1 [json_name = "pgpSid", jstype = JS_STRING];</code>
      * @param value The pgpSid to set.
      * @return This builder for chaining.
      */
@@ -397,7 +397,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int64 pgp_sid = 1 [json_name = "pgpSid"];</code>
+     * <code>int64 pgp_sid = 1 [json_name = "pgpSid", jstype = JS_STRING];</code>
      * @return This builder for chaining.
      */
     public Builder clearPgpSid() {

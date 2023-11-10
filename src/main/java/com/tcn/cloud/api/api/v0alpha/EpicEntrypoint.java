@@ -24,6 +24,8 @@ private static final long serialVersionUID = 0L;
     entityTypes_ = java.util.Collections.emptyList();
     groupBaseUrl_ = "";
     groupFhirId_ = "";
+    timezone_ = "";
+    fields_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -390,6 +392,144 @@ private static final long serialVersionUID = 0L;
     return flushDuringCheck_;
   }
 
+  public static final int TIMEZONE_FIELD_NUMBER = 11;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object timezone_ = "";
+  /**
+   * <pre>
+   * Specifies the timezone to be used by the cron
+   * </pre>
+   *
+   * <code>string timezone = 11 [json_name = "timezone"];</code>
+   * @return The timezone.
+   */
+  @java.lang.Override
+  public java.lang.String getTimezone() {
+    java.lang.Object ref = timezone_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      timezone_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Specifies the timezone to be used by the cron
+   * </pre>
+   *
+   * <code>string timezone = 11 [json_name = "timezone"];</code>
+   * @return The bytes for timezone.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getTimezoneBytes() {
+    java.lang.Object ref = timezone_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      timezone_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int ENABLED_FIELD_NUMBER = 12;
+  private boolean enabled_ = false;
+  /**
+   * <pre>
+   * If process is enabled
+   * </pre>
+   *
+   * <code>bool enabled = 12 [json_name = "enabled"];</code>
+   * @return The enabled.
+   */
+  @java.lang.Override
+  public boolean getEnabled() {
+    return enabled_;
+  }
+
+  public static final int FIELDS_FIELD_NUMBER = 13;
+  @SuppressWarnings("serial")
+  private java.util.List<com.tcn.cloud.api.api.v0alpha.Field> fields_;
+  /**
+   * <pre>
+   * The fields the user wants retrieved from the raw json response
+   * </pre>
+   *
+   * <code>repeated .api.v0alpha.Field fields = 13 [json_name = "fields"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.api.v0alpha.Field> getFieldsList() {
+    return fields_;
+  }
+  /**
+   * <pre>
+   * The fields the user wants retrieved from the raw json response
+   * </pre>
+   *
+   * <code>repeated .api.v0alpha.Field fields = 13 [json_name = "fields"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.tcn.cloud.api.api.v0alpha.FieldOrBuilder> 
+      getFieldsOrBuilderList() {
+    return fields_;
+  }
+  /**
+   * <pre>
+   * The fields the user wants retrieved from the raw json response
+   * </pre>
+   *
+   * <code>repeated .api.v0alpha.Field fields = 13 [json_name = "fields"];</code>
+   */
+  @java.lang.Override
+  public int getFieldsCount() {
+    return fields_.size();
+  }
+  /**
+   * <pre>
+   * The fields the user wants retrieved from the raw json response
+   * </pre>
+   *
+   * <code>repeated .api.v0alpha.Field fields = 13 [json_name = "fields"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v0alpha.Field getFields(int index) {
+    return fields_.get(index);
+  }
+  /**
+   * <pre>
+   * The fields the user wants retrieved from the raw json response
+   * </pre>
+   *
+   * <code>repeated .api.v0alpha.Field fields = 13 [json_name = "fields"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v0alpha.FieldOrBuilder getFieldsOrBuilder(
+      int index) {
+    return fields_.get(index);
+  }
+
+  public static final int RAW_JSON_FIELD_NUMBER = 14;
+  private boolean rawJson_ = false;
+  /**
+   * <pre>
+   * If we should return one column as raw json and not any specified fields for file template
+   * </pre>
+   *
+   * <code>bool raw_json = 14 [json_name = "rawJson"];</code>
+   * @return The rawJson.
+   */
+  @java.lang.Override
+  public boolean getRawJson() {
+    return rawJson_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -435,6 +575,18 @@ private static final long serialVersionUID = 0L;
     }
     if (flushDuringCheck_ != false) {
       output.writeBool(10, flushDuringCheck_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timezone_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 11, timezone_);
+    }
+    if (enabled_ != false) {
+      output.writeBool(12, enabled_);
+    }
+    for (int i = 0; i < fields_.size(); i++) {
+      output.writeMessage(13, fields_.get(i));
+    }
+    if (rawJson_ != false) {
+      output.writeBool(14, rawJson_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -486,6 +638,21 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(10, flushDuringCheck_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timezone_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, timezone_);
+    }
+    if (enabled_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(12, enabled_);
+    }
+    for (int i = 0; i < fields_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(13, fields_.get(i));
+    }
+    if (rawJson_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(14, rawJson_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -522,6 +689,14 @@ private static final long serialVersionUID = 0L;
         != other.getFlushMinuteCount()) return false;
     if (getFlushDuringCheck()
         != other.getFlushDuringCheck()) return false;
+    if (!getTimezone()
+        .equals(other.getTimezone())) return false;
+    if (getEnabled()
+        != other.getEnabled()) return false;
+    if (!getFieldsList()
+        .equals(other.getFieldsList())) return false;
+    if (getRawJson()
+        != other.getRawJson()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -559,6 +734,18 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + FLUSH_DURING_CHECK_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getFlushDuringCheck());
+    hash = (37 * hash) + TIMEZONE_FIELD_NUMBER;
+    hash = (53 * hash) + getTimezone().hashCode();
+    hash = (37 * hash) + ENABLED_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getEnabled());
+    if (getFieldsCount() > 0) {
+      hash = (37 * hash) + FIELDS_FIELD_NUMBER;
+      hash = (53 * hash) + getFieldsList().hashCode();
+    }
+    hash = (37 * hash) + RAW_JSON_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getRawJson());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -708,6 +895,16 @@ private static final long serialVersionUID = 0L;
       flushPageCount_ = 0L;
       flushMinuteCount_ = 0L;
       flushDuringCheck_ = false;
+      timezone_ = "";
+      enabled_ = false;
+      if (fieldsBuilder_ == null) {
+        fields_ = java.util.Collections.emptyList();
+      } else {
+        fields_ = null;
+        fieldsBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000800);
+      rawJson_ = false;
       return this;
     }
 
@@ -746,6 +943,15 @@ private static final long serialVersionUID = 0L;
         bitField0_ = (bitField0_ & ~0x00000004);
       }
       result.entityTypes_ = entityTypes_;
+      if (fieldsBuilder_ == null) {
+        if (((bitField0_ & 0x00000800) != 0)) {
+          fields_ = java.util.Collections.unmodifiableList(fields_);
+          bitField0_ = (bitField0_ & ~0x00000800);
+        }
+        result.fields_ = fields_;
+      } else {
+        result.fields_ = fieldsBuilder_.build();
+      }
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.v0alpha.EpicEntrypoint result) {
@@ -775,6 +981,15 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000100) != 0)) {
         result.flushDuringCheck_ = flushDuringCheck_;
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.timezone_ = timezone_;
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        result.enabled_ = enabled_;
+      }
+      if (((from_bitField0_ & 0x00001000) != 0)) {
+        result.rawJson_ = rawJson_;
       }
     }
 
@@ -862,6 +1077,43 @@ private static final long serialVersionUID = 0L;
       if (other.getFlushDuringCheck() != false) {
         setFlushDuringCheck(other.getFlushDuringCheck());
       }
+      if (!other.getTimezone().isEmpty()) {
+        timezone_ = other.timezone_;
+        bitField0_ |= 0x00000200;
+        onChanged();
+      }
+      if (other.getEnabled() != false) {
+        setEnabled(other.getEnabled());
+      }
+      if (fieldsBuilder_ == null) {
+        if (!other.fields_.isEmpty()) {
+          if (fields_.isEmpty()) {
+            fields_ = other.fields_;
+            bitField0_ = (bitField0_ & ~0x00000800);
+          } else {
+            ensureFieldsIsMutable();
+            fields_.addAll(other.fields_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.fields_.isEmpty()) {
+          if (fieldsBuilder_.isEmpty()) {
+            fieldsBuilder_.dispose();
+            fieldsBuilder_ = null;
+            fields_ = other.fields_;
+            bitField0_ = (bitField0_ & ~0x00000800);
+            fieldsBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getFieldsFieldBuilder() : null;
+          } else {
+            fieldsBuilder_.addAllMessages(other.fields_);
+          }
+        }
+      }
+      if (other.getRawJson() != false) {
+        setRawJson(other.getRawJson());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -947,6 +1199,34 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000100;
               break;
             } // case 80
+            case 90: {
+              timezone_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 90
+            case 96: {
+              enabled_ = input.readBool();
+              bitField0_ |= 0x00000400;
+              break;
+            } // case 96
+            case 106: {
+              com.tcn.cloud.api.api.v0alpha.Field m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.v0alpha.Field.parser(),
+                      extensionRegistry);
+              if (fieldsBuilder_ == null) {
+                ensureFieldsIsMutable();
+                fields_.add(m);
+              } else {
+                fieldsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 106
+            case 112: {
+              rawJson_ = input.readBool();
+              bitField0_ |= 0x00001000;
+              break;
+            } // case 112
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1830,6 +2110,498 @@ private static final long serialVersionUID = 0L;
     public Builder clearFlushDuringCheck() {
       bitField0_ = (bitField0_ & ~0x00000100);
       flushDuringCheck_ = false;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object timezone_ = "";
+    /**
+     * <pre>
+     * Specifies the timezone to be used by the cron
+     * </pre>
+     *
+     * <code>string timezone = 11 [json_name = "timezone"];</code>
+     * @return The timezone.
+     */
+    public java.lang.String getTimezone() {
+      java.lang.Object ref = timezone_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        timezone_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Specifies the timezone to be used by the cron
+     * </pre>
+     *
+     * <code>string timezone = 11 [json_name = "timezone"];</code>
+     * @return The bytes for timezone.
+     */
+    public com.google.protobuf.ByteString
+        getTimezoneBytes() {
+      java.lang.Object ref = timezone_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        timezone_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Specifies the timezone to be used by the cron
+     * </pre>
+     *
+     * <code>string timezone = 11 [json_name = "timezone"];</code>
+     * @param value The timezone to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTimezone(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      timezone_ = value;
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Specifies the timezone to be used by the cron
+     * </pre>
+     *
+     * <code>string timezone = 11 [json_name = "timezone"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTimezone() {
+      timezone_ = getDefaultInstance().getTimezone();
+      bitField0_ = (bitField0_ & ~0x00000200);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Specifies the timezone to be used by the cron
+     * </pre>
+     *
+     * <code>string timezone = 11 [json_name = "timezone"];</code>
+     * @param value The bytes for timezone to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTimezoneBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      timezone_ = value;
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+
+    private boolean enabled_ ;
+    /**
+     * <pre>
+     * If process is enabled
+     * </pre>
+     *
+     * <code>bool enabled = 12 [json_name = "enabled"];</code>
+     * @return The enabled.
+     */
+    @java.lang.Override
+    public boolean getEnabled() {
+      return enabled_;
+    }
+    /**
+     * <pre>
+     * If process is enabled
+     * </pre>
+     *
+     * <code>bool enabled = 12 [json_name = "enabled"];</code>
+     * @param value The enabled to set.
+     * @return This builder for chaining.
+     */
+    public Builder setEnabled(boolean value) {
+
+      enabled_ = value;
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * If process is enabled
+     * </pre>
+     *
+     * <code>bool enabled = 12 [json_name = "enabled"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearEnabled() {
+      bitField0_ = (bitField0_ & ~0x00000400);
+      enabled_ = false;
+      onChanged();
+      return this;
+    }
+
+    private java.util.List<com.tcn.cloud.api.api.v0alpha.Field> fields_ =
+      java.util.Collections.emptyList();
+    private void ensureFieldsIsMutable() {
+      if (!((bitField0_ & 0x00000800) != 0)) {
+        fields_ = new java.util.ArrayList<com.tcn.cloud.api.api.v0alpha.Field>(fields_);
+        bitField0_ |= 0x00000800;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.v0alpha.Field, com.tcn.cloud.api.api.v0alpha.Field.Builder, com.tcn.cloud.api.api.v0alpha.FieldOrBuilder> fieldsBuilder_;
+
+    /**
+     * <pre>
+     * The fields the user wants retrieved from the raw json response
+     * </pre>
+     *
+     * <code>repeated .api.v0alpha.Field fields = 13 [json_name = "fields"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.v0alpha.Field> getFieldsList() {
+      if (fieldsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(fields_);
+      } else {
+        return fieldsBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * The fields the user wants retrieved from the raw json response
+     * </pre>
+     *
+     * <code>repeated .api.v0alpha.Field fields = 13 [json_name = "fields"];</code>
+     */
+    public int getFieldsCount() {
+      if (fieldsBuilder_ == null) {
+        return fields_.size();
+      } else {
+        return fieldsBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * The fields the user wants retrieved from the raw json response
+     * </pre>
+     *
+     * <code>repeated .api.v0alpha.Field fields = 13 [json_name = "fields"];</code>
+     */
+    public com.tcn.cloud.api.api.v0alpha.Field getFields(int index) {
+      if (fieldsBuilder_ == null) {
+        return fields_.get(index);
+      } else {
+        return fieldsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * The fields the user wants retrieved from the raw json response
+     * </pre>
+     *
+     * <code>repeated .api.v0alpha.Field fields = 13 [json_name = "fields"];</code>
+     */
+    public Builder setFields(
+        int index, com.tcn.cloud.api.api.v0alpha.Field value) {
+      if (fieldsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureFieldsIsMutable();
+        fields_.set(index, value);
+        onChanged();
+      } else {
+        fieldsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The fields the user wants retrieved from the raw json response
+     * </pre>
+     *
+     * <code>repeated .api.v0alpha.Field fields = 13 [json_name = "fields"];</code>
+     */
+    public Builder setFields(
+        int index, com.tcn.cloud.api.api.v0alpha.Field.Builder builderForValue) {
+      if (fieldsBuilder_ == null) {
+        ensureFieldsIsMutable();
+        fields_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        fieldsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The fields the user wants retrieved from the raw json response
+     * </pre>
+     *
+     * <code>repeated .api.v0alpha.Field fields = 13 [json_name = "fields"];</code>
+     */
+    public Builder addFields(com.tcn.cloud.api.api.v0alpha.Field value) {
+      if (fieldsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureFieldsIsMutable();
+        fields_.add(value);
+        onChanged();
+      } else {
+        fieldsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The fields the user wants retrieved from the raw json response
+     * </pre>
+     *
+     * <code>repeated .api.v0alpha.Field fields = 13 [json_name = "fields"];</code>
+     */
+    public Builder addFields(
+        int index, com.tcn.cloud.api.api.v0alpha.Field value) {
+      if (fieldsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureFieldsIsMutable();
+        fields_.add(index, value);
+        onChanged();
+      } else {
+        fieldsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The fields the user wants retrieved from the raw json response
+     * </pre>
+     *
+     * <code>repeated .api.v0alpha.Field fields = 13 [json_name = "fields"];</code>
+     */
+    public Builder addFields(
+        com.tcn.cloud.api.api.v0alpha.Field.Builder builderForValue) {
+      if (fieldsBuilder_ == null) {
+        ensureFieldsIsMutable();
+        fields_.add(builderForValue.build());
+        onChanged();
+      } else {
+        fieldsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The fields the user wants retrieved from the raw json response
+     * </pre>
+     *
+     * <code>repeated .api.v0alpha.Field fields = 13 [json_name = "fields"];</code>
+     */
+    public Builder addFields(
+        int index, com.tcn.cloud.api.api.v0alpha.Field.Builder builderForValue) {
+      if (fieldsBuilder_ == null) {
+        ensureFieldsIsMutable();
+        fields_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        fieldsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The fields the user wants retrieved from the raw json response
+     * </pre>
+     *
+     * <code>repeated .api.v0alpha.Field fields = 13 [json_name = "fields"];</code>
+     */
+    public Builder addAllFields(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.v0alpha.Field> values) {
+      if (fieldsBuilder_ == null) {
+        ensureFieldsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, fields_);
+        onChanged();
+      } else {
+        fieldsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The fields the user wants retrieved from the raw json response
+     * </pre>
+     *
+     * <code>repeated .api.v0alpha.Field fields = 13 [json_name = "fields"];</code>
+     */
+    public Builder clearFields() {
+      if (fieldsBuilder_ == null) {
+        fields_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000800);
+        onChanged();
+      } else {
+        fieldsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The fields the user wants retrieved from the raw json response
+     * </pre>
+     *
+     * <code>repeated .api.v0alpha.Field fields = 13 [json_name = "fields"];</code>
+     */
+    public Builder removeFields(int index) {
+      if (fieldsBuilder_ == null) {
+        ensureFieldsIsMutable();
+        fields_.remove(index);
+        onChanged();
+      } else {
+        fieldsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The fields the user wants retrieved from the raw json response
+     * </pre>
+     *
+     * <code>repeated .api.v0alpha.Field fields = 13 [json_name = "fields"];</code>
+     */
+    public com.tcn.cloud.api.api.v0alpha.Field.Builder getFieldsBuilder(
+        int index) {
+      return getFieldsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * The fields the user wants retrieved from the raw json response
+     * </pre>
+     *
+     * <code>repeated .api.v0alpha.Field fields = 13 [json_name = "fields"];</code>
+     */
+    public com.tcn.cloud.api.api.v0alpha.FieldOrBuilder getFieldsOrBuilder(
+        int index) {
+      if (fieldsBuilder_ == null) {
+        return fields_.get(index);  } else {
+        return fieldsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * The fields the user wants retrieved from the raw json response
+     * </pre>
+     *
+     * <code>repeated .api.v0alpha.Field fields = 13 [json_name = "fields"];</code>
+     */
+    public java.util.List<? extends com.tcn.cloud.api.api.v0alpha.FieldOrBuilder> 
+         getFieldsOrBuilderList() {
+      if (fieldsBuilder_ != null) {
+        return fieldsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(fields_);
+      }
+    }
+    /**
+     * <pre>
+     * The fields the user wants retrieved from the raw json response
+     * </pre>
+     *
+     * <code>repeated .api.v0alpha.Field fields = 13 [json_name = "fields"];</code>
+     */
+    public com.tcn.cloud.api.api.v0alpha.Field.Builder addFieldsBuilder() {
+      return getFieldsFieldBuilder().addBuilder(
+          com.tcn.cloud.api.api.v0alpha.Field.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * The fields the user wants retrieved from the raw json response
+     * </pre>
+     *
+     * <code>repeated .api.v0alpha.Field fields = 13 [json_name = "fields"];</code>
+     */
+    public com.tcn.cloud.api.api.v0alpha.Field.Builder addFieldsBuilder(
+        int index) {
+      return getFieldsFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.api.v0alpha.Field.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * The fields the user wants retrieved from the raw json response
+     * </pre>
+     *
+     * <code>repeated .api.v0alpha.Field fields = 13 [json_name = "fields"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.v0alpha.Field.Builder> 
+         getFieldsBuilderList() {
+      return getFieldsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.v0alpha.Field, com.tcn.cloud.api.api.v0alpha.Field.Builder, com.tcn.cloud.api.api.v0alpha.FieldOrBuilder> 
+        getFieldsFieldBuilder() {
+      if (fieldsBuilder_ == null) {
+        fieldsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.api.v0alpha.Field, com.tcn.cloud.api.api.v0alpha.Field.Builder, com.tcn.cloud.api.api.v0alpha.FieldOrBuilder>(
+                fields_,
+                ((bitField0_ & 0x00000800) != 0),
+                getParentForChildren(),
+                isClean());
+        fields_ = null;
+      }
+      return fieldsBuilder_;
+    }
+
+    private boolean rawJson_ ;
+    /**
+     * <pre>
+     * If we should return one column as raw json and not any specified fields for file template
+     * </pre>
+     *
+     * <code>bool raw_json = 14 [json_name = "rawJson"];</code>
+     * @return The rawJson.
+     */
+    @java.lang.Override
+    public boolean getRawJson() {
+      return rawJson_;
+    }
+    /**
+     * <pre>
+     * If we should return one column as raw json and not any specified fields for file template
+     * </pre>
+     *
+     * <code>bool raw_json = 14 [json_name = "rawJson"];</code>
+     * @param value The rawJson to set.
+     * @return This builder for chaining.
+     */
+    public Builder setRawJson(boolean value) {
+
+      rawJson_ = value;
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * If we should return one column as raw json and not any specified fields for file template
+     * </pre>
+     *
+     * <code>bool raw_json = 14 [json_name = "rawJson"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearRawJson() {
+      bitField0_ = (bitField0_ & ~0x00001000);
+      rawJson_ = false;
       onChanged();
       return this;
     }

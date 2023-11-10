@@ -163,11 +163,13 @@ private static final long serialVersionUID = 0L;
    * skills associated with the campaign
    * </pre>
    *
-   * <code>.api.commons.OmniConversationSkills skills = 4 [json_name = "skills"];</code>
+   * <code>.api.commons.OmniConversationSkills skills = 4 [json_name = "skills", deprecated = true];</code>
+   * @deprecated api.commons.OmniCampaign.skills is deprecated.
+   *     See api/commons/omnichannel.proto;l=22
    * @return Whether the skills field is set.
    */
   @java.lang.Override
-  public boolean hasSkills() {
+  @java.lang.Deprecated public boolean hasSkills() {
     return skills_ != null;
   }
   /**
@@ -175,11 +177,13 @@ private static final long serialVersionUID = 0L;
    * skills associated with the campaign
    * </pre>
    *
-   * <code>.api.commons.OmniConversationSkills skills = 4 [json_name = "skills"];</code>
+   * <code>.api.commons.OmniConversationSkills skills = 4 [json_name = "skills", deprecated = true];</code>
+   * @deprecated api.commons.OmniCampaign.skills is deprecated.
+   *     See api/commons/omnichannel.proto;l=22
    * @return The skills.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.OmniConversationSkills getSkills() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.OmniConversationSkills getSkills() {
     return skills_ == null ? com.tcn.cloud.api.api.commons.OmniConversationSkills.getDefaultInstance() : skills_;
   }
   /**
@@ -187,10 +191,10 @@ private static final long serialVersionUID = 0L;
    * skills associated with the campaign
    * </pre>
    *
-   * <code>.api.commons.OmniConversationSkills skills = 4 [json_name = "skills"];</code>
+   * <code>.api.commons.OmniConversationSkills skills = 4 [json_name = "skills", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.OmniConversationSkillsOrBuilder getSkillsOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.OmniConversationSkillsOrBuilder getSkillsOrBuilder() {
     return skills_ == null ? com.tcn.cloud.api.api.commons.OmniConversationSkills.getDefaultInstance() : skills_;
   }
 
@@ -489,6 +493,44 @@ private static final long serialVersionUID = 0L;
     return shortenUrl_;
   }
 
+  public static final int COMPLIANCE_CONFIG_FIELD_NUMBER = 14;
+  private com.tcn.cloud.api.api.commons.OmniComplianceConfig complianceConfig_;
+  /**
+   * <pre>
+   * compliance configuration
+   * </pre>
+   *
+   * <code>.api.commons.OmniComplianceConfig compliance_config = 14 [json_name = "complianceConfig"];</code>
+   * @return Whether the complianceConfig field is set.
+   */
+  @java.lang.Override
+  public boolean hasComplianceConfig() {
+    return complianceConfig_ != null;
+  }
+  /**
+   * <pre>
+   * compliance configuration
+   * </pre>
+   *
+   * <code>.api.commons.OmniComplianceConfig compliance_config = 14 [json_name = "complianceConfig"];</code>
+   * @return The complianceConfig.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.OmniComplianceConfig getComplianceConfig() {
+    return complianceConfig_ == null ? com.tcn.cloud.api.api.commons.OmniComplianceConfig.getDefaultInstance() : complianceConfig_;
+  }
+  /**
+   * <pre>
+   * compliance configuration
+   * </pre>
+   *
+   * <code>.api.commons.OmniComplianceConfig compliance_config = 14 [json_name = "complianceConfig"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.OmniComplianceConfigOrBuilder getComplianceConfigOrBuilder() {
+    return complianceConfig_ == null ? com.tcn.cloud.api.api.commons.OmniComplianceConfig.getDefaultInstance() : complianceConfig_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -541,6 +583,9 @@ private static final long serialVersionUID = 0L;
     }
     if (shortenUrl_ != false) {
       output.writeBool(13, shortenUrl_);
+    }
+    if (complianceConfig_ != null) {
+      output.writeMessage(14, getComplianceConfig());
     }
     getUnknownFields().writeTo(output);
   }
@@ -601,6 +646,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(13, shortenUrl_);
     }
+    if (complianceConfig_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(14, getComplianceConfig());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -655,6 +704,11 @@ private static final long serialVersionUID = 0L;
     }
     if (getShortenUrl()
         != other.getShortenUrl()) return false;
+    if (hasComplianceConfig() != other.hasComplianceConfig()) return false;
+    if (hasComplianceConfig()) {
+      if (!getComplianceConfig()
+          .equals(other.getComplianceConfig())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -707,6 +761,10 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + SHORTEN_URL_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getShortenUrl());
+    if (hasComplianceConfig()) {
+      hash = (37 * hash) + COMPLIANCE_CONFIG_FIELD_NUMBER;
+      hash = (53 * hash) + getComplianceConfig().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -881,6 +939,11 @@ private static final long serialVersionUID = 0L;
         timeZoneBuilder_ = null;
       }
       shortenUrl_ = false;
+      complianceConfig_ = null;
+      if (complianceConfigBuilder_ != null) {
+        complianceConfigBuilder_.dispose();
+        complianceConfigBuilder_ = null;
+      }
       return this;
     }
 
@@ -972,6 +1035,11 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00001000) != 0)) {
         result.shortenUrl_ = shortenUrl_;
+      }
+      if (((from_bitField0_ & 0x00002000) != 0)) {
+        result.complianceConfig_ = complianceConfigBuilder_ == null
+            ? complianceConfig_
+            : complianceConfigBuilder_.build();
       }
     }
 
@@ -1085,6 +1153,9 @@ private static final long serialVersionUID = 0L;
       if (other.getShortenUrl() != false) {
         setShortenUrl(other.getShortenUrl());
       }
+      if (other.hasComplianceConfig()) {
+        mergeComplianceConfig(other.getComplianceConfig());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1194,6 +1265,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00001000;
               break;
             } // case 104
+            case 114: {
+              input.readMessage(
+                  getComplianceConfigFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00002000;
+              break;
+            } // case 114
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1447,10 +1525,12 @@ private static final long serialVersionUID = 0L;
      * skills associated with the campaign
      * </pre>
      *
-     * <code>.api.commons.OmniConversationSkills skills = 4 [json_name = "skills"];</code>
+     * <code>.api.commons.OmniConversationSkills skills = 4 [json_name = "skills", deprecated = true];</code>
+     * @deprecated api.commons.OmniCampaign.skills is deprecated.
+     *     See api/commons/omnichannel.proto;l=22
      * @return Whether the skills field is set.
      */
-    public boolean hasSkills() {
+    @java.lang.Deprecated public boolean hasSkills() {
       return ((bitField0_ & 0x00000008) != 0);
     }
     /**
@@ -1458,10 +1538,12 @@ private static final long serialVersionUID = 0L;
      * skills associated with the campaign
      * </pre>
      *
-     * <code>.api.commons.OmniConversationSkills skills = 4 [json_name = "skills"];</code>
+     * <code>.api.commons.OmniConversationSkills skills = 4 [json_name = "skills", deprecated = true];</code>
+     * @deprecated api.commons.OmniCampaign.skills is deprecated.
+     *     See api/commons/omnichannel.proto;l=22
      * @return The skills.
      */
-    public com.tcn.cloud.api.api.commons.OmniConversationSkills getSkills() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.OmniConversationSkills getSkills() {
       if (skillsBuilder_ == null) {
         return skills_ == null ? com.tcn.cloud.api.api.commons.OmniConversationSkills.getDefaultInstance() : skills_;
       } else {
@@ -1473,9 +1555,9 @@ private static final long serialVersionUID = 0L;
      * skills associated with the campaign
      * </pre>
      *
-     * <code>.api.commons.OmniConversationSkills skills = 4 [json_name = "skills"];</code>
+     * <code>.api.commons.OmniConversationSkills skills = 4 [json_name = "skills", deprecated = true];</code>
      */
-    public Builder setSkills(com.tcn.cloud.api.api.commons.OmniConversationSkills value) {
+    @java.lang.Deprecated public Builder setSkills(com.tcn.cloud.api.api.commons.OmniConversationSkills value) {
       if (skillsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1493,9 +1575,9 @@ private static final long serialVersionUID = 0L;
      * skills associated with the campaign
      * </pre>
      *
-     * <code>.api.commons.OmniConversationSkills skills = 4 [json_name = "skills"];</code>
+     * <code>.api.commons.OmniConversationSkills skills = 4 [json_name = "skills", deprecated = true];</code>
      */
-    public Builder setSkills(
+    @java.lang.Deprecated public Builder setSkills(
         com.tcn.cloud.api.api.commons.OmniConversationSkills.Builder builderForValue) {
       if (skillsBuilder_ == null) {
         skills_ = builderForValue.build();
@@ -1511,9 +1593,9 @@ private static final long serialVersionUID = 0L;
      * skills associated with the campaign
      * </pre>
      *
-     * <code>.api.commons.OmniConversationSkills skills = 4 [json_name = "skills"];</code>
+     * <code>.api.commons.OmniConversationSkills skills = 4 [json_name = "skills", deprecated = true];</code>
      */
-    public Builder mergeSkills(com.tcn.cloud.api.api.commons.OmniConversationSkills value) {
+    @java.lang.Deprecated public Builder mergeSkills(com.tcn.cloud.api.api.commons.OmniConversationSkills value) {
       if (skillsBuilder_ == null) {
         if (((bitField0_ & 0x00000008) != 0) &&
           skills_ != null &&
@@ -1534,9 +1616,9 @@ private static final long serialVersionUID = 0L;
      * skills associated with the campaign
      * </pre>
      *
-     * <code>.api.commons.OmniConversationSkills skills = 4 [json_name = "skills"];</code>
+     * <code>.api.commons.OmniConversationSkills skills = 4 [json_name = "skills", deprecated = true];</code>
      */
-    public Builder clearSkills() {
+    @java.lang.Deprecated public Builder clearSkills() {
       bitField0_ = (bitField0_ & ~0x00000008);
       skills_ = null;
       if (skillsBuilder_ != null) {
@@ -1551,9 +1633,9 @@ private static final long serialVersionUID = 0L;
      * skills associated with the campaign
      * </pre>
      *
-     * <code>.api.commons.OmniConversationSkills skills = 4 [json_name = "skills"];</code>
+     * <code>.api.commons.OmniConversationSkills skills = 4 [json_name = "skills", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.OmniConversationSkills.Builder getSkillsBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.OmniConversationSkills.Builder getSkillsBuilder() {
       bitField0_ |= 0x00000008;
       onChanged();
       return getSkillsFieldBuilder().getBuilder();
@@ -1563,9 +1645,9 @@ private static final long serialVersionUID = 0L;
      * skills associated with the campaign
      * </pre>
      *
-     * <code>.api.commons.OmniConversationSkills skills = 4 [json_name = "skills"];</code>
+     * <code>.api.commons.OmniConversationSkills skills = 4 [json_name = "skills", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.OmniConversationSkillsOrBuilder getSkillsOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.OmniConversationSkillsOrBuilder getSkillsOrBuilder() {
       if (skillsBuilder_ != null) {
         return skillsBuilder_.getMessageOrBuilder();
       } else {
@@ -1578,7 +1660,7 @@ private static final long serialVersionUID = 0L;
      * skills associated with the campaign
      * </pre>
      *
-     * <code>.api.commons.OmniConversationSkills skills = 4 [json_name = "skills"];</code>
+     * <code>.api.commons.OmniConversationSkills skills = 4 [json_name = "skills", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.OmniConversationSkills, com.tcn.cloud.api.api.commons.OmniConversationSkills.Builder, com.tcn.cloud.api.api.commons.OmniConversationSkillsOrBuilder> 
@@ -2758,6 +2840,161 @@ private static final long serialVersionUID = 0L;
       shortenUrl_ = false;
       onChanged();
       return this;
+    }
+
+    private com.tcn.cloud.api.api.commons.OmniComplianceConfig complianceConfig_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.OmniComplianceConfig, com.tcn.cloud.api.api.commons.OmniComplianceConfig.Builder, com.tcn.cloud.api.api.commons.OmniComplianceConfigOrBuilder> complianceConfigBuilder_;
+    /**
+     * <pre>
+     * compliance configuration
+     * </pre>
+     *
+     * <code>.api.commons.OmniComplianceConfig compliance_config = 14 [json_name = "complianceConfig"];</code>
+     * @return Whether the complianceConfig field is set.
+     */
+    public boolean hasComplianceConfig() {
+      return ((bitField0_ & 0x00002000) != 0);
+    }
+    /**
+     * <pre>
+     * compliance configuration
+     * </pre>
+     *
+     * <code>.api.commons.OmniComplianceConfig compliance_config = 14 [json_name = "complianceConfig"];</code>
+     * @return The complianceConfig.
+     */
+    public com.tcn.cloud.api.api.commons.OmniComplianceConfig getComplianceConfig() {
+      if (complianceConfigBuilder_ == null) {
+        return complianceConfig_ == null ? com.tcn.cloud.api.api.commons.OmniComplianceConfig.getDefaultInstance() : complianceConfig_;
+      } else {
+        return complianceConfigBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * compliance configuration
+     * </pre>
+     *
+     * <code>.api.commons.OmniComplianceConfig compliance_config = 14 [json_name = "complianceConfig"];</code>
+     */
+    public Builder setComplianceConfig(com.tcn.cloud.api.api.commons.OmniComplianceConfig value) {
+      if (complianceConfigBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        complianceConfig_ = value;
+      } else {
+        complianceConfigBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00002000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * compliance configuration
+     * </pre>
+     *
+     * <code>.api.commons.OmniComplianceConfig compliance_config = 14 [json_name = "complianceConfig"];</code>
+     */
+    public Builder setComplianceConfig(
+        com.tcn.cloud.api.api.commons.OmniComplianceConfig.Builder builderForValue) {
+      if (complianceConfigBuilder_ == null) {
+        complianceConfig_ = builderForValue.build();
+      } else {
+        complianceConfigBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00002000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * compliance configuration
+     * </pre>
+     *
+     * <code>.api.commons.OmniComplianceConfig compliance_config = 14 [json_name = "complianceConfig"];</code>
+     */
+    public Builder mergeComplianceConfig(com.tcn.cloud.api.api.commons.OmniComplianceConfig value) {
+      if (complianceConfigBuilder_ == null) {
+        if (((bitField0_ & 0x00002000) != 0) &&
+          complianceConfig_ != null &&
+          complianceConfig_ != com.tcn.cloud.api.api.commons.OmniComplianceConfig.getDefaultInstance()) {
+          getComplianceConfigBuilder().mergeFrom(value);
+        } else {
+          complianceConfig_ = value;
+        }
+      } else {
+        complianceConfigBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00002000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * compliance configuration
+     * </pre>
+     *
+     * <code>.api.commons.OmniComplianceConfig compliance_config = 14 [json_name = "complianceConfig"];</code>
+     */
+    public Builder clearComplianceConfig() {
+      bitField0_ = (bitField0_ & ~0x00002000);
+      complianceConfig_ = null;
+      if (complianceConfigBuilder_ != null) {
+        complianceConfigBuilder_.dispose();
+        complianceConfigBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * compliance configuration
+     * </pre>
+     *
+     * <code>.api.commons.OmniComplianceConfig compliance_config = 14 [json_name = "complianceConfig"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.OmniComplianceConfig.Builder getComplianceConfigBuilder() {
+      bitField0_ |= 0x00002000;
+      onChanged();
+      return getComplianceConfigFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * compliance configuration
+     * </pre>
+     *
+     * <code>.api.commons.OmniComplianceConfig compliance_config = 14 [json_name = "complianceConfig"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.OmniComplianceConfigOrBuilder getComplianceConfigOrBuilder() {
+      if (complianceConfigBuilder_ != null) {
+        return complianceConfigBuilder_.getMessageOrBuilder();
+      } else {
+        return complianceConfig_ == null ?
+            com.tcn.cloud.api.api.commons.OmniComplianceConfig.getDefaultInstance() : complianceConfig_;
+      }
+    }
+    /**
+     * <pre>
+     * compliance configuration
+     * </pre>
+     *
+     * <code>.api.commons.OmniComplianceConfig compliance_config = 14 [json_name = "complianceConfig"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.OmniComplianceConfig, com.tcn.cloud.api.api.commons.OmniComplianceConfig.Builder, com.tcn.cloud.api.api.commons.OmniComplianceConfigOrBuilder> 
+        getComplianceConfigFieldBuilder() {
+      if (complianceConfigBuilder_ == null) {
+        complianceConfigBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.OmniComplianceConfig, com.tcn.cloud.api.api.commons.OmniComplianceConfig.Builder, com.tcn.cloud.api.api.commons.OmniComplianceConfigOrBuilder>(
+                getComplianceConfig(),
+                getParentForChildren(),
+                isClean());
+        complianceConfig_ = null;
+      }
+      return complianceConfigBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

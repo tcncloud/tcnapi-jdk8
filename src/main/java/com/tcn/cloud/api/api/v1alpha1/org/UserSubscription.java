@@ -599,6 +599,603 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  public interface DeliveryOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:api.v1alpha1.org.UserSubscription.Delivery)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Required.
+     * Used to lookup how the notification is going to happen through Delivery.
+     * </pre>
+     *
+     * <code>string transfer_config_name = 1 [json_name = "transferConfigName"];</code>
+     * @return The transferConfigName.
+     */
+    java.lang.String getTransferConfigName();
+    /**
+     * <pre>
+     * Required.
+     * Used to lookup how the notification is going to happen through Delivery.
+     * </pre>
+     *
+     * <code>string transfer_config_name = 1 [json_name = "transferConfigName"];</code>
+     * @return The bytes for transferConfigName.
+     */
+    com.google.protobuf.ByteString
+        getTransferConfigNameBytes();
+  }
+  /**
+   * Protobuf type {@code api.v1alpha1.org.UserSubscription.Delivery}
+   */
+  public static final class Delivery extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:api.v1alpha1.org.UserSubscription.Delivery)
+      DeliveryOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Delivery.newBuilder() to construct.
+    private Delivery(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Delivery() {
+      transferConfigName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Delivery();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.tcn.cloud.api.api.v1alpha1.org.NotificationsProto.internal_static_api_v1alpha1_org_UserSubscription_Delivery_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.tcn.cloud.api.api.v1alpha1.org.NotificationsProto.internal_static_api_v1alpha1_org_UserSubscription_Delivery_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Delivery.class, com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Delivery.Builder.class);
+    }
+
+    public static final int TRANSFER_CONFIG_NAME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object transferConfigName_ = "";
+    /**
+     * <pre>
+     * Required.
+     * Used to lookup how the notification is going to happen through Delivery.
+     * </pre>
+     *
+     * <code>string transfer_config_name = 1 [json_name = "transferConfigName"];</code>
+     * @return The transferConfigName.
+     */
+    @java.lang.Override
+    public java.lang.String getTransferConfigName() {
+      java.lang.Object ref = transferConfigName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        transferConfigName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Required.
+     * Used to lookup how the notification is going to happen through Delivery.
+     * </pre>
+     *
+     * <code>string transfer_config_name = 1 [json_name = "transferConfigName"];</code>
+     * @return The bytes for transferConfigName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTransferConfigNameBytes() {
+      java.lang.Object ref = transferConfigName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        transferConfigName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(transferConfigName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, transferConfigName_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(transferConfigName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, transferConfigName_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Delivery)) {
+        return super.equals(obj);
+      }
+      com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Delivery other = (com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Delivery) obj;
+
+      if (!getTransferConfigName()
+          .equals(other.getTransferConfigName())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TRANSFER_CONFIG_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getTransferConfigName().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Delivery parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Delivery parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Delivery parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Delivery parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Delivery parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Delivery parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Delivery parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Delivery parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Delivery parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Delivery parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Delivery parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Delivery parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Delivery prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code api.v1alpha1.org.UserSubscription.Delivery}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:api.v1alpha1.org.UserSubscription.Delivery)
+        com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.DeliveryOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.api.v1alpha1.org.NotificationsProto.internal_static_api_v1alpha1_org_UserSubscription_Delivery_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.api.v1alpha1.org.NotificationsProto.internal_static_api_v1alpha1_org_UserSubscription_Delivery_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Delivery.class, com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Delivery.Builder.class);
+      }
+
+      // Construct using com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Delivery.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        transferConfigName_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.tcn.cloud.api.api.v1alpha1.org.NotificationsProto.internal_static_api_v1alpha1_org_UserSubscription_Delivery_descriptor;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Delivery getDefaultInstanceForType() {
+        return com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Delivery.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Delivery build() {
+        com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Delivery result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Delivery buildPartial() {
+        com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Delivery result = new com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Delivery(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Delivery result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.transferConfigName_ = transferConfigName_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Delivery) {
+          return mergeFrom((com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Delivery)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Delivery other) {
+        if (other == com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Delivery.getDefaultInstance()) return this;
+        if (!other.getTransferConfigName().isEmpty()) {
+          transferConfigName_ = other.transferConfigName_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                transferConfigName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object transferConfigName_ = "";
+      /**
+       * <pre>
+       * Required.
+       * Used to lookup how the notification is going to happen through Delivery.
+       * </pre>
+       *
+       * <code>string transfer_config_name = 1 [json_name = "transferConfigName"];</code>
+       * @return The transferConfigName.
+       */
+      public java.lang.String getTransferConfigName() {
+        java.lang.Object ref = transferConfigName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          transferConfigName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Required.
+       * Used to lookup how the notification is going to happen through Delivery.
+       * </pre>
+       *
+       * <code>string transfer_config_name = 1 [json_name = "transferConfigName"];</code>
+       * @return The bytes for transferConfigName.
+       */
+      public com.google.protobuf.ByteString
+          getTransferConfigNameBytes() {
+        java.lang.Object ref = transferConfigName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          transferConfigName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Required.
+       * Used to lookup how the notification is going to happen through Delivery.
+       * </pre>
+       *
+       * <code>string transfer_config_name = 1 [json_name = "transferConfigName"];</code>
+       * @param value The transferConfigName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTransferConfigName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        transferConfigName_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required.
+       * Used to lookup how the notification is going to happen through Delivery.
+       * </pre>
+       *
+       * <code>string transfer_config_name = 1 [json_name = "transferConfigName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTransferConfigName() {
+        transferConfigName_ = getDefaultInstance().getTransferConfigName();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required.
+       * Used to lookup how the notification is going to happen through Delivery.
+       * </pre>
+       *
+       * <code>string transfer_config_name = 1 [json_name = "transferConfigName"];</code>
+       * @param value The bytes for transferConfigName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTransferConfigNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        transferConfigName_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:api.v1alpha1.org.UserSubscription.Delivery)
+    }
+
+    // @@protoc_insertion_point(class_scope:api.v1alpha1.org.UserSubscription.Delivery)
+    private static final com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Delivery DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Delivery();
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Delivery getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Delivery>
+        PARSER = new com.google.protobuf.AbstractParser<Delivery>() {
+      @java.lang.Override
+      public Delivery parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Delivery> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Delivery> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Delivery getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private int deliverMethodCase_ = 0;
   @SuppressWarnings("serial")
   private java.lang.Object deliverMethod_;
@@ -606,6 +1203,7 @@ private static final long serialVersionUID = 0L;
       implements com.google.protobuf.Internal.EnumLite,
           com.google.protobuf.AbstractMessage.InternalOneOfEnum {
     ROOM303(100),
+    DELIVERY(200),
     DELIVERMETHOD_NOT_SET(0);
     private final int value;
     private DeliverMethodCase(int value) {
@@ -624,6 +1222,7 @@ private static final long serialVersionUID = 0L;
     public static DeliverMethodCase forNumber(int value) {
       switch (value) {
         case 100: return ROOM303;
+        case 200: return DELIVERY;
         case 0: return DELIVERMETHOD_NOT_SET;
         default: return null;
       }
@@ -773,10 +1372,6 @@ private static final long serialVersionUID = 0L;
 
   public static final int ROOM303_FIELD_NUMBER = 100;
   /**
-   * <pre>
-   * TODO: add email, sms, etc.
-   * </pre>
-   *
    * <code>.api.v1alpha1.org.UserSubscription.Room303 room303 = 100 [json_name = "room303"];</code>
    * @return Whether the room303 field is set.
    */
@@ -785,10 +1380,6 @@ private static final long serialVersionUID = 0L;
     return deliverMethodCase_ == 100;
   }
   /**
-   * <pre>
-   * TODO: add email, sms, etc.
-   * </pre>
-   *
    * <code>.api.v1alpha1.org.UserSubscription.Room303 room303 = 100 [json_name = "room303"];</code>
    * @return The room303.
    */
@@ -800,10 +1391,6 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Room303.getDefaultInstance();
   }
   /**
-   * <pre>
-   * TODO: add email, sms, etc.
-   * </pre>
-   *
    * <code>.api.v1alpha1.org.UserSubscription.Room303 room303 = 100 [json_name = "room303"];</code>
    */
   @java.lang.Override
@@ -812,6 +1399,49 @@ private static final long serialVersionUID = 0L;
        return (com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Room303) deliverMethod_;
     }
     return com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Room303.getDefaultInstance();
+  }
+
+  public static final int DELIVERY_FIELD_NUMBER = 200;
+  /**
+   * <pre>
+   * TODO: add email, sms, etc.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.org.UserSubscription.Delivery delivery = 200 [json_name = "delivery"];</code>
+   * @return Whether the delivery field is set.
+   */
+  @java.lang.Override
+  public boolean hasDelivery() {
+    return deliverMethodCase_ == 200;
+  }
+  /**
+   * <pre>
+   * TODO: add email, sms, etc.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.org.UserSubscription.Delivery delivery = 200 [json_name = "delivery"];</code>
+   * @return The delivery.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Delivery getDelivery() {
+    if (deliverMethodCase_ == 200) {
+       return (com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Delivery) deliverMethod_;
+    }
+    return com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Delivery.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * TODO: add email, sms, etc.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.org.UserSubscription.Delivery delivery = 200 [json_name = "delivery"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.DeliveryOrBuilder getDeliveryOrBuilder() {
+    if (deliverMethodCase_ == 200) {
+       return (com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Delivery) deliverMethod_;
+    }
+    return com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Delivery.getDefaultInstance();
   }
 
   public static final int FILTERS_FIELD_NUMBER = 4;
@@ -927,6 +1557,9 @@ private static final long serialVersionUID = 0L;
     if (deliverMethodCase_ == 100) {
       output.writeMessage(100, (com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Room303) deliverMethod_);
     }
+    if (deliverMethodCase_ == 200) {
+      output.writeMessage(200, (com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Delivery) deliverMethod_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -958,6 +1591,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(100, (com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Room303) deliverMethod_);
     }
+    if (deliverMethodCase_ == 200) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(200, (com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Delivery) deliverMethod_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -987,6 +1624,10 @@ private static final long serialVersionUID = 0L;
       case 100:
         if (!getRoom303()
             .equals(other.getRoom303())) return false;
+        break;
+      case 200:
+        if (!getDelivery()
+            .equals(other.getDelivery())) return false;
         break;
       case 0:
       default:
@@ -1019,6 +1660,10 @@ private static final long serialVersionUID = 0L;
       case 100:
         hash = (37 * hash) + ROOM303_FIELD_NUMBER;
         hash = (53 * hash) + getRoom303().hashCode();
+        break;
+      case 200:
+        hash = (37 * hash) + DELIVERY_FIELD_NUMBER;
+        hash = (53 * hash) + getDelivery().hashCode();
         break;
       case 0:
       default:
@@ -1165,13 +1810,16 @@ private static final long serialVersionUID = 0L;
       if (room303Builder_ != null) {
         room303Builder_.clear();
       }
+      if (deliveryBuilder_ != null) {
+        deliveryBuilder_.clear();
+      }
       if (filtersBuilder_ == null) {
         filters_ = java.util.Collections.emptyList();
       } else {
         filters_ = null;
         filtersBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000020);
       version_ = 0L;
       deliverMethodCase_ = 0;
       deliverMethod_ = null;
@@ -1210,9 +1858,9 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.org.UserSubscription result) {
       if (filtersBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) != 0)) {
+        if (((bitField0_ & 0x00000020) != 0)) {
           filters_ = java.util.Collections.unmodifiableList(filters_);
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000020);
         }
         result.filters_ = filters_;
       } else {
@@ -1231,7 +1879,7 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.userId_ = userId_;
       }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
+      if (((from_bitField0_ & 0x00000040) != 0)) {
         result.version_ = version_;
       }
     }
@@ -1242,6 +1890,10 @@ private static final long serialVersionUID = 0L;
       if (deliverMethodCase_ == 100 &&
           room303Builder_ != null) {
         result.deliverMethod_ = room303Builder_.build();
+      }
+      if (deliverMethodCase_ == 200 &&
+          deliveryBuilder_ != null) {
+        result.deliverMethod_ = deliveryBuilder_.build();
       }
     }
 
@@ -1306,7 +1958,7 @@ private static final long serialVersionUID = 0L;
         if (!other.filters_.isEmpty()) {
           if (filters_.isEmpty()) {
             filters_ = other.filters_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000020);
           } else {
             ensureFiltersIsMutable();
             filters_.addAll(other.filters_);
@@ -1319,7 +1971,7 @@ private static final long serialVersionUID = 0L;
             filtersBuilder_.dispose();
             filtersBuilder_ = null;
             filters_ = other.filters_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000020);
             filtersBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getFiltersFieldBuilder() : null;
@@ -1334,6 +1986,10 @@ private static final long serialVersionUID = 0L;
       switch (other.getDeliverMethodCase()) {
         case ROOM303: {
           mergeRoom303(other.getRoom303());
+          break;
+        }
+        case DELIVERY: {
+          mergeDelivery(other.getDelivery());
           break;
         }
         case DELIVERMETHOD_NOT_SET: {
@@ -1396,7 +2052,7 @@ private static final long serialVersionUID = 0L;
             } // case 34
             case 40: {
               version_ = input.readInt64();
-              bitField0_ |= 0x00000020;
+              bitField0_ |= 0x00000040;
               break;
             } // case 40
             case 802: {
@@ -1406,6 +2062,13 @@ private static final long serialVersionUID = 0L;
               deliverMethodCase_ = 100;
               break;
             } // case 802
+            case 1602: {
+              input.readMessage(
+                  getDeliveryFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              deliverMethodCase_ = 200;
+              break;
+            } // case 1602
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1728,10 +2391,6 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Room303, com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Room303.Builder, com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Room303OrBuilder> room303Builder_;
     /**
-     * <pre>
-     * TODO: add email, sms, etc.
-     * </pre>
-     *
      * <code>.api.v1alpha1.org.UserSubscription.Room303 room303 = 100 [json_name = "room303"];</code>
      * @return Whether the room303 field is set.
      */
@@ -1740,10 +2399,6 @@ private static final long serialVersionUID = 0L;
       return deliverMethodCase_ == 100;
     }
     /**
-     * <pre>
-     * TODO: add email, sms, etc.
-     * </pre>
-     *
      * <code>.api.v1alpha1.org.UserSubscription.Room303 room303 = 100 [json_name = "room303"];</code>
      * @return The room303.
      */
@@ -1762,10 +2417,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * TODO: add email, sms, etc.
-     * </pre>
-     *
      * <code>.api.v1alpha1.org.UserSubscription.Room303 room303 = 100 [json_name = "room303"];</code>
      */
     public Builder setRoom303(com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Room303 value) {
@@ -1782,10 +2433,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * TODO: add email, sms, etc.
-     * </pre>
-     *
      * <code>.api.v1alpha1.org.UserSubscription.Room303 room303 = 100 [json_name = "room303"];</code>
      */
     public Builder setRoom303(
@@ -1800,10 +2447,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * TODO: add email, sms, etc.
-     * </pre>
-     *
      * <code>.api.v1alpha1.org.UserSubscription.Room303 room303 = 100 [json_name = "room303"];</code>
      */
     public Builder mergeRoom303(com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Room303 value) {
@@ -1827,10 +2470,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * TODO: add email, sms, etc.
-     * </pre>
-     *
      * <code>.api.v1alpha1.org.UserSubscription.Room303 room303 = 100 [json_name = "room303"];</code>
      */
     public Builder clearRoom303() {
@@ -1850,20 +2489,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * TODO: add email, sms, etc.
-     * </pre>
-     *
      * <code>.api.v1alpha1.org.UserSubscription.Room303 room303 = 100 [json_name = "room303"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Room303.Builder getRoom303Builder() {
       return getRoom303FieldBuilder().getBuilder();
     }
     /**
-     * <pre>
-     * TODO: add email, sms, etc.
-     * </pre>
-     *
      * <code>.api.v1alpha1.org.UserSubscription.Room303 room303 = 100 [json_name = "room303"];</code>
      */
     @java.lang.Override
@@ -1878,10 +2509,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * TODO: add email, sms, etc.
-     * </pre>
-     *
      * <code>.api.v1alpha1.org.UserSubscription.Room303 room303 = 100 [json_name = "room303"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -1903,12 +2530,190 @@ private static final long serialVersionUID = 0L;
       return room303Builder_;
     }
 
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Delivery, com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Delivery.Builder, com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.DeliveryOrBuilder> deliveryBuilder_;
+    /**
+     * <pre>
+     * TODO: add email, sms, etc.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.org.UserSubscription.Delivery delivery = 200 [json_name = "delivery"];</code>
+     * @return Whether the delivery field is set.
+     */
+    @java.lang.Override
+    public boolean hasDelivery() {
+      return deliverMethodCase_ == 200;
+    }
+    /**
+     * <pre>
+     * TODO: add email, sms, etc.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.org.UserSubscription.Delivery delivery = 200 [json_name = "delivery"];</code>
+     * @return The delivery.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Delivery getDelivery() {
+      if (deliveryBuilder_ == null) {
+        if (deliverMethodCase_ == 200) {
+          return (com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Delivery) deliverMethod_;
+        }
+        return com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Delivery.getDefaultInstance();
+      } else {
+        if (deliverMethodCase_ == 200) {
+          return deliveryBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Delivery.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * TODO: add email, sms, etc.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.org.UserSubscription.Delivery delivery = 200 [json_name = "delivery"];</code>
+     */
+    public Builder setDelivery(com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Delivery value) {
+      if (deliveryBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        deliverMethod_ = value;
+        onChanged();
+      } else {
+        deliveryBuilder_.setMessage(value);
+      }
+      deliverMethodCase_ = 200;
+      return this;
+    }
+    /**
+     * <pre>
+     * TODO: add email, sms, etc.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.org.UserSubscription.Delivery delivery = 200 [json_name = "delivery"];</code>
+     */
+    public Builder setDelivery(
+        com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Delivery.Builder builderForValue) {
+      if (deliveryBuilder_ == null) {
+        deliverMethod_ = builderForValue.build();
+        onChanged();
+      } else {
+        deliveryBuilder_.setMessage(builderForValue.build());
+      }
+      deliverMethodCase_ = 200;
+      return this;
+    }
+    /**
+     * <pre>
+     * TODO: add email, sms, etc.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.org.UserSubscription.Delivery delivery = 200 [json_name = "delivery"];</code>
+     */
+    public Builder mergeDelivery(com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Delivery value) {
+      if (deliveryBuilder_ == null) {
+        if (deliverMethodCase_ == 200 &&
+            deliverMethod_ != com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Delivery.getDefaultInstance()) {
+          deliverMethod_ = com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Delivery.newBuilder((com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Delivery) deliverMethod_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          deliverMethod_ = value;
+        }
+        onChanged();
+      } else {
+        if (deliverMethodCase_ == 200) {
+          deliveryBuilder_.mergeFrom(value);
+        } else {
+          deliveryBuilder_.setMessage(value);
+        }
+      }
+      deliverMethodCase_ = 200;
+      return this;
+    }
+    /**
+     * <pre>
+     * TODO: add email, sms, etc.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.org.UserSubscription.Delivery delivery = 200 [json_name = "delivery"];</code>
+     */
+    public Builder clearDelivery() {
+      if (deliveryBuilder_ == null) {
+        if (deliverMethodCase_ == 200) {
+          deliverMethodCase_ = 0;
+          deliverMethod_ = null;
+          onChanged();
+        }
+      } else {
+        if (deliverMethodCase_ == 200) {
+          deliverMethodCase_ = 0;
+          deliverMethod_ = null;
+        }
+        deliveryBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * TODO: add email, sms, etc.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.org.UserSubscription.Delivery delivery = 200 [json_name = "delivery"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Delivery.Builder getDeliveryBuilder() {
+      return getDeliveryFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * TODO: add email, sms, etc.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.org.UserSubscription.Delivery delivery = 200 [json_name = "delivery"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.DeliveryOrBuilder getDeliveryOrBuilder() {
+      if ((deliverMethodCase_ == 200) && (deliveryBuilder_ != null)) {
+        return deliveryBuilder_.getMessageOrBuilder();
+      } else {
+        if (deliverMethodCase_ == 200) {
+          return (com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Delivery) deliverMethod_;
+        }
+        return com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Delivery.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * TODO: add email, sms, etc.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.org.UserSubscription.Delivery delivery = 200 [json_name = "delivery"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Delivery, com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Delivery.Builder, com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.DeliveryOrBuilder> 
+        getDeliveryFieldBuilder() {
+      if (deliveryBuilder_ == null) {
+        if (!(deliverMethodCase_ == 200)) {
+          deliverMethod_ = com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Delivery.getDefaultInstance();
+        }
+        deliveryBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Delivery, com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Delivery.Builder, com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.DeliveryOrBuilder>(
+                (com.tcn.cloud.api.api.v1alpha1.org.UserSubscription.Delivery) deliverMethod_,
+                getParentForChildren(),
+                isClean());
+        deliverMethod_ = null;
+      }
+      deliverMethodCase_ = 200;
+      onChanged();
+      return deliveryBuilder_;
+    }
+
     private java.util.List<com.tcn.cloud.api.api.commons.FieldValueFilter> filters_ =
       java.util.Collections.emptyList();
     private void ensureFiltersIsMutable() {
-      if (!((bitField0_ & 0x00000010) != 0)) {
+      if (!((bitField0_ & 0x00000020) != 0)) {
         filters_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.FieldValueFilter>(filters_);
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000020;
        }
     }
 
@@ -2113,7 +2918,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearFilters() {
       if (filtersBuilder_ == null) {
         filters_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
       } else {
         filtersBuilder_.clear();
@@ -2225,7 +3030,7 @@ private static final long serialVersionUID = 0L;
         filtersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.commons.FieldValueFilter, com.tcn.cloud.api.api.commons.FieldValueFilter.Builder, com.tcn.cloud.api.api.commons.FieldValueFilterOrBuilder>(
                 filters_,
-                ((bitField0_ & 0x00000010) != 0),
+                ((bitField0_ & 0x00000020) != 0),
                 getParentForChildren(),
                 isClean());
         filters_ = null;
@@ -2258,7 +3063,7 @@ private static final long serialVersionUID = 0L;
     public Builder setVersion(long value) {
 
       version_ = value;
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -2271,7 +3076,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearVersion() {
-      bitField0_ = (bitField0_ & ~0x00000020);
+      bitField0_ = (bitField0_ & ~0x00000040);
       version_ = 0L;
       onChanged();
       return this;

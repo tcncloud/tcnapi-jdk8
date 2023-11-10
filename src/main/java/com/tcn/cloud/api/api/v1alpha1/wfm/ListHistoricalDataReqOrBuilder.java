@@ -10,12 +10,12 @@ public interface ListHistoricalDataReqOrBuilder extends
   /**
    * <pre>
    * ID of the skill profile used to examine matching calls in the client's historical data.
-   * Deprecated: use skill_profile_category instead.
+   * Deprecated as of Sep/8/2023: use skill_profile_category instead.
    * </pre>
    *
    * <code>int64 skill_profile_sid = 1 [json_name = "skillProfileSid", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.ListHistoricalDataReq.skill_profile_sid is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=2718
+   *     See api/v1alpha1/wfm/wfm.proto;l=3511
    * @return The skillProfileSid.
    */
   @java.lang.Deprecated long getSkillProfileSid();

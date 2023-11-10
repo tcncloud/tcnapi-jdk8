@@ -209,4 +209,88 @@ public interface EpicEntrypointOrBuilder extends
    * @return The flushDuringCheck.
    */
   boolean getFlushDuringCheck();
+
+  /**
+   * <pre>
+   * Specifies the timezone to be used by the cron
+   * </pre>
+   *
+   * <code>string timezone = 11 [json_name = "timezone"];</code>
+   * @return The timezone.
+   */
+  java.lang.String getTimezone();
+  /**
+   * <pre>
+   * Specifies the timezone to be used by the cron
+   * </pre>
+   *
+   * <code>string timezone = 11 [json_name = "timezone"];</code>
+   * @return The bytes for timezone.
+   */
+  com.google.protobuf.ByteString
+      getTimezoneBytes();
+
+  /**
+   * <pre>
+   * If process is enabled
+   * </pre>
+   *
+   * <code>bool enabled = 12 [json_name = "enabled"];</code>
+   * @return The enabled.
+   */
+  boolean getEnabled();
+
+  /**
+   * <pre>
+   * The fields the user wants retrieved from the raw json response
+   * </pre>
+   *
+   * <code>repeated .api.v0alpha.Field fields = 13 [json_name = "fields"];</code>
+   */
+  java.util.List<com.tcn.cloud.api.api.v0alpha.Field> 
+      getFieldsList();
+  /**
+   * <pre>
+   * The fields the user wants retrieved from the raw json response
+   * </pre>
+   *
+   * <code>repeated .api.v0alpha.Field fields = 13 [json_name = "fields"];</code>
+   */
+  com.tcn.cloud.api.api.v0alpha.Field getFields(int index);
+  /**
+   * <pre>
+   * The fields the user wants retrieved from the raw json response
+   * </pre>
+   *
+   * <code>repeated .api.v0alpha.Field fields = 13 [json_name = "fields"];</code>
+   */
+  int getFieldsCount();
+  /**
+   * <pre>
+   * The fields the user wants retrieved from the raw json response
+   * </pre>
+   *
+   * <code>repeated .api.v0alpha.Field fields = 13 [json_name = "fields"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.api.v0alpha.FieldOrBuilder> 
+      getFieldsOrBuilderList();
+  /**
+   * <pre>
+   * The fields the user wants retrieved from the raw json response
+   * </pre>
+   *
+   * <code>repeated .api.v0alpha.Field fields = 13 [json_name = "fields"];</code>
+   */
+  com.tcn.cloud.api.api.v0alpha.FieldOrBuilder getFieldsOrBuilder(
+      int index);
+
+  /**
+   * <pre>
+   * If we should return one column as raw json and not any specified fields for file template
+   * </pre>
+   *
+   * <code>bool raw_json = 14 [json_name = "rawJson"];</code>
+   * @return The rawJson.
+   */
+  boolean getRawJson();
 }

@@ -1655,6 +1655,36 @@ public interface ExecuteFlowOrBuilder extends
   com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyLatestOrBuilder getJourneyLatestOrBuilder();
 
   /**
+   * <code>.api.commons.integrations.ExecuteJourneyList journey_list = 2402 [json_name = "journeyList"];</code>
+   * @return Whether the journeyList field is set.
+   */
+  boolean hasJourneyList();
+  /**
+   * <code>.api.commons.integrations.ExecuteJourneyList journey_list = 2402 [json_name = "journeyList"];</code>
+   * @return The journeyList.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyList getJourneyList();
+  /**
+   * <code>.api.commons.integrations.ExecuteJourneyList journey_list = 2402 [json_name = "journeyList"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyListOrBuilder getJourneyListOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteJourneyUpdate journey_update = 2403 [json_name = "journeyUpdate"];</code>
+   * @return Whether the journeyUpdate field is set.
+   */
+  boolean hasJourneyUpdate();
+  /**
+   * <code>.api.commons.integrations.ExecuteJourneyUpdate journey_update = 2403 [json_name = "journeyUpdate"];</code>
+   * @return The journeyUpdate.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdate getJourneyUpdate();
+  /**
+   * <code>.api.commons.integrations.ExecuteJourneyUpdate journey_update = 2403 [json_name = "journeyUpdate"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteJourneyUpdateOrBuilder getJourneyUpdateOrBuilder();
+
+  /**
    * <code>.api.commons.integrations.ExecuteAthenahealthGetPatients athenahealth_get_patients = 2501 [json_name = "athenahealthGetPatients"];</code>
    * @return Whether the athenahealthGetPatients field is set.
    */
@@ -2525,6 +2555,21 @@ public interface ExecuteFlowOrBuilder extends
   com.tcn.cloud.api.api.commons.integrations.ExecuteShift4CcPaymentsOrBuilder getShift4CcPaymentOrBuilder();
 
   /**
+   * <code>.api.commons.integrations.ExecuteShift4CcPayments shift4_access_token = 3402 [json_name = "shift4AccessToken"];</code>
+   * @return Whether the shift4AccessToken field is set.
+   */
+  boolean hasShift4AccessToken();
+  /**
+   * <code>.api.commons.integrations.ExecuteShift4CcPayments shift4_access_token = 3402 [json_name = "shift4AccessToken"];</code>
+   * @return The shift4AccessToken.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteShift4CcPayments getShift4AccessToken();
+  /**
+   * <code>.api.commons.integrations.ExecuteShift4CcPayments shift4_access_token = 3402 [json_name = "shift4AccessToken"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteShift4CcPaymentsOrBuilder getShift4AccessTokenOrBuilder();
+
+  /**
    * <code>.api.commons.integrations.ExecutePoscorpAccesstoken poscorp_accesstoken = 3501 [json_name = "poscorpAccesstoken"];</code>
    * @return Whether the poscorpAccesstoken field is set.
    */
@@ -2598,6 +2643,66 @@ public interface ExecuteFlowOrBuilder extends
    * <code>.api.commons.integrations.ExecutePianoUpdateUser PIANO_UPDATE_USER = 3602 [json_name = "PIANOUPDATEUSER"];</code>
    */
   com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateUserOrBuilder getPIANOUPDATEUSEROrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecutePianoUpdateSubscription PIANO_UPDATE_SUBSCRIPTION = 3603 [json_name = "PIANOUPDATESUBSCRIPTION"];</code>
+   * @return Whether the pIANOUPDATESUBSCRIPTION field is set.
+   */
+  boolean hasPIANOUPDATESUBSCRIPTION();
+  /**
+   * <code>.api.commons.integrations.ExecutePianoUpdateSubscription PIANO_UPDATE_SUBSCRIPTION = 3603 [json_name = "PIANOUPDATESUBSCRIPTION"];</code>
+   * @return The pIANOUPDATESUBSCRIPTION.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateSubscription getPIANOUPDATESUBSCRIPTION();
+  /**
+   * <code>.api.commons.integrations.ExecutePianoUpdateSubscription PIANO_UPDATE_SUBSCRIPTION = 3603 [json_name = "PIANOUPDATESUBSCRIPTION"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateSubscriptionOrBuilder getPIANOUPDATESUBSCRIPTIONOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecutePianoGetPayment PIANO_GET_PAYMENT = 3604 [json_name = "PIANOGETPAYMENT"];</code>
+   * @return Whether the pIANOGETPAYMENT field is set.
+   */
+  boolean hasPIANOGETPAYMENT();
+  /**
+   * <code>.api.commons.integrations.ExecutePianoGetPayment PIANO_GET_PAYMENT = 3604 [json_name = "PIANOGETPAYMENT"];</code>
+   * @return The pIANOGETPAYMENT.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetPayment getPIANOGETPAYMENT();
+  /**
+   * <code>.api.commons.integrations.ExecutePianoGetPayment PIANO_GET_PAYMENT = 3604 [json_name = "PIANOGETPAYMENT"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetPaymentOrBuilder getPIANOGETPAYMENTOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecutePianoListSubscription PIANO_LIST_SUBSCRIPTION = 3605 [json_name = "PIANOLISTSUBSCRIPTION"];</code>
+   * @return Whether the pIANOLISTSUBSCRIPTION field is set.
+   */
+  boolean hasPIANOLISTSUBSCRIPTION();
+  /**
+   * <code>.api.commons.integrations.ExecutePianoListSubscription PIANO_LIST_SUBSCRIPTION = 3605 [json_name = "PIANOLISTSUBSCRIPTION"];</code>
+   * @return The pIANOLISTSUBSCRIPTION.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecutePianoListSubscription getPIANOLISTSUBSCRIPTION();
+  /**
+   * <code>.api.commons.integrations.ExecutePianoListSubscription PIANO_LIST_SUBSCRIPTION = 3605 [json_name = "PIANOLISTSUBSCRIPTION"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecutePianoListSubscriptionOrBuilder getPIANOLISTSUBSCRIPTIONOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecutePianoLastAccessConversion PIANO_LASTACCESS_CONVERSION = 3606 [json_name = "PIANOLASTACCESSCONVERSION"];</code>
+   * @return Whether the pIANOLASTACCESSCONVERSION field is set.
+   */
+  boolean hasPIANOLASTACCESSCONVERSION();
+  /**
+   * <code>.api.commons.integrations.ExecutePianoLastAccessConversion PIANO_LASTACCESS_CONVERSION = 3606 [json_name = "PIANOLASTACCESSCONVERSION"];</code>
+   * @return The pIANOLASTACCESSCONVERSION.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecutePianoLastAccessConversion getPIANOLASTACCESSCONVERSION();
+  /**
+   * <code>.api.commons.integrations.ExecutePianoLastAccessConversion PIANO_LASTACCESS_CONVERSION = 3606 [json_name = "PIANOLASTACCESSCONVERSION"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecutePianoLastAccessConversionOrBuilder getPIANOLASTACCESSCONVERSIONOrBuilder();
 
   /**
    * <code>.api.commons.integrations.ExecuteEpicGetToken epic_get_token = 3701 [json_name = "epicGetToken"];</code>
@@ -2868,6 +2973,51 @@ public interface ExecuteFlowOrBuilder extends
    * <code>.api.commons.integrations.ExecutePriocommerceCcPayment priocommerce_cc_payment = 3902 [json_name = "priocommerceCcPayment"];</code>
    */
   com.tcn.cloud.api.api.commons.integrations.ExecutePriocommerceCcPaymentOrBuilder getPriocommerceCcPaymentOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteNavigaCreatePayment naviga_create_payment = 4001 [json_name = "navigaCreatePayment"];</code>
+   * @return Whether the navigaCreatePayment field is set.
+   */
+  boolean hasNavigaCreatePayment();
+  /**
+   * <code>.api.commons.integrations.ExecuteNavigaCreatePayment naviga_create_payment = 4001 [json_name = "navigaCreatePayment"];</code>
+   * @return The navigaCreatePayment.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePayment getNavigaCreatePayment();
+  /**
+   * <code>.api.commons.integrations.ExecuteNavigaCreatePayment naviga_create_payment = 4001 [json_name = "navigaCreatePayment"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaCreatePaymentOrBuilder getNavigaCreatePaymentOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteNavigaChangeBilling naviga_change_billing = 4002 [json_name = "navigaChangeBilling"];</code>
+   * @return Whether the navigaChangeBilling field is set.
+   */
+  boolean hasNavigaChangeBilling();
+  /**
+   * <code>.api.commons.integrations.ExecuteNavigaChangeBilling naviga_change_billing = 4002 [json_name = "navigaChangeBilling"];</code>
+   * @return The navigaChangeBilling.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaChangeBilling getNavigaChangeBilling();
+  /**
+   * <code>.api.commons.integrations.ExecuteNavigaChangeBilling naviga_change_billing = 4002 [json_name = "navigaChangeBilling"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaChangeBillingOrBuilder getNavigaChangeBillingOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecutePaynsecondsTokenizeCard paynseconds_tokenize_card = 4101 [json_name = "paynsecondsTokenizeCard"];</code>
+   * @return Whether the paynsecondsTokenizeCard field is set.
+   */
+  boolean hasPaynsecondsTokenizeCard();
+  /**
+   * <code>.api.commons.integrations.ExecutePaynsecondsTokenizeCard paynseconds_tokenize_card = 4101 [json_name = "paynsecondsTokenizeCard"];</code>
+   * @return The paynsecondsTokenizeCard.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCard getPaynsecondsTokenizeCard();
+  /**
+   * <code>.api.commons.integrations.ExecutePaynsecondsTokenizeCard paynseconds_tokenize_card = 4101 [json_name = "paynsecondsTokenizeCard"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecutePaynsecondsTokenizeCardOrBuilder getPaynsecondsTokenizeCardOrBuilder();
 
   com.tcn.cloud.api.api.commons.integrations.ExecuteFlow.ValueCase getValueCase();
 }

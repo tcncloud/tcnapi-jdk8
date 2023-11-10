@@ -1407,6 +1407,114 @@ public interface AuditEventOrBuilder extends
 
   /**
    * <pre>
+   *accepted manual approve task
+   * </pre>
+   *
+   * <code>.api.commons.audit.OmnichannelManualApproveTaskAcceptedEvent omnichannel_manual_approve_task_accepted_event = 358 [json_name = "omnichannelManualApproveTaskAcceptedEvent"];</code>
+   * @return Whether the omnichannelManualApproveTaskAcceptedEvent field is set.
+   */
+  boolean hasOmnichannelManualApproveTaskAcceptedEvent();
+  /**
+   * <pre>
+   *accepted manual approve task
+   * </pre>
+   *
+   * <code>.api.commons.audit.OmnichannelManualApproveTaskAcceptedEvent omnichannel_manual_approve_task_accepted_event = 358 [json_name = "omnichannelManualApproveTaskAcceptedEvent"];</code>
+   * @return The omnichannelManualApproveTaskAcceptedEvent.
+   */
+  com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskAcceptedEvent getOmnichannelManualApproveTaskAcceptedEvent();
+  /**
+   * <pre>
+   *accepted manual approve task
+   * </pre>
+   *
+   * <code>.api.commons.audit.OmnichannelManualApproveTaskAcceptedEvent omnichannel_manual_approve_task_accepted_event = 358 [json_name = "omnichannelManualApproveTaskAcceptedEvent"];</code>
+   */
+  com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskAcceptedEventOrBuilder getOmnichannelManualApproveTaskAcceptedEventOrBuilder();
+
+  /**
+   * <pre>
+   *rejected manual approve task
+   * </pre>
+   *
+   * <code>.api.commons.audit.OmnichannelManualApproveTaskRejectedEvent omnichannel_manual_approve_task_rejected_event = 359 [json_name = "omnichannelManualApproveTaskRejectedEvent"];</code>
+   * @return Whether the omnichannelManualApproveTaskRejectedEvent field is set.
+   */
+  boolean hasOmnichannelManualApproveTaskRejectedEvent();
+  /**
+   * <pre>
+   *rejected manual approve task
+   * </pre>
+   *
+   * <code>.api.commons.audit.OmnichannelManualApproveTaskRejectedEvent omnichannel_manual_approve_task_rejected_event = 359 [json_name = "omnichannelManualApproveTaskRejectedEvent"];</code>
+   * @return The omnichannelManualApproveTaskRejectedEvent.
+   */
+  com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRejectedEvent getOmnichannelManualApproveTaskRejectedEvent();
+  /**
+   * <pre>
+   *rejected manual approve task
+   * </pre>
+   *
+   * <code>.api.commons.audit.OmnichannelManualApproveTaskRejectedEvent omnichannel_manual_approve_task_rejected_event = 359 [json_name = "omnichannelManualApproveTaskRejectedEvent"];</code>
+   */
+  com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRejectedEventOrBuilder getOmnichannelManualApproveTaskRejectedEventOrBuilder();
+
+  /**
+   * <pre>
+   *timeout of manual approve task
+   * </pre>
+   *
+   * <code>.api.commons.audit.OmnichannelManualApproveTaskTimeoutEvent omnichannel_manual_approve_task_timeout_event = 360 [json_name = "omnichannelManualApproveTaskTimeoutEvent"];</code>
+   * @return Whether the omnichannelManualApproveTaskTimeoutEvent field is set.
+   */
+  boolean hasOmnichannelManualApproveTaskTimeoutEvent();
+  /**
+   * <pre>
+   *timeout of manual approve task
+   * </pre>
+   *
+   * <code>.api.commons.audit.OmnichannelManualApproveTaskTimeoutEvent omnichannel_manual_approve_task_timeout_event = 360 [json_name = "omnichannelManualApproveTaskTimeoutEvent"];</code>
+   * @return The omnichannelManualApproveTaskTimeoutEvent.
+   */
+  com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskTimeoutEvent getOmnichannelManualApproveTaskTimeoutEvent();
+  /**
+   * <pre>
+   *timeout of manual approve task
+   * </pre>
+   *
+   * <code>.api.commons.audit.OmnichannelManualApproveTaskTimeoutEvent omnichannel_manual_approve_task_timeout_event = 360 [json_name = "omnichannelManualApproveTaskTimeoutEvent"];</code>
+   */
+  com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskTimeoutEventOrBuilder getOmnichannelManualApproveTaskTimeoutEventOrBuilder();
+
+  /**
+   * <pre>
+   *requeue of manual approve task
+   * </pre>
+   *
+   * <code>.api.commons.audit.OmnichannelManualApproveTaskRequeueEvent omnichannel_manual_approve_task_requeue_event = 361 [json_name = "omnichannelManualApproveTaskRequeueEvent"];</code>
+   * @return Whether the omnichannelManualApproveTaskRequeueEvent field is set.
+   */
+  boolean hasOmnichannelManualApproveTaskRequeueEvent();
+  /**
+   * <pre>
+   *requeue of manual approve task
+   * </pre>
+   *
+   * <code>.api.commons.audit.OmnichannelManualApproveTaskRequeueEvent omnichannel_manual_approve_task_requeue_event = 361 [json_name = "omnichannelManualApproveTaskRequeueEvent"];</code>
+   * @return The omnichannelManualApproveTaskRequeueEvent.
+   */
+  com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRequeueEvent getOmnichannelManualApproveTaskRequeueEvent();
+  /**
+   * <pre>
+   *requeue of manual approve task
+   * </pre>
+   *
+   * <code>.api.commons.audit.OmnichannelManualApproveTaskRequeueEvent omnichannel_manual_approve_task_requeue_event = 361 [json_name = "omnichannelManualApproveTaskRequeueEvent"];</code>
+   */
+  com.tcn.cloud.api.api.commons.audit.OmnichannelManualApproveTaskRequeueEventOrBuilder getOmnichannelManualApproveTaskRequeueEventOrBuilder();
+
+  /**
+   * <pre>
    *&#47; Asm events 400
    * agent logged into asm event
    * </pre>
@@ -2418,6 +2526,33 @@ public interface AuditEventOrBuilder extends
    * <code>.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent agent_training_create_learning_opportunity_event = 800 [json_name = "agentTrainingCreateLearningOpportunityEvent"];</code>
    */
   com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEventOrBuilder getAgentTrainingCreateLearningOpportunityEventOrBuilder();
+
+  /**
+   * <pre>
+   * LMS Events class 900
+   * </pre>
+   *
+   * <code>.api.commons.audit.LMSPipelineFailureEvent lms_pipeline_failure_event = 900 [json_name = "lmsPipelineFailureEvent"];</code>
+   * @return Whether the lmsPipelineFailureEvent field is set.
+   */
+  boolean hasLmsPipelineFailureEvent();
+  /**
+   * <pre>
+   * LMS Events class 900
+   * </pre>
+   *
+   * <code>.api.commons.audit.LMSPipelineFailureEvent lms_pipeline_failure_event = 900 [json_name = "lmsPipelineFailureEvent"];</code>
+   * @return The lmsPipelineFailureEvent.
+   */
+  com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent getLmsPipelineFailureEvent();
+  /**
+   * <pre>
+   * LMS Events class 900
+   * </pre>
+   *
+   * <code>.api.commons.audit.LMSPipelineFailureEvent lms_pipeline_failure_event = 900 [json_name = "lmsPipelineFailureEvent"];</code>
+   */
+  com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEventOrBuilder getLmsPipelineFailureEventOrBuilder();
 
   com.tcn.cloud.api.api.commons.audit.AuditEvent.EventCase getEventCase();
 }

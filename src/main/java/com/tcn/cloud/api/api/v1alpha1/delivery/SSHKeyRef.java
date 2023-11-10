@@ -41,7 +41,7 @@ private static final long serialVersionUID = 0L;
   public static final int SSH_KEY_SID_FIELD_NUMBER = 1;
   private long sshKeySid_ = 0L;
   /**
-   * <code>int64 ssh_key_sid = 1 [json_name = "sshKeySid"];</code>
+   * <code>int64 ssh_key_sid = 1 [json_name = "sshKeySid", jstype = JS_STRING];</code>
    * @return The sshKeySid.
    */
   @java.lang.Override
@@ -377,7 +377,7 @@ private static final long serialVersionUID = 0L;
 
     private long sshKeySid_ ;
     /**
-     * <code>int64 ssh_key_sid = 1 [json_name = "sshKeySid"];</code>
+     * <code>int64 ssh_key_sid = 1 [json_name = "sshKeySid", jstype = JS_STRING];</code>
      * @return The sshKeySid.
      */
     @java.lang.Override
@@ -385,7 +385,7 @@ private static final long serialVersionUID = 0L;
       return sshKeySid_;
     }
     /**
-     * <code>int64 ssh_key_sid = 1 [json_name = "sshKeySid"];</code>
+     * <code>int64 ssh_key_sid = 1 [json_name = "sshKeySid", jstype = JS_STRING];</code>
      * @param value The sshKeySid to set.
      * @return This builder for chaining.
      */
@@ -397,7 +397,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int64 ssh_key_sid = 1 [json_name = "sshKeySid"];</code>
+     * <code>int64 ssh_key_sid = 1 [json_name = "sshKeySid", jstype = JS_STRING];</code>
      * @return This builder for chaining.
      */
     public Builder clearSshKeySid() {

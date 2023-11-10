@@ -27,7 +27,7 @@ public final class ServiceProto {
       "i.v1alpha1.tickets\032\027annotations/authz.pr" +
       "oto\032\"api/v1alpha1/tickets/project.proto\032" +
       "!api/v1alpha1/tickets/ticket.proto\032\034goog" +
-      "le/api/annotations.proto2\210!\n\007Tickets\022\235\001\n" +
+      "le/api/annotations.proto2\255\'\n\007Tickets\022\235\001\n" +
       "\014CreateTicket\022%.api.v1alpha1.tickets.Cre" +
       "ateTicketReq\032%.api.v1alpha1.tickets.Crea" +
       "teTicketRes\"?\272\270\221\002\005\n\003\010\234\030\202\323\344\223\002/\"*/api/v1al" +
@@ -67,77 +67,98 @@ public final class ServiceProto {
       "*\022\221\001\n\tCreateSLA\022\".api.v1alpha1.tickets.C" +
       "reateSlaReq\032\".api.v1alpha1.tickets.Creat" +
       "eSlaRes\"<\272\270\221\002\005\n\003\010\235\030\202\323\344\223\002,\"\'/api/v1alpha1" +
-      "/tickets/tickets/createsla:\001*\022\211\001\n\007ListSL" +
+      "/tickets/tickets/createsla:\001*\022\216\001\n\007ListSL" +
       "A\022 .api.v1alpha1.tickets.ListSlaReq\032 .ap" +
-      "i.v1alpha1.tickets.ListSlaRes\":\272\270\221\002\005\n\003\010\235" +
-      "\030\202\323\344\223\002*\"%/api/v1alpha1/tickets/tickets/l" +
-      "istsla:\001*\022\221\001\n\tUpdateSLA\022\".api.v1alpha1.t" +
-      "ickets.UpdateSlaReq\032\".api.v1alpha1.ticke" +
-      "ts.UpdateSlaRes\"<\272\270\221\002\005\n\003\010\235\030\202\323\344\223\002,\"\'/api/" +
-      "v1alpha1/tickets/tickets/updatesla:\001*\022\255\001" +
-      "\n\020ListSLACondition\022).api.v1alpha1.ticket" +
-      "s.ListSlaConditionReq\032).api.v1alpha1.tic" +
-      "kets.ListSlaConditionRes\"C\272\270\221\002\005\n\003\010\235\030\202\323\344\223" +
-      "\0023\"./api/v1alpha1/tickets/tickets/listsl" +
-      "acondition:\001*\022\235\001\n\014ReplyComment\022%.api.v1a" +
-      "lpha1.tickets.ReplyCommentReq\032%.api.v1al" +
-      "pha1.tickets.ReplyCommentRes\"?\272\270\221\002\005\n\003\010\234\030" +
-      "\202\323\344\223\002/\"*/api/v1alpha1/tickets/tickets/re" +
-      "plycomment:\001*\022\253\001\n\022ListTicketAuditLog\022+.a" +
-      "pi.v1alpha1.tickets.ListTicketAuditLogRe" +
-      "q\032+.api.v1alpha1.tickets.ListTicketAudit" +
-      "LogRes\";\272\270\221\002\005\n\003\010\234\030\202\323\344\223\002+\"&/api/v1alpha1/" +
-      "tickets/tickets/auditlog:\001*\022\241\001\n\nAssignSe" +
-      "lf\022).api.v1alpha1.tickets.CreateSelfAssi" +
-      "gnReq\032).api.v1alpha1.tickets.CreateSelfA" +
-      "ssignRes\"=\272\270\221\002\005\n\003\010\234\030\202\323\344\223\002-\"(/api/v1alpha" +
-      "1/tickets/tickets/assignself:\001*\022\245\001\n\016Edit" +
-      "MaskTicket\022\'.api.v1alpha1.tickets.EditMa" +
-      "skTicketReq\032\'.api.v1alpha1.tickets.EditM" +
-      "askTicketRes\"A\272\270\221\002\005\n\003\010\234\030\202\323\344\223\0021\",/api/v1a" +
-      "lpha1/tickets/tickets/editmaskticket:\001*\022" +
-      "\276\001\n\024ListAllocatedTickets\022,.api.v1alpha1." +
-      "tickets.ListAllocatedTicketReq\032,.api.v1a" +
-      "lpha1.tickets.ListAllocatedTicketRes\"J\210\002" +
-      "\001\272\270\221\002\005\n\003\010\234\030\202\323\344\223\0027\"2/api/v1alpha1/tickets" +
-      "/tickets/listallocatedtickets:\001*\022\332\001\n\031Lis" +
-      "tAvailableAgentTickets\0226.api.v1alpha1.ti" +
-      "ckets.ListAvailableAgentTicketsRequest\0327" +
-      ".api.v1alpha1.tickets.ListAvailableAgent" +
-      "TicketsResponse\"L\272\270\221\002\005\n\003\010\234\030\202\323\344\223\002<\"7/api/" +
-      "v1alpha1/tickets/tickets/listavailableag" +
-      "enttickets:\001*\022\236\001\n\nListSkills\022\'.api.v1alp" +
-      "ha1.tickets.ListSkillsRequest\032(.api.v1al" +
-      "pha1.tickets.ListSkillsResponse\"=\272\270\221\002\005\n\003" +
-      "\010\234\030\202\323\344\223\002-\"(/api/v1alpha1/tickets/tickets" +
-      "/listskills:\001*\022\232\001\n\tListUsers\022&.api.v1alp" +
-      "ha1.tickets.ListUsersRequest\032\'.api.v1alp" +
-      "ha1.tickets.ListUsersResponse\"<\272\270\221\002\005\n\003\010\234" +
-      "\030\202\323\344\223\002,\"\'/api/v1alpha1/tickets/tickets/l" +
-      "istusers:\001*\022\272\001\n\021CloseTicketAction\022..api." +
-      "v1alpha1.tickets.CloseTicketActionReques" +
-      "t\032/.api.v1alpha1.tickets.CloseTicketActi" +
-      "onResponse\"D\272\270\221\002\005\n\003\010\234\030\202\323\344\223\0024\"//api/v1alp" +
-      "ha1/tickets/tickets/closeticketaction:\001*" +
-      "\022\276\001\n\022AssignTicketAction\022/.api.v1alpha1.t" +
-      "ickets.AssignTicketActionRequest\0320.api.v" +
-      "1alpha1.tickets.AssignTicketActionRespon" +
-      "se\"E\272\270\221\002\005\n\003\010\234\030\202\323\344\223\0025\"0/api/v1alpha1/tick" +
-      "ets/tickets/assignticketaction:\001*\022\276\001\n\022Cr" +
-      "eateTicketAction\022/.api.v1alpha1.tickets." +
-      "CreateTicketActionRequest\0320.api.v1alpha1" +
-      ".tickets.CreateTicketActionResponse\"E\272\270\221" +
-      "\002\005\n\003\010\234\030\202\323\344\223\0025\"0/api/v1alpha1/tickets/tic" +
-      "kets/createticketaction:\001*\022\276\001\n\022ChangeTic" +
-      "ketStatus\022/.api.v1alpha1.tickets.ChangeT" +
-      "icketStatusRequest\0320.api.v1alpha1.ticket" +
-      "s.ChangeTicketStatusResponse\"E\272\270\221\002\005\n\003\010\234\030" +
-      "\202\323\344\223\0025\"0/api/v1alpha1/tickets/tickets/ch" +
-      "angeticketstatus:\001*B\250\001\n&com.tcn.cloud.ap" +
-      "i.api.v1alpha1.ticketsB\014ServiceProtoP\001\242\002" +
-      "\003AVT\252\002\024Api.V1alpha1.Tickets\312\002\024Api\\V1alph" +
-      "a1\\Tickets\342\002 Api\\V1alpha1\\Tickets\\GPBMet" +
-      "adata\352\002\026Api::V1alpha1::Ticketsb\006proto3"
+      "i.v1alpha1.tickets.ListSlaRes\"?\272\270\221\002\n\n\003\010\235" +
+      "\030\n\003\010\234\030\202\323\344\223\002*\"%/api/v1alpha1/tickets/tick" +
+      "ets/listsla:\001*\022\221\001\n\tUpdateSLA\022\".api.v1alp" +
+      "ha1.tickets.UpdateSlaReq\032\".api.v1alpha1." +
+      "tickets.UpdateSlaRes\"<\272\270\221\002\005\n\003\010\235\030\202\323\344\223\002,\"\'" +
+      "/api/v1alpha1/tickets/tickets/updatesla:" +
+      "\001*\022\262\001\n\020ListSLACondition\022).api.v1alpha1.t" +
+      "ickets.ListSlaConditionReq\032).api.v1alpha" +
+      "1.tickets.ListSlaConditionRes\"H\272\270\221\002\n\n\003\010\235" +
+      "\030\n\003\010\234\030\202\323\344\223\0023\"./api/v1alpha1/tickets/tick" +
+      "ets/listslacondition:\001*\022\235\001\n\014ReplyComment" +
+      "\022%.api.v1alpha1.tickets.ReplyCommentReq\032" +
+      "%.api.v1alpha1.tickets.ReplyCommentRes\"?" +
+      "\272\270\221\002\005\n\003\010\234\030\202\323\344\223\002/\"*/api/v1alpha1/tickets/" +
+      "tickets/replycomment:\001*\022\253\001\n\022ListTicketAu" +
+      "ditLog\022+.api.v1alpha1.tickets.ListTicket" +
+      "AuditLogReq\032+.api.v1alpha1.tickets.ListT" +
+      "icketAuditLogRes\";\272\270\221\002\005\n\003\010\234\030\202\323\344\223\002+\"&/api" +
+      "/v1alpha1/tickets/tickets/auditlog:\001*\022\241\001" +
+      "\n\nAssignSelf\022).api.v1alpha1.tickets.Crea" +
+      "teSelfAssignReq\032).api.v1alpha1.tickets.C" +
+      "reateSelfAssignRes\"=\272\270\221\002\005\n\003\010\234\030\202\323\344\223\002-\"(/a" +
+      "pi/v1alpha1/tickets/tickets/assignself:\001" +
+      "*\022\245\001\n\016EditMaskTicket\022\'.api.v1alpha1.tick" +
+      "ets.EditMaskTicketReq\032\'.api.v1alpha1.tic" +
+      "kets.EditMaskTicketRes\"A\272\270\221\002\005\n\003\010\234\030\202\323\344\223\0021" +
+      "\",/api/v1alpha1/tickets/tickets/editmask" +
+      "ticket:\001*\022\276\001\n\024ListAllocatedTickets\022,.api" +
+      ".v1alpha1.tickets.ListAllocatedTicketReq" +
+      "\032,.api.v1alpha1.tickets.ListAllocatedTic" +
+      "ketRes\"J\210\002\001\272\270\221\002\005\n\003\010\234\030\202\323\344\223\0027\"2/api/v1alph" +
+      "a1/tickets/tickets/listallocatedtickets:" +
+      "\001*\022\332\001\n\031ListAvailableAgentTickets\0226.api.v" +
+      "1alpha1.tickets.ListAvailableAgentTicket" +
+      "sRequest\0327.api.v1alpha1.tickets.ListAvai" +
+      "lableAgentTicketsResponse\"L\272\270\221\002\005\n\003\010\234\030\202\323\344" +
+      "\223\002<\"7/api/v1alpha1/tickets/tickets/lista" +
+      "vailableagenttickets:\001*\022\236\001\n\nListSkills\022\'" +
+      ".api.v1alpha1.tickets.ListSkillsRequest\032" +
+      "(.api.v1alpha1.tickets.ListSkillsRespons" +
+      "e\"=\272\270\221\002\005\n\003\010\234\030\202\323\344\223\002-\"(/api/v1alpha1/ticke" +
+      "ts/tickets/listskills:\001*\022\232\001\n\tListUsers\022&" +
+      ".api.v1alpha1.tickets.ListUsersRequest\032\'" +
+      ".api.v1alpha1.tickets.ListUsersResponse\"" +
+      "<\272\270\221\002\005\n\003\010\234\030\202\323\344\223\002,\"\'/api/v1alpha1/tickets" +
+      "/tickets/listusers:\001*\022\272\001\n\021CloseTicketAct" +
+      "ion\022..api.v1alpha1.tickets.CloseTicketAc" +
+      "tionRequest\032/.api.v1alpha1.tickets.Close" +
+      "TicketActionResponse\"D\272\270\221\002\005\n\003\010\234\030\202\323\344\223\0024\"/" +
+      "/api/v1alpha1/tickets/tickets/closeticke" +
+      "taction:\001*\022\276\001\n\022AssignTicketAction\022/.api." +
+      "v1alpha1.tickets.AssignTicketActionReque" +
+      "st\0320.api.v1alpha1.tickets.AssignTicketAc" +
+      "tionResponse\"E\272\270\221\002\005\n\003\010\234\030\202\323\344\223\0025\"0/api/v1a" +
+      "lpha1/tickets/tickets/assignticketaction" +
+      ":\001*\022\276\001\n\022CreateTicketAction\022/.api.v1alpha" +
+      "1.tickets.CreateTicketActionRequest\0320.ap" +
+      "i.v1alpha1.tickets.CreateTicketActionRes" +
+      "ponse\"E\272\270\221\002\005\n\003\010\234\030\202\323\344\223\0025\"0/api/v1alpha1/t" +
+      "ickets/tickets/createticketaction:\001*\022\276\001\n" +
+      "\022ChangeTicketStatus\022/.api.v1alpha1.ticke" +
+      "ts.ChangeTicketStatusRequest\0320.api.v1alp" +
+      "ha1.tickets.ChangeTicketStatusResponse\"E" +
+      "\272\270\221\002\005\n\003\010\234\030\202\323\344\223\0025\"0/api/v1alpha1/tickets/" +
+      "tickets/changeticketstatus:\001*\022\306\001\n\024Create" +
+      "TicketTemplate\0221.api.v1alpha1.tickets.Cr" +
+      "eateTicketTemplateRequest\0322.api.v1alpha1" +
+      ".tickets.CreateTicketTemplateResponse\"G\272" +
+      "\270\221\002\005\n\003\010\235\030\202\323\344\223\0027\"2/api/v1alpha1/tickets/t" +
+      "ickets/createtickettemplate:\001*\022\276\001\n\022EditT" +
+      "icketTemplate\022/.api.v1alpha1.tickets.Edi" +
+      "tTicketTemplateRequest\0320.api.v1alpha1.ti" +
+      "ckets.EditTicketTemplateResponse\"E\272\270\221\002\005\n" +
+      "\003\010\235\030\202\323\344\223\0025\"0/api/v1alpha1/tickets/ticket" +
+      "s/edittickettemplate:\001*\022\303\001\n\022ListTicketTe" +
+      "mplate\022/.api.v1alpha1.tickets.ListTicket" +
+      "TemplateRequest\0320.api.v1alpha1.tickets.L" +
+      "istTicketTemplateResponse\"J\272\270\221\002\n\n\003\010\235\030\n\003\010" +
+      "\234\030\202\323\344\223\0025\"0/api/v1alpha1/tickets/tickets/" +
+      "listtickettemplate:\001*\022\310\001\n\024AssignTicketTe" +
+      "mplate\0222.api.v1alpha1.tickets.AssignProj" +
+      "ectTemplateRequest\0323.api.v1alpha1.ticket" +
+      "s.AssignProjectTemplateResponse\"G\272\270\221\002\005\n\003" +
+      "\010\235\030\202\323\344\223\0027\"2/api/v1alpha1/tickets/tickets" +
+      "/assigntickettemplate:\001*B\250\001\n&com.tcn.clo" +
+      "ud.api.api.v1alpha1.ticketsB\014ServiceProt" +
+      "oP\001\242\002\003AVT\252\002\024Api.V1alpha1.Tickets\312\002\024Api\\V" +
+      "1alpha1\\Tickets\342\002 Api\\V1alpha1\\Tickets\\G" +
+      "PBMetadata\352\002\026Api::V1alpha1::Ticketsb\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

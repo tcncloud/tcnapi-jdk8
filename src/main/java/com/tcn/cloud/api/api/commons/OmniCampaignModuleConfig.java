@@ -829,6 +829,44 @@ private static final long serialVersionUID = 0L;
     return flowId_ == null ? com.tcn.cloud.api.api.commons.Int64Id.getDefaultInstance() : flowId_;
   }
 
+  public static final int SKILLS_FIELD_NUMBER = 21;
+  private com.tcn.cloud.api.api.commons.OmniConversationSkills skills_;
+  /**
+   * <pre>
+   * skills
+   * </pre>
+   *
+   * <code>.api.commons.OmniConversationSkills skills = 21 [json_name = "skills"];</code>
+   * @return Whether the skills field is set.
+   */
+  @java.lang.Override
+  public boolean hasSkills() {
+    return skills_ != null;
+  }
+  /**
+   * <pre>
+   * skills
+   * </pre>
+   *
+   * <code>.api.commons.OmniConversationSkills skills = 21 [json_name = "skills"];</code>
+   * @return The skills.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.OmniConversationSkills getSkills() {
+    return skills_ == null ? com.tcn.cloud.api.api.commons.OmniConversationSkills.getDefaultInstance() : skills_;
+  }
+  /**
+   * <pre>
+   * skills
+   * </pre>
+   *
+   * <code>.api.commons.OmniConversationSkills skills = 21 [json_name = "skills"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.OmniConversationSkillsOrBuilder getSkillsOrBuilder() {
+    return skills_ == null ? com.tcn.cloud.api.api.commons.OmniConversationSkills.getDefaultInstance() : skills_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -899,6 +937,9 @@ private static final long serialVersionUID = 0L;
     }
     if (flowId_ != null) {
       output.writeMessage(20, getFlowId());
+    }
+    if (skills_ != null) {
+      output.writeMessage(21, getSkills());
     }
     getUnknownFields().writeTo(output);
   }
@@ -988,6 +1029,10 @@ private static final long serialVersionUID = 0L;
     if (flowId_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(20, getFlowId());
+    }
+    if (skills_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(21, getSkills());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -1090,6 +1135,11 @@ private static final long serialVersionUID = 0L;
       if (!getFlowId()
           .equals(other.getFlowId())) return false;
     }
+    if (hasSkills() != other.hasSkills()) return false;
+    if (hasSkills()) {
+      if (!getSkills()
+          .equals(other.getSkills())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1176,6 +1226,10 @@ private static final long serialVersionUID = 0L;
     if (hasFlowId()) {
       hash = (37 * hash) + FLOW_ID_FIELD_NUMBER;
       hash = (53 * hash) + getFlowId().hashCode();
+    }
+    if (hasSkills()) {
+      hash = (37 * hash) + SKILLS_FIELD_NUMBER;
+      hash = (53 * hash) + getSkills().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -1408,6 +1462,11 @@ private static final long serialVersionUID = 0L;
         flowIdBuilder_.dispose();
         flowIdBuilder_ = null;
       }
+      skills_ = null;
+      if (skillsBuilder_ != null) {
+        skillsBuilder_.dispose();
+        skillsBuilder_ = null;
+      }
       return this;
     }
 
@@ -1546,6 +1605,11 @@ private static final long serialVersionUID = 0L;
         result.flowId_ = flowIdBuilder_ == null
             ? flowId_
             : flowIdBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00080000) != 0)) {
+        result.skills_ = skillsBuilder_ == null
+            ? skills_
+            : skillsBuilder_.build();
       }
     }
 
@@ -1702,6 +1766,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasFlowId()) {
         mergeFlowId(other.getFlowId());
+      }
+      if (other.hasSkills()) {
+        mergeSkills(other.getSkills());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -1873,6 +1940,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00040000;
               break;
             } // case 162
+            case 170: {
+              input.readMessage(
+                  getSkillsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00080000;
+              break;
+            } // case 170
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -5139,6 +5213,161 @@ private static final long serialVersionUID = 0L;
         flowId_ = null;
       }
       return flowIdBuilder_;
+    }
+
+    private com.tcn.cloud.api.api.commons.OmniConversationSkills skills_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.OmniConversationSkills, com.tcn.cloud.api.api.commons.OmniConversationSkills.Builder, com.tcn.cloud.api.api.commons.OmniConversationSkillsOrBuilder> skillsBuilder_;
+    /**
+     * <pre>
+     * skills
+     * </pre>
+     *
+     * <code>.api.commons.OmniConversationSkills skills = 21 [json_name = "skills"];</code>
+     * @return Whether the skills field is set.
+     */
+    public boolean hasSkills() {
+      return ((bitField0_ & 0x00080000) != 0);
+    }
+    /**
+     * <pre>
+     * skills
+     * </pre>
+     *
+     * <code>.api.commons.OmniConversationSkills skills = 21 [json_name = "skills"];</code>
+     * @return The skills.
+     */
+    public com.tcn.cloud.api.api.commons.OmniConversationSkills getSkills() {
+      if (skillsBuilder_ == null) {
+        return skills_ == null ? com.tcn.cloud.api.api.commons.OmniConversationSkills.getDefaultInstance() : skills_;
+      } else {
+        return skillsBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * skills
+     * </pre>
+     *
+     * <code>.api.commons.OmniConversationSkills skills = 21 [json_name = "skills"];</code>
+     */
+    public Builder setSkills(com.tcn.cloud.api.api.commons.OmniConversationSkills value) {
+      if (skillsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        skills_ = value;
+      } else {
+        skillsBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00080000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * skills
+     * </pre>
+     *
+     * <code>.api.commons.OmniConversationSkills skills = 21 [json_name = "skills"];</code>
+     */
+    public Builder setSkills(
+        com.tcn.cloud.api.api.commons.OmniConversationSkills.Builder builderForValue) {
+      if (skillsBuilder_ == null) {
+        skills_ = builderForValue.build();
+      } else {
+        skillsBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00080000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * skills
+     * </pre>
+     *
+     * <code>.api.commons.OmniConversationSkills skills = 21 [json_name = "skills"];</code>
+     */
+    public Builder mergeSkills(com.tcn.cloud.api.api.commons.OmniConversationSkills value) {
+      if (skillsBuilder_ == null) {
+        if (((bitField0_ & 0x00080000) != 0) &&
+          skills_ != null &&
+          skills_ != com.tcn.cloud.api.api.commons.OmniConversationSkills.getDefaultInstance()) {
+          getSkillsBuilder().mergeFrom(value);
+        } else {
+          skills_ = value;
+        }
+      } else {
+        skillsBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00080000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * skills
+     * </pre>
+     *
+     * <code>.api.commons.OmniConversationSkills skills = 21 [json_name = "skills"];</code>
+     */
+    public Builder clearSkills() {
+      bitField0_ = (bitField0_ & ~0x00080000);
+      skills_ = null;
+      if (skillsBuilder_ != null) {
+        skillsBuilder_.dispose();
+        skillsBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * skills
+     * </pre>
+     *
+     * <code>.api.commons.OmniConversationSkills skills = 21 [json_name = "skills"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.OmniConversationSkills.Builder getSkillsBuilder() {
+      bitField0_ |= 0x00080000;
+      onChanged();
+      return getSkillsFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * skills
+     * </pre>
+     *
+     * <code>.api.commons.OmniConversationSkills skills = 21 [json_name = "skills"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.OmniConversationSkillsOrBuilder getSkillsOrBuilder() {
+      if (skillsBuilder_ != null) {
+        return skillsBuilder_.getMessageOrBuilder();
+      } else {
+        return skills_ == null ?
+            com.tcn.cloud.api.api.commons.OmniConversationSkills.getDefaultInstance() : skills_;
+      }
+    }
+    /**
+     * <pre>
+     * skills
+     * </pre>
+     *
+     * <code>.api.commons.OmniConversationSkills skills = 21 [json_name = "skills"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.OmniConversationSkills, com.tcn.cloud.api.api.commons.OmniConversationSkills.Builder, com.tcn.cloud.api.api.commons.OmniConversationSkillsOrBuilder> 
+        getSkillsFieldBuilder() {
+      if (skillsBuilder_ == null) {
+        skillsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.OmniConversationSkills, com.tcn.cloud.api.api.commons.OmniConversationSkills.Builder, com.tcn.cloud.api.api.commons.OmniConversationSkillsOrBuilder>(
+                getSkills(),
+                getParentForChildren(),
+                isClean());
+        skills_ = null;
+      }
+      return skillsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

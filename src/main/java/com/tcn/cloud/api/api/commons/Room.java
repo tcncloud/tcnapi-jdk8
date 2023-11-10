@@ -364,6 +364,44 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int CONFIG_FIELD_NUMBER = 10;
+  private com.tcn.cloud.api.api.commons.RoomConfig config_;
+  /**
+   * <pre>
+   * room configuration details
+   * </pre>
+   *
+   * <code>.api.commons.RoomConfig config = 10 [json_name = "config"];</code>
+   * @return Whether the config field is set.
+   */
+  @java.lang.Override
+  public boolean hasConfig() {
+    return config_ != null;
+  }
+  /**
+   * <pre>
+   * room configuration details
+   * </pre>
+   *
+   * <code>.api.commons.RoomConfig config = 10 [json_name = "config"];</code>
+   * @return The config.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.RoomConfig getConfig() {
+    return config_ == null ? com.tcn.cloud.api.api.commons.RoomConfig.getDefaultInstance() : config_;
+  }
+  /**
+   * <pre>
+   * room configuration details
+   * </pre>
+   *
+   * <code>.api.commons.RoomConfig config = 10 [json_name = "config"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.RoomConfigOrBuilder getConfigOrBuilder() {
+    return config_ == null ? com.tcn.cloud.api.api.commons.RoomConfig.getDefaultInstance() : config_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -402,6 +440,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(displayName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 9, displayName_);
     }
+    if (config_ != null) {
+      output.writeMessage(10, getConfig());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -439,6 +480,10 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(displayName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, displayName_);
     }
+    if (config_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(10, getConfig());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -474,6 +519,11 @@ private static final long serialVersionUID = 0L;
         .equals(other.getId())) return false;
     if (!getDisplayName()
         .equals(other.getDisplayName())) return false;
+    if (hasConfig() != other.hasConfig()) return false;
+    if (hasConfig()) {
+      if (!getConfig()
+          .equals(other.getConfig())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -505,6 +555,10 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getId().hashCode();
     hash = (37 * hash) + DISPLAY_NAME_FIELD_NUMBER;
     hash = (53 * hash) + getDisplayName().hashCode();
+    if (hasConfig()) {
+      hash = (37 * hash) + CONFIG_FIELD_NUMBER;
+      hash = (53 * hash) + getConfig().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -652,6 +706,11 @@ private static final long serialVersionUID = 0L;
       status_ = 0;
       id_ = "";
       displayName_ = "";
+      config_ = null;
+      if (configBuilder_ != null) {
+        configBuilder_.dispose();
+        configBuilder_ = null;
+      }
       return this;
     }
 
@@ -712,6 +771,11 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.displayName_ = displayName_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.config_ = configBuilder_ == null
+            ? config_
+            : configBuilder_.build();
       }
     }
 
@@ -791,6 +855,9 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000080;
         onChanged();
       }
+      if (other.hasConfig()) {
+        mergeConfig(other.getConfig());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -861,6 +928,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000080;
               break;
             } // case 74
+            case 82: {
+              input.readMessage(
+                  getConfigFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 82
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1710,6 +1784,161 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000080;
       onChanged();
       return this;
+    }
+
+    private com.tcn.cloud.api.api.commons.RoomConfig config_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.RoomConfig, com.tcn.cloud.api.api.commons.RoomConfig.Builder, com.tcn.cloud.api.api.commons.RoomConfigOrBuilder> configBuilder_;
+    /**
+     * <pre>
+     * room configuration details
+     * </pre>
+     *
+     * <code>.api.commons.RoomConfig config = 10 [json_name = "config"];</code>
+     * @return Whether the config field is set.
+     */
+    public boolean hasConfig() {
+      return ((bitField0_ & 0x00000100) != 0);
+    }
+    /**
+     * <pre>
+     * room configuration details
+     * </pre>
+     *
+     * <code>.api.commons.RoomConfig config = 10 [json_name = "config"];</code>
+     * @return The config.
+     */
+    public com.tcn.cloud.api.api.commons.RoomConfig getConfig() {
+      if (configBuilder_ == null) {
+        return config_ == null ? com.tcn.cloud.api.api.commons.RoomConfig.getDefaultInstance() : config_;
+      } else {
+        return configBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * room configuration details
+     * </pre>
+     *
+     * <code>.api.commons.RoomConfig config = 10 [json_name = "config"];</code>
+     */
+    public Builder setConfig(com.tcn.cloud.api.api.commons.RoomConfig value) {
+      if (configBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        config_ = value;
+      } else {
+        configBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * room configuration details
+     * </pre>
+     *
+     * <code>.api.commons.RoomConfig config = 10 [json_name = "config"];</code>
+     */
+    public Builder setConfig(
+        com.tcn.cloud.api.api.commons.RoomConfig.Builder builderForValue) {
+      if (configBuilder_ == null) {
+        config_ = builderForValue.build();
+      } else {
+        configBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * room configuration details
+     * </pre>
+     *
+     * <code>.api.commons.RoomConfig config = 10 [json_name = "config"];</code>
+     */
+    public Builder mergeConfig(com.tcn.cloud.api.api.commons.RoomConfig value) {
+      if (configBuilder_ == null) {
+        if (((bitField0_ & 0x00000100) != 0) &&
+          config_ != null &&
+          config_ != com.tcn.cloud.api.api.commons.RoomConfig.getDefaultInstance()) {
+          getConfigBuilder().mergeFrom(value);
+        } else {
+          config_ = value;
+        }
+      } else {
+        configBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * room configuration details
+     * </pre>
+     *
+     * <code>.api.commons.RoomConfig config = 10 [json_name = "config"];</code>
+     */
+    public Builder clearConfig() {
+      bitField0_ = (bitField0_ & ~0x00000100);
+      config_ = null;
+      if (configBuilder_ != null) {
+        configBuilder_.dispose();
+        configBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * room configuration details
+     * </pre>
+     *
+     * <code>.api.commons.RoomConfig config = 10 [json_name = "config"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.RoomConfig.Builder getConfigBuilder() {
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return getConfigFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * room configuration details
+     * </pre>
+     *
+     * <code>.api.commons.RoomConfig config = 10 [json_name = "config"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.RoomConfigOrBuilder getConfigOrBuilder() {
+      if (configBuilder_ != null) {
+        return configBuilder_.getMessageOrBuilder();
+      } else {
+        return config_ == null ?
+            com.tcn.cloud.api.api.commons.RoomConfig.getDefaultInstance() : config_;
+      }
+    }
+    /**
+     * <pre>
+     * room configuration details
+     * </pre>
+     *
+     * <code>.api.commons.RoomConfig config = 10 [json_name = "config"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.RoomConfig, com.tcn.cloud.api.api.commons.RoomConfig.Builder, com.tcn.cloud.api.api.commons.RoomConfigOrBuilder> 
+        getConfigFieldBuilder() {
+      if (configBuilder_ == null) {
+        configBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.RoomConfig, com.tcn.cloud.api.api.commons.RoomConfig.Builder, com.tcn.cloud.api.api.commons.RoomConfigOrBuilder>(
+                getConfig(),
+                getParentForChildren(),
+                isClean());
+        config_ = null;
+      }
+      return configBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

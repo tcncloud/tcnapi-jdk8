@@ -36,6 +36,8 @@ private static final long serialVersionUID = 0L;
     ticketStatus_ = 0;
     ticketAssignee_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
+    ticketParticipant_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   @java.lang.Override
@@ -877,6 +879,59 @@ private static final long serialVersionUID = 0L;
     return ticketAssignee_.getByteString(index);
   }
 
+  public static final int TICKET_PARTICIPANT_FIELD_NUMBER = 22;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.LazyStringArrayList ticketParticipant_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
+  /**
+   * <pre>
+   *participant list
+   * </pre>
+   *
+   * <code>repeated string ticket_participant = 22 [json_name = "ticketParticipant"];</code>
+   * @return A list containing the ticketParticipant.
+   */
+  public com.google.protobuf.ProtocolStringList
+      getTicketParticipantList() {
+    return ticketParticipant_;
+  }
+  /**
+   * <pre>
+   *participant list
+   * </pre>
+   *
+   * <code>repeated string ticket_participant = 22 [json_name = "ticketParticipant"];</code>
+   * @return The count of ticketParticipant.
+   */
+  public int getTicketParticipantCount() {
+    return ticketParticipant_.size();
+  }
+  /**
+   * <pre>
+   *participant list
+   * </pre>
+   *
+   * <code>repeated string ticket_participant = 22 [json_name = "ticketParticipant"];</code>
+   * @param index The index of the element to return.
+   * @return The ticketParticipant at the given index.
+   */
+  public java.lang.String getTicketParticipant(int index) {
+    return ticketParticipant_.get(index);
+  }
+  /**
+   * <pre>
+   *participant list
+   * </pre>
+   *
+   * <code>repeated string ticket_participant = 22 [json_name = "ticketParticipant"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the ticketParticipant at the given index.
+   */
+  public com.google.protobuf.ByteString
+      getTicketParticipantBytes(int index) {
+    return ticketParticipant_.getByteString(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -950,6 +1005,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < ticketAssignee_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 21, ticketAssignee_.getRaw(i));
+    }
+    for (int i = 0; i < ticketParticipant_.size(); i++) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 22, ticketParticipant_.getRaw(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -1035,6 +1093,14 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 2 * getTicketAssigneeList().size();
     }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < ticketParticipant_.size(); i++) {
+        dataSize += computeStringSizeNoTag(ticketParticipant_.getRaw(i));
+      }
+      size += dataSize;
+      size += 2 * getTicketParticipantList().size();
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -1095,6 +1161,8 @@ private static final long serialVersionUID = 0L;
     if (ticketStatus_ != other.ticketStatus_) return false;
     if (!getTicketAssigneeList()
         .equals(other.getTicketAssigneeList())) return false;
+    if (!getTicketParticipantList()
+        .equals(other.getTicketParticipantList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1162,6 +1230,10 @@ private static final long serialVersionUID = 0L;
     if (getTicketAssigneeCount() > 0) {
       hash = (37 * hash) + TICKET_ASSIGNEE_FIELD_NUMBER;
       hash = (53 * hash) + getTicketAssigneeList().hashCode();
+    }
+    if (getTicketParticipantCount() > 0) {
+      hash = (37 * hash) + TICKET_PARTICIPANT_FIELD_NUMBER;
+      hash = (53 * hash) + getTicketParticipantList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -1351,6 +1423,8 @@ private static final long serialVersionUID = 0L;
       ticketStatus_ = 0;
       ticketAssignee_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
+      ticketParticipant_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
     }
 
@@ -1476,6 +1550,10 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00080000) != 0)) {
         ticketAssignee_.makeImmutable();
         result.ticketAssignee_ = ticketAssignee_;
+      }
+      if (((from_bitField0_ & 0x00100000) != 0)) {
+        ticketParticipant_.makeImmutable();
+        result.ticketParticipant_ = ticketParticipant_;
       }
     }
 
@@ -1700,6 +1778,16 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       }
+      if (!other.ticketParticipant_.isEmpty()) {
+        if (ticketParticipant_.isEmpty()) {
+          ticketParticipant_ = other.ticketParticipant_;
+          bitField0_ |= 0x00100000;
+        } else {
+          ensureTicketParticipantIsMutable();
+          ticketParticipant_.addAll(other.ticketParticipant_);
+        }
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1863,6 +1951,12 @@ private static final long serialVersionUID = 0L;
               ticketAssignee_.add(s);
               break;
             } // case 170
+            case 178: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureTicketParticipantIsMutable();
+              ticketParticipant_.add(s);
+              break;
+            } // case 178
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -4466,6 +4560,153 @@ private static final long serialVersionUID = 0L;
       ensureTicketAssigneeIsMutable();
       ticketAssignee_.add(value);
       bitField0_ |= 0x00080000;
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.LazyStringArrayList ticketParticipant_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    private void ensureTicketParticipantIsMutable() {
+      if (!ticketParticipant_.isModifiable()) {
+        ticketParticipant_ = new com.google.protobuf.LazyStringArrayList(ticketParticipant_);
+      }
+      bitField0_ |= 0x00100000;
+    }
+    /**
+     * <pre>
+     *participant list
+     * </pre>
+     *
+     * <code>repeated string ticket_participant = 22 [json_name = "ticketParticipant"];</code>
+     * @return A list containing the ticketParticipant.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getTicketParticipantList() {
+      ticketParticipant_.makeImmutable();
+      return ticketParticipant_;
+    }
+    /**
+     * <pre>
+     *participant list
+     * </pre>
+     *
+     * <code>repeated string ticket_participant = 22 [json_name = "ticketParticipant"];</code>
+     * @return The count of ticketParticipant.
+     */
+    public int getTicketParticipantCount() {
+      return ticketParticipant_.size();
+    }
+    /**
+     * <pre>
+     *participant list
+     * </pre>
+     *
+     * <code>repeated string ticket_participant = 22 [json_name = "ticketParticipant"];</code>
+     * @param index The index of the element to return.
+     * @return The ticketParticipant at the given index.
+     */
+    public java.lang.String getTicketParticipant(int index) {
+      return ticketParticipant_.get(index);
+    }
+    /**
+     * <pre>
+     *participant list
+     * </pre>
+     *
+     * <code>repeated string ticket_participant = 22 [json_name = "ticketParticipant"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the ticketParticipant at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getTicketParticipantBytes(int index) {
+      return ticketParticipant_.getByteString(index);
+    }
+    /**
+     * <pre>
+     *participant list
+     * </pre>
+     *
+     * <code>repeated string ticket_participant = 22 [json_name = "ticketParticipant"];</code>
+     * @param index The index to set the value at.
+     * @param value The ticketParticipant to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTicketParticipant(
+        int index, java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureTicketParticipantIsMutable();
+      ticketParticipant_.set(index, value);
+      bitField0_ |= 0x00100000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     *participant list
+     * </pre>
+     *
+     * <code>repeated string ticket_participant = 22 [json_name = "ticketParticipant"];</code>
+     * @param value The ticketParticipant to add.
+     * @return This builder for chaining.
+     */
+    public Builder addTicketParticipant(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureTicketParticipantIsMutable();
+      ticketParticipant_.add(value);
+      bitField0_ |= 0x00100000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     *participant list
+     * </pre>
+     *
+     * <code>repeated string ticket_participant = 22 [json_name = "ticketParticipant"];</code>
+     * @param values The ticketParticipant to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllTicketParticipant(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureTicketParticipantIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, ticketParticipant_);
+      bitField0_ |= 0x00100000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     *participant list
+     * </pre>
+     *
+     * <code>repeated string ticket_participant = 22 [json_name = "ticketParticipant"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTicketParticipant() {
+      ticketParticipant_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00100000);;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     *participant list
+     * </pre>
+     *
+     * <code>repeated string ticket_participant = 22 [json_name = "ticketParticipant"];</code>
+     * @param value The bytes of the ticketParticipant to add.
+     * @return This builder for chaining.
+     */
+    public Builder addTicketParticipantBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      ensureTicketParticipantIsMutable();
+      ticketParticipant_.add(value);
+      bitField0_ |= 0x00100000;
       onChanged();
       return this;
     }

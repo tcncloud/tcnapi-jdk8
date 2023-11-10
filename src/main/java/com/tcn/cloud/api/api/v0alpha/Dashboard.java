@@ -23,6 +23,7 @@ private static final long serialVersionUID = 0L;
     dashboardId_ = "";
     title_ = "";
     description_ = "";
+    resourceId_ = "";
   }
 
   @java.lang.Override
@@ -300,6 +301,68 @@ private static final long serialVersionUID = 0L;
     return type_ == null ? com.tcn.cloud.api.api.v0alpha.DashboardType.getDefaultInstance() : type_;
   }
 
+  public static final int RESOURCE_ID_FIELD_NUMBER = 7;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceId_ = "";
+  /**
+   * <pre>
+   * resource id of the dashboard
+   * </pre>
+   *
+   * <code>string resource_id = 7 [json_name = "resourceId"];</code>
+   * @return The resourceId.
+   */
+  @java.lang.Override
+  public java.lang.String getResourceId() {
+    java.lang.Object ref = resourceId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      resourceId_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * resource id of the dashboard
+   * </pre>
+   *
+   * <code>string resource_id = 7 [json_name = "resourceId"];</code>
+   * @return The bytes for resourceId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getResourceIdBytes() {
+    java.lang.Object ref = resourceId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      resourceId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int STANDARD_DASHBOARD_FIELD_NUMBER = 8;
+  private boolean standardDashboard_ = false;
+  /**
+   * <pre>
+   * standard dashboard flag
+   * </pre>
+   *
+   * <code>bool standard_dashboard = 8 [json_name = "standardDashboard"];</code>
+   * @return The standardDashboard.
+   */
+  @java.lang.Override
+  public boolean getStandardDashboard() {
+    return standardDashboard_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -332,6 +395,12 @@ private static final long serialVersionUID = 0L;
     if (type_ != null) {
       output.writeMessage(6, getType());
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 7, resourceId_);
+    }
+    if (standardDashboard_ != false) {
+      output.writeBool(8, standardDashboard_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -361,6 +430,13 @@ private static final long serialVersionUID = 0L;
     if (type_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, getType());
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, resourceId_);
+    }
+    if (standardDashboard_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(8, standardDashboard_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -398,6 +474,10 @@ private static final long serialVersionUID = 0L;
       if (!getType()
           .equals(other.getType())) return false;
     }
+    if (!getResourceId()
+        .equals(other.getResourceId())) return false;
+    if (getStandardDashboard()
+        != other.getStandardDashboard()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -427,6 +507,11 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + TYPE_FIELD_NUMBER;
       hash = (53 * hash) + getType().hashCode();
     }
+    hash = (37 * hash) + RESOURCE_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getResourceId().hashCode();
+    hash = (37 * hash) + STANDARD_DASHBOARD_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getStandardDashboard());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -580,6 +665,8 @@ private static final long serialVersionUID = 0L;
         typeBuilder_.dispose();
         typeBuilder_ = null;
       }
+      resourceId_ = "";
+      standardDashboard_ = false;
       return this;
     }
 
@@ -636,6 +723,12 @@ private static final long serialVersionUID = 0L;
         result.type_ = typeBuilder_ == null
             ? type_
             : typeBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.resourceId_ = resourceId_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.standardDashboard_ = standardDashboard_;
       }
     }
 
@@ -707,6 +800,14 @@ private static final long serialVersionUID = 0L;
       if (other.hasType()) {
         mergeType(other.getType());
       }
+      if (!other.getResourceId().isEmpty()) {
+        resourceId_ = other.resourceId_;
+        bitField0_ |= 0x00000040;
+        onChanged();
+      }
+      if (other.getStandardDashboard() != false) {
+        setStandardDashboard(other.getStandardDashboard());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -769,6 +870,16 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000020;
               break;
             } // case 50
+            case 58: {
+              resourceId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 58
+            case 64: {
+              standardDashboard_ = input.readBool();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 64
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1525,6 +1636,142 @@ private static final long serialVersionUID = 0L;
         type_ = null;
       }
       return typeBuilder_;
+    }
+
+    private java.lang.Object resourceId_ = "";
+    /**
+     * <pre>
+     * resource id of the dashboard
+     * </pre>
+     *
+     * <code>string resource_id = 7 [json_name = "resourceId"];</code>
+     * @return The resourceId.
+     */
+    public java.lang.String getResourceId() {
+      java.lang.Object ref = resourceId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        resourceId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * resource id of the dashboard
+     * </pre>
+     *
+     * <code>string resource_id = 7 [json_name = "resourceId"];</code>
+     * @return The bytes for resourceId.
+     */
+    public com.google.protobuf.ByteString
+        getResourceIdBytes() {
+      java.lang.Object ref = resourceId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        resourceId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * resource id of the dashboard
+     * </pre>
+     *
+     * <code>string resource_id = 7 [json_name = "resourceId"];</code>
+     * @param value The resourceId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setResourceId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      resourceId_ = value;
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * resource id of the dashboard
+     * </pre>
+     *
+     * <code>string resource_id = 7 [json_name = "resourceId"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearResourceId() {
+      resourceId_ = getDefaultInstance().getResourceId();
+      bitField0_ = (bitField0_ & ~0x00000040);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * resource id of the dashboard
+     * </pre>
+     *
+     * <code>string resource_id = 7 [json_name = "resourceId"];</code>
+     * @param value The bytes for resourceId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setResourceIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      resourceId_ = value;
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+
+    private boolean standardDashboard_ ;
+    /**
+     * <pre>
+     * standard dashboard flag
+     * </pre>
+     *
+     * <code>bool standard_dashboard = 8 [json_name = "standardDashboard"];</code>
+     * @return The standardDashboard.
+     */
+    @java.lang.Override
+    public boolean getStandardDashboard() {
+      return standardDashboard_;
+    }
+    /**
+     * <pre>
+     * standard dashboard flag
+     * </pre>
+     *
+     * <code>bool standard_dashboard = 8 [json_name = "standardDashboard"];</code>
+     * @param value The standardDashboard to set.
+     * @return This builder for chaining.
+     */
+    public Builder setStandardDashboard(boolean value) {
+
+      standardDashboard_ = value;
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * standard dashboard flag
+     * </pre>
+     *
+     * <code>bool standard_dashboard = 8 [json_name = "standardDashboard"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearStandardDashboard() {
+      bitField0_ = (bitField0_ & ~0x00000080);
+      standardDashboard_ = false;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

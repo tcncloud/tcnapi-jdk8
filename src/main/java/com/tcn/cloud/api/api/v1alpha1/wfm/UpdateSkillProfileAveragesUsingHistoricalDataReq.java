@@ -21,6 +21,7 @@ private static final long serialVersionUID = 0L;
   }
   private UpdateSkillProfileAveragesUsingHistoricalDataReq() {
     skillProfileSids_ = emptyLongList();
+    skillProfileGroupSids_ = emptyLongList();
   }
 
   @java.lang.Override
@@ -144,6 +145,47 @@ private static final long serialVersionUID = 0L;
     return excludeSkillProfilesWithManualAverages_;
   }
 
+  public static final int SKILL_PROFILE_GROUP_SIDS_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.Internal.LongList skillProfileGroupSids_;
+  /**
+   * <pre>
+   * IDs of the skill profile groups to calculate the averages of, if none are sent it calculates it for all skill profile groups that the org has.
+   * </pre>
+   *
+   * <code>repeated int64 skill_profile_group_sids = 4 [json_name = "skillProfileGroupSids", jstype = JS_STRING];</code>
+   * @return A list containing the skillProfileGroupSids.
+   */
+  @java.lang.Override
+  public java.util.List<java.lang.Long>
+      getSkillProfileGroupSidsList() {
+    return skillProfileGroupSids_;
+  }
+  /**
+   * <pre>
+   * IDs of the skill profile groups to calculate the averages of, if none are sent it calculates it for all skill profile groups that the org has.
+   * </pre>
+   *
+   * <code>repeated int64 skill_profile_group_sids = 4 [json_name = "skillProfileGroupSids", jstype = JS_STRING];</code>
+   * @return The count of skillProfileGroupSids.
+   */
+  public int getSkillProfileGroupSidsCount() {
+    return skillProfileGroupSids_.size();
+  }
+  /**
+   * <pre>
+   * IDs of the skill profile groups to calculate the averages of, if none are sent it calculates it for all skill profile groups that the org has.
+   * </pre>
+   *
+   * <code>repeated int64 skill_profile_group_sids = 4 [json_name = "skillProfileGroupSids", jstype = JS_STRING];</code>
+   * @param index The index of the element to return.
+   * @return The skillProfileGroupSids at the given index.
+   */
+  public long getSkillProfileGroupSids(int index) {
+    return skillProfileGroupSids_.getLong(index);
+  }
+  private int skillProfileGroupSidsMemoizedSerializedSize = -1;
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -171,6 +213,13 @@ private static final long serialVersionUID = 0L;
     }
     if (excludeSkillProfilesWithManualAverages_ != false) {
       output.writeBool(3, excludeSkillProfilesWithManualAverages_);
+    }
+    if (getSkillProfileGroupSidsList().size() > 0) {
+      output.writeUInt32NoTag(34);
+      output.writeUInt32NoTag(skillProfileGroupSidsMemoizedSerializedSize);
+    }
+    for (int i = 0; i < skillProfileGroupSids_.size(); i++) {
+      output.writeInt64NoTag(skillProfileGroupSids_.getLong(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -203,6 +252,20 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(3, excludeSkillProfilesWithManualAverages_);
     }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < skillProfileGroupSids_.size(); i++) {
+        dataSize += com.google.protobuf.CodedOutputStream
+          .computeInt64SizeNoTag(skillProfileGroupSids_.getLong(i));
+      }
+      size += dataSize;
+      if (!getSkillProfileGroupSidsList().isEmpty()) {
+        size += 1;
+        size += com.google.protobuf.CodedOutputStream
+            .computeInt32SizeNoTag(dataSize);
+      }
+      skillProfileGroupSidsMemoizedSerializedSize = dataSize;
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -227,6 +290,8 @@ private static final long serialVersionUID = 0L;
     }
     if (getExcludeSkillProfilesWithManualAverages()
         != other.getExcludeSkillProfilesWithManualAverages()) return false;
+    if (!getSkillProfileGroupSidsList()
+        .equals(other.getSkillProfileGroupSidsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -249,6 +314,10 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + EXCLUDE_SKILL_PROFILES_WITH_MANUAL_AVERAGES_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getExcludeSkillProfilesWithManualAverages());
+    if (getSkillProfileGroupSidsCount() > 0) {
+      hash = (37 * hash) + SKILL_PROFILE_GROUP_SIDS_FIELD_NUMBER;
+      hash = (53 * hash) + getSkillProfileGroupSidsList().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -391,6 +460,7 @@ private static final long serialVersionUID = 0L;
         datetimeRangeBuilder_ = null;
       }
       excludeSkillProfilesWithManualAverages_ = false;
+      skillProfileGroupSids_ = emptyLongList();
       return this;
     }
 
@@ -429,6 +499,11 @@ private static final long serialVersionUID = 0L;
         bitField0_ = (bitField0_ & ~0x00000001);
       }
       result.skillProfileSids_ = skillProfileSids_;
+      if (((bitField0_ & 0x00000008) != 0)) {
+        skillProfileGroupSids_.makeImmutable();
+        bitField0_ = (bitField0_ & ~0x00000008);
+      }
+      result.skillProfileGroupSids_ = skillProfileGroupSids_;
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileAveragesUsingHistoricalDataReq result) {
@@ -503,6 +578,16 @@ private static final long serialVersionUID = 0L;
       if (other.getExcludeSkillProfilesWithManualAverages() != false) {
         setExcludeSkillProfilesWithManualAverages(other.getExcludeSkillProfilesWithManualAverages());
       }
+      if (!other.skillProfileGroupSids_.isEmpty()) {
+        if (skillProfileGroupSids_.isEmpty()) {
+          skillProfileGroupSids_ = other.skillProfileGroupSids_;
+          bitField0_ = (bitField0_ & ~0x00000008);
+        } else {
+          ensureSkillProfileGroupSidsIsMutable();
+          skillProfileGroupSids_.addAll(other.skillProfileGroupSids_);
+        }
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -557,6 +642,22 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 24
+            case 32: {
+              long v = input.readInt64();
+              ensureSkillProfileGroupSidsIsMutable();
+              skillProfileGroupSids_.addLong(v);
+              break;
+            } // case 32
+            case 34: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              ensureSkillProfileGroupSidsIsMutable();
+              while (input.getBytesUntilLimit() > 0) {
+                skillProfileGroupSids_.addLong(input.readInt64());
+              }
+              input.popLimit(limit);
+              break;
+            } // case 34
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -899,6 +1000,115 @@ private static final long serialVersionUID = 0L;
     public Builder clearExcludeSkillProfilesWithManualAverages() {
       bitField0_ = (bitField0_ & ~0x00000004);
       excludeSkillProfilesWithManualAverages_ = false;
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.Internal.LongList skillProfileGroupSids_ = emptyLongList();
+    private void ensureSkillProfileGroupSidsIsMutable() {
+      if (!((bitField0_ & 0x00000008) != 0)) {
+        skillProfileGroupSids_ = mutableCopy(skillProfileGroupSids_);
+        bitField0_ |= 0x00000008;
+      }
+    }
+    /**
+     * <pre>
+     * IDs of the skill profile groups to calculate the averages of, if none are sent it calculates it for all skill profile groups that the org has.
+     * </pre>
+     *
+     * <code>repeated int64 skill_profile_group_sids = 4 [json_name = "skillProfileGroupSids", jstype = JS_STRING];</code>
+     * @return A list containing the skillProfileGroupSids.
+     */
+    public java.util.List<java.lang.Long>
+        getSkillProfileGroupSidsList() {
+      return ((bitField0_ & 0x00000008) != 0) ?
+               java.util.Collections.unmodifiableList(skillProfileGroupSids_) : skillProfileGroupSids_;
+    }
+    /**
+     * <pre>
+     * IDs of the skill profile groups to calculate the averages of, if none are sent it calculates it for all skill profile groups that the org has.
+     * </pre>
+     *
+     * <code>repeated int64 skill_profile_group_sids = 4 [json_name = "skillProfileGroupSids", jstype = JS_STRING];</code>
+     * @return The count of skillProfileGroupSids.
+     */
+    public int getSkillProfileGroupSidsCount() {
+      return skillProfileGroupSids_.size();
+    }
+    /**
+     * <pre>
+     * IDs of the skill profile groups to calculate the averages of, if none are sent it calculates it for all skill profile groups that the org has.
+     * </pre>
+     *
+     * <code>repeated int64 skill_profile_group_sids = 4 [json_name = "skillProfileGroupSids", jstype = JS_STRING];</code>
+     * @param index The index of the element to return.
+     * @return The skillProfileGroupSids at the given index.
+     */
+    public long getSkillProfileGroupSids(int index) {
+      return skillProfileGroupSids_.getLong(index);
+    }
+    /**
+     * <pre>
+     * IDs of the skill profile groups to calculate the averages of, if none are sent it calculates it for all skill profile groups that the org has.
+     * </pre>
+     *
+     * <code>repeated int64 skill_profile_group_sids = 4 [json_name = "skillProfileGroupSids", jstype = JS_STRING];</code>
+     * @param index The index to set the value at.
+     * @param value The skillProfileGroupSids to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSkillProfileGroupSids(
+        int index, long value) {
+
+      ensureSkillProfileGroupSidsIsMutable();
+      skillProfileGroupSids_.setLong(index, value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * IDs of the skill profile groups to calculate the averages of, if none are sent it calculates it for all skill profile groups that the org has.
+     * </pre>
+     *
+     * <code>repeated int64 skill_profile_group_sids = 4 [json_name = "skillProfileGroupSids", jstype = JS_STRING];</code>
+     * @param value The skillProfileGroupSids to add.
+     * @return This builder for chaining.
+     */
+    public Builder addSkillProfileGroupSids(long value) {
+
+      ensureSkillProfileGroupSidsIsMutable();
+      skillProfileGroupSids_.addLong(value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * IDs of the skill profile groups to calculate the averages of, if none are sent it calculates it for all skill profile groups that the org has.
+     * </pre>
+     *
+     * <code>repeated int64 skill_profile_group_sids = 4 [json_name = "skillProfileGroupSids", jstype = JS_STRING];</code>
+     * @param values The skillProfileGroupSids to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllSkillProfileGroupSids(
+        java.lang.Iterable<? extends java.lang.Long> values) {
+      ensureSkillProfileGroupSidsIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, skillProfileGroupSids_);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * IDs of the skill profile groups to calculate the averages of, if none are sent it calculates it for all skill profile groups that the org has.
+     * </pre>
+     *
+     * <code>repeated int64 skill_profile_group_sids = 4 [json_name = "skillProfileGroupSids", jstype = JS_STRING];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearSkillProfileGroupSids() {
+      skillProfileGroupSids_ = emptyLongList();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }

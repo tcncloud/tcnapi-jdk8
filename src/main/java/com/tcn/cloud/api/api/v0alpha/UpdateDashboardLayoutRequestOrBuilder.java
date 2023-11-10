@@ -53,4 +53,24 @@ public interface UpdateDashboardLayoutRequestOrBuilder extends
    * <code>.api.v0alpha.DashboardLayout layout = 2 [json_name = "layout"];</code>
    */
   com.tcn.cloud.api.api.v0alpha.DashboardLayoutOrBuilder getLayoutOrBuilder();
+
+  /**
+   * <pre>
+   * resource id of the dashboard
+   * </pre>
+   *
+   * <code>string resource_id = 3 [json_name = "resourceId"];</code>
+   * @return The resourceId.
+   */
+  java.lang.String getResourceId();
+  /**
+   * <pre>
+   * resource id of the dashboard
+   * </pre>
+   *
+   * <code>string resource_id = 3 [json_name = "resourceId"];</code>
+   * @return The bytes for resourceId.
+   */
+  com.google.protobuf.ByteString
+      getResourceIdBytes();
 }

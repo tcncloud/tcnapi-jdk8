@@ -96,4 +96,48 @@ public interface TicketProjectOrBuilder extends
    * @return The isActive.
    */
   boolean getIsActive();
+
+  /**
+   * <pre>
+   * Added ticket template ID &amp; add in DB too
+   * </pre>
+   *
+   * <code>repeated .api.commons.TemplateDescription template_desc = 7 [json_name = "templateDesc"];</code>
+   */
+  java.util.List<com.tcn.cloud.api.api.commons.TemplateDescription> 
+      getTemplateDescList();
+  /**
+   * <pre>
+   * Added ticket template ID &amp; add in DB too
+   * </pre>
+   *
+   * <code>repeated .api.commons.TemplateDescription template_desc = 7 [json_name = "templateDesc"];</code>
+   */
+  com.tcn.cloud.api.api.commons.TemplateDescription getTemplateDesc(int index);
+  /**
+   * <pre>
+   * Added ticket template ID &amp; add in DB too
+   * </pre>
+   *
+   * <code>repeated .api.commons.TemplateDescription template_desc = 7 [json_name = "templateDesc"];</code>
+   */
+  int getTemplateDescCount();
+  /**
+   * <pre>
+   * Added ticket template ID &amp; add in DB too
+   * </pre>
+   *
+   * <code>repeated .api.commons.TemplateDescription template_desc = 7 [json_name = "templateDesc"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.api.commons.TemplateDescriptionOrBuilder> 
+      getTemplateDescOrBuilderList();
+  /**
+   * <pre>
+   * Added ticket template ID &amp; add in DB too
+   * </pre>
+   *
+   * <code>repeated .api.commons.TemplateDescription template_desc = 7 [json_name = "templateDesc"];</code>
+   */
+  com.tcn.cloud.api.api.commons.TemplateDescriptionOrBuilder getTemplateDescOrBuilder(
+      int index);
 }
