@@ -108,19 +108,20 @@ public final class Room303Proto {
       "ges\022D\n\014send_message\030\005 \001(\0162!.api.commons." +
       "ConfigPermissionEnumR\013sendMessage\022D\n\014arc" +
       "hive_room\030\006 \001(\0162!.api.commons.ConfigPerm" +
-      "issionEnumR\013archiveRoom*K\n\010RoomType\022\024\n\020R" +
+      "issionEnumR\013archiveRoom*_\n\010RoomType\022\024\n\020R" +
       "OOM_TYPE_DIRECT\020\000\022\023\n\017ROOM_TYPE_MULTI\020\001\022\024" +
-      "\n\020ROOM_TYPE_SYSTEM\020\002*b\n\rMessageStatus\022\031\n" +
-      "\025MESSAGE_STATUS_ACTIVE\020\000\022\031\n\025MESSAGE_STAT" +
-      "US_EDITED\020\001\022\033\n\027MESSAGE_STATUS_ARCHIVED\020\002" +
-      "*W\n\nRoomStatus\022\026\n\022ROOM_STATUS_ACTIVE\020\000\022\030" +
-      "\n\024ROOM_STATUS_ARCHIVED\020\001\022\027\n\023ROOM_STATUS_" +
-      "DELETED\020\002*O\n\024ConfigPermissionEnum\022\013\n\007LIM" +
-      "ITED\020\000\022\022\n\016ROOM303_MEMBER\020\001\022\026\n\022ROOM303_SU" +
-      "PERVISOR\020\002Bz\n\035com.tcn.cloud.api.api.comm" +
-      "onsB\014Room303ProtoP\001\242\002\003ACX\252\002\013Api.Commons\312" +
-      "\002\013Api\\Commons\342\002\027Api\\Commons\\GPBMetadata\352" +
-      "\002\014Api::Commonsb\006proto3"
+      "\n\020ROOM_TYPE_SYSTEM\020\002\022\022\n\016ROOM_TYPE_NEWS\020\003" +
+      "*b\n\rMessageStatus\022\031\n\025MESSAGE_STATUS_ACTI" +
+      "VE\020\000\022\031\n\025MESSAGE_STATUS_EDITED\020\001\022\033\n\027MESSA" +
+      "GE_STATUS_ARCHIVED\020\002*W\n\nRoomStatus\022\026\n\022RO" +
+      "OM_STATUS_ACTIVE\020\000\022\030\n\024ROOM_STATUS_ARCHIV" +
+      "ED\020\001\022\027\n\023ROOM_STATUS_DELETED\020\002*O\n\024ConfigP" +
+      "ermissionEnum\022\013\n\007LIMITED\020\000\022\022\n\016ROOM303_ME" +
+      "MBER\020\001\022\026\n\022ROOM303_SUPERVISOR\020\002Bz\n\035com.tc" +
+      "n.cloud.api.api.commonsB\014Room303ProtoP\001\242" +
+      "\002\003ACX\252\002\013Api.Commons\312\002\013Api\\Commons\342\002\027Api\\" +
+      "Commons\\GPBMetadata\352\002\014Api::Commonsb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
