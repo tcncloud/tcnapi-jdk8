@@ -15,6 +15,68 @@ public final class BillingServiceGrpc {
   public static final java.lang.String SERVICE_NAME = "services.billing.v1alpha1.BillingService";
 
   // Static method descriptors that strictly reflect the proto.
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.CommitBillingPlanRequest,
+      com.tcn.cloud.api.services.billing.v1alpha1.CommitBillingPlanResponse> getCommitBillingPlanMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CommitBillingPlan",
+      requestType = com.tcn.cloud.api.services.billing.v1alpha1.CommitBillingPlanRequest.class,
+      responseType = com.tcn.cloud.api.services.billing.v1alpha1.CommitBillingPlanResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.CommitBillingPlanRequest,
+      com.tcn.cloud.api.services.billing.v1alpha1.CommitBillingPlanResponse> getCommitBillingPlanMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.CommitBillingPlanRequest, com.tcn.cloud.api.services.billing.v1alpha1.CommitBillingPlanResponse> getCommitBillingPlanMethod;
+    if ((getCommitBillingPlanMethod = BillingServiceGrpc.getCommitBillingPlanMethod) == null) {
+      synchronized (BillingServiceGrpc.class) {
+        if ((getCommitBillingPlanMethod = BillingServiceGrpc.getCommitBillingPlanMethod) == null) {
+          BillingServiceGrpc.getCommitBillingPlanMethod = getCommitBillingPlanMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.services.billing.v1alpha1.CommitBillingPlanRequest, com.tcn.cloud.api.services.billing.v1alpha1.CommitBillingPlanResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CommitBillingPlan"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.billing.v1alpha1.CommitBillingPlanRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.billing.v1alpha1.CommitBillingPlanResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new BillingServiceMethodDescriptorSupplier("CommitBillingPlan"))
+              .build();
+        }
+      }
+    }
+    return getCommitBillingPlanMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.CommitDefaultBillingPlanRequest,
+      com.tcn.cloud.api.services.billing.v1alpha1.CommitDefaultBillingPlanResponse> getCommitDefaultBillingPlanMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CommitDefaultBillingPlan",
+      requestType = com.tcn.cloud.api.services.billing.v1alpha1.CommitDefaultBillingPlanRequest.class,
+      responseType = com.tcn.cloud.api.services.billing.v1alpha1.CommitDefaultBillingPlanResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.CommitDefaultBillingPlanRequest,
+      com.tcn.cloud.api.services.billing.v1alpha1.CommitDefaultBillingPlanResponse> getCommitDefaultBillingPlanMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.CommitDefaultBillingPlanRequest, com.tcn.cloud.api.services.billing.v1alpha1.CommitDefaultBillingPlanResponse> getCommitDefaultBillingPlanMethod;
+    if ((getCommitDefaultBillingPlanMethod = BillingServiceGrpc.getCommitDefaultBillingPlanMethod) == null) {
+      synchronized (BillingServiceGrpc.class) {
+        if ((getCommitDefaultBillingPlanMethod = BillingServiceGrpc.getCommitDefaultBillingPlanMethod) == null) {
+          BillingServiceGrpc.getCommitDefaultBillingPlanMethod = getCommitDefaultBillingPlanMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.services.billing.v1alpha1.CommitDefaultBillingPlanRequest, com.tcn.cloud.api.services.billing.v1alpha1.CommitDefaultBillingPlanResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CommitDefaultBillingPlan"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.billing.v1alpha1.CommitDefaultBillingPlanRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.billing.v1alpha1.CommitDefaultBillingPlanResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new BillingServiceMethodDescriptorSupplier("CommitDefaultBillingPlan"))
+              .build();
+        }
+      }
+    }
+    return getCommitDefaultBillingPlanMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.CreateBillingPlanRequest,
       com.tcn.cloud.api.services.billing.v1alpha1.CreateBillingPlanResponse> getCreateBillingPlanMethod;
 
@@ -778,6 +840,47 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
+     * Commits a billing plan for the ORG, finalizing it's creation and allowing it
+     * to become active.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.FailedPrecondition: The billing plan is already committed.
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified billing plan doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
+     * </pre>
+     */
+    default void commitBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.CommitBillingPlanRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.CommitBillingPlanResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCommitBillingPlanMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Commits a default billing plan for the REGION, finalizing it's creation and allowing it
+     * to become active.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     *   TCN_BILLING_ADMIN
+     * Errors:
+     *   - grpc.FailedPrecondition: The default billing plan is already committed.
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified default billing plan doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    default void commitDefaultBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.CommitDefaultBillingPlanRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.CommitDefaultBillingPlanResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCommitDefaultBillingPlanMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Creates a billing plan for the ORG.
      * Required permissions:
      *   CUSTOMER_SUPPORT
@@ -1234,6 +1337,49 @@ public final class BillingServiceGrpc {
     protected BillingServiceStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new BillingServiceStub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Commits a billing plan for the ORG, finalizing it's creation and allowing it
+     * to become active.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.FailedPrecondition: The billing plan is already committed.
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified billing plan doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
+     * </pre>
+     */
+    public void commitBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.CommitBillingPlanRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.CommitBillingPlanResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCommitBillingPlanMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Commits a default billing plan for the REGION, finalizing it's creation and allowing it
+     * to become active.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     *   TCN_BILLING_ADMIN
+     * Errors:
+     *   - grpc.FailedPrecondition: The default billing plan is already committed.
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified default billing plan doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    public void commitDefaultBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.CommitDefaultBillingPlanRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.CommitDefaultBillingPlanResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCommitDefaultBillingPlanMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -1710,6 +1856,47 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
+     * Commits a billing plan for the ORG, finalizing it's creation and allowing it
+     * to become active.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.FailedPrecondition: The billing plan is already committed.
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified billing plan doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
+     * </pre>
+     */
+    public com.tcn.cloud.api.services.billing.v1alpha1.CommitBillingPlanResponse commitBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.CommitBillingPlanRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCommitBillingPlanMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Commits a default billing plan for the REGION, finalizing it's creation and allowing it
+     * to become active.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     *   TCN_BILLING_ADMIN
+     * Errors:
+     *   - grpc.FailedPrecondition: The default billing plan is already committed.
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified default billing plan doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    public com.tcn.cloud.api.services.billing.v1alpha1.CommitDefaultBillingPlanResponse commitDefaultBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.CommitDefaultBillingPlanRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCommitDefaultBillingPlanMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Creates a billing plan for the ORG.
      * Required permissions:
      *   CUSTOMER_SUPPORT
@@ -2155,6 +2342,49 @@ public final class BillingServiceGrpc {
     protected BillingServiceFutureStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new BillingServiceFutureStub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Commits a billing plan for the ORG, finalizing it's creation and allowing it
+     * to become active.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.FailedPrecondition: The billing plan is already committed.
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified billing plan doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.billing.v1alpha1.CommitBillingPlanResponse> commitBillingPlan(
+        com.tcn.cloud.api.services.billing.v1alpha1.CommitBillingPlanRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCommitBillingPlanMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Commits a default billing plan for the REGION, finalizing it's creation and allowing it
+     * to become active.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     *   TCN_BILLING_ADMIN
+     * Errors:
+     *   - grpc.FailedPrecondition: The default billing plan is already committed.
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified default billing plan doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.billing.v1alpha1.CommitDefaultBillingPlanResponse> commitDefaultBillingPlan(
+        com.tcn.cloud.api.services.billing.v1alpha1.CommitDefaultBillingPlanRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCommitDefaultBillingPlanMethod(), getCallOptions()), request);
     }
 
     /**
@@ -2613,29 +2843,31 @@ public final class BillingServiceGrpc {
     }
   }
 
-  private static final int METHODID_CREATE_BILLING_PLAN = 0;
-  private static final int METHODID_CREATE_DEFAULT_BILLING_PLAN = 1;
-  private static final int METHODID_CREATE_DEFAULT_RATE_DEFINITION = 2;
-  private static final int METHODID_CREATE_INVOICE = 3;
-  private static final int METHODID_CREATE_RATE_DEFINITION = 4;
-  private static final int METHODID_DELETE_BILLING_PLAN = 5;
-  private static final int METHODID_DELETE_DEFAULT_BILLING_PLAN = 6;
-  private static final int METHODID_DELETE_DEFAULT_RATE_DEFINITION = 7;
-  private static final int METHODID_DELETE_INVOICE = 8;
-  private static final int METHODID_DELETE_RATE_DEFINITION = 9;
-  private static final int METHODID_EXPORT_INVOICE = 10;
-  private static final int METHODID_GET_ACTIVE_BILLING_PLAN = 11;
-  private static final int METHODID_GET_BILLING_PLAN = 12;
-  private static final int METHODID_GET_INVOICE = 13;
-  private static final int METHODID_GET_RATE_DEFINITION = 14;
-  private static final int METHODID_LIST_BILLING_PLANS = 15;
-  private static final int METHODID_LIST_INVOICES = 16;
-  private static final int METHODID_LIST_RATE_DEFINITIONS = 17;
-  private static final int METHODID_UPDATE_BILLING_PLAN = 18;
-  private static final int METHODID_UPDATE_DEFAULT_BILLING_PLAN = 19;
-  private static final int METHODID_UPDATE_DEFAULT_RATE_DEFINITION = 20;
-  private static final int METHODID_UPDATE_INVOICE = 21;
-  private static final int METHODID_UPDATE_RATE_DEFINITION = 22;
+  private static final int METHODID_COMMIT_BILLING_PLAN = 0;
+  private static final int METHODID_COMMIT_DEFAULT_BILLING_PLAN = 1;
+  private static final int METHODID_CREATE_BILLING_PLAN = 2;
+  private static final int METHODID_CREATE_DEFAULT_BILLING_PLAN = 3;
+  private static final int METHODID_CREATE_DEFAULT_RATE_DEFINITION = 4;
+  private static final int METHODID_CREATE_INVOICE = 5;
+  private static final int METHODID_CREATE_RATE_DEFINITION = 6;
+  private static final int METHODID_DELETE_BILLING_PLAN = 7;
+  private static final int METHODID_DELETE_DEFAULT_BILLING_PLAN = 8;
+  private static final int METHODID_DELETE_DEFAULT_RATE_DEFINITION = 9;
+  private static final int METHODID_DELETE_INVOICE = 10;
+  private static final int METHODID_DELETE_RATE_DEFINITION = 11;
+  private static final int METHODID_EXPORT_INVOICE = 12;
+  private static final int METHODID_GET_ACTIVE_BILLING_PLAN = 13;
+  private static final int METHODID_GET_BILLING_PLAN = 14;
+  private static final int METHODID_GET_INVOICE = 15;
+  private static final int METHODID_GET_RATE_DEFINITION = 16;
+  private static final int METHODID_LIST_BILLING_PLANS = 17;
+  private static final int METHODID_LIST_INVOICES = 18;
+  private static final int METHODID_LIST_RATE_DEFINITIONS = 19;
+  private static final int METHODID_UPDATE_BILLING_PLAN = 20;
+  private static final int METHODID_UPDATE_DEFAULT_BILLING_PLAN = 21;
+  private static final int METHODID_UPDATE_DEFAULT_RATE_DEFINITION = 22;
+  private static final int METHODID_UPDATE_INVOICE = 23;
+  private static final int METHODID_UPDATE_RATE_DEFINITION = 24;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -2654,6 +2886,14 @@ public final class BillingServiceGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
+        case METHODID_COMMIT_BILLING_PLAN:
+          serviceImpl.commitBillingPlan((com.tcn.cloud.api.services.billing.v1alpha1.CommitBillingPlanRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.CommitBillingPlanResponse>) responseObserver);
+          break;
+        case METHODID_COMMIT_DEFAULT_BILLING_PLAN:
+          serviceImpl.commitDefaultBillingPlan((com.tcn.cloud.api.services.billing.v1alpha1.CommitDefaultBillingPlanRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.CommitDefaultBillingPlanResponse>) responseObserver);
+          break;
         case METHODID_CREATE_BILLING_PLAN:
           serviceImpl.createBillingPlan((com.tcn.cloud.api.services.billing.v1alpha1.CreateBillingPlanRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.CreateBillingPlanResponse>) responseObserver);
@@ -2764,6 +3004,20 @@ public final class BillingServiceGrpc {
 
   public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
     return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getCommitBillingPlanMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.services.billing.v1alpha1.CommitBillingPlanRequest,
+              com.tcn.cloud.api.services.billing.v1alpha1.CommitBillingPlanResponse>(
+                service, METHODID_COMMIT_BILLING_PLAN)))
+        .addMethod(
+          getCommitDefaultBillingPlanMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.services.billing.v1alpha1.CommitDefaultBillingPlanRequest,
+              com.tcn.cloud.api.services.billing.v1alpha1.CommitDefaultBillingPlanResponse>(
+                service, METHODID_COMMIT_DEFAULT_BILLING_PLAN)))
         .addMethod(
           getCreateBillingPlanMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -2973,6 +3227,8 @@ public final class BillingServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new BillingServiceFileDescriptorSupplier())
+              .addMethod(getCommitBillingPlanMethod())
+              .addMethod(getCommitDefaultBillingPlanMethod())
               .addMethod(getCreateBillingPlanMethod())
               .addMethod(getCreateDefaultBillingPlanMethod())
               .addMethod(getCreateDefaultRateDefinitionMethod())

@@ -202,4 +202,23 @@ public interface BillingPlanOrBuilder extends
    */
   com.google.protobuf.ByteString
       getRateDefinitionIdsBytes(int index);
+
+  /**
+   * <pre>
+   * the billing plan status
+   * </pre>
+   *
+   * <code>.services.billing.entities.v1alpha1.BillingPlanStatus status = 8 [json_name = "status"];</code>
+   * @return The enum numeric value on the wire for status.
+   */
+  int getStatusValue();
+  /**
+   * <pre>
+   * the billing plan status
+   * </pre>
+   *
+   * <code>.services.billing.entities.v1alpha1.BillingPlanStatus status = 8 [json_name = "status"];</code>
+   * @return The status.
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlanStatus getStatus();
 }

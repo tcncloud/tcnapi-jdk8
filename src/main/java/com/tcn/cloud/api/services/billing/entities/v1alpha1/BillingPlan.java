@@ -23,6 +23,7 @@ private static final long serialVersionUID = 0L;
     billingPlanId_ = "";
     rateDefinitionIds_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
+    status_ = 0;
   }
 
   @java.lang.Override
@@ -335,6 +336,32 @@ private static final long serialVersionUID = 0L;
     return rateDefinitionIds_.getByteString(index);
   }
 
+  public static final int STATUS_FIELD_NUMBER = 8;
+  private int status_ = 0;
+  /**
+   * <pre>
+   * the billing plan status
+   * </pre>
+   *
+   * <code>.services.billing.entities.v1alpha1.BillingPlanStatus status = 8 [json_name = "status"];</code>
+   * @return The enum numeric value on the wire for status.
+   */
+  @java.lang.Override public int getStatusValue() {
+    return status_;
+  }
+  /**
+   * <pre>
+   * the billing plan status
+   * </pre>
+   *
+   * <code>.services.billing.entities.v1alpha1.BillingPlanStatus status = 8 [json_name = "status"];</code>
+   * @return The status.
+   */
+  @java.lang.Override public com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlanStatus getStatus() {
+    com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlanStatus result = com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlanStatus.forNumber(status_);
+    return result == null ? com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlanStatus.UNRECOGNIZED : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -369,6 +396,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < rateDefinitionIds_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 7, rateDefinitionIds_.getRaw(i));
+    }
+    if (status_ != com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlanStatus.BILLING_PLAN_STATUS_UNSPECIFIED.getNumber()) {
+      output.writeEnum(8, status_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -409,6 +439,10 @@ private static final long serialVersionUID = 0L;
       }
       size += dataSize;
       size += 1 * getRateDefinitionIdsList().size();
+    }
+    if (status_ != com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlanStatus.BILLING_PLAN_STATUS_UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(8, status_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -454,6 +488,7 @@ private static final long serialVersionUID = 0L;
     }
     if (!getRateDefinitionIdsList()
         .equals(other.getRateDefinitionIdsList())) return false;
+    if (status_ != other.status_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -491,6 +526,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + RATE_DEFINITION_IDS_FIELD_NUMBER;
       hash = (53 * hash) + getRateDefinitionIdsList().hashCode();
     }
+    hash = (37 * hash) + STATUS_FIELD_NUMBER;
+    hash = (53 * hash) + status_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -654,6 +691,7 @@ private static final long serialVersionUID = 0L;
       }
       rateDefinitionIds_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
+      status_ = 0;
       return this;
     }
 
@@ -718,6 +756,9 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000040) != 0)) {
         rateDefinitionIds_.makeImmutable();
         result.rateDefinitionIds_ = rateDefinitionIds_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.status_ = status_;
       }
     }
 
@@ -795,6 +836,9 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       }
+      if (other.status_ != 0) {
+        setStatusValue(other.getStatusValue());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -867,6 +911,11 @@ private static final long serialVersionUID = 0L;
               rateDefinitionIds_.add(s);
               break;
             } // case 58
+            case 64: {
+              status_ = input.readEnum();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 64
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1894,6 +1943,79 @@ private static final long serialVersionUID = 0L;
       ensureRateDefinitionIdsIsMutable();
       rateDefinitionIds_.add(value);
       bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+
+    private int status_ = 0;
+    /**
+     * <pre>
+     * the billing plan status
+     * </pre>
+     *
+     * <code>.services.billing.entities.v1alpha1.BillingPlanStatus status = 8 [json_name = "status"];</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    @java.lang.Override public int getStatusValue() {
+      return status_;
+    }
+    /**
+     * <pre>
+     * the billing plan status
+     * </pre>
+     *
+     * <code>.services.billing.entities.v1alpha1.BillingPlanStatus status = 8 [json_name = "status"];</code>
+     * @param value The enum numeric value on the wire for status to set.
+     * @return This builder for chaining.
+     */
+    public Builder setStatusValue(int value) {
+      status_ = value;
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the billing plan status
+     * </pre>
+     *
+     * <code>.services.billing.entities.v1alpha1.BillingPlanStatus status = 8 [json_name = "status"];</code>
+     * @return The status.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlanStatus getStatus() {
+      com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlanStatus result = com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlanStatus.forNumber(status_);
+      return result == null ? com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlanStatus.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * the billing plan status
+     * </pre>
+     *
+     * <code>.services.billing.entities.v1alpha1.BillingPlanStatus status = 8 [json_name = "status"];</code>
+     * @param value The status to set.
+     * @return This builder for chaining.
+     */
+    public Builder setStatus(com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlanStatus value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000080;
+      status_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the billing plan status
+     * </pre>
+     *
+     * <code>.services.billing.entities.v1alpha1.BillingPlanStatus status = 8 [json_name = "status"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearStatus() {
+      bitField0_ = (bitField0_ & ~0x00000080);
+      status_ = 0;
       onChanged();
       return this;
     }
