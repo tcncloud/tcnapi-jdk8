@@ -34,12 +34,12 @@ public enum RoomType
   ROOM_TYPE_SYSTEM(2),
   /**
    * <pre>
-   * Newsroom channel - used to publish news articles
+   * Global system channel - used for global messages
    * </pre>
    *
-   * <code>ROOM_TYPE_NEWS = 3;</code>
+   * <code>ROOM_TYPE_GLOBAL_SYSTEM = 3;</code>
    */
-  ROOM_TYPE_NEWS(3),
+  ROOM_TYPE_GLOBAL_SYSTEM(3),
   UNRECOGNIZED(-1),
   ;
 
@@ -69,12 +69,12 @@ public enum RoomType
   public static final int ROOM_TYPE_SYSTEM_VALUE = 2;
   /**
    * <pre>
-   * Newsroom channel - used to publish news articles
+   * Global system channel - used for global messages
    * </pre>
    *
-   * <code>ROOM_TYPE_NEWS = 3;</code>
+   * <code>ROOM_TYPE_GLOBAL_SYSTEM = 3;</code>
    */
-  public static final int ROOM_TYPE_NEWS_VALUE = 3;
+  public static final int ROOM_TYPE_GLOBAL_SYSTEM_VALUE = 3;
 
 
   public final int getNumber() {
@@ -104,7 +104,7 @@ public enum RoomType
       case 0: return ROOM_TYPE_DIRECT;
       case 1: return ROOM_TYPE_MULTI;
       case 2: return ROOM_TYPE_SYSTEM;
-      case 3: return ROOM_TYPE_NEWS;
+      case 3: return ROOM_TYPE_GLOBAL_SYSTEM;
       default: return null;
     }
   }

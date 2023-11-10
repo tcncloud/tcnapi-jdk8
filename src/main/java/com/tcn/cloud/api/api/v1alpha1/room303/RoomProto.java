@@ -84,11 +84,6 @@ public final class RoomProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_room303_GetGlobalConfigResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_room303_CreateNewsRoomRequest_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_room303_CreateNewsRoomRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -139,12 +134,11 @@ public final class RoomProto {
       "nfigR\006config\022=\n\014date_created\030\003 \001(\0132\032.goo" +
       "gle.protobuf.TimestampR\013dateCreated\022;\n\013l" +
       "ast_edited\030\004 \001(\0132\032.google.protobuf.Times" +
-      "tampR\nlastEdited\"\027\n\025CreateNewsRoomReques" +
-      "tB\245\001\n&com.tcn.cloud.api.api.v1alpha1.roo" +
-      "m303B\tRoomProtoP\001\242\002\003AVR\252\002\024Api.V1alpha1.R" +
-      "oom303\312\002\024Api\\V1alpha1\\Room303\342\002 Api\\V1al" +
-      "pha1\\Room303\\GPBMetadata\352\002\026Api::V1alpha1" +
-      "::Room303b\006proto3"
+      "tampR\nlastEditedB\245\001\n&com.tcn.cloud.api.a" +
+      "pi.v1alpha1.room303B\tRoomProtoP\001\242\002\003AVR\252\002" +
+      "\024Api.V1alpha1.Room303\312\002\024Api\\V1alpha1\\Roo" +
+      "m303\342\002 Api\\V1alpha1\\Room303\\GPBMetadata\352" +
+      "\002\026Api::V1alpha1::Room303b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -238,12 +232,6 @@ public final class RoomProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_room303_GetGlobalConfigResponse_descriptor,
         new java.lang.String[] { "EditedBy", "Config", "DateCreated", "LastEdited", });
-    internal_static_api_v1alpha1_room303_CreateNewsRoomRequest_descriptor =
-      getDescriptor().getMessageTypes().get(14);
-    internal_static_api_v1alpha1_room303_CreateNewsRoomRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_room303_CreateNewsRoomRequest_descriptor,
-        new java.lang.String[] { });
     com.tcn.cloud.api.api.commons.Room303Proto.getDescriptor();
     com.tcn.cloud.api.api.commons.UserProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
