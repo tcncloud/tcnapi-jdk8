@@ -24,7 +24,7 @@ public final class EventTypesProto {
   static {
     java.lang.String[] descriptorData = {
       "\n#api/commons/audit/event_types.proto\022\021a" +
-      "pi.commons.audit*\255\035\n\tEventType\022\025\n\021DUMMY_" +
+      "pi.commons.audit*\344 \n\tEventType\022\025\n\021DUMMY_" +
       "APPLICATION\020\000\022\035\n\031DUMMY_APPLICATION_STORA" +
       "GE\020\001\022\035\n\031DUMMY_APPLICATION_COMPUTE\020\002\022\023\n\017V" +
       "OICE_ANALYTICS\020d\022#\n\037VOICE_ANALYTICS_FLAG" +
@@ -118,11 +118,22 @@ public final class EventTypesProto {
       "EVENT\020\274\005\022&\n!COMPLIANCE_RND_QUERY_CACHED_" +
       "EVENT\020\275\005\0225\n0AGENT_TRAINING_CREATE_LEARNI" +
       "NG_OPPORTUNITY_EVENT\020\240\006\022\037\n\032LMS_PIPELINE_" +
-      "FAILURE_EVENT\020\204\007B\234\001\n#com.tcn.cloud.api.a" +
-      "pi.commons.auditB\017EventTypesProtoP\001\242\002\003AC" +
-      "A\252\002\021Api.Commons.Audit\312\002\021Api\\Commons\\Audi" +
-      "t\342\002\035Api\\Commons\\Audit\\GPBMetadata\352\002\023Api:" +
-      ":Commons::Auditb\006proto3"
+      "FAILURE_EVENT\020\204\007\022+\n&EVENT_TYPE_BILLING_C" +
+      "REATE_BILLING_PLAN\020\350\007\022&\n!EVENT_TYPE_BILL" +
+      "ING_CREATE_INVOICE\020\351\007\022.\n)EVENT_TYPE_BILL" +
+      "ING_CREATE_RATE_DEFINITION\020\352\007\022+\n&EVENT_T" +
+      "YPE_BILLING_DELETE_BILLING_PLAN\020\353\007\022&\n!EV" +
+      "ENT_TYPE_BILLING_DELETE_INVOICE\020\354\007\022.\n)EV" +
+      "ENT_TYPE_BILLING_DELETE_RATE_DEFINITION\020" +
+      "\355\007\022&\n!EVENT_TYPE_BILLING_EXPORT_INVOICE\020" +
+      "\356\007\022+\n&EVENT_TYPE_BILLING_UPDATE_BILLING_" +
+      "PLAN\020\357\007\022&\n!EVENT_TYPE_BILLING_UPDATE_INV" +
+      "OICE\020\360\007\022.\n)EVENT_TYPE_BILLING_UPDATE_RAT" +
+      "E_DEFINITION\020\361\007B\234\001\n#com.tcn.cloud.api.ap" +
+      "i.commons.auditB\017EventTypesProtoP\001\242\002\003ACA" +
+      "\252\002\021Api.Commons.Audit\312\002\021Api\\Commons\\Audit" +
+      "\342\002\035Api\\Commons\\Audit\\GPBMetadata\352\002\023Api::" +
+      "Commons::Auditb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
