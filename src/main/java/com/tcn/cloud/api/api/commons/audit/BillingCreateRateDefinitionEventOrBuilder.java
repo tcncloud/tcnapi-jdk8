@@ -8,19 +8,16 @@ public interface BillingCreateRateDefinitionEventOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.services.billing.entities.v1alpha1.RateDefinition rate_definition = 1 [json_name = "rateDefinition"];</code>
-   * @return Whether the rateDefinition field is set.
+   * <code>string rate_definition_id = 1 [json_name = "rateDefinitionId"];</code>
+   * @return The rateDefinitionId.
    */
-  boolean hasRateDefinition();
+  java.lang.String getRateDefinitionId();
   /**
-   * <code>.services.billing.entities.v1alpha1.RateDefinition rate_definition = 1 [json_name = "rateDefinition"];</code>
-   * @return The rateDefinition.
+   * <code>string rate_definition_id = 1 [json_name = "rateDefinitionId"];</code>
+   * @return The bytes for rateDefinitionId.
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition getRateDefinition();
-  /**
-   * <code>.services.billing.entities.v1alpha1.RateDefinition rate_definition = 1 [json_name = "rateDefinition"];</code>
-   */
-  com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionOrBuilder getRateDefinitionOrBuilder();
+  com.google.protobuf.ByteString
+      getRateDefinitionIdBytes();
 
   /**
    * <code>string user_id = 2 [json_name = "userId"];</code>

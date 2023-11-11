@@ -8,19 +8,16 @@ public interface BillingDeleteRateDefinitionEventOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.google.protobuf.StringValue rate_definition_id = 1 [json_name = "rateDefinitionId"];</code>
-   * @return Whether the rateDefinitionId field is set.
-   */
-  boolean hasRateDefinitionId();
-  /**
-   * <code>.google.protobuf.StringValue rate_definition_id = 1 [json_name = "rateDefinitionId"];</code>
+   * <code>string rate_definition_id = 1 [json_name = "rateDefinitionId"];</code>
    * @return The rateDefinitionId.
    */
-  com.google.protobuf.StringValue getRateDefinitionId();
+  java.lang.String getRateDefinitionId();
   /**
-   * <code>.google.protobuf.StringValue rate_definition_id = 1 [json_name = "rateDefinitionId"];</code>
+   * <code>string rate_definition_id = 1 [json_name = "rateDefinitionId"];</code>
+   * @return The bytes for rateDefinitionId.
    */
-  com.google.protobuf.StringValueOrBuilder getRateDefinitionIdOrBuilder();
+  com.google.protobuf.ByteString
+      getRateDefinitionIdBytes();
 
   /**
    * <code>string user_id = 2 [json_name = "userId"];</code>

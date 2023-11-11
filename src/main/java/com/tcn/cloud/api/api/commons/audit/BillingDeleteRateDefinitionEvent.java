@@ -20,6 +20,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private BillingDeleteRateDefinitionEvent() {
+    rateDefinitionId_ = "";
     userId_ = "";
   }
 
@@ -44,29 +45,42 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RATE_DEFINITION_ID_FIELD_NUMBER = 1;
-  private com.google.protobuf.StringValue rateDefinitionId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object rateDefinitionId_ = "";
   /**
-   * <code>.google.protobuf.StringValue rate_definition_id = 1 [json_name = "rateDefinitionId"];</code>
-   * @return Whether the rateDefinitionId field is set.
-   */
-  @java.lang.Override
-  public boolean hasRateDefinitionId() {
-    return rateDefinitionId_ != null;
-  }
-  /**
-   * <code>.google.protobuf.StringValue rate_definition_id = 1 [json_name = "rateDefinitionId"];</code>
+   * <code>string rate_definition_id = 1 [json_name = "rateDefinitionId"];</code>
    * @return The rateDefinitionId.
    */
   @java.lang.Override
-  public com.google.protobuf.StringValue getRateDefinitionId() {
-    return rateDefinitionId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : rateDefinitionId_;
+  public java.lang.String getRateDefinitionId() {
+    java.lang.Object ref = rateDefinitionId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      rateDefinitionId_ = s;
+      return s;
+    }
   }
   /**
-   * <code>.google.protobuf.StringValue rate_definition_id = 1 [json_name = "rateDefinitionId"];</code>
+   * <code>string rate_definition_id = 1 [json_name = "rateDefinitionId"];</code>
+   * @return The bytes for rateDefinitionId.
    */
   @java.lang.Override
-  public com.google.protobuf.StringValueOrBuilder getRateDefinitionIdOrBuilder() {
-    return rateDefinitionId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : rateDefinitionId_;
+  public com.google.protobuf.ByteString
+      getRateDefinitionIdBytes() {
+    java.lang.Object ref = rateDefinitionId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      rateDefinitionId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
   }
 
   public static final int USER_ID_FIELD_NUMBER = 2;
@@ -122,8 +136,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (rateDefinitionId_ != null) {
-      output.writeMessage(1, getRateDefinitionId());
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rateDefinitionId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, rateDefinitionId_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, userId_);
@@ -137,9 +151,8 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (rateDefinitionId_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, getRateDefinitionId());
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rateDefinitionId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, rateDefinitionId_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, userId_);
@@ -159,11 +172,8 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.commons.audit.BillingDeleteRateDefinitionEvent other = (com.tcn.cloud.api.api.commons.audit.BillingDeleteRateDefinitionEvent) obj;
 
-    if (hasRateDefinitionId() != other.hasRateDefinitionId()) return false;
-    if (hasRateDefinitionId()) {
-      if (!getRateDefinitionId()
-          .equals(other.getRateDefinitionId())) return false;
-    }
+    if (!getRateDefinitionId()
+        .equals(other.getRateDefinitionId())) return false;
     if (!getUserId()
         .equals(other.getUserId())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -177,10 +187,8 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (hasRateDefinitionId()) {
-      hash = (37 * hash) + RATE_DEFINITION_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getRateDefinitionId().hashCode();
-    }
+    hash = (37 * hash) + RATE_DEFINITION_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getRateDefinitionId().hashCode();
     hash = (37 * hash) + USER_ID_FIELD_NUMBER;
     hash = (53 * hash) + getUserId().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
@@ -318,11 +326,7 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      rateDefinitionId_ = null;
-      if (rateDefinitionIdBuilder_ != null) {
-        rateDefinitionIdBuilder_.dispose();
-        rateDefinitionIdBuilder_ = null;
-      }
+      rateDefinitionId_ = "";
       userId_ = "";
       return this;
     }
@@ -358,9 +362,7 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.tcn.cloud.api.api.commons.audit.BillingDeleteRateDefinitionEvent result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.rateDefinitionId_ = rateDefinitionIdBuilder_ == null
-            ? rateDefinitionId_
-            : rateDefinitionIdBuilder_.build();
+        result.rateDefinitionId_ = rateDefinitionId_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.userId_ = userId_;
@@ -411,8 +413,10 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.commons.audit.BillingDeleteRateDefinitionEvent other) {
       if (other == com.tcn.cloud.api.api.commons.audit.BillingDeleteRateDefinitionEvent.getDefaultInstance()) return this;
-      if (other.hasRateDefinitionId()) {
-        mergeRateDefinitionId(other.getRateDefinitionId());
+      if (!other.getRateDefinitionId().isEmpty()) {
+        rateDefinitionId_ = other.rateDefinitionId_;
+        bitField0_ |= 0x00000001;
+        onChanged();
       }
       if (!other.getUserId().isEmpty()) {
         userId_ = other.userId_;
@@ -446,9 +450,7 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              input.readMessage(
-                  getRateDefinitionIdFieldBuilder().getBuilder(),
-                  extensionRegistry);
+              rateDefinitionId_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000001;
               break;
             } // case 10
@@ -474,123 +476,76 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private com.google.protobuf.StringValue rateDefinitionId_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> rateDefinitionIdBuilder_;
+    private java.lang.Object rateDefinitionId_ = "";
     /**
-     * <code>.google.protobuf.StringValue rate_definition_id = 1 [json_name = "rateDefinitionId"];</code>
-     * @return Whether the rateDefinitionId field is set.
-     */
-    public boolean hasRateDefinitionId() {
-      return ((bitField0_ & 0x00000001) != 0);
-    }
-    /**
-     * <code>.google.protobuf.StringValue rate_definition_id = 1 [json_name = "rateDefinitionId"];</code>
+     * <code>string rate_definition_id = 1 [json_name = "rateDefinitionId"];</code>
      * @return The rateDefinitionId.
      */
-    public com.google.protobuf.StringValue getRateDefinitionId() {
-      if (rateDefinitionIdBuilder_ == null) {
-        return rateDefinitionId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : rateDefinitionId_;
+    public java.lang.String getRateDefinitionId() {
+      java.lang.Object ref = rateDefinitionId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        rateDefinitionId_ = s;
+        return s;
       } else {
-        return rateDefinitionIdBuilder_.getMessage();
+        return (java.lang.String) ref;
       }
     }
     /**
-     * <code>.google.protobuf.StringValue rate_definition_id = 1 [json_name = "rateDefinitionId"];</code>
+     * <code>string rate_definition_id = 1 [json_name = "rateDefinitionId"];</code>
+     * @return The bytes for rateDefinitionId.
      */
-    public Builder setRateDefinitionId(com.google.protobuf.StringValue value) {
-      if (rateDefinitionIdBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        rateDefinitionId_ = value;
+    public com.google.protobuf.ByteString
+        getRateDefinitionIdBytes() {
+      java.lang.Object ref = rateDefinitionId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        rateDefinitionId_ = b;
+        return b;
       } else {
-        rateDefinitionIdBuilder_.setMessage(value);
+        return (com.google.protobuf.ByteString) ref;
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
     }
     /**
-     * <code>.google.protobuf.StringValue rate_definition_id = 1 [json_name = "rateDefinitionId"];</code>
+     * <code>string rate_definition_id = 1 [json_name = "rateDefinitionId"];</code>
+     * @param value The rateDefinitionId to set.
+     * @return This builder for chaining.
      */
     public Builder setRateDefinitionId(
-        com.google.protobuf.StringValue.Builder builderForValue) {
-      if (rateDefinitionIdBuilder_ == null) {
-        rateDefinitionId_ = builderForValue.build();
-      } else {
-        rateDefinitionIdBuilder_.setMessage(builderForValue.build());
-      }
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      rateDefinitionId_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>.google.protobuf.StringValue rate_definition_id = 1 [json_name = "rateDefinitionId"];</code>
-     */
-    public Builder mergeRateDefinitionId(com.google.protobuf.StringValue value) {
-      if (rateDefinitionIdBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0) &&
-          rateDefinitionId_ != null &&
-          rateDefinitionId_ != com.google.protobuf.StringValue.getDefaultInstance()) {
-          getRateDefinitionIdBuilder().mergeFrom(value);
-        } else {
-          rateDefinitionId_ = value;
-        }
-      } else {
-        rateDefinitionIdBuilder_.mergeFrom(value);
-      }
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.google.protobuf.StringValue rate_definition_id = 1 [json_name = "rateDefinitionId"];</code>
+     * <code>string rate_definition_id = 1 [json_name = "rateDefinitionId"];</code>
+     * @return This builder for chaining.
      */
     public Builder clearRateDefinitionId() {
+      rateDefinitionId_ = getDefaultInstance().getRateDefinitionId();
       bitField0_ = (bitField0_ & ~0x00000001);
-      rateDefinitionId_ = null;
-      if (rateDefinitionIdBuilder_ != null) {
-        rateDefinitionIdBuilder_.dispose();
-        rateDefinitionIdBuilder_ = null;
-      }
       onChanged();
       return this;
     }
     /**
-     * <code>.google.protobuf.StringValue rate_definition_id = 1 [json_name = "rateDefinitionId"];</code>
+     * <code>string rate_definition_id = 1 [json_name = "rateDefinitionId"];</code>
+     * @param value The bytes for rateDefinitionId to set.
+     * @return This builder for chaining.
      */
-    public com.google.protobuf.StringValue.Builder getRateDefinitionIdBuilder() {
+    public Builder setRateDefinitionIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      rateDefinitionId_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
-      return getRateDefinitionIdFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.google.protobuf.StringValue rate_definition_id = 1 [json_name = "rateDefinitionId"];</code>
-     */
-    public com.google.protobuf.StringValueOrBuilder getRateDefinitionIdOrBuilder() {
-      if (rateDefinitionIdBuilder_ != null) {
-        return rateDefinitionIdBuilder_.getMessageOrBuilder();
-      } else {
-        return rateDefinitionId_ == null ?
-            com.google.protobuf.StringValue.getDefaultInstance() : rateDefinitionId_;
-      }
-    }
-    /**
-     * <code>.google.protobuf.StringValue rate_definition_id = 1 [json_name = "rateDefinitionId"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
-        getRateDefinitionIdFieldBuilder() {
-      if (rateDefinitionIdBuilder_ == null) {
-        rateDefinitionIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
-                getRateDefinitionId(),
-                getParentForChildren(),
-                isClean());
-        rateDefinitionId_ = null;
-      }
-      return rateDefinitionIdBuilder_;
+      return this;
     }
 
     private java.lang.Object userId_ = "";

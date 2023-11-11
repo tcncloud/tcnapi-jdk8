@@ -20,6 +20,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private BillingUpdateRateDefinitionEvent() {
+    rateDefinitionId_ = "";
     userId_ = "";
   }
 
@@ -43,30 +44,43 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.audit.BillingUpdateRateDefinitionEvent.class, com.tcn.cloud.api.api.commons.audit.BillingUpdateRateDefinitionEvent.Builder.class);
   }
 
-  public static final int RATE_DEFINITION_FIELD_NUMBER = 1;
-  private com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition rateDefinition_;
+  public static final int RATE_DEFINITION_ID_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object rateDefinitionId_ = "";
   /**
-   * <code>.services.billing.entities.v1alpha1.RateDefinition rate_definition = 1 [json_name = "rateDefinition"];</code>
-   * @return Whether the rateDefinition field is set.
+   * <code>string rate_definition_id = 1 [json_name = "rateDefinitionId"];</code>
+   * @return The rateDefinitionId.
    */
   @java.lang.Override
-  public boolean hasRateDefinition() {
-    return rateDefinition_ != null;
+  public java.lang.String getRateDefinitionId() {
+    java.lang.Object ref = rateDefinitionId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      rateDefinitionId_ = s;
+      return s;
+    }
   }
   /**
-   * <code>.services.billing.entities.v1alpha1.RateDefinition rate_definition = 1 [json_name = "rateDefinition"];</code>
-   * @return The rateDefinition.
+   * <code>string rate_definition_id = 1 [json_name = "rateDefinitionId"];</code>
+   * @return The bytes for rateDefinitionId.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition getRateDefinition() {
-    return rateDefinition_ == null ? com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition.getDefaultInstance() : rateDefinition_;
-  }
-  /**
-   * <code>.services.billing.entities.v1alpha1.RateDefinition rate_definition = 1 [json_name = "rateDefinition"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionOrBuilder getRateDefinitionOrBuilder() {
-    return rateDefinition_ == null ? com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition.getDefaultInstance() : rateDefinition_;
+  public com.google.protobuf.ByteString
+      getRateDefinitionIdBytes() {
+    java.lang.Object ref = rateDefinitionId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      rateDefinitionId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
   }
 
   public static final int USER_ID_FIELD_NUMBER = 2;
@@ -122,8 +136,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (rateDefinition_ != null) {
-      output.writeMessage(1, getRateDefinition());
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rateDefinitionId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, rateDefinitionId_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, userId_);
@@ -137,9 +151,8 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (rateDefinition_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, getRateDefinition());
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rateDefinitionId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, rateDefinitionId_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, userId_);
@@ -159,11 +172,8 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.commons.audit.BillingUpdateRateDefinitionEvent other = (com.tcn.cloud.api.api.commons.audit.BillingUpdateRateDefinitionEvent) obj;
 
-    if (hasRateDefinition() != other.hasRateDefinition()) return false;
-    if (hasRateDefinition()) {
-      if (!getRateDefinition()
-          .equals(other.getRateDefinition())) return false;
-    }
+    if (!getRateDefinitionId()
+        .equals(other.getRateDefinitionId())) return false;
     if (!getUserId()
         .equals(other.getUserId())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -177,10 +187,8 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (hasRateDefinition()) {
-      hash = (37 * hash) + RATE_DEFINITION_FIELD_NUMBER;
-      hash = (53 * hash) + getRateDefinition().hashCode();
-    }
+    hash = (37 * hash) + RATE_DEFINITION_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getRateDefinitionId().hashCode();
     hash = (37 * hash) + USER_ID_FIELD_NUMBER;
     hash = (53 * hash) + getUserId().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
@@ -318,11 +326,7 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      rateDefinition_ = null;
-      if (rateDefinitionBuilder_ != null) {
-        rateDefinitionBuilder_.dispose();
-        rateDefinitionBuilder_ = null;
-      }
+      rateDefinitionId_ = "";
       userId_ = "";
       return this;
     }
@@ -358,9 +362,7 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.tcn.cloud.api.api.commons.audit.BillingUpdateRateDefinitionEvent result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.rateDefinition_ = rateDefinitionBuilder_ == null
-            ? rateDefinition_
-            : rateDefinitionBuilder_.build();
+        result.rateDefinitionId_ = rateDefinitionId_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.userId_ = userId_;
@@ -411,8 +413,10 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.commons.audit.BillingUpdateRateDefinitionEvent other) {
       if (other == com.tcn.cloud.api.api.commons.audit.BillingUpdateRateDefinitionEvent.getDefaultInstance()) return this;
-      if (other.hasRateDefinition()) {
-        mergeRateDefinition(other.getRateDefinition());
+      if (!other.getRateDefinitionId().isEmpty()) {
+        rateDefinitionId_ = other.rateDefinitionId_;
+        bitField0_ |= 0x00000001;
+        onChanged();
       }
       if (!other.getUserId().isEmpty()) {
         userId_ = other.userId_;
@@ -446,9 +450,7 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              input.readMessage(
-                  getRateDefinitionFieldBuilder().getBuilder(),
-                  extensionRegistry);
+              rateDefinitionId_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000001;
               break;
             } // case 10
@@ -474,123 +476,76 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition rateDefinition_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition, com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionOrBuilder> rateDefinitionBuilder_;
+    private java.lang.Object rateDefinitionId_ = "";
     /**
-     * <code>.services.billing.entities.v1alpha1.RateDefinition rate_definition = 1 [json_name = "rateDefinition"];</code>
-     * @return Whether the rateDefinition field is set.
+     * <code>string rate_definition_id = 1 [json_name = "rateDefinitionId"];</code>
+     * @return The rateDefinitionId.
      */
-    public boolean hasRateDefinition() {
-      return ((bitField0_ & 0x00000001) != 0);
-    }
-    /**
-     * <code>.services.billing.entities.v1alpha1.RateDefinition rate_definition = 1 [json_name = "rateDefinition"];</code>
-     * @return The rateDefinition.
-     */
-    public com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition getRateDefinition() {
-      if (rateDefinitionBuilder_ == null) {
-        return rateDefinition_ == null ? com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition.getDefaultInstance() : rateDefinition_;
+    public java.lang.String getRateDefinitionId() {
+      java.lang.Object ref = rateDefinitionId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        rateDefinitionId_ = s;
+        return s;
       } else {
-        return rateDefinitionBuilder_.getMessage();
+        return (java.lang.String) ref;
       }
     }
     /**
-     * <code>.services.billing.entities.v1alpha1.RateDefinition rate_definition = 1 [json_name = "rateDefinition"];</code>
+     * <code>string rate_definition_id = 1 [json_name = "rateDefinitionId"];</code>
+     * @return The bytes for rateDefinitionId.
      */
-    public Builder setRateDefinition(com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition value) {
-      if (rateDefinitionBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        rateDefinition_ = value;
+    public com.google.protobuf.ByteString
+        getRateDefinitionIdBytes() {
+      java.lang.Object ref = rateDefinitionId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        rateDefinitionId_ = b;
+        return b;
       } else {
-        rateDefinitionBuilder_.setMessage(value);
+        return (com.google.protobuf.ByteString) ref;
       }
+    }
+    /**
+     * <code>string rate_definition_id = 1 [json_name = "rateDefinitionId"];</code>
+     * @param value The rateDefinitionId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setRateDefinitionId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      rateDefinitionId_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha1.RateDefinition rate_definition = 1 [json_name = "rateDefinition"];</code>
+     * <code>string rate_definition_id = 1 [json_name = "rateDefinitionId"];</code>
+     * @return This builder for chaining.
      */
-    public Builder setRateDefinition(
-        com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition.Builder builderForValue) {
-      if (rateDefinitionBuilder_ == null) {
-        rateDefinition_ = builderForValue.build();
-      } else {
-        rateDefinitionBuilder_.setMessage(builderForValue.build());
-      }
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.services.billing.entities.v1alpha1.RateDefinition rate_definition = 1 [json_name = "rateDefinition"];</code>
-     */
-    public Builder mergeRateDefinition(com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition value) {
-      if (rateDefinitionBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0) &&
-          rateDefinition_ != null &&
-          rateDefinition_ != com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition.getDefaultInstance()) {
-          getRateDefinitionBuilder().mergeFrom(value);
-        } else {
-          rateDefinition_ = value;
-        }
-      } else {
-        rateDefinitionBuilder_.mergeFrom(value);
-      }
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.services.billing.entities.v1alpha1.RateDefinition rate_definition = 1 [json_name = "rateDefinition"];</code>
-     */
-    public Builder clearRateDefinition() {
+    public Builder clearRateDefinitionId() {
+      rateDefinitionId_ = getDefaultInstance().getRateDefinitionId();
       bitField0_ = (bitField0_ & ~0x00000001);
-      rateDefinition_ = null;
-      if (rateDefinitionBuilder_ != null) {
-        rateDefinitionBuilder_.dispose();
-        rateDefinitionBuilder_ = null;
-      }
       onChanged();
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha1.RateDefinition rate_definition = 1 [json_name = "rateDefinition"];</code>
+     * <code>string rate_definition_id = 1 [json_name = "rateDefinitionId"];</code>
+     * @param value The bytes for rateDefinitionId to set.
+     * @return This builder for chaining.
      */
-    public com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition.Builder getRateDefinitionBuilder() {
+    public Builder setRateDefinitionIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      rateDefinitionId_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
-      return getRateDefinitionFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.services.billing.entities.v1alpha1.RateDefinition rate_definition = 1 [json_name = "rateDefinition"];</code>
-     */
-    public com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionOrBuilder getRateDefinitionOrBuilder() {
-      if (rateDefinitionBuilder_ != null) {
-        return rateDefinitionBuilder_.getMessageOrBuilder();
-      } else {
-        return rateDefinition_ == null ?
-            com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition.getDefaultInstance() : rateDefinition_;
-      }
-    }
-    /**
-     * <code>.services.billing.entities.v1alpha1.RateDefinition rate_definition = 1 [json_name = "rateDefinition"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition, com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionOrBuilder> 
-        getRateDefinitionFieldBuilder() {
-      if (rateDefinitionBuilder_ == null) {
-        rateDefinitionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition, com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinition.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha1.RateDefinitionOrBuilder>(
-                getRateDefinition(),
-                getParentForChildren(),
-                isClean());
-        rateDefinition_ = null;
-      }
-      return rateDefinitionBuilder_;
+      return this;
     }
 
     private java.lang.Object userId_ = "";

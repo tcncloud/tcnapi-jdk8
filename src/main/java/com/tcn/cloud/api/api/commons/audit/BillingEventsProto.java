@@ -85,38 +85,35 @@ public final class BillingEventsProto {
       "er_id\030\002 \001(\tR\006userId\"{\n\031BillingCreateInvo" +
       "iceEvent\022E\n\007invoice\030\001 \001(\0132+.services.bil" +
       "ling.entities.v1alpha1.InvoiceR\007invoice\022" +
-      "\027\n\007user_id\030\002 \001(\tR\006userId\"\230\001\n BillingCrea" +
-      "teRateDefinitionEvent\022[\n\017rate_definition" +
-      "\030\001 \001(\01322.services.billing.entities.v1alp" +
-      "ha1.RateDefinitionR\016rateDefinition\022\027\n\007us" +
-      "er_id\030\002 \001(\tR\006userId\"~\n\035BillingDeleteBill" +
-      "ingPlanEvent\022D\n\017billing_plan_id\030\001 \001(\0132\034." +
-      "google.protobuf.StringValueR\rbillingPlan" +
-      "Id\022\027\n\007user_id\030\002 \001(\tR\006userId\"q\n\031BillingDe" +
-      "leteInvoiceEvent\022;\n\ninvoice_id\030\001 \001(\0132\034.g" +
-      "oogle.protobuf.StringValueR\tinvoiceId\022\027\n" +
-      "\007user_id\030\002 \001(\tR\006userId\"\207\001\n BillingDelete" +
-      "RateDefinitionEvent\022J\n\022rate_definition_i" +
-      "d\030\001 \001(\0132\034.google.protobuf.StringValueR\020r" +
-      "ateDefinitionId\022\027\n\007user_id\030\002 \001(\tR\006userId" +
-      "\"{\n\031BillingExportInvoiceEvent\022E\n\007invoice" +
-      "\030\001 \001(\0132+.services.billing.entities.v1alp" +
-      "ha1.InvoiceR\007invoice\022\027\n\007user_id\030\002 \001(\tR\006u" +
-      "serId\"\214\001\n\035BillingUpdateBillingPlanEvent\022" +
-      "R\n\014billing_plan\030\001 \001(\0132/.services.billing" +
-      ".entities.v1alpha1.BillingPlanR\013billingP" +
-      "lan\022\027\n\007user_id\030\002 \001(\tR\006userId\"{\n\031BillingU" +
-      "pdateInvoiceEvent\022E\n\007invoice\030\001 \001(\0132+.ser" +
-      "vices.billing.entities.v1alpha1.InvoiceR" +
-      "\007invoice\022\027\n\007user_id\030\002 \001(\tR\006userId\"\230\001\n Bi" +
-      "llingUpdateRateDefinitionEvent\022[\n\017rate_d" +
-      "efinition\030\001 \001(\01322.services.billing.entit" +
-      "ies.v1alpha1.RateDefinitionR\016rateDefinit" +
-      "ion\022\027\n\007user_id\030\002 \001(\tR\006userIdB\237\001\n#com.tcn" +
-      ".cloud.api.api.commons.auditB\022BillingEve" +
-      "ntsProtoP\001\242\002\003ACA\252\002\021Api.Commons.Audit\312\002\021A" +
-      "pi\\Commons\\Audit\342\002\035Api\\Commons\\Audit\\GPB" +
-      "Metadata\352\002\023Api::Commons::Auditb\006proto3"
+      "\027\n\007user_id\030\002 \001(\tR\006userId\"i\n BillingCreat" +
+      "eRateDefinitionEvent\022,\n\022rate_definition_" +
+      "id\030\001 \001(\tR\020rateDefinitionId\022\027\n\007user_id\030\002 " +
+      "\001(\tR\006userId\"~\n\035BillingDeleteBillingPlanE" +
+      "vent\022D\n\017billing_plan_id\030\001 \001(\0132\034.google.p" +
+      "rotobuf.StringValueR\rbillingPlanId\022\027\n\007us" +
+      "er_id\030\002 \001(\tR\006userId\"q\n\031BillingDeleteInvo" +
+      "iceEvent\022;\n\ninvoice_id\030\001 \001(\0132\034.google.pr" +
+      "otobuf.StringValueR\tinvoiceId\022\027\n\007user_id" +
+      "\030\002 \001(\tR\006userId\"i\n BillingDeleteRateDefin" +
+      "itionEvent\022,\n\022rate_definition_id\030\001 \001(\tR\020" +
+      "rateDefinitionId\022\027\n\007user_id\030\002 \001(\tR\006userI" +
+      "d\"{\n\031BillingExportInvoiceEvent\022E\n\007invoic" +
+      "e\030\001 \001(\0132+.services.billing.entities.v1al" +
+      "pha1.InvoiceR\007invoice\022\027\n\007user_id\030\002 \001(\tR\006" +
+      "userId\"\214\001\n\035BillingUpdateBillingPlanEvent" +
+      "\022R\n\014billing_plan\030\001 \001(\0132/.services.billin" +
+      "g.entities.v1alpha1.BillingPlanR\013billing" +
+      "Plan\022\027\n\007user_id\030\002 \001(\tR\006userId\"{\n\031Billing" +
+      "UpdateInvoiceEvent\022E\n\007invoice\030\001 \001(\0132+.se" +
+      "rvices.billing.entities.v1alpha1.Invoice" +
+      "R\007invoice\022\027\n\007user_id\030\002 \001(\tR\006userId\"i\n Bi" +
+      "llingUpdateRateDefinitionEvent\022,\n\022rate_d" +
+      "efinition_id\030\001 \001(\tR\020rateDefinitionId\022\027\n\007" +
+      "user_id\030\002 \001(\tR\006userIdB\237\001\n#com.tcn.cloud." +
+      "api.api.commons.auditB\022BillingEventsProt" +
+      "oP\001\242\002\003ACA\252\002\021Api.Commons.Audit\312\002\021Api\\Comm" +
+      "ons\\Audit\342\002\035Api\\Commons\\Audit\\GPBMetadat" +
+      "a\352\002\023Api::Commons::Auditb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -143,7 +140,7 @@ public final class BillingEventsProto {
     internal_static_api_commons_audit_BillingCreateRateDefinitionEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_audit_BillingCreateRateDefinitionEvent_descriptor,
-        new java.lang.String[] { "RateDefinition", "UserId", });
+        new java.lang.String[] { "RateDefinitionId", "UserId", });
     internal_static_api_commons_audit_BillingDeleteBillingPlanEvent_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_api_commons_audit_BillingDeleteBillingPlanEvent_fieldAccessorTable = new
@@ -185,7 +182,7 @@ public final class BillingEventsProto {
     internal_static_api_commons_audit_BillingUpdateRateDefinitionEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_audit_BillingUpdateRateDefinitionEvent_descriptor,
-        new java.lang.String[] { "RateDefinition", "UserId", });
+        new java.lang.String[] { "RateDefinitionId", "UserId", });
     com.google.protobuf.WrappersProto.getDescriptor();
     com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceProto.getDescriptor();
     com.tcn.cloud.api.services.billing.entities.v1alpha1.PlanProto.getDescriptor();
