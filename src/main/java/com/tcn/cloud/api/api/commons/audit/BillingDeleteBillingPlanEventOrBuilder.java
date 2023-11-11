@@ -8,19 +8,16 @@ public interface BillingDeleteBillingPlanEventOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.google.protobuf.StringValue billing_plan_id = 1 [json_name = "billingPlanId"];</code>
-   * @return Whether the billingPlanId field is set.
+   * <code>string billing_plan = 1 [json_name = "billingPlan"];</code>
+   * @return The billingPlan.
    */
-  boolean hasBillingPlanId();
+  java.lang.String getBillingPlan();
   /**
-   * <code>.google.protobuf.StringValue billing_plan_id = 1 [json_name = "billingPlanId"];</code>
-   * @return The billingPlanId.
+   * <code>string billing_plan = 1 [json_name = "billingPlan"];</code>
+   * @return The bytes for billingPlan.
    */
-  com.google.protobuf.StringValue getBillingPlanId();
-  /**
-   * <code>.google.protobuf.StringValue billing_plan_id = 1 [json_name = "billingPlanId"];</code>
-   */
-  com.google.protobuf.StringValueOrBuilder getBillingPlanIdOrBuilder();
+  com.google.protobuf.ByteString
+      getBillingPlanBytes();
 
   /**
    * <code>string user_id = 2 [json_name = "userId"];</code>

@@ -8,19 +8,16 @@ public interface BillingCreateBillingPlanEventOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.services.billing.entities.v1alpha1.BillingPlan billing_plan = 1 [json_name = "billingPlan"];</code>
-   * @return Whether the billingPlan field is set.
-   */
-  boolean hasBillingPlan();
-  /**
-   * <code>.services.billing.entities.v1alpha1.BillingPlan billing_plan = 1 [json_name = "billingPlan"];</code>
+   * <code>string billing_plan = 1 [json_name = "billingPlan"];</code>
    * @return The billingPlan.
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlan getBillingPlan();
+  java.lang.String getBillingPlan();
   /**
-   * <code>.services.billing.entities.v1alpha1.BillingPlan billing_plan = 1 [json_name = "billingPlan"];</code>
+   * <code>string billing_plan = 1 [json_name = "billingPlan"];</code>
+   * @return The bytes for billingPlan.
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlanOrBuilder getBillingPlanOrBuilder();
+  com.google.protobuf.ByteString
+      getBillingPlanBytes();
 
   /**
    * <code>string user_id = 2 [json_name = "userId"];</code>

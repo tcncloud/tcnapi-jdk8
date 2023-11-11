@@ -8,19 +8,16 @@ public interface BillingDeleteInvoiceEventOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.google.protobuf.StringValue invoice_id = 1 [json_name = "invoiceId"];</code>
-   * @return Whether the invoiceId field is set.
+   * <code>string invoice = 1 [json_name = "invoice"];</code>
+   * @return The invoice.
    */
-  boolean hasInvoiceId();
+  java.lang.String getInvoice();
   /**
-   * <code>.google.protobuf.StringValue invoice_id = 1 [json_name = "invoiceId"];</code>
-   * @return The invoiceId.
+   * <code>string invoice = 1 [json_name = "invoice"];</code>
+   * @return The bytes for invoice.
    */
-  com.google.protobuf.StringValue getInvoiceId();
-  /**
-   * <code>.google.protobuf.StringValue invoice_id = 1 [json_name = "invoiceId"];</code>
-   */
-  com.google.protobuf.StringValueOrBuilder getInvoiceIdOrBuilder();
+  com.google.protobuf.ByteString
+      getInvoiceBytes();
 
   /**
    * <code>string user_id = 2 [json_name = "userId"];</code>

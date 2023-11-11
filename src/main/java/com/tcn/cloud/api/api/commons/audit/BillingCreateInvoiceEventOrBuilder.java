@@ -8,19 +8,16 @@ public interface BillingCreateInvoiceEventOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.services.billing.entities.v1alpha1.Invoice invoice = 1 [json_name = "invoice"];</code>
-   * @return Whether the invoice field is set.
-   */
-  boolean hasInvoice();
-  /**
-   * <code>.services.billing.entities.v1alpha1.Invoice invoice = 1 [json_name = "invoice"];</code>
+   * <code>string invoice = 1 [json_name = "invoice"];</code>
    * @return The invoice.
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha1.Invoice getInvoice();
+  java.lang.String getInvoice();
   /**
-   * <code>.services.billing.entities.v1alpha1.Invoice invoice = 1 [json_name = "invoice"];</code>
+   * <code>string invoice = 1 [json_name = "invoice"];</code>
+   * @return The bytes for invoice.
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha1.InvoiceOrBuilder getInvoiceOrBuilder();
+  com.google.protobuf.ByteString
+      getInvoiceBytes();
 
   /**
    * <code>string user_id = 2 [json_name = "userId"];</code>
