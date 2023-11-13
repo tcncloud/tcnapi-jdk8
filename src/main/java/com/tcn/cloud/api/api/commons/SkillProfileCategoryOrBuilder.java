@@ -12,7 +12,7 @@ public interface SkillProfileCategoryOrBuilder extends
    * ID of either a skill profile or a skill profile group determined by &#64;skill_profile_category_type.
    * </pre>
    *
-   * <code>int64 skill_profile_category_sid = 1 [json_name = "skillProfileCategorySid", jstype = JS_STRING];</code>
+   * <code>int64 skill_profile_category_sid = 1 [json_name = "skillProfileCategorySid"];</code>
    * @return The skillProfileCategorySid.
    */
   long getSkillProfileCategorySid();
