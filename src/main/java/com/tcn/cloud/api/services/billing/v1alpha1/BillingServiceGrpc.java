@@ -387,6 +387,68 @@ public final class BillingServiceGrpc {
     return getDeleteRateDefinitionMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.DuplicateBillingPlanRequest,
+      com.tcn.cloud.api.services.billing.v1alpha1.DuplicateBillingPlanResponse> getDuplicateBillingPlanMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DuplicateBillingPlan",
+      requestType = com.tcn.cloud.api.services.billing.v1alpha1.DuplicateBillingPlanRequest.class,
+      responseType = com.tcn.cloud.api.services.billing.v1alpha1.DuplicateBillingPlanResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.DuplicateBillingPlanRequest,
+      com.tcn.cloud.api.services.billing.v1alpha1.DuplicateBillingPlanResponse> getDuplicateBillingPlanMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.DuplicateBillingPlanRequest, com.tcn.cloud.api.services.billing.v1alpha1.DuplicateBillingPlanResponse> getDuplicateBillingPlanMethod;
+    if ((getDuplicateBillingPlanMethod = BillingServiceGrpc.getDuplicateBillingPlanMethod) == null) {
+      synchronized (BillingServiceGrpc.class) {
+        if ((getDuplicateBillingPlanMethod = BillingServiceGrpc.getDuplicateBillingPlanMethod) == null) {
+          BillingServiceGrpc.getDuplicateBillingPlanMethod = getDuplicateBillingPlanMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.services.billing.v1alpha1.DuplicateBillingPlanRequest, com.tcn.cloud.api.services.billing.v1alpha1.DuplicateBillingPlanResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DuplicateBillingPlan"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.billing.v1alpha1.DuplicateBillingPlanRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.billing.v1alpha1.DuplicateBillingPlanResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new BillingServiceMethodDescriptorSupplier("DuplicateBillingPlan"))
+              .build();
+        }
+      }
+    }
+    return getDuplicateBillingPlanMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.DuplicateDefaultBillingPlanRequest,
+      com.tcn.cloud.api.services.billing.v1alpha1.DuplicateDefaultBillingPlanResponse> getDuplicateDefaultBillingPlanMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DuplicateDefaultBillingPlan",
+      requestType = com.tcn.cloud.api.services.billing.v1alpha1.DuplicateDefaultBillingPlanRequest.class,
+      responseType = com.tcn.cloud.api.services.billing.v1alpha1.DuplicateDefaultBillingPlanResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.DuplicateDefaultBillingPlanRequest,
+      com.tcn.cloud.api.services.billing.v1alpha1.DuplicateDefaultBillingPlanResponse> getDuplicateDefaultBillingPlanMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.DuplicateDefaultBillingPlanRequest, com.tcn.cloud.api.services.billing.v1alpha1.DuplicateDefaultBillingPlanResponse> getDuplicateDefaultBillingPlanMethod;
+    if ((getDuplicateDefaultBillingPlanMethod = BillingServiceGrpc.getDuplicateDefaultBillingPlanMethod) == null) {
+      synchronized (BillingServiceGrpc.class) {
+        if ((getDuplicateDefaultBillingPlanMethod = BillingServiceGrpc.getDuplicateDefaultBillingPlanMethod) == null) {
+          BillingServiceGrpc.getDuplicateDefaultBillingPlanMethod = getDuplicateDefaultBillingPlanMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.services.billing.v1alpha1.DuplicateDefaultBillingPlanRequest, com.tcn.cloud.api.services.billing.v1alpha1.DuplicateDefaultBillingPlanResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DuplicateDefaultBillingPlan"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.billing.v1alpha1.DuplicateDefaultBillingPlanRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.billing.v1alpha1.DuplicateDefaultBillingPlanResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new BillingServiceMethodDescriptorSupplier("DuplicateDefaultBillingPlan"))
+              .build();
+        }
+      }
+    }
+    return getDuplicateDefaultBillingPlanMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha1.ExportInvoiceRequest,
       com.tcn.cloud.api.services.billing.v1alpha1.ExportInvoiceResponse> getExportInvoiceMethod;
 
@@ -1072,6 +1134,44 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
+     * Duplicates a billing plan. This copies the billing plan and all of its rate definitions.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified billing plan doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
+     * </pre>
+     */
+    default void duplicateBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.DuplicateBillingPlanRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.DuplicateBillingPlanResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDuplicateBillingPlanMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Duplicates a default billing plan. This copies the billing plan, all of its rate definitions,
+     * and all of its rate definition groups and features.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     *   TCN_BILLING_ADMIN
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified billing plan doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
+     * </pre>
+     */
+    default void duplicateDefaultBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.DuplicateDefaultBillingPlanRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.DuplicateDefaultBillingPlanResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDuplicateDefaultBillingPlanMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Exports an invoice.
      * Required permissions:
      *   CUSTOMER_SUPPORT
@@ -1585,6 +1685,46 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
+     * Duplicates a billing plan. This copies the billing plan and all of its rate definitions.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified billing plan doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
+     * </pre>
+     */
+    public void duplicateBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.DuplicateBillingPlanRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.DuplicateBillingPlanResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDuplicateBillingPlanMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Duplicates a default billing plan. This copies the billing plan, all of its rate definitions,
+     * and all of its rate definition groups and features.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     *   TCN_BILLING_ADMIN
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified billing plan doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
+     * </pre>
+     */
+    public void duplicateDefaultBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.DuplicateDefaultBillingPlanRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.DuplicateDefaultBillingPlanResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDuplicateDefaultBillingPlanMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Exports an invoice.
      * Required permissions:
      *   CUSTOMER_SUPPORT
@@ -2084,6 +2224,44 @@ public final class BillingServiceGrpc {
     public com.tcn.cloud.api.services.billing.v1alpha1.DeleteRateDefinitionResponse deleteRateDefinition(com.tcn.cloud.api.services.billing.v1alpha1.DeleteRateDefinitionRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteRateDefinitionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Duplicates a billing plan. This copies the billing plan and all of its rate definitions.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified billing plan doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
+     * </pre>
+     */
+    public com.tcn.cloud.api.services.billing.v1alpha1.DuplicateBillingPlanResponse duplicateBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.DuplicateBillingPlanRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDuplicateBillingPlanMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Duplicates a default billing plan. This copies the billing plan, all of its rate definitions,
+     * and all of its rate definition groups and features.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     *   TCN_BILLING_ADMIN
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified billing plan doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
+     * </pre>
+     */
+    public com.tcn.cloud.api.services.billing.v1alpha1.DuplicateDefaultBillingPlanResponse duplicateDefaultBillingPlan(com.tcn.cloud.api.services.billing.v1alpha1.DuplicateDefaultBillingPlanRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDuplicateDefaultBillingPlanMethod(), getCallOptions(), request);
     }
 
     /**
@@ -2590,6 +2768,46 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
+     * Duplicates a billing plan. This copies the billing plan and all of its rate definitions.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified billing plan doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.billing.v1alpha1.DuplicateBillingPlanResponse> duplicateBillingPlan(
+        com.tcn.cloud.api.services.billing.v1alpha1.DuplicateBillingPlanRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDuplicateBillingPlanMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Duplicates a default billing plan. This copies the billing plan, all of its rate definitions,
+     * and all of its rate definition groups and features.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     *   TCN_BILLING_ADMIN
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The specified billing plan doesn't exist.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.billing.v1alpha1.DuplicateDefaultBillingPlanResponse> duplicateDefaultBillingPlan(
+        com.tcn.cloud.api.services.billing.v1alpha1.DuplicateDefaultBillingPlanRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDuplicateDefaultBillingPlanMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Exports an invoice.
      * Required permissions:
      *   CUSTOMER_SUPPORT
@@ -2855,19 +3073,21 @@ public final class BillingServiceGrpc {
   private static final int METHODID_DELETE_DEFAULT_RATE_DEFINITION = 9;
   private static final int METHODID_DELETE_INVOICE = 10;
   private static final int METHODID_DELETE_RATE_DEFINITION = 11;
-  private static final int METHODID_EXPORT_INVOICE = 12;
-  private static final int METHODID_GET_ACTIVE_BILLING_PLAN = 13;
-  private static final int METHODID_GET_BILLING_PLAN = 14;
-  private static final int METHODID_GET_INVOICE = 15;
-  private static final int METHODID_GET_RATE_DEFINITION = 16;
-  private static final int METHODID_LIST_BILLING_PLANS = 17;
-  private static final int METHODID_LIST_INVOICES = 18;
-  private static final int METHODID_LIST_RATE_DEFINITIONS = 19;
-  private static final int METHODID_UPDATE_BILLING_PLAN = 20;
-  private static final int METHODID_UPDATE_DEFAULT_BILLING_PLAN = 21;
-  private static final int METHODID_UPDATE_DEFAULT_RATE_DEFINITION = 22;
-  private static final int METHODID_UPDATE_INVOICE = 23;
-  private static final int METHODID_UPDATE_RATE_DEFINITION = 24;
+  private static final int METHODID_DUPLICATE_BILLING_PLAN = 12;
+  private static final int METHODID_DUPLICATE_DEFAULT_BILLING_PLAN = 13;
+  private static final int METHODID_EXPORT_INVOICE = 14;
+  private static final int METHODID_GET_ACTIVE_BILLING_PLAN = 15;
+  private static final int METHODID_GET_BILLING_PLAN = 16;
+  private static final int METHODID_GET_INVOICE = 17;
+  private static final int METHODID_GET_RATE_DEFINITION = 18;
+  private static final int METHODID_LIST_BILLING_PLANS = 19;
+  private static final int METHODID_LIST_INVOICES = 20;
+  private static final int METHODID_LIST_RATE_DEFINITIONS = 21;
+  private static final int METHODID_UPDATE_BILLING_PLAN = 22;
+  private static final int METHODID_UPDATE_DEFAULT_BILLING_PLAN = 23;
+  private static final int METHODID_UPDATE_DEFAULT_RATE_DEFINITION = 24;
+  private static final int METHODID_UPDATE_INVOICE = 25;
+  private static final int METHODID_UPDATE_RATE_DEFINITION = 26;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -2933,6 +3153,14 @@ public final class BillingServiceGrpc {
         case METHODID_DELETE_RATE_DEFINITION:
           serviceImpl.deleteRateDefinition((com.tcn.cloud.api.services.billing.v1alpha1.DeleteRateDefinitionRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.DeleteRateDefinitionResponse>) responseObserver);
+          break;
+        case METHODID_DUPLICATE_BILLING_PLAN:
+          serviceImpl.duplicateBillingPlan((com.tcn.cloud.api.services.billing.v1alpha1.DuplicateBillingPlanRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.DuplicateBillingPlanResponse>) responseObserver);
+          break;
+        case METHODID_DUPLICATE_DEFAULT_BILLING_PLAN:
+          serviceImpl.duplicateDefaultBillingPlan((com.tcn.cloud.api.services.billing.v1alpha1.DuplicateDefaultBillingPlanRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha1.DuplicateDefaultBillingPlanResponse>) responseObserver);
           break;
         case METHODID_EXPORT_INVOICE:
           serviceImpl.exportInvoice((com.tcn.cloud.api.services.billing.v1alpha1.ExportInvoiceRequest) request,
@@ -3089,6 +3317,20 @@ public final class BillingServiceGrpc {
               com.tcn.cloud.api.services.billing.v1alpha1.DeleteRateDefinitionResponse>(
                 service, METHODID_DELETE_RATE_DEFINITION)))
         .addMethod(
+          getDuplicateBillingPlanMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.services.billing.v1alpha1.DuplicateBillingPlanRequest,
+              com.tcn.cloud.api.services.billing.v1alpha1.DuplicateBillingPlanResponse>(
+                service, METHODID_DUPLICATE_BILLING_PLAN)))
+        .addMethod(
+          getDuplicateDefaultBillingPlanMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.services.billing.v1alpha1.DuplicateDefaultBillingPlanRequest,
+              com.tcn.cloud.api.services.billing.v1alpha1.DuplicateDefaultBillingPlanResponse>(
+                service, METHODID_DUPLICATE_DEFAULT_BILLING_PLAN)))
+        .addMethod(
           getExportInvoiceMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -3239,6 +3481,8 @@ public final class BillingServiceGrpc {
               .addMethod(getDeleteDefaultRateDefinitionMethod())
               .addMethod(getDeleteInvoiceMethod())
               .addMethod(getDeleteRateDefinitionMethod())
+              .addMethod(getDuplicateBillingPlanMethod())
+              .addMethod(getDuplicateDefaultBillingPlanMethod())
               .addMethod(getExportInvoiceMethod())
               .addMethod(getGetActiveBillingPlanMethod())
               .addMethod(getGetBillingPlanMethod())
