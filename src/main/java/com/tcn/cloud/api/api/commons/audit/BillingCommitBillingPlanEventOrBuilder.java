@@ -8,16 +8,16 @@ public interface BillingCommitBillingPlanEventOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string billing_plan = 1 [json_name = "billingPlan"];</code>
-   * @return The billingPlan.
+   * <code>string billing_plan_id = 1 [json_name = "billingPlanId"];</code>
+   * @return The billingPlanId.
    */
-  java.lang.String getBillingPlan();
+  java.lang.String getBillingPlanId();
   /**
-   * <code>string billing_plan = 1 [json_name = "billingPlan"];</code>
-   * @return The bytes for billingPlan.
+   * <code>string billing_plan_id = 1 [json_name = "billingPlanId"];</code>
+   * @return The bytes for billingPlanId.
    */
   com.google.protobuf.ByteString
-      getBillingPlanBytes();
+      getBillingPlanIdBytes();
 
   /**
    * <code>string user_id = 2 [json_name = "userId"];</code>

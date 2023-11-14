@@ -20,7 +20,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private BillingExportInvoiceEvent() {
-    invoice_ = "";
+    invoiceId_ = "";
     userId_ = "";
   }
 
@@ -44,39 +44,39 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.audit.BillingExportInvoiceEvent.class, com.tcn.cloud.api.api.commons.audit.BillingExportInvoiceEvent.Builder.class);
   }
 
-  public static final int INVOICE_FIELD_NUMBER = 1;
+  public static final int INVOICE_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object invoice_ = "";
+  private volatile java.lang.Object invoiceId_ = "";
   /**
-   * <code>string invoice = 1 [json_name = "invoice"];</code>
-   * @return The invoice.
+   * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+   * @return The invoiceId.
    */
   @java.lang.Override
-  public java.lang.String getInvoice() {
-    java.lang.Object ref = invoice_;
+  public java.lang.String getInvoiceId() {
+    java.lang.Object ref = invoiceId_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      invoice_ = s;
+      invoiceId_ = s;
       return s;
     }
   }
   /**
-   * <code>string invoice = 1 [json_name = "invoice"];</code>
-   * @return The bytes for invoice.
+   * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+   * @return The bytes for invoiceId.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getInvoiceBytes() {
-    java.lang.Object ref = invoice_;
+      getInvoiceIdBytes() {
+    java.lang.Object ref = invoiceId_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      invoice_ = b;
+      invoiceId_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -136,8 +136,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(invoice_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, invoice_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(invoiceId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, invoiceId_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, userId_);
@@ -151,8 +151,8 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(invoice_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, invoice_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(invoiceId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, invoiceId_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, userId_);
@@ -172,8 +172,8 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.commons.audit.BillingExportInvoiceEvent other = (com.tcn.cloud.api.api.commons.audit.BillingExportInvoiceEvent) obj;
 
-    if (!getInvoice()
-        .equals(other.getInvoice())) return false;
+    if (!getInvoiceId()
+        .equals(other.getInvoiceId())) return false;
     if (!getUserId()
         .equals(other.getUserId())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -187,8 +187,8 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + INVOICE_FIELD_NUMBER;
-    hash = (53 * hash) + getInvoice().hashCode();
+    hash = (37 * hash) + INVOICE_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getInvoiceId().hashCode();
     hash = (37 * hash) + USER_ID_FIELD_NUMBER;
     hash = (53 * hash) + getUserId().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
@@ -326,7 +326,7 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      invoice_ = "";
+      invoiceId_ = "";
       userId_ = "";
       return this;
     }
@@ -362,7 +362,7 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.tcn.cloud.api.api.commons.audit.BillingExportInvoiceEvent result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.invoice_ = invoice_;
+        result.invoiceId_ = invoiceId_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.userId_ = userId_;
@@ -413,8 +413,8 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.commons.audit.BillingExportInvoiceEvent other) {
       if (other == com.tcn.cloud.api.api.commons.audit.BillingExportInvoiceEvent.getDefaultInstance()) return this;
-      if (!other.getInvoice().isEmpty()) {
-        invoice_ = other.invoice_;
+      if (!other.getInvoiceId().isEmpty()) {
+        invoiceId_ = other.invoiceId_;
         bitField0_ |= 0x00000001;
         onChanged();
       }
@@ -450,7 +450,7 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              invoice_ = input.readStringRequireUtf8();
+              invoiceId_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000001;
               break;
             } // case 10
@@ -476,73 +476,73 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.lang.Object invoice_ = "";
+    private java.lang.Object invoiceId_ = "";
     /**
-     * <code>string invoice = 1 [json_name = "invoice"];</code>
-     * @return The invoice.
+     * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+     * @return The invoiceId.
      */
-    public java.lang.String getInvoice() {
-      java.lang.Object ref = invoice_;
+    public java.lang.String getInvoiceId() {
+      java.lang.Object ref = invoiceId_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        invoice_ = s;
+        invoiceId_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
       }
     }
     /**
-     * <code>string invoice = 1 [json_name = "invoice"];</code>
-     * @return The bytes for invoice.
+     * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+     * @return The bytes for invoiceId.
      */
     public com.google.protobuf.ByteString
-        getInvoiceBytes() {
-      java.lang.Object ref = invoice_;
+        getInvoiceIdBytes() {
+      java.lang.Object ref = invoiceId_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        invoice_ = b;
+        invoiceId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <code>string invoice = 1 [json_name = "invoice"];</code>
-     * @param value The invoice to set.
+     * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+     * @param value The invoiceId to set.
      * @return This builder for chaining.
      */
-    public Builder setInvoice(
+    public Builder setInvoiceId(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      invoice_ = value;
+      invoiceId_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>string invoice = 1 [json_name = "invoice"];</code>
+     * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearInvoice() {
-      invoice_ = getDefaultInstance().getInvoice();
+    public Builder clearInvoiceId() {
+      invoiceId_ = getDefaultInstance().getInvoiceId();
       bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
     /**
-     * <code>string invoice = 1 [json_name = "invoice"];</code>
-     * @param value The bytes for invoice to set.
+     * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+     * @param value The bytes for invoiceId to set.
      * @return This builder for chaining.
      */
-    public Builder setInvoiceBytes(
+    public Builder setInvoiceIdBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      invoice_ = value;
+      invoiceId_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;

@@ -20,7 +20,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private BillingDeleteBillingPlanEvent() {
-    billingPlan_ = "";
+    billingPlanId_ = "";
     userId_ = "";
   }
 
@@ -44,39 +44,39 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.audit.BillingDeleteBillingPlanEvent.class, com.tcn.cloud.api.api.commons.audit.BillingDeleteBillingPlanEvent.Builder.class);
   }
 
-  public static final int BILLING_PLAN_FIELD_NUMBER = 1;
+  public static final int BILLING_PLAN_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object billingPlan_ = "";
+  private volatile java.lang.Object billingPlanId_ = "";
   /**
-   * <code>string billing_plan = 1 [json_name = "billingPlan"];</code>
-   * @return The billingPlan.
+   * <code>string billing_plan_id = 1 [json_name = "billingPlanId"];</code>
+   * @return The billingPlanId.
    */
   @java.lang.Override
-  public java.lang.String getBillingPlan() {
-    java.lang.Object ref = billingPlan_;
+  public java.lang.String getBillingPlanId() {
+    java.lang.Object ref = billingPlanId_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      billingPlan_ = s;
+      billingPlanId_ = s;
       return s;
     }
   }
   /**
-   * <code>string billing_plan = 1 [json_name = "billingPlan"];</code>
-   * @return The bytes for billingPlan.
+   * <code>string billing_plan_id = 1 [json_name = "billingPlanId"];</code>
+   * @return The bytes for billingPlanId.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getBillingPlanBytes() {
-    java.lang.Object ref = billingPlan_;
+      getBillingPlanIdBytes() {
+    java.lang.Object ref = billingPlanId_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      billingPlan_ = b;
+      billingPlanId_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -136,8 +136,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(billingPlan_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, billingPlan_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(billingPlanId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, billingPlanId_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, userId_);
@@ -151,8 +151,8 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(billingPlan_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, billingPlan_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(billingPlanId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, billingPlanId_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, userId_);
@@ -172,8 +172,8 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.commons.audit.BillingDeleteBillingPlanEvent other = (com.tcn.cloud.api.api.commons.audit.BillingDeleteBillingPlanEvent) obj;
 
-    if (!getBillingPlan()
-        .equals(other.getBillingPlan())) return false;
+    if (!getBillingPlanId()
+        .equals(other.getBillingPlanId())) return false;
     if (!getUserId()
         .equals(other.getUserId())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -187,8 +187,8 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + BILLING_PLAN_FIELD_NUMBER;
-    hash = (53 * hash) + getBillingPlan().hashCode();
+    hash = (37 * hash) + BILLING_PLAN_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getBillingPlanId().hashCode();
     hash = (37 * hash) + USER_ID_FIELD_NUMBER;
     hash = (53 * hash) + getUserId().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
@@ -326,7 +326,7 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      billingPlan_ = "";
+      billingPlanId_ = "";
       userId_ = "";
       return this;
     }
@@ -362,7 +362,7 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.tcn.cloud.api.api.commons.audit.BillingDeleteBillingPlanEvent result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.billingPlan_ = billingPlan_;
+        result.billingPlanId_ = billingPlanId_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.userId_ = userId_;
@@ -413,8 +413,8 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.commons.audit.BillingDeleteBillingPlanEvent other) {
       if (other == com.tcn.cloud.api.api.commons.audit.BillingDeleteBillingPlanEvent.getDefaultInstance()) return this;
-      if (!other.getBillingPlan().isEmpty()) {
-        billingPlan_ = other.billingPlan_;
+      if (!other.getBillingPlanId().isEmpty()) {
+        billingPlanId_ = other.billingPlanId_;
         bitField0_ |= 0x00000001;
         onChanged();
       }
@@ -450,7 +450,7 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              billingPlan_ = input.readStringRequireUtf8();
+              billingPlanId_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000001;
               break;
             } // case 10
@@ -476,73 +476,73 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.lang.Object billingPlan_ = "";
+    private java.lang.Object billingPlanId_ = "";
     /**
-     * <code>string billing_plan = 1 [json_name = "billingPlan"];</code>
-     * @return The billingPlan.
+     * <code>string billing_plan_id = 1 [json_name = "billingPlanId"];</code>
+     * @return The billingPlanId.
      */
-    public java.lang.String getBillingPlan() {
-      java.lang.Object ref = billingPlan_;
+    public java.lang.String getBillingPlanId() {
+      java.lang.Object ref = billingPlanId_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        billingPlan_ = s;
+        billingPlanId_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
       }
     }
     /**
-     * <code>string billing_plan = 1 [json_name = "billingPlan"];</code>
-     * @return The bytes for billingPlan.
+     * <code>string billing_plan_id = 1 [json_name = "billingPlanId"];</code>
+     * @return The bytes for billingPlanId.
      */
     public com.google.protobuf.ByteString
-        getBillingPlanBytes() {
-      java.lang.Object ref = billingPlan_;
+        getBillingPlanIdBytes() {
+      java.lang.Object ref = billingPlanId_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        billingPlan_ = b;
+        billingPlanId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <code>string billing_plan = 1 [json_name = "billingPlan"];</code>
-     * @param value The billingPlan to set.
+     * <code>string billing_plan_id = 1 [json_name = "billingPlanId"];</code>
+     * @param value The billingPlanId to set.
      * @return This builder for chaining.
      */
-    public Builder setBillingPlan(
+    public Builder setBillingPlanId(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      billingPlan_ = value;
+      billingPlanId_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>string billing_plan = 1 [json_name = "billingPlan"];</code>
+     * <code>string billing_plan_id = 1 [json_name = "billingPlanId"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearBillingPlan() {
-      billingPlan_ = getDefaultInstance().getBillingPlan();
+    public Builder clearBillingPlanId() {
+      billingPlanId_ = getDefaultInstance().getBillingPlanId();
       bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
     /**
-     * <code>string billing_plan = 1 [json_name = "billingPlan"];</code>
-     * @param value The bytes for billingPlan to set.
+     * <code>string billing_plan_id = 1 [json_name = "billingPlanId"];</code>
+     * @param value The bytes for billingPlanId to set.
      * @return This builder for chaining.
      */
-    public Builder setBillingPlanBytes(
+    public Builder setBillingPlanIdBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      billingPlan_ = value;
+      billingPlanId_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
