@@ -18,4 +18,19 @@ public interface DuplicateBillingPlanRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getBillingPlanIdBytes();
+
+  /**
+   * <code>.services.billing.entities.v1alpha1.BillingPlan billing_plan = 2 [json_name = "billingPlan"];</code>
+   * @return Whether the billingPlan field is set.
+   */
+  boolean hasBillingPlan();
+  /**
+   * <code>.services.billing.entities.v1alpha1.BillingPlan billing_plan = 2 [json_name = "billingPlan"];</code>
+   * @return The billingPlan.
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlan getBillingPlan();
+  /**
+   * <code>.services.billing.entities.v1alpha1.BillingPlan billing_plan = 2 [json_name = "billingPlan"];</code>
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlanOrBuilder getBillingPlanOrBuilder();
 }

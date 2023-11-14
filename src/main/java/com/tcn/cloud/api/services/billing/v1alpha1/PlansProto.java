@@ -180,52 +180,56 @@ public final class PlansProto {
       "teBillingPlanResponse\"I\n\037DeleteDefaultBi" +
       "llingPlanRequest\022&\n\017billing_plan_id\030\001 \001(" +
       "\tR\rbillingPlanId\"\"\n DeleteDefaultBilling" +
-      "PlanResponse\"E\n\033DuplicateBillingPlanRequ" +
-      "est\022&\n\017billing_plan_id\030\001 \001(\tR\rbillingPla" +
-      "nId\"F\n\034DuplicateBillingPlanResponse\022&\n\017b" +
-      "illing_plan_id\030\001 \001(\tR\rbillingPlanId\"L\n\"D" +
-      "uplicateDefaultBillingPlanRequest\022&\n\017bil" +
-      "ling_plan_id\030\001 \001(\tR\rbillingPlanId\"M\n#Dup" +
-      "licateDefaultBillingPlanResponse\022&\n\017bill" +
-      "ing_plan_id\030\001 \001(\tR\rbillingPlanId\"w\n\033GetA" +
-      "ctiveBillingPlanRequest\022\025\n\006org_id\030\001 \001(\tR" +
-      "\005orgId\022A\n\016effective_time\030\002 \001(\0132\032.google." +
-      "protobuf.TimestampR\reffectiveTime\"r\n\034Get" +
-      "ActiveBillingPlanResponse\022R\n\014billing_pla" +
-      "n\030\001 \001(\0132/.services.billing.entities.v1al" +
-      "pha1.BillingPlanR\013billingPlan\"?\n\025GetBill" +
-      "ingPlanRequest\022&\n\017billing_plan_id\030\001 \001(\tR" +
-      "\rbillingPlanId\"l\n\026GetBillingPlanResponse" +
-      "\022R\n\014billing_plan\030\001 \001(\0132/.services.billin" +
-      "g.entities.v1alpha1.BillingPlanR\013billing" +
-      "Plan\"\367\001\n\027ListBillingPlansRequest\022&\n\017bill" +
-      "ing_plan_id\030\001 \001(\tR\rbillingPlanId\022\026\n\006filt" +
-      "er\030\002 \001(\tR\006filter\0222\n\006fields\030\003 \001(\0132\032.googl" +
-      "e.protobuf.FieldMaskR\006fields\0223\n\004sort\030\004 \003" +
-      "(\0132\037.services.billing.v1alpha1.SortR\004sor" +
-      "t\0223\n\004page\030\005 \001(\0132\037.services.billing.v1alp" +
-      "ha1.PageR\004page\"\206\001\n\030ListBillingPlansRespo" +
-      "nse\022T\n\rbilling_plans\030\001 \003(\0132/.services.bi" +
-      "lling.entities.v1alpha1.BillingPlanR\014bil" +
-      "lingPlans\022\024\n\005token\030\002 \001(\tR\005token\"\327\001\n\030Upda" +
-      "teBillingPlanRequest\022&\n\017billing_plan_id\030" +
-      "\001 \001(\tR\rbillingPlanId\022R\n\014billing_plan\030\002 \001" +
-      "(\0132/.services.billing.entities.v1alpha1." +
-      "BillingPlanR\013billingPlan\022?\n\rupdate_field" +
-      "s\030\003 \001(\0132\032.google.protobuf.FieldMaskR\014upd" +
-      "ateFields\"\033\n\031UpdateBillingPlanResponse\"\336" +
-      "\001\n\037UpdateDefaultBillingPlanRequest\022&\n\017bi" +
-      "lling_plan_id\030\001 \001(\tR\rbillingPlanId\022R\n\014bi" +
-      "lling_plan\030\002 \001(\0132/.services.billing.enti" +
-      "ties.v1alpha1.BillingPlanR\013billingPlan\022?" +
-      "\n\rupdate_fields\030\003 \001(\0132\032.google.protobuf." +
-      "FieldMaskR\014updateFields\"\"\n UpdateDefault" +
-      "BillingPlanResponseB\277\001\n+com.tcn.cloud.ap" +
-      "i.services.billing.v1alpha1B\nPlansProtoP" +
-      "\001\242\002\003SBX\252\002\031Services.Billing.V1alpha1\312\002\031Se" +
-      "rvices\\Billing\\V1alpha1\342\002%Services\\Billi" +
-      "ng\\V1alpha1\\GPBMetadata\352\002\033Services::Bill" +
-      "ing::V1alpha1b\006proto3"
+      "PlanResponse\"\231\001\n\033DuplicateBillingPlanReq" +
+      "uest\022&\n\017billing_plan_id\030\001 \001(\tR\rbillingPl" +
+      "anId\022R\n\014billing_plan\030\002 \001(\0132/.services.bi" +
+      "lling.entities.v1alpha1.BillingPlanR\013bil" +
+      "lingPlan\"F\n\034DuplicateBillingPlanResponse" +
+      "\022&\n\017billing_plan_id\030\001 \001(\tR\rbillingPlanId" +
+      "\"\240\001\n\"DuplicateDefaultBillingPlanRequest\022" +
+      "&\n\017billing_plan_id\030\001 \001(\tR\rbillingPlanId\022" +
+      "R\n\014billing_plan\030\002 \001(\0132/.services.billing" +
+      ".entities.v1alpha1.BillingPlanR\013billingP" +
+      "lan\"M\n#DuplicateDefaultBillingPlanRespon" +
+      "se\022&\n\017billing_plan_id\030\001 \001(\tR\rbillingPlan" +
+      "Id\"w\n\033GetActiveBillingPlanRequest\022\025\n\006org" +
+      "_id\030\001 \001(\tR\005orgId\022A\n\016effective_time\030\002 \001(\013" +
+      "2\032.google.protobuf.TimestampR\reffectiveT" +
+      "ime\"r\n\034GetActiveBillingPlanResponse\022R\n\014b" +
+      "illing_plan\030\001 \001(\0132/.services.billing.ent" +
+      "ities.v1alpha1.BillingPlanR\013billingPlan\"" +
+      "?\n\025GetBillingPlanRequest\022&\n\017billing_plan" +
+      "_id\030\001 \001(\tR\rbillingPlanId\"l\n\026GetBillingPl" +
+      "anResponse\022R\n\014billing_plan\030\001 \001(\0132/.servi" +
+      "ces.billing.entities.v1alpha1.BillingPla" +
+      "nR\013billingPlan\"\367\001\n\027ListBillingPlansReque" +
+      "st\022&\n\017billing_plan_id\030\001 \001(\tR\rbillingPlan" +
+      "Id\022\026\n\006filter\030\002 \001(\tR\006filter\0222\n\006fields\030\003 \001" +
+      "(\0132\032.google.protobuf.FieldMaskR\006fields\0223" +
+      "\n\004sort\030\004 \003(\0132\037.services.billing.v1alpha1" +
+      ".SortR\004sort\0223\n\004page\030\005 \001(\0132\037.services.bil" +
+      "ling.v1alpha1.PageR\004page\"\206\001\n\030ListBilling" +
+      "PlansResponse\022T\n\rbilling_plans\030\001 \003(\0132/.s" +
+      "ervices.billing.entities.v1alpha1.Billin" +
+      "gPlanR\014billingPlans\022\024\n\005token\030\002 \001(\tR\005toke" +
+      "n\"\327\001\n\030UpdateBillingPlanRequest\022&\n\017billin" +
+      "g_plan_id\030\001 \001(\tR\rbillingPlanId\022R\n\014billin" +
+      "g_plan\030\002 \001(\0132/.services.billing.entities" +
+      ".v1alpha1.BillingPlanR\013billingPlan\022?\n\rup" +
+      "date_fields\030\003 \001(\0132\032.google.protobuf.Fiel" +
+      "dMaskR\014updateFields\"\033\n\031UpdateBillingPlan" +
+      "Response\"\336\001\n\037UpdateDefaultBillingPlanReq" +
+      "uest\022&\n\017billing_plan_id\030\001 \001(\tR\rbillingPl" +
+      "anId\022R\n\014billing_plan\030\002 \001(\0132/.services.bi" +
+      "lling.entities.v1alpha1.BillingPlanR\013bil" +
+      "lingPlan\022?\n\rupdate_fields\030\003 \001(\0132\032.google" +
+      ".protobuf.FieldMaskR\014updateFields\"\"\n Upd" +
+      "ateDefaultBillingPlanResponseB\277\001\n+com.tc" +
+      "n.cloud.api.services.billing.v1alpha1B\nP" +
+      "lansProtoP\001\242\002\003SBX\252\002\031Services.Billing.V1a" +
+      "lpha1\312\002\031Services\\Billing\\V1alpha1\342\002%Serv" +
+      "ices\\Billing\\V1alpha1\\GPBMetadata\352\002\033Serv" +
+      "ices::Billing::V1alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -312,7 +316,7 @@ public final class PlansProto {
     internal_static_services_billing_v1alpha1_DuplicateBillingPlanRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_v1alpha1_DuplicateBillingPlanRequest_descriptor,
-        new java.lang.String[] { "BillingPlanId", });
+        new java.lang.String[] { "BillingPlanId", "BillingPlan", });
     internal_static_services_billing_v1alpha1_DuplicateBillingPlanResponse_descriptor =
       getDescriptor().getMessageTypes().get(13);
     internal_static_services_billing_v1alpha1_DuplicateBillingPlanResponse_fieldAccessorTable = new
@@ -324,7 +328,7 @@ public final class PlansProto {
     internal_static_services_billing_v1alpha1_DuplicateDefaultBillingPlanRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_v1alpha1_DuplicateDefaultBillingPlanRequest_descriptor,
-        new java.lang.String[] { "BillingPlanId", });
+        new java.lang.String[] { "BillingPlanId", "BillingPlan", });
     internal_static_services_billing_v1alpha1_DuplicateDefaultBillingPlanResponse_descriptor =
       getDescriptor().getMessageTypes().get(15);
     internal_static_services_billing_v1alpha1_DuplicateDefaultBillingPlanResponse_fieldAccessorTable = new
