@@ -2559,160 +2559,175 @@ public interface AuditEventOrBuilder extends
    * Billing Events class 1000
    * </pre>
    *
-   * <code>.api.commons.audit.BillingCreateBillingPlanEvent billing_create_billing_plan_event = 1000 [json_name = "billingCreateBillingPlanEvent"];</code>
+   * <code>.api.commons.audit.BillingCommitBillingPlanEvent billing_commit_billing_plan_event = 1000 [json_name = "billingCommitBillingPlanEvent"];</code>
+   * @return Whether the billingCommitBillingPlanEvent field is set.
+   */
+  boolean hasBillingCommitBillingPlanEvent();
+  /**
+   * <pre>
+   * Billing Events class 1000
+   * </pre>
+   *
+   * <code>.api.commons.audit.BillingCommitBillingPlanEvent billing_commit_billing_plan_event = 1000 [json_name = "billingCommitBillingPlanEvent"];</code>
+   * @return The billingCommitBillingPlanEvent.
+   */
+  com.tcn.cloud.api.api.commons.audit.BillingCommitBillingPlanEvent getBillingCommitBillingPlanEvent();
+  /**
+   * <pre>
+   * Billing Events class 1000
+   * </pre>
+   *
+   * <code>.api.commons.audit.BillingCommitBillingPlanEvent billing_commit_billing_plan_event = 1000 [json_name = "billingCommitBillingPlanEvent"];</code>
+   */
+  com.tcn.cloud.api.api.commons.audit.BillingCommitBillingPlanEventOrBuilder getBillingCommitBillingPlanEventOrBuilder();
+
+  /**
+   * <code>.api.commons.audit.BillingCreateBillingPlanEvent billing_create_billing_plan_event = 1001 [json_name = "billingCreateBillingPlanEvent"];</code>
    * @return Whether the billingCreateBillingPlanEvent field is set.
    */
   boolean hasBillingCreateBillingPlanEvent();
   /**
-   * <pre>
-   * Billing Events class 1000
-   * </pre>
-   *
-   * <code>.api.commons.audit.BillingCreateBillingPlanEvent billing_create_billing_plan_event = 1000 [json_name = "billingCreateBillingPlanEvent"];</code>
+   * <code>.api.commons.audit.BillingCreateBillingPlanEvent billing_create_billing_plan_event = 1001 [json_name = "billingCreateBillingPlanEvent"];</code>
    * @return The billingCreateBillingPlanEvent.
    */
   com.tcn.cloud.api.api.commons.audit.BillingCreateBillingPlanEvent getBillingCreateBillingPlanEvent();
   /**
-   * <pre>
-   * Billing Events class 1000
-   * </pre>
-   *
-   * <code>.api.commons.audit.BillingCreateBillingPlanEvent billing_create_billing_plan_event = 1000 [json_name = "billingCreateBillingPlanEvent"];</code>
+   * <code>.api.commons.audit.BillingCreateBillingPlanEvent billing_create_billing_plan_event = 1001 [json_name = "billingCreateBillingPlanEvent"];</code>
    */
   com.tcn.cloud.api.api.commons.audit.BillingCreateBillingPlanEventOrBuilder getBillingCreateBillingPlanEventOrBuilder();
 
   /**
-   * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1001 [json_name = "billingCreateInvoiceEvent"];</code>
+   * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent"];</code>
    * @return Whether the billingCreateInvoiceEvent field is set.
    */
   boolean hasBillingCreateInvoiceEvent();
   /**
-   * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1001 [json_name = "billingCreateInvoiceEvent"];</code>
+   * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent"];</code>
    * @return The billingCreateInvoiceEvent.
    */
   com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent getBillingCreateInvoiceEvent();
   /**
-   * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1001 [json_name = "billingCreateInvoiceEvent"];</code>
+   * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent"];</code>
    */
   com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEventOrBuilder getBillingCreateInvoiceEventOrBuilder();
 
   /**
-   * <code>.api.commons.audit.BillingCreateRateDefinitionEvent billing_create_rate_definition_event = 1002 [json_name = "billingCreateRateDefinitionEvent"];</code>
+   * <code>.api.commons.audit.BillingCreateRateDefinitionEvent billing_create_rate_definition_event = 1003 [json_name = "billingCreateRateDefinitionEvent"];</code>
    * @return Whether the billingCreateRateDefinitionEvent field is set.
    */
   boolean hasBillingCreateRateDefinitionEvent();
   /**
-   * <code>.api.commons.audit.BillingCreateRateDefinitionEvent billing_create_rate_definition_event = 1002 [json_name = "billingCreateRateDefinitionEvent"];</code>
+   * <code>.api.commons.audit.BillingCreateRateDefinitionEvent billing_create_rate_definition_event = 1003 [json_name = "billingCreateRateDefinitionEvent"];</code>
    * @return The billingCreateRateDefinitionEvent.
    */
   com.tcn.cloud.api.api.commons.audit.BillingCreateRateDefinitionEvent getBillingCreateRateDefinitionEvent();
   /**
-   * <code>.api.commons.audit.BillingCreateRateDefinitionEvent billing_create_rate_definition_event = 1002 [json_name = "billingCreateRateDefinitionEvent"];</code>
+   * <code>.api.commons.audit.BillingCreateRateDefinitionEvent billing_create_rate_definition_event = 1003 [json_name = "billingCreateRateDefinitionEvent"];</code>
    */
   com.tcn.cloud.api.api.commons.audit.BillingCreateRateDefinitionEventOrBuilder getBillingCreateRateDefinitionEventOrBuilder();
 
   /**
-   * <code>.api.commons.audit.BillingDeleteBillingPlanEvent billing_delete_billing_plan_event = 1003 [json_name = "billingDeleteBillingPlanEvent"];</code>
+   * <code>.api.commons.audit.BillingDeleteBillingPlanEvent billing_delete_billing_plan_event = 1004 [json_name = "billingDeleteBillingPlanEvent"];</code>
    * @return Whether the billingDeleteBillingPlanEvent field is set.
    */
   boolean hasBillingDeleteBillingPlanEvent();
   /**
-   * <code>.api.commons.audit.BillingDeleteBillingPlanEvent billing_delete_billing_plan_event = 1003 [json_name = "billingDeleteBillingPlanEvent"];</code>
+   * <code>.api.commons.audit.BillingDeleteBillingPlanEvent billing_delete_billing_plan_event = 1004 [json_name = "billingDeleteBillingPlanEvent"];</code>
    * @return The billingDeleteBillingPlanEvent.
    */
   com.tcn.cloud.api.api.commons.audit.BillingDeleteBillingPlanEvent getBillingDeleteBillingPlanEvent();
   /**
-   * <code>.api.commons.audit.BillingDeleteBillingPlanEvent billing_delete_billing_plan_event = 1003 [json_name = "billingDeleteBillingPlanEvent"];</code>
+   * <code>.api.commons.audit.BillingDeleteBillingPlanEvent billing_delete_billing_plan_event = 1004 [json_name = "billingDeleteBillingPlanEvent"];</code>
    */
   com.tcn.cloud.api.api.commons.audit.BillingDeleteBillingPlanEventOrBuilder getBillingDeleteBillingPlanEventOrBuilder();
 
   /**
-   * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1004 [json_name = "billingDeleteInvoiceEvent"];</code>
+   * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent"];</code>
    * @return Whether the billingDeleteInvoiceEvent field is set.
    */
   boolean hasBillingDeleteInvoiceEvent();
   /**
-   * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1004 [json_name = "billingDeleteInvoiceEvent"];</code>
+   * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent"];</code>
    * @return The billingDeleteInvoiceEvent.
    */
   com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent getBillingDeleteInvoiceEvent();
   /**
-   * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1004 [json_name = "billingDeleteInvoiceEvent"];</code>
+   * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent"];</code>
    */
   com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEventOrBuilder getBillingDeleteInvoiceEventOrBuilder();
 
   /**
-   * <code>.api.commons.audit.BillingDeleteRateDefinitionEvent billing_delete_rate_definition_event = 1005 [json_name = "billingDeleteRateDefinitionEvent"];</code>
+   * <code>.api.commons.audit.BillingDeleteRateDefinitionEvent billing_delete_rate_definition_event = 1006 [json_name = "billingDeleteRateDefinitionEvent"];</code>
    * @return Whether the billingDeleteRateDefinitionEvent field is set.
    */
   boolean hasBillingDeleteRateDefinitionEvent();
   /**
-   * <code>.api.commons.audit.BillingDeleteRateDefinitionEvent billing_delete_rate_definition_event = 1005 [json_name = "billingDeleteRateDefinitionEvent"];</code>
+   * <code>.api.commons.audit.BillingDeleteRateDefinitionEvent billing_delete_rate_definition_event = 1006 [json_name = "billingDeleteRateDefinitionEvent"];</code>
    * @return The billingDeleteRateDefinitionEvent.
    */
   com.tcn.cloud.api.api.commons.audit.BillingDeleteRateDefinitionEvent getBillingDeleteRateDefinitionEvent();
   /**
-   * <code>.api.commons.audit.BillingDeleteRateDefinitionEvent billing_delete_rate_definition_event = 1005 [json_name = "billingDeleteRateDefinitionEvent"];</code>
+   * <code>.api.commons.audit.BillingDeleteRateDefinitionEvent billing_delete_rate_definition_event = 1006 [json_name = "billingDeleteRateDefinitionEvent"];</code>
    */
   com.tcn.cloud.api.api.commons.audit.BillingDeleteRateDefinitionEventOrBuilder getBillingDeleteRateDefinitionEventOrBuilder();
 
   /**
-   * <code>.api.commons.audit.BillingExportInvoiceEvent billing_export_invoice_event = 1006 [json_name = "billingExportInvoiceEvent"];</code>
+   * <code>.api.commons.audit.BillingExportInvoiceEvent billing_export_invoice_event = 1007 [json_name = "billingExportInvoiceEvent"];</code>
    * @return Whether the billingExportInvoiceEvent field is set.
    */
   boolean hasBillingExportInvoiceEvent();
   /**
-   * <code>.api.commons.audit.BillingExportInvoiceEvent billing_export_invoice_event = 1006 [json_name = "billingExportInvoiceEvent"];</code>
+   * <code>.api.commons.audit.BillingExportInvoiceEvent billing_export_invoice_event = 1007 [json_name = "billingExportInvoiceEvent"];</code>
    * @return The billingExportInvoiceEvent.
    */
   com.tcn.cloud.api.api.commons.audit.BillingExportInvoiceEvent getBillingExportInvoiceEvent();
   /**
-   * <code>.api.commons.audit.BillingExportInvoiceEvent billing_export_invoice_event = 1006 [json_name = "billingExportInvoiceEvent"];</code>
+   * <code>.api.commons.audit.BillingExportInvoiceEvent billing_export_invoice_event = 1007 [json_name = "billingExportInvoiceEvent"];</code>
    */
   com.tcn.cloud.api.api.commons.audit.BillingExportInvoiceEventOrBuilder getBillingExportInvoiceEventOrBuilder();
 
   /**
-   * <code>.api.commons.audit.BillingUpdateBillingPlanEvent billing_update_billing_plan_event = 1007 [json_name = "billingUpdateBillingPlanEvent"];</code>
+   * <code>.api.commons.audit.BillingUpdateBillingPlanEvent billing_update_billing_plan_event = 1008 [json_name = "billingUpdateBillingPlanEvent"];</code>
    * @return Whether the billingUpdateBillingPlanEvent field is set.
    */
   boolean hasBillingUpdateBillingPlanEvent();
   /**
-   * <code>.api.commons.audit.BillingUpdateBillingPlanEvent billing_update_billing_plan_event = 1007 [json_name = "billingUpdateBillingPlanEvent"];</code>
+   * <code>.api.commons.audit.BillingUpdateBillingPlanEvent billing_update_billing_plan_event = 1008 [json_name = "billingUpdateBillingPlanEvent"];</code>
    * @return The billingUpdateBillingPlanEvent.
    */
   com.tcn.cloud.api.api.commons.audit.BillingUpdateBillingPlanEvent getBillingUpdateBillingPlanEvent();
   /**
-   * <code>.api.commons.audit.BillingUpdateBillingPlanEvent billing_update_billing_plan_event = 1007 [json_name = "billingUpdateBillingPlanEvent"];</code>
+   * <code>.api.commons.audit.BillingUpdateBillingPlanEvent billing_update_billing_plan_event = 1008 [json_name = "billingUpdateBillingPlanEvent"];</code>
    */
   com.tcn.cloud.api.api.commons.audit.BillingUpdateBillingPlanEventOrBuilder getBillingUpdateBillingPlanEventOrBuilder();
 
   /**
-   * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1008 [json_name = "billingUpdateInvoiceEvent"];</code>
+   * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent"];</code>
    * @return Whether the billingUpdateInvoiceEvent field is set.
    */
   boolean hasBillingUpdateInvoiceEvent();
   /**
-   * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1008 [json_name = "billingUpdateInvoiceEvent"];</code>
+   * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent"];</code>
    * @return The billingUpdateInvoiceEvent.
    */
   com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent getBillingUpdateInvoiceEvent();
   /**
-   * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1008 [json_name = "billingUpdateInvoiceEvent"];</code>
+   * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent"];</code>
    */
   com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEventOrBuilder getBillingUpdateInvoiceEventOrBuilder();
 
   /**
-   * <code>.api.commons.audit.BillingUpdateRateDefinitionEvent billing_update_rate_definition_event = 1009 [json_name = "billingUpdateRateDefinitionEvent"];</code>
+   * <code>.api.commons.audit.BillingUpdateRateDefinitionEvent billing_update_rate_definition_event = 1010 [json_name = "billingUpdateRateDefinitionEvent"];</code>
    * @return Whether the billingUpdateRateDefinitionEvent field is set.
    */
   boolean hasBillingUpdateRateDefinitionEvent();
   /**
-   * <code>.api.commons.audit.BillingUpdateRateDefinitionEvent billing_update_rate_definition_event = 1009 [json_name = "billingUpdateRateDefinitionEvent"];</code>
+   * <code>.api.commons.audit.BillingUpdateRateDefinitionEvent billing_update_rate_definition_event = 1010 [json_name = "billingUpdateRateDefinitionEvent"];</code>
    * @return The billingUpdateRateDefinitionEvent.
    */
   com.tcn.cloud.api.api.commons.audit.BillingUpdateRateDefinitionEvent getBillingUpdateRateDefinitionEvent();
   /**
-   * <code>.api.commons.audit.BillingUpdateRateDefinitionEvent billing_update_rate_definition_event = 1009 [json_name = "billingUpdateRateDefinitionEvent"];</code>
+   * <code>.api.commons.audit.BillingUpdateRateDefinitionEvent billing_update_rate_definition_event = 1010 [json_name = "billingUpdateRateDefinitionEvent"];</code>
    */
   com.tcn.cloud.api.api.commons.audit.BillingUpdateRateDefinitionEventOrBuilder getBillingUpdateRateDefinitionEventOrBuilder();
 
