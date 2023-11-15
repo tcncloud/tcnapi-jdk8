@@ -2810,6 +2810,36 @@ public interface ExecuteFlowOrBuilder extends
   com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountOrBuilder getEpicGetAccountOrBuilder();
 
   /**
+   * <code>.api.commons.integrations.ExecuteEpicReceiveCommunication2 epic_receive_communication_2 = 3708 [json_name = "epicReceiveCommunication2"];</code>
+   * @return Whether the epicReceiveCommunication2 field is set.
+   */
+  boolean hasEpicReceiveCommunication2();
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicReceiveCommunication2 epic_receive_communication_2 = 3708 [json_name = "epicReceiveCommunication2"];</code>
+   * @return The epicReceiveCommunication2.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication2 getEpicReceiveCommunication2();
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicReceiveCommunication2 epic_receive_communication_2 = 3708 [json_name = "epicReceiveCommunication2"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication2OrBuilder getEpicReceiveCommunication2OrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicReceiveCommunication3 epic_receive_communication_3 = 3709 [json_name = "epicReceiveCommunication3"];</code>
+   * @return Whether the epicReceiveCommunication3 field is set.
+   */
+  boolean hasEpicReceiveCommunication3();
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicReceiveCommunication3 epic_receive_communication_3 = 3709 [json_name = "epicReceiveCommunication3"];</code>
+   * @return The epicReceiveCommunication3.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication3 getEpicReceiveCommunication3();
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicReceiveCommunication3 epic_receive_communication_3 = 3709 [json_name = "epicReceiveCommunication3"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication3OrBuilder getEpicReceiveCommunication3OrBuilder();
+
+  /**
    * <code>.api.commons.integrations.ExecuteNewzwarePhoneLookup newzware_phone_lookup = 3801 [json_name = "newzwarePhoneLookup"];</code>
    * @return Whether the newzwarePhoneLookup field is set.
    */

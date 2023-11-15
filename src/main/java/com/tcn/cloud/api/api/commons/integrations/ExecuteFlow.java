@@ -238,6 +238,8 @@ private static final long serialVersionUID = 0L;
     EPIC_FIND_APPOINTMENT(3705),
     EPIC_BOOK_APPOINTMENT(3706),
     EPIC_GET_ACCOUNT(3707),
+    EPIC_RECEIVE_COMMUNICATION_2(3708),
+    EPIC_RECEIVE_COMMUNICATION_3(3709),
     NEWZWARE_PHONE_LOOKUP(3801),
     NEWZWARE_ACCOUNT_INQUIRY(3802),
     NEWZWARE_CC_PAYMENT(3803),
@@ -455,6 +457,8 @@ private static final long serialVersionUID = 0L;
         case 3705: return EPIC_FIND_APPOINTMENT;
         case 3706: return EPIC_BOOK_APPOINTMENT;
         case 3707: return EPIC_GET_ACCOUNT;
+        case 3708: return EPIC_RECEIVE_COMMUNICATION_2;
+        case 3709: return EPIC_RECEIVE_COMMUNICATION_3;
         case 3801: return NEWZWARE_PHONE_LOOKUP;
         case 3802: return NEWZWARE_ACCOUNT_INQUIRY;
         case 3803: return NEWZWARE_CC_PAYMENT;
@@ -6289,6 +6293,68 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccount.getDefaultInstance();
   }
 
+  public static final int EPIC_RECEIVE_COMMUNICATION_2_FIELD_NUMBER = 3708;
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicReceiveCommunication2 epic_receive_communication_2 = 3708 [json_name = "epicReceiveCommunication2"];</code>
+   * @return Whether the epicReceiveCommunication2 field is set.
+   */
+  @java.lang.Override
+  public boolean hasEpicReceiveCommunication2() {
+    return valueCase_ == 3708;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicReceiveCommunication2 epic_receive_communication_2 = 3708 [json_name = "epicReceiveCommunication2"];</code>
+   * @return The epicReceiveCommunication2.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication2 getEpicReceiveCommunication2() {
+    if (valueCase_ == 3708) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication2) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication2.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicReceiveCommunication2 epic_receive_communication_2 = 3708 [json_name = "epicReceiveCommunication2"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication2OrBuilder getEpicReceiveCommunication2OrBuilder() {
+    if (valueCase_ == 3708) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication2) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication2.getDefaultInstance();
+  }
+
+  public static final int EPIC_RECEIVE_COMMUNICATION_3_FIELD_NUMBER = 3709;
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicReceiveCommunication3 epic_receive_communication_3 = 3709 [json_name = "epicReceiveCommunication3"];</code>
+   * @return Whether the epicReceiveCommunication3 field is set.
+   */
+  @java.lang.Override
+  public boolean hasEpicReceiveCommunication3() {
+    return valueCase_ == 3709;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicReceiveCommunication3 epic_receive_communication_3 = 3709 [json_name = "epicReceiveCommunication3"];</code>
+   * @return The epicReceiveCommunication3.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication3 getEpicReceiveCommunication3() {
+    if (valueCase_ == 3709) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication3) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication3.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicReceiveCommunication3 epic_receive_communication_3 = 3709 [json_name = "epicReceiveCommunication3"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication3OrBuilder getEpicReceiveCommunication3OrBuilder() {
+    if (valueCase_ == 3709) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication3) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication3.getDefaultInstance();
+  }
+
   public static final int NEWZWARE_PHONE_LOOKUP_FIELD_NUMBER = 3801;
   /**
    * <code>.api.commons.integrations.ExecuteNewzwarePhoneLookup newzware_phone_lookup = 3801 [json_name = "newzwarePhoneLookup"];</code>
@@ -7298,6 +7364,12 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 3707) {
       output.writeMessage(3707, (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccount) value_);
     }
+    if (valueCase_ == 3708) {
+      output.writeMessage(3708, (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication2) value_);
+    }
+    if (valueCase_ == 3709) {
+      output.writeMessage(3709, (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication3) value_);
+    }
     if (valueCase_ == 3801) {
       output.writeMessage(3801, (com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwarePhoneLookup) value_);
     }
@@ -8095,6 +8167,14 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 3707) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3707, (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccount) value_);
+    }
+    if (valueCase_ == 3708) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3708, (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication2) value_);
+    }
+    if (valueCase_ == 3709) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3709, (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication3) value_);
     }
     if (valueCase_ == 3801) {
       size += com.google.protobuf.CodedOutputStream
@@ -8915,6 +8995,14 @@ private static final long serialVersionUID = 0L;
         if (!getEpicGetAccount()
             .equals(other.getEpicGetAccount())) return false;
         break;
+      case 3708:
+        if (!getEpicReceiveCommunication2()
+            .equals(other.getEpicReceiveCommunication2())) return false;
+        break;
+      case 3709:
+        if (!getEpicReceiveCommunication3()
+            .equals(other.getEpicReceiveCommunication3())) return false;
+        break;
       case 3801:
         if (!getNewzwarePhoneLookup()
             .equals(other.getNewzwarePhoneLookup())) return false;
@@ -9732,6 +9820,14 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + EPIC_GET_ACCOUNT_FIELD_NUMBER;
         hash = (53 * hash) + getEpicGetAccount().hashCode();
         break;
+      case 3708:
+        hash = (37 * hash) + EPIC_RECEIVE_COMMUNICATION_2_FIELD_NUMBER;
+        hash = (53 * hash) + getEpicReceiveCommunication2().hashCode();
+        break;
+      case 3709:
+        hash = (37 * hash) + EPIC_RECEIVE_COMMUNICATION_3_FIELD_NUMBER;
+        hash = (53 * hash) + getEpicReceiveCommunication3().hashCode();
+        break;
       case 3801:
         hash = (37 * hash) + NEWZWARE_PHONE_LOOKUP_FIELD_NUMBER;
         hash = (53 * hash) + getNewzwarePhoneLookup().hashCode();
@@ -10493,6 +10589,12 @@ private static final long serialVersionUID = 0L;
       }
       if (epicGetAccountBuilder_ != null) {
         epicGetAccountBuilder_.clear();
+      }
+      if (epicReceiveCommunication2Builder_ != null) {
+        epicReceiveCommunication2Builder_.clear();
+      }
+      if (epicReceiveCommunication3Builder_ != null) {
+        epicReceiveCommunication3Builder_.clear();
       }
       if (newzwarePhoneLookupBuilder_ != null) {
         newzwarePhoneLookupBuilder_.clear();
@@ -11354,6 +11456,14 @@ private static final long serialVersionUID = 0L;
           epicGetAccountBuilder_ != null) {
         result.value_ = epicGetAccountBuilder_.build();
       }
+      if (valueCase_ == 3708 &&
+          epicReceiveCommunication2Builder_ != null) {
+        result.value_ = epicReceiveCommunication2Builder_.build();
+      }
+      if (valueCase_ == 3709 &&
+          epicReceiveCommunication3Builder_ != null) {
+        result.value_ = epicReceiveCommunication3Builder_.build();
+      }
       if (valueCase_ == 3801 &&
           newzwarePhoneLookupBuilder_ != null) {
         result.value_ = newzwarePhoneLookupBuilder_.build();
@@ -12204,6 +12314,14 @@ private static final long serialVersionUID = 0L;
         }
         case EPIC_GET_ACCOUNT: {
           mergeEpicGetAccount(other.getEpicGetAccount());
+          break;
+        }
+        case EPIC_RECEIVE_COMMUNICATION_2: {
+          mergeEpicReceiveCommunication2(other.getEpicReceiveCommunication2());
+          break;
+        }
+        case EPIC_RECEIVE_COMMUNICATION_3: {
+          mergeEpicReceiveCommunication3(other.getEpicReceiveCommunication3());
           break;
         }
         case NEWZWARE_PHONE_LOOKUP: {
@@ -13599,6 +13717,20 @@ private static final long serialVersionUID = 0L;
               valueCase_ = 3707;
               break;
             } // case 29658
+            case 29666: {
+              input.readMessage(
+                  getEpicReceiveCommunication2FieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 3708;
+              break;
+            } // case 29666
+            case 29674: {
+              input.readMessage(
+                  getEpicReceiveCommunication3FieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 3709;
+              break;
+            } // case 29674
             case 30410: {
               input.readMessage(
                   getNewzwarePhoneLookupFieldBuilder().getBuilder(),
@@ -40217,6 +40349,290 @@ private static final long serialVersionUID = 0L;
       valueCase_ = 3707;
       onChanged();
       return epicGetAccountBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication2, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication2.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication2OrBuilder> epicReceiveCommunication2Builder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicReceiveCommunication2 epic_receive_communication_2 = 3708 [json_name = "epicReceiveCommunication2"];</code>
+     * @return Whether the epicReceiveCommunication2 field is set.
+     */
+    @java.lang.Override
+    public boolean hasEpicReceiveCommunication2() {
+      return valueCase_ == 3708;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicReceiveCommunication2 epic_receive_communication_2 = 3708 [json_name = "epicReceiveCommunication2"];</code>
+     * @return The epicReceiveCommunication2.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication2 getEpicReceiveCommunication2() {
+      if (epicReceiveCommunication2Builder_ == null) {
+        if (valueCase_ == 3708) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication2) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication2.getDefaultInstance();
+      } else {
+        if (valueCase_ == 3708) {
+          return epicReceiveCommunication2Builder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication2.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicReceiveCommunication2 epic_receive_communication_2 = 3708 [json_name = "epicReceiveCommunication2"];</code>
+     */
+    public Builder setEpicReceiveCommunication2(com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication2 value) {
+      if (epicReceiveCommunication2Builder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        epicReceiveCommunication2Builder_.setMessage(value);
+      }
+      valueCase_ = 3708;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicReceiveCommunication2 epic_receive_communication_2 = 3708 [json_name = "epicReceiveCommunication2"];</code>
+     */
+    public Builder setEpicReceiveCommunication2(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication2.Builder builderForValue) {
+      if (epicReceiveCommunication2Builder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        epicReceiveCommunication2Builder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 3708;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicReceiveCommunication2 epic_receive_communication_2 = 3708 [json_name = "epicReceiveCommunication2"];</code>
+     */
+    public Builder mergeEpicReceiveCommunication2(com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication2 value) {
+      if (epicReceiveCommunication2Builder_ == null) {
+        if (valueCase_ == 3708 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication2.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication2.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication2) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 3708) {
+          epicReceiveCommunication2Builder_.mergeFrom(value);
+        } else {
+          epicReceiveCommunication2Builder_.setMessage(value);
+        }
+      }
+      valueCase_ = 3708;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicReceiveCommunication2 epic_receive_communication_2 = 3708 [json_name = "epicReceiveCommunication2"];</code>
+     */
+    public Builder clearEpicReceiveCommunication2() {
+      if (epicReceiveCommunication2Builder_ == null) {
+        if (valueCase_ == 3708) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 3708) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        epicReceiveCommunication2Builder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicReceiveCommunication2 epic_receive_communication_2 = 3708 [json_name = "epicReceiveCommunication2"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication2.Builder getEpicReceiveCommunication2Builder() {
+      return getEpicReceiveCommunication2FieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicReceiveCommunication2 epic_receive_communication_2 = 3708 [json_name = "epicReceiveCommunication2"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication2OrBuilder getEpicReceiveCommunication2OrBuilder() {
+      if ((valueCase_ == 3708) && (epicReceiveCommunication2Builder_ != null)) {
+        return epicReceiveCommunication2Builder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 3708) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication2) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication2.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicReceiveCommunication2 epic_receive_communication_2 = 3708 [json_name = "epicReceiveCommunication2"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication2, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication2.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication2OrBuilder> 
+        getEpicReceiveCommunication2FieldBuilder() {
+      if (epicReceiveCommunication2Builder_ == null) {
+        if (!(valueCase_ == 3708)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication2.getDefaultInstance();
+        }
+        epicReceiveCommunication2Builder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication2, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication2.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication2OrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication2) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 3708;
+      onChanged();
+      return epicReceiveCommunication2Builder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication3, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication3.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication3OrBuilder> epicReceiveCommunication3Builder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicReceiveCommunication3 epic_receive_communication_3 = 3709 [json_name = "epicReceiveCommunication3"];</code>
+     * @return Whether the epicReceiveCommunication3 field is set.
+     */
+    @java.lang.Override
+    public boolean hasEpicReceiveCommunication3() {
+      return valueCase_ == 3709;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicReceiveCommunication3 epic_receive_communication_3 = 3709 [json_name = "epicReceiveCommunication3"];</code>
+     * @return The epicReceiveCommunication3.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication3 getEpicReceiveCommunication3() {
+      if (epicReceiveCommunication3Builder_ == null) {
+        if (valueCase_ == 3709) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication3) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication3.getDefaultInstance();
+      } else {
+        if (valueCase_ == 3709) {
+          return epicReceiveCommunication3Builder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication3.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicReceiveCommunication3 epic_receive_communication_3 = 3709 [json_name = "epicReceiveCommunication3"];</code>
+     */
+    public Builder setEpicReceiveCommunication3(com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication3 value) {
+      if (epicReceiveCommunication3Builder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        epicReceiveCommunication3Builder_.setMessage(value);
+      }
+      valueCase_ = 3709;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicReceiveCommunication3 epic_receive_communication_3 = 3709 [json_name = "epicReceiveCommunication3"];</code>
+     */
+    public Builder setEpicReceiveCommunication3(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication3.Builder builderForValue) {
+      if (epicReceiveCommunication3Builder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        epicReceiveCommunication3Builder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 3709;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicReceiveCommunication3 epic_receive_communication_3 = 3709 [json_name = "epicReceiveCommunication3"];</code>
+     */
+    public Builder mergeEpicReceiveCommunication3(com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication3 value) {
+      if (epicReceiveCommunication3Builder_ == null) {
+        if (valueCase_ == 3709 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication3.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication3.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication3) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 3709) {
+          epicReceiveCommunication3Builder_.mergeFrom(value);
+        } else {
+          epicReceiveCommunication3Builder_.setMessage(value);
+        }
+      }
+      valueCase_ = 3709;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicReceiveCommunication3 epic_receive_communication_3 = 3709 [json_name = "epicReceiveCommunication3"];</code>
+     */
+    public Builder clearEpicReceiveCommunication3() {
+      if (epicReceiveCommunication3Builder_ == null) {
+        if (valueCase_ == 3709) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 3709) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        epicReceiveCommunication3Builder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicReceiveCommunication3 epic_receive_communication_3 = 3709 [json_name = "epicReceiveCommunication3"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication3.Builder getEpicReceiveCommunication3Builder() {
+      return getEpicReceiveCommunication3FieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicReceiveCommunication3 epic_receive_communication_3 = 3709 [json_name = "epicReceiveCommunication3"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication3OrBuilder getEpicReceiveCommunication3OrBuilder() {
+      if ((valueCase_ == 3709) && (epicReceiveCommunication3Builder_ != null)) {
+        return epicReceiveCommunication3Builder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 3709) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication3) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication3.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicReceiveCommunication3 epic_receive_communication_3 = 3709 [json_name = "epicReceiveCommunication3"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication3, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication3.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication3OrBuilder> 
+        getEpicReceiveCommunication3FieldBuilder() {
+      if (epicReceiveCommunication3Builder_ == null) {
+        if (!(valueCase_ == 3709)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication3.getDefaultInstance();
+        }
+        epicReceiveCommunication3Builder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication3, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication3.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication3OrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication3) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 3709;
+      onChanged();
+      return epicReceiveCommunication3Builder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
