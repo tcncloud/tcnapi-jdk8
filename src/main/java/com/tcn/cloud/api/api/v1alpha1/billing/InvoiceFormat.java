@@ -6,7 +6,7 @@ package com.tcn.cloud.api.api.v1alpha1.billing;
 /**
  * Protobuf enum {@code api.v1alpha1.billing.InvoiceFormat}
  */
-public enum InvoiceFormat
+@java.lang.Deprecated public enum InvoiceFormat
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
    * <code>INVOICE_FORMAT_UNSPECIFIED = 0;</code>

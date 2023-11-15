@@ -3,14 +3,12 @@ package com.tcn.cloud.api.api.v1alpha1.billing;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
- * <pre>
- * Billing service for handling billing requests.
- * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.57.1)",
     comments = "Source: api/v1alpha1/billing/service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
+@java.lang.Deprecated
 public final class BillingGrpc {
 
   private BillingGrpc() {}
@@ -187,64 +185,37 @@ public final class BillingGrpc {
   }
 
   /**
-   * <pre>
-   * Billing service for handling billing requests.
-   * </pre>
    */
+  @java.lang.Deprecated
   public interface AsyncService {
 
     /**
-     * <pre>
-     * GetBillingPlan - returns the billing plan for the provided organization.
-     * </pre>
      */
+    @java.lang.Deprecated
     default void getBillingPlan(com.tcn.cloud.api.api.v1alpha1.billing.GetBillingPlanReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.billing.GetBillingPlanRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetBillingPlanMethod(), responseObserver);
     }
 
     /**
-     * <pre>
-     * UpdateBillingPlan - updates the provided billing plan and it's details.
-     * If some details are not provided, they will be left as is. However, if
-     * deletion is desired, the DeleteBillingDetails method should be used. The
-     * billing plan still follows the constraint of only having one billing detail
-     * with a specific config type and event type, and so if the request contains
-     * more than one billing detail with a config type and event type, the request
-     * is malformed and will result in potentially unexpected behavior.
-     * </pre>
      */
+    @java.lang.Deprecated
     default void updateBillingPlan(com.tcn.cloud.api.api.v1alpha1.billing.UpdateBillingPlanReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.billing.UpdateBillingPlanRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateBillingPlanMethod(), responseObserver);
     }
 
     /**
-     * <pre>
-     * GetInvoice - returns the invoice for the organization.
-     * If a date is provided, this will return the invoice for the
-     * organization that corresponds to the billing cycle that contains
-     * the provided date. If no date is provided, this will return the
-     * invoice as it currently stands for the current billing cycle.
-     * </pre>
      */
+    @java.lang.Deprecated
     default void getInvoice(com.tcn.cloud.api.api.v1alpha1.billing.GetInvoiceReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.billing.GetInvoiceRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetInvoiceMethod(), responseObserver);
     }
 
     /**
-     * <pre>
-     * ExportGeneratedInvoice - returns the invoice for the organization.
-     * If a date is provided, this will return the invoice for the
-     * organization that corresponds to the billing cycle that contains
-     * the provided date. If no date is provided, this will return the
-     * invoice, as it has been last generated, for the current billing cycle.
-     * This differs from GetInvoice in that it returns the invoice as
-     * it was last generated. It will not take into account new billing
-     * events since the last generation.
-     * </pre>
      */
+    @java.lang.Deprecated
     default void exportGeneratedInvoice(com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getExportGeneratedInvoiceMethod(), responseObserver);
@@ -253,10 +224,8 @@ public final class BillingGrpc {
 
   /**
    * Base class for the server implementation of the service Billing.
-   * <pre>
-   * Billing service for handling billing requests.
-   * </pre>
    */
+  @java.lang.Deprecated
   public static abstract class BillingImplBase
       implements io.grpc.BindableService, AsyncService {
 
@@ -267,10 +236,8 @@ public final class BillingGrpc {
 
   /**
    * A stub to allow clients to do asynchronous rpc calls to service Billing.
-   * <pre>
-   * Billing service for handling billing requests.
-   * </pre>
    */
+  @java.lang.Deprecated
   public static final class BillingStub
       extends io.grpc.stub.AbstractAsyncStub<BillingStub> {
     private BillingStub(
@@ -285,10 +252,8 @@ public final class BillingGrpc {
     }
 
     /**
-     * <pre>
-     * GetBillingPlan - returns the billing plan for the provided organization.
-     * </pre>
      */
+    @java.lang.Deprecated
     public void getBillingPlan(com.tcn.cloud.api.api.v1alpha1.billing.GetBillingPlanReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.billing.GetBillingPlanRes> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -296,16 +261,8 @@ public final class BillingGrpc {
     }
 
     /**
-     * <pre>
-     * UpdateBillingPlan - updates the provided billing plan and it's details.
-     * If some details are not provided, they will be left as is. However, if
-     * deletion is desired, the DeleteBillingDetails method should be used. The
-     * billing plan still follows the constraint of only having one billing detail
-     * with a specific config type and event type, and so if the request contains
-     * more than one billing detail with a config type and event type, the request
-     * is malformed and will result in potentially unexpected behavior.
-     * </pre>
      */
+    @java.lang.Deprecated
     public void updateBillingPlan(com.tcn.cloud.api.api.v1alpha1.billing.UpdateBillingPlanReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.billing.UpdateBillingPlanRes> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -313,14 +270,8 @@ public final class BillingGrpc {
     }
 
     /**
-     * <pre>
-     * GetInvoice - returns the invoice for the organization.
-     * If a date is provided, this will return the invoice for the
-     * organization that corresponds to the billing cycle that contains
-     * the provided date. If no date is provided, this will return the
-     * invoice as it currently stands for the current billing cycle.
-     * </pre>
      */
+    @java.lang.Deprecated
     public void getInvoice(com.tcn.cloud.api.api.v1alpha1.billing.GetInvoiceReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.billing.GetInvoiceRes> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -328,17 +279,8 @@ public final class BillingGrpc {
     }
 
     /**
-     * <pre>
-     * ExportGeneratedInvoice - returns the invoice for the organization.
-     * If a date is provided, this will return the invoice for the
-     * organization that corresponds to the billing cycle that contains
-     * the provided date. If no date is provided, this will return the
-     * invoice, as it has been last generated, for the current billing cycle.
-     * This differs from GetInvoice in that it returns the invoice as
-     * it was last generated. It will not take into account new billing
-     * events since the last generation.
-     * </pre>
      */
+    @java.lang.Deprecated
     public void exportGeneratedInvoice(com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceRes> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -348,10 +290,8 @@ public final class BillingGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service Billing.
-   * <pre>
-   * Billing service for handling billing requests.
-   * </pre>
    */
+  @java.lang.Deprecated
   public static final class BillingBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<BillingBlockingStub> {
     private BillingBlockingStub(
@@ -366,57 +306,32 @@ public final class BillingGrpc {
     }
 
     /**
-     * <pre>
-     * GetBillingPlan - returns the billing plan for the provided organization.
-     * </pre>
      */
+    @java.lang.Deprecated
     public com.tcn.cloud.api.api.v1alpha1.billing.GetBillingPlanRes getBillingPlan(com.tcn.cloud.api.api.v1alpha1.billing.GetBillingPlanReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetBillingPlanMethod(), getCallOptions(), request);
     }
 
     /**
-     * <pre>
-     * UpdateBillingPlan - updates the provided billing plan and it's details.
-     * If some details are not provided, they will be left as is. However, if
-     * deletion is desired, the DeleteBillingDetails method should be used. The
-     * billing plan still follows the constraint of only having one billing detail
-     * with a specific config type and event type, and so if the request contains
-     * more than one billing detail with a config type and event type, the request
-     * is malformed and will result in potentially unexpected behavior.
-     * </pre>
      */
+    @java.lang.Deprecated
     public com.tcn.cloud.api.api.v1alpha1.billing.UpdateBillingPlanRes updateBillingPlan(com.tcn.cloud.api.api.v1alpha1.billing.UpdateBillingPlanReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateBillingPlanMethod(), getCallOptions(), request);
     }
 
     /**
-     * <pre>
-     * GetInvoice - returns the invoice for the organization.
-     * If a date is provided, this will return the invoice for the
-     * organization that corresponds to the billing cycle that contains
-     * the provided date. If no date is provided, this will return the
-     * invoice as it currently stands for the current billing cycle.
-     * </pre>
      */
+    @java.lang.Deprecated
     public com.tcn.cloud.api.api.v1alpha1.billing.GetInvoiceRes getInvoice(com.tcn.cloud.api.api.v1alpha1.billing.GetInvoiceReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetInvoiceMethod(), getCallOptions(), request);
     }
 
     /**
-     * <pre>
-     * ExportGeneratedInvoice - returns the invoice for the organization.
-     * If a date is provided, this will return the invoice for the
-     * organization that corresponds to the billing cycle that contains
-     * the provided date. If no date is provided, this will return the
-     * invoice, as it has been last generated, for the current billing cycle.
-     * This differs from GetInvoice in that it returns the invoice as
-     * it was last generated. It will not take into account new billing
-     * events since the last generation.
-     * </pre>
      */
+    @java.lang.Deprecated
     public com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceRes exportGeneratedInvoice(com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getExportGeneratedInvoiceMethod(), getCallOptions(), request);
@@ -425,10 +340,8 @@ public final class BillingGrpc {
 
   /**
    * A stub to allow clients to do ListenableFuture-style rpc calls to service Billing.
-   * <pre>
-   * Billing service for handling billing requests.
-   * </pre>
    */
+  @java.lang.Deprecated
   public static final class BillingFutureStub
       extends io.grpc.stub.AbstractFutureStub<BillingFutureStub> {
     private BillingFutureStub(
@@ -443,10 +356,8 @@ public final class BillingGrpc {
     }
 
     /**
-     * <pre>
-     * GetBillingPlan - returns the billing plan for the provided organization.
-     * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.billing.GetBillingPlanRes> getBillingPlan(
         com.tcn.cloud.api.api.v1alpha1.billing.GetBillingPlanReq request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -454,16 +365,8 @@ public final class BillingGrpc {
     }
 
     /**
-     * <pre>
-     * UpdateBillingPlan - updates the provided billing plan and it's details.
-     * If some details are not provided, they will be left as is. However, if
-     * deletion is desired, the DeleteBillingDetails method should be used. The
-     * billing plan still follows the constraint of only having one billing detail
-     * with a specific config type and event type, and so if the request contains
-     * more than one billing detail with a config type and event type, the request
-     * is malformed and will result in potentially unexpected behavior.
-     * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.billing.UpdateBillingPlanRes> updateBillingPlan(
         com.tcn.cloud.api.api.v1alpha1.billing.UpdateBillingPlanReq request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -471,14 +374,8 @@ public final class BillingGrpc {
     }
 
     /**
-     * <pre>
-     * GetInvoice - returns the invoice for the organization.
-     * If a date is provided, this will return the invoice for the
-     * organization that corresponds to the billing cycle that contains
-     * the provided date. If no date is provided, this will return the
-     * invoice as it currently stands for the current billing cycle.
-     * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.billing.GetInvoiceRes> getInvoice(
         com.tcn.cloud.api.api.v1alpha1.billing.GetInvoiceReq request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -486,17 +383,8 @@ public final class BillingGrpc {
     }
 
     /**
-     * <pre>
-     * ExportGeneratedInvoice - returns the invoice for the organization.
-     * If a date is provided, this will return the invoice for the
-     * organization that corresponds to the billing cycle that contains
-     * the provided date. If no date is provided, this will return the
-     * invoice, as it has been last generated, for the current billing cycle.
-     * This differs from GetInvoice in that it returns the invoice as
-     * it was last generated. It will not take into account new billing
-     * events since the last generation.
-     * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceRes> exportGeneratedInvoice(
         com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceReq request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(

@@ -4,14 +4,9 @@
 package com.tcn.cloud.api.api.commons.billing.modules;
 
 /**
- * <pre>
- * BasicConfig - basic config for a rating module when there is no
- * other data needed
- * </pre>
- *
  * Protobuf type {@code api.commons.billing.modules.BasicConfig}
  */
-public final class BasicConfig extends
+@java.lang.Deprecated public final class BasicConfig extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.commons.billing.modules.BasicConfig)
     BasicConfigOrBuilder {
@@ -46,15 +41,13 @@ private static final long serialVersionUID = 0L;
   public static final int RATE_FIELD_NUMBER = 1;
   private double rate_ = 0D;
   /**
-   * <pre>
-   * Required. the amount to rate a single event
-   * </pre>
-   *
-   * <code>double rate = 1 [json_name = "rate"];</code>
+   * <code>double rate = 1 [json_name = "rate", deprecated = true];</code>
+   * @deprecated api.commons.billing.modules.BasicConfig.rate is deprecated.
+   *     See api/commons/billing/modules/modules.proto;l=8
    * @return The rate.
    */
   @java.lang.Override
-  public double getRate() {
+  @java.lang.Deprecated public double getRate() {
     return rate_;
   }
 
@@ -218,11 +211,6 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * <pre>
-   * BasicConfig - basic config for a rating module when there is no
-   * other data needed
-   * </pre>
-   *
    * Protobuf type {@code api.commons.billing.modules.BasicConfig}
    */
   public static final class Builder extends
@@ -392,27 +380,23 @@ private static final long serialVersionUID = 0L;
 
     private double rate_ ;
     /**
-     * <pre>
-     * Required. the amount to rate a single event
-     * </pre>
-     *
-     * <code>double rate = 1 [json_name = "rate"];</code>
+     * <code>double rate = 1 [json_name = "rate", deprecated = true];</code>
+     * @deprecated api.commons.billing.modules.BasicConfig.rate is deprecated.
+     *     See api/commons/billing/modules/modules.proto;l=8
      * @return The rate.
      */
     @java.lang.Override
-    public double getRate() {
+    @java.lang.Deprecated public double getRate() {
       return rate_;
     }
     /**
-     * <pre>
-     * Required. the amount to rate a single event
-     * </pre>
-     *
-     * <code>double rate = 1 [json_name = "rate"];</code>
+     * <code>double rate = 1 [json_name = "rate", deprecated = true];</code>
+     * @deprecated api.commons.billing.modules.BasicConfig.rate is deprecated.
+     *     See api/commons/billing/modules/modules.proto;l=8
      * @param value The rate to set.
      * @return This builder for chaining.
      */
-    public Builder setRate(double value) {
+    @java.lang.Deprecated public Builder setRate(double value) {
 
       rate_ = value;
       bitField0_ |= 0x00000001;
@@ -420,14 +404,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Required. the amount to rate a single event
-     * </pre>
-     *
-     * <code>double rate = 1 [json_name = "rate"];</code>
+     * <code>double rate = 1 [json_name = "rate", deprecated = true];</code>
+     * @deprecated api.commons.billing.modules.BasicConfig.rate is deprecated.
+     *     See api/commons/billing/modules/modules.proto;l=8
      * @return This builder for chaining.
      */
-    public Builder clearRate() {
+    @java.lang.Deprecated public Builder clearRate() {
       bitField0_ = (bitField0_ & ~0x00000001);
       rate_ = 0D;
       onChanged();

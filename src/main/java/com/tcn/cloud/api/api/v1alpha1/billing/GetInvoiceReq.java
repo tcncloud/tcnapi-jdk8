@@ -4,13 +4,9 @@
 package com.tcn.cloud.api.api.v1alpha1.billing;
 
 /**
- * <pre>
- * GetInvoiceReq - request to get an invoice
- * </pre>
- *
  * Protobuf type {@code api.v1alpha1.billing.GetInvoiceReq}
  */
-public final class GetInvoiceReq extends
+@java.lang.Deprecated public final class GetInvoiceReq extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.v1alpha1.billing.GetInvoiceReq)
     GetInvoiceReqOrBuilder {
@@ -48,47 +44,30 @@ private static final long serialVersionUID = 0L;
   public static final int INVOICE_DATE_FIELD_NUMBER = 1;
   private com.google.protobuf.Timestamp invoiceDate_;
   /**
-   * <pre>
-   * Optional. the date of the invoice to retrieve. If not specified,
-   * will return the invoice associated with the current billing cycle.
-   * Otherwise, it will return the invoice associated with the billing
-   * cycle that contains the specified date.
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp invoice_date = 1 [json_name = "invoiceDate"];</code>
+   * <code>.google.protobuf.Timestamp invoice_date = 1 [json_name = "invoiceDate", deprecated = true];</code>
+   * @deprecated api.v1alpha1.billing.GetInvoiceReq.invoice_date is deprecated.
+   *     See api/v1alpha1/billing/entities.proto;l=33
    * @return Whether the invoiceDate field is set.
    */
   @java.lang.Override
-  public boolean hasInvoiceDate() {
+  @java.lang.Deprecated public boolean hasInvoiceDate() {
     return invoiceDate_ != null;
   }
   /**
-   * <pre>
-   * Optional. the date of the invoice to retrieve. If not specified,
-   * will return the invoice associated with the current billing cycle.
-   * Otherwise, it will return the invoice associated with the billing
-   * cycle that contains the specified date.
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp invoice_date = 1 [json_name = "invoiceDate"];</code>
+   * <code>.google.protobuf.Timestamp invoice_date = 1 [json_name = "invoiceDate", deprecated = true];</code>
+   * @deprecated api.v1alpha1.billing.GetInvoiceReq.invoice_date is deprecated.
+   *     See api/v1alpha1/billing/entities.proto;l=33
    * @return The invoiceDate.
    */
   @java.lang.Override
-  public com.google.protobuf.Timestamp getInvoiceDate() {
+  @java.lang.Deprecated public com.google.protobuf.Timestamp getInvoiceDate() {
     return invoiceDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : invoiceDate_;
   }
   /**
-   * <pre>
-   * Optional. the date of the invoice to retrieve. If not specified,
-   * will return the invoice associated with the current billing cycle.
-   * Otherwise, it will return the invoice associated with the billing
-   * cycle that contains the specified date.
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp invoice_date = 1 [json_name = "invoiceDate"];</code>
+   * <code>.google.protobuf.Timestamp invoice_date = 1 [json_name = "invoiceDate", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.google.protobuf.TimestampOrBuilder getInvoiceDateOrBuilder() {
+  @java.lang.Deprecated public com.google.protobuf.TimestampOrBuilder getInvoiceDateOrBuilder() {
     return invoiceDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : invoiceDate_;
   }
 
@@ -96,15 +75,13 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object orgId_ = "";
   /**
-   * <pre>
-   * Required. the identifier of the organization to update the plan for
-   * </pre>
-   *
-   * <code>string org_id = 2 [json_name = "orgId"];</code>
+   * <code>string org_id = 2 [json_name = "orgId", deprecated = true];</code>
+   * @deprecated api.v1alpha1.billing.GetInvoiceReq.org_id is deprecated.
+   *     See api/v1alpha1/billing/entities.proto;l=34
    * @return The orgId.
    */
   @java.lang.Override
-  public java.lang.String getOrgId() {
+  @java.lang.Deprecated public java.lang.String getOrgId() {
     java.lang.Object ref = orgId_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -117,15 +94,13 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   * Required. the identifier of the organization to update the plan for
-   * </pre>
-   *
-   * <code>string org_id = 2 [json_name = "orgId"];</code>
+   * <code>string org_id = 2 [json_name = "orgId", deprecated = true];</code>
+   * @deprecated api.v1alpha1.billing.GetInvoiceReq.org_id is deprecated.
+   *     See api/v1alpha1/billing/entities.proto;l=34
    * @return The bytes for orgId.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
+  @java.lang.Deprecated public com.google.protobuf.ByteString
       getOrgIdBytes() {
     java.lang.Object ref = orgId_;
     if (ref instanceof java.lang.String) {
@@ -142,26 +117,18 @@ private static final long serialVersionUID = 0L;
   public static final int FORMAT_FIELD_NUMBER = 3;
   private int format_ = 0;
   /**
-   * <pre>
-   * deprecated
-   * </pre>
-   *
    * <code>.api.v1alpha1.billing.InvoiceFormat format = 3 [json_name = "format", deprecated = true];</code>
    * @deprecated api.v1alpha1.billing.GetInvoiceReq.format is deprecated.
-   *     See api/v1alpha1/billing/entities.proto;l=47
+   *     See api/v1alpha1/billing/entities.proto;l=35
    * @return The enum numeric value on the wire for format.
    */
   @java.lang.Override @java.lang.Deprecated public int getFormatValue() {
     return format_;
   }
   /**
-   * <pre>
-   * deprecated
-   * </pre>
-   *
    * <code>.api.v1alpha1.billing.InvoiceFormat format = 3 [json_name = "format", deprecated = true];</code>
    * @deprecated api.v1alpha1.billing.GetInvoiceReq.format is deprecated.
-   *     See api/v1alpha1/billing/entities.proto;l=47
+   *     See api/v1alpha1/billing/entities.proto;l=35
    * @return The format.
    */
   @java.lang.Override @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.billing.InvoiceFormat getFormat() {
@@ -172,27 +139,21 @@ private static final long serialVersionUID = 0L;
   public static final int INVOICE_FORMAT_FIELD_NUMBER = 4;
   private int invoiceFormat_ = 0;
   /**
-   * <pre>
-   * Optional. the format the invoice is returned using. If not specified,
-   * will use the proto format as the default
-   * </pre>
-   *
-   * <code>.api.commons.billing.InvoiceFormat invoice_format = 4 [json_name = "invoiceFormat"];</code>
+   * <code>.api.commons.billing.InvoiceFormat invoice_format = 4 [json_name = "invoiceFormat", deprecated = true];</code>
+   * @deprecated api.v1alpha1.billing.GetInvoiceReq.invoice_format is deprecated.
+   *     See api/v1alpha1/billing/entities.proto;l=36
    * @return The enum numeric value on the wire for invoiceFormat.
    */
-  @java.lang.Override public int getInvoiceFormatValue() {
+  @java.lang.Override @java.lang.Deprecated public int getInvoiceFormatValue() {
     return invoiceFormat_;
   }
   /**
-   * <pre>
-   * Optional. the format the invoice is returned using. If not specified,
-   * will use the proto format as the default
-   * </pre>
-   *
-   * <code>.api.commons.billing.InvoiceFormat invoice_format = 4 [json_name = "invoiceFormat"];</code>
+   * <code>.api.commons.billing.InvoiceFormat invoice_format = 4 [json_name = "invoiceFormat", deprecated = true];</code>
+   * @deprecated api.v1alpha1.billing.GetInvoiceReq.invoice_format is deprecated.
+   *     See api/v1alpha1/billing/entities.proto;l=36
    * @return The invoiceFormat.
    */
-  @java.lang.Override public com.tcn.cloud.api.api.commons.billing.InvoiceFormat getInvoiceFormat() {
+  @java.lang.Override @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.InvoiceFormat getInvoiceFormat() {
     com.tcn.cloud.api.api.commons.billing.InvoiceFormat result = com.tcn.cloud.api.api.commons.billing.InvoiceFormat.forNumber(invoiceFormat_);
     return result == null ? com.tcn.cloud.api.api.commons.billing.InvoiceFormat.UNRECOGNIZED : result;
   }
@@ -390,10 +351,6 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * <pre>
-   * GetInvoiceReq - request to get an invoice
-   * </pre>
-   *
    * Protobuf type {@code api.v1alpha1.billing.GetInvoiceReq}
    */
   public static final class Builder extends
@@ -611,31 +568,21 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> invoiceDateBuilder_;
     /**
-     * <pre>
-     * Optional. the date of the invoice to retrieve. If not specified,
-     * will return the invoice associated with the current billing cycle.
-     * Otherwise, it will return the invoice associated with the billing
-     * cycle that contains the specified date.
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp invoice_date = 1 [json_name = "invoiceDate"];</code>
+     * <code>.google.protobuf.Timestamp invoice_date = 1 [json_name = "invoiceDate", deprecated = true];</code>
+     * @deprecated api.v1alpha1.billing.GetInvoiceReq.invoice_date is deprecated.
+     *     See api/v1alpha1/billing/entities.proto;l=33
      * @return Whether the invoiceDate field is set.
      */
-    public boolean hasInvoiceDate() {
+    @java.lang.Deprecated public boolean hasInvoiceDate() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <pre>
-     * Optional. the date of the invoice to retrieve. If not specified,
-     * will return the invoice associated with the current billing cycle.
-     * Otherwise, it will return the invoice associated with the billing
-     * cycle that contains the specified date.
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp invoice_date = 1 [json_name = "invoiceDate"];</code>
+     * <code>.google.protobuf.Timestamp invoice_date = 1 [json_name = "invoiceDate", deprecated = true];</code>
+     * @deprecated api.v1alpha1.billing.GetInvoiceReq.invoice_date is deprecated.
+     *     See api/v1alpha1/billing/entities.proto;l=33
      * @return The invoiceDate.
      */
-    public com.google.protobuf.Timestamp getInvoiceDate() {
+    @java.lang.Deprecated public com.google.protobuf.Timestamp getInvoiceDate() {
       if (invoiceDateBuilder_ == null) {
         return invoiceDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : invoiceDate_;
       } else {
@@ -643,16 +590,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Optional. the date of the invoice to retrieve. If not specified,
-     * will return the invoice associated with the current billing cycle.
-     * Otherwise, it will return the invoice associated with the billing
-     * cycle that contains the specified date.
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp invoice_date = 1 [json_name = "invoiceDate"];</code>
+     * <code>.google.protobuf.Timestamp invoice_date = 1 [json_name = "invoiceDate", deprecated = true];</code>
      */
-    public Builder setInvoiceDate(com.google.protobuf.Timestamp value) {
+    @java.lang.Deprecated public Builder setInvoiceDate(com.google.protobuf.Timestamp value) {
       if (invoiceDateBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -666,16 +606,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Optional. the date of the invoice to retrieve. If not specified,
-     * will return the invoice associated with the current billing cycle.
-     * Otherwise, it will return the invoice associated with the billing
-     * cycle that contains the specified date.
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp invoice_date = 1 [json_name = "invoiceDate"];</code>
+     * <code>.google.protobuf.Timestamp invoice_date = 1 [json_name = "invoiceDate", deprecated = true];</code>
      */
-    public Builder setInvoiceDate(
+    @java.lang.Deprecated public Builder setInvoiceDate(
         com.google.protobuf.Timestamp.Builder builderForValue) {
       if (invoiceDateBuilder_ == null) {
         invoiceDate_ = builderForValue.build();
@@ -687,16 +620,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Optional. the date of the invoice to retrieve. If not specified,
-     * will return the invoice associated with the current billing cycle.
-     * Otherwise, it will return the invoice associated with the billing
-     * cycle that contains the specified date.
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp invoice_date = 1 [json_name = "invoiceDate"];</code>
+     * <code>.google.protobuf.Timestamp invoice_date = 1 [json_name = "invoiceDate", deprecated = true];</code>
      */
-    public Builder mergeInvoiceDate(com.google.protobuf.Timestamp value) {
+    @java.lang.Deprecated public Builder mergeInvoiceDate(com.google.protobuf.Timestamp value) {
       if (invoiceDateBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0) &&
           invoiceDate_ != null &&
@@ -713,16 +639,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Optional. the date of the invoice to retrieve. If not specified,
-     * will return the invoice associated with the current billing cycle.
-     * Otherwise, it will return the invoice associated with the billing
-     * cycle that contains the specified date.
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp invoice_date = 1 [json_name = "invoiceDate"];</code>
+     * <code>.google.protobuf.Timestamp invoice_date = 1 [json_name = "invoiceDate", deprecated = true];</code>
      */
-    public Builder clearInvoiceDate() {
+    @java.lang.Deprecated public Builder clearInvoiceDate() {
       bitField0_ = (bitField0_ & ~0x00000001);
       invoiceDate_ = null;
       if (invoiceDateBuilder_ != null) {
@@ -733,31 +652,17 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Optional. the date of the invoice to retrieve. If not specified,
-     * will return the invoice associated with the current billing cycle.
-     * Otherwise, it will return the invoice associated with the billing
-     * cycle that contains the specified date.
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp invoice_date = 1 [json_name = "invoiceDate"];</code>
+     * <code>.google.protobuf.Timestamp invoice_date = 1 [json_name = "invoiceDate", deprecated = true];</code>
      */
-    public com.google.protobuf.Timestamp.Builder getInvoiceDateBuilder() {
+    @java.lang.Deprecated public com.google.protobuf.Timestamp.Builder getInvoiceDateBuilder() {
       bitField0_ |= 0x00000001;
       onChanged();
       return getInvoiceDateFieldBuilder().getBuilder();
     }
     /**
-     * <pre>
-     * Optional. the date of the invoice to retrieve. If not specified,
-     * will return the invoice associated with the current billing cycle.
-     * Otherwise, it will return the invoice associated with the billing
-     * cycle that contains the specified date.
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp invoice_date = 1 [json_name = "invoiceDate"];</code>
+     * <code>.google.protobuf.Timestamp invoice_date = 1 [json_name = "invoiceDate", deprecated = true];</code>
      */
-    public com.google.protobuf.TimestampOrBuilder getInvoiceDateOrBuilder() {
+    @java.lang.Deprecated public com.google.protobuf.TimestampOrBuilder getInvoiceDateOrBuilder() {
       if (invoiceDateBuilder_ != null) {
         return invoiceDateBuilder_.getMessageOrBuilder();
       } else {
@@ -766,14 +671,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Optional. the date of the invoice to retrieve. If not specified,
-     * will return the invoice associated with the current billing cycle.
-     * Otherwise, it will return the invoice associated with the billing
-     * cycle that contains the specified date.
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp invoice_date = 1 [json_name = "invoiceDate"];</code>
+     * <code>.google.protobuf.Timestamp invoice_date = 1 [json_name = "invoiceDate", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -791,14 +689,12 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object orgId_ = "";
     /**
-     * <pre>
-     * Required. the identifier of the organization to update the plan for
-     * </pre>
-     *
-     * <code>string org_id = 2 [json_name = "orgId"];</code>
+     * <code>string org_id = 2 [json_name = "orgId", deprecated = true];</code>
+     * @deprecated api.v1alpha1.billing.GetInvoiceReq.org_id is deprecated.
+     *     See api/v1alpha1/billing/entities.proto;l=34
      * @return The orgId.
      */
-    public java.lang.String getOrgId() {
+    @java.lang.Deprecated public java.lang.String getOrgId() {
       java.lang.Object ref = orgId_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -811,14 +707,12 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Required. the identifier of the organization to update the plan for
-     * </pre>
-     *
-     * <code>string org_id = 2 [json_name = "orgId"];</code>
+     * <code>string org_id = 2 [json_name = "orgId", deprecated = true];</code>
+     * @deprecated api.v1alpha1.billing.GetInvoiceReq.org_id is deprecated.
+     *     See api/v1alpha1/billing/entities.proto;l=34
      * @return The bytes for orgId.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getOrgIdBytes() {
       java.lang.Object ref = orgId_;
       if (ref instanceof String) {
@@ -832,15 +726,13 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Required. the identifier of the organization to update the plan for
-     * </pre>
-     *
-     * <code>string org_id = 2 [json_name = "orgId"];</code>
+     * <code>string org_id = 2 [json_name = "orgId", deprecated = true];</code>
+     * @deprecated api.v1alpha1.billing.GetInvoiceReq.org_id is deprecated.
+     *     See api/v1alpha1/billing/entities.proto;l=34
      * @param value The orgId to set.
      * @return This builder for chaining.
      */
-    public Builder setOrgId(
+    @java.lang.Deprecated public Builder setOrgId(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       orgId_ = value;
@@ -849,29 +741,25 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Required. the identifier of the organization to update the plan for
-     * </pre>
-     *
-     * <code>string org_id = 2 [json_name = "orgId"];</code>
+     * <code>string org_id = 2 [json_name = "orgId", deprecated = true];</code>
+     * @deprecated api.v1alpha1.billing.GetInvoiceReq.org_id is deprecated.
+     *     See api/v1alpha1/billing/entities.proto;l=34
      * @return This builder for chaining.
      */
-    public Builder clearOrgId() {
+    @java.lang.Deprecated public Builder clearOrgId() {
       orgId_ = getDefaultInstance().getOrgId();
       bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
     /**
-     * <pre>
-     * Required. the identifier of the organization to update the plan for
-     * </pre>
-     *
-     * <code>string org_id = 2 [json_name = "orgId"];</code>
+     * <code>string org_id = 2 [json_name = "orgId", deprecated = true];</code>
+     * @deprecated api.v1alpha1.billing.GetInvoiceReq.org_id is deprecated.
+     *     See api/v1alpha1/billing/entities.proto;l=34
      * @param value The bytes for orgId to set.
      * @return This builder for chaining.
      */
-    public Builder setOrgIdBytes(
+    @java.lang.Deprecated public Builder setOrgIdBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
@@ -883,26 +771,18 @@ private static final long serialVersionUID = 0L;
 
     private int format_ = 0;
     /**
-     * <pre>
-     * deprecated
-     * </pre>
-     *
      * <code>.api.v1alpha1.billing.InvoiceFormat format = 3 [json_name = "format", deprecated = true];</code>
      * @deprecated api.v1alpha1.billing.GetInvoiceReq.format is deprecated.
-     *     See api/v1alpha1/billing/entities.proto;l=47
+     *     See api/v1alpha1/billing/entities.proto;l=35
      * @return The enum numeric value on the wire for format.
      */
     @java.lang.Override @java.lang.Deprecated public int getFormatValue() {
       return format_;
     }
     /**
-     * <pre>
-     * deprecated
-     * </pre>
-     *
      * <code>.api.v1alpha1.billing.InvoiceFormat format = 3 [json_name = "format", deprecated = true];</code>
      * @deprecated api.v1alpha1.billing.GetInvoiceReq.format is deprecated.
-     *     See api/v1alpha1/billing/entities.proto;l=47
+     *     See api/v1alpha1/billing/entities.proto;l=35
      * @param value The enum numeric value on the wire for format to set.
      * @return This builder for chaining.
      */
@@ -913,13 +793,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * deprecated
-     * </pre>
-     *
      * <code>.api.v1alpha1.billing.InvoiceFormat format = 3 [json_name = "format", deprecated = true];</code>
      * @deprecated api.v1alpha1.billing.GetInvoiceReq.format is deprecated.
-     *     See api/v1alpha1/billing/entities.proto;l=47
+     *     See api/v1alpha1/billing/entities.proto;l=35
      * @return The format.
      */
     @java.lang.Override
@@ -928,13 +804,9 @@ private static final long serialVersionUID = 0L;
       return result == null ? com.tcn.cloud.api.api.v1alpha1.billing.InvoiceFormat.UNRECOGNIZED : result;
     }
     /**
-     * <pre>
-     * deprecated
-     * </pre>
-     *
      * <code>.api.v1alpha1.billing.InvoiceFormat format = 3 [json_name = "format", deprecated = true];</code>
      * @deprecated api.v1alpha1.billing.GetInvoiceReq.format is deprecated.
-     *     See api/v1alpha1/billing/entities.proto;l=47
+     *     See api/v1alpha1/billing/entities.proto;l=35
      * @param value The format to set.
      * @return This builder for chaining.
      */
@@ -948,13 +820,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * deprecated
-     * </pre>
-     *
      * <code>.api.v1alpha1.billing.InvoiceFormat format = 3 [json_name = "format", deprecated = true];</code>
      * @deprecated api.v1alpha1.billing.GetInvoiceReq.format is deprecated.
-     *     See api/v1alpha1/billing/entities.proto;l=47
+     *     See api/v1alpha1/billing/entities.proto;l=35
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearFormat() {
@@ -966,58 +834,46 @@ private static final long serialVersionUID = 0L;
 
     private int invoiceFormat_ = 0;
     /**
-     * <pre>
-     * Optional. the format the invoice is returned using. If not specified,
-     * will use the proto format as the default
-     * </pre>
-     *
-     * <code>.api.commons.billing.InvoiceFormat invoice_format = 4 [json_name = "invoiceFormat"];</code>
+     * <code>.api.commons.billing.InvoiceFormat invoice_format = 4 [json_name = "invoiceFormat", deprecated = true];</code>
+     * @deprecated api.v1alpha1.billing.GetInvoiceReq.invoice_format is deprecated.
+     *     See api/v1alpha1/billing/entities.proto;l=36
      * @return The enum numeric value on the wire for invoiceFormat.
      */
-    @java.lang.Override public int getInvoiceFormatValue() {
+    @java.lang.Override @java.lang.Deprecated public int getInvoiceFormatValue() {
       return invoiceFormat_;
     }
     /**
-     * <pre>
-     * Optional. the format the invoice is returned using. If not specified,
-     * will use the proto format as the default
-     * </pre>
-     *
-     * <code>.api.commons.billing.InvoiceFormat invoice_format = 4 [json_name = "invoiceFormat"];</code>
+     * <code>.api.commons.billing.InvoiceFormat invoice_format = 4 [json_name = "invoiceFormat", deprecated = true];</code>
+     * @deprecated api.v1alpha1.billing.GetInvoiceReq.invoice_format is deprecated.
+     *     See api/v1alpha1/billing/entities.proto;l=36
      * @param value The enum numeric value on the wire for invoiceFormat to set.
      * @return This builder for chaining.
      */
-    public Builder setInvoiceFormatValue(int value) {
+    @java.lang.Deprecated public Builder setInvoiceFormatValue(int value) {
       invoiceFormat_ = value;
       bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
     /**
-     * <pre>
-     * Optional. the format the invoice is returned using. If not specified,
-     * will use the proto format as the default
-     * </pre>
-     *
-     * <code>.api.commons.billing.InvoiceFormat invoice_format = 4 [json_name = "invoiceFormat"];</code>
+     * <code>.api.commons.billing.InvoiceFormat invoice_format = 4 [json_name = "invoiceFormat", deprecated = true];</code>
+     * @deprecated api.v1alpha1.billing.GetInvoiceReq.invoice_format is deprecated.
+     *     See api/v1alpha1/billing/entities.proto;l=36
      * @return The invoiceFormat.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.InvoiceFormat getInvoiceFormat() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.InvoiceFormat getInvoiceFormat() {
       com.tcn.cloud.api.api.commons.billing.InvoiceFormat result = com.tcn.cloud.api.api.commons.billing.InvoiceFormat.forNumber(invoiceFormat_);
       return result == null ? com.tcn.cloud.api.api.commons.billing.InvoiceFormat.UNRECOGNIZED : result;
     }
     /**
-     * <pre>
-     * Optional. the format the invoice is returned using. If not specified,
-     * will use the proto format as the default
-     * </pre>
-     *
-     * <code>.api.commons.billing.InvoiceFormat invoice_format = 4 [json_name = "invoiceFormat"];</code>
+     * <code>.api.commons.billing.InvoiceFormat invoice_format = 4 [json_name = "invoiceFormat", deprecated = true];</code>
+     * @deprecated api.v1alpha1.billing.GetInvoiceReq.invoice_format is deprecated.
+     *     See api/v1alpha1/billing/entities.proto;l=36
      * @param value The invoiceFormat to set.
      * @return This builder for chaining.
      */
-    public Builder setInvoiceFormat(com.tcn.cloud.api.api.commons.billing.InvoiceFormat value) {
+    @java.lang.Deprecated public Builder setInvoiceFormat(com.tcn.cloud.api.api.commons.billing.InvoiceFormat value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -1027,15 +883,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Optional. the format the invoice is returned using. If not specified,
-     * will use the proto format as the default
-     * </pre>
-     *
-     * <code>.api.commons.billing.InvoiceFormat invoice_format = 4 [json_name = "invoiceFormat"];</code>
+     * <code>.api.commons.billing.InvoiceFormat invoice_format = 4 [json_name = "invoiceFormat", deprecated = true];</code>
+     * @deprecated api.v1alpha1.billing.GetInvoiceReq.invoice_format is deprecated.
+     *     See api/v1alpha1/billing/entities.proto;l=36
      * @return This builder for chaining.
      */
-    public Builder clearInvoiceFormat() {
+    @java.lang.Deprecated public Builder clearInvoiceFormat() {
       bitField0_ = (bitField0_ & ~0x00000008);
       invoiceFormat_ = 0;
       onChanged();

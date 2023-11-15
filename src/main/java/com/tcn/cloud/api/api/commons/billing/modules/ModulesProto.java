@@ -35,18 +35,19 @@ public final class ModulesProto {
     java.lang.String[] descriptorData = {
       "\n)api/commons/billing/modules/modules.pr" +
       "oto\022\033api.commons.billing.modules\032\036google" +
-      "/protobuf/wrappers.proto\"!\n\013BasicConfig\022" +
-      "\022\n\004rate\030\001 \001(\001R\004rate\"\303\001\n\021BasicAmountConfi" +
-      "g\022\026\n\006amount\030\001 \001(\003R\006amount\022\022\n\004rate\030\002 \001(\001R" +
-      "\004rate\022@\n\rmin_increment\030\003 \001(\0132\033.google.pr" +
-      "otobuf.Int64ValueR\014minIncrement\022@\n\rmax_i" +
-      "ncrement\030\004 \001(\0132\033.google.protobuf.Int64Va" +
-      "lueR\014maxIncrementB\315\001\n-com.tcn.cloud.api." +
-      "api.commons.billing.modulesB\014ModulesProt" +
-      "oP\001\242\002\004ACBM\252\002\033Api.Commons.Billing.Modules" +
-      "\312\002\033Api\\Commons\\Billing\\Modules\342\002\'Api\\Com" +
-      "mons\\Billing\\Modules\\GPBMetadata\352\002\036Api::" +
-      "Commons::Billing::Modulesb\006proto3"
+      "/protobuf/wrappers.proto\")\n\013BasicConfig\022" +
+      "\026\n\004rate\030\001 \001(\001B\002\030\001R\004rate:\002\030\001\"\327\001\n\021BasicAmo" +
+      "untConfig\022\032\n\006amount\030\001 \001(\003B\002\030\001R\006amount\022\026\n" +
+      "\004rate\030\002 \001(\001B\002\030\001R\004rate\022D\n\rmin_increment\030\003" +
+      " \001(\0132\033.google.protobuf.Int64ValueB\002\030\001R\014m" +
+      "inIncrement\022D\n\rmax_increment\030\004 \001(\0132\033.goo" +
+      "gle.protobuf.Int64ValueB\002\030\001R\014maxIncremen" +
+      "t:\002\030\001B\315\001\n-com.tcn.cloud.api.api.commons." +
+      "billing.modulesB\014ModulesProtoP\001\242\002\004ACBM\252\002" +
+      "\033Api.Commons.Billing.Modules\312\002\033Api\\Commo" +
+      "ns\\Billing\\Modules\342\002\'Api\\Commons\\Billing" +
+      "\\Modules\\GPBMetadata\352\002\036Api::Commons::Bil" +
+      "ling::Modulesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -4,14 +4,9 @@
 package com.tcn.cloud.api.api.commons.billing;
 
 /**
- * <pre>
- * Product - represents a billed product. A product should show up only
- * once in a monthly invoice.
- * </pre>
- *
  * Protobuf enum {@code api.commons.billing.Product}
  */
-public enum Product
+@java.lang.Deprecated public enum Product
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
    * <code>PRODUCT_UNSPECIFIED = 0;</code>

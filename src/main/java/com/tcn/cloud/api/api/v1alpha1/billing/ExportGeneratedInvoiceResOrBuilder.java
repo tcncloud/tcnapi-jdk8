@@ -3,21 +3,21 @@
 
 package com.tcn.cloud.api.api.v1alpha1.billing;
 
-public interface ExportGeneratedInvoiceResOrBuilder extends
+@java.lang.Deprecated public interface ExportGeneratedInvoiceResOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v1alpha1.billing.ExportGeneratedInvoiceRes)
     com.google.protobuf.MessageOrBuilder {
 
   /**
    * <code>.api.commons.billing.Invoice proto = 1 [json_name = "proto", deprecated = true];</code>
    * @deprecated api.v1alpha1.billing.ExportGeneratedInvoiceRes.proto is deprecated.
-   *     See api/v1alpha1/billing/entities.proto;l=91
+   *     See api/v1alpha1/billing/entities.proto;l=64
    * @return Whether the proto field is set.
    */
   @java.lang.Deprecated boolean hasProto();
   /**
    * <code>.api.commons.billing.Invoice proto = 1 [json_name = "proto", deprecated = true];</code>
    * @deprecated api.v1alpha1.billing.ExportGeneratedInvoiceRes.proto is deprecated.
-   *     See api/v1alpha1/billing/entities.proto;l=91
+   *     See api/v1alpha1/billing/entities.proto;l=64
    * @return The proto.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.Invoice getProto();
@@ -29,76 +29,82 @@ public interface ExportGeneratedInvoiceResOrBuilder extends
   /**
    * <code>string csv_url = 2 [json_name = "csvUrl", deprecated = true];</code>
    * @deprecated api.v1alpha1.billing.ExportGeneratedInvoiceRes.csv_url is deprecated.
-   *     See api/v1alpha1/billing/entities.proto;l=92
+   *     See api/v1alpha1/billing/entities.proto;l=65
    * @return Whether the csvUrl field is set.
    */
   @java.lang.Deprecated boolean hasCsvUrl();
   /**
    * <code>string csv_url = 2 [json_name = "csvUrl", deprecated = true];</code>
    * @deprecated api.v1alpha1.billing.ExportGeneratedInvoiceRes.csv_url is deprecated.
-   *     See api/v1alpha1/billing/entities.proto;l=92
+   *     See api/v1alpha1/billing/entities.proto;l=65
    * @return The csvUrl.
    */
   @java.lang.Deprecated java.lang.String getCsvUrl();
   /**
    * <code>string csv_url = 2 [json_name = "csvUrl", deprecated = true];</code>
    * @deprecated api.v1alpha1.billing.ExportGeneratedInvoiceRes.csv_url is deprecated.
-   *     See api/v1alpha1/billing/entities.proto;l=92
+   *     See api/v1alpha1/billing/entities.proto;l=65
    * @return The bytes for csvUrl.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString
       getCsvUrlBytes();
 
   /**
-   * <code>.api.commons.billing.Invoice invoice_proto = 100 [json_name = "invoiceProto"];</code>
+   * <code>.api.commons.billing.Invoice invoice_proto = 100 [json_name = "invoiceProto", deprecated = true];</code>
+   * @deprecated api.v1alpha1.billing.ExportGeneratedInvoiceRes.invoice_proto is deprecated.
+   *     See api/v1alpha1/billing/entities.proto;l=68
    * @return Whether the invoiceProto field is set.
    */
-  boolean hasInvoiceProto();
+  @java.lang.Deprecated boolean hasInvoiceProto();
   /**
-   * <code>.api.commons.billing.Invoice invoice_proto = 100 [json_name = "invoiceProto"];</code>
+   * <code>.api.commons.billing.Invoice invoice_proto = 100 [json_name = "invoiceProto", deprecated = true];</code>
+   * @deprecated api.v1alpha1.billing.ExportGeneratedInvoiceRes.invoice_proto is deprecated.
+   *     See api/v1alpha1/billing/entities.proto;l=68
    * @return The invoiceProto.
    */
-  com.tcn.cloud.api.api.commons.billing.Invoice getInvoiceProto();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.Invoice getInvoiceProto();
   /**
-   * <code>.api.commons.billing.Invoice invoice_proto = 100 [json_name = "invoiceProto"];</code>
+   * <code>.api.commons.billing.Invoice invoice_proto = 100 [json_name = "invoiceProto", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.billing.InvoiceOrBuilder getInvoiceProtoOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.InvoiceOrBuilder getInvoiceProtoOrBuilder();
 
   /**
-   * <code>string invoice_csv_url = 101 [json_name = "invoiceCsvUrl"];</code>
+   * <code>string invoice_csv_url = 101 [json_name = "invoiceCsvUrl", deprecated = true];</code>
+   * @deprecated api.v1alpha1.billing.ExportGeneratedInvoiceRes.invoice_csv_url is deprecated.
+   *     See api/v1alpha1/billing/entities.proto;l=69
    * @return Whether the invoiceCsvUrl field is set.
    */
-  boolean hasInvoiceCsvUrl();
+  @java.lang.Deprecated boolean hasInvoiceCsvUrl();
   /**
-   * <code>string invoice_csv_url = 101 [json_name = "invoiceCsvUrl"];</code>
+   * <code>string invoice_csv_url = 101 [json_name = "invoiceCsvUrl", deprecated = true];</code>
+   * @deprecated api.v1alpha1.billing.ExportGeneratedInvoiceRes.invoice_csv_url is deprecated.
+   *     See api/v1alpha1/billing/entities.proto;l=69
    * @return The invoiceCsvUrl.
    */
-  java.lang.String getInvoiceCsvUrl();
+  @java.lang.Deprecated java.lang.String getInvoiceCsvUrl();
   /**
-   * <code>string invoice_csv_url = 101 [json_name = "invoiceCsvUrl"];</code>
+   * <code>string invoice_csv_url = 101 [json_name = "invoiceCsvUrl", deprecated = true];</code>
+   * @deprecated api.v1alpha1.billing.ExportGeneratedInvoiceRes.invoice_csv_url is deprecated.
+   *     See api/v1alpha1/billing/entities.proto;l=69
    * @return The bytes for invoiceCsvUrl.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getInvoiceCsvUrlBytes();
 
   /**
-   * <pre>
-   * the billing cycle of the invoice requested
-   * </pre>
-   *
-   * <code>string billing_cycle = 4 [json_name = "billingCycle"];</code>
+   * <code>string billing_cycle = 4 [json_name = "billingCycle", deprecated = true];</code>
+   * @deprecated api.v1alpha1.billing.ExportGeneratedInvoiceRes.billing_cycle is deprecated.
+   *     See api/v1alpha1/billing/entities.proto;l=71
    * @return The billingCycle.
    */
-  java.lang.String getBillingCycle();
+  @java.lang.Deprecated java.lang.String getBillingCycle();
   /**
-   * <pre>
-   * the billing cycle of the invoice requested
-   * </pre>
-   *
-   * <code>string billing_cycle = 4 [json_name = "billingCycle"];</code>
+   * <code>string billing_cycle = 4 [json_name = "billingCycle", deprecated = true];</code>
+   * @deprecated api.v1alpha1.billing.ExportGeneratedInvoiceRes.billing_cycle is deprecated.
+   *     See api/v1alpha1/billing/entities.proto;l=71
    * @return The bytes for billingCycle.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getBillingCycleBytes();
 
   com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceRes.FormatCase getFormatCase();

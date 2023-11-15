@@ -3,17 +3,15 @@
 
 package com.tcn.cloud.api.api.commons.billing.modules;
 
-public interface BasicConfigOrBuilder extends
+@java.lang.Deprecated public interface BasicConfigOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.commons.billing.modules.BasicConfig)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <pre>
-   * Required. the amount to rate a single event
-   * </pre>
-   *
-   * <code>double rate = 1 [json_name = "rate"];</code>
+   * <code>double rate = 1 [json_name = "rate", deprecated = true];</code>
+   * @deprecated api.commons.billing.modules.BasicConfig.rate is deprecated.
+   *     See api/commons/billing/modules/modules.proto;l=8
    * @return The rate.
    */
-  double getRate();
+  @java.lang.Deprecated double getRate();
 }

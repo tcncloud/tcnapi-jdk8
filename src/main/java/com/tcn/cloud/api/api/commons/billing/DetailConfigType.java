@@ -4,13 +4,9 @@
 package com.tcn.cloud.api.api.commons.billing;
 
 /**
- * <pre>
- * DetailConfigType - the types of billing detail configurations available
- * </pre>
- *
  * Protobuf enum {@code api.commons.billing.DetailConfigType}
  */
-public enum DetailConfigType
+@java.lang.Deprecated public enum DetailConfigType
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
    * <code>DETAIL_CONFIG_TYPE_UNSPECIFIED = 0;</code>

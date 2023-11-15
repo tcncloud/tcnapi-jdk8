@@ -3,34 +3,26 @@
 
 package com.tcn.cloud.api.api.v1alpha1.billing;
 
-public interface GetBillingPlanResOrBuilder extends
+@java.lang.Deprecated public interface GetBillingPlanResOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v1alpha1.billing.GetBillingPlanRes)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <pre>
-   * the billing plan
-   * </pre>
-   *
-   * <code>.api.commons.billing.Plan billing_plan = 1 [json_name = "billingPlan"];</code>
+   * <code>.api.commons.billing.Plan billing_plan = 1 [json_name = "billingPlan", deprecated = true];</code>
+   * @deprecated api.v1alpha1.billing.GetBillingPlanRes.billing_plan is deprecated.
+   *     See api/v1alpha1/billing/entities.proto;l=17
    * @return Whether the billingPlan field is set.
    */
-  boolean hasBillingPlan();
+  @java.lang.Deprecated boolean hasBillingPlan();
   /**
-   * <pre>
-   * the billing plan
-   * </pre>
-   *
-   * <code>.api.commons.billing.Plan billing_plan = 1 [json_name = "billingPlan"];</code>
+   * <code>.api.commons.billing.Plan billing_plan = 1 [json_name = "billingPlan", deprecated = true];</code>
+   * @deprecated api.v1alpha1.billing.GetBillingPlanRes.billing_plan is deprecated.
+   *     See api/v1alpha1/billing/entities.proto;l=17
    * @return The billingPlan.
    */
-  com.tcn.cloud.api.api.commons.billing.Plan getBillingPlan();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.Plan getBillingPlan();
   /**
-   * <pre>
-   * the billing plan
-   * </pre>
-   *
-   * <code>.api.commons.billing.Plan billing_plan = 1 [json_name = "billingPlan"];</code>
+   * <code>.api.commons.billing.Plan billing_plan = 1 [json_name = "billingPlan", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.billing.PlanOrBuilder getBillingPlanOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.PlanOrBuilder getBillingPlanOrBuilder();
 }

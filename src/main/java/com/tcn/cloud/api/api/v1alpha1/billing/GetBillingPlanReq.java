@@ -4,13 +4,9 @@
 package com.tcn.cloud.api.api.v1alpha1.billing;
 
 /**
- * <pre>
- * GetBillingPlanReq - request to get an organization's billing plan
- * </pre>
- *
  * Protobuf type {@code api.v1alpha1.billing.GetBillingPlanReq}
  */
-public final class GetBillingPlanReq extends
+@java.lang.Deprecated public final class GetBillingPlanReq extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.v1alpha1.billing.GetBillingPlanReq)
     GetBillingPlanReqOrBuilder {
@@ -47,15 +43,13 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object orgId_ = "";
   /**
-   * <pre>
-   * Required. the identifier of the organization to get the plan for
-   * </pre>
-   *
-   * <code>string org_id = 1 [json_name = "orgId"];</code>
+   * <code>string org_id = 1 [json_name = "orgId", deprecated = true];</code>
+   * @deprecated api.v1alpha1.billing.GetBillingPlanReq.org_id is deprecated.
+   *     See api/v1alpha1/billing/entities.proto;l=12
    * @return The orgId.
    */
   @java.lang.Override
-  public java.lang.String getOrgId() {
+  @java.lang.Deprecated public java.lang.String getOrgId() {
     java.lang.Object ref = orgId_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -68,15 +62,13 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   * Required. the identifier of the organization to get the plan for
-   * </pre>
-   *
-   * <code>string org_id = 1 [json_name = "orgId"];</code>
+   * <code>string org_id = 1 [json_name = "orgId", deprecated = true];</code>
+   * @deprecated api.v1alpha1.billing.GetBillingPlanReq.org_id is deprecated.
+   *     See api/v1alpha1/billing/entities.proto;l=12
    * @return The bytes for orgId.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
+  @java.lang.Deprecated public com.google.protobuf.ByteString
       getOrgIdBytes() {
     java.lang.Object ref = orgId_;
     if (ref instanceof java.lang.String) {
@@ -247,10 +239,6 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * <pre>
-   * GetBillingPlanReq - request to get an organization's billing plan
-   * </pre>
-   *
    * Protobuf type {@code api.v1alpha1.billing.GetBillingPlanReq}
    */
   public static final class Builder extends
@@ -422,14 +410,12 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object orgId_ = "";
     /**
-     * <pre>
-     * Required. the identifier of the organization to get the plan for
-     * </pre>
-     *
-     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     * <code>string org_id = 1 [json_name = "orgId", deprecated = true];</code>
+     * @deprecated api.v1alpha1.billing.GetBillingPlanReq.org_id is deprecated.
+     *     See api/v1alpha1/billing/entities.proto;l=12
      * @return The orgId.
      */
-    public java.lang.String getOrgId() {
+    @java.lang.Deprecated public java.lang.String getOrgId() {
       java.lang.Object ref = orgId_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -442,14 +428,12 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Required. the identifier of the organization to get the plan for
-     * </pre>
-     *
-     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     * <code>string org_id = 1 [json_name = "orgId", deprecated = true];</code>
+     * @deprecated api.v1alpha1.billing.GetBillingPlanReq.org_id is deprecated.
+     *     See api/v1alpha1/billing/entities.proto;l=12
      * @return The bytes for orgId.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getOrgIdBytes() {
       java.lang.Object ref = orgId_;
       if (ref instanceof String) {
@@ -463,15 +447,13 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Required. the identifier of the organization to get the plan for
-     * </pre>
-     *
-     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     * <code>string org_id = 1 [json_name = "orgId", deprecated = true];</code>
+     * @deprecated api.v1alpha1.billing.GetBillingPlanReq.org_id is deprecated.
+     *     See api/v1alpha1/billing/entities.proto;l=12
      * @param value The orgId to set.
      * @return This builder for chaining.
      */
-    public Builder setOrgId(
+    @java.lang.Deprecated public Builder setOrgId(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       orgId_ = value;
@@ -480,29 +462,25 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Required. the identifier of the organization to get the plan for
-     * </pre>
-     *
-     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     * <code>string org_id = 1 [json_name = "orgId", deprecated = true];</code>
+     * @deprecated api.v1alpha1.billing.GetBillingPlanReq.org_id is deprecated.
+     *     See api/v1alpha1/billing/entities.proto;l=12
      * @return This builder for chaining.
      */
-    public Builder clearOrgId() {
+    @java.lang.Deprecated public Builder clearOrgId() {
       orgId_ = getDefaultInstance().getOrgId();
       bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
     /**
-     * <pre>
-     * Required. the identifier of the organization to get the plan for
-     * </pre>
-     *
-     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     * <code>string org_id = 1 [json_name = "orgId", deprecated = true];</code>
+     * @deprecated api.v1alpha1.billing.GetBillingPlanReq.org_id is deprecated.
+     *     See api/v1alpha1/billing/entities.proto;l=12
      * @param value The bytes for orgId to set.
      * @return This builder for chaining.
      */
-    public Builder setOrgIdBytes(
+    @java.lang.Deprecated public Builder setOrgIdBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);

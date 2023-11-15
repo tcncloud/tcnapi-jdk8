@@ -3,71 +3,47 @@
 
 package com.tcn.cloud.api.api.v1alpha1.billing;
 
-public interface UpdateBillingPlanReqOrBuilder extends
+@java.lang.Deprecated public interface UpdateBillingPlanReqOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v1alpha1.billing.UpdateBillingPlanReq)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <pre>
-   * Required. the billing details to update
-   * </pre>
-   *
-   * <code>repeated .api.commons.billing.Detail billing_details = 1 [json_name = "billingDetails"];</code>
+   * <code>repeated .api.commons.billing.Detail billing_details = 1 [json_name = "billingDetails", deprecated = true];</code>
    */
-  java.util.List<com.tcn.cloud.api.api.commons.billing.Detail> 
+  @java.lang.Deprecated java.util.List<com.tcn.cloud.api.api.commons.billing.Detail> 
       getBillingDetailsList();
   /**
-   * <pre>
-   * Required. the billing details to update
-   * </pre>
-   *
-   * <code>repeated .api.commons.billing.Detail billing_details = 1 [json_name = "billingDetails"];</code>
+   * <code>repeated .api.commons.billing.Detail billing_details = 1 [json_name = "billingDetails", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.billing.Detail getBillingDetails(int index);
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.Detail getBillingDetails(int index);
   /**
-   * <pre>
-   * Required. the billing details to update
-   * </pre>
-   *
-   * <code>repeated .api.commons.billing.Detail billing_details = 1 [json_name = "billingDetails"];</code>
+   * <code>repeated .api.commons.billing.Detail billing_details = 1 [json_name = "billingDetails", deprecated = true];</code>
    */
-  int getBillingDetailsCount();
+  @java.lang.Deprecated int getBillingDetailsCount();
   /**
-   * <pre>
-   * Required. the billing details to update
-   * </pre>
-   *
-   * <code>repeated .api.commons.billing.Detail billing_details = 1 [json_name = "billingDetails"];</code>
+   * <code>repeated .api.commons.billing.Detail billing_details = 1 [json_name = "billingDetails", deprecated = true];</code>
    */
-  java.util.List<? extends com.tcn.cloud.api.api.commons.billing.DetailOrBuilder> 
+  @java.lang.Deprecated java.util.List<? extends com.tcn.cloud.api.api.commons.billing.DetailOrBuilder> 
       getBillingDetailsOrBuilderList();
   /**
-   * <pre>
-   * Required. the billing details to update
-   * </pre>
-   *
-   * <code>repeated .api.commons.billing.Detail billing_details = 1 [json_name = "billingDetails"];</code>
+   * <code>repeated .api.commons.billing.Detail billing_details = 1 [json_name = "billingDetails", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.billing.DetailOrBuilder getBillingDetailsOrBuilder(
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.DetailOrBuilder getBillingDetailsOrBuilder(
       int index);
 
   /**
-   * <pre>
-   * Required. the identifier of the organization to update the plan for
-   * </pre>
-   *
-   * <code>string org_id = 2 [json_name = "orgId"];</code>
+   * <code>string org_id = 2 [json_name = "orgId", deprecated = true];</code>
+   * @deprecated api.v1alpha1.billing.UpdateBillingPlanReq.org_id is deprecated.
+   *     See api/v1alpha1/billing/entities.proto;l=23
    * @return The orgId.
    */
-  java.lang.String getOrgId();
+  @java.lang.Deprecated java.lang.String getOrgId();
   /**
-   * <pre>
-   * Required. the identifier of the organization to update the plan for
-   * </pre>
-   *
-   * <code>string org_id = 2 [json_name = "orgId"];</code>
+   * <code>string org_id = 2 [json_name = "orgId", deprecated = true];</code>
+   * @deprecated api.v1alpha1.billing.UpdateBillingPlanReq.org_id is deprecated.
+   *     See api/v1alpha1/billing/entities.proto;l=23
    * @return The bytes for orgId.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getOrgIdBytes();
 }
