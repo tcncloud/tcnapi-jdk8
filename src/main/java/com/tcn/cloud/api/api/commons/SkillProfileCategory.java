@@ -178,7 +178,7 @@ private static final long serialVersionUID = 0L;
    * ID of either a skill profile or a skill profile group determined by &#64;skill_profile_category_type.
    * </pre>
    *
-   * <code>int64 skill_profile_category_sid = 1 [json_name = "skillProfileCategorySid"];</code>
+   * <code>int64 skill_profile_category_sid = 1 [json_name = "skillProfileCategorySid", jstype = JS_STRING];</code>
    * @return The skillProfileCategorySid.
    */
   @java.lang.Override
@@ -570,7 +570,7 @@ private static final long serialVersionUID = 0L;
      * ID of either a skill profile or a skill profile group determined by &#64;skill_profile_category_type.
      * </pre>
      *
-     * <code>int64 skill_profile_category_sid = 1 [json_name = "skillProfileCategorySid"];</code>
+     * <code>int64 skill_profile_category_sid = 1 [json_name = "skillProfileCategorySid", jstype = JS_STRING];</code>
      * @return The skillProfileCategorySid.
      */
     @java.lang.Override
@@ -582,7 +582,7 @@ private static final long serialVersionUID = 0L;
      * ID of either a skill profile or a skill profile group determined by &#64;skill_profile_category_type.
      * </pre>
      *
-     * <code>int64 skill_profile_category_sid = 1 [json_name = "skillProfileCategorySid"];</code>
+     * <code>int64 skill_profile_category_sid = 1 [json_name = "skillProfileCategorySid", jstype = JS_STRING];</code>
      * @param value The skillProfileCategorySid to set.
      * @return This builder for chaining.
      */
@@ -598,7 +598,7 @@ private static final long serialVersionUID = 0L;
      * ID of either a skill profile or a skill profile group determined by &#64;skill_profile_category_type.
      * </pre>
      *
-     * <code>int64 skill_profile_category_sid = 1 [json_name = "skillProfileCategorySid"];</code>
+     * <code>int64 skill_profile_category_sid = 1 [json_name = "skillProfileCategorySid", jstype = JS_STRING];</code>
      * @return This builder for chaining.
      */
     public Builder clearSkillProfileCategorySid() {
