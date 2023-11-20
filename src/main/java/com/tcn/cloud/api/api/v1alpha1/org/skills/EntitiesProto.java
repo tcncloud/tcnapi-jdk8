@@ -141,30 +141,30 @@ public final class EntitiesProto {
       "\014skillGroupId\022\035\n\nfield_mask\030\002 \003(\tR\tfield" +
       "Mask\"U\n\025GetSkillGroupResponse\022<\n\013skill_g" +
       "roup\030\001 \001(\0132\033.api.commons.org.SkillGroupR" +
-      "\nskillGroup\"V\n\027DeleteSkillGroupRequest\022\025" +
-      "\n\006org_id\030\001 \001(\tR\005orgId\022$\n\016skill_group_id\030" +
-      "\002 \001(\tR\014skillGroupId\"\032\n\030DeleteSkillGroupR" +
-      "esponse\"X\n\027AssignSkillGroupRequest\022$\n\016sk" +
-      "ill_group_id\030\001 \001(\tR\014skillGroupId\022\027\n\007user" +
-      "_id\030\002 \001(\tR\006userId\"\032\n\030AssignSkillGroupRes" +
-      "ponse\"X\n\027RevokeSkillGroupRequest\022$\n\016skil" +
-      "l_group_id\030\001 \001(\tR\014skillGroupId\022\027\n\007user_i" +
-      "d\030\002 \001(\tR\006userId\"\032\n\030RevokeSkillGroupRespo" +
-      "nse\"4\n\031GetUserSkillGroupsRequest\022\027\n\007user" +
-      "_id\030\001 \001(\tR\006userId\"D\n\032GetUserSkillGroupsR" +
-      "esponse\022&\n\017skill_group_ids\030\001 \003(\tR\rskillG" +
-      "roupIds\"/\n\024GetUserSkillsRequest\022\027\n\007user_" +
-      "id\030\001 \001(\tR\006userId\"Q\n\025GetUserSkillsRespons" +
-      "e\0228\n\nskill_sets\030\001 \003(\0132\031.api.commons.org." +
-      "SkillSetR\tskillSets\"C\n\033GetSkillGroupMemb" +
-      "ersRequest\022$\n\016skill_group_id\030\001 \001(\tR\014skil" +
-      "lGroupId\"9\n\034GetSkillGroupMembersResponse" +
-      "\022\031\n\010user_ids\030\001 \003(\tR\007userIdsB\272\001\n)com.tcn." +
-      "cloud.api.api.v1alpha1.org.skillsB\rEntit" +
-      "iesProtoP\001\242\002\004AVOS\252\002\027Api.V1alpha1.Org.Ski" +
-      "lls\312\002\027Api\\V1alpha1\\Org\\Skills\342\002#Api\\V1al" +
-      "pha1\\Org\\Skills\\GPBMetadata\352\002\032Api::V1alp" +
-      "ha1::Org::Skillsb\006proto3"
+      "\nskillGroup\"?\n\027DeleteSkillGroupRequest\022$" +
+      "\n\016skill_group_id\030\001 \001(\tR\014skillGroupId\"\032\n\030" +
+      "DeleteSkillGroupResponse\"X\n\027AssignSkillG" +
+      "roupRequest\022$\n\016skill_group_id\030\001 \001(\tR\014ski" +
+      "llGroupId\022\027\n\007user_id\030\002 \001(\tR\006userId\"\032\n\030As" +
+      "signSkillGroupResponse\"X\n\027RevokeSkillGro" +
+      "upRequest\022$\n\016skill_group_id\030\001 \001(\tR\014skill" +
+      "GroupId\022\027\n\007user_id\030\002 \001(\tR\006userId\"\032\n\030Revo" +
+      "keSkillGroupResponse\"4\n\031GetUserSkillGrou" +
+      "psRequest\022\027\n\007user_id\030\001 \001(\tR\006userId\"D\n\032Ge" +
+      "tUserSkillGroupsResponse\022&\n\017skill_group_" +
+      "ids\030\001 \003(\tR\rskillGroupIds\"/\n\024GetUserSkill" +
+      "sRequest\022\027\n\007user_id\030\001 \001(\tR\006userId\"Q\n\025Get" +
+      "UserSkillsResponse\0228\n\nskill_sets\030\001 \003(\0132\031" +
+      ".api.commons.org.SkillSetR\tskillSets\"C\n\033" +
+      "GetSkillGroupMembersRequest\022$\n\016skill_gro" +
+      "up_id\030\001 \001(\tR\014skillGroupId\"9\n\034GetSkillGro" +
+      "upMembersResponse\022\031\n\010user_ids\030\001 \003(\tR\007use" +
+      "rIdsB\272\001\n)com.tcn.cloud.api.api.v1alpha1." +
+      "org.skillsB\rEntitiesProtoP\001\242\002\004AVOS\252\002\027Api" +
+      ".V1alpha1.Org.Skills\312\002\027Api\\V1alpha1\\Org\\" +
+      "Skills\342\002#Api\\V1alpha1\\Org\\Skills\\GPBMeta" +
+      "data\352\002\032Api::V1alpha1::Org::Skillsb\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -224,7 +224,7 @@ public final class EntitiesProto {
     internal_static_api_v1alpha1_org_skills_DeleteSkillGroupRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_skills_DeleteSkillGroupRequest_descriptor,
-        new java.lang.String[] { "OrgId", "SkillGroupId", });
+        new java.lang.String[] { "SkillGroupId", });
     internal_static_api_v1alpha1_org_skills_DeleteSkillGroupResponse_descriptor =
       getDescriptor().getMessageTypes().get(9);
     internal_static_api_v1alpha1_org_skills_DeleteSkillGroupResponse_fieldAccessorTable = new

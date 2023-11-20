@@ -9,30 +9,10 @@ public interface DeleteSkillGroupRequestOrBuilder extends
 
   /**
    * <pre>
-   * The org id of the skill group to delete.
-   * </pre>
-   *
-   * <code>string org_id = 1 [json_name = "orgId"];</code>
-   * @return The orgId.
-   */
-  java.lang.String getOrgId();
-  /**
-   * <pre>
-   * The org id of the skill group to delete.
-   * </pre>
-   *
-   * <code>string org_id = 1 [json_name = "orgId"];</code>
-   * @return The bytes for orgId.
-   */
-  com.google.protobuf.ByteString
-      getOrgIdBytes();
-
-  /**
-   * <pre>
    * The skill group id of the skill group to delete.
    * </pre>
    *
-   * <code>string skill_group_id = 2 [json_name = "skillGroupId"];</code>
+   * <code>string skill_group_id = 1 [json_name = "skillGroupId"];</code>
    * @return The skillGroupId.
    */
   java.lang.String getSkillGroupId();
@@ -41,7 +21,7 @@ public interface DeleteSkillGroupRequestOrBuilder extends
    * The skill group id of the skill group to delete.
    * </pre>
    *
-   * <code>string skill_group_id = 2 [json_name = "skillGroupId"];</code>
+   * <code>string skill_group_id = 1 [json_name = "skillGroupId"];</code>
    * @return The bytes for skillGroupId.
    */
   com.google.protobuf.ByteString
