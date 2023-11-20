@@ -5,41 +5,41 @@ package com.tcn.cloud.api.api.v1alpha1.org.skills;
 
 /**
  * <pre>
- * Response message for the RevokeSkillGroup rpc.
+ * Response message for the RevokeSkillGroups rpc.
  * </pre>
  *
- * Protobuf type {@code api.v1alpha1.org.skills.RevokeSkillGroupResponse}
+ * Protobuf type {@code api.v1alpha1.org.skills.RevokeSkillGroupsResponse}
  */
-public final class RevokeSkillGroupResponse extends
+public final class RevokeSkillGroupsResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v1alpha1.org.skills.RevokeSkillGroupResponse)
-    RevokeSkillGroupResponseOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v1alpha1.org.skills.RevokeSkillGroupsResponse)
+    RevokeSkillGroupsResponseOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use RevokeSkillGroupResponse.newBuilder() to construct.
-  private RevokeSkillGroupResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use RevokeSkillGroupsResponse.newBuilder() to construct.
+  private RevokeSkillGroupsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private RevokeSkillGroupResponse() {
+  private RevokeSkillGroupsResponse() {
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new RevokeSkillGroupResponse();
+    return new RevokeSkillGroupsResponse();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v1alpha1.org.skills.EntitiesProto.internal_static_api_v1alpha1_org_skills_RevokeSkillGroupResponse_descriptor;
+    return com.tcn.cloud.api.api.v1alpha1.org.skills.EntitiesProto.internal_static_api_v1alpha1_org_skills_RevokeSkillGroupsResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v1alpha1.org.skills.EntitiesProto.internal_static_api_v1alpha1_org_skills_RevokeSkillGroupResponse_fieldAccessorTable
+    return com.tcn.cloud.api.api.v1alpha1.org.skills.EntitiesProto.internal_static_api_v1alpha1_org_skills_RevokeSkillGroupsResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupResponse.class, com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupResponse.Builder.class);
+            com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsResponse.class, com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsResponse.Builder.class);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -75,10 +75,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupResponse)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsResponse)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupResponse other = (com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupResponse) obj;
+    com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsResponse other = (com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsResponse) obj;
 
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -96,44 +96,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsResponse parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsResponse parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsResponse parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupResponse parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsResponse parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsResponse parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupResponse parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsResponse parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsResponse parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -141,26 +141,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupResponse parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupResponse parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsResponse parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -173,7 +173,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupResponse prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -190,29 +190,29 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Response message for the RevokeSkillGroup rpc.
+   * Response message for the RevokeSkillGroups rpc.
    * </pre>
    *
-   * Protobuf type {@code api.v1alpha1.org.skills.RevokeSkillGroupResponse}
+   * Protobuf type {@code api.v1alpha1.org.skills.RevokeSkillGroupsResponse}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v1alpha1.org.skills.RevokeSkillGroupResponse)
-      com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupResponseOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v1alpha1.org.skills.RevokeSkillGroupsResponse)
+      com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v1alpha1.org.skills.EntitiesProto.internal_static_api_v1alpha1_org_skills_RevokeSkillGroupResponse_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.org.skills.EntitiesProto.internal_static_api_v1alpha1_org_skills_RevokeSkillGroupsResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v1alpha1.org.skills.EntitiesProto.internal_static_api_v1alpha1_org_skills_RevokeSkillGroupResponse_fieldAccessorTable
+      return com.tcn.cloud.api.api.v1alpha1.org.skills.EntitiesProto.internal_static_api_v1alpha1_org_skills_RevokeSkillGroupsResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupResponse.class, com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupResponse.Builder.class);
+              com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsResponse.class, com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsResponse.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupResponse.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsResponse.newBuilder()
     private Builder() {
 
     }
@@ -231,17 +231,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v1alpha1.org.skills.EntitiesProto.internal_static_api_v1alpha1_org_skills_RevokeSkillGroupResponse_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.org.skills.EntitiesProto.internal_static_api_v1alpha1_org_skills_RevokeSkillGroupsResponse_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupResponse getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupResponse.getDefaultInstance();
+    public com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsResponse getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsResponse.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupResponse build() {
-      com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupResponse result = buildPartial();
+    public com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsResponse build() {
+      com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsResponse result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -249,8 +249,8 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupResponse buildPartial() {
-      com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupResponse result = new com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupResponse(this);
+    public com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsResponse buildPartial() {
+      com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsResponse result = new com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsResponse(this);
       onBuilt();
       return result;
     }
@@ -289,16 +289,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupResponse) {
-        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupResponse)other);
+      if (other instanceof com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsResponse) {
+        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsResponse)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupResponse other) {
-      if (other == com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupResponse.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsResponse other) {
+      if (other == com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsResponse.getDefaultInstance()) return this;
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -353,23 +353,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v1alpha1.org.skills.RevokeSkillGroupResponse)
+    // @@protoc_insertion_point(builder_scope:api.v1alpha1.org.skills.RevokeSkillGroupsResponse)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v1alpha1.org.skills.RevokeSkillGroupResponse)
-  private static final com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupResponse DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v1alpha1.org.skills.RevokeSkillGroupsResponse)
+  private static final com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsResponse DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupResponse();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsResponse();
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupResponse getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsResponse getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<RevokeSkillGroupResponse>
-      PARSER = new com.google.protobuf.AbstractParser<RevokeSkillGroupResponse>() {
+  private static final com.google.protobuf.Parser<RevokeSkillGroupsResponse>
+      PARSER = new com.google.protobuf.AbstractParser<RevokeSkillGroupsResponse>() {
     @java.lang.Override
-    public RevokeSkillGroupResponse parsePartialFrom(
+    public RevokeSkillGroupsResponse parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -388,17 +388,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<RevokeSkillGroupResponse> parser() {
+  public static com.google.protobuf.Parser<RevokeSkillGroupsResponse> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<RevokeSkillGroupResponse> getParserForType() {
+  public com.google.protobuf.Parser<RevokeSkillGroupsResponse> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupResponse getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

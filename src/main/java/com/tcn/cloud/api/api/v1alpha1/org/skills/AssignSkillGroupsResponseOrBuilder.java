@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.v1alpha1.org.skills;
 
-public interface AssignSkillGroupResponseOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v1alpha1.org.skills.AssignSkillGroupResponse)
+public interface AssignSkillGroupsResponseOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v1alpha1.org.skills.AssignSkillGroupsResponse)
     com.google.protobuf.MessageOrBuilder {
 }

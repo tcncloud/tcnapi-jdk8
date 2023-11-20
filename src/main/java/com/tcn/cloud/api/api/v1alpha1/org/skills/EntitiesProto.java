@@ -65,25 +65,25 @@ public final class EntitiesProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_org_skills_DeleteSkillGroupResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_org_skills_AssignSkillGroupRequest_descriptor;
+    internal_static_api_v1alpha1_org_skills_AssignSkillGroupsRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_org_skills_AssignSkillGroupRequest_fieldAccessorTable;
+      internal_static_api_v1alpha1_org_skills_AssignSkillGroupsRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_org_skills_AssignSkillGroupResponse_descriptor;
+    internal_static_api_v1alpha1_org_skills_AssignSkillGroupsResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_org_skills_AssignSkillGroupResponse_fieldAccessorTable;
+      internal_static_api_v1alpha1_org_skills_AssignSkillGroupsResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_org_skills_RevokeSkillGroupRequest_descriptor;
+    internal_static_api_v1alpha1_org_skills_RevokeSkillGroupsRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_org_skills_RevokeSkillGroupRequest_fieldAccessorTable;
+      internal_static_api_v1alpha1_org_skills_RevokeSkillGroupsRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_org_skills_RevokeSkillGroupResponse_descriptor;
+    internal_static_api_v1alpha1_org_skills_RevokeSkillGroupsResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_org_skills_RevokeSkillGroupResponse_fieldAccessorTable;
+      internal_static_api_v1alpha1_org_skills_RevokeSkillGroupsResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_v1alpha1_org_skills_GetUserSkillGroupsRequest_descriptor;
   static final 
@@ -143,28 +143,28 @@ public final class EntitiesProto {
       "roup\030\001 \001(\0132\033.api.commons.org.SkillGroupR" +
       "\nskillGroup\"?\n\027DeleteSkillGroupRequest\022$" +
       "\n\016skill_group_id\030\001 \001(\tR\014skillGroupId\"\032\n\030" +
-      "DeleteSkillGroupResponse\"X\n\027AssignSkillG" +
-      "roupRequest\022$\n\016skill_group_id\030\001 \001(\tR\014ski" +
-      "llGroupId\022\027\n\007user_id\030\002 \001(\tR\006userId\"\032\n\030As" +
-      "signSkillGroupResponse\"X\n\027RevokeSkillGro" +
-      "upRequest\022$\n\016skill_group_id\030\001 \001(\tR\014skill" +
-      "GroupId\022\027\n\007user_id\030\002 \001(\tR\006userId\"\032\n\030Revo" +
-      "keSkillGroupResponse\"4\n\031GetUserSkillGrou" +
-      "psRequest\022\027\n\007user_id\030\001 \001(\tR\006userId\"D\n\032Ge" +
-      "tUserSkillGroupsResponse\022&\n\017skill_group_" +
-      "ids\030\001 \003(\tR\rskillGroupIds\"/\n\024GetUserSkill" +
-      "sRequest\022\027\n\007user_id\030\001 \001(\tR\006userId\"Q\n\025Get" +
-      "UserSkillsResponse\0228\n\nskill_sets\030\001 \003(\0132\031" +
-      ".api.commons.org.SkillSetR\tskillSets\"C\n\033" +
-      "GetSkillGroupMembersRequest\022$\n\016skill_gro" +
-      "up_id\030\001 \001(\tR\014skillGroupId\"9\n\034GetSkillGro" +
-      "upMembersResponse\022\031\n\010user_ids\030\001 \003(\tR\007use" +
-      "rIdsB\272\001\n)com.tcn.cloud.api.api.v1alpha1." +
-      "org.skillsB\rEntitiesProtoP\001\242\002\004AVOS\252\002\027Api" +
-      ".V1alpha1.Org.Skills\312\002\027Api\\V1alpha1\\Org\\" +
-      "Skills\342\002#Api\\V1alpha1\\Org\\Skills\\GPBMeta" +
-      "data\352\002\032Api::V1alpha1::Org::Skillsb\006proto" +
-      "3"
+      "DeleteSkillGroupResponse\"[\n\030AssignSkillG" +
+      "roupsRequest\022&\n\017skill_group_ids\030\001 \003(\tR\rs" +
+      "killGroupIds\022\027\n\007user_id\030\002 \001(\tR\006userId\"\033\n" +
+      "\031AssignSkillGroupsResponse\"[\n\030RevokeSkil" +
+      "lGroupsRequest\022&\n\017skill_group_ids\030\001 \003(\tR" +
+      "\rskillGroupIds\022\027\n\007user_id\030\002 \001(\tR\006userId\"" +
+      "\033\n\031RevokeSkillGroupsResponse\"4\n\031GetUserS" +
+      "killGroupsRequest\022\027\n\007user_id\030\001 \001(\tR\006user" +
+      "Id\"D\n\032GetUserSkillGroupsResponse\022&\n\017skil" +
+      "l_group_ids\030\001 \003(\tR\rskillGroupIds\"/\n\024GetU" +
+      "serSkillsRequest\022\027\n\007user_id\030\001 \001(\tR\006userI" +
+      "d\"Q\n\025GetUserSkillsResponse\0228\n\nskill_sets" +
+      "\030\001 \003(\0132\031.api.commons.org.SkillSetR\tskill" +
+      "Sets\"C\n\033GetSkillGroupMembersRequest\022$\n\016s" +
+      "kill_group_id\030\001 \001(\tR\014skillGroupId\"9\n\034Get" +
+      "SkillGroupMembersResponse\022\031\n\010user_ids\030\001 " +
+      "\003(\tR\007userIdsB\272\001\n)com.tcn.cloud.api.api.v" +
+      "1alpha1.org.skillsB\rEntitiesProtoP\001\242\002\004AV" +
+      "OS\252\002\027Api.V1alpha1.Org.Skills\312\002\027Api\\V1alp" +
+      "ha1\\Org\\Skills\342\002#Api\\V1alpha1\\Org\\Skills" +
+      "\\GPBMetadata\352\002\032Api::V1alpha1::Org::Skill" +
+      "sb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -231,29 +231,29 @@ public final class EntitiesProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_skills_DeleteSkillGroupResponse_descriptor,
         new java.lang.String[] { });
-    internal_static_api_v1alpha1_org_skills_AssignSkillGroupRequest_descriptor =
+    internal_static_api_v1alpha1_org_skills_AssignSkillGroupsRequest_descriptor =
       getDescriptor().getMessageTypes().get(10);
-    internal_static_api_v1alpha1_org_skills_AssignSkillGroupRequest_fieldAccessorTable = new
+    internal_static_api_v1alpha1_org_skills_AssignSkillGroupsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_org_skills_AssignSkillGroupRequest_descriptor,
-        new java.lang.String[] { "SkillGroupId", "UserId", });
-    internal_static_api_v1alpha1_org_skills_AssignSkillGroupResponse_descriptor =
+        internal_static_api_v1alpha1_org_skills_AssignSkillGroupsRequest_descriptor,
+        new java.lang.String[] { "SkillGroupIds", "UserId", });
+    internal_static_api_v1alpha1_org_skills_AssignSkillGroupsResponse_descriptor =
       getDescriptor().getMessageTypes().get(11);
-    internal_static_api_v1alpha1_org_skills_AssignSkillGroupResponse_fieldAccessorTable = new
+    internal_static_api_v1alpha1_org_skills_AssignSkillGroupsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_org_skills_AssignSkillGroupResponse_descriptor,
+        internal_static_api_v1alpha1_org_skills_AssignSkillGroupsResponse_descriptor,
         new java.lang.String[] { });
-    internal_static_api_v1alpha1_org_skills_RevokeSkillGroupRequest_descriptor =
+    internal_static_api_v1alpha1_org_skills_RevokeSkillGroupsRequest_descriptor =
       getDescriptor().getMessageTypes().get(12);
-    internal_static_api_v1alpha1_org_skills_RevokeSkillGroupRequest_fieldAccessorTable = new
+    internal_static_api_v1alpha1_org_skills_RevokeSkillGroupsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_org_skills_RevokeSkillGroupRequest_descriptor,
-        new java.lang.String[] { "SkillGroupId", "UserId", });
-    internal_static_api_v1alpha1_org_skills_RevokeSkillGroupResponse_descriptor =
+        internal_static_api_v1alpha1_org_skills_RevokeSkillGroupsRequest_descriptor,
+        new java.lang.String[] { "SkillGroupIds", "UserId", });
+    internal_static_api_v1alpha1_org_skills_RevokeSkillGroupsResponse_descriptor =
       getDescriptor().getMessageTypes().get(13);
-    internal_static_api_v1alpha1_org_skills_RevokeSkillGroupResponse_fieldAccessorTable = new
+    internal_static_api_v1alpha1_org_skills_RevokeSkillGroupsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_org_skills_RevokeSkillGroupResponse_descriptor,
+        internal_static_api_v1alpha1_org_skills_RevokeSkillGroupsResponse_descriptor,
         new java.lang.String[] { });
     internal_static_api_v1alpha1_org_skills_GetUserSkillGroupsRequest_descriptor =
       getDescriptor().getMessageTypes().get(14);

@@ -5,22 +5,23 @@ package com.tcn.cloud.api.api.v1alpha1.org.skills;
 
 /**
  * <pre>
- * Request message for the AssignSkillGroup rpc.
+ * Request message for the RevokeSkillGroups rpc.
  * </pre>
  *
- * Protobuf type {@code api.v1alpha1.org.skills.AssignSkillGroupRequest}
+ * Protobuf type {@code api.v1alpha1.org.skills.RevokeSkillGroupsRequest}
  */
-public final class AssignSkillGroupRequest extends
+public final class RevokeSkillGroupsRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v1alpha1.org.skills.AssignSkillGroupRequest)
-    AssignSkillGroupRequestOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v1alpha1.org.skills.RevokeSkillGroupsRequest)
+    RevokeSkillGroupsRequestOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use AssignSkillGroupRequest.newBuilder() to construct.
-  private AssignSkillGroupRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use RevokeSkillGroupsRequest.newBuilder() to construct.
+  private RevokeSkillGroupsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private AssignSkillGroupRequest() {
-    skillGroupId_ = "";
+  private RevokeSkillGroupsRequest() {
+    skillGroupIds_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     userId_ = "";
   }
 
@@ -28,67 +29,73 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new AssignSkillGroupRequest();
+    return new RevokeSkillGroupsRequest();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v1alpha1.org.skills.EntitiesProto.internal_static_api_v1alpha1_org_skills_AssignSkillGroupRequest_descriptor;
+    return com.tcn.cloud.api.api.v1alpha1.org.skills.EntitiesProto.internal_static_api_v1alpha1_org_skills_RevokeSkillGroupsRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v1alpha1.org.skills.EntitiesProto.internal_static_api_v1alpha1_org_skills_AssignSkillGroupRequest_fieldAccessorTable
+    return com.tcn.cloud.api.api.v1alpha1.org.skills.EntitiesProto.internal_static_api_v1alpha1_org_skills_RevokeSkillGroupsRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v1alpha1.org.skills.AssignSkillGroupRequest.class, com.tcn.cloud.api.api.v1alpha1.org.skills.AssignSkillGroupRequest.Builder.class);
+            com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsRequest.class, com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsRequest.Builder.class);
   }
 
-  public static final int SKILL_GROUP_ID_FIELD_NUMBER = 1;
+  public static final int SKILL_GROUP_IDS_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object skillGroupId_ = "";
+  private com.google.protobuf.LazyStringArrayList skillGroupIds_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
-   * The skill group id of the skill group.
+   * The ids of the skill groups to be revoked.
    * </pre>
    *
-   * <code>string skill_group_id = 1 [json_name = "skillGroupId"];</code>
-   * @return The skillGroupId.
+   * <code>repeated string skill_group_ids = 1 [json_name = "skillGroupIds"];</code>
+   * @return A list containing the skillGroupIds.
    */
-  @java.lang.Override
-  public java.lang.String getSkillGroupId() {
-    java.lang.Object ref = skillGroupId_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      skillGroupId_ = s;
-      return s;
-    }
+  public com.google.protobuf.ProtocolStringList
+      getSkillGroupIdsList() {
+    return skillGroupIds_;
   }
   /**
    * <pre>
-   * The skill group id of the skill group.
+   * The ids of the skill groups to be revoked.
    * </pre>
    *
-   * <code>string skill_group_id = 1 [json_name = "skillGroupId"];</code>
-   * @return The bytes for skillGroupId.
+   * <code>repeated string skill_group_ids = 1 [json_name = "skillGroupIds"];</code>
+   * @return The count of skillGroupIds.
    */
-  @java.lang.Override
+  public int getSkillGroupIdsCount() {
+    return skillGroupIds_.size();
+  }
+  /**
+   * <pre>
+   * The ids of the skill groups to be revoked.
+   * </pre>
+   *
+   * <code>repeated string skill_group_ids = 1 [json_name = "skillGroupIds"];</code>
+   * @param index The index of the element to return.
+   * @return The skillGroupIds at the given index.
+   */
+  public java.lang.String getSkillGroupIds(int index) {
+    return skillGroupIds_.get(index);
+  }
+  /**
+   * <pre>
+   * The ids of the skill groups to be revoked.
+   * </pre>
+   *
+   * <code>repeated string skill_group_ids = 1 [json_name = "skillGroupIds"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the skillGroupIds at the given index.
+   */
   public com.google.protobuf.ByteString
-      getSkillGroupIdBytes() {
-    java.lang.Object ref = skillGroupId_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      skillGroupId_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
+      getSkillGroupIdsBytes(int index) {
+    return skillGroupIds_.getByteString(index);
   }
 
   public static final int USER_ID_FIELD_NUMBER = 2;
@@ -152,8 +159,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(skillGroupId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, skillGroupId_);
+    for (int i = 0; i < skillGroupIds_.size(); i++) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, skillGroupIds_.getRaw(i));
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, userId_);
@@ -167,8 +174,13 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(skillGroupId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, skillGroupId_);
+    {
+      int dataSize = 0;
+      for (int i = 0; i < skillGroupIds_.size(); i++) {
+        dataSize += computeStringSizeNoTag(skillGroupIds_.getRaw(i));
+      }
+      size += dataSize;
+      size += 1 * getSkillGroupIdsList().size();
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, userId_);
@@ -183,13 +195,13 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.org.skills.AssignSkillGroupRequest)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsRequest)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v1alpha1.org.skills.AssignSkillGroupRequest other = (com.tcn.cloud.api.api.v1alpha1.org.skills.AssignSkillGroupRequest) obj;
+    com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsRequest other = (com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsRequest) obj;
 
-    if (!getSkillGroupId()
-        .equals(other.getSkillGroupId())) return false;
+    if (!getSkillGroupIdsList()
+        .equals(other.getSkillGroupIdsList())) return false;
     if (!getUserId()
         .equals(other.getUserId())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -203,8 +215,10 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + SKILL_GROUP_ID_FIELD_NUMBER;
-    hash = (53 * hash) + getSkillGroupId().hashCode();
+    if (getSkillGroupIdsCount() > 0) {
+      hash = (37 * hash) + SKILL_GROUP_IDS_FIELD_NUMBER;
+      hash = (53 * hash) + getSkillGroupIdsList().hashCode();
+    }
     hash = (37 * hash) + USER_ID_FIELD_NUMBER;
     hash = (53 * hash) + getUserId().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
@@ -212,44 +226,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.org.skills.AssignSkillGroupRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsRequest parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.skills.AssignSkillGroupRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsRequest parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.skills.AssignSkillGroupRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.skills.AssignSkillGroupRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.skills.AssignSkillGroupRequest parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.skills.AssignSkillGroupRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsRequest parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.skills.AssignSkillGroupRequest parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsRequest parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.skills.AssignSkillGroupRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsRequest parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -257,26 +271,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.org.skills.AssignSkillGroupRequest parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.org.skills.AssignSkillGroupRequest parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.skills.AssignSkillGroupRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsRequest parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.skills.AssignSkillGroupRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -289,7 +303,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.org.skills.AssignSkillGroupRequest prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -306,29 +320,29 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Request message for the AssignSkillGroup rpc.
+   * Request message for the RevokeSkillGroups rpc.
    * </pre>
    *
-   * Protobuf type {@code api.v1alpha1.org.skills.AssignSkillGroupRequest}
+   * Protobuf type {@code api.v1alpha1.org.skills.RevokeSkillGroupsRequest}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v1alpha1.org.skills.AssignSkillGroupRequest)
-      com.tcn.cloud.api.api.v1alpha1.org.skills.AssignSkillGroupRequestOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v1alpha1.org.skills.RevokeSkillGroupsRequest)
+      com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v1alpha1.org.skills.EntitiesProto.internal_static_api_v1alpha1_org_skills_AssignSkillGroupRequest_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.org.skills.EntitiesProto.internal_static_api_v1alpha1_org_skills_RevokeSkillGroupsRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v1alpha1.org.skills.EntitiesProto.internal_static_api_v1alpha1_org_skills_AssignSkillGroupRequest_fieldAccessorTable
+      return com.tcn.cloud.api.api.v1alpha1.org.skills.EntitiesProto.internal_static_api_v1alpha1_org_skills_RevokeSkillGroupsRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v1alpha1.org.skills.AssignSkillGroupRequest.class, com.tcn.cloud.api.api.v1alpha1.org.skills.AssignSkillGroupRequest.Builder.class);
+              com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsRequest.class, com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsRequest.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v1alpha1.org.skills.AssignSkillGroupRequest.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsRequest.newBuilder()
     private Builder() {
 
     }
@@ -342,7 +356,8 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      skillGroupId_ = "";
+      skillGroupIds_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       userId_ = "";
       return this;
     }
@@ -350,17 +365,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v1alpha1.org.skills.EntitiesProto.internal_static_api_v1alpha1_org_skills_AssignSkillGroupRequest_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.org.skills.EntitiesProto.internal_static_api_v1alpha1_org_skills_RevokeSkillGroupsRequest_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.org.skills.AssignSkillGroupRequest getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v1alpha1.org.skills.AssignSkillGroupRequest.getDefaultInstance();
+    public com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsRequest getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsRequest.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.org.skills.AssignSkillGroupRequest build() {
-      com.tcn.cloud.api.api.v1alpha1.org.skills.AssignSkillGroupRequest result = buildPartial();
+    public com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsRequest build() {
+      com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsRequest result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -368,17 +383,18 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.org.skills.AssignSkillGroupRequest buildPartial() {
-      com.tcn.cloud.api.api.v1alpha1.org.skills.AssignSkillGroupRequest result = new com.tcn.cloud.api.api.v1alpha1.org.skills.AssignSkillGroupRequest(this);
+    public com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsRequest buildPartial() {
+      com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsRequest result = new com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsRequest(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.skills.AssignSkillGroupRequest result) {
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.skillGroupId_ = skillGroupId_;
+        skillGroupIds_.makeImmutable();
+        result.skillGroupIds_ = skillGroupIds_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.userId_ = userId_;
@@ -419,19 +435,24 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v1alpha1.org.skills.AssignSkillGroupRequest) {
-        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.org.skills.AssignSkillGroupRequest)other);
+      if (other instanceof com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsRequest) {
+        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.org.skills.AssignSkillGroupRequest other) {
-      if (other == com.tcn.cloud.api.api.v1alpha1.org.skills.AssignSkillGroupRequest.getDefaultInstance()) return this;
-      if (!other.getSkillGroupId().isEmpty()) {
-        skillGroupId_ = other.skillGroupId_;
-        bitField0_ |= 0x00000001;
+    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsRequest other) {
+      if (other == com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsRequest.getDefaultInstance()) return this;
+      if (!other.skillGroupIds_.isEmpty()) {
+        if (skillGroupIds_.isEmpty()) {
+          skillGroupIds_ = other.skillGroupIds_;
+          bitField0_ |= 0x00000001;
+        } else {
+          ensureSkillGroupIdsIsMutable();
+          skillGroupIds_.addAll(other.skillGroupIds_);
+        }
         onChanged();
       }
       if (!other.getUserId().isEmpty()) {
@@ -466,8 +487,9 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              skillGroupId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureSkillGroupIdsIsMutable();
+              skillGroupIds_.add(s);
               break;
             } // case 10
             case 18: {
@@ -492,93 +514,148 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.lang.Object skillGroupId_ = "";
-    /**
-     * <pre>
-     * The skill group id of the skill group.
-     * </pre>
-     *
-     * <code>string skill_group_id = 1 [json_name = "skillGroupId"];</code>
-     * @return The skillGroupId.
-     */
-    public java.lang.String getSkillGroupId() {
-      java.lang.Object ref = skillGroupId_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        skillGroupId_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
+    private com.google.protobuf.LazyStringArrayList skillGroupIds_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    private void ensureSkillGroupIdsIsMutable() {
+      if (!skillGroupIds_.isModifiable()) {
+        skillGroupIds_ = new com.google.protobuf.LazyStringArrayList(skillGroupIds_);
       }
+      bitField0_ |= 0x00000001;
     }
     /**
      * <pre>
-     * The skill group id of the skill group.
+     * The ids of the skill groups to be revoked.
      * </pre>
      *
-     * <code>string skill_group_id = 1 [json_name = "skillGroupId"];</code>
-     * @return The bytes for skillGroupId.
+     * <code>repeated string skill_group_ids = 1 [json_name = "skillGroupIds"];</code>
+     * @return A list containing the skillGroupIds.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getSkillGroupIdsList() {
+      skillGroupIds_.makeImmutable();
+      return skillGroupIds_;
+    }
+    /**
+     * <pre>
+     * The ids of the skill groups to be revoked.
+     * </pre>
+     *
+     * <code>repeated string skill_group_ids = 1 [json_name = "skillGroupIds"];</code>
+     * @return The count of skillGroupIds.
+     */
+    public int getSkillGroupIdsCount() {
+      return skillGroupIds_.size();
+    }
+    /**
+     * <pre>
+     * The ids of the skill groups to be revoked.
+     * </pre>
+     *
+     * <code>repeated string skill_group_ids = 1 [json_name = "skillGroupIds"];</code>
+     * @param index The index of the element to return.
+     * @return The skillGroupIds at the given index.
+     */
+    public java.lang.String getSkillGroupIds(int index) {
+      return skillGroupIds_.get(index);
+    }
+    /**
+     * <pre>
+     * The ids of the skill groups to be revoked.
+     * </pre>
+     *
+     * <code>repeated string skill_group_ids = 1 [json_name = "skillGroupIds"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the skillGroupIds at the given index.
      */
     public com.google.protobuf.ByteString
-        getSkillGroupIdBytes() {
-      java.lang.Object ref = skillGroupId_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        skillGroupId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+        getSkillGroupIdsBytes(int index) {
+      return skillGroupIds_.getByteString(index);
     }
     /**
      * <pre>
-     * The skill group id of the skill group.
+     * The ids of the skill groups to be revoked.
      * </pre>
      *
-     * <code>string skill_group_id = 1 [json_name = "skillGroupId"];</code>
-     * @param value The skillGroupId to set.
+     * <code>repeated string skill_group_ids = 1 [json_name = "skillGroupIds"];</code>
+     * @param index The index to set the value at.
+     * @param value The skillGroupIds to set.
      * @return This builder for chaining.
      */
-    public Builder setSkillGroupId(
-        java.lang.String value) {
+    public Builder setSkillGroupIds(
+        int index, java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      skillGroupId_ = value;
+      ensureSkillGroupIdsIsMutable();
+      skillGroupIds_.set(index, value);
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * The skill group id of the skill group.
+     * The ids of the skill groups to be revoked.
      * </pre>
      *
-     * <code>string skill_group_id = 1 [json_name = "skillGroupId"];</code>
+     * <code>repeated string skill_group_ids = 1 [json_name = "skillGroupIds"];</code>
+     * @param value The skillGroupIds to add.
      * @return This builder for chaining.
      */
-    public Builder clearSkillGroupId() {
-      skillGroupId_ = getDefaultInstance().getSkillGroupId();
-      bitField0_ = (bitField0_ & ~0x00000001);
+    public Builder addSkillGroupIds(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureSkillGroupIdsIsMutable();
+      skillGroupIds_.add(value);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * The skill group id of the skill group.
+     * The ids of the skill groups to be revoked.
      * </pre>
      *
-     * <code>string skill_group_id = 1 [json_name = "skillGroupId"];</code>
-     * @param value The bytes for skillGroupId to set.
+     * <code>repeated string skill_group_ids = 1 [json_name = "skillGroupIds"];</code>
+     * @param values The skillGroupIds to add.
      * @return This builder for chaining.
      */
-    public Builder setSkillGroupIdBytes(
+    public Builder addAllSkillGroupIds(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureSkillGroupIdsIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, skillGroupIds_);
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The ids of the skill groups to be revoked.
+     * </pre>
+     *
+     * <code>repeated string skill_group_ids = 1 [json_name = "skillGroupIds"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearSkillGroupIds() {
+      skillGroupIds_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000001);;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The ids of the skill groups to be revoked.
+     * </pre>
+     *
+     * <code>repeated string skill_group_ids = 1 [json_name = "skillGroupIds"];</code>
+     * @param value The bytes of the skillGroupIds to add.
+     * @return This builder for chaining.
+     */
+    public Builder addSkillGroupIdsBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      skillGroupId_ = value;
+      ensureSkillGroupIdsIsMutable();
+      skillGroupIds_.add(value);
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
@@ -688,23 +765,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v1alpha1.org.skills.AssignSkillGroupRequest)
+    // @@protoc_insertion_point(builder_scope:api.v1alpha1.org.skills.RevokeSkillGroupsRequest)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v1alpha1.org.skills.AssignSkillGroupRequest)
-  private static final com.tcn.cloud.api.api.v1alpha1.org.skills.AssignSkillGroupRequest DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v1alpha1.org.skills.RevokeSkillGroupsRequest)
+  private static final com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsRequest DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.org.skills.AssignSkillGroupRequest();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsRequest();
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.org.skills.AssignSkillGroupRequest getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsRequest getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<AssignSkillGroupRequest>
-      PARSER = new com.google.protobuf.AbstractParser<AssignSkillGroupRequest>() {
+  private static final com.google.protobuf.Parser<RevokeSkillGroupsRequest>
+      PARSER = new com.google.protobuf.AbstractParser<RevokeSkillGroupsRequest>() {
     @java.lang.Override
-    public AssignSkillGroupRequest parsePartialFrom(
+    public RevokeSkillGroupsRequest parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -723,17 +800,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<AssignSkillGroupRequest> parser() {
+  public static com.google.protobuf.Parser<RevokeSkillGroupsRequest> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<AssignSkillGroupRequest> getParserForType() {
+  public com.google.protobuf.Parser<RevokeSkillGroupsRequest> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.org.skills.AssignSkillGroupRequest getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v1alpha1.org.skills.RevokeSkillGroupsRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

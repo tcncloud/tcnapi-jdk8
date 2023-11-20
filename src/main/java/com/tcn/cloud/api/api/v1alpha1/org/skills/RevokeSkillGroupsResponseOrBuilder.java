@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.v1alpha1.org.skills;
 
-public interface RevokeSkillGroupResponseOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v1alpha1.org.skills.RevokeSkillGroupResponse)
+public interface RevokeSkillGroupsResponseOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v1alpha1.org.skills.RevokeSkillGroupsResponse)
     com.google.protobuf.MessageOrBuilder {
 }
