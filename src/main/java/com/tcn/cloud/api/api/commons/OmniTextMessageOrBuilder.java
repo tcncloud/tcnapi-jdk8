@@ -97,34 +97,4 @@ public interface OmniTextMessageOrBuilder extends
    * <code>.google.protobuf.Int64Value primary_asm_session_sid = 3 [json_name = "primaryAsmSessionSid"];</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getPrimaryAsmSessionSidOrBuilder();
-
-  /**
-   * <pre>
-   * whatsapp message types
-   * </pre>
-   *
-   * <code>.api.commons.WhatsAppMsgType type = 4 [json_name = "type"];</code>
-   * @return The enum numeric value on the wire for type.
-   */
-  int getTypeValue();
-  /**
-   * <pre>
-   * whatsapp message types
-   * </pre>
-   *
-   * <code>.api.commons.WhatsAppMsgType type = 4 [json_name = "type"];</code>
-   * @return The type.
-   */
-  com.tcn.cloud.api.api.commons.WhatsAppMsgType getType();
-
-  /**
-   * <pre>
-   * whatsapp preview url allows for URL previews in text messages
-   * required if type=text
-   * </pre>
-   *
-   * <code>bool preview_url = 5 [json_name = "previewUrl"];</code>
-   * @return The previewUrl.
-   */
-  boolean getPreviewUrl();
 }

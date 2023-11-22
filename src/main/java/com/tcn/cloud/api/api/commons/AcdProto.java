@@ -209,7 +209,7 @@ public final class AcdProto {
       "4\022.\n*WARM_CALLER_TRANSFER_INVITE_CALLER_" +
       "INITIAL\0205\022&\n\"WARM_CALLER_TRANSFER_INVITE" +
       "_CALLER\0206\022\034\n\030WARM_CALLER_TRANSFER_END\0207\"" +
-      "\253\n\n\025AgentCallLogActionKey\"\221\n\n\004Enum\022\014\n\010DN" +
+      "\322\n\n\025AgentCallLogActionKey\"\270\n\n\004Enum\022\014\n\010DN" +
       "CL_ADD\020\000\022\016\n\nCALL_ENDED\020\001\022\023\n\017CALL_DISCONN" +
       "ECT\020\002\022\021\n\rCALLER_HUNGUP\020\003\022-\n)WARM_TRANSFE" +
       "R_AGENT_INVITE_CALLER_INITIAL\020\004\022%\n!WARM_" +
@@ -242,181 +242,182 @@ public final class AcdProto {
       "START\020\'\022.\n*WARM_CALLER_TRANSFER_INVITE_C" +
       "ALLER_INITIAL\020(\022&\n\"WARM_CALLER_TRANSFER_" +
       "INVITE_CALLER\020)\022\034\n\030WARM_CALLER_TRANSFER_" +
-      "END\020*\"n\n\027AgentCallLogActionValue\"S\n\004Enum" +
-      "\022\017\n\013UNSPECIFIED\020\000\022\026\n\022DNCL_RESULT_FAILED\020" +
-      "\001\022\"\n\036CALL_ENDED_CALLER_DISCONNECTED\020\002\"\301\033" +
-      "\n\021HuntGroupParamKey\"\253\033\n\004Enum\022\030\n\024AGENT_DI" +
-      "AL_IN_NUMBER\020\000\022\'\n#AGENT_LOGIN_GUI_STATIS" +
-      "TICS_TEMPLATE\020\001\022\"\n\036AGENT_PASSWORD_REQUIR" +
-      "ES_LETTER\020\002\022\"\n\036AGENT_PASSWORD_REQUIRES_N" +
-      "UMBER\020\003\022\"\n\036AGENT_PASSWORD_REQUIRES_SYMBO" +
-      "L\020\004\022\'\n#AGENT_PASSWORD_REQUIRES_UPPER_LOW" +
-      "ER\020\005\022\035\n\031AGENT_SKILLS_REASSIGNMENT\020\006\022\034\n\030A" +
-      "GENT_STATS_CALL_HISTORY\020\007\022\021\n\rAGENT_TRIGG" +
-      "ER\020\010\022&\n\"AGENT_DISPOSITION_CONDITIONAL_DN" +
-      "CL\020\t\022\017\n\013ALLOWED_IPS\020\n\022\024\n\020ALLOW_AGENT_HOL" +
-      "D\020\013\022\030\n\024ALLOW_AGENT_INTERCOM\020\014\022\036\n\032ALLOW_A" +
-      "GENT_PASSWORD_RESET\020\r\022 \n\034ALLOW_AGENT_PAU" +
-      "SE_CODE_RESET\020\016\022\030\n\024ALLOW_AGENT_TO_PAUSE\020" +
-      "\017\022\035\n\031ALLOW_CALLBACK_SCHEDULING\020\020\022&\n\"ALLO" +
-      "W_EXPORT_PHONE_NUMBER_ACTIVITY\020\021\022\"\n\036ALLO" +
-      "W_MANUAL_APPROVAL_OF_CALLS\020\022\022\030\n\024ALLOW_MA" +
-      "NUAL_DIALING\020\023\022\037\n\033ALLOW_PHONE_NUMBER_ACT" +
-      "IVITY\020\024\022\035\n\031ALLOW_PREVIEW_DIAL_CANCEL\020\025\022$" +
-      "\n ALLOW_SCHEDULED_CALLBACK_CALLING\020\026\022\030\n\024" +
-      "ALLOW_TRANSFER_CALLS\020\027\022\027\n\023ALPHANUMERIC_K" +
-      "EYPAD\020\030\022\034\n\030AUTO_PAUSE_ON_MULTI_HOLD\020\031\022 \n" +
-      "\034AUTO_PAUSE_ON_PREVIEW_CANCEL\020\032\022\034\n\030DEFAU" +
-      "LT_AGENT_PAUSE_CODE\020\033\022%\n!DEFAULT_AGENT_T" +
-      "RANSFERS_FILTERING\020\034\022\030\n\024DEFAULT_DNCL_COU" +
-      "NTRY\020\035\022\033\n\027DEFAULT_DNCL_EXPIRATION\020\036\022(\n$D" +
-      "EFAULT_INBOUND_CALL_DNCL_EXPIRATION\020\037\022\'\n" +
-      "#DEFAULT_MANUAL_CALL_DNCL_EXPIRATION\020 \022)" +
-      "\n%DEFAULT_OUTBOUND_CALL_DNCL_EXPIRATION\020" +
-      "!\022(\n$DEFAULT_PREVIEW_CALL_DNCL_EXPIRATIO" +
-      "N\020\"\022&\n\"DEFAULT_SCHEDULED_CALLBACK_ROUTIN" +
-      "G\020#\022 \n\034DISCONNECT_CALL_CONFIRMATION\020$\022%\n" +
-      "!DISPLAY_AGENT_TRANSFERS_FILTERING\020%\022\035\n\031" +
-      "DISPLAY_DATA_COLLECT_DATA\020&\022\034\n\030DISPLAY_D" +
-      "ATA_DIPPED_DATA\020\'\022\034\n\030DISPLAY_IVR_KEYS_PR" +
-      "ESSED\020(\022\036\n\032DISPLAY_PHONE_ZIP_METADATA\020)\022" +
-      "\037\n\033DISPLAY_RECORDING_INDICATOR\020*\022\025\n\021DO_A" +
-      "LLOW_ADD_DNCL\020+\022\032\n\026ENABLE_RECORDING_PAUS" +
-      "E\020,\022\031\n\025HOLD_QUEUE_MONITORING\020-\022\'\n#HOLD_Q" +
-      "UEUE_MONITORING_AGENT_ROUTING\020.\0226\n2HOLD_" +
-      "QUEUE_MONITORING_PREFERRED_HUNT_GROUP_RO" +
-      "UTING\020/\0225\n1HOLD_QUEUE_MONITORING_REQUIRE" +
-      "D_HUNT_GROUP_ROUTING\0200\022+\n\'HUNT_GROUP_CLI" +
-      "ENT_INFO_DISPLAY_TEMPLATE\0201\022\025\n\021HUNT_GROU" +
-      "P_SCRIPT\0202\022\027\n\023HUNT_GROUP_WEB_LINK\0203\022\'\n#M" +
-      "ANUAL_APPROVAL_NUMBER_CONFIRMATION\0204\022\035\n\031" +
-      "MANUAL_DIAL_AUTO_DNCL_ADD\0205\022!\n\035MANUAL_DI" +
-      "AL_DEFAULT_CALLER_ID\0206\022\037\n\033MANUAL_DIAL_DE" +
-      "FAULT_COUNTRY\0207\022+\n\'MANUAL_DIAL_DISPLAY_C" +
-      "OUNTRY_SELECT_MENU\0208\022)\n%MANUAL_DIAL_DEFA" +
-      "ULT_CALLER_ID_COUNTRY\0209\0225\n1MANUAL_DIAL_D" +
-      "ISPLAY_CALLER_ID_COUNTRY_SELECT_MENU\020:\0222" +
-      "\n.MANUAL_DIAL_DISPLAY_OUTBOUND_NUMBER_PH" +
-      "ONE_BOOK\020;\022\"\n\036MANUAL_DIAL_DISPLAY_PHONE_" +
-      "BOOK\020<\022!\n\035MANUAL_DIAL_NUMBER_WHITE_LIST\020" +
-      "=\022#\n\037MANUAL_DIAL_OVERRIDE_CELL_SCRUB\020>\022+" +
-      "\n\'MANUAL_DIAL_OVERRIDE_RECORDING_SETTING" +
-      "S\020@\022\036\n\032MANUAL_DIAL_SCRUB_OVERRIDE\020A\022!\n\035M" +
-      "ANUAL_DIAL_TIMEZONE_OVERRIDE\020B\022\'\n#MANUAL" +
-      "_DIAL_USER_EDITABLE_CALLER_ID\020C\022#\n\037MANUA" +
-      "L_QUEUE_CONFIGURATION_NAME\020D\022!\n\035MINIMUM_" +
-      "AGENT_PASSWORD_LENGTH\020E\022(\n$PHONE_NUMBER_" +
-      "ACTIVITY_EDIT_RESPONSES\020F\022-\n)PHONE_NUMBE" +
-      "R_ACTIVITY_RECORDINGS_DOWNLOAD\020G\022\036\n\032PREV" +
-      "IEW_DIAL_AUTO_DNCL_ADD\020H\022\035\n\031PREVIEW_DIAL" +
-      "_CALL_TIMEOUT\020I\022\035\n\031PREVIEW_DIAL_CONFIRMA" +
-      "TION\020J\022$\n PREVIEW_QUEUE_CONFIGURATION_NA" +
-      "ME\020K\022\023\n\017RECORDING_DELAY\020L\022-\n)REQUEUE_TRA" +
-      "NSFER_QUEUE_CONFIGURATION_NAME\020M\022&\n\"SCHE" +
-      "DULED_CALLBACKS_RETRIEVAL_MODE\020N\022)\n%SCHE" +
-      "DULED_CALLBACK_ROUTING_DISALLOWED\020O\022$\n T" +
-      "RANSFER_CALLS_DEFAULT_CALLER_ID\020P\022\"\n\036TRA" +
-      "NSFER_CALLS_DEFAULT_COUNTRY\020Q\022*\n&TRANSFE" +
-      "R_CALLS_DEFAULT_TRANSFER_NUMBER\020R\022/\n+TRA" +
-      "NSFER_CALLS_DISPLAY_CALLER_ID_PHONE_BOOK" +
-      "\020S\022.\n*TRANSFER_CALLS_DISPLAY_COUNTRY_SEL" +
-      "ECT_MENU\020T\0225\n1TRANSFER_CALLS_DISPLAY_TRA" +
-      "NSFER_NUMBER_PHONE_BOOK\020U\022 \n\034TRANSFER_CA" +
-      "LLS_HAND_OFF_TYPE\020V\022 \n\034TRANSFER_CALLS_TR" +
-      "ANSFER_TYPE\020W\022*\n&TRANSFER_CALLS_USER_EDI" +
-      "TABLE_CALLER_ID\020X\0220\n,TRANSFER_CALLS_USER" +
-      "_EDITABLE_TRANSFER_NUMBER\020Y\022\035\n\031TRANSFER_" +
-      "RECORDING_STATUS\020Z\022\036\n\032USE_ADVANCED_GATEW" +
-      "AY_TITLE\020[\022\031\n\025USE_AGENT_PAUSE_CODES\020\\\022\025\n" +
-      "\021USE_IP_BASED_AUTH\020]\022&\n\"HUNT_GROUP_REASS" +
-      "IGNMENT_DISALLOWED\020^\022&\n\"REQUEUE_TRANSFER" +
-      "_DISALLOWED_SKILLS\020_\022\'\n#ALLOW_MANUAL_APP" +
-      "ROVAL_FOR_MESSAGING\020`\022\022\n\016DISPLAY_SKILLS\020" +
-      "a\022&\n\"PBX_TRANSFER_DISALLOWED_EXTENSIONS\020" +
-      "b\"?\n\rReplaceConfig\".\n\004Enum\022\r\n\tNO_CHANGE\020" +
-      "\000\022\n\n\006TENANT\020\001\022\013\n\007REPLACE\020\002\"\227\001\n\016TransferM" +
-      "ember\022\036\n\nidentifier\030\001 \001(\tR\nidentifier\022#\n" +
-      "\rdisplay_label\030\002 \001(\tR\014displayLabel\022@\n\013me" +
-      "mber_type\030\003 \001(\0162\037.api.commons.TransferMe" +
-      "mberTypeR\nmemberType\"\261\002\n\nAgentAlert\022Y\n\022b" +
-      "ackoffice_message\030\001 \001(\0132(.api.commons.Ag" +
-      "entBackofficeMessageAlertH\000R\021backofficeM" +
-      "essage\022`\n\025directed_call_ringing\030\002 \001(\0132*." +
-      "api.commons.AgentDirectedCallRingingAler" +
-      "tH\000R\023directedCallRinging\022]\n\024directed_cal" +
-      "l_hangup\030\003 \001(\0132).api.commons.AgentDirect" +
-      "edCallHangupAlertH\000R\022directedCallHangupB" +
-      "\007\n\005alert\"\367\001\n\033AgentBackofficeMessageAlert" +
-      "\022\'\n\017expire_duration\030\001 \001(\003R\016expireDuratio" +
-      "n\0228\n\ttimestamp\030\002 \001(\0132\032.google.protobuf.T" +
-      "imestampR\ttimestamp\022K\n\024target_agent_sess" +
-      "ion\030\003 \001(\0132\031.api.commons.AgentSessionR\022ta" +
-      "rgetAgentSession\022\030\n\007message\030\004 \001(\tR\007messa" +
-      "ge\022\016\n\002id\030\005 \001(\tR\002id\"\342\002\n\035AgentDirectedCall" +
-      "RingingAlert\022\'\n\017expire_duration\030\001 \001(\003R\016e" +
-      "xpireDuration\0228\n\ttimestamp\030\002 \001(\0132\032.googl" +
-      "e.protobuf.TimestampR\ttimestamp\022K\n\024targe" +
-      "t_agent_session\030\003 \001(\0132\031.api.commons.Agen" +
-      "tSessionR\022targetAgentSession\0225\n\ncaller_s" +
-      "id\030\004 \001(\0132\026.api.commons.CallerSidR\tcaller" +
-      "Sid\022\033\n\tcaller_id\030\005 \001(\tR\010callerId\022-\n\022dest" +
-      "ination_number\030\006 \001(\tR\021destinationNumber\022" +
-      "\016\n\002id\030\007 \001(\tR\002id\"\225\002\n\034AgentDirectedCallHan" +
-      "gupAlert\022\'\n\017expire_duration\030\001 \001(\003R\016expir" +
-      "eDuration\0228\n\ttimestamp\030\002 \001(\0132\032.google.pr" +
-      "otobuf.TimestampR\ttimestamp\022K\n\024target_ag" +
-      "ent_session\030\003 \001(\0132\031.api.commons.AgentSes" +
-      "sionR\022targetAgentSession\0225\n\ncaller_sid\030\004" +
-      " \001(\0132\026.api.commons.CallerSidR\tcallerSid\022" +
-      "\016\n\002id\030\005 \001(\tR\002id\"\344\005\n\nAgentState\022\026\n\006status" +
-      "\030\002 \001(\003R\006status\022>\n\013status_desc\030\003 \001(\0162\035.ap" +
-      "i.commons.AgentStatus.EnumR\nstatusDesc\022\026" +
-      "\n\006paused\030\004 \001(\010R\006paused\022\024\n\005queue\030\005 \001(\tR\005q" +
-      "ueue\022,\n\022current_session_id\030\006 \001(\003R\020curren" +
-      "tSessionId\022,\n\022last_status_change\030\007 \001(\003R\020" +
-      "lastStatusChange\022\036\n\nmonitoring\030\010 \001(\010R\nmo" +
-      "nitoring\022\037\n\013calls_count\030\t \001(\003R\ncallsCoun" +
-      "t\022\"\n\rlast_sip_code\030\n \001(\003R\013lastSipCode\0224\n" +
-      "\027agent_peer_is_lost_call\030\013 \001(\010R\023agentPee" +
-      "rIsLostCall\022\032\n\010disabled\030\014 \001(\010R\010disabled\022" +
-      "0\n\024caller_was_suspended\030\r \001(\010R\022callerWas" +
-      "Suspended\022F\n\020transfer_members\030\016 \003(\0132\033.ap" +
-      "i.commons.TransferMemberR\017transferMember" +
-      "s\022?\n\035agent_peer_is_direct_to_agent\030\017 \001(\010" +
-      "R\030agentPeerIsDirectToAgent\022\027\n\007user_id\030\020 " +
-      "\001(\tR\006userId\022\033\n\tagent_sid\030\021 \001(\003R\010agentSid" +
-      "\022&\n\017asm_session_sid\030\022 \001(\003R\rasmSessionSid" +
-      "\022$\n\016agent_is_muted\030\023 \001(\010R\014agentIsMuted*\267" +
-      "\001\n\tACDStatus\022\017\n\013ACD_UNKNOWN\020\000\022\035\n\030AGENT_S" +
-      "ESSION_LOGGING_IN\020\204 \022\034\n\027AGENT_SESSION_LO" +
-      "GGED_IN\020\216 \022\034\n\027AGENT_SESSION_COMPLETED\020\350 " +
-      "\022\031\n\024AGENT_SESSION_SUMMED\020\314!\022#\n\036AGENT_SES" +
-      "SION_ACCOUNTINGEXPORT\020\260\"*\244\001\n\025AgentCallLo" +
-      "gCallEnded\022\023\n\017AGENT_CANCELLED\020\000\022\027\n\023CALLE" +
-      "R_DISCONNECTED\020\001\022\021\n\rNOT_CONNECTED\020\002\022\016\n\nA" +
-      "GENT_LOST\020\003\022\020\n\014AGENT_HANGUP\020\004\022\021\n\rCALLER_" +
-      "HANGUP\020\005\022\025\n\021CALL_END_ESTIMATE\020\006*.\n\010HoldT" +
-      "ype\022\013\n\007UNKNOWN\020\000\022\n\n\006SIMPLE\020\001\022\t\n\005MULTI\020\002*" +
-      "\372\001\n\026QueuedNotificationType\022*\n&QueuedNoti" +
-      "ficationType_GENERAL_INITIAL\020\000\022&\n\"Queued" +
-      "NotificationType_PBX_INITIAL\020\001\022.\n*Queued" +
-      "NotificationType_AGENT_BOUND_INITIAL\020\002\022+" +
-      "\n\'QueuedNotificationType_GENERAL_REQUEUE" +
-      "D\020\003\022/\n+QueuedNotificationType_AGENT_BOUN" +
-      "D_REQUEUED\020\004*r\n\022TransferMemberType\022\034\n\030Tr" +
-      "ansferMemberType_AGENT\020\000\022\035\n\031TransferMemb" +
-      "erType_CALLER\020\001\022\037\n\033TransferMemberType_OU" +
-      "TBOUND\020\002*\242\002\n\tDTMFDigit\022\017\n\013DTMFDigit_0\020\000\022" +
-      "\017\n\013DTMFDigit_1\020\001\022\017\n\013DTMFDigit_2\020\002\022\017\n\013DTM" +
-      "FDigit_3\020\003\022\017\n\013DTMFDigit_4\020\004\022\017\n\013DTMFDigit" +
-      "_5\020\005\022\017\n\013DTMFDigit_6\020\006\022\017\n\013DTMFDigit_7\020\007\022\017" +
-      "\n\013DTMFDigit_8\020\010\022\017\n\013DTMFDigit_9\020\t\022\017\n\013DTMF" +
-      "Digit_A\020\n\022\017\n\013DTMFDigit_B\020\013\022\017\n\013DTMFDigit_" +
-      "C\020\014\022\017\n\013DTMFDigit_D\020\r\022\022\n\016DTMFDigit_STAR\020\016" +
-      "\022\023\n\017DTMFDigit_POUND\020\017Bv\n\035com.tcn.cloud.a" +
-      "pi.api.commonsB\010AcdProtoP\001\242\002\003ACX\252\002\013Api.C" +
-      "ommons\312\002\013Api\\Commons\342\002\027Api\\Commons\\GPBMe" +
-      "tadata\352\002\014Api::Commonsb\006proto3"
+      "END\020*\022\022\n\016BARGE_IN_START\020+\022\021\n\rBARGE_IN_ST" +
+      "OP\020,\"n\n\027AgentCallLogActionValue\"S\n\004Enum\022" +
+      "\017\n\013UNSPECIFIED\020\000\022\026\n\022DNCL_RESULT_FAILED\020\001" +
+      "\022\"\n\036CALL_ENDED_CALLER_DISCONNECTED\020\002\"\301\033\n" +
+      "\021HuntGroupParamKey\"\253\033\n\004Enum\022\030\n\024AGENT_DIA" +
+      "L_IN_NUMBER\020\000\022\'\n#AGENT_LOGIN_GUI_STATIST" +
+      "ICS_TEMPLATE\020\001\022\"\n\036AGENT_PASSWORD_REQUIRE" +
+      "S_LETTER\020\002\022\"\n\036AGENT_PASSWORD_REQUIRES_NU" +
+      "MBER\020\003\022\"\n\036AGENT_PASSWORD_REQUIRES_SYMBOL" +
+      "\020\004\022\'\n#AGENT_PASSWORD_REQUIRES_UPPER_LOWE" +
+      "R\020\005\022\035\n\031AGENT_SKILLS_REASSIGNMENT\020\006\022\034\n\030AG" +
+      "ENT_STATS_CALL_HISTORY\020\007\022\021\n\rAGENT_TRIGGE" +
+      "R\020\010\022&\n\"AGENT_DISPOSITION_CONDITIONAL_DNC" +
+      "L\020\t\022\017\n\013ALLOWED_IPS\020\n\022\024\n\020ALLOW_AGENT_HOLD" +
+      "\020\013\022\030\n\024ALLOW_AGENT_INTERCOM\020\014\022\036\n\032ALLOW_AG" +
+      "ENT_PASSWORD_RESET\020\r\022 \n\034ALLOW_AGENT_PAUS" +
+      "E_CODE_RESET\020\016\022\030\n\024ALLOW_AGENT_TO_PAUSE\020\017" +
+      "\022\035\n\031ALLOW_CALLBACK_SCHEDULING\020\020\022&\n\"ALLOW" +
+      "_EXPORT_PHONE_NUMBER_ACTIVITY\020\021\022\"\n\036ALLOW" +
+      "_MANUAL_APPROVAL_OF_CALLS\020\022\022\030\n\024ALLOW_MAN" +
+      "UAL_DIALING\020\023\022\037\n\033ALLOW_PHONE_NUMBER_ACTI" +
+      "VITY\020\024\022\035\n\031ALLOW_PREVIEW_DIAL_CANCEL\020\025\022$\n" +
+      " ALLOW_SCHEDULED_CALLBACK_CALLING\020\026\022\030\n\024A" +
+      "LLOW_TRANSFER_CALLS\020\027\022\027\n\023ALPHANUMERIC_KE" +
+      "YPAD\020\030\022\034\n\030AUTO_PAUSE_ON_MULTI_HOLD\020\031\022 \n\034" +
+      "AUTO_PAUSE_ON_PREVIEW_CANCEL\020\032\022\034\n\030DEFAUL" +
+      "T_AGENT_PAUSE_CODE\020\033\022%\n!DEFAULT_AGENT_TR" +
+      "ANSFERS_FILTERING\020\034\022\030\n\024DEFAULT_DNCL_COUN" +
+      "TRY\020\035\022\033\n\027DEFAULT_DNCL_EXPIRATION\020\036\022(\n$DE" +
+      "FAULT_INBOUND_CALL_DNCL_EXPIRATION\020\037\022\'\n#" +
+      "DEFAULT_MANUAL_CALL_DNCL_EXPIRATION\020 \022)\n" +
+      "%DEFAULT_OUTBOUND_CALL_DNCL_EXPIRATION\020!" +
+      "\022(\n$DEFAULT_PREVIEW_CALL_DNCL_EXPIRATION" +
+      "\020\"\022&\n\"DEFAULT_SCHEDULED_CALLBACK_ROUTING" +
+      "\020#\022 \n\034DISCONNECT_CALL_CONFIRMATION\020$\022%\n!" +
+      "DISPLAY_AGENT_TRANSFERS_FILTERING\020%\022\035\n\031D" +
+      "ISPLAY_DATA_COLLECT_DATA\020&\022\034\n\030DISPLAY_DA" +
+      "TA_DIPPED_DATA\020\'\022\034\n\030DISPLAY_IVR_KEYS_PRE" +
+      "SSED\020(\022\036\n\032DISPLAY_PHONE_ZIP_METADATA\020)\022\037" +
+      "\n\033DISPLAY_RECORDING_INDICATOR\020*\022\025\n\021DO_AL" +
+      "LOW_ADD_DNCL\020+\022\032\n\026ENABLE_RECORDING_PAUSE" +
+      "\020,\022\031\n\025HOLD_QUEUE_MONITORING\020-\022\'\n#HOLD_QU" +
+      "EUE_MONITORING_AGENT_ROUTING\020.\0226\n2HOLD_Q" +
+      "UEUE_MONITORING_PREFERRED_HUNT_GROUP_ROU" +
+      "TING\020/\0225\n1HOLD_QUEUE_MONITORING_REQUIRED" +
+      "_HUNT_GROUP_ROUTING\0200\022+\n\'HUNT_GROUP_CLIE" +
+      "NT_INFO_DISPLAY_TEMPLATE\0201\022\025\n\021HUNT_GROUP" +
+      "_SCRIPT\0202\022\027\n\023HUNT_GROUP_WEB_LINK\0203\022\'\n#MA" +
+      "NUAL_APPROVAL_NUMBER_CONFIRMATION\0204\022\035\n\031M" +
+      "ANUAL_DIAL_AUTO_DNCL_ADD\0205\022!\n\035MANUAL_DIA" +
+      "L_DEFAULT_CALLER_ID\0206\022\037\n\033MANUAL_DIAL_DEF" +
+      "AULT_COUNTRY\0207\022+\n\'MANUAL_DIAL_DISPLAY_CO" +
+      "UNTRY_SELECT_MENU\0208\022)\n%MANUAL_DIAL_DEFAU" +
+      "LT_CALLER_ID_COUNTRY\0209\0225\n1MANUAL_DIAL_DI" +
+      "SPLAY_CALLER_ID_COUNTRY_SELECT_MENU\020:\0222\n" +
+      ".MANUAL_DIAL_DISPLAY_OUTBOUND_NUMBER_PHO" +
+      "NE_BOOK\020;\022\"\n\036MANUAL_DIAL_DISPLAY_PHONE_B" +
+      "OOK\020<\022!\n\035MANUAL_DIAL_NUMBER_WHITE_LIST\020=" +
+      "\022#\n\037MANUAL_DIAL_OVERRIDE_CELL_SCRUB\020>\022+\n" +
+      "\'MANUAL_DIAL_OVERRIDE_RECORDING_SETTINGS" +
+      "\020@\022\036\n\032MANUAL_DIAL_SCRUB_OVERRIDE\020A\022!\n\035MA" +
+      "NUAL_DIAL_TIMEZONE_OVERRIDE\020B\022\'\n#MANUAL_" +
+      "DIAL_USER_EDITABLE_CALLER_ID\020C\022#\n\037MANUAL" +
+      "_QUEUE_CONFIGURATION_NAME\020D\022!\n\035MINIMUM_A" +
+      "GENT_PASSWORD_LENGTH\020E\022(\n$PHONE_NUMBER_A" +
+      "CTIVITY_EDIT_RESPONSES\020F\022-\n)PHONE_NUMBER" +
+      "_ACTIVITY_RECORDINGS_DOWNLOAD\020G\022\036\n\032PREVI" +
+      "EW_DIAL_AUTO_DNCL_ADD\020H\022\035\n\031PREVIEW_DIAL_" +
+      "CALL_TIMEOUT\020I\022\035\n\031PREVIEW_DIAL_CONFIRMAT" +
+      "ION\020J\022$\n PREVIEW_QUEUE_CONFIGURATION_NAM" +
+      "E\020K\022\023\n\017RECORDING_DELAY\020L\022-\n)REQUEUE_TRAN" +
+      "SFER_QUEUE_CONFIGURATION_NAME\020M\022&\n\"SCHED" +
+      "ULED_CALLBACKS_RETRIEVAL_MODE\020N\022)\n%SCHED" +
+      "ULED_CALLBACK_ROUTING_DISALLOWED\020O\022$\n TR" +
+      "ANSFER_CALLS_DEFAULT_CALLER_ID\020P\022\"\n\036TRAN" +
+      "SFER_CALLS_DEFAULT_COUNTRY\020Q\022*\n&TRANSFER" +
+      "_CALLS_DEFAULT_TRANSFER_NUMBER\020R\022/\n+TRAN" +
+      "SFER_CALLS_DISPLAY_CALLER_ID_PHONE_BOOK\020" +
+      "S\022.\n*TRANSFER_CALLS_DISPLAY_COUNTRY_SELE" +
+      "CT_MENU\020T\0225\n1TRANSFER_CALLS_DISPLAY_TRAN" +
+      "SFER_NUMBER_PHONE_BOOK\020U\022 \n\034TRANSFER_CAL" +
+      "LS_HAND_OFF_TYPE\020V\022 \n\034TRANSFER_CALLS_TRA" +
+      "NSFER_TYPE\020W\022*\n&TRANSFER_CALLS_USER_EDIT" +
+      "ABLE_CALLER_ID\020X\0220\n,TRANSFER_CALLS_USER_" +
+      "EDITABLE_TRANSFER_NUMBER\020Y\022\035\n\031TRANSFER_R" +
+      "ECORDING_STATUS\020Z\022\036\n\032USE_ADVANCED_GATEWA" +
+      "Y_TITLE\020[\022\031\n\025USE_AGENT_PAUSE_CODES\020\\\022\025\n\021" +
+      "USE_IP_BASED_AUTH\020]\022&\n\"HUNT_GROUP_REASSI" +
+      "GNMENT_DISALLOWED\020^\022&\n\"REQUEUE_TRANSFER_" +
+      "DISALLOWED_SKILLS\020_\022\'\n#ALLOW_MANUAL_APPR" +
+      "OVAL_FOR_MESSAGING\020`\022\022\n\016DISPLAY_SKILLS\020a" +
+      "\022&\n\"PBX_TRANSFER_DISALLOWED_EXTENSIONS\020b" +
+      "\"?\n\rReplaceConfig\".\n\004Enum\022\r\n\tNO_CHANGE\020\000" +
+      "\022\n\n\006TENANT\020\001\022\013\n\007REPLACE\020\002\"\227\001\n\016TransferMe" +
+      "mber\022\036\n\nidentifier\030\001 \001(\tR\nidentifier\022#\n\r" +
+      "display_label\030\002 \001(\tR\014displayLabel\022@\n\013mem" +
+      "ber_type\030\003 \001(\0162\037.api.commons.TransferMem" +
+      "berTypeR\nmemberType\"\261\002\n\nAgentAlert\022Y\n\022ba" +
+      "ckoffice_message\030\001 \001(\0132(.api.commons.Age" +
+      "ntBackofficeMessageAlertH\000R\021backofficeMe" +
+      "ssage\022`\n\025directed_call_ringing\030\002 \001(\0132*.a" +
+      "pi.commons.AgentDirectedCallRingingAlert" +
+      "H\000R\023directedCallRinging\022]\n\024directed_call" +
+      "_hangup\030\003 \001(\0132).api.commons.AgentDirecte" +
+      "dCallHangupAlertH\000R\022directedCallHangupB\007" +
+      "\n\005alert\"\367\001\n\033AgentBackofficeMessageAlert\022" +
+      "\'\n\017expire_duration\030\001 \001(\003R\016expireDuration" +
+      "\0228\n\ttimestamp\030\002 \001(\0132\032.google.protobuf.Ti" +
+      "mestampR\ttimestamp\022K\n\024target_agent_sessi" +
+      "on\030\003 \001(\0132\031.api.commons.AgentSessionR\022tar" +
+      "getAgentSession\022\030\n\007message\030\004 \001(\tR\007messag" +
+      "e\022\016\n\002id\030\005 \001(\tR\002id\"\342\002\n\035AgentDirectedCallR" +
+      "ingingAlert\022\'\n\017expire_duration\030\001 \001(\003R\016ex" +
+      "pireDuration\0228\n\ttimestamp\030\002 \001(\0132\032.google" +
+      ".protobuf.TimestampR\ttimestamp\022K\n\024target" +
+      "_agent_session\030\003 \001(\0132\031.api.commons.Agent" +
+      "SessionR\022targetAgentSession\0225\n\ncaller_si" +
+      "d\030\004 \001(\0132\026.api.commons.CallerSidR\tcallerS" +
+      "id\022\033\n\tcaller_id\030\005 \001(\tR\010callerId\022-\n\022desti" +
+      "nation_number\030\006 \001(\tR\021destinationNumber\022\016" +
+      "\n\002id\030\007 \001(\tR\002id\"\225\002\n\034AgentDirectedCallHang" +
+      "upAlert\022\'\n\017expire_duration\030\001 \001(\003R\016expire" +
+      "Duration\0228\n\ttimestamp\030\002 \001(\0132\032.google.pro" +
+      "tobuf.TimestampR\ttimestamp\022K\n\024target_age" +
+      "nt_session\030\003 \001(\0132\031.api.commons.AgentSess" +
+      "ionR\022targetAgentSession\0225\n\ncaller_sid\030\004 " +
+      "\001(\0132\026.api.commons.CallerSidR\tcallerSid\022\016" +
+      "\n\002id\030\005 \001(\tR\002id\"\344\005\n\nAgentState\022\026\n\006status\030" +
+      "\002 \001(\003R\006status\022>\n\013status_desc\030\003 \001(\0162\035.api" +
+      ".commons.AgentStatus.EnumR\nstatusDesc\022\026\n" +
+      "\006paused\030\004 \001(\010R\006paused\022\024\n\005queue\030\005 \001(\tR\005qu" +
+      "eue\022,\n\022current_session_id\030\006 \001(\003R\020current" +
+      "SessionId\022,\n\022last_status_change\030\007 \001(\003R\020l" +
+      "astStatusChange\022\036\n\nmonitoring\030\010 \001(\010R\nmon" +
+      "itoring\022\037\n\013calls_count\030\t \001(\003R\ncallsCount" +
+      "\022\"\n\rlast_sip_code\030\n \001(\003R\013lastSipCode\0224\n\027" +
+      "agent_peer_is_lost_call\030\013 \001(\010R\023agentPeer" +
+      "IsLostCall\022\032\n\010disabled\030\014 \001(\010R\010disabled\0220" +
+      "\n\024caller_was_suspended\030\r \001(\010R\022callerWasS" +
+      "uspended\022F\n\020transfer_members\030\016 \003(\0132\033.api" +
+      ".commons.TransferMemberR\017transferMembers" +
+      "\022?\n\035agent_peer_is_direct_to_agent\030\017 \001(\010R" +
+      "\030agentPeerIsDirectToAgent\022\027\n\007user_id\030\020 \001" +
+      "(\tR\006userId\022\033\n\tagent_sid\030\021 \001(\003R\010agentSid\022" +
+      "&\n\017asm_session_sid\030\022 \001(\003R\rasmSessionSid\022" +
+      "$\n\016agent_is_muted\030\023 \001(\010R\014agentIsMuted*\267\001" +
+      "\n\tACDStatus\022\017\n\013ACD_UNKNOWN\020\000\022\035\n\030AGENT_SE" +
+      "SSION_LOGGING_IN\020\204 \022\034\n\027AGENT_SESSION_LOG" +
+      "GED_IN\020\216 \022\034\n\027AGENT_SESSION_COMPLETED\020\350 \022" +
+      "\031\n\024AGENT_SESSION_SUMMED\020\314!\022#\n\036AGENT_SESS" +
+      "ION_ACCOUNTINGEXPORT\020\260\"*\244\001\n\025AgentCallLog" +
+      "CallEnded\022\023\n\017AGENT_CANCELLED\020\000\022\027\n\023CALLER" +
+      "_DISCONNECTED\020\001\022\021\n\rNOT_CONNECTED\020\002\022\016\n\nAG" +
+      "ENT_LOST\020\003\022\020\n\014AGENT_HANGUP\020\004\022\021\n\rCALLER_H" +
+      "ANGUP\020\005\022\025\n\021CALL_END_ESTIMATE\020\006*.\n\010HoldTy" +
+      "pe\022\013\n\007UNKNOWN\020\000\022\n\n\006SIMPLE\020\001\022\t\n\005MULTI\020\002*\372" +
+      "\001\n\026QueuedNotificationType\022*\n&QueuedNotif" +
+      "icationType_GENERAL_INITIAL\020\000\022&\n\"QueuedN" +
+      "otificationType_PBX_INITIAL\020\001\022.\n*QueuedN" +
+      "otificationType_AGENT_BOUND_INITIAL\020\002\022+\n" +
+      "\'QueuedNotificationType_GENERAL_REQUEUED" +
+      "\020\003\022/\n+QueuedNotificationType_AGENT_BOUND" +
+      "_REQUEUED\020\004*r\n\022TransferMemberType\022\034\n\030Tra" +
+      "nsferMemberType_AGENT\020\000\022\035\n\031TransferMembe" +
+      "rType_CALLER\020\001\022\037\n\033TransferMemberType_OUT" +
+      "BOUND\020\002*\242\002\n\tDTMFDigit\022\017\n\013DTMFDigit_0\020\000\022\017" +
+      "\n\013DTMFDigit_1\020\001\022\017\n\013DTMFDigit_2\020\002\022\017\n\013DTMF" +
+      "Digit_3\020\003\022\017\n\013DTMFDigit_4\020\004\022\017\n\013DTMFDigit_" +
+      "5\020\005\022\017\n\013DTMFDigit_6\020\006\022\017\n\013DTMFDigit_7\020\007\022\017\n" +
+      "\013DTMFDigit_8\020\010\022\017\n\013DTMFDigit_9\020\t\022\017\n\013DTMFD" +
+      "igit_A\020\n\022\017\n\013DTMFDigit_B\020\013\022\017\n\013DTMFDigit_C" +
+      "\020\014\022\017\n\013DTMFDigit_D\020\r\022\022\n\016DTMFDigit_STAR\020\016\022" +
+      "\023\n\017DTMFDigit_POUND\020\017Bv\n\035com.tcn.cloud.ap" +
+      "i.api.commonsB\010AcdProtoP\001\242\002\003ACX\252\002\013Api.Co" +
+      "mmons\312\002\013Api\\Commons\342\002\027Api\\Commons\\GPBMet" +
+      "adata\352\002\014Api::Commonsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
