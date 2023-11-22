@@ -99,4 +99,21 @@ public interface ListTemplateOrBuilder extends
    */
   com.google.protobuf.ByteString
       getProjectTitleBytes();
+
+  /**
+   * <code>repeated int64 assigned_project = 10 [json_name = "assignedProject"];</code>
+   * @return A list containing the assignedProject.
+   */
+  java.util.List<java.lang.Long> getAssignedProjectList();
+  /**
+   * <code>repeated int64 assigned_project = 10 [json_name = "assignedProject"];</code>
+   * @return The count of assignedProject.
+   */
+  int getAssignedProjectCount();
+  /**
+   * <code>repeated int64 assigned_project = 10 [json_name = "assignedProject"];</code>
+   * @param index The index of the element to return.
+   * @return The assignedProject at the given index.
+   */
+  long getAssignedProject(int index);
 }
