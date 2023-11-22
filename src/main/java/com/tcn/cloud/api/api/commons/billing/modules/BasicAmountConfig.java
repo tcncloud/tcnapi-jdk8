@@ -4,14 +4,9 @@
 package com.tcn.cloud.api.api.commons.billing.modules;
 
 /**
- * <pre>
- * BasicSizeConfig - basic config for a rating module that rates based
- * on event size
- * </pre>
- *
  * Protobuf type {@code api.commons.billing.modules.BasicAmountConfig}
  */
-public final class BasicAmountConfig extends
+@java.lang.Deprecated public final class BasicAmountConfig extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.commons.billing.modules.BasicAmountConfig)
     BasicAmountConfigOrBuilder {
@@ -46,127 +41,86 @@ private static final long serialVersionUID = 0L;
   public static final int AMOUNT_FIELD_NUMBER = 1;
   private long amount_ = 0L;
   /**
-   * <pre>
-   * Required. the amount of a unit to apply the rate to. This is the
-   * increment amount; for example, an amount of 300 (with bytes as a
-   * unit of measurement) and a message of size 400 bytes will get
-   * billed as if it were a size of 600 bytes.
-   * </pre>
-   *
-   * <code>int64 amount = 1 [json_name = "amount"];</code>
+   * <code>int64 amount = 1 [json_name = "amount", deprecated = true];</code>
+   * @deprecated api.commons.billing.modules.BasicAmountConfig.amount is deprecated.
+   *     See api/commons/billing/modules/modules.proto;l=13
    * @return The amount.
    */
   @java.lang.Override
-  public long getAmount() {
+  @java.lang.Deprecated public long getAmount() {
     return amount_;
   }
 
   public static final int RATE_FIELD_NUMBER = 2;
   private double rate_ = 0D;
   /**
-   * <pre>
-   * Required. the amount to rate each size increment
-   * </pre>
-   *
-   * <code>double rate = 2 [json_name = "rate"];</code>
+   * <code>double rate = 2 [json_name = "rate", deprecated = true];</code>
+   * @deprecated api.commons.billing.modules.BasicAmountConfig.rate is deprecated.
+   *     See api/commons/billing/modules/modules.proto;l=14
    * @return The rate.
    */
   @java.lang.Override
-  public double getRate() {
+  @java.lang.Deprecated public double getRate() {
     return rate_;
   }
 
   public static final int MIN_INCREMENT_FIELD_NUMBER = 3;
   private com.google.protobuf.Int64Value minIncrement_;
   /**
-   * <pre>
-   * Optional. the minimum number of increments to rate; for example,
-   * an amount of 5 seconds and a min_increment of 2 would mean that
-   * any event less than 10 seconds would be billed as if it were 10
-   * seconds.
-   * </pre>
-   *
-   * <code>.google.protobuf.Int64Value min_increment = 3 [json_name = "minIncrement"];</code>
+   * <code>.google.protobuf.Int64Value min_increment = 3 [json_name = "minIncrement", deprecated = true];</code>
+   * @deprecated api.commons.billing.modules.BasicAmountConfig.min_increment is deprecated.
+   *     See api/commons/billing/modules/modules.proto;l=15
    * @return Whether the minIncrement field is set.
    */
   @java.lang.Override
-  public boolean hasMinIncrement() {
+  @java.lang.Deprecated public boolean hasMinIncrement() {
     return minIncrement_ != null;
   }
   /**
-   * <pre>
-   * Optional. the minimum number of increments to rate; for example,
-   * an amount of 5 seconds and a min_increment of 2 would mean that
-   * any event less than 10 seconds would be billed as if it were 10
-   * seconds.
-   * </pre>
-   *
-   * <code>.google.protobuf.Int64Value min_increment = 3 [json_name = "minIncrement"];</code>
+   * <code>.google.protobuf.Int64Value min_increment = 3 [json_name = "minIncrement", deprecated = true];</code>
+   * @deprecated api.commons.billing.modules.BasicAmountConfig.min_increment is deprecated.
+   *     See api/commons/billing/modules/modules.proto;l=15
    * @return The minIncrement.
    */
   @java.lang.Override
-  public com.google.protobuf.Int64Value getMinIncrement() {
+  @java.lang.Deprecated public com.google.protobuf.Int64Value getMinIncrement() {
     return minIncrement_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : minIncrement_;
   }
   /**
-   * <pre>
-   * Optional. the minimum number of increments to rate; for example,
-   * an amount of 5 seconds and a min_increment of 2 would mean that
-   * any event less than 10 seconds would be billed as if it were 10
-   * seconds.
-   * </pre>
-   *
-   * <code>.google.protobuf.Int64Value min_increment = 3 [json_name = "minIncrement"];</code>
+   * <code>.google.protobuf.Int64Value min_increment = 3 [json_name = "minIncrement", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.google.protobuf.Int64ValueOrBuilder getMinIncrementOrBuilder() {
+  @java.lang.Deprecated public com.google.protobuf.Int64ValueOrBuilder getMinIncrementOrBuilder() {
     return minIncrement_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : minIncrement_;
   }
 
   public static final int MAX_INCREMENT_FIELD_NUMBER = 4;
   private com.google.protobuf.Int64Value maxIncrement_;
   /**
-   * <pre>
-   * Optional. the maximum number of increments to rate; for example,
-   * an amount of 5 seconds and a max_increment of 2 would mean that
-   * any event more than 10 seconds would be billed as if it were 10
-   * seconds.
-   * </pre>
-   *
-   * <code>.google.protobuf.Int64Value max_increment = 4 [json_name = "maxIncrement"];</code>
+   * <code>.google.protobuf.Int64Value max_increment = 4 [json_name = "maxIncrement", deprecated = true];</code>
+   * @deprecated api.commons.billing.modules.BasicAmountConfig.max_increment is deprecated.
+   *     See api/commons/billing/modules/modules.proto;l=16
    * @return Whether the maxIncrement field is set.
    */
   @java.lang.Override
-  public boolean hasMaxIncrement() {
+  @java.lang.Deprecated public boolean hasMaxIncrement() {
     return maxIncrement_ != null;
   }
   /**
-   * <pre>
-   * Optional. the maximum number of increments to rate; for example,
-   * an amount of 5 seconds and a max_increment of 2 would mean that
-   * any event more than 10 seconds would be billed as if it were 10
-   * seconds.
-   * </pre>
-   *
-   * <code>.google.protobuf.Int64Value max_increment = 4 [json_name = "maxIncrement"];</code>
+   * <code>.google.protobuf.Int64Value max_increment = 4 [json_name = "maxIncrement", deprecated = true];</code>
+   * @deprecated api.commons.billing.modules.BasicAmountConfig.max_increment is deprecated.
+   *     See api/commons/billing/modules/modules.proto;l=16
    * @return The maxIncrement.
    */
   @java.lang.Override
-  public com.google.protobuf.Int64Value getMaxIncrement() {
+  @java.lang.Deprecated public com.google.protobuf.Int64Value getMaxIncrement() {
     return maxIncrement_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxIncrement_;
   }
   /**
-   * <pre>
-   * Optional. the maximum number of increments to rate; for example,
-   * an amount of 5 seconds and a max_increment of 2 would mean that
-   * any event more than 10 seconds would be billed as if it were 10
-   * seconds.
-   * </pre>
-   *
-   * <code>.google.protobuf.Int64Value max_increment = 4 [json_name = "maxIncrement"];</code>
+   * <code>.google.protobuf.Int64Value max_increment = 4 [json_name = "maxIncrement", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.google.protobuf.Int64ValueOrBuilder getMaxIncrementOrBuilder() {
+  @java.lang.Deprecated public com.google.protobuf.Int64ValueOrBuilder getMaxIncrementOrBuilder() {
     return maxIncrement_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxIncrement_;
   }
 
@@ -374,11 +328,6 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * <pre>
-   * BasicSizeConfig - basic config for a rating module that rates based
-   * on event size
-   * </pre>
-   *
    * Protobuf type {@code api.commons.billing.modules.BasicAmountConfig}
    */
   public static final class Builder extends
@@ -600,33 +549,23 @@ private static final long serialVersionUID = 0L;
 
     private long amount_ ;
     /**
-     * <pre>
-     * Required. the amount of a unit to apply the rate to. This is the
-     * increment amount; for example, an amount of 300 (with bytes as a
-     * unit of measurement) and a message of size 400 bytes will get
-     * billed as if it were a size of 600 bytes.
-     * </pre>
-     *
-     * <code>int64 amount = 1 [json_name = "amount"];</code>
+     * <code>int64 amount = 1 [json_name = "amount", deprecated = true];</code>
+     * @deprecated api.commons.billing.modules.BasicAmountConfig.amount is deprecated.
+     *     See api/commons/billing/modules/modules.proto;l=13
      * @return The amount.
      */
     @java.lang.Override
-    public long getAmount() {
+    @java.lang.Deprecated public long getAmount() {
       return amount_;
     }
     /**
-     * <pre>
-     * Required. the amount of a unit to apply the rate to. This is the
-     * increment amount; for example, an amount of 300 (with bytes as a
-     * unit of measurement) and a message of size 400 bytes will get
-     * billed as if it were a size of 600 bytes.
-     * </pre>
-     *
-     * <code>int64 amount = 1 [json_name = "amount"];</code>
+     * <code>int64 amount = 1 [json_name = "amount", deprecated = true];</code>
+     * @deprecated api.commons.billing.modules.BasicAmountConfig.amount is deprecated.
+     *     See api/commons/billing/modules/modules.proto;l=13
      * @param value The amount to set.
      * @return This builder for chaining.
      */
-    public Builder setAmount(long value) {
+    @java.lang.Deprecated public Builder setAmount(long value) {
 
       amount_ = value;
       bitField0_ |= 0x00000001;
@@ -634,17 +573,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Required. the amount of a unit to apply the rate to. This is the
-     * increment amount; for example, an amount of 300 (with bytes as a
-     * unit of measurement) and a message of size 400 bytes will get
-     * billed as if it were a size of 600 bytes.
-     * </pre>
-     *
-     * <code>int64 amount = 1 [json_name = "amount"];</code>
+     * <code>int64 amount = 1 [json_name = "amount", deprecated = true];</code>
+     * @deprecated api.commons.billing.modules.BasicAmountConfig.amount is deprecated.
+     *     See api/commons/billing/modules/modules.proto;l=13
      * @return This builder for chaining.
      */
-    public Builder clearAmount() {
+    @java.lang.Deprecated public Builder clearAmount() {
       bitField0_ = (bitField0_ & ~0x00000001);
       amount_ = 0L;
       onChanged();
@@ -653,27 +587,23 @@ private static final long serialVersionUID = 0L;
 
     private double rate_ ;
     /**
-     * <pre>
-     * Required. the amount to rate each size increment
-     * </pre>
-     *
-     * <code>double rate = 2 [json_name = "rate"];</code>
+     * <code>double rate = 2 [json_name = "rate", deprecated = true];</code>
+     * @deprecated api.commons.billing.modules.BasicAmountConfig.rate is deprecated.
+     *     See api/commons/billing/modules/modules.proto;l=14
      * @return The rate.
      */
     @java.lang.Override
-    public double getRate() {
+    @java.lang.Deprecated public double getRate() {
       return rate_;
     }
     /**
-     * <pre>
-     * Required. the amount to rate each size increment
-     * </pre>
-     *
-     * <code>double rate = 2 [json_name = "rate"];</code>
+     * <code>double rate = 2 [json_name = "rate", deprecated = true];</code>
+     * @deprecated api.commons.billing.modules.BasicAmountConfig.rate is deprecated.
+     *     See api/commons/billing/modules/modules.proto;l=14
      * @param value The rate to set.
      * @return This builder for chaining.
      */
-    public Builder setRate(double value) {
+    @java.lang.Deprecated public Builder setRate(double value) {
 
       rate_ = value;
       bitField0_ |= 0x00000002;
@@ -681,14 +611,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Required. the amount to rate each size increment
-     * </pre>
-     *
-     * <code>double rate = 2 [json_name = "rate"];</code>
+     * <code>double rate = 2 [json_name = "rate", deprecated = true];</code>
+     * @deprecated api.commons.billing.modules.BasicAmountConfig.rate is deprecated.
+     *     See api/commons/billing/modules/modules.proto;l=14
      * @return This builder for chaining.
      */
-    public Builder clearRate() {
+    @java.lang.Deprecated public Builder clearRate() {
       bitField0_ = (bitField0_ & ~0x00000002);
       rate_ = 0D;
       onChanged();
@@ -699,31 +627,21 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> minIncrementBuilder_;
     /**
-     * <pre>
-     * Optional. the minimum number of increments to rate; for example,
-     * an amount of 5 seconds and a min_increment of 2 would mean that
-     * any event less than 10 seconds would be billed as if it were 10
-     * seconds.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value min_increment = 3 [json_name = "minIncrement"];</code>
+     * <code>.google.protobuf.Int64Value min_increment = 3 [json_name = "minIncrement", deprecated = true];</code>
+     * @deprecated api.commons.billing.modules.BasicAmountConfig.min_increment is deprecated.
+     *     See api/commons/billing/modules/modules.proto;l=15
      * @return Whether the minIncrement field is set.
      */
-    public boolean hasMinIncrement() {
+    @java.lang.Deprecated public boolean hasMinIncrement() {
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
-     * <pre>
-     * Optional. the minimum number of increments to rate; for example,
-     * an amount of 5 seconds and a min_increment of 2 would mean that
-     * any event less than 10 seconds would be billed as if it were 10
-     * seconds.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value min_increment = 3 [json_name = "minIncrement"];</code>
+     * <code>.google.protobuf.Int64Value min_increment = 3 [json_name = "minIncrement", deprecated = true];</code>
+     * @deprecated api.commons.billing.modules.BasicAmountConfig.min_increment is deprecated.
+     *     See api/commons/billing/modules/modules.proto;l=15
      * @return The minIncrement.
      */
-    public com.google.protobuf.Int64Value getMinIncrement() {
+    @java.lang.Deprecated public com.google.protobuf.Int64Value getMinIncrement() {
       if (minIncrementBuilder_ == null) {
         return minIncrement_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : minIncrement_;
       } else {
@@ -731,16 +649,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Optional. the minimum number of increments to rate; for example,
-     * an amount of 5 seconds and a min_increment of 2 would mean that
-     * any event less than 10 seconds would be billed as if it were 10
-     * seconds.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value min_increment = 3 [json_name = "minIncrement"];</code>
+     * <code>.google.protobuf.Int64Value min_increment = 3 [json_name = "minIncrement", deprecated = true];</code>
      */
-    public Builder setMinIncrement(com.google.protobuf.Int64Value value) {
+    @java.lang.Deprecated public Builder setMinIncrement(com.google.protobuf.Int64Value value) {
       if (minIncrementBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -754,16 +665,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Optional. the minimum number of increments to rate; for example,
-     * an amount of 5 seconds and a min_increment of 2 would mean that
-     * any event less than 10 seconds would be billed as if it were 10
-     * seconds.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value min_increment = 3 [json_name = "minIncrement"];</code>
+     * <code>.google.protobuf.Int64Value min_increment = 3 [json_name = "minIncrement", deprecated = true];</code>
      */
-    public Builder setMinIncrement(
+    @java.lang.Deprecated public Builder setMinIncrement(
         com.google.protobuf.Int64Value.Builder builderForValue) {
       if (minIncrementBuilder_ == null) {
         minIncrement_ = builderForValue.build();
@@ -775,16 +679,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Optional. the minimum number of increments to rate; for example,
-     * an amount of 5 seconds and a min_increment of 2 would mean that
-     * any event less than 10 seconds would be billed as if it were 10
-     * seconds.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value min_increment = 3 [json_name = "minIncrement"];</code>
+     * <code>.google.protobuf.Int64Value min_increment = 3 [json_name = "minIncrement", deprecated = true];</code>
      */
-    public Builder mergeMinIncrement(com.google.protobuf.Int64Value value) {
+    @java.lang.Deprecated public Builder mergeMinIncrement(com.google.protobuf.Int64Value value) {
       if (minIncrementBuilder_ == null) {
         if (((bitField0_ & 0x00000004) != 0) &&
           minIncrement_ != null &&
@@ -801,16 +698,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Optional. the minimum number of increments to rate; for example,
-     * an amount of 5 seconds and a min_increment of 2 would mean that
-     * any event less than 10 seconds would be billed as if it were 10
-     * seconds.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value min_increment = 3 [json_name = "minIncrement"];</code>
+     * <code>.google.protobuf.Int64Value min_increment = 3 [json_name = "minIncrement", deprecated = true];</code>
      */
-    public Builder clearMinIncrement() {
+    @java.lang.Deprecated public Builder clearMinIncrement() {
       bitField0_ = (bitField0_ & ~0x00000004);
       minIncrement_ = null;
       if (minIncrementBuilder_ != null) {
@@ -821,31 +711,17 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Optional. the minimum number of increments to rate; for example,
-     * an amount of 5 seconds and a min_increment of 2 would mean that
-     * any event less than 10 seconds would be billed as if it were 10
-     * seconds.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value min_increment = 3 [json_name = "minIncrement"];</code>
+     * <code>.google.protobuf.Int64Value min_increment = 3 [json_name = "minIncrement", deprecated = true];</code>
      */
-    public com.google.protobuf.Int64Value.Builder getMinIncrementBuilder() {
+    @java.lang.Deprecated public com.google.protobuf.Int64Value.Builder getMinIncrementBuilder() {
       bitField0_ |= 0x00000004;
       onChanged();
       return getMinIncrementFieldBuilder().getBuilder();
     }
     /**
-     * <pre>
-     * Optional. the minimum number of increments to rate; for example,
-     * an amount of 5 seconds and a min_increment of 2 would mean that
-     * any event less than 10 seconds would be billed as if it were 10
-     * seconds.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value min_increment = 3 [json_name = "minIncrement"];</code>
+     * <code>.google.protobuf.Int64Value min_increment = 3 [json_name = "minIncrement", deprecated = true];</code>
      */
-    public com.google.protobuf.Int64ValueOrBuilder getMinIncrementOrBuilder() {
+    @java.lang.Deprecated public com.google.protobuf.Int64ValueOrBuilder getMinIncrementOrBuilder() {
       if (minIncrementBuilder_ != null) {
         return minIncrementBuilder_.getMessageOrBuilder();
       } else {
@@ -854,14 +730,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Optional. the minimum number of increments to rate; for example,
-     * an amount of 5 seconds and a min_increment of 2 would mean that
-     * any event less than 10 seconds would be billed as if it were 10
-     * seconds.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value min_increment = 3 [json_name = "minIncrement"];</code>
+     * <code>.google.protobuf.Int64Value min_increment = 3 [json_name = "minIncrement", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -881,31 +750,21 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxIncrementBuilder_;
     /**
-     * <pre>
-     * Optional. the maximum number of increments to rate; for example,
-     * an amount of 5 seconds and a max_increment of 2 would mean that
-     * any event more than 10 seconds would be billed as if it were 10
-     * seconds.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value max_increment = 4 [json_name = "maxIncrement"];</code>
+     * <code>.google.protobuf.Int64Value max_increment = 4 [json_name = "maxIncrement", deprecated = true];</code>
+     * @deprecated api.commons.billing.modules.BasicAmountConfig.max_increment is deprecated.
+     *     See api/commons/billing/modules/modules.proto;l=16
      * @return Whether the maxIncrement field is set.
      */
-    public boolean hasMaxIncrement() {
+    @java.lang.Deprecated public boolean hasMaxIncrement() {
       return ((bitField0_ & 0x00000008) != 0);
     }
     /**
-     * <pre>
-     * Optional. the maximum number of increments to rate; for example,
-     * an amount of 5 seconds and a max_increment of 2 would mean that
-     * any event more than 10 seconds would be billed as if it were 10
-     * seconds.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value max_increment = 4 [json_name = "maxIncrement"];</code>
+     * <code>.google.protobuf.Int64Value max_increment = 4 [json_name = "maxIncrement", deprecated = true];</code>
+     * @deprecated api.commons.billing.modules.BasicAmountConfig.max_increment is deprecated.
+     *     See api/commons/billing/modules/modules.proto;l=16
      * @return The maxIncrement.
      */
-    public com.google.protobuf.Int64Value getMaxIncrement() {
+    @java.lang.Deprecated public com.google.protobuf.Int64Value getMaxIncrement() {
       if (maxIncrementBuilder_ == null) {
         return maxIncrement_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxIncrement_;
       } else {
@@ -913,16 +772,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Optional. the maximum number of increments to rate; for example,
-     * an amount of 5 seconds and a max_increment of 2 would mean that
-     * any event more than 10 seconds would be billed as if it were 10
-     * seconds.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value max_increment = 4 [json_name = "maxIncrement"];</code>
+     * <code>.google.protobuf.Int64Value max_increment = 4 [json_name = "maxIncrement", deprecated = true];</code>
      */
-    public Builder setMaxIncrement(com.google.protobuf.Int64Value value) {
+    @java.lang.Deprecated public Builder setMaxIncrement(com.google.protobuf.Int64Value value) {
       if (maxIncrementBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -936,16 +788,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Optional. the maximum number of increments to rate; for example,
-     * an amount of 5 seconds and a max_increment of 2 would mean that
-     * any event more than 10 seconds would be billed as if it were 10
-     * seconds.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value max_increment = 4 [json_name = "maxIncrement"];</code>
+     * <code>.google.protobuf.Int64Value max_increment = 4 [json_name = "maxIncrement", deprecated = true];</code>
      */
-    public Builder setMaxIncrement(
+    @java.lang.Deprecated public Builder setMaxIncrement(
         com.google.protobuf.Int64Value.Builder builderForValue) {
       if (maxIncrementBuilder_ == null) {
         maxIncrement_ = builderForValue.build();
@@ -957,16 +802,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Optional. the maximum number of increments to rate; for example,
-     * an amount of 5 seconds and a max_increment of 2 would mean that
-     * any event more than 10 seconds would be billed as if it were 10
-     * seconds.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value max_increment = 4 [json_name = "maxIncrement"];</code>
+     * <code>.google.protobuf.Int64Value max_increment = 4 [json_name = "maxIncrement", deprecated = true];</code>
      */
-    public Builder mergeMaxIncrement(com.google.protobuf.Int64Value value) {
+    @java.lang.Deprecated public Builder mergeMaxIncrement(com.google.protobuf.Int64Value value) {
       if (maxIncrementBuilder_ == null) {
         if (((bitField0_ & 0x00000008) != 0) &&
           maxIncrement_ != null &&
@@ -983,16 +821,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Optional. the maximum number of increments to rate; for example,
-     * an amount of 5 seconds and a max_increment of 2 would mean that
-     * any event more than 10 seconds would be billed as if it were 10
-     * seconds.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value max_increment = 4 [json_name = "maxIncrement"];</code>
+     * <code>.google.protobuf.Int64Value max_increment = 4 [json_name = "maxIncrement", deprecated = true];</code>
      */
-    public Builder clearMaxIncrement() {
+    @java.lang.Deprecated public Builder clearMaxIncrement() {
       bitField0_ = (bitField0_ & ~0x00000008);
       maxIncrement_ = null;
       if (maxIncrementBuilder_ != null) {
@@ -1003,31 +834,17 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Optional. the maximum number of increments to rate; for example,
-     * an amount of 5 seconds and a max_increment of 2 would mean that
-     * any event more than 10 seconds would be billed as if it were 10
-     * seconds.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value max_increment = 4 [json_name = "maxIncrement"];</code>
+     * <code>.google.protobuf.Int64Value max_increment = 4 [json_name = "maxIncrement", deprecated = true];</code>
      */
-    public com.google.protobuf.Int64Value.Builder getMaxIncrementBuilder() {
+    @java.lang.Deprecated public com.google.protobuf.Int64Value.Builder getMaxIncrementBuilder() {
       bitField0_ |= 0x00000008;
       onChanged();
       return getMaxIncrementFieldBuilder().getBuilder();
     }
     /**
-     * <pre>
-     * Optional. the maximum number of increments to rate; for example,
-     * an amount of 5 seconds and a max_increment of 2 would mean that
-     * any event more than 10 seconds would be billed as if it were 10
-     * seconds.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value max_increment = 4 [json_name = "maxIncrement"];</code>
+     * <code>.google.protobuf.Int64Value max_increment = 4 [json_name = "maxIncrement", deprecated = true];</code>
      */
-    public com.google.protobuf.Int64ValueOrBuilder getMaxIncrementOrBuilder() {
+    @java.lang.Deprecated public com.google.protobuf.Int64ValueOrBuilder getMaxIncrementOrBuilder() {
       if (maxIncrementBuilder_ != null) {
         return maxIncrementBuilder_.getMessageOrBuilder();
       } else {
@@ -1036,14 +853,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * Optional. the maximum number of increments to rate; for example,
-     * an amount of 5 seconds and a max_increment of 2 would mean that
-     * any event more than 10 seconds would be billed as if it were 10
-     * seconds.
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value max_increment = 4 [json_name = "maxIncrement"];</code>
+     * <code>.google.protobuf.Int64Value max_increment = 4 [json_name = "maxIncrement", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 

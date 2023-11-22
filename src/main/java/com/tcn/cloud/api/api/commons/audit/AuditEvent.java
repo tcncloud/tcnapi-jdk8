@@ -145,6 +145,17 @@ private static final long serialVersionUID = 0L;
     COMPLIANCE_RND_QUERY_CACHED_EVENT(701),
     AGENT_TRAINING_CREATE_LEARNING_OPPORTUNITY_EVENT(800),
     LMS_PIPELINE_FAILURE_EVENT(900),
+    BILLING_COMMIT_BILLING_PLAN_EVENT(1000),
+    BILLING_CREATE_BILLING_PLAN_EVENT(1001),
+    BILLING_CREATE_INVOICE_EVENT(1002),
+    BILLING_CREATE_RATE_DEFINITION_EVENT(1003),
+    BILLING_DELETE_BILLING_PLAN_EVENT(1004),
+    BILLING_DELETE_INVOICE_EVENT(1005),
+    BILLING_DELETE_RATE_DEFINITION_EVENT(1006),
+    BILLING_EXPORT_INVOICE_EVENT(1007),
+    BILLING_UPDATE_BILLING_PLAN_EVENT(1008),
+    BILLING_UPDATE_INVOICE_EVENT(1009),
+    BILLING_UPDATE_RATE_DEFINITION_EVENT(1010),
     EVENT_NOT_SET(0);
     private final int value;
     private EventCase(int value) {
@@ -254,6 +265,17 @@ private static final long serialVersionUID = 0L;
         case 701: return COMPLIANCE_RND_QUERY_CACHED_EVENT;
         case 800: return AGENT_TRAINING_CREATE_LEARNING_OPPORTUNITY_EVENT;
         case 900: return LMS_PIPELINE_FAILURE_EVENT;
+        case 1000: return BILLING_COMMIT_BILLING_PLAN_EVENT;
+        case 1001: return BILLING_CREATE_BILLING_PLAN_EVENT;
+        case 1002: return BILLING_CREATE_INVOICE_EVENT;
+        case 1003: return BILLING_CREATE_RATE_DEFINITION_EVENT;
+        case 1004: return BILLING_DELETE_BILLING_PLAN_EVENT;
+        case 1005: return BILLING_DELETE_INVOICE_EVENT;
+        case 1006: return BILLING_DELETE_RATE_DEFINITION_EVENT;
+        case 1007: return BILLING_EXPORT_INVOICE_EVENT;
+        case 1008: return BILLING_UPDATE_BILLING_PLAN_EVENT;
+        case 1009: return BILLING_UPDATE_INVOICE_EVENT;
+        case 1010: return BILLING_UPDATE_RATE_DEFINITION_EVENT;
         case 0: return EVENT_NOT_SET;
         default: return null;
       }
@@ -4414,6 +4436,359 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent.getDefaultInstance();
   }
 
+  public static final int BILLING_COMMIT_BILLING_PLAN_EVENT_FIELD_NUMBER = 1000;
+  /**
+   * <pre>
+   * Billing Events class 1000
+   * </pre>
+   *
+   * <code>.api.commons.audit.BillingCommitBillingPlanEvent billing_commit_billing_plan_event = 1000 [json_name = "billingCommitBillingPlanEvent"];</code>
+   * @return Whether the billingCommitBillingPlanEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasBillingCommitBillingPlanEvent() {
+    return eventCase_ == 1000;
+  }
+  /**
+   * <pre>
+   * Billing Events class 1000
+   * </pre>
+   *
+   * <code>.api.commons.audit.BillingCommitBillingPlanEvent billing_commit_billing_plan_event = 1000 [json_name = "billingCommitBillingPlanEvent"];</code>
+   * @return The billingCommitBillingPlanEvent.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.BillingCommitBillingPlanEvent getBillingCommitBillingPlanEvent() {
+    if (eventCase_ == 1000) {
+       return (com.tcn.cloud.api.api.commons.audit.BillingCommitBillingPlanEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.BillingCommitBillingPlanEvent.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Billing Events class 1000
+   * </pre>
+   *
+   * <code>.api.commons.audit.BillingCommitBillingPlanEvent billing_commit_billing_plan_event = 1000 [json_name = "billingCommitBillingPlanEvent"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.BillingCommitBillingPlanEventOrBuilder getBillingCommitBillingPlanEventOrBuilder() {
+    if (eventCase_ == 1000) {
+       return (com.tcn.cloud.api.api.commons.audit.BillingCommitBillingPlanEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.BillingCommitBillingPlanEvent.getDefaultInstance();
+  }
+
+  public static final int BILLING_CREATE_BILLING_PLAN_EVENT_FIELD_NUMBER = 1001;
+  /**
+   * <code>.api.commons.audit.BillingCreateBillingPlanEvent billing_create_billing_plan_event = 1001 [json_name = "billingCreateBillingPlanEvent"];</code>
+   * @return Whether the billingCreateBillingPlanEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasBillingCreateBillingPlanEvent() {
+    return eventCase_ == 1001;
+  }
+  /**
+   * <code>.api.commons.audit.BillingCreateBillingPlanEvent billing_create_billing_plan_event = 1001 [json_name = "billingCreateBillingPlanEvent"];</code>
+   * @return The billingCreateBillingPlanEvent.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.BillingCreateBillingPlanEvent getBillingCreateBillingPlanEvent() {
+    if (eventCase_ == 1001) {
+       return (com.tcn.cloud.api.api.commons.audit.BillingCreateBillingPlanEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.BillingCreateBillingPlanEvent.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.audit.BillingCreateBillingPlanEvent billing_create_billing_plan_event = 1001 [json_name = "billingCreateBillingPlanEvent"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.BillingCreateBillingPlanEventOrBuilder getBillingCreateBillingPlanEventOrBuilder() {
+    if (eventCase_ == 1001) {
+       return (com.tcn.cloud.api.api.commons.audit.BillingCreateBillingPlanEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.BillingCreateBillingPlanEvent.getDefaultInstance();
+  }
+
+  public static final int BILLING_CREATE_INVOICE_EVENT_FIELD_NUMBER = 1002;
+  /**
+   * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent"];</code>
+   * @return Whether the billingCreateInvoiceEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasBillingCreateInvoiceEvent() {
+    return eventCase_ == 1002;
+  }
+  /**
+   * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent"];</code>
+   * @return The billingCreateInvoiceEvent.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent getBillingCreateInvoiceEvent() {
+    if (eventCase_ == 1002) {
+       return (com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEventOrBuilder getBillingCreateInvoiceEventOrBuilder() {
+    if (eventCase_ == 1002) {
+       return (com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent.getDefaultInstance();
+  }
+
+  public static final int BILLING_CREATE_RATE_DEFINITION_EVENT_FIELD_NUMBER = 1003;
+  /**
+   * <code>.api.commons.audit.BillingCreateRateDefinitionEvent billing_create_rate_definition_event = 1003 [json_name = "billingCreateRateDefinitionEvent"];</code>
+   * @return Whether the billingCreateRateDefinitionEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasBillingCreateRateDefinitionEvent() {
+    return eventCase_ == 1003;
+  }
+  /**
+   * <code>.api.commons.audit.BillingCreateRateDefinitionEvent billing_create_rate_definition_event = 1003 [json_name = "billingCreateRateDefinitionEvent"];</code>
+   * @return The billingCreateRateDefinitionEvent.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.BillingCreateRateDefinitionEvent getBillingCreateRateDefinitionEvent() {
+    if (eventCase_ == 1003) {
+       return (com.tcn.cloud.api.api.commons.audit.BillingCreateRateDefinitionEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.BillingCreateRateDefinitionEvent.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.audit.BillingCreateRateDefinitionEvent billing_create_rate_definition_event = 1003 [json_name = "billingCreateRateDefinitionEvent"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.BillingCreateRateDefinitionEventOrBuilder getBillingCreateRateDefinitionEventOrBuilder() {
+    if (eventCase_ == 1003) {
+       return (com.tcn.cloud.api.api.commons.audit.BillingCreateRateDefinitionEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.BillingCreateRateDefinitionEvent.getDefaultInstance();
+  }
+
+  public static final int BILLING_DELETE_BILLING_PLAN_EVENT_FIELD_NUMBER = 1004;
+  /**
+   * <code>.api.commons.audit.BillingDeleteBillingPlanEvent billing_delete_billing_plan_event = 1004 [json_name = "billingDeleteBillingPlanEvent"];</code>
+   * @return Whether the billingDeleteBillingPlanEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasBillingDeleteBillingPlanEvent() {
+    return eventCase_ == 1004;
+  }
+  /**
+   * <code>.api.commons.audit.BillingDeleteBillingPlanEvent billing_delete_billing_plan_event = 1004 [json_name = "billingDeleteBillingPlanEvent"];</code>
+   * @return The billingDeleteBillingPlanEvent.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.BillingDeleteBillingPlanEvent getBillingDeleteBillingPlanEvent() {
+    if (eventCase_ == 1004) {
+       return (com.tcn.cloud.api.api.commons.audit.BillingDeleteBillingPlanEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.BillingDeleteBillingPlanEvent.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.audit.BillingDeleteBillingPlanEvent billing_delete_billing_plan_event = 1004 [json_name = "billingDeleteBillingPlanEvent"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.BillingDeleteBillingPlanEventOrBuilder getBillingDeleteBillingPlanEventOrBuilder() {
+    if (eventCase_ == 1004) {
+       return (com.tcn.cloud.api.api.commons.audit.BillingDeleteBillingPlanEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.BillingDeleteBillingPlanEvent.getDefaultInstance();
+  }
+
+  public static final int BILLING_DELETE_INVOICE_EVENT_FIELD_NUMBER = 1005;
+  /**
+   * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent"];</code>
+   * @return Whether the billingDeleteInvoiceEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasBillingDeleteInvoiceEvent() {
+    return eventCase_ == 1005;
+  }
+  /**
+   * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent"];</code>
+   * @return The billingDeleteInvoiceEvent.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent getBillingDeleteInvoiceEvent() {
+    if (eventCase_ == 1005) {
+       return (com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEventOrBuilder getBillingDeleteInvoiceEventOrBuilder() {
+    if (eventCase_ == 1005) {
+       return (com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent.getDefaultInstance();
+  }
+
+  public static final int BILLING_DELETE_RATE_DEFINITION_EVENT_FIELD_NUMBER = 1006;
+  /**
+   * <code>.api.commons.audit.BillingDeleteRateDefinitionEvent billing_delete_rate_definition_event = 1006 [json_name = "billingDeleteRateDefinitionEvent"];</code>
+   * @return Whether the billingDeleteRateDefinitionEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasBillingDeleteRateDefinitionEvent() {
+    return eventCase_ == 1006;
+  }
+  /**
+   * <code>.api.commons.audit.BillingDeleteRateDefinitionEvent billing_delete_rate_definition_event = 1006 [json_name = "billingDeleteRateDefinitionEvent"];</code>
+   * @return The billingDeleteRateDefinitionEvent.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.BillingDeleteRateDefinitionEvent getBillingDeleteRateDefinitionEvent() {
+    if (eventCase_ == 1006) {
+       return (com.tcn.cloud.api.api.commons.audit.BillingDeleteRateDefinitionEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.BillingDeleteRateDefinitionEvent.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.audit.BillingDeleteRateDefinitionEvent billing_delete_rate_definition_event = 1006 [json_name = "billingDeleteRateDefinitionEvent"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.BillingDeleteRateDefinitionEventOrBuilder getBillingDeleteRateDefinitionEventOrBuilder() {
+    if (eventCase_ == 1006) {
+       return (com.tcn.cloud.api.api.commons.audit.BillingDeleteRateDefinitionEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.BillingDeleteRateDefinitionEvent.getDefaultInstance();
+  }
+
+  public static final int BILLING_EXPORT_INVOICE_EVENT_FIELD_NUMBER = 1007;
+  /**
+   * <code>.api.commons.audit.BillingExportInvoiceEvent billing_export_invoice_event = 1007 [json_name = "billingExportInvoiceEvent"];</code>
+   * @return Whether the billingExportInvoiceEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasBillingExportInvoiceEvent() {
+    return eventCase_ == 1007;
+  }
+  /**
+   * <code>.api.commons.audit.BillingExportInvoiceEvent billing_export_invoice_event = 1007 [json_name = "billingExportInvoiceEvent"];</code>
+   * @return The billingExportInvoiceEvent.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.BillingExportInvoiceEvent getBillingExportInvoiceEvent() {
+    if (eventCase_ == 1007) {
+       return (com.tcn.cloud.api.api.commons.audit.BillingExportInvoiceEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.BillingExportInvoiceEvent.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.audit.BillingExportInvoiceEvent billing_export_invoice_event = 1007 [json_name = "billingExportInvoiceEvent"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.BillingExportInvoiceEventOrBuilder getBillingExportInvoiceEventOrBuilder() {
+    if (eventCase_ == 1007) {
+       return (com.tcn.cloud.api.api.commons.audit.BillingExportInvoiceEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.BillingExportInvoiceEvent.getDefaultInstance();
+  }
+
+  public static final int BILLING_UPDATE_BILLING_PLAN_EVENT_FIELD_NUMBER = 1008;
+  /**
+   * <code>.api.commons.audit.BillingUpdateBillingPlanEvent billing_update_billing_plan_event = 1008 [json_name = "billingUpdateBillingPlanEvent"];</code>
+   * @return Whether the billingUpdateBillingPlanEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasBillingUpdateBillingPlanEvent() {
+    return eventCase_ == 1008;
+  }
+  /**
+   * <code>.api.commons.audit.BillingUpdateBillingPlanEvent billing_update_billing_plan_event = 1008 [json_name = "billingUpdateBillingPlanEvent"];</code>
+   * @return The billingUpdateBillingPlanEvent.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.BillingUpdateBillingPlanEvent getBillingUpdateBillingPlanEvent() {
+    if (eventCase_ == 1008) {
+       return (com.tcn.cloud.api.api.commons.audit.BillingUpdateBillingPlanEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.BillingUpdateBillingPlanEvent.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.audit.BillingUpdateBillingPlanEvent billing_update_billing_plan_event = 1008 [json_name = "billingUpdateBillingPlanEvent"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.BillingUpdateBillingPlanEventOrBuilder getBillingUpdateBillingPlanEventOrBuilder() {
+    if (eventCase_ == 1008) {
+       return (com.tcn.cloud.api.api.commons.audit.BillingUpdateBillingPlanEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.BillingUpdateBillingPlanEvent.getDefaultInstance();
+  }
+
+  public static final int BILLING_UPDATE_INVOICE_EVENT_FIELD_NUMBER = 1009;
+  /**
+   * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent"];</code>
+   * @return Whether the billingUpdateInvoiceEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasBillingUpdateInvoiceEvent() {
+    return eventCase_ == 1009;
+  }
+  /**
+   * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent"];</code>
+   * @return The billingUpdateInvoiceEvent.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent getBillingUpdateInvoiceEvent() {
+    if (eventCase_ == 1009) {
+       return (com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEventOrBuilder getBillingUpdateInvoiceEventOrBuilder() {
+    if (eventCase_ == 1009) {
+       return (com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent.getDefaultInstance();
+  }
+
+  public static final int BILLING_UPDATE_RATE_DEFINITION_EVENT_FIELD_NUMBER = 1010;
+  /**
+   * <code>.api.commons.audit.BillingUpdateRateDefinitionEvent billing_update_rate_definition_event = 1010 [json_name = "billingUpdateRateDefinitionEvent"];</code>
+   * @return Whether the billingUpdateRateDefinitionEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasBillingUpdateRateDefinitionEvent() {
+    return eventCase_ == 1010;
+  }
+  /**
+   * <code>.api.commons.audit.BillingUpdateRateDefinitionEvent billing_update_rate_definition_event = 1010 [json_name = "billingUpdateRateDefinitionEvent"];</code>
+   * @return The billingUpdateRateDefinitionEvent.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.BillingUpdateRateDefinitionEvent getBillingUpdateRateDefinitionEvent() {
+    if (eventCase_ == 1010) {
+       return (com.tcn.cloud.api.api.commons.audit.BillingUpdateRateDefinitionEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.BillingUpdateRateDefinitionEvent.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.audit.BillingUpdateRateDefinitionEvent billing_update_rate_definition_event = 1010 [json_name = "billingUpdateRateDefinitionEvent"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.BillingUpdateRateDefinitionEventOrBuilder getBillingUpdateRateDefinitionEventOrBuilder() {
+    if (eventCase_ == 1010) {
+       return (com.tcn.cloud.api.api.commons.audit.BillingUpdateRateDefinitionEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.BillingUpdateRateDefinitionEvent.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -4721,6 +5096,39 @@ private static final long serialVersionUID = 0L;
     }
     if (eventCase_ == 900) {
       output.writeMessage(900, (com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent) event_);
+    }
+    if (eventCase_ == 1000) {
+      output.writeMessage(1000, (com.tcn.cloud.api.api.commons.audit.BillingCommitBillingPlanEvent) event_);
+    }
+    if (eventCase_ == 1001) {
+      output.writeMessage(1001, (com.tcn.cloud.api.api.commons.audit.BillingCreateBillingPlanEvent) event_);
+    }
+    if (eventCase_ == 1002) {
+      output.writeMessage(1002, (com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent) event_);
+    }
+    if (eventCase_ == 1003) {
+      output.writeMessage(1003, (com.tcn.cloud.api.api.commons.audit.BillingCreateRateDefinitionEvent) event_);
+    }
+    if (eventCase_ == 1004) {
+      output.writeMessage(1004, (com.tcn.cloud.api.api.commons.audit.BillingDeleteBillingPlanEvent) event_);
+    }
+    if (eventCase_ == 1005) {
+      output.writeMessage(1005, (com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent) event_);
+    }
+    if (eventCase_ == 1006) {
+      output.writeMessage(1006, (com.tcn.cloud.api.api.commons.audit.BillingDeleteRateDefinitionEvent) event_);
+    }
+    if (eventCase_ == 1007) {
+      output.writeMessage(1007, (com.tcn.cloud.api.api.commons.audit.BillingExportInvoiceEvent) event_);
+    }
+    if (eventCase_ == 1008) {
+      output.writeMessage(1008, (com.tcn.cloud.api.api.commons.audit.BillingUpdateBillingPlanEvent) event_);
+    }
+    if (eventCase_ == 1009) {
+      output.writeMessage(1009, (com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent) event_);
+    }
+    if (eventCase_ == 1010) {
+      output.writeMessage(1010, (com.tcn.cloud.api.api.commons.audit.BillingUpdateRateDefinitionEvent) event_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -5118,6 +5526,50 @@ private static final long serialVersionUID = 0L;
     if (eventCase_ == 900) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(900, (com.tcn.cloud.api.api.commons.audit.LMSPipelineFailureEvent) event_);
+    }
+    if (eventCase_ == 1000) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1000, (com.tcn.cloud.api.api.commons.audit.BillingCommitBillingPlanEvent) event_);
+    }
+    if (eventCase_ == 1001) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1001, (com.tcn.cloud.api.api.commons.audit.BillingCreateBillingPlanEvent) event_);
+    }
+    if (eventCase_ == 1002) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1002, (com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent) event_);
+    }
+    if (eventCase_ == 1003) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1003, (com.tcn.cloud.api.api.commons.audit.BillingCreateRateDefinitionEvent) event_);
+    }
+    if (eventCase_ == 1004) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1004, (com.tcn.cloud.api.api.commons.audit.BillingDeleteBillingPlanEvent) event_);
+    }
+    if (eventCase_ == 1005) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1005, (com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent) event_);
+    }
+    if (eventCase_ == 1006) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1006, (com.tcn.cloud.api.api.commons.audit.BillingDeleteRateDefinitionEvent) event_);
+    }
+    if (eventCase_ == 1007) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1007, (com.tcn.cloud.api.api.commons.audit.BillingExportInvoiceEvent) event_);
+    }
+    if (eventCase_ == 1008) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1008, (com.tcn.cloud.api.api.commons.audit.BillingUpdateBillingPlanEvent) event_);
+    }
+    if (eventCase_ == 1009) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1009, (com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent) event_);
+    }
+    if (eventCase_ == 1010) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1010, (com.tcn.cloud.api.api.commons.audit.BillingUpdateRateDefinitionEvent) event_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -5518,6 +5970,50 @@ private static final long serialVersionUID = 0L;
         if (!getLmsPipelineFailureEvent()
             .equals(other.getLmsPipelineFailureEvent())) return false;
         break;
+      case 1000:
+        if (!getBillingCommitBillingPlanEvent()
+            .equals(other.getBillingCommitBillingPlanEvent())) return false;
+        break;
+      case 1001:
+        if (!getBillingCreateBillingPlanEvent()
+            .equals(other.getBillingCreateBillingPlanEvent())) return false;
+        break;
+      case 1002:
+        if (!getBillingCreateInvoiceEvent()
+            .equals(other.getBillingCreateInvoiceEvent())) return false;
+        break;
+      case 1003:
+        if (!getBillingCreateRateDefinitionEvent()
+            .equals(other.getBillingCreateRateDefinitionEvent())) return false;
+        break;
+      case 1004:
+        if (!getBillingDeleteBillingPlanEvent()
+            .equals(other.getBillingDeleteBillingPlanEvent())) return false;
+        break;
+      case 1005:
+        if (!getBillingDeleteInvoiceEvent()
+            .equals(other.getBillingDeleteInvoiceEvent())) return false;
+        break;
+      case 1006:
+        if (!getBillingDeleteRateDefinitionEvent()
+            .equals(other.getBillingDeleteRateDefinitionEvent())) return false;
+        break;
+      case 1007:
+        if (!getBillingExportInvoiceEvent()
+            .equals(other.getBillingExportInvoiceEvent())) return false;
+        break;
+      case 1008:
+        if (!getBillingUpdateBillingPlanEvent()
+            .equals(other.getBillingUpdateBillingPlanEvent())) return false;
+        break;
+      case 1009:
+        if (!getBillingUpdateInvoiceEvent()
+            .equals(other.getBillingUpdateInvoiceEvent())) return false;
+        break;
+      case 1010:
+        if (!getBillingUpdateRateDefinitionEvent()
+            .equals(other.getBillingUpdateRateDefinitionEvent())) return false;
+        break;
       case 0:
       default:
     }
@@ -5914,6 +6410,50 @@ private static final long serialVersionUID = 0L;
       case 900:
         hash = (37 * hash) + LMS_PIPELINE_FAILURE_EVENT_FIELD_NUMBER;
         hash = (53 * hash) + getLmsPipelineFailureEvent().hashCode();
+        break;
+      case 1000:
+        hash = (37 * hash) + BILLING_COMMIT_BILLING_PLAN_EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getBillingCommitBillingPlanEvent().hashCode();
+        break;
+      case 1001:
+        hash = (37 * hash) + BILLING_CREATE_BILLING_PLAN_EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getBillingCreateBillingPlanEvent().hashCode();
+        break;
+      case 1002:
+        hash = (37 * hash) + BILLING_CREATE_INVOICE_EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getBillingCreateInvoiceEvent().hashCode();
+        break;
+      case 1003:
+        hash = (37 * hash) + BILLING_CREATE_RATE_DEFINITION_EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getBillingCreateRateDefinitionEvent().hashCode();
+        break;
+      case 1004:
+        hash = (37 * hash) + BILLING_DELETE_BILLING_PLAN_EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getBillingDeleteBillingPlanEvent().hashCode();
+        break;
+      case 1005:
+        hash = (37 * hash) + BILLING_DELETE_INVOICE_EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getBillingDeleteInvoiceEvent().hashCode();
+        break;
+      case 1006:
+        hash = (37 * hash) + BILLING_DELETE_RATE_DEFINITION_EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getBillingDeleteRateDefinitionEvent().hashCode();
+        break;
+      case 1007:
+        hash = (37 * hash) + BILLING_EXPORT_INVOICE_EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getBillingExportInvoiceEvent().hashCode();
+        break;
+      case 1008:
+        hash = (37 * hash) + BILLING_UPDATE_BILLING_PLAN_EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getBillingUpdateBillingPlanEvent().hashCode();
+        break;
+      case 1009:
+        hash = (37 * hash) + BILLING_UPDATE_INVOICE_EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getBillingUpdateInvoiceEvent().hashCode();
+        break;
+      case 1010:
+        hash = (37 * hash) + BILLING_UPDATE_RATE_DEFINITION_EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getBillingUpdateRateDefinitionEvent().hashCode();
         break;
       case 0:
       default:
@@ -6341,6 +6881,39 @@ private static final long serialVersionUID = 0L;
       }
       if (lmsPipelineFailureEventBuilder_ != null) {
         lmsPipelineFailureEventBuilder_.clear();
+      }
+      if (billingCommitBillingPlanEventBuilder_ != null) {
+        billingCommitBillingPlanEventBuilder_.clear();
+      }
+      if (billingCreateBillingPlanEventBuilder_ != null) {
+        billingCreateBillingPlanEventBuilder_.clear();
+      }
+      if (billingCreateInvoiceEventBuilder_ != null) {
+        billingCreateInvoiceEventBuilder_.clear();
+      }
+      if (billingCreateRateDefinitionEventBuilder_ != null) {
+        billingCreateRateDefinitionEventBuilder_.clear();
+      }
+      if (billingDeleteBillingPlanEventBuilder_ != null) {
+        billingDeleteBillingPlanEventBuilder_.clear();
+      }
+      if (billingDeleteInvoiceEventBuilder_ != null) {
+        billingDeleteInvoiceEventBuilder_.clear();
+      }
+      if (billingDeleteRateDefinitionEventBuilder_ != null) {
+        billingDeleteRateDefinitionEventBuilder_.clear();
+      }
+      if (billingExportInvoiceEventBuilder_ != null) {
+        billingExportInvoiceEventBuilder_.clear();
+      }
+      if (billingUpdateBillingPlanEventBuilder_ != null) {
+        billingUpdateBillingPlanEventBuilder_.clear();
+      }
+      if (billingUpdateInvoiceEventBuilder_ != null) {
+        billingUpdateInvoiceEventBuilder_.clear();
+      }
+      if (billingUpdateRateDefinitionEventBuilder_ != null) {
+        billingUpdateRateDefinitionEventBuilder_.clear();
       }
       eventCase_ = 0;
       event_ = null;
@@ -6786,6 +7359,50 @@ private static final long serialVersionUID = 0L;
           lmsPipelineFailureEventBuilder_ != null) {
         result.event_ = lmsPipelineFailureEventBuilder_.build();
       }
+      if (eventCase_ == 1000 &&
+          billingCommitBillingPlanEventBuilder_ != null) {
+        result.event_ = billingCommitBillingPlanEventBuilder_.build();
+      }
+      if (eventCase_ == 1001 &&
+          billingCreateBillingPlanEventBuilder_ != null) {
+        result.event_ = billingCreateBillingPlanEventBuilder_.build();
+      }
+      if (eventCase_ == 1002 &&
+          billingCreateInvoiceEventBuilder_ != null) {
+        result.event_ = billingCreateInvoiceEventBuilder_.build();
+      }
+      if (eventCase_ == 1003 &&
+          billingCreateRateDefinitionEventBuilder_ != null) {
+        result.event_ = billingCreateRateDefinitionEventBuilder_.build();
+      }
+      if (eventCase_ == 1004 &&
+          billingDeleteBillingPlanEventBuilder_ != null) {
+        result.event_ = billingDeleteBillingPlanEventBuilder_.build();
+      }
+      if (eventCase_ == 1005 &&
+          billingDeleteInvoiceEventBuilder_ != null) {
+        result.event_ = billingDeleteInvoiceEventBuilder_.build();
+      }
+      if (eventCase_ == 1006 &&
+          billingDeleteRateDefinitionEventBuilder_ != null) {
+        result.event_ = billingDeleteRateDefinitionEventBuilder_.build();
+      }
+      if (eventCase_ == 1007 &&
+          billingExportInvoiceEventBuilder_ != null) {
+        result.event_ = billingExportInvoiceEventBuilder_.build();
+      }
+      if (eventCase_ == 1008 &&
+          billingUpdateBillingPlanEventBuilder_ != null) {
+        result.event_ = billingUpdateBillingPlanEventBuilder_.build();
+      }
+      if (eventCase_ == 1009 &&
+          billingUpdateInvoiceEventBuilder_ != null) {
+        result.event_ = billingUpdateInvoiceEventBuilder_.build();
+      }
+      if (eventCase_ == 1010 &&
+          billingUpdateRateDefinitionEventBuilder_ != null) {
+        result.event_ = billingUpdateRateDefinitionEventBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -7225,6 +7842,50 @@ private static final long serialVersionUID = 0L;
         }
         case LMS_PIPELINE_FAILURE_EVENT: {
           mergeLmsPipelineFailureEvent(other.getLmsPipelineFailureEvent());
+          break;
+        }
+        case BILLING_COMMIT_BILLING_PLAN_EVENT: {
+          mergeBillingCommitBillingPlanEvent(other.getBillingCommitBillingPlanEvent());
+          break;
+        }
+        case BILLING_CREATE_BILLING_PLAN_EVENT: {
+          mergeBillingCreateBillingPlanEvent(other.getBillingCreateBillingPlanEvent());
+          break;
+        }
+        case BILLING_CREATE_INVOICE_EVENT: {
+          mergeBillingCreateInvoiceEvent(other.getBillingCreateInvoiceEvent());
+          break;
+        }
+        case BILLING_CREATE_RATE_DEFINITION_EVENT: {
+          mergeBillingCreateRateDefinitionEvent(other.getBillingCreateRateDefinitionEvent());
+          break;
+        }
+        case BILLING_DELETE_BILLING_PLAN_EVENT: {
+          mergeBillingDeleteBillingPlanEvent(other.getBillingDeleteBillingPlanEvent());
+          break;
+        }
+        case BILLING_DELETE_INVOICE_EVENT: {
+          mergeBillingDeleteInvoiceEvent(other.getBillingDeleteInvoiceEvent());
+          break;
+        }
+        case BILLING_DELETE_RATE_DEFINITION_EVENT: {
+          mergeBillingDeleteRateDefinitionEvent(other.getBillingDeleteRateDefinitionEvent());
+          break;
+        }
+        case BILLING_EXPORT_INVOICE_EVENT: {
+          mergeBillingExportInvoiceEvent(other.getBillingExportInvoiceEvent());
+          break;
+        }
+        case BILLING_UPDATE_BILLING_PLAN_EVENT: {
+          mergeBillingUpdateBillingPlanEvent(other.getBillingUpdateBillingPlanEvent());
+          break;
+        }
+        case BILLING_UPDATE_INVOICE_EVENT: {
+          mergeBillingUpdateInvoiceEvent(other.getBillingUpdateInvoiceEvent());
+          break;
+        }
+        case BILLING_UPDATE_RATE_DEFINITION_EVENT: {
+          mergeBillingUpdateRateDefinitionEvent(other.getBillingUpdateRateDefinitionEvent());
           break;
         }
         case EVENT_NOT_SET: {
@@ -7933,6 +8594,83 @@ private static final long serialVersionUID = 0L;
               eventCase_ = 900;
               break;
             } // case 7202
+            case 8002: {
+              input.readMessage(
+                  getBillingCommitBillingPlanEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              eventCase_ = 1000;
+              break;
+            } // case 8002
+            case 8010: {
+              input.readMessage(
+                  getBillingCreateBillingPlanEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              eventCase_ = 1001;
+              break;
+            } // case 8010
+            case 8018: {
+              input.readMessage(
+                  getBillingCreateInvoiceEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              eventCase_ = 1002;
+              break;
+            } // case 8018
+            case 8026: {
+              input.readMessage(
+                  getBillingCreateRateDefinitionEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              eventCase_ = 1003;
+              break;
+            } // case 8026
+            case 8034: {
+              input.readMessage(
+                  getBillingDeleteBillingPlanEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              eventCase_ = 1004;
+              break;
+            } // case 8034
+            case 8042: {
+              input.readMessage(
+                  getBillingDeleteInvoiceEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              eventCase_ = 1005;
+              break;
+            } // case 8042
+            case 8050: {
+              input.readMessage(
+                  getBillingDeleteRateDefinitionEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              eventCase_ = 1006;
+              break;
+            } // case 8050
+            case 8058: {
+              input.readMessage(
+                  getBillingExportInvoiceEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              eventCase_ = 1007;
+              break;
+            } // case 8058
+            case 8066: {
+              input.readMessage(
+                  getBillingUpdateBillingPlanEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              eventCase_ = 1008;
+              break;
+            } // case 8066
+            case 8074: {
+              input.readMessage(
+                  getBillingUpdateInvoiceEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              eventCase_ = 1009;
+              break;
+            } // case 8074
+            case 8082: {
+              input.readMessage(
+                  getBillingUpdateRateDefinitionEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              eventCase_ = 1010;
+              break;
+            } // case 8082
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -24746,6 +25484,1604 @@ private static final long serialVersionUID = 0L;
       eventCase_ = 900;
       onChanged();
       return lmsPipelineFailureEventBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.BillingCommitBillingPlanEvent, com.tcn.cloud.api.api.commons.audit.BillingCommitBillingPlanEvent.Builder, com.tcn.cloud.api.api.commons.audit.BillingCommitBillingPlanEventOrBuilder> billingCommitBillingPlanEventBuilder_;
+    /**
+     * <pre>
+     * Billing Events class 1000
+     * </pre>
+     *
+     * <code>.api.commons.audit.BillingCommitBillingPlanEvent billing_commit_billing_plan_event = 1000 [json_name = "billingCommitBillingPlanEvent"];</code>
+     * @return Whether the billingCommitBillingPlanEvent field is set.
+     */
+    @java.lang.Override
+    public boolean hasBillingCommitBillingPlanEvent() {
+      return eventCase_ == 1000;
+    }
+    /**
+     * <pre>
+     * Billing Events class 1000
+     * </pre>
+     *
+     * <code>.api.commons.audit.BillingCommitBillingPlanEvent billing_commit_billing_plan_event = 1000 [json_name = "billingCommitBillingPlanEvent"];</code>
+     * @return The billingCommitBillingPlanEvent.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.BillingCommitBillingPlanEvent getBillingCommitBillingPlanEvent() {
+      if (billingCommitBillingPlanEventBuilder_ == null) {
+        if (eventCase_ == 1000) {
+          return (com.tcn.cloud.api.api.commons.audit.BillingCommitBillingPlanEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.BillingCommitBillingPlanEvent.getDefaultInstance();
+      } else {
+        if (eventCase_ == 1000) {
+          return billingCommitBillingPlanEventBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.audit.BillingCommitBillingPlanEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Billing Events class 1000
+     * </pre>
+     *
+     * <code>.api.commons.audit.BillingCommitBillingPlanEvent billing_commit_billing_plan_event = 1000 [json_name = "billingCommitBillingPlanEvent"];</code>
+     */
+    public Builder setBillingCommitBillingPlanEvent(com.tcn.cloud.api.api.commons.audit.BillingCommitBillingPlanEvent value) {
+      if (billingCommitBillingPlanEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        event_ = value;
+        onChanged();
+      } else {
+        billingCommitBillingPlanEventBuilder_.setMessage(value);
+      }
+      eventCase_ = 1000;
+      return this;
+    }
+    /**
+     * <pre>
+     * Billing Events class 1000
+     * </pre>
+     *
+     * <code>.api.commons.audit.BillingCommitBillingPlanEvent billing_commit_billing_plan_event = 1000 [json_name = "billingCommitBillingPlanEvent"];</code>
+     */
+    public Builder setBillingCommitBillingPlanEvent(
+        com.tcn.cloud.api.api.commons.audit.BillingCommitBillingPlanEvent.Builder builderForValue) {
+      if (billingCommitBillingPlanEventBuilder_ == null) {
+        event_ = builderForValue.build();
+        onChanged();
+      } else {
+        billingCommitBillingPlanEventBuilder_.setMessage(builderForValue.build());
+      }
+      eventCase_ = 1000;
+      return this;
+    }
+    /**
+     * <pre>
+     * Billing Events class 1000
+     * </pre>
+     *
+     * <code>.api.commons.audit.BillingCommitBillingPlanEvent billing_commit_billing_plan_event = 1000 [json_name = "billingCommitBillingPlanEvent"];</code>
+     */
+    public Builder mergeBillingCommitBillingPlanEvent(com.tcn.cloud.api.api.commons.audit.BillingCommitBillingPlanEvent value) {
+      if (billingCommitBillingPlanEventBuilder_ == null) {
+        if (eventCase_ == 1000 &&
+            event_ != com.tcn.cloud.api.api.commons.audit.BillingCommitBillingPlanEvent.getDefaultInstance()) {
+          event_ = com.tcn.cloud.api.api.commons.audit.BillingCommitBillingPlanEvent.newBuilder((com.tcn.cloud.api.api.commons.audit.BillingCommitBillingPlanEvent) event_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          event_ = value;
+        }
+        onChanged();
+      } else {
+        if (eventCase_ == 1000) {
+          billingCommitBillingPlanEventBuilder_.mergeFrom(value);
+        } else {
+          billingCommitBillingPlanEventBuilder_.setMessage(value);
+        }
+      }
+      eventCase_ = 1000;
+      return this;
+    }
+    /**
+     * <pre>
+     * Billing Events class 1000
+     * </pre>
+     *
+     * <code>.api.commons.audit.BillingCommitBillingPlanEvent billing_commit_billing_plan_event = 1000 [json_name = "billingCommitBillingPlanEvent"];</code>
+     */
+    public Builder clearBillingCommitBillingPlanEvent() {
+      if (billingCommitBillingPlanEventBuilder_ == null) {
+        if (eventCase_ == 1000) {
+          eventCase_ = 0;
+          event_ = null;
+          onChanged();
+        }
+      } else {
+        if (eventCase_ == 1000) {
+          eventCase_ = 0;
+          event_ = null;
+        }
+        billingCommitBillingPlanEventBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Billing Events class 1000
+     * </pre>
+     *
+     * <code>.api.commons.audit.BillingCommitBillingPlanEvent billing_commit_billing_plan_event = 1000 [json_name = "billingCommitBillingPlanEvent"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.audit.BillingCommitBillingPlanEvent.Builder getBillingCommitBillingPlanEventBuilder() {
+      return getBillingCommitBillingPlanEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Billing Events class 1000
+     * </pre>
+     *
+     * <code>.api.commons.audit.BillingCommitBillingPlanEvent billing_commit_billing_plan_event = 1000 [json_name = "billingCommitBillingPlanEvent"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.BillingCommitBillingPlanEventOrBuilder getBillingCommitBillingPlanEventOrBuilder() {
+      if ((eventCase_ == 1000) && (billingCommitBillingPlanEventBuilder_ != null)) {
+        return billingCommitBillingPlanEventBuilder_.getMessageOrBuilder();
+      } else {
+        if (eventCase_ == 1000) {
+          return (com.tcn.cloud.api.api.commons.audit.BillingCommitBillingPlanEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.BillingCommitBillingPlanEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Billing Events class 1000
+     * </pre>
+     *
+     * <code>.api.commons.audit.BillingCommitBillingPlanEvent billing_commit_billing_plan_event = 1000 [json_name = "billingCommitBillingPlanEvent"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.BillingCommitBillingPlanEvent, com.tcn.cloud.api.api.commons.audit.BillingCommitBillingPlanEvent.Builder, com.tcn.cloud.api.api.commons.audit.BillingCommitBillingPlanEventOrBuilder> 
+        getBillingCommitBillingPlanEventFieldBuilder() {
+      if (billingCommitBillingPlanEventBuilder_ == null) {
+        if (!(eventCase_ == 1000)) {
+          event_ = com.tcn.cloud.api.api.commons.audit.BillingCommitBillingPlanEvent.getDefaultInstance();
+        }
+        billingCommitBillingPlanEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.audit.BillingCommitBillingPlanEvent, com.tcn.cloud.api.api.commons.audit.BillingCommitBillingPlanEvent.Builder, com.tcn.cloud.api.api.commons.audit.BillingCommitBillingPlanEventOrBuilder>(
+                (com.tcn.cloud.api.api.commons.audit.BillingCommitBillingPlanEvent) event_,
+                getParentForChildren(),
+                isClean());
+        event_ = null;
+      }
+      eventCase_ = 1000;
+      onChanged();
+      return billingCommitBillingPlanEventBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.BillingCreateBillingPlanEvent, com.tcn.cloud.api.api.commons.audit.BillingCreateBillingPlanEvent.Builder, com.tcn.cloud.api.api.commons.audit.BillingCreateBillingPlanEventOrBuilder> billingCreateBillingPlanEventBuilder_;
+    /**
+     * <code>.api.commons.audit.BillingCreateBillingPlanEvent billing_create_billing_plan_event = 1001 [json_name = "billingCreateBillingPlanEvent"];</code>
+     * @return Whether the billingCreateBillingPlanEvent field is set.
+     */
+    @java.lang.Override
+    public boolean hasBillingCreateBillingPlanEvent() {
+      return eventCase_ == 1001;
+    }
+    /**
+     * <code>.api.commons.audit.BillingCreateBillingPlanEvent billing_create_billing_plan_event = 1001 [json_name = "billingCreateBillingPlanEvent"];</code>
+     * @return The billingCreateBillingPlanEvent.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.BillingCreateBillingPlanEvent getBillingCreateBillingPlanEvent() {
+      if (billingCreateBillingPlanEventBuilder_ == null) {
+        if (eventCase_ == 1001) {
+          return (com.tcn.cloud.api.api.commons.audit.BillingCreateBillingPlanEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.BillingCreateBillingPlanEvent.getDefaultInstance();
+      } else {
+        if (eventCase_ == 1001) {
+          return billingCreateBillingPlanEventBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.audit.BillingCreateBillingPlanEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.audit.BillingCreateBillingPlanEvent billing_create_billing_plan_event = 1001 [json_name = "billingCreateBillingPlanEvent"];</code>
+     */
+    public Builder setBillingCreateBillingPlanEvent(com.tcn.cloud.api.api.commons.audit.BillingCreateBillingPlanEvent value) {
+      if (billingCreateBillingPlanEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        event_ = value;
+        onChanged();
+      } else {
+        billingCreateBillingPlanEventBuilder_.setMessage(value);
+      }
+      eventCase_ = 1001;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.BillingCreateBillingPlanEvent billing_create_billing_plan_event = 1001 [json_name = "billingCreateBillingPlanEvent"];</code>
+     */
+    public Builder setBillingCreateBillingPlanEvent(
+        com.tcn.cloud.api.api.commons.audit.BillingCreateBillingPlanEvent.Builder builderForValue) {
+      if (billingCreateBillingPlanEventBuilder_ == null) {
+        event_ = builderForValue.build();
+        onChanged();
+      } else {
+        billingCreateBillingPlanEventBuilder_.setMessage(builderForValue.build());
+      }
+      eventCase_ = 1001;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.BillingCreateBillingPlanEvent billing_create_billing_plan_event = 1001 [json_name = "billingCreateBillingPlanEvent"];</code>
+     */
+    public Builder mergeBillingCreateBillingPlanEvent(com.tcn.cloud.api.api.commons.audit.BillingCreateBillingPlanEvent value) {
+      if (billingCreateBillingPlanEventBuilder_ == null) {
+        if (eventCase_ == 1001 &&
+            event_ != com.tcn.cloud.api.api.commons.audit.BillingCreateBillingPlanEvent.getDefaultInstance()) {
+          event_ = com.tcn.cloud.api.api.commons.audit.BillingCreateBillingPlanEvent.newBuilder((com.tcn.cloud.api.api.commons.audit.BillingCreateBillingPlanEvent) event_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          event_ = value;
+        }
+        onChanged();
+      } else {
+        if (eventCase_ == 1001) {
+          billingCreateBillingPlanEventBuilder_.mergeFrom(value);
+        } else {
+          billingCreateBillingPlanEventBuilder_.setMessage(value);
+        }
+      }
+      eventCase_ = 1001;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.BillingCreateBillingPlanEvent billing_create_billing_plan_event = 1001 [json_name = "billingCreateBillingPlanEvent"];</code>
+     */
+    public Builder clearBillingCreateBillingPlanEvent() {
+      if (billingCreateBillingPlanEventBuilder_ == null) {
+        if (eventCase_ == 1001) {
+          eventCase_ = 0;
+          event_ = null;
+          onChanged();
+        }
+      } else {
+        if (eventCase_ == 1001) {
+          eventCase_ = 0;
+          event_ = null;
+        }
+        billingCreateBillingPlanEventBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.BillingCreateBillingPlanEvent billing_create_billing_plan_event = 1001 [json_name = "billingCreateBillingPlanEvent"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.audit.BillingCreateBillingPlanEvent.Builder getBillingCreateBillingPlanEventBuilder() {
+      return getBillingCreateBillingPlanEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.audit.BillingCreateBillingPlanEvent billing_create_billing_plan_event = 1001 [json_name = "billingCreateBillingPlanEvent"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.BillingCreateBillingPlanEventOrBuilder getBillingCreateBillingPlanEventOrBuilder() {
+      if ((eventCase_ == 1001) && (billingCreateBillingPlanEventBuilder_ != null)) {
+        return billingCreateBillingPlanEventBuilder_.getMessageOrBuilder();
+      } else {
+        if (eventCase_ == 1001) {
+          return (com.tcn.cloud.api.api.commons.audit.BillingCreateBillingPlanEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.BillingCreateBillingPlanEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.audit.BillingCreateBillingPlanEvent billing_create_billing_plan_event = 1001 [json_name = "billingCreateBillingPlanEvent"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.BillingCreateBillingPlanEvent, com.tcn.cloud.api.api.commons.audit.BillingCreateBillingPlanEvent.Builder, com.tcn.cloud.api.api.commons.audit.BillingCreateBillingPlanEventOrBuilder> 
+        getBillingCreateBillingPlanEventFieldBuilder() {
+      if (billingCreateBillingPlanEventBuilder_ == null) {
+        if (!(eventCase_ == 1001)) {
+          event_ = com.tcn.cloud.api.api.commons.audit.BillingCreateBillingPlanEvent.getDefaultInstance();
+        }
+        billingCreateBillingPlanEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.audit.BillingCreateBillingPlanEvent, com.tcn.cloud.api.api.commons.audit.BillingCreateBillingPlanEvent.Builder, com.tcn.cloud.api.api.commons.audit.BillingCreateBillingPlanEventOrBuilder>(
+                (com.tcn.cloud.api.api.commons.audit.BillingCreateBillingPlanEvent) event_,
+                getParentForChildren(),
+                isClean());
+        event_ = null;
+      }
+      eventCase_ = 1001;
+      onChanged();
+      return billingCreateBillingPlanEventBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent, com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent.Builder, com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEventOrBuilder> billingCreateInvoiceEventBuilder_;
+    /**
+     * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent"];</code>
+     * @return Whether the billingCreateInvoiceEvent field is set.
+     */
+    @java.lang.Override
+    public boolean hasBillingCreateInvoiceEvent() {
+      return eventCase_ == 1002;
+    }
+    /**
+     * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent"];</code>
+     * @return The billingCreateInvoiceEvent.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent getBillingCreateInvoiceEvent() {
+      if (billingCreateInvoiceEventBuilder_ == null) {
+        if (eventCase_ == 1002) {
+          return (com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent.getDefaultInstance();
+      } else {
+        if (eventCase_ == 1002) {
+          return billingCreateInvoiceEventBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent"];</code>
+     */
+    public Builder setBillingCreateInvoiceEvent(com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent value) {
+      if (billingCreateInvoiceEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        event_ = value;
+        onChanged();
+      } else {
+        billingCreateInvoiceEventBuilder_.setMessage(value);
+      }
+      eventCase_ = 1002;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent"];</code>
+     */
+    public Builder setBillingCreateInvoiceEvent(
+        com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent.Builder builderForValue) {
+      if (billingCreateInvoiceEventBuilder_ == null) {
+        event_ = builderForValue.build();
+        onChanged();
+      } else {
+        billingCreateInvoiceEventBuilder_.setMessage(builderForValue.build());
+      }
+      eventCase_ = 1002;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent"];</code>
+     */
+    public Builder mergeBillingCreateInvoiceEvent(com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent value) {
+      if (billingCreateInvoiceEventBuilder_ == null) {
+        if (eventCase_ == 1002 &&
+            event_ != com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent.getDefaultInstance()) {
+          event_ = com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent.newBuilder((com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent) event_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          event_ = value;
+        }
+        onChanged();
+      } else {
+        if (eventCase_ == 1002) {
+          billingCreateInvoiceEventBuilder_.mergeFrom(value);
+        } else {
+          billingCreateInvoiceEventBuilder_.setMessage(value);
+        }
+      }
+      eventCase_ = 1002;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent"];</code>
+     */
+    public Builder clearBillingCreateInvoiceEvent() {
+      if (billingCreateInvoiceEventBuilder_ == null) {
+        if (eventCase_ == 1002) {
+          eventCase_ = 0;
+          event_ = null;
+          onChanged();
+        }
+      } else {
+        if (eventCase_ == 1002) {
+          eventCase_ = 0;
+          event_ = null;
+        }
+        billingCreateInvoiceEventBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent.Builder getBillingCreateInvoiceEventBuilder() {
+      return getBillingCreateInvoiceEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEventOrBuilder getBillingCreateInvoiceEventOrBuilder() {
+      if ((eventCase_ == 1002) && (billingCreateInvoiceEventBuilder_ != null)) {
+        return billingCreateInvoiceEventBuilder_.getMessageOrBuilder();
+      } else {
+        if (eventCase_ == 1002) {
+          return (com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent, com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent.Builder, com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEventOrBuilder> 
+        getBillingCreateInvoiceEventFieldBuilder() {
+      if (billingCreateInvoiceEventBuilder_ == null) {
+        if (!(eventCase_ == 1002)) {
+          event_ = com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent.getDefaultInstance();
+        }
+        billingCreateInvoiceEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent, com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent.Builder, com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEventOrBuilder>(
+                (com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent) event_,
+                getParentForChildren(),
+                isClean());
+        event_ = null;
+      }
+      eventCase_ = 1002;
+      onChanged();
+      return billingCreateInvoiceEventBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.BillingCreateRateDefinitionEvent, com.tcn.cloud.api.api.commons.audit.BillingCreateRateDefinitionEvent.Builder, com.tcn.cloud.api.api.commons.audit.BillingCreateRateDefinitionEventOrBuilder> billingCreateRateDefinitionEventBuilder_;
+    /**
+     * <code>.api.commons.audit.BillingCreateRateDefinitionEvent billing_create_rate_definition_event = 1003 [json_name = "billingCreateRateDefinitionEvent"];</code>
+     * @return Whether the billingCreateRateDefinitionEvent field is set.
+     */
+    @java.lang.Override
+    public boolean hasBillingCreateRateDefinitionEvent() {
+      return eventCase_ == 1003;
+    }
+    /**
+     * <code>.api.commons.audit.BillingCreateRateDefinitionEvent billing_create_rate_definition_event = 1003 [json_name = "billingCreateRateDefinitionEvent"];</code>
+     * @return The billingCreateRateDefinitionEvent.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.BillingCreateRateDefinitionEvent getBillingCreateRateDefinitionEvent() {
+      if (billingCreateRateDefinitionEventBuilder_ == null) {
+        if (eventCase_ == 1003) {
+          return (com.tcn.cloud.api.api.commons.audit.BillingCreateRateDefinitionEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.BillingCreateRateDefinitionEvent.getDefaultInstance();
+      } else {
+        if (eventCase_ == 1003) {
+          return billingCreateRateDefinitionEventBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.audit.BillingCreateRateDefinitionEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.audit.BillingCreateRateDefinitionEvent billing_create_rate_definition_event = 1003 [json_name = "billingCreateRateDefinitionEvent"];</code>
+     */
+    public Builder setBillingCreateRateDefinitionEvent(com.tcn.cloud.api.api.commons.audit.BillingCreateRateDefinitionEvent value) {
+      if (billingCreateRateDefinitionEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        event_ = value;
+        onChanged();
+      } else {
+        billingCreateRateDefinitionEventBuilder_.setMessage(value);
+      }
+      eventCase_ = 1003;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.BillingCreateRateDefinitionEvent billing_create_rate_definition_event = 1003 [json_name = "billingCreateRateDefinitionEvent"];</code>
+     */
+    public Builder setBillingCreateRateDefinitionEvent(
+        com.tcn.cloud.api.api.commons.audit.BillingCreateRateDefinitionEvent.Builder builderForValue) {
+      if (billingCreateRateDefinitionEventBuilder_ == null) {
+        event_ = builderForValue.build();
+        onChanged();
+      } else {
+        billingCreateRateDefinitionEventBuilder_.setMessage(builderForValue.build());
+      }
+      eventCase_ = 1003;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.BillingCreateRateDefinitionEvent billing_create_rate_definition_event = 1003 [json_name = "billingCreateRateDefinitionEvent"];</code>
+     */
+    public Builder mergeBillingCreateRateDefinitionEvent(com.tcn.cloud.api.api.commons.audit.BillingCreateRateDefinitionEvent value) {
+      if (billingCreateRateDefinitionEventBuilder_ == null) {
+        if (eventCase_ == 1003 &&
+            event_ != com.tcn.cloud.api.api.commons.audit.BillingCreateRateDefinitionEvent.getDefaultInstance()) {
+          event_ = com.tcn.cloud.api.api.commons.audit.BillingCreateRateDefinitionEvent.newBuilder((com.tcn.cloud.api.api.commons.audit.BillingCreateRateDefinitionEvent) event_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          event_ = value;
+        }
+        onChanged();
+      } else {
+        if (eventCase_ == 1003) {
+          billingCreateRateDefinitionEventBuilder_.mergeFrom(value);
+        } else {
+          billingCreateRateDefinitionEventBuilder_.setMessage(value);
+        }
+      }
+      eventCase_ = 1003;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.BillingCreateRateDefinitionEvent billing_create_rate_definition_event = 1003 [json_name = "billingCreateRateDefinitionEvent"];</code>
+     */
+    public Builder clearBillingCreateRateDefinitionEvent() {
+      if (billingCreateRateDefinitionEventBuilder_ == null) {
+        if (eventCase_ == 1003) {
+          eventCase_ = 0;
+          event_ = null;
+          onChanged();
+        }
+      } else {
+        if (eventCase_ == 1003) {
+          eventCase_ = 0;
+          event_ = null;
+        }
+        billingCreateRateDefinitionEventBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.BillingCreateRateDefinitionEvent billing_create_rate_definition_event = 1003 [json_name = "billingCreateRateDefinitionEvent"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.audit.BillingCreateRateDefinitionEvent.Builder getBillingCreateRateDefinitionEventBuilder() {
+      return getBillingCreateRateDefinitionEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.audit.BillingCreateRateDefinitionEvent billing_create_rate_definition_event = 1003 [json_name = "billingCreateRateDefinitionEvent"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.BillingCreateRateDefinitionEventOrBuilder getBillingCreateRateDefinitionEventOrBuilder() {
+      if ((eventCase_ == 1003) && (billingCreateRateDefinitionEventBuilder_ != null)) {
+        return billingCreateRateDefinitionEventBuilder_.getMessageOrBuilder();
+      } else {
+        if (eventCase_ == 1003) {
+          return (com.tcn.cloud.api.api.commons.audit.BillingCreateRateDefinitionEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.BillingCreateRateDefinitionEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.audit.BillingCreateRateDefinitionEvent billing_create_rate_definition_event = 1003 [json_name = "billingCreateRateDefinitionEvent"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.BillingCreateRateDefinitionEvent, com.tcn.cloud.api.api.commons.audit.BillingCreateRateDefinitionEvent.Builder, com.tcn.cloud.api.api.commons.audit.BillingCreateRateDefinitionEventOrBuilder> 
+        getBillingCreateRateDefinitionEventFieldBuilder() {
+      if (billingCreateRateDefinitionEventBuilder_ == null) {
+        if (!(eventCase_ == 1003)) {
+          event_ = com.tcn.cloud.api.api.commons.audit.BillingCreateRateDefinitionEvent.getDefaultInstance();
+        }
+        billingCreateRateDefinitionEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.audit.BillingCreateRateDefinitionEvent, com.tcn.cloud.api.api.commons.audit.BillingCreateRateDefinitionEvent.Builder, com.tcn.cloud.api.api.commons.audit.BillingCreateRateDefinitionEventOrBuilder>(
+                (com.tcn.cloud.api.api.commons.audit.BillingCreateRateDefinitionEvent) event_,
+                getParentForChildren(),
+                isClean());
+        event_ = null;
+      }
+      eventCase_ = 1003;
+      onChanged();
+      return billingCreateRateDefinitionEventBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.BillingDeleteBillingPlanEvent, com.tcn.cloud.api.api.commons.audit.BillingDeleteBillingPlanEvent.Builder, com.tcn.cloud.api.api.commons.audit.BillingDeleteBillingPlanEventOrBuilder> billingDeleteBillingPlanEventBuilder_;
+    /**
+     * <code>.api.commons.audit.BillingDeleteBillingPlanEvent billing_delete_billing_plan_event = 1004 [json_name = "billingDeleteBillingPlanEvent"];</code>
+     * @return Whether the billingDeleteBillingPlanEvent field is set.
+     */
+    @java.lang.Override
+    public boolean hasBillingDeleteBillingPlanEvent() {
+      return eventCase_ == 1004;
+    }
+    /**
+     * <code>.api.commons.audit.BillingDeleteBillingPlanEvent billing_delete_billing_plan_event = 1004 [json_name = "billingDeleteBillingPlanEvent"];</code>
+     * @return The billingDeleteBillingPlanEvent.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.BillingDeleteBillingPlanEvent getBillingDeleteBillingPlanEvent() {
+      if (billingDeleteBillingPlanEventBuilder_ == null) {
+        if (eventCase_ == 1004) {
+          return (com.tcn.cloud.api.api.commons.audit.BillingDeleteBillingPlanEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.BillingDeleteBillingPlanEvent.getDefaultInstance();
+      } else {
+        if (eventCase_ == 1004) {
+          return billingDeleteBillingPlanEventBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.audit.BillingDeleteBillingPlanEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.audit.BillingDeleteBillingPlanEvent billing_delete_billing_plan_event = 1004 [json_name = "billingDeleteBillingPlanEvent"];</code>
+     */
+    public Builder setBillingDeleteBillingPlanEvent(com.tcn.cloud.api.api.commons.audit.BillingDeleteBillingPlanEvent value) {
+      if (billingDeleteBillingPlanEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        event_ = value;
+        onChanged();
+      } else {
+        billingDeleteBillingPlanEventBuilder_.setMessage(value);
+      }
+      eventCase_ = 1004;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.BillingDeleteBillingPlanEvent billing_delete_billing_plan_event = 1004 [json_name = "billingDeleteBillingPlanEvent"];</code>
+     */
+    public Builder setBillingDeleteBillingPlanEvent(
+        com.tcn.cloud.api.api.commons.audit.BillingDeleteBillingPlanEvent.Builder builderForValue) {
+      if (billingDeleteBillingPlanEventBuilder_ == null) {
+        event_ = builderForValue.build();
+        onChanged();
+      } else {
+        billingDeleteBillingPlanEventBuilder_.setMessage(builderForValue.build());
+      }
+      eventCase_ = 1004;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.BillingDeleteBillingPlanEvent billing_delete_billing_plan_event = 1004 [json_name = "billingDeleteBillingPlanEvent"];</code>
+     */
+    public Builder mergeBillingDeleteBillingPlanEvent(com.tcn.cloud.api.api.commons.audit.BillingDeleteBillingPlanEvent value) {
+      if (billingDeleteBillingPlanEventBuilder_ == null) {
+        if (eventCase_ == 1004 &&
+            event_ != com.tcn.cloud.api.api.commons.audit.BillingDeleteBillingPlanEvent.getDefaultInstance()) {
+          event_ = com.tcn.cloud.api.api.commons.audit.BillingDeleteBillingPlanEvent.newBuilder((com.tcn.cloud.api.api.commons.audit.BillingDeleteBillingPlanEvent) event_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          event_ = value;
+        }
+        onChanged();
+      } else {
+        if (eventCase_ == 1004) {
+          billingDeleteBillingPlanEventBuilder_.mergeFrom(value);
+        } else {
+          billingDeleteBillingPlanEventBuilder_.setMessage(value);
+        }
+      }
+      eventCase_ = 1004;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.BillingDeleteBillingPlanEvent billing_delete_billing_plan_event = 1004 [json_name = "billingDeleteBillingPlanEvent"];</code>
+     */
+    public Builder clearBillingDeleteBillingPlanEvent() {
+      if (billingDeleteBillingPlanEventBuilder_ == null) {
+        if (eventCase_ == 1004) {
+          eventCase_ = 0;
+          event_ = null;
+          onChanged();
+        }
+      } else {
+        if (eventCase_ == 1004) {
+          eventCase_ = 0;
+          event_ = null;
+        }
+        billingDeleteBillingPlanEventBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.BillingDeleteBillingPlanEvent billing_delete_billing_plan_event = 1004 [json_name = "billingDeleteBillingPlanEvent"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.audit.BillingDeleteBillingPlanEvent.Builder getBillingDeleteBillingPlanEventBuilder() {
+      return getBillingDeleteBillingPlanEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.audit.BillingDeleteBillingPlanEvent billing_delete_billing_plan_event = 1004 [json_name = "billingDeleteBillingPlanEvent"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.BillingDeleteBillingPlanEventOrBuilder getBillingDeleteBillingPlanEventOrBuilder() {
+      if ((eventCase_ == 1004) && (billingDeleteBillingPlanEventBuilder_ != null)) {
+        return billingDeleteBillingPlanEventBuilder_.getMessageOrBuilder();
+      } else {
+        if (eventCase_ == 1004) {
+          return (com.tcn.cloud.api.api.commons.audit.BillingDeleteBillingPlanEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.BillingDeleteBillingPlanEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.audit.BillingDeleteBillingPlanEvent billing_delete_billing_plan_event = 1004 [json_name = "billingDeleteBillingPlanEvent"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.BillingDeleteBillingPlanEvent, com.tcn.cloud.api.api.commons.audit.BillingDeleteBillingPlanEvent.Builder, com.tcn.cloud.api.api.commons.audit.BillingDeleteBillingPlanEventOrBuilder> 
+        getBillingDeleteBillingPlanEventFieldBuilder() {
+      if (billingDeleteBillingPlanEventBuilder_ == null) {
+        if (!(eventCase_ == 1004)) {
+          event_ = com.tcn.cloud.api.api.commons.audit.BillingDeleteBillingPlanEvent.getDefaultInstance();
+        }
+        billingDeleteBillingPlanEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.audit.BillingDeleteBillingPlanEvent, com.tcn.cloud.api.api.commons.audit.BillingDeleteBillingPlanEvent.Builder, com.tcn.cloud.api.api.commons.audit.BillingDeleteBillingPlanEventOrBuilder>(
+                (com.tcn.cloud.api.api.commons.audit.BillingDeleteBillingPlanEvent) event_,
+                getParentForChildren(),
+                isClean());
+        event_ = null;
+      }
+      eventCase_ = 1004;
+      onChanged();
+      return billingDeleteBillingPlanEventBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent, com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent.Builder, com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEventOrBuilder> billingDeleteInvoiceEventBuilder_;
+    /**
+     * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent"];</code>
+     * @return Whether the billingDeleteInvoiceEvent field is set.
+     */
+    @java.lang.Override
+    public boolean hasBillingDeleteInvoiceEvent() {
+      return eventCase_ == 1005;
+    }
+    /**
+     * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent"];</code>
+     * @return The billingDeleteInvoiceEvent.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent getBillingDeleteInvoiceEvent() {
+      if (billingDeleteInvoiceEventBuilder_ == null) {
+        if (eventCase_ == 1005) {
+          return (com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent.getDefaultInstance();
+      } else {
+        if (eventCase_ == 1005) {
+          return billingDeleteInvoiceEventBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent"];</code>
+     */
+    public Builder setBillingDeleteInvoiceEvent(com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent value) {
+      if (billingDeleteInvoiceEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        event_ = value;
+        onChanged();
+      } else {
+        billingDeleteInvoiceEventBuilder_.setMessage(value);
+      }
+      eventCase_ = 1005;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent"];</code>
+     */
+    public Builder setBillingDeleteInvoiceEvent(
+        com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent.Builder builderForValue) {
+      if (billingDeleteInvoiceEventBuilder_ == null) {
+        event_ = builderForValue.build();
+        onChanged();
+      } else {
+        billingDeleteInvoiceEventBuilder_.setMessage(builderForValue.build());
+      }
+      eventCase_ = 1005;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent"];</code>
+     */
+    public Builder mergeBillingDeleteInvoiceEvent(com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent value) {
+      if (billingDeleteInvoiceEventBuilder_ == null) {
+        if (eventCase_ == 1005 &&
+            event_ != com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent.getDefaultInstance()) {
+          event_ = com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent.newBuilder((com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent) event_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          event_ = value;
+        }
+        onChanged();
+      } else {
+        if (eventCase_ == 1005) {
+          billingDeleteInvoiceEventBuilder_.mergeFrom(value);
+        } else {
+          billingDeleteInvoiceEventBuilder_.setMessage(value);
+        }
+      }
+      eventCase_ = 1005;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent"];</code>
+     */
+    public Builder clearBillingDeleteInvoiceEvent() {
+      if (billingDeleteInvoiceEventBuilder_ == null) {
+        if (eventCase_ == 1005) {
+          eventCase_ = 0;
+          event_ = null;
+          onChanged();
+        }
+      } else {
+        if (eventCase_ == 1005) {
+          eventCase_ = 0;
+          event_ = null;
+        }
+        billingDeleteInvoiceEventBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent.Builder getBillingDeleteInvoiceEventBuilder() {
+      return getBillingDeleteInvoiceEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEventOrBuilder getBillingDeleteInvoiceEventOrBuilder() {
+      if ((eventCase_ == 1005) && (billingDeleteInvoiceEventBuilder_ != null)) {
+        return billingDeleteInvoiceEventBuilder_.getMessageOrBuilder();
+      } else {
+        if (eventCase_ == 1005) {
+          return (com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent, com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent.Builder, com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEventOrBuilder> 
+        getBillingDeleteInvoiceEventFieldBuilder() {
+      if (billingDeleteInvoiceEventBuilder_ == null) {
+        if (!(eventCase_ == 1005)) {
+          event_ = com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent.getDefaultInstance();
+        }
+        billingDeleteInvoiceEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent, com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent.Builder, com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEventOrBuilder>(
+                (com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent) event_,
+                getParentForChildren(),
+                isClean());
+        event_ = null;
+      }
+      eventCase_ = 1005;
+      onChanged();
+      return billingDeleteInvoiceEventBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.BillingDeleteRateDefinitionEvent, com.tcn.cloud.api.api.commons.audit.BillingDeleteRateDefinitionEvent.Builder, com.tcn.cloud.api.api.commons.audit.BillingDeleteRateDefinitionEventOrBuilder> billingDeleteRateDefinitionEventBuilder_;
+    /**
+     * <code>.api.commons.audit.BillingDeleteRateDefinitionEvent billing_delete_rate_definition_event = 1006 [json_name = "billingDeleteRateDefinitionEvent"];</code>
+     * @return Whether the billingDeleteRateDefinitionEvent field is set.
+     */
+    @java.lang.Override
+    public boolean hasBillingDeleteRateDefinitionEvent() {
+      return eventCase_ == 1006;
+    }
+    /**
+     * <code>.api.commons.audit.BillingDeleteRateDefinitionEvent billing_delete_rate_definition_event = 1006 [json_name = "billingDeleteRateDefinitionEvent"];</code>
+     * @return The billingDeleteRateDefinitionEvent.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.BillingDeleteRateDefinitionEvent getBillingDeleteRateDefinitionEvent() {
+      if (billingDeleteRateDefinitionEventBuilder_ == null) {
+        if (eventCase_ == 1006) {
+          return (com.tcn.cloud.api.api.commons.audit.BillingDeleteRateDefinitionEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.BillingDeleteRateDefinitionEvent.getDefaultInstance();
+      } else {
+        if (eventCase_ == 1006) {
+          return billingDeleteRateDefinitionEventBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.audit.BillingDeleteRateDefinitionEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.audit.BillingDeleteRateDefinitionEvent billing_delete_rate_definition_event = 1006 [json_name = "billingDeleteRateDefinitionEvent"];</code>
+     */
+    public Builder setBillingDeleteRateDefinitionEvent(com.tcn.cloud.api.api.commons.audit.BillingDeleteRateDefinitionEvent value) {
+      if (billingDeleteRateDefinitionEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        event_ = value;
+        onChanged();
+      } else {
+        billingDeleteRateDefinitionEventBuilder_.setMessage(value);
+      }
+      eventCase_ = 1006;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.BillingDeleteRateDefinitionEvent billing_delete_rate_definition_event = 1006 [json_name = "billingDeleteRateDefinitionEvent"];</code>
+     */
+    public Builder setBillingDeleteRateDefinitionEvent(
+        com.tcn.cloud.api.api.commons.audit.BillingDeleteRateDefinitionEvent.Builder builderForValue) {
+      if (billingDeleteRateDefinitionEventBuilder_ == null) {
+        event_ = builderForValue.build();
+        onChanged();
+      } else {
+        billingDeleteRateDefinitionEventBuilder_.setMessage(builderForValue.build());
+      }
+      eventCase_ = 1006;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.BillingDeleteRateDefinitionEvent billing_delete_rate_definition_event = 1006 [json_name = "billingDeleteRateDefinitionEvent"];</code>
+     */
+    public Builder mergeBillingDeleteRateDefinitionEvent(com.tcn.cloud.api.api.commons.audit.BillingDeleteRateDefinitionEvent value) {
+      if (billingDeleteRateDefinitionEventBuilder_ == null) {
+        if (eventCase_ == 1006 &&
+            event_ != com.tcn.cloud.api.api.commons.audit.BillingDeleteRateDefinitionEvent.getDefaultInstance()) {
+          event_ = com.tcn.cloud.api.api.commons.audit.BillingDeleteRateDefinitionEvent.newBuilder((com.tcn.cloud.api.api.commons.audit.BillingDeleteRateDefinitionEvent) event_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          event_ = value;
+        }
+        onChanged();
+      } else {
+        if (eventCase_ == 1006) {
+          billingDeleteRateDefinitionEventBuilder_.mergeFrom(value);
+        } else {
+          billingDeleteRateDefinitionEventBuilder_.setMessage(value);
+        }
+      }
+      eventCase_ = 1006;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.BillingDeleteRateDefinitionEvent billing_delete_rate_definition_event = 1006 [json_name = "billingDeleteRateDefinitionEvent"];</code>
+     */
+    public Builder clearBillingDeleteRateDefinitionEvent() {
+      if (billingDeleteRateDefinitionEventBuilder_ == null) {
+        if (eventCase_ == 1006) {
+          eventCase_ = 0;
+          event_ = null;
+          onChanged();
+        }
+      } else {
+        if (eventCase_ == 1006) {
+          eventCase_ = 0;
+          event_ = null;
+        }
+        billingDeleteRateDefinitionEventBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.BillingDeleteRateDefinitionEvent billing_delete_rate_definition_event = 1006 [json_name = "billingDeleteRateDefinitionEvent"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.audit.BillingDeleteRateDefinitionEvent.Builder getBillingDeleteRateDefinitionEventBuilder() {
+      return getBillingDeleteRateDefinitionEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.audit.BillingDeleteRateDefinitionEvent billing_delete_rate_definition_event = 1006 [json_name = "billingDeleteRateDefinitionEvent"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.BillingDeleteRateDefinitionEventOrBuilder getBillingDeleteRateDefinitionEventOrBuilder() {
+      if ((eventCase_ == 1006) && (billingDeleteRateDefinitionEventBuilder_ != null)) {
+        return billingDeleteRateDefinitionEventBuilder_.getMessageOrBuilder();
+      } else {
+        if (eventCase_ == 1006) {
+          return (com.tcn.cloud.api.api.commons.audit.BillingDeleteRateDefinitionEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.BillingDeleteRateDefinitionEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.audit.BillingDeleteRateDefinitionEvent billing_delete_rate_definition_event = 1006 [json_name = "billingDeleteRateDefinitionEvent"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.BillingDeleteRateDefinitionEvent, com.tcn.cloud.api.api.commons.audit.BillingDeleteRateDefinitionEvent.Builder, com.tcn.cloud.api.api.commons.audit.BillingDeleteRateDefinitionEventOrBuilder> 
+        getBillingDeleteRateDefinitionEventFieldBuilder() {
+      if (billingDeleteRateDefinitionEventBuilder_ == null) {
+        if (!(eventCase_ == 1006)) {
+          event_ = com.tcn.cloud.api.api.commons.audit.BillingDeleteRateDefinitionEvent.getDefaultInstance();
+        }
+        billingDeleteRateDefinitionEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.audit.BillingDeleteRateDefinitionEvent, com.tcn.cloud.api.api.commons.audit.BillingDeleteRateDefinitionEvent.Builder, com.tcn.cloud.api.api.commons.audit.BillingDeleteRateDefinitionEventOrBuilder>(
+                (com.tcn.cloud.api.api.commons.audit.BillingDeleteRateDefinitionEvent) event_,
+                getParentForChildren(),
+                isClean());
+        event_ = null;
+      }
+      eventCase_ = 1006;
+      onChanged();
+      return billingDeleteRateDefinitionEventBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.BillingExportInvoiceEvent, com.tcn.cloud.api.api.commons.audit.BillingExportInvoiceEvent.Builder, com.tcn.cloud.api.api.commons.audit.BillingExportInvoiceEventOrBuilder> billingExportInvoiceEventBuilder_;
+    /**
+     * <code>.api.commons.audit.BillingExportInvoiceEvent billing_export_invoice_event = 1007 [json_name = "billingExportInvoiceEvent"];</code>
+     * @return Whether the billingExportInvoiceEvent field is set.
+     */
+    @java.lang.Override
+    public boolean hasBillingExportInvoiceEvent() {
+      return eventCase_ == 1007;
+    }
+    /**
+     * <code>.api.commons.audit.BillingExportInvoiceEvent billing_export_invoice_event = 1007 [json_name = "billingExportInvoiceEvent"];</code>
+     * @return The billingExportInvoiceEvent.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.BillingExportInvoiceEvent getBillingExportInvoiceEvent() {
+      if (billingExportInvoiceEventBuilder_ == null) {
+        if (eventCase_ == 1007) {
+          return (com.tcn.cloud.api.api.commons.audit.BillingExportInvoiceEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.BillingExportInvoiceEvent.getDefaultInstance();
+      } else {
+        if (eventCase_ == 1007) {
+          return billingExportInvoiceEventBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.audit.BillingExportInvoiceEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.audit.BillingExportInvoiceEvent billing_export_invoice_event = 1007 [json_name = "billingExportInvoiceEvent"];</code>
+     */
+    public Builder setBillingExportInvoiceEvent(com.tcn.cloud.api.api.commons.audit.BillingExportInvoiceEvent value) {
+      if (billingExportInvoiceEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        event_ = value;
+        onChanged();
+      } else {
+        billingExportInvoiceEventBuilder_.setMessage(value);
+      }
+      eventCase_ = 1007;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.BillingExportInvoiceEvent billing_export_invoice_event = 1007 [json_name = "billingExportInvoiceEvent"];</code>
+     */
+    public Builder setBillingExportInvoiceEvent(
+        com.tcn.cloud.api.api.commons.audit.BillingExportInvoiceEvent.Builder builderForValue) {
+      if (billingExportInvoiceEventBuilder_ == null) {
+        event_ = builderForValue.build();
+        onChanged();
+      } else {
+        billingExportInvoiceEventBuilder_.setMessage(builderForValue.build());
+      }
+      eventCase_ = 1007;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.BillingExportInvoiceEvent billing_export_invoice_event = 1007 [json_name = "billingExportInvoiceEvent"];</code>
+     */
+    public Builder mergeBillingExportInvoiceEvent(com.tcn.cloud.api.api.commons.audit.BillingExportInvoiceEvent value) {
+      if (billingExportInvoiceEventBuilder_ == null) {
+        if (eventCase_ == 1007 &&
+            event_ != com.tcn.cloud.api.api.commons.audit.BillingExportInvoiceEvent.getDefaultInstance()) {
+          event_ = com.tcn.cloud.api.api.commons.audit.BillingExportInvoiceEvent.newBuilder((com.tcn.cloud.api.api.commons.audit.BillingExportInvoiceEvent) event_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          event_ = value;
+        }
+        onChanged();
+      } else {
+        if (eventCase_ == 1007) {
+          billingExportInvoiceEventBuilder_.mergeFrom(value);
+        } else {
+          billingExportInvoiceEventBuilder_.setMessage(value);
+        }
+      }
+      eventCase_ = 1007;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.BillingExportInvoiceEvent billing_export_invoice_event = 1007 [json_name = "billingExportInvoiceEvent"];</code>
+     */
+    public Builder clearBillingExportInvoiceEvent() {
+      if (billingExportInvoiceEventBuilder_ == null) {
+        if (eventCase_ == 1007) {
+          eventCase_ = 0;
+          event_ = null;
+          onChanged();
+        }
+      } else {
+        if (eventCase_ == 1007) {
+          eventCase_ = 0;
+          event_ = null;
+        }
+        billingExportInvoiceEventBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.BillingExportInvoiceEvent billing_export_invoice_event = 1007 [json_name = "billingExportInvoiceEvent"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.audit.BillingExportInvoiceEvent.Builder getBillingExportInvoiceEventBuilder() {
+      return getBillingExportInvoiceEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.audit.BillingExportInvoiceEvent billing_export_invoice_event = 1007 [json_name = "billingExportInvoiceEvent"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.BillingExportInvoiceEventOrBuilder getBillingExportInvoiceEventOrBuilder() {
+      if ((eventCase_ == 1007) && (billingExportInvoiceEventBuilder_ != null)) {
+        return billingExportInvoiceEventBuilder_.getMessageOrBuilder();
+      } else {
+        if (eventCase_ == 1007) {
+          return (com.tcn.cloud.api.api.commons.audit.BillingExportInvoiceEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.BillingExportInvoiceEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.audit.BillingExportInvoiceEvent billing_export_invoice_event = 1007 [json_name = "billingExportInvoiceEvent"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.BillingExportInvoiceEvent, com.tcn.cloud.api.api.commons.audit.BillingExportInvoiceEvent.Builder, com.tcn.cloud.api.api.commons.audit.BillingExportInvoiceEventOrBuilder> 
+        getBillingExportInvoiceEventFieldBuilder() {
+      if (billingExportInvoiceEventBuilder_ == null) {
+        if (!(eventCase_ == 1007)) {
+          event_ = com.tcn.cloud.api.api.commons.audit.BillingExportInvoiceEvent.getDefaultInstance();
+        }
+        billingExportInvoiceEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.audit.BillingExportInvoiceEvent, com.tcn.cloud.api.api.commons.audit.BillingExportInvoiceEvent.Builder, com.tcn.cloud.api.api.commons.audit.BillingExportInvoiceEventOrBuilder>(
+                (com.tcn.cloud.api.api.commons.audit.BillingExportInvoiceEvent) event_,
+                getParentForChildren(),
+                isClean());
+        event_ = null;
+      }
+      eventCase_ = 1007;
+      onChanged();
+      return billingExportInvoiceEventBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.BillingUpdateBillingPlanEvent, com.tcn.cloud.api.api.commons.audit.BillingUpdateBillingPlanEvent.Builder, com.tcn.cloud.api.api.commons.audit.BillingUpdateBillingPlanEventOrBuilder> billingUpdateBillingPlanEventBuilder_;
+    /**
+     * <code>.api.commons.audit.BillingUpdateBillingPlanEvent billing_update_billing_plan_event = 1008 [json_name = "billingUpdateBillingPlanEvent"];</code>
+     * @return Whether the billingUpdateBillingPlanEvent field is set.
+     */
+    @java.lang.Override
+    public boolean hasBillingUpdateBillingPlanEvent() {
+      return eventCase_ == 1008;
+    }
+    /**
+     * <code>.api.commons.audit.BillingUpdateBillingPlanEvent billing_update_billing_plan_event = 1008 [json_name = "billingUpdateBillingPlanEvent"];</code>
+     * @return The billingUpdateBillingPlanEvent.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.BillingUpdateBillingPlanEvent getBillingUpdateBillingPlanEvent() {
+      if (billingUpdateBillingPlanEventBuilder_ == null) {
+        if (eventCase_ == 1008) {
+          return (com.tcn.cloud.api.api.commons.audit.BillingUpdateBillingPlanEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.BillingUpdateBillingPlanEvent.getDefaultInstance();
+      } else {
+        if (eventCase_ == 1008) {
+          return billingUpdateBillingPlanEventBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.audit.BillingUpdateBillingPlanEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.audit.BillingUpdateBillingPlanEvent billing_update_billing_plan_event = 1008 [json_name = "billingUpdateBillingPlanEvent"];</code>
+     */
+    public Builder setBillingUpdateBillingPlanEvent(com.tcn.cloud.api.api.commons.audit.BillingUpdateBillingPlanEvent value) {
+      if (billingUpdateBillingPlanEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        event_ = value;
+        onChanged();
+      } else {
+        billingUpdateBillingPlanEventBuilder_.setMessage(value);
+      }
+      eventCase_ = 1008;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.BillingUpdateBillingPlanEvent billing_update_billing_plan_event = 1008 [json_name = "billingUpdateBillingPlanEvent"];</code>
+     */
+    public Builder setBillingUpdateBillingPlanEvent(
+        com.tcn.cloud.api.api.commons.audit.BillingUpdateBillingPlanEvent.Builder builderForValue) {
+      if (billingUpdateBillingPlanEventBuilder_ == null) {
+        event_ = builderForValue.build();
+        onChanged();
+      } else {
+        billingUpdateBillingPlanEventBuilder_.setMessage(builderForValue.build());
+      }
+      eventCase_ = 1008;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.BillingUpdateBillingPlanEvent billing_update_billing_plan_event = 1008 [json_name = "billingUpdateBillingPlanEvent"];</code>
+     */
+    public Builder mergeBillingUpdateBillingPlanEvent(com.tcn.cloud.api.api.commons.audit.BillingUpdateBillingPlanEvent value) {
+      if (billingUpdateBillingPlanEventBuilder_ == null) {
+        if (eventCase_ == 1008 &&
+            event_ != com.tcn.cloud.api.api.commons.audit.BillingUpdateBillingPlanEvent.getDefaultInstance()) {
+          event_ = com.tcn.cloud.api.api.commons.audit.BillingUpdateBillingPlanEvent.newBuilder((com.tcn.cloud.api.api.commons.audit.BillingUpdateBillingPlanEvent) event_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          event_ = value;
+        }
+        onChanged();
+      } else {
+        if (eventCase_ == 1008) {
+          billingUpdateBillingPlanEventBuilder_.mergeFrom(value);
+        } else {
+          billingUpdateBillingPlanEventBuilder_.setMessage(value);
+        }
+      }
+      eventCase_ = 1008;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.BillingUpdateBillingPlanEvent billing_update_billing_plan_event = 1008 [json_name = "billingUpdateBillingPlanEvent"];</code>
+     */
+    public Builder clearBillingUpdateBillingPlanEvent() {
+      if (billingUpdateBillingPlanEventBuilder_ == null) {
+        if (eventCase_ == 1008) {
+          eventCase_ = 0;
+          event_ = null;
+          onChanged();
+        }
+      } else {
+        if (eventCase_ == 1008) {
+          eventCase_ = 0;
+          event_ = null;
+        }
+        billingUpdateBillingPlanEventBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.BillingUpdateBillingPlanEvent billing_update_billing_plan_event = 1008 [json_name = "billingUpdateBillingPlanEvent"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.audit.BillingUpdateBillingPlanEvent.Builder getBillingUpdateBillingPlanEventBuilder() {
+      return getBillingUpdateBillingPlanEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.audit.BillingUpdateBillingPlanEvent billing_update_billing_plan_event = 1008 [json_name = "billingUpdateBillingPlanEvent"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.BillingUpdateBillingPlanEventOrBuilder getBillingUpdateBillingPlanEventOrBuilder() {
+      if ((eventCase_ == 1008) && (billingUpdateBillingPlanEventBuilder_ != null)) {
+        return billingUpdateBillingPlanEventBuilder_.getMessageOrBuilder();
+      } else {
+        if (eventCase_ == 1008) {
+          return (com.tcn.cloud.api.api.commons.audit.BillingUpdateBillingPlanEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.BillingUpdateBillingPlanEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.audit.BillingUpdateBillingPlanEvent billing_update_billing_plan_event = 1008 [json_name = "billingUpdateBillingPlanEvent"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.BillingUpdateBillingPlanEvent, com.tcn.cloud.api.api.commons.audit.BillingUpdateBillingPlanEvent.Builder, com.tcn.cloud.api.api.commons.audit.BillingUpdateBillingPlanEventOrBuilder> 
+        getBillingUpdateBillingPlanEventFieldBuilder() {
+      if (billingUpdateBillingPlanEventBuilder_ == null) {
+        if (!(eventCase_ == 1008)) {
+          event_ = com.tcn.cloud.api.api.commons.audit.BillingUpdateBillingPlanEvent.getDefaultInstance();
+        }
+        billingUpdateBillingPlanEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.audit.BillingUpdateBillingPlanEvent, com.tcn.cloud.api.api.commons.audit.BillingUpdateBillingPlanEvent.Builder, com.tcn.cloud.api.api.commons.audit.BillingUpdateBillingPlanEventOrBuilder>(
+                (com.tcn.cloud.api.api.commons.audit.BillingUpdateBillingPlanEvent) event_,
+                getParentForChildren(),
+                isClean());
+        event_ = null;
+      }
+      eventCase_ = 1008;
+      onChanged();
+      return billingUpdateBillingPlanEventBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent, com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent.Builder, com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEventOrBuilder> billingUpdateInvoiceEventBuilder_;
+    /**
+     * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent"];</code>
+     * @return Whether the billingUpdateInvoiceEvent field is set.
+     */
+    @java.lang.Override
+    public boolean hasBillingUpdateInvoiceEvent() {
+      return eventCase_ == 1009;
+    }
+    /**
+     * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent"];</code>
+     * @return The billingUpdateInvoiceEvent.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent getBillingUpdateInvoiceEvent() {
+      if (billingUpdateInvoiceEventBuilder_ == null) {
+        if (eventCase_ == 1009) {
+          return (com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent.getDefaultInstance();
+      } else {
+        if (eventCase_ == 1009) {
+          return billingUpdateInvoiceEventBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent"];</code>
+     */
+    public Builder setBillingUpdateInvoiceEvent(com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent value) {
+      if (billingUpdateInvoiceEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        event_ = value;
+        onChanged();
+      } else {
+        billingUpdateInvoiceEventBuilder_.setMessage(value);
+      }
+      eventCase_ = 1009;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent"];</code>
+     */
+    public Builder setBillingUpdateInvoiceEvent(
+        com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent.Builder builderForValue) {
+      if (billingUpdateInvoiceEventBuilder_ == null) {
+        event_ = builderForValue.build();
+        onChanged();
+      } else {
+        billingUpdateInvoiceEventBuilder_.setMessage(builderForValue.build());
+      }
+      eventCase_ = 1009;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent"];</code>
+     */
+    public Builder mergeBillingUpdateInvoiceEvent(com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent value) {
+      if (billingUpdateInvoiceEventBuilder_ == null) {
+        if (eventCase_ == 1009 &&
+            event_ != com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent.getDefaultInstance()) {
+          event_ = com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent.newBuilder((com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent) event_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          event_ = value;
+        }
+        onChanged();
+      } else {
+        if (eventCase_ == 1009) {
+          billingUpdateInvoiceEventBuilder_.mergeFrom(value);
+        } else {
+          billingUpdateInvoiceEventBuilder_.setMessage(value);
+        }
+      }
+      eventCase_ = 1009;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent"];</code>
+     */
+    public Builder clearBillingUpdateInvoiceEvent() {
+      if (billingUpdateInvoiceEventBuilder_ == null) {
+        if (eventCase_ == 1009) {
+          eventCase_ = 0;
+          event_ = null;
+          onChanged();
+        }
+      } else {
+        if (eventCase_ == 1009) {
+          eventCase_ = 0;
+          event_ = null;
+        }
+        billingUpdateInvoiceEventBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent.Builder getBillingUpdateInvoiceEventBuilder() {
+      return getBillingUpdateInvoiceEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEventOrBuilder getBillingUpdateInvoiceEventOrBuilder() {
+      if ((eventCase_ == 1009) && (billingUpdateInvoiceEventBuilder_ != null)) {
+        return billingUpdateInvoiceEventBuilder_.getMessageOrBuilder();
+      } else {
+        if (eventCase_ == 1009) {
+          return (com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent, com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent.Builder, com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEventOrBuilder> 
+        getBillingUpdateInvoiceEventFieldBuilder() {
+      if (billingUpdateInvoiceEventBuilder_ == null) {
+        if (!(eventCase_ == 1009)) {
+          event_ = com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent.getDefaultInstance();
+        }
+        billingUpdateInvoiceEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent, com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent.Builder, com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEventOrBuilder>(
+                (com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent) event_,
+                getParentForChildren(),
+                isClean());
+        event_ = null;
+      }
+      eventCase_ = 1009;
+      onChanged();
+      return billingUpdateInvoiceEventBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.BillingUpdateRateDefinitionEvent, com.tcn.cloud.api.api.commons.audit.BillingUpdateRateDefinitionEvent.Builder, com.tcn.cloud.api.api.commons.audit.BillingUpdateRateDefinitionEventOrBuilder> billingUpdateRateDefinitionEventBuilder_;
+    /**
+     * <code>.api.commons.audit.BillingUpdateRateDefinitionEvent billing_update_rate_definition_event = 1010 [json_name = "billingUpdateRateDefinitionEvent"];</code>
+     * @return Whether the billingUpdateRateDefinitionEvent field is set.
+     */
+    @java.lang.Override
+    public boolean hasBillingUpdateRateDefinitionEvent() {
+      return eventCase_ == 1010;
+    }
+    /**
+     * <code>.api.commons.audit.BillingUpdateRateDefinitionEvent billing_update_rate_definition_event = 1010 [json_name = "billingUpdateRateDefinitionEvent"];</code>
+     * @return The billingUpdateRateDefinitionEvent.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.BillingUpdateRateDefinitionEvent getBillingUpdateRateDefinitionEvent() {
+      if (billingUpdateRateDefinitionEventBuilder_ == null) {
+        if (eventCase_ == 1010) {
+          return (com.tcn.cloud.api.api.commons.audit.BillingUpdateRateDefinitionEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.BillingUpdateRateDefinitionEvent.getDefaultInstance();
+      } else {
+        if (eventCase_ == 1010) {
+          return billingUpdateRateDefinitionEventBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.audit.BillingUpdateRateDefinitionEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.audit.BillingUpdateRateDefinitionEvent billing_update_rate_definition_event = 1010 [json_name = "billingUpdateRateDefinitionEvent"];</code>
+     */
+    public Builder setBillingUpdateRateDefinitionEvent(com.tcn.cloud.api.api.commons.audit.BillingUpdateRateDefinitionEvent value) {
+      if (billingUpdateRateDefinitionEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        event_ = value;
+        onChanged();
+      } else {
+        billingUpdateRateDefinitionEventBuilder_.setMessage(value);
+      }
+      eventCase_ = 1010;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.BillingUpdateRateDefinitionEvent billing_update_rate_definition_event = 1010 [json_name = "billingUpdateRateDefinitionEvent"];</code>
+     */
+    public Builder setBillingUpdateRateDefinitionEvent(
+        com.tcn.cloud.api.api.commons.audit.BillingUpdateRateDefinitionEvent.Builder builderForValue) {
+      if (billingUpdateRateDefinitionEventBuilder_ == null) {
+        event_ = builderForValue.build();
+        onChanged();
+      } else {
+        billingUpdateRateDefinitionEventBuilder_.setMessage(builderForValue.build());
+      }
+      eventCase_ = 1010;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.BillingUpdateRateDefinitionEvent billing_update_rate_definition_event = 1010 [json_name = "billingUpdateRateDefinitionEvent"];</code>
+     */
+    public Builder mergeBillingUpdateRateDefinitionEvent(com.tcn.cloud.api.api.commons.audit.BillingUpdateRateDefinitionEvent value) {
+      if (billingUpdateRateDefinitionEventBuilder_ == null) {
+        if (eventCase_ == 1010 &&
+            event_ != com.tcn.cloud.api.api.commons.audit.BillingUpdateRateDefinitionEvent.getDefaultInstance()) {
+          event_ = com.tcn.cloud.api.api.commons.audit.BillingUpdateRateDefinitionEvent.newBuilder((com.tcn.cloud.api.api.commons.audit.BillingUpdateRateDefinitionEvent) event_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          event_ = value;
+        }
+        onChanged();
+      } else {
+        if (eventCase_ == 1010) {
+          billingUpdateRateDefinitionEventBuilder_.mergeFrom(value);
+        } else {
+          billingUpdateRateDefinitionEventBuilder_.setMessage(value);
+        }
+      }
+      eventCase_ = 1010;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.BillingUpdateRateDefinitionEvent billing_update_rate_definition_event = 1010 [json_name = "billingUpdateRateDefinitionEvent"];</code>
+     */
+    public Builder clearBillingUpdateRateDefinitionEvent() {
+      if (billingUpdateRateDefinitionEventBuilder_ == null) {
+        if (eventCase_ == 1010) {
+          eventCase_ = 0;
+          event_ = null;
+          onChanged();
+        }
+      } else {
+        if (eventCase_ == 1010) {
+          eventCase_ = 0;
+          event_ = null;
+        }
+        billingUpdateRateDefinitionEventBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.BillingUpdateRateDefinitionEvent billing_update_rate_definition_event = 1010 [json_name = "billingUpdateRateDefinitionEvent"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.audit.BillingUpdateRateDefinitionEvent.Builder getBillingUpdateRateDefinitionEventBuilder() {
+      return getBillingUpdateRateDefinitionEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.audit.BillingUpdateRateDefinitionEvent billing_update_rate_definition_event = 1010 [json_name = "billingUpdateRateDefinitionEvent"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.BillingUpdateRateDefinitionEventOrBuilder getBillingUpdateRateDefinitionEventOrBuilder() {
+      if ((eventCase_ == 1010) && (billingUpdateRateDefinitionEventBuilder_ != null)) {
+        return billingUpdateRateDefinitionEventBuilder_.getMessageOrBuilder();
+      } else {
+        if (eventCase_ == 1010) {
+          return (com.tcn.cloud.api.api.commons.audit.BillingUpdateRateDefinitionEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.BillingUpdateRateDefinitionEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.audit.BillingUpdateRateDefinitionEvent billing_update_rate_definition_event = 1010 [json_name = "billingUpdateRateDefinitionEvent"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.BillingUpdateRateDefinitionEvent, com.tcn.cloud.api.api.commons.audit.BillingUpdateRateDefinitionEvent.Builder, com.tcn.cloud.api.api.commons.audit.BillingUpdateRateDefinitionEventOrBuilder> 
+        getBillingUpdateRateDefinitionEventFieldBuilder() {
+      if (billingUpdateRateDefinitionEventBuilder_ == null) {
+        if (!(eventCase_ == 1010)) {
+          event_ = com.tcn.cloud.api.api.commons.audit.BillingUpdateRateDefinitionEvent.getDefaultInstance();
+        }
+        billingUpdateRateDefinitionEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.audit.BillingUpdateRateDefinitionEvent, com.tcn.cloud.api.api.commons.audit.BillingUpdateRateDefinitionEvent.Builder, com.tcn.cloud.api.api.commons.audit.BillingUpdateRateDefinitionEventOrBuilder>(
+                (com.tcn.cloud.api.api.commons.audit.BillingUpdateRateDefinitionEvent) event_,
+                getParentForChildren(),
+                isClean());
+        event_ = null;
+      }
+      eventCase_ = 1010;
+      onChanged();
+      return billingUpdateRateDefinitionEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

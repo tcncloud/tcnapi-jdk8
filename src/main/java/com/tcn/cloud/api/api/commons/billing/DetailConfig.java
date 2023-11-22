@@ -4,14 +4,9 @@
 package com.tcn.cloud.api.api.commons.billing;
 
 /**
- * <pre>
- * DetailConfig - contains the data specific to the rating module,
- * so that it may rate events correctly
- * </pre>
- *
  * Protobuf type {@code api.commons.billing.DetailConfig}
  */
-public final class DetailConfig extends
+@java.lang.Deprecated public final class DetailConfig extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.commons.billing.DetailConfig)
     DetailConfigOrBuilder {
@@ -49,45 +44,45 @@ private static final long serialVersionUID = 0L;
   public enum ConfigCase
       implements com.google.protobuf.Internal.EnumLite,
           com.google.protobuf.AbstractMessage.InternalOneOfEnum {
-    AGENT_SEATS_CONFIG(2),
-    AGENT_TEXT_MESSAGE_CHAT_CONFIG(100),
-    AGENT_TEXT_MESSAGE_EMAIL_MESSAGE_CONFIG(101),
-    AGENT_TEXT_MESSAGE_EMAIL_SIZE_CONFIG(102),
-    AGENT_TEXT_MESSAGE_SMS_CONFIG(103),
-    TASK_MESSAGE_SENT_EMAIL_MESSAGE_CONFIG(104),
-    TASK_MESSAGE_SENT_EMAIL_SIZE_CONFIG(105),
-    TASK_MESSAGE_SENT_SMS_CONFIG(106),
-    CONNECTED_INBOX_POLL_CONFIG(107),
-    MANAGER_TEXT_MESSAGE_CHAT_CONFIG(108),
-    MANAGER_TEXT_MESSAGE_EMAIL_MESSAGE_CONFIG(109),
-    MANAGER_TEXT_MESSAGE_EMAIL_SIZE_CONFIG(110),
-    MANAGER_TEXT_MESSAGE_SMS_CONFIG(111),
-    CUSTOMER_TEXT_MESSAGE_CHAT_CONFIG(112),
-    CUSTOMER_TEXT_MESSAGE_EMAIL_MESSAGE_CONFIG(113),
-    CUSTOMER_TEXT_MESSAGE_EMAIL_SIZE_CONFIG(114),
-    CUSTOMER_TEXT_MESSAGE_SMS_CONFIG(115),
-    AGENT_TEXT_MESSAGE_CHAT_SIZE_CONFIG(116),
-    MANAGER_TEXT_MESSAGE_CHAT_SIZE_CONFIG(117),
-    CUSTOMER_TEXT_MESSAGE_CHAT_SIZE_CONFIG(118),
-    CONNECTED_INBOX_CREATED_CONFIG(119),
-    AGENT_TEXT_MESSAGE_SMS_SIZE_CONFIG(120),
-    MANAGER_TEXT_MESSAGE_SMS_SIZE_CONFIG(121),
-    CUSTOMER_TEXT_MESSAGE_SMS_SIZE_CONFIG(122),
-    TASK_MESSAGE_SENT_SMS_SIZE_CONFIG(123),
-    AGENT_CHAT_MESSAGE_UNITS_CONFIG(124),
-    AGENT_EMAIL_MESSAGE_UNITS_CONFIG(125),
-    AGENT_SMS_MESSAGE_UNITS_CONFIG(126),
-    MANAGER_CHAT_MESSAGE_UNITS_CONFIG(127),
-    MANAGER_EMAIL_MESSAGE_UNITS_CONFIG(128),
-    MANAGER_SMS_MESSAGE_UNITS_CONFIG(129),
-    CUSTOMER_CHAT_MESSAGE_UNITS_CONFIG(130),
-    CUSTOMER_EMAIL_MESSAGE_UNITS_CONFIG(131),
-    CUSTOMER_SMS_MESSAGE_UNITS_CONFIG(132),
-    SYSTEM_CHAT_MESSAGE_UNITS_CONFIG(133),
-    SYSTEM_EMAIL_MESSAGE_UNITS_CONFIG(134),
-    SYSTEM_SMS_MESSAGE_UNITS_CONFIG(135),
-    COMPLIANCE_RND_QUERY_CONFIG(200),
-    COMPLIANCE_RND_QUERY_CACHED_CONFIG(201),
+    @java.lang.Deprecated AGENT_SEATS_CONFIG(2),
+    @java.lang.Deprecated AGENT_TEXT_MESSAGE_CHAT_CONFIG(100),
+    @java.lang.Deprecated AGENT_TEXT_MESSAGE_EMAIL_MESSAGE_CONFIG(101),
+    @java.lang.Deprecated AGENT_TEXT_MESSAGE_EMAIL_SIZE_CONFIG(102),
+    @java.lang.Deprecated AGENT_TEXT_MESSAGE_SMS_CONFIG(103),
+    @java.lang.Deprecated TASK_MESSAGE_SENT_EMAIL_MESSAGE_CONFIG(104),
+    @java.lang.Deprecated TASK_MESSAGE_SENT_EMAIL_SIZE_CONFIG(105),
+    @java.lang.Deprecated TASK_MESSAGE_SENT_SMS_CONFIG(106),
+    @java.lang.Deprecated CONNECTED_INBOX_POLL_CONFIG(107),
+    @java.lang.Deprecated MANAGER_TEXT_MESSAGE_CHAT_CONFIG(108),
+    @java.lang.Deprecated MANAGER_TEXT_MESSAGE_EMAIL_MESSAGE_CONFIG(109),
+    @java.lang.Deprecated MANAGER_TEXT_MESSAGE_EMAIL_SIZE_CONFIG(110),
+    @java.lang.Deprecated MANAGER_TEXT_MESSAGE_SMS_CONFIG(111),
+    @java.lang.Deprecated CUSTOMER_TEXT_MESSAGE_CHAT_CONFIG(112),
+    @java.lang.Deprecated CUSTOMER_TEXT_MESSAGE_EMAIL_MESSAGE_CONFIG(113),
+    @java.lang.Deprecated CUSTOMER_TEXT_MESSAGE_EMAIL_SIZE_CONFIG(114),
+    @java.lang.Deprecated CUSTOMER_TEXT_MESSAGE_SMS_CONFIG(115),
+    @java.lang.Deprecated AGENT_TEXT_MESSAGE_CHAT_SIZE_CONFIG(116),
+    @java.lang.Deprecated MANAGER_TEXT_MESSAGE_CHAT_SIZE_CONFIG(117),
+    @java.lang.Deprecated CUSTOMER_TEXT_MESSAGE_CHAT_SIZE_CONFIG(118),
+    @java.lang.Deprecated CONNECTED_INBOX_CREATED_CONFIG(119),
+    @java.lang.Deprecated AGENT_TEXT_MESSAGE_SMS_SIZE_CONFIG(120),
+    @java.lang.Deprecated MANAGER_TEXT_MESSAGE_SMS_SIZE_CONFIG(121),
+    @java.lang.Deprecated CUSTOMER_TEXT_MESSAGE_SMS_SIZE_CONFIG(122),
+    @java.lang.Deprecated TASK_MESSAGE_SENT_SMS_SIZE_CONFIG(123),
+    @java.lang.Deprecated AGENT_CHAT_MESSAGE_UNITS_CONFIG(124),
+    @java.lang.Deprecated AGENT_EMAIL_MESSAGE_UNITS_CONFIG(125),
+    @java.lang.Deprecated AGENT_SMS_MESSAGE_UNITS_CONFIG(126),
+    @java.lang.Deprecated MANAGER_CHAT_MESSAGE_UNITS_CONFIG(127),
+    @java.lang.Deprecated MANAGER_EMAIL_MESSAGE_UNITS_CONFIG(128),
+    @java.lang.Deprecated MANAGER_SMS_MESSAGE_UNITS_CONFIG(129),
+    @java.lang.Deprecated CUSTOMER_CHAT_MESSAGE_UNITS_CONFIG(130),
+    @java.lang.Deprecated CUSTOMER_EMAIL_MESSAGE_UNITS_CONFIG(131),
+    @java.lang.Deprecated CUSTOMER_SMS_MESSAGE_UNITS_CONFIG(132),
+    @java.lang.Deprecated SYSTEM_CHAT_MESSAGE_UNITS_CONFIG(133),
+    @java.lang.Deprecated SYSTEM_EMAIL_MESSAGE_UNITS_CONFIG(134),
+    @java.lang.Deprecated SYSTEM_SMS_MESSAGE_UNITS_CONFIG(135),
+    @java.lang.Deprecated COMPLIANCE_RND_QUERY_CONFIG(200),
+    @java.lang.Deprecated COMPLIANCE_RND_QUERY_CACHED_CONFIG(201),
     CONFIG_NOT_SET(0);
     private final int value;
     private ConfigCase(int value) {
@@ -161,29 +156,33 @@ private static final long serialVersionUID = 0L;
 
   public static final int AGENT_SEATS_CONFIG_FIELD_NUMBER = 2;
   /**
-   * <code>.api.commons.billing.modules.BasicConfig agent_seats_config = 2 [json_name = "agentSeatsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig agent_seats_config = 2 [json_name = "agentSeatsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.agent_seats_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=40
    * @return Whether the agentSeatsConfig field is set.
    */
   @java.lang.Override
-  public boolean hasAgentSeatsConfig() {
+  @java.lang.Deprecated public boolean hasAgentSeatsConfig() {
     return configCase_ == 2;
   }
   /**
-   * <code>.api.commons.billing.modules.BasicConfig agent_seats_config = 2 [json_name = "agentSeatsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig agent_seats_config = 2 [json_name = "agentSeatsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.agent_seats_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=40
    * @return The agentSeatsConfig.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getAgentSeatsConfig() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getAgentSeatsConfig() {
     if (configCase_ == 2) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
     }
     return com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.getDefaultInstance();
   }
   /**
-   * <code>.api.commons.billing.modules.BasicConfig agent_seats_config = 2 [json_name = "agentSeatsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig agent_seats_config = 2 [json_name = "agentSeatsConfig", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getAgentSeatsConfigOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getAgentSeatsConfigOrBuilder() {
     if (configCase_ == 2) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
     }
@@ -196,11 +195,13 @@ private static final long serialVersionUID = 0L;
    * omni configs
    * </pre>
    *
-   * <code>.api.commons.billing.modules.BasicConfig agent_text_message_chat_config = 100 [json_name = "agentTextMessageChatConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig agent_text_message_chat_config = 100 [json_name = "agentTextMessageChatConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.agent_text_message_chat_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=43
    * @return Whether the agentTextMessageChatConfig field is set.
    */
   @java.lang.Override
-  public boolean hasAgentTextMessageChatConfig() {
+  @java.lang.Deprecated public boolean hasAgentTextMessageChatConfig() {
     return configCase_ == 100;
   }
   /**
@@ -208,11 +209,13 @@ private static final long serialVersionUID = 0L;
    * omni configs
    * </pre>
    *
-   * <code>.api.commons.billing.modules.BasicConfig agent_text_message_chat_config = 100 [json_name = "agentTextMessageChatConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig agent_text_message_chat_config = 100 [json_name = "agentTextMessageChatConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.agent_text_message_chat_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=43
    * @return The agentTextMessageChatConfig.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getAgentTextMessageChatConfig() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getAgentTextMessageChatConfig() {
     if (configCase_ == 100) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
     }
@@ -223,10 +226,10 @@ private static final long serialVersionUID = 0L;
    * omni configs
    * </pre>
    *
-   * <code>.api.commons.billing.modules.BasicConfig agent_text_message_chat_config = 100 [json_name = "agentTextMessageChatConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig agent_text_message_chat_config = 100 [json_name = "agentTextMessageChatConfig", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getAgentTextMessageChatConfigOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getAgentTextMessageChatConfigOrBuilder() {
     if (configCase_ == 100) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
     }
@@ -235,29 +238,33 @@ private static final long serialVersionUID = 0L;
 
   public static final int AGENT_TEXT_MESSAGE_EMAIL_MESSAGE_CONFIG_FIELD_NUMBER = 101;
   /**
-   * <code>.api.commons.billing.modules.BasicConfig agent_text_message_email_message_config = 101 [json_name = "agentTextMessageEmailMessageConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig agent_text_message_email_message_config = 101 [json_name = "agentTextMessageEmailMessageConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.agent_text_message_email_message_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=44
    * @return Whether the agentTextMessageEmailMessageConfig field is set.
    */
   @java.lang.Override
-  public boolean hasAgentTextMessageEmailMessageConfig() {
+  @java.lang.Deprecated public boolean hasAgentTextMessageEmailMessageConfig() {
     return configCase_ == 101;
   }
   /**
-   * <code>.api.commons.billing.modules.BasicConfig agent_text_message_email_message_config = 101 [json_name = "agentTextMessageEmailMessageConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig agent_text_message_email_message_config = 101 [json_name = "agentTextMessageEmailMessageConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.agent_text_message_email_message_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=44
    * @return The agentTextMessageEmailMessageConfig.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getAgentTextMessageEmailMessageConfig() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getAgentTextMessageEmailMessageConfig() {
     if (configCase_ == 101) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
     }
     return com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.getDefaultInstance();
   }
   /**
-   * <code>.api.commons.billing.modules.BasicConfig agent_text_message_email_message_config = 101 [json_name = "agentTextMessageEmailMessageConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig agent_text_message_email_message_config = 101 [json_name = "agentTextMessageEmailMessageConfig", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getAgentTextMessageEmailMessageConfigOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getAgentTextMessageEmailMessageConfigOrBuilder() {
     if (configCase_ == 101) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
     }
@@ -266,29 +273,33 @@ private static final long serialVersionUID = 0L;
 
   public static final int AGENT_TEXT_MESSAGE_EMAIL_SIZE_CONFIG_FIELD_NUMBER = 102;
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_email_size_config = 102 [json_name = "agentTextMessageEmailSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_email_size_config = 102 [json_name = "agentTextMessageEmailSizeConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.agent_text_message_email_size_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=45
    * @return Whether the agentTextMessageEmailSizeConfig field is set.
    */
   @java.lang.Override
-  public boolean hasAgentTextMessageEmailSizeConfig() {
+  @java.lang.Deprecated public boolean hasAgentTextMessageEmailSizeConfig() {
     return configCase_ == 102;
   }
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_email_size_config = 102 [json_name = "agentTextMessageEmailSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_email_size_config = 102 [json_name = "agentTextMessageEmailSizeConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.agent_text_message_email_size_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=45
    * @return The agentTextMessageEmailSizeConfig.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getAgentTextMessageEmailSizeConfig() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getAgentTextMessageEmailSizeConfig() {
     if (configCase_ == 102) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig) config_;
     }
     return com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.getDefaultInstance();
   }
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_email_size_config = 102 [json_name = "agentTextMessageEmailSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_email_size_config = 102 [json_name = "agentTextMessageEmailSizeConfig", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getAgentTextMessageEmailSizeConfigOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getAgentTextMessageEmailSizeConfigOrBuilder() {
     if (configCase_ == 102) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig) config_;
     }
@@ -297,29 +308,33 @@ private static final long serialVersionUID = 0L;
 
   public static final int AGENT_TEXT_MESSAGE_SMS_CONFIG_FIELD_NUMBER = 103;
   /**
-   * <code>.api.commons.billing.modules.BasicConfig agent_text_message_sms_config = 103 [json_name = "agentTextMessageSmsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig agent_text_message_sms_config = 103 [json_name = "agentTextMessageSmsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.agent_text_message_sms_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=46
    * @return Whether the agentTextMessageSmsConfig field is set.
    */
   @java.lang.Override
-  public boolean hasAgentTextMessageSmsConfig() {
+  @java.lang.Deprecated public boolean hasAgentTextMessageSmsConfig() {
     return configCase_ == 103;
   }
   /**
-   * <code>.api.commons.billing.modules.BasicConfig agent_text_message_sms_config = 103 [json_name = "agentTextMessageSmsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig agent_text_message_sms_config = 103 [json_name = "agentTextMessageSmsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.agent_text_message_sms_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=46
    * @return The agentTextMessageSmsConfig.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getAgentTextMessageSmsConfig() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getAgentTextMessageSmsConfig() {
     if (configCase_ == 103) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
     }
     return com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.getDefaultInstance();
   }
   /**
-   * <code>.api.commons.billing.modules.BasicConfig agent_text_message_sms_config = 103 [json_name = "agentTextMessageSmsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig agent_text_message_sms_config = 103 [json_name = "agentTextMessageSmsConfig", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getAgentTextMessageSmsConfigOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getAgentTextMessageSmsConfigOrBuilder() {
     if (configCase_ == 103) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
     }
@@ -328,29 +343,33 @@ private static final long serialVersionUID = 0L;
 
   public static final int TASK_MESSAGE_SENT_EMAIL_MESSAGE_CONFIG_FIELD_NUMBER = 104;
   /**
-   * <code>.api.commons.billing.modules.BasicConfig task_message_sent_email_message_config = 104 [json_name = "taskMessageSentEmailMessageConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig task_message_sent_email_message_config = 104 [json_name = "taskMessageSentEmailMessageConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.task_message_sent_email_message_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=47
    * @return Whether the taskMessageSentEmailMessageConfig field is set.
    */
   @java.lang.Override
-  public boolean hasTaskMessageSentEmailMessageConfig() {
+  @java.lang.Deprecated public boolean hasTaskMessageSentEmailMessageConfig() {
     return configCase_ == 104;
   }
   /**
-   * <code>.api.commons.billing.modules.BasicConfig task_message_sent_email_message_config = 104 [json_name = "taskMessageSentEmailMessageConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig task_message_sent_email_message_config = 104 [json_name = "taskMessageSentEmailMessageConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.task_message_sent_email_message_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=47
    * @return The taskMessageSentEmailMessageConfig.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getTaskMessageSentEmailMessageConfig() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getTaskMessageSentEmailMessageConfig() {
     if (configCase_ == 104) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
     }
     return com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.getDefaultInstance();
   }
   /**
-   * <code>.api.commons.billing.modules.BasicConfig task_message_sent_email_message_config = 104 [json_name = "taskMessageSentEmailMessageConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig task_message_sent_email_message_config = 104 [json_name = "taskMessageSentEmailMessageConfig", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getTaskMessageSentEmailMessageConfigOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getTaskMessageSentEmailMessageConfigOrBuilder() {
     if (configCase_ == 104) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
     }
@@ -359,29 +378,33 @@ private static final long serialVersionUID = 0L;
 
   public static final int TASK_MESSAGE_SENT_EMAIL_SIZE_CONFIG_FIELD_NUMBER = 105;
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig task_message_sent_email_size_config = 105 [json_name = "taskMessageSentEmailSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig task_message_sent_email_size_config = 105 [json_name = "taskMessageSentEmailSizeConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.task_message_sent_email_size_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=48
    * @return Whether the taskMessageSentEmailSizeConfig field is set.
    */
   @java.lang.Override
-  public boolean hasTaskMessageSentEmailSizeConfig() {
+  @java.lang.Deprecated public boolean hasTaskMessageSentEmailSizeConfig() {
     return configCase_ == 105;
   }
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig task_message_sent_email_size_config = 105 [json_name = "taskMessageSentEmailSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig task_message_sent_email_size_config = 105 [json_name = "taskMessageSentEmailSizeConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.task_message_sent_email_size_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=48
    * @return The taskMessageSentEmailSizeConfig.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getTaskMessageSentEmailSizeConfig() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getTaskMessageSentEmailSizeConfig() {
     if (configCase_ == 105) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig) config_;
     }
     return com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.getDefaultInstance();
   }
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig task_message_sent_email_size_config = 105 [json_name = "taskMessageSentEmailSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig task_message_sent_email_size_config = 105 [json_name = "taskMessageSentEmailSizeConfig", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getTaskMessageSentEmailSizeConfigOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getTaskMessageSentEmailSizeConfigOrBuilder() {
     if (configCase_ == 105) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig) config_;
     }
@@ -390,29 +413,33 @@ private static final long serialVersionUID = 0L;
 
   public static final int TASK_MESSAGE_SENT_SMS_CONFIG_FIELD_NUMBER = 106;
   /**
-   * <code>.api.commons.billing.modules.BasicConfig task_message_sent_sms_config = 106 [json_name = "taskMessageSentSmsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig task_message_sent_sms_config = 106 [json_name = "taskMessageSentSmsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.task_message_sent_sms_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=49
    * @return Whether the taskMessageSentSmsConfig field is set.
    */
   @java.lang.Override
-  public boolean hasTaskMessageSentSmsConfig() {
+  @java.lang.Deprecated public boolean hasTaskMessageSentSmsConfig() {
     return configCase_ == 106;
   }
   /**
-   * <code>.api.commons.billing.modules.BasicConfig task_message_sent_sms_config = 106 [json_name = "taskMessageSentSmsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig task_message_sent_sms_config = 106 [json_name = "taskMessageSentSmsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.task_message_sent_sms_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=49
    * @return The taskMessageSentSmsConfig.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getTaskMessageSentSmsConfig() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getTaskMessageSentSmsConfig() {
     if (configCase_ == 106) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
     }
     return com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.getDefaultInstance();
   }
   /**
-   * <code>.api.commons.billing.modules.BasicConfig task_message_sent_sms_config = 106 [json_name = "taskMessageSentSmsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig task_message_sent_sms_config = 106 [json_name = "taskMessageSentSmsConfig", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getTaskMessageSentSmsConfigOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getTaskMessageSentSmsConfigOrBuilder() {
     if (configCase_ == 106) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
     }
@@ -421,29 +448,33 @@ private static final long serialVersionUID = 0L;
 
   public static final int CONNECTED_INBOX_POLL_CONFIG_FIELD_NUMBER = 107;
   /**
-   * <code>.api.commons.billing.modules.BasicConfig connected_inbox_poll_config = 107 [json_name = "connectedInboxPollConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig connected_inbox_poll_config = 107 [json_name = "connectedInboxPollConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.connected_inbox_poll_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=50
    * @return Whether the connectedInboxPollConfig field is set.
    */
   @java.lang.Override
-  public boolean hasConnectedInboxPollConfig() {
+  @java.lang.Deprecated public boolean hasConnectedInboxPollConfig() {
     return configCase_ == 107;
   }
   /**
-   * <code>.api.commons.billing.modules.BasicConfig connected_inbox_poll_config = 107 [json_name = "connectedInboxPollConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig connected_inbox_poll_config = 107 [json_name = "connectedInboxPollConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.connected_inbox_poll_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=50
    * @return The connectedInboxPollConfig.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getConnectedInboxPollConfig() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getConnectedInboxPollConfig() {
     if (configCase_ == 107) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
     }
     return com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.getDefaultInstance();
   }
   /**
-   * <code>.api.commons.billing.modules.BasicConfig connected_inbox_poll_config = 107 [json_name = "connectedInboxPollConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig connected_inbox_poll_config = 107 [json_name = "connectedInboxPollConfig", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getConnectedInboxPollConfigOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getConnectedInboxPollConfigOrBuilder() {
     if (configCase_ == 107) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
     }
@@ -452,29 +483,33 @@ private static final long serialVersionUID = 0L;
 
   public static final int MANAGER_TEXT_MESSAGE_CHAT_CONFIG_FIELD_NUMBER = 108;
   /**
-   * <code>.api.commons.billing.modules.BasicConfig manager_text_message_chat_config = 108 [json_name = "managerTextMessageChatConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig manager_text_message_chat_config = 108 [json_name = "managerTextMessageChatConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.manager_text_message_chat_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=51
    * @return Whether the managerTextMessageChatConfig field is set.
    */
   @java.lang.Override
-  public boolean hasManagerTextMessageChatConfig() {
+  @java.lang.Deprecated public boolean hasManagerTextMessageChatConfig() {
     return configCase_ == 108;
   }
   /**
-   * <code>.api.commons.billing.modules.BasicConfig manager_text_message_chat_config = 108 [json_name = "managerTextMessageChatConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig manager_text_message_chat_config = 108 [json_name = "managerTextMessageChatConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.manager_text_message_chat_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=51
    * @return The managerTextMessageChatConfig.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getManagerTextMessageChatConfig() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getManagerTextMessageChatConfig() {
     if (configCase_ == 108) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
     }
     return com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.getDefaultInstance();
   }
   /**
-   * <code>.api.commons.billing.modules.BasicConfig manager_text_message_chat_config = 108 [json_name = "managerTextMessageChatConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig manager_text_message_chat_config = 108 [json_name = "managerTextMessageChatConfig", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getManagerTextMessageChatConfigOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getManagerTextMessageChatConfigOrBuilder() {
     if (configCase_ == 108) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
     }
@@ -483,29 +518,33 @@ private static final long serialVersionUID = 0L;
 
   public static final int MANAGER_TEXT_MESSAGE_EMAIL_MESSAGE_CONFIG_FIELD_NUMBER = 109;
   /**
-   * <code>.api.commons.billing.modules.BasicConfig manager_text_message_email_message_config = 109 [json_name = "managerTextMessageEmailMessageConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig manager_text_message_email_message_config = 109 [json_name = "managerTextMessageEmailMessageConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.manager_text_message_email_message_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=52
    * @return Whether the managerTextMessageEmailMessageConfig field is set.
    */
   @java.lang.Override
-  public boolean hasManagerTextMessageEmailMessageConfig() {
+  @java.lang.Deprecated public boolean hasManagerTextMessageEmailMessageConfig() {
     return configCase_ == 109;
   }
   /**
-   * <code>.api.commons.billing.modules.BasicConfig manager_text_message_email_message_config = 109 [json_name = "managerTextMessageEmailMessageConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig manager_text_message_email_message_config = 109 [json_name = "managerTextMessageEmailMessageConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.manager_text_message_email_message_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=52
    * @return The managerTextMessageEmailMessageConfig.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getManagerTextMessageEmailMessageConfig() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getManagerTextMessageEmailMessageConfig() {
     if (configCase_ == 109) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
     }
     return com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.getDefaultInstance();
   }
   /**
-   * <code>.api.commons.billing.modules.BasicConfig manager_text_message_email_message_config = 109 [json_name = "managerTextMessageEmailMessageConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig manager_text_message_email_message_config = 109 [json_name = "managerTextMessageEmailMessageConfig", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getManagerTextMessageEmailMessageConfigOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getManagerTextMessageEmailMessageConfigOrBuilder() {
     if (configCase_ == 109) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
     }
@@ -514,29 +553,33 @@ private static final long serialVersionUID = 0L;
 
   public static final int MANAGER_TEXT_MESSAGE_EMAIL_SIZE_CONFIG_FIELD_NUMBER = 110;
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_email_size_config = 110 [json_name = "managerTextMessageEmailSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_email_size_config = 110 [json_name = "managerTextMessageEmailSizeConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.manager_text_message_email_size_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=53
    * @return Whether the managerTextMessageEmailSizeConfig field is set.
    */
   @java.lang.Override
-  public boolean hasManagerTextMessageEmailSizeConfig() {
+  @java.lang.Deprecated public boolean hasManagerTextMessageEmailSizeConfig() {
     return configCase_ == 110;
   }
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_email_size_config = 110 [json_name = "managerTextMessageEmailSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_email_size_config = 110 [json_name = "managerTextMessageEmailSizeConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.manager_text_message_email_size_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=53
    * @return The managerTextMessageEmailSizeConfig.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getManagerTextMessageEmailSizeConfig() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getManagerTextMessageEmailSizeConfig() {
     if (configCase_ == 110) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig) config_;
     }
     return com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.getDefaultInstance();
   }
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_email_size_config = 110 [json_name = "managerTextMessageEmailSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_email_size_config = 110 [json_name = "managerTextMessageEmailSizeConfig", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getManagerTextMessageEmailSizeConfigOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getManagerTextMessageEmailSizeConfigOrBuilder() {
     if (configCase_ == 110) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig) config_;
     }
@@ -545,29 +588,33 @@ private static final long serialVersionUID = 0L;
 
   public static final int MANAGER_TEXT_MESSAGE_SMS_CONFIG_FIELD_NUMBER = 111;
   /**
-   * <code>.api.commons.billing.modules.BasicConfig manager_text_message_sms_config = 111 [json_name = "managerTextMessageSmsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig manager_text_message_sms_config = 111 [json_name = "managerTextMessageSmsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.manager_text_message_sms_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=54
    * @return Whether the managerTextMessageSmsConfig field is set.
    */
   @java.lang.Override
-  public boolean hasManagerTextMessageSmsConfig() {
+  @java.lang.Deprecated public boolean hasManagerTextMessageSmsConfig() {
     return configCase_ == 111;
   }
   /**
-   * <code>.api.commons.billing.modules.BasicConfig manager_text_message_sms_config = 111 [json_name = "managerTextMessageSmsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig manager_text_message_sms_config = 111 [json_name = "managerTextMessageSmsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.manager_text_message_sms_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=54
    * @return The managerTextMessageSmsConfig.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getManagerTextMessageSmsConfig() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getManagerTextMessageSmsConfig() {
     if (configCase_ == 111) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
     }
     return com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.getDefaultInstance();
   }
   /**
-   * <code>.api.commons.billing.modules.BasicConfig manager_text_message_sms_config = 111 [json_name = "managerTextMessageSmsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig manager_text_message_sms_config = 111 [json_name = "managerTextMessageSmsConfig", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getManagerTextMessageSmsConfigOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getManagerTextMessageSmsConfigOrBuilder() {
     if (configCase_ == 111) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
     }
@@ -576,29 +623,33 @@ private static final long serialVersionUID = 0L;
 
   public static final int CUSTOMER_TEXT_MESSAGE_CHAT_CONFIG_FIELD_NUMBER = 112;
   /**
-   * <code>.api.commons.billing.modules.BasicConfig customer_text_message_chat_config = 112 [json_name = "customerTextMessageChatConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig customer_text_message_chat_config = 112 [json_name = "customerTextMessageChatConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.customer_text_message_chat_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=55
    * @return Whether the customerTextMessageChatConfig field is set.
    */
   @java.lang.Override
-  public boolean hasCustomerTextMessageChatConfig() {
+  @java.lang.Deprecated public boolean hasCustomerTextMessageChatConfig() {
     return configCase_ == 112;
   }
   /**
-   * <code>.api.commons.billing.modules.BasicConfig customer_text_message_chat_config = 112 [json_name = "customerTextMessageChatConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig customer_text_message_chat_config = 112 [json_name = "customerTextMessageChatConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.customer_text_message_chat_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=55
    * @return The customerTextMessageChatConfig.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getCustomerTextMessageChatConfig() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getCustomerTextMessageChatConfig() {
     if (configCase_ == 112) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
     }
     return com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.getDefaultInstance();
   }
   /**
-   * <code>.api.commons.billing.modules.BasicConfig customer_text_message_chat_config = 112 [json_name = "customerTextMessageChatConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig customer_text_message_chat_config = 112 [json_name = "customerTextMessageChatConfig", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getCustomerTextMessageChatConfigOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getCustomerTextMessageChatConfigOrBuilder() {
     if (configCase_ == 112) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
     }
@@ -607,29 +658,33 @@ private static final long serialVersionUID = 0L;
 
   public static final int CUSTOMER_TEXT_MESSAGE_EMAIL_MESSAGE_CONFIG_FIELD_NUMBER = 113;
   /**
-   * <code>.api.commons.billing.modules.BasicConfig customer_text_message_email_message_config = 113 [json_name = "customerTextMessageEmailMessageConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig customer_text_message_email_message_config = 113 [json_name = "customerTextMessageEmailMessageConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.customer_text_message_email_message_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=56
    * @return Whether the customerTextMessageEmailMessageConfig field is set.
    */
   @java.lang.Override
-  public boolean hasCustomerTextMessageEmailMessageConfig() {
+  @java.lang.Deprecated public boolean hasCustomerTextMessageEmailMessageConfig() {
     return configCase_ == 113;
   }
   /**
-   * <code>.api.commons.billing.modules.BasicConfig customer_text_message_email_message_config = 113 [json_name = "customerTextMessageEmailMessageConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig customer_text_message_email_message_config = 113 [json_name = "customerTextMessageEmailMessageConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.customer_text_message_email_message_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=56
    * @return The customerTextMessageEmailMessageConfig.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getCustomerTextMessageEmailMessageConfig() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getCustomerTextMessageEmailMessageConfig() {
     if (configCase_ == 113) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
     }
     return com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.getDefaultInstance();
   }
   /**
-   * <code>.api.commons.billing.modules.BasicConfig customer_text_message_email_message_config = 113 [json_name = "customerTextMessageEmailMessageConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig customer_text_message_email_message_config = 113 [json_name = "customerTextMessageEmailMessageConfig", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getCustomerTextMessageEmailMessageConfigOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getCustomerTextMessageEmailMessageConfigOrBuilder() {
     if (configCase_ == 113) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
     }
@@ -638,29 +693,33 @@ private static final long serialVersionUID = 0L;
 
   public static final int CUSTOMER_TEXT_MESSAGE_EMAIL_SIZE_CONFIG_FIELD_NUMBER = 114;
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_email_size_config = 114 [json_name = "customerTextMessageEmailSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_email_size_config = 114 [json_name = "customerTextMessageEmailSizeConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.customer_text_message_email_size_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=57
    * @return Whether the customerTextMessageEmailSizeConfig field is set.
    */
   @java.lang.Override
-  public boolean hasCustomerTextMessageEmailSizeConfig() {
+  @java.lang.Deprecated public boolean hasCustomerTextMessageEmailSizeConfig() {
     return configCase_ == 114;
   }
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_email_size_config = 114 [json_name = "customerTextMessageEmailSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_email_size_config = 114 [json_name = "customerTextMessageEmailSizeConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.customer_text_message_email_size_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=57
    * @return The customerTextMessageEmailSizeConfig.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getCustomerTextMessageEmailSizeConfig() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getCustomerTextMessageEmailSizeConfig() {
     if (configCase_ == 114) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig) config_;
     }
     return com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.getDefaultInstance();
   }
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_email_size_config = 114 [json_name = "customerTextMessageEmailSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_email_size_config = 114 [json_name = "customerTextMessageEmailSizeConfig", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getCustomerTextMessageEmailSizeConfigOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getCustomerTextMessageEmailSizeConfigOrBuilder() {
     if (configCase_ == 114) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig) config_;
     }
@@ -669,29 +728,33 @@ private static final long serialVersionUID = 0L;
 
   public static final int CUSTOMER_TEXT_MESSAGE_SMS_CONFIG_FIELD_NUMBER = 115;
   /**
-   * <code>.api.commons.billing.modules.BasicConfig customer_text_message_sms_config = 115 [json_name = "customerTextMessageSmsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig customer_text_message_sms_config = 115 [json_name = "customerTextMessageSmsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.customer_text_message_sms_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=58
    * @return Whether the customerTextMessageSmsConfig field is set.
    */
   @java.lang.Override
-  public boolean hasCustomerTextMessageSmsConfig() {
+  @java.lang.Deprecated public boolean hasCustomerTextMessageSmsConfig() {
     return configCase_ == 115;
   }
   /**
-   * <code>.api.commons.billing.modules.BasicConfig customer_text_message_sms_config = 115 [json_name = "customerTextMessageSmsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig customer_text_message_sms_config = 115 [json_name = "customerTextMessageSmsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.customer_text_message_sms_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=58
    * @return The customerTextMessageSmsConfig.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getCustomerTextMessageSmsConfig() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getCustomerTextMessageSmsConfig() {
     if (configCase_ == 115) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
     }
     return com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.getDefaultInstance();
   }
   /**
-   * <code>.api.commons.billing.modules.BasicConfig customer_text_message_sms_config = 115 [json_name = "customerTextMessageSmsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig customer_text_message_sms_config = 115 [json_name = "customerTextMessageSmsConfig", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getCustomerTextMessageSmsConfigOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getCustomerTextMessageSmsConfigOrBuilder() {
     if (configCase_ == 115) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
     }
@@ -700,29 +763,33 @@ private static final long serialVersionUID = 0L;
 
   public static final int AGENT_TEXT_MESSAGE_CHAT_SIZE_CONFIG_FIELD_NUMBER = 116;
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_chat_size_config = 116 [json_name = "agentTextMessageChatSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_chat_size_config = 116 [json_name = "agentTextMessageChatSizeConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.agent_text_message_chat_size_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=59
    * @return Whether the agentTextMessageChatSizeConfig field is set.
    */
   @java.lang.Override
-  public boolean hasAgentTextMessageChatSizeConfig() {
+  @java.lang.Deprecated public boolean hasAgentTextMessageChatSizeConfig() {
     return configCase_ == 116;
   }
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_chat_size_config = 116 [json_name = "agentTextMessageChatSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_chat_size_config = 116 [json_name = "agentTextMessageChatSizeConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.agent_text_message_chat_size_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=59
    * @return The agentTextMessageChatSizeConfig.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getAgentTextMessageChatSizeConfig() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getAgentTextMessageChatSizeConfig() {
     if (configCase_ == 116) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig) config_;
     }
     return com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.getDefaultInstance();
   }
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_chat_size_config = 116 [json_name = "agentTextMessageChatSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_chat_size_config = 116 [json_name = "agentTextMessageChatSizeConfig", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getAgentTextMessageChatSizeConfigOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getAgentTextMessageChatSizeConfigOrBuilder() {
     if (configCase_ == 116) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig) config_;
     }
@@ -731,29 +798,33 @@ private static final long serialVersionUID = 0L;
 
   public static final int MANAGER_TEXT_MESSAGE_CHAT_SIZE_CONFIG_FIELD_NUMBER = 117;
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_chat_size_config = 117 [json_name = "managerTextMessageChatSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_chat_size_config = 117 [json_name = "managerTextMessageChatSizeConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.manager_text_message_chat_size_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=60
    * @return Whether the managerTextMessageChatSizeConfig field is set.
    */
   @java.lang.Override
-  public boolean hasManagerTextMessageChatSizeConfig() {
+  @java.lang.Deprecated public boolean hasManagerTextMessageChatSizeConfig() {
     return configCase_ == 117;
   }
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_chat_size_config = 117 [json_name = "managerTextMessageChatSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_chat_size_config = 117 [json_name = "managerTextMessageChatSizeConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.manager_text_message_chat_size_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=60
    * @return The managerTextMessageChatSizeConfig.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getManagerTextMessageChatSizeConfig() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getManagerTextMessageChatSizeConfig() {
     if (configCase_ == 117) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig) config_;
     }
     return com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.getDefaultInstance();
   }
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_chat_size_config = 117 [json_name = "managerTextMessageChatSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_chat_size_config = 117 [json_name = "managerTextMessageChatSizeConfig", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getManagerTextMessageChatSizeConfigOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getManagerTextMessageChatSizeConfigOrBuilder() {
     if (configCase_ == 117) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig) config_;
     }
@@ -762,29 +833,33 @@ private static final long serialVersionUID = 0L;
 
   public static final int CUSTOMER_TEXT_MESSAGE_CHAT_SIZE_CONFIG_FIELD_NUMBER = 118;
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_chat_size_config = 118 [json_name = "customerTextMessageChatSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_chat_size_config = 118 [json_name = "customerTextMessageChatSizeConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.customer_text_message_chat_size_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=61
    * @return Whether the customerTextMessageChatSizeConfig field is set.
    */
   @java.lang.Override
-  public boolean hasCustomerTextMessageChatSizeConfig() {
+  @java.lang.Deprecated public boolean hasCustomerTextMessageChatSizeConfig() {
     return configCase_ == 118;
   }
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_chat_size_config = 118 [json_name = "customerTextMessageChatSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_chat_size_config = 118 [json_name = "customerTextMessageChatSizeConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.customer_text_message_chat_size_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=61
    * @return The customerTextMessageChatSizeConfig.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getCustomerTextMessageChatSizeConfig() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getCustomerTextMessageChatSizeConfig() {
     if (configCase_ == 118) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig) config_;
     }
     return com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.getDefaultInstance();
   }
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_chat_size_config = 118 [json_name = "customerTextMessageChatSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_chat_size_config = 118 [json_name = "customerTextMessageChatSizeConfig", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getCustomerTextMessageChatSizeConfigOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getCustomerTextMessageChatSizeConfigOrBuilder() {
     if (configCase_ == 118) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig) config_;
     }
@@ -793,29 +868,33 @@ private static final long serialVersionUID = 0L;
 
   public static final int CONNECTED_INBOX_CREATED_CONFIG_FIELD_NUMBER = 119;
   /**
-   * <code>.api.commons.billing.modules.BasicConfig connected_inbox_created_config = 119 [json_name = "connectedInboxCreatedConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig connected_inbox_created_config = 119 [json_name = "connectedInboxCreatedConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.connected_inbox_created_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=62
    * @return Whether the connectedInboxCreatedConfig field is set.
    */
   @java.lang.Override
-  public boolean hasConnectedInboxCreatedConfig() {
+  @java.lang.Deprecated public boolean hasConnectedInboxCreatedConfig() {
     return configCase_ == 119;
   }
   /**
-   * <code>.api.commons.billing.modules.BasicConfig connected_inbox_created_config = 119 [json_name = "connectedInboxCreatedConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig connected_inbox_created_config = 119 [json_name = "connectedInboxCreatedConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.connected_inbox_created_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=62
    * @return The connectedInboxCreatedConfig.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getConnectedInboxCreatedConfig() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getConnectedInboxCreatedConfig() {
     if (configCase_ == 119) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
     }
     return com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.getDefaultInstance();
   }
   /**
-   * <code>.api.commons.billing.modules.BasicConfig connected_inbox_created_config = 119 [json_name = "connectedInboxCreatedConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig connected_inbox_created_config = 119 [json_name = "connectedInboxCreatedConfig", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getConnectedInboxCreatedConfigOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getConnectedInboxCreatedConfigOrBuilder() {
     if (configCase_ == 119) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
     }
@@ -824,29 +903,33 @@ private static final long serialVersionUID = 0L;
 
   public static final int AGENT_TEXT_MESSAGE_SMS_SIZE_CONFIG_FIELD_NUMBER = 120;
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_sms_size_config = 120 [json_name = "agentTextMessageSmsSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_sms_size_config = 120 [json_name = "agentTextMessageSmsSizeConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.agent_text_message_sms_size_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=63
    * @return Whether the agentTextMessageSmsSizeConfig field is set.
    */
   @java.lang.Override
-  public boolean hasAgentTextMessageSmsSizeConfig() {
+  @java.lang.Deprecated public boolean hasAgentTextMessageSmsSizeConfig() {
     return configCase_ == 120;
   }
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_sms_size_config = 120 [json_name = "agentTextMessageSmsSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_sms_size_config = 120 [json_name = "agentTextMessageSmsSizeConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.agent_text_message_sms_size_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=63
    * @return The agentTextMessageSmsSizeConfig.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getAgentTextMessageSmsSizeConfig() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getAgentTextMessageSmsSizeConfig() {
     if (configCase_ == 120) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig) config_;
     }
     return com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.getDefaultInstance();
   }
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_sms_size_config = 120 [json_name = "agentTextMessageSmsSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_sms_size_config = 120 [json_name = "agentTextMessageSmsSizeConfig", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getAgentTextMessageSmsSizeConfigOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getAgentTextMessageSmsSizeConfigOrBuilder() {
     if (configCase_ == 120) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig) config_;
     }
@@ -855,29 +938,33 @@ private static final long serialVersionUID = 0L;
 
   public static final int MANAGER_TEXT_MESSAGE_SMS_SIZE_CONFIG_FIELD_NUMBER = 121;
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_sms_size_config = 121 [json_name = "managerTextMessageSmsSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_sms_size_config = 121 [json_name = "managerTextMessageSmsSizeConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.manager_text_message_sms_size_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=64
    * @return Whether the managerTextMessageSmsSizeConfig field is set.
    */
   @java.lang.Override
-  public boolean hasManagerTextMessageSmsSizeConfig() {
+  @java.lang.Deprecated public boolean hasManagerTextMessageSmsSizeConfig() {
     return configCase_ == 121;
   }
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_sms_size_config = 121 [json_name = "managerTextMessageSmsSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_sms_size_config = 121 [json_name = "managerTextMessageSmsSizeConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.manager_text_message_sms_size_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=64
    * @return The managerTextMessageSmsSizeConfig.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getManagerTextMessageSmsSizeConfig() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getManagerTextMessageSmsSizeConfig() {
     if (configCase_ == 121) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig) config_;
     }
     return com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.getDefaultInstance();
   }
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_sms_size_config = 121 [json_name = "managerTextMessageSmsSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_sms_size_config = 121 [json_name = "managerTextMessageSmsSizeConfig", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getManagerTextMessageSmsSizeConfigOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getManagerTextMessageSmsSizeConfigOrBuilder() {
     if (configCase_ == 121) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig) config_;
     }
@@ -886,29 +973,33 @@ private static final long serialVersionUID = 0L;
 
   public static final int CUSTOMER_TEXT_MESSAGE_SMS_SIZE_CONFIG_FIELD_NUMBER = 122;
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_sms_size_config = 122 [json_name = "customerTextMessageSmsSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_sms_size_config = 122 [json_name = "customerTextMessageSmsSizeConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.customer_text_message_sms_size_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=65
    * @return Whether the customerTextMessageSmsSizeConfig field is set.
    */
   @java.lang.Override
-  public boolean hasCustomerTextMessageSmsSizeConfig() {
+  @java.lang.Deprecated public boolean hasCustomerTextMessageSmsSizeConfig() {
     return configCase_ == 122;
   }
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_sms_size_config = 122 [json_name = "customerTextMessageSmsSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_sms_size_config = 122 [json_name = "customerTextMessageSmsSizeConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.customer_text_message_sms_size_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=65
    * @return The customerTextMessageSmsSizeConfig.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getCustomerTextMessageSmsSizeConfig() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getCustomerTextMessageSmsSizeConfig() {
     if (configCase_ == 122) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig) config_;
     }
     return com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.getDefaultInstance();
   }
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_sms_size_config = 122 [json_name = "customerTextMessageSmsSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_sms_size_config = 122 [json_name = "customerTextMessageSmsSizeConfig", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getCustomerTextMessageSmsSizeConfigOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getCustomerTextMessageSmsSizeConfigOrBuilder() {
     if (configCase_ == 122) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig) config_;
     }
@@ -917,29 +1008,33 @@ private static final long serialVersionUID = 0L;
 
   public static final int TASK_MESSAGE_SENT_SMS_SIZE_CONFIG_FIELD_NUMBER = 123;
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig task_message_sent_sms_size_config = 123 [json_name = "taskMessageSentSmsSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig task_message_sent_sms_size_config = 123 [json_name = "taskMessageSentSmsSizeConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.task_message_sent_sms_size_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=66
    * @return Whether the taskMessageSentSmsSizeConfig field is set.
    */
   @java.lang.Override
-  public boolean hasTaskMessageSentSmsSizeConfig() {
+  @java.lang.Deprecated public boolean hasTaskMessageSentSmsSizeConfig() {
     return configCase_ == 123;
   }
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig task_message_sent_sms_size_config = 123 [json_name = "taskMessageSentSmsSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig task_message_sent_sms_size_config = 123 [json_name = "taskMessageSentSmsSizeConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.task_message_sent_sms_size_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=66
    * @return The taskMessageSentSmsSizeConfig.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getTaskMessageSentSmsSizeConfig() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getTaskMessageSentSmsSizeConfig() {
     if (configCase_ == 123) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig) config_;
     }
     return com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.getDefaultInstance();
   }
   /**
-   * <code>.api.commons.billing.modules.BasicAmountConfig task_message_sent_sms_size_config = 123 [json_name = "taskMessageSentSmsSizeConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicAmountConfig task_message_sent_sms_size_config = 123 [json_name = "taskMessageSentSmsSizeConfig", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getTaskMessageSentSmsSizeConfigOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getTaskMessageSentSmsSizeConfigOrBuilder() {
     if (configCase_ == 123) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig) config_;
     }
@@ -948,29 +1043,33 @@ private static final long serialVersionUID = 0L;
 
   public static final int AGENT_CHAT_MESSAGE_UNITS_CONFIG_FIELD_NUMBER = 124;
   /**
-   * <code>.api.commons.billing.modules.BasicConfig agent_chat_message_units_config = 124 [json_name = "agentChatMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig agent_chat_message_units_config = 124 [json_name = "agentChatMessageUnitsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.agent_chat_message_units_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=67
    * @return Whether the agentChatMessageUnitsConfig field is set.
    */
   @java.lang.Override
-  public boolean hasAgentChatMessageUnitsConfig() {
+  @java.lang.Deprecated public boolean hasAgentChatMessageUnitsConfig() {
     return configCase_ == 124;
   }
   /**
-   * <code>.api.commons.billing.modules.BasicConfig agent_chat_message_units_config = 124 [json_name = "agentChatMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig agent_chat_message_units_config = 124 [json_name = "agentChatMessageUnitsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.agent_chat_message_units_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=67
    * @return The agentChatMessageUnitsConfig.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getAgentChatMessageUnitsConfig() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getAgentChatMessageUnitsConfig() {
     if (configCase_ == 124) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
     }
     return com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.getDefaultInstance();
   }
   /**
-   * <code>.api.commons.billing.modules.BasicConfig agent_chat_message_units_config = 124 [json_name = "agentChatMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig agent_chat_message_units_config = 124 [json_name = "agentChatMessageUnitsConfig", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getAgentChatMessageUnitsConfigOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getAgentChatMessageUnitsConfigOrBuilder() {
     if (configCase_ == 124) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
     }
@@ -979,29 +1078,33 @@ private static final long serialVersionUID = 0L;
 
   public static final int AGENT_EMAIL_MESSAGE_UNITS_CONFIG_FIELD_NUMBER = 125;
   /**
-   * <code>.api.commons.billing.modules.BasicConfig agent_email_message_units_config = 125 [json_name = "agentEmailMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig agent_email_message_units_config = 125 [json_name = "agentEmailMessageUnitsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.agent_email_message_units_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=68
    * @return Whether the agentEmailMessageUnitsConfig field is set.
    */
   @java.lang.Override
-  public boolean hasAgentEmailMessageUnitsConfig() {
+  @java.lang.Deprecated public boolean hasAgentEmailMessageUnitsConfig() {
     return configCase_ == 125;
   }
   /**
-   * <code>.api.commons.billing.modules.BasicConfig agent_email_message_units_config = 125 [json_name = "agentEmailMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig agent_email_message_units_config = 125 [json_name = "agentEmailMessageUnitsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.agent_email_message_units_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=68
    * @return The agentEmailMessageUnitsConfig.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getAgentEmailMessageUnitsConfig() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getAgentEmailMessageUnitsConfig() {
     if (configCase_ == 125) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
     }
     return com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.getDefaultInstance();
   }
   /**
-   * <code>.api.commons.billing.modules.BasicConfig agent_email_message_units_config = 125 [json_name = "agentEmailMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig agent_email_message_units_config = 125 [json_name = "agentEmailMessageUnitsConfig", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getAgentEmailMessageUnitsConfigOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getAgentEmailMessageUnitsConfigOrBuilder() {
     if (configCase_ == 125) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
     }
@@ -1010,29 +1113,33 @@ private static final long serialVersionUID = 0L;
 
   public static final int AGENT_SMS_MESSAGE_UNITS_CONFIG_FIELD_NUMBER = 126;
   /**
-   * <code>.api.commons.billing.modules.BasicConfig agent_sms_message_units_config = 126 [json_name = "agentSmsMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig agent_sms_message_units_config = 126 [json_name = "agentSmsMessageUnitsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.agent_sms_message_units_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=69
    * @return Whether the agentSmsMessageUnitsConfig field is set.
    */
   @java.lang.Override
-  public boolean hasAgentSmsMessageUnitsConfig() {
+  @java.lang.Deprecated public boolean hasAgentSmsMessageUnitsConfig() {
     return configCase_ == 126;
   }
   /**
-   * <code>.api.commons.billing.modules.BasicConfig agent_sms_message_units_config = 126 [json_name = "agentSmsMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig agent_sms_message_units_config = 126 [json_name = "agentSmsMessageUnitsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.agent_sms_message_units_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=69
    * @return The agentSmsMessageUnitsConfig.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getAgentSmsMessageUnitsConfig() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getAgentSmsMessageUnitsConfig() {
     if (configCase_ == 126) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
     }
     return com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.getDefaultInstance();
   }
   /**
-   * <code>.api.commons.billing.modules.BasicConfig agent_sms_message_units_config = 126 [json_name = "agentSmsMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig agent_sms_message_units_config = 126 [json_name = "agentSmsMessageUnitsConfig", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getAgentSmsMessageUnitsConfigOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getAgentSmsMessageUnitsConfigOrBuilder() {
     if (configCase_ == 126) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
     }
@@ -1041,29 +1148,33 @@ private static final long serialVersionUID = 0L;
 
   public static final int MANAGER_CHAT_MESSAGE_UNITS_CONFIG_FIELD_NUMBER = 127;
   /**
-   * <code>.api.commons.billing.modules.BasicConfig manager_chat_message_units_config = 127 [json_name = "managerChatMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig manager_chat_message_units_config = 127 [json_name = "managerChatMessageUnitsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.manager_chat_message_units_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=70
    * @return Whether the managerChatMessageUnitsConfig field is set.
    */
   @java.lang.Override
-  public boolean hasManagerChatMessageUnitsConfig() {
+  @java.lang.Deprecated public boolean hasManagerChatMessageUnitsConfig() {
     return configCase_ == 127;
   }
   /**
-   * <code>.api.commons.billing.modules.BasicConfig manager_chat_message_units_config = 127 [json_name = "managerChatMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig manager_chat_message_units_config = 127 [json_name = "managerChatMessageUnitsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.manager_chat_message_units_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=70
    * @return The managerChatMessageUnitsConfig.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getManagerChatMessageUnitsConfig() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getManagerChatMessageUnitsConfig() {
     if (configCase_ == 127) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
     }
     return com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.getDefaultInstance();
   }
   /**
-   * <code>.api.commons.billing.modules.BasicConfig manager_chat_message_units_config = 127 [json_name = "managerChatMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig manager_chat_message_units_config = 127 [json_name = "managerChatMessageUnitsConfig", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getManagerChatMessageUnitsConfigOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getManagerChatMessageUnitsConfigOrBuilder() {
     if (configCase_ == 127) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
     }
@@ -1072,29 +1183,33 @@ private static final long serialVersionUID = 0L;
 
   public static final int MANAGER_EMAIL_MESSAGE_UNITS_CONFIG_FIELD_NUMBER = 128;
   /**
-   * <code>.api.commons.billing.modules.BasicConfig manager_email_message_units_config = 128 [json_name = "managerEmailMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig manager_email_message_units_config = 128 [json_name = "managerEmailMessageUnitsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.manager_email_message_units_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=71
    * @return Whether the managerEmailMessageUnitsConfig field is set.
    */
   @java.lang.Override
-  public boolean hasManagerEmailMessageUnitsConfig() {
+  @java.lang.Deprecated public boolean hasManagerEmailMessageUnitsConfig() {
     return configCase_ == 128;
   }
   /**
-   * <code>.api.commons.billing.modules.BasicConfig manager_email_message_units_config = 128 [json_name = "managerEmailMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig manager_email_message_units_config = 128 [json_name = "managerEmailMessageUnitsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.manager_email_message_units_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=71
    * @return The managerEmailMessageUnitsConfig.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getManagerEmailMessageUnitsConfig() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getManagerEmailMessageUnitsConfig() {
     if (configCase_ == 128) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
     }
     return com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.getDefaultInstance();
   }
   /**
-   * <code>.api.commons.billing.modules.BasicConfig manager_email_message_units_config = 128 [json_name = "managerEmailMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig manager_email_message_units_config = 128 [json_name = "managerEmailMessageUnitsConfig", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getManagerEmailMessageUnitsConfigOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getManagerEmailMessageUnitsConfigOrBuilder() {
     if (configCase_ == 128) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
     }
@@ -1103,29 +1218,33 @@ private static final long serialVersionUID = 0L;
 
   public static final int MANAGER_SMS_MESSAGE_UNITS_CONFIG_FIELD_NUMBER = 129;
   /**
-   * <code>.api.commons.billing.modules.BasicConfig manager_sms_message_units_config = 129 [json_name = "managerSmsMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig manager_sms_message_units_config = 129 [json_name = "managerSmsMessageUnitsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.manager_sms_message_units_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=72
    * @return Whether the managerSmsMessageUnitsConfig field is set.
    */
   @java.lang.Override
-  public boolean hasManagerSmsMessageUnitsConfig() {
+  @java.lang.Deprecated public boolean hasManagerSmsMessageUnitsConfig() {
     return configCase_ == 129;
   }
   /**
-   * <code>.api.commons.billing.modules.BasicConfig manager_sms_message_units_config = 129 [json_name = "managerSmsMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig manager_sms_message_units_config = 129 [json_name = "managerSmsMessageUnitsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.manager_sms_message_units_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=72
    * @return The managerSmsMessageUnitsConfig.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getManagerSmsMessageUnitsConfig() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getManagerSmsMessageUnitsConfig() {
     if (configCase_ == 129) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
     }
     return com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.getDefaultInstance();
   }
   /**
-   * <code>.api.commons.billing.modules.BasicConfig manager_sms_message_units_config = 129 [json_name = "managerSmsMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig manager_sms_message_units_config = 129 [json_name = "managerSmsMessageUnitsConfig", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getManagerSmsMessageUnitsConfigOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getManagerSmsMessageUnitsConfigOrBuilder() {
     if (configCase_ == 129) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
     }
@@ -1134,29 +1253,33 @@ private static final long serialVersionUID = 0L;
 
   public static final int CUSTOMER_CHAT_MESSAGE_UNITS_CONFIG_FIELD_NUMBER = 130;
   /**
-   * <code>.api.commons.billing.modules.BasicConfig customer_chat_message_units_config = 130 [json_name = "customerChatMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig customer_chat_message_units_config = 130 [json_name = "customerChatMessageUnitsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.customer_chat_message_units_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=73
    * @return Whether the customerChatMessageUnitsConfig field is set.
    */
   @java.lang.Override
-  public boolean hasCustomerChatMessageUnitsConfig() {
+  @java.lang.Deprecated public boolean hasCustomerChatMessageUnitsConfig() {
     return configCase_ == 130;
   }
   /**
-   * <code>.api.commons.billing.modules.BasicConfig customer_chat_message_units_config = 130 [json_name = "customerChatMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig customer_chat_message_units_config = 130 [json_name = "customerChatMessageUnitsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.customer_chat_message_units_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=73
    * @return The customerChatMessageUnitsConfig.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getCustomerChatMessageUnitsConfig() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getCustomerChatMessageUnitsConfig() {
     if (configCase_ == 130) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
     }
     return com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.getDefaultInstance();
   }
   /**
-   * <code>.api.commons.billing.modules.BasicConfig customer_chat_message_units_config = 130 [json_name = "customerChatMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig customer_chat_message_units_config = 130 [json_name = "customerChatMessageUnitsConfig", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getCustomerChatMessageUnitsConfigOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getCustomerChatMessageUnitsConfigOrBuilder() {
     if (configCase_ == 130) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
     }
@@ -1165,29 +1288,33 @@ private static final long serialVersionUID = 0L;
 
   public static final int CUSTOMER_EMAIL_MESSAGE_UNITS_CONFIG_FIELD_NUMBER = 131;
   /**
-   * <code>.api.commons.billing.modules.BasicConfig customer_email_message_units_config = 131 [json_name = "customerEmailMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig customer_email_message_units_config = 131 [json_name = "customerEmailMessageUnitsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.customer_email_message_units_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=74
    * @return Whether the customerEmailMessageUnitsConfig field is set.
    */
   @java.lang.Override
-  public boolean hasCustomerEmailMessageUnitsConfig() {
+  @java.lang.Deprecated public boolean hasCustomerEmailMessageUnitsConfig() {
     return configCase_ == 131;
   }
   /**
-   * <code>.api.commons.billing.modules.BasicConfig customer_email_message_units_config = 131 [json_name = "customerEmailMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig customer_email_message_units_config = 131 [json_name = "customerEmailMessageUnitsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.customer_email_message_units_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=74
    * @return The customerEmailMessageUnitsConfig.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getCustomerEmailMessageUnitsConfig() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getCustomerEmailMessageUnitsConfig() {
     if (configCase_ == 131) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
     }
     return com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.getDefaultInstance();
   }
   /**
-   * <code>.api.commons.billing.modules.BasicConfig customer_email_message_units_config = 131 [json_name = "customerEmailMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig customer_email_message_units_config = 131 [json_name = "customerEmailMessageUnitsConfig", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getCustomerEmailMessageUnitsConfigOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getCustomerEmailMessageUnitsConfigOrBuilder() {
     if (configCase_ == 131) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
     }
@@ -1196,29 +1323,33 @@ private static final long serialVersionUID = 0L;
 
   public static final int CUSTOMER_SMS_MESSAGE_UNITS_CONFIG_FIELD_NUMBER = 132;
   /**
-   * <code>.api.commons.billing.modules.BasicConfig customer_sms_message_units_config = 132 [json_name = "customerSmsMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig customer_sms_message_units_config = 132 [json_name = "customerSmsMessageUnitsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.customer_sms_message_units_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=75
    * @return Whether the customerSmsMessageUnitsConfig field is set.
    */
   @java.lang.Override
-  public boolean hasCustomerSmsMessageUnitsConfig() {
+  @java.lang.Deprecated public boolean hasCustomerSmsMessageUnitsConfig() {
     return configCase_ == 132;
   }
   /**
-   * <code>.api.commons.billing.modules.BasicConfig customer_sms_message_units_config = 132 [json_name = "customerSmsMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig customer_sms_message_units_config = 132 [json_name = "customerSmsMessageUnitsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.customer_sms_message_units_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=75
    * @return The customerSmsMessageUnitsConfig.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getCustomerSmsMessageUnitsConfig() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getCustomerSmsMessageUnitsConfig() {
     if (configCase_ == 132) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
     }
     return com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.getDefaultInstance();
   }
   /**
-   * <code>.api.commons.billing.modules.BasicConfig customer_sms_message_units_config = 132 [json_name = "customerSmsMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig customer_sms_message_units_config = 132 [json_name = "customerSmsMessageUnitsConfig", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getCustomerSmsMessageUnitsConfigOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getCustomerSmsMessageUnitsConfigOrBuilder() {
     if (configCase_ == 132) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
     }
@@ -1227,29 +1358,33 @@ private static final long serialVersionUID = 0L;
 
   public static final int SYSTEM_CHAT_MESSAGE_UNITS_CONFIG_FIELD_NUMBER = 133;
   /**
-   * <code>.api.commons.billing.modules.BasicConfig system_chat_message_units_config = 133 [json_name = "systemChatMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig system_chat_message_units_config = 133 [json_name = "systemChatMessageUnitsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.system_chat_message_units_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=76
    * @return Whether the systemChatMessageUnitsConfig field is set.
    */
   @java.lang.Override
-  public boolean hasSystemChatMessageUnitsConfig() {
+  @java.lang.Deprecated public boolean hasSystemChatMessageUnitsConfig() {
     return configCase_ == 133;
   }
   /**
-   * <code>.api.commons.billing.modules.BasicConfig system_chat_message_units_config = 133 [json_name = "systemChatMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig system_chat_message_units_config = 133 [json_name = "systemChatMessageUnitsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.system_chat_message_units_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=76
    * @return The systemChatMessageUnitsConfig.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getSystemChatMessageUnitsConfig() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getSystemChatMessageUnitsConfig() {
     if (configCase_ == 133) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
     }
     return com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.getDefaultInstance();
   }
   /**
-   * <code>.api.commons.billing.modules.BasicConfig system_chat_message_units_config = 133 [json_name = "systemChatMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig system_chat_message_units_config = 133 [json_name = "systemChatMessageUnitsConfig", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getSystemChatMessageUnitsConfigOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getSystemChatMessageUnitsConfigOrBuilder() {
     if (configCase_ == 133) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
     }
@@ -1258,29 +1393,33 @@ private static final long serialVersionUID = 0L;
 
   public static final int SYSTEM_EMAIL_MESSAGE_UNITS_CONFIG_FIELD_NUMBER = 134;
   /**
-   * <code>.api.commons.billing.modules.BasicConfig system_email_message_units_config = 134 [json_name = "systemEmailMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig system_email_message_units_config = 134 [json_name = "systemEmailMessageUnitsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.system_email_message_units_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=77
    * @return Whether the systemEmailMessageUnitsConfig field is set.
    */
   @java.lang.Override
-  public boolean hasSystemEmailMessageUnitsConfig() {
+  @java.lang.Deprecated public boolean hasSystemEmailMessageUnitsConfig() {
     return configCase_ == 134;
   }
   /**
-   * <code>.api.commons.billing.modules.BasicConfig system_email_message_units_config = 134 [json_name = "systemEmailMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig system_email_message_units_config = 134 [json_name = "systemEmailMessageUnitsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.system_email_message_units_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=77
    * @return The systemEmailMessageUnitsConfig.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getSystemEmailMessageUnitsConfig() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getSystemEmailMessageUnitsConfig() {
     if (configCase_ == 134) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
     }
     return com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.getDefaultInstance();
   }
   /**
-   * <code>.api.commons.billing.modules.BasicConfig system_email_message_units_config = 134 [json_name = "systemEmailMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig system_email_message_units_config = 134 [json_name = "systemEmailMessageUnitsConfig", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getSystemEmailMessageUnitsConfigOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getSystemEmailMessageUnitsConfigOrBuilder() {
     if (configCase_ == 134) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
     }
@@ -1289,29 +1428,33 @@ private static final long serialVersionUID = 0L;
 
   public static final int SYSTEM_SMS_MESSAGE_UNITS_CONFIG_FIELD_NUMBER = 135;
   /**
-   * <code>.api.commons.billing.modules.BasicConfig system_sms_message_units_config = 135 [json_name = "systemSmsMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig system_sms_message_units_config = 135 [json_name = "systemSmsMessageUnitsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.system_sms_message_units_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=78
    * @return Whether the systemSmsMessageUnitsConfig field is set.
    */
   @java.lang.Override
-  public boolean hasSystemSmsMessageUnitsConfig() {
+  @java.lang.Deprecated public boolean hasSystemSmsMessageUnitsConfig() {
     return configCase_ == 135;
   }
   /**
-   * <code>.api.commons.billing.modules.BasicConfig system_sms_message_units_config = 135 [json_name = "systemSmsMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig system_sms_message_units_config = 135 [json_name = "systemSmsMessageUnitsConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.system_sms_message_units_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=78
    * @return The systemSmsMessageUnitsConfig.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getSystemSmsMessageUnitsConfig() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getSystemSmsMessageUnitsConfig() {
     if (configCase_ == 135) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
     }
     return com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.getDefaultInstance();
   }
   /**
-   * <code>.api.commons.billing.modules.BasicConfig system_sms_message_units_config = 135 [json_name = "systemSmsMessageUnitsConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig system_sms_message_units_config = 135 [json_name = "systemSmsMessageUnitsConfig", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getSystemSmsMessageUnitsConfigOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getSystemSmsMessageUnitsConfigOrBuilder() {
     if (configCase_ == 135) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
     }
@@ -1324,11 +1467,13 @@ private static final long serialVersionUID = 0L;
    * compliance configs
    * </pre>
    *
-   * <code>.api.commons.billing.modules.BasicConfig compliance_rnd_query_config = 200 [json_name = "complianceRndQueryConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig compliance_rnd_query_config = 200 [json_name = "complianceRndQueryConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.compliance_rnd_query_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=81
    * @return Whether the complianceRndQueryConfig field is set.
    */
   @java.lang.Override
-  public boolean hasComplianceRndQueryConfig() {
+  @java.lang.Deprecated public boolean hasComplianceRndQueryConfig() {
     return configCase_ == 200;
   }
   /**
@@ -1336,11 +1481,13 @@ private static final long serialVersionUID = 0L;
    * compliance configs
    * </pre>
    *
-   * <code>.api.commons.billing.modules.BasicConfig compliance_rnd_query_config = 200 [json_name = "complianceRndQueryConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig compliance_rnd_query_config = 200 [json_name = "complianceRndQueryConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.compliance_rnd_query_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=81
    * @return The complianceRndQueryConfig.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getComplianceRndQueryConfig() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getComplianceRndQueryConfig() {
     if (configCase_ == 200) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
     }
@@ -1351,10 +1498,10 @@ private static final long serialVersionUID = 0L;
    * compliance configs
    * </pre>
    *
-   * <code>.api.commons.billing.modules.BasicConfig compliance_rnd_query_config = 200 [json_name = "complianceRndQueryConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig compliance_rnd_query_config = 200 [json_name = "complianceRndQueryConfig", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getComplianceRndQueryConfigOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getComplianceRndQueryConfigOrBuilder() {
     if (configCase_ == 200) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
     }
@@ -1363,29 +1510,33 @@ private static final long serialVersionUID = 0L;
 
   public static final int COMPLIANCE_RND_QUERY_CACHED_CONFIG_FIELD_NUMBER = 201;
   /**
-   * <code>.api.commons.billing.modules.BasicConfig compliance_rnd_query_cached_config = 201 [json_name = "complianceRndQueryCachedConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig compliance_rnd_query_cached_config = 201 [json_name = "complianceRndQueryCachedConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.compliance_rnd_query_cached_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=82
    * @return Whether the complianceRndQueryCachedConfig field is set.
    */
   @java.lang.Override
-  public boolean hasComplianceRndQueryCachedConfig() {
+  @java.lang.Deprecated public boolean hasComplianceRndQueryCachedConfig() {
     return configCase_ == 201;
   }
   /**
-   * <code>.api.commons.billing.modules.BasicConfig compliance_rnd_query_cached_config = 201 [json_name = "complianceRndQueryCachedConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig compliance_rnd_query_cached_config = 201 [json_name = "complianceRndQueryCachedConfig", deprecated = true];</code>
+   * @deprecated api.commons.billing.DetailConfig.compliance_rnd_query_cached_config is deprecated.
+   *     See api/commons/billing/detail.proto;l=82
    * @return The complianceRndQueryCachedConfig.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getComplianceRndQueryCachedConfig() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getComplianceRndQueryCachedConfig() {
     if (configCase_ == 201) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
     }
     return com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.getDefaultInstance();
   }
   /**
-   * <code>.api.commons.billing.modules.BasicConfig compliance_rnd_query_cached_config = 201 [json_name = "complianceRndQueryCachedConfig"];</code>
+   * <code>.api.commons.billing.modules.BasicConfig compliance_rnd_query_cached_config = 201 [json_name = "complianceRndQueryCachedConfig", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getComplianceRndQueryCachedConfigOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getComplianceRndQueryCachedConfigOrBuilder() {
     if (configCase_ == 201) {
        return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
     }
@@ -2133,11 +2284,6 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * <pre>
-   * DetailConfig - contains the data specific to the rating module,
-   * so that it may rate events correctly
-   * </pre>
-   *
    * Protobuf type {@code api.commons.billing.DetailConfig}
    */
   public static final class Builder extends
@@ -3033,19 +3179,23 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder> agentSeatsConfigBuilder_;
     /**
-     * <code>.api.commons.billing.modules.BasicConfig agent_seats_config = 2 [json_name = "agentSeatsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig agent_seats_config = 2 [json_name = "agentSeatsConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.agent_seats_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=40
      * @return Whether the agentSeatsConfig field is set.
      */
     @java.lang.Override
-    public boolean hasAgentSeatsConfig() {
+    @java.lang.Deprecated public boolean hasAgentSeatsConfig() {
       return configCase_ == 2;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig agent_seats_config = 2 [json_name = "agentSeatsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig agent_seats_config = 2 [json_name = "agentSeatsConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.agent_seats_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=40
      * @return The agentSeatsConfig.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getAgentSeatsConfig() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getAgentSeatsConfig() {
       if (agentSeatsConfigBuilder_ == null) {
         if (configCase_ == 2) {
           return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
@@ -3059,9 +3209,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig agent_seats_config = 2 [json_name = "agentSeatsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig agent_seats_config = 2 [json_name = "agentSeatsConfig", deprecated = true];</code>
      */
-    public Builder setAgentSeatsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
+    @java.lang.Deprecated public Builder setAgentSeatsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
       if (agentSeatsConfigBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -3075,9 +3225,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig agent_seats_config = 2 [json_name = "agentSeatsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig agent_seats_config = 2 [json_name = "agentSeatsConfig", deprecated = true];</code>
      */
-    public Builder setAgentSeatsConfig(
+    @java.lang.Deprecated public Builder setAgentSeatsConfig(
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder builderForValue) {
       if (agentSeatsConfigBuilder_ == null) {
         config_ = builderForValue.build();
@@ -3089,9 +3239,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig agent_seats_config = 2 [json_name = "agentSeatsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig agent_seats_config = 2 [json_name = "agentSeatsConfig", deprecated = true];</code>
      */
-    public Builder mergeAgentSeatsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
+    @java.lang.Deprecated public Builder mergeAgentSeatsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
       if (agentSeatsConfigBuilder_ == null) {
         if (configCase_ == 2 &&
             config_ != com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.getDefaultInstance()) {
@@ -3112,9 +3262,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig agent_seats_config = 2 [json_name = "agentSeatsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig agent_seats_config = 2 [json_name = "agentSeatsConfig", deprecated = true];</code>
      */
-    public Builder clearAgentSeatsConfig() {
+    @java.lang.Deprecated public Builder clearAgentSeatsConfig() {
       if (agentSeatsConfigBuilder_ == null) {
         if (configCase_ == 2) {
           configCase_ = 0;
@@ -3131,16 +3281,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig agent_seats_config = 2 [json_name = "agentSeatsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig agent_seats_config = 2 [json_name = "agentSeatsConfig", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder getAgentSeatsConfigBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder getAgentSeatsConfigBuilder() {
       return getAgentSeatsConfigFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig agent_seats_config = 2 [json_name = "agentSeatsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig agent_seats_config = 2 [json_name = "agentSeatsConfig", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getAgentSeatsConfigOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getAgentSeatsConfigOrBuilder() {
       if ((configCase_ == 2) && (agentSeatsConfigBuilder_ != null)) {
         return agentSeatsConfigBuilder_.getMessageOrBuilder();
       } else {
@@ -3151,7 +3301,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig agent_seats_config = 2 [json_name = "agentSeatsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig agent_seats_config = 2 [json_name = "agentSeatsConfig", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder> 
@@ -3179,11 +3329,13 @@ private static final long serialVersionUID = 0L;
      * omni configs
      * </pre>
      *
-     * <code>.api.commons.billing.modules.BasicConfig agent_text_message_chat_config = 100 [json_name = "agentTextMessageChatConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig agent_text_message_chat_config = 100 [json_name = "agentTextMessageChatConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.agent_text_message_chat_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=43
      * @return Whether the agentTextMessageChatConfig field is set.
      */
     @java.lang.Override
-    public boolean hasAgentTextMessageChatConfig() {
+    @java.lang.Deprecated public boolean hasAgentTextMessageChatConfig() {
       return configCase_ == 100;
     }
     /**
@@ -3191,11 +3343,13 @@ private static final long serialVersionUID = 0L;
      * omni configs
      * </pre>
      *
-     * <code>.api.commons.billing.modules.BasicConfig agent_text_message_chat_config = 100 [json_name = "agentTextMessageChatConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig agent_text_message_chat_config = 100 [json_name = "agentTextMessageChatConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.agent_text_message_chat_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=43
      * @return The agentTextMessageChatConfig.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getAgentTextMessageChatConfig() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getAgentTextMessageChatConfig() {
       if (agentTextMessageChatConfigBuilder_ == null) {
         if (configCase_ == 100) {
           return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
@@ -3213,9 +3367,9 @@ private static final long serialVersionUID = 0L;
      * omni configs
      * </pre>
      *
-     * <code>.api.commons.billing.modules.BasicConfig agent_text_message_chat_config = 100 [json_name = "agentTextMessageChatConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig agent_text_message_chat_config = 100 [json_name = "agentTextMessageChatConfig", deprecated = true];</code>
      */
-    public Builder setAgentTextMessageChatConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
+    @java.lang.Deprecated public Builder setAgentTextMessageChatConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
       if (agentTextMessageChatConfigBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -3233,9 +3387,9 @@ private static final long serialVersionUID = 0L;
      * omni configs
      * </pre>
      *
-     * <code>.api.commons.billing.modules.BasicConfig agent_text_message_chat_config = 100 [json_name = "agentTextMessageChatConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig agent_text_message_chat_config = 100 [json_name = "agentTextMessageChatConfig", deprecated = true];</code>
      */
-    public Builder setAgentTextMessageChatConfig(
+    @java.lang.Deprecated public Builder setAgentTextMessageChatConfig(
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder builderForValue) {
       if (agentTextMessageChatConfigBuilder_ == null) {
         config_ = builderForValue.build();
@@ -3251,9 +3405,9 @@ private static final long serialVersionUID = 0L;
      * omni configs
      * </pre>
      *
-     * <code>.api.commons.billing.modules.BasicConfig agent_text_message_chat_config = 100 [json_name = "agentTextMessageChatConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig agent_text_message_chat_config = 100 [json_name = "agentTextMessageChatConfig", deprecated = true];</code>
      */
-    public Builder mergeAgentTextMessageChatConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
+    @java.lang.Deprecated public Builder mergeAgentTextMessageChatConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
       if (agentTextMessageChatConfigBuilder_ == null) {
         if (configCase_ == 100 &&
             config_ != com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.getDefaultInstance()) {
@@ -3278,9 +3432,9 @@ private static final long serialVersionUID = 0L;
      * omni configs
      * </pre>
      *
-     * <code>.api.commons.billing.modules.BasicConfig agent_text_message_chat_config = 100 [json_name = "agentTextMessageChatConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig agent_text_message_chat_config = 100 [json_name = "agentTextMessageChatConfig", deprecated = true];</code>
      */
-    public Builder clearAgentTextMessageChatConfig() {
+    @java.lang.Deprecated public Builder clearAgentTextMessageChatConfig() {
       if (agentTextMessageChatConfigBuilder_ == null) {
         if (configCase_ == 100) {
           configCase_ = 0;
@@ -3301,9 +3455,9 @@ private static final long serialVersionUID = 0L;
      * omni configs
      * </pre>
      *
-     * <code>.api.commons.billing.modules.BasicConfig agent_text_message_chat_config = 100 [json_name = "agentTextMessageChatConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig agent_text_message_chat_config = 100 [json_name = "agentTextMessageChatConfig", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder getAgentTextMessageChatConfigBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder getAgentTextMessageChatConfigBuilder() {
       return getAgentTextMessageChatConfigFieldBuilder().getBuilder();
     }
     /**
@@ -3311,10 +3465,10 @@ private static final long serialVersionUID = 0L;
      * omni configs
      * </pre>
      *
-     * <code>.api.commons.billing.modules.BasicConfig agent_text_message_chat_config = 100 [json_name = "agentTextMessageChatConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig agent_text_message_chat_config = 100 [json_name = "agentTextMessageChatConfig", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getAgentTextMessageChatConfigOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getAgentTextMessageChatConfigOrBuilder() {
       if ((configCase_ == 100) && (agentTextMessageChatConfigBuilder_ != null)) {
         return agentTextMessageChatConfigBuilder_.getMessageOrBuilder();
       } else {
@@ -3329,7 +3483,7 @@ private static final long serialVersionUID = 0L;
      * omni configs
      * </pre>
      *
-     * <code>.api.commons.billing.modules.BasicConfig agent_text_message_chat_config = 100 [json_name = "agentTextMessageChatConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig agent_text_message_chat_config = 100 [json_name = "agentTextMessageChatConfig", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder> 
@@ -3353,19 +3507,23 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder> agentTextMessageEmailMessageConfigBuilder_;
     /**
-     * <code>.api.commons.billing.modules.BasicConfig agent_text_message_email_message_config = 101 [json_name = "agentTextMessageEmailMessageConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig agent_text_message_email_message_config = 101 [json_name = "agentTextMessageEmailMessageConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.agent_text_message_email_message_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=44
      * @return Whether the agentTextMessageEmailMessageConfig field is set.
      */
     @java.lang.Override
-    public boolean hasAgentTextMessageEmailMessageConfig() {
+    @java.lang.Deprecated public boolean hasAgentTextMessageEmailMessageConfig() {
       return configCase_ == 101;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig agent_text_message_email_message_config = 101 [json_name = "agentTextMessageEmailMessageConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig agent_text_message_email_message_config = 101 [json_name = "agentTextMessageEmailMessageConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.agent_text_message_email_message_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=44
      * @return The agentTextMessageEmailMessageConfig.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getAgentTextMessageEmailMessageConfig() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getAgentTextMessageEmailMessageConfig() {
       if (agentTextMessageEmailMessageConfigBuilder_ == null) {
         if (configCase_ == 101) {
           return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
@@ -3379,9 +3537,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig agent_text_message_email_message_config = 101 [json_name = "agentTextMessageEmailMessageConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig agent_text_message_email_message_config = 101 [json_name = "agentTextMessageEmailMessageConfig", deprecated = true];</code>
      */
-    public Builder setAgentTextMessageEmailMessageConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
+    @java.lang.Deprecated public Builder setAgentTextMessageEmailMessageConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
       if (agentTextMessageEmailMessageConfigBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -3395,9 +3553,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig agent_text_message_email_message_config = 101 [json_name = "agentTextMessageEmailMessageConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig agent_text_message_email_message_config = 101 [json_name = "agentTextMessageEmailMessageConfig", deprecated = true];</code>
      */
-    public Builder setAgentTextMessageEmailMessageConfig(
+    @java.lang.Deprecated public Builder setAgentTextMessageEmailMessageConfig(
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder builderForValue) {
       if (agentTextMessageEmailMessageConfigBuilder_ == null) {
         config_ = builderForValue.build();
@@ -3409,9 +3567,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig agent_text_message_email_message_config = 101 [json_name = "agentTextMessageEmailMessageConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig agent_text_message_email_message_config = 101 [json_name = "agentTextMessageEmailMessageConfig", deprecated = true];</code>
      */
-    public Builder mergeAgentTextMessageEmailMessageConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
+    @java.lang.Deprecated public Builder mergeAgentTextMessageEmailMessageConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
       if (agentTextMessageEmailMessageConfigBuilder_ == null) {
         if (configCase_ == 101 &&
             config_ != com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.getDefaultInstance()) {
@@ -3432,9 +3590,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig agent_text_message_email_message_config = 101 [json_name = "agentTextMessageEmailMessageConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig agent_text_message_email_message_config = 101 [json_name = "agentTextMessageEmailMessageConfig", deprecated = true];</code>
      */
-    public Builder clearAgentTextMessageEmailMessageConfig() {
+    @java.lang.Deprecated public Builder clearAgentTextMessageEmailMessageConfig() {
       if (agentTextMessageEmailMessageConfigBuilder_ == null) {
         if (configCase_ == 101) {
           configCase_ = 0;
@@ -3451,16 +3609,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig agent_text_message_email_message_config = 101 [json_name = "agentTextMessageEmailMessageConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig agent_text_message_email_message_config = 101 [json_name = "agentTextMessageEmailMessageConfig", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder getAgentTextMessageEmailMessageConfigBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder getAgentTextMessageEmailMessageConfigBuilder() {
       return getAgentTextMessageEmailMessageConfigFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig agent_text_message_email_message_config = 101 [json_name = "agentTextMessageEmailMessageConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig agent_text_message_email_message_config = 101 [json_name = "agentTextMessageEmailMessageConfig", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getAgentTextMessageEmailMessageConfigOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getAgentTextMessageEmailMessageConfigOrBuilder() {
       if ((configCase_ == 101) && (agentTextMessageEmailMessageConfigBuilder_ != null)) {
         return agentTextMessageEmailMessageConfigBuilder_.getMessageOrBuilder();
       } else {
@@ -3471,7 +3629,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig agent_text_message_email_message_config = 101 [json_name = "agentTextMessageEmailMessageConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig agent_text_message_email_message_config = 101 [json_name = "agentTextMessageEmailMessageConfig", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder> 
@@ -3495,19 +3653,23 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder> agentTextMessageEmailSizeConfigBuilder_;
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_email_size_config = 102 [json_name = "agentTextMessageEmailSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_email_size_config = 102 [json_name = "agentTextMessageEmailSizeConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.agent_text_message_email_size_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=45
      * @return Whether the agentTextMessageEmailSizeConfig field is set.
      */
     @java.lang.Override
-    public boolean hasAgentTextMessageEmailSizeConfig() {
+    @java.lang.Deprecated public boolean hasAgentTextMessageEmailSizeConfig() {
       return configCase_ == 102;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_email_size_config = 102 [json_name = "agentTextMessageEmailSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_email_size_config = 102 [json_name = "agentTextMessageEmailSizeConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.agent_text_message_email_size_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=45
      * @return The agentTextMessageEmailSizeConfig.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getAgentTextMessageEmailSizeConfig() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getAgentTextMessageEmailSizeConfig() {
       if (agentTextMessageEmailSizeConfigBuilder_ == null) {
         if (configCase_ == 102) {
           return (com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig) config_;
@@ -3521,9 +3683,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_email_size_config = 102 [json_name = "agentTextMessageEmailSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_email_size_config = 102 [json_name = "agentTextMessageEmailSizeConfig", deprecated = true];</code>
      */
-    public Builder setAgentTextMessageEmailSizeConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig value) {
+    @java.lang.Deprecated public Builder setAgentTextMessageEmailSizeConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig value) {
       if (agentTextMessageEmailSizeConfigBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -3537,9 +3699,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_email_size_config = 102 [json_name = "agentTextMessageEmailSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_email_size_config = 102 [json_name = "agentTextMessageEmailSizeConfig", deprecated = true];</code>
      */
-    public Builder setAgentTextMessageEmailSizeConfig(
+    @java.lang.Deprecated public Builder setAgentTextMessageEmailSizeConfig(
         com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder builderForValue) {
       if (agentTextMessageEmailSizeConfigBuilder_ == null) {
         config_ = builderForValue.build();
@@ -3551,9 +3713,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_email_size_config = 102 [json_name = "agentTextMessageEmailSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_email_size_config = 102 [json_name = "agentTextMessageEmailSizeConfig", deprecated = true];</code>
      */
-    public Builder mergeAgentTextMessageEmailSizeConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig value) {
+    @java.lang.Deprecated public Builder mergeAgentTextMessageEmailSizeConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig value) {
       if (agentTextMessageEmailSizeConfigBuilder_ == null) {
         if (configCase_ == 102 &&
             config_ != com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.getDefaultInstance()) {
@@ -3574,9 +3736,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_email_size_config = 102 [json_name = "agentTextMessageEmailSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_email_size_config = 102 [json_name = "agentTextMessageEmailSizeConfig", deprecated = true];</code>
      */
-    public Builder clearAgentTextMessageEmailSizeConfig() {
+    @java.lang.Deprecated public Builder clearAgentTextMessageEmailSizeConfig() {
       if (agentTextMessageEmailSizeConfigBuilder_ == null) {
         if (configCase_ == 102) {
           configCase_ = 0;
@@ -3593,16 +3755,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_email_size_config = 102 [json_name = "agentTextMessageEmailSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_email_size_config = 102 [json_name = "agentTextMessageEmailSizeConfig", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder getAgentTextMessageEmailSizeConfigBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder getAgentTextMessageEmailSizeConfigBuilder() {
       return getAgentTextMessageEmailSizeConfigFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_email_size_config = 102 [json_name = "agentTextMessageEmailSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_email_size_config = 102 [json_name = "agentTextMessageEmailSizeConfig", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getAgentTextMessageEmailSizeConfigOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getAgentTextMessageEmailSizeConfigOrBuilder() {
       if ((configCase_ == 102) && (agentTextMessageEmailSizeConfigBuilder_ != null)) {
         return agentTextMessageEmailSizeConfigBuilder_.getMessageOrBuilder();
       } else {
@@ -3613,7 +3775,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_email_size_config = 102 [json_name = "agentTextMessageEmailSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_email_size_config = 102 [json_name = "agentTextMessageEmailSizeConfig", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder> 
@@ -3637,19 +3799,23 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder> agentTextMessageSmsConfigBuilder_;
     /**
-     * <code>.api.commons.billing.modules.BasicConfig agent_text_message_sms_config = 103 [json_name = "agentTextMessageSmsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig agent_text_message_sms_config = 103 [json_name = "agentTextMessageSmsConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.agent_text_message_sms_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=46
      * @return Whether the agentTextMessageSmsConfig field is set.
      */
     @java.lang.Override
-    public boolean hasAgentTextMessageSmsConfig() {
+    @java.lang.Deprecated public boolean hasAgentTextMessageSmsConfig() {
       return configCase_ == 103;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig agent_text_message_sms_config = 103 [json_name = "agentTextMessageSmsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig agent_text_message_sms_config = 103 [json_name = "agentTextMessageSmsConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.agent_text_message_sms_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=46
      * @return The agentTextMessageSmsConfig.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getAgentTextMessageSmsConfig() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getAgentTextMessageSmsConfig() {
       if (agentTextMessageSmsConfigBuilder_ == null) {
         if (configCase_ == 103) {
           return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
@@ -3663,9 +3829,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig agent_text_message_sms_config = 103 [json_name = "agentTextMessageSmsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig agent_text_message_sms_config = 103 [json_name = "agentTextMessageSmsConfig", deprecated = true];</code>
      */
-    public Builder setAgentTextMessageSmsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
+    @java.lang.Deprecated public Builder setAgentTextMessageSmsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
       if (agentTextMessageSmsConfigBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -3679,9 +3845,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig agent_text_message_sms_config = 103 [json_name = "agentTextMessageSmsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig agent_text_message_sms_config = 103 [json_name = "agentTextMessageSmsConfig", deprecated = true];</code>
      */
-    public Builder setAgentTextMessageSmsConfig(
+    @java.lang.Deprecated public Builder setAgentTextMessageSmsConfig(
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder builderForValue) {
       if (agentTextMessageSmsConfigBuilder_ == null) {
         config_ = builderForValue.build();
@@ -3693,9 +3859,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig agent_text_message_sms_config = 103 [json_name = "agentTextMessageSmsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig agent_text_message_sms_config = 103 [json_name = "agentTextMessageSmsConfig", deprecated = true];</code>
      */
-    public Builder mergeAgentTextMessageSmsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
+    @java.lang.Deprecated public Builder mergeAgentTextMessageSmsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
       if (agentTextMessageSmsConfigBuilder_ == null) {
         if (configCase_ == 103 &&
             config_ != com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.getDefaultInstance()) {
@@ -3716,9 +3882,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig agent_text_message_sms_config = 103 [json_name = "agentTextMessageSmsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig agent_text_message_sms_config = 103 [json_name = "agentTextMessageSmsConfig", deprecated = true];</code>
      */
-    public Builder clearAgentTextMessageSmsConfig() {
+    @java.lang.Deprecated public Builder clearAgentTextMessageSmsConfig() {
       if (agentTextMessageSmsConfigBuilder_ == null) {
         if (configCase_ == 103) {
           configCase_ = 0;
@@ -3735,16 +3901,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig agent_text_message_sms_config = 103 [json_name = "agentTextMessageSmsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig agent_text_message_sms_config = 103 [json_name = "agentTextMessageSmsConfig", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder getAgentTextMessageSmsConfigBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder getAgentTextMessageSmsConfigBuilder() {
       return getAgentTextMessageSmsConfigFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig agent_text_message_sms_config = 103 [json_name = "agentTextMessageSmsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig agent_text_message_sms_config = 103 [json_name = "agentTextMessageSmsConfig", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getAgentTextMessageSmsConfigOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getAgentTextMessageSmsConfigOrBuilder() {
       if ((configCase_ == 103) && (agentTextMessageSmsConfigBuilder_ != null)) {
         return agentTextMessageSmsConfigBuilder_.getMessageOrBuilder();
       } else {
@@ -3755,7 +3921,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig agent_text_message_sms_config = 103 [json_name = "agentTextMessageSmsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig agent_text_message_sms_config = 103 [json_name = "agentTextMessageSmsConfig", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder> 
@@ -3779,19 +3945,23 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder> taskMessageSentEmailMessageConfigBuilder_;
     /**
-     * <code>.api.commons.billing.modules.BasicConfig task_message_sent_email_message_config = 104 [json_name = "taskMessageSentEmailMessageConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig task_message_sent_email_message_config = 104 [json_name = "taskMessageSentEmailMessageConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.task_message_sent_email_message_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=47
      * @return Whether the taskMessageSentEmailMessageConfig field is set.
      */
     @java.lang.Override
-    public boolean hasTaskMessageSentEmailMessageConfig() {
+    @java.lang.Deprecated public boolean hasTaskMessageSentEmailMessageConfig() {
       return configCase_ == 104;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig task_message_sent_email_message_config = 104 [json_name = "taskMessageSentEmailMessageConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig task_message_sent_email_message_config = 104 [json_name = "taskMessageSentEmailMessageConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.task_message_sent_email_message_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=47
      * @return The taskMessageSentEmailMessageConfig.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getTaskMessageSentEmailMessageConfig() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getTaskMessageSentEmailMessageConfig() {
       if (taskMessageSentEmailMessageConfigBuilder_ == null) {
         if (configCase_ == 104) {
           return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
@@ -3805,9 +3975,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig task_message_sent_email_message_config = 104 [json_name = "taskMessageSentEmailMessageConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig task_message_sent_email_message_config = 104 [json_name = "taskMessageSentEmailMessageConfig", deprecated = true];</code>
      */
-    public Builder setTaskMessageSentEmailMessageConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
+    @java.lang.Deprecated public Builder setTaskMessageSentEmailMessageConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
       if (taskMessageSentEmailMessageConfigBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -3821,9 +3991,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig task_message_sent_email_message_config = 104 [json_name = "taskMessageSentEmailMessageConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig task_message_sent_email_message_config = 104 [json_name = "taskMessageSentEmailMessageConfig", deprecated = true];</code>
      */
-    public Builder setTaskMessageSentEmailMessageConfig(
+    @java.lang.Deprecated public Builder setTaskMessageSentEmailMessageConfig(
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder builderForValue) {
       if (taskMessageSentEmailMessageConfigBuilder_ == null) {
         config_ = builderForValue.build();
@@ -3835,9 +4005,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig task_message_sent_email_message_config = 104 [json_name = "taskMessageSentEmailMessageConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig task_message_sent_email_message_config = 104 [json_name = "taskMessageSentEmailMessageConfig", deprecated = true];</code>
      */
-    public Builder mergeTaskMessageSentEmailMessageConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
+    @java.lang.Deprecated public Builder mergeTaskMessageSentEmailMessageConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
       if (taskMessageSentEmailMessageConfigBuilder_ == null) {
         if (configCase_ == 104 &&
             config_ != com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.getDefaultInstance()) {
@@ -3858,9 +4028,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig task_message_sent_email_message_config = 104 [json_name = "taskMessageSentEmailMessageConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig task_message_sent_email_message_config = 104 [json_name = "taskMessageSentEmailMessageConfig", deprecated = true];</code>
      */
-    public Builder clearTaskMessageSentEmailMessageConfig() {
+    @java.lang.Deprecated public Builder clearTaskMessageSentEmailMessageConfig() {
       if (taskMessageSentEmailMessageConfigBuilder_ == null) {
         if (configCase_ == 104) {
           configCase_ = 0;
@@ -3877,16 +4047,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig task_message_sent_email_message_config = 104 [json_name = "taskMessageSentEmailMessageConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig task_message_sent_email_message_config = 104 [json_name = "taskMessageSentEmailMessageConfig", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder getTaskMessageSentEmailMessageConfigBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder getTaskMessageSentEmailMessageConfigBuilder() {
       return getTaskMessageSentEmailMessageConfigFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig task_message_sent_email_message_config = 104 [json_name = "taskMessageSentEmailMessageConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig task_message_sent_email_message_config = 104 [json_name = "taskMessageSentEmailMessageConfig", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getTaskMessageSentEmailMessageConfigOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getTaskMessageSentEmailMessageConfigOrBuilder() {
       if ((configCase_ == 104) && (taskMessageSentEmailMessageConfigBuilder_ != null)) {
         return taskMessageSentEmailMessageConfigBuilder_.getMessageOrBuilder();
       } else {
@@ -3897,7 +4067,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig task_message_sent_email_message_config = 104 [json_name = "taskMessageSentEmailMessageConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig task_message_sent_email_message_config = 104 [json_name = "taskMessageSentEmailMessageConfig", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder> 
@@ -3921,19 +4091,23 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder> taskMessageSentEmailSizeConfigBuilder_;
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig task_message_sent_email_size_config = 105 [json_name = "taskMessageSentEmailSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig task_message_sent_email_size_config = 105 [json_name = "taskMessageSentEmailSizeConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.task_message_sent_email_size_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=48
      * @return Whether the taskMessageSentEmailSizeConfig field is set.
      */
     @java.lang.Override
-    public boolean hasTaskMessageSentEmailSizeConfig() {
+    @java.lang.Deprecated public boolean hasTaskMessageSentEmailSizeConfig() {
       return configCase_ == 105;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig task_message_sent_email_size_config = 105 [json_name = "taskMessageSentEmailSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig task_message_sent_email_size_config = 105 [json_name = "taskMessageSentEmailSizeConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.task_message_sent_email_size_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=48
      * @return The taskMessageSentEmailSizeConfig.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getTaskMessageSentEmailSizeConfig() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getTaskMessageSentEmailSizeConfig() {
       if (taskMessageSentEmailSizeConfigBuilder_ == null) {
         if (configCase_ == 105) {
           return (com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig) config_;
@@ -3947,9 +4121,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig task_message_sent_email_size_config = 105 [json_name = "taskMessageSentEmailSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig task_message_sent_email_size_config = 105 [json_name = "taskMessageSentEmailSizeConfig", deprecated = true];</code>
      */
-    public Builder setTaskMessageSentEmailSizeConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig value) {
+    @java.lang.Deprecated public Builder setTaskMessageSentEmailSizeConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig value) {
       if (taskMessageSentEmailSizeConfigBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -3963,9 +4137,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig task_message_sent_email_size_config = 105 [json_name = "taskMessageSentEmailSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig task_message_sent_email_size_config = 105 [json_name = "taskMessageSentEmailSizeConfig", deprecated = true];</code>
      */
-    public Builder setTaskMessageSentEmailSizeConfig(
+    @java.lang.Deprecated public Builder setTaskMessageSentEmailSizeConfig(
         com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder builderForValue) {
       if (taskMessageSentEmailSizeConfigBuilder_ == null) {
         config_ = builderForValue.build();
@@ -3977,9 +4151,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig task_message_sent_email_size_config = 105 [json_name = "taskMessageSentEmailSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig task_message_sent_email_size_config = 105 [json_name = "taskMessageSentEmailSizeConfig", deprecated = true];</code>
      */
-    public Builder mergeTaskMessageSentEmailSizeConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig value) {
+    @java.lang.Deprecated public Builder mergeTaskMessageSentEmailSizeConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig value) {
       if (taskMessageSentEmailSizeConfigBuilder_ == null) {
         if (configCase_ == 105 &&
             config_ != com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.getDefaultInstance()) {
@@ -4000,9 +4174,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig task_message_sent_email_size_config = 105 [json_name = "taskMessageSentEmailSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig task_message_sent_email_size_config = 105 [json_name = "taskMessageSentEmailSizeConfig", deprecated = true];</code>
      */
-    public Builder clearTaskMessageSentEmailSizeConfig() {
+    @java.lang.Deprecated public Builder clearTaskMessageSentEmailSizeConfig() {
       if (taskMessageSentEmailSizeConfigBuilder_ == null) {
         if (configCase_ == 105) {
           configCase_ = 0;
@@ -4019,16 +4193,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig task_message_sent_email_size_config = 105 [json_name = "taskMessageSentEmailSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig task_message_sent_email_size_config = 105 [json_name = "taskMessageSentEmailSizeConfig", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder getTaskMessageSentEmailSizeConfigBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder getTaskMessageSentEmailSizeConfigBuilder() {
       return getTaskMessageSentEmailSizeConfigFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig task_message_sent_email_size_config = 105 [json_name = "taskMessageSentEmailSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig task_message_sent_email_size_config = 105 [json_name = "taskMessageSentEmailSizeConfig", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getTaskMessageSentEmailSizeConfigOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getTaskMessageSentEmailSizeConfigOrBuilder() {
       if ((configCase_ == 105) && (taskMessageSentEmailSizeConfigBuilder_ != null)) {
         return taskMessageSentEmailSizeConfigBuilder_.getMessageOrBuilder();
       } else {
@@ -4039,7 +4213,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig task_message_sent_email_size_config = 105 [json_name = "taskMessageSentEmailSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig task_message_sent_email_size_config = 105 [json_name = "taskMessageSentEmailSizeConfig", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder> 
@@ -4063,19 +4237,23 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder> taskMessageSentSmsConfigBuilder_;
     /**
-     * <code>.api.commons.billing.modules.BasicConfig task_message_sent_sms_config = 106 [json_name = "taskMessageSentSmsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig task_message_sent_sms_config = 106 [json_name = "taskMessageSentSmsConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.task_message_sent_sms_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=49
      * @return Whether the taskMessageSentSmsConfig field is set.
      */
     @java.lang.Override
-    public boolean hasTaskMessageSentSmsConfig() {
+    @java.lang.Deprecated public boolean hasTaskMessageSentSmsConfig() {
       return configCase_ == 106;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig task_message_sent_sms_config = 106 [json_name = "taskMessageSentSmsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig task_message_sent_sms_config = 106 [json_name = "taskMessageSentSmsConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.task_message_sent_sms_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=49
      * @return The taskMessageSentSmsConfig.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getTaskMessageSentSmsConfig() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getTaskMessageSentSmsConfig() {
       if (taskMessageSentSmsConfigBuilder_ == null) {
         if (configCase_ == 106) {
           return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
@@ -4089,9 +4267,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig task_message_sent_sms_config = 106 [json_name = "taskMessageSentSmsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig task_message_sent_sms_config = 106 [json_name = "taskMessageSentSmsConfig", deprecated = true];</code>
      */
-    public Builder setTaskMessageSentSmsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
+    @java.lang.Deprecated public Builder setTaskMessageSentSmsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
       if (taskMessageSentSmsConfigBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -4105,9 +4283,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig task_message_sent_sms_config = 106 [json_name = "taskMessageSentSmsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig task_message_sent_sms_config = 106 [json_name = "taskMessageSentSmsConfig", deprecated = true];</code>
      */
-    public Builder setTaskMessageSentSmsConfig(
+    @java.lang.Deprecated public Builder setTaskMessageSentSmsConfig(
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder builderForValue) {
       if (taskMessageSentSmsConfigBuilder_ == null) {
         config_ = builderForValue.build();
@@ -4119,9 +4297,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig task_message_sent_sms_config = 106 [json_name = "taskMessageSentSmsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig task_message_sent_sms_config = 106 [json_name = "taskMessageSentSmsConfig", deprecated = true];</code>
      */
-    public Builder mergeTaskMessageSentSmsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
+    @java.lang.Deprecated public Builder mergeTaskMessageSentSmsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
       if (taskMessageSentSmsConfigBuilder_ == null) {
         if (configCase_ == 106 &&
             config_ != com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.getDefaultInstance()) {
@@ -4142,9 +4320,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig task_message_sent_sms_config = 106 [json_name = "taskMessageSentSmsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig task_message_sent_sms_config = 106 [json_name = "taskMessageSentSmsConfig", deprecated = true];</code>
      */
-    public Builder clearTaskMessageSentSmsConfig() {
+    @java.lang.Deprecated public Builder clearTaskMessageSentSmsConfig() {
       if (taskMessageSentSmsConfigBuilder_ == null) {
         if (configCase_ == 106) {
           configCase_ = 0;
@@ -4161,16 +4339,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig task_message_sent_sms_config = 106 [json_name = "taskMessageSentSmsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig task_message_sent_sms_config = 106 [json_name = "taskMessageSentSmsConfig", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder getTaskMessageSentSmsConfigBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder getTaskMessageSentSmsConfigBuilder() {
       return getTaskMessageSentSmsConfigFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig task_message_sent_sms_config = 106 [json_name = "taskMessageSentSmsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig task_message_sent_sms_config = 106 [json_name = "taskMessageSentSmsConfig", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getTaskMessageSentSmsConfigOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getTaskMessageSentSmsConfigOrBuilder() {
       if ((configCase_ == 106) && (taskMessageSentSmsConfigBuilder_ != null)) {
         return taskMessageSentSmsConfigBuilder_.getMessageOrBuilder();
       } else {
@@ -4181,7 +4359,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig task_message_sent_sms_config = 106 [json_name = "taskMessageSentSmsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig task_message_sent_sms_config = 106 [json_name = "taskMessageSentSmsConfig", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder> 
@@ -4205,19 +4383,23 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder> connectedInboxPollConfigBuilder_;
     /**
-     * <code>.api.commons.billing.modules.BasicConfig connected_inbox_poll_config = 107 [json_name = "connectedInboxPollConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig connected_inbox_poll_config = 107 [json_name = "connectedInboxPollConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.connected_inbox_poll_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=50
      * @return Whether the connectedInboxPollConfig field is set.
      */
     @java.lang.Override
-    public boolean hasConnectedInboxPollConfig() {
+    @java.lang.Deprecated public boolean hasConnectedInboxPollConfig() {
       return configCase_ == 107;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig connected_inbox_poll_config = 107 [json_name = "connectedInboxPollConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig connected_inbox_poll_config = 107 [json_name = "connectedInboxPollConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.connected_inbox_poll_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=50
      * @return The connectedInboxPollConfig.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getConnectedInboxPollConfig() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getConnectedInboxPollConfig() {
       if (connectedInboxPollConfigBuilder_ == null) {
         if (configCase_ == 107) {
           return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
@@ -4231,9 +4413,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig connected_inbox_poll_config = 107 [json_name = "connectedInboxPollConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig connected_inbox_poll_config = 107 [json_name = "connectedInboxPollConfig", deprecated = true];</code>
      */
-    public Builder setConnectedInboxPollConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
+    @java.lang.Deprecated public Builder setConnectedInboxPollConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
       if (connectedInboxPollConfigBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -4247,9 +4429,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig connected_inbox_poll_config = 107 [json_name = "connectedInboxPollConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig connected_inbox_poll_config = 107 [json_name = "connectedInboxPollConfig", deprecated = true];</code>
      */
-    public Builder setConnectedInboxPollConfig(
+    @java.lang.Deprecated public Builder setConnectedInboxPollConfig(
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder builderForValue) {
       if (connectedInboxPollConfigBuilder_ == null) {
         config_ = builderForValue.build();
@@ -4261,9 +4443,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig connected_inbox_poll_config = 107 [json_name = "connectedInboxPollConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig connected_inbox_poll_config = 107 [json_name = "connectedInboxPollConfig", deprecated = true];</code>
      */
-    public Builder mergeConnectedInboxPollConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
+    @java.lang.Deprecated public Builder mergeConnectedInboxPollConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
       if (connectedInboxPollConfigBuilder_ == null) {
         if (configCase_ == 107 &&
             config_ != com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.getDefaultInstance()) {
@@ -4284,9 +4466,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig connected_inbox_poll_config = 107 [json_name = "connectedInboxPollConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig connected_inbox_poll_config = 107 [json_name = "connectedInboxPollConfig", deprecated = true];</code>
      */
-    public Builder clearConnectedInboxPollConfig() {
+    @java.lang.Deprecated public Builder clearConnectedInboxPollConfig() {
       if (connectedInboxPollConfigBuilder_ == null) {
         if (configCase_ == 107) {
           configCase_ = 0;
@@ -4303,16 +4485,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig connected_inbox_poll_config = 107 [json_name = "connectedInboxPollConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig connected_inbox_poll_config = 107 [json_name = "connectedInboxPollConfig", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder getConnectedInboxPollConfigBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder getConnectedInboxPollConfigBuilder() {
       return getConnectedInboxPollConfigFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig connected_inbox_poll_config = 107 [json_name = "connectedInboxPollConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig connected_inbox_poll_config = 107 [json_name = "connectedInboxPollConfig", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getConnectedInboxPollConfigOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getConnectedInboxPollConfigOrBuilder() {
       if ((configCase_ == 107) && (connectedInboxPollConfigBuilder_ != null)) {
         return connectedInboxPollConfigBuilder_.getMessageOrBuilder();
       } else {
@@ -4323,7 +4505,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig connected_inbox_poll_config = 107 [json_name = "connectedInboxPollConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig connected_inbox_poll_config = 107 [json_name = "connectedInboxPollConfig", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder> 
@@ -4347,19 +4529,23 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder> managerTextMessageChatConfigBuilder_;
     /**
-     * <code>.api.commons.billing.modules.BasicConfig manager_text_message_chat_config = 108 [json_name = "managerTextMessageChatConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig manager_text_message_chat_config = 108 [json_name = "managerTextMessageChatConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.manager_text_message_chat_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=51
      * @return Whether the managerTextMessageChatConfig field is set.
      */
     @java.lang.Override
-    public boolean hasManagerTextMessageChatConfig() {
+    @java.lang.Deprecated public boolean hasManagerTextMessageChatConfig() {
       return configCase_ == 108;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig manager_text_message_chat_config = 108 [json_name = "managerTextMessageChatConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig manager_text_message_chat_config = 108 [json_name = "managerTextMessageChatConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.manager_text_message_chat_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=51
      * @return The managerTextMessageChatConfig.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getManagerTextMessageChatConfig() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getManagerTextMessageChatConfig() {
       if (managerTextMessageChatConfigBuilder_ == null) {
         if (configCase_ == 108) {
           return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
@@ -4373,9 +4559,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig manager_text_message_chat_config = 108 [json_name = "managerTextMessageChatConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig manager_text_message_chat_config = 108 [json_name = "managerTextMessageChatConfig", deprecated = true];</code>
      */
-    public Builder setManagerTextMessageChatConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
+    @java.lang.Deprecated public Builder setManagerTextMessageChatConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
       if (managerTextMessageChatConfigBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -4389,9 +4575,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig manager_text_message_chat_config = 108 [json_name = "managerTextMessageChatConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig manager_text_message_chat_config = 108 [json_name = "managerTextMessageChatConfig", deprecated = true];</code>
      */
-    public Builder setManagerTextMessageChatConfig(
+    @java.lang.Deprecated public Builder setManagerTextMessageChatConfig(
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder builderForValue) {
       if (managerTextMessageChatConfigBuilder_ == null) {
         config_ = builderForValue.build();
@@ -4403,9 +4589,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig manager_text_message_chat_config = 108 [json_name = "managerTextMessageChatConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig manager_text_message_chat_config = 108 [json_name = "managerTextMessageChatConfig", deprecated = true];</code>
      */
-    public Builder mergeManagerTextMessageChatConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
+    @java.lang.Deprecated public Builder mergeManagerTextMessageChatConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
       if (managerTextMessageChatConfigBuilder_ == null) {
         if (configCase_ == 108 &&
             config_ != com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.getDefaultInstance()) {
@@ -4426,9 +4612,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig manager_text_message_chat_config = 108 [json_name = "managerTextMessageChatConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig manager_text_message_chat_config = 108 [json_name = "managerTextMessageChatConfig", deprecated = true];</code>
      */
-    public Builder clearManagerTextMessageChatConfig() {
+    @java.lang.Deprecated public Builder clearManagerTextMessageChatConfig() {
       if (managerTextMessageChatConfigBuilder_ == null) {
         if (configCase_ == 108) {
           configCase_ = 0;
@@ -4445,16 +4631,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig manager_text_message_chat_config = 108 [json_name = "managerTextMessageChatConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig manager_text_message_chat_config = 108 [json_name = "managerTextMessageChatConfig", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder getManagerTextMessageChatConfigBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder getManagerTextMessageChatConfigBuilder() {
       return getManagerTextMessageChatConfigFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig manager_text_message_chat_config = 108 [json_name = "managerTextMessageChatConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig manager_text_message_chat_config = 108 [json_name = "managerTextMessageChatConfig", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getManagerTextMessageChatConfigOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getManagerTextMessageChatConfigOrBuilder() {
       if ((configCase_ == 108) && (managerTextMessageChatConfigBuilder_ != null)) {
         return managerTextMessageChatConfigBuilder_.getMessageOrBuilder();
       } else {
@@ -4465,7 +4651,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig manager_text_message_chat_config = 108 [json_name = "managerTextMessageChatConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig manager_text_message_chat_config = 108 [json_name = "managerTextMessageChatConfig", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder> 
@@ -4489,19 +4675,23 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder> managerTextMessageEmailMessageConfigBuilder_;
     /**
-     * <code>.api.commons.billing.modules.BasicConfig manager_text_message_email_message_config = 109 [json_name = "managerTextMessageEmailMessageConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig manager_text_message_email_message_config = 109 [json_name = "managerTextMessageEmailMessageConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.manager_text_message_email_message_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=52
      * @return Whether the managerTextMessageEmailMessageConfig field is set.
      */
     @java.lang.Override
-    public boolean hasManagerTextMessageEmailMessageConfig() {
+    @java.lang.Deprecated public boolean hasManagerTextMessageEmailMessageConfig() {
       return configCase_ == 109;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig manager_text_message_email_message_config = 109 [json_name = "managerTextMessageEmailMessageConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig manager_text_message_email_message_config = 109 [json_name = "managerTextMessageEmailMessageConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.manager_text_message_email_message_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=52
      * @return The managerTextMessageEmailMessageConfig.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getManagerTextMessageEmailMessageConfig() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getManagerTextMessageEmailMessageConfig() {
       if (managerTextMessageEmailMessageConfigBuilder_ == null) {
         if (configCase_ == 109) {
           return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
@@ -4515,9 +4705,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig manager_text_message_email_message_config = 109 [json_name = "managerTextMessageEmailMessageConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig manager_text_message_email_message_config = 109 [json_name = "managerTextMessageEmailMessageConfig", deprecated = true];</code>
      */
-    public Builder setManagerTextMessageEmailMessageConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
+    @java.lang.Deprecated public Builder setManagerTextMessageEmailMessageConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
       if (managerTextMessageEmailMessageConfigBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -4531,9 +4721,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig manager_text_message_email_message_config = 109 [json_name = "managerTextMessageEmailMessageConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig manager_text_message_email_message_config = 109 [json_name = "managerTextMessageEmailMessageConfig", deprecated = true];</code>
      */
-    public Builder setManagerTextMessageEmailMessageConfig(
+    @java.lang.Deprecated public Builder setManagerTextMessageEmailMessageConfig(
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder builderForValue) {
       if (managerTextMessageEmailMessageConfigBuilder_ == null) {
         config_ = builderForValue.build();
@@ -4545,9 +4735,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig manager_text_message_email_message_config = 109 [json_name = "managerTextMessageEmailMessageConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig manager_text_message_email_message_config = 109 [json_name = "managerTextMessageEmailMessageConfig", deprecated = true];</code>
      */
-    public Builder mergeManagerTextMessageEmailMessageConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
+    @java.lang.Deprecated public Builder mergeManagerTextMessageEmailMessageConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
       if (managerTextMessageEmailMessageConfigBuilder_ == null) {
         if (configCase_ == 109 &&
             config_ != com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.getDefaultInstance()) {
@@ -4568,9 +4758,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig manager_text_message_email_message_config = 109 [json_name = "managerTextMessageEmailMessageConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig manager_text_message_email_message_config = 109 [json_name = "managerTextMessageEmailMessageConfig", deprecated = true];</code>
      */
-    public Builder clearManagerTextMessageEmailMessageConfig() {
+    @java.lang.Deprecated public Builder clearManagerTextMessageEmailMessageConfig() {
       if (managerTextMessageEmailMessageConfigBuilder_ == null) {
         if (configCase_ == 109) {
           configCase_ = 0;
@@ -4587,16 +4777,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig manager_text_message_email_message_config = 109 [json_name = "managerTextMessageEmailMessageConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig manager_text_message_email_message_config = 109 [json_name = "managerTextMessageEmailMessageConfig", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder getManagerTextMessageEmailMessageConfigBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder getManagerTextMessageEmailMessageConfigBuilder() {
       return getManagerTextMessageEmailMessageConfigFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig manager_text_message_email_message_config = 109 [json_name = "managerTextMessageEmailMessageConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig manager_text_message_email_message_config = 109 [json_name = "managerTextMessageEmailMessageConfig", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getManagerTextMessageEmailMessageConfigOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getManagerTextMessageEmailMessageConfigOrBuilder() {
       if ((configCase_ == 109) && (managerTextMessageEmailMessageConfigBuilder_ != null)) {
         return managerTextMessageEmailMessageConfigBuilder_.getMessageOrBuilder();
       } else {
@@ -4607,7 +4797,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig manager_text_message_email_message_config = 109 [json_name = "managerTextMessageEmailMessageConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig manager_text_message_email_message_config = 109 [json_name = "managerTextMessageEmailMessageConfig", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder> 
@@ -4631,19 +4821,23 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder> managerTextMessageEmailSizeConfigBuilder_;
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_email_size_config = 110 [json_name = "managerTextMessageEmailSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_email_size_config = 110 [json_name = "managerTextMessageEmailSizeConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.manager_text_message_email_size_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=53
      * @return Whether the managerTextMessageEmailSizeConfig field is set.
      */
     @java.lang.Override
-    public boolean hasManagerTextMessageEmailSizeConfig() {
+    @java.lang.Deprecated public boolean hasManagerTextMessageEmailSizeConfig() {
       return configCase_ == 110;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_email_size_config = 110 [json_name = "managerTextMessageEmailSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_email_size_config = 110 [json_name = "managerTextMessageEmailSizeConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.manager_text_message_email_size_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=53
      * @return The managerTextMessageEmailSizeConfig.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getManagerTextMessageEmailSizeConfig() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getManagerTextMessageEmailSizeConfig() {
       if (managerTextMessageEmailSizeConfigBuilder_ == null) {
         if (configCase_ == 110) {
           return (com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig) config_;
@@ -4657,9 +4851,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_email_size_config = 110 [json_name = "managerTextMessageEmailSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_email_size_config = 110 [json_name = "managerTextMessageEmailSizeConfig", deprecated = true];</code>
      */
-    public Builder setManagerTextMessageEmailSizeConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig value) {
+    @java.lang.Deprecated public Builder setManagerTextMessageEmailSizeConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig value) {
       if (managerTextMessageEmailSizeConfigBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -4673,9 +4867,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_email_size_config = 110 [json_name = "managerTextMessageEmailSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_email_size_config = 110 [json_name = "managerTextMessageEmailSizeConfig", deprecated = true];</code>
      */
-    public Builder setManagerTextMessageEmailSizeConfig(
+    @java.lang.Deprecated public Builder setManagerTextMessageEmailSizeConfig(
         com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder builderForValue) {
       if (managerTextMessageEmailSizeConfigBuilder_ == null) {
         config_ = builderForValue.build();
@@ -4687,9 +4881,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_email_size_config = 110 [json_name = "managerTextMessageEmailSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_email_size_config = 110 [json_name = "managerTextMessageEmailSizeConfig", deprecated = true];</code>
      */
-    public Builder mergeManagerTextMessageEmailSizeConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig value) {
+    @java.lang.Deprecated public Builder mergeManagerTextMessageEmailSizeConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig value) {
       if (managerTextMessageEmailSizeConfigBuilder_ == null) {
         if (configCase_ == 110 &&
             config_ != com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.getDefaultInstance()) {
@@ -4710,9 +4904,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_email_size_config = 110 [json_name = "managerTextMessageEmailSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_email_size_config = 110 [json_name = "managerTextMessageEmailSizeConfig", deprecated = true];</code>
      */
-    public Builder clearManagerTextMessageEmailSizeConfig() {
+    @java.lang.Deprecated public Builder clearManagerTextMessageEmailSizeConfig() {
       if (managerTextMessageEmailSizeConfigBuilder_ == null) {
         if (configCase_ == 110) {
           configCase_ = 0;
@@ -4729,16 +4923,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_email_size_config = 110 [json_name = "managerTextMessageEmailSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_email_size_config = 110 [json_name = "managerTextMessageEmailSizeConfig", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder getManagerTextMessageEmailSizeConfigBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder getManagerTextMessageEmailSizeConfigBuilder() {
       return getManagerTextMessageEmailSizeConfigFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_email_size_config = 110 [json_name = "managerTextMessageEmailSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_email_size_config = 110 [json_name = "managerTextMessageEmailSizeConfig", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getManagerTextMessageEmailSizeConfigOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getManagerTextMessageEmailSizeConfigOrBuilder() {
       if ((configCase_ == 110) && (managerTextMessageEmailSizeConfigBuilder_ != null)) {
         return managerTextMessageEmailSizeConfigBuilder_.getMessageOrBuilder();
       } else {
@@ -4749,7 +4943,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_email_size_config = 110 [json_name = "managerTextMessageEmailSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_email_size_config = 110 [json_name = "managerTextMessageEmailSizeConfig", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder> 
@@ -4773,19 +4967,23 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder> managerTextMessageSmsConfigBuilder_;
     /**
-     * <code>.api.commons.billing.modules.BasicConfig manager_text_message_sms_config = 111 [json_name = "managerTextMessageSmsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig manager_text_message_sms_config = 111 [json_name = "managerTextMessageSmsConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.manager_text_message_sms_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=54
      * @return Whether the managerTextMessageSmsConfig field is set.
      */
     @java.lang.Override
-    public boolean hasManagerTextMessageSmsConfig() {
+    @java.lang.Deprecated public boolean hasManagerTextMessageSmsConfig() {
       return configCase_ == 111;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig manager_text_message_sms_config = 111 [json_name = "managerTextMessageSmsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig manager_text_message_sms_config = 111 [json_name = "managerTextMessageSmsConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.manager_text_message_sms_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=54
      * @return The managerTextMessageSmsConfig.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getManagerTextMessageSmsConfig() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getManagerTextMessageSmsConfig() {
       if (managerTextMessageSmsConfigBuilder_ == null) {
         if (configCase_ == 111) {
           return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
@@ -4799,9 +4997,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig manager_text_message_sms_config = 111 [json_name = "managerTextMessageSmsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig manager_text_message_sms_config = 111 [json_name = "managerTextMessageSmsConfig", deprecated = true];</code>
      */
-    public Builder setManagerTextMessageSmsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
+    @java.lang.Deprecated public Builder setManagerTextMessageSmsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
       if (managerTextMessageSmsConfigBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -4815,9 +5013,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig manager_text_message_sms_config = 111 [json_name = "managerTextMessageSmsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig manager_text_message_sms_config = 111 [json_name = "managerTextMessageSmsConfig", deprecated = true];</code>
      */
-    public Builder setManagerTextMessageSmsConfig(
+    @java.lang.Deprecated public Builder setManagerTextMessageSmsConfig(
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder builderForValue) {
       if (managerTextMessageSmsConfigBuilder_ == null) {
         config_ = builderForValue.build();
@@ -4829,9 +5027,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig manager_text_message_sms_config = 111 [json_name = "managerTextMessageSmsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig manager_text_message_sms_config = 111 [json_name = "managerTextMessageSmsConfig", deprecated = true];</code>
      */
-    public Builder mergeManagerTextMessageSmsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
+    @java.lang.Deprecated public Builder mergeManagerTextMessageSmsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
       if (managerTextMessageSmsConfigBuilder_ == null) {
         if (configCase_ == 111 &&
             config_ != com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.getDefaultInstance()) {
@@ -4852,9 +5050,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig manager_text_message_sms_config = 111 [json_name = "managerTextMessageSmsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig manager_text_message_sms_config = 111 [json_name = "managerTextMessageSmsConfig", deprecated = true];</code>
      */
-    public Builder clearManagerTextMessageSmsConfig() {
+    @java.lang.Deprecated public Builder clearManagerTextMessageSmsConfig() {
       if (managerTextMessageSmsConfigBuilder_ == null) {
         if (configCase_ == 111) {
           configCase_ = 0;
@@ -4871,16 +5069,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig manager_text_message_sms_config = 111 [json_name = "managerTextMessageSmsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig manager_text_message_sms_config = 111 [json_name = "managerTextMessageSmsConfig", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder getManagerTextMessageSmsConfigBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder getManagerTextMessageSmsConfigBuilder() {
       return getManagerTextMessageSmsConfigFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig manager_text_message_sms_config = 111 [json_name = "managerTextMessageSmsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig manager_text_message_sms_config = 111 [json_name = "managerTextMessageSmsConfig", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getManagerTextMessageSmsConfigOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getManagerTextMessageSmsConfigOrBuilder() {
       if ((configCase_ == 111) && (managerTextMessageSmsConfigBuilder_ != null)) {
         return managerTextMessageSmsConfigBuilder_.getMessageOrBuilder();
       } else {
@@ -4891,7 +5089,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig manager_text_message_sms_config = 111 [json_name = "managerTextMessageSmsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig manager_text_message_sms_config = 111 [json_name = "managerTextMessageSmsConfig", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder> 
@@ -4915,19 +5113,23 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder> customerTextMessageChatConfigBuilder_;
     /**
-     * <code>.api.commons.billing.modules.BasicConfig customer_text_message_chat_config = 112 [json_name = "customerTextMessageChatConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig customer_text_message_chat_config = 112 [json_name = "customerTextMessageChatConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.customer_text_message_chat_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=55
      * @return Whether the customerTextMessageChatConfig field is set.
      */
     @java.lang.Override
-    public boolean hasCustomerTextMessageChatConfig() {
+    @java.lang.Deprecated public boolean hasCustomerTextMessageChatConfig() {
       return configCase_ == 112;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig customer_text_message_chat_config = 112 [json_name = "customerTextMessageChatConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig customer_text_message_chat_config = 112 [json_name = "customerTextMessageChatConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.customer_text_message_chat_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=55
      * @return The customerTextMessageChatConfig.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getCustomerTextMessageChatConfig() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getCustomerTextMessageChatConfig() {
       if (customerTextMessageChatConfigBuilder_ == null) {
         if (configCase_ == 112) {
           return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
@@ -4941,9 +5143,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig customer_text_message_chat_config = 112 [json_name = "customerTextMessageChatConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig customer_text_message_chat_config = 112 [json_name = "customerTextMessageChatConfig", deprecated = true];</code>
      */
-    public Builder setCustomerTextMessageChatConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
+    @java.lang.Deprecated public Builder setCustomerTextMessageChatConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
       if (customerTextMessageChatConfigBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -4957,9 +5159,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig customer_text_message_chat_config = 112 [json_name = "customerTextMessageChatConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig customer_text_message_chat_config = 112 [json_name = "customerTextMessageChatConfig", deprecated = true];</code>
      */
-    public Builder setCustomerTextMessageChatConfig(
+    @java.lang.Deprecated public Builder setCustomerTextMessageChatConfig(
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder builderForValue) {
       if (customerTextMessageChatConfigBuilder_ == null) {
         config_ = builderForValue.build();
@@ -4971,9 +5173,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig customer_text_message_chat_config = 112 [json_name = "customerTextMessageChatConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig customer_text_message_chat_config = 112 [json_name = "customerTextMessageChatConfig", deprecated = true];</code>
      */
-    public Builder mergeCustomerTextMessageChatConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
+    @java.lang.Deprecated public Builder mergeCustomerTextMessageChatConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
       if (customerTextMessageChatConfigBuilder_ == null) {
         if (configCase_ == 112 &&
             config_ != com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.getDefaultInstance()) {
@@ -4994,9 +5196,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig customer_text_message_chat_config = 112 [json_name = "customerTextMessageChatConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig customer_text_message_chat_config = 112 [json_name = "customerTextMessageChatConfig", deprecated = true];</code>
      */
-    public Builder clearCustomerTextMessageChatConfig() {
+    @java.lang.Deprecated public Builder clearCustomerTextMessageChatConfig() {
       if (customerTextMessageChatConfigBuilder_ == null) {
         if (configCase_ == 112) {
           configCase_ = 0;
@@ -5013,16 +5215,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig customer_text_message_chat_config = 112 [json_name = "customerTextMessageChatConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig customer_text_message_chat_config = 112 [json_name = "customerTextMessageChatConfig", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder getCustomerTextMessageChatConfigBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder getCustomerTextMessageChatConfigBuilder() {
       return getCustomerTextMessageChatConfigFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig customer_text_message_chat_config = 112 [json_name = "customerTextMessageChatConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig customer_text_message_chat_config = 112 [json_name = "customerTextMessageChatConfig", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getCustomerTextMessageChatConfigOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getCustomerTextMessageChatConfigOrBuilder() {
       if ((configCase_ == 112) && (customerTextMessageChatConfigBuilder_ != null)) {
         return customerTextMessageChatConfigBuilder_.getMessageOrBuilder();
       } else {
@@ -5033,7 +5235,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig customer_text_message_chat_config = 112 [json_name = "customerTextMessageChatConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig customer_text_message_chat_config = 112 [json_name = "customerTextMessageChatConfig", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder> 
@@ -5057,19 +5259,23 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder> customerTextMessageEmailMessageConfigBuilder_;
     /**
-     * <code>.api.commons.billing.modules.BasicConfig customer_text_message_email_message_config = 113 [json_name = "customerTextMessageEmailMessageConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig customer_text_message_email_message_config = 113 [json_name = "customerTextMessageEmailMessageConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.customer_text_message_email_message_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=56
      * @return Whether the customerTextMessageEmailMessageConfig field is set.
      */
     @java.lang.Override
-    public boolean hasCustomerTextMessageEmailMessageConfig() {
+    @java.lang.Deprecated public boolean hasCustomerTextMessageEmailMessageConfig() {
       return configCase_ == 113;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig customer_text_message_email_message_config = 113 [json_name = "customerTextMessageEmailMessageConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig customer_text_message_email_message_config = 113 [json_name = "customerTextMessageEmailMessageConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.customer_text_message_email_message_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=56
      * @return The customerTextMessageEmailMessageConfig.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getCustomerTextMessageEmailMessageConfig() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getCustomerTextMessageEmailMessageConfig() {
       if (customerTextMessageEmailMessageConfigBuilder_ == null) {
         if (configCase_ == 113) {
           return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
@@ -5083,9 +5289,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig customer_text_message_email_message_config = 113 [json_name = "customerTextMessageEmailMessageConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig customer_text_message_email_message_config = 113 [json_name = "customerTextMessageEmailMessageConfig", deprecated = true];</code>
      */
-    public Builder setCustomerTextMessageEmailMessageConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
+    @java.lang.Deprecated public Builder setCustomerTextMessageEmailMessageConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
       if (customerTextMessageEmailMessageConfigBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -5099,9 +5305,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig customer_text_message_email_message_config = 113 [json_name = "customerTextMessageEmailMessageConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig customer_text_message_email_message_config = 113 [json_name = "customerTextMessageEmailMessageConfig", deprecated = true];</code>
      */
-    public Builder setCustomerTextMessageEmailMessageConfig(
+    @java.lang.Deprecated public Builder setCustomerTextMessageEmailMessageConfig(
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder builderForValue) {
       if (customerTextMessageEmailMessageConfigBuilder_ == null) {
         config_ = builderForValue.build();
@@ -5113,9 +5319,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig customer_text_message_email_message_config = 113 [json_name = "customerTextMessageEmailMessageConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig customer_text_message_email_message_config = 113 [json_name = "customerTextMessageEmailMessageConfig", deprecated = true];</code>
      */
-    public Builder mergeCustomerTextMessageEmailMessageConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
+    @java.lang.Deprecated public Builder mergeCustomerTextMessageEmailMessageConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
       if (customerTextMessageEmailMessageConfigBuilder_ == null) {
         if (configCase_ == 113 &&
             config_ != com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.getDefaultInstance()) {
@@ -5136,9 +5342,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig customer_text_message_email_message_config = 113 [json_name = "customerTextMessageEmailMessageConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig customer_text_message_email_message_config = 113 [json_name = "customerTextMessageEmailMessageConfig", deprecated = true];</code>
      */
-    public Builder clearCustomerTextMessageEmailMessageConfig() {
+    @java.lang.Deprecated public Builder clearCustomerTextMessageEmailMessageConfig() {
       if (customerTextMessageEmailMessageConfigBuilder_ == null) {
         if (configCase_ == 113) {
           configCase_ = 0;
@@ -5155,16 +5361,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig customer_text_message_email_message_config = 113 [json_name = "customerTextMessageEmailMessageConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig customer_text_message_email_message_config = 113 [json_name = "customerTextMessageEmailMessageConfig", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder getCustomerTextMessageEmailMessageConfigBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder getCustomerTextMessageEmailMessageConfigBuilder() {
       return getCustomerTextMessageEmailMessageConfigFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig customer_text_message_email_message_config = 113 [json_name = "customerTextMessageEmailMessageConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig customer_text_message_email_message_config = 113 [json_name = "customerTextMessageEmailMessageConfig", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getCustomerTextMessageEmailMessageConfigOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getCustomerTextMessageEmailMessageConfigOrBuilder() {
       if ((configCase_ == 113) && (customerTextMessageEmailMessageConfigBuilder_ != null)) {
         return customerTextMessageEmailMessageConfigBuilder_.getMessageOrBuilder();
       } else {
@@ -5175,7 +5381,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig customer_text_message_email_message_config = 113 [json_name = "customerTextMessageEmailMessageConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig customer_text_message_email_message_config = 113 [json_name = "customerTextMessageEmailMessageConfig", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder> 
@@ -5199,19 +5405,23 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder> customerTextMessageEmailSizeConfigBuilder_;
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_email_size_config = 114 [json_name = "customerTextMessageEmailSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_email_size_config = 114 [json_name = "customerTextMessageEmailSizeConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.customer_text_message_email_size_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=57
      * @return Whether the customerTextMessageEmailSizeConfig field is set.
      */
     @java.lang.Override
-    public boolean hasCustomerTextMessageEmailSizeConfig() {
+    @java.lang.Deprecated public boolean hasCustomerTextMessageEmailSizeConfig() {
       return configCase_ == 114;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_email_size_config = 114 [json_name = "customerTextMessageEmailSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_email_size_config = 114 [json_name = "customerTextMessageEmailSizeConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.customer_text_message_email_size_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=57
      * @return The customerTextMessageEmailSizeConfig.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getCustomerTextMessageEmailSizeConfig() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getCustomerTextMessageEmailSizeConfig() {
       if (customerTextMessageEmailSizeConfigBuilder_ == null) {
         if (configCase_ == 114) {
           return (com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig) config_;
@@ -5225,9 +5435,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_email_size_config = 114 [json_name = "customerTextMessageEmailSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_email_size_config = 114 [json_name = "customerTextMessageEmailSizeConfig", deprecated = true];</code>
      */
-    public Builder setCustomerTextMessageEmailSizeConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig value) {
+    @java.lang.Deprecated public Builder setCustomerTextMessageEmailSizeConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig value) {
       if (customerTextMessageEmailSizeConfigBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -5241,9 +5451,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_email_size_config = 114 [json_name = "customerTextMessageEmailSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_email_size_config = 114 [json_name = "customerTextMessageEmailSizeConfig", deprecated = true];</code>
      */
-    public Builder setCustomerTextMessageEmailSizeConfig(
+    @java.lang.Deprecated public Builder setCustomerTextMessageEmailSizeConfig(
         com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder builderForValue) {
       if (customerTextMessageEmailSizeConfigBuilder_ == null) {
         config_ = builderForValue.build();
@@ -5255,9 +5465,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_email_size_config = 114 [json_name = "customerTextMessageEmailSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_email_size_config = 114 [json_name = "customerTextMessageEmailSizeConfig", deprecated = true];</code>
      */
-    public Builder mergeCustomerTextMessageEmailSizeConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig value) {
+    @java.lang.Deprecated public Builder mergeCustomerTextMessageEmailSizeConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig value) {
       if (customerTextMessageEmailSizeConfigBuilder_ == null) {
         if (configCase_ == 114 &&
             config_ != com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.getDefaultInstance()) {
@@ -5278,9 +5488,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_email_size_config = 114 [json_name = "customerTextMessageEmailSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_email_size_config = 114 [json_name = "customerTextMessageEmailSizeConfig", deprecated = true];</code>
      */
-    public Builder clearCustomerTextMessageEmailSizeConfig() {
+    @java.lang.Deprecated public Builder clearCustomerTextMessageEmailSizeConfig() {
       if (customerTextMessageEmailSizeConfigBuilder_ == null) {
         if (configCase_ == 114) {
           configCase_ = 0;
@@ -5297,16 +5507,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_email_size_config = 114 [json_name = "customerTextMessageEmailSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_email_size_config = 114 [json_name = "customerTextMessageEmailSizeConfig", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder getCustomerTextMessageEmailSizeConfigBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder getCustomerTextMessageEmailSizeConfigBuilder() {
       return getCustomerTextMessageEmailSizeConfigFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_email_size_config = 114 [json_name = "customerTextMessageEmailSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_email_size_config = 114 [json_name = "customerTextMessageEmailSizeConfig", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getCustomerTextMessageEmailSizeConfigOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getCustomerTextMessageEmailSizeConfigOrBuilder() {
       if ((configCase_ == 114) && (customerTextMessageEmailSizeConfigBuilder_ != null)) {
         return customerTextMessageEmailSizeConfigBuilder_.getMessageOrBuilder();
       } else {
@@ -5317,7 +5527,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_email_size_config = 114 [json_name = "customerTextMessageEmailSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_email_size_config = 114 [json_name = "customerTextMessageEmailSizeConfig", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder> 
@@ -5341,19 +5551,23 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder> customerTextMessageSmsConfigBuilder_;
     /**
-     * <code>.api.commons.billing.modules.BasicConfig customer_text_message_sms_config = 115 [json_name = "customerTextMessageSmsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig customer_text_message_sms_config = 115 [json_name = "customerTextMessageSmsConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.customer_text_message_sms_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=58
      * @return Whether the customerTextMessageSmsConfig field is set.
      */
     @java.lang.Override
-    public boolean hasCustomerTextMessageSmsConfig() {
+    @java.lang.Deprecated public boolean hasCustomerTextMessageSmsConfig() {
       return configCase_ == 115;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig customer_text_message_sms_config = 115 [json_name = "customerTextMessageSmsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig customer_text_message_sms_config = 115 [json_name = "customerTextMessageSmsConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.customer_text_message_sms_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=58
      * @return The customerTextMessageSmsConfig.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getCustomerTextMessageSmsConfig() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getCustomerTextMessageSmsConfig() {
       if (customerTextMessageSmsConfigBuilder_ == null) {
         if (configCase_ == 115) {
           return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
@@ -5367,9 +5581,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig customer_text_message_sms_config = 115 [json_name = "customerTextMessageSmsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig customer_text_message_sms_config = 115 [json_name = "customerTextMessageSmsConfig", deprecated = true];</code>
      */
-    public Builder setCustomerTextMessageSmsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
+    @java.lang.Deprecated public Builder setCustomerTextMessageSmsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
       if (customerTextMessageSmsConfigBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -5383,9 +5597,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig customer_text_message_sms_config = 115 [json_name = "customerTextMessageSmsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig customer_text_message_sms_config = 115 [json_name = "customerTextMessageSmsConfig", deprecated = true];</code>
      */
-    public Builder setCustomerTextMessageSmsConfig(
+    @java.lang.Deprecated public Builder setCustomerTextMessageSmsConfig(
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder builderForValue) {
       if (customerTextMessageSmsConfigBuilder_ == null) {
         config_ = builderForValue.build();
@@ -5397,9 +5611,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig customer_text_message_sms_config = 115 [json_name = "customerTextMessageSmsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig customer_text_message_sms_config = 115 [json_name = "customerTextMessageSmsConfig", deprecated = true];</code>
      */
-    public Builder mergeCustomerTextMessageSmsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
+    @java.lang.Deprecated public Builder mergeCustomerTextMessageSmsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
       if (customerTextMessageSmsConfigBuilder_ == null) {
         if (configCase_ == 115 &&
             config_ != com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.getDefaultInstance()) {
@@ -5420,9 +5634,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig customer_text_message_sms_config = 115 [json_name = "customerTextMessageSmsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig customer_text_message_sms_config = 115 [json_name = "customerTextMessageSmsConfig", deprecated = true];</code>
      */
-    public Builder clearCustomerTextMessageSmsConfig() {
+    @java.lang.Deprecated public Builder clearCustomerTextMessageSmsConfig() {
       if (customerTextMessageSmsConfigBuilder_ == null) {
         if (configCase_ == 115) {
           configCase_ = 0;
@@ -5439,16 +5653,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig customer_text_message_sms_config = 115 [json_name = "customerTextMessageSmsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig customer_text_message_sms_config = 115 [json_name = "customerTextMessageSmsConfig", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder getCustomerTextMessageSmsConfigBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder getCustomerTextMessageSmsConfigBuilder() {
       return getCustomerTextMessageSmsConfigFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig customer_text_message_sms_config = 115 [json_name = "customerTextMessageSmsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig customer_text_message_sms_config = 115 [json_name = "customerTextMessageSmsConfig", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getCustomerTextMessageSmsConfigOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getCustomerTextMessageSmsConfigOrBuilder() {
       if ((configCase_ == 115) && (customerTextMessageSmsConfigBuilder_ != null)) {
         return customerTextMessageSmsConfigBuilder_.getMessageOrBuilder();
       } else {
@@ -5459,7 +5673,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig customer_text_message_sms_config = 115 [json_name = "customerTextMessageSmsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig customer_text_message_sms_config = 115 [json_name = "customerTextMessageSmsConfig", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder> 
@@ -5483,19 +5697,23 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder> agentTextMessageChatSizeConfigBuilder_;
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_chat_size_config = 116 [json_name = "agentTextMessageChatSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_chat_size_config = 116 [json_name = "agentTextMessageChatSizeConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.agent_text_message_chat_size_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=59
      * @return Whether the agentTextMessageChatSizeConfig field is set.
      */
     @java.lang.Override
-    public boolean hasAgentTextMessageChatSizeConfig() {
+    @java.lang.Deprecated public boolean hasAgentTextMessageChatSizeConfig() {
       return configCase_ == 116;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_chat_size_config = 116 [json_name = "agentTextMessageChatSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_chat_size_config = 116 [json_name = "agentTextMessageChatSizeConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.agent_text_message_chat_size_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=59
      * @return The agentTextMessageChatSizeConfig.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getAgentTextMessageChatSizeConfig() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getAgentTextMessageChatSizeConfig() {
       if (agentTextMessageChatSizeConfigBuilder_ == null) {
         if (configCase_ == 116) {
           return (com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig) config_;
@@ -5509,9 +5727,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_chat_size_config = 116 [json_name = "agentTextMessageChatSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_chat_size_config = 116 [json_name = "agentTextMessageChatSizeConfig", deprecated = true];</code>
      */
-    public Builder setAgentTextMessageChatSizeConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig value) {
+    @java.lang.Deprecated public Builder setAgentTextMessageChatSizeConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig value) {
       if (agentTextMessageChatSizeConfigBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -5525,9 +5743,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_chat_size_config = 116 [json_name = "agentTextMessageChatSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_chat_size_config = 116 [json_name = "agentTextMessageChatSizeConfig", deprecated = true];</code>
      */
-    public Builder setAgentTextMessageChatSizeConfig(
+    @java.lang.Deprecated public Builder setAgentTextMessageChatSizeConfig(
         com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder builderForValue) {
       if (agentTextMessageChatSizeConfigBuilder_ == null) {
         config_ = builderForValue.build();
@@ -5539,9 +5757,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_chat_size_config = 116 [json_name = "agentTextMessageChatSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_chat_size_config = 116 [json_name = "agentTextMessageChatSizeConfig", deprecated = true];</code>
      */
-    public Builder mergeAgentTextMessageChatSizeConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig value) {
+    @java.lang.Deprecated public Builder mergeAgentTextMessageChatSizeConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig value) {
       if (agentTextMessageChatSizeConfigBuilder_ == null) {
         if (configCase_ == 116 &&
             config_ != com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.getDefaultInstance()) {
@@ -5562,9 +5780,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_chat_size_config = 116 [json_name = "agentTextMessageChatSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_chat_size_config = 116 [json_name = "agentTextMessageChatSizeConfig", deprecated = true];</code>
      */
-    public Builder clearAgentTextMessageChatSizeConfig() {
+    @java.lang.Deprecated public Builder clearAgentTextMessageChatSizeConfig() {
       if (agentTextMessageChatSizeConfigBuilder_ == null) {
         if (configCase_ == 116) {
           configCase_ = 0;
@@ -5581,16 +5799,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_chat_size_config = 116 [json_name = "agentTextMessageChatSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_chat_size_config = 116 [json_name = "agentTextMessageChatSizeConfig", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder getAgentTextMessageChatSizeConfigBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder getAgentTextMessageChatSizeConfigBuilder() {
       return getAgentTextMessageChatSizeConfigFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_chat_size_config = 116 [json_name = "agentTextMessageChatSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_chat_size_config = 116 [json_name = "agentTextMessageChatSizeConfig", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getAgentTextMessageChatSizeConfigOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getAgentTextMessageChatSizeConfigOrBuilder() {
       if ((configCase_ == 116) && (agentTextMessageChatSizeConfigBuilder_ != null)) {
         return agentTextMessageChatSizeConfigBuilder_.getMessageOrBuilder();
       } else {
@@ -5601,7 +5819,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_chat_size_config = 116 [json_name = "agentTextMessageChatSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_chat_size_config = 116 [json_name = "agentTextMessageChatSizeConfig", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder> 
@@ -5625,19 +5843,23 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder> managerTextMessageChatSizeConfigBuilder_;
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_chat_size_config = 117 [json_name = "managerTextMessageChatSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_chat_size_config = 117 [json_name = "managerTextMessageChatSizeConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.manager_text_message_chat_size_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=60
      * @return Whether the managerTextMessageChatSizeConfig field is set.
      */
     @java.lang.Override
-    public boolean hasManagerTextMessageChatSizeConfig() {
+    @java.lang.Deprecated public boolean hasManagerTextMessageChatSizeConfig() {
       return configCase_ == 117;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_chat_size_config = 117 [json_name = "managerTextMessageChatSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_chat_size_config = 117 [json_name = "managerTextMessageChatSizeConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.manager_text_message_chat_size_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=60
      * @return The managerTextMessageChatSizeConfig.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getManagerTextMessageChatSizeConfig() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getManagerTextMessageChatSizeConfig() {
       if (managerTextMessageChatSizeConfigBuilder_ == null) {
         if (configCase_ == 117) {
           return (com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig) config_;
@@ -5651,9 +5873,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_chat_size_config = 117 [json_name = "managerTextMessageChatSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_chat_size_config = 117 [json_name = "managerTextMessageChatSizeConfig", deprecated = true];</code>
      */
-    public Builder setManagerTextMessageChatSizeConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig value) {
+    @java.lang.Deprecated public Builder setManagerTextMessageChatSizeConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig value) {
       if (managerTextMessageChatSizeConfigBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -5667,9 +5889,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_chat_size_config = 117 [json_name = "managerTextMessageChatSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_chat_size_config = 117 [json_name = "managerTextMessageChatSizeConfig", deprecated = true];</code>
      */
-    public Builder setManagerTextMessageChatSizeConfig(
+    @java.lang.Deprecated public Builder setManagerTextMessageChatSizeConfig(
         com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder builderForValue) {
       if (managerTextMessageChatSizeConfigBuilder_ == null) {
         config_ = builderForValue.build();
@@ -5681,9 +5903,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_chat_size_config = 117 [json_name = "managerTextMessageChatSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_chat_size_config = 117 [json_name = "managerTextMessageChatSizeConfig", deprecated = true];</code>
      */
-    public Builder mergeManagerTextMessageChatSizeConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig value) {
+    @java.lang.Deprecated public Builder mergeManagerTextMessageChatSizeConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig value) {
       if (managerTextMessageChatSizeConfigBuilder_ == null) {
         if (configCase_ == 117 &&
             config_ != com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.getDefaultInstance()) {
@@ -5704,9 +5926,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_chat_size_config = 117 [json_name = "managerTextMessageChatSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_chat_size_config = 117 [json_name = "managerTextMessageChatSizeConfig", deprecated = true];</code>
      */
-    public Builder clearManagerTextMessageChatSizeConfig() {
+    @java.lang.Deprecated public Builder clearManagerTextMessageChatSizeConfig() {
       if (managerTextMessageChatSizeConfigBuilder_ == null) {
         if (configCase_ == 117) {
           configCase_ = 0;
@@ -5723,16 +5945,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_chat_size_config = 117 [json_name = "managerTextMessageChatSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_chat_size_config = 117 [json_name = "managerTextMessageChatSizeConfig", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder getManagerTextMessageChatSizeConfigBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder getManagerTextMessageChatSizeConfigBuilder() {
       return getManagerTextMessageChatSizeConfigFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_chat_size_config = 117 [json_name = "managerTextMessageChatSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_chat_size_config = 117 [json_name = "managerTextMessageChatSizeConfig", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getManagerTextMessageChatSizeConfigOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getManagerTextMessageChatSizeConfigOrBuilder() {
       if ((configCase_ == 117) && (managerTextMessageChatSizeConfigBuilder_ != null)) {
         return managerTextMessageChatSizeConfigBuilder_.getMessageOrBuilder();
       } else {
@@ -5743,7 +5965,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_chat_size_config = 117 [json_name = "managerTextMessageChatSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_chat_size_config = 117 [json_name = "managerTextMessageChatSizeConfig", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder> 
@@ -5767,19 +5989,23 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder> customerTextMessageChatSizeConfigBuilder_;
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_chat_size_config = 118 [json_name = "customerTextMessageChatSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_chat_size_config = 118 [json_name = "customerTextMessageChatSizeConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.customer_text_message_chat_size_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=61
      * @return Whether the customerTextMessageChatSizeConfig field is set.
      */
     @java.lang.Override
-    public boolean hasCustomerTextMessageChatSizeConfig() {
+    @java.lang.Deprecated public boolean hasCustomerTextMessageChatSizeConfig() {
       return configCase_ == 118;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_chat_size_config = 118 [json_name = "customerTextMessageChatSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_chat_size_config = 118 [json_name = "customerTextMessageChatSizeConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.customer_text_message_chat_size_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=61
      * @return The customerTextMessageChatSizeConfig.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getCustomerTextMessageChatSizeConfig() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getCustomerTextMessageChatSizeConfig() {
       if (customerTextMessageChatSizeConfigBuilder_ == null) {
         if (configCase_ == 118) {
           return (com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig) config_;
@@ -5793,9 +6019,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_chat_size_config = 118 [json_name = "customerTextMessageChatSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_chat_size_config = 118 [json_name = "customerTextMessageChatSizeConfig", deprecated = true];</code>
      */
-    public Builder setCustomerTextMessageChatSizeConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig value) {
+    @java.lang.Deprecated public Builder setCustomerTextMessageChatSizeConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig value) {
       if (customerTextMessageChatSizeConfigBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -5809,9 +6035,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_chat_size_config = 118 [json_name = "customerTextMessageChatSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_chat_size_config = 118 [json_name = "customerTextMessageChatSizeConfig", deprecated = true];</code>
      */
-    public Builder setCustomerTextMessageChatSizeConfig(
+    @java.lang.Deprecated public Builder setCustomerTextMessageChatSizeConfig(
         com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder builderForValue) {
       if (customerTextMessageChatSizeConfigBuilder_ == null) {
         config_ = builderForValue.build();
@@ -5823,9 +6049,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_chat_size_config = 118 [json_name = "customerTextMessageChatSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_chat_size_config = 118 [json_name = "customerTextMessageChatSizeConfig", deprecated = true];</code>
      */
-    public Builder mergeCustomerTextMessageChatSizeConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig value) {
+    @java.lang.Deprecated public Builder mergeCustomerTextMessageChatSizeConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig value) {
       if (customerTextMessageChatSizeConfigBuilder_ == null) {
         if (configCase_ == 118 &&
             config_ != com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.getDefaultInstance()) {
@@ -5846,9 +6072,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_chat_size_config = 118 [json_name = "customerTextMessageChatSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_chat_size_config = 118 [json_name = "customerTextMessageChatSizeConfig", deprecated = true];</code>
      */
-    public Builder clearCustomerTextMessageChatSizeConfig() {
+    @java.lang.Deprecated public Builder clearCustomerTextMessageChatSizeConfig() {
       if (customerTextMessageChatSizeConfigBuilder_ == null) {
         if (configCase_ == 118) {
           configCase_ = 0;
@@ -5865,16 +6091,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_chat_size_config = 118 [json_name = "customerTextMessageChatSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_chat_size_config = 118 [json_name = "customerTextMessageChatSizeConfig", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder getCustomerTextMessageChatSizeConfigBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder getCustomerTextMessageChatSizeConfigBuilder() {
       return getCustomerTextMessageChatSizeConfigFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_chat_size_config = 118 [json_name = "customerTextMessageChatSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_chat_size_config = 118 [json_name = "customerTextMessageChatSizeConfig", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getCustomerTextMessageChatSizeConfigOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getCustomerTextMessageChatSizeConfigOrBuilder() {
       if ((configCase_ == 118) && (customerTextMessageChatSizeConfigBuilder_ != null)) {
         return customerTextMessageChatSizeConfigBuilder_.getMessageOrBuilder();
       } else {
@@ -5885,7 +6111,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_chat_size_config = 118 [json_name = "customerTextMessageChatSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_chat_size_config = 118 [json_name = "customerTextMessageChatSizeConfig", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder> 
@@ -5909,19 +6135,23 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder> connectedInboxCreatedConfigBuilder_;
     /**
-     * <code>.api.commons.billing.modules.BasicConfig connected_inbox_created_config = 119 [json_name = "connectedInboxCreatedConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig connected_inbox_created_config = 119 [json_name = "connectedInboxCreatedConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.connected_inbox_created_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=62
      * @return Whether the connectedInboxCreatedConfig field is set.
      */
     @java.lang.Override
-    public boolean hasConnectedInboxCreatedConfig() {
+    @java.lang.Deprecated public boolean hasConnectedInboxCreatedConfig() {
       return configCase_ == 119;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig connected_inbox_created_config = 119 [json_name = "connectedInboxCreatedConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig connected_inbox_created_config = 119 [json_name = "connectedInboxCreatedConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.connected_inbox_created_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=62
      * @return The connectedInboxCreatedConfig.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getConnectedInboxCreatedConfig() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getConnectedInboxCreatedConfig() {
       if (connectedInboxCreatedConfigBuilder_ == null) {
         if (configCase_ == 119) {
           return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
@@ -5935,9 +6165,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig connected_inbox_created_config = 119 [json_name = "connectedInboxCreatedConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig connected_inbox_created_config = 119 [json_name = "connectedInboxCreatedConfig", deprecated = true];</code>
      */
-    public Builder setConnectedInboxCreatedConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
+    @java.lang.Deprecated public Builder setConnectedInboxCreatedConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
       if (connectedInboxCreatedConfigBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -5951,9 +6181,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig connected_inbox_created_config = 119 [json_name = "connectedInboxCreatedConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig connected_inbox_created_config = 119 [json_name = "connectedInboxCreatedConfig", deprecated = true];</code>
      */
-    public Builder setConnectedInboxCreatedConfig(
+    @java.lang.Deprecated public Builder setConnectedInboxCreatedConfig(
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder builderForValue) {
       if (connectedInboxCreatedConfigBuilder_ == null) {
         config_ = builderForValue.build();
@@ -5965,9 +6195,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig connected_inbox_created_config = 119 [json_name = "connectedInboxCreatedConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig connected_inbox_created_config = 119 [json_name = "connectedInboxCreatedConfig", deprecated = true];</code>
      */
-    public Builder mergeConnectedInboxCreatedConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
+    @java.lang.Deprecated public Builder mergeConnectedInboxCreatedConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
       if (connectedInboxCreatedConfigBuilder_ == null) {
         if (configCase_ == 119 &&
             config_ != com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.getDefaultInstance()) {
@@ -5988,9 +6218,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig connected_inbox_created_config = 119 [json_name = "connectedInboxCreatedConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig connected_inbox_created_config = 119 [json_name = "connectedInboxCreatedConfig", deprecated = true];</code>
      */
-    public Builder clearConnectedInboxCreatedConfig() {
+    @java.lang.Deprecated public Builder clearConnectedInboxCreatedConfig() {
       if (connectedInboxCreatedConfigBuilder_ == null) {
         if (configCase_ == 119) {
           configCase_ = 0;
@@ -6007,16 +6237,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig connected_inbox_created_config = 119 [json_name = "connectedInboxCreatedConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig connected_inbox_created_config = 119 [json_name = "connectedInboxCreatedConfig", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder getConnectedInboxCreatedConfigBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder getConnectedInboxCreatedConfigBuilder() {
       return getConnectedInboxCreatedConfigFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig connected_inbox_created_config = 119 [json_name = "connectedInboxCreatedConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig connected_inbox_created_config = 119 [json_name = "connectedInboxCreatedConfig", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getConnectedInboxCreatedConfigOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getConnectedInboxCreatedConfigOrBuilder() {
       if ((configCase_ == 119) && (connectedInboxCreatedConfigBuilder_ != null)) {
         return connectedInboxCreatedConfigBuilder_.getMessageOrBuilder();
       } else {
@@ -6027,7 +6257,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig connected_inbox_created_config = 119 [json_name = "connectedInboxCreatedConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig connected_inbox_created_config = 119 [json_name = "connectedInboxCreatedConfig", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder> 
@@ -6051,19 +6281,23 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder> agentTextMessageSmsSizeConfigBuilder_;
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_sms_size_config = 120 [json_name = "agentTextMessageSmsSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_sms_size_config = 120 [json_name = "agentTextMessageSmsSizeConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.agent_text_message_sms_size_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=63
      * @return Whether the agentTextMessageSmsSizeConfig field is set.
      */
     @java.lang.Override
-    public boolean hasAgentTextMessageSmsSizeConfig() {
+    @java.lang.Deprecated public boolean hasAgentTextMessageSmsSizeConfig() {
       return configCase_ == 120;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_sms_size_config = 120 [json_name = "agentTextMessageSmsSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_sms_size_config = 120 [json_name = "agentTextMessageSmsSizeConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.agent_text_message_sms_size_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=63
      * @return The agentTextMessageSmsSizeConfig.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getAgentTextMessageSmsSizeConfig() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getAgentTextMessageSmsSizeConfig() {
       if (agentTextMessageSmsSizeConfigBuilder_ == null) {
         if (configCase_ == 120) {
           return (com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig) config_;
@@ -6077,9 +6311,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_sms_size_config = 120 [json_name = "agentTextMessageSmsSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_sms_size_config = 120 [json_name = "agentTextMessageSmsSizeConfig", deprecated = true];</code>
      */
-    public Builder setAgentTextMessageSmsSizeConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig value) {
+    @java.lang.Deprecated public Builder setAgentTextMessageSmsSizeConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig value) {
       if (agentTextMessageSmsSizeConfigBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -6093,9 +6327,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_sms_size_config = 120 [json_name = "agentTextMessageSmsSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_sms_size_config = 120 [json_name = "agentTextMessageSmsSizeConfig", deprecated = true];</code>
      */
-    public Builder setAgentTextMessageSmsSizeConfig(
+    @java.lang.Deprecated public Builder setAgentTextMessageSmsSizeConfig(
         com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder builderForValue) {
       if (agentTextMessageSmsSizeConfigBuilder_ == null) {
         config_ = builderForValue.build();
@@ -6107,9 +6341,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_sms_size_config = 120 [json_name = "agentTextMessageSmsSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_sms_size_config = 120 [json_name = "agentTextMessageSmsSizeConfig", deprecated = true];</code>
      */
-    public Builder mergeAgentTextMessageSmsSizeConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig value) {
+    @java.lang.Deprecated public Builder mergeAgentTextMessageSmsSizeConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig value) {
       if (agentTextMessageSmsSizeConfigBuilder_ == null) {
         if (configCase_ == 120 &&
             config_ != com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.getDefaultInstance()) {
@@ -6130,9 +6364,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_sms_size_config = 120 [json_name = "agentTextMessageSmsSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_sms_size_config = 120 [json_name = "agentTextMessageSmsSizeConfig", deprecated = true];</code>
      */
-    public Builder clearAgentTextMessageSmsSizeConfig() {
+    @java.lang.Deprecated public Builder clearAgentTextMessageSmsSizeConfig() {
       if (agentTextMessageSmsSizeConfigBuilder_ == null) {
         if (configCase_ == 120) {
           configCase_ = 0;
@@ -6149,16 +6383,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_sms_size_config = 120 [json_name = "agentTextMessageSmsSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_sms_size_config = 120 [json_name = "agentTextMessageSmsSizeConfig", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder getAgentTextMessageSmsSizeConfigBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder getAgentTextMessageSmsSizeConfigBuilder() {
       return getAgentTextMessageSmsSizeConfigFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_sms_size_config = 120 [json_name = "agentTextMessageSmsSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_sms_size_config = 120 [json_name = "agentTextMessageSmsSizeConfig", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getAgentTextMessageSmsSizeConfigOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getAgentTextMessageSmsSizeConfigOrBuilder() {
       if ((configCase_ == 120) && (agentTextMessageSmsSizeConfigBuilder_ != null)) {
         return agentTextMessageSmsSizeConfigBuilder_.getMessageOrBuilder();
       } else {
@@ -6169,7 +6403,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_sms_size_config = 120 [json_name = "agentTextMessageSmsSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig agent_text_message_sms_size_config = 120 [json_name = "agentTextMessageSmsSizeConfig", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder> 
@@ -6193,19 +6427,23 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder> managerTextMessageSmsSizeConfigBuilder_;
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_sms_size_config = 121 [json_name = "managerTextMessageSmsSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_sms_size_config = 121 [json_name = "managerTextMessageSmsSizeConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.manager_text_message_sms_size_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=64
      * @return Whether the managerTextMessageSmsSizeConfig field is set.
      */
     @java.lang.Override
-    public boolean hasManagerTextMessageSmsSizeConfig() {
+    @java.lang.Deprecated public boolean hasManagerTextMessageSmsSizeConfig() {
       return configCase_ == 121;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_sms_size_config = 121 [json_name = "managerTextMessageSmsSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_sms_size_config = 121 [json_name = "managerTextMessageSmsSizeConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.manager_text_message_sms_size_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=64
      * @return The managerTextMessageSmsSizeConfig.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getManagerTextMessageSmsSizeConfig() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getManagerTextMessageSmsSizeConfig() {
       if (managerTextMessageSmsSizeConfigBuilder_ == null) {
         if (configCase_ == 121) {
           return (com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig) config_;
@@ -6219,9 +6457,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_sms_size_config = 121 [json_name = "managerTextMessageSmsSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_sms_size_config = 121 [json_name = "managerTextMessageSmsSizeConfig", deprecated = true];</code>
      */
-    public Builder setManagerTextMessageSmsSizeConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig value) {
+    @java.lang.Deprecated public Builder setManagerTextMessageSmsSizeConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig value) {
       if (managerTextMessageSmsSizeConfigBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -6235,9 +6473,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_sms_size_config = 121 [json_name = "managerTextMessageSmsSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_sms_size_config = 121 [json_name = "managerTextMessageSmsSizeConfig", deprecated = true];</code>
      */
-    public Builder setManagerTextMessageSmsSizeConfig(
+    @java.lang.Deprecated public Builder setManagerTextMessageSmsSizeConfig(
         com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder builderForValue) {
       if (managerTextMessageSmsSizeConfigBuilder_ == null) {
         config_ = builderForValue.build();
@@ -6249,9 +6487,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_sms_size_config = 121 [json_name = "managerTextMessageSmsSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_sms_size_config = 121 [json_name = "managerTextMessageSmsSizeConfig", deprecated = true];</code>
      */
-    public Builder mergeManagerTextMessageSmsSizeConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig value) {
+    @java.lang.Deprecated public Builder mergeManagerTextMessageSmsSizeConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig value) {
       if (managerTextMessageSmsSizeConfigBuilder_ == null) {
         if (configCase_ == 121 &&
             config_ != com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.getDefaultInstance()) {
@@ -6272,9 +6510,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_sms_size_config = 121 [json_name = "managerTextMessageSmsSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_sms_size_config = 121 [json_name = "managerTextMessageSmsSizeConfig", deprecated = true];</code>
      */
-    public Builder clearManagerTextMessageSmsSizeConfig() {
+    @java.lang.Deprecated public Builder clearManagerTextMessageSmsSizeConfig() {
       if (managerTextMessageSmsSizeConfigBuilder_ == null) {
         if (configCase_ == 121) {
           configCase_ = 0;
@@ -6291,16 +6529,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_sms_size_config = 121 [json_name = "managerTextMessageSmsSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_sms_size_config = 121 [json_name = "managerTextMessageSmsSizeConfig", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder getManagerTextMessageSmsSizeConfigBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder getManagerTextMessageSmsSizeConfigBuilder() {
       return getManagerTextMessageSmsSizeConfigFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_sms_size_config = 121 [json_name = "managerTextMessageSmsSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_sms_size_config = 121 [json_name = "managerTextMessageSmsSizeConfig", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getManagerTextMessageSmsSizeConfigOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getManagerTextMessageSmsSizeConfigOrBuilder() {
       if ((configCase_ == 121) && (managerTextMessageSmsSizeConfigBuilder_ != null)) {
         return managerTextMessageSmsSizeConfigBuilder_.getMessageOrBuilder();
       } else {
@@ -6311,7 +6549,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_sms_size_config = 121 [json_name = "managerTextMessageSmsSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig manager_text_message_sms_size_config = 121 [json_name = "managerTextMessageSmsSizeConfig", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder> 
@@ -6335,19 +6573,23 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder> customerTextMessageSmsSizeConfigBuilder_;
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_sms_size_config = 122 [json_name = "customerTextMessageSmsSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_sms_size_config = 122 [json_name = "customerTextMessageSmsSizeConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.customer_text_message_sms_size_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=65
      * @return Whether the customerTextMessageSmsSizeConfig field is set.
      */
     @java.lang.Override
-    public boolean hasCustomerTextMessageSmsSizeConfig() {
+    @java.lang.Deprecated public boolean hasCustomerTextMessageSmsSizeConfig() {
       return configCase_ == 122;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_sms_size_config = 122 [json_name = "customerTextMessageSmsSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_sms_size_config = 122 [json_name = "customerTextMessageSmsSizeConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.customer_text_message_sms_size_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=65
      * @return The customerTextMessageSmsSizeConfig.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getCustomerTextMessageSmsSizeConfig() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getCustomerTextMessageSmsSizeConfig() {
       if (customerTextMessageSmsSizeConfigBuilder_ == null) {
         if (configCase_ == 122) {
           return (com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig) config_;
@@ -6361,9 +6603,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_sms_size_config = 122 [json_name = "customerTextMessageSmsSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_sms_size_config = 122 [json_name = "customerTextMessageSmsSizeConfig", deprecated = true];</code>
      */
-    public Builder setCustomerTextMessageSmsSizeConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig value) {
+    @java.lang.Deprecated public Builder setCustomerTextMessageSmsSizeConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig value) {
       if (customerTextMessageSmsSizeConfigBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -6377,9 +6619,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_sms_size_config = 122 [json_name = "customerTextMessageSmsSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_sms_size_config = 122 [json_name = "customerTextMessageSmsSizeConfig", deprecated = true];</code>
      */
-    public Builder setCustomerTextMessageSmsSizeConfig(
+    @java.lang.Deprecated public Builder setCustomerTextMessageSmsSizeConfig(
         com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder builderForValue) {
       if (customerTextMessageSmsSizeConfigBuilder_ == null) {
         config_ = builderForValue.build();
@@ -6391,9 +6633,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_sms_size_config = 122 [json_name = "customerTextMessageSmsSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_sms_size_config = 122 [json_name = "customerTextMessageSmsSizeConfig", deprecated = true];</code>
      */
-    public Builder mergeCustomerTextMessageSmsSizeConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig value) {
+    @java.lang.Deprecated public Builder mergeCustomerTextMessageSmsSizeConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig value) {
       if (customerTextMessageSmsSizeConfigBuilder_ == null) {
         if (configCase_ == 122 &&
             config_ != com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.getDefaultInstance()) {
@@ -6414,9 +6656,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_sms_size_config = 122 [json_name = "customerTextMessageSmsSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_sms_size_config = 122 [json_name = "customerTextMessageSmsSizeConfig", deprecated = true];</code>
      */
-    public Builder clearCustomerTextMessageSmsSizeConfig() {
+    @java.lang.Deprecated public Builder clearCustomerTextMessageSmsSizeConfig() {
       if (customerTextMessageSmsSizeConfigBuilder_ == null) {
         if (configCase_ == 122) {
           configCase_ = 0;
@@ -6433,16 +6675,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_sms_size_config = 122 [json_name = "customerTextMessageSmsSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_sms_size_config = 122 [json_name = "customerTextMessageSmsSizeConfig", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder getCustomerTextMessageSmsSizeConfigBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder getCustomerTextMessageSmsSizeConfigBuilder() {
       return getCustomerTextMessageSmsSizeConfigFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_sms_size_config = 122 [json_name = "customerTextMessageSmsSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_sms_size_config = 122 [json_name = "customerTextMessageSmsSizeConfig", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getCustomerTextMessageSmsSizeConfigOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getCustomerTextMessageSmsSizeConfigOrBuilder() {
       if ((configCase_ == 122) && (customerTextMessageSmsSizeConfigBuilder_ != null)) {
         return customerTextMessageSmsSizeConfigBuilder_.getMessageOrBuilder();
       } else {
@@ -6453,7 +6695,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_sms_size_config = 122 [json_name = "customerTextMessageSmsSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig customer_text_message_sms_size_config = 122 [json_name = "customerTextMessageSmsSizeConfig", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder> 
@@ -6477,19 +6719,23 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder> taskMessageSentSmsSizeConfigBuilder_;
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig task_message_sent_sms_size_config = 123 [json_name = "taskMessageSentSmsSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig task_message_sent_sms_size_config = 123 [json_name = "taskMessageSentSmsSizeConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.task_message_sent_sms_size_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=66
      * @return Whether the taskMessageSentSmsSizeConfig field is set.
      */
     @java.lang.Override
-    public boolean hasTaskMessageSentSmsSizeConfig() {
+    @java.lang.Deprecated public boolean hasTaskMessageSentSmsSizeConfig() {
       return configCase_ == 123;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig task_message_sent_sms_size_config = 123 [json_name = "taskMessageSentSmsSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig task_message_sent_sms_size_config = 123 [json_name = "taskMessageSentSmsSizeConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.task_message_sent_sms_size_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=66
      * @return The taskMessageSentSmsSizeConfig.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getTaskMessageSentSmsSizeConfig() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig getTaskMessageSentSmsSizeConfig() {
       if (taskMessageSentSmsSizeConfigBuilder_ == null) {
         if (configCase_ == 123) {
           return (com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig) config_;
@@ -6503,9 +6749,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig task_message_sent_sms_size_config = 123 [json_name = "taskMessageSentSmsSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig task_message_sent_sms_size_config = 123 [json_name = "taskMessageSentSmsSizeConfig", deprecated = true];</code>
      */
-    public Builder setTaskMessageSentSmsSizeConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig value) {
+    @java.lang.Deprecated public Builder setTaskMessageSentSmsSizeConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig value) {
       if (taskMessageSentSmsSizeConfigBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -6519,9 +6765,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig task_message_sent_sms_size_config = 123 [json_name = "taskMessageSentSmsSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig task_message_sent_sms_size_config = 123 [json_name = "taskMessageSentSmsSizeConfig", deprecated = true];</code>
      */
-    public Builder setTaskMessageSentSmsSizeConfig(
+    @java.lang.Deprecated public Builder setTaskMessageSentSmsSizeConfig(
         com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder builderForValue) {
       if (taskMessageSentSmsSizeConfigBuilder_ == null) {
         config_ = builderForValue.build();
@@ -6533,9 +6779,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig task_message_sent_sms_size_config = 123 [json_name = "taskMessageSentSmsSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig task_message_sent_sms_size_config = 123 [json_name = "taskMessageSentSmsSizeConfig", deprecated = true];</code>
      */
-    public Builder mergeTaskMessageSentSmsSizeConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig value) {
+    @java.lang.Deprecated public Builder mergeTaskMessageSentSmsSizeConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig value) {
       if (taskMessageSentSmsSizeConfigBuilder_ == null) {
         if (configCase_ == 123 &&
             config_ != com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.getDefaultInstance()) {
@@ -6556,9 +6802,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig task_message_sent_sms_size_config = 123 [json_name = "taskMessageSentSmsSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig task_message_sent_sms_size_config = 123 [json_name = "taskMessageSentSmsSizeConfig", deprecated = true];</code>
      */
-    public Builder clearTaskMessageSentSmsSizeConfig() {
+    @java.lang.Deprecated public Builder clearTaskMessageSentSmsSizeConfig() {
       if (taskMessageSentSmsSizeConfigBuilder_ == null) {
         if (configCase_ == 123) {
           configCase_ = 0;
@@ -6575,16 +6821,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig task_message_sent_sms_size_config = 123 [json_name = "taskMessageSentSmsSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig task_message_sent_sms_size_config = 123 [json_name = "taskMessageSentSmsSizeConfig", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder getTaskMessageSentSmsSizeConfigBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder getTaskMessageSentSmsSizeConfigBuilder() {
       return getTaskMessageSentSmsSizeConfigFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig task_message_sent_sms_size_config = 123 [json_name = "taskMessageSentSmsSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig task_message_sent_sms_size_config = 123 [json_name = "taskMessageSentSmsSizeConfig", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getTaskMessageSentSmsSizeConfigOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder getTaskMessageSentSmsSizeConfigOrBuilder() {
       if ((configCase_ == 123) && (taskMessageSentSmsSizeConfigBuilder_ != null)) {
         return taskMessageSentSmsSizeConfigBuilder_.getMessageOrBuilder();
       } else {
@@ -6595,7 +6841,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicAmountConfig task_message_sent_sms_size_config = 123 [json_name = "taskMessageSentSmsSizeConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicAmountConfig task_message_sent_sms_size_config = 123 [json_name = "taskMessageSentSmsSizeConfig", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfigOrBuilder> 
@@ -6619,19 +6865,23 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder> agentChatMessageUnitsConfigBuilder_;
     /**
-     * <code>.api.commons.billing.modules.BasicConfig agent_chat_message_units_config = 124 [json_name = "agentChatMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig agent_chat_message_units_config = 124 [json_name = "agentChatMessageUnitsConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.agent_chat_message_units_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=67
      * @return Whether the agentChatMessageUnitsConfig field is set.
      */
     @java.lang.Override
-    public boolean hasAgentChatMessageUnitsConfig() {
+    @java.lang.Deprecated public boolean hasAgentChatMessageUnitsConfig() {
       return configCase_ == 124;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig agent_chat_message_units_config = 124 [json_name = "agentChatMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig agent_chat_message_units_config = 124 [json_name = "agentChatMessageUnitsConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.agent_chat_message_units_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=67
      * @return The agentChatMessageUnitsConfig.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getAgentChatMessageUnitsConfig() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getAgentChatMessageUnitsConfig() {
       if (agentChatMessageUnitsConfigBuilder_ == null) {
         if (configCase_ == 124) {
           return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
@@ -6645,9 +6895,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig agent_chat_message_units_config = 124 [json_name = "agentChatMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig agent_chat_message_units_config = 124 [json_name = "agentChatMessageUnitsConfig", deprecated = true];</code>
      */
-    public Builder setAgentChatMessageUnitsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
+    @java.lang.Deprecated public Builder setAgentChatMessageUnitsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
       if (agentChatMessageUnitsConfigBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -6661,9 +6911,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig agent_chat_message_units_config = 124 [json_name = "agentChatMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig agent_chat_message_units_config = 124 [json_name = "agentChatMessageUnitsConfig", deprecated = true];</code>
      */
-    public Builder setAgentChatMessageUnitsConfig(
+    @java.lang.Deprecated public Builder setAgentChatMessageUnitsConfig(
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder builderForValue) {
       if (agentChatMessageUnitsConfigBuilder_ == null) {
         config_ = builderForValue.build();
@@ -6675,9 +6925,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig agent_chat_message_units_config = 124 [json_name = "agentChatMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig agent_chat_message_units_config = 124 [json_name = "agentChatMessageUnitsConfig", deprecated = true];</code>
      */
-    public Builder mergeAgentChatMessageUnitsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
+    @java.lang.Deprecated public Builder mergeAgentChatMessageUnitsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
       if (agentChatMessageUnitsConfigBuilder_ == null) {
         if (configCase_ == 124 &&
             config_ != com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.getDefaultInstance()) {
@@ -6698,9 +6948,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig agent_chat_message_units_config = 124 [json_name = "agentChatMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig agent_chat_message_units_config = 124 [json_name = "agentChatMessageUnitsConfig", deprecated = true];</code>
      */
-    public Builder clearAgentChatMessageUnitsConfig() {
+    @java.lang.Deprecated public Builder clearAgentChatMessageUnitsConfig() {
       if (agentChatMessageUnitsConfigBuilder_ == null) {
         if (configCase_ == 124) {
           configCase_ = 0;
@@ -6717,16 +6967,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig agent_chat_message_units_config = 124 [json_name = "agentChatMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig agent_chat_message_units_config = 124 [json_name = "agentChatMessageUnitsConfig", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder getAgentChatMessageUnitsConfigBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder getAgentChatMessageUnitsConfigBuilder() {
       return getAgentChatMessageUnitsConfigFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig agent_chat_message_units_config = 124 [json_name = "agentChatMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig agent_chat_message_units_config = 124 [json_name = "agentChatMessageUnitsConfig", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getAgentChatMessageUnitsConfigOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getAgentChatMessageUnitsConfigOrBuilder() {
       if ((configCase_ == 124) && (agentChatMessageUnitsConfigBuilder_ != null)) {
         return agentChatMessageUnitsConfigBuilder_.getMessageOrBuilder();
       } else {
@@ -6737,7 +6987,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig agent_chat_message_units_config = 124 [json_name = "agentChatMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig agent_chat_message_units_config = 124 [json_name = "agentChatMessageUnitsConfig", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder> 
@@ -6761,19 +7011,23 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder> agentEmailMessageUnitsConfigBuilder_;
     /**
-     * <code>.api.commons.billing.modules.BasicConfig agent_email_message_units_config = 125 [json_name = "agentEmailMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig agent_email_message_units_config = 125 [json_name = "agentEmailMessageUnitsConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.agent_email_message_units_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=68
      * @return Whether the agentEmailMessageUnitsConfig field is set.
      */
     @java.lang.Override
-    public boolean hasAgentEmailMessageUnitsConfig() {
+    @java.lang.Deprecated public boolean hasAgentEmailMessageUnitsConfig() {
       return configCase_ == 125;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig agent_email_message_units_config = 125 [json_name = "agentEmailMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig agent_email_message_units_config = 125 [json_name = "agentEmailMessageUnitsConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.agent_email_message_units_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=68
      * @return The agentEmailMessageUnitsConfig.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getAgentEmailMessageUnitsConfig() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getAgentEmailMessageUnitsConfig() {
       if (agentEmailMessageUnitsConfigBuilder_ == null) {
         if (configCase_ == 125) {
           return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
@@ -6787,9 +7041,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig agent_email_message_units_config = 125 [json_name = "agentEmailMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig agent_email_message_units_config = 125 [json_name = "agentEmailMessageUnitsConfig", deprecated = true];</code>
      */
-    public Builder setAgentEmailMessageUnitsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
+    @java.lang.Deprecated public Builder setAgentEmailMessageUnitsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
       if (agentEmailMessageUnitsConfigBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -6803,9 +7057,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig agent_email_message_units_config = 125 [json_name = "agentEmailMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig agent_email_message_units_config = 125 [json_name = "agentEmailMessageUnitsConfig", deprecated = true];</code>
      */
-    public Builder setAgentEmailMessageUnitsConfig(
+    @java.lang.Deprecated public Builder setAgentEmailMessageUnitsConfig(
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder builderForValue) {
       if (agentEmailMessageUnitsConfigBuilder_ == null) {
         config_ = builderForValue.build();
@@ -6817,9 +7071,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig agent_email_message_units_config = 125 [json_name = "agentEmailMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig agent_email_message_units_config = 125 [json_name = "agentEmailMessageUnitsConfig", deprecated = true];</code>
      */
-    public Builder mergeAgentEmailMessageUnitsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
+    @java.lang.Deprecated public Builder mergeAgentEmailMessageUnitsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
       if (agentEmailMessageUnitsConfigBuilder_ == null) {
         if (configCase_ == 125 &&
             config_ != com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.getDefaultInstance()) {
@@ -6840,9 +7094,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig agent_email_message_units_config = 125 [json_name = "agentEmailMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig agent_email_message_units_config = 125 [json_name = "agentEmailMessageUnitsConfig", deprecated = true];</code>
      */
-    public Builder clearAgentEmailMessageUnitsConfig() {
+    @java.lang.Deprecated public Builder clearAgentEmailMessageUnitsConfig() {
       if (agentEmailMessageUnitsConfigBuilder_ == null) {
         if (configCase_ == 125) {
           configCase_ = 0;
@@ -6859,16 +7113,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig agent_email_message_units_config = 125 [json_name = "agentEmailMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig agent_email_message_units_config = 125 [json_name = "agentEmailMessageUnitsConfig", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder getAgentEmailMessageUnitsConfigBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder getAgentEmailMessageUnitsConfigBuilder() {
       return getAgentEmailMessageUnitsConfigFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig agent_email_message_units_config = 125 [json_name = "agentEmailMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig agent_email_message_units_config = 125 [json_name = "agentEmailMessageUnitsConfig", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getAgentEmailMessageUnitsConfigOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getAgentEmailMessageUnitsConfigOrBuilder() {
       if ((configCase_ == 125) && (agentEmailMessageUnitsConfigBuilder_ != null)) {
         return agentEmailMessageUnitsConfigBuilder_.getMessageOrBuilder();
       } else {
@@ -6879,7 +7133,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig agent_email_message_units_config = 125 [json_name = "agentEmailMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig agent_email_message_units_config = 125 [json_name = "agentEmailMessageUnitsConfig", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder> 
@@ -6903,19 +7157,23 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder> agentSmsMessageUnitsConfigBuilder_;
     /**
-     * <code>.api.commons.billing.modules.BasicConfig agent_sms_message_units_config = 126 [json_name = "agentSmsMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig agent_sms_message_units_config = 126 [json_name = "agentSmsMessageUnitsConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.agent_sms_message_units_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=69
      * @return Whether the agentSmsMessageUnitsConfig field is set.
      */
     @java.lang.Override
-    public boolean hasAgentSmsMessageUnitsConfig() {
+    @java.lang.Deprecated public boolean hasAgentSmsMessageUnitsConfig() {
       return configCase_ == 126;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig agent_sms_message_units_config = 126 [json_name = "agentSmsMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig agent_sms_message_units_config = 126 [json_name = "agentSmsMessageUnitsConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.agent_sms_message_units_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=69
      * @return The agentSmsMessageUnitsConfig.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getAgentSmsMessageUnitsConfig() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getAgentSmsMessageUnitsConfig() {
       if (agentSmsMessageUnitsConfigBuilder_ == null) {
         if (configCase_ == 126) {
           return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
@@ -6929,9 +7187,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig agent_sms_message_units_config = 126 [json_name = "agentSmsMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig agent_sms_message_units_config = 126 [json_name = "agentSmsMessageUnitsConfig", deprecated = true];</code>
      */
-    public Builder setAgentSmsMessageUnitsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
+    @java.lang.Deprecated public Builder setAgentSmsMessageUnitsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
       if (agentSmsMessageUnitsConfigBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -6945,9 +7203,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig agent_sms_message_units_config = 126 [json_name = "agentSmsMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig agent_sms_message_units_config = 126 [json_name = "agentSmsMessageUnitsConfig", deprecated = true];</code>
      */
-    public Builder setAgentSmsMessageUnitsConfig(
+    @java.lang.Deprecated public Builder setAgentSmsMessageUnitsConfig(
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder builderForValue) {
       if (agentSmsMessageUnitsConfigBuilder_ == null) {
         config_ = builderForValue.build();
@@ -6959,9 +7217,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig agent_sms_message_units_config = 126 [json_name = "agentSmsMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig agent_sms_message_units_config = 126 [json_name = "agentSmsMessageUnitsConfig", deprecated = true];</code>
      */
-    public Builder mergeAgentSmsMessageUnitsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
+    @java.lang.Deprecated public Builder mergeAgentSmsMessageUnitsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
       if (agentSmsMessageUnitsConfigBuilder_ == null) {
         if (configCase_ == 126 &&
             config_ != com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.getDefaultInstance()) {
@@ -6982,9 +7240,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig agent_sms_message_units_config = 126 [json_name = "agentSmsMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig agent_sms_message_units_config = 126 [json_name = "agentSmsMessageUnitsConfig", deprecated = true];</code>
      */
-    public Builder clearAgentSmsMessageUnitsConfig() {
+    @java.lang.Deprecated public Builder clearAgentSmsMessageUnitsConfig() {
       if (agentSmsMessageUnitsConfigBuilder_ == null) {
         if (configCase_ == 126) {
           configCase_ = 0;
@@ -7001,16 +7259,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig agent_sms_message_units_config = 126 [json_name = "agentSmsMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig agent_sms_message_units_config = 126 [json_name = "agentSmsMessageUnitsConfig", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder getAgentSmsMessageUnitsConfigBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder getAgentSmsMessageUnitsConfigBuilder() {
       return getAgentSmsMessageUnitsConfigFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig agent_sms_message_units_config = 126 [json_name = "agentSmsMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig agent_sms_message_units_config = 126 [json_name = "agentSmsMessageUnitsConfig", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getAgentSmsMessageUnitsConfigOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getAgentSmsMessageUnitsConfigOrBuilder() {
       if ((configCase_ == 126) && (agentSmsMessageUnitsConfigBuilder_ != null)) {
         return agentSmsMessageUnitsConfigBuilder_.getMessageOrBuilder();
       } else {
@@ -7021,7 +7279,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig agent_sms_message_units_config = 126 [json_name = "agentSmsMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig agent_sms_message_units_config = 126 [json_name = "agentSmsMessageUnitsConfig", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder> 
@@ -7045,19 +7303,23 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder> managerChatMessageUnitsConfigBuilder_;
     /**
-     * <code>.api.commons.billing.modules.BasicConfig manager_chat_message_units_config = 127 [json_name = "managerChatMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig manager_chat_message_units_config = 127 [json_name = "managerChatMessageUnitsConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.manager_chat_message_units_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=70
      * @return Whether the managerChatMessageUnitsConfig field is set.
      */
     @java.lang.Override
-    public boolean hasManagerChatMessageUnitsConfig() {
+    @java.lang.Deprecated public boolean hasManagerChatMessageUnitsConfig() {
       return configCase_ == 127;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig manager_chat_message_units_config = 127 [json_name = "managerChatMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig manager_chat_message_units_config = 127 [json_name = "managerChatMessageUnitsConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.manager_chat_message_units_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=70
      * @return The managerChatMessageUnitsConfig.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getManagerChatMessageUnitsConfig() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getManagerChatMessageUnitsConfig() {
       if (managerChatMessageUnitsConfigBuilder_ == null) {
         if (configCase_ == 127) {
           return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
@@ -7071,9 +7333,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig manager_chat_message_units_config = 127 [json_name = "managerChatMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig manager_chat_message_units_config = 127 [json_name = "managerChatMessageUnitsConfig", deprecated = true];</code>
      */
-    public Builder setManagerChatMessageUnitsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
+    @java.lang.Deprecated public Builder setManagerChatMessageUnitsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
       if (managerChatMessageUnitsConfigBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -7087,9 +7349,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig manager_chat_message_units_config = 127 [json_name = "managerChatMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig manager_chat_message_units_config = 127 [json_name = "managerChatMessageUnitsConfig", deprecated = true];</code>
      */
-    public Builder setManagerChatMessageUnitsConfig(
+    @java.lang.Deprecated public Builder setManagerChatMessageUnitsConfig(
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder builderForValue) {
       if (managerChatMessageUnitsConfigBuilder_ == null) {
         config_ = builderForValue.build();
@@ -7101,9 +7363,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig manager_chat_message_units_config = 127 [json_name = "managerChatMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig manager_chat_message_units_config = 127 [json_name = "managerChatMessageUnitsConfig", deprecated = true];</code>
      */
-    public Builder mergeManagerChatMessageUnitsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
+    @java.lang.Deprecated public Builder mergeManagerChatMessageUnitsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
       if (managerChatMessageUnitsConfigBuilder_ == null) {
         if (configCase_ == 127 &&
             config_ != com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.getDefaultInstance()) {
@@ -7124,9 +7386,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig manager_chat_message_units_config = 127 [json_name = "managerChatMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig manager_chat_message_units_config = 127 [json_name = "managerChatMessageUnitsConfig", deprecated = true];</code>
      */
-    public Builder clearManagerChatMessageUnitsConfig() {
+    @java.lang.Deprecated public Builder clearManagerChatMessageUnitsConfig() {
       if (managerChatMessageUnitsConfigBuilder_ == null) {
         if (configCase_ == 127) {
           configCase_ = 0;
@@ -7143,16 +7405,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig manager_chat_message_units_config = 127 [json_name = "managerChatMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig manager_chat_message_units_config = 127 [json_name = "managerChatMessageUnitsConfig", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder getManagerChatMessageUnitsConfigBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder getManagerChatMessageUnitsConfigBuilder() {
       return getManagerChatMessageUnitsConfigFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig manager_chat_message_units_config = 127 [json_name = "managerChatMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig manager_chat_message_units_config = 127 [json_name = "managerChatMessageUnitsConfig", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getManagerChatMessageUnitsConfigOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getManagerChatMessageUnitsConfigOrBuilder() {
       if ((configCase_ == 127) && (managerChatMessageUnitsConfigBuilder_ != null)) {
         return managerChatMessageUnitsConfigBuilder_.getMessageOrBuilder();
       } else {
@@ -7163,7 +7425,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig manager_chat_message_units_config = 127 [json_name = "managerChatMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig manager_chat_message_units_config = 127 [json_name = "managerChatMessageUnitsConfig", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder> 
@@ -7187,19 +7449,23 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder> managerEmailMessageUnitsConfigBuilder_;
     /**
-     * <code>.api.commons.billing.modules.BasicConfig manager_email_message_units_config = 128 [json_name = "managerEmailMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig manager_email_message_units_config = 128 [json_name = "managerEmailMessageUnitsConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.manager_email_message_units_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=71
      * @return Whether the managerEmailMessageUnitsConfig field is set.
      */
     @java.lang.Override
-    public boolean hasManagerEmailMessageUnitsConfig() {
+    @java.lang.Deprecated public boolean hasManagerEmailMessageUnitsConfig() {
       return configCase_ == 128;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig manager_email_message_units_config = 128 [json_name = "managerEmailMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig manager_email_message_units_config = 128 [json_name = "managerEmailMessageUnitsConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.manager_email_message_units_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=71
      * @return The managerEmailMessageUnitsConfig.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getManagerEmailMessageUnitsConfig() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getManagerEmailMessageUnitsConfig() {
       if (managerEmailMessageUnitsConfigBuilder_ == null) {
         if (configCase_ == 128) {
           return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
@@ -7213,9 +7479,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig manager_email_message_units_config = 128 [json_name = "managerEmailMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig manager_email_message_units_config = 128 [json_name = "managerEmailMessageUnitsConfig", deprecated = true];</code>
      */
-    public Builder setManagerEmailMessageUnitsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
+    @java.lang.Deprecated public Builder setManagerEmailMessageUnitsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
       if (managerEmailMessageUnitsConfigBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -7229,9 +7495,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig manager_email_message_units_config = 128 [json_name = "managerEmailMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig manager_email_message_units_config = 128 [json_name = "managerEmailMessageUnitsConfig", deprecated = true];</code>
      */
-    public Builder setManagerEmailMessageUnitsConfig(
+    @java.lang.Deprecated public Builder setManagerEmailMessageUnitsConfig(
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder builderForValue) {
       if (managerEmailMessageUnitsConfigBuilder_ == null) {
         config_ = builderForValue.build();
@@ -7243,9 +7509,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig manager_email_message_units_config = 128 [json_name = "managerEmailMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig manager_email_message_units_config = 128 [json_name = "managerEmailMessageUnitsConfig", deprecated = true];</code>
      */
-    public Builder mergeManagerEmailMessageUnitsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
+    @java.lang.Deprecated public Builder mergeManagerEmailMessageUnitsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
       if (managerEmailMessageUnitsConfigBuilder_ == null) {
         if (configCase_ == 128 &&
             config_ != com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.getDefaultInstance()) {
@@ -7266,9 +7532,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig manager_email_message_units_config = 128 [json_name = "managerEmailMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig manager_email_message_units_config = 128 [json_name = "managerEmailMessageUnitsConfig", deprecated = true];</code>
      */
-    public Builder clearManagerEmailMessageUnitsConfig() {
+    @java.lang.Deprecated public Builder clearManagerEmailMessageUnitsConfig() {
       if (managerEmailMessageUnitsConfigBuilder_ == null) {
         if (configCase_ == 128) {
           configCase_ = 0;
@@ -7285,16 +7551,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig manager_email_message_units_config = 128 [json_name = "managerEmailMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig manager_email_message_units_config = 128 [json_name = "managerEmailMessageUnitsConfig", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder getManagerEmailMessageUnitsConfigBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder getManagerEmailMessageUnitsConfigBuilder() {
       return getManagerEmailMessageUnitsConfigFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig manager_email_message_units_config = 128 [json_name = "managerEmailMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig manager_email_message_units_config = 128 [json_name = "managerEmailMessageUnitsConfig", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getManagerEmailMessageUnitsConfigOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getManagerEmailMessageUnitsConfigOrBuilder() {
       if ((configCase_ == 128) && (managerEmailMessageUnitsConfigBuilder_ != null)) {
         return managerEmailMessageUnitsConfigBuilder_.getMessageOrBuilder();
       } else {
@@ -7305,7 +7571,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig manager_email_message_units_config = 128 [json_name = "managerEmailMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig manager_email_message_units_config = 128 [json_name = "managerEmailMessageUnitsConfig", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder> 
@@ -7329,19 +7595,23 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder> managerSmsMessageUnitsConfigBuilder_;
     /**
-     * <code>.api.commons.billing.modules.BasicConfig manager_sms_message_units_config = 129 [json_name = "managerSmsMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig manager_sms_message_units_config = 129 [json_name = "managerSmsMessageUnitsConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.manager_sms_message_units_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=72
      * @return Whether the managerSmsMessageUnitsConfig field is set.
      */
     @java.lang.Override
-    public boolean hasManagerSmsMessageUnitsConfig() {
+    @java.lang.Deprecated public boolean hasManagerSmsMessageUnitsConfig() {
       return configCase_ == 129;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig manager_sms_message_units_config = 129 [json_name = "managerSmsMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig manager_sms_message_units_config = 129 [json_name = "managerSmsMessageUnitsConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.manager_sms_message_units_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=72
      * @return The managerSmsMessageUnitsConfig.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getManagerSmsMessageUnitsConfig() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getManagerSmsMessageUnitsConfig() {
       if (managerSmsMessageUnitsConfigBuilder_ == null) {
         if (configCase_ == 129) {
           return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
@@ -7355,9 +7625,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig manager_sms_message_units_config = 129 [json_name = "managerSmsMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig manager_sms_message_units_config = 129 [json_name = "managerSmsMessageUnitsConfig", deprecated = true];</code>
      */
-    public Builder setManagerSmsMessageUnitsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
+    @java.lang.Deprecated public Builder setManagerSmsMessageUnitsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
       if (managerSmsMessageUnitsConfigBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -7371,9 +7641,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig manager_sms_message_units_config = 129 [json_name = "managerSmsMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig manager_sms_message_units_config = 129 [json_name = "managerSmsMessageUnitsConfig", deprecated = true];</code>
      */
-    public Builder setManagerSmsMessageUnitsConfig(
+    @java.lang.Deprecated public Builder setManagerSmsMessageUnitsConfig(
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder builderForValue) {
       if (managerSmsMessageUnitsConfigBuilder_ == null) {
         config_ = builderForValue.build();
@@ -7385,9 +7655,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig manager_sms_message_units_config = 129 [json_name = "managerSmsMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig manager_sms_message_units_config = 129 [json_name = "managerSmsMessageUnitsConfig", deprecated = true];</code>
      */
-    public Builder mergeManagerSmsMessageUnitsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
+    @java.lang.Deprecated public Builder mergeManagerSmsMessageUnitsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
       if (managerSmsMessageUnitsConfigBuilder_ == null) {
         if (configCase_ == 129 &&
             config_ != com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.getDefaultInstance()) {
@@ -7408,9 +7678,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig manager_sms_message_units_config = 129 [json_name = "managerSmsMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig manager_sms_message_units_config = 129 [json_name = "managerSmsMessageUnitsConfig", deprecated = true];</code>
      */
-    public Builder clearManagerSmsMessageUnitsConfig() {
+    @java.lang.Deprecated public Builder clearManagerSmsMessageUnitsConfig() {
       if (managerSmsMessageUnitsConfigBuilder_ == null) {
         if (configCase_ == 129) {
           configCase_ = 0;
@@ -7427,16 +7697,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig manager_sms_message_units_config = 129 [json_name = "managerSmsMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig manager_sms_message_units_config = 129 [json_name = "managerSmsMessageUnitsConfig", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder getManagerSmsMessageUnitsConfigBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder getManagerSmsMessageUnitsConfigBuilder() {
       return getManagerSmsMessageUnitsConfigFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig manager_sms_message_units_config = 129 [json_name = "managerSmsMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig manager_sms_message_units_config = 129 [json_name = "managerSmsMessageUnitsConfig", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getManagerSmsMessageUnitsConfigOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getManagerSmsMessageUnitsConfigOrBuilder() {
       if ((configCase_ == 129) && (managerSmsMessageUnitsConfigBuilder_ != null)) {
         return managerSmsMessageUnitsConfigBuilder_.getMessageOrBuilder();
       } else {
@@ -7447,7 +7717,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig manager_sms_message_units_config = 129 [json_name = "managerSmsMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig manager_sms_message_units_config = 129 [json_name = "managerSmsMessageUnitsConfig", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder> 
@@ -7471,19 +7741,23 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder> customerChatMessageUnitsConfigBuilder_;
     /**
-     * <code>.api.commons.billing.modules.BasicConfig customer_chat_message_units_config = 130 [json_name = "customerChatMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig customer_chat_message_units_config = 130 [json_name = "customerChatMessageUnitsConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.customer_chat_message_units_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=73
      * @return Whether the customerChatMessageUnitsConfig field is set.
      */
     @java.lang.Override
-    public boolean hasCustomerChatMessageUnitsConfig() {
+    @java.lang.Deprecated public boolean hasCustomerChatMessageUnitsConfig() {
       return configCase_ == 130;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig customer_chat_message_units_config = 130 [json_name = "customerChatMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig customer_chat_message_units_config = 130 [json_name = "customerChatMessageUnitsConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.customer_chat_message_units_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=73
      * @return The customerChatMessageUnitsConfig.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getCustomerChatMessageUnitsConfig() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getCustomerChatMessageUnitsConfig() {
       if (customerChatMessageUnitsConfigBuilder_ == null) {
         if (configCase_ == 130) {
           return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
@@ -7497,9 +7771,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig customer_chat_message_units_config = 130 [json_name = "customerChatMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig customer_chat_message_units_config = 130 [json_name = "customerChatMessageUnitsConfig", deprecated = true];</code>
      */
-    public Builder setCustomerChatMessageUnitsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
+    @java.lang.Deprecated public Builder setCustomerChatMessageUnitsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
       if (customerChatMessageUnitsConfigBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -7513,9 +7787,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig customer_chat_message_units_config = 130 [json_name = "customerChatMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig customer_chat_message_units_config = 130 [json_name = "customerChatMessageUnitsConfig", deprecated = true];</code>
      */
-    public Builder setCustomerChatMessageUnitsConfig(
+    @java.lang.Deprecated public Builder setCustomerChatMessageUnitsConfig(
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder builderForValue) {
       if (customerChatMessageUnitsConfigBuilder_ == null) {
         config_ = builderForValue.build();
@@ -7527,9 +7801,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig customer_chat_message_units_config = 130 [json_name = "customerChatMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig customer_chat_message_units_config = 130 [json_name = "customerChatMessageUnitsConfig", deprecated = true];</code>
      */
-    public Builder mergeCustomerChatMessageUnitsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
+    @java.lang.Deprecated public Builder mergeCustomerChatMessageUnitsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
       if (customerChatMessageUnitsConfigBuilder_ == null) {
         if (configCase_ == 130 &&
             config_ != com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.getDefaultInstance()) {
@@ -7550,9 +7824,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig customer_chat_message_units_config = 130 [json_name = "customerChatMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig customer_chat_message_units_config = 130 [json_name = "customerChatMessageUnitsConfig", deprecated = true];</code>
      */
-    public Builder clearCustomerChatMessageUnitsConfig() {
+    @java.lang.Deprecated public Builder clearCustomerChatMessageUnitsConfig() {
       if (customerChatMessageUnitsConfigBuilder_ == null) {
         if (configCase_ == 130) {
           configCase_ = 0;
@@ -7569,16 +7843,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig customer_chat_message_units_config = 130 [json_name = "customerChatMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig customer_chat_message_units_config = 130 [json_name = "customerChatMessageUnitsConfig", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder getCustomerChatMessageUnitsConfigBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder getCustomerChatMessageUnitsConfigBuilder() {
       return getCustomerChatMessageUnitsConfigFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig customer_chat_message_units_config = 130 [json_name = "customerChatMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig customer_chat_message_units_config = 130 [json_name = "customerChatMessageUnitsConfig", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getCustomerChatMessageUnitsConfigOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getCustomerChatMessageUnitsConfigOrBuilder() {
       if ((configCase_ == 130) && (customerChatMessageUnitsConfigBuilder_ != null)) {
         return customerChatMessageUnitsConfigBuilder_.getMessageOrBuilder();
       } else {
@@ -7589,7 +7863,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig customer_chat_message_units_config = 130 [json_name = "customerChatMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig customer_chat_message_units_config = 130 [json_name = "customerChatMessageUnitsConfig", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder> 
@@ -7613,19 +7887,23 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder> customerEmailMessageUnitsConfigBuilder_;
     /**
-     * <code>.api.commons.billing.modules.BasicConfig customer_email_message_units_config = 131 [json_name = "customerEmailMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig customer_email_message_units_config = 131 [json_name = "customerEmailMessageUnitsConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.customer_email_message_units_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=74
      * @return Whether the customerEmailMessageUnitsConfig field is set.
      */
     @java.lang.Override
-    public boolean hasCustomerEmailMessageUnitsConfig() {
+    @java.lang.Deprecated public boolean hasCustomerEmailMessageUnitsConfig() {
       return configCase_ == 131;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig customer_email_message_units_config = 131 [json_name = "customerEmailMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig customer_email_message_units_config = 131 [json_name = "customerEmailMessageUnitsConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.customer_email_message_units_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=74
      * @return The customerEmailMessageUnitsConfig.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getCustomerEmailMessageUnitsConfig() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getCustomerEmailMessageUnitsConfig() {
       if (customerEmailMessageUnitsConfigBuilder_ == null) {
         if (configCase_ == 131) {
           return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
@@ -7639,9 +7917,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig customer_email_message_units_config = 131 [json_name = "customerEmailMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig customer_email_message_units_config = 131 [json_name = "customerEmailMessageUnitsConfig", deprecated = true];</code>
      */
-    public Builder setCustomerEmailMessageUnitsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
+    @java.lang.Deprecated public Builder setCustomerEmailMessageUnitsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
       if (customerEmailMessageUnitsConfigBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -7655,9 +7933,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig customer_email_message_units_config = 131 [json_name = "customerEmailMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig customer_email_message_units_config = 131 [json_name = "customerEmailMessageUnitsConfig", deprecated = true];</code>
      */
-    public Builder setCustomerEmailMessageUnitsConfig(
+    @java.lang.Deprecated public Builder setCustomerEmailMessageUnitsConfig(
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder builderForValue) {
       if (customerEmailMessageUnitsConfigBuilder_ == null) {
         config_ = builderForValue.build();
@@ -7669,9 +7947,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig customer_email_message_units_config = 131 [json_name = "customerEmailMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig customer_email_message_units_config = 131 [json_name = "customerEmailMessageUnitsConfig", deprecated = true];</code>
      */
-    public Builder mergeCustomerEmailMessageUnitsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
+    @java.lang.Deprecated public Builder mergeCustomerEmailMessageUnitsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
       if (customerEmailMessageUnitsConfigBuilder_ == null) {
         if (configCase_ == 131 &&
             config_ != com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.getDefaultInstance()) {
@@ -7692,9 +7970,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig customer_email_message_units_config = 131 [json_name = "customerEmailMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig customer_email_message_units_config = 131 [json_name = "customerEmailMessageUnitsConfig", deprecated = true];</code>
      */
-    public Builder clearCustomerEmailMessageUnitsConfig() {
+    @java.lang.Deprecated public Builder clearCustomerEmailMessageUnitsConfig() {
       if (customerEmailMessageUnitsConfigBuilder_ == null) {
         if (configCase_ == 131) {
           configCase_ = 0;
@@ -7711,16 +7989,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig customer_email_message_units_config = 131 [json_name = "customerEmailMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig customer_email_message_units_config = 131 [json_name = "customerEmailMessageUnitsConfig", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder getCustomerEmailMessageUnitsConfigBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder getCustomerEmailMessageUnitsConfigBuilder() {
       return getCustomerEmailMessageUnitsConfigFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig customer_email_message_units_config = 131 [json_name = "customerEmailMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig customer_email_message_units_config = 131 [json_name = "customerEmailMessageUnitsConfig", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getCustomerEmailMessageUnitsConfigOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getCustomerEmailMessageUnitsConfigOrBuilder() {
       if ((configCase_ == 131) && (customerEmailMessageUnitsConfigBuilder_ != null)) {
         return customerEmailMessageUnitsConfigBuilder_.getMessageOrBuilder();
       } else {
@@ -7731,7 +8009,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig customer_email_message_units_config = 131 [json_name = "customerEmailMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig customer_email_message_units_config = 131 [json_name = "customerEmailMessageUnitsConfig", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder> 
@@ -7755,19 +8033,23 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder> customerSmsMessageUnitsConfigBuilder_;
     /**
-     * <code>.api.commons.billing.modules.BasicConfig customer_sms_message_units_config = 132 [json_name = "customerSmsMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig customer_sms_message_units_config = 132 [json_name = "customerSmsMessageUnitsConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.customer_sms_message_units_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=75
      * @return Whether the customerSmsMessageUnitsConfig field is set.
      */
     @java.lang.Override
-    public boolean hasCustomerSmsMessageUnitsConfig() {
+    @java.lang.Deprecated public boolean hasCustomerSmsMessageUnitsConfig() {
       return configCase_ == 132;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig customer_sms_message_units_config = 132 [json_name = "customerSmsMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig customer_sms_message_units_config = 132 [json_name = "customerSmsMessageUnitsConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.customer_sms_message_units_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=75
      * @return The customerSmsMessageUnitsConfig.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getCustomerSmsMessageUnitsConfig() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getCustomerSmsMessageUnitsConfig() {
       if (customerSmsMessageUnitsConfigBuilder_ == null) {
         if (configCase_ == 132) {
           return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
@@ -7781,9 +8063,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig customer_sms_message_units_config = 132 [json_name = "customerSmsMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig customer_sms_message_units_config = 132 [json_name = "customerSmsMessageUnitsConfig", deprecated = true];</code>
      */
-    public Builder setCustomerSmsMessageUnitsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
+    @java.lang.Deprecated public Builder setCustomerSmsMessageUnitsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
       if (customerSmsMessageUnitsConfigBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -7797,9 +8079,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig customer_sms_message_units_config = 132 [json_name = "customerSmsMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig customer_sms_message_units_config = 132 [json_name = "customerSmsMessageUnitsConfig", deprecated = true];</code>
      */
-    public Builder setCustomerSmsMessageUnitsConfig(
+    @java.lang.Deprecated public Builder setCustomerSmsMessageUnitsConfig(
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder builderForValue) {
       if (customerSmsMessageUnitsConfigBuilder_ == null) {
         config_ = builderForValue.build();
@@ -7811,9 +8093,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig customer_sms_message_units_config = 132 [json_name = "customerSmsMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig customer_sms_message_units_config = 132 [json_name = "customerSmsMessageUnitsConfig", deprecated = true];</code>
      */
-    public Builder mergeCustomerSmsMessageUnitsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
+    @java.lang.Deprecated public Builder mergeCustomerSmsMessageUnitsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
       if (customerSmsMessageUnitsConfigBuilder_ == null) {
         if (configCase_ == 132 &&
             config_ != com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.getDefaultInstance()) {
@@ -7834,9 +8116,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig customer_sms_message_units_config = 132 [json_name = "customerSmsMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig customer_sms_message_units_config = 132 [json_name = "customerSmsMessageUnitsConfig", deprecated = true];</code>
      */
-    public Builder clearCustomerSmsMessageUnitsConfig() {
+    @java.lang.Deprecated public Builder clearCustomerSmsMessageUnitsConfig() {
       if (customerSmsMessageUnitsConfigBuilder_ == null) {
         if (configCase_ == 132) {
           configCase_ = 0;
@@ -7853,16 +8135,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig customer_sms_message_units_config = 132 [json_name = "customerSmsMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig customer_sms_message_units_config = 132 [json_name = "customerSmsMessageUnitsConfig", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder getCustomerSmsMessageUnitsConfigBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder getCustomerSmsMessageUnitsConfigBuilder() {
       return getCustomerSmsMessageUnitsConfigFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig customer_sms_message_units_config = 132 [json_name = "customerSmsMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig customer_sms_message_units_config = 132 [json_name = "customerSmsMessageUnitsConfig", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getCustomerSmsMessageUnitsConfigOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getCustomerSmsMessageUnitsConfigOrBuilder() {
       if ((configCase_ == 132) && (customerSmsMessageUnitsConfigBuilder_ != null)) {
         return customerSmsMessageUnitsConfigBuilder_.getMessageOrBuilder();
       } else {
@@ -7873,7 +8155,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig customer_sms_message_units_config = 132 [json_name = "customerSmsMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig customer_sms_message_units_config = 132 [json_name = "customerSmsMessageUnitsConfig", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder> 
@@ -7897,19 +8179,23 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder> systemChatMessageUnitsConfigBuilder_;
     /**
-     * <code>.api.commons.billing.modules.BasicConfig system_chat_message_units_config = 133 [json_name = "systemChatMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig system_chat_message_units_config = 133 [json_name = "systemChatMessageUnitsConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.system_chat_message_units_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=76
      * @return Whether the systemChatMessageUnitsConfig field is set.
      */
     @java.lang.Override
-    public boolean hasSystemChatMessageUnitsConfig() {
+    @java.lang.Deprecated public boolean hasSystemChatMessageUnitsConfig() {
       return configCase_ == 133;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig system_chat_message_units_config = 133 [json_name = "systemChatMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig system_chat_message_units_config = 133 [json_name = "systemChatMessageUnitsConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.system_chat_message_units_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=76
      * @return The systemChatMessageUnitsConfig.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getSystemChatMessageUnitsConfig() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getSystemChatMessageUnitsConfig() {
       if (systemChatMessageUnitsConfigBuilder_ == null) {
         if (configCase_ == 133) {
           return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
@@ -7923,9 +8209,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig system_chat_message_units_config = 133 [json_name = "systemChatMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig system_chat_message_units_config = 133 [json_name = "systemChatMessageUnitsConfig", deprecated = true];</code>
      */
-    public Builder setSystemChatMessageUnitsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
+    @java.lang.Deprecated public Builder setSystemChatMessageUnitsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
       if (systemChatMessageUnitsConfigBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -7939,9 +8225,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig system_chat_message_units_config = 133 [json_name = "systemChatMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig system_chat_message_units_config = 133 [json_name = "systemChatMessageUnitsConfig", deprecated = true];</code>
      */
-    public Builder setSystemChatMessageUnitsConfig(
+    @java.lang.Deprecated public Builder setSystemChatMessageUnitsConfig(
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder builderForValue) {
       if (systemChatMessageUnitsConfigBuilder_ == null) {
         config_ = builderForValue.build();
@@ -7953,9 +8239,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig system_chat_message_units_config = 133 [json_name = "systemChatMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig system_chat_message_units_config = 133 [json_name = "systemChatMessageUnitsConfig", deprecated = true];</code>
      */
-    public Builder mergeSystemChatMessageUnitsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
+    @java.lang.Deprecated public Builder mergeSystemChatMessageUnitsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
       if (systemChatMessageUnitsConfigBuilder_ == null) {
         if (configCase_ == 133 &&
             config_ != com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.getDefaultInstance()) {
@@ -7976,9 +8262,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig system_chat_message_units_config = 133 [json_name = "systemChatMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig system_chat_message_units_config = 133 [json_name = "systemChatMessageUnitsConfig", deprecated = true];</code>
      */
-    public Builder clearSystemChatMessageUnitsConfig() {
+    @java.lang.Deprecated public Builder clearSystemChatMessageUnitsConfig() {
       if (systemChatMessageUnitsConfigBuilder_ == null) {
         if (configCase_ == 133) {
           configCase_ = 0;
@@ -7995,16 +8281,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig system_chat_message_units_config = 133 [json_name = "systemChatMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig system_chat_message_units_config = 133 [json_name = "systemChatMessageUnitsConfig", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder getSystemChatMessageUnitsConfigBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder getSystemChatMessageUnitsConfigBuilder() {
       return getSystemChatMessageUnitsConfigFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig system_chat_message_units_config = 133 [json_name = "systemChatMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig system_chat_message_units_config = 133 [json_name = "systemChatMessageUnitsConfig", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getSystemChatMessageUnitsConfigOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getSystemChatMessageUnitsConfigOrBuilder() {
       if ((configCase_ == 133) && (systemChatMessageUnitsConfigBuilder_ != null)) {
         return systemChatMessageUnitsConfigBuilder_.getMessageOrBuilder();
       } else {
@@ -8015,7 +8301,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig system_chat_message_units_config = 133 [json_name = "systemChatMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig system_chat_message_units_config = 133 [json_name = "systemChatMessageUnitsConfig", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder> 
@@ -8039,19 +8325,23 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder> systemEmailMessageUnitsConfigBuilder_;
     /**
-     * <code>.api.commons.billing.modules.BasicConfig system_email_message_units_config = 134 [json_name = "systemEmailMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig system_email_message_units_config = 134 [json_name = "systemEmailMessageUnitsConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.system_email_message_units_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=77
      * @return Whether the systemEmailMessageUnitsConfig field is set.
      */
     @java.lang.Override
-    public boolean hasSystemEmailMessageUnitsConfig() {
+    @java.lang.Deprecated public boolean hasSystemEmailMessageUnitsConfig() {
       return configCase_ == 134;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig system_email_message_units_config = 134 [json_name = "systemEmailMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig system_email_message_units_config = 134 [json_name = "systemEmailMessageUnitsConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.system_email_message_units_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=77
      * @return The systemEmailMessageUnitsConfig.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getSystemEmailMessageUnitsConfig() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getSystemEmailMessageUnitsConfig() {
       if (systemEmailMessageUnitsConfigBuilder_ == null) {
         if (configCase_ == 134) {
           return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
@@ -8065,9 +8355,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig system_email_message_units_config = 134 [json_name = "systemEmailMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig system_email_message_units_config = 134 [json_name = "systemEmailMessageUnitsConfig", deprecated = true];</code>
      */
-    public Builder setSystemEmailMessageUnitsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
+    @java.lang.Deprecated public Builder setSystemEmailMessageUnitsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
       if (systemEmailMessageUnitsConfigBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -8081,9 +8371,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig system_email_message_units_config = 134 [json_name = "systemEmailMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig system_email_message_units_config = 134 [json_name = "systemEmailMessageUnitsConfig", deprecated = true];</code>
      */
-    public Builder setSystemEmailMessageUnitsConfig(
+    @java.lang.Deprecated public Builder setSystemEmailMessageUnitsConfig(
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder builderForValue) {
       if (systemEmailMessageUnitsConfigBuilder_ == null) {
         config_ = builderForValue.build();
@@ -8095,9 +8385,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig system_email_message_units_config = 134 [json_name = "systemEmailMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig system_email_message_units_config = 134 [json_name = "systemEmailMessageUnitsConfig", deprecated = true];</code>
      */
-    public Builder mergeSystemEmailMessageUnitsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
+    @java.lang.Deprecated public Builder mergeSystemEmailMessageUnitsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
       if (systemEmailMessageUnitsConfigBuilder_ == null) {
         if (configCase_ == 134 &&
             config_ != com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.getDefaultInstance()) {
@@ -8118,9 +8408,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig system_email_message_units_config = 134 [json_name = "systemEmailMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig system_email_message_units_config = 134 [json_name = "systemEmailMessageUnitsConfig", deprecated = true];</code>
      */
-    public Builder clearSystemEmailMessageUnitsConfig() {
+    @java.lang.Deprecated public Builder clearSystemEmailMessageUnitsConfig() {
       if (systemEmailMessageUnitsConfigBuilder_ == null) {
         if (configCase_ == 134) {
           configCase_ = 0;
@@ -8137,16 +8427,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig system_email_message_units_config = 134 [json_name = "systemEmailMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig system_email_message_units_config = 134 [json_name = "systemEmailMessageUnitsConfig", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder getSystemEmailMessageUnitsConfigBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder getSystemEmailMessageUnitsConfigBuilder() {
       return getSystemEmailMessageUnitsConfigFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig system_email_message_units_config = 134 [json_name = "systemEmailMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig system_email_message_units_config = 134 [json_name = "systemEmailMessageUnitsConfig", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getSystemEmailMessageUnitsConfigOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getSystemEmailMessageUnitsConfigOrBuilder() {
       if ((configCase_ == 134) && (systemEmailMessageUnitsConfigBuilder_ != null)) {
         return systemEmailMessageUnitsConfigBuilder_.getMessageOrBuilder();
       } else {
@@ -8157,7 +8447,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig system_email_message_units_config = 134 [json_name = "systemEmailMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig system_email_message_units_config = 134 [json_name = "systemEmailMessageUnitsConfig", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder> 
@@ -8181,19 +8471,23 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder> systemSmsMessageUnitsConfigBuilder_;
     /**
-     * <code>.api.commons.billing.modules.BasicConfig system_sms_message_units_config = 135 [json_name = "systemSmsMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig system_sms_message_units_config = 135 [json_name = "systemSmsMessageUnitsConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.system_sms_message_units_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=78
      * @return Whether the systemSmsMessageUnitsConfig field is set.
      */
     @java.lang.Override
-    public boolean hasSystemSmsMessageUnitsConfig() {
+    @java.lang.Deprecated public boolean hasSystemSmsMessageUnitsConfig() {
       return configCase_ == 135;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig system_sms_message_units_config = 135 [json_name = "systemSmsMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig system_sms_message_units_config = 135 [json_name = "systemSmsMessageUnitsConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.system_sms_message_units_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=78
      * @return The systemSmsMessageUnitsConfig.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getSystemSmsMessageUnitsConfig() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getSystemSmsMessageUnitsConfig() {
       if (systemSmsMessageUnitsConfigBuilder_ == null) {
         if (configCase_ == 135) {
           return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
@@ -8207,9 +8501,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig system_sms_message_units_config = 135 [json_name = "systemSmsMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig system_sms_message_units_config = 135 [json_name = "systemSmsMessageUnitsConfig", deprecated = true];</code>
      */
-    public Builder setSystemSmsMessageUnitsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
+    @java.lang.Deprecated public Builder setSystemSmsMessageUnitsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
       if (systemSmsMessageUnitsConfigBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -8223,9 +8517,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig system_sms_message_units_config = 135 [json_name = "systemSmsMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig system_sms_message_units_config = 135 [json_name = "systemSmsMessageUnitsConfig", deprecated = true];</code>
      */
-    public Builder setSystemSmsMessageUnitsConfig(
+    @java.lang.Deprecated public Builder setSystemSmsMessageUnitsConfig(
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder builderForValue) {
       if (systemSmsMessageUnitsConfigBuilder_ == null) {
         config_ = builderForValue.build();
@@ -8237,9 +8531,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig system_sms_message_units_config = 135 [json_name = "systemSmsMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig system_sms_message_units_config = 135 [json_name = "systemSmsMessageUnitsConfig", deprecated = true];</code>
      */
-    public Builder mergeSystemSmsMessageUnitsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
+    @java.lang.Deprecated public Builder mergeSystemSmsMessageUnitsConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
       if (systemSmsMessageUnitsConfigBuilder_ == null) {
         if (configCase_ == 135 &&
             config_ != com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.getDefaultInstance()) {
@@ -8260,9 +8554,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig system_sms_message_units_config = 135 [json_name = "systemSmsMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig system_sms_message_units_config = 135 [json_name = "systemSmsMessageUnitsConfig", deprecated = true];</code>
      */
-    public Builder clearSystemSmsMessageUnitsConfig() {
+    @java.lang.Deprecated public Builder clearSystemSmsMessageUnitsConfig() {
       if (systemSmsMessageUnitsConfigBuilder_ == null) {
         if (configCase_ == 135) {
           configCase_ = 0;
@@ -8279,16 +8573,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig system_sms_message_units_config = 135 [json_name = "systemSmsMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig system_sms_message_units_config = 135 [json_name = "systemSmsMessageUnitsConfig", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder getSystemSmsMessageUnitsConfigBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder getSystemSmsMessageUnitsConfigBuilder() {
       return getSystemSmsMessageUnitsConfigFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig system_sms_message_units_config = 135 [json_name = "systemSmsMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig system_sms_message_units_config = 135 [json_name = "systemSmsMessageUnitsConfig", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getSystemSmsMessageUnitsConfigOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getSystemSmsMessageUnitsConfigOrBuilder() {
       if ((configCase_ == 135) && (systemSmsMessageUnitsConfigBuilder_ != null)) {
         return systemSmsMessageUnitsConfigBuilder_.getMessageOrBuilder();
       } else {
@@ -8299,7 +8593,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig system_sms_message_units_config = 135 [json_name = "systemSmsMessageUnitsConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig system_sms_message_units_config = 135 [json_name = "systemSmsMessageUnitsConfig", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder> 
@@ -8327,11 +8621,13 @@ private static final long serialVersionUID = 0L;
      * compliance configs
      * </pre>
      *
-     * <code>.api.commons.billing.modules.BasicConfig compliance_rnd_query_config = 200 [json_name = "complianceRndQueryConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig compliance_rnd_query_config = 200 [json_name = "complianceRndQueryConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.compliance_rnd_query_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=81
      * @return Whether the complianceRndQueryConfig field is set.
      */
     @java.lang.Override
-    public boolean hasComplianceRndQueryConfig() {
+    @java.lang.Deprecated public boolean hasComplianceRndQueryConfig() {
       return configCase_ == 200;
     }
     /**
@@ -8339,11 +8635,13 @@ private static final long serialVersionUID = 0L;
      * compliance configs
      * </pre>
      *
-     * <code>.api.commons.billing.modules.BasicConfig compliance_rnd_query_config = 200 [json_name = "complianceRndQueryConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig compliance_rnd_query_config = 200 [json_name = "complianceRndQueryConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.compliance_rnd_query_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=81
      * @return The complianceRndQueryConfig.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getComplianceRndQueryConfig() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getComplianceRndQueryConfig() {
       if (complianceRndQueryConfigBuilder_ == null) {
         if (configCase_ == 200) {
           return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
@@ -8361,9 +8659,9 @@ private static final long serialVersionUID = 0L;
      * compliance configs
      * </pre>
      *
-     * <code>.api.commons.billing.modules.BasicConfig compliance_rnd_query_config = 200 [json_name = "complianceRndQueryConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig compliance_rnd_query_config = 200 [json_name = "complianceRndQueryConfig", deprecated = true];</code>
      */
-    public Builder setComplianceRndQueryConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
+    @java.lang.Deprecated public Builder setComplianceRndQueryConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
       if (complianceRndQueryConfigBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -8381,9 +8679,9 @@ private static final long serialVersionUID = 0L;
      * compliance configs
      * </pre>
      *
-     * <code>.api.commons.billing.modules.BasicConfig compliance_rnd_query_config = 200 [json_name = "complianceRndQueryConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig compliance_rnd_query_config = 200 [json_name = "complianceRndQueryConfig", deprecated = true];</code>
      */
-    public Builder setComplianceRndQueryConfig(
+    @java.lang.Deprecated public Builder setComplianceRndQueryConfig(
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder builderForValue) {
       if (complianceRndQueryConfigBuilder_ == null) {
         config_ = builderForValue.build();
@@ -8399,9 +8697,9 @@ private static final long serialVersionUID = 0L;
      * compliance configs
      * </pre>
      *
-     * <code>.api.commons.billing.modules.BasicConfig compliance_rnd_query_config = 200 [json_name = "complianceRndQueryConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig compliance_rnd_query_config = 200 [json_name = "complianceRndQueryConfig", deprecated = true];</code>
      */
-    public Builder mergeComplianceRndQueryConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
+    @java.lang.Deprecated public Builder mergeComplianceRndQueryConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
       if (complianceRndQueryConfigBuilder_ == null) {
         if (configCase_ == 200 &&
             config_ != com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.getDefaultInstance()) {
@@ -8426,9 +8724,9 @@ private static final long serialVersionUID = 0L;
      * compliance configs
      * </pre>
      *
-     * <code>.api.commons.billing.modules.BasicConfig compliance_rnd_query_config = 200 [json_name = "complianceRndQueryConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig compliance_rnd_query_config = 200 [json_name = "complianceRndQueryConfig", deprecated = true];</code>
      */
-    public Builder clearComplianceRndQueryConfig() {
+    @java.lang.Deprecated public Builder clearComplianceRndQueryConfig() {
       if (complianceRndQueryConfigBuilder_ == null) {
         if (configCase_ == 200) {
           configCase_ = 0;
@@ -8449,9 +8747,9 @@ private static final long serialVersionUID = 0L;
      * compliance configs
      * </pre>
      *
-     * <code>.api.commons.billing.modules.BasicConfig compliance_rnd_query_config = 200 [json_name = "complianceRndQueryConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig compliance_rnd_query_config = 200 [json_name = "complianceRndQueryConfig", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder getComplianceRndQueryConfigBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder getComplianceRndQueryConfigBuilder() {
       return getComplianceRndQueryConfigFieldBuilder().getBuilder();
     }
     /**
@@ -8459,10 +8757,10 @@ private static final long serialVersionUID = 0L;
      * compliance configs
      * </pre>
      *
-     * <code>.api.commons.billing.modules.BasicConfig compliance_rnd_query_config = 200 [json_name = "complianceRndQueryConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig compliance_rnd_query_config = 200 [json_name = "complianceRndQueryConfig", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getComplianceRndQueryConfigOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getComplianceRndQueryConfigOrBuilder() {
       if ((configCase_ == 200) && (complianceRndQueryConfigBuilder_ != null)) {
         return complianceRndQueryConfigBuilder_.getMessageOrBuilder();
       } else {
@@ -8477,7 +8775,7 @@ private static final long serialVersionUID = 0L;
      * compliance configs
      * </pre>
      *
-     * <code>.api.commons.billing.modules.BasicConfig compliance_rnd_query_config = 200 [json_name = "complianceRndQueryConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig compliance_rnd_query_config = 200 [json_name = "complianceRndQueryConfig", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder> 
@@ -8501,19 +8799,23 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder> complianceRndQueryCachedConfigBuilder_;
     /**
-     * <code>.api.commons.billing.modules.BasicConfig compliance_rnd_query_cached_config = 201 [json_name = "complianceRndQueryCachedConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig compliance_rnd_query_cached_config = 201 [json_name = "complianceRndQueryCachedConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.compliance_rnd_query_cached_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=82
      * @return Whether the complianceRndQueryCachedConfig field is set.
      */
     @java.lang.Override
-    public boolean hasComplianceRndQueryCachedConfig() {
+    @java.lang.Deprecated public boolean hasComplianceRndQueryCachedConfig() {
       return configCase_ == 201;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig compliance_rnd_query_cached_config = 201 [json_name = "complianceRndQueryCachedConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig compliance_rnd_query_cached_config = 201 [json_name = "complianceRndQueryCachedConfig", deprecated = true];</code>
+     * @deprecated api.commons.billing.DetailConfig.compliance_rnd_query_cached_config is deprecated.
+     *     See api/commons/billing/detail.proto;l=82
      * @return The complianceRndQueryCachedConfig.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getComplianceRndQueryCachedConfig() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig getComplianceRndQueryCachedConfig() {
       if (complianceRndQueryCachedConfigBuilder_ == null) {
         if (configCase_ == 201) {
           return (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_;
@@ -8527,9 +8829,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig compliance_rnd_query_cached_config = 201 [json_name = "complianceRndQueryCachedConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig compliance_rnd_query_cached_config = 201 [json_name = "complianceRndQueryCachedConfig", deprecated = true];</code>
      */
-    public Builder setComplianceRndQueryCachedConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
+    @java.lang.Deprecated public Builder setComplianceRndQueryCachedConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
       if (complianceRndQueryCachedConfigBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -8543,9 +8845,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig compliance_rnd_query_cached_config = 201 [json_name = "complianceRndQueryCachedConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig compliance_rnd_query_cached_config = 201 [json_name = "complianceRndQueryCachedConfig", deprecated = true];</code>
      */
-    public Builder setComplianceRndQueryCachedConfig(
+    @java.lang.Deprecated public Builder setComplianceRndQueryCachedConfig(
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder builderForValue) {
       if (complianceRndQueryCachedConfigBuilder_ == null) {
         config_ = builderForValue.build();
@@ -8557,9 +8859,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig compliance_rnd_query_cached_config = 201 [json_name = "complianceRndQueryCachedConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig compliance_rnd_query_cached_config = 201 [json_name = "complianceRndQueryCachedConfig", deprecated = true];</code>
      */
-    public Builder mergeComplianceRndQueryCachedConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
+    @java.lang.Deprecated public Builder mergeComplianceRndQueryCachedConfig(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig value) {
       if (complianceRndQueryCachedConfigBuilder_ == null) {
         if (configCase_ == 201 &&
             config_ != com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.getDefaultInstance()) {
@@ -8580,9 +8882,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig compliance_rnd_query_cached_config = 201 [json_name = "complianceRndQueryCachedConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig compliance_rnd_query_cached_config = 201 [json_name = "complianceRndQueryCachedConfig", deprecated = true];</code>
      */
-    public Builder clearComplianceRndQueryCachedConfig() {
+    @java.lang.Deprecated public Builder clearComplianceRndQueryCachedConfig() {
       if (complianceRndQueryCachedConfigBuilder_ == null) {
         if (configCase_ == 201) {
           configCase_ = 0;
@@ -8599,16 +8901,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig compliance_rnd_query_cached_config = 201 [json_name = "complianceRndQueryCachedConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig compliance_rnd_query_cached_config = 201 [json_name = "complianceRndQueryCachedConfig", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder getComplianceRndQueryCachedConfigBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder getComplianceRndQueryCachedConfigBuilder() {
       return getComplianceRndQueryCachedConfigFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig compliance_rnd_query_cached_config = 201 [json_name = "complianceRndQueryCachedConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig compliance_rnd_query_cached_config = 201 [json_name = "complianceRndQueryCachedConfig", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getComplianceRndQueryCachedConfigOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getComplianceRndQueryCachedConfigOrBuilder() {
       if ((configCase_ == 201) && (complianceRndQueryCachedConfigBuilder_ != null)) {
         return complianceRndQueryCachedConfigBuilder_.getMessageOrBuilder();
       } else {
@@ -8619,7 +8921,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.billing.modules.BasicConfig compliance_rnd_query_cached_config = 201 [json_name = "complianceRndQueryCachedConfig"];</code>
+     * <code>.api.commons.billing.modules.BasicConfig compliance_rnd_query_cached_config = 201 [json_name = "complianceRndQueryCachedConfig", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder> 

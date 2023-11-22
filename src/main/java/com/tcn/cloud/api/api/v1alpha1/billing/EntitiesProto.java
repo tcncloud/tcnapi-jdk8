@@ -68,50 +68,53 @@ public final class EntitiesProto {
       "roto\032 api/commons/billing/detail.proto\032!" +
       "api/commons/billing/invoice.proto\032\034googl" +
       "e/api/annotations.proto\032\037google/protobuf" +
-      "/timestamp.proto\"*\n\021GetBillingPlanReq\022\025\n" +
-      "\006org_id\030\001 \001(\tR\005orgId\"Q\n\021GetBillingPlanRe" +
-      "s\022<\n\014billing_plan\030\001 \001(\0132\031.api.commons.bi" +
-      "lling.PlanR\013billingPlan\"s\n\024UpdateBilling" +
-      "PlanReq\022D\n\017billing_details\030\001 \003(\0132\033.api.c" +
-      "ommons.billing.DetailR\016billingDetails\022\025\n" +
-      "\006org_id\030\002 \001(\tR\005orgId\"T\n\024UpdateBillingPla" +
-      "nRes\022<\n\014billing_plan\030\001 \001(\0132\031.api.commons" +
-      ".billing.PlanR\013billingPlan\"\361\001\n\rGetInvoic" +
-      "eReq\022=\n\014invoice_date\030\001 \001(\0132\032.google.prot" +
-      "obuf.TimestampR\013invoiceDate\022\025\n\006org_id\030\002 " +
-      "\001(\tR\005orgId\022?\n\006format\030\003 \001(\0162#.api.v1alpha" +
-      "1.billing.InvoiceFormatB\002\030\001R\006format\022I\n\016i" +
-      "nvoice_format\030\004 \001(\0162\".api.commons.billin" +
-      "g.InvoiceFormatR\rinvoiceFormat\"\322\002\n\rGetIn" +
-      "voiceRes\022:\n\007invoice\030\001 \001(\0132\034.api.commons." +
-      "billing.InvoiceB\002\030\001R\007invoice\0228\n\005proto\030\002 " +
-      "\001(\0132\034.api.commons.billing.InvoiceB\002\030\001H\000R" +
-      "\005proto\022\035\n\007csv_url\030\003 \001(\tB\002\030\001H\000R\006csvUrl\022C\n" +
-      "\rinvoice_proto\030d \001(\0132\034.api.commons.billi" +
-      "ng.InvoiceH\001R\014invoiceProto\022(\n\017invoice_cs" +
-      "v_url\030e \001(\tH\001R\rinvoiceCsvUrl\022#\n\rbilling_" +
-      "cycle\030\004 \001(\tR\014billingCycleB\010\n\006formatB\016\n\014i" +
-      "nvoice_data\"\375\001\n\031ExportGeneratedInvoiceRe" +
-      "q\022=\n\014invoice_date\030\001 \001(\0132\032.google.protobu" +
-      "f.TimestampR\013invoiceDate\022\025\n\006org_id\030\002 \001(\t" +
-      "R\005orgId\022?\n\006format\030\003 \001(\0162#.api.v1alpha1.b" +
-      "illing.InvoiceFormatB\002\030\001R\006format\022I\n\016invo" +
-      "ice_format\030\004 \001(\0162\".api.commons.billing.I" +
-      "nvoiceFormatR\rinvoiceFormat\"\242\002\n\031ExportGe" +
-      "neratedInvoiceRes\0228\n\005proto\030\001 \001(\0132\034.api.c" +
-      "ommons.billing.InvoiceB\002\030\001H\000R\005proto\022\035\n\007c" +
-      "sv_url\030\002 \001(\tB\002\030\001H\000R\006csvUrl\022C\n\rinvoice_pr" +
-      "oto\030d \001(\0132\034.api.commons.billing.InvoiceH" +
-      "\001R\014invoiceProto\022(\n\017invoice_csv_url\030e \001(\t" +
-      "H\001R\rinvoiceCsvUrl\022#\n\rbilling_cycle\030\004 \001(\t" +
-      "R\014billingCycleB\010\n\006formatB\016\n\014invoice_data" +
-      "*a\n\rInvoiceFormat\022\036\n\032INVOICE_FORMAT_UNSP" +
-      "ECIFIED\020\000\022\030\n\024INVOICE_FORMAT_PROTO\020\001\022\026\n\022I" +
-      "NVOICE_FORMAT_CSV\020\002B\251\001\n&com.tcn.cloud.ap" +
-      "i.api.v1alpha1.billingB\rEntitiesProtoP\001\242" +
-      "\002\003AVB\252\002\024Api.V1alpha1.Billing\312\002\024Api\\V1alp" +
-      "ha1\\Billing\342\002 Api\\V1alpha1\\Billing\\GPBMe" +
-      "tadata\352\002\026Api::V1alpha1::Billingb\006proto3"
+      "/timestamp.proto\"2\n\021GetBillingPlanReq\022\031\n" +
+      "\006org_id\030\001 \001(\tB\002\030\001R\005orgId:\002\030\001\"Y\n\021GetBilli" +
+      "ngPlanRes\022@\n\014billing_plan\030\001 \001(\0132\031.api.co" +
+      "mmons.billing.PlanB\002\030\001R\013billingPlan:\002\030\001\"" +
+      "\177\n\024UpdateBillingPlanReq\022H\n\017billing_detai" +
+      "ls\030\001 \003(\0132\033.api.commons.billing.DetailB\002\030" +
+      "\001R\016billingDetails\022\031\n\006org_id\030\002 \001(\tB\002\030\001R\005o" +
+      "rgId:\002\030\001\"\\\n\024UpdateBillingPlanRes\022@\n\014bill" +
+      "ing_plan\030\001 \001(\0132\031.api.commons.billing.Pla" +
+      "nB\002\030\001R\013billingPlan:\002\030\001\"\201\002\n\rGetInvoiceReq" +
+      "\022A\n\014invoice_date\030\001 \001(\0132\032.google.protobuf" +
+      ".TimestampB\002\030\001R\013invoiceDate\022\031\n\006org_id\030\002 " +
+      "\001(\tB\002\030\001R\005orgId\022?\n\006format\030\003 \001(\0162#.api.v1a" +
+      "lpha1.billing.InvoiceFormatB\002\030\001R\006format\022" +
+      "M\n\016invoice_format\030\004 \001(\0162\".api.commons.bi" +
+      "lling.InvoiceFormatB\002\030\001R\rinvoiceFormat:\002" +
+      "\030\001\"\342\002\n\rGetInvoiceRes\022:\n\007invoice\030\001 \001(\0132\034." +
+      "api.commons.billing.InvoiceB\002\030\001R\007invoice" +
+      "\0228\n\005proto\030\002 \001(\0132\034.api.commons.billing.In" +
+      "voiceB\002\030\001H\000R\005proto\022\035\n\007csv_url\030\003 \001(\tB\002\030\001H" +
+      "\000R\006csvUrl\022G\n\rinvoice_proto\030d \001(\0132\034.api.c" +
+      "ommons.billing.InvoiceB\002\030\001H\001R\014invoicePro" +
+      "to\022,\n\017invoice_csv_url\030e \001(\tB\002\030\001H\001R\rinvoi" +
+      "ceCsvUrl\022\'\n\rbilling_cycle\030\004 \001(\tB\002\030\001R\014bil" +
+      "lingCycle:\002\030\001B\010\n\006formatB\016\n\014invoice_data\"" +
+      "\215\002\n\031ExportGeneratedInvoiceReq\022A\n\014invoice" +
+      "_date\030\001 \001(\0132\032.google.protobuf.TimestampB" +
+      "\002\030\001R\013invoiceDate\022\031\n\006org_id\030\002 \001(\tB\002\030\001R\005or" +
+      "gId\022?\n\006format\030\003 \001(\0162#.api.v1alpha1.billi" +
+      "ng.InvoiceFormatB\002\030\001R\006format\022M\n\016invoice_" +
+      "format\030\004 \001(\0162\".api.commons.billing.Invoi" +
+      "ceFormatB\002\030\001R\rinvoiceFormat:\002\030\001\"\262\002\n\031Expo" +
+      "rtGeneratedInvoiceRes\0228\n\005proto\030\001 \001(\0132\034.a" +
+      "pi.commons.billing.InvoiceB\002\030\001H\000R\005proto\022" +
+      "\035\n\007csv_url\030\002 \001(\tB\002\030\001H\000R\006csvUrl\022G\n\rinvoic" +
+      "e_proto\030d \001(\0132\034.api.commons.billing.Invo" +
+      "iceB\002\030\001H\001R\014invoiceProto\022,\n\017invoice_csv_u" +
+      "rl\030e \001(\tB\002\030\001H\001R\rinvoiceCsvUrl\022\'\n\rbilling" +
+      "_cycle\030\004 \001(\tB\002\030\001R\014billingCycle:\002\030\001B\010\n\006fo" +
+      "rmatB\016\n\014invoice_data*e\n\rInvoiceFormat\022\036\n" +
+      "\032INVOICE_FORMAT_UNSPECIFIED\020\000\022\030\n\024INVOICE" +
+      "_FORMAT_PROTO\020\001\022\026\n\022INVOICE_FORMAT_CSV\020\002\032" +
+      "\002\030\001B\251\001\n&com.tcn.cloud.api.api.v1alpha1.b" +
+      "illingB\rEntitiesProtoP\001\242\002\003AVB\252\002\024Api.V1al" +
+      "pha1.Billing\312\002\024Api\\V1alpha1\\Billing\342\002 Ap" +
+      "i\\V1alpha1\\Billing\\GPBMetadata\352\002\026Api::V1" +
+      "alpha1::Billingb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

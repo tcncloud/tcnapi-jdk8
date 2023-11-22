@@ -24,6 +24,10 @@ public enum ChannelType
    * <code>CHANNEL_TYPE_VOICE = 3;</code>
    */
   CHANNEL_TYPE_VOICE(3),
+  /**
+   * <code>CHANNEL_TYPE_WHATSAPP = 4;</code>
+   */
+  CHANNEL_TYPE_WHATSAPP(4),
   UNRECOGNIZED(-1),
   ;
 
@@ -43,6 +47,10 @@ public enum ChannelType
    * <code>CHANNEL_TYPE_VOICE = 3;</code>
    */
   public static final int CHANNEL_TYPE_VOICE_VALUE = 3;
+  /**
+   * <code>CHANNEL_TYPE_WHATSAPP = 4;</code>
+   */
+  public static final int CHANNEL_TYPE_WHATSAPP_VALUE = 4;
 
 
   public final int getNumber() {
@@ -73,6 +81,7 @@ public enum ChannelType
       case 1: return CHANNEL_TYPE_SMS;
       case 2: return CHANNEL_TYPE_CHAT;
       case 3: return CHANNEL_TYPE_VOICE;
+      case 4: return CHANNEL_TYPE_WHATSAPP;
       default: return null;
     }
   }

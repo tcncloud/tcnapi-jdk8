@@ -3,194 +3,131 @@
 
 package com.tcn.cloud.api.api.commons.billing;
 
-public interface PlanOrBuilder extends
+@java.lang.Deprecated public interface PlanOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.commons.billing.Plan)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <pre>
-   * all the details that make up this billing plan, where each
-   * detail defines how to configure a particular rating module.
-   * </pre>
-   *
-   * <code>repeated .api.commons.billing.Detail details = 1 [json_name = "details"];</code>
+   * <code>repeated .api.commons.billing.Detail details = 1 [json_name = "details", deprecated = true];</code>
    */
-  java.util.List<com.tcn.cloud.api.api.commons.billing.Detail> 
+  @java.lang.Deprecated java.util.List<com.tcn.cloud.api.api.commons.billing.Detail> 
       getDetailsList();
   /**
-   * <pre>
-   * all the details that make up this billing plan, where each
-   * detail defines how to configure a particular rating module.
-   * </pre>
-   *
-   * <code>repeated .api.commons.billing.Detail details = 1 [json_name = "details"];</code>
+   * <code>repeated .api.commons.billing.Detail details = 1 [json_name = "details", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.billing.Detail getDetails(int index);
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.Detail getDetails(int index);
   /**
-   * <pre>
-   * all the details that make up this billing plan, where each
-   * detail defines how to configure a particular rating module.
-   * </pre>
-   *
-   * <code>repeated .api.commons.billing.Detail details = 1 [json_name = "details"];</code>
+   * <code>repeated .api.commons.billing.Detail details = 1 [json_name = "details", deprecated = true];</code>
    */
-  int getDetailsCount();
+  @java.lang.Deprecated int getDetailsCount();
   /**
-   * <pre>
-   * all the details that make up this billing plan, where each
-   * detail defines how to configure a particular rating module.
-   * </pre>
-   *
-   * <code>repeated .api.commons.billing.Detail details = 1 [json_name = "details"];</code>
+   * <code>repeated .api.commons.billing.Detail details = 1 [json_name = "details", deprecated = true];</code>
    */
-  java.util.List<? extends com.tcn.cloud.api.api.commons.billing.DetailOrBuilder> 
+  @java.lang.Deprecated java.util.List<? extends com.tcn.cloud.api.api.commons.billing.DetailOrBuilder> 
       getDetailsOrBuilderList();
   /**
-   * <pre>
-   * all the details that make up this billing plan, where each
-   * detail defines how to configure a particular rating module.
-   * </pre>
-   *
-   * <code>repeated .api.commons.billing.Detail details = 1 [json_name = "details"];</code>
+   * <code>repeated .api.commons.billing.Detail details = 1 [json_name = "details", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.billing.DetailOrBuilder getDetailsOrBuilder(
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.DetailOrBuilder getDetailsOrBuilder(
       int index);
 
   /**
-   * <pre>
-   * the organization identifier
-   * </pre>
-   *
-   * <code>string org_id = 2 [json_name = "orgId"];</code>
+   * <code>string org_id = 2 [json_name = "orgId", deprecated = true];</code>
+   * @deprecated api.commons.billing.Plan.org_id is deprecated.
+   *     See api/commons/billing/detail.proto;l=11
    * @return The orgId.
    */
-  java.lang.String getOrgId();
+  @java.lang.Deprecated java.lang.String getOrgId();
   /**
-   * <pre>
-   * the organization identifier
-   * </pre>
-   *
-   * <code>string org_id = 2 [json_name = "orgId"];</code>
+   * <code>string org_id = 2 [json_name = "orgId", deprecated = true];</code>
+   * @deprecated api.commons.billing.Plan.org_id is deprecated.
+   *     See api/commons/billing/detail.proto;l=11
    * @return The bytes for orgId.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getOrgIdBytes();
 
   /**
-   * <pre>
-   * billing plan identifier
-   * </pre>
-   *
-   * <code>int64 billing_plan_id = 3 [json_name = "billingPlanId", jstype = JS_STRING];</code>
+   * <code>int64 billing_plan_id = 3 [json_name = "billingPlanId", deprecated = true, jstype = JS_STRING];</code>
+   * @deprecated api.commons.billing.Plan.billing_plan_id is deprecated.
+   *     See api/commons/billing/detail.proto;l=12
    * @return The billingPlanId.
    */
-  long getBillingPlanId();
+  @java.lang.Deprecated long getBillingPlanId();
 
   /**
-   * <pre>
-   * time the billing plan was created
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime"];</code>
+   * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime", deprecated = true];</code>
+   * @deprecated api.commons.billing.Plan.create_time is deprecated.
+   *     See api/commons/billing/detail.proto;l=16
    * @return Whether the createTime field is set.
    */
-  boolean hasCreateTime();
+  @java.lang.Deprecated boolean hasCreateTime();
   /**
-   * <pre>
-   * time the billing plan was created
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime"];</code>
+   * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime", deprecated = true];</code>
+   * @deprecated api.commons.billing.Plan.create_time is deprecated.
+   *     See api/commons/billing/detail.proto;l=16
    * @return The createTime.
    */
-  com.google.protobuf.Timestamp getCreateTime();
+  @java.lang.Deprecated com.google.protobuf.Timestamp getCreateTime();
   /**
-   * <pre>
-   * time the billing plan was created
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime"];</code>
+   * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime", deprecated = true];</code>
    */
-  com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder();
+  @java.lang.Deprecated com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder();
 
   /**
-   * <pre>
-   * time the billing plan was updated
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
+   * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime", deprecated = true];</code>
+   * @deprecated api.commons.billing.Plan.update_time is deprecated.
+   *     See api/commons/billing/detail.proto;l=17
    * @return Whether the updateTime field is set.
    */
-  boolean hasUpdateTime();
+  @java.lang.Deprecated boolean hasUpdateTime();
   /**
-   * <pre>
-   * time the billing plan was updated
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
+   * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime", deprecated = true];</code>
+   * @deprecated api.commons.billing.Plan.update_time is deprecated.
+   *     See api/commons/billing/detail.proto;l=17
    * @return The updateTime.
    */
-  com.google.protobuf.Timestamp getUpdateTime();
+  @java.lang.Deprecated com.google.protobuf.Timestamp getUpdateTime();
   /**
-   * <pre>
-   * time the billing plan was updated
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
+   * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime", deprecated = true];</code>
    */
-  com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder();
+  @java.lang.Deprecated com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder();
 
   /**
-   * <pre>
-   * the time from which this billing plan took effect
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp start_time = 6 [json_name = "startTime"];</code>
+   * <code>.google.protobuf.Timestamp start_time = 6 [json_name = "startTime", deprecated = true];</code>
+   * @deprecated api.commons.billing.Plan.start_time is deprecated.
+   *     See api/commons/billing/detail.proto;l=18
    * @return Whether the startTime field is set.
    */
-  boolean hasStartTime();
+  @java.lang.Deprecated boolean hasStartTime();
   /**
-   * <pre>
-   * the time from which this billing plan took effect
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp start_time = 6 [json_name = "startTime"];</code>
+   * <code>.google.protobuf.Timestamp start_time = 6 [json_name = "startTime", deprecated = true];</code>
+   * @deprecated api.commons.billing.Plan.start_time is deprecated.
+   *     See api/commons/billing/detail.proto;l=18
    * @return The startTime.
    */
-  com.google.protobuf.Timestamp getStartTime();
+  @java.lang.Deprecated com.google.protobuf.Timestamp getStartTime();
   /**
-   * <pre>
-   * the time from which this billing plan took effect
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp start_time = 6 [json_name = "startTime"];</code>
+   * <code>.google.protobuf.Timestamp start_time = 6 [json_name = "startTime", deprecated = true];</code>
    */
-  com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder();
+  @java.lang.Deprecated com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder();
 
   /**
-   * <pre>
-   * the time (if applicable) this billing plan ended; can be null
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp end_time = 7 [json_name = "endTime"];</code>
+   * <code>.google.protobuf.Timestamp end_time = 7 [json_name = "endTime", deprecated = true];</code>
+   * @deprecated api.commons.billing.Plan.end_time is deprecated.
+   *     See api/commons/billing/detail.proto;l=19
    * @return Whether the endTime field is set.
    */
-  boolean hasEndTime();
+  @java.lang.Deprecated boolean hasEndTime();
   /**
-   * <pre>
-   * the time (if applicable) this billing plan ended; can be null
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp end_time = 7 [json_name = "endTime"];</code>
+   * <code>.google.protobuf.Timestamp end_time = 7 [json_name = "endTime", deprecated = true];</code>
+   * @deprecated api.commons.billing.Plan.end_time is deprecated.
+   *     See api/commons/billing/detail.proto;l=19
    * @return The endTime.
    */
-  com.google.protobuf.Timestamp getEndTime();
+  @java.lang.Deprecated com.google.protobuf.Timestamp getEndTime();
   /**
-   * <pre>
-   * the time (if applicable) this billing plan ended; can be null
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp end_time = 7 [json_name = "endTime"];</code>
+   * <code>.google.protobuf.Timestamp end_time = 7 [json_name = "endTime", deprecated = true];</code>
    */
-  com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder();
+  @java.lang.Deprecated com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder();
 }

@@ -3,140 +3,93 @@
 
 package com.tcn.cloud.api.api.commons.billing;
 
-public interface InvoiceOrBuilder extends
+@java.lang.Deprecated public interface InvoiceOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.commons.billing.Invoice)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <pre>
-   * The items forming the invoice, where a product type
-   * should show up only once in this list.
-   * </pre>
-   *
-   * <code>repeated .api.commons.billing.InvoiceItem items = 1 [json_name = "items"];</code>
+   * <code>repeated .api.commons.billing.InvoiceItem items = 1 [json_name = "items", deprecated = true];</code>
    */
-  java.util.List<com.tcn.cloud.api.api.commons.billing.InvoiceItem> 
+  @java.lang.Deprecated java.util.List<com.tcn.cloud.api.api.commons.billing.InvoiceItem> 
       getItemsList();
   /**
-   * <pre>
-   * The items forming the invoice, where a product type
-   * should show up only once in this list.
-   * </pre>
-   *
-   * <code>repeated .api.commons.billing.InvoiceItem items = 1 [json_name = "items"];</code>
+   * <code>repeated .api.commons.billing.InvoiceItem items = 1 [json_name = "items", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.billing.InvoiceItem getItems(int index);
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.InvoiceItem getItems(int index);
   /**
-   * <pre>
-   * The items forming the invoice, where a product type
-   * should show up only once in this list.
-   * </pre>
-   *
-   * <code>repeated .api.commons.billing.InvoiceItem items = 1 [json_name = "items"];</code>
+   * <code>repeated .api.commons.billing.InvoiceItem items = 1 [json_name = "items", deprecated = true];</code>
    */
-  int getItemsCount();
+  @java.lang.Deprecated int getItemsCount();
   /**
-   * <pre>
-   * The items forming the invoice, where a product type
-   * should show up only once in this list.
-   * </pre>
-   *
-   * <code>repeated .api.commons.billing.InvoiceItem items = 1 [json_name = "items"];</code>
+   * <code>repeated .api.commons.billing.InvoiceItem items = 1 [json_name = "items", deprecated = true];</code>
    */
-  java.util.List<? extends com.tcn.cloud.api.api.commons.billing.InvoiceItemOrBuilder> 
+  @java.lang.Deprecated java.util.List<? extends com.tcn.cloud.api.api.commons.billing.InvoiceItemOrBuilder> 
       getItemsOrBuilderList();
   /**
-   * <pre>
-   * The items forming the invoice, where a product type
-   * should show up only once in this list.
-   * </pre>
-   *
-   * <code>repeated .api.commons.billing.InvoiceItem items = 1 [json_name = "items"];</code>
+   * <code>repeated .api.commons.billing.InvoiceItem items = 1 [json_name = "items", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.billing.InvoiceItemOrBuilder getItemsOrBuilder(
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.InvoiceItemOrBuilder getItemsOrBuilder(
       int index);
 
   /**
-   * <pre>
-   * the invoice identifier
-   * </pre>
-   *
-   * <code>int64 invoice_id = 2 [json_name = "invoiceId", jstype = JS_STRING];</code>
+   * <code>int64 invoice_id = 2 [json_name = "invoiceId", deprecated = true, jstype = JS_STRING];</code>
+   * @deprecated api.commons.billing.Invoice.invoice_id is deprecated.
+   *     See api/commons/billing/invoice.proto;l=30
    * @return The invoiceId.
    */
-  long getInvoiceId();
+  @java.lang.Deprecated long getInvoiceId();
 
   /**
-   * <pre>
-   * the billing cycle this invoice was generated for
-   * </pre>
-   *
-   * <code>string billing_cycle = 3 [json_name = "billingCycle"];</code>
+   * <code>string billing_cycle = 3 [json_name = "billingCycle", deprecated = true];</code>
+   * @deprecated api.commons.billing.Invoice.billing_cycle is deprecated.
+   *     See api/commons/billing/invoice.proto;l=34
    * @return The billingCycle.
    */
-  java.lang.String getBillingCycle();
+  @java.lang.Deprecated java.lang.String getBillingCycle();
   /**
-   * <pre>
-   * the billing cycle this invoice was generated for
-   * </pre>
-   *
-   * <code>string billing_cycle = 3 [json_name = "billingCycle"];</code>
+   * <code>string billing_cycle = 3 [json_name = "billingCycle", deprecated = true];</code>
+   * @deprecated api.commons.billing.Invoice.billing_cycle is deprecated.
+   *     See api/commons/billing/invoice.proto;l=34
    * @return The bytes for billingCycle.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getBillingCycleBytes();
 
   /**
-   * <pre>
-   * time the invoice was created
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime"];</code>
+   * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime", deprecated = true];</code>
+   * @deprecated api.commons.billing.Invoice.create_time is deprecated.
+   *     See api/commons/billing/invoice.proto;l=35
    * @return Whether the createTime field is set.
    */
-  boolean hasCreateTime();
+  @java.lang.Deprecated boolean hasCreateTime();
   /**
-   * <pre>
-   * time the invoice was created
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime"];</code>
+   * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime", deprecated = true];</code>
+   * @deprecated api.commons.billing.Invoice.create_time is deprecated.
+   *     See api/commons/billing/invoice.proto;l=35
    * @return The createTime.
    */
-  com.google.protobuf.Timestamp getCreateTime();
+  @java.lang.Deprecated com.google.protobuf.Timestamp getCreateTime();
   /**
-   * <pre>
-   * time the invoice was created
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime"];</code>
+   * <code>.google.protobuf.Timestamp create_time = 4 [json_name = "createTime", deprecated = true];</code>
    */
-  com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder();
+  @java.lang.Deprecated com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder();
 
   /**
-   * <pre>
-   * time the invoice was last updated
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
+   * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime", deprecated = true];</code>
+   * @deprecated api.commons.billing.Invoice.update_time is deprecated.
+   *     See api/commons/billing/invoice.proto;l=36
    * @return Whether the updateTime field is set.
    */
-  boolean hasUpdateTime();
+  @java.lang.Deprecated boolean hasUpdateTime();
   /**
-   * <pre>
-   * time the invoice was last updated
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
+   * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime", deprecated = true];</code>
+   * @deprecated api.commons.billing.Invoice.update_time is deprecated.
+   *     See api/commons/billing/invoice.proto;l=36
    * @return The updateTime.
    */
-  com.google.protobuf.Timestamp getUpdateTime();
+  @java.lang.Deprecated com.google.protobuf.Timestamp getUpdateTime();
   /**
-   * <pre>
-   * time the invoice was last updated
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
+   * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime", deprecated = true];</code>
    */
-  com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder();
+  @java.lang.Deprecated com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder();
 }

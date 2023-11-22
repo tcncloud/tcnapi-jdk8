@@ -18,6 +18,7 @@ private static final long serialVersionUID = 0L;
   private OmniTextMessage() {
     message_ = "";
     attachments_ = java.util.Collections.emptyList();
+    type_ = 0;
   }
 
   @java.lang.Override
@@ -186,6 +187,48 @@ private static final long serialVersionUID = 0L;
     return primaryAsmSessionSid_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : primaryAsmSessionSid_;
   }
 
+  public static final int TYPE_FIELD_NUMBER = 4;
+  private int type_ = 0;
+  /**
+   * <pre>
+   * whatsapp message types
+   * </pre>
+   *
+   * <code>.api.commons.WhatsAppMsgType type = 4 [json_name = "type"];</code>
+   * @return The enum numeric value on the wire for type.
+   */
+  @java.lang.Override public int getTypeValue() {
+    return type_;
+  }
+  /**
+   * <pre>
+   * whatsapp message types
+   * </pre>
+   *
+   * <code>.api.commons.WhatsAppMsgType type = 4 [json_name = "type"];</code>
+   * @return The type.
+   */
+  @java.lang.Override public com.tcn.cloud.api.api.commons.WhatsAppMsgType getType() {
+    com.tcn.cloud.api.api.commons.WhatsAppMsgType result = com.tcn.cloud.api.api.commons.WhatsAppMsgType.forNumber(type_);
+    return result == null ? com.tcn.cloud.api.api.commons.WhatsAppMsgType.UNRECOGNIZED : result;
+  }
+
+  public static final int PREVIEW_URL_FIELD_NUMBER = 5;
+  private boolean previewUrl_ = false;
+  /**
+   * <pre>
+   * whatsapp preview url allows for URL previews in text messages
+   * required if type=text
+   * </pre>
+   *
+   * <code>bool preview_url = 5 [json_name = "previewUrl"];</code>
+   * @return The previewUrl.
+   */
+  @java.lang.Override
+  public boolean getPreviewUrl() {
+    return previewUrl_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -209,6 +252,12 @@ private static final long serialVersionUID = 0L;
     if (primaryAsmSessionSid_ != null) {
       output.writeMessage(3, getPrimaryAsmSessionSid());
     }
+    if (type_ != com.tcn.cloud.api.api.commons.WhatsAppMsgType.WHATSAPP_AUDIO_TYPE.getNumber()) {
+      output.writeEnum(4, type_);
+    }
+    if (previewUrl_ != false) {
+      output.writeBool(5, previewUrl_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -228,6 +277,14 @@ private static final long serialVersionUID = 0L;
     if (primaryAsmSessionSid_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getPrimaryAsmSessionSid());
+    }
+    if (type_ != com.tcn.cloud.api.api.commons.WhatsAppMsgType.WHATSAPP_AUDIO_TYPE.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(4, type_);
+    }
+    if (previewUrl_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(5, previewUrl_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -253,6 +310,9 @@ private static final long serialVersionUID = 0L;
       if (!getPrimaryAsmSessionSid()
           .equals(other.getPrimaryAsmSessionSid())) return false;
     }
+    if (type_ != other.type_) return false;
+    if (getPreviewUrl()
+        != other.getPreviewUrl()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -274,6 +334,11 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + PRIMARY_ASM_SESSION_SID_FIELD_NUMBER;
       hash = (53 * hash) + getPrimaryAsmSessionSid().hashCode();
     }
+    hash = (37 * hash) + TYPE_FIELD_NUMBER;
+    hash = (53 * hash) + type_;
+    hash = (37 * hash) + PREVIEW_URL_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getPreviewUrl());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -418,6 +483,8 @@ private static final long serialVersionUID = 0L;
         primaryAsmSessionSidBuilder_.dispose();
         primaryAsmSessionSidBuilder_ = null;
       }
+      type_ = 0;
+      previewUrl_ = false;
       return this;
     }
 
@@ -471,6 +538,12 @@ private static final long serialVersionUID = 0L;
         result.primaryAsmSessionSid_ = primaryAsmSessionSidBuilder_ == null
             ? primaryAsmSessionSid_
             : primaryAsmSessionSidBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.type_ = type_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.previewUrl_ = previewUrl_;
       }
     }
 
@@ -552,6 +625,12 @@ private static final long serialVersionUID = 0L;
       if (other.hasPrimaryAsmSessionSid()) {
         mergePrimaryAsmSessionSid(other.getPrimaryAsmSessionSid());
       }
+      if (other.type_ != 0) {
+        setTypeValue(other.getTypeValue());
+      }
+      if (other.getPreviewUrl() != false) {
+        setPreviewUrl(other.getPreviewUrl());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -603,6 +682,16 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 26
+            case 32: {
+              type_ = input.readEnum();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
+            case 40: {
+              previewUrl_ = input.readBool();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 40
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1177,6 +1266,126 @@ private static final long serialVersionUID = 0L;
         primaryAsmSessionSid_ = null;
       }
       return primaryAsmSessionSidBuilder_;
+    }
+
+    private int type_ = 0;
+    /**
+     * <pre>
+     * whatsapp message types
+     * </pre>
+     *
+     * <code>.api.commons.WhatsAppMsgType type = 4 [json_name = "type"];</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    @java.lang.Override public int getTypeValue() {
+      return type_;
+    }
+    /**
+     * <pre>
+     * whatsapp message types
+     * </pre>
+     *
+     * <code>.api.commons.WhatsAppMsgType type = 4 [json_name = "type"];</code>
+     * @param value The enum numeric value on the wire for type to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTypeValue(int value) {
+      type_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * whatsapp message types
+     * </pre>
+     *
+     * <code>.api.commons.WhatsAppMsgType type = 4 [json_name = "type"];</code>
+     * @return The type.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.WhatsAppMsgType getType() {
+      com.tcn.cloud.api.api.commons.WhatsAppMsgType result = com.tcn.cloud.api.api.commons.WhatsAppMsgType.forNumber(type_);
+      return result == null ? com.tcn.cloud.api.api.commons.WhatsAppMsgType.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * whatsapp message types
+     * </pre>
+     *
+     * <code>.api.commons.WhatsAppMsgType type = 4 [json_name = "type"];</code>
+     * @param value The type to set.
+     * @return This builder for chaining.
+     */
+    public Builder setType(com.tcn.cloud.api.api.commons.WhatsAppMsgType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000008;
+      type_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * whatsapp message types
+     * </pre>
+     *
+     * <code>.api.commons.WhatsAppMsgType type = 4 [json_name = "type"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearType() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      type_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private boolean previewUrl_ ;
+    /**
+     * <pre>
+     * whatsapp preview url allows for URL previews in text messages
+     * required if type=text
+     * </pre>
+     *
+     * <code>bool preview_url = 5 [json_name = "previewUrl"];</code>
+     * @return The previewUrl.
+     */
+    @java.lang.Override
+    public boolean getPreviewUrl() {
+      return previewUrl_;
+    }
+    /**
+     * <pre>
+     * whatsapp preview url allows for URL previews in text messages
+     * required if type=text
+     * </pre>
+     *
+     * <code>bool preview_url = 5 [json_name = "previewUrl"];</code>
+     * @param value The previewUrl to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPreviewUrl(boolean value) {
+
+      previewUrl_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * whatsapp preview url allows for URL previews in text messages
+     * required if type=text
+     * </pre>
+     *
+     * <code>bool preview_url = 5 [json_name = "previewUrl"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearPreviewUrl() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      previewUrl_ = false;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
