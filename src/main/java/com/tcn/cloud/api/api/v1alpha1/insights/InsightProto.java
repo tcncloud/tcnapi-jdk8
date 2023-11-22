@@ -104,6 +104,16 @@ public final class InsightProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_insights_ListVfsesResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_insights_ListVfsSchemasRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_insights_ListVfsSchemasRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_insights_ListVfsSchemasResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_insights_ListVfsSchemasResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -155,16 +165,20 @@ public final class InsightProto {
       "sourceId\"N\n\022GetInsightResponse\0228\n\007insigh" +
       "t\030\001 \001(\0132\036.api.v1alpha1.insights.InsightR" +
       "\007insight\"4\n\023GetVfsSchemaRequest\022\035\n\nalias" +
-      "_name\030\001 \001(\tR\taliasName\"\250\002\n\024GetVfsSchemaR" +
+      "_name\030\001 \001(\tR\taliasName\"\307\002\n\024GetVfsSchemaR" +
       "esponse\022I\n\006fields\030\001 \003(\01321.api.v1alpha1.i" +
       "nsights.GetVfsSchemaResponse.FieldR\006fiel" +
       "ds\022\'\n\017vfs_description\030\002 \001(\tR\016vfsDescript" +
-      "ion\032\233\001\n\005Field\022\037\n\013column_name\030\001 \001(\tR\ncolu" +
-      "mnName\022B\n\013column_type\030\002 \001(\0162!.api.common" +
-      "s.InsightVfsSchemaTypeR\ncolumnType\022-\n\022co" +
-      "lumn_description\030\003 \001(\tR\021columnDescriptio" +
-      "n\"\022\n\020ListVfsesRequest\"-\n\021ListVfsesRespon" +
-      "se\022\030\n\007aliases\030\001 \003(\tR\007aliasesB\255\001\n\'com.tcn" +
+      "ion\022\035\n\nalias_name\030\003 \001(\tR\taliasName\032\233\001\n\005F" +
+      "ield\022\037\n\013column_name\030\001 \001(\tR\ncolumnName\022B\n" +
+      "\013column_type\030\002 \001(\0162!.api.commons.Insight" +
+      "VfsSchemaTypeR\ncolumnType\022-\n\022column_desc" +
+      "ription\030\003 \001(\tR\021columnDescription\"\022\n\020List" +
+      "VfsesRequest\"-\n\021ListVfsesResponse\022\030\n\007ali" +
+      "ases\030\001 \003(\tR\007aliases\"\027\n\025ListVfsSchemasReq" +
+      "uest\"f\n\026ListVfsSchemasResponse\022L\n\013vfs_sc" +
+      "hemas\030\001 \003(\0132+.api.v1alpha1.insights.GetV" +
+      "fsSchemaResponseR\nvfsSchemasB\255\001\n\'com.tcn" +
       ".cloud.api.api.v1alpha1.insightsB\014Insigh" +
       "tProtoP\001\242\002\003AVI\252\002\025Api.V1alpha1.Insights\312\002" +
       "\025Api\\V1alpha1\\Insights\342\002!Api\\V1alpha1\\In" +
@@ -266,7 +280,7 @@ public final class InsightProto {
     internal_static_api_v1alpha1_insights_GetVfsSchemaResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_insights_GetVfsSchemaResponse_descriptor,
-        new java.lang.String[] { "Fields", "VfsDescription", });
+        new java.lang.String[] { "Fields", "VfsDescription", "AliasName", });
     internal_static_api_v1alpha1_insights_GetVfsSchemaResponse_Field_descriptor =
       internal_static_api_v1alpha1_insights_GetVfsSchemaResponse_descriptor.getNestedTypes().get(0);
     internal_static_api_v1alpha1_insights_GetVfsSchemaResponse_Field_fieldAccessorTable = new
@@ -285,6 +299,18 @@ public final class InsightProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_insights_ListVfsesResponse_descriptor,
         new java.lang.String[] { "Aliases", });
+    internal_static_api_v1alpha1_insights_ListVfsSchemasRequest_descriptor =
+      getDescriptor().getMessageTypes().get(17);
+    internal_static_api_v1alpha1_insights_ListVfsSchemasRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_insights_ListVfsSchemasRequest_descriptor,
+        new java.lang.String[] { });
+    internal_static_api_v1alpha1_insights_ListVfsSchemasResponse_descriptor =
+      getDescriptor().getMessageTypes().get(18);
+    internal_static_api_v1alpha1_insights_ListVfsSchemasResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_insights_ListVfsSchemasResponse_descriptor,
+        new java.lang.String[] { "VfsSchemas", });
     com.tcn.cloud.api.api.commons.InsightsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
   }

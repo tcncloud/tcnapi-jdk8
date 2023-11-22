@@ -325,6 +325,37 @@ public final class InsightsGrpc {
     return getListVfsesMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.insights.ListVfsSchemasRequest,
+      com.tcn.cloud.api.api.v1alpha1.insights.ListVfsSchemasResponse> getListVfsSchemasMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListVfsSchemas",
+      requestType = com.tcn.cloud.api.api.v1alpha1.insights.ListVfsSchemasRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.insights.ListVfsSchemasResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.insights.ListVfsSchemasRequest,
+      com.tcn.cloud.api.api.v1alpha1.insights.ListVfsSchemasResponse> getListVfsSchemasMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.insights.ListVfsSchemasRequest, com.tcn.cloud.api.api.v1alpha1.insights.ListVfsSchemasResponse> getListVfsSchemasMethod;
+    if ((getListVfsSchemasMethod = InsightsGrpc.getListVfsSchemasMethod) == null) {
+      synchronized (InsightsGrpc.class) {
+        if ((getListVfsSchemasMethod = InsightsGrpc.getListVfsSchemasMethod) == null) {
+          InsightsGrpc.getListVfsSchemasMethod = getListVfsSchemasMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.insights.ListVfsSchemasRequest, com.tcn.cloud.api.api.v1alpha1.insights.ListVfsSchemasResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListVfsSchemas"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.insights.ListVfsSchemasRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.insights.ListVfsSchemasResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new InsightsMethodDescriptorSupplier("ListVfsSchemas"))
+              .build();
+        }
+      }
+    }
+    return getListVfsSchemasMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.insights.PublishInsightRequest,
       com.tcn.cloud.api.api.v1alpha1.insights.PublishInsightResponse> getPublishInsightMethod;
 
@@ -506,6 +537,16 @@ public final class InsightsGrpc {
 
     /**
      * <pre>
+     * ListVfses lists exported vfs aliases
+     * </pre>
+     */
+    default void listVfsSchemas(com.tcn.cloud.api.api.v1alpha1.insights.ListVfsSchemasRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.ListVfsSchemasResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListVfsSchemasMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * PublishInsight publishes an insight
      * </pre>
      */
@@ -654,6 +695,17 @@ public final class InsightsGrpc {
 
     /**
      * <pre>
+     * ListVfses lists exported vfs aliases
+     * </pre>
+     */
+    public void listVfsSchemas(com.tcn.cloud.api.api.v1alpha1.insights.ListVfsSchemasRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.ListVfsSchemasResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListVfsSchemasMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * PublishInsight publishes an insight
      * </pre>
      */
@@ -778,6 +830,16 @@ public final class InsightsGrpc {
     public com.tcn.cloud.api.api.v1alpha1.insights.ListVfsesResponse listVfses(com.tcn.cloud.api.api.v1alpha1.insights.ListVfsesRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListVfsesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * ListVfses lists exported vfs aliases
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.insights.ListVfsSchemasResponse listVfsSchemas(com.tcn.cloud.api.api.v1alpha1.insights.ListVfsSchemasRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListVfsSchemasMethod(), getCallOptions(), request);
     }
 
     /**
@@ -919,6 +981,17 @@ public final class InsightsGrpc {
 
     /**
      * <pre>
+     * ListVfses lists exported vfs aliases
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.insights.ListVfsSchemasResponse> listVfsSchemas(
+        com.tcn.cloud.api.api.v1alpha1.insights.ListVfsSchemasRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListVfsSchemasMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * PublishInsight publishes an insight
      * </pre>
      */
@@ -939,7 +1012,8 @@ public final class InsightsGrpc {
   private static final int METHODID_DELETE_COMMONS_INSIGHT = 7;
   private static final int METHODID_GET_VFS_SCHEMA = 8;
   private static final int METHODID_LIST_VFSES = 9;
-  private static final int METHODID_PUBLISH_INSIGHT = 10;
+  private static final int METHODID_LIST_VFS_SCHEMAS = 10;
+  private static final int METHODID_PUBLISH_INSIGHT = 11;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -997,6 +1071,10 @@ public final class InsightsGrpc {
         case METHODID_LIST_VFSES:
           serviceImpl.listVfses((com.tcn.cloud.api.api.v1alpha1.insights.ListVfsesRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.ListVfsesResponse>) responseObserver);
+          break;
+        case METHODID_LIST_VFS_SCHEMAS:
+          serviceImpl.listVfsSchemas((com.tcn.cloud.api.api.v1alpha1.insights.ListVfsSchemasRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.ListVfsSchemasResponse>) responseObserver);
           break;
         case METHODID_PUBLISH_INSIGHT:
           serviceImpl.publishInsight((com.tcn.cloud.api.api.v1alpha1.insights.PublishInsightRequest) request,
@@ -1091,6 +1169,13 @@ public final class InsightsGrpc {
               com.tcn.cloud.api.api.v1alpha1.insights.ListVfsesResponse>(
                 service, METHODID_LIST_VFSES)))
         .addMethod(
+          getListVfsSchemasMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.insights.ListVfsSchemasRequest,
+              com.tcn.cloud.api.api.v1alpha1.insights.ListVfsSchemasResponse>(
+                service, METHODID_LIST_VFS_SCHEMAS)))
+        .addMethod(
           getPublishInsightMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -1155,6 +1240,7 @@ public final class InsightsGrpc {
               .addMethod(getDeleteCommonsInsightMethod())
               .addMethod(getGetVfsSchemaMethod())
               .addMethod(getListVfsesMethod())
+              .addMethod(getListVfsSchemasMethod())
               .addMethod(getPublishInsightMethod())
               .build();
         }

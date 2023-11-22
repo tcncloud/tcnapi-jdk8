@@ -70,4 +70,24 @@ public interface GetVfsSchemaResponseOrBuilder extends
    */
   com.google.protobuf.ByteString
       getVfsDescriptionBytes();
+
+  /**
+   * <pre>
+   * alias name of the vfs
+   * </pre>
+   *
+   * <code>string alias_name = 3 [json_name = "aliasName"];</code>
+   * @return The aliasName.
+   */
+  java.lang.String getAliasName();
+  /**
+   * <pre>
+   * alias name of the vfs
+   * </pre>
+   *
+   * <code>string alias_name = 3 [json_name = "aliasName"];</code>
+   * @return The bytes for aliasName.
+   */
+  com.google.protobuf.ByteString
+      getAliasNameBytes();
 }
