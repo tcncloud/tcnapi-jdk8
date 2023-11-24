@@ -21,6 +21,7 @@ private static final long serialVersionUID = 0L;
     templateEntityVersion_ = "";
     createdById_ = "";
     projectTitle_ = "";
+    assignedProject_ = emptyLongList();
   }
 
   @java.lang.Override
@@ -297,6 +298,35 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int ASSIGNED_PROJECT_FIELD_NUMBER = 10;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.Internal.LongList assignedProject_;
+  /**
+   * <code>repeated int64 assigned_project = 10 [json_name = "assignedProject"];</code>
+   * @return A list containing the assignedProject.
+   */
+  @java.lang.Override
+  public java.util.List<java.lang.Long>
+      getAssignedProjectList() {
+    return assignedProject_;
+  }
+  /**
+   * <code>repeated int64 assigned_project = 10 [json_name = "assignedProject"];</code>
+   * @return The count of assignedProject.
+   */
+  public int getAssignedProjectCount() {
+    return assignedProject_.size();
+  }
+  /**
+   * <code>repeated int64 assigned_project = 10 [json_name = "assignedProject"];</code>
+   * @param index The index of the element to return.
+   * @return The assignedProject at the given index.
+   */
+  public long getAssignedProject(int index) {
+    return assignedProject_.getLong(index);
+  }
+  private int assignedProjectMemoizedSerializedSize = -1;
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -311,6 +341,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    getSerializedSize();
     if (ticketTemplateId_ != 0L) {
       output.writeInt64(1, ticketTemplateId_);
     }
@@ -337,6 +368,13 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectTitle_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 9, projectTitle_);
+    }
+    if (getAssignedProjectList().size() > 0) {
+      output.writeUInt32NoTag(82);
+      output.writeUInt32NoTag(assignedProjectMemoizedSerializedSize);
+    }
+    for (int i = 0; i < assignedProject_.size(); i++) {
+      output.writeInt64NoTag(assignedProject_.getLong(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -378,6 +416,20 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectTitle_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, projectTitle_);
     }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < assignedProject_.size(); i++) {
+        dataSize += com.google.protobuf.CodedOutputStream
+          .computeInt64SizeNoTag(assignedProject_.getLong(i));
+      }
+      size += dataSize;
+      if (!getAssignedProjectList().isEmpty()) {
+        size += 1;
+        size += com.google.protobuf.CodedOutputStream
+            .computeInt32SizeNoTag(dataSize);
+      }
+      assignedProjectMemoizedSerializedSize = dataSize;
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -414,6 +466,8 @@ private static final long serialVersionUID = 0L;
     }
     if (!getProjectTitle()
         .equals(other.getProjectTitle())) return false;
+    if (!getAssignedProjectList()
+        .equals(other.getAssignedProjectList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -448,6 +502,10 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + PROJECT_TITLE_FIELD_NUMBER;
     hash = (53 * hash) + getProjectTitle().hashCode();
+    if (getAssignedProjectCount() > 0) {
+      hash = (37 * hash) + ASSIGNED_PROJECT_FIELD_NUMBER;
+      hash = (53 * hash) + getAssignedProjectList().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -592,6 +650,7 @@ private static final long serialVersionUID = 0L;
         createdDateBuilder_ = null;
       }
       projectTitle_ = "";
+      assignedProject_ = emptyLongList();
       return this;
     }
 
@@ -618,9 +677,18 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.ListTemplate buildPartial() {
       com.tcn.cloud.api.api.commons.ListTemplate result = new com.tcn.cloud.api.api.commons.ListTemplate(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.commons.ListTemplate result) {
+      if (((bitField0_ & 0x00000200) != 0)) {
+        assignedProject_.makeImmutable();
+        bitField0_ = (bitField0_ & ~0x00000200);
+      }
+      result.assignedProject_ = assignedProject_;
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.commons.ListTemplate result) {
@@ -737,6 +805,16 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000100;
         onChanged();
       }
+      if (!other.assignedProject_.isEmpty()) {
+        if (assignedProject_.isEmpty()) {
+          assignedProject_ = other.assignedProject_;
+          bitField0_ = (bitField0_ & ~0x00000200);
+        } else {
+          ensureAssignedProjectIsMutable();
+          assignedProject_.addAll(other.assignedProject_);
+        }
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -810,6 +888,22 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000100;
               break;
             } // case 74
+            case 80: {
+              long v = input.readInt64();
+              ensureAssignedProjectIsMutable();
+              assignedProject_.addLong(v);
+              break;
+            } // case 80
+            case 82: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              ensureAssignedProjectIsMutable();
+              while (input.getBytesUntilLimit() > 0) {
+                assignedProject_.addLong(input.readInt64());
+              }
+              input.popLimit(limit);
+              break;
+            } // case 82
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1398,6 +1492,87 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       projectTitle_ = value;
       bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.Internal.LongList assignedProject_ = emptyLongList();
+    private void ensureAssignedProjectIsMutable() {
+      if (!((bitField0_ & 0x00000200) != 0)) {
+        assignedProject_ = mutableCopy(assignedProject_);
+        bitField0_ |= 0x00000200;
+      }
+    }
+    /**
+     * <code>repeated int64 assigned_project = 10 [json_name = "assignedProject"];</code>
+     * @return A list containing the assignedProject.
+     */
+    public java.util.List<java.lang.Long>
+        getAssignedProjectList() {
+      return ((bitField0_ & 0x00000200) != 0) ?
+               java.util.Collections.unmodifiableList(assignedProject_) : assignedProject_;
+    }
+    /**
+     * <code>repeated int64 assigned_project = 10 [json_name = "assignedProject"];</code>
+     * @return The count of assignedProject.
+     */
+    public int getAssignedProjectCount() {
+      return assignedProject_.size();
+    }
+    /**
+     * <code>repeated int64 assigned_project = 10 [json_name = "assignedProject"];</code>
+     * @param index The index of the element to return.
+     * @return The assignedProject at the given index.
+     */
+    public long getAssignedProject(int index) {
+      return assignedProject_.getLong(index);
+    }
+    /**
+     * <code>repeated int64 assigned_project = 10 [json_name = "assignedProject"];</code>
+     * @param index The index to set the value at.
+     * @param value The assignedProject to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAssignedProject(
+        int index, long value) {
+
+      ensureAssignedProjectIsMutable();
+      assignedProject_.setLong(index, value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated int64 assigned_project = 10 [json_name = "assignedProject"];</code>
+     * @param value The assignedProject to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAssignedProject(long value) {
+
+      ensureAssignedProjectIsMutable();
+      assignedProject_.addLong(value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated int64 assigned_project = 10 [json_name = "assignedProject"];</code>
+     * @param values The assignedProject to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllAssignedProject(
+        java.lang.Iterable<? extends java.lang.Long> values) {
+      ensureAssignedProjectIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, assignedProject_);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated int64 assigned_project = 10 [json_name = "assignedProject"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAssignedProject() {
+      assignedProject_ = emptyLongList();
+      bitField0_ = (bitField0_ & ~0x00000200);
       onChanged();
       return this;
     }
