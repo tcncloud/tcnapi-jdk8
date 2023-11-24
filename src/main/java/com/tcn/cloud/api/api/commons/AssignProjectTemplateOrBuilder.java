@@ -29,4 +29,28 @@ public interface AssignProjectTemplateOrBuilder extends
    * @return The projectId.
    */
   long getProjectId();
+
+  /**
+   * <code>repeated .api.commons.TemplateDetail template_details = 3 [json_name = "templateDetails"];</code>
+   */
+  java.util.List<com.tcn.cloud.api.api.commons.TemplateDetail> 
+      getTemplateDetailsList();
+  /**
+   * <code>repeated .api.commons.TemplateDetail template_details = 3 [json_name = "templateDetails"];</code>
+   */
+  com.tcn.cloud.api.api.commons.TemplateDetail getTemplateDetails(int index);
+  /**
+   * <code>repeated .api.commons.TemplateDetail template_details = 3 [json_name = "templateDetails"];</code>
+   */
+  int getTemplateDetailsCount();
+  /**
+   * <code>repeated .api.commons.TemplateDetail template_details = 3 [json_name = "templateDetails"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.api.commons.TemplateDetailOrBuilder> 
+      getTemplateDetailsOrBuilderList();
+  /**
+   * <code>repeated .api.commons.TemplateDetail template_details = 3 [json_name = "templateDetails"];</code>
+   */
+  com.tcn.cloud.api.api.commons.TemplateDetailOrBuilder getTemplateDetailsOrBuilder(
+      int index);
 }

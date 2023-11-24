@@ -302,6 +302,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private com.google.protobuf.Internal.LongList assignedProject_;
   /**
+   * <pre>
+   * Need to change
+   * </pre>
+   *
    * <code>repeated int64 assigned_project = 10 [json_name = "assignedProject"];</code>
    * @return A list containing the assignedProject.
    */
@@ -311,6 +315,10 @@ private static final long serialVersionUID = 0L;
     return assignedProject_;
   }
   /**
+   * <pre>
+   * Need to change
+   * </pre>
+   *
    * <code>repeated int64 assigned_project = 10 [json_name = "assignedProject"];</code>
    * @return The count of assignedProject.
    */
@@ -318,6 +326,10 @@ private static final long serialVersionUID = 0L;
     return assignedProject_.size();
   }
   /**
+   * <pre>
+   * Need to change
+   * </pre>
+   *
    * <code>repeated int64 assigned_project = 10 [json_name = "assignedProject"];</code>
    * @param index The index of the element to return.
    * @return The assignedProject at the given index.
@@ -1504,6 +1516,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Need to change
+     * </pre>
+     *
      * <code>repeated int64 assigned_project = 10 [json_name = "assignedProject"];</code>
      * @return A list containing the assignedProject.
      */
@@ -1513,6 +1529,10 @@ private static final long serialVersionUID = 0L;
                java.util.Collections.unmodifiableList(assignedProject_) : assignedProject_;
     }
     /**
+     * <pre>
+     * Need to change
+     * </pre>
+     *
      * <code>repeated int64 assigned_project = 10 [json_name = "assignedProject"];</code>
      * @return The count of assignedProject.
      */
@@ -1520,6 +1540,10 @@ private static final long serialVersionUID = 0L;
       return assignedProject_.size();
     }
     /**
+     * <pre>
+     * Need to change
+     * </pre>
+     *
      * <code>repeated int64 assigned_project = 10 [json_name = "assignedProject"];</code>
      * @param index The index of the element to return.
      * @return The assignedProject at the given index.
@@ -1528,6 +1552,10 @@ private static final long serialVersionUID = 0L;
       return assignedProject_.getLong(index);
     }
     /**
+     * <pre>
+     * Need to change
+     * </pre>
+     *
      * <code>repeated int64 assigned_project = 10 [json_name = "assignedProject"];</code>
      * @param index The index to set the value at.
      * @param value The assignedProject to set.
@@ -1542,6 +1570,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Need to change
+     * </pre>
+     *
      * <code>repeated int64 assigned_project = 10 [json_name = "assignedProject"];</code>
      * @param value The assignedProject to add.
      * @return This builder for chaining.
@@ -1554,6 +1586,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Need to change
+     * </pre>
+     *
      * <code>repeated int64 assigned_project = 10 [json_name = "assignedProject"];</code>
      * @param values The assignedProject to add.
      * @return This builder for chaining.
@@ -1567,6 +1603,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Need to change
+     * </pre>
+     *
      * <code>repeated int64 assigned_project = 10 [json_name = "assignedProject"];</code>
      * @return This builder for chaining.
      */

@@ -17,6 +17,7 @@ private static final long serialVersionUID = 0L;
   }
   private AssignProjectTemplate() {
     ticketTemplateId_ = emptyLongList();
+    templateDetails_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -79,6 +80,47 @@ private static final long serialVersionUID = 0L;
     return projectId_;
   }
 
+  public static final int TEMPLATE_DETAILS_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
+  private java.util.List<com.tcn.cloud.api.api.commons.TemplateDetail> templateDetails_;
+  /**
+   * <code>repeated .api.commons.TemplateDetail template_details = 3 [json_name = "templateDetails"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.api.commons.TemplateDetail> getTemplateDetailsList() {
+    return templateDetails_;
+  }
+  /**
+   * <code>repeated .api.commons.TemplateDetail template_details = 3 [json_name = "templateDetails"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.tcn.cloud.api.api.commons.TemplateDetailOrBuilder> 
+      getTemplateDetailsOrBuilderList() {
+    return templateDetails_;
+  }
+  /**
+   * <code>repeated .api.commons.TemplateDetail template_details = 3 [json_name = "templateDetails"];</code>
+   */
+  @java.lang.Override
+  public int getTemplateDetailsCount() {
+    return templateDetails_.size();
+  }
+  /**
+   * <code>repeated .api.commons.TemplateDetail template_details = 3 [json_name = "templateDetails"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.TemplateDetail getTemplateDetails(int index) {
+    return templateDetails_.get(index);
+  }
+  /**
+   * <code>repeated .api.commons.TemplateDetail template_details = 3 [json_name = "templateDetails"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.TemplateDetailOrBuilder getTemplateDetailsOrBuilder(
+      int index) {
+    return templateDetails_.get(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -103,6 +145,9 @@ private static final long serialVersionUID = 0L;
     }
     if (projectId_ != 0L) {
       output.writeInt64(2, projectId_);
+    }
+    for (int i = 0; i < templateDetails_.size(); i++) {
+      output.writeMessage(3, templateDetails_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -131,6 +176,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(2, projectId_);
     }
+    for (int i = 0; i < templateDetails_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, templateDetails_.get(i));
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -150,6 +199,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getTicketTemplateIdList())) return false;
     if (getProjectId()
         != other.getProjectId()) return false;
+    if (!getTemplateDetailsList()
+        .equals(other.getTemplateDetailsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -168,6 +219,10 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + PROJECT_ID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getProjectId());
+    if (getTemplateDetailsCount() > 0) {
+      hash = (37 * hash) + TEMPLATE_DETAILS_FIELD_NUMBER;
+      hash = (53 * hash) + getTemplateDetailsList().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -301,6 +356,13 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       ticketTemplateId_ = emptyLongList();
       projectId_ = 0L;
+      if (templateDetailsBuilder_ == null) {
+        templateDetails_ = java.util.Collections.emptyList();
+      } else {
+        templateDetails_ = null;
+        templateDetailsBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000004);
       return this;
     }
 
@@ -339,6 +401,15 @@ private static final long serialVersionUID = 0L;
         bitField0_ = (bitField0_ & ~0x00000001);
       }
       result.ticketTemplateId_ = ticketTemplateId_;
+      if (templateDetailsBuilder_ == null) {
+        if (((bitField0_ & 0x00000004) != 0)) {
+          templateDetails_ = java.util.Collections.unmodifiableList(templateDetails_);
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.templateDetails_ = templateDetails_;
+      } else {
+        result.templateDetails_ = templateDetailsBuilder_.build();
+      }
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.commons.AssignProjectTemplate result) {
@@ -405,6 +476,32 @@ private static final long serialVersionUID = 0L;
       if (other.getProjectId() != 0L) {
         setProjectId(other.getProjectId());
       }
+      if (templateDetailsBuilder_ == null) {
+        if (!other.templateDetails_.isEmpty()) {
+          if (templateDetails_.isEmpty()) {
+            templateDetails_ = other.templateDetails_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureTemplateDetailsIsMutable();
+            templateDetails_.addAll(other.templateDetails_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.templateDetails_.isEmpty()) {
+          if (templateDetailsBuilder_.isEmpty()) {
+            templateDetailsBuilder_.dispose();
+            templateDetailsBuilder_ = null;
+            templateDetails_ = other.templateDetails_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+            templateDetailsBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getTemplateDetailsFieldBuilder() : null;
+          } else {
+            templateDetailsBuilder_.addAllMessages(other.templateDetails_);
+          }
+        }
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -452,6 +549,19 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 16
+            case 26: {
+              com.tcn.cloud.api.api.commons.TemplateDetail m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.commons.TemplateDetail.parser(),
+                      extensionRegistry);
+              if (templateDetailsBuilder_ == null) {
+                ensureTemplateDetailsIsMutable();
+                templateDetails_.add(m);
+              } else {
+                templateDetailsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -580,6 +690,246 @@ private static final long serialVersionUID = 0L;
       projectId_ = 0L;
       onChanged();
       return this;
+    }
+
+    private java.util.List<com.tcn.cloud.api.api.commons.TemplateDetail> templateDetails_ =
+      java.util.Collections.emptyList();
+    private void ensureTemplateDetailsIsMutable() {
+      if (!((bitField0_ & 0x00000004) != 0)) {
+        templateDetails_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.TemplateDetail>(templateDetails_);
+        bitField0_ |= 0x00000004;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.TemplateDetail, com.tcn.cloud.api.api.commons.TemplateDetail.Builder, com.tcn.cloud.api.api.commons.TemplateDetailOrBuilder> templateDetailsBuilder_;
+
+    /**
+     * <code>repeated .api.commons.TemplateDetail template_details = 3 [json_name = "templateDetails"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.TemplateDetail> getTemplateDetailsList() {
+      if (templateDetailsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(templateDetails_);
+      } else {
+        return templateDetailsBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .api.commons.TemplateDetail template_details = 3 [json_name = "templateDetails"];</code>
+     */
+    public int getTemplateDetailsCount() {
+      if (templateDetailsBuilder_ == null) {
+        return templateDetails_.size();
+      } else {
+        return templateDetailsBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .api.commons.TemplateDetail template_details = 3 [json_name = "templateDetails"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.TemplateDetail getTemplateDetails(int index) {
+      if (templateDetailsBuilder_ == null) {
+        return templateDetails_.get(index);
+      } else {
+        return templateDetailsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .api.commons.TemplateDetail template_details = 3 [json_name = "templateDetails"];</code>
+     */
+    public Builder setTemplateDetails(
+        int index, com.tcn.cloud.api.api.commons.TemplateDetail value) {
+      if (templateDetailsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureTemplateDetailsIsMutable();
+        templateDetails_.set(index, value);
+        onChanged();
+      } else {
+        templateDetailsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.TemplateDetail template_details = 3 [json_name = "templateDetails"];</code>
+     */
+    public Builder setTemplateDetails(
+        int index, com.tcn.cloud.api.api.commons.TemplateDetail.Builder builderForValue) {
+      if (templateDetailsBuilder_ == null) {
+        ensureTemplateDetailsIsMutable();
+        templateDetails_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        templateDetailsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.TemplateDetail template_details = 3 [json_name = "templateDetails"];</code>
+     */
+    public Builder addTemplateDetails(com.tcn.cloud.api.api.commons.TemplateDetail value) {
+      if (templateDetailsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureTemplateDetailsIsMutable();
+        templateDetails_.add(value);
+        onChanged();
+      } else {
+        templateDetailsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.TemplateDetail template_details = 3 [json_name = "templateDetails"];</code>
+     */
+    public Builder addTemplateDetails(
+        int index, com.tcn.cloud.api.api.commons.TemplateDetail value) {
+      if (templateDetailsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureTemplateDetailsIsMutable();
+        templateDetails_.add(index, value);
+        onChanged();
+      } else {
+        templateDetailsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.TemplateDetail template_details = 3 [json_name = "templateDetails"];</code>
+     */
+    public Builder addTemplateDetails(
+        com.tcn.cloud.api.api.commons.TemplateDetail.Builder builderForValue) {
+      if (templateDetailsBuilder_ == null) {
+        ensureTemplateDetailsIsMutable();
+        templateDetails_.add(builderForValue.build());
+        onChanged();
+      } else {
+        templateDetailsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.TemplateDetail template_details = 3 [json_name = "templateDetails"];</code>
+     */
+    public Builder addTemplateDetails(
+        int index, com.tcn.cloud.api.api.commons.TemplateDetail.Builder builderForValue) {
+      if (templateDetailsBuilder_ == null) {
+        ensureTemplateDetailsIsMutable();
+        templateDetails_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        templateDetailsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.TemplateDetail template_details = 3 [json_name = "templateDetails"];</code>
+     */
+    public Builder addAllTemplateDetails(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.TemplateDetail> values) {
+      if (templateDetailsBuilder_ == null) {
+        ensureTemplateDetailsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, templateDetails_);
+        onChanged();
+      } else {
+        templateDetailsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.TemplateDetail template_details = 3 [json_name = "templateDetails"];</code>
+     */
+    public Builder clearTemplateDetails() {
+      if (templateDetailsBuilder_ == null) {
+        templateDetails_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+      } else {
+        templateDetailsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.TemplateDetail template_details = 3 [json_name = "templateDetails"];</code>
+     */
+    public Builder removeTemplateDetails(int index) {
+      if (templateDetailsBuilder_ == null) {
+        ensureTemplateDetailsIsMutable();
+        templateDetails_.remove(index);
+        onChanged();
+      } else {
+        templateDetailsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.TemplateDetail template_details = 3 [json_name = "templateDetails"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.TemplateDetail.Builder getTemplateDetailsBuilder(
+        int index) {
+      return getTemplateDetailsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .api.commons.TemplateDetail template_details = 3 [json_name = "templateDetails"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.TemplateDetailOrBuilder getTemplateDetailsOrBuilder(
+        int index) {
+      if (templateDetailsBuilder_ == null) {
+        return templateDetails_.get(index);  } else {
+        return templateDetailsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .api.commons.TemplateDetail template_details = 3 [json_name = "templateDetails"];</code>
+     */
+    public java.util.List<? extends com.tcn.cloud.api.api.commons.TemplateDetailOrBuilder> 
+         getTemplateDetailsOrBuilderList() {
+      if (templateDetailsBuilder_ != null) {
+        return templateDetailsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(templateDetails_);
+      }
+    }
+    /**
+     * <code>repeated .api.commons.TemplateDetail template_details = 3 [json_name = "templateDetails"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.TemplateDetail.Builder addTemplateDetailsBuilder() {
+      return getTemplateDetailsFieldBuilder().addBuilder(
+          com.tcn.cloud.api.api.commons.TemplateDetail.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .api.commons.TemplateDetail template_details = 3 [json_name = "templateDetails"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.TemplateDetail.Builder addTemplateDetailsBuilder(
+        int index) {
+      return getTemplateDetailsFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.api.commons.TemplateDetail.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .api.commons.TemplateDetail template_details = 3 [json_name = "templateDetails"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.TemplateDetail.Builder> 
+         getTemplateDetailsBuilderList() {
+      return getTemplateDetailsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.TemplateDetail, com.tcn.cloud.api.api.commons.TemplateDetail.Builder, com.tcn.cloud.api.api.commons.TemplateDetailOrBuilder> 
+        getTemplateDetailsFieldBuilder() {
+      if (templateDetailsBuilder_ == null) {
+        templateDetailsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.TemplateDetail, com.tcn.cloud.api.api.commons.TemplateDetail.Builder, com.tcn.cloud.api.api.commons.TemplateDetailOrBuilder>(
+                templateDetails_,
+                ((bitField0_ & 0x00000004) != 0),
+                getParentForChildren(),
+                isClean());
+        templateDetails_ = null;
+      }
+      return templateDetailsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
