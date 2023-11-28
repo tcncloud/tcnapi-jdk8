@@ -4989,10 +4989,11 @@ public final class WFMGrpc {
      * <pre>
      * Gets the last date of a skill profile resync for the org seding the request.
      * If the org has never done a skill profile resync &#64;resync_date will not be set.
+     * It will also start loading the client's history cache if its not loaded already.
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Internal: error occurs when getting the resync date.
+     *   - grpc.Internal: error occurs when getting the resync date or starting the client's history cache.
      * </pre>
      */
     default void getLastSkillProfileResyncDate(com.tcn.cloud.api.api.v1alpha1.wfm.GetLastSkillProfileResyncDateReq request,
@@ -7765,10 +7766,11 @@ public final class WFMGrpc {
      * <pre>
      * Gets the last date of a skill profile resync for the org seding the request.
      * If the org has never done a skill profile resync &#64;resync_date will not be set.
+     * It will also start loading the client's history cache if its not loaded already.
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Internal: error occurs when getting the resync date.
+     *   - grpc.Internal: error occurs when getting the resync date or starting the client's history cache.
      * </pre>
      */
     public void getLastSkillProfileResyncDate(com.tcn.cloud.api.api.v1alpha1.wfm.GetLastSkillProfileResyncDateReq request,
@@ -10673,10 +10675,11 @@ public final class WFMGrpc {
      * <pre>
      * Gets the last date of a skill profile resync for the org seding the request.
      * If the org has never done a skill profile resync &#64;resync_date will not be set.
+     * It will also start loading the client's history cache if its not loaded already.
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Internal: error occurs when getting the resync date.
+     *   - grpc.Internal: error occurs when getting the resync date or starting the client's history cache.
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.GetLastSkillProfileResyncDateRes getLastSkillProfileResyncDate(com.tcn.cloud.api.api.v1alpha1.wfm.GetLastSkillProfileResyncDateReq request) {
@@ -13441,10 +13444,11 @@ public final class WFMGrpc {
      * <pre>
      * Gets the last date of a skill profile resync for the org seding the request.
      * If the org has never done a skill profile resync &#64;resync_date will not be set.
+     * It will also start loading the client's history cache if its not loaded already.
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Internal: error occurs when getting the resync date.
+     *   - grpc.Internal: error occurs when getting the resync date or starting the client's history cache.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.GetLastSkillProfileResyncDateRes> getLastSkillProfileResyncDate(
