@@ -24,6 +24,10 @@ public enum ConfigPermissionEnum
    * <code>ROOM303_SUPERVISOR = 2;</code>
    */
   ROOM303_SUPERVISOR(2),
+  /**
+   * <code>ROOM303_LIMITED = 3;</code>
+   */
+  ROOM303_LIMITED(3),
   UNRECOGNIZED(-1),
   ;
 
@@ -39,6 +43,10 @@ public enum ConfigPermissionEnum
    * <code>ROOM303_SUPERVISOR = 2;</code>
    */
   public static final int ROOM303_SUPERVISOR_VALUE = 2;
+  /**
+   * <code>ROOM303_LIMITED = 3;</code>
+   */
+  public static final int ROOM303_LIMITED_VALUE = 3;
 
 
   public final int getNumber() {
@@ -68,6 +76,7 @@ public enum ConfigPermissionEnum
       case 0: return LIMITED;
       case 1: return ROOM303_MEMBER;
       case 2: return ROOM303_SUPERVISOR;
+      case 3: return ROOM303_LIMITED;
       default: return null;
     }
   }

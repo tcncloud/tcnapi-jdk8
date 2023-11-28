@@ -115,12 +115,13 @@ public final class Room303Proto {
       "US_EDITED\020\001\022\033\n\027MESSAGE_STATUS_ARCHIVED\020\002" +
       "*W\n\nRoomStatus\022\026\n\022ROOM_STATUS_ACTIVE\020\000\022\030" +
       "\n\024ROOM_STATUS_ARCHIVED\020\001\022\027\n\023ROOM_STATUS_" +
-      "DELETED\020\002*O\n\024ConfigPermissionEnum\022\013\n\007LIM" +
+      "DELETED\020\002*d\n\024ConfigPermissionEnum\022\013\n\007LIM" +
       "ITED\020\000\022\022\n\016ROOM303_MEMBER\020\001\022\026\n\022ROOM303_SU" +
-      "PERVISOR\020\002Bz\n\035com.tcn.cloud.api.api.comm" +
-      "onsB\014Room303ProtoP\001\242\002\003ACX\252\002\013Api.Commons\312" +
-      "\002\013Api\\Commons\342\002\027Api\\Commons\\GPBMetadata\352" +
-      "\002\014Api::Commonsb\006proto3"
+      "PERVISOR\020\002\022\023\n\017ROOM303_LIMITED\020\003Bz\n\035com.t" +
+      "cn.cloud.api.api.commonsB\014Room303ProtoP\001" +
+      "\242\002\003ACX\252\002\013Api.Commons\312\002\013Api\\Commons\342\002\027Api" +
+      "\\Commons\\GPBMetadata\352\002\014Api::Commonsb\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
