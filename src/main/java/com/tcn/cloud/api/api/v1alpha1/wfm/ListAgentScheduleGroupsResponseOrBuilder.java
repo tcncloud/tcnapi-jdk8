@@ -8,24 +8,44 @@ public interface ListAgentScheduleGroupsResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * The agent_groups found. They will be filled with member_wfm_agents only.
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.wfm.AgentGroup agent_groups = 1 [json_name = "agentGroups"];</code>
    */
   java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.AgentGroup> 
       getAgentGroupsList();
   /**
+   * <pre>
+   * The agent_groups found. They will be filled with member_wfm_agents only.
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.wfm.AgentGroup agent_groups = 1 [json_name = "agentGroups"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.wfm.AgentGroup getAgentGroups(int index);
   /**
+   * <pre>
+   * The agent_groups found. They will be filled with member_wfm_agents only.
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.wfm.AgentGroup agent_groups = 1 [json_name = "agentGroups"];</code>
    */
   int getAgentGroupsCount();
   /**
+   * <pre>
+   * The agent_groups found. They will be filled with member_wfm_agents only.
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.wfm.AgentGroup agent_groups = 1 [json_name = "agentGroups"];</code>
    */
   java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.AgentGroupOrBuilder> 
       getAgentGroupsOrBuilderList();
   /**
+   * <pre>
+   * The agent_groups found. They will be filled with member_wfm_agents only.
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.wfm.AgentGroup agent_groups = 1 [json_name = "agentGroups"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.wfm.AgentGroupOrBuilder getAgentGroupsOrBuilder(

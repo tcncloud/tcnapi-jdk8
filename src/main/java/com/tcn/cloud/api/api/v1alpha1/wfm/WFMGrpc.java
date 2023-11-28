@@ -6001,7 +6001,13 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Lists all schedulable AgentGroups on or under the given Node or ShiftTemplate.
+     * ListAgentScheduleGroups lists all schedulable agent groups for the given &#64;entity and &#64;org_id, filled with &#64;member_wfm_agents.
+     * The given &#64;entity must be either a Node or a ShiftTemplate.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when getting the agent groups.
      * </pre>
      */
     default void listAgentScheduleGroups(com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentScheduleGroupsRequest request,
@@ -8836,7 +8842,13 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Lists all schedulable AgentGroups on or under the given Node or ShiftTemplate.
+     * ListAgentScheduleGroups lists all schedulable agent groups for the given &#64;entity and &#64;org_id, filled with &#64;member_wfm_agents.
+     * The given &#64;entity must be either a Node or a ShiftTemplate.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when getting the agent groups.
      * </pre>
      */
     public void listAgentScheduleGroups(com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentScheduleGroupsRequest request,
@@ -11693,7 +11705,13 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Lists all schedulable AgentGroups on or under the given Node or ShiftTemplate.
+     * ListAgentScheduleGroups lists all schedulable agent groups for the given &#64;entity and &#64;org_id, filled with &#64;member_wfm_agents.
+     * The given &#64;entity must be either a Node or a ShiftTemplate.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when getting the agent groups.
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentScheduleGroupsResponse listAgentScheduleGroups(com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentScheduleGroupsRequest request) {
@@ -14402,7 +14420,13 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Lists all schedulable AgentGroups on or under the given Node or ShiftTemplate.
+     * ListAgentScheduleGroups lists all schedulable agent groups for the given &#64;entity and &#64;org_id, filled with &#64;member_wfm_agents.
+     * The given &#64;entity must be either a Node or a ShiftTemplate.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when getting the agent groups.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentScheduleGroupsResponse> listAgentScheduleGroups(
