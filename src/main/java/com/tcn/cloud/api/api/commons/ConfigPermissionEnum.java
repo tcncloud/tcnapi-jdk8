@@ -13,18 +13,34 @@ package com.tcn.cloud.api.api.commons;
 public enum ConfigPermissionEnum
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
+   * <pre>
+   * default
+   * </pre>
+   *
    * <code>LIMITED = 0;</code>
    */
   LIMITED(0),
   /**
+   * <pre>
+   * member permissions
+   * </pre>
+   *
    * <code>ROOM303_MEMBER = 1;</code>
    */
   ROOM303_MEMBER(1),
   /**
+   * <pre>
+   * supervisor permissions
+   * </pre>
+   *
    * <code>ROOM303_SUPERVISOR = 2;</code>
    */
   ROOM303_SUPERVISOR(2),
   /**
+   * <pre>
+   * limited permissions
+   * </pre>
+   *
    * <code>ROOM303_LIMITED = 3;</code>
    */
   ROOM303_LIMITED(3),
@@ -32,18 +48,34 @@ public enum ConfigPermissionEnum
   ;
 
   /**
+   * <pre>
+   * default
+   * </pre>
+   *
    * <code>LIMITED = 0;</code>
    */
   public static final int LIMITED_VALUE = 0;
   /**
+   * <pre>
+   * member permissions
+   * </pre>
+   *
    * <code>ROOM303_MEMBER = 1;</code>
    */
   public static final int ROOM303_MEMBER_VALUE = 1;
   /**
+   * <pre>
+   * supervisor permissions
+   * </pre>
+   *
    * <code>ROOM303_SUPERVISOR = 2;</code>
    */
   public static final int ROOM303_SUPERVISOR_VALUE = 2;
   /**
+   * <pre>
+   * limited permissions
+   * </pre>
+   *
    * <code>ROOM303_LIMITED = 3;</code>
    */
   public static final int ROOM303_LIMITED_VALUE = 3;
