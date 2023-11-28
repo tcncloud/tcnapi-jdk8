@@ -46,7 +46,7 @@ public final class UserProto {
       "\n\032api/commons/org/user.proto\022\017api.common" +
       "s.org\032\025api/commons/org.proto\032\037google/pro" +
       "tobuf/timestamp.proto\032\036google/protobuf/w" +
-      "rappers.proto\"\271\014\n\004User\022\027\n\007user_id\030\001 \001(\tR" +
+      "rappers.proto\"\341\014\n\004User\022\027\n\007user_id\030\001 \001(\tR" +
       "\006userId\022\025\n\006org_id\030\002 \001(\tR\005orgId\022\032\n\010userna" +
       "me\030\003 \001(\tR\010username\0223\n\026p3_permission_grou" +
       "p_id\030\004 \001(\tR\023p3PermissionGroupId\022\033\n\tlogin" +
@@ -81,7 +81,8 @@ public final class UserProto {
       "entProfileGroupId\022/\n\006skills\030\320\001 \003(\0132\026.api" +
       ".commons.org.SkillR\006skills\022\025\n\005agent\030\254\002 \001" +
       "(\010R\005agent\022$\n\raccount_owner\030\220\003 \001(\010R\014accou" +
-      "ntOwner\032a\n\021RegionSidMapEntry\022\020\n\003key\030\001 \001(" +
+      "ntOwner\022&\n\016email_verified\030\221\003 \001(\010R\remailV" +
+      "erified\032a\n\021RegionSidMapEntry\022\020\n\003key\030\001 \001(" +
       "\tR\003key\0226\n\005value\030\002 \001(\0132 .api.commons.org." +
       "User.RegionSidsR\005value:\0028\001\032e\n\nRegionSids" +
       "\022\033\n\tlogin_sid\030\001 \001(\003R\010loginSid\022\033\n\tagent_s" +
@@ -106,7 +107,7 @@ public final class UserProto {
     internal_static_api_commons_org_User_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_org_User_descriptor,
-        new java.lang.String[] { "UserId", "OrgId", "Username", "P3PermissionGroupId", "LoginSid", "AgentSid", "RegionId", "PartnerAgentId", "ClientSid", "RegionSidMap", "ApiKey", "Email", "LoginDisabled", "CallerIds", "LinkbackNumbers", "AuthUserId", "EnableMfa", "FirstName", "LastName", "Created", "LastUpdated", "PasswordResetRequired", "ConnectionId", "TimeZoneOverride", "PermissionGroupIds", "TrustIds", "DefaultRegion", "DefaultApplication", "UserCallerId", "AgentProfileGroupId", "Skills", "Agent", "AccountOwner", });
+        new java.lang.String[] { "UserId", "OrgId", "Username", "P3PermissionGroupId", "LoginSid", "AgentSid", "RegionId", "PartnerAgentId", "ClientSid", "RegionSidMap", "ApiKey", "Email", "LoginDisabled", "CallerIds", "LinkbackNumbers", "AuthUserId", "EnableMfa", "FirstName", "LastName", "Created", "LastUpdated", "PasswordResetRequired", "ConnectionId", "TimeZoneOverride", "PermissionGroupIds", "TrustIds", "DefaultRegion", "DefaultApplication", "UserCallerId", "AgentProfileGroupId", "Skills", "Agent", "AccountOwner", "EmailVerified", });
     internal_static_api_commons_org_User_RegionSidMapEntry_descriptor =
       internal_static_api_commons_org_User_descriptor.getNestedTypes().get(0);
     internal_static_api_commons_org_User_RegionSidMapEntry_fieldAccessorTable = new

@@ -743,4 +743,14 @@ com.tcn.cloud.api.api.commons.org.User.RegionSids defaultValue);
    * @return The accountOwner.
    */
   boolean getAccountOwner();
+
+  /**
+   * <pre>
+   * Whether or not the user's email is verified.
+   * </pre>
+   *
+   * <code>bool email_verified = 401 [json_name = "emailVerified"];</code>
+   * @return The emailVerified.
+   */
+  boolean getEmailVerified();
 }
