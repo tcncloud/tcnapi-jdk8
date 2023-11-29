@@ -46,7 +46,7 @@ private static final long serialVersionUID = 0L;
   private com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity entity_;
   /**
    * <pre>
-   * Any Node or ShiftTemplate.
+   * Any node or shift template that the agent groups belong to.
    * </pre>
    *
    * <code>.api.v1alpha1.wfm.ParentEntity entity = 1 [json_name = "entity"];</code>
@@ -58,7 +58,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Any Node or ShiftTemplate.
+   * Any node or shift template that the agent groups belong to.
    * </pre>
    *
    * <code>.api.v1alpha1.wfm.ParentEntity entity = 1 [json_name = "entity"];</code>
@@ -70,7 +70,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Any Node or ShiftTemplate.
+   * Any node or shift template that the agent groups belong to.
    * </pre>
    *
    * <code>.api.v1alpha1.wfm.ParentEntity entity = 1 [json_name = "entity"];</code>
@@ -427,7 +427,7 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity, com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntityOrBuilder> entityBuilder_;
     /**
      * <pre>
-     * Any Node or ShiftTemplate.
+     * Any node or shift template that the agent groups belong to.
      * </pre>
      *
      * <code>.api.v1alpha1.wfm.ParentEntity entity = 1 [json_name = "entity"];</code>
@@ -438,7 +438,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Any Node or ShiftTemplate.
+     * Any node or shift template that the agent groups belong to.
      * </pre>
      *
      * <code>.api.v1alpha1.wfm.ParentEntity entity = 1 [json_name = "entity"];</code>
@@ -453,7 +453,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Any Node or ShiftTemplate.
+     * Any node or shift template that the agent groups belong to.
      * </pre>
      *
      * <code>.api.v1alpha1.wfm.ParentEntity entity = 1 [json_name = "entity"];</code>
@@ -473,7 +473,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Any Node or ShiftTemplate.
+     * Any node or shift template that the agent groups belong to.
      * </pre>
      *
      * <code>.api.v1alpha1.wfm.ParentEntity entity = 1 [json_name = "entity"];</code>
@@ -491,7 +491,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Any Node or ShiftTemplate.
+     * Any node or shift template that the agent groups belong to.
      * </pre>
      *
      * <code>.api.v1alpha1.wfm.ParentEntity entity = 1 [json_name = "entity"];</code>
@@ -514,7 +514,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Any Node or ShiftTemplate.
+     * Any node or shift template that the agent groups belong to.
      * </pre>
      *
      * <code>.api.v1alpha1.wfm.ParentEntity entity = 1 [json_name = "entity"];</code>
@@ -531,7 +531,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Any Node or ShiftTemplate.
+     * Any node or shift template that the agent groups belong to.
      * </pre>
      *
      * <code>.api.v1alpha1.wfm.ParentEntity entity = 1 [json_name = "entity"];</code>
@@ -543,7 +543,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Any Node or ShiftTemplate.
+     * Any node or shift template that the agent groups belong to.
      * </pre>
      *
      * <code>.api.v1alpha1.wfm.ParentEntity entity = 1 [json_name = "entity"];</code>
@@ -558,7 +558,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Any Node or ShiftTemplate.
+     * Any node or shift template that the agent groups belong to.
      * </pre>
      *
      * <code>.api.v1alpha1.wfm.ParentEntity entity = 1 [json_name = "entity"];</code>

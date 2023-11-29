@@ -9,7 +9,7 @@ public interface ListAgentScheduleGroupsRequestOrBuilder extends
 
   /**
    * <pre>
-   * Any Node or ShiftTemplate.
+   * Any node or shift template that the agent groups belong to.
    * </pre>
    *
    * <code>.api.v1alpha1.wfm.ParentEntity entity = 1 [json_name = "entity"];</code>
@@ -18,7 +18,7 @@ public interface ListAgentScheduleGroupsRequestOrBuilder extends
   boolean hasEntity();
   /**
    * <pre>
-   * Any Node or ShiftTemplate.
+   * Any node or shift template that the agent groups belong to.
    * </pre>
    *
    * <code>.api.v1alpha1.wfm.ParentEntity entity = 1 [json_name = "entity"];</code>
@@ -27,7 +27,7 @@ public interface ListAgentScheduleGroupsRequestOrBuilder extends
   com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity getEntity();
   /**
    * <pre>
-   * Any Node or ShiftTemplate.
+   * Any node or shift template that the agent groups belong to.
    * </pre>
    *
    * <code>.api.v1alpha1.wfm.ParentEntity entity = 1 [json_name = "entity"];</code>

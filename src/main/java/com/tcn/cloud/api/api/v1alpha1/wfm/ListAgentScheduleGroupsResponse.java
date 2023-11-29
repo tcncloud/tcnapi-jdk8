@@ -47,6 +47,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.AgentGroup> agentGroups_;
   /**
+   * <pre>
+   * The agent_groups found. They will be filled with member_wfm_agents only.
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.wfm.AgentGroup agent_groups = 1 [json_name = "agentGroups"];</code>
    */
   @java.lang.Override
@@ -54,6 +58,10 @@ private static final long serialVersionUID = 0L;
     return agentGroups_;
   }
   /**
+   * <pre>
+   * The agent_groups found. They will be filled with member_wfm_agents only.
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.wfm.AgentGroup agent_groups = 1 [json_name = "agentGroups"];</code>
    */
   @java.lang.Override
@@ -62,6 +70,10 @@ private static final long serialVersionUID = 0L;
     return agentGroups_;
   }
   /**
+   * <pre>
+   * The agent_groups found. They will be filled with member_wfm_agents only.
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.wfm.AgentGroup agent_groups = 1 [json_name = "agentGroups"];</code>
    */
   @java.lang.Override
@@ -69,6 +81,10 @@ private static final long serialVersionUID = 0L;
     return agentGroups_.size();
   }
   /**
+   * <pre>
+   * The agent_groups found. They will be filled with member_wfm_agents only.
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.wfm.AgentGroup agent_groups = 1 [json_name = "agentGroups"];</code>
    */
   @java.lang.Override
@@ -76,6 +92,10 @@ private static final long serialVersionUID = 0L;
     return agentGroups_.get(index);
   }
   /**
+   * <pre>
+   * The agent_groups found. They will be filled with member_wfm_agents only.
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.wfm.AgentGroup agent_groups = 1 [json_name = "agentGroups"];</code>
    */
   @java.lang.Override
@@ -475,6 +495,10 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.wfm.AgentGroup, com.tcn.cloud.api.api.v1alpha1.wfm.AgentGroup.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.AgentGroupOrBuilder> agentGroupsBuilder_;
 
     /**
+     * <pre>
+     * The agent_groups found. They will be filled with member_wfm_agents only.
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.wfm.AgentGroup agent_groups = 1 [json_name = "agentGroups"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.AgentGroup> getAgentGroupsList() {
@@ -485,6 +509,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The agent_groups found. They will be filled with member_wfm_agents only.
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.wfm.AgentGroup agent_groups = 1 [json_name = "agentGroups"];</code>
      */
     public int getAgentGroupsCount() {
@@ -495,6 +523,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The agent_groups found. They will be filled with member_wfm_agents only.
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.wfm.AgentGroup agent_groups = 1 [json_name = "agentGroups"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.AgentGroup getAgentGroups(int index) {
@@ -505,6 +537,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The agent_groups found. They will be filled with member_wfm_agents only.
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.wfm.AgentGroup agent_groups = 1 [json_name = "agentGroups"];</code>
      */
     public Builder setAgentGroups(
@@ -522,6 +558,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The agent_groups found. They will be filled with member_wfm_agents only.
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.wfm.AgentGroup agent_groups = 1 [json_name = "agentGroups"];</code>
      */
     public Builder setAgentGroups(
@@ -536,6 +576,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The agent_groups found. They will be filled with member_wfm_agents only.
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.wfm.AgentGroup agent_groups = 1 [json_name = "agentGroups"];</code>
      */
     public Builder addAgentGroups(com.tcn.cloud.api.api.v1alpha1.wfm.AgentGroup value) {
@@ -552,6 +596,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The agent_groups found. They will be filled with member_wfm_agents only.
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.wfm.AgentGroup agent_groups = 1 [json_name = "agentGroups"];</code>
      */
     public Builder addAgentGroups(
@@ -569,6 +617,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The agent_groups found. They will be filled with member_wfm_agents only.
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.wfm.AgentGroup agent_groups = 1 [json_name = "agentGroups"];</code>
      */
     public Builder addAgentGroups(
@@ -583,6 +635,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The agent_groups found. They will be filled with member_wfm_agents only.
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.wfm.AgentGroup agent_groups = 1 [json_name = "agentGroups"];</code>
      */
     public Builder addAgentGroups(
@@ -597,6 +653,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The agent_groups found. They will be filled with member_wfm_agents only.
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.wfm.AgentGroup agent_groups = 1 [json_name = "agentGroups"];</code>
      */
     public Builder addAllAgentGroups(
@@ -612,6 +672,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The agent_groups found. They will be filled with member_wfm_agents only.
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.wfm.AgentGroup agent_groups = 1 [json_name = "agentGroups"];</code>
      */
     public Builder clearAgentGroups() {
@@ -625,6 +689,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The agent_groups found. They will be filled with member_wfm_agents only.
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.wfm.AgentGroup agent_groups = 1 [json_name = "agentGroups"];</code>
      */
     public Builder removeAgentGroups(int index) {
@@ -638,6 +706,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The agent_groups found. They will be filled with member_wfm_agents only.
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.wfm.AgentGroup agent_groups = 1 [json_name = "agentGroups"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.AgentGroup.Builder getAgentGroupsBuilder(
@@ -645,6 +717,10 @@ private static final long serialVersionUID = 0L;
       return getAgentGroupsFieldBuilder().getBuilder(index);
     }
     /**
+     * <pre>
+     * The agent_groups found. They will be filled with member_wfm_agents only.
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.wfm.AgentGroup agent_groups = 1 [json_name = "agentGroups"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.AgentGroupOrBuilder getAgentGroupsOrBuilder(
@@ -655,6 +731,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The agent_groups found. They will be filled with member_wfm_agents only.
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.wfm.AgentGroup agent_groups = 1 [json_name = "agentGroups"];</code>
      */
     public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.AgentGroupOrBuilder> 
@@ -666,6 +746,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The agent_groups found. They will be filled with member_wfm_agents only.
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.wfm.AgentGroup agent_groups = 1 [json_name = "agentGroups"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.AgentGroup.Builder addAgentGroupsBuilder() {
@@ -673,6 +757,10 @@ private static final long serialVersionUID = 0L;
           com.tcn.cloud.api.api.v1alpha1.wfm.AgentGroup.getDefaultInstance());
     }
     /**
+     * <pre>
+     * The agent_groups found. They will be filled with member_wfm_agents only.
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.wfm.AgentGroup agent_groups = 1 [json_name = "agentGroups"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.AgentGroup.Builder addAgentGroupsBuilder(
@@ -681,6 +769,10 @@ private static final long serialVersionUID = 0L;
           index, com.tcn.cloud.api.api.v1alpha1.wfm.AgentGroup.getDefaultInstance());
     }
     /**
+     * <pre>
+     * The agent_groups found. They will be filled with member_wfm_agents only.
+     * </pre>
+     *
      * <code>repeated .api.v1alpha1.wfm.AgentGroup agent_groups = 1 [json_name = "agentGroups"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.AgentGroup.Builder> 
