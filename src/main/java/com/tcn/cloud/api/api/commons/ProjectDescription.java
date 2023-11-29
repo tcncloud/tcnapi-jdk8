@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.commons;
 
 /**
+ * <pre>
+ * Project Description
+ * </pre>
+ *
  * Protobuf type {@code api.commons.ProjectDescription}
  */
 public final class ProjectDescription extends
@@ -16,7 +20,6 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ProjectDescription() {
-    projectCode_ = "";
     projectTitle_ = "";
   }
 
@@ -43,6 +46,10 @@ private static final long serialVersionUID = 0L;
   public static final int PROJECT_ID_FIELD_NUMBER = 1;
   private long projectId_ = 0L;
   /**
+   * <pre>
+   * Project Id from Omni
+   * </pre>
+   *
    * <code>int64 project_id = 1 [json_name = "projectId", jstype = JS_STRING];</code>
    * @return The projectId.
    */
@@ -51,50 +58,15 @@ private static final long serialVersionUID = 0L;
     return projectId_;
   }
 
-  public static final int PROJECT_CODE_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object projectCode_ = "";
-  /**
-   * <code>string project_code = 2 [json_name = "projectCode"];</code>
-   * @return The projectCode.
-   */
-  @java.lang.Override
-  public java.lang.String getProjectCode() {
-    java.lang.Object ref = projectCode_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      projectCode_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string project_code = 2 [json_name = "projectCode"];</code>
-   * @return The bytes for projectCode.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getProjectCodeBytes() {
-    java.lang.Object ref = projectCode_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      projectCode_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int PROJECT_TITLE_FIELD_NUMBER = 3;
+  public static final int PROJECT_TITLE_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
   private volatile java.lang.Object projectTitle_ = "";
   /**
-   * <code>string project_title = 3 [json_name = "projectTitle"];</code>
+   * <pre>
+   * Project Title From Omni
+   * </pre>
+   *
+   * <code>string project_title = 2 [json_name = "projectTitle"];</code>
    * @return The projectTitle.
    */
   @java.lang.Override
@@ -111,7 +83,11 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string project_title = 3 [json_name = "projectTitle"];</code>
+   * <pre>
+   * Project Title From Omni
+   * </pre>
+   *
+   * <code>string project_title = 2 [json_name = "projectTitle"];</code>
    * @return The bytes for projectTitle.
    */
   @java.lang.Override
@@ -146,11 +122,8 @@ private static final long serialVersionUID = 0L;
     if (projectId_ != 0L) {
       output.writeInt64(1, projectId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectCode_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, projectCode_);
-    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectTitle_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, projectTitle_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, projectTitle_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -165,11 +138,8 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(1, projectId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectCode_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, projectCode_);
-    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectTitle_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, projectTitle_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, projectTitle_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -188,8 +158,6 @@ private static final long serialVersionUID = 0L;
 
     if (getProjectId()
         != other.getProjectId()) return false;
-    if (!getProjectCode()
-        .equals(other.getProjectCode())) return false;
     if (!getProjectTitle()
         .equals(other.getProjectTitle())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -206,8 +174,6 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + PROJECT_ID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getProjectId());
-    hash = (37 * hash) + PROJECT_CODE_FIELD_NUMBER;
-    hash = (53 * hash) + getProjectCode().hashCode();
     hash = (37 * hash) + PROJECT_TITLE_FIELD_NUMBER;
     hash = (53 * hash) + getProjectTitle().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
@@ -308,6 +274,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Project Description
+   * </pre>
+   *
    * Protobuf type {@code api.commons.ProjectDescription}
    */
   public static final class Builder extends
@@ -342,7 +312,6 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       projectId_ = 0L;
-      projectCode_ = "";
       projectTitle_ = "";
       return this;
     }
@@ -381,9 +350,6 @@ private static final long serialVersionUID = 0L;
         result.projectId_ = projectId_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.projectCode_ = projectCode_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
         result.projectTitle_ = projectTitle_;
       }
     }
@@ -435,14 +401,9 @@ private static final long serialVersionUID = 0L;
       if (other.getProjectId() != 0L) {
         setProjectId(other.getProjectId());
       }
-      if (!other.getProjectCode().isEmpty()) {
-        projectCode_ = other.projectCode_;
-        bitField0_ |= 0x00000002;
-        onChanged();
-      }
       if (!other.getProjectTitle().isEmpty()) {
         projectTitle_ = other.projectTitle_;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -477,15 +438,10 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 8
             case 18: {
-              projectCode_ = input.readStringRequireUtf8();
+              projectTitle_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000002;
               break;
             } // case 18
-            case 26: {
-              projectTitle_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -505,6 +461,10 @@ private static final long serialVersionUID = 0L;
 
     private long projectId_ ;
     /**
+     * <pre>
+     * Project Id from Omni
+     * </pre>
+     *
      * <code>int64 project_id = 1 [json_name = "projectId", jstype = JS_STRING];</code>
      * @return The projectId.
      */
@@ -513,6 +473,10 @@ private static final long serialVersionUID = 0L;
       return projectId_;
     }
     /**
+     * <pre>
+     * Project Id from Omni
+     * </pre>
+     *
      * <code>int64 project_id = 1 [json_name = "projectId", jstype = JS_STRING];</code>
      * @param value The projectId to set.
      * @return This builder for chaining.
@@ -525,6 +489,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Project Id from Omni
+     * </pre>
+     *
      * <code>int64 project_id = 1 [json_name = "projectId", jstype = JS_STRING];</code>
      * @return This builder for chaining.
      */
@@ -535,81 +503,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object projectCode_ = "";
-    /**
-     * <code>string project_code = 2 [json_name = "projectCode"];</code>
-     * @return The projectCode.
-     */
-    public java.lang.String getProjectCode() {
-      java.lang.Object ref = projectCode_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        projectCode_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string project_code = 2 [json_name = "projectCode"];</code>
-     * @return The bytes for projectCode.
-     */
-    public com.google.protobuf.ByteString
-        getProjectCodeBytes() {
-      java.lang.Object ref = projectCode_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        projectCode_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string project_code = 2 [json_name = "projectCode"];</code>
-     * @param value The projectCode to set.
-     * @return This builder for chaining.
-     */
-    public Builder setProjectCode(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      projectCode_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string project_code = 2 [json_name = "projectCode"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearProjectCode() {
-      projectCode_ = getDefaultInstance().getProjectCode();
-      bitField0_ = (bitField0_ & ~0x00000002);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string project_code = 2 [json_name = "projectCode"];</code>
-     * @param value The bytes for projectCode to set.
-     * @return This builder for chaining.
-     */
-    public Builder setProjectCodeBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      projectCode_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-
     private java.lang.Object projectTitle_ = "";
     /**
-     * <code>string project_title = 3 [json_name = "projectTitle"];</code>
+     * <pre>
+     * Project Title From Omni
+     * </pre>
+     *
+     * <code>string project_title = 2 [json_name = "projectTitle"];</code>
      * @return The projectTitle.
      */
     public java.lang.String getProjectTitle() {
@@ -625,7 +525,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string project_title = 3 [json_name = "projectTitle"];</code>
+     * <pre>
+     * Project Title From Omni
+     * </pre>
+     *
+     * <code>string project_title = 2 [json_name = "projectTitle"];</code>
      * @return The bytes for projectTitle.
      */
     public com.google.protobuf.ByteString
@@ -642,7 +546,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string project_title = 3 [json_name = "projectTitle"];</code>
+     * <pre>
+     * Project Title From Omni
+     * </pre>
+     *
+     * <code>string project_title = 2 [json_name = "projectTitle"];</code>
      * @param value The projectTitle to set.
      * @return This builder for chaining.
      */
@@ -650,22 +558,30 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       projectTitle_ = value;
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
-     * <code>string project_title = 3 [json_name = "projectTitle"];</code>
+     * <pre>
+     * Project Title From Omni
+     * </pre>
+     *
+     * <code>string project_title = 2 [json_name = "projectTitle"];</code>
      * @return This builder for chaining.
      */
     public Builder clearProjectTitle() {
       projectTitle_ = getDefaultInstance().getProjectTitle();
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
     /**
-     * <code>string project_title = 3 [json_name = "projectTitle"];</code>
+     * <pre>
+     * Project Title From Omni
+     * </pre>
+     *
+     * <code>string project_title = 2 [json_name = "projectTitle"];</code>
      * @param value The bytes for projectTitle to set.
      * @return This builder for chaining.
      */
@@ -674,7 +590,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       projectTitle_ = value;
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }

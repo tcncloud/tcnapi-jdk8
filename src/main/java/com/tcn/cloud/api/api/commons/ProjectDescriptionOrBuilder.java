@@ -8,30 +8,30 @@ public interface ProjectDescriptionOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * Project Id from Omni
+   * </pre>
+   *
    * <code>int64 project_id = 1 [json_name = "projectId", jstype = JS_STRING];</code>
    * @return The projectId.
    */
   long getProjectId();
 
   /**
-   * <code>string project_code = 2 [json_name = "projectCode"];</code>
-   * @return The projectCode.
-   */
-  java.lang.String getProjectCode();
-  /**
-   * <code>string project_code = 2 [json_name = "projectCode"];</code>
-   * @return The bytes for projectCode.
-   */
-  com.google.protobuf.ByteString
-      getProjectCodeBytes();
-
-  /**
-   * <code>string project_title = 3 [json_name = "projectTitle"];</code>
+   * <pre>
+   * Project Title From Omni
+   * </pre>
+   *
+   * <code>string project_title = 2 [json_name = "projectTitle"];</code>
    * @return The projectTitle.
    */
   java.lang.String getProjectTitle();
   /**
-   * <code>string project_title = 3 [json_name = "projectTitle"];</code>
+   * <pre>
+   * Project Title From Omni
+   * </pre>
+   *
+   * <code>string project_title = 2 [json_name = "projectTitle"];</code>
    * @return The bytes for projectTitle.
    */
   com.google.protobuf.ByteString

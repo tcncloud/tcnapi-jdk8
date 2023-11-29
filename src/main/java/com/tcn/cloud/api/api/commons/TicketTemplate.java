@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.commons;
 
 /**
+ * <pre>
+ * Ticket Template
+ * </pre>
+ *
  * Protobuf type {@code api.commons.TicketTemplate}
  */
 public final class TicketTemplate extends
@@ -47,9 +51,13 @@ private static final long serialVersionUID = 0L;
   public static final int TICKET_TEMPLATE_ID_FIELD_NUMBER = 1;
   private long ticketTemplateId_ = 0L;
   /**
+   * <pre>
+   * Deprecated
+   * </pre>
+   *
    * <code>int64 ticket_template_id = 1 [json_name = "ticketTemplateId", deprecated = true];</code>
    * @deprecated api.commons.TicketTemplate.ticket_template_id is deprecated.
-   *     See api/commons/tickets.proto;l=55
+   *     See api/commons/tickets.proto;l=57
    * @return The ticketTemplateId.
    */
   @java.lang.Override
@@ -61,6 +69,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object orgId_ = "";
   /**
+   * <pre>
+   * Organization ID
+   * </pre>
+   *
    * <code>string org_id = 2 [json_name = "orgId"];</code>
    * @return The orgId.
    */
@@ -78,6 +90,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * Organization ID
+   * </pre>
+   *
    * <code>string org_id = 2 [json_name = "orgId"];</code>
    * @return The bytes for orgId.
    */
@@ -100,6 +116,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object template_ = "";
   /**
+   * <pre>
+   * A formatted string which the FE uses to retrieve all template related information
+   * </pre>
+   *
    * <code>string template = 3 [json_name = "template"];</code>
    * @return The template.
    */
@@ -117,6 +137,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * A formatted string which the FE uses to retrieve all template related information
+   * </pre>
+   *
    * <code>string template = 3 [json_name = "template"];</code>
    * @return The bytes for template.
    */
@@ -139,6 +163,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object templateEntityVersion_ = "";
   /**
+   * <pre>
+   * Version of the Template
+   * </pre>
+   *
    * <code>string template_entity_version = 4 [json_name = "templateEntityVersion"];</code>
    * @return The templateEntityVersion.
    */
@@ -156,6 +184,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * Version of the Template
+   * </pre>
+   *
    * <code>string template_entity_version = 4 [json_name = "templateEntityVersion"];</code>
    * @return The bytes for templateEntityVersion.
    */
@@ -178,6 +210,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object templateName_ = "";
   /**
+   * <pre>
+   * Name of the Template
+   * </pre>
+   *
    * <code>string template_name = 5 [json_name = "templateName"];</code>
    * @return The templateName.
    */
@@ -195,6 +231,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * Name of the Template
+   * </pre>
+   *
    * <code>string template_name = 5 [json_name = "templateName"];</code>
    * @return The bytes for templateName.
    */
@@ -217,6 +257,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object createdById_ = "";
   /**
+   * <pre>
+   * Template created by user
+   * </pre>
+   *
    * <code>string created_by_id = 6 [json_name = "createdById"];</code>
    * @return The createdById.
    */
@@ -234,6 +278,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * Template created by user
+   * </pre>
+   *
    * <code>string created_by_id = 6 [json_name = "createdById"];</code>
    * @return The bytes for createdById.
    */
@@ -256,6 +304,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object modifiedBy_ = "";
   /**
+   * <pre>
+   * Template modified by user
+   * </pre>
+   *
    * <code>string modified_by = 7 [json_name = "modifiedBy"];</code>
    * @return The modifiedBy.
    */
@@ -273,6 +325,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * Template modified by user
+   * </pre>
+   *
    * <code>string modified_by = 7 [json_name = "modifiedBy"];</code>
    * @return The bytes for modifiedBy.
    */
@@ -294,6 +350,10 @@ private static final long serialVersionUID = 0L;
   public static final int CREATED_DATE_FIELD_NUMBER = 8;
   private com.google.protobuf.Timestamp createdDate_;
   /**
+   * <pre>
+   * Template create date
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp created_date = 8 [json_name = "createdDate"];</code>
    * @return Whether the createdDate field is set.
    */
@@ -302,6 +362,10 @@ private static final long serialVersionUID = 0L;
     return createdDate_ != null;
   }
   /**
+   * <pre>
+   * Template create date
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp created_date = 8 [json_name = "createdDate"];</code>
    * @return The createdDate.
    */
@@ -310,6 +374,10 @@ private static final long serialVersionUID = 0L;
     return createdDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdDate_;
   }
   /**
+   * <pre>
+   * Template create date
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp created_date = 8 [json_name = "createdDate"];</code>
    */
   @java.lang.Override
@@ -320,6 +388,10 @@ private static final long serialVersionUID = 0L;
   public static final int MODIFIED_DATE_FIELD_NUMBER = 9;
   private com.google.protobuf.Timestamp modifiedDate_;
   /**
+   * <pre>
+   * Template modified date
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp modified_date = 9 [json_name = "modifiedDate"];</code>
    * @return Whether the modifiedDate field is set.
    */
@@ -328,6 +400,10 @@ private static final long serialVersionUID = 0L;
     return modifiedDate_ != null;
   }
   /**
+   * <pre>
+   * Template modified date
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp modified_date = 9 [json_name = "modifiedDate"];</code>
    * @return The modifiedDate.
    */
@@ -336,6 +412,10 @@ private static final long serialVersionUID = 0L;
     return modifiedDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : modifiedDate_;
   }
   /**
+   * <pre>
+   * Template modified date
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp modified_date = 9 [json_name = "modifiedDate"];</code>
    */
   @java.lang.Override
@@ -346,6 +426,10 @@ private static final long serialVersionUID = 0L;
   public static final int IS_ACTIVE_FIELD_NUMBER = 10;
   private boolean isActive_ = false;
   /**
+   * <pre>
+   * True/False Identifies if a template is active or inactive
+   * </pre>
+   *
    * <code>bool is_active = 10 [json_name = "isActive"];</code>
    * @return The isActive.
    */
@@ -357,6 +441,10 @@ private static final long serialVersionUID = 0L;
   public static final int TEMPLATE_ID_FIELD_NUMBER = 11;
   private long templateId_ = 0L;
   /**
+   * <pre>
+   * Snowflake Id of Ticket Template
+   * </pre>
+   *
    * <code>int64 template_id = 11 [json_name = "templateId", jstype = JS_STRING];</code>
    * @return The templateId.
    */
@@ -640,6 +728,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Ticket Template
+   * </pre>
+   *
    * Protobuf type {@code api.commons.TicketTemplate}
    */
   public static final class Builder extends
@@ -957,9 +1049,13 @@ private static final long serialVersionUID = 0L;
 
     private long ticketTemplateId_ ;
     /**
+     * <pre>
+     * Deprecated
+     * </pre>
+     *
      * <code>int64 ticket_template_id = 1 [json_name = "ticketTemplateId", deprecated = true];</code>
      * @deprecated api.commons.TicketTemplate.ticket_template_id is deprecated.
-     *     See api/commons/tickets.proto;l=55
+     *     See api/commons/tickets.proto;l=57
      * @return The ticketTemplateId.
      */
     @java.lang.Override
@@ -967,9 +1063,13 @@ private static final long serialVersionUID = 0L;
       return ticketTemplateId_;
     }
     /**
+     * <pre>
+     * Deprecated
+     * </pre>
+     *
      * <code>int64 ticket_template_id = 1 [json_name = "ticketTemplateId", deprecated = true];</code>
      * @deprecated api.commons.TicketTemplate.ticket_template_id is deprecated.
-     *     See api/commons/tickets.proto;l=55
+     *     See api/commons/tickets.proto;l=57
      * @param value The ticketTemplateId to set.
      * @return This builder for chaining.
      */
@@ -981,9 +1081,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Deprecated
+     * </pre>
+     *
      * <code>int64 ticket_template_id = 1 [json_name = "ticketTemplateId", deprecated = true];</code>
      * @deprecated api.commons.TicketTemplate.ticket_template_id is deprecated.
-     *     See api/commons/tickets.proto;l=55
+     *     See api/commons/tickets.proto;l=57
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearTicketTemplateId() {
@@ -995,6 +1099,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object orgId_ = "";
     /**
+     * <pre>
+     * Organization ID
+     * </pre>
+     *
      * <code>string org_id = 2 [json_name = "orgId"];</code>
      * @return The orgId.
      */
@@ -1011,6 +1119,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Organization ID
+     * </pre>
+     *
      * <code>string org_id = 2 [json_name = "orgId"];</code>
      * @return The bytes for orgId.
      */
@@ -1028,6 +1140,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Organization ID
+     * </pre>
+     *
      * <code>string org_id = 2 [json_name = "orgId"];</code>
      * @param value The orgId to set.
      * @return This builder for chaining.
@@ -1041,6 +1157,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Organization ID
+     * </pre>
+     *
      * <code>string org_id = 2 [json_name = "orgId"];</code>
      * @return This builder for chaining.
      */
@@ -1051,6 +1171,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Organization ID
+     * </pre>
+     *
      * <code>string org_id = 2 [json_name = "orgId"];</code>
      * @param value The bytes for orgId to set.
      * @return This builder for chaining.
@@ -1067,6 +1191,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object template_ = "";
     /**
+     * <pre>
+     * A formatted string which the FE uses to retrieve all template related information
+     * </pre>
+     *
      * <code>string template = 3 [json_name = "template"];</code>
      * @return The template.
      */
@@ -1083,6 +1211,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * A formatted string which the FE uses to retrieve all template related information
+     * </pre>
+     *
      * <code>string template = 3 [json_name = "template"];</code>
      * @return The bytes for template.
      */
@@ -1100,6 +1232,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * A formatted string which the FE uses to retrieve all template related information
+     * </pre>
+     *
      * <code>string template = 3 [json_name = "template"];</code>
      * @param value The template to set.
      * @return This builder for chaining.
@@ -1113,6 +1249,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * A formatted string which the FE uses to retrieve all template related information
+     * </pre>
+     *
      * <code>string template = 3 [json_name = "template"];</code>
      * @return This builder for chaining.
      */
@@ -1123,6 +1263,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * A formatted string which the FE uses to retrieve all template related information
+     * </pre>
+     *
      * <code>string template = 3 [json_name = "template"];</code>
      * @param value The bytes for template to set.
      * @return This builder for chaining.
@@ -1139,6 +1283,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object templateEntityVersion_ = "";
     /**
+     * <pre>
+     * Version of the Template
+     * </pre>
+     *
      * <code>string template_entity_version = 4 [json_name = "templateEntityVersion"];</code>
      * @return The templateEntityVersion.
      */
@@ -1155,6 +1303,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Version of the Template
+     * </pre>
+     *
      * <code>string template_entity_version = 4 [json_name = "templateEntityVersion"];</code>
      * @return The bytes for templateEntityVersion.
      */
@@ -1172,6 +1324,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Version of the Template
+     * </pre>
+     *
      * <code>string template_entity_version = 4 [json_name = "templateEntityVersion"];</code>
      * @param value The templateEntityVersion to set.
      * @return This builder for chaining.
@@ -1185,6 +1341,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Version of the Template
+     * </pre>
+     *
      * <code>string template_entity_version = 4 [json_name = "templateEntityVersion"];</code>
      * @return This builder for chaining.
      */
@@ -1195,6 +1355,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Version of the Template
+     * </pre>
+     *
      * <code>string template_entity_version = 4 [json_name = "templateEntityVersion"];</code>
      * @param value The bytes for templateEntityVersion to set.
      * @return This builder for chaining.
@@ -1211,6 +1375,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object templateName_ = "";
     /**
+     * <pre>
+     * Name of the Template
+     * </pre>
+     *
      * <code>string template_name = 5 [json_name = "templateName"];</code>
      * @return The templateName.
      */
@@ -1227,6 +1395,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Name of the Template
+     * </pre>
+     *
      * <code>string template_name = 5 [json_name = "templateName"];</code>
      * @return The bytes for templateName.
      */
@@ -1244,6 +1416,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Name of the Template
+     * </pre>
+     *
      * <code>string template_name = 5 [json_name = "templateName"];</code>
      * @param value The templateName to set.
      * @return This builder for chaining.
@@ -1257,6 +1433,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Name of the Template
+     * </pre>
+     *
      * <code>string template_name = 5 [json_name = "templateName"];</code>
      * @return This builder for chaining.
      */
@@ -1267,6 +1447,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Name of the Template
+     * </pre>
+     *
      * <code>string template_name = 5 [json_name = "templateName"];</code>
      * @param value The bytes for templateName to set.
      * @return This builder for chaining.
@@ -1283,6 +1467,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object createdById_ = "";
     /**
+     * <pre>
+     * Template created by user
+     * </pre>
+     *
      * <code>string created_by_id = 6 [json_name = "createdById"];</code>
      * @return The createdById.
      */
@@ -1299,6 +1487,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Template created by user
+     * </pre>
+     *
      * <code>string created_by_id = 6 [json_name = "createdById"];</code>
      * @return The bytes for createdById.
      */
@@ -1316,6 +1508,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Template created by user
+     * </pre>
+     *
      * <code>string created_by_id = 6 [json_name = "createdById"];</code>
      * @param value The createdById to set.
      * @return This builder for chaining.
@@ -1329,6 +1525,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Template created by user
+     * </pre>
+     *
      * <code>string created_by_id = 6 [json_name = "createdById"];</code>
      * @return This builder for chaining.
      */
@@ -1339,6 +1539,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Template created by user
+     * </pre>
+     *
      * <code>string created_by_id = 6 [json_name = "createdById"];</code>
      * @param value The bytes for createdById to set.
      * @return This builder for chaining.
@@ -1355,6 +1559,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object modifiedBy_ = "";
     /**
+     * <pre>
+     * Template modified by user
+     * </pre>
+     *
      * <code>string modified_by = 7 [json_name = "modifiedBy"];</code>
      * @return The modifiedBy.
      */
@@ -1371,6 +1579,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Template modified by user
+     * </pre>
+     *
      * <code>string modified_by = 7 [json_name = "modifiedBy"];</code>
      * @return The bytes for modifiedBy.
      */
@@ -1388,6 +1600,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Template modified by user
+     * </pre>
+     *
      * <code>string modified_by = 7 [json_name = "modifiedBy"];</code>
      * @param value The modifiedBy to set.
      * @return This builder for chaining.
@@ -1401,6 +1617,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Template modified by user
+     * </pre>
+     *
      * <code>string modified_by = 7 [json_name = "modifiedBy"];</code>
      * @return This builder for chaining.
      */
@@ -1411,6 +1631,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Template modified by user
+     * </pre>
+     *
      * <code>string modified_by = 7 [json_name = "modifiedBy"];</code>
      * @param value The bytes for modifiedBy to set.
      * @return This builder for chaining.
@@ -1429,6 +1653,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdDateBuilder_;
     /**
+     * <pre>
+     * Template create date
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_date = 8 [json_name = "createdDate"];</code>
      * @return Whether the createdDate field is set.
      */
@@ -1436,6 +1664,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000080) != 0);
     }
     /**
+     * <pre>
+     * Template create date
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_date = 8 [json_name = "createdDate"];</code>
      * @return The createdDate.
      */
@@ -1447,6 +1679,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Template create date
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_date = 8 [json_name = "createdDate"];</code>
      */
     public Builder setCreatedDate(com.google.protobuf.Timestamp value) {
@@ -1463,6 +1699,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Template create date
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_date = 8 [json_name = "createdDate"];</code>
      */
     public Builder setCreatedDate(
@@ -1477,6 +1717,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Template create date
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_date = 8 [json_name = "createdDate"];</code>
      */
     public Builder mergeCreatedDate(com.google.protobuf.Timestamp value) {
@@ -1496,6 +1740,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Template create date
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_date = 8 [json_name = "createdDate"];</code>
      */
     public Builder clearCreatedDate() {
@@ -1509,6 +1757,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Template create date
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_date = 8 [json_name = "createdDate"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getCreatedDateBuilder() {
@@ -1517,6 +1769,10 @@ private static final long serialVersionUID = 0L;
       return getCreatedDateFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Template create date
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_date = 8 [json_name = "createdDate"];</code>
      */
     public com.google.protobuf.TimestampOrBuilder getCreatedDateOrBuilder() {
@@ -1528,6 +1784,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Template create date
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_date = 8 [json_name = "createdDate"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -1548,6 +1808,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> modifiedDateBuilder_;
     /**
+     * <pre>
+     * Template modified date
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp modified_date = 9 [json_name = "modifiedDate"];</code>
      * @return Whether the modifiedDate field is set.
      */
@@ -1555,6 +1819,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000100) != 0);
     }
     /**
+     * <pre>
+     * Template modified date
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp modified_date = 9 [json_name = "modifiedDate"];</code>
      * @return The modifiedDate.
      */
@@ -1566,6 +1834,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Template modified date
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp modified_date = 9 [json_name = "modifiedDate"];</code>
      */
     public Builder setModifiedDate(com.google.protobuf.Timestamp value) {
@@ -1582,6 +1854,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Template modified date
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp modified_date = 9 [json_name = "modifiedDate"];</code>
      */
     public Builder setModifiedDate(
@@ -1596,6 +1872,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Template modified date
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp modified_date = 9 [json_name = "modifiedDate"];</code>
      */
     public Builder mergeModifiedDate(com.google.protobuf.Timestamp value) {
@@ -1615,6 +1895,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Template modified date
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp modified_date = 9 [json_name = "modifiedDate"];</code>
      */
     public Builder clearModifiedDate() {
@@ -1628,6 +1912,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Template modified date
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp modified_date = 9 [json_name = "modifiedDate"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getModifiedDateBuilder() {
@@ -1636,6 +1924,10 @@ private static final long serialVersionUID = 0L;
       return getModifiedDateFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Template modified date
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp modified_date = 9 [json_name = "modifiedDate"];</code>
      */
     public com.google.protobuf.TimestampOrBuilder getModifiedDateOrBuilder() {
@@ -1647,6 +1939,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Template modified date
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp modified_date = 9 [json_name = "modifiedDate"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -1665,6 +1961,10 @@ private static final long serialVersionUID = 0L;
 
     private boolean isActive_ ;
     /**
+     * <pre>
+     * True/False Identifies if a template is active or inactive
+     * </pre>
+     *
      * <code>bool is_active = 10 [json_name = "isActive"];</code>
      * @return The isActive.
      */
@@ -1673,6 +1973,10 @@ private static final long serialVersionUID = 0L;
       return isActive_;
     }
     /**
+     * <pre>
+     * True/False Identifies if a template is active or inactive
+     * </pre>
+     *
      * <code>bool is_active = 10 [json_name = "isActive"];</code>
      * @param value The isActive to set.
      * @return This builder for chaining.
@@ -1685,6 +1989,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * True/False Identifies if a template is active or inactive
+     * </pre>
+     *
      * <code>bool is_active = 10 [json_name = "isActive"];</code>
      * @return This builder for chaining.
      */
@@ -1697,6 +2005,10 @@ private static final long serialVersionUID = 0L;
 
     private long templateId_ ;
     /**
+     * <pre>
+     * Snowflake Id of Ticket Template
+     * </pre>
+     *
      * <code>int64 template_id = 11 [json_name = "templateId", jstype = JS_STRING];</code>
      * @return The templateId.
      */
@@ -1705,6 +2017,10 @@ private static final long serialVersionUID = 0L;
       return templateId_;
     }
     /**
+     * <pre>
+     * Snowflake Id of Ticket Template
+     * </pre>
+     *
      * <code>int64 template_id = 11 [json_name = "templateId", jstype = JS_STRING];</code>
      * @param value The templateId to set.
      * @return This builder for chaining.
@@ -1717,6 +2033,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Snowflake Id of Ticket Template
+     * </pre>
+     *
      * <code>int64 template_id = 11 [json_name = "templateId", jstype = JS_STRING];</code>
      * @return This builder for chaining.
      */

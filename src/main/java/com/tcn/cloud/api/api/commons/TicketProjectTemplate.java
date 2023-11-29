@@ -4,6 +4,12 @@
 package com.tcn.cloud.api.api.commons;
 
 /**
+ * <pre>
+ * Mapping of Template to a Project
+ * Each Ticket Template Can be mapped to Multiple Projects - In ListTicketTemplateRequest we need all Template To
+ * Project Mapping
+ * </pre>
+ *
  * Protobuf type {@code api.commons.TicketProjectTemplate}
  */
 public final class TicketProjectTemplate extends
@@ -282,6 +288,12 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Mapping of Template to a Project
+   * Each Ticket Template Can be mapped to Multiple Projects - In ListTicketTemplateRequest we need all Template To
+   * Project Mapping
+   * </pre>
+   *
    * Protobuf type {@code api.commons.TicketProjectTemplate}
    */
   public static final class Builder extends

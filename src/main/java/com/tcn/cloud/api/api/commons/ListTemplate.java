@@ -4,6 +4,9 @@
 package com.tcn.cloud.api.api.commons;
 
 /**
+ * <pre>
+ * </pre>
+ *
  * Protobuf type {@code api.commons.ListTemplate}
  */
 @java.lang.Deprecated public final class ListTemplate extends
@@ -604,6 +607,9 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * </pre>
+   *
    * Protobuf type {@code api.commons.ListTemplate}
    */
   public static final class Builder extends
