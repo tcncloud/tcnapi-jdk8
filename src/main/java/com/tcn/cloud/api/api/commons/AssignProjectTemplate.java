@@ -4,9 +4,13 @@
 package com.tcn.cloud.api.api.commons;
 
 /**
+ * <pre>
+ * Deprecated and will not be used
+ * </pre>
+ *
  * Protobuf type {@code api.commons.AssignProjectTemplate}
  */
-public final class AssignProjectTemplate extends
+@java.lang.Deprecated public final class AssignProjectTemplate extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.commons.AssignProjectTemplate)
     AssignProjectTemplateOrBuilder {
@@ -266,6 +270,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Deprecated and will not be used
+   * </pre>
+   *
    * Protobuf type {@code api.commons.AssignProjectTemplate}
    */
   public static final class Builder extends

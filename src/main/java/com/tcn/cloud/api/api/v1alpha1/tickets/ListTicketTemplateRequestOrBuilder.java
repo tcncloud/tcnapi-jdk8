@@ -8,16 +8,20 @@ public interface ListTicketTemplateRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>int64 ticket_template_id = 1 [json_name = "ticketTemplateId"];</code>
+   * <code>int64 ticket_template_id = 1 [json_name = "ticketTemplateId", deprecated = true];</code>
+   * @deprecated api.v1alpha1.tickets.ListTicketTemplateRequest.ticket_template_id is deprecated.
+   *     See api/v1alpha1/tickets/ticket.proto;l=59
    * @return The ticketTemplateId.
    */
-  long getTicketTemplateId();
+  @java.lang.Deprecated long getTicketTemplateId();
 
   /**
-   * <code>int64 project_id = 2 [json_name = "projectId"];</code>
+   * <code>int64 project_id = 2 [json_name = "projectId", deprecated = true];</code>
+   * @deprecated api.v1alpha1.tickets.ListTicketTemplateRequest.project_id is deprecated.
+   *     See api/v1alpha1/tickets/ticket.proto;l=60
    * @return The projectId.
    */
-  long getProjectId();
+  @java.lang.Deprecated long getProjectId();
 
   /**
    * <pre>
@@ -45,4 +49,16 @@ public interface ListTicketTemplateRequestOrBuilder extends
    * <code>.google.protobuf.FieldMask request_mask = 3 [json_name = "requestMask"];</code>
    */
   com.google.protobuf.FieldMaskOrBuilder getRequestMaskOrBuilder();
+
+  /**
+   * <code>int64 template_id = 4 [json_name = "templateId", jstype = JS_STRING];</code>
+   * @return The templateId.
+   */
+  long getTemplateId();
+
+  /**
+   * <code>int64 template_project_id = 5 [json_name = "templateProjectId", jstype = JS_STRING];</code>
+   * @return The templateProjectId.
+   */
+  long getTemplateProjectId();
 }
