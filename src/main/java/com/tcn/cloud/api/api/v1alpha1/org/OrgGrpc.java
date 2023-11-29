@@ -2963,6 +2963,254 @@ public final class OrgGrpc {
     return getListOrgSubscriptionsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.CreateAuthTokenRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.CreateAuthTokenResponse> getCreateAuthTokenMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateAuthToken",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.CreateAuthTokenRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.CreateAuthTokenResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.CreateAuthTokenRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.CreateAuthTokenResponse> getCreateAuthTokenMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.CreateAuthTokenRequest, com.tcn.cloud.api.api.v1alpha1.org.CreateAuthTokenResponse> getCreateAuthTokenMethod;
+    if ((getCreateAuthTokenMethod = OrgGrpc.getCreateAuthTokenMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getCreateAuthTokenMethod = OrgGrpc.getCreateAuthTokenMethod) == null) {
+          OrgGrpc.getCreateAuthTokenMethod = getCreateAuthTokenMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.CreateAuthTokenRequest, com.tcn.cloud.api.api.v1alpha1.org.CreateAuthTokenResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateAuthToken"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.CreateAuthTokenRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.CreateAuthTokenResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("CreateAuthToken"))
+              .build();
+        }
+      }
+    }
+    return getCreateAuthTokenMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.CreateAuthTokenByUserIdRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.CreateAuthTokenByUserIdResponse> getCreateAuthTokenByUserIdMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateAuthTokenByUserId",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.CreateAuthTokenByUserIdRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.CreateAuthTokenByUserIdResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.CreateAuthTokenByUserIdRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.CreateAuthTokenByUserIdResponse> getCreateAuthTokenByUserIdMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.CreateAuthTokenByUserIdRequest, com.tcn.cloud.api.api.v1alpha1.org.CreateAuthTokenByUserIdResponse> getCreateAuthTokenByUserIdMethod;
+    if ((getCreateAuthTokenByUserIdMethod = OrgGrpc.getCreateAuthTokenByUserIdMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getCreateAuthTokenByUserIdMethod = OrgGrpc.getCreateAuthTokenByUserIdMethod) == null) {
+          OrgGrpc.getCreateAuthTokenByUserIdMethod = getCreateAuthTokenByUserIdMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.CreateAuthTokenByUserIdRequest, com.tcn.cloud.api.api.v1alpha1.org.CreateAuthTokenByUserIdResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateAuthTokenByUserId"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.CreateAuthTokenByUserIdRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.CreateAuthTokenByUserIdResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("CreateAuthTokenByUserId"))
+              .build();
+        }
+      }
+    }
+    return getCreateAuthTokenByUserIdMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.ListAuthTokensRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.ListAuthTokensResponse> getListAuthTokensMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListAuthTokens",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.ListAuthTokensRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.ListAuthTokensResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.ListAuthTokensRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.ListAuthTokensResponse> getListAuthTokensMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.ListAuthTokensRequest, com.tcn.cloud.api.api.v1alpha1.org.ListAuthTokensResponse> getListAuthTokensMethod;
+    if ((getListAuthTokensMethod = OrgGrpc.getListAuthTokensMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getListAuthTokensMethod = OrgGrpc.getListAuthTokensMethod) == null) {
+          OrgGrpc.getListAuthTokensMethod = getListAuthTokensMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.ListAuthTokensRequest, com.tcn.cloud.api.api.v1alpha1.org.ListAuthTokensResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListAuthTokens"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.ListAuthTokensRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.ListAuthTokensResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListAuthTokens"))
+              .build();
+        }
+      }
+    }
+    return getListAuthTokensMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.ListAuthTokensByUserIdRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.ListAuthTokensByUserIdResponse> getListAuthTokensByUserIdMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListAuthTokensByUserId",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.ListAuthTokensByUserIdRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.ListAuthTokensByUserIdResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.ListAuthTokensByUserIdRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.ListAuthTokensByUserIdResponse> getListAuthTokensByUserIdMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.ListAuthTokensByUserIdRequest, com.tcn.cloud.api.api.v1alpha1.org.ListAuthTokensByUserIdResponse> getListAuthTokensByUserIdMethod;
+    if ((getListAuthTokensByUserIdMethod = OrgGrpc.getListAuthTokensByUserIdMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getListAuthTokensByUserIdMethod = OrgGrpc.getListAuthTokensByUserIdMethod) == null) {
+          OrgGrpc.getListAuthTokensByUserIdMethod = getListAuthTokensByUserIdMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.ListAuthTokensByUserIdRequest, com.tcn.cloud.api.api.v1alpha1.org.ListAuthTokensByUserIdResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListAuthTokensByUserId"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.ListAuthTokensByUserIdRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.ListAuthTokensByUserIdResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListAuthTokensByUserId"))
+              .build();
+        }
+      }
+    }
+    return getListAuthTokensByUserIdMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.SetAuthTokenExpirationRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.SetAuthTokenExpirationResponse> getSetAuthTokenExpirationMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SetAuthTokenExpiration",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.SetAuthTokenExpirationRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.SetAuthTokenExpirationResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.SetAuthTokenExpirationRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.SetAuthTokenExpirationResponse> getSetAuthTokenExpirationMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.SetAuthTokenExpirationRequest, com.tcn.cloud.api.api.v1alpha1.org.SetAuthTokenExpirationResponse> getSetAuthTokenExpirationMethod;
+    if ((getSetAuthTokenExpirationMethod = OrgGrpc.getSetAuthTokenExpirationMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getSetAuthTokenExpirationMethod = OrgGrpc.getSetAuthTokenExpirationMethod) == null) {
+          OrgGrpc.getSetAuthTokenExpirationMethod = getSetAuthTokenExpirationMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.SetAuthTokenExpirationRequest, com.tcn.cloud.api.api.v1alpha1.org.SetAuthTokenExpirationResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetAuthTokenExpiration"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.SetAuthTokenExpirationRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.SetAuthTokenExpirationResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("SetAuthTokenExpiration"))
+              .build();
+        }
+      }
+    }
+    return getSetAuthTokenExpirationMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.SetAuthTokenExpirationByUserIdRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.SetAuthTokenExpirationByUserIdResponse> getSetAuthTokenExpirationByUserIdMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SetAuthTokenExpirationByUserId",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.SetAuthTokenExpirationByUserIdRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.SetAuthTokenExpirationByUserIdResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.SetAuthTokenExpirationByUserIdRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.SetAuthTokenExpirationByUserIdResponse> getSetAuthTokenExpirationByUserIdMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.SetAuthTokenExpirationByUserIdRequest, com.tcn.cloud.api.api.v1alpha1.org.SetAuthTokenExpirationByUserIdResponse> getSetAuthTokenExpirationByUserIdMethod;
+    if ((getSetAuthTokenExpirationByUserIdMethod = OrgGrpc.getSetAuthTokenExpirationByUserIdMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getSetAuthTokenExpirationByUserIdMethod = OrgGrpc.getSetAuthTokenExpirationByUserIdMethod) == null) {
+          OrgGrpc.getSetAuthTokenExpirationByUserIdMethod = getSetAuthTokenExpirationByUserIdMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.SetAuthTokenExpirationByUserIdRequest, com.tcn.cloud.api.api.v1alpha1.org.SetAuthTokenExpirationByUserIdResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetAuthTokenExpirationByUserId"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.SetAuthTokenExpirationByUserIdRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.SetAuthTokenExpirationByUserIdResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("SetAuthTokenExpirationByUserId"))
+              .build();
+        }
+      }
+    }
+    return getSetAuthTokenExpirationByUserIdMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthTokenRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthTokenResponse> getDeleteAuthTokenMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteAuthToken",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthTokenRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthTokenResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthTokenRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthTokenResponse> getDeleteAuthTokenMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthTokenRequest, com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthTokenResponse> getDeleteAuthTokenMethod;
+    if ((getDeleteAuthTokenMethod = OrgGrpc.getDeleteAuthTokenMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getDeleteAuthTokenMethod = OrgGrpc.getDeleteAuthTokenMethod) == null) {
+          OrgGrpc.getDeleteAuthTokenMethod = getDeleteAuthTokenMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthTokenRequest, com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthTokenResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteAuthToken"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthTokenRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthTokenResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("DeleteAuthToken"))
+              .build();
+        }
+      }
+    }
+    return getDeleteAuthTokenMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthTokenByUserIdRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthTokenByUserIdResponse> getDeleteAuthTokenByUserIdMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteAuthTokenByUserId",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthTokenByUserIdRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthTokenByUserIdResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthTokenByUserIdRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthTokenByUserIdResponse> getDeleteAuthTokenByUserIdMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthTokenByUserIdRequest, com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthTokenByUserIdResponse> getDeleteAuthTokenByUserIdMethod;
+    if ((getDeleteAuthTokenByUserIdMethod = OrgGrpc.getDeleteAuthTokenByUserIdMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getDeleteAuthTokenByUserIdMethod = OrgGrpc.getDeleteAuthTokenByUserIdMethod) == null) {
+          OrgGrpc.getDeleteAuthTokenByUserIdMethod = getDeleteAuthTokenByUserIdMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthTokenByUserIdRequest, com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthTokenByUserIdResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteAuthTokenByUserId"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthTokenByUserIdRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthTokenByUserIdResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("DeleteAuthTokenByUserId"))
+              .build();
+        }
+      }
+    }
+    return getDeleteAuthTokenByUserIdMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupSettingsRequest,
       com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupSettingsResponse> getGetHuntGroupSettingsMethod;
 
@@ -5790,6 +6038,87 @@ public final class OrgGrpc {
 
     /**
      * <pre>
+     * AUTH TOKEN
+     * CreateAuthToken creates an auth token for the current user.
+     * </pre>
+     */
+    default void createAuthToken(com.tcn.cloud.api.api.v1alpha1.org.CreateAuthTokenRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.CreateAuthTokenResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateAuthTokenMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * CreateAuthTokenByUserId creates an auth token for the given user.
+     * </pre>
+     */
+    default void createAuthTokenByUserId(com.tcn.cloud.api.api.v1alpha1.org.CreateAuthTokenByUserIdRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.CreateAuthTokenByUserIdResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateAuthTokenByUserIdMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * ListAuthTokens list tokens of current user.
+     * </pre>
+     */
+    default void listAuthTokens(com.tcn.cloud.api.api.v1alpha1.org.ListAuthTokensRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ListAuthTokensResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAuthTokensMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * ListAuthTokensByUserId list tokens of given user.
+     * </pre>
+     */
+    default void listAuthTokensByUserId(com.tcn.cloud.api.api.v1alpha1.org.ListAuthTokensByUserIdRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ListAuthTokensByUserIdResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAuthTokensByUserIdMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * SetAuthTokenExpiration sets expiration back one year for current user.
+     * </pre>
+     */
+    default void setAuthTokenExpiration(com.tcn.cloud.api.api.v1alpha1.org.SetAuthTokenExpirationRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.SetAuthTokenExpirationResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetAuthTokenExpirationMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * SetAuthTokenExpirationByUserId sets expiration back one year for given user.
+     * </pre>
+     */
+    default void setAuthTokenExpirationByUserId(com.tcn.cloud.api.api.v1alpha1.org.SetAuthTokenExpirationByUserIdRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.SetAuthTokenExpirationByUserIdResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetAuthTokenExpirationByUserIdMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * DeleteAuthToken deletes a given auth token for the current user.
+     * </pre>
+     */
+    default void deleteAuthToken(com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthTokenRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthTokenResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteAuthTokenMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * DeleteAuthTokenByUserId deletes a given auth token for the given user.
+     * </pre>
+     */
+    default void deleteAuthTokenByUserId(com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthTokenByUserIdRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthTokenByUserIdResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteAuthTokenByUserIdMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * GetHuntGroupSettings returns the field masked hunt group settings for the
      * provided hunt group.
      * </pre>
@@ -7495,6 +7824,95 @@ public final class OrgGrpc {
 
     /**
      * <pre>
+     * AUTH TOKEN
+     * CreateAuthToken creates an auth token for the current user.
+     * </pre>
+     */
+    public void createAuthToken(com.tcn.cloud.api.api.v1alpha1.org.CreateAuthTokenRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.CreateAuthTokenResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateAuthTokenMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * CreateAuthTokenByUserId creates an auth token for the given user.
+     * </pre>
+     */
+    public void createAuthTokenByUserId(com.tcn.cloud.api.api.v1alpha1.org.CreateAuthTokenByUserIdRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.CreateAuthTokenByUserIdResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateAuthTokenByUserIdMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * ListAuthTokens list tokens of current user.
+     * </pre>
+     */
+    public void listAuthTokens(com.tcn.cloud.api.api.v1alpha1.org.ListAuthTokensRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ListAuthTokensResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListAuthTokensMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * ListAuthTokensByUserId list tokens of given user.
+     * </pre>
+     */
+    public void listAuthTokensByUserId(com.tcn.cloud.api.api.v1alpha1.org.ListAuthTokensByUserIdRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ListAuthTokensByUserIdResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListAuthTokensByUserIdMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * SetAuthTokenExpiration sets expiration back one year for current user.
+     * </pre>
+     */
+    public void setAuthTokenExpiration(com.tcn.cloud.api.api.v1alpha1.org.SetAuthTokenExpirationRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.SetAuthTokenExpirationResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getSetAuthTokenExpirationMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * SetAuthTokenExpirationByUserId sets expiration back one year for given user.
+     * </pre>
+     */
+    public void setAuthTokenExpirationByUserId(com.tcn.cloud.api.api.v1alpha1.org.SetAuthTokenExpirationByUserIdRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.SetAuthTokenExpirationByUserIdResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getSetAuthTokenExpirationByUserIdMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * DeleteAuthToken deletes a given auth token for the current user.
+     * </pre>
+     */
+    public void deleteAuthToken(com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthTokenRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthTokenResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteAuthTokenMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * DeleteAuthTokenByUserId deletes a given auth token for the given user.
+     * </pre>
+     */
+    public void deleteAuthTokenByUserId(com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthTokenByUserIdRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthTokenByUserIdResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteAuthTokenByUserIdMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * GetHuntGroupSettings returns the field masked hunt group settings for the
      * provided hunt group.
      * </pre>
@@ -9157,6 +9575,87 @@ public final class OrgGrpc {
 
     /**
      * <pre>
+     * AUTH TOKEN
+     * CreateAuthToken creates an auth token for the current user.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.CreateAuthTokenResponse createAuthToken(com.tcn.cloud.api.api.v1alpha1.org.CreateAuthTokenRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateAuthTokenMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * CreateAuthTokenByUserId creates an auth token for the given user.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.CreateAuthTokenByUserIdResponse createAuthTokenByUserId(com.tcn.cloud.api.api.v1alpha1.org.CreateAuthTokenByUserIdRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateAuthTokenByUserIdMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * ListAuthTokens list tokens of current user.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.ListAuthTokensResponse listAuthTokens(com.tcn.cloud.api.api.v1alpha1.org.ListAuthTokensRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListAuthTokensMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * ListAuthTokensByUserId list tokens of given user.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.ListAuthTokensByUserIdResponse listAuthTokensByUserId(com.tcn.cloud.api.api.v1alpha1.org.ListAuthTokensByUserIdRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListAuthTokensByUserIdMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * SetAuthTokenExpiration sets expiration back one year for current user.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.SetAuthTokenExpirationResponse setAuthTokenExpiration(com.tcn.cloud.api.api.v1alpha1.org.SetAuthTokenExpirationRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSetAuthTokenExpirationMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * SetAuthTokenExpirationByUserId sets expiration back one year for given user.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.SetAuthTokenExpirationByUserIdResponse setAuthTokenExpirationByUserId(com.tcn.cloud.api.api.v1alpha1.org.SetAuthTokenExpirationByUserIdRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSetAuthTokenExpirationByUserIdMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * DeleteAuthToken deletes a given auth token for the current user.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthTokenResponse deleteAuthToken(com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthTokenRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteAuthTokenMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * DeleteAuthTokenByUserId deletes a given auth token for the given user.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthTokenByUserIdResponse deleteAuthTokenByUserId(com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthTokenByUserIdRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteAuthTokenByUserIdMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * GetHuntGroupSettings returns the field masked hunt group settings for the
      * provided hunt group.
      * </pre>
@@ -10760,6 +11259,95 @@ public final class OrgGrpc {
 
     /**
      * <pre>
+     * AUTH TOKEN
+     * CreateAuthToken creates an auth token for the current user.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.CreateAuthTokenResponse> createAuthToken(
+        com.tcn.cloud.api.api.v1alpha1.org.CreateAuthTokenRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateAuthTokenMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * CreateAuthTokenByUserId creates an auth token for the given user.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.CreateAuthTokenByUserIdResponse> createAuthTokenByUserId(
+        com.tcn.cloud.api.api.v1alpha1.org.CreateAuthTokenByUserIdRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateAuthTokenByUserIdMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * ListAuthTokens list tokens of current user.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.ListAuthTokensResponse> listAuthTokens(
+        com.tcn.cloud.api.api.v1alpha1.org.ListAuthTokensRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListAuthTokensMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * ListAuthTokensByUserId list tokens of given user.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.ListAuthTokensByUserIdResponse> listAuthTokensByUserId(
+        com.tcn.cloud.api.api.v1alpha1.org.ListAuthTokensByUserIdRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListAuthTokensByUserIdMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * SetAuthTokenExpiration sets expiration back one year for current user.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.SetAuthTokenExpirationResponse> setAuthTokenExpiration(
+        com.tcn.cloud.api.api.v1alpha1.org.SetAuthTokenExpirationRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getSetAuthTokenExpirationMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * SetAuthTokenExpirationByUserId sets expiration back one year for given user.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.SetAuthTokenExpirationByUserIdResponse> setAuthTokenExpirationByUserId(
+        com.tcn.cloud.api.api.v1alpha1.org.SetAuthTokenExpirationByUserIdRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getSetAuthTokenExpirationByUserIdMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * DeleteAuthToken deletes a given auth token for the current user.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthTokenResponse> deleteAuthToken(
+        com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthTokenRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteAuthTokenMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * DeleteAuthTokenByUserId deletes a given auth token for the given user.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthTokenByUserIdResponse> deleteAuthTokenByUserId(
+        com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthTokenByUserIdRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteAuthTokenByUserIdMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * GetHuntGroupSettings returns the field masked hunt group settings for the
      * provided hunt group.
      * </pre>
@@ -11512,64 +12100,72 @@ public final class OrgGrpc {
   private static final int METHODID_LIST_USER_SUBSCRIPTIONS = 92;
   private static final int METHODID_LIST_USER_SUBSCRIPTIONS_BY_USER_ID = 93;
   private static final int METHODID_LIST_ORG_SUBSCRIPTIONS = 94;
-  private static final int METHODID_GET_HUNT_GROUP_SETTINGS = 95;
-  private static final int METHODID_UPDATE_HUNT_GROUP_SETTINGS = 96;
-  private static final int METHODID_LIST_CALLER_ID_BUCKETS = 97;
-  private static final int METHODID_GET_DATA_DIP_TEMPLATE = 98;
-  private static final int METHODID_LIST_DATA_DIP_TEMPLATES = 99;
-  private static final int METHODID_CREATE_DATA_DIP_TEMPLATE = 100;
-  private static final int METHODID_UPDATE_DATA_DIP_TEMPLATE = 101;
-  private static final int METHODID_DELETE_DATA_DIP_TEMPLATE = 102;
-  private static final int METHODID_COPY_DATA_DIP_TEMPLATE = 103;
-  private static final int METHODID_COPY_DATA_DIP_TEMPLATE_TO_ORGANIZATION = 104;
-  private static final int METHODID_LIST_AGENT_RESPONSE_AUTO_RULES = 105;
-  private static final int METHODID_CREATE_AGENT_RESPONSE_AUTO_RULES = 106;
-  private static final int METHODID_UPDATE_AGENT_RESPONSE_AUTO_RULES = 107;
-  private static final int METHODID_DELETE_AGENT_RESPONSE_AUTO_RULES = 108;
-  private static final int METHODID_CREATE_TRUST = 109;
-  private static final int METHODID_ACCEPT_TRUST = 110;
-  private static final int METHODID_REJECT_TRUST = 111;
-  private static final int METHODID_GET_TRUST = 112;
-  private static final int METHODID_LIST_INCOMING_TRUSTS = 113;
-  private static final int METHODID_LIST_GIVEN_TRUSTS = 114;
-  private static final int METHODID_LIST_ASSIGNABLE_TRUSTS = 115;
-  private static final int METHODID_DELETE_TRUST = 116;
-  private static final int METHODID_ASSIGN_TRUST = 117;
-  private static final int METHODID_UNASSIGN_TRUST = 118;
-  private static final int METHODID_CREATE_LABEL = 119;
-  private static final int METHODID_DELETE_LABEL = 120;
-  private static final int METHODID_LIST_LABELS = 121;
-  private static final int METHODID_GET_LABEL = 122;
-  private static final int METHODID_UPDATE_LABEL = 123;
-  private static final int METHODID_ASSIGN_LABEL = 124;
-  private static final int METHODID_UNASSIGN_LABEL = 125;
-  private static final int METHODID_GET_ASSIGNMENT_COUNTS = 126;
-  private static final int METHODID_GET_ASSIGNABLE_LABELS = 127;
-  private static final int METHODID_GET_PERMISSIONS = 128;
-  private static final int METHODID_GET_USER_PERMISSIONS = 129;
-  private static final int METHODID_CREATE_PERMISSION_GROUP = 130;
-  private static final int METHODID_UPDATE_PERMISSION_GROUP = 131;
-  private static final int METHODID_DELETE_PERMISSION_GROUP = 132;
-  private static final int METHODID_LIST_PERMISSION_GROUPS = 133;
-  private static final int METHODID_LIST_PERMISSION_GROUPS_BY_ORG_ID = 134;
-  private static final int METHODID_ASSIGN_USERS_PERMISSION_GROUP = 135;
-  private static final int METHODID_REVOKE_USERS_PERMISSION_GROUP = 136;
-  private static final int METHODID_ASSIGN_ACCOUNT_OWNER_PERMISSION_TO_USER = 137;
-  private static final int METHODID_REVOKE_ACCOUNT_OWNER_PERMISSION_FROM_USER = 138;
-  private static final int METHODID_INIT_DEFAULT_PERMISSION_GROUPS = 139;
-  private static final int METHODID_GET_ACCOUNT_OWNER_GROUP = 140;
-  private static final int METHODID_GET_LICENSES = 141;
-  private static final int METHODID_GET_ORG_LICENSES = 142;
-  private static final int METHODID_UPDATE_LICENSES = 143;
-  private static final int METHODID_REMOVE_PERMISSION_FROM_ALL_PERMISSION_GROUPS = 144;
-  private static final int METHODID_LIST_P3PERMISSION_GROUPS = 145;
-  private static final int METHODID_LIST_P3PERMISSION_GROUPS_BY_ORG_ID = 146;
-  private static final int METHODID_CREATE_P3PERMISSION_GROUP = 147;
-  private static final int METHODID_UPDATE_P3PERMISSION_GROUP = 148;
-  private static final int METHODID_UPDATE_P3PERMISSION_GROUP_BY_ORG_ID = 149;
-  private static final int METHODID_DELETE_P3PERMISSION_GROUP = 150;
-  private static final int METHODID_ASSIGN_USERS_P3PERMISSION_GROUP = 151;
-  private static final int METHODID_REVOKE_USERS_P3PERMISSION_GROUP = 152;
+  private static final int METHODID_CREATE_AUTH_TOKEN = 95;
+  private static final int METHODID_CREATE_AUTH_TOKEN_BY_USER_ID = 96;
+  private static final int METHODID_LIST_AUTH_TOKENS = 97;
+  private static final int METHODID_LIST_AUTH_TOKENS_BY_USER_ID = 98;
+  private static final int METHODID_SET_AUTH_TOKEN_EXPIRATION = 99;
+  private static final int METHODID_SET_AUTH_TOKEN_EXPIRATION_BY_USER_ID = 100;
+  private static final int METHODID_DELETE_AUTH_TOKEN = 101;
+  private static final int METHODID_DELETE_AUTH_TOKEN_BY_USER_ID = 102;
+  private static final int METHODID_GET_HUNT_GROUP_SETTINGS = 103;
+  private static final int METHODID_UPDATE_HUNT_GROUP_SETTINGS = 104;
+  private static final int METHODID_LIST_CALLER_ID_BUCKETS = 105;
+  private static final int METHODID_GET_DATA_DIP_TEMPLATE = 106;
+  private static final int METHODID_LIST_DATA_DIP_TEMPLATES = 107;
+  private static final int METHODID_CREATE_DATA_DIP_TEMPLATE = 108;
+  private static final int METHODID_UPDATE_DATA_DIP_TEMPLATE = 109;
+  private static final int METHODID_DELETE_DATA_DIP_TEMPLATE = 110;
+  private static final int METHODID_COPY_DATA_DIP_TEMPLATE = 111;
+  private static final int METHODID_COPY_DATA_DIP_TEMPLATE_TO_ORGANIZATION = 112;
+  private static final int METHODID_LIST_AGENT_RESPONSE_AUTO_RULES = 113;
+  private static final int METHODID_CREATE_AGENT_RESPONSE_AUTO_RULES = 114;
+  private static final int METHODID_UPDATE_AGENT_RESPONSE_AUTO_RULES = 115;
+  private static final int METHODID_DELETE_AGENT_RESPONSE_AUTO_RULES = 116;
+  private static final int METHODID_CREATE_TRUST = 117;
+  private static final int METHODID_ACCEPT_TRUST = 118;
+  private static final int METHODID_REJECT_TRUST = 119;
+  private static final int METHODID_GET_TRUST = 120;
+  private static final int METHODID_LIST_INCOMING_TRUSTS = 121;
+  private static final int METHODID_LIST_GIVEN_TRUSTS = 122;
+  private static final int METHODID_LIST_ASSIGNABLE_TRUSTS = 123;
+  private static final int METHODID_DELETE_TRUST = 124;
+  private static final int METHODID_ASSIGN_TRUST = 125;
+  private static final int METHODID_UNASSIGN_TRUST = 126;
+  private static final int METHODID_CREATE_LABEL = 127;
+  private static final int METHODID_DELETE_LABEL = 128;
+  private static final int METHODID_LIST_LABELS = 129;
+  private static final int METHODID_GET_LABEL = 130;
+  private static final int METHODID_UPDATE_LABEL = 131;
+  private static final int METHODID_ASSIGN_LABEL = 132;
+  private static final int METHODID_UNASSIGN_LABEL = 133;
+  private static final int METHODID_GET_ASSIGNMENT_COUNTS = 134;
+  private static final int METHODID_GET_ASSIGNABLE_LABELS = 135;
+  private static final int METHODID_GET_PERMISSIONS = 136;
+  private static final int METHODID_GET_USER_PERMISSIONS = 137;
+  private static final int METHODID_CREATE_PERMISSION_GROUP = 138;
+  private static final int METHODID_UPDATE_PERMISSION_GROUP = 139;
+  private static final int METHODID_DELETE_PERMISSION_GROUP = 140;
+  private static final int METHODID_LIST_PERMISSION_GROUPS = 141;
+  private static final int METHODID_LIST_PERMISSION_GROUPS_BY_ORG_ID = 142;
+  private static final int METHODID_ASSIGN_USERS_PERMISSION_GROUP = 143;
+  private static final int METHODID_REVOKE_USERS_PERMISSION_GROUP = 144;
+  private static final int METHODID_ASSIGN_ACCOUNT_OWNER_PERMISSION_TO_USER = 145;
+  private static final int METHODID_REVOKE_ACCOUNT_OWNER_PERMISSION_FROM_USER = 146;
+  private static final int METHODID_INIT_DEFAULT_PERMISSION_GROUPS = 147;
+  private static final int METHODID_GET_ACCOUNT_OWNER_GROUP = 148;
+  private static final int METHODID_GET_LICENSES = 149;
+  private static final int METHODID_GET_ORG_LICENSES = 150;
+  private static final int METHODID_UPDATE_LICENSES = 151;
+  private static final int METHODID_REMOVE_PERMISSION_FROM_ALL_PERMISSION_GROUPS = 152;
+  private static final int METHODID_LIST_P3PERMISSION_GROUPS = 153;
+  private static final int METHODID_LIST_P3PERMISSION_GROUPS_BY_ORG_ID = 154;
+  private static final int METHODID_CREATE_P3PERMISSION_GROUP = 155;
+  private static final int METHODID_UPDATE_P3PERMISSION_GROUP = 156;
+  private static final int METHODID_UPDATE_P3PERMISSION_GROUP_BY_ORG_ID = 157;
+  private static final int METHODID_DELETE_P3PERMISSION_GROUP = 158;
+  private static final int METHODID_ASSIGN_USERS_P3PERMISSION_GROUP = 159;
+  private static final int METHODID_REVOKE_USERS_P3PERMISSION_GROUP = 160;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -11967,6 +12563,38 @@ public final class OrgGrpc {
         case METHODID_LIST_ORG_SUBSCRIPTIONS:
           serviceImpl.listOrgSubscriptions((com.tcn.cloud.api.api.v1alpha1.org.ListOrgSubscriptionsRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ListOrgSubscriptionsResponse>) responseObserver);
+          break;
+        case METHODID_CREATE_AUTH_TOKEN:
+          serviceImpl.createAuthToken((com.tcn.cloud.api.api.v1alpha1.org.CreateAuthTokenRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.CreateAuthTokenResponse>) responseObserver);
+          break;
+        case METHODID_CREATE_AUTH_TOKEN_BY_USER_ID:
+          serviceImpl.createAuthTokenByUserId((com.tcn.cloud.api.api.v1alpha1.org.CreateAuthTokenByUserIdRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.CreateAuthTokenByUserIdResponse>) responseObserver);
+          break;
+        case METHODID_LIST_AUTH_TOKENS:
+          serviceImpl.listAuthTokens((com.tcn.cloud.api.api.v1alpha1.org.ListAuthTokensRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ListAuthTokensResponse>) responseObserver);
+          break;
+        case METHODID_LIST_AUTH_TOKENS_BY_USER_ID:
+          serviceImpl.listAuthTokensByUserId((com.tcn.cloud.api.api.v1alpha1.org.ListAuthTokensByUserIdRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ListAuthTokensByUserIdResponse>) responseObserver);
+          break;
+        case METHODID_SET_AUTH_TOKEN_EXPIRATION:
+          serviceImpl.setAuthTokenExpiration((com.tcn.cloud.api.api.v1alpha1.org.SetAuthTokenExpirationRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.SetAuthTokenExpirationResponse>) responseObserver);
+          break;
+        case METHODID_SET_AUTH_TOKEN_EXPIRATION_BY_USER_ID:
+          serviceImpl.setAuthTokenExpirationByUserId((com.tcn.cloud.api.api.v1alpha1.org.SetAuthTokenExpirationByUserIdRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.SetAuthTokenExpirationByUserIdResponse>) responseObserver);
+          break;
+        case METHODID_DELETE_AUTH_TOKEN:
+          serviceImpl.deleteAuthToken((com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthTokenRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthTokenResponse>) responseObserver);
+          break;
+        case METHODID_DELETE_AUTH_TOKEN_BY_USER_ID:
+          serviceImpl.deleteAuthTokenByUserId((com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthTokenByUserIdRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthTokenByUserIdResponse>) responseObserver);
           break;
         case METHODID_GET_HUNT_GROUP_SETTINGS:
           serviceImpl.getHuntGroupSettings((com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupSettingsRequest) request,
@@ -12884,6 +13512,62 @@ public final class OrgGrpc {
               com.tcn.cloud.api.api.v1alpha1.org.ListOrgSubscriptionsResponse>(
                 service, METHODID_LIST_ORG_SUBSCRIPTIONS)))
         .addMethod(
+          getCreateAuthTokenMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.CreateAuthTokenRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.CreateAuthTokenResponse>(
+                service, METHODID_CREATE_AUTH_TOKEN)))
+        .addMethod(
+          getCreateAuthTokenByUserIdMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.CreateAuthTokenByUserIdRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.CreateAuthTokenByUserIdResponse>(
+                service, METHODID_CREATE_AUTH_TOKEN_BY_USER_ID)))
+        .addMethod(
+          getListAuthTokensMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.ListAuthTokensRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.ListAuthTokensResponse>(
+                service, METHODID_LIST_AUTH_TOKENS)))
+        .addMethod(
+          getListAuthTokensByUserIdMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.ListAuthTokensByUserIdRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.ListAuthTokensByUserIdResponse>(
+                service, METHODID_LIST_AUTH_TOKENS_BY_USER_ID)))
+        .addMethod(
+          getSetAuthTokenExpirationMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.SetAuthTokenExpirationRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.SetAuthTokenExpirationResponse>(
+                service, METHODID_SET_AUTH_TOKEN_EXPIRATION)))
+        .addMethod(
+          getSetAuthTokenExpirationByUserIdMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.SetAuthTokenExpirationByUserIdRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.SetAuthTokenExpirationByUserIdResponse>(
+                service, METHODID_SET_AUTH_TOKEN_EXPIRATION_BY_USER_ID)))
+        .addMethod(
+          getDeleteAuthTokenMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthTokenRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthTokenResponse>(
+                service, METHODID_DELETE_AUTH_TOKEN)))
+        .addMethod(
+          getDeleteAuthTokenByUserIdMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthTokenByUserIdRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthTokenByUserIdResponse>(
+                service, METHODID_DELETE_AUTH_TOKEN_BY_USER_ID)))
+        .addMethod(
           getGetHuntGroupSettingsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -13432,6 +14116,14 @@ public final class OrgGrpc {
               .addMethod(getListUserSubscriptionsMethod())
               .addMethod(getListUserSubscriptionsByUserIdMethod())
               .addMethod(getListOrgSubscriptionsMethod())
+              .addMethod(getCreateAuthTokenMethod())
+              .addMethod(getCreateAuthTokenByUserIdMethod())
+              .addMethod(getListAuthTokensMethod())
+              .addMethod(getListAuthTokensByUserIdMethod())
+              .addMethod(getSetAuthTokenExpirationMethod())
+              .addMethod(getSetAuthTokenExpirationByUserIdMethod())
+              .addMethod(getDeleteAuthTokenMethod())
+              .addMethod(getDeleteAuthTokenByUserIdMethod())
               .addMethod(getGetHuntGroupSettingsMethod())
               .addMethod(getUpdateHuntGroupSettingsMethod())
               .addMethod(getListCallerIdBucketsMethod())
