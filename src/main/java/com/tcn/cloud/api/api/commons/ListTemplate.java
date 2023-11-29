@@ -5,6 +5,7 @@ package com.tcn.cloud.api.api.commons;
 
 /**
  * <pre>
+ * Deprecated and will not be used
  * </pre>
  *
  * Protobuf type {@code api.commons.ListTemplate}
@@ -608,6 +609,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
+   * Deprecated and will not be used
    * </pre>
    *
    * Protobuf type {@code api.commons.ListTemplate}

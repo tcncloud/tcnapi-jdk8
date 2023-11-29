@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.commons;
 
 /**
+ * <pre>
+ * Deprecated and will not be used
+ * </pre>
+ *
  * Protobuf type {@code api.commons.AssignProjectTemplate}
  */
 @java.lang.Deprecated public final class AssignProjectTemplate extends
@@ -266,6 +270,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Deprecated and will not be used
+   * </pre>
+   *
    * Protobuf type {@code api.commons.AssignProjectTemplate}
    */
   public static final class Builder extends
