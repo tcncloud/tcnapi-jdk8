@@ -6,7 +6,7 @@ package com.tcn.cloud.api.api.commons;
 /**
  * Protobuf type {@code api.commons.ListTemplate}
  */
-public final class ListTemplate extends
+@java.lang.Deprecated public final class ListTemplate extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.commons.ListTemplate)
     ListTemplateOrBuilder {

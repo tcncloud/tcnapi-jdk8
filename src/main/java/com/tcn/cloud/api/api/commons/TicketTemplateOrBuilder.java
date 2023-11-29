@@ -8,10 +8,12 @@ public interface TicketTemplateOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>int64 ticket_template_id = 1 [json_name = "ticketTemplateId"];</code>
+   * <code>int64 ticket_template_id = 1 [json_name = "ticketTemplateId", deprecated = true];</code>
+   * @deprecated api.commons.TicketTemplate.ticket_template_id is deprecated.
+   *     See api/commons/tickets.proto;l=55
    * @return The ticketTemplateId.
    */
-  long getTicketTemplateId();
+  @java.lang.Deprecated long getTicketTemplateId();
 
   /**
    * <code>string org_id = 2 [json_name = "orgId"];</code>
@@ -120,4 +122,10 @@ public interface TicketTemplateOrBuilder extends
    * @return The isActive.
    */
   boolean getIsActive();
+
+  /**
+   * <code>int64 template_id = 11 [json_name = "templateId", jstype = JS_STRING];</code>
+   * @return The templateId.
+   */
+  long getTemplateId();
 }

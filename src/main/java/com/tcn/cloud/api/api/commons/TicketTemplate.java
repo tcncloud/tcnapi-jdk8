@@ -47,11 +47,13 @@ private static final long serialVersionUID = 0L;
   public static final int TICKET_TEMPLATE_ID_FIELD_NUMBER = 1;
   private long ticketTemplateId_ = 0L;
   /**
-   * <code>int64 ticket_template_id = 1 [json_name = "ticketTemplateId"];</code>
+   * <code>int64 ticket_template_id = 1 [json_name = "ticketTemplateId", deprecated = true];</code>
+   * @deprecated api.commons.TicketTemplate.ticket_template_id is deprecated.
+   *     See api/commons/tickets.proto;l=55
    * @return The ticketTemplateId.
    */
   @java.lang.Override
-  public long getTicketTemplateId() {
+  @java.lang.Deprecated public long getTicketTemplateId() {
     return ticketTemplateId_;
   }
 
@@ -352,6 +354,17 @@ private static final long serialVersionUID = 0L;
     return isActive_;
   }
 
+  public static final int TEMPLATE_ID_FIELD_NUMBER = 11;
+  private long templateId_ = 0L;
+  /**
+   * <code>int64 template_id = 11 [json_name = "templateId", jstype = JS_STRING];</code>
+   * @return The templateId.
+   */
+  @java.lang.Override
+  public long getTemplateId() {
+    return templateId_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -396,6 +409,9 @@ private static final long serialVersionUID = 0L;
     if (isActive_ != false) {
       output.writeBool(10, isActive_);
     }
+    if (templateId_ != 0L) {
+      output.writeInt64(11, templateId_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -439,6 +455,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(10, isActive_);
     }
+    if (templateId_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(11, templateId_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -480,6 +500,8 @@ private static final long serialVersionUID = 0L;
     }
     if (getIsActive()
         != other.getIsActive()) return false;
+    if (getTemplateId()
+        != other.getTemplateId()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -517,6 +539,9 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + IS_ACTIVE_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getIsActive());
+    hash = (37 * hash) + TEMPLATE_ID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getTemplateId());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -666,6 +691,7 @@ private static final long serialVersionUID = 0L;
         modifiedDateBuilder_ = null;
       }
       isActive_ = false;
+      templateId_ = 0L;
       return this;
     }
 
@@ -732,6 +758,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000200) != 0)) {
         result.isActive_ = isActive_;
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        result.templateId_ = templateId_;
       }
     }
 
@@ -821,6 +850,9 @@ private static final long serialVersionUID = 0L;
       if (other.getIsActive() != false) {
         setIsActive(other.getIsActive());
       }
+      if (other.getTemplateId() != 0L) {
+        setTemplateId(other.getTemplateId());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -901,6 +933,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000200;
               break;
             } // case 80
+            case 88: {
+              templateId_ = input.readInt64();
+              bitField0_ |= 0x00000400;
+              break;
+            } // case 88
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -920,19 +957,23 @@ private static final long serialVersionUID = 0L;
 
     private long ticketTemplateId_ ;
     /**
-     * <code>int64 ticket_template_id = 1 [json_name = "ticketTemplateId"];</code>
+     * <code>int64 ticket_template_id = 1 [json_name = "ticketTemplateId", deprecated = true];</code>
+     * @deprecated api.commons.TicketTemplate.ticket_template_id is deprecated.
+     *     See api/commons/tickets.proto;l=55
      * @return The ticketTemplateId.
      */
     @java.lang.Override
-    public long getTicketTemplateId() {
+    @java.lang.Deprecated public long getTicketTemplateId() {
       return ticketTemplateId_;
     }
     /**
-     * <code>int64 ticket_template_id = 1 [json_name = "ticketTemplateId"];</code>
+     * <code>int64 ticket_template_id = 1 [json_name = "ticketTemplateId", deprecated = true];</code>
+     * @deprecated api.commons.TicketTemplate.ticket_template_id is deprecated.
+     *     See api/commons/tickets.proto;l=55
      * @param value The ticketTemplateId to set.
      * @return This builder for chaining.
      */
-    public Builder setTicketTemplateId(long value) {
+    @java.lang.Deprecated public Builder setTicketTemplateId(long value) {
 
       ticketTemplateId_ = value;
       bitField0_ |= 0x00000001;
@@ -940,10 +981,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int64 ticket_template_id = 1 [json_name = "ticketTemplateId"];</code>
+     * <code>int64 ticket_template_id = 1 [json_name = "ticketTemplateId", deprecated = true];</code>
+     * @deprecated api.commons.TicketTemplate.ticket_template_id is deprecated.
+     *     See api/commons/tickets.proto;l=55
      * @return This builder for chaining.
      */
-    public Builder clearTicketTemplateId() {
+    @java.lang.Deprecated public Builder clearTicketTemplateId() {
       bitField0_ = (bitField0_ & ~0x00000001);
       ticketTemplateId_ = 0L;
       onChanged();
@@ -1648,6 +1691,38 @@ private static final long serialVersionUID = 0L;
     public Builder clearIsActive() {
       bitField0_ = (bitField0_ & ~0x00000200);
       isActive_ = false;
+      onChanged();
+      return this;
+    }
+
+    private long templateId_ ;
+    /**
+     * <code>int64 template_id = 11 [json_name = "templateId", jstype = JS_STRING];</code>
+     * @return The templateId.
+     */
+    @java.lang.Override
+    public long getTemplateId() {
+      return templateId_;
+    }
+    /**
+     * <code>int64 template_id = 11 [json_name = "templateId", jstype = JS_STRING];</code>
+     * @param value The templateId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTemplateId(long value) {
+
+      templateId_ = value;
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int64 template_id = 11 [json_name = "templateId", jstype = JS_STRING];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTemplateId() {
+      bitField0_ = (bitField0_ & ~0x00000400);
+      templateId_ = 0L;
       onChanged();
       return this;
     }

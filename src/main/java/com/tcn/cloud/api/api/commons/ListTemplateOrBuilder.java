@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.commons;
 
-public interface ListTemplateOrBuilder extends
+@java.lang.Deprecated public interface ListTemplateOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.commons.ListTemplate)
     com.google.protobuf.MessageOrBuilder {
 
