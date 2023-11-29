@@ -32,6 +32,14 @@ public enum RoomType
    * <code>ROOM_TYPE_SYSTEM = 2;</code>
    */
   ROOM_TYPE_SYSTEM(2),
+  /**
+   * <pre>
+   * Global system channel - used for global messages
+   * </pre>
+   *
+   * <code>ROOM_TYPE_GLOBAL_SYSTEM = 3;</code>
+   */
+  ROOM_TYPE_GLOBAL_SYSTEM(3),
   UNRECOGNIZED(-1),
   ;
 
@@ -59,6 +67,14 @@ public enum RoomType
    * <code>ROOM_TYPE_SYSTEM = 2;</code>
    */
   public static final int ROOM_TYPE_SYSTEM_VALUE = 2;
+  /**
+   * <pre>
+   * Global system channel - used for global messages
+   * </pre>
+   *
+   * <code>ROOM_TYPE_GLOBAL_SYSTEM = 3;</code>
+   */
+  public static final int ROOM_TYPE_GLOBAL_SYSTEM_VALUE = 3;
 
 
   public final int getNumber() {
@@ -88,6 +104,7 @@ public enum RoomType
       case 0: return ROOM_TYPE_DIRECT;
       case 1: return ROOM_TYPE_MULTI;
       case 2: return ROOM_TYPE_SYSTEM;
+      case 3: return ROOM_TYPE_GLOBAL_SYSTEM;
       default: return null;
     }
   }

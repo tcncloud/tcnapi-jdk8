@@ -18,6 +18,8 @@ private static final long serialVersionUID = 0L;
   private EmailTransport() {
     fromAddress_ = "";
     toAddress_ = "";
+    ccAddresses_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   @java.lang.Override
@@ -44,6 +46,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object fromAddress_ = "";
   /**
+   * <pre>
+   * which email we want to show up as as from
+   * </pre>
+   *
    * <code>string from_address = 1 [json_name = "fromAddress"];</code>
    * @return The fromAddress.
    */
@@ -61,6 +67,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * which email we want to show up as as from
+   * </pre>
+   *
    * <code>string from_address = 1 [json_name = "fromAddress"];</code>
    * @return The bytes for fromAddress.
    */
@@ -83,6 +93,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object toAddress_ = "";
   /**
+   * <pre>
+   * which email we are sending to
+   * </pre>
+   *
    * <code>string to_address = 2 [json_name = "toAddress"];</code>
    * @return The toAddress.
    */
@@ -100,6 +114,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * which email we are sending to
+   * </pre>
+   *
    * <code>string to_address = 2 [json_name = "toAddress"];</code>
    * @return The bytes for toAddress.
    */
@@ -116,6 +134,59 @@ private static final long serialVersionUID = 0L;
     } else {
       return (com.google.protobuf.ByteString) ref;
     }
+  }
+
+  public static final int CC_ADDRESSES_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.LazyStringArrayList ccAddresses_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
+  /**
+   * <pre>
+   * additional emails we are sending to
+   * </pre>
+   *
+   * <code>repeated string cc_addresses = 3 [json_name = "ccAddresses"];</code>
+   * @return A list containing the ccAddresses.
+   */
+  public com.google.protobuf.ProtocolStringList
+      getCcAddressesList() {
+    return ccAddresses_;
+  }
+  /**
+   * <pre>
+   * additional emails we are sending to
+   * </pre>
+   *
+   * <code>repeated string cc_addresses = 3 [json_name = "ccAddresses"];</code>
+   * @return The count of ccAddresses.
+   */
+  public int getCcAddressesCount() {
+    return ccAddresses_.size();
+  }
+  /**
+   * <pre>
+   * additional emails we are sending to
+   * </pre>
+   *
+   * <code>repeated string cc_addresses = 3 [json_name = "ccAddresses"];</code>
+   * @param index The index of the element to return.
+   * @return The ccAddresses at the given index.
+   */
+  public java.lang.String getCcAddresses(int index) {
+    return ccAddresses_.get(index);
+  }
+  /**
+   * <pre>
+   * additional emails we are sending to
+   * </pre>
+   *
+   * <code>repeated string cc_addresses = 3 [json_name = "ccAddresses"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the ccAddresses at the given index.
+   */
+  public com.google.protobuf.ByteString
+      getCcAddressesBytes(int index) {
+    return ccAddresses_.getByteString(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -138,6 +209,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(toAddress_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, toAddress_);
     }
+    for (int i = 0; i < ccAddresses_.size(); i++) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, ccAddresses_.getRaw(i));
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -152,6 +226,14 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(toAddress_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, toAddress_);
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < ccAddresses_.size(); i++) {
+        dataSize += computeStringSizeNoTag(ccAddresses_.getRaw(i));
+      }
+      size += dataSize;
+      size += 1 * getCcAddressesList().size();
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -172,6 +254,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getFromAddress())) return false;
     if (!getToAddress()
         .equals(other.getToAddress())) return false;
+    if (!getCcAddressesList()
+        .equals(other.getCcAddressesList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -187,6 +271,10 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getFromAddress().hashCode();
     hash = (37 * hash) + TO_ADDRESS_FIELD_NUMBER;
     hash = (53 * hash) + getToAddress().hashCode();
+    if (getCcAddressesCount() > 0) {
+      hash = (37 * hash) + CC_ADDRESSES_FIELD_NUMBER;
+      hash = (53 * hash) + getCcAddressesList().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -320,6 +408,8 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       fromAddress_ = "";
       toAddress_ = "";
+      ccAddresses_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
     }
 
@@ -358,6 +448,10 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.toAddress_ = toAddress_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        ccAddresses_.makeImmutable();
+        result.ccAddresses_ = ccAddresses_;
       }
     }
 
@@ -415,6 +509,16 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000002;
         onChanged();
       }
+      if (!other.ccAddresses_.isEmpty()) {
+        if (ccAddresses_.isEmpty()) {
+          ccAddresses_ = other.ccAddresses_;
+          bitField0_ |= 0x00000004;
+        } else {
+          ensureCcAddressesIsMutable();
+          ccAddresses_.addAll(other.ccAddresses_);
+        }
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -451,6 +555,12 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 18
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureCcAddressesIsMutable();
+              ccAddresses_.add(s);
+              break;
+            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -470,6 +580,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object fromAddress_ = "";
     /**
+     * <pre>
+     * which email we want to show up as as from
+     * </pre>
+     *
      * <code>string from_address = 1 [json_name = "fromAddress"];</code>
      * @return The fromAddress.
      */
@@ -486,6 +600,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * which email we want to show up as as from
+     * </pre>
+     *
      * <code>string from_address = 1 [json_name = "fromAddress"];</code>
      * @return The bytes for fromAddress.
      */
@@ -503,6 +621,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * which email we want to show up as as from
+     * </pre>
+     *
      * <code>string from_address = 1 [json_name = "fromAddress"];</code>
      * @param value The fromAddress to set.
      * @return This builder for chaining.
@@ -516,6 +638,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * which email we want to show up as as from
+     * </pre>
+     *
      * <code>string from_address = 1 [json_name = "fromAddress"];</code>
      * @return This builder for chaining.
      */
@@ -526,6 +652,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * which email we want to show up as as from
+     * </pre>
+     *
      * <code>string from_address = 1 [json_name = "fromAddress"];</code>
      * @param value The bytes for fromAddress to set.
      * @return This builder for chaining.
@@ -542,6 +672,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object toAddress_ = "";
     /**
+     * <pre>
+     * which email we are sending to
+     * </pre>
+     *
      * <code>string to_address = 2 [json_name = "toAddress"];</code>
      * @return The toAddress.
      */
@@ -558,6 +692,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * which email we are sending to
+     * </pre>
+     *
      * <code>string to_address = 2 [json_name = "toAddress"];</code>
      * @return The bytes for toAddress.
      */
@@ -575,6 +713,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * which email we are sending to
+     * </pre>
+     *
      * <code>string to_address = 2 [json_name = "toAddress"];</code>
      * @param value The toAddress to set.
      * @return This builder for chaining.
@@ -588,6 +730,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * which email we are sending to
+     * </pre>
+     *
      * <code>string to_address = 2 [json_name = "toAddress"];</code>
      * @return This builder for chaining.
      */
@@ -598,6 +744,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * which email we are sending to
+     * </pre>
+     *
      * <code>string to_address = 2 [json_name = "toAddress"];</code>
      * @param value The bytes for toAddress to set.
      * @return This builder for chaining.
@@ -608,6 +758,153 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       toAddress_ = value;
       bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.LazyStringArrayList ccAddresses_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    private void ensureCcAddressesIsMutable() {
+      if (!ccAddresses_.isModifiable()) {
+        ccAddresses_ = new com.google.protobuf.LazyStringArrayList(ccAddresses_);
+      }
+      bitField0_ |= 0x00000004;
+    }
+    /**
+     * <pre>
+     * additional emails we are sending to
+     * </pre>
+     *
+     * <code>repeated string cc_addresses = 3 [json_name = "ccAddresses"];</code>
+     * @return A list containing the ccAddresses.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getCcAddressesList() {
+      ccAddresses_.makeImmutable();
+      return ccAddresses_;
+    }
+    /**
+     * <pre>
+     * additional emails we are sending to
+     * </pre>
+     *
+     * <code>repeated string cc_addresses = 3 [json_name = "ccAddresses"];</code>
+     * @return The count of ccAddresses.
+     */
+    public int getCcAddressesCount() {
+      return ccAddresses_.size();
+    }
+    /**
+     * <pre>
+     * additional emails we are sending to
+     * </pre>
+     *
+     * <code>repeated string cc_addresses = 3 [json_name = "ccAddresses"];</code>
+     * @param index The index of the element to return.
+     * @return The ccAddresses at the given index.
+     */
+    public java.lang.String getCcAddresses(int index) {
+      return ccAddresses_.get(index);
+    }
+    /**
+     * <pre>
+     * additional emails we are sending to
+     * </pre>
+     *
+     * <code>repeated string cc_addresses = 3 [json_name = "ccAddresses"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the ccAddresses at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getCcAddressesBytes(int index) {
+      return ccAddresses_.getByteString(index);
+    }
+    /**
+     * <pre>
+     * additional emails we are sending to
+     * </pre>
+     *
+     * <code>repeated string cc_addresses = 3 [json_name = "ccAddresses"];</code>
+     * @param index The index to set the value at.
+     * @param value The ccAddresses to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCcAddresses(
+        int index, java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureCcAddressesIsMutable();
+      ccAddresses_.set(index, value);
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * additional emails we are sending to
+     * </pre>
+     *
+     * <code>repeated string cc_addresses = 3 [json_name = "ccAddresses"];</code>
+     * @param value The ccAddresses to add.
+     * @return This builder for chaining.
+     */
+    public Builder addCcAddresses(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureCcAddressesIsMutable();
+      ccAddresses_.add(value);
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * additional emails we are sending to
+     * </pre>
+     *
+     * <code>repeated string cc_addresses = 3 [json_name = "ccAddresses"];</code>
+     * @param values The ccAddresses to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllCcAddresses(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureCcAddressesIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, ccAddresses_);
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * additional emails we are sending to
+     * </pre>
+     *
+     * <code>repeated string cc_addresses = 3 [json_name = "ccAddresses"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCcAddresses() {
+      ccAddresses_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000004);;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * additional emails we are sending to
+     * </pre>
+     *
+     * <code>repeated string cc_addresses = 3 [json_name = "ccAddresses"];</code>
+     * @param value The bytes of the ccAddresses to add.
+     * @return This builder for chaining.
+     */
+    public Builder addCcAddressesBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      ensureCcAddressesIsMutable();
+      ccAddresses_.add(value);
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }

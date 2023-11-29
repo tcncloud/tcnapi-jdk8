@@ -16,6 +16,8 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private SMSTransport() {
+    destinationPhone_ = "";
+    sourcePhone_ = "";
   }
 
   @java.lang.Override
@@ -38,6 +40,100 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.delivery.SMSTransport.class, com.tcn.cloud.api.api.v1alpha1.delivery.SMSTransport.Builder.class);
   }
 
+  public static final int DESTINATION_PHONE_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object destinationPhone_ = "";
+  /**
+   * <pre>
+   * must include country code and area code
+   * </pre>
+   *
+   * <code>string destination_phone = 1 [json_name = "destinationPhone"];</code>
+   * @return The destinationPhone.
+   */
+  @java.lang.Override
+  public java.lang.String getDestinationPhone() {
+    java.lang.Object ref = destinationPhone_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      destinationPhone_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * must include country code and area code
+   * </pre>
+   *
+   * <code>string destination_phone = 1 [json_name = "destinationPhone"];</code>
+   * @return The bytes for destinationPhone.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getDestinationPhoneBytes() {
+    java.lang.Object ref = destinationPhone_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      destinationPhone_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int SOURCE_PHONE_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object sourcePhone_ = "";
+  /**
+   * <pre>
+   * the phone number we want this message to come from
+   * </pre>
+   *
+   * <code>string source_phone = 2 [json_name = "sourcePhone"];</code>
+   * @return The sourcePhone.
+   */
+  @java.lang.Override
+  public java.lang.String getSourcePhone() {
+    java.lang.Object ref = sourcePhone_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      sourcePhone_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * the phone number we want this message to come from
+   * </pre>
+   *
+   * <code>string source_phone = 2 [json_name = "sourcePhone"];</code>
+   * @return The bytes for sourcePhone.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getSourcePhoneBytes() {
+    java.lang.Object ref = sourcePhone_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      sourcePhone_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -52,6 +148,12 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(destinationPhone_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, destinationPhone_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sourcePhone_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, sourcePhone_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -61,6 +163,12 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(destinationPhone_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, destinationPhone_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sourcePhone_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, sourcePhone_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -76,6 +184,10 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v1alpha1.delivery.SMSTransport other = (com.tcn.cloud.api.api.v1alpha1.delivery.SMSTransport) obj;
 
+    if (!getDestinationPhone()
+        .equals(other.getDestinationPhone())) return false;
+    if (!getSourcePhone()
+        .equals(other.getSourcePhone())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -87,6 +199,10 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + DESTINATION_PHONE_FIELD_NUMBER;
+    hash = (53 * hash) + getDestinationPhone().hashCode();
+    hash = (37 * hash) + SOURCE_PHONE_FIELD_NUMBER;
+    hash = (53 * hash) + getSourcePhone().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -217,6 +333,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
+      destinationPhone_ = "";
+      sourcePhone_ = "";
       return this;
     }
 
@@ -243,8 +362,19 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.delivery.SMSTransport buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.delivery.SMSTransport result = new com.tcn.cloud.api.api.v1alpha1.delivery.SMSTransport(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.delivery.SMSTransport result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.destinationPhone_ = destinationPhone_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.sourcePhone_ = sourcePhone_;
+      }
     }
 
     @java.lang.Override
@@ -291,6 +421,16 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.delivery.SMSTransport other) {
       if (other == com.tcn.cloud.api.api.v1alpha1.delivery.SMSTransport.getDefaultInstance()) return this;
+      if (!other.getDestinationPhone().isEmpty()) {
+        destinationPhone_ = other.destinationPhone_;
+        bitField0_ |= 0x00000001;
+        onChanged();
+      }
+      if (!other.getSourcePhone().isEmpty()) {
+        sourcePhone_ = other.sourcePhone_;
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -317,6 +457,16 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
+            case 10: {
+              destinationPhone_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
+              sourcePhone_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -330,6 +480,191 @@ private static final long serialVersionUID = 0L;
       } finally {
         onChanged();
       } // finally
+      return this;
+    }
+    private int bitField0_;
+
+    private java.lang.Object destinationPhone_ = "";
+    /**
+     * <pre>
+     * must include country code and area code
+     * </pre>
+     *
+     * <code>string destination_phone = 1 [json_name = "destinationPhone"];</code>
+     * @return The destinationPhone.
+     */
+    public java.lang.String getDestinationPhone() {
+      java.lang.Object ref = destinationPhone_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        destinationPhone_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * must include country code and area code
+     * </pre>
+     *
+     * <code>string destination_phone = 1 [json_name = "destinationPhone"];</code>
+     * @return The bytes for destinationPhone.
+     */
+    public com.google.protobuf.ByteString
+        getDestinationPhoneBytes() {
+      java.lang.Object ref = destinationPhone_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        destinationPhone_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * must include country code and area code
+     * </pre>
+     *
+     * <code>string destination_phone = 1 [json_name = "destinationPhone"];</code>
+     * @param value The destinationPhone to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDestinationPhone(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      destinationPhone_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * must include country code and area code
+     * </pre>
+     *
+     * <code>string destination_phone = 1 [json_name = "destinationPhone"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearDestinationPhone() {
+      destinationPhone_ = getDefaultInstance().getDestinationPhone();
+      bitField0_ = (bitField0_ & ~0x00000001);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * must include country code and area code
+     * </pre>
+     *
+     * <code>string destination_phone = 1 [json_name = "destinationPhone"];</code>
+     * @param value The bytes for destinationPhone to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDestinationPhoneBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      destinationPhone_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object sourcePhone_ = "";
+    /**
+     * <pre>
+     * the phone number we want this message to come from
+     * </pre>
+     *
+     * <code>string source_phone = 2 [json_name = "sourcePhone"];</code>
+     * @return The sourcePhone.
+     */
+    public java.lang.String getSourcePhone() {
+      java.lang.Object ref = sourcePhone_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sourcePhone_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * the phone number we want this message to come from
+     * </pre>
+     *
+     * <code>string source_phone = 2 [json_name = "sourcePhone"];</code>
+     * @return The bytes for sourcePhone.
+     */
+    public com.google.protobuf.ByteString
+        getSourcePhoneBytes() {
+      java.lang.Object ref = sourcePhone_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sourcePhone_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * the phone number we want this message to come from
+     * </pre>
+     *
+     * <code>string source_phone = 2 [json_name = "sourcePhone"];</code>
+     * @param value The sourcePhone to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSourcePhone(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      sourcePhone_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the phone number we want this message to come from
+     * </pre>
+     *
+     * <code>string source_phone = 2 [json_name = "sourcePhone"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearSourcePhone() {
+      sourcePhone_ = getDefaultInstance().getSourcePhone();
+      bitField0_ = (bitField0_ & ~0x00000002);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the phone number we want this message to come from
+     * </pre>
+     *
+     * <code>string source_phone = 2 [json_name = "sourcePhone"];</code>
+     * @param value The bytes for sourcePhone to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSourcePhoneBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      sourcePhone_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     @java.lang.Override

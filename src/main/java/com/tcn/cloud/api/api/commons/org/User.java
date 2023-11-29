@@ -2081,6 +2081,21 @@ com.tcn.cloud.api.api.commons.org.User.RegionSids defaultValue) {
     return accountOwner_;
   }
 
+  public static final int EMAIL_VERIFIED_FIELD_NUMBER = 401;
+  private boolean emailVerified_ = false;
+  /**
+   * <pre>
+   * Whether or not the user's email is verified.
+   * </pre>
+   *
+   * <code>bool email_verified = 401 [json_name = "emailVerified"];</code>
+   * @return The emailVerified.
+   */
+  @java.lang.Override
+  public boolean getEmailVerified() {
+    return emailVerified_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -2196,6 +2211,9 @@ com.tcn.cloud.api.api.commons.org.User.RegionSids defaultValue) {
     }
     if (accountOwner_ != false) {
       output.writeBool(400, accountOwner_);
+    }
+    if (emailVerified_ != false) {
+      output.writeBool(401, emailVerified_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -2346,6 +2364,10 @@ com.tcn.cloud.api.api.commons.org.User.RegionSids defaultValue) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(400, accountOwner_);
     }
+    if (emailVerified_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(401, emailVerified_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -2438,6 +2460,8 @@ com.tcn.cloud.api.api.commons.org.User.RegionSids defaultValue) {
         != other.getAgent()) return false;
     if (getAccountOwner()
         != other.getAccountOwner()) return false;
+    if (getEmailVerified()
+        != other.getEmailVerified()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -2543,6 +2567,9 @@ com.tcn.cloud.api.api.commons.org.User.RegionSids defaultValue) {
     hash = (37 * hash) + ACCOUNT_OWNER_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getAccountOwner());
+    hash = (37 * hash) + EMAIL_VERIFIED_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getEmailVerified());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -2760,6 +2787,7 @@ com.tcn.cloud.api.api.commons.org.User.RegionSids defaultValue) {
       bitField0_ = (bitField0_ & ~0x40000000);
       agent_ = false;
       accountOwner_ = false;
+      emailVerified_ = false;
       return this;
     }
 
@@ -2919,6 +2947,9 @@ com.tcn.cloud.api.api.commons.org.User.RegionSids defaultValue) {
       int from_bitField1_ = bitField1_;
       if (((from_bitField1_ & 0x00000001) != 0)) {
         result.accountOwner_ = accountOwner_;
+      }
+      if (((from_bitField1_ & 0x00000002) != 0)) {
+        result.emailVerified_ = emailVerified_;
       }
     }
 
@@ -3144,6 +3175,9 @@ com.tcn.cloud.api.api.commons.org.User.RegionSids defaultValue) {
       if (other.getAccountOwner() != false) {
         setAccountOwner(other.getAccountOwner());
       }
+      if (other.getEmailVerified() != false) {
+        setEmailVerified(other.getEmailVerified());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -3359,6 +3393,11 @@ com.tcn.cloud.api.api.commons.org.User.RegionSids defaultValue) {
               bitField1_ |= 0x00000001;
               break;
             } // case 3200
+            case 3208: {
+              emailVerified_ = input.readBool();
+              bitField1_ |= 0x00000002;
+              break;
+            } // case 3208
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -6737,6 +6776,50 @@ com.tcn.cloud.api.api.commons.org.User.RegionSids defaultValue) {
     public Builder clearAccountOwner() {
       bitField1_ = (bitField1_ & ~0x00000001);
       accountOwner_ = false;
+      onChanged();
+      return this;
+    }
+
+    private boolean emailVerified_ ;
+    /**
+     * <pre>
+     * Whether or not the user's email is verified.
+     * </pre>
+     *
+     * <code>bool email_verified = 401 [json_name = "emailVerified"];</code>
+     * @return The emailVerified.
+     */
+    @java.lang.Override
+    public boolean getEmailVerified() {
+      return emailVerified_;
+    }
+    /**
+     * <pre>
+     * Whether or not the user's email is verified.
+     * </pre>
+     *
+     * <code>bool email_verified = 401 [json_name = "emailVerified"];</code>
+     * @param value The emailVerified to set.
+     * @return This builder for chaining.
+     */
+    public Builder setEmailVerified(boolean value) {
+
+      emailVerified_ = value;
+      bitField1_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Whether or not the user's email is verified.
+     * </pre>
+     *
+     * <code>bool email_verified = 401 [json_name = "emailVerified"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearEmailVerified() {
+      bitField1_ = (bitField1_ & ~0x00000002);
+      emailVerified_ = false;
       onChanged();
       return this;
     }

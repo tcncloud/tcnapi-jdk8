@@ -8,11 +8,19 @@ public interface EmailTransportOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * which email we want to show up as as from
+   * </pre>
+   *
    * <code>string from_address = 1 [json_name = "fromAddress"];</code>
    * @return The fromAddress.
    */
   java.lang.String getFromAddress();
   /**
+   * <pre>
+   * which email we want to show up as as from
+   * </pre>
+   *
    * <code>string from_address = 1 [json_name = "fromAddress"];</code>
    * @return The bytes for fromAddress.
    */
@@ -20,14 +28,63 @@ public interface EmailTransportOrBuilder extends
       getFromAddressBytes();
 
   /**
+   * <pre>
+   * which email we are sending to
+   * </pre>
+   *
    * <code>string to_address = 2 [json_name = "toAddress"];</code>
    * @return The toAddress.
    */
   java.lang.String getToAddress();
   /**
+   * <pre>
+   * which email we are sending to
+   * </pre>
+   *
    * <code>string to_address = 2 [json_name = "toAddress"];</code>
    * @return The bytes for toAddress.
    */
   com.google.protobuf.ByteString
       getToAddressBytes();
+
+  /**
+   * <pre>
+   * additional emails we are sending to
+   * </pre>
+   *
+   * <code>repeated string cc_addresses = 3 [json_name = "ccAddresses"];</code>
+   * @return A list containing the ccAddresses.
+   */
+  java.util.List<java.lang.String>
+      getCcAddressesList();
+  /**
+   * <pre>
+   * additional emails we are sending to
+   * </pre>
+   *
+   * <code>repeated string cc_addresses = 3 [json_name = "ccAddresses"];</code>
+   * @return The count of ccAddresses.
+   */
+  int getCcAddressesCount();
+  /**
+   * <pre>
+   * additional emails we are sending to
+   * </pre>
+   *
+   * <code>repeated string cc_addresses = 3 [json_name = "ccAddresses"];</code>
+   * @param index The index of the element to return.
+   * @return The ccAddresses at the given index.
+   */
+  java.lang.String getCcAddresses(int index);
+  /**
+   * <pre>
+   * additional emails we are sending to
+   * </pre>
+   *
+   * <code>repeated string cc_addresses = 3 [json_name = "ccAddresses"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the ccAddresses at the given index.
+   */
+  com.google.protobuf.ByteString
+      getCcAddressesBytes(int index);
 }
