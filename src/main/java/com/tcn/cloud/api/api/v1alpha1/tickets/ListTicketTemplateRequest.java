@@ -41,22 +41,26 @@ private static final long serialVersionUID = 0L;
   public static final int TICKET_TEMPLATE_ID_FIELD_NUMBER = 1;
   private long ticketTemplateId_ = 0L;
   /**
-   * <code>int64 ticket_template_id = 1 [json_name = "ticketTemplateId"];</code>
+   * <code>int64 ticket_template_id = 1 [json_name = "ticketTemplateId", deprecated = true];</code>
+   * @deprecated api.v1alpha1.tickets.ListTicketTemplateRequest.ticket_template_id is deprecated.
+   *     See api/v1alpha1/tickets/ticket.proto;l=59
    * @return The ticketTemplateId.
    */
   @java.lang.Override
-  public long getTicketTemplateId() {
+  @java.lang.Deprecated public long getTicketTemplateId() {
     return ticketTemplateId_;
   }
 
   public static final int PROJECT_ID_FIELD_NUMBER = 2;
   private long projectId_ = 0L;
   /**
-   * <code>int64 project_id = 2 [json_name = "projectId"];</code>
+   * <code>int64 project_id = 2 [json_name = "projectId", deprecated = true];</code>
+   * @deprecated api.v1alpha1.tickets.ListTicketTemplateRequest.project_id is deprecated.
+   *     See api/v1alpha1/tickets/ticket.proto;l=60
    * @return The projectId.
    */
   @java.lang.Override
-  public long getProjectId() {
+  @java.lang.Deprecated public long getProjectId() {
     return projectId_;
   }
 
@@ -98,6 +102,28 @@ private static final long serialVersionUID = 0L;
     return requestMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : requestMask_;
   }
 
+  public static final int TEMPLATE_ID_FIELD_NUMBER = 4;
+  private long templateId_ = 0L;
+  /**
+   * <code>int64 template_id = 4 [json_name = "templateId", jstype = JS_STRING];</code>
+   * @return The templateId.
+   */
+  @java.lang.Override
+  public long getTemplateId() {
+    return templateId_;
+  }
+
+  public static final int TEMPLATE_PROJECT_ID_FIELD_NUMBER = 5;
+  private long templateProjectId_ = 0L;
+  /**
+   * <code>int64 template_project_id = 5 [json_name = "templateProjectId", jstype = JS_STRING];</code>
+   * @return The templateProjectId.
+   */
+  @java.lang.Override
+  public long getTemplateProjectId() {
+    return templateProjectId_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -121,6 +147,12 @@ private static final long serialVersionUID = 0L;
     if (requestMask_ != null) {
       output.writeMessage(3, getRequestMask());
     }
+    if (templateId_ != 0L) {
+      output.writeInt64(4, templateId_);
+    }
+    if (templateProjectId_ != 0L) {
+      output.writeInt64(5, templateProjectId_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -141,6 +173,14 @@ private static final long serialVersionUID = 0L;
     if (requestMask_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getRequestMask());
+    }
+    if (templateId_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(4, templateId_);
+    }
+    if (templateProjectId_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(5, templateProjectId_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -166,6 +206,10 @@ private static final long serialVersionUID = 0L;
       if (!getRequestMask()
           .equals(other.getRequestMask())) return false;
     }
+    if (getTemplateId()
+        != other.getTemplateId()) return false;
+    if (getTemplateProjectId()
+        != other.getTemplateProjectId()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -187,6 +231,12 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + REQUEST_MASK_FIELD_NUMBER;
       hash = (53 * hash) + getRequestMask().hashCode();
     }
+    hash = (37 * hash) + TEMPLATE_ID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getTemplateId());
+    hash = (37 * hash) + TEMPLATE_PROJECT_ID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getTemplateProjectId());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -325,6 +375,8 @@ private static final long serialVersionUID = 0L;
         requestMaskBuilder_.dispose();
         requestMaskBuilder_ = null;
       }
+      templateId_ = 0L;
+      templateProjectId_ = 0L;
       return this;
     }
 
@@ -368,6 +420,12 @@ private static final long serialVersionUID = 0L;
         result.requestMask_ = requestMaskBuilder_ == null
             ? requestMask_
             : requestMaskBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.templateId_ = templateId_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.templateProjectId_ = templateProjectId_;
       }
     }
 
@@ -424,6 +482,12 @@ private static final long serialVersionUID = 0L;
       if (other.hasRequestMask()) {
         mergeRequestMask(other.getRequestMask());
       }
+      if (other.getTemplateId() != 0L) {
+        setTemplateId(other.getTemplateId());
+      }
+      if (other.getTemplateProjectId() != 0L) {
+        setTemplateProjectId(other.getTemplateProjectId());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -467,6 +531,16 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 26
+            case 32: {
+              templateId_ = input.readInt64();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
+            case 40: {
+              templateProjectId_ = input.readInt64();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 40
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -486,19 +560,23 @@ private static final long serialVersionUID = 0L;
 
     private long ticketTemplateId_ ;
     /**
-     * <code>int64 ticket_template_id = 1 [json_name = "ticketTemplateId"];</code>
+     * <code>int64 ticket_template_id = 1 [json_name = "ticketTemplateId", deprecated = true];</code>
+     * @deprecated api.v1alpha1.tickets.ListTicketTemplateRequest.ticket_template_id is deprecated.
+     *     See api/v1alpha1/tickets/ticket.proto;l=59
      * @return The ticketTemplateId.
      */
     @java.lang.Override
-    public long getTicketTemplateId() {
+    @java.lang.Deprecated public long getTicketTemplateId() {
       return ticketTemplateId_;
     }
     /**
-     * <code>int64 ticket_template_id = 1 [json_name = "ticketTemplateId"];</code>
+     * <code>int64 ticket_template_id = 1 [json_name = "ticketTemplateId", deprecated = true];</code>
+     * @deprecated api.v1alpha1.tickets.ListTicketTemplateRequest.ticket_template_id is deprecated.
+     *     See api/v1alpha1/tickets/ticket.proto;l=59
      * @param value The ticketTemplateId to set.
      * @return This builder for chaining.
      */
-    public Builder setTicketTemplateId(long value) {
+    @java.lang.Deprecated public Builder setTicketTemplateId(long value) {
 
       ticketTemplateId_ = value;
       bitField0_ |= 0x00000001;
@@ -506,10 +584,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int64 ticket_template_id = 1 [json_name = "ticketTemplateId"];</code>
+     * <code>int64 ticket_template_id = 1 [json_name = "ticketTemplateId", deprecated = true];</code>
+     * @deprecated api.v1alpha1.tickets.ListTicketTemplateRequest.ticket_template_id is deprecated.
+     *     See api/v1alpha1/tickets/ticket.proto;l=59
      * @return This builder for chaining.
      */
-    public Builder clearTicketTemplateId() {
+    @java.lang.Deprecated public Builder clearTicketTemplateId() {
       bitField0_ = (bitField0_ & ~0x00000001);
       ticketTemplateId_ = 0L;
       onChanged();
@@ -518,19 +598,23 @@ private static final long serialVersionUID = 0L;
 
     private long projectId_ ;
     /**
-     * <code>int64 project_id = 2 [json_name = "projectId"];</code>
+     * <code>int64 project_id = 2 [json_name = "projectId", deprecated = true];</code>
+     * @deprecated api.v1alpha1.tickets.ListTicketTemplateRequest.project_id is deprecated.
+     *     See api/v1alpha1/tickets/ticket.proto;l=60
      * @return The projectId.
      */
     @java.lang.Override
-    public long getProjectId() {
+    @java.lang.Deprecated public long getProjectId() {
       return projectId_;
     }
     /**
-     * <code>int64 project_id = 2 [json_name = "projectId"];</code>
+     * <code>int64 project_id = 2 [json_name = "projectId", deprecated = true];</code>
+     * @deprecated api.v1alpha1.tickets.ListTicketTemplateRequest.project_id is deprecated.
+     *     See api/v1alpha1/tickets/ticket.proto;l=60
      * @param value The projectId to set.
      * @return This builder for chaining.
      */
-    public Builder setProjectId(long value) {
+    @java.lang.Deprecated public Builder setProjectId(long value) {
 
       projectId_ = value;
       bitField0_ |= 0x00000002;
@@ -538,10 +622,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int64 project_id = 2 [json_name = "projectId"];</code>
+     * <code>int64 project_id = 2 [json_name = "projectId", deprecated = true];</code>
+     * @deprecated api.v1alpha1.tickets.ListTicketTemplateRequest.project_id is deprecated.
+     *     See api/v1alpha1/tickets/ticket.proto;l=60
      * @return This builder for chaining.
      */
-    public Builder clearProjectId() {
+    @java.lang.Deprecated public Builder clearProjectId() {
       bitField0_ = (bitField0_ & ~0x00000002);
       projectId_ = 0L;
       onChanged();
@@ -701,6 +787,70 @@ private static final long serialVersionUID = 0L;
         requestMask_ = null;
       }
       return requestMaskBuilder_;
+    }
+
+    private long templateId_ ;
+    /**
+     * <code>int64 template_id = 4 [json_name = "templateId", jstype = JS_STRING];</code>
+     * @return The templateId.
+     */
+    @java.lang.Override
+    public long getTemplateId() {
+      return templateId_;
+    }
+    /**
+     * <code>int64 template_id = 4 [json_name = "templateId", jstype = JS_STRING];</code>
+     * @param value The templateId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTemplateId(long value) {
+
+      templateId_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int64 template_id = 4 [json_name = "templateId", jstype = JS_STRING];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTemplateId() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      templateId_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private long templateProjectId_ ;
+    /**
+     * <code>int64 template_project_id = 5 [json_name = "templateProjectId", jstype = JS_STRING];</code>
+     * @return The templateProjectId.
+     */
+    @java.lang.Override
+    public long getTemplateProjectId() {
+      return templateProjectId_;
+    }
+    /**
+     * <code>int64 template_project_id = 5 [json_name = "templateProjectId", jstype = JS_STRING];</code>
+     * @param value The templateProjectId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTemplateProjectId(long value) {
+
+      templateProjectId_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int64 template_project_id = 5 [json_name = "templateProjectId", jstype = JS_STRING];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTemplateProjectId() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      templateProjectId_ = 0L;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

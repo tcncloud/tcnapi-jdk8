@@ -8,26 +8,50 @@ public interface ListTicketTemplateResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>repeated .api.commons.ListTemplate enabled_templates = 1 [json_name = "enabledTemplates"];</code>
+   * <code>repeated .api.commons.ListTemplate enabled_templates = 1 [json_name = "enabledTemplates", deprecated = true];</code>
    */
-  java.util.List<com.tcn.cloud.api.api.commons.ListTemplate> 
+  @java.lang.Deprecated java.util.List<com.tcn.cloud.api.api.commons.ListTemplate> 
       getEnabledTemplatesList();
   /**
-   * <code>repeated .api.commons.ListTemplate enabled_templates = 1 [json_name = "enabledTemplates"];</code>
+   * <code>repeated .api.commons.ListTemplate enabled_templates = 1 [json_name = "enabledTemplates", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.ListTemplate getEnabledTemplates(int index);
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.ListTemplate getEnabledTemplates(int index);
   /**
-   * <code>repeated .api.commons.ListTemplate enabled_templates = 1 [json_name = "enabledTemplates"];</code>
+   * <code>repeated .api.commons.ListTemplate enabled_templates = 1 [json_name = "enabledTemplates", deprecated = true];</code>
    */
-  int getEnabledTemplatesCount();
+  @java.lang.Deprecated int getEnabledTemplatesCount();
   /**
-   * <code>repeated .api.commons.ListTemplate enabled_templates = 1 [json_name = "enabledTemplates"];</code>
+   * <code>repeated .api.commons.ListTemplate enabled_templates = 1 [json_name = "enabledTemplates", deprecated = true];</code>
    */
-  java.util.List<? extends com.tcn.cloud.api.api.commons.ListTemplateOrBuilder> 
+  @java.lang.Deprecated java.util.List<? extends com.tcn.cloud.api.api.commons.ListTemplateOrBuilder> 
       getEnabledTemplatesOrBuilderList();
   /**
-   * <code>repeated .api.commons.ListTemplate enabled_templates = 1 [json_name = "enabledTemplates"];</code>
+   * <code>repeated .api.commons.ListTemplate enabled_templates = 1 [json_name = "enabledTemplates", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.ListTemplateOrBuilder getEnabledTemplatesOrBuilder(
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.ListTemplateOrBuilder getEnabledTemplatesOrBuilder(
+      int index);
+
+  /**
+   * <code>repeated .api.commons.TicketProjectTemplate ticket_project_template = 2 [json_name = "ticketProjectTemplate"];</code>
+   */
+  java.util.List<com.tcn.cloud.api.api.commons.TicketProjectTemplate> 
+      getTicketProjectTemplateList();
+  /**
+   * <code>repeated .api.commons.TicketProjectTemplate ticket_project_template = 2 [json_name = "ticketProjectTemplate"];</code>
+   */
+  com.tcn.cloud.api.api.commons.TicketProjectTemplate getTicketProjectTemplate(int index);
+  /**
+   * <code>repeated .api.commons.TicketProjectTemplate ticket_project_template = 2 [json_name = "ticketProjectTemplate"];</code>
+   */
+  int getTicketProjectTemplateCount();
+  /**
+   * <code>repeated .api.commons.TicketProjectTemplate ticket_project_template = 2 [json_name = "ticketProjectTemplate"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.api.commons.TicketProjectTemplateOrBuilder> 
+      getTicketProjectTemplateOrBuilderList();
+  /**
+   * <code>repeated .api.commons.TicketProjectTemplate ticket_project_template = 2 [json_name = "ticketProjectTemplate"];</code>
+   */
+  com.tcn.cloud.api.api.commons.TicketProjectTemplateOrBuilder getTicketProjectTemplateOrBuilder(
       int index);
 }

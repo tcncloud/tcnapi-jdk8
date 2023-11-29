@@ -8,17 +8,31 @@ public interface TicketTemplateOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>int64 ticket_template_id = 1 [json_name = "ticketTemplateId"];</code>
+   * <pre>
+   * Deprecated
+   * </pre>
+   *
+   * <code>int64 ticket_template_id = 1 [json_name = "ticketTemplateId", deprecated = true];</code>
+   * @deprecated api.commons.TicketTemplate.ticket_template_id is deprecated.
+   *     See api/commons/tickets.proto;l=57
    * @return The ticketTemplateId.
    */
-  long getTicketTemplateId();
+  @java.lang.Deprecated long getTicketTemplateId();
 
   /**
+   * <pre>
+   * Organization ID
+   * </pre>
+   *
    * <code>string org_id = 2 [json_name = "orgId"];</code>
    * @return The orgId.
    */
   java.lang.String getOrgId();
   /**
+   * <pre>
+   * Organization ID
+   * </pre>
+   *
    * <code>string org_id = 2 [json_name = "orgId"];</code>
    * @return The bytes for orgId.
    */
@@ -26,11 +40,19 @@ public interface TicketTemplateOrBuilder extends
       getOrgIdBytes();
 
   /**
+   * <pre>
+   * A formatted string which the FE uses to retrieve all template related information
+   * </pre>
+   *
    * <code>string template = 3 [json_name = "template"];</code>
    * @return The template.
    */
   java.lang.String getTemplate();
   /**
+   * <pre>
+   * A formatted string which the FE uses to retrieve all template related information
+   * </pre>
+   *
    * <code>string template = 3 [json_name = "template"];</code>
    * @return The bytes for template.
    */
@@ -38,11 +60,19 @@ public interface TicketTemplateOrBuilder extends
       getTemplateBytes();
 
   /**
+   * <pre>
+   * Version of the Template
+   * </pre>
+   *
    * <code>string template_entity_version = 4 [json_name = "templateEntityVersion"];</code>
    * @return The templateEntityVersion.
    */
   java.lang.String getTemplateEntityVersion();
   /**
+   * <pre>
+   * Version of the Template
+   * </pre>
+   *
    * <code>string template_entity_version = 4 [json_name = "templateEntityVersion"];</code>
    * @return The bytes for templateEntityVersion.
    */
@@ -50,11 +80,19 @@ public interface TicketTemplateOrBuilder extends
       getTemplateEntityVersionBytes();
 
   /**
+   * <pre>
+   * Name of the Template
+   * </pre>
+   *
    * <code>string template_name = 5 [json_name = "templateName"];</code>
    * @return The templateName.
    */
   java.lang.String getTemplateName();
   /**
+   * <pre>
+   * Name of the Template
+   * </pre>
+   *
    * <code>string template_name = 5 [json_name = "templateName"];</code>
    * @return The bytes for templateName.
    */
@@ -62,11 +100,19 @@ public interface TicketTemplateOrBuilder extends
       getTemplateNameBytes();
 
   /**
+   * <pre>
+   * Template created by user
+   * </pre>
+   *
    * <code>string created_by_id = 6 [json_name = "createdById"];</code>
    * @return The createdById.
    */
   java.lang.String getCreatedById();
   /**
+   * <pre>
+   * Template created by user
+   * </pre>
+   *
    * <code>string created_by_id = 6 [json_name = "createdById"];</code>
    * @return The bytes for createdById.
    */
@@ -74,11 +120,19 @@ public interface TicketTemplateOrBuilder extends
       getCreatedByIdBytes();
 
   /**
+   * <pre>
+   * Template modified by user
+   * </pre>
+   *
    * <code>string modified_by = 7 [json_name = "modifiedBy"];</code>
    * @return The modifiedBy.
    */
   java.lang.String getModifiedBy();
   /**
+   * <pre>
+   * Template modified by user
+   * </pre>
+   *
    * <code>string modified_by = 7 [json_name = "modifiedBy"];</code>
    * @return The bytes for modifiedBy.
    */
@@ -86,38 +140,76 @@ public interface TicketTemplateOrBuilder extends
       getModifiedByBytes();
 
   /**
+   * <pre>
+   * Template create date
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp created_date = 8 [json_name = "createdDate"];</code>
    * @return Whether the createdDate field is set.
    */
   boolean hasCreatedDate();
   /**
+   * <pre>
+   * Template create date
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp created_date = 8 [json_name = "createdDate"];</code>
    * @return The createdDate.
    */
   com.google.protobuf.Timestamp getCreatedDate();
   /**
+   * <pre>
+   * Template create date
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp created_date = 8 [json_name = "createdDate"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getCreatedDateOrBuilder();
 
   /**
+   * <pre>
+   * Template modified date
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp modified_date = 9 [json_name = "modifiedDate"];</code>
    * @return Whether the modifiedDate field is set.
    */
   boolean hasModifiedDate();
   /**
+   * <pre>
+   * Template modified date
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp modified_date = 9 [json_name = "modifiedDate"];</code>
    * @return The modifiedDate.
    */
   com.google.protobuf.Timestamp getModifiedDate();
   /**
+   * <pre>
+   * Template modified date
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp modified_date = 9 [json_name = "modifiedDate"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getModifiedDateOrBuilder();
 
   /**
+   * <pre>
+   * True/False Identifies if a template is active or inactive
+   * </pre>
+   *
    * <code>bool is_active = 10 [json_name = "isActive"];</code>
    * @return The isActive.
    */
   boolean getIsActive();
+
+  /**
+   * <pre>
+   * Snowflake Id of Ticket Template
+   * </pre>
+   *
+   * <code>int64 template_id = 11 [json_name = "templateId", jstype = JS_STRING];</code>
+   * @return The templateId.
+   */
+  long getTemplateId();
 }

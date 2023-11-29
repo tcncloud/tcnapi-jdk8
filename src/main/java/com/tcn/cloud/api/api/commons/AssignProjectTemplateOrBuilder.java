@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.commons;
 
-public interface AssignProjectTemplateOrBuilder extends
+@java.lang.Deprecated public interface AssignProjectTemplateOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.commons.AssignProjectTemplate)
     com.google.protobuf.MessageOrBuilder {
 

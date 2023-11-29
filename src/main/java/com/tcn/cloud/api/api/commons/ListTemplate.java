@@ -4,9 +4,13 @@
 package com.tcn.cloud.api.api.commons;
 
 /**
+ * <pre>
+ * Deprecated and will not be used
+ * </pre>
+ *
  * Protobuf type {@code api.commons.ListTemplate}
  */
-public final class ListTemplate extends
+@java.lang.Deprecated public final class ListTemplate extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.commons.ListTemplate)
     ListTemplateOrBuilder {
@@ -604,6 +608,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Deprecated and will not be used
+   * </pre>
+   *
    * Protobuf type {@code api.commons.ListTemplate}
    */
   public static final class Builder extends
