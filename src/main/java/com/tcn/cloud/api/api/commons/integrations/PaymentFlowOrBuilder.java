@@ -215,6 +215,36 @@ public interface PaymentFlowOrBuilder extends
   com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceAchOrBuilder getPriocommerceAchOrBuilder();
 
   /**
+   * <code>.api.commons.integrations.PaymentVisionCC paymentvision_cc = 15 [json_name = "paymentvisionCc"];</code>
+   * @return Whether the paymentvisionCc field is set.
+   */
+  boolean hasPaymentvisionCc();
+  /**
+   * <code>.api.commons.integrations.PaymentVisionCC paymentvision_cc = 15 [json_name = "paymentvisionCc"];</code>
+   * @return The paymentvisionCc.
+   */
+  com.tcn.cloud.api.api.commons.integrations.PaymentVisionCC getPaymentvisionCc();
+  /**
+   * <code>.api.commons.integrations.PaymentVisionCC paymentvision_cc = 15 [json_name = "paymentvisionCc"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.PaymentVisionCCOrBuilder getPaymentvisionCcOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.PaymentVisionACH paymentvision_ach = 16 [json_name = "paymentvisionAch"];</code>
+   * @return Whether the paymentvisionAch field is set.
+   */
+  boolean hasPaymentvisionAch();
+  /**
+   * <code>.api.commons.integrations.PaymentVisionACH paymentvision_ach = 16 [json_name = "paymentvisionAch"];</code>
+   * @return The paymentvisionAch.
+   */
+  com.tcn.cloud.api.api.commons.integrations.PaymentVisionACH getPaymentvisionAch();
+  /**
+   * <code>.api.commons.integrations.PaymentVisionACH paymentvision_ach = 16 [json_name = "paymentvisionAch"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.PaymentVisionACHOrBuilder getPaymentvisionAchOrBuilder();
+
+  /**
    * <pre>
    * the fields the user will use for the payment form
    * must be a subset of fields that is enough data to make the api call.

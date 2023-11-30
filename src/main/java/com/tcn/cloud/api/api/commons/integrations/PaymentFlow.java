@@ -59,6 +59,8 @@ private static final long serialVersionUID = 0L;
     NEWZWARE_ACH(12),
     PRIOCOMMERCE_CC(13),
     PRIOCOMMERCE_ACH(14),
+    PAYMENTVISION_CC(15),
+    PAYMENTVISION_ACH(16),
     VALUE_NOT_SET(0);
     private final int value;
     private ValueCase(int value) {
@@ -89,6 +91,8 @@ private static final long serialVersionUID = 0L;
         case 12: return NEWZWARE_ACH;
         case 13: return PRIOCOMMERCE_CC;
         case 14: return PRIOCOMMERCE_ACH;
+        case 15: return PAYMENTVISION_CC;
+        case 16: return PAYMENTVISION_ACH;
         case 0: return VALUE_NOT_SET;
         default: return null;
       }
@@ -546,6 +550,68 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceAch.getDefaultInstance();
   }
 
+  public static final int PAYMENTVISION_CC_FIELD_NUMBER = 15;
+  /**
+   * <code>.api.commons.integrations.PaymentVisionCC paymentvision_cc = 15 [json_name = "paymentvisionCc"];</code>
+   * @return Whether the paymentvisionCc field is set.
+   */
+  @java.lang.Override
+  public boolean hasPaymentvisionCc() {
+    return valueCase_ == 15;
+  }
+  /**
+   * <code>.api.commons.integrations.PaymentVisionCC paymentvision_cc = 15 [json_name = "paymentvisionCc"];</code>
+   * @return The paymentvisionCc.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.PaymentVisionCC getPaymentvisionCc() {
+    if (valueCase_ == 15) {
+       return (com.tcn.cloud.api.api.commons.integrations.PaymentVisionCC) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.PaymentVisionCC.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.PaymentVisionCC paymentvision_cc = 15 [json_name = "paymentvisionCc"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.PaymentVisionCCOrBuilder getPaymentvisionCcOrBuilder() {
+    if (valueCase_ == 15) {
+       return (com.tcn.cloud.api.api.commons.integrations.PaymentVisionCC) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.PaymentVisionCC.getDefaultInstance();
+  }
+
+  public static final int PAYMENTVISION_ACH_FIELD_NUMBER = 16;
+  /**
+   * <code>.api.commons.integrations.PaymentVisionACH paymentvision_ach = 16 [json_name = "paymentvisionAch"];</code>
+   * @return Whether the paymentvisionAch field is set.
+   */
+  @java.lang.Override
+  public boolean hasPaymentvisionAch() {
+    return valueCase_ == 16;
+  }
+  /**
+   * <code>.api.commons.integrations.PaymentVisionACH paymentvision_ach = 16 [json_name = "paymentvisionAch"];</code>
+   * @return The paymentvisionAch.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.PaymentVisionACH getPaymentvisionAch() {
+    if (valueCase_ == 16) {
+       return (com.tcn.cloud.api.api.commons.integrations.PaymentVisionACH) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.PaymentVisionACH.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.PaymentVisionACH paymentvision_ach = 16 [json_name = "paymentvisionAch"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.PaymentVisionACHOrBuilder getPaymentvisionAchOrBuilder() {
+    if (valueCase_ == 16) {
+       return (com.tcn.cloud.api.api.commons.integrations.PaymentVisionACH) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.PaymentVisionACH.getDefaultInstance();
+  }
+
   public static final int PAYMENT_FIELDS_FIELD_NUMBER = 20;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition> paymentFields_;
@@ -678,6 +744,12 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 14) {
       output.writeMessage(14, (com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceAch) value_);
     }
+    if (valueCase_ == 15) {
+      output.writeMessage(15, (com.tcn.cloud.api.api.commons.integrations.PaymentVisionCC) value_);
+    }
+    if (valueCase_ == 16) {
+      output.writeMessage(16, (com.tcn.cloud.api.api.commons.integrations.PaymentVisionACH) value_);
+    }
     for (int i = 0; i < paymentFields_.size(); i++) {
       output.writeMessage(20, paymentFields_.get(i));
     }
@@ -744,6 +816,14 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 14) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(14, (com.tcn.cloud.api.api.commons.integrations.PaymentPriocommerceAch) value_);
+    }
+    if (valueCase_ == 15) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(15, (com.tcn.cloud.api.api.commons.integrations.PaymentVisionCC) value_);
+    }
+    if (valueCase_ == 16) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(16, (com.tcn.cloud.api.api.commons.integrations.PaymentVisionACH) value_);
     }
     for (int i = 0; i < paymentFields_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
@@ -822,6 +902,14 @@ private static final long serialVersionUID = 0L;
         if (!getPriocommerceAch()
             .equals(other.getPriocommerceAch())) return false;
         break;
+      case 15:
+        if (!getPaymentvisionCc()
+            .equals(other.getPaymentvisionCc())) return false;
+        break;
+      case 16:
+        if (!getPaymentvisionAch()
+            .equals(other.getPaymentvisionAch())) return false;
+        break;
       case 0:
       default:
     }
@@ -894,6 +982,14 @@ private static final long serialVersionUID = 0L;
       case 14:
         hash = (37 * hash) + PRIOCOMMERCE_ACH_FIELD_NUMBER;
         hash = (53 * hash) + getPriocommerceAch().hashCode();
+        break;
+      case 15:
+        hash = (37 * hash) + PAYMENTVISION_CC_FIELD_NUMBER;
+        hash = (53 * hash) + getPaymentvisionCc().hashCode();
+        break;
+      case 16:
+        hash = (37 * hash) + PAYMENTVISION_ACH_FIELD_NUMBER;
+        hash = (53 * hash) + getPaymentvisionAch().hashCode();
         break;
       case 0:
       default:
@@ -1069,13 +1165,19 @@ private static final long serialVersionUID = 0L;
       if (priocommerceAchBuilder_ != null) {
         priocommerceAchBuilder_.clear();
       }
+      if (paymentvisionCcBuilder_ != null) {
+        paymentvisionCcBuilder_.clear();
+      }
+      if (paymentvisionAchBuilder_ != null) {
+        paymentvisionAchBuilder_.clear();
+      }
       if (paymentFieldsBuilder_ == null) {
         paymentFields_ = java.util.Collections.emptyList();
       } else {
         paymentFields_ = null;
         paymentFieldsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00004000);
+      bitField0_ = (bitField0_ & ~0x00010000);
       valueCase_ = 0;
       value_ = null;
       return this;
@@ -1113,9 +1215,9 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartialRepeatedFields(com.tcn.cloud.api.api.commons.integrations.PaymentFlow result) {
       if (paymentFieldsBuilder_ == null) {
-        if (((bitField0_ & 0x00004000) != 0)) {
+        if (((bitField0_ & 0x00010000) != 0)) {
           paymentFields_ = java.util.Collections.unmodifiableList(paymentFields_);
-          bitField0_ = (bitField0_ & ~0x00004000);
+          bitField0_ = (bitField0_ & ~0x00010000);
         }
         result.paymentFields_ = paymentFields_;
       } else {
@@ -1185,6 +1287,14 @@ private static final long serialVersionUID = 0L;
           priocommerceAchBuilder_ != null) {
         result.value_ = priocommerceAchBuilder_.build();
       }
+      if (valueCase_ == 15 &&
+          paymentvisionCcBuilder_ != null) {
+        result.value_ = paymentvisionCcBuilder_.build();
+      }
+      if (valueCase_ == 16 &&
+          paymentvisionAchBuilder_ != null) {
+        result.value_ = paymentvisionAchBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -1240,7 +1350,7 @@ private static final long serialVersionUID = 0L;
         if (!other.paymentFields_.isEmpty()) {
           if (paymentFields_.isEmpty()) {
             paymentFields_ = other.paymentFields_;
-            bitField0_ = (bitField0_ & ~0x00004000);
+            bitField0_ = (bitField0_ & ~0x00010000);
           } else {
             ensurePaymentFieldsIsMutable();
             paymentFields_.addAll(other.paymentFields_);
@@ -1253,7 +1363,7 @@ private static final long serialVersionUID = 0L;
             paymentFieldsBuilder_.dispose();
             paymentFieldsBuilder_ = null;
             paymentFields_ = other.paymentFields_;
-            bitField0_ = (bitField0_ & ~0x00004000);
+            bitField0_ = (bitField0_ & ~0x00010000);
             paymentFieldsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getPaymentFieldsFieldBuilder() : null;
@@ -1313,6 +1423,14 @@ private static final long serialVersionUID = 0L;
         }
         case PRIOCOMMERCE_ACH: {
           mergePriocommerceAch(other.getPriocommerceAch());
+          break;
+        }
+        case PAYMENTVISION_CC: {
+          mergePaymentvisionCc(other.getPaymentvisionCc());
+          break;
+        }
+        case PAYMENTVISION_ACH: {
+          mergePaymentvisionAch(other.getPaymentvisionAch());
           break;
         }
         case VALUE_NOT_SET: {
@@ -1441,6 +1559,20 @@ private static final long serialVersionUID = 0L;
               valueCase_ = 14;
               break;
             } // case 114
+            case 122: {
+              input.readMessage(
+                  getPaymentvisionCcFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 15;
+              break;
+            } // case 122
+            case 130: {
+              input.readMessage(
+                  getPaymentvisionAchFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 16;
+              break;
+            } // case 130
             case 162: {
               com.tcn.cloud.api.api.commons.integrations.FieldDefinition m =
                   input.readMessage(
@@ -3404,12 +3536,296 @@ private static final long serialVersionUID = 0L;
       return priocommerceAchBuilder_;
     }
 
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.PaymentVisionCC, com.tcn.cloud.api.api.commons.integrations.PaymentVisionCC.Builder, com.tcn.cloud.api.api.commons.integrations.PaymentVisionCCOrBuilder> paymentvisionCcBuilder_;
+    /**
+     * <code>.api.commons.integrations.PaymentVisionCC paymentvision_cc = 15 [json_name = "paymentvisionCc"];</code>
+     * @return Whether the paymentvisionCc field is set.
+     */
+    @java.lang.Override
+    public boolean hasPaymentvisionCc() {
+      return valueCase_ == 15;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentVisionCC paymentvision_cc = 15 [json_name = "paymentvisionCc"];</code>
+     * @return The paymentvisionCc.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.PaymentVisionCC getPaymentvisionCc() {
+      if (paymentvisionCcBuilder_ == null) {
+        if (valueCase_ == 15) {
+          return (com.tcn.cloud.api.api.commons.integrations.PaymentVisionCC) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.PaymentVisionCC.getDefaultInstance();
+      } else {
+        if (valueCase_ == 15) {
+          return paymentvisionCcBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.PaymentVisionCC.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentVisionCC paymentvision_cc = 15 [json_name = "paymentvisionCc"];</code>
+     */
+    public Builder setPaymentvisionCc(com.tcn.cloud.api.api.commons.integrations.PaymentVisionCC value) {
+      if (paymentvisionCcBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        paymentvisionCcBuilder_.setMessage(value);
+      }
+      valueCase_ = 15;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentVisionCC paymentvision_cc = 15 [json_name = "paymentvisionCc"];</code>
+     */
+    public Builder setPaymentvisionCc(
+        com.tcn.cloud.api.api.commons.integrations.PaymentVisionCC.Builder builderForValue) {
+      if (paymentvisionCcBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        paymentvisionCcBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 15;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentVisionCC paymentvision_cc = 15 [json_name = "paymentvisionCc"];</code>
+     */
+    public Builder mergePaymentvisionCc(com.tcn.cloud.api.api.commons.integrations.PaymentVisionCC value) {
+      if (paymentvisionCcBuilder_ == null) {
+        if (valueCase_ == 15 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.PaymentVisionCC.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.PaymentVisionCC.newBuilder((com.tcn.cloud.api.api.commons.integrations.PaymentVisionCC) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 15) {
+          paymentvisionCcBuilder_.mergeFrom(value);
+        } else {
+          paymentvisionCcBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 15;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentVisionCC paymentvision_cc = 15 [json_name = "paymentvisionCc"];</code>
+     */
+    public Builder clearPaymentvisionCc() {
+      if (paymentvisionCcBuilder_ == null) {
+        if (valueCase_ == 15) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 15) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        paymentvisionCcBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentVisionCC paymentvision_cc = 15 [json_name = "paymentvisionCc"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.PaymentVisionCC.Builder getPaymentvisionCcBuilder() {
+      return getPaymentvisionCcFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentVisionCC paymentvision_cc = 15 [json_name = "paymentvisionCc"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.PaymentVisionCCOrBuilder getPaymentvisionCcOrBuilder() {
+      if ((valueCase_ == 15) && (paymentvisionCcBuilder_ != null)) {
+        return paymentvisionCcBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 15) {
+          return (com.tcn.cloud.api.api.commons.integrations.PaymentVisionCC) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.PaymentVisionCC.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentVisionCC paymentvision_cc = 15 [json_name = "paymentvisionCc"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.PaymentVisionCC, com.tcn.cloud.api.api.commons.integrations.PaymentVisionCC.Builder, com.tcn.cloud.api.api.commons.integrations.PaymentVisionCCOrBuilder> 
+        getPaymentvisionCcFieldBuilder() {
+      if (paymentvisionCcBuilder_ == null) {
+        if (!(valueCase_ == 15)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.PaymentVisionCC.getDefaultInstance();
+        }
+        paymentvisionCcBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.PaymentVisionCC, com.tcn.cloud.api.api.commons.integrations.PaymentVisionCC.Builder, com.tcn.cloud.api.api.commons.integrations.PaymentVisionCCOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.PaymentVisionCC) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 15;
+      onChanged();
+      return paymentvisionCcBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.PaymentVisionACH, com.tcn.cloud.api.api.commons.integrations.PaymentVisionACH.Builder, com.tcn.cloud.api.api.commons.integrations.PaymentVisionACHOrBuilder> paymentvisionAchBuilder_;
+    /**
+     * <code>.api.commons.integrations.PaymentVisionACH paymentvision_ach = 16 [json_name = "paymentvisionAch"];</code>
+     * @return Whether the paymentvisionAch field is set.
+     */
+    @java.lang.Override
+    public boolean hasPaymentvisionAch() {
+      return valueCase_ == 16;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentVisionACH paymentvision_ach = 16 [json_name = "paymentvisionAch"];</code>
+     * @return The paymentvisionAch.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.PaymentVisionACH getPaymentvisionAch() {
+      if (paymentvisionAchBuilder_ == null) {
+        if (valueCase_ == 16) {
+          return (com.tcn.cloud.api.api.commons.integrations.PaymentVisionACH) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.PaymentVisionACH.getDefaultInstance();
+      } else {
+        if (valueCase_ == 16) {
+          return paymentvisionAchBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.PaymentVisionACH.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentVisionACH paymentvision_ach = 16 [json_name = "paymentvisionAch"];</code>
+     */
+    public Builder setPaymentvisionAch(com.tcn.cloud.api.api.commons.integrations.PaymentVisionACH value) {
+      if (paymentvisionAchBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        paymentvisionAchBuilder_.setMessage(value);
+      }
+      valueCase_ = 16;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentVisionACH paymentvision_ach = 16 [json_name = "paymentvisionAch"];</code>
+     */
+    public Builder setPaymentvisionAch(
+        com.tcn.cloud.api.api.commons.integrations.PaymentVisionACH.Builder builderForValue) {
+      if (paymentvisionAchBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        paymentvisionAchBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 16;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentVisionACH paymentvision_ach = 16 [json_name = "paymentvisionAch"];</code>
+     */
+    public Builder mergePaymentvisionAch(com.tcn.cloud.api.api.commons.integrations.PaymentVisionACH value) {
+      if (paymentvisionAchBuilder_ == null) {
+        if (valueCase_ == 16 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.PaymentVisionACH.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.PaymentVisionACH.newBuilder((com.tcn.cloud.api.api.commons.integrations.PaymentVisionACH) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 16) {
+          paymentvisionAchBuilder_.mergeFrom(value);
+        } else {
+          paymentvisionAchBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 16;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentVisionACH paymentvision_ach = 16 [json_name = "paymentvisionAch"];</code>
+     */
+    public Builder clearPaymentvisionAch() {
+      if (paymentvisionAchBuilder_ == null) {
+        if (valueCase_ == 16) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 16) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        paymentvisionAchBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentVisionACH paymentvision_ach = 16 [json_name = "paymentvisionAch"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.PaymentVisionACH.Builder getPaymentvisionAchBuilder() {
+      return getPaymentvisionAchFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentVisionACH paymentvision_ach = 16 [json_name = "paymentvisionAch"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.PaymentVisionACHOrBuilder getPaymentvisionAchOrBuilder() {
+      if ((valueCase_ == 16) && (paymentvisionAchBuilder_ != null)) {
+        return paymentvisionAchBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 16) {
+          return (com.tcn.cloud.api.api.commons.integrations.PaymentVisionACH) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.PaymentVisionACH.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentVisionACH paymentvision_ach = 16 [json_name = "paymentvisionAch"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.PaymentVisionACH, com.tcn.cloud.api.api.commons.integrations.PaymentVisionACH.Builder, com.tcn.cloud.api.api.commons.integrations.PaymentVisionACHOrBuilder> 
+        getPaymentvisionAchFieldBuilder() {
+      if (paymentvisionAchBuilder_ == null) {
+        if (!(valueCase_ == 16)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.PaymentVisionACH.getDefaultInstance();
+        }
+        paymentvisionAchBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.PaymentVisionACH, com.tcn.cloud.api.api.commons.integrations.PaymentVisionACH.Builder, com.tcn.cloud.api.api.commons.integrations.PaymentVisionACHOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.PaymentVisionACH) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 16;
+      onChanged();
+      return paymentvisionAchBuilder_;
+    }
+
     private java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition> paymentFields_ =
       java.util.Collections.emptyList();
     private void ensurePaymentFieldsIsMutable() {
-      if (!((bitField0_ & 0x00004000) != 0)) {
+      if (!((bitField0_ & 0x00010000) != 0)) {
         paymentFields_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.integrations.FieldDefinition>(paymentFields_);
-        bitField0_ |= 0x00004000;
+        bitField0_ |= 0x00010000;
        }
     }
 
@@ -3636,7 +4052,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearPaymentFields() {
       if (paymentFieldsBuilder_ == null) {
         paymentFields_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00004000);
+        bitField0_ = (bitField0_ & ~0x00010000);
         onChanged();
       } else {
         paymentFieldsBuilder_.clear();
@@ -3762,7 +4178,7 @@ private static final long serialVersionUID = 0L;
         paymentFieldsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.commons.integrations.FieldDefinition, com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder, com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder>(
                 paymentFields_,
-                ((bitField0_ & 0x00004000) != 0),
+                ((bitField0_ & 0x00010000) != 0),
                 getParentForChildren(),
                 isClean());
         paymentFields_ = null;
