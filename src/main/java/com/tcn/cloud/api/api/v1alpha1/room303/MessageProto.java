@@ -104,6 +104,26 @@ public final class MessageProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_room303_BulkMarkMessageReadResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_room303_ListNewsRoomGlobalMessagesRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_room303_ListNewsRoomGlobalMessagesRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_room303_ListNewsRoomGlobalMessagesResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_room303_ListNewsRoomGlobalMessagesResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_room303_SendNewsRoomGlobalMessageRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_room303_SendNewsRoomGlobalMessageRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_room303_SendNewsRoomGlobalMessageResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_room303_SendNewsRoomGlobalMessageResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -151,11 +171,19 @@ public final class MessageProto {
       "\001 \001(\tR\006roomId\022\037\n\013message_ids\030\002 \003(\tR\nmess" +
       "ageIds\"O\n\033BulkMarkMessageReadResponse\0220\n" +
       "\010messages\030\001 \003(\0132\024.api.commons.MessageR\010m" +
-      "essagesB\250\001\n&com.tcn.cloud.api.api.v1alph" +
-      "a1.room303B\014MessageProtoP\001\242\002\003AVR\252\002\024Api.V" +
-      "1alpha1.Room303\312\002\024Api\\V1alpha1\\Room303\342\002" +
-      " Api\\V1alpha1\\Room303\\GPBMetadata\352\002\026Api:" +
-      ":V1alpha1::Room303b\006proto3"
+      "essages\"#\n!ListNewsRoomGlobalMessagesReq" +
+      "uest\"b\n\"ListNewsRoomGlobalMessagesRespon" +
+      "se\022<\n\010messages\030\001 \003(\0132 .api.commons.Globa" +
+      "lSystemMessageR\010messages\"^\n SendNewsRoom" +
+      "GlobalMessageRequest\022:\n\007message\030\001 \001(\0132 ." +
+      "api.commons.GlobalSystemMessageR\007message" +
+      "\"<\n!SendNewsRoomGlobalMessageResponse\022\027\n" +
+      "\007room_id\030\001 \001(\tR\006roomIdB\250\001\n&com.tcn.cloud" +
+      ".api.api.v1alpha1.room303B\014MessageProtoP" +
+      "\001\242\002\003AVR\252\002\024Api.V1alpha1.Room303\312\002\024Api\\V1a" +
+      "lpha1\\Room303\342\002 Api\\V1alpha1\\Room303\\GPB" +
+      "Metadata\352\002\026Api::V1alpha1::Room303b\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -271,6 +299,30 @@ public final class MessageProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_room303_BulkMarkMessageReadResponse_descriptor,
         new java.lang.String[] { "Messages", });
+    internal_static_api_v1alpha1_room303_ListNewsRoomGlobalMessagesRequest_descriptor =
+      getDescriptor().getMessageTypes().get(18);
+    internal_static_api_v1alpha1_room303_ListNewsRoomGlobalMessagesRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_room303_ListNewsRoomGlobalMessagesRequest_descriptor,
+        new java.lang.String[] { });
+    internal_static_api_v1alpha1_room303_ListNewsRoomGlobalMessagesResponse_descriptor =
+      getDescriptor().getMessageTypes().get(19);
+    internal_static_api_v1alpha1_room303_ListNewsRoomGlobalMessagesResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_room303_ListNewsRoomGlobalMessagesResponse_descriptor,
+        new java.lang.String[] { "Messages", });
+    internal_static_api_v1alpha1_room303_SendNewsRoomGlobalMessageRequest_descriptor =
+      getDescriptor().getMessageTypes().get(20);
+    internal_static_api_v1alpha1_room303_SendNewsRoomGlobalMessageRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_room303_SendNewsRoomGlobalMessageRequest_descriptor,
+        new java.lang.String[] { "Message", });
+    internal_static_api_v1alpha1_room303_SendNewsRoomGlobalMessageResponse_descriptor =
+      getDescriptor().getMessageTypes().get(21);
+    internal_static_api_v1alpha1_room303_SendNewsRoomGlobalMessageResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_room303_SendNewsRoomGlobalMessageResponse_descriptor,
+        new java.lang.String[] { "RoomId", });
     com.tcn.cloud.api.api.commons.Room303Proto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
   }

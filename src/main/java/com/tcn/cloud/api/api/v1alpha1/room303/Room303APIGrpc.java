@@ -759,6 +759,68 @@ public final class Room303APIGrpc {
     return getGetGlobalConfigMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.room303.ListNewsRoomGlobalMessagesRequest,
+      com.tcn.cloud.api.api.v1alpha1.room303.ListNewsRoomGlobalMessagesResponse> getListNewsRoomGlobalMessagesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListNewsRoomGlobalMessages",
+      requestType = com.tcn.cloud.api.api.v1alpha1.room303.ListNewsRoomGlobalMessagesRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.room303.ListNewsRoomGlobalMessagesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.room303.ListNewsRoomGlobalMessagesRequest,
+      com.tcn.cloud.api.api.v1alpha1.room303.ListNewsRoomGlobalMessagesResponse> getListNewsRoomGlobalMessagesMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.room303.ListNewsRoomGlobalMessagesRequest, com.tcn.cloud.api.api.v1alpha1.room303.ListNewsRoomGlobalMessagesResponse> getListNewsRoomGlobalMessagesMethod;
+    if ((getListNewsRoomGlobalMessagesMethod = Room303APIGrpc.getListNewsRoomGlobalMessagesMethod) == null) {
+      synchronized (Room303APIGrpc.class) {
+        if ((getListNewsRoomGlobalMessagesMethod = Room303APIGrpc.getListNewsRoomGlobalMessagesMethod) == null) {
+          Room303APIGrpc.getListNewsRoomGlobalMessagesMethod = getListNewsRoomGlobalMessagesMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.room303.ListNewsRoomGlobalMessagesRequest, com.tcn.cloud.api.api.v1alpha1.room303.ListNewsRoomGlobalMessagesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListNewsRoomGlobalMessages"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.room303.ListNewsRoomGlobalMessagesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.room303.ListNewsRoomGlobalMessagesResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new Room303APIMethodDescriptorSupplier("ListNewsRoomGlobalMessages"))
+              .build();
+        }
+      }
+    }
+    return getListNewsRoomGlobalMessagesMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.room303.SendNewsRoomGlobalMessageRequest,
+      com.tcn.cloud.api.api.v1alpha1.room303.SendNewsRoomGlobalMessageResponse> getSendNewsRoomGlobalMessageMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SendNewsRoomGlobalMessage",
+      requestType = com.tcn.cloud.api.api.v1alpha1.room303.SendNewsRoomGlobalMessageRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.room303.SendNewsRoomGlobalMessageResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.room303.SendNewsRoomGlobalMessageRequest,
+      com.tcn.cloud.api.api.v1alpha1.room303.SendNewsRoomGlobalMessageResponse> getSendNewsRoomGlobalMessageMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.room303.SendNewsRoomGlobalMessageRequest, com.tcn.cloud.api.api.v1alpha1.room303.SendNewsRoomGlobalMessageResponse> getSendNewsRoomGlobalMessageMethod;
+    if ((getSendNewsRoomGlobalMessageMethod = Room303APIGrpc.getSendNewsRoomGlobalMessageMethod) == null) {
+      synchronized (Room303APIGrpc.class) {
+        if ((getSendNewsRoomGlobalMessageMethod = Room303APIGrpc.getSendNewsRoomGlobalMessageMethod) == null) {
+          Room303APIGrpc.getSendNewsRoomGlobalMessageMethod = getSendNewsRoomGlobalMessageMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.room303.SendNewsRoomGlobalMessageRequest, com.tcn.cloud.api.api.v1alpha1.room303.SendNewsRoomGlobalMessageResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SendNewsRoomGlobalMessage"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.room303.SendNewsRoomGlobalMessageRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.room303.SendNewsRoomGlobalMessageResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new Room303APIMethodDescriptorSupplier("SendNewsRoomGlobalMessage"))
+              .build();
+        }
+      }
+    }
+    return getSendNewsRoomGlobalMessageMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -1010,6 +1072,26 @@ public final class Room303APIGrpc {
     default void getGlobalConfig(com.tcn.cloud.api.api.v1alpha1.room303.GetGlobalConfigRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.room303.GetGlobalConfigResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetGlobalConfigMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * ListNewsRoomGlobalMessages returns a list of global messages for newsroom
+     * </pre>
+     */
+    default void listNewsRoomGlobalMessages(com.tcn.cloud.api.api.v1alpha1.room303.ListNewsRoomGlobalMessagesRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.room303.ListNewsRoomGlobalMessagesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListNewsRoomGlobalMessagesMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * SendNewsRoomGlobalMessage - send global message for newsroom to be added
+     * </pre>
+     */
+    default void sendNewsRoomGlobalMessage(com.tcn.cloud.api.api.v1alpha1.room303.SendNewsRoomGlobalMessageRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.room303.SendNewsRoomGlobalMessageResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSendNewsRoomGlobalMessageMethod(), responseObserver);
     }
   }
 
@@ -1268,6 +1350,28 @@ public final class Room303APIGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetGlobalConfigMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * ListNewsRoomGlobalMessages returns a list of global messages for newsroom
+     * </pre>
+     */
+    public void listNewsRoomGlobalMessages(com.tcn.cloud.api.api.v1alpha1.room303.ListNewsRoomGlobalMessagesRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.room303.ListNewsRoomGlobalMessagesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListNewsRoomGlobalMessagesMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * SendNewsRoomGlobalMessage - send global message for newsroom to be added
+     * </pre>
+     */
+    public void sendNewsRoomGlobalMessage(com.tcn.cloud.api.api.v1alpha1.room303.SendNewsRoomGlobalMessageRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.room303.SendNewsRoomGlobalMessageResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getSendNewsRoomGlobalMessageMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -1491,6 +1595,26 @@ public final class Room303APIGrpc {
     public com.tcn.cloud.api.api.v1alpha1.room303.GetGlobalConfigResponse getGlobalConfig(com.tcn.cloud.api.api.v1alpha1.room303.GetGlobalConfigRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetGlobalConfigMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * ListNewsRoomGlobalMessages returns a list of global messages for newsroom
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.room303.ListNewsRoomGlobalMessagesResponse listNewsRoomGlobalMessages(com.tcn.cloud.api.api.v1alpha1.room303.ListNewsRoomGlobalMessagesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListNewsRoomGlobalMessagesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * SendNewsRoomGlobalMessage - send global message for newsroom to be added
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.room303.SendNewsRoomGlobalMessageResponse sendNewsRoomGlobalMessage(com.tcn.cloud.api.api.v1alpha1.room303.SendNewsRoomGlobalMessageRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSendNewsRoomGlobalMessageMethod(), getCallOptions(), request);
     }
   }
 
@@ -1719,6 +1843,28 @@ public final class Room303APIGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetGlobalConfigMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * ListNewsRoomGlobalMessages returns a list of global messages for newsroom
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.room303.ListNewsRoomGlobalMessagesResponse> listNewsRoomGlobalMessages(
+        com.tcn.cloud.api.api.v1alpha1.room303.ListNewsRoomGlobalMessagesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListNewsRoomGlobalMessagesMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * SendNewsRoomGlobalMessage - send global message for newsroom to be added
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.room303.SendNewsRoomGlobalMessageResponse> sendNewsRoomGlobalMessage(
+        com.tcn.cloud.api.api.v1alpha1.room303.SendNewsRoomGlobalMessageRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getSendNewsRoomGlobalMessageMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_ADD_ROOM_MEMBER = 0;
@@ -1745,6 +1891,8 @@ public final class Room303APIGrpc {
   private static final int METHODID_UPDATE_ROOM_CONFIG = 21;
   private static final int METHODID_UPDATE_GLOBAL_CONFIG = 22;
   private static final int METHODID_GET_GLOBAL_CONFIG = 23;
+  private static final int METHODID_LIST_NEWS_ROOM_GLOBAL_MESSAGES = 24;
+  private static final int METHODID_SEND_NEWS_ROOM_GLOBAL_MESSAGE = 25;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1858,6 +2006,14 @@ public final class Room303APIGrpc {
         case METHODID_GET_GLOBAL_CONFIG:
           serviceImpl.getGlobalConfig((com.tcn.cloud.api.api.v1alpha1.room303.GetGlobalConfigRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.room303.GetGlobalConfigResponse>) responseObserver);
+          break;
+        case METHODID_LIST_NEWS_ROOM_GLOBAL_MESSAGES:
+          serviceImpl.listNewsRoomGlobalMessages((com.tcn.cloud.api.api.v1alpha1.room303.ListNewsRoomGlobalMessagesRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.room303.ListNewsRoomGlobalMessagesResponse>) responseObserver);
+          break;
+        case METHODID_SEND_NEWS_ROOM_GLOBAL_MESSAGE:
+          serviceImpl.sendNewsRoomGlobalMessage((com.tcn.cloud.api.api.v1alpha1.room303.SendNewsRoomGlobalMessageRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.room303.SendNewsRoomGlobalMessageResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -2045,6 +2201,20 @@ public final class Room303APIGrpc {
               com.tcn.cloud.api.api.v1alpha1.room303.GetGlobalConfigRequest,
               com.tcn.cloud.api.api.v1alpha1.room303.GetGlobalConfigResponse>(
                 service, METHODID_GET_GLOBAL_CONFIG)))
+        .addMethod(
+          getListNewsRoomGlobalMessagesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.room303.ListNewsRoomGlobalMessagesRequest,
+              com.tcn.cloud.api.api.v1alpha1.room303.ListNewsRoomGlobalMessagesResponse>(
+                service, METHODID_LIST_NEWS_ROOM_GLOBAL_MESSAGES)))
+        .addMethod(
+          getSendNewsRoomGlobalMessageMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.room303.SendNewsRoomGlobalMessageRequest,
+              com.tcn.cloud.api.api.v1alpha1.room303.SendNewsRoomGlobalMessageResponse>(
+                service, METHODID_SEND_NEWS_ROOM_GLOBAL_MESSAGE)))
         .build();
   }
 
@@ -2117,6 +2287,8 @@ public final class Room303APIGrpc {
               .addMethod(getUpdateRoomConfigMethod())
               .addMethod(getUpdateGlobalConfigMethod())
               .addMethod(getGetGlobalConfigMethod())
+              .addMethod(getListNewsRoomGlobalMessagesMethod())
+              .addMethod(getSendNewsRoomGlobalMessageMethod())
               .build();
         }
       }

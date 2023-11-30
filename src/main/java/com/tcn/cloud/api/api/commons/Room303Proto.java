@@ -49,6 +49,11 @@ public final class Room303Proto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_commons_RoomConfig_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_GlobalSystemMessage_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_GlobalSystemMessage_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -108,20 +113,29 @@ public final class Room303Proto {
       "ges\022D\n\014send_message\030\005 \001(\0162!.api.commons." +
       "ConfigPermissionEnumR\013sendMessage\022D\n\014arc" +
       "hive_room\030\006 \001(\0162!.api.commons.ConfigPerm" +
-      "issionEnumR\013archiveRoom*h\n\010RoomType\022\024\n\020R" +
-      "OOM_TYPE_DIRECT\020\000\022\023\n\017ROOM_TYPE_MULTI\020\001\022\024" +
-      "\n\020ROOM_TYPE_SYSTEM\020\002\022\033\n\027ROOM_TYPE_GLOBAL" +
-      "_SYSTEM\020\003*b\n\rMessageStatus\022\031\n\025MESSAGE_ST" +
-      "ATUS_ACTIVE\020\000\022\031\n\025MESSAGE_STATUS_EDITED\020\001" +
-      "\022\033\n\027MESSAGE_STATUS_ARCHIVED\020\002*W\n\nRoomSta" +
-      "tus\022\026\n\022ROOM_STATUS_ACTIVE\020\000\022\030\n\024ROOM_STAT" +
-      "US_ARCHIVED\020\001\022\027\n\023ROOM_STATUS_DELETED\020\002*O" +
-      "\n\024ConfigPermissionEnum\022\013\n\007LIMITED\020\000\022\022\n\016R" +
-      "OOM303_MEMBER\020\001\022\026\n\022ROOM303_SUPERVISOR\020\002B" +
-      "z\n\035com.tcn.cloud.api.api.commonsB\014Room30" +
-      "3ProtoP\001\242\002\003ACX\252\002\013Api.Commons\312\002\013Api\\Commo" +
-      "ns\342\002\027Api\\Commons\\GPBMetadata\352\002\014Api::Comm" +
-      "onsb\006proto3"
+      "issionEnumR\013archiveRoom\"\334\002\n\023GlobalSystem" +
+      "Message\022\035\n\nmessage_id\030\001 \001(\tR\tmessageId\022\027" +
+      "\n\007room_id\030\002 \001(\tR\006roomId\0222\n\006status\030\003 \001(\0162" +
+      "\032.api.commons.MessageStatusR\006status\022;\n\013r" +
+      "eceived_at\030\004 \001(\0132\032.google.protobuf.Times" +
+      "tampR\nreceivedAt\0229\n\nupdated_at\030\005 \001(\0132\032.g" +
+      "oogle.protobuf.TimestampR\tupdatedAt\022\030\n\007p" +
+      "ayload\030\006 \001(\tR\007payload\022\026\n\006unread\030\007 \001(\010R\006u" +
+      "nread\022/\n\006config\030\010 \001(\0132\027.api.commons.Room" +
+      "ConfigR\006config*h\n\010RoomType\022\024\n\020ROOM_TYPE_" +
+      "DIRECT\020\000\022\023\n\017ROOM_TYPE_MULTI\020\001\022\024\n\020ROOM_TY" +
+      "PE_SYSTEM\020\002\022\033\n\027ROOM_TYPE_GLOBAL_SYSTEM\020\003" +
+      "*b\n\rMessageStatus\022\031\n\025MESSAGE_STATUS_ACTI" +
+      "VE\020\000\022\031\n\025MESSAGE_STATUS_EDITED\020\001\022\033\n\027MESSA" +
+      "GE_STATUS_ARCHIVED\020\002*W\n\nRoomStatus\022\026\n\022RO" +
+      "OM_STATUS_ACTIVE\020\000\022\030\n\024ROOM_STATUS_ARCHIV" +
+      "ED\020\001\022\027\n\023ROOM_STATUS_DELETED\020\002*O\n\024ConfigP" +
+      "ermissionEnum\022\013\n\007LIMITED\020\000\022\022\n\016ROOM303_ME" +
+      "MBER\020\001\022\026\n\022ROOM303_SUPERVISOR\020\002Bz\n\035com.tc" +
+      "n.cloud.api.api.commonsB\014Room303ProtoP\001\242" +
+      "\002\003ACX\252\002\013Api.Commons\312\002\013Api\\Commons\342\002\027Api\\" +
+      "Commons\\GPBMetadata\352\002\014Api::Commonsb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -170,6 +184,12 @@ public final class Room303Proto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_RoomConfig_descriptor,
         new java.lang.String[] { "AddUser", "RemoveUser", "PromoteToAdmin", "ReadMessages", "SendMessage", "ArchiveRoom", });
+    internal_static_api_commons_GlobalSystemMessage_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_api_commons_GlobalSystemMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_GlobalSystemMessage_descriptor,
+        new java.lang.String[] { "MessageId", "RoomId", "Status", "ReceivedAt", "UpdatedAt", "Payload", "Unread", "Config", });
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 
