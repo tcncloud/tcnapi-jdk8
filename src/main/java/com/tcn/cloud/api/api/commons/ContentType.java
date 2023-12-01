@@ -28,6 +28,10 @@ public enum ContentType
    * <code>CT_ACCOUNT_NUMBER = 4;</code>
    */
   CT_ACCOUNT_NUMBER(4),
+  /**
+   * <code>CT_WHATSAPP = 5;</code>
+   */
+  CT_WHATSAPP(5),
   UNRECOGNIZED(-1),
   ;
 
@@ -51,6 +55,10 @@ public enum ContentType
    * <code>CT_ACCOUNT_NUMBER = 4;</code>
    */
   public static final int CT_ACCOUNT_NUMBER_VALUE = 4;
+  /**
+   * <code>CT_WHATSAPP = 5;</code>
+   */
+  public static final int CT_WHATSAPP_VALUE = 5;
 
 
   public final int getNumber() {
@@ -82,6 +90,7 @@ public enum ContentType
       case 2: return CT_SMS;
       case 3: return CT_OTHER;
       case 4: return CT_ACCOUNT_NUMBER;
+      case 5: return CT_WHATSAPP;
       default: return null;
     }
   }

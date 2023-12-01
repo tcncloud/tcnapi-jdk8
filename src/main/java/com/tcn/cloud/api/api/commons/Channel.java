@@ -20,6 +20,10 @@ public enum Channel
    * <code>CHANNEL_SMS = 2;</code>
    */
   CHANNEL_SMS(2),
+  /**
+   * <code>CHANNEL_WHATSAPP = 3;</code>
+   */
+  CHANNEL_WHATSAPP(3),
   UNRECOGNIZED(-1),
   ;
 
@@ -35,6 +39,10 @@ public enum Channel
    * <code>CHANNEL_SMS = 2;</code>
    */
   public static final int CHANNEL_SMS_VALUE = 2;
+  /**
+   * <code>CHANNEL_WHATSAPP = 3;</code>
+   */
+  public static final int CHANNEL_WHATSAPP_VALUE = 3;
 
 
   public final int getNumber() {
@@ -64,6 +72,7 @@ public enum Channel
       case 0: return CHANNEL_CALL;
       case 1: return CHANNEL_EMAIL;
       case 2: return CHANNEL_SMS;
+      case 3: return CHANNEL_WHATSAPP;
       default: return null;
     }
   }
