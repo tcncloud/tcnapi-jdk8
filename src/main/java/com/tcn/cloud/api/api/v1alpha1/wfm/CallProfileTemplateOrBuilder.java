@@ -248,4 +248,24 @@ public interface CallProfileTemplateOrBuilder extends
    * @return The defaultToFixedAveragesForecast.
    */
   boolean getDefaultToFixedAveragesForecast();
+
+  /**
+   * <pre>
+   * Time zone in IANA format that the call profile template is in.
+   * </pre>
+   *
+   * <code>string time_zone = 14 [json_name = "timeZone"];</code>
+   * @return The timeZone.
+   */
+  java.lang.String getTimeZone();
+  /**
+   * <pre>
+   * Time zone in IANA format that the call profile template is in.
+   * </pre>
+   *
+   * <code>string time_zone = 14 [json_name = "timeZone"];</code>
+   * @return The bytes for timeZone.
+   */
+  com.google.protobuf.ByteString
+      getTimeZoneBytes();
 }
