@@ -585,11 +585,13 @@ private static final long serialVersionUID = 0L;
    * google xoauth2 refresh token (if using google xoauth2)
    * </pre>
    *
-   * <code>.google.protobuf.StringValue google_xoauth2_refresh_token = 18 [json_name = "googleXoauth2RefreshToken"];</code>
+   * <code>.google.protobuf.StringValue google_xoauth2_refresh_token = 18 [json_name = "googleXoauth2RefreshToken", deprecated = true];</code>
+   * @deprecated api.commons.ConnectedInbox.google_xoauth2_refresh_token is deprecated.
+   *     See api/commons/omnichannel.proto;l=1024
    * @return Whether the googleXoauth2RefreshToken field is set.
    */
   @java.lang.Override
-  public boolean hasGoogleXoauth2RefreshToken() {
+  @java.lang.Deprecated public boolean hasGoogleXoauth2RefreshToken() {
     return googleXoauth2RefreshToken_ != null;
   }
   /**
@@ -597,11 +599,13 @@ private static final long serialVersionUID = 0L;
    * google xoauth2 refresh token (if using google xoauth2)
    * </pre>
    *
-   * <code>.google.protobuf.StringValue google_xoauth2_refresh_token = 18 [json_name = "googleXoauth2RefreshToken"];</code>
+   * <code>.google.protobuf.StringValue google_xoauth2_refresh_token = 18 [json_name = "googleXoauth2RefreshToken", deprecated = true];</code>
+   * @deprecated api.commons.ConnectedInbox.google_xoauth2_refresh_token is deprecated.
+   *     See api/commons/omnichannel.proto;l=1024
    * @return The googleXoauth2RefreshToken.
    */
   @java.lang.Override
-  public com.google.protobuf.StringValue getGoogleXoauth2RefreshToken() {
+  @java.lang.Deprecated public com.google.protobuf.StringValue getGoogleXoauth2RefreshToken() {
     return googleXoauth2RefreshToken_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : googleXoauth2RefreshToken_;
   }
   /**
@@ -609,10 +613,10 @@ private static final long serialVersionUID = 0L;
    * google xoauth2 refresh token (if using google xoauth2)
    * </pre>
    *
-   * <code>.google.protobuf.StringValue google_xoauth2_refresh_token = 18 [json_name = "googleXoauth2RefreshToken"];</code>
+   * <code>.google.protobuf.StringValue google_xoauth2_refresh_token = 18 [json_name = "googleXoauth2RefreshToken", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.google.protobuf.StringValueOrBuilder getGoogleXoauth2RefreshTokenOrBuilder() {
+  @java.lang.Deprecated public com.google.protobuf.StringValueOrBuilder getGoogleXoauth2RefreshTokenOrBuilder() {
     return googleXoauth2RefreshToken_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : googleXoauth2RefreshToken_;
   }
 
@@ -623,11 +627,13 @@ private static final long serialVersionUID = 0L;
    * google xoauth2 access token (if using google xoauth2)
    * </pre>
    *
-   * <code>.google.protobuf.StringValue google_xoauth2_access_token = 19 [json_name = "googleXoauth2AccessToken"];</code>
+   * <code>.google.protobuf.StringValue google_xoauth2_access_token = 19 [json_name = "googleXoauth2AccessToken", deprecated = true];</code>
+   * @deprecated api.commons.ConnectedInbox.google_xoauth2_access_token is deprecated.
+   *     See api/commons/omnichannel.proto;l=1026
    * @return Whether the googleXoauth2AccessToken field is set.
    */
   @java.lang.Override
-  public boolean hasGoogleXoauth2AccessToken() {
+  @java.lang.Deprecated public boolean hasGoogleXoauth2AccessToken() {
     return googleXoauth2AccessToken_ != null;
   }
   /**
@@ -635,11 +641,13 @@ private static final long serialVersionUID = 0L;
    * google xoauth2 access token (if using google xoauth2)
    * </pre>
    *
-   * <code>.google.protobuf.StringValue google_xoauth2_access_token = 19 [json_name = "googleXoauth2AccessToken"];</code>
+   * <code>.google.protobuf.StringValue google_xoauth2_access_token = 19 [json_name = "googleXoauth2AccessToken", deprecated = true];</code>
+   * @deprecated api.commons.ConnectedInbox.google_xoauth2_access_token is deprecated.
+   *     See api/commons/omnichannel.proto;l=1026
    * @return The googleXoauth2AccessToken.
    */
   @java.lang.Override
-  public com.google.protobuf.StringValue getGoogleXoauth2AccessToken() {
+  @java.lang.Deprecated public com.google.protobuf.StringValue getGoogleXoauth2AccessToken() {
     return googleXoauth2AccessToken_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : googleXoauth2AccessToken_;
   }
   /**
@@ -647,10 +655,10 @@ private static final long serialVersionUID = 0L;
    * google xoauth2 access token (if using google xoauth2)
    * </pre>
    *
-   * <code>.google.protobuf.StringValue google_xoauth2_access_token = 19 [json_name = "googleXoauth2AccessToken"];</code>
+   * <code>.google.protobuf.StringValue google_xoauth2_access_token = 19 [json_name = "googleXoauth2AccessToken", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.google.protobuf.StringValueOrBuilder getGoogleXoauth2AccessTokenOrBuilder() {
+  @java.lang.Deprecated public com.google.protobuf.StringValueOrBuilder getGoogleXoauth2AccessTokenOrBuilder() {
     return googleXoauth2AccessToken_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : googleXoauth2AccessToken_;
   }
 
@@ -661,11 +669,13 @@ private static final long serialVersionUID = 0L;
    * time the google xoauth2 access token expires (if using google xoauth2)
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp google_xoauth2_access_token_expiration = 20 [json_name = "googleXoauth2AccessTokenExpiration"];</code>
+   * <code>.google.protobuf.Timestamp google_xoauth2_access_token_expiration = 20 [json_name = "googleXoauth2AccessTokenExpiration", deprecated = true];</code>
+   * @deprecated api.commons.ConnectedInbox.google_xoauth2_access_token_expiration is deprecated.
+   *     See api/commons/omnichannel.proto;l=1028
    * @return Whether the googleXoauth2AccessTokenExpiration field is set.
    */
   @java.lang.Override
-  public boolean hasGoogleXoauth2AccessTokenExpiration() {
+  @java.lang.Deprecated public boolean hasGoogleXoauth2AccessTokenExpiration() {
     return googleXoauth2AccessTokenExpiration_ != null;
   }
   /**
@@ -673,11 +683,13 @@ private static final long serialVersionUID = 0L;
    * time the google xoauth2 access token expires (if using google xoauth2)
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp google_xoauth2_access_token_expiration = 20 [json_name = "googleXoauth2AccessTokenExpiration"];</code>
+   * <code>.google.protobuf.Timestamp google_xoauth2_access_token_expiration = 20 [json_name = "googleXoauth2AccessTokenExpiration", deprecated = true];</code>
+   * @deprecated api.commons.ConnectedInbox.google_xoauth2_access_token_expiration is deprecated.
+   *     See api/commons/omnichannel.proto;l=1028
    * @return The googleXoauth2AccessTokenExpiration.
    */
   @java.lang.Override
-  public com.google.protobuf.Timestamp getGoogleXoauth2AccessTokenExpiration() {
+  @java.lang.Deprecated public com.google.protobuf.Timestamp getGoogleXoauth2AccessTokenExpiration() {
     return googleXoauth2AccessTokenExpiration_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : googleXoauth2AccessTokenExpiration_;
   }
   /**
@@ -685,10 +697,10 @@ private static final long serialVersionUID = 0L;
    * time the google xoauth2 access token expires (if using google xoauth2)
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp google_xoauth2_access_token_expiration = 20 [json_name = "googleXoauth2AccessTokenExpiration"];</code>
+   * <code>.google.protobuf.Timestamp google_xoauth2_access_token_expiration = 20 [json_name = "googleXoauth2AccessTokenExpiration", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.google.protobuf.TimestampOrBuilder getGoogleXoauth2AccessTokenExpirationOrBuilder() {
+  @java.lang.Deprecated public com.google.protobuf.TimestampOrBuilder getGoogleXoauth2AccessTokenExpirationOrBuilder() {
     return googleXoauth2AccessTokenExpiration_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : googleXoauth2AccessTokenExpiration_;
   }
 
@@ -716,6 +728,44 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override public com.tcn.cloud.api.api.commons.ConnectedInboxAuthenticationType getAuthenticationType() {
     com.tcn.cloud.api.api.commons.ConnectedInboxAuthenticationType result = com.tcn.cloud.api.api.commons.ConnectedInboxAuthenticationType.forNumber(authenticationType_);
     return result == null ? com.tcn.cloud.api.api.commons.ConnectedInboxAuthenticationType.UNRECOGNIZED : result;
+  }
+
+  public static final int OAUTH_REFERENCE_ID_FIELD_NUMBER = 22;
+  private com.tcn.cloud.api.api.commons.ConnectedInboxOAuthConfig oauthReferenceId_;
+  /**
+   * <pre>
+   * config for the oauth provider
+   * </pre>
+   *
+   * <code>.api.commons.ConnectedInboxOAuthConfig oauth_reference_id = 22 [json_name = "oauthReferenceId"];</code>
+   * @return Whether the oauthReferenceId field is set.
+   */
+  @java.lang.Override
+  public boolean hasOauthReferenceId() {
+    return oauthReferenceId_ != null;
+  }
+  /**
+   * <pre>
+   * config for the oauth provider
+   * </pre>
+   *
+   * <code>.api.commons.ConnectedInboxOAuthConfig oauth_reference_id = 22 [json_name = "oauthReferenceId"];</code>
+   * @return The oauthReferenceId.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.ConnectedInboxOAuthConfig getOauthReferenceId() {
+    return oauthReferenceId_ == null ? com.tcn.cloud.api.api.commons.ConnectedInboxOAuthConfig.getDefaultInstance() : oauthReferenceId_;
+  }
+  /**
+   * <pre>
+   * config for the oauth provider
+   * </pre>
+   *
+   * <code>.api.commons.ConnectedInboxOAuthConfig oauth_reference_id = 22 [json_name = "oauthReferenceId"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.ConnectedInboxOAuthConfigOrBuilder getOauthReferenceIdOrBuilder() {
+    return oauthReferenceId_ == null ? com.tcn.cloud.api.api.commons.ConnectedInboxOAuthConfig.getDefaultInstance() : oauthReferenceId_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -794,6 +844,9 @@ private static final long serialVersionUID = 0L;
     }
     if (authenticationType_ != com.tcn.cloud.api.api.commons.ConnectedInboxAuthenticationType.CONNECTED_INBOX_AUTHENTICATION_TYPE_PASSWORD.getNumber()) {
       output.writeEnum(21, authenticationType_);
+    }
+    if (oauthReferenceId_ != null) {
+      output.writeMessage(22, getOauthReferenceId());
     }
     getUnknownFields().writeTo(output);
   }
@@ -883,6 +936,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(21, authenticationType_);
     }
+    if (oauthReferenceId_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(22, getOauthReferenceId());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -963,6 +1020,11 @@ private static final long serialVersionUID = 0L;
           .equals(other.getGoogleXoauth2AccessTokenExpiration())) return false;
     }
     if (authenticationType_ != other.authenticationType_) return false;
+    if (hasOauthReferenceId() != other.hasOauthReferenceId()) return false;
+    if (hasOauthReferenceId()) {
+      if (!getOauthReferenceId()
+          .equals(other.getOauthReferenceId())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1036,6 +1098,10 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + AUTHENTICATION_TYPE_FIELD_NUMBER;
     hash = (53 * hash) + authenticationType_;
+    if (hasOauthReferenceId()) {
+      hash = (37 * hash) + OAUTH_REFERENCE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getOauthReferenceId().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -1224,6 +1290,11 @@ private static final long serialVersionUID = 0L;
         googleXoauth2AccessTokenExpirationBuilder_ = null;
       }
       authenticationType_ = 0;
+      oauthReferenceId_ = null;
+      if (oauthReferenceIdBuilder_ != null) {
+        oauthReferenceIdBuilder_.dispose();
+        oauthReferenceIdBuilder_ = null;
+      }
       return this;
     }
 
@@ -1335,6 +1406,11 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00100000) != 0)) {
         result.authenticationType_ = authenticationType_;
+      }
+      if (((from_bitField0_ & 0x00200000) != 0)) {
+        result.oauthReferenceId_ = oauthReferenceIdBuilder_ == null
+            ? oauthReferenceId_
+            : oauthReferenceIdBuilder_.build();
       }
     }
 
@@ -1454,6 +1530,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.authenticationType_ != 0) {
         setAuthenticationTypeValue(other.getAuthenticationTypeValue());
+      }
+      if (other.hasOauthReferenceId()) {
+        mergeOauthReferenceId(other.getOauthReferenceId());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -1602,6 +1681,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00100000;
               break;
             } // case 168
+            case 178: {
+              input.readMessage(
+                  getOauthReferenceIdFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00200000;
+              break;
+            } // case 178
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -3170,10 +3256,12 @@ private static final long serialVersionUID = 0L;
      * google xoauth2 refresh token (if using google xoauth2)
      * </pre>
      *
-     * <code>.google.protobuf.StringValue google_xoauth2_refresh_token = 18 [json_name = "googleXoauth2RefreshToken"];</code>
+     * <code>.google.protobuf.StringValue google_xoauth2_refresh_token = 18 [json_name = "googleXoauth2RefreshToken", deprecated = true];</code>
+     * @deprecated api.commons.ConnectedInbox.google_xoauth2_refresh_token is deprecated.
+     *     See api/commons/omnichannel.proto;l=1024
      * @return Whether the googleXoauth2RefreshToken field is set.
      */
-    public boolean hasGoogleXoauth2RefreshToken() {
+    @java.lang.Deprecated public boolean hasGoogleXoauth2RefreshToken() {
       return ((bitField0_ & 0x00020000) != 0);
     }
     /**
@@ -3181,10 +3269,12 @@ private static final long serialVersionUID = 0L;
      * google xoauth2 refresh token (if using google xoauth2)
      * </pre>
      *
-     * <code>.google.protobuf.StringValue google_xoauth2_refresh_token = 18 [json_name = "googleXoauth2RefreshToken"];</code>
+     * <code>.google.protobuf.StringValue google_xoauth2_refresh_token = 18 [json_name = "googleXoauth2RefreshToken", deprecated = true];</code>
+     * @deprecated api.commons.ConnectedInbox.google_xoauth2_refresh_token is deprecated.
+     *     See api/commons/omnichannel.proto;l=1024
      * @return The googleXoauth2RefreshToken.
      */
-    public com.google.protobuf.StringValue getGoogleXoauth2RefreshToken() {
+    @java.lang.Deprecated public com.google.protobuf.StringValue getGoogleXoauth2RefreshToken() {
       if (googleXoauth2RefreshTokenBuilder_ == null) {
         return googleXoauth2RefreshToken_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : googleXoauth2RefreshToken_;
       } else {
@@ -3196,9 +3286,9 @@ private static final long serialVersionUID = 0L;
      * google xoauth2 refresh token (if using google xoauth2)
      * </pre>
      *
-     * <code>.google.protobuf.StringValue google_xoauth2_refresh_token = 18 [json_name = "googleXoauth2RefreshToken"];</code>
+     * <code>.google.protobuf.StringValue google_xoauth2_refresh_token = 18 [json_name = "googleXoauth2RefreshToken", deprecated = true];</code>
      */
-    public Builder setGoogleXoauth2RefreshToken(com.google.protobuf.StringValue value) {
+    @java.lang.Deprecated public Builder setGoogleXoauth2RefreshToken(com.google.protobuf.StringValue value) {
       if (googleXoauth2RefreshTokenBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -3216,9 +3306,9 @@ private static final long serialVersionUID = 0L;
      * google xoauth2 refresh token (if using google xoauth2)
      * </pre>
      *
-     * <code>.google.protobuf.StringValue google_xoauth2_refresh_token = 18 [json_name = "googleXoauth2RefreshToken"];</code>
+     * <code>.google.protobuf.StringValue google_xoauth2_refresh_token = 18 [json_name = "googleXoauth2RefreshToken", deprecated = true];</code>
      */
-    public Builder setGoogleXoauth2RefreshToken(
+    @java.lang.Deprecated public Builder setGoogleXoauth2RefreshToken(
         com.google.protobuf.StringValue.Builder builderForValue) {
       if (googleXoauth2RefreshTokenBuilder_ == null) {
         googleXoauth2RefreshToken_ = builderForValue.build();
@@ -3234,9 +3324,9 @@ private static final long serialVersionUID = 0L;
      * google xoauth2 refresh token (if using google xoauth2)
      * </pre>
      *
-     * <code>.google.protobuf.StringValue google_xoauth2_refresh_token = 18 [json_name = "googleXoauth2RefreshToken"];</code>
+     * <code>.google.protobuf.StringValue google_xoauth2_refresh_token = 18 [json_name = "googleXoauth2RefreshToken", deprecated = true];</code>
      */
-    public Builder mergeGoogleXoauth2RefreshToken(com.google.protobuf.StringValue value) {
+    @java.lang.Deprecated public Builder mergeGoogleXoauth2RefreshToken(com.google.protobuf.StringValue value) {
       if (googleXoauth2RefreshTokenBuilder_ == null) {
         if (((bitField0_ & 0x00020000) != 0) &&
           googleXoauth2RefreshToken_ != null &&
@@ -3257,9 +3347,9 @@ private static final long serialVersionUID = 0L;
      * google xoauth2 refresh token (if using google xoauth2)
      * </pre>
      *
-     * <code>.google.protobuf.StringValue google_xoauth2_refresh_token = 18 [json_name = "googleXoauth2RefreshToken"];</code>
+     * <code>.google.protobuf.StringValue google_xoauth2_refresh_token = 18 [json_name = "googleXoauth2RefreshToken", deprecated = true];</code>
      */
-    public Builder clearGoogleXoauth2RefreshToken() {
+    @java.lang.Deprecated public Builder clearGoogleXoauth2RefreshToken() {
       bitField0_ = (bitField0_ & ~0x00020000);
       googleXoauth2RefreshToken_ = null;
       if (googleXoauth2RefreshTokenBuilder_ != null) {
@@ -3274,9 +3364,9 @@ private static final long serialVersionUID = 0L;
      * google xoauth2 refresh token (if using google xoauth2)
      * </pre>
      *
-     * <code>.google.protobuf.StringValue google_xoauth2_refresh_token = 18 [json_name = "googleXoauth2RefreshToken"];</code>
+     * <code>.google.protobuf.StringValue google_xoauth2_refresh_token = 18 [json_name = "googleXoauth2RefreshToken", deprecated = true];</code>
      */
-    public com.google.protobuf.StringValue.Builder getGoogleXoauth2RefreshTokenBuilder() {
+    @java.lang.Deprecated public com.google.protobuf.StringValue.Builder getGoogleXoauth2RefreshTokenBuilder() {
       bitField0_ |= 0x00020000;
       onChanged();
       return getGoogleXoauth2RefreshTokenFieldBuilder().getBuilder();
@@ -3286,9 +3376,9 @@ private static final long serialVersionUID = 0L;
      * google xoauth2 refresh token (if using google xoauth2)
      * </pre>
      *
-     * <code>.google.protobuf.StringValue google_xoauth2_refresh_token = 18 [json_name = "googleXoauth2RefreshToken"];</code>
+     * <code>.google.protobuf.StringValue google_xoauth2_refresh_token = 18 [json_name = "googleXoauth2RefreshToken", deprecated = true];</code>
      */
-    public com.google.protobuf.StringValueOrBuilder getGoogleXoauth2RefreshTokenOrBuilder() {
+    @java.lang.Deprecated public com.google.protobuf.StringValueOrBuilder getGoogleXoauth2RefreshTokenOrBuilder() {
       if (googleXoauth2RefreshTokenBuilder_ != null) {
         return googleXoauth2RefreshTokenBuilder_.getMessageOrBuilder();
       } else {
@@ -3301,7 +3391,7 @@ private static final long serialVersionUID = 0L;
      * google xoauth2 refresh token (if using google xoauth2)
      * </pre>
      *
-     * <code>.google.protobuf.StringValue google_xoauth2_refresh_token = 18 [json_name = "googleXoauth2RefreshToken"];</code>
+     * <code>.google.protobuf.StringValue google_xoauth2_refresh_token = 18 [json_name = "googleXoauth2RefreshToken", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -3325,10 +3415,12 @@ private static final long serialVersionUID = 0L;
      * google xoauth2 access token (if using google xoauth2)
      * </pre>
      *
-     * <code>.google.protobuf.StringValue google_xoauth2_access_token = 19 [json_name = "googleXoauth2AccessToken"];</code>
+     * <code>.google.protobuf.StringValue google_xoauth2_access_token = 19 [json_name = "googleXoauth2AccessToken", deprecated = true];</code>
+     * @deprecated api.commons.ConnectedInbox.google_xoauth2_access_token is deprecated.
+     *     See api/commons/omnichannel.proto;l=1026
      * @return Whether the googleXoauth2AccessToken field is set.
      */
-    public boolean hasGoogleXoauth2AccessToken() {
+    @java.lang.Deprecated public boolean hasGoogleXoauth2AccessToken() {
       return ((bitField0_ & 0x00040000) != 0);
     }
     /**
@@ -3336,10 +3428,12 @@ private static final long serialVersionUID = 0L;
      * google xoauth2 access token (if using google xoauth2)
      * </pre>
      *
-     * <code>.google.protobuf.StringValue google_xoauth2_access_token = 19 [json_name = "googleXoauth2AccessToken"];</code>
+     * <code>.google.protobuf.StringValue google_xoauth2_access_token = 19 [json_name = "googleXoauth2AccessToken", deprecated = true];</code>
+     * @deprecated api.commons.ConnectedInbox.google_xoauth2_access_token is deprecated.
+     *     See api/commons/omnichannel.proto;l=1026
      * @return The googleXoauth2AccessToken.
      */
-    public com.google.protobuf.StringValue getGoogleXoauth2AccessToken() {
+    @java.lang.Deprecated public com.google.protobuf.StringValue getGoogleXoauth2AccessToken() {
       if (googleXoauth2AccessTokenBuilder_ == null) {
         return googleXoauth2AccessToken_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : googleXoauth2AccessToken_;
       } else {
@@ -3351,9 +3445,9 @@ private static final long serialVersionUID = 0L;
      * google xoauth2 access token (if using google xoauth2)
      * </pre>
      *
-     * <code>.google.protobuf.StringValue google_xoauth2_access_token = 19 [json_name = "googleXoauth2AccessToken"];</code>
+     * <code>.google.protobuf.StringValue google_xoauth2_access_token = 19 [json_name = "googleXoauth2AccessToken", deprecated = true];</code>
      */
-    public Builder setGoogleXoauth2AccessToken(com.google.protobuf.StringValue value) {
+    @java.lang.Deprecated public Builder setGoogleXoauth2AccessToken(com.google.protobuf.StringValue value) {
       if (googleXoauth2AccessTokenBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -3371,9 +3465,9 @@ private static final long serialVersionUID = 0L;
      * google xoauth2 access token (if using google xoauth2)
      * </pre>
      *
-     * <code>.google.protobuf.StringValue google_xoauth2_access_token = 19 [json_name = "googleXoauth2AccessToken"];</code>
+     * <code>.google.protobuf.StringValue google_xoauth2_access_token = 19 [json_name = "googleXoauth2AccessToken", deprecated = true];</code>
      */
-    public Builder setGoogleXoauth2AccessToken(
+    @java.lang.Deprecated public Builder setGoogleXoauth2AccessToken(
         com.google.protobuf.StringValue.Builder builderForValue) {
       if (googleXoauth2AccessTokenBuilder_ == null) {
         googleXoauth2AccessToken_ = builderForValue.build();
@@ -3389,9 +3483,9 @@ private static final long serialVersionUID = 0L;
      * google xoauth2 access token (if using google xoauth2)
      * </pre>
      *
-     * <code>.google.protobuf.StringValue google_xoauth2_access_token = 19 [json_name = "googleXoauth2AccessToken"];</code>
+     * <code>.google.protobuf.StringValue google_xoauth2_access_token = 19 [json_name = "googleXoauth2AccessToken", deprecated = true];</code>
      */
-    public Builder mergeGoogleXoauth2AccessToken(com.google.protobuf.StringValue value) {
+    @java.lang.Deprecated public Builder mergeGoogleXoauth2AccessToken(com.google.protobuf.StringValue value) {
       if (googleXoauth2AccessTokenBuilder_ == null) {
         if (((bitField0_ & 0x00040000) != 0) &&
           googleXoauth2AccessToken_ != null &&
@@ -3412,9 +3506,9 @@ private static final long serialVersionUID = 0L;
      * google xoauth2 access token (if using google xoauth2)
      * </pre>
      *
-     * <code>.google.protobuf.StringValue google_xoauth2_access_token = 19 [json_name = "googleXoauth2AccessToken"];</code>
+     * <code>.google.protobuf.StringValue google_xoauth2_access_token = 19 [json_name = "googleXoauth2AccessToken", deprecated = true];</code>
      */
-    public Builder clearGoogleXoauth2AccessToken() {
+    @java.lang.Deprecated public Builder clearGoogleXoauth2AccessToken() {
       bitField0_ = (bitField0_ & ~0x00040000);
       googleXoauth2AccessToken_ = null;
       if (googleXoauth2AccessTokenBuilder_ != null) {
@@ -3429,9 +3523,9 @@ private static final long serialVersionUID = 0L;
      * google xoauth2 access token (if using google xoauth2)
      * </pre>
      *
-     * <code>.google.protobuf.StringValue google_xoauth2_access_token = 19 [json_name = "googleXoauth2AccessToken"];</code>
+     * <code>.google.protobuf.StringValue google_xoauth2_access_token = 19 [json_name = "googleXoauth2AccessToken", deprecated = true];</code>
      */
-    public com.google.protobuf.StringValue.Builder getGoogleXoauth2AccessTokenBuilder() {
+    @java.lang.Deprecated public com.google.protobuf.StringValue.Builder getGoogleXoauth2AccessTokenBuilder() {
       bitField0_ |= 0x00040000;
       onChanged();
       return getGoogleXoauth2AccessTokenFieldBuilder().getBuilder();
@@ -3441,9 +3535,9 @@ private static final long serialVersionUID = 0L;
      * google xoauth2 access token (if using google xoauth2)
      * </pre>
      *
-     * <code>.google.protobuf.StringValue google_xoauth2_access_token = 19 [json_name = "googleXoauth2AccessToken"];</code>
+     * <code>.google.protobuf.StringValue google_xoauth2_access_token = 19 [json_name = "googleXoauth2AccessToken", deprecated = true];</code>
      */
-    public com.google.protobuf.StringValueOrBuilder getGoogleXoauth2AccessTokenOrBuilder() {
+    @java.lang.Deprecated public com.google.protobuf.StringValueOrBuilder getGoogleXoauth2AccessTokenOrBuilder() {
       if (googleXoauth2AccessTokenBuilder_ != null) {
         return googleXoauth2AccessTokenBuilder_.getMessageOrBuilder();
       } else {
@@ -3456,7 +3550,7 @@ private static final long serialVersionUID = 0L;
      * google xoauth2 access token (if using google xoauth2)
      * </pre>
      *
-     * <code>.google.protobuf.StringValue google_xoauth2_access_token = 19 [json_name = "googleXoauth2AccessToken"];</code>
+     * <code>.google.protobuf.StringValue google_xoauth2_access_token = 19 [json_name = "googleXoauth2AccessToken", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -3480,10 +3574,12 @@ private static final long serialVersionUID = 0L;
      * time the google xoauth2 access token expires (if using google xoauth2)
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp google_xoauth2_access_token_expiration = 20 [json_name = "googleXoauth2AccessTokenExpiration"];</code>
+     * <code>.google.protobuf.Timestamp google_xoauth2_access_token_expiration = 20 [json_name = "googleXoauth2AccessTokenExpiration", deprecated = true];</code>
+     * @deprecated api.commons.ConnectedInbox.google_xoauth2_access_token_expiration is deprecated.
+     *     See api/commons/omnichannel.proto;l=1028
      * @return Whether the googleXoauth2AccessTokenExpiration field is set.
      */
-    public boolean hasGoogleXoauth2AccessTokenExpiration() {
+    @java.lang.Deprecated public boolean hasGoogleXoauth2AccessTokenExpiration() {
       return ((bitField0_ & 0x00080000) != 0);
     }
     /**
@@ -3491,10 +3587,12 @@ private static final long serialVersionUID = 0L;
      * time the google xoauth2 access token expires (if using google xoauth2)
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp google_xoauth2_access_token_expiration = 20 [json_name = "googleXoauth2AccessTokenExpiration"];</code>
+     * <code>.google.protobuf.Timestamp google_xoauth2_access_token_expiration = 20 [json_name = "googleXoauth2AccessTokenExpiration", deprecated = true];</code>
+     * @deprecated api.commons.ConnectedInbox.google_xoauth2_access_token_expiration is deprecated.
+     *     See api/commons/omnichannel.proto;l=1028
      * @return The googleXoauth2AccessTokenExpiration.
      */
-    public com.google.protobuf.Timestamp getGoogleXoauth2AccessTokenExpiration() {
+    @java.lang.Deprecated public com.google.protobuf.Timestamp getGoogleXoauth2AccessTokenExpiration() {
       if (googleXoauth2AccessTokenExpirationBuilder_ == null) {
         return googleXoauth2AccessTokenExpiration_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : googleXoauth2AccessTokenExpiration_;
       } else {
@@ -3506,9 +3604,9 @@ private static final long serialVersionUID = 0L;
      * time the google xoauth2 access token expires (if using google xoauth2)
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp google_xoauth2_access_token_expiration = 20 [json_name = "googleXoauth2AccessTokenExpiration"];</code>
+     * <code>.google.protobuf.Timestamp google_xoauth2_access_token_expiration = 20 [json_name = "googleXoauth2AccessTokenExpiration", deprecated = true];</code>
      */
-    public Builder setGoogleXoauth2AccessTokenExpiration(com.google.protobuf.Timestamp value) {
+    @java.lang.Deprecated public Builder setGoogleXoauth2AccessTokenExpiration(com.google.protobuf.Timestamp value) {
       if (googleXoauth2AccessTokenExpirationBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -3526,9 +3624,9 @@ private static final long serialVersionUID = 0L;
      * time the google xoauth2 access token expires (if using google xoauth2)
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp google_xoauth2_access_token_expiration = 20 [json_name = "googleXoauth2AccessTokenExpiration"];</code>
+     * <code>.google.protobuf.Timestamp google_xoauth2_access_token_expiration = 20 [json_name = "googleXoauth2AccessTokenExpiration", deprecated = true];</code>
      */
-    public Builder setGoogleXoauth2AccessTokenExpiration(
+    @java.lang.Deprecated public Builder setGoogleXoauth2AccessTokenExpiration(
         com.google.protobuf.Timestamp.Builder builderForValue) {
       if (googleXoauth2AccessTokenExpirationBuilder_ == null) {
         googleXoauth2AccessTokenExpiration_ = builderForValue.build();
@@ -3544,9 +3642,9 @@ private static final long serialVersionUID = 0L;
      * time the google xoauth2 access token expires (if using google xoauth2)
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp google_xoauth2_access_token_expiration = 20 [json_name = "googleXoauth2AccessTokenExpiration"];</code>
+     * <code>.google.protobuf.Timestamp google_xoauth2_access_token_expiration = 20 [json_name = "googleXoauth2AccessTokenExpiration", deprecated = true];</code>
      */
-    public Builder mergeGoogleXoauth2AccessTokenExpiration(com.google.protobuf.Timestamp value) {
+    @java.lang.Deprecated public Builder mergeGoogleXoauth2AccessTokenExpiration(com.google.protobuf.Timestamp value) {
       if (googleXoauth2AccessTokenExpirationBuilder_ == null) {
         if (((bitField0_ & 0x00080000) != 0) &&
           googleXoauth2AccessTokenExpiration_ != null &&
@@ -3567,9 +3665,9 @@ private static final long serialVersionUID = 0L;
      * time the google xoauth2 access token expires (if using google xoauth2)
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp google_xoauth2_access_token_expiration = 20 [json_name = "googleXoauth2AccessTokenExpiration"];</code>
+     * <code>.google.protobuf.Timestamp google_xoauth2_access_token_expiration = 20 [json_name = "googleXoauth2AccessTokenExpiration", deprecated = true];</code>
      */
-    public Builder clearGoogleXoauth2AccessTokenExpiration() {
+    @java.lang.Deprecated public Builder clearGoogleXoauth2AccessTokenExpiration() {
       bitField0_ = (bitField0_ & ~0x00080000);
       googleXoauth2AccessTokenExpiration_ = null;
       if (googleXoauth2AccessTokenExpirationBuilder_ != null) {
@@ -3584,9 +3682,9 @@ private static final long serialVersionUID = 0L;
      * time the google xoauth2 access token expires (if using google xoauth2)
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp google_xoauth2_access_token_expiration = 20 [json_name = "googleXoauth2AccessTokenExpiration"];</code>
+     * <code>.google.protobuf.Timestamp google_xoauth2_access_token_expiration = 20 [json_name = "googleXoauth2AccessTokenExpiration", deprecated = true];</code>
      */
-    public com.google.protobuf.Timestamp.Builder getGoogleXoauth2AccessTokenExpirationBuilder() {
+    @java.lang.Deprecated public com.google.protobuf.Timestamp.Builder getGoogleXoauth2AccessTokenExpirationBuilder() {
       bitField0_ |= 0x00080000;
       onChanged();
       return getGoogleXoauth2AccessTokenExpirationFieldBuilder().getBuilder();
@@ -3596,9 +3694,9 @@ private static final long serialVersionUID = 0L;
      * time the google xoauth2 access token expires (if using google xoauth2)
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp google_xoauth2_access_token_expiration = 20 [json_name = "googleXoauth2AccessTokenExpiration"];</code>
+     * <code>.google.protobuf.Timestamp google_xoauth2_access_token_expiration = 20 [json_name = "googleXoauth2AccessTokenExpiration", deprecated = true];</code>
      */
-    public com.google.protobuf.TimestampOrBuilder getGoogleXoauth2AccessTokenExpirationOrBuilder() {
+    @java.lang.Deprecated public com.google.protobuf.TimestampOrBuilder getGoogleXoauth2AccessTokenExpirationOrBuilder() {
       if (googleXoauth2AccessTokenExpirationBuilder_ != null) {
         return googleXoauth2AccessTokenExpirationBuilder_.getMessageOrBuilder();
       } else {
@@ -3611,7 +3709,7 @@ private static final long serialVersionUID = 0L;
      * time the google xoauth2 access token expires (if using google xoauth2)
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp google_xoauth2_access_token_expiration = 20 [json_name = "googleXoauth2AccessTokenExpiration"];</code>
+     * <code>.google.protobuf.Timestamp google_xoauth2_access_token_expiration = 20 [json_name = "googleXoauth2AccessTokenExpiration", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -3698,6 +3796,161 @@ private static final long serialVersionUID = 0L;
       authenticationType_ = 0;
       onChanged();
       return this;
+    }
+
+    private com.tcn.cloud.api.api.commons.ConnectedInboxOAuthConfig oauthReferenceId_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.ConnectedInboxOAuthConfig, com.tcn.cloud.api.api.commons.ConnectedInboxOAuthConfig.Builder, com.tcn.cloud.api.api.commons.ConnectedInboxOAuthConfigOrBuilder> oauthReferenceIdBuilder_;
+    /**
+     * <pre>
+     * config for the oauth provider
+     * </pre>
+     *
+     * <code>.api.commons.ConnectedInboxOAuthConfig oauth_reference_id = 22 [json_name = "oauthReferenceId"];</code>
+     * @return Whether the oauthReferenceId field is set.
+     */
+    public boolean hasOauthReferenceId() {
+      return ((bitField0_ & 0x00200000) != 0);
+    }
+    /**
+     * <pre>
+     * config for the oauth provider
+     * </pre>
+     *
+     * <code>.api.commons.ConnectedInboxOAuthConfig oauth_reference_id = 22 [json_name = "oauthReferenceId"];</code>
+     * @return The oauthReferenceId.
+     */
+    public com.tcn.cloud.api.api.commons.ConnectedInboxOAuthConfig getOauthReferenceId() {
+      if (oauthReferenceIdBuilder_ == null) {
+        return oauthReferenceId_ == null ? com.tcn.cloud.api.api.commons.ConnectedInboxOAuthConfig.getDefaultInstance() : oauthReferenceId_;
+      } else {
+        return oauthReferenceIdBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * config for the oauth provider
+     * </pre>
+     *
+     * <code>.api.commons.ConnectedInboxOAuthConfig oauth_reference_id = 22 [json_name = "oauthReferenceId"];</code>
+     */
+    public Builder setOauthReferenceId(com.tcn.cloud.api.api.commons.ConnectedInboxOAuthConfig value) {
+      if (oauthReferenceIdBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        oauthReferenceId_ = value;
+      } else {
+        oauthReferenceIdBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00200000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * config for the oauth provider
+     * </pre>
+     *
+     * <code>.api.commons.ConnectedInboxOAuthConfig oauth_reference_id = 22 [json_name = "oauthReferenceId"];</code>
+     */
+    public Builder setOauthReferenceId(
+        com.tcn.cloud.api.api.commons.ConnectedInboxOAuthConfig.Builder builderForValue) {
+      if (oauthReferenceIdBuilder_ == null) {
+        oauthReferenceId_ = builderForValue.build();
+      } else {
+        oauthReferenceIdBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00200000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * config for the oauth provider
+     * </pre>
+     *
+     * <code>.api.commons.ConnectedInboxOAuthConfig oauth_reference_id = 22 [json_name = "oauthReferenceId"];</code>
+     */
+    public Builder mergeOauthReferenceId(com.tcn.cloud.api.api.commons.ConnectedInboxOAuthConfig value) {
+      if (oauthReferenceIdBuilder_ == null) {
+        if (((bitField0_ & 0x00200000) != 0) &&
+          oauthReferenceId_ != null &&
+          oauthReferenceId_ != com.tcn.cloud.api.api.commons.ConnectedInboxOAuthConfig.getDefaultInstance()) {
+          getOauthReferenceIdBuilder().mergeFrom(value);
+        } else {
+          oauthReferenceId_ = value;
+        }
+      } else {
+        oauthReferenceIdBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00200000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * config for the oauth provider
+     * </pre>
+     *
+     * <code>.api.commons.ConnectedInboxOAuthConfig oauth_reference_id = 22 [json_name = "oauthReferenceId"];</code>
+     */
+    public Builder clearOauthReferenceId() {
+      bitField0_ = (bitField0_ & ~0x00200000);
+      oauthReferenceId_ = null;
+      if (oauthReferenceIdBuilder_ != null) {
+        oauthReferenceIdBuilder_.dispose();
+        oauthReferenceIdBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * config for the oauth provider
+     * </pre>
+     *
+     * <code>.api.commons.ConnectedInboxOAuthConfig oauth_reference_id = 22 [json_name = "oauthReferenceId"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.ConnectedInboxOAuthConfig.Builder getOauthReferenceIdBuilder() {
+      bitField0_ |= 0x00200000;
+      onChanged();
+      return getOauthReferenceIdFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * config for the oauth provider
+     * </pre>
+     *
+     * <code>.api.commons.ConnectedInboxOAuthConfig oauth_reference_id = 22 [json_name = "oauthReferenceId"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.ConnectedInboxOAuthConfigOrBuilder getOauthReferenceIdOrBuilder() {
+      if (oauthReferenceIdBuilder_ != null) {
+        return oauthReferenceIdBuilder_.getMessageOrBuilder();
+      } else {
+        return oauthReferenceId_ == null ?
+            com.tcn.cloud.api.api.commons.ConnectedInboxOAuthConfig.getDefaultInstance() : oauthReferenceId_;
+      }
+    }
+    /**
+     * <pre>
+     * config for the oauth provider
+     * </pre>
+     *
+     * <code>.api.commons.ConnectedInboxOAuthConfig oauth_reference_id = 22 [json_name = "oauthReferenceId"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.ConnectedInboxOAuthConfig, com.tcn.cloud.api.api.commons.ConnectedInboxOAuthConfig.Builder, com.tcn.cloud.api.api.commons.ConnectedInboxOAuthConfigOrBuilder> 
+        getOauthReferenceIdFieldBuilder() {
+      if (oauthReferenceIdBuilder_ == null) {
+        oauthReferenceIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.ConnectedInboxOAuthConfig, com.tcn.cloud.api.api.commons.ConnectedInboxOAuthConfig.Builder, com.tcn.cloud.api.api.commons.ConnectedInboxOAuthConfigOrBuilder>(
+                getOauthReferenceId(),
+                getParentForChildren(),
+                isClean());
+        oauthReferenceId_ = null;
+      }
+      return oauthReferenceIdBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
