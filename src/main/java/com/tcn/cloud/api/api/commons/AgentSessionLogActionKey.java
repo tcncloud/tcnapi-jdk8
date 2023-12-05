@@ -343,22 +343,6 @@ private static final long serialVersionUID = 0L;
      * <code>WARM_CALLER_TRANSFER_END = 55;</code>
      */
     WARM_CALLER_TRANSFER_END(55),
-    /**
-     * <pre>
-     * when a manager starts a barge in
-     * </pre>
-     *
-     * <code>BARGE_IN_START = 56;</code>
-     */
-    BARGE_IN_START(56),
-    /**
-     * <pre>
-     * when a manager stops a barge in
-     * </pre>
-     *
-     * <code>BARGE_IN_STOP = 57;</code>
-     */
-    BARGE_IN_STOP(57),
     UNRECOGNIZED(-1),
     ;
 
@@ -662,22 +646,6 @@ private static final long serialVersionUID = 0L;
      * <code>WARM_CALLER_TRANSFER_END = 55;</code>
      */
     public static final int WARM_CALLER_TRANSFER_END_VALUE = 55;
-    /**
-     * <pre>
-     * when a manager starts a barge in
-     * </pre>
-     *
-     * <code>BARGE_IN_START = 56;</code>
-     */
-    public static final int BARGE_IN_START_VALUE = 56;
-    /**
-     * <pre>
-     * when a manager stops a barge in
-     * </pre>
-     *
-     * <code>BARGE_IN_STOP = 57;</code>
-     */
-    public static final int BARGE_IN_STOP_VALUE = 57;
 
 
     public final int getNumber() {
@@ -760,8 +728,6 @@ private static final long serialVersionUID = 0L;
         case 53: return WARM_CALLER_TRANSFER_INVITE_CALLER_INITIAL;
         case 54: return WARM_CALLER_TRANSFER_INVITE_CALLER;
         case 55: return WARM_CALLER_TRANSFER_END;
-        case 56: return BARGE_IN_START;
-        case 57: return BARGE_IN_STOP;
         default: return null;
       }
     }
