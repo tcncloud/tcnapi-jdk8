@@ -29,6 +29,11 @@ public final class CommunicationProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_commons_SmsType_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_WhatsAppType_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_WhatsAppType_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -39,17 +44,20 @@ public final class CommunicationProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\037api/commons/communication.proto\022\013api.c" +
-      "ommons\032\025api/commons/acd.proto\"\303\001\n\010CommTy" +
+      "ommons\032\025api/commons/acd.proto\"\212\002\n\010CommTy" +
       "pe\0229\n\tcall_type\030\001 \001(\0162\032.api.commons.Call" +
       "Type.EnumH\000R\010callType\022<\n\nemail_type\030\002 \001(" +
       "\0162\033.api.commons.EmailType.EnumH\000R\temailT" +
       "ype\0226\n\010sms_type\030\003 \001(\0162\031.api.commons.SmsT" +
-      "ype.EnumH\000R\007smsTypeB\006\n\004type\"!\n\tEmailType" +
-      "\"\024\n\004Enum\022\014\n\010OUTBOUND\020\000\"\037\n\007SmsType\"\024\n\004Enu" +
-      "m\022\014\n\010OUTBOUND\020\000B\200\001\n\035com.tcn.cloud.api.ap" +
-      "i.commonsB\022CommunicationProtoP\001\242\002\003ACX\252\002\013" +
-      "Api.Commons\312\002\013Api\\Commons\342\002\027Api\\Commons\\" +
-      "GPBMetadata\352\002\014Api::Commonsb\006proto3"
+      "ype.EnumH\000R\007smsType\022E\n\rwhatsapp_type\030\004 \001" +
+      "(\0162\036.api.commons.WhatsAppType.EnumH\000R\014wh" +
+      "atsappTypeB\006\n\004type\"!\n\tEmailType\"\024\n\004Enum\022" +
+      "\014\n\010OUTBOUND\020\000\"\037\n\007SmsType\"\024\n\004Enum\022\014\n\010OUTB" +
+      "OUND\020\000\"$\n\014WhatsAppType\"\024\n\004Enum\022\014\n\010OUTBOU" +
+      "ND\020\000B\200\001\n\035com.tcn.cloud.api.api.commonsB\022" +
+      "CommunicationProtoP\001\242\002\003ACX\252\002\013Api.Commons" +
+      "\312\002\013Api\\Commons\342\002\027Api\\Commons\\GPBMetadata" +
+      "\352\002\014Api::Commonsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -61,7 +69,7 @@ public final class CommunicationProto {
     internal_static_api_commons_CommType_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_CommType_descriptor,
-        new java.lang.String[] { "CallType", "EmailType", "SmsType", "Type", });
+        new java.lang.String[] { "CallType", "EmailType", "SmsType", "WhatsappType", "Type", });
     internal_static_api_commons_EmailType_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_api_commons_EmailType_fieldAccessorTable = new
@@ -73,6 +81,12 @@ public final class CommunicationProto {
     internal_static_api_commons_SmsType_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_SmsType_descriptor,
+        new java.lang.String[] { });
+    internal_static_api_commons_WhatsAppType_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_api_commons_WhatsAppType_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_WhatsAppType_descriptor,
         new java.lang.String[] { });
     com.tcn.cloud.api.api.commons.AcdProto.getDescriptor();
   }

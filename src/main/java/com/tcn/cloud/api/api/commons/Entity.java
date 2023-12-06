@@ -24,6 +24,10 @@ public enum Entity
    * <code>E_SMS = 3;</code>
    */
   E_SMS(3),
+  /**
+   * <code>E_WHATSAPP = 4;</code>
+   */
+  E_WHATSAPP(4),
   UNRECOGNIZED(-1),
   ;
 
@@ -43,6 +47,10 @@ public enum Entity
    * <code>E_SMS = 3;</code>
    */
   public static final int E_SMS_VALUE = 3;
+  /**
+   * <code>E_WHATSAPP = 4;</code>
+   */
+  public static final int E_WHATSAPP_VALUE = 4;
 
 
   public final int getNumber() {
@@ -73,6 +81,7 @@ public enum Entity
       case 1: return E_CALL;
       case 2: return E_EMAIL;
       case 3: return E_SMS;
+      case 4: return E_WHATSAPP;
       default: return null;
     }
   }
