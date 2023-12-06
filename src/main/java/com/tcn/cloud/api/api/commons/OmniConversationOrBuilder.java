@@ -19,7 +19,7 @@ public interface OmniConversationOrBuilder extends
 
   /**
    * <pre>
-   * the conversation's channel type i.e. chat|email|sms|etc.
+   * the conversation's channel type i.e. chat|email|sms|whatsapp|etc.
    * </pre>
    *
    * <code>.api.commons.ChannelType channel_type = 2 [json_name = "channelType"];</code>
@@ -28,7 +28,7 @@ public interface OmniConversationOrBuilder extends
   int getChannelTypeValue();
   /**
    * <pre>
-   * the conversation's channel type i.e. chat|email|sms|etc.
+   * the conversation's channel type i.e. chat|email|sms|whatsapp|etc.
    * </pre>
    *
    * <code>.api.commons.ChannelType channel_type = 2 [json_name = "channelType"];</code>

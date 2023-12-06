@@ -118,6 +118,44 @@ private static final long serialVersionUID = 0L;
     return sms_ == null ? com.tcn.cloud.api.api.commons.OmniComplianceConfig.getDefaultInstance() : sms_;
   }
 
+  public static final int WHATSAPP_FIELD_NUMBER = 3;
+  private com.tcn.cloud.api.api.commons.OmniComplianceConfig whatsapp_;
+  /**
+   * <pre>
+   * compliance configuration for whatsapp
+   * </pre>
+   *
+   * <code>.api.commons.OmniComplianceConfig whatsapp = 3 [json_name = "whatsapp"];</code>
+   * @return Whether the whatsapp field is set.
+   */
+  @java.lang.Override
+  public boolean hasWhatsapp() {
+    return whatsapp_ != null;
+  }
+  /**
+   * <pre>
+   * compliance configuration for whatsapp
+   * </pre>
+   *
+   * <code>.api.commons.OmniComplianceConfig whatsapp = 3 [json_name = "whatsapp"];</code>
+   * @return The whatsapp.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.OmniComplianceConfig getWhatsapp() {
+    return whatsapp_ == null ? com.tcn.cloud.api.api.commons.OmniComplianceConfig.getDefaultInstance() : whatsapp_;
+  }
+  /**
+   * <pre>
+   * compliance configuration for whatsapp
+   * </pre>
+   *
+   * <code>.api.commons.OmniComplianceConfig whatsapp = 3 [json_name = "whatsapp"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.OmniComplianceConfigOrBuilder getWhatsappOrBuilder() {
+    return whatsapp_ == null ? com.tcn.cloud.api.api.commons.OmniComplianceConfig.getDefaultInstance() : whatsapp_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -138,6 +176,9 @@ private static final long serialVersionUID = 0L;
     if (sms_ != null) {
       output.writeMessage(2, getSms());
     }
+    if (whatsapp_ != null) {
+      output.writeMessage(3, getWhatsapp());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -154,6 +195,10 @@ private static final long serialVersionUID = 0L;
     if (sms_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getSms());
+    }
+    if (whatsapp_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, getWhatsapp());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -180,6 +225,11 @@ private static final long serialVersionUID = 0L;
       if (!getSms()
           .equals(other.getSms())) return false;
     }
+    if (hasWhatsapp() != other.hasWhatsapp()) return false;
+    if (hasWhatsapp()) {
+      if (!getWhatsapp()
+          .equals(other.getWhatsapp())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -198,6 +248,10 @@ private static final long serialVersionUID = 0L;
     if (hasSms()) {
       hash = (37 * hash) + SMS_FIELD_NUMBER;
       hash = (53 * hash) + getSms().hashCode();
+    }
+    if (hasWhatsapp()) {
+      hash = (37 * hash) + WHATSAPP_FIELD_NUMBER;
+      hash = (53 * hash) + getWhatsapp().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -344,6 +398,11 @@ private static final long serialVersionUID = 0L;
         smsBuilder_.dispose();
         smsBuilder_ = null;
       }
+      whatsapp_ = null;
+      if (whatsappBuilder_ != null) {
+        whatsappBuilder_.dispose();
+        whatsappBuilder_ = null;
+      }
       return this;
     }
 
@@ -386,6 +445,11 @@ private static final long serialVersionUID = 0L;
         result.sms_ = smsBuilder_ == null
             ? sms_
             : smsBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.whatsapp_ = whatsappBuilder_ == null
+            ? whatsapp_
+            : whatsappBuilder_.build();
       }
     }
 
@@ -439,6 +503,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasSms()) {
         mergeSms(other.getSms());
       }
+      if (other.hasWhatsapp()) {
+        mergeWhatsapp(other.getWhatsapp());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -479,6 +546,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 18
+            case 26: {
+              input.readMessage(
+                  getWhatsappFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -804,6 +878,161 @@ private static final long serialVersionUID = 0L;
         sms_ = null;
       }
       return smsBuilder_;
+    }
+
+    private com.tcn.cloud.api.api.commons.OmniComplianceConfig whatsapp_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.OmniComplianceConfig, com.tcn.cloud.api.api.commons.OmniComplianceConfig.Builder, com.tcn.cloud.api.api.commons.OmniComplianceConfigOrBuilder> whatsappBuilder_;
+    /**
+     * <pre>
+     * compliance configuration for whatsapp
+     * </pre>
+     *
+     * <code>.api.commons.OmniComplianceConfig whatsapp = 3 [json_name = "whatsapp"];</code>
+     * @return Whether the whatsapp field is set.
+     */
+    public boolean hasWhatsapp() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * compliance configuration for whatsapp
+     * </pre>
+     *
+     * <code>.api.commons.OmniComplianceConfig whatsapp = 3 [json_name = "whatsapp"];</code>
+     * @return The whatsapp.
+     */
+    public com.tcn.cloud.api.api.commons.OmniComplianceConfig getWhatsapp() {
+      if (whatsappBuilder_ == null) {
+        return whatsapp_ == null ? com.tcn.cloud.api.api.commons.OmniComplianceConfig.getDefaultInstance() : whatsapp_;
+      } else {
+        return whatsappBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * compliance configuration for whatsapp
+     * </pre>
+     *
+     * <code>.api.commons.OmniComplianceConfig whatsapp = 3 [json_name = "whatsapp"];</code>
+     */
+    public Builder setWhatsapp(com.tcn.cloud.api.api.commons.OmniComplianceConfig value) {
+      if (whatsappBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        whatsapp_ = value;
+      } else {
+        whatsappBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * compliance configuration for whatsapp
+     * </pre>
+     *
+     * <code>.api.commons.OmniComplianceConfig whatsapp = 3 [json_name = "whatsapp"];</code>
+     */
+    public Builder setWhatsapp(
+        com.tcn.cloud.api.api.commons.OmniComplianceConfig.Builder builderForValue) {
+      if (whatsappBuilder_ == null) {
+        whatsapp_ = builderForValue.build();
+      } else {
+        whatsappBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * compliance configuration for whatsapp
+     * </pre>
+     *
+     * <code>.api.commons.OmniComplianceConfig whatsapp = 3 [json_name = "whatsapp"];</code>
+     */
+    public Builder mergeWhatsapp(com.tcn.cloud.api.api.commons.OmniComplianceConfig value) {
+      if (whatsappBuilder_ == null) {
+        if (((bitField0_ & 0x00000004) != 0) &&
+          whatsapp_ != null &&
+          whatsapp_ != com.tcn.cloud.api.api.commons.OmniComplianceConfig.getDefaultInstance()) {
+          getWhatsappBuilder().mergeFrom(value);
+        } else {
+          whatsapp_ = value;
+        }
+      } else {
+        whatsappBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * compliance configuration for whatsapp
+     * </pre>
+     *
+     * <code>.api.commons.OmniComplianceConfig whatsapp = 3 [json_name = "whatsapp"];</code>
+     */
+    public Builder clearWhatsapp() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      whatsapp_ = null;
+      if (whatsappBuilder_ != null) {
+        whatsappBuilder_.dispose();
+        whatsappBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * compliance configuration for whatsapp
+     * </pre>
+     *
+     * <code>.api.commons.OmniComplianceConfig whatsapp = 3 [json_name = "whatsapp"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.OmniComplianceConfig.Builder getWhatsappBuilder() {
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return getWhatsappFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * compliance configuration for whatsapp
+     * </pre>
+     *
+     * <code>.api.commons.OmniComplianceConfig whatsapp = 3 [json_name = "whatsapp"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.OmniComplianceConfigOrBuilder getWhatsappOrBuilder() {
+      if (whatsappBuilder_ != null) {
+        return whatsappBuilder_.getMessageOrBuilder();
+      } else {
+        return whatsapp_ == null ?
+            com.tcn.cloud.api.api.commons.OmniComplianceConfig.getDefaultInstance() : whatsapp_;
+      }
+    }
+    /**
+     * <pre>
+     * compliance configuration for whatsapp
+     * </pre>
+     *
+     * <code>.api.commons.OmniComplianceConfig whatsapp = 3 [json_name = "whatsapp"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.OmniComplianceConfig, com.tcn.cloud.api.api.commons.OmniComplianceConfig.Builder, com.tcn.cloud.api.api.commons.OmniComplianceConfigOrBuilder> 
+        getWhatsappFieldBuilder() {
+      if (whatsappBuilder_ == null) {
+        whatsappBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.OmniComplianceConfig, com.tcn.cloud.api.api.commons.OmniComplianceConfig.Builder, com.tcn.cloud.api.api.commons.OmniComplianceConfigOrBuilder>(
+                getWhatsapp(),
+                getParentForChildren(),
+                isClean());
+        whatsapp_ = null;
+      }
+      return whatsappBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

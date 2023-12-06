@@ -2159,6 +2159,37 @@ public final class OmniApiGrpc {
     return getListUserSkillsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListWhatsAppNumbersReq,
+      com.tcn.cloud.api.api.v0alpha.ListWhatsAppNumbersRes> getListWhatsAppNumbersMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListWhatsAppNumbers",
+      requestType = com.tcn.cloud.api.api.v0alpha.ListWhatsAppNumbersReq.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.ListWhatsAppNumbersRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListWhatsAppNumbersReq,
+      com.tcn.cloud.api.api.v0alpha.ListWhatsAppNumbersRes> getListWhatsAppNumbersMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListWhatsAppNumbersReq, com.tcn.cloud.api.api.v0alpha.ListWhatsAppNumbersRes> getListWhatsAppNumbersMethod;
+    if ((getListWhatsAppNumbersMethod = OmniApiGrpc.getListWhatsAppNumbersMethod) == null) {
+      synchronized (OmniApiGrpc.class) {
+        if ((getListWhatsAppNumbersMethod = OmniApiGrpc.getListWhatsAppNumbersMethod) == null) {
+          OmniApiGrpc.getListWhatsAppNumbersMethod = getListWhatsAppNumbersMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListWhatsAppNumbersReq, com.tcn.cloud.api.api.v0alpha.ListWhatsAppNumbersRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListWhatsAppNumbers"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.ListWhatsAppNumbersReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.ListWhatsAppNumbersRes.getDefaultInstance()))
+              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("ListWhatsAppNumbers"))
+              .build();
+        }
+      }
+    }
+    return getListWhatsAppNumbersMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -3035,6 +3066,16 @@ public final class OmniApiGrpc {
     default void listUserSkills(com.tcn.cloud.api.api.v0alpha.ListUserSkillsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListUserSkillsRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListUserSkillsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * List whatsapp numbers for the client
+     * </pre>
+     */
+    default void listWhatsAppNumbers(com.tcn.cloud.api.api.v0alpha.ListWhatsAppNumbersReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListWhatsAppNumbersRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListWhatsAppNumbersMethod(), responseObserver);
     }
   }
 
@@ -3968,6 +4009,17 @@ public final class OmniApiGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListUserSkillsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * List whatsapp numbers for the client
+     * </pre>
+     */
+    public void listWhatsAppNumbers(com.tcn.cloud.api.api.v0alpha.ListWhatsAppNumbersReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListWhatsAppNumbersRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListWhatsAppNumbersMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -4816,6 +4868,16 @@ public final class OmniApiGrpc {
     public com.tcn.cloud.api.api.v0alpha.ListUserSkillsRes listUserSkills(com.tcn.cloud.api.api.v0alpha.ListUserSkillsReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListUserSkillsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * List whatsapp numbers for the client
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v0alpha.ListWhatsAppNumbersRes listWhatsAppNumbers(com.tcn.cloud.api.api.v0alpha.ListWhatsAppNumbersReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListWhatsAppNumbersMethod(), getCallOptions(), request);
     }
   }
 
@@ -5709,6 +5771,17 @@ public final class OmniApiGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListUserSkillsMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * List whatsapp numbers for the client
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListWhatsAppNumbersRes> listWhatsAppNumbers(
+        com.tcn.cloud.api.api.v0alpha.ListWhatsAppNumbersReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListWhatsAppNumbersMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_ARCHIVE_CAMPAIGN = 0;
@@ -5780,6 +5853,7 @@ public final class OmniApiGrpc {
   private static final int METHODID_LIST_CANNED_MESSAGES_BY_GROUP_ID = 66;
   private static final int METHODID_GET_CANNED_MESSAGE_GROUP_BY_ID = 67;
   private static final int METHODID_LIST_USER_SKILLS = 68;
+  private static final int METHODID_LIST_WHATS_APP_NUMBERS = 69;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -6073,6 +6147,10 @@ public final class OmniApiGrpc {
         case METHODID_LIST_USER_SKILLS:
           serviceImpl.listUserSkills((com.tcn.cloud.api.api.v0alpha.ListUserSkillsReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListUserSkillsRes>) responseObserver);
+          break;
+        case METHODID_LIST_WHATS_APP_NUMBERS:
+          serviceImpl.listWhatsAppNumbers((com.tcn.cloud.api.api.v0alpha.ListWhatsAppNumbersReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListWhatsAppNumbersRes>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -6575,6 +6653,13 @@ public final class OmniApiGrpc {
               com.tcn.cloud.api.api.v0alpha.ListUserSkillsReq,
               com.tcn.cloud.api.api.v0alpha.ListUserSkillsRes>(
                 service, METHODID_LIST_USER_SKILLS)))
+        .addMethod(
+          getListWhatsAppNumbersMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListWhatsAppNumbersReq,
+              com.tcn.cloud.api.api.v0alpha.ListWhatsAppNumbersRes>(
+                service, METHODID_LIST_WHATS_APP_NUMBERS)))
         .build();
   }
 
@@ -6692,6 +6777,7 @@ public final class OmniApiGrpc {
               .addMethod(getListCannedMessagesByGroupIdMethod())
               .addMethod(getGetCannedMessageGroupByIdMethod())
               .addMethod(getListUserSkillsMethod())
+              .addMethod(getListWhatsAppNumbersMethod())
               .build();
         }
       }

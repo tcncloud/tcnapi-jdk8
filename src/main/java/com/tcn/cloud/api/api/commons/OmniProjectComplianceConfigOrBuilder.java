@@ -60,4 +60,31 @@ public interface OmniProjectComplianceConfigOrBuilder extends
    * <code>.api.commons.OmniComplianceConfig sms = 2 [json_name = "sms"];</code>
    */
   com.tcn.cloud.api.api.commons.OmniComplianceConfigOrBuilder getSmsOrBuilder();
+
+  /**
+   * <pre>
+   * compliance configuration for whatsapp
+   * </pre>
+   *
+   * <code>.api.commons.OmniComplianceConfig whatsapp = 3 [json_name = "whatsapp"];</code>
+   * @return Whether the whatsapp field is set.
+   */
+  boolean hasWhatsapp();
+  /**
+   * <pre>
+   * compliance configuration for whatsapp
+   * </pre>
+   *
+   * <code>.api.commons.OmniComplianceConfig whatsapp = 3 [json_name = "whatsapp"];</code>
+   * @return The whatsapp.
+   */
+  com.tcn.cloud.api.api.commons.OmniComplianceConfig getWhatsapp();
+  /**
+   * <pre>
+   * compliance configuration for whatsapp
+   * </pre>
+   *
+   * <code>.api.commons.OmniComplianceConfig whatsapp = 3 [json_name = "whatsapp"];</code>
+   */
+  com.tcn.cloud.api.api.commons.OmniComplianceConfigOrBuilder getWhatsappOrBuilder();
 }
