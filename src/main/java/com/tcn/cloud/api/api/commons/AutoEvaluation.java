@@ -46,6 +46,1182 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.AutoEvaluation.class, com.tcn.cloud.api.api.commons.AutoEvaluation.Builder.class);
   }
 
+  public interface ScorecardInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:api.commons.AutoEvaluation.ScorecardInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * title of the scorecard.
+     * </pre>
+     *
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    java.lang.String getTitle();
+    /**
+     * <pre>
+     * title of the scorecard.
+     * </pre>
+     *
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+  }
+  /**
+   * Protobuf type {@code api.commons.AutoEvaluation.ScorecardInfo}
+   */
+  public static final class ScorecardInfo extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:api.commons.AutoEvaluation.ScorecardInfo)
+      ScorecardInfoOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ScorecardInfo.newBuilder() to construct.
+    private ScorecardInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ScorecardInfo() {
+      title_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ScorecardInfo();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.tcn.cloud.api.api.commons.ScorecardsProto.internal_static_api_commons_AutoEvaluation_ScorecardInfo_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.tcn.cloud.api.api.commons.ScorecardsProto.internal_static_api_commons_AutoEvaluation_ScorecardInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.tcn.cloud.api.api.commons.AutoEvaluation.ScorecardInfo.class, com.tcn.cloud.api.api.commons.AutoEvaluation.ScorecardInfo.Builder.class);
+    }
+
+    public static final int TITLE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object title_ = "";
+    /**
+     * <pre>
+     * title of the scorecard.
+     * </pre>
+     *
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    @java.lang.Override
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * title of the scorecard.
+     * </pre>
+     *
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, title_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, title_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.tcn.cloud.api.api.commons.AutoEvaluation.ScorecardInfo)) {
+        return super.equals(obj);
+      }
+      com.tcn.cloud.api.api.commons.AutoEvaluation.ScorecardInfo other = (com.tcn.cloud.api.api.commons.AutoEvaluation.ScorecardInfo) obj;
+
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getTitle().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.tcn.cloud.api.api.commons.AutoEvaluation.ScorecardInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.commons.AutoEvaluation.ScorecardInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.commons.AutoEvaluation.ScorecardInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.commons.AutoEvaluation.ScorecardInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.commons.AutoEvaluation.ScorecardInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.commons.AutoEvaluation.ScorecardInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.commons.AutoEvaluation.ScorecardInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.commons.AutoEvaluation.ScorecardInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.tcn.cloud.api.api.commons.AutoEvaluation.ScorecardInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.tcn.cloud.api.api.commons.AutoEvaluation.ScorecardInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.commons.AutoEvaluation.ScorecardInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.commons.AutoEvaluation.ScorecardInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.tcn.cloud.api.api.commons.AutoEvaluation.ScorecardInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code api.commons.AutoEvaluation.ScorecardInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:api.commons.AutoEvaluation.ScorecardInfo)
+        com.tcn.cloud.api.api.commons.AutoEvaluation.ScorecardInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.api.commons.ScorecardsProto.internal_static_api_commons_AutoEvaluation_ScorecardInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.api.commons.ScorecardsProto.internal_static_api_commons_AutoEvaluation_ScorecardInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.api.commons.AutoEvaluation.ScorecardInfo.class, com.tcn.cloud.api.api.commons.AutoEvaluation.ScorecardInfo.Builder.class);
+      }
+
+      // Construct using com.tcn.cloud.api.api.commons.AutoEvaluation.ScorecardInfo.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        title_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.tcn.cloud.api.api.commons.ScorecardsProto.internal_static_api_commons_AutoEvaluation_ScorecardInfo_descriptor;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.commons.AutoEvaluation.ScorecardInfo getDefaultInstanceForType() {
+        return com.tcn.cloud.api.api.commons.AutoEvaluation.ScorecardInfo.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.commons.AutoEvaluation.ScorecardInfo build() {
+        com.tcn.cloud.api.api.commons.AutoEvaluation.ScorecardInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.commons.AutoEvaluation.ScorecardInfo buildPartial() {
+        com.tcn.cloud.api.api.commons.AutoEvaluation.ScorecardInfo result = new com.tcn.cloud.api.api.commons.AutoEvaluation.ScorecardInfo(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.api.commons.AutoEvaluation.ScorecardInfo result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.title_ = title_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.tcn.cloud.api.api.commons.AutoEvaluation.ScorecardInfo) {
+          return mergeFrom((com.tcn.cloud.api.api.commons.AutoEvaluation.ScorecardInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.tcn.cloud.api.api.commons.AutoEvaluation.ScorecardInfo other) {
+        if (other == com.tcn.cloud.api.api.commons.AutoEvaluation.ScorecardInfo.getDefaultInstance()) return this;
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                title_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object title_ = "";
+      /**
+       * <pre>
+       * title of the scorecard.
+       * </pre>
+       *
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The title.
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          title_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * title of the scorecard.
+       * </pre>
+       *
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The bytes for title.
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * title of the scorecard.
+       * </pre>
+       *
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * title of the scorecard.
+       * </pre>
+       *
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTitle() {
+        title_ = getDefaultInstance().getTitle();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * title of the scorecard.
+       * </pre>
+       *
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The bytes for title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:api.commons.AutoEvaluation.ScorecardInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:api.commons.AutoEvaluation.ScorecardInfo)
+    private static final com.tcn.cloud.api.api.commons.AutoEvaluation.ScorecardInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.AutoEvaluation.ScorecardInfo();
+    }
+
+    public static com.tcn.cloud.api.api.commons.AutoEvaluation.ScorecardInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ScorecardInfo>
+        PARSER = new com.google.protobuf.AbstractParser<ScorecardInfo>() {
+      @java.lang.Override
+      public ScorecardInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ScorecardInfo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ScorecardInfo> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.AutoEvaluation.ScorecardInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CategoryInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:api.commons.AutoEvaluation.CategoryInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * title of the category.
+     * </pre>
+     *
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    java.lang.String getTitle();
+    /**
+     * <pre>
+     * title of the category.
+     * </pre>
+     *
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+  }
+  /**
+   * Protobuf type {@code api.commons.AutoEvaluation.CategoryInfo}
+   */
+  public static final class CategoryInfo extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:api.commons.AutoEvaluation.CategoryInfo)
+      CategoryInfoOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CategoryInfo.newBuilder() to construct.
+    private CategoryInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CategoryInfo() {
+      title_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CategoryInfo();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.tcn.cloud.api.api.commons.ScorecardsProto.internal_static_api_commons_AutoEvaluation_CategoryInfo_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.tcn.cloud.api.api.commons.ScorecardsProto.internal_static_api_commons_AutoEvaluation_CategoryInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.tcn.cloud.api.api.commons.AutoEvaluation.CategoryInfo.class, com.tcn.cloud.api.api.commons.AutoEvaluation.CategoryInfo.Builder.class);
+    }
+
+    public static final int TITLE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object title_ = "";
+    /**
+     * <pre>
+     * title of the category.
+     * </pre>
+     *
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    @java.lang.Override
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * title of the category.
+     * </pre>
+     *
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, title_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, title_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.tcn.cloud.api.api.commons.AutoEvaluation.CategoryInfo)) {
+        return super.equals(obj);
+      }
+      com.tcn.cloud.api.api.commons.AutoEvaluation.CategoryInfo other = (com.tcn.cloud.api.api.commons.AutoEvaluation.CategoryInfo) obj;
+
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getTitle().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.tcn.cloud.api.api.commons.AutoEvaluation.CategoryInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.commons.AutoEvaluation.CategoryInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.commons.AutoEvaluation.CategoryInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.commons.AutoEvaluation.CategoryInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.commons.AutoEvaluation.CategoryInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.commons.AutoEvaluation.CategoryInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.commons.AutoEvaluation.CategoryInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.commons.AutoEvaluation.CategoryInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.tcn.cloud.api.api.commons.AutoEvaluation.CategoryInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.tcn.cloud.api.api.commons.AutoEvaluation.CategoryInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.commons.AutoEvaluation.CategoryInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.commons.AutoEvaluation.CategoryInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.tcn.cloud.api.api.commons.AutoEvaluation.CategoryInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code api.commons.AutoEvaluation.CategoryInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:api.commons.AutoEvaluation.CategoryInfo)
+        com.tcn.cloud.api.api.commons.AutoEvaluation.CategoryInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.api.commons.ScorecardsProto.internal_static_api_commons_AutoEvaluation_CategoryInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.api.commons.ScorecardsProto.internal_static_api_commons_AutoEvaluation_CategoryInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.api.commons.AutoEvaluation.CategoryInfo.class, com.tcn.cloud.api.api.commons.AutoEvaluation.CategoryInfo.Builder.class);
+      }
+
+      // Construct using com.tcn.cloud.api.api.commons.AutoEvaluation.CategoryInfo.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        title_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.tcn.cloud.api.api.commons.ScorecardsProto.internal_static_api_commons_AutoEvaluation_CategoryInfo_descriptor;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.commons.AutoEvaluation.CategoryInfo getDefaultInstanceForType() {
+        return com.tcn.cloud.api.api.commons.AutoEvaluation.CategoryInfo.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.commons.AutoEvaluation.CategoryInfo build() {
+        com.tcn.cloud.api.api.commons.AutoEvaluation.CategoryInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.commons.AutoEvaluation.CategoryInfo buildPartial() {
+        com.tcn.cloud.api.api.commons.AutoEvaluation.CategoryInfo result = new com.tcn.cloud.api.api.commons.AutoEvaluation.CategoryInfo(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.api.commons.AutoEvaluation.CategoryInfo result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.title_ = title_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.tcn.cloud.api.api.commons.AutoEvaluation.CategoryInfo) {
+          return mergeFrom((com.tcn.cloud.api.api.commons.AutoEvaluation.CategoryInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.tcn.cloud.api.api.commons.AutoEvaluation.CategoryInfo other) {
+        if (other == com.tcn.cloud.api.api.commons.AutoEvaluation.CategoryInfo.getDefaultInstance()) return this;
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                title_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object title_ = "";
+      /**
+       * <pre>
+       * title of the category.
+       * </pre>
+       *
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The title.
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          title_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * title of the category.
+       * </pre>
+       *
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The bytes for title.
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * title of the category.
+       * </pre>
+       *
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * title of the category.
+       * </pre>
+       *
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTitle() {
+        title_ = getDefaultInstance().getTitle();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * title of the category.
+       * </pre>
+       *
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The bytes for title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:api.commons.AutoEvaluation.CategoryInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:api.commons.AutoEvaluation.CategoryInfo)
+    private static final com.tcn.cloud.api.api.commons.AutoEvaluation.CategoryInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.AutoEvaluation.CategoryInfo();
+    }
+
+    public static com.tcn.cloud.api.api.commons.AutoEvaluation.CategoryInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CategoryInfo>
+        PARSER = new com.google.protobuf.AbstractParser<CategoryInfo>() {
+      @java.lang.Override
+      public CategoryInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<CategoryInfo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CategoryInfo> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.AutoEvaluation.CategoryInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public static final int AUTO_EVALUATION_ID_FIELD_NUMBER = 2;
   private long autoEvaluationId_ = 0L;
   /**
@@ -352,6 +1528,82 @@ private static final long serialVersionUID = 0L;
     return callLength_;
   }
 
+  public static final int SCORECARD_INFO_FIELD_NUMBER = 17;
+  private com.tcn.cloud.api.api.commons.AutoEvaluation.ScorecardInfo scorecardInfo_;
+  /**
+   * <pre>
+   * read-only info provided from the parent scorecard
+   * </pre>
+   *
+   * <code>.api.commons.AutoEvaluation.ScorecardInfo scorecard_info = 17 [json_name = "scorecardInfo"];</code>
+   * @return Whether the scorecardInfo field is set.
+   */
+  @java.lang.Override
+  public boolean hasScorecardInfo() {
+    return scorecardInfo_ != null;
+  }
+  /**
+   * <pre>
+   * read-only info provided from the parent scorecard
+   * </pre>
+   *
+   * <code>.api.commons.AutoEvaluation.ScorecardInfo scorecard_info = 17 [json_name = "scorecardInfo"];</code>
+   * @return The scorecardInfo.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.AutoEvaluation.ScorecardInfo getScorecardInfo() {
+    return scorecardInfo_ == null ? com.tcn.cloud.api.api.commons.AutoEvaluation.ScorecardInfo.getDefaultInstance() : scorecardInfo_;
+  }
+  /**
+   * <pre>
+   * read-only info provided from the parent scorecard
+   * </pre>
+   *
+   * <code>.api.commons.AutoEvaluation.ScorecardInfo scorecard_info = 17 [json_name = "scorecardInfo"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.AutoEvaluation.ScorecardInfoOrBuilder getScorecardInfoOrBuilder() {
+    return scorecardInfo_ == null ? com.tcn.cloud.api.api.commons.AutoEvaluation.ScorecardInfo.getDefaultInstance() : scorecardInfo_;
+  }
+
+  public static final int CATEGORY_INFO_FIELD_NUMBER = 18;
+  private com.tcn.cloud.api.api.commons.AutoEvaluation.CategoryInfo categoryInfo_;
+  /**
+   * <pre>
+   * read-only info provided from the parent category
+   * </pre>
+   *
+   * <code>.api.commons.AutoEvaluation.CategoryInfo category_info = 18 [json_name = "categoryInfo"];</code>
+   * @return Whether the categoryInfo field is set.
+   */
+  @java.lang.Override
+  public boolean hasCategoryInfo() {
+    return categoryInfo_ != null;
+  }
+  /**
+   * <pre>
+   * read-only info provided from the parent category
+   * </pre>
+   *
+   * <code>.api.commons.AutoEvaluation.CategoryInfo category_info = 18 [json_name = "categoryInfo"];</code>
+   * @return The categoryInfo.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.AutoEvaluation.CategoryInfo getCategoryInfo() {
+    return categoryInfo_ == null ? com.tcn.cloud.api.api.commons.AutoEvaluation.CategoryInfo.getDefaultInstance() : categoryInfo_;
+  }
+  /**
+   * <pre>
+   * read-only info provided from the parent category
+   * </pre>
+   *
+   * <code>.api.commons.AutoEvaluation.CategoryInfo category_info = 18 [json_name = "categoryInfo"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.AutoEvaluation.CategoryInfoOrBuilder getCategoryInfoOrBuilder() {
+    return categoryInfo_ == null ? com.tcn.cloud.api.api.commons.AutoEvaluation.CategoryInfo.getDefaultInstance() : categoryInfo_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -401,6 +1653,12 @@ private static final long serialVersionUID = 0L;
     }
     if (callLength_ != 0) {
       output.writeInt32(16, callLength_);
+    }
+    if (scorecardInfo_ != null) {
+      output.writeMessage(17, getScorecardInfo());
+    }
+    if (categoryInfo_ != null) {
+      output.writeMessage(18, getCategoryInfo());
     }
     getUnknownFields().writeTo(output);
   }
@@ -458,6 +1716,14 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(16, callLength_);
     }
+    if (scorecardInfo_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(17, getScorecardInfo());
+    }
+    if (categoryInfo_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(18, getCategoryInfo());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -501,6 +1767,16 @@ private static final long serialVersionUID = 0L;
     if (riskLevel_ != other.riskLevel_) return false;
     if (getCallLength()
         != other.getCallLength()) return false;
+    if (hasScorecardInfo() != other.hasScorecardInfo()) return false;
+    if (hasScorecardInfo()) {
+      if (!getScorecardInfo()
+          .equals(other.getScorecardInfo())) return false;
+    }
+    if (hasCategoryInfo() != other.hasCategoryInfo()) return false;
+    if (hasCategoryInfo()) {
+      if (!getCategoryInfo()
+          .equals(other.getCategoryInfo())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -547,6 +1823,14 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + riskLevel_;
     hash = (37 * hash) + CALL_LENGTH_FIELD_NUMBER;
     hash = (53 * hash) + getCallLength();
+    if (hasScorecardInfo()) {
+      hash = (37 * hash) + SCORECARD_INFO_FIELD_NUMBER;
+      hash = (53 * hash) + getScorecardInfo().hashCode();
+    }
+    if (hasCategoryInfo()) {
+      hash = (37 * hash) + CATEGORY_INFO_FIELD_NUMBER;
+      hash = (53 * hash) + getCategoryInfo().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -708,6 +1992,16 @@ private static final long serialVersionUID = 0L;
       expressionMatched_ = false;
       riskLevel_ = 0;
       callLength_ = 0;
+      scorecardInfo_ = null;
+      if (scorecardInfoBuilder_ != null) {
+        scorecardInfoBuilder_.dispose();
+        scorecardInfoBuilder_ = null;
+      }
+      categoryInfo_ = null;
+      if (categoryInfoBuilder_ != null) {
+        categoryInfoBuilder_.dispose();
+        categoryInfoBuilder_ = null;
+      }
       return this;
     }
 
@@ -790,6 +2084,16 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000800) != 0)) {
         result.callLength_ = callLength_;
+      }
+      if (((from_bitField0_ & 0x00001000) != 0)) {
+        result.scorecardInfo_ = scorecardInfoBuilder_ == null
+            ? scorecardInfo_
+            : scorecardInfoBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00002000) != 0)) {
+        result.categoryInfo_ = categoryInfoBuilder_ == null
+            ? categoryInfo_
+            : categoryInfoBuilder_.build();
       }
     }
 
@@ -898,6 +2202,12 @@ private static final long serialVersionUID = 0L;
       if (other.getCallLength() != 0) {
         setCallLength(other.getCallLength());
       }
+      if (other.hasScorecardInfo()) {
+        mergeScorecardInfo(other.getScorecardInfo());
+      }
+      if (other.hasCategoryInfo()) {
+        mergeCategoryInfo(other.getCategoryInfo());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -996,6 +2306,20 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000800;
               break;
             } // case 128
+            case 138: {
+              input.readMessage(
+                  getScorecardInfoFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00001000;
+              break;
+            } // case 138
+            case 146: {
+              input.readMessage(
+                  getCategoryInfoFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00002000;
+              break;
+            } // case 146
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2063,6 +3387,316 @@ private static final long serialVersionUID = 0L;
       callLength_ = 0;
       onChanged();
       return this;
+    }
+
+    private com.tcn.cloud.api.api.commons.AutoEvaluation.ScorecardInfo scorecardInfo_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.AutoEvaluation.ScorecardInfo, com.tcn.cloud.api.api.commons.AutoEvaluation.ScorecardInfo.Builder, com.tcn.cloud.api.api.commons.AutoEvaluation.ScorecardInfoOrBuilder> scorecardInfoBuilder_;
+    /**
+     * <pre>
+     * read-only info provided from the parent scorecard
+     * </pre>
+     *
+     * <code>.api.commons.AutoEvaluation.ScorecardInfo scorecard_info = 17 [json_name = "scorecardInfo"];</code>
+     * @return Whether the scorecardInfo field is set.
+     */
+    public boolean hasScorecardInfo() {
+      return ((bitField0_ & 0x00001000) != 0);
+    }
+    /**
+     * <pre>
+     * read-only info provided from the parent scorecard
+     * </pre>
+     *
+     * <code>.api.commons.AutoEvaluation.ScorecardInfo scorecard_info = 17 [json_name = "scorecardInfo"];</code>
+     * @return The scorecardInfo.
+     */
+    public com.tcn.cloud.api.api.commons.AutoEvaluation.ScorecardInfo getScorecardInfo() {
+      if (scorecardInfoBuilder_ == null) {
+        return scorecardInfo_ == null ? com.tcn.cloud.api.api.commons.AutoEvaluation.ScorecardInfo.getDefaultInstance() : scorecardInfo_;
+      } else {
+        return scorecardInfoBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * read-only info provided from the parent scorecard
+     * </pre>
+     *
+     * <code>.api.commons.AutoEvaluation.ScorecardInfo scorecard_info = 17 [json_name = "scorecardInfo"];</code>
+     */
+    public Builder setScorecardInfo(com.tcn.cloud.api.api.commons.AutoEvaluation.ScorecardInfo value) {
+      if (scorecardInfoBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        scorecardInfo_ = value;
+      } else {
+        scorecardInfoBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * read-only info provided from the parent scorecard
+     * </pre>
+     *
+     * <code>.api.commons.AutoEvaluation.ScorecardInfo scorecard_info = 17 [json_name = "scorecardInfo"];</code>
+     */
+    public Builder setScorecardInfo(
+        com.tcn.cloud.api.api.commons.AutoEvaluation.ScorecardInfo.Builder builderForValue) {
+      if (scorecardInfoBuilder_ == null) {
+        scorecardInfo_ = builderForValue.build();
+      } else {
+        scorecardInfoBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * read-only info provided from the parent scorecard
+     * </pre>
+     *
+     * <code>.api.commons.AutoEvaluation.ScorecardInfo scorecard_info = 17 [json_name = "scorecardInfo"];</code>
+     */
+    public Builder mergeScorecardInfo(com.tcn.cloud.api.api.commons.AutoEvaluation.ScorecardInfo value) {
+      if (scorecardInfoBuilder_ == null) {
+        if (((bitField0_ & 0x00001000) != 0) &&
+          scorecardInfo_ != null &&
+          scorecardInfo_ != com.tcn.cloud.api.api.commons.AutoEvaluation.ScorecardInfo.getDefaultInstance()) {
+          getScorecardInfoBuilder().mergeFrom(value);
+        } else {
+          scorecardInfo_ = value;
+        }
+      } else {
+        scorecardInfoBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * read-only info provided from the parent scorecard
+     * </pre>
+     *
+     * <code>.api.commons.AutoEvaluation.ScorecardInfo scorecard_info = 17 [json_name = "scorecardInfo"];</code>
+     */
+    public Builder clearScorecardInfo() {
+      bitField0_ = (bitField0_ & ~0x00001000);
+      scorecardInfo_ = null;
+      if (scorecardInfoBuilder_ != null) {
+        scorecardInfoBuilder_.dispose();
+        scorecardInfoBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * read-only info provided from the parent scorecard
+     * </pre>
+     *
+     * <code>.api.commons.AutoEvaluation.ScorecardInfo scorecard_info = 17 [json_name = "scorecardInfo"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.AutoEvaluation.ScorecardInfo.Builder getScorecardInfoBuilder() {
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return getScorecardInfoFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * read-only info provided from the parent scorecard
+     * </pre>
+     *
+     * <code>.api.commons.AutoEvaluation.ScorecardInfo scorecard_info = 17 [json_name = "scorecardInfo"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.AutoEvaluation.ScorecardInfoOrBuilder getScorecardInfoOrBuilder() {
+      if (scorecardInfoBuilder_ != null) {
+        return scorecardInfoBuilder_.getMessageOrBuilder();
+      } else {
+        return scorecardInfo_ == null ?
+            com.tcn.cloud.api.api.commons.AutoEvaluation.ScorecardInfo.getDefaultInstance() : scorecardInfo_;
+      }
+    }
+    /**
+     * <pre>
+     * read-only info provided from the parent scorecard
+     * </pre>
+     *
+     * <code>.api.commons.AutoEvaluation.ScorecardInfo scorecard_info = 17 [json_name = "scorecardInfo"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.AutoEvaluation.ScorecardInfo, com.tcn.cloud.api.api.commons.AutoEvaluation.ScorecardInfo.Builder, com.tcn.cloud.api.api.commons.AutoEvaluation.ScorecardInfoOrBuilder> 
+        getScorecardInfoFieldBuilder() {
+      if (scorecardInfoBuilder_ == null) {
+        scorecardInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.AutoEvaluation.ScorecardInfo, com.tcn.cloud.api.api.commons.AutoEvaluation.ScorecardInfo.Builder, com.tcn.cloud.api.api.commons.AutoEvaluation.ScorecardInfoOrBuilder>(
+                getScorecardInfo(),
+                getParentForChildren(),
+                isClean());
+        scorecardInfo_ = null;
+      }
+      return scorecardInfoBuilder_;
+    }
+
+    private com.tcn.cloud.api.api.commons.AutoEvaluation.CategoryInfo categoryInfo_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.AutoEvaluation.CategoryInfo, com.tcn.cloud.api.api.commons.AutoEvaluation.CategoryInfo.Builder, com.tcn.cloud.api.api.commons.AutoEvaluation.CategoryInfoOrBuilder> categoryInfoBuilder_;
+    /**
+     * <pre>
+     * read-only info provided from the parent category
+     * </pre>
+     *
+     * <code>.api.commons.AutoEvaluation.CategoryInfo category_info = 18 [json_name = "categoryInfo"];</code>
+     * @return Whether the categoryInfo field is set.
+     */
+    public boolean hasCategoryInfo() {
+      return ((bitField0_ & 0x00002000) != 0);
+    }
+    /**
+     * <pre>
+     * read-only info provided from the parent category
+     * </pre>
+     *
+     * <code>.api.commons.AutoEvaluation.CategoryInfo category_info = 18 [json_name = "categoryInfo"];</code>
+     * @return The categoryInfo.
+     */
+    public com.tcn.cloud.api.api.commons.AutoEvaluation.CategoryInfo getCategoryInfo() {
+      if (categoryInfoBuilder_ == null) {
+        return categoryInfo_ == null ? com.tcn.cloud.api.api.commons.AutoEvaluation.CategoryInfo.getDefaultInstance() : categoryInfo_;
+      } else {
+        return categoryInfoBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * read-only info provided from the parent category
+     * </pre>
+     *
+     * <code>.api.commons.AutoEvaluation.CategoryInfo category_info = 18 [json_name = "categoryInfo"];</code>
+     */
+    public Builder setCategoryInfo(com.tcn.cloud.api.api.commons.AutoEvaluation.CategoryInfo value) {
+      if (categoryInfoBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        categoryInfo_ = value;
+      } else {
+        categoryInfoBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00002000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * read-only info provided from the parent category
+     * </pre>
+     *
+     * <code>.api.commons.AutoEvaluation.CategoryInfo category_info = 18 [json_name = "categoryInfo"];</code>
+     */
+    public Builder setCategoryInfo(
+        com.tcn.cloud.api.api.commons.AutoEvaluation.CategoryInfo.Builder builderForValue) {
+      if (categoryInfoBuilder_ == null) {
+        categoryInfo_ = builderForValue.build();
+      } else {
+        categoryInfoBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00002000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * read-only info provided from the parent category
+     * </pre>
+     *
+     * <code>.api.commons.AutoEvaluation.CategoryInfo category_info = 18 [json_name = "categoryInfo"];</code>
+     */
+    public Builder mergeCategoryInfo(com.tcn.cloud.api.api.commons.AutoEvaluation.CategoryInfo value) {
+      if (categoryInfoBuilder_ == null) {
+        if (((bitField0_ & 0x00002000) != 0) &&
+          categoryInfo_ != null &&
+          categoryInfo_ != com.tcn.cloud.api.api.commons.AutoEvaluation.CategoryInfo.getDefaultInstance()) {
+          getCategoryInfoBuilder().mergeFrom(value);
+        } else {
+          categoryInfo_ = value;
+        }
+      } else {
+        categoryInfoBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00002000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * read-only info provided from the parent category
+     * </pre>
+     *
+     * <code>.api.commons.AutoEvaluation.CategoryInfo category_info = 18 [json_name = "categoryInfo"];</code>
+     */
+    public Builder clearCategoryInfo() {
+      bitField0_ = (bitField0_ & ~0x00002000);
+      categoryInfo_ = null;
+      if (categoryInfoBuilder_ != null) {
+        categoryInfoBuilder_.dispose();
+        categoryInfoBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * read-only info provided from the parent category
+     * </pre>
+     *
+     * <code>.api.commons.AutoEvaluation.CategoryInfo category_info = 18 [json_name = "categoryInfo"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.AutoEvaluation.CategoryInfo.Builder getCategoryInfoBuilder() {
+      bitField0_ |= 0x00002000;
+      onChanged();
+      return getCategoryInfoFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * read-only info provided from the parent category
+     * </pre>
+     *
+     * <code>.api.commons.AutoEvaluation.CategoryInfo category_info = 18 [json_name = "categoryInfo"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.AutoEvaluation.CategoryInfoOrBuilder getCategoryInfoOrBuilder() {
+      if (categoryInfoBuilder_ != null) {
+        return categoryInfoBuilder_.getMessageOrBuilder();
+      } else {
+        return categoryInfo_ == null ?
+            com.tcn.cloud.api.api.commons.AutoEvaluation.CategoryInfo.getDefaultInstance() : categoryInfo_;
+      }
+    }
+    /**
+     * <pre>
+     * read-only info provided from the parent category
+     * </pre>
+     *
+     * <code>.api.commons.AutoEvaluation.CategoryInfo category_info = 18 [json_name = "categoryInfo"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.AutoEvaluation.CategoryInfo, com.tcn.cloud.api.api.commons.AutoEvaluation.CategoryInfo.Builder, com.tcn.cloud.api.api.commons.AutoEvaluation.CategoryInfoOrBuilder> 
+        getCategoryInfoFieldBuilder() {
+      if (categoryInfoBuilder_ == null) {
+        categoryInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.AutoEvaluation.CategoryInfo, com.tcn.cloud.api.api.commons.AutoEvaluation.CategoryInfo.Builder, com.tcn.cloud.api.api.commons.AutoEvaluation.CategoryInfoOrBuilder>(
+                getCategoryInfo(),
+                getParentForChildren(),
+                isClean());
+        categoryInfo_ = null;
+      }
+      return categoryInfoBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

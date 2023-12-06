@@ -202,4 +202,58 @@ public interface AutoEvaluationOrBuilder extends
    * @return The callLength.
    */
   int getCallLength();
+
+  /**
+   * <pre>
+   * read-only info provided from the parent scorecard
+   * </pre>
+   *
+   * <code>.api.commons.AutoEvaluation.ScorecardInfo scorecard_info = 17 [json_name = "scorecardInfo"];</code>
+   * @return Whether the scorecardInfo field is set.
+   */
+  boolean hasScorecardInfo();
+  /**
+   * <pre>
+   * read-only info provided from the parent scorecard
+   * </pre>
+   *
+   * <code>.api.commons.AutoEvaluation.ScorecardInfo scorecard_info = 17 [json_name = "scorecardInfo"];</code>
+   * @return The scorecardInfo.
+   */
+  com.tcn.cloud.api.api.commons.AutoEvaluation.ScorecardInfo getScorecardInfo();
+  /**
+   * <pre>
+   * read-only info provided from the parent scorecard
+   * </pre>
+   *
+   * <code>.api.commons.AutoEvaluation.ScorecardInfo scorecard_info = 17 [json_name = "scorecardInfo"];</code>
+   */
+  com.tcn.cloud.api.api.commons.AutoEvaluation.ScorecardInfoOrBuilder getScorecardInfoOrBuilder();
+
+  /**
+   * <pre>
+   * read-only info provided from the parent category
+   * </pre>
+   *
+   * <code>.api.commons.AutoEvaluation.CategoryInfo category_info = 18 [json_name = "categoryInfo"];</code>
+   * @return Whether the categoryInfo field is set.
+   */
+  boolean hasCategoryInfo();
+  /**
+   * <pre>
+   * read-only info provided from the parent category
+   * </pre>
+   *
+   * <code>.api.commons.AutoEvaluation.CategoryInfo category_info = 18 [json_name = "categoryInfo"];</code>
+   * @return The categoryInfo.
+   */
+  com.tcn.cloud.api.api.commons.AutoEvaluation.CategoryInfo getCategoryInfo();
+  /**
+   * <pre>
+   * read-only info provided from the parent category
+   * </pre>
+   *
+   * <code>.api.commons.AutoEvaluation.CategoryInfo category_info = 18 [json_name = "categoryInfo"];</code>
+   */
+  com.tcn.cloud.api.api.commons.AutoEvaluation.CategoryInfoOrBuilder getCategoryInfoOrBuilder();
 }

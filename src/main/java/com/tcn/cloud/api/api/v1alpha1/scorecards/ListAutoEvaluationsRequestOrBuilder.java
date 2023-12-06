@@ -62,4 +62,153 @@ public interface ListAutoEvaluationsRequestOrBuilder extends
    * <code>.api.commons.TimeFilter completed_at = 3 [json_name = "completedAt"];</code>
    */
   com.tcn.cloud.api.api.commons.TimeFilterOrBuilder getCompletedAtOrBuilder();
+
+  /**
+   * <pre>
+   * Optional - filter by category ids.
+   * </pre>
+   *
+   * <code>repeated int64 category_ids = 5 [json_name = "categoryIds"];</code>
+   * @return A list containing the categoryIds.
+   */
+  java.util.List<java.lang.Long> getCategoryIdsList();
+  /**
+   * <pre>
+   * Optional - filter by category ids.
+   * </pre>
+   *
+   * <code>repeated int64 category_ids = 5 [json_name = "categoryIds"];</code>
+   * @return The count of categoryIds.
+   */
+  int getCategoryIdsCount();
+  /**
+   * <pre>
+   * Optional - filter by category ids.
+   * </pre>
+   *
+   * <code>repeated int64 category_ids = 5 [json_name = "categoryIds"];</code>
+   * @param index The index of the element to return.
+   * @return The categoryIds at the given index.
+   */
+  long getCategoryIds(int index);
+
+  /**
+   * <pre>
+   * Optional - filter by call sid.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.scorecards.ListAutoEvaluationsRequest.CallSidFilter call_sid = 6 [json_name = "callSid"];</code>
+   * @return Whether the callSid field is set.
+   */
+  boolean hasCallSid();
+  /**
+   * <pre>
+   * Optional - filter by call sid.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.scorecards.ListAutoEvaluationsRequest.CallSidFilter call_sid = 6 [json_name = "callSid"];</code>
+   * @return The callSid.
+   */
+  com.tcn.cloud.api.api.v1alpha1.scorecards.ListAutoEvaluationsRequest.CallSidFilter getCallSid();
+  /**
+   * <pre>
+   * Optional - filter by call sid.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.scorecards.ListAutoEvaluationsRequest.CallSidFilter call_sid = 6 [json_name = "callSid"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.scorecards.ListAutoEvaluationsRequest.CallSidFilterOrBuilder getCallSidOrBuilder();
+
+  /**
+   * <pre>
+   * Optional - filter by agent user ids.
+   * </pre>
+   *
+   * <code>repeated string agent_user_ids = 7 [json_name = "agentUserIds"];</code>
+   * @return A list containing the agentUserIds.
+   */
+  java.util.List<java.lang.String>
+      getAgentUserIdsList();
+  /**
+   * <pre>
+   * Optional - filter by agent user ids.
+   * </pre>
+   *
+   * <code>repeated string agent_user_ids = 7 [json_name = "agentUserIds"];</code>
+   * @return The count of agentUserIds.
+   */
+  int getAgentUserIdsCount();
+  /**
+   * <pre>
+   * Optional - filter by agent user ids.
+   * </pre>
+   *
+   * <code>repeated string agent_user_ids = 7 [json_name = "agentUserIds"];</code>
+   * @param index The index of the element to return.
+   * @return The agentUserIds at the given index.
+   */
+  java.lang.String getAgentUserIds(int index);
+  /**
+   * <pre>
+   * Optional - filter by agent user ids.
+   * </pre>
+   *
+   * <code>repeated string agent_user_ids = 7 [json_name = "agentUserIds"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the agentUserIds at the given index.
+   */
+  com.google.protobuf.ByteString
+      getAgentUserIdsBytes(int index);
+
+  /**
+   * <pre>
+   * Optional - number of auto evaluations included in response
+   * </pre>
+   *
+   * <code>int32 page_size = 8 [json_name = "pageSize"];</code>
+   * @return The pageSize.
+   */
+  int getPageSize();
+
+  /**
+   * <pre>
+   * Optional. The order by which auto evaluations will be listed. Follows sql order by
+   * syntax. When not provided the order defaults to "completed_at DESC".
+   * </pre>
+   *
+   * <code>string order_by = 9 [json_name = "orderBy"];</code>
+   * @return The orderBy.
+   */
+  java.lang.String getOrderBy();
+  /**
+   * <pre>
+   * Optional. The order by which auto evaluations will be listed. Follows sql order by
+   * syntax. When not provided the order defaults to "completed_at DESC".
+   * </pre>
+   *
+   * <code>string order_by = 9 [json_name = "orderBy"];</code>
+   * @return The bytes for orderBy.
+   */
+  com.google.protobuf.ByteString
+      getOrderByBytes();
+
+  /**
+   * <pre>
+   * Optional. The next_page_token returned from a previous List request, if any.
+   * </pre>
+   *
+   * <code>string page_token = 10 [json_name = "pageToken"];</code>
+   * @return The pageToken.
+   */
+  java.lang.String getPageToken();
+  /**
+   * <pre>
+   * Optional. The next_page_token returned from a previous List request, if any.
+   * </pre>
+   *
+   * <code>string page_token = 10 [json_name = "pageToken"];</code>
+   * @return The bytes for pageToken.
+   */
+  com.google.protobuf.ByteString
+      getPageTokenBytes();
 }
