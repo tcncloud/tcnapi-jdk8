@@ -74,7 +74,7 @@ public final class AutoEvaluationProto {
       "ionRequest\022,\n\022auto_evaluation_id\030\002 \001(\003R\020" +
       "autoEvaluationId\"a\n\031GetAutoEvaluationRes" +
       "ponse\022D\n\017auto_evaluation\030\001 \001(\0132\033.api.com" +
-      "mons.AutoEvaluationR\016autoEvaluation\"\367\003\n\032" +
+      "mons.AutoEvaluationR\016autoEvaluation\"\260\004\n\032" +
       "ListAutoEvaluationsRequest\022#\n\rscorecard_" +
       "ids\030\002 \003(\003R\014scorecardIds\022:\n\014completed_at\030" +
       "\003 \001(\0132\027.api.commons.TimeFilterR\013complete" +
@@ -84,29 +84,30 @@ public final class AutoEvaluationProto {
       "terR\007callSid\022$\n\016agent_user_ids\030\007 \003(\tR\014ag" +
       "entUserIds\022\033\n\tpage_size\030\010 \001(\005R\010pageSize\022" +
       "\031\n\010order_by\030\t \001(\tR\007orderBy\022\035\n\npage_token" +
-      "\030\n \001(\tR\tpageToken\032z\n\rCallSidFilter\022\025\n\006an" +
-      "y_of\030\001 \003(\003R\005anyOf\022\016\n\002eq\030\002 \001(\003R\002eq\022\020\n\003gte" +
-      "\030\003 \001(\003R\003gte\022\020\n\003lte\030\004 \001(\003R\003lte\022\016\n\002gt\030\005 \001(" +
-      "\003R\002gt\022\016\n\002lt\030\006 \001(\003R\002lt\"\215\001\n\033ListAutoEvalua" +
-      "tionsResponse\022F\n\020auto_evaluations\030\001 \003(\0132" +
-      "\033.api.commons.AutoEvaluationR\017autoEvalua" +
-      "tions\022&\n\017next_page_token\030\002 \001(\tR\rnextPage" +
-      "Token\"K\n\033DeleteAutoEvaluationRequest\022,\n\022" +
-      "auto_evaluation_id\030\002 \001(\003R\020autoEvaluation" +
-      "Id\"d\n\034DeleteAutoEvaluationResponse\022D\n\017au" +
-      "to_evaluation\030\001 \001(\0132\033.api.commons.AutoEv" +
-      "aluationR\016autoEvaluation\"\177\n\034StreamAutoEv" +
-      "aluationsRequest\022#\n\rscorecard_ids\030\002 \003(\003R" +
-      "\014scorecardIds\022:\n\014completed_at\030\003 \001(\0132\027.ap" +
-      "i.commons.TimeFilterR\013completedAt\"e\n\035Str" +
-      "eamAutoEvaluationsResponse\022D\n\017auto_evalu" +
-      "ation\030\001 \001(\0132\033.api.commons.AutoEvaluation" +
-      "R\016autoEvaluationB\276\001\n)com.tcn.cloud.api.a" +
-      "pi.v1alpha1.scorecardsB\023AutoEvaluationPr" +
-      "otoP\001\242\002\003AVS\252\002\027Api.V1alpha1.Scorecards\312\002\027" +
-      "Api\\V1alpha1\\Scorecards\342\002#Api\\V1alpha1\\S" +
-      "corecards\\GPBMetadata\352\002\031Api::V1alpha1::S" +
-      "corecardsb\006proto3"
+      "\030\n \001(\tR\tpageToken\0227\n\013risk_levels\030\013 \003(\0162\026" +
+      ".api.commons.RiskLevelR\nriskLevels\032z\n\rCa" +
+      "llSidFilter\022\025\n\006any_of\030\001 \003(\003R\005anyOf\022\016\n\002eq" +
+      "\030\002 \001(\003R\002eq\022\020\n\003gte\030\003 \001(\003R\003gte\022\020\n\003lte\030\004 \001(" +
+      "\003R\003lte\022\016\n\002gt\030\005 \001(\003R\002gt\022\016\n\002lt\030\006 \001(\003R\002lt\"\215" +
+      "\001\n\033ListAutoEvaluationsResponse\022F\n\020auto_e" +
+      "valuations\030\001 \003(\0132\033.api.commons.AutoEvalu" +
+      "ationR\017autoEvaluations\022&\n\017next_page_toke" +
+      "n\030\002 \001(\tR\rnextPageToken\"K\n\033DeleteAutoEval" +
+      "uationRequest\022,\n\022auto_evaluation_id\030\002 \001(" +
+      "\003R\020autoEvaluationId\"d\n\034DeleteAutoEvaluat" +
+      "ionResponse\022D\n\017auto_evaluation\030\001 \001(\0132\033.a" +
+      "pi.commons.AutoEvaluationR\016autoEvaluatio" +
+      "n\"\177\n\034StreamAutoEvaluationsRequest\022#\n\rsco" +
+      "recard_ids\030\002 \003(\003R\014scorecardIds\022:\n\014comple" +
+      "ted_at\030\003 \001(\0132\027.api.commons.TimeFilterR\013c" +
+      "ompletedAt\"e\n\035StreamAutoEvaluationsRespo" +
+      "nse\022D\n\017auto_evaluation\030\001 \001(\0132\033.api.commo" +
+      "ns.AutoEvaluationR\016autoEvaluationB\276\001\n)co" +
+      "m.tcn.cloud.api.api.v1alpha1.scorecardsB" +
+      "\023AutoEvaluationProtoP\001\242\002\003AVS\252\002\027Api.V1alp" +
+      "ha1.Scorecards\312\002\027Api\\V1alpha1\\Scorecards" +
+      "\342\002#Api\\V1alpha1\\Scorecards\\GPBMetadata\352\002" +
+      "\031Api::V1alpha1::Scorecardsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -130,7 +131,7 @@ public final class AutoEvaluationProto {
     internal_static_api_v1alpha1_scorecards_ListAutoEvaluationsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_scorecards_ListAutoEvaluationsRequest_descriptor,
-        new java.lang.String[] { "ScorecardIds", "CompletedAt", "CategoryIds", "CallSid", "AgentUserIds", "PageSize", "OrderBy", "PageToken", });
+        new java.lang.String[] { "ScorecardIds", "CompletedAt", "CategoryIds", "CallSid", "AgentUserIds", "PageSize", "OrderBy", "PageToken", "RiskLevels", });
     internal_static_api_v1alpha1_scorecards_ListAutoEvaluationsRequest_CallSidFilter_descriptor =
       internal_static_api_v1alpha1_scorecards_ListAutoEvaluationsRequest_descriptor.getNestedTypes().get(0);
     internal_static_api_v1alpha1_scorecards_ListAutoEvaluationsRequest_CallSidFilter_fieldAccessorTable = new

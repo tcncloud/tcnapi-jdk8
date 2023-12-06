@@ -162,7 +162,7 @@ public interface ListAutoEvaluationsRequestOrBuilder extends
 
   /**
    * <pre>
-   * Optional - number of auto evaluations included in response
+   * Optional - number of auto evaluations included in response.
    * </pre>
    *
    * <code>int32 page_size = 8 [json_name = "pageSize"];</code>
@@ -211,4 +211,53 @@ public interface ListAutoEvaluationsRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getPageTokenBytes();
+
+  /**
+   * <pre>
+   * Optional - filter by risk level.
+   * </pre>
+   *
+   * <code>repeated .api.commons.RiskLevel risk_levels = 11 [json_name = "riskLevels"];</code>
+   * @return A list containing the riskLevels.
+   */
+  java.util.List<com.tcn.cloud.api.api.commons.RiskLevel> getRiskLevelsList();
+  /**
+   * <pre>
+   * Optional - filter by risk level.
+   * </pre>
+   *
+   * <code>repeated .api.commons.RiskLevel risk_levels = 11 [json_name = "riskLevels"];</code>
+   * @return The count of riskLevels.
+   */
+  int getRiskLevelsCount();
+  /**
+   * <pre>
+   * Optional - filter by risk level.
+   * </pre>
+   *
+   * <code>repeated .api.commons.RiskLevel risk_levels = 11 [json_name = "riskLevels"];</code>
+   * @param index The index of the element to return.
+   * @return The riskLevels at the given index.
+   */
+  com.tcn.cloud.api.api.commons.RiskLevel getRiskLevels(int index);
+  /**
+   * <pre>
+   * Optional - filter by risk level.
+   * </pre>
+   *
+   * <code>repeated .api.commons.RiskLevel risk_levels = 11 [json_name = "riskLevels"];</code>
+   * @return A list containing the enum numeric values on the wire for riskLevels.
+   */
+  java.util.List<java.lang.Integer>
+  getRiskLevelsValueList();
+  /**
+   * <pre>
+   * Optional - filter by risk level.
+   * </pre>
+   *
+   * <code>repeated .api.commons.RiskLevel risk_levels = 11 [json_name = "riskLevels"];</code>
+   * @param index The index of the value to return.
+   * @return The enum numeric value on the wire of riskLevels at the given index.
+   */
+  int getRiskLevelsValue(int index);
 }

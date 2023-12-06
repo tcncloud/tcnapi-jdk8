@@ -55,5 +55,21 @@ public interface CommTypeOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.SmsType.Enum getSmsType();
 
+  /**
+   * <code>.api.commons.WhatsAppType.Enum whatsapp_type = 4 [json_name = "whatsappType"];</code>
+   * @return Whether the whatsappType field is set.
+   */
+  boolean hasWhatsappType();
+  /**
+   * <code>.api.commons.WhatsAppType.Enum whatsapp_type = 4 [json_name = "whatsappType"];</code>
+   * @return The enum numeric value on the wire for whatsappType.
+   */
+  int getWhatsappTypeValue();
+  /**
+   * <code>.api.commons.WhatsAppType.Enum whatsapp_type = 4 [json_name = "whatsappType"];</code>
+   * @return The whatsappType.
+   */
+  com.tcn.cloud.api.api.commons.WhatsAppType.Enum getWhatsappType();
+
   com.tcn.cloud.api.api.commons.CommType.TypeCase getTypeCase();
 }

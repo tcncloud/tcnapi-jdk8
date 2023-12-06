@@ -26,6 +26,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.LazyStringArrayList.emptyList();
     orderBy_ = "";
     pageToken_ = "";
+    riskLevels_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -1376,7 +1377,7 @@ private static final long serialVersionUID = 0L;
   private int pageSize_ = 0;
   /**
    * <pre>
-   * Optional - number of auto evaluations included in response
+   * Optional - number of auto evaluations included in response.
    * </pre>
    *
    * <code>int32 page_size = 8 [json_name = "pageSize"];</code>
@@ -1483,6 +1484,84 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int RISK_LEVELS_FIELD_NUMBER = 11;
+  @SuppressWarnings("serial")
+  private java.util.List<java.lang.Integer> riskLevels_;
+  private static final com.google.protobuf.Internal.ListAdapter.Converter<
+      java.lang.Integer, com.tcn.cloud.api.api.commons.RiskLevel> riskLevels_converter_ =
+          new com.google.protobuf.Internal.ListAdapter.Converter<
+              java.lang.Integer, com.tcn.cloud.api.api.commons.RiskLevel>() {
+            public com.tcn.cloud.api.api.commons.RiskLevel convert(java.lang.Integer from) {
+              com.tcn.cloud.api.api.commons.RiskLevel result = com.tcn.cloud.api.api.commons.RiskLevel.forNumber(from);
+              return result == null ? com.tcn.cloud.api.api.commons.RiskLevel.UNRECOGNIZED : result;
+            }
+          };
+  /**
+   * <pre>
+   * Optional - filter by risk level.
+   * </pre>
+   *
+   * <code>repeated .api.commons.RiskLevel risk_levels = 11 [json_name = "riskLevels"];</code>
+   * @return A list containing the riskLevels.
+   */
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.api.commons.RiskLevel> getRiskLevelsList() {
+    return new com.google.protobuf.Internal.ListAdapter<
+        java.lang.Integer, com.tcn.cloud.api.api.commons.RiskLevel>(riskLevels_, riskLevels_converter_);
+  }
+  /**
+   * <pre>
+   * Optional - filter by risk level.
+   * </pre>
+   *
+   * <code>repeated .api.commons.RiskLevel risk_levels = 11 [json_name = "riskLevels"];</code>
+   * @return The count of riskLevels.
+   */
+  @java.lang.Override
+  public int getRiskLevelsCount() {
+    return riskLevels_.size();
+  }
+  /**
+   * <pre>
+   * Optional - filter by risk level.
+   * </pre>
+   *
+   * <code>repeated .api.commons.RiskLevel risk_levels = 11 [json_name = "riskLevels"];</code>
+   * @param index The index of the element to return.
+   * @return The riskLevels at the given index.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.RiskLevel getRiskLevels(int index) {
+    return riskLevels_converter_.convert(riskLevels_.get(index));
+  }
+  /**
+   * <pre>
+   * Optional - filter by risk level.
+   * </pre>
+   *
+   * <code>repeated .api.commons.RiskLevel risk_levels = 11 [json_name = "riskLevels"];</code>
+   * @return A list containing the enum numeric values on the wire for riskLevels.
+   */
+  @java.lang.Override
+  public java.util.List<java.lang.Integer>
+  getRiskLevelsValueList() {
+    return riskLevels_;
+  }
+  /**
+   * <pre>
+   * Optional - filter by risk level.
+   * </pre>
+   *
+   * <code>repeated .api.commons.RiskLevel risk_levels = 11 [json_name = "riskLevels"];</code>
+   * @param index The index of the value to return.
+   * @return The enum numeric value on the wire of riskLevels at the given index.
+   */
+  @java.lang.Override
+  public int getRiskLevelsValue(int index) {
+    return riskLevels_.get(index);
+  }
+  private int riskLevelsMemoizedSerializedSize;
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1529,6 +1608,13 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 10, pageToken_);
+    }
+    if (getRiskLevelsList().size() > 0) {
+      output.writeUInt32NoTag(90);
+      output.writeUInt32NoTag(riskLevelsMemoizedSerializedSize);
+    }
+    for (int i = 0; i < riskLevels_.size(); i++) {
+      output.writeEnumNoTag(riskLevels_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -1593,6 +1679,18 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, pageToken_);
     }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < riskLevels_.size(); i++) {
+        dataSize += com.google.protobuf.CodedOutputStream
+          .computeEnumSizeNoTag(riskLevels_.get(i));
+      }
+      size += dataSize;
+      if (!getRiskLevelsList().isEmpty()) {  size += 1;
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32SizeNoTag(dataSize);
+      }riskLevelsMemoizedSerializedSize = dataSize;
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -1630,6 +1728,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getOrderBy())) return false;
     if (!getPageToken()
         .equals(other.getPageToken())) return false;
+    if (!riskLevels_.equals(other.riskLevels_)) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1667,6 +1766,10 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getOrderBy().hashCode();
     hash = (37 * hash) + PAGE_TOKEN_FIELD_NUMBER;
     hash = (53 * hash) + getPageToken().hashCode();
+    if (getRiskLevelsCount() > 0) {
+      hash = (37 * hash) + RISK_LEVELS_FIELD_NUMBER;
+      hash = (53 * hash) + riskLevels_.hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -1819,6 +1922,8 @@ private static final long serialVersionUID = 0L;
       pageSize_ = 0;
       orderBy_ = "";
       pageToken_ = "";
+      riskLevels_ = java.util.Collections.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000100);
       return this;
     }
 
@@ -1862,6 +1967,11 @@ private static final long serialVersionUID = 0L;
         bitField0_ = (bitField0_ & ~0x00000004);
       }
       result.categoryIds_ = categoryIds_;
+      if (((bitField0_ & 0x00000100) != 0)) {
+        riskLevels_ = java.util.Collections.unmodifiableList(riskLevels_);
+        bitField0_ = (bitField0_ & ~0x00000100);
+      }
+      result.riskLevels_ = riskLevels_;
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.scorecards.ListAutoEvaluationsRequest result) {
@@ -1984,6 +2094,16 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000080;
         onChanged();
       }
+      if (!other.riskLevels_.isEmpty()) {
+        if (riskLevels_.isEmpty()) {
+          riskLevels_ = other.riskLevels_;
+          bitField0_ = (bitField0_ & ~0x00000100);
+        } else {
+          ensureRiskLevelsIsMutable();
+          riskLevels_.addAll(other.riskLevels_);
+        }
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -2077,6 +2197,23 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000080;
               break;
             } // case 82
+            case 88: {
+              int tmpRaw = input.readEnum();
+              ensureRiskLevelsIsMutable();
+              riskLevels_.add(tmpRaw);
+              break;
+            } // case 88
+            case 90: {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while(input.getBytesUntilLimit() > 0) {
+                int tmpRaw = input.readEnum();
+                ensureRiskLevelsIsMutable();
+                riskLevels_.add(tmpRaw);
+              }
+              input.popLimit(oldLimit);
+              break;
+            } // case 90
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2772,7 +2909,7 @@ private static final long serialVersionUID = 0L;
     private int pageSize_ ;
     /**
      * <pre>
-     * Optional - number of auto evaluations included in response
+     * Optional - number of auto evaluations included in response.
      * </pre>
      *
      * <code>int32 page_size = 8 [json_name = "pageSize"];</code>
@@ -2784,7 +2921,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional - number of auto evaluations included in response
+     * Optional - number of auto evaluations included in response.
      * </pre>
      *
      * <code>int32 page_size = 8 [json_name = "pageSize"];</code>
@@ -2800,7 +2937,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional - number of auto evaluations included in response
+     * Optional - number of auto evaluations included in response.
      * </pre>
      *
      * <code>int32 page_size = 8 [json_name = "pageSize"];</code>
@@ -2998,6 +3135,194 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       pageToken_ = value;
       bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+
+    private java.util.List<java.lang.Integer> riskLevels_ =
+      java.util.Collections.emptyList();
+    private void ensureRiskLevelsIsMutable() {
+      if (!((bitField0_ & 0x00000100) != 0)) {
+        riskLevels_ = new java.util.ArrayList<java.lang.Integer>(riskLevels_);
+        bitField0_ |= 0x00000100;
+      }
+    }
+    /**
+     * <pre>
+     * Optional - filter by risk level.
+     * </pre>
+     *
+     * <code>repeated .api.commons.RiskLevel risk_levels = 11 [json_name = "riskLevels"];</code>
+     * @return A list containing the riskLevels.
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.RiskLevel> getRiskLevelsList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, com.tcn.cloud.api.api.commons.RiskLevel>(riskLevels_, riskLevels_converter_);
+    }
+    /**
+     * <pre>
+     * Optional - filter by risk level.
+     * </pre>
+     *
+     * <code>repeated .api.commons.RiskLevel risk_levels = 11 [json_name = "riskLevels"];</code>
+     * @return The count of riskLevels.
+     */
+    public int getRiskLevelsCount() {
+      return riskLevels_.size();
+    }
+    /**
+     * <pre>
+     * Optional - filter by risk level.
+     * </pre>
+     *
+     * <code>repeated .api.commons.RiskLevel risk_levels = 11 [json_name = "riskLevels"];</code>
+     * @param index The index of the element to return.
+     * @return The riskLevels at the given index.
+     */
+    public com.tcn.cloud.api.api.commons.RiskLevel getRiskLevels(int index) {
+      return riskLevels_converter_.convert(riskLevels_.get(index));
+    }
+    /**
+     * <pre>
+     * Optional - filter by risk level.
+     * </pre>
+     *
+     * <code>repeated .api.commons.RiskLevel risk_levels = 11 [json_name = "riskLevels"];</code>
+     * @param index The index to set the value at.
+     * @param value The riskLevels to set.
+     * @return This builder for chaining.
+     */
+    public Builder setRiskLevels(
+        int index, com.tcn.cloud.api.api.commons.RiskLevel value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensureRiskLevelsIsMutable();
+      riskLevels_.set(index, value.getNumber());
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional - filter by risk level.
+     * </pre>
+     *
+     * <code>repeated .api.commons.RiskLevel risk_levels = 11 [json_name = "riskLevels"];</code>
+     * @param value The riskLevels to add.
+     * @return This builder for chaining.
+     */
+    public Builder addRiskLevels(com.tcn.cloud.api.api.commons.RiskLevel value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensureRiskLevelsIsMutable();
+      riskLevels_.add(value.getNumber());
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional - filter by risk level.
+     * </pre>
+     *
+     * <code>repeated .api.commons.RiskLevel risk_levels = 11 [json_name = "riskLevels"];</code>
+     * @param values The riskLevels to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllRiskLevels(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.RiskLevel> values) {
+      ensureRiskLevelsIsMutable();
+      for (com.tcn.cloud.api.api.commons.RiskLevel value : values) {
+        riskLevels_.add(value.getNumber());
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional - filter by risk level.
+     * </pre>
+     *
+     * <code>repeated .api.commons.RiskLevel risk_levels = 11 [json_name = "riskLevels"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearRiskLevels() {
+      riskLevels_ = java.util.Collections.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000100);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional - filter by risk level.
+     * </pre>
+     *
+     * <code>repeated .api.commons.RiskLevel risk_levels = 11 [json_name = "riskLevels"];</code>
+     * @return A list containing the enum numeric values on the wire for riskLevels.
+     */
+    public java.util.List<java.lang.Integer>
+    getRiskLevelsValueList() {
+      return java.util.Collections.unmodifiableList(riskLevels_);
+    }
+    /**
+     * <pre>
+     * Optional - filter by risk level.
+     * </pre>
+     *
+     * <code>repeated .api.commons.RiskLevel risk_levels = 11 [json_name = "riskLevels"];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of riskLevels at the given index.
+     */
+    public int getRiskLevelsValue(int index) {
+      return riskLevels_.get(index);
+    }
+    /**
+     * <pre>
+     * Optional - filter by risk level.
+     * </pre>
+     *
+     * <code>repeated .api.commons.RiskLevel risk_levels = 11 [json_name = "riskLevels"];</code>
+     * @param index The index to set the value at.
+     * @param value The enum numeric value on the wire for riskLevels to set.
+     * @return This builder for chaining.
+     */
+    public Builder setRiskLevelsValue(
+        int index, int value) {
+      ensureRiskLevelsIsMutable();
+      riskLevels_.set(index, value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional - filter by risk level.
+     * </pre>
+     *
+     * <code>repeated .api.commons.RiskLevel risk_levels = 11 [json_name = "riskLevels"];</code>
+     * @param value The enum numeric value on the wire for riskLevels to add.
+     * @return This builder for chaining.
+     */
+    public Builder addRiskLevelsValue(int value) {
+      ensureRiskLevelsIsMutable();
+      riskLevels_.add(value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional - filter by risk level.
+     * </pre>
+     *
+     * <code>repeated .api.commons.RiskLevel risk_levels = 11 [json_name = "riskLevels"];</code>
+     * @param values The enum numeric values on the wire for riskLevels to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllRiskLevelsValue(
+        java.lang.Iterable<java.lang.Integer> values) {
+      ensureRiskLevelsIsMutable();
+      for (int value : values) {
+        riskLevels_.add(value);
+      }
       onChanged();
       return this;
     }
