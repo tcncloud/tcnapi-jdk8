@@ -1221,7 +1221,7 @@ private static final long serialVersionUID = 0L;
   private int channelType_ = 0;
   /**
    * <pre>
-   * the conversation's channel type i.e. chat|email|sms|etc.
+   * the conversation's channel type i.e. chat|email|sms|whatsapp|etc.
    * </pre>
    *
    * <code>.api.commons.ChannelType channel_type = 2 [json_name = "channelType"];</code>
@@ -1232,7 +1232,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * the conversation's channel type i.e. chat|email|sms|etc.
+   * the conversation's channel type i.e. chat|email|sms|whatsapp|etc.
    * </pre>
    *
    * <code>.api.commons.ChannelType channel_type = 2 [json_name = "channelType"];</code>
@@ -3036,7 +3036,7 @@ private static final long serialVersionUID = 0L;
     private int channelType_ = 0;
     /**
      * <pre>
-     * the conversation's channel type i.e. chat|email|sms|etc.
+     * the conversation's channel type i.e. chat|email|sms|whatsapp|etc.
      * </pre>
      *
      * <code>.api.commons.ChannelType channel_type = 2 [json_name = "channelType"];</code>
@@ -3047,7 +3047,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the conversation's channel type i.e. chat|email|sms|etc.
+     * the conversation's channel type i.e. chat|email|sms|whatsapp|etc.
      * </pre>
      *
      * <code>.api.commons.ChannelType channel_type = 2 [json_name = "channelType"];</code>
@@ -3062,7 +3062,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the conversation's channel type i.e. chat|email|sms|etc.
+     * the conversation's channel type i.e. chat|email|sms|whatsapp|etc.
      * </pre>
      *
      * <code>.api.commons.ChannelType channel_type = 2 [json_name = "channelType"];</code>
@@ -3075,7 +3075,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the conversation's channel type i.e. chat|email|sms|etc.
+     * the conversation's channel type i.e. chat|email|sms|whatsapp|etc.
      * </pre>
      *
      * <code>.api.commons.ChannelType channel_type = 2 [json_name = "channelType"];</code>
@@ -3093,7 +3093,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the conversation's channel type i.e. chat|email|sms|etc.
+     * the conversation's channel type i.e. chat|email|sms|whatsapp|etc.
      * </pre>
      *
      * <code>.api.commons.ChannelType channel_type = 2 [json_name = "channelType"];</code>

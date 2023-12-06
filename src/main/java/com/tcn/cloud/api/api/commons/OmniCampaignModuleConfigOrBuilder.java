@@ -594,4 +594,31 @@ public interface OmniCampaignModuleConfigOrBuilder extends
    * <code>.api.commons.OmniConversationSkills skills = 21 [json_name = "skills"];</code>
    */
   com.tcn.cloud.api.api.commons.OmniConversationSkillsOrBuilder getSkillsOrBuilder();
+
+  /**
+   * <pre>
+   * whatsapp number
+   * </pre>
+   *
+   * <code>.api.commons.WhatsAppNumber whatsapp_number = 22 [json_name = "whatsappNumber"];</code>
+   * @return Whether the whatsappNumber field is set.
+   */
+  boolean hasWhatsappNumber();
+  /**
+   * <pre>
+   * whatsapp number
+   * </pre>
+   *
+   * <code>.api.commons.WhatsAppNumber whatsapp_number = 22 [json_name = "whatsappNumber"];</code>
+   * @return The whatsappNumber.
+   */
+  com.tcn.cloud.api.api.commons.WhatsAppNumber getWhatsappNumber();
+  /**
+   * <pre>
+   * whatsapp number
+   * </pre>
+   *
+   * <code>.api.commons.WhatsAppNumber whatsapp_number = 22 [json_name = "whatsappNumber"];</code>
+   */
+  com.tcn.cloud.api.api.commons.WhatsAppNumberOrBuilder getWhatsappNumberOrBuilder();
 }

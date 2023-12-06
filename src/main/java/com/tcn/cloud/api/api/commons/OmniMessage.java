@@ -109,6 +109,7 @@ private static final long serialVersionUID = 0L;
    * chat = if agent then user_id, if customer then name
    * email = email address
    * sms = phone number
+   * whatsapp = phone number
    * </pre>
    *
    * <code>string sent_from = 5 [json_name = "sentFrom"];</code>
@@ -133,6 +134,7 @@ private static final long serialVersionUID = 0L;
    * chat = if agent then user_id, if customer then name
    * email = email address
    * sms = phone number
+   * whatsapp = phone number
    * </pre>
    *
    * <code>string sent_from = 5 [json_name = "sentFrom"];</code>
@@ -162,6 +164,7 @@ private static final long serialVersionUID = 0L;
    * chat = if customer then name, otherwise leave as an empty string
    * email = email address
    * sms = phone number
+   * whatsapp = phone number
    * </pre>
    *
    * <code>string sent_to = 6 [json_name = "sentTo"];</code>
@@ -186,6 +189,7 @@ private static final long serialVersionUID = 0L;
    * chat = if customer then name, otherwise leave as an empty string
    * email = email address
    * sms = phone number
+   * whatsapp = phone number
    * </pre>
    *
    * <code>string sent_to = 6 [json_name = "sentTo"];</code>
@@ -240,6 +244,7 @@ private static final long serialVersionUID = 0L;
    * chat = not set
    * email = email message header
    * sms = not set
+   * whatsapp = not set
    * </pre>
    *
    * <code>.google.protobuf.StringValue reference_id = 8 [json_name = "referenceId"];</code>
@@ -255,6 +260,7 @@ private static final long serialVersionUID = 0L;
    * chat = not set
    * email = email message header
    * sms = not set
+   * whatsapp = not set
    * </pre>
    *
    * <code>.google.protobuf.StringValue reference_id = 8 [json_name = "referenceId"];</code>
@@ -270,6 +276,7 @@ private static final long serialVersionUID = 0L;
    * chat = not set
    * email = email message header
    * sms = not set
+   * whatsapp = not set
    * </pre>
    *
    * <code>.google.protobuf.StringValue reference_id = 8 [json_name = "referenceId"];</code>
@@ -530,6 +537,7 @@ private static final long serialVersionUID = 0L;
    * chat = not set
    * email = the email subject line
    * sms = not set
+   * whatsapp = not set
    * </pre>
    *
    * <code>.google.protobuf.StringValue subject = 19 [json_name = "subject"];</code>
@@ -545,6 +553,7 @@ private static final long serialVersionUID = 0L;
    * chat = not set
    * email = the email subject line
    * sms = not set
+   * whatsapp = not set
    * </pre>
    *
    * <code>.google.protobuf.StringValue subject = 19 [json_name = "subject"];</code>
@@ -560,6 +569,7 @@ private static final long serialVersionUID = 0L;
    * chat = not set
    * email = the email subject line
    * sms = not set
+   * whatsapp = not set
    * </pre>
    *
    * <code>.google.protobuf.StringValue subject = 19 [json_name = "subject"];</code>
@@ -1624,6 +1634,7 @@ private static final long serialVersionUID = 0L;
      * chat = if agent then user_id, if customer then name
      * email = email address
      * sms = phone number
+     * whatsapp = phone number
      * </pre>
      *
      * <code>string sent_from = 5 [json_name = "sentFrom"];</code>
@@ -1647,6 +1658,7 @@ private static final long serialVersionUID = 0L;
      * chat = if agent then user_id, if customer then name
      * email = email address
      * sms = phone number
+     * whatsapp = phone number
      * </pre>
      *
      * <code>string sent_from = 5 [json_name = "sentFrom"];</code>
@@ -1671,6 +1683,7 @@ private static final long serialVersionUID = 0L;
      * chat = if agent then user_id, if customer then name
      * email = email address
      * sms = phone number
+     * whatsapp = phone number
      * </pre>
      *
      * <code>string sent_from = 5 [json_name = "sentFrom"];</code>
@@ -1691,6 +1704,7 @@ private static final long serialVersionUID = 0L;
      * chat = if agent then user_id, if customer then name
      * email = email address
      * sms = phone number
+     * whatsapp = phone number
      * </pre>
      *
      * <code>string sent_from = 5 [json_name = "sentFrom"];</code>
@@ -1708,6 +1722,7 @@ private static final long serialVersionUID = 0L;
      * chat = if agent then user_id, if customer then name
      * email = email address
      * sms = phone number
+     * whatsapp = phone number
      * </pre>
      *
      * <code>string sent_from = 5 [json_name = "sentFrom"];</code>
@@ -1731,6 +1746,7 @@ private static final long serialVersionUID = 0L;
      * chat = if customer then name, otherwise leave as an empty string
      * email = email address
      * sms = phone number
+     * whatsapp = phone number
      * </pre>
      *
      * <code>string sent_to = 6 [json_name = "sentTo"];</code>
@@ -1754,6 +1770,7 @@ private static final long serialVersionUID = 0L;
      * chat = if customer then name, otherwise leave as an empty string
      * email = email address
      * sms = phone number
+     * whatsapp = phone number
      * </pre>
      *
      * <code>string sent_to = 6 [json_name = "sentTo"];</code>
@@ -1778,6 +1795,7 @@ private static final long serialVersionUID = 0L;
      * chat = if customer then name, otherwise leave as an empty string
      * email = email address
      * sms = phone number
+     * whatsapp = phone number
      * </pre>
      *
      * <code>string sent_to = 6 [json_name = "sentTo"];</code>
@@ -1798,6 +1816,7 @@ private static final long serialVersionUID = 0L;
      * chat = if customer then name, otherwise leave as an empty string
      * email = email address
      * sms = phone number
+     * whatsapp = phone number
      * </pre>
      *
      * <code>string sent_to = 6 [json_name = "sentTo"];</code>
@@ -1815,6 +1834,7 @@ private static final long serialVersionUID = 0L;
      * chat = if customer then name, otherwise leave as an empty string
      * email = email address
      * sms = phone number
+     * whatsapp = phone number
      * </pre>
      *
      * <code>string sent_to = 6 [json_name = "sentTo"];</code>
@@ -1913,6 +1933,7 @@ private static final long serialVersionUID = 0L;
      * chat = not set
      * email = email message header
      * sms = not set
+     * whatsapp = not set
      * </pre>
      *
      * <code>.google.protobuf.StringValue reference_id = 8 [json_name = "referenceId"];</code>
@@ -1927,6 +1948,7 @@ private static final long serialVersionUID = 0L;
      * chat = not set
      * email = email message header
      * sms = not set
+     * whatsapp = not set
      * </pre>
      *
      * <code>.google.protobuf.StringValue reference_id = 8 [json_name = "referenceId"];</code>
@@ -1945,6 +1967,7 @@ private static final long serialVersionUID = 0L;
      * chat = not set
      * email = email message header
      * sms = not set
+     * whatsapp = not set
      * </pre>
      *
      * <code>.google.protobuf.StringValue reference_id = 8 [json_name = "referenceId"];</code>
@@ -1968,6 +1991,7 @@ private static final long serialVersionUID = 0L;
      * chat = not set
      * email = email message header
      * sms = not set
+     * whatsapp = not set
      * </pre>
      *
      * <code>.google.protobuf.StringValue reference_id = 8 [json_name = "referenceId"];</code>
@@ -1989,6 +2013,7 @@ private static final long serialVersionUID = 0L;
      * chat = not set
      * email = email message header
      * sms = not set
+     * whatsapp = not set
      * </pre>
      *
      * <code>.google.protobuf.StringValue reference_id = 8 [json_name = "referenceId"];</code>
@@ -2015,6 +2040,7 @@ private static final long serialVersionUID = 0L;
      * chat = not set
      * email = email message header
      * sms = not set
+     * whatsapp = not set
      * </pre>
      *
      * <code>.google.protobuf.StringValue reference_id = 8 [json_name = "referenceId"];</code>
@@ -2035,6 +2061,7 @@ private static final long serialVersionUID = 0L;
      * chat = not set
      * email = email message header
      * sms = not set
+     * whatsapp = not set
      * </pre>
      *
      * <code>.google.protobuf.StringValue reference_id = 8 [json_name = "referenceId"];</code>
@@ -2050,6 +2077,7 @@ private static final long serialVersionUID = 0L;
      * chat = not set
      * email = email message header
      * sms = not set
+     * whatsapp = not set
      * </pre>
      *
      * <code>.google.protobuf.StringValue reference_id = 8 [json_name = "referenceId"];</code>
@@ -2068,6 +2096,7 @@ private static final long serialVersionUID = 0L;
      * chat = not set
      * email = email message header
      * sms = not set
+     * whatsapp = not set
      * </pre>
      *
      * <code>.google.protobuf.StringValue reference_id = 8 [json_name = "referenceId"];</code>
@@ -2933,6 +2962,7 @@ private static final long serialVersionUID = 0L;
      * chat = not set
      * email = the email subject line
      * sms = not set
+     * whatsapp = not set
      * </pre>
      *
      * <code>.google.protobuf.StringValue subject = 19 [json_name = "subject"];</code>
@@ -2947,6 +2977,7 @@ private static final long serialVersionUID = 0L;
      * chat = not set
      * email = the email subject line
      * sms = not set
+     * whatsapp = not set
      * </pre>
      *
      * <code>.google.protobuf.StringValue subject = 19 [json_name = "subject"];</code>
@@ -2965,6 +2996,7 @@ private static final long serialVersionUID = 0L;
      * chat = not set
      * email = the email subject line
      * sms = not set
+     * whatsapp = not set
      * </pre>
      *
      * <code>.google.protobuf.StringValue subject = 19 [json_name = "subject"];</code>
@@ -2988,6 +3020,7 @@ private static final long serialVersionUID = 0L;
      * chat = not set
      * email = the email subject line
      * sms = not set
+     * whatsapp = not set
      * </pre>
      *
      * <code>.google.protobuf.StringValue subject = 19 [json_name = "subject"];</code>
@@ -3009,6 +3042,7 @@ private static final long serialVersionUID = 0L;
      * chat = not set
      * email = the email subject line
      * sms = not set
+     * whatsapp = not set
      * </pre>
      *
      * <code>.google.protobuf.StringValue subject = 19 [json_name = "subject"];</code>
@@ -3035,6 +3069,7 @@ private static final long serialVersionUID = 0L;
      * chat = not set
      * email = the email subject line
      * sms = not set
+     * whatsapp = not set
      * </pre>
      *
      * <code>.google.protobuf.StringValue subject = 19 [json_name = "subject"];</code>
@@ -3055,6 +3090,7 @@ private static final long serialVersionUID = 0L;
      * chat = not set
      * email = the email subject line
      * sms = not set
+     * whatsapp = not set
      * </pre>
      *
      * <code>.google.protobuf.StringValue subject = 19 [json_name = "subject"];</code>
@@ -3070,6 +3106,7 @@ private static final long serialVersionUID = 0L;
      * chat = not set
      * email = the email subject line
      * sms = not set
+     * whatsapp = not set
      * </pre>
      *
      * <code>.google.protobuf.StringValue subject = 19 [json_name = "subject"];</code>
@@ -3088,6 +3125,7 @@ private static final long serialVersionUID = 0L;
      * chat = not set
      * email = the email subject line
      * sms = not set
+     * whatsapp = not set
      * </pre>
      *
      * <code>.google.protobuf.StringValue subject = 19 [json_name = "subject"];</code>

@@ -53,6 +53,7 @@ public interface OmniMessageOrBuilder extends
    * chat = if agent then user_id, if customer then name
    * email = email address
    * sms = phone number
+   * whatsapp = phone number
    * </pre>
    *
    * <code>string sent_from = 5 [json_name = "sentFrom"];</code>
@@ -65,6 +66,7 @@ public interface OmniMessageOrBuilder extends
    * chat = if agent then user_id, if customer then name
    * email = email address
    * sms = phone number
+   * whatsapp = phone number
    * </pre>
    *
    * <code>string sent_from = 5 [json_name = "sentFrom"];</code>
@@ -79,6 +81,7 @@ public interface OmniMessageOrBuilder extends
    * chat = if customer then name, otherwise leave as an empty string
    * email = email address
    * sms = phone number
+   * whatsapp = phone number
    * </pre>
    *
    * <code>string sent_to = 6 [json_name = "sentTo"];</code>
@@ -91,6 +94,7 @@ public interface OmniMessageOrBuilder extends
    * chat = if customer then name, otherwise leave as an empty string
    * email = email address
    * sms = phone number
+   * whatsapp = phone number
    * </pre>
    *
    * <code>string sent_to = 6 [json_name = "sentTo"];</code>
@@ -124,6 +128,7 @@ public interface OmniMessageOrBuilder extends
    * chat = not set
    * email = email message header
    * sms = not set
+   * whatsapp = not set
    * </pre>
    *
    * <code>.google.protobuf.StringValue reference_id = 8 [json_name = "referenceId"];</code>
@@ -136,6 +141,7 @@ public interface OmniMessageOrBuilder extends
    * chat = not set
    * email = email message header
    * sms = not set
+   * whatsapp = not set
    * </pre>
    *
    * <code>.google.protobuf.StringValue reference_id = 8 [json_name = "referenceId"];</code>
@@ -148,6 +154,7 @@ public interface OmniMessageOrBuilder extends
    * chat = not set
    * email = email message header
    * sms = not set
+   * whatsapp = not set
    * </pre>
    *
    * <code>.google.protobuf.StringValue reference_id = 8 [json_name = "referenceId"];</code>
@@ -320,6 +327,7 @@ public interface OmniMessageOrBuilder extends
    * chat = not set
    * email = the email subject line
    * sms = not set
+   * whatsapp = not set
    * </pre>
    *
    * <code>.google.protobuf.StringValue subject = 19 [json_name = "subject"];</code>
@@ -332,6 +340,7 @@ public interface OmniMessageOrBuilder extends
    * chat = not set
    * email = the email subject line
    * sms = not set
+   * whatsapp = not set
    * </pre>
    *
    * <code>.google.protobuf.StringValue subject = 19 [json_name = "subject"];</code>
@@ -344,6 +353,7 @@ public interface OmniMessageOrBuilder extends
    * chat = not set
    * email = the email subject line
    * sms = not set
+   * whatsapp = not set
    * </pre>
    *
    * <code>.google.protobuf.StringValue subject = 19 [json_name = "subject"];</code>
