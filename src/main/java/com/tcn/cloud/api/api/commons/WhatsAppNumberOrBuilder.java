@@ -29,38 +29,19 @@ public interface WhatsAppNumberOrBuilder extends
 
   /**
    * <pre>
-   * the type of whatsapp number (Alphanumeric|Short Code|Number)
+   * associated provider (whatsappsms)
    * </pre>
    *
-   * <code>.api.commons.WhatsAppNumberType type = 2 [json_name = "type"];</code>
-   * @return The enum numeric value on the wire for type.
-   */
-  int getTypeValue();
-  /**
-   * <pre>
-   * the type of whatsapp number (Alphanumeric|Short Code|Number)
-   * </pre>
-   *
-   * <code>.api.commons.WhatsAppNumberType type = 2 [json_name = "type"];</code>
-   * @return The type.
-   */
-  com.tcn.cloud.api.api.commons.WhatsAppNumberType getType();
-
-  /**
-   * <pre>
-   * associated provider (whatsappvoice | whatsappsms)
-   * </pre>
-   *
-   * <code>.api.commons.WhatsAppNumberProvider provider = 3 [json_name = "provider"];</code>
+   * <code>.api.commons.WhatsAppNumberProvider provider = 2 [json_name = "provider"];</code>
    * @return The enum numeric value on the wire for provider.
    */
   int getProviderValue();
   /**
    * <pre>
-   * associated provider (whatsappvoice | whatsappsms)
+   * associated provider (whatsappsms)
    * </pre>
    *
-   * <code>.api.commons.WhatsAppNumberProvider provider = 3 [json_name = "provider"];</code>
+   * <code>.api.commons.WhatsAppNumberProvider provider = 2 [json_name = "provider"];</code>
    * @return The provider.
    */
   com.tcn.cloud.api.api.commons.WhatsAppNumberProvider getProvider();
@@ -70,7 +51,7 @@ public interface WhatsAppNumberOrBuilder extends
    * country code the whatsapp number belongs to
    * </pre>
    *
-   * <code>int32 country_code = 4 [json_name = "countryCode"];</code>
+   * <code>int32 country_code = 3 [json_name = "countryCode"];</code>
    * @return The countryCode.
    */
   int getCountryCode();

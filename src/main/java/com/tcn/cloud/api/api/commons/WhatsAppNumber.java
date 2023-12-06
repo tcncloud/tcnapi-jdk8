@@ -21,7 +21,6 @@ private static final long serialVersionUID = 0L;
   }
   private WhatsAppNumber() {
     number_ = "";
-    type_ = 0;
     provider_ = 0;
   }
 
@@ -92,40 +91,14 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int TYPE_FIELD_NUMBER = 2;
-  private int type_ = 0;
-  /**
-   * <pre>
-   * the type of whatsapp number (Alphanumeric|Short Code|Number)
-   * </pre>
-   *
-   * <code>.api.commons.WhatsAppNumberType type = 2 [json_name = "type"];</code>
-   * @return The enum numeric value on the wire for type.
-   */
-  @java.lang.Override public int getTypeValue() {
-    return type_;
-  }
-  /**
-   * <pre>
-   * the type of whatsapp number (Alphanumeric|Short Code|Number)
-   * </pre>
-   *
-   * <code>.api.commons.WhatsAppNumberType type = 2 [json_name = "type"];</code>
-   * @return The type.
-   */
-  @java.lang.Override public com.tcn.cloud.api.api.commons.WhatsAppNumberType getType() {
-    com.tcn.cloud.api.api.commons.WhatsAppNumberType result = com.tcn.cloud.api.api.commons.WhatsAppNumberType.forNumber(type_);
-    return result == null ? com.tcn.cloud.api.api.commons.WhatsAppNumberType.UNRECOGNIZED : result;
-  }
-
-  public static final int PROVIDER_FIELD_NUMBER = 3;
+  public static final int PROVIDER_FIELD_NUMBER = 2;
   private int provider_ = 0;
   /**
    * <pre>
-   * associated provider (whatsappvoice | whatsappsms)
+   * associated provider (whatsappsms)
    * </pre>
    *
-   * <code>.api.commons.WhatsAppNumberProvider provider = 3 [json_name = "provider"];</code>
+   * <code>.api.commons.WhatsAppNumberProvider provider = 2 [json_name = "provider"];</code>
    * @return The enum numeric value on the wire for provider.
    */
   @java.lang.Override public int getProviderValue() {
@@ -133,10 +106,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * associated provider (whatsappvoice | whatsappsms)
+   * associated provider (whatsappsms)
    * </pre>
    *
-   * <code>.api.commons.WhatsAppNumberProvider provider = 3 [json_name = "provider"];</code>
+   * <code>.api.commons.WhatsAppNumberProvider provider = 2 [json_name = "provider"];</code>
    * @return The provider.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.WhatsAppNumberProvider getProvider() {
@@ -144,14 +117,14 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.tcn.cloud.api.api.commons.WhatsAppNumberProvider.UNRECOGNIZED : result;
   }
 
-  public static final int COUNTRY_CODE_FIELD_NUMBER = 4;
+  public static final int COUNTRY_CODE_FIELD_NUMBER = 3;
   private int countryCode_ = 0;
   /**
    * <pre>
    * country code the whatsapp number belongs to
    * </pre>
    *
-   * <code>int32 country_code = 4 [json_name = "countryCode"];</code>
+   * <code>int32 country_code = 3 [json_name = "countryCode"];</code>
    * @return The countryCode.
    */
   @java.lang.Override
@@ -176,14 +149,11 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(number_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, number_);
     }
-    if (type_ != com.tcn.cloud.api.api.commons.WhatsAppNumberType.WHATSAPP_NUMBER_TYPE.getNumber()) {
-      output.writeEnum(2, type_);
-    }
     if (provider_ != com.tcn.cloud.api.api.commons.WhatsAppNumberProvider.UNKNOWN_WHATSAPP_PROVIDER.getNumber()) {
-      output.writeEnum(3, provider_);
+      output.writeEnum(2, provider_);
     }
     if (countryCode_ != 0) {
-      output.writeInt32(4, countryCode_);
+      output.writeInt32(3, countryCode_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -197,17 +167,13 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(number_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, number_);
     }
-    if (type_ != com.tcn.cloud.api.api.commons.WhatsAppNumberType.WHATSAPP_NUMBER_TYPE.getNumber()) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(2, type_);
-    }
     if (provider_ != com.tcn.cloud.api.api.commons.WhatsAppNumberProvider.UNKNOWN_WHATSAPP_PROVIDER.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(3, provider_);
+        .computeEnumSize(2, provider_);
     }
     if (countryCode_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(4, countryCode_);
+        .computeInt32Size(3, countryCode_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -226,7 +192,6 @@ private static final long serialVersionUID = 0L;
 
     if (!getNumber()
         .equals(other.getNumber())) return false;
-    if (type_ != other.type_) return false;
     if (provider_ != other.provider_) return false;
     if (getCountryCode()
         != other.getCountryCode()) return false;
@@ -243,8 +208,6 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + NUMBER_FIELD_NUMBER;
     hash = (53 * hash) + getNumber().hashCode();
-    hash = (37 * hash) + TYPE_FIELD_NUMBER;
-    hash = (53 * hash) + type_;
     hash = (37 * hash) + PROVIDER_FIELD_NUMBER;
     hash = (53 * hash) + provider_;
     hash = (37 * hash) + COUNTRY_CODE_FIELD_NUMBER;
@@ -385,7 +348,6 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       number_ = "";
-      type_ = 0;
       provider_ = 0;
       countryCode_ = 0;
       return this;
@@ -425,12 +387,9 @@ private static final long serialVersionUID = 0L;
         result.number_ = number_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.type_ = type_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
         result.provider_ = provider_;
       }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
+      if (((from_bitField0_ & 0x00000004) != 0)) {
         result.countryCode_ = countryCode_;
       }
     }
@@ -484,9 +443,6 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000001;
         onChanged();
       }
-      if (other.type_ != 0) {
-        setTypeValue(other.getTypeValue());
-      }
       if (other.provider_ != 0) {
         setProviderValue(other.getProviderValue());
       }
@@ -525,20 +481,15 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 10
             case 16: {
-              type_ = input.readEnum();
+              provider_ = input.readEnum();
               bitField0_ |= 0x00000002;
               break;
             } // case 16
             case 24: {
-              provider_ = input.readEnum();
+              countryCode_ = input.readInt32();
               bitField0_ |= 0x00000004;
               break;
             } // case 24
-            case 32: {
-              countryCode_ = input.readInt32();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 32
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -648,86 +599,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private int type_ = 0;
-    /**
-     * <pre>
-     * the type of whatsapp number (Alphanumeric|Short Code|Number)
-     * </pre>
-     *
-     * <code>.api.commons.WhatsAppNumberType type = 2 [json_name = "type"];</code>
-     * @return The enum numeric value on the wire for type.
-     */
-    @java.lang.Override public int getTypeValue() {
-      return type_;
-    }
-    /**
-     * <pre>
-     * the type of whatsapp number (Alphanumeric|Short Code|Number)
-     * </pre>
-     *
-     * <code>.api.commons.WhatsAppNumberType type = 2 [json_name = "type"];</code>
-     * @param value The enum numeric value on the wire for type to set.
-     * @return This builder for chaining.
-     */
-    public Builder setTypeValue(int value) {
-      type_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * the type of whatsapp number (Alphanumeric|Short Code|Number)
-     * </pre>
-     *
-     * <code>.api.commons.WhatsAppNumberType type = 2 [json_name = "type"];</code>
-     * @return The type.
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.WhatsAppNumberType getType() {
-      com.tcn.cloud.api.api.commons.WhatsAppNumberType result = com.tcn.cloud.api.api.commons.WhatsAppNumberType.forNumber(type_);
-      return result == null ? com.tcn.cloud.api.api.commons.WhatsAppNumberType.UNRECOGNIZED : result;
-    }
-    /**
-     * <pre>
-     * the type of whatsapp number (Alphanumeric|Short Code|Number)
-     * </pre>
-     *
-     * <code>.api.commons.WhatsAppNumberType type = 2 [json_name = "type"];</code>
-     * @param value The type to set.
-     * @return This builder for chaining.
-     */
-    public Builder setType(com.tcn.cloud.api.api.commons.WhatsAppNumberType value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      bitField0_ |= 0x00000002;
-      type_ = value.getNumber();
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * the type of whatsapp number (Alphanumeric|Short Code|Number)
-     * </pre>
-     *
-     * <code>.api.commons.WhatsAppNumberType type = 2 [json_name = "type"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearType() {
-      bitField0_ = (bitField0_ & ~0x00000002);
-      type_ = 0;
-      onChanged();
-      return this;
-    }
-
     private int provider_ = 0;
     /**
      * <pre>
-     * associated provider (whatsappvoice | whatsappsms)
+     * associated provider (whatsappsms)
      * </pre>
      *
-     * <code>.api.commons.WhatsAppNumberProvider provider = 3 [json_name = "provider"];</code>
+     * <code>.api.commons.WhatsAppNumberProvider provider = 2 [json_name = "provider"];</code>
      * @return The enum numeric value on the wire for provider.
      */
     @java.lang.Override public int getProviderValue() {
@@ -735,25 +613,25 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * associated provider (whatsappvoice | whatsappsms)
+     * associated provider (whatsappsms)
      * </pre>
      *
-     * <code>.api.commons.WhatsAppNumberProvider provider = 3 [json_name = "provider"];</code>
+     * <code>.api.commons.WhatsAppNumberProvider provider = 2 [json_name = "provider"];</code>
      * @param value The enum numeric value on the wire for provider to set.
      * @return This builder for chaining.
      */
     public Builder setProviderValue(int value) {
       provider_ = value;
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * associated provider (whatsappvoice | whatsappsms)
+     * associated provider (whatsappsms)
      * </pre>
      *
-     * <code>.api.commons.WhatsAppNumberProvider provider = 3 [json_name = "provider"];</code>
+     * <code>.api.commons.WhatsAppNumberProvider provider = 2 [json_name = "provider"];</code>
      * @return The provider.
      */
     @java.lang.Override
@@ -763,10 +641,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * associated provider (whatsappvoice | whatsappsms)
+     * associated provider (whatsappsms)
      * </pre>
      *
-     * <code>.api.commons.WhatsAppNumberProvider provider = 3 [json_name = "provider"];</code>
+     * <code>.api.commons.WhatsAppNumberProvider provider = 2 [json_name = "provider"];</code>
      * @param value The provider to set.
      * @return This builder for chaining.
      */
@@ -774,21 +652,21 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       provider_ = value.getNumber();
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * associated provider (whatsappvoice | whatsappsms)
+     * associated provider (whatsappsms)
      * </pre>
      *
-     * <code>.api.commons.WhatsAppNumberProvider provider = 3 [json_name = "provider"];</code>
+     * <code>.api.commons.WhatsAppNumberProvider provider = 2 [json_name = "provider"];</code>
      * @return This builder for chaining.
      */
     public Builder clearProvider() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000002);
       provider_ = 0;
       onChanged();
       return this;
@@ -800,7 +678,7 @@ private static final long serialVersionUID = 0L;
      * country code the whatsapp number belongs to
      * </pre>
      *
-     * <code>int32 country_code = 4 [json_name = "countryCode"];</code>
+     * <code>int32 country_code = 3 [json_name = "countryCode"];</code>
      * @return The countryCode.
      */
     @java.lang.Override
@@ -812,14 +690,14 @@ private static final long serialVersionUID = 0L;
      * country code the whatsapp number belongs to
      * </pre>
      *
-     * <code>int32 country_code = 4 [json_name = "countryCode"];</code>
+     * <code>int32 country_code = 3 [json_name = "countryCode"];</code>
      * @param value The countryCode to set.
      * @return This builder for chaining.
      */
     public Builder setCountryCode(int value) {
 
       countryCode_ = value;
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -828,11 +706,11 @@ private static final long serialVersionUID = 0L;
      * country code the whatsapp number belongs to
      * </pre>
      *
-     * <code>int32 country_code = 4 [json_name = "countryCode"];</code>
+     * <code>int32 country_code = 3 [json_name = "countryCode"];</code>
      * @return This builder for chaining.
      */
     public Builder clearCountryCode() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000004);
       countryCode_ = 0;
       onChanged();
       return this;

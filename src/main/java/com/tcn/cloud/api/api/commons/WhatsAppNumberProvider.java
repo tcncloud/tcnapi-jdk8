@@ -28,14 +28,6 @@ public enum WhatsAppNumberProvider
    * <code>WHATSAPP_SMS_PROVIDER = 1;</code>
    */
   WHATSAPP_SMS_PROVIDER(1),
-  /**
-   * <pre>
-   * WhatsAppVoiceProvder
-   * </pre>
-   *
-   * <code>WHATSAPP_VOICE_PROVIDER = 2;</code>
-   */
-  WHATSAPP_VOICE_PROVIDER(2),
   UNRECOGNIZED(-1),
   ;
 
@@ -55,14 +47,6 @@ public enum WhatsAppNumberProvider
    * <code>WHATSAPP_SMS_PROVIDER = 1;</code>
    */
   public static final int WHATSAPP_SMS_PROVIDER_VALUE = 1;
-  /**
-   * <pre>
-   * WhatsAppVoiceProvder
-   * </pre>
-   *
-   * <code>WHATSAPP_VOICE_PROVIDER = 2;</code>
-   */
-  public static final int WHATSAPP_VOICE_PROVIDER_VALUE = 2;
 
 
   public final int getNumber() {
@@ -91,7 +75,6 @@ public enum WhatsAppNumberProvider
     switch (value) {
       case 0: return UNKNOWN_WHATSAPP_PROVIDER;
       case 1: return WHATSAPP_SMS_PROVIDER;
-      case 2: return WHATSAPP_VOICE_PROVIDER;
       default: return null;
     }
   }
@@ -122,7 +105,7 @@ public enum WhatsAppNumberProvider
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.commons.OmnichannelProto.getDescriptor().getEnumTypes().get(22);
+    return com.tcn.cloud.api.api.commons.OmnichannelProto.getDescriptor().getEnumTypes().get(21);
   }
 
   private static final WhatsAppNumberProvider[] VALUES = values();
