@@ -136,7 +136,7 @@ public interface OmniCampaignOrBuilder extends
 
   /**
    * <pre>
-   * campaign channel type (chat|email|sms|etc.)
+   * campaign channel type (chat|email|sms|whatsapp|etc.)
    * </pre>
    *
    * <code>.api.commons.ChannelType channel_type = 7 [json_name = "channelType"];</code>
@@ -145,7 +145,7 @@ public interface OmniCampaignOrBuilder extends
   int getChannelTypeValue();
   /**
    * <pre>
-   * campaign channel type (chat|email|sms|etc.)
+   * campaign channel type (chat|email|sms|whatsapp|etc.)
    * </pre>
    *
    * <code>.api.commons.ChannelType channel_type = 7 [json_name = "channelType"];</code>

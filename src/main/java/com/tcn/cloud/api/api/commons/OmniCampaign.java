@@ -266,7 +266,7 @@ private static final long serialVersionUID = 0L;
   private int channelType_ = 0;
   /**
    * <pre>
-   * campaign channel type (chat|email|sms|etc.)
+   * campaign channel type (chat|email|sms|whatsapp|etc.)
    * </pre>
    *
    * <code>.api.commons.ChannelType channel_type = 7 [json_name = "channelType"];</code>
@@ -277,7 +277,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * campaign channel type (chat|email|sms|etc.)
+   * campaign channel type (chat|email|sms|whatsapp|etc.)
    * </pre>
    *
    * <code>.api.commons.ChannelType channel_type = 7 [json_name = "channelType"];</code>
@@ -1907,7 +1907,7 @@ private static final long serialVersionUID = 0L;
     private int channelType_ = 0;
     /**
      * <pre>
-     * campaign channel type (chat|email|sms|etc.)
+     * campaign channel type (chat|email|sms|whatsapp|etc.)
      * </pre>
      *
      * <code>.api.commons.ChannelType channel_type = 7 [json_name = "channelType"];</code>
@@ -1918,7 +1918,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * campaign channel type (chat|email|sms|etc.)
+     * campaign channel type (chat|email|sms|whatsapp|etc.)
      * </pre>
      *
      * <code>.api.commons.ChannelType channel_type = 7 [json_name = "channelType"];</code>
@@ -1933,7 +1933,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * campaign channel type (chat|email|sms|etc.)
+     * campaign channel type (chat|email|sms|whatsapp|etc.)
      * </pre>
      *
      * <code>.api.commons.ChannelType channel_type = 7 [json_name = "channelType"];</code>
@@ -1946,7 +1946,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * campaign channel type (chat|email|sms|etc.)
+     * campaign channel type (chat|email|sms|whatsapp|etc.)
      * </pre>
      *
      * <code>.api.commons.ChannelType channel_type = 7 [json_name = "channelType"];</code>
@@ -1964,7 +1964,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * campaign channel type (chat|email|sms|etc.)
+     * campaign channel type (chat|email|sms|whatsapp|etc.)
      * </pre>
      *
      * <code>.api.commons.ChannelType channel_type = 7 [json_name = "channelType"];</code>

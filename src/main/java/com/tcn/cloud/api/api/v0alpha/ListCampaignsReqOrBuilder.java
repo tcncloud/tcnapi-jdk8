@@ -188,5 +188,20 @@ public interface ListCampaignsReqOrBuilder extends
    */
   com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.BySmsNumberOrBuilder getBySmsNumberOrBuilder();
 
+  /**
+   * <code>.api.v0alpha.ListCampaignsReq.ByWhatsAppNumber by_whatsapp_number = 107 [json_name = "byWhatsappNumber"];</code>
+   * @return Whether the byWhatsappNumber field is set.
+   */
+  boolean hasByWhatsappNumber();
+  /**
+   * <code>.api.v0alpha.ListCampaignsReq.ByWhatsAppNumber by_whatsapp_number = 107 [json_name = "byWhatsappNumber"];</code>
+   * @return The byWhatsappNumber.
+   */
+  com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsAppNumber getByWhatsappNumber();
+  /**
+   * <code>.api.v0alpha.ListCampaignsReq.ByWhatsAppNumber by_whatsapp_number = 107 [json_name = "byWhatsappNumber"];</code>
+   */
+  com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsAppNumberOrBuilder getByWhatsappNumberOrBuilder();
+
   com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.FilterCase getFilterCase();
 }

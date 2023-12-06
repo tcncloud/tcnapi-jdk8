@@ -51,6 +51,7 @@ private static final long serialVersionUID = 0L;
     CALL_TYPE(1),
     EMAIL_TYPE(2),
     SMS_TYPE(3),
+    WHATSAPP_TYPE(4),
     TYPE_NOT_SET(0);
     private final int value;
     private TypeCase(int value) {
@@ -71,6 +72,7 @@ private static final long serialVersionUID = 0L;
         case 1: return CALL_TYPE;
         case 2: return EMAIL_TYPE;
         case 3: return SMS_TYPE;
+        case 4: return WHATSAPP_TYPE;
         case 0: return TYPE_NOT_SET;
         default: return null;
       }
@@ -179,6 +181,37 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.SmsType.Enum.OUTBOUND;
   }
 
+  public static final int WHATSAPP_TYPE_FIELD_NUMBER = 4;
+  /**
+   * <code>.api.commons.WhatsAppType.Enum whatsapp_type = 4 [json_name = "whatsappType"];</code>
+   * @return Whether the whatsappType field is set.
+   */
+  public boolean hasWhatsappType() {
+    return typeCase_ == 4;
+  }
+  /**
+   * <code>.api.commons.WhatsAppType.Enum whatsapp_type = 4 [json_name = "whatsappType"];</code>
+   * @return The enum numeric value on the wire for whatsappType.
+   */
+  public int getWhatsappTypeValue() {
+    if (typeCase_ == 4) {
+      return (java.lang.Integer) type_;
+    }
+    return 0;
+  }
+  /**
+   * <code>.api.commons.WhatsAppType.Enum whatsapp_type = 4 [json_name = "whatsappType"];</code>
+   * @return The whatsappType.
+   */
+  public com.tcn.cloud.api.api.commons.WhatsAppType.Enum getWhatsappType() {
+    if (typeCase_ == 4) {
+      com.tcn.cloud.api.api.commons.WhatsAppType.Enum result = com.tcn.cloud.api.api.commons.WhatsAppType.Enum.forNumber(
+          (java.lang.Integer) type_);
+      return result == null ? com.tcn.cloud.api.api.commons.WhatsAppType.Enum.UNRECOGNIZED : result;
+    }
+    return com.tcn.cloud.api.api.commons.WhatsAppType.Enum.OUTBOUND;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -202,6 +235,9 @@ private static final long serialVersionUID = 0L;
     if (typeCase_ == 3) {
       output.writeEnum(3, ((java.lang.Integer) type_));
     }
+    if (typeCase_ == 4) {
+      output.writeEnum(4, ((java.lang.Integer) type_));
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -222,6 +258,10 @@ private static final long serialVersionUID = 0L;
     if (typeCase_ == 3) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(3, ((java.lang.Integer) type_));
+    }
+    if (typeCase_ == 4) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(4, ((java.lang.Integer) type_));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -252,6 +292,10 @@ private static final long serialVersionUID = 0L;
         if (getSmsTypeValue()
             != other.getSmsTypeValue()) return false;
         break;
+      case 4:
+        if (getWhatsappTypeValue()
+            != other.getWhatsappTypeValue()) return false;
+        break;
       case 0:
       default:
     }
@@ -278,6 +322,10 @@ private static final long serialVersionUID = 0L;
       case 3:
         hash = (37 * hash) + SMS_TYPE_FIELD_NUMBER;
         hash = (53 * hash) + getSmsTypeValue();
+        break;
+      case 4:
+        hash = (37 * hash) + WHATSAPP_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + getWhatsappTypeValue();
         break;
       case 0:
       default:
@@ -517,6 +565,10 @@ private static final long serialVersionUID = 0L;
           setSmsTypeValue(other.getSmsTypeValue());
           break;
         }
+        case WHATSAPP_TYPE: {
+          setWhatsappTypeValue(other.getWhatsappTypeValue());
+          break;
+        }
         case TYPE_NOT_SET: {
           break;
         }
@@ -565,6 +617,12 @@ private static final long serialVersionUID = 0L;
               type_ = rawValue;
               break;
             } // case 24
+            case 32: {
+              int rawValue = input.readEnum();
+              typeCase_ = 4;
+              type_ = rawValue;
+              break;
+            } // case 32
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -800,6 +858,76 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearSmsType() {
       if (typeCase_ == 3) {
+        typeCase_ = 0;
+        type_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <code>.api.commons.WhatsAppType.Enum whatsapp_type = 4 [json_name = "whatsappType"];</code>
+     * @return Whether the whatsappType field is set.
+     */
+    @java.lang.Override
+    public boolean hasWhatsappType() {
+      return typeCase_ == 4;
+    }
+    /**
+     * <code>.api.commons.WhatsAppType.Enum whatsapp_type = 4 [json_name = "whatsappType"];</code>
+     * @return The enum numeric value on the wire for whatsappType.
+     */
+    @java.lang.Override
+    public int getWhatsappTypeValue() {
+      if (typeCase_ == 4) {
+        return ((java.lang.Integer) type_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <code>.api.commons.WhatsAppType.Enum whatsapp_type = 4 [json_name = "whatsappType"];</code>
+     * @param value The enum numeric value on the wire for whatsappType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setWhatsappTypeValue(int value) {
+      typeCase_ = 4;
+      type_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.WhatsAppType.Enum whatsapp_type = 4 [json_name = "whatsappType"];</code>
+     * @return The whatsappType.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.WhatsAppType.Enum getWhatsappType() {
+      if (typeCase_ == 4) {
+        com.tcn.cloud.api.api.commons.WhatsAppType.Enum result = com.tcn.cloud.api.api.commons.WhatsAppType.Enum.forNumber(
+            (java.lang.Integer) type_);
+        return result == null ? com.tcn.cloud.api.api.commons.WhatsAppType.Enum.UNRECOGNIZED : result;
+      }
+      return com.tcn.cloud.api.api.commons.WhatsAppType.Enum.OUTBOUND;
+    }
+    /**
+     * <code>.api.commons.WhatsAppType.Enum whatsapp_type = 4 [json_name = "whatsappType"];</code>
+     * @param value The whatsappType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setWhatsappType(com.tcn.cloud.api.api.commons.WhatsAppType.Enum value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      typeCase_ = 4;
+      type_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.WhatsAppType.Enum whatsapp_type = 4 [json_name = "whatsappType"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearWhatsappType() {
+      if (typeCase_ == 4) {
         typeCase_ = 0;
         type_ = null;
         onChanged();

@@ -867,6 +867,44 @@ private static final long serialVersionUID = 0L;
     return skills_ == null ? com.tcn.cloud.api.api.commons.OmniConversationSkills.getDefaultInstance() : skills_;
   }
 
+  public static final int WHATSAPP_NUMBER_FIELD_NUMBER = 22;
+  private com.tcn.cloud.api.api.commons.WhatsAppNumber whatsappNumber_;
+  /**
+   * <pre>
+   * whatsapp number
+   * </pre>
+   *
+   * <code>.api.commons.WhatsAppNumber whatsapp_number = 22 [json_name = "whatsappNumber"];</code>
+   * @return Whether the whatsappNumber field is set.
+   */
+  @java.lang.Override
+  public boolean hasWhatsappNumber() {
+    return whatsappNumber_ != null;
+  }
+  /**
+   * <pre>
+   * whatsapp number
+   * </pre>
+   *
+   * <code>.api.commons.WhatsAppNumber whatsapp_number = 22 [json_name = "whatsappNumber"];</code>
+   * @return The whatsappNumber.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.WhatsAppNumber getWhatsappNumber() {
+    return whatsappNumber_ == null ? com.tcn.cloud.api.api.commons.WhatsAppNumber.getDefaultInstance() : whatsappNumber_;
+  }
+  /**
+   * <pre>
+   * whatsapp number
+   * </pre>
+   *
+   * <code>.api.commons.WhatsAppNumber whatsapp_number = 22 [json_name = "whatsappNumber"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.WhatsAppNumberOrBuilder getWhatsappNumberOrBuilder() {
+    return whatsappNumber_ == null ? com.tcn.cloud.api.api.commons.WhatsAppNumber.getDefaultInstance() : whatsappNumber_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -940,6 +978,9 @@ private static final long serialVersionUID = 0L;
     }
     if (skills_ != null) {
       output.writeMessage(21, getSkills());
+    }
+    if (whatsappNumber_ != null) {
+      output.writeMessage(22, getWhatsappNumber());
     }
     getUnknownFields().writeTo(output);
   }
@@ -1033,6 +1074,10 @@ private static final long serialVersionUID = 0L;
     if (skills_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(21, getSkills());
+    }
+    if (whatsappNumber_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(22, getWhatsappNumber());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -1140,6 +1185,11 @@ private static final long serialVersionUID = 0L;
       if (!getSkills()
           .equals(other.getSkills())) return false;
     }
+    if (hasWhatsappNumber() != other.hasWhatsappNumber()) return false;
+    if (hasWhatsappNumber()) {
+      if (!getWhatsappNumber()
+          .equals(other.getWhatsappNumber())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1230,6 +1280,10 @@ private static final long serialVersionUID = 0L;
     if (hasSkills()) {
       hash = (37 * hash) + SKILLS_FIELD_NUMBER;
       hash = (53 * hash) + getSkills().hashCode();
+    }
+    if (hasWhatsappNumber()) {
+      hash = (37 * hash) + WHATSAPP_NUMBER_FIELD_NUMBER;
+      hash = (53 * hash) + getWhatsappNumber().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -1467,6 +1521,11 @@ private static final long serialVersionUID = 0L;
         skillsBuilder_.dispose();
         skillsBuilder_ = null;
       }
+      whatsappNumber_ = null;
+      if (whatsappNumberBuilder_ != null) {
+        whatsappNumberBuilder_.dispose();
+        whatsappNumberBuilder_ = null;
+      }
       return this;
     }
 
@@ -1610,6 +1669,11 @@ private static final long serialVersionUID = 0L;
         result.skills_ = skillsBuilder_ == null
             ? skills_
             : skillsBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00100000) != 0)) {
+        result.whatsappNumber_ = whatsappNumberBuilder_ == null
+            ? whatsappNumber_
+            : whatsappNumberBuilder_.build();
       }
     }
 
@@ -1769,6 +1833,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasSkills()) {
         mergeSkills(other.getSkills());
+      }
+      if (other.hasWhatsappNumber()) {
+        mergeWhatsappNumber(other.getWhatsappNumber());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -1947,6 +2014,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00080000;
               break;
             } // case 170
+            case 178: {
+              input.readMessage(
+                  getWhatsappNumberFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00100000;
+              break;
+            } // case 178
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -5368,6 +5442,161 @@ private static final long serialVersionUID = 0L;
         skills_ = null;
       }
       return skillsBuilder_;
+    }
+
+    private com.tcn.cloud.api.api.commons.WhatsAppNumber whatsappNumber_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.WhatsAppNumber, com.tcn.cloud.api.api.commons.WhatsAppNumber.Builder, com.tcn.cloud.api.api.commons.WhatsAppNumberOrBuilder> whatsappNumberBuilder_;
+    /**
+     * <pre>
+     * whatsapp number
+     * </pre>
+     *
+     * <code>.api.commons.WhatsAppNumber whatsapp_number = 22 [json_name = "whatsappNumber"];</code>
+     * @return Whether the whatsappNumber field is set.
+     */
+    public boolean hasWhatsappNumber() {
+      return ((bitField0_ & 0x00100000) != 0);
+    }
+    /**
+     * <pre>
+     * whatsapp number
+     * </pre>
+     *
+     * <code>.api.commons.WhatsAppNumber whatsapp_number = 22 [json_name = "whatsappNumber"];</code>
+     * @return The whatsappNumber.
+     */
+    public com.tcn.cloud.api.api.commons.WhatsAppNumber getWhatsappNumber() {
+      if (whatsappNumberBuilder_ == null) {
+        return whatsappNumber_ == null ? com.tcn.cloud.api.api.commons.WhatsAppNumber.getDefaultInstance() : whatsappNumber_;
+      } else {
+        return whatsappNumberBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * whatsapp number
+     * </pre>
+     *
+     * <code>.api.commons.WhatsAppNumber whatsapp_number = 22 [json_name = "whatsappNumber"];</code>
+     */
+    public Builder setWhatsappNumber(com.tcn.cloud.api.api.commons.WhatsAppNumber value) {
+      if (whatsappNumberBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        whatsappNumber_ = value;
+      } else {
+        whatsappNumberBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00100000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * whatsapp number
+     * </pre>
+     *
+     * <code>.api.commons.WhatsAppNumber whatsapp_number = 22 [json_name = "whatsappNumber"];</code>
+     */
+    public Builder setWhatsappNumber(
+        com.tcn.cloud.api.api.commons.WhatsAppNumber.Builder builderForValue) {
+      if (whatsappNumberBuilder_ == null) {
+        whatsappNumber_ = builderForValue.build();
+      } else {
+        whatsappNumberBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00100000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * whatsapp number
+     * </pre>
+     *
+     * <code>.api.commons.WhatsAppNumber whatsapp_number = 22 [json_name = "whatsappNumber"];</code>
+     */
+    public Builder mergeWhatsappNumber(com.tcn.cloud.api.api.commons.WhatsAppNumber value) {
+      if (whatsappNumberBuilder_ == null) {
+        if (((bitField0_ & 0x00100000) != 0) &&
+          whatsappNumber_ != null &&
+          whatsappNumber_ != com.tcn.cloud.api.api.commons.WhatsAppNumber.getDefaultInstance()) {
+          getWhatsappNumberBuilder().mergeFrom(value);
+        } else {
+          whatsappNumber_ = value;
+        }
+      } else {
+        whatsappNumberBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00100000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * whatsapp number
+     * </pre>
+     *
+     * <code>.api.commons.WhatsAppNumber whatsapp_number = 22 [json_name = "whatsappNumber"];</code>
+     */
+    public Builder clearWhatsappNumber() {
+      bitField0_ = (bitField0_ & ~0x00100000);
+      whatsappNumber_ = null;
+      if (whatsappNumberBuilder_ != null) {
+        whatsappNumberBuilder_.dispose();
+        whatsappNumberBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * whatsapp number
+     * </pre>
+     *
+     * <code>.api.commons.WhatsAppNumber whatsapp_number = 22 [json_name = "whatsappNumber"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.WhatsAppNumber.Builder getWhatsappNumberBuilder() {
+      bitField0_ |= 0x00100000;
+      onChanged();
+      return getWhatsappNumberFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * whatsapp number
+     * </pre>
+     *
+     * <code>.api.commons.WhatsAppNumber whatsapp_number = 22 [json_name = "whatsappNumber"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.WhatsAppNumberOrBuilder getWhatsappNumberOrBuilder() {
+      if (whatsappNumberBuilder_ != null) {
+        return whatsappNumberBuilder_.getMessageOrBuilder();
+      } else {
+        return whatsappNumber_ == null ?
+            com.tcn.cloud.api.api.commons.WhatsAppNumber.getDefaultInstance() : whatsappNumber_;
+      }
+    }
+    /**
+     * <pre>
+     * whatsapp number
+     * </pre>
+     *
+     * <code>.api.commons.WhatsAppNumber whatsapp_number = 22 [json_name = "whatsappNumber"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.WhatsAppNumber, com.tcn.cloud.api.api.commons.WhatsAppNumber.Builder, com.tcn.cloud.api.api.commons.WhatsAppNumberOrBuilder> 
+        getWhatsappNumberFieldBuilder() {
+      if (whatsappNumberBuilder_ == null) {
+        whatsappNumberBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.WhatsAppNumber, com.tcn.cloud.api.api.commons.WhatsAppNumber.Builder, com.tcn.cloud.api.api.commons.WhatsAppNumberOrBuilder>(
+                getWhatsappNumber(),
+                getParentForChildren(),
+                isClean());
+        whatsappNumber_ = null;
+      }
+      return whatsappNumberBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

@@ -34,6 +34,11 @@ public final class UserProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_commons_org_Skill_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_org_PasswordResetLink_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_org_PasswordResetLink_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -90,10 +95,14 @@ public final class UserProto {
       "clientSid\"p\n\005Skill\022\024\n\005level\030\001 \001(\003R\005level" +
       "\022\022\n\004name\030\002 \001(\tR\004name\022 \n\013description\030\003 \001(" +
       "\tR\013description\022\033\n\tskill_sid\030\004 \001(\003R\010skill" +
-      "SidB\214\001\n!com.tcn.cloud.api.api.commons.or" +
-      "gB\tUserProtoP\001\242\002\003ACO\252\002\017Api.Commons.Org\312\002" +
-      "\017Api\\Commons\\Org\342\002\033Api\\Commons\\Org\\GPBMe" +
-      "tadata\352\002\021Api::Commons::Orgb\006proto3"
+      "Sid\"\230\001\n\021PasswordResetLink\022\027\n\007link_id\030\001 \001" +
+      "(\tR\006linkId\022\027\n\007user_id\030\002 \001(\tR\006userId\022\025\n\006o" +
+      "rg_id\030\003 \001(\tR\005orgId\022:\n\nexpiration\030\004 \001(\0132\032" +
+      ".google.protobuf.TimestampR\nexpirationB\214" +
+      "\001\n!com.tcn.cloud.api.api.commons.orgB\tUs" +
+      "erProtoP\001\242\002\003ACO\252\002\017Api.Commons.Org\312\002\017Api\\" +
+      "Commons\\Org\342\002\033Api\\Commons\\Org\\GPBMetadat" +
+      "a\352\002\021Api::Commons::Orgb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -126,6 +135,12 @@ public final class UserProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_org_Skill_descriptor,
         new java.lang.String[] { "Level", "Name", "Description", "SkillSid", });
+    internal_static_api_commons_org_PasswordResetLink_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_api_commons_org_PasswordResetLink_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_org_PasswordResetLink_descriptor,
+        new java.lang.String[] { "LinkId", "UserId", "OrgId", "Expiration", });
     com.tcn.cloud.api.api.commons.OrgProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();

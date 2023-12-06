@@ -1165,6 +1165,37 @@ public final class OrgGrpc {
     return getUpdateBusinessPreferencesMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.UpdateAdminBusinessPreferencesRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.UpdateAdminBusinessPreferencesResponse> getUpdateAdminBusinessPreferencesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateAdminBusinessPreferences",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.UpdateAdminBusinessPreferencesRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.UpdateAdminBusinessPreferencesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.UpdateAdminBusinessPreferencesRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.UpdateAdminBusinessPreferencesResponse> getUpdateAdminBusinessPreferencesMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.UpdateAdminBusinessPreferencesRequest, com.tcn.cloud.api.api.v1alpha1.org.UpdateAdminBusinessPreferencesResponse> getUpdateAdminBusinessPreferencesMethod;
+    if ((getUpdateAdminBusinessPreferencesMethod = OrgGrpc.getUpdateAdminBusinessPreferencesMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getUpdateAdminBusinessPreferencesMethod = OrgGrpc.getUpdateAdminBusinessPreferencesMethod) == null) {
+          OrgGrpc.getUpdateAdminBusinessPreferencesMethod = getUpdateAdminBusinessPreferencesMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.UpdateAdminBusinessPreferencesRequest, com.tcn.cloud.api.api.v1alpha1.org.UpdateAdminBusinessPreferencesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateAdminBusinessPreferences"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.UpdateAdminBusinessPreferencesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.UpdateAdminBusinessPreferencesResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateAdminBusinessPreferences"))
+              .build();
+        }
+      }
+    }
+    return getUpdateAdminBusinessPreferencesMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.GetScorecardsPreferencesRequest,
       com.tcn.cloud.api.api.v1alpha1.org.GetScorecardsPreferencesResponse> getGetScorecardsPreferencesMethod;
 
@@ -2248,6 +2279,37 @@ public final class OrgGrpc {
       }
     }
     return getGetUserPasswordResetLinkByOrgIdMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkResponse> getCreatePasswordResetLinkMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreatePasswordResetLink",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkResponse> getCreatePasswordResetLinkMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkRequest, com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkResponse> getCreatePasswordResetLinkMethod;
+    if ((getCreatePasswordResetLinkMethod = OrgGrpc.getCreatePasswordResetLinkMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getCreatePasswordResetLinkMethod = OrgGrpc.getCreatePasswordResetLinkMethod) == null) {
+          OrgGrpc.getCreatePasswordResetLinkMethod = getCreatePasswordResetLinkMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkRequest, com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreatePasswordResetLink"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("CreatePasswordResetLink"))
+              .build();
+        }
+      }
+    }
+    return getCreatePasswordResetLinkMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.GetUserLoginInfoRequest,
@@ -5449,6 +5511,16 @@ public final class OrgGrpc {
 
     /**
      * <pre>
+     * UpdateAdminBusinessPreferences updates preferences for business intelligence.
+     * </pre>
+     */
+    default void updateAdminBusinessPreferences(com.tcn.cloud.api.api.v1alpha1.org.UpdateAdminBusinessPreferencesRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.UpdateAdminBusinessPreferencesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateAdminBusinessPreferencesMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * GetScorecardsPreferences returns preferences for scorecards.
      * </pre>
      */
@@ -5803,6 +5875,16 @@ public final class OrgGrpc {
     default void getUserPasswordResetLinkByOrgId(com.tcn.cloud.api.api.v1alpha1.org.GetUserPasswordResetLinkByOrgIdRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.GetUserPasswordResetLinkByOrgIdResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetUserPasswordResetLinkByOrgIdMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * CreatePasswordResetLink creates a password reset link for the given user id.
+     * </pre>
+     */
+    default void createPasswordResetLink(com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreatePasswordResetLinkMethod(), responseObserver);
     }
 
     /**
@@ -7177,6 +7259,17 @@ public final class OrgGrpc {
 
     /**
      * <pre>
+     * UpdateAdminBusinessPreferences updates preferences for business intelligence.
+     * </pre>
+     */
+    public void updateAdminBusinessPreferences(com.tcn.cloud.api.api.v1alpha1.org.UpdateAdminBusinessPreferencesRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.UpdateAdminBusinessPreferencesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateAdminBusinessPreferencesMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * GetScorecardsPreferences returns preferences for scorecards.
      * </pre>
      */
@@ -7566,6 +7659,17 @@ public final class OrgGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.GetUserPasswordResetLinkByOrgIdResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetUserPasswordResetLinkByOrgIdMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * CreatePasswordResetLink creates a password reset link for the given user id.
+     * </pre>
+     */
+    public void createPasswordResetLink(com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreatePasswordResetLinkMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -8982,6 +9086,16 @@ public final class OrgGrpc {
 
     /**
      * <pre>
+     * UpdateAdminBusinessPreferences updates preferences for business intelligence.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.UpdateAdminBusinessPreferencesResponse updateAdminBusinessPreferences(com.tcn.cloud.api.api.v1alpha1.org.UpdateAdminBusinessPreferencesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateAdminBusinessPreferencesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * GetScorecardsPreferences returns preferences for scorecards.
      * </pre>
      */
@@ -9340,6 +9454,16 @@ public final class OrgGrpc {
     public com.tcn.cloud.api.api.v1alpha1.org.GetUserPasswordResetLinkByOrgIdResponse getUserPasswordResetLinkByOrgId(com.tcn.cloud.api.api.v1alpha1.org.GetUserPasswordResetLinkByOrgIdRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetUserPasswordResetLinkByOrgIdMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * CreatePasswordResetLink creates a password reset link for the given user id.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkResponse createPasswordResetLink(com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreatePasswordResetLinkMethod(), getCallOptions(), request);
     }
 
     /**
@@ -10656,6 +10780,17 @@ public final class OrgGrpc {
 
     /**
      * <pre>
+     * UpdateAdminBusinessPreferences updates preferences for business intelligence.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.UpdateAdminBusinessPreferencesResponse> updateAdminBusinessPreferences(
+        com.tcn.cloud.api.api.v1alpha1.org.UpdateAdminBusinessPreferencesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateAdminBusinessPreferencesMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * GetScorecardsPreferences returns preferences for scorecards.
      * </pre>
      */
@@ -11001,6 +11136,17 @@ public final class OrgGrpc {
         com.tcn.cloud.api.api.v1alpha1.org.GetUserPasswordResetLinkByOrgIdRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetUserPasswordResetLinkByOrgIdMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * CreatePasswordResetLink creates a password reset link for the given user id.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkResponse> createPasswordResetLink(
+        com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreatePasswordResetLinkMethod(), getCallOptions()), request);
     }
 
     /**
@@ -12042,130 +12188,132 @@ public final class OrgGrpc {
   private static final int METHODID_UPDATE_EMAIL_SMS_PREFERENCES = 34;
   private static final int METHODID_GET_BUSINESS_PREFERENCES = 35;
   private static final int METHODID_UPDATE_BUSINESS_PREFERENCES = 36;
-  private static final int METHODID_GET_SCORECARDS_PREFERENCES = 37;
-  private static final int METHODID_UPDATE_SCORECARDS_PREFERENCES = 38;
-  private static final int METHODID_GET_VOICE_ANALYTICS_PREFERENCES = 39;
-  private static final int METHODID_LIST_VOICE_ANALYTICS_PREFERENCES = 40;
-  private static final int METHODID_UPDATE_VOICE_ANALYTICS_PREFERENCES = 41;
-  private static final int METHODID_GET_END_OF_DAY_PREFERENCES = 42;
-  private static final int METHODID_UPDATE_END_OF_DAY_PREFERENCES = 43;
-  private static final int METHODID_GET_REPORT_FILTER_PREFERENCES = 44;
-  private static final int METHODID_UPDATE_REPORT_FILTER_PREFERENCES = 45;
-  private static final int METHODID_GET_RECORDING_PREFERENCES = 46;
-  private static final int METHODID_UPDATE_RECORDING_PREFERENCES = 47;
-  private static final int METHODID_GET_ADMIN_CLIENT_PREFERENCES = 48;
-  private static final int METHODID_UPDATE_ADMIN_CLIENT_PREFERENCES = 49;
-  private static final int METHODID_ACCEPT_LINKBACK_RECORDING_TERMS = 50;
-  private static final int METHODID_LINKBACK_UPDATE_BROADCAST_TEMPLATES = 51;
-  private static final int METHODID_RECORD_EMAIL_UNSUBSCRIBE_ACKNOWLEDGEMENT = 52;
-  private static final int METHODID_CLEAR_EMAIL_UNSUBSCRIBE_ACKNOWLEDGEMENT = 53;
-  private static final int METHODID_CREATE_USER = 54;
-  private static final int METHODID_CREATE_DELEGATED_USER = 55;
-  private static final int METHODID_GET_MY_USER = 56;
-  private static final int METHODID_GET_USER = 57;
-  private static final int METHODID_GET_USER_BY_ORG_ID = 58;
-  private static final int METHODID_LIST_AGENTS = 59;
-  private static final int METHODID_LIST_USERS = 60;
-  private static final int METHODID_LIST_USERS_BY_ORG_ID = 61;
-  private static final int METHODID_LIST_USERS_BY_REGION = 62;
-  private static final int METHODID_UPDATE_MY_USER = 63;
-  private static final int METHODID_UPDATE_USER = 64;
-  private static final int METHODID_UPDATE_USER_LABELS = 65;
-  private static final int METHODID_UPDATE_USER_CALLER_ID = 66;
-  private static final int METHODID_UPDATE_USER_DISABLED = 67;
-  private static final int METHODID_UPDATE_USER_DISABLED_BY_ORG_ID = 68;
-  private static final int METHODID_GET_MY_USER_PASSWORD_RESET_LINK = 69;
-  private static final int METHODID_GET_USER_PASSWORD_RESET_LINK = 70;
-  private static final int METHODID_GET_USER_PASSWORD_RESET_LINK_BY_ORG_ID = 71;
-  private static final int METHODID_GET_USER_LOGIN_INFO = 72;
-  private static final int METHODID_GET_USER_EMAIL_VERIFIED = 73;
-  private static final int METHODID_GET_USER_EMAIL_VERIFIED_BY_ORG_ID = 74;
-  private static final int METHODID_SEND_USER_EMAIL_VERIFICATION = 75;
-  private static final int METHODID_SEND_USER_EMAIL_VERIFICATION_BY_ORG_ID = 76;
-  private static final int METHODID_GET_USER_SESSION_DATA = 77;
-  private static final int METHODID_GET_AGENT_PROFILE_GROUP = 78;
-  private static final int METHODID_LIST_AGENT_PROFILE_GROUPS = 79;
-  private static final int METHODID_UPDATE_AGENT_PROFILE_GROUP = 80;
-  private static final int METHODID_CREATE_AGENT_PROFILE_GROUP = 81;
-  private static final int METHODID_DELETE_AGENT_PROFILE_GROUP = 82;
-  private static final int METHODID_ASSIGN_AGENT_PROFILE_GROUPS = 83;
-  private static final int METHODID_ADD_USER_SUBSCRIPTION = 84;
-  private static final int METHODID_ADD_USER_SUBSCRIPTION_BY_USER_ID = 85;
-  private static final int METHODID_GET_USER_SUBSCRIPTION = 86;
-  private static final int METHODID_GET_USER_SUBSCRIPTION_BY_USER_ID = 87;
-  private static final int METHODID_UPDATE_USER_SUBSCRIPTION = 88;
-  private static final int METHODID_UPDATE_USER_SUBSCRIPTION_BY_USER_ID = 89;
-  private static final int METHODID_REMOVE_USER_SUBSCRIPTION = 90;
-  private static final int METHODID_REMOVE_USER_SUBSCRIPTION_BY_USER_ID = 91;
-  private static final int METHODID_LIST_USER_SUBSCRIPTIONS = 92;
-  private static final int METHODID_LIST_USER_SUBSCRIPTIONS_BY_USER_ID = 93;
-  private static final int METHODID_LIST_ORG_SUBSCRIPTIONS = 94;
-  private static final int METHODID_CREATE_AUTH_TOKEN = 95;
-  private static final int METHODID_CREATE_AUTH_TOKEN_BY_USER_ID = 96;
-  private static final int METHODID_LIST_AUTH_TOKENS = 97;
-  private static final int METHODID_LIST_AUTH_TOKENS_BY_USER_ID = 98;
-  private static final int METHODID_SET_AUTH_TOKEN_EXPIRATION = 99;
-  private static final int METHODID_SET_AUTH_TOKEN_EXPIRATION_BY_USER_ID = 100;
-  private static final int METHODID_DELETE_AUTH_TOKEN = 101;
-  private static final int METHODID_DELETE_AUTH_TOKEN_BY_USER_ID = 102;
-  private static final int METHODID_GET_HUNT_GROUP_SETTINGS = 103;
-  private static final int METHODID_UPDATE_HUNT_GROUP_SETTINGS = 104;
-  private static final int METHODID_LIST_CALLER_ID_BUCKETS = 105;
-  private static final int METHODID_GET_DATA_DIP_TEMPLATE = 106;
-  private static final int METHODID_LIST_DATA_DIP_TEMPLATES = 107;
-  private static final int METHODID_CREATE_DATA_DIP_TEMPLATE = 108;
-  private static final int METHODID_UPDATE_DATA_DIP_TEMPLATE = 109;
-  private static final int METHODID_DELETE_DATA_DIP_TEMPLATE = 110;
-  private static final int METHODID_COPY_DATA_DIP_TEMPLATE = 111;
-  private static final int METHODID_COPY_DATA_DIP_TEMPLATE_TO_ORGANIZATION = 112;
-  private static final int METHODID_LIST_AGENT_RESPONSE_AUTO_RULES = 113;
-  private static final int METHODID_CREATE_AGENT_RESPONSE_AUTO_RULES = 114;
-  private static final int METHODID_UPDATE_AGENT_RESPONSE_AUTO_RULES = 115;
-  private static final int METHODID_DELETE_AGENT_RESPONSE_AUTO_RULES = 116;
-  private static final int METHODID_CREATE_TRUST = 117;
-  private static final int METHODID_ACCEPT_TRUST = 118;
-  private static final int METHODID_REJECT_TRUST = 119;
-  private static final int METHODID_GET_TRUST = 120;
-  private static final int METHODID_LIST_INCOMING_TRUSTS = 121;
-  private static final int METHODID_LIST_GIVEN_TRUSTS = 122;
-  private static final int METHODID_LIST_ASSIGNABLE_TRUSTS = 123;
-  private static final int METHODID_DELETE_TRUST = 124;
-  private static final int METHODID_ASSIGN_TRUST = 125;
-  private static final int METHODID_UNASSIGN_TRUST = 126;
-  private static final int METHODID_CREATE_LABEL = 127;
-  private static final int METHODID_DELETE_LABEL = 128;
-  private static final int METHODID_LIST_LABELS = 129;
-  private static final int METHODID_GET_LABEL = 130;
-  private static final int METHODID_UPDATE_LABEL = 131;
-  private static final int METHODID_ASSIGN_LABEL = 132;
-  private static final int METHODID_UNASSIGN_LABEL = 133;
-  private static final int METHODID_GET_ASSIGNMENT_COUNTS = 134;
-  private static final int METHODID_GET_ASSIGNABLE_LABELS = 135;
-  private static final int METHODID_GET_PERMISSIONS = 136;
-  private static final int METHODID_GET_USER_PERMISSIONS = 137;
-  private static final int METHODID_CREATE_PERMISSION_GROUP = 138;
-  private static final int METHODID_UPDATE_PERMISSION_GROUP = 139;
-  private static final int METHODID_DELETE_PERMISSION_GROUP = 140;
-  private static final int METHODID_LIST_PERMISSION_GROUPS = 141;
-  private static final int METHODID_LIST_PERMISSION_GROUPS_BY_ORG_ID = 142;
-  private static final int METHODID_ASSIGN_USERS_PERMISSION_GROUP = 143;
-  private static final int METHODID_REVOKE_USERS_PERMISSION_GROUP = 144;
-  private static final int METHODID_ASSIGN_ACCOUNT_OWNER_PERMISSION_TO_USER = 145;
-  private static final int METHODID_REVOKE_ACCOUNT_OWNER_PERMISSION_FROM_USER = 146;
-  private static final int METHODID_INIT_DEFAULT_PERMISSION_GROUPS = 147;
-  private static final int METHODID_GET_ACCOUNT_OWNER_GROUP = 148;
-  private static final int METHODID_GET_LICENSES = 149;
-  private static final int METHODID_GET_ORG_LICENSES = 150;
-  private static final int METHODID_UPDATE_LICENSES = 151;
-  private static final int METHODID_REMOVE_PERMISSION_FROM_ALL_PERMISSION_GROUPS = 152;
-  private static final int METHODID_LIST_P3PERMISSION_GROUPS = 153;
-  private static final int METHODID_LIST_P3PERMISSION_GROUPS_BY_ORG_ID = 154;
-  private static final int METHODID_CREATE_P3PERMISSION_GROUP = 155;
-  private static final int METHODID_UPDATE_P3PERMISSION_GROUP = 156;
-  private static final int METHODID_UPDATE_P3PERMISSION_GROUP_BY_ORG_ID = 157;
-  private static final int METHODID_DELETE_P3PERMISSION_GROUP = 158;
-  private static final int METHODID_ASSIGN_USERS_P3PERMISSION_GROUP = 159;
-  private static final int METHODID_REVOKE_USERS_P3PERMISSION_GROUP = 160;
+  private static final int METHODID_UPDATE_ADMIN_BUSINESS_PREFERENCES = 37;
+  private static final int METHODID_GET_SCORECARDS_PREFERENCES = 38;
+  private static final int METHODID_UPDATE_SCORECARDS_PREFERENCES = 39;
+  private static final int METHODID_GET_VOICE_ANALYTICS_PREFERENCES = 40;
+  private static final int METHODID_LIST_VOICE_ANALYTICS_PREFERENCES = 41;
+  private static final int METHODID_UPDATE_VOICE_ANALYTICS_PREFERENCES = 42;
+  private static final int METHODID_GET_END_OF_DAY_PREFERENCES = 43;
+  private static final int METHODID_UPDATE_END_OF_DAY_PREFERENCES = 44;
+  private static final int METHODID_GET_REPORT_FILTER_PREFERENCES = 45;
+  private static final int METHODID_UPDATE_REPORT_FILTER_PREFERENCES = 46;
+  private static final int METHODID_GET_RECORDING_PREFERENCES = 47;
+  private static final int METHODID_UPDATE_RECORDING_PREFERENCES = 48;
+  private static final int METHODID_GET_ADMIN_CLIENT_PREFERENCES = 49;
+  private static final int METHODID_UPDATE_ADMIN_CLIENT_PREFERENCES = 50;
+  private static final int METHODID_ACCEPT_LINKBACK_RECORDING_TERMS = 51;
+  private static final int METHODID_LINKBACK_UPDATE_BROADCAST_TEMPLATES = 52;
+  private static final int METHODID_RECORD_EMAIL_UNSUBSCRIBE_ACKNOWLEDGEMENT = 53;
+  private static final int METHODID_CLEAR_EMAIL_UNSUBSCRIBE_ACKNOWLEDGEMENT = 54;
+  private static final int METHODID_CREATE_USER = 55;
+  private static final int METHODID_CREATE_DELEGATED_USER = 56;
+  private static final int METHODID_GET_MY_USER = 57;
+  private static final int METHODID_GET_USER = 58;
+  private static final int METHODID_GET_USER_BY_ORG_ID = 59;
+  private static final int METHODID_LIST_AGENTS = 60;
+  private static final int METHODID_LIST_USERS = 61;
+  private static final int METHODID_LIST_USERS_BY_ORG_ID = 62;
+  private static final int METHODID_LIST_USERS_BY_REGION = 63;
+  private static final int METHODID_UPDATE_MY_USER = 64;
+  private static final int METHODID_UPDATE_USER = 65;
+  private static final int METHODID_UPDATE_USER_LABELS = 66;
+  private static final int METHODID_UPDATE_USER_CALLER_ID = 67;
+  private static final int METHODID_UPDATE_USER_DISABLED = 68;
+  private static final int METHODID_UPDATE_USER_DISABLED_BY_ORG_ID = 69;
+  private static final int METHODID_GET_MY_USER_PASSWORD_RESET_LINK = 70;
+  private static final int METHODID_GET_USER_PASSWORD_RESET_LINK = 71;
+  private static final int METHODID_GET_USER_PASSWORD_RESET_LINK_BY_ORG_ID = 72;
+  private static final int METHODID_CREATE_PASSWORD_RESET_LINK = 73;
+  private static final int METHODID_GET_USER_LOGIN_INFO = 74;
+  private static final int METHODID_GET_USER_EMAIL_VERIFIED = 75;
+  private static final int METHODID_GET_USER_EMAIL_VERIFIED_BY_ORG_ID = 76;
+  private static final int METHODID_SEND_USER_EMAIL_VERIFICATION = 77;
+  private static final int METHODID_SEND_USER_EMAIL_VERIFICATION_BY_ORG_ID = 78;
+  private static final int METHODID_GET_USER_SESSION_DATA = 79;
+  private static final int METHODID_GET_AGENT_PROFILE_GROUP = 80;
+  private static final int METHODID_LIST_AGENT_PROFILE_GROUPS = 81;
+  private static final int METHODID_UPDATE_AGENT_PROFILE_GROUP = 82;
+  private static final int METHODID_CREATE_AGENT_PROFILE_GROUP = 83;
+  private static final int METHODID_DELETE_AGENT_PROFILE_GROUP = 84;
+  private static final int METHODID_ASSIGN_AGENT_PROFILE_GROUPS = 85;
+  private static final int METHODID_ADD_USER_SUBSCRIPTION = 86;
+  private static final int METHODID_ADD_USER_SUBSCRIPTION_BY_USER_ID = 87;
+  private static final int METHODID_GET_USER_SUBSCRIPTION = 88;
+  private static final int METHODID_GET_USER_SUBSCRIPTION_BY_USER_ID = 89;
+  private static final int METHODID_UPDATE_USER_SUBSCRIPTION = 90;
+  private static final int METHODID_UPDATE_USER_SUBSCRIPTION_BY_USER_ID = 91;
+  private static final int METHODID_REMOVE_USER_SUBSCRIPTION = 92;
+  private static final int METHODID_REMOVE_USER_SUBSCRIPTION_BY_USER_ID = 93;
+  private static final int METHODID_LIST_USER_SUBSCRIPTIONS = 94;
+  private static final int METHODID_LIST_USER_SUBSCRIPTIONS_BY_USER_ID = 95;
+  private static final int METHODID_LIST_ORG_SUBSCRIPTIONS = 96;
+  private static final int METHODID_CREATE_AUTH_TOKEN = 97;
+  private static final int METHODID_CREATE_AUTH_TOKEN_BY_USER_ID = 98;
+  private static final int METHODID_LIST_AUTH_TOKENS = 99;
+  private static final int METHODID_LIST_AUTH_TOKENS_BY_USER_ID = 100;
+  private static final int METHODID_SET_AUTH_TOKEN_EXPIRATION = 101;
+  private static final int METHODID_SET_AUTH_TOKEN_EXPIRATION_BY_USER_ID = 102;
+  private static final int METHODID_DELETE_AUTH_TOKEN = 103;
+  private static final int METHODID_DELETE_AUTH_TOKEN_BY_USER_ID = 104;
+  private static final int METHODID_GET_HUNT_GROUP_SETTINGS = 105;
+  private static final int METHODID_UPDATE_HUNT_GROUP_SETTINGS = 106;
+  private static final int METHODID_LIST_CALLER_ID_BUCKETS = 107;
+  private static final int METHODID_GET_DATA_DIP_TEMPLATE = 108;
+  private static final int METHODID_LIST_DATA_DIP_TEMPLATES = 109;
+  private static final int METHODID_CREATE_DATA_DIP_TEMPLATE = 110;
+  private static final int METHODID_UPDATE_DATA_DIP_TEMPLATE = 111;
+  private static final int METHODID_DELETE_DATA_DIP_TEMPLATE = 112;
+  private static final int METHODID_COPY_DATA_DIP_TEMPLATE = 113;
+  private static final int METHODID_COPY_DATA_DIP_TEMPLATE_TO_ORGANIZATION = 114;
+  private static final int METHODID_LIST_AGENT_RESPONSE_AUTO_RULES = 115;
+  private static final int METHODID_CREATE_AGENT_RESPONSE_AUTO_RULES = 116;
+  private static final int METHODID_UPDATE_AGENT_RESPONSE_AUTO_RULES = 117;
+  private static final int METHODID_DELETE_AGENT_RESPONSE_AUTO_RULES = 118;
+  private static final int METHODID_CREATE_TRUST = 119;
+  private static final int METHODID_ACCEPT_TRUST = 120;
+  private static final int METHODID_REJECT_TRUST = 121;
+  private static final int METHODID_GET_TRUST = 122;
+  private static final int METHODID_LIST_INCOMING_TRUSTS = 123;
+  private static final int METHODID_LIST_GIVEN_TRUSTS = 124;
+  private static final int METHODID_LIST_ASSIGNABLE_TRUSTS = 125;
+  private static final int METHODID_DELETE_TRUST = 126;
+  private static final int METHODID_ASSIGN_TRUST = 127;
+  private static final int METHODID_UNASSIGN_TRUST = 128;
+  private static final int METHODID_CREATE_LABEL = 129;
+  private static final int METHODID_DELETE_LABEL = 130;
+  private static final int METHODID_LIST_LABELS = 131;
+  private static final int METHODID_GET_LABEL = 132;
+  private static final int METHODID_UPDATE_LABEL = 133;
+  private static final int METHODID_ASSIGN_LABEL = 134;
+  private static final int METHODID_UNASSIGN_LABEL = 135;
+  private static final int METHODID_GET_ASSIGNMENT_COUNTS = 136;
+  private static final int METHODID_GET_ASSIGNABLE_LABELS = 137;
+  private static final int METHODID_GET_PERMISSIONS = 138;
+  private static final int METHODID_GET_USER_PERMISSIONS = 139;
+  private static final int METHODID_CREATE_PERMISSION_GROUP = 140;
+  private static final int METHODID_UPDATE_PERMISSION_GROUP = 141;
+  private static final int METHODID_DELETE_PERMISSION_GROUP = 142;
+  private static final int METHODID_LIST_PERMISSION_GROUPS = 143;
+  private static final int METHODID_LIST_PERMISSION_GROUPS_BY_ORG_ID = 144;
+  private static final int METHODID_ASSIGN_USERS_PERMISSION_GROUP = 145;
+  private static final int METHODID_REVOKE_USERS_PERMISSION_GROUP = 146;
+  private static final int METHODID_ASSIGN_ACCOUNT_OWNER_PERMISSION_TO_USER = 147;
+  private static final int METHODID_REVOKE_ACCOUNT_OWNER_PERMISSION_FROM_USER = 148;
+  private static final int METHODID_INIT_DEFAULT_PERMISSION_GROUPS = 149;
+  private static final int METHODID_GET_ACCOUNT_OWNER_GROUP = 150;
+  private static final int METHODID_GET_LICENSES = 151;
+  private static final int METHODID_GET_ORG_LICENSES = 152;
+  private static final int METHODID_UPDATE_LICENSES = 153;
+  private static final int METHODID_REMOVE_PERMISSION_FROM_ALL_PERMISSION_GROUPS = 154;
+  private static final int METHODID_LIST_P3PERMISSION_GROUPS = 155;
+  private static final int METHODID_LIST_P3PERMISSION_GROUPS_BY_ORG_ID = 156;
+  private static final int METHODID_CREATE_P3PERMISSION_GROUP = 157;
+  private static final int METHODID_UPDATE_P3PERMISSION_GROUP = 158;
+  private static final int METHODID_UPDATE_P3PERMISSION_GROUP_BY_ORG_ID = 159;
+  private static final int METHODID_DELETE_P3PERMISSION_GROUP = 160;
+  private static final int METHODID_ASSIGN_USERS_P3PERMISSION_GROUP = 161;
+  private static final int METHODID_REVOKE_USERS_P3PERMISSION_GROUP = 162;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -12332,6 +12480,10 @@ public final class OrgGrpc {
           serviceImpl.updateBusinessPreferences((com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessPreferencesRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessPreferencesResponse>) responseObserver);
           break;
+        case METHODID_UPDATE_ADMIN_BUSINESS_PREFERENCES:
+          serviceImpl.updateAdminBusinessPreferences((com.tcn.cloud.api.api.v1alpha1.org.UpdateAdminBusinessPreferencesRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.UpdateAdminBusinessPreferencesResponse>) responseObserver);
+          break;
         case METHODID_GET_SCORECARDS_PREFERENCES:
           serviceImpl.getScorecardsPreferences((com.tcn.cloud.api.api.v1alpha1.org.GetScorecardsPreferencesRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.GetScorecardsPreferencesResponse>) responseObserver);
@@ -12471,6 +12623,10 @@ public final class OrgGrpc {
         case METHODID_GET_USER_PASSWORD_RESET_LINK_BY_ORG_ID:
           serviceImpl.getUserPasswordResetLinkByOrgId((com.tcn.cloud.api.api.v1alpha1.org.GetUserPasswordResetLinkByOrgIdRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.GetUserPasswordResetLinkByOrgIdResponse>) responseObserver);
+          break;
+        case METHODID_CREATE_PASSWORD_RESET_LINK:
+          serviceImpl.createPasswordResetLink((com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkResponse>) responseObserver);
           break;
         case METHODID_GET_USER_LOGIN_INFO:
           serviceImpl.getUserLoginInfo((com.tcn.cloud.api.api.v1alpha1.org.GetUserLoginInfoRequest) request,
@@ -13106,6 +13262,13 @@ public final class OrgGrpc {
               com.tcn.cloud.api.api.v1alpha1.org.UpdateBusinessPreferencesResponse>(
                 service, METHODID_UPDATE_BUSINESS_PREFERENCES)))
         .addMethod(
+          getUpdateAdminBusinessPreferencesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.UpdateAdminBusinessPreferencesRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.UpdateAdminBusinessPreferencesResponse>(
+                service, METHODID_UPDATE_ADMIN_BUSINESS_PREFERENCES)))
+        .addMethod(
           getGetScorecardsPreferencesMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -13350,6 +13513,13 @@ public final class OrgGrpc {
               com.tcn.cloud.api.api.v1alpha1.org.GetUserPasswordResetLinkByOrgIdRequest,
               com.tcn.cloud.api.api.v1alpha1.org.GetUserPasswordResetLinkByOrgIdResponse>(
                 service, METHODID_GET_USER_PASSWORD_RESET_LINK_BY_ORG_ID)))
+        .addMethod(
+          getCreatePasswordResetLinkMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkResponse>(
+                service, METHODID_CREATE_PASSWORD_RESET_LINK)))
         .addMethod(
           getGetUserLoginInfoMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -14058,6 +14228,7 @@ public final class OrgGrpc {
               .addMethod(getUpdateEmailSmsPreferencesMethod())
               .addMethod(getGetBusinessPreferencesMethod())
               .addMethod(getUpdateBusinessPreferencesMethod())
+              .addMethod(getUpdateAdminBusinessPreferencesMethod())
               .addMethod(getGetScorecardsPreferencesMethod())
               .addMethod(getUpdateScorecardsPreferencesMethod())
               .addMethod(getGetVoiceAnalyticsPreferencesMethod())
@@ -14093,6 +14264,7 @@ public final class OrgGrpc {
               .addMethod(getGetMyUserPasswordResetLinkMethod())
               .addMethod(getGetUserPasswordResetLinkMethod())
               .addMethod(getGetUserPasswordResetLinkByOrgIdMethod())
+              .addMethod(getCreatePasswordResetLinkMethod())
               .addMethod(getGetUserLoginInfoMethod())
               .addMethod(getGetUserEmailVerifiedMethod())
               .addMethod(getGetUserEmailVerifiedByOrgIdMethod())
