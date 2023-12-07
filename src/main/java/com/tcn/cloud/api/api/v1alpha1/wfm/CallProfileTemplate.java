@@ -21,6 +21,7 @@ private static final long serialVersionUID = 0L;
   }
   private CallProfileTemplate() {
     name_ = "";
+    timeZone_ = "";
   }
 
   @java.lang.Override
@@ -408,6 +409,53 @@ private static final long serialVersionUID = 0L;
     return defaultToFixedAveragesForecast_;
   }
 
+  public static final int TIME_ZONE_FIELD_NUMBER = 14;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object timeZone_ = "";
+  /**
+   * <pre>
+   * Time zone in IANA format that the call profile template is in.
+   * </pre>
+   *
+   * <code>string time_zone = 14 [json_name = "timeZone"];</code>
+   * @return The timeZone.
+   */
+  @java.lang.Override
+  public java.lang.String getTimeZone() {
+    java.lang.Object ref = timeZone_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      timeZone_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Time zone in IANA format that the call profile template is in.
+   * </pre>
+   *
+   * <code>string time_zone = 14 [json_name = "timeZone"];</code>
+   * @return The bytes for timeZone.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getTimeZoneBytes() {
+    java.lang.Object ref = timeZone_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      timeZone_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -460,6 +508,9 @@ private static final long serialVersionUID = 0L;
     }
     if (defaultToFixedAveragesForecast_ != false) {
       output.writeBool(13, defaultToFixedAveragesForecast_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timeZone_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 14, timeZone_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -520,6 +571,9 @@ private static final long serialVersionUID = 0L;
     if (defaultToFixedAveragesForecast_ != false) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(13, defaultToFixedAveragesForecast_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timeZone_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, timeZone_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -584,6 +638,8 @@ private static final long serialVersionUID = 0L;
             other.getFixedAverageTimeToAbort())) return false;
     if (getDefaultToFixedAveragesForecast()
         != other.getDefaultToFixedAveragesForecast()) return false;
+    if (!getTimeZone()
+        .equals(other.getTimeZone())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -639,6 +695,8 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + DEFAULT_TO_FIXED_AVERAGES_FORECAST_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getDefaultToFixedAveragesForecast());
+    hash = (37 * hash) + TIME_ZONE_FIELD_NUMBER;
+    hash = (53 * hash) + getTimeZone().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -811,6 +869,7 @@ private static final long serialVersionUID = 0L;
       fixedAverageAfterCallWork_ = 0F;
       fixedAverageTimeToAbort_ = 0F;
       defaultToFixedAveragesForecast_ = false;
+      timeZone_ = "";
       return this;
     }
 
@@ -894,6 +953,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00001000) != 0)) {
         result.defaultToFixedAveragesForecast_ = defaultToFixedAveragesForecast_;
+      }
+      if (((from_bitField0_ & 0x00002000) != 0)) {
+        result.timeZone_ = timeZone_;
       }
     }
 
@@ -981,6 +1043,11 @@ private static final long serialVersionUID = 0L;
       }
       if (other.getDefaultToFixedAveragesForecast() != false) {
         setDefaultToFixedAveragesForecast(other.getDefaultToFixedAveragesForecast());
+      }
+      if (!other.getTimeZone().isEmpty()) {
+        timeZone_ = other.timeZone_;
+        bitField0_ |= 0x00002000;
+        onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -1085,6 +1152,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00001000;
               break;
             } // case 104
+            case 114: {
+              timeZone_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00002000;
+              break;
+            } // case 114
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2384,6 +2456,98 @@ private static final long serialVersionUID = 0L;
     public Builder clearDefaultToFixedAveragesForecast() {
       bitField0_ = (bitField0_ & ~0x00001000);
       defaultToFixedAveragesForecast_ = false;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object timeZone_ = "";
+    /**
+     * <pre>
+     * Time zone in IANA format that the call profile template is in.
+     * </pre>
+     *
+     * <code>string time_zone = 14 [json_name = "timeZone"];</code>
+     * @return The timeZone.
+     */
+    public java.lang.String getTimeZone() {
+      java.lang.Object ref = timeZone_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        timeZone_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Time zone in IANA format that the call profile template is in.
+     * </pre>
+     *
+     * <code>string time_zone = 14 [json_name = "timeZone"];</code>
+     * @return The bytes for timeZone.
+     */
+    public com.google.protobuf.ByteString
+        getTimeZoneBytes() {
+      java.lang.Object ref = timeZone_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        timeZone_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Time zone in IANA format that the call profile template is in.
+     * </pre>
+     *
+     * <code>string time_zone = 14 [json_name = "timeZone"];</code>
+     * @param value The timeZone to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTimeZone(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      timeZone_ = value;
+      bitField0_ |= 0x00002000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Time zone in IANA format that the call profile template is in.
+     * </pre>
+     *
+     * <code>string time_zone = 14 [json_name = "timeZone"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTimeZone() {
+      timeZone_ = getDefaultInstance().getTimeZone();
+      bitField0_ = (bitField0_ & ~0x00002000);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Time zone in IANA format that the call profile template is in.
+     * </pre>
+     *
+     * <code>string time_zone = 14 [json_name = "timeZone"];</code>
+     * @param value The bytes for timeZone to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTimeZoneBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      timeZone_ = value;
+      bitField0_ |= 0x00002000;
       onChanged();
       return this;
     }
