@@ -422,6 +422,10 @@ private static final long serialVersionUID = 0L;
   public static final int CREATED_BY_DATE_FIELD_NUMBER = 10;
   private com.google.protobuf.Timestamp createdByDate_;
   /**
+   * <pre>
+   * The created Date of the Ticket Object
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp created_by_date = 10 [json_name = "createdByDate"];</code>
    * @return Whether the createdByDate field is set.
    */
@@ -430,6 +434,10 @@ private static final long serialVersionUID = 0L;
     return createdByDate_ != null;
   }
   /**
+   * <pre>
+   * The created Date of the Ticket Object
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp created_by_date = 10 [json_name = "createdByDate"];</code>
    * @return The createdByDate.
    */
@@ -438,6 +446,10 @@ private static final long serialVersionUID = 0L;
     return createdByDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdByDate_;
   }
   /**
+   * <pre>
+   * The created Date of the Ticket Object
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp created_by_date = 10 [json_name = "createdByDate"];</code>
    */
   @java.lang.Override
@@ -488,7 +500,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object assigneeList_ = "";
   /**
    * <pre>
-   * A list of hunt groups, skills or users assigned to this ticket.
+   * A list of users assigned to this ticket.
    * </pre>
    *
    * <code>string assignee_list = 12 [json_name = "assigneeList"];</code>
@@ -509,7 +521,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * A list of hunt groups, skills or users assigned to this ticket.
+   * A list of users assigned to this ticket.
    * </pre>
    *
    * <code>string assignee_list = 12 [json_name = "assigneeList"];</code>
@@ -535,7 +547,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<com.tcn.cloud.api.api.commons.Metadata> metadata_;
   /**
    * <pre>
-   * A list of conversation context meatadatgit stata
+   * A list of conversation context meatadata
    * </pre>
    *
    * <code>repeated .api.commons.Metadata metadata = 14 [json_name = "metadata"];</code>
@@ -546,7 +558,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * A list of conversation context meatadatgit stata
+   * A list of conversation context meatadata
    * </pre>
    *
    * <code>repeated .api.commons.Metadata metadata = 14 [json_name = "metadata"];</code>
@@ -558,7 +570,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * A list of conversation context meatadatgit stata
+   * A list of conversation context meatadata
    * </pre>
    *
    * <code>repeated .api.commons.Metadata metadata = 14 [json_name = "metadata"];</code>
@@ -569,7 +581,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * A list of conversation context meatadatgit stata
+   * A list of conversation context meatadata
    * </pre>
    *
    * <code>repeated .api.commons.Metadata metadata = 14 [json_name = "metadata"];</code>
@@ -580,7 +592,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * A list of conversation context meatadatgit stata
+   * A list of conversation context meatadata
    * </pre>
    *
    * <code>repeated .api.commons.Metadata metadata = 14 [json_name = "metadata"];</code>
@@ -732,6 +744,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object assignee_ = "";
   /**
+   * <pre>
+   * To be deprecated
+   * </pre>
+   *
    * <code>string assignee = 18 [json_name = "assignee"];</code>
    * @return The assignee.
    */
@@ -749,6 +765,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * To be deprecated
+   * </pre>
+   *
    * <code>string assignee = 18 [json_name = "assignee"];</code>
    * @return The bytes for assignee.
    */
@@ -771,6 +791,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.commons.TicketAction> ticketAction_;
   /**
+   * <pre>
+   * A set of Action associated with a Project
+   * </pre>
+   *
    * <code>repeated .api.commons.TicketAction ticket_action = 19 [json_name = "ticketAction"];</code>
    */
   @java.lang.Override
@@ -778,6 +802,10 @@ private static final long serialVersionUID = 0L;
     return ticketAction_;
   }
   /**
+   * <pre>
+   * A set of Action associated with a Project
+   * </pre>
+   *
    * <code>repeated .api.commons.TicketAction ticket_action = 19 [json_name = "ticketAction"];</code>
    */
   @java.lang.Override
@@ -786,6 +814,10 @@ private static final long serialVersionUID = 0L;
     return ticketAction_;
   }
   /**
+   * <pre>
+   * A set of Action associated with a Project
+   * </pre>
+   *
    * <code>repeated .api.commons.TicketAction ticket_action = 19 [json_name = "ticketAction"];</code>
    */
   @java.lang.Override
@@ -793,6 +825,10 @@ private static final long serialVersionUID = 0L;
     return ticketAction_.size();
   }
   /**
+   * <pre>
+   * A set of Action associated with a Project
+   * </pre>
+   *
    * <code>repeated .api.commons.TicketAction ticket_action = 19 [json_name = "ticketAction"];</code>
    */
   @java.lang.Override
@@ -800,6 +836,10 @@ private static final long serialVersionUID = 0L;
     return ticketAction_.get(index);
   }
   /**
+   * <pre>
+   * A set of Action associated with a Project
+   * </pre>
+   *
    * <code>repeated .api.commons.TicketAction ticket_action = 19 [json_name = "ticketAction"];</code>
    */
   @java.lang.Override
@@ -811,6 +851,10 @@ private static final long serialVersionUID = 0L;
   public static final int TICKET_STATUS_FIELD_NUMBER = 20;
   private int ticketStatus_ = 0;
   /**
+   * <pre>
+   * Status of the ticket - NEW,OPEN,CLOSED
+   * </pre>
+   *
    * <code>.api.commons.TicketStatus ticket_status = 20 [json_name = "ticketStatus"];</code>
    * @return The enum numeric value on the wire for ticketStatus.
    */
@@ -818,6 +862,10 @@ private static final long serialVersionUID = 0L;
     return ticketStatus_;
   }
   /**
+   * <pre>
+   * Status of the ticket - NEW,OPEN,CLOSED
+   * </pre>
+   *
    * <code>.api.commons.TicketStatus ticket_status = 20 [json_name = "ticketStatus"];</code>
    * @return The ticketStatus.
    */
@@ -885,7 +933,7 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
-   *participant list
+   *participant list - Any user who participates in the ticket life cycle
    * </pre>
    *
    * <code>repeated string ticket_participant = 22 [json_name = "ticketParticipant"];</code>
@@ -897,7 +945,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   *participant list
+   *participant list - Any user who participates in the ticket life cycle
    * </pre>
    *
    * <code>repeated string ticket_participant = 22 [json_name = "ticketParticipant"];</code>
@@ -908,7 +956,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   *participant list
+   *participant list - Any user who participates in the ticket life cycle
    * </pre>
    *
    * <code>repeated string ticket_participant = 22 [json_name = "ticketParticipant"];</code>
@@ -920,7 +968,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   *participant list
+   *participant list - Any user who participates in the ticket life cycle
    * </pre>
    *
    * <code>repeated string ticket_participant = 22 [json_name = "ticketParticipant"];</code>
@@ -2710,6 +2758,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdByDateBuilder_;
     /**
+     * <pre>
+     * The created Date of the Ticket Object
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_by_date = 10 [json_name = "createdByDate"];</code>
      * @return Whether the createdByDate field is set.
      */
@@ -2717,6 +2769,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000200) != 0);
     }
     /**
+     * <pre>
+     * The created Date of the Ticket Object
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_by_date = 10 [json_name = "createdByDate"];</code>
      * @return The createdByDate.
      */
@@ -2728,6 +2784,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The created Date of the Ticket Object
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_by_date = 10 [json_name = "createdByDate"];</code>
      */
     public Builder setCreatedByDate(com.google.protobuf.Timestamp value) {
@@ -2744,6 +2804,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The created Date of the Ticket Object
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_by_date = 10 [json_name = "createdByDate"];</code>
      */
     public Builder setCreatedByDate(
@@ -2758,6 +2822,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The created Date of the Ticket Object
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_by_date = 10 [json_name = "createdByDate"];</code>
      */
     public Builder mergeCreatedByDate(com.google.protobuf.Timestamp value) {
@@ -2777,6 +2845,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The created Date of the Ticket Object
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_by_date = 10 [json_name = "createdByDate"];</code>
      */
     public Builder clearCreatedByDate() {
@@ -2790,6 +2862,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The created Date of the Ticket Object
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_by_date = 10 [json_name = "createdByDate"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getCreatedByDateBuilder() {
@@ -2798,6 +2874,10 @@ private static final long serialVersionUID = 0L;
       return getCreatedByDateFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * The created Date of the Ticket Object
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_by_date = 10 [json_name = "createdByDate"];</code>
      */
     public com.google.protobuf.TimestampOrBuilder getCreatedByDateOrBuilder() {
@@ -2809,6 +2889,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The created Date of the Ticket Object
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_by_date = 10 [json_name = "createdByDate"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -2983,7 +3067,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object assigneeList_ = "";
     /**
      * <pre>
-     * A list of hunt groups, skills or users assigned to this ticket.
+     * A list of users assigned to this ticket.
      * </pre>
      *
      * <code>string assignee_list = 12 [json_name = "assigneeList"];</code>
@@ -3003,7 +3087,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A list of hunt groups, skills or users assigned to this ticket.
+     * A list of users assigned to this ticket.
      * </pre>
      *
      * <code>string assignee_list = 12 [json_name = "assigneeList"];</code>
@@ -3024,7 +3108,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A list of hunt groups, skills or users assigned to this ticket.
+     * A list of users assigned to this ticket.
      * </pre>
      *
      * <code>string assignee_list = 12 [json_name = "assigneeList"];</code>
@@ -3041,7 +3125,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A list of hunt groups, skills or users assigned to this ticket.
+     * A list of users assigned to this ticket.
      * </pre>
      *
      * <code>string assignee_list = 12 [json_name = "assigneeList"];</code>
@@ -3055,7 +3139,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A list of hunt groups, skills or users assigned to this ticket.
+     * A list of users assigned to this ticket.
      * </pre>
      *
      * <code>string assignee_list = 12 [json_name = "assigneeList"];</code>
@@ -3086,7 +3170,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * A list of conversation context meatadatgit stata
+     * A list of conversation context meatadata
      * </pre>
      *
      * <code>repeated .api.commons.Metadata metadata = 14 [json_name = "metadata"];</code>
@@ -3100,7 +3184,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A list of conversation context meatadatgit stata
+     * A list of conversation context meatadata
      * </pre>
      *
      * <code>repeated .api.commons.Metadata metadata = 14 [json_name = "metadata"];</code>
@@ -3114,7 +3198,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A list of conversation context meatadatgit stata
+     * A list of conversation context meatadata
      * </pre>
      *
      * <code>repeated .api.commons.Metadata metadata = 14 [json_name = "metadata"];</code>
@@ -3128,7 +3212,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A list of conversation context meatadatgit stata
+     * A list of conversation context meatadata
      * </pre>
      *
      * <code>repeated .api.commons.Metadata metadata = 14 [json_name = "metadata"];</code>
@@ -3149,7 +3233,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A list of conversation context meatadatgit stata
+     * A list of conversation context meatadata
      * </pre>
      *
      * <code>repeated .api.commons.Metadata metadata = 14 [json_name = "metadata"];</code>
@@ -3167,7 +3251,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A list of conversation context meatadatgit stata
+     * A list of conversation context meatadata
      * </pre>
      *
      * <code>repeated .api.commons.Metadata metadata = 14 [json_name = "metadata"];</code>
@@ -3187,7 +3271,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A list of conversation context meatadatgit stata
+     * A list of conversation context meatadata
      * </pre>
      *
      * <code>repeated .api.commons.Metadata metadata = 14 [json_name = "metadata"];</code>
@@ -3208,7 +3292,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A list of conversation context meatadatgit stata
+     * A list of conversation context meatadata
      * </pre>
      *
      * <code>repeated .api.commons.Metadata metadata = 14 [json_name = "metadata"];</code>
@@ -3226,7 +3310,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A list of conversation context meatadatgit stata
+     * A list of conversation context meatadata
      * </pre>
      *
      * <code>repeated .api.commons.Metadata metadata = 14 [json_name = "metadata"];</code>
@@ -3244,7 +3328,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A list of conversation context meatadatgit stata
+     * A list of conversation context meatadata
      * </pre>
      *
      * <code>repeated .api.commons.Metadata metadata = 14 [json_name = "metadata"];</code>
@@ -3263,7 +3347,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A list of conversation context meatadatgit stata
+     * A list of conversation context meatadata
      * </pre>
      *
      * <code>repeated .api.commons.Metadata metadata = 14 [json_name = "metadata"];</code>
@@ -3280,7 +3364,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A list of conversation context meatadatgit stata
+     * A list of conversation context meatadata
      * </pre>
      *
      * <code>repeated .api.commons.Metadata metadata = 14 [json_name = "metadata"];</code>
@@ -3297,7 +3381,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A list of conversation context meatadatgit stata
+     * A list of conversation context meatadata
      * </pre>
      *
      * <code>repeated .api.commons.Metadata metadata = 14 [json_name = "metadata"];</code>
@@ -3308,7 +3392,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A list of conversation context meatadatgit stata
+     * A list of conversation context meatadata
      * </pre>
      *
      * <code>repeated .api.commons.Metadata metadata = 14 [json_name = "metadata"];</code>
@@ -3322,7 +3406,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A list of conversation context meatadatgit stata
+     * A list of conversation context meatadata
      * </pre>
      *
      * <code>repeated .api.commons.Metadata metadata = 14 [json_name = "metadata"];</code>
@@ -3337,7 +3421,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A list of conversation context meatadatgit stata
+     * A list of conversation context meatadata
      * </pre>
      *
      * <code>repeated .api.commons.Metadata metadata = 14 [json_name = "metadata"];</code>
@@ -3348,7 +3432,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A list of conversation context meatadatgit stata
+     * A list of conversation context meatadata
      * </pre>
      *
      * <code>repeated .api.commons.Metadata metadata = 14 [json_name = "metadata"];</code>
@@ -3360,7 +3444,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A list of conversation context meatadatgit stata
+     * A list of conversation context meatadata
      * </pre>
      *
      * <code>repeated .api.commons.Metadata metadata = 14 [json_name = "metadata"];</code>
@@ -4054,6 +4138,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object assignee_ = "";
     /**
+     * <pre>
+     * To be deprecated
+     * </pre>
+     *
      * <code>string assignee = 18 [json_name = "assignee"];</code>
      * @return The assignee.
      */
@@ -4070,6 +4158,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * To be deprecated
+     * </pre>
+     *
      * <code>string assignee = 18 [json_name = "assignee"];</code>
      * @return The bytes for assignee.
      */
@@ -4087,6 +4179,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * To be deprecated
+     * </pre>
+     *
      * <code>string assignee = 18 [json_name = "assignee"];</code>
      * @param value The assignee to set.
      * @return This builder for chaining.
@@ -4100,6 +4196,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * To be deprecated
+     * </pre>
+     *
      * <code>string assignee = 18 [json_name = "assignee"];</code>
      * @return This builder for chaining.
      */
@@ -4110,6 +4210,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * To be deprecated
+     * </pre>
+     *
      * <code>string assignee = 18 [json_name = "assignee"];</code>
      * @param value The bytes for assignee to set.
      * @return This builder for chaining.
@@ -4137,6 +4241,10 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.TicketAction, com.tcn.cloud.api.api.commons.TicketAction.Builder, com.tcn.cloud.api.api.commons.TicketActionOrBuilder> ticketActionBuilder_;
 
     /**
+     * <pre>
+     * A set of Action associated with a Project
+     * </pre>
+     *
      * <code>repeated .api.commons.TicketAction ticket_action = 19 [json_name = "ticketAction"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.commons.TicketAction> getTicketActionList() {
@@ -4147,6 +4255,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * A set of Action associated with a Project
+     * </pre>
+     *
      * <code>repeated .api.commons.TicketAction ticket_action = 19 [json_name = "ticketAction"];</code>
      */
     public int getTicketActionCount() {
@@ -4157,6 +4269,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * A set of Action associated with a Project
+     * </pre>
+     *
      * <code>repeated .api.commons.TicketAction ticket_action = 19 [json_name = "ticketAction"];</code>
      */
     public com.tcn.cloud.api.api.commons.TicketAction getTicketAction(int index) {
@@ -4167,6 +4283,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * A set of Action associated with a Project
+     * </pre>
+     *
      * <code>repeated .api.commons.TicketAction ticket_action = 19 [json_name = "ticketAction"];</code>
      */
     public Builder setTicketAction(
@@ -4184,6 +4304,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * A set of Action associated with a Project
+     * </pre>
+     *
      * <code>repeated .api.commons.TicketAction ticket_action = 19 [json_name = "ticketAction"];</code>
      */
     public Builder setTicketAction(
@@ -4198,6 +4322,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * A set of Action associated with a Project
+     * </pre>
+     *
      * <code>repeated .api.commons.TicketAction ticket_action = 19 [json_name = "ticketAction"];</code>
      */
     public Builder addTicketAction(com.tcn.cloud.api.api.commons.TicketAction value) {
@@ -4214,6 +4342,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * A set of Action associated with a Project
+     * </pre>
+     *
      * <code>repeated .api.commons.TicketAction ticket_action = 19 [json_name = "ticketAction"];</code>
      */
     public Builder addTicketAction(
@@ -4231,6 +4363,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * A set of Action associated with a Project
+     * </pre>
+     *
      * <code>repeated .api.commons.TicketAction ticket_action = 19 [json_name = "ticketAction"];</code>
      */
     public Builder addTicketAction(
@@ -4245,6 +4381,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * A set of Action associated with a Project
+     * </pre>
+     *
      * <code>repeated .api.commons.TicketAction ticket_action = 19 [json_name = "ticketAction"];</code>
      */
     public Builder addTicketAction(
@@ -4259,6 +4399,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * A set of Action associated with a Project
+     * </pre>
+     *
      * <code>repeated .api.commons.TicketAction ticket_action = 19 [json_name = "ticketAction"];</code>
      */
     public Builder addAllTicketAction(
@@ -4274,6 +4418,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * A set of Action associated with a Project
+     * </pre>
+     *
      * <code>repeated .api.commons.TicketAction ticket_action = 19 [json_name = "ticketAction"];</code>
      */
     public Builder clearTicketAction() {
@@ -4287,6 +4435,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * A set of Action associated with a Project
+     * </pre>
+     *
      * <code>repeated .api.commons.TicketAction ticket_action = 19 [json_name = "ticketAction"];</code>
      */
     public Builder removeTicketAction(int index) {
@@ -4300,6 +4452,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * A set of Action associated with a Project
+     * </pre>
+     *
      * <code>repeated .api.commons.TicketAction ticket_action = 19 [json_name = "ticketAction"];</code>
      */
     public com.tcn.cloud.api.api.commons.TicketAction.Builder getTicketActionBuilder(
@@ -4307,6 +4463,10 @@ private static final long serialVersionUID = 0L;
       return getTicketActionFieldBuilder().getBuilder(index);
     }
     /**
+     * <pre>
+     * A set of Action associated with a Project
+     * </pre>
+     *
      * <code>repeated .api.commons.TicketAction ticket_action = 19 [json_name = "ticketAction"];</code>
      */
     public com.tcn.cloud.api.api.commons.TicketActionOrBuilder getTicketActionOrBuilder(
@@ -4317,6 +4477,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * A set of Action associated with a Project
+     * </pre>
+     *
      * <code>repeated .api.commons.TicketAction ticket_action = 19 [json_name = "ticketAction"];</code>
      */
     public java.util.List<? extends com.tcn.cloud.api.api.commons.TicketActionOrBuilder> 
@@ -4328,6 +4492,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * A set of Action associated with a Project
+     * </pre>
+     *
      * <code>repeated .api.commons.TicketAction ticket_action = 19 [json_name = "ticketAction"];</code>
      */
     public com.tcn.cloud.api.api.commons.TicketAction.Builder addTicketActionBuilder() {
@@ -4335,6 +4503,10 @@ private static final long serialVersionUID = 0L;
           com.tcn.cloud.api.api.commons.TicketAction.getDefaultInstance());
     }
     /**
+     * <pre>
+     * A set of Action associated with a Project
+     * </pre>
+     *
      * <code>repeated .api.commons.TicketAction ticket_action = 19 [json_name = "ticketAction"];</code>
      */
     public com.tcn.cloud.api.api.commons.TicketAction.Builder addTicketActionBuilder(
@@ -4343,6 +4515,10 @@ private static final long serialVersionUID = 0L;
           index, com.tcn.cloud.api.api.commons.TicketAction.getDefaultInstance());
     }
     /**
+     * <pre>
+     * A set of Action associated with a Project
+     * </pre>
+     *
      * <code>repeated .api.commons.TicketAction ticket_action = 19 [json_name = "ticketAction"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.commons.TicketAction.Builder> 
@@ -4366,6 +4542,10 @@ private static final long serialVersionUID = 0L;
 
     private int ticketStatus_ = 0;
     /**
+     * <pre>
+     * Status of the ticket - NEW,OPEN,CLOSED
+     * </pre>
+     *
      * <code>.api.commons.TicketStatus ticket_status = 20 [json_name = "ticketStatus"];</code>
      * @return The enum numeric value on the wire for ticketStatus.
      */
@@ -4373,6 +4553,10 @@ private static final long serialVersionUID = 0L;
       return ticketStatus_;
     }
     /**
+     * <pre>
+     * Status of the ticket - NEW,OPEN,CLOSED
+     * </pre>
+     *
      * <code>.api.commons.TicketStatus ticket_status = 20 [json_name = "ticketStatus"];</code>
      * @param value The enum numeric value on the wire for ticketStatus to set.
      * @return This builder for chaining.
@@ -4384,6 +4568,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Status of the ticket - NEW,OPEN,CLOSED
+     * </pre>
+     *
      * <code>.api.commons.TicketStatus ticket_status = 20 [json_name = "ticketStatus"];</code>
      * @return The ticketStatus.
      */
@@ -4393,6 +4581,10 @@ private static final long serialVersionUID = 0L;
       return result == null ? com.tcn.cloud.api.api.commons.TicketStatus.UNRECOGNIZED : result;
     }
     /**
+     * <pre>
+     * Status of the ticket - NEW,OPEN,CLOSED
+     * </pre>
+     *
      * <code>.api.commons.TicketStatus ticket_status = 20 [json_name = "ticketStatus"];</code>
      * @param value The ticketStatus to set.
      * @return This builder for chaining.
@@ -4407,6 +4599,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Status of the ticket - NEW,OPEN,CLOSED
+     * </pre>
+     *
      * <code>.api.commons.TicketStatus ticket_status = 20 [json_name = "ticketStatus"];</code>
      * @return This builder for chaining.
      */
@@ -4574,7 +4770,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *participant list
+     *participant list - Any user who participates in the ticket life cycle
      * </pre>
      *
      * <code>repeated string ticket_participant = 22 [json_name = "ticketParticipant"];</code>
@@ -4587,7 +4783,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *participant list
+     *participant list - Any user who participates in the ticket life cycle
      * </pre>
      *
      * <code>repeated string ticket_participant = 22 [json_name = "ticketParticipant"];</code>
@@ -4598,7 +4794,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *participant list
+     *participant list - Any user who participates in the ticket life cycle
      * </pre>
      *
      * <code>repeated string ticket_participant = 22 [json_name = "ticketParticipant"];</code>
@@ -4610,7 +4806,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *participant list
+     *participant list - Any user who participates in the ticket life cycle
      * </pre>
      *
      * <code>repeated string ticket_participant = 22 [json_name = "ticketParticipant"];</code>
@@ -4623,7 +4819,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *participant list
+     *participant list - Any user who participates in the ticket life cycle
      * </pre>
      *
      * <code>repeated string ticket_participant = 22 [json_name = "ticketParticipant"];</code>
@@ -4642,7 +4838,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *participant list
+     *participant list - Any user who participates in the ticket life cycle
      * </pre>
      *
      * <code>repeated string ticket_participant = 22 [json_name = "ticketParticipant"];</code>
@@ -4660,7 +4856,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *participant list
+     *participant list - Any user who participates in the ticket life cycle
      * </pre>
      *
      * <code>repeated string ticket_participant = 22 [json_name = "ticketParticipant"];</code>
@@ -4678,7 +4874,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *participant list
+     *participant list - Any user who participates in the ticket life cycle
      * </pre>
      *
      * <code>repeated string ticket_participant = 22 [json_name = "ticketParticipant"];</code>
@@ -4693,7 +4889,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *participant list
+     *participant list - Any user who participates in the ticket life cycle
      * </pre>
      *
      * <code>repeated string ticket_participant = 22 [json_name = "ticketParticipant"];</code>

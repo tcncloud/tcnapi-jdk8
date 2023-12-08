@@ -236,4 +236,51 @@ public interface TicketActionOrBuilder extends
    */
   com.google.protobuf.ByteString
       getWorkDoneByBytes();
+
+  /**
+   * <code>.api.commons.CallbackContext voice_context = 12 [json_name = "voiceContext"];</code>
+   * @return Whether the voiceContext field is set.
+   */
+  boolean hasVoiceContext();
+  /**
+   * <code>.api.commons.CallbackContext voice_context = 12 [json_name = "voiceContext"];</code>
+   * @return The voiceContext.
+   */
+  com.tcn.cloud.api.api.commons.CallbackContext getVoiceContext();
+  /**
+   * <code>.api.commons.CallbackContext voice_context = 12 [json_name = "voiceContext"];</code>
+   */
+  com.tcn.cloud.api.api.commons.CallbackContextOrBuilder getVoiceContextOrBuilder();
+
+  /**
+   * <code>.api.commons.SmsbackContext sms_context = 13 [json_name = "smsContext"];</code>
+   * @return Whether the smsContext field is set.
+   */
+  boolean hasSmsContext();
+  /**
+   * <code>.api.commons.SmsbackContext sms_context = 13 [json_name = "smsContext"];</code>
+   * @return The smsContext.
+   */
+  com.tcn.cloud.api.api.commons.SmsbackContext getSmsContext();
+  /**
+   * <code>.api.commons.SmsbackContext sms_context = 13 [json_name = "smsContext"];</code>
+   */
+  com.tcn.cloud.api.api.commons.SmsbackContextOrBuilder getSmsContextOrBuilder();
+
+  /**
+   * <code>.api.commons.EmailbackContext email_context = 14 [json_name = "emailContext"];</code>
+   * @return Whether the emailContext field is set.
+   */
+  boolean hasEmailContext();
+  /**
+   * <code>.api.commons.EmailbackContext email_context = 14 [json_name = "emailContext"];</code>
+   * @return The emailContext.
+   */
+  com.tcn.cloud.api.api.commons.EmailbackContext getEmailContext();
+  /**
+   * <code>.api.commons.EmailbackContext email_context = 14 [json_name = "emailContext"];</code>
+   */
+  com.tcn.cloud.api.api.commons.EmailbackContextOrBuilder getEmailContextOrBuilder();
+
+  com.tcn.cloud.api.api.commons.TicketAction.ContextCase getContextCase();
 }

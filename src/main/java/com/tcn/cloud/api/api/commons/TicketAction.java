@@ -46,6 +46,50 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.TicketAction.class, com.tcn.cloud.api.api.commons.TicketAction.Builder.class);
   }
 
+  private int contextCase_ = 0;
+  @SuppressWarnings("serial")
+  private java.lang.Object context_;
+  public enum ContextCase
+      implements com.google.protobuf.Internal.EnumLite,
+          com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+    VOICE_CONTEXT(12),
+    SMS_CONTEXT(13),
+    EMAIL_CONTEXT(14),
+    CONTEXT_NOT_SET(0);
+    private final int value;
+    private ContextCase(int value) {
+      this.value = value;
+    }
+    /**
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static ContextCase valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static ContextCase forNumber(int value) {
+      switch (value) {
+        case 12: return VOICE_CONTEXT;
+        case 13: return SMS_CONTEXT;
+        case 14: return EMAIL_CONTEXT;
+        case 0: return CONTEXT_NOT_SET;
+        default: return null;
+      }
+    }
+    public int getNumber() {
+      return this.value;
+    }
+  };
+
+  public ContextCase
+  getContextCase() {
+    return ContextCase.forNumber(
+        contextCase_);
+  }
+
   public static final int TICKET_ACTION_ID_FIELD_NUMBER = 1;
   private long ticketActionId_ = 0L;
   /**
@@ -385,6 +429,99 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int VOICE_CONTEXT_FIELD_NUMBER = 12;
+  /**
+   * <code>.api.commons.CallbackContext voice_context = 12 [json_name = "voiceContext"];</code>
+   * @return Whether the voiceContext field is set.
+   */
+  @java.lang.Override
+  public boolean hasVoiceContext() {
+    return contextCase_ == 12;
+  }
+  /**
+   * <code>.api.commons.CallbackContext voice_context = 12 [json_name = "voiceContext"];</code>
+   * @return The voiceContext.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.CallbackContext getVoiceContext() {
+    if (contextCase_ == 12) {
+       return (com.tcn.cloud.api.api.commons.CallbackContext) context_;
+    }
+    return com.tcn.cloud.api.api.commons.CallbackContext.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.CallbackContext voice_context = 12 [json_name = "voiceContext"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.CallbackContextOrBuilder getVoiceContextOrBuilder() {
+    if (contextCase_ == 12) {
+       return (com.tcn.cloud.api.api.commons.CallbackContext) context_;
+    }
+    return com.tcn.cloud.api.api.commons.CallbackContext.getDefaultInstance();
+  }
+
+  public static final int SMS_CONTEXT_FIELD_NUMBER = 13;
+  /**
+   * <code>.api.commons.SmsbackContext sms_context = 13 [json_name = "smsContext"];</code>
+   * @return Whether the smsContext field is set.
+   */
+  @java.lang.Override
+  public boolean hasSmsContext() {
+    return contextCase_ == 13;
+  }
+  /**
+   * <code>.api.commons.SmsbackContext sms_context = 13 [json_name = "smsContext"];</code>
+   * @return The smsContext.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.SmsbackContext getSmsContext() {
+    if (contextCase_ == 13) {
+       return (com.tcn.cloud.api.api.commons.SmsbackContext) context_;
+    }
+    return com.tcn.cloud.api.api.commons.SmsbackContext.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.SmsbackContext sms_context = 13 [json_name = "smsContext"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.SmsbackContextOrBuilder getSmsContextOrBuilder() {
+    if (contextCase_ == 13) {
+       return (com.tcn.cloud.api.api.commons.SmsbackContext) context_;
+    }
+    return com.tcn.cloud.api.api.commons.SmsbackContext.getDefaultInstance();
+  }
+
+  public static final int EMAIL_CONTEXT_FIELD_NUMBER = 14;
+  /**
+   * <code>.api.commons.EmailbackContext email_context = 14 [json_name = "emailContext"];</code>
+   * @return Whether the emailContext field is set.
+   */
+  @java.lang.Override
+  public boolean hasEmailContext() {
+    return contextCase_ == 14;
+  }
+  /**
+   * <code>.api.commons.EmailbackContext email_context = 14 [json_name = "emailContext"];</code>
+   * @return The emailContext.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.EmailbackContext getEmailContext() {
+    if (contextCase_ == 14) {
+       return (com.tcn.cloud.api.api.commons.EmailbackContext) context_;
+    }
+    return com.tcn.cloud.api.api.commons.EmailbackContext.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.EmailbackContext email_context = 14 [json_name = "emailContext"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.EmailbackContextOrBuilder getEmailContextOrBuilder() {
+    if (contextCase_ == 14) {
+       return (com.tcn.cloud.api.api.commons.EmailbackContext) context_;
+    }
+    return com.tcn.cloud.api.api.commons.EmailbackContext.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -428,6 +565,15 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(workDoneBy_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 11, workDoneBy_);
+    }
+    if (contextCase_ == 12) {
+      output.writeMessage(12, (com.tcn.cloud.api.api.commons.CallbackContext) context_);
+    }
+    if (contextCase_ == 13) {
+      output.writeMessage(13, (com.tcn.cloud.api.api.commons.SmsbackContext) context_);
+    }
+    if (contextCase_ == 14) {
+      output.writeMessage(14, (com.tcn.cloud.api.api.commons.EmailbackContext) context_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -481,6 +627,18 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(workDoneBy_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, workDoneBy_);
     }
+    if (contextCase_ == 12) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(12, (com.tcn.cloud.api.api.commons.CallbackContext) context_);
+    }
+    if (contextCase_ == 13) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(13, (com.tcn.cloud.api.api.commons.SmsbackContext) context_);
+    }
+    if (contextCase_ == 14) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(14, (com.tcn.cloud.api.api.commons.EmailbackContext) context_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -525,6 +683,23 @@ private static final long serialVersionUID = 0L;
         .equals(other.getActionSlaIdList())) return false;
     if (!getWorkDoneBy()
         .equals(other.getWorkDoneBy())) return false;
+    if (!getContextCase().equals(other.getContextCase())) return false;
+    switch (contextCase_) {
+      case 12:
+        if (!getVoiceContext()
+            .equals(other.getVoiceContext())) return false;
+        break;
+      case 13:
+        if (!getSmsContext()
+            .equals(other.getSmsContext())) return false;
+        break;
+      case 14:
+        if (!getEmailContext()
+            .equals(other.getEmailContext())) return false;
+        break;
+      case 0:
+      default:
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -570,6 +745,22 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + WORK_DONE_BY_FIELD_NUMBER;
     hash = (53 * hash) + getWorkDoneBy().hashCode();
+    switch (contextCase_) {
+      case 12:
+        hash = (37 * hash) + VOICE_CONTEXT_FIELD_NUMBER;
+        hash = (53 * hash) + getVoiceContext().hashCode();
+        break;
+      case 13:
+        hash = (37 * hash) + SMS_CONTEXT_FIELD_NUMBER;
+        hash = (53 * hash) + getSmsContext().hashCode();
+        break;
+      case 14:
+        hash = (37 * hash) + EMAIL_CONTEXT_FIELD_NUMBER;
+        hash = (53 * hash) + getEmailContext().hashCode();
+        break;
+      case 0:
+      default:
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -734,6 +925,17 @@ private static final long serialVersionUID = 0L;
       }
       bitField0_ = (bitField0_ & ~0x00000100);
       workDoneBy_ = "";
+      if (voiceContextBuilder_ != null) {
+        voiceContextBuilder_.clear();
+      }
+      if (smsContextBuilder_ != null) {
+        smsContextBuilder_.clear();
+      }
+      if (emailContextBuilder_ != null) {
+        emailContextBuilder_.clear();
+      }
+      contextCase_ = 0;
+      context_ = null;
       return this;
     }
 
@@ -762,6 +964,7 @@ private static final long serialVersionUID = 0L;
       com.tcn.cloud.api.api.commons.TicketAction result = new com.tcn.cloud.api.api.commons.TicketAction(this);
       buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
+      buildPartialOneofs(result);
       onBuilt();
       return result;
     }
@@ -813,6 +1016,23 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000200) != 0)) {
         result.workDoneBy_ = workDoneBy_;
+      }
+    }
+
+    private void buildPartialOneofs(com.tcn.cloud.api.api.commons.TicketAction result) {
+      result.contextCase_ = contextCase_;
+      result.context_ = this.context_;
+      if (contextCase_ == 12 &&
+          voiceContextBuilder_ != null) {
+        result.context_ = voiceContextBuilder_.build();
+      }
+      if (contextCase_ == 13 &&
+          smsContextBuilder_ != null) {
+        result.context_ = smsContextBuilder_.build();
+      }
+      if (contextCase_ == 14 &&
+          emailContextBuilder_ != null) {
+        result.context_ = emailContextBuilder_.build();
       }
     }
 
@@ -922,6 +1142,23 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000200;
         onChanged();
       }
+      switch (other.getContextCase()) {
+        case VOICE_CONTEXT: {
+          mergeVoiceContext(other.getVoiceContext());
+          break;
+        }
+        case SMS_CONTEXT: {
+          mergeSmsContext(other.getSmsContext());
+          break;
+        }
+        case EMAIL_CONTEXT: {
+          mergeEmailContext(other.getEmailContext());
+          break;
+        }
+        case CONTEXT_NOT_SET: {
+          break;
+        }
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1013,6 +1250,27 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000200;
               break;
             } // case 90
+            case 98: {
+              input.readMessage(
+                  getVoiceContextFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              contextCase_ = 12;
+              break;
+            } // case 98
+            case 106: {
+              input.readMessage(
+                  getSmsContextFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              contextCase_ = 13;
+              break;
+            } // case 106
+            case 114: {
+              input.readMessage(
+                  getEmailContextFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              contextCase_ = 14;
+              break;
+            } // case 114
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1028,6 +1286,21 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int contextCase_ = 0;
+    private java.lang.Object context_;
+    public ContextCase
+        getContextCase() {
+      return ContextCase.forNumber(
+          contextCase_);
+    }
+
+    public Builder clearContext() {
+      contextCase_ = 0;
+      context_ = null;
+      onChanged();
+      return this;
+    }
+
     private int bitField0_;
 
     private long ticketActionId_ ;
@@ -2229,6 +2502,432 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000200;
       onChanged();
       return this;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.CallbackContext, com.tcn.cloud.api.api.commons.CallbackContext.Builder, com.tcn.cloud.api.api.commons.CallbackContextOrBuilder> voiceContextBuilder_;
+    /**
+     * <code>.api.commons.CallbackContext voice_context = 12 [json_name = "voiceContext"];</code>
+     * @return Whether the voiceContext field is set.
+     */
+    @java.lang.Override
+    public boolean hasVoiceContext() {
+      return contextCase_ == 12;
+    }
+    /**
+     * <code>.api.commons.CallbackContext voice_context = 12 [json_name = "voiceContext"];</code>
+     * @return The voiceContext.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.CallbackContext getVoiceContext() {
+      if (voiceContextBuilder_ == null) {
+        if (contextCase_ == 12) {
+          return (com.tcn.cloud.api.api.commons.CallbackContext) context_;
+        }
+        return com.tcn.cloud.api.api.commons.CallbackContext.getDefaultInstance();
+      } else {
+        if (contextCase_ == 12) {
+          return voiceContextBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.CallbackContext.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.CallbackContext voice_context = 12 [json_name = "voiceContext"];</code>
+     */
+    public Builder setVoiceContext(com.tcn.cloud.api.api.commons.CallbackContext value) {
+      if (voiceContextBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        context_ = value;
+        onChanged();
+      } else {
+        voiceContextBuilder_.setMessage(value);
+      }
+      contextCase_ = 12;
+      return this;
+    }
+    /**
+     * <code>.api.commons.CallbackContext voice_context = 12 [json_name = "voiceContext"];</code>
+     */
+    public Builder setVoiceContext(
+        com.tcn.cloud.api.api.commons.CallbackContext.Builder builderForValue) {
+      if (voiceContextBuilder_ == null) {
+        context_ = builderForValue.build();
+        onChanged();
+      } else {
+        voiceContextBuilder_.setMessage(builderForValue.build());
+      }
+      contextCase_ = 12;
+      return this;
+    }
+    /**
+     * <code>.api.commons.CallbackContext voice_context = 12 [json_name = "voiceContext"];</code>
+     */
+    public Builder mergeVoiceContext(com.tcn.cloud.api.api.commons.CallbackContext value) {
+      if (voiceContextBuilder_ == null) {
+        if (contextCase_ == 12 &&
+            context_ != com.tcn.cloud.api.api.commons.CallbackContext.getDefaultInstance()) {
+          context_ = com.tcn.cloud.api.api.commons.CallbackContext.newBuilder((com.tcn.cloud.api.api.commons.CallbackContext) context_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          context_ = value;
+        }
+        onChanged();
+      } else {
+        if (contextCase_ == 12) {
+          voiceContextBuilder_.mergeFrom(value);
+        } else {
+          voiceContextBuilder_.setMessage(value);
+        }
+      }
+      contextCase_ = 12;
+      return this;
+    }
+    /**
+     * <code>.api.commons.CallbackContext voice_context = 12 [json_name = "voiceContext"];</code>
+     */
+    public Builder clearVoiceContext() {
+      if (voiceContextBuilder_ == null) {
+        if (contextCase_ == 12) {
+          contextCase_ = 0;
+          context_ = null;
+          onChanged();
+        }
+      } else {
+        if (contextCase_ == 12) {
+          contextCase_ = 0;
+          context_ = null;
+        }
+        voiceContextBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.CallbackContext voice_context = 12 [json_name = "voiceContext"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.CallbackContext.Builder getVoiceContextBuilder() {
+      return getVoiceContextFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.CallbackContext voice_context = 12 [json_name = "voiceContext"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.CallbackContextOrBuilder getVoiceContextOrBuilder() {
+      if ((contextCase_ == 12) && (voiceContextBuilder_ != null)) {
+        return voiceContextBuilder_.getMessageOrBuilder();
+      } else {
+        if (contextCase_ == 12) {
+          return (com.tcn.cloud.api.api.commons.CallbackContext) context_;
+        }
+        return com.tcn.cloud.api.api.commons.CallbackContext.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.CallbackContext voice_context = 12 [json_name = "voiceContext"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.CallbackContext, com.tcn.cloud.api.api.commons.CallbackContext.Builder, com.tcn.cloud.api.api.commons.CallbackContextOrBuilder> 
+        getVoiceContextFieldBuilder() {
+      if (voiceContextBuilder_ == null) {
+        if (!(contextCase_ == 12)) {
+          context_ = com.tcn.cloud.api.api.commons.CallbackContext.getDefaultInstance();
+        }
+        voiceContextBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.CallbackContext, com.tcn.cloud.api.api.commons.CallbackContext.Builder, com.tcn.cloud.api.api.commons.CallbackContextOrBuilder>(
+                (com.tcn.cloud.api.api.commons.CallbackContext) context_,
+                getParentForChildren(),
+                isClean());
+        context_ = null;
+      }
+      contextCase_ = 12;
+      onChanged();
+      return voiceContextBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.SmsbackContext, com.tcn.cloud.api.api.commons.SmsbackContext.Builder, com.tcn.cloud.api.api.commons.SmsbackContextOrBuilder> smsContextBuilder_;
+    /**
+     * <code>.api.commons.SmsbackContext sms_context = 13 [json_name = "smsContext"];</code>
+     * @return Whether the smsContext field is set.
+     */
+    @java.lang.Override
+    public boolean hasSmsContext() {
+      return contextCase_ == 13;
+    }
+    /**
+     * <code>.api.commons.SmsbackContext sms_context = 13 [json_name = "smsContext"];</code>
+     * @return The smsContext.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.SmsbackContext getSmsContext() {
+      if (smsContextBuilder_ == null) {
+        if (contextCase_ == 13) {
+          return (com.tcn.cloud.api.api.commons.SmsbackContext) context_;
+        }
+        return com.tcn.cloud.api.api.commons.SmsbackContext.getDefaultInstance();
+      } else {
+        if (contextCase_ == 13) {
+          return smsContextBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.SmsbackContext.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.SmsbackContext sms_context = 13 [json_name = "smsContext"];</code>
+     */
+    public Builder setSmsContext(com.tcn.cloud.api.api.commons.SmsbackContext value) {
+      if (smsContextBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        context_ = value;
+        onChanged();
+      } else {
+        smsContextBuilder_.setMessage(value);
+      }
+      contextCase_ = 13;
+      return this;
+    }
+    /**
+     * <code>.api.commons.SmsbackContext sms_context = 13 [json_name = "smsContext"];</code>
+     */
+    public Builder setSmsContext(
+        com.tcn.cloud.api.api.commons.SmsbackContext.Builder builderForValue) {
+      if (smsContextBuilder_ == null) {
+        context_ = builderForValue.build();
+        onChanged();
+      } else {
+        smsContextBuilder_.setMessage(builderForValue.build());
+      }
+      contextCase_ = 13;
+      return this;
+    }
+    /**
+     * <code>.api.commons.SmsbackContext sms_context = 13 [json_name = "smsContext"];</code>
+     */
+    public Builder mergeSmsContext(com.tcn.cloud.api.api.commons.SmsbackContext value) {
+      if (smsContextBuilder_ == null) {
+        if (contextCase_ == 13 &&
+            context_ != com.tcn.cloud.api.api.commons.SmsbackContext.getDefaultInstance()) {
+          context_ = com.tcn.cloud.api.api.commons.SmsbackContext.newBuilder((com.tcn.cloud.api.api.commons.SmsbackContext) context_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          context_ = value;
+        }
+        onChanged();
+      } else {
+        if (contextCase_ == 13) {
+          smsContextBuilder_.mergeFrom(value);
+        } else {
+          smsContextBuilder_.setMessage(value);
+        }
+      }
+      contextCase_ = 13;
+      return this;
+    }
+    /**
+     * <code>.api.commons.SmsbackContext sms_context = 13 [json_name = "smsContext"];</code>
+     */
+    public Builder clearSmsContext() {
+      if (smsContextBuilder_ == null) {
+        if (contextCase_ == 13) {
+          contextCase_ = 0;
+          context_ = null;
+          onChanged();
+        }
+      } else {
+        if (contextCase_ == 13) {
+          contextCase_ = 0;
+          context_ = null;
+        }
+        smsContextBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.SmsbackContext sms_context = 13 [json_name = "smsContext"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.SmsbackContext.Builder getSmsContextBuilder() {
+      return getSmsContextFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.SmsbackContext sms_context = 13 [json_name = "smsContext"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.SmsbackContextOrBuilder getSmsContextOrBuilder() {
+      if ((contextCase_ == 13) && (smsContextBuilder_ != null)) {
+        return smsContextBuilder_.getMessageOrBuilder();
+      } else {
+        if (contextCase_ == 13) {
+          return (com.tcn.cloud.api.api.commons.SmsbackContext) context_;
+        }
+        return com.tcn.cloud.api.api.commons.SmsbackContext.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.SmsbackContext sms_context = 13 [json_name = "smsContext"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.SmsbackContext, com.tcn.cloud.api.api.commons.SmsbackContext.Builder, com.tcn.cloud.api.api.commons.SmsbackContextOrBuilder> 
+        getSmsContextFieldBuilder() {
+      if (smsContextBuilder_ == null) {
+        if (!(contextCase_ == 13)) {
+          context_ = com.tcn.cloud.api.api.commons.SmsbackContext.getDefaultInstance();
+        }
+        smsContextBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.SmsbackContext, com.tcn.cloud.api.api.commons.SmsbackContext.Builder, com.tcn.cloud.api.api.commons.SmsbackContextOrBuilder>(
+                (com.tcn.cloud.api.api.commons.SmsbackContext) context_,
+                getParentForChildren(),
+                isClean());
+        context_ = null;
+      }
+      contextCase_ = 13;
+      onChanged();
+      return smsContextBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.EmailbackContext, com.tcn.cloud.api.api.commons.EmailbackContext.Builder, com.tcn.cloud.api.api.commons.EmailbackContextOrBuilder> emailContextBuilder_;
+    /**
+     * <code>.api.commons.EmailbackContext email_context = 14 [json_name = "emailContext"];</code>
+     * @return Whether the emailContext field is set.
+     */
+    @java.lang.Override
+    public boolean hasEmailContext() {
+      return contextCase_ == 14;
+    }
+    /**
+     * <code>.api.commons.EmailbackContext email_context = 14 [json_name = "emailContext"];</code>
+     * @return The emailContext.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.EmailbackContext getEmailContext() {
+      if (emailContextBuilder_ == null) {
+        if (contextCase_ == 14) {
+          return (com.tcn.cloud.api.api.commons.EmailbackContext) context_;
+        }
+        return com.tcn.cloud.api.api.commons.EmailbackContext.getDefaultInstance();
+      } else {
+        if (contextCase_ == 14) {
+          return emailContextBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.EmailbackContext.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.EmailbackContext email_context = 14 [json_name = "emailContext"];</code>
+     */
+    public Builder setEmailContext(com.tcn.cloud.api.api.commons.EmailbackContext value) {
+      if (emailContextBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        context_ = value;
+        onChanged();
+      } else {
+        emailContextBuilder_.setMessage(value);
+      }
+      contextCase_ = 14;
+      return this;
+    }
+    /**
+     * <code>.api.commons.EmailbackContext email_context = 14 [json_name = "emailContext"];</code>
+     */
+    public Builder setEmailContext(
+        com.tcn.cloud.api.api.commons.EmailbackContext.Builder builderForValue) {
+      if (emailContextBuilder_ == null) {
+        context_ = builderForValue.build();
+        onChanged();
+      } else {
+        emailContextBuilder_.setMessage(builderForValue.build());
+      }
+      contextCase_ = 14;
+      return this;
+    }
+    /**
+     * <code>.api.commons.EmailbackContext email_context = 14 [json_name = "emailContext"];</code>
+     */
+    public Builder mergeEmailContext(com.tcn.cloud.api.api.commons.EmailbackContext value) {
+      if (emailContextBuilder_ == null) {
+        if (contextCase_ == 14 &&
+            context_ != com.tcn.cloud.api.api.commons.EmailbackContext.getDefaultInstance()) {
+          context_ = com.tcn.cloud.api.api.commons.EmailbackContext.newBuilder((com.tcn.cloud.api.api.commons.EmailbackContext) context_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          context_ = value;
+        }
+        onChanged();
+      } else {
+        if (contextCase_ == 14) {
+          emailContextBuilder_.mergeFrom(value);
+        } else {
+          emailContextBuilder_.setMessage(value);
+        }
+      }
+      contextCase_ = 14;
+      return this;
+    }
+    /**
+     * <code>.api.commons.EmailbackContext email_context = 14 [json_name = "emailContext"];</code>
+     */
+    public Builder clearEmailContext() {
+      if (emailContextBuilder_ == null) {
+        if (contextCase_ == 14) {
+          contextCase_ = 0;
+          context_ = null;
+          onChanged();
+        }
+      } else {
+        if (contextCase_ == 14) {
+          contextCase_ = 0;
+          context_ = null;
+        }
+        emailContextBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.EmailbackContext email_context = 14 [json_name = "emailContext"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.EmailbackContext.Builder getEmailContextBuilder() {
+      return getEmailContextFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.EmailbackContext email_context = 14 [json_name = "emailContext"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.EmailbackContextOrBuilder getEmailContextOrBuilder() {
+      if ((contextCase_ == 14) && (emailContextBuilder_ != null)) {
+        return emailContextBuilder_.getMessageOrBuilder();
+      } else {
+        if (contextCase_ == 14) {
+          return (com.tcn.cloud.api.api.commons.EmailbackContext) context_;
+        }
+        return com.tcn.cloud.api.api.commons.EmailbackContext.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.EmailbackContext email_context = 14 [json_name = "emailContext"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.EmailbackContext, com.tcn.cloud.api.api.commons.EmailbackContext.Builder, com.tcn.cloud.api.api.commons.EmailbackContextOrBuilder> 
+        getEmailContextFieldBuilder() {
+      if (emailContextBuilder_ == null) {
+        if (!(contextCase_ == 14)) {
+          context_ = com.tcn.cloud.api.api.commons.EmailbackContext.getDefaultInstance();
+        }
+        emailContextBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.EmailbackContext, com.tcn.cloud.api.api.commons.EmailbackContext.Builder, com.tcn.cloud.api.api.commons.EmailbackContextOrBuilder>(
+                (com.tcn.cloud.api.api.commons.EmailbackContext) context_,
+                getParentForChildren(),
+                isClean());
+        context_ = null;
+      }
+      contextCase_ = 14;
+      onChanged();
+      return emailContextBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
