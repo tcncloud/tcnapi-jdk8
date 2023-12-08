@@ -561,6 +561,44 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.EmailbackContext.getDefaultInstance();
   }
 
+  public static final int ACTION_TYPE_FIELD_NUMBER = 15;
+  private com.tcn.cloud.api.api.commons.ActionType actionType_;
+  /**
+   * <pre>
+   * Action Type
+   * </pre>
+   *
+   * <code>.api.commons.ActionType action_type = 15 [json_name = "actionType"];</code>
+   * @return Whether the actionType field is set.
+   */
+  @java.lang.Override
+  public boolean hasActionType() {
+    return actionType_ != null;
+  }
+  /**
+   * <pre>
+   * Action Type
+   * </pre>
+   *
+   * <code>.api.commons.ActionType action_type = 15 [json_name = "actionType"];</code>
+   * @return The actionType.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.ActionType getActionType() {
+    return actionType_ == null ? com.tcn.cloud.api.api.commons.ActionType.getDefaultInstance() : actionType_;
+  }
+  /**
+   * <pre>
+   * Action Type
+   * </pre>
+   *
+   * <code>.api.commons.ActionType action_type = 15 [json_name = "actionType"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.ActionTypeOrBuilder getActionTypeOrBuilder() {
+    return actionType_ == null ? com.tcn.cloud.api.api.commons.ActionType.getDefaultInstance() : actionType_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -613,6 +651,9 @@ private static final long serialVersionUID = 0L;
     }
     if (contextCase_ == 14) {
       output.writeMessage(14, (com.tcn.cloud.api.api.commons.EmailbackContext) context_);
+    }
+    if (actionType_ != null) {
+      output.writeMessage(15, getActionType());
     }
     getUnknownFields().writeTo(output);
   }
@@ -678,6 +719,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(14, (com.tcn.cloud.api.api.commons.EmailbackContext) context_);
     }
+    if (actionType_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(15, getActionType());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -722,6 +767,11 @@ private static final long serialVersionUID = 0L;
         .equals(other.getActionSlaIdList())) return false;
     if (!getWorkDoneBy()
         .equals(other.getWorkDoneBy())) return false;
+    if (hasActionType() != other.hasActionType()) return false;
+    if (hasActionType()) {
+      if (!getActionType()
+          .equals(other.getActionType())) return false;
+    }
     if (!getContextCase().equals(other.getContextCase())) return false;
     switch (contextCase_) {
       case 12:
@@ -784,6 +834,10 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + WORK_DONE_BY_FIELD_NUMBER;
     hash = (53 * hash) + getWorkDoneBy().hashCode();
+    if (hasActionType()) {
+      hash = (37 * hash) + ACTION_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getActionType().hashCode();
+    }
     switch (contextCase_) {
       case 12:
         hash = (37 * hash) + VOICE_CONTEXT_FIELD_NUMBER;
@@ -973,6 +1027,11 @@ private static final long serialVersionUID = 0L;
       if (emailContextBuilder_ != null) {
         emailContextBuilder_.clear();
       }
+      actionType_ = null;
+      if (actionTypeBuilder_ != null) {
+        actionTypeBuilder_.dispose();
+        actionTypeBuilder_ = null;
+      }
       contextCase_ = 0;
       context_ = null;
       return this;
@@ -1055,6 +1114,11 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000200) != 0)) {
         result.workDoneBy_ = workDoneBy_;
+      }
+      if (((from_bitField0_ & 0x00002000) != 0)) {
+        result.actionType_ = actionTypeBuilder_ == null
+            ? actionType_
+            : actionTypeBuilder_.build();
       }
     }
 
@@ -1180,6 +1244,9 @@ private static final long serialVersionUID = 0L;
         workDoneBy_ = other.workDoneBy_;
         bitField0_ |= 0x00000200;
         onChanged();
+      }
+      if (other.hasActionType()) {
+        mergeActionType(other.getActionType());
       }
       switch (other.getContextCase()) {
         case VOICE_CONTEXT: {
@@ -1310,6 +1377,13 @@ private static final long serialVersionUID = 0L;
               contextCase_ = 14;
               break;
             } // case 114
+            case 122: {
+              input.readMessage(
+                  getActionTypeFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00002000;
+              break;
+            } // case 122
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -3084,6 +3158,161 @@ private static final long serialVersionUID = 0L;
       contextCase_ = 14;
       onChanged();
       return emailContextBuilder_;
+    }
+
+    private com.tcn.cloud.api.api.commons.ActionType actionType_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.ActionType, com.tcn.cloud.api.api.commons.ActionType.Builder, com.tcn.cloud.api.api.commons.ActionTypeOrBuilder> actionTypeBuilder_;
+    /**
+     * <pre>
+     * Action Type
+     * </pre>
+     *
+     * <code>.api.commons.ActionType action_type = 15 [json_name = "actionType"];</code>
+     * @return Whether the actionType field is set.
+     */
+    public boolean hasActionType() {
+      return ((bitField0_ & 0x00002000) != 0);
+    }
+    /**
+     * <pre>
+     * Action Type
+     * </pre>
+     *
+     * <code>.api.commons.ActionType action_type = 15 [json_name = "actionType"];</code>
+     * @return The actionType.
+     */
+    public com.tcn.cloud.api.api.commons.ActionType getActionType() {
+      if (actionTypeBuilder_ == null) {
+        return actionType_ == null ? com.tcn.cloud.api.api.commons.ActionType.getDefaultInstance() : actionType_;
+      } else {
+        return actionTypeBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Action Type
+     * </pre>
+     *
+     * <code>.api.commons.ActionType action_type = 15 [json_name = "actionType"];</code>
+     */
+    public Builder setActionType(com.tcn.cloud.api.api.commons.ActionType value) {
+      if (actionTypeBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        actionType_ = value;
+      } else {
+        actionTypeBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00002000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Action Type
+     * </pre>
+     *
+     * <code>.api.commons.ActionType action_type = 15 [json_name = "actionType"];</code>
+     */
+    public Builder setActionType(
+        com.tcn.cloud.api.api.commons.ActionType.Builder builderForValue) {
+      if (actionTypeBuilder_ == null) {
+        actionType_ = builderForValue.build();
+      } else {
+        actionTypeBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00002000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Action Type
+     * </pre>
+     *
+     * <code>.api.commons.ActionType action_type = 15 [json_name = "actionType"];</code>
+     */
+    public Builder mergeActionType(com.tcn.cloud.api.api.commons.ActionType value) {
+      if (actionTypeBuilder_ == null) {
+        if (((bitField0_ & 0x00002000) != 0) &&
+          actionType_ != null &&
+          actionType_ != com.tcn.cloud.api.api.commons.ActionType.getDefaultInstance()) {
+          getActionTypeBuilder().mergeFrom(value);
+        } else {
+          actionType_ = value;
+        }
+      } else {
+        actionTypeBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00002000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Action Type
+     * </pre>
+     *
+     * <code>.api.commons.ActionType action_type = 15 [json_name = "actionType"];</code>
+     */
+    public Builder clearActionType() {
+      bitField0_ = (bitField0_ & ~0x00002000);
+      actionType_ = null;
+      if (actionTypeBuilder_ != null) {
+        actionTypeBuilder_.dispose();
+        actionTypeBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Action Type
+     * </pre>
+     *
+     * <code>.api.commons.ActionType action_type = 15 [json_name = "actionType"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.ActionType.Builder getActionTypeBuilder() {
+      bitField0_ |= 0x00002000;
+      onChanged();
+      return getActionTypeFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Action Type
+     * </pre>
+     *
+     * <code>.api.commons.ActionType action_type = 15 [json_name = "actionType"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.ActionTypeOrBuilder getActionTypeOrBuilder() {
+      if (actionTypeBuilder_ != null) {
+        return actionTypeBuilder_.getMessageOrBuilder();
+      } else {
+        return actionType_ == null ?
+            com.tcn.cloud.api.api.commons.ActionType.getDefaultInstance() : actionType_;
+      }
+    }
+    /**
+     * <pre>
+     * Action Type
+     * </pre>
+     *
+     * <code>.api.commons.ActionType action_type = 15 [json_name = "actionType"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.ActionType, com.tcn.cloud.api.api.commons.ActionType.Builder, com.tcn.cloud.api.api.commons.ActionTypeOrBuilder> 
+        getActionTypeFieldBuilder() {
+      if (actionTypeBuilder_ == null) {
+        actionTypeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.ActionType, com.tcn.cloud.api.api.commons.ActionType.Builder, com.tcn.cloud.api.api.commons.ActionTypeOrBuilder>(
+                getActionType(),
+                getParentForChildren(),
+                isClean());
+        actionType_ = null;
+      }
+      return actionTypeBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

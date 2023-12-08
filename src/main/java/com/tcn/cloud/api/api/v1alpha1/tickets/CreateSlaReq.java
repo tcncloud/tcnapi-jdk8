@@ -171,6 +171,10 @@ private static final long serialVersionUID = 0L;
   public static final int DURATION_FIELD_NUMBER = 5;
   private com.tcn.cloud.api.api.commons.Duration duration_;
   /**
+   * <pre>
+   * SLA Duration
+   * </pre>
+   *
    * <code>.api.commons.Duration duration = 5 [json_name = "duration"];</code>
    * @return Whether the duration field is set.
    */
@@ -179,6 +183,10 @@ private static final long serialVersionUID = 0L;
     return duration_ != null;
   }
   /**
+   * <pre>
+   * SLA Duration
+   * </pre>
+   *
    * <code>.api.commons.Duration duration = 5 [json_name = "duration"];</code>
    * @return The duration.
    */
@@ -187,6 +195,10 @@ private static final long serialVersionUID = 0L;
     return duration_ == null ? com.tcn.cloud.api.api.commons.Duration.getDefaultInstance() : duration_;
   }
   /**
+   * <pre>
+   * SLA Duration
+   * </pre>
+   *
    * <code>.api.commons.Duration duration = 5 [json_name = "duration"];</code>
    */
   @java.lang.Override
@@ -908,6 +920,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.Duration, com.tcn.cloud.api.api.commons.Duration.Builder, com.tcn.cloud.api.api.commons.DurationOrBuilder> durationBuilder_;
     /**
+     * <pre>
+     * SLA Duration
+     * </pre>
+     *
      * <code>.api.commons.Duration duration = 5 [json_name = "duration"];</code>
      * @return Whether the duration field is set.
      */
@@ -915,6 +931,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000010) != 0);
     }
     /**
+     * <pre>
+     * SLA Duration
+     * </pre>
+     *
      * <code>.api.commons.Duration duration = 5 [json_name = "duration"];</code>
      * @return The duration.
      */
@@ -926,6 +946,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * SLA Duration
+     * </pre>
+     *
      * <code>.api.commons.Duration duration = 5 [json_name = "duration"];</code>
      */
     public Builder setDuration(com.tcn.cloud.api.api.commons.Duration value) {
@@ -942,6 +966,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * SLA Duration
+     * </pre>
+     *
      * <code>.api.commons.Duration duration = 5 [json_name = "duration"];</code>
      */
     public Builder setDuration(
@@ -956,6 +984,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * SLA Duration
+     * </pre>
+     *
      * <code>.api.commons.Duration duration = 5 [json_name = "duration"];</code>
      */
     public Builder mergeDuration(com.tcn.cloud.api.api.commons.Duration value) {
@@ -975,6 +1007,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * SLA Duration
+     * </pre>
+     *
      * <code>.api.commons.Duration duration = 5 [json_name = "duration"];</code>
      */
     public Builder clearDuration() {
@@ -988,6 +1024,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * SLA Duration
+     * </pre>
+     *
      * <code>.api.commons.Duration duration = 5 [json_name = "duration"];</code>
      */
     public com.tcn.cloud.api.api.commons.Duration.Builder getDurationBuilder() {
@@ -996,6 +1036,10 @@ private static final long serialVersionUID = 0L;
       return getDurationFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * SLA Duration
+     * </pre>
+     *
      * <code>.api.commons.Duration duration = 5 [json_name = "duration"];</code>
      */
     public com.tcn.cloud.api.api.commons.DurationOrBuilder getDurationOrBuilder() {
@@ -1007,6 +1051,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * SLA Duration
+     * </pre>
+     *
      * <code>.api.commons.Duration duration = 5 [json_name = "duration"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<

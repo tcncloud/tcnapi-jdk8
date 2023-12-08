@@ -321,5 +321,32 @@ public interface TicketActionOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.EmailbackContextOrBuilder getEmailContextOrBuilder();
 
+  /**
+   * <pre>
+   * Action Type
+   * </pre>
+   *
+   * <code>.api.commons.ActionType action_type = 15 [json_name = "actionType"];</code>
+   * @return Whether the actionType field is set.
+   */
+  boolean hasActionType();
+  /**
+   * <pre>
+   * Action Type
+   * </pre>
+   *
+   * <code>.api.commons.ActionType action_type = 15 [json_name = "actionType"];</code>
+   * @return The actionType.
+   */
+  com.tcn.cloud.api.api.commons.ActionType getActionType();
+  /**
+   * <pre>
+   * Action Type
+   * </pre>
+   *
+   * <code>.api.commons.ActionType action_type = 15 [json_name = "actionType"];</code>
+   */
+  com.tcn.cloud.api.api.commons.ActionTypeOrBuilder getActionTypeOrBuilder();
+
   com.tcn.cloud.api.api.commons.TicketAction.ContextCase getContextCase();
 }
