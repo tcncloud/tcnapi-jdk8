@@ -42,6 +42,10 @@ private static final long serialVersionUID = 0L;
   public static final int VALUE_FIELD_NUMBER = 1;
   private long value_ = 0L;
   /**
+   * <pre>
+   * Value of of the Scale
+   * </pre>
+   *
    * <code>int64 value = 1 [json_name = "value", jstype = JS_STRING];</code>
    * @return The value.
    */
@@ -53,6 +57,10 @@ private static final long serialVersionUID = 0L;
   public static final int SCALE_FIELD_NUMBER = 2;
   private int scale_ = 0;
   /**
+   * <pre>
+   * Scale - In minutes,hour,day,week,month,year
+   * </pre>
+   *
    * <code>.api.commons.TimeScale scale = 2 [json_name = "scale"];</code>
    * @return The enum numeric value on the wire for scale.
    */
@@ -60,6 +68,10 @@ private static final long serialVersionUID = 0L;
     return scale_;
   }
   /**
+   * <pre>
+   * Scale - In minutes,hour,day,week,month,year
+   * </pre>
+   *
    * <code>.api.commons.TimeScale scale = 2 [json_name = "scale"];</code>
    * @return The scale.
    */
@@ -418,6 +430,10 @@ private static final long serialVersionUID = 0L;
 
     private long value_ ;
     /**
+     * <pre>
+     * Value of of the Scale
+     * </pre>
+     *
      * <code>int64 value = 1 [json_name = "value", jstype = JS_STRING];</code>
      * @return The value.
      */
@@ -426,6 +442,10 @@ private static final long serialVersionUID = 0L;
       return value_;
     }
     /**
+     * <pre>
+     * Value of of the Scale
+     * </pre>
+     *
      * <code>int64 value = 1 [json_name = "value", jstype = JS_STRING];</code>
      * @param value The value to set.
      * @return This builder for chaining.
@@ -438,6 +458,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Value of of the Scale
+     * </pre>
+     *
      * <code>int64 value = 1 [json_name = "value", jstype = JS_STRING];</code>
      * @return This builder for chaining.
      */
@@ -450,6 +474,10 @@ private static final long serialVersionUID = 0L;
 
     private int scale_ = 0;
     /**
+     * <pre>
+     * Scale - In minutes,hour,day,week,month,year
+     * </pre>
+     *
      * <code>.api.commons.TimeScale scale = 2 [json_name = "scale"];</code>
      * @return The enum numeric value on the wire for scale.
      */
@@ -457,6 +485,10 @@ private static final long serialVersionUID = 0L;
       return scale_;
     }
     /**
+     * <pre>
+     * Scale - In minutes,hour,day,week,month,year
+     * </pre>
+     *
      * <code>.api.commons.TimeScale scale = 2 [json_name = "scale"];</code>
      * @param value The enum numeric value on the wire for scale to set.
      * @return This builder for chaining.
@@ -468,6 +500,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Scale - In minutes,hour,day,week,month,year
+     * </pre>
+     *
      * <code>.api.commons.TimeScale scale = 2 [json_name = "scale"];</code>
      * @return The scale.
      */
@@ -477,6 +513,10 @@ private static final long serialVersionUID = 0L;
       return result == null ? com.tcn.cloud.api.api.commons.TimeScale.UNRECOGNIZED : result;
     }
     /**
+     * <pre>
+     * Scale - In minutes,hour,day,week,month,year
+     * </pre>
+     *
      * <code>.api.commons.TimeScale scale = 2 [json_name = "scale"];</code>
      * @param value The scale to set.
      * @return This builder for chaining.
@@ -491,6 +531,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Scale - In minutes,hour,day,week,month,year
+     * </pre>
+     *
      * <code>.api.commons.TimeScale scale = 2 [json_name = "scale"];</code>
      * @return This builder for chaining.
      */

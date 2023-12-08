@@ -8,45 +8,81 @@ public interface EditMaskTicketReqOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * Ticket Id
+   * </pre>
+   *
    * <code>int64 ticket_sid = 1 [json_name = "ticketSid", jstype = JS_STRING];</code>
    * @return The ticketSid.
    */
   long getTicketSid();
 
   /**
+   * <pre>
+   * Ticket Object
+   * </pre>
+   *
    * <code>.api.commons.Ticket edit_value = 2 [json_name = "editValue"];</code>
    * @return Whether the editValue field is set.
    */
   boolean hasEditValue();
   /**
+   * <pre>
+   * Ticket Object
+   * </pre>
+   *
    * <code>.api.commons.Ticket edit_value = 2 [json_name = "editValue"];</code>
    * @return The editValue.
    */
   com.tcn.cloud.api.api.commons.Ticket getEditValue();
   /**
+   * <pre>
+   * Ticket Object
+   * </pre>
+   *
    * <code>.api.commons.Ticket edit_value = 2 [json_name = "editValue"];</code>
    */
   com.tcn.cloud.api.api.commons.TicketOrBuilder getEditValueOrBuilder();
 
   /**
+   * <pre>
+   * Field to be edited in DB
+   * </pre>
+   *
    * <code>repeated .google.protobuf.FieldMask edited_fields_mask = 3 [json_name = "editedFieldsMask"];</code>
    */
   java.util.List<com.google.protobuf.FieldMask> 
       getEditedFieldsMaskList();
   /**
+   * <pre>
+   * Field to be edited in DB
+   * </pre>
+   *
    * <code>repeated .google.protobuf.FieldMask edited_fields_mask = 3 [json_name = "editedFieldsMask"];</code>
    */
   com.google.protobuf.FieldMask getEditedFieldsMask(int index);
   /**
+   * <pre>
+   * Field to be edited in DB
+   * </pre>
+   *
    * <code>repeated .google.protobuf.FieldMask edited_fields_mask = 3 [json_name = "editedFieldsMask"];</code>
    */
   int getEditedFieldsMaskCount();
   /**
+   * <pre>
+   * Field to be edited in DB
+   * </pre>
+   *
    * <code>repeated .google.protobuf.FieldMask edited_fields_mask = 3 [json_name = "editedFieldsMask"];</code>
    */
   java.util.List<? extends com.google.protobuf.FieldMaskOrBuilder> 
       getEditedFieldsMaskOrBuilderList();
   /**
+   * <pre>
+   * Field to be edited in DB
+   * </pre>
+   *
    * <code>repeated .google.protobuf.FieldMask edited_fields_mask = 3 [json_name = "editedFieldsMask"];</code>
    */
   com.google.protobuf.FieldMaskOrBuilder getEditedFieldsMaskOrBuilder(

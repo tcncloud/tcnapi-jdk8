@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.v1alpha1.tickets;
 
-public interface EditTicketReqOrBuilder extends
+@java.lang.Deprecated public interface EditTicketReqOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v1alpha1.tickets.EditTicketReq)
     com.google.protobuf.MessageOrBuilder {
 

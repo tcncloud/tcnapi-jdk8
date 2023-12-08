@@ -9,14 +9,26 @@ package com.tcn.cloud.api.api.commons;
 public enum TicketStatus
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
+   * <pre>
+   * NEW
+   * </pre>
+   *
    * <code>TICKET_STATUS_NEW = 0;</code>
    */
   TICKET_STATUS_NEW(0),
   /**
+   * <pre>
+   * OPEN
+   * </pre>
+   *
    * <code>TICKET_STATUS_OPEN = 1;</code>
    */
   TICKET_STATUS_OPEN(1),
   /**
+   * <pre>
+   * CLOSE
+   * </pre>
+   *
    * <code>TICKET_STATUS_CLOSE = 2;</code>
    */
   TICKET_STATUS_CLOSE(2),
@@ -24,14 +36,26 @@ public enum TicketStatus
   ;
 
   /**
+   * <pre>
+   * NEW
+   * </pre>
+   *
    * <code>TICKET_STATUS_NEW = 0;</code>
    */
   public static final int TICKET_STATUS_NEW_VALUE = 0;
   /**
+   * <pre>
+   * OPEN
+   * </pre>
+   *
    * <code>TICKET_STATUS_OPEN = 1;</code>
    */
   public static final int TICKET_STATUS_OPEN_VALUE = 1;
   /**
+   * <pre>
+   * CLOSE
+   * </pre>
+   *
    * <code>TICKET_STATUS_CLOSE = 2;</code>
    */
   public static final int TICKET_STATUS_CLOSE_VALUE = 2;
