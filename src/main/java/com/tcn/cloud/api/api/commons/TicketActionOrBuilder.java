@@ -30,6 +30,7 @@ public interface TicketActionOrBuilder extends
   /**
    * <pre>
    * Attributes for a callback Action
+   * To be Deprecated Later
    * </pre>
    *
    * <code>.api.commons.CallbackContext callback_context = 3 [json_name = "callbackContext"];</code>
@@ -39,6 +40,7 @@ public interface TicketActionOrBuilder extends
   /**
    * <pre>
    * Attributes for a callback Action
+   * To be Deprecated Later
    * </pre>
    *
    * <code>.api.commons.CallbackContext callback_context = 3 [json_name = "callbackContext"];</code>
@@ -48,6 +50,7 @@ public interface TicketActionOrBuilder extends
   /**
    * <pre>
    * Attributes for a callback Action
+   * To be Deprecated Later
    * </pre>
    *
    * <code>.api.commons.CallbackContext callback_context = 3 [json_name = "callbackContext"];</code>
@@ -238,46 +241,82 @@ public interface TicketActionOrBuilder extends
       getWorkDoneByBytes();
 
   /**
+   * <pre>
+   * Voice Callback Context
+   * </pre>
+   *
    * <code>.api.commons.CallbackContext voice_context = 12 [json_name = "voiceContext"];</code>
    * @return Whether the voiceContext field is set.
    */
   boolean hasVoiceContext();
   /**
+   * <pre>
+   * Voice Callback Context
+   * </pre>
+   *
    * <code>.api.commons.CallbackContext voice_context = 12 [json_name = "voiceContext"];</code>
    * @return The voiceContext.
    */
   com.tcn.cloud.api.api.commons.CallbackContext getVoiceContext();
   /**
+   * <pre>
+   * Voice Callback Context
+   * </pre>
+   *
    * <code>.api.commons.CallbackContext voice_context = 12 [json_name = "voiceContext"];</code>
    */
   com.tcn.cloud.api.api.commons.CallbackContextOrBuilder getVoiceContextOrBuilder();
 
   /**
+   * <pre>
+   * SMS Callback Context
+   * </pre>
+   *
    * <code>.api.commons.SmsbackContext sms_context = 13 [json_name = "smsContext"];</code>
    * @return Whether the smsContext field is set.
    */
   boolean hasSmsContext();
   /**
+   * <pre>
+   * SMS Callback Context
+   * </pre>
+   *
    * <code>.api.commons.SmsbackContext sms_context = 13 [json_name = "smsContext"];</code>
    * @return The smsContext.
    */
   com.tcn.cloud.api.api.commons.SmsbackContext getSmsContext();
   /**
+   * <pre>
+   * SMS Callback Context
+   * </pre>
+   *
    * <code>.api.commons.SmsbackContext sms_context = 13 [json_name = "smsContext"];</code>
    */
   com.tcn.cloud.api.api.commons.SmsbackContextOrBuilder getSmsContextOrBuilder();
 
   /**
+   * <pre>
+   * Email Callback Context
+   * </pre>
+   *
    * <code>.api.commons.EmailbackContext email_context = 14 [json_name = "emailContext"];</code>
    * @return Whether the emailContext field is set.
    */
   boolean hasEmailContext();
   /**
+   * <pre>
+   * Email Callback Context
+   * </pre>
+   *
    * <code>.api.commons.EmailbackContext email_context = 14 [json_name = "emailContext"];</code>
    * @return The emailContext.
    */
   com.tcn.cloud.api.api.commons.EmailbackContext getEmailContext();
   /**
+   * <pre>
+   * Email Callback Context
+   * </pre>
+   *
    * <code>.api.commons.EmailbackContext email_context = 14 [json_name = "emailContext"];</code>
    */
   com.tcn.cloud.api.api.commons.EmailbackContextOrBuilder getEmailContextOrBuilder();
