@@ -266,4 +266,24 @@ public interface RateDefinitionOrBuilder extends
    * <code>.google.protobuf.Timestamp delete_time = 11 [json_name = "deleteTime"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getDeleteTimeOrBuilder();
+
+  /**
+   * <pre>
+   * the matching sha for this definition
+   * </pre>
+   *
+   * <code>string MatchingSha = 12 [json_name = "MatchingSha"];</code>
+   * @return The matchingSha.
+   */
+  java.lang.String getMatchingSha();
+  /**
+   * <pre>
+   * the matching sha for this definition
+   * </pre>
+   *
+   * <code>string MatchingSha = 12 [json_name = "MatchingSha"];</code>
+   * @return The bytes for matchingSha.
+   */
+  com.google.protobuf.ByteString
+      getMatchingShaBytes();
 }
