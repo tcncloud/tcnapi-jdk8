@@ -168,16 +168,28 @@ public interface TicketOrBuilder extends
       getCreatedByNameBytes();
 
   /**
+   * <pre>
+   * The created Date of the Ticket Object
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp created_by_date = 10 [json_name = "createdByDate"];</code>
    * @return Whether the createdByDate field is set.
    */
   boolean hasCreatedByDate();
   /**
+   * <pre>
+   * The created Date of the Ticket Object
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp created_by_date = 10 [json_name = "createdByDate"];</code>
    * @return The createdByDate.
    */
   com.google.protobuf.Timestamp getCreatedByDate();
   /**
+   * <pre>
+   * The created Date of the Ticket Object
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp created_by_date = 10 [json_name = "createdByDate"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getCreatedByDateOrBuilder();
@@ -211,7 +223,7 @@ public interface TicketOrBuilder extends
 
   /**
    * <pre>
-   * A list of hunt groups, skills or users assigned to this ticket.
+   * A list of users assigned to this ticket.
    * </pre>
    *
    * <code>string assignee_list = 12 [json_name = "assigneeList"];</code>
@@ -220,7 +232,7 @@ public interface TicketOrBuilder extends
   java.lang.String getAssigneeList();
   /**
    * <pre>
-   * A list of hunt groups, skills or users assigned to this ticket.
+   * A list of users assigned to this ticket.
    * </pre>
    *
    * <code>string assignee_list = 12 [json_name = "assigneeList"];</code>
@@ -231,7 +243,7 @@ public interface TicketOrBuilder extends
 
   /**
    * <pre>
-   * A list of conversation context meatadatgit stata
+   * A list of conversation context meatadata
    * </pre>
    *
    * <code>repeated .api.commons.Metadata metadata = 14 [json_name = "metadata"];</code>
@@ -240,7 +252,7 @@ public interface TicketOrBuilder extends
       getMetadataList();
   /**
    * <pre>
-   * A list of conversation context meatadatgit stata
+   * A list of conversation context meatadata
    * </pre>
    *
    * <code>repeated .api.commons.Metadata metadata = 14 [json_name = "metadata"];</code>
@@ -248,7 +260,7 @@ public interface TicketOrBuilder extends
   com.tcn.cloud.api.api.commons.Metadata getMetadata(int index);
   /**
    * <pre>
-   * A list of conversation context meatadatgit stata
+   * A list of conversation context meatadata
    * </pre>
    *
    * <code>repeated .api.commons.Metadata metadata = 14 [json_name = "metadata"];</code>
@@ -256,7 +268,7 @@ public interface TicketOrBuilder extends
   int getMetadataCount();
   /**
    * <pre>
-   * A list of conversation context meatadatgit stata
+   * A list of conversation context meatadata
    * </pre>
    *
    * <code>repeated .api.commons.Metadata metadata = 14 [json_name = "metadata"];</code>
@@ -265,7 +277,7 @@ public interface TicketOrBuilder extends
       getMetadataOrBuilderList();
   /**
    * <pre>
-   * A list of conversation context meatadatgit stata
+   * A list of conversation context meatadata
    * </pre>
    *
    * <code>repeated .api.commons.Metadata metadata = 14 [json_name = "metadata"];</code>
@@ -372,11 +384,19 @@ public interface TicketOrBuilder extends
       int index);
 
   /**
+   * <pre>
+   * To be deprecated
+   * </pre>
+   *
    * <code>string assignee = 18 [json_name = "assignee"];</code>
    * @return The assignee.
    */
   java.lang.String getAssignee();
   /**
+   * <pre>
+   * To be deprecated
+   * </pre>
+   *
    * <code>string assignee = 18 [json_name = "assignee"];</code>
    * @return The bytes for assignee.
    */
@@ -384,35 +404,63 @@ public interface TicketOrBuilder extends
       getAssigneeBytes();
 
   /**
+   * <pre>
+   * A set of Action associated with a Project
+   * </pre>
+   *
    * <code>repeated .api.commons.TicketAction ticket_action = 19 [json_name = "ticketAction"];</code>
    */
   java.util.List<com.tcn.cloud.api.api.commons.TicketAction> 
       getTicketActionList();
   /**
+   * <pre>
+   * A set of Action associated with a Project
+   * </pre>
+   *
    * <code>repeated .api.commons.TicketAction ticket_action = 19 [json_name = "ticketAction"];</code>
    */
   com.tcn.cloud.api.api.commons.TicketAction getTicketAction(int index);
   /**
+   * <pre>
+   * A set of Action associated with a Project
+   * </pre>
+   *
    * <code>repeated .api.commons.TicketAction ticket_action = 19 [json_name = "ticketAction"];</code>
    */
   int getTicketActionCount();
   /**
+   * <pre>
+   * A set of Action associated with a Project
+   * </pre>
+   *
    * <code>repeated .api.commons.TicketAction ticket_action = 19 [json_name = "ticketAction"];</code>
    */
   java.util.List<? extends com.tcn.cloud.api.api.commons.TicketActionOrBuilder> 
       getTicketActionOrBuilderList();
   /**
+   * <pre>
+   * A set of Action associated with a Project
+   * </pre>
+   *
    * <code>repeated .api.commons.TicketAction ticket_action = 19 [json_name = "ticketAction"];</code>
    */
   com.tcn.cloud.api.api.commons.TicketActionOrBuilder getTicketActionOrBuilder(
       int index);
 
   /**
+   * <pre>
+   * Status of the ticket - NEW,OPEN,CLOSED
+   * </pre>
+   *
    * <code>.api.commons.TicketStatus ticket_status = 20 [json_name = "ticketStatus"];</code>
    * @return The enum numeric value on the wire for ticketStatus.
    */
   int getTicketStatusValue();
   /**
+   * <pre>
+   * Status of the ticket - NEW,OPEN,CLOSED
+   * </pre>
+   *
    * <code>.api.commons.TicketStatus ticket_status = 20 [json_name = "ticketStatus"];</code>
    * @return The ticketStatus.
    */
@@ -461,7 +509,7 @@ public interface TicketOrBuilder extends
 
   /**
    * <pre>
-   *participant list
+   *participant list - Any user who participates in the ticket life cycle
    * </pre>
    *
    * <code>repeated string ticket_participant = 22 [json_name = "ticketParticipant"];</code>
@@ -471,7 +519,7 @@ public interface TicketOrBuilder extends
       getTicketParticipantList();
   /**
    * <pre>
-   *participant list
+   *participant list - Any user who participates in the ticket life cycle
    * </pre>
    *
    * <code>repeated string ticket_participant = 22 [json_name = "ticketParticipant"];</code>
@@ -480,7 +528,7 @@ public interface TicketOrBuilder extends
   int getTicketParticipantCount();
   /**
    * <pre>
-   *participant list
+   *participant list - Any user who participates in the ticket life cycle
    * </pre>
    *
    * <code>repeated string ticket_participant = 22 [json_name = "ticketParticipant"];</code>
@@ -490,7 +538,7 @@ public interface TicketOrBuilder extends
   java.lang.String getTicketParticipant(int index);
   /**
    * <pre>
-   *participant list
+   *participant list - Any user who participates in the ticket life cycle
    * </pre>
    *
    * <code>repeated string ticket_participant = 22 [json_name = "ticketParticipant"];</code>

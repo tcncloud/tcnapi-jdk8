@@ -4,80 +4,89 @@
 package com.tcn.cloud.api.api.commons;
 
 /**
- * Protobuf type {@code api.commons.Duration}
+ * Protobuf type {@code api.commons.ActionType}
  */
-public final class Duration extends
+public final class ActionType extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.commons.Duration)
-    DurationOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.commons.ActionType)
+    ActionTypeOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use Duration.newBuilder() to construct.
-  private Duration(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use ActionType.newBuilder() to construct.
+  private ActionType(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private Duration() {
-    scale_ = 0;
+  private ActionType() {
+    actionName_ = "";
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new Duration();
+    return new ActionType();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.commons.TicketsProto.internal_static_api_commons_Duration_descriptor;
+    return com.tcn.cloud.api.api.commons.TicketsProto.internal_static_api_commons_ActionType_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.commons.TicketsProto.internal_static_api_commons_Duration_fieldAccessorTable
+    return com.tcn.cloud.api.api.commons.TicketsProto.internal_static_api_commons_ActionType_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.commons.Duration.class, com.tcn.cloud.api.api.commons.Duration.Builder.class);
+            com.tcn.cloud.api.api.commons.ActionType.class, com.tcn.cloud.api.api.commons.ActionType.Builder.class);
   }
 
-  public static final int VALUE_FIELD_NUMBER = 1;
-  private long value_ = 0L;
+  public static final int ACTION_TYPE_ID_FIELD_NUMBER = 1;
+  private long actionTypeId_ = 0L;
   /**
-   * <pre>
-   * Value of of the Scale
-   * </pre>
-   *
-   * <code>int64 value = 1 [json_name = "value", jstype = JS_STRING];</code>
-   * @return The value.
+   * <code>int64 action_type_id = 1 [json_name = "actionTypeId", jstype = JS_STRING];</code>
+   * @return The actionTypeId.
    */
   @java.lang.Override
-  public long getValue() {
-    return value_;
+  public long getActionTypeId() {
+    return actionTypeId_;
   }
 
-  public static final int SCALE_FIELD_NUMBER = 2;
-  private int scale_ = 0;
+  public static final int ACTION_NAME_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object actionName_ = "";
   /**
-   * <pre>
-   * Scale - In minutes,hour,day,week,month,year
-   * </pre>
-   *
-   * <code>.api.commons.TimeScale scale = 2 [json_name = "scale"];</code>
-   * @return The enum numeric value on the wire for scale.
+   * <code>string action_name = 2 [json_name = "actionName"];</code>
+   * @return The actionName.
    */
-  @java.lang.Override public int getScaleValue() {
-    return scale_;
+  @java.lang.Override
+  public java.lang.String getActionName() {
+    java.lang.Object ref = actionName_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      actionName_ = s;
+      return s;
+    }
   }
   /**
-   * <pre>
-   * Scale - In minutes,hour,day,week,month,year
-   * </pre>
-   *
-   * <code>.api.commons.TimeScale scale = 2 [json_name = "scale"];</code>
-   * @return The scale.
+   * <code>string action_name = 2 [json_name = "actionName"];</code>
+   * @return The bytes for actionName.
    */
-  @java.lang.Override public com.tcn.cloud.api.api.commons.TimeScale getScale() {
-    com.tcn.cloud.api.api.commons.TimeScale result = com.tcn.cloud.api.api.commons.TimeScale.forNumber(scale_);
-    return result == null ? com.tcn.cloud.api.api.commons.TimeScale.UNRECOGNIZED : result;
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getActionNameBytes() {
+    java.lang.Object ref = actionName_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      actionName_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
   }
 
   private byte memoizedIsInitialized = -1;
@@ -94,11 +103,11 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (value_ != 0L) {
-      output.writeInt64(1, value_);
+    if (actionTypeId_ != 0L) {
+      output.writeInt64(1, actionTypeId_);
     }
-    if (scale_ != com.tcn.cloud.api.api.commons.TimeScale.TIME_SCALE_MINUTE.getNumber()) {
-      output.writeEnum(2, scale_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(actionName_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, actionName_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -109,13 +118,12 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (value_ != 0L) {
+    if (actionTypeId_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(1, value_);
+        .computeInt64Size(1, actionTypeId_);
     }
-    if (scale_ != com.tcn.cloud.api.api.commons.TimeScale.TIME_SCALE_MINUTE.getNumber()) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(2, scale_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(actionName_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, actionName_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -127,14 +135,15 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.commons.Duration)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.commons.ActionType)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.commons.Duration other = (com.tcn.cloud.api.api.commons.Duration) obj;
+    com.tcn.cloud.api.api.commons.ActionType other = (com.tcn.cloud.api.api.commons.ActionType) obj;
 
-    if (getValue()
-        != other.getValue()) return false;
-    if (scale_ != other.scale_) return false;
+    if (getActionTypeId()
+        != other.getActionTypeId()) return false;
+    if (!getActionName()
+        .equals(other.getActionName())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -146,54 +155,54 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + VALUE_FIELD_NUMBER;
+    hash = (37 * hash) + ACTION_TYPE_ID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getValue());
-    hash = (37 * hash) + SCALE_FIELD_NUMBER;
-    hash = (53 * hash) + scale_;
+        getActionTypeId());
+    hash = (37 * hash) + ACTION_NAME_FIELD_NUMBER;
+    hash = (53 * hash) + getActionName().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.commons.Duration parseFrom(
+  public static com.tcn.cloud.api.api.commons.ActionType parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.Duration parseFrom(
+  public static com.tcn.cloud.api.api.commons.ActionType parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.Duration parseFrom(
+  public static com.tcn.cloud.api.api.commons.ActionType parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.Duration parseFrom(
+  public static com.tcn.cloud.api.api.commons.ActionType parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.Duration parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.commons.ActionType parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.Duration parseFrom(
+  public static com.tcn.cloud.api.api.commons.ActionType parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.Duration parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.commons.ActionType parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.commons.Duration parseFrom(
+  public static com.tcn.cloud.api.api.commons.ActionType parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -201,26 +210,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.commons.Duration parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.commons.ActionType parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.commons.Duration parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.commons.ActionType parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.Duration parseFrom(
+  public static com.tcn.cloud.api.api.commons.ActionType parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.commons.Duration parseFrom(
+  public static com.tcn.cloud.api.api.commons.ActionType parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -233,7 +242,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.commons.Duration prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.commons.ActionType prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -249,26 +258,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code api.commons.Duration}
+   * Protobuf type {@code api.commons.ActionType}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.commons.Duration)
-      com.tcn.cloud.api.api.commons.DurationOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.commons.ActionType)
+      com.tcn.cloud.api.api.commons.ActionTypeOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.commons.TicketsProto.internal_static_api_commons_Duration_descriptor;
+      return com.tcn.cloud.api.api.commons.TicketsProto.internal_static_api_commons_ActionType_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.commons.TicketsProto.internal_static_api_commons_Duration_fieldAccessorTable
+      return com.tcn.cloud.api.api.commons.TicketsProto.internal_static_api_commons_ActionType_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.commons.Duration.class, com.tcn.cloud.api.api.commons.Duration.Builder.class);
+              com.tcn.cloud.api.api.commons.ActionType.class, com.tcn.cloud.api.api.commons.ActionType.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.commons.Duration.newBuilder()
+    // Construct using com.tcn.cloud.api.api.commons.ActionType.newBuilder()
     private Builder() {
 
     }
@@ -282,25 +291,25 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      value_ = 0L;
-      scale_ = 0;
+      actionTypeId_ = 0L;
+      actionName_ = "";
       return this;
     }
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.commons.TicketsProto.internal_static_api_commons_Duration_descriptor;
+      return com.tcn.cloud.api.api.commons.TicketsProto.internal_static_api_commons_ActionType_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.Duration getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.commons.Duration.getDefaultInstance();
+    public com.tcn.cloud.api.api.commons.ActionType getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.commons.ActionType.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.Duration build() {
-      com.tcn.cloud.api.api.commons.Duration result = buildPartial();
+    public com.tcn.cloud.api.api.commons.ActionType build() {
+      com.tcn.cloud.api.api.commons.ActionType result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -308,20 +317,20 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.Duration buildPartial() {
-      com.tcn.cloud.api.api.commons.Duration result = new com.tcn.cloud.api.api.commons.Duration(this);
+    public com.tcn.cloud.api.api.commons.ActionType buildPartial() {
+      com.tcn.cloud.api.api.commons.ActionType result = new com.tcn.cloud.api.api.commons.ActionType(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.commons.Duration result) {
+    private void buildPartial0(com.tcn.cloud.api.api.commons.ActionType result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.value_ = value_;
+        result.actionTypeId_ = actionTypeId_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.scale_ = scale_;
+        result.actionName_ = actionName_;
       }
     }
 
@@ -359,21 +368,23 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.commons.Duration) {
-        return mergeFrom((com.tcn.cloud.api.api.commons.Duration)other);
+      if (other instanceof com.tcn.cloud.api.api.commons.ActionType) {
+        return mergeFrom((com.tcn.cloud.api.api.commons.ActionType)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.commons.Duration other) {
-      if (other == com.tcn.cloud.api.api.commons.Duration.getDefaultInstance()) return this;
-      if (other.getValue() != 0L) {
-        setValue(other.getValue());
+    public Builder mergeFrom(com.tcn.cloud.api.api.commons.ActionType other) {
+      if (other == com.tcn.cloud.api.api.commons.ActionType.getDefaultInstance()) return this;
+      if (other.getActionTypeId() != 0L) {
+        setActionTypeId(other.getActionTypeId());
       }
-      if (other.scale_ != 0) {
-        setScaleValue(other.getScaleValue());
+      if (!other.getActionName().isEmpty()) {
+        actionName_ = other.actionName_;
+        bitField0_ |= 0x00000002;
+        onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -402,15 +413,15 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 8: {
-              value_ = input.readInt64();
+              actionTypeId_ = input.readInt64();
               bitField0_ |= 0x00000001;
               break;
             } // case 8
-            case 16: {
-              scale_ = input.readEnum();
+            case 18: {
+              actionName_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000002;
               break;
-            } // case 16
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -428,119 +439,106 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private long value_ ;
+    private long actionTypeId_ ;
     /**
-     * <pre>
-     * Value of of the Scale
-     * </pre>
-     *
-     * <code>int64 value = 1 [json_name = "value", jstype = JS_STRING];</code>
-     * @return The value.
+     * <code>int64 action_type_id = 1 [json_name = "actionTypeId", jstype = JS_STRING];</code>
+     * @return The actionTypeId.
      */
     @java.lang.Override
-    public long getValue() {
-      return value_;
+    public long getActionTypeId() {
+      return actionTypeId_;
     }
     /**
-     * <pre>
-     * Value of of the Scale
-     * </pre>
-     *
-     * <code>int64 value = 1 [json_name = "value", jstype = JS_STRING];</code>
-     * @param value The value to set.
+     * <code>int64 action_type_id = 1 [json_name = "actionTypeId", jstype = JS_STRING];</code>
+     * @param value The actionTypeId to set.
      * @return This builder for chaining.
      */
-    public Builder setValue(long value) {
+    public Builder setActionTypeId(long value) {
 
-      value_ = value;
+      actionTypeId_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <pre>
-     * Value of of the Scale
-     * </pre>
-     *
-     * <code>int64 value = 1 [json_name = "value", jstype = JS_STRING];</code>
+     * <code>int64 action_type_id = 1 [json_name = "actionTypeId", jstype = JS_STRING];</code>
      * @return This builder for chaining.
      */
-    public Builder clearValue() {
+    public Builder clearActionTypeId() {
       bitField0_ = (bitField0_ & ~0x00000001);
-      value_ = 0L;
+      actionTypeId_ = 0L;
       onChanged();
       return this;
     }
 
-    private int scale_ = 0;
+    private java.lang.Object actionName_ = "";
     /**
-     * <pre>
-     * Scale - In minutes,hour,day,week,month,year
-     * </pre>
-     *
-     * <code>.api.commons.TimeScale scale = 2 [json_name = "scale"];</code>
-     * @return The enum numeric value on the wire for scale.
+     * <code>string action_name = 2 [json_name = "actionName"];</code>
+     * @return The actionName.
      */
-    @java.lang.Override public int getScaleValue() {
-      return scale_;
-    }
-    /**
-     * <pre>
-     * Scale - In minutes,hour,day,week,month,year
-     * </pre>
-     *
-     * <code>.api.commons.TimeScale scale = 2 [json_name = "scale"];</code>
-     * @param value The enum numeric value on the wire for scale to set.
-     * @return This builder for chaining.
-     */
-    public Builder setScaleValue(int value) {
-      scale_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Scale - In minutes,hour,day,week,month,year
-     * </pre>
-     *
-     * <code>.api.commons.TimeScale scale = 2 [json_name = "scale"];</code>
-     * @return The scale.
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.TimeScale getScale() {
-      com.tcn.cloud.api.api.commons.TimeScale result = com.tcn.cloud.api.api.commons.TimeScale.forNumber(scale_);
-      return result == null ? com.tcn.cloud.api.api.commons.TimeScale.UNRECOGNIZED : result;
-    }
-    /**
-     * <pre>
-     * Scale - In minutes,hour,day,week,month,year
-     * </pre>
-     *
-     * <code>.api.commons.TimeScale scale = 2 [json_name = "scale"];</code>
-     * @param value The scale to set.
-     * @return This builder for chaining.
-     */
-    public Builder setScale(com.tcn.cloud.api.api.commons.TimeScale value) {
-      if (value == null) {
-        throw new NullPointerException();
+    public java.lang.String getActionName() {
+      java.lang.Object ref = actionName_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        actionName_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
       }
+    }
+    /**
+     * <code>string action_name = 2 [json_name = "actionName"];</code>
+     * @return The bytes for actionName.
+     */
+    public com.google.protobuf.ByteString
+        getActionNameBytes() {
+      java.lang.Object ref = actionName_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        actionName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string action_name = 2 [json_name = "actionName"];</code>
+     * @param value The actionName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setActionName(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      actionName_ = value;
       bitField0_ |= 0x00000002;
-      scale_ = value.getNumber();
       onChanged();
       return this;
     }
     /**
-     * <pre>
-     * Scale - In minutes,hour,day,week,month,year
-     * </pre>
-     *
-     * <code>.api.commons.TimeScale scale = 2 [json_name = "scale"];</code>
+     * <code>string action_name = 2 [json_name = "actionName"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearScale() {
+    public Builder clearActionName() {
+      actionName_ = getDefaultInstance().getActionName();
       bitField0_ = (bitField0_ & ~0x00000002);
-      scale_ = 0;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string action_name = 2 [json_name = "actionName"];</code>
+     * @param value The bytes for actionName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setActionNameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      actionName_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -557,23 +555,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.commons.Duration)
+    // @@protoc_insertion_point(builder_scope:api.commons.ActionType)
   }
 
-  // @@protoc_insertion_point(class_scope:api.commons.Duration)
-  private static final com.tcn.cloud.api.api.commons.Duration DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.commons.ActionType)
+  private static final com.tcn.cloud.api.api.commons.ActionType DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.Duration();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.ActionType();
   }
 
-  public static com.tcn.cloud.api.api.commons.Duration getDefaultInstance() {
+  public static com.tcn.cloud.api.api.commons.ActionType getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<Duration>
-      PARSER = new com.google.protobuf.AbstractParser<Duration>() {
+  private static final com.google.protobuf.Parser<ActionType>
+      PARSER = new com.google.protobuf.AbstractParser<ActionType>() {
     @java.lang.Override
-    public Duration parsePartialFrom(
+    public ActionType parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -592,17 +590,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<Duration> parser() {
+  public static com.google.protobuf.Parser<ActionType> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<Duration> getParserForType() {
+  public com.google.protobuf.Parser<ActionType> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.Duration getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.commons.ActionType getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

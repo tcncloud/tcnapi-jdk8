@@ -75,6 +75,16 @@ public final class TicketProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_tickets_CreateTicketRes_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_tickets_GetActionTypeRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_tickets_GetActionTypeRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_tickets_GetActionTypeResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_tickets_GetActionTypeResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_v1alpha1_tickets_EditTicketReq_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -353,100 +363,103 @@ public final class TicketProto {
       "signProjectTemplateResponse\022\037\n\013is_assign" +
       "ed\030\001 \001(\010R\nisAssigned\">\n\017CreateTicketRes\022" +
       "+\n\006ticket\030\001 \001(\0132\023.api.commons.TicketR\006ti" +
-      "cket\"m\n\rEditTicketReq\022!\n\nticket_sid\030\001 \001(" +
-      "\003B\0020\001R\tticketSid\0229\n\nedit_value\030\002 \001(\0132\032.a" +
-      "pi.commons.EditAttributeR\teditValue\"\264\001\n\021" +
-      "EditMaskTicketReq\022!\n\nticket_sid\030\001 \001(\003B\0020" +
-      "\001R\tticketSid\0222\n\nedit_value\030\002 \001(\0132\023.api.c" +
-      "ommons.TicketR\teditValue\022H\n\022edited_field" +
-      "s_mask\030\003 \003(\0132\032.google.protobuf.FieldMask" +
-      "R\020editedFieldsMask\"0\n\021EditMaskTicketRes\022" +
-      "\033\n\tis_edited\030\001 \001(\010R\010isEdited\"?\n\026ListAllo" +
-      "catedTicketRes\022!\n\nticket_sid\030\001 \003(\003B\0020\001R\t" +
-      "ticketSid:\002\030\001\"\034\n\026ListAllocatedTicketReq:" +
-      "\002\030\001\"s\n!ListAvailableAgentTicketsResponse" +
-      "\022!\n\nticket_sid\030\001 \003(\003B\0020\001R\tticketSid\022+\n\006t" +
-      "icket\030\002 \003(\0132\023.api.commons.TicketR\006ticket" +
-      "\"\"\n ListAvailableAgentTicketsRequest\",\n\r" +
-      "EditTicketRes\022\033\n\tis_edited\030\001 \001(\010R\010isEdit" +
-      "ed\"\020\n\016ListTicketsReq\"?\n\016ListTicketsRes\022-" +
-      "\n\007tickets\030\001 \003(\0132\023.api.commons.TicketR\007ti" +
-      "ckets\"z\n\017AssignTicketReq\022!\n\nticket_sid\030\001" +
-      " \001(\003B\0020\001R\tticketSid\022#\n\rassignee_list\030\002 \001" +
-      "(\tR\014assigneeList\022\037\n\013assigned_id\030\003 \001(\tR\na" +
-      "ssignedId\"z\n\017AssignTicketRes\022!\n\nticket_s" +
-      "id\030\001 \001(\003B\0020\001R\tticketSid\022#\n\rassignee_list" +
-      "\030\002 \001(\tR\014assigneeList\022\037\n\013assigned_id\030\003 \001(" +
-      "\tR\nassignedId\"2\n\rViewTicketReq\022!\n\nticket" +
-      "_sid\030\001 \001(\003B\0020\001R\tticketSid\"\256\001\n\rViewTicket" +
-      "Res\022+\n\006ticket\030\001 \001(\0132\023.api.commons.Ticket" +
-      "R\006ticket\0220\n\010comments\030\002 \003(\0132\024.api.commons" +
-      ".CommentR\010comments\022>\n\rreply_comment\030\003 \003(" +
-      "\0132\031.api.commons.ReplyCommentR\014replyComme" +
-      "nt\"O\n\020CreateCommentReq\022!\n\nticket_sid\030\001 \001" +
-      "(\003B\0020\001R\tticketSid\022\030\n\007comment\030\002 \001(\tR\007comm" +
-      "ent\"B\n\020CreateCommentRes\022.\n\007comment\030\001 \001(\013" +
-      "2\024.api.commons.CommentR\007comment\"r\n\016Close" +
-      "TicketReq\022!\n\nticket_sid\030\001 \001(\003B\0020\001R\tticke" +
-      "tSid\022\030\n\007comment\030\002 \001(\tR\007comment\022#\n\013from_s" +
-      "tatus\030\003 \001(\003B\0020\001R\nfromStatus\"-\n\016CloseTick" +
-      "etRes\022\033\n\tis_status\030\001 \001(\010R\010isStatus\"\260\001\n\014C" +
-      "reateSlaReq\022\033\n\007sla_sid\030\001 \001(\003B\0020\001R\006slaSid" +
-      "\022\022\n\004name\030\002 \001(\tR\004name\022 \n\013description\030\003 \001(" +
-      "\tR\013description\022\032\n\010interval\030\004 \001(\003R\010interv" +
-      "al\0221\n\010duration\030\005 \001(\0132\025.api.commons.Durat" +
-      "ionR\010duration\"8\n\014CreateSlaRes\022(\n\003sla\030\001 \001" +
-      "(\0132\026.api.commons.TicketSlaR\003sla\"\014\n\nListS" +
-      "laReq\"D\n\nListSlaRes\0226\n\nticketsSla\030\001 \003(\0132" +
-      "\026.api.commons.TicketSlaR\nticketsSla\"H\n\014U" +
-      "pdateSlaReq\022\033\n\007sla_sid\030\001 \001(\003B\0020\001R\006slaSid" +
-      "\022\033\n\tis_active\030\002 \001(\003R\010isActive\"F\n\014UpdateS" +
-      "laRes\0226\n\nticketsSla\030\001 \001(\0132\026.api.commons." +
-      "TicketSlaR\nticketsSla\"\025\n\023ListSlaConditio" +
-      "nReq\"U\n\023ListSlaConditionRes\022>\n\014slaCondit" +
-      "ion\030\001 \003(\0132\032.api.commons.SlaConditionsR\014s" +
-      "laCondition\"\223\001\n\017ReplyCommentReq\022#\n\013comme" +
-      "nt_sid\030\001 \001(\003B\0020\001R\ncommentSid\022!\n\nticket_s" +
-      "id\030\002 \001(\003B\0020\001R\tticketSid\022\024\n\005reply\030\003 \001(\tR\005" +
-      "reply\022\"\n\rcreated_by_id\030\004 \001(\tR\013createdByI" +
-      "d\"R\n\017ReplyCommentRes\022?\n\nis_created\030\001 \001(\013" +
-      "2 .api.commons.ConfirmReplyCommentR\tisCr" +
-      "eated\"8\n\023CreateSelfAssignReq\022!\n\nticket_s" +
-      "id\030\001 \001(\003B\0020\001R\tticketSid\"6\n\023CreateSelfAss" +
-      "ignRes\022\037\n\013is_assigned\030\001 \001(\010R\nisAssigned\"" +
-      "\023\n\021ListSkillsRequest\"I\n\022ListSkillsRespon" +
-      "se\0223\n\006skills\030\001 \003(\0132\033.api.v1alpha1.ticket" +
-      "s.SkillR\006skills\"6\n\005Skill\022\031\n\010skill_id\030\001 \001" +
-      "(\tR\007skillId\022\022\n\004name\030\002 \001(\tR\004name\"\022\n\020ListU" +
-      "sersRequest\"E\n\021ListUsersResponse\0220\n\005user" +
-      "s\030\001 \003(\0132\032.api.v1alpha1.tickets.UserR\005use" +
-      "rs\"x\n\004User\022\027\n\007user_id\030\001 \001(\tR\006userId\022\035\n\nf" +
-      "irst_name\030\002 \001(\tR\tfirstName\022\033\n\tlast_name\030" +
-      "\003 \001(\tR\010lastName\022\033\n\tis_active\030\004 \001(\010R\010isAc" +
-      "tive\"[\n\031CreateTicketActionRequest\022>\n\rtic" +
-      "ket_action\030\001 \001(\0132\031.api.commons.TicketAct" +
-      "ionR\014ticketAction\"\\\n\032CreateTicketActionR" +
-      "esponse\022>\n\rticket_action\030\001 \001(\0132\031.api.com" +
-      "mons.TicketActionR\014ticketAction\"\203\001\n\030Clos" +
-      "eTicketActionRequest\022,\n\020ticket_action_id" +
-      "\030\001 \001(\003B\0020\001R\016ticketActionId\022\037\n\tticket_id\030" +
-      "\002 \001(\003B\0020\001R\010ticketId\022\030\n\007comment\030\003 \001(\tR\007co" +
-      "mment\"8\n\031CloseTicketActionResponse\022\033\n\tis" +
-      "_closed\030\001 \001(\010R\010isClosed\"I\n\031AssignTicketA" +
-      "ctionRequest\022,\n\020ticket_action_id\030\001 \001(\003B\002" +
-      "0\001R\016ticketActionId\"=\n\032AssignTicketAction" +
-      "Response\022\037\n\013is_assigned\030\001 \001(\010R\nisAssigne" +
-      "d\"\235\001\n\031ChangeTicketStatusRequest\022\037\n\tticke" +
-      "t_id\030\001 \001(\003B\0020\001R\010ticketId\022\037\n\tstatus_id\030\002 " +
-      "\001(\003B\0020\001R\010statusId\022>\n\rticket_status\030\003 \001(\016" +
-      "2\031.api.commons.TicketStatusR\014ticketStatu" +
-      "s\"F\n\032ChangeTicketStatusResponse\022(\n\020is_st" +
-      "atus_edited\030\001 \001(\010R\016isStatusEditedB\247\001\n&co" +
-      "m.tcn.cloud.api.api.v1alpha1.ticketsB\013Ti" +
-      "cketProtoP\001\242\002\003AVT\252\002\024Api.V1alpha1.Tickets" +
-      "\312\002\024Api\\V1alpha1\\Tickets\342\002 Api\\V1alpha1\\T" +
-      "ickets\\GPBMetadata\352\002\026Api::V1alpha1::Tick" +
-      "etsb\006proto3"
+      "cket\"\026\n\024GetActionTypeRequest\"Q\n\025GetActio" +
+      "nTypeResponse\0228\n\013action_type\030\001 \003(\0132\027.api" +
+      ".commons.ActionTypeR\nactionType\"q\n\rEditT" +
+      "icketReq\022!\n\nticket_sid\030\001 \001(\003B\0020\001R\tticket" +
+      "Sid\0229\n\nedit_value\030\002 \001(\0132\032.api.commons.Ed" +
+      "itAttributeR\teditValue:\002\030\001\"\264\001\n\021EditMaskT" +
+      "icketReq\022!\n\nticket_sid\030\001 \001(\003B\0020\001R\tticket" +
+      "Sid\0222\n\nedit_value\030\002 \001(\0132\023.api.commons.Ti" +
+      "cketR\teditValue\022H\n\022edited_fields_mask\030\003 " +
+      "\003(\0132\032.google.protobuf.FieldMaskR\020editedF" +
+      "ieldsMask\"0\n\021EditMaskTicketRes\022\033\n\tis_edi" +
+      "ted\030\001 \001(\010R\010isEdited\"?\n\026ListAllocatedTick" +
+      "etRes\022!\n\nticket_sid\030\001 \003(\003B\0020\001R\tticketSid" +
+      ":\002\030\001\"\034\n\026ListAllocatedTicketReq:\002\030\001\"s\n!Li" +
+      "stAvailableAgentTicketsResponse\022!\n\nticke" +
+      "t_sid\030\001 \003(\003B\0020\001R\tticketSid\022+\n\006ticket\030\002 \003" +
+      "(\0132\023.api.commons.TicketR\006ticket\"\"\n ListA" +
+      "vailableAgentTicketsRequest\",\n\rEditTicke" +
+      "tRes\022\033\n\tis_edited\030\001 \001(\010R\010isEdited\"\020\n\016Lis" +
+      "tTicketsReq\"?\n\016ListTicketsRes\022-\n\007tickets" +
+      "\030\001 \003(\0132\023.api.commons.TicketR\007tickets\"z\n\017" +
+      "AssignTicketReq\022!\n\nticket_sid\030\001 \001(\003B\0020\001R" +
+      "\tticketSid\022#\n\rassignee_list\030\002 \001(\tR\014assig" +
+      "neeList\022\037\n\013assigned_id\030\003 \001(\tR\nassignedId" +
+      "\"z\n\017AssignTicketRes\022!\n\nticket_sid\030\001 \001(\003B" +
+      "\0020\001R\tticketSid\022#\n\rassignee_list\030\002 \001(\tR\014a" +
+      "ssigneeList\022\037\n\013assigned_id\030\003 \001(\tR\nassign" +
+      "edId\"2\n\rViewTicketReq\022!\n\nticket_sid\030\001 \001(" +
+      "\003B\0020\001R\tticketSid\"\256\001\n\rViewTicketRes\022+\n\006ti" +
+      "cket\030\001 \001(\0132\023.api.commons.TicketR\006ticket\022" +
+      "0\n\010comments\030\002 \003(\0132\024.api.commons.CommentR" +
+      "\010comments\022>\n\rreply_comment\030\003 \003(\0132\031.api.c" +
+      "ommons.ReplyCommentR\014replyComment\"O\n\020Cre" +
+      "ateCommentReq\022!\n\nticket_sid\030\001 \001(\003B\0020\001R\tt" +
+      "icketSid\022\030\n\007comment\030\002 \001(\tR\007comment\"B\n\020Cr" +
+      "eateCommentRes\022.\n\007comment\030\001 \001(\0132\024.api.co" +
+      "mmons.CommentR\007comment\"r\n\016CloseTicketReq" +
+      "\022!\n\nticket_sid\030\001 \001(\003B\0020\001R\tticketSid\022\030\n\007c" +
+      "omment\030\002 \001(\tR\007comment\022#\n\013from_status\030\003 \001" +
+      "(\003B\0020\001R\nfromStatus\"-\n\016CloseTicketRes\022\033\n\t" +
+      "is_status\030\001 \001(\010R\010isStatus\"\260\001\n\014CreateSlaR" +
+      "eq\022\033\n\007sla_sid\030\001 \001(\003B\0020\001R\006slaSid\022\022\n\004name\030" +
+      "\002 \001(\tR\004name\022 \n\013description\030\003 \001(\tR\013descri" +
+      "ption\022\032\n\010interval\030\004 \001(\003R\010interval\0221\n\010dur" +
+      "ation\030\005 \001(\0132\025.api.commons.DurationR\010dura" +
+      "tion\"8\n\014CreateSlaRes\022(\n\003sla\030\001 \001(\0132\026.api." +
+      "commons.TicketSlaR\003sla\"\014\n\nListSlaReq\"D\n\n" +
+      "ListSlaRes\0226\n\nticketsSla\030\001 \003(\0132\026.api.com" +
+      "mons.TicketSlaR\nticketsSla\"H\n\014UpdateSlaR" +
+      "eq\022\033\n\007sla_sid\030\001 \001(\003B\0020\001R\006slaSid\022\033\n\tis_ac" +
+      "tive\030\002 \001(\003R\010isActive\"F\n\014UpdateSlaRes\0226\n\n" +
+      "ticketsSla\030\001 \001(\0132\026.api.commons.TicketSla" +
+      "R\nticketsSla\"\025\n\023ListSlaConditionReq\"U\n\023L" +
+      "istSlaConditionRes\022>\n\014slaCondition\030\001 \003(\013" +
+      "2\032.api.commons.SlaConditionsR\014slaConditi" +
+      "on\"\223\001\n\017ReplyCommentReq\022#\n\013comment_sid\030\001 " +
+      "\001(\003B\0020\001R\ncommentSid\022!\n\nticket_sid\030\002 \001(\003B" +
+      "\0020\001R\tticketSid\022\024\n\005reply\030\003 \001(\tR\005reply\022\"\n\r" +
+      "created_by_id\030\004 \001(\tR\013createdById\"R\n\017Repl" +
+      "yCommentRes\022?\n\nis_created\030\001 \001(\0132 .api.co" +
+      "mmons.ConfirmReplyCommentR\tisCreated\"8\n\023" +
+      "CreateSelfAssignReq\022!\n\nticket_sid\030\001 \001(\003B" +
+      "\0020\001R\tticketSid\"6\n\023CreateSelfAssignRes\022\037\n" +
+      "\013is_assigned\030\001 \001(\010R\nisAssigned\"\023\n\021ListSk" +
+      "illsRequest\"I\n\022ListSkillsResponse\0223\n\006ski" +
+      "lls\030\001 \003(\0132\033.api.v1alpha1.tickets.SkillR\006" +
+      "skills\"6\n\005Skill\022\031\n\010skill_id\030\001 \001(\tR\007skill" +
+      "Id\022\022\n\004name\030\002 \001(\tR\004name\"\022\n\020ListUsersReque" +
+      "st\"E\n\021ListUsersResponse\0220\n\005users\030\001 \003(\0132\032" +
+      ".api.v1alpha1.tickets.UserR\005users\"x\n\004Use" +
+      "r\022\027\n\007user_id\030\001 \001(\tR\006userId\022\035\n\nfirst_name" +
+      "\030\002 \001(\tR\tfirstName\022\033\n\tlast_name\030\003 \001(\tR\010la" +
+      "stName\022\033\n\tis_active\030\004 \001(\010R\010isActive\"[\n\031C" +
+      "reateTicketActionRequest\022>\n\rticket_actio" +
+      "n\030\001 \001(\0132\031.api.commons.TicketActionR\014tick" +
+      "etAction\"\\\n\032CreateTicketActionResponse\022>" +
+      "\n\rticket_action\030\001 \001(\0132\031.api.commons.Tick" +
+      "etActionR\014ticketAction\"\203\001\n\030CloseTicketAc" +
+      "tionRequest\022,\n\020ticket_action_id\030\001 \001(\003B\0020" +
+      "\001R\016ticketActionId\022\037\n\tticket_id\030\002 \001(\003B\0020\001" +
+      "R\010ticketId\022\030\n\007comment\030\003 \001(\tR\007comment\"8\n\031" +
+      "CloseTicketActionResponse\022\033\n\tis_closed\030\001" +
+      " \001(\010R\010isClosed\"I\n\031AssignTicketActionRequ" +
+      "est\022,\n\020ticket_action_id\030\001 \001(\003B\0020\001R\016ticke" +
+      "tActionId\"=\n\032AssignTicketActionResponse\022" +
+      "\037\n\013is_assigned\030\001 \001(\010R\nisAssigned\"\235\001\n\031Cha" +
+      "ngeTicketStatusRequest\022\037\n\tticket_id\030\001 \001(" +
+      "\003B\0020\001R\010ticketId\022\037\n\tstatus_id\030\002 \001(\003B\0020\001R\010" +
+      "statusId\022>\n\rticket_status\030\003 \001(\0162\031.api.co" +
+      "mmons.TicketStatusR\014ticketStatus\"F\n\032Chan" +
+      "geTicketStatusResponse\022(\n\020is_status_edit" +
+      "ed\030\001 \001(\010R\016isStatusEditedB\247\001\n&com.tcn.clo" +
+      "ud.api.api.v1alpha1.ticketsB\013TicketProto" +
+      "P\001\242\002\003AVT\252\002\024Api.V1alpha1.Tickets\312\002\024Api\\V1" +
+      "alpha1\\Tickets\342\002 Api\\V1alpha1\\Tickets\\GP" +
+      "BMetadata\352\002\026Api::V1alpha1::Ticketsb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -527,266 +540,278 @@ public final class TicketProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_tickets_CreateTicketRes_descriptor,
         new java.lang.String[] { "Ticket", });
-    internal_static_api_v1alpha1_tickets_EditTicketReq_descriptor =
+    internal_static_api_v1alpha1_tickets_GetActionTypeRequest_descriptor =
       getDescriptor().getMessageTypes().get(12);
+    internal_static_api_v1alpha1_tickets_GetActionTypeRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_tickets_GetActionTypeRequest_descriptor,
+        new java.lang.String[] { });
+    internal_static_api_v1alpha1_tickets_GetActionTypeResponse_descriptor =
+      getDescriptor().getMessageTypes().get(13);
+    internal_static_api_v1alpha1_tickets_GetActionTypeResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_tickets_GetActionTypeResponse_descriptor,
+        new java.lang.String[] { "ActionType", });
+    internal_static_api_v1alpha1_tickets_EditTicketReq_descriptor =
+      getDescriptor().getMessageTypes().get(14);
     internal_static_api_v1alpha1_tickets_EditTicketReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_tickets_EditTicketReq_descriptor,
         new java.lang.String[] { "TicketSid", "EditValue", });
     internal_static_api_v1alpha1_tickets_EditMaskTicketReq_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_api_v1alpha1_tickets_EditMaskTicketReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_tickets_EditMaskTicketReq_descriptor,
         new java.lang.String[] { "TicketSid", "EditValue", "EditedFieldsMask", });
     internal_static_api_v1alpha1_tickets_EditMaskTicketRes_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_api_v1alpha1_tickets_EditMaskTicketRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_tickets_EditMaskTicketRes_descriptor,
         new java.lang.String[] { "IsEdited", });
     internal_static_api_v1alpha1_tickets_ListAllocatedTicketRes_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_api_v1alpha1_tickets_ListAllocatedTicketRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_tickets_ListAllocatedTicketRes_descriptor,
         new java.lang.String[] { "TicketSid", });
     internal_static_api_v1alpha1_tickets_ListAllocatedTicketReq_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_api_v1alpha1_tickets_ListAllocatedTicketReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_tickets_ListAllocatedTicketReq_descriptor,
         new java.lang.String[] { });
     internal_static_api_v1alpha1_tickets_ListAvailableAgentTicketsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_api_v1alpha1_tickets_ListAvailableAgentTicketsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_tickets_ListAvailableAgentTicketsResponse_descriptor,
         new java.lang.String[] { "TicketSid", "Ticket", });
     internal_static_api_v1alpha1_tickets_ListAvailableAgentTicketsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_api_v1alpha1_tickets_ListAvailableAgentTicketsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_tickets_ListAvailableAgentTicketsRequest_descriptor,
         new java.lang.String[] { });
     internal_static_api_v1alpha1_tickets_EditTicketRes_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_api_v1alpha1_tickets_EditTicketRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_tickets_EditTicketRes_descriptor,
         new java.lang.String[] { "IsEdited", });
     internal_static_api_v1alpha1_tickets_ListTicketsReq_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_api_v1alpha1_tickets_ListTicketsReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_tickets_ListTicketsReq_descriptor,
         new java.lang.String[] { });
     internal_static_api_v1alpha1_tickets_ListTicketsRes_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_api_v1alpha1_tickets_ListTicketsRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_tickets_ListTicketsRes_descriptor,
         new java.lang.String[] { "Tickets", });
     internal_static_api_v1alpha1_tickets_AssignTicketReq_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(24);
     internal_static_api_v1alpha1_tickets_AssignTicketReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_tickets_AssignTicketReq_descriptor,
         new java.lang.String[] { "TicketSid", "AssigneeList", "AssignedId", });
     internal_static_api_v1alpha1_tickets_AssignTicketRes_descriptor =
-      getDescriptor().getMessageTypes().get(23);
+      getDescriptor().getMessageTypes().get(25);
     internal_static_api_v1alpha1_tickets_AssignTicketRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_tickets_AssignTicketRes_descriptor,
         new java.lang.String[] { "TicketSid", "AssigneeList", "AssignedId", });
     internal_static_api_v1alpha1_tickets_ViewTicketReq_descriptor =
-      getDescriptor().getMessageTypes().get(24);
+      getDescriptor().getMessageTypes().get(26);
     internal_static_api_v1alpha1_tickets_ViewTicketReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_tickets_ViewTicketReq_descriptor,
         new java.lang.String[] { "TicketSid", });
     internal_static_api_v1alpha1_tickets_ViewTicketRes_descriptor =
-      getDescriptor().getMessageTypes().get(25);
+      getDescriptor().getMessageTypes().get(27);
     internal_static_api_v1alpha1_tickets_ViewTicketRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_tickets_ViewTicketRes_descriptor,
         new java.lang.String[] { "Ticket", "Comments", "ReplyComment", });
     internal_static_api_v1alpha1_tickets_CreateCommentReq_descriptor =
-      getDescriptor().getMessageTypes().get(26);
+      getDescriptor().getMessageTypes().get(28);
     internal_static_api_v1alpha1_tickets_CreateCommentReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_tickets_CreateCommentReq_descriptor,
         new java.lang.String[] { "TicketSid", "Comment", });
     internal_static_api_v1alpha1_tickets_CreateCommentRes_descriptor =
-      getDescriptor().getMessageTypes().get(27);
+      getDescriptor().getMessageTypes().get(29);
     internal_static_api_v1alpha1_tickets_CreateCommentRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_tickets_CreateCommentRes_descriptor,
         new java.lang.String[] { "Comment", });
     internal_static_api_v1alpha1_tickets_CloseTicketReq_descriptor =
-      getDescriptor().getMessageTypes().get(28);
+      getDescriptor().getMessageTypes().get(30);
     internal_static_api_v1alpha1_tickets_CloseTicketReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_tickets_CloseTicketReq_descriptor,
         new java.lang.String[] { "TicketSid", "Comment", "FromStatus", });
     internal_static_api_v1alpha1_tickets_CloseTicketRes_descriptor =
-      getDescriptor().getMessageTypes().get(29);
+      getDescriptor().getMessageTypes().get(31);
     internal_static_api_v1alpha1_tickets_CloseTicketRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_tickets_CloseTicketRes_descriptor,
         new java.lang.String[] { "IsStatus", });
     internal_static_api_v1alpha1_tickets_CreateSlaReq_descriptor =
-      getDescriptor().getMessageTypes().get(30);
+      getDescriptor().getMessageTypes().get(32);
     internal_static_api_v1alpha1_tickets_CreateSlaReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_tickets_CreateSlaReq_descriptor,
         new java.lang.String[] { "SlaSid", "Name", "Description", "Interval", "Duration", });
     internal_static_api_v1alpha1_tickets_CreateSlaRes_descriptor =
-      getDescriptor().getMessageTypes().get(31);
+      getDescriptor().getMessageTypes().get(33);
     internal_static_api_v1alpha1_tickets_CreateSlaRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_tickets_CreateSlaRes_descriptor,
         new java.lang.String[] { "Sla", });
     internal_static_api_v1alpha1_tickets_ListSlaReq_descriptor =
-      getDescriptor().getMessageTypes().get(32);
+      getDescriptor().getMessageTypes().get(34);
     internal_static_api_v1alpha1_tickets_ListSlaReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_tickets_ListSlaReq_descriptor,
         new java.lang.String[] { });
     internal_static_api_v1alpha1_tickets_ListSlaRes_descriptor =
-      getDescriptor().getMessageTypes().get(33);
+      getDescriptor().getMessageTypes().get(35);
     internal_static_api_v1alpha1_tickets_ListSlaRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_tickets_ListSlaRes_descriptor,
         new java.lang.String[] { "TicketsSla", });
     internal_static_api_v1alpha1_tickets_UpdateSlaReq_descriptor =
-      getDescriptor().getMessageTypes().get(34);
+      getDescriptor().getMessageTypes().get(36);
     internal_static_api_v1alpha1_tickets_UpdateSlaReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_tickets_UpdateSlaReq_descriptor,
         new java.lang.String[] { "SlaSid", "IsActive", });
     internal_static_api_v1alpha1_tickets_UpdateSlaRes_descriptor =
-      getDescriptor().getMessageTypes().get(35);
+      getDescriptor().getMessageTypes().get(37);
     internal_static_api_v1alpha1_tickets_UpdateSlaRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_tickets_UpdateSlaRes_descriptor,
         new java.lang.String[] { "TicketsSla", });
     internal_static_api_v1alpha1_tickets_ListSlaConditionReq_descriptor =
-      getDescriptor().getMessageTypes().get(36);
+      getDescriptor().getMessageTypes().get(38);
     internal_static_api_v1alpha1_tickets_ListSlaConditionReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_tickets_ListSlaConditionReq_descriptor,
         new java.lang.String[] { });
     internal_static_api_v1alpha1_tickets_ListSlaConditionRes_descriptor =
-      getDescriptor().getMessageTypes().get(37);
+      getDescriptor().getMessageTypes().get(39);
     internal_static_api_v1alpha1_tickets_ListSlaConditionRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_tickets_ListSlaConditionRes_descriptor,
         new java.lang.String[] { "SlaCondition", });
     internal_static_api_v1alpha1_tickets_ReplyCommentReq_descriptor =
-      getDescriptor().getMessageTypes().get(38);
+      getDescriptor().getMessageTypes().get(40);
     internal_static_api_v1alpha1_tickets_ReplyCommentReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_tickets_ReplyCommentReq_descriptor,
         new java.lang.String[] { "CommentSid", "TicketSid", "Reply", "CreatedById", });
     internal_static_api_v1alpha1_tickets_ReplyCommentRes_descriptor =
-      getDescriptor().getMessageTypes().get(39);
+      getDescriptor().getMessageTypes().get(41);
     internal_static_api_v1alpha1_tickets_ReplyCommentRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_tickets_ReplyCommentRes_descriptor,
         new java.lang.String[] { "IsCreated", });
     internal_static_api_v1alpha1_tickets_CreateSelfAssignReq_descriptor =
-      getDescriptor().getMessageTypes().get(40);
+      getDescriptor().getMessageTypes().get(42);
     internal_static_api_v1alpha1_tickets_CreateSelfAssignReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_tickets_CreateSelfAssignReq_descriptor,
         new java.lang.String[] { "TicketSid", });
     internal_static_api_v1alpha1_tickets_CreateSelfAssignRes_descriptor =
-      getDescriptor().getMessageTypes().get(41);
+      getDescriptor().getMessageTypes().get(43);
     internal_static_api_v1alpha1_tickets_CreateSelfAssignRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_tickets_CreateSelfAssignRes_descriptor,
         new java.lang.String[] { "IsAssigned", });
     internal_static_api_v1alpha1_tickets_ListSkillsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(42);
+      getDescriptor().getMessageTypes().get(44);
     internal_static_api_v1alpha1_tickets_ListSkillsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_tickets_ListSkillsRequest_descriptor,
         new java.lang.String[] { });
     internal_static_api_v1alpha1_tickets_ListSkillsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(43);
+      getDescriptor().getMessageTypes().get(45);
     internal_static_api_v1alpha1_tickets_ListSkillsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_tickets_ListSkillsResponse_descriptor,
         new java.lang.String[] { "Skills", });
     internal_static_api_v1alpha1_tickets_Skill_descriptor =
-      getDescriptor().getMessageTypes().get(44);
+      getDescriptor().getMessageTypes().get(46);
     internal_static_api_v1alpha1_tickets_Skill_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_tickets_Skill_descriptor,
         new java.lang.String[] { "SkillId", "Name", });
     internal_static_api_v1alpha1_tickets_ListUsersRequest_descriptor =
-      getDescriptor().getMessageTypes().get(45);
+      getDescriptor().getMessageTypes().get(47);
     internal_static_api_v1alpha1_tickets_ListUsersRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_tickets_ListUsersRequest_descriptor,
         new java.lang.String[] { });
     internal_static_api_v1alpha1_tickets_ListUsersResponse_descriptor =
-      getDescriptor().getMessageTypes().get(46);
+      getDescriptor().getMessageTypes().get(48);
     internal_static_api_v1alpha1_tickets_ListUsersResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_tickets_ListUsersResponse_descriptor,
         new java.lang.String[] { "Users", });
     internal_static_api_v1alpha1_tickets_User_descriptor =
-      getDescriptor().getMessageTypes().get(47);
+      getDescriptor().getMessageTypes().get(49);
     internal_static_api_v1alpha1_tickets_User_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_tickets_User_descriptor,
         new java.lang.String[] { "UserId", "FirstName", "LastName", "IsActive", });
     internal_static_api_v1alpha1_tickets_CreateTicketActionRequest_descriptor =
-      getDescriptor().getMessageTypes().get(48);
+      getDescriptor().getMessageTypes().get(50);
     internal_static_api_v1alpha1_tickets_CreateTicketActionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_tickets_CreateTicketActionRequest_descriptor,
         new java.lang.String[] { "TicketAction", });
     internal_static_api_v1alpha1_tickets_CreateTicketActionResponse_descriptor =
-      getDescriptor().getMessageTypes().get(49);
+      getDescriptor().getMessageTypes().get(51);
     internal_static_api_v1alpha1_tickets_CreateTicketActionResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_tickets_CreateTicketActionResponse_descriptor,
         new java.lang.String[] { "TicketAction", });
     internal_static_api_v1alpha1_tickets_CloseTicketActionRequest_descriptor =
-      getDescriptor().getMessageTypes().get(50);
+      getDescriptor().getMessageTypes().get(52);
     internal_static_api_v1alpha1_tickets_CloseTicketActionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_tickets_CloseTicketActionRequest_descriptor,
         new java.lang.String[] { "TicketActionId", "TicketId", "Comment", });
     internal_static_api_v1alpha1_tickets_CloseTicketActionResponse_descriptor =
-      getDescriptor().getMessageTypes().get(51);
+      getDescriptor().getMessageTypes().get(53);
     internal_static_api_v1alpha1_tickets_CloseTicketActionResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_tickets_CloseTicketActionResponse_descriptor,
         new java.lang.String[] { "IsClosed", });
     internal_static_api_v1alpha1_tickets_AssignTicketActionRequest_descriptor =
-      getDescriptor().getMessageTypes().get(52);
+      getDescriptor().getMessageTypes().get(54);
     internal_static_api_v1alpha1_tickets_AssignTicketActionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_tickets_AssignTicketActionRequest_descriptor,
         new java.lang.String[] { "TicketActionId", });
     internal_static_api_v1alpha1_tickets_AssignTicketActionResponse_descriptor =
-      getDescriptor().getMessageTypes().get(53);
+      getDescriptor().getMessageTypes().get(55);
     internal_static_api_v1alpha1_tickets_AssignTicketActionResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_tickets_AssignTicketActionResponse_descriptor,
         new java.lang.String[] { "IsAssigned", });
     internal_static_api_v1alpha1_tickets_ChangeTicketStatusRequest_descriptor =
-      getDescriptor().getMessageTypes().get(54);
+      getDescriptor().getMessageTypes().get(56);
     internal_static_api_v1alpha1_tickets_ChangeTicketStatusRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_tickets_ChangeTicketStatusRequest_descriptor,
         new java.lang.String[] { "TicketId", "StatusId", "TicketStatus", });
     internal_static_api_v1alpha1_tickets_ChangeTicketStatusResponse_descriptor =
-      getDescriptor().getMessageTypes().get(55);
+      getDescriptor().getMessageTypes().get(57);
     internal_static_api_v1alpha1_tickets_ChangeTicketStatusResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_tickets_ChangeTicketStatusResponse_descriptor,

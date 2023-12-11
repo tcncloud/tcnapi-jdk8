@@ -8,17 +8,29 @@ public interface DurationOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * Value of of the Scale
+   * </pre>
+   *
    * <code>int64 value = 1 [json_name = "value", jstype = JS_STRING];</code>
    * @return The value.
    */
   long getValue();
 
   /**
+   * <pre>
+   * Scale - In minutes,hour,day,week,month,year
+   * </pre>
+   *
    * <code>.api.commons.TimeScale scale = 2 [json_name = "scale"];</code>
    * @return The enum numeric value on the wire for scale.
    */
   int getScaleValue();
   /**
+   * <pre>
+   * Scale - In minutes,hour,day,week,month,year
+   * </pre>
+   *
    * <code>.api.commons.TimeScale scale = 2 [json_name = "scale"];</code>
    * @return The scale.
    */

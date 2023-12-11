@@ -47,6 +47,10 @@ private static final long serialVersionUID = 0L;
   public static final int TICKET_SID_FIELD_NUMBER = 1;
   private long ticketSid_ = 0L;
   /**
+   * <pre>
+   * Ticket Id
+   * </pre>
+   *
    * <code>int64 ticket_sid = 1 [json_name = "ticketSid", jstype = JS_STRING];</code>
    * @return The ticketSid.
    */
@@ -58,6 +62,10 @@ private static final long serialVersionUID = 0L;
   public static final int EDIT_VALUE_FIELD_NUMBER = 2;
   private com.tcn.cloud.api.api.commons.Ticket editValue_;
   /**
+   * <pre>
+   * Ticket Object
+   * </pre>
+   *
    * <code>.api.commons.Ticket edit_value = 2 [json_name = "editValue"];</code>
    * @return Whether the editValue field is set.
    */
@@ -66,6 +74,10 @@ private static final long serialVersionUID = 0L;
     return editValue_ != null;
   }
   /**
+   * <pre>
+   * Ticket Object
+   * </pre>
+   *
    * <code>.api.commons.Ticket edit_value = 2 [json_name = "editValue"];</code>
    * @return The editValue.
    */
@@ -74,6 +86,10 @@ private static final long serialVersionUID = 0L;
     return editValue_ == null ? com.tcn.cloud.api.api.commons.Ticket.getDefaultInstance() : editValue_;
   }
   /**
+   * <pre>
+   * Ticket Object
+   * </pre>
+   *
    * <code>.api.commons.Ticket edit_value = 2 [json_name = "editValue"];</code>
    */
   @java.lang.Override
@@ -85,6 +101,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<com.google.protobuf.FieldMask> editedFieldsMask_;
   /**
+   * <pre>
+   * Field to be edited in DB
+   * </pre>
+   *
    * <code>repeated .google.protobuf.FieldMask edited_fields_mask = 3 [json_name = "editedFieldsMask"];</code>
    */
   @java.lang.Override
@@ -92,6 +112,10 @@ private static final long serialVersionUID = 0L;
     return editedFieldsMask_;
   }
   /**
+   * <pre>
+   * Field to be edited in DB
+   * </pre>
+   *
    * <code>repeated .google.protobuf.FieldMask edited_fields_mask = 3 [json_name = "editedFieldsMask"];</code>
    */
   @java.lang.Override
@@ -100,6 +124,10 @@ private static final long serialVersionUID = 0L;
     return editedFieldsMask_;
   }
   /**
+   * <pre>
+   * Field to be edited in DB
+   * </pre>
+   *
    * <code>repeated .google.protobuf.FieldMask edited_fields_mask = 3 [json_name = "editedFieldsMask"];</code>
    */
   @java.lang.Override
@@ -107,6 +135,10 @@ private static final long serialVersionUID = 0L;
     return editedFieldsMask_.size();
   }
   /**
+   * <pre>
+   * Field to be edited in DB
+   * </pre>
+   *
    * <code>repeated .google.protobuf.FieldMask edited_fields_mask = 3 [json_name = "editedFieldsMask"];</code>
    */
   @java.lang.Override
@@ -114,6 +146,10 @@ private static final long serialVersionUID = 0L;
     return editedFieldsMask_.get(index);
   }
   /**
+   * <pre>
+   * Field to be edited in DB
+   * </pre>
+   *
    * <code>repeated .google.protobuf.FieldMask edited_fields_mask = 3 [json_name = "editedFieldsMask"];</code>
    */
   @java.lang.Override
@@ -563,6 +599,10 @@ private static final long serialVersionUID = 0L;
 
     private long ticketSid_ ;
     /**
+     * <pre>
+     * Ticket Id
+     * </pre>
+     *
      * <code>int64 ticket_sid = 1 [json_name = "ticketSid", jstype = JS_STRING];</code>
      * @return The ticketSid.
      */
@@ -571,6 +611,10 @@ private static final long serialVersionUID = 0L;
       return ticketSid_;
     }
     /**
+     * <pre>
+     * Ticket Id
+     * </pre>
+     *
      * <code>int64 ticket_sid = 1 [json_name = "ticketSid", jstype = JS_STRING];</code>
      * @param value The ticketSid to set.
      * @return This builder for chaining.
@@ -583,6 +627,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Ticket Id
+     * </pre>
+     *
      * <code>int64 ticket_sid = 1 [json_name = "ticketSid", jstype = JS_STRING];</code>
      * @return This builder for chaining.
      */
@@ -597,6 +645,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.Ticket, com.tcn.cloud.api.api.commons.Ticket.Builder, com.tcn.cloud.api.api.commons.TicketOrBuilder> editValueBuilder_;
     /**
+     * <pre>
+     * Ticket Object
+     * </pre>
+     *
      * <code>.api.commons.Ticket edit_value = 2 [json_name = "editValue"];</code>
      * @return Whether the editValue field is set.
      */
@@ -604,6 +656,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
+     * <pre>
+     * Ticket Object
+     * </pre>
+     *
      * <code>.api.commons.Ticket edit_value = 2 [json_name = "editValue"];</code>
      * @return The editValue.
      */
@@ -615,6 +671,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Ticket Object
+     * </pre>
+     *
      * <code>.api.commons.Ticket edit_value = 2 [json_name = "editValue"];</code>
      */
     public Builder setEditValue(com.tcn.cloud.api.api.commons.Ticket value) {
@@ -631,6 +691,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Ticket Object
+     * </pre>
+     *
      * <code>.api.commons.Ticket edit_value = 2 [json_name = "editValue"];</code>
      */
     public Builder setEditValue(
@@ -645,6 +709,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Ticket Object
+     * </pre>
+     *
      * <code>.api.commons.Ticket edit_value = 2 [json_name = "editValue"];</code>
      */
     public Builder mergeEditValue(com.tcn.cloud.api.api.commons.Ticket value) {
@@ -664,6 +732,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Ticket Object
+     * </pre>
+     *
      * <code>.api.commons.Ticket edit_value = 2 [json_name = "editValue"];</code>
      */
     public Builder clearEditValue() {
@@ -677,6 +749,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Ticket Object
+     * </pre>
+     *
      * <code>.api.commons.Ticket edit_value = 2 [json_name = "editValue"];</code>
      */
     public com.tcn.cloud.api.api.commons.Ticket.Builder getEditValueBuilder() {
@@ -685,6 +761,10 @@ private static final long serialVersionUID = 0L;
       return getEditValueFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Ticket Object
+     * </pre>
+     *
      * <code>.api.commons.Ticket edit_value = 2 [json_name = "editValue"];</code>
      */
     public com.tcn.cloud.api.api.commons.TicketOrBuilder getEditValueOrBuilder() {
@@ -696,6 +776,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Ticket Object
+     * </pre>
+     *
      * <code>.api.commons.Ticket edit_value = 2 [json_name = "editValue"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -725,6 +809,10 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> editedFieldsMaskBuilder_;
 
     /**
+     * <pre>
+     * Field to be edited in DB
+     * </pre>
+     *
      * <code>repeated .google.protobuf.FieldMask edited_fields_mask = 3 [json_name = "editedFieldsMask"];</code>
      */
     public java.util.List<com.google.protobuf.FieldMask> getEditedFieldsMaskList() {
@@ -735,6 +823,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Field to be edited in DB
+     * </pre>
+     *
      * <code>repeated .google.protobuf.FieldMask edited_fields_mask = 3 [json_name = "editedFieldsMask"];</code>
      */
     public int getEditedFieldsMaskCount() {
@@ -745,6 +837,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Field to be edited in DB
+     * </pre>
+     *
      * <code>repeated .google.protobuf.FieldMask edited_fields_mask = 3 [json_name = "editedFieldsMask"];</code>
      */
     public com.google.protobuf.FieldMask getEditedFieldsMask(int index) {
@@ -755,6 +851,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Field to be edited in DB
+     * </pre>
+     *
      * <code>repeated .google.protobuf.FieldMask edited_fields_mask = 3 [json_name = "editedFieldsMask"];</code>
      */
     public Builder setEditedFieldsMask(
@@ -772,6 +872,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Field to be edited in DB
+     * </pre>
+     *
      * <code>repeated .google.protobuf.FieldMask edited_fields_mask = 3 [json_name = "editedFieldsMask"];</code>
      */
     public Builder setEditedFieldsMask(
@@ -786,6 +890,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Field to be edited in DB
+     * </pre>
+     *
      * <code>repeated .google.protobuf.FieldMask edited_fields_mask = 3 [json_name = "editedFieldsMask"];</code>
      */
     public Builder addEditedFieldsMask(com.google.protobuf.FieldMask value) {
@@ -802,6 +910,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Field to be edited in DB
+     * </pre>
+     *
      * <code>repeated .google.protobuf.FieldMask edited_fields_mask = 3 [json_name = "editedFieldsMask"];</code>
      */
     public Builder addEditedFieldsMask(
@@ -819,6 +931,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Field to be edited in DB
+     * </pre>
+     *
      * <code>repeated .google.protobuf.FieldMask edited_fields_mask = 3 [json_name = "editedFieldsMask"];</code>
      */
     public Builder addEditedFieldsMask(
@@ -833,6 +949,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Field to be edited in DB
+     * </pre>
+     *
      * <code>repeated .google.protobuf.FieldMask edited_fields_mask = 3 [json_name = "editedFieldsMask"];</code>
      */
     public Builder addEditedFieldsMask(
@@ -847,6 +967,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Field to be edited in DB
+     * </pre>
+     *
      * <code>repeated .google.protobuf.FieldMask edited_fields_mask = 3 [json_name = "editedFieldsMask"];</code>
      */
     public Builder addAllEditedFieldsMask(
@@ -862,6 +986,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Field to be edited in DB
+     * </pre>
+     *
      * <code>repeated .google.protobuf.FieldMask edited_fields_mask = 3 [json_name = "editedFieldsMask"];</code>
      */
     public Builder clearEditedFieldsMask() {
@@ -875,6 +1003,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Field to be edited in DB
+     * </pre>
+     *
      * <code>repeated .google.protobuf.FieldMask edited_fields_mask = 3 [json_name = "editedFieldsMask"];</code>
      */
     public Builder removeEditedFieldsMask(int index) {
@@ -888,6 +1020,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Field to be edited in DB
+     * </pre>
+     *
      * <code>repeated .google.protobuf.FieldMask edited_fields_mask = 3 [json_name = "editedFieldsMask"];</code>
      */
     public com.google.protobuf.FieldMask.Builder getEditedFieldsMaskBuilder(
@@ -895,6 +1031,10 @@ private static final long serialVersionUID = 0L;
       return getEditedFieldsMaskFieldBuilder().getBuilder(index);
     }
     /**
+     * <pre>
+     * Field to be edited in DB
+     * </pre>
+     *
      * <code>repeated .google.protobuf.FieldMask edited_fields_mask = 3 [json_name = "editedFieldsMask"];</code>
      */
     public com.google.protobuf.FieldMaskOrBuilder getEditedFieldsMaskOrBuilder(
@@ -905,6 +1045,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Field to be edited in DB
+     * </pre>
+     *
      * <code>repeated .google.protobuf.FieldMask edited_fields_mask = 3 [json_name = "editedFieldsMask"];</code>
      */
     public java.util.List<? extends com.google.protobuf.FieldMaskOrBuilder> 
@@ -916,6 +1060,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Field to be edited in DB
+     * </pre>
+     *
      * <code>repeated .google.protobuf.FieldMask edited_fields_mask = 3 [json_name = "editedFieldsMask"];</code>
      */
     public com.google.protobuf.FieldMask.Builder addEditedFieldsMaskBuilder() {
@@ -923,6 +1071,10 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.FieldMask.getDefaultInstance());
     }
     /**
+     * <pre>
+     * Field to be edited in DB
+     * </pre>
+     *
      * <code>repeated .google.protobuf.FieldMask edited_fields_mask = 3 [json_name = "editedFieldsMask"];</code>
      */
     public com.google.protobuf.FieldMask.Builder addEditedFieldsMaskBuilder(
@@ -931,6 +1083,10 @@ private static final long serialVersionUID = 0L;
           index, com.google.protobuf.FieldMask.getDefaultInstance());
     }
     /**
+     * <pre>
+     * Field to be edited in DB
+     * </pre>
+     *
      * <code>repeated .google.protobuf.FieldMask edited_fields_mask = 3 [json_name = "editedFieldsMask"];</code>
      */
     public java.util.List<com.google.protobuf.FieldMask.Builder> 
