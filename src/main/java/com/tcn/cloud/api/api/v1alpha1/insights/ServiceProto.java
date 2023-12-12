@@ -26,7 +26,7 @@ public final class ServiceProto {
       "\n#api/v1alpha1/insights/service.proto\022\025a" +
       "pi.v1alpha1.insights\032\027annotations/authz." +
       "proto\032#api/v1alpha1/insights/insight.pro" +
-      "to\032\034google/api/annotations.proto2\261\021\n\010Ins" +
+      "to\032\034google/api/annotations.proto2\247\021\n\010Ins" +
       "ights\022\263\001\n\rCreateInsight\022+.api.v1alpha1.i" +
       "nsights.CreateInsightRequest\032,.api.v1alp" +
       "ha1.insights.CreateInsightResponse\"G\272\270\221\002" +
@@ -73,21 +73,20 @@ public final class ServiceProto {
       "esRequest\032(.api.v1alpha1.insights.ListVf" +
       "sesResponse\"C\272\270\221\002\n\n\003\010\372\001\n\003\010\336\004\202\323\344\223\002.\")/api" +
       "/v1alpha1/insights/insights/listvfses:\001*" +
-      "\022\301\001\n\016ListVfsSchemas\022,.api.v1alpha1.insig" +
+      "\022\267\001\n\016ListVfsSchemas\022,.api.v1alpha1.insig" +
       "hts.ListVfsSchemasRequest\032-.api.v1alpha1" +
-      ".insights.ListVfsSchemasResponse\"R\272\270\221\002\024\n" +
-      "\003\010\372\001\n\003\010\336\004\n\003\010\337\004\n\003\010\335\004\202\323\344\223\0023\"./api/v1alpha1" +
-      "/insights/insights/listvfsschemas:\001*\022\265\001\n" +
-      "\016PublishInsight\022,.api.v1alpha1.insights." +
-      "PublishInsightRequest\032-.api.v1alpha1.ins" +
-      "ights.PublishInsightResponse\"F\272\270\221\002\010\n\006\010\372\001" +
-      "\010\336\004\202\323\344\223\0023\"./api/v1alpha1/insights/insigh" +
-      "ts/publishinsight:\001*B\255\001\n\'com.tcn.cloud.a" +
-      "pi.api.v1alpha1.insightsB\014ServiceProtoP\001" +
-      "\242\002\003AVI\252\002\025Api.V1alpha1.Insights\312\002\025Api\\V1a" +
-      "lpha1\\Insights\342\002!Api\\V1alpha1\\Insights\\G" +
-      "PBMetadata\352\002\027Api::V1alpha1::Insightsb\006pr" +
-      "oto3"
+      ".insights.ListVfsSchemasResponse\"H\272\270\221\002\n\n" +
+      "\003\010\372\001\n\003\010\336\004\202\323\344\223\0023\"./api/v1alpha1/insights/" +
+      "insights/listvfsschemas:\001*\022\265\001\n\016PublishIn" +
+      "sight\022,.api.v1alpha1.insights.PublishIns" +
+      "ightRequest\032-.api.v1alpha1.insights.Publ" +
+      "ishInsightResponse\"F\272\270\221\002\010\n\006\010\372\001\010\336\004\202\323\344\223\0023\"" +
+      "./api/v1alpha1/insights/insights/publish" +
+      "insight:\001*B\255\001\n\'com.tcn.cloud.api.api.v1a" +
+      "lpha1.insightsB\014ServiceProtoP\001\242\002\003AVI\252\002\025A" +
+      "pi.V1alpha1.Insights\312\002\025Api\\V1alpha1\\Insi" +
+      "ghts\342\002!Api\\V1alpha1\\Insights\\GPBMetadata" +
+      "\352\002\027Api::V1alpha1::Insightsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
