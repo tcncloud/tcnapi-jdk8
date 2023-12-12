@@ -16,4 +16,24 @@ public interface BuildCallProfileTemplateForSkillProfileReqOrBuilder extends
    * @return The skillProfileSid.
    */
   long getSkillProfileSid();
+
+  /**
+   * <pre>
+   * Time zone in IANA format that the call profile template built will be in.
+   * </pre>
+   *
+   * <code>string time_zone = 2 [json_name = "timeZone"];</code>
+   * @return The timeZone.
+   */
+  java.lang.String getTimeZone();
+  /**
+   * <pre>
+   * Time zone in IANA format that the call profile template built will be in.
+   * </pre>
+   *
+   * <code>string time_zone = 2 [json_name = "timeZone"];</code>
+   * @return The bytes for timeZone.
+   */
+  com.google.protobuf.ByteString
+      getTimeZoneBytes();
 }
