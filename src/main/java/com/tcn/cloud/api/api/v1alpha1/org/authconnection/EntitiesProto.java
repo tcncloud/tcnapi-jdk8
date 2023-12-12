@@ -79,6 +79,16 @@ public final class EntitiesProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_org_authconnection_UpdateAuthConnectionGroupsResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_authconnection_ListAuthConnectionIdsRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_authconnection_ListAuthConnectionIdsRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_authconnection_ListAuthConnectionIdsResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_authconnection_ListAuthConnectionIdsResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -121,13 +131,16 @@ public final class EntitiesProto {
       "ItemR\014defaultGroup\022?\n\rcustom_groups\030\002 \003(" +
       "\0132\032.api.commons.org.GroupItemR\014customGro" +
       "ups\022#\n\rconnection_id\030\003 \001(\tR\014connectionId" +
-      "\"$\n\"UpdateAuthConnectionGroupsResponseB\342" +
-      "\001\n1com.tcn.cloud.api.api.v1alpha1.org.au" +
-      "thconnectionB\rEntitiesProtoP\001\242\002\004AVOA\252\002\037A" +
-      "pi.V1alpha1.Org.Authconnection\312\002\037Api\\V1a" +
-      "lpha1\\Org\\Authconnection\342\002+Api\\V1alpha1\\" +
-      "Org\\Authconnection\\GPBMetadata\352\002\"Api::V1" +
-      "alpha1::Org::Authconnectionb\006proto3"
+      "\"$\n\"UpdateAuthConnectionGroupsResponse\"\036" +
+      "\n\034ListAuthConnectionIdsRequest\"M\n\035ListAu" +
+      "thConnectionIdsResponse\022,\n\022auth_connetio" +
+      "n_ids\030\001 \003(\tR\020authConnetionIdsB\342\001\n1com.tc" +
+      "n.cloud.api.api.v1alpha1.org.authconnect" +
+      "ionB\rEntitiesProtoP\001\242\002\004AVOA\252\002\037Api.V1alph" +
+      "a1.Org.Authconnection\312\002\037Api\\V1alpha1\\Org" +
+      "\\Authconnection\342\002+Api\\V1alpha1\\Org\\Authc" +
+      "onnection\\GPBMetadata\352\002\"Api::V1alpha1::O" +
+      "rg::Authconnectionb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -213,6 +226,18 @@ public final class EntitiesProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_authconnection_UpdateAuthConnectionGroupsResponse_descriptor,
         new java.lang.String[] { });
+    internal_static_api_v1alpha1_org_authconnection_ListAuthConnectionIdsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(12);
+    internal_static_api_v1alpha1_org_authconnection_ListAuthConnectionIdsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_authconnection_ListAuthConnectionIdsRequest_descriptor,
+        new java.lang.String[] { });
+    internal_static_api_v1alpha1_org_authconnection_ListAuthConnectionIdsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(13);
+    internal_static_api_v1alpha1_org_authconnection_ListAuthConnectionIdsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_authconnection_ListAuthConnectionIdsResponse_descriptor,
+        new java.lang.String[] { "AuthConnetionIds", });
     com.tcn.cloud.api.api.commons.org.AuthConnectionsProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
   }

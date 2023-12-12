@@ -46,6 +46,37 @@ public final class AuthConnectionServiceGrpc {
     return getCreateAuthConnectionMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse> getListAuthConnectionIdsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListAuthConnectionIds",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse> getListAuthConnectionIdsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsRequest, com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse> getListAuthConnectionIdsMethod;
+    if ((getListAuthConnectionIdsMethod = AuthConnectionServiceGrpc.getListAuthConnectionIdsMethod) == null) {
+      synchronized (AuthConnectionServiceGrpc.class) {
+        if ((getListAuthConnectionIdsMethod = AuthConnectionServiceGrpc.getListAuthConnectionIdsMethod) == null) {
+          AuthConnectionServiceGrpc.getListAuthConnectionIdsMethod = getListAuthConnectionIdsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsRequest, com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListAuthConnectionIds"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new AuthConnectionServiceMethodDescriptorSupplier("ListAuthConnectionIds"))
+              .build();
+        }
+      }
+    }
+    return getListAuthConnectionIdsMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.authconnection.GetAuthConnectionSettingsRequest,
       com.tcn.cloud.api.api.v1alpha1.org.authconnection.GetAuthConnectionSettingsResponse> getGetAuthConnectionSettingsMethod;
 
@@ -261,6 +292,16 @@ public final class AuthConnectionServiceGrpc {
 
     /**
      * <pre>
+     * ListAuthConnectionIds returns the IDs of all authconnections belonging to the current org.
+     * </pre>
+     */
+    default void listAuthConnectionIds(com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAuthConnectionIdsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * GetAuthConnectionSettings gets auth connection settings.
      * DEPRECATED: use GetAuthConnection
      * </pre>
@@ -351,6 +392,17 @@ public final class AuthConnectionServiceGrpc {
 
     /**
      * <pre>
+     * ListAuthConnectionIds returns the IDs of all authconnections belonging to the current org.
+     * </pre>
+     */
+    public void listAuthConnectionIds(com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListAuthConnectionIdsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * GetAuthConnectionSettings gets auth connection settings.
      * DEPRECATED: use GetAuthConnection
      * </pre>
@@ -434,6 +486,16 @@ public final class AuthConnectionServiceGrpc {
 
     /**
      * <pre>
+     * ListAuthConnectionIds returns the IDs of all authconnections belonging to the current org.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse listAuthConnectionIds(com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListAuthConnectionIdsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * GetAuthConnectionSettings gets auth connection settings.
      * DEPRECATED: use GetAuthConnection
      * </pre>
@@ -513,6 +575,17 @@ public final class AuthConnectionServiceGrpc {
 
     /**
      * <pre>
+     * ListAuthConnectionIds returns the IDs of all authconnections belonging to the current org.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse> listAuthConnectionIds(
+        com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListAuthConnectionIdsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * GetAuthConnectionSettings gets auth connection settings.
      * DEPRECATED: use GetAuthConnection
      * </pre>
@@ -569,11 +642,12 @@ public final class AuthConnectionServiceGrpc {
   }
 
   private static final int METHODID_CREATE_AUTH_CONNECTION = 0;
-  private static final int METHODID_GET_AUTH_CONNECTION_SETTINGS = 1;
-  private static final int METHODID_GET_AUTH_CONNECTION = 2;
-  private static final int METHODID_DELETE_AUTH_CONNECTION = 3;
-  private static final int METHODID_UPDATE_AUTH_CONNECTION_SECRET = 4;
-  private static final int METHODID_UPDATE_AUTH_CONNECTION_GROUPS = 5;
+  private static final int METHODID_LIST_AUTH_CONNECTION_IDS = 1;
+  private static final int METHODID_GET_AUTH_CONNECTION_SETTINGS = 2;
+  private static final int METHODID_GET_AUTH_CONNECTION = 3;
+  private static final int METHODID_DELETE_AUTH_CONNECTION = 4;
+  private static final int METHODID_UPDATE_AUTH_CONNECTION_SECRET = 5;
+  private static final int METHODID_UPDATE_AUTH_CONNECTION_GROUPS = 6;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -595,6 +669,10 @@ public final class AuthConnectionServiceGrpc {
         case METHODID_CREATE_AUTH_CONNECTION:
           serviceImpl.createAuthConnection((com.tcn.cloud.api.api.v1alpha1.org.authconnection.CreateAuthConnectionRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.authconnection.CreateAuthConnectionResponse>) responseObserver);
+          break;
+        case METHODID_LIST_AUTH_CONNECTION_IDS:
+          serviceImpl.listAuthConnectionIds((com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse>) responseObserver);
           break;
         case METHODID_GET_AUTH_CONNECTION_SETTINGS:
           serviceImpl.getAuthConnectionSettings((com.tcn.cloud.api.api.v1alpha1.org.authconnection.GetAuthConnectionSettingsRequest) request,
@@ -641,6 +719,13 @@ public final class AuthConnectionServiceGrpc {
               com.tcn.cloud.api.api.v1alpha1.org.authconnection.CreateAuthConnectionRequest,
               com.tcn.cloud.api.api.v1alpha1.org.authconnection.CreateAuthConnectionResponse>(
                 service, METHODID_CREATE_AUTH_CONNECTION)))
+        .addMethod(
+          getListAuthConnectionIdsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse>(
+                service, METHODID_LIST_AUTH_CONNECTION_IDS)))
         .addMethod(
           getGetAuthConnectionSettingsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -725,6 +810,7 @@ public final class AuthConnectionServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new AuthConnectionServiceFileDescriptorSupplier())
               .addMethod(getCreateAuthConnectionMethod())
+              .addMethod(getListAuthConnectionIdsMethod())
               .addMethod(getGetAuthConnectionSettingsMethod())
               .addMethod(getGetAuthConnectionMethod())
               .addMethod(getDeleteAuthConnectionMethod())
