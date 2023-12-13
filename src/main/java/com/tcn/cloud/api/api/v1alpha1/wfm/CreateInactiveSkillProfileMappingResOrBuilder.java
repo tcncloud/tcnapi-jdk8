@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.v1alpha1.wfm;
 
-public interface CreateInactiveSkillProfileMappingResOrBuilder extends
+@java.lang.Deprecated public interface CreateInactiveSkillProfileMappingResOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v1alpha1.wfm.CreateInactiveSkillProfileMappingRes)
     com.google.protobuf.MessageOrBuilder {
 }

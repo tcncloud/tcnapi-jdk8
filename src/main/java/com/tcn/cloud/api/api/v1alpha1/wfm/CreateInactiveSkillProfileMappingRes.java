@@ -6,11 +6,12 @@ package com.tcn.cloud.api.api.v1alpha1.wfm;
 /**
  * <pre>
  * Response message for the CreateInactiveSkillProfileMapping RPC.
+ * DEPRECATED as of Sep/27/2023 - Use skill profile groups instead.
  * </pre>
  *
  * Protobuf type {@code api.v1alpha1.wfm.CreateInactiveSkillProfileMappingRes}
  */
-public final class CreateInactiveSkillProfileMappingRes extends
+@java.lang.Deprecated public final class CreateInactiveSkillProfileMappingRes extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.v1alpha1.wfm.CreateInactiveSkillProfileMappingRes)
     CreateInactiveSkillProfileMappingResOrBuilder {
@@ -191,6 +192,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Response message for the CreateInactiveSkillProfileMapping RPC.
+   * DEPRECATED as of Sep/27/2023 - Use skill profile groups instead.
    * </pre>
    *
    * Protobuf type {@code api.v1alpha1.wfm.CreateInactiveSkillProfileMappingRes}

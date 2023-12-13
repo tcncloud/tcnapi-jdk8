@@ -6,11 +6,12 @@ package com.tcn.cloud.api.api.v1alpha1.wfm;
 /**
  * <pre>
  * Response message for the GetClientHistoryCacheInfo RPC.
+ * DEPRECATED as of Dec/13/2023 - Use PerformInitialClientSetup instead.
  * </pre>
  *
  * Protobuf type {@code api.v1alpha1.wfm.GetClientHistoryCacheInfoRes}
  */
-public final class GetClientHistoryCacheInfoRes extends
+@java.lang.Deprecated public final class GetClientHistoryCacheInfoRes extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.v1alpha1.wfm.GetClientHistoryCacheInfoRes)
     GetClientHistoryCacheInfoResOrBuilder {
@@ -245,6 +246,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Response message for the GetClientHistoryCacheInfo RPC.
+   * DEPRECATED as of Dec/13/2023 - Use PerformInitialClientSetup instead.
    * </pre>
    *
    * Protobuf type {@code api.v1alpha1.wfm.GetClientHistoryCacheInfoRes}
