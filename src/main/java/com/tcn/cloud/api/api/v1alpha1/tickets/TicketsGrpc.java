@@ -917,6 +917,37 @@ public final class TicketsGrpc {
     return getAssignTicketTemplateMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.tickets.GetActionTypeRequest,
+      com.tcn.cloud.api.api.v1alpha1.tickets.GetActionTypeResponse> getGetAllActionTypeMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetAllActionType",
+      requestType = com.tcn.cloud.api.api.v1alpha1.tickets.GetActionTypeRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.tickets.GetActionTypeResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.tickets.GetActionTypeRequest,
+      com.tcn.cloud.api.api.v1alpha1.tickets.GetActionTypeResponse> getGetAllActionTypeMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.tickets.GetActionTypeRequest, com.tcn.cloud.api.api.v1alpha1.tickets.GetActionTypeResponse> getGetAllActionTypeMethod;
+    if ((getGetAllActionTypeMethod = TicketsGrpc.getGetAllActionTypeMethod) == null) {
+      synchronized (TicketsGrpc.class) {
+        if ((getGetAllActionTypeMethod = TicketsGrpc.getGetAllActionTypeMethod) == null) {
+          TicketsGrpc.getGetAllActionTypeMethod = getGetAllActionTypeMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.tickets.GetActionTypeRequest, com.tcn.cloud.api.api.v1alpha1.tickets.GetActionTypeResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAllActionType"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.tickets.GetActionTypeRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.tickets.GetActionTypeResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new TicketsMethodDescriptorSupplier("GetAllActionType"))
+              .build();
+        }
+      }
+    }
+    return getGetAllActionTypeMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -1221,7 +1252,7 @@ public final class TicketsGrpc {
 
     /**
      * <pre>
-     * Public method to change the Status of a ticket
+     * Public method to create a Ticket Template
      * </pre>
      */
     default void createTicketTemplate(com.tcn.cloud.api.api.v1alpha1.tickets.CreateTicketTemplateRequest request,
@@ -1231,7 +1262,7 @@ public final class TicketsGrpc {
 
     /**
      * <pre>
-     * Public method to change the Status of a ticket
+     * Public method to Edit a Ticket Template
      * </pre>
      */
     default void editTicketTemplate(com.tcn.cloud.api.api.v1alpha1.tickets.EditTicketTemplateRequest request,
@@ -1241,7 +1272,7 @@ public final class TicketsGrpc {
 
     /**
      * <pre>
-     * Public method to change the Status of a ticket
+     * Public method to all Ticket Templates
      * </pre>
      */
     default void listTicketTemplate(com.tcn.cloud.api.api.v1alpha1.tickets.ListTicketTemplateRequest request,
@@ -1251,12 +1282,22 @@ public final class TicketsGrpc {
 
     /**
      * <pre>
-     * Public method to change the Status of a ticket
+     * Public method to assign a Template To a Project
      * </pre>
      */
     default void assignTicketTemplate(com.tcn.cloud.api.api.v1alpha1.tickets.AssignProjectTemplateRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.AssignProjectTemplateResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAssignTicketTemplateMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Public method to list all Action Types
+     * </pre>
+     */
+    default void getAllActionType(com.tcn.cloud.api.api.v1alpha1.tickets.GetActionTypeRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.GetActionTypeResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAllActionTypeMethod(), responseObserver);
     }
   }
 
@@ -1571,7 +1612,7 @@ public final class TicketsGrpc {
 
     /**
      * <pre>
-     * Public method to change the Status of a ticket
+     * Public method to create a Ticket Template
      * </pre>
      */
     public void createTicketTemplate(com.tcn.cloud.api.api.v1alpha1.tickets.CreateTicketTemplateRequest request,
@@ -1582,7 +1623,7 @@ public final class TicketsGrpc {
 
     /**
      * <pre>
-     * Public method to change the Status of a ticket
+     * Public method to Edit a Ticket Template
      * </pre>
      */
     public void editTicketTemplate(com.tcn.cloud.api.api.v1alpha1.tickets.EditTicketTemplateRequest request,
@@ -1593,7 +1634,7 @@ public final class TicketsGrpc {
 
     /**
      * <pre>
-     * Public method to change the Status of a ticket
+     * Public method to all Ticket Templates
      * </pre>
      */
     public void listTicketTemplate(com.tcn.cloud.api.api.v1alpha1.tickets.ListTicketTemplateRequest request,
@@ -1604,13 +1645,24 @@ public final class TicketsGrpc {
 
     /**
      * <pre>
-     * Public method to change the Status of a ticket
+     * Public method to assign a Template To a Project
      * </pre>
      */
     public void assignTicketTemplate(com.tcn.cloud.api.api.v1alpha1.tickets.AssignProjectTemplateRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.AssignProjectTemplateResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getAssignTicketTemplateMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Public method to list all Action Types
+     * </pre>
+     */
+    public void getAllActionType(com.tcn.cloud.api.api.v1alpha1.tickets.GetActionTypeRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.GetActionTypeResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetAllActionTypeMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -1886,7 +1938,7 @@ public final class TicketsGrpc {
 
     /**
      * <pre>
-     * Public method to change the Status of a ticket
+     * Public method to create a Ticket Template
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.tickets.CreateTicketTemplateResponse createTicketTemplate(com.tcn.cloud.api.api.v1alpha1.tickets.CreateTicketTemplateRequest request) {
@@ -1896,7 +1948,7 @@ public final class TicketsGrpc {
 
     /**
      * <pre>
-     * Public method to change the Status of a ticket
+     * Public method to Edit a Ticket Template
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.tickets.EditTicketTemplateResponse editTicketTemplate(com.tcn.cloud.api.api.v1alpha1.tickets.EditTicketTemplateRequest request) {
@@ -1906,7 +1958,7 @@ public final class TicketsGrpc {
 
     /**
      * <pre>
-     * Public method to change the Status of a ticket
+     * Public method to all Ticket Templates
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.tickets.ListTicketTemplateResponse listTicketTemplate(com.tcn.cloud.api.api.v1alpha1.tickets.ListTicketTemplateRequest request) {
@@ -1916,12 +1968,22 @@ public final class TicketsGrpc {
 
     /**
      * <pre>
-     * Public method to change the Status of a ticket
+     * Public method to assign a Template To a Project
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.tickets.AssignProjectTemplateResponse assignTicketTemplate(com.tcn.cloud.api.api.v1alpha1.tickets.AssignProjectTemplateRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getAssignTicketTemplateMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Public method to list all Action Types
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.tickets.GetActionTypeResponse getAllActionType(com.tcn.cloud.api.api.v1alpha1.tickets.GetActionTypeRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetAllActionTypeMethod(), getCallOptions(), request);
     }
   }
 
@@ -2222,7 +2284,7 @@ public final class TicketsGrpc {
 
     /**
      * <pre>
-     * Public method to change the Status of a ticket
+     * Public method to create a Ticket Template
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.tickets.CreateTicketTemplateResponse> createTicketTemplate(
@@ -2233,7 +2295,7 @@ public final class TicketsGrpc {
 
     /**
      * <pre>
-     * Public method to change the Status of a ticket
+     * Public method to Edit a Ticket Template
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.tickets.EditTicketTemplateResponse> editTicketTemplate(
@@ -2244,7 +2306,7 @@ public final class TicketsGrpc {
 
     /**
      * <pre>
-     * Public method to change the Status of a ticket
+     * Public method to all Ticket Templates
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.tickets.ListTicketTemplateResponse> listTicketTemplate(
@@ -2255,13 +2317,24 @@ public final class TicketsGrpc {
 
     /**
      * <pre>
-     * Public method to change the Status of a ticket
+     * Public method to assign a Template To a Project
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.tickets.AssignProjectTemplateResponse> assignTicketTemplate(
         com.tcn.cloud.api.api.v1alpha1.tickets.AssignProjectTemplateRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getAssignTicketTemplateMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Public method to list all Action Types
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.tickets.GetActionTypeResponse> getAllActionType(
+        com.tcn.cloud.api.api.v1alpha1.tickets.GetActionTypeRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetAllActionTypeMethod(), getCallOptions()), request);
     }
   }
 
@@ -2294,6 +2367,7 @@ public final class TicketsGrpc {
   private static final int METHODID_EDIT_TICKET_TEMPLATE = 26;
   private static final int METHODID_LIST_TICKET_TEMPLATE = 27;
   private static final int METHODID_ASSIGN_TICKET_TEMPLATE = 28;
+  private static final int METHODID_GET_ALL_ACTION_TYPE = 29;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -2427,6 +2501,10 @@ public final class TicketsGrpc {
         case METHODID_ASSIGN_TICKET_TEMPLATE:
           serviceImpl.assignTicketTemplate((com.tcn.cloud.api.api.v1alpha1.tickets.AssignProjectTemplateRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.AssignProjectTemplateResponse>) responseObserver);
+          break;
+        case METHODID_GET_ALL_ACTION_TYPE:
+          serviceImpl.getAllActionType((com.tcn.cloud.api.api.v1alpha1.tickets.GetActionTypeRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.GetActionTypeResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -2649,6 +2727,13 @@ public final class TicketsGrpc {
               com.tcn.cloud.api.api.v1alpha1.tickets.AssignProjectTemplateRequest,
               com.tcn.cloud.api.api.v1alpha1.tickets.AssignProjectTemplateResponse>(
                 service, METHODID_ASSIGN_TICKET_TEMPLATE)))
+        .addMethod(
+          getGetAllActionTypeMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.tickets.GetActionTypeRequest,
+              com.tcn.cloud.api.api.v1alpha1.tickets.GetActionTypeResponse>(
+                service, METHODID_GET_ALL_ACTION_TYPE)))
         .build();
   }
 
@@ -2726,6 +2811,7 @@ public final class TicketsGrpc {
               .addMethod(getEditTicketTemplateMethod())
               .addMethod(getListTicketTemplateMethod())
               .addMethod(getAssignTicketTemplateMethod())
+              .addMethod(getGetAllActionTypeMethod())
               .build();
         }
       }
