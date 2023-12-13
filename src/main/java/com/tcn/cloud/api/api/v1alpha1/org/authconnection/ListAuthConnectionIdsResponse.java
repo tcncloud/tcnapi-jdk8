@@ -20,8 +20,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ListAuthConnectionIdsResponse() {
-    authConnetionIds_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    connections_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -44,41 +43,745 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.class, com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Builder.class);
   }
 
-  public static final int AUTH_CONNETION_IDS_FIELD_NUMBER = 1;
+  public interface ConnectionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string auth_connection_id = 1 [json_name = "authConnectionId"];</code>
+     * @return The authConnectionId.
+     */
+    java.lang.String getAuthConnectionId();
+    /**
+     * <code>string auth_connection_id = 1 [json_name = "authConnectionId"];</code>
+     * @return The bytes for authConnectionId.
+     */
+    com.google.protobuf.ByteString
+        getAuthConnectionIdBytes();
+
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+  }
+  /**
+   * Protobuf type {@code api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection}
+   */
+  public static final class Connection extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection)
+      ConnectionOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Connection.newBuilder() to construct.
+    private Connection(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Connection() {
+      authConnectionId_ = "";
+      name_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Connection();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.tcn.cloud.api.api.v1alpha1.org.authconnection.EntitiesProto.internal_static_api_v1alpha1_org_authconnection_ListAuthConnectionIdsResponse_Connection_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.tcn.cloud.api.api.v1alpha1.org.authconnection.EntitiesProto.internal_static_api_v1alpha1_org_authconnection_ListAuthConnectionIdsResponse_Connection_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection.class, com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection.Builder.class);
+    }
+
+    public static final int AUTH_CONNECTION_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object authConnectionId_ = "";
+    /**
+     * <code>string auth_connection_id = 1 [json_name = "authConnectionId"];</code>
+     * @return The authConnectionId.
+     */
+    @java.lang.Override
+    public java.lang.String getAuthConnectionId() {
+      java.lang.Object ref = authConnectionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        authConnectionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string auth_connection_id = 1 [json_name = "authConnectionId"];</code>
+     * @return The bytes for authConnectionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAuthConnectionIdBytes() {
+      java.lang.Object ref = authConnectionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        authConnectionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NAME_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authConnectionId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, authConnectionId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authConnectionId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, authConnectionId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection)) {
+        return super.equals(obj);
+      }
+      com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection other = (com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection) obj;
+
+      if (!getAuthConnectionId()
+          .equals(other.getAuthConnectionId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + AUTH_CONNECTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getAuthConnectionId().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection)
+        com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.ConnectionOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.api.v1alpha1.org.authconnection.EntitiesProto.internal_static_api_v1alpha1_org_authconnection_ListAuthConnectionIdsResponse_Connection_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.api.v1alpha1.org.authconnection.EntitiesProto.internal_static_api_v1alpha1_org_authconnection_ListAuthConnectionIdsResponse_Connection_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection.class, com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection.Builder.class);
+      }
+
+      // Construct using com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        authConnectionId_ = "";
+        name_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.tcn.cloud.api.api.v1alpha1.org.authconnection.EntitiesProto.internal_static_api_v1alpha1_org_authconnection_ListAuthConnectionIdsResponse_Connection_descriptor;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection getDefaultInstanceForType() {
+        return com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection build() {
+        com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection buildPartial() {
+        com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection result = new com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.authConnectionId_ = authConnectionId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.name_ = name_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection) {
+          return mergeFrom((com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection other) {
+        if (other == com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection.getDefaultInstance()) return this;
+        if (!other.getAuthConnectionId().isEmpty()) {
+          authConnectionId_ = other.authConnectionId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                authConnectionId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object authConnectionId_ = "";
+      /**
+       * <code>string auth_connection_id = 1 [json_name = "authConnectionId"];</code>
+       * @return The authConnectionId.
+       */
+      public java.lang.String getAuthConnectionId() {
+        java.lang.Object ref = authConnectionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          authConnectionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string auth_connection_id = 1 [json_name = "authConnectionId"];</code>
+       * @return The bytes for authConnectionId.
+       */
+      public com.google.protobuf.ByteString
+          getAuthConnectionIdBytes() {
+        java.lang.Object ref = authConnectionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          authConnectionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string auth_connection_id = 1 [json_name = "authConnectionId"];</code>
+       * @param value The authConnectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthConnectionId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        authConnectionId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string auth_connection_id = 1 [json_name = "authConnectionId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAuthConnectionId() {
+        authConnectionId_ = getDefaultInstance().getAuthConnectionId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string auth_connection_id = 1 [json_name = "authConnectionId"];</code>
+       * @param value The bytes for authConnectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthConnectionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        authConnectionId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        name_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection)
+    }
+
+    // @@protoc_insertion_point(class_scope:api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection)
+    private static final com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection();
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Connection>
+        PARSER = new com.google.protobuf.AbstractParser<Connection>() {
+      @java.lang.Override
+      public Connection parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Connection> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Connection> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public static final int CONNECTIONS_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringArrayList authConnetionIds_ =
-      com.google.protobuf.LazyStringArrayList.emptyList();
+  private java.util.List<com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection> connections_;
   /**
-   * <code>repeated string auth_connetion_ids = 1 [json_name = "authConnetionIds"];</code>
-   * @return A list containing the authConnetionIds.
+   * <code>repeated .api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection connections = 1 [json_name = "connections"];</code>
    */
-  public com.google.protobuf.ProtocolStringList
-      getAuthConnetionIdsList() {
-    return authConnetionIds_;
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection> getConnectionsList() {
+    return connections_;
   }
   /**
-   * <code>repeated string auth_connetion_ids = 1 [json_name = "authConnetionIds"];</code>
-   * @return The count of authConnetionIds.
+   * <code>repeated .api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection connections = 1 [json_name = "connections"];</code>
    */
-  public int getAuthConnetionIdsCount() {
-    return authConnetionIds_.size();
+  @java.lang.Override
+  public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.ConnectionOrBuilder> 
+      getConnectionsOrBuilderList() {
+    return connections_;
   }
   /**
-   * <code>repeated string auth_connetion_ids = 1 [json_name = "authConnetionIds"];</code>
-   * @param index The index of the element to return.
-   * @return The authConnetionIds at the given index.
+   * <code>repeated .api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection connections = 1 [json_name = "connections"];</code>
    */
-  public java.lang.String getAuthConnetionIds(int index) {
-    return authConnetionIds_.get(index);
+  @java.lang.Override
+  public int getConnectionsCount() {
+    return connections_.size();
   }
   /**
-   * <code>repeated string auth_connetion_ids = 1 [json_name = "authConnetionIds"];</code>
-   * @param index The index of the value to return.
-   * @return The bytes of the authConnetionIds at the given index.
+   * <code>repeated .api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection connections = 1 [json_name = "connections"];</code>
    */
-  public com.google.protobuf.ByteString
-      getAuthConnetionIdsBytes(int index) {
-    return authConnetionIds_.getByteString(index);
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection getConnections(int index) {
+    return connections_.get(index);
+  }
+  /**
+   * <code>repeated .api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection connections = 1 [json_name = "connections"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.ConnectionOrBuilder getConnectionsOrBuilder(
+      int index) {
+    return connections_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -95,8 +798,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    for (int i = 0; i < authConnetionIds_.size(); i++) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, authConnetionIds_.getRaw(i));
+    for (int i = 0; i < connections_.size(); i++) {
+      output.writeMessage(1, connections_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -107,13 +810,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    {
-      int dataSize = 0;
-      for (int i = 0; i < authConnetionIds_.size(); i++) {
-        dataSize += computeStringSizeNoTag(authConnetionIds_.getRaw(i));
-      }
-      size += dataSize;
-      size += 1 * getAuthConnetionIdsList().size();
+    for (int i = 0; i < connections_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1, connections_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -130,8 +829,8 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse other = (com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse) obj;
 
-    if (!getAuthConnetionIdsList()
-        .equals(other.getAuthConnetionIdsList())) return false;
+    if (!getConnectionsList()
+        .equals(other.getConnectionsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -143,9 +842,9 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (getAuthConnetionIdsCount() > 0) {
-      hash = (37 * hash) + AUTH_CONNETION_IDS_FIELD_NUMBER;
-      hash = (53 * hash) + getAuthConnetionIdsList().hashCode();
+    if (getConnectionsCount() > 0) {
+      hash = (37 * hash) + CONNECTIONS_FIELD_NUMBER;
+      hash = (53 * hash) + getConnectionsList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -282,8 +981,13 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      authConnetionIds_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
+      if (connectionsBuilder_ == null) {
+        connections_ = java.util.Collections.emptyList();
+      } else {
+        connections_ = null;
+        connectionsBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000001);
       return this;
     }
 
@@ -310,17 +1014,26 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse result = new com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse result) {
+      if (connectionsBuilder_ == null) {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          connections_ = java.util.Collections.unmodifiableList(connections_);
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.connections_ = connections_;
+      } else {
+        result.connections_ = connectionsBuilder_.build();
+      }
+    }
+
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse result) {
       int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        authConnetionIds_.makeImmutable();
-        result.authConnetionIds_ = authConnetionIds_;
-      }
     }
 
     @java.lang.Override
@@ -367,15 +1080,31 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse other) {
       if (other == com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.getDefaultInstance()) return this;
-      if (!other.authConnetionIds_.isEmpty()) {
-        if (authConnetionIds_.isEmpty()) {
-          authConnetionIds_ = other.authConnetionIds_;
-          bitField0_ |= 0x00000001;
-        } else {
-          ensureAuthConnetionIdsIsMutable();
-          authConnetionIds_.addAll(other.authConnetionIds_);
+      if (connectionsBuilder_ == null) {
+        if (!other.connections_.isEmpty()) {
+          if (connections_.isEmpty()) {
+            connections_ = other.connections_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureConnectionsIsMutable();
+            connections_.addAll(other.connections_);
+          }
+          onChanged();
         }
-        onChanged();
+      } else {
+        if (!other.connections_.isEmpty()) {
+          if (connectionsBuilder_.isEmpty()) {
+            connectionsBuilder_.dispose();
+            connectionsBuilder_ = null;
+            connections_ = other.connections_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+            connectionsBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getConnectionsFieldBuilder() : null;
+          } else {
+            connectionsBuilder_.addAllMessages(other.connections_);
+          }
+        }
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -404,9 +1133,16 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-              ensureAuthConnetionIdsIsMutable();
-              authConnetionIds_.add(s);
+              com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection.parser(),
+                      extensionRegistry);
+              if (connectionsBuilder_ == null) {
+                ensureConnectionsIsMutable();
+                connections_.add(m);
+              } else {
+                connectionsBuilder_.addMessage(m);
+              }
               break;
             } // case 10
             default: {
@@ -426,115 +1162,244 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private com.google.protobuf.LazyStringArrayList authConnetionIds_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-    private void ensureAuthConnetionIdsIsMutable() {
-      if (!authConnetionIds_.isModifiable()) {
-        authConnetionIds_ = new com.google.protobuf.LazyStringArrayList(authConnetionIds_);
+    private java.util.List<com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection> connections_ =
+      java.util.Collections.emptyList();
+    private void ensureConnectionsIsMutable() {
+      if (!((bitField0_ & 0x00000001) != 0)) {
+        connections_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection>(connections_);
+        bitField0_ |= 0x00000001;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection, com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection.Builder, com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.ConnectionOrBuilder> connectionsBuilder_;
+
+    /**
+     * <code>repeated .api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection connections = 1 [json_name = "connections"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection> getConnectionsList() {
+      if (connectionsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(connections_);
+      } else {
+        return connectionsBuilder_.getMessageList();
       }
-      bitField0_ |= 0x00000001;
     }
     /**
-     * <code>repeated string auth_connetion_ids = 1 [json_name = "authConnetionIds"];</code>
-     * @return A list containing the authConnetionIds.
+     * <code>repeated .api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection connections = 1 [json_name = "connections"];</code>
      */
-    public com.google.protobuf.ProtocolStringList
-        getAuthConnetionIdsList() {
-      authConnetionIds_.makeImmutable();
-      return authConnetionIds_;
+    public int getConnectionsCount() {
+      if (connectionsBuilder_ == null) {
+        return connections_.size();
+      } else {
+        return connectionsBuilder_.getCount();
+      }
     }
     /**
-     * <code>repeated string auth_connetion_ids = 1 [json_name = "authConnetionIds"];</code>
-     * @return The count of authConnetionIds.
+     * <code>repeated .api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection connections = 1 [json_name = "connections"];</code>
      */
-    public int getAuthConnetionIdsCount() {
-      return authConnetionIds_.size();
+    public com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection getConnections(int index) {
+      if (connectionsBuilder_ == null) {
+        return connections_.get(index);
+      } else {
+        return connectionsBuilder_.getMessage(index);
+      }
     }
     /**
-     * <code>repeated string auth_connetion_ids = 1 [json_name = "authConnetionIds"];</code>
-     * @param index The index of the element to return.
-     * @return The authConnetionIds at the given index.
+     * <code>repeated .api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection connections = 1 [json_name = "connections"];</code>
      */
-    public java.lang.String getAuthConnetionIds(int index) {
-      return authConnetionIds_.get(index);
-    }
-    /**
-     * <code>repeated string auth_connetion_ids = 1 [json_name = "authConnetionIds"];</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the authConnetionIds at the given index.
-     */
-    public com.google.protobuf.ByteString
-        getAuthConnetionIdsBytes(int index) {
-      return authConnetionIds_.getByteString(index);
-    }
-    /**
-     * <code>repeated string auth_connetion_ids = 1 [json_name = "authConnetionIds"];</code>
-     * @param index The index to set the value at.
-     * @param value The authConnetionIds to set.
-     * @return This builder for chaining.
-     */
-    public Builder setAuthConnetionIds(
-        int index, java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureAuthConnetionIdsIsMutable();
-      authConnetionIds_.set(index, value);
-      bitField0_ |= 0x00000001;
-      onChanged();
+    public Builder setConnections(
+        int index, com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection value) {
+      if (connectionsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureConnectionsIsMutable();
+        connections_.set(index, value);
+        onChanged();
+      } else {
+        connectionsBuilder_.setMessage(index, value);
+      }
       return this;
     }
     /**
-     * <code>repeated string auth_connetion_ids = 1 [json_name = "authConnetionIds"];</code>
-     * @param value The authConnetionIds to add.
-     * @return This builder for chaining.
+     * <code>repeated .api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection connections = 1 [json_name = "connections"];</code>
      */
-    public Builder addAuthConnetionIds(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureAuthConnetionIdsIsMutable();
-      authConnetionIds_.add(value);
-      bitField0_ |= 0x00000001;
-      onChanged();
+    public Builder setConnections(
+        int index, com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection.Builder builderForValue) {
+      if (connectionsBuilder_ == null) {
+        ensureConnectionsIsMutable();
+        connections_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        connectionsBuilder_.setMessage(index, builderForValue.build());
+      }
       return this;
     }
     /**
-     * <code>repeated string auth_connetion_ids = 1 [json_name = "authConnetionIds"];</code>
-     * @param values The authConnetionIds to add.
-     * @return This builder for chaining.
+     * <code>repeated .api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection connections = 1 [json_name = "connections"];</code>
      */
-    public Builder addAllAuthConnetionIds(
-        java.lang.Iterable<java.lang.String> values) {
-      ensureAuthConnetionIdsIsMutable();
-      com.google.protobuf.AbstractMessageLite.Builder.addAll(
-          values, authConnetionIds_);
-      bitField0_ |= 0x00000001;
-      onChanged();
+    public Builder addConnections(com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection value) {
+      if (connectionsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureConnectionsIsMutable();
+        connections_.add(value);
+        onChanged();
+      } else {
+        connectionsBuilder_.addMessage(value);
+      }
       return this;
     }
     /**
-     * <code>repeated string auth_connetion_ids = 1 [json_name = "authConnetionIds"];</code>
-     * @return This builder for chaining.
+     * <code>repeated .api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection connections = 1 [json_name = "connections"];</code>
      */
-    public Builder clearAuthConnetionIds() {
-      authConnetionIds_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000001);;
-      onChanged();
+    public Builder addConnections(
+        int index, com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection value) {
+      if (connectionsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureConnectionsIsMutable();
+        connections_.add(index, value);
+        onChanged();
+      } else {
+        connectionsBuilder_.addMessage(index, value);
+      }
       return this;
     }
     /**
-     * <code>repeated string auth_connetion_ids = 1 [json_name = "authConnetionIds"];</code>
-     * @param value The bytes of the authConnetionIds to add.
-     * @return This builder for chaining.
+     * <code>repeated .api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection connections = 1 [json_name = "connections"];</code>
      */
-    public Builder addAuthConnetionIdsBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      ensureAuthConnetionIdsIsMutable();
-      authConnetionIds_.add(value);
-      bitField0_ |= 0x00000001;
-      onChanged();
+    public Builder addConnections(
+        com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection.Builder builderForValue) {
+      if (connectionsBuilder_ == null) {
+        ensureConnectionsIsMutable();
+        connections_.add(builderForValue.build());
+        onChanged();
+      } else {
+        connectionsBuilder_.addMessage(builderForValue.build());
+      }
       return this;
+    }
+    /**
+     * <code>repeated .api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection connections = 1 [json_name = "connections"];</code>
+     */
+    public Builder addConnections(
+        int index, com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection.Builder builderForValue) {
+      if (connectionsBuilder_ == null) {
+        ensureConnectionsIsMutable();
+        connections_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        connectionsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection connections = 1 [json_name = "connections"];</code>
+     */
+    public Builder addAllConnections(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection> values) {
+      if (connectionsBuilder_ == null) {
+        ensureConnectionsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, connections_);
+        onChanged();
+      } else {
+        connectionsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection connections = 1 [json_name = "connections"];</code>
+     */
+    public Builder clearConnections() {
+      if (connectionsBuilder_ == null) {
+        connections_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+      } else {
+        connectionsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection connections = 1 [json_name = "connections"];</code>
+     */
+    public Builder removeConnections(int index) {
+      if (connectionsBuilder_ == null) {
+        ensureConnectionsIsMutable();
+        connections_.remove(index);
+        onChanged();
+      } else {
+        connectionsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection connections = 1 [json_name = "connections"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection.Builder getConnectionsBuilder(
+        int index) {
+      return getConnectionsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection connections = 1 [json_name = "connections"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.ConnectionOrBuilder getConnectionsOrBuilder(
+        int index) {
+      if (connectionsBuilder_ == null) {
+        return connections_.get(index);  } else {
+        return connectionsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection connections = 1 [json_name = "connections"];</code>
+     */
+    public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.ConnectionOrBuilder> 
+         getConnectionsOrBuilderList() {
+      if (connectionsBuilder_ != null) {
+        return connectionsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(connections_);
+      }
+    }
+    /**
+     * <code>repeated .api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection connections = 1 [json_name = "connections"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection.Builder addConnectionsBuilder() {
+      return getConnectionsFieldBuilder().addBuilder(
+          com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection connections = 1 [json_name = "connections"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection.Builder addConnectionsBuilder(
+        int index) {
+      return getConnectionsFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection connections = 1 [json_name = "connections"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection.Builder> 
+         getConnectionsBuilderList() {
+      return getConnectionsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection, com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection.Builder, com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.ConnectionOrBuilder> 
+        getConnectionsFieldBuilder() {
+      if (connectionsBuilder_ == null) {
+        connectionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection, com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection.Builder, com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.ConnectionOrBuilder>(
+                connections_,
+                ((bitField0_ & 0x00000001) != 0),
+                getParentForChildren(),
+                isClean());
+        connections_ = null;
+      }
+      return connectionsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

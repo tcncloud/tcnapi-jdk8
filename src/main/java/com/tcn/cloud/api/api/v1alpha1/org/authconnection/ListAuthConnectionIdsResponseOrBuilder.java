@@ -8,27 +8,26 @@ public interface ListAuthConnectionIdsResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>repeated string auth_connetion_ids = 1 [json_name = "authConnetionIds"];</code>
-   * @return A list containing the authConnetionIds.
+   * <code>repeated .api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection connections = 1 [json_name = "connections"];</code>
    */
-  java.util.List<java.lang.String>
-      getAuthConnetionIdsList();
+  java.util.List<com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection> 
+      getConnectionsList();
   /**
-   * <code>repeated string auth_connetion_ids = 1 [json_name = "authConnetionIds"];</code>
-   * @return The count of authConnetionIds.
+   * <code>repeated .api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection connections = 1 [json_name = "connections"];</code>
    */
-  int getAuthConnetionIdsCount();
+  com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection getConnections(int index);
   /**
-   * <code>repeated string auth_connetion_ids = 1 [json_name = "authConnetionIds"];</code>
-   * @param index The index of the element to return.
-   * @return The authConnetionIds at the given index.
+   * <code>repeated .api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection connections = 1 [json_name = "connections"];</code>
    */
-  java.lang.String getAuthConnetionIds(int index);
+  int getConnectionsCount();
   /**
-   * <code>repeated string auth_connetion_ids = 1 [json_name = "authConnetionIds"];</code>
-   * @param index The index of the value to return.
-   * @return The bytes of the authConnetionIds at the given index.
+   * <code>repeated .api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection connections = 1 [json_name = "connections"];</code>
    */
-  com.google.protobuf.ByteString
-      getAuthConnetionIdsBytes(int index);
+  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.ConnectionOrBuilder> 
+      getConnectionsOrBuilderList();
+  /**
+   * <code>repeated .api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.Connection connections = 1 [json_name = "connections"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.org.authconnection.ListAuthConnectionIdsResponse.ConnectionOrBuilder getConnectionsOrBuilder(
+      int index);
 }
