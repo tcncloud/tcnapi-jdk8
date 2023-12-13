@@ -15,29 +15,29 @@ public final class OauthServiceGrpc {
   public static final java.lang.String SERVICE_NAME = "services.omnichannel.oauth.v1alpha1.OauthService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.omnichannel.oauth.entities.v1alpha1.GetConnectedInboxOAuthSpecificationsRequest,
-      com.tcn.cloud.api.services.omnichannel.oauth.entities.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse> getGetConnectedInboxOAuthSpecificationsMethod;
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsRequest,
+      com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse> getGetConnectedInboxOAuthSpecificationsMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "GetConnectedInboxOAuthSpecifications",
-      requestType = com.tcn.cloud.api.services.omnichannel.oauth.entities.v1alpha1.GetConnectedInboxOAuthSpecificationsRequest.class,
-      responseType = com.tcn.cloud.api.services.omnichannel.oauth.entities.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse.class,
+      requestType = com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsRequest.class,
+      responseType = com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.services.omnichannel.oauth.entities.v1alpha1.GetConnectedInboxOAuthSpecificationsRequest,
-      com.tcn.cloud.api.services.omnichannel.oauth.entities.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse> getGetConnectedInboxOAuthSpecificationsMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.services.omnichannel.oauth.entities.v1alpha1.GetConnectedInboxOAuthSpecificationsRequest, com.tcn.cloud.api.services.omnichannel.oauth.entities.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse> getGetConnectedInboxOAuthSpecificationsMethod;
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsRequest,
+      com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse> getGetConnectedInboxOAuthSpecificationsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsRequest, com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse> getGetConnectedInboxOAuthSpecificationsMethod;
     if ((getGetConnectedInboxOAuthSpecificationsMethod = OauthServiceGrpc.getGetConnectedInboxOAuthSpecificationsMethod) == null) {
       synchronized (OauthServiceGrpc.class) {
         if ((getGetConnectedInboxOAuthSpecificationsMethod = OauthServiceGrpc.getGetConnectedInboxOAuthSpecificationsMethod) == null) {
           OauthServiceGrpc.getGetConnectedInboxOAuthSpecificationsMethod = getGetConnectedInboxOAuthSpecificationsMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.services.omnichannel.oauth.entities.v1alpha1.GetConnectedInboxOAuthSpecificationsRequest, com.tcn.cloud.api.services.omnichannel.oauth.entities.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse>newBuilder()
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsRequest, com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetConnectedInboxOAuthSpecifications"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.services.omnichannel.oauth.entities.v1alpha1.GetConnectedInboxOAuthSpecificationsRequest.getDefaultInstance()))
+                  com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.services.omnichannel.oauth.entities.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse.getDefaultInstance()))
+                  com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse.getDefaultInstance()))
               .setSchemaDescriptor(new OauthServiceMethodDescriptorSupplier("GetConnectedInboxOAuthSpecifications"))
               .build();
         }
@@ -96,8 +96,8 @@ public final class OauthServiceGrpc {
 
     /**
      */
-    default void getConnectedInboxOAuthSpecifications(com.tcn.cloud.api.services.omnichannel.oauth.entities.v1alpha1.GetConnectedInboxOAuthSpecificationsRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.omnichannel.oauth.entities.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse> responseObserver) {
+    default void getConnectedInboxOAuthSpecifications(com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetConnectedInboxOAuthSpecificationsMethod(), responseObserver);
     }
   }
@@ -131,8 +131,8 @@ public final class OauthServiceGrpc {
 
     /**
      */
-    public void getConnectedInboxOAuthSpecifications(com.tcn.cloud.api.services.omnichannel.oauth.entities.v1alpha1.GetConnectedInboxOAuthSpecificationsRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.omnichannel.oauth.entities.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse> responseObserver) {
+    public void getConnectedInboxOAuthSpecifications(com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetConnectedInboxOAuthSpecificationsMethod(), getCallOptions()), request, responseObserver);
     }
@@ -156,7 +156,7 @@ public final class OauthServiceGrpc {
 
     /**
      */
-    public com.tcn.cloud.api.services.omnichannel.oauth.entities.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse getConnectedInboxOAuthSpecifications(com.tcn.cloud.api.services.omnichannel.oauth.entities.v1alpha1.GetConnectedInboxOAuthSpecificationsRequest request) {
+    public com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse getConnectedInboxOAuthSpecifications(com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetConnectedInboxOAuthSpecificationsMethod(), getCallOptions(), request);
     }
@@ -180,8 +180,8 @@ public final class OauthServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.omnichannel.oauth.entities.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse> getConnectedInboxOAuthSpecifications(
-        com.tcn.cloud.api.services.omnichannel.oauth.entities.v1alpha1.GetConnectedInboxOAuthSpecificationsRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse> getConnectedInboxOAuthSpecifications(
+        com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetConnectedInboxOAuthSpecificationsMethod(), getCallOptions()), request);
     }
@@ -207,8 +207,8 @@ public final class OauthServiceGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_GET_CONNECTED_INBOX_OAUTH_SPECIFICATIONS:
-          serviceImpl.getConnectedInboxOAuthSpecifications((com.tcn.cloud.api.services.omnichannel.oauth.entities.v1alpha1.GetConnectedInboxOAuthSpecificationsRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.omnichannel.oauth.entities.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse>) responseObserver);
+          serviceImpl.getConnectedInboxOAuthSpecifications((com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -232,8 +232,8 @@ public final class OauthServiceGrpc {
           getGetConnectedInboxOAuthSpecificationsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.tcn.cloud.api.services.omnichannel.oauth.entities.v1alpha1.GetConnectedInboxOAuthSpecificationsRequest,
-              com.tcn.cloud.api.services.omnichannel.oauth.entities.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse>(
+              com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsRequest,
+              com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse>(
                 service, METHODID_GET_CONNECTED_INBOX_OAUTH_SPECIFICATIONS)))
         .build();
   }

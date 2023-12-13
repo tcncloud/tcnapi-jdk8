@@ -26,30 +26,30 @@ public final class ServiceProto {
       "\n1services/omnichannel/oauth/v1alpha1/se" +
       "rvice.proto\022#services.omnichannel.oauth." +
       "v1alpha1\032\027annotations/authz.proto\032\034googl" +
-      "e/api/annotations.proto\032;services/omnich" +
-      "annel/oauth/entities/v1alpha1/entities.p" +
-      "roto2\312\002\n\014OauthService\022\271\002\n$GetConnectedIn" +
-      "boxOAuthSpecifications\022Y.services.omnich" +
-      "annel.oauth.entities.v1alpha1.GetConnect" +
-      "edInboxOAuthSpecificationsRequest\032Z.serv" +
-      "ices.omnichannel.oauth.entities.v1alpha1" +
-      ".GetConnectedInboxOAuthSpecificationsRes" +
-      "ponse\"Z\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002J\"E/services/omnic" +
-      "hannel/v1alpha1/getconnectedinboxoauthsp" +
-      "ecifitications:\001*B\364\001\n5com.tcn.cloud.api." +
-      "services.omnichannel.oauth.v1alpha1B\014Ser" +
-      "viceProtoP\001\242\002\003SOO\252\002#Services.Omnichannel" +
-      ".Oauth.V1alpha1\312\002#Services\\Omnichannel\\O" +
-      "auth\\V1alpha1\342\002/Services\\Omnichannel\\Oau" +
-      "th\\V1alpha1\\GPBMetadata\352\002&Services::Omni" +
-      "channel::Oauth::V1alpha1b\006proto3"
+      "e/api/annotations.proto\0322services/omnich" +
+      "annel/oauth/v1alpha1/entities.proto2\270\002\n\014" +
+      "OauthService\022\247\002\n$GetConnectedInboxOAuthS" +
+      "pecifications\022P.services.omnichannel.oau" +
+      "th.v1alpha1.GetConnectedInboxOAuthSpecif" +
+      "icationsRequest\032Q.services.omnichannel.o" +
+      "auth.v1alpha1.GetConnectedInboxOAuthSpec" +
+      "ificationsResponse\"Z\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002J\"E/s" +
+      "ervices/omnichannel/v1alpha1/getconnecte" +
+      "dinboxoauthspecifitications:\001*B\364\001\n5com.t" +
+      "cn.cloud.api.services.omnichannel.oauth." +
+      "v1alpha1B\014ServiceProtoP\001\242\002\003SOO\252\002#Service" +
+      "s.Omnichannel.Oauth.V1alpha1\312\002#Services\\" +
+      "Omnichannel\\Oauth\\V1alpha1\342\002/Services\\Om" +
+      "nichannel\\Oauth\\V1alpha1\\GPBMetadata\352\002&S" +
+      "ervices::Omnichannel::Oauth::V1alpha1b\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.tcn.cloud.api.annotations.AuthzProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-          com.tcn.cloud.api.services.omnichannel.oauth.entities.v1alpha1.EntitiesProto.getDescriptor(),
+          com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.EntitiesProto.getDescriptor(),
         });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
@@ -59,7 +59,7 @@ public final class ServiceProto {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.tcn.cloud.api.annotations.AuthzProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
-    com.tcn.cloud.api.services.omnichannel.oauth.entities.v1alpha1.EntitiesProto.getDescriptor();
+    com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.EntitiesProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
