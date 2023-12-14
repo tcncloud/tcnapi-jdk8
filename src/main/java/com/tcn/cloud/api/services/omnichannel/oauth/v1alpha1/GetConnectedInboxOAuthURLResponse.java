@@ -4,74 +4,74 @@
 package com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1;
 
 /**
- * Protobuf type {@code services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse}
+ * Protobuf type {@code services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthURLResponse}
  */
-public final class GetConnectedInboxOAuthSpecificationsResponse extends
+public final class GetConnectedInboxOAuthURLResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse)
-    GetConnectedInboxOAuthSpecificationsResponseOrBuilder {
+    // @@protoc_insertion_point(message_implements:services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthURLResponse)
+    GetConnectedInboxOAuthURLResponseOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use GetConnectedInboxOAuthSpecificationsResponse.newBuilder() to construct.
-  private GetConnectedInboxOAuthSpecificationsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use GetConnectedInboxOAuthURLResponse.newBuilder() to construct.
+  private GetConnectedInboxOAuthURLResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private GetConnectedInboxOAuthSpecificationsResponse() {
-    redirectUri_ = "";
+  private GetConnectedInboxOAuthURLResponse() {
+    oauthUrl_ = "";
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new GetConnectedInboxOAuthSpecificationsResponse();
+    return new GetConnectedInboxOAuthURLResponse();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.EntitiesProto.internal_static_services_omnichannel_oauth_v1alpha1_GetConnectedInboxOAuthSpecificationsResponse_descriptor;
+    return com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.EntitiesProto.internal_static_services_omnichannel_oauth_v1alpha1_GetConnectedInboxOAuthURLResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.EntitiesProto.internal_static_services_omnichannel_oauth_v1alpha1_GetConnectedInboxOAuthSpecificationsResponse_fieldAccessorTable
+    return com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.EntitiesProto.internal_static_services_omnichannel_oauth_v1alpha1_GetConnectedInboxOAuthURLResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse.class, com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse.Builder.class);
+            com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthURLResponse.class, com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthURLResponse.Builder.class);
   }
 
-  public static final int REDIRECT_URI_FIELD_NUMBER = 1;
+  public static final int OAUTH_URL_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object redirectUri_ = "";
+  private volatile java.lang.Object oauthUrl_ = "";
   /**
-   * <code>string redirect_uri = 1 [json_name = "redirectUri"];</code>
-   * @return The redirectUri.
+   * <code>string oauth_url = 1 [json_name = "oauthUrl"];</code>
+   * @return The oauthUrl.
    */
   @java.lang.Override
-  public java.lang.String getRedirectUri() {
-    java.lang.Object ref = redirectUri_;
+  public java.lang.String getOauthUrl() {
+    java.lang.Object ref = oauthUrl_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      redirectUri_ = s;
+      oauthUrl_ = s;
       return s;
     }
   }
   /**
-   * <code>string redirect_uri = 1 [json_name = "redirectUri"];</code>
-   * @return The bytes for redirectUri.
+   * <code>string oauth_url = 1 [json_name = "oauthUrl"];</code>
+   * @return The bytes for oauthUrl.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getRedirectUriBytes() {
-    java.lang.Object ref = redirectUri_;
+      getOauthUrlBytes() {
+    java.lang.Object ref = oauthUrl_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      redirectUri_ = b;
+      oauthUrl_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -92,8 +92,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(redirectUri_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, redirectUri_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(oauthUrl_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, oauthUrl_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -104,8 +104,8 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(redirectUri_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, redirectUri_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(oauthUrl_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, oauthUrl_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -117,13 +117,13 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse)) {
+    if (!(obj instanceof com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthURLResponse)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse other = (com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse) obj;
+    com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthURLResponse other = (com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthURLResponse) obj;
 
-    if (!getRedirectUri()
-        .equals(other.getRedirectUri())) return false;
+    if (!getOauthUrl()
+        .equals(other.getOauthUrl())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -135,51 +135,51 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + REDIRECT_URI_FIELD_NUMBER;
-    hash = (53 * hash) + getRedirectUri().hashCode();
+    hash = (37 * hash) + OAUTH_URL_FIELD_NUMBER;
+    hash = (53 * hash) + getOauthUrl().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse parseFrom(
+  public static com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthURLResponse parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse parseFrom(
+  public static com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthURLResponse parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse parseFrom(
+  public static com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthURLResponse parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse parseFrom(
+  public static com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthURLResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse parseFrom(byte[] data)
+  public static com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthURLResponse parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse parseFrom(
+  public static com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthURLResponse parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthURLResponse parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse parseFrom(
+  public static com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthURLResponse parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -187,26 +187,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthURLResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse parseDelimitedFrom(
+  public static com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthURLResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse parseFrom(
+  public static com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthURLResponse parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse parseFrom(
+  public static com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthURLResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -219,7 +219,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthURLResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -235,26 +235,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse}
+   * Protobuf type {@code services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthURLResponse}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse)
-      com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsResponseOrBuilder {
+      // @@protoc_insertion_point(builder_implements:services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthURLResponse)
+      com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthURLResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.EntitiesProto.internal_static_services_omnichannel_oauth_v1alpha1_GetConnectedInboxOAuthSpecificationsResponse_descriptor;
+      return com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.EntitiesProto.internal_static_services_omnichannel_oauth_v1alpha1_GetConnectedInboxOAuthURLResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.EntitiesProto.internal_static_services_omnichannel_oauth_v1alpha1_GetConnectedInboxOAuthSpecificationsResponse_fieldAccessorTable
+      return com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.EntitiesProto.internal_static_services_omnichannel_oauth_v1alpha1_GetConnectedInboxOAuthURLResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse.class, com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse.Builder.class);
+              com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthURLResponse.class, com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthURLResponse.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse.newBuilder()
+    // Construct using com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthURLResponse.newBuilder()
     private Builder() {
 
     }
@@ -268,24 +268,24 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      redirectUri_ = "";
+      oauthUrl_ = "";
       return this;
     }
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.EntitiesProto.internal_static_services_omnichannel_oauth_v1alpha1_GetConnectedInboxOAuthSpecificationsResponse_descriptor;
+      return com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.EntitiesProto.internal_static_services_omnichannel_oauth_v1alpha1_GetConnectedInboxOAuthURLResponse_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse getDefaultInstanceForType() {
-      return com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse.getDefaultInstance();
+    public com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthURLResponse getDefaultInstanceForType() {
+      return com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthURLResponse.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse build() {
-      com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse result = buildPartial();
+    public com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthURLResponse build() {
+      com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthURLResponse result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -293,17 +293,17 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse buildPartial() {
-      com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse result = new com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse(this);
+    public com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthURLResponse buildPartial() {
+      com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthURLResponse result = new com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthURLResponse(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse result) {
+    private void buildPartial0(com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthURLResponse result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.redirectUri_ = redirectUri_;
+        result.oauthUrl_ = oauthUrl_;
       }
     }
 
@@ -341,18 +341,18 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse) {
-        return mergeFrom((com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse)other);
+      if (other instanceof com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthURLResponse) {
+        return mergeFrom((com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthURLResponse)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse other) {
-      if (other == com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse.getDefaultInstance()) return this;
-      if (!other.getRedirectUri().isEmpty()) {
-        redirectUri_ = other.redirectUri_;
+    public Builder mergeFrom(com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthURLResponse other) {
+      if (other == com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthURLResponse.getDefaultInstance()) return this;
+      if (!other.getOauthUrl().isEmpty()) {
+        oauthUrl_ = other.oauthUrl_;
         bitField0_ |= 0x00000001;
         onChanged();
       }
@@ -383,7 +383,7 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              redirectUri_ = input.readStringRequireUtf8();
+              oauthUrl_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000001;
               break;
             } // case 10
@@ -404,73 +404,73 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.lang.Object redirectUri_ = "";
+    private java.lang.Object oauthUrl_ = "";
     /**
-     * <code>string redirect_uri = 1 [json_name = "redirectUri"];</code>
-     * @return The redirectUri.
+     * <code>string oauth_url = 1 [json_name = "oauthUrl"];</code>
+     * @return The oauthUrl.
      */
-    public java.lang.String getRedirectUri() {
-      java.lang.Object ref = redirectUri_;
+    public java.lang.String getOauthUrl() {
+      java.lang.Object ref = oauthUrl_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        redirectUri_ = s;
+        oauthUrl_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
       }
     }
     /**
-     * <code>string redirect_uri = 1 [json_name = "redirectUri"];</code>
-     * @return The bytes for redirectUri.
+     * <code>string oauth_url = 1 [json_name = "oauthUrl"];</code>
+     * @return The bytes for oauthUrl.
      */
     public com.google.protobuf.ByteString
-        getRedirectUriBytes() {
-      java.lang.Object ref = redirectUri_;
+        getOauthUrlBytes() {
+      java.lang.Object ref = oauthUrl_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        redirectUri_ = b;
+        oauthUrl_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <code>string redirect_uri = 1 [json_name = "redirectUri"];</code>
-     * @param value The redirectUri to set.
+     * <code>string oauth_url = 1 [json_name = "oauthUrl"];</code>
+     * @param value The oauthUrl to set.
      * @return This builder for chaining.
      */
-    public Builder setRedirectUri(
+    public Builder setOauthUrl(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      redirectUri_ = value;
+      oauthUrl_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>string redirect_uri = 1 [json_name = "redirectUri"];</code>
+     * <code>string oauth_url = 1 [json_name = "oauthUrl"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearRedirectUri() {
-      redirectUri_ = getDefaultInstance().getRedirectUri();
+    public Builder clearOauthUrl() {
+      oauthUrl_ = getDefaultInstance().getOauthUrl();
       bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
     /**
-     * <code>string redirect_uri = 1 [json_name = "redirectUri"];</code>
-     * @param value The bytes for redirectUri to set.
+     * <code>string oauth_url = 1 [json_name = "oauthUrl"];</code>
+     * @param value The bytes for oauthUrl to set.
      * @return This builder for chaining.
      */
-    public Builder setRedirectUriBytes(
+    public Builder setOauthUrlBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      redirectUri_ = value;
+      oauthUrl_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
@@ -488,23 +488,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse)
+    // @@protoc_insertion_point(builder_scope:services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthURLResponse)
   }
 
-  // @@protoc_insertion_point(class_scope:services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse)
-  private static final com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthURLResponse)
+  private static final com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthURLResponse DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthURLResponse();
   }
 
-  public static com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse getDefaultInstance() {
+  public static com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthURLResponse getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<GetConnectedInboxOAuthSpecificationsResponse>
-      PARSER = new com.google.protobuf.AbstractParser<GetConnectedInboxOAuthSpecificationsResponse>() {
+  private static final com.google.protobuf.Parser<GetConnectedInboxOAuthURLResponse>
+      PARSER = new com.google.protobuf.AbstractParser<GetConnectedInboxOAuthURLResponse>() {
     @java.lang.Override
-    public GetConnectedInboxOAuthSpecificationsResponse parsePartialFrom(
+    public GetConnectedInboxOAuthURLResponse parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -523,17 +523,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<GetConnectedInboxOAuthSpecificationsResponse> parser() {
+  public static com.google.protobuf.Parser<GetConnectedInboxOAuthURLResponse> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<GetConnectedInboxOAuthSpecificationsResponse> getParserForType() {
+  public com.google.protobuf.Parser<GetConnectedInboxOAuthURLResponse> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsResponse getDefaultInstanceForType() {
+  public com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthURLResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

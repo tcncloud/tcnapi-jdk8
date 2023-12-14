@@ -15,15 +15,15 @@ public final class EntitiesProto {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_services_omnichannel_oauth_v1alpha1_GetConnectedInboxOAuthSpecificationsRequest_descriptor;
+    internal_static_services_omnichannel_oauth_v1alpha1_GetConnectedInboxOAuthURLRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_services_omnichannel_oauth_v1alpha1_GetConnectedInboxOAuthSpecificationsRequest_fieldAccessorTable;
+      internal_static_services_omnichannel_oauth_v1alpha1_GetConnectedInboxOAuthURLRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_services_omnichannel_oauth_v1alpha1_GetConnectedInboxOAuthSpecificationsResponse_descriptor;
+    internal_static_services_omnichannel_oauth_v1alpha1_GetConnectedInboxOAuthURLResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_services_omnichannel_oauth_v1alpha1_GetConnectedInboxOAuthSpecificationsResponse_fieldAccessorTable;
+      internal_static_services_omnichannel_oauth_v1alpha1_GetConnectedInboxOAuthURLResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -36,38 +36,37 @@ public final class EntitiesProto {
       "\n2services/omnichannel/oauth/v1alpha1/en" +
       "tities.proto\022#services.omnichannel.oauth" +
       ".v1alpha1\032\035api/commons/omnichannel.proto" +
-      "\"\303\001\n+GetConnectedInboxOAuthSpecification" +
-      "sRequest\022^\n\023authentication_type\030\001 \001(\0162-." +
-      "api.commons.ConnectedInboxAuthentication" +
-      "TypeR\022authenticationType\0224\n\026returning_re" +
-      "direct_uri\030\002 \001(\tR\024returningRedirectUri\"Q" +
-      "\n,GetConnectedInboxOAuthSpecificationsRe" +
-      "sponse\022!\n\014redirect_uri\030\001 \001(\tR\013redirectUr" +
-      "iB\365\001\n5com.tcn.cloud.api.services.omnicha" +
-      "nnel.oauth.v1alpha1B\rEntitiesProtoP\001\242\002\003S" +
-      "OO\252\002#Services.Omnichannel.Oauth.V1alpha1" +
-      "\312\002#Services\\Omnichannel\\Oauth\\V1alpha1\342\002" +
-      "/Services\\Omnichannel\\Oauth\\V1alpha1\\GPB" +
-      "Metadata\352\002&Services::Omnichannel::Oauth:" +
-      ":V1alpha1b\006proto3"
+      "\"\270\001\n GetConnectedInboxOAuthURLRequest\022^\n" +
+      "\023authentication_type\030\001 \001(\0162-.api.commons" +
+      ".ConnectedInboxAuthenticationTypeR\022authe" +
+      "nticationType\0224\n\026returning_redirect_uri\030" +
+      "\002 \001(\tR\024returningRedirectUri\"@\n!GetConnec" +
+      "tedInboxOAuthURLResponse\022\033\n\toauth_url\030\001 " +
+      "\001(\tR\010oauthUrlB\365\001\n5com.tcn.cloud.api.serv" +
+      "ices.omnichannel.oauth.v1alpha1B\rEntitie" +
+      "sProtoP\001\242\002\003SOO\252\002#Services.Omnichannel.Oa" +
+      "uth.V1alpha1\312\002#Services\\Omnichannel\\Oaut" +
+      "h\\V1alpha1\342\002/Services\\Omnichannel\\Oauth\\" +
+      "V1alpha1\\GPBMetadata\352\002&Services::Omnicha" +
+      "nnel::Oauth::V1alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.tcn.cloud.api.api.commons.OmnichannelProto.getDescriptor(),
         });
-    internal_static_services_omnichannel_oauth_v1alpha1_GetConnectedInboxOAuthSpecificationsRequest_descriptor =
+    internal_static_services_omnichannel_oauth_v1alpha1_GetConnectedInboxOAuthURLRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_services_omnichannel_oauth_v1alpha1_GetConnectedInboxOAuthSpecificationsRequest_fieldAccessorTable = new
+    internal_static_services_omnichannel_oauth_v1alpha1_GetConnectedInboxOAuthURLRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_services_omnichannel_oauth_v1alpha1_GetConnectedInboxOAuthSpecificationsRequest_descriptor,
+        internal_static_services_omnichannel_oauth_v1alpha1_GetConnectedInboxOAuthURLRequest_descriptor,
         new java.lang.String[] { "AuthenticationType", "ReturningRedirectUri", });
-    internal_static_services_omnichannel_oauth_v1alpha1_GetConnectedInboxOAuthSpecificationsResponse_descriptor =
+    internal_static_services_omnichannel_oauth_v1alpha1_GetConnectedInboxOAuthURLResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_services_omnichannel_oauth_v1alpha1_GetConnectedInboxOAuthSpecificationsResponse_fieldAccessorTable = new
+    internal_static_services_omnichannel_oauth_v1alpha1_GetConnectedInboxOAuthURLResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_services_omnichannel_oauth_v1alpha1_GetConnectedInboxOAuthSpecificationsResponse_descriptor,
-        new java.lang.String[] { "RedirectUri", });
+        internal_static_services_omnichannel_oauth_v1alpha1_GetConnectedInboxOAuthURLResponse_descriptor,
+        new java.lang.String[] { "OauthUrl", });
     com.tcn.cloud.api.api.commons.OmnichannelProto.getDescriptor();
   }
 

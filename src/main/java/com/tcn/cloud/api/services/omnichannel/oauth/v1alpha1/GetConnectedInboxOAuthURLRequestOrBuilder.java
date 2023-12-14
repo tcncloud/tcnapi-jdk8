@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.services.omnichannel.oauth.v1alpha1;
 
-public interface GetConnectedInboxOAuthSpecificationsRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthSpecificationsRequest)
+public interface GetConnectedInboxOAuthURLRequestOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:services.omnichannel.oauth.v1alpha1.GetConnectedInboxOAuthURLRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**
