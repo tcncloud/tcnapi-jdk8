@@ -189,19 +189,38 @@ public interface ListCampaignsReqOrBuilder extends
   com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.BySmsNumberOrBuilder getBySmsNumberOrBuilder();
 
   /**
-   * <code>.api.v0alpha.ListCampaignsReq.ByWhatsAppNumber by_whatsapp_number = 107 [json_name = "byWhatsappNumber"];</code>
+   * <code>.api.v0alpha.ListCampaignsReq.ByWhatsAppNumber by_whatsapp_number = 107 [json_name = "byWhatsappNumber", deprecated = true];</code>
+   * @deprecated api.v0alpha.ListCampaignsReq.by_whatsapp_number is deprecated.
+   *     See api/v0alpha/omniapi.proto;l=1143
    * @return Whether the byWhatsappNumber field is set.
    */
-  boolean hasByWhatsappNumber();
+  @java.lang.Deprecated boolean hasByWhatsappNumber();
   /**
-   * <code>.api.v0alpha.ListCampaignsReq.ByWhatsAppNumber by_whatsapp_number = 107 [json_name = "byWhatsappNumber"];</code>
+   * <code>.api.v0alpha.ListCampaignsReq.ByWhatsAppNumber by_whatsapp_number = 107 [json_name = "byWhatsappNumber", deprecated = true];</code>
+   * @deprecated api.v0alpha.ListCampaignsReq.by_whatsapp_number is deprecated.
+   *     See api/v0alpha/omniapi.proto;l=1143
    * @return The byWhatsappNumber.
    */
-  com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsAppNumber getByWhatsappNumber();
+  @java.lang.Deprecated com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsAppNumber getByWhatsappNumber();
   /**
-   * <code>.api.v0alpha.ListCampaignsReq.ByWhatsAppNumber by_whatsapp_number = 107 [json_name = "byWhatsappNumber"];</code>
+   * <code>.api.v0alpha.ListCampaignsReq.ByWhatsAppNumber by_whatsapp_number = 107 [json_name = "byWhatsappNumber", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsAppNumberOrBuilder getByWhatsappNumberOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsAppNumberOrBuilder getByWhatsappNumberOrBuilder();
+
+  /**
+   * <code>.api.v0alpha.ListCampaignsReq.ByWhatsApp by_whats_app = 108 [json_name = "byWhatsApp"];</code>
+   * @return Whether the byWhatsApp field is set.
+   */
+  boolean hasByWhatsApp();
+  /**
+   * <code>.api.v0alpha.ListCampaignsReq.ByWhatsApp by_whats_app = 108 [json_name = "byWhatsApp"];</code>
+   * @return The byWhatsApp.
+   */
+  com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp getByWhatsApp();
+  /**
+   * <code>.api.v0alpha.ListCampaignsReq.ByWhatsApp by_whats_app = 108 [json_name = "byWhatsApp"];</code>
+   */
+  com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsAppOrBuilder getByWhatsAppOrBuilder();
 
   com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.FilterCase getFilterCase();
 }
