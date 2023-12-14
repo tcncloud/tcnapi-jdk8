@@ -16,6 +16,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ManualDialStartReq() {
+    bucketRegionData_ = "";
   }
 
   @java.lang.Override
@@ -86,6 +87,56 @@ private static final long serialVersionUID = 0L;
     return agentSessionSid_;
   }
 
+  public static final int BUCKETID_FIELD_NUMBER = 8;
+  private long bucketId_ = 0L;
+  /**
+   * <code>int64 bucketId = 8 [json_name = "bucketId"];</code>
+   * @return The bucketId.
+   */
+  @java.lang.Override
+  public long getBucketId() {
+    return bucketId_;
+  }
+
+  public static final int BUCKETREGIONDATA_FIELD_NUMBER = 9;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object bucketRegionData_ = "";
+  /**
+   * <code>string bucketRegionData = 9 [json_name = "bucketRegionData"];</code>
+   * @return The bucketRegionData.
+   */
+  @java.lang.Override
+  public java.lang.String getBucketRegionData() {
+    java.lang.Object ref = bucketRegionData_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      bucketRegionData_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string bucketRegionData = 9 [json_name = "bucketRegionData"];</code>
+   * @return The bytes for bucketRegionData.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getBucketRegionDataBytes() {
+    java.lang.Object ref = bucketRegionData_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      bucketRegionData_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -109,6 +160,12 @@ private static final long serialVersionUID = 0L;
     if (agentSessionSid_ != 0L) {
       output.writeInt64(7, agentSessionSid_);
     }
+    if (bucketId_ != 0L) {
+      output.writeInt64(8, bucketId_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bucketRegionData_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 9, bucketRegionData_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -129,6 +186,13 @@ private static final long serialVersionUID = 0L;
     if (agentSessionSid_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(7, agentSessionSid_);
+    }
+    if (bucketId_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(8, bucketId_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bucketRegionData_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, bucketRegionData_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -154,6 +218,10 @@ private static final long serialVersionUID = 0L;
         != other.getHuntGroupSid()) return false;
     if (getAgentSessionSid()
         != other.getAgentSessionSid()) return false;
+    if (getBucketId()
+        != other.getBucketId()) return false;
+    if (!getBucketRegionData()
+        .equals(other.getBucketRegionData())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -175,6 +243,11 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + AGENT_SESSION_SID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getAgentSessionSid());
+    hash = (37 * hash) + BUCKETID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getBucketId());
+    hash = (37 * hash) + BUCKETREGIONDATA_FIELD_NUMBER;
+    hash = (53 * hash) + getBucketRegionData().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -313,6 +386,8 @@ private static final long serialVersionUID = 0L;
       }
       huntGroupSid_ = 0L;
       agentSessionSid_ = 0L;
+      bucketId_ = 0L;
+      bucketRegionData_ = "";
       return this;
     }
 
@@ -356,6 +431,12 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.agentSessionSid_ = agentSessionSid_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.bucketId_ = bucketId_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.bucketRegionData_ = bucketRegionData_;
       }
     }
 
@@ -412,6 +493,14 @@ private static final long serialVersionUID = 0L;
       if (other.getAgentSessionSid() != 0L) {
         setAgentSessionSid(other.getAgentSessionSid());
       }
+      if (other.getBucketId() != 0L) {
+        setBucketId(other.getBucketId());
+      }
+      if (!other.getBucketRegionData().isEmpty()) {
+        bucketRegionData_ = other.bucketRegionData_;
+        bitField0_ |= 0x00000010;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -455,6 +544,16 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 56
+            case 64: {
+              bucketId_ = input.readInt64();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 64
+            case 74: {
+              bucketRegionData_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 74
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -651,6 +750,110 @@ private static final long serialVersionUID = 0L;
     public Builder clearAgentSessionSid() {
       bitField0_ = (bitField0_ & ~0x00000004);
       agentSessionSid_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private long bucketId_ ;
+    /**
+     * <code>int64 bucketId = 8 [json_name = "bucketId"];</code>
+     * @return The bucketId.
+     */
+    @java.lang.Override
+    public long getBucketId() {
+      return bucketId_;
+    }
+    /**
+     * <code>int64 bucketId = 8 [json_name = "bucketId"];</code>
+     * @param value The bucketId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setBucketId(long value) {
+
+      bucketId_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int64 bucketId = 8 [json_name = "bucketId"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearBucketId() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      bucketId_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object bucketRegionData_ = "";
+    /**
+     * <code>string bucketRegionData = 9 [json_name = "bucketRegionData"];</code>
+     * @return The bucketRegionData.
+     */
+    public java.lang.String getBucketRegionData() {
+      java.lang.Object ref = bucketRegionData_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        bucketRegionData_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string bucketRegionData = 9 [json_name = "bucketRegionData"];</code>
+     * @return The bytes for bucketRegionData.
+     */
+    public com.google.protobuf.ByteString
+        getBucketRegionDataBytes() {
+      java.lang.Object ref = bucketRegionData_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        bucketRegionData_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string bucketRegionData = 9 [json_name = "bucketRegionData"];</code>
+     * @param value The bucketRegionData to set.
+     * @return This builder for chaining.
+     */
+    public Builder setBucketRegionData(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      bucketRegionData_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string bucketRegionData = 9 [json_name = "bucketRegionData"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearBucketRegionData() {
+      bucketRegionData_ = getDefaultInstance().getBucketRegionData();
+      bitField0_ = (bitField0_ & ~0x00000010);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string bucketRegionData = 9 [json_name = "bucketRegionData"];</code>
+     * @param value The bytes for bucketRegionData to set.
+     * @return This builder for chaining.
+     */
+    public Builder setBucketRegionDataBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      bucketRegionData_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
