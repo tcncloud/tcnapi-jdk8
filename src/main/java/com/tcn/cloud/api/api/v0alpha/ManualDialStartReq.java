@@ -87,10 +87,10 @@ private static final long serialVersionUID = 0L;
     return agentSessionSid_;
   }
 
-  public static final int BUCKETID_FIELD_NUMBER = 8;
+  public static final int BUCKET_ID_FIELD_NUMBER = 8;
   private long bucketId_ = 0L;
   /**
-   * <code>int64 bucketId = 8 [json_name = "bucketId"];</code>
+   * <code>int64 bucket_id = 8 [json_name = "bucketId"];</code>
    * @return The bucketId.
    */
   @java.lang.Override
@@ -98,11 +98,11 @@ private static final long serialVersionUID = 0L;
     return bucketId_;
   }
 
-  public static final int BUCKETREGIONDATA_FIELD_NUMBER = 9;
+  public static final int BUCKET_REGION_DATA_FIELD_NUMBER = 9;
   @SuppressWarnings("serial")
   private volatile java.lang.Object bucketRegionData_ = "";
   /**
-   * <code>string bucketRegionData = 9 [json_name = "bucketRegionData"];</code>
+   * <code>string bucket_region_data = 9 [json_name = "bucketRegionData"];</code>
    * @return The bucketRegionData.
    */
   @java.lang.Override
@@ -119,7 +119,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string bucketRegionData = 9 [json_name = "bucketRegionData"];</code>
+   * <code>string bucket_region_data = 9 [json_name = "bucketRegionData"];</code>
    * @return The bytes for bucketRegionData.
    */
   @java.lang.Override
@@ -243,10 +243,10 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + AGENT_SESSION_SID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getAgentSessionSid());
-    hash = (37 * hash) + BUCKETID_FIELD_NUMBER;
+    hash = (37 * hash) + BUCKET_ID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getBucketId());
-    hash = (37 * hash) + BUCKETREGIONDATA_FIELD_NUMBER;
+    hash = (37 * hash) + BUCKET_REGION_DATA_FIELD_NUMBER;
     hash = (53 * hash) + getBucketRegionData().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -756,7 +756,7 @@ private static final long serialVersionUID = 0L;
 
     private long bucketId_ ;
     /**
-     * <code>int64 bucketId = 8 [json_name = "bucketId"];</code>
+     * <code>int64 bucket_id = 8 [json_name = "bucketId"];</code>
      * @return The bucketId.
      */
     @java.lang.Override
@@ -764,7 +764,7 @@ private static final long serialVersionUID = 0L;
       return bucketId_;
     }
     /**
-     * <code>int64 bucketId = 8 [json_name = "bucketId"];</code>
+     * <code>int64 bucket_id = 8 [json_name = "bucketId"];</code>
      * @param value The bucketId to set.
      * @return This builder for chaining.
      */
@@ -776,7 +776,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int64 bucketId = 8 [json_name = "bucketId"];</code>
+     * <code>int64 bucket_id = 8 [json_name = "bucketId"];</code>
      * @return This builder for chaining.
      */
     public Builder clearBucketId() {
@@ -788,7 +788,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object bucketRegionData_ = "";
     /**
-     * <code>string bucketRegionData = 9 [json_name = "bucketRegionData"];</code>
+     * <code>string bucket_region_data = 9 [json_name = "bucketRegionData"];</code>
      * @return The bucketRegionData.
      */
     public java.lang.String getBucketRegionData() {
@@ -804,7 +804,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string bucketRegionData = 9 [json_name = "bucketRegionData"];</code>
+     * <code>string bucket_region_data = 9 [json_name = "bucketRegionData"];</code>
      * @return The bytes for bucketRegionData.
      */
     public com.google.protobuf.ByteString
@@ -821,7 +821,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string bucketRegionData = 9 [json_name = "bucketRegionData"];</code>
+     * <code>string bucket_region_data = 9 [json_name = "bucketRegionData"];</code>
      * @param value The bucketRegionData to set.
      * @return This builder for chaining.
      */
@@ -834,7 +834,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string bucketRegionData = 9 [json_name = "bucketRegionData"];</code>
+     * <code>string bucket_region_data = 9 [json_name = "bucketRegionData"];</code>
      * @return This builder for chaining.
      */
     public Builder clearBucketRegionData() {
@@ -844,7 +844,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string bucketRegionData = 9 [json_name = "bucketRegionData"];</code>
+     * <code>string bucket_region_data = 9 [json_name = "bucketRegionData"];</code>
      * @param value The bytes for bucketRegionData to set.
      * @return This builder for chaining.
      */

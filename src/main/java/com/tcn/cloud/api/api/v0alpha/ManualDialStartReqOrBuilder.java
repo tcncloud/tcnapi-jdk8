@@ -35,18 +35,18 @@ public interface ManualDialStartReqOrBuilder extends
   long getAgentSessionSid();
 
   /**
-   * <code>int64 bucketId = 8 [json_name = "bucketId"];</code>
+   * <code>int64 bucket_id = 8 [json_name = "bucketId"];</code>
    * @return The bucketId.
    */
   long getBucketId();
 
   /**
-   * <code>string bucketRegionData = 9 [json_name = "bucketRegionData"];</code>
+   * <code>string bucket_region_data = 9 [json_name = "bucketRegionData"];</code>
    * @return The bucketRegionData.
    */
   java.lang.String getBucketRegionData();
   /**
-   * <code>string bucketRegionData = 9 [json_name = "bucketRegionData"];</code>
+   * <code>string bucket_region_data = 9 [json_name = "bucketRegionData"];</code>
    * @return The bytes for bucketRegionData.
    */
   com.google.protobuf.ByteString
