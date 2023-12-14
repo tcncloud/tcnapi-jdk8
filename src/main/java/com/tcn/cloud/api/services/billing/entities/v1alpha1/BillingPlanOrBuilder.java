@@ -221,4 +221,31 @@ public interface BillingPlanOrBuilder extends
    * @return The status.
    */
   com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlanStatus getStatus();
+
+  /**
+   * <pre>
+   * the time the billing will actually take effect
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp actual_start_time = 9 [json_name = "actualStartTime"];</code>
+   * @return Whether the actualStartTime field is set.
+   */
+  boolean hasActualStartTime();
+  /**
+   * <pre>
+   * the time the billing will actually take effect
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp actual_start_time = 9 [json_name = "actualStartTime"];</code>
+   * @return The actualStartTime.
+   */
+  com.google.protobuf.Timestamp getActualStartTime();
+  /**
+   * <pre>
+   * the time the billing will actually take effect
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp actual_start_time = 9 [json_name = "actualStartTime"];</code>
+   */
+  com.google.protobuf.TimestampOrBuilder getActualStartTimeOrBuilder();
 }
