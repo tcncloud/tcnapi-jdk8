@@ -3707,6 +3707,37 @@ public final class OrgGrpc {
     return getDeleteAgentResponseAutoRulesMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupIntegrationLinksRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupIntegrationLinksResponse> getListHuntGroupIntegrationLinksMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListHuntGroupIntegrationLinks",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupIntegrationLinksRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupIntegrationLinksResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupIntegrationLinksRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupIntegrationLinksResponse> getListHuntGroupIntegrationLinksMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupIntegrationLinksRequest, com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupIntegrationLinksResponse> getListHuntGroupIntegrationLinksMethod;
+    if ((getListHuntGroupIntegrationLinksMethod = OrgGrpc.getListHuntGroupIntegrationLinksMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getListHuntGroupIntegrationLinksMethod = OrgGrpc.getListHuntGroupIntegrationLinksMethod) == null) {
+          OrgGrpc.getListHuntGroupIntegrationLinksMethod = getListHuntGroupIntegrationLinksMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupIntegrationLinksRequest, com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupIntegrationLinksResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListHuntGroupIntegrationLinks"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupIntegrationLinksRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupIntegrationLinksResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListHuntGroupIntegrationLinks"))
+              .build();
+        }
+      }
+    }
+    return getListHuntGroupIntegrationLinksMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.CreateTrustRequest,
       com.tcn.cloud.api.api.v1alpha1.org.CreateTrustResponse> getCreateTrustMethod;
 
@@ -6344,6 +6375,16 @@ public final class OrgGrpc {
 
     /**
      * <pre>
+     * ListHuntGroupIntegrationLinks returns all integration links for a hunt group.
+     * </pre>
+     */
+    default void listHuntGroupIntegrationLinks(com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupIntegrationLinksRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupIntegrationLinksResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListHuntGroupIntegrationLinksMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * CreateTrust creates a new trust.
      * </pre>
      */
@@ -8174,6 +8215,17 @@ public final class OrgGrpc {
 
     /**
      * <pre>
+     * ListHuntGroupIntegrationLinks returns all integration links for a hunt group.
+     * </pre>
+     */
+    public void listHuntGroupIntegrationLinks(com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupIntegrationLinksRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupIntegrationLinksResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListHuntGroupIntegrationLinksMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * CreateTrust creates a new trust.
      * </pre>
      */
@@ -9923,6 +9975,16 @@ public final class OrgGrpc {
 
     /**
      * <pre>
+     * ListHuntGroupIntegrationLinks returns all integration links for a hunt group.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupIntegrationLinksResponse listHuntGroupIntegrationLinks(com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupIntegrationLinksRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListHuntGroupIntegrationLinksMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * CreateTrust creates a new trust.
      * </pre>
      */
@@ -11651,6 +11713,17 @@ public final class OrgGrpc {
 
     /**
      * <pre>
+     * ListHuntGroupIntegrationLinks returns all integration links for a hunt group.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupIntegrationLinksResponse> listHuntGroupIntegrationLinks(
+        com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupIntegrationLinksRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListHuntGroupIntegrationLinksMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * CreateTrust creates a new trust.
      * </pre>
      */
@@ -12270,50 +12343,51 @@ public final class OrgGrpc {
   private static final int METHODID_CREATE_AGENT_RESPONSE_AUTO_RULES = 116;
   private static final int METHODID_UPDATE_AGENT_RESPONSE_AUTO_RULES = 117;
   private static final int METHODID_DELETE_AGENT_RESPONSE_AUTO_RULES = 118;
-  private static final int METHODID_CREATE_TRUST = 119;
-  private static final int METHODID_ACCEPT_TRUST = 120;
-  private static final int METHODID_REJECT_TRUST = 121;
-  private static final int METHODID_GET_TRUST = 122;
-  private static final int METHODID_LIST_INCOMING_TRUSTS = 123;
-  private static final int METHODID_LIST_GIVEN_TRUSTS = 124;
-  private static final int METHODID_LIST_ASSIGNABLE_TRUSTS = 125;
-  private static final int METHODID_DELETE_TRUST = 126;
-  private static final int METHODID_ASSIGN_TRUST = 127;
-  private static final int METHODID_UNASSIGN_TRUST = 128;
-  private static final int METHODID_CREATE_LABEL = 129;
-  private static final int METHODID_DELETE_LABEL = 130;
-  private static final int METHODID_LIST_LABELS = 131;
-  private static final int METHODID_GET_LABEL = 132;
-  private static final int METHODID_UPDATE_LABEL = 133;
-  private static final int METHODID_ASSIGN_LABEL = 134;
-  private static final int METHODID_UNASSIGN_LABEL = 135;
-  private static final int METHODID_GET_ASSIGNMENT_COUNTS = 136;
-  private static final int METHODID_GET_ASSIGNABLE_LABELS = 137;
-  private static final int METHODID_GET_PERMISSIONS = 138;
-  private static final int METHODID_GET_USER_PERMISSIONS = 139;
-  private static final int METHODID_CREATE_PERMISSION_GROUP = 140;
-  private static final int METHODID_UPDATE_PERMISSION_GROUP = 141;
-  private static final int METHODID_DELETE_PERMISSION_GROUP = 142;
-  private static final int METHODID_LIST_PERMISSION_GROUPS = 143;
-  private static final int METHODID_LIST_PERMISSION_GROUPS_BY_ORG_ID = 144;
-  private static final int METHODID_ASSIGN_USERS_PERMISSION_GROUP = 145;
-  private static final int METHODID_REVOKE_USERS_PERMISSION_GROUP = 146;
-  private static final int METHODID_ASSIGN_ACCOUNT_OWNER_PERMISSION_TO_USER = 147;
-  private static final int METHODID_REVOKE_ACCOUNT_OWNER_PERMISSION_FROM_USER = 148;
-  private static final int METHODID_INIT_DEFAULT_PERMISSION_GROUPS = 149;
-  private static final int METHODID_GET_ACCOUNT_OWNER_GROUP = 150;
-  private static final int METHODID_GET_LICENSES = 151;
-  private static final int METHODID_GET_ORG_LICENSES = 152;
-  private static final int METHODID_UPDATE_LICENSES = 153;
-  private static final int METHODID_REMOVE_PERMISSION_FROM_ALL_PERMISSION_GROUPS = 154;
-  private static final int METHODID_LIST_P3PERMISSION_GROUPS = 155;
-  private static final int METHODID_LIST_P3PERMISSION_GROUPS_BY_ORG_ID = 156;
-  private static final int METHODID_CREATE_P3PERMISSION_GROUP = 157;
-  private static final int METHODID_UPDATE_P3PERMISSION_GROUP = 158;
-  private static final int METHODID_UPDATE_P3PERMISSION_GROUP_BY_ORG_ID = 159;
-  private static final int METHODID_DELETE_P3PERMISSION_GROUP = 160;
-  private static final int METHODID_ASSIGN_USERS_P3PERMISSION_GROUP = 161;
-  private static final int METHODID_REVOKE_USERS_P3PERMISSION_GROUP = 162;
+  private static final int METHODID_LIST_HUNT_GROUP_INTEGRATION_LINKS = 119;
+  private static final int METHODID_CREATE_TRUST = 120;
+  private static final int METHODID_ACCEPT_TRUST = 121;
+  private static final int METHODID_REJECT_TRUST = 122;
+  private static final int METHODID_GET_TRUST = 123;
+  private static final int METHODID_LIST_INCOMING_TRUSTS = 124;
+  private static final int METHODID_LIST_GIVEN_TRUSTS = 125;
+  private static final int METHODID_LIST_ASSIGNABLE_TRUSTS = 126;
+  private static final int METHODID_DELETE_TRUST = 127;
+  private static final int METHODID_ASSIGN_TRUST = 128;
+  private static final int METHODID_UNASSIGN_TRUST = 129;
+  private static final int METHODID_CREATE_LABEL = 130;
+  private static final int METHODID_DELETE_LABEL = 131;
+  private static final int METHODID_LIST_LABELS = 132;
+  private static final int METHODID_GET_LABEL = 133;
+  private static final int METHODID_UPDATE_LABEL = 134;
+  private static final int METHODID_ASSIGN_LABEL = 135;
+  private static final int METHODID_UNASSIGN_LABEL = 136;
+  private static final int METHODID_GET_ASSIGNMENT_COUNTS = 137;
+  private static final int METHODID_GET_ASSIGNABLE_LABELS = 138;
+  private static final int METHODID_GET_PERMISSIONS = 139;
+  private static final int METHODID_GET_USER_PERMISSIONS = 140;
+  private static final int METHODID_CREATE_PERMISSION_GROUP = 141;
+  private static final int METHODID_UPDATE_PERMISSION_GROUP = 142;
+  private static final int METHODID_DELETE_PERMISSION_GROUP = 143;
+  private static final int METHODID_LIST_PERMISSION_GROUPS = 144;
+  private static final int METHODID_LIST_PERMISSION_GROUPS_BY_ORG_ID = 145;
+  private static final int METHODID_ASSIGN_USERS_PERMISSION_GROUP = 146;
+  private static final int METHODID_REVOKE_USERS_PERMISSION_GROUP = 147;
+  private static final int METHODID_ASSIGN_ACCOUNT_OWNER_PERMISSION_TO_USER = 148;
+  private static final int METHODID_REVOKE_ACCOUNT_OWNER_PERMISSION_FROM_USER = 149;
+  private static final int METHODID_INIT_DEFAULT_PERMISSION_GROUPS = 150;
+  private static final int METHODID_GET_ACCOUNT_OWNER_GROUP = 151;
+  private static final int METHODID_GET_LICENSES = 152;
+  private static final int METHODID_GET_ORG_LICENSES = 153;
+  private static final int METHODID_UPDATE_LICENSES = 154;
+  private static final int METHODID_REMOVE_PERMISSION_FROM_ALL_PERMISSION_GROUPS = 155;
+  private static final int METHODID_LIST_P3PERMISSION_GROUPS = 156;
+  private static final int METHODID_LIST_P3PERMISSION_GROUPS_BY_ORG_ID = 157;
+  private static final int METHODID_CREATE_P3PERMISSION_GROUP = 158;
+  private static final int METHODID_UPDATE_P3PERMISSION_GROUP = 159;
+  private static final int METHODID_UPDATE_P3PERMISSION_GROUP_BY_ORG_ID = 160;
+  private static final int METHODID_DELETE_P3PERMISSION_GROUP = 161;
+  private static final int METHODID_ASSIGN_USERS_P3PERMISSION_GROUP = 162;
+  private static final int METHODID_REVOKE_USERS_P3PERMISSION_GROUP = 163;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -12807,6 +12881,10 @@ public final class OrgGrpc {
         case METHODID_DELETE_AGENT_RESPONSE_AUTO_RULES:
           serviceImpl.deleteAgentResponseAutoRules((com.tcn.cloud.api.api.v1alpha1.org.DeleteAgentResponseAutoRulesRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.DeleteAgentResponseAutoRulesResponse>) responseObserver);
+          break;
+        case METHODID_LIST_HUNT_GROUP_INTEGRATION_LINKS:
+          serviceImpl.listHuntGroupIntegrationLinks((com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupIntegrationLinksRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupIntegrationLinksResponse>) responseObserver);
           break;
         case METHODID_CREATE_TRUST:
           serviceImpl.createTrust((com.tcn.cloud.api.api.v1alpha1.org.CreateTrustRequest) request,
@@ -13836,6 +13914,13 @@ public final class OrgGrpc {
               com.tcn.cloud.api.api.v1alpha1.org.DeleteAgentResponseAutoRulesResponse>(
                 service, METHODID_DELETE_AGENT_RESPONSE_AUTO_RULES)))
         .addMethod(
+          getListHuntGroupIntegrationLinksMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupIntegrationLinksRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.ListHuntGroupIntegrationLinksResponse>(
+                service, METHODID_LIST_HUNT_GROUP_INTEGRATION_LINKS)))
+        .addMethod(
           getCreateTrustMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -14310,6 +14395,7 @@ public final class OrgGrpc {
               .addMethod(getCreateAgentResponseAutoRulesMethod())
               .addMethod(getUpdateAgentResponseAutoRulesMethod())
               .addMethod(getDeleteAgentResponseAutoRulesMethod())
+              .addMethod(getListHuntGroupIntegrationLinksMethod())
               .addMethod(getCreateTrustMethod())
               .addMethod(getAcceptTrustMethod())
               .addMethod(getRejectTrustMethod())
