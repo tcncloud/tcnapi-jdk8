@@ -3,13 +3,13 @@
 
 package com.tcn.cloud.api.api.v1alpha1.org;
 
-public interface SendUserEmailPasswordResetRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v1alpha1.org.SendUserEmailPasswordResetRequest)
+public interface SendPasswordResetRequestOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v1alpha1.org.SendPasswordResetRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**
    * <pre>
-   * The email address of the user's password to be reset.
+   * The email address to send the password reset lnk to.
    * </pre>
    *
    * <code>string email = 1 [json_name = "email"];</code>
@@ -18,7 +18,7 @@ public interface SendUserEmailPasswordResetRequestOrBuilder extends
   java.lang.String getEmail();
   /**
    * <pre>
-   * The email address of the user's password to be reset.
+   * The email address to send the password reset lnk to.
    * </pre>
    *
    * <code>string email = 1 [json_name = "email"];</code>

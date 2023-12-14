@@ -5,85 +5,77 @@ package com.tcn.cloud.api.api.v1alpha1.org;
 
 /**
  * <pre>
- * Request message for the SendUserEmailPasswordReset rpc.
+ * Response message for the CreatePasswordResetLinkByOrgId rpc.
  * </pre>
  *
- * Protobuf type {@code api.v1alpha1.org.SendUserEmailPasswordResetRequest}
+ * Protobuf type {@code api.v1alpha1.org.CreatePasswordResetLinkByOrgIdResponse}
  */
-public final class SendUserEmailPasswordResetRequest extends
+public final class CreatePasswordResetLinkByOrgIdResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v1alpha1.org.SendUserEmailPasswordResetRequest)
-    SendUserEmailPasswordResetRequestOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v1alpha1.org.CreatePasswordResetLinkByOrgIdResponse)
+    CreatePasswordResetLinkByOrgIdResponseOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use SendUserEmailPasswordResetRequest.newBuilder() to construct.
-  private SendUserEmailPasswordResetRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use CreatePasswordResetLinkByOrgIdResponse.newBuilder() to construct.
+  private CreatePasswordResetLinkByOrgIdResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private SendUserEmailPasswordResetRequest() {
-    email_ = "";
+  private CreatePasswordResetLinkByOrgIdResponse() {
+    url_ = "";
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new SendUserEmailPasswordResetRequest();
+    return new CreatePasswordResetLinkByOrgIdResponse();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v1alpha1.org.UserProto.internal_static_api_v1alpha1_org_SendUserEmailPasswordResetRequest_descriptor;
+    return com.tcn.cloud.api.api.v1alpha1.org.UserProto.internal_static_api_v1alpha1_org_CreatePasswordResetLinkByOrgIdResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v1alpha1.org.UserProto.internal_static_api_v1alpha1_org_SendUserEmailPasswordResetRequest_fieldAccessorTable
+    return com.tcn.cloud.api.api.v1alpha1.org.UserProto.internal_static_api_v1alpha1_org_CreatePasswordResetLinkByOrgIdResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailPasswordResetRequest.class, com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailPasswordResetRequest.Builder.class);
+            com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkByOrgIdResponse.class, com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkByOrgIdResponse.Builder.class);
   }
 
-  public static final int EMAIL_FIELD_NUMBER = 1;
+  public static final int URL_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object email_ = "";
+  private volatile java.lang.Object url_ = "";
   /**
-   * <pre>
-   * The email address of the user's password to be reset.
-   * </pre>
-   *
-   * <code>string email = 1 [json_name = "email"];</code>
-   * @return The email.
+   * <code>string url = 1 [json_name = "url"];</code>
+   * @return The url.
    */
   @java.lang.Override
-  public java.lang.String getEmail() {
-    java.lang.Object ref = email_;
+  public java.lang.String getUrl() {
+    java.lang.Object ref = url_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      email_ = s;
+      url_ = s;
       return s;
     }
   }
   /**
-   * <pre>
-   * The email address of the user's password to be reset.
-   * </pre>
-   *
-   * <code>string email = 1 [json_name = "email"];</code>
-   * @return The bytes for email.
+   * <code>string url = 1 [json_name = "url"];</code>
+   * @return The bytes for url.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getEmailBytes() {
-    java.lang.Object ref = email_;
+      getUrlBytes() {
+    java.lang.Object ref = url_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      email_ = b;
+      url_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -104,8 +96,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(email_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, email_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, url_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -116,8 +108,8 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(email_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, email_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, url_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -129,13 +121,13 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailPasswordResetRequest)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkByOrgIdResponse)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailPasswordResetRequest other = (com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailPasswordResetRequest) obj;
+    com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkByOrgIdResponse other = (com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkByOrgIdResponse) obj;
 
-    if (!getEmail()
-        .equals(other.getEmail())) return false;
+    if (!getUrl()
+        .equals(other.getUrl())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -147,51 +139,51 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + EMAIL_FIELD_NUMBER;
-    hash = (53 * hash) + getEmail().hashCode();
+    hash = (37 * hash) + URL_FIELD_NUMBER;
+    hash = (53 * hash) + getUrl().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailPasswordResetRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkByOrgIdResponse parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailPasswordResetRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkByOrgIdResponse parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailPasswordResetRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkByOrgIdResponse parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailPasswordResetRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkByOrgIdResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailPasswordResetRequest parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkByOrgIdResponse parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailPasswordResetRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkByOrgIdResponse parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailPasswordResetRequest parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkByOrgIdResponse parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailPasswordResetRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkByOrgIdResponse parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -199,26 +191,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailPasswordResetRequest parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkByOrgIdResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailPasswordResetRequest parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkByOrgIdResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailPasswordResetRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkByOrgIdResponse parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailPasswordResetRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkByOrgIdResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -231,7 +223,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailPasswordResetRequest prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkByOrgIdResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -248,29 +240,29 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Request message for the SendUserEmailPasswordReset rpc.
+   * Response message for the CreatePasswordResetLinkByOrgId rpc.
    * </pre>
    *
-   * Protobuf type {@code api.v1alpha1.org.SendUserEmailPasswordResetRequest}
+   * Protobuf type {@code api.v1alpha1.org.CreatePasswordResetLinkByOrgIdResponse}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v1alpha1.org.SendUserEmailPasswordResetRequest)
-      com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailPasswordResetRequestOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v1alpha1.org.CreatePasswordResetLinkByOrgIdResponse)
+      com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkByOrgIdResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v1alpha1.org.UserProto.internal_static_api_v1alpha1_org_SendUserEmailPasswordResetRequest_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.org.UserProto.internal_static_api_v1alpha1_org_CreatePasswordResetLinkByOrgIdResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v1alpha1.org.UserProto.internal_static_api_v1alpha1_org_SendUserEmailPasswordResetRequest_fieldAccessorTable
+      return com.tcn.cloud.api.api.v1alpha1.org.UserProto.internal_static_api_v1alpha1_org_CreatePasswordResetLinkByOrgIdResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailPasswordResetRequest.class, com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailPasswordResetRequest.Builder.class);
+              com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkByOrgIdResponse.class, com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkByOrgIdResponse.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailPasswordResetRequest.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkByOrgIdResponse.newBuilder()
     private Builder() {
 
     }
@@ -284,24 +276,24 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      email_ = "";
+      url_ = "";
       return this;
     }
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v1alpha1.org.UserProto.internal_static_api_v1alpha1_org_SendUserEmailPasswordResetRequest_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.org.UserProto.internal_static_api_v1alpha1_org_CreatePasswordResetLinkByOrgIdResponse_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailPasswordResetRequest getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailPasswordResetRequest.getDefaultInstance();
+    public com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkByOrgIdResponse getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkByOrgIdResponse.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailPasswordResetRequest build() {
-      com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailPasswordResetRequest result = buildPartial();
+    public com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkByOrgIdResponse build() {
+      com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkByOrgIdResponse result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -309,17 +301,17 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailPasswordResetRequest buildPartial() {
-      com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailPasswordResetRequest result = new com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailPasswordResetRequest(this);
+    public com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkByOrgIdResponse buildPartial() {
+      com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkByOrgIdResponse result = new com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkByOrgIdResponse(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailPasswordResetRequest result) {
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkByOrgIdResponse result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.email_ = email_;
+        result.url_ = url_;
       }
     }
 
@@ -357,18 +349,18 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailPasswordResetRequest) {
-        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailPasswordResetRequest)other);
+      if (other instanceof com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkByOrgIdResponse) {
+        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkByOrgIdResponse)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailPasswordResetRequest other) {
-      if (other == com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailPasswordResetRequest.getDefaultInstance()) return this;
-      if (!other.getEmail().isEmpty()) {
-        email_ = other.email_;
+    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkByOrgIdResponse other) {
+      if (other == com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkByOrgIdResponse.getDefaultInstance()) return this;
+      if (!other.getUrl().isEmpty()) {
+        url_ = other.url_;
         bitField0_ |= 0x00000001;
         onChanged();
       }
@@ -399,7 +391,7 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              email_ = input.readStringRequireUtf8();
+              url_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000001;
               break;
             } // case 10
@@ -420,93 +412,73 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.lang.Object email_ = "";
+    private java.lang.Object url_ = "";
     /**
-     * <pre>
-     * The email address of the user's password to be reset.
-     * </pre>
-     *
-     * <code>string email = 1 [json_name = "email"];</code>
-     * @return The email.
+     * <code>string url = 1 [json_name = "url"];</code>
+     * @return The url.
      */
-    public java.lang.String getEmail() {
-      java.lang.Object ref = email_;
+    public java.lang.String getUrl() {
+      java.lang.Object ref = url_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        email_ = s;
+        url_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
       }
     }
     /**
-     * <pre>
-     * The email address of the user's password to be reset.
-     * </pre>
-     *
-     * <code>string email = 1 [json_name = "email"];</code>
-     * @return The bytes for email.
+     * <code>string url = 1 [json_name = "url"];</code>
+     * @return The bytes for url.
      */
     public com.google.protobuf.ByteString
-        getEmailBytes() {
-      java.lang.Object ref = email_;
+        getUrlBytes() {
+      java.lang.Object ref = url_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        email_ = b;
+        url_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <pre>
-     * The email address of the user's password to be reset.
-     * </pre>
-     *
-     * <code>string email = 1 [json_name = "email"];</code>
-     * @param value The email to set.
+     * <code>string url = 1 [json_name = "url"];</code>
+     * @param value The url to set.
      * @return This builder for chaining.
      */
-    public Builder setEmail(
+    public Builder setUrl(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      email_ = value;
+      url_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <pre>
-     * The email address of the user's password to be reset.
-     * </pre>
-     *
-     * <code>string email = 1 [json_name = "email"];</code>
+     * <code>string url = 1 [json_name = "url"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearEmail() {
-      email_ = getDefaultInstance().getEmail();
+    public Builder clearUrl() {
+      url_ = getDefaultInstance().getUrl();
       bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
     /**
-     * <pre>
-     * The email address of the user's password to be reset.
-     * </pre>
-     *
-     * <code>string email = 1 [json_name = "email"];</code>
-     * @param value The bytes for email to set.
+     * <code>string url = 1 [json_name = "url"];</code>
+     * @param value The bytes for url to set.
      * @return This builder for chaining.
      */
-    public Builder setEmailBytes(
+    public Builder setUrlBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      email_ = value;
+      url_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
@@ -524,23 +496,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v1alpha1.org.SendUserEmailPasswordResetRequest)
+    // @@protoc_insertion_point(builder_scope:api.v1alpha1.org.CreatePasswordResetLinkByOrgIdResponse)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v1alpha1.org.SendUserEmailPasswordResetRequest)
-  private static final com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailPasswordResetRequest DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v1alpha1.org.CreatePasswordResetLinkByOrgIdResponse)
+  private static final com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkByOrgIdResponse DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailPasswordResetRequest();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkByOrgIdResponse();
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailPasswordResetRequest getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkByOrgIdResponse getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<SendUserEmailPasswordResetRequest>
-      PARSER = new com.google.protobuf.AbstractParser<SendUserEmailPasswordResetRequest>() {
+  private static final com.google.protobuf.Parser<CreatePasswordResetLinkByOrgIdResponse>
+      PARSER = new com.google.protobuf.AbstractParser<CreatePasswordResetLinkByOrgIdResponse>() {
     @java.lang.Override
-    public SendUserEmailPasswordResetRequest parsePartialFrom(
+    public CreatePasswordResetLinkByOrgIdResponse parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -559,17 +531,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<SendUserEmailPasswordResetRequest> parser() {
+  public static com.google.protobuf.Parser<CreatePasswordResetLinkByOrgIdResponse> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<SendUserEmailPasswordResetRequest> getParserForType() {
+  public com.google.protobuf.Parser<CreatePasswordResetLinkByOrgIdResponse> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailPasswordResetRequest getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkByOrgIdResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

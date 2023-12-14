@@ -2312,6 +2312,37 @@ public final class OrgGrpc {
     return getCreatePasswordResetLinkMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkByOrgIdRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkByOrgIdResponse> getCreatePasswordResetLinkByOrgIdMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreatePasswordResetLinkByOrgId",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkByOrgIdRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkByOrgIdResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkByOrgIdRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkByOrgIdResponse> getCreatePasswordResetLinkByOrgIdMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkByOrgIdRequest, com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkByOrgIdResponse> getCreatePasswordResetLinkByOrgIdMethod;
+    if ((getCreatePasswordResetLinkByOrgIdMethod = OrgGrpc.getCreatePasswordResetLinkByOrgIdMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getCreatePasswordResetLinkByOrgIdMethod = OrgGrpc.getCreatePasswordResetLinkByOrgIdMethod) == null) {
+          OrgGrpc.getCreatePasswordResetLinkByOrgIdMethod = getCreatePasswordResetLinkByOrgIdMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkByOrgIdRequest, com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkByOrgIdResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreatePasswordResetLinkByOrgId"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkByOrgIdRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkByOrgIdResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("CreatePasswordResetLinkByOrgId"))
+              .build();
+        }
+      }
+    }
+    return getCreatePasswordResetLinkByOrgIdMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.GetUserLoginInfoRequest,
       com.tcn.cloud.api.api.v1alpha1.org.GetUserLoginInfoResponse> getGetUserLoginInfoMethod;
 
@@ -2405,6 +2436,99 @@ public final class OrgGrpc {
     return getGetUserEmailVerifiedByOrgIdMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.ResetMyPasswordRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.ResetMyPasswordResponse> getResetMyPasswordMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ResetMyPassword",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.ResetMyPasswordRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.ResetMyPasswordResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.ResetMyPasswordRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.ResetMyPasswordResponse> getResetMyPasswordMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.ResetMyPasswordRequest, com.tcn.cloud.api.api.v1alpha1.org.ResetMyPasswordResponse> getResetMyPasswordMethod;
+    if ((getResetMyPasswordMethod = OrgGrpc.getResetMyPasswordMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getResetMyPasswordMethod = OrgGrpc.getResetMyPasswordMethod) == null) {
+          OrgGrpc.getResetMyPasswordMethod = getResetMyPasswordMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.ResetMyPasswordRequest, com.tcn.cloud.api.api.v1alpha1.org.ResetMyPasswordResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ResetMyPassword"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.ResetMyPasswordRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.ResetMyPasswordResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ResetMyPassword"))
+              .build();
+        }
+      }
+    }
+    return getResetMyPasswordMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.ResetUserPasswordRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.ResetUserPasswordResponse> getResetUserPasswordMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ResetUserPassword",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.ResetUserPasswordRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.ResetUserPasswordResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.ResetUserPasswordRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.ResetUserPasswordResponse> getResetUserPasswordMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.ResetUserPasswordRequest, com.tcn.cloud.api.api.v1alpha1.org.ResetUserPasswordResponse> getResetUserPasswordMethod;
+    if ((getResetUserPasswordMethod = OrgGrpc.getResetUserPasswordMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getResetUserPasswordMethod = OrgGrpc.getResetUserPasswordMethod) == null) {
+          OrgGrpc.getResetUserPasswordMethod = getResetUserPasswordMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.ResetUserPasswordRequest, com.tcn.cloud.api.api.v1alpha1.org.ResetUserPasswordResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ResetUserPassword"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.ResetUserPasswordRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.ResetUserPasswordResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ResetUserPassword"))
+              .build();
+        }
+      }
+    }
+    return getResetUserPasswordMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.ResetUserPasswordByOrgIdRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.ResetUserPasswordByOrgIdResponse> getResetUserPasswordByOrgIdMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ResetUserPasswordByOrgId",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.ResetUserPasswordByOrgIdRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.ResetUserPasswordByOrgIdResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.ResetUserPasswordByOrgIdRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.ResetUserPasswordByOrgIdResponse> getResetUserPasswordByOrgIdMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.ResetUserPasswordByOrgIdRequest, com.tcn.cloud.api.api.v1alpha1.org.ResetUserPasswordByOrgIdResponse> getResetUserPasswordByOrgIdMethod;
+    if ((getResetUserPasswordByOrgIdMethod = OrgGrpc.getResetUserPasswordByOrgIdMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getResetUserPasswordByOrgIdMethod = OrgGrpc.getResetUserPasswordByOrgIdMethod) == null) {
+          OrgGrpc.getResetUserPasswordByOrgIdMethod = getResetUserPasswordByOrgIdMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.ResetUserPasswordByOrgIdRequest, com.tcn.cloud.api.api.v1alpha1.org.ResetUserPasswordByOrgIdResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ResetUserPasswordByOrgId"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.ResetUserPasswordByOrgIdRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.ResetUserPasswordByOrgIdResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ResetUserPasswordByOrgId"))
+              .build();
+        }
+      }
+    }
+    return getResetUserPasswordByOrgIdMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailVerificationRequest,
       com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailVerificationResponse> getSendUserEmailVerificationMethod;
 
@@ -2436,37 +2560,6 @@ public final class OrgGrpc {
     return getSendUserEmailVerificationMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailPasswordResetRequest,
-      com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailPasswordResetResponse> getSendUserEmailPasswordResetMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "SendUserEmailPasswordReset",
-      requestType = com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailPasswordResetRequest.class,
-      responseType = com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailPasswordResetResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailPasswordResetRequest,
-      com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailPasswordResetResponse> getSendUserEmailPasswordResetMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailPasswordResetRequest, com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailPasswordResetResponse> getSendUserEmailPasswordResetMethod;
-    if ((getSendUserEmailPasswordResetMethod = OrgGrpc.getSendUserEmailPasswordResetMethod) == null) {
-      synchronized (OrgGrpc.class) {
-        if ((getSendUserEmailPasswordResetMethod = OrgGrpc.getSendUserEmailPasswordResetMethod) == null) {
-          OrgGrpc.getSendUserEmailPasswordResetMethod = getSendUserEmailPasswordResetMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailPasswordResetRequest, com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailPasswordResetResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SendUserEmailPasswordReset"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailPasswordResetRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailPasswordResetResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("SendUserEmailPasswordReset"))
-              .build();
-        }
-      }
-    }
-    return getSendUserEmailPasswordResetMethod;
-  }
-
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailVerificationByOrgIdRequest,
       com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailVerificationByOrgIdResponse> getSendUserEmailVerificationByOrgIdMethod;
 
@@ -2496,6 +2589,68 @@ public final class OrgGrpc {
       }
     }
     return getSendUserEmailVerificationByOrgIdMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.SendPasswordResetRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.SendPasswordResetResponse> getSendPasswordResetMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SendPasswordReset",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.SendPasswordResetRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.SendPasswordResetResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.SendPasswordResetRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.SendPasswordResetResponse> getSendPasswordResetMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.SendPasswordResetRequest, com.tcn.cloud.api.api.v1alpha1.org.SendPasswordResetResponse> getSendPasswordResetMethod;
+    if ((getSendPasswordResetMethod = OrgGrpc.getSendPasswordResetMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getSendPasswordResetMethod = OrgGrpc.getSendPasswordResetMethod) == null) {
+          OrgGrpc.getSendPasswordResetMethod = getSendPasswordResetMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.SendPasswordResetRequest, com.tcn.cloud.api.api.v1alpha1.org.SendPasswordResetResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SendPasswordReset"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.SendPasswordResetRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.SendPasswordResetResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("SendPasswordReset"))
+              .build();
+        }
+      }
+    }
+    return getSendPasswordResetMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.SendPasswordResetByOrgIdRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.SendPasswordResetByOrgIdResponse> getSendPasswordResetByOrgIdMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SendPasswordResetByOrgId",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.SendPasswordResetByOrgIdRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.SendPasswordResetByOrgIdResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.SendPasswordResetByOrgIdRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.SendPasswordResetByOrgIdResponse> getSendPasswordResetByOrgIdMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.SendPasswordResetByOrgIdRequest, com.tcn.cloud.api.api.v1alpha1.org.SendPasswordResetByOrgIdResponse> getSendPasswordResetByOrgIdMethod;
+    if ((getSendPasswordResetByOrgIdMethod = OrgGrpc.getSendPasswordResetByOrgIdMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getSendPasswordResetByOrgIdMethod = OrgGrpc.getSendPasswordResetByOrgIdMethod) == null) {
+          OrgGrpc.getSendPasswordResetByOrgIdMethod = getSendPasswordResetByOrgIdMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.SendPasswordResetByOrgIdRequest, com.tcn.cloud.api.api.v1alpha1.org.SendPasswordResetByOrgIdResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SendPasswordResetByOrgId"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.SendPasswordResetByOrgIdRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.SendPasswordResetByOrgIdResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("SendPasswordResetByOrgId"))
+              .build();
+        }
+      }
+    }
+    return getSendPasswordResetByOrgIdMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataRequest,
@@ -5920,6 +6075,16 @@ public final class OrgGrpc {
 
     /**
      * <pre>
+     * CreatePasswordResetLinkByOrgId creates a password reset link for the given user id.
+     * </pre>
+     */
+    default void createPasswordResetLinkByOrgId(com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkByOrgIdRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkByOrgIdResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreatePasswordResetLinkByOrgIdMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Used to be called GetUserBlocked
      * GetUserLoginInfo gets information about a user's login.
      * </pre>
@@ -5951,6 +6116,36 @@ public final class OrgGrpc {
 
     /**
      * <pre>
+     * ResetMyPassword resets the user's password.
+     * </pre>
+     */
+    default void resetMyPassword(com.tcn.cloud.api.api.v1alpha1.org.ResetMyPasswordRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ResetMyPasswordResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getResetMyPasswordMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * ResetUserPassword resets the user's password.
+     * </pre>
+     */
+    default void resetUserPassword(com.tcn.cloud.api.api.v1alpha1.org.ResetUserPasswordRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ResetUserPasswordResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getResetUserPasswordMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * ResetUserPasswordByOrgId resets the user's password.
+     * </pre>
+     */
+    default void resetUserPasswordByOrgId(com.tcn.cloud.api.api.v1alpha1.org.ResetUserPasswordByOrgIdRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ResetUserPasswordByOrgIdResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getResetUserPasswordByOrgIdMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * SendUserEmailVerification sends a verification email to the user.
      * </pre>
      */
@@ -5961,22 +6156,32 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * SendUserEmailPasswordReset sends a verification email to the user.
-     * </pre>
-     */
-    default void sendUserEmailPasswordReset(com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailPasswordResetRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailPasswordResetResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSendUserEmailPasswordResetMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
      * SendUserEmailVerificationByOrgId sends a verification email to the user.
      * </pre>
      */
     default void sendUserEmailVerificationByOrgId(com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailVerificationByOrgIdRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailVerificationByOrgIdResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSendUserEmailVerificationByOrgIdMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * SendPasswordReset sends a password reset email to the user.
+     * </pre>
+     */
+    default void sendPasswordReset(com.tcn.cloud.api.api.v1alpha1.org.SendPasswordResetRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.SendPasswordResetResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSendPasswordResetMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * SendPasswordResetByOrgId sends a password reset email to the user.
+     * </pre>
+     */
+    default void sendPasswordResetByOrgId(com.tcn.cloud.api.api.v1alpha1.org.SendPasswordResetByOrgIdRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.SendPasswordResetByOrgIdResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSendPasswordResetByOrgIdMethod(), responseObserver);
     }
 
     /**
@@ -7715,6 +7920,17 @@ public final class OrgGrpc {
 
     /**
      * <pre>
+     * CreatePasswordResetLinkByOrgId creates a password reset link for the given user id.
+     * </pre>
+     */
+    public void createPasswordResetLinkByOrgId(com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkByOrgIdRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkByOrgIdResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreatePasswordResetLinkByOrgIdMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Used to be called GetUserBlocked
      * GetUserLoginInfo gets information about a user's login.
      * </pre>
@@ -7749,6 +7965,39 @@ public final class OrgGrpc {
 
     /**
      * <pre>
+     * ResetMyPassword resets the user's password.
+     * </pre>
+     */
+    public void resetMyPassword(com.tcn.cloud.api.api.v1alpha1.org.ResetMyPasswordRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ResetMyPasswordResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getResetMyPasswordMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * ResetUserPassword resets the user's password.
+     * </pre>
+     */
+    public void resetUserPassword(com.tcn.cloud.api.api.v1alpha1.org.ResetUserPasswordRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ResetUserPasswordResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getResetUserPasswordMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * ResetUserPasswordByOrgId resets the user's password.
+     * </pre>
+     */
+    public void resetUserPasswordByOrgId(com.tcn.cloud.api.api.v1alpha1.org.ResetUserPasswordByOrgIdRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ResetUserPasswordByOrgIdResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getResetUserPasswordByOrgIdMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * SendUserEmailVerification sends a verification email to the user.
      * </pre>
      */
@@ -7760,17 +8009,6 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * SendUserEmailPasswordReset sends a verification email to the user.
-     * </pre>
-     */
-    public void sendUserEmailPasswordReset(com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailPasswordResetRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailPasswordResetResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getSendUserEmailPasswordResetMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
      * SendUserEmailVerificationByOrgId sends a verification email to the user.
      * </pre>
      */
@@ -7778,6 +8016,28 @@ public final class OrgGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailVerificationByOrgIdResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getSendUserEmailVerificationByOrgIdMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * SendPasswordReset sends a password reset email to the user.
+     * </pre>
+     */
+    public void sendPasswordReset(com.tcn.cloud.api.api.v1alpha1.org.SendPasswordResetRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.SendPasswordResetResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getSendPasswordResetMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * SendPasswordResetByOrgId sends a password reset email to the user.
+     * </pre>
+     */
+    public void sendPasswordResetByOrgId(com.tcn.cloud.api.api.v1alpha1.org.SendPasswordResetByOrgIdRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.SendPasswordResetByOrgIdResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getSendPasswordResetByOrgIdMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -9520,6 +9780,16 @@ public final class OrgGrpc {
 
     /**
      * <pre>
+     * CreatePasswordResetLinkByOrgId creates a password reset link for the given user id.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkByOrgIdResponse createPasswordResetLinkByOrgId(com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkByOrgIdRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreatePasswordResetLinkByOrgIdMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Used to be called GetUserBlocked
      * GetUserLoginInfo gets information about a user's login.
      * </pre>
@@ -9551,6 +9821,36 @@ public final class OrgGrpc {
 
     /**
      * <pre>
+     * ResetMyPassword resets the user's password.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.ResetMyPasswordResponse resetMyPassword(com.tcn.cloud.api.api.v1alpha1.org.ResetMyPasswordRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getResetMyPasswordMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * ResetUserPassword resets the user's password.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.ResetUserPasswordResponse resetUserPassword(com.tcn.cloud.api.api.v1alpha1.org.ResetUserPasswordRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getResetUserPasswordMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * ResetUserPasswordByOrgId resets the user's password.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.ResetUserPasswordByOrgIdResponse resetUserPasswordByOrgId(com.tcn.cloud.api.api.v1alpha1.org.ResetUserPasswordByOrgIdRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getResetUserPasswordByOrgIdMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * SendUserEmailVerification sends a verification email to the user.
      * </pre>
      */
@@ -9561,22 +9861,32 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * SendUserEmailPasswordReset sends a verification email to the user.
-     * </pre>
-     */
-    public com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailPasswordResetResponse sendUserEmailPasswordReset(com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailPasswordResetRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getSendUserEmailPasswordResetMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
      * SendUserEmailVerificationByOrgId sends a verification email to the user.
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailVerificationByOrgIdResponse sendUserEmailVerificationByOrgId(com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailVerificationByOrgIdRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSendUserEmailVerificationByOrgIdMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * SendPasswordReset sends a password reset email to the user.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.SendPasswordResetResponse sendPasswordReset(com.tcn.cloud.api.api.v1alpha1.org.SendPasswordResetRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSendPasswordResetMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * SendPasswordResetByOrgId sends a password reset email to the user.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.SendPasswordResetByOrgIdResponse sendPasswordResetByOrgId(com.tcn.cloud.api.api.v1alpha1.org.SendPasswordResetByOrgIdRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSendPasswordResetByOrgIdMethod(), getCallOptions(), request);
     }
 
     /**
@@ -11213,6 +11523,17 @@ public final class OrgGrpc {
 
     /**
      * <pre>
+     * CreatePasswordResetLinkByOrgId creates a password reset link for the given user id.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkByOrgIdResponse> createPasswordResetLinkByOrgId(
+        com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkByOrgIdRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreatePasswordResetLinkByOrgIdMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Used to be called GetUserBlocked
      * GetUserLoginInfo gets information about a user's login.
      * </pre>
@@ -11247,6 +11568,39 @@ public final class OrgGrpc {
 
     /**
      * <pre>
+     * ResetMyPassword resets the user's password.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.ResetMyPasswordResponse> resetMyPassword(
+        com.tcn.cloud.api.api.v1alpha1.org.ResetMyPasswordRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getResetMyPasswordMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * ResetUserPassword resets the user's password.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.ResetUserPasswordResponse> resetUserPassword(
+        com.tcn.cloud.api.api.v1alpha1.org.ResetUserPasswordRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getResetUserPasswordMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * ResetUserPasswordByOrgId resets the user's password.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.ResetUserPasswordByOrgIdResponse> resetUserPasswordByOrgId(
+        com.tcn.cloud.api.api.v1alpha1.org.ResetUserPasswordByOrgIdRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getResetUserPasswordByOrgIdMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * SendUserEmailVerification sends a verification email to the user.
      * </pre>
      */
@@ -11258,17 +11612,6 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * SendUserEmailPasswordReset sends a verification email to the user.
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailPasswordResetResponse> sendUserEmailPasswordReset(
-        com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailPasswordResetRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getSendUserEmailPasswordResetMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
      * SendUserEmailVerificationByOrgId sends a verification email to the user.
      * </pre>
      */
@@ -11276,6 +11619,28 @@ public final class OrgGrpc {
         com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailVerificationByOrgIdRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getSendUserEmailVerificationByOrgIdMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * SendPasswordReset sends a password reset email to the user.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.SendPasswordResetResponse> sendPasswordReset(
+        com.tcn.cloud.api.api.v1alpha1.org.SendPasswordResetRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getSendPasswordResetMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * SendPasswordResetByOrgId sends a password reset email to the user.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.SendPasswordResetByOrgIdResponse> sendPasswordResetByOrgId(
+        com.tcn.cloud.api.api.v1alpha1.org.SendPasswordResetByOrgIdRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getSendPasswordResetByOrgIdMethod(), getCallOptions()), request);
     }
 
     /**
@@ -12298,96 +12663,101 @@ public final class OrgGrpc {
   private static final int METHODID_GET_USER_PASSWORD_RESET_LINK = 71;
   private static final int METHODID_GET_USER_PASSWORD_RESET_LINK_BY_ORG_ID = 72;
   private static final int METHODID_CREATE_PASSWORD_RESET_LINK = 73;
-  private static final int METHODID_GET_USER_LOGIN_INFO = 74;
-  private static final int METHODID_GET_USER_EMAIL_VERIFIED = 75;
-  private static final int METHODID_GET_USER_EMAIL_VERIFIED_BY_ORG_ID = 76;
-  private static final int METHODID_SEND_USER_EMAIL_VERIFICATION = 77;
-  private static final int METHODID_SEND_USER_EMAIL_PASSWORD_RESET = 78;
-  private static final int METHODID_SEND_USER_EMAIL_VERIFICATION_BY_ORG_ID = 79;
-  private static final int METHODID_GET_USER_SESSION_DATA = 80;
-  private static final int METHODID_GET_AGENT_PROFILE_GROUP = 81;
-  private static final int METHODID_LIST_AGENT_PROFILE_GROUPS = 82;
-  private static final int METHODID_UPDATE_AGENT_PROFILE_GROUP = 83;
-  private static final int METHODID_CREATE_AGENT_PROFILE_GROUP = 84;
-  private static final int METHODID_DELETE_AGENT_PROFILE_GROUP = 85;
-  private static final int METHODID_ASSIGN_AGENT_PROFILE_GROUPS = 86;
-  private static final int METHODID_ADD_USER_SUBSCRIPTION = 87;
-  private static final int METHODID_ADD_USER_SUBSCRIPTION_BY_USER_ID = 88;
-  private static final int METHODID_GET_USER_SUBSCRIPTION = 89;
-  private static final int METHODID_GET_USER_SUBSCRIPTION_BY_USER_ID = 90;
-  private static final int METHODID_UPDATE_USER_SUBSCRIPTION = 91;
-  private static final int METHODID_UPDATE_USER_SUBSCRIPTION_BY_USER_ID = 92;
-  private static final int METHODID_REMOVE_USER_SUBSCRIPTION = 93;
-  private static final int METHODID_REMOVE_USER_SUBSCRIPTION_BY_USER_ID = 94;
-  private static final int METHODID_LIST_USER_SUBSCRIPTIONS = 95;
-  private static final int METHODID_LIST_USER_SUBSCRIPTIONS_BY_USER_ID = 96;
-  private static final int METHODID_LIST_ORG_SUBSCRIPTIONS = 97;
-  private static final int METHODID_CREATE_AUTH_TOKEN = 98;
-  private static final int METHODID_CREATE_AUTH_TOKEN_BY_USER_ID = 99;
-  private static final int METHODID_LIST_AUTH_TOKENS = 100;
-  private static final int METHODID_LIST_AUTH_TOKENS_BY_USER_ID = 101;
-  private static final int METHODID_SET_AUTH_TOKEN_EXPIRATION = 102;
-  private static final int METHODID_SET_AUTH_TOKEN_EXPIRATION_BY_USER_ID = 103;
-  private static final int METHODID_DELETE_AUTH_TOKEN = 104;
-  private static final int METHODID_DELETE_AUTH_TOKEN_BY_USER_ID = 105;
-  private static final int METHODID_GET_HUNT_GROUP_SETTINGS = 106;
-  private static final int METHODID_UPDATE_HUNT_GROUP_SETTINGS = 107;
-  private static final int METHODID_LIST_CALLER_ID_BUCKETS = 108;
-  private static final int METHODID_GET_DATA_DIP_TEMPLATE = 109;
-  private static final int METHODID_LIST_DATA_DIP_TEMPLATES = 110;
-  private static final int METHODID_CREATE_DATA_DIP_TEMPLATE = 111;
-  private static final int METHODID_UPDATE_DATA_DIP_TEMPLATE = 112;
-  private static final int METHODID_DELETE_DATA_DIP_TEMPLATE = 113;
-  private static final int METHODID_COPY_DATA_DIP_TEMPLATE = 114;
-  private static final int METHODID_COPY_DATA_DIP_TEMPLATE_TO_ORGANIZATION = 115;
-  private static final int METHODID_LIST_AGENT_RESPONSE_AUTO_RULES = 116;
-  private static final int METHODID_CREATE_AGENT_RESPONSE_AUTO_RULES = 117;
-  private static final int METHODID_UPDATE_AGENT_RESPONSE_AUTO_RULES = 118;
-  private static final int METHODID_DELETE_AGENT_RESPONSE_AUTO_RULES = 119;
-  private static final int METHODID_CREATE_TRUST = 120;
-  private static final int METHODID_ACCEPT_TRUST = 121;
-  private static final int METHODID_REJECT_TRUST = 122;
-  private static final int METHODID_GET_TRUST = 123;
-  private static final int METHODID_LIST_INCOMING_TRUSTS = 124;
-  private static final int METHODID_LIST_GIVEN_TRUSTS = 125;
-  private static final int METHODID_LIST_ASSIGNABLE_TRUSTS = 126;
-  private static final int METHODID_DELETE_TRUST = 127;
-  private static final int METHODID_ASSIGN_TRUST = 128;
-  private static final int METHODID_UNASSIGN_TRUST = 129;
-  private static final int METHODID_CREATE_LABEL = 130;
-  private static final int METHODID_DELETE_LABEL = 131;
-  private static final int METHODID_LIST_LABELS = 132;
-  private static final int METHODID_GET_LABEL = 133;
-  private static final int METHODID_UPDATE_LABEL = 134;
-  private static final int METHODID_ASSIGN_LABEL = 135;
-  private static final int METHODID_UNASSIGN_LABEL = 136;
-  private static final int METHODID_GET_ASSIGNMENT_COUNTS = 137;
-  private static final int METHODID_GET_ASSIGNABLE_LABELS = 138;
-  private static final int METHODID_GET_PERMISSIONS = 139;
-  private static final int METHODID_GET_USER_PERMISSIONS = 140;
-  private static final int METHODID_CREATE_PERMISSION_GROUP = 141;
-  private static final int METHODID_UPDATE_PERMISSION_GROUP = 142;
-  private static final int METHODID_DELETE_PERMISSION_GROUP = 143;
-  private static final int METHODID_LIST_PERMISSION_GROUPS = 144;
-  private static final int METHODID_LIST_PERMISSION_GROUPS_BY_ORG_ID = 145;
-  private static final int METHODID_ASSIGN_USERS_PERMISSION_GROUP = 146;
-  private static final int METHODID_REVOKE_USERS_PERMISSION_GROUP = 147;
-  private static final int METHODID_ASSIGN_ACCOUNT_OWNER_PERMISSION_TO_USER = 148;
-  private static final int METHODID_REVOKE_ACCOUNT_OWNER_PERMISSION_FROM_USER = 149;
-  private static final int METHODID_INIT_DEFAULT_PERMISSION_GROUPS = 150;
-  private static final int METHODID_GET_ACCOUNT_OWNER_GROUP = 151;
-  private static final int METHODID_GET_LICENSES = 152;
-  private static final int METHODID_GET_ORG_LICENSES = 153;
-  private static final int METHODID_UPDATE_LICENSES = 154;
-  private static final int METHODID_REMOVE_PERMISSION_FROM_ALL_PERMISSION_GROUPS = 155;
-  private static final int METHODID_LIST_P3PERMISSION_GROUPS = 156;
-  private static final int METHODID_LIST_P3PERMISSION_GROUPS_BY_ORG_ID = 157;
-  private static final int METHODID_CREATE_P3PERMISSION_GROUP = 158;
-  private static final int METHODID_UPDATE_P3PERMISSION_GROUP = 159;
-  private static final int METHODID_UPDATE_P3PERMISSION_GROUP_BY_ORG_ID = 160;
-  private static final int METHODID_DELETE_P3PERMISSION_GROUP = 161;
-  private static final int METHODID_ASSIGN_USERS_P3PERMISSION_GROUP = 162;
-  private static final int METHODID_REVOKE_USERS_P3PERMISSION_GROUP = 163;
+  private static final int METHODID_CREATE_PASSWORD_RESET_LINK_BY_ORG_ID = 74;
+  private static final int METHODID_GET_USER_LOGIN_INFO = 75;
+  private static final int METHODID_GET_USER_EMAIL_VERIFIED = 76;
+  private static final int METHODID_GET_USER_EMAIL_VERIFIED_BY_ORG_ID = 77;
+  private static final int METHODID_RESET_MY_PASSWORD = 78;
+  private static final int METHODID_RESET_USER_PASSWORD = 79;
+  private static final int METHODID_RESET_USER_PASSWORD_BY_ORG_ID = 80;
+  private static final int METHODID_SEND_USER_EMAIL_VERIFICATION = 81;
+  private static final int METHODID_SEND_USER_EMAIL_VERIFICATION_BY_ORG_ID = 82;
+  private static final int METHODID_SEND_PASSWORD_RESET = 83;
+  private static final int METHODID_SEND_PASSWORD_RESET_BY_ORG_ID = 84;
+  private static final int METHODID_GET_USER_SESSION_DATA = 85;
+  private static final int METHODID_GET_AGENT_PROFILE_GROUP = 86;
+  private static final int METHODID_LIST_AGENT_PROFILE_GROUPS = 87;
+  private static final int METHODID_UPDATE_AGENT_PROFILE_GROUP = 88;
+  private static final int METHODID_CREATE_AGENT_PROFILE_GROUP = 89;
+  private static final int METHODID_DELETE_AGENT_PROFILE_GROUP = 90;
+  private static final int METHODID_ASSIGN_AGENT_PROFILE_GROUPS = 91;
+  private static final int METHODID_ADD_USER_SUBSCRIPTION = 92;
+  private static final int METHODID_ADD_USER_SUBSCRIPTION_BY_USER_ID = 93;
+  private static final int METHODID_GET_USER_SUBSCRIPTION = 94;
+  private static final int METHODID_GET_USER_SUBSCRIPTION_BY_USER_ID = 95;
+  private static final int METHODID_UPDATE_USER_SUBSCRIPTION = 96;
+  private static final int METHODID_UPDATE_USER_SUBSCRIPTION_BY_USER_ID = 97;
+  private static final int METHODID_REMOVE_USER_SUBSCRIPTION = 98;
+  private static final int METHODID_REMOVE_USER_SUBSCRIPTION_BY_USER_ID = 99;
+  private static final int METHODID_LIST_USER_SUBSCRIPTIONS = 100;
+  private static final int METHODID_LIST_USER_SUBSCRIPTIONS_BY_USER_ID = 101;
+  private static final int METHODID_LIST_ORG_SUBSCRIPTIONS = 102;
+  private static final int METHODID_CREATE_AUTH_TOKEN = 103;
+  private static final int METHODID_CREATE_AUTH_TOKEN_BY_USER_ID = 104;
+  private static final int METHODID_LIST_AUTH_TOKENS = 105;
+  private static final int METHODID_LIST_AUTH_TOKENS_BY_USER_ID = 106;
+  private static final int METHODID_SET_AUTH_TOKEN_EXPIRATION = 107;
+  private static final int METHODID_SET_AUTH_TOKEN_EXPIRATION_BY_USER_ID = 108;
+  private static final int METHODID_DELETE_AUTH_TOKEN = 109;
+  private static final int METHODID_DELETE_AUTH_TOKEN_BY_USER_ID = 110;
+  private static final int METHODID_GET_HUNT_GROUP_SETTINGS = 111;
+  private static final int METHODID_UPDATE_HUNT_GROUP_SETTINGS = 112;
+  private static final int METHODID_LIST_CALLER_ID_BUCKETS = 113;
+  private static final int METHODID_GET_DATA_DIP_TEMPLATE = 114;
+  private static final int METHODID_LIST_DATA_DIP_TEMPLATES = 115;
+  private static final int METHODID_CREATE_DATA_DIP_TEMPLATE = 116;
+  private static final int METHODID_UPDATE_DATA_DIP_TEMPLATE = 117;
+  private static final int METHODID_DELETE_DATA_DIP_TEMPLATE = 118;
+  private static final int METHODID_COPY_DATA_DIP_TEMPLATE = 119;
+  private static final int METHODID_COPY_DATA_DIP_TEMPLATE_TO_ORGANIZATION = 120;
+  private static final int METHODID_LIST_AGENT_RESPONSE_AUTO_RULES = 121;
+  private static final int METHODID_CREATE_AGENT_RESPONSE_AUTO_RULES = 122;
+  private static final int METHODID_UPDATE_AGENT_RESPONSE_AUTO_RULES = 123;
+  private static final int METHODID_DELETE_AGENT_RESPONSE_AUTO_RULES = 124;
+  private static final int METHODID_CREATE_TRUST = 125;
+  private static final int METHODID_ACCEPT_TRUST = 126;
+  private static final int METHODID_REJECT_TRUST = 127;
+  private static final int METHODID_GET_TRUST = 128;
+  private static final int METHODID_LIST_INCOMING_TRUSTS = 129;
+  private static final int METHODID_LIST_GIVEN_TRUSTS = 130;
+  private static final int METHODID_LIST_ASSIGNABLE_TRUSTS = 131;
+  private static final int METHODID_DELETE_TRUST = 132;
+  private static final int METHODID_ASSIGN_TRUST = 133;
+  private static final int METHODID_UNASSIGN_TRUST = 134;
+  private static final int METHODID_CREATE_LABEL = 135;
+  private static final int METHODID_DELETE_LABEL = 136;
+  private static final int METHODID_LIST_LABELS = 137;
+  private static final int METHODID_GET_LABEL = 138;
+  private static final int METHODID_UPDATE_LABEL = 139;
+  private static final int METHODID_ASSIGN_LABEL = 140;
+  private static final int METHODID_UNASSIGN_LABEL = 141;
+  private static final int METHODID_GET_ASSIGNMENT_COUNTS = 142;
+  private static final int METHODID_GET_ASSIGNABLE_LABELS = 143;
+  private static final int METHODID_GET_PERMISSIONS = 144;
+  private static final int METHODID_GET_USER_PERMISSIONS = 145;
+  private static final int METHODID_CREATE_PERMISSION_GROUP = 146;
+  private static final int METHODID_UPDATE_PERMISSION_GROUP = 147;
+  private static final int METHODID_DELETE_PERMISSION_GROUP = 148;
+  private static final int METHODID_LIST_PERMISSION_GROUPS = 149;
+  private static final int METHODID_LIST_PERMISSION_GROUPS_BY_ORG_ID = 150;
+  private static final int METHODID_ASSIGN_USERS_PERMISSION_GROUP = 151;
+  private static final int METHODID_REVOKE_USERS_PERMISSION_GROUP = 152;
+  private static final int METHODID_ASSIGN_ACCOUNT_OWNER_PERMISSION_TO_USER = 153;
+  private static final int METHODID_REVOKE_ACCOUNT_OWNER_PERMISSION_FROM_USER = 154;
+  private static final int METHODID_INIT_DEFAULT_PERMISSION_GROUPS = 155;
+  private static final int METHODID_GET_ACCOUNT_OWNER_GROUP = 156;
+  private static final int METHODID_GET_LICENSES = 157;
+  private static final int METHODID_GET_ORG_LICENSES = 158;
+  private static final int METHODID_UPDATE_LICENSES = 159;
+  private static final int METHODID_REMOVE_PERMISSION_FROM_ALL_PERMISSION_GROUPS = 160;
+  private static final int METHODID_LIST_P3PERMISSION_GROUPS = 161;
+  private static final int METHODID_LIST_P3PERMISSION_GROUPS_BY_ORG_ID = 162;
+  private static final int METHODID_CREATE_P3PERMISSION_GROUP = 163;
+  private static final int METHODID_UPDATE_P3PERMISSION_GROUP = 164;
+  private static final int METHODID_UPDATE_P3PERMISSION_GROUP_BY_ORG_ID = 165;
+  private static final int METHODID_DELETE_P3PERMISSION_GROUP = 166;
+  private static final int METHODID_ASSIGN_USERS_P3PERMISSION_GROUP = 167;
+  private static final int METHODID_REVOKE_USERS_P3PERMISSION_GROUP = 168;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -12702,6 +13072,10 @@ public final class OrgGrpc {
           serviceImpl.createPasswordResetLink((com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkResponse>) responseObserver);
           break;
+        case METHODID_CREATE_PASSWORD_RESET_LINK_BY_ORG_ID:
+          serviceImpl.createPasswordResetLinkByOrgId((com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkByOrgIdRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkByOrgIdResponse>) responseObserver);
+          break;
         case METHODID_GET_USER_LOGIN_INFO:
           serviceImpl.getUserLoginInfo((com.tcn.cloud.api.api.v1alpha1.org.GetUserLoginInfoRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.GetUserLoginInfoResponse>) responseObserver);
@@ -12714,17 +13088,33 @@ public final class OrgGrpc {
           serviceImpl.getUserEmailVerifiedByOrgId((com.tcn.cloud.api.api.v1alpha1.org.GetUserEmailVerifiedByOrgIdRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.GetUserEmailVerifiedByOrgIdResponse>) responseObserver);
           break;
+        case METHODID_RESET_MY_PASSWORD:
+          serviceImpl.resetMyPassword((com.tcn.cloud.api.api.v1alpha1.org.ResetMyPasswordRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ResetMyPasswordResponse>) responseObserver);
+          break;
+        case METHODID_RESET_USER_PASSWORD:
+          serviceImpl.resetUserPassword((com.tcn.cloud.api.api.v1alpha1.org.ResetUserPasswordRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ResetUserPasswordResponse>) responseObserver);
+          break;
+        case METHODID_RESET_USER_PASSWORD_BY_ORG_ID:
+          serviceImpl.resetUserPasswordByOrgId((com.tcn.cloud.api.api.v1alpha1.org.ResetUserPasswordByOrgIdRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ResetUserPasswordByOrgIdResponse>) responseObserver);
+          break;
         case METHODID_SEND_USER_EMAIL_VERIFICATION:
           serviceImpl.sendUserEmailVerification((com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailVerificationRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailVerificationResponse>) responseObserver);
           break;
-        case METHODID_SEND_USER_EMAIL_PASSWORD_RESET:
-          serviceImpl.sendUserEmailPasswordReset((com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailPasswordResetRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailPasswordResetResponse>) responseObserver);
-          break;
         case METHODID_SEND_USER_EMAIL_VERIFICATION_BY_ORG_ID:
           serviceImpl.sendUserEmailVerificationByOrgId((com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailVerificationByOrgIdRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailVerificationByOrgIdResponse>) responseObserver);
+          break;
+        case METHODID_SEND_PASSWORD_RESET:
+          serviceImpl.sendPasswordReset((com.tcn.cloud.api.api.v1alpha1.org.SendPasswordResetRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.SendPasswordResetResponse>) responseObserver);
+          break;
+        case METHODID_SEND_PASSWORD_RESET_BY_ORG_ID:
+          serviceImpl.sendPasswordResetByOrgId((com.tcn.cloud.api.api.v1alpha1.org.SendPasswordResetByOrgIdRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.SendPasswordResetByOrgIdResponse>) responseObserver);
           break;
         case METHODID_GET_USER_SESSION_DATA:
           serviceImpl.getUserSessionData((com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataRequest) request,
@@ -13599,6 +13989,13 @@ public final class OrgGrpc {
               com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkResponse>(
                 service, METHODID_CREATE_PASSWORD_RESET_LINK)))
         .addMethod(
+          getCreatePasswordResetLinkByOrgIdMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkByOrgIdRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.CreatePasswordResetLinkByOrgIdResponse>(
+                service, METHODID_CREATE_PASSWORD_RESET_LINK_BY_ORG_ID)))
+        .addMethod(
           getGetUserLoginInfoMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -13620,6 +14017,27 @@ public final class OrgGrpc {
               com.tcn.cloud.api.api.v1alpha1.org.GetUserEmailVerifiedByOrgIdResponse>(
                 service, METHODID_GET_USER_EMAIL_VERIFIED_BY_ORG_ID)))
         .addMethod(
+          getResetMyPasswordMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.ResetMyPasswordRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.ResetMyPasswordResponse>(
+                service, METHODID_RESET_MY_PASSWORD)))
+        .addMethod(
+          getResetUserPasswordMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.ResetUserPasswordRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.ResetUserPasswordResponse>(
+                service, METHODID_RESET_USER_PASSWORD)))
+        .addMethod(
+          getResetUserPasswordByOrgIdMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.ResetUserPasswordByOrgIdRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.ResetUserPasswordByOrgIdResponse>(
+                service, METHODID_RESET_USER_PASSWORD_BY_ORG_ID)))
+        .addMethod(
           getSendUserEmailVerificationMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -13627,19 +14045,26 @@ public final class OrgGrpc {
               com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailVerificationResponse>(
                 service, METHODID_SEND_USER_EMAIL_VERIFICATION)))
         .addMethod(
-          getSendUserEmailPasswordResetMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailPasswordResetRequest,
-              com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailPasswordResetResponse>(
-                service, METHODID_SEND_USER_EMAIL_PASSWORD_RESET)))
-        .addMethod(
           getSendUserEmailVerificationByOrgIdMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
               com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailVerificationByOrgIdRequest,
               com.tcn.cloud.api.api.v1alpha1.org.SendUserEmailVerificationByOrgIdResponse>(
                 service, METHODID_SEND_USER_EMAIL_VERIFICATION_BY_ORG_ID)))
+        .addMethod(
+          getSendPasswordResetMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.SendPasswordResetRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.SendPasswordResetResponse>(
+                service, METHODID_SEND_PASSWORD_RESET)))
+        .addMethod(
+          getSendPasswordResetByOrgIdMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.SendPasswordResetByOrgIdRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.SendPasswordResetByOrgIdResponse>(
+                service, METHODID_SEND_PASSWORD_RESET_BY_ORG_ID)))
         .addMethod(
           getGetUserSessionDataMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -14350,12 +14775,17 @@ public final class OrgGrpc {
               .addMethod(getGetUserPasswordResetLinkMethod())
               .addMethod(getGetUserPasswordResetLinkByOrgIdMethod())
               .addMethod(getCreatePasswordResetLinkMethod())
+              .addMethod(getCreatePasswordResetLinkByOrgIdMethod())
               .addMethod(getGetUserLoginInfoMethod())
               .addMethod(getGetUserEmailVerifiedMethod())
               .addMethod(getGetUserEmailVerifiedByOrgIdMethod())
+              .addMethod(getResetMyPasswordMethod())
+              .addMethod(getResetUserPasswordMethod())
+              .addMethod(getResetUserPasswordByOrgIdMethod())
               .addMethod(getSendUserEmailVerificationMethod())
-              .addMethod(getSendUserEmailPasswordResetMethod())
               .addMethod(getSendUserEmailVerificationByOrgIdMethod())
+              .addMethod(getSendPasswordResetMethod())
+              .addMethod(getSendPasswordResetByOrgIdMethod())
               .addMethod(getGetUserSessionDataMethod())
               .addMethod(getGetAgentProfileGroupMethod())
               .addMethod(getListAgentProfileGroupsMethod())

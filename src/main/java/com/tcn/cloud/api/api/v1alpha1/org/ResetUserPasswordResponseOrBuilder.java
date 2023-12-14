@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.v1alpha1.org;
 
-public interface SendUserEmailPasswordResetResponseOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v1alpha1.org.SendUserEmailPasswordResetResponse)
+public interface ResetUserPasswordResponseOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v1alpha1.org.ResetUserPasswordResponse)
     com.google.protobuf.MessageOrBuilder {
 }
