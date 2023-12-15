@@ -325,6 +325,37 @@ public final class SkillsServiceGrpc {
     return getGetSkillGroupMembersMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.skills.ListSkillGroupsMembersRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.skills.ListSkillGroupsMembersResponse> getListSkillGroupsMembersMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListSkillGroupsMembers",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.skills.ListSkillGroupsMembersRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.skills.ListSkillGroupsMembersResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.skills.ListSkillGroupsMembersRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.skills.ListSkillGroupsMembersResponse> getListSkillGroupsMembersMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.skills.ListSkillGroupsMembersRequest, com.tcn.cloud.api.api.v1alpha1.org.skills.ListSkillGroupsMembersResponse> getListSkillGroupsMembersMethod;
+    if ((getListSkillGroupsMembersMethod = SkillsServiceGrpc.getListSkillGroupsMembersMethod) == null) {
+      synchronized (SkillsServiceGrpc.class) {
+        if ((getListSkillGroupsMembersMethod = SkillsServiceGrpc.getListSkillGroupsMembersMethod) == null) {
+          SkillsServiceGrpc.getListSkillGroupsMembersMethod = getListSkillGroupsMembersMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.skills.ListSkillGroupsMembersRequest, com.tcn.cloud.api.api.v1alpha1.org.skills.ListSkillGroupsMembersResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListSkillGroupsMembers"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.skills.ListSkillGroupsMembersRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.skills.ListSkillGroupsMembersResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new SkillsServiceMethodDescriptorSupplier("ListSkillGroupsMembers"))
+              .build();
+        }
+      }
+    }
+    return getListSkillGroupsMembersMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -472,6 +503,16 @@ public final class SkillsServiceGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.skills.GetSkillGroupMembersResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetSkillGroupMembersMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * ListSkillGroupsMembers gets the members of a skill group for each skill group in an Org.
+     * </pre>
+     */
+    default void listSkillGroupsMembers(com.tcn.cloud.api.api.v1alpha1.org.skills.ListSkillGroupsMembersRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.skills.ListSkillGroupsMembersResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListSkillGroupsMembersMethod(), responseObserver);
+    }
   }
 
   /**
@@ -610,6 +651,17 @@ public final class SkillsServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetSkillGroupMembersMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * ListSkillGroupsMembers gets the members of a skill group for each skill group in an Org.
+     * </pre>
+     */
+    public void listSkillGroupsMembers(com.tcn.cloud.api.api.v1alpha1.org.skills.ListSkillGroupsMembersRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.skills.ListSkillGroupsMembersResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListSkillGroupsMembersMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -726,6 +778,16 @@ public final class SkillsServiceGrpc {
     public com.tcn.cloud.api.api.v1alpha1.org.skills.GetSkillGroupMembersResponse getSkillGroupMembers(com.tcn.cloud.api.api.v1alpha1.org.skills.GetSkillGroupMembersRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetSkillGroupMembersMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * ListSkillGroupsMembers gets the members of a skill group for each skill group in an Org.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.skills.ListSkillGroupsMembersResponse listSkillGroupsMembers(com.tcn.cloud.api.api.v1alpha1.org.skills.ListSkillGroupsMembersRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListSkillGroupsMembersMethod(), getCallOptions(), request);
     }
   }
 
@@ -854,6 +916,17 @@ public final class SkillsServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetSkillGroupMembersMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * ListSkillGroupsMembers gets the members of a skill group for each skill group in an Org.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.skills.ListSkillGroupsMembersResponse> listSkillGroupsMembers(
+        com.tcn.cloud.api.api.v1alpha1.org.skills.ListSkillGroupsMembersRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListSkillGroupsMembersMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE_SKILL_GROUP = 0;
@@ -866,6 +939,7 @@ public final class SkillsServiceGrpc {
   private static final int METHODID_GET_USER_SKILL_GROUPS = 7;
   private static final int METHODID_GET_USER_SKILLS = 8;
   private static final int METHODID_GET_SKILL_GROUP_MEMBERS = 9;
+  private static final int METHODID_LIST_SKILL_GROUPS_MEMBERS = 10;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -923,6 +997,10 @@ public final class SkillsServiceGrpc {
         case METHODID_GET_SKILL_GROUP_MEMBERS:
           serviceImpl.getSkillGroupMembers((com.tcn.cloud.api.api.v1alpha1.org.skills.GetSkillGroupMembersRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.skills.GetSkillGroupMembersResponse>) responseObserver);
+          break;
+        case METHODID_LIST_SKILL_GROUPS_MEMBERS:
+          serviceImpl.listSkillGroupsMembers((com.tcn.cloud.api.api.v1alpha1.org.skills.ListSkillGroupsMembersRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.skills.ListSkillGroupsMembersResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -1012,6 +1090,13 @@ public final class SkillsServiceGrpc {
               com.tcn.cloud.api.api.v1alpha1.org.skills.GetSkillGroupMembersRequest,
               com.tcn.cloud.api.api.v1alpha1.org.skills.GetSkillGroupMembersResponse>(
                 service, METHODID_GET_SKILL_GROUP_MEMBERS)))
+        .addMethod(
+          getListSkillGroupsMembersMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.skills.ListSkillGroupsMembersRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.skills.ListSkillGroupsMembersResponse>(
+                service, METHODID_LIST_SKILL_GROUPS_MEMBERS)))
         .build();
   }
 
@@ -1070,6 +1155,7 @@ public final class SkillsServiceGrpc {
               .addMethod(getGetUserSkillGroupsMethod())
               .addMethod(getGetUserSkillsMethod())
               .addMethod(getGetSkillGroupMembersMethod())
+              .addMethod(getListSkillGroupsMembersMethod())
               .build();
         }
       }

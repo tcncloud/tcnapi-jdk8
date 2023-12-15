@@ -27,7 +27,7 @@ public final class ServiceProto {
       "\027api.v1alpha1.org.skills\032\027annotations/au" +
       "thz.proto\032&api/v1alpha1/org/skills/entit" +
       "ies.proto\032\034google/api/annotations.proto2" +
-      "\245\016\n\rSkillsService\022\262\001\n\020CreateSkillGroup\0220" +
+      "\362\017\n\rSkillsService\022\262\001\n\020CreateSkillGroup\0220" +
       ".api.v1alpha1.org.skills.CreateSkillGrou" +
       "pRequest\0321.api.v1alpha1.org.skills.Creat" +
       "eSkillGroupResponse\"9\272\270\221\002\004\n\002\010d\202\323\344\223\002*\"%/a" +
@@ -72,12 +72,17 @@ public final class ServiceProto {
       "kills.GetSkillGroupMembersRequest\0325.api." +
       "v1alpha1.org.skills.GetSkillGroupMembers" +
       "Response\"=\272\270\221\002\004\n\002\010e\202\323\344\223\002.\")/api/v1alpha1" +
-      "/skills/getskillgroupmembers:\001*B\271\001\n)com." +
-      "tcn.cloud.api.api.v1alpha1.org.skillsB\014S" +
-      "erviceProtoP\001\242\002\004AVOS\252\002\027Api.V1alpha1.Org." +
-      "Skills\312\002\027Api\\V1alpha1\\Org\\Skills\342\002#Api\\V" +
-      "1alpha1\\Org\\Skills\\GPBMetadata\352\002\032Api::V1" +
-      "alpha1::Org::Skillsb\006proto3"
+      "/skills/getskillgroupmembers:\001*\022\312\001\n\026List" +
+      "SkillGroupsMembers\0226.api.v1alpha1.org.sk" +
+      "ills.ListSkillGroupsMembersRequest\0327.api" +
+      ".v1alpha1.org.skills.ListSkillGroupsMemb" +
+      "ersResponse\"?\272\270\221\002\004\n\002\010e\202\323\344\223\0020\"+/api/v1alp" +
+      "ha1/skills/listskillgroupsmembers:\001*B\271\001\n" +
+      ")com.tcn.cloud.api.api.v1alpha1.org.skil" +
+      "lsB\014ServiceProtoP\001\242\002\004AVOS\252\002\027Api.V1alpha1" +
+      ".Org.Skills\312\002\027Api\\V1alpha1\\Org\\Skills\342\002#" +
+      "Api\\V1alpha1\\Org\\Skills\\GPBMetadata\352\002\032Ap" +
+      "i::V1alpha1::Org::Skillsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

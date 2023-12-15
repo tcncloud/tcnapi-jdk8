@@ -114,6 +114,21 @@ public final class EntitiesProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_org_skills_GetSkillGroupMembersResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_skills_ListSkillGroupsMembersRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_skills_ListSkillGroupsMembersRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_skills_ListSkillGroupsMembersResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_skills_ListSkillGroupsMembersResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_skills_SkillGroupMembers_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_skills_SkillGroupMembers_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -159,12 +174,18 @@ public final class EntitiesProto {
       "Sets\"C\n\033GetSkillGroupMembersRequest\022$\n\016s" +
       "kill_group_id\030\001 \001(\tR\014skillGroupId\"9\n\034Get" +
       "SkillGroupMembersResponse\022\031\n\010user_ids\030\001 " +
-      "\003(\tR\007userIdsB\272\001\n)com.tcn.cloud.api.api.v" +
-      "1alpha1.org.skillsB\rEntitiesProtoP\001\242\002\004AV" +
-      "OS\252\002\027Api.V1alpha1.Org.Skills\312\002\027Api\\V1alp" +
-      "ha1\\Org\\Skills\342\002#Api\\V1alpha1\\Org\\Skills" +
-      "\\GPBMetadata\352\002\032Api::V1alpha1::Org::Skill" +
-      "sb\006proto3"
+      "\003(\tR\007userIds\"\037\n\035ListSkillGroupsMembersRe" +
+      "quest\"|\n\036ListSkillGroupsMembersResponse\022" +
+      "Z\n\023skill_group_members\030\001 \003(\0132*.api.v1alp" +
+      "ha1.org.skills.SkillGroupMembersR\021skillG" +
+      "roupMembers\"T\n\021SkillGroupMembers\022$\n\016skil" +
+      "l_group_id\030\001 \001(\tR\014skillGroupId\022\031\n\010user_i" +
+      "ds\030\002 \003(\tR\007userIdsB\272\001\n)com.tcn.cloud.api." +
+      "api.v1alpha1.org.skillsB\rEntitiesProtoP\001" +
+      "\242\002\004AVOS\252\002\027Api.V1alpha1.Org.Skills\312\002\027Api\\" +
+      "V1alpha1\\Org\\Skills\342\002#Api\\V1alpha1\\Org\\S" +
+      "kills\\GPBMetadata\352\002\032Api::V1alpha1::Org::" +
+      "Skillsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -291,6 +312,24 @@ public final class EntitiesProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_skills_GetSkillGroupMembersResponse_descriptor,
         new java.lang.String[] { "UserIds", });
+    internal_static_api_v1alpha1_org_skills_ListSkillGroupsMembersRequest_descriptor =
+      getDescriptor().getMessageTypes().get(20);
+    internal_static_api_v1alpha1_org_skills_ListSkillGroupsMembersRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_skills_ListSkillGroupsMembersRequest_descriptor,
+        new java.lang.String[] { });
+    internal_static_api_v1alpha1_org_skills_ListSkillGroupsMembersResponse_descriptor =
+      getDescriptor().getMessageTypes().get(21);
+    internal_static_api_v1alpha1_org_skills_ListSkillGroupsMembersResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_skills_ListSkillGroupsMembersResponse_descriptor,
+        new java.lang.String[] { "SkillGroupMembers", });
+    internal_static_api_v1alpha1_org_skills_SkillGroupMembers_descriptor =
+      getDescriptor().getMessageTypes().get(22);
+    internal_static_api_v1alpha1_org_skills_SkillGroupMembers_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_skills_SkillGroupMembers_descriptor,
+        new java.lang.String[] { "SkillGroupId", "UserIds", });
     com.tcn.cloud.api.api.commons.org.SkillGroupProto.getDescriptor();
   }
 
