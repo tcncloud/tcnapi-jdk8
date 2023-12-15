@@ -6,11 +6,12 @@ package com.tcn.cloud.api.api.v1alpha1.wfm;
 /**
  * <pre>
  * Response message for the BuildCallProfileTemplateForSkillProfile RPC.
+ * DEPRECATED as of Sep/7/2023 - Use BuildCallProfileTemplate instead.
  * </pre>
  *
  * Protobuf type {@code api.v1alpha1.wfm.BuildCallProfileTemplateForSkillProfileRes}
  */
-public final class BuildCallProfileTemplateForSkillProfileRes extends
+@java.lang.Deprecated public final class BuildCallProfileTemplateForSkillProfileRes extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.v1alpha1.wfm.BuildCallProfileTemplateForSkillProfileRes)
     BuildCallProfileTemplateForSkillProfileResOrBuilder {
@@ -245,6 +246,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Response message for the BuildCallProfileTemplateForSkillProfile RPC.
+   * DEPRECATED as of Sep/7/2023 - Use BuildCallProfileTemplate instead.
    * </pre>
    *
    * Protobuf type {@code api.v1alpha1.wfm.BuildCallProfileTemplateForSkillProfileRes}

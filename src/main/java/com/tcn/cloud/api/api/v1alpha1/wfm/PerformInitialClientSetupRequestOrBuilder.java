@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.v1alpha1.wfm;
 
-@java.lang.Deprecated public interface GetClientHistoryCacheInfoReqOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v1alpha1.wfm.GetClientHistoryCacheInfoReq)
+public interface PerformInitialClientSetupRequestOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v1alpha1.wfm.PerformInitialClientSetupRequest)
     com.google.protobuf.MessageOrBuilder {
 }

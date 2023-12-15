@@ -6,11 +6,12 @@ package com.tcn.cloud.api.api.v1alpha1.wfm;
 /**
  * <pre>
  * Request message for the ListForecastIntervalsForSkillProfile RPC
+ * DEPRECATED as of Sep/13/2023 - Use ListForecastIntervals instead.
  * </pre>
  *
  * Protobuf type {@code api.v1alpha1.wfm.ListForecastIntervalsForSkillProfileReq}
  */
-public final class ListForecastIntervalsForSkillProfileReq extends
+@java.lang.Deprecated public final class ListForecastIntervalsForSkillProfileReq extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.v1alpha1.wfm.ListForecastIntervalsForSkillProfileReq)
     ListForecastIntervalsForSkillProfileReqOrBuilder {
@@ -218,6 +219,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Request message for the ListForecastIntervalsForSkillProfile RPC
+   * DEPRECATED as of Sep/13/2023 - Use ListForecastIntervals instead.
    * </pre>
    *
    * Protobuf type {@code api.v1alpha1.wfm.ListForecastIntervalsForSkillProfileReq}

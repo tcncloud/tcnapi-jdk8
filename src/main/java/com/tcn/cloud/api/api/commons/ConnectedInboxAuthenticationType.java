@@ -20,6 +20,10 @@ public enum ConnectedInboxAuthenticationType
    * <code>CONNECTED_INBOX_AUTHENTICATION_TYPE_GOOGLE_XOAUTH2 = 1;</code>
    */
   CONNECTED_INBOX_AUTHENTICATION_TYPE_GOOGLE_XOAUTH2(1),
+  /**
+   * <code>CONNECTED_INBOX_AUTHENTICATION_TYPE_MICROSOFT_365 = 2;</code>
+   */
+  CONNECTED_INBOX_AUTHENTICATION_TYPE_MICROSOFT_365(2),
   UNRECOGNIZED(-1),
   ;
 
@@ -31,6 +35,10 @@ public enum ConnectedInboxAuthenticationType
    * <code>CONNECTED_INBOX_AUTHENTICATION_TYPE_GOOGLE_XOAUTH2 = 1;</code>
    */
   public static final int CONNECTED_INBOX_AUTHENTICATION_TYPE_GOOGLE_XOAUTH2_VALUE = 1;
+  /**
+   * <code>CONNECTED_INBOX_AUTHENTICATION_TYPE_MICROSOFT_365 = 2;</code>
+   */
+  public static final int CONNECTED_INBOX_AUTHENTICATION_TYPE_MICROSOFT_365_VALUE = 2;
 
 
   public final int getNumber() {
@@ -59,6 +67,7 @@ public enum ConnectedInboxAuthenticationType
     switch (value) {
       case 0: return CONNECTED_INBOX_AUTHENTICATION_TYPE_PASSWORD;
       case 1: return CONNECTED_INBOX_AUTHENTICATION_TYPE_GOOGLE_XOAUTH2;
+      case 2: return CONNECTED_INBOX_AUTHENTICATION_TYPE_MICROSOFT_365;
       default: return null;
     }
   }
