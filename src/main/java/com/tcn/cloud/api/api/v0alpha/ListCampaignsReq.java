@@ -4835,6 +4835,602 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  public interface ByWhatsAppOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:api.v0alpha.ListCampaignsReq.ByWhatsApp)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * whatsapp number
+     * </pre>
+     *
+     * <code>string number = 1 [json_name = "number"];</code>
+     * @return The number.
+     */
+    java.lang.String getNumber();
+    /**
+     * <pre>
+     * whatsapp number
+     * </pre>
+     *
+     * <code>string number = 1 [json_name = "number"];</code>
+     * @return The bytes for number.
+     */
+    com.google.protobuf.ByteString
+        getNumberBytes();
+  }
+  /**
+   * <pre>
+   * ByWhatsApp - filter the list of campaigns by the Whatsapp
+   * </pre>
+   *
+   * Protobuf type {@code api.v0alpha.ListCampaignsReq.ByWhatsApp}
+   */
+  public static final class ByWhatsApp extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:api.v0alpha.ListCampaignsReq.ByWhatsApp)
+      ByWhatsAppOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ByWhatsApp.newBuilder() to construct.
+    private ByWhatsApp(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ByWhatsApp() {
+      number_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ByWhatsApp();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.tcn.cloud.api.api.v0alpha.OmniapiProto.internal_static_api_v0alpha_ListCampaignsReq_ByWhatsApp_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.tcn.cloud.api.api.v0alpha.OmniapiProto.internal_static_api_v0alpha_ListCampaignsReq_ByWhatsApp_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp.class, com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp.Builder.class);
+    }
+
+    public static final int NUMBER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object number_ = "";
+    /**
+     * <pre>
+     * whatsapp number
+     * </pre>
+     *
+     * <code>string number = 1 [json_name = "number"];</code>
+     * @return The number.
+     */
+    @java.lang.Override
+    public java.lang.String getNumber() {
+      java.lang.Object ref = number_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        number_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * whatsapp number
+     * </pre>
+     *
+     * <code>string number = 1 [json_name = "number"];</code>
+     * @return The bytes for number.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNumberBytes() {
+      java.lang.Object ref = number_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        number_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(number_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, number_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(number_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, number_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp)) {
+        return super.equals(obj);
+      }
+      com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp other = (com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp) obj;
+
+      if (!getNumber()
+          .equals(other.getNumber())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NUMBER_FIELD_NUMBER;
+      hash = (53 * hash) + getNumber().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * ByWhatsApp - filter the list of campaigns by the Whatsapp
+     * </pre>
+     *
+     * Protobuf type {@code api.v0alpha.ListCampaignsReq.ByWhatsApp}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:api.v0alpha.ListCampaignsReq.ByWhatsApp)
+        com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsAppOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.api.v0alpha.OmniapiProto.internal_static_api_v0alpha_ListCampaignsReq_ByWhatsApp_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.api.v0alpha.OmniapiProto.internal_static_api_v0alpha_ListCampaignsReq_ByWhatsApp_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp.class, com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp.Builder.class);
+      }
+
+      // Construct using com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        number_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.tcn.cloud.api.api.v0alpha.OmniapiProto.internal_static_api_v0alpha_ListCampaignsReq_ByWhatsApp_descriptor;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp getDefaultInstanceForType() {
+        return com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp build() {
+        com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp buildPartial() {
+        com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp result = new com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.number_ = number_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp) {
+          return mergeFrom((com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp other) {
+        if (other == com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp.getDefaultInstance()) return this;
+        if (!other.getNumber().isEmpty()) {
+          number_ = other.number_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                number_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object number_ = "";
+      /**
+       * <pre>
+       * whatsapp number
+       * </pre>
+       *
+       * <code>string number = 1 [json_name = "number"];</code>
+       * @return The number.
+       */
+      public java.lang.String getNumber() {
+        java.lang.Object ref = number_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          number_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * whatsapp number
+       * </pre>
+       *
+       * <code>string number = 1 [json_name = "number"];</code>
+       * @return The bytes for number.
+       */
+      public com.google.protobuf.ByteString
+          getNumberBytes() {
+        java.lang.Object ref = number_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          number_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * whatsapp number
+       * </pre>
+       *
+       * <code>string number = 1 [json_name = "number"];</code>
+       * @param value The number to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNumber(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        number_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * whatsapp number
+       * </pre>
+       *
+       * <code>string number = 1 [json_name = "number"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNumber() {
+        number_ = getDefaultInstance().getNumber();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * whatsapp number
+       * </pre>
+       *
+       * <code>string number = 1 [json_name = "number"];</code>
+       * @param value The bytes for number to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNumberBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        number_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:api.v0alpha.ListCampaignsReq.ByWhatsApp)
+    }
+
+    // @@protoc_insertion_point(class_scope:api.v0alpha.ListCampaignsReq.ByWhatsApp)
+    private static final com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp();
+    }
+
+    public static com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ByWhatsApp>
+        PARSER = new com.google.protobuf.AbstractParser<ByWhatsApp>() {
+      @java.lang.Override
+      public ByWhatsApp parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ByWhatsApp> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ByWhatsApp> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private int filterCase_ = 0;
   @SuppressWarnings("serial")
   private java.lang.Object filter_;
@@ -4848,7 +5444,8 @@ private static final long serialVersionUID = 0L;
     BY_CONNECTED_INBOX(104),
     BY_VERIFIED_EMAIL(105),
     BY_SMS_NUMBER(106),
-    BY_WHATSAPP_NUMBER(107),
+    @java.lang.Deprecated BY_WHATSAPP_NUMBER(107),
+    BY_WHATS_APP(108),
     FILTER_NOT_SET(0);
     private final int value;
     private FilterCase(int value) {
@@ -4874,6 +5471,7 @@ private static final long serialVersionUID = 0L;
         case 105: return BY_VERIFIED_EMAIL;
         case 106: return BY_SMS_NUMBER;
         case 107: return BY_WHATSAPP_NUMBER;
+        case 108: return BY_WHATS_APP;
         case 0: return FILTER_NOT_SET;
         default: return null;
       }
@@ -5224,33 +5822,68 @@ private static final long serialVersionUID = 0L;
 
   public static final int BY_WHATSAPP_NUMBER_FIELD_NUMBER = 107;
   /**
-   * <code>.api.v0alpha.ListCampaignsReq.ByWhatsAppNumber by_whatsapp_number = 107 [json_name = "byWhatsappNumber"];</code>
+   * <code>.api.v0alpha.ListCampaignsReq.ByWhatsAppNumber by_whatsapp_number = 107 [json_name = "byWhatsappNumber", deprecated = true];</code>
+   * @deprecated api.v0alpha.ListCampaignsReq.by_whatsapp_number is deprecated.
+   *     See api/v0alpha/omniapi.proto;l=1143
    * @return Whether the byWhatsappNumber field is set.
    */
   @java.lang.Override
-  public boolean hasByWhatsappNumber() {
+  @java.lang.Deprecated public boolean hasByWhatsappNumber() {
     return filterCase_ == 107;
   }
   /**
-   * <code>.api.v0alpha.ListCampaignsReq.ByWhatsAppNumber by_whatsapp_number = 107 [json_name = "byWhatsappNumber"];</code>
+   * <code>.api.v0alpha.ListCampaignsReq.ByWhatsAppNumber by_whatsapp_number = 107 [json_name = "byWhatsappNumber", deprecated = true];</code>
+   * @deprecated api.v0alpha.ListCampaignsReq.by_whatsapp_number is deprecated.
+   *     See api/v0alpha/omniapi.proto;l=1143
    * @return The byWhatsappNumber.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsAppNumber getByWhatsappNumber() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsAppNumber getByWhatsappNumber() {
     if (filterCase_ == 107) {
        return (com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsAppNumber) filter_;
     }
     return com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsAppNumber.getDefaultInstance();
   }
   /**
-   * <code>.api.v0alpha.ListCampaignsReq.ByWhatsAppNumber by_whatsapp_number = 107 [json_name = "byWhatsappNumber"];</code>
+   * <code>.api.v0alpha.ListCampaignsReq.ByWhatsAppNumber by_whatsapp_number = 107 [json_name = "byWhatsappNumber", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsAppNumberOrBuilder getByWhatsappNumberOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsAppNumberOrBuilder getByWhatsappNumberOrBuilder() {
     if (filterCase_ == 107) {
        return (com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsAppNumber) filter_;
     }
     return com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsAppNumber.getDefaultInstance();
+  }
+
+  public static final int BY_WHATS_APP_FIELD_NUMBER = 108;
+  /**
+   * <code>.api.v0alpha.ListCampaignsReq.ByWhatsApp by_whats_app = 108 [json_name = "byWhatsApp"];</code>
+   * @return Whether the byWhatsApp field is set.
+   */
+  @java.lang.Override
+  public boolean hasByWhatsApp() {
+    return filterCase_ == 108;
+  }
+  /**
+   * <code>.api.v0alpha.ListCampaignsReq.ByWhatsApp by_whats_app = 108 [json_name = "byWhatsApp"];</code>
+   * @return The byWhatsApp.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp getByWhatsApp() {
+    if (filterCase_ == 108) {
+       return (com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp) filter_;
+    }
+    return com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp.getDefaultInstance();
+  }
+  /**
+   * <code>.api.v0alpha.ListCampaignsReq.ByWhatsApp by_whats_app = 108 [json_name = "byWhatsApp"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsAppOrBuilder getByWhatsAppOrBuilder() {
+    if (filterCase_ == 108) {
+       return (com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp) filter_;
+    }
+    return com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp.getDefaultInstance();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -5301,6 +5934,9 @@ private static final long serialVersionUID = 0L;
     }
     if (filterCase_ == 107) {
       output.writeMessage(107, (com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsAppNumber) filter_);
+    }
+    if (filterCase_ == 108) {
+      output.writeMessage(108, (com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp) filter_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -5359,6 +5995,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(107, (com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsAppNumber) filter_);
     }
+    if (filterCase_ == 108) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(108, (com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp) filter_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -5414,6 +6054,10 @@ private static final long serialVersionUID = 0L;
         if (!getByWhatsappNumber()
             .equals(other.getByWhatsappNumber())) return false;
         break;
+      case 108:
+        if (!getByWhatsApp()
+            .equals(other.getByWhatsApp())) return false;
+        break;
       case 0:
       default:
     }
@@ -5468,6 +6112,10 @@ private static final long serialVersionUID = 0L;
       case 107:
         hash = (37 * hash) + BY_WHATSAPP_NUMBER_FIELD_NUMBER;
         hash = (53 * hash) + getByWhatsappNumber().hashCode();
+        break;
+      case 108:
+        hash = (37 * hash) + BY_WHATS_APP_FIELD_NUMBER;
+        hash = (53 * hash) + getByWhatsApp().hashCode();
         break;
       case 0:
       default:
@@ -5638,6 +6286,9 @@ private static final long serialVersionUID = 0L;
       if (byWhatsappNumberBuilder_ != null) {
         byWhatsappNumberBuilder_.clear();
       }
+      if (byWhatsAppBuilder_ != null) {
+        byWhatsAppBuilder_.clear();
+      }
       filterCase_ = 0;
       filter_ = null;
       return this;
@@ -5724,6 +6375,10 @@ private static final long serialVersionUID = 0L;
       if (filterCase_ == 107 &&
           byWhatsappNumberBuilder_ != null) {
         result.filter_ = byWhatsappNumberBuilder_.build();
+      }
+      if (filterCase_ == 108 &&
+          byWhatsAppBuilder_ != null) {
+        result.filter_ = byWhatsAppBuilder_.build();
       }
     }
 
@@ -5815,6 +6470,10 @@ private static final long serialVersionUID = 0L;
         }
         case BY_WHATSAPP_NUMBER: {
           mergeByWhatsappNumber(other.getByWhatsappNumber());
+          break;
+        }
+        case BY_WHATS_APP: {
+          mergeByWhatsApp(other.getByWhatsApp());
           break;
         }
         case FILTER_NOT_SET: {
@@ -5927,6 +6586,13 @@ private static final long serialVersionUID = 0L;
               filterCase_ = 107;
               break;
             } // case 858
+            case 866: {
+              input.readMessage(
+                  getByWhatsAppFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              filterCase_ = 108;
+              break;
+            } // case 866
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -7299,19 +7965,23 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsAppNumber, com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsAppNumber.Builder, com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsAppNumberOrBuilder> byWhatsappNumberBuilder_;
     /**
-     * <code>.api.v0alpha.ListCampaignsReq.ByWhatsAppNumber by_whatsapp_number = 107 [json_name = "byWhatsappNumber"];</code>
+     * <code>.api.v0alpha.ListCampaignsReq.ByWhatsAppNumber by_whatsapp_number = 107 [json_name = "byWhatsappNumber", deprecated = true];</code>
+     * @deprecated api.v0alpha.ListCampaignsReq.by_whatsapp_number is deprecated.
+     *     See api/v0alpha/omniapi.proto;l=1143
      * @return Whether the byWhatsappNumber field is set.
      */
     @java.lang.Override
-    public boolean hasByWhatsappNumber() {
+    @java.lang.Deprecated public boolean hasByWhatsappNumber() {
       return filterCase_ == 107;
     }
     /**
-     * <code>.api.v0alpha.ListCampaignsReq.ByWhatsAppNumber by_whatsapp_number = 107 [json_name = "byWhatsappNumber"];</code>
+     * <code>.api.v0alpha.ListCampaignsReq.ByWhatsAppNumber by_whatsapp_number = 107 [json_name = "byWhatsappNumber", deprecated = true];</code>
+     * @deprecated api.v0alpha.ListCampaignsReq.by_whatsapp_number is deprecated.
+     *     See api/v0alpha/omniapi.proto;l=1143
      * @return The byWhatsappNumber.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsAppNumber getByWhatsappNumber() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsAppNumber getByWhatsappNumber() {
       if (byWhatsappNumberBuilder_ == null) {
         if (filterCase_ == 107) {
           return (com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsAppNumber) filter_;
@@ -7325,9 +7995,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.v0alpha.ListCampaignsReq.ByWhatsAppNumber by_whatsapp_number = 107 [json_name = "byWhatsappNumber"];</code>
+     * <code>.api.v0alpha.ListCampaignsReq.ByWhatsAppNumber by_whatsapp_number = 107 [json_name = "byWhatsappNumber", deprecated = true];</code>
      */
-    public Builder setByWhatsappNumber(com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsAppNumber value) {
+    @java.lang.Deprecated public Builder setByWhatsappNumber(com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsAppNumber value) {
       if (byWhatsappNumberBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -7341,9 +8011,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.v0alpha.ListCampaignsReq.ByWhatsAppNumber by_whatsapp_number = 107 [json_name = "byWhatsappNumber"];</code>
+     * <code>.api.v0alpha.ListCampaignsReq.ByWhatsAppNumber by_whatsapp_number = 107 [json_name = "byWhatsappNumber", deprecated = true];</code>
      */
-    public Builder setByWhatsappNumber(
+    @java.lang.Deprecated public Builder setByWhatsappNumber(
         com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsAppNumber.Builder builderForValue) {
       if (byWhatsappNumberBuilder_ == null) {
         filter_ = builderForValue.build();
@@ -7355,9 +8025,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.v0alpha.ListCampaignsReq.ByWhatsAppNumber by_whatsapp_number = 107 [json_name = "byWhatsappNumber"];</code>
+     * <code>.api.v0alpha.ListCampaignsReq.ByWhatsAppNumber by_whatsapp_number = 107 [json_name = "byWhatsappNumber", deprecated = true];</code>
      */
-    public Builder mergeByWhatsappNumber(com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsAppNumber value) {
+    @java.lang.Deprecated public Builder mergeByWhatsappNumber(com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsAppNumber value) {
       if (byWhatsappNumberBuilder_ == null) {
         if (filterCase_ == 107 &&
             filter_ != com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsAppNumber.getDefaultInstance()) {
@@ -7378,9 +8048,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.v0alpha.ListCampaignsReq.ByWhatsAppNumber by_whatsapp_number = 107 [json_name = "byWhatsappNumber"];</code>
+     * <code>.api.v0alpha.ListCampaignsReq.ByWhatsAppNumber by_whatsapp_number = 107 [json_name = "byWhatsappNumber", deprecated = true];</code>
      */
-    public Builder clearByWhatsappNumber() {
+    @java.lang.Deprecated public Builder clearByWhatsappNumber() {
       if (byWhatsappNumberBuilder_ == null) {
         if (filterCase_ == 107) {
           filterCase_ = 0;
@@ -7397,16 +8067,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.v0alpha.ListCampaignsReq.ByWhatsAppNumber by_whatsapp_number = 107 [json_name = "byWhatsappNumber"];</code>
+     * <code>.api.v0alpha.ListCampaignsReq.ByWhatsAppNumber by_whatsapp_number = 107 [json_name = "byWhatsappNumber", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsAppNumber.Builder getByWhatsappNumberBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsAppNumber.Builder getByWhatsappNumberBuilder() {
       return getByWhatsappNumberFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.v0alpha.ListCampaignsReq.ByWhatsAppNumber by_whatsapp_number = 107 [json_name = "byWhatsappNumber"];</code>
+     * <code>.api.v0alpha.ListCampaignsReq.ByWhatsAppNumber by_whatsapp_number = 107 [json_name = "byWhatsappNumber", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsAppNumberOrBuilder getByWhatsappNumberOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsAppNumberOrBuilder getByWhatsappNumberOrBuilder() {
       if ((filterCase_ == 107) && (byWhatsappNumberBuilder_ != null)) {
         return byWhatsappNumberBuilder_.getMessageOrBuilder();
       } else {
@@ -7417,7 +8087,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.v0alpha.ListCampaignsReq.ByWhatsAppNumber by_whatsapp_number = 107 [json_name = "byWhatsappNumber"];</code>
+     * <code>.api.v0alpha.ListCampaignsReq.ByWhatsAppNumber by_whatsapp_number = 107 [json_name = "byWhatsappNumber", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsAppNumber, com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsAppNumber.Builder, com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsAppNumberOrBuilder> 
@@ -7436,6 +8106,148 @@ private static final long serialVersionUID = 0L;
       filterCase_ = 107;
       onChanged();
       return byWhatsappNumberBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp, com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp.Builder, com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsAppOrBuilder> byWhatsAppBuilder_;
+    /**
+     * <code>.api.v0alpha.ListCampaignsReq.ByWhatsApp by_whats_app = 108 [json_name = "byWhatsApp"];</code>
+     * @return Whether the byWhatsApp field is set.
+     */
+    @java.lang.Override
+    public boolean hasByWhatsApp() {
+      return filterCase_ == 108;
+    }
+    /**
+     * <code>.api.v0alpha.ListCampaignsReq.ByWhatsApp by_whats_app = 108 [json_name = "byWhatsApp"];</code>
+     * @return The byWhatsApp.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp getByWhatsApp() {
+      if (byWhatsAppBuilder_ == null) {
+        if (filterCase_ == 108) {
+          return (com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp) filter_;
+        }
+        return com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp.getDefaultInstance();
+      } else {
+        if (filterCase_ == 108) {
+          return byWhatsAppBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.v0alpha.ListCampaignsReq.ByWhatsApp by_whats_app = 108 [json_name = "byWhatsApp"];</code>
+     */
+    public Builder setByWhatsApp(com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp value) {
+      if (byWhatsAppBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        filter_ = value;
+        onChanged();
+      } else {
+        byWhatsAppBuilder_.setMessage(value);
+      }
+      filterCase_ = 108;
+      return this;
+    }
+    /**
+     * <code>.api.v0alpha.ListCampaignsReq.ByWhatsApp by_whats_app = 108 [json_name = "byWhatsApp"];</code>
+     */
+    public Builder setByWhatsApp(
+        com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp.Builder builderForValue) {
+      if (byWhatsAppBuilder_ == null) {
+        filter_ = builderForValue.build();
+        onChanged();
+      } else {
+        byWhatsAppBuilder_.setMessage(builderForValue.build());
+      }
+      filterCase_ = 108;
+      return this;
+    }
+    /**
+     * <code>.api.v0alpha.ListCampaignsReq.ByWhatsApp by_whats_app = 108 [json_name = "byWhatsApp"];</code>
+     */
+    public Builder mergeByWhatsApp(com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp value) {
+      if (byWhatsAppBuilder_ == null) {
+        if (filterCase_ == 108 &&
+            filter_ != com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp.getDefaultInstance()) {
+          filter_ = com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp.newBuilder((com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp) filter_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          filter_ = value;
+        }
+        onChanged();
+      } else {
+        if (filterCase_ == 108) {
+          byWhatsAppBuilder_.mergeFrom(value);
+        } else {
+          byWhatsAppBuilder_.setMessage(value);
+        }
+      }
+      filterCase_ = 108;
+      return this;
+    }
+    /**
+     * <code>.api.v0alpha.ListCampaignsReq.ByWhatsApp by_whats_app = 108 [json_name = "byWhatsApp"];</code>
+     */
+    public Builder clearByWhatsApp() {
+      if (byWhatsAppBuilder_ == null) {
+        if (filterCase_ == 108) {
+          filterCase_ = 0;
+          filter_ = null;
+          onChanged();
+        }
+      } else {
+        if (filterCase_ == 108) {
+          filterCase_ = 0;
+          filter_ = null;
+        }
+        byWhatsAppBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.v0alpha.ListCampaignsReq.ByWhatsApp by_whats_app = 108 [json_name = "byWhatsApp"];</code>
+     */
+    public com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp.Builder getByWhatsAppBuilder() {
+      return getByWhatsAppFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.v0alpha.ListCampaignsReq.ByWhatsApp by_whats_app = 108 [json_name = "byWhatsApp"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsAppOrBuilder getByWhatsAppOrBuilder() {
+      if ((filterCase_ == 108) && (byWhatsAppBuilder_ != null)) {
+        return byWhatsAppBuilder_.getMessageOrBuilder();
+      } else {
+        if (filterCase_ == 108) {
+          return (com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp) filter_;
+        }
+        return com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.v0alpha.ListCampaignsReq.ByWhatsApp by_whats_app = 108 [json_name = "byWhatsApp"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp, com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp.Builder, com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsAppOrBuilder> 
+        getByWhatsAppFieldBuilder() {
+      if (byWhatsAppBuilder_ == null) {
+        if (!(filterCase_ == 108)) {
+          filter_ = com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp.getDefaultInstance();
+        }
+        byWhatsAppBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp, com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp.Builder, com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsAppOrBuilder>(
+                (com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.ByWhatsApp) filter_,
+                getParentForChildren(),
+                isClean());
+        filter_ = null;
+      }
+      filterCase_ = 108;
+      onChanged();
+      return byWhatsAppBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

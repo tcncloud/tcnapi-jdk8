@@ -265,6 +265,16 @@ public final class UserProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_org_CreatePasswordResetLinkResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_CreatePasswordResetLinkByOrgIdRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_CreatePasswordResetLinkByOrgIdRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_CreatePasswordResetLinkByOrgIdResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_CreatePasswordResetLinkByOrgIdResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_v1alpha1_org_GetUserLoginInfoRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -274,6 +284,56 @@ public final class UserProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_org_GetUserLoginInfoResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_SendPasswordResetRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_SendPasswordResetRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_SendPasswordResetResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_SendPasswordResetResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_SendPasswordResetByOrgIdRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_SendPasswordResetByOrgIdRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_SendPasswordResetByOrgIdResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_SendPasswordResetByOrgIdResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_ResetMyPasswordRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_ResetMyPasswordRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_ResetMyPasswordResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_ResetMyPasswordResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_ResetUserPasswordRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_ResetUserPasswordRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_ResetUserPasswordResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_ResetUserPasswordResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_ResetUserPasswordByOrgIdRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_ResetUserPasswordByOrgIdRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_ResetUserPasswordByOrgIdResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_ResetUserPasswordByOrgIdResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_v1alpha1_org_GetUserEmailVerifiedRequest_descriptor;
   static final 
@@ -600,82 +660,99 @@ public final class UserProto {
       "equest\022\027\n\007user_id\030\001 \001(\tR\006userId\022:\n\nexpir" +
       "ation\030\002 \001(\0132\032.google.protobuf.TimestampR" +
       "\nexpiration\"3\n\037CreatePasswordResetLinkRe" +
-      "sponse\022\020\n\003url\030\001 \001(\tR\003url\"I\n\027GetUserLogin" +
-      "InfoRequest\022\027\n\007user_id\030\001 \001(\tR\006userId\022\025\n\006" +
-      "org_id\030\002 \001(\tR\005orgId\"\225\003\n\030GetUserLoginInfo" +
-      "Response\022\030\n\007blocked\030\001 \001(\010R\007blocked\022\027\n\007la" +
-      "st_ip\030\002 \001(\tR\006lastIp\0229\n\nlast_login\030\003 \001(\0132" +
-      "\032.google.protobuf.TimestampR\tlastLogin\022J" +
-      "\n\023last_password_reset\030\004 \001(\0132\032.google.pro" +
-      "tobuf.TimestampR\021lastPasswordReset\022!\n\014lo" +
-      "gins_count\030\005 \001(\003R\013loginsCount\0229\n\ncreated" +
-      "_at\030\006 \001(\0132\032.google.protobuf.TimestampR\tc" +
-      "reatedAt\0229\n\nupdated_at\030\007 \001(\0132\032.google.pr" +
-      "otobuf.TimestampR\tupdatedAt\022&\n\017has_block" +
-      "ed_ips\030\010 \001(\010R\rhasBlockedIps\"6\n\033GetUserEm" +
-      "ailVerifiedRequest\022\027\n\007user_id\030\001 \001(\tR\006use" +
-      "rId\"E\n\034GetUserEmailVerifiedResponse\022%\n\016e" +
-      "mail_verified\030\001 \001(\010R\remailVerified\"T\n\"Ge" +
-      "tUserEmailVerifiedByOrgIdRequest\022\027\n\007user" +
-      "_id\030\001 \001(\tR\006userId\022\025\n\006org_id\030\002 \001(\tR\005orgId" +
-      "\"L\n#GetUserEmailVerifiedByOrgIdResponse\022" +
-      "%\n\016email_verified\030\001 \001(\010R\remailVerified\";" +
-      "\n SendUserEmailVerificationRequest\022\027\n\007us" +
-      "er_id\030\001 \001(\tR\006userId\"#\n!SendUserEmailVeri" +
-      "ficationResponse\"Y\n\'SendUserEmailVerific" +
-      "ationByOrgIdRequest\022\027\n\007user_id\030\001 \001(\tR\006us" +
-      "erId\022\025\n\006org_id\030\002 \001(\tR\005orgId\"*\n(SendUserE" +
-      "mailVerificationByOrgIdResponse\"\033\n\031GetUs" +
-      "erSessionDataRequest\"\373\r\n\032GetUserSessionD" +
-      "ataResponse\022E\n\004user\030\001 \001(\01321.api.v1alpha1" +
-      ".org.GetUserSessionDataResponse.UserR\004us" +
-      "er\022\031\n\010org_name\030\002 \001(\tR\007orgName\022>\n\016p3_perm" +
-      "issions\030\003 \003(\0162\027.api.commons.PermissionR\r" +
-      "p3Permissions\022M\n\021permission_groups\030\004 \003(\013" +
-      "2 .api.commons.org.PermissionGroupR\020perm" +
-      "issionGroups\022.\n\006labels\030\005 \003(\0132\026.api.commo" +
-      "ns.org.LabelR\006labels\032\273\013\n\004User\022\027\n\007user_id" +
-      "\030\001 \001(\tR\006userId\022\025\n\006org_id\030\002 \001(\tR\005orgId\022\032\n" +
-      "\010username\030\003 \001(\tR\010username\0223\n\026p3_permissi" +
-      "on_group_id\030\004 \001(\tR\023p3PermissionGroupId\022(" +
-      "\n\020partner_agent_id\030\010 \001(\tR\016partnerAgentId" +
-      "\022i\n\016region_sid_map\030\n \003(\0132C.api.v1alpha1." +
-      "org.GetUserSessionDataResponse.User.Regi" +
-      "onSidMapEntryR\014regionSidMap\022%\n\016default_r" +
-      "egion\030\013 \001(\tR\rdefaultRegion\022\027\n\007api_key\030\014 " +
-      "\001(\tR\006apiKey\022\024\n\005email\030\r \001(\tR\005email\022%\n\016log" +
-      "in_disabled\030\016 \001(\010R\rloginDisabled\022\035\n\ncall" +
-      "er_ids\030\017 \003(\tR\tcallerIds\022)\n\020linkback_numb" +
-      "ers\030\020 \003(\tR\017linkbackNumbers\022 \n\014auth_user_" +
-      "id\030\021 \001(\tR\nauthUserId\022\035\n\nenable_mfa\030\022 \001(\010" +
-      "R\tenableMfa\022\035\n\nfirst_name\030\023 \001(\tR\tfirstNa" +
-      "me\022\033\n\tlast_name\030\024 \001(\tR\010lastName\0224\n\007creat" +
-      "ed\030\025 \001(\0132\032.google.protobuf.TimestampR\007cr" +
-      "eated\022=\n\014last_updated\030\026 \001(\0132\032.google.pro" +
-      "tobuf.TimestampR\013lastUpdated\0226\n\027password" +
-      "_reset_required\030\027 \001(\010R\025passwordResetRequ" +
-      "ired\022A\n\rconnection_id\030\030 \001(\0132\034.google.pro" +
-      "tobuf.StringValueR\014connectionId\022J\n\022time_" +
-      "zone_override\030\031 \001(\0132\034.api.commons.TimeZo" +
-      "neWrapperR\020timeZoneOverride\0220\n\024permissio" +
-      "n_group_ids\030\032 \003(\tR\022permissionGroupIds\022\033\n" +
-      "\ttrust_ids\030\033 \003(\tR\010trustIds\022R\n\023default_ap" +
-      "plication\030\034 \001(\0162!.api.commons.OperatorAp" +
-      "plicationsR\022defaultApplication\022$\n\016user_c" +
-      "aller_id\030\035 \001(\tR\014userCallerId\0223\n\026agent_pr" +
-      "ofile_group_id\030\036 \001(\tR\023agentProfileGroupI" +
-      "d\022\024\n\005agent\030\037 \001(\010R\005agent\022#\n\raccount_owner" +
-      "\030  \001(\010R\014accountOwner\032e\n\nRegionSids\022\033\n\tlo" +
-      "gin_sid\030\001 \001(\003R\010loginSid\022\033\n\tagent_sid\030\002 \001" +
-      "(\003R\010agentSid\022\035\n\nclient_sid\030\003 \001(\003R\tclient" +
-      "Sid\032}\n\021RegionSidMapEntry\022\020\n\003key\030\001 \001(\tR\003k" +
-      "ey\022R\n\005value\030\002 \001(\0132<.api.v1alpha1.org.Get" +
-      "UserSessionDataResponse.User.RegionSidsR" +
-      "\005value:\0028\001B\221\001\n\"com.tcn.cloud.api.api.v1a" +
-      "lpha1.orgB\tUserProtoP\001\242\002\003AVO\252\002\020Api.V1alp" +
-      "ha1.Org\312\002\020Api\\V1alpha1\\Org\342\002\034Api\\V1alpha" +
-      "1\\Org\\GPBMetadata\352\002\022Api::V1alpha1::Orgb\006" +
-      "proto3"
+      "sponse\022\020\n\003url\030\001 \001(\tR\003url\"W\n%CreatePasswo" +
+      "rdResetLinkByOrgIdRequest\022\027\n\007user_id\030\001 \001" +
+      "(\tR\006userId\022\025\n\006org_id\030\002 \001(\tR\005orgId\":\n&Cre" +
+      "atePasswordResetLinkByOrgIdResponse\022\020\n\003u" +
+      "rl\030\001 \001(\tR\003url\"I\n\027GetUserLoginInfoRequest" +
+      "\022\027\n\007user_id\030\001 \001(\tR\006userId\022\025\n\006org_id\030\002 \001(" +
+      "\tR\005orgId\"\225\003\n\030GetUserLoginInfoResponse\022\030\n" +
+      "\007blocked\030\001 \001(\010R\007blocked\022\027\n\007last_ip\030\002 \001(\t" +
+      "R\006lastIp\0229\n\nlast_login\030\003 \001(\0132\032.google.pr" +
+      "otobuf.TimestampR\tlastLogin\022J\n\023last_pass" +
+      "word_reset\030\004 \001(\0132\032.google.protobuf.Times" +
+      "tampR\021lastPasswordReset\022!\n\014logins_count\030" +
+      "\005 \001(\003R\013loginsCount\0229\n\ncreated_at\030\006 \001(\0132\032" +
+      ".google.protobuf.TimestampR\tcreatedAt\0229\n" +
+      "\nupdated_at\030\007 \001(\0132\032.google.protobuf.Time" +
+      "stampR\tupdatedAt\022&\n\017has_blocked_ips\030\010 \001(" +
+      "\010R\rhasBlockedIps\"0\n\030SendPasswordResetReq" +
+      "uest\022\024\n\005email\030\001 \001(\tR\005email\"\033\n\031SendPasswo" +
+      "rdResetResponse\"N\n\037SendPasswordResetByOr" +
+      "gIdRequest\022\025\n\006org_id\030\001 \001(\tR\005orgId\022\024\n\005ema" +
+      "il\030\002 \001(\tR\005email\"\"\n SendPasswordResetByOr" +
+      "gIdResponse\"4\n\026ResetMyPasswordRequest\022\032\n" +
+      "\010password\030\001 \001(\tR\010password\"\031\n\027ResetMyPass" +
+      "wordResponse\"O\n\030ResetUserPasswordRequest" +
+      "\022\032\n\010password\030\001 \001(\tR\010password\022\027\n\007user_id\030" +
+      "\002 \001(\tR\006userId\"\033\n\031ResetUserPasswordRespon" +
+      "se\"m\n\037ResetUserPasswordByOrgIdRequest\022\032\n" +
+      "\010password\030\001 \001(\tR\010password\022\027\n\007user_id\030\002 \001" +
+      "(\tR\006userId\022\025\n\006org_id\030\003 \001(\tR\005orgId\"\"\n Res" +
+      "etUserPasswordByOrgIdResponse\"6\n\033GetUser" +
+      "EmailVerifiedRequest\022\027\n\007user_id\030\001 \001(\tR\006u" +
+      "serId\"E\n\034GetUserEmailVerifiedResponse\022%\n" +
+      "\016email_verified\030\001 \001(\010R\remailVerified\"T\n\"" +
+      "GetUserEmailVerifiedByOrgIdRequest\022\027\n\007us" +
+      "er_id\030\001 \001(\tR\006userId\022\025\n\006org_id\030\002 \001(\tR\005org" +
+      "Id\"L\n#GetUserEmailVerifiedByOrgIdRespons" +
+      "e\022%\n\016email_verified\030\001 \001(\010R\remailVerified" +
+      "\";\n SendUserEmailVerificationRequest\022\027\n\007" +
+      "user_id\030\001 \001(\tR\006userId\"#\n!SendUserEmailVe" +
+      "rificationResponse\"Y\n\'SendUserEmailVerif" +
+      "icationByOrgIdRequest\022\027\n\007user_id\030\001 \001(\tR\006" +
+      "userId\022\025\n\006org_id\030\002 \001(\tR\005orgId\"*\n(SendUse" +
+      "rEmailVerificationByOrgIdResponse\"\033\n\031Get" +
+      "UserSessionDataRequest\"\373\r\n\032GetUserSessio" +
+      "nDataResponse\022E\n\004user\030\001 \001(\01321.api.v1alph" +
+      "a1.org.GetUserSessionDataResponse.UserR\004" +
+      "user\022\031\n\010org_name\030\002 \001(\tR\007orgName\022>\n\016p3_pe" +
+      "rmissions\030\003 \003(\0162\027.api.commons.Permission" +
+      "R\rp3Permissions\022M\n\021permission_groups\030\004 \003" +
+      "(\0132 .api.commons.org.PermissionGroupR\020pe" +
+      "rmissionGroups\022.\n\006labels\030\005 \003(\0132\026.api.com" +
+      "mons.org.LabelR\006labels\032\273\013\n\004User\022\027\n\007user_" +
+      "id\030\001 \001(\tR\006userId\022\025\n\006org_id\030\002 \001(\tR\005orgId\022" +
+      "\032\n\010username\030\003 \001(\tR\010username\0223\n\026p3_permis" +
+      "sion_group_id\030\004 \001(\tR\023p3PermissionGroupId" +
+      "\022(\n\020partner_agent_id\030\010 \001(\tR\016partnerAgent" +
+      "Id\022i\n\016region_sid_map\030\n \003(\0132C.api.v1alpha" +
+      "1.org.GetUserSessionDataResponse.User.Re" +
+      "gionSidMapEntryR\014regionSidMap\022%\n\016default" +
+      "_region\030\013 \001(\tR\rdefaultRegion\022\027\n\007api_key\030" +
+      "\014 \001(\tR\006apiKey\022\024\n\005email\030\r \001(\tR\005email\022%\n\016l" +
+      "ogin_disabled\030\016 \001(\010R\rloginDisabled\022\035\n\nca" +
+      "ller_ids\030\017 \003(\tR\tcallerIds\022)\n\020linkback_nu" +
+      "mbers\030\020 \003(\tR\017linkbackNumbers\022 \n\014auth_use" +
+      "r_id\030\021 \001(\tR\nauthUserId\022\035\n\nenable_mfa\030\022 \001" +
+      "(\010R\tenableMfa\022\035\n\nfirst_name\030\023 \001(\tR\tfirst" +
+      "Name\022\033\n\tlast_name\030\024 \001(\tR\010lastName\0224\n\007cre" +
+      "ated\030\025 \001(\0132\032.google.protobuf.TimestampR\007" +
+      "created\022=\n\014last_updated\030\026 \001(\0132\032.google.p" +
+      "rotobuf.TimestampR\013lastUpdated\0226\n\027passwo" +
+      "rd_reset_required\030\027 \001(\010R\025passwordResetRe" +
+      "quired\022A\n\rconnection_id\030\030 \001(\0132\034.google.p" +
+      "rotobuf.StringValueR\014connectionId\022J\n\022tim" +
+      "e_zone_override\030\031 \001(\0132\034.api.commons.Time" +
+      "ZoneWrapperR\020timeZoneOverride\0220\n\024permiss" +
+      "ion_group_ids\030\032 \003(\tR\022permissionGroupIds\022" +
+      "\033\n\ttrust_ids\030\033 \003(\tR\010trustIds\022R\n\023default_" +
+      "application\030\034 \001(\0162!.api.commons.Operator" +
+      "ApplicationsR\022defaultApplication\022$\n\016user" +
+      "_caller_id\030\035 \001(\tR\014userCallerId\0223\n\026agent_" +
+      "profile_group_id\030\036 \001(\tR\023agentProfileGrou" +
+      "pId\022\024\n\005agent\030\037 \001(\010R\005agent\022#\n\raccount_own" +
+      "er\030  \001(\010R\014accountOwner\032e\n\nRegionSids\022\033\n\t" +
+      "login_sid\030\001 \001(\003R\010loginSid\022\033\n\tagent_sid\030\002" +
+      " \001(\003R\010agentSid\022\035\n\nclient_sid\030\003 \001(\003R\tclie" +
+      "ntSid\032}\n\021RegionSidMapEntry\022\020\n\003key\030\001 \001(\tR" +
+      "\003key\022R\n\005value\030\002 \001(\0132<.api.v1alpha1.org.G" +
+      "etUserSessionDataResponse.User.RegionSid" +
+      "sR\005value:\0028\001B\221\001\n\"com.tcn.cloud.api.api.v" +
+      "1alpha1.orgB\tUserProtoP\001\242\002\003AVO\252\002\020Api.V1a" +
+      "lpha1.Org\312\002\020Api\\V1alpha1\\Org\342\002\034Api\\V1alp" +
+      "ha1\\Org\\GPBMetadata\352\002\022Api::V1alpha1::Org" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -990,74 +1067,146 @@ public final class UserProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_CreatePasswordResetLinkResponse_descriptor,
         new java.lang.String[] { "Url", });
-    internal_static_api_v1alpha1_org_GetUserLoginInfoRequest_descriptor =
+    internal_static_api_v1alpha1_org_CreatePasswordResetLinkByOrgIdRequest_descriptor =
       getDescriptor().getMessageTypes().get(38);
+    internal_static_api_v1alpha1_org_CreatePasswordResetLinkByOrgIdRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_CreatePasswordResetLinkByOrgIdRequest_descriptor,
+        new java.lang.String[] { "UserId", "OrgId", });
+    internal_static_api_v1alpha1_org_CreatePasswordResetLinkByOrgIdResponse_descriptor =
+      getDescriptor().getMessageTypes().get(39);
+    internal_static_api_v1alpha1_org_CreatePasswordResetLinkByOrgIdResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_CreatePasswordResetLinkByOrgIdResponse_descriptor,
+        new java.lang.String[] { "Url", });
+    internal_static_api_v1alpha1_org_GetUserLoginInfoRequest_descriptor =
+      getDescriptor().getMessageTypes().get(40);
     internal_static_api_v1alpha1_org_GetUserLoginInfoRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_GetUserLoginInfoRequest_descriptor,
         new java.lang.String[] { "UserId", "OrgId", });
     internal_static_api_v1alpha1_org_GetUserLoginInfoResponse_descriptor =
-      getDescriptor().getMessageTypes().get(39);
+      getDescriptor().getMessageTypes().get(41);
     internal_static_api_v1alpha1_org_GetUserLoginInfoResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_GetUserLoginInfoResponse_descriptor,
         new java.lang.String[] { "Blocked", "LastIp", "LastLogin", "LastPasswordReset", "LoginsCount", "CreatedAt", "UpdatedAt", "HasBlockedIps", });
+    internal_static_api_v1alpha1_org_SendPasswordResetRequest_descriptor =
+      getDescriptor().getMessageTypes().get(42);
+    internal_static_api_v1alpha1_org_SendPasswordResetRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_SendPasswordResetRequest_descriptor,
+        new java.lang.String[] { "Email", });
+    internal_static_api_v1alpha1_org_SendPasswordResetResponse_descriptor =
+      getDescriptor().getMessageTypes().get(43);
+    internal_static_api_v1alpha1_org_SendPasswordResetResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_SendPasswordResetResponse_descriptor,
+        new java.lang.String[] { });
+    internal_static_api_v1alpha1_org_SendPasswordResetByOrgIdRequest_descriptor =
+      getDescriptor().getMessageTypes().get(44);
+    internal_static_api_v1alpha1_org_SendPasswordResetByOrgIdRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_SendPasswordResetByOrgIdRequest_descriptor,
+        new java.lang.String[] { "OrgId", "Email", });
+    internal_static_api_v1alpha1_org_SendPasswordResetByOrgIdResponse_descriptor =
+      getDescriptor().getMessageTypes().get(45);
+    internal_static_api_v1alpha1_org_SendPasswordResetByOrgIdResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_SendPasswordResetByOrgIdResponse_descriptor,
+        new java.lang.String[] { });
+    internal_static_api_v1alpha1_org_ResetMyPasswordRequest_descriptor =
+      getDescriptor().getMessageTypes().get(46);
+    internal_static_api_v1alpha1_org_ResetMyPasswordRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_ResetMyPasswordRequest_descriptor,
+        new java.lang.String[] { "Password", });
+    internal_static_api_v1alpha1_org_ResetMyPasswordResponse_descriptor =
+      getDescriptor().getMessageTypes().get(47);
+    internal_static_api_v1alpha1_org_ResetMyPasswordResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_ResetMyPasswordResponse_descriptor,
+        new java.lang.String[] { });
+    internal_static_api_v1alpha1_org_ResetUserPasswordRequest_descriptor =
+      getDescriptor().getMessageTypes().get(48);
+    internal_static_api_v1alpha1_org_ResetUserPasswordRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_ResetUserPasswordRequest_descriptor,
+        new java.lang.String[] { "Password", "UserId", });
+    internal_static_api_v1alpha1_org_ResetUserPasswordResponse_descriptor =
+      getDescriptor().getMessageTypes().get(49);
+    internal_static_api_v1alpha1_org_ResetUserPasswordResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_ResetUserPasswordResponse_descriptor,
+        new java.lang.String[] { });
+    internal_static_api_v1alpha1_org_ResetUserPasswordByOrgIdRequest_descriptor =
+      getDescriptor().getMessageTypes().get(50);
+    internal_static_api_v1alpha1_org_ResetUserPasswordByOrgIdRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_ResetUserPasswordByOrgIdRequest_descriptor,
+        new java.lang.String[] { "Password", "UserId", "OrgId", });
+    internal_static_api_v1alpha1_org_ResetUserPasswordByOrgIdResponse_descriptor =
+      getDescriptor().getMessageTypes().get(51);
+    internal_static_api_v1alpha1_org_ResetUserPasswordByOrgIdResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_ResetUserPasswordByOrgIdResponse_descriptor,
+        new java.lang.String[] { });
     internal_static_api_v1alpha1_org_GetUserEmailVerifiedRequest_descriptor =
-      getDescriptor().getMessageTypes().get(40);
+      getDescriptor().getMessageTypes().get(52);
     internal_static_api_v1alpha1_org_GetUserEmailVerifiedRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_GetUserEmailVerifiedRequest_descriptor,
         new java.lang.String[] { "UserId", });
     internal_static_api_v1alpha1_org_GetUserEmailVerifiedResponse_descriptor =
-      getDescriptor().getMessageTypes().get(41);
+      getDescriptor().getMessageTypes().get(53);
     internal_static_api_v1alpha1_org_GetUserEmailVerifiedResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_GetUserEmailVerifiedResponse_descriptor,
         new java.lang.String[] { "EmailVerified", });
     internal_static_api_v1alpha1_org_GetUserEmailVerifiedByOrgIdRequest_descriptor =
-      getDescriptor().getMessageTypes().get(42);
+      getDescriptor().getMessageTypes().get(54);
     internal_static_api_v1alpha1_org_GetUserEmailVerifiedByOrgIdRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_GetUserEmailVerifiedByOrgIdRequest_descriptor,
         new java.lang.String[] { "UserId", "OrgId", });
     internal_static_api_v1alpha1_org_GetUserEmailVerifiedByOrgIdResponse_descriptor =
-      getDescriptor().getMessageTypes().get(43);
+      getDescriptor().getMessageTypes().get(55);
     internal_static_api_v1alpha1_org_GetUserEmailVerifiedByOrgIdResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_GetUserEmailVerifiedByOrgIdResponse_descriptor,
         new java.lang.String[] { "EmailVerified", });
     internal_static_api_v1alpha1_org_SendUserEmailVerificationRequest_descriptor =
-      getDescriptor().getMessageTypes().get(44);
+      getDescriptor().getMessageTypes().get(56);
     internal_static_api_v1alpha1_org_SendUserEmailVerificationRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_SendUserEmailVerificationRequest_descriptor,
         new java.lang.String[] { "UserId", });
     internal_static_api_v1alpha1_org_SendUserEmailVerificationResponse_descriptor =
-      getDescriptor().getMessageTypes().get(45);
+      getDescriptor().getMessageTypes().get(57);
     internal_static_api_v1alpha1_org_SendUserEmailVerificationResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_SendUserEmailVerificationResponse_descriptor,
         new java.lang.String[] { });
     internal_static_api_v1alpha1_org_SendUserEmailVerificationByOrgIdRequest_descriptor =
-      getDescriptor().getMessageTypes().get(46);
+      getDescriptor().getMessageTypes().get(58);
     internal_static_api_v1alpha1_org_SendUserEmailVerificationByOrgIdRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_SendUserEmailVerificationByOrgIdRequest_descriptor,
         new java.lang.String[] { "UserId", "OrgId", });
     internal_static_api_v1alpha1_org_SendUserEmailVerificationByOrgIdResponse_descriptor =
-      getDescriptor().getMessageTypes().get(47);
+      getDescriptor().getMessageTypes().get(59);
     internal_static_api_v1alpha1_org_SendUserEmailVerificationByOrgIdResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_SendUserEmailVerificationByOrgIdResponse_descriptor,
         new java.lang.String[] { });
     internal_static_api_v1alpha1_org_GetUserSessionDataRequest_descriptor =
-      getDescriptor().getMessageTypes().get(48);
+      getDescriptor().getMessageTypes().get(60);
     internal_static_api_v1alpha1_org_GetUserSessionDataRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_GetUserSessionDataRequest_descriptor,
         new java.lang.String[] { });
     internal_static_api_v1alpha1_org_GetUserSessionDataResponse_descriptor =
-      getDescriptor().getMessageTypes().get(49);
+      getDescriptor().getMessageTypes().get(61);
     internal_static_api_v1alpha1_org_GetUserSessionDataResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_GetUserSessionDataResponse_descriptor,

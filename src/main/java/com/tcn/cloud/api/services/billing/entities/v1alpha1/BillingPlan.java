@@ -362,6 +362,44 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlanStatus.UNRECOGNIZED : result;
   }
 
+  public static final int ACTUAL_START_TIME_FIELD_NUMBER = 9;
+  private com.google.protobuf.Timestamp actualStartTime_;
+  /**
+   * <pre>
+   * the time the billing will actually take effect
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp actual_start_time = 9 [json_name = "actualStartTime"];</code>
+   * @return Whether the actualStartTime field is set.
+   */
+  @java.lang.Override
+  public boolean hasActualStartTime() {
+    return actualStartTime_ != null;
+  }
+  /**
+   * <pre>
+   * the time the billing will actually take effect
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp actual_start_time = 9 [json_name = "actualStartTime"];</code>
+   * @return The actualStartTime.
+   */
+  @java.lang.Override
+  public com.google.protobuf.Timestamp getActualStartTime() {
+    return actualStartTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : actualStartTime_;
+  }
+  /**
+   * <pre>
+   * the time the billing will actually take effect
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp actual_start_time = 9 [json_name = "actualStartTime"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.TimestampOrBuilder getActualStartTimeOrBuilder() {
+    return actualStartTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : actualStartTime_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -399,6 +437,9 @@ private static final long serialVersionUID = 0L;
     }
     if (status_ != com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlanStatus.BILLING_PLAN_STATUS_UNSPECIFIED.getNumber()) {
       output.writeEnum(8, status_);
+    }
+    if (actualStartTime_ != null) {
+      output.writeMessage(9, getActualStartTime());
     }
     getUnknownFields().writeTo(output);
   }
@@ -443,6 +484,10 @@ private static final long serialVersionUID = 0L;
     if (status_ != com.tcn.cloud.api.services.billing.entities.v1alpha1.BillingPlanStatus.BILLING_PLAN_STATUS_UNSPECIFIED.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(8, status_);
+    }
+    if (actualStartTime_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(9, getActualStartTime());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -489,6 +534,11 @@ private static final long serialVersionUID = 0L;
     if (!getRateDefinitionIdsList()
         .equals(other.getRateDefinitionIdsList())) return false;
     if (status_ != other.status_) return false;
+    if (hasActualStartTime() != other.hasActualStartTime()) return false;
+    if (hasActualStartTime()) {
+      if (!getActualStartTime()
+          .equals(other.getActualStartTime())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -528,6 +578,10 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + STATUS_FIELD_NUMBER;
     hash = (53 * hash) + status_;
+    if (hasActualStartTime()) {
+      hash = (37 * hash) + ACTUAL_START_TIME_FIELD_NUMBER;
+      hash = (53 * hash) + getActualStartTime().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -692,6 +746,11 @@ private static final long serialVersionUID = 0L;
       rateDefinitionIds_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
       status_ = 0;
+      actualStartTime_ = null;
+      if (actualStartTimeBuilder_ != null) {
+        actualStartTimeBuilder_.dispose();
+        actualStartTimeBuilder_ = null;
+      }
       return this;
     }
 
@@ -759,6 +818,11 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.status_ = status_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.actualStartTime_ = actualStartTimeBuilder_ == null
+            ? actualStartTime_
+            : actualStartTimeBuilder_.build();
       }
     }
 
@@ -839,6 +903,9 @@ private static final long serialVersionUID = 0L;
       if (other.status_ != 0) {
         setStatusValue(other.getStatusValue());
       }
+      if (other.hasActualStartTime()) {
+        mergeActualStartTime(other.getActualStartTime());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -916,6 +983,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000080;
               break;
             } // case 64
+            case 74: {
+              input.readMessage(
+                  getActualStartTimeFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 74
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2018,6 +2092,161 @@ private static final long serialVersionUID = 0L;
       status_ = 0;
       onChanged();
       return this;
+    }
+
+    private com.google.protobuf.Timestamp actualStartTime_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> actualStartTimeBuilder_;
+    /**
+     * <pre>
+     * the time the billing will actually take effect
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp actual_start_time = 9 [json_name = "actualStartTime"];</code>
+     * @return Whether the actualStartTime field is set.
+     */
+    public boolean hasActualStartTime() {
+      return ((bitField0_ & 0x00000100) != 0);
+    }
+    /**
+     * <pre>
+     * the time the billing will actually take effect
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp actual_start_time = 9 [json_name = "actualStartTime"];</code>
+     * @return The actualStartTime.
+     */
+    public com.google.protobuf.Timestamp getActualStartTime() {
+      if (actualStartTimeBuilder_ == null) {
+        return actualStartTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : actualStartTime_;
+      } else {
+        return actualStartTimeBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * the time the billing will actually take effect
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp actual_start_time = 9 [json_name = "actualStartTime"];</code>
+     */
+    public Builder setActualStartTime(com.google.protobuf.Timestamp value) {
+      if (actualStartTimeBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        actualStartTime_ = value;
+      } else {
+        actualStartTimeBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the time the billing will actually take effect
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp actual_start_time = 9 [json_name = "actualStartTime"];</code>
+     */
+    public Builder setActualStartTime(
+        com.google.protobuf.Timestamp.Builder builderForValue) {
+      if (actualStartTimeBuilder_ == null) {
+        actualStartTime_ = builderForValue.build();
+      } else {
+        actualStartTimeBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the time the billing will actually take effect
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp actual_start_time = 9 [json_name = "actualStartTime"];</code>
+     */
+    public Builder mergeActualStartTime(com.google.protobuf.Timestamp value) {
+      if (actualStartTimeBuilder_ == null) {
+        if (((bitField0_ & 0x00000100) != 0) &&
+          actualStartTime_ != null &&
+          actualStartTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+          getActualStartTimeBuilder().mergeFrom(value);
+        } else {
+          actualStartTime_ = value;
+        }
+      } else {
+        actualStartTimeBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the time the billing will actually take effect
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp actual_start_time = 9 [json_name = "actualStartTime"];</code>
+     */
+    public Builder clearActualStartTime() {
+      bitField0_ = (bitField0_ & ~0x00000100);
+      actualStartTime_ = null;
+      if (actualStartTimeBuilder_ != null) {
+        actualStartTimeBuilder_.dispose();
+        actualStartTimeBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the time the billing will actually take effect
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp actual_start_time = 9 [json_name = "actualStartTime"];</code>
+     */
+    public com.google.protobuf.Timestamp.Builder getActualStartTimeBuilder() {
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return getActualStartTimeFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * the time the billing will actually take effect
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp actual_start_time = 9 [json_name = "actualStartTime"];</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getActualStartTimeOrBuilder() {
+      if (actualStartTimeBuilder_ != null) {
+        return actualStartTimeBuilder_.getMessageOrBuilder();
+      } else {
+        return actualStartTime_ == null ?
+            com.google.protobuf.Timestamp.getDefaultInstance() : actualStartTime_;
+      }
+    }
+    /**
+     * <pre>
+     * the time the billing will actually take effect
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp actual_start_time = 9 [json_name = "actualStartTime"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+        getActualStartTimeFieldBuilder() {
+      if (actualStartTimeBuilder_ == null) {
+        actualStartTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                getActualStartTime(),
+                getParentForChildren(),
+                isClean());
+        actualStartTime_ = null;
+      }
+      return actualStartTimeBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

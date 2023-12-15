@@ -90,6 +90,11 @@ public final class OmniapiProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v0alpha_ListCampaignsReq_ByWhatsAppNumber_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v0alpha_ListCampaignsReq_ByWhatsApp_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v0alpha_ListCampaignsReq_ByWhatsApp_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_v0alpha_ListCampaignsRes_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -755,7 +760,7 @@ public final class OmniapiProto {
       ".api.v0alpha.ContactListDataSourceR\026cont" +
       "actListsDataSource\"E\n\025ContactListDataSou" +
       "rce\022,\n\020contact_list_sid\030\001 \001(\003B\0020\001R\016conta" +
-      "ctListSid\"\202\n\n\020ListCampaignsReq\022;\n\010status" +
+      "ctListSid\"\372\n\n\020ListCampaignsReq\022;\n\010status" +
       "es\030\001 \003(\0162\037.api.commons.OmniCampaignStatu" +
       "sR\010statuses\0229\n\nfield_mask\030\002 \001(\0132\032.google" +
       ".protobuf.FieldMaskR\tfieldMask\022<\n\006by_ids" +
@@ -773,20 +778,23 @@ public final class OmniapiProto {
       "sReq.ByVerifiedEmailH\000R\017byVerifiedEmail\022" +
       "O\n\rby_sms_number\030j \001(\0132).api.v0alpha.Lis" +
       "tCampaignsReq.BySmsNumberH\000R\013bySmsNumber" +
-      "\022^\n\022by_whatsapp_number\030k \001(\0132..api.v0alp" +
-      "ha.ListCampaignsReq.ByWhatsAppNumberH\000R\020" +
-      "byWhatsappNumber\0323\n\020ByConnectedInbox\022\037\n\t" +
-      "inbox_sid\030\001 \001(\003B\0020\001R\010inboxSid\0320\n\005ByIds\022\'" +
-      "\n\rcampaign_sids\030\001 \003(\003B\0020\001R\014campaignSids\032" +
-      "0\n\tByProject\022#\n\013project_sid\030\001 \001(\003B\0020\001R\np" +
-      "rojectSid\032~\n\006ByTime\022;\n\013search_from\030\001 \001(\013" +
-      "2\032.google.protobuf.TimestampR\nsearchFrom" +
-      "\0227\n\tsearch_to\030\002 \001(\0132\032.google.protobuf.Ti" +
-      "mestampR\010searchTo\0322\n\021ByUnsubscribeLink\022\035" +
-      "\n\010link_sid\030\001 \001(\003B\0020\001R\007linkSid\0322\n\017ByVerif" +
-      "iedEmail\022\037\n\temail_sid\030\001 \001(\003B\0020\001R\010emailSi" +
-      "d\032%\n\013BySmsNumber\022\026\n\006number\030\001 \001(\tR\006number" +
-      "\032*\n\020ByWhatsAppNumber\022\026\n\006number\030\001 \001(\tR\006nu" +
+      "\022b\n\022by_whatsapp_number\030k \001(\0132..api.v0alp" +
+      "ha.ListCampaignsReq.ByWhatsAppNumberB\002\030\001" +
+      "H\000R\020byWhatsappNumber\022L\n\014by_whats_app\030l \001" +
+      "(\0132(.api.v0alpha.ListCampaignsReq.ByWhat" +
+      "sAppH\000R\nbyWhatsApp\0323\n\020ByConnectedInbox\022\037" +
+      "\n\tinbox_sid\030\001 \001(\003B\0020\001R\010inboxSid\0320\n\005ByIds" +
+      "\022\'\n\rcampaign_sids\030\001 \003(\003B\0020\001R\014campaignSid" +
+      "s\0320\n\tByProject\022#\n\013project_sid\030\001 \001(\003B\0020\001R" +
+      "\nprojectSid\032~\n\006ByTime\022;\n\013search_from\030\001 \001" +
+      "(\0132\032.google.protobuf.TimestampR\nsearchFr" +
+      "om\0227\n\tsearch_to\030\002 \001(\0132\032.google.protobuf." +
+      "TimestampR\010searchTo\0322\n\021ByUnsubscribeLink" +
+      "\022\035\n\010link_sid\030\001 \001(\003B\0020\001R\007linkSid\0322\n\017ByVer" +
+      "ifiedEmail\022\037\n\temail_sid\030\001 \001(\003B\0020\001R\010email" +
+      "Sid\032%\n\013BySmsNumber\022\026\n\006number\030\001 \001(\tR\006numb" +
+      "er\032*\n\020ByWhatsAppNumber\022\026\n\006number\030\001 \001(\tR\006" +
+      "number\032$\n\nByWhatsApp\022\026\n\006number\030\001 \001(\tR\006nu" +
       "mberB\010\n\006filter\"\206\001\n\020ListCampaignsRes\0227\n\tc" +
       "ampaigns\030\001 \003(\0132\031.api.commons.OmniCampaig" +
       "nR\tcampaigns\0229\n\007modules\030\002 \003(\0132\037.api.comm" +
@@ -1129,10 +1137,10 @@ public final class OmniapiProto {
       "sages_with_group\030\001 \003(\0132#.api.v0alpha.Can" +
       "nedMessageWithGroupR\027cannedMessagesWithG" +
       "roup\"U\n\034GetCannedMessageGroupByIdReq\0225\n\027" +
-      "canned_message_group_id\030\001 \001(\tR\024cannedMes" +
+      "canned_message_group_id\030\001 \001(\tR\024cannedMes",
       "sageGroupId\"S\n\021ListUserSkillsReq\022>\n\014type" +
       "_filters\030\001 \003(\0162\033.api.commons.SkillType.E" +
-      "numR\013typeFilters\"C\n\021ListUserSkillsRes\022.\n",
+      "numR\013typeFilters\"C\n\021ListUserSkillsRes\022.\n" +
       "\006skills\030\001 \003(\0132\026.api.v0alpha.OmniSkillR\006s" +
       "kills\"\237\001\n\tOmniSkill\022\026\n\006region\030\001 \001(\tR\006reg" +
       "ion\022\023\n\005p3_id\030\002 \001(\tR\004p3Id\022\022\n\004name\030\003 \001(\tR\004" +
@@ -1468,7 +1476,7 @@ public final class OmniapiProto {
     internal_static_api_v0alpha_ListCampaignsReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_ListCampaignsReq_descriptor,
-        new java.lang.String[] { "Statuses", "FieldMask", "ByIds", "ByProject", "ByTime", "ByUnsubscribeLink", "ByConnectedInbox", "ByVerifiedEmail", "BySmsNumber", "ByWhatsappNumber", "Filter", });
+        new java.lang.String[] { "Statuses", "FieldMask", "ByIds", "ByProject", "ByTime", "ByUnsubscribeLink", "ByConnectedInbox", "ByVerifiedEmail", "BySmsNumber", "ByWhatsappNumber", "ByWhatsApp", "Filter", });
     internal_static_api_v0alpha_ListCampaignsReq_ByConnectedInbox_descriptor =
       internal_static_api_v0alpha_ListCampaignsReq_descriptor.getNestedTypes().get(0);
     internal_static_api_v0alpha_ListCampaignsReq_ByConnectedInbox_fieldAccessorTable = new
@@ -1516,6 +1524,12 @@ public final class OmniapiProto {
     internal_static_api_v0alpha_ListCampaignsReq_ByWhatsAppNumber_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_ListCampaignsReq_ByWhatsAppNumber_descriptor,
+        new java.lang.String[] { "Number", });
+    internal_static_api_v0alpha_ListCampaignsReq_ByWhatsApp_descriptor =
+      internal_static_api_v0alpha_ListCampaignsReq_descriptor.getNestedTypes().get(8);
+    internal_static_api_v0alpha_ListCampaignsReq_ByWhatsApp_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v0alpha_ListCampaignsReq_ByWhatsApp_descriptor,
         new java.lang.String[] { "Number", });
     internal_static_api_v0alpha_ListCampaignsRes_descriptor =
       getDescriptor().getMessageTypes().get(6);
