@@ -23,7 +23,6 @@ private static final long serialVersionUID = 0L;
     name_ = "";
     description_ = "";
     parameters_ = java.util.Collections.emptyList();
-    configurationName_ = "";
   }
 
   @java.lang.Override
@@ -209,45 +208,6 @@ private static final long serialVersionUID = 0L;
     return parameters_.get(index);
   }
 
-  public static final int CONFIGURATION_NAME_FIELD_NUMBER = 8;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object configurationName_ = "";
-  /**
-   * <code>string configuration_name = 8 [json_name = "configurationName"];</code>
-   * @return The configurationName.
-   */
-  @java.lang.Override
-  public java.lang.String getConfigurationName() {
-    java.lang.Object ref = configurationName_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      configurationName_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string configuration_name = 8 [json_name = "configurationName"];</code>
-   * @return The bytes for configurationName.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getConfigurationNameBytes() {
-    java.lang.Object ref = configurationName_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      configurationName_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -282,9 +242,6 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < parameters_.size(); i++) {
       output.writeMessage(7, parameters_.get(i));
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(configurationName_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 8, configurationName_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -321,9 +278,6 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, parameters_.get(i));
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(configurationName_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, configurationName_);
-    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -353,8 +307,6 @@ private static final long serialVersionUID = 0L;
         != other.getOrder()) return false;
     if (!getParametersList()
         .equals(other.getParametersList())) return false;
-    if (!getConfigurationName()
-        .equals(other.getConfigurationName())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -386,8 +338,6 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + PARAMETERS_FIELD_NUMBER;
       hash = (53 * hash) + getParametersList().hashCode();
     }
-    hash = (37 * hash) + CONFIGURATION_NAME_FIELD_NUMBER;
-    hash = (53 * hash) + getConfigurationName().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -536,7 +486,6 @@ private static final long serialVersionUID = 0L;
         parametersBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000040);
-      configurationName_ = "";
       return this;
     }
 
@@ -600,9 +549,6 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.order_ = order_;
-      }
-      if (((from_bitField0_ & 0x00000080) != 0)) {
-        result.configurationName_ = configurationName_;
       }
     }
 
@@ -698,11 +644,6 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
-      if (!other.getConfigurationName().isEmpty()) {
-        configurationName_ = other.configurationName_;
-        bitField0_ |= 0x00000080;
-        onChanged();
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -772,11 +713,6 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 58
-            case 66: {
-              configurationName_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000080;
-              break;
-            } // case 66
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1304,78 +1240,6 @@ private static final long serialVersionUID = 0L;
         parameters_ = null;
       }
       return parametersBuilder_;
-    }
-
-    private java.lang.Object configurationName_ = "";
-    /**
-     * <code>string configuration_name = 8 [json_name = "configurationName"];</code>
-     * @return The configurationName.
-     */
-    public java.lang.String getConfigurationName() {
-      java.lang.Object ref = configurationName_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        configurationName_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string configuration_name = 8 [json_name = "configurationName"];</code>
-     * @return The bytes for configurationName.
-     */
-    public com.google.protobuf.ByteString
-        getConfigurationNameBytes() {
-      java.lang.Object ref = configurationName_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        configurationName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string configuration_name = 8 [json_name = "configurationName"];</code>
-     * @param value The configurationName to set.
-     * @return This builder for chaining.
-     */
-    public Builder setConfigurationName(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      configurationName_ = value;
-      bitField0_ |= 0x00000080;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string configuration_name = 8 [json_name = "configurationName"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearConfigurationName() {
-      configurationName_ = getDefaultInstance().getConfigurationName();
-      bitField0_ = (bitField0_ & ~0x00000080);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string configuration_name = 8 [json_name = "configurationName"];</code>
-     * @param value The bytes for configurationName to set.
-     * @return This builder for chaining.
-     */
-    public Builder setConfigurationNameBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      configurationName_ = value;
-      bitField0_ |= 0x00000080;
-      onChanged();
-      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
