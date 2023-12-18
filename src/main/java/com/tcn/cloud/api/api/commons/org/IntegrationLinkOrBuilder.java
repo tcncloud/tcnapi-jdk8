@@ -78,4 +78,16 @@ public interface IntegrationLinkOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.org.IntegrationLinkParameterOrBuilder getParametersOrBuilder(
       int index);
+
+  /**
+   * <code>string configuration_name = 8 [json_name = "configurationName"];</code>
+   * @return The configurationName.
+   */
+  java.lang.String getConfigurationName();
+  /**
+   * <code>string configuration_name = 8 [json_name = "configurationName"];</code>
+   * @return The bytes for configurationName.
+   */
+  com.google.protobuf.ByteString
+      getConfigurationNameBytes();
 }
