@@ -948,6 +948,37 @@ public final class TicketsGrpc {
     return getGetAllActionTypeMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.tickets.GetPhoneNumberTypeRequest,
+      com.tcn.cloud.api.api.v1alpha1.tickets.GetPhoneNumberTypeResponse> getGetPhoneNumberTypeMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetPhoneNumberType",
+      requestType = com.tcn.cloud.api.api.v1alpha1.tickets.GetPhoneNumberTypeRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.tickets.GetPhoneNumberTypeResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.tickets.GetPhoneNumberTypeRequest,
+      com.tcn.cloud.api.api.v1alpha1.tickets.GetPhoneNumberTypeResponse> getGetPhoneNumberTypeMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.tickets.GetPhoneNumberTypeRequest, com.tcn.cloud.api.api.v1alpha1.tickets.GetPhoneNumberTypeResponse> getGetPhoneNumberTypeMethod;
+    if ((getGetPhoneNumberTypeMethod = TicketsGrpc.getGetPhoneNumberTypeMethod) == null) {
+      synchronized (TicketsGrpc.class) {
+        if ((getGetPhoneNumberTypeMethod = TicketsGrpc.getGetPhoneNumberTypeMethod) == null) {
+          TicketsGrpc.getGetPhoneNumberTypeMethod = getGetPhoneNumberTypeMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.tickets.GetPhoneNumberTypeRequest, com.tcn.cloud.api.api.v1alpha1.tickets.GetPhoneNumberTypeResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetPhoneNumberType"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.tickets.GetPhoneNumberTypeRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.tickets.GetPhoneNumberTypeResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new TicketsMethodDescriptorSupplier("GetPhoneNumberType"))
+              .build();
+        }
+      }
+    }
+    return getGetPhoneNumberTypeMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -1298,6 +1329,16 @@ public final class TicketsGrpc {
     default void getAllActionType(com.tcn.cloud.api.api.v1alpha1.tickets.GetActionTypeRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.GetActionTypeResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAllActionTypeMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Public method to list all Action Types
+     * </pre>
+     */
+    default void getPhoneNumberType(com.tcn.cloud.api.api.v1alpha1.tickets.GetPhoneNumberTypeRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.GetPhoneNumberTypeResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetPhoneNumberTypeMethod(), responseObserver);
     }
   }
 
@@ -1664,6 +1705,17 @@ public final class TicketsGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetAllActionTypeMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Public method to list all Action Types
+     * </pre>
+     */
+    public void getPhoneNumberType(com.tcn.cloud.api.api.v1alpha1.tickets.GetPhoneNumberTypeRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.GetPhoneNumberTypeResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetPhoneNumberTypeMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -1984,6 +2036,16 @@ public final class TicketsGrpc {
     public com.tcn.cloud.api.api.v1alpha1.tickets.GetActionTypeResponse getAllActionType(com.tcn.cloud.api.api.v1alpha1.tickets.GetActionTypeRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetAllActionTypeMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Public method to list all Action Types
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.tickets.GetPhoneNumberTypeResponse getPhoneNumberType(com.tcn.cloud.api.api.v1alpha1.tickets.GetPhoneNumberTypeRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetPhoneNumberTypeMethod(), getCallOptions(), request);
     }
   }
 
@@ -2336,6 +2398,17 @@ public final class TicketsGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetAllActionTypeMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Public method to list all Action Types
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.tickets.GetPhoneNumberTypeResponse> getPhoneNumberType(
+        com.tcn.cloud.api.api.v1alpha1.tickets.GetPhoneNumberTypeRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetPhoneNumberTypeMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE_TICKET = 0;
@@ -2368,6 +2441,7 @@ public final class TicketsGrpc {
   private static final int METHODID_LIST_TICKET_TEMPLATE = 27;
   private static final int METHODID_ASSIGN_TICKET_TEMPLATE = 28;
   private static final int METHODID_GET_ALL_ACTION_TYPE = 29;
+  private static final int METHODID_GET_PHONE_NUMBER_TYPE = 30;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -2505,6 +2579,10 @@ public final class TicketsGrpc {
         case METHODID_GET_ALL_ACTION_TYPE:
           serviceImpl.getAllActionType((com.tcn.cloud.api.api.v1alpha1.tickets.GetActionTypeRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.GetActionTypeResponse>) responseObserver);
+          break;
+        case METHODID_GET_PHONE_NUMBER_TYPE:
+          serviceImpl.getPhoneNumberType((com.tcn.cloud.api.api.v1alpha1.tickets.GetPhoneNumberTypeRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.GetPhoneNumberTypeResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -2734,6 +2812,13 @@ public final class TicketsGrpc {
               com.tcn.cloud.api.api.v1alpha1.tickets.GetActionTypeRequest,
               com.tcn.cloud.api.api.v1alpha1.tickets.GetActionTypeResponse>(
                 service, METHODID_GET_ALL_ACTION_TYPE)))
+        .addMethod(
+          getGetPhoneNumberTypeMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.tickets.GetPhoneNumberTypeRequest,
+              com.tcn.cloud.api.api.v1alpha1.tickets.GetPhoneNumberTypeResponse>(
+                service, METHODID_GET_PHONE_NUMBER_TYPE)))
         .build();
   }
 
@@ -2812,6 +2897,7 @@ public final class TicketsGrpc {
               .addMethod(getListTicketTemplateMethod())
               .addMethod(getAssignTicketTemplateMethod())
               .addMethod(getGetAllActionTypeMethod())
+              .addMethod(getGetPhoneNumberTypeMethod())
               .build();
         }
       }
