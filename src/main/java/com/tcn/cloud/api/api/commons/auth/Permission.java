@@ -267,7 +267,7 @@ public enum Permission
    * Enables devs access to the version tools in the Customer Support.
    * </pre>
    *
-   * <code>PERMISSION_DEV_SUPPORT = 252 [(.annotations.perms.options) = { ... }</code>
+   * <code>PERMISSION_DEV_SUPPORT = 252;</code>
    */
   PERMISSION_DEV_SUPPORT(252),
   /**
@@ -1001,7 +1001,7 @@ public enum Permission
    * Enables devs access to the version tools in the Customer Support.
    * </pre>
    *
-   * <code>PERMISSION_DEV_SUPPORT = 252 [(.annotations.perms.options) = { ... }</code>
+   * <code>PERMISSION_DEV_SUPPORT = 252;</code>
    */
   public static final int PERMISSION_DEV_SUPPORT_VALUE = 252;
   /**
