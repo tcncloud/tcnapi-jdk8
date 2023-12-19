@@ -27,7 +27,7 @@ public final class ServiceProto {
       "i.v1alpha1.tickets\032\027annotations/authz.pr" +
       "oto\032\"api/v1alpha1/tickets/project.proto\032" +
       "!api/v1alpha1/tickets/ticket.proto\032\034goog" +
-      "le/api/annotations.proto2\345(\n\007Tickets\022\235\001\n" +
+      "le/api/annotations.proto2\253*\n\007Tickets\022\235\001\n" +
       "\014CreateTicket\022%.api.v1alpha1.tickets.Cre" +
       "ateTicketReq\032%.api.v1alpha1.tickets.Crea" +
       "teTicketRes\"?\272\270\221\002\005\n\003\010\234\030\202\323\344\223\002/\"*/api/v1al" +
@@ -158,11 +158,16 @@ public final class ServiceProto {
       "peRequest\032+.api.v1alpha1.tickets.GetActi" +
       "onTypeResponse\"H\272\270\221\002\n\n\003\010\235\030\n\003\010\234\030\202\323\344\223\0023\"./" +
       "api/v1alpha1/tickets/tickets/getallActio" +
-      "ntype:\001*B\250\001\n&com.tcn.cloud.api.api.v1alp" +
-      "ha1.ticketsB\014ServiceProtoP\001\242\002\003AVT\252\002\024Api." +
-      "V1alpha1.Tickets\312\002\024Api\\V1alpha1\\Tickets\342" +
-      "\002 Api\\V1alpha1\\Tickets\\GPBMetadata\352\002\026Api" +
-      "::V1alpha1::Ticketsb\006proto3"
+      "ntype:\001*\022\303\001\n\022GetPhoneNumberType\022/.api.v1" +
+      "alpha1.tickets.GetPhoneNumberTypeRequest" +
+      "\0320.api.v1alpha1.tickets.GetPhoneNumberTy" +
+      "peResponse\"J\272\270\221\002\n\n\003\010\235\030\n\003\010\234\030\202\323\344\223\0025\"0/api/" +
+      "v1alpha1/tickets/tickets/getphonenumbert" +
+      "ype:\001*B\250\001\n&com.tcn.cloud.api.api.v1alpha" +
+      "1.ticketsB\014ServiceProtoP\001\242\002\003AVT\252\002\024Api.V1" +
+      "alpha1.Tickets\312\002\024Api\\V1alpha1\\Tickets\342\002 " +
+      "Api\\V1alpha1\\Tickets\\GPBMetadata\352\002\026Api::" +
+      "V1alpha1::Ticketsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
