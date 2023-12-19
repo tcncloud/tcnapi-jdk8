@@ -47,6 +47,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.commons.org.IntegrationLink> links_;
   /**
+   * <pre>
+   * The list of integration links for the hunt group.
+   * </pre>
+   *
    * <code>repeated .api.commons.org.IntegrationLink links = 1 [json_name = "links"];</code>
    */
   @java.lang.Override
@@ -54,6 +58,10 @@ private static final long serialVersionUID = 0L;
     return links_;
   }
   /**
+   * <pre>
+   * The list of integration links for the hunt group.
+   * </pre>
+   *
    * <code>repeated .api.commons.org.IntegrationLink links = 1 [json_name = "links"];</code>
    */
   @java.lang.Override
@@ -62,6 +70,10 @@ private static final long serialVersionUID = 0L;
     return links_;
   }
   /**
+   * <pre>
+   * The list of integration links for the hunt group.
+   * </pre>
+   *
    * <code>repeated .api.commons.org.IntegrationLink links = 1 [json_name = "links"];</code>
    */
   @java.lang.Override
@@ -69,6 +81,10 @@ private static final long serialVersionUID = 0L;
     return links_.size();
   }
   /**
+   * <pre>
+   * The list of integration links for the hunt group.
+   * </pre>
+   *
    * <code>repeated .api.commons.org.IntegrationLink links = 1 [json_name = "links"];</code>
    */
   @java.lang.Override
@@ -76,6 +92,10 @@ private static final long serialVersionUID = 0L;
     return links_.get(index);
   }
   /**
+   * <pre>
+   * The list of integration links for the hunt group.
+   * </pre>
+   *
    * <code>repeated .api.commons.org.IntegrationLink links = 1 [json_name = "links"];</code>
    */
   @java.lang.Override
@@ -475,6 +495,10 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.org.IntegrationLink, com.tcn.cloud.api.api.commons.org.IntegrationLink.Builder, com.tcn.cloud.api.api.commons.org.IntegrationLinkOrBuilder> linksBuilder_;
 
     /**
+     * <pre>
+     * The list of integration links for the hunt group.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.IntegrationLink links = 1 [json_name = "links"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.commons.org.IntegrationLink> getLinksList() {
@@ -485,6 +509,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The list of integration links for the hunt group.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.IntegrationLink links = 1 [json_name = "links"];</code>
      */
     public int getLinksCount() {
@@ -495,6 +523,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The list of integration links for the hunt group.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.IntegrationLink links = 1 [json_name = "links"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.IntegrationLink getLinks(int index) {
@@ -505,6 +537,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The list of integration links for the hunt group.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.IntegrationLink links = 1 [json_name = "links"];</code>
      */
     public Builder setLinks(
@@ -522,6 +558,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The list of integration links for the hunt group.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.IntegrationLink links = 1 [json_name = "links"];</code>
      */
     public Builder setLinks(
@@ -536,6 +576,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The list of integration links for the hunt group.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.IntegrationLink links = 1 [json_name = "links"];</code>
      */
     public Builder addLinks(com.tcn.cloud.api.api.commons.org.IntegrationLink value) {
@@ -552,6 +596,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The list of integration links for the hunt group.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.IntegrationLink links = 1 [json_name = "links"];</code>
      */
     public Builder addLinks(
@@ -569,6 +617,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The list of integration links for the hunt group.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.IntegrationLink links = 1 [json_name = "links"];</code>
      */
     public Builder addLinks(
@@ -583,6 +635,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The list of integration links for the hunt group.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.IntegrationLink links = 1 [json_name = "links"];</code>
      */
     public Builder addLinks(
@@ -597,6 +653,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The list of integration links for the hunt group.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.IntegrationLink links = 1 [json_name = "links"];</code>
      */
     public Builder addAllLinks(
@@ -612,6 +672,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The list of integration links for the hunt group.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.IntegrationLink links = 1 [json_name = "links"];</code>
      */
     public Builder clearLinks() {
@@ -625,6 +689,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The list of integration links for the hunt group.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.IntegrationLink links = 1 [json_name = "links"];</code>
      */
     public Builder removeLinks(int index) {
@@ -638,6 +706,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The list of integration links for the hunt group.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.IntegrationLink links = 1 [json_name = "links"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.IntegrationLink.Builder getLinksBuilder(
@@ -645,6 +717,10 @@ private static final long serialVersionUID = 0L;
       return getLinksFieldBuilder().getBuilder(index);
     }
     /**
+     * <pre>
+     * The list of integration links for the hunt group.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.IntegrationLink links = 1 [json_name = "links"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.IntegrationLinkOrBuilder getLinksOrBuilder(
@@ -655,6 +731,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The list of integration links for the hunt group.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.IntegrationLink links = 1 [json_name = "links"];</code>
      */
     public java.util.List<? extends com.tcn.cloud.api.api.commons.org.IntegrationLinkOrBuilder> 
@@ -666,6 +746,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The list of integration links for the hunt group.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.IntegrationLink links = 1 [json_name = "links"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.IntegrationLink.Builder addLinksBuilder() {
@@ -673,6 +757,10 @@ private static final long serialVersionUID = 0L;
           com.tcn.cloud.api.api.commons.org.IntegrationLink.getDefaultInstance());
     }
     /**
+     * <pre>
+     * The list of integration links for the hunt group.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.IntegrationLink links = 1 [json_name = "links"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.IntegrationLink.Builder addLinksBuilder(
@@ -681,6 +769,10 @@ private static final long serialVersionUID = 0L;
           index, com.tcn.cloud.api.api.commons.org.IntegrationLink.getDefaultInstance());
     }
     /**
+     * <pre>
+     * The list of integration links for the hunt group.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.IntegrationLink links = 1 [json_name = "links"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.commons.org.IntegrationLink.Builder> 

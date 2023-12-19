@@ -48,6 +48,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object key_ = "";
   /**
+   * <pre>
+   * The sub parameter key is the field name of the integration link.
+   * </pre>
+   *
    * <code>string key = 1 [json_name = "key"];</code>
    * @return The key.
    */
@@ -65,6 +69,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The sub parameter key is the field name of the integration link.
+   * </pre>
+   *
    * <code>string key = 1 [json_name = "key"];</code>
    * @return The bytes for key.
    */
@@ -87,6 +95,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.commons.org.IntegrationLinkSubParameterPart> parts_;
   /**
+   * <pre>
+   * The parts of the sub parameter.
+   * </pre>
+   *
    * <code>repeated .api.commons.org.IntegrationLinkSubParameterPart parts = 2 [json_name = "parts"];</code>
    */
   @java.lang.Override
@@ -94,6 +106,10 @@ private static final long serialVersionUID = 0L;
     return parts_;
   }
   /**
+   * <pre>
+   * The parts of the sub parameter.
+   * </pre>
+   *
    * <code>repeated .api.commons.org.IntegrationLinkSubParameterPart parts = 2 [json_name = "parts"];</code>
    */
   @java.lang.Override
@@ -102,6 +118,10 @@ private static final long serialVersionUID = 0L;
     return parts_;
   }
   /**
+   * <pre>
+   * The parts of the sub parameter.
+   * </pre>
+   *
    * <code>repeated .api.commons.org.IntegrationLinkSubParameterPart parts = 2 [json_name = "parts"];</code>
    */
   @java.lang.Override
@@ -109,6 +129,10 @@ private static final long serialVersionUID = 0L;
     return parts_.size();
   }
   /**
+   * <pre>
+   * The parts of the sub parameter.
+   * </pre>
+   *
    * <code>repeated .api.commons.org.IntegrationLinkSubParameterPart parts = 2 [json_name = "parts"];</code>
    */
   @java.lang.Override
@@ -116,6 +140,10 @@ private static final long serialVersionUID = 0L;
     return parts_.get(index);
   }
   /**
+   * <pre>
+   * The parts of the sub parameter.
+   * </pre>
+   *
    * <code>repeated .api.commons.org.IntegrationLinkSubParameterPart parts = 2 [json_name = "parts"];</code>
    */
   @java.lang.Override
@@ -528,6 +556,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object key_ = "";
     /**
+     * <pre>
+     * The sub parameter key is the field name of the integration link.
+     * </pre>
+     *
      * <code>string key = 1 [json_name = "key"];</code>
      * @return The key.
      */
@@ -544,6 +576,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The sub parameter key is the field name of the integration link.
+     * </pre>
+     *
      * <code>string key = 1 [json_name = "key"];</code>
      * @return The bytes for key.
      */
@@ -561,6 +597,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The sub parameter key is the field name of the integration link.
+     * </pre>
+     *
      * <code>string key = 1 [json_name = "key"];</code>
      * @param value The key to set.
      * @return This builder for chaining.
@@ -574,6 +614,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The sub parameter key is the field name of the integration link.
+     * </pre>
+     *
      * <code>string key = 1 [json_name = "key"];</code>
      * @return This builder for chaining.
      */
@@ -584,6 +628,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The sub parameter key is the field name of the integration link.
+     * </pre>
+     *
      * <code>string key = 1 [json_name = "key"];</code>
      * @param value The bytes for key to set.
      * @return This builder for chaining.
@@ -611,6 +659,10 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.org.IntegrationLinkSubParameterPart, com.tcn.cloud.api.api.commons.org.IntegrationLinkSubParameterPart.Builder, com.tcn.cloud.api.api.commons.org.IntegrationLinkSubParameterPartOrBuilder> partsBuilder_;
 
     /**
+     * <pre>
+     * The parts of the sub parameter.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.IntegrationLinkSubParameterPart parts = 2 [json_name = "parts"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.commons.org.IntegrationLinkSubParameterPart> getPartsList() {
@@ -621,6 +673,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The parts of the sub parameter.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.IntegrationLinkSubParameterPart parts = 2 [json_name = "parts"];</code>
      */
     public int getPartsCount() {
@@ -631,6 +687,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The parts of the sub parameter.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.IntegrationLinkSubParameterPart parts = 2 [json_name = "parts"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.IntegrationLinkSubParameterPart getParts(int index) {
@@ -641,6 +701,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The parts of the sub parameter.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.IntegrationLinkSubParameterPart parts = 2 [json_name = "parts"];</code>
      */
     public Builder setParts(
@@ -658,6 +722,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The parts of the sub parameter.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.IntegrationLinkSubParameterPart parts = 2 [json_name = "parts"];</code>
      */
     public Builder setParts(
@@ -672,6 +740,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The parts of the sub parameter.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.IntegrationLinkSubParameterPart parts = 2 [json_name = "parts"];</code>
      */
     public Builder addParts(com.tcn.cloud.api.api.commons.org.IntegrationLinkSubParameterPart value) {
@@ -688,6 +760,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The parts of the sub parameter.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.IntegrationLinkSubParameterPart parts = 2 [json_name = "parts"];</code>
      */
     public Builder addParts(
@@ -705,6 +781,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The parts of the sub parameter.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.IntegrationLinkSubParameterPart parts = 2 [json_name = "parts"];</code>
      */
     public Builder addParts(
@@ -719,6 +799,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The parts of the sub parameter.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.IntegrationLinkSubParameterPart parts = 2 [json_name = "parts"];</code>
      */
     public Builder addParts(
@@ -733,6 +817,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The parts of the sub parameter.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.IntegrationLinkSubParameterPart parts = 2 [json_name = "parts"];</code>
      */
     public Builder addAllParts(
@@ -748,6 +836,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The parts of the sub parameter.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.IntegrationLinkSubParameterPart parts = 2 [json_name = "parts"];</code>
      */
     public Builder clearParts() {
@@ -761,6 +853,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The parts of the sub parameter.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.IntegrationLinkSubParameterPart parts = 2 [json_name = "parts"];</code>
      */
     public Builder removeParts(int index) {
@@ -774,6 +870,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The parts of the sub parameter.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.IntegrationLinkSubParameterPart parts = 2 [json_name = "parts"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.IntegrationLinkSubParameterPart.Builder getPartsBuilder(
@@ -781,6 +881,10 @@ private static final long serialVersionUID = 0L;
       return getPartsFieldBuilder().getBuilder(index);
     }
     /**
+     * <pre>
+     * The parts of the sub parameter.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.IntegrationLinkSubParameterPart parts = 2 [json_name = "parts"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.IntegrationLinkSubParameterPartOrBuilder getPartsOrBuilder(
@@ -791,6 +895,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The parts of the sub parameter.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.IntegrationLinkSubParameterPart parts = 2 [json_name = "parts"];</code>
      */
     public java.util.List<? extends com.tcn.cloud.api.api.commons.org.IntegrationLinkSubParameterPartOrBuilder> 
@@ -802,6 +910,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The parts of the sub parameter.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.IntegrationLinkSubParameterPart parts = 2 [json_name = "parts"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.IntegrationLinkSubParameterPart.Builder addPartsBuilder() {
@@ -809,6 +921,10 @@ private static final long serialVersionUID = 0L;
           com.tcn.cloud.api.api.commons.org.IntegrationLinkSubParameterPart.getDefaultInstance());
     }
     /**
+     * <pre>
+     * The parts of the sub parameter.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.IntegrationLinkSubParameterPart parts = 2 [json_name = "parts"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.IntegrationLinkSubParameterPart.Builder addPartsBuilder(
@@ -817,6 +933,10 @@ private static final long serialVersionUID = 0L;
           index, com.tcn.cloud.api.api.commons.org.IntegrationLinkSubParameterPart.getDefaultInstance());
     }
     /**
+     * <pre>
+     * The parts of the sub parameter.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.IntegrationLinkSubParameterPart parts = 2 [json_name = "parts"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.commons.org.IntegrationLinkSubParameterPart.Builder> 

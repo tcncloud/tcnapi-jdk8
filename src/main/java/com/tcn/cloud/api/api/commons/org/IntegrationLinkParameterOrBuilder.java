@@ -8,11 +8,19 @@ public interface IntegrationLinkParameterOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * The parameter key.
+   * </pre>
+   *
    * <code>string key = 1 [json_name = "key"];</code>
    * @return The key.
    */
   java.lang.String getKey();
   /**
+   * <pre>
+   * The parameter key.
+   * </pre>
+   *
    * <code>string key = 1 [json_name = "key"];</code>
    * @return The bytes for key.
    */
@@ -20,24 +28,44 @@ public interface IntegrationLinkParameterOrBuilder extends
       getKeyBytes();
 
   /**
+   * <pre>
+   * The sub parameters of the parameter.
+   * </pre>
+   *
    * <code>repeated .api.commons.org.IntegrationLinkSubParameter sub_parameters = 2 [json_name = "subParameters"];</code>
    */
   java.util.List<com.tcn.cloud.api.api.commons.org.IntegrationLinkSubParameter> 
       getSubParametersList();
   /**
+   * <pre>
+   * The sub parameters of the parameter.
+   * </pre>
+   *
    * <code>repeated .api.commons.org.IntegrationLinkSubParameter sub_parameters = 2 [json_name = "subParameters"];</code>
    */
   com.tcn.cloud.api.api.commons.org.IntegrationLinkSubParameter getSubParameters(int index);
   /**
+   * <pre>
+   * The sub parameters of the parameter.
+   * </pre>
+   *
    * <code>repeated .api.commons.org.IntegrationLinkSubParameter sub_parameters = 2 [json_name = "subParameters"];</code>
    */
   int getSubParametersCount();
   /**
+   * <pre>
+   * The sub parameters of the parameter.
+   * </pre>
+   *
    * <code>repeated .api.commons.org.IntegrationLinkSubParameter sub_parameters = 2 [json_name = "subParameters"];</code>
    */
   java.util.List<? extends com.tcn.cloud.api.api.commons.org.IntegrationLinkSubParameterOrBuilder> 
       getSubParametersOrBuilderList();
   /**
+   * <pre>
+   * The sub parameters of the parameter.
+   * </pre>
+   *
    * <code>repeated .api.commons.org.IntegrationLinkSubParameter sub_parameters = 2 [json_name = "subParameters"];</code>
    */
   com.tcn.cloud.api.api.commons.org.IntegrationLinkSubParameterOrBuilder getSubParametersOrBuilder(

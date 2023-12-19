@@ -23,6 +23,7 @@ private static final long serialVersionUID = 0L;
     name_ = "";
     description_ = "";
     parameters_ = java.util.Collections.emptyList();
+    configurationName_ = "";
   }
 
   @java.lang.Override
@@ -48,6 +49,10 @@ private static final long serialVersionUID = 0L;
   public static final int INTEGRATION_ID_FIELD_NUMBER = 1;
   private long integrationId_ = 0L;
   /**
+   * <pre>
+   * The ID of the integration.
+   * </pre>
+   *
    * <code>int64 integration_id = 1 [json_name = "integrationId"];</code>
    * @return The integrationId.
    */
@@ -59,6 +64,10 @@ private static final long serialVersionUID = 0L;
   public static final int PARAMETER_SID_FIELD_NUMBER = 2;
   private long parameterSid_ = 0L;
   /**
+   * <pre>
+   * The sid or the unique ID of the integration link stored in the database.
+   * </pre>
+   *
    * <code>int64 parameter_sid = 2 [json_name = "parameterSid"];</code>
    * @return The parameterSid.
    */
@@ -71,6 +80,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object name_ = "";
   /**
+   * <pre>
+   * The display name of the integration link.
+   * </pre>
+   *
    * <code>string name = 3 [json_name = "name"];</code>
    * @return The name.
    */
@@ -88,6 +101,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The display name of the integration link.
+   * </pre>
+   *
    * <code>string name = 3 [json_name = "name"];</code>
    * @return The bytes for name.
    */
@@ -110,6 +127,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object description_ = "";
   /**
+   * <pre>
+   * The description of the integration link.
+   * </pre>
+   *
    * <code>string description = 4 [json_name = "description"];</code>
    * @return The description.
    */
@@ -127,6 +148,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The description of the integration link.
+   * </pre>
+   *
    * <code>string description = 4 [json_name = "description"];</code>
    * @return The bytes for description.
    */
@@ -148,6 +173,10 @@ private static final long serialVersionUID = 0L;
   public static final int METHOD_ID_FIELD_NUMBER = 5;
   private long methodId_ = 0L;
   /**
+   * <pre>
+   * The ID of the method to use for the integration link.
+   * </pre>
+   *
    * <code>int64 method_id = 5 [json_name = "methodId"];</code>
    * @return The methodId.
    */
@@ -159,6 +188,10 @@ private static final long serialVersionUID = 0L;
   public static final int ORDER_FIELD_NUMBER = 6;
   private long order_ = 0L;
   /**
+   * <pre>
+   * The order of the integration link, used for sorting.
+   * </pre>
+   *
    * <code>int64 order = 6 [json_name = "order"];</code>
    * @return The order.
    */
@@ -171,6 +204,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.commons.org.IntegrationLinkParameter> parameters_;
   /**
+   * <pre>
+   * The parameters used for the integration link.
+   * </pre>
+   *
    * <code>repeated .api.commons.org.IntegrationLinkParameter parameters = 7 [json_name = "parameters"];</code>
    */
   @java.lang.Override
@@ -178,6 +215,10 @@ private static final long serialVersionUID = 0L;
     return parameters_;
   }
   /**
+   * <pre>
+   * The parameters used for the integration link.
+   * </pre>
+   *
    * <code>repeated .api.commons.org.IntegrationLinkParameter parameters = 7 [json_name = "parameters"];</code>
    */
   @java.lang.Override
@@ -186,6 +227,10 @@ private static final long serialVersionUID = 0L;
     return parameters_;
   }
   /**
+   * <pre>
+   * The parameters used for the integration link.
+   * </pre>
+   *
    * <code>repeated .api.commons.org.IntegrationLinkParameter parameters = 7 [json_name = "parameters"];</code>
    */
   @java.lang.Override
@@ -193,6 +238,10 @@ private static final long serialVersionUID = 0L;
     return parameters_.size();
   }
   /**
+   * <pre>
+   * The parameters used for the integration link.
+   * </pre>
+   *
    * <code>repeated .api.commons.org.IntegrationLinkParameter parameters = 7 [json_name = "parameters"];</code>
    */
   @java.lang.Override
@@ -200,12 +249,63 @@ private static final long serialVersionUID = 0L;
     return parameters_.get(index);
   }
   /**
+   * <pre>
+   * The parameters used for the integration link.
+   * </pre>
+   *
    * <code>repeated .api.commons.org.IntegrationLinkParameter parameters = 7 [json_name = "parameters"];</code>
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.org.IntegrationLinkParameterOrBuilder getParametersOrBuilder(
       int index) {
     return parameters_.get(index);
+  }
+
+  public static final int CONFIGURATION_NAME_FIELD_NUMBER = 8;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object configurationName_ = "";
+  /**
+   * <pre>
+   * The configuration name of the integration link.
+   * </pre>
+   *
+   * <code>string configuration_name = 8 [json_name = "configurationName"];</code>
+   * @return The configurationName.
+   */
+  @java.lang.Override
+  public java.lang.String getConfigurationName() {
+    java.lang.Object ref = configurationName_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      configurationName_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * The configuration name of the integration link.
+   * </pre>
+   *
+   * <code>string configuration_name = 8 [json_name = "configurationName"];</code>
+   * @return The bytes for configurationName.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getConfigurationNameBytes() {
+    java.lang.Object ref = configurationName_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      configurationName_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
   }
 
   private byte memoizedIsInitialized = -1;
@@ -243,6 +343,9 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < parameters_.size(); i++) {
       output.writeMessage(7, parameters_.get(i));
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(configurationName_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 8, configurationName_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -278,6 +381,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, parameters_.get(i));
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(configurationName_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, configurationName_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -307,6 +413,8 @@ private static final long serialVersionUID = 0L;
         != other.getOrder()) return false;
     if (!getParametersList()
         .equals(other.getParametersList())) return false;
+    if (!getConfigurationName()
+        .equals(other.getConfigurationName())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -338,6 +446,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + PARAMETERS_FIELD_NUMBER;
       hash = (53 * hash) + getParametersList().hashCode();
     }
+    hash = (37 * hash) + CONFIGURATION_NAME_FIELD_NUMBER;
+    hash = (53 * hash) + getConfigurationName().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -486,6 +596,7 @@ private static final long serialVersionUID = 0L;
         parametersBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000040);
+      configurationName_ = "";
       return this;
     }
 
@@ -549,6 +660,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.order_ = order_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.configurationName_ = configurationName_;
       }
     }
 
@@ -644,6 +758,11 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (!other.getConfigurationName().isEmpty()) {
+        configurationName_ = other.configurationName_;
+        bitField0_ |= 0x00000080;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -713,6 +832,11 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 58
+            case 66: {
+              configurationName_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 66
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -732,6 +856,10 @@ private static final long serialVersionUID = 0L;
 
     private long integrationId_ ;
     /**
+     * <pre>
+     * The ID of the integration.
+     * </pre>
+     *
      * <code>int64 integration_id = 1 [json_name = "integrationId"];</code>
      * @return The integrationId.
      */
@@ -740,6 +868,10 @@ private static final long serialVersionUID = 0L;
       return integrationId_;
     }
     /**
+     * <pre>
+     * The ID of the integration.
+     * </pre>
+     *
      * <code>int64 integration_id = 1 [json_name = "integrationId"];</code>
      * @param value The integrationId to set.
      * @return This builder for chaining.
@@ -752,6 +884,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The ID of the integration.
+     * </pre>
+     *
      * <code>int64 integration_id = 1 [json_name = "integrationId"];</code>
      * @return This builder for chaining.
      */
@@ -764,6 +900,10 @@ private static final long serialVersionUID = 0L;
 
     private long parameterSid_ ;
     /**
+     * <pre>
+     * The sid or the unique ID of the integration link stored in the database.
+     * </pre>
+     *
      * <code>int64 parameter_sid = 2 [json_name = "parameterSid"];</code>
      * @return The parameterSid.
      */
@@ -772,6 +912,10 @@ private static final long serialVersionUID = 0L;
       return parameterSid_;
     }
     /**
+     * <pre>
+     * The sid or the unique ID of the integration link stored in the database.
+     * </pre>
+     *
      * <code>int64 parameter_sid = 2 [json_name = "parameterSid"];</code>
      * @param value The parameterSid to set.
      * @return This builder for chaining.
@@ -784,6 +928,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The sid or the unique ID of the integration link stored in the database.
+     * </pre>
+     *
      * <code>int64 parameter_sid = 2 [json_name = "parameterSid"];</code>
      * @return This builder for chaining.
      */
@@ -796,6 +944,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object name_ = "";
     /**
+     * <pre>
+     * The display name of the integration link.
+     * </pre>
+     *
      * <code>string name = 3 [json_name = "name"];</code>
      * @return The name.
      */
@@ -812,6 +964,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The display name of the integration link.
+     * </pre>
+     *
      * <code>string name = 3 [json_name = "name"];</code>
      * @return The bytes for name.
      */
@@ -829,6 +985,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The display name of the integration link.
+     * </pre>
+     *
      * <code>string name = 3 [json_name = "name"];</code>
      * @param value The name to set.
      * @return This builder for chaining.
@@ -842,6 +1002,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The display name of the integration link.
+     * </pre>
+     *
      * <code>string name = 3 [json_name = "name"];</code>
      * @return This builder for chaining.
      */
@@ -852,6 +1016,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The display name of the integration link.
+     * </pre>
+     *
      * <code>string name = 3 [json_name = "name"];</code>
      * @param value The bytes for name to set.
      * @return This builder for chaining.
@@ -868,6 +1036,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object description_ = "";
     /**
+     * <pre>
+     * The description of the integration link.
+     * </pre>
+     *
      * <code>string description = 4 [json_name = "description"];</code>
      * @return The description.
      */
@@ -884,6 +1056,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The description of the integration link.
+     * </pre>
+     *
      * <code>string description = 4 [json_name = "description"];</code>
      * @return The bytes for description.
      */
@@ -901,6 +1077,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The description of the integration link.
+     * </pre>
+     *
      * <code>string description = 4 [json_name = "description"];</code>
      * @param value The description to set.
      * @return This builder for chaining.
@@ -914,6 +1094,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The description of the integration link.
+     * </pre>
+     *
      * <code>string description = 4 [json_name = "description"];</code>
      * @return This builder for chaining.
      */
@@ -924,6 +1108,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The description of the integration link.
+     * </pre>
+     *
      * <code>string description = 4 [json_name = "description"];</code>
      * @param value The bytes for description to set.
      * @return This builder for chaining.
@@ -940,6 +1128,10 @@ private static final long serialVersionUID = 0L;
 
     private long methodId_ ;
     /**
+     * <pre>
+     * The ID of the method to use for the integration link.
+     * </pre>
+     *
      * <code>int64 method_id = 5 [json_name = "methodId"];</code>
      * @return The methodId.
      */
@@ -948,6 +1140,10 @@ private static final long serialVersionUID = 0L;
       return methodId_;
     }
     /**
+     * <pre>
+     * The ID of the method to use for the integration link.
+     * </pre>
+     *
      * <code>int64 method_id = 5 [json_name = "methodId"];</code>
      * @param value The methodId to set.
      * @return This builder for chaining.
@@ -960,6 +1156,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The ID of the method to use for the integration link.
+     * </pre>
+     *
      * <code>int64 method_id = 5 [json_name = "methodId"];</code>
      * @return This builder for chaining.
      */
@@ -972,6 +1172,10 @@ private static final long serialVersionUID = 0L;
 
     private long order_ ;
     /**
+     * <pre>
+     * The order of the integration link, used for sorting.
+     * </pre>
+     *
      * <code>int64 order = 6 [json_name = "order"];</code>
      * @return The order.
      */
@@ -980,6 +1184,10 @@ private static final long serialVersionUID = 0L;
       return order_;
     }
     /**
+     * <pre>
+     * The order of the integration link, used for sorting.
+     * </pre>
+     *
      * <code>int64 order = 6 [json_name = "order"];</code>
      * @param value The order to set.
      * @return This builder for chaining.
@@ -992,6 +1200,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The order of the integration link, used for sorting.
+     * </pre>
+     *
      * <code>int64 order = 6 [json_name = "order"];</code>
      * @return This builder for chaining.
      */
@@ -1015,6 +1227,10 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.org.IntegrationLinkParameter, com.tcn.cloud.api.api.commons.org.IntegrationLinkParameter.Builder, com.tcn.cloud.api.api.commons.org.IntegrationLinkParameterOrBuilder> parametersBuilder_;
 
     /**
+     * <pre>
+     * The parameters used for the integration link.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.IntegrationLinkParameter parameters = 7 [json_name = "parameters"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.commons.org.IntegrationLinkParameter> getParametersList() {
@@ -1025,6 +1241,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The parameters used for the integration link.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.IntegrationLinkParameter parameters = 7 [json_name = "parameters"];</code>
      */
     public int getParametersCount() {
@@ -1035,6 +1255,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The parameters used for the integration link.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.IntegrationLinkParameter parameters = 7 [json_name = "parameters"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.IntegrationLinkParameter getParameters(int index) {
@@ -1045,6 +1269,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The parameters used for the integration link.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.IntegrationLinkParameter parameters = 7 [json_name = "parameters"];</code>
      */
     public Builder setParameters(
@@ -1062,6 +1290,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The parameters used for the integration link.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.IntegrationLinkParameter parameters = 7 [json_name = "parameters"];</code>
      */
     public Builder setParameters(
@@ -1076,6 +1308,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The parameters used for the integration link.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.IntegrationLinkParameter parameters = 7 [json_name = "parameters"];</code>
      */
     public Builder addParameters(com.tcn.cloud.api.api.commons.org.IntegrationLinkParameter value) {
@@ -1092,6 +1328,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The parameters used for the integration link.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.IntegrationLinkParameter parameters = 7 [json_name = "parameters"];</code>
      */
     public Builder addParameters(
@@ -1109,6 +1349,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The parameters used for the integration link.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.IntegrationLinkParameter parameters = 7 [json_name = "parameters"];</code>
      */
     public Builder addParameters(
@@ -1123,6 +1367,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The parameters used for the integration link.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.IntegrationLinkParameter parameters = 7 [json_name = "parameters"];</code>
      */
     public Builder addParameters(
@@ -1137,6 +1385,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The parameters used for the integration link.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.IntegrationLinkParameter parameters = 7 [json_name = "parameters"];</code>
      */
     public Builder addAllParameters(
@@ -1152,6 +1404,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The parameters used for the integration link.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.IntegrationLinkParameter parameters = 7 [json_name = "parameters"];</code>
      */
     public Builder clearParameters() {
@@ -1165,6 +1421,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The parameters used for the integration link.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.IntegrationLinkParameter parameters = 7 [json_name = "parameters"];</code>
      */
     public Builder removeParameters(int index) {
@@ -1178,6 +1438,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The parameters used for the integration link.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.IntegrationLinkParameter parameters = 7 [json_name = "parameters"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.IntegrationLinkParameter.Builder getParametersBuilder(
@@ -1185,6 +1449,10 @@ private static final long serialVersionUID = 0L;
       return getParametersFieldBuilder().getBuilder(index);
     }
     /**
+     * <pre>
+     * The parameters used for the integration link.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.IntegrationLinkParameter parameters = 7 [json_name = "parameters"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.IntegrationLinkParameterOrBuilder getParametersOrBuilder(
@@ -1195,6 +1463,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The parameters used for the integration link.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.IntegrationLinkParameter parameters = 7 [json_name = "parameters"];</code>
      */
     public java.util.List<? extends com.tcn.cloud.api.api.commons.org.IntegrationLinkParameterOrBuilder> 
@@ -1206,6 +1478,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The parameters used for the integration link.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.IntegrationLinkParameter parameters = 7 [json_name = "parameters"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.IntegrationLinkParameter.Builder addParametersBuilder() {
@@ -1213,6 +1489,10 @@ private static final long serialVersionUID = 0L;
           com.tcn.cloud.api.api.commons.org.IntegrationLinkParameter.getDefaultInstance());
     }
     /**
+     * <pre>
+     * The parameters used for the integration link.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.IntegrationLinkParameter parameters = 7 [json_name = "parameters"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.IntegrationLinkParameter.Builder addParametersBuilder(
@@ -1221,6 +1501,10 @@ private static final long serialVersionUID = 0L;
           index, com.tcn.cloud.api.api.commons.org.IntegrationLinkParameter.getDefaultInstance());
     }
     /**
+     * <pre>
+     * The parameters used for the integration link.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.IntegrationLinkParameter parameters = 7 [json_name = "parameters"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.commons.org.IntegrationLinkParameter.Builder> 
@@ -1240,6 +1524,98 @@ private static final long serialVersionUID = 0L;
         parameters_ = null;
       }
       return parametersBuilder_;
+    }
+
+    private java.lang.Object configurationName_ = "";
+    /**
+     * <pre>
+     * The configuration name of the integration link.
+     * </pre>
+     *
+     * <code>string configuration_name = 8 [json_name = "configurationName"];</code>
+     * @return The configurationName.
+     */
+    public java.lang.String getConfigurationName() {
+      java.lang.Object ref = configurationName_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        configurationName_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The configuration name of the integration link.
+     * </pre>
+     *
+     * <code>string configuration_name = 8 [json_name = "configurationName"];</code>
+     * @return The bytes for configurationName.
+     */
+    public com.google.protobuf.ByteString
+        getConfigurationNameBytes() {
+      java.lang.Object ref = configurationName_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        configurationName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The configuration name of the integration link.
+     * </pre>
+     *
+     * <code>string configuration_name = 8 [json_name = "configurationName"];</code>
+     * @param value The configurationName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setConfigurationName(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      configurationName_ = value;
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The configuration name of the integration link.
+     * </pre>
+     *
+     * <code>string configuration_name = 8 [json_name = "configurationName"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearConfigurationName() {
+      configurationName_ = getDefaultInstance().getConfigurationName();
+      bitField0_ = (bitField0_ & ~0x00000080);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The configuration name of the integration link.
+     * </pre>
+     *
+     * <code>string configuration_name = 8 [json_name = "configurationName"];</code>
+     * @param value The bytes for configurationName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setConfigurationNameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      configurationName_ = value;
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

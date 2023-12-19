@@ -8,17 +8,29 @@ public interface IntegrationLinkSubParameterPartOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * The ID for the contact field.
+   * </pre>
+   *
    * <code>int64 contact_field_sid = 1 [json_name = "contactFieldSid"];</code>
    * @return The contactFieldSid.
    */
   long getContactFieldSid();
 
   /**
+   * <pre>
+   * The value of the sub parameter part.
+   * </pre>
+   *
    * <code>string helper_value = 2 [json_name = "helperValue"];</code>
    * @return The helperValue.
    */
   java.lang.String getHelperValue();
   /**
+   * <pre>
+   * The value of the sub parameter part.
+   * </pre>
+   *
    * <code>string helper_value = 2 [json_name = "helperValue"];</code>
    * @return The bytes for helperValue.
    */
@@ -26,11 +38,19 @@ public interface IntegrationLinkSubParameterPartOrBuilder extends
       getHelperValueBytes();
 
   /**
+   * <pre>
+   * The source type of the sub parameter part.
+   * </pre>
+   *
    * <code>.api.commons.org.ParameterSourceType parameter_source_type = 3 [json_name = "parameterSourceType"];</code>
    * @return The enum numeric value on the wire for parameterSourceType.
    */
   int getParameterSourceTypeValue();
   /**
+   * <pre>
+   * The source type of the sub parameter part.
+   * </pre>
+   *
    * <code>.api.commons.org.ParameterSourceType parameter_source_type = 3 [json_name = "parameterSourceType"];</code>
    * @return The parameterSourceType.
    */
