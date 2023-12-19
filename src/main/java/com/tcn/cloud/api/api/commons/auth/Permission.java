@@ -264,6 +264,14 @@ public enum Permission
   PERMISSION_SUPPORT_TCN_DASHBOARDS_ADMIN(251),
   /**
    * <pre>
+   * Enables devs access to the version-ui app in the Customer Support.
+   * </pre>
+   *
+   * <code>PERMISSION_DEV_SUPPORT = 252;</code>
+   */
+  PERMISSION_DEV_SUPPORT(252),
+  /**
+   * <pre>
    * Enables access to agent.
    * </pre>
    *
@@ -988,6 +996,14 @@ public enum Permission
   public static final int PERMISSION_SUPPORT_TCN_DASHBOARDS_ADMIN_VALUE = 251;
   /**
    * <pre>
+   * Enables devs access to the version-ui app in the Customer Support.
+   * </pre>
+   *
+   * <code>PERMISSION_DEV_SUPPORT = 252;</code>
+   */
+  public static final int PERMISSION_DEV_SUPPORT_VALUE = 252;
+  /**
+   * <pre>
    * Enables access to agent.
    * </pre>
    *
@@ -1514,6 +1530,7 @@ public enum Permission
       case 241: return PERMISSION_TCN_BILLING_ADMIN;
       case 250: return PERMISSION_SUPPORT_TCN_INSIGHTS_ADMIN;
       case 251: return PERMISSION_SUPPORT_TCN_DASHBOARDS_ADMIN;
+      case 252: return PERMISSION_DEV_SUPPORT;
       case 300: return PERMISSION_AGENT;
       case 310: return PERMISSION_ACCEPT_QUEUED_CALLS;
       case 320: return PERMISSION_VIEW_CAMPAIGN_COMPLETION;
