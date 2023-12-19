@@ -8,24 +8,44 @@ public interface ListHuntGroupIntegrationLinksResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * The list of integration links for the hunt group.
+   * </pre>
+   *
    * <code>repeated .api.commons.org.IntegrationLink links = 1 [json_name = "links"];</code>
    */
   java.util.List<com.tcn.cloud.api.api.commons.org.IntegrationLink> 
       getLinksList();
   /**
+   * <pre>
+   * The list of integration links for the hunt group.
+   * </pre>
+   *
    * <code>repeated .api.commons.org.IntegrationLink links = 1 [json_name = "links"];</code>
    */
   com.tcn.cloud.api.api.commons.org.IntegrationLink getLinks(int index);
   /**
+   * <pre>
+   * The list of integration links for the hunt group.
+   * </pre>
+   *
    * <code>repeated .api.commons.org.IntegrationLink links = 1 [json_name = "links"];</code>
    */
   int getLinksCount();
   /**
+   * <pre>
+   * The list of integration links for the hunt group.
+   * </pre>
+   *
    * <code>repeated .api.commons.org.IntegrationLink links = 1 [json_name = "links"];</code>
    */
   java.util.List<? extends com.tcn.cloud.api.api.commons.org.IntegrationLinkOrBuilder> 
       getLinksOrBuilderList();
   /**
+   * <pre>
+   * The list of integration links for the hunt group.
+   * </pre>
+   *
    * <code>repeated .api.commons.org.IntegrationLink links = 1 [json_name = "links"];</code>
    */
   com.tcn.cloud.api.api.commons.org.IntegrationLinkOrBuilder getLinksOrBuilder(

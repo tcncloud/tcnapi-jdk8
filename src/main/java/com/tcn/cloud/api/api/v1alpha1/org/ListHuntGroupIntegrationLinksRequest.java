@@ -47,6 +47,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object orgId_ = "";
   /**
+   * <pre>
+   * The ID of the organization which the hunt group belongs to.
+   * </pre>
+   *
    * <code>string org_id = 1 [json_name = "orgId"];</code>
    * @return The orgId.
    */
@@ -64,6 +68,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The ID of the organization which the hunt group belongs to.
+   * </pre>
+   *
    * <code>string org_id = 1 [json_name = "orgId"];</code>
    * @return The bytes for orgId.
    */
@@ -85,6 +93,10 @@ private static final long serialVersionUID = 0L;
   public static final int HUNT_GROUP_SID_FIELD_NUMBER = 2;
   private long huntGroupSid_ = 0L;
   /**
+   * <pre>
+   * The ID of the hunt group to list integration links for.
+   * </pre>
+   *
    * <code>int64 hunt_group_sid = 2 [json_name = "huntGroupSid"];</code>
    * @return The huntGroupSid.
    */
@@ -449,6 +461,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object orgId_ = "";
     /**
+     * <pre>
+     * The ID of the organization which the hunt group belongs to.
+     * </pre>
+     *
      * <code>string org_id = 1 [json_name = "orgId"];</code>
      * @return The orgId.
      */
@@ -465,6 +481,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The ID of the organization which the hunt group belongs to.
+     * </pre>
+     *
      * <code>string org_id = 1 [json_name = "orgId"];</code>
      * @return The bytes for orgId.
      */
@@ -482,6 +502,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The ID of the organization which the hunt group belongs to.
+     * </pre>
+     *
      * <code>string org_id = 1 [json_name = "orgId"];</code>
      * @param value The orgId to set.
      * @return This builder for chaining.
@@ -495,6 +519,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The ID of the organization which the hunt group belongs to.
+     * </pre>
+     *
      * <code>string org_id = 1 [json_name = "orgId"];</code>
      * @return This builder for chaining.
      */
@@ -505,6 +533,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The ID of the organization which the hunt group belongs to.
+     * </pre>
+     *
      * <code>string org_id = 1 [json_name = "orgId"];</code>
      * @param value The bytes for orgId to set.
      * @return This builder for chaining.
@@ -521,6 +553,10 @@ private static final long serialVersionUID = 0L;
 
     private long huntGroupSid_ ;
     /**
+     * <pre>
+     * The ID of the hunt group to list integration links for.
+     * </pre>
+     *
      * <code>int64 hunt_group_sid = 2 [json_name = "huntGroupSid"];</code>
      * @return The huntGroupSid.
      */
@@ -529,6 +565,10 @@ private static final long serialVersionUID = 0L;
       return huntGroupSid_;
     }
     /**
+     * <pre>
+     * The ID of the hunt group to list integration links for.
+     * </pre>
+     *
      * <code>int64 hunt_group_sid = 2 [json_name = "huntGroupSid"];</code>
      * @param value The huntGroupSid to set.
      * @return This builder for chaining.
@@ -541,6 +581,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The ID of the hunt group to list integration links for.
+     * </pre>
+     *
      * <code>int64 hunt_group_sid = 2 [json_name = "huntGroupSid"];</code>
      * @return This builder for chaining.
      */

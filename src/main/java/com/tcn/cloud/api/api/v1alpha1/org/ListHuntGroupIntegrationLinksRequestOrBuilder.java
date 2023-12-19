@@ -8,11 +8,19 @@ public interface ListHuntGroupIntegrationLinksRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * The ID of the organization which the hunt group belongs to.
+   * </pre>
+   *
    * <code>string org_id = 1 [json_name = "orgId"];</code>
    * @return The orgId.
    */
   java.lang.String getOrgId();
   /**
+   * <pre>
+   * The ID of the organization which the hunt group belongs to.
+   * </pre>
+   *
    * <code>string org_id = 1 [json_name = "orgId"];</code>
    * @return The bytes for orgId.
    */
@@ -20,6 +28,10 @@ public interface ListHuntGroupIntegrationLinksRequestOrBuilder extends
       getOrgIdBytes();
 
   /**
+   * <pre>
+   * The ID of the hunt group to list integration links for.
+   * </pre>
+   *
    * <code>int64 hunt_group_sid = 2 [json_name = "huntGroupSid"];</code>
    * @return The huntGroupSid.
    */

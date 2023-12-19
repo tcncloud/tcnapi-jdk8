@@ -47,6 +47,10 @@ private static final long serialVersionUID = 0L;
   public static final int CONTACT_FIELD_SID_FIELD_NUMBER = 1;
   private long contactFieldSid_ = 0L;
   /**
+   * <pre>
+   * The ID for the contact field.
+   * </pre>
+   *
    * <code>int64 contact_field_sid = 1 [json_name = "contactFieldSid"];</code>
    * @return The contactFieldSid.
    */
@@ -59,6 +63,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object helperValue_ = "";
   /**
+   * <pre>
+   * The value of the sub parameter part.
+   * </pre>
+   *
    * <code>string helper_value = 2 [json_name = "helperValue"];</code>
    * @return The helperValue.
    */
@@ -76,6 +84,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The value of the sub parameter part.
+   * </pre>
+   *
    * <code>string helper_value = 2 [json_name = "helperValue"];</code>
    * @return The bytes for helperValue.
    */
@@ -97,6 +109,10 @@ private static final long serialVersionUID = 0L;
   public static final int PARAMETER_SOURCE_TYPE_FIELD_NUMBER = 3;
   private int parameterSourceType_ = 0;
   /**
+   * <pre>
+   * The source type of the sub parameter part.
+   * </pre>
+   *
    * <code>.api.commons.org.ParameterSourceType parameter_source_type = 3 [json_name = "parameterSourceType"];</code>
    * @return The enum numeric value on the wire for parameterSourceType.
    */
@@ -104,6 +120,10 @@ private static final long serialVersionUID = 0L;
     return parameterSourceType_;
   }
   /**
+   * <pre>
+   * The source type of the sub parameter part.
+   * </pre>
+   *
    * <code>.api.commons.org.ParameterSourceType parameter_source_type = 3 [json_name = "parameterSourceType"];</code>
    * @return The parameterSourceType.
    */
@@ -490,6 +510,10 @@ private static final long serialVersionUID = 0L;
 
     private long contactFieldSid_ ;
     /**
+     * <pre>
+     * The ID for the contact field.
+     * </pre>
+     *
      * <code>int64 contact_field_sid = 1 [json_name = "contactFieldSid"];</code>
      * @return The contactFieldSid.
      */
@@ -498,6 +522,10 @@ private static final long serialVersionUID = 0L;
       return contactFieldSid_;
     }
     /**
+     * <pre>
+     * The ID for the contact field.
+     * </pre>
+     *
      * <code>int64 contact_field_sid = 1 [json_name = "contactFieldSid"];</code>
      * @param value The contactFieldSid to set.
      * @return This builder for chaining.
@@ -510,6 +538,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The ID for the contact field.
+     * </pre>
+     *
      * <code>int64 contact_field_sid = 1 [json_name = "contactFieldSid"];</code>
      * @return This builder for chaining.
      */
@@ -522,6 +554,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object helperValue_ = "";
     /**
+     * <pre>
+     * The value of the sub parameter part.
+     * </pre>
+     *
      * <code>string helper_value = 2 [json_name = "helperValue"];</code>
      * @return The helperValue.
      */
@@ -538,6 +574,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The value of the sub parameter part.
+     * </pre>
+     *
      * <code>string helper_value = 2 [json_name = "helperValue"];</code>
      * @return The bytes for helperValue.
      */
@@ -555,6 +595,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The value of the sub parameter part.
+     * </pre>
+     *
      * <code>string helper_value = 2 [json_name = "helperValue"];</code>
      * @param value The helperValue to set.
      * @return This builder for chaining.
@@ -568,6 +612,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The value of the sub parameter part.
+     * </pre>
+     *
      * <code>string helper_value = 2 [json_name = "helperValue"];</code>
      * @return This builder for chaining.
      */
@@ -578,6 +626,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The value of the sub parameter part.
+     * </pre>
+     *
      * <code>string helper_value = 2 [json_name = "helperValue"];</code>
      * @param value The bytes for helperValue to set.
      * @return This builder for chaining.
@@ -594,6 +646,10 @@ private static final long serialVersionUID = 0L;
 
     private int parameterSourceType_ = 0;
     /**
+     * <pre>
+     * The source type of the sub parameter part.
+     * </pre>
+     *
      * <code>.api.commons.org.ParameterSourceType parameter_source_type = 3 [json_name = "parameterSourceType"];</code>
      * @return The enum numeric value on the wire for parameterSourceType.
      */
@@ -601,6 +657,10 @@ private static final long serialVersionUID = 0L;
       return parameterSourceType_;
     }
     /**
+     * <pre>
+     * The source type of the sub parameter part.
+     * </pre>
+     *
      * <code>.api.commons.org.ParameterSourceType parameter_source_type = 3 [json_name = "parameterSourceType"];</code>
      * @param value The enum numeric value on the wire for parameterSourceType to set.
      * @return This builder for chaining.
@@ -612,6 +672,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The source type of the sub parameter part.
+     * </pre>
+     *
      * <code>.api.commons.org.ParameterSourceType parameter_source_type = 3 [json_name = "parameterSourceType"];</code>
      * @return The parameterSourceType.
      */
@@ -621,6 +685,10 @@ private static final long serialVersionUID = 0L;
       return result == null ? com.tcn.cloud.api.api.commons.org.ParameterSourceType.UNRECOGNIZED : result;
     }
     /**
+     * <pre>
+     * The source type of the sub parameter part.
+     * </pre>
+     *
      * <code>.api.commons.org.ParameterSourceType parameter_source_type = 3 [json_name = "parameterSourceType"];</code>
      * @param value The parameterSourceType to set.
      * @return This builder for chaining.
@@ -635,6 +703,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The source type of the sub parameter part.
+     * </pre>
+     *
      * <code>.api.commons.org.ParameterSourceType parameter_source_type = 3 [json_name = "parameterSourceType"];</code>
      * @return This builder for chaining.
      */
