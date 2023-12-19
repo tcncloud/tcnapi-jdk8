@@ -8,6 +8,10 @@ public interface CreateHuntGroupClientInfoDisplayTemplateResponseOrBuilder exten
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * The template sid of the created client info display template
+   * </pre>
+   *
    * <code>int64 template_sid = 1 [json_name = "templateSid"];</code>
    * @return The templateSid.
    */

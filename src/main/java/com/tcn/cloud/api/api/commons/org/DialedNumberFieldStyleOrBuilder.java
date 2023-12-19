@@ -8,21 +8,37 @@ public interface DialedNumberFieldStyleOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * The field style of the dialed number field
+   * </pre>
+   *
    * <code>.api.commons.org.FieldStyle field_style = 1 [json_name = "fieldStyle"];</code>
    * @return Whether the fieldStyle field is set.
    */
   boolean hasFieldStyle();
   /**
+   * <pre>
+   * The field style of the dialed number field
+   * </pre>
+   *
    * <code>.api.commons.org.FieldStyle field_style = 1 [json_name = "fieldStyle"];</code>
    * @return The fieldStyle.
    */
   com.tcn.cloud.api.api.commons.org.FieldStyle getFieldStyle();
   /**
+   * <pre>
+   * The field style of the dialed number field
+   * </pre>
+   *
    * <code>.api.commons.org.FieldStyle field_style = 1 [json_name = "fieldStyle"];</code>
    */
   com.tcn.cloud.api.api.commons.org.FieldStyleOrBuilder getFieldStyleOrBuilder();
 
   /**
+   * <pre>
+   * Display the dialed number field to the agent
+   * </pre>
+   *
    * <code>bool display_to_agent = 2 [json_name = "displayToAgent"];</code>
    * @return The displayToAgent.
    */

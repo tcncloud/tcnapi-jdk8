@@ -45,6 +45,10 @@ private static final long serialVersionUID = 0L;
   public static final int HUNT_GROUP_SID_FIELD_NUMBER = 1;
   private long huntGroupSid_ = 0L;
   /**
+   * <pre>
+   * The hunt group sid of the desired client info display template
+   * </pre>
+   *
    * <code>int64 hunt_group_sid = 1 [json_name = "huntGroupSid"];</code>
    * @return The huntGroupSid.
    */
@@ -385,6 +389,10 @@ private static final long serialVersionUID = 0L;
 
     private long huntGroupSid_ ;
     /**
+     * <pre>
+     * The hunt group sid of the desired client info display template
+     * </pre>
+     *
      * <code>int64 hunt_group_sid = 1 [json_name = "huntGroupSid"];</code>
      * @return The huntGroupSid.
      */
@@ -393,6 +401,10 @@ private static final long serialVersionUID = 0L;
       return huntGroupSid_;
     }
     /**
+     * <pre>
+     * The hunt group sid of the desired client info display template
+     * </pre>
+     *
      * <code>int64 hunt_group_sid = 1 [json_name = "huntGroupSid"];</code>
      * @param value The huntGroupSid to set.
      * @return This builder for chaining.
@@ -405,6 +417,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The hunt group sid of the desired client info display template
+     * </pre>
+     *
      * <code>int64 hunt_group_sid = 1 [json_name = "huntGroupSid"];</code>
      * @return This builder for chaining.
      */

@@ -45,6 +45,10 @@ private static final long serialVersionUID = 0L;
   public static final int FIELD_STYLE_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.api.commons.org.FieldStyle fieldStyle_;
   /**
+   * <pre>
+   * The field style of the dialed number field
+   * </pre>
+   *
    * <code>.api.commons.org.FieldStyle field_style = 1 [json_name = "fieldStyle"];</code>
    * @return Whether the fieldStyle field is set.
    */
@@ -53,6 +57,10 @@ private static final long serialVersionUID = 0L;
     return fieldStyle_ != null;
   }
   /**
+   * <pre>
+   * The field style of the dialed number field
+   * </pre>
+   *
    * <code>.api.commons.org.FieldStyle field_style = 1 [json_name = "fieldStyle"];</code>
    * @return The fieldStyle.
    */
@@ -61,6 +69,10 @@ private static final long serialVersionUID = 0L;
     return fieldStyle_ == null ? com.tcn.cloud.api.api.commons.org.FieldStyle.getDefaultInstance() : fieldStyle_;
   }
   /**
+   * <pre>
+   * The field style of the dialed number field
+   * </pre>
+   *
    * <code>.api.commons.org.FieldStyle field_style = 1 [json_name = "fieldStyle"];</code>
    */
   @java.lang.Override
@@ -71,6 +83,10 @@ private static final long serialVersionUID = 0L;
   public static final int DISPLAY_TO_AGENT_FIELD_NUMBER = 2;
   private boolean displayToAgent_ = false;
   /**
+   * <pre>
+   * Display the dialed number field to the agent
+   * </pre>
+   *
    * <code>bool display_to_agent = 2 [json_name = "displayToAgent"];</code>
    * @return The displayToAgent.
    */
@@ -449,6 +465,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.org.FieldStyle, com.tcn.cloud.api.api.commons.org.FieldStyle.Builder, com.tcn.cloud.api.api.commons.org.FieldStyleOrBuilder> fieldStyleBuilder_;
     /**
+     * <pre>
+     * The field style of the dialed number field
+     * </pre>
+     *
      * <code>.api.commons.org.FieldStyle field_style = 1 [json_name = "fieldStyle"];</code>
      * @return Whether the fieldStyle field is set.
      */
@@ -456,6 +476,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
+     * <pre>
+     * The field style of the dialed number field
+     * </pre>
+     *
      * <code>.api.commons.org.FieldStyle field_style = 1 [json_name = "fieldStyle"];</code>
      * @return The fieldStyle.
      */
@@ -467,6 +491,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The field style of the dialed number field
+     * </pre>
+     *
      * <code>.api.commons.org.FieldStyle field_style = 1 [json_name = "fieldStyle"];</code>
      */
     public Builder setFieldStyle(com.tcn.cloud.api.api.commons.org.FieldStyle value) {
@@ -483,6 +511,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The field style of the dialed number field
+     * </pre>
+     *
      * <code>.api.commons.org.FieldStyle field_style = 1 [json_name = "fieldStyle"];</code>
      */
     public Builder setFieldStyle(
@@ -497,6 +529,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The field style of the dialed number field
+     * </pre>
+     *
      * <code>.api.commons.org.FieldStyle field_style = 1 [json_name = "fieldStyle"];</code>
      */
     public Builder mergeFieldStyle(com.tcn.cloud.api.api.commons.org.FieldStyle value) {
@@ -516,6 +552,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The field style of the dialed number field
+     * </pre>
+     *
      * <code>.api.commons.org.FieldStyle field_style = 1 [json_name = "fieldStyle"];</code>
      */
     public Builder clearFieldStyle() {
@@ -529,6 +569,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The field style of the dialed number field
+     * </pre>
+     *
      * <code>.api.commons.org.FieldStyle field_style = 1 [json_name = "fieldStyle"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.FieldStyle.Builder getFieldStyleBuilder() {
@@ -537,6 +581,10 @@ private static final long serialVersionUID = 0L;
       return getFieldStyleFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * The field style of the dialed number field
+     * </pre>
+     *
      * <code>.api.commons.org.FieldStyle field_style = 1 [json_name = "fieldStyle"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.FieldStyleOrBuilder getFieldStyleOrBuilder() {
@@ -548,6 +596,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The field style of the dialed number field
+     * </pre>
+     *
      * <code>.api.commons.org.FieldStyle field_style = 1 [json_name = "fieldStyle"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -566,6 +618,10 @@ private static final long serialVersionUID = 0L;
 
     private boolean displayToAgent_ ;
     /**
+     * <pre>
+     * Display the dialed number field to the agent
+     * </pre>
+     *
      * <code>bool display_to_agent = 2 [json_name = "displayToAgent"];</code>
      * @return The displayToAgent.
      */
@@ -574,6 +630,10 @@ private static final long serialVersionUID = 0L;
       return displayToAgent_;
     }
     /**
+     * <pre>
+     * Display the dialed number field to the agent
+     * </pre>
+     *
      * <code>bool display_to_agent = 2 [json_name = "displayToAgent"];</code>
      * @param value The displayToAgent to set.
      * @return This builder for chaining.
@@ -586,6 +646,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Display the dialed number field to the agent
+     * </pre>
+     *
      * <code>bool display_to_agent = 2 [json_name = "displayToAgent"];</code>
      * @return This builder for chaining.
      */

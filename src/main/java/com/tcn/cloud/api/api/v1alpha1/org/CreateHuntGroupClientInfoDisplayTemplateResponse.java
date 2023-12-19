@@ -45,6 +45,10 @@ private static final long serialVersionUID = 0L;
   public static final int TEMPLATE_SID_FIELD_NUMBER = 1;
   private long templateSid_ = 0L;
   /**
+   * <pre>
+   * The template sid of the created client info display template
+   * </pre>
+   *
    * <code>int64 template_sid = 1 [json_name = "templateSid"];</code>
    * @return The templateSid.
    */
@@ -385,6 +389,10 @@ private static final long serialVersionUID = 0L;
 
     private long templateSid_ ;
     /**
+     * <pre>
+     * The template sid of the created client info display template
+     * </pre>
+     *
      * <code>int64 template_sid = 1 [json_name = "templateSid"];</code>
      * @return The templateSid.
      */
@@ -393,6 +401,10 @@ private static final long serialVersionUID = 0L;
       return templateSid_;
     }
     /**
+     * <pre>
+     * The template sid of the created client info display template
+     * </pre>
+     *
      * <code>int64 template_sid = 1 [json_name = "templateSid"];</code>
      * @param value The templateSid to set.
      * @return This builder for chaining.
@@ -405,6 +417,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The template sid of the created client info display template
+     * </pre>
+     *
      * <code>int64 template_sid = 1 [json_name = "templateSid"];</code>
      * @return This builder for chaining.
      */

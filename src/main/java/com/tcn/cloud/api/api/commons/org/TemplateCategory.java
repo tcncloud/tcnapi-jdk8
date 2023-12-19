@@ -21,10 +21,18 @@ public enum TemplateCategory
    */
   TEMPLATE_CATEGORY_UNSPECIFIED(0),
   /**
+   * <pre>
+   * 1 means a hunt group client info display template
+   * </pre>
+   *
    * <code>TEMPLATE_CATEGORY_HUNT_GROUP = 1;</code>
    */
   TEMPLATE_CATEGORY_HUNT_GROUP(1),
   /**
+   * <pre>
+   * 2 means a campaign client info display template
+   * </pre>
+   *
    * <code>TEMPLATE_CATEGORY_CAMPAIGN = 2;</code>
    */
   TEMPLATE_CATEGORY_CAMPAIGN(2),
@@ -40,10 +48,18 @@ public enum TemplateCategory
    */
   public static final int TEMPLATE_CATEGORY_UNSPECIFIED_VALUE = 0;
   /**
+   * <pre>
+   * 1 means a hunt group client info display template
+   * </pre>
+   *
    * <code>TEMPLATE_CATEGORY_HUNT_GROUP = 1;</code>
    */
   public static final int TEMPLATE_CATEGORY_HUNT_GROUP_VALUE = 1;
   /**
+   * <pre>
+   * 2 means a campaign client info display template
+   * </pre>
+   *
    * <code>TEMPLATE_CATEGORY_CAMPAIGN = 2;</code>
    */
   public static final int TEMPLATE_CATEGORY_CAMPAIGN_VALUE = 2;

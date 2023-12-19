@@ -8,22 +8,38 @@ public interface ContactFieldStyleOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * The description id of the contact field style
+   * </pre>
+   *
    * <code>int64 description_id = 1 [json_name = "descriptionId"];</code>
    * @return The descriptionId.
    */
   long getDescriptionId();
 
   /**
+   * <pre>
+   * The field style of the contact field
+   * </pre>
+   *
    * <code>.api.commons.org.FieldStyle field_style = 2 [json_name = "fieldStyle"];</code>
    * @return Whether the fieldStyle field is set.
    */
   boolean hasFieldStyle();
   /**
+   * <pre>
+   * The field style of the contact field
+   * </pre>
+   *
    * <code>.api.commons.org.FieldStyle field_style = 2 [json_name = "fieldStyle"];</code>
    * @return The fieldStyle.
    */
   com.tcn.cloud.api.api.commons.org.FieldStyle getFieldStyle();
   /**
+   * <pre>
+   * The field style of the contact field
+   * </pre>
+   *
    * <code>.api.commons.org.FieldStyle field_style = 2 [json_name = "fieldStyle"];</code>
    */
   com.tcn.cloud.api.api.commons.org.FieldStyleOrBuilder getFieldStyleOrBuilder();

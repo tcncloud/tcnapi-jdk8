@@ -45,6 +45,10 @@ private static final long serialVersionUID = 0L;
   public static final int HUNT_GROUP_SID_FIELD_NUMBER = 1;
   private long huntGroupSid_ = 0L;
   /**
+   * <pre>
+   * The hunt group sid of the desired client info display template to update
+   * </pre>
+   *
    * <code>int64 hunt_group_sid = 1 [json_name = "huntGroupSid"];</code>
    * @return The huntGroupSid.
    */
@@ -56,6 +60,10 @@ private static final long serialVersionUID = 0L;
   public static final int TEMPLATE_FIELD_NUMBER = 2;
   private com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate template_;
   /**
+   * <pre>
+   * The template info of the updated client info display template
+   * </pre>
+   *
    * <code>.api.commons.org.ClientInfoDisplayTemplate template = 2 [json_name = "template"];</code>
    * @return Whether the template field is set.
    */
@@ -64,6 +72,10 @@ private static final long serialVersionUID = 0L;
     return template_ != null;
   }
   /**
+   * <pre>
+   * The template info of the updated client info display template
+   * </pre>
+   *
    * <code>.api.commons.org.ClientInfoDisplayTemplate template = 2 [json_name = "template"];</code>
    * @return The template.
    */
@@ -72,6 +84,10 @@ private static final long serialVersionUID = 0L;
     return template_ == null ? com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate.getDefaultInstance() : template_;
   }
   /**
+   * <pre>
+   * The template info of the updated client info display template
+   * </pre>
+   *
    * <code>.api.commons.org.ClientInfoDisplayTemplate template = 2 [json_name = "template"];</code>
    */
   @java.lang.Override
@@ -447,6 +463,10 @@ private static final long serialVersionUID = 0L;
 
     private long huntGroupSid_ ;
     /**
+     * <pre>
+     * The hunt group sid of the desired client info display template to update
+     * </pre>
+     *
      * <code>int64 hunt_group_sid = 1 [json_name = "huntGroupSid"];</code>
      * @return The huntGroupSid.
      */
@@ -455,6 +475,10 @@ private static final long serialVersionUID = 0L;
       return huntGroupSid_;
     }
     /**
+     * <pre>
+     * The hunt group sid of the desired client info display template to update
+     * </pre>
+     *
      * <code>int64 hunt_group_sid = 1 [json_name = "huntGroupSid"];</code>
      * @param value The huntGroupSid to set.
      * @return This builder for chaining.
@@ -467,6 +491,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The hunt group sid of the desired client info display template to update
+     * </pre>
+     *
      * <code>int64 hunt_group_sid = 1 [json_name = "huntGroupSid"];</code>
      * @return This builder for chaining.
      */
@@ -481,6 +509,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate, com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate.Builder, com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplateOrBuilder> templateBuilder_;
     /**
+     * <pre>
+     * The template info of the updated client info display template
+     * </pre>
+     *
      * <code>.api.commons.org.ClientInfoDisplayTemplate template = 2 [json_name = "template"];</code>
      * @return Whether the template field is set.
      */
@@ -488,6 +520,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
+     * <pre>
+     * The template info of the updated client info display template
+     * </pre>
+     *
      * <code>.api.commons.org.ClientInfoDisplayTemplate template = 2 [json_name = "template"];</code>
      * @return The template.
      */
@@ -499,6 +535,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The template info of the updated client info display template
+     * </pre>
+     *
      * <code>.api.commons.org.ClientInfoDisplayTemplate template = 2 [json_name = "template"];</code>
      */
     public Builder setTemplate(com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate value) {
@@ -515,6 +555,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The template info of the updated client info display template
+     * </pre>
+     *
      * <code>.api.commons.org.ClientInfoDisplayTemplate template = 2 [json_name = "template"];</code>
      */
     public Builder setTemplate(
@@ -529,6 +573,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The template info of the updated client info display template
+     * </pre>
+     *
      * <code>.api.commons.org.ClientInfoDisplayTemplate template = 2 [json_name = "template"];</code>
      */
     public Builder mergeTemplate(com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate value) {
@@ -548,6 +596,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The template info of the updated client info display template
+     * </pre>
+     *
      * <code>.api.commons.org.ClientInfoDisplayTemplate template = 2 [json_name = "template"];</code>
      */
     public Builder clearTemplate() {
@@ -561,6 +613,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The template info of the updated client info display template
+     * </pre>
+     *
      * <code>.api.commons.org.ClientInfoDisplayTemplate template = 2 [json_name = "template"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate.Builder getTemplateBuilder() {
@@ -569,6 +625,10 @@ private static final long serialVersionUID = 0L;
       return getTemplateFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * The template info of the updated client info display template
+     * </pre>
+     *
      * <code>.api.commons.org.ClientInfoDisplayTemplate template = 2 [json_name = "template"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplateOrBuilder getTemplateOrBuilder() {
@@ -580,6 +640,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The template info of the updated client info display template
+     * </pre>
+     *
      * <code>.api.commons.org.ClientInfoDisplayTemplate template = 2 [json_name = "template"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<

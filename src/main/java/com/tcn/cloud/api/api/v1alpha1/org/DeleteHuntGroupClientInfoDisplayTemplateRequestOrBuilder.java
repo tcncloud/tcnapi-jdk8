@@ -8,12 +8,20 @@ public interface DeleteHuntGroupClientInfoDisplayTemplateRequestOrBuilder extend
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * The hunt group sid of the desired client info display template to delete
+   * </pre>
+   *
    * <code>int64 hunt_group_sid = 1 [json_name = "huntGroupSid"];</code>
    * @return The huntGroupSid.
    */
   long getHuntGroupSid();
 
   /**
+   * <pre>
+   * The template sid of the client info display template to delete
+   * </pre>
+   *
    * <code>int64 template_sid = 2 [json_name = "templateSid"];</code>
    * @return The templateSid.
    */

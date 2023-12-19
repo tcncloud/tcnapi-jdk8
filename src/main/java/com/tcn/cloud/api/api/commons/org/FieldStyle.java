@@ -48,6 +48,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object textColor_ = "";
   /**
+   * <pre>
+   * Text color of a field style
+   * </pre>
+   *
    * <code>string text_color = 1 [json_name = "textColor"];</code>
    * @return The textColor.
    */
@@ -65,6 +69,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * Text color of a field style
+   * </pre>
+   *
    * <code>string text_color = 1 [json_name = "textColor"];</code>
    * @return The bytes for textColor.
    */
@@ -87,6 +95,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object backgroundColor_ = "";
   /**
+   * <pre>
+   * Background color of a field style
+   * </pre>
+   *
    * <code>string background_color = 2 [json_name = "backgroundColor"];</code>
    * @return The backgroundColor.
    */
@@ -104,6 +116,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * Background color of a field style
+   * </pre>
+   *
    * <code>string background_color = 2 [json_name = "backgroundColor"];</code>
    * @return The bytes for backgroundColor.
    */
@@ -125,6 +141,10 @@ private static final long serialVersionUID = 0L;
   public static final int ALLOW_AGENT_COPY_FIELD_NUMBER = 3;
   private boolean allowAgentCopy_ = false;
   /**
+   * <pre>
+   * Allow the agent to copy this field style
+   * </pre>
+   *
    * <code>bool allow_agent_copy = 3 [json_name = "allowAgentCopy"];</code>
    * @return The allowAgentCopy.
    */
@@ -513,6 +533,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object textColor_ = "";
     /**
+     * <pre>
+     * Text color of a field style
+     * </pre>
+     *
      * <code>string text_color = 1 [json_name = "textColor"];</code>
      * @return The textColor.
      */
@@ -529,6 +553,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Text color of a field style
+     * </pre>
+     *
      * <code>string text_color = 1 [json_name = "textColor"];</code>
      * @return The bytes for textColor.
      */
@@ -546,6 +574,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Text color of a field style
+     * </pre>
+     *
      * <code>string text_color = 1 [json_name = "textColor"];</code>
      * @param value The textColor to set.
      * @return This builder for chaining.
@@ -559,6 +591,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Text color of a field style
+     * </pre>
+     *
      * <code>string text_color = 1 [json_name = "textColor"];</code>
      * @return This builder for chaining.
      */
@@ -569,6 +605,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Text color of a field style
+     * </pre>
+     *
      * <code>string text_color = 1 [json_name = "textColor"];</code>
      * @param value The bytes for textColor to set.
      * @return This builder for chaining.
@@ -585,6 +625,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object backgroundColor_ = "";
     /**
+     * <pre>
+     * Background color of a field style
+     * </pre>
+     *
      * <code>string background_color = 2 [json_name = "backgroundColor"];</code>
      * @return The backgroundColor.
      */
@@ -601,6 +645,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Background color of a field style
+     * </pre>
+     *
      * <code>string background_color = 2 [json_name = "backgroundColor"];</code>
      * @return The bytes for backgroundColor.
      */
@@ -618,6 +666,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Background color of a field style
+     * </pre>
+     *
      * <code>string background_color = 2 [json_name = "backgroundColor"];</code>
      * @param value The backgroundColor to set.
      * @return This builder for chaining.
@@ -631,6 +683,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Background color of a field style
+     * </pre>
+     *
      * <code>string background_color = 2 [json_name = "backgroundColor"];</code>
      * @return This builder for chaining.
      */
@@ -641,6 +697,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Background color of a field style
+     * </pre>
+     *
      * <code>string background_color = 2 [json_name = "backgroundColor"];</code>
      * @param value The bytes for backgroundColor to set.
      * @return This builder for chaining.
@@ -657,6 +717,10 @@ private static final long serialVersionUID = 0L;
 
     private boolean allowAgentCopy_ ;
     /**
+     * <pre>
+     * Allow the agent to copy this field style
+     * </pre>
+     *
      * <code>bool allow_agent_copy = 3 [json_name = "allowAgentCopy"];</code>
      * @return The allowAgentCopy.
      */
@@ -665,6 +729,10 @@ private static final long serialVersionUID = 0L;
       return allowAgentCopy_;
     }
     /**
+     * <pre>
+     * Allow the agent to copy this field style
+     * </pre>
+     *
      * <code>bool allow_agent_copy = 3 [json_name = "allowAgentCopy"];</code>
      * @param value The allowAgentCopy to set.
      * @return This builder for chaining.
@@ -677,6 +745,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Allow the agent to copy this field style
+     * </pre>
+     *
      * <code>bool allow_agent_copy = 3 [json_name = "allowAgentCopy"];</code>
      * @return This builder for chaining.
      */

@@ -8,22 +8,38 @@ public interface CreateHuntGroupClientInfoDisplayTemplateRequestOrBuilder extend
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * The hunt group sid of the desired client info display template
+   * </pre>
+   *
    * <code>int64 hunt_group_sid = 1 [json_name = "huntGroupSid"];</code>
    * @return The huntGroupSid.
    */
   long getHuntGroupSid();
 
   /**
+   * <pre>
+   * The template info of the client info display template
+   * </pre>
+   *
    * <code>.api.commons.org.ClientInfoDisplayTemplate template = 2 [json_name = "template"];</code>
    * @return Whether the template field is set.
    */
   boolean hasTemplate();
   /**
+   * <pre>
+   * The template info of the client info display template
+   * </pre>
+   *
    * <code>.api.commons.org.ClientInfoDisplayTemplate template = 2 [json_name = "template"];</code>
    * @return The template.
    */
   com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate getTemplate();
   /**
+   * <pre>
+   * The template info of the client info display template
+   * </pre>
+   *
    * <code>.api.commons.org.ClientInfoDisplayTemplate template = 2 [json_name = "template"];</code>
    */
   com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplateOrBuilder getTemplateOrBuilder();

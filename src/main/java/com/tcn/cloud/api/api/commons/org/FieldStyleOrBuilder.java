@@ -8,11 +8,19 @@ public interface FieldStyleOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * Text color of a field style
+   * </pre>
+   *
    * <code>string text_color = 1 [json_name = "textColor"];</code>
    * @return The textColor.
    */
   java.lang.String getTextColor();
   /**
+   * <pre>
+   * Text color of a field style
+   * </pre>
+   *
    * <code>string text_color = 1 [json_name = "textColor"];</code>
    * @return The bytes for textColor.
    */
@@ -20,11 +28,19 @@ public interface FieldStyleOrBuilder extends
       getTextColorBytes();
 
   /**
+   * <pre>
+   * Background color of a field style
+   * </pre>
+   *
    * <code>string background_color = 2 [json_name = "backgroundColor"];</code>
    * @return The backgroundColor.
    */
   java.lang.String getBackgroundColor();
   /**
+   * <pre>
+   * Background color of a field style
+   * </pre>
+   *
    * <code>string background_color = 2 [json_name = "backgroundColor"];</code>
    * @return The bytes for backgroundColor.
    */
@@ -32,6 +48,10 @@ public interface FieldStyleOrBuilder extends
       getBackgroundColorBytes();
 
   /**
+   * <pre>
+   * Allow the agent to copy this field style
+   * </pre>
+   *
    * <code>bool allow_agent_copy = 3 [json_name = "allowAgentCopy"];</code>
    * @return The allowAgentCopy.
    */

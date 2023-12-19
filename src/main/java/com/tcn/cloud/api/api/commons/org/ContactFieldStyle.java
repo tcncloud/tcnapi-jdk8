@@ -46,6 +46,10 @@ private static final long serialVersionUID = 0L;
   public static final int DESCRIPTION_ID_FIELD_NUMBER = 1;
   private long descriptionId_ = 0L;
   /**
+   * <pre>
+   * The description id of the contact field style
+   * </pre>
+   *
    * <code>int64 description_id = 1 [json_name = "descriptionId"];</code>
    * @return The descriptionId.
    */
@@ -57,6 +61,10 @@ private static final long serialVersionUID = 0L;
   public static final int FIELD_STYLE_FIELD_NUMBER = 2;
   private com.tcn.cloud.api.api.commons.org.FieldStyle fieldStyle_;
   /**
+   * <pre>
+   * The field style of the contact field
+   * </pre>
+   *
    * <code>.api.commons.org.FieldStyle field_style = 2 [json_name = "fieldStyle"];</code>
    * @return Whether the fieldStyle field is set.
    */
@@ -65,6 +73,10 @@ private static final long serialVersionUID = 0L;
     return fieldStyle_ != null;
   }
   /**
+   * <pre>
+   * The field style of the contact field
+   * </pre>
+   *
    * <code>.api.commons.org.FieldStyle field_style = 2 [json_name = "fieldStyle"];</code>
    * @return The fieldStyle.
    */
@@ -73,6 +85,10 @@ private static final long serialVersionUID = 0L;
     return fieldStyle_ == null ? com.tcn.cloud.api.api.commons.org.FieldStyle.getDefaultInstance() : fieldStyle_;
   }
   /**
+   * <pre>
+   * The field style of the contact field
+   * </pre>
+   *
    * <code>.api.commons.org.FieldStyle field_style = 2 [json_name = "fieldStyle"];</code>
    */
   @java.lang.Override
@@ -449,6 +465,10 @@ private static final long serialVersionUID = 0L;
 
     private long descriptionId_ ;
     /**
+     * <pre>
+     * The description id of the contact field style
+     * </pre>
+     *
      * <code>int64 description_id = 1 [json_name = "descriptionId"];</code>
      * @return The descriptionId.
      */
@@ -457,6 +477,10 @@ private static final long serialVersionUID = 0L;
       return descriptionId_;
     }
     /**
+     * <pre>
+     * The description id of the contact field style
+     * </pre>
+     *
      * <code>int64 description_id = 1 [json_name = "descriptionId"];</code>
      * @param value The descriptionId to set.
      * @return This builder for chaining.
@@ -469,6 +493,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The description id of the contact field style
+     * </pre>
+     *
      * <code>int64 description_id = 1 [json_name = "descriptionId"];</code>
      * @return This builder for chaining.
      */
@@ -483,6 +511,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.org.FieldStyle, com.tcn.cloud.api.api.commons.org.FieldStyle.Builder, com.tcn.cloud.api.api.commons.org.FieldStyleOrBuilder> fieldStyleBuilder_;
     /**
+     * <pre>
+     * The field style of the contact field
+     * </pre>
+     *
      * <code>.api.commons.org.FieldStyle field_style = 2 [json_name = "fieldStyle"];</code>
      * @return Whether the fieldStyle field is set.
      */
@@ -490,6 +522,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
+     * <pre>
+     * The field style of the contact field
+     * </pre>
+     *
      * <code>.api.commons.org.FieldStyle field_style = 2 [json_name = "fieldStyle"];</code>
      * @return The fieldStyle.
      */
@@ -501,6 +537,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The field style of the contact field
+     * </pre>
+     *
      * <code>.api.commons.org.FieldStyle field_style = 2 [json_name = "fieldStyle"];</code>
      */
     public Builder setFieldStyle(com.tcn.cloud.api.api.commons.org.FieldStyle value) {
@@ -517,6 +557,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The field style of the contact field
+     * </pre>
+     *
      * <code>.api.commons.org.FieldStyle field_style = 2 [json_name = "fieldStyle"];</code>
      */
     public Builder setFieldStyle(
@@ -531,6 +575,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The field style of the contact field
+     * </pre>
+     *
      * <code>.api.commons.org.FieldStyle field_style = 2 [json_name = "fieldStyle"];</code>
      */
     public Builder mergeFieldStyle(com.tcn.cloud.api.api.commons.org.FieldStyle value) {
@@ -550,6 +598,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The field style of the contact field
+     * </pre>
+     *
      * <code>.api.commons.org.FieldStyle field_style = 2 [json_name = "fieldStyle"];</code>
      */
     public Builder clearFieldStyle() {
@@ -563,6 +615,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The field style of the contact field
+     * </pre>
+     *
      * <code>.api.commons.org.FieldStyle field_style = 2 [json_name = "fieldStyle"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.FieldStyle.Builder getFieldStyleBuilder() {
@@ -571,6 +627,10 @@ private static final long serialVersionUID = 0L;
       return getFieldStyleFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * The field style of the contact field
+     * </pre>
+     *
      * <code>.api.commons.org.FieldStyle field_style = 2 [json_name = "fieldStyle"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.FieldStyleOrBuilder getFieldStyleOrBuilder() {
@@ -582,6 +642,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The field style of the contact field
+     * </pre>
+     *
      * <code>.api.commons.org.FieldStyle field_style = 2 [json_name = "fieldStyle"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<

@@ -51,6 +51,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object templateSid_ = "";
   /**
+   * <pre>
+   * The template sid of the client info display template
+   * </pre>
+   *
    * <code>string template_sid = 1 [json_name = "templateSid"];</code>
    * @return The templateSid.
    */
@@ -68,6 +72,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The template sid of the client info display template
+   * </pre>
+   *
    * <code>string template_sid = 1 [json_name = "templateSid"];</code>
    * @return The bytes for templateSid.
    */
@@ -90,6 +98,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object name_ = "";
   /**
+   * <pre>
+   * The name of the client info display template
+   * </pre>
+   *
    * <code>string name = 2 [json_name = "name"];</code>
    * @return The name.
    */
@@ -107,6 +119,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The name of the client info display template
+   * </pre>
+   *
    * <code>string name = 2 [json_name = "name"];</code>
    * @return The bytes for name.
    */
@@ -129,6 +145,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object description_ = "";
   /**
+   * <pre>
+   * The description of the client info display template
+   * </pre>
+   *
    * <code>string description = 3 [json_name = "description"];</code>
    * @return The description.
    */
@@ -146,6 +166,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The description of the client info display template
+   * </pre>
+   *
    * <code>string description = 3 [json_name = "description"];</code>
    * @return The bytes for description.
    */
@@ -167,6 +191,10 @@ private static final long serialVersionUID = 0L;
   public static final int DISPLAY_ALL_FIELDS_FIELD_NUMBER = 4;
   private boolean displayAllFields_ = false;
   /**
+   * <pre>
+   * Bool used to determine whether to show all fields in a client info display template
+   * </pre>
+   *
    * <code>bool display_all_fields = 4 [json_name = "displayAllFields"];</code>
    * @return The displayAllFields.
    */
@@ -178,6 +206,10 @@ private static final long serialVersionUID = 0L;
   public static final int DIALED_NUMBER_FIELD_STYLE_FIELD_NUMBER = 5;
   private com.tcn.cloud.api.api.commons.org.DialedNumberFieldStyle dialedNumberFieldStyle_;
   /**
+   * <pre>
+   * The dialed number field style of a client info display template
+   * </pre>
+   *
    * <code>.api.commons.org.DialedNumberFieldStyle dialed_number_field_style = 5 [json_name = "dialedNumberFieldStyle"];</code>
    * @return Whether the dialedNumberFieldStyle field is set.
    */
@@ -186,6 +218,10 @@ private static final long serialVersionUID = 0L;
     return dialedNumberFieldStyle_ != null;
   }
   /**
+   * <pre>
+   * The dialed number field style of a client info display template
+   * </pre>
+   *
    * <code>.api.commons.org.DialedNumberFieldStyle dialed_number_field_style = 5 [json_name = "dialedNumberFieldStyle"];</code>
    * @return The dialedNumberFieldStyle.
    */
@@ -194,6 +230,10 @@ private static final long serialVersionUID = 0L;
     return dialedNumberFieldStyle_ == null ? com.tcn.cloud.api.api.commons.org.DialedNumberFieldStyle.getDefaultInstance() : dialedNumberFieldStyle_;
   }
   /**
+   * <pre>
+   * The dialed number field style of a client info display template
+   * </pre>
+   *
    * <code>.api.commons.org.DialedNumberFieldStyle dialed_number_field_style = 5 [json_name = "dialedNumberFieldStyle"];</code>
    */
   @java.lang.Override
@@ -205,6 +245,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.commons.org.ContactFieldStyle> contactFieldStyles_;
   /**
+   * <pre>
+   * A list of Contact Field Styles for a client info display template
+   * </pre>
+   *
    * <code>repeated .api.commons.org.ContactFieldStyle contact_field_styles = 6 [json_name = "contactFieldStyles"];</code>
    */
   @java.lang.Override
@@ -212,6 +256,10 @@ private static final long serialVersionUID = 0L;
     return contactFieldStyles_;
   }
   /**
+   * <pre>
+   * A list of Contact Field Styles for a client info display template
+   * </pre>
+   *
    * <code>repeated .api.commons.org.ContactFieldStyle contact_field_styles = 6 [json_name = "contactFieldStyles"];</code>
    */
   @java.lang.Override
@@ -220,6 +268,10 @@ private static final long serialVersionUID = 0L;
     return contactFieldStyles_;
   }
   /**
+   * <pre>
+   * A list of Contact Field Styles for a client info display template
+   * </pre>
+   *
    * <code>repeated .api.commons.org.ContactFieldStyle contact_field_styles = 6 [json_name = "contactFieldStyles"];</code>
    */
   @java.lang.Override
@@ -227,6 +279,10 @@ private static final long serialVersionUID = 0L;
     return contactFieldStyles_.size();
   }
   /**
+   * <pre>
+   * A list of Contact Field Styles for a client info display template
+   * </pre>
+   *
    * <code>repeated .api.commons.org.ContactFieldStyle contact_field_styles = 6 [json_name = "contactFieldStyles"];</code>
    */
   @java.lang.Override
@@ -234,6 +290,10 @@ private static final long serialVersionUID = 0L;
     return contactFieldStyles_.get(index);
   }
   /**
+   * <pre>
+   * A list of Contact Field Styles for a client info display template
+   * </pre>
+   *
    * <code>repeated .api.commons.org.ContactFieldStyle contact_field_styles = 6 [json_name = "contactFieldStyles"];</code>
    */
   @java.lang.Override
@@ -245,6 +305,10 @@ private static final long serialVersionUID = 0L;
   public static final int TEMPLATE_CATEGORY_FIELD_NUMBER = 7;
   private int templateCategory_ = 0;
   /**
+   * <pre>
+   * The template type
+   * </pre>
+   *
    * <code>.api.commons.org.TemplateCategory template_category = 7 [json_name = "templateCategory"];</code>
    * @return The enum numeric value on the wire for templateCategory.
    */
@@ -252,6 +316,10 @@ private static final long serialVersionUID = 0L;
     return templateCategory_;
   }
   /**
+   * <pre>
+   * The template type
+   * </pre>
+   *
    * <code>.api.commons.org.TemplateCategory template_category = 7 [json_name = "templateCategory"];</code>
    * @return The templateCategory.
    */
@@ -794,6 +862,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object templateSid_ = "";
     /**
+     * <pre>
+     * The template sid of the client info display template
+     * </pre>
+     *
      * <code>string template_sid = 1 [json_name = "templateSid"];</code>
      * @return The templateSid.
      */
@@ -810,6 +882,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The template sid of the client info display template
+     * </pre>
+     *
      * <code>string template_sid = 1 [json_name = "templateSid"];</code>
      * @return The bytes for templateSid.
      */
@@ -827,6 +903,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The template sid of the client info display template
+     * </pre>
+     *
      * <code>string template_sid = 1 [json_name = "templateSid"];</code>
      * @param value The templateSid to set.
      * @return This builder for chaining.
@@ -840,6 +920,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The template sid of the client info display template
+     * </pre>
+     *
      * <code>string template_sid = 1 [json_name = "templateSid"];</code>
      * @return This builder for chaining.
      */
@@ -850,6 +934,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The template sid of the client info display template
+     * </pre>
+     *
      * <code>string template_sid = 1 [json_name = "templateSid"];</code>
      * @param value The bytes for templateSid to set.
      * @return This builder for chaining.
@@ -866,6 +954,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object name_ = "";
     /**
+     * <pre>
+     * The name of the client info display template
+     * </pre>
+     *
      * <code>string name = 2 [json_name = "name"];</code>
      * @return The name.
      */
@@ -882,6 +974,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The name of the client info display template
+     * </pre>
+     *
      * <code>string name = 2 [json_name = "name"];</code>
      * @return The bytes for name.
      */
@@ -899,6 +995,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The name of the client info display template
+     * </pre>
+     *
      * <code>string name = 2 [json_name = "name"];</code>
      * @param value The name to set.
      * @return This builder for chaining.
@@ -912,6 +1012,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The name of the client info display template
+     * </pre>
+     *
      * <code>string name = 2 [json_name = "name"];</code>
      * @return This builder for chaining.
      */
@@ -922,6 +1026,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The name of the client info display template
+     * </pre>
+     *
      * <code>string name = 2 [json_name = "name"];</code>
      * @param value The bytes for name to set.
      * @return This builder for chaining.
@@ -938,6 +1046,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object description_ = "";
     /**
+     * <pre>
+     * The description of the client info display template
+     * </pre>
+     *
      * <code>string description = 3 [json_name = "description"];</code>
      * @return The description.
      */
@@ -954,6 +1066,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The description of the client info display template
+     * </pre>
+     *
      * <code>string description = 3 [json_name = "description"];</code>
      * @return The bytes for description.
      */
@@ -971,6 +1087,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The description of the client info display template
+     * </pre>
+     *
      * <code>string description = 3 [json_name = "description"];</code>
      * @param value The description to set.
      * @return This builder for chaining.
@@ -984,6 +1104,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The description of the client info display template
+     * </pre>
+     *
      * <code>string description = 3 [json_name = "description"];</code>
      * @return This builder for chaining.
      */
@@ -994,6 +1118,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The description of the client info display template
+     * </pre>
+     *
      * <code>string description = 3 [json_name = "description"];</code>
      * @param value The bytes for description to set.
      * @return This builder for chaining.
@@ -1010,6 +1138,10 @@ private static final long serialVersionUID = 0L;
 
     private boolean displayAllFields_ ;
     /**
+     * <pre>
+     * Bool used to determine whether to show all fields in a client info display template
+     * </pre>
+     *
      * <code>bool display_all_fields = 4 [json_name = "displayAllFields"];</code>
      * @return The displayAllFields.
      */
@@ -1018,6 +1150,10 @@ private static final long serialVersionUID = 0L;
       return displayAllFields_;
     }
     /**
+     * <pre>
+     * Bool used to determine whether to show all fields in a client info display template
+     * </pre>
+     *
      * <code>bool display_all_fields = 4 [json_name = "displayAllFields"];</code>
      * @param value The displayAllFields to set.
      * @return This builder for chaining.
@@ -1030,6 +1166,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Bool used to determine whether to show all fields in a client info display template
+     * </pre>
+     *
      * <code>bool display_all_fields = 4 [json_name = "displayAllFields"];</code>
      * @return This builder for chaining.
      */
@@ -1044,6 +1184,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.org.DialedNumberFieldStyle, com.tcn.cloud.api.api.commons.org.DialedNumberFieldStyle.Builder, com.tcn.cloud.api.api.commons.org.DialedNumberFieldStyleOrBuilder> dialedNumberFieldStyleBuilder_;
     /**
+     * <pre>
+     * The dialed number field style of a client info display template
+     * </pre>
+     *
      * <code>.api.commons.org.DialedNumberFieldStyle dialed_number_field_style = 5 [json_name = "dialedNumberFieldStyle"];</code>
      * @return Whether the dialedNumberFieldStyle field is set.
      */
@@ -1051,6 +1195,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000010) != 0);
     }
     /**
+     * <pre>
+     * The dialed number field style of a client info display template
+     * </pre>
+     *
      * <code>.api.commons.org.DialedNumberFieldStyle dialed_number_field_style = 5 [json_name = "dialedNumberFieldStyle"];</code>
      * @return The dialedNumberFieldStyle.
      */
@@ -1062,6 +1210,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The dialed number field style of a client info display template
+     * </pre>
+     *
      * <code>.api.commons.org.DialedNumberFieldStyle dialed_number_field_style = 5 [json_name = "dialedNumberFieldStyle"];</code>
      */
     public Builder setDialedNumberFieldStyle(com.tcn.cloud.api.api.commons.org.DialedNumberFieldStyle value) {
@@ -1078,6 +1230,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The dialed number field style of a client info display template
+     * </pre>
+     *
      * <code>.api.commons.org.DialedNumberFieldStyle dialed_number_field_style = 5 [json_name = "dialedNumberFieldStyle"];</code>
      */
     public Builder setDialedNumberFieldStyle(
@@ -1092,6 +1248,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The dialed number field style of a client info display template
+     * </pre>
+     *
      * <code>.api.commons.org.DialedNumberFieldStyle dialed_number_field_style = 5 [json_name = "dialedNumberFieldStyle"];</code>
      */
     public Builder mergeDialedNumberFieldStyle(com.tcn.cloud.api.api.commons.org.DialedNumberFieldStyle value) {
@@ -1111,6 +1271,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The dialed number field style of a client info display template
+     * </pre>
+     *
      * <code>.api.commons.org.DialedNumberFieldStyle dialed_number_field_style = 5 [json_name = "dialedNumberFieldStyle"];</code>
      */
     public Builder clearDialedNumberFieldStyle() {
@@ -1124,6 +1288,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The dialed number field style of a client info display template
+     * </pre>
+     *
      * <code>.api.commons.org.DialedNumberFieldStyle dialed_number_field_style = 5 [json_name = "dialedNumberFieldStyle"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.DialedNumberFieldStyle.Builder getDialedNumberFieldStyleBuilder() {
@@ -1132,6 +1300,10 @@ private static final long serialVersionUID = 0L;
       return getDialedNumberFieldStyleFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * The dialed number field style of a client info display template
+     * </pre>
+     *
      * <code>.api.commons.org.DialedNumberFieldStyle dialed_number_field_style = 5 [json_name = "dialedNumberFieldStyle"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.DialedNumberFieldStyleOrBuilder getDialedNumberFieldStyleOrBuilder() {
@@ -1143,6 +1315,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The dialed number field style of a client info display template
+     * </pre>
+     *
      * <code>.api.commons.org.DialedNumberFieldStyle dialed_number_field_style = 5 [json_name = "dialedNumberFieldStyle"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -1172,6 +1348,10 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.org.ContactFieldStyle, com.tcn.cloud.api.api.commons.org.ContactFieldStyle.Builder, com.tcn.cloud.api.api.commons.org.ContactFieldStyleOrBuilder> contactFieldStylesBuilder_;
 
     /**
+     * <pre>
+     * A list of Contact Field Styles for a client info display template
+     * </pre>
+     *
      * <code>repeated .api.commons.org.ContactFieldStyle contact_field_styles = 6 [json_name = "contactFieldStyles"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.commons.org.ContactFieldStyle> getContactFieldStylesList() {
@@ -1182,6 +1362,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * A list of Contact Field Styles for a client info display template
+     * </pre>
+     *
      * <code>repeated .api.commons.org.ContactFieldStyle contact_field_styles = 6 [json_name = "contactFieldStyles"];</code>
      */
     public int getContactFieldStylesCount() {
@@ -1192,6 +1376,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * A list of Contact Field Styles for a client info display template
+     * </pre>
+     *
      * <code>repeated .api.commons.org.ContactFieldStyle contact_field_styles = 6 [json_name = "contactFieldStyles"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.ContactFieldStyle getContactFieldStyles(int index) {
@@ -1202,6 +1390,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * A list of Contact Field Styles for a client info display template
+     * </pre>
+     *
      * <code>repeated .api.commons.org.ContactFieldStyle contact_field_styles = 6 [json_name = "contactFieldStyles"];</code>
      */
     public Builder setContactFieldStyles(
@@ -1219,6 +1411,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * A list of Contact Field Styles for a client info display template
+     * </pre>
+     *
      * <code>repeated .api.commons.org.ContactFieldStyle contact_field_styles = 6 [json_name = "contactFieldStyles"];</code>
      */
     public Builder setContactFieldStyles(
@@ -1233,6 +1429,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * A list of Contact Field Styles for a client info display template
+     * </pre>
+     *
      * <code>repeated .api.commons.org.ContactFieldStyle contact_field_styles = 6 [json_name = "contactFieldStyles"];</code>
      */
     public Builder addContactFieldStyles(com.tcn.cloud.api.api.commons.org.ContactFieldStyle value) {
@@ -1249,6 +1449,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * A list of Contact Field Styles for a client info display template
+     * </pre>
+     *
      * <code>repeated .api.commons.org.ContactFieldStyle contact_field_styles = 6 [json_name = "contactFieldStyles"];</code>
      */
     public Builder addContactFieldStyles(
@@ -1266,6 +1470,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * A list of Contact Field Styles for a client info display template
+     * </pre>
+     *
      * <code>repeated .api.commons.org.ContactFieldStyle contact_field_styles = 6 [json_name = "contactFieldStyles"];</code>
      */
     public Builder addContactFieldStyles(
@@ -1280,6 +1488,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * A list of Contact Field Styles for a client info display template
+     * </pre>
+     *
      * <code>repeated .api.commons.org.ContactFieldStyle contact_field_styles = 6 [json_name = "contactFieldStyles"];</code>
      */
     public Builder addContactFieldStyles(
@@ -1294,6 +1506,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * A list of Contact Field Styles for a client info display template
+     * </pre>
+     *
      * <code>repeated .api.commons.org.ContactFieldStyle contact_field_styles = 6 [json_name = "contactFieldStyles"];</code>
      */
     public Builder addAllContactFieldStyles(
@@ -1309,6 +1525,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * A list of Contact Field Styles for a client info display template
+     * </pre>
+     *
      * <code>repeated .api.commons.org.ContactFieldStyle contact_field_styles = 6 [json_name = "contactFieldStyles"];</code>
      */
     public Builder clearContactFieldStyles() {
@@ -1322,6 +1542,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * A list of Contact Field Styles for a client info display template
+     * </pre>
+     *
      * <code>repeated .api.commons.org.ContactFieldStyle contact_field_styles = 6 [json_name = "contactFieldStyles"];</code>
      */
     public Builder removeContactFieldStyles(int index) {
@@ -1335,6 +1559,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * A list of Contact Field Styles for a client info display template
+     * </pre>
+     *
      * <code>repeated .api.commons.org.ContactFieldStyle contact_field_styles = 6 [json_name = "contactFieldStyles"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.ContactFieldStyle.Builder getContactFieldStylesBuilder(
@@ -1342,6 +1570,10 @@ private static final long serialVersionUID = 0L;
       return getContactFieldStylesFieldBuilder().getBuilder(index);
     }
     /**
+     * <pre>
+     * A list of Contact Field Styles for a client info display template
+     * </pre>
+     *
      * <code>repeated .api.commons.org.ContactFieldStyle contact_field_styles = 6 [json_name = "contactFieldStyles"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.ContactFieldStyleOrBuilder getContactFieldStylesOrBuilder(
@@ -1352,6 +1584,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * A list of Contact Field Styles for a client info display template
+     * </pre>
+     *
      * <code>repeated .api.commons.org.ContactFieldStyle contact_field_styles = 6 [json_name = "contactFieldStyles"];</code>
      */
     public java.util.List<? extends com.tcn.cloud.api.api.commons.org.ContactFieldStyleOrBuilder> 
@@ -1363,6 +1599,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * A list of Contact Field Styles for a client info display template
+     * </pre>
+     *
      * <code>repeated .api.commons.org.ContactFieldStyle contact_field_styles = 6 [json_name = "contactFieldStyles"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.ContactFieldStyle.Builder addContactFieldStylesBuilder() {
@@ -1370,6 +1610,10 @@ private static final long serialVersionUID = 0L;
           com.tcn.cloud.api.api.commons.org.ContactFieldStyle.getDefaultInstance());
     }
     /**
+     * <pre>
+     * A list of Contact Field Styles for a client info display template
+     * </pre>
+     *
      * <code>repeated .api.commons.org.ContactFieldStyle contact_field_styles = 6 [json_name = "contactFieldStyles"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.ContactFieldStyle.Builder addContactFieldStylesBuilder(
@@ -1378,6 +1622,10 @@ private static final long serialVersionUID = 0L;
           index, com.tcn.cloud.api.api.commons.org.ContactFieldStyle.getDefaultInstance());
     }
     /**
+     * <pre>
+     * A list of Contact Field Styles for a client info display template
+     * </pre>
+     *
      * <code>repeated .api.commons.org.ContactFieldStyle contact_field_styles = 6 [json_name = "contactFieldStyles"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.commons.org.ContactFieldStyle.Builder> 
@@ -1401,6 +1649,10 @@ private static final long serialVersionUID = 0L;
 
     private int templateCategory_ = 0;
     /**
+     * <pre>
+     * The template type
+     * </pre>
+     *
      * <code>.api.commons.org.TemplateCategory template_category = 7 [json_name = "templateCategory"];</code>
      * @return The enum numeric value on the wire for templateCategory.
      */
@@ -1408,6 +1660,10 @@ private static final long serialVersionUID = 0L;
       return templateCategory_;
     }
     /**
+     * <pre>
+     * The template type
+     * </pre>
+     *
      * <code>.api.commons.org.TemplateCategory template_category = 7 [json_name = "templateCategory"];</code>
      * @param value The enum numeric value on the wire for templateCategory to set.
      * @return This builder for chaining.
@@ -1419,6 +1675,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The template type
+     * </pre>
+     *
      * <code>.api.commons.org.TemplateCategory template_category = 7 [json_name = "templateCategory"];</code>
      * @return The templateCategory.
      */
@@ -1428,6 +1688,10 @@ private static final long serialVersionUID = 0L;
       return result == null ? com.tcn.cloud.api.api.commons.org.TemplateCategory.UNRECOGNIZED : result;
     }
     /**
+     * <pre>
+     * The template type
+     * </pre>
+     *
      * <code>.api.commons.org.TemplateCategory template_category = 7 [json_name = "templateCategory"];</code>
      * @param value The templateCategory to set.
      * @return This builder for chaining.
@@ -1442,6 +1706,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The template type
+     * </pre>
+     *
      * <code>.api.commons.org.TemplateCategory template_category = 7 [json_name = "templateCategory"];</code>
      * @return This builder for chaining.
      */

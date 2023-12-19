@@ -8,16 +8,28 @@ public interface GetHuntGroupClientInfoDisplayTemplateResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * The template info of the client info display template
+   * </pre>
+   *
    * <code>.api.commons.org.ClientInfoDisplayTemplate template = 1 [json_name = "template"];</code>
    * @return Whether the template field is set.
    */
   boolean hasTemplate();
   /**
+   * <pre>
+   * The template info of the client info display template
+   * </pre>
+   *
    * <code>.api.commons.org.ClientInfoDisplayTemplate template = 1 [json_name = "template"];</code>
    * @return The template.
    */
   com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplate getTemplate();
   /**
+   * <pre>
+   * The template info of the client info display template
+   * </pre>
+   *
    * <code>.api.commons.org.ClientInfoDisplayTemplate template = 1 [json_name = "template"];</code>
    */
   com.tcn.cloud.api.api.commons.org.ClientInfoDisplayTemplateOrBuilder getTemplateOrBuilder();
