@@ -264,10 +264,10 @@ public enum Permission
   PERMISSION_SUPPORT_TCN_DASHBOARDS_ADMIN(251),
   /**
    * <pre>
-   * Enables devs access to the version-ui app in the Customer Support.
+   * Enables devs access to the version tools in the Customer Support.
    * </pre>
    *
-   * <code>PERMISSION_DEV_SUPPORT = 252;</code>
+   * <code>PERMISSION_DEV_SUPPORT = 252 [(.annotations.perms.options) = { ... }</code>
    */
   PERMISSION_DEV_SUPPORT(252),
   /**
@@ -645,11 +645,13 @@ public enum Permission
   PERMISSION_SCORECARDS_LEARNING_OPPORTUNITIES(1604),
   /**
    * <pre>
+   * Deprecated
    * Enables access to Dev Tools app.
    * </pre>
    *
-   * <code>PERMISSION_DEV_TOOLS = 1800 [(.annotations.perms.options) = { ... }</code>
+   * <code>PERMISSION_DEV_TOOLS = 1800 [deprecated = true, (.annotations.perms.options) = { ... }</code>
    */
+  @java.lang.Deprecated
   PERMISSION_DEV_TOOLS(1800),
   /**
    * <pre>
@@ -996,10 +998,10 @@ public enum Permission
   public static final int PERMISSION_SUPPORT_TCN_DASHBOARDS_ADMIN_VALUE = 251;
   /**
    * <pre>
-   * Enables devs access to the version-ui app in the Customer Support.
+   * Enables devs access to the version tools in the Customer Support.
    * </pre>
    *
-   * <code>PERMISSION_DEV_SUPPORT = 252;</code>
+   * <code>PERMISSION_DEV_SUPPORT = 252 [(.annotations.perms.options) = { ... }</code>
    */
   public static final int PERMISSION_DEV_SUPPORT_VALUE = 252;
   /**
@@ -1377,12 +1379,13 @@ public enum Permission
   public static final int PERMISSION_SCORECARDS_LEARNING_OPPORTUNITIES_VALUE = 1604;
   /**
    * <pre>
+   * Deprecated
    * Enables access to Dev Tools app.
    * </pre>
    *
-   * <code>PERMISSION_DEV_TOOLS = 1800 [(.annotations.perms.options) = { ... }</code>
+   * <code>PERMISSION_DEV_TOOLS = 1800 [deprecated = true, (.annotations.perms.options) = { ... }</code>
    */
-  public static final int PERMISSION_DEV_TOOLS_VALUE = 1800;
+  @java.lang.Deprecated public static final int PERMISSION_DEV_TOOLS_VALUE = 1800;
   /**
    * <pre>
    * Enables access to view delivery notifications.

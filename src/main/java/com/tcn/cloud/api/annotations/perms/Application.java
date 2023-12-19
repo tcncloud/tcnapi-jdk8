@@ -29,8 +29,9 @@ public enum Application
    */
   APPLICATION_DELIVERY_SERVICE(3),
   /**
-   * <code>APPLICATION_DEV_TOOLS = 4;</code>
+   * <code>APPLICATION_DEV_TOOLS = 4 [deprecated = true];</code>
    */
+  @java.lang.Deprecated
   APPLICATION_DEV_TOOLS(4),
   /**
    * <code>APPLICATION_INTEGRATIONS = 5;</code>
@@ -84,6 +85,10 @@ public enum Application
    * <code>APPLICATION_NEWSROOM = 17;</code>
    */
   APPLICATION_NEWSROOM(17),
+  /**
+   * <code>APPLICATION_CUSTOMER_SUPPORT = 18;</code>
+   */
+  APPLICATION_CUSTOMER_SUPPORT(18),
   UNRECOGNIZED(-1),
   ;
 
@@ -104,9 +109,9 @@ public enum Application
    */
   public static final int APPLICATION_DELIVERY_SERVICE_VALUE = 3;
   /**
-   * <code>APPLICATION_DEV_TOOLS = 4;</code>
+   * <code>APPLICATION_DEV_TOOLS = 4 [deprecated = true];</code>
    */
-  public static final int APPLICATION_DEV_TOOLS_VALUE = 4;
+  @java.lang.Deprecated public static final int APPLICATION_DEV_TOOLS_VALUE = 4;
   /**
    * <code>APPLICATION_INTEGRATIONS = 5;</code>
    */
@@ -159,6 +164,10 @@ public enum Application
    * <code>APPLICATION_NEWSROOM = 17;</code>
    */
   public static final int APPLICATION_NEWSROOM_VALUE = 17;
+  /**
+   * <code>APPLICATION_CUSTOMER_SUPPORT = 18;</code>
+   */
+  public static final int APPLICATION_CUSTOMER_SUPPORT_VALUE = 18;
 
 
   public final int getNumber() {
@@ -203,6 +212,7 @@ public enum Application
       case 15: return APPLICATION_WORK_FORCE_MANAGEMENT;
       case 16: return APPLICATION_WORKFLOWS;
       case 17: return APPLICATION_NEWSROOM;
+      case 18: return APPLICATION_CUSTOMER_SUPPORT;
       default: return null;
     }
   }

@@ -141,8 +141,9 @@ public enum OperatorApplications
    * Dev Tools
    * </pre>
    *
-   * <code>DEV_TOOLS_APP = 20;</code>
+   * <code>DEV_TOOLS_APP = 20 [deprecated = true];</code>
    */
+  @java.lang.Deprecated
   DEV_TOOLS_APP(20),
   /**
    * <pre>
@@ -328,9 +329,9 @@ public enum OperatorApplications
    * Dev Tools
    * </pre>
    *
-   * <code>DEV_TOOLS_APP = 20;</code>
+   * <code>DEV_TOOLS_APP = 20 [deprecated = true];</code>
    */
-  public static final int DEV_TOOLS_APP_VALUE = 20;
+  @java.lang.Deprecated public static final int DEV_TOOLS_APP_VALUE = 20;
   /**
    * <pre>
    * Learning Center
