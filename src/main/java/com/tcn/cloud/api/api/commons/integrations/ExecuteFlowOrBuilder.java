@@ -2840,6 +2840,36 @@ public interface ExecuteFlowOrBuilder extends
   com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication3OrBuilder getEpicReceiveCommunication3OrBuilder();
 
   /**
+   * <code>.api.commons.integrations.ExecuteEpicPostPatientMadePayment epic_post_patient_made_payment = 3710 [json_name = "epicPostPatientMadePayment"];</code>
+   * @return Whether the epicPostPatientMadePayment field is set.
+   */
+  boolean hasEpicPostPatientMadePayment();
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicPostPatientMadePayment epic_post_patient_made_payment = 3710 [json_name = "epicPostPatientMadePayment"];</code>
+   * @return The epicPostPatientMadePayment.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteEpicPostPatientMadePayment getEpicPostPatientMadePayment();
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicPostPatientMadePayment epic_post_patient_made_payment = 3710 [json_name = "epicPostPatientMadePayment"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteEpicPostPatientMadePaymentOrBuilder getEpicPostPatientMadePaymentOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicGetPatientBillingDetails epic_get_patient_billing_details = 3711 [json_name = "epicGetPatientBillingDetails"];</code>
+   * @return Whether the epicGetPatientBillingDetails field is set.
+   */
+  boolean hasEpicGetPatientBillingDetails();
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicGetPatientBillingDetails epic_get_patient_billing_details = 3711 [json_name = "epicGetPatientBillingDetails"];</code>
+   * @return The epicGetPatientBillingDetails.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatientBillingDetails getEpicGetPatientBillingDetails();
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicGetPatientBillingDetails epic_get_patient_billing_details = 3711 [json_name = "epicGetPatientBillingDetails"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatientBillingDetailsOrBuilder getEpicGetPatientBillingDetailsOrBuilder();
+
+  /**
    * <code>.api.commons.integrations.ExecuteNewzwarePhoneLookup newzware_phone_lookup = 3801 [json_name = "newzwarePhoneLookup"];</code>
    * @return Whether the newzwarePhoneLookup field is set.
    */
