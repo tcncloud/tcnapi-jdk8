@@ -240,8 +240,6 @@ private static final long serialVersionUID = 0L;
     EPIC_GET_ACCOUNT(3707),
     EPIC_RECEIVE_COMMUNICATION_2(3708),
     EPIC_RECEIVE_COMMUNICATION_3(3709),
-    EPIC_POST_PATIENT_MADE_PAYMENT(3710),
-    EPIC_GET_PATIENT_BILLING_DETAILS(3711),
     NEWZWARE_PHONE_LOOKUP(3801),
     NEWZWARE_ACCOUNT_INQUIRY(3802),
     NEWZWARE_CC_PAYMENT(3803),
@@ -461,8 +459,6 @@ private static final long serialVersionUID = 0L;
         case 3707: return EPIC_GET_ACCOUNT;
         case 3708: return EPIC_RECEIVE_COMMUNICATION_2;
         case 3709: return EPIC_RECEIVE_COMMUNICATION_3;
-        case 3710: return EPIC_POST_PATIENT_MADE_PAYMENT;
-        case 3711: return EPIC_GET_PATIENT_BILLING_DETAILS;
         case 3801: return NEWZWARE_PHONE_LOOKUP;
         case 3802: return NEWZWARE_ACCOUNT_INQUIRY;
         case 3803: return NEWZWARE_CC_PAYMENT;
@@ -6359,68 +6355,6 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication3.getDefaultInstance();
   }
 
-  public static final int EPIC_POST_PATIENT_MADE_PAYMENT_FIELD_NUMBER = 3710;
-  /**
-   * <code>.api.commons.integrations.ExecuteEpicPostPatientMadePayment epic_post_patient_made_payment = 3710 [json_name = "epicPostPatientMadePayment"];</code>
-   * @return Whether the epicPostPatientMadePayment field is set.
-   */
-  @java.lang.Override
-  public boolean hasEpicPostPatientMadePayment() {
-    return valueCase_ == 3710;
-  }
-  /**
-   * <code>.api.commons.integrations.ExecuteEpicPostPatientMadePayment epic_post_patient_made_payment = 3710 [json_name = "epicPostPatientMadePayment"];</code>
-   * @return The epicPostPatientMadePayment.
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicPostPatientMadePayment getEpicPostPatientMadePayment() {
-    if (valueCase_ == 3710) {
-       return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicPostPatientMadePayment) value_;
-    }
-    return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicPostPatientMadePayment.getDefaultInstance();
-  }
-  /**
-   * <code>.api.commons.integrations.ExecuteEpicPostPatientMadePayment epic_post_patient_made_payment = 3710 [json_name = "epicPostPatientMadePayment"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicPostPatientMadePaymentOrBuilder getEpicPostPatientMadePaymentOrBuilder() {
-    if (valueCase_ == 3710) {
-       return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicPostPatientMadePayment) value_;
-    }
-    return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicPostPatientMadePayment.getDefaultInstance();
-  }
-
-  public static final int EPIC_GET_PATIENT_BILLING_DETAILS_FIELD_NUMBER = 3711;
-  /**
-   * <code>.api.commons.integrations.ExecuteEpicGetPatientBillingDetails epic_get_patient_billing_details = 3711 [json_name = "epicGetPatientBillingDetails"];</code>
-   * @return Whether the epicGetPatientBillingDetails field is set.
-   */
-  @java.lang.Override
-  public boolean hasEpicGetPatientBillingDetails() {
-    return valueCase_ == 3711;
-  }
-  /**
-   * <code>.api.commons.integrations.ExecuteEpicGetPatientBillingDetails epic_get_patient_billing_details = 3711 [json_name = "epicGetPatientBillingDetails"];</code>
-   * @return The epicGetPatientBillingDetails.
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatientBillingDetails getEpicGetPatientBillingDetails() {
-    if (valueCase_ == 3711) {
-       return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatientBillingDetails) value_;
-    }
-    return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatientBillingDetails.getDefaultInstance();
-  }
-  /**
-   * <code>.api.commons.integrations.ExecuteEpicGetPatientBillingDetails epic_get_patient_billing_details = 3711 [json_name = "epicGetPatientBillingDetails"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatientBillingDetailsOrBuilder getEpicGetPatientBillingDetailsOrBuilder() {
-    if (valueCase_ == 3711) {
-       return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatientBillingDetails) value_;
-    }
-    return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatientBillingDetails.getDefaultInstance();
-  }
-
   public static final int NEWZWARE_PHONE_LOOKUP_FIELD_NUMBER = 3801;
   /**
    * <code>.api.commons.integrations.ExecuteNewzwarePhoneLookup newzware_phone_lookup = 3801 [json_name = "newzwarePhoneLookup"];</code>
@@ -7436,12 +7370,6 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 3709) {
       output.writeMessage(3709, (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication3) value_);
     }
-    if (valueCase_ == 3710) {
-      output.writeMessage(3710, (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicPostPatientMadePayment) value_);
-    }
-    if (valueCase_ == 3711) {
-      output.writeMessage(3711, (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatientBillingDetails) value_);
-    }
     if (valueCase_ == 3801) {
       output.writeMessage(3801, (com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwarePhoneLookup) value_);
     }
@@ -8247,14 +8175,6 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 3709) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3709, (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicReceiveCommunication3) value_);
-    }
-    if (valueCase_ == 3710) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(3710, (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicPostPatientMadePayment) value_);
-    }
-    if (valueCase_ == 3711) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(3711, (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatientBillingDetails) value_);
     }
     if (valueCase_ == 3801) {
       size += com.google.protobuf.CodedOutputStream
@@ -9083,14 +9003,6 @@ private static final long serialVersionUID = 0L;
         if (!getEpicReceiveCommunication3()
             .equals(other.getEpicReceiveCommunication3())) return false;
         break;
-      case 3710:
-        if (!getEpicPostPatientMadePayment()
-            .equals(other.getEpicPostPatientMadePayment())) return false;
-        break;
-      case 3711:
-        if (!getEpicGetPatientBillingDetails()
-            .equals(other.getEpicGetPatientBillingDetails())) return false;
-        break;
       case 3801:
         if (!getNewzwarePhoneLookup()
             .equals(other.getNewzwarePhoneLookup())) return false;
@@ -9916,14 +9828,6 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + EPIC_RECEIVE_COMMUNICATION_3_FIELD_NUMBER;
         hash = (53 * hash) + getEpicReceiveCommunication3().hashCode();
         break;
-      case 3710:
-        hash = (37 * hash) + EPIC_POST_PATIENT_MADE_PAYMENT_FIELD_NUMBER;
-        hash = (53 * hash) + getEpicPostPatientMadePayment().hashCode();
-        break;
-      case 3711:
-        hash = (37 * hash) + EPIC_GET_PATIENT_BILLING_DETAILS_FIELD_NUMBER;
-        hash = (53 * hash) + getEpicGetPatientBillingDetails().hashCode();
-        break;
       case 3801:
         hash = (37 * hash) + NEWZWARE_PHONE_LOOKUP_FIELD_NUMBER;
         hash = (53 * hash) + getNewzwarePhoneLookup().hashCode();
@@ -10691,12 +10595,6 @@ private static final long serialVersionUID = 0L;
       }
       if (epicReceiveCommunication3Builder_ != null) {
         epicReceiveCommunication3Builder_.clear();
-      }
-      if (epicPostPatientMadePaymentBuilder_ != null) {
-        epicPostPatientMadePaymentBuilder_.clear();
-      }
-      if (epicGetPatientBillingDetailsBuilder_ != null) {
-        epicGetPatientBillingDetailsBuilder_.clear();
       }
       if (newzwarePhoneLookupBuilder_ != null) {
         newzwarePhoneLookupBuilder_.clear();
@@ -11566,14 +11464,6 @@ private static final long serialVersionUID = 0L;
           epicReceiveCommunication3Builder_ != null) {
         result.value_ = epicReceiveCommunication3Builder_.build();
       }
-      if (valueCase_ == 3710 &&
-          epicPostPatientMadePaymentBuilder_ != null) {
-        result.value_ = epicPostPatientMadePaymentBuilder_.build();
-      }
-      if (valueCase_ == 3711 &&
-          epicGetPatientBillingDetailsBuilder_ != null) {
-        result.value_ = epicGetPatientBillingDetailsBuilder_.build();
-      }
       if (valueCase_ == 3801 &&
           newzwarePhoneLookupBuilder_ != null) {
         result.value_ = newzwarePhoneLookupBuilder_.build();
@@ -12432,14 +12322,6 @@ private static final long serialVersionUID = 0L;
         }
         case EPIC_RECEIVE_COMMUNICATION_3: {
           mergeEpicReceiveCommunication3(other.getEpicReceiveCommunication3());
-          break;
-        }
-        case EPIC_POST_PATIENT_MADE_PAYMENT: {
-          mergeEpicPostPatientMadePayment(other.getEpicPostPatientMadePayment());
-          break;
-        }
-        case EPIC_GET_PATIENT_BILLING_DETAILS: {
-          mergeEpicGetPatientBillingDetails(other.getEpicGetPatientBillingDetails());
           break;
         }
         case NEWZWARE_PHONE_LOOKUP: {
@@ -13849,20 +13731,6 @@ private static final long serialVersionUID = 0L;
               valueCase_ = 3709;
               break;
             } // case 29674
-            case 29682: {
-              input.readMessage(
-                  getEpicPostPatientMadePaymentFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              valueCase_ = 3710;
-              break;
-            } // case 29682
-            case 29690: {
-              input.readMessage(
-                  getEpicGetPatientBillingDetailsFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              valueCase_ = 3711;
-              break;
-            } // case 29690
             case 30410: {
               input.readMessage(
                   getNewzwarePhoneLookupFieldBuilder().getBuilder(),
@@ -40765,290 +40633,6 @@ private static final long serialVersionUID = 0L;
       valueCase_ = 3709;
       onChanged();
       return epicReceiveCommunication3Builder_;
-    }
-
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.integrations.ExecuteEpicPostPatientMadePayment, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicPostPatientMadePayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicPostPatientMadePaymentOrBuilder> epicPostPatientMadePaymentBuilder_;
-    /**
-     * <code>.api.commons.integrations.ExecuteEpicPostPatientMadePayment epic_post_patient_made_payment = 3710 [json_name = "epicPostPatientMadePayment"];</code>
-     * @return Whether the epicPostPatientMadePayment field is set.
-     */
-    @java.lang.Override
-    public boolean hasEpicPostPatientMadePayment() {
-      return valueCase_ == 3710;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteEpicPostPatientMadePayment epic_post_patient_made_payment = 3710 [json_name = "epicPostPatientMadePayment"];</code>
-     * @return The epicPostPatientMadePayment.
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicPostPatientMadePayment getEpicPostPatientMadePayment() {
-      if (epicPostPatientMadePaymentBuilder_ == null) {
-        if (valueCase_ == 3710) {
-          return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicPostPatientMadePayment) value_;
-        }
-        return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicPostPatientMadePayment.getDefaultInstance();
-      } else {
-        if (valueCase_ == 3710) {
-          return epicPostPatientMadePaymentBuilder_.getMessage();
-        }
-        return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicPostPatientMadePayment.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteEpicPostPatientMadePayment epic_post_patient_made_payment = 3710 [json_name = "epicPostPatientMadePayment"];</code>
-     */
-    public Builder setEpicPostPatientMadePayment(com.tcn.cloud.api.api.commons.integrations.ExecuteEpicPostPatientMadePayment value) {
-      if (epicPostPatientMadePaymentBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        value_ = value;
-        onChanged();
-      } else {
-        epicPostPatientMadePaymentBuilder_.setMessage(value);
-      }
-      valueCase_ = 3710;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteEpicPostPatientMadePayment epic_post_patient_made_payment = 3710 [json_name = "epicPostPatientMadePayment"];</code>
-     */
-    public Builder setEpicPostPatientMadePayment(
-        com.tcn.cloud.api.api.commons.integrations.ExecuteEpicPostPatientMadePayment.Builder builderForValue) {
-      if (epicPostPatientMadePaymentBuilder_ == null) {
-        value_ = builderForValue.build();
-        onChanged();
-      } else {
-        epicPostPatientMadePaymentBuilder_.setMessage(builderForValue.build());
-      }
-      valueCase_ = 3710;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteEpicPostPatientMadePayment epic_post_patient_made_payment = 3710 [json_name = "epicPostPatientMadePayment"];</code>
-     */
-    public Builder mergeEpicPostPatientMadePayment(com.tcn.cloud.api.api.commons.integrations.ExecuteEpicPostPatientMadePayment value) {
-      if (epicPostPatientMadePaymentBuilder_ == null) {
-        if (valueCase_ == 3710 &&
-            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteEpicPostPatientMadePayment.getDefaultInstance()) {
-          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteEpicPostPatientMadePayment.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteEpicPostPatientMadePayment) value_)
-              .mergeFrom(value).buildPartial();
-        } else {
-          value_ = value;
-        }
-        onChanged();
-      } else {
-        if (valueCase_ == 3710) {
-          epicPostPatientMadePaymentBuilder_.mergeFrom(value);
-        } else {
-          epicPostPatientMadePaymentBuilder_.setMessage(value);
-        }
-      }
-      valueCase_ = 3710;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteEpicPostPatientMadePayment epic_post_patient_made_payment = 3710 [json_name = "epicPostPatientMadePayment"];</code>
-     */
-    public Builder clearEpicPostPatientMadePayment() {
-      if (epicPostPatientMadePaymentBuilder_ == null) {
-        if (valueCase_ == 3710) {
-          valueCase_ = 0;
-          value_ = null;
-          onChanged();
-        }
-      } else {
-        if (valueCase_ == 3710) {
-          valueCase_ = 0;
-          value_ = null;
-        }
-        epicPostPatientMadePaymentBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteEpicPostPatientMadePayment epic_post_patient_made_payment = 3710 [json_name = "epicPostPatientMadePayment"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicPostPatientMadePayment.Builder getEpicPostPatientMadePaymentBuilder() {
-      return getEpicPostPatientMadePaymentFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteEpicPostPatientMadePayment epic_post_patient_made_payment = 3710 [json_name = "epicPostPatientMadePayment"];</code>
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicPostPatientMadePaymentOrBuilder getEpicPostPatientMadePaymentOrBuilder() {
-      if ((valueCase_ == 3710) && (epicPostPatientMadePaymentBuilder_ != null)) {
-        return epicPostPatientMadePaymentBuilder_.getMessageOrBuilder();
-      } else {
-        if (valueCase_ == 3710) {
-          return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicPostPatientMadePayment) value_;
-        }
-        return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicPostPatientMadePayment.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteEpicPostPatientMadePayment epic_post_patient_made_payment = 3710 [json_name = "epicPostPatientMadePayment"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.integrations.ExecuteEpicPostPatientMadePayment, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicPostPatientMadePayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicPostPatientMadePaymentOrBuilder> 
-        getEpicPostPatientMadePaymentFieldBuilder() {
-      if (epicPostPatientMadePaymentBuilder_ == null) {
-        if (!(valueCase_ == 3710)) {
-          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteEpicPostPatientMadePayment.getDefaultInstance();
-        }
-        epicPostPatientMadePaymentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.integrations.ExecuteEpicPostPatientMadePayment, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicPostPatientMadePayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicPostPatientMadePaymentOrBuilder>(
-                (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicPostPatientMadePayment) value_,
-                getParentForChildren(),
-                isClean());
-        value_ = null;
-      }
-      valueCase_ = 3710;
-      onChanged();
-      return epicPostPatientMadePaymentBuilder_;
-    }
-
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatientBillingDetails, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatientBillingDetails.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatientBillingDetailsOrBuilder> epicGetPatientBillingDetailsBuilder_;
-    /**
-     * <code>.api.commons.integrations.ExecuteEpicGetPatientBillingDetails epic_get_patient_billing_details = 3711 [json_name = "epicGetPatientBillingDetails"];</code>
-     * @return Whether the epicGetPatientBillingDetails field is set.
-     */
-    @java.lang.Override
-    public boolean hasEpicGetPatientBillingDetails() {
-      return valueCase_ == 3711;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteEpicGetPatientBillingDetails epic_get_patient_billing_details = 3711 [json_name = "epicGetPatientBillingDetails"];</code>
-     * @return The epicGetPatientBillingDetails.
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatientBillingDetails getEpicGetPatientBillingDetails() {
-      if (epicGetPatientBillingDetailsBuilder_ == null) {
-        if (valueCase_ == 3711) {
-          return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatientBillingDetails) value_;
-        }
-        return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatientBillingDetails.getDefaultInstance();
-      } else {
-        if (valueCase_ == 3711) {
-          return epicGetPatientBillingDetailsBuilder_.getMessage();
-        }
-        return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatientBillingDetails.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteEpicGetPatientBillingDetails epic_get_patient_billing_details = 3711 [json_name = "epicGetPatientBillingDetails"];</code>
-     */
-    public Builder setEpicGetPatientBillingDetails(com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatientBillingDetails value) {
-      if (epicGetPatientBillingDetailsBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        value_ = value;
-        onChanged();
-      } else {
-        epicGetPatientBillingDetailsBuilder_.setMessage(value);
-      }
-      valueCase_ = 3711;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteEpicGetPatientBillingDetails epic_get_patient_billing_details = 3711 [json_name = "epicGetPatientBillingDetails"];</code>
-     */
-    public Builder setEpicGetPatientBillingDetails(
-        com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatientBillingDetails.Builder builderForValue) {
-      if (epicGetPatientBillingDetailsBuilder_ == null) {
-        value_ = builderForValue.build();
-        onChanged();
-      } else {
-        epicGetPatientBillingDetailsBuilder_.setMessage(builderForValue.build());
-      }
-      valueCase_ = 3711;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteEpicGetPatientBillingDetails epic_get_patient_billing_details = 3711 [json_name = "epicGetPatientBillingDetails"];</code>
-     */
-    public Builder mergeEpicGetPatientBillingDetails(com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatientBillingDetails value) {
-      if (epicGetPatientBillingDetailsBuilder_ == null) {
-        if (valueCase_ == 3711 &&
-            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatientBillingDetails.getDefaultInstance()) {
-          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatientBillingDetails.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatientBillingDetails) value_)
-              .mergeFrom(value).buildPartial();
-        } else {
-          value_ = value;
-        }
-        onChanged();
-      } else {
-        if (valueCase_ == 3711) {
-          epicGetPatientBillingDetailsBuilder_.mergeFrom(value);
-        } else {
-          epicGetPatientBillingDetailsBuilder_.setMessage(value);
-        }
-      }
-      valueCase_ = 3711;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteEpicGetPatientBillingDetails epic_get_patient_billing_details = 3711 [json_name = "epicGetPatientBillingDetails"];</code>
-     */
-    public Builder clearEpicGetPatientBillingDetails() {
-      if (epicGetPatientBillingDetailsBuilder_ == null) {
-        if (valueCase_ == 3711) {
-          valueCase_ = 0;
-          value_ = null;
-          onChanged();
-        }
-      } else {
-        if (valueCase_ == 3711) {
-          valueCase_ = 0;
-          value_ = null;
-        }
-        epicGetPatientBillingDetailsBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteEpicGetPatientBillingDetails epic_get_patient_billing_details = 3711 [json_name = "epicGetPatientBillingDetails"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatientBillingDetails.Builder getEpicGetPatientBillingDetailsBuilder() {
-      return getEpicGetPatientBillingDetailsFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteEpicGetPatientBillingDetails epic_get_patient_billing_details = 3711 [json_name = "epicGetPatientBillingDetails"];</code>
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatientBillingDetailsOrBuilder getEpicGetPatientBillingDetailsOrBuilder() {
-      if ((valueCase_ == 3711) && (epicGetPatientBillingDetailsBuilder_ != null)) {
-        return epicGetPatientBillingDetailsBuilder_.getMessageOrBuilder();
-      } else {
-        if (valueCase_ == 3711) {
-          return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatientBillingDetails) value_;
-        }
-        return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatientBillingDetails.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteEpicGetPatientBillingDetails epic_get_patient_billing_details = 3711 [json_name = "epicGetPatientBillingDetails"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatientBillingDetails, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatientBillingDetails.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatientBillingDetailsOrBuilder> 
-        getEpicGetPatientBillingDetailsFieldBuilder() {
-      if (epicGetPatientBillingDetailsBuilder_ == null) {
-        if (!(valueCase_ == 3711)) {
-          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatientBillingDetails.getDefaultInstance();
-        }
-        epicGetPatientBillingDetailsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatientBillingDetails, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatientBillingDetails.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatientBillingDetailsOrBuilder>(
-                (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatientBillingDetails) value_,
-                getParentForChildren(),
-                isClean());
-        value_ = null;
-      }
-      valueCase_ = 3711;
-      onChanged();
-      return epicGetPatientBillingDetailsBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
