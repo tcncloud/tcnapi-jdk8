@@ -375,6 +375,14 @@ private static final long serialVersionUID = 0L;
      * <code>BargeInCallLeft = 59;</code>
      */
     BargeInCallLeft(59),
+    /**
+     * <pre>
+     * Integration
+     * </pre>
+     *
+     * <code>EXECUTED_AGENT_INTEGRATIONLINK = 60;</code>
+     */
+    EXECUTED_AGENT_INTEGRATIONLINK(60),
     UNRECOGNIZED(-1),
     ;
 
@@ -710,6 +718,14 @@ private static final long serialVersionUID = 0L;
      * <code>BargeInCallLeft = 59;</code>
      */
     public static final int BargeInCallLeft_VALUE = 59;
+    /**
+     * <pre>
+     * Integration
+     * </pre>
+     *
+     * <code>EXECUTED_AGENT_INTEGRATIONLINK = 60;</code>
+     */
+    public static final int EXECUTED_AGENT_INTEGRATIONLINK_VALUE = 60;
 
 
     public final int getNumber() {
@@ -796,6 +812,7 @@ private static final long serialVersionUID = 0L;
         case 57: return BARGE_IN_STOP;
         case 58: return BargeInCallJoined;
         case 59: return BargeInCallLeft;
+        case 60: return EXECUTED_AGENT_INTEGRATIONLINK;
         default: return null;
       }
     }
