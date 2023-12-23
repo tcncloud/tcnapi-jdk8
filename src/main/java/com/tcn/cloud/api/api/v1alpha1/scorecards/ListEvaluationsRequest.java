@@ -274,6 +274,71 @@ private static final long serialVersionUID = 0L;
   }
   private int scorecardIdsMemoizedSerializedSize = -1;
 
+  public static final int RETURN_FIELDS_FIELD_NUMBER = 10;
+  private com.google.protobuf.FieldMask returnFields_;
+  /**
+   * <pre>
+   * Optional. Fields to return. Defaults to all evaluation fields (no sub entities).
+   *
+   * Example selecting score, section points, and question answers:
+   * {
+   *   paths: [
+   *     "score",
+   *     "evaluation_section.points",
+   *     "evaluation_section.evaluation_question.answers"
+   *   ]
+   * }
+   * </pre>
+   *
+   * <code>.google.protobuf.FieldMask return_fields = 10 [json_name = "returnFields"];</code>
+   * @return Whether the returnFields field is set.
+   */
+  @java.lang.Override
+  public boolean hasReturnFields() {
+    return returnFields_ != null;
+  }
+  /**
+   * <pre>
+   * Optional. Fields to return. Defaults to all evaluation fields (no sub entities).
+   *
+   * Example selecting score, section points, and question answers:
+   * {
+   *   paths: [
+   *     "score",
+   *     "evaluation_section.points",
+   *     "evaluation_section.evaluation_question.answers"
+   *   ]
+   * }
+   * </pre>
+   *
+   * <code>.google.protobuf.FieldMask return_fields = 10 [json_name = "returnFields"];</code>
+   * @return The returnFields.
+   */
+  @java.lang.Override
+  public com.google.protobuf.FieldMask getReturnFields() {
+    return returnFields_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : returnFields_;
+  }
+  /**
+   * <pre>
+   * Optional. Fields to return. Defaults to all evaluation fields (no sub entities).
+   *
+   * Example selecting score, section points, and question answers:
+   * {
+   *   paths: [
+   *     "score",
+   *     "evaluation_section.points",
+   *     "evaluation_section.evaluation_question.answers"
+   *   ]
+   * }
+   * </pre>
+   *
+   * <code>.google.protobuf.FieldMask return_fields = 10 [json_name = "returnFields"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.FieldMaskOrBuilder getReturnFieldsOrBuilder() {
+    return returnFields_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : returnFields_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -311,6 +376,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < scorecardIds_.size(); i++) {
       output.writeInt64NoTag(scorecardIds_.getLong(i));
+    }
+    if (returnFields_ != null) {
+      output.writeMessage(10, getReturnFields());
     }
     getUnknownFields().writeTo(output);
   }
@@ -369,6 +437,10 @@ private static final long serialVersionUID = 0L;
       }
       scorecardIdsMemoizedSerializedSize = dataSize;
     }
+    if (returnFields_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(10, getReturnFields());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -397,6 +469,11 @@ private static final long serialVersionUID = 0L;
         .equals(other.getAgentUserIdsList())) return false;
     if (!getScorecardIdsList()
         .equals(other.getScorecardIdsList())) return false;
+    if (hasReturnFields() != other.hasReturnFields()) return false;
+    if (hasReturnFields()) {
+      if (!getReturnFields()
+          .equals(other.getReturnFields())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -427,6 +504,10 @@ private static final long serialVersionUID = 0L;
     if (getScorecardIdsCount() > 0) {
       hash = (37 * hash) + SCORECARD_IDS_FIELD_NUMBER;
       hash = (53 * hash) + getScorecardIdsList().hashCode();
+    }
+    if (hasReturnFields()) {
+      hash = (37 * hash) + RETURN_FIELDS_FIELD_NUMBER;
+      hash = (53 * hash) + getReturnFields().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -574,6 +655,11 @@ private static final long serialVersionUID = 0L;
       agentUserIds_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
       scorecardIds_ = emptyLongList();
+      returnFields_ = null;
+      if (returnFieldsBuilder_ != null) {
+        returnFieldsBuilder_.dispose();
+        returnFieldsBuilder_ = null;
+      }
       return this;
     }
 
@@ -633,6 +719,11 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000008) != 0)) {
         agentUserIds_.makeImmutable();
         result.agentUserIds_ = agentUserIds_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.returnFields_ = returnFieldsBuilder_ == null
+            ? returnFields_
+            : returnFieldsBuilder_.build();
       }
     }
 
@@ -723,6 +814,9 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       }
+      if (other.hasReturnFields()) {
+        mergeReturnFields(other.getReturnFields());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -800,6 +894,13 @@ private static final long serialVersionUID = 0L;
               input.popLimit(limit);
               break;
             } // case 50
+            case 82: {
+              input.readMessage(
+                  getReturnFieldsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 82
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1482,6 +1583,242 @@ private static final long serialVersionUID = 0L;
       bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
+    }
+
+    private com.google.protobuf.FieldMask returnFields_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> returnFieldsBuilder_;
+    /**
+     * <pre>
+     * Optional. Fields to return. Defaults to all evaluation fields (no sub entities).
+     *
+     * Example selecting score, section points, and question answers:
+     * {
+     *   paths: [
+     *     "score",
+     *     "evaluation_section.points",
+     *     "evaluation_section.evaluation_question.answers"
+     *   ]
+     * }
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask return_fields = 10 [json_name = "returnFields"];</code>
+     * @return Whether the returnFields field is set.
+     */
+    public boolean hasReturnFields() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <pre>
+     * Optional. Fields to return. Defaults to all evaluation fields (no sub entities).
+     *
+     * Example selecting score, section points, and question answers:
+     * {
+     *   paths: [
+     *     "score",
+     *     "evaluation_section.points",
+     *     "evaluation_section.evaluation_question.answers"
+     *   ]
+     * }
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask return_fields = 10 [json_name = "returnFields"];</code>
+     * @return The returnFields.
+     */
+    public com.google.protobuf.FieldMask getReturnFields() {
+      if (returnFieldsBuilder_ == null) {
+        return returnFields_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : returnFields_;
+      } else {
+        return returnFieldsBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Optional. Fields to return. Defaults to all evaluation fields (no sub entities).
+     *
+     * Example selecting score, section points, and question answers:
+     * {
+     *   paths: [
+     *     "score",
+     *     "evaluation_section.points",
+     *     "evaluation_section.evaluation_question.answers"
+     *   ]
+     * }
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask return_fields = 10 [json_name = "returnFields"];</code>
+     */
+    public Builder setReturnFields(com.google.protobuf.FieldMask value) {
+      if (returnFieldsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        returnFields_ = value;
+      } else {
+        returnFieldsBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Fields to return. Defaults to all evaluation fields (no sub entities).
+     *
+     * Example selecting score, section points, and question answers:
+     * {
+     *   paths: [
+     *     "score",
+     *     "evaluation_section.points",
+     *     "evaluation_section.evaluation_question.answers"
+     *   ]
+     * }
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask return_fields = 10 [json_name = "returnFields"];</code>
+     */
+    public Builder setReturnFields(
+        com.google.protobuf.FieldMask.Builder builderForValue) {
+      if (returnFieldsBuilder_ == null) {
+        returnFields_ = builderForValue.build();
+      } else {
+        returnFieldsBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Fields to return. Defaults to all evaluation fields (no sub entities).
+     *
+     * Example selecting score, section points, and question answers:
+     * {
+     *   paths: [
+     *     "score",
+     *     "evaluation_section.points",
+     *     "evaluation_section.evaluation_question.answers"
+     *   ]
+     * }
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask return_fields = 10 [json_name = "returnFields"];</code>
+     */
+    public Builder mergeReturnFields(com.google.protobuf.FieldMask value) {
+      if (returnFieldsBuilder_ == null) {
+        if (((bitField0_ & 0x00000020) != 0) &&
+          returnFields_ != null &&
+          returnFields_ != com.google.protobuf.FieldMask.getDefaultInstance()) {
+          getReturnFieldsBuilder().mergeFrom(value);
+        } else {
+          returnFields_ = value;
+        }
+      } else {
+        returnFieldsBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Fields to return. Defaults to all evaluation fields (no sub entities).
+     *
+     * Example selecting score, section points, and question answers:
+     * {
+     *   paths: [
+     *     "score",
+     *     "evaluation_section.points",
+     *     "evaluation_section.evaluation_question.answers"
+     *   ]
+     * }
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask return_fields = 10 [json_name = "returnFields"];</code>
+     */
+    public Builder clearReturnFields() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      returnFields_ = null;
+      if (returnFieldsBuilder_ != null) {
+        returnFieldsBuilder_.dispose();
+        returnFieldsBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Fields to return. Defaults to all evaluation fields (no sub entities).
+     *
+     * Example selecting score, section points, and question answers:
+     * {
+     *   paths: [
+     *     "score",
+     *     "evaluation_section.points",
+     *     "evaluation_section.evaluation_question.answers"
+     *   ]
+     * }
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask return_fields = 10 [json_name = "returnFields"];</code>
+     */
+    public com.google.protobuf.FieldMask.Builder getReturnFieldsBuilder() {
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return getReturnFieldsFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Optional. Fields to return. Defaults to all evaluation fields (no sub entities).
+     *
+     * Example selecting score, section points, and question answers:
+     * {
+     *   paths: [
+     *     "score",
+     *     "evaluation_section.points",
+     *     "evaluation_section.evaluation_question.answers"
+     *   ]
+     * }
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask return_fields = 10 [json_name = "returnFields"];</code>
+     */
+    public com.google.protobuf.FieldMaskOrBuilder getReturnFieldsOrBuilder() {
+      if (returnFieldsBuilder_ != null) {
+        return returnFieldsBuilder_.getMessageOrBuilder();
+      } else {
+        return returnFields_ == null ?
+            com.google.protobuf.FieldMask.getDefaultInstance() : returnFields_;
+      }
+    }
+    /**
+     * <pre>
+     * Optional. Fields to return. Defaults to all evaluation fields (no sub entities).
+     *
+     * Example selecting score, section points, and question answers:
+     * {
+     *   paths: [
+     *     "score",
+     *     "evaluation_section.points",
+     *     "evaluation_section.evaluation_question.answers"
+     *   ]
+     * }
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask return_fields = 10 [json_name = "returnFields"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> 
+        getReturnFieldsFieldBuilder() {
+      if (returnFieldsBuilder_ == null) {
+        returnFieldsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder>(
+                getReturnFields(),
+                getParentForChildren(),
+                isClean());
+        returnFields_ = null;
+      }
+      return returnFieldsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
