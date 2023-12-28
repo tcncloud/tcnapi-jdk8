@@ -20,6 +20,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ShiftSegment() {
+    callStats_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -173,6 +174,67 @@ private static final long serialVersionUID = 0L;
     return schedulingActivity_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingActivity.getDefaultInstance() : schedulingActivity_;
   }
 
+  public static final int CALL_STATS_FIELD_NUMBER = 9;
+  @SuppressWarnings("serial")
+  private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue> callStats_;
+  /**
+   * <pre>
+   * A map of ShiftSegmentCallStats by SkillProfileCategory.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue call_stats = 9 [json_name = "callStats"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue> getCallStatsList() {
+    return callStats_;
+  }
+  /**
+   * <pre>
+   * A map of ShiftSegmentCallStats by SkillProfileCategory.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue call_stats = 9 [json_name = "callStats"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValueOrBuilder> 
+      getCallStatsOrBuilderList() {
+    return callStats_;
+  }
+  /**
+   * <pre>
+   * A map of ShiftSegmentCallStats by SkillProfileCategory.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue call_stats = 9 [json_name = "callStats"];</code>
+   */
+  @java.lang.Override
+  public int getCallStatsCount() {
+    return callStats_.size();
+  }
+  /**
+   * <pre>
+   * A map of ShiftSegmentCallStats by SkillProfileCategory.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue call_stats = 9 [json_name = "callStats"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue getCallStats(int index) {
+    return callStats_.get(index);
+  }
+  /**
+   * <pre>
+   * A map of ShiftSegmentCallStats by SkillProfileCategory.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue call_stats = 9 [json_name = "callStats"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValueOrBuilder getCallStatsOrBuilder(
+      int index) {
+    return callStats_.get(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -207,6 +269,9 @@ private static final long serialVersionUID = 0L;
     }
     if (schedulingActivity_ != null) {
       output.writeMessage(8, getSchedulingActivity());
+    }
+    for (int i = 0; i < callStats_.size(); i++) {
+      output.writeMessage(9, callStats_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -245,6 +310,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, getSchedulingActivity());
     }
+    for (int i = 0; i < callStats_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(9, callStats_.get(i));
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -277,6 +346,8 @@ private static final long serialVersionUID = 0L;
       if (!getSchedulingActivity()
           .equals(other.getSchedulingActivity())) return false;
     }
+    if (!getCallStatsList()
+        .equals(other.getCallStatsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -306,6 +377,10 @@ private static final long serialVersionUID = 0L;
     if (hasSchedulingActivity()) {
       hash = (37 * hash) + SCHEDULING_ACTIVITY_FIELD_NUMBER;
       hash = (53 * hash) + getSchedulingActivity().hashCode();
+    }
+    if (getCallStatsCount() > 0) {
+      hash = (37 * hash) + CALL_STATS_FIELD_NUMBER;
+      hash = (53 * hash) + getCallStatsList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -453,6 +528,13 @@ private static final long serialVersionUID = 0L;
         schedulingActivityBuilder_.dispose();
         schedulingActivityBuilder_ = null;
       }
+      if (callStatsBuilder_ == null) {
+        callStats_ = java.util.Collections.emptyList();
+      } else {
+        callStats_ = null;
+        callStatsBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000080);
       return this;
     }
 
@@ -479,9 +561,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegment buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegment result = new com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegment(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegment result) {
+      if (callStatsBuilder_ == null) {
+        if (((bitField0_ & 0x00000080) != 0)) {
+          callStats_ = java.util.Collections.unmodifiableList(callStats_);
+          bitField0_ = (bitField0_ & ~0x00000080);
+        }
+        result.callStats_ = callStats_;
+      } else {
+        result.callStats_ = callStatsBuilder_.build();
+      }
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegment result) {
@@ -576,6 +671,32 @@ private static final long serialVersionUID = 0L;
       if (other.hasSchedulingActivity()) {
         mergeSchedulingActivity(other.getSchedulingActivity());
       }
+      if (callStatsBuilder_ == null) {
+        if (!other.callStats_.isEmpty()) {
+          if (callStats_.isEmpty()) {
+            callStats_ = other.callStats_;
+            bitField0_ = (bitField0_ & ~0x00000080);
+          } else {
+            ensureCallStatsIsMutable();
+            callStats_.addAll(other.callStats_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.callStats_.isEmpty()) {
+          if (callStatsBuilder_.isEmpty()) {
+            callStatsBuilder_.dispose();
+            callStatsBuilder_ = null;
+            callStats_ = other.callStats_;
+            bitField0_ = (bitField0_ & ~0x00000080);
+            callStatsBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getCallStatsFieldBuilder() : null;
+          } else {
+            callStatsBuilder_.addAllMessages(other.callStats_);
+          }
+        }
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -639,6 +760,19 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000040;
               break;
             } // case 66
+            case 74: {
+              com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue.parser(),
+                      extensionRegistry);
+              if (callStatsBuilder_ == null) {
+                ensureCallStatsIsMutable();
+                callStats_.add(m);
+              } else {
+                callStatsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 74
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1082,6 +1216,318 @@ private static final long serialVersionUID = 0L;
         schedulingActivity_ = null;
       }
       return schedulingActivityBuilder_;
+    }
+
+    private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue> callStats_ =
+      java.util.Collections.emptyList();
+    private void ensureCallStatsIsMutable() {
+      if (!((bitField0_ & 0x00000080) != 0)) {
+        callStats_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue>(callStats_);
+        bitField0_ |= 0x00000080;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue, com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValueOrBuilder> callStatsBuilder_;
+
+    /**
+     * <pre>
+     * A map of ShiftSegmentCallStats by SkillProfileCategory.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue call_stats = 9 [json_name = "callStats"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue> getCallStatsList() {
+      if (callStatsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(callStats_);
+      } else {
+        return callStatsBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * A map of ShiftSegmentCallStats by SkillProfileCategory.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue call_stats = 9 [json_name = "callStats"];</code>
+     */
+    public int getCallStatsCount() {
+      if (callStatsBuilder_ == null) {
+        return callStats_.size();
+      } else {
+        return callStatsBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * A map of ShiftSegmentCallStats by SkillProfileCategory.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue call_stats = 9 [json_name = "callStats"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue getCallStats(int index) {
+      if (callStatsBuilder_ == null) {
+        return callStats_.get(index);
+      } else {
+        return callStatsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * A map of ShiftSegmentCallStats by SkillProfileCategory.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue call_stats = 9 [json_name = "callStats"];</code>
+     */
+    public Builder setCallStats(
+        int index, com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue value) {
+      if (callStatsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureCallStatsIsMutable();
+        callStats_.set(index, value);
+        onChanged();
+      } else {
+        callStatsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * A map of ShiftSegmentCallStats by SkillProfileCategory.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue call_stats = 9 [json_name = "callStats"];</code>
+     */
+    public Builder setCallStats(
+        int index, com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue.Builder builderForValue) {
+      if (callStatsBuilder_ == null) {
+        ensureCallStatsIsMutable();
+        callStats_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        callStatsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * A map of ShiftSegmentCallStats by SkillProfileCategory.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue call_stats = 9 [json_name = "callStats"];</code>
+     */
+    public Builder addCallStats(com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue value) {
+      if (callStatsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureCallStatsIsMutable();
+        callStats_.add(value);
+        onChanged();
+      } else {
+        callStatsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * A map of ShiftSegmentCallStats by SkillProfileCategory.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue call_stats = 9 [json_name = "callStats"];</code>
+     */
+    public Builder addCallStats(
+        int index, com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue value) {
+      if (callStatsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureCallStatsIsMutable();
+        callStats_.add(index, value);
+        onChanged();
+      } else {
+        callStatsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * A map of ShiftSegmentCallStats by SkillProfileCategory.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue call_stats = 9 [json_name = "callStats"];</code>
+     */
+    public Builder addCallStats(
+        com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue.Builder builderForValue) {
+      if (callStatsBuilder_ == null) {
+        ensureCallStatsIsMutable();
+        callStats_.add(builderForValue.build());
+        onChanged();
+      } else {
+        callStatsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * A map of ShiftSegmentCallStats by SkillProfileCategory.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue call_stats = 9 [json_name = "callStats"];</code>
+     */
+    public Builder addCallStats(
+        int index, com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue.Builder builderForValue) {
+      if (callStatsBuilder_ == null) {
+        ensureCallStatsIsMutable();
+        callStats_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        callStatsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * A map of ShiftSegmentCallStats by SkillProfileCategory.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue call_stats = 9 [json_name = "callStats"];</code>
+     */
+    public Builder addAllCallStats(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue> values) {
+      if (callStatsBuilder_ == null) {
+        ensureCallStatsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, callStats_);
+        onChanged();
+      } else {
+        callStatsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * A map of ShiftSegmentCallStats by SkillProfileCategory.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue call_stats = 9 [json_name = "callStats"];</code>
+     */
+    public Builder clearCallStats() {
+      if (callStatsBuilder_ == null) {
+        callStats_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000080);
+        onChanged();
+      } else {
+        callStatsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * A map of ShiftSegmentCallStats by SkillProfileCategory.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue call_stats = 9 [json_name = "callStats"];</code>
+     */
+    public Builder removeCallStats(int index) {
+      if (callStatsBuilder_ == null) {
+        ensureCallStatsIsMutable();
+        callStats_.remove(index);
+        onChanged();
+      } else {
+        callStatsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * A map of ShiftSegmentCallStats by SkillProfileCategory.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue call_stats = 9 [json_name = "callStats"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue.Builder getCallStatsBuilder(
+        int index) {
+      return getCallStatsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * A map of ShiftSegmentCallStats by SkillProfileCategory.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue call_stats = 9 [json_name = "callStats"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValueOrBuilder getCallStatsOrBuilder(
+        int index) {
+      if (callStatsBuilder_ == null) {
+        return callStats_.get(index);  } else {
+        return callStatsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * A map of ShiftSegmentCallStats by SkillProfileCategory.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue call_stats = 9 [json_name = "callStats"];</code>
+     */
+    public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValueOrBuilder> 
+         getCallStatsOrBuilderList() {
+      if (callStatsBuilder_ != null) {
+        return callStatsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(callStats_);
+      }
+    }
+    /**
+     * <pre>
+     * A map of ShiftSegmentCallStats by SkillProfileCategory.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue call_stats = 9 [json_name = "callStats"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue.Builder addCallStatsBuilder() {
+      return getCallStatsFieldBuilder().addBuilder(
+          com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * A map of ShiftSegmentCallStats by SkillProfileCategory.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue call_stats = 9 [json_name = "callStats"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue.Builder addCallStatsBuilder(
+        int index) {
+      return getCallStatsFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * A map of ShiftSegmentCallStats by SkillProfileCategory.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue call_stats = 9 [json_name = "callStats"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue.Builder> 
+         getCallStatsBuilderList() {
+      return getCallStatsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue, com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValueOrBuilder> 
+        getCallStatsFieldBuilder() {
+      if (callStatsBuilder_ == null) {
+        callStatsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue, com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValueOrBuilder>(
+                callStats_,
+                ((bitField0_ & 0x00000080) != 0),
+                getParentForChildren(),
+                isClean());
+        callStats_ = null;
+      }
+      return callStatsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

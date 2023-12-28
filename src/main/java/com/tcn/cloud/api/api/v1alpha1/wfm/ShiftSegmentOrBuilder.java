@@ -96,4 +96,48 @@ public interface ShiftSegmentOrBuilder extends
    * <code>.api.v1alpha1.wfm.SchedulingActivity scheduling_activity = 8 [json_name = "schedulingActivity"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingActivityOrBuilder getSchedulingActivityOrBuilder();
+
+  /**
+   * <pre>
+   * A map of ShiftSegmentCallStats by SkillProfileCategory.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue call_stats = 9 [json_name = "callStats"];</code>
+   */
+  java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue> 
+      getCallStatsList();
+  /**
+   * <pre>
+   * A map of ShiftSegmentCallStats by SkillProfileCategory.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue call_stats = 9 [json_name = "callStats"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue getCallStats(int index);
+  /**
+   * <pre>
+   * A map of ShiftSegmentCallStats by SkillProfileCategory.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue call_stats = 9 [json_name = "callStats"];</code>
+   */
+  int getCallStatsCount();
+  /**
+   * <pre>
+   * A map of ShiftSegmentCallStats by SkillProfileCategory.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue call_stats = 9 [json_name = "callStats"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValueOrBuilder> 
+      getCallStatsOrBuilderList();
+  /**
+   * <pre>
+   * A map of ShiftSegmentCallStats by SkillProfileCategory.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStatKeyValue call_stats = 9 [json_name = "callStats"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStatKeyValueOrBuilder getCallStatsOrBuilder(
+      int index);
 }
