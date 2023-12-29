@@ -5,26 +5,23 @@ package com.tcn.cloud.api.api.v1alpha1.wfm;
 
 /**
  * <pre>
- * Deprecated.
- * Represents a performance metric
- * This was replaced with both PerformanceMetricV1 and PerformanceMetricV2.
- * Fields copied into BasicPerformanceMetricV1.
+ * BasicPerformanceMetricV2.
  * </pre>
  *
- * Protobuf type {@code api.v1alpha1.wfm.PerformanceMetric}
+ * Protobuf type {@code api.v1alpha1.wfm.BasicPerformanceMetricV2}
  */
-public final class PerformanceMetric extends
+public final class BasicPerformanceMetricV2 extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v1alpha1.wfm.PerformanceMetric)
-    PerformanceMetricOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v1alpha1.wfm.BasicPerformanceMetricV2)
+    BasicPerformanceMetricV2OrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use PerformanceMetric.newBuilder() to construct.
-  private PerformanceMetric(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use BasicPerformanceMetricV2.newBuilder() to construct.
+  private BasicPerformanceMetricV2(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private PerformanceMetric() {
+  private BasicPerformanceMetricV2() {
     metricType_ = 0;
-    fteIntervals_ = java.util.Collections.emptyList();
+    fteOccupancyIntervals_ = java.util.Collections.emptyList();
     serviceLevelIntervals_ = java.util.Collections.emptyList();
   }
 
@@ -32,20 +29,20 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new PerformanceMetric();
+    return new BasicPerformanceMetricV2();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_PerformanceMetric_descriptor;
+    return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_BasicPerformanceMetricV2_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_PerformanceMetric_fieldAccessorTable
+    return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_BasicPerformanceMetricV2_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric.class, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric.Builder.class);
+            com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV2.class, com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV2.Builder.class);
   }
 
   public static final int DATE_RANGE_FIELD_NUMBER = 1;
@@ -86,119 +83,102 @@ private static final long serialVersionUID = 0L;
     return dateRange_ == null ? com.tcn.cloud.api.api.commons.DatetimeRange.getDefaultInstance() : dateRange_;
   }
 
-  public static final int TOTAL_CALLS_REQUIRED_FIELD_NUMBER = 2;
-  private int totalCallsRequired_ = 0;
+  public static final int TOTAL_FTE_INTERVALS_REQUIRED_FIELD_NUMBER = 2;
+  private float totalFteIntervalsRequired_ = 0F;
   /**
-   * <pre>
-   * The total calls required over the &#64;date_range, as determined by the forecast.
-   * </pre>
-   *
-   * <code>int32 total_calls_required = 2 [json_name = "totalCallsRequired"];</code>
-   * @return The totalCallsRequired.
+   * <code>float total_fte_intervals_required = 2 [json_name = "totalFteIntervalsRequired"];</code>
+   * @return The totalFteIntervalsRequired.
    */
   @java.lang.Override
-  public int getTotalCallsRequired() {
-    return totalCallsRequired_;
+  public float getTotalFteIntervalsRequired() {
+    return totalFteIntervalsRequired_;
   }
 
-  public static final int TOTAL_FTES_ACHIEVED_FIELD_NUMBER = 3;
-  private int totalFtesAchieved_ = 0;
+  public static final int TOTAL_FTE_INTERVALS_ACHIEVED_FIELD_NUMBER = 3;
+  private float totalFteIntervalsAchieved_ = 0F;
   /**
-   * <pre>
-   * The total calls the the schedule is likely to address with the current shift instances.
-   * </pre>
-   *
-   * <code>int32 total_ftes_achieved = 3 [json_name = "totalFtesAchieved"];</code>
-   * @return The totalFtesAchieved.
+   * <code>float total_fte_intervals_achieved = 3 [json_name = "totalFteIntervalsAchieved"];</code>
+   * @return The totalFteIntervalsAchieved.
    */
   @java.lang.Override
-  public int getTotalFtesAchieved() {
-    return totalFtesAchieved_;
+  public float getTotalFteIntervalsAchieved() {
+    return totalFteIntervalsAchieved_;
   }
 
-  public static final int NUM_INTERVALS_WITH_REQUIRED_CALLS_FIELD_NUMBER = 4;
-  private int numIntervalsWithRequiredCalls_ = 0;
+  public static final int NUM_INTERVALS_WITH_CALL_FTES_FIELD_NUMBER = 4;
+  private int numIntervalsWithCallFtes_ = 0;
   /**
-   * <pre>
-   * The number of intervals with required calls.
-   * </pre>
-   *
-   * <code>int32 num_intervals_with_required_calls = 4 [json_name = "numIntervalsWithRequiredCalls"];</code>
-   * @return The numIntervalsWithRequiredCalls.
+   * <code>int32 num_intervals_with_call_ftes = 4 [json_name = "numIntervalsWithCallFtes"];</code>
+   * @return The numIntervalsWithCallFtes.
    */
   @java.lang.Override
-  public int getNumIntervalsWithRequiredCalls() {
-    return numIntervalsWithRequiredCalls_;
+  public int getNumIntervalsWithCallFtes() {
+    return numIntervalsWithCallFtes_;
   }
 
-  public static final int NUM_INTERVALS_WITH_FTES_BUT_NO_SCHEDULES_FIELD_NUMBER = 5;
-  private int numIntervalsWithFtesButNoSchedules_ = 0;
+  public static final int NUM_INTERVALS_WITH_SHIFT_FTES_FIELD_NUMBER = 5;
+  private int numIntervalsWithShiftFtes_ = 0;
   /**
-   * <pre>
-   * The number of intervals with FTE's but no schedules.
-   * </pre>
-   *
-   * <code>int32 num_intervals_with_ftes_but_no_schedules = 5 [json_name = "numIntervalsWithFtesButNoSchedules"];</code>
-   * @return The numIntervalsWithFtesButNoSchedules.
+   * <code>int32 num_intervals_with_shift_ftes = 5 [json_name = "numIntervalsWithShiftFtes"];</code>
+   * @return The numIntervalsWithShiftFtes.
    */
   @java.lang.Override
-  public int getNumIntervalsWithFtesButNoSchedules() {
-    return numIntervalsWithFtesButNoSchedules_;
+  public int getNumIntervalsWithShiftFtes() {
+    return numIntervalsWithShiftFtes_;
   }
 
-  public static final int NUM_INTERVALS_WITH_FTES_BUT_NO_FORECASTED_CALLS_FIELD_NUMBER = 6;
-  private int numIntervalsWithFtesButNoForecastedCalls_ = 0;
+  public static final int NUM_INTERVALS_WITH_CALL_FTES_BUT_NO_SHIFTS_FIELD_NUMBER = 6;
+  private int numIntervalsWithCallFtesButNoShifts_ = 0;
   /**
-   * <pre>
-   * the number of intervals with FTE's but no forecasted calls.
-   * </pre>
-   *
-   * <code>int32 num_intervals_with_ftes_but_no_forecasted_calls = 6 [json_name = "numIntervalsWithFtesButNoForecastedCalls"];</code>
-   * @return The numIntervalsWithFtesButNoForecastedCalls.
+   * <code>int32 num_intervals_with_call_ftes_but_no_shifts = 6 [json_name = "numIntervalsWithCallFtesButNoShifts"];</code>
+   * @return The numIntervalsWithCallFtesButNoShifts.
    */
   @java.lang.Override
-  public int getNumIntervalsWithFtesButNoForecastedCalls() {
-    return numIntervalsWithFtesButNoForecastedCalls_;
+  public int getNumIntervalsWithCallFtesButNoShifts() {
+    return numIntervalsWithCallFtesButNoShifts_;
   }
 
-  public static final int TOTAL_UNSCHEDULED_CALLS_FIELD_NUMBER = 7;
-  private int totalUnscheduledCalls_ = 0;
+  public static final int NUM_INTERVALS_WITH_SHIFTS_BUT_NO_CALL_FTES_FIELD_NUMBER = 7;
+  private int numIntervalsWithShiftsButNoCallFtes_ = 0;
   /**
-   * <pre>
-   * The total calls forecsted where there are no FTE's scheduled.
-   * </pre>
-   *
-   * <code>int32 total_unscheduled_calls = 7 [json_name = "totalUnscheduledCalls"];</code>
-   * @return The totalUnscheduledCalls.
+   * <code>int32 num_intervals_with_shifts_but_no_call_ftes = 7 [json_name = "numIntervalsWithShiftsButNoCallFtes"];</code>
+   * @return The numIntervalsWithShiftsButNoCallFtes.
    */
   @java.lang.Override
-  public int getTotalUnscheduledCalls() {
-    return totalUnscheduledCalls_;
+  public int getNumIntervalsWithShiftsButNoCallFtes() {
+    return numIntervalsWithShiftsButNoCallFtes_;
   }
 
-  public static final int TOTAL_UNNECESSARY_FTES_FIELD_NUMBER = 8;
-  private int totalUnnecessaryFtes_ = 0;
+  public static final int TOTAL_UNDERSCHEDULED_CALL_FTES_FIELD_NUMBER = 8;
+  private float totalUnderscheduledCallFtes_ = 0F;
   /**
-   * <pre>
-   * The total number of FTE's scheduled where there were no forecasted calls.
-   * </pre>
-   *
-   * <code>int32 total_unnecessary_ftes = 8 [json_name = "totalUnnecessaryFtes"];</code>
-   * @return The totalUnnecessaryFtes.
+   * <code>float total_underscheduled_call_ftes = 8 [json_name = "totalUnderscheduledCallFtes"];</code>
+   * @return The totalUnderscheduledCallFtes.
    */
   @java.lang.Override
-  public int getTotalUnnecessaryFtes() {
-    return totalUnnecessaryFtes_;
+  public float getTotalUnderscheduledCallFtes() {
+    return totalUnderscheduledCallFtes_;
   }
 
-  public static final int INTERVAL_WIDTH_IN_MINUTES_FIELD_NUMBER = 9;
+  public static final int TOTAL_OVERSCHEDULED_CALL_FTES_FIELD_NUMBER = 9;
+  private float totalOverscheduledCallFtes_ = 0F;
+  /**
+   * <code>float total_overscheduled_call_ftes = 9 [json_name = "totalOverscheduledCallFtes"];</code>
+   * @return The totalOverscheduledCallFtes.
+   */
+  @java.lang.Override
+  public float getTotalOverscheduledCallFtes() {
+    return totalOverscheduledCallFtes_;
+  }
+
+  public static final int INTERVAL_WIDTH_IN_MINUTES_FIELD_NUMBER = 10;
   private int intervalWidthInMinutes_ = 0;
   /**
    * <pre>
    * Width of each interval in minutes.
    * </pre>
    *
-   * <code>int32 interval_width_in_minutes = 9 [json_name = "intervalWidthInMinutes"];</code>
+   * <code>int32 interval_width_in_minutes = 10 [json_name = "intervalWidthInMinutes"];</code>
    * @return The intervalWidthInMinutes.
    */
   @java.lang.Override
@@ -206,14 +186,14 @@ private static final long serialVersionUID = 0L;
     return intervalWidthInMinutes_;
   }
 
-  public static final int METRIC_TYPE_FIELD_NUMBER = 10;
+  public static final int METRIC_TYPE_FIELD_NUMBER = 11;
   private int metricType_ = 0;
   /**
    * <pre>
    * The type of metric being reported.
    * </pre>
    *
-   * <code>.api.commons.PerformanceMetricType metric_type = 10 [json_name = "metricType"];</code>
+   * <code>.api.commons.PerformanceMetricType metric_type = 11 [json_name = "metricType"];</code>
    * @return The enum numeric value on the wire for metricType.
    */
   @java.lang.Override public int getMetricTypeValue() {
@@ -224,7 +204,7 @@ private static final long serialVersionUID = 0L;
    * The type of metric being reported.
    * </pre>
    *
-   * <code>.api.commons.PerformanceMetricType metric_type = 10 [json_name = "metricType"];</code>
+   * <code>.api.commons.PerformanceMetricType metric_type = 11 [json_name = "metricType"];</code>
    * @return The metricType.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.PerformanceMetricType getMetricType() {
@@ -232,83 +212,83 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.tcn.cloud.api.api.commons.PerformanceMetricType.UNRECOGNIZED : result;
   }
 
-  public static final int FTE_INTERVALS_FIELD_NUMBER = 11;
+  public static final int FTE_OCCUPANCY_INTERVALS_FIELD_NUMBER = 12;
   @SuppressWarnings("serial")
-  private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedInterval> fteIntervals_;
+  private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval> fteOccupancyIntervals_;
   /**
    * <pre>
-   * One value will be set between &#64;fte_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
-   * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_intervals
+   * One value will be set between &#64;fte_occupancy_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
+   * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_occupancy_intervals
    * If &#64;metric_type is SERVICE_LEVEL_ANALYSIS then the intervals will be stored in &#64;service_level_intervals
    * Interval set comparing the number of FTE required to the number achieved.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedInterval fte_intervals = 11 [json_name = "fteIntervals"];</code>
+   * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval fte_occupancy_intervals = 12 [json_name = "fteOccupancyIntervals"];</code>
    */
   @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedInterval> getFteIntervalsList() {
-    return fteIntervals_;
+  public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval> getFteOccupancyIntervalsList() {
+    return fteOccupancyIntervals_;
   }
   /**
    * <pre>
-   * One value will be set between &#64;fte_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
-   * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_intervals
+   * One value will be set between &#64;fte_occupancy_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
+   * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_occupancy_intervals
    * If &#64;metric_type is SERVICE_LEVEL_ANALYSIS then the intervals will be stored in &#64;service_level_intervals
    * Interval set comparing the number of FTE required to the number achieved.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedInterval fte_intervals = 11 [json_name = "fteIntervals"];</code>
+   * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval fte_occupancy_intervals = 12 [json_name = "fteOccupancyIntervals"];</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedIntervalOrBuilder> 
-      getFteIntervalsOrBuilderList() {
-    return fteIntervals_;
+  public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyIntervalOrBuilder> 
+      getFteOccupancyIntervalsOrBuilderList() {
+    return fteOccupancyIntervals_;
   }
   /**
    * <pre>
-   * One value will be set between &#64;fte_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
-   * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_intervals
+   * One value will be set between &#64;fte_occupancy_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
+   * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_occupancy_intervals
    * If &#64;metric_type is SERVICE_LEVEL_ANALYSIS then the intervals will be stored in &#64;service_level_intervals
    * Interval set comparing the number of FTE required to the number achieved.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedInterval fte_intervals = 11 [json_name = "fteIntervals"];</code>
+   * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval fte_occupancy_intervals = 12 [json_name = "fteOccupancyIntervals"];</code>
    */
   @java.lang.Override
-  public int getFteIntervalsCount() {
-    return fteIntervals_.size();
+  public int getFteOccupancyIntervalsCount() {
+    return fteOccupancyIntervals_.size();
   }
   /**
    * <pre>
-   * One value will be set between &#64;fte_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
-   * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_intervals
+   * One value will be set between &#64;fte_occupancy_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
+   * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_occupancy_intervals
    * If &#64;metric_type is SERVICE_LEVEL_ANALYSIS then the intervals will be stored in &#64;service_level_intervals
    * Interval set comparing the number of FTE required to the number achieved.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedInterval fte_intervals = 11 [json_name = "fteIntervals"];</code>
+   * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval fte_occupancy_intervals = 12 [json_name = "fteOccupancyIntervals"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedInterval getFteIntervals(int index) {
-    return fteIntervals_.get(index);
+  public com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval getFteOccupancyIntervals(int index) {
+    return fteOccupancyIntervals_.get(index);
   }
   /**
    * <pre>
-   * One value will be set between &#64;fte_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
-   * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_intervals
+   * One value will be set between &#64;fte_occupancy_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
+   * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_occupancy_intervals
    * If &#64;metric_type is SERVICE_LEVEL_ANALYSIS then the intervals will be stored in &#64;service_level_intervals
    * Interval set comparing the number of FTE required to the number achieved.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedInterval fte_intervals = 11 [json_name = "fteIntervals"];</code>
+   * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval fte_occupancy_intervals = 12 [json_name = "fteOccupancyIntervals"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedIntervalOrBuilder getFteIntervalsOrBuilder(
+  public com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyIntervalOrBuilder getFteOccupancyIntervalsOrBuilder(
       int index) {
-    return fteIntervals_.get(index);
+    return fteOccupancyIntervals_.get(index);
   }
 
-  public static final int SERVICE_LEVEL_INTERVALS_FIELD_NUMBER = 12;
+  public static final int SERVICE_LEVEL_INTERVALS_FIELD_NUMBER = 13;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval> serviceLevelIntervals_;
   /**
@@ -316,7 +296,7 @@ private static final long serialVersionUID = 0L;
    * Interval set checking the service level achieved as a percentage.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 12 [json_name = "serviceLevelIntervals"];</code>
+   * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 13 [json_name = "serviceLevelIntervals"];</code>
    */
   @java.lang.Override
   public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval> getServiceLevelIntervalsList() {
@@ -327,7 +307,7 @@ private static final long serialVersionUID = 0L;
    * Interval set checking the service level achieved as a percentage.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 12 [json_name = "serviceLevelIntervals"];</code>
+   * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 13 [json_name = "serviceLevelIntervals"];</code>
    */
   @java.lang.Override
   public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelIntervalOrBuilder> 
@@ -339,7 +319,7 @@ private static final long serialVersionUID = 0L;
    * Interval set checking the service level achieved as a percentage.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 12 [json_name = "serviceLevelIntervals"];</code>
+   * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 13 [json_name = "serviceLevelIntervals"];</code>
    */
   @java.lang.Override
   public int getServiceLevelIntervalsCount() {
@@ -350,7 +330,7 @@ private static final long serialVersionUID = 0L;
    * Interval set checking the service level achieved as a percentage.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 12 [json_name = "serviceLevelIntervals"];</code>
+   * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 13 [json_name = "serviceLevelIntervals"];</code>
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval getServiceLevelIntervals(int index) {
@@ -361,7 +341,7 @@ private static final long serialVersionUID = 0L;
    * Interval set checking the service level achieved as a percentage.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 12 [json_name = "serviceLevelIntervals"];</code>
+   * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 13 [json_name = "serviceLevelIntervals"];</code>
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelIntervalOrBuilder getServiceLevelIntervalsOrBuilder(
@@ -386,38 +366,41 @@ private static final long serialVersionUID = 0L;
     if (dateRange_ != null) {
       output.writeMessage(1, getDateRange());
     }
-    if (totalCallsRequired_ != 0) {
-      output.writeInt32(2, totalCallsRequired_);
+    if (java.lang.Float.floatToRawIntBits(totalFteIntervalsRequired_) != 0) {
+      output.writeFloat(2, totalFteIntervalsRequired_);
     }
-    if (totalFtesAchieved_ != 0) {
-      output.writeInt32(3, totalFtesAchieved_);
+    if (java.lang.Float.floatToRawIntBits(totalFteIntervalsAchieved_) != 0) {
+      output.writeFloat(3, totalFteIntervalsAchieved_);
     }
-    if (numIntervalsWithRequiredCalls_ != 0) {
-      output.writeInt32(4, numIntervalsWithRequiredCalls_);
+    if (numIntervalsWithCallFtes_ != 0) {
+      output.writeInt32(4, numIntervalsWithCallFtes_);
     }
-    if (numIntervalsWithFtesButNoSchedules_ != 0) {
-      output.writeInt32(5, numIntervalsWithFtesButNoSchedules_);
+    if (numIntervalsWithShiftFtes_ != 0) {
+      output.writeInt32(5, numIntervalsWithShiftFtes_);
     }
-    if (numIntervalsWithFtesButNoForecastedCalls_ != 0) {
-      output.writeInt32(6, numIntervalsWithFtesButNoForecastedCalls_);
+    if (numIntervalsWithCallFtesButNoShifts_ != 0) {
+      output.writeInt32(6, numIntervalsWithCallFtesButNoShifts_);
     }
-    if (totalUnscheduledCalls_ != 0) {
-      output.writeInt32(7, totalUnscheduledCalls_);
+    if (numIntervalsWithShiftsButNoCallFtes_ != 0) {
+      output.writeInt32(7, numIntervalsWithShiftsButNoCallFtes_);
     }
-    if (totalUnnecessaryFtes_ != 0) {
-      output.writeInt32(8, totalUnnecessaryFtes_);
+    if (java.lang.Float.floatToRawIntBits(totalUnderscheduledCallFtes_) != 0) {
+      output.writeFloat(8, totalUnderscheduledCallFtes_);
+    }
+    if (java.lang.Float.floatToRawIntBits(totalOverscheduledCallFtes_) != 0) {
+      output.writeFloat(9, totalOverscheduledCallFtes_);
     }
     if (intervalWidthInMinutes_ != 0) {
-      output.writeInt32(9, intervalWidthInMinutes_);
+      output.writeInt32(10, intervalWidthInMinutes_);
     }
     if (metricType_ != com.tcn.cloud.api.api.commons.PerformanceMetricType.FTE_REQUIRED_VS_ACHIEVED_SIMPLE.getNumber()) {
-      output.writeEnum(10, metricType_);
+      output.writeEnum(11, metricType_);
     }
-    for (int i = 0; i < fteIntervals_.size(); i++) {
-      output.writeMessage(11, fteIntervals_.get(i));
+    for (int i = 0; i < fteOccupancyIntervals_.size(); i++) {
+      output.writeMessage(12, fteOccupancyIntervals_.get(i));
     }
     for (int i = 0; i < serviceLevelIntervals_.size(); i++) {
-      output.writeMessage(12, serviceLevelIntervals_.get(i));
+      output.writeMessage(13, serviceLevelIntervals_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -432,49 +415,53 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getDateRange());
     }
-    if (totalCallsRequired_ != 0) {
+    if (java.lang.Float.floatToRawIntBits(totalFteIntervalsRequired_) != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(2, totalCallsRequired_);
+        .computeFloatSize(2, totalFteIntervalsRequired_);
     }
-    if (totalFtesAchieved_ != 0) {
+    if (java.lang.Float.floatToRawIntBits(totalFteIntervalsAchieved_) != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(3, totalFtesAchieved_);
+        .computeFloatSize(3, totalFteIntervalsAchieved_);
     }
-    if (numIntervalsWithRequiredCalls_ != 0) {
+    if (numIntervalsWithCallFtes_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(4, numIntervalsWithRequiredCalls_);
+        .computeInt32Size(4, numIntervalsWithCallFtes_);
     }
-    if (numIntervalsWithFtesButNoSchedules_ != 0) {
+    if (numIntervalsWithShiftFtes_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(5, numIntervalsWithFtesButNoSchedules_);
+        .computeInt32Size(5, numIntervalsWithShiftFtes_);
     }
-    if (numIntervalsWithFtesButNoForecastedCalls_ != 0) {
+    if (numIntervalsWithCallFtesButNoShifts_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(6, numIntervalsWithFtesButNoForecastedCalls_);
+        .computeInt32Size(6, numIntervalsWithCallFtesButNoShifts_);
     }
-    if (totalUnscheduledCalls_ != 0) {
+    if (numIntervalsWithShiftsButNoCallFtes_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(7, totalUnscheduledCalls_);
+        .computeInt32Size(7, numIntervalsWithShiftsButNoCallFtes_);
     }
-    if (totalUnnecessaryFtes_ != 0) {
+    if (java.lang.Float.floatToRawIntBits(totalUnderscheduledCallFtes_) != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(8, totalUnnecessaryFtes_);
+        .computeFloatSize(8, totalUnderscheduledCallFtes_);
+    }
+    if (java.lang.Float.floatToRawIntBits(totalOverscheduledCallFtes_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeFloatSize(9, totalOverscheduledCallFtes_);
     }
     if (intervalWidthInMinutes_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(9, intervalWidthInMinutes_);
+        .computeInt32Size(10, intervalWidthInMinutes_);
     }
     if (metricType_ != com.tcn.cloud.api.api.commons.PerformanceMetricType.FTE_REQUIRED_VS_ACHIEVED_SIMPLE.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(10, metricType_);
+        .computeEnumSize(11, metricType_);
     }
-    for (int i = 0; i < fteIntervals_.size(); i++) {
+    for (int i = 0; i < fteOccupancyIntervals_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(11, fteIntervals_.get(i));
+        .computeMessageSize(12, fteOccupancyIntervals_.get(i));
     }
     for (int i = 0; i < serviceLevelIntervals_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(12, serviceLevelIntervals_.get(i));
+        .computeMessageSize(13, serviceLevelIntervals_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -486,35 +473,41 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV2)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric other = (com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric) obj;
+    com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV2 other = (com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV2) obj;
 
     if (hasDateRange() != other.hasDateRange()) return false;
     if (hasDateRange()) {
       if (!getDateRange()
           .equals(other.getDateRange())) return false;
     }
-    if (getTotalCallsRequired()
-        != other.getTotalCallsRequired()) return false;
-    if (getTotalFtesAchieved()
-        != other.getTotalFtesAchieved()) return false;
-    if (getNumIntervalsWithRequiredCalls()
-        != other.getNumIntervalsWithRequiredCalls()) return false;
-    if (getNumIntervalsWithFtesButNoSchedules()
-        != other.getNumIntervalsWithFtesButNoSchedules()) return false;
-    if (getNumIntervalsWithFtesButNoForecastedCalls()
-        != other.getNumIntervalsWithFtesButNoForecastedCalls()) return false;
-    if (getTotalUnscheduledCalls()
-        != other.getTotalUnscheduledCalls()) return false;
-    if (getTotalUnnecessaryFtes()
-        != other.getTotalUnnecessaryFtes()) return false;
+    if (java.lang.Float.floatToIntBits(getTotalFteIntervalsRequired())
+        != java.lang.Float.floatToIntBits(
+            other.getTotalFteIntervalsRequired())) return false;
+    if (java.lang.Float.floatToIntBits(getTotalFteIntervalsAchieved())
+        != java.lang.Float.floatToIntBits(
+            other.getTotalFteIntervalsAchieved())) return false;
+    if (getNumIntervalsWithCallFtes()
+        != other.getNumIntervalsWithCallFtes()) return false;
+    if (getNumIntervalsWithShiftFtes()
+        != other.getNumIntervalsWithShiftFtes()) return false;
+    if (getNumIntervalsWithCallFtesButNoShifts()
+        != other.getNumIntervalsWithCallFtesButNoShifts()) return false;
+    if (getNumIntervalsWithShiftsButNoCallFtes()
+        != other.getNumIntervalsWithShiftsButNoCallFtes()) return false;
+    if (java.lang.Float.floatToIntBits(getTotalUnderscheduledCallFtes())
+        != java.lang.Float.floatToIntBits(
+            other.getTotalUnderscheduledCallFtes())) return false;
+    if (java.lang.Float.floatToIntBits(getTotalOverscheduledCallFtes())
+        != java.lang.Float.floatToIntBits(
+            other.getTotalOverscheduledCallFtes())) return false;
     if (getIntervalWidthInMinutes()
         != other.getIntervalWidthInMinutes()) return false;
     if (metricType_ != other.metricType_) return false;
-    if (!getFteIntervalsList()
-        .equals(other.getFteIntervalsList())) return false;
+    if (!getFteOccupancyIntervalsList()
+        .equals(other.getFteOccupancyIntervalsList())) return false;
     if (!getServiceLevelIntervalsList()
         .equals(other.getServiceLevelIntervalsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -532,27 +525,33 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + DATE_RANGE_FIELD_NUMBER;
       hash = (53 * hash) + getDateRange().hashCode();
     }
-    hash = (37 * hash) + TOTAL_CALLS_REQUIRED_FIELD_NUMBER;
-    hash = (53 * hash) + getTotalCallsRequired();
-    hash = (37 * hash) + TOTAL_FTES_ACHIEVED_FIELD_NUMBER;
-    hash = (53 * hash) + getTotalFtesAchieved();
-    hash = (37 * hash) + NUM_INTERVALS_WITH_REQUIRED_CALLS_FIELD_NUMBER;
-    hash = (53 * hash) + getNumIntervalsWithRequiredCalls();
-    hash = (37 * hash) + NUM_INTERVALS_WITH_FTES_BUT_NO_SCHEDULES_FIELD_NUMBER;
-    hash = (53 * hash) + getNumIntervalsWithFtesButNoSchedules();
-    hash = (37 * hash) + NUM_INTERVALS_WITH_FTES_BUT_NO_FORECASTED_CALLS_FIELD_NUMBER;
-    hash = (53 * hash) + getNumIntervalsWithFtesButNoForecastedCalls();
-    hash = (37 * hash) + TOTAL_UNSCHEDULED_CALLS_FIELD_NUMBER;
-    hash = (53 * hash) + getTotalUnscheduledCalls();
-    hash = (37 * hash) + TOTAL_UNNECESSARY_FTES_FIELD_NUMBER;
-    hash = (53 * hash) + getTotalUnnecessaryFtes();
+    hash = (37 * hash) + TOTAL_FTE_INTERVALS_REQUIRED_FIELD_NUMBER;
+    hash = (53 * hash) + java.lang.Float.floatToIntBits(
+        getTotalFteIntervalsRequired());
+    hash = (37 * hash) + TOTAL_FTE_INTERVALS_ACHIEVED_FIELD_NUMBER;
+    hash = (53 * hash) + java.lang.Float.floatToIntBits(
+        getTotalFteIntervalsAchieved());
+    hash = (37 * hash) + NUM_INTERVALS_WITH_CALL_FTES_FIELD_NUMBER;
+    hash = (53 * hash) + getNumIntervalsWithCallFtes();
+    hash = (37 * hash) + NUM_INTERVALS_WITH_SHIFT_FTES_FIELD_NUMBER;
+    hash = (53 * hash) + getNumIntervalsWithShiftFtes();
+    hash = (37 * hash) + NUM_INTERVALS_WITH_CALL_FTES_BUT_NO_SHIFTS_FIELD_NUMBER;
+    hash = (53 * hash) + getNumIntervalsWithCallFtesButNoShifts();
+    hash = (37 * hash) + NUM_INTERVALS_WITH_SHIFTS_BUT_NO_CALL_FTES_FIELD_NUMBER;
+    hash = (53 * hash) + getNumIntervalsWithShiftsButNoCallFtes();
+    hash = (37 * hash) + TOTAL_UNDERSCHEDULED_CALL_FTES_FIELD_NUMBER;
+    hash = (53 * hash) + java.lang.Float.floatToIntBits(
+        getTotalUnderscheduledCallFtes());
+    hash = (37 * hash) + TOTAL_OVERSCHEDULED_CALL_FTES_FIELD_NUMBER;
+    hash = (53 * hash) + java.lang.Float.floatToIntBits(
+        getTotalOverscheduledCallFtes());
     hash = (37 * hash) + INTERVAL_WIDTH_IN_MINUTES_FIELD_NUMBER;
     hash = (53 * hash) + getIntervalWidthInMinutes();
     hash = (37 * hash) + METRIC_TYPE_FIELD_NUMBER;
     hash = (53 * hash) + metricType_;
-    if (getFteIntervalsCount() > 0) {
-      hash = (37 * hash) + FTE_INTERVALS_FIELD_NUMBER;
-      hash = (53 * hash) + getFteIntervalsList().hashCode();
+    if (getFteOccupancyIntervalsCount() > 0) {
+      hash = (37 * hash) + FTE_OCCUPANCY_INTERVALS_FIELD_NUMBER;
+      hash = (53 * hash) + getFteOccupancyIntervalsList().hashCode();
     }
     if (getServiceLevelIntervalsCount() > 0) {
       hash = (37 * hash) + SERVICE_LEVEL_INTERVALS_FIELD_NUMBER;
@@ -563,44 +562,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV2 parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV2 parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV2 parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV2 parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV2 parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV2 parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV2 parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV2 parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -608,26 +607,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV2 parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV2 parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV2 parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV2 parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -640,7 +639,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV2 prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -657,32 +656,29 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Deprecated.
-   * Represents a performance metric
-   * This was replaced with both PerformanceMetricV1 and PerformanceMetricV2.
-   * Fields copied into BasicPerformanceMetricV1.
+   * BasicPerformanceMetricV2.
    * </pre>
    *
-   * Protobuf type {@code api.v1alpha1.wfm.PerformanceMetric}
+   * Protobuf type {@code api.v1alpha1.wfm.BasicPerformanceMetricV2}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v1alpha1.wfm.PerformanceMetric)
-      com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v1alpha1.wfm.BasicPerformanceMetricV2)
+      com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV2OrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_PerformanceMetric_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_BasicPerformanceMetricV2_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_PerformanceMetric_fieldAccessorTable
+      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_BasicPerformanceMetricV2_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric.class, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric.Builder.class);
+              com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV2.class, com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV2.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV2.newBuilder()
     private Builder() {
 
     }
@@ -701,46 +697,47 @@ private static final long serialVersionUID = 0L;
         dateRangeBuilder_.dispose();
         dateRangeBuilder_ = null;
       }
-      totalCallsRequired_ = 0;
-      totalFtesAchieved_ = 0;
-      numIntervalsWithRequiredCalls_ = 0;
-      numIntervalsWithFtesButNoSchedules_ = 0;
-      numIntervalsWithFtesButNoForecastedCalls_ = 0;
-      totalUnscheduledCalls_ = 0;
-      totalUnnecessaryFtes_ = 0;
+      totalFteIntervalsRequired_ = 0F;
+      totalFteIntervalsAchieved_ = 0F;
+      numIntervalsWithCallFtes_ = 0;
+      numIntervalsWithShiftFtes_ = 0;
+      numIntervalsWithCallFtesButNoShifts_ = 0;
+      numIntervalsWithShiftsButNoCallFtes_ = 0;
+      totalUnderscheduledCallFtes_ = 0F;
+      totalOverscheduledCallFtes_ = 0F;
       intervalWidthInMinutes_ = 0;
       metricType_ = 0;
-      if (fteIntervalsBuilder_ == null) {
-        fteIntervals_ = java.util.Collections.emptyList();
+      if (fteOccupancyIntervalsBuilder_ == null) {
+        fteOccupancyIntervals_ = java.util.Collections.emptyList();
       } else {
-        fteIntervals_ = null;
-        fteIntervalsBuilder_.clear();
+        fteOccupancyIntervals_ = null;
+        fteOccupancyIntervalsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000400);
+      bitField0_ = (bitField0_ & ~0x00000800);
       if (serviceLevelIntervalsBuilder_ == null) {
         serviceLevelIntervals_ = java.util.Collections.emptyList();
       } else {
         serviceLevelIntervals_ = null;
         serviceLevelIntervalsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000800);
+      bitField0_ = (bitField0_ & ~0x00001000);
       return this;
     }
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_PerformanceMetric_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_BasicPerformanceMetricV2_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric.getDefaultInstance();
+    public com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV2 getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV2.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric build() {
-      com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric result = buildPartial();
+    public com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV2 build() {
+      com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV2 result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -748,28 +745,28 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric buildPartial() {
-      com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric result = new com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric(this);
+    public com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV2 buildPartial() {
+      com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV2 result = new com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV2(this);
       buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric result) {
-      if (fteIntervalsBuilder_ == null) {
-        if (((bitField0_ & 0x00000400) != 0)) {
-          fteIntervals_ = java.util.Collections.unmodifiableList(fteIntervals_);
-          bitField0_ = (bitField0_ & ~0x00000400);
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV2 result) {
+      if (fteOccupancyIntervalsBuilder_ == null) {
+        if (((bitField0_ & 0x00000800) != 0)) {
+          fteOccupancyIntervals_ = java.util.Collections.unmodifiableList(fteOccupancyIntervals_);
+          bitField0_ = (bitField0_ & ~0x00000800);
         }
-        result.fteIntervals_ = fteIntervals_;
+        result.fteOccupancyIntervals_ = fteOccupancyIntervals_;
       } else {
-        result.fteIntervals_ = fteIntervalsBuilder_.build();
+        result.fteOccupancyIntervals_ = fteOccupancyIntervalsBuilder_.build();
       }
       if (serviceLevelIntervalsBuilder_ == null) {
-        if (((bitField0_ & 0x00000800) != 0)) {
+        if (((bitField0_ & 0x00001000) != 0)) {
           serviceLevelIntervals_ = java.util.Collections.unmodifiableList(serviceLevelIntervals_);
-          bitField0_ = (bitField0_ & ~0x00000800);
+          bitField0_ = (bitField0_ & ~0x00001000);
         }
         result.serviceLevelIntervals_ = serviceLevelIntervals_;
       } else {
@@ -777,7 +774,7 @@ private static final long serialVersionUID = 0L;
       }
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric result) {
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV2 result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.dateRange_ = dateRangeBuilder_ == null
@@ -785,30 +782,33 @@ private static final long serialVersionUID = 0L;
             : dateRangeBuilder_.build();
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.totalCallsRequired_ = totalCallsRequired_;
+        result.totalFteIntervalsRequired_ = totalFteIntervalsRequired_;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.totalFtesAchieved_ = totalFtesAchieved_;
+        result.totalFteIntervalsAchieved_ = totalFteIntervalsAchieved_;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.numIntervalsWithRequiredCalls_ = numIntervalsWithRequiredCalls_;
+        result.numIntervalsWithCallFtes_ = numIntervalsWithCallFtes_;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.numIntervalsWithFtesButNoSchedules_ = numIntervalsWithFtesButNoSchedules_;
+        result.numIntervalsWithShiftFtes_ = numIntervalsWithShiftFtes_;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.numIntervalsWithFtesButNoForecastedCalls_ = numIntervalsWithFtesButNoForecastedCalls_;
+        result.numIntervalsWithCallFtesButNoShifts_ = numIntervalsWithCallFtesButNoShifts_;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
-        result.totalUnscheduledCalls_ = totalUnscheduledCalls_;
+        result.numIntervalsWithShiftsButNoCallFtes_ = numIntervalsWithShiftsButNoCallFtes_;
       }
       if (((from_bitField0_ & 0x00000080) != 0)) {
-        result.totalUnnecessaryFtes_ = totalUnnecessaryFtes_;
+        result.totalUnderscheduledCallFtes_ = totalUnderscheduledCallFtes_;
       }
       if (((from_bitField0_ & 0x00000100) != 0)) {
-        result.intervalWidthInMinutes_ = intervalWidthInMinutes_;
+        result.totalOverscheduledCallFtes_ = totalOverscheduledCallFtes_;
       }
       if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.intervalWidthInMinutes_ = intervalWidthInMinutes_;
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
         result.metricType_ = metricType_;
       }
     }
@@ -847,39 +847,42 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric) {
-        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric)other);
+      if (other instanceof com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV2) {
+        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV2)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric other) {
-      if (other == com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV2 other) {
+      if (other == com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV2.getDefaultInstance()) return this;
       if (other.hasDateRange()) {
         mergeDateRange(other.getDateRange());
       }
-      if (other.getTotalCallsRequired() != 0) {
-        setTotalCallsRequired(other.getTotalCallsRequired());
+      if (other.getTotalFteIntervalsRequired() != 0F) {
+        setTotalFteIntervalsRequired(other.getTotalFteIntervalsRequired());
       }
-      if (other.getTotalFtesAchieved() != 0) {
-        setTotalFtesAchieved(other.getTotalFtesAchieved());
+      if (other.getTotalFteIntervalsAchieved() != 0F) {
+        setTotalFteIntervalsAchieved(other.getTotalFteIntervalsAchieved());
       }
-      if (other.getNumIntervalsWithRequiredCalls() != 0) {
-        setNumIntervalsWithRequiredCalls(other.getNumIntervalsWithRequiredCalls());
+      if (other.getNumIntervalsWithCallFtes() != 0) {
+        setNumIntervalsWithCallFtes(other.getNumIntervalsWithCallFtes());
       }
-      if (other.getNumIntervalsWithFtesButNoSchedules() != 0) {
-        setNumIntervalsWithFtesButNoSchedules(other.getNumIntervalsWithFtesButNoSchedules());
+      if (other.getNumIntervalsWithShiftFtes() != 0) {
+        setNumIntervalsWithShiftFtes(other.getNumIntervalsWithShiftFtes());
       }
-      if (other.getNumIntervalsWithFtesButNoForecastedCalls() != 0) {
-        setNumIntervalsWithFtesButNoForecastedCalls(other.getNumIntervalsWithFtesButNoForecastedCalls());
+      if (other.getNumIntervalsWithCallFtesButNoShifts() != 0) {
+        setNumIntervalsWithCallFtesButNoShifts(other.getNumIntervalsWithCallFtesButNoShifts());
       }
-      if (other.getTotalUnscheduledCalls() != 0) {
-        setTotalUnscheduledCalls(other.getTotalUnscheduledCalls());
+      if (other.getNumIntervalsWithShiftsButNoCallFtes() != 0) {
+        setNumIntervalsWithShiftsButNoCallFtes(other.getNumIntervalsWithShiftsButNoCallFtes());
       }
-      if (other.getTotalUnnecessaryFtes() != 0) {
-        setTotalUnnecessaryFtes(other.getTotalUnnecessaryFtes());
+      if (other.getTotalUnderscheduledCallFtes() != 0F) {
+        setTotalUnderscheduledCallFtes(other.getTotalUnderscheduledCallFtes());
+      }
+      if (other.getTotalOverscheduledCallFtes() != 0F) {
+        setTotalOverscheduledCallFtes(other.getTotalOverscheduledCallFtes());
       }
       if (other.getIntervalWidthInMinutes() != 0) {
         setIntervalWidthInMinutes(other.getIntervalWidthInMinutes());
@@ -887,29 +890,29 @@ private static final long serialVersionUID = 0L;
       if (other.metricType_ != 0) {
         setMetricTypeValue(other.getMetricTypeValue());
       }
-      if (fteIntervalsBuilder_ == null) {
-        if (!other.fteIntervals_.isEmpty()) {
-          if (fteIntervals_.isEmpty()) {
-            fteIntervals_ = other.fteIntervals_;
-            bitField0_ = (bitField0_ & ~0x00000400);
+      if (fteOccupancyIntervalsBuilder_ == null) {
+        if (!other.fteOccupancyIntervals_.isEmpty()) {
+          if (fteOccupancyIntervals_.isEmpty()) {
+            fteOccupancyIntervals_ = other.fteOccupancyIntervals_;
+            bitField0_ = (bitField0_ & ~0x00000800);
           } else {
-            ensureFteIntervalsIsMutable();
-            fteIntervals_.addAll(other.fteIntervals_);
+            ensureFteOccupancyIntervalsIsMutable();
+            fteOccupancyIntervals_.addAll(other.fteOccupancyIntervals_);
           }
           onChanged();
         }
       } else {
-        if (!other.fteIntervals_.isEmpty()) {
-          if (fteIntervalsBuilder_.isEmpty()) {
-            fteIntervalsBuilder_.dispose();
-            fteIntervalsBuilder_ = null;
-            fteIntervals_ = other.fteIntervals_;
-            bitField0_ = (bitField0_ & ~0x00000400);
-            fteIntervalsBuilder_ = 
+        if (!other.fteOccupancyIntervals_.isEmpty()) {
+          if (fteOccupancyIntervalsBuilder_.isEmpty()) {
+            fteOccupancyIntervalsBuilder_.dispose();
+            fteOccupancyIntervalsBuilder_ = null;
+            fteOccupancyIntervals_ = other.fteOccupancyIntervals_;
+            bitField0_ = (bitField0_ & ~0x00000800);
+            fteOccupancyIntervalsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getFteIntervalsFieldBuilder() : null;
+                 getFteOccupancyIntervalsFieldBuilder() : null;
           } else {
-            fteIntervalsBuilder_.addAllMessages(other.fteIntervals_);
+            fteOccupancyIntervalsBuilder_.addAllMessages(other.fteOccupancyIntervals_);
           }
         }
       }
@@ -917,7 +920,7 @@ private static final long serialVersionUID = 0L;
         if (!other.serviceLevelIntervals_.isEmpty()) {
           if (serviceLevelIntervals_.isEmpty()) {
             serviceLevelIntervals_ = other.serviceLevelIntervals_;
-            bitField0_ = (bitField0_ & ~0x00000800);
+            bitField0_ = (bitField0_ & ~0x00001000);
           } else {
             ensureServiceLevelIntervalsIsMutable();
             serviceLevelIntervals_.addAll(other.serviceLevelIntervals_);
@@ -930,7 +933,7 @@ private static final long serialVersionUID = 0L;
             serviceLevelIntervalsBuilder_.dispose();
             serviceLevelIntervalsBuilder_ = null;
             serviceLevelIntervals_ = other.serviceLevelIntervals_;
-            bitField0_ = (bitField0_ & ~0x00000800);
+            bitField0_ = (bitField0_ & ~0x00001000);
             serviceLevelIntervalsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getServiceLevelIntervalsFieldBuilder() : null;
@@ -972,65 +975,70 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 10
-            case 16: {
-              totalCallsRequired_ = input.readInt32();
+            case 21: {
+              totalFteIntervalsRequired_ = input.readFloat();
               bitField0_ |= 0x00000002;
               break;
-            } // case 16
-            case 24: {
-              totalFtesAchieved_ = input.readInt32();
+            } // case 21
+            case 29: {
+              totalFteIntervalsAchieved_ = input.readFloat();
               bitField0_ |= 0x00000004;
               break;
-            } // case 24
+            } // case 29
             case 32: {
-              numIntervalsWithRequiredCalls_ = input.readInt32();
+              numIntervalsWithCallFtes_ = input.readInt32();
               bitField0_ |= 0x00000008;
               break;
             } // case 32
             case 40: {
-              numIntervalsWithFtesButNoSchedules_ = input.readInt32();
+              numIntervalsWithShiftFtes_ = input.readInt32();
               bitField0_ |= 0x00000010;
               break;
             } // case 40
             case 48: {
-              numIntervalsWithFtesButNoForecastedCalls_ = input.readInt32();
+              numIntervalsWithCallFtesButNoShifts_ = input.readInt32();
               bitField0_ |= 0x00000020;
               break;
             } // case 48
             case 56: {
-              totalUnscheduledCalls_ = input.readInt32();
+              numIntervalsWithShiftsButNoCallFtes_ = input.readInt32();
               bitField0_ |= 0x00000040;
               break;
             } // case 56
-            case 64: {
-              totalUnnecessaryFtes_ = input.readInt32();
+            case 69: {
+              totalUnderscheduledCallFtes_ = input.readFloat();
               bitField0_ |= 0x00000080;
               break;
-            } // case 64
-            case 72: {
-              intervalWidthInMinutes_ = input.readInt32();
+            } // case 69
+            case 77: {
+              totalOverscheduledCallFtes_ = input.readFloat();
               bitField0_ |= 0x00000100;
               break;
-            } // case 72
+            } // case 77
             case 80: {
-              metricType_ = input.readEnum();
+              intervalWidthInMinutes_ = input.readInt32();
               bitField0_ |= 0x00000200;
               break;
             } // case 80
-            case 90: {
-              com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedInterval m =
+            case 88: {
+              metricType_ = input.readEnum();
+              bitField0_ |= 0x00000400;
+              break;
+            } // case 88
+            case 98: {
+              com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval m =
                   input.readMessage(
-                      com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedInterval.parser(),
+                      com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval.parser(),
                       extensionRegistry);
-              if (fteIntervalsBuilder_ == null) {
-                ensureFteIntervalsIsMutable();
-                fteIntervals_.add(m);
+              if (fteOccupancyIntervalsBuilder_ == null) {
+                ensureFteOccupancyIntervalsIsMutable();
+                fteOccupancyIntervals_.add(m);
               } else {
-                fteIntervalsBuilder_.addMessage(m);
+                fteOccupancyIntervalsBuilder_.addMessage(m);
               }
               break;
-            } // case 90
-            case 98: {
+            } // case 98
+            case 106: {
               com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval m =
                   input.readMessage(
                       com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval.parser(),
@@ -1042,7 +1050,7 @@ private static final long serialVersionUID = 0L;
                 serviceLevelIntervalsBuilder_.addMessage(m);
               }
               break;
-            } // case 98
+            } // case 106
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1215,310 +1223,258 @@ private static final long serialVersionUID = 0L;
       return dateRangeBuilder_;
     }
 
-    private int totalCallsRequired_ ;
+    private float totalFteIntervalsRequired_ ;
     /**
-     * <pre>
-     * The total calls required over the &#64;date_range, as determined by the forecast.
-     * </pre>
-     *
-     * <code>int32 total_calls_required = 2 [json_name = "totalCallsRequired"];</code>
-     * @return The totalCallsRequired.
+     * <code>float total_fte_intervals_required = 2 [json_name = "totalFteIntervalsRequired"];</code>
+     * @return The totalFteIntervalsRequired.
      */
     @java.lang.Override
-    public int getTotalCallsRequired() {
-      return totalCallsRequired_;
+    public float getTotalFteIntervalsRequired() {
+      return totalFteIntervalsRequired_;
     }
     /**
-     * <pre>
-     * The total calls required over the &#64;date_range, as determined by the forecast.
-     * </pre>
-     *
-     * <code>int32 total_calls_required = 2 [json_name = "totalCallsRequired"];</code>
-     * @param value The totalCallsRequired to set.
+     * <code>float total_fte_intervals_required = 2 [json_name = "totalFteIntervalsRequired"];</code>
+     * @param value The totalFteIntervalsRequired to set.
      * @return This builder for chaining.
      */
-    public Builder setTotalCallsRequired(int value) {
+    public Builder setTotalFteIntervalsRequired(float value) {
 
-      totalCallsRequired_ = value;
+      totalFteIntervalsRequired_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
-     * <pre>
-     * The total calls required over the &#64;date_range, as determined by the forecast.
-     * </pre>
-     *
-     * <code>int32 total_calls_required = 2 [json_name = "totalCallsRequired"];</code>
+     * <code>float total_fte_intervals_required = 2 [json_name = "totalFteIntervalsRequired"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearTotalCallsRequired() {
+    public Builder clearTotalFteIntervalsRequired() {
       bitField0_ = (bitField0_ & ~0x00000002);
-      totalCallsRequired_ = 0;
+      totalFteIntervalsRequired_ = 0F;
       onChanged();
       return this;
     }
 
-    private int totalFtesAchieved_ ;
+    private float totalFteIntervalsAchieved_ ;
     /**
-     * <pre>
-     * The total calls the the schedule is likely to address with the current shift instances.
-     * </pre>
-     *
-     * <code>int32 total_ftes_achieved = 3 [json_name = "totalFtesAchieved"];</code>
-     * @return The totalFtesAchieved.
+     * <code>float total_fte_intervals_achieved = 3 [json_name = "totalFteIntervalsAchieved"];</code>
+     * @return The totalFteIntervalsAchieved.
      */
     @java.lang.Override
-    public int getTotalFtesAchieved() {
-      return totalFtesAchieved_;
+    public float getTotalFteIntervalsAchieved() {
+      return totalFteIntervalsAchieved_;
     }
     /**
-     * <pre>
-     * The total calls the the schedule is likely to address with the current shift instances.
-     * </pre>
-     *
-     * <code>int32 total_ftes_achieved = 3 [json_name = "totalFtesAchieved"];</code>
-     * @param value The totalFtesAchieved to set.
+     * <code>float total_fte_intervals_achieved = 3 [json_name = "totalFteIntervalsAchieved"];</code>
+     * @param value The totalFteIntervalsAchieved to set.
      * @return This builder for chaining.
      */
-    public Builder setTotalFtesAchieved(int value) {
+    public Builder setTotalFteIntervalsAchieved(float value) {
 
-      totalFtesAchieved_ = value;
+      totalFteIntervalsAchieved_ = value;
       bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
-     * <pre>
-     * The total calls the the schedule is likely to address with the current shift instances.
-     * </pre>
-     *
-     * <code>int32 total_ftes_achieved = 3 [json_name = "totalFtesAchieved"];</code>
+     * <code>float total_fte_intervals_achieved = 3 [json_name = "totalFteIntervalsAchieved"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearTotalFtesAchieved() {
+    public Builder clearTotalFteIntervalsAchieved() {
       bitField0_ = (bitField0_ & ~0x00000004);
-      totalFtesAchieved_ = 0;
+      totalFteIntervalsAchieved_ = 0F;
       onChanged();
       return this;
     }
 
-    private int numIntervalsWithRequiredCalls_ ;
+    private int numIntervalsWithCallFtes_ ;
     /**
-     * <pre>
-     * The number of intervals with required calls.
-     * </pre>
-     *
-     * <code>int32 num_intervals_with_required_calls = 4 [json_name = "numIntervalsWithRequiredCalls"];</code>
-     * @return The numIntervalsWithRequiredCalls.
+     * <code>int32 num_intervals_with_call_ftes = 4 [json_name = "numIntervalsWithCallFtes"];</code>
+     * @return The numIntervalsWithCallFtes.
      */
     @java.lang.Override
-    public int getNumIntervalsWithRequiredCalls() {
-      return numIntervalsWithRequiredCalls_;
+    public int getNumIntervalsWithCallFtes() {
+      return numIntervalsWithCallFtes_;
     }
     /**
-     * <pre>
-     * The number of intervals with required calls.
-     * </pre>
-     *
-     * <code>int32 num_intervals_with_required_calls = 4 [json_name = "numIntervalsWithRequiredCalls"];</code>
-     * @param value The numIntervalsWithRequiredCalls to set.
+     * <code>int32 num_intervals_with_call_ftes = 4 [json_name = "numIntervalsWithCallFtes"];</code>
+     * @param value The numIntervalsWithCallFtes to set.
      * @return This builder for chaining.
      */
-    public Builder setNumIntervalsWithRequiredCalls(int value) {
+    public Builder setNumIntervalsWithCallFtes(int value) {
 
-      numIntervalsWithRequiredCalls_ = value;
+      numIntervalsWithCallFtes_ = value;
       bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
     /**
-     * <pre>
-     * The number of intervals with required calls.
-     * </pre>
-     *
-     * <code>int32 num_intervals_with_required_calls = 4 [json_name = "numIntervalsWithRequiredCalls"];</code>
+     * <code>int32 num_intervals_with_call_ftes = 4 [json_name = "numIntervalsWithCallFtes"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearNumIntervalsWithRequiredCalls() {
+    public Builder clearNumIntervalsWithCallFtes() {
       bitField0_ = (bitField0_ & ~0x00000008);
-      numIntervalsWithRequiredCalls_ = 0;
+      numIntervalsWithCallFtes_ = 0;
       onChanged();
       return this;
     }
 
-    private int numIntervalsWithFtesButNoSchedules_ ;
+    private int numIntervalsWithShiftFtes_ ;
     /**
-     * <pre>
-     * The number of intervals with FTE's but no schedules.
-     * </pre>
-     *
-     * <code>int32 num_intervals_with_ftes_but_no_schedules = 5 [json_name = "numIntervalsWithFtesButNoSchedules"];</code>
-     * @return The numIntervalsWithFtesButNoSchedules.
+     * <code>int32 num_intervals_with_shift_ftes = 5 [json_name = "numIntervalsWithShiftFtes"];</code>
+     * @return The numIntervalsWithShiftFtes.
      */
     @java.lang.Override
-    public int getNumIntervalsWithFtesButNoSchedules() {
-      return numIntervalsWithFtesButNoSchedules_;
+    public int getNumIntervalsWithShiftFtes() {
+      return numIntervalsWithShiftFtes_;
     }
     /**
-     * <pre>
-     * The number of intervals with FTE's but no schedules.
-     * </pre>
-     *
-     * <code>int32 num_intervals_with_ftes_but_no_schedules = 5 [json_name = "numIntervalsWithFtesButNoSchedules"];</code>
-     * @param value The numIntervalsWithFtesButNoSchedules to set.
+     * <code>int32 num_intervals_with_shift_ftes = 5 [json_name = "numIntervalsWithShiftFtes"];</code>
+     * @param value The numIntervalsWithShiftFtes to set.
      * @return This builder for chaining.
      */
-    public Builder setNumIntervalsWithFtesButNoSchedules(int value) {
+    public Builder setNumIntervalsWithShiftFtes(int value) {
 
-      numIntervalsWithFtesButNoSchedules_ = value;
+      numIntervalsWithShiftFtes_ = value;
       bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
     /**
-     * <pre>
-     * The number of intervals with FTE's but no schedules.
-     * </pre>
-     *
-     * <code>int32 num_intervals_with_ftes_but_no_schedules = 5 [json_name = "numIntervalsWithFtesButNoSchedules"];</code>
+     * <code>int32 num_intervals_with_shift_ftes = 5 [json_name = "numIntervalsWithShiftFtes"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearNumIntervalsWithFtesButNoSchedules() {
+    public Builder clearNumIntervalsWithShiftFtes() {
       bitField0_ = (bitField0_ & ~0x00000010);
-      numIntervalsWithFtesButNoSchedules_ = 0;
+      numIntervalsWithShiftFtes_ = 0;
       onChanged();
       return this;
     }
 
-    private int numIntervalsWithFtesButNoForecastedCalls_ ;
+    private int numIntervalsWithCallFtesButNoShifts_ ;
     /**
-     * <pre>
-     * the number of intervals with FTE's but no forecasted calls.
-     * </pre>
-     *
-     * <code>int32 num_intervals_with_ftes_but_no_forecasted_calls = 6 [json_name = "numIntervalsWithFtesButNoForecastedCalls"];</code>
-     * @return The numIntervalsWithFtesButNoForecastedCalls.
+     * <code>int32 num_intervals_with_call_ftes_but_no_shifts = 6 [json_name = "numIntervalsWithCallFtesButNoShifts"];</code>
+     * @return The numIntervalsWithCallFtesButNoShifts.
      */
     @java.lang.Override
-    public int getNumIntervalsWithFtesButNoForecastedCalls() {
-      return numIntervalsWithFtesButNoForecastedCalls_;
+    public int getNumIntervalsWithCallFtesButNoShifts() {
+      return numIntervalsWithCallFtesButNoShifts_;
     }
     /**
-     * <pre>
-     * the number of intervals with FTE's but no forecasted calls.
-     * </pre>
-     *
-     * <code>int32 num_intervals_with_ftes_but_no_forecasted_calls = 6 [json_name = "numIntervalsWithFtesButNoForecastedCalls"];</code>
-     * @param value The numIntervalsWithFtesButNoForecastedCalls to set.
+     * <code>int32 num_intervals_with_call_ftes_but_no_shifts = 6 [json_name = "numIntervalsWithCallFtesButNoShifts"];</code>
+     * @param value The numIntervalsWithCallFtesButNoShifts to set.
      * @return This builder for chaining.
      */
-    public Builder setNumIntervalsWithFtesButNoForecastedCalls(int value) {
+    public Builder setNumIntervalsWithCallFtesButNoShifts(int value) {
 
-      numIntervalsWithFtesButNoForecastedCalls_ = value;
+      numIntervalsWithCallFtesButNoShifts_ = value;
       bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
     /**
-     * <pre>
-     * the number of intervals with FTE's but no forecasted calls.
-     * </pre>
-     *
-     * <code>int32 num_intervals_with_ftes_but_no_forecasted_calls = 6 [json_name = "numIntervalsWithFtesButNoForecastedCalls"];</code>
+     * <code>int32 num_intervals_with_call_ftes_but_no_shifts = 6 [json_name = "numIntervalsWithCallFtesButNoShifts"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearNumIntervalsWithFtesButNoForecastedCalls() {
+    public Builder clearNumIntervalsWithCallFtesButNoShifts() {
       bitField0_ = (bitField0_ & ~0x00000020);
-      numIntervalsWithFtesButNoForecastedCalls_ = 0;
+      numIntervalsWithCallFtesButNoShifts_ = 0;
       onChanged();
       return this;
     }
 
-    private int totalUnscheduledCalls_ ;
+    private int numIntervalsWithShiftsButNoCallFtes_ ;
     /**
-     * <pre>
-     * The total calls forecsted where there are no FTE's scheduled.
-     * </pre>
-     *
-     * <code>int32 total_unscheduled_calls = 7 [json_name = "totalUnscheduledCalls"];</code>
-     * @return The totalUnscheduledCalls.
+     * <code>int32 num_intervals_with_shifts_but_no_call_ftes = 7 [json_name = "numIntervalsWithShiftsButNoCallFtes"];</code>
+     * @return The numIntervalsWithShiftsButNoCallFtes.
      */
     @java.lang.Override
-    public int getTotalUnscheduledCalls() {
-      return totalUnscheduledCalls_;
+    public int getNumIntervalsWithShiftsButNoCallFtes() {
+      return numIntervalsWithShiftsButNoCallFtes_;
     }
     /**
-     * <pre>
-     * The total calls forecsted where there are no FTE's scheduled.
-     * </pre>
-     *
-     * <code>int32 total_unscheduled_calls = 7 [json_name = "totalUnscheduledCalls"];</code>
-     * @param value The totalUnscheduledCalls to set.
+     * <code>int32 num_intervals_with_shifts_but_no_call_ftes = 7 [json_name = "numIntervalsWithShiftsButNoCallFtes"];</code>
+     * @param value The numIntervalsWithShiftsButNoCallFtes to set.
      * @return This builder for chaining.
      */
-    public Builder setTotalUnscheduledCalls(int value) {
+    public Builder setNumIntervalsWithShiftsButNoCallFtes(int value) {
 
-      totalUnscheduledCalls_ = value;
+      numIntervalsWithShiftsButNoCallFtes_ = value;
       bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
     /**
-     * <pre>
-     * The total calls forecsted where there are no FTE's scheduled.
-     * </pre>
-     *
-     * <code>int32 total_unscheduled_calls = 7 [json_name = "totalUnscheduledCalls"];</code>
+     * <code>int32 num_intervals_with_shifts_but_no_call_ftes = 7 [json_name = "numIntervalsWithShiftsButNoCallFtes"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearTotalUnscheduledCalls() {
+    public Builder clearNumIntervalsWithShiftsButNoCallFtes() {
       bitField0_ = (bitField0_ & ~0x00000040);
-      totalUnscheduledCalls_ = 0;
+      numIntervalsWithShiftsButNoCallFtes_ = 0;
       onChanged();
       return this;
     }
 
-    private int totalUnnecessaryFtes_ ;
+    private float totalUnderscheduledCallFtes_ ;
     /**
-     * <pre>
-     * The total number of FTE's scheduled where there were no forecasted calls.
-     * </pre>
-     *
-     * <code>int32 total_unnecessary_ftes = 8 [json_name = "totalUnnecessaryFtes"];</code>
-     * @return The totalUnnecessaryFtes.
+     * <code>float total_underscheduled_call_ftes = 8 [json_name = "totalUnderscheduledCallFtes"];</code>
+     * @return The totalUnderscheduledCallFtes.
      */
     @java.lang.Override
-    public int getTotalUnnecessaryFtes() {
-      return totalUnnecessaryFtes_;
+    public float getTotalUnderscheduledCallFtes() {
+      return totalUnderscheduledCallFtes_;
     }
     /**
-     * <pre>
-     * The total number of FTE's scheduled where there were no forecasted calls.
-     * </pre>
-     *
-     * <code>int32 total_unnecessary_ftes = 8 [json_name = "totalUnnecessaryFtes"];</code>
-     * @param value The totalUnnecessaryFtes to set.
+     * <code>float total_underscheduled_call_ftes = 8 [json_name = "totalUnderscheduledCallFtes"];</code>
+     * @param value The totalUnderscheduledCallFtes to set.
      * @return This builder for chaining.
      */
-    public Builder setTotalUnnecessaryFtes(int value) {
+    public Builder setTotalUnderscheduledCallFtes(float value) {
 
-      totalUnnecessaryFtes_ = value;
+      totalUnderscheduledCallFtes_ = value;
       bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
     /**
-     * <pre>
-     * The total number of FTE's scheduled where there were no forecasted calls.
-     * </pre>
-     *
-     * <code>int32 total_unnecessary_ftes = 8 [json_name = "totalUnnecessaryFtes"];</code>
+     * <code>float total_underscheduled_call_ftes = 8 [json_name = "totalUnderscheduledCallFtes"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearTotalUnnecessaryFtes() {
+    public Builder clearTotalUnderscheduledCallFtes() {
       bitField0_ = (bitField0_ & ~0x00000080);
-      totalUnnecessaryFtes_ = 0;
+      totalUnderscheduledCallFtes_ = 0F;
+      onChanged();
+      return this;
+    }
+
+    private float totalOverscheduledCallFtes_ ;
+    /**
+     * <code>float total_overscheduled_call_ftes = 9 [json_name = "totalOverscheduledCallFtes"];</code>
+     * @return The totalOverscheduledCallFtes.
+     */
+    @java.lang.Override
+    public float getTotalOverscheduledCallFtes() {
+      return totalOverscheduledCallFtes_;
+    }
+    /**
+     * <code>float total_overscheduled_call_ftes = 9 [json_name = "totalOverscheduledCallFtes"];</code>
+     * @param value The totalOverscheduledCallFtes to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTotalOverscheduledCallFtes(float value) {
+
+      totalOverscheduledCallFtes_ = value;
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>float total_overscheduled_call_ftes = 9 [json_name = "totalOverscheduledCallFtes"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTotalOverscheduledCallFtes() {
+      bitField0_ = (bitField0_ & ~0x00000100);
+      totalOverscheduledCallFtes_ = 0F;
       onChanged();
       return this;
     }
@@ -1529,7 +1485,7 @@ private static final long serialVersionUID = 0L;
      * Width of each interval in minutes.
      * </pre>
      *
-     * <code>int32 interval_width_in_minutes = 9 [json_name = "intervalWidthInMinutes"];</code>
+     * <code>int32 interval_width_in_minutes = 10 [json_name = "intervalWidthInMinutes"];</code>
      * @return The intervalWidthInMinutes.
      */
     @java.lang.Override
@@ -1541,14 +1497,14 @@ private static final long serialVersionUID = 0L;
      * Width of each interval in minutes.
      * </pre>
      *
-     * <code>int32 interval_width_in_minutes = 9 [json_name = "intervalWidthInMinutes"];</code>
+     * <code>int32 interval_width_in_minutes = 10 [json_name = "intervalWidthInMinutes"];</code>
      * @param value The intervalWidthInMinutes to set.
      * @return This builder for chaining.
      */
     public Builder setIntervalWidthInMinutes(int value) {
 
       intervalWidthInMinutes_ = value;
-      bitField0_ |= 0x00000100;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -1557,11 +1513,11 @@ private static final long serialVersionUID = 0L;
      * Width of each interval in minutes.
      * </pre>
      *
-     * <code>int32 interval_width_in_minutes = 9 [json_name = "intervalWidthInMinutes"];</code>
+     * <code>int32 interval_width_in_minutes = 10 [json_name = "intervalWidthInMinutes"];</code>
      * @return This builder for chaining.
      */
     public Builder clearIntervalWidthInMinutes() {
-      bitField0_ = (bitField0_ & ~0x00000100);
+      bitField0_ = (bitField0_ & ~0x00000200);
       intervalWidthInMinutes_ = 0;
       onChanged();
       return this;
@@ -1573,7 +1529,7 @@ private static final long serialVersionUID = 0L;
      * The type of metric being reported.
      * </pre>
      *
-     * <code>.api.commons.PerformanceMetricType metric_type = 10 [json_name = "metricType"];</code>
+     * <code>.api.commons.PerformanceMetricType metric_type = 11 [json_name = "metricType"];</code>
      * @return The enum numeric value on the wire for metricType.
      */
     @java.lang.Override public int getMetricTypeValue() {
@@ -1584,13 +1540,13 @@ private static final long serialVersionUID = 0L;
      * The type of metric being reported.
      * </pre>
      *
-     * <code>.api.commons.PerformanceMetricType metric_type = 10 [json_name = "metricType"];</code>
+     * <code>.api.commons.PerformanceMetricType metric_type = 11 [json_name = "metricType"];</code>
      * @param value The enum numeric value on the wire for metricType to set.
      * @return This builder for chaining.
      */
     public Builder setMetricTypeValue(int value) {
       metricType_ = value;
-      bitField0_ |= 0x00000200;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -1599,7 +1555,7 @@ private static final long serialVersionUID = 0L;
      * The type of metric being reported.
      * </pre>
      *
-     * <code>.api.commons.PerformanceMetricType metric_type = 10 [json_name = "metricType"];</code>
+     * <code>.api.commons.PerformanceMetricType metric_type = 11 [json_name = "metricType"];</code>
      * @return The metricType.
      */
     @java.lang.Override
@@ -1612,7 +1568,7 @@ private static final long serialVersionUID = 0L;
      * The type of metric being reported.
      * </pre>
      *
-     * <code>.api.commons.PerformanceMetricType metric_type = 10 [json_name = "metricType"];</code>
+     * <code>.api.commons.PerformanceMetricType metric_type = 11 [json_name = "metricType"];</code>
      * @param value The metricType to set.
      * @return This builder for chaining.
      */
@@ -1620,7 +1576,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000200;
+      bitField0_ |= 0x00000400;
       metricType_ = value.getNumber();
       onChanged();
       return this;
@@ -1630,388 +1586,388 @@ private static final long serialVersionUID = 0L;
      * The type of metric being reported.
      * </pre>
      *
-     * <code>.api.commons.PerformanceMetricType metric_type = 10 [json_name = "metricType"];</code>
+     * <code>.api.commons.PerformanceMetricType metric_type = 11 [json_name = "metricType"];</code>
      * @return This builder for chaining.
      */
     public Builder clearMetricType() {
-      bitField0_ = (bitField0_ & ~0x00000200);
+      bitField0_ = (bitField0_ & ~0x00000400);
       metricType_ = 0;
       onChanged();
       return this;
     }
 
-    private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedInterval> fteIntervals_ =
+    private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval> fteOccupancyIntervals_ =
       java.util.Collections.emptyList();
-    private void ensureFteIntervalsIsMutable() {
-      if (!((bitField0_ & 0x00000400) != 0)) {
-        fteIntervals_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedInterval>(fteIntervals_);
-        bitField0_ |= 0x00000400;
+    private void ensureFteOccupancyIntervalsIsMutable() {
+      if (!((bitField0_ & 0x00000800) != 0)) {
+        fteOccupancyIntervals_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval>(fteOccupancyIntervals_);
+        bitField0_ |= 0x00000800;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedInterval, com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedInterval.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedIntervalOrBuilder> fteIntervalsBuilder_;
+        com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval, com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyIntervalOrBuilder> fteOccupancyIntervalsBuilder_;
 
     /**
      * <pre>
-     * One value will be set between &#64;fte_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
-     * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_intervals
+     * One value will be set between &#64;fte_occupancy_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
+     * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_occupancy_intervals
      * If &#64;metric_type is SERVICE_LEVEL_ANALYSIS then the intervals will be stored in &#64;service_level_intervals
      * Interval set comparing the number of FTE required to the number achieved.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedInterval fte_intervals = 11 [json_name = "fteIntervals"];</code>
+     * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval fte_occupancy_intervals = 12 [json_name = "fteOccupancyIntervals"];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedInterval> getFteIntervalsList() {
-      if (fteIntervalsBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(fteIntervals_);
+    public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval> getFteOccupancyIntervalsList() {
+      if (fteOccupancyIntervalsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(fteOccupancyIntervals_);
       } else {
-        return fteIntervalsBuilder_.getMessageList();
+        return fteOccupancyIntervalsBuilder_.getMessageList();
       }
     }
     /**
      * <pre>
-     * One value will be set between &#64;fte_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
-     * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_intervals
+     * One value will be set between &#64;fte_occupancy_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
+     * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_occupancy_intervals
      * If &#64;metric_type is SERVICE_LEVEL_ANALYSIS then the intervals will be stored in &#64;service_level_intervals
      * Interval set comparing the number of FTE required to the number achieved.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedInterval fte_intervals = 11 [json_name = "fteIntervals"];</code>
+     * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval fte_occupancy_intervals = 12 [json_name = "fteOccupancyIntervals"];</code>
      */
-    public int getFteIntervalsCount() {
-      if (fteIntervalsBuilder_ == null) {
-        return fteIntervals_.size();
+    public int getFteOccupancyIntervalsCount() {
+      if (fteOccupancyIntervalsBuilder_ == null) {
+        return fteOccupancyIntervals_.size();
       } else {
-        return fteIntervalsBuilder_.getCount();
+        return fteOccupancyIntervalsBuilder_.getCount();
       }
     }
     /**
      * <pre>
-     * One value will be set between &#64;fte_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
-     * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_intervals
+     * One value will be set between &#64;fte_occupancy_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
+     * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_occupancy_intervals
      * If &#64;metric_type is SERVICE_LEVEL_ANALYSIS then the intervals will be stored in &#64;service_level_intervals
      * Interval set comparing the number of FTE required to the number achieved.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedInterval fte_intervals = 11 [json_name = "fteIntervals"];</code>
+     * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval fte_occupancy_intervals = 12 [json_name = "fteOccupancyIntervals"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedInterval getFteIntervals(int index) {
-      if (fteIntervalsBuilder_ == null) {
-        return fteIntervals_.get(index);
+    public com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval getFteOccupancyIntervals(int index) {
+      if (fteOccupancyIntervalsBuilder_ == null) {
+        return fteOccupancyIntervals_.get(index);
       } else {
-        return fteIntervalsBuilder_.getMessage(index);
+        return fteOccupancyIntervalsBuilder_.getMessage(index);
       }
     }
     /**
      * <pre>
-     * One value will be set between &#64;fte_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
-     * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_intervals
+     * One value will be set between &#64;fte_occupancy_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
+     * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_occupancy_intervals
      * If &#64;metric_type is SERVICE_LEVEL_ANALYSIS then the intervals will be stored in &#64;service_level_intervals
      * Interval set comparing the number of FTE required to the number achieved.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedInterval fte_intervals = 11 [json_name = "fteIntervals"];</code>
+     * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval fte_occupancy_intervals = 12 [json_name = "fteOccupancyIntervals"];</code>
      */
-    public Builder setFteIntervals(
-        int index, com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedInterval value) {
-      if (fteIntervalsBuilder_ == null) {
+    public Builder setFteOccupancyIntervals(
+        int index, com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval value) {
+      if (fteOccupancyIntervalsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureFteIntervalsIsMutable();
-        fteIntervals_.set(index, value);
+        ensureFteOccupancyIntervalsIsMutable();
+        fteOccupancyIntervals_.set(index, value);
         onChanged();
       } else {
-        fteIntervalsBuilder_.setMessage(index, value);
+        fteOccupancyIntervalsBuilder_.setMessage(index, value);
       }
       return this;
     }
     /**
      * <pre>
-     * One value will be set between &#64;fte_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
-     * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_intervals
+     * One value will be set between &#64;fte_occupancy_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
+     * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_occupancy_intervals
      * If &#64;metric_type is SERVICE_LEVEL_ANALYSIS then the intervals will be stored in &#64;service_level_intervals
      * Interval set comparing the number of FTE required to the number achieved.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedInterval fte_intervals = 11 [json_name = "fteIntervals"];</code>
+     * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval fte_occupancy_intervals = 12 [json_name = "fteOccupancyIntervals"];</code>
      */
-    public Builder setFteIntervals(
-        int index, com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedInterval.Builder builderForValue) {
-      if (fteIntervalsBuilder_ == null) {
-        ensureFteIntervalsIsMutable();
-        fteIntervals_.set(index, builderForValue.build());
+    public Builder setFteOccupancyIntervals(
+        int index, com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval.Builder builderForValue) {
+      if (fteOccupancyIntervalsBuilder_ == null) {
+        ensureFteOccupancyIntervalsIsMutable();
+        fteOccupancyIntervals_.set(index, builderForValue.build());
         onChanged();
       } else {
-        fteIntervalsBuilder_.setMessage(index, builderForValue.build());
+        fteOccupancyIntervalsBuilder_.setMessage(index, builderForValue.build());
       }
       return this;
     }
     /**
      * <pre>
-     * One value will be set between &#64;fte_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
-     * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_intervals
+     * One value will be set between &#64;fte_occupancy_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
+     * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_occupancy_intervals
      * If &#64;metric_type is SERVICE_LEVEL_ANALYSIS then the intervals will be stored in &#64;service_level_intervals
      * Interval set comparing the number of FTE required to the number achieved.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedInterval fte_intervals = 11 [json_name = "fteIntervals"];</code>
+     * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval fte_occupancy_intervals = 12 [json_name = "fteOccupancyIntervals"];</code>
      */
-    public Builder addFteIntervals(com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedInterval value) {
-      if (fteIntervalsBuilder_ == null) {
+    public Builder addFteOccupancyIntervals(com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval value) {
+      if (fteOccupancyIntervalsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureFteIntervalsIsMutable();
-        fteIntervals_.add(value);
+        ensureFteOccupancyIntervalsIsMutable();
+        fteOccupancyIntervals_.add(value);
         onChanged();
       } else {
-        fteIntervalsBuilder_.addMessage(value);
+        fteOccupancyIntervalsBuilder_.addMessage(value);
       }
       return this;
     }
     /**
      * <pre>
-     * One value will be set between &#64;fte_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
-     * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_intervals
+     * One value will be set between &#64;fte_occupancy_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
+     * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_occupancy_intervals
      * If &#64;metric_type is SERVICE_LEVEL_ANALYSIS then the intervals will be stored in &#64;service_level_intervals
      * Interval set comparing the number of FTE required to the number achieved.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedInterval fte_intervals = 11 [json_name = "fteIntervals"];</code>
+     * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval fte_occupancy_intervals = 12 [json_name = "fteOccupancyIntervals"];</code>
      */
-    public Builder addFteIntervals(
-        int index, com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedInterval value) {
-      if (fteIntervalsBuilder_ == null) {
+    public Builder addFteOccupancyIntervals(
+        int index, com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval value) {
+      if (fteOccupancyIntervalsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureFteIntervalsIsMutable();
-        fteIntervals_.add(index, value);
+        ensureFteOccupancyIntervalsIsMutable();
+        fteOccupancyIntervals_.add(index, value);
         onChanged();
       } else {
-        fteIntervalsBuilder_.addMessage(index, value);
+        fteOccupancyIntervalsBuilder_.addMessage(index, value);
       }
       return this;
     }
     /**
      * <pre>
-     * One value will be set between &#64;fte_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
-     * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_intervals
+     * One value will be set between &#64;fte_occupancy_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
+     * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_occupancy_intervals
      * If &#64;metric_type is SERVICE_LEVEL_ANALYSIS then the intervals will be stored in &#64;service_level_intervals
      * Interval set comparing the number of FTE required to the number achieved.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedInterval fte_intervals = 11 [json_name = "fteIntervals"];</code>
+     * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval fte_occupancy_intervals = 12 [json_name = "fteOccupancyIntervals"];</code>
      */
-    public Builder addFteIntervals(
-        com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedInterval.Builder builderForValue) {
-      if (fteIntervalsBuilder_ == null) {
-        ensureFteIntervalsIsMutable();
-        fteIntervals_.add(builderForValue.build());
+    public Builder addFteOccupancyIntervals(
+        com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval.Builder builderForValue) {
+      if (fteOccupancyIntervalsBuilder_ == null) {
+        ensureFteOccupancyIntervalsIsMutable();
+        fteOccupancyIntervals_.add(builderForValue.build());
         onChanged();
       } else {
-        fteIntervalsBuilder_.addMessage(builderForValue.build());
+        fteOccupancyIntervalsBuilder_.addMessage(builderForValue.build());
       }
       return this;
     }
     /**
      * <pre>
-     * One value will be set between &#64;fte_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
-     * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_intervals
+     * One value will be set between &#64;fte_occupancy_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
+     * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_occupancy_intervals
      * If &#64;metric_type is SERVICE_LEVEL_ANALYSIS then the intervals will be stored in &#64;service_level_intervals
      * Interval set comparing the number of FTE required to the number achieved.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedInterval fte_intervals = 11 [json_name = "fteIntervals"];</code>
+     * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval fte_occupancy_intervals = 12 [json_name = "fteOccupancyIntervals"];</code>
      */
-    public Builder addFteIntervals(
-        int index, com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedInterval.Builder builderForValue) {
-      if (fteIntervalsBuilder_ == null) {
-        ensureFteIntervalsIsMutable();
-        fteIntervals_.add(index, builderForValue.build());
+    public Builder addFteOccupancyIntervals(
+        int index, com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval.Builder builderForValue) {
+      if (fteOccupancyIntervalsBuilder_ == null) {
+        ensureFteOccupancyIntervalsIsMutable();
+        fteOccupancyIntervals_.add(index, builderForValue.build());
         onChanged();
       } else {
-        fteIntervalsBuilder_.addMessage(index, builderForValue.build());
+        fteOccupancyIntervalsBuilder_.addMessage(index, builderForValue.build());
       }
       return this;
     }
     /**
      * <pre>
-     * One value will be set between &#64;fte_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
-     * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_intervals
+     * One value will be set between &#64;fte_occupancy_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
+     * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_occupancy_intervals
      * If &#64;metric_type is SERVICE_LEVEL_ANALYSIS then the intervals will be stored in &#64;service_level_intervals
      * Interval set comparing the number of FTE required to the number achieved.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedInterval fte_intervals = 11 [json_name = "fteIntervals"];</code>
+     * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval fte_occupancy_intervals = 12 [json_name = "fteOccupancyIntervals"];</code>
      */
-    public Builder addAllFteIntervals(
-        java.lang.Iterable<? extends com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedInterval> values) {
-      if (fteIntervalsBuilder_ == null) {
-        ensureFteIntervalsIsMutable();
+    public Builder addAllFteOccupancyIntervals(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval> values) {
+      if (fteOccupancyIntervalsBuilder_ == null) {
+        ensureFteOccupancyIntervalsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, fteIntervals_);
+            values, fteOccupancyIntervals_);
         onChanged();
       } else {
-        fteIntervalsBuilder_.addAllMessages(values);
+        fteOccupancyIntervalsBuilder_.addAllMessages(values);
       }
       return this;
     }
     /**
      * <pre>
-     * One value will be set between &#64;fte_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
-     * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_intervals
+     * One value will be set between &#64;fte_occupancy_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
+     * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_occupancy_intervals
      * If &#64;metric_type is SERVICE_LEVEL_ANALYSIS then the intervals will be stored in &#64;service_level_intervals
      * Interval set comparing the number of FTE required to the number achieved.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedInterval fte_intervals = 11 [json_name = "fteIntervals"];</code>
+     * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval fte_occupancy_intervals = 12 [json_name = "fteOccupancyIntervals"];</code>
      */
-    public Builder clearFteIntervals() {
-      if (fteIntervalsBuilder_ == null) {
-        fteIntervals_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000400);
+    public Builder clearFteOccupancyIntervals() {
+      if (fteOccupancyIntervalsBuilder_ == null) {
+        fteOccupancyIntervals_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000800);
         onChanged();
       } else {
-        fteIntervalsBuilder_.clear();
+        fteOccupancyIntervalsBuilder_.clear();
       }
       return this;
     }
     /**
      * <pre>
-     * One value will be set between &#64;fte_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
-     * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_intervals
+     * One value will be set between &#64;fte_occupancy_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
+     * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_occupancy_intervals
      * If &#64;metric_type is SERVICE_LEVEL_ANALYSIS then the intervals will be stored in &#64;service_level_intervals
      * Interval set comparing the number of FTE required to the number achieved.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedInterval fte_intervals = 11 [json_name = "fteIntervals"];</code>
+     * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval fte_occupancy_intervals = 12 [json_name = "fteOccupancyIntervals"];</code>
      */
-    public Builder removeFteIntervals(int index) {
-      if (fteIntervalsBuilder_ == null) {
-        ensureFteIntervalsIsMutable();
-        fteIntervals_.remove(index);
+    public Builder removeFteOccupancyIntervals(int index) {
+      if (fteOccupancyIntervalsBuilder_ == null) {
+        ensureFteOccupancyIntervalsIsMutable();
+        fteOccupancyIntervals_.remove(index);
         onChanged();
       } else {
-        fteIntervalsBuilder_.remove(index);
+        fteOccupancyIntervalsBuilder_.remove(index);
       }
       return this;
     }
     /**
      * <pre>
-     * One value will be set between &#64;fte_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
-     * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_intervals
+     * One value will be set between &#64;fte_occupancy_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
+     * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_occupancy_intervals
      * If &#64;metric_type is SERVICE_LEVEL_ANALYSIS then the intervals will be stored in &#64;service_level_intervals
      * Interval set comparing the number of FTE required to the number achieved.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedInterval fte_intervals = 11 [json_name = "fteIntervals"];</code>
+     * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval fte_occupancy_intervals = 12 [json_name = "fteOccupancyIntervals"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedInterval.Builder getFteIntervalsBuilder(
+    public com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval.Builder getFteOccupancyIntervalsBuilder(
         int index) {
-      return getFteIntervalsFieldBuilder().getBuilder(index);
+      return getFteOccupancyIntervalsFieldBuilder().getBuilder(index);
     }
     /**
      * <pre>
-     * One value will be set between &#64;fte_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
-     * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_intervals
+     * One value will be set between &#64;fte_occupancy_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
+     * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_occupancy_intervals
      * If &#64;metric_type is SERVICE_LEVEL_ANALYSIS then the intervals will be stored in &#64;service_level_intervals
      * Interval set comparing the number of FTE required to the number achieved.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedInterval fte_intervals = 11 [json_name = "fteIntervals"];</code>
+     * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval fte_occupancy_intervals = 12 [json_name = "fteOccupancyIntervals"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedIntervalOrBuilder getFteIntervalsOrBuilder(
+    public com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyIntervalOrBuilder getFteOccupancyIntervalsOrBuilder(
         int index) {
-      if (fteIntervalsBuilder_ == null) {
-        return fteIntervals_.get(index);  } else {
-        return fteIntervalsBuilder_.getMessageOrBuilder(index);
+      if (fteOccupancyIntervalsBuilder_ == null) {
+        return fteOccupancyIntervals_.get(index);  } else {
+        return fteOccupancyIntervalsBuilder_.getMessageOrBuilder(index);
       }
     }
     /**
      * <pre>
-     * One value will be set between &#64;fte_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
-     * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_intervals
+     * One value will be set between &#64;fte_occupancy_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
+     * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_occupancy_intervals
      * If &#64;metric_type is SERVICE_LEVEL_ANALYSIS then the intervals will be stored in &#64;service_level_intervals
      * Interval set comparing the number of FTE required to the number achieved.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedInterval fte_intervals = 11 [json_name = "fteIntervals"];</code>
+     * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval fte_occupancy_intervals = 12 [json_name = "fteOccupancyIntervals"];</code>
      */
-    public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedIntervalOrBuilder> 
-         getFteIntervalsOrBuilderList() {
-      if (fteIntervalsBuilder_ != null) {
-        return fteIntervalsBuilder_.getMessageOrBuilderList();
+    public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyIntervalOrBuilder> 
+         getFteOccupancyIntervalsOrBuilderList() {
+      if (fteOccupancyIntervalsBuilder_ != null) {
+        return fteOccupancyIntervalsBuilder_.getMessageOrBuilderList();
       } else {
-        return java.util.Collections.unmodifiableList(fteIntervals_);
+        return java.util.Collections.unmodifiableList(fteOccupancyIntervals_);
       }
     }
     /**
      * <pre>
-     * One value will be set between &#64;fte_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
-     * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_intervals
+     * One value will be set between &#64;fte_occupancy_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
+     * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_occupancy_intervals
      * If &#64;metric_type is SERVICE_LEVEL_ANALYSIS then the intervals will be stored in &#64;service_level_intervals
      * Interval set comparing the number of FTE required to the number achieved.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedInterval fte_intervals = 11 [json_name = "fteIntervals"];</code>
+     * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval fte_occupancy_intervals = 12 [json_name = "fteOccupancyIntervals"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedInterval.Builder addFteIntervalsBuilder() {
-      return getFteIntervalsFieldBuilder().addBuilder(
-          com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedInterval.getDefaultInstance());
+    public com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval.Builder addFteOccupancyIntervalsBuilder() {
+      return getFteOccupancyIntervalsFieldBuilder().addBuilder(
+          com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval.getDefaultInstance());
     }
     /**
      * <pre>
-     * One value will be set between &#64;fte_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
-     * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_intervals
+     * One value will be set between &#64;fte_occupancy_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
+     * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_occupancy_intervals
      * If &#64;metric_type is SERVICE_LEVEL_ANALYSIS then the intervals will be stored in &#64;service_level_intervals
      * Interval set comparing the number of FTE required to the number achieved.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedInterval fte_intervals = 11 [json_name = "fteIntervals"];</code>
+     * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval fte_occupancy_intervals = 12 [json_name = "fteOccupancyIntervals"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedInterval.Builder addFteIntervalsBuilder(
+    public com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval.Builder addFteOccupancyIntervalsBuilder(
         int index) {
-      return getFteIntervalsFieldBuilder().addBuilder(
-          index, com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedInterval.getDefaultInstance());
+      return getFteOccupancyIntervalsFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval.getDefaultInstance());
     }
     /**
      * <pre>
-     * One value will be set between &#64;fte_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
-     * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_intervals
+     * One value will be set between &#64;fte_occupancy_intervals and &#64;service_level_intervals, depending on &#64;metric_type.
+     * If &#64;metric_type is FTE_REQUIRED_VS_ACHIEVED_SIMPLE then the intervals will be stored in &#64;fte_occupancy_intervals
      * If &#64;metric_type is SERVICE_LEVEL_ANALYSIS then the intervals will be stored in &#64;service_level_intervals
      * Interval set comparing the number of FTE required to the number achieved.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedInterval fte_intervals = 11 [json_name = "fteIntervals"];</code>
+     * <code>repeated .api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval fte_occupancy_intervals = 12 [json_name = "fteOccupancyIntervals"];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedInterval.Builder> 
-         getFteIntervalsBuilderList() {
-      return getFteIntervalsFieldBuilder().getBuilderList();
+    public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval.Builder> 
+         getFteOccupancyIntervalsBuilderList() {
+      return getFteOccupancyIntervalsFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedInterval, com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedInterval.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedIntervalOrBuilder> 
-        getFteIntervalsFieldBuilder() {
-      if (fteIntervalsBuilder_ == null) {
-        fteIntervalsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedInterval, com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedInterval.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedIntervalOrBuilder>(
-                fteIntervals_,
-                ((bitField0_ & 0x00000400) != 0),
+        com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval, com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyIntervalOrBuilder> 
+        getFteOccupancyIntervalsFieldBuilder() {
+      if (fteOccupancyIntervalsBuilder_ == null) {
+        fteOccupancyIntervalsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval, com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyIntervalOrBuilder>(
+                fteOccupancyIntervals_,
+                ((bitField0_ & 0x00000800) != 0),
                 getParentForChildren(),
                 isClean());
-        fteIntervals_ = null;
+        fteOccupancyIntervals_ = null;
       }
-      return fteIntervalsBuilder_;
+      return fteOccupancyIntervalsBuilder_;
     }
 
     private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval> serviceLevelIntervals_ =
       java.util.Collections.emptyList();
     private void ensureServiceLevelIntervalsIsMutable() {
-      if (!((bitField0_ & 0x00000800) != 0)) {
+      if (!((bitField0_ & 0x00001000) != 0)) {
         serviceLevelIntervals_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval>(serviceLevelIntervals_);
-        bitField0_ |= 0x00000800;
+        bitField0_ |= 0x00001000;
        }
     }
 
@@ -2023,7 +1979,7 @@ private static final long serialVersionUID = 0L;
      * Interval set checking the service level achieved as a percentage.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 12 [json_name = "serviceLevelIntervals"];</code>
+     * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 13 [json_name = "serviceLevelIntervals"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval> getServiceLevelIntervalsList() {
       if (serviceLevelIntervalsBuilder_ == null) {
@@ -2037,7 +1993,7 @@ private static final long serialVersionUID = 0L;
      * Interval set checking the service level achieved as a percentage.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 12 [json_name = "serviceLevelIntervals"];</code>
+     * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 13 [json_name = "serviceLevelIntervals"];</code>
      */
     public int getServiceLevelIntervalsCount() {
       if (serviceLevelIntervalsBuilder_ == null) {
@@ -2051,7 +2007,7 @@ private static final long serialVersionUID = 0L;
      * Interval set checking the service level achieved as a percentage.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 12 [json_name = "serviceLevelIntervals"];</code>
+     * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 13 [json_name = "serviceLevelIntervals"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval getServiceLevelIntervals(int index) {
       if (serviceLevelIntervalsBuilder_ == null) {
@@ -2065,7 +2021,7 @@ private static final long serialVersionUID = 0L;
      * Interval set checking the service level achieved as a percentage.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 12 [json_name = "serviceLevelIntervals"];</code>
+     * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 13 [json_name = "serviceLevelIntervals"];</code>
      */
     public Builder setServiceLevelIntervals(
         int index, com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval value) {
@@ -2086,7 +2042,7 @@ private static final long serialVersionUID = 0L;
      * Interval set checking the service level achieved as a percentage.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 12 [json_name = "serviceLevelIntervals"];</code>
+     * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 13 [json_name = "serviceLevelIntervals"];</code>
      */
     public Builder setServiceLevelIntervals(
         int index, com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval.Builder builderForValue) {
@@ -2104,7 +2060,7 @@ private static final long serialVersionUID = 0L;
      * Interval set checking the service level achieved as a percentage.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 12 [json_name = "serviceLevelIntervals"];</code>
+     * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 13 [json_name = "serviceLevelIntervals"];</code>
      */
     public Builder addServiceLevelIntervals(com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval value) {
       if (serviceLevelIntervalsBuilder_ == null) {
@@ -2124,7 +2080,7 @@ private static final long serialVersionUID = 0L;
      * Interval set checking the service level achieved as a percentage.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 12 [json_name = "serviceLevelIntervals"];</code>
+     * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 13 [json_name = "serviceLevelIntervals"];</code>
      */
     public Builder addServiceLevelIntervals(
         int index, com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval value) {
@@ -2145,7 +2101,7 @@ private static final long serialVersionUID = 0L;
      * Interval set checking the service level achieved as a percentage.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 12 [json_name = "serviceLevelIntervals"];</code>
+     * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 13 [json_name = "serviceLevelIntervals"];</code>
      */
     public Builder addServiceLevelIntervals(
         com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval.Builder builderForValue) {
@@ -2163,7 +2119,7 @@ private static final long serialVersionUID = 0L;
      * Interval set checking the service level achieved as a percentage.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 12 [json_name = "serviceLevelIntervals"];</code>
+     * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 13 [json_name = "serviceLevelIntervals"];</code>
      */
     public Builder addServiceLevelIntervals(
         int index, com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval.Builder builderForValue) {
@@ -2181,7 +2137,7 @@ private static final long serialVersionUID = 0L;
      * Interval set checking the service level achieved as a percentage.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 12 [json_name = "serviceLevelIntervals"];</code>
+     * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 13 [json_name = "serviceLevelIntervals"];</code>
      */
     public Builder addAllServiceLevelIntervals(
         java.lang.Iterable<? extends com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval> values) {
@@ -2200,12 +2156,12 @@ private static final long serialVersionUID = 0L;
      * Interval set checking the service level achieved as a percentage.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 12 [json_name = "serviceLevelIntervals"];</code>
+     * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 13 [json_name = "serviceLevelIntervals"];</code>
      */
     public Builder clearServiceLevelIntervals() {
       if (serviceLevelIntervalsBuilder_ == null) {
         serviceLevelIntervals_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000800);
+        bitField0_ = (bitField0_ & ~0x00001000);
         onChanged();
       } else {
         serviceLevelIntervalsBuilder_.clear();
@@ -2217,7 +2173,7 @@ private static final long serialVersionUID = 0L;
      * Interval set checking the service level achieved as a percentage.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 12 [json_name = "serviceLevelIntervals"];</code>
+     * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 13 [json_name = "serviceLevelIntervals"];</code>
      */
     public Builder removeServiceLevelIntervals(int index) {
       if (serviceLevelIntervalsBuilder_ == null) {
@@ -2234,7 +2190,7 @@ private static final long serialVersionUID = 0L;
      * Interval set checking the service level achieved as a percentage.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 12 [json_name = "serviceLevelIntervals"];</code>
+     * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 13 [json_name = "serviceLevelIntervals"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval.Builder getServiceLevelIntervalsBuilder(
         int index) {
@@ -2245,7 +2201,7 @@ private static final long serialVersionUID = 0L;
      * Interval set checking the service level achieved as a percentage.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 12 [json_name = "serviceLevelIntervals"];</code>
+     * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 13 [json_name = "serviceLevelIntervals"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelIntervalOrBuilder getServiceLevelIntervalsOrBuilder(
         int index) {
@@ -2259,7 +2215,7 @@ private static final long serialVersionUID = 0L;
      * Interval set checking the service level achieved as a percentage.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 12 [json_name = "serviceLevelIntervals"];</code>
+     * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 13 [json_name = "serviceLevelIntervals"];</code>
      */
     public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelIntervalOrBuilder> 
          getServiceLevelIntervalsOrBuilderList() {
@@ -2274,7 +2230,7 @@ private static final long serialVersionUID = 0L;
      * Interval set checking the service level achieved as a percentage.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 12 [json_name = "serviceLevelIntervals"];</code>
+     * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 13 [json_name = "serviceLevelIntervals"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval.Builder addServiceLevelIntervalsBuilder() {
       return getServiceLevelIntervalsFieldBuilder().addBuilder(
@@ -2285,7 +2241,7 @@ private static final long serialVersionUID = 0L;
      * Interval set checking the service level achieved as a percentage.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 12 [json_name = "serviceLevelIntervals"];</code>
+     * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 13 [json_name = "serviceLevelIntervals"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval.Builder addServiceLevelIntervalsBuilder(
         int index) {
@@ -2297,7 +2253,7 @@ private static final long serialVersionUID = 0L;
      * Interval set checking the service level achieved as a percentage.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 12 [json_name = "serviceLevelIntervals"];</code>
+     * <code>repeated .api.v1alpha1.wfm.ServiceLevelInterval service_level_intervals = 13 [json_name = "serviceLevelIntervals"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval.Builder> 
          getServiceLevelIntervalsBuilderList() {
@@ -2310,7 +2266,7 @@ private static final long serialVersionUID = 0L;
         serviceLevelIntervalsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval, com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelIntervalOrBuilder>(
                 serviceLevelIntervals_,
-                ((bitField0_ & 0x00000800) != 0),
+                ((bitField0_ & 0x00001000) != 0),
                 getParentForChildren(),
                 isClean());
         serviceLevelIntervals_ = null;
@@ -2330,23 +2286,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v1alpha1.wfm.PerformanceMetric)
+    // @@protoc_insertion_point(builder_scope:api.v1alpha1.wfm.BasicPerformanceMetricV2)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v1alpha1.wfm.PerformanceMetric)
-  private static final com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v1alpha1.wfm.BasicPerformanceMetricV2)
+  private static final com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV2 DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV2();
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV2 getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<PerformanceMetric>
-      PARSER = new com.google.protobuf.AbstractParser<PerformanceMetric>() {
+  private static final com.google.protobuf.Parser<BasicPerformanceMetricV2>
+      PARSER = new com.google.protobuf.AbstractParser<BasicPerformanceMetricV2>() {
     @java.lang.Override
-    public PerformanceMetric parsePartialFrom(
+    public BasicPerformanceMetricV2 parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -2365,17 +2321,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<PerformanceMetric> parser() {
+  public static com.google.protobuf.Parser<BasicPerformanceMetricV2> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<PerformanceMetric> getParserForType() {
+  public com.google.protobuf.Parser<BasicPerformanceMetricV2> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v1alpha1.wfm.BasicPerformanceMetricV2 getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 
