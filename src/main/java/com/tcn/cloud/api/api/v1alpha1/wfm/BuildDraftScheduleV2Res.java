@@ -5,23 +5,21 @@ package com.tcn.cloud.api.api.v1alpha1.wfm;
 
 /**
  * <pre>
- * Deprecated.
  * Response message for the BuildDraftSchedule RPC
- * This was replaced by BuildDraftScheduleV2Res.
  * </pre>
  *
- * Protobuf type {@code api.v1alpha1.wfm.BuildDraftScheduleRes}
+ * Protobuf type {@code api.v1alpha1.wfm.BuildDraftScheduleV2Res}
  */
-public final class BuildDraftScheduleRes extends
+public final class BuildDraftScheduleV2Res extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v1alpha1.wfm.BuildDraftScheduleRes)
-    BuildDraftScheduleResOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v1alpha1.wfm.BuildDraftScheduleV2Res)
+    BuildDraftScheduleV2ResOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use BuildDraftScheduleRes.newBuilder() to construct.
-  private BuildDraftScheduleRes(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use BuildDraftScheduleV2Res.newBuilder() to construct.
+  private BuildDraftScheduleV2Res(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private BuildDraftScheduleRes() {
+  private BuildDraftScheduleV2Res() {
     diagnostics_ = java.util.Collections.emptyList();
   }
 
@@ -29,20 +27,20 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new BuildDraftScheduleRes();
+    return new BuildDraftScheduleV2Res();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_BuildDraftScheduleRes_descriptor;
+    return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_BuildDraftScheduleV2Res_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_BuildDraftScheduleRes_fieldAccessorTable
+    return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_BuildDraftScheduleV2Res_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleRes.class, com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleRes.Builder.class);
+            com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleV2Res.class, com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleV2Res.Builder.class);
   }
 
   public static final int DRAFT_SCHEDULE_FIELD_NUMBER = 1;
@@ -145,13 +143,13 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SCHEDULING_RESULT_METRIC_FIELD_NUMBER = 3;
-  private com.tcn.cloud.api.api.commons.SchedulingResultMetric schedulingResultMetric_;
+  private com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingResultMetric schedulingResultMetric_;
   /**
    * <pre>
    * The scheduling result metric for the built schedule range.
    * </pre>
    *
-   * <code>.api.commons.SchedulingResultMetric scheduling_result_metric = 3 [json_name = "schedulingResultMetric"];</code>
+   * <code>.api.v1alpha1.wfm.SchedulingResultMetric scheduling_result_metric = 3 [json_name = "schedulingResultMetric"];</code>
    * @return Whether the schedulingResultMetric field is set.
    */
   @java.lang.Override
@@ -163,23 +161,23 @@ private static final long serialVersionUID = 0L;
    * The scheduling result metric for the built schedule range.
    * </pre>
    *
-   * <code>.api.commons.SchedulingResultMetric scheduling_result_metric = 3 [json_name = "schedulingResultMetric"];</code>
+   * <code>.api.v1alpha1.wfm.SchedulingResultMetric scheduling_result_metric = 3 [json_name = "schedulingResultMetric"];</code>
    * @return The schedulingResultMetric.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.SchedulingResultMetric getSchedulingResultMetric() {
-    return schedulingResultMetric_ == null ? com.tcn.cloud.api.api.commons.SchedulingResultMetric.getDefaultInstance() : schedulingResultMetric_;
+  public com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingResultMetric getSchedulingResultMetric() {
+    return schedulingResultMetric_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingResultMetric.getDefaultInstance() : schedulingResultMetric_;
   }
   /**
    * <pre>
    * The scheduling result metric for the built schedule range.
    * </pre>
    *
-   * <code>.api.commons.SchedulingResultMetric scheduling_result_metric = 3 [json_name = "schedulingResultMetric"];</code>
+   * <code>.api.v1alpha1.wfm.SchedulingResultMetric scheduling_result_metric = 3 [json_name = "schedulingResultMetric"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.SchedulingResultMetricOrBuilder getSchedulingResultMetricOrBuilder() {
-    return schedulingResultMetric_ == null ? com.tcn.cloud.api.api.commons.SchedulingResultMetric.getDefaultInstance() : schedulingResultMetric_;
+  public com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingResultMetricOrBuilder getSchedulingResultMetricOrBuilder() {
+    return schedulingResultMetric_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingResultMetric.getDefaultInstance() : schedulingResultMetric_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -236,10 +234,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleRes)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleV2Res)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleRes other = (com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleRes) obj;
+    com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleV2Res other = (com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleV2Res) obj;
 
     if (hasDraftSchedule() != other.hasDraftSchedule()) return false;
     if (hasDraftSchedule()) {
@@ -281,44 +279,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleRes parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleV2Res parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleRes parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleV2Res parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleRes parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleV2Res parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleRes parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleV2Res parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleRes parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleV2Res parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleRes parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleV2Res parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleRes parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleV2Res parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleRes parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleV2Res parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -326,26 +324,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleRes parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleV2Res parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleRes parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleV2Res parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleRes parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleV2Res parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleRes parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleV2Res parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -358,7 +356,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleRes prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleV2Res prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -375,31 +373,29 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Deprecated.
    * Response message for the BuildDraftSchedule RPC
-   * This was replaced by BuildDraftScheduleV2Res.
    * </pre>
    *
-   * Protobuf type {@code api.v1alpha1.wfm.BuildDraftScheduleRes}
+   * Protobuf type {@code api.v1alpha1.wfm.BuildDraftScheduleV2Res}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v1alpha1.wfm.BuildDraftScheduleRes)
-      com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleResOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v1alpha1.wfm.BuildDraftScheduleV2Res)
+      com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleV2ResOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_BuildDraftScheduleRes_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_BuildDraftScheduleV2Res_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_BuildDraftScheduleRes_fieldAccessorTable
+      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_BuildDraftScheduleV2Res_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleRes.class, com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleRes.Builder.class);
+              com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleV2Res.class, com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleV2Res.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleRes.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleV2Res.newBuilder()
     private Builder() {
 
     }
@@ -436,17 +432,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_BuildDraftScheduleRes_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_BuildDraftScheduleV2Res_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleRes getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleRes.getDefaultInstance();
+    public com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleV2Res getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleV2Res.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleRes build() {
-      com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleRes result = buildPartial();
+    public com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleV2Res build() {
+      com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleV2Res result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -454,15 +450,15 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleRes buildPartial() {
-      com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleRes result = new com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleRes(this);
+    public com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleV2Res buildPartial() {
+      com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleV2Res result = new com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleV2Res(this);
       buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleRes result) {
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleV2Res result) {
       if (diagnosticsBuilder_ == null) {
         if (((bitField0_ & 0x00000002) != 0)) {
           diagnostics_ = java.util.Collections.unmodifiableList(diagnostics_);
@@ -474,7 +470,7 @@ private static final long serialVersionUID = 0L;
       }
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleRes result) {
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleV2Res result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.draftSchedule_ = draftScheduleBuilder_ == null
@@ -522,16 +518,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleRes) {
-        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleRes)other);
+      if (other instanceof com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleV2Res) {
+        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleV2Res)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleRes other) {
-      if (other == com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleRes.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleV2Res other) {
+      if (other == com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleV2Res.getDefaultInstance()) return this;
       if (other.hasDraftSchedule()) {
         mergeDraftSchedule(other.getDraftSchedule());
       }
@@ -1101,15 +1097,15 @@ private static final long serialVersionUID = 0L;
       return diagnosticsBuilder_;
     }
 
-    private com.tcn.cloud.api.api.commons.SchedulingResultMetric schedulingResultMetric_;
+    private com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingResultMetric schedulingResultMetric_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.SchedulingResultMetric, com.tcn.cloud.api.api.commons.SchedulingResultMetric.Builder, com.tcn.cloud.api.api.commons.SchedulingResultMetricOrBuilder> schedulingResultMetricBuilder_;
+        com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingResultMetric, com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingResultMetric.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingResultMetricOrBuilder> schedulingResultMetricBuilder_;
     /**
      * <pre>
      * The scheduling result metric for the built schedule range.
      * </pre>
      *
-     * <code>.api.commons.SchedulingResultMetric scheduling_result_metric = 3 [json_name = "schedulingResultMetric"];</code>
+     * <code>.api.v1alpha1.wfm.SchedulingResultMetric scheduling_result_metric = 3 [json_name = "schedulingResultMetric"];</code>
      * @return Whether the schedulingResultMetric field is set.
      */
     public boolean hasSchedulingResultMetric() {
@@ -1120,12 +1116,12 @@ private static final long serialVersionUID = 0L;
      * The scheduling result metric for the built schedule range.
      * </pre>
      *
-     * <code>.api.commons.SchedulingResultMetric scheduling_result_metric = 3 [json_name = "schedulingResultMetric"];</code>
+     * <code>.api.v1alpha1.wfm.SchedulingResultMetric scheduling_result_metric = 3 [json_name = "schedulingResultMetric"];</code>
      * @return The schedulingResultMetric.
      */
-    public com.tcn.cloud.api.api.commons.SchedulingResultMetric getSchedulingResultMetric() {
+    public com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingResultMetric getSchedulingResultMetric() {
       if (schedulingResultMetricBuilder_ == null) {
-        return schedulingResultMetric_ == null ? com.tcn.cloud.api.api.commons.SchedulingResultMetric.getDefaultInstance() : schedulingResultMetric_;
+        return schedulingResultMetric_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingResultMetric.getDefaultInstance() : schedulingResultMetric_;
       } else {
         return schedulingResultMetricBuilder_.getMessage();
       }
@@ -1135,9 +1131,9 @@ private static final long serialVersionUID = 0L;
      * The scheduling result metric for the built schedule range.
      * </pre>
      *
-     * <code>.api.commons.SchedulingResultMetric scheduling_result_metric = 3 [json_name = "schedulingResultMetric"];</code>
+     * <code>.api.v1alpha1.wfm.SchedulingResultMetric scheduling_result_metric = 3 [json_name = "schedulingResultMetric"];</code>
      */
-    public Builder setSchedulingResultMetric(com.tcn.cloud.api.api.commons.SchedulingResultMetric value) {
+    public Builder setSchedulingResultMetric(com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingResultMetric value) {
       if (schedulingResultMetricBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1155,10 +1151,10 @@ private static final long serialVersionUID = 0L;
      * The scheduling result metric for the built schedule range.
      * </pre>
      *
-     * <code>.api.commons.SchedulingResultMetric scheduling_result_metric = 3 [json_name = "schedulingResultMetric"];</code>
+     * <code>.api.v1alpha1.wfm.SchedulingResultMetric scheduling_result_metric = 3 [json_name = "schedulingResultMetric"];</code>
      */
     public Builder setSchedulingResultMetric(
-        com.tcn.cloud.api.api.commons.SchedulingResultMetric.Builder builderForValue) {
+        com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingResultMetric.Builder builderForValue) {
       if (schedulingResultMetricBuilder_ == null) {
         schedulingResultMetric_ = builderForValue.build();
       } else {
@@ -1173,13 +1169,13 @@ private static final long serialVersionUID = 0L;
      * The scheduling result metric for the built schedule range.
      * </pre>
      *
-     * <code>.api.commons.SchedulingResultMetric scheduling_result_metric = 3 [json_name = "schedulingResultMetric"];</code>
+     * <code>.api.v1alpha1.wfm.SchedulingResultMetric scheduling_result_metric = 3 [json_name = "schedulingResultMetric"];</code>
      */
-    public Builder mergeSchedulingResultMetric(com.tcn.cloud.api.api.commons.SchedulingResultMetric value) {
+    public Builder mergeSchedulingResultMetric(com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingResultMetric value) {
       if (schedulingResultMetricBuilder_ == null) {
         if (((bitField0_ & 0x00000004) != 0) &&
           schedulingResultMetric_ != null &&
-          schedulingResultMetric_ != com.tcn.cloud.api.api.commons.SchedulingResultMetric.getDefaultInstance()) {
+          schedulingResultMetric_ != com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingResultMetric.getDefaultInstance()) {
           getSchedulingResultMetricBuilder().mergeFrom(value);
         } else {
           schedulingResultMetric_ = value;
@@ -1196,7 +1192,7 @@ private static final long serialVersionUID = 0L;
      * The scheduling result metric for the built schedule range.
      * </pre>
      *
-     * <code>.api.commons.SchedulingResultMetric scheduling_result_metric = 3 [json_name = "schedulingResultMetric"];</code>
+     * <code>.api.v1alpha1.wfm.SchedulingResultMetric scheduling_result_metric = 3 [json_name = "schedulingResultMetric"];</code>
      */
     public Builder clearSchedulingResultMetric() {
       bitField0_ = (bitField0_ & ~0x00000004);
@@ -1213,9 +1209,9 @@ private static final long serialVersionUID = 0L;
      * The scheduling result metric for the built schedule range.
      * </pre>
      *
-     * <code>.api.commons.SchedulingResultMetric scheduling_result_metric = 3 [json_name = "schedulingResultMetric"];</code>
+     * <code>.api.v1alpha1.wfm.SchedulingResultMetric scheduling_result_metric = 3 [json_name = "schedulingResultMetric"];</code>
      */
-    public com.tcn.cloud.api.api.commons.SchedulingResultMetric.Builder getSchedulingResultMetricBuilder() {
+    public com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingResultMetric.Builder getSchedulingResultMetricBuilder() {
       bitField0_ |= 0x00000004;
       onChanged();
       return getSchedulingResultMetricFieldBuilder().getBuilder();
@@ -1225,14 +1221,14 @@ private static final long serialVersionUID = 0L;
      * The scheduling result metric for the built schedule range.
      * </pre>
      *
-     * <code>.api.commons.SchedulingResultMetric scheduling_result_metric = 3 [json_name = "schedulingResultMetric"];</code>
+     * <code>.api.v1alpha1.wfm.SchedulingResultMetric scheduling_result_metric = 3 [json_name = "schedulingResultMetric"];</code>
      */
-    public com.tcn.cloud.api.api.commons.SchedulingResultMetricOrBuilder getSchedulingResultMetricOrBuilder() {
+    public com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingResultMetricOrBuilder getSchedulingResultMetricOrBuilder() {
       if (schedulingResultMetricBuilder_ != null) {
         return schedulingResultMetricBuilder_.getMessageOrBuilder();
       } else {
         return schedulingResultMetric_ == null ?
-            com.tcn.cloud.api.api.commons.SchedulingResultMetric.getDefaultInstance() : schedulingResultMetric_;
+            com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingResultMetric.getDefaultInstance() : schedulingResultMetric_;
       }
     }
     /**
@@ -1240,14 +1236,14 @@ private static final long serialVersionUID = 0L;
      * The scheduling result metric for the built schedule range.
      * </pre>
      *
-     * <code>.api.commons.SchedulingResultMetric scheduling_result_metric = 3 [json_name = "schedulingResultMetric"];</code>
+     * <code>.api.v1alpha1.wfm.SchedulingResultMetric scheduling_result_metric = 3 [json_name = "schedulingResultMetric"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.SchedulingResultMetric, com.tcn.cloud.api.api.commons.SchedulingResultMetric.Builder, com.tcn.cloud.api.api.commons.SchedulingResultMetricOrBuilder> 
+        com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingResultMetric, com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingResultMetric.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingResultMetricOrBuilder> 
         getSchedulingResultMetricFieldBuilder() {
       if (schedulingResultMetricBuilder_ == null) {
         schedulingResultMetricBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.SchedulingResultMetric, com.tcn.cloud.api.api.commons.SchedulingResultMetric.Builder, com.tcn.cloud.api.api.commons.SchedulingResultMetricOrBuilder>(
+            com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingResultMetric, com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingResultMetric.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingResultMetricOrBuilder>(
                 getSchedulingResultMetric(),
                 getParentForChildren(),
                 isClean());
@@ -1268,23 +1264,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v1alpha1.wfm.BuildDraftScheduleRes)
+    // @@protoc_insertion_point(builder_scope:api.v1alpha1.wfm.BuildDraftScheduleV2Res)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v1alpha1.wfm.BuildDraftScheduleRes)
-  private static final com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleRes DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v1alpha1.wfm.BuildDraftScheduleV2Res)
+  private static final com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleV2Res DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleRes();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleV2Res();
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleRes getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleV2Res getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<BuildDraftScheduleRes>
-      PARSER = new com.google.protobuf.AbstractParser<BuildDraftScheduleRes>() {
+  private static final com.google.protobuf.Parser<BuildDraftScheduleV2Res>
+      PARSER = new com.google.protobuf.AbstractParser<BuildDraftScheduleV2Res>() {
     @java.lang.Override
-    public BuildDraftScheduleRes parsePartialFrom(
+    public BuildDraftScheduleV2Res parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1303,17 +1299,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<BuildDraftScheduleRes> parser() {
+  public static com.google.protobuf.Parser<BuildDraftScheduleV2Res> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<BuildDraftScheduleRes> getParserForType() {
+  public com.google.protobuf.Parser<BuildDraftScheduleV2Res> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleRes getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleV2Res getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 
