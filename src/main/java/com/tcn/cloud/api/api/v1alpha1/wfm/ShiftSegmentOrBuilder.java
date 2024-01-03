@@ -99,7 +99,7 @@ public interface ShiftSegmentOrBuilder extends
 
   /**
    * <pre>
-   * A map of ShiftSegmentCallStats by SkillProfileCategory.
+   * Per-skill call stats.
    * </pre>
    *
    * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStat call_stats_by_skill_collection = 9 [json_name = "callStatsBySkillCollection"];</code>
@@ -108,7 +108,7 @@ public interface ShiftSegmentOrBuilder extends
       getCallStatsBySkillCollectionList();
   /**
    * <pre>
-   * A map of ShiftSegmentCallStats by SkillProfileCategory.
+   * Per-skill call stats.
    * </pre>
    *
    * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStat call_stats_by_skill_collection = 9 [json_name = "callStatsBySkillCollection"];</code>
@@ -116,7 +116,7 @@ public interface ShiftSegmentOrBuilder extends
   com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStat getCallStatsBySkillCollection(int index);
   /**
    * <pre>
-   * A map of ShiftSegmentCallStats by SkillProfileCategory.
+   * Per-skill call stats.
    * </pre>
    *
    * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStat call_stats_by_skill_collection = 9 [json_name = "callStatsBySkillCollection"];</code>
@@ -124,7 +124,7 @@ public interface ShiftSegmentOrBuilder extends
   int getCallStatsBySkillCollectionCount();
   /**
    * <pre>
-   * A map of ShiftSegmentCallStats by SkillProfileCategory.
+   * Per-skill call stats.
    * </pre>
    *
    * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStat call_stats_by_skill_collection = 9 [json_name = "callStatsBySkillCollection"];</code>
@@ -133,7 +133,7 @@ public interface ShiftSegmentOrBuilder extends
       getCallStatsBySkillCollectionOrBuilderList();
   /**
    * <pre>
-   * A map of ShiftSegmentCallStats by SkillProfileCategory.
+   * Per-skill call stats.
    * </pre>
    *
    * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStat call_stats_by_skill_collection = 9 [json_name = "callStatsBySkillCollection"];</code>

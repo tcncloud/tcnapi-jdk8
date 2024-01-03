@@ -179,7 +179,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegmentCallStat> callStatsBySkillCollection_;
   /**
    * <pre>
-   * A map of ShiftSegmentCallStats by SkillProfileCategory.
+   * Per-skill call stats.
    * </pre>
    *
    * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStat call_stats_by_skill_collection = 9 [json_name = "callStatsBySkillCollection"];</code>
@@ -190,7 +190,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * A map of ShiftSegmentCallStats by SkillProfileCategory.
+   * Per-skill call stats.
    * </pre>
    *
    * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStat call_stats_by_skill_collection = 9 [json_name = "callStatsBySkillCollection"];</code>
@@ -202,7 +202,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * A map of ShiftSegmentCallStats by SkillProfileCategory.
+   * Per-skill call stats.
    * </pre>
    *
    * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStat call_stats_by_skill_collection = 9 [json_name = "callStatsBySkillCollection"];</code>
@@ -213,7 +213,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * A map of ShiftSegmentCallStats by SkillProfileCategory.
+   * Per-skill call stats.
    * </pre>
    *
    * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStat call_stats_by_skill_collection = 9 [json_name = "callStatsBySkillCollection"];</code>
@@ -224,7 +224,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * A map of ShiftSegmentCallStats by SkillProfileCategory.
+   * Per-skill call stats.
    * </pre>
    *
    * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStat call_stats_by_skill_collection = 9 [json_name = "callStatsBySkillCollection"];</code>
@@ -1232,7 +1232,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * A map of ShiftSegmentCallStats by SkillProfileCategory.
+     * Per-skill call stats.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStat call_stats_by_skill_collection = 9 [json_name = "callStatsBySkillCollection"];</code>
@@ -1246,7 +1246,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A map of ShiftSegmentCallStats by SkillProfileCategory.
+     * Per-skill call stats.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStat call_stats_by_skill_collection = 9 [json_name = "callStatsBySkillCollection"];</code>
@@ -1260,7 +1260,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A map of ShiftSegmentCallStats by SkillProfileCategory.
+     * Per-skill call stats.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStat call_stats_by_skill_collection = 9 [json_name = "callStatsBySkillCollection"];</code>
@@ -1274,7 +1274,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A map of ShiftSegmentCallStats by SkillProfileCategory.
+     * Per-skill call stats.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStat call_stats_by_skill_collection = 9 [json_name = "callStatsBySkillCollection"];</code>
@@ -1295,7 +1295,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A map of ShiftSegmentCallStats by SkillProfileCategory.
+     * Per-skill call stats.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStat call_stats_by_skill_collection = 9 [json_name = "callStatsBySkillCollection"];</code>
@@ -1313,7 +1313,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A map of ShiftSegmentCallStats by SkillProfileCategory.
+     * Per-skill call stats.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStat call_stats_by_skill_collection = 9 [json_name = "callStatsBySkillCollection"];</code>
@@ -1333,7 +1333,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A map of ShiftSegmentCallStats by SkillProfileCategory.
+     * Per-skill call stats.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStat call_stats_by_skill_collection = 9 [json_name = "callStatsBySkillCollection"];</code>
@@ -1354,7 +1354,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A map of ShiftSegmentCallStats by SkillProfileCategory.
+     * Per-skill call stats.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStat call_stats_by_skill_collection = 9 [json_name = "callStatsBySkillCollection"];</code>
@@ -1372,7 +1372,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A map of ShiftSegmentCallStats by SkillProfileCategory.
+     * Per-skill call stats.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStat call_stats_by_skill_collection = 9 [json_name = "callStatsBySkillCollection"];</code>
@@ -1390,7 +1390,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A map of ShiftSegmentCallStats by SkillProfileCategory.
+     * Per-skill call stats.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStat call_stats_by_skill_collection = 9 [json_name = "callStatsBySkillCollection"];</code>
@@ -1409,7 +1409,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A map of ShiftSegmentCallStats by SkillProfileCategory.
+     * Per-skill call stats.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStat call_stats_by_skill_collection = 9 [json_name = "callStatsBySkillCollection"];</code>
@@ -1426,7 +1426,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A map of ShiftSegmentCallStats by SkillProfileCategory.
+     * Per-skill call stats.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStat call_stats_by_skill_collection = 9 [json_name = "callStatsBySkillCollection"];</code>
@@ -1443,7 +1443,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A map of ShiftSegmentCallStats by SkillProfileCategory.
+     * Per-skill call stats.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStat call_stats_by_skill_collection = 9 [json_name = "callStatsBySkillCollection"];</code>
@@ -1454,7 +1454,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A map of ShiftSegmentCallStats by SkillProfileCategory.
+     * Per-skill call stats.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStat call_stats_by_skill_collection = 9 [json_name = "callStatsBySkillCollection"];</code>
@@ -1468,7 +1468,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A map of ShiftSegmentCallStats by SkillProfileCategory.
+     * Per-skill call stats.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStat call_stats_by_skill_collection = 9 [json_name = "callStatsBySkillCollection"];</code>
@@ -1483,7 +1483,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A map of ShiftSegmentCallStats by SkillProfileCategory.
+     * Per-skill call stats.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStat call_stats_by_skill_collection = 9 [json_name = "callStatsBySkillCollection"];</code>
@@ -1494,7 +1494,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A map of ShiftSegmentCallStats by SkillProfileCategory.
+     * Per-skill call stats.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStat call_stats_by_skill_collection = 9 [json_name = "callStatsBySkillCollection"];</code>
@@ -1506,7 +1506,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A map of ShiftSegmentCallStats by SkillProfileCategory.
+     * Per-skill call stats.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.ShiftSegmentCallStat call_stats_by_skill_collection = 9 [json_name = "callStatsBySkillCollection"];</code>
